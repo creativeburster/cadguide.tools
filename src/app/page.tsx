@@ -1,0 +1,204 @@
+import { tools } from '@/lib/data';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Metadata } from 'next';
+import { ToolLogo } from '@/components/tool-logo';
+
+export const metadata: Metadata = {
+  title: 'CADTools.io: Compare 75+ Best CAD Software 2026 (Free & Pro)',
+  description: 'Find the perfect design tool. Compare 75+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
+  keywords: ['best CAD software 2026', 'CAD comparison directory', 'AutoCAD alternatives', 'BIM software review', 'specialized CAD tools', 'free 2D CAD'],
+};
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-white">
+      {/* Hero Section - Deep ocean blue */}
+      <section className="bg-gradient-to-br from-blue-950 via-[#0a192f] to-blue-900 text-white pt-24 pb-32 relative overflow-hidden w-full px-4">
+        {/* Abstract background elements - pure blue glow effect */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/30 rounded-full blur-[100px] -mr-40 -mt-40"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/20 rounded-full blur-[100px] -ml-40 -mb-40"></div>
+        
+        <div className="w-full max-w-4xl mx-auto px-2 sm:px-4 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-white/10 text-blue-200 border border-white/20 px-4 py-2 rounded-full text-[10px] sm:text-xs font-bold mb-10 backdrop-blur-md">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+            </span>
+            Verified & Updated: April 2026
+          </div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1] break-words">
+            Compare <span className="text-blue-400">75+ Top CAD</span> Tools in 60s.
+          </h1>
+          <p className="text-lg sm:text-xl text-blue-100/70 mb-14 max-w-2xl mx-auto leading-relaxed">
+            Independent reviews, transparent pricing, and deep technical specs for 75+ professional CAD & BIM software.
+          </p>
+          
+          {/* Advanced Search Mockup */}
+          <form action="/tools" method="GET" className="bg-white p-3 sm:p-2 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-3 max-w-3xl mx-auto w-full">
+            <input 
+              name="q"
+              type="text" 
+              placeholder="e.g. Free 2D CAD for Mac or Electrical..." 
+              className="flex-1 px-5 py-4 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 text-base"
+            />
+            <Button type="submit" className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-7 px-10 rounded-xl transition-all text-lg shadow-lg shadow-blue-200">
+              Search
+            </Button>
+          </form>
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 px-4">
+            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 border-none font-bold h-14 rounded-xl">
+              <Link href="/matchmaker">Try Smart Matchmaker</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="bg-transparent border-blue-400/50 text-white hover:bg-white/10 font-bold h-14 rounded-xl">
+              <Link href="/tools">Browse 80+ Tools</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* 1. TOP RATED SHELF */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="flex items-center justify-between mb-10 gap-4 border-b border-slate-100 pb-6">
+          <div>
+            <h2 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">Industry Standards</h2>
+            <p className="text-sm text-slate-400 font-medium mt-1">The most trusted and highest-rated CAD platforms worldwide.</p>
+          </div>
+          <Button asChild variant="ghost" className="text-blue-600 font-bold p-0 hover:bg-transparent shrink-0">
+            <Link href="/tools" className="flex items-center gap-1 text-sm sm:text-base transition-transform hover:translate-x-1">Full Directory →</Link>
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {tools.filter(t => t.score >= 4.8).slice(0, 6).map((tool) => (
+            <Card key={tool.id} className="overflow-hidden border-2 hover:border-blue-600 transition-all group relative rounded-[32px] bg-white shadow-sm hover:shadow-xl">
+              <div className="p-8">
+                <div className="flex items-center gap-5 mb-6">
+                  <ToolLogo 
+                    src={tool.logo_url} 
+                    name={tool.name} 
+                    className="w-16 h-16 border border-slate-100 rounded-2xl shrink-0 shadow-sm" 
+                  />
+                  <div>
+                    <h3 className="font-black text-xl group-hover:text-blue-600 transition-colors">
+                      <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-yellow-500 text-sm font-black">★ {tool.score}</span>
+                      <Badge variant="outline" className="text-[9px] uppercase font-bold tracking-widest h-5 bg-slate-50">{tool.pricing_type}</Badge>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-slate-500 text-sm font-medium line-clamp-2 mb-8 leading-relaxed">
+                  {tool.short_desc}
+                </p>
+                <div className="flex gap-3">
+                  <Button asChild variant="outline" className="flex-1 rounded-xl font-bold text-xs h-11">
+                    <Link href={`/tools/${tool.slug}`}>Review</Link>
+                  </Button>
+                  <Button asChild className="flex-1 bg-slate-900 hover:bg-blue-600 text-white rounded-xl font-bold text-xs h-11">
+                    <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow">Website</a>
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* 2. BIM & AEC SHELF - Light Gray Background */}
+      <section className="bg-slate-50 py-20">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between mb-12">
+             <div className="flex items-center gap-4">
+               <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+               </div>
+               <h2 className="text-3xl font-black text-slate-900 tracking-tight">Trending BIM Solutions</h2>
+             </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {tools.filter(t => t.category_id === 'c3').slice(0, 4).map((tool) => (
+              <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white p-6 rounded-[32px] border border-transparent hover:border-blue-100 hover:shadow-2xl transition-all">
+                <ToolLogo 
+                  src={tool.logo_url} 
+                  name={tool.name} 
+                  className="aspect-square rounded-2xl mb-6 transition-all border border-slate-50 shadow-sm group-hover:scale-105" 
+                />
+                <h3 className="font-black text-slate-900 group-hover:text-blue-600 text-lg transition-colors">{tool.name}</h3>
+                <p className="text-[11px] text-slate-400 font-bold uppercase tracking-widest mt-1">{tool.pricing_type} • AEC Industry</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. VERTICAL GEMS - Dark Blue Background */}
+      <section className="bg-[#0a192f] py-24 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px]"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">Specialized Vertical Gems</h2>
+            <p className="text-blue-200/50 max-w-2xl mx-auto font-medium">Deep-industry specific tools that redefine professional efficiency in niche sectors.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {tools.filter(t => t.category_id === 'c7').slice(0, 12).map((tool) => (
+              <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:bg-white/10 hover:border-blue-400/50 transition-all text-center">
+                <ToolLogo 
+                  src={tool.logo_url} 
+                  name={tool.name} 
+                  className="w-16 h-16 mx-auto rounded-xl mb-4 transition-all bg-white shadow-lg group-hover:scale-110" 
+                />
+                <div className="text-[10px] font-black text-white uppercase tracking-tighter truncate">{tool.name}</div>
+                <div className="text-[8px] text-blue-400 font-bold mt-1">{tool.industries[0]}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="bg-white text-slate-900 py-24 border-y border-slate-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-black mb-4 tracking-tight">Independent & Objective Analysis</h2>
+          <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don't accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+            <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
+              <div className="text-blue-600 text-5xl font-black mb-2">80+</div>
+              <div className="text-slate-900 font-black uppercase tracking-widest text-xs">Tools Indexed</div>
+            </div>
+            <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
+              <div className="text-blue-600 text-5xl font-black mb-2">100%</div>
+              <div className="text-slate-900 font-black uppercase tracking-widest text-xs">Neutral Data</div>
+            </div>
+            <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
+              <div className="text-blue-600 text-5xl font-black mb-2">Free</div>
+              <div className="text-slate-900 font-black uppercase tracking-widest text-xs">Always Open</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-24 bg-blue-600 text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-700 rounded-full blur-3xl opacity-50 -ml-32 -mb-32"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-6">Can't Find Your Preferred Software?</h2>
+          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+            Our directory is growing every day. If you want us to review a specific tool, or if you're a vendor, let us know.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold px-10 h-14 text-lg rounded-2xl shadow-xl shadow-blue-900/20">
+              <Link href="/sponsor">Submit a Tool</Link>
+            </Button>
+            <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold px-10 h-14 text-lg rounded-2xl">
+              <Link href="/matchmaker">Talk to Expert</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
