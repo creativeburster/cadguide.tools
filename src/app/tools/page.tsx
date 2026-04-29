@@ -284,6 +284,11 @@ function ToolsList() {
                         </Badge>
                       </div>
                       <p className="text-slate-500 leading-relaxed text-[15px] font-medium line-clamp-2 max-w-2xl">{tool.short_desc}</p>
+                      <div className="flex items-center gap-2 mt-3">
+                        <span className="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-widest border border-slate-200">
+                          🌍 {tool.country || 'USA'}
+                        </span>
+                      </div>
                     </div>
                     
                     <div className="bg-slate-900 px-6 py-4 rounded-[24px] text-right shrink-0 w-full 2xl:w-auto shadow-xl shadow-slate-200 group-hover:bg-blue-600 transition-colors duration-500">

@@ -127,10 +127,14 @@ export default async function ToolPage({ params }: Props) {
           </header>
 
           {/* At a Glance Grid - Inspired by Capterra */}
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <section className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-10">
+            <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1.5">Country</span>
+              <span className="text-sm font-bold text-slate-900 leading-tight">🌍 {tool.country || 'USA'}</span>
+            </div>
             <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
               <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1.5">Best For</span>
-              <span className="text-sm font-bold text-slate-900 leading-tight">{tool.industries[0]} Professionals</span>
+              <span className="text-sm font-bold text-slate-900 leading-tight">{tool.industries[0]}</span>
             </div>
             <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
               <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1.5">Platform</span>
