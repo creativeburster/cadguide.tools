@@ -381,7 +381,7 @@ function ToolsList() {
 
 export default function ToolsDirectoryPage() {
   return (
-    <main className="container mx-auto px-4 py-10 min-h-screen">
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 py-10 min-h-screen">
       <div className="mb-10 text-center">
         <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1 mb-4 font-bold uppercase tracking-widest text-[10px]">
           CAD Directory

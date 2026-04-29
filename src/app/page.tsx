@@ -60,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* 1. TOP RATED SHELF */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="flex items-center justify-between mb-10 gap-4 border-b border-slate-100 pb-6">
           <div>
             <h2 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">Industry Standards</h2>
@@ -110,7 +110,7 @@ export default function Home() {
 
       {/* 2. BIM & AEC SHELF - Light Gray Background */}
       <section className="bg-slate-50 py-20">
-        <div className="container mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
              <div className="flex items-center gap-4">
                <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
@@ -138,7 +138,7 @@ export default function Home() {
       {/* 3. VERTICAL GEMS - Dark Blue Background */}
       <section className="bg-[#0a192f] py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px]"></div>
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">Specialized Vertical Gems</h2>
             <p className="text-blue-200/50 max-w-2xl mx-auto font-medium">Deep-industry specific tools that redefine professional efficiency in niche sectors.</p>
@@ -161,7 +161,7 @@ export default function Home() {
 
       {/* Trust Section */}
       <section className="bg-white text-slate-900 py-24 border-y border-slate-100">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-4 tracking-tight">Independent & Objective Analysis</h2>
           <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don't accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
@@ -184,7 +184,7 @@ export default function Home() {
       <section className="py-24 bg-blue-600 text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-700 rounded-full blur-3xl opacity-50 -ml-32 -mb-32"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6">Can't Find Your Preferred Software?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
             Our directory is growing every day. If you want us to review a specific tool, or if you're a vendor, let us know.

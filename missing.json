@@ -1,0 +1,314 @@
+[
+  {
+    "country": "USA",
+    "name": "Inventor",
+    "company": "Autodesk",
+    "url": "https://www.autodesk.com/products/inventor\r"
+  },
+  {
+    "country": "USA",
+    "name": "Creo",
+    "company": "PTC",
+    "url": "https://www.ptc.com/en/products/creo\r"
+  },
+  {
+    "country": "USA",
+    "name": "Rhinoceros 3D",
+    "company": "Robert McNeel & Associates",
+    "url": "https://www.rhino3d.com/\r"
+  },
+  {
+    "country": "USA",
+    "name": "TurboCAD",
+    "company": "IMSI/Design",
+    "url": "https://www.turbocad.com/\r"
+  },
+  {
+    "country": "France",
+    "name": "3DEXPERIENCE",
+    "company": "Dassault Systèmes",
+    "url": "https://www.3ds.com/\r"
+  },
+  {
+    "country": "France",
+    "name": "TopSolid",
+    "company": "TOPSOLID SAS",
+    "url": "https://www.topsolid.com/\r"
+  },
+  {
+    "country": "France",
+    "name": "BIMoffice",
+    "company": "Abvent",
+    "url": "https://www.bimoffice.com/\r"
+  },
+  {
+    "country": "Germany",
+    "name": "EPLAN",
+    "company": "EPLAN Software & Service",
+    "url": "https://www.eplan-software.com/\r"
+  },
+  {
+    "country": "Germany",
+    "name": "MEDUSA4",
+    "company": "CAD Schroer",
+    "url": "https://www.cad-schroer.com/\r"
+  },
+  {
+    "country": "Germany",
+    "name": "HiCAD",
+    "company": "ISD Group",
+    "url": "https://www.isdgroup.com/\r"
+  },
+  {
+    "country": "Germany",
+    "name": "BeckerCAD",
+    "company": "Markt+Technik",
+    "url": "https://www.beckercad.de/\r"
+  },
+  {
+    "country": "Germany",
+    "name": "pCon.planner",
+    "company": "EasternGraphics",
+    "url": "https://pcon-planner.com/\r"
+  },
+  {
+    "country": "China",
+    "name": "CrownCAD",
+    "company": "Hualian",
+    "url": "https://www.crowncad.com/\r"
+  },
+  {
+    "country": "China",
+    "name": "SINOVATION",
+    "company": "Hualian",
+    "url": "http://www.hweast.com/\r"
+  },
+  {
+    "country": "China",
+    "name": "HaoChen CAD",
+    "company": "Gstarsoft",
+    "url": "http://www.hccad.net/\r"
+  },
+  {
+    "country": "Japan",
+    "name": "CR-8000",
+    "company": "Zuken",
+    "url": "https://www.zuken.com/\r"
+  },
+  {
+    "country": "Japan",
+    "name": "CADmeister",
+    "company": "UEL Corporation",
+    "url": "https://www.uel.co.jp/\r"
+  },
+  {
+    "country": "Japan",
+    "name": "IJCAD",
+    "company": "System Metrix",
+    "url": "https://www.ijcad.jp/\r"
+  },
+  {
+    "country": "Japan",
+    "name": "Quadcept",
+    "company": "Quadcept",
+    "url": "https://www.quadcept.com/\r"
+  },
+  {
+    "country": "Japan",
+    "name": "RootPro CAD",
+    "company": "RootPro",
+    "url": "https://www.rootprocad.com/\r"
+  },
+  {
+    "country": "Japan",
+    "name": "V-nas",
+    "company": "KTS",
+    "url": "https://www.kts.co.jp/\r"
+  },
+  {
+    "country": "Russia",
+    "name": "KOMPAS-3D",
+    "company": "ASCON",
+    "url": "https://ascon.net/\r"
+  },
+  {
+    "country": "Russia",
+    "name": "T-FLEX CAD",
+    "company": "Top Systems",
+    "url": "https://www.tflex.com/\r"
+  },
+  {
+    "country": "Russia",
+    "name": "Renga",
+    "company": "Renga Software",
+    "url": "https://rengabim.com/\r"
+  },
+  {
+    "country": "Russia",
+    "name": "Model Studio CS",
+    "company": "CSoft",
+    "url": "https://www.mstudio.ru/\r"
+  },
+  {
+    "country": "UK",
+    "name": "AVEVA E3D Design",
+    "company": "AVEVA",
+    "url": "https://www.aveva.com/\r"
+  },
+  {
+    "country": "UK",
+    "name": "DesignSpark Mechanical",
+    "company": "RS Components",
+    "url": "https://www.rs-online.com/designspark/\r"
+  },
+  {
+    "country": "UK",
+    "name": "LUSAS",
+    "company": "LUSAS",
+    "url": "https://www.lusas.com/\r"
+  },
+  {
+    "country": "UK",
+    "name": "Visi",
+    "company": "Hexagon (Vero)",
+    "url": "https://www.hexagonmi.com/\r"
+  },
+  {
+    "country": "UK",
+    "name": "Edgecam",
+    "company": "Hexagon (Vero)",
+    "url": "https://www.hexagonmi.com/\r"
+  },
+  {
+    "country": "South Korea",
+    "name": "midas Civil",
+    "company": "MIDAS IT",
+    "url": "https://www.midasoft.com/\r"
+  },
+  {
+    "country": "South Korea",
+    "name": "midas Gen",
+    "company": "MIDAS IT",
+    "url": "https://www.midasoft.com/\r"
+  },
+  {
+    "country": "South Korea",
+    "name": "CADian",
+    "company": "Intelli Korea",
+    "url": "https://www.cadian.com/\r"
+  },
+  {
+    "country": "Italy",
+    "name": "progeCAD",
+    "company": "progeSOFT",
+    "url": "https://www.progesoft.com/\r"
+  },
+  {
+    "country": "Italy",
+    "name": "Edificius",
+    "company": "ACCA software",
+    "url": "https://www.accasoftware.com/\r"
+  },
+  {
+    "country": "Italy",
+    "name": "EdiLus",
+    "company": "ACCA software",
+    "url": "https://www.accasoftware.com/\r"
+  },
+  {
+    "country": "Italy",
+    "name": "think3",
+    "company": "think3",
+    "url": "https://www.think3.eu/\r"
+  },
+  {
+    "country": "Australia",
+    "name": "Maptek Vulcan",
+    "company": "Maptek",
+    "url": "https://www.maptek.com/\r"
+  },
+  {
+    "country": "Canada",
+    "name": "Promine",
+    "company": "Promine",
+    "url": "https://www.promine.com/\r"
+  },
+  {
+    "country": "Belgium",
+    "name": "OOFELIE",
+    "company": "Open Engineering",
+    "url": "https://www.open-engineering.com/\r"
+  },
+  {
+    "country": "Spain",
+    "name": "CYPECAD",
+    "company": "CYPE",
+    "url": "https://www.cype.com/\r"
+  },
+  {
+    "country": "Spain",
+    "name": "TeKton3D",
+    "company": "iMventa",
+    "url": "https://www.imventa.com/\r"
+  },
+  {
+    "country": "Switzerland",
+    "name": "KISSsoft",
+    "company": "KISSsoft AG",
+    "url": "https://www.kisssoft.com/\r"
+  },
+  {
+    "country": "Switzerland",
+    "name": "cadwork",
+    "company": "cadwork informatik",
+    "url": "https://www.cadwork.com/\r"
+  },
+  {
+    "country": "Finland",
+    "name": "MagiCAD",
+    "company": "MagiCAD Group",
+    "url": "https://www.magicad.com/\r"
+  },
+  {
+    "country": "Finland",
+    "name": "Vertex BD",
+    "company": "Vertex Systems",
+    "url": "https://www.vertex.fi/\r"
+  },
+  {
+    "country": "Sweden",
+    "name": "CET Designer",
+    "company": "Configura",
+    "url": "https://www.configura.com/\r"
+  },
+  {
+    "country": "India",
+    "name": "ActCAD",
+    "company": "ActCAD LLC",
+    "url": "https://actcad.com/\r"
+  },
+  {
+    "country": "India",
+    "name": "CADVision",
+    "company": "CADVision Systems",
+    "url": "https://www.cadvision.com/\r"
+  },
+  {
+    "country": "Brazil",
+    "name": "Eberick",
+    "company": "AltoQi",
+    "url": "https://www.altoqi.com.br/\r"
+  },
+  {
+    "country": "Brazil",
+    "name": "Promob",
+    "company": "Promob Software",
+    "url": "https://www.promob.com/\r"
+  },
+  {
+    "country": "Netherlands",
+    "name": "SCIA Engineer",
+    "company": "Nemetschek (SCIA)",
+    "url": "https://www.scia.net/\r"
+  }
+]

@@ -126,11 +126,36 @@
     width: 100%;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
+    
+    /* Responsive base font size */
+    font-size: 15px; /* Default for mobile/tablet */
   }
+
+  @media (min-width: 1280px) {
+    html {
+      font-size: 16px; /* Standard Desktop */
+    }
+  }
+
+  @media (min-width: 1920px) {
+    html {
+      font-size: 18px; /* Large Monitors / 4K */
+    }
+  }
+
+  @media (min-width: 2560px) {
+    html {
+      font-size: 20px; /* Ultrawide / High-DPI */
+    }
+  }
+
   body {
     @apply bg-background text-foreground;
     width: 100%;
     overflow-x: hidden;
     position: relative;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

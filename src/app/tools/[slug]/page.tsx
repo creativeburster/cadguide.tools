@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${tool.name} Review 2026: Pricing, Features & Alternatives | CADTools.io`,
     description: `Expert review of ${tool.name}. Explore its ${tool.core_features.slice(0, 3).join(', ')} features, pricing starting at $${tool.starting_price}, and professional verdict by CAD experts.`,
-    alternatives: {
+    alternates: {
       canonical: `https://cadtools.io/tools/${tool.slug}`,
     },
     openGraph: {
@@ -90,7 +90,7 @@ export default async function ToolPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
-      <nav className="bg-slate-50 border-b py-3 text-sm text-slate-500">
+      <nav className="bg-slate-50 border-b py-3 text-sm md:text-base text-slate-500">
         <div className="container mx-auto px-4">
           <Link href="/" className="hover:text-blue-600 font-medium transition-colors">Home</Link>
           <span className="mx-2 opacity-30">/</span>
@@ -100,7 +100,7 @@ export default async function ToolPage({ params }: Props) {
         </div>
       </nav>
 
-      <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-12">
+      <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-12">
         <main className="flex-1">
           <header className="flex flex-col md:flex-row items-start gap-6 mb-8">
             <ToolLogo 
