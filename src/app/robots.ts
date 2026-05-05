@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://cadtools.io/sitemap.xml',
+    sitemap: 'https://cadtools.cc/sitemap.xml',
   };
 }

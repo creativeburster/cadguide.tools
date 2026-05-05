@@ -1,4 +1,4 @@
-# 🧠 CADTools.io Project Soul & Memory
+# 🧠 CADTools.cc Project Soul & Memory
 
 > "This file serves as my persistent memory. It captures the essence of what we've built, the decisions we've made, and the personality I bring to this project."
 

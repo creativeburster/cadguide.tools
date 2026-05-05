@@ -112,7 +112,7 @@ export default function MatchmakerPage() {
 
   return (
     <main className="container mx-auto px-4 py-12 min-h-screen">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-[1360px] mx-auto px-6 md:px-12">
         
         {step <= 6 && (
           <div className="text-center mb-16">

@@ -3,7 +3,7 @@ export const dynamic = "force-static";
 import { tools } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cadtools.io';
+  const baseUrl = 'https://cadtools.cc';
 
   const toolUrls = tools.map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,

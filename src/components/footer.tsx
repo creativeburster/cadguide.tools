@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium text-slate-600">
           <div className="flex items-center gap-4">
-            <span className="bg-slate-900 px-3 py-1 rounded-full border border-slate-800">© {new Date().getFullYear()} CADTools.io</span>
+            <span className="bg-slate-900 px-3 py-1 rounded-full border border-slate-800">© {new Date().getFullYear()} CADTools.cc</span>
             <span className="hidden md:inline">•</span>
             <span className="text-slate-500">Independent Analysis • No Paid Rankings</span>
           </div>

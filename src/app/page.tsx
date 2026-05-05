@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 import { ToolLogo } from '@/components/tool-logo';
 
 export const metadata: Metadata = {
-  title: 'CADTools.io: Compare 75+ Best CAD Software 2026 (Free & Pro)',
+  title: 'CADTools.cc: Compare 75+ Best CAD Software 2026 (Free & Pro)',
   description: 'Find the perfect design tool. Compare 75+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
   keywords: ['best CAD software 2026', 'CAD comparison directory', 'AutoCAD alternatives', 'BIM software review', 'specialized CAD tools', 'free 2D CAD'],
 };
@@ -30,10 +30,10 @@ export default function Home() {
             Verified & Updated: April 2026
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1] break-words">
-            Compare <span className="text-blue-400">75+ Top CAD</span> Tools in 60s.
+            Compare and Find Your <span className="text-blue-400">Perfect CAD</span> Software.
           </h1>
           <p className="text-lg sm:text-xl text-blue-100/70 mb-14 max-w-2xl mx-auto leading-relaxed">
-            Independent reviews, transparent pricing, and deep technical specs for 75+ professional CAD & BIM software.
+            Independent reviews, transparent pricing, and deep technical specs for 80+ professional CAD & BIM software.
           </p>
           
           {/* Advanced Search Mockup */}
@@ -60,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* 1. TOP RATED SHELF */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-[1360px] mx-auto px-6 py-16">
         <div className="flex items-center justify-between mb-10 gap-4 border-b border-slate-100 pb-6">
           <div>
             <h2 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">Industry Standards</h2>
@@ -110,7 +110,7 @@ export default function Home() {
 
       {/* 2. BIM & AEC SHELF - Light Gray Background */}
       <section className="bg-slate-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
              <div className="flex items-center gap-4">
                <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
@@ -138,7 +138,7 @@ export default function Home() {
       {/* 3. VERTICAL GEMS - Dark Blue Background */}
       <section className="bg-[#0a192f] py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px]"></div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-[1360px] mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">Specialized Vertical Gems</h2>
             <p className="text-blue-200/50 max-w-2xl mx-auto font-medium">Deep-industry specific tools that redefine professional efficiency in niche sectors.</p>

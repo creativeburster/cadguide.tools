@@ -6,7 +6,7 @@ export default function SponsorPage() {
   return (
     <main className="container mx-auto px-4 py-12 max-w-4xl">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4">Partner with CADTools.io</h1>
+        <h1 className="text-4xl font-bold mb-4">Partner with CADTools.cc</h1>
         <p className="text-xl text-muted-foreground">Reach a highly targeted audience of engineers, architects, and decision-makers.</p>
       </div>
 
@@ -44,7 +44,7 @@ export default function SponsorPage() {
       </div>
 
       <div className="mt-16 text-center text-slate-500">
-        <p>Contact us at: <span className="font-bold">partners@cadtools.io</span></p>
+        <p>Contact us at: <span className="font-bold">partners@cadtools.cc</span></p>
       </div>
     </main>
   );

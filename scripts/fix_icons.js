@@ -1,0 +1,12 @@
+const fs = require('fs');
+
+// Solid blue 192x192 PNG
+const icon192 = "iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlS0LnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAADUExURQAA/6f889AAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAXSURBVHhe7cEBDAAAAMOg+VPf4ARVAQBg7wAtAAAB9+I9AAAAAElFTkSuQmCC";
+
+// Solid blue 512x512 PNG
+const icon512 = "iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAAQMAAADO7ggGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAADUExURQAA/6f889AAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVHhe7cEBDAAAAMOg+VPf4ARVAQBg7wAtAAAB9+I9AAAAAElFTkSuQmCC";
+
+fs.writeFileSync('public/icon-192.png', Buffer.from(icon192, 'base64'));
+fs.writeFileSync('public/icon-512.png', Buffer.from(icon512, 'base64'));
+
+console.log('Icons fixed with valid dimensions.');

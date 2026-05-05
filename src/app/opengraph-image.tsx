@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og';
 export const dynamic = 'force-static';
 export const runtime = 'edge';
 
-export const alt = 'CADTools.io - The Ultimate CAD Software Directory';
+export const alt = 'CADTools.cc - The Ultimate CAD Software Directory';
 export const size = {
   width: 1200,
   height: 630,
@@ -58,7 +58,7 @@ export default async function Image() {
               letterSpacing: '-2px',
             }}
           >
-            CADTools.io
+            CADTools.cc
           </div>
         </div>
         

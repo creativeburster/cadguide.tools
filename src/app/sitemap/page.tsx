@@ -6,7 +6,7 @@ export default function SitemapPage() {
     <main className="min-h-screen bg-slate-50 py-20">
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Site Sitemap</h1>
-        <p className="text-slate-600 mb-12 text-lg">A comprehensive overview of all pages on CADTools.io. This sitemap is updated automatically.</p>
+        <p className="text-slate-600 mb-12 text-lg">A comprehensive overview of all pages on CADTools.cc. This sitemap is updated automatically.</p>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Main Pages */}
