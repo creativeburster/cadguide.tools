@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="text-2xl font-black text-white flex items-center gap-2">
-              <span className="text-blue-500">CAD</span>Tools.io
+              <span className="text-blue-500">CAD</span>Tools.cc
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
               The world's premier independent directory for CAD, BIM, and Engineering software. Deep-diving into 80+ tools to help professionals make smarter tech decisions.

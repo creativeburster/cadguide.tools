@@ -24,7 +24,7 @@ export function Navbar() {
         <div className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
           <Link href="/" className="text-xl font-bold text-slate-900 flex items-center gap-2 group shrink-0">
             <span className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white text-sm shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform font-black">CT</span>
-            <span className="tracking-tight hidden sm:inline-block">CADTools<span className="text-blue-600">.io</span></span>
+            <span className="tracking-tight hidden sm:inline-block">CADTools<span className="text-blue-600">.cc</span></span>
           </Link>
 
           {/* Desktop Nav */}
