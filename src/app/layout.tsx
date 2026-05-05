@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "CADTools.cc | Compare 80+ CAD & BIM Software (ASM vs Parasolid)",
   description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, and pricing for 80+ professional 2D/3D design tools.",
   metadataBase: new URL('https://cadtools.cc'),
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
