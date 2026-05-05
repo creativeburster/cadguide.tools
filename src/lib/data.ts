@@ -47,6 +47,12 @@ export interface Tool {
     items: { name: string; status: boolean }[];
   }[];
   alternatives?: string[]; // slugs of similar tools
+  pricing_breakdown?: {
+    tier: string;
+    price: string;
+    notes: string;
+  }[];
+  key_capabilities?: string[];
 }
 
 export const categories: Category[] = [
@@ -352,11 +358,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'V-Ray Integration (Studio Tier)',
-      'Point Cloud Modeling (Scan Essentials)',
-      'Direct Revit File Import',
-      'Sefaira for Energy & Carbon Analysis',
-      'Advanced Solid Tools for 3D Printing',
+      {
+        category: 'Features',
+        items: [
+          { name: 'V-Ray Integration (Studio Tier)', status: true },
+          { name: 'Point Cloud Modeling (Scan Essentials)', status: true },
+          { name: 'Direct Revit File Import', status: true },
+          { name: 'Sefaira for Energy & Carbon Analysis', status: true },
+          { name: 'Advanced Solid Tools for 3D Printing', status: true }
+        ],
+      },
     ],
 
     alternatives: ['rhino-3d', 'revit', 'archicad'],
@@ -440,11 +451,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'Toposolid: Advanced terrain modeling tools',
-      'Accelerated Graphics (Tech Preview)',
-      'Automated Sheet Placement',
-      'MEP Fabrication Modeling enhancements',
-      'Native IFC Support & Interoperability',
+      {
+        category: 'Features',
+        items: [
+          { name: 'Toposolid: Advanced terrain modeling tools', status: true },
+          { name: 'Accelerated Graphics (Tech Preview)', status: true },
+          { name: 'Automated Sheet Placement', status: true },
+          { name: 'MEP Fabrication Modeling enhancements', status: true },
+          { name: 'Native IFC Support & Interoperability', status: true }
+        ],
+      },
     ],
 
     alternatives: ['archicad', 'vectorworks', 'allplan'],
@@ -1147,11 +1163,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'Extensible via Python API',
-      'Modular Workbench-based UI',
-      'Support for many formats (STEP, IGES, STL, DXF)',
-      'Sketcher with constraint solver',
-      'Path (CAM) module for CNC',
+      {
+        category: 'Features',
+        items: [
+          { name: 'Extensible via Python API', status: true },
+          { name: 'Modular Workbench-based UI', status: true },
+          { name: 'Support for many formats (STEP, IGES, STL, DXF)', status: true },
+          { name: 'Sketcher with constraint solver', status: true },
+          { name: 'Path (CAM) module for CNC', status: true }
+        ],
+      },
     ],
 
     alternatives: ['solidworks', 'fusion-360', 'solvespace'],
@@ -1232,11 +1253,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'Flexi-block (similar to Dynamic Blocks)',
-      'Smart Voice: Add voice annotations to drawings',
-      'Smart Select: Multi-criteria object selection',
-      'Hardware Acceleration for large drawings',
-      'DWG 2024 support',
+      {
+        category: 'Features',
+        items: [
+          { name: 'Flexi-block (similar to Dynamic Blocks)', status: true },
+          { name: 'Smart Voice: Add voice annotations to drawings', status: true },
+          { name: 'Smart Select: Multi-criteria object selection', status: true },
+          { name: 'Hardware Acceleration for large drawings', status: true },
+          { name: 'DWG 2024 support', status: true }
+        ],
+      },
     ],
 
     alternatives: ['autocad', 'bricscad', 'gstarcad'],
@@ -1322,11 +1348,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'One platform for 2D, 3D, BIM, and Mechanical',
-      'Propagate: Copy details across entire model',
-      'Automated Scan-to-BIM workflows',
-      'Assembly design & Kinematics',
-      'Parametric Blocks with constraints',
+      {
+        category: 'Features',
+        items: [
+          { name: 'One platform for 2D, 3D, BIM, and Mechanical', status: true },
+          { name: 'Propagate: Copy details across entire model', status: true },
+          { name: 'Automated Scan-to-BIM workflows', status: true },
+          { name: 'Assembly design & Kinematics', status: true },
+          { name: 'Parametric Blocks with constraints', status: true }
+        ],
+      },
     ],
 
     alternatives: ['autocad', 'zwcad', 'revit'],
@@ -1805,11 +1836,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'Support for more than 30 languages',
-      'Plugin support for extra features',
-      'Advanced snapping system',
-      'Library of blocks/symbols',
-      'Active community support',
+      {
+        category: 'Features',
+        items: [
+          { name: 'Support for more than 30 languages', status: true },
+          { name: 'Plugin support for extra features', status: true },
+          { name: 'Advanced snapping system', status: true },
+          { name: 'Library of blocks/symbols', status: true },
+          { name: 'Active community support', status: true }
+        ],
+      },
     ],
 
     alternatives: ['qcad', 'nanocad', 'autocad'],
@@ -2889,11 +2925,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'Extremely fast file opening & saving',
-      'Cloud storage integration',
-      'Mobile App (GstarCAD MC) integration',
-      'Batch Printing & File Comparison',
-      'Parametric Constraint support',
+      {
+        category: 'Features',
+        items: [
+          { name: 'Extremely fast file opening & saving', status: true },
+          { name: 'Cloud storage integration', status: true },
+          { name: 'Mobile App (GstarCAD MC) integration', status: true },
+          { name: 'Batch Printing & File Comparison', status: true },
+          { name: 'Parametric Constraint support', status: true }
+        ],
+      },
     ],
 
     alternatives: ['autocad', 'zwcad', 'bricscad'],
@@ -4247,11 +4288,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'Extremely fast file opening & saving',
-      'Cloud storage integration',
-      'Mobile App (GstarCAD MC) integration',
-      'Batch Printing & File Comparison',
-      'Parametric Constraint support',
+      {
+        category: 'Features',
+        items: [
+          { name: 'Extremely fast file opening & saving', status: true },
+          { name: 'Cloud storage integration', status: true },
+          { name: 'Mobile App (GstarCAD MC) integration', status: true },
+          { name: 'Batch Printing & File Comparison', status: true },
+          { name: 'Parametric Constraint support', status: true }
+        ],
+      },
     ],
   },
   {
@@ -4533,11 +4579,16 @@ export const tools: Tool[] = [
     ],
 
     detailed_features: [
-      'Support for more than 30 languages',
-      'Plugin support for extra features',
-      'Advanced snapping system',
-      'Library of blocks/symbols',
-      'Active community support',
+      {
+        category: 'Features',
+        items: [
+          { name: 'Support for more than 30 languages', status: true },
+          { name: 'Plugin support for extra features', status: true },
+          { name: 'Advanced snapping system', status: true },
+          { name: 'Library of blocks/symbols', status: true },
+          { name: 'Active community support', status: true }
+        ],
+      },
     ],
   },
   {
