@@ -259,7 +259,7 @@ function ToolsList() {
               <div className="flex flex-col xl:flex-row items-start gap-6">
                 <div className="flex flex-col items-center gap-4 shrink-0 w-full xl:w-32">
                   <div className="w-24 h-24 bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-100 group-hover:scale-105 transition-transform duration-500 relative">
-                    <ToolLogo src={tool.logo_url} name={tool.name} className="w-full h-full" />
+                    <ToolLogo src={tool.logo_url} websiteUrl={tool.official_url} name={tool.name} className="w-full h-full" />
                     <div className="absolute -top-1 -right-1 bg-white border border-slate-100 shadow-lg rounded-xl px-2.5 py-1 text-[10px] font-black text-blue-600 z-10">
                       {tool.score}
                     </div>

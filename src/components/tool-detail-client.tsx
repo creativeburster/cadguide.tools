@@ -70,10 +70,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 120,
-        behavior: 'smooth'
-      });
+      // offsetTop is relative to offsetParent (not always the body),
+      // which made the previous window.scrollTo no-op when sections were
+      // nested inside positioned containers. scrollIntoView walks the
+      // ancestor chain correctly, and `scroll-mt-36` on each section
+      // already accounts for the sticky sub-nav.
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -117,6 +119,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 <div className="flex flex-col md:flex-row items-start gap-10 mb-12">
                   <ToolLogo 
                     src={tool.logo_url} 
+                    websiteUrl={tool.official_url}
                     name={tool.name} 
                     className="w-24 h-24 md:w-40 md:h-40 rounded-[40px] shadow-2xl border-4 border-white shrink-0 bg-white" 
                   />
@@ -370,7 +373,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   </p>
                   <div className="flex flex-col md:flex-row md:items-center justify-between border-t border-white/5 pt-12 gap-8">
                     <div className="flex items-center gap-4">
-                       <ToolLogo src={tool.logo_url} name={tool.name} className="w-14 h-14 rounded-2xl bg-white p-1" />
+                       <ToolLogo src={tool.logo_url} websiteUrl={tool.official_url} name={tool.name} className="w-14 h-14 rounded-2xl bg-white p-1" />
                        <div>
                          <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Editor Score</div>
                          <div className="text-3xl font-black">{tool.score} <span className="text-blue-400">/ 5.0</span></div>
@@ -421,7 +424,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               <div className="grid md:grid-cols-3 gap-8">
                 {alternativeTools.map((alt) => alt && (
                   <Card key={alt.id} className="p-10 text-center rounded-[48px] border-slate-100 hover:border-blue-600 transition-all group shadow-sm hover:shadow-2xl">
-                    <ToolLogo src={alt.logo_url} name={alt.name} className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-sm border border-slate-50 group-hover:scale-110 transition-all duration-500" />
+                    <ToolLogo src={alt.logo_url} websiteUrl={alt.official_url} name={alt.name} className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-sm border border-slate-50 group-hover:scale-110 transition-all duration-500" />
                     <h5 className="font-black text-xl mb-2">{alt.name}</h5>
                     <div className="text-yellow-500 font-black text-sm mb-8">★ {alt.score} <span className="text-slate-300">/ 5.0</span></div>
                     <Button asChild variant="outline" className="w-full rounded-[20px] font-black h-14 hover:bg-blue-600 hover:text-white transition-all">
@@ -525,7 +528,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 <div className="space-y-6">
                   {trendingTools.map(t => (
                     <Link key={t.id} href={`/tools/${t.slug}`} className="flex items-center gap-4 group">
-                      <ToolLogo src={t.logo_url} name={t.name} className="w-12 h-12 rounded-xl border border-slate-50 group-hover:scale-105 transition-transform" />
+                      <ToolLogo src={t.logo_url} websiteUrl={t.official_url} name={t.name} className="w-12 h-12 rounded-xl border border-slate-50 group-hover:scale-105 transition-transform" />
                       <div className="flex-1 min-w-0">
                         <div className="font-black text-slate-900 text-sm truncate group-hover:text-blue-600 transition-colors">{t.name}</div>
                         <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">{t.pricing_type}</div>

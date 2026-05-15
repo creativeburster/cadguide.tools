@@ -171,6 +171,7 @@ export default function DealsPage() {
                     <div className="flex justify-between items-start mb-6">
                       <ToolLogo 
                         src={tool?.logo_url || ''} 
+                        websiteUrl={tool?.official_url}
                         name={tool?.name || 'CAD Tool'} 
                         className="w-12 h-12 border border-slate-100 rounded-2xl group-hover:scale-110 transition-transform" 
                       />

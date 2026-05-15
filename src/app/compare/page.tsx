@@ -95,7 +95,7 @@ function CompareContent() {
                   onClick={() => addTool(tool.id)}
                   className="w-full flex items-center gap-5 px-6 py-4 hover:bg-blue-50 transition-all rounded-2xl text-left"
                 >
-                  <ToolLogo src={tool.logo_url} name={tool.name} className="w-12 h-12 rounded-xl" />
+                  <ToolLogo src={tool.logo_url} websiteUrl={tool.official_url} name={tool.name} className="w-12 h-12 rounded-xl" />
                   <div>
                     <div className="font-black text-slate-900">{tool.name}</div>
                     <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{tool.industries[0]}</div>
@@ -130,7 +130,7 @@ function CompareContent() {
                             >
                               <X className="w-5 h-5" />
                             </button>
-                            <ToolLogo src={tool.logo_url} name={tool.name} className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-xl border border-slate-50" />
+                            <ToolLogo src={tool.logo_url} websiteUrl={tool.official_url} name={tool.name} className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-xl border border-slate-50" />
                             <h3 className="text-2xl font-black text-slate-900 mb-3 tracking-tight">{tool.name}</h3>
                             <div className="inline-flex items-center gap-2 bg-yellow-50 px-4 py-1.5 rounded-xl border border-yellow-100">
                               <span className="text-yellow-600 font-black text-lg">★ {tool.score}</span>

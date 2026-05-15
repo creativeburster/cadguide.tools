@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
+import { ToolLogo } from '@/components/tool-logo';
 import Link from 'next/link';
 
 export default function MatchmakerPage() {
@@ -215,9 +216,12 @@ export default function MatchmakerPage() {
                     )}
                     <div className="flex flex-col xl:flex-row gap-10">
                       <div className="w-full xl:w-48 flex flex-col items-center gap-6">
-                        <div className="w-32 h-32 bg-white rounded-3xl flex items-center justify-center p-6 border border-slate-50 shadow-xl shadow-slate-100 group-hover:scale-105 transition-transform duration-500">
-                          <img src={tool.logo_url} alt={tool.name} className="max-h-full max-w-full object-contain" />
-                        </div>
+                        <ToolLogo
+                          src={tool.logo_url}
+                          websiteUrl={tool.official_url}
+                          name={tool.name}
+                          className="w-32 h-32 bg-white rounded-3xl border border-slate-50 shadow-xl shadow-slate-100 group-hover:scale-105 transition-transform duration-500"
+                        />
                         <div className="text-center w-full">
                           <div className="text-3xl font-black text-blue-600">{tool.score}</div>
                           <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Match Score</div>
@@ -296,7 +300,7 @@ export default function MatchmakerPage() {
                          <div className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2 px-2 border-b border-slate-50 pb-1">Search Results</div>
                          {filteredRecommendations.slice(0, 3).map(t => (
                            <Link key={t.id} href={`/tools/${t.slug}`} className="flex items-center gap-2 p-2 hover:bg-blue-50 rounded-lg transition-all group">
-                             <div className="w-8 h-8 bg-slate-50 rounded p-1.5 shrink-0 border border-slate-100 group-hover:border-blue-200"><img src={t.logo_url} alt="" className="max-h-full max-w-full object-contain" /></div>
+                             <ToolLogo src={t.logo_url} websiteUrl={t.official_url} name={t.name} className="w-8 h-8 bg-slate-50 rounded shrink-0 border border-slate-100 group-hover:border-blue-200" />
                              <div className="flex-1 min-w-0">
                                <div className="font-black text-xs text-slate-900 truncate">{t.name}</div>
                                <div className="text-[8px] text-slate-400 font-bold uppercase">{t.pricing_type}</div>
