@@ -39,6 +39,7 @@ import {
   Star,
 } from "lucide-react";
 import { Tool, Category, tools as allTools } from "@/lib/data";
+import { linkifyToolNames } from "@/lib/linkify";
 
 interface Props {
   tool: Tool;
@@ -259,7 +260,11 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
                 <div className="prose prose-slate max-w-none">
                   <p className="text-2xl text-slate-600 leading-relaxed font-medium mb-10">
-                    {tool.description}
+                    {linkifyToolNames(tool.description, allTools, {
+                      currentSlug: tool.slug,
+                      className:
+                        "text-blue-600 hover:text-blue-700 underline decoration-blue-200 hover:decoration-blue-500 transition-colors",
+                    })}
                   </p>
 
                   <div className="flex flex-wrap items-center gap-4 mb-10">

@@ -205,33 +205,6 @@ export const categories: Category[] = [
 const getLogo = (name: string) =>
   `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0f172a&color=fff&size=200&bold=true&font-size=0.33`;
 
-const genericFaqs = (name: string) => [
-  {
-    q: `Is ${name} suitable for professional work?`,
-    a: `Yes, ${name} is widely used in its respective industry by professionals.`,
-  },
-  {
-    q: `What are the system requirements for ${name}?`,
-    a: `It typically requires a modern multi-core processor, 8GB+ RAM, and a dedicated graphics card.`,
-  },
-  {
-    q: `Does ${name} support DWG files?`,
-    a: `Many professional CAD tools support DWG, but you should check specific import/export capabilities.`,
-  },
-  {
-    q: `Is there a free trial for ${name}?`,
-    a: `Most professional software offers a 15-30 day free trial on their official website.`,
-  },
-  {
-    q: `Where can I find tutorials for ${name}?`,
-    a: `YouTube, Udemy, and the official vendor documentation are great starting points.`,
-  },
-  {
-    q: `Can ${name} run on a laptop?`,
-    a: `Yes, provided it meets the hardware specifications for 3D rendering and processing.`,
-  },
-];
-
 export const tools: Tool[] = [
   {
     id: "t1",
@@ -355,7 +328,32 @@ export const tools: Tool[] = [
       "High precision",
     ],
     cons: ["Expensive", "Non-parametric 3D", "Single-core modeling"],
-    faqs: genericFaqs("AutoCAD"),
+    faqs: [
+      {
+        q: "What is AutoCAD used for?",
+        a: "The global industrial standard for 2D drafting and 3D modeling. AutoCAD is a 2D CAD solution widely adopted in Architecture, Engineering, Manufacturing.",
+      },
+      {
+        q: "How much does AutoCAD cost?",
+        a: "AutoCAD starts at $255 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does AutoCAD offer a free trial?",
+        a: "Yes — AutoCAD ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does AutoCAD support?",
+        a: "AutoCAD runs on Windows, macOS, and Web. Deployment options include desktop, cloud, web.",
+      },
+      {
+        q: "Which file formats does AutoCAD support?",
+        a: "AutoCAD imports DWG, DXF, DWF, DGN, STEP, IGES and more. Export covers DWG, DXF, DWF, PDF, STL, IGES and more.",
+      },
+      {
+        q: "Does AutoCAD have an API for automation and customization?",
+        a: "Yes. AutoCAD exposes AutoLISP / ObjectARX / .NET / VBA with SDK bindings for C++, C#, .NET, LISP. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Autodesk ShapeManager (ASM)",
@@ -564,7 +562,7 @@ export const tools: Tool[] = [
       },
     ],
 
-    alternatives: ["autodesk-inventor", "solidedge", "onshape"],
+    alternatives: ["autodesk-inventor", "onshape", "ptc-creo"],
     country: "USA",
     category_id: "c2",
     pricing_type: "Subscription",
@@ -588,7 +586,32 @@ export const tools: Tool[] = [
       "Unmatched ecosystem",
     ],
     cons: ["Windows only", "Hardware hungry", "Legacy API"],
-    faqs: genericFaqs("SolidWorks"),
+    faqs: [
+      {
+        q: "What is SolidWorks used for?",
+        a: "The de-facto industry standard for 3D parametric mechanical design. SolidWorks is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Automotive.",
+      },
+      {
+        q: "How much does SolidWorks cost?",
+        a: "SolidWorks starts at $1,295 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does SolidWorks offer a free trial?",
+        a: "Yes — SolidWorks ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does SolidWorks support?",
+        a: "SolidWorks runs on Windows. Deployment options include desktop, cloud.",
+      },
+      {
+        q: "Which file formats does SolidWorks support?",
+        a: "SolidWorks imports SLDPRT, SLDASM, SLDDRW, STEP, IGES, Parasolid and more. Export covers SLDPRT, STEP, IGES, Parasolid, STL, 3DXML and more.",
+      },
+      {
+        q: "Does SolidWorks have an API for automation and customization?",
+        a: "Yes. SolidWorks exposes COM-based API with SDK bindings for C++, C#, VBA, .NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Siemens Parasolid",
@@ -780,7 +803,32 @@ export const tools: Tool[] = [
       "Great rendering support",
     ],
     cons: ["Large scene slowdown", "Weak curves", "Sluggish documentation"],
-    faqs: genericFaqs("SketchUp"),
+    faqs: [
+      {
+        q: "What is SketchUp used for?",
+        a: "The world's most intuitive 3D design tool for architecture and interiors. SketchUp is a 3D modeling solution widely adopted in Architecture, Interior Design, Landscape.",
+      },
+      {
+        q: "How much does SketchUp cost?",
+        a: "SketchUp starts at $119 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does SketchUp offer a free trial?",
+        a: "Yes — SketchUp ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does SketchUp support?",
+        a: "SketchUp runs on Windows, macOS, and Web. Deployment options include desktop, web, cloud.",
+      },
+      {
+        q: "Which file formats does SketchUp support?",
+        a: "SketchUp imports SKP, DWG, DXF, 3DS, STL, KMZ and more. Export covers SKP, DWG, DXF, 3DS, STL, KMZ and more.",
+      },
+      {
+        q: "Does SketchUp have an API for automation and customization?",
+        a: "Yes. SketchUp exposes Ruby API / SketchUp SDK with SDK bindings for Ruby, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Trimble Proprietary",
@@ -1001,7 +1049,32 @@ export const tools: Tool[] = [
       "Steep learning curve",
       "High hardware requirements",
     ],
-    faqs: genericFaqs("Revit"),
+    faqs: [
+      {
+        q: "What is Revit used for?",
+        a: "The de-facto standard for Building Information Modeling (BIM). Revit is a BIM solution widely adopted in AEC, Construction, Structural Engineering.",
+      },
+      {
+        q: "How much does Revit cost?",
+        a: "Revit starts at $355 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does Revit offer a free trial?",
+        a: "Yes — Revit ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does Revit support?",
+        a: "Revit runs on Windows. Deployment options include desktop, cloud.",
+      },
+      {
+        q: "Which file formats does Revit support?",
+        a: "Revit imports RVT, RFA, RTE, IFC, DWG, DXF and more. Export covers RVT, IFC, DWG, DXF, DGN, NWC and more.",
+      },
+      {
+        q: "Does Revit have an API for automation and customization?",
+        a: "Yes. Revit exposes .NET API with SDK bindings for C#, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Autodesk ShapeManager (ASM)",
@@ -1274,7 +1347,32 @@ export const tools: Tool[] = [
       "Native Apple Silicon",
     ],
     cons: ["Cloud dependency", "Subscription only", "Learning curve"],
-    faqs: genericFaqs("Fusion 360"),
+    faqs: [
+      {
+        q: "What is Fusion 360 used for?",
+        a: "The cloud-native powerhouse for integrated CAD, CAM, and CAE. Fusion 360 is a 3D modeling solution widely adopted in Industrial Design, Electronics, Prototyping.",
+      },
+      {
+        q: "How much does Fusion 360 cost?",
+        a: "Fusion 360 starts at $85 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does Fusion 360 offer a free trial?",
+        a: "Yes — Fusion 360 ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does Fusion 360 support?",
+        a: "Fusion 360 runs on Windows and macOS. Deployment options include desktop, cloud, web.",
+      },
+      {
+        q: "Which file formats does Fusion 360 support?",
+        a: "Fusion 360 imports F3D, STEP, IGES, SAT, STL, DWG and more. Export covers F3D, STEP, IGES, SAT, STL, DWG and more.",
+      },
+      {
+        q: "Does Fusion 360 have an API for automation and customization?",
+        a: "Yes. Fusion 360 exposes Fusion API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Autodesk ShapeManager (ASM)",
@@ -1510,7 +1608,32 @@ export const tools: Tool[] = [
       "Vibrant community",
     ],
     cons: ["Lacks native parametric history", "Basic 2D", "High hardware reqs"],
-    faqs: genericFaqs("Rhino 3D"),
+    faqs: [
+      {
+        q: "What is Rhino 3D used for?",
+        a: "The industry standard for complex NURBS modeling and computational design. Rhino 3D is a 3D modeling solution widely adopted in Architecture, Industrial Design, Jewelry.",
+      },
+      {
+        q: "How much does Rhino 3D cost?",
+        a: "Rhino 3D starts at $995 per seat on a perpetual and educational license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does Rhino 3D offer a free trial?",
+        a: "Yes — Rhino 3D ships with a 90-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does Rhino 3D support?",
+        a: "Rhino 3D runs on Windows and macOS. Deployment options include desktop.",
+      },
+      {
+        q: "Which file formats does Rhino 3D support?",
+        a: "Rhino 3D imports 3DM, STEP, IGES, SAT, STL, DWG and more. Export covers 3DM, STEP, IGES, STL, DWG, DXF and more.",
+      },
+      {
+        q: "Does Rhino 3D have an API for automation and customization?",
+        a: "Yes. Rhino 3D exposes RhinoCommon / openNURBS with SDK bindings for C#, Python, C++, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "OpenNURBS",
@@ -1760,7 +1883,32 @@ export const tools: Tool[] = [
       "Steep learning curve",
       "Extreme hardware reqs",
     ],
-    faqs: genericFaqs("CATIA"),
+    faqs: [
+      {
+        q: "What is CATIA used for?",
+        a: "The high-end PLM standard for Aerospace and Automotive engineering. CATIA is a 3D modeling solution widely adopted in Aerospace, Automotive, Shipbuilding.",
+      },
+      {
+        q: "How much does CATIA cost?",
+        a: "CATIA starts at $4,500 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does CATIA offer a free trial?",
+        a: "CATIA does not currently advertise a public time-boxed trial. The vendor typically arranges evaluation access on request through reseller partners.",
+      },
+      {
+        q: "What operating systems does CATIA support?",
+        a: "CATIA runs on Windows. Deployment options include desktop, cloud, on-premise.",
+      },
+      {
+        q: "Which file formats does CATIA support?",
+        a: "CATIA imports CATPart, CATProduct, CATDrawing, STEP, IGES, 3DXML and more. Export covers CATPart, CATProduct, STEP, IGES, 3DXML, STL and more.",
+      },
+      {
+        q: "Does CATIA have an API for automation and customization?",
+        a: "Yes. CATIA exposes CAA / 3DEXPERIENCE API with SDK bindings for C++, C#, Java, VBScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "CGM (Convergence Geometric Modeler)",
@@ -1999,7 +2147,32 @@ export const tools: Tool[] = [
       "Native Linux support",
     ],
     cons: ["High entry price", "Complex licensing", "Specialized training req"],
-    faqs: genericFaqs("Siemens NX"),
+    faqs: [
+      {
+        q: "What is Siemens NX used for?",
+        a: "Powerful high-end CAD/CAM/CAE suite for advanced manufacturing. Siemens NX is a CAE / CAM solution widely adopted in Aerospace, Consumer Electronics, Energy.",
+      },
+      {
+        q: "How much does Siemens NX cost?",
+        a: "Siemens NX starts at $6,000 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does Siemens NX offer a free trial?",
+        a: "Yes — Siemens NX ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does Siemens NX support?",
+        a: "Siemens NX runs on Windows and Linux. Deployment options include desktop, cloud, on-premise.",
+      },
+      {
+        q: "Which file formats does Siemens NX support?",
+        a: "Siemens NX imports PRT, STEP, IGES, Parasolid, JT, CATPart and more. Export covers PRT, STEP, IGES, Parasolid, JT, STL and more.",
+      },
+      {
+        q: "Does Siemens NX have an API for automation and customization?",
+        a: "Yes. Siemens NX exposes NX Open / Open C / Open C++ with SDK bindings for C++, C#, Java, Python. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Siemens Parasolid",
@@ -2217,7 +2390,7 @@ export const tools: Tool[] = [
       },
     ],
 
-    alternatives: ["revit", "vectorworks", "archicad"],
+    alternatives: ["revit", "vectorworks", "allplan"],
     country: "Hungary",
     category_id: "c3",
     pricing_type: "Subscription",
@@ -2247,7 +2420,32 @@ export const tools: Tool[] = [
       "MEP tools less mature",
       "Smaller plugin ecosystem",
     ],
-    faqs: genericFaqs("ArchiCAD"),
+    faqs: [
+      {
+        q: "What is ArchiCAD used for?",
+        a: "The BIM software of choice for design-oriented architects. ArchiCAD is a BIM solution widely adopted in Architecture, Interior Design.",
+      },
+      {
+        q: "How much does ArchiCAD cost?",
+        a: "ArchiCAD starts at $1,800 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does ArchiCAD offer a free trial?",
+        a: "Yes — ArchiCAD ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does ArchiCAD support?",
+        a: "ArchiCAD runs on Windows and macOS. Deployment options include desktop, cloud.",
+      },
+      {
+        q: "Which file formats does ArchiCAD support?",
+        a: "ArchiCAD imports PLN, PLA, IFC, BCF, DWG, DXF and more. Export covers PLN, PLA, IFC, BCF, DWG, DXF and more.",
+      },
+      {
+        q: "Does ArchiCAD have an API for automation and customization?",
+        a: "Yes. ArchiCAD exposes GDL / ArchicadAPI with SDK bindings for C++, Python, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Graphisoft Proprietary",
@@ -2469,7 +2667,7 @@ export const tools: Tool[] = [
       },
     ],
 
-    alternatives: ["eagle", "kicad", "orcad"],
+    alternatives: ["eagle", "orcad", "eplan-electric-p8"],
     country: "Australia",
     category_id: "c6",
     pricing_type: "Subscription",
@@ -2495,7 +2693,32 @@ export const tools: Tool[] = [
       "Extensive component library",
     ],
     cons: ["High subscription cost", "Steep learning curve", "Windows only"],
-    faqs: genericFaqs("Altium Designer"),
+    faqs: [
+      {
+        q: "What is Altium Designer used for?",
+        a: "The professional standard for PCB and electronics design. Altium Designer is an EDA solution widely adopted in Consumer Electronics, Medical, Automotive.",
+      },
+      {
+        q: "How much does Altium Designer cost?",
+        a: "Altium Designer starts at $3,850 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does Altium Designer offer a free trial?",
+        a: "Yes — Altium Designer ships with a 15-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does Altium Designer support?",
+        a: "Altium Designer runs on Windows. Deployment options include desktop, cloud.",
+      },
+      {
+        q: "Which file formats does Altium Designer support?",
+        a: "Altium Designer imports SchDoc, PcbDoc, PrjPcb, Gerber, ODB++, IPC-2581 and more. Export covers SchDoc, PcbDoc, Gerber, ODB++, IPC-2581, STEP and more.",
+      },
+      {
+        q: "Does Altium Designer have an API for automation and customization?",
+        a: "Yes. Altium Designer exposes Delphi-based API / Altium 365 REST with SDK bindings for Delphi, JavaScript, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Altium Unified Modeler",
@@ -2661,7 +2884,32 @@ export const tools: Tool[] = [
     score: 4.2,
     pros: ["Completely free", "Python scriptable", "Excellent cross-platform"],
     cons: ["Cluttered UI", "Stability issues", "Steep learning curve"],
-    faqs: genericFaqs("FreeCAD"),
+    faqs: [
+      {
+        q: "What is FreeCAD used for?",
+        a: "The premier open-source 3D parametric modeler. FreeCAD is a 3D modeling solution widely adopted in Hobbyist, Education, Engineering.",
+      },
+      {
+        q: "How much does FreeCAD cost?",
+        a: "FreeCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is FreeCAD really free?",
+        a: "Yes — FreeCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does FreeCAD support?",
+        a: "FreeCAD runs on Windows, macOS, and Linux. Deployment options include desktop.",
+      },
+      {
+        q: "Which file formats does FreeCAD support?",
+        a: "FreeCAD imports FCStd, STEP, IGES, BREP, OBJ, STL and more. Export covers FCStd, STEP, IGES, BREP, OBJ, STL and more.",
+      },
+      {
+        q: "Does FreeCAD have an API for automation and customization?",
+        a: "Yes. FreeCAD exposes Python API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "OpenCASCADE",
@@ -2867,7 +3115,32 @@ export const tools: Tool[] = [
       "Perpetual license option",
     ],
     cons: ["Basic 3D", "Cloud evolving", "Smaller plugin ecosystem"],
-    faqs: genericFaqs("ZWCAD"),
+    faqs: [
+      {
+        q: "What is ZWCAD used for?",
+        a: "The most cost-effective and compatible alternative to AutoCAD. ZWCAD is a 2D CAD solution widely adopted in Architecture, Engineering, Interior Design.",
+      },
+      {
+        q: "How much does ZWCAD cost?",
+        a: "ZWCAD starts at $899 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of ZWCAD?",
+        a: "ZWCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ZWCAD support?",
+        a: "ZWCAD runs on Windows and Linux.",
+      },
+      {
+        q: "Which file formats does ZWCAD support?",
+        a: "ZWCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ZWCAD?",
+        a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, GstarCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "ZWSoft Custom",
@@ -2974,7 +3247,32 @@ export const tools: Tool[] = [
       "Tier-locked BIM",
       "Direct Modeling curve",
     ],
-    faqs: genericFaqs("BricsCAD"),
+    faqs: [
+      {
+        q: "What is BricsCAD used for?",
+        a: "The modern CAD platform for 2D, 3D, BIM, and Mechanical. BricsCAD is a 2D CAD solution widely adopted in AEC, Mechanical, GIS.",
+      },
+      {
+        q: "How much does BricsCAD cost?",
+        a: "BricsCAD starts at $590 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of BricsCAD?",
+        a: "BricsCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does BricsCAD support?",
+        a: "BricsCAD runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does BricsCAD support?",
+        a: "BricsCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to BricsCAD?",
+        a: "The closest alternatives within the 2D CAD space are AutoCAD, ZWCAD, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "ACIS",
@@ -3127,7 +3425,32 @@ export const tools: Tool[] = [
       "Surfacing maturing",
       "Expensive for occasional users",
     ],
-    faqs: genericFaqs("Onshape"),
+    faqs: [
+      {
+        q: "What is Onshape used for?",
+        a: "The professional CAD system built for agile cloud development. Onshape is a 3D modeling solution widely adopted in Startups, Consumer Products, Robotics.",
+      },
+      {
+        q: "How much does Onshape cost?",
+        a: "Onshape starts at $1,500 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does Onshape offer a free trial?",
+        a: "Yes — Onshape ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does Onshape support?",
+        a: "Onshape runs on Web, iOS, and Android. Deployment options include cloud, web, mobile.",
+      },
+      {
+        q: "Which file formats does Onshape support?",
+        a: "Onshape imports STEP, IGES, Parasolid, STL, SLDPRT, SLDASM and more. Export covers STEP, IGES, Parasolid, STL, 3MF, DWG and more.",
+      },
+      {
+        q: "Does Onshape have an API for automation and customization?",
+        a: "Yes. Onshape exposes REST with SDK bindings for Python, JavaScript, Java, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Siemens Parasolid (Cloud)",
@@ -3346,7 +3669,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["revit", "allplan", "tekla-structures"],
+    alternatives: ["revit", "allplan", "civil-3d"],
     country: "Finland",
     category_id: "c3",
     pricing_type: "Subscription",
@@ -3370,7 +3693,32 @@ export const tools: Tool[] = [
       "CNC machine link",
     ],
     cons: ["Very expensive", "Highly specialized", "Steep learning curve"],
-    faqs: genericFaqs("Tekla Structures"),
+    faqs: [
+      {
+        q: "What is Tekla Structures used for?",
+        a: "The world's most advanced structural BIM software. Tekla Structures is a BIM solution widely adopted in Structural Engineering, Construction.",
+      },
+      {
+        q: "How much does Tekla Structures cost?",
+        a: "Tekla Structures starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Tekla Structures?",
+        a: "Tekla Structures is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Tekla Structures support?",
+        a: "Tekla Structures runs on Windows.",
+      },
+      {
+        q: "Which file formats does Tekla Structures support?",
+        a: "Tekla Structures works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Tekla Structures?",
+        a: "The closest alternatives within the BIM space are Revit, Allplan, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Trimble Structural Core",
       multicore: "Moderate",
@@ -3492,7 +3840,32 @@ export const tools: Tool[] = [
       "Legacy UI areas",
       "Smaller community",
     ],
-    faqs: genericFaqs("Solid Edge"),
+    faqs: [
+      {
+        q: "What is Solid Edge used for?",
+        a: "Professional 3D CAD with industry-leading Synchronous Technology. Solid Edge is a 3D modeling solution widely adopted in Mechanical, Industrial Design.",
+      },
+      {
+        q: "How much does Solid Edge cost?",
+        a: "Solid Edge starts at $1,200 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Solid Edge?",
+        a: "Solid Edge is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Solid Edge support?",
+        a: "Solid Edge runs on Windows.",
+      },
+      {
+        q: "Which file formats does Solid Edge support?",
+        a: "Solid Edge works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Solid Edge?",
+        a: "The closest alternatives within the 3D Modeling space are SolidWorks, Autodesk Inventor, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Siemens Parasolid",
       multicore: "Moderate",
@@ -3610,7 +3983,32 @@ export const tools: Tool[] = [
       "3D navigation clunky",
       "Steep learning curve",
     ],
-    faqs: genericFaqs("Vectorworks"),
+    faqs: [
+      {
+        q: "What is Vectorworks used for?",
+        a: "The all-in-one BIM solution for landscape and entertainment design. Vectorworks is a BIM solution widely adopted in Architecture, Landscape, Entertainment.",
+      },
+      {
+        q: "How much does Vectorworks cost?",
+        a: "Vectorworks starts at $1,530 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Vectorworks?",
+        a: "Vectorworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Vectorworks support?",
+        a: "Vectorworks runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does Vectorworks support?",
+        a: "Vectorworks works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Vectorworks?",
+        a: "The closest alternatives within the BIM space are ArchiCAD, Revit, SketchUp. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Siemens Parasolid",
       multicore: "High",
@@ -3670,7 +4068,32 @@ export const tools: Tool[] = [
     score: 4.7,
     pros: ["iLogic design automation", "Eco-system integration"],
     cons: ["Windows only", "Expensive"],
-    faqs: genericFaqs("Autodesk Inventor"),
+    faqs: [
+      {
+        q: "What is Autodesk Inventor used for?",
+        a: "Professional-grade 3D mechanical design and simulation. Autodesk Inventor is a 3D modeling solution widely adopted in Manufacturing.",
+      },
+      {
+        q: "How much does Autodesk Inventor cost?",
+        a: "Autodesk Inventor starts at $315 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does Autodesk Inventor offer a free trial?",
+        a: "Yes — Autodesk Inventor ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does Autodesk Inventor support?",
+        a: "Autodesk Inventor runs on Windows. Deployment options include desktop.",
+      },
+      {
+        q: "Which file formats does Autodesk Inventor support?",
+        a: "Autodesk Inventor imports IPT, IAM, IDW, IDX, STEP, IGES and more. Export covers IPT, IAM, STEP, IGES, SAT, STL and more.",
+      },
+      {
+        q: "Does Autodesk Inventor have an API for automation and customization?",
+        a: "Yes. Autodesk Inventor exposes .NET / COM API with SDK bindings for C#, VB.NET, C++, VBA. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Autodesk ShapeManager (ASM)",
@@ -3903,7 +4326,32 @@ export const tools: Tool[] = [
       "Expensive for individuals",
       "Steep learning curve",
     ],
-    faqs: genericFaqs("MicroStation"),
+    faqs: [
+      {
+        q: "What is MicroStation used for?",
+        a: "The infrastructure engineering standard for massive projects. MicroStation is a 2D CAD solution widely adopted in Infrastructure, Civil Engineering, GIS.",
+      },
+      {
+        q: "How much does MicroStation cost?",
+        a: "MicroStation starts at $2,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of MicroStation?",
+        a: "MicroStation is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does MicroStation support?",
+        a: "MicroStation runs on Windows.",
+      },
+      {
+        q: "Which file formats does MicroStation support?",
+        a: "MicroStation works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to MicroStation?",
+        a: "The closest alternatives within the 2D CAD space are AutoCAD, Civil 3D, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Bentley Graphics Engine",
       multicore: "High",
@@ -4025,7 +4473,32 @@ export const tools: Tool[] = [
       "Professional support",
     ],
     cons: ["No longer free", "Interface generic", "Lacks AutoCAD automation"],
-    faqs: genericFaqs("DraftSight"),
+    faqs: [
+      {
+        q: "What is DraftSight used for?",
+        a: "Professional-grade 2D CAD solution from Dassault Systèmes. DraftSight is a 2D CAD solution widely adopted in Manufacturing, Engineering, AEC.",
+      },
+      {
+        q: "How much does DraftSight cost?",
+        a: "DraftSight starts at $249 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of DraftSight?",
+        a: "DraftSight is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does DraftSight support?",
+        a: "DraftSight runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does DraftSight support?",
+        a: "DraftSight works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to DraftSight?",
+        a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ARES",
       multicore: "Low",
@@ -4112,7 +4585,32 @@ export const tools: Tool[] = [
       "Overwhelming UI",
       "Hardware workstation req",
     ],
-    faqs: genericFaqs("PTC Creo"),
+    faqs: [
+      {
+        q: "What is PTC Creo used for?",
+        a: "The original parametric 3D CAD powerhouse. PTC Creo is a 3D modeling solution widely adopted in Manufacturing, High-Tech, Medical.",
+      },
+      {
+        q: "How much does PTC Creo cost?",
+        a: "PTC Creo starts at $2,430 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Does PTC Creo offer a free trial?",
+        a: "Yes — PTC Creo ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      },
+      {
+        q: "What operating systems does PTC Creo support?",
+        a: "PTC Creo runs on Windows. Deployment options include desktop, cloud.",
+      },
+      {
+        q: "Which file formats does PTC Creo support?",
+        a: "PTC Creo imports PRT, ASM, DRW, STEP, IGES, STL and more. Export covers PRT, ASM, STEP, IGES, STL, DWG and more.",
+      },
+      {
+        q: "Does PTC Creo have an API for automation and customization?",
+        a: "Yes. PTC Creo exposes Pro/TOOLKIT / J-Link / Web.Link with SDK bindings for C, C++, Java, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Granite",
@@ -4262,7 +4760,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["freecad", "openscad", "solvespace"],
+    alternatives: ["freecad", "solvespace", "solvespace-pro"],
     country: "Community/International",
     category_id: "c2",
     pricing_type: "Free",
@@ -4284,7 +4782,32 @@ export const tools: Tool[] = [
       "Extremely lightweight",
     ],
     cons: ["No interactive GUI", "Cody learning curve", "Poor organic shapes"],
-    faqs: genericFaqs("OpenSCAD"),
+    faqs: [
+      {
+        q: "What is OpenSCAD used for?",
+        a: "The programmer's solid 3D CAD modeler. OpenSCAD is a 3D modeling solution widely adopted in Hobbyist, Maker, Research.",
+      },
+      {
+        q: "How much does OpenSCAD cost?",
+        a: "OpenSCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is OpenSCAD really free?",
+        a: "Yes — OpenSCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does OpenSCAD support?",
+        a: "OpenSCAD runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does OpenSCAD support?",
+        a: "OpenSCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to OpenSCAD?",
+        a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolveSpace, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CGAL / OpenCSG",
       multicore: "Low",
@@ -4363,7 +4886,32 @@ export const tools: Tool[] = [
       "Offline mobility",
     ],
     cons: ["Subscription only", "Assembly maturing", "Pencil req for iPad"],
-    faqs: genericFaqs("Shapr3D"),
+    faqs: [
+      {
+        q: "What is Shapr3D used for?",
+        a: "Professional CAD for mobile and desktop mobility. Shapr3D is a 3D modeling solution widely adopted in Industrial Design, Prototyping, AEC.",
+      },
+      {
+        q: "How much does Shapr3D cost?",
+        a: "Shapr3D starts at $299 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Shapr3D?",
+        a: "Shapr3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Shapr3D support?",
+        a: "Shapr3D runs on Windows, macOS, and iOS.",
+      },
+      {
+        q: "Which file formats does Shapr3D support?",
+        a: "Shapr3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Shapr3D?",
+        a: "The closest alternatives within the 3D Modeling space are Fusion 360, SolidWorks, Onshape. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Siemens Parasolid",
       multicore: "Moderate",
@@ -4479,7 +5027,32 @@ export const tools: Tool[] = [
       "Fast client renders",
     ],
     cons: ["Not for mechanical", "Expensive", "Windows version lead"],
-    faqs: genericFaqs("Chief Architect"),
+    faqs: [
+      {
+        q: "What is Chief Architect used for?",
+        a: "Professional home design software for builders. Chief Architect is a BIM solution widely adopted in Residential Architecture, Remodeling.",
+      },
+      {
+        q: "How much does Chief Architect cost?",
+        a: "Chief Architect starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Chief Architect?",
+        a: "Chief Architect is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Chief Architect support?",
+        a: "Chief Architect runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does Chief Architect support?",
+        a: "Chief Architect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Chief Architect?",
+        a: "The closest alternatives within the BIM space are Revit, SketchUp, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Chief Custom AEC Engine",
       multicore: "High",
@@ -4529,7 +5102,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["mastercam", "solidcam", "fusion-360"],
+    alternatives: ["solidcam", "fusion-360", "ansys-mechanical"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Subscription",
@@ -4547,7 +5120,32 @@ export const tools: Tool[] = [
       "Global training network",
     ],
     cons: ["Steep price", "Dated legacy UI", "Complex mastering"],
-    faqs: genericFaqs("Mastercam"),
+    faqs: [
+      {
+        q: "What is Mastercam used for?",
+        a: "The global leader in CAM software for manufacturing. Mastercam is a CAE / CAM solution widely adopted in Manufacturing, Machining, Die & Mold.",
+      },
+      {
+        q: "How much does Mastercam cost?",
+        a: "Mastercam starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Mastercam?",
+        a: "Mastercam is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Mastercam support?",
+        a: "Mastercam runs on Windows.",
+      },
+      {
+        q: "Which file formats does Mastercam support?",
+        a: "Mastercam works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Mastercam?",
+        a: "The closest alternatives within the CAE/CAM space are SolidCAM, Fusion 360, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Mastercam Custom CAM",
       multicore: "Excellent",
@@ -4583,7 +5181,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["freecad", "openscad", "solvespace"],
+    alternatives: ["freecad", "openscad", "solvespace-pro"],
     country: "Community/International",
     category_id: "c2",
     pricing_type: "Free",
@@ -4597,7 +5195,32 @@ export const tools: Tool[] = [
     score: 4.1,
     pros: ["Tiny file size", "Fast for simple parts", "Pure logic"],
     cons: ["No assembly management", "Basic UI", "Limited rendering"],
-    faqs: genericFaqs("SolveSpace"),
+    faqs: [
+      {
+        q: "What is SolveSpace used for?",
+        a: "A minimalist, open-source 2D/3D parametric CAD tool. SolveSpace is a 3D modeling solution widely adopted in Hobbyist, Light Engineering, Education.",
+      },
+      {
+        q: "How much does SolveSpace cost?",
+        a: "SolveSpace is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is SolveSpace really free?",
+        a: "Yes — SolveSpace is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does SolveSpace support?",
+        a: "SolveSpace runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does SolveSpace support?",
+        a: "SolveSpace works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to SolveSpace?",
+        a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "SolveSpace Custom Solver",
       multicore: "Low",
@@ -4647,7 +5270,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["solidworks", "solidedge", "alibre-design"],
+    alternatives: ["solidworks", "varicad", "zw3d"],
     country: "USA",
     category_id: "c2",
     pricing_type: "Perpetual",
@@ -4665,7 +5288,32 @@ export const tools: Tool[] = [
       "Solid mid-range perf",
     ],
     cons: ["Windows only", "Smaller add-on ecosystem", "Tiered simulation"],
-    faqs: genericFaqs("Alibre Design"),
+    faqs: [
+      {
+        q: "What is Alibre Design used for?",
+        a: "Professional 3D CAD without the enterprise price tag. Alibre Design is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Prototyping.",
+      },
+      {
+        q: "How much does Alibre Design cost?",
+        a: "Alibre Design starts at $950 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Alibre Design?",
+        a: "Alibre Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Alibre Design support?",
+        a: "Alibre Design runs on Windows.",
+      },
+      {
+        q: "Which file formats does Alibre Design support?",
+        a: "Alibre Design works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Alibre Design?",
+        a: "The closest alternatives within the 3D Modeling space are SolidWorks, VariCAD, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ACIS",
       multicore: "Moderate",
@@ -4709,7 +5357,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["ntop", "ansys-mechanical", "siemens-nx"],
+    alternatives: ["ansys-mechanical", "siemens-nx", "mastercam"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Subscription",
@@ -4735,7 +5383,32 @@ export const tools: Tool[] = [
       "Mathematical mindset curve",
       "Not general-purpose",
     ],
-    faqs: genericFaqs("nTop"),
+    faqs: [
+      {
+        q: "What is nTop used for?",
+        a: "Engineering design software for additive manufacturing. nTop is a CAE / CAM solution widely adopted in Aerospace, Medical, Automotive.",
+      },
+      {
+        q: "How much does nTop cost?",
+        a: "nTop starts at $7,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of nTop?",
+        a: "nTop is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does nTop support?",
+        a: "nTop runs on Windows.",
+      },
+      {
+        q: "Which file formats does nTop support?",
+        a: "nTop works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to nTop?",
+        a: "The closest alternatives within the CAE/CAM space are ANSYS Mechanical, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "nTop Implicit Engine",
       multicore: "Excellent",
@@ -4793,7 +5466,32 @@ export const tools: Tool[] = [
       "Great post-processors",
     ],
     cons: ["Host CAD req", "Learning curve", "High price"],
-    faqs: genericFaqs("SolidCAM"),
+    faqs: [
+      {
+        q: "What is SolidCAM used for?",
+        a: "The leading integrated CAM for SolidWorks. SolidCAM is a CAE / CAM solution widely adopted in Manufacturing, Medical, Aerospace.",
+      },
+      {
+        q: "How much does SolidCAM cost?",
+        a: "SolidCAM starts at $4,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of SolidCAM?",
+        a: "SolidCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does SolidCAM support?",
+        a: "SolidCAM runs on Windows.",
+      },
+      {
+        q: "Which file formats does SolidCAM support?",
+        a: "SolidCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to SolidCAM?",
+        a: "The closest alternatives within the CAE/CAM space are Mastercam, CAMWorks, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "SolidCAM Machining",
       multicore: "Excellent",
@@ -4898,7 +5596,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["bluebeam-revu", "navisworks", "solibri"],
+    alternatives: ["navisworks", "solibri", "recap-pro"],
     country: "USA",
     category_id: "c4",
     pricing_type: "Subscription",
@@ -4926,7 +5624,32 @@ export const tools: Tool[] = [
       "Subscription shift",
       "Learning curve",
     ],
-    faqs: genericFaqs("Bluebeam Revu"),
+    faqs: [
+      {
+        q: "What is Bluebeam Revu used for?",
+        a: "The AEC standard for PDF markup and collaboration. Bluebeam Revu is a CAD viewer solution widely adopted in AEC, Construction, Estimating.",
+      },
+      {
+        q: "How much does Bluebeam Revu cost?",
+        a: "Bluebeam Revu starts at $240 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Bluebeam Revu?",
+        a: "Bluebeam Revu is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Bluebeam Revu support?",
+        a: "Bluebeam Revu runs on Windows.",
+      },
+      {
+        q: "Which file formats does Bluebeam Revu support?",
+        a: "Bluebeam Revu works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Bluebeam Revu?",
+        a: "The closest alternatives within the Viewer space are Navisworks, Solibri, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Bluebeam Rendering",
       multicore: "High",
@@ -5020,7 +5743,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["navisworks", "solibri", "bluebeam-revu"],
+    alternatives: ["solibri", "bluebeam-revu", "recap-pro"],
     country: "USA",
     category_id: "c4",
     pricing_type: "Subscription",
@@ -5044,7 +5767,32 @@ export const tools: Tool[] = [
       "Powerful reports",
     ],
     cons: ["Dated UI", "Steep learning", "Expensive viewer"],
-    faqs: genericFaqs("Navisworks"),
+    faqs: [
+      {
+        q: "What is Navisworks used for?",
+        a: "Project review software for clash detection. Navisworks is a CAD viewer solution widely adopted in Construction, AEC, Oil & Gas.",
+      },
+      {
+        q: "How much does Navisworks cost?",
+        a: "Navisworks starts at $1,050 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Navisworks?",
+        a: "Navisworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Navisworks support?",
+        a: "Navisworks runs on Windows.",
+      },
+      {
+        q: "Which file formats does Navisworks support?",
+        a: "Navisworks works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Navisworks?",
+        a: "The closest alternatives within the Viewer space are Solibri, Bluebeam Revu, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Autodesk Navisworks",
       multicore: "Moderate",
@@ -5089,7 +5837,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["navisworks", "solibri", "revizto"],
+    alternatives: ["navisworks", "recap-pro", "bluebeam-revu"],
     country: "USA",
     category_id: "c4",
     pricing_type: "Subscription",
@@ -5107,7 +5855,32 @@ export const tools: Tool[] = [
     score: 4.7,
     pros: ["Deepest validation rules", "Clean UI", "Open BIM native"],
     cons: ["Expensive", "IFC data quality dependent", "Complex rule custom"],
-    faqs: genericFaqs("Solibri"),
+    faqs: [
+      {
+        q: "What is Solibri used for?",
+        a: "The BIM quality assurance and QC leader. Solibri is a CAD viewer solution widely adopted in AEC, BIM Management.",
+      },
+      {
+        q: "How much does Solibri cost?",
+        a: "Solibri starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Solibri?",
+        a: "Solibri is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Solibri support?",
+        a: "Solibri runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does Solibri support?",
+        a: "Solibri works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Solibri?",
+        a: "The closest alternatives within the Viewer space are Navisworks, Recap Pro, Bluebeam Revu. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Solibri IFC Engine",
       multicore: "Moderate",
@@ -5143,7 +5916,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["meshlab", "magics", "blender"],
+    alternatives: ["magics", "blender", "solid-edge-viewer"],
     country: "USA",
     category_id: "c4",
     pricing_type: "Free",
@@ -5161,7 +5934,32 @@ export const tools: Tool[] = [
     score: 4.1,
     pros: ["Vast mesh filters", "Completely free", "Point cloud handling"],
     cons: ["Unstable (crashes)", "Complex UI", "Legacy UX"],
-    faqs: genericFaqs("MeshLab"),
+    faqs: [
+      {
+        q: "What is MeshLab used for?",
+        a: "Open-source system for processing 3D meshes. MeshLab is a CAD viewer solution widely adopted in Research, Archaeology, 3D Printing.",
+      },
+      {
+        q: "How much does MeshLab cost?",
+        a: "MeshLab is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is MeshLab really free?",
+        a: "Yes — MeshLab is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does MeshLab support?",
+        a: "MeshLab runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does MeshLab support?",
+        a: "MeshLab works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to MeshLab?",
+        a: "The closest alternatives within the Viewer space are Magics, Blender, Solid Edge Viewer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "VCG Library",
       multicore: "Low",
@@ -5206,7 +6004,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["magics", "meshlab", "netfabb"],
+    alternatives: ["meshlab", "siemens-nx", "mastercam"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Subscription",
@@ -5232,7 +6030,32 @@ export const tools: Tool[] = [
       "Specialized knowledge req",
       "Steep learning",
     ],
-    faqs: genericFaqs("Magics"),
+    faqs: [
+      {
+        q: "What is Magics used for?",
+        a: "Data and build preparation for 3D printing. Magics is a CAE / CAM solution widely adopted in Additive Manufacturing, Medical, Aerospace.",
+      },
+      {
+        q: "How much does Magics cost?",
+        a: "Magics starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Magics?",
+        a: "Magics is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Magics support?",
+        a: "Magics runs on Windows.",
+      },
+      {
+        q: "Which file formats does Magics support?",
+        a: "Magics works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Magics?",
+        a: "The closest alternatives within the CAE/CAM space are MeshLab, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Materialise Geometric Engine",
       multicore: "High",
@@ -5269,7 +6092,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["recap-pro", "meshlab", "cyclone"],
+    alternatives: ["meshlab", "solibri", "navisworks"],
     country: "USA",
     category_id: "c4",
     pricing_type: "Subscription",
@@ -5287,7 +6110,32 @@ export const tools: Tool[] = [
       "Limited manual editing",
       "Subscription only",
     ],
-    faqs: genericFaqs("Recap Pro"),
+    faqs: [
+      {
+        q: "What is Recap Pro used for?",
+        a: "Reality capture and 3D scanning software. Recap Pro is a CAD viewer solution widely adopted in AEC, Surveying, Infrastructure.",
+      },
+      {
+        q: "How much does Recap Pro cost?",
+        a: "Recap Pro starts at $360 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Recap Pro?",
+        a: "Recap Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Recap Pro support?",
+        a: "Recap Pro runs on Windows.",
+      },
+      {
+        q: "Which file formats does Recap Pro support?",
+        a: "Recap Pro works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Recap Pro?",
+        a: "The closest alternatives within the Viewer space are MeshLab, Solibri, Navisworks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Autodesk Reality",
       multicore: "Excellent",
@@ -5323,7 +6171,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["opencascade", "freecad", "parasolid"],
+    alternatives: ["freecad", "siemens-nx", "solidcam"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Free",
@@ -5345,7 +6193,32 @@ export const tools: Tool[] = [
       "Customizable",
     ],
     cons: ["Very hard to learn", "C++ knowledge req", "Basic documentation"],
-    faqs: genericFaqs("OpenCASCADE"),
+    faqs: [
+      {
+        q: "What is OpenCASCADE used for?",
+        a: "The open-source geometry kernel for CAD developers. OpenCASCADE is a CAE / CAM solution widely adopted in Software Dev, Research.",
+      },
+      {
+        q: "How much does OpenCASCADE cost?",
+        a: "OpenCASCADE is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is OpenCASCADE really free?",
+        a: "Yes — OpenCASCADE is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does OpenCASCADE support?",
+        a: "OpenCASCADE runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does OpenCASCADE support?",
+        a: "OpenCASCADE works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to OpenCASCADE?",
+        a: "The closest alternatives within the CAE/CAM space are FreeCAD, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "OpenCASCADE Kernel",
       multicore: "High",
@@ -5381,7 +6254,7 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["varicad", "freecad", "solidworks"],
+    alternatives: ["freecad", "solidworks", "alibre-design"],
     country: "USA",
     category_id: "c2",
     pricing_type: "Perpetual",
@@ -5395,7 +6268,32 @@ export const tools: Tool[] = [
     score: 4.0,
     pros: ["Fast performance", "Native Linux support", "Affordable perpetual"],
     cons: ["Non-standard UI", "Basic visuals", "Small community"],
-    faqs: genericFaqs("VariCAD"),
+    faqs: [
+      {
+        q: "What is VariCAD used for?",
+        a: "Compact CAD system for mechanical engineering. VariCAD is a 3D modeling solution widely adopted in Mechanical, Hobbyist.",
+      },
+      {
+        q: "How much does VariCAD cost?",
+        a: "VariCAD starts at $700 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of VariCAD?",
+        a: "VariCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does VariCAD support?",
+        a: "VariCAD runs on Windows and Linux.",
+      },
+      {
+        q: "Which file formats does VariCAD support?",
+        a: "VariCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to VariCAD?",
+        a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolidWorks, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "VariCAD Custom",
       multicore: "Low",
@@ -5432,7 +6330,11 @@ export const tools: Tool[] = [
         ],
       },
     ],
-    alternatives: ["eagle", "kicad", "altium"],
+    alternatives: [
+      "altium-designer",
+      "eplan-electric-p8",
+      "synopsys-fusion-compiler",
+    ],
     country: "USA",
     category_id: "c6",
     pricing_type: "Subscription",
@@ -5454,7 +6356,32 @@ export const tools: Tool[] = [
       "Interface quirky",
       "Replaced by Fusion Electronics",
     ],
-    faqs: genericFaqs("Eagle"),
+    faqs: [
+      {
+        q: "What is Eagle used for?",
+        a: "PCB design software integrated with Fusion 360. Eagle is an EDA solution widely adopted in Electronics, IoT, Education.",
+      },
+      {
+        q: "How much does Eagle cost?",
+        a: "Eagle starts at $680 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Eagle?",
+        a: "Eagle is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Eagle support?",
+        a: "Eagle runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does Eagle support?",
+        a: "Eagle works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Eagle?",
+        a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Synopsys Fusion Compiler. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "EAGLE Core",
       multicore: "Low",
@@ -5492,7 +6419,32 @@ export const tools: Tool[] = [
       "Legacy platform reliability",
     ],
     cons: ["Niche and expensive", "Old-school UI", "Limited BIM"],
-    faqs: genericFaqs("CADra"),
+    faqs: [
+      {
+        q: "What is CADra used for?",
+        a: "High-end 2D CAD for drafting automation. CADra is a 2D CAD solution widely adopted in Manufacturing, Automation.",
+      },
+      {
+        q: "How much does CADra cost?",
+        a: "CADra starts at $1,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of CADra?",
+        a: "CADra is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CADra support?",
+        a: "CADra runs on Windows.",
+      },
+      {
+        q: "Which file formats does CADra support?",
+        a: "CADra works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CADra?",
+        a: "The closest alternatives within the 2D CAD space are AutoCAD, nanoCAD, MicroStation. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Custom",
       multicore: "Moderate",
@@ -5529,7 +6481,32 @@ export const tools: Tool[] = [
     score: 4.8,
     pros: ["Road design standard", "Dynamic objects", "Infra BIM essential"],
     cons: ["Prone to crashes", "Steep learning curve", "Expensive"],
-    faqs: genericFaqs("Civil 3D"),
+    faqs: [
+      {
+        q: "What is Civil 3D used for?",
+        a: "Civil engineering design and documentation software. Civil 3D is a BIM solution widely adopted in Civil Engineering, Transportation.",
+      },
+      {
+        q: "How much does Civil 3D cost?",
+        a: "Civil 3D starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Civil 3D?",
+        a: "Civil 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Civil 3D support?",
+        a: "Civil 3D runs on Windows.",
+      },
+      {
+        q: "Which file formats does Civil 3D support?",
+        a: "Civil 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Civil 3D?",
+        a: "The closest alternatives within the BIM space are Revit, OpenRoads Designer, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Autodesk ShapeManager (ASM)",
@@ -5639,7 +6616,32 @@ export const tools: Tool[] = [
     score: 4.8,
     pros: ["Remodeling standard", "Kitchen design speed", "macOS support"],
     cons: ["Not for mechanical", "Steep learning", "Expensive"],
-    faqs: genericFaqs("Chief Architect Pro"),
+    faqs: [
+      {
+        q: "What is Chief Architect Pro used for?",
+        a: "High-end 3D home design for professionals. Chief Architect Pro is a BIM solution widely adopted in Residential Design, Remodeling.",
+      },
+      {
+        q: "How much does Chief Architect Pro cost?",
+        a: "Chief Architect Pro starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Chief Architect Pro?",
+        a: "Chief Architect Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Chief Architect Pro support?",
+        a: "Chief Architect Pro runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does Chief Architect Pro support?",
+        a: "Chief Architect Pro works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Chief Architect Pro?",
+        a: "The closest alternatives within the BIM space are Chief Architect, ArchiCAD, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Proprietary",
@@ -5693,7 +6695,32 @@ export const tools: Tool[] = [
     score: 4.2,
     pros: ["Free for all", "Official file support", "Measurement tools"],
     cons: ["Windows only", "No editing", "Large install"],
-    faqs: genericFaqs("Solid Edge Viewer"),
+    faqs: [
+      {
+        q: "What is Solid Edge Viewer used for?",
+        a: "Free viewer for Solid Edge and 2D CAD files. Solid Edge Viewer is a CAD viewer solution widely adopted in Manufacturing, General.",
+      },
+      {
+        q: "How much does Solid Edge Viewer cost?",
+        a: "Solid Edge Viewer is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is Solid Edge Viewer really free?",
+        a: "Yes — Solid Edge Viewer is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does Solid Edge Viewer support?",
+        a: "Solid Edge Viewer runs on Windows.",
+      },
+      {
+        q: "Which file formats does Solid Edge Viewer support?",
+        a: "Solid Edge Viewer works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Solid Edge Viewer?",
+        a: "The closest alternatives within the Viewer space are DWG TrueView, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Siemens JT",
       multicore: "Low",
@@ -5723,7 +6750,32 @@ export const tools: Tool[] = [
     score: 4.3,
     pros: ["Most accurate viewer", "TrueConvert included", "100% Free"],
     cons: ["Heavy install", "No macOS", "No mark-up"],
-    faqs: genericFaqs("DWG TrueView"),
+    faqs: [
+      {
+        q: "What is DWG TrueView used for?",
+        a: "Official free DWG viewer and converter. DWG TrueView is a CAD viewer solution widely adopted in Architecture, Engineering.",
+      },
+      {
+        q: "How much does DWG TrueView cost?",
+        a: "DWG TrueView is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is DWG TrueView really free?",
+        a: "Yes — DWG TrueView is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does DWG TrueView support?",
+        a: "DWG TrueView runs on Windows.",
+      },
+      {
+        q: "Which file formats does DWG TrueView support?",
+        a: "DWG TrueView works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to DWG TrueView?",
+        a: "The closest alternatives within the Viewer space are Solid Edge Viewer, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "AutoCAD Core",
       multicore: "Low",
@@ -5760,7 +6812,32 @@ export const tools: Tool[] = [
     score: 4.9,
     pros: ["Industry VFX standard", "Node-based power", "Linux support"],
     cons: ["Steep learning", "High cost", "Not for engineering"],
-    faqs: genericFaqs("Maya"),
+    faqs: [
+      {
+        q: "What is Maya used for?",
+        a: "3D animation, modeling, and simulation software. Maya is a 3D modeling solution widely adopted in VFX, Gaming, Animation.",
+      },
+      {
+        q: "How much does Maya cost?",
+        a: "Maya starts at $1,875 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Maya?",
+        a: "Maya is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Maya support?",
+        a: "Maya runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does Maya support?",
+        a: "Maya works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Maya?",
+        a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Maya Nucleus",
@@ -5878,7 +6955,32 @@ export const tools: Tool[] = [
     score: 4.8,
     pros: ["100% Free", "Cycles production renderer", "Rapid development"],
     cons: ["Non-standard UI", "Lacks NURBS precision", "Not for CAD/CAM"],
-    faqs: genericFaqs("Blender"),
+    faqs: [
+      {
+        q: "What is Blender used for?",
+        a: "The free and open-source 3D creation suite. Blender is a 3D modeling solution widely adopted in Indie Games, VFX, Hobbyist.",
+      },
+      {
+        q: "How much does Blender cost?",
+        a: "Blender is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is Blender really free?",
+        a: "Yes — Blender is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does Blender support?",
+        a: "Blender runs on Windows, macOS, and Linux. Deployment options include desktop.",
+      },
+      {
+        q: "Which file formats does Blender support?",
+        a: "Blender imports BLEND, OBJ, FBX, glTF, GLB, USD and more. Export covers BLEND, OBJ, FBX, glTF, GLB, USD and more.",
+      },
+      {
+        q: "Does Blender have an API for automation and customization?",
+        a: "Yes. Blender exposes Python API with SDK bindings for Python, C, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      },
+    ],
 
     tech_specs: {
       engine: "Cycles / Eevee",
@@ -6082,7 +7184,32 @@ export const tools: Tool[] = [
     score: 4.3,
     pros: ["Extremely fast", "Pure geometric logic", "Completely free"],
     cons: ["No assembly", "Hard for organic", "Slow complex rendering"],
-    faqs: genericFaqs("SolveSpace Pro"),
+    faqs: [
+      {
+        q: "What is SolveSpace Pro used for?",
+        a: "Constraint-based 2D/3D parametric CAD. SolveSpace Pro is a 3D modeling solution widely adopted in Education, Makers, Mechanical.",
+      },
+      {
+        q: "How much does SolveSpace Pro cost?",
+        a: "SolveSpace Pro is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is SolveSpace Pro really free?",
+        a: "Yes — SolveSpace Pro is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does SolveSpace Pro support?",
+        a: "SolveSpace Pro runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does SolveSpace Pro support?",
+        a: "SolveSpace Pro works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to SolveSpace Pro?",
+        a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Custom",
       multicore: "Low",
@@ -6124,7 +7251,32 @@ export const tools: Tool[] = [
     score: 4.6,
     pros: ["Super fast on mobile", "Good cloud sync", "Free basic version"],
     cons: ["Subscription for Pro", "Ads in free version", "Limited 3D"],
-    faqs: genericFaqs("DWG FastView"),
+    faqs: [
+      {
+        q: "What is DWG FastView used for?",
+        a: "Lightweight cross-platform CAD viewer & editor. DWG FastView is a 2D CAD solution widely adopted in Construction, Real Estate, Architecture.",
+      },
+      {
+        q: "How much does DWG FastView cost?",
+        a: "DWG FastView is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of DWG FastView?",
+        a: "DWG FastView is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does DWG FastView support?",
+        a: "DWG FastView runs on Windows, Mobile, and Web. The browser-based experience requires no local install.",
+      },
+      {
+        q: "Which file formats does DWG FastView support?",
+        a: "DWG FastView works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to DWG FastView?",
+        a: "The closest alternatives within the 2D CAD space are QCAD, ZWCAD, TurboCAD Platinum. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "GstarCAD Core",
@@ -6251,7 +7403,32 @@ export const tools: Tool[] = [
     score: 4.8,
     pros: ["Extremely fast core", "One-time cost", "Native compatibility"],
     cons: ["Windows only", "Brand awareness in West", "Fewer add-ons"],
-    faqs: genericFaqs("GstarCAD"),
+    faqs: [
+      {
+        q: "What is GstarCAD used for?",
+        a: "High-performance AutoCAD alternative. GstarCAD is a 2D CAD solution widely adopted in Manufacturing, Mechanical, Construction.",
+      },
+      {
+        q: "How much does GstarCAD cost?",
+        a: "GstarCAD starts at $499 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of GstarCAD?",
+        a: "GstarCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does GstarCAD support?",
+        a: "GstarCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does GstarCAD support?",
+        a: "GstarCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to GstarCAD?",
+        a: "The closest alternatives within the 2D CAD space are progeCAD Professional, CADopia, CAXA CAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Independent Core",
@@ -6328,7 +7505,32 @@ export const tools: Tool[] = [
     score: 4.4,
     pros: ["Open source core", "Very easy to learn", "Great for schematics"],
     cons: ["2D only", "Limited advanced automation", "Older UI style"],
-    faqs: genericFaqs("QCAD"),
+    faqs: [
+      {
+        q: "What is QCAD used for?",
+        a: "The open-source 2D CAD standard for everyone. QCAD is a 2D CAD solution widely adopted in General Drafting, Education, Hobbyist.",
+      },
+      {
+        q: "How much does QCAD cost?",
+        a: "QCAD starts at $39 per seat on a freemium license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of QCAD?",
+        a: "QCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does QCAD support?",
+        a: "QCAD runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does QCAD support?",
+        a: "QCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to QCAD?",
+        a: "The closest alternatives within the 2D CAD space are DWG FastView, ARES Commander, DraftSight. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Qt/QCAD",
       multicore: "Low",
@@ -6373,7 +7575,32 @@ export const tools: Tool[] = [
       "Subscription required for latest",
       "Steep learning curve for Pro",
     ],
-    faqs: genericFaqs("nanoCAD"),
+    faqs: [
+      {
+        q: "What is nanoCAD used for?",
+        a: "Professional-grade 2D/3D CAD with powerful API. nanoCAD is a 2D CAD solution widely adopted in Engineering, Construction, Manufacturing.",
+      },
+      {
+        q: "How much does nanoCAD cost?",
+        a: "nanoCAD starts at $200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of nanoCAD?",
+        a: "nanoCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does nanoCAD support?",
+        a: "nanoCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does nanoCAD support?",
+        a: "nanoCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to nanoCAD?",
+        a: "The closest alternatives within the 2D CAD space are AutoCAD, MicroStation, ARES Commander. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "nanoCAD Core",
       multicore: "High",
@@ -6413,7 +7640,32 @@ export const tools: Tool[] = [
       "Can be buggy with huge files",
       "Update cycle is annual",
     ],
-    faqs: genericFaqs("progeCAD"),
+    faqs: [
+      {
+        q: "What is progeCAD Professional used for?",
+        a: "AutoCAD clone with PDF to DWG conversion. progeCAD Professional is a 2D CAD solution widely adopted in Architecture, Civil Engineering, Mechanical.",
+      },
+      {
+        q: "How much does progeCAD Professional cost?",
+        a: "progeCAD Professional starts at $399 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of progeCAD Professional?",
+        a: "progeCAD Professional is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does progeCAD Professional support?",
+        a: "progeCAD Professional runs on Windows.",
+      },
+      {
+        q: "Which file formats does progeCAD Professional support?",
+        a: "progeCAD Professional works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to progeCAD Professional?",
+        a: "The closest alternatives within the 2D CAD space are CADopia, TurboCAD Platinum, CAXA CAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "IntelliCAD",
       multicore: "Moderate",
@@ -6459,7 +7711,32 @@ export const tools: Tool[] = [
       "Flexible modeling",
     ],
     cons: ["Expensive", "Smaller user base", "Requires high-end GPU"],
-    faqs: genericFaqs("IronCAD"),
+    faqs: [
+      {
+        q: "What is IronCAD used for?",
+        a: "The fastest way to 3D design and manufacturing. IronCAD is a 3D modeling solution widely adopted in Industrial Design, Machine Design, Packaging.",
+      },
+      {
+        q: "How much does IronCAD cost?",
+        a: "IronCAD starts at $3,950 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of IronCAD?",
+        a: "IronCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does IronCAD support?",
+        a: "IronCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does IronCAD support?",
+        a: "IronCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to IronCAD?",
+        a: "The closest alternatives within the 3D Modeling space are Rhino 3D, ZW3D, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "ACIS & Parasolid",
@@ -6565,7 +7842,32 @@ export const tools: Tool[] = [
       "No constraint issues",
     ],
     cons: ["Lacks parametric history", "Niche user base", "UI feels dated"],
-    faqs: genericFaqs("KeyCreator"),
+    faqs: [
+      {
+        q: "What is KeyCreator used for?",
+        a: "Direct modeling CAD for fast manufacturing design. KeyCreator is a 3D modeling solution widely adopted in Tool & Die, Mold Design, Rapid Prototyping.",
+      },
+      {
+        q: "How much does KeyCreator cost?",
+        a: "KeyCreator starts at $1,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of KeyCreator?",
+        a: "KeyCreator is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does KeyCreator support?",
+        a: "KeyCreator runs on Windows.",
+      },
+      {
+        q: "Which file formats does KeyCreator support?",
+        a: "KeyCreator works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to KeyCreator?",
+        a: "The closest alternatives within the 3D Modeling space are Autodesk Inventor, Fusion 360, PTC Creo. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Proprietary Direct",
       multicore: "Moderate",
@@ -6608,7 +7910,32 @@ export const tools: Tool[] = [
       "No DWG support (DXF only)",
       "No 3D capability",
     ],
-    faqs: genericFaqs("LibreCAD"),
+    faqs: [
+      {
+        q: "What is LibreCAD used for?",
+        a: "Open source free 2D CAD for all platforms. LibreCAD is a 2D CAD solution widely adopted in Education, Hobbyist, Laser Cutting.",
+      },
+      {
+        q: "How much does LibreCAD cost?",
+        a: "LibreCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      },
+      {
+        q: "Is LibreCAD really free?",
+        a: "Yes — LibreCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      },
+      {
+        q: "What operating systems does LibreCAD support?",
+        a: "LibreCAD runs on Windows, macOS, and Linux.",
+      },
+      {
+        q: "Which file formats does LibreCAD support?",
+        a: "LibreCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to LibreCAD?",
+        a: "The closest alternatives within the 2D CAD space are QCAD, DWG FastView, CADra. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Qt/LibreCAD",
@@ -6679,7 +8006,32 @@ export const tools: Tool[] = [
       "AutoCAD like experience",
     ],
     cons: ["Windows only", "Slow update cycle", "Marketing is outdated"],
-    faqs: genericFaqs("CADopia"),
+    faqs: [
+      {
+        q: "What is CADopia used for?",
+        a: "Professional 2D/3D DWG CAD for engineers. CADopia is a 2D CAD solution widely adopted in Engineering, AEC, Interior Design.",
+      },
+      {
+        q: "How much does CADopia cost?",
+        a: "CADopia starts at $545 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of CADopia?",
+        a: "CADopia is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CADopia support?",
+        a: "CADopia runs on Windows.",
+      },
+      {
+        q: "Which file formats does CADopia support?",
+        a: "CADopia works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CADopia?",
+        a: "The closest alternatives within the 2D CAD space are progeCAD Professional, CAXA CAD, TurboCAD Platinum. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ARES",
       multicore: "Moderate",
@@ -6723,7 +8075,32 @@ export const tools: Tool[] = [
       "Occasional instability",
       "High system requirements",
     ],
-    faqs: genericFaqs("TurboCAD"),
+    faqs: [
+      {
+        q: "What is TurboCAD Platinum used for?",
+        a: "All-in-one professional 2D/3D design suite. TurboCAD Platinum is a 2D CAD solution widely adopted in Architecture, Mechanical, Consumer Products.",
+      },
+      {
+        q: "How much does TurboCAD Platinum cost?",
+        a: "TurboCAD Platinum starts at $999 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of TurboCAD Platinum?",
+        a: "TurboCAD Platinum is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does TurboCAD Platinum support?",
+        a: "TurboCAD Platinum runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does TurboCAD Platinum support?",
+        a: "TurboCAD Platinum works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to TurboCAD Platinum?",
+        a: "The closest alternatives within the 2D CAD space are CAXA CAD, progeCAD Professional, CADopia. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ACIS & D-Cube",
       multicore: "Moderate",
@@ -6773,7 +8150,32 @@ export const tools: Tool[] = [
       "Steep learning curve",
       "Requires specialized training",
     ],
-    faqs: genericFaqs("EPLAN"),
+    faqs: [
+      {
+        q: "What is EPLAN Electric P8 used for?",
+        a: "The global standard for electrical engineering. EPLAN Electric P8 is an EDA solution widely adopted in Electrical Engineering, Automation.",
+      },
+      {
+        q: "How much does EPLAN Electric P8 cost?",
+        a: "EPLAN Electric P8 starts at $2,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of EPLAN Electric P8?",
+        a: "EPLAN Electric P8 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does EPLAN Electric P8 support?",
+        a: "EPLAN Electric P8 runs on Windows.",
+      },
+      {
+        q: "Which file formats does EPLAN Electric P8 support?",
+        a: "EPLAN Electric P8 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to EPLAN Electric P8?",
+        a: "The closest alternatives within the EDA space are Altium Designer, Synopsys Fusion Compiler, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Proprietary",
@@ -6883,7 +8285,32 @@ export const tools: Tool[] = [
       "Windows only",
       "UI is very traditional",
     ],
-    faqs: genericFaqs("PC SCHEMATIC"),
+    faqs: [
+      {
+        q: "What is PC SCHEMATIC Automation used for?",
+        a: "Intelligent electrical CAD for automation. PC SCHEMATIC Automation is a visualization and rendering solution widely adopted in Automation, Manufacturing.",
+      },
+      {
+        q: "How much does PC SCHEMATIC Automation cost?",
+        a: "PC SCHEMATIC Automation starts at $1,500 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of PC SCHEMATIC Automation?",
+        a: "PC SCHEMATIC Automation is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does PC SCHEMATIC Automation support?",
+        a: "PC SCHEMATIC Automation runs on Windows.",
+      },
+      {
+        q: "Which file formats does PC SCHEMATIC Automation support?",
+        a: "PC SCHEMATIC Automation works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to PC SCHEMATIC Automation?",
+        a: "The closest alternatives within the Specialized space are Shoemaster, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Custom",
       multicore: "Moderate",
@@ -6931,7 +8358,32 @@ export const tools: Tool[] = [
       "Niche hardware requirements",
       "Steep learning curve",
     ],
-    faqs: genericFaqs("MatrixGold"),
+    faqs: [
+      {
+        q: "What is MatrixGold used for?",
+        a: "The world's most advanced jewelry design software. MatrixGold is a visualization and rendering solution widely adopted in Jewelry Design, Manufacturing.",
+      },
+      {
+        q: "How much does MatrixGold cost?",
+        a: "MatrixGold starts at $7,900 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of MatrixGold?",
+        a: "MatrixGold is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does MatrixGold support?",
+        a: "MatrixGold runs on Windows.",
+      },
+      {
+        q: "Which file formats does MatrixGold support?",
+        a: "MatrixGold works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to MatrixGold?",
+        a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Rhino 7 + Custom",
@@ -7005,7 +8457,32 @@ export const tools: Tool[] = [
       "Requires specific scanners",
       "High total cost",
     ],
-    faqs: genericFaqs("exocad"),
+    faqs: [
+      {
+        q: "What is exocad DentalCAD used for?",
+        a: "Leading dental CAD software for labs. exocad DentalCAD is a visualization and rendering solution widely adopted in Dental, Medical.",
+      },
+      {
+        q: "How much does exocad DentalCAD cost?",
+        a: "exocad DentalCAD starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of exocad DentalCAD?",
+        a: "exocad DentalCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does exocad DentalCAD support?",
+        a: "exocad DentalCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does exocad DentalCAD support?",
+        a: "exocad DentalCAD works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to exocad DentalCAD?",
+        a: "The closest alternatives within the Specialized space are CLO 3D, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Proprietary",
@@ -7078,7 +8555,32 @@ export const tools: Tool[] = [
       "Old-school UI",
       "High cost of implementation",
     ],
-    faqs: genericFaqs("Cabinet Vision"),
+    faqs: [
+      {
+        q: "What is Cabinet Vision used for?",
+        a: "Essential tool for the woodworking industry. Cabinet Vision is a visualization and rendering solution widely adopted in Woodworking, Furniture.",
+      },
+      {
+        q: "How much does Cabinet Vision cost?",
+        a: "Cabinet Vision starts at $2,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Cabinet Vision?",
+        a: "Cabinet Vision is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Cabinet Vision support?",
+        a: "Cabinet Vision runs on Windows.",
+      },
+      {
+        q: "Which file formats does Cabinet Vision support?",
+        a: "Cabinet Vision works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Cabinet Vision?",
+        a: "The closest alternatives within the Specialized space are exocad DentalCAD, CLO 3D, Land F/X. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Proprietary",
       multicore: "Moderate",
@@ -7122,7 +8624,32 @@ export const tools: Tool[] = [
       "Huge learning curve",
       "Requires specialized IT infrastructure",
     ],
-    faqs: genericFaqs("AVEVA Marine"),
+    faqs: [
+      {
+        q: "What is AVEVA Marine used for?",
+        a: "Integrated engineering and design for shipbuilding. AVEVA Marine is a visualization and rendering solution widely adopted in Shipbuilding, Oil & Gas.",
+      },
+      {
+        q: "How much does AVEVA Marine cost?",
+        a: "AVEVA Marine starts at $15,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of AVEVA Marine?",
+        a: "AVEVA Marine is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does AVEVA Marine support?",
+        a: "AVEVA Marine runs on Windows.",
+      },
+      {
+        q: "Which file formats does AVEVA Marine support?",
+        a: "AVEVA Marine works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to AVEVA Marine?",
+        a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "AVEVA E3D",
       multicore: "Ultra",
@@ -7170,7 +8697,32 @@ export const tools: Tool[] = [
       "Subscription only",
       "Learning curve for pattern making",
     ],
-    faqs: genericFaqs("CLO 3D"),
+    faqs: [
+      {
+        q: "What is CLO 3D used for?",
+        a: "3D garment visualization and design. CLO 3D is a visualization and rendering solution widely adopted in Fashion, Apparel, Gaming.",
+      },
+      {
+        q: "How much does CLO 3D cost?",
+        a: "CLO 3D starts at $600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of CLO 3D?",
+        a: "CLO 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CLO 3D support?",
+        a: "CLO 3D runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does CLO 3D support?",
+        a: "CLO 3D works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CLO 3D?",
+        a: "The closest alternatives within the Specialized space are exocad DentalCAD, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "CLO Simulation Engine",
@@ -7255,7 +8807,32 @@ export const tools: Tool[] = [
       "Requires modern hardware",
       "Expensive setup",
     ],
-    faqs: genericFaqs("Vectorworks Landmark"),
+    faqs: [
+      {
+        q: "What is Vectorworks Landmark used for?",
+        a: "The premier CAD software for landscape design. Vectorworks Landmark is a BIM solution widely adopted in Landscape Architecture, Urban Planning.",
+      },
+      {
+        q: "How much does Vectorworks Landmark cost?",
+        a: "Vectorworks Landmark starts at $153 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Vectorworks Landmark?",
+        a: "Vectorworks Landmark is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Vectorworks Landmark support?",
+        a: "Vectorworks Landmark runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does Vectorworks Landmark support?",
+        a: "Vectorworks Landmark works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Vectorworks Landmark?",
+        a: "The closest alternatives within the BIM space are ArchiCAD, Revit, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Parasolid",
       multicore: "High",
@@ -7296,7 +8873,32 @@ export const tools: Tool[] = [
       "Highly specialized",
     ],
     cons: ["Very niche", "High cost", "Legacy UI"],
-    faqs: genericFaqs("Shoemaster"),
+    faqs: [
+      {
+        q: "What is Shoemaster used for?",
+        a: "Leading CAD/CAM for the global footwear industry. Shoemaster is a visualization and rendering solution widely adopted in Footwear, Apparel.",
+      },
+      {
+        q: "How much does Shoemaster cost?",
+        a: "Shoemaster starts at $5,000 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Shoemaster?",
+        a: "Shoemaster is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Shoemaster support?",
+        a: "Shoemaster runs on Windows.",
+      },
+      {
+        q: "Which file formats does Shoemaster support?",
+        a: "Shoemaster works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Shoemaster?",
+        a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Proprietary",
       multicore: "Moderate",
@@ -7331,7 +8933,32 @@ export const tools: Tool[] = [
     score: 4.8,
     pros: ["Incredibly robust for molds", "Fast processing", "Integrated CAM"],
     cons: ["Expensive", "Requires specialized knowledge", "Complex interface"],
-    faqs: genericFaqs("VISI Modelling"),
+    faqs: [
+      {
+        q: "What is VISI Modelling used for?",
+        a: "Specialized CAD/CAM for the mold and die industry. VISI Modelling is a CAE / CAM solution widely adopted in Mold Design, Tooling.",
+      },
+      {
+        q: "How much does VISI Modelling cost?",
+        a: "VISI Modelling starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of VISI Modelling?",
+        a: "VISI Modelling is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does VISI Modelling support?",
+        a: "VISI Modelling runs on Windows.",
+      },
+      {
+        q: "Which file formats does VISI Modelling support?",
+        a: "VISI Modelling works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to VISI Modelling?",
+        a: "The closest alternatives within the CAE/CAM space are Cimatron, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Parasolid",
       multicore: "Moderate",
@@ -7376,7 +9003,32 @@ export const tools: Tool[] = [
       "Heavy hardware demand",
       "Steep learning curve",
     ],
-    faqs: genericFaqs("WYSIWYG"),
+    faqs: [
+      {
+        q: "What is WYSIWYG used for?",
+        a: "The standard for lighting design and pre-visualization. WYSIWYG is a visualization and rendering solution widely adopted in Event Design, Theatre, Concerts.",
+      },
+      {
+        q: "How much does WYSIWYG cost?",
+        a: "WYSIWYG starts at $1,200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of WYSIWYG?",
+        a: "WYSIWYG is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does WYSIWYG support?",
+        a: "WYSIWYG runs on Windows.",
+      },
+      {
+        q: "Which file formats does WYSIWYG support?",
+        a: "WYSIWYG works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to WYSIWYG?",
+        a: "The closest alternatives within the Specialized space are AVEVA Marine, exocad DentalCAD, CLO 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Cast Core",
       multicore: "High",
@@ -7417,7 +9069,32 @@ export const tools: Tool[] = [
       "Very expensive",
       "Niche user base",
     ],
-    faqs: genericFaqs("3Design"),
+    faqs: [
+      {
+        q: "What is 3Design used for?",
+        a: "Parametric 3D CAD for professional jewelry. 3Design is a visualization and rendering solution widely adopted in Jewelry Design.",
+      },
+      {
+        q: "How much does 3Design cost?",
+        a: "3Design starts at $6,000 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of 3Design?",
+        a: "3Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does 3Design support?",
+        a: "3Design runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does 3Design support?",
+        a: "3Design works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to 3Design?",
+        a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Proprietary Parametric",
       multicore: "Moderate",
@@ -7462,7 +9139,32 @@ export const tools: Tool[] = [
       "High hardware requirements",
       "Steep learning curve",
     ],
-    faqs: genericFaqs("Geomagic Design X"),
+    faqs: [
+      {
+        q: "What is Geomagic Design X used for?",
+        a: "The world's most comprehensive reverse engineering software. Geomagic Design X is a 3D modeling solution widely adopted in Reverse Engineering, Quality Control.",
+      },
+      {
+        q: "How much does Geomagic Design X cost?",
+        a: "Geomagic Design X starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Geomagic Design X?",
+        a: "Geomagic Design X is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Geomagic Design X support?",
+        a: "Geomagic Design X runs on Windows.",
+      },
+      {
+        q: "Which file formats does Geomagic Design X support?",
+        a: "Geomagic Design X works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Geomagic Design X?",
+        a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, Autodesk Inventor. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Parasolid",
       multicore: "High",
@@ -7507,7 +9209,32 @@ export const tools: Tool[] = [
       "Steepest learning curve in CAD",
       "Niche expertise needed",
     ],
-    faqs: genericFaqs("Alias AutoStudio"),
+    faqs: [
+      {
+        q: "What is Alias AutoStudio used for?",
+        a: "Industrial design and automotive styling software. Alias AutoStudio is a 3D modeling solution widely adopted in Automotive, Industrial Design.",
+      },
+      {
+        q: "How much does Alias AutoStudio cost?",
+        a: "Alias AutoStudio starts at $12,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Alias AutoStudio?",
+        a: "Alias AutoStudio is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Alias AutoStudio support?",
+        a: "Alias AutoStudio runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does Alias AutoStudio support?",
+        a: "Alias AutoStudio works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Alias AutoStudio?",
+        a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Alias Core",
       multicore: "High",
@@ -7547,7 +9274,32 @@ export const tools: Tool[] = [
       "Specialized mold tools",
     ],
     cons: ["Legacy UI feel", "Expensive", "Requires high-end PC"],
-    faqs: genericFaqs("Cimatron"),
+    faqs: [
+      {
+        q: "What is Cimatron used for?",
+        a: "Integrated CAD/CAM for mold and die makers. Cimatron is a CAE / CAM solution widely adopted in Mold Design, Die Design.",
+      },
+      {
+        q: "How much does Cimatron cost?",
+        a: "Cimatron starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Cimatron?",
+        a: "Cimatron is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Cimatron support?",
+        a: "Cimatron runs on Windows.",
+      },
+      {
+        q: "Which file formats does Cimatron support?",
+        a: "Cimatron works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Cimatron?",
+        a: "The closest alternatives within the CAE/CAM space are VISI Modelling, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Parasolid",
       multicore: "Moderate",
@@ -7591,7 +9343,32 @@ export const tools: Tool[] = [
       "Subscription based",
       "Learning curve for automation",
     ],
-    faqs: genericFaqs("Land F/X"),
+    faqs: [
+      {
+        q: "What is Land F/X used for?",
+        a: "Professional AutoCAD plugin for landscape architects. Land F/X is a visualization and rendering solution widely adopted in Landscape Architecture, Irrigation.",
+      },
+      {
+        q: "How much does Land F/X cost?",
+        a: "Land F/X starts at $500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Land F/X?",
+        a: "Land F/X is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Land F/X support?",
+        a: "Land F/X runs on Windows.",
+      },
+      {
+        q: "Which file formats does Land F/X support?",
+        a: "Land F/X works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Land F/X?",
+        a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "AutoCAD + Custom",
       multicore: "Low",
@@ -7631,7 +9408,32 @@ export const tools: Tool[] = [
       "Direct manufacturing export",
     ],
     cons: ["Very niche", "High cost", "Steep learning for non-tech designers"],
-    faqs: genericFaqs("ICAD3D+"),
+    faqs: [
+      {
+        q: "What is ICAD3D+ used for?",
+        a: "3D design and pattern engineering for footwear. ICAD3D+ is a visualization and rendering solution widely adopted in Footwear.",
+      },
+      {
+        q: "How much does ICAD3D+ cost?",
+        a: "ICAD3D+ starts at $4,500 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of ICAD3D+?",
+        a: "ICAD3D+ is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ICAD3D+ support?",
+        a: "ICAD3D+ runs on Windows.",
+      },
+      {
+        q: "Which file formats does ICAD3D+ support?",
+        a: "ICAD3D+ works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ICAD3D+?",
+        a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Proprietary 3D",
       multicore: "Moderate",
@@ -7676,7 +9478,32 @@ export const tools: Tool[] = [
       "Tight CAD integrations",
     ],
     cons: ["Very high cost", "Complex licensing", "Steep learning curve"],
-    faqs: genericFaqs("ANSYS Mechanical"),
+    faqs: [
+      {
+        q: "What is ANSYS Mechanical used for?",
+        a: "The gold standard for structural FEA simulation. ANSYS Mechanical is a CAE / CAM solution widely adopted in Aerospace, Automotive, Energy.",
+      },
+      {
+        q: "How much does ANSYS Mechanical cost?",
+        a: "ANSYS Mechanical starts at $25,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of ANSYS Mechanical?",
+        a: "ANSYS Mechanical is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ANSYS Mechanical support?",
+        a: "ANSYS Mechanical runs on Windows and Linux.",
+      },
+      {
+        q: "Which file formats does ANSYS Mechanical support?",
+        a: "ANSYS Mechanical works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ANSYS Mechanical?",
+        a: "The closest alternatives within the CAE/CAM space are Mastercam, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Proprietary FEA",
@@ -7781,7 +9608,32 @@ export const tools: Tool[] = [
       "Broad solver capabilities",
     ],
     cons: ["Extremely expensive", "Old-school UI", "Complex setup"],
-    faqs: genericFaqs("MSC Nastran"),
+    faqs: [
+      {
+        q: "What is MSC Nastran used for?",
+        a: "NASA-born structural analysis solver, now by Hexagon. MSC Nastran is a CAE / CAM solution widely adopted in Aerospace, Automotive, Defense.",
+      },
+      {
+        q: "How much does MSC Nastran cost?",
+        a: "MSC Nastran starts at $18,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of MSC Nastran?",
+        a: "MSC Nastran is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does MSC Nastran support?",
+        a: "MSC Nastran runs on Windows and Linux.",
+      },
+      {
+        q: "Which file formats does MSC Nastran support?",
+        a: "MSC Nastran works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to MSC Nastran?",
+        a: "The closest alternatives within the CAE/CAM space are Siemens NX, Mastercam, nTop. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Proprietary FEA Solver",
@@ -7861,7 +9713,32 @@ export const tools: Tool[] = [
       "Complex ecosystem",
       "UI can be overwhelming",
     ],
-    faqs: genericFaqs("Altair HyperWorks"),
+    faqs: [
+      {
+        q: "What is Altair HyperWorks used for?",
+        a: "Comprehensive simulation-driven design platform. Altair HyperWorks is a CAE / CAM solution widely adopted in Automotive, Aerospace, Manufacturing.",
+      },
+      {
+        q: "How much does Altair HyperWorks cost?",
+        a: "Altair HyperWorks starts at $12,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Altair HyperWorks?",
+        a: "Altair HyperWorks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Altair HyperWorks support?",
+        a: "Altair HyperWorks runs on Windows and Linux.",
+      },
+      {
+        q: "Which file formats does Altair HyperWorks support?",
+        a: "Altair HyperWorks works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Altair HyperWorks?",
+        a: "The closest alternatives within the CAE/CAM space are SolidCAM, Mastercam, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Proprietary CAE Suite",
@@ -7935,7 +9812,32 @@ export const tools: Tool[] = [
       "Very high cost",
       "Limited community resources",
     ],
-    faqs: genericFaqs("ESI Visual-Environment"),
+    faqs: [
+      {
+        q: "What is ESI Visual-Environment used for?",
+        a: "Virtual prototyping platform for crash and comfort simulation. ESI Visual-Environment is a CAE / CAM solution widely adopted in Automotive, Aerospace, Shipbuilding.",
+      },
+      {
+        q: "How much does ESI Visual-Environment cost?",
+        a: "ESI Visual-Environment starts at $15,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of ESI Visual-Environment?",
+        a: "ESI Visual-Environment is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ESI Visual-Environment support?",
+        a: "ESI Visual-Environment runs on Windows and Linux.",
+      },
+      {
+        q: "Which file formats does ESI Visual-Environment support?",
+        a: "ESI Visual-Environment works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ESI Visual-Environment?",
+        a: "The closest alternatives within the CAE/CAM space are Siemens NX, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "PAM-CRASH Solver",
       multicore: "Ultra",
@@ -7979,7 +9881,32 @@ export const tools: Tool[] = [
       "Less frequent updates",
       "Smaller community",
     ],
-    faqs: genericFaqs("CorelCAD"),
+    faqs: [
+      {
+        q: "What is CorelCAD used for?",
+        a: "Affordable DWG-compatible CAD for professionals. CorelCAD is a 2D CAD solution widely adopted in Architecture, Mechanical, General.",
+      },
+      {
+        q: "How much does CorelCAD cost?",
+        a: "CorelCAD starts at $499 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of CorelCAD?",
+        a: "CorelCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CorelCAD support?",
+        a: "CorelCAD runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does CorelCAD support?",
+        a: "CorelCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CorelCAD?",
+        a: "The closest alternatives within the 2D CAD space are CAXA CAD, TurboCAD Platinum, CADopia. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ARES/IntelliCAD",
       multicore: "Low",
@@ -8028,7 +9955,32 @@ export const tools: Tool[] = [
       "Smaller user community",
       "UI not as polished as NX",
     ],
-    faqs: genericFaqs("ZW3D"),
+    faqs: [
+      {
+        q: "What is ZW3D used for?",
+        a: "All-in-one 3D CAD/CAM solution from ZWSOFT. ZW3D is a 3D modeling solution widely adopted in Manufacturing, Mechanical, Mold Design.",
+      },
+      {
+        q: "How much does ZW3D cost?",
+        a: "ZW3D starts at $2,995 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of ZW3D?",
+        a: "ZW3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ZW3D support?",
+        a: "ZW3D runs on Windows.",
+      },
+      {
+        q: "Which file formats does ZW3D support?",
+        a: "ZW3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ZW3D?",
+        a: "The closest alternatives within the 3D Modeling space are Alibre Design, Rhino 3D, IronCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Overdrive Kernel (Proprietary)",
@@ -8155,7 +10107,32 @@ export const tools: Tool[] = [
       "English documentation limited",
       "Fewer plugins vs AutoCAD",
     ],
-    faqs: genericFaqs("CAXA CAD"),
+    faqs: [
+      {
+        q: "What is CAXA CAD used for?",
+        a: "Leading Chinese 2D CAD with English market presence. CAXA CAD is a 2D CAD solution widely adopted in Mechanical, Manufacturing, Electrical.",
+      },
+      {
+        q: "How much does CAXA CAD cost?",
+        a: "CAXA CAD starts at $800 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of CAXA CAD?",
+        a: "CAXA CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CAXA CAD support?",
+        a: "CAXA CAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does CAXA CAD support?",
+        a: "CAXA CAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CAXA CAD?",
+        a: "The closest alternatives within the 2D CAD space are TurboCAD Platinum, CADopia, CorelCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Proprietary 2D",
       multicore: "Low",
@@ -8196,7 +10173,32 @@ export const tools: Tool[] = [
       "Less known than BricsCAD",
       "Cloud features require subscription",
     ],
-    faqs: genericFaqs("ARES Commander"),
+    faqs: [
+      {
+        q: "What is ARES Commander used for?",
+        a: "Professional DWG CAD with cross-platform trinity. ARES Commander is a 2D CAD solution widely adopted in Architecture, Mechanical, General.",
+      },
+      {
+        q: "How much does ARES Commander cost?",
+        a: "ARES Commander starts at $200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of ARES Commander?",
+        a: "ARES Commander is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ARES Commander support?",
+        a: "ARES Commander runs on Windows, macOS, Linux, and Web. The browser-based experience requires no local install.",
+      },
+      {
+        q: "Which file formats does ARES Commander support?",
+        a: "ARES Commander works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ARES Commander?",
+        a: "The closest alternatives within the 2D CAD space are DraftSight, AutoCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "ARES (IntelliCAD-derived)",
@@ -8262,7 +10264,32 @@ export const tools: Tool[] = [
       "AI-powered optimization",
     ],
     cons: ["Extremely expensive", "Linux only", "Requires deep EDA expertise"],
-    faqs: genericFaqs("Synopsys Fusion Compiler"),
+    faqs: [
+      {
+        q: "What is Synopsys Fusion Compiler used for?",
+        a: "Next-generation RTL-to-GDSII EDA compiler from Synopsys. Synopsys Fusion Compiler is an EDA solution widely adopted in Semiconductor, IC Design, Electronics.",
+      },
+      {
+        q: "How much does Synopsys Fusion Compiler cost?",
+        a: "Synopsys Fusion Compiler starts at $50,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Synopsys Fusion Compiler?",
+        a: "Synopsys Fusion Compiler is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Synopsys Fusion Compiler support?",
+        a: "Synopsys Fusion Compiler runs on Linux.",
+      },
+      {
+        q: "Which file formats does Synopsys Fusion Compiler support?",
+        a: "Synopsys Fusion Compiler works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Synopsys Fusion Compiler?",
+        a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Synopsys Fusion Engine",
       multicore: "Ultra",
@@ -8306,7 +10333,32 @@ export const tools: Tool[] = [
       "Expensive for what it offers",
       "Support can be slow",
     ],
-    faqs: genericFaqs("CAMWorks"),
+    faqs: [
+      {
+        q: "What is CAMWorks used for?",
+        a: "Knowledge-based CAM solution by HCL Technologies. CAMWorks is a CAE / CAM solution widely adopted in Manufacturing, Mold Design, Precision Machining.",
+      },
+      {
+        q: "How much does CAMWorks cost?",
+        a: "CAMWorks starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of CAMWorks?",
+        a: "CAMWorks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CAMWorks support?",
+        a: "CAMWorks runs on Windows.",
+      },
+      {
+        q: "Which file formats does CAMWorks support?",
+        a: "CAMWorks works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CAMWorks?",
+        a: "The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Parasolid (via SolidWorks)",
       multicore: "High",
@@ -8355,7 +10407,32 @@ export const tools: Tool[] = [
       "Steeper learning curve",
       "UI feels dated",
     ],
-    faqs: genericFaqs("Allplan"),
+    faqs: [
+      {
+        q: "What is Allplan used for?",
+        a: "Professional BIM platform by Nemetschek for AEC. Allplan is a BIM solution widely adopted in Architecture, Structural Engineering, Construction.",
+      },
+      {
+        q: "How much does Allplan cost?",
+        a: "Allplan starts at $1,800 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of Allplan?",
+        a: "Allplan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Allplan support?",
+        a: "Allplan runs on Windows.",
+      },
+      {
+        q: "Which file formats does Allplan support?",
+        a: "Allplan works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Allplan?",
+        a: "The closest alternatives within the BIM space are ArchiCAD, Revit, OpenRoads Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "Proprietary BIM",
@@ -8475,7 +10552,32 @@ export const tools: Tool[] = [
       "Strong Bentley ecosystem integration",
     ],
     cons: ["High cost", "Windows only", "Complex for simple projects"],
-    faqs: genericFaqs("OpenRoads Designer"),
+    faqs: [
+      {
+        q: "What is OpenRoads Designer used for?",
+        a: "Comprehensive civil road design platform by Bentley. OpenRoads Designer is a BIM solution widely adopted in Civil Engineering, Transportation, Infrastructure.",
+      },
+      {
+        q: "How much does OpenRoads Designer cost?",
+        a: "OpenRoads Designer starts at $4,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      },
+      {
+        q: "Is there a free version of OpenRoads Designer?",
+        a: "OpenRoads Designer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does OpenRoads Designer support?",
+        a: "OpenRoads Designer runs on Windows.",
+      },
+      {
+        q: "Which file formats does OpenRoads Designer support?",
+        a: "OpenRoads Designer works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to OpenRoads Designer?",
+        a: "The closest alternatives within the BIM space are Revit, Civil 3D, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "MicroStation (Bentley)",
       multicore: "High",
@@ -8504,7 +10606,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["medusa4", "pconplanner", "crowncad"],
     country: "France",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -8518,7 +10620,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("3DEXPERIENCE"),
+    faqs: [
+      {
+        q: "What is 3DEXPERIENCE used for?",
+        a: "Through virtual twin technologies, Dassault Systèmes’ collaborative platform empowers business and people to create sust 3DEXPERIENCE is a 2D CAD solution.",
+      },
+      {
+        q: "How much does 3DEXPERIENCE cost?",
+        a: "3DEXPERIENCE is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of 3DEXPERIENCE?",
+        a: "3DEXPERIENCE is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does 3DEXPERIENCE support?",
+        a: "3DEXPERIENCE runs on macOS.",
+      },
+      {
+        q: "Which file formats does 3DEXPERIENCE support?",
+        a: "3DEXPERIENCE works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to 3DEXPERIENCE?",
+        a: "The closest alternatives within the 2D CAD space are MEDUSA4, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "3DEXPERIENCE Engine",
       multicore: "N/A",
@@ -8546,7 +10673,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["beckercad", "cadmeister", "visi"],
     country: "France",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -8560,7 +10687,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("TopSolid"),
+    faqs: [
+      {
+        q: "What is TopSolid used for?",
+        a: "TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal  TopSolid is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does TopSolid cost?",
+        a: "TopSolid is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of TopSolid?",
+        a: "TopSolid is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does TopSolid support?",
+        a: "TopSolid runs on Windows.",
+      },
+      {
+        q: "Which file formats does TopSolid support?",
+        a: "TopSolid works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to TopSolid?",
+        a: "The closest alternatives within the CAE/CAM space are BeckerCAD, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "TopSolid Engine",
       multicore: "N/A",
@@ -8586,7 +10738,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["hicad", "renga", "edificius"],
     country: "France",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -8600,7 +10752,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("BIMoffice"),
+    faqs: [
+      {
+        q: "What is BIMoffice used for?",
+        a: "简要介绍 BIMoffice（官方站点） BIMoffice is a BIM solution.",
+      },
+      {
+        q: "How much does BIMoffice cost?",
+        a: "BIMoffice is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of BIMoffice?",
+        a: "BIMoffice is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does BIMoffice support?",
+        a: "BIMoffice runs on Windows.",
+      },
+      {
+        q: "Which file formats does BIMoffice support?",
+        a: "BIMoffice works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to BIMoffice?",
+        a: "The closest alternatives within the BIM space are HiCAD, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "BIMoffice Engine",
       multicore: "N/A",
@@ -8628,7 +10805,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["cr-8000", "quadcept", "allegro-pcb"],
     country: "Germany",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -8642,7 +10819,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("EPLAN"),
+    faqs: [
+      {
+        q: "What is EPLAN used for?",
+        a: "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing. EPLAN is an EDA solution.",
+      },
+      {
+        q: "How much does EPLAN cost?",
+        a: "EPLAN is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of EPLAN?",
+        a: "EPLAN is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does EPLAN support?",
+        a: "EPLAN runs on Windows.",
+      },
+      {
+        q: "Which file formats does EPLAN support?",
+        a: "EPLAN works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to EPLAN?",
+        a: "The closest alternatives within the EDA space are CR-8000, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "EPLAN Engine",
       multicore: "N/A",
@@ -8670,7 +10872,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "pconplanner", "crowncad"],
     country: "Germany",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -8684,7 +10886,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("MEDUSA4"),
+    faqs: [
+      {
+        q: "What is MEDUSA4 used for?",
+        a: "Benefit from intelligent 2D & 3D CAD software, immersive AR and VR apps for virtual experiences, training and services f MEDUSA4 is a 2D CAD solution.",
+      },
+      {
+        q: "How much does MEDUSA4 cost?",
+        a: "MEDUSA4 is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of MEDUSA4?",
+        a: "MEDUSA4 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does MEDUSA4 support?",
+        a: "MEDUSA4 runs on Windows.",
+      },
+      {
+        q: "Which file formats does MEDUSA4 support?",
+        a: "MEDUSA4 works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to MEDUSA4?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "MEDUSA4 Engine",
       multicore: "N/A",
@@ -8712,7 +10939,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "renga", "edificius"],
     country: "Germany",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -8726,7 +10953,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("HiCAD"),
+    faqs: [
+      {
+        q: "What is HiCAD used for?",
+        a: "ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung,  HiCAD is a BIM solution.",
+      },
+      {
+        q: "How much does HiCAD cost?",
+        a: "HiCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of HiCAD?",
+        a: "HiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does HiCAD support?",
+        a: "HiCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does HiCAD support?",
+        a: "HiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to HiCAD?",
+        a: "The closest alternatives within the BIM space are BIMoffice, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "HiCAD Engine",
       multicore: "N/A",
@@ -8752,7 +11004,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "cadmeister", "visi"],
     country: "Germany",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -8766,7 +11018,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("BeckerCAD"),
+    faqs: [
+      {
+        q: "What is BeckerCAD used for?",
+        a: "简要介绍 BeckerCAD（官方站点） BeckerCAD is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does BeckerCAD cost?",
+        a: "BeckerCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of BeckerCAD?",
+        a: "BeckerCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does BeckerCAD support?",
+        a: "BeckerCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does BeckerCAD support?",
+        a: "BeckerCAD works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to BeckerCAD?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "BeckerCAD Engine",
       multicore: "N/A",
@@ -8792,7 +11069,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "crowncad"],
     country: "Germany",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -8806,7 +11083,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("pCon.planner"),
+    faqs: [
+      {
+        q: "What is pCon.planner used for?",
+        a: "简要介绍 pCon.planner（官方站点） pCon.planner is a 2D CAD solution.",
+      },
+      {
+        q: "How much does pCon.planner cost?",
+        a: "pCon.planner is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of pCon.planner?",
+        a: "pCon.planner is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does pCon.planner support?",
+        a: "pCon.planner runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does pCon.planner support?",
+        a: "pCon.planner works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to pCon.planner?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "pCon.planner Engine",
       multicore: "N/A",
@@ -8834,7 +11136,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "China",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -8848,7 +11150,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("CrownCAD"),
+    faqs: [
+      {
+        q: "What is CrownCAD used for?",
+        a: "华云三维致力于面向智能制造的工业软件研发和推广，拥有自主研发的三维几何建模引擎和几何约束求解器，基于这两项三维CAD核心技术，专注打造完全自主可控、基于云架构的三维CAD平台皇冠CAD（CrownCAD） CrownCAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does CrownCAD cost?",
+        a: "CrownCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of CrownCAD?",
+        a: "CrownCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CrownCAD support?",
+        a: "CrownCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does CrownCAD support?",
+        a: "CrownCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CrownCAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CrownCAD Engine",
       multicore: "N/A",
@@ -8874,7 +11201,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "China",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -8888,7 +11215,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("SINOVATION"),
+    faqs: [
+      {
+        q: "What is SINOVATION used for?",
+        a: "简要介绍 SINOVATION（官方站点） SINOVATION is a 2D CAD solution.",
+      },
+      {
+        q: "How much does SINOVATION cost?",
+        a: "SINOVATION is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of SINOVATION?",
+        a: "SINOVATION is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does SINOVATION support?",
+        a: "SINOVATION runs on Windows.",
+      },
+      {
+        q: "Which file formats does SINOVATION support?",
+        a: "SINOVATION works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to SINOVATION?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "SINOVATION Engine",
       multicore: "N/A",
@@ -8914,7 +11266,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "China",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -8928,7 +11280,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("HaoChen CAD"),
+    faqs: [
+      {
+        q: "What is HaoChen CAD used for?",
+        a: "简要介绍 HaoChen CAD（官方站点） HaoChen CAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does HaoChen CAD cost?",
+        a: "HaoChen CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of HaoChen CAD?",
+        a: "HaoChen CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does HaoChen CAD support?",
+        a: "HaoChen CAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does HaoChen CAD support?",
+        a: "HaoChen CAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to HaoChen CAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "HaoChen CAD Engine",
       multicore: "N/A",
@@ -8956,7 +11333,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "quadcept", "allegro-pcb"],
     country: "Japan",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -8970,7 +11347,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("CR-8000"),
+    faqs: [
+      {
+        q: "What is CR-8000 used for?",
+        a: "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management o CR-8000 is an EDA solution.",
+      },
+      {
+        q: "How much does CR-8000 cost?",
+        a: "CR-8000 is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of CR-8000?",
+        a: "CR-8000 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CR-8000 support?",
+        a: "CR-8000 runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does CR-8000 support?",
+        a: "CR-8000 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CR-8000?",
+        a: "The closest alternatives within the EDA space are EPLAN, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CR-8000 Engine",
       multicore: "N/A",
@@ -8996,7 +11398,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "visi"],
     country: "Japan",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -9010,7 +11412,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("CADmeister"),
+    faqs: [
+      {
+        q: "What is CADmeister used for?",
+        a: "简要介绍 CADmeister（官方站点） CADmeister is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does CADmeister cost?",
+        a: "CADmeister is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of CADmeister?",
+        a: "CADmeister is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CADmeister support?",
+        a: "CADmeister runs on Windows.",
+      },
+      {
+        q: "Which file formats does CADmeister support?",
+        a: "CADmeister works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CADmeister?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CADmeister Engine",
       multicore: "N/A",
@@ -9038,7 +11465,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Japan",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9052,7 +11479,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("IJCAD"),
+    faqs: [
+      {
+        q: "What is IJCAD used for?",
+        a: "IJCADはAutoCADと互換性のあるソフトウェアとして高いシェアを誇っています。IJCADは業種や規模を限定せず、.dwg図面が使われるあらゆるシーンで活用が可能です。 IJCAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does IJCAD cost?",
+        a: "IJCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of IJCAD?",
+        a: "IJCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does IJCAD support?",
+        a: "IJCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does IJCAD support?",
+        a: "IJCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to IJCAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "IJCAD Engine",
       multicore: "N/A",
@@ -9080,7 +11532,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "cr-8000", "allegro-pcb"],
     country: "Japan",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -9094,7 +11546,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Quadcept"),
+    faqs: [
+      {
+        q: "What is Quadcept used for?",
+        a: "Quadcept is a pay as you go cloud based CAD system offering robust features. Quadcept is an EDA solution.",
+      },
+      {
+        q: "How much does Quadcept cost?",
+        a: "Quadcept is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Quadcept?",
+        a: "Quadcept is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Quadcept support?",
+        a: "Quadcept runs on Windows.",
+      },
+      {
+        q: "Which file formats does Quadcept support?",
+        a: "Quadcept works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Quadcept?",
+        a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Quadcept Engine",
       multicore: "N/A",
@@ -9122,7 +11599,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Japan",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9136,7 +11613,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("RootPro CAD"),
+    faqs: [
+      {
+        q: "What is RootPro CAD used for?",
+        a: "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, ar RootPro CAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does RootPro CAD cost?",
+        a: "RootPro CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of RootPro CAD?",
+        a: "RootPro CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does RootPro CAD support?",
+        a: "RootPro CAD runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does RootPro CAD support?",
+        a: "RootPro CAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to RootPro CAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "RootPro CAD Engine",
       multicore: "N/A",
@@ -9164,7 +11666,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Japan",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9178,7 +11680,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("V-nas"),
+    faqs: [
+      {
+        q: "What is V-nas used for?",
+        a: "情報サービスコンサルタント『川田テクノシステム株式会社（KTS）』の公式ホームページです。KTSの取り組みのご紹介、製品情報のご紹介、各種お申込みのご案内を掲載しています。 V-nas is a 2D CAD solution.",
+      },
+      {
+        q: "How much does V-nas cost?",
+        a: "V-nas is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of V-nas?",
+        a: "V-nas is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does V-nas support?",
+        a: "V-nas runs on Windows.",
+      },
+      {
+        q: "Which file formats does V-nas support?",
+        a: "V-nas works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to V-nas?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "V-nas Engine",
       multicore: "N/A",
@@ -9206,7 +11733,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Russia",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9220,7 +11747,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("KOMPAS-3D"),
+    faqs: [
+      {
+        q: "What is KOMPAS-3D used for?",
+        a: "The official website of ASCON, a leading software developer for design, manufacturing, and data management solutions. KOMPAS-3D is a 2D CAD solution.",
+      },
+      {
+        q: "How much does KOMPAS-3D cost?",
+        a: "KOMPAS-3D is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of KOMPAS-3D?",
+        a: "KOMPAS-3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does KOMPAS-3D support?",
+        a: "KOMPAS-3D runs on Windows.",
+      },
+      {
+        q: "Which file formats does KOMPAS-3D support?",
+        a: "KOMPAS-3D works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to KOMPAS-3D?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "KOMPAS-3D Engine",
       multicore: "N/A",
@@ -9248,7 +11800,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Russia",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9262,7 +11814,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("T-FLEX CAD"),
+    faqs: [
+      {
+        q: "What is T-FLEX CAD used for?",
+        a: "Top Systems offers the comprehensive set of integrated applications for T-FLEX Parametric CAD, including CAM, FEA and PD T-FLEX CAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does T-FLEX CAD cost?",
+        a: "T-FLEX CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of T-FLEX CAD?",
+        a: "T-FLEX CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does T-FLEX CAD support?",
+        a: "T-FLEX CAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does T-FLEX CAD support?",
+        a: "T-FLEX CAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to T-FLEX CAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "T-FLEX CAD Engine",
       multicore: "N/A",
@@ -9290,7 +11867,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "hicad", "edificius"],
     country: "Russia",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -9304,7 +11881,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Renga"),
+    faqs: [
+      {
+        q: "What is Renga used for?",
+        a: "Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних Renga is a BIM solution.",
+      },
+      {
+        q: "How much does Renga cost?",
+        a: "Renga is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Renga?",
+        a: "Renga is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Renga support?",
+        a: "Renga runs on Windows.",
+      },
+      {
+        q: "Which file formats does Renga support?",
+        a: "Renga works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Renga?",
+        a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Renga Engine",
       multicore: "N/A",
@@ -9330,7 +11932,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Russia",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9344,7 +11946,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Model Studio CS"),
+    faqs: [
+      {
+        q: "What is Model Studio CS used for?",
+        a: "简要介绍 Model Studio CS（官方站点） Model Studio CS is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Model Studio CS cost?",
+        a: "Model Studio CS is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Model Studio CS?",
+        a: "Model Studio CS is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Model Studio CS support?",
+        a: "Model Studio CS runs on Windows.",
+      },
+      {
+        q: "Which file formats does Model Studio CS support?",
+        a: "Model Studio CS works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Model Studio CS?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Model Studio CS Engine",
       multicore: "N/A",
@@ -9372,7 +11999,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "UK",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9386,7 +12013,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("AVEVA E3D Design"),
+    faqs: [
+      {
+        q: "What is AVEVA E3D Design used for?",
+        a: "At AVEVA, we work with you and harness the power of our ecosystem, to deliver solutions and expertise to optimize engine AVEVA E3D Design is a 2D CAD solution.",
+      },
+      {
+        q: "How much does AVEVA E3D Design cost?",
+        a: "AVEVA E3D Design is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of AVEVA E3D Design?",
+        a: "AVEVA E3D Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does AVEVA E3D Design support?",
+        a: "AVEVA E3D Design runs on Windows.",
+      },
+      {
+        q: "Which file formats does AVEVA E3D Design support?",
+        a: "AVEVA E3D Design works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to AVEVA E3D Design?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "AVEVA E3D Design Engine",
       multicore: "N/A",
@@ -9414,7 +12066,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "UK",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9428,7 +12080,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("DesignSpark Mechanical"),
+    faqs: [
+      {
+        q: "What is DesignSpark Mechanical used for?",
+        a: "Your go-to design engineering platform – Accelerate your design time to market with design software, access to CAD neutral. DesignSpark Mechanical is a 2D CAD solution.",
+      },
+      {
+        q: "How much does DesignSpark Mechanical cost?",
+        a: "DesignSpark Mechanical is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of DesignSpark Mechanical?",
+        a: "DesignSpark Mechanical is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does DesignSpark Mechanical support?",
+        a: "DesignSpark Mechanical runs on Windows.",
+      },
+      {
+        q: "Which file formats does DesignSpark Mechanical support?",
+        a: "DesignSpark Mechanical works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to DesignSpark Mechanical?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "DesignSpark Mechanical Engine",
       multicore: "N/A",
@@ -9454,7 +12131,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "UK",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9468,7 +12145,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("LUSAS"),
+    faqs: [
+      {
+        q: "What is LUSAS used for?",
+        a: "简要介绍 LUSAS（官方站点） LUSAS is a 2D CAD solution.",
+      },
+      {
+        q: "How much does LUSAS cost?",
+        a: "LUSAS is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of LUSAS?",
+        a: "LUSAS is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does LUSAS support?",
+        a: "LUSAS runs on Windows.",
+      },
+      {
+        q: "Which file formats does LUSAS support?",
+        a: "LUSAS works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to LUSAS?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "LUSAS Engine",
       multicore: "N/A",
@@ -9494,7 +12196,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "UK",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -9508,7 +12210,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Visi"),
+    faqs: [
+      {
+        q: "What is Visi used for?",
+        a: "简要介绍 Visi（官方站点） Visi is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does Visi cost?",
+        a: "Visi is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Visi?",
+        a: "Visi is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Visi support?",
+        a: "Visi runs on Windows.",
+      },
+      {
+        q: "Which file formats does Visi support?",
+        a: "Visi works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Visi?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Visi Engine",
       multicore: "N/A",
@@ -9534,7 +12261,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "UK",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -9548,7 +12275,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Edgecam"),
+    faqs: [
+      {
+        q: "What is Edgecam used for?",
+        a: "简要介绍 Edgecam（官方站点） Edgecam is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does Edgecam cost?",
+        a: "Edgecam is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Edgecam?",
+        a: "Edgecam is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Edgecam support?",
+        a: "Edgecam runs on Windows.",
+      },
+      {
+        q: "Which file formats does Edgecam support?",
+        a: "Edgecam works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Edgecam?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Edgecam Engine",
       multicore: "N/A",
@@ -9576,7 +12328,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "South Korea",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9590,7 +12342,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("midas Civil"),
+    faqs: [
+      {
+        q: "What is midas Civil used for?",
+        a: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an midas Civil is a 2D CAD solution.",
+      },
+      {
+        q: "How much does midas Civil cost?",
+        a: "midas Civil is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of midas Civil?",
+        a: "midas Civil is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does midas Civil support?",
+        a: "midas Civil runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does midas Civil support?",
+        a: "midas Civil works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to midas Civil?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "midas Civil Engine",
       multicore: "N/A",
@@ -9618,7 +12395,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "South Korea",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9632,7 +12409,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("midas Gen"),
+    faqs: [
+      {
+        q: "What is midas Gen used for?",
+        a: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an midas Gen is a 2D CAD solution.",
+      },
+      {
+        q: "How much does midas Gen cost?",
+        a: "midas Gen is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of midas Gen?",
+        a: "midas Gen is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does midas Gen support?",
+        a: "midas Gen runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does midas Gen support?",
+        a: "midas Gen works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to midas Gen?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "midas Gen Engine",
       multicore: "N/A",
@@ -9660,7 +12462,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "South Korea",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9674,7 +12476,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("CADian"),
+    faqs: [
+      {
+        q: "What is CADian used for?",
+        a: "30년 이상의 개발 역사가 말해주듯, 신뢰할 수 있는 국산 CAD, CADian! CADian is a 2D CAD solution.",
+      },
+      {
+        q: "How much does CADian cost?",
+        a: "CADian is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of CADian?",
+        a: "CADian is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CADian support?",
+        a: "CADian runs on Windows.",
+      },
+      {
+        q: "Which file formats does CADian support?",
+        a: "CADian works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CADian?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CADian Engine",
       multicore: "N/A",
@@ -9702,7 +12529,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "hicad", "renga"],
     country: "Italy",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -9716,7 +12543,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Edificius"),
+    faqs: [
+      {
+        q: "What is Edificius used for?",
+        a: "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a Edificius is a BIM solution.",
+      },
+      {
+        q: "How much does Edificius cost?",
+        a: "Edificius is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Edificius?",
+        a: "Edificius is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Edificius support?",
+        a: "Edificius runs on Windows.",
+      },
+      {
+        q: "Which file formats does Edificius support?",
+        a: "Edificius works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Edificius?",
+        a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Edificius Engine",
       multicore: "N/A",
@@ -9744,7 +12596,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "hicad", "renga"],
     country: "Italy",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -9758,7 +12610,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("EdiLus"),
+    faqs: [
+      {
+        q: "What is EdiLus used for?",
+        a: "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a EdiLus is a BIM solution.",
+      },
+      {
+        q: "How much does EdiLus cost?",
+        a: "EdiLus is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of EdiLus?",
+        a: "EdiLus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does EdiLus support?",
+        a: "EdiLus runs on Windows.",
+      },
+      {
+        q: "Which file formats does EdiLus support?",
+        a: "EdiLus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to EdiLus?",
+        a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "EdiLus Engine",
       multicore: "N/A",
@@ -9784,7 +12661,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Italy",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9798,7 +12675,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("think3"),
+    faqs: [
+      {
+        q: "What is think3 used for?",
+        a: "简要介绍 think3（官方站点） think3 is a 2D CAD solution.",
+      },
+      {
+        q: "How much does think3 cost?",
+        a: "think3 is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of think3?",
+        a: "think3 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does think3 support?",
+        a: "think3 runs on Windows.",
+      },
+      {
+        q: "Which file formats does think3 support?",
+        a: "think3 works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to think3?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "think3 Engine",
       multicore: "N/A",
@@ -9826,7 +12728,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Australia",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9840,7 +12742,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Maptek Vulcan"),
+    faqs: [
+      {
+        q: "What is Maptek Vulcan used for?",
+        a: "Maptek™ is a leading provider of innovative software, hardware and services for the mining industry. Founded 40 years ag Maptek Vulcan is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Maptek Vulcan cost?",
+        a: "Maptek Vulcan is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Maptek Vulcan?",
+        a: "Maptek Vulcan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Maptek Vulcan support?",
+        a: "Maptek Vulcan runs on Windows.",
+      },
+      {
+        q: "Which file formats does Maptek Vulcan support?",
+        a: "Maptek Vulcan works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Maptek Vulcan?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Maptek Vulcan Engine",
       multicore: "N/A",
@@ -9868,7 +12795,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Canada",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9882,7 +12809,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Promine"),
+    faqs: [
+      {
+        q: "What is Promine used for?",
+        a: "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’ Promine is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Promine cost?",
+        a: "Promine is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Promine?",
+        a: "Promine is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Promine support?",
+        a: "Promine runs on Windows.",
+      },
+      {
+        q: "Which file formats does Promine support?",
+        a: "Promine works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Promine?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Promine Engine",
       multicore: "N/A",
@@ -9910,7 +12862,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Belgium",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9924,7 +12876,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("OOFELIE"),
+    faqs: [
+      {
+        q: "What is OOFELIE used for?",
+        a: "Open Engineering is a European high-tech supplier of multiphysics simulations engineering tools and services. OOFELIE is a 2D CAD solution.",
+      },
+      {
+        q: "How much does OOFELIE cost?",
+        a: "OOFELIE is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of OOFELIE?",
+        a: "OOFELIE is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does OOFELIE support?",
+        a: "OOFELIE runs on Windows.",
+      },
+      {
+        q: "Which file formats does OOFELIE support?",
+        a: "OOFELIE works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to OOFELIE?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "OOFELIE Engine",
       multicore: "N/A",
@@ -9952,7 +12929,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Spain",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -9966,7 +12943,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("CYPECAD"),
+    faqs: [
+      {
+        q: "What is CYPECAD used for?",
+        a: "Technical software for structural design, mep systems, construction management. Engineering projects. Pathology CYPECAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does CYPECAD cost?",
+        a: "CYPECAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of CYPECAD?",
+        a: "CYPECAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CYPECAD support?",
+        a: "CYPECAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does CYPECAD support?",
+        a: "CYPECAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CYPECAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CYPECAD Engine",
       multicore: "N/A",
@@ -9994,7 +12996,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Spain",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10008,7 +13010,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("TeKton3D"),
+    faqs: [
+      {
+        q: "What is TeKton3D used for?",
+        a: "Desarrollo de software para el diseño y cálculo de instalaciones y estructuras en edificios y aplicación del Código Técn TeKton3D is a 2D CAD solution.",
+      },
+      {
+        q: "How much does TeKton3D cost?",
+        a: "TeKton3D is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of TeKton3D?",
+        a: "TeKton3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does TeKton3D support?",
+        a: "TeKton3D runs on Windows.",
+      },
+      {
+        q: "Which file formats does TeKton3D support?",
+        a: "TeKton3D works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to TeKton3D?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "TeKton3D Engine",
       multicore: "N/A",
@@ -10034,7 +13061,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "Switzerland",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10048,7 +13075,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("KISSsoft"),
+    faqs: [
+      {
+        q: "What is KISSsoft used for?",
+        a: "简要介绍 KISSsoft（官方站点） KISSsoft is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does KISSsoft cost?",
+        a: "KISSsoft is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of KISSsoft?",
+        a: "KISSsoft is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does KISSsoft support?",
+        a: "KISSsoft runs on Windows.",
+      },
+      {
+        q: "Which file formats does KISSsoft support?",
+        a: "KISSsoft works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to KISSsoft?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "KISSsoft Engine",
       multicore: "N/A",
@@ -10074,7 +13126,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "hicad", "renga"],
     country: "Switzerland",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -10088,7 +13140,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("cadwork"),
+    faqs: [
+      {
+        q: "What is cadwork used for?",
+        a: "Cadwork CAD/CAM software for timber construction. cadwork is a BIM solution.",
+      },
+      {
+        q: "How much does cadwork cost?",
+        a: "cadwork is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of cadwork?",
+        a: "cadwork is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does cadwork support?",
+        a: "cadwork runs on Windows.",
+      },
+      {
+        q: "Which file formats does cadwork support?",
+        a: "cadwork works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to cadwork?",
+        a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "cadwork Engine",
       multicore: "N/A",
@@ -10116,7 +13193,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "hicad", "renga"],
     country: "Finland",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -10130,7 +13207,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("MagiCAD"),
+    faqs: [
+      {
+        q: "What is MagiCAD used for?",
+        a: "MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the constructi MagiCAD is a BIM solution.",
+      },
+      {
+        q: "How much does MagiCAD cost?",
+        a: "MagiCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of MagiCAD?",
+        a: "MagiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does MagiCAD support?",
+        a: "MagiCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does MagiCAD support?",
+        a: "MagiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to MagiCAD?",
+        a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "MagiCAD Engine",
       multicore: "N/A",
@@ -10158,7 +13260,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Finland",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10172,7 +13274,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Vertex BD"),
+    faqs: [
+      {
+        q: "What is Vertex BD used for?",
+        a: "Vertexin kotimaiset 3D-suunnitteluohjelmat sekä tiedonhallintaratkaisut teollisuudelle. 3D CAD, PDM ja PLM – lue lisää o Vertex BD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Vertex BD cost?",
+        a: "Vertex BD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Vertex BD?",
+        a: "Vertex BD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Vertex BD support?",
+        a: "Vertex BD runs on Windows.",
+      },
+      {
+        q: "Which file formats does Vertex BD support?",
+        a: "Vertex BD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Vertex BD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Vertex BD Engine",
       multicore: "N/A",
@@ -10200,7 +13327,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Sweden",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10214,7 +13341,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("CET Designer"),
+    faqs: [
+      {
+        q: "What is CET Designer used for?",
+        a: "We offer space planning software solutions that will help you streamline your sales, design and order processes. CET Designer is a 2D CAD solution.",
+      },
+      {
+        q: "How much does CET Designer cost?",
+        a: "CET Designer is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of CET Designer?",
+        a: "CET Designer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CET Designer support?",
+        a: "CET Designer runs on Windows.",
+      },
+      {
+        q: "Which file formats does CET Designer support?",
+        a: "CET Designer works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CET Designer?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CET Designer Engine",
       multicore: "N/A",
@@ -10240,7 +13392,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "India",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10254,7 +13406,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("ActCAD"),
+    faqs: [
+      {
+        q: "What is ActCAD used for?",
+        a: "简要介绍 ActCAD（官方站点） ActCAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does ActCAD cost?",
+        a: "ActCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of ActCAD?",
+        a: "ActCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ActCAD support?",
+        a: "ActCAD runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does ActCAD support?",
+        a: "ActCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ActCAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ActCAD Engine",
       multicore: "N/A",
@@ -10280,7 +13457,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "India",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10294,7 +13471,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("CADVision"),
+    faqs: [
+      {
+        q: "What is CADVision used for?",
+        a: "简要介绍 CADVision（官方站点） CADVision is a 2D CAD solution.",
+      },
+      {
+        q: "How much does CADVision cost?",
+        a: "CADVision is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of CADVision?",
+        a: "CADVision is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does CADVision support?",
+        a: "CADVision runs on Windows.",
+      },
+      {
+        q: "Which file formats does CADVision support?",
+        a: "CADVision works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to CADVision?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "CADVision Engine",
       multicore: "N/A",
@@ -10322,7 +13524,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Brazil",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10336,7 +13538,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Eberick"),
+    faqs: [
+      {
+        q: "What is Eberick used for?",
+        a: "Somos a líder nacional para projetos em BIM e Gestão Digital da Construção, com soluções em software para todas as etapa Eberick is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Eberick cost?",
+        a: "Eberick is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Eberick?",
+        a: "Eberick is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Eberick support?",
+        a: "Eberick runs on Windows.",
+      },
+      {
+        q: "Which file formats does Eberick support?",
+        a: "Eberick works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Eberick?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Eberick Engine",
       multicore: "N/A",
@@ -10364,7 +13591,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Brazil",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10378,7 +13605,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Promob"),
+    faqs: [
+      {
+        q: "What is Promob used for?",
+        a: "Projetar, produzir e gerenciar nunca foi tão fácil com a Promob Software Solutions. À maior desenvolvedora de software d Promob is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Promob cost?",
+        a: "Promob is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Promob?",
+        a: "Promob is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Promob support?",
+        a: "Promob runs on Windows.",
+      },
+      {
+        q: "Which file formats does Promob support?",
+        a: "Promob works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Promob?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Promob Engine",
       multicore: "N/A",
@@ -10406,7 +13658,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Netherlands",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10420,7 +13672,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("SCIA Engineer"),
+    faqs: [
+      {
+        q: "What is SCIA Engineer used for?",
+        a: "SCIA combines structural engineering and design know-how with technology, to provide powerful structural analysis softwa SCIA Engineer is a 2D CAD solution.",
+      },
+      {
+        q: "How much does SCIA Engineer cost?",
+        a: "SCIA Engineer is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of SCIA Engineer?",
+        a: "SCIA Engineer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does SCIA Engineer support?",
+        a: "SCIA Engineer runs on Windows.",
+      },
+      {
+        q: "Which file formats does SCIA Engineer support?",
+        a: "SCIA Engineer works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to SCIA Engineer?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "SCIA Engineer Engine",
       multicore: "N/A",
@@ -10446,7 +13723,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "UK",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10460,7 +13737,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("PowerMill"),
+    faqs: [
+      {
+        q: "What is PowerMill used for?",
+        a: "简要介绍 PowerMill（官方站点） PowerMill is a 2D CAD solution.",
+      },
+      {
+        q: "How much does PowerMill cost?",
+        a: "PowerMill is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of PowerMill?",
+        a: "PowerMill is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does PowerMill support?",
+        a: "PowerMill runs on Windows.",
+      },
+      {
+        q: "Which file formats does PowerMill support?",
+        a: "PowerMill works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to PowerMill?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "PowerMill Engine",
       multicore: "N/A",
@@ -10486,7 +13788,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10500,7 +13802,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("FeatureCAM"),
+    faqs: [
+      {
+        q: "What is FeatureCAM used for?",
+        a: "简要介绍 FeatureCAM（官方站点） FeatureCAM is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does FeatureCAM cost?",
+        a: "FeatureCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of FeatureCAM?",
+        a: "FeatureCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does FeatureCAM support?",
+        a: "FeatureCAM runs on Windows.",
+      },
+      {
+        q: "Which file formats does FeatureCAM support?",
+        a: "FeatureCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to FeatureCAM?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "FeatureCAM Engine",
       multicore: "N/A",
@@ -10528,7 +13855,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10542,7 +13869,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("GibbsCAM"),
+    faqs: [
+      {
+        q: "What is GibbsCAM used for?",
+        a: "GibbsCAM® is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts th GibbsCAM is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does GibbsCAM cost?",
+        a: "GibbsCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of GibbsCAM?",
+        a: "GibbsCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does GibbsCAM support?",
+        a: "GibbsCAM runs on Windows.",
+      },
+      {
+        q: "Which file formats does GibbsCAM support?",
+        a: "GibbsCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to GibbsCAM?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "GibbsCAM Engine",
       multicore: "N/A",
@@ -10570,7 +13922,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "USA",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10584,7 +13936,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("ESPRIT"),
+    faqs: [
+      {
+        q: "What is ESPRIT used for?",
+        a: "Is ESPRIT the best CAM software for your shop? Learn more about what makes us different and how we can help you achieve  ESPRIT is a 2D CAD solution.",
+      },
+      {
+        q: "How much does ESPRIT cost?",
+        a: "ESPRIT is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of ESPRIT?",
+        a: "ESPRIT is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ESPRIT support?",
+        a: "ESPRIT runs on Windows.",
+      },
+      {
+        q: "Which file formats does ESPRIT support?",
+        a: "ESPRIT works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ESPRIT?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ESPRIT Engine",
       multicore: "N/A",
@@ -10612,7 +13989,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "Germany",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10626,7 +14003,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("hyperMILL"),
+    faqs: [
+      {
+        q: "What is hyperMILL used for?",
+        a: "Innovative CAD CAM solutions generate optimised NC milling and turning programs for machine tools | Explore hyperMILL CA hyperMILL is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does hyperMILL cost?",
+        a: "hyperMILL is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of hyperMILL?",
+        a: "hyperMILL is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does hyperMILL support?",
+        a: "hyperMILL runs on Windows.",
+      },
+      {
+        q: "Which file formats does hyperMILL support?",
+        a: "hyperMILL works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to hyperMILL?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "hyperMILL Engine",
       multicore: "N/A",
@@ -10654,7 +14056,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "Germany",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10668,7 +14070,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Tebis"),
+    faqs: [
+      {
+        q: "What is Tebis used for?",
+        a: "Software components for CAD/CAM, CAQ and MES support design and production in die, model and machine manufacturing. Tebis is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does Tebis cost?",
+        a: "Tebis is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Tebis?",
+        a: "Tebis is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Tebis support?",
+        a: "Tebis runs on Windows.",
+      },
+      {
+        q: "Which file formats does Tebis support?",
+        a: "Tebis works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Tebis?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Tebis Engine",
       multicore: "N/A",
@@ -10694,7 +14121,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "France",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10708,7 +14135,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("WorkNC"),
+    faqs: [
+      {
+        q: "What is WorkNC used for?",
+        a: "简要介绍 WorkNC（官方站点） WorkNC is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does WorkNC cost?",
+        a: "WorkNC is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of WorkNC?",
+        a: "WorkNC is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does WorkNC support?",
+        a: "WorkNC runs on Windows.",
+      },
+      {
+        q: "Which file formats does WorkNC support?",
+        a: "WorkNC works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to WorkNC?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "WorkNC Engine",
       multicore: "N/A",
@@ -10734,7 +14186,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10748,7 +14200,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("SURFCAM"),
+    faqs: [
+      {
+        q: "What is SURFCAM used for?",
+        a: "简要介绍 SURFCAM（官方站点） SURFCAM is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does SURFCAM cost?",
+        a: "SURFCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of SURFCAM?",
+        a: "SURFCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does SURFCAM support?",
+        a: "SURFCAM runs on Windows.",
+      },
+      {
+        q: "Which file formats does SURFCAM support?",
+        a: "SURFCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to SURFCAM?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "SURFCAM Engine",
       multicore: "N/A",
@@ -10776,7 +14253,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -10790,7 +14267,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("BobCAD-CAM"),
+    faqs: [
+      {
+        q: "What is BobCAD-CAM used for?",
+        a: "The World Leader in Powerful & Affordable CNC CAD/CAM Software Solutions BobCAD-CAM is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does BobCAD-CAM cost?",
+        a: "BobCAD-CAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of BobCAD-CAM?",
+        a: "BobCAD-CAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does BobCAD-CAM support?",
+        a: "BobCAD-CAM runs on Windows.",
+      },
+      {
+        q: "Which file formats does BobCAD-CAM support?",
+        a: "BobCAD-CAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to BobCAD-CAM?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "BobCAD-CAM Engine",
       multicore: "N/A",
@@ -10816,7 +14318,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "hicad", "renga"],
     country: "Norway",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -10830,7 +14332,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("DDS-CAD"),
+    faqs: [
+      {
+        q: "What is DDS-CAD used for?",
+        a: "简要介绍 DDS-CAD（官方站点） DDS-CAD is a BIM solution.",
+      },
+      {
+        q: "How much does DDS-CAD cost?",
+        a: "DDS-CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of DDS-CAD?",
+        a: "DDS-CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does DDS-CAD support?",
+        a: "DDS-CAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does DDS-CAD support?",
+        a: "DDS-CAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to DDS-CAD?",
+        a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "DDS-CAD Engine",
       multicore: "N/A",
@@ -10856,7 +14383,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Germany",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -10870,7 +14397,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Planbar"),
+    faqs: [
+      {
+        q: "What is Planbar used for?",
+        a: "简要介绍 Planbar（官方站点） Planbar is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Planbar cost?",
+        a: "Planbar is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Planbar?",
+        a: "Planbar is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Planbar support?",
+        a: "Planbar runs on Windows.",
+      },
+      {
+        q: "Which file formats does Planbar support?",
+        a: "Planbar works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Planbar?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Planbar Engine",
       multicore: "N/A",
@@ -10898,7 +14450,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["bimoffice", "hicad", "renga"],
     country: "Norway",
     category_id: "c3",
     pricing_type: "Perpetual",
@@ -10912,7 +14464,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("dRofus"),
+    faqs: [
+      {
+        q: "What is dRofus used for?",
+        a: "dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos dRofus is a BIM solution.",
+      },
+      {
+        q: "How much does dRofus cost?",
+        a: "dRofus is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of dRofus?",
+        a: "dRofus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does dRofus support?",
+        a: "dRofus runs on Windows.",
+      },
+      {
+        q: "Which file formats does dRofus support?",
+        a: "dRofus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to dRofus?",
+        a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "dRofus Engine",
       multicore: "N/A",
@@ -10938,7 +14515,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "cr-8000", "quadcept"],
     country: "USA",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -10953,7 +14530,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Allegro PCB"),
+    faqs: [
+      {
+        q: "What is Allegro PCB used for?",
+        a: "简要介绍 Allegro PCB（官方站点） Allegro PCB is an EDA solution.",
+      },
+      {
+        q: "How much does Allegro PCB cost?",
+        a: "Allegro PCB is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Allegro PCB?",
+        a: "Allegro PCB is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Allegro PCB support?",
+        a: "Allegro PCB runs on Windows.",
+      },
+      {
+        q: "Which file formats does Allegro PCB support?",
+        a: "Allegro PCB works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Allegro PCB?",
+        a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Allegro PCB Engine",
       multicore: "N/A",
@@ -10979,7 +14581,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "cr-8000", "quadcept"],
     country: "USA",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -10993,7 +14595,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("OrCAD"),
+    faqs: [
+      {
+        q: "What is OrCAD used for?",
+        a: "简要介绍 OrCAD（官方站点） OrCAD is an EDA solution.",
+      },
+      {
+        q: "How much does OrCAD cost?",
+        a: "OrCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of OrCAD?",
+        a: "OrCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does OrCAD support?",
+        a: "OrCAD runs on Windows.",
+      },
+      {
+        q: "Which file formats does OrCAD support?",
+        a: "OrCAD works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to OrCAD?",
+        a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "OrCAD Engine",
       multicore: "N/A",
@@ -11021,7 +14648,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "cr-8000", "quadcept"],
     country: "USA",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -11035,7 +14662,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("PADS Professional"),
+    faqs: [
+      {
+        q: "What is PADS Professional used for?",
+        a: "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-read PADS Professional is an EDA solution.",
+      },
+      {
+        q: "How much does PADS Professional cost?",
+        a: "PADS Professional is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of PADS Professional?",
+        a: "PADS Professional is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does PADS Professional support?",
+        a: "PADS Professional runs on Windows.",
+      },
+      {
+        q: "Which file formats does PADS Professional support?",
+        a: "PADS Professional works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to PADS Professional?",
+        a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "PADS Professional Engine",
       multicore: "N/A",
@@ -11063,7 +14715,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "cr-8000", "quadcept"],
     country: "USA",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -11077,7 +14729,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Xpedition"),
+    faqs: [
+      {
+        q: "What is Xpedition used for?",
+        a: "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent Xpedition is an EDA solution.",
+      },
+      {
+        q: "How much does Xpedition cost?",
+        a: "Xpedition is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Xpedition?",
+        a: "Xpedition is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Xpedition support?",
+        a: "Xpedition runs on Windows.",
+      },
+      {
+        q: "Which file formats does Xpedition support?",
+        a: "Xpedition works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Xpedition?",
+        a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Xpedition Engine",
       multicore: "N/A",
@@ -11105,7 +14782,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "cr-8000", "quadcept"],
     country: "UK",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -11119,7 +14796,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Pulsonix"),
+    faqs: [
+      {
+        q: "What is Pulsonix used for?",
+        a: "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software. Pulsonix is an EDA solution.",
+      },
+      {
+        q: "How much does Pulsonix cost?",
+        a: "Pulsonix is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Pulsonix?",
+        a: "Pulsonix is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Pulsonix support?",
+        a: "Pulsonix runs on Windows.",
+      },
+      {
+        q: "Which file formats does Pulsonix support?",
+        a: "Pulsonix works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Pulsonix?",
+        a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Pulsonix Engine",
       multicore: "N/A",
@@ -11145,7 +14847,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["eplan", "cr-8000", "quadcept"],
     country: "Germany",
     category_id: "c6",
     pricing_type: "Perpetual",
@@ -11159,7 +14861,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Target 3001!"),
+    faqs: [
+      {
+        q: "What is Target 3001! used for?",
+        a: "简要介绍 Target 3001!（官方站点） Target 3001! is an EDA solution.",
+      },
+      {
+        q: "How much does Target 3001! cost?",
+        a: "Target 3001! is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Target 3001!?",
+        a: "Target 3001! is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Target 3001! support?",
+        a: "Target 3001! runs on Windows.",
+      },
+      {
+        q: "Which file formats does Target 3001! support?",
+        a: "Target 3001! works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Target 3001!?",
+        a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Target 3001! Engine",
       multicore: "N/A",
@@ -11187,7 +14914,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "Switzerland",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11201,7 +14928,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("AutoForm"),
+    faqs: [
+      {
+        q: "What is AutoForm used for?",
+        a: "AutoForm’s software solutions form a comprehensive platform for the engineering, evaluation and improvement of the sheet AutoForm is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does AutoForm cost?",
+        a: "AutoForm is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of AutoForm?",
+        a: "AutoForm is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does AutoForm support?",
+        a: "AutoForm runs on Windows.",
+      },
+      {
+        q: "Which file formats does AutoForm support?",
+        a: "AutoForm works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to AutoForm?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "AutoForm Engine",
       multicore: "N/A",
@@ -11227,7 +14979,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "France",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11241,7 +14993,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("PAM-STAMP"),
+    faqs: [
+      {
+        q: "What is PAM-STAMP used for?",
+        a: "简要介绍 PAM-STAMP（官方站点） PAM-STAMP is a 2D CAD solution.",
+      },
+      {
+        q: "How much does PAM-STAMP cost?",
+        a: "PAM-STAMP is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of PAM-STAMP?",
+        a: "PAM-STAMP is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does PAM-STAMP support?",
+        a: "PAM-STAMP runs on Windows.",
+      },
+      {
+        q: "Which file formats does PAM-STAMP support?",
+        a: "PAM-STAMP works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to PAM-STAMP?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "PAM-STAMP Engine",
       multicore: "N/A",
@@ -11267,7 +15044,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11281,7 +15058,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Moldflow"),
+    faqs: [
+      {
+        q: "What is Moldflow used for?",
+        a: "简要介绍 Moldflow（官方站点） Moldflow is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does Moldflow cost?",
+        a: "Moldflow is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Moldflow?",
+        a: "Moldflow is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Moldflow support?",
+        a: "Moldflow runs on Windows.",
+      },
+      {
+        q: "Which file formats does Moldflow support?",
+        a: "Moldflow works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Moldflow?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Moldflow Engine",
       multicore: "N/A",
@@ -11307,7 +15109,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "Taiwan",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11321,7 +15123,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Moldex3D"),
+    faqs: [
+      {
+        q: "What is Moldex3D used for?",
+        a: "Moldex3D | Plastic Injection Molding Simulation Software Moldex3D is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does Moldex3D cost?",
+        a: "Moldex3D is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Moldex3D?",
+        a: "Moldex3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Moldex3D support?",
+        a: "Moldex3D runs on macOS.",
+      },
+      {
+        q: "Which file formats does Moldex3D support?",
+        a: "Moldex3D works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Moldex3D?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Moldex3D Engine",
       multicore: "N/A",
@@ -11349,7 +15176,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Canada",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11363,7 +15190,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("ShipConstructor"),
+    faqs: [
+      {
+        q: "What is ShipConstructor used for?",
+        a: "Engineering information is a shipbuilder’s most important asset. Using a solution that is built to handle shipbuilding’s ShipConstructor is a 2D CAD solution.",
+      },
+      {
+        q: "How much does ShipConstructor cost?",
+        a: "ShipConstructor is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of ShipConstructor?",
+        a: "ShipConstructor is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ShipConstructor support?",
+        a: "ShipConstructor runs on macOS.",
+      },
+      {
+        q: "Which file formats does ShipConstructor support?",
+        a: "ShipConstructor works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ShipConstructor?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "ShipConstructor Engine",
       multicore: "N/A",
@@ -11391,7 +15243,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Finland",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11405,7 +15257,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("NAPA"),
+    faqs: [
+      {
+        q: "What is NAPA used for?",
+        a: "NAPA provides maritime software and data services for ship design and operations to enable a safer, more sustainable, an NAPA is a 2D CAD solution.",
+      },
+      {
+        q: "How much does NAPA cost?",
+        a: "NAPA is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of NAPA?",
+        a: "NAPA is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does NAPA support?",
+        a: "NAPA runs on Windows.",
+      },
+      {
+        q: "Which file formats does NAPA support?",
+        a: "NAPA works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to NAPA?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "NAPA Engine",
       multicore: "N/A",
@@ -11431,7 +15308,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Spain",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11445,7 +15322,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("FORAN"),
+    faqs: [
+      {
+        q: "What is FORAN used for?",
+        a: "简要介绍 FORAN（官方站点） FORAN is a 2D CAD solution.",
+      },
+      {
+        q: "How much does FORAN cost?",
+        a: "FORAN is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of FORAN?",
+        a: "FORAN is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does FORAN support?",
+        a: "FORAN runs on Windows.",
+      },
+      {
+        q: "Which file formats does FORAN support?",
+        a: "FORAN works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to FORAN?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "FORAN Engine",
       multicore: "N/A",
@@ -11473,7 +15375,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Germany",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11487,7 +15389,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Pytha"),
+    faqs: [
+      {
+        q: "What is Pytha used for?",
+        a: "PYTHA is the most advanced 3D CAD system in interior design, furniture making, exhibition design and for the shop fittin Pytha is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Pytha cost?",
+        a: "Pytha is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Pytha?",
+        a: "Pytha is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Pytha support?",
+        a: "Pytha runs on Windows.",
+      },
+      {
+        q: "Which file formats does Pytha support?",
+        a: "Pytha works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Pytha?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Pytha Engine",
       multicore: "N/A",
@@ -11515,7 +15442,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Germany",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11529,7 +15456,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("imos iX"),
+    faqs: [
+      {
+        q: "What is imos iX used for?",
+        a: "Die imos AG entwickelt und vertreibt weltweit integrierte Softwarelösungen für den Möbel- und Innenausbau. imos iX is a 2D CAD solution.",
+      },
+      {
+        q: "How much does imos iX cost?",
+        a: "imos iX is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of imos iX?",
+        a: "imos iX is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does imos iX support?",
+        a: "imos iX runs on Windows.",
+      },
+      {
+        q: "Which file formats does imos iX support?",
+        a: "imos iX works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to imos iX?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "imos iX Engine",
       multicore: "N/A",
@@ -11557,7 +15509,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "USA",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11571,7 +15523,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("20-20 Design"),
+    faqs: [
+      {
+        q: "What is 20-20 Design used for?",
+        a: "Explore all training options for Design Flex, the leading kitchen and bathroom design and sales solution. Ideal for resi 20-20 Design is a 2D CAD solution.",
+      },
+      {
+        q: "How much does 20-20 Design cost?",
+        a: "20-20 Design is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of 20-20 Design?",
+        a: "20-20 Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does 20-20 Design support?",
+        a: "20-20 Design runs on Windows.",
+      },
+      {
+        q: "Which file formats does 20-20 Design support?",
+        a: "20-20 Design works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to 20-20 Design?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "20-20 Design Engine",
       multicore: "N/A",
@@ -11599,7 +15576,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "Germany",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11613,7 +15590,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Palette CAD"),
+    faqs: [
+      {
+        q: "What is Palette CAD used for?",
+        a: "Palette CAD 3D-Software für Handwerker, Fachhandel & Planer überzeugt mit Einfachheit & Professionalität zugleich. Onlin Palette CAD is a 2D CAD solution.",
+      },
+      {
+        q: "How much does Palette CAD cost?",
+        a: "Palette CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Palette CAD?",
+        a: "Palette CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Palette CAD support?",
+        a: "Palette CAD runs on macOS.",
+      },
+      {
+        q: "Which file formats does Palette CAD support?",
+        a: "Palette CAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Palette CAD?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Palette CAD Engine",
       multicore: "N/A",
@@ -11639,7 +15641,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["3dexperience", "medusa4", "pconplanner"],
     country: "China",
     category_id: "c1",
     pricing_type: "Perpetual",
@@ -11653,7 +15655,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("KD Max"),
+    faqs: [
+      {
+        q: "What is KD Max used for?",
+        a: "简要介绍 KD Max（官方站点） KD Max is a 2D CAD solution.",
+      },
+      {
+        q: "How much does KD Max cost?",
+        a: "KD Max is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of KD Max?",
+        a: "KD Max is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does KD Max support?",
+        a: "KD Max runs on Windows.",
+      },
+      {
+        q: "Which file formats does KD Max support?",
+        a: "KD Max works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to KD Max?",
+        a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "KD Max Engine",
       multicore: "N/A",
@@ -11681,7 +15708,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "Germany",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11695,7 +15722,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("WoodWOP"),
+    faqs: [
+      {
+        q: "What is WoodWOP used for?",
+        a: "Whether you are seeking a machinery or software for furniture production, flooring production, kitchen production, close WoodWOP is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does WoodWOP cost?",
+        a: "WoodWOP is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of WoodWOP?",
+        a: "WoodWOP is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does WoodWOP support?",
+        a: "WoodWOP runs on Windows and macOS.",
+      },
+      {
+        q: "Which file formats does WoodWOP support?",
+        a: "WoodWOP works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to WoodWOP?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "WoodWOP Engine",
       multicore: "N/A",
@@ -11721,7 +15773,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "UK",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11735,7 +15787,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("AlphaCAM"),
+    faqs: [
+      {
+        q: "What is AlphaCAM used for?",
+        a: "简要介绍 AlphaCAM（官方站点） AlphaCAM is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does AlphaCAM cost?",
+        a: "AlphaCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of AlphaCAM?",
+        a: "AlphaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does AlphaCAM support?",
+        a: "AlphaCAM runs on Windows.",
+      },
+      {
+        q: "Which file formats does AlphaCAM support?",
+        a: "AlphaCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to AlphaCAM?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "AlphaCAM Engine",
       multicore: "N/A",
@@ -11761,7 +15838,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "UK",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11775,7 +15852,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Radan"),
+    faqs: [
+      {
+        q: "What is Radan used for?",
+        a: "简要介绍 Radan（官方站点） Radan is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does Radan cost?",
+        a: "Radan is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Radan?",
+        a: "Radan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Radan support?",
+        a: "Radan runs on Windows.",
+      },
+      {
+        q: "Which file formats does Radan support?",
+        a: "Radan works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Radan?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Radan Engine",
       multicore: "N/A",
@@ -11801,7 +15903,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "Spain",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11815,7 +15917,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Lantek Expert"),
+    faqs: [
+      {
+        q: "What is Lantek Expert used for?",
+        a: "简要介绍 Lantek Expert（官方站点） Lantek Expert is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does Lantek Expert cost?",
+        a: "Lantek Expert is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Lantek Expert?",
+        a: "Lantek Expert is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Lantek Expert support?",
+        a: "Lantek Expert runs on Windows.",
+      },
+      {
+        q: "Which file formats does Lantek Expert support?",
+        a: "Lantek Expert works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Lantek Expert?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "Lantek Expert Engine",
       multicore: "N/A",
@@ -11843,7 +15970,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11857,7 +15984,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("SigmaNEST"),
+    faqs: [
+      {
+        q: "What is SigmaNEST used for?",
+        a: "SigmaNEST CAD/CAM nesting software runs all major brands of laser, plasma, punch, router, waterjet, tube, and pressbrake SigmaNEST is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does SigmaNEST cost?",
+        a: "SigmaNEST is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of SigmaNEST?",
+        a: "SigmaNEST is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does SigmaNEST support?",
+        a: "SigmaNEST runs on Windows.",
+      },
+      {
+        q: "Which file formats does SigmaNEST support?",
+        a: "SigmaNEST works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to SigmaNEST?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "SigmaNEST Engine",
       multicore: "N/A",
@@ -11885,7 +16037,7 @@ export const tools: Tool[] = [
       },
     ],
     detailed_features: [],
-    alternatives: [],
+    alternatives: ["topsolid", "beckercad", "cadmeister"],
     country: "USA",
     category_id: "c5",
     pricing_type: "Perpetual",
@@ -11899,7 +16051,32 @@ export const tools: Tool[] = [
     score: 0,
     pros: [],
     cons: [],
-    faqs: genericFaqs("MetaCAM"),
+    faqs: [
+      {
+        q: "What is MetaCAM used for?",
+        a: "Metamation Sheet Metal CAD CAM Software. Designing, Developing and Delivering Sheet Metal CAD CAM Software. MetaCAM is a CAE / CAM solution.",
+      },
+      {
+        q: "How much does MetaCAM cost?",
+        a: "MetaCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of MetaCAM?",
+        a: "MetaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does MetaCAM support?",
+        a: "MetaCAM runs on macOS.",
+      },
+      {
+        q: "Which file formats does MetaCAM support?",
+        a: "MetaCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to MetaCAM?",
+        a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
     tech_specs: {
       engine: "MetaCAM Engine",
       multicore: "N/A",
@@ -12013,7 +16190,32 @@ export const tools: Tool[] = [
     score: 4.5,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Infraworks"),
+    faqs: [
+      {
+        q: "What is Infraworks used for?",
+        a: "Professional solution for Infraworks. Infraworks is a visualization and rendering solution widely adopted in Engineering.",
+      },
+      {
+        q: "How much does Infraworks cost?",
+        a: "Infraworks is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Infraworks?",
+        a: "Infraworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Infraworks support?",
+        a: "Infraworks runs on Windows.",
+      },
+      {
+        q: "Which file formats does Infraworks support?",
+        a: "Infraworks works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Infraworks?",
+        a: "The closest alternatives within the Specialized space are 3ds Max, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "N/A",
@@ -12127,7 +16329,32 @@ export const tools: Tool[] = [
     score: 4.5,
     pros: [],
     cons: [],
-    faqs: genericFaqs("3ds Max"),
+    faqs: [
+      {
+        q: "What is 3ds Max used for?",
+        a: "Professional solution for 3ds Max. 3ds Max is a visualization and rendering solution widely adopted in Engineering.",
+      },
+      {
+        q: "How much does 3ds Max cost?",
+        a: "3ds Max is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of 3ds Max?",
+        a: "3ds Max is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does 3ds Max support?",
+        a: "3ds Max runs on Windows.",
+      },
+      {
+        q: "Which file formats does 3ds Max support?",
+        a: "3ds Max works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to 3ds Max?",
+        a: "The closest alternatives within the Specialized space are Infraworks, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "N/A",
@@ -12241,7 +16468,32 @@ export const tools: Tool[] = [
     score: 4.5,
     pros: [],
     cons: [],
-    faqs: genericFaqs("ZBrush"),
+    faqs: [
+      {
+        q: "What is ZBrush used for?",
+        a: "Professional solution for ZBrush. ZBrush is a visualization and rendering solution widely adopted in Engineering.",
+      },
+      {
+        q: "How much does ZBrush cost?",
+        a: "ZBrush is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of ZBrush?",
+        a: "ZBrush is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does ZBrush support?",
+        a: "ZBrush runs on Windows.",
+      },
+      {
+        q: "Which file formats does ZBrush support?",
+        a: "ZBrush works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to ZBrush?",
+        a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "N/A",
@@ -12343,7 +16595,32 @@ export const tools: Tool[] = [
     score: 4.5,
     pros: [],
     cons: [],
-    faqs: genericFaqs("KeyShot"),
+    faqs: [
+      {
+        q: "What is KeyShot used for?",
+        a: "Professional solution for KeyShot. KeyShot is a visualization and rendering solution widely adopted in Engineering.",
+      },
+      {
+        q: "How much does KeyShot cost?",
+        a: "KeyShot is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of KeyShot?",
+        a: "KeyShot is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does KeyShot support?",
+        a: "KeyShot runs on Windows.",
+      },
+      {
+        q: "Which file formats does KeyShot support?",
+        a: "KeyShot works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to KeyShot?",
+        a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "N/A",
@@ -12457,7 +16734,32 @@ export const tools: Tool[] = [
     score: 4.5,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Lumion"),
+    faqs: [
+      {
+        q: "What is Lumion used for?",
+        a: "Professional solution for Lumion. Lumion is a visualization and rendering solution widely adopted in Engineering.",
+      },
+      {
+        q: "How much does Lumion cost?",
+        a: "Lumion is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Lumion?",
+        a: "Lumion is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Lumion support?",
+        a: "Lumion runs on Windows.",
+      },
+      {
+        q: "Which file formats does Lumion support?",
+        a: "Lumion works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Lumion?",
+        a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "N/A",
@@ -12571,7 +16873,32 @@ export const tools: Tool[] = [
     score: 4.5,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Enscape"),
+    faqs: [
+      {
+        q: "What is Enscape used for?",
+        a: "Professional solution for Enscape. Enscape is a visualization and rendering solution widely adopted in Engineering.",
+      },
+      {
+        q: "How much does Enscape cost?",
+        a: "Enscape is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Enscape?",
+        a: "Enscape is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Enscape support?",
+        a: "Enscape runs on Windows.",
+      },
+      {
+        q: "Which file formats does Enscape support?",
+        a: "Enscape works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Enscape?",
+        a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "N/A",
@@ -12687,7 +17014,32 @@ export const tools: Tool[] = [
     score: 4.5,
     pros: [],
     cons: [],
-    faqs: genericFaqs("Twinmotion"),
+    faqs: [
+      {
+        q: "What is Twinmotion used for?",
+        a: "Professional solution for Twinmotion. Twinmotion is a visualization and rendering solution widely adopted in Engineering.",
+      },
+      {
+        q: "How much does Twinmotion cost?",
+        a: "Twinmotion is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      },
+      {
+        q: "Is there a free version of Twinmotion?",
+        a: "Twinmotion is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      },
+      {
+        q: "What operating systems does Twinmotion support?",
+        a: "Twinmotion runs on Windows.",
+      },
+      {
+        q: "Which file formats does Twinmotion support?",
+        a: "Twinmotion works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      },
+      {
+        q: "What are the best alternatives to Twinmotion?",
+        a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      },
+    ],
 
     tech_specs: {
       engine: "N/A",
