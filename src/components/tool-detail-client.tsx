@@ -243,7 +243,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                           </li>
                         ))}
                       </ul>
-                      <Button className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 ${tier.is_popular ? 'bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200' : 'bg-slate-900 hover:bg-slate-800'}`}>
+                      <Button className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 text-white ${tier.is_popular ? 'bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200' : 'bg-slate-900 hover:bg-slate-800'}`}>
                         Choose {tier.name}
                       </Button>
                     </CardContent>
