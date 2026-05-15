@@ -27,7 +27,7 @@ export default function SponsorPage() {
         </Card>
 
         <Card className="flex flex-col border-2 border-blue-600 relative">
-          <Badge className="absolute -top-3 right-4 bg-blue-600">Most Effective</Badge>
+          <Badge className="absolute -top-3 right-4 bg-blue-600 text-white">Most Effective</Badge>
           <CardHeader>
             <CardTitle className="text-2xl">Sponsored Placement</CardTitle>
           </CardHeader>
@@ -38,7 +38,7 @@ export default function SponsorPage() {
               <li>• Featured Badge on card</li>
               <li>• Priority SEO landing page placement</li>
             </ul>
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 mt-auto">Request Media Kit</Button>
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-auto">Request Media Kit</Button>
           </CardContent>
         </Card>
       </div>
