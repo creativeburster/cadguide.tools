@@ -5,13 +5,29 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Metadata } from 'next';
 import { ToolLogo } from '@/components/tool-logo';
+import { pageMetadata, websiteLd } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'CADTools.cc: Compare 175+ Best CAD Software 2026 (Free & Pro)',
-  description: 'Find the perfect design tool. Compare 175+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
-};
+  description:
+    'Find the perfect design tool. Compare 175+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
+  path: '/',
+});
 
 export default function Home() {
+  const ld = websiteLd();
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+      />
+      <HomeBody />
+    </>
+  );
+}
+
+function HomeBody() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Deep ocean blue */}

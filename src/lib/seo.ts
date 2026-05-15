@@ -2,6 +2,7 @@
 // keywords, and Schema.org JSON-LD payloads. Keeping these in one module
 // makes them easy to unit-test and easy to reuse from both `page.tsx`
 // (generateMetadata) and `opengraph-image.tsx`.
+import type { Metadata } from 'next';
 import type { Tool, Category } from './data';
 
 export const SITE_URL = 'https://cadtools.cc';
@@ -172,6 +173,102 @@ export function breadcrumbLd(tool: Tool, category?: Category) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: items,
+  };
+}
+
+// ------- Site-level page helpers ---------------------------------------
+
+/**
+ * Build a `Metadata` object for a static / index page. Includes title,
+ * description, canonical URL, openGraph, and Twitter card so we don't
+ * duplicate the same boilerplate on every page.
+ */
+export function pageMetadata(opts: {
+  title: string;
+  description: string;
+  path: string; // path beginning with '/', e.g. '/about'
+  ogType?: 'website' | 'article';
+}): Metadata {
+  const url = `${SITE_URL}${opts.path}`;
+  const fullTitle = opts.title.includes(SITE_NAME)
+    ? opts.title
+    : `${opts.title} | ${SITE_NAME}`;
+  return {
+    title: fullTitle,
+    description: opts.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: opts.ogType ?? 'website',
+      url,
+      title: fullTitle,
+      description: opts.description,
+      siteName: SITE_NAME,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fullTitle,
+      description: opts.description,
+    },
+    robots: { index: true, follow: true },
+  };
+}
+
+/** Generic `WebSite` payload — useful as a homepage JSON-LD. */
+export function websiteLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: SITE_URL,
+    description:
+      'Compare 175+ CAD, BIM, CAE/CAM, and EDA tools side by side. Unbiased reviews, real pricing, and deep technical specs.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/tools?search={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+/** `CollectionPage` payload — used on `/tools`, etc. */
+export function collectionPageLd(opts: {
+  name: string;
+  description: string;
+  path: string;
+  numItems: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: opts.name,
+    description: opts.description,
+    url: `${SITE_URL}${opts.path}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: opts.numItems,
+    },
+  };
+}
+
+/** Simple breadcrumb payload for non-tool pages. */
+export function siteBreadcrumbLd(items: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      item: `${SITE_URL}${it.path}`,
+    })),
   };
 }
 

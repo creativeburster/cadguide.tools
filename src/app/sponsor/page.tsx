@@ -1,8 +1,33 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Sponsor CADTools.cc — Reach CAD Decision-Makers',
+  description:
+    'Advertise your CAD, BIM, CAE/CAM, or EDA software to a highly targeted audience of engineers, architects, designers, and procurement decision-makers.',
+  path: '/sponsor',
+});
 
 export default function SponsorPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'Sponsor', path: '/sponsor' },
+  ]);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <SponsorBody />
+    </>
+  );
+}
+
+function SponsorBody() {
   return (
     <main className="container mx-auto px-4 py-12 max-w-4xl">
       <div className="text-center mb-16">

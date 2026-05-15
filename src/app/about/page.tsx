@@ -1,4 +1,30 @@
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = pageMetadata({
+  title: 'About CADTools.cc — Independent CAD Software Reviews',
+  description:
+    'CADTools.cc is an independent, vendor-neutral directory of CAD, BIM, CAE/CAM, and EDA software. Learn how we evaluate, score, and review tools.',
+  path: '/about',
+});
+
 export default function AboutPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+  ]);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <AboutBody />
+    </>
+  );
+}
+
+function AboutBody() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
