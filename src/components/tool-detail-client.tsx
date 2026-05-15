@@ -190,7 +190,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               <div className="relative z-10">
                 <div className="flex flex-col md:flex-row items-start gap-10 mb-12">
                   <ToolLogo
-                    src={tool.logo_url}
+                    slug={tool.slug} src={tool.logo_url}
                     websiteUrl={tool.official_url}
                     name={tool.name}
                     className="w-24 h-24 md:w-40 md:h-40 rounded-[40px] shadow-2xl border-4 border-white shrink-0 bg-white"
@@ -851,7 +851,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   <div className="flex flex-col md:flex-row md:items-center justify-between border-t border-white/5 pt-12 gap-8">
                     <div className="flex items-center gap-4">
                       <ToolLogo
-                        src={tool.logo_url}
+                        slug={tool.slug} src={tool.logo_url}
                         websiteUrl={tool.official_url}
                         name={tool.name}
                         className="w-14 h-14 rounded-2xl bg-white p-1"
@@ -938,7 +938,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         className="p-10 text-center rounded-[48px] border-slate-100 hover:border-blue-600 transition-all group shadow-sm hover:shadow-2xl"
                       >
                         <ToolLogo
-                          src={alt.logo_url}
+                          slug={alt.slug} src={alt.logo_url}
                           websiteUrl={alt.official_url}
                           name={alt.name}
                           className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-sm border border-slate-50 group-hover:scale-110 transition-all duration-500"
@@ -1086,7 +1086,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       className="flex items-center gap-4 group"
                     >
                       <ToolLogo
-                        src={t.logo_url}
+                        slug={t.slug} src={t.logo_url}
                         websiteUrl={t.official_url}
                         name={t.name}
                         className="w-12 h-12 rounded-xl border border-slate-50 group-hover:scale-105 transition-transform"

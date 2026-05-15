@@ -2,11 +2,14 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { LOGO_MANIFEST } from '@/lib/logo-manifest';
 
 interface ToolLogoProps {
-  /** Original logo URL from the data file (typically a ui-avatars placeholder). */
+  /** Tool slug — used to look up a locally-hosted logo first (preferred). */
+  slug?: string;
+  /** Original logo URL from the data file (typically a getLogo placeholder). */
   src: string;
-  /** Official website URL. Used to fetch a real favicon/logo when available. */
+  /** Official website URL — used as a fallback to derive a favicon. */
   websiteUrl?: string;
   name: string;
   className?: string;
@@ -28,25 +31,34 @@ function pickGradient(str: string) {
   return gradients[Math.abs(hash) % gradients.length];
 }
 
-function deriveCandidates(src: string, websiteUrl?: string): string[] {
+function deriveCandidates(slug: string | undefined, src: string, websiteUrl?: string): string[] {
   const candidates: string[] = [];
+  // 1. Locally-hosted logo (preferred — no CLS, no third-party network).
+  if (slug && LOGO_MANIFEST[slug]) {
+    candidates.push(`/logos/${LOGO_MANIFEST[slug]}`);
+  }
+  // 2-3. CDN fallbacks — used for tools missing from the manifest or whose
+  // local file ever fails to load.
   if (websiteUrl) {
     try {
       const host = new URL(websiteUrl).hostname.replace(/^www\./, '');
-      // icon.horse returns high-res favicons/logos when available (free, no key).
       candidates.push(`https://icon.horse/icon/${host}`);
-      // Google's s2 service is a rock-solid fallback that always returns a 200.
       candidates.push(`https://www.google.com/s2/favicons?domain=${host}&sz=128`);
     } catch {
       /* malformed URL — fall through to placeholder. */
     }
   }
+  // 4. Original data.ts logo_url (ui-avatars placeholder) — last resort before
+  // dropping to the gradient initials.
   if (src) candidates.push(src);
   return candidates;
 }
 
-export function ToolLogo({ src, websiteUrl, name, className }: ToolLogoProps) {
-  const candidates = useMemo(() => deriveCandidates(src, websiteUrl), [src, websiteUrl]);
+export function ToolLogo({ slug, src, websiteUrl, name, className }: ToolLogoProps) {
+  const candidates = useMemo(
+    () => deriveCandidates(slug, src, websiteUrl),
+    [slug, src, websiteUrl]
+  );
   const [index, setIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement | null>(null);
@@ -73,7 +85,12 @@ export function ToolLogo({ src, websiteUrl, name, className }: ToolLogoProps) {
   const showPlaceholder = exhausted || !loaded;
 
   return (
-    <div className={cn('relative flex items-center justify-center overflow-hidden rounded-xl', className)}>
+    <div
+      className={cn(
+        'relative flex items-center justify-center overflow-hidden rounded-xl',
+        className
+      )}
+    >
       {showPlaceholder && (
         <div
           className={cn(
@@ -86,11 +103,20 @@ export function ToolLogo({ src, websiteUrl, name, className }: ToolLogoProps) {
       )}
 
       {current && (
+        // Use <img> instead of next/image because the local logos are a mix of
+        // .png/.svg/.ico/.jpg (next/image doesn't support .ico, and SVG needs
+        // dangerouslyAllowSVG). All logos are small (4-180KB), and the
+        // explicit width/height on the container plus loading="lazy" gives us
+        // CLS=0 and on-demand loading without the optimizer.
         <img
           ref={imgRef}
           key={current}
           src={current}
-          alt={name}
+          alt={`${name} logo`}
+          loading="lazy"
+          decoding="async"
+          width={96}
+          height={96}
           className={cn(
             'max-w-full max-h-full object-contain p-2 transition-opacity duration-300 bg-white w-full h-full',
             loaded ? 'opacity-100' : 'opacity-0'

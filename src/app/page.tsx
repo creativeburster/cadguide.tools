@@ -92,7 +92,7 @@ function HomeBody() {
               <div className="p-8">
                 <div className="flex items-center gap-5 mb-6">
                   <ToolLogo 
-                    src={tool.logo_url} 
+                    slug={tool.slug} src={tool.logo_url} 
                     websiteUrl={tool.official_url}
                     name={tool.name} 
                     className="w-16 h-16 border border-slate-100 rounded-2xl shrink-0 shadow-sm" 
@@ -139,7 +139,7 @@ function HomeBody() {
             {tools.filter(t => t.category_id === 'c3').slice(0, 4).map((tool) => (
               <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white p-6 rounded-[32px] border border-transparent hover:border-blue-100 hover:shadow-2xl transition-all">
                 <ToolLogo 
-                  src={tool.logo_url} 
+                  slug={tool.slug} src={tool.logo_url} 
                   websiteUrl={tool.official_url}
                   name={tool.name} 
                   className="aspect-square rounded-2xl mb-6 transition-all border border-slate-50 shadow-sm group-hover:scale-105" 
@@ -164,7 +164,7 @@ function HomeBody() {
             {tools.filter(t => t.category_id === 'c7').slice(0, 12).map((tool) => (
               <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:bg-white/10 hover:border-blue-400/50 transition-all text-center">
                 <ToolLogo 
-                  src={tool.logo_url} 
+                  slug={tool.slug} src={tool.logo_url} 
                   websiteUrl={tool.official_url}
                   name={tool.name} 
                   className="w-16 h-16 mx-auto rounded-xl mb-4 transition-all bg-white shadow-lg group-hover:scale-110" 
