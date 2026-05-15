@@ -388,7 +388,7 @@ export default function ToolsDirectoryPage() {
         </Badge>
         <h1 className="text-4xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">Professional CAD Software</h1>
         <p className="text-slate-500 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-          Deep-dive into 80+ tools with technical specs, expert verdicts, and community reviews.
+          Deep-dive into 175+ tools with technical specs, expert verdicts, and community reviews.
         </p>
       </div>
 

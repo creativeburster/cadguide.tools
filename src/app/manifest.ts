@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'CADTools.cc',
     short_name: 'CADTools',
-    description: 'Compare 80+ CAD/BIM tools – pricing, features, specs, expert verdicts.',
+    description: 'Compare 175+ CAD/BIM tools – pricing, features, specs, expert verdicts.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

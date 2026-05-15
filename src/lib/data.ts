@@ -5,7 +5,12 @@ export interface Category {
   description: string;
 }
 
-export type PricingType = 'Free' | 'Freemium' | 'Subscription' | 'Perpetual' | 'Subscription / Perpetual';
+export type PricingType =
+  | 'Free'
+  | 'Freemium'
+  | 'Subscription'
+  | 'Perpetual'
+  | 'Subscription / Perpetual';
 
 export interface Tool {
   id: string;
@@ -139,7 +144,12 @@ export const tools: Tool[] = [
         price: '2,030',
         period: '/yr',
 
-        features: ['All Monthly features', 'Web & Mobile Apps', 'Smart Blocks', 'Technical Support'],
+        features: [
+          'All Monthly features',
+          'Web & Mobile Apps',
+          'Smart Blocks',
+          'Technical Support',
+        ],
 
         is_popular: true,
       },
@@ -365,7 +375,7 @@ export const tools: Tool[] = [
           { name: 'Point Cloud Modeling (Scan Essentials)', status: true },
           { name: 'Direct Revit File Import', status: true },
           { name: 'Sefaira for Energy & Carbon Analysis', status: true },
-          { name: 'Advanced Solid Tools for 3D Printing', status: true }
+          { name: 'Advanced Solid Tools for 3D Printing', status: true },
         ],
       },
     ],
@@ -391,7 +401,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'OpenGL',
       standards: ['SKP', 'DWG', 'IFC', 'STL'],
     },
-    expert_verdict: "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
+    expert_verdict:
+      "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
 
     pricing_breakdown: [
       {
@@ -458,7 +469,7 @@ export const tools: Tool[] = [
           { name: 'Accelerated Graphics (Tech Preview)', status: true },
           { name: 'Automated Sheet Placement', status: true },
           { name: 'MEP Fabrication Modeling enhancements', status: true },
-          { name: 'Native IFC Support & Interoperability', status: true }
+          { name: 'Native IFC Support & Interoperability', status: true },
         ],
       },
     ],
@@ -484,7 +495,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'DirectX 11',
       standards: ['RVT', 'IFC', 'DWG', 'NWD'],
     },
-    expert_verdict: 'Revit is the undisputed king of BIM in North America. Essential for modern architecture.',
+    expert_verdict:
+      'Revit is the undisputed king of BIM in North America. Essential for modern architecture.',
 
     pricing_breakdown: [
       {
@@ -518,14 +530,20 @@ export const tools: Tool[] = [
     slug: 'fusion-360',
     logo_url: getLogo('F3'),
     short_desc: 'The cloud-native powerhouse for integrated CAD, CAM, and CAE.',
-    description: 'Fusion 360 is a cloud-based platform that breaks down the silos between design and production.',
+    description:
+      'Fusion 360 is a cloud-based platform that breaks down the silos between design and production.',
     pricing_tiers: [
       {
         name: 'Fusion (Standard)',
         price: '57',
         period: '/mo',
 
-        features: ['3D Design & Modeling', 'Basic CAM (2.5 & 3-axis)', 'PCB Design', 'Team Collaboration'],
+        features: [
+          '3D Design & Modeling',
+          'Basic CAM (2.5 & 3-axis)',
+          'PCB Design',
+          'Team Collaboration',
+        ],
 
         is_popular: true,
       },
@@ -548,7 +566,12 @@ export const tools: Tool[] = [
         price: '137',
         period: '/mo',
 
-        features: ['All Standard features', 'Generative Design', 'Advanced Simulation', 'Complex Surfacing'],
+        features: [
+          'All Standard features',
+          'Generative Design',
+          'Advanced Simulation',
+          'Complex Surfacing',
+        ],
 
         is_popular: false,
       },
@@ -606,7 +629,13 @@ export const tools: Tool[] = [
     starting_price: 85,
     platforms: ['Windows', 'macOS'],
     industries: ['Industrial Design', 'Electronics', 'Prototyping'],
-    core_features: ['Cloud CAD/CAM', 'Generative Design', 'Integrated PCB', 'Simulation', 'Collaboration'],
+    core_features: [
+      'Cloud CAD/CAM',
+      'Generative Design',
+      'Integrated PCB',
+      'Simulation',
+      'Collaboration',
+    ],
     user_scales: ['Small Business', 'Startups', 'Individuals'],
     official_url: 'https://www.autodesk.com/fusion-360',
     affiliate_url: null,
@@ -636,7 +665,12 @@ export const tools: Tool[] = [
         price: '995',
         period: 'one-time',
 
-        features: ['Full NURBS Modeling', 'Grasshopper included', 'SubD Modeling', 'Permanent License'],
+        features: [
+          'Full NURBS Modeling',
+          'Grasshopper included',
+          'SubD Modeling',
+          'Permanent License',
+        ],
 
         is_popular: true,
       },
@@ -721,7 +755,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'OpenGL',
       standards: ['3DM', 'STEP', 'IGES', 'OBJ'],
     },
-    expert_verdict: 'If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.',
+    expert_verdict:
+      'If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.',
   },
   {
     id: 't7',
@@ -737,7 +772,12 @@ export const tools: Tool[] = [
         price: '2,700',
         period: '/yr',
 
-        features: ['Social Collaboration', '3D Dashboard', 'Base Part/Assembly Design', 'Version Control'],
+        features: [
+          'Social Collaboration',
+          '3D Dashboard',
+          'Base Part/Assembly Design',
+          'Version Control',
+        ],
 
         is_popular: true,
       },
@@ -746,7 +786,12 @@ export const tools: Tool[] = [
         price: '4,500',
         period: '/yr',
 
-        features: ['Advanced Surfacing', 'Sheet Metal Design', 'Mechanism Simulation', 'Standard Catalogs'],
+        features: [
+          'Advanced Surfacing',
+          'Sheet Metal Design',
+          'Mechanism Simulation',
+          'Standard Catalogs',
+        ],
 
         is_popular: false,
       },
@@ -755,7 +800,11 @@ export const tools: Tool[] = [
         price: 'Custom',
         period: 'quote',
 
-        features: ['Model-based Systems (MBSE)', 'Electric/Electronic Systems', 'Lifecycle Analysis'],
+        features: [
+          'Model-based Systems (MBSE)',
+          'Electric/Electronic Systems',
+          'Lifecycle Analysis',
+        ],
 
         is_popular: false,
       },
@@ -813,7 +862,13 @@ export const tools: Tool[] = [
     starting_price: 4500,
     platforms: ['Windows'],
     industries: ['Aerospace', 'Automotive', 'Shipbuilding'],
-    core_features: ['High-end Surfacing', 'Aero & Auto Design', 'Systems Engineering', 'Digital Twin', 'Cloud PLM'],
+    core_features: [
+      'High-end Surfacing',
+      'Aero & Auto Design',
+      'Systems Engineering',
+      'Digital Twin',
+      'Cloud PLM',
+    ],
     user_scales: ['Enterprise'],
     official_url: 'https://www.3ds.com/products-services/catia/',
     affiliate_url: null,
@@ -859,7 +914,12 @@ export const tools: Tool[] = [
         price: 'Custom',
         period: 'per use',
 
-        features: ['Flexible module access', 'Simulation roles', 'Manufacturing roles', 'Enterprise scale'],
+        features: [
+          'Flexible module access',
+          'Simulation roles',
+          'Manufacturing roles',
+          'Enterprise scale',
+        ],
 
         is_popular: false,
       },
@@ -917,7 +977,13 @@ export const tools: Tool[] = [
     starting_price: 6000,
     platforms: ['Windows', 'Linux'],
     industries: ['Aerospace', 'Consumer Electronics', 'Energy'],
-    core_features: ['Synchronous Tech', 'Convergent Modeling', 'Digital Twin', 'Advanced Mfg', 'Scalable PLM'],
+    core_features: [
+      'Synchronous Tech',
+      'Convergent Modeling',
+      'Digital Twin',
+      'Advanced Mfg',
+      'Scalable PLM',
+    ],
     user_scales: ['Enterprise'],
     official_url: 'https://www.plm.automation.siemens.com',
     affiliate_url: null,
@@ -939,14 +1005,20 @@ export const tools: Tool[] = [
     slug: 'archicad',
     logo_url: getLogo('ACD'),
     short_desc: 'The BIM software of choice for design-oriented architects.',
-    description: 'ArchiCAD, developed by Graphisoft, was the first BIM software for personal computers.',
+    description:
+      'ArchiCAD, developed by Graphisoft, was the first BIM software for personal computers.',
     pricing_tiers: [
       {
         name: 'Studio',
         price: '201',
         period: '/mo',
 
-        features: ['Architectural Design', 'Local Collaboration', 'Standard BIM tools', 'Documentation'],
+        features: [
+          'Architectural Design',
+          'Local Collaboration',
+          'Standard BIM tools',
+          'Documentation',
+        ],
 
         is_popular: true,
       },
@@ -964,7 +1036,12 @@ export const tools: Tool[] = [
         price: '47',
         period: '/mo',
 
-        features: ['Cloud Coordination', 'Real-time multi-user sync', 'Infinite projects', 'Security'],
+        features: [
+          'Cloud Coordination',
+          'Real-time multi-user sync',
+          'Infinite projects',
+          'Security',
+        ],
 
         is_popular: false,
       },
@@ -1022,7 +1099,13 @@ export const tools: Tool[] = [
     starting_price: 1800,
     platforms: ['Windows', 'macOS'],
     industries: ['Architecture', 'Interior Design'],
-    core_features: ['Parametric BIM', 'Teamwork Sync', 'Open BIM', 'Smart Objects', 'Documentation'],
+    core_features: [
+      'Parametric BIM',
+      'Teamwork Sync',
+      'Open BIM',
+      'Smart Objects',
+      'Documentation',
+    ],
     user_scales: ['Mid-Market', 'Small Business'],
     official_url: 'https://graphisoft.com',
     affiliate_url: null,
@@ -1044,14 +1127,20 @@ export const tools: Tool[] = [
     slug: 'altium-designer',
     logo_url: getLogo('AD'),
     short_desc: 'The professional standard for PCB and electronics design.',
-    description: 'Altium Designer offers a unified design environment including schematic capture and 3D PCB layout.',
+    description:
+      'Altium Designer offers a unified design environment including schematic capture and 3D PCB layout.',
     pricing_tiers: [
       {
         name: 'Standard',
         price: '3,500',
         period: '/yr',
 
-        features: ['Unified PCB Design', 'Native 3D PCB', 'Standard Component Mgmt', 'Altium 365 Core'],
+        features: [
+          'Unified PCB Design',
+          'Native 3D PCB',
+          'Standard Component Mgmt',
+          'Altium 365 Core',
+        ],
 
         is_popular: true,
       },
@@ -1060,7 +1149,12 @@ export const tools: Tool[] = [
         price: '7,500',
         period: '/yr',
 
-        features: ['Advanced Simulation', 'Rigid-flex Design', 'Multi-board Assembly', 'Team Configuration'],
+        features: [
+          'Advanced Simulation',
+          'Rigid-flex Design',
+          'Multi-board Assembly',
+          'Team Configuration',
+        ],
 
         is_popular: false,
       },
@@ -1069,7 +1163,12 @@ export const tools: Tool[] = [
         price: 'Custom',
         period: 'quote',
 
-        features: ['Lifecycle Management', 'Centralized Libraries', 'Global Team Workflow', 'Custom APIs'],
+        features: [
+          'Lifecycle Management',
+          'Centralized Libraries',
+          'Global Team Workflow',
+          'Custom APIs',
+        ],
 
         is_popular: false,
       },
@@ -1127,7 +1226,13 @@ export const tools: Tool[] = [
     starting_price: 3850,
     platforms: ['Windows'],
     industries: ['Consumer Electronics', 'Medical', 'Automotive'],
-    core_features: ['Unified PCB Design', 'Native 3D', 'Altium 365', 'Interactive Routing', 'Supply Chain Integration'],
+    core_features: [
+      'Unified PCB Design',
+      'Native 3D',
+      'Altium 365',
+      'Interactive Routing',
+      'Supply Chain Integration',
+    ],
     user_scales: ['Enterprise', 'Mid-Market'],
     official_url: 'https://www.altium.com',
     affiliate_url: null,
@@ -1150,7 +1255,8 @@ export const tools: Tool[] = [
     logo_url: getLogo('FC'),
     short_desc: 'The premier open-source 3D parametric modeler.',
 
-    description: 'FreeCAD is an open-source parametric 3D modeler made to design real-life objects of any size.',
+    description:
+      'FreeCAD is an open-source parametric 3D modeler made to design real-life objects of any size.',
 
     pricing_tiers: [
       {
@@ -1170,7 +1276,7 @@ export const tools: Tool[] = [
           { name: 'Modular Workbench-based UI', status: true },
           { name: 'Support for many formats (STEP, IGES, STL, DXF)', status: true },
           { name: 'Sketcher with constraint solver', status: true },
-          { name: 'Path (CAM) module for CNC', status: true }
+          { name: 'Path (CAM) module for CNC', status: true },
         ],
       },
     ],
@@ -1228,7 +1334,8 @@ export const tools: Tool[] = [
     logo_url: getLogo('ZW'),
     short_desc: 'The most cost-effective and compatible alternative to AutoCAD.',
 
-    description: 'ZWCAD is a powerful 2D CAD solution with high compatibility with the .DWG format.',
+    description:
+      'ZWCAD is a powerful 2D CAD solution with high compatibility with the .DWG format.',
 
     pricing_tiers: [
       {
@@ -1260,7 +1367,7 @@ export const tools: Tool[] = [
           { name: 'Smart Voice: Add voice annotations to drawings', status: true },
           { name: 'Smart Select: Multi-criteria object selection', status: true },
           { name: 'Hardware Acceleration for large drawings', status: true },
-          { name: 'DWG 2024 support', status: true }
+          { name: 'DWG 2024 support', status: true },
         ],
       },
     ],
@@ -1323,7 +1430,8 @@ export const tools: Tool[] = [
     logo_url: getLogo('BC'),
     short_desc: 'The modern CAD platform for 2D, 3D, BIM, and Mechanical.',
 
-    description: 'BricsCAD uses AI-driven tools to speed up design workflows in a single environment.',
+    description:
+      'BricsCAD uses AI-driven tools to speed up design workflows in a single environment.',
 
     pricing_tiers: [
       {
@@ -1355,7 +1463,7 @@ export const tools: Tool[] = [
           { name: 'Propagate: Copy details across entire model', status: true },
           { name: 'Automated Scan-to-BIM workflows', status: true },
           { name: 'Assembly design & Kinematics', status: true },
-          { name: 'Parametric Blocks with constraints', status: true }
+          { name: 'Parametric Blocks with constraints', status: true },
         ],
       },
     ],
@@ -1424,7 +1532,12 @@ export const tools: Tool[] = [
         price: '2,500',
         period: '/yr',
 
-        features: ['Cloud-native CAD', 'Built-in PDM', 'Real-time Collaboration', 'Advanced Surface'],
+        features: [
+          'Cloud-native CAD',
+          'Built-in PDM',
+          'Real-time Collaboration',
+          'Advanced Surface',
+        ],
 
         is_popular: true,
       },
@@ -1517,14 +1630,20 @@ export const tools: Tool[] = [
     slug: 'tekla-structures',
     logo_url: getLogo('TS'),
     short_desc: "The world's most advanced structural BIM software.",
-    description: 'Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.',
+    description:
+      'Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.',
     pricing_tiers: [
       {
         name: 'Carbon',
         price: '3,800',
         period: '/yr',
 
-        features: ['Viewing & Collaboration', 'Layout management', 'Planning tools', 'Open API access'],
+        features: [
+          'Viewing & Collaboration',
+          'Layout management',
+          'Planning tools',
+          'Open API access',
+        ],
 
         is_popular: false,
       },
@@ -1533,7 +1652,12 @@ export const tools: Tool[] = [
         price: '7,200',
         period: '/yr',
 
-        features: ['Modeling & Documentation', 'Reinforced concrete', 'Standard connections', 'Reporting'],
+        features: [
+          'Modeling & Documentation',
+          'Reinforced concrete',
+          'Standard connections',
+          'Reporting',
+        ],
 
         is_popular: true,
       },
@@ -1600,7 +1724,13 @@ export const tools: Tool[] = [
     starting_price: 2400,
     platforms: ['Windows'],
     industries: ['Structural Engineering', 'Construction'],
-    core_features: ['Steel Detailing', 'BIM LOD 500', 'Clash Detection', 'CNC Export', 'Structural Engineering'],
+    core_features: [
+      'Steel Detailing',
+      'BIM LOD 500',
+      'Clash Detection',
+      'CNC Export',
+      'Structural Engineering',
+    ],
     user_scales: ['Enterprise'],
     official_url: 'https://www.tekla.com',
     affiliate_url: null,
@@ -1622,7 +1752,8 @@ export const tools: Tool[] = [
     slug: 'solid-edge',
     logo_url: getLogo('SE'),
     short_desc: 'Professional 3D CAD with industry-leading Synchronous Technology.',
-    description: 'Solid Edge features Synchronous Technology for rapid direct and history-based modeling.',
+    description:
+      'Solid Edge features Synchronous Technology for rapid direct and history-based modeling.',
     pricing_tiers: [
       {
         name: 'Classic (Annual)',
@@ -1818,155 +1949,6 @@ export const tools: Tool[] = [
     expert_verdict: 'If you work in landscape or lighting design, Vectorworks is the standard.',
   },
   {
-    id: 't18',
-    name: 'LibreCAD',
-    slug: 'librecad',
-    logo_url: getLogo('LC'),
-    short_desc: 'The leading open-source 2D CAD for lightweight drafting.',
-    description: 'LibreCAD is a fully comprehensive, open-source 2D CAD application.',
-
-    pricing_tiers: [
-      {
-        name: 'Open Source',
-        price: '0',
-        period: '/yr',
-        features: ['All features', 'No ads', 'Community support'],
-        is_popular: true,
-      },
-    ],
-
-    detailed_features: [
-      {
-        category: 'Features',
-        items: [
-          { name: 'Support for more than 30 languages', status: true },
-          { name: 'Plugin support for extra features', status: true },
-          { name: 'Advanced snapping system', status: true },
-          { name: 'Library of blocks/symbols', status: true },
-          { name: 'Active community support', status: true }
-        ],
-      },
-    ],
-
-    alternatives: ['qcad', 'nanocad', 'autocad'],
-    country: 'Community/International',
-    category_id: 'c1',
-    pricing_type: 'Free',
-    starting_price: 0,
-    platforms: ['Windows', 'macOS', 'Linux'],
-    industries: ['Hobbyist', 'Drafting'],
-    core_features: ['2D Vector Drafting', 'DXF Support', 'Multi-language UI'],
-    user_scales: ['Individuals'],
-    official_url: 'https://librecad.org',
-    affiliate_url: null,
-    score: 3.9,
-    pros: ['100% Free forever', 'Very lightweight', 'Large community'],
-    cons: ['No 3D support', 'UI dated', 'Limited export'],
-    faqs: genericFaqs('LibreCAD'),
-
-    tech_specs: {
-      engine: 'Qt based drafting',
-      multicore: 'Low',
-      gpu_optimization: 'None',
-      standards: ['DXF', 'CXF', 'LFF'],
-    },
-
-    expert_verdict: "For simple 2D layouts, LibreCAD is the 'Notepad' of CAD.",
-
-    pricing_breakdown: [
-      {
-        tier: 'Free',
-        price: '$0',
-        notes: 'Open Source (GPLv2)',
-      },
-    ],
-
-    key_capabilities: [
-      'Free 2D Drafting & Design',
-      'Native DXF support',
-      'Layer Management',
-      'Command-line input for precision',
-      'Lightweight & Cross-platform',
-    ],
-  },
-  {
-    id: 't19',
-    name: 'nanoCAD',
-    slug: 'nanocad',
-    logo_url: getLogo('NC'),
-    short_desc: 'Professional grade 2D/3D CAD with a familiar interface.',
-    description: 'nanoCAD is a multi-purpose CAD platform with native DWG support and a powerful API.',
-    pricing_tiers: [
-      {
-        name: 'Standard',
-        price: '200',
-        period: '/yr',
-        features: ['2D Drafting', 'Full LISP', 'DWG Native'],
-      },
-      {
-        name: 'Pro',
-        price: '350',
-        period: '/yr',
-        features: ['3D Modeling', 'Constraint engine', 'Point cloud tools'],
-        is_popular: true,
-      },
-      {
-        name: 'Mechanica',
-        price: '450',
-        period: '/yr',
-        features: ['Mechanical library', 'Calculation tools', 'BOM gen.'],
-      },
-    ],
-    detailed_features: [
-      {
-        category: 'Drafting',
-        items: [
-          { name: 'Native DWG', status: true },
-          { name: 'Excel Tables', status: true },
-          { name: 'Dynamic Blocks', status: true },
-        ],
-      },
-      {
-        category: '3D',
-        items: [
-          { name: 'Parametric Modeling', status: true },
-          { name: 'Direct Modeling', status: true },
-          { name: 'Point Cloud Proc.', status: true },
-        ],
-      },
-      {
-        category: 'API',
-        items: [
-          { name: 'Full LISP', status: true },
-          { name: 'C++ / .NET API', status: true },
-          { name: 'VBA Scripting', status: true },
-        ],
-      },
-    ],
-    alternatives: ['autocad', 'zwcad', 'gstarcad'],
-    country: 'Russia',
-    category_id: 'c1',
-    pricing_type: 'Subscription',
-    starting_price: 200,
-    platforms: ['Windows'],
-    industries: ['Engineering', 'Construction', 'Manufacturing'],
-    core_features: ['Native DWG', 'Excel-like Tables', 'LISP/C++ API'],
-    user_scales: ['Small Business', 'Mid-Market'],
-    official_url: 'https://nanocad.com',
-    affiliate_url: null,
-    score: 4.7,
-    pros: ['Exceptional value', 'Native DWG stability', 'AutoCAD-like API'],
-    cons: ['Windows only', 'Smaller English community', 'Interface cluttered'],
-    faqs: genericFaqs('nanoCAD'),
-    tech_specs: {
-      engine: 'ODA Teigha',
-      multicore: 'Moderate',
-      gpu_optimization: 'DirectX',
-      standards: ['DWG', 'DXF', 'DWT'],
-    },
-    expert_verdict: 'nanoCAD is the dark horse of 2D CAD. Surprisingly high reliability.',
-  },
-  {
     id: 't20',
     name: 'Autodesk Inventor',
     slug: 'autodesk-inventor',
@@ -2035,7 +2017,12 @@ export const tools: Tool[] = [
         price: '2,150',
         period: '/yr',
 
-        features: ['Full 2D/3D CAD', 'Interoperability support', 'Bentley Learn training', 'Cloud services'],
+        features: [
+          'Full 2D/3D CAD',
+          'Interoperability support',
+          'Bentley Learn training',
+          'Cloud services',
+        ],
 
         is_popular: true,
       },
@@ -2044,7 +2031,12 @@ export const tools: Tool[] = [
         price: 'Custom',
         period: 'quote',
 
-        features: ['Massive dataset handling', 'ProjectWise integration', 'Priority support', 'Global licensing'],
+        features: [
+          'Massive dataset handling',
+          'ProjectWise integration',
+          'Priority support',
+          'Global licensing',
+        ],
 
         is_popular: false,
       },
@@ -2210,7 +2202,13 @@ export const tools: Tool[] = [
     starting_price: 249,
     platforms: ['Windows', 'macOS'],
     industries: ['Manufacturing', 'Engineering', 'AEC'],
-    core_features: ['2D/3D Drafting', 'LISP Support', 'Dynamic Blocks', 'Toolbox Utilities', 'DGN Support'],
+    core_features: [
+      '2D/3D Drafting',
+      'LISP Support',
+      'Dynamic Blocks',
+      'Toolbox Utilities',
+      'DGN Support',
+    ],
     user_scales: ['Small Business', 'Mid-Market'],
     official_url: 'https://www.draftsight.com',
     affiliate_url: null,
@@ -2224,7 +2222,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Basic',
       standards: ['DWG', 'DXF', 'PDF'],
     },
-    expert_verdict: "The most 'professional' AutoCAD clone. Perfect companion for SolidWorks users.",
+    expert_verdict:
+      "The most 'professional' AutoCAD clone. Perfect companion for SolidWorks users.",
   },
   {
     id: 't23',
@@ -2408,7 +2407,11 @@ export const tools: Tool[] = [
     starting_price: 299,
     platforms: ['Windows', 'macOS', 'iOS'],
     industries: ['Industrial Design', 'Prototyping', 'AEC'],
-    core_features: ['Direct Modeling with Apple Pencil', 'Parasolid Precision', 'Multi-Device Sync'],
+    core_features: [
+      'Direct Modeling with Apple Pencil',
+      'Parasolid Precision',
+      'Multi-Device Sync',
+    ],
     user_scales: ['Individuals', 'Small Business'],
     official_url: 'https://www.shapr3d.com',
     affiliate_url: null,
@@ -2423,100 +2426,6 @@ export const tools: Tool[] = [
       standards: ['STEP', 'IGES', 'XT', 'STL'],
     },
     expert_verdict: 'Shapr3D has done the impossible: made professional CAD fun.',
-  },
-  {
-    id: 't26',
-    name: 'IronCAD',
-    slug: 'ironcad',
-    logo_url: getLogo('IC'),
-    short_desc: "The world's most productive 3D design platform.",
-    description:
-      'IronCAD is a unique mechanical design system. Its Dual-Kernel architecture allows users to switch between Parasolid and ACIS for maximum reliability.',
-    pricing_tiers: [
-      {
-        name: 'Annual',
-        price: '1,500',
-        period: '/yr',
-
-        features: ['Drag & Drop Modeling', 'Unified Design Env', 'TriBall Tool', 'Full 3D Design'],
-
-        is_popular: true,
-      },
-    ],
-    detailed_features: [
-      {
-        category: 'Efficiency',
-
-        items: [
-          {
-            name: 'TriBall Versatile Tool',
-            status: true,
-          },
-          {
-            name: 'Catalog-based Design',
-            status: true,
-          },
-          {
-            name: 'Dual-engine (ACIS/Parasolid)',
-            status: true,
-          },
-          {
-            name: 'Dynamic Handles',
-            status: true,
-          },
-        ],
-      },
-      {
-        category: 'Workflow',
-
-        items: [
-          {
-            name: 'Single-scene Assembly',
-            status: true,
-          },
-          {
-            name: 'Direct Feature Editing',
-            status: true,
-          },
-          {
-            name: 'Automatic BOM Update',
-            status: true,
-          },
-          {
-            name: 'Sheet Metal & Frame',
-            status: true,
-          },
-        ],
-      },
-    ],
-    alternatives: ['solidworks', 'solidedge', 'ironcad'],
-    country: 'USA',
-    category_id: 'c2',
-    pricing_type: 'Subscription / Perpetual',
-    starting_price: 3995,
-    platforms: ['Windows'],
-    industries: ['Fabrication', 'Industrial Equipment', 'Automation'],
-    core_features: [
-      'Drag-and-Drop Design',
-      'TriBall Interaction',
-      'Unified Design Environment',
-      'Non-history Modeling',
-      'Large Assembly',
-    ],
-    user_scales: ['Mid-Market', 'Small Business'],
-    official_url: 'https://www.ironcad.com',
-    affiliate_url: null,
-    score: 4.6,
-    pros: ['Fast conceptual design', 'Productive TriBall tool', 'Assembly flexibility'],
-    cons: ['Smaller user base', 'Non-traditional UI', 'TriBall mastery curve'],
-    faqs: genericFaqs('IronCAD'),
-    tech_specs: {
-      engine: 'Parasolid & ACIS Dual-Kernel',
-      multicore: 'Moderate',
-      gpu_optimization: 'OpenGL',
-      standards: ['STEP', 'IGES', 'SAT', 'XT'],
-    },
-    expert_verdict: "IronCAD is the 'best-kept secret' in CAD.",
   },
   {
     id: 't27',
@@ -2539,7 +2448,12 @@ export const tools: Tool[] = [
         price: '1,995',
         period: '/yr',
 
-        features: ['Full Architectural Tools', 'Kitchen & Bath', 'Construction Docs', 'Priority support'],
+        features: [
+          'Full Architectural Tools',
+          'Kitchen & Bath',
+          'Construction Docs',
+          'Priority support',
+        ],
 
         is_popular: false,
       },
@@ -2672,7 +2586,11 @@ export const tools: Tool[] = [
     official_url: 'https://www.mastercam.com',
     affiliate_url: null,
     score: 4.9,
-    pros: ['Standard post-processors', 'Dynamic Milling cycle reduction', 'Global training network'],
+    pros: [
+      'Standard post-processors',
+      'Dynamic Milling cycle reduction',
+      'Global training network',
+    ],
     cons: ['Steep price', 'Dated legacy UI', 'Complex mastering'],
     faqs: genericFaqs('Mastercam'),
     tech_specs: {
@@ -2906,89 +2824,6 @@ export const tools: Tool[] = [
     expert_verdict: 'iMachining is literal magic for CNC shops.',
   },
   {
-    id: 't33',
-    name: 'GstarCAD',
-    slug: 'gstarcad',
-    logo_url: getLogo('GS'),
-    short_desc: 'High-performance AutoCAD alternative.',
-
-    description: 'GstarCAD is a powerful 2D/3D CAD software with high compatibility with AutoCAD and the .DWG format.',
-
-    pricing_tiers: [
-      {
-        name: 'Professional',
-        price: '799',
-        period: 'initial',
-        features: ['2D/3D Drafting', 'Dynamic Blocks', 'Perpetual'],
-        is_popular: true,
-      },
-    ],
-
-    detailed_features: [
-      {
-        category: 'Features',
-        items: [
-          { name: 'Extremely fast file opening & saving', status: true },
-          { name: 'Cloud storage integration', status: true },
-          { name: 'Mobile App (GstarCAD MC) integration', status: true },
-          { name: 'Batch Printing & File Comparison', status: true },
-          { name: 'Parametric Constraint support', status: true }
-        ],
-      },
-    ],
-
-    alternatives: ['autocad', 'zwcad', 'bricscad'],
-    country: 'China',
-    category_id: 'c1',
-    pricing_type: 'Perpetual',
-    starting_price: 799,
-    platforms: ['Windows'],
-    industries: ['Architecture', 'Engineering', 'Construction'],
-    core_features: ['Native DWG', 'Dynamic Blocks', 'LISP Support'],
-    user_scales: ['Mid-Market', 'Small Business'],
-    official_url: 'https://www.gstarcad.net',
-    affiliate_url: null,
-    score: 4.5,
-    pros: ['Fast performance', 'Perpetual option', 'API compatibility'],
-    cons: ['Limited 3D', 'Smaller support network', 'Windows lead'],
-    faqs: genericFaqs('GstarCAD'),
-
-    tech_specs: {
-      engine: 'Gstarsoft Custom',
-      multicore: 'Moderate',
-      gpu_optimization: 'Hardware Acceleration',
-      standards: ['DWG', 'DXF', 'PDF'],
-    },
-
-    expert_verdict: 'The fastest AutoCAD clone on the market.',
-
-    pricing_breakdown: [
-      {
-        tier: 'Standard',
-        price: '~$600',
-        notes: 'Perpetual license',
-      },
-      {
-        tier: 'Professional',
-        price: '~$900',
-        notes: 'Full 3D modeling support',
-      },
-      {
-        tier: 'Annual Update',
-        price: '~$200',
-        notes: 'Optional upgrade fee',
-      },
-    ],
-
-    key_capabilities: [
-      'High-performance 2D/3D CAD',
-      'Dynamic Block Support',
-      'PDF to DWG Conversion',
-      'Collaborative Design toolset',
-      'Lisp/C++/VBA Support',
-    ],
-  },
-  {
     id: 't34',
     name: 'Bluebeam Revu',
     slug: 'bluebeam-revu',
@@ -3002,7 +2837,12 @@ export const tools: Tool[] = [
         price: '240',
         period: '/yr',
 
-        features: ['PDF Markup Tools', 'Real-time Collaboration', 'Cloud Storage', 'Measurement tools'],
+        features: [
+          'PDF Markup Tools',
+          'Real-time Collaboration',
+          'Cloud Storage',
+          'Measurement tools',
+        ],
 
         is_popular: false,
       },
@@ -3011,7 +2851,12 @@ export const tools: Tool[] = [
         price: '300',
         period: '/yr',
 
-        features: ['Advanced Measurement', 'Quantity Link', 'Specialized Toolsets', 'Mobile access'],
+        features: [
+          'Advanced Measurement',
+          'Quantity Link',
+          'Specialized Toolsets',
+          'Mobile access',
+        ],
 
         is_popular: true,
       },
@@ -3121,7 +2966,12 @@ export const tools: Tool[] = [
         price: '1,100',
         period: '/yr',
 
-        features: ['Timeline simulation', 'Advanced Rendering', 'No Clash Detection', 'NWD conversion'],
+        features: [
+          'Timeline simulation',
+          'Advanced Rendering',
+          'No Clash Detection',
+          'NWD conversion',
+        ],
 
         is_popular: false,
       },
@@ -3639,7 +3489,12 @@ export const tools: Tool[] = [
         price: '330',
         period: '/mo',
 
-        features: ['Road & Highway design', 'Parcel & Grading', 'Gravity & Pressure Pipe', 'Dynamic Alignment'],
+        features: [
+          'Road & Highway design',
+          'Parcel & Grading',
+          'Gravity & Pressure Pipe',
+          'Dynamic Alignment',
+        ],
 
         is_popular: false,
       },
@@ -3648,7 +3503,12 @@ export const tools: Tool[] = [
         price: '2,645',
         period: '/yr',
 
-        features: ['Full BIM integration', 'Project Explorer', 'Grading Optimization', 'Technical Support'],
+        features: [
+          'Full BIM integration',
+          'Project Explorer',
+          'Grading Optimization',
+          'Technical Support',
+        ],
 
         is_popular: true,
       },
@@ -3702,41 +3562,13 @@ export const tools: Tool[] = [
     ],
   },
   {
-    id: 't45',
-    name: 'DraftSight',
-    slug: 'draftsight-extra',
-    logo_url: getLogo('DSE'),
-    short_desc: 'Professional 2D CAD from Dassault Systèmes.',
-    description: 'DraftSight provides high-end 2D CAD features with a familiar interface.',
-    country: 'France',
-    category_id: 'c1',
-    pricing_type: 'Subscription',
-    starting_price: 249,
-    platforms: ['Windows', 'macOS'],
-    industries: ['Manufacturing', 'Engineering'],
-    core_features: ['Native DWG', 'Image Tracing', 'LISP Support'],
-    user_scales: ['Small Business', 'Mid-Market'],
-    official_url: 'https://www.draftsight.com',
-    affiliate_url: null,
-    score: 4.3,
-    pros: ['SolidWorks integration', 'Familiar UI', 'Professional support'],
-    cons: ['No longer free', 'Generic interface', 'Lacks AutoCAD automation'],
-    faqs: genericFaqs('DraftSight'),
-    tech_specs: {
-      engine: 'ARES',
-      multicore: 'Low',
-      gpu_optimization: 'Basic',
-      standards: ['DWG', 'DXF', 'PDF'],
-    },
-    expert_verdict: 'The most reliable AutoCAD clone for SolidWorks firms.',
-  },
-  {
     id: 't46',
     name: 'Chief Architect Pro',
     slug: 'chief-architect-pro',
     logo_url: getLogo('CAP'),
     short_desc: 'High-end 3D home design for professionals.',
-    description: 'Chief Architect Pro specializes in advanced residential and light commercial design.',
+    description:
+      'Chief Architect Pro specializes in advanced residential and light commercial design.',
     country: 'USA',
     category_id: 'c3',
     pricing_type: 'Subscription',
@@ -3778,63 +3610,6 @@ export const tools: Tool[] = [
         items: [
           {
             name: 'Smart Objects',
-            status: true,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 't47',
-    name: 'ARES Commander',
-    slug: 'ares-commander',
-    logo_url: getLogo('AR'),
-    short_desc: 'Cross-platform professional DWG CAD.',
-
-    description:
-      'ARES Commander is the engine behind DraftSight and CorelCAD, running natively on Windows, Mac, and Linux.',
-
-    country: 'Germany',
-    category_id: 'c1',
-    pricing_type: 'Subscription',
-    starting_price: 250,
-    platforms: ['Windows', 'macOS', 'Linux'],
-    industries: ['Architecture', 'Civil Engineering'],
-    core_features: ['DWG Drafting', 'Cloud/Mobile CAD'],
-    user_scales: ['Mid-Market', 'Enterprise'],
-    official_url: 'https://www.graebert.com',
-    affiliate_url: null,
-    score: 4.5,
-    pros: ['Best Linux/Mac DWG', 'Cloud innovation', 'BIM data viewing'],
-    cons: ['Smaller brand', 'Cloud workflow curve', 'Subscription focus'],
-    faqs: genericFaqs('ARES Commander'),
-
-    tech_specs: {
-      engine: 'ARES',
-      multicore: 'Moderate',
-      gpu_optimization: 'High',
-      standards: ['DWG', 'IFC', 'PDF'],
-    },
-
-    expert_verdict: 'The most advanced cross-platform CAD tool.',
-
-    pricing_tiers: [
-      {
-        name: 'Annual',
-        price: '250',
-        period: '/yr',
-        features: ['Trinity Workflow', 'Cloud & Mobile', 'Full DWG'],
-        is_popular: true,
-      },
-    ],
-
-    detailed_features: [
-      {
-        category: 'CAD',
-
-        items: [
-          {
-            name: 'BIM-to-CAD features',
             status: true,
           },
         ],
@@ -3912,7 +3687,13 @@ export const tools: Tool[] = [
     platforms: ['Windows', 'macOS', 'Linux'],
     industries: ['VFX', 'Gaming', 'Animation'],
 
-    core_features: ['Character Animation', '3D Modeling', 'Dynamics & Effects', 'Rendering', 'Pipeline Integration'],
+    core_features: [
+      'Character Animation',
+      '3D Modeling',
+      'Dynamics & Effects',
+      'Rendering',
+      'Pipeline Integration',
+    ],
 
     user_scales: ['Enterprise', 'Agencies'],
     official_url: 'https://www.autodesk.com/maya',
@@ -3937,7 +3718,12 @@ export const tools: Tool[] = [
         price: '235',
         period: '/mo',
 
-        features: ['Character Animation', 'Bifrost for Maya', 'Arnold Renderer', 'Advanced Rigging'],
+        features: [
+          'Character Animation',
+          'Bifrost for Maya',
+          'Arnold Renderer',
+          'Advanced Rigging',
+        ],
 
         is_popular: true,
       },
@@ -3946,7 +3732,12 @@ export const tools: Tool[] = [
         price: '1,875',
         period: '/yr',
 
-        features: ['Full Motion Graphics', 'USD integration', 'Interactive Grooming', 'Technical Support'],
+        features: [
+          'Full Motion Graphics',
+          'USD integration',
+          'Interactive Grooming',
+          'Technical Support',
+        ],
 
         is_popular: false,
       },
@@ -4013,7 +3804,13 @@ export const tools: Tool[] = [
     platforms: ['Windows', 'macOS', 'Linux'],
     industries: ['Indie Games', 'VFX', 'Hobbyist'],
 
-    core_features: ['Open Source 3D', 'Geometry Nodes', 'Sculpting', 'VFX/Compositing', '2D Animation (Grease Pencil)'],
+    core_features: [
+      'Open Source 3D',
+      'Geometry Nodes',
+      'Sculpting',
+      'VFX/Compositing',
+      '2D Animation (Grease Pencil)',
+    ],
 
     user_scales: ['Individuals', 'Startups'],
     official_url: 'https://www.blender.org',
@@ -4135,7 +3932,13 @@ export const tools: Tool[] = [
     platforms: ['Windows', 'Mobile', 'Web'],
     industries: ['Construction', 'Real Estate', 'Architecture'],
 
-    core_features: ['Mobile DWG Viewer', 'Cloud Sync', '3D Format Support', 'Basic Editing', 'Annotations'],
+    core_features: [
+      'Mobile DWG Viewer',
+      'Cloud Sync',
+      '3D Format Support',
+      'Basic Editing',
+      'Annotations',
+    ],
 
     user_scales: ['Individuals', 'Small Business'],
     official_url: 'https://en.dwgfastview.com',
@@ -4295,7 +4098,7 @@ export const tools: Tool[] = [
           { name: 'Cloud storage integration', status: true },
           { name: 'Mobile App (GstarCAD MC) integration', status: true },
           { name: 'Batch Printing & File Comparison', status: true },
-          { name: 'Parametric Constraint support', status: true }
+          { name: 'Parametric Constraint support', status: true },
         ],
       },
     ],
@@ -4328,7 +4131,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'None',
       standards: ['DXF', 'DWG', 'SVG'],
     },
-    expert_verdict: 'The go-to choice for cross-platform 2D drafting without the overhead of modern CAD bloat.',
+    expert_verdict:
+      'The go-to choice for cross-platform 2D drafting without the overhead of modern CAD bloat.',
   },
   {
     id: 't56',
@@ -4344,7 +4148,12 @@ export const tools: Tool[] = [
     starting_price: 200,
     platforms: ['Windows'],
     industries: ['Engineering', 'Construction', 'Manufacturing'],
-    core_features: ['Native DWG Support', 'Parametric 3D', 'Excel Integration', 'Open API (C++, .NET)'],
+    core_features: [
+      'Native DWG Support',
+      'Parametric 3D',
+      'Excel Integration',
+      'Open API (C++, .NET)',
+    ],
     user_scales: ['Mid-Market', 'Enterprise'],
     official_url: 'https://nanocad.com',
     affiliate_url: null,
@@ -4375,7 +4184,12 @@ export const tools: Tool[] = [
     starting_price: 399,
     platforms: ['Windows'],
     industries: ['Architecture', 'Civil Engineering', 'Mechanical'],
-    core_features: ['PDF to DWG Converter', '3D Architectural Module', 'EasyArch 3D Plugin', 'iCADLib Block Manager'],
+    core_features: [
+      'PDF to DWG Converter',
+      '3D Architectural Module',
+      'EasyArch 3D Plugin',
+      'iCADLib Block Manager',
+    ],
     user_scales: ['Small Team', 'Mid-Market'],
     official_url: 'https://www.progecad.com',
     affiliate_url: null,
@@ -4389,7 +4203,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Basic',
       standards: ['DWG', 'PDF', 'DXF'],
     },
-    expert_verdict: 'The Swiss army knife of CAD clones, offering more utilities out-of-the-box than AutoCAD.',
+    expert_verdict:
+      'The Swiss army knife of CAD clones, offering more utilities out-of-the-box than AutoCAD.',
   },
   {
     id: 't58',
@@ -4526,7 +4341,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Moderate',
       standards: ['STEP', 'IGES', 'STL'],
     },
-    expert_verdict: "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
+    expert_verdict:
+      "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
   },
   {
     id: 't60',
@@ -4586,7 +4402,7 @@ export const tools: Tool[] = [
           { name: 'Plugin support for extra features', status: true },
           { name: 'Advanced snapping system', status: true },
           { name: 'Library of blocks/symbols', status: true },
-          { name: 'Active community support', status: true }
+          { name: 'Active community support', status: true },
         ],
       },
     ],
@@ -4605,7 +4421,12 @@ export const tools: Tool[] = [
     starting_price: 545,
     platforms: ['Windows'],
     industries: ['Engineering', 'AEC', 'Interior Design'],
-    core_features: ['Native DWG Support', '3D Solid Modeling', 'LISP Support', 'Digital Signatures'],
+    core_features: [
+      'Native DWG Support',
+      '3D Solid Modeling',
+      'LISP Support',
+      'Digital Signatures',
+    ],
     user_scales: ['Small Team', 'Mid-Market'],
     official_url: 'https://www.cadopia.com',
     affiliate_url: null,
@@ -4619,7 +4440,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Basic',
       standards: ['DWG', 'DXF', 'DWT'],
     },
-    expert_verdict: "A solid, stable choice for firms that want a 'set it and forget it' 2D/3D solution.",
+    expert_verdict:
+      "A solid, stable choice for firms that want a 'set it and forget it' 2D/3D solution.",
   },
   {
     id: 't62',
@@ -4635,7 +4457,12 @@ export const tools: Tool[] = [
     starting_price: 999,
     platforms: ['Windows', 'macOS'],
     industries: ['Architecture', 'Mechanical', 'Consumer Products'],
-    core_features: ['Hybrid Modeling', 'Photorealistic Rendering', 'Geometric Constraints', 'BIM Data Support'],
+    core_features: [
+      'Hybrid Modeling',
+      'Photorealistic Rendering',
+      'Geometric Constraints',
+      'BIM Data Support',
+    ],
     user_scales: ['Small Business', 'Mid-Market'],
     official_url: 'https://www.turbocad.com',
     affiliate_url: null,
@@ -4662,7 +4489,7 @@ export const tools: Tool[] = [
       'EPLAN Electric P8 is a consistent, integrated and fast system for the planning and design of electrical engineering for machines and plant systems.',
 
     country: 'USA',
-    category_id: 'c7',
+    category_id: 'c6',
     pricing_type: 'Subscription',
     starting_price: 2500,
     platforms: ['Windows'],
@@ -4699,7 +4526,12 @@ export const tools: Tool[] = [
         price: '3,500',
         period: '/yr',
 
-        features: ['Electrical Design', 'Schematic Creation', 'Standard Parts Data', 'Cloud services'],
+        features: [
+          'Electrical Design',
+          'Schematic Creation',
+          'Standard Parts Data',
+          'Cloud services',
+        ],
 
         is_popular: true,
       },
@@ -4766,7 +4598,12 @@ export const tools: Tool[] = [
     starting_price: 1500,
     platforms: ['Windows'],
     industries: ['Automation', 'Manufacturing'],
-    core_features: ['Auto-generating Lists', 'Component Database', 'Smart Routing', 'PLC Management'],
+    core_features: [
+      'Auto-generating Lists',
+      'Component Database',
+      'Smart Routing',
+      'PLC Management',
+    ],
     user_scales: ['Small Team', 'Mid-Market'],
     official_url: 'https://www.pcschematic.com',
     affiliate_url: null,
@@ -4780,7 +4617,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Basic',
       standards: ['IEC 61346', 'EN 81346'],
     },
-    expert_verdict: 'The most efficient alternative to EPLAN for small to mid-sized automation firms.',
+    expert_verdict:
+      'The most efficient alternative to EPLAN for small to mid-sized automation firms.',
   },
   {
     id: 't65',
@@ -4799,7 +4637,12 @@ export const tools: Tool[] = [
     platforms: ['Windows'],
     industries: ['Jewelry Design', 'Manufacturing'],
 
-    core_features: ['Jewelry Design', 'Parametric Gem placement', 'Ring Builders', 'High-end Rendering'],
+    core_features: [
+      'Jewelry Design',
+      'Parametric Gem placement',
+      'Ring Builders',
+      'High-end Rendering',
+    ],
 
     user_scales: ['Individual Artists', 'High-end Jewelers'],
     official_url: 'https://www.gemvision.com/matrixgold',
@@ -4845,7 +4688,8 @@ export const tools: Tool[] = [
     id: 't66',
     name: 'exocad DentalCAD',
     slug: 'exocad',
-    logo_url: 'https://exocad.com/typo3conf/ext/exocad_site/Resources/Public/Images/exocad_logo.svg',
+    logo_url:
+      'https://exocad.com/typo3conf/ext/exocad_site/Resources/Public/Images/exocad_logo.svg',
     short_desc: 'Leading dental CAD software for labs.',
 
     description:
@@ -4858,7 +4702,12 @@ export const tools: Tool[] = [
     platforms: ['Windows'],
     industries: ['Dental', 'Medical'],
 
-    core_features: ['Digital Dentistry', 'Crown & Bridge design', 'Implant Planning', '3D Scanning integration'],
+    core_features: [
+      'Digital Dentistry',
+      'Crown & Bridge design',
+      'Implant Planning',
+      '3D Scanning integration',
+    ],
 
     user_scales: ['Dental Labs', 'Clinics'],
     official_url: 'https://exocad.com',
@@ -4914,7 +4763,12 @@ export const tools: Tool[] = [
     starting_price: 2000,
     platforms: ['Windows'],
     industries: ['Woodworking', 'Furniture'],
-    core_features: ['Auto-generation of Cut Lists', 'CNC Integration', '3D Photo Rendering', 'Material Optimization'],
+    core_features: [
+      'Auto-generation of Cut Lists',
+      'CNC Integration',
+      '3D Photo Rendering',
+      'Material Optimization',
+    ],
     user_scales: ['Small Custom Shops', 'Industrial Manufacturers'],
     official_url: 'https://www.cabinetvision.com',
     affiliate_url: null,
@@ -4944,7 +4798,12 @@ export const tools: Tool[] = [
     starting_price: 15000,
     platforms: ['Windows'],
     industries: ['Shipbuilding', 'Oil & Gas'],
-    core_features: ['Hull Design', 'Outfitting', '3D Collaborative Environment', 'Project Management'],
+    core_features: [
+      'Hull Design',
+      'Outfitting',
+      '3D Collaborative Environment',
+      'Project Management',
+    ],
     user_scales: ['Enterprise', 'Major Shipyards'],
     official_url: 'https://www.aveva.com/en/products/marine/',
     affiliate_url: null,
@@ -4977,7 +4836,13 @@ export const tools: Tool[] = [
     platforms: ['Windows', 'macOS'],
     industries: ['Fashion', 'Apparel', 'Gaming'],
 
-    core_features: ['3D Garment Design', 'Fabric Simulation', 'Virtual Fitting', 'Pattern Grading', 'Modular Design'],
+    core_features: [
+      '3D Garment Design',
+      'Fabric Simulation',
+      'Virtual Fitting',
+      'Pattern Grading',
+      'Modular Design',
+    ],
 
     user_scales: ['Indie Designers', 'Global Fashion Brands'],
     official_url: 'https://www.clo3d.com',
@@ -5074,7 +4939,12 @@ export const tools: Tool[] = [
     starting_price: 5000,
     platforms: ['Windows'],
     industries: ['Footwear', 'Apparel'],
-    core_features: ['3D Last Design', 'Pattern Engineering', 'Material Costing', 'Virtual Sampling'],
+    core_features: [
+      '3D Last Design',
+      'Pattern Engineering',
+      'Material Costing',
+      'Virtual Sampling',
+    ],
     user_scales: ['Large Manufacturers', 'Design Studios'],
     official_url: 'https://www.shoemaster.co.uk',
     affiliate_url: null,
@@ -5104,7 +4974,12 @@ export const tools: Tool[] = [
     starting_price: 3000,
     platforms: ['Windows'],
     industries: ['Mold Design', 'Tooling'],
-    core_features: ['Analysis of Draft', 'Core & Cavity Separation', 'Electrode Design', 'Dynamic Wireframe'],
+    core_features: [
+      'Analysis of Draft',
+      'Core & Cavity Separation',
+      'Electrode Design',
+      'Dynamic Wireframe',
+    ],
     user_scales: ['Tool Shops', 'Manufacturing Plants'],
     official_url: 'https://www.visicadcam.com',
     affiliate_url: null,
@@ -5134,7 +5009,12 @@ export const tools: Tool[] = [
     starting_price: 1200,
     platforms: ['Windows'],
     industries: ['Event Design', 'Theatre', 'Concerts'],
-    core_features: ['Real-time Visualization', 'Lighting Plotting', 'Console Integration', 'VR Pre-viz'],
+    core_features: [
+      'Real-time Visualization',
+      'Lighting Plotting',
+      'Console Integration',
+      'VR Pre-viz',
+    ],
     user_scales: ['Lighting Designers', 'Production Houses'],
     official_url: 'https://cast-soft.com/wysiwyg/',
     affiliate_url: null,
@@ -5178,7 +5058,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'High',
       standards: ['STL', 'OBJ', '3DM'],
     },
-    expert_verdict: 'The serious alternative to MatrixGold for those who prefer Mac or true parametric history.',
+    expert_verdict:
+      'The serious alternative to MatrixGold for those who prefer Mac or true parametric history.',
   },
   {
     id: 't79',
@@ -5194,7 +5075,12 @@ export const tools: Tool[] = [
     starting_price: 5000,
     platforms: ['Windows'],
     industries: ['Reverse Engineering', 'Quality Control'],
-    core_features: ['Automatic Surface Fitting', 'Mesh to Solid', 'LiveTransfer to CAD', 'Point Cloud Analysis'],
+    core_features: [
+      'Automatic Surface Fitting',
+      'Mesh to Solid',
+      'LiveTransfer to CAD',
+      'Point Cloud Analysis',
+    ],
     user_scales: ['Mid-Market', 'Enterprise'],
     official_url: 'https://www.3dsystems.com/software/geomagic-design-x',
     affiliate_url: null,
@@ -5224,12 +5110,21 @@ export const tools: Tool[] = [
     starting_price: 12000,
     platforms: ['Windows', 'macOS'],
     industries: ['Automotive', 'Industrial Design'],
-    core_features: ['Class-A Surfacing', 'Conceptual Sketching', 'VR Visualization', 'Dynamo Integration'],
+    core_features: [
+      'Class-A Surfacing',
+      'Conceptual Sketching',
+      'VR Visualization',
+      'Dynamo Integration',
+    ],
     user_scales: ['Enterprise', 'Design Agencies'],
     official_url: 'https://www.autodesk.com/products/alias/overview',
     affiliate_url: null,
     score: 4.9,
-    pros: ['Gold standard for Class-A surfaces', 'Stunning visualization', 'Unified design workflow'],
+    pros: [
+      'Gold standard for Class-A surfaces',
+      'Stunning visualization',
+      'Unified design workflow',
+    ],
     cons: ['Extremely high cost', 'Steepest learning curve in CAD', 'Niche expertise needed'],
     faqs: genericFaqs('Alias AutoStudio'),
     tech_specs: {
@@ -5254,7 +5149,12 @@ export const tools: Tool[] = [
     starting_price: 3500,
     platforms: ['Windows'],
     industries: ['Mold Design', 'Die Design'],
-    core_features: ['Automated Tool Design', 'Conformal Cooling', 'NC Programming', 'Quick Split & Core'],
+    core_features: [
+      'Automated Tool Design',
+      'Conformal Cooling',
+      'NC Programming',
+      'Quick Split & Core',
+    ],
     user_scales: ['Tool Shops', 'Manufacturing Plants'],
     official_url: 'https://www.cimatron.com',
     affiliate_url: null,
@@ -5284,7 +5184,12 @@ export const tools: Tool[] = [
     starting_price: 500,
     platforms: ['Windows'],
     industries: ['Landscape Architecture', 'Irrigation'],
-    core_features: ['Plant Manager', 'Irrigation Design', 'Detail Management', 'SketchUp Connection'],
+    core_features: [
+      'Plant Manager',
+      'Irrigation Design',
+      'Detail Management',
+      'SketchUp Connection',
+    ],
     user_scales: ['Small Business', 'Mid-Market'],
     official_url: 'https://www.landfx.com',
     affiliate_url: null,
@@ -5314,7 +5219,12 @@ export const tools: Tool[] = [
     starting_price: 4500,
     platforms: ['Windows'],
     industries: ['Footwear'],
-    core_features: ['Virtual Flattening', 'Sole Design', 'Material Consumption Analysis', 'Direct to Manufacturing'],
+    core_features: [
+      'Virtual Flattening',
+      'Sole Design',
+      'Material Consumption Analysis',
+      'Direct to Manufacturing',
+    ],
     user_scales: ['Footwear Brands', 'Pattern Houses'],
     official_url: 'https://www.icad3dplus.com',
     affiliate_url: null,
@@ -5450,7 +5360,11 @@ export const tools: Tool[] = [
     official_url: 'https://hexagon.com/products/msc-nastran',
     affiliate_url: null,
     score: 4.9,
-    pros: ['NASA heritage and proven accuracy', 'Industry-standard for aerospace', 'Broad solver capabilities'],
+    pros: [
+      'NASA heritage and proven accuracy',
+      'Industry-standard for aerospace',
+      'Broad solver capabilities',
+    ],
     cons: ['Extremely expensive', 'Old-school UI', 'Complex setup'],
     faqs: genericFaqs('MSC Nastran'),
 
@@ -5461,7 +5375,8 @@ export const tools: Tool[] = [
       standards: ['STEP', 'IGES', 'BDF'],
     },
 
-    expert_verdict: 'Born at NASA, Nastran is the simulation benchmark for aerospace certifications worldwide.',
+    expert_verdict:
+      'Born at NASA, Nastran is the simulation benchmark for aerospace certifications worldwide.',
 
     pricing_tiers: [
       {
@@ -5469,7 +5384,12 @@ export const tools: Tool[] = [
         price: '12,000',
         period: '/yr',
 
-        features: ['Advanced FEA', 'Structural Dynamics', 'Acoustics', 'High-performance computing'],
+        features: [
+          'Advanced FEA',
+          'Structural Dynamics',
+          'Acoustics',
+          'High-performance computing',
+        ],
 
         is_popular: true,
       },
@@ -5505,7 +5425,12 @@ export const tools: Tool[] = [
     platforms: ['Windows', 'Linux'],
     industries: ['Automotive', 'Aerospace', 'Manufacturing'],
 
-    core_features: ['Multi-physics Simulation', 'Optimization', 'Data Analytics', 'Electromagnetics'],
+    core_features: [
+      'Multi-physics Simulation',
+      'Optimization',
+      'Data Analytics',
+      'Electromagnetics',
+    ],
 
     user_scales: ['Mid-Market', 'Enterprise'],
     official_url: 'https://altair.com/hyperworks/',
@@ -5522,7 +5447,8 @@ export const tools: Tool[] = [
       standards: ['STEP', 'IGES', 'Nastran BDF', 'LS-DYNA'],
     },
 
-    expert_verdict: 'The most flexible CAE platform thanks to its unique unit-based licensing model.',
+    expert_verdict:
+      'The most flexible CAE platform thanks to its unique unit-based licensing model.',
 
     pricing_tiers: [
       {
@@ -5561,12 +5487,21 @@ export const tools: Tool[] = [
     starting_price: 15000,
     platforms: ['Windows', 'Linux'],
     industries: ['Automotive', 'Aerospace', 'Shipbuilding'],
-    core_features: ['Crash Simulation (PAM-CRASH)', 'NVH Analysis', 'Welding Simulation', 'Composites Design'],
+    core_features: [
+      'Crash Simulation (PAM-CRASH)',
+      'NVH Analysis',
+      'Welding Simulation',
+      'Composites Design',
+    ],
     user_scales: ['Enterprise'],
     official_url: 'https://www.esi-group.com/products/virtual-performance',
     affiliate_url: null,
     score: 4.7,
-    pros: ['Leading crash simulation (PAM-CRASH)', 'Comprehensive virtual manufacturing', 'Strong automotive heritage'],
+    pros: [
+      'Leading crash simulation (PAM-CRASH)',
+      'Comprehensive virtual manufacturing',
+      'Strong automotive heritage',
+    ],
     cons: ['Niche market focus', 'Very high cost', 'Limited community resources'],
     faqs: genericFaqs('ESI Visual-Environment'),
     tech_specs: {
@@ -5575,7 +5510,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'High',
       standards: ['STEP', 'IGES', 'LS-DYNA', 'Nastran'],
     },
-    expert_verdict: 'The automotive crash simulation specialist trusted by European OEMs for decades.',
+    expert_verdict:
+      'The automotive crash simulation specialist trusted by European OEMs for decades.',
   },
   {
     id: 't88',
@@ -5605,7 +5541,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Basic',
       standards: ['DWG', 'DXF', 'STL', '3DM'],
     },
-    expert_verdict: "The best perpetual-license AutoCAD alternative for Mac users who don't need a subscription.",
+    expert_verdict:
+      "The best perpetual-license AutoCAD alternative for Mac users who don't need a subscription.",
   },
   {
     id: 't89',
@@ -5624,7 +5561,13 @@ export const tools: Tool[] = [
     platforms: ['Windows'],
     industries: ['Manufacturing', 'Mechanical', 'Mold Design'],
 
-    core_features: ['CAD/CAM/CAE', 'Overdrive Engine', 'Mold Design', 'Surface Modeling', 'Hybrid Modeling'],
+    core_features: [
+      'CAD/CAM/CAE',
+      'Overdrive Engine',
+      'Mold Design',
+      'Surface Modeling',
+      'Hybrid Modeling',
+    ],
 
     user_scales: ['Small Business', 'Mid-Market'],
     official_url: 'https://www.zwsoft.com/zw3d',
@@ -5641,7 +5584,8 @@ export const tools: Tool[] = [
       standards: ['STEP', 'IGES', 'DXF', 'STL'],
     },
 
-    expert_verdict: 'Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.',
+    expert_verdict:
+      'Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.',
 
     pricing_tiers: [
       {
@@ -5728,7 +5672,12 @@ export const tools: Tool[] = [
     starting_price: 800,
     platforms: ['Windows'],
     industries: ['Mechanical', 'Manufacturing', 'Electrical'],
-    core_features: ['DWG Compatibility', 'Parametric Drawing', 'BOM Generation', 'Title Block Management'],
+    core_features: [
+      'DWG Compatibility',
+      'Parametric Drawing',
+      'BOM Generation',
+      'Title Block Management',
+    ],
     user_scales: ['Small Business', 'Mid-Market', 'Enterprise'],
     official_url: 'https://www.caxa.com/en/',
     affiliate_url: null,
@@ -5742,7 +5691,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Basic',
       standards: ['DWG', 'DXF', 'EXB'],
     },
-    expert_verdict: 'The dominant CAD brand in China, increasingly gaining traction in global markets.',
+    expert_verdict:
+      'The dominant CAD brand in China, increasingly gaining traction in global markets.',
   },
   {
     id: 't91',
@@ -5766,7 +5716,11 @@ export const tools: Tool[] = [
     affiliate_url: null,
     score: 4.5,
     pros: ['Only CAD with Desktop+Mobile+Cloud sync', 'Linux support', 'Reasonable pricing'],
-    cons: ['Smaller plugin ecosystem', 'Less known than BricsCAD', 'Cloud features require subscription'],
+    cons: [
+      'Smaller plugin ecosystem',
+      'Less known than BricsCAD',
+      'Cloud features require subscription',
+    ],
     faqs: genericFaqs('ARES Commander'),
 
     tech_specs: {
@@ -5776,7 +5730,8 @@ export const tools: Tool[] = [
       standards: ['DWG', 'DXF', 'PDF'],
     },
 
-    expert_verdict: 'The undisputed king of cross-platform DWG CAD — desktop, mobile, and cloud in perfect sync.',
+    expert_verdict:
+      'The undisputed king of cross-platform DWG CAD — desktop, mobile, and cloud in perfect sync.',
 
     pricing_tiers: [
       {
@@ -5817,7 +5772,8 @@ export const tools: Tool[] = [
     industries: ['Semiconductor', 'IC Design', 'Electronics'],
     core_features: ['RTL Synthesis', 'Place & Route', 'Signoff Closure', 'AI-Driven Optimization'],
     user_scales: ['Enterprise'],
-    official_url: 'https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html',
+    official_url:
+      'https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html',
     affiliate_url: null,
     score: 4.9,
     pros: ['Industry-leading PPA results', 'Unified RTL-to-GDSII flow', 'AI-powered optimization'],
@@ -5829,7 +5785,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'Ultra',
       standards: ['GDSII', 'LEF/DEF', 'Liberty', 'Verilog'],
     },
-    expert_verdict: 'The most advanced chip implementation platform, powering designs at 3nm and below.',
+    expert_verdict:
+      'The most advanced chip implementation platform, powering designs at 3nm and below.',
   },
   {
     id: 't93',
@@ -5855,7 +5812,11 @@ export const tools: Tool[] = [
     official_url: 'https://camworks.com/',
     affiliate_url: null,
     score: 4.6,
-    pros: ['Deep SolidWorks native integration', 'Automated feature recognition', 'VoluMill bundled'],
+    pros: [
+      'Deep SolidWorks native integration',
+      'Automated feature recognition',
+      'VoluMill bundled',
+    ],
     cons: ['SolidWorks-dependent', 'Expensive for what it offers', 'Support can be slow'],
     faqs: genericFaqs('CAMWorks'),
     tech_specs: {
@@ -5907,7 +5868,8 @@ export const tools: Tool[] = [
       standards: ['IFC', 'DWG', 'DXF', 'STEP'],
     },
 
-    expert_verdict: "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
+    expert_verdict:
+      "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
 
     pricing_tiers: [
       {
@@ -5924,7 +5886,12 @@ export const tools: Tool[] = [
         price: '3,200',
         period: '/yr',
 
-        features: ['Civil Engineering', 'Precast elements', 'Quantity takeoff', 'Bimplus integration'],
+        features: [
+          'Civil Engineering',
+          'Precast elements',
+          'Quantity takeoff',
+          'Bimplus integration',
+        ],
 
         is_popular: false,
       },
@@ -5991,7 +5958,12 @@ export const tools: Tool[] = [
     starting_price: 4000,
     platforms: ['Windows'],
     industries: ['Civil Engineering', 'Transportation', 'Infrastructure'],
-    core_features: ['Corridor Modeling', 'Drainage Design', 'Terrain Modeling', 'InRoads Migration'],
+    core_features: [
+      'Corridor Modeling',
+      'Drainage Design',
+      'Terrain Modeling',
+      'InRoads Migration',
+    ],
     user_scales: ['Mid-Market', 'Enterprise'],
     official_url: 'https://www.bentley.com/software/openroads-designer/',
     affiliate_url: null,
@@ -6009,345 +5981,8 @@ export const tools: Tool[] = [
       gpu_optimization: 'High',
       standards: ['IFC', 'DGN', 'DWG', 'LandXML'],
     },
-    expert_verdict: 'The definitive platform for highway and infrastructure projects at enterprise scale.',
-  },
-  {
-    id: 't96',
-    name: 'Inventor',
-    slug: 'inventor',
-    logo_url: getLogo('IN'),
-    short_desc: '简要介绍 Inventor（官方站点）',
-    description: '详细介绍 Inventor（官方站点）',
-    pricing_tiers: [
-      {
-        name: 'Monthly',
-        price: '290',
-        period: '/mo',
-        features: ['Professional Design', 'Assembly Modeling', 'Standard Parts', 'Cloud Sync'],
-        is_popular: false,
-      },
-      {
-        name: 'Annual',
-        price: '2,320',
-        period: '/yr',
-
-        features: ['Full Simulation', 'Tube & Pipe design', 'AnyCAD Interoperability', 'Technical Support'],
-
-        is_popular: true,
-      },
-    ],
-    detailed_features: [
-      {
-        category: 'Product Engineering',
-
-        items: [
-          {
-            name: 'Rule-based Design (iLogic)',
-            status: true,
-          },
-          {
-            name: 'Sheet Metal & Frame Design',
-            status: true,
-          },
-          {
-            name: 'Tube and Pipe runs',
-            status: true,
-          },
-          {
-            name: 'Electromechanical Design',
-            status: true,
-          },
-        ],
-      },
-      {
-        category: 'Interoperability',
-
-        items: [
-          {
-            name: 'AnyCAD Multi-CAD support',
-            status: true,
-          },
-          {
-            name: 'Shared View Collaboration',
-            status: true,
-          },
-          {
-            name: 'BIM Content Exchange',
-            status: true,
-          },
-          {
-            name: 'Native DWG compatibility',
-            status: true,
-          },
-        ],
-      },
-    ],
-    alternatives: [],
-    country: 'USA',
-    category_id: 'c1',
-    pricing_type: 'Perpetual',
-    starting_price: 0,
-    platforms: ['Windows'],
-    industries: [],
-    core_features: [
-      'Parametric Design',
-      'Assembly Modeling',
-      'Simulation/FEA',
-      'Sheet Metal',
-      'Large Assembly Performance',
-    ],
-    user_scales: [],
-    official_url: 'https://www.autodesk.com/products/inventor',
-    affiliate_url: null,
-    score: 0,
-    pros: [],
-    cons: [],
-    faqs: genericFaqs('Inventor'),
-    tech_specs: {
-      engine: 'Inventor Engine',
-      multicore: 'N/A',
-      gpu_optimization: 'N/A',
-      standards: [],
-    },
-    expert_verdict: '待补充专业评语。',
-  },
-  {
-    id: 't97',
-    name: 'Creo',
-    slug: 'creo',
-    logo_url: getLogo('CR'),
-    short_desc:
-      'Creo is the industry’s leading 3D CAD software. Try Creo Parametric for free today and start advancing your design capab',
-    description:
-      'Creo is the industry’s leading 3D CAD software. Try Creo Parametric for free today and start advancing your design capabilities.',
-    pricing_tiers: [
-      {
-        name: 'Design Essentials',
-        price: '2,430',
-        period: '/yr',
-
-        features: ['Core 3D Design', 'Standard Part Library', 'Advanced Surfacing', 'Collaboration'],
-
-        is_popular: true,
-      },
-      {
-        name: 'Design Advanced',
-        price: '5,980',
-        period: '/yr',
-        features: ['Top-down Design', 'Simulation Lite', 'Prismatic Milling', 'Sheet Metal'],
-        is_popular: false,
-      },
-    ],
-    detailed_features: [
-      {
-        category: 'Core Modeling',
-
-        items: [
-          {
-            name: 'Parametric & Direct Modeling',
-            status: true,
-          },
-          {
-            name: 'Freestyle Surfacing',
-            status: true,
-          },
-          {
-            name: 'Human Factors Design',
-            status: true,
-          },
-          {
-            name: 'Sheet Metal design',
-            status: true,
-          },
-        ],
-      },
-      {
-        category: 'Future Tech',
-
-        items: [
-          {
-            name: 'AI-driven Generative Design',
-            status: true,
-          },
-          {
-            name: 'Real-time Simulation (Ansys)',
-            status: true,
-          },
-          {
-            name: 'Additive Mfg Optimization',
-            status: true,
-          },
-          {
-            name: 'AR (Augmented Reality) check',
-            status: true,
-          },
-        ],
-      },
-    ],
-    alternatives: [],
-    country: 'USA',
-    category_id: 'c1',
-    pricing_type: 'Perpetual',
-    starting_price: 0,
-    platforms: ['Windows', 'macOS'],
-    industries: [],
-    core_features: [
-      'Parametric CAD',
-      'Direct Modeling',
-      'Generative Design',
-      'AR Collaboration',
-      'Advanced Simulation',
-    ],
-    user_scales: [],
-    official_url: 'https://www.ptc.com/en/products/creo',
-    affiliate_url: null,
-    score: 0,
-    pros: [],
-    cons: [],
-    faqs: genericFaqs('Creo'),
-    tech_specs: { engine: 'Creo Engine', multicore: 'N/A', gpu_optimization: 'N/A', standards: [] },
-    expert_verdict: '待补充专业评语。',
-  },
-  {
-    id: 't98',
-    name: 'Rhinoceros 3D',
-    slug: 'rhinoceros-3d',
-    logo_url: getLogo('RH'),
-    short_desc: 'Rhinoceros 3D: Design, Model, Present, Analyze, Realize...',
-    description: 'Rhinoceros 3D: Design, Model, Present, Analyze, Realize...',
-    pricing_tiers: [
-      {
-        name: 'Commercial (Perpetual)',
-        price: '995',
-        period: 'one-time',
-
-        features: [
-          'Full NURBS Modeling',
-          'Grasshopper included',
-          'All platforms (Win/Mac)',
-          'No subscription required',
-        ],
-
-        is_popular: true,
-      },
-      {
-        name: 'Educational',
-        price: '195',
-        period: 'one-time',
-
-        features: ['Full version features', 'Valid student ID required', 'Permanent license', 'Upgradable'],
-
-        is_popular: false,
-      },
-    ],
-    detailed_features: [
-      {
-        category: 'Modeling Tech',
-
-        items: [
-          {
-            name: 'Advanced NURBS Surfaces',
-            status: true,
-          },
-          {
-            name: 'SubD (Subdivision) support',
-            status: true,
-          },
-          {
-            name: 'Point Cloud Processing',
-            status: true,
-          },
-          {
-            name: 'Mesh Editing Tools',
-            status: true,
-          },
-        ],
-      },
-      {
-        category: 'Computational Design',
-
-        items: [
-          {
-            name: 'Grasshopper Integration',
-            status: true,
-          },
-          {
-            name: 'Kangaroo Physics engine',
-            status: true,
-          },
-          {
-            name: 'Multi-threaded solvers',
-            status: true,
-          },
-          {
-            name: 'BIM integration (Rhino.Inside)',
-            status: true,
-          },
-        ],
-      },
-    ],
-    alternatives: [],
-    country: 'USA',
-    category_id: 'c1',
-    pricing_type: 'Perpetual',
-    starting_price: 0,
-    platforms: ['macOS'],
-    industries: [],
-    core_features: [
-      'NURBS Modeling',
-      'Grasshopper Visual Programming',
-      'SubD Modeling',
-      'Render Integration',
-      'Python/C# API',
-    ],
-    user_scales: [],
-    official_url: 'https://www.rhino3d.com/',
-    affiliate_url: null,
-    score: 0,
-    pros: [],
-    cons: [],
-    faqs: genericFaqs('Rhinoceros 3D'),
-    tech_specs: {
-      engine: 'Rhinoceros 3D Engine',
-      multicore: 'N/A',
-      gpu_optimization: 'N/A',
-      standards: [],
-    },
-    expert_verdict: '待补充专业评语。',
-  },
-  {
-    id: 't99',
-    name: 'TurboCAD',
-    slug: 'turbocad',
-    logo_url: getLogo('TU'),
-    short_desc:
-      'IMSI Design is a leader in high performance, general-purpose 3D CAD (Computer Aided Design) and home design desktop soft',
-    description:
-      'IMSI Design is a leader in high performance, general-purpose 3D CAD (Computer Aided Design) and home design desktop software, and a pioneer in mobile solutions for the AEC (Architectural, Engineering, and Construction) industry.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
-    detailed_features: [],
-    alternatives: [],
-    country: 'USA',
-    category_id: 'c1',
-    pricing_type: 'Perpetual',
-    starting_price: 0,
-    platforms: ['Windows', 'macOS'],
-    industries: [],
-    core_features: [],
-    user_scales: [],
-    official_url: 'https://www.turbocad.com/',
-    affiliate_url: null,
-    score: 0,
-    pros: [],
-    cons: [],
-    faqs: genericFaqs('TurboCAD'),
-    tech_specs: {
-      engine: 'TurboCAD Engine',
-      multicore: 'N/A',
-      gpu_optimization: 'N/A',
-      standards: [],
-    },
-    expert_verdict: '待补充专业评语。',
+    expert_verdict:
+      'The definitive platform for highway and infrastructure projects at enterprise scale.',
   },
   {
     id: 't100',
@@ -6358,7 +5993,9 @@ export const tools: Tool[] = [
       'Through virtual twin technologies, Dassault Systèmes’ collaborative platform empowers business and people to create sust',
     description:
       'Through virtual twin technologies, Dassault Systèmes’ collaborative platform empowers business and people to create sustainable innovations.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'France',
@@ -6392,14 +6029,16 @@ export const tools: Tool[] = [
       'TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal ',
     description:
       'TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal working/boiler making, and woodworking industries.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'France',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -6424,11 +6063,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('BI'),
     short_desc: '简要介绍 BIMoffice（官方站点）',
     description: '详细介绍 BIMoffice（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'France',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -6458,14 +6099,16 @@ export const tools: Tool[] = [
       'Eplan offers automated electrical engineering software for panel building and switchgear manufacturing.',
     description:
       'Eplan offers automated electrical engineering software for panel building and switchgear manufacturing.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -6492,7 +6135,9 @@ export const tools: Tool[] = [
       'Benefit from intelligent 2D & 3D CAD software, immersive AR and VR apps for virtual experiences, training and services f',
     description:
       'Benefit from intelligent 2D & 3D CAD software, immersive AR and VR apps for virtual experiences, training and services for mechanical engineering, factory layout, plant design.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
@@ -6526,11 +6171,13 @@ export const tools: Tool[] = [
       'ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung, ',
     description:
       'ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung, Stahl- und Metallbau.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -6558,11 +6205,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('BE'),
     short_desc: '简要介绍 BeckerCAD（官方站点）',
     description: '详细介绍 BeckerCAD（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -6590,7 +6239,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('PC'),
     short_desc: '简要介绍 pCon.planner（官方站点）',
     description: '详细介绍 pCon.planner（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
@@ -6624,7 +6275,9 @@ export const tools: Tool[] = [
       '华云三维致力于面向智能制造的工业软件研发和推广，拥有自主研发的三维几何建模引擎和几何约束求解器，基于这两项三维CAD核心技术，专注打造完全自主可控、基于云架构的三维CAD平台皇冠CAD（CrownCAD）',
     description:
       '华云三维致力于面向智能制造的工业软件研发和推广，拥有自主研发的三维几何建模引擎和几何约束求解器，基于这两项三维CAD核心技术，专注打造完全自主可控、基于云架构的三维CAD平台皇冠CAD（CrownCAD）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'China',
@@ -6656,7 +6309,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('SI'),
     short_desc: '简要介绍 SINOVATION（官方站点）',
     description: '详细介绍 SINOVATION（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'China',
@@ -6688,7 +6343,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('HA'),
     short_desc: '简要介绍 HaoChen CAD（官方站点）',
     description: '详细介绍 HaoChen CAD（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'China',
@@ -6722,11 +6379,13 @@ export const tools: Tool[] = [
       'Zuken Americas is part of a global software company offering advanced design solutions for the creation and management o',
     description:
       'Zuken Americas is part of a global software company offering advanced design solutions for the creation and management of PCB designs, electrical and fluid systems and 3D cabinet and wire harness layouts.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Japan',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows', 'macOS'],
@@ -6754,11 +6413,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('CA'),
     short_desc: '简要介绍 CADmeister（官方站点）',
     description: '详细介绍 CADmeister（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Japan',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -6788,7 +6449,9 @@ export const tools: Tool[] = [
       'IJCADはAutoCADと互換性のあるソフトウェアとして高いシェアを誇っています。IJCADは業種や規模を限定せず、.dwg図面が使われるあらゆるシーンで活用が可能です。',
     description:
       'IJCADはAutoCADと互換性のあるソフトウェアとして高いシェアを誇っています。IJCADは業種や規模を限定せず、.dwg図面が使われるあらゆるシーンで活用が可能です。',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Japan',
@@ -6820,11 +6483,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('QU'),
     short_desc: 'Quadcept is a pay as you go cloud based CAD system offering robust features.',
     description: 'Quadcept is a pay as you go cloud based CAD system offering robust features.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Japan',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -6854,7 +6519,9 @@ export const tools: Tool[] = [
       'RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, ar',
     description:
       'RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics. It can be used by many people such as design, construction, quality control, and drawing management. RootPro CAD has a free version that can be used for free and a professional version that can be used with subscription license. Please use it according to your needs.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Japan',
@@ -6888,7 +6555,9 @@ export const tools: Tool[] = [
       '情報サービスコンサルタント『川田テクノシステム株式会社（KTS）』の公式ホームページです。KTSの取り組みのご紹介、製品情報のご紹介、各種お申込みのご案内を掲載しています。',
     description:
       '情報サービスコンサルタント『川田テクノシステム株式会社（KTS）』の公式ホームページです。KTSの取り組みのご紹介、製品情報のご紹介、各種お申込みのご案内を掲載しています。',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Japan',
@@ -6922,14 +6591,16 @@ export const tools: Tool[] = [
       'The official website of ASCON, a leading software developer for design, manufacturing, and data management solutions.',
     description:
       'The official website of ASCON, a leading software developer for design, manufacturing, and data management solutions.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Russia',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -6956,14 +6627,16 @@ export const tools: Tool[] = [
       'Top Systems offers the comprehensive set of integrated applications for T-FLEX Parametric CAD, including CAM, FEA and PD',
     description:
       'Top Systems offers the comprehensive set of integrated applications for T-FLEX Parametric CAD, including CAM, FEA and PDM',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Russia',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -6990,11 +6663,13 @@ export const tools: Tool[] = [
       'Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних',
     description:
       'Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних инженерных сетей и технологической части зданий и сооружений.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Russia',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -7022,7 +6697,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('MO'),
     short_desc: '简要介绍 Model Studio CS（官方站点）',
     description: '详细介绍 Model Studio CS（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Russia',
@@ -7056,7 +6733,9 @@ export const tools: Tool[] = [
       'At AVEVA, we work with you and harness the power of our ecosystem, to deliver solutions and expertise to optimize engine',
     description:
       'At AVEVA, we work with you and harness the power of our ecosystem, to deliver solutions and expertise to optimize engineering, operations and performance.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
@@ -7090,14 +6769,16 @@ export const tools: Tool[] = [
       'Your go-to design engineering platform – Accelerate your design time to market with design software, access to CAD neutral.',
     description:
       'Your go-to design engineering platform – Accelerate your design time to market with design software, access to CAD neutral libraries, early introduction to products and support from engineers and manufacturers.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -7122,7 +6803,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('LU'),
     short_desc: '简要介绍 LUSAS（官方站点）',
     description: '详细介绍 LUSAS（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
@@ -7154,11 +6837,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('VI'),
     short_desc: '简要介绍 Visi（官方站点）',
     description: '详细介绍 Visi（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -7181,11 +6866,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('ED'),
     short_desc: '简要介绍 Edgecam（官方站点）',
     description: '详细介绍 Edgecam（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -7215,7 +6902,9 @@ export const tools: Tool[] = [
       'MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an',
     description:
       'MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, and machinery. It responds to a wide range of static, dynamic, nonlinear, ground analysis, liquidation, seismic analysis, and BIM linkage with FEA NX, CIVIL NX, iGEN, SOILWORKS, etc.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'South Korea',
@@ -7249,7 +6938,9 @@ export const tools: Tool[] = [
       'MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an',
     description:
       'MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, and machinery. It responds to a wide range of static, dynamic, nonlinear, ground analysis, liquidation, seismic analysis, and BIM linkage with FEA NX, CIVIL NX, iGEN, SOILWORKS, etc.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'South Korea',
@@ -7281,7 +6972,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('CA'),
     short_desc: '30년 이상의 개발 역사가 말해주듯, 신뢰할 수 있는 국산 CAD, CADian!',
     description: '30년 이상의 개발 역사가 말해주듯, 신뢰할 수 있는 국산 CAD, CADian!',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'South Korea',
@@ -7307,40 +7000,6 @@ export const tools: Tool[] = [
     expert_verdict: '待补充专业评语。',
   },
   {
-    id: 't129',
-    name: 'progeCAD',
-    slug: 'progecad',
-    logo_url: getLogo('PR'),
-    short_desc:
-      'ACAD replacement. Powerful 2D and 3D design software low priced, useful for CAD field & concept sketch, electrical schem',
-    description:
-      'ACAD replacement. Powerful 2D and 3D design software low priced, useful for CAD field & concept sketch, electrical schematics, building construction, AEC architectural, civil, GIS, Topography, structural, mechanical and industrial engineering, MCAD mechanical. IFC,STEP,IGES,SHP,PDF import',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
-    detailed_features: [],
-    alternatives: [],
-    country: 'Italy',
-    category_id: 'c1',
-    pricing_type: 'Perpetual',
-    starting_price: 0,
-    platforms: ['Windows', 'macOS'],
-    industries: [],
-    core_features: [],
-    user_scales: [],
-    official_url: 'https://www.progesoft.com/',
-    affiliate_url: null,
-    score: 0,
-    pros: [],
-    cons: [],
-    faqs: genericFaqs('progeCAD'),
-    tech_specs: {
-      engine: 'progeCAD Engine',
-      multicore: 'N/A',
-      gpu_optimization: 'N/A',
-      standards: [],
-    },
-    expert_verdict: '待补充专业评语。',
-  },
-  {
     id: 't130',
     name: 'Edificius',
     slug: 'edificius',
@@ -7349,11 +7008,13 @@ export const tools: Tool[] = [
       'The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a',
     description:
       'The company with the highest number of IFC certified software solutions in the world for the architecture, engineering and construction industries',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Italy',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -7383,11 +7044,13 @@ export const tools: Tool[] = [
       'The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a',
     description:
       'The company with the highest number of IFC certified software solutions in the world for the architecture, engineering and construction industries',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Italy',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -7415,7 +7078,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('TH'),
     short_desc: '简要介绍 think3（官方站点）',
     description: '详细介绍 think3（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Italy',
@@ -7449,14 +7114,16 @@ export const tools: Tool[] = [
       'Maptek™ is a leading provider of innovative software, hardware and services for the mining industry. Founded 40 years ag',
     description:
       'Maptek™ is a leading provider of innovative software, hardware and services for the mining industry. Founded 40 years ago, Maptek develops products which are used at more than 2500 sites in 90 countries. Our technology solutions cover the whole mining cycle from exploration to reclamation.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Australia',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -7483,7 +7150,9 @@ export const tools: Tool[] = [
       'Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’',
     description:
       'Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’s mining industry.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Canada',
@@ -7517,7 +7186,9 @@ export const tools: Tool[] = [
       'Open Engineering is a European high-tech supplier of multiphysics simulations engineering tools and services.',
     description:
       'Open Engineering is a European high-tech supplier of multiphysics simulations engineering tools and services.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Belgium',
@@ -7551,7 +7222,9 @@ export const tools: Tool[] = [
       'Technical software for structural design, mep systems, construction management. Engineering projects. Pathology',
     description:
       'Technical software for structural design, mep systems, construction management. Engineering projects. Pathology',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Spain',
@@ -7585,14 +7258,16 @@ export const tools: Tool[] = [
       'Desarrollo de software para el diseño y cálculo de instalaciones y estructuras en edificios y aplicación del Código Técn',
     description:
       'Desarrollo de software para el diseño y cálculo de instalaciones y estructuras en edificios y aplicación del Código Técnico de la Edificación',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Spain',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -7617,14 +7292,16 @@ export const tools: Tool[] = [
     logo_url: getLogo('KI'),
     short_desc: '简要介绍 KISSsoft（官方站点）',
     description: '详细介绍 KISSsoft（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Switzerland',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -7649,11 +7326,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('CA'),
     short_desc: 'Cadwork CAD/CAM software for timber construction.',
     description: 'Cadwork CAD/CAM software for timber construction.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Switzerland',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -7683,11 +7362,13 @@ export const tools: Tool[] = [
       'MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the constructi',
     description:
       'MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Finland',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -7717,14 +7398,16 @@ export const tools: Tool[] = [
       'Vertexin kotimaiset 3D-suunnitteluohjelmat sekä tiedonhallintaratkaisut teollisuudelle. 3D CAD, PDM ja PLM – lue lisää o',
     description:
       'Vertexin kotimaiset 3D-suunnitteluohjelmat sekä tiedonhallintaratkaisut teollisuudelle. 3D CAD, PDM ja PLM – lue lisää ohjelmistoista sivuiltamme.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Finland',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -7751,7 +7434,9 @@ export const tools: Tool[] = [
       'We offer space planning software solutions that will help you streamline your sales, design and order processes.',
     description:
       'We offer space planning software solutions that will help you streamline your sales, design and order processes.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Sweden',
@@ -7783,7 +7468,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('AC'),
     short_desc: '简要介绍 ActCAD（官方站点）',
     description: '详细介绍 ActCAD（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'India',
@@ -7815,7 +7502,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('CA'),
     short_desc: '简要介绍 CADVision（官方站点）',
     description: '详细介绍 CADVision（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'India',
@@ -7849,7 +7538,9 @@ export const tools: Tool[] = [
       'Somos a líder nacional para projetos em BIM e Gestão Digital da Construção, com soluções em software para todas as etapa',
     description:
       'Somos a líder nacional para projetos em BIM e Gestão Digital da Construção, com soluções em software para todas as etapas do ciclo de vida do empreendimento.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Brazil',
@@ -7883,7 +7574,9 @@ export const tools: Tool[] = [
       'Projetar, produzir e gerenciar nunca foi tão fácil com a Promob Software Solutions. À maior desenvolvedora de software d',
     description:
       'Projetar, produzir e gerenciar nunca foi tão fácil com a Promob Software Solutions. À maior desenvolvedora de software do setor moveleiro!',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Brazil',
@@ -7917,7 +7610,9 @@ export const tools: Tool[] = [
       'SCIA combines structural engineering and design know-how with technology, to provide powerful structural analysis softwa',
     description:
       'SCIA combines structural engineering and design know-how with technology, to provide powerful structural analysis software and high-level support.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Netherlands',
@@ -7949,7 +7644,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('PO'),
     short_desc: '简要介绍 PowerMill（官方站点）',
     description: '详细介绍 PowerMill（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
@@ -7981,11 +7678,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('FE'),
     short_desc: '简要介绍 FeatureCAM（官方站点）',
     description: '详细介绍 FeatureCAM（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8015,14 +7714,16 @@ export const tools: Tool[] = [
       'GibbsCAM® is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts th',
     description:
       'GibbsCAM® is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -8049,14 +7750,16 @@ export const tools: Tool[] = [
       'Is ESPRIT the best CAM software for your shop? Learn more about what makes us different and how we can help you achieve ',
     description:
       'Is ESPRIT the best CAM software for your shop? Learn more about what makes us different and how we can help you achieve your goals.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -8083,14 +7786,16 @@ export const tools: Tool[] = [
       'Innovative CAD CAM solutions generate optimised NC milling and turning programs for machine tools | Explore hyperMILL CA',
     description:
       'Innovative CAD CAM solutions generate optimised NC milling and turning programs for machine tools | Explore hyperMILL CAM software now!',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -8117,14 +7822,16 @@ export const tools: Tool[] = [
       'Software components for CAD/CAM, CAQ and MES support design and production in die, model and machine manufacturing.',
     description:
       'Software components for CAD/CAM, CAQ and MES support design and production in die, model and machine manufacturing.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -8149,11 +7856,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('WO'),
     short_desc: '简要介绍 WorkNC（官方站点）',
     description: '详细介绍 WorkNC（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'France',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8181,11 +7890,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('SU'),
     short_desc: '简要介绍 SURFCAM（官方站点）',
     description: '详细介绍 SURFCAM（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8213,14 +7924,16 @@ export const tools: Tool[] = [
     logo_url: getLogo('BO'),
     short_desc: 'The World Leader in Powerful & Affordable CNC CAD/CAM Software Solutions',
     description: 'The World Leader in Powerful & Affordable CNC CAD/CAM Software Solutions',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -8245,11 +7958,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('DD'),
     short_desc: '简要介绍 DDS-CAD（官方站点）',
     description: '详细介绍 DDS-CAD（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Norway',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8277,7 +7992,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('PL'),
     short_desc: '简要介绍 Planbar（官方站点）',
     description: '详细介绍 Planbar（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
@@ -8311,11 +8028,13 @@ export const tools: Tool[] = [
       'dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos',
     description:
       'dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Norway',
-    category_id: 'c1',
+    category_id: 'c3',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8343,11 +8062,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('AL'),
     short_desc: '简要介绍 Allegro PCB（官方站点）',
     description: '详细介绍 Allegro PCB（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8376,11 +8097,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('OR'),
     short_desc: '简要介绍 OrCAD（官方站点）',
     description: '详细介绍 OrCAD（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8410,11 +8133,13 @@ export const tools: Tool[] = [
       'For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-read',
     description:
       'For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-ready Xpedition ecosystem.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8444,11 +8169,13 @@ export const tools: Tool[] = [
       'The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent',
     description:
       'The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent engineers to global enterprises.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8474,13 +8201,17 @@ export const tools: Tool[] = [
     name: 'Pulsonix',
     slug: 'pulsonix',
     logo_url: getLogo('PU'),
-    short_desc: 'Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.',
-    description: 'Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    short_desc:
+      'Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.',
+    description:
+      'Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.',
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8508,11 +8239,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('TA'),
     short_desc: '简要介绍 Target 3001!（官方站点）',
     description: '详细介绍 Target 3001!（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
-    category_id: 'c1',
+    category_id: 'c6',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8542,11 +8275,13 @@ export const tools: Tool[] = [
       'AutoForm’s software solutions form a comprehensive platform for the engineering, evaluation and improvement of the sheet',
     description:
       'AutoForm’s software solutions form a comprehensive platform for the engineering, evaluation and improvement of the sheet metal forming and BiW assembly processes. This platform allows for full digitalization, seamless information and data flow, and integration of Industry 4.0 standards.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Switzerland',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8574,7 +8309,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('PA'),
     short_desc: '简要介绍 PAM-STAMP（官方站点）',
     description: '详细介绍 PAM-STAMP（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'France',
@@ -8606,11 +8343,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('MO'),
     short_desc: '简要介绍 Moldflow（官方站点）',
     description: '详细介绍 Moldflow（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8638,11 +8377,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('MO'),
     short_desc: 'Moldex3D | Plastic Injection Molding Simulation Software',
     description: 'Moldex3D | Plastic Injection Molding Simulation Software',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Taiwan',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['macOS'],
@@ -8672,7 +8413,9 @@ export const tools: Tool[] = [
       'Engineering information is a shipbuilder’s most important asset. Using a solution that is built to handle shipbuilding’s',
     description:
       'Engineering information is a shipbuilder’s most important asset. Using a solution that is built to handle shipbuilding’s unique challenges is key.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Canada',
@@ -8706,7 +8449,9 @@ export const tools: Tool[] = [
       'NAPA provides maritime software and data services for ship design and operations to enable a safer, more sustainable, an',
     description:
       'NAPA provides maritime software and data services for ship design and operations to enable a safer, more sustainable, and future-proof maritime industry.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Finland',
@@ -8733,7 +8478,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('FO'),
     short_desc: '简要介绍 FORAN（官方站点）',
     description: '详细介绍 FORAN（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Spain',
@@ -8767,14 +8514,16 @@ export const tools: Tool[] = [
       'PYTHA is the most advanced 3D CAD system in interior design, furniture making, exhibition design and for the shop fittin',
     description:
       'PYTHA is the most advanced 3D CAD system in interior design, furniture making, exhibition design and for the shop fitting industry.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
     category_id: 'c1',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -8801,7 +8550,9 @@ export const tools: Tool[] = [
       'Die imos AG entwickelt und vertreibt weltweit integrierte Softwarelösungen für den Möbel- und Innenausbau.',
     description:
       'Die imos AG entwickelt und vertreibt weltweit integrierte Softwarelösungen für den Möbel- und Innenausbau.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
@@ -8835,7 +8586,9 @@ export const tools: Tool[] = [
       'Explore all training options for Design Flex, the leading kitchen and bathroom design and sales solution. Ideal for resi',
     description:
       'Explore all training options for Design Flex, the leading kitchen and bathroom design and sales solution. Ideal for residential and commercial design projects.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
@@ -8869,7 +8622,9 @@ export const tools: Tool[] = [
       'Palette CAD 3D-Software für Handwerker, Fachhandel & Planer überzeugt mit Einfachheit & Professionalität zugleich. Onlin',
     description:
       'Palette CAD 3D-Software für Handwerker, Fachhandel & Planer überzeugt mit Einfachheit & Professionalität zugleich. Online & Cloudbasiert!',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
@@ -8901,7 +8656,9 @@ export const tools: Tool[] = [
     logo_url: getLogo('KD'),
     short_desc: '简要介绍 KD Max（官方站点）',
     description: '详细介绍 KD Max（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'China',
@@ -8935,11 +8692,13 @@ export const tools: Tool[] = [
       'Whether you are seeking a machinery or software for furniture production, flooring production, kitchen production, close',
     description:
       'Whether you are seeking a machinery or software for furniture production, flooring production, kitchen production, closet production, construction element production, timber house construction and solid wood processing, we offer solutions from individual machines to complete production line. From small woodworking shops to industry-level series production, our products are used to produce high-quality furniture, kitchens, wooden houses, windows, wooden floors and stairs.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Germany',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows', 'macOS'],
@@ -8967,11 +8726,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('AL'),
     short_desc: '简要介绍 AlphaCAM（官方站点）',
     description: '详细介绍 AlphaCAM（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -8999,11 +8760,13 @@ export const tools: Tool[] = [
     logo_url: getLogo('RA'),
     short_desc: '简要介绍 Radan（官方站点）',
     description: '详细介绍 Radan（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'UK',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -9025,49 +8788,19 @@ export const tools: Tool[] = [
     expert_verdict: '待补充专业评语。',
   },
   {
-    id: 't181',
-    name: 'Cabinet Vision',
-    slug: 'cabinet-vision',
-    logo_url: getLogo('CA'),
-    short_desc: '简要介绍 Cabinet Vision（官方站点）',
-    description: '详细介绍 Cabinet Vision（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
-    detailed_features: [],
-    alternatives: [],
-    country: 'USA',
-    category_id: 'c1',
-    pricing_type: 'Perpetual',
-    starting_price: 0,
-    platforms: ['Windows'],
-    industries: [],
-    core_features: [],
-    user_scales: [],
-    official_url: 'https://www.cabinetvision.com/',
-    affiliate_url: null,
-    score: 0,
-    pros: [],
-    cons: [],
-    faqs: genericFaqs('Cabinet Vision'),
-    tech_specs: {
-      engine: 'Cabinet Vision Engine',
-      multicore: 'N/A',
-      gpu_optimization: 'N/A',
-      standards: [],
-    },
-    expert_verdict: '待补充专业评语。',
-  },
-  {
     id: 't182',
     name: 'Lantek Expert',
     slug: 'lantek-expert',
     logo_url: getLogo('LA'),
     short_desc: '简要介绍 Lantek Expert（官方站点）',
     description: '详细介绍 Lantek Expert（官方站点）',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'Spain',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['Windows'],
@@ -9097,14 +8830,16 @@ export const tools: Tool[] = [
       'SigmaNEST CAD/CAM nesting software runs all major brands of laser, plasma, punch, router, waterjet, tube, and pressbrake',
     description:
       'SigmaNEST CAD/CAM nesting software runs all major brands of laser, plasma, punch, router, waterjet, tube, and pressbrake, providing higher yield, high quality, faster NC; and automates importing, quoting, work orders, and inventory.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
-    platforms: ['macOS'],
+    platforms: ['Windows'],
     industries: [],
     core_features: [],
     user_scales: [],
@@ -9131,11 +8866,13 @@ export const tools: Tool[] = [
       'Metamation Sheet Metal CAD CAM Software. Designing, Developing and Delivering Sheet Metal CAD CAM Software.',
     description:
       'Metamation Sheet Metal CAD CAM Software. Designing, Developing and Delivering Sheet Metal CAD CAM Software.',
-    pricing_tiers: [{ name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false }],
+    pricing_tiers: [
+      { name: 'Perpetual', price: 'N/A', period: 'initial', features: [], is_popular: false },
+    ],
     detailed_features: [],
     alternatives: [],
     country: 'USA',
-    category_id: 'c1',
+    category_id: 'c5',
     pricing_type: 'Perpetual',
     starting_price: 0,
     platforms: ['macOS'],
@@ -9179,7 +8916,12 @@ export const tools: Tool[] = [
         price: '2,075',
         period: '/yr',
 
-        features: ['Advanced Bridge design', 'Mobility Simulation', 'Visual Storytelling', 'Autodesk Docs sync'],
+        features: [
+          'Advanced Bridge design',
+          'Mobility Simulation',
+          'Visual Storytelling',
+          'Autodesk Docs sync',
+        ],
 
         is_popular: true,
       },
@@ -9289,7 +9031,13 @@ export const tools: Tool[] = [
       },
     ],
 
-    core_features: ['Architectural Visualization', '3D Modeling', 'Texture Mapping', 'Rendering', 'Dynamic Simulation'],
+    core_features: [
+      'Architectural Visualization',
+      '3D Modeling',
+      'Texture Mapping',
+      'Rendering',
+      'Dynamic Simulation',
+    ],
 
     detailed_features: [
       {
@@ -9381,13 +9129,24 @@ export const tools: Tool[] = [
         price: '359',
         period: '/yr',
 
-        features: ['Full license access', 'All plugins included', 'Maxon Cloud storage', 'Technical Support'],
+        features: [
+          'Full license access',
+          'All plugins included',
+          'Maxon Cloud storage',
+          'Technical Support',
+        ],
 
         is_popular: true,
       },
     ],
 
-    core_features: ['Digital Sculpting', 'High-poly Modeling', 'Texturing', 'Concept Design', '3D Printing Prep'],
+    core_features: [
+      'Digital Sculpting',
+      'High-poly Modeling',
+      'Texturing',
+      'Concept Design',
+      '3D Printing Prep',
+    ],
 
     detailed_features: [
       {

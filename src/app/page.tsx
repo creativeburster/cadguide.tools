@@ -7,9 +7,8 @@ import { Metadata } from 'next';
 import { ToolLogo } from '@/components/tool-logo';
 
 export const metadata: Metadata = {
-  title: 'CADTools.cc: Compare 75+ Best CAD Software 2026 (Free & Pro)',
-  description: 'Find the perfect design tool. Compare 75+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
-  keywords: ['best CAD software 2026', 'CAD comparison directory', 'AutoCAD alternatives', 'BIM software review', 'specialized CAD tools', 'free 2D CAD'],
+  title: 'CADTools.cc: Compare 175+ Best CAD Software 2026 (Free & Pro)',
+  description: 'Find the perfect design tool. Compare 175+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
 };
 
 export default function Home() {
@@ -33,7 +32,7 @@ export default function Home() {
             Compare and Find Your <span className="text-blue-400">Perfect CAD</span> Software.
           </h1>
           <p className="text-lg sm:text-xl text-blue-100/70 mb-14 max-w-2xl mx-auto leading-relaxed">
-            Independent reviews, transparent pricing, and deep technical specs for 80+ professional CAD & BIM software.
+            Independent reviews, transparent pricing, and deep technical specs for 175+ professional CAD & BIM software.
           </p>
           
           {/* Advanced Search Mockup */}
@@ -53,7 +52,7 @@ export default function Home() {
               <Link href="/matchmaker">Try Smart Matchmaker</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-blue-400/50 text-white hover:bg-white/10 font-bold h-14 rounded-xl">
-              <Link href="/tools">Browse 80+ Tools</Link>
+              <Link href="/tools">Browse 175+ Tools</Link>
             </Button>
           </div>
         </div>
@@ -169,7 +168,7 @@ export default function Home() {
           <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don't accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
-              <div className="text-blue-600 text-5xl font-black mb-2">80+</div>
+              <div className="text-blue-600 text-5xl font-black mb-2">175+</div>
               <div className="text-slate-900 font-black uppercase tracking-widest text-xs">Tools Indexed</div>
             </div>
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
