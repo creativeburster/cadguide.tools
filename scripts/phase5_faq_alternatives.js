@@ -500,11 +500,20 @@ let faqPatched = 0;
 let altPatched = 0;
 
 for (const t of toolEntries) {
-  // FAQ
+  // FAQ — replace genericFaqs(...) calls AND fill empty FAQ arrays.
   const faqsProp = toolPropertyOf(t.node, 'faqs');
-  if (faqsProp && faqsProp.value && faqsProp.value.type === 'CallExpression') {
-    const callee = faqsProp.value.callee;
-    if (callee && callee.type === 'Identifier' && callee.name === 'genericFaqs') {
+  if (faqsProp && faqsProp.value) {
+    if (faqsProp.value.type === 'CallExpression') {
+      const callee = faqsProp.value.callee;
+      if (callee && callee.type === 'Identifier' && callee.name === 'genericFaqs') {
+        const faqs = buildFaqs(t);
+        faqsProp.value = faqObjectsAst(faqs);
+        faqPatched++;
+      }
+    } else if (
+      faqsProp.value.type === 'ArrayExpression' &&
+      faqsProp.value.elements.length === 0
+    ) {
       const faqs = buildFaqs(t);
       faqsProp.value = faqObjectsAst(faqs);
       faqPatched++;

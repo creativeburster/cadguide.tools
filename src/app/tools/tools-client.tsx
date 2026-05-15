@@ -154,7 +154,7 @@ function ToolsList() {
           <Separator className="bg-slate-100" />
 
           <FilterSection title="Pricing Model">
-            {['Free', 'Freemium', 'Subscription', 'Perpetual'].map(type => (
+            {['Free', 'Open Source', 'Freemium', 'Subscription', 'Perpetual'].map(type => (
               <div key={type} className="flex items-center group">
                 <Checkbox 
                   id={`price-${type}`} 
