@@ -1,7 +1,10 @@
 import { ImageResponse } from 'next/og';
 
-export const dynamic = 'force-static';
-export const runtime = 'edge';
+// `opengraph-image` route handlers are statically optimized by default —
+// see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#good-to-know.
+// The previous combination of `dynamic = 'force-static'` + `runtime = 'edge'`
+// was logged at build time as "currently incompatible". Removing both leaves
+// the default static optimization in place and silences that warning.
 
 export const alt = 'CADTools.cc - The Ultimate CAD Software Directory';
 export const size = {
