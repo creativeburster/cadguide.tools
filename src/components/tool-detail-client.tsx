@@ -311,12 +311,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
             {/* Sub-nav (Horizontal Sticky) */}
             <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md overflow-x-auto">
-              <nav className="w-full flex items-center gap-2 lg:gap-4 bg-white border border-slate-100 rounded-[20px] p-1.5 shadow-xl shadow-slate-200/20 whitespace-nowrap">
+              <nav className="max-w-full w-full flex items-center gap-0.5 lg:gap-1.5 bg-white border border-slate-100 rounded-[20px] p-0.5 shadow-xl shadow-slate-200/20 whitespace-nowrap">
                 {menuItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => scrollTo(item.id)}
-                    className={`px-3 py-2 rounded-[14px] text-[10px] lg:text-xs font-black uppercase tracking-widest transition-all shrink-0 ${
+                    className={`px-1.5 py-1 rounded-[12px] text-[9px] lg:text-[11px] font-black uppercase tracking-widest transition-all shrink-0 ${
                       activeSection === item.id
                         ? "bg-blue-600 text-white shadow-lg shadow-blue-200"
                         : "text-slate-400 hover:text-slate-900"
