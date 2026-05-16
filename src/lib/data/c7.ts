@@ -1108,6 +1108,7 @@ export const c7Tools: Tool[] = [
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is 3ds Max used for?",
@@ -1143,6 +1144,14 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Professional choice for the industry.",
+
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 39,
+    url: "https://www.trustradius.com/products/autodesk-3ds-max/reviews"
+  }]
 },
 {
   id: "ext-zbrush",
@@ -1513,6 +1522,7 @@ export const c7Tools: Tool[] = [
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Lumion used for?",
@@ -1548,6 +1558,14 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Professional choice for the industry.",
+
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.7,
+    max: 5,
+    count: 155,
+    url: "https://www.softwareadvice.com/architecture/lumion-profile/"
+  }]
 },
 {
   id: "ext-enscape",
@@ -1652,6 +1670,7 @@ export const c7Tools: Tool[] = [
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Enscape used for?",
@@ -1687,6 +1706,14 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Professional choice for the industry.",
+
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.4,
+    max: 5,
+    count: 68,
+    url: "https://www.softwareadvice.com/architectural-cad/enscape-profile/"
+  }]
 },
 {
   id: "ext-twinmotion",
@@ -1877,6 +1904,7 @@ export const c7Tools: Tool[] = [
   },
 
   "expert_verdict": "The slicer 70% of FDM printers in the world rely on. Free, fast, and good enough for nearly everything.",
+
   faqs: [{
     q: 'What is UltiMaker Cura used for?',
     a: 'Free, open-source slicer — the most-used FDM 3D printing prep tool in the world. UltiMaker Cura is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing.',
@@ -1896,8 +1924,23 @@ export const c7Tools: Tool[] = [
     q: 'What are the best alternatives to UltiMaker Cura?',
     a: 'The closest alternatives within the Specialized space are Bambu Studio, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
   }],
+
   alternatives: ['bambu-studio', 'prusaslicer', 'd5-render'],
   detailed_features: [],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 51,
+    url: "https://www.g2.com/products/ultimaker-cura/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 36,
+    url: "https://www.capterra.com/reviews/ultimaker-cura"
+  }]
 },
 {
   id: "t214",

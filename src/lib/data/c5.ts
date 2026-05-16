@@ -2849,8 +2849,17 @@ export const c5Tools: Tool[] = [
     q: 'What are the best alternatives to ANSYS Fluent?',
     a: 'The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, ANSYS Workbench. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
   }],
+
   alternatives: ['solidcam', 'altair-hyperworks', 'ansys-workbench'],
   detailed_features: [],
+
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 8.9,
+    max: 10,
+    count: 8,
+    url: "https://www.trustradius.com/products/ansys-fluent/reviews"
+  }]
 },
 {
   id: "t186",
@@ -3110,6 +3119,7 @@ export const c5Tools: Tool[] = [
   },
 
   "expert_verdict": "The go-to FEA tool when you need to couple unusual physics — RF + thermal + structural in one shot.",
+
   faqs: [{
     q: 'What is COMSOL Multiphysics used for?',
     a: 'Coupled multi-physics finite element simulation across electromagnetics, structures, fluids, and chemistry. COMSOL Multiphysics is a CAE / CAM solution widely adopted in Electronics, Energy, Research.',
@@ -3129,8 +3139,17 @@ export const c5Tools: Tool[] = [
     q: 'What are the best alternatives to COMSOL Multiphysics?',
     a: 'The closest alternatives within the CAE/CAM space are CSI ETABS, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
   }],
+
   alternatives: ['etabs', 'sap2000', 'femap'],
   detailed_features: [],
+
+  external_ratings: [{
+    source: "GetApp",
+    score: 4.6,
+    max: 5,
+    count: 35,
+    url: "https://www.getapp.com/it-management-software/a/comsol-multiphysics/"
+  }]
 },
 {
   id: "t190",

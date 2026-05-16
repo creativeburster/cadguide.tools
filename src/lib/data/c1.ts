@@ -279,6 +279,7 @@ export const c1Tools: Tool[] = [
   name: "ZWCAD",
   slug: "zwcad",
   logo_url: getLogo("ZW"),
+
   short_desc:
     "The most cost-effective and compatible alternative to AutoCAD.",
 
@@ -333,21 +334,26 @@ export const c1Tools: Tool[] = [
   starting_price: 899,
   platforms: ["Windows", "Linux"],
   industries: ["Architecture", "Engineering", "Interior Design"],
+
   core_features: [
     "Smart Mouse / Smart Voice",
     "High DWG Compatibility",
     "LISP Support",
   ],
+
   user_scales: ["Small Business", "Mid-Market"],
   official_url: "https://www.zwsoft.com/zwcad",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Familiar to AutoCAD users",
     "Fast for large drawings",
     "Perpetual license option",
   ],
+
   cons: ["Basic 3D", "Cloud evolving", "Smaller plugin ecosystem"],
+
   faqs: [
     {
       q: "What is ZWCAD used for?",
@@ -409,6 +415,14 @@ export const c1Tools: Tool[] = [
     "Smart Plotting & Annotations",
     "Multi-platform (Desktop & Mobile)",
   ],
+
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.5,
+    max: 5,
+    count: 17,
+    url: "https://www.softwareadvice.com/architectural-cad/zwcad-profile/"
+  }]
 },
 {
   id: "t13",
@@ -470,16 +484,19 @@ export const c1Tools: Tool[] = [
   official_url: "https://www.bricsys.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Unified DWG platform",
     "Excellent AI implementation",
     "AutoCAD plugin support",
   ],
+
   cons: [
     "Lacks brand recognition",
     "Tier-locked BIM",
     "Direct Modeling curve",
   ],
+
   faqs: [
     {
       q: "What is BricsCAD used for?",
@@ -541,6 +558,20 @@ export const c1Tools: Tool[] = [
     "Civil/Survey design tools",
     "Point Cloud viewing & modeling",
   ],
+
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 18,
+    url: "https://www.capterra.com/p/159378/BricsCAD/"
+  }, {
+    source: "TrustRadius",
+    score: 9.9,
+    max: 10,
+    count: 11,
+    url: "https://www.trustradius.com/products/bricscad/reviews"
+  }]
 },
 {
   id: "t21",
@@ -694,8 +725,10 @@ export const c1Tools: Tool[] = [
   slug: "draftsight",
   logo_url: getLogo("DS"),
   short_desc: "Professional-grade 2D CAD solution from Dassault Systèmes.",
+
   description:
     "DraftSight is the go-to AutoCAD alternative for firms using SolidWorks. It offers a familiar interface and full DWG compatibility.",
+
   pricing_tiers: [
     {
       name: "Professional",
@@ -731,6 +764,7 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Productivity",
@@ -777,6 +811,7 @@ export const c1Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["autocad", "bricscad", "nanocad"],
   country: "France",
   category_id: "c1",
@@ -784,6 +819,7 @@ export const c1Tools: Tool[] = [
   starting_price: 249,
   platforms: ["Windows", "macOS"],
   industries: ["Manufacturing", "Engineering", "AEC"],
+
   core_features: [
     "2D/3D Drafting",
     "LISP Support",
@@ -791,16 +827,20 @@ export const c1Tools: Tool[] = [
     "Toolbox Utilities",
     "DGN Support",
   ],
+
   user_scales: ["Small Business", "Mid-Market"],
   official_url: "https://www.draftsight.com",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Cheaper than AutoCAD",
     "SolidWorks PDM integration",
     "Professional support",
   ],
+
   cons: ["No longer free", "Interface generic", "Lacks AutoCAD automation"],
+
   faqs: [
     {
       q: "What is DraftSight used for?",
@@ -827,14 +867,24 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "ARES",
     multicore: "Low",
     gpu_optimization: "Basic",
     standards: ["DWG", "DXF", "PDF"],
   },
+
   expert_verdict:
     "The most 'professional' AutoCAD clone. Perfect companion for SolidWorks users.",
+
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 57,
+    url: "https://www.capterra.com/p/138330/DraftSight/"
+  }]
 },
 {
   id: "t43",
@@ -1747,16 +1797,19 @@ export const c1Tools: Tool[] = [
   official_url: "https://www.graebert.com/cad-software/ares-commander/",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Only CAD with Desktop+Mobile+Cloud sync",
     "Linux support",
     "Reasonable pricing",
   ],
+
   cons: [
     "Smaller plugin ecosystem",
     "Less known than BricsCAD",
     "Cloud features require subscription",
   ],
+
   faqs: [
     {
       q: "What is ARES Commander used for?",
@@ -1816,6 +1869,14 @@ export const c1Tools: Tool[] = [
       ],
     },
   ],
+
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 20,
+    url: "https://www.capterra.com/p/164140/ARES-Commander/"
+  }]
 },
 {
   id: "t100",

@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "description": "Hand-researched external_ratings for ~20 popular tools. Sources are the exact strings from Tool.external_ratings.source union: G2 | Capterra | TrustRadius | Gartner Peer Insights | Software Advice | GetApp. Score uses each platform's own scale (G2/Capterra/SoftwareAdvice/GetApp: 0-5, TrustRadius: 0-10).",
+    "research_date": "2026-05-15",
+    "method": "web_search snippets parsed manually; data points where the rating + review count were both surfaced in the result snippet from one of the canonical review sites"
+  },
+  "bricscad": [
+    { "source": "Capterra", "score": 4.5, "max": 5, "count": 18, "url": "https://www.capterra.com/p/159378/BricsCAD/" },
+    { "source": "TrustRadius", "score": 9.9, "max": 10, "count": 11, "url": "https://www.trustradius.com/products/bricscad/reviews" }
+  ],
+  "draftsight": [
+    { "source": "Capterra", "score": 4.4, "max": 5, "count": 57, "url": "https://www.capterra.com/p/138330/DraftSight/" }
+  ],
+  "ares-commander": [
+    { "source": "Capterra", "score": 4.9, "max": 5, "count": 20, "url": "https://www.capterra.com/p/164140/ARES-Commander/" }
+  ],
+  "zwcad": [
+    { "source": "Software Advice", "score": 4.5, "max": 5, "count": 17, "url": "https://www.softwareadvice.com/architectural-cad/zwcad-profile/" }
+  ],
+  "maya": [
+    { "source": "G2", "score": 4.3, "max": 5, "count": 265, "url": "https://www.g2.com/products/maya/reviews" },
+    { "source": "Capterra", "score": 4.4, "max": 5, "count": 8, "url": "https://www.capterra.com/reviews/maya" }
+  ],
+  "solid-edge": [
+    { "source": "TrustRadius", "score": 7.9, "max": 10, "count": 55, "url": "https://www.trustradius.com/products/siemens-solid-edge/reviews" }
+  ],
+  "shapr3d": [
+    { "source": "Capterra", "score": 4.6, "max": 5, "count": 22, "url": "https://www.capterra.com/p/184498/Shapr3D/" }
+  ],
+  "tekla-structures": [
+    { "source": "Capterra", "score": 4.4, "max": 5, "count": 37, "url": "https://www.capterra.com/p/92964/Tekla-Structures/" }
+  ],
+  "civil-3d": [
+    { "source": "TrustRadius", "score": 9.3, "max": 10, "count": 35, "url": "https://www.trustradius.com/products/autodesk-civil-3d/reviews" }
+  ],
+  "vectorworks": [
+    { "source": "G2", "score": 4.4, "max": 5, "count": 278, "url": "https://www.g2.com/sellers/vectorworks-inc" }
+  ],
+  "chief-architect": [
+    { "source": "Software Advice", "score": 4.4, "max": 5, "count": 67, "url": "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/" },
+    { "source": "GetApp", "score": 4.4, "max": 5, "count": 68, "url": "https://www.getapp.com/construction-software/a/chief-architect/" }
+  ],
+  "bluebeam-revu": [
+    { "source": "GetApp", "score": 4.7, "max": 5, "count": 975, "url": "https://www.getapp.com/collaboration-software/a/bluebeam-pdf-revu/" }
+  ],
+  "navisworks": [
+    { "source": "TrustRadius", "score": 9.3, "max": 10, "count": 43, "url": "https://www.trustradius.com/products/navisworks/reviews" }
+  ],
+  "ansys-fluent": [
+    { "source": "TrustRadius", "score": 8.9, "max": 10, "count": 8, "url": "https://www.trustradius.com/products/ansys-fluent/reviews" }
+  ],
+  "comsol-multiphysics": [
+    { "source": "GetApp", "score": 4.6, "max": 5, "count": 35, "url": "https://www.getapp.com/it-management-software/a/comsol-multiphysics/" }
+  ],
+  "altium-365": [
+    { "source": "TrustRadius", "score": 8.5, "max": 10, "count": 30, "url": "https://www.trustradius.com/products/altium-365/reviews" }
+  ],
+  "ultimaker-cura": [
+    { "source": "G2", "score": 4.7, "max": 5, "count": 51, "url": "https://www.g2.com/products/ultimaker-cura/reviews" },
+    { "source": "Capterra", "score": 4.7, "max": 5, "count": 36, "url": "https://www.capterra.com/reviews/ultimaker-cura" }
+  ],
+  "3ds-max": [
+    { "source": "TrustRadius", "score": 8.8, "max": 10, "count": 39, "url": "https://www.trustradius.com/products/autodesk-3ds-max/reviews" }
+  ],
+  "lumion": [
+    { "source": "Software Advice", "score": 4.7, "max": 5, "count": 155, "url": "https://www.softwareadvice.com/architecture/lumion-profile/" }
+  ],
+  "enscape": [
+    { "source": "Software Advice", "score": 4.4, "max": 5, "count": 68, "url": "https://www.softwareadvice.com/architectural-cad/enscape-profile/" }
+  ]
+}
