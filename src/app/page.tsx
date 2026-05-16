@@ -5,14 +5,29 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Metadata } from 'next';
 import { ToolLogo } from '@/components/tool-logo';
+import { pageMetadata, websiteLd } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'CADTools.cc: Compare 75+ Best CAD Software 2026 (Free & Pro)',
-  description: 'Find the perfect design tool. Compare 75+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
-  keywords: ['best CAD software 2026', 'CAD comparison directory', 'AutoCAD alternatives', 'BIM software review', 'specialized CAD tools', 'free 2D CAD'],
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'CADTools.cc: Compare 175+ Best CAD Software 2026 (Free & Pro)',
+  description:
+    'Find the perfect design tool. Compare 175+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
+  path: '/',
+});
 
 export default function Home() {
+  const ld = websiteLd();
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+      />
+      <HomeBody />
+    </>
+  );
+}
+
+function HomeBody() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section - Deep ocean blue */}
@@ -33,7 +48,7 @@ export default function Home() {
             Compare and Find Your <span className="text-blue-400">Perfect CAD</span> Software.
           </h1>
           <p className="text-lg sm:text-xl text-blue-100/70 mb-14 max-w-2xl mx-auto leading-relaxed">
-            Independent reviews, transparent pricing, and deep technical specs for 80+ professional CAD & BIM software.
+            Independent reviews, transparent pricing, and deep technical specs for 175+ professional CAD & BIM software.
           </p>
           
           {/* Advanced Search Mockup */}
@@ -53,7 +68,7 @@ export default function Home() {
               <Link href="/matchmaker">Try Smart Matchmaker</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-blue-400/50 text-white hover:bg-white/10 font-bold h-14 rounded-xl">
-              <Link href="/tools">Browse 80+ Tools</Link>
+              <Link href="/tools">Browse 175+ Tools</Link>
             </Button>
           </div>
         </div>
@@ -77,7 +92,8 @@ export default function Home() {
               <div className="p-8">
                 <div className="flex items-center gap-5 mb-6">
                   <ToolLogo 
-                    src={tool.logo_url} 
+                    slug={tool.slug} src={tool.logo_url} 
+                    websiteUrl={tool.official_url}
                     name={tool.name} 
                     className="w-16 h-16 border border-slate-100 rounded-2xl shrink-0 shadow-sm" 
                   />
@@ -123,7 +139,8 @@ export default function Home() {
             {tools.filter(t => t.category_id === 'c3').slice(0, 4).map((tool) => (
               <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white p-6 rounded-[32px] border border-transparent hover:border-blue-100 hover:shadow-2xl transition-all">
                 <ToolLogo 
-                  src={tool.logo_url} 
+                  slug={tool.slug} src={tool.logo_url} 
+                  websiteUrl={tool.official_url}
                   name={tool.name} 
                   className="aspect-square rounded-2xl mb-6 transition-all border border-slate-50 shadow-sm group-hover:scale-105" 
                 />
@@ -147,7 +164,8 @@ export default function Home() {
             {tools.filter(t => t.category_id === 'c7').slice(0, 12).map((tool) => (
               <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:bg-white/10 hover:border-blue-400/50 transition-all text-center">
                 <ToolLogo 
-                  src={tool.logo_url} 
+                  slug={tool.slug} src={tool.logo_url} 
+                  websiteUrl={tool.official_url}
                   name={tool.name} 
                   className="w-16 h-16 mx-auto rounded-xl mb-4 transition-all bg-white shadow-lg group-hover:scale-110" 
                 />
@@ -166,7 +184,7 @@ export default function Home() {
           <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don't accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
-              <div className="text-blue-600 text-5xl font-black mb-2">80+</div>
+              <div className="text-blue-600 text-5xl font-black mb-2">175+</div>
               <div className="text-slate-900 font-black uppercase tracking-widest text-xs">Tools Indexed</div>
             </div>
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">

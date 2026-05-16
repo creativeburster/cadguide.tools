@@ -1,7 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Contact CADTools.cc',
+  description:
+    'Get in touch with the CADTools.cc team for partnerships, software submissions, listing corrections, press inquiries, or general feedback.',
+  path: '/contact',
+});
 
 export default function ContactPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'Contact', path: '/contact' },
+  ]);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <ContactBody />
+    </>
+  );
+}
+
+function ContactBody() {
   return (
     <main className="min-h-screen bg-slate-50 py-24">
       <div className="max-w-[1000px] mx-auto px-6 md:px-12">

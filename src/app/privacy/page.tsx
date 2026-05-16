@@ -1,4 +1,30 @@
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Privacy Policy',
+  description:
+    'How CADTools.cc collects, uses, and protects your information. GDPR and CCPA compliant. No data sold to third parties.',
+  path: '/privacy',
+});
+
 export default function PrivacyPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'Privacy', path: '/privacy' },
+  ]);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <PrivacyBody />
+    </>
+  );
+}
+
+function PrivacyBody() {
   return (
     <main className="min-h-screen bg-slate-50 py-20">
       <div className="max-w-[1000px] mx-auto px-6 md:px-12">

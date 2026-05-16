@@ -1,12 +1,30 @@
 import { tools, categories } from '@/lib/data';
 import Link from 'next/link';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import type { Metadata } from 'next';
 
-export default function SitemapPage() {
+export const metadata: Metadata = pageMetadata({
+  title: 'All CAD Tools — Complete Software Index',
+  description:
+    'A-Z index of all 175+ CAD, BIM, CAE/CAM, EDA, and viewer tools listed on CADTools.cc. Browse by category or jump directly to any product page.',
+  path: '/all-tools',
+});
+
+export default function AllToolsPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'All Tools', path: '/all-tools' },
+  ]);
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
     <main className="min-h-screen bg-slate-50 py-20">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Site Sitemap</h1>
-        <p className="text-slate-600 mb-12 text-lg">A comprehensive overview of all pages on CADTools.cc. This sitemap is updated automatically.</p>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">All CAD Tools</h1>
+        <p className="text-slate-600 mb-12 text-lg">A complete A-Z index of every tool on CADTools.cc — {tools.length} products, organised by category. For the XML sitemap (machine-readable), see <Link href="/sitemap.xml" className="text-blue-600 hover:underline">/sitemap.xml</Link>.</p>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Main Pages */}
@@ -62,5 +80,6 @@ export default function SitemapPage() {
         </section>
       </div>
     </main>
+    </>
   );
 }

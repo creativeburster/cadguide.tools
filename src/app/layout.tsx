@@ -10,10 +10,10 @@ import { PWARegistration } from "@/components/pwa-registration";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CADTools.cc | Compare 80+ CAD & BIM Software (ASM vs Parasolid)",
-  description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, and pricing for 80+ professional 2D/3D design tools.",
+  title: "CADTools.cc | Compare 175+ CAD & BIM Software (ASM vs Parasolid)",
+  description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, and pricing for 175+ professional 2D/3D design tools.",
   metadataBase: new URL('https://cadtools.cc'),
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#020617" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>

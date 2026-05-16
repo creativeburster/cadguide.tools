@@ -11,7 +11,7 @@ export function Footer() {
               <span className="text-blue-500">CAD</span>Tools.cc
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
-              The world's premier independent directory for CAD, BIM, and Engineering software. Deep-diving into 80+ tools to help professionals make smarter tech decisions.
+              The world's premier independent directory for CAD, BIM, and Engineering software. Deep-diving into 175+ tools to help professionals make smarter tech decisions.
             </p>
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
@@ -51,7 +51,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">Our Methodology</Link></li>
               <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support Desk</Link></li>
               <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy & Terms</Link></li>
-              <li><Link href="/sitemap" className="hover:text-blue-400 transition-colors">XML Sitemap</Link></li>
+              <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
             </ul>
           </div>
         </div>
