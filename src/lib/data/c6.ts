@@ -1122,7 +1122,7 @@ export const c6Tools: Tool[] = [
   industries: [],
   core_features: [],
   user_scales: [],
-  official_url: "https://ibf-it.com/",
+  official_url: "https://ibfriedrich.com/",
   affiliate_url: null,
   score: 0,
   pros: [],

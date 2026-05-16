@@ -534,8 +534,7 @@ export const c7Tools: Tool[] = [
   id: "t75",
   name: "Shoemaster",
   slug: "shoemaster",
-  logo_url:
-    "https://www.shoemaster.co.uk/wp-content/themes/shoemaster/images/logo.png",
+  logo_url: getLogo("SM"),
   short_desc: "Leading CAD/CAM for the global footwear industry.",
   description:
     "Shoemaster is a world-leading CAD/CAM system providing 2D and 3D solutions for the footwear industry, from initial design to manufacturing.",
@@ -552,7 +551,7 @@ export const c7Tools: Tool[] = [
     "Virtual Sampling",
   ],
   user_scales: ["Large Manufacturers", "Design Studios"],
-  official_url: "https://www.shoemaster.co.uk",
+  official_url: "https://atom-shoemaster.com/",
   affiliate_url: null,
   score: 4.7,
   pros: [
