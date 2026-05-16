@@ -17,6 +17,13 @@ function ToolsList() {
   const initialQuery = searchParams.get('q') || '';
 
   const [searchQuery, setSearchQuery] = useState(initialQuery);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setCurrentPage(1);
+  };
   const [filters, setFilters] = useState({
     pricing: [] as string[],
     os: [] as string[],
@@ -29,15 +36,17 @@ function ToolsList() {
 
   const toggleFilter = (type: keyof typeof filters, value: string) => {
     if (type === 'minRating') return; // Handled separately
+    setCurrentPage(1);
     setFilters(prev => ({
       ...prev,
-      [type]: (prev[type] as string[]).includes(value) 
-        ? (prev[type] as string[]).filter(v => v !== value) 
+      [type]: (prev[type] as string[]).includes(value)
+        ? (prev[type] as string[]).filter(v => v !== value)
         : [...(prev[type] as string[]), value]
     }));
   };
 
   const setRating = (rating: number) => {
+    setCurrentPage(1);
     setFilters(prev => ({ ...prev, minRating: prev.minRating === rating ? 0 : rating }));
   };
 
@@ -49,8 +58,8 @@ function ToolsList() {
   const filteredTools = useMemo(() => {
     return tools.filter(tool => {
       const query = searchQuery.toLowerCase();
-      const matchQuery = !query || 
-        tool.name.toLowerCase().includes(query) || 
+      const matchQuery = !query ||
+        tool.name.toLowerCase().includes(query) ||
         tool.short_desc.toLowerCase().includes(query) ||
         tool.industries.some(i => i.toLowerCase().includes(query));
 
@@ -61,10 +70,18 @@ function ToolsList() {
       const matchUserScale = filters.userScale.length === 0 || tool.user_scales.some(s => filters.userScale.includes(s));
       const matchKernel = filters.kernel.length === 0 || (tool.tech_specs?.engine && filters.kernel.includes(tool.tech_specs.engine));
       const matchRating = tool.score >= filters.minRating;
-      
+
       return matchQuery && matchPricing && matchOS && matchIndustry && matchCategory && matchUserScale && matchKernel && matchRating;
     });
   }, [searchQuery, filters]);
+
+  const totalPages = Math.ceil(filteredTools.length / itemsPerPage);
+  const paginatedTools = filteredTools.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const FilterSection = ({ title, children }: { title: string, children: React.ReactNode }) => (
     <div className="px-2">
@@ -86,10 +103,10 @@ function ToolsList() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-blue-600/20 transition-colors"></div>
           <h3 className="font-bold mb-4 uppercase text-[10px] tracking-widest text-blue-400 relative z-10">Smart Search</h3>
           <div className="relative z-10">
-            <Input 
-              placeholder="Find a specific tool..." 
+            <Input
+              placeholder="Find a specific tool..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSearchChange(e.target.value)}
               className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600"
             />
             <div className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500">
@@ -236,12 +253,13 @@ function ToolsList() {
             </div>
           </div>
           {(Object.values(filters).some(f => Array.isArray(f) ? f.length > 0 : f > 0) || searchQuery) && (
-            <Button 
-              variant="ghost" 
-              size="sm" 
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={() => {
+                setCurrentPage(1);
                 setFilters({ pricing: [], os: [], industry: [], category: [], userScale: [], kernel: [], minRating: 0 });
-                setSearchQuery('');
+                handleSearchChange('');
               }}
               className="text-slate-400 hover:text-red-600 font-bold text-[10px] uppercase tracking-widest gap-2 hover:bg-red-50 px-4 rounded-xl"
             >
@@ -252,7 +270,7 @@ function ToolsList() {
         </div>
 
         <div className="grid gap-6">
-          {filteredTools.map(tool => (
+          {paginatedTools.map(tool => (
             <Card key={tool.id} className="p-6 hover:shadow-2xl transition-all duration-500 border-slate-100 rounded-[40px] group relative overflow-hidden bg-white hover:-translate-y-1">
               <div className="absolute top-0 left-0 w-1.5 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
               
@@ -361,16 +379,72 @@ function ToolsList() {
               </div>
               <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">Zero Matches Found</h2>
               <p className="text-slate-500 font-medium mb-10 max-w-md mx-auto leading-relaxed">We couldn't find any tools matching your specific combination of filters. Try broadening your criteria.</p>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="rounded-[20px] font-black px-10 h-14 text-xs uppercase tracking-widest border-slate-200 hover:bg-white"
                 onClick={() => {
+                  setCurrentPage(1);
                   setFilters({ pricing: [], os: [], industry: [], category: [], userScale: [], kernel: [], minRating: 0 });
-                  setSearchQuery('');
+                  handleSearchChange('');
                 }}
               >
                 Clear All Filter Criteria
               </Button>
+            </div>
+          )}
+
+          {totalPages > 1 && (
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-8 border-t border-slate-100">
+              <div className="text-sm font-bold text-slate-600">
+                Showing {((currentPage - 1) * itemsPerPage) + 1} to {Math.min(currentPage * itemsPerPage, filteredTools.length)} of {filteredTools.length} tools
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="rounded-xl border-slate-200 hover:bg-slate-50 font-black text-xs uppercase tracking-widest px-4 h-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Previous
+                </Button>
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
+                    let pageNum;
+                    if (totalPages <= 5) {
+                      pageNum = i + 1;
+                    } else if (currentPage <= 3) {
+                      pageNum = i + 1;
+                    } else if (currentPage >= totalPages - 2) {
+                      pageNum = totalPages - 4 + i;
+                    } else {
+                      pageNum = currentPage - 2 + i;
+                    }
+                    return (
+                      <button
+                        key={pageNum}
+                        onClick={() => handlePageChange(pageNum)}
+                        className={`w-10 h-10 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${
+                          currentPage === pageNum
+                            ? 'bg-blue-600 text-white shadow-lg shadow-blue-200'
+                            : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    );
+                  })}
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="rounded-xl border-slate-200 hover:bg-slate-50 font-black text-xs uppercase tracking-widest px-4 h-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Next
+                </Button>
+              </div>
             </div>
           )}
         </div>
