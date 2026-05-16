@@ -156,7 +156,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     <div className="bg-[#fcfdfe] min-h-screen pb-20">
       {/* Top Header - Standardized Width */}
       <div className="bg-white border-b py-6">
-        <div className="max-w-[1360px] mx-auto px-4">
+        <div className="w-full max-w-[1360px] mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex items-center text-sm font-bold text-slate-400">
               <Link href="/" className="hover:text-blue-600 transition-colors">
@@ -176,7 +176,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
         </div>
       </div>
 
-      <div className="max-w-[1360px] mx-auto px-4 py-12">
+      <div className="w-full max-w-[1360px] mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Main Content Area (Two Column Layout) */}
           <main className="flex-1 space-y-20 min-w-0">
@@ -185,7 +185,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               id="overview"
               className="bg-white rounded-[48px] p-8 md:p-14 border border-slate-100 shadow-sm relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+              <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-blue-600/5 rounded-full blur-[120px] -mr-24 -mt-24 md:-mr-48 md:-mt-48 hidden sm:block"></div>
 
               <div className="relative z-10">
                 <div className="flex flex-col md:flex-row items-start gap-10 mb-12">
@@ -310,8 +310,8 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
             </section>
 
             {/* Sub-nav (Horizontal Sticky) */}
-            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md overflow-x-auto">
-              <nav className="max-w-full w-full flex items-center gap-0.5 lg:gap-1.5 bg-white border border-slate-100 rounded-[20px] p-0.5 shadow-xl shadow-slate-200/20 whitespace-nowrap">
+            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md">
+              <nav className="max-w-full w-full flex items-center gap-0.5 lg:gap-1.5 bg-white border border-slate-100 rounded-[20px] p-0.5 shadow-xl shadow-slate-200/20 overflow-x-auto whitespace-nowrap">
                 {menuItems.map((item) => (
                   <button
                     key={item.id}
@@ -829,8 +829,8 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
 
               {/* Verdict Highlight */}
-              <div className="bg-slate-900 text-white rounded-[56px] p-16 relative overflow-hidden shadow-2xl">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -mr-[250px] -mt-[250px]"></div>
+              <div className="bg-slate-900 text-white rounded-[56px] p-8 md:p-16 relative overflow-hidden shadow-2xl">
+                <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-600/10 rounded-full blur-[120px] -mr-[150px] -mt-[150px] md:-mr-[250px] md:-mt-[250px] hidden sm:block"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-5 mb-12">
                     <div className="w-16 h-16 bg-blue-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/30">
