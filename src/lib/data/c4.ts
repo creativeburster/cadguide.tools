@@ -10,8 +10,10 @@ export const c4Tools: Tool[] = [
   slug: "bluebeam-revu",
   logo_url: getLogo("BB"),
   short_desc: "The AEC standard for PDF markup and collaboration.",
+
   description:
     "Bluebeam Revu is a project efficiency and collaboration solution that allows users to markup, takeoff, and organize PDF files.",
+
   pricing_tiers: [
     {
       name: "Basics",
@@ -54,6 +56,7 @@ export const c4Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Collaboration",
@@ -100,6 +103,7 @@ export const c4Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["navisworks", "solibri", "recap-pro"],
   country: "USA",
   category_id: "c4",
@@ -107,6 +111,7 @@ export const c4Tools: Tool[] = [
   starting_price: 240,
   platforms: ["Windows"],
   industries: ["AEC", "Construction", "Estimating"],
+
   core_features: [
     "AEC Collaboration",
     "Studio Sessions",
@@ -114,20 +119,24 @@ export const c4Tools: Tool[] = [
     "Quantity Takeoff",
     "Document Management",
   ],
+
   user_scales: ["Enterprise", "Mid-Market"],
   official_url: "https://www.bluebeam.com",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Essential construction project hub",
     "Best PDF markup",
     "Estimating integration",
   ],
+
   cons: [
     "No longer free trial version",
     "Subscription shift",
     "Learning curve",
   ],
+
   faqs: [
     {
       q: "What is Bluebeam Revu used for?",
@@ -154,14 +163,24 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are Navisworks, Solibri, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Bluebeam Rendering",
     multicore: "High",
     gpu_optimization: "Hardware Acceleration",
     standards: ["PDF", "IFC"],
   },
+
   expert_verdict:
     "You cannot run a modern construction project without Bluebeam.",
+
+  external_ratings: [{
+    source: "GetApp",
+    score: 4.7,
+    max: 5,
+    count: 975,
+    url: "https://www.getapp.com/collaboration-software/a/bluebeam-pdf-revu/"
+  }]
 },
 {
   id: "t35",
@@ -169,8 +188,10 @@ export const c4Tools: Tool[] = [
   slug: "navisworks",
   logo_url: getLogo("NV"),
   short_desc: "Project review software for clash detection.",
+
   description:
     "Navisworks allows architecture, engineering, and construction professionals to holistically review integrated models and data with stakeholders to better control project outcomes.",
+
   pricing_tiers: [
     {
       name: "Manage (Annual)",
@@ -201,6 +222,7 @@ export const c4Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Coordination",
@@ -247,6 +269,7 @@ export const c4Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["solibri", "bluebeam-revu", "recap-pro"],
   country: "USA",
   category_id: "c4",
@@ -254,6 +277,7 @@ export const c4Tools: Tool[] = [
   starting_price: 1050,
   platforms: ["Windows"],
   industries: ["Construction", "AEC", "Oil & Gas"],
+
   core_features: [
     "BIM Coordination",
     "Clash Detection",
@@ -261,16 +285,20 @@ export const c4Tools: Tool[] = [
     "Model Aggregation",
     "Cloud Collaboration",
   ],
+
   user_scales: ["Enterprise", "Mid-Market"],
   official_url: "https://www.autodesk.com/navisworks",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Massive model handling",
     "BIM coordination standard",
     "Powerful reports",
   ],
+
   cons: ["Dated UI", "Steep learning", "Expensive viewer"],
+
   faqs: [
     {
       q: "What is Navisworks used for?",
@@ -297,14 +325,24 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are Solibri, Bluebeam Revu, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Autodesk Navisworks",
     multicore: "Moderate",
     gpu_optimization: "High",
     standards: ["NWD", "NWC", "IFC"],
   },
+
   expert_verdict:
     "Navisworks is where Virtual Design and Construction happens.",
+
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 9.3,
+    max: 10,
+    count: 43,
+    url: "https://www.trustradius.com/products/navisworks/reviews"
+  }]
 },
 {
   id: "t36",

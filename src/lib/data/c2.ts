@@ -1784,10 +1784,13 @@ export const c2Tools: Tool[] = [
   name: "Solid Edge",
   slug: "solid-edge",
   logo_url: getLogo("SE"),
+
   short_desc:
     "Professional 3D CAD with industry-leading Synchronous Technology.",
+
   description:
     "Solid Edge features Synchronous Technology for rapid direct and history-based modeling.",
+
   pricing_tiers: [
     {
       name: "Classic (Annual)",
@@ -1818,6 +1821,7 @@ export const c2Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Core Modeling",
@@ -1864,6 +1868,7 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["solidworks", "autodesk-inventor", "fusion-360"],
   country: "USA",
   category_id: "c2",
@@ -1871,6 +1876,7 @@ export const c2Tools: Tool[] = [
   starting_price: 1200,
   platforms: ["Windows"],
   industries: ["Mechanical", "Industrial Design"],
+
   core_features: [
     "Synchronous Technology",
     "Large Assembly Mgmt",
@@ -1878,20 +1884,24 @@ export const c2Tools: Tool[] = [
     "Generative Design",
     "CAD/CAM/CAE",
   ],
+
   user_scales: ["Mid-Market", "Small Business"],
   official_url: "https://solidedge.siemens.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Hybrid modeling power",
     "Excellent sheet metal",
     "Flexible pricing",
   ],
+
   cons: [
     "Smaller marketing presence",
     "Legacy UI areas",
     "Smaller community",
   ],
+
   faqs: [
     {
       q: "What is Solid Edge used for?",
@@ -1918,13 +1928,23 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, Autodesk Inventor, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Moderate",
     gpu_optimization: "OpenGL",
     standards: ["PAR", "STEP", "IGES", "JT"],
   },
+
   expert_verdict: "Solid Edge is the 'thinking man's' SolidWorks.",
+
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 7.9,
+    max: 10,
+    count: 55,
+    url: "https://www.trustradius.com/products/siemens-solid-edge/reviews"
+  }]
 },
 {
   id: "t20",
@@ -2437,8 +2457,10 @@ export const c2Tools: Tool[] = [
   slug: "shapr3d",
   logo_url: getLogo("S3"),
   short_desc: "Professional CAD for mobile and desktop mobility.",
+
   description:
     "Shapr3D is a professional CAD tool built for iPad and desktop. It uses the Siemens Parasolid kernel for industrial-grade precision.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -2460,6 +2482,7 @@ export const c2Tools: Tool[] = [
       features: ["Network licensing", "Priority support", "Deployment tools"],
     },
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -2478,6 +2501,7 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["fusion-360", "solidworks", "onshape"],
   country: "Hungary",
   category_id: "c2",
@@ -2485,21 +2509,26 @@ export const c2Tools: Tool[] = [
   starting_price: 299,
   platforms: ["Windows", "macOS", "iOS"],
   industries: ["Industrial Design", "Prototyping", "AEC"],
+
   core_features: [
     "Direct Modeling with Apple Pencil",
     "Parasolid Precision",
     "Multi-Device Sync",
   ],
+
   user_scales: ["Individuals", "Small Business"],
   official_url: "https://www.shapr3d.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Most intuitive UI",
     "Industrial Parasolid kernel",
     "Offline mobility",
   ],
+
   cons: ["Subscription only", "Assembly maturing", "Pencil req for iPad"],
+
   faqs: [
     {
       q: "What is Shapr3D used for?",
@@ -2526,14 +2555,24 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are Fusion 360, SolidWorks, Onshape. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Moderate",
     gpu_optimization: "Metal / DirectX",
     standards: ["STEP", "IGES", "XT", "STL"],
   },
+
   expert_verdict:
     "Shapr3D has done the impossible: made professional CAD fun.",
+
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 22,
+    url: "https://www.capterra.com/p/184498/Shapr3D/"
+  }]
 },
 {
   id: "t29",
@@ -2785,8 +2824,10 @@ export const c2Tools: Tool[] = [
   slug: "maya",
   logo_url: getLogo("MY"),
   short_desc: "3D animation, modeling, and simulation software.",
+
   description:
     "Maya is professional 3D software for creating realistic characters and effects.",
+
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1875,
@@ -2807,6 +2848,7 @@ export const c2Tools: Tool[] = [
   score: 4.9,
   pros: ["Industry VFX standard", "Node-based power", "Linux support"],
   cons: ["Steep learning", "High cost", "Not for engineering"],
+
   faqs: [
     {
       q: "What is Maya used for?",
@@ -2920,6 +2962,20 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 265,
+    url: "https://www.g2.com/products/maya/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 8,
+    url: "https://www.capterra.com/reviews/maya"
+  }]
 },
 {
   id: "t51",

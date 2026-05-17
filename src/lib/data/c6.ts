@@ -1629,6 +1629,7 @@ export const c6Tools: Tool[] = [
   },
 
   "expert_verdict": "If you already use Altium Designer in a team, 365 has become almost mandatory for managing design data and MCAD handoff.",
+
   faqs: [{
     q: 'What is Altium 365 used for?',
     a: 'Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams. Altium 365 is an EDA solution widely adopted in Electronics, Aerospace, Industrial.',
@@ -1648,8 +1649,17 @@ export const c6Tools: Tool[] = [
     q: 'What are the best alternatives to Altium 365?',
     a: 'The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
   }],
+
   alternatives: ['altium-designer', 'eplan-electric-p8', 'multisim'],
   detailed_features: [],
+
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 8.5,
+    max: 10,
+    count: 30,
+    url: "https://www.trustradius.com/products/altium-365/reviews"
+  }]
 },
 {
   id: "t205",

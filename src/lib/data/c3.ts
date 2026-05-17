@@ -529,8 +529,10 @@ export const c3Tools: Tool[] = [
   slug: "tekla-structures",
   logo_url: getLogo("TS"),
   short_desc: "The world's most advanced structural BIM software.",
+
   description:
     "Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.",
+
   pricing_tiers: [
     {
       name: "Carbon",
@@ -575,6 +577,7 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Steel & Concrete",
@@ -621,6 +624,7 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["revit", "allplan", "civil-3d"],
   country: "Finland",
   category_id: "c3",
@@ -628,6 +632,7 @@ export const c3Tools: Tool[] = [
   starting_price: 2400,
   platforms: ["Windows"],
   industries: ["Structural Engineering", "Construction"],
+
   core_features: [
     "Steel Detailing",
     "BIM LOD 500",
@@ -635,16 +640,20 @@ export const c3Tools: Tool[] = [
     "CNC Export",
     "Structural Engineering",
   ],
+
   user_scales: ["Enterprise"],
   official_url: "https://www.tekla.com",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Unbeatable for steel",
     "Handles massive models",
     "CNC machine link",
   ],
+
   cons: ["Very expensive", "Highly specialized", "Steep learning curve"],
+
   faqs: [
     {
       q: "What is Tekla Structures used for?",
@@ -671,23 +680,36 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Revit, Allplan, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Trimble Structural Core",
     multicore: "Moderate",
     gpu_optimization: "High",
     standards: ["IFC", "STEP", "XML", "CIS/2"],
   },
+
   expert_verdict: "The choice for massive steel stadiums and complex plants.",
+
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 37,
+    url: "https://www.capterra.com/p/92964/Tekla-Structures/"
+  }]
 },
 {
   id: "t17",
   name: "Vectorworks",
   slug: "vectorworks",
   logo_url: getLogo("VW"),
+
   short_desc:
     "The all-in-one BIM solution for landscape and entertainment design.",
+
   description:
     "Vectorworks is a versatile BIM and CAD software suite for architects and entertainment professionals.",
+
   pricing_tiers: [
     {
       name: "Architect (Annual)",
@@ -714,6 +736,7 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Specialized Design",
@@ -760,6 +783,7 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["archicad", "revit", "sketchup"],
   country: "USA",
   category_id: "c3",
@@ -767,6 +791,7 @@ export const c3Tools: Tool[] = [
   starting_price: 1530,
   platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Landscape", "Entertainment"],
+
   core_features: [
     "Multi-disciplinary BIM",
     "Stage & Lighting Design",
@@ -774,20 +799,24 @@ export const c3Tools: Tool[] = [
     "High-end Rendering",
     "GIS Integration",
   ],
+
   user_scales: ["Small Business", "Agencies"],
   official_url: "https://www.vectorworks.net",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Best-in-class 2D graphics",
     "Unique industry modules",
     "Strong macOS optimization",
   ],
+
   cons: [
     "BIM coordination less robust",
     "3D navigation clunky",
     "Steep learning curve",
   ],
+
   faqs: [
     {
       q: "What is Vectorworks used for?",
@@ -814,14 +843,24 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are ArchiCAD, Revit, SketchUp. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "High",
     gpu_optimization: "Metal / DirectX",
     standards: ["IFC", "DWG", "RVV", "OBJ"],
   },
+
   expert_verdict:
     "If you work in landscape or lighting design, Vectorworks is the standard.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 278,
+    url: "https://www.g2.com/sellers/vectorworks-inc"
+  }]
 },
 {
   id: "t27",
@@ -829,8 +868,10 @@ export const c3Tools: Tool[] = [
   slug: "chief-architect",
   logo_url: getLogo("CA"),
   short_desc: "Professional home design software for builders.",
+
   description:
     "Chief Architect is specialized for residential home design. It generates 3D models and construction documents with architectural automation.",
+
   pricing_tiers: [
     {
       name: "Premier Monthly",
@@ -859,6 +900,7 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Building Tools",
@@ -905,6 +947,7 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["revit", "sketchup", "archicad"],
   country: "USA",
   category_id: "c3",
@@ -912,6 +955,7 @@ export const c3Tools: Tool[] = [
   starting_price: 1995,
   platforms: ["Windows", "macOS"],
   industries: ["Residential Architecture", "Remodeling"],
+
   core_features: [
     "Residential Design",
     "Automated Building Tools",
@@ -919,16 +963,20 @@ export const c3Tools: Tool[] = [
     "Interior Design",
     "Photorealistic Rendering",
   ],
+
   user_scales: ["Small Business", "Agencies"],
   official_url: "https://www.chiefarchitect.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Residential construction docs",
     "Massive home library",
     "Fast client renders",
   ],
+
   cons: ["Not for mechanical", "Expensive", "Windows version lead"],
+
   faqs: [
     {
       q: "What is Chief Architect used for?",
@@ -955,13 +1003,29 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Revit, SketchUp, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Chief Custom AEC Engine",
     multicore: "High",
     gpu_optimization: "DirectX / Metal",
     standards: ["DWG", "DXF", "OBJ", "SKP"],
   },
+
   expert_verdict: "If you build houses, buy Chief Architect.",
+
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.4,
+    max: 5,
+    count: 67,
+    url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.4,
+    max: 5,
+    count: 68,
+    url: "https://www.getapp.com/construction-software/a/chief-architect/"
+  }]
 },
 {
   id: "t44",
@@ -991,6 +1055,7 @@ export const c3Tools: Tool[] = [
   score: 4.8,
   pros: ["Road design standard", "Dynamic objects", "Infra BIM essential"],
   cons: ["Prone to crashes", "Steep learning curve", "Expensive"],
+
   faqs: [
     {
       q: "What is Civil 3D used for?",
@@ -1104,6 +1169,14 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
+
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 9.3,
+    max: 10,
+    count: 35,
+    url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
+  }]
 },
 {
   id: "t46",
