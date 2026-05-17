@@ -1479,7 +1479,7 @@ export const c5Tools: Tool[] = [
   industries: [],
   core_features: [],
   user_scales: [],
-  official_url: "https://www.uel.co.jp/",
+  official_url: "https://www.biprogy-uel.co.jp/cadmeister/",
   affiliate_url: null,
   score: 0,
   pros: [],
