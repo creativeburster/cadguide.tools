@@ -2,20 +2,24 @@
 
 import { useState, useMemo, Suspense, useRef } from 'react';
 import { tools } from '@/lib/data';
+import { editorPickPairs } from '@/lib/seo-content';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
 import Link from 'next/link';
-import { X, Info, Scale, Check, Search as SearchIcon } from 'lucide-react';
+import { X, Scale, Search as SearchIcon, ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 
 function CompareContent() {
   const searchParams = useSearchParams();
   const initialIds = searchParams.get('ids')?.split(',').filter(Boolean) || [];
-  
+
   const [selectedToolIds, setSelectedToolIds] = useState<string[]>(initialIds);
   const [searchTerm, setSearchTerm] = useState('');
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Editor-picked top comparisons. Static data — compute once.
+  const editorPicks = useMemo(() => editorPickPairs(), []);
 
   const filteredSearch = useMemo(() => {
     if (!searchTerm) return [];
@@ -210,18 +214,89 @@ function CompareContent() {
           </div>
         </div>
       ) : (
-        <div className="text-center py-32 bg-white rounded-[48px] border-4 border-dashed border-slate-100 max-w-4xl mx-auto shadow-sm">
-          <button 
-            onClick={focusSearch}
-            className="w-full"
-          >
-            <div className="w-24 h-24 bg-slate-50 rounded-[32px] flex items-center justify-center mx-auto mb-10 text-slate-200 hover:text-blue-600 transition-colors">
-              <SearchIcon className="w-12 h-12" />
-            </div>
-            <h2 className="text-3xl font-black text-slate-300 uppercase tracking-[0.2em] hover:text-blue-600 transition-colors">Add software to begin Matrix</h2>
-          </button>
-        </div>
+        <button
+          onClick={focusSearch}
+          className="block w-full text-center py-12 md:py-20 bg-white rounded-[28px] md:rounded-[48px] border-4 border-dashed border-slate-100 max-w-4xl mx-auto shadow-sm hover:border-blue-200 transition-colors"
+        >
+          <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-50 rounded-[24px] md:rounded-[32px] flex items-center justify-center mx-auto mb-6 md:mb-10 text-slate-300 transition-colors">
+            <SearchIcon className="w-10 h-10 md:w-12 md:h-12" />
+          </div>
+          <h2 className="text-lg md:text-3xl font-black text-slate-400 uppercase tracking-[0.2em] hover:text-blue-600 transition-colors">
+            Search above to build your matrix
+          </h2>
+          <p className="mt-3 md:mt-4 text-sm font-medium text-slate-400">
+            …or pick a popular head-to-head below.
+          </p>
+        </button>
       )}
+
+      {/* Editor Picks — featured pre-built comparison pages.
+          Always rendered so users can keep discovering after they've
+          finished a custom matrix. Each card deep-links to a
+          /compare/<a-vs-b> long-tail page that already has its own
+          metadata + JSON-LD. */}
+      <section className="mt-20 md:mt-28">
+        <div className="text-center mb-10 md:mb-14">
+          <Badge
+            variant="outline"
+            className="bg-blue-50 text-blue-700 border-blue-100 font-black uppercase tracking-widest text-[10px] mb-4 md:mb-6"
+          >
+            Editor Picks
+          </Badge>
+          <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-3 md:mb-4 tracking-tight">
+            Popular Head-to-Heads
+          </h2>
+          <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Pre-built deep-dive pages for the comparisons buyers search for most. Each has an 11-row feature matrix and a decision guide.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {editorPicks.map(({ pairSlug, a, b, blurb }) => (
+            <Link
+              key={pairSlug}
+              href={`/compare/${pairSlug}`}
+              className="group bg-white rounded-[24px] md:rounded-[28px] border border-slate-100 p-5 md:p-7 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-100/40 transition-all flex flex-col"
+            >
+              <div className="flex items-center gap-3 mb-4 md:mb-5">
+                <ToolLogo
+                  slug={a.slug}
+                  src={a.logo_url}
+                  websiteUrl={a.official_url}
+                  name={a.name}
+                  className="w-11 h-11 md:w-12 md:h-12 rounded-xl shadow-sm border border-slate-50"
+                />
+                <span className="text-xs font-black uppercase tracking-widest text-slate-300">vs</span>
+                <ToolLogo
+                  slug={b.slug}
+                  src={b.logo_url}
+                  websiteUrl={b.official_url}
+                  name={b.name}
+                  className="w-11 h-11 md:w-12 md:h-12 rounded-xl shadow-sm border border-slate-50"
+                />
+              </div>
+              <h3 className="text-base md:text-lg font-black text-slate-900 mb-2 tracking-tight group-hover:text-blue-600 transition-colors">
+                {a.name} <span className="text-slate-300">vs</span> {b.name}
+              </h3>
+              <p className="text-sm text-slate-500 font-medium leading-relaxed mb-5 line-clamp-2">
+                {blurb}
+              </p>
+              <div className="mt-auto flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-blue-600 group-hover:text-blue-700">
+                View comparison
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-10 md:mt-14">
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-2xl border-slate-200 font-black text-xs uppercase tracking-widest h-12 px-6 hover:bg-white"
+          >
+            <Link href="/best">Browse Best-Of Lists by Category</Link>
+          </Button>
+        </div>
+      </section>
     </main>
   );
 }
