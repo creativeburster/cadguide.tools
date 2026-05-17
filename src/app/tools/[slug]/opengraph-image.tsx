@@ -3,7 +3,7 @@ import { tools, categories } from '@/lib/data';
 import { pricingSummary } from '@/lib/seo';
 
 // Image metadata
-export const alt = 'CADTools.cc Tool Review';
+export const alt = 'CADGuide.tools Tool Review';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -33,7 +33,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             fontWeight: 900,
           }}
         >
-          CADTools.cc
+          CADGuide.tools
         </div>
       ),
       { ...size },
@@ -66,7 +66,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           fontFamily: 'system-ui, sans-serif',
         }}
       >
-        {/* Header — CADTools.cc wordmark + category chip */}
+        {/* Header — CADGuide.tools wordmark + category chip */}
         <div
           style={{
             display: 'flex',
@@ -92,7 +92,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               CT
             </div>
             <div style={{ fontSize: 32, fontWeight: 900, letterSpacing: '-1px' }}>
-              CADTools.cc
+              CADGuide.tools
             </div>
           </div>
           <div

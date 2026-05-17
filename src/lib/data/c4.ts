@@ -160,7 +160,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Bluebeam Revu?",
-      a: "The closest alternatives within the Viewer space are Navisworks, Solibri, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Viewer space are Navisworks, Solibri, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -322,7 +322,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Navisworks?",
-      a: "The closest alternatives within the Viewer space are Solibri, Bluebeam Revu, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Viewer space are Solibri, Bluebeam Revu, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -420,7 +420,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Solibri?",
-      a: "The closest alternatives within the Viewer space are Navisworks, Recap Pro, Bluebeam Revu. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Viewer space are Navisworks, Recap Pro, Bluebeam Revu. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -499,7 +499,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MeshLab?",
-      a: "The closest alternatives within the Viewer space are Magics, Blender, Solid Edge Viewer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Viewer space are Magics, Blender, Solid Edge Viewer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -579,7 +579,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Recap Pro?",
-      a: "The closest alternatives within the Viewer space are MeshLab, Solibri, Navisworks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Viewer space are MeshLab, Solibri, Navisworks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -633,7 +633,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Solid Edge Viewer?",
-      a: "The closest alternatives within the Viewer space are DWG TrueView, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Viewer space are DWG TrueView, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -688,7 +688,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to DWG TrueView?",
-      a: "The closest alternatives within the Viewer space are Solid Edge Viewer, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Viewer space are Solid Edge Viewer, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {

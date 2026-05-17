@@ -4,7 +4,7 @@ import { bestOfPaths, comparisonPairs } from '@/lib/seo-content';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = 'https://cadtools.cc';
+const BASE_URL = 'https://cadguide.tools';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

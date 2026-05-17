@@ -377,7 +377,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ZWCAD?",
-      a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, GstarCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, GstarCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -520,7 +520,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to BricsCAD?",
-      a: "The closest alternatives within the 2D CAD space are AutoCAD, ZWCAD, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are AutoCAD, ZWCAD, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -708,7 +708,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MicroStation?",
-      a: "The closest alternatives within the 2D CAD space are AutoCAD, Civil 3D, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are AutoCAD, Civil 3D, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -864,7 +864,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to DraftSight?",
-      a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -938,7 +938,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CADra?",
-      a: "The closest alternatives within the 2D CAD space are AutoCAD, nanoCAD, MicroStation. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are AutoCAD, nanoCAD, MicroStation. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1004,7 +1004,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to DWG FastView?",
-      a: "The closest alternatives within the 2D CAD space are QCAD, ZWCAD, TurboCAD Platinum. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are QCAD, ZWCAD, TurboCAD Platinum. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1156,7 +1156,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to GstarCAD?",
-      a: "The closest alternatives within the 2D CAD space are progeCAD Professional, CADopia, CAXA CAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are progeCAD Professional, CADopia, CAXA CAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1258,7 +1258,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to QCAD?",
-      a: "The closest alternatives within the 2D CAD space are DWG FastView, ARES Commander, DraftSight. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are DWG FastView, ARES Commander, DraftSight. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1328,7 +1328,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to nanoCAD?",
-      a: "The closest alternatives within the 2D CAD space are AutoCAD, MicroStation, ARES Commander. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are AutoCAD, MicroStation, ARES Commander. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1393,7 +1393,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to progeCAD Professional?",
-      a: "The closest alternatives within the 2D CAD space are CADopia, TurboCAD Platinum, CAXA CAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are CADopia, TurboCAD Platinum, CAXA CAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1461,7 +1461,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to LibreCAD?",
-      a: "The closest alternatives within the 2D CAD space are QCAD, DWG FastView, CADra. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are QCAD, DWG FastView, CADra. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1557,7 +1557,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CADopia?",
-      a: "The closest alternatives within the 2D CAD space are progeCAD Professional, CAXA CAD, TurboCAD Platinum. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are progeCAD Professional, CAXA CAD, TurboCAD Platinum. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1626,7 +1626,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to TurboCAD Platinum?",
-      a: "The closest alternatives within the 2D CAD space are CAXA CAD, progeCAD Professional, CADopia. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are CAXA CAD, progeCAD Professional, CADopia. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1695,7 +1695,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CorelCAD?",
-      a: "The closest alternatives within the 2D CAD space are CAXA CAD, TurboCAD Platinum, CADopia. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are CAXA CAD, TurboCAD Platinum, CADopia. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1764,7 +1764,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CAXA CAD?",
-      a: "The closest alternatives within the 2D CAD space are TurboCAD Platinum, CADopia, CorelCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are TurboCAD Platinum, CADopia, CorelCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1833,7 +1833,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ARES Commander?",
-      a: "The closest alternatives within the 2D CAD space are DraftSight, AutoCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are DraftSight, AutoCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1934,7 +1934,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to 3DEXPERIENCE?",
-      a: "The closest alternatives within the 2D CAD space are MEDUSA4, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are MEDUSA4, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2001,7 +2001,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MEDUSA4?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2066,7 +2066,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to pCon.planner?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2133,7 +2133,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CrownCAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2198,7 +2198,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SINOVATION?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2263,7 +2263,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to HaoChen CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2330,7 +2330,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to IJCAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2397,7 +2397,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to RootPro CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2464,7 +2464,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to V-nas?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2531,7 +2531,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to KOMPAS-3D?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2598,7 +2598,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to T-FLEX CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2663,7 +2663,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Model Studio CS?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2730,7 +2730,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to AVEVA E3D Design?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2797,7 +2797,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to DesignSpark Mechanical?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2862,7 +2862,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to LUSAS?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2929,7 +2929,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to midas Civil?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2996,7 +2996,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to midas Gen?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3063,7 +3063,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CADian?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3128,7 +3128,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to think3?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3195,7 +3195,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Maptek Vulcan?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3262,7 +3262,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Promine?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3329,7 +3329,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to OOFELIE?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3396,7 +3396,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CYPECAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3463,7 +3463,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to TeKton3D?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3530,7 +3530,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Vertex BD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3597,7 +3597,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CET Designer?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3662,7 +3662,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ActCAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3727,7 +3727,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CADVision?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3794,7 +3794,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Eberick?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3861,7 +3861,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Promob?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3928,7 +3928,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SCIA Engineer?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3993,7 +3993,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to PowerMill?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4060,7 +4060,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ESPRIT?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4125,7 +4125,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Planbar?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4190,7 +4190,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to PAM-STAMP?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4257,7 +4257,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ShipConstructor?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4324,7 +4324,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to NAPA?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4389,7 +4389,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to FORAN?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4456,7 +4456,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Pytha?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4523,7 +4523,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to imos iX?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4590,7 +4590,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to 20-20 Design?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4657,7 +4657,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Palette CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -4722,7 +4722,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to KD Max?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {

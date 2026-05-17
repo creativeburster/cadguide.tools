@@ -677,7 +677,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Tekla Structures?",
-      a: "The closest alternatives within the BIM space are Revit, Allplan, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are Revit, Allplan, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -840,7 +840,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Vectorworks?",
-      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, SketchUp. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, SketchUp. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1000,7 +1000,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Chief Architect?",
-      a: "The closest alternatives within the BIM space are Revit, SketchUp, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are Revit, SketchUp, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1079,7 +1079,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Civil 3D?",
-      a: "The closest alternatives within the BIM space are Revit, OpenRoads Designer, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are Revit, OpenRoads Designer, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1222,7 +1222,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Chief Architect Pro?",
-      a: "The closest alternatives within the BIM space are Chief Architect, ArchiCAD, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are Chief Architect, ArchiCAD, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1311,7 +1311,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Vectorworks Landmark?",
-      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1385,7 +1385,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Allplan?",
-      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, OpenRoads Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, OpenRoads Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1530,7 +1530,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to OpenRoads Designer?",
-      a: "The closest alternatives within the BIM space are Revit, Civil 3D, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are Revit, Civil 3D, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1596,7 +1596,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to BIMoffice?",
-      a: "The closest alternatives within the BIM space are HiCAD, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are HiCAD, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1663,7 +1663,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to HiCAD?",
-      a: "The closest alternatives within the BIM space are BIMoffice, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1730,7 +1730,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Renga?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1797,7 +1797,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Edificius?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1864,7 +1864,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to EdiLus?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1929,7 +1929,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to cadwork?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1996,7 +1996,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MagiCAD?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2061,7 +2061,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to DDS-CAD?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2128,7 +2128,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to dRofus?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2204,7 +2204,7 @@ export const c3Tools: Tool[] = [
     a: 'AutoCAD Plant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to AutoCAD Plant 3D?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'allplan', 'bimcollab'],
   detailed_features: [],
@@ -2274,7 +2274,7 @@ export const c3Tools: Tool[] = [
     a: 'Hexagon SmartPlant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Hexagon SmartPlant 3D?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'allplan', 'bimcollab'],
   detailed_features: [],
@@ -2344,7 +2344,7 @@ export const c3Tools: Tool[] = [
     a: 'CADWorx Plant Professional works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to CADWorx Plant Professional?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, BIMcollab, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, BIMcollab, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'bimcollab', 'autocad-plant-3d'],
   detailed_features: [],
@@ -2414,7 +2414,7 @@ export const c3Tools: Tool[] = [
     a: 'Autodesk Construction Cloud works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Autodesk Construction Cloud?',
-    a: 'The closest alternatives within the BIM space are BIMcollab, Allplan, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the BIM space are BIMcollab, Allplan, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['bimcollab', 'allplan', 'autocad-plant-3d'],
   detailed_features: [],
@@ -2484,7 +2484,7 @@ export const c3Tools: Tool[] = [
     a: 'Trimble Connect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Trimble Connect?',
-    a: 'The closest alternatives within the BIM space are Autodesk Dynamo, Autodesk Construction Cloud, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the BIM space are Autodesk Dynamo, Autodesk Construction Cloud, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-dynamo', 'autodesk-construction-cloud', 'bimcollab'],
   detailed_features: [],
@@ -2554,7 +2554,7 @@ export const c3Tools: Tool[] = [
     a: 'BIMcollab works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to BIMcollab?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'allplan', 'revit'],
   detailed_features: [],
@@ -2624,7 +2624,7 @@ export const c3Tools: Tool[] = [
     a: 'Autodesk Dynamo works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Autodesk Dynamo?',
-    a: 'The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['trimble-connect', 'bimcollab', 'autodesk-construction-cloud'],
   detailed_features: [],

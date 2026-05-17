@@ -857,7 +857,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     </div>
                     <div>
                       <h3 className="text-xl md:text-3xl font-black tracking-tight">
-                        CADTools Verdict
+                        CADGuide Verdict
                       </h3>
                       <p className="text-blue-400 font-black uppercase text-[10px] tracking-[0.4em] mt-1">
                         Final Professional Conclusion

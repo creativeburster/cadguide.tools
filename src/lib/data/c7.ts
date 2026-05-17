@@ -61,7 +61,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to PC SCHEMATIC Automation?",
-      a: "The closest alternatives within the Specialized space are Shoemaster, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Shoemaster, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -134,7 +134,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MatrixGold?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -233,7 +233,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to exocad DentalCAD?",
-      a: "The closest alternatives within the Specialized space are CLO 3D, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are CLO 3D, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -331,7 +331,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Cabinet Vision?",
-      a: "The closest alternatives within the Specialized space are exocad DentalCAD, CLO 3D, Land F/X. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are exocad DentalCAD, CLO 3D, Land F/X. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -400,7 +400,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to AVEVA Marine?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -473,7 +473,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CLO 3D?",
-      a: "The closest alternatives within the Specialized space are exocad DentalCAD, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are exocad DentalCAD, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -583,7 +583,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Shoemaster?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -652,7 +652,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to WYSIWYG?",
-      a: "The closest alternatives within the Specialized space are AVEVA Marine, exocad DentalCAD, CLO 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are AVEVA Marine, exocad DentalCAD, CLO 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -718,7 +718,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to 3Design?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -787,7 +787,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Land F/X?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -852,7 +852,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ICAD3D+?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -992,7 +992,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Infraworks?",
-      a: "The closest alternatives within the Specialized space are 3ds Max, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are 3ds Max, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1132,7 +1132,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to 3ds Max?",
-      a: "The closest alternatives within the Specialized space are Infraworks, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1279,7 +1279,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ZBrush?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1406,7 +1406,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to KeyShot?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1546,7 +1546,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Lumion?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1694,7 +1694,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Enscape?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1843,7 +1843,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Twinmotion?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1922,7 +1922,7 @@ export const c7Tools: Tool[] = [
     a: 'UltiMaker Cura works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to UltiMaker Cura?',
-    a: 'The closest alternatives within the Specialized space are Bambu Studio, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Bambu Studio, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
 
   alternatives: ['bambu-studio', 'prusaslicer', 'd5-render'],
@@ -2007,7 +2007,7 @@ export const c7Tools: Tool[] = [
     a: 'PrusaSlicer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to PrusaSlicer?',
-    a: 'The closest alternatives within the Specialized space are Bambu Studio, UltiMaker Cura, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Bambu Studio, UltiMaker Cura, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['bambu-studio', 'ultimaker-cura', 'd5-render'],
   detailed_features: [],
@@ -2077,7 +2077,7 @@ export const c7Tools: Tool[] = [
     a: 'Bambu Studio works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Bambu Studio?',
-    a: 'The closest alternatives within the Specialized space are UltiMaker Cura, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are UltiMaker Cura, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ultimaker-cura', 'prusaslicer', 'd5-render'],
   detailed_features: [],
@@ -2147,7 +2147,7 @@ export const c7Tools: Tool[] = [
     a: 'Simplify3D works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Simplify3D?',
-    a: 'The closest alternatives within the Specialized space are JewelCAD Pro, RhinoGold, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are JewelCAD Pro, RhinoGold, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['jewelcad-pro', 'rhinogold', 'carlson-survey'],
   detailed_features: [],
@@ -2217,7 +2217,7 @@ export const c7Tools: Tool[] = [
     a: 'Autodesk Netfabb works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Autodesk Netfabb?',
-    a: 'The closest alternatives within the Specialized space are Optitex, Lectra Modaris, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Optitex, Lectra Modaris, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['optitex', 'lectra-modaris', 'gerber-accumark'],
   detailed_features: [],
@@ -2287,7 +2287,7 @@ export const c7Tools: Tool[] = [
     a: 'Optitex works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Optitex?',
-    a: 'The closest alternatives within the Specialized space are Browzwear, Trimble Business Center, Marvelous Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Browzwear, Trimble Business Center, Marvelous Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['browzwear', 'trimble-business-center', 'marvelous-designer'],
   detailed_features: [],
@@ -2357,7 +2357,7 @@ export const c7Tools: Tool[] = [
     a: 'Gerber AccuMark works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Gerber AccuMark?',
-    a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['infraworks', '3ds-max', 'zbrush'],
   detailed_features: [],
@@ -2427,7 +2427,7 @@ export const c7Tools: Tool[] = [
     a: 'Lectra Modaris works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Lectra Modaris?',
-    a: 'The closest alternatives within the Specialized space are Autodesk Netfabb, Optitex, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Autodesk Netfabb, Optitex, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-netfabb', 'optitex', 'gerber-accumark'],
   detailed_features: [],
@@ -2497,7 +2497,7 @@ export const c7Tools: Tool[] = [
     a: 'Browzwear works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Browzwear?',
-    a: 'The closest alternatives within the Specialized space are Trimble Business Center, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Trimble Business Center, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['trimble-business-center', 'marvelous-designer', 'v-ray'],
   detailed_features: [],
@@ -2567,7 +2567,7 @@ export const c7Tools: Tool[] = [
     a: 'Marvelous Designer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Marvelous Designer?',
-    a: 'The closest alternatives within the Specialized space are Adobe Substance 3D Painter, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Adobe Substance 3D Painter, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['substance-painter', 'v-ray', 'browzwear'],
   detailed_features: [],
@@ -2637,7 +2637,7 @@ export const c7Tools: Tool[] = [
     a: 'RhinoGold works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to RhinoGold?',
-    a: 'The closest alternatives within the Specialized space are JewelCAD Pro, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are JewelCAD Pro, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['jewelcad-pro', 'simplify3d', 'carlson-survey'],
   detailed_features: [],
@@ -2707,7 +2707,7 @@ export const c7Tools: Tool[] = [
     a: 'JewelCAD Pro works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to JewelCAD Pro?',
-    a: 'The closest alternatives within the Specialized space are RhinoGold, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are RhinoGold, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['rhinogold', 'simplify3d', 'carlson-survey'],
   detailed_features: [],
@@ -2777,7 +2777,7 @@ export const c7Tools: Tool[] = [
     a: 'D5 Render works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to D5 Render?',
-    a: 'The closest alternatives within the Specialized space are UltiMaker Cura, Corona Renderer, Bambu Studio. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are UltiMaker Cura, Corona Renderer, Bambu Studio. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ultimaker-cura', 'corona-renderer', 'bambu-studio'],
   detailed_features: [],
@@ -2847,7 +2847,7 @@ export const c7Tools: Tool[] = [
     a: 'V-Ray works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to V-Ray?',
-    a: 'The closest alternatives within the Specialized space are Marvelous Designer, Browzwear, Trimble Business Center. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Marvelous Designer, Browzwear, Trimble Business Center. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['marvelous-designer', 'browzwear', 'trimble-business-center'],
   detailed_features: [],
@@ -2917,7 +2917,7 @@ export const c7Tools: Tool[] = [
     a: 'Corona Renderer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Corona Renderer?',
-    a: 'The closest alternatives within the Specialized space are Marvelous Designer, Adobe Substance 3D Painter, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Marvelous Designer, Adobe Substance 3D Painter, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['marvelous-designer', 'substance-painter', 'browzwear'],
   detailed_features: [],
@@ -2987,7 +2987,7 @@ export const c7Tools: Tool[] = [
     a: 'Adobe Substance 3D Painter works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Adobe Substance 3D Painter?',
-    a: 'The closest alternatives within the Specialized space are Marvelous Designer, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Marvelous Designer, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['marvelous-designer', 'v-ray', 'browzwear'],
   detailed_features: [],
@@ -3053,7 +3053,7 @@ export const c7Tools: Tool[] = [
     a: 'Carlson Survey works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Carlson Survey?',
-    a: 'The closest alternatives within the Specialized space are RhinoGold, PC SCHEMATIC Automation, JewelCAD Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are RhinoGold, PC SCHEMATIC Automation, JewelCAD Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['rhinogold', 'pc-schematic', 'jewelcad-pro'],
   detailed_features: [],
@@ -3123,7 +3123,7 @@ export const c7Tools: Tool[] = [
     a: 'Trimble Business Center works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Trimble Business Center?',
-    a: 'The closest alternatives within the Specialized space are Browzwear, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Browzwear, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['browzwear', 'marvelous-designer', 'v-ray'],
   detailed_features: [],
@@ -3193,7 +3193,7 @@ export const c7Tools: Tool[] = [
     a: 'Leica Cyclone works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Leica Cyclone?',
-    a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['infraworks', '3ds-max', 'zbrush'],
   detailed_features: [],

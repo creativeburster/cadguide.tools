@@ -10,9 +10,9 @@ import { PWARegistration } from "@/components/pwa-registration";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CADTools.cc | Compare 175+ CAD & BIM Software (ASM vs Parasolid)",
+  title: "CADGuide.tools | Compare 175+ CAD & BIM Software (ASM vs Parasolid)",
   description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, and pricing for 175+ professional 2D/3D design tools.",
-  metadataBase: new URL('https://cadtools.cc'),
+  metadataBase: new URL('https://cadguide.tools'),
   robots: { index: true, follow: true },
 };
 

@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://cadtools.cc/sitemap.xml',
-    host: 'https://cadtools.cc',
+    sitemap: 'https://cadguide.tools/sitemap.xml',
+    host: 'https://cadguide.tools',
   };
 }

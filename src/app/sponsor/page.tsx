@@ -5,7 +5,7 @@ import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Sponsor CADTools.cc — Reach CAD Decision-Makers',
+  title: 'Sponsor CADGuide.tools — Reach CAD Decision-Makers',
   description:
     'Advertise your CAD, BIM, CAE/CAM, or EDA software to a highly targeted audience of engineers, architects, designers, and procurement decision-makers.',
   path: '/sponsor',
@@ -31,7 +31,7 @@ function SponsorBody() {
   return (
     <main className="container mx-auto px-4 py-12 max-w-4xl">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4">Partner with CADTools.cc</h1>
+        <h1 className="text-4xl font-bold mb-4">Partner with CADGuide.tools</h1>
         <p className="text-xl text-muted-foreground">Reach a highly targeted audience of engineers, architects, and decision-makers.</p>
       </div>
 
@@ -69,7 +69,7 @@ function SponsorBody() {
       </div>
 
       <div className="mt-16 text-center text-slate-500">
-        <p>Contact us at: <span className="font-bold">partners@cadtools.cc</span></p>
+        <p>Contact us at: <span className="font-bold">partners@cadguide.tools</span></p>
       </div>
     </main>
   );

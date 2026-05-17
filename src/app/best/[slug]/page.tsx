@@ -108,7 +108,7 @@ function articleLd(category: Category) {
     mainEntityOfPage: `${SITE_URL}/best/${category.slug}`,
     publisher: {
       '@type': 'Organization',
-      name: 'CADTools.cc',
+      name: 'CADGuide.tools',
       url: SITE_URL,
     },
     datePublished: '2026-01-01',

@@ -2,9 +2,9 @@ import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'About CADTools.cc — Independent CAD Software Reviews',
+  title: 'About CADGuide.tools — Independent CAD Software Reviews',
   description:
-    'CADTools.cc is an independent, vendor-neutral directory of CAD, BIM, CAE/CAM, and EDA software. Learn how we evaluate, score, and review tools.',
+    'CADGuide.tools is an independent, vendor-neutral directory of CAD, BIM, CAE/CAM, and EDA software. Learn how we evaluate, score, and review tools.',
   path: '/about',
 });
 
@@ -43,12 +43,12 @@ function AboutBody() {
       {/* Content Section */}
       <section className="py-24 max-w-[1000px] mx-auto px-6 md:px-12">
         <div className="prose prose-slate lg:prose-xl max-w-none">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Why CADTools.cc?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Why CADGuide.tools?</h2>
           <p>
             The CAD software market is fragmented, expensive, and often confusing. With hundreds of options ranging from free open-source tools to enterprise-level PLM suites, professionals often struggle to compare features, pricing, and real-world performance objectively.
           </p>
           <p>
-            <strong>CADTools.cc</strong> was founded to bridge this gap. We provide a structured, data-driven directory that allows you to filter software by operating system, industry, pricing model, and core features.
+            <strong>CADGuide.tools</strong> was founded to bridge this gap. We provide a structured, data-driven directory that allows you to filter software by operating system, industry, pricing model, and core features.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 my-16 not-prose">
@@ -77,7 +77,7 @@ function AboutBody() {
           <div className="bg-blue-600 text-white p-12 rounded-3xl mt-16 shadow-2xl shadow-blue-200">
             <h3 className="text-2xl font-bold mb-4 text-white">Join Our Community</h3>
             <p className="text-blue-100 mb-0 leading-relaxed">
-              CADTools.cc is a growing community. We invite vendors and users to contribute to our database to ensure the information remains the most accurate in the industry.
+              CADGuide.tools is a growing community. We invite vendors and users to contribute to our database to ensure the information remains the most accurate in the industry.
             </p>
           </div>
         </div>

@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'CADTools.cc',
-    short_name: 'CADTools',
+    name: 'CADGuide.tools',
+    short_name: 'CADGuide',
     description: 'Compare 175+ CAD/BIM tools – pricing, features, specs, expert verdicts.',
     start_url: '/',
     display: 'standalone',

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = pageMetadata({
   title: 'Privacy Policy',
   description:
-    'How CADTools.cc collects, uses, and protects your information. GDPR and CCPA compliant. No data sold to third parties.',
+    'How CADGuide.tools collects, uses, and protects your information. GDPR and CCPA compliant. No data sold to third parties.',
   path: '/privacy',
 });
 
@@ -33,7 +33,7 @@ function PrivacyBody() {
           <p className="text-slate-500 mb-12">Last Updated: April 25, 2026</p>
 
           <div className="prose prose-slate lg:prose-lg max-w-none">
-            <p>At <strong>CADTools.cc</strong>, we take your privacy seriously. This policy describes how we collect, use, and protect your information when you visit our website.</p>
+            <p>At <strong>CADGuide.tools</strong>, we take your privacy seriously. This policy describes how we collect, use, and protect your information when you visit our website.</p>
 
             <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">1. Information We Collect</h2>
             <p>We may collect information in the following ways:</p>
@@ -59,13 +59,13 @@ function PrivacyBody() {
             <p>Our directory contains links to external software vendors. We are not responsible for the privacy practices or content of these third-party websites.</p>
 
             <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">5. Your Rights</h2>
-            <p>You have the right to request access to, correction of, or deletion of your personal information stored by us. Please contact us at <strong>support@cadtools.cc</strong> for any such requests.</p>
+            <p>You have the right to request access to, correction of, or deletion of your personal information stored by us. Please contact us at <strong>support@cadguide.tools</strong> for any such requests.</p>
 
             <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">6. Changes to This Policy</h2>
             <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
 
             <div className="mt-16 p-8 bg-slate-50 rounded-3xl border border-slate-100 italic text-slate-600">
-              If you have any questions about this Privacy Policy, please contact us at support@cadtools.cc.
+              If you have any questions about this Privacy Policy, please contact us at support@cadguide.tools.
             </div>
           </div>
         </div>

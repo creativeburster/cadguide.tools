@@ -5,8 +5,8 @@
 import type { Metadata } from "next";
 import type { Tool, Category } from "./data";
 
-export const SITE_URL = "https://cadtools.cc";
-export const SITE_NAME = "CADTools.cc";
+export const SITE_URL = "https://cadguide.tools";
+export const SITE_NAME = "CADGuide.tools";
 
 const MAX_DESC = 160;
 

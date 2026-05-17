@@ -8,7 +8,7 @@ import { ToolLogo } from '@/components/tool-logo';
 import { pageMetadata, websiteLd } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CADTools.cc: Compare 175+ Best CAD Software 2026 (Free & Pro)',
+  title: 'CADGuide.tools: Compare 175+ Best CAD Software 2026 (Free & Pro)',
   description:
     'Find the perfect design tool. Compare 175+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
   path: '/',

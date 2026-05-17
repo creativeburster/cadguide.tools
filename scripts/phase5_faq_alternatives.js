@@ -379,7 +379,7 @@ function pickBuyerQuestion(t) {
       .join(', ');
     return {
       q: `What are the best alternatives to ${name}?`,
-      a: `The closest alternatives within the ${cat} space are ${altNames}. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.`,
+      a: `The closest alternatives within the ${cat} space are ${altNames}. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.`,
     };
   }
 
