@@ -155,7 +155,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   return (
     <div className="bg-[#fcfdfe] min-h-screen pb-20">
       {/* Top Header - Standardized Width */}
-      <div className="bg-white border-b py-6">
+      <div className="bg-white border-b py-4 md:py-6">
         <div className="w-full max-w-[1360px] mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex items-center text-sm font-bold text-slate-400">
@@ -176,24 +176,24 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
         </div>
       </div>
 
-      <div className="w-full max-w-[1360px] mx-auto px-4 py-12">
-        <div className="flex flex-col lg:flex-row gap-12 items-start">
+      <div className="w-full max-w-[1360px] mx-auto px-4 py-6 md:py-12">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
           {/* Main Content Area (Two Column Layout) */}
-          <main className="flex-1 space-y-20 min-w-0">
+          <main className="flex-1 space-y-12 md:space-y-20 min-w-0">
             {/* Hero Section */}
             <section
               id="overview"
-              className="bg-white rounded-[48px] p-8 md:p-14 border border-slate-100 shadow-sm relative overflow-hidden"
+              className="bg-white rounded-[24px] md:rounded-[48px] p-5 md:p-14 border border-slate-100 shadow-sm relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-blue-600/5 rounded-full blur-[120px] -mr-24 -mt-24 md:-mr-48 md:-mt-48 hidden sm:block"></div>
 
               <div className="relative z-10">
-                <div className="flex flex-col md:flex-row items-start gap-10 mb-12">
+                <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 mb-8 md:mb-12">
                   <ToolLogo
                     slug={tool.slug} src={tool.logo_url}
                     websiteUrl={tool.official_url}
                     name={tool.name}
-                    className="w-24 h-24 md:w-40 md:h-40 rounded-[40px] shadow-2xl border-4 border-white shrink-0 bg-white"
+                    className="w-20 h-20 md:w-40 md:h-40 rounded-[24px] md:rounded-[40px] shadow-2xl border-2 md:border-4 border-white shrink-0 bg-white"
                   />
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -207,7 +207,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         {tool.pricing_type}
                       </Badge>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight leading-tight break-words">
                       {tool.name}
                     </h1>
                     <div className="flex flex-wrap items-center gap-4 md:gap-8">
@@ -259,7 +259,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 </div>
 
                 <div className="prose prose-slate max-w-none">
-                  <p className="text-2xl text-slate-600 leading-relaxed font-medium mb-10">
+                  <p className="text-base md:text-2xl text-slate-600 leading-relaxed font-medium mb-6 md:mb-10">
                     {linkifyToolNames(tool.description, allTools, {
                       currentSlug: tool.slug,
                       className:
@@ -270,13 +270,13 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   <div className="flex flex-wrap items-center gap-4 mb-10">
                     <Button
                       asChild
-                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-14 px-10 shadow-xl shadow-blue-200"
+                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 md:h-14 px-6 md:px-10 shadow-xl shadow-blue-200"
                     >
                       <a
                         href={tool.affiliate_url || tool.official_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-lg"
+                        className="flex items-center gap-2 md:gap-3 text-base md:text-lg"
                       >
                         Go to Website <ExternalLink className="w-5 h-5" />
                       </a>
@@ -284,7 +284,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     <Button
                       asChild
                       variant="outline"
-                      className="rounded-2xl border-blue-100 text-blue-600 hover:bg-blue-50 font-black h-14 px-8 text-lg"
+                      className="rounded-2xl border-blue-100 text-blue-600 hover:bg-blue-50 font-black h-12 md:h-14 px-5 md:px-8 text-base md:text-lg"
                     >
                       <Link
                         href={`/compare?ids=${tool.id}`}
@@ -309,27 +309,46 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
             </section>
 
-            {/* Sub-nav (Horizontal Sticky) */}
+            {/* Sub-nav (Horizontal Sticky)
+                Strategy:
+                - On narrow viewports: icon-only buttons, horizontally
+                  scrollable with edge fade gradients so users can tell
+                  there's more content off-screen.
+                - On md+: icon + label inline, labels visible.
+                - On lg+: gap widens so the bar fills the column.
+                The label still has `sr-only` on narrow widths so screen
+                readers and the title= tooltip both expose the full name. */}
             <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md">
-              <nav className="max-w-full w-full flex items-center gap-0.5 lg:gap-1.5 bg-white border border-slate-100 rounded-[20px] p-0.5 shadow-xl shadow-slate-200/20 overflow-x-auto whitespace-nowrap">
-                {menuItems.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollTo(item.id)}
-                    className={`px-1.5 py-1 rounded-[12px] text-[9px] lg:text-[11px] font-black uppercase tracking-widest transition-all shrink-0 ${
-                      activeSection === item.id
-                        ? "bg-blue-600 text-white shadow-lg shadow-blue-200"
-                        : "text-slate-400 hover:text-slate-900"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </nav>
+              <div className="relative">
+                {/* Left & right fade gradients telegraph horizontal scroll. */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-6 z-10 bg-gradient-to-r from-white to-transparent rounded-l-[20px]" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-6 z-10 bg-gradient-to-l from-white to-transparent rounded-r-[20px]" />
+                <nav
+                  aria-label="Section navigation"
+                  className="scrollbar-none flex items-center gap-1 md:gap-1.5 lg:gap-2 bg-white border border-slate-100 rounded-[20px] p-1.5 shadow-xl shadow-slate-200/20 overflow-x-auto whitespace-nowrap"
+                >
+                  {menuItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollTo(item.id)}
+                      title={item.label}
+                      aria-label={item.label}
+                      className={`shrink-0 inline-flex items-center gap-1.5 px-2.5 md:px-3 py-2 rounded-[12px] text-[10px] lg:text-[11px] font-black uppercase tracking-wider transition-all ${
+                        activeSection === item.id
+                          ? "bg-blue-600 text-white shadow-lg shadow-blue-200"
+                          : "text-slate-400 hover:text-slate-900"
+                      }`}
+                    >
+                      <span className="shrink-0">{item.icon}</span>
+                      <span className="hidden md:inline">{item.label}</span>
+                    </button>
+                  ))}
+                </nav>
+              </div>
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
               {[
                 {
                   icon: <Cpu className="w-6 h-6" />,
@@ -354,9 +373,9 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white p-8 rounded-[36px] border border-slate-100 shadow-sm flex flex-col items-center text-center transition-all hover:border-blue-200 hover:-translate-y-1"
+                  className="bg-white p-5 md:p-8 rounded-[20px] md:rounded-[36px] border border-slate-100 shadow-sm flex flex-col items-center text-center transition-all hover:border-blue-200 hover:-translate-y-1"
                 >
-                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 mb-4">
+                  <div className="w-10 h-10 md:w-14 md:h-14 bg-slate-50 rounded-xl md:rounded-2xl flex items-center justify-center text-slate-400 mb-3 md:mb-4">
                     {stat.icon}
                   </div>
                   <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">
@@ -370,12 +389,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
             </div>
 
             {/* Pricing Section */}
-            <section id="pricing" className="scroll-mt-36 space-y-10">
+            <section id="pricing" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="flex items-center gap-5">
                 <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 shadow-sm">
                   <CreditCard className="w-6 h-6" />
                 </div>
-                <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                   Full Pricing Breakdown
                 </h2>
               </div>
@@ -384,19 +403,19 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 {tool.pricing_tiers?.map((tier, i) => (
                   <Card
                     key={i}
-                    className={`rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl scale-[1.03]" : "border-slate-100"}`}
+                    className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl md:scale-[1.03]" : "border-slate-100"}`}
                   >
                     {tier.is_popular && (
                       <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] text-center py-3">
                         Recommended
                       </div>
                     )}
-                    <CardHeader className="text-center p-10 pb-6">
+                    <CardHeader className="text-center p-6 md:p-10 pb-4 md:pb-6">
                       <div className="text-slate-400 font-black uppercase text-[10px] tracking-widest mb-4">
                         {tier.name}
                       </div>
                       <div className="flex items-baseline justify-center gap-1">
-                        <span className="text-5xl font-black text-slate-900">
+                        <span className="text-4xl md:text-5xl font-black text-slate-900">
                           ${tier.price}
                         </span>
                         <span className="text-slate-400 font-bold text-sm tracking-tight">
@@ -404,7 +423,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         </span>
                       </div>
                     </CardHeader>
-                    <CardContent className="p-10 pt-4">
+                    <CardContent className="p-6 md:p-10 pt-4">
                       <Separator className="mb-8 opacity-40" />
                       <ul className="space-y-5 mb-10">
                         {tier.features?.map((f, j) => (
@@ -429,12 +448,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
             </section>
 
             {/* Features Section */}
-            <section id="features" className="scroll-mt-36 space-y-10">
+            <section id="features" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="flex items-center gap-5">
                 <div className="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600">
                   <Zap className="w-6 h-6" />
                 </div>
-                <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                   Key Capabilities
                 </h2>
               </div>
@@ -466,17 +485,17 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
             </section>
 
             {/* Tech Specs Section */}
-            <section id="specs" className="scroll-mt-36 space-y-10">
+            <section id="specs" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="flex items-center gap-5">
                 <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600">
                   <BarChart3 className="w-6 h-6" />
                 </div>
-                <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                   Technical Audit
                 </h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
-                <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                   <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
                     Environment Support
                   </h4>
@@ -507,7 +526,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     </div>
                   </div>
                 </Card>
-                <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                   <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
                     Industry Standards
                   </h4>
@@ -527,19 +546,19 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
             {/* Compatibility Section (only when we have enrichment data) */}
             {hasCompatibility && (
-              <section id="compatibility" className="scroll-mt-36 space-y-10">
+              <section id="compatibility" className="scroll-mt-36 space-y-6 md:space-y-10">
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600">
                     <Plug className="w-6 h-6" />
                   </div>
-                  <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                     Compatibility & Interoperability
                   </h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
                   {(tool.file_formats_in?.length ||
                     tool.file_formats_out?.length) && (
-                    <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                    <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                       <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                         <FileText className="w-4 h-4" /> File Format Support
                       </h4>
@@ -582,7 +601,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     </Card>
                   )}
                   {tool.integrations && tool.integrations.length > 0 && (
-                    <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                    <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                       <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                         <Plug className="w-4 h-4" /> Native Integrations
                       </h4>
@@ -600,7 +619,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   )}
                   {tool.deployment_options &&
                     tool.deployment_options.length > 0 && (
-                      <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                      <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                         <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                           <Cloud className="w-4 h-4" /> Deployment Options
                         </h4>
@@ -617,7 +636,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       </Card>
                     )}
                   {tool.languages && tool.languages.length > 0 && (
-                    <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                    <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                       <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                         <Languages className="w-4 h-4" /> Interface Languages
                       </h4>
@@ -635,7 +654,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   )}
                   {tool.api_sdk &&
                     (tool.api_sdk.has_api || tool.api_sdk.has_sdk) && (
-                      <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm md:col-span-2">
+                      <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm md:col-span-2">
                         <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                           <Code2 className="w-4 h-4" /> API & Developer Access
                         </h4>
@@ -688,12 +707,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
             {/* Trust & Support Section (only when we have enrichment data) */}
             {hasTrust && (
-              <section id="trust" className="scroll-mt-36 space-y-10">
+              <section id="trust" className="scroll-mt-36 space-y-6 md:space-y-10">
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600">
                     <Award className="w-6 h-6" />
                   </div>
-                  <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                     Trust & Support
                   </h2>
                 </div>
@@ -736,7 +755,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 <div className="grid md:grid-cols-2 gap-8">
                   {tool.support_channels &&
                     tool.support_channels.length > 0 && (
-                      <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                      <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                         <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                           <MessageSquare className="w-4 h-4" /> Support Channels
                         </h4>
@@ -754,7 +773,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     )}
                   {tool.security_compliance &&
                     tool.security_compliance.length > 0 && (
-                      <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm">
+                      <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                         <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                           <Lock className="w-4 h-4" /> Security & Compliance
                         </h4>
@@ -771,7 +790,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       </Card>
                     )}
                   {tool.license_types && tool.license_types.length > 0 && (
-                    <Card className="rounded-[40px] p-10 border-slate-100 shadow-sm md:col-span-2">
+                    <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm md:col-span-2">
                       <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
                         <Tag className="w-4 h-4" /> License Types
                       </h4>
@@ -792,9 +811,9 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
             )}
 
             {/* Pros & Cons Section */}
-            <section id="reviews" className="scroll-mt-36 space-y-10">
+            <section id="reviews" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white p-12 rounded-[48px] border-4 border-green-50 shadow-sm">
+                <div className="bg-white p-6 md:p-12 rounded-[24px] md:rounded-[48px] border-4 border-green-50 shadow-sm">
                   <h3 className="text-2xl font-black text-slate-900 mb-10 flex items-center gap-4">
                     <CheckCircle2 className="w-8 h-8 text-green-500" /> The Pros
                   </h3>
@@ -810,7 +829,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     ))}
                   </ul>
                 </div>
-                <div className="bg-white p-12 rounded-[48px] border-4 border-red-50 shadow-sm">
+                <div className="bg-white p-6 md:p-12 rounded-[24px] md:rounded-[48px] border-4 border-red-50 shadow-sm">
                   <h3 className="text-2xl font-black text-slate-900 mb-10 flex items-center gap-4">
                     <XCircle className="w-8 h-8 text-red-500" /> The Cons
                   </h3>
@@ -829,15 +848,15 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
 
               {/* Verdict Highlight */}
-              <div className="bg-slate-900 text-white rounded-[56px] p-8 md:p-16 relative overflow-hidden shadow-2xl">
+              <div className="bg-slate-900 text-white rounded-[28px] md:rounded-[56px] p-6 md:p-16 relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-600/10 rounded-full blur-[120px] -mr-[150px] -mt-[150px] md:-mr-[250px] md:-mt-[250px] hidden sm:block"></div>
                 <div className="relative z-10">
-                  <div className="flex items-center gap-5 mb-12">
-                    <div className="w-16 h-16 bg-blue-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/30">
-                      <ShieldCheck className="w-9 h-9 text-white" />
+                  <div className="flex items-center gap-4 md:gap-5 mb-8 md:mb-12">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/30 shrink-0">
+                      <ShieldCheck className="w-6 h-6 md:w-9 md:h-9 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-3xl font-black tracking-tight">
+                      <h3 className="text-xl md:text-3xl font-black tracking-tight">
                         CADTools Verdict
                       </h3>
                       <p className="text-blue-400 font-black uppercase text-[10px] tracking-[0.4em] mt-1">
@@ -845,10 +864,10 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       </p>
                     </div>
                   </div>
-                  <p className="text-3xl md:text-4xl text-blue-50 font-black leading-tight italic mb-12">
+                  <p className="text-lg md:text-3xl lg:text-4xl text-blue-50 font-black leading-tight italic mb-8 md:mb-12">
                     "{tool.expert_verdict}"
                   </p>
-                  <div className="flex flex-col md:flex-row md:items-center justify-between border-t border-white/5 pt-12 gap-8">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between border-t border-white/5 pt-6 md:pt-12 gap-6 md:gap-8">
                     <div className="flex items-center gap-4">
                       <ToolLogo
                         slug={tool.slug} src={tool.logo_url}
@@ -875,12 +894,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
             </section>
 
             {/* FAQ Section */}
-            <section id="faq" className="scroll-mt-36 space-y-10">
+            <section id="faq" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="flex items-center gap-5">
                 <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600">
                   <HelpCircle className="w-6 h-6" />
                 </div>
-                <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                   Expert Q&A
                 </h2>
               </div>
@@ -888,7 +907,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 {tool.faqs.map((faq, i) => (
                   <div
                     key={i}
-                    className="bg-white p-10 rounded-[40px] border border-slate-100 shadow-sm group hover:border-blue-200 transition-all"
+                    className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[40px] border border-slate-100 shadow-sm group hover:border-blue-200 transition-all"
                   >
                     <h4 className="font-black text-slate-900 mb-6 text-lg flex items-start gap-4">
                       <span className="text-blue-600 opacity-20 text-4xl leading-none">
@@ -905,13 +924,13 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
             </section>
 
             {/* Alternatives Section */}
-            <section id="alternatives" className="scroll-mt-36 space-y-10">
+            <section id="alternatives" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600">
                     <Search className="w-6 h-6" />
                   </div>
-                  <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                     Compare Alternatives
                   </h2>
                 </div>
@@ -935,7 +954,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     alt && (
                       <Card
                         key={alt.id}
-                        className="p-10 text-center rounded-[48px] border-slate-100 hover:border-blue-600 transition-all group shadow-sm hover:shadow-2xl"
+                        className="p-6 md:p-10 text-center rounded-[24px] md:rounded-[48px] border-slate-100 hover:border-blue-600 transition-all group shadow-sm hover:shadow-2xl"
                       >
                         <ToolLogo
                           slug={alt.slug} src={alt.logo_url}
@@ -963,28 +982,28 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
           </main>
 
           {/* Right Sidebar - Conversion & Tools */}
-          <aside className="w-full lg:w-[400px] space-y-10">
-            <div className="sticky top-28 space-y-10">
+          <aside className="w-full lg:w-[400px] space-y-6 md:space-y-10">
+            <div className="lg:sticky lg:top-28 space-y-6 md:space-y-10">
               {/* Primary Purchase Card */}
-              <Card className="rounded-[40px] border-2 border-blue-600 shadow-2xl shadow-blue-900/10 overflow-hidden flex flex-col group bg-[#0f172a]">
-                <div className="bg-[#0f172a] text-white p-10 pb-8 relative overflow-hidden">
+              <Card className="rounded-[24px] md:rounded-[40px] border-2 border-blue-600 shadow-2xl shadow-blue-900/10 overflow-hidden flex flex-col group bg-[#0f172a]">
+                <div className="bg-[#0f172a] text-white p-6 md:p-10 pb-6 md:pb-8 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-blue-600/20 transition-colors"></div>
                   <div className="relative z-10">
                     <div className="text-blue-400 font-black uppercase text-[10px] tracking-[0.3em] mb-4">
                       Official Release
                     </div>
-                    <div className="text-3xl md:text-4xl font-black leading-tight">
+                    <div className="text-2xl md:text-4xl font-black leading-tight">
                       Get Licensed <br />
                       {tool.name}
                     </div>
                   </div>
                 </div>
-                <CardContent className="p-10 flex-1 bg-white relative z-10">
-                  <div className="flex items-baseline gap-2 mb-10">
-                    <span className="text-slate-400 text-lg font-bold">
+                <CardContent className="p-6 md:p-10 flex-1 bg-white relative z-10">
+                  <div className="flex items-baseline gap-2 mb-6 md:mb-10">
+                    <span className="text-slate-400 text-base md:text-lg font-bold">
                       From
                     </span>
-                    <span className="text-5xl font-black text-slate-900">
+                    <span className="text-4xl md:text-5xl font-black text-slate-900">
                       ${tool.starting_price}
                     </span>
                     <span className="text-slate-400 font-bold text-sm">
@@ -1009,7 +1028,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
                   <Button
                     asChild
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black h-20 rounded-[24px] shadow-2xl shadow-blue-200 text-xl transition-all active:scale-95"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black h-16 md:h-20 rounded-[24px] shadow-2xl shadow-blue-200 text-lg md:text-xl transition-all active:scale-95"
                   >
                     <a
                       href={tool.affiliate_url || tool.official_url}
@@ -1026,7 +1045,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </Card>
 
               {/* AI Matchmaker Sidebar Card (Restored) */}
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-10 rounded-[48px] text-white relative overflow-hidden shadow-xl shadow-blue-200 group">
+              <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-6 md:p-10 rounded-[24px] md:rounded-[48px] text-white relative overflow-hidden shadow-xl shadow-blue-200 group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
                 <div className="relative z-10">
                   <Sparkles className="w-10 h-10 mb-6 text-blue-200" />
@@ -1047,7 +1066,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
 
               {/* Newsletter Subscription */}
-              <div className="bg-white p-10 rounded-[48px] border border-slate-100 shadow-sm text-center">
+              <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm text-center">
                 <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-[24px] flex items-center justify-center mx-auto mb-6">
                   <Mail className="w-8 h-8" />
                 </div>
