@@ -167,6 +167,49 @@ export function comparisonPairs(): ComparisonPair[] {
   return out;
 }
 
+/** ---------- Editor-picked top comparisons -------------------------
+ * The dozen pairs we surface as discovery cards on the `/compare` page.
+ * Each pair has a short editorial blurb so the card has copy beyond
+ * "X vs Y". Pairs that point to unknown slugs are silently dropped so
+ * the UI degrades gracefully if the catalog changes. The slug pair is
+ * passed to `pairSlugFor` for canonicalisation, matching the same
+ * alphabetised URL the static route uses.
+ */
+const EDITOR_PICK_PAIRS: { a: string; b: string; blurb: string }[] = [
+  { a: "autocad", b: "bricscad", blurb: "The 2D-CAD industry standard meets the AutoCAD-compatible challenger that costs a fraction." },
+  { a: "solidworks", b: "fusion-360", blurb: "Per-seat parametric MCAD vs the subscription cloud workflow Autodesk is betting on." },
+  { a: "revit", b: "archicad", blurb: "The two BIM authoring suites architects keep weighing — workflow, ecosystem, price." },
+  { a: "autocad", b: "revit", blurb: "Should your firm still draft in 2D, or jump to a full BIM model?" },
+  { a: "blender", b: "maya", blurb: "Open-source 3D powerhouse vs the studio-grade animation standard." },
+  { a: "kicad", b: "altium-designer", blurb: "Free, open-source PCB design vs the enterprise EDA suite of choice." },
+  { a: "lumion", b: "twinmotion", blurb: "Real-time architectural visualisation, head to head." },
+  { a: "fusion-360", b: "onshape", blurb: "Two cloud-first MCAD platforms with very different licensing philosophies." },
+  { a: "solidworks", b: "autodesk-inventor", blurb: "Dassault vs Autodesk for mid-range parametric MCAD." },
+  { a: "ansys-fluent", b: "comsol-multiphysics", blurb: "Dedicated CFD solver vs the multiphysics generalist." },
+  { a: "ultimaker-cura", b: "prusaslicer", blurb: "The battle of the top open-source FDM slicers." },
+  { a: "catia", b: "siemens-nx", blurb: "High-end aerospace and automotive CAD, going toe to toe." },
+];
+
+export interface EditorPickPair extends ComparisonPair {
+  blurb: string;
+}
+
+/**
+ * Return the editor-picked comparison pairs, resolved against the live
+ * catalog. Pairs whose slugs no longer exist are dropped.
+ */
+export function editorPickPairs(): EditorPickPair[] {
+  const out: EditorPickPair[] = [];
+  for (const { a: aSlug, b: bSlug, blurb } of EDITOR_PICK_PAIRS) {
+    if (aSlug === bSlug) continue;
+    const a = getToolBySlug(aSlug);
+    const b = getToolBySlug(bSlug);
+    if (!a || !b) continue;
+    out.push({ pairSlug: pairSlugFor(aSlug, bSlug), a, b, blurb });
+  }
+  return out;
+}
+
 /** Parse "<a>-vs-<b>" and return the two tools, or null if unknown. */
 export function parseComparisonPair(pairSlug: string): ComparisonPair | null {
   const m = pairSlug.match(/^([a-z0-9-]+)-vs-([a-z0-9-]+)$/i);

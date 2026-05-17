@@ -11,6 +11,7 @@ export function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Directory', href: '/tools' },
+    { name: 'Best Lists', href: '/best' },
     { name: 'Compare', href: '/compare' },
     { name: 'Matchmaker', href: '/matchmaker' },
     { name: 'Deals', href: '/deals' },
@@ -28,7 +29,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base font-semibold text-slate-600">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-7 text-sm lg:text-base font-semibold text-slate-600">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-blue-600 transition-colors">{link.name}</Link>
             ))}
