@@ -6,7 +6,7 @@ import { ImageResponse } from 'next/og';
 // was logged at build time as "currently incompatible". Removing both leaves
 // the default static optimization in place and silences that warning.
 
-export const alt = 'CADTools.cc - The Ultimate CAD Software Directory';
+export const alt = 'CADGuide.tools - The Ultimate CAD Software Directory';
 export const size = {
   width: 1200,
   height: 630,
@@ -61,7 +61,7 @@ export default async function Image() {
               letterSpacing: '-2px',
             }}
           >
-            CADTools.cc
+            CADGuide.tools
           </div>
         </div>
         

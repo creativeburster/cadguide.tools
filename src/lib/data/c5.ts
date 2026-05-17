@@ -354,7 +354,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Mastercam?",
-      a: "The closest alternatives within the CAE/CAM space are SolidCAM, Fusion 360, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are SolidCAM, Fusion 360, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -449,7 +449,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to nTop?",
-      a: "The closest alternatives within the CAE/CAM space are ANSYS Mechanical, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are ANSYS Mechanical, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -532,7 +532,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SolidCAM?",
-      a: "The closest alternatives within the CAE/CAM space are Mastercam, CAMWorks, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are Mastercam, CAMWorks, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -627,7 +627,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Magics?",
-      a: "The closest alternatives within the CAE/CAM space are MeshLab, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are MeshLab, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -711,7 +711,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to OpenCASCADE?",
-      a: "The closest alternatives within the CAE/CAM space are FreeCAD, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are FreeCAD, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -771,7 +771,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to VISI Modelling?",
-      a: "The closest alternatives within the CAE/CAM space are Cimatron, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are Cimatron, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -836,7 +836,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Cimatron?",
-      a: "The closest alternatives within the CAE/CAM space are VISI Modelling, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are VISI Modelling, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -906,7 +906,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ANSYS Mechanical?",
-      a: "The closest alternatives within the CAE/CAM space are Mastercam, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are Mastercam, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1036,7 +1036,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MSC Nastran?",
-      a: "The closest alternatives within the CAE/CAM space are Siemens NX, Mastercam, nTop. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are Siemens NX, Mastercam, nTop. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1141,7 +1141,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Altair HyperWorks?",
-      a: "The closest alternatives within the CAE/CAM space are SolidCAM, Mastercam, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are SolidCAM, Mastercam, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -1240,7 +1240,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ESI Visual-Environment?",
-      a: "The closest alternatives within the CAE/CAM space are Siemens NX, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are Siemens NX, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1309,7 +1309,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CAMWorks?",
-      a: "The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1377,7 +1377,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to TopSolid?",
-      a: "The closest alternatives within the CAE/CAM space are BeckerCAD, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are BeckerCAD, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1442,7 +1442,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to BeckerCAD?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1507,7 +1507,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CADmeister?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1572,7 +1572,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Visi?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1637,7 +1637,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Edgecam?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1702,7 +1702,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to KISSsoft?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1767,7 +1767,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to FeatureCAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1834,7 +1834,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to GibbsCAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1901,7 +1901,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to hyperMILL?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1968,7 +1968,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Tebis?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2033,7 +2033,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to WorkNC?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2098,7 +2098,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SURFCAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2165,7 +2165,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to BobCAD-CAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2232,7 +2232,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to AutoForm?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2297,7 +2297,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Moldflow?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2362,7 +2362,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Moldex3D?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2429,7 +2429,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to WoodWOP?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2494,7 +2494,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to AlphaCAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2559,7 +2559,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Radan?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2624,7 +2624,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Lantek Expert?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2691,7 +2691,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SigmaNEST?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2758,7 +2758,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MetaCAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2847,7 +2847,7 @@ export const c5Tools: Tool[] = [
     a: 'ANSYS Fluent works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to ANSYS Fluent?',
-    a: 'The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, ANSYS Workbench. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, ANSYS Workbench. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
 
   alternatives: ['solidcam', 'altair-hyperworks', 'ansys-workbench'],
@@ -2926,7 +2926,7 @@ export const c5Tools: Tool[] = [
     a: 'ANSYS Workbench works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to ANSYS Workbench?',
-    a: 'The closest alternatives within the CAE/CAM space are Simcenter STAR-CCM+, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Simcenter STAR-CCM+, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['simcenter-star-ccm', 'caesar-ii', 'aspen-hysys'],
   detailed_features: [],
@@ -2996,7 +2996,7 @@ export const c5Tools: Tool[] = [
     a: 'ANSYS Discovery works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to ANSYS Discovery?',
-    a: 'The closest alternatives within the CAE/CAM space are Altair Inspire, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Altair Inspire, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['altair-inspire', 'pv-elite', 'staad-pro'],
   detailed_features: [],
@@ -3066,7 +3066,7 @@ export const c5Tools: Tool[] = [
     a: 'Abaqus works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Abaqus?',
-    a: 'The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['siemens-nx', 'esi-visual-environment', 'ansys-fluent'],
   detailed_features: [],
@@ -3137,7 +3137,7 @@ export const c5Tools: Tool[] = [
     a: 'COMSOL Multiphysics works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to COMSOL Multiphysics?',
-    a: 'The closest alternatives within the CAE/CAM space are CSI ETABS, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are CSI ETABS, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
 
   alternatives: ['etabs', 'sap2000', 'femap'],
@@ -3216,7 +3216,7 @@ export const c5Tools: Tool[] = [
     a: 'LS-DYNA works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to LS-DYNA?',
-    a: 'The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['siemens-nx', 'esi-visual-environment', 'ansys-fluent'],
   detailed_features: [],
@@ -3286,7 +3286,7 @@ export const c5Tools: Tool[] = [
     a: 'Simcenter STAR-CCM+ works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Simcenter STAR-CCM+?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-workbench', 'caesar-ii', 'aspen-hysys'],
   detailed_features: [],
@@ -3356,7 +3356,7 @@ export const c5Tools: Tool[] = [
     a: 'OpenFOAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to OpenFOAM?',
-    a: 'The closest alternatives within the CAE/CAM space are OpenCASCADE, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are OpenCASCADE, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['opencascade', 'ansys-discovery', 'altair-inspire'],
   detailed_features: [],
@@ -3426,7 +3426,7 @@ export const c5Tools: Tool[] = [
     a: 'SimScale works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to SimScale?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'pv-elite'],
   detailed_features: [],
@@ -3496,7 +3496,7 @@ export const c5Tools: Tool[] = [
     a: 'Femap works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Femap?',
-    a: 'The closest alternatives within the CAE/CAM space are CSI SAP2000, COMSOL Multiphysics, CSI ETABS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are CSI SAP2000, COMSOL Multiphysics, CSI ETABS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['sap2000', 'comsol-multiphysics', 'etabs'],
   detailed_features: [],
@@ -3566,7 +3566,7 @@ export const c5Tools: Tool[] = [
     a: 'Altair Inspire works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Altair Inspire?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'pv-elite', 'staad-pro'],
   detailed_features: [],
@@ -3636,7 +3636,7 @@ export const c5Tools: Tool[] = [
     a: 'MSC Patran works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to MSC Patran?',
-    a: 'The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, Bentley STAAD.Pro, Bentley AutoPIPE. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, Bentley STAAD.Pro, Bentley AutoPIPE. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-robot', 'staad-pro', 'autopipe'],
   detailed_features: [],
@@ -3706,7 +3706,7 @@ export const c5Tools: Tool[] = [
     a: 'MSC Adams works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to MSC Adams?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'pv-elite'],
   detailed_features: [],
@@ -3776,7 +3776,7 @@ export const c5Tools: Tool[] = [
     a: 'CAESAR II works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to CAESAR II?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-workbench', 'simcenter-star-ccm', 'aspen-hysys'],
   detailed_features: [],
@@ -3846,7 +3846,7 @@ export const c5Tools: Tool[] = [
     a: 'Bentley AutoPIPE works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Bentley AutoPIPE?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'pv-elite'],
   detailed_features: [],
@@ -3916,7 +3916,7 @@ export const c5Tools: Tool[] = [
     a: 'PV Elite works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to PV Elite?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'staad-pro'],
   detailed_features: [],
@@ -3982,7 +3982,7 @@ export const c5Tools: Tool[] = [
     a: 'AspenTech Aspen HYSYS works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to AspenTech Aspen HYSYS?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, CAESAR II. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, CAESAR II. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-workbench', 'simcenter-star-ccm', 'caesar-ii'],
   detailed_features: [],
@@ -4052,7 +4052,7 @@ export const c5Tools: Tool[] = [
     a: 'CSI SAP2000 works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to CSI SAP2000?',
-    a: 'The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI ETABS, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI ETABS, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['comsol-multiphysics', 'etabs', 'femap'],
   detailed_features: [],
@@ -4122,7 +4122,7 @@ export const c5Tools: Tool[] = [
     a: 'CSI ETABS works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to CSI ETABS?',
-    a: 'The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['comsol-multiphysics', 'sap2000', 'femap'],
   detailed_features: [],
@@ -4192,7 +4192,7 @@ export const c5Tools: Tool[] = [
     a: 'Bentley STAAD.Pro works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Bentley STAAD.Pro?',
-    a: 'The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-robot', 'ansys-discovery', 'altair-inspire'],
   detailed_features: [],
@@ -4262,7 +4262,7 @@ export const c5Tools: Tool[] = [
     a: 'Tekla Tedds works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Tekla Tedds?',
-    a: 'The closest alternatives within the CAE/CAM space are RISA-3D, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are RISA-3D, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['risa-3d', 'ansys-discovery', 'simscale'],
   detailed_features: [],
@@ -4332,7 +4332,7 @@ export const c5Tools: Tool[] = [
     a: 'Autodesk Robot Structural Analysis works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Autodesk Robot Structural Analysis?',
-    a: 'The closest alternatives within the CAE/CAM space are Bentley STAAD.Pro, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Bentley STAAD.Pro, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['staad-pro', 'ansys-discovery', 'altair-inspire'],
   detailed_features: [],
@@ -4402,7 +4402,7 @@ export const c5Tools: Tool[] = [
     a: 'IDEA StatiCa works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to IDEA StatiCa?',
-    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, SimScale, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, SimScale, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'simscale', 'altair-inspire'],
   detailed_features: [],
@@ -4472,7 +4472,7 @@ export const c5Tools: Tool[] = [
     a: 'RISA-3D works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to RISA-3D?',
-    a: 'The closest alternatives within the CAE/CAM space are Tekla Tedds, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the CAE/CAM space are Tekla Tedds, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['tekla-tedds', 'ansys-discovery', 'simscale'],
   detailed_features: [],

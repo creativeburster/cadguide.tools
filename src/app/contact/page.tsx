@@ -4,9 +4,9 @@ import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Contact CADTools.cc',
+  title: 'Contact CADGuide.tools',
   description:
-    'Get in touch with the CADTools.cc team for partnerships, software submissions, listing corrections, press inquiries, or general feedback.',
+    'Get in touch with the CADGuide.tools team for partnerships, software submissions, listing corrections, press inquiries, or general feedback.',
   path: '/contact',
 });
 
@@ -45,7 +45,7 @@ function ContactBody() {
                 <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center shrink-0 text-xl">📧</div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1 text-lg">Email Support</h3>
-                  <p className="text-blue-600 font-medium">support@cadtools.cc</p>
+                  <p className="text-blue-600 font-medium">support@cadguide.tools</p>
                   <p className="text-sm text-slate-500 mt-1">We typically respond within 24-48 business hours.</p>
                 </div>
               </div>
@@ -64,7 +64,7 @@ function ContactBody() {
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1 text-lg">Partnerships</h3>
                   <p className="text-slate-600">Interested in advertising or a featured listing?</p>
-                  <p className="text-blue-600 font-medium">partners@cadtools.cc</p>
+                  <p className="text-blue-600 font-medium">partners@cadguide.tools</p>
                 </div>
               </div>
             </div>

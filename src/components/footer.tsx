@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="text-2xl font-black text-white flex items-center gap-2">
-              <span className="text-blue-500">CAD</span>Tools.cc
+              <span className="text-blue-500">CAD</span>Guide.tools
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
               The world's premier independent directory for CAD, BIM, and Engineering software. Deep-diving into 175+ tools to help professionals make smarter tech decisions.
@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium text-slate-600">
           <div className="flex items-center gap-4">
-            <span className="bg-slate-900 px-3 py-1 rounded-full border border-slate-800">© {new Date().getFullYear()} CADTools.cc</span>
+            <span className="bg-slate-900 px-3 py-1 rounded-full border border-slate-800">© {new Date().getFullYear()} CADGuide.tools</span>
             <span className="hidden md:inline">•</span>
             <span className="text-slate-500">Independent Analysis • No Paid Rankings</span>
           </div>

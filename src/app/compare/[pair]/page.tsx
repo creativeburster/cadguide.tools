@@ -148,7 +148,7 @@ function articleLd(a: Tool, b: Tool, pairSlug: string) {
     mainEntityOfPage: `${SITE_URL}/compare/${pairSlug}`,
     publisher: {
       '@type': 'Organization',
-      name: 'CADTools.cc',
+      name: 'CADGuide.tools',
       url: SITE_URL,
     },
     about: [

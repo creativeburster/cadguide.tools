@@ -1925,7 +1925,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Solid Edge?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, Autodesk Inventor, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, Autodesk Inventor, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -2439,7 +2439,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to OpenSCAD?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolveSpace, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolveSpace, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2552,7 +2552,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Shapr3D?",
-      a: "The closest alternatives within the 3D Modeling space are Fusion 360, SolidWorks, Onshape. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are Fusion 360, SolidWorks, Onshape. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -2638,7 +2638,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SolveSpace?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2731,7 +2731,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Alibre Design?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, VariCAD, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, VariCAD, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2806,7 +2806,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to VariCAD?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolidWorks, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolidWorks, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -2872,7 +2872,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Maya?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -3258,7 +3258,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SolveSpace Pro?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3329,7 +3329,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to IronCAD?",
-      a: "The closest alternatives within the 3D Modeling space are Rhino 3D, ZW3D, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are Rhino 3D, ZW3D, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -3460,7 +3460,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to KeyCreator?",
-      a: "The closest alternatives within the 3D Modeling space are Autodesk Inventor, Fusion 360, PTC Creo. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are Autodesk Inventor, Fusion 360, PTC Creo. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3530,7 +3530,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Geomagic Design X?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, Autodesk Inventor. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, Autodesk Inventor. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3600,7 +3600,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Alias AutoStudio?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -3674,7 +3674,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ZW3D?",
-      a: "The closest alternatives within the 3D Modeling space are Alibre Design, Rhino 3D, IronCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the 3D Modeling space are Alibre Design, Rhino 3D, IronCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -3834,7 +3834,7 @@ export const c2Tools: Tool[] = [
     a: 'Plasticity works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Plasticity?',
-    a: 'The closest alternatives within the 3D Modeling space are MoI3D, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the 3D Modeling space are MoI3D, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['moi3d', 'alibre-design', 'zw3d'],
   detailed_features: [],
@@ -3904,7 +3904,7 @@ export const c2Tools: Tool[] = [
     a: 'MoI3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to MoI3D?',
-    a: 'The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['plasticity', 'alibre-design', 'zw3d'],
   detailed_features: [],

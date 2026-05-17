@@ -345,7 +345,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Eagle?",
-      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Synopsys Fusion Compiler. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Synopsys Fusion Compiler. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -419,7 +419,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to EPLAN Electric P8?",
-      a: "The closest alternatives within the EDA space are Altium Designer, Synopsys Fusion Compiler, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are Altium Designer, Synopsys Fusion Compiler, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
@@ -551,7 +551,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Synopsys Fusion Compiler?",
-      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -619,7 +619,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to EPLAN?",
-      a: "The closest alternatives within the EDA space are CR-8000, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are CR-8000, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -686,7 +686,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CR-8000?",
-      a: "The closest alternatives within the EDA space are EPLAN, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -753,7 +753,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Quadcept?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -819,7 +819,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Allegro PCB?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -884,7 +884,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to OrCAD?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -951,7 +951,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to PADS Professional?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1018,7 +1018,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Xpedition?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1085,7 +1085,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Pulsonix?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1150,7 +1150,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Target 3001!?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.",
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
   tech_specs: {
@@ -1226,7 +1226,7 @@ export const c6Tools: Tool[] = [
     a: 'KiCad works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to KiCad?',
-    a: 'The closest alternatives within the EDA space are LTspice, EasyEDA, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are LTspice, EasyEDA, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ltspice', 'easyeda', 'proteus-design-suite'],
   detailed_features: [],
@@ -1296,7 +1296,7 @@ export const c6Tools: Tool[] = [
     a: 'EasyEDA works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to EasyEDA?',
-    a: 'The closest alternatives within the EDA space are Proteus Design Suite, NI Multisim, KiCad. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are Proteus Design Suite, NI Multisim, KiCad. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['proteus-design-suite', 'multisim', 'kicad'],
   detailed_features: [],
@@ -1366,7 +1366,7 @@ export const c6Tools: Tool[] = [
     a: 'DipTrace works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to DipTrace?',
-    a: 'The closest alternatives within the EDA space are Proteus Design Suite, EasyEDA, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are Proteus Design Suite, EasyEDA, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['proteus-design-suite', 'easyeda', 'multisim'],
   detailed_features: [],
@@ -1436,7 +1436,7 @@ export const c6Tools: Tool[] = [
     a: 'NI Multisim works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to NI Multisim?',
-    a: 'The closest alternatives within the EDA space are Altium 365, Eagle, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are Altium 365, Eagle, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['altium-365', 'eagle', 'altium-designer'],
   detailed_features: [],
@@ -1506,7 +1506,7 @@ export const c6Tools: Tool[] = [
     a: 'LTspice works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to LTspice?',
-    a: 'The closest alternatives within the EDA space are CircuitMaker, KiCad, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are CircuitMaker, KiCad, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['circuitmaker', 'kicad', 'altium-designer'],
   detailed_features: [],
@@ -1576,7 +1576,7 @@ export const c6Tools: Tool[] = [
     a: 'Proteus Design Suite works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Proteus Design Suite?',
-    a: 'The closest alternatives within the EDA space are DipTrace, NI Multisim, EasyEDA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are DipTrace, NI Multisim, EasyEDA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['diptrace', 'multisim', 'easyeda'],
   detailed_features: [],
@@ -1647,7 +1647,7 @@ export const c6Tools: Tool[] = [
     a: 'Altium 365 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to Altium 365?',
-    a: 'The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
 
   alternatives: ['altium-designer', 'eplan-electric-p8', 'multisim'],
@@ -1726,7 +1726,7 @@ export const c6Tools: Tool[] = [
     a: 'CircuitMaker works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
   }, {
     q: 'What are the best alternatives to CircuitMaker?',
-    a: 'The closest alternatives within the EDA space are LTspice, NI Multisim, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADTools comparison tool.',
+    a: 'The closest alternatives within the EDA space are LTspice, NI Multisim, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ltspice', 'multisim', 'proteus-design-suite'],
   detailed_features: [],

@@ -1,5 +1,5 @@
 // public/sw.js
-const CACHE_NAME = 'cadtools-cache-v2';
+const CACHE_NAME = 'cadguide-cache-v3';
 const ASSETS_TO_CACHE = [
   '/',
   '/icon-192.png',
