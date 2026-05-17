@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { tools, categories } from '@/lib/data';
+import { bestOfPaths, comparisonPairs } from '@/lib/seo-content';
 
 export const dynamic = 'force-static';
 
@@ -17,12 +18,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/all-tools`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/matchmaker`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE_URL}/compare`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE_URL}/best`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE_URL}/deals`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/sponsor`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ];
+
+  // Best-of category pages — one per category.
+  const bestOfUrls: MetadataRoute.Sitemap = bestOfPaths().map(({ slug }) => ({
+    url: `${BASE_URL}/best/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
+  // Tool-vs-tool comparison pages — programmatically generated from a
+  // curated buyer-intent pair list in src/lib/seo-content.ts.
+  const compareUrls: MetadataRoute.Sitemap = comparisonPairs().map(
+    ({ pairSlug }) => ({
+      url: `${BASE_URL}/compare/${pairSlug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }),
+  );
 
   // One URL per category-filtered tools listing. These aren't separate
   // routes — they're just `/tools?category=cX` — but linking them from
@@ -45,5 +66,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: tool.score >= 4.5 ? 0.9 : 0.8,
   }));
 
-  return [...staticPages, ...categoryFacetUrls, ...toolUrls];
+  return [
+    ...staticPages,
+    ...bestOfUrls,
+    ...compareUrls,
+    ...categoryFacetUrls,
+    ...toolUrls,
+  ];
 }
