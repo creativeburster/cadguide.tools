@@ -323,43 +323,43 @@ export default function MatchmakerPage() {
                 Start Quiz From Scratch
               </Button>
             </div>
-
-            {/* Best Lists Section */}
-            <div className="mt-16 pt-16 border-t border-slate-100">
-              <div className="text-center mb-12">
-                <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1 mb-6 font-bold uppercase tracking-widest text-[10px]">
-                  Expert Rankings
-                </Badge>
-                <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">Explore Best Lists by Category</h2>
-                <p className="text-slate-500 font-medium max-w-2xl mx-auto">
-                  Curated rankings of top tools in each CAD category, based on expert scores and real customer reviews.
-                </p>
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {categories.slice(0, 6).map((c) => (
-                  <Link
-                    key={c.id}
-                    href={`/best/${c.slug}`}
-                    className="block rounded-2xl bg-white border border-slate-200 hover:border-blue-300 p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">
-                      Best {c.name} Software
-                    </h3>
-                    <p className="text-slate-500 text-sm line-clamp-2">{c.description}</p>
-                    <span className="mt-4 inline-block text-sm font-semibold text-blue-600">
-                      View ranking →
-                    </span>
-                  </Link>
-                ))}
-              </div>
-              <div className="text-center mt-8">
-                <Button asChild variant="outline" className="rounded-xl border-slate-200 font-bold text-xs uppercase tracking-widest">
-                  <Link href="/best">View All Best Lists</Link>
-                </Button>
-              </div>
-            </div>
           </div>
         )}
+
+        {/* Best Lists Section - Always visible */}
+        <div className="mt-16 pt-16 border-t border-slate-100">
+          <div className="text-center mb-12">
+            <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1 mb-6 font-bold uppercase tracking-widest text-[10px]">
+              Expert Rankings
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">Explore Best Lists by Category</h2>
+            <p className="text-slate-500 font-medium max-w-2xl mx-auto">
+              Curated rankings of top tools in each CAD category, based on expert scores and real customer reviews.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {categories.slice(0, 6).map((c) => (
+              <Link
+                key={c.id}
+                href={`/best/${c.slug}`}
+                className="block rounded-2xl bg-white border border-slate-200 hover:border-blue-300 p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
+              >
+                <h3 className="text-lg font-bold text-slate-900 mb-2">
+                  Best {c.name} Software
+                </h3>
+                <p className="text-slate-500 text-sm line-clamp-2">{c.description}</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-blue-600">
+                  View ranking →
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild variant="outline" className="rounded-xl border-slate-200 font-bold text-xs uppercase tracking-widest">
+              <Link href="/best">View All Best Lists</Link>
+            </Button>
+          </div>
+        </div>
       </div>
     </main>
   );
