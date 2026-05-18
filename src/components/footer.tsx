@@ -77,12 +77,12 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-10 mb-16">
           {/* Brand Info */}
-          <div className="space-y-5">
+          <div className="lg:col-span-2 space-y-5">
             <div className="text-xl font-black text-white flex items-center gap-2">
               <span className="text-blue-500">CAD</span>Guide.tools
             </div>
             <p className="text-sm leading-relaxed">
-              Independent directory of 235+ CAD, BIM, and engineering tools.
+              The world&apos;s premier independent directory for CAD, BIM, & Engineering software. Deep-diving into 235+ tools to help professionals make smarter tech decisions.
             </p>
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
@@ -153,7 +153,7 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="lg:col-span-2">
+          <div>
             <NewsletterForm />
           </div>
         </div>
