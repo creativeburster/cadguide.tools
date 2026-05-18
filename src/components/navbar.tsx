@@ -11,7 +11,6 @@ export function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Directory', href: '/tools' },
-    { name: 'Best Lists', href: '/best' },
     { name: 'Compare', href: '/compare' },
     { name: 'Matchmaker', href: '/matchmaker' },
     { name: 'Deals', href: '/deals' },
