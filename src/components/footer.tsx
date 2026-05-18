@@ -107,6 +107,8 @@ export function Footer() {
             <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Ecosystem</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Smart Matchmaker</Link></li>
+              <li><Link href="/best" className="hover:text-blue-400 transition-colors">Best Lists by Category</Link></li>
+              <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Tool Comparisons</Link></li>
               <li><Link href="/deals" className="hover:text-blue-400 transition-colors">Active Software Deals</Link></li>
               <li><Link href="/tools" className="hover:text-blue-400 transition-colors">Technical Directory</Link></li>
               <li><Link href="/sponsor" className="hover:text-blue-400 transition-colors">List Your Software</Link></li>
