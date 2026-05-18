@@ -2,16 +2,12 @@ import { MetadataRoute } from 'next';
 import { tools, categories } from '@/lib/data';
 import { bestOfPaths, comparisonPairs } from '@/lib/seo-content';
 
-export const dynamic = 'force-static';
-
 const BASE_URL = 'https://cadguide.tools';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  // Top-level pages — the audit flagged that /compare, /deals, /sponsor,
-  // /about, /contact, /privacy, /all-tools were missing from the XML
-  // sitemap. They're all indexable now, so they belong here.
+  // Top-level pages
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
     { url: `${BASE_URL}/tools`, lastModified: now, changeFrequency: 'daily', priority: 0.95 },
@@ -26,39 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
-  // Best-of category pages — one per category.
-  const bestOfUrls: MetadataRoute.Sitemap = bestOfPaths().map(({ slug }) => ({
-    url: `${BASE_URL}/best/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.85,
-  }));
-
-  // Tool-vs-tool comparison pages — programmatically generated from a
-  // curated buyer-intent pair list in src/lib/seo-content.ts.
-  const compareUrls: MetadataRoute.Sitemap = comparisonPairs().map(
-    ({ pairSlug }) => ({
-      url: `${BASE_URL}/compare/${pairSlug}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    }),
-  );
-
-  // One URL per category-filtered tools listing. These aren't separate
-  // routes — they're just `/tools?category=cX` — but linking them from
-  // the sitemap lets Google understand the facet hierarchy without us
-  // having to invent a `/category/<slug>` page tree.
-  const categoryFacetUrls: MetadataRoute.Sitemap = categories.map((cat) => ({
-    url: `${BASE_URL}/tools?category=${cat.id}`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }));
-
-  // One URL per tool detail page. Priority slightly higher for higher-
-  // scoring tools so Google understands which products we consider the
-  // most authoritative entries in the catalog.
+  // Tool detail pages
   const toolUrls: MetadataRoute.Sitemap = tools.map((tool) => ({
     url: `${BASE_URL}/tools/${tool.slug}`,
     lastModified: now,
@@ -68,9 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
-    ...bestOfUrls,
-    ...compareUrls,
-    ...categoryFacetUrls,
     ...toolUrls,
   ];
 }
