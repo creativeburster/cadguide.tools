@@ -42,14 +42,12 @@ function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-      <div className="flex items-center gap-2">
-        <h4 className="text-white font-black uppercase text-[10px] tracking-[0.2em] whitespace-nowrap">Newsletter</h4>
-        <p className="text-[10px] text-slate-500 leading-tight">
-          Monthly digest: new tool reviews, fresh deals, and curated picks.
-        </p>
-      </div>
-      <div className="flex gap-2">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+      <h4 className="text-white font-black uppercase text-xs tracking-[0.2em]">Newsletter</h4>
+      <p className="text-[11px] text-slate-500 leading-tight">
+        Monthly digest: new tool reviews, fresh deals, and curated picks.
+      </p>
+      <div className="flex gap-2 mt-1">
         <Input
           type="email"
           name="EMAIL"
