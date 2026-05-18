@@ -46,7 +46,7 @@ function NewsletterForm() {
       <div className="flex items-center gap-2">
         <h4 className="text-white font-black uppercase text-[10px] tracking-[0.2em] whitespace-nowrap">Newsletter</h4>
         <p className="text-[10px] text-slate-500 leading-tight">
-          Monthly digest. Trusted by 5k+ Pros.
+          Monthly digest: new tool reviews, fresh deals, and curated picks.
         </p>
       </div>
       <div className="flex gap-2">
@@ -76,8 +76,8 @@ function NewsletterForm() {
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900">
-      <div className="container mx-auto px-1">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+      <div className="container mx-auto px-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 mb-16">
           {/* Brand Info */}
           <div className="space-y-5">
             <div className="text-xl font-black text-white flex items-center gap-2">
@@ -86,7 +86,9 @@ export function Footer() {
             <p className="text-sm leading-relaxed">
               The world&apos;s premier independent directory for CAD, BIM, & Engineering software. Deep-diving into 235+ tools to help professionals make smarter tech decisions.
             </p>
-            <NewsletterForm />
+            <div className="flex items-center gap-3">
+              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Trusted by 5k+ Pros</span>
+            </div>
           </div>
 
           {/* Browse by Role */}
@@ -134,6 +136,11 @@ export function Footer() {
               <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy & Terms</Link></li>
               <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
             </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <NewsletterForm />
           </div>
         </div>
 
