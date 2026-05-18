@@ -15,7 +15,7 @@ export function ContactBody() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const response = await fetch('https://formspree.io/f/xvgpzzry', {
+      const response = await fetch('https://formsubmit.co/ajax/support@cadguide.tools', {
         method: 'POST',
         body: formData,
         headers: {
@@ -27,7 +27,7 @@ export function ContactBody() {
         setIsSubmitted(true);
       } else {
         const data = await response.json();
-        alert(data.error || 'There was a problem submitting the form');
+        alert(data.message || 'There was a problem submitting the form');
       }
     } catch (error) {
       console.error('Form submission error:', error);
@@ -104,6 +104,9 @@ export function ContactBody() {
           <div className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/60 border border-white">
             <h2 className="text-2xl font-bold text-slate-900 mb-8">Send us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="_subject" value="New Contact Form Submission from CADGuide.tools" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-700 ml-1">Your Name</label>
