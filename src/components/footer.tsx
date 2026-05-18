@@ -74,7 +74,7 @@ function NewsletterForm() {
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-10 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-5">
@@ -105,51 +105,64 @@ export function Footer() {
 
           {/* Browse by Role */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">By Role</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/for/architects" className="hover:text-blue-400 transition-colors">Architects</Link></li>
-              <li><Link href="/for/mechanical-engineers" className="hover:text-blue-400 transition-colors">Mechanical Engineers</Link></li>
-              <li><Link href="/for/civil-engineers" className="hover:text-blue-400 transition-colors">Civil Engineers</Link></li>
-              <li><Link href="/for/students" className="hover:text-blue-400 transition-colors">Students</Link></li>
-              <li><Link href="/for/jewelry-designers" className="hover:text-blue-400 transition-colors">Jewelry Designers</Link></li>
-              <li><Link href="/for" className="hover:text-blue-400 transition-colors font-semibold">All 10 roles →</Link></li>
-            </ul>
+            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">By Role</h4>
+            <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
+              <Link href="/for/architects" className="hover:text-blue-400 transition-colors whitespace-nowrap">Architects</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/for/mechanical-engineers" className="hover:text-blue-400 transition-colors whitespace-nowrap">Mechanical Engineers</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/for/civil-engineers" className="hover:text-blue-400 transition-colors whitespace-nowrap">Civil Engineers</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/for/students" className="hover:text-blue-400 transition-colors whitespace-nowrap">Students</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/for/jewelry-designers" className="hover:text-blue-400 transition-colors whitespace-nowrap">Jewelry Designers</Link>
+            </div>
           </div>
 
           {/* Browse Software */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Browse</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/alternatives" className="hover:text-blue-400 transition-colors">Alternatives</Link></li>
-              <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">By Platform</Link></li>
-              <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">By File Format</Link></li>
-              <li><Link href="/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
-              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open-Source CAD</Link></li>
-              <li><Link href="/best" className="hover:text-blue-400 transition-colors">Best Lists</Link></li>
-            </ul>
+            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Browse</h4>
+            <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
+              <Link href="/alternatives" className="hover:text-blue-400 transition-colors whitespace-nowrap">Alternatives</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/platforms" className="hover:text-blue-400 transition-colors whitespace-nowrap">By Platform</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/file-formats" className="hover:text-blue-400 transition-colors whitespace-nowrap">By File Format</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/free" className="hover:text-blue-400 transition-colors whitespace-nowrap">Free CAD</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/open-source" className="hover:text-blue-400 transition-colors whitespace-nowrap">Open-Source CAD</Link>
+            </div>
           </div>
 
           {/* Ecosystem */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Ecosystem</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Smart Matchmaker</Link></li>
-              <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Tool Comparisons</Link></li>
-              <li><Link href="/deals" className="hover:text-blue-400 transition-colors">Active Software Deals</Link></li>
-              <li><Link href="/tools" className="hover:text-blue-400 transition-colors">Technical Directory</Link></li>
-              <li><Link href="/sponsor" className="hover:text-blue-400 transition-colors">List Your Software</Link></li>
-            </ul>
+            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Ecosystem</h4>
+            <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
+              <Link href="/matchmaker" className="hover:text-blue-400 transition-colors whitespace-nowrap">Smart Matchmaker</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/compare" className="hover:text-blue-400 transition-colors whitespace-nowrap">Tool Comparisons</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/deals" className="hover:text-blue-400 transition-colors whitespace-nowrap">Active Software Deals</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/tools" className="hover:text-blue-400 transition-colors whitespace-nowrap">Technical Directory</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/sponsor" className="hover:text-blue-400 transition-colors whitespace-nowrap">List Your Software</Link>
+            </div>
           </div>
 
           {/* Organization */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Organization</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/about" className="hover:text-blue-400 transition-colors">Our Methodology</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support Desk</Link></li>
-              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy & Terms</Link></li>
-              <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
-            </ul>
+            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Organization</h4>
+            <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
+              <Link href="/about" className="hover:text-blue-400 transition-colors whitespace-nowrap">Our Methodology</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/contact" className="hover:text-blue-400 transition-colors whitespace-nowrap">Support Desk</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/privacy" className="hover:text-blue-400 transition-colors whitespace-nowrap">Privacy & Terms</Link>
+              <span className="text-slate-700">|</span>
+              <Link href="/all-tools" className="hover:text-blue-400 transition-colors whitespace-nowrap">All Tools Index</Link>
+            </div>
           </div>
 
           {/* Newsletter */}
