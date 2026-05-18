@@ -28,11 +28,12 @@ export function ContactBody() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '122d71cd-cb54-4eac-9cd4-1c4b9087a180', // Replace with your Web3Forms access key
+          access_key: '122d71cd-cb54-4eac-9cd4-1c4b9087a180',
           subject: data.subject,
           from_name: data.name,
           from_email: data.email,
           message: data.message,
+          to_email: 'support@cadguide.tools',
         }),
       });
 
