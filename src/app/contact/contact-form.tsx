@@ -15,6 +15,7 @@ export function ContactBody() {
     const formData = new FormData(e.currentTarget);
 
     try {
+      console.log('Submitting form to Formsubmit...');
       const response = await fetch('https://formsubmit.co/ajax/support@cadguide.tools', {
         method: 'POST',
         body: formData,
@@ -23,15 +24,21 @@ export function ContactBody() {
         },
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+
       if (response.ok) {
+        const data = await response.json();
+        console.log('Success response:', data);
         setIsSubmitted(true);
       } else {
         const data = await response.json();
-        alert(data.message || 'There was a problem submitting the form');
+        console.error('Error response:', data);
+        alert(`Error: ${data.message || 'There was a problem submitting the form'}`);
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('There was a problem submitting the form');
+      alert(`Network error: ${error instanceof Error ? error.message : 'There was a problem submitting the form'}`);
     } finally {
       setIsSubmitting(false);
     }
