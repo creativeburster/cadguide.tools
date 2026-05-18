@@ -29,7 +29,7 @@ export function SiteNotice() {
         </span>
         <button
           onClick={handleDismiss}
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-white/20 rounded transition-colors"
+          className="absolute right-4 bottom-1 p-1 hover:bg-white/20 rounded transition-colors"
           aria-label="Dismiss notice"
         >
           <X size={14} />

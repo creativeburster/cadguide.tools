@@ -47,14 +47,14 @@ function NewsletterForm() {
       <p className="text-xs text-slate-500 leading-relaxed">
         Monthly digest: new tool reviews, fresh deals, and curated picks. No spam — unsubscribe anytime.
       </p>
-      <div className="space-y-2">
+      <div className="flex gap-2">
         <Input
           type="email"
           name="EMAIL"
           placeholder="you@company.com"
           required
           disabled={isSubmitting}
-          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-11 rounded-lg text-sm w-full"
+          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-11 rounded-lg text-sm flex-1"
         />
         <input type="text" name="email_address_check" value="" className="hidden" />
         <input type="hidden" name="locale" value="en" />
@@ -62,7 +62,7 @@ function NewsletterForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-blue-600 hover:bg-blue-700 h-11 px-5 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap w-full"
+          className="bg-blue-600 hover:bg-blue-700 h-11 px-5 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap"
         >
           {isSubmitting ? '...' : 'Subscribe'}
         </Button>
@@ -100,6 +100,7 @@ export function Footer() {
                 ))}
               </div>
               <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Trusted by 5k+ Pros</span>
+              <NewsletterForm />
             </div>
           </div>
 
@@ -149,11 +150,6 @@ export function Footer() {
               <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
             </ul>
           </div>
-        </div>
-
-        {/* Newsletter */}
-        <div className="mb-16">
-          <NewsletterForm />
         </div>
 
         <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-600">
