@@ -338,3 +338,106 @@ export function faqLd(tool: Tool) {
     })),
   };
 }
+
+/** Schema.org Organization payload for brand entity. */
+export function organizationLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description:
+      "Compare 175+ CAD, BIM, CAE/CAM, and EDA tools side by side. Unbiased reviews, real pricing, and deep technical specs.",
+    logo: `${SITE_URL}/favicon.svg`,
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "support@cadguide.tools",
+      contactType: "customer service",
+      availableLanguage: "English",
+    },
+    sameAs: [
+      // Add social media links when available
+      // "https://twitter.com/cadguide",
+      // "https://linkedin.com/company/cadguide",
+    ],
+  };
+}
+
+/** Schema.org HowTo payload for Matchmaker page. */
+export function howToLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Find Your Perfect CAD Software in 60 Seconds",
+    description:
+      "Answer 6 quick questions about your industry, platform, budget, team size, workflow, and CAD experience to get a personalised shortlist of CAD tools.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Select Your Industry",
+        text: "Choose your primary industry (Architecture, Manufacturing, Civil Engineering, Electrical Engineering, etc.)",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Choose Your Platform",
+        text: "Select your operating system (Windows, macOS, Linux, or Web-based)",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Set Your Budget",
+        text: "Indicate your pricing preference (Free, Freemium, Subscription, Perpetual, or Enterprise)",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Specify Team Size",
+        text: "Select your team size (Individual, Small Team, or Enterprise)",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Describe Your Workflow",
+        text: "Choose your primary workflow (Design, Drafting, Analysis, Manufacturing, etc.)",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Indicate CAD Experience",
+        text: "Select your experience level (Beginner, Intermediate, or Expert)",
+      },
+    ],
+    tool: [
+      {
+        "@type": "HowToTool",
+        name: "Smart Matchmaker Algorithm",
+      },
+    ],
+    totalTime: "PT1M",
+  };
+}
+
+/** Schema.org Review payload from external ratings. Returns null if no external ratings. */
+export function reviewLd(tool: Tool) {
+  if (!tool.external_ratings || tool.external_ratings.length === 0) return null;
+  
+  return tool.external_ratings.map((rating) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "SoftwareApplication",
+      name: tool.name,
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: (rating.score / rating.max * 5).toFixed(1),
+      bestRating: "5",
+      worstRating: "0",
+    },
+    author: {
+      "@type": "Organization",
+      name: rating.source,
+    },
+    reviewCount: rating.count,
+    publisher: {
+      "@type": "Organization",
+      name: rating.source,
+    },
+  }));
+}

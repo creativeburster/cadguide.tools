@@ -8,7 +8,7 @@ export const c1Tools: Tool[] = [
   id: "t1",
   name: "AutoCAD",
   slug: "autocad",
-  logo_url: getLogo("AC"),
+  logo_url: "",
   short_desc:
     "The global industrial standard for 2D drafting and 3D modeling.",
 
@@ -278,7 +278,7 @@ export const c1Tools: Tool[] = [
   id: "t12",
   name: "ZWCAD",
   slug: "zwcad",
-  logo_url: getLogo("ZW"),
+  logo_url: "",
 
   short_desc:
     "The most cost-effective and compatible alternative to AutoCAD.",
@@ -428,7 +428,7 @@ export const c1Tools: Tool[] = [
   id: "t13",
   name: "BricsCAD",
   slug: "bricscad",
-  logo_url: getLogo("BC"),
+  logo_url: "",
   short_desc: "The modern CAD platform for 2D, 3D, BIM, and Mechanical.",
 
   description:
@@ -577,7 +577,7 @@ export const c1Tools: Tool[] = [
   id: "t21",
   name: "MicroStation",
   slug: "microstation",
-  logo_url: getLogo("MS"),
+  logo_url: "",
   short_desc: "The infrastructure engineering standard for massive projects.",
   description:
     "MicroStation is the CAD platform of choice for the world's most demanding infrastructure projects. It handles massive datasets with ease, providing native DGN support.",
@@ -723,7 +723,7 @@ export const c1Tools: Tool[] = [
   id: "t22",
   name: "DraftSight",
   slug: "draftsight",
-  logo_url: getLogo("DS"),
+  logo_url: "",
   short_desc: "Professional-grade 2D CAD solution from Dassault Systèmes.",
 
   description:
@@ -890,7 +890,7 @@ export const c1Tools: Tool[] = [
   id: "t43",
   name: "CADra",
   slug: "cadra",
-  logo_url: getLogo("CDR"),
+  logo_url: "",
   short_desc: "High-end 2D CAD for drafting automation.",
   description:
     "CADra is a professional 2D drafting system used for high-end design automation.",
@@ -1642,7 +1642,7 @@ export const c1Tools: Tool[] = [
   id: "t88",
   name: "CorelCAD",
   slug: "corelcad",
-  logo_url: getLogo("CorelCAD"),
+  logo_url: "",
   short_desc: "Affordable DWG-compatible CAD for professionals.",
   description:
     "CorelCAD delivers powerful 2D drafting and 3D design tools in a familiar CAD environment, offering DWG file compatibility at a fraction of AutoCAD's price.",
@@ -1711,7 +1711,7 @@ export const c1Tools: Tool[] = [
   id: "t90",
   name: "CAXA CAD",
   slug: "caxa-cad",
-  logo_url: getLogo("CAXA CAD"),
+  logo_url: "",
   short_desc: "Leading Chinese 2D CAD with English market presence.",
   description:
     "CAXA CAD is a professional 2D drafting and design software developed in China, offering full DWG compatibility and specialized tools for mechanical and electrical design.",
@@ -1780,7 +1780,7 @@ export const c1Tools: Tool[] = [
   id: "t91",
   name: "ARES Commander",
   slug: "ares-commander",
-  logo_url: getLogo("ARES Commander"),
+  logo_url: "",
   short_desc: "Professional DWG CAD with cross-platform trinity.",
 
   description:
@@ -1882,7 +1882,7 @@ export const c1Tools: Tool[] = [
   id: "t100",
   name: "3DEXPERIENCE",
   slug: "3dexperience",
-  logo_url: getLogo("3D"),
+  logo_url: "",
   short_desc:
     "Through virtual twin technologies, Dassault Systèmes’ collaborative platform empowers business and people to create sust",
   description:
@@ -1949,7 +1949,7 @@ export const c1Tools: Tool[] = [
   id: "t104",
   name: "MEDUSA4",
   slug: "medusa4",
-  logo_url: getLogo("ME"),
+  logo_url: "",
   short_desc:
     "Benefit from intelligent 2D & 3D CAD software, immersive AR and VR apps for virtual experiences, training and services f",
   description:
@@ -2016,7 +2016,7 @@ export const c1Tools: Tool[] = [
   id: "t107",
   name: "pCon.planner",
   slug: "pconplanner",
-  logo_url: getLogo("PC"),
+  logo_url: "",
   short_desc: "简要介绍 pCon.planner（官方站点）",
   description: "详细介绍 pCon.planner（官方站点）",
   pricing_tiers: [
@@ -2081,7 +2081,7 @@ export const c1Tools: Tool[] = [
   id: "t108",
   name: "CrownCAD",
   slug: "crowncad",
-  logo_url: getLogo("CR"),
+  logo_url: "",
   short_desc:
     "华云三维致力于面向智能制造的工业软件研发和推广，拥有自主研发的三维几何建模引擎和几何约束求解器，基于这两项三维CAD核心技术，专注打造完全自主可控、基于云架构的三维CAD平台皇冠CAD（CrownCAD）",
   description:
@@ -2148,7 +2148,7 @@ export const c1Tools: Tool[] = [
   id: "t109",
   name: "SINOVATION",
   slug: "sinovation",
-  logo_url: getLogo("SI"),
+  logo_url: "",
   short_desc: "简要介绍 SINOVATION（官方站点）",
   description: "详细介绍 SINOVATION（官方站点）",
   pricing_tiers: [
@@ -2213,7 +2213,7 @@ export const c1Tools: Tool[] = [
   id: "t110",
   name: "HaoChen CAD",
   slug: "haochen-cad",
-  logo_url: getLogo("HA"),
+  logo_url: "",
   short_desc: "简要介绍 HaoChen CAD（官方站点）",
   description: "详细介绍 HaoChen CAD（官方站点）",
   pricing_tiers: [
@@ -2278,7 +2278,7 @@ export const c1Tools: Tool[] = [
   id: "t113",
   name: "IJCAD",
   slug: "ijcad",
-  logo_url: getLogo("IJ"),
+  logo_url: "",
   short_desc:
     "IJCADはAutoCADと互換性のあるソフトウェアとして高いシェアを誇っています。IJCADは業種や規模を限定せず、.dwg図面が使われるあらゆるシーンで活用が可能です。",
   description:
@@ -2345,7 +2345,7 @@ export const c1Tools: Tool[] = [
   id: "t115",
   name: "RootPro CAD",
   slug: "rootpro-cad",
-  logo_url: getLogo("RO"),
+  logo_url: "",
   short_desc:
     "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, ar",
   description:
@@ -2412,7 +2412,7 @@ export const c1Tools: Tool[] = [
   id: "t116",
   name: "V-nas",
   slug: "v-nas",
-  logo_url: getLogo("V"),
+  logo_url: "",
   short_desc:
     "情報サービスコンサルタント『川田テクノシステム株式会社（KTS）』の公式ホームページです。KTSの取り組みのご紹介、製品情報のご紹介、各種お申込みのご案内を掲載しています。",
   description:
@@ -2479,7 +2479,7 @@ export const c1Tools: Tool[] = [
   id: "t117",
   name: "KOMPAS-3D",
   slug: "kompas-3d",
-  logo_url: getLogo("KO"),
+  logo_url: "",
   short_desc:
     "The official website of ASCON, a leading software developer for design, manufacturing, and data management solutions.",
   description:
@@ -2546,7 +2546,7 @@ export const c1Tools: Tool[] = [
   id: "t118",
   name: "T-FLEX CAD",
   slug: "t-flex-cad",
-  logo_url: getLogo("T"),
+  logo_url: "",
   short_desc:
     "Top Systems offers the comprehensive set of integrated applications for T-FLEX Parametric CAD, including CAM, FEA and PD",
   description:
@@ -2613,7 +2613,7 @@ export const c1Tools: Tool[] = [
   id: "t120",
   name: "Model Studio CS",
   slug: "model-studio-cs",
-  logo_url: getLogo("MO"),
+  logo_url: "",
   short_desc: "简要介绍 Model Studio CS（官方站点）",
   description: "详细介绍 Model Studio CS（官方站点）",
   pricing_tiers: [
@@ -2678,7 +2678,7 @@ export const c1Tools: Tool[] = [
   id: "t121",
   name: "AVEVA E3D Design",
   slug: "aveva-e3d-design",
-  logo_url: getLogo("AV"),
+  logo_url: "",
   short_desc:
     "At AVEVA, we work with you and harness the power of our ecosystem, to deliver solutions and expertise to optimize engine",
   description:
@@ -2745,7 +2745,7 @@ export const c1Tools: Tool[] = [
   id: "t122",
   name: "DesignSpark Mechanical",
   slug: "designspark-mechanical",
-  logo_url: getLogo("DE"),
+  logo_url: "",
   short_desc:
     "Your go-to design engineering platform – Accelerate your design time to market with design software, access to CAD neutral.",
   description:
@@ -2812,7 +2812,7 @@ export const c1Tools: Tool[] = [
   id: "t123",
   name: "LUSAS",
   slug: "lusas",
-  logo_url: getLogo("LU"),
+  logo_url: "",
   short_desc: "简要介绍 LUSAS（官方站点）",
   description: "详细介绍 LUSAS（官方站点）",
   pricing_tiers: [
@@ -2877,7 +2877,7 @@ export const c1Tools: Tool[] = [
   id: "t126",
   name: "midas Civil",
   slug: "midas-civil",
-  logo_url: getLogo("MI"),
+  logo_url: "",
   short_desc:
     "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an",
   description:
@@ -2944,7 +2944,7 @@ export const c1Tools: Tool[] = [
   id: "t127",
   name: "midas Gen",
   slug: "midas-gen",
-  logo_url: getLogo("MI"),
+  logo_url: "",
   short_desc:
     "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an",
   description:
@@ -3011,7 +3011,7 @@ export const c1Tools: Tool[] = [
   id: "t128",
   name: "CADian",
   slug: "cadian",
-  logo_url: getLogo("CA"),
+  logo_url: "",
   short_desc:
     "30년 이상의 개발 역사가 말해주듯, 신뢰할 수 있는 국산 CAD, CADian!",
   description:
@@ -3078,7 +3078,7 @@ export const c1Tools: Tool[] = [
   id: "t132",
   name: "think3",
   slug: "think3",
-  logo_url: getLogo("TH"),
+  logo_url: "",
   short_desc: "简要介绍 think3（官方站点）",
   description: "详细介绍 think3（官方站点）",
   pricing_tiers: [
@@ -3143,7 +3143,7 @@ export const c1Tools: Tool[] = [
   id: "t133",
   name: "Maptek Vulcan",
   slug: "maptek-vulcan",
-  logo_url: getLogo("MA"),
+  logo_url: "",
   short_desc:
     "Maptek™ is a leading provider of innovative software, hardware and services for the mining industry. Founded 40 years ag",
   description:
@@ -3210,7 +3210,7 @@ export const c1Tools: Tool[] = [
   id: "t134",
   name: "Promine",
   slug: "promine",
-  logo_url: getLogo("PR"),
+  logo_url: "",
   short_desc:
     "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’",
   description:
@@ -3277,7 +3277,7 @@ export const c1Tools: Tool[] = [
   id: "t135",
   name: "OOFELIE",
   slug: "oofelie",
-  logo_url: getLogo("OO"),
+  logo_url: "",
   short_desc:
     "Open Engineering is a European high-tech supplier of multiphysics simulations engineering tools and services.",
   description:
@@ -3344,7 +3344,7 @@ export const c1Tools: Tool[] = [
   id: "t136",
   name: "CYPECAD",
   slug: "cypecad",
-  logo_url: getLogo("CY"),
+  logo_url: "",
   short_desc:
     "Technical software for structural design, mep systems, construction management. Engineering projects. Pathology",
   description:
@@ -3411,7 +3411,7 @@ export const c1Tools: Tool[] = [
   id: "t137",
   name: "TeKton3D",
   slug: "tekton3d",
-  logo_url: getLogo("TE"),
+  logo_url: "",
   short_desc:
     "Desarrollo de software para el diseño y cálculo de instalaciones y estructuras en edificios y aplicación del Código Técn",
   description:
@@ -3478,7 +3478,7 @@ export const c1Tools: Tool[] = [
   id: "t141",
   name: "Vertex BD",
   slug: "vertex-bd",
-  logo_url: getLogo("VE"),
+  logo_url: "",
   short_desc:
     "Vertexin kotimaiset 3D-suunnitteluohjelmat sekä tiedonhallintaratkaisut teollisuudelle. 3D CAD, PDM ja PLM – lue lisää o",
   description:
@@ -3545,7 +3545,7 @@ export const c1Tools: Tool[] = [
   id: "t142",
   name: "CET Designer",
   slug: "cet-designer",
-  logo_url: getLogo("CE"),
+  logo_url: "",
   short_desc:
     "We offer space planning software solutions that will help you streamline your sales, design and order processes.",
   description:
@@ -3612,7 +3612,7 @@ export const c1Tools: Tool[] = [
   id: "t143",
   name: "ActCAD",
   slug: "actcad",
-  logo_url: getLogo("AC"),
+  logo_url: "",
   short_desc: "简要介绍 ActCAD（官方站点）",
   description: "详细介绍 ActCAD（官方站点）",
   pricing_tiers: [
@@ -3677,7 +3677,7 @@ export const c1Tools: Tool[] = [
   id: "t144",
   name: "CADVision",
   slug: "cadvision",
-  logo_url: getLogo("CA"),
+  logo_url: "",
   short_desc: "简要介绍 CADVision（官方站点）",
   description: "详细介绍 CADVision（官方站点）",
   pricing_tiers: [
@@ -3742,7 +3742,7 @@ export const c1Tools: Tool[] = [
   id: "t145",
   name: "Eberick",
   slug: "eberick",
-  logo_url: getLogo("EB"),
+  logo_url: "",
   short_desc:
     "Somos a líder nacional para projetos em BIM e Gestão Digital da Construção, com soluções em software para todas as etapa",
   description:
@@ -3809,7 +3809,7 @@ export const c1Tools: Tool[] = [
   id: "t146",
   name: "Promob",
   slug: "promob",
-  logo_url: getLogo("PR"),
+  logo_url: "",
   short_desc:
     "Projetar, produzir e gerenciar nunca foi tão fácil com a Promob Software Solutions. À maior desenvolvedora de software d",
   description:
@@ -3876,7 +3876,7 @@ export const c1Tools: Tool[] = [
   id: "t147",
   name: "SCIA Engineer",
   slug: "scia-engineer",
-  logo_url: getLogo("SC"),
+  logo_url: "",
   short_desc:
     "SCIA combines structural engineering and design know-how with technology, to provide powerful structural analysis softwa",
   description:
@@ -3943,7 +3943,7 @@ export const c1Tools: Tool[] = [
   id: "t148",
   name: "PowerMill",
   slug: "powermill",
-  logo_url: getLogo("PO"),
+  logo_url: "",
   short_desc: "简要介绍 PowerMill（官方站点）",
   description: "详细介绍 PowerMill（官方站点）",
   pricing_tiers: [
@@ -4008,7 +4008,7 @@ export const c1Tools: Tool[] = [
   id: "t151",
   name: "ESPRIT",
   slug: "esprit",
-  logo_url: getLogo("ES"),
+  logo_url: "",
   short_desc:
     "Is ESPRIT the best CAM software for your shop? Learn more about what makes us different and how we can help you achieve ",
   description:
@@ -4075,7 +4075,7 @@ export const c1Tools: Tool[] = [
   id: "t158",
   name: "Planbar",
   slug: "planbar",
-  logo_url: getLogo("PL"),
+  logo_url: "",
   short_desc: "简要介绍 Planbar（官方站点）",
   description: "详细介绍 Planbar（官方站点）",
   pricing_tiers: [
@@ -4140,7 +4140,7 @@ export const c1Tools: Tool[] = [
   id: "t167",
   name: "PAM-STAMP",
   slug: "pam-stamp",
-  logo_url: getLogo("PA"),
+  logo_url: "",
   short_desc: "简要介绍 PAM-STAMP（官方站点）",
   description: "详细介绍 PAM-STAMP（官方站点）",
   pricing_tiers: [
@@ -4205,7 +4205,7 @@ export const c1Tools: Tool[] = [
   id: "t170",
   name: "ShipConstructor",
   slug: "shipconstructor",
-  logo_url: getLogo("SH"),
+  logo_url: "",
   short_desc:
     "Engineering information is a shipbuilder’s most important asset. Using a solution that is built to handle shipbuilding’s",
   description:
@@ -4272,7 +4272,7 @@ export const c1Tools: Tool[] = [
   id: "t171",
   name: "NAPA",
   slug: "napa",
-  logo_url: getLogo("NA"),
+  logo_url: "",
   short_desc:
     "NAPA provides maritime software and data services for ship design and operations to enable a safer, more sustainable, an",
   description:
@@ -4339,7 +4339,7 @@ export const c1Tools: Tool[] = [
   id: "t172",
   name: "FORAN",
   slug: "foran",
-  logo_url: getLogo("FO"),
+  logo_url: "",
   short_desc: "简要介绍 FORAN（官方站点）",
   description: "详细介绍 FORAN（官方站点）",
   pricing_tiers: [
@@ -4404,7 +4404,7 @@ export const c1Tools: Tool[] = [
   id: "t173",
   name: "Pytha",
   slug: "pytha",
-  logo_url: getLogo("PY"),
+  logo_url: "",
   short_desc:
     "PYTHA is the most advanced 3D CAD system in interior design, furniture making, exhibition design and for the shop fittin",
   description:
@@ -4471,7 +4471,7 @@ export const c1Tools: Tool[] = [
   id: "t174",
   name: "imos iX",
   slug: "imos-ix",
-  logo_url: getLogo("IM"),
+  logo_url: "",
   short_desc:
     "Die imos AG entwickelt und vertreibt weltweit integrierte Softwarelösungen für den Möbel- und Innenausbau.",
   description:
@@ -4538,7 +4538,7 @@ export const c1Tools: Tool[] = [
   id: "t175",
   name: "20-20 Design",
   slug: "20-20-design",
-  logo_url: getLogo("20"),
+  logo_url: "",
   short_desc:
     "Explore all training options for Design Flex, the leading kitchen and bathroom design and sales solution. Ideal for resi",
   description:
@@ -4605,7 +4605,7 @@ export const c1Tools: Tool[] = [
   id: "t176",
   name: "Palette CAD",
   slug: "palette-cad",
-  logo_url: getLogo("PA"),
+  logo_url: "",
   short_desc:
     "Palette CAD 3D-Software für Handwerker, Fachhandel & Planer überzeugt mit Einfachheit & Professionalität zugleich. Onlin",
   description:
@@ -4672,7 +4672,7 @@ export const c1Tools: Tool[] = [
   id: "t177",
   name: "KD Max",
   slug: "kd-max",
-  logo_url: getLogo("KD"),
+  logo_url: "",
   short_desc: "简要介绍 KD Max（官方站点）",
   description: "详细介绍 KD Max（官方站点）",
   pricing_tiers: [

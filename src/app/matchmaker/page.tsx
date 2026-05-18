@@ -1,4 +1,4 @@
-import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd, howToLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 import MatchmakerClient from './matchmaker-client';
 
@@ -14,11 +14,16 @@ export default function Page() {
     { name: 'Home', path: '/' },
     { name: 'Matchmaker', path: '/matchmaker' },
   ]);
+  const howTo = howToLd();
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}
       />
       <MatchmakerClient />
     </>

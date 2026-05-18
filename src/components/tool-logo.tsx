@@ -37,18 +37,22 @@ function deriveCandidates(slug: string | undefined, src: string, websiteUrl?: st
   if (slug && LOGO_MANIFEST[slug]) {
     candidates.push(`/logos/${LOGO_MANIFEST[slug]}`);
   }
-  // 2-3. CDN fallbacks — used for tools missing from the manifest or whose
-  // local file ever fails to load.
+  // 2-4. CDN fallbacks — used for tools missing from the manifest or whose
+  // local file ever fails to load. Ordered by reliability.
   if (websiteUrl) {
     try {
       const host = new URL(websiteUrl).hostname.replace(/^www\./, '');
+      // icon.horse is more reliable than Google favicons for software logos
       candidates.push(`https://icon.horse/icon/${host}`);
+      // Google favicons as backup
       candidates.push(`https://www.google.com/s2/favicons?domain=${host}&sz=128`);
+      // Clearbit API as additional fallback (if available)
+      candidates.push(`https://logo.clearbit.com/${host}?size=200&format=png`);
     } catch {
       /* malformed URL — fall through to placeholder. */
     }
   }
-  // 4. Original data.ts logo_url (ui-avatars placeholder) — last resort before
+  // 5. Original data.ts logo_url (ui-avatars placeholder) — last resort before
   // dropping to the gradient initials.
   if (src) candidates.push(src);
   return candidates;
@@ -107,7 +111,7 @@ export function ToolLogo({ slug, src, websiteUrl, name, className }: ToolLogoPro
         // .png/.svg/.ico/.jpg (next/image doesn't support .ico, and SVG needs
         // dangerouslyAllowSVG). All logos are small (4-180KB), and the
         // explicit width/height on the container plus loading="lazy" gives us
-        // CLS=0 and on-demand loading without the optimizer.
+        // CLS=0 and on-demand loading. Remote images are optimized via Next.js config.
         <img
           ref={imgRef}
           key={current}

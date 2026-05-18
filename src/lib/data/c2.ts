@@ -8,7 +8,7 @@ export const c2Tools: Tool[] = [
   id: "t2",
   name: "SolidWorks",
   slug: "solidworks",
-  logo_url: getLogo("SW"),
+  logo_url: "",
   short_desc:
     "The de-facto industry standard for 3D parametric mechanical design.",
 
@@ -267,7 +267,7 @@ export const c2Tools: Tool[] = [
   id: "t3",
   name: "SketchUp",
   slug: "sketchup",
-  logo_url: getLogo("SU"),
+  logo_url: "",
   short_desc:
     "The world's most intuitive 3D design tool for architecture and interiors.",
 
@@ -786,7 +786,7 @@ export const c2Tools: Tool[] = [
   id: "t6",
   name: "Rhino 3D",
   slug: "rhino-3d",
-  logo_url: getLogo("RH"),
+  logo_url: "",
   short_desc:
     "The industry standard for complex NURBS modeling and computational design.",
 
@@ -1310,7 +1310,7 @@ export const c2Tools: Tool[] = [
   id: "t11",
   name: "FreeCAD",
   slug: "freecad",
-  logo_url: getLogo("FC"),
+  logo_url: "",
   short_desc: "The premier open-source 3D parametric modeler.",
 
   description:
@@ -1950,7 +1950,7 @@ export const c2Tools: Tool[] = [
   id: "t20",
   name: "Autodesk Inventor",
   slug: "autodesk-inventor",
-  logo_url: getLogo("INV"),
+  logo_url: "",
   short_desc: "Professional-grade 3D mechanical design and simulation.",
 
   description:
@@ -2822,7 +2822,7 @@ export const c2Tools: Tool[] = [
   id: "t50",
   name: "Maya",
   slug: "maya",
-  logo_url: getLogo("MY"),
+  logo_url: "",
   short_desc: "3D animation, modeling, and simulation software.",
 
   description:
@@ -2981,7 +2981,7 @@ export const c2Tools: Tool[] = [
   id: "t51",
   name: "Blender",
   slug: "blender",
-  logo_url: getLogo("BL"),
+  logo_url: "",
   short_desc: "The free and open-source 3D creation suite.",
   description:
     "Blender supports the entirety of the 3D pipeline for modeling and animation.",
@@ -3616,7 +3616,7 @@ export const c2Tools: Tool[] = [
   id: "t89",
   name: "ZW3D",
   slug: "zw3d",
-  logo_url: getLogo("ZW3D"),
+  logo_url: "",
   short_desc: "All-in-one 3D CAD/CAM solution from ZWSOFT.",
 
   description:
@@ -3843,7 +3843,7 @@ export const c2Tools: Tool[] = [
   id: "t238",
   "name": "MoI3D",
   "slug": "moi3d",
-  logo_url: getLogo("MO"),
+  logo_url: "",
   "short_desc": "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design.",
   "description": "MoI3D (Moment of Inspiration) is a long-running solo-developer NURBS modeller — drawn from the same lineage as Rhino but with a famously elegant, simple UI focused on rapid concept modeling.",
   "country": "USA",

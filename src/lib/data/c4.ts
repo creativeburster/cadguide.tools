@@ -8,7 +8,7 @@ export const c4Tools: Tool[] = [
   id: "t34",
   name: "Bluebeam Revu",
   slug: "bluebeam-revu",
-  logo_url: getLogo("BB"),
+  logo_url: "",
   short_desc: "The AEC standard for PDF markup and collaboration.",
 
   description:
@@ -186,7 +186,7 @@ export const c4Tools: Tool[] = [
   id: "t35",
   name: "Navisworks",
   slug: "navisworks",
-  logo_url: getLogo("NV"),
+  logo_url: "",
   short_desc: "Project review software for clash detection.",
 
   description:
@@ -348,7 +348,7 @@ export const c4Tools: Tool[] = [
   id: "t36",
   name: "Solibri",
   slug: "solibri",
-  logo_url: getLogo("SL"),
+  logo_url: "",
   short_desc: "The BIM quality assurance and QC leader.",
   description:
     "Solibri is the market leader in BIM Quality Assurance and Quality Control. It provides tools for BIM managers to check for model integrity and coordination issues.",
@@ -435,7 +435,7 @@ export const c4Tools: Tool[] = [
   id: "t37",
   name: "MeshLab",
   slug: "meshlab",
-  logo_url: getLogo("ML"),
+  logo_url: "",
   short_desc: "Open-source system for processing 3D meshes.",
   description:
     "MeshLab is an open-source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.",
@@ -515,7 +515,7 @@ export const c4Tools: Tool[] = [
   id: "t39",
   name: "Recap Pro",
   slug: "recap-pro",
-  logo_url: getLogo("RC"),
+  logo_url: "",
   short_desc: "Reality capture and 3D scanning software.",
   description:
     "Autodesk ReCap Pro converts laser scans and photos into 3D models or point clouds. It is essential for scan-to-BIM workflows.",
@@ -594,7 +594,7 @@ export const c4Tools: Tool[] = [
   id: "t48",
   name: "Solid Edge Viewer",
   slug: "solid-edge-viewer",
-  logo_url: getLogo("SEV"),
+  logo_url: "",
   short_desc: "Free viewer for Solid Edge and 2D CAD files.",
   description: "View Solid Edge assemblies, parts, and drafts for free.",
   country: "USA",
@@ -648,7 +648,7 @@ export const c4Tools: Tool[] = [
   id: "t49",
   name: "DWG TrueView",
   slug: "dwg-trueview",
-  logo_url: getLogo("TV"),
+  logo_url: "",
   short_desc: "Official free DWG viewer and converter.",
   description:
     "The official viewer for DWG files, built on the AutoCAD engine.",

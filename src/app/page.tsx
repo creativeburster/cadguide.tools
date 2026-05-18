@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Metadata } from 'next';
 import { ToolLogo } from '@/components/tool-logo';
-import { pageMetadata, websiteLd } from '@/lib/seo';
+import { pageMetadata, websiteLd, organizationLd } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CADGuide.tools: Compare 175+ Best CAD Software 2026 (Free & Pro)',
@@ -15,12 +15,17 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function Home() {
-  const ld = websiteLd();
+  const websiteLdData = websiteLd();
+  const organizationLdData = organizationLd();
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLdData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLdData) }}
       />
       <HomeBody />
     </>

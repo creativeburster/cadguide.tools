@@ -35,7 +35,7 @@ export async function generateMetadata({
   return pageMetadata({
     title: `All CAD & BIM Software — Filter by Category, Price, Platform${titleSuffix}`,
     description:
-      'Browse 235+ professional CAD, BIM, CAE/CAM, EDA, and viewer tools. Filter by category, pricing, operating system, industry, user scale, kernel, and expert rating.',
+      'Browse 235+ CAD, BIM, CAE/CAM, EDA tools. Filter by category, price, OS, industry, and expert ratings.',
     path,
   });
 }

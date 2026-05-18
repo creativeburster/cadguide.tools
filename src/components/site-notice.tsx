@@ -1,0 +1,40 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { X } from 'lucide-react';
+
+export function SiteNotice() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('site-notice-dismissed');
+    if (!dismissed) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('site-notice-dismissed', 'true');
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="bg-blue-600 text-white text-sm relative">
+      <div className="container mx-auto px-4 py-2.5 flex items-center justify-center gap-2">
+        <span>
+          The <Link href="/deals" className="underline font-medium hover:text-sky-100 transition-colors">Deals</Link> page is currently in demo mode and will be fully operational soon.
+        </span>
+        <button
+          onClick={handleDismiss}
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-white/20 rounded transition-colors"
+          aria-label="Dismiss notice"
+        >
+          <X size={14} />
+        </button>
+      </div>
+    </div>
+  );
+}

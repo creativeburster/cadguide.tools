@@ -8,7 +8,7 @@ export const c6Tools: Tool[] = [
   id: "t10",
   name: "Altium Designer",
   slug: "altium-designer",
-  logo_url: getLogo("AD"),
+  logo_url: "",
   short_desc: "The professional standard for PCB and electronics design.",
 
   description:
@@ -501,7 +501,7 @@ export const c6Tools: Tool[] = [
   id: "t92",
   name: "Synopsys Fusion Compiler",
   slug: "synopsys-fusion-compiler",
-  logo_url: getLogo("Synopsys"),
+  logo_url: "",
   short_desc: "Next-generation RTL-to-GDSII EDA compiler from Synopsys.",
   description:
     "Synopsys Fusion Compiler is an innovative RTL-to-GDSII implementation system that fuses synthesis, place and route, and signoff-driven optimization in a single, unified environment.",
@@ -567,7 +567,7 @@ export const c6Tools: Tool[] = [
   id: "t103",
   name: "EPLAN",
   slug: "eplan",
-  logo_url: getLogo("EP"),
+  logo_url: "",
   short_desc:
     "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing.",
   description:
@@ -834,7 +834,7 @@ export const c6Tools: Tool[] = [
   id: "t161",
   name: "OrCAD",
   slug: "orcad",
-  logo_url: getLogo("OR"),
+  logo_url: "",
   short_desc: "简要介绍 OrCAD（官方站点）",
   description: "详细介绍 OrCAD（官方站点）",
   pricing_tiers: [
@@ -899,7 +899,7 @@ export const c6Tools: Tool[] = [
   id: "t162",
   name: "PADS Professional",
   slug: "pads-professional",
-  logo_url: getLogo("PA"),
+  logo_url: "",
   short_desc:
     "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-read",
   description:
@@ -1033,7 +1033,7 @@ export const c6Tools: Tool[] = [
   id: "t164",
   name: "Pulsonix",
   slug: "pulsonix",
-  logo_url: getLogo("PU"),
+  logo_url: "",
   short_desc:
     "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.",
   description:
@@ -1445,7 +1445,7 @@ export const c6Tools: Tool[] = [
   id: "t202",
   "name": "LTspice",
   "slug": "ltspice",
-  logo_url: getLogo("LT"),
+  logo_url: "",
   "short_desc": "Free SPICE simulator from Analog Devices, the de facto industry standard for analog design.",
   "description": "LTspice is a free, high-performance SPICE simulator distributed by Analog Devices — the most widely used SPICE tool in industry for power-electronics, switching converters, and analog circuit design.",
   "country": "USA",
@@ -1515,7 +1515,7 @@ export const c6Tools: Tool[] = [
   id: "t203",
   "name": "Proteus Design Suite",
   "slug": "proteus-design-suite",
-  logo_url: getLogo("PD"),
+  logo_url: "",
   "short_desc": "Schematic, simulation, and PCB design with embedded-firmware co-simulation.",
   "description": "Proteus from Labcenter Electronics combines schematic capture, mixed-signal SPICE simulation, PCB layout, and — uniquely — full microcontroller firmware co-simulation for AVR, PIC, ARM Cortex-M, and 8051 in a single tool.",
   "country": "UK",

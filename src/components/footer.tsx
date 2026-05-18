@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -71,7 +73,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="text-2xl font-black text-white flex items-center gap-2">
@@ -88,7 +90,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Top Industries - SEO POWERHOUSE */}
+          {/* Top Industries */}
           <div>
             <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Top Industries</h4>
             <ul className="space-y-3 text-sm">
@@ -100,7 +102,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Ecosystem */}
           <div>
             <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Ecosystem</h4>
             <ul className="space-y-3 text-sm">
@@ -111,19 +113,31 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Organization */}
+          <div>
+            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Organization</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/about" className="hover:text-blue-400 transition-colors">Our Methodology</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support Desk</Link></li>
+              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy & Terms</Link></li>
+              <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
+            </ul>
+          </div>
+
           {/* Newsletter */}
           <div>
             <NewsletterForm />
           </div>
         </div>
 
-        <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium text-slate-600">
-          <div className="flex items-center gap-4">
-            <span className="bg-slate-900 px-3 py-1 rounded-full border border-slate-800">© {new Date().getFullYear()} CADGuide.tools</span>
-            <span className="hidden md:inline">•</span>
+        <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-600">
+          <div className="hidden md:block" />
+          <div className="flex items-center gap-4 justify-center whitespace-nowrap">
+            <span>© {new Date().getFullYear()} CADGuide.tools</span>
+            <span>•</span>
             <span className="text-slate-500">Independent Analysis • No Paid Rankings</span>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-8 justify-center md:justify-end">
             <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Twitter</Link>
             <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">LinkedIn</Link>
             <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Newsletter</Link>

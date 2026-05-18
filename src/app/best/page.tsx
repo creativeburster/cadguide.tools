@@ -7,7 +7,7 @@ const YEAR = 2026;
 
 export const metadata: Metadata = pageMetadata({
   title: `Best CAD Software in ${YEAR} — Top Tools by Category`,
-  description: `Independent best-of rankings for ${YEAR}: top 2D CAD, 3D modeling, BIM, CAE/CAM, EDA, viewer, and specialized CAD tools. Hand-curated by experts, validated against real customer reviews.`,
+  description: `Expert-curated ${YEAR} rankings: top 2D CAD, 3D modeling, BIM, CAE/CAM, EDA tools. Validated against real customer reviews.`,
   path: '/best',
 });
 

@@ -2,7 +2,7 @@ import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Privacy Policy',
+  title: 'Privacy Policy & Data Protection — GDPR & CCPA Compliant',
   description:
     'How CADGuide.tools collects, uses, and protects your information. GDPR and CCPA compliant. No data sold to third parties.',
   path: '/privacy',

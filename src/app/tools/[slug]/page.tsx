@@ -9,6 +9,7 @@ import {
   softwareApplicationLd,
   breadcrumbLd,
   faqLd,
+  reviewLd,
   SITE_NAME,
 } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -74,6 +75,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const softwareLd = softwareApplicationLd(tool, category);
   const breadcrumbsLd = breadcrumbLd(tool, category);
   const faq = faqLd(tool);
+  const reviews = reviewLd(tool);
 
   return (
     <>
@@ -94,6 +96,13 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
         />
       )}
+      {reviews && reviews.map((review, index) => (
+        <script
+          key={`review-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(review) }}
+        />
+      ))}
       <ToolDetailClient tool={tool} category={category} alternativeTools={alternativeTools} />
     </>
   );

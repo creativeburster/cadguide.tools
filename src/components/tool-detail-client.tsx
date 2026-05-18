@@ -69,44 +69,44 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   );
 
   const menuItems = [
-    { id: "overview", label: "Overview", icon: <Layers className="w-4 h-4" /> },
+    { id: "overview", label: "Overview", icon: <Layers className="w-3.5 h-3.5" /> },
     {
       id: "pricing",
       label: "Pricing Plans",
-      icon: <CreditCard className="w-4 h-4" />,
+      icon: <CreditCard className="w-3.5 h-3.5" />,
     },
     {
       id: "features",
       label: "Key Features",
-      icon: <Zap className="w-4 h-4" />,
+      icon: <Zap className="w-3.5 h-3.5" />,
     },
     {
       id: "specs",
       label: "Tech Specs",
-      icon: <BarChart3 className="w-4 h-4" />,
+      icon: <BarChart3 className="w-3.5 h-3.5" />,
     },
     ...(hasCompatibility
       ? [
           {
             id: "compatibility",
             label: "Compatibility",
-            icon: <Plug className="w-4 h-4" />,
+            icon: <Plug className="w-3.5 h-3.5" />,
           },
         ]
       : []),
     ...(hasTrust
-      ? [{ id: "trust", label: "Trust", icon: <Award className="w-4 h-4" /> }]
+      ? [{ id: "trust", label: "Trust", icon: <Award className="w-3.5 h-3.5" /> }]
       : []),
     {
       id: "reviews",
       label: "Pros & Cons",
-      icon: <MessageSquare className="w-4 h-4" />,
+      icon: <MessageSquare className="w-3.5 h-3.5" />,
     },
-    { id: "faq", label: "FAQ", icon: <HelpCircle className="w-4 h-4" /> },
+    { id: "faq", label: "FAQ", icon: <HelpCircle className="w-3.5 h-3.5" /> },
     {
       id: "alternatives",
       label: "Alternatives",
-      icon: <Search className="w-4 h-4" />,
+      icon: <Search className="w-3.5 h-3.5" />,
     },
   ];
 
@@ -325,7 +325,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-6 z-10 bg-gradient-to-l from-white to-transparent rounded-r-[20px]" />
                 <nav
                   aria-label="Section navigation"
-                  className="scrollbar-none flex items-center gap-1 md:gap-1.5 lg:gap-2 bg-white border border-slate-100 rounded-[20px] p-1.5 shadow-xl shadow-slate-200/20 overflow-x-auto whitespace-nowrap"
+                  className="scrollbar-none flex items-center gap-0.5 md:gap-1 lg:gap-1.5 bg-white border border-slate-100 rounded-[20px] p-1 shadow-xl shadow-slate-200/20 overflow-x-auto whitespace-nowrap"
                 >
                   {menuItems.map((item) => (
                     <button
@@ -333,7 +333,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       onClick={() => scrollTo(item.id)}
                       title={item.label}
                       aria-label={item.label}
-                      className={`shrink-0 inline-flex items-center gap-1.5 px-2.5 md:px-3 py-2 rounded-[12px] text-[10px] lg:text-[11px] font-black uppercase tracking-wider transition-all ${
+                      className={`shrink-0 inline-flex items-center gap-1 px-1.5 md:px-2 py-1.5 rounded-[12px] text-[9px] lg:text-[10px] font-black uppercase tracking-wider transition-all ${
                         activeSection === item.id
                           ? "bg-blue-600 text-white shadow-lg shadow-blue-200"
                           : "text-slate-400 hover:text-slate-900"

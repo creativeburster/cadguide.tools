@@ -8,7 +8,7 @@ export const c5Tools: Tool[] = [
   id: "t8",
   name: "Siemens NX",
   slug: "siemens-nx",
-  logo_url: getLogo("NX"),
+  logo_url: "",
   short_desc:
     "Powerful high-end CAD/CAM/CAE suite for advanced manufacturing.",
 
@@ -276,7 +276,7 @@ export const c5Tools: Tool[] = [
   id: "t28",
   name: "Mastercam",
   slug: "mastercam",
-  logo_url: getLogo("MC"),
+  logo_url: "",
   short_desc: "The global leader in CAM software for manufacturing.",
   description:
     "Mastercam is the world's most widely used CAM software. It provides solutions for all types of manufacturing, from 2- through 5-axis milling.",
@@ -852,7 +852,7 @@ export const c5Tools: Tool[] = [
   id: "t84",
   name: "ANSYS Mechanical",
   slug: "ansys-mechanical",
-  logo_url: getLogo("ANSYS"),
+  logo_url: "",
   short_desc: "The gold standard for structural FEA simulation.",
 
   description:
@@ -986,7 +986,7 @@ export const c5Tools: Tool[] = [
   id: "t85",
   name: "MSC Nastran",
   slug: "msc-nastran",
-  logo_url: getLogo("MSC Nastran"),
+  logo_url: "",
   short_desc: "NASA-born structural analysis solver, now by Hexagon.",
 
   description:
@@ -1084,7 +1084,7 @@ export const c5Tools: Tool[] = [
   id: "t86",
   name: "Altair HyperWorks",
   slug: "altair-hyperworks",
-  logo_url: getLogo("Altair HyperWorks"),
+  logo_url: "",
   short_desc: "Comprehensive simulation-driven design platform.",
 
   description:
@@ -1186,7 +1186,7 @@ export const c5Tools: Tool[] = [
   id: "t87",
   name: "ESI Visual-Environment",
   slug: "esi-visual-environment",
-  logo_url: getLogo("ESI Group"),
+  logo_url: "",
   short_desc:
     "Virtual prototyping platform for crash and comfort simulation.",
   description:
@@ -1256,7 +1256,7 @@ export const c5Tools: Tool[] = [
   id: "t93",
   name: "CAMWorks",
   slug: "camworks",
-  logo_url: getLogo("CAMWorks"),
+  logo_url: "",
   short_desc: "Knowledge-based CAM solution by HCL Technologies.",
   description:
     "CAMWorks is an industry-leading CAM solution developed by HCL Technologies that works natively inside SolidWorks and Solid Edge, using feature-based machining to automate CNC programming.",
@@ -1587,7 +1587,7 @@ export const c5Tools: Tool[] = [
   id: "t125",
   name: "Edgecam",
   slug: "edgecam",
-  logo_url: getLogo("ED"),
+  logo_url: "",
   short_desc: "简要介绍 Edgecam（官方站点）",
   description: "详细介绍 Edgecam（官方站点）",
   pricing_tiers: [
@@ -1717,7 +1717,7 @@ export const c5Tools: Tool[] = [
   id: "t149",
   name: "FeatureCAM",
   slug: "featurecam",
-  logo_url: getLogo("FE"),
+  logo_url: "",
   short_desc: "简要介绍 FeatureCAM（官方站点）",
   description: "详细介绍 FeatureCAM（官方站点）",
   pricing_tiers: [
@@ -1849,7 +1849,7 @@ export const c5Tools: Tool[] = [
   id: "t152",
   name: "hyperMILL",
   slug: "hypermill",
-  logo_url: getLogo("HY"),
+  logo_url: "",
   short_desc:
     "Innovative CAD CAM solutions generate optimised NC milling and turning programs for machine tools | Explore hyperMILL CA",
   description:
@@ -1916,7 +1916,7 @@ export const c5Tools: Tool[] = [
   id: "t153",
   name: "Tebis",
   slug: "tebis",
-  logo_url: getLogo("TE"),
+  logo_url: "",
   short_desc:
     "Software components for CAD/CAM, CAQ and MES support design and production in die, model and machine manufacturing.",
   description:
@@ -2574,7 +2574,7 @@ export const c5Tools: Tool[] = [
   id: "t182",
   name: "Lantek Expert",
   slug: "lantek-expert",
-  logo_url: getLogo("LA"),
+  logo_url: "",
   short_desc: "简要介绍 Lantek Expert（官方站点）",
   description: "详细介绍 Lantek Expert（官方站点）",
   pricing_tiers: [
@@ -2639,7 +2639,7 @@ export const c5Tools: Tool[] = [
   id: "t183",
   name: "SigmaNEST",
   slug: "sigmanest",
-  logo_url: getLogo("SI"),
+  logo_url: "",
   short_desc:
     "SigmaNEST CAD/CAM nesting software runs all major brands of laser, plasma, punch, router, waterjet, tube, and pressbrake",
   description:
@@ -3365,7 +3365,7 @@ export const c5Tools: Tool[] = [
   id: "t193",
   "name": "SimScale",
   "slug": "simscale",
-  logo_url: getLogo("SI"),
+  logo_url: "",
   "short_desc": "Browser-based cloud CFD/FEA/thermal simulation platform with per-hour pricing.",
   "description": "SimScale runs OpenFOAM, Code_Aster, and CalculiX in the browser on AWS — letting engineers do production-grade CFD and FEA without local solvers, local hardware, or licensing servers.",
   "country": "Germany",
@@ -3435,7 +3435,7 @@ export const c5Tools: Tool[] = [
   id: "t194",
   "name": "Femap",
   "slug": "femap",
-  logo_url: getLogo("FE"),
+  logo_url: "",
   "short_desc": "Siemens Femap is a CAD-independent FEA pre/postprocessor primarily paired with NX Nastran.",
   "description": "Femap is Siemens' Windows-native, CAD-agnostic finite element preprocessor and post-processor, most often paired with NX Nastran or MSC Nastran as the solver of record for aerospace structures.",
   "country": "USA",
@@ -3715,7 +3715,7 @@ export const c5Tools: Tool[] = [
   id: "t209",
   "name": "CAESAR II",
   "slug": "caesar-ii",
-  logo_url: getLogo("CI"),
+  logo_url: "",
   "short_desc": "Industry-standard pipe stress analysis for static and dynamic load cases.",
   "description": "Hexagon CAESAR II is the global benchmark pipe-stress analysis tool — used by oil & gas, petrochemical, and power EPCs for code-compliant ASME B31, EN 13480, and B31.3 stress analysis of piping systems.",
   "country": "USA",

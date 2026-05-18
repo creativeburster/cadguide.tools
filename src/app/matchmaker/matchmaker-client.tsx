@@ -201,7 +201,7 @@ export default function MatchmakerPage() {
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Perfect Matches Found
               </div>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Your Custom Recommendations</h1>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Your Custom Recommendations</h2>
               <p className="text-slate-500 font-medium">Based on your {selections.industry} profile and {selections.platform} workflow.</p>
             </div>
 

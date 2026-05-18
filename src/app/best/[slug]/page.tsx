@@ -24,7 +24,7 @@ function pageTitle(category: Category): string {
 }
 
 function pageDescription(category: Category): string {
-  return `${BEST_OF_LIMIT} top-rated ${category.name} tools for ${YEAR}, ranked by expert score, real G2/Capterra/TrustRadius reviews, and feature depth. Pricing, platforms, and best-for guidance for each pick.`;
+  return `${BEST_OF_LIMIT} top ${category.name} tools for ${YEAR}. Ranked by expert score and real reviews. Pricing, platforms, and best-for guidance included.`;
 }
 
 export async function generateMetadata(

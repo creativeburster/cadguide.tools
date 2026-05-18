@@ -702,7 +702,7 @@ export const c3Tools: Tool[] = [
   id: "t17",
   name: "Vectorworks",
   slug: "vectorworks",
-  logo_url: getLogo("VW"),
+  logo_url: "",
 
   short_desc:
     "The all-in-one BIM solution for landscape and entertainment design.",
@@ -866,7 +866,7 @@ export const c3Tools: Tool[] = [
   id: "t27",
   name: "Chief Architect",
   slug: "chief-architect",
-  logo_url: getLogo("CA"),
+  logo_url: "",
   short_desc: "Professional home design software for builders.",
 
   description:
@@ -1327,7 +1327,7 @@ export const c3Tools: Tool[] = [
   id: "t94",
   name: "Allplan",
   slug: "allplan",
-  logo_url: getLogo("Allplan"),
+  logo_url: "",
   short_desc: "Professional BIM platform by Nemetschek for AEC.",
 
   description:
@@ -1481,7 +1481,7 @@ export const c3Tools: Tool[] = [
   id: "t95",
   name: "OpenRoads Designer",
   slug: "openroads-designer",
-  logo_url: getLogo("OpenRoads Designer"),
+  logo_url: "",
   short_desc: "Comprehensive civil road design platform by Bentley.",
   description:
     "OpenRoads Designer by Bentley Systems is a comprehensive BIM application for road and highway design, providing a fully dynamic design environment for road layout, drainage, and corridor modeling.",
@@ -1745,7 +1745,7 @@ export const c3Tools: Tool[] = [
   id: "t130",
   name: "Edificius",
   slug: "edificius",
-  logo_url: getLogo("ED"),
+  logo_url: "",
   short_desc:
     "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a",
   description:
@@ -1812,7 +1812,7 @@ export const c3Tools: Tool[] = [
   id: "t131",
   name: "EdiLus",
   slug: "edilus",
-  logo_url: getLogo("ED"),
+  logo_url: "",
   short_desc:
     "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a",
   description:
@@ -1879,7 +1879,7 @@ export const c3Tools: Tool[] = [
   id: "t139",
   name: "cadwork",
   slug: "cadwork",
-  logo_url: getLogo("CA"),
+  logo_url: "",
   short_desc: "Cadwork CAD/CAM software for timber construction.",
   description: "Cadwork CAD/CAM software for timber construction.",
   pricing_tiers: [
@@ -2353,7 +2353,7 @@ export const c3Tools: Tool[] = [
   id: "t229",
   "name": "Autodesk Construction Cloud",
   "slug": "autodesk-construction-cloud",
-  logo_url: getLogo("AC"),
+  logo_url: "",
   "short_desc": "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs).",
   "description": "Autodesk Construction Cloud is the umbrella for Autodesk's construction-management software — BIM Collaborate, Build, Docs, Takeoff, Cost — replacing the long-running BIM 360 brand and unifying common data environment, model coordination, and field tools.",
   "country": "USA",
@@ -2563,7 +2563,7 @@ export const c3Tools: Tool[] = [
   id: "t232",
   "name": "Autodesk Dynamo",
   "slug": "autodesk-dynamo",
-  logo_url: getLogo("AD"),
+  logo_url: "",
   "short_desc": "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM.",
   "description": "Dynamo is the visual programming environment that sits inside Revit and Civil 3D — letting BIM specialists automate repetitive workflows, generate parametric geometry, and access the Revit API without writing C# code.",
   "country": "USA",
