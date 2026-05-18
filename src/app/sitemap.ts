@@ -1,6 +1,13 @@
 import { MetadataRoute } from 'next';
 import { tools } from '@/lib/data';
-import { bestOfPaths, comparisonPairs } from '@/lib/seo-content';
+import {
+  bestOfPaths,
+  comparisonPairs,
+  alternativesPagePaths,
+  platformPagePaths,
+  formatPagePaths,
+  personaPagePaths,
+} from '@/lib/seo-content';
 
 const BASE_URL = 'https://cadguide.tools';
 
@@ -15,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/matchmaker`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE_URL}/compare`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE_URL}/best`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE_URL}/alternatives`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/platforms`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/file-formats`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/for`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/free`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/open-source`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/deals`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/sponsor`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
@@ -30,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: tool.score >= 4.5 ? 0.9 : 0.8,
   }));
 
-  // Per-category best-of pages (7 entries) — important long-tail SEO.
+  // Per-category best-of pages (7 entries).
   const bestOfUrls: MetadataRoute.Sitemap = bestOfPaths().map(({ slug }) => ({
     url: `${BASE_URL}/best/${slug}`,
     lastModified: now,
@@ -46,10 +59,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Per-tool alternatives pages (one per tool, 235 entries) — long-tail
+  // "<tool> alternatives" keyword targeting.
+  const alternativesUrls: MetadataRoute.Sitemap = alternativesPagePaths().map(
+    ({ slug }) => ({
+      url: `${BASE_URL}/alternatives/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    }),
+  );
+
+  // Platform / OS pages (mac, linux, web, ios).
+  const platformUrls: MetadataRoute.Sitemap = platformPagePaths().map(
+    ({ slug }) => ({
+      url: `${BASE_URL}/platforms/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }),
+  );
+
+  // File-format pages (dwg, step, stl, …).
+  const formatUrls: MetadataRoute.Sitemap = formatPagePaths().map(({ slug }) => ({
+    url: `${BASE_URL}/file-formats/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  // Persona / use-case pages (architects, students, ...).
+  const personaUrls: MetadataRoute.Sitemap = personaPagePaths().map(
+    ({ slug }) => ({
+      url: `${BASE_URL}/for/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }),
+  );
+
   return [
     ...staticPages,
     ...toolUrls,
     ...bestOfUrls,
     ...compareUrls,
+    ...alternativesUrls,
+    ...platformUrls,
+    ...formatUrls,
+    ...personaUrls,
   ];
 }
