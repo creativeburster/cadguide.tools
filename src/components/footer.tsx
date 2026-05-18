@@ -42,11 +42,13 @@ function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <h4 className="text-white font-black uppercase text-xs tracking-[0.2em]">Newsletter</h4>
-      <p className="text-xs text-slate-500 leading-relaxed">
-        Monthly digest: new tool reviews, fresh deals, and curated picks. No spam — unsubscribe anytime.
-      </p>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <h4 className="text-white font-black uppercase text-[10px] tracking-[0.2em] whitespace-nowrap">Newsletter</h4>
+        <p className="text-[10px] text-slate-500 leading-tight">
+          Monthly digest: new tool reviews, fresh deals, and curated picks.
+        </p>
+      </div>
       <div className="flex gap-2">
         <Input
           type="email"
@@ -54,7 +56,7 @@ function NewsletterForm() {
           placeholder="you@company.com"
           required
           disabled={isSubmitting}
-          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-11 rounded-lg text-sm flex-1"
+          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-8 rounded-lg text-[11px] flex-1"
         />
         <input type="text" name="email_address_check" value="" className="hidden" />
         <input type="hidden" name="locale" value="en" />
@@ -62,7 +64,7 @@ function NewsletterForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-blue-600 hover:bg-blue-700 h-11 px-5 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap"
+          className="bg-blue-600 hover:bg-blue-700 h-8 px-3 rounded-lg font-black text-[9px] uppercase tracking-widest whitespace-nowrap"
         >
           {isSubmitting ? '...' : 'Subscribe'}
         </Button>
@@ -85,20 +87,6 @@ export function Footer() {
               The world&apos;s premier independent directory for CAD, BIM, & Engineering software. Deep-diving into 235+ tools to help professionals make smarter tech decisions.
             </p>
             <div className="flex items-center gap-3">
-              <div className="flex -space-x-2">
-                {[
-                  { initial: 'A', from: 'from-blue-500', to: 'to-purple-600' },
-                  { initial: 'M', from: 'from-emerald-500', to: 'to-teal-600' },
-                  { initial: 'S', from: 'from-amber-500', to: 'to-orange-600' },
-                ].map((a) => (
-                  <div
-                    key={a.initial}
-                    className={`w-8 h-8 rounded-full border-2 border-slate-950 bg-gradient-to-br ${a.from} ${a.to} flex items-center justify-center text-white text-[11px] font-black`}
-                  >
-                    {a.initial}
-                  </div>
-                ))}
-              </div>
               <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Trusted by 5k+ Pros</span>
               <NewsletterForm />
             </div>
