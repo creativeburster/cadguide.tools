@@ -45,14 +45,14 @@ function NewsletterForm() {
     <form onSubmit={handleSubmit} className="space-y-3">
       <h4 className="text-white font-black uppercase text-xs tracking-[0.2em]">Newsletter</h4>
       <p className="text-xs text-slate-500">Get CAD insights & deals in your inbox.</p>
-      <div className="flex gap-2">
+      <div className="space-y-2">
         <Input
           type="email"
           name="EMAIL"
           placeholder="Your email"
           required
           disabled={isSubmitting}
-          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-10 rounded-lg text-sm"
+          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-10 rounded-lg text-sm w-full"
         />
         <input type="text" name="email_address_check" value="" className="hidden" />
         <input type="hidden" name="locale" value="en" />
@@ -60,7 +60,7 @@ function NewsletterForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-blue-600 hover:bg-blue-700 h-10 px-4 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap"
+          className="bg-blue-600 hover:bg-blue-700 h-10 px-4 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap w-full"
         >
           {isSubmitting ? '...' : 'Subscribe'}
         </Button>

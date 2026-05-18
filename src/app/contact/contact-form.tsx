@@ -13,10 +13,15 @@ export function ContactBody() {
     const subject = formData.get('subject') as string;
     const message = formData.get('message') as string;
 
+    if (!name || !email || !subject || !message) {
+      alert('Please fill in all fields');
+      return;
+    }
+
     // Create mailto link
     const mailtoLink = `mailto:support@cadguide.tools?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
     
-    window.location.href = mailtoLink;
+    window.open(mailtoLink, '_blank');
   };
 
   return (
