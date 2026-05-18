@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = pageMetadata({
   title: 'All CAD Tools — Complete Software Index',
   description:
-    'A-Z index of all 175+ CAD, BIM, CAE/CAM, EDA, and viewer tools listed on CADGuide.tools. Browse by category or jump directly to any product page.',
+    'A-Z index of all 235+ CAD, BIM, CAE/CAM, EDA, and viewer tools listed on CADGuide.tools. Browse by category or jump directly to any product page.',
   path: '/all-tools',
 });
 

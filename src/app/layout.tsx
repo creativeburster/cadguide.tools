@@ -11,8 +11,8 @@ import { SiteNotice } from "@/components/site-notice";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CADGuide.tools | Compare 175+ CAD & BIM Software (ASM vs Parasolid)",
-  description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, and pricing for 175+ professional 2D/3D design tools.",
+  title: "CADGuide.tools | Compare 235+ CAD & BIM Software (ASM vs Parasolid)",
+  description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, and pricing for 235+ professional 2D/3D design tools.",
   metadataBase: new URL('https://cadguide.tools'),
   alternates: {
     canonical: 'https://cadguide.tools',
