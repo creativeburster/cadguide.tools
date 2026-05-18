@@ -47,14 +47,14 @@ function NewsletterForm() {
       <p className="text-xs text-slate-500 leading-relaxed">
         Monthly digest: new tool reviews, fresh deals, and curated picks. No spam — unsubscribe anytime.
       </p>
-      <div className="flex gap-2">
+      <div className="space-y-2">
         <Input
           type="email"
           name="EMAIL"
           placeholder="you@company.com"
           required
           disabled={isSubmitting}
-          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-11 rounded-lg text-sm flex-1 min-w-0"
+          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-11 rounded-lg text-sm w-full"
         />
         <input type="text" name="email_address_check" value="" className="hidden" />
         <input type="hidden" name="locale" value="en" />
@@ -62,7 +62,7 @@ function NewsletterForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-blue-600 hover:bg-blue-700 h-11 px-5 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap shrink-0"
+          className="bg-blue-600 hover:bg-blue-700 h-11 px-5 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap w-full"
         >
           {isSubmitting ? '...' : 'Subscribe'}
         </Button>
