@@ -85,6 +85,11 @@ export function Footer() {
               The world&apos;s premier independent directory for CAD, BIM, & Engineering software. Deep-diving into 235+ tools to help professionals make smarter tech decisions.
             </p>
             <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-slate-950 flex items-center justify-center text-[8px] text-white font-bold">JD</div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 border-2 border-slate-950 flex items-center justify-center text-[8px] text-white font-bold">MK</div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-slate-950 flex items-center justify-center text-[8px] text-white font-bold">AL</div>
+              </div>
               <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Trusted by 5k+ Pros</span>
             </div>
           </div>
