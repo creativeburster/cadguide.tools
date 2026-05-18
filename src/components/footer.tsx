@@ -46,7 +46,7 @@ function NewsletterForm() {
       <div className="flex items-center gap-2">
         <h4 className="text-white font-black uppercase text-[10px] tracking-[0.2em] whitespace-nowrap">Newsletter</h4>
         <p className="text-[10px] text-slate-500 leading-tight">
-          Monthly digest: new tool reviews, fresh deals, and curated picks.
+          Monthly digest. Trusted by 5k+ Pros.
         </p>
       </div>
       <div className="flex gap-2">
@@ -86,10 +86,7 @@ export function Footer() {
             <p className="text-sm leading-relaxed">
               The world&apos;s premier independent directory for CAD, BIM, & Engineering software. Deep-diving into 235+ tools to help professionals make smarter tech decisions.
             </p>
-            <div className="flex items-center gap-3">
-              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Trusted by 5k+ Pros</span>
-              <NewsletterForm />
-            </div>
+            <NewsletterForm />
           </div>
 
           {/* Browse by Role */}
