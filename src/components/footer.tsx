@@ -1,36 +1,76 @@
 import Link from 'next/link';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useState } from 'react';
+
+function NewsletterForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch('https://14c0c158.sibforms.com/serve/MUIFAKIxKpcA9tVcGMHLoh1hj5E5nIDzAq2znbxbzvMcjfkPq3hEYLFBQ6sT2Ay_pV6p6i-dyE3A8DmKpCbG0_NJhlCfZAWOGziY94NmSKC3hLU9V-pzratM4gdnUu9F3wbBUtqS6MRh0bCipP7gT4bjwmbMgIQ-qRcdy70QNBdaipZGyXI0rnYnvZAxAELcDVqpvofktMOrSCoM', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors',
+      });
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Newsletter submission error:', error);
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="text-center">
+        <div className="text-green-400 text-2xl mb-2">✓</div>
+        <p className="text-white font-medium">Thanks for subscribing!</p>
+        <p className="text-sm text-slate-500 mt-1">Check your inbox for confirmation.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <h4 className="text-white font-black uppercase text-xs tracking-[0.2em]">Newsletter</h4>
+      <p className="text-xs text-slate-500">Get CAD insights & deals in your inbox.</p>
+      <div className="flex gap-2">
+        <Input
+          type="email"
+          name="EMAIL"
+          placeholder="Your email"
+          required
+          disabled={isSubmitting}
+          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-10 rounded-lg text-sm"
+        />
+        <input type="text" name="email_address_check" value="" className="hidden" />
+        <input type="hidden" name="locale" value="en" />
+        <input type="hidden" name="html_type" value="simple" />
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className="bg-blue-600 hover:bg-blue-700 h-10 px-4 rounded-lg font-black text-[10px] uppercase tracking-widest whitespace-nowrap"
+        >
+          {isSubmitting ? '...' : 'Subscribe'}
+        </Button>
+      </div>
+    </form>
+  );
+}
 
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900">
       <div className="container mx-auto px-4">
-        {/* Newsletter Section */}
-        <div className="max-w-2xl mx-auto mb-16 text-center">
-          <h3 className="text-2xl font-black text-white mb-3">Stay Updated</h3>
-          <p className="text-sm text-slate-500 mb-6">Subscribe to our newsletter for the latest CAD software insights, deals, and expert recommendations.</p>
-          <form
-            method="POST"
-            action="https://14c0c158.sibforms.com/serve/MUIFAKIxKpcA9tVcGMHLoh1hj5E5nIDzAq2znbxbzvMcjfkPq3hEYLFBQ6sT2Ay_pV6p6i-dyE3A8DmKpCbG0_NJhlCfZAWOGziY94NmSKC3hLU9V-pzratM4gdnUu9F3wbBUtqS6MRh0bCipP7gT4bjwmbMgIQ-qRcdy70QNBdaipZGyXI0rnYnvZAxAELcDVqpvofktMOrSCoM"
-            className="flex gap-3 max-w-md mx-auto"
-          >
-            <input type="text" name="email_address_check" value="" className="hidden" />
-            <input type="hidden" name="locale" value="en" />
-            <input type="hidden" name="html_type" value="simple" />
-            <Input
-              type="email"
-              name="EMAIL"
-              placeholder="Enter your email"
-              required
-              className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-12 rounded-xl"
-            />
-            <Button type="submit" className="bg-blue-600 hover:bg-blue-700 h-12 px-6 rounded-xl font-black text-xs uppercase tracking-widest">
-              Subscribe
-            </Button>
-          </form>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-6">
@@ -71,15 +111,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Legal */}
+          {/* Newsletter */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Organization</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/about" className="hover:text-blue-400 transition-colors">Our Methodology</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support Desk</Link></li>
-              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy & Terms</Link></li>
-              <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
-            </ul>
+            <NewsletterForm />
           </div>
         </div>
 
