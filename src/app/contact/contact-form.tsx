@@ -2,27 +2,60 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useState } from 'react';
 
 export function ContactBody() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
     const formData = new FormData(e.currentTarget);
-    
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const subject = formData.get('subject') as string;
-    const message = formData.get('message') as string;
 
-    if (!name || !email || !subject || !message) {
-      alert('Please fill in all fields');
-      return;
+    try {
+      const response = await fetch('https://formspree.io/f/xvgpzzry', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        const data = await response.json();
+        alert(data.error || 'There was a problem submitting the form');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was a problem submitting the form');
+    } finally {
+      setIsSubmitting(false);
     }
-
-    // Create mailto link
-    const mailtoLink = `mailto:support@cadguide.tools?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
-    
-    window.open(mailtoLink, '_blank');
   };
+
+  if (isSubmitted) {
+    return (
+      <main className="min-h-screen bg-slate-50 py-24">
+        <div className="max-w-[1000px] mx-auto px-6 md:px-12">
+          <div className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/60 border border-white text-center">
+            <div className="text-green-500 text-6xl mb-4">✓</div>
+            <h1 className="text-3xl font-bold text-slate-900 mb-4">Message Sent!</h1>
+            <p className="text-lg text-slate-600">Thank you for contacting us. We'll get back to you within 24-48 business hours.</p>
+            <Button 
+              onClick={() => setIsSubmitted(false)}
+              className="mt-8 h-12 px-8 bg-blue-600 hover:bg-blue-700 rounded-xl"
+            >
+              Send Another Message
+            </Button>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-slate-50 py-24">
@@ -96,9 +129,10 @@ export function ContactBody() {
               </div>
               <Button 
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg shadow-blue-200"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
