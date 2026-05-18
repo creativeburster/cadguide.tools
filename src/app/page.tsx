@@ -203,6 +203,51 @@ function HomeBody() {
           </div>
         </div>
       </section>
+      {/* Browse by … Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100 font-black uppercase text-[10px] tracking-[0.25em] py-1 px-3 rounded-full">Discover</Badge>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Browse 235 Tools by …</h2>
+            <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
+              Slice the catalog by role, platform, file format, or pricing — every angle has its own curated guide.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <Link href="/for" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">10 roles</div>
+              <div className="mt-1 text-lg font-black text-slate-900">By Role</div>
+              <div className="mt-1 text-xs text-slate-500">Architects, engineers, students…</div>
+            </Link>
+            <Link href="/platforms" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">4 platforms</div>
+              <div className="mt-1 text-lg font-black text-slate-900">By Platform</div>
+              <div className="mt-1 text-xs text-slate-500">Mac, Linux, Web, iPad</div>
+            </Link>
+            <Link href="/file-formats" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">10 formats</div>
+              <div className="mt-1 text-lg font-black text-slate-900">By File Format</div>
+              <div className="mt-1 text-xs text-slate-500">DWG, STEP, STL, IFC, …</div>
+            </Link>
+            <Link href="/alternatives" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">235 guides</div>
+              <div className="mt-1 text-lg font-black text-slate-900">Alternatives</div>
+              <div className="mt-1 text-xs text-slate-500">Switch-away guides per tool</div>
+            </Link>
+            <Link href="/free" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">20 free</div>
+              <div className="mt-1 text-lg font-black text-slate-900">Free CAD</div>
+              <div className="mt-1 text-xs text-slate-500">Truly free, no trial-ware</div>
+            </Link>
+            <Link href="/best" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">7 lists</div>
+              <div className="mt-1 text-lg font-black text-slate-900">Best Lists</div>
+              <div className="mt-1 text-xs text-slate-500">Top picks per category</div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-blue-600 text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>

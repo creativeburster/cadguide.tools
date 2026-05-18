@@ -73,7 +73,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-10 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="text-2xl font-black text-white flex items-center gap-2">
@@ -90,15 +90,29 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Top Industries */}
+          {/* Browse by Role */}
           <div>
-            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Top Industries</h4>
+            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">By Role</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/tools?q=Electrical" className="hover:text-blue-400 transition-colors">Electrical Engineering</Link></li>
-              <li><Link href="/tools?q=Jewelry" className="hover:text-blue-400 transition-colors">Jewelry & Gemology</Link></li>
-              <li><Link href="/tools?q=Dental" className="hover:text-blue-400 transition-colors">Dental & Medical</Link></li>
-              <li><Link href="/tools?q=Fashion" className="hover:text-blue-400 transition-colors">Fashion & Apparel</Link></li>
-              <li><Link href="/tools?q=Marine" className="hover:text-blue-400 transition-colors">Shipbuilding & Marine</Link></li>
+              <li><Link href="/for/architects" className="hover:text-blue-400 transition-colors">Architects</Link></li>
+              <li><Link href="/for/mechanical-engineers" className="hover:text-blue-400 transition-colors">Mechanical Engineers</Link></li>
+              <li><Link href="/for/civil-engineers" className="hover:text-blue-400 transition-colors">Civil Engineers</Link></li>
+              <li><Link href="/for/students" className="hover:text-blue-400 transition-colors">Students</Link></li>
+              <li><Link href="/for/jewelry-designers" className="hover:text-blue-400 transition-colors">Jewelry Designers</Link></li>
+              <li><Link href="/for" className="hover:text-blue-400 transition-colors font-semibold">All 10 roles →</Link></li>
+            </ul>
+          </div>
+
+          {/* Browse Software */}
+          <div>
+            <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Browse</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/alternatives" className="hover:text-blue-400 transition-colors">Alternatives</Link></li>
+              <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">By Platform</Link></li>
+              <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">By File Format</Link></li>
+              <li><Link href="/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
+              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open-Source CAD</Link></li>
+              <li><Link href="/best" className="hover:text-blue-400 transition-colors">Best Lists</Link></li>
             </ul>
           </div>
 
@@ -107,7 +121,6 @@ export function Footer() {
             <h4 className="text-white font-black mb-6 uppercase text-xs tracking-[0.2em]">Ecosystem</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Smart Matchmaker</Link></li>
-              <li><Link href="/best" className="hover:text-blue-400 transition-colors">Best Lists by Category</Link></li>
               <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Tool Comparisons</Link></li>
               <li><Link href="/deals" className="hover:text-blue-400 transition-colors">Active Software Deals</Link></li>
               <li><Link href="/tools" className="hover:text-blue-400 transition-colors">Technical Directory</Link></li>

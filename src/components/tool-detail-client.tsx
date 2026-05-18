@@ -978,6 +978,14 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     ),
                 )}
               </div>
+              <div className="text-center pt-2">
+                <Link
+                  href={`/alternatives/${tool.slug}`}
+                  className="inline-flex items-center gap-2 text-blue-600 font-black hover:underline"
+                >
+                  See the full {tool.name} alternatives guide →
+                </Link>
+              </div>
             </section>
           </main>
 
