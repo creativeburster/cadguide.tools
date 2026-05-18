@@ -76,7 +76,7 @@ function NewsletterForm() {
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900">
-      <div className="container mx-auto px-2">
+      <div className="container mx-auto px-1">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 mb-16">
           {/* Brand Info */}
           <div className="space-y-5">
