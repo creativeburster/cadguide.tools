@@ -1,9 +1,36 @@
 import Link from 'next/link';
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900">
       <div className="container mx-auto px-4">
+        {/* Newsletter Section */}
+        <div className="max-w-2xl mx-auto mb-16 text-center">
+          <h3 className="text-2xl font-black text-white mb-3">Stay Updated</h3>
+          <p className="text-sm text-slate-500 mb-6">Subscribe to our newsletter for the latest CAD software insights, deals, and expert recommendations.</p>
+          <form
+            method="POST"
+            action="https://14c0c158.sibforms.com/serve/MUIFAKIxKpcA9tVcGMHLoh1hj5E5nIDzAq2znbxbzvMcjfkPq3hEYLFBQ6sT2Ay_pV6p6i-dyE3A8DmKpCbG0_NJhlCfZAWOGziY94NmSKC3hLU9V-pzratM4gdnUu9F3wbBUtqS6MRh0bCipP7gT4bjwmbMgIQ-qRcdy70QNBdaipZGyXI0rnYnvZAxAELcDVqpvofktMOrSCoM"
+            className="flex gap-3 max-w-md mx-auto"
+          >
+            <input type="text" name="email_address_check" value="" className="hidden" />
+            <input type="hidden" name="locale" value="en" />
+            <input type="hidden" name="html_type" value="simple" />
+            <Input
+              type="email"
+              name="EMAIL"
+              placeholder="Enter your email"
+              required
+              className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-12 rounded-xl"
+            />
+            <Button type="submit" className="bg-blue-600 hover:bg-blue-700 h-12 px-6 rounded-xl font-black text-xs uppercase tracking-widest">
+              Subscribe
+            </Button>
+          </form>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-6">
