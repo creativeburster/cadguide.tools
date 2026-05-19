@@ -69,7 +69,7 @@ function HomeBody() {
             </Button>
           </form>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 px-4">
-            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-100 hover:text-blue-900 border-none font-bold h-14 rounded-xl">
+            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-white hover:shadow-xl hover:ring-2 hover:ring-white/50 border-none font-bold h-14 rounded-xl transition-all">
               <Link href="/matchmaker">Try Smart Matchmaker</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-blue-400/50 text-white hover:bg-white/10 font-bold h-14 rounded-xl">
@@ -258,7 +258,7 @@ function HomeBody() {
             Our directory is growing every day. If you want us to review a specific tool, or if you're a vendor, let us know.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-100 hover:text-blue-900 font-bold px-10 h-14 text-lg rounded-2xl shadow-xl shadow-blue-900/20">
+            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-white hover:shadow-2xl hover:ring-2 hover:ring-white/50 font-bold px-10 h-14 text-lg rounded-2xl shadow-xl shadow-blue-900/20 transition-all">
               <Link href="/sponsor">Submit a Tool</Link>
             </Button>
             <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold px-10 h-14 text-lg rounded-2xl">
