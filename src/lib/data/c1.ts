@@ -107,7 +107,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 255,
-  platforms: ["Windows", "macOS", "Web"],
+  platforms: ["Windows", "macOS", "Web", "Android", "iOS"],
   industries: ["Architecture", "Engineering", "Manufacturing"],
   core_features: [
     "2D Drafting",
