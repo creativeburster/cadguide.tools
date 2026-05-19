@@ -59,13 +59,15 @@ function NewsletterForm() {
         <input type="text" name="email_address_check" value="" className="hidden" />
         <input type="hidden" name="locale" value="en" />
         <input type="hidden" name="html_type" value="simple" />
-        <Button
-          type="submit"
-          disabled={isSubmitting}
-          className="bg-blue-600 hover:bg-blue-700 h-8 px-3 rounded-lg font-black text-[9px] uppercase tracking-widest whitespace-nowrap w-full"
-        >
-          {isSubmitting ? '...' : 'Subscribe'}
-        </Button>
+        <div className="flex justify-center">
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-blue-600 hover:bg-blue-700 h-8 px-8 rounded-lg font-black text-[9px] uppercase tracking-widest whitespace-nowrap"
+          >
+            {isSubmitting ? '...' : 'Subscribe'}
+          </Button>
+        </div>
       </div>
     </form>
   );
