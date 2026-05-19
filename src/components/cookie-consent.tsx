@@ -23,7 +23,14 @@ export function CookieConsent() {
 
   return (
     <div className="fixed bottom-6 left-6 z-[100] animate-in fade-in slide-in-from-bottom-5 duration-500 max-w-[320px]">
-      <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-2xl border border-slate-700/50 backdrop-blur-xl">
+      <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-2xl border border-slate-700/50 backdrop-blur-xl relative">
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-2 right-2 w-5 h-5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-slate-800 rounded-full text-[10px] transition-colors"
+          aria-label="Close cookie banner"
+        >
+          ✕
+        </button>
         <div className="flex flex-col gap-4">
           <div>
             <h3 className="font-bold text-sm mb-1 flex items-center gap-2">

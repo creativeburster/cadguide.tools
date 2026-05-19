@@ -158,8 +158,8 @@ export function Footer() {
           </div>
           <div className="flex gap-8 justify-center md:justify-end">
             <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Twitter</Link>
-            <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">LinkedIn</Link>
-            <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Newsletter</Link>
+            <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Facebook</Link>
+            <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Reddit</Link>
           </div>
         </div>
       </div>
