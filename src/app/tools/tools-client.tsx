@@ -341,7 +341,7 @@ function ToolsList() {
 
           <FilterSection title="Operating System">
             <div className="flex flex-wrap gap-2">
-              {['Windows', 'macOS', 'Linux', 'Web'].map(os => (
+              {['Windows', 'macOS', 'Linux', 'Web', 'Android', 'iOS'].map(os => (
                 <button
                   key={os}
                   onClick={() => toggleFilter('os', os)}

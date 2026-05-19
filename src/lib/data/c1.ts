@@ -964,7 +964,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
-  platforms: ["Windows", "Mobile", "Web"],
+  platforms: ["Windows", "Web", "Android", "iOS"],
   industries: ["Construction", "Real Estate", "Architecture"],
 
   core_features: [
