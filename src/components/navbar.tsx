@@ -21,7 +21,7 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-[110] bg-white/95 backdrop-blur-md border-b border-slate-100 w-full h-16">
-        <div className="w-full max-w-none md:max-w-[1360px] mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
+        <div className="w-full h-full flex items-center justify-between px-4 sm:px-6 max-w-none md:max-w-[1360px] mx-auto">
           <Link href="/" className="text-xl font-bold text-slate-900 flex items-center gap-2 group shrink-0">
             <span className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white text-sm shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform font-black">CG</span>
             <span className="tracking-tight hidden sm:inline-block">CADGuide<span className="text-blue-600">.tools</span></span>

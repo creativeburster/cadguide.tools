@@ -34,7 +34,7 @@ export default function Home() {
 
 function HomeBody() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white w-full">
       {/* Hero Section - Deep ocean blue */}
       <section className="bg-gradient-to-br from-blue-950 via-[#0a192f] to-blue-900 text-white pt-24 pb-32 relative overflow-hidden w-full px-4">
         {/* Abstract background elements - pure blue glow effect */}

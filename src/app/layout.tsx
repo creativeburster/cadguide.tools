@@ -45,7 +45,7 @@ export default function RootLayout({
         <PWARegistration />
         <SiteNotice />
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow w-full">
           {children}
         </main>
         <Footer />
