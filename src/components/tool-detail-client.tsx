@@ -318,7 +318,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 - On lg+: gap widens so the bar fills the column.
                 The label still has `sr-only` on narrow widths so screen
                 readers and the title= tooltip both expose the full name. */}
-            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md w-full max-w-full overflow-hidden">
+            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md w-full">
               <div className="relative">
                 {/* Left & right fade gradients telegraph horizontal scroll. */}
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-6 z-10 bg-gradient-to-r from-white to-transparent rounded-l-[20px]" />
