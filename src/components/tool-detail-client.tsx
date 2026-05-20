@@ -153,9 +153,9 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     .slice(0, 3);
 
   return (
-    <div className="bg-[#fcfdfe] min-h-screen pb-20">
+    <div className="bg-[#fcfdfe] min-h-screen pb-20 w-full">
       {/* Top Header - Standardized Width */}
-      <div className="bg-white border-b py-4 md:py-6 w-full min-w-full">
+      <div className="bg-white border-b py-4 md:py-6 w-full">
         <div className="w-full max-w-none md:max-w-[1360px] mx-auto px-3 md:px-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 min-w-0">
             <div className="flex items-center text-sm font-bold text-slate-400 min-w-0 flex-1">
