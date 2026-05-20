@@ -270,27 +270,27 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   <div className="flex flex-wrap items-center gap-4 mb-10">
                     <Button
                       asChild
-                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 md:h-14 px-6 md:px-10 shadow-xl shadow-blue-200"
+                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-10 shadow-xl shadow-blue-200 text-sm sm:text-base md:text-lg"
                     >
                       <a
                         href={tool.affiliate_url || tool.official_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 md:gap-3 text-base md:text-lg"
+                        className="flex items-center gap-2 md:gap-3"
                       >
-                        Go to Website <ExternalLink className="w-5 h-5" />
+                        Go to Website <ExternalLink className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
                       </a>
                     </Button>
                     <Button
                       asChild
                       variant="outline"
-                      className="rounded-2xl border-blue-100 text-blue-600 hover:bg-blue-50 font-black h-12 md:h-14 px-5 md:px-8 text-base md:text-lg"
+                      className="rounded-2xl border-blue-100 text-blue-600 hover:bg-blue-50 font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 text-sm sm:text-base md:text-lg"
                     >
                       <Link
                         href={`/compare?ids=${tool.id}`}
-                        className="flex items-center gap-3"
+                        className="flex items-center gap-2 md:gap-3"
                       >
-                        <Scale className="w-5 h-5" /> Compare with another tool
+                        <Scale className="w-4 h-4 md:w-5 md:h-5 shrink-0" /> Compare with another tool
                       </Link>
                     </Button>
                   </div>
@@ -318,7 +318,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 - On lg+: gap widens so the bar fills the column.
                 The label still has `sr-only` on narrow widths so screen
                 readers and the title= tooltip both expose the full name. */}
-            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md">
+            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md w-full max-w-full overflow-hidden">
               <div className="relative">
                 {/* Left & right fade gradients telegraph horizontal scroll. */}
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-6 z-10 bg-gradient-to-r from-white to-transparent rounded-l-[20px]" />
@@ -469,7 +469,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       {cat.category}{" "}
                       <div className="h-px bg-slate-100 flex-1"></div>
                     </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-3">
                       {cat.items?.map((item, j) => (
                         <div key={j} className="flex items-center gap-2 group">
                           {item.status ? (
@@ -504,27 +504,27 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     Environment Support
                   </h4>
                   <div className="space-y-6">
-                    <div className="flex justify-between items-center text-base">
+                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
                       <span className="font-bold text-slate-500">
                         Certified OS
                       </span>
-                      <span className="font-black text-slate-900">
+                      <span className="font-black text-slate-900 text-right">
                         {tool.platforms.join(", ")}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center text-base">
+                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
                       <span className="font-bold text-slate-500">
                         Multi-threading
                       </span>
-                      <span className="font-black text-slate-900">
+                      <span className="font-black text-slate-900 text-right">
                         {tool.tech_specs?.multicore}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center text-base">
+                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
                       <span className="font-bold text-slate-500">
                         GPU Optimization
                       </span>
-                      <span className="font-black text-slate-900">
+                      <span className="font-black text-slate-900 text-right">
                         {tool.tech_specs?.gpu_optimization}
                       </span>
                     </div>
