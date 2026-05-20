@@ -156,9 +156,9 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     <div className="bg-[#fcfdfe] min-h-screen pb-20">
       {/* Top Header - Standardized Width */}
       <div className="bg-white border-b py-4 md:py-6">
-        <div className="w-full max-w-[1360px] mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 min-w-0">
-            <div className="flex items-center text-sm font-bold text-slate-400 min-w-0 flex-1 overflow-x-auto">
+        <div className="w-full max-w-[1360px] mx-auto px-3 md:px-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 min-w-0">
+            <div className="flex items-center text-sm font-bold text-slate-400 min-w-0 flex-1">
               <Link href="/" className="hover:text-blue-600 transition-colors">
                 Home
               </Link>
