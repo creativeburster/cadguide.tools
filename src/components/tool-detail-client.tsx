@@ -176,7 +176,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
         </div>
       </div>
 
-      <div className="w-full max-w-[1360px] mx-auto px-4 py-6 md:py-12">
+      <div className="w-full max-w-[1360px] mx-auto px-4 py-8 md:py-12 pt-12 md:pt-12">
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start w-full">
           {/* Main Content Area (Two Column Layout) */}
           <main className="flex-1 space-y-12 md:space-y-20 min-w-0">
