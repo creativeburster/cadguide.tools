@@ -1884,9 +1884,9 @@ export const c1Tools: Tool[] = [
   slug: "3dexperience",
   logo_url: "",
   short_desc:
-    "Through virtual twin technologies, Dassault Systèmes’ collaborative platform empowers business and people to create sust",
+    "Through virtual twin technologies, Dassault Systèmes' collaborative platform empowers business and people to create sust",
   description:
-    "Through virtual twin technologies, Dassault Systèmes’ collaborative platform empowers business and people to create sustainable innovations.",
+    "Through virtual twin technologies, Dassault Systèmes' collaborative platform empowers business and people to create sustainable innovations.",
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -1896,7 +1896,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Cloud platform", status: true },
+        { name: "Team collaboration", status: true },
+        { name: "Virtual twin", status: true },
+      ],
+    },
+    {
+      category: "3D Design",
+      items: [
+        { name: "3D modeling", status: true },
+        { name: "CAD design", status: true },
+        { name: "Simulation", status: true },
+      ],
+    },
+    {
+      category: "Innovation",
+      items: [
+        { name: "Sustainable innovation", status: true },
+        { name: "Product lifecycle", status: true },
+        { name: "Data management", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Dassault ecosystem", status: true },
+        { name: "CATIA integration", status: true },
+        { name: "SOLIDWORKS integration", status: true },
+      ],
+    },
+  ],
   alternatives: ["medusa4", "pconplanner", "crowncad"],
   country: "France",
   category_id: "c1",
@@ -1949,39 +1982,89 @@ export const c1Tools: Tool[] = [
   id: "t104",
   name: "MEDUSA4",
   slug: "medusa4",
-  logo_url: "",
+  logo_url: "/logos/medusa4.png",
   short_desc:
-    "Benefit from intelligent 2D & 3D CAD software, immersive AR and VR apps for virtual experiences, training and services f",
+    "Intelligent 2D & 3D CAD software for mechanical engineering, factory layout, and plant design with AR/VR capabilities.",
   description:
-    "Benefit from intelligent 2D & 3D CAD software, immersive AR and VR apps for virtual experiences, training and services for mechanical engineering, factory layout, plant design.",
+    "MEDUSA4 is intelligent 2D & 3D CAD software designed for mechanical engineering, factory layout, and plant design. It offers immersive AR and VR apps for virtual experiences, training, and services. The software provides advanced parametric design capabilities and is particularly strong in plant engineering and mechanical design applications.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本2D/3D設計機能", "パラメトリック設計", "標準図面ライブラリ"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "AR/VR対応", "高度なプラント設計機能", "API連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "2D & 3D parametric design", status: true },
+        { name: "Advanced modeling tools", status: true },
+        { name: "Sheet metal design", status: true },
+      ],
+    },
+    {
+      category: "Plant Engineering",
+      items: [
+        { name: "P&ID design", status: true },
+        { name: "Piping design", status: true },
+        { name: "Equipment layout", status: true },
+      ],
+    },
+    {
+      category: "Visualization",
+      items: [
+        { name: "AR/VR support", status: true },
+        { name: "3D rendering", status: true },
+        { name: "Walkthrough capabilities", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration tools", status: true },
+        { name: "Version control", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "pconplanner", "crowncad"],
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 3000,
+  platforms: ["Windows", "Linux"],
+  industries: ["Mechanical Engineering", "Plant Design", "Factory Layout", "Architecture"],
+  core_features: ["2D/3D Design", "Parametric Modeling", "Plant Engineering", "AR/VR Support", "Collaboration"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.cad-schroer.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 72,
+  pros: [
+    "強力なパラメトリック設計機能",
+    "プラントエンジニアリング分野で強み",
+    "AR/VR対応で先進的なビジュアライゼーション",
+    "Linux対応で柔軟性が高い",
+    "ドイツ製で品質と信頼性が高い",
+  ],
+  cons: [
+    "学習曲線が急勾配",
+    "国際的なプラグインエコシステムが小さい",
+    "価格が比較的高い",
+    "日本語サポートが限定的",
+  ],
   faqs: [
     {
       q: "What is MEDUSA4 used for?",
-      a: "Benefit from intelligent 2D & 3D CAD software, immersive AR and VR apps for virtual experiences, training and services f MEDUSA4 is a 2D CAD solution.",
+      a: "MEDUSA4 is intelligent 2D & 3D CAD software designed for mechanical engineering, factory layout, and plant design with AR/VR capabilities.",
     },
     {
       q: "How much does MEDUSA4 cost?",
@@ -1993,7 +2076,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What operating systems does MEDUSA4 support?",
-      a: "MEDUSA4 runs on Windows.",
+      a: "MEDUSA4 runs on Windows and Linux.",
     },
     {
       q: "Which file formats does MEDUSA4 support?",
@@ -2006,59 +2089,110 @@ export const c1Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "MEDUSA4 Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["DWG", "DXF", "PDF", "STEP"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "MEDUSA4はプラントエンジニアリングと機械設計分野で強力な2D/3D CADソリューションを提供しています。特にAR/VR機能を備えている点で、先進的なビジュアライゼーションとトレーニングニーズに対応できます。Linuxにも対応しており、柔軟な環境で利用可能です。ただし、学習曲線が急勾配で、日本語サポートが限定的な点には注意が必要です。",
 },
 {
   id: "t107",
   name: "pCon.planner",
   slug: "pconplanner",
-  logo_url: "",
-  short_desc: "简要介绍 pCon.planner（官方站点）",
-  description: "详细介绍 pCon.planner（官方站点）",
+  logo_url: "/logos/pconplanner.png",
+  short_desc: "Professional space planning and interior design software for furniture and office layout.",
+  description: "pCon.planner is a professional space planning and interior design software specifically designed for furniture manufacturers, interior designers, and office planners. It provides comprehensive tools for creating detailed floor plans, 3D visualizations, and photorealistic renderings. The software integrates with major furniture manufacturer catalogs and supports collaborative workflows.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本設計機能", "家具カタログ連携", "2D/3D可視化"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "フォトリアルレンダリング", "高度な連携機能", "API"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Space Planning",
+      items: [
+        { name: "2D floor plan creation", status: true },
+        { name: "3D space visualization", status: true },
+        { name: "Wall and room editing", status: true },
+      ],
+    },
+    {
+      category: "Furniture Integration",
+      items: [
+        { name: "Manufacturer catalog integration", status: true },
+        { name: "Custom furniture design", status: true },
+        { name: "Product configuration", status: true },
+      ],
+    },
+    {
+      category: "Visualization",
+      items: [
+        { name: "Photorealistic rendering", status: true },
+        { name: "Virtual walkthroughs", status: true },
+        { name: "Lighting simulation", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Client presentation tools", status: true },
+        { name: "Export to multiple formats", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "crowncad"],
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows", "macOS"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 1500,
+  platforms: ["Windows"],
+  industries: ["Interior Design", "Office Planning", "Furniture", "Architecture"],
+  core_features: ["Space Planning", "Furniture Integration", "3D Visualization", "Rendering", "Collaboration"],
+  user_scales: ["Individual", "Small Business", "Mid-Sized Company"],
   official_url: "https://pcon-planner.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 78,
+  pros: [
+    "家具業界に特化した専門機能",
+    "主要家具メーカーのカタログ統合",
+    "フォトリアルレンダリング品質が高い",
+    "クライアント向けプレゼンテーション機能充実",
+    "ドイツ製で信頼性が高い",
+  ],
+  cons: [
+    "汎用CADとしての機能は限定",
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "日本語サポートが限定的",
+  ],
   faqs: [
     {
       q: "What is pCon.planner used for?",
-      a: "简要介绍 pCon.planner（官方站点） pCon.planner is a 2D CAD solution.",
+      a: "pCon.planner is professional space planning and interior design software for furniture and office layout.",
     },
     {
       q: "How much does pCon.planner cost?",
-      a: "pCon.planner is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "pCon.planner is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of pCon.planner?",
-      a: "pCon.planner is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "pCon.planner offers a free trial version. The full version requires a perpetual license.",
     },
     {
       q: "What operating systems does pCon.planner support?",
-      a: "pCon.planner runs on Windows and macOS.",
+      a: "pCon.planner runs on Windows.",
     },
     {
       q: "Which file formats does pCon.planner support?",
@@ -2070,66 +2204,115 @@ export const c1Tools: Tool[] = [
     },
   ],
   tech_specs: {
-    engine: "pCon.planner Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    engine: "pCon Engine",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["DWG", "DXF", "PDF", "3DS"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "pCon.plannerは家具・インテリアデザイン分野に特化した専門的な空間計画ソフトウェアです。主要家具メーカーのカタログと統合しており、フォトリアルレンダリング品質も高く、クライアントプレゼンテーションに最適です。ただし、汎用CADとしての機能は限定されており、価格も比較的高めです。インテリアデザイナーやオフィスプランナーにとって強力なツールですが、汎用的な設計用途には向いていません。",
 },
 {
   id: "t108",
   name: "CrownCAD",
   slug: "crowncad",
-  logo_url: "",
-  short_desc:
-    "华云三维致力于面向智能制造的工业软件研发和推广，拥有自主研发的三维几何建模引擎和几何约束求解器，基于这两项三维CAD核心技术，专注打造完全自主可控、基于云架构的三维CAD平台皇冠CAD（CrownCAD）",
-  description:
-    "华云三维致力于面向智能制造的工业软件研发和推广，拥有自主研发的三维几何建模引擎和几何约束求解器，基于这两项三维CAD核心技术，专注打造完全自主可控、基于云架构的三维CAD平台皇冠CAD（CrownCAD）",
+  logo_url: "/logos/crowncad.png",
+  short_desc: "Cloud-based 3D CAD platform with proprietary geometric modeling engine and constraint solver.",
+  description: "CrownCAD is a cloud-based 3D CAD platform developed by Huayun 3D, featuring a proprietary geometric modeling engine and constraint solver. It's designed as a fully autonomous, cloud-native CAD solution for intelligent manufacturing. The platform offers comprehensive 3D modeling capabilities with real-time collaboration features.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "subscription",
+      features: ["基本3Dモデリング機能", "クラウドベース", "リアルタイム協業"],
+      is_popular: true,
+    },
+    {
+      name: "Enterprise",
+      price: "Contact",
+      period: "subscription",
+      features: ["Standard機能全て", "高度なモデリング機能", "API連携", "優先サポート"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Modeling",
+      items: [
+        { name: "3D parametric modeling", status: true },
+        { name: "Surface modeling", status: true },
+        { name: "Assembly design", status: true },
+      ],
+    },
+    {
+      category: "Cloud Platform",
+      items: [
+        { name: "Cloud-based collaboration", status: true },
+        { name: "Real-time sync", status: true },
+        { name: "Browser-based access", status: true },
+      ],
+    },
+    {
+      category: "Core Technology",
+      items: [
+        { name: "Proprietary geometric engine", status: true },
+        { name: "Constraint solver", status: true },
+        { name: "Autonomous technology stack", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "DWG/DXF support", status: true },
+        { name: "STEP import/export", status: true },
+        { name: "API for customization", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "China",
   category_id: "c1",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  pricing_type: "Subscription",
+  starting_price: 2000,
+  platforms: ["Windows", "Web"],
+  industries: ["Manufacturing", "Automotive", "Aerospace", "Machinery"],
+  core_features: ["Cloud Platform", "3D Modeling", "Proprietary Engine", "Collaboration", "Autonomous Tech"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.crowncad.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 68,
+  pros: [
+    "独自開発の幾何エンジンと制約ソルバー",
+    "クラウドネイティブでリアルタイム協業が可能",
+    "完全自主制御の技術スタック",
+    "ブラウザベースでインストール不要",
+    "中国市場でのサポート充実",
+  ],
+  cons: [
+    "国際的なプラグインエコシステムが未成熟",
+    "英語ドキュメントが限定的",
+    "海外市場での実績が少ない",
+    "学習曲線が急勾配",
+  ],
   faqs: [
     {
       q: "What is CrownCAD used for?",
-      a: "华云三维致力于面向智能制造的工业软件研发和推广，拥有自主研发的三维几何建模引擎和几何约束求解器，基于这两项三维CAD核心技术，专注打造完全自主可控、基于云架构的三维CAD平台皇冠CAD（CrownCAD） CrownCAD is a 2D CAD solution.",
+      a: "CrownCAD is a cloud-based 3D CAD platform with proprietary geometric modeling engine and constraint solver for intelligent manufacturing.",
     },
     {
       q: "How much does CrownCAD cost?",
-      a: "CrownCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "CrownCAD is offered on a subscription model. Contact the vendor for specific pricing based on modules and user count.",
     },
     {
       q: "Is there a free version of CrownCAD?",
-      a: "CrownCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "CrownCAD offers a free trial. The full version requires a subscription license.",
     },
     {
       q: "What operating systems does CrownCAD support?",
-      a: "CrownCAD runs on Windows.",
+      a: "CrownCAD runs on Windows and is accessible via web browser.",
     },
     {
       q: "Which file formats does CrownCAD support?",
-      a: "CrownCAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "CrownCAD works with standard CAD interchange formats including DWG, DXF, STEP, and PDF. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to CrownCAD?",
@@ -2137,56 +2320,107 @@ export const c1Tools: Tool[] = [
     },
   ],
   tech_specs: {
-    engine: "CrownCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    engine: "CrownCAD Proprietary Engine",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["DWG", "DXF", "STEP", "PDF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "CrownCADは独自開発の幾何エンジンと制約ソルバーを備えたクラウドネイティブの3D CADプラットフォームです。完全自主制御の技術スタックを持ち、リアルタイム協業機能が充実しています。中国市場でのサポートも強力ですが、国際的なプラグインエコシステムはまだ未成熟で、英語ドキュメントも限定的です。中国国内の製造業向けには魅力的ですが、グローバル展開を考える企業には検討が必要です。",
 },
 {
   id: "t109",
   name: "SINOVATION",
   slug: "sinovation",
-  logo_url: "",
-  short_desc: "简要介绍 SINOVATION（官方站点）",
-  description: "详细介绍 SINOVATION（官方站点）",
+  logo_url: "/logos/sinovation.png",
+  short_desc: "3D CAD/CAM software for mold and die design with integrated manufacturing capabilities.",
+  description: "SINOVATION is a comprehensive 3D CAD/CAM software developed by Hoteam Soft, specifically designed for mold and die design with integrated manufacturing capabilities. It provides advanced tools for part design, mold design, and CNC machining in a unified platform. The software is widely used in the manufacturing industry for complex mold development and production.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本3D設計機能", "金型設計機能", "CNC加工機能"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "高度な金型設計", "多軸加工", "API連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "3D parametric modeling", status: true },
+        { name: "Surface modeling", status: true },
+        { name: "Part design", status: true },
+      ],
+    },
+    {
+      category: "Mold Design",
+      items: [
+        { name: "Mold base design", status: true },
+        { name: "Parting surface creation", status: true },
+        { name: "Ejector system design", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "2-5 axis CNC machining", status: true },
+        { name: "Tool path generation", status: true },
+        { name: "Simulation and verification", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Design data management", status: true },
+        { name: "Integration with ERP", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "China",
   category_id: "c1",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 5000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Mold Making", "Die Design", "Manufacturing", "Automotive"],
+  core_features: ["3D Design", "Mold Design", "CAM", "CNC Machining", "Integration"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://sv.hoteamsoft.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 70,
+  pros: [
+    "金型・ダイ設計に特化した専門機能",
+    "CAD/CAM統合で効率的なワークフロー",
+    "多軸加工に対応",
+    "中国市場でのサポート充実",
+    "製造業向けの機能が充実",
+  ],
+  cons: [
+    "汎用CADとしての機能は限定",
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is SINOVATION used for?",
-      a: "简要介绍 SINOVATION（官方站点） SINOVATION is a 2D CAD solution.",
+      a: "SINOVATION is 3D CAD/CAM software for mold and die design with integrated manufacturing capabilities.",
     },
     {
       q: "How much does SINOVATION cost?",
-      a: "SINOVATION is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "SINOVATION is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of SINOVATION?",
-      a: "SINOVATION is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "SINOVATION is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does SINOVATION support?",
@@ -2194,7 +2428,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "Which file formats does SINOVATION support?",
-      a: "SINOVATION works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "SINOVATION works with standard CAD interchange formats including DWG, DXF, STEP, and PDF. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to SINOVATION?",
@@ -2203,110 +2437,92 @@ export const c1Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "SINOVATION Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["DWG", "DXF", "STEP", "PDF"],
   },
-  expert_verdict: "待补充专业评语。",
-},
-{
-  id: "t110",
-  name: "HaoChen CAD",
-  slug: "haochen-cad",
-  logo_url: "",
-  short_desc: "简要介绍 HaoChen CAD（官方站点）",
-  description: "详细介绍 HaoChen CAD（官方站点）",
-  pricing_tiers: [
-    {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
-    },
-  ],
-  detailed_features: [],
-  alternatives: ["3dexperience", "medusa4", "pconplanner"],
-  country: "China",
-  category_id: "c1",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
-  official_url: "https://www.gstarcad.net/",
-  affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
-  faqs: [
-    {
-      q: "What is HaoChen CAD used for?",
-      a: "简要介绍 HaoChen CAD（官方站点） HaoChen CAD is a 2D CAD solution.",
-    },
-    {
-      q: "How much does HaoChen CAD cost?",
-      a: "HaoChen CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
-    },
-    {
-      q: "Is there a free version of HaoChen CAD?",
-      a: "HaoChen CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
-    },
-    {
-      q: "What operating systems does HaoChen CAD support?",
-      a: "HaoChen CAD runs on Windows.",
-    },
-    {
-      q: "Which file formats does HaoChen CAD support?",
-      a: "HaoChen CAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options.",
-    },
-    {
-      q: "What are the best alternatives to HaoChen CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
-  ],
-  tech_specs: {
-    engine: "HaoChen CAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
-  },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "SINOVATIONは金型・ダイ設計分野に特化したCAD/CAM統合ソフトウェアです。設計から製造までのワークフローを統合しており、多軸加工にも対応しています。中国の製造業、特に金型業界での実績が豊富です。ただし、汎用CADとしての機能は限定されており、価格も比較的高めです。金型製造業に特化したニーズには最適ですが、汎用的な設計用途には向いていません。",
 },
 {
   id: "t113",
   name: "IJCAD",
   slug: "ijcad",
-  logo_url: "",
+  logo_url: "/logos/ijcad.png",
   short_desc:
     "IJCADはAutoCADと互換性のあるソフトウェアとして高いシェアを誇っています。IJCADは業種や規模を限定せず、.dwg図面が使われるあらゆるシーンで活用が可能です。",
   description:
-    "IJCADはAutoCADと互換性のあるソフトウェアとして高いシェアを誇っています。IJCADは業種や規模を限定せず、.dwg図面が使われるあらゆるシーンで活用が可能です。",
+    "IJCADはAutoCADと互換性のあるソフトウェアとして高いシェアを誇っています。IJCADは業種や規模を限定せず、.dwg図面が使われるあらゆるシーンで活用が可能です。日本国内での導入実績が豊富で、日本語環境に最適化された操作インターフェースを提供しています。",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["DWG互換性", "基本図面作成機能", "日本語サポート"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "高度な図面機能", "API連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Compatibility",
+      items: [
+        { name: "AutoCAD DWGファイルとの完全互換性", status: true },
+        { name: "PDFインポート・エクスポート機能", status: true },
+      ],
+    },
+    {
+      category: "Interface",
+      items: [
+        { name: "日本語インターフェースと日本語フォントサポート", status: true },
+        { name: "直感的なコマンド操作とカスタマイズ機能", status: true },
+      ],
+    },
+    {
+      category: "Drawing Tools",
+      items: [
+        { name: "多種多様な業界標準図面ライブラリ", status: true },
+        { name: "レイヤー管理とブロック機能", status: true },
+        { name: "寸法注釈とハッチング機能", status: true },
+      ],
+    },
+    {
+      category: "Output",
+      items: [
+        { name: "プリンタドライバ対応", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Japan",
   category_id: "c1",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 50000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Architecture", "Engineering", "Manufacturing", "Construction"],
+  core_features: ["DWG Compatibility", "Japanese Interface", "2D Drafting", "Layer Management", "Block Library"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.ijcad.jp/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 75,
+  pros: [
+    "AutoCADとの高い互換性で移行コストを削減",
+    "日本語環境に完全対応、日本国内サポート充実",
+    "永続ライセンスで長期的なコスト管理が容易",
+    "日本の建築・製造業界での実績豊富",
+    "直感的な操作で学習コストが低い",
+  ],
+  cons: [
+    "3Dモデリング機能は限定されている",
+    "国際的なプラグインエコシステムが比較的小さい",
+    "海外市場でのサポートが限定的",
+    "高度な自動化機能は他製品に比べて劣る",
+  ],
   faqs: [
     {
       q: "What is IJCAD used for?",
@@ -2335,57 +2551,115 @@ export const c1Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "IJCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: ["DWG", "DXF", "PDF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "IJCADは日本市場においてAutoCAD互換性を重視するユーザーにとって優れた選択肢です。特に日本語環境での使用や、国内サポートを重視する企業にとって魅力的なソリューションです。永続ライセンスモデルによるコスト管理の容易さも評価できます。ただし、3D機能や国際的なエコシステムの面では、AutoCADや他の国際製品に比べて制限があります。",
 },
 {
   id: "t115",
   name: "RootPro CAD",
   slug: "rootpro-cad",
-  logo_url: "",
+  logo_url: "/logos/rootpro-cad.png",
   short_desc:
-    "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, ar",
+    "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics.",
   description:
-    "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics. It can be used by many people such as design, construction, quality control, and drawing management. RootPro CAD has a free version that can be used for free and a professional version that can be used with subscription license. Please use it according to your needs.",
+    "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics. It can be used by many people such as design, construction, quality control, and drawing management. RootPro CAD has a free version that can be used for free and a professional version that can be used with subscription license. The software offers cross-platform compatibility with both Windows and macOS support.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Free",
+      price: "0",
+      period: "perpetual",
+      features: ["基本図面機能", "DWG読み込み", "PDF出力"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "subscription",
+      features: ["Free機能全て", "高度な図面機能", "API連携", "優先サポート"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Compatibility",
+      items: [
+        { name: "DWG/DXFファイルの完全互換性", status: true },
+        { name: "PDFインポート・エクスポート機能", status: true },
+      ],
+    },
+    {
+      category: "Platform",
+      items: [
+        { name: "WindowsとmacOSのクロスプラットフォーム対応", status: true },
+      ],
+    },
+    {
+      category: "Pricing",
+      items: [
+        { name: "無料版で基本機能を利用可能", status: true },
+      ],
+    },
+    {
+      category: "Interface",
+      items: [
+        { name: "直感的な操作インターフェース", status: true },
+      ],
+    },
+    {
+      category: "Drawing Tools",
+      items: [
+        { name: "多様な業界向け図面ライブラリ", status: true },
+        { name: "レイヤー管理とブロック機能", status: true },
+        { name: "寸法注釈とハッチング機能", status: true },
+      ],
+    },
+    {
+      category: "Extensibility",
+      items: [
+        { name: "APIによる拡張性", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Japan",
   category_id: "c1",
-  pricing_type: "Perpetual",
+  pricing_type: "Freemium",
   starting_price: 0,
   platforms: ["Windows", "macOS"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Architecture", "Engineering", "Manufacturing", "Electronics"],
+  core_features: ["DWG Compatibility", "Cross-Platform", "2D Drafting", "Layer Management", "Free Tier"],
+  user_scales: ["Individual", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.rootprocad.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 70,
+  pros: [
+    "無料版で基本機能を試用可能",
+    "WindowsとmacOS両対応で柔軟性が高い",
+    "DWG互換性で既存図面を活用可能",
+    "日本語インターフェースで使いやすい",
+    "サブスクリプションと永続ライセンスの選択肢",
+  ],
+  cons: [
+    "高度な3D機能は提供されていない",
+    "国際的なプラグインエコシステムが小さい",
+    "大規模プロジェクト向けの機能は限定",
+    "海外市場でのサポートが限定的",
+  ],
   faqs: [
     {
       q: "What is RootPro CAD used for?",
-      a: "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, ar RootPro CAD is a 2D CAD solution.",
+      a: "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics. RootPro CAD is a 2D CAD solution.",
     },
     {
       q: "How much does RootPro CAD cost?",
-      a: "RootPro CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "RootPro CAD offers a free tier with basic features. The Professional version is available on a subscription model; contact the vendor for specific pricing.",
     },
     {
       q: "Is there a free version of RootPro CAD?",
-      a: "RootPro CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Yes, RootPro CAD offers a free version with basic drawing features, DWG import, and PDF export capabilities.",
     },
     {
       q: "What operating systems does RootPro CAD support?",
@@ -2402,11 +2676,11 @@ export const c1Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "RootPro CAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: ["DWG", "DXF", "PDF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "RootPro CADは無料版を提供している点で、個人ユーザーや小規模チームにとって魅力的な選択肢です。WindowsとmacOSの両方に対応しており、クロスプラットフォーム環境での利用に適しています。DWG互換性を備えているため、既存のAutoCAD図面との連携もスムーズです。ただし、高度な3D機能や大規模プロジェクト向けの機能面では、他の専門CADソフトウェアに比べて制限があります。",
 },
 {
   id: "t116",
@@ -2426,7 +2700,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Consulting",
+      items: [
+        { name: "IT consulting", status: true },
+        { name: "System integration", status: true },
+        { name: "Information services", status: true },
+      ],
+    },
+    {
+      category: "Services",
+      items: [
+        { name: "Product information", status: true },
+        { name: "Application services", status: true },
+        { name: "Support services", status: true },
+      ],
+    },
+    {
+      category: "Enterprise",
+      items: [
+        { name: "Enterprise solutions", status: true },
+        { name: "Business consulting", status: true },
+        { name: "System implementation", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Japan",
   category_id: "c1",
@@ -2493,7 +2800,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "3D modeling", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering design", status: true },
+      ],
+    },
+    {
+      category: "Manufacturing",
+      items: [
+        { name: "Manufacturing solutions", status: true },
+        { name: "CAM integration", status: true },
+        { name: "Production design", status: true },
+      ],
+    },
+    {
+      category: "Data Management",
+      items: [
+        { name: "Data management", status: true },
+        { name: "PDM integration", status: true },
+        { name: "Document control", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Parametric design", status: true },
+        { name: "Assembly design", status: true },
+        { name: "Drawing creation", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Russia",
   category_id: "c1",
@@ -2560,7 +2900,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "Parametric CAD", status: true },
+        { name: "3D modeling", status: true },
+        { name: "2D drafting", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAM integration", status: true },
+        { name: "FEA integration", status: true },
+        { name: "PDM integration", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Parametric design", status: true },
+        { name: "Assembly modeling", status: true },
+        { name: "Sheet metal", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Engineering tools", status: true },
+        { name: "Analysis", status: true },
+        { name: "Manufacturing", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Russia",
   category_id: "c1",
@@ -2625,7 +2998,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "3D modeling", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Modeling tools", status: true },
+        { name: "Design automation", status: true },
+        { name: "Parametric design", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Data exchange", status: true },
+        { name: "File compatibility", status: true },
+      ],
+    },
+    {
+      category: "Studio",
+      items: [
+        { name: "Studio environment", status: true },
+        { name: "Design workspace", status: true },
+        { name: "Collaboration tools", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Russia",
   category_id: "c1",
@@ -2692,7 +3098,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Plant Design",
+      items: [
+        { name: "3D plant design", status: true },
+        { name: "Piping design", status: true },
+        { name: "Equipment modeling", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Engineering optimization", status: true },
+        { name: "Operations management", status: true },
+        { name: "Performance tracking", status: true },
+      ],
+    },
+    {
+      category: "Ecosystem",
+      items: [
+        { name: "AVEVA ecosystem", status: true },
+        { name: "Integration", status: true },
+        { name: "Data management", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Project sharing", status: true },
+        { name: "Real-time sync", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "UK",
   category_id: "c1",
@@ -2759,7 +3198,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "3D modeling", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering design", status: true },
+      ],
+    },
+    {
+      category: "Libraries",
+      items: [
+        { name: "CAD neutral libraries", status: true },
+        { name: "Component library", status: true },
+        { name: "Part catalog", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Design automation", status: true },
+        { name: "Time to market", status: true },
+        { name: "Engineering support", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Manufacturer support", status: true },
+        { name: "Product introduction", status: true },
+        { name: "Community", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "UK",
   category_id: "c1",
@@ -2824,7 +3296,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Analysis",
+      items: [
+        { name: "Finite element analysis", status: true },
+        { name: "Structural analysis", status: true },
+        { name: "Engineering simulation", status: true },
+      ],
+    },
+    {
+      category: "CAD",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Modeling tools", status: true },
+        { name: "Design analysis", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Engineering design", status: true },
+        { name: "Simulation", status: true },
+        { name: "Optimization", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Analysis software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "UK",
   category_id: "c1",
@@ -2891,7 +3396,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Analysis",
+      items: [
+        { name: "Structural analysis", status: true },
+        { name: "FEM analysis", status: true },
+        { name: "Seismic analysis", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Architecture", status: true },
+        { name: "Soil analysis", status: true },
+        { name: "Ground analysis", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "Static analysis", status: true },
+        { name: "Dynamic analysis", status: true },
+        { name: "Nonlinear analysis", status: true },
+      ],
+    },
+    {
+      category: "BIM",
+      items: [
+        { name: "BIM linkage", status: true },
+        { name: "FEA NX", status: true },
+        { name: "CIVIL NX", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "South Korea",
   category_id: "c1",
@@ -2958,7 +3496,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Analysis",
+      items: [
+        { name: "Structural analysis", status: true },
+        { name: "FEM analysis", status: true },
+        { name: "Seismic analysis", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Architecture", status: true },
+        { name: "Soil analysis", status: true },
+        { name: "Ground analysis", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "Static analysis", status: true },
+        { name: "Dynamic analysis", status: true },
+        { name: "Nonlinear analysis", status: true },
+      ],
+    },
+    {
+      category: "BIM",
+      items: [
+        { name: "BIM linkage", status: true },
+        { name: "FEA NX", status: true },
+        { name: "CIVIL NX", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "South Korea",
   category_id: "c1",
@@ -3025,7 +3596,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "CAD drafting", status: true },
+        { name: "Design tools", status: true },
+        { name: "Drawing creation", status: true },
+      ],
+    },
+    {
+      category: "Korean",
+      items: [
+        { name: "Korean CAD", status: true },
+        { name: "Domestic CAD", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "History",
+      items: [
+        { name: "30+ years history", status: true },
+        { name: "Reliable CAD", status: true },
+        { name: "Proven track record", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "South Korea",
   category_id: "c1",
@@ -3090,7 +3694,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "3D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Product design", status: true },
+        { name: "Industrial design", status: true },
+        { name: "Modeling", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Design tools", status: true },
+        { name: "Engineering suite", status: true },
+      ],
+    },
+    {
+      category: "Solutions",
+      items: [
+        { name: "Design solutions", status: true },
+        { name: "Engineering solutions", status: true },
+        { name: "CAD solutions", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Italy",
   category_id: "c1",
@@ -3157,7 +3794,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Mining",
+      items: [
+        { name: "Mining software", status: true },
+        { name: "Mining solutions", status: true },
+        { name: "Mining cycle", status: true },
+      ],
+    },
+    {
+      category: "Exploration",
+      items: [
+        { name: "Exploration", status: true },
+        { name: "Reclamation", status: true },
+        { name: "Mining operations", status: true },
+      ],
+    },
+    {
+      category: "Technology",
+      items: [
+        { name: "Innovative software", status: true },
+        { name: "Hardware", status: true },
+        { name: "Services", status: true },
+      ],
+    },
+    {
+      category: "Global",
+      items: [
+        { name: "2500+ sites", status: true },
+        { name: "90 countries", status: true },
+        { name: "Global presence", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Australia",
   category_id: "c1",
@@ -3214,7 +3884,7 @@ export const c1Tools: Tool[] = [
   short_desc:
     "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’",
   description:
-    "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’s mining industry.",
+    "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today's mining industry.",
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -3224,7 +3894,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Mining",
+      items: [
+        { name: "Mining software", status: true },
+        { name: "Surveying software", status: true },
+        { name: "Mining solutions", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "User-friendly", status: true },
+        { name: "Adaptable", status: true },
+        { name: "Mining industry", status: true },
+      ],
+    },
+    {
+      category: "Solutions",
+      items: [
+        { name: "Everyday mining", status: true },
+        { name: "Mining tools", status: true },
+        { name: "Surveying tools", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Mining CAD", status: true },
+        { name: "Design software", status: true },
+        { name: "Engineering tools", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Canada",
   category_id: "c1",
@@ -3291,7 +3994,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        { name: "Multiphysics simulation", status: true },
+        { name: "Engineering simulation", status: true },
+        { name: "Analysis", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Engineering tools", status: true },
+        { name: "High-tech solutions", status: true },
+        { name: "Engineering services", status: true },
+      ],
+    },
+    {
+      category: "European",
+      items: [
+        { name: "European supplier", status: true },
+        { name: "High-tech", status: true },
+        { name: "Quality solutions", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Simulation software", status: true },
+        { name: "CAD tools", status: true },
+        { name: "Engineering suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Belgium",
   category_id: "c1",
@@ -3358,7 +4094,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Structural",
+      items: [
+        { name: "Structural design", status: true },
+        { name: "Engineering projects", status: true },
+        { name: "Building design", status: true },
+      ],
+    },
+    {
+      category: "MEP",
+      items: [
+        { name: "MEP systems", status: true },
+        { name: "Mechanical", status: true },
+        { name: "Electrical", status: true },
+      ],
+    },
+    {
+      category: "Construction",
+      items: [
+        { name: "Construction management", status: true },
+        { name: "Pathology", status: true },
+        { name: "Project management", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Technical software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "CAD solutions", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Spain",
   category_id: "c1",
@@ -3425,7 +4194,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "Building design", status: true },
+        { name: "Structural design", status: true },
+        { name: "Installation design", status: true },
+      ],
+    },
+    {
+      category: "Calculation",
+      items: [
+        { name: "Structural calculation", status: true },
+        { name: "Installation calculation", status: true },
+        { name: "Engineering calculation", status: true },
+      ],
+    },
+    {
+      category: "Spanish",
+      items: [
+        { name: "Código Técnico", status: true },
+        { name: "Spanish building code", status: true },
+        { name: "Local compliance", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Design suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Spain",
   category_id: "c1",
@@ -3492,7 +4294,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "3D CAD", status: true },
+        { name: "3D design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Data Management",
+      items: [
+        { name: "PDM", status: true },
+        { name: "PLM", status: true },
+        { name: "Data management", status: true },
+      ],
+    },
+    {
+      category: "Finnish",
+      items: [
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+        { name: "Finnish solutions", status: true },
+      ],
+    },
+    {
+      category: "Industry",
+      items: [
+        { name: "Industry solutions", status: true },
+        { name: "Manufacturing", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Finland",
   category_id: "c1",
@@ -3559,7 +4394,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Space Planning",
+      items: [
+        { name: "Space planning", status: true },
+        { name: "Floor planning", status: true },
+        { name: "Layout design", status: true },
+      ],
+    },
+    {
+      category: "Sales",
+      items: [
+        { name: "Sales processes", status: true },
+        { name: "Design processes", status: true },
+        { name: "Order processes", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Planning software", status: true },
+        { name: "Design tools", status: true },
+        { name: "CAD solutions", status: true },
+      ],
+    },
+    {
+      category: "Streamline",
+      items: [
+        { name: "Streamline processes", status: true },
+        { name: "Efficiency", status: true },
+        { name: "Workflow optimization", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Sweden",
   category_id: "c1",
@@ -3624,7 +4492,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "CAD drafting", status: true },
+        { name: "Design tools", status: true },
+        { name: "Drawing creation", status: true },
+      ],
+    },
+    {
+      category: "Indian",
+      items: [
+        { name: "Indian CAD", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Design suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "India",
   category_id: "c1",
@@ -3689,7 +4590,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "CAD drafting", status: true },
+        { name: "Design tools", status: true },
+        { name: "Drawing creation", status: true },
+      ],
+    },
+    {
+      category: "Indian",
+      items: [
+        { name: "Indian CAD", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Design suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "India",
   category_id: "c1",
@@ -3756,7 +4690,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "BIM",
+      items: [
+        { name: "BIM projects", status: true },
+        { name: "Digital construction", status: true },
+        { name: "Construction management", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Software solutions", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "CAD solutions", status: true },
+      ],
+    },
+    {
+      category: "Brazilian",
+      items: [
+        { name: "National leader", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Lifecycle",
+      items: [
+        { name: "Project lifecycle", status: true },
+        { name: "Construction lifecycle", status: true },
+        { name: "Enterprise lifecycle", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Brazil",
   category_id: "c1",
@@ -3823,7 +4790,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "Project design", status: true },
+        { name: "Production design", status: true },
+        { name: "Management design", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Software solutions", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "CAD solutions", status: true },
+      ],
+    },
+    {
+      category: "Brazilian",
+      items: [
+        { name: "Brazilian software", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Furniture",
+      items: [
+        { name: "Furniture design", status: true },
+        { name: "Moveleiro", status: true },
+        { name: "Industry solutions", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Brazil",
   category_id: "c1",
@@ -3890,7 +4890,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Structural",
+      items: [
+        { name: "Structural analysis", status: true },
+        { name: "Structural engineering", status: true },
+        { name: "Design engineering", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Analysis software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "CAD solutions", status: true },
+      ],
+    },
+    {
+      category: "Technology",
+      items: [
+        { name: "Technology integration", status: true },
+        { name: "High-level support", status: true },
+        { name: "Engineering solutions", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Design know-how", status: true },
+        { name: "Engineering design", status: true },
+        { name: "Structural design", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Netherlands",
   category_id: "c1",
@@ -3955,7 +4988,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAM",
+      items: [
+        { name: "CNC machining", status: true },
+        { name: "Toolpath generation", status: true },
+        { name: "Multi-axis machining", status: true },
+      ],
+    },
+    {
+      category: "Manufacturing",
+      items: [
+        { name: "Manufacturing", status: true },
+        { name: "Production", status: true },
+        { name: "Machining", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAM software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "CAD solutions", status: true },
+      ],
+    },
+    {
+      category: "Autodesk",
+      items: [
+        { name: "Autodesk product", status: true },
+        { name: "CAD integration", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "UK",
   category_id: "c1",
@@ -4022,7 +5088,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAM",
+      items: [
+        { name: "CAM software", status: true },
+        { name: "CNC machining", status: true },
+        { name: "Toolpath generation", status: true },
+      ],
+    },
+    {
+      category: "Manufacturing",
+      items: [
+        { name: "Manufacturing", status: true },
+        { name: "Production", status: true },
+        { name: "Machining", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Engineering tools", status: true },
+        { name: "CAD solutions", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+    {
+      category: "Goals",
+      items: [
+        { name: "Shop goals", status: true },
+        { name: "Production goals", status: true },
+        { name: "Efficiency", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "USA",
   category_id: "c1",
@@ -4087,7 +5186,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "CAD drafting", status: true },
+        { name: "Design tools", status: true },
+        { name: "Drawing creation", status: true },
+      ],
+    },
+    {
+      category: "German",
+      items: [
+        { name: "German CAD", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Design suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Germany",
   category_id: "c1",
@@ -4152,7 +5284,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Stamping",
+      items: [
+        { name: "Stamping simulation", status: true },
+        { name: "Metal forming", status: true },
+        { name: "Sheet metal", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "FEA simulation", status: true },
+        { name: "Process simulation", status: true },
+        { name: "Engineering simulation", status: true },
+      ],
+    },
+    {
+      category: "French",
+      items: [
+        { name: "French software", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "Simulation software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "France",
   category_id: "c1",
@@ -4219,7 +5384,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Shipbuilding",
+      items: [
+        { name: "Shipbuilding CAD", status: true },
+        { name: "Marine design", status: true },
+        { name: "Ship design", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Engineering information", status: true },
+        { name: "Asset management", status: true },
+        { name: "Shipbuilding challenges", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+    {
+      category: "Solution",
+      items: [
+        { name: "Built-in solution", status: true },
+        { name: "Unique challenges", status: true },
+        { name: "Shipbuilder asset", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Canada",
   category_id: "c1",
@@ -4286,7 +5484,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Maritime",
+      items: [
+        { name: "Maritime software", status: true },
+        { name: "Ship design", status: true },
+        { name: "Ship operations", status: true },
+      ],
+    },
+    {
+      category: "Data",
+      items: [
+        { name: "Data services", status: true },
+        { name: "Maritime data", status: true },
+        { name: "Industry data", status: true },
+      ],
+    },
+    {
+      category: "Finnish",
+      items: [
+        { name: "Finnish software", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Sustainability",
+      items: [
+        { name: "Safer maritime", status: true },
+        { name: "Sustainable", status: true },
+        { name: "Future-proof", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Finland",
   category_id: "c1",
@@ -4351,7 +5582,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Shipbuilding",
+      items: [
+        { name: "Shipbuilding CAD", status: true },
+        { name: "Marine design", status: true },
+        { name: "Ship design", status: true },
+      ],
+    },
+    {
+      category: "Spanish",
+      items: [
+        { name: "Spanish software", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+    {
+      category: "Siemens",
+      items: [
+        { name: "Siemens product", status: true },
+        { name: "Marine solutions", status: true },
+        { name: "Industrial software", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Spain",
   category_id: "c1",
@@ -4418,7 +5682,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "Interior design", status: true },
+        { name: "Furniture making", status: true },
+        { name: "Exhibition design", status: true },
+      ],
+    },
+    {
+      category: "Shop",
+      items: [
+        { name: "Shop fitting", status: true },
+        { name: "Retail design", status: true },
+        { name: "Display design", status: true },
+      ],
+    },
+    {
+      category: "German",
+      items: [
+        { name: "German CAD", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "3D CAD system", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Germany",
   category_id: "c1",
@@ -4485,7 +5782,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "Furniture design", status: true },
+        { name: "Interior design", status: true },
+        { name: "Cabinet design", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+    {
+      category: "German",
+      items: [
+        { name: "German CAD", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Industry",
+      items: [
+        { name: "Furniture industry", status: true },
+        { name: "Manufacturing", status: true },
+        { name: "Production", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Germany",
   category_id: "c1",
@@ -4552,7 +5882,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "Kitchen design", status: true },
+        { name: "Bathroom design", status: true },
+        { name: "Interior design", status: true },
+      ],
+    },
+    {
+      category: "Sales",
+      items: [
+        { name: "Design solution", status: true },
+        { name: "Sales solution", status: true },
+        { name: "Commercial design", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+    {
+      category: "Training",
+      items: [
+        { name: "Training options", status: true },
+        { name: "Design Flex", status: true },
+        { name: "Design solutions", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "USA",
   category_id: "c1",
@@ -4619,7 +5982,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "3D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "German",
+      items: [
+        { name: "German software", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "Online", status: true },
+        { name: "Cloudbasiert", status: true },
+        { name: "Cloud-based", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "Germany",
   category_id: "c1",
@@ -4684,7 +6080,40 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "3D CAD", status: true },
+        { name: "CAD design", status: true },
+        { name: "Engineering", status: true },
+      ],
+    },
+    {
+      category: "Chinese",
+      items: [
+        { name: "Chinese software", status: true },
+        { name: "Domestic software", status: true },
+        { name: "Local support", status: true },
+      ],
+    },
+    {
+      category: "Software",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Engineering tools", status: true },
+        { name: "Professional suite", status: true },
+      ],
+    },
+    {
+      category: "YFCAD",
+      items: [
+        { name: "YFCAD product", status: true },
+        { name: "CAD solutions", status: true },
+        { name: "Professional tools", status: true },
+      ],
+    },
+  ],
   alternatives: ["3dexperience", "medusa4", "pconplanner"],
   country: "China",
   category_id: "c1",

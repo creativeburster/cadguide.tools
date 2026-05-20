@@ -22,7 +22,7 @@ export function SiteNotice() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-blue-600 text-white text-sm relative">
+    <div className="bg-blue-600 text-white text-sm relative z-[100]">
       <div className="container mx-auto px-4 py-2.5 flex items-center justify-center gap-2">
         <span>
           The <Link href="/deals" className="underline font-medium hover:text-sky-100 transition-colors">Deals</Link> page is currently in demo mode and will be fully operational soon.
