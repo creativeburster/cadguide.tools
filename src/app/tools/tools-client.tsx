@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense, useEffect, useCallback, useRef } from 'react';
+import { useState, useMemo, Suspense, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { tools, categories } from '@/lib/data';
 import { Card } from '@/components/ui/card';
@@ -17,15 +17,6 @@ import { SlidersHorizontal, X } from 'lucide-react';
 // src/app/tools/page.tsx so canonical URLs and client pagination agree.
 const ITEMS_PER_PAGE = 24;
 
-// 防抖函数
-function debounce<T extends (...args: any[]) => any>(func: T, wait: number): (...args: Parameters<T>) => void {
-  let timeoutId: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func(...args), wait);
-  };
-}
-
 function ToolsList() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -35,10 +26,7 @@ function ToolsList() {
   // setState-in-effect anti-pattern that Next 16's react-hooks lint
   // forbids.
   const currentPage = Math.max(1, Number(searchParams.get('page')) || 1);
-  const initialQuery = searchParams.get('q') ?? '';
-  
-  // 使用本地状态管理输入框值，避免每次输入不立即更新 URL
-  const [localSearchQuery, setLocalSearchQuery] = useState(initialQuery);
+  const searchQuery = searchParams.get('q') ?? '';
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
   // Lock body scroll while the mobile filters drawer is open.
@@ -52,15 +40,10 @@ function ToolsList() {
     }
   }, [isFiltersOpen]);
 
-  // 当 URL 变化时更新本地状态
-  useEffect(() => {
-    setLocalSearchQuery(initialQuery);
-  }, [initialQuery]);
-
   // Push search/page state into the URL. Uses `replace` so the user can
   // navigate back out of /tools in one click instead of stepping through
   // every intermediate page/query keystroke.
-  const syncUrl = useCallback((next: { page?: number; query?: string }) => {
+  const syncUrl = (next: { page?: number; query?: string }) => {
     const params = new URLSearchParams(searchParams.toString());
     if (next.query !== undefined) {
       if (next.query) params.set('q', next.query);
@@ -72,19 +55,10 @@ function ToolsList() {
     }
     const qs = params.toString();
     router.replace(qs ? `/tools?${qs}` : '/tools', { scroll: false });
-  }, [searchParams, router]);
-
-  // 创建防抖函数，延迟更新 URL
-  const debouncedSyncUrl = useMemo(
-    () => debounce((value: string) => {
-      syncUrl({ page: 1, query: value });
-    }, 300),
-    [syncUrl]
-  );
+  };
 
   const handleSearchChange = (value: string) => {
-    setLocalSearchQuery(value);
-    debouncedSyncUrl(value);
+    syncUrl({ page: 1, query: value });
   };
   const [filters, setFilters] = useState({
     pricing: [] as string[],
@@ -117,16 +91,13 @@ function ToolsList() {
   const allKernels = useMemo(() => Array.from(new Set(tools.filter(t => t.tech_specs?.engine).map(t => t.tech_specs!.engine))).sort(), []);
   const allUserScales = useMemo(() => Array.from(new Set(tools.flatMap(t => t.user_scales))).sort(), []);
 
-  // 规范化字符串：移除连字符、空格、转成小写，用于模糊匹配
-  const normalize = (str: string) => str.toLowerCase().replace(/[-\s]+/g, '');
-  
   const filteredTools = useMemo(() => {
-    const query = localSearchQuery.toLowerCase();
-    const normalizedQuery = normalize(query);
-    const matchQuery = !query ||
-      normalize(tool.name).includes(normalizedQuery) ||
-      normalize(tool.short_desc).includes(normalizedQuery) ||
-      tool.industries.some(i => normalize(i).includes(normalizedQuery));
+    return tools.filter(tool => {
+      const query = searchQuery.toLowerCase();
+      const matchQuery = !query ||
+        tool.name.toLowerCase().includes(query) ||
+        tool.short_desc.toLowerCase().includes(query) ||
+        tool.industries.some(i => i.toLowerCase().includes(query));
 
       const matchPricing = filters.pricing.length === 0 || filters.pricing.includes(tool.pricing_type);
       const matchOS = filters.os.length === 0 || tool.platforms.some(p => filters.os.includes(p));
@@ -193,10 +164,10 @@ function ToolsList() {
           onClear: () => setRating(filters.minRating),
         }]
       : []),
-    ...(localSearchQuery
+    ...(searchQuery
       ? [{
           key: 'query',
-          label: `“${localSearchQuery}”`,
+          label: `“${searchQuery}”`,
           onClear: () => handleSearchChange(''),
         }]
       : []),
@@ -205,7 +176,6 @@ function ToolsList() {
 
   const resetAll = () => {
     setFilters({ pricing: [], os: [], industry: [], category: [], userScale: [], kernel: [], minRating: 0 });
-    setLocalSearchQuery('');
     syncUrl({ page: 1, query: '' });
     setIsFiltersOpen(false);
   };
@@ -288,7 +258,7 @@ function ToolsList() {
           <div className="relative z-10">
             <Input
               placeholder="Find a specific tool..."
-              value={localSearchQuery}
+              value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
               className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600"
             />
