@@ -155,10 +155,10 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   return (
     <div className="bg-[#fcfdfe] min-h-screen pb-20 overflow-x-hidden">
       {/* Top Header - Standardized Width */}
-      <div className="bg-white border-b py-4 md:py-6">
+      <div className="bg-white border-b py-4 md:py-6 overflow-x-hidden">
         <div className="w-full max-w-[1360px] mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="flex items-center text-sm font-bold text-slate-400">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 min-w-0">
+            <div className="flex items-center text-sm font-bold text-slate-400 min-w-0 flex-1">
               <Link href="/" className="hover:text-blue-600 transition-colors">
                 Home
               </Link>
@@ -169,8 +169,8 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               >
                 Tools
               </Link>
-              <ChevronRight className="w-4 h-4 mx-2 opacity-30" />
-              <span className="text-slate-900 font-black">{tool.name}</span>
+              <ChevronRight className="w-4 h-4 mx-2 opacity-30 shrink-0" />
+              <span className="text-slate-900 font-black truncate">{tool.name}</span>
             </div>
           </div>
         </div>
