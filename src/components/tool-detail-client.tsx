@@ -153,9 +153,9 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     .slice(0, 3);
 
   return (
-    <div className="bg-[#fcfdfe] min-h-screen pb-20 w-full">
+    <div className="bg-[#fcfdfe] min-h-screen pb-20 w-full overflow-x-hidden">
       {/* Top Header - Standardized Width */}
-      <div className="bg-white border-b py-4 md:py-6 w-full">
+      <div className="bg-white border-b py-4 md:py-6 w-full overflow-x-hidden">
         <div className="w-full max-w-none md:max-w-[1360px] mx-auto px-3 md:px-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 min-w-0">
             <div className="flex items-center text-sm font-bold text-slate-400 min-w-0 flex-1">
@@ -176,10 +176,10 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
         </div>
       </div>
 
-      <div className="w-full max-w-[1360px] mx-auto px-4 py-8 md:py-12 pt-12 md:pt-12">
+      <div className="max-w-[1360px] mx-auto px-4 py-8 md:py-12 pt-12 md:pt-12 w-full">
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start w-full">
           {/* Main Content Area (Two Column Layout) */}
-          <main className="flex-1 space-y-12 md:space-y-20 min-w-0">
+          <main className="flex-1 space-y-12 md:space-y-20 min-w-0 w-full overflow-x-hidden">
             {/* Hero Section */}
             <section
               id="overview"
@@ -403,7 +403,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 {tool.pricing_tiers?.map((tier, i) => (
                   <Card
                     key={i}
-                    className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl md:scale-[1.03]" : "border-slate-100"}`}
+                    className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl" : "border-slate-100"}`}
                   >
                     {tier.is_popular && (
                       <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] text-center py-3">
@@ -469,7 +469,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       {cat.category}{" "}
                       <div className="h-px bg-slate-100 flex-1"></div>
                     </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-3">
                       {cat.items?.map((item, j) => (
                         <div key={j} className="flex items-center gap-2 group">
                           {item.status ? (
@@ -994,7 +994,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
           </main>
 
           {/* Right Sidebar - Conversion & Tools */}
-          <aside className="w-full lg:w-[400px] space-y-6 md:space-y-10">
+          <aside className="w-full lg:w-96 lg:shrink-0 space-y-6 md:space-y-10">
             <div className="lg:sticky lg:top-28 space-y-6 md:space-y-10">
               {/* Primary Purchase Card */}
               <Card className="rounded-[24px] md:rounded-[40px] border-2 border-blue-600 shadow-2xl shadow-blue-900/10 overflow-hidden flex flex-col group bg-[#0f172a]">
