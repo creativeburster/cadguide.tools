@@ -41,7 +41,7 @@ export default function RootLayout({
           gtag('config', 'G-2NC8HV27GC');
         `}} />
       </head>
-      <body className={cn(inter.className, "min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 overflow-x-hidden")}>
+      <body className={cn(inter.className, "min-h-screen w-full flex flex-col bg-slate-50 text-slate-900")}>
         <PWARegistration />
         <SiteNotice />
         <Navbar />
