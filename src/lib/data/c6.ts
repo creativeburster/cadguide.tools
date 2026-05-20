@@ -581,7 +581,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Electrical Design",
+      items: [
+        { name: "Automated engineering", status: true },
+        { name: "Panel building", status: true },
+        { name: "Switchgear manufacturing", status: true },
+      ],
+    },
+    {
+      category: "Schematics",
+      items: [
+        { name: "Circuit diagrams", status: true },
+        { name: "Control systems", status: true },
+        { name: "PLC integration", status: true },
+      ],
+    },
+    {
+      category: "Documentation",
+      items: [
+        { name: "Auto-generated reports", status: true },
+        { name: "Terminal diagrams", status: true },
+        { name: "Cable documentation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "ERP integration", status: true },
+        { name: "CAE integration", status: true },
+        { name: "3D cabinet layout", status: true },
+      ],
+    },
+  ],
   alternatives: ["cr-8000", "quadcept", "allegro-pcb"],
   country: "Germany",
   category_id: "c6",
@@ -648,7 +681,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "PCB design", status: true },
+        { name: "Electrical systems", status: true },
+        { name: "Fluid systems", status: true },
+      ],
+    },
+    {
+      category: "3D Layout",
+      items: [
+        { name: "3D cabinet layout", status: true },
+        { name: "Wire harness layout", status: true },
+        { name: "Cable routing", status: true },
+      ],
+    },
+    {
+      category: "Management",
+      items: [
+        { name: "Design management", status: true },
+        { name: "Version control", status: true },
+        { name: "Collaboration", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "MCAD integration", status: true },
+        { name: "PLM integration", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "quadcept", "allegro-pcb"],
   country: "Japan",
   category_id: "c6",
@@ -715,7 +781,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Cloud CAD",
+      items: [
+        { name: "Cloud-based", status: true },
+        { name: "Pay as you go", status: true },
+        { name: "Robust features", status: true },
+      ],
+    },
+    {
+      category: "EDA",
+      items: [
+        { name: "PCB design", status: true },
+        { name: "Schematic design", status: true },
+        { name: "Circuit design", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Real-time collaboration", status: true },
+        { name: "Cloud storage", status: true },
+        { name: "Team sharing", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "File compatibility", status: true },
+        { name: "Export formats", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "cr-8000", "allegro-pcb"],
   country: "Japan",
   category_id: "c6",
@@ -780,7 +879,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "PCB layout", status: true },
+        { name: "Schematic capture", status: true },
+        { name: "Circuit simulation", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "High-speed design", status: true },
+        { name: "Signal integrity", status: true },
+        { name: "Power integrity", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Thermal analysis", status: true },
+        { name: "EMI/EMC analysis", status: true },
+        { name: "Design verification", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "OrCAD integration", status: true },
+        { name: "Cadence ecosystem", status: true },
+        { name: "Manufacturing output", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "cr-8000", "quadcept"],
   country: "USA",
   category_id: "c6",
@@ -846,7 +978,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "Schematic capture", status: true },
+        { name: "PCB layout", status: true },
+        { name: "Circuit simulation", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "PSpice simulation", status: true },
+        { name: "Analog simulation", status: true },
+        { name: "Mixed-signal", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Signal integrity", status: true },
+        { name: "Thermal analysis", status: true },
+        { name: "EMI/EMC", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Allegro integration", status: true },
+        { name: "Cadence ecosystem", status: true },
+        { name: "Manufacturing output", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "cr-8000", "quadcept"],
   country: "USA",
   category_id: "c6",
@@ -913,7 +1078,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "PCB layout", status: true },
+        { name: "Schematic capture", status: true },
+        { name: "Circuit simulation", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "High-speed design", status: true },
+        { name: "Signal integrity", status: true },
+        { name: "Power integrity", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Thermal analysis", status: true },
+        { name: "EMI/EMC analysis", status: true },
+        { name: "Design verification", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Xpedition ecosystem", status: true },
+        { name: "Mentor Graphics", status: true },
+        { name: "Manufacturing output", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "cr-8000", "quadcept"],
   country: "USA",
   category_id: "c6",
@@ -980,7 +1178,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "Scalable PCB design", status: true },
+        { name: "Enterprise solutions", status: true },
+        { name: "Team collaboration", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "High-speed design", status: true },
+        { name: "Signal integrity", status: true },
+        { name: "Power integrity", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Thermal analysis", status: true },
+        { name: "EMI/EMC analysis", status: true },
+        { name: "Design verification", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Mentor Graphics", status: true },
+        { name: "Siemens ecosystem", status: true },
+        { name: "Manufacturing output", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "cr-8000", "quadcept"],
   country: "USA",
   category_id: "c6",
@@ -1047,7 +1278,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "Schematic capture", status: true },
+        { name: "PCB layout", status: true },
+        { name: "Circuit simulation", status: true },
+      ],
+    },
+    {
+      category: "Features",
+      items: [
+        { name: "Affordable", status: true },
+        { name: "Powerful", status: true },
+        { name: "Intuitive", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Signal integrity", status: true },
+        { name: "Thermal analysis", status: true },
+        { name: "Design verification", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Manufacturing output", status: true },
+        { name: "File compatibility", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "cr-8000", "quadcept"],
   country: "UK",
   category_id: "c6",
@@ -1112,7 +1376,40 @@ export const c6Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "Schematic capture", status: true },
+        { name: "PCB layout", status: true },
+        { name: "Circuit simulation", status: true },
+      ],
+    },
+    {
+      category: "Features",
+      items: [
+        { name: "CAD software", status: true },
+        { name: "Design automation", status: true },
+        { name: "Component library", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Signal integrity", status: true },
+        { name: "Thermal analysis", status: true },
+        { name: "Design verification", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Manufacturing output", status: true },
+        { name: "File compatibility", status: true },
+        { name: "CAD integration", status: true },
+      ],
+    },
+  ],
   alternatives: ["eplan", "cr-8000", "quadcept"],
   country: "Germany",
   category_id: "c6",
@@ -1229,7 +1526,40 @@ export const c6Tools: Tool[] = [
     a: 'The closest alternatives within the EDA space are LTspice, EasyEDA, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ltspice', 'easyeda', 'proteus-design-suite'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "Schematic capture", status: true },
+        { name: "PCB layout", status: true },
+        { name: "3D viewer", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "SPICE simulation", status: true },
+        { name: "Circuit simulation", status: true },
+        { name: "Ngspice", status: true },
+      ],
+    },
+    {
+      category: "Routing",
+      items: [
+        { name: "Push-and-shove router", status: true },
+        { name: "Differential pairs", status: true },
+        { name: "Length matching", status: true },
+      ],
+    },
+    {
+      category: "Output",
+      items: [
+        { name: "Gerber output", status: true },
+        { name: "IPC-2581", status: true },
+        { name: "ODB++", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t199",
@@ -1299,7 +1629,40 @@ export const c6Tools: Tool[] = [
     a: 'The closest alternatives within the EDA space are Proteus Design Suite, NI Multisim, KiCad. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['proteus-design-suite', 'multisim', 'kicad'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Cloud PCB",
+      items: [
+        { name: "Browser-based editor", status: true },
+        { name: "Cloud collaboration", status: true },
+        { name: "Real-time editing", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "LCSC catalog", status: true },
+        { name: "JLCPCB integration", status: true },
+        { name: "One-click fabrication", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "NgSpice simulator", status: true },
+        { name: "Circuit simulation", status: true },
+        { name: "SPICE", status: true },
+      ],
+    },
+    {
+      category: "Import",
+      items: [
+        { name: "Altium import", status: true },
+        { name: "Eagle import", status: true },
+        { name: "KiCad import", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t200",
@@ -1369,7 +1732,40 @@ export const c6Tools: Tool[] = [
     a: 'The closest alternatives within the EDA space are Proteus Design Suite, EasyEDA, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['proteus-design-suite', 'easyeda', 'multisim'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "Schematic capture", status: true },
+        { name: "Hierarchical sheets", status: true },
+        { name: "PCB layout", status: true },
+      ],
+    },
+    {
+      category: "Routing",
+      items: [
+        { name: "Shape-based autorouter", status: true },
+        { name: "Differential pairs", status: true },
+        { name: "Length matching", status: true },
+      ],
+    },
+    {
+      category: "3D",
+      items: [
+        { name: "3D viewer", status: true },
+        { name: "STEP export", status: true },
+        { name: "Component library", status: true },
+      ],
+    },
+    {
+      category: "Output",
+      items: [
+        { name: "ODB++ output", status: true },
+        { name: "Gerber X2", status: true },
+        { name: "NC drill", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t201",
@@ -1439,7 +1835,40 @@ export const c6Tools: Tool[] = [
     a: 'The closest alternatives within the EDA space are Altium 365, Eagle, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['altium-365', 'eagle', 'altium-designer'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        { name: "SPICE simulation", status: true },
+        { name: "Virtual instruments", status: true },
+        { name: "Interactive simulation", status: true },
+      ],
+    },
+    {
+      category: "Mixed-Signal",
+      items: [
+        { name: "Mixed-signal A/D", status: true },
+        { name: "Microcontroller co-sim", status: true },
+        { name: "Analog design", status: true },
+      ],
+    },
+    {
+      category: "PCB",
+      items: [
+        { name: "Ultiboard layout", status: true },
+        { name: "Schematic capture", status: true },
+        { name: "Component database", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "LabVIEW integration", status: true },
+        { name: "Educational tools", status: true },
+        { name: "Lab bench simulation", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t202",
@@ -1509,7 +1938,40 @@ export const c6Tools: Tool[] = [
     a: 'The closest alternatives within the EDA space are CircuitMaker, KiCad, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['circuitmaker', 'kicad', 'altium-designer'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        { name: "SPICE3 solver", status: true },
+        { name: "SPICE4 solver", status: true },
+        { name: "High-speed simulation", status: true },
+      ],
+    },
+    {
+      category: "Power Electronics",
+      items: [
+        { name: "Switching regulators", status: true },
+        { name: "Power simulation", status: true },
+        { name: "Analog design", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Waveform viewer", status: true },
+        { name: "Monte Carlo", status: true },
+        { name: "Worst-case analysis", status: true },
+      ],
+    },
+    {
+      category: "Models",
+      items: [
+        { name: "Analog Devices models", status: true },
+        { name: "Behavioral models", status: true },
+        { name: "SPICE directives", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t203",
@@ -1579,7 +2041,40 @@ export const c6Tools: Tool[] = [
     a: 'The closest alternatives within the EDA space are DipTrace, NI Multisim, EasyEDA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['diptrace', 'multisim', 'easyeda'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        { name: "SPICE simulation", status: true },
+        { name: "Schematic capture", status: true },
+        { name: "Mixed-signal sim", status: true },
+      ],
+    },
+    {
+      category: "Microcontroller",
+      items: [
+        { name: "VSM co-simulation", status: true },
+        { name: "Firmware debugging", status: true },
+        { name: "Peripheral models", status: true },
+      ],
+    },
+    {
+      category: "PCB",
+      items: [
+        { name: "ARES PCB layout", status: true },
+        { name: "Autorouter", status: true },
+        { name: "3D viewer", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "IDE link", status: true },
+        { name: "MPLAB X", status: true },
+        { name: "Atmel Studio", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t204",
@@ -1651,7 +2146,40 @@ export const c6Tools: Tool[] = [
   }],
 
   alternatives: ['altium-designer', 'eplan-electric-p8', 'multisim'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Cloud",
+      items: [
+        { name: "Cloud workspace", status: true },
+        { name: "Version control", status: true },
+        { name: "Data management", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "MCAD CoDesigner", status: true },
+        { name: "SolidWorks link", status: true },
+        { name: "Creo link", status: true },
+      ],
+    },
+    {
+      category: "Supply Chain",
+      items: [
+        { name: "Live BOM", status: true },
+        { name: "Part lifecycle", status: true },
+        { name: "Octopart link", status: true },
+      ],
+    },
+    {
+      category: "Management",
+      items: [
+        { name: "Manufacturing portal", status: true },
+        { name: "Component vault", status: true },
+        { name: "Web viewer", status: true },
+      ],
+    },
+  ],
 
   external_ratings: [{
     source: "TrustRadius",
@@ -1729,6 +2257,39 @@ export const c6Tools: Tool[] = [
     a: 'The closest alternatives within the EDA space are LTspice, NI Multisim, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ltspice', 'multisim', 'proteus-design-suite'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        { name: "Altium engine", status: true },
+        { name: "Schematic capture", status: true },
+        { name: "PCB layout", status: true },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "Cloud hosting", status: true },
+        { name: "Public projects", status: true },
+        { name: "Collaboration", status: true },
+      ],
+    },
+    {
+      category: "Components",
+      items: [
+        { name: "Octopart library", status: true },
+        { name: "Component library", status: true },
+        { name: "STEP export", status: true },
+      ],
+    },
+    {
+      category: "Community",
+      items: [
+        { name: "Open-source sharing", status: true },
+        { name: "Maker community", status: true },
+        { name: "Sandbox repos", status: true },
+      ],
+    },
+  ]
 }
 ];

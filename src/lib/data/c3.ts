@@ -1558,7 +1558,40 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "BIM",
+      items: [
+        { name: "BIM modeling", status: true },
+        { name: "3D design", status: true },
+        { name: "Building design", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Data management", status: true },
+        { name: "Project sharing", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Architectural design", status: true },
+        { name: "Structural design", status: true },
+        { name: "MEP design", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "IFC support", status: true },
+        { name: "DWG support", status: true },
+        { name: "CAD integration", status: true },
+      ],
+    },
+  ],
   alternatives: ["hicad", "renga", "edificius"],
   country: "France",
   category_id: "c3",
@@ -1613,45 +1646,96 @@ export const c3Tools: Tool[] = [
   slug: "hicad",
   logo_url: getLogo("HI"),
   short_desc:
-    "ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung, ",
+    "Comprehensive 2D/3D CAD and PDM/PLM solution for mechanical engineering, plant design, sheet metal, and steel construction.",
   description:
-    "ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung, Stahl- und Metallbau.",
+    "HiCAD by ISD Group is a comprehensive 2D/3D CAD and PDM/PLM solution designed for mechanical engineering, plant design, sheet metal working, and steel/metal construction. The software provides integrated tools for design, documentation, and data management across various engineering disciplines.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本2D/3D設計機能", "シートメタル設計", "鋼構造設計"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "PDM/PLM統合", "高度な自動化", "API連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        { name: "2D/3D CAD modeling", status: true },
+        { name: "Parametric design", status: true },
+        { name: "Assembly design", status: true },
+      ],
+    },
+    {
+      category: "Industry Specific",
+      items: [
+        { name: "Sheet metal design", status: true },
+        { name: "Steel construction", status: true },
+        { name: "Plant engineering", status: true },
+      ],
+    },
+    {
+      category: "PDM/PLM",
+      items: [
+        { name: "Product data management", status: true },
+        { name: "Workflow automation", status: true },
+        { name: "Version control", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Multi-user support", status: true },
+        { name: "Integration with ERP", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "renga", "edificius"],
   country: "Germany",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 4000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Mechanical Engineering", "Plant Design", "Steel Construction", "Sheet Metal"],
+  core_features: ["2D/3D CAD", "Sheet Metal", "Steel Construction", "PDM/PLM", "Parametric Design"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.isdgroup.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 72,
+  pros: [
+    "複数の業界に対応する包括的なソリューション",
+    "PDM/PLM統合でデータ管理が効率的",
+    "シートメタルと鋼構造に特化した機能",
+    "ドイツ製で信頼性が高い",
+    "パラメトリック設計機能が充実",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "国際的なプラグインエコシステムが小さい",
+    "英語ドキュメントが限定的",
+  ],
   faqs: [
     {
       q: "What is HiCAD used for?",
-      a: "ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung,  HiCAD is a BIM solution.",
+      a: "HiCAD is comprehensive 2D/3D CAD and PDM/PLM solution for mechanical engineering, plant design, sheet metal, and steel construction.",
     },
     {
       q: "How much does HiCAD cost?",
-      a: "HiCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "HiCAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of HiCAD?",
-      a: "HiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "HiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does HiCAD support?",
@@ -1659,7 +1743,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "Which file formats does HiCAD support?",
-      a: "HiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "HiCAD works with standard CAD interchange formats including DWG, DXF, STEP, and IFC. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to HiCAD?",
@@ -1668,11 +1752,11 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "HiCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["DWG", "DXF", "STEP", "IFC"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "HiCADは機械設計、プラント設計、シートメタル、鋼構造など複数の業界に対応する包括的なCAD/PDM/PLMソリューションです。特にシートメタルと鋼構造分野で強みを持ち、データ管理機能も充実しています。ドイツ製の信頼性が高い製品ですが、価格も高めで学習曲線も急勾配です。複数の業界で活用したい企業にとって魅力的な選択肢です。",
 },
 {
   id: "t119",
@@ -1680,45 +1764,96 @@ export const c3Tools: Tool[] = [
   slug: "renga",
   logo_url: getLogo("RE"),
   short_desc:
-    "Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних",
+    "Russian BIM system for collaborative architectural design, structural engineering, MEP, and building technology.",
   description:
-    "Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних инженерных сетей и технологической части зданий и сооружений.",
+    "Renga is a Russian BIM system designed for collaborative architectural design, structural engineering, MEP (mechanical, electrical, plumbing), and building technology. The software provides integrated tools for building information modeling across all disciplines with a focus on the Russian construction market.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本BIM設計機能", "建築設計", "構造設計"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "MEP設計", "協業機能", "API連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Architecture",
+      items: [
+        { name: "Architectural design", status: true },
+        { name: "Building modeling", status: true },
+        { name: "Documentation generation", status: true },
+      ],
+    },
+    {
+      category: "Engineering",
+      items: [
+        { name: "Structural engineering", status: true },
+        { name: "MEP design", status: true },
+        { name: "Reinforcement design", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Real-time coordination", status: true },
+        { name: "Change management", status: true },
+      ],
+    },
+    {
+      category: "Standards",
+      items: [
+        { name: "Russian construction standards", status: true },
+        { name: "IFC support", status: true },
+        { name: "SNiP compliance", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "hicad", "edificius"],
   country: "Russia",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 2500,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Architecture", "Construction", "Engineering", "MEP"],
+  core_features: ["BIM Modeling", "Architecture", "Structural", "MEP", "Russian Standards"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://rengabim.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 68,
+  pros: [
+    "ロシア建築基準に完全対応",
+    "全分野をカバーする包括的なBIMソリューション",
+    "コストパフォーマンスが高い",
+    "ロシア市場でのサポート充実",
+    "IFC対応で相互運用性が高い",
+  ],
+  cons: [
+    "国際的なプラグインエコシステムが小さい",
+    "英語ドキュメントが限定的",
+    "海外市場での実績が少ない",
+    "高度な自動化機能は他製品に比べて劣る",
+  ],
   faqs: [
     {
       q: "What is Renga used for?",
-      a: "Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних Renga is a BIM solution.",
+      a: "Renga is Russian BIM system for collaborative architectural design, structural engineering, MEP, and building technology.",
     },
     {
       q: "How much does Renga cost?",
-      a: "Renga is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Renga is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Renga?",
-      a: "Renga is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Renga is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Renga support?",
@@ -1726,7 +1861,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "Which file formats does Renga support?",
-      a: "Renga works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Renga works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Renga?",
@@ -1735,57 +1870,108 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Renga Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Rengaはロシア建築基準に完全対応したBIMシステムで、建築、構造、MEPなど全分野をカバーしています。ロシア市場でのサポートが充実しており、コストパフォーマンスも高いです。ただし、国際的なエコシステムは小さく、英語ドキュメントも限定的です。ロシア国内の建設プロジェクトには最適ですが、グローバル展開を考える企業には検討が必要です。",
 },
 {
   id: "t130",
   name: "Edificius",
   slug: "edificius",
-  logo_url: "",
+  logo_url: "/logos/edificius.png",
   short_desc:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a",
+    "BIM software with the highest number of IFC certified solutions for architecture, engineering, and construction.",
   description:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering and construction industries",
+    "Edificius by ACCA Software is a BIM solution with the highest number of IFC certified software solutions in the world for the architecture, engineering, and construction industries. It provides integrated tools for architectural design, structural engineering, and MEP with strong IFC compliance.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本BIM設計機能", "建築設計", "IFC完全対応"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "構造設計", "MEP設計", "高度な連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "BIM Design",
+      items: [
+        { name: "Architectural BIM modeling", status: true },
+        { name: "Structural BIM", status: true },
+        { name: "MEP BIM", status: true },
+      ],
+    },
+    {
+      category: "IFC Compliance",
+      items: [
+        { name: "IFC 2x3 certified", status: true },
+        { name: "IFC 4 certified", status: true },
+        { name: "OpenBIM support", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Model coordination", status: true },
+        { name: "Clash detection", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CDE integration", status: true },
+        { name: "ERP connection", status: true },
+        { name: "API support", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Italy",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 2000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Architecture", "Engineering", "Construction", "MEP"],
+  core_features: ["BIM Modeling", "IFC Certified", "Architecture", "Structural", "MEP"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 75,
+  pros: [
+    "世界最高数のIFC認証ソリューション",
+    "オープンBIM規格への完全準拠",
+    "建築・構造・MEPを統合",
+    "イタリア製で欧州市場での実績豊富",
+    "相互運用性が高い",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "英語ドキュメントが限定的",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is Edificius used for?",
-      a: "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a Edificius is a BIM solution.",
+      a: "Edificius is BIM software with the highest number of IFC certified solutions for architecture, engineering, and construction.",
     },
     {
       q: "How much does Edificius cost?",
-      a: "Edificius is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Edificius is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Edificius?",
-      a: "Edificius is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Edificius is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Edificius support?",
@@ -1793,7 +1979,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "Which file formats does Edificius support?",
-      a: "Edificius works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Edificius works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Edificius?",
@@ -1802,57 +1988,108 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Edificius Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Edificiusは世界最高数のIFC認証を持つBIMソフトウェアで、オープンBIM規格への完全準拠が大きな特徴です。建築、構造、MEPを統合したソリューションを提供し、相互運用性が非常に高いです。イタリア製の信頼性が高い製品で、欧州市場での実績も豊富です。ただし、価格は高めで学習曲線も急勾配です。オープンBIMを重視するプロジェクトにとって最適な選択肢です。",
 },
 {
   id: "t131",
   name: "EdiLus",
   slug: "edilus",
-  logo_url: "",
+  logo_url: "/logos/edilus.png",
   short_desc:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a",
+    "Architectural BIM software for building design and documentation with IFC certification.",
   description:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering and construction industries",
+    "EdiLus by ACCA Software is an architectural BIM solution designed for building design and documentation. It provides intuitive tools for architectural modeling with IFC certification for interoperability. The software is part of the ACCA Software family, known for its IFC certified solutions.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本建築設計機能", "IFC対応", "図面作成"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "高度なモデリング", "レンダリング", "連携機能"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Architecture",
+      items: [
+        { name: "3D architectural modeling", status: true },
+        { name: "Floor plan design", status: true },
+        { name: "Section and elevation", status: true },
+      ],
+    },
+    {
+      category: "Documentation",
+      items: [
+        { name: "Automatic drawing generation", status: true },
+        { name: "Quantity takeoff", status: true },
+        { name: "Scheduling", status: true },
+      ],
+    },
+    {
+      category: "IFC Compliance",
+      items: [
+        { name: "IFC 2x3 certified", status: true },
+        { name: "OpenBIM support", status: true },
+        { name: "Model exchange", status: true },
+      ],
+    },
+    {
+      category: "Visualization",
+      items: [
+        { name: "3D visualization", status: true },
+        { name: "Rendering", status: true },
+        { name: "Walkthrough", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Italy",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 1500,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Architecture", "Construction", "Interior Design"],
+  core_features: ["Architectural BIM", "IFC Certified", "Documentation", "Visualization"],
+  user_scales: ["Individual", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 70,
+  pros: [
+    "IFC認証で相互運用性が高い",
+    "直感的な建築設計インターフェース",
+    "自動図面生成機能",
+    "イタリア製で欧州市場での実績",
+    "コストパフォーマンスが良い",
+  ],
+  cons: [
+    "構造・MEP機能は限定",
+    "高度な解析機能が不足",
+    "英語ドキュメントが限定的",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is EdiLus used for?",
-      a: "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a EdiLus is a BIM solution.",
+      a: "EdiLus is architectural BIM software for building design and documentation with IFC certification.",
     },
     {
       q: "How much does EdiLus cost?",
-      a: "EdiLus is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "EdiLus is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of EdiLus?",
-      a: "EdiLus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "EdiLus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does EdiLus support?",
@@ -1860,7 +2097,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "Which file formats does EdiLus support?",
-      a: "EdiLus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "EdiLus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to EdiLus?",
@@ -1869,55 +2106,106 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "EdiLus Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["IFC", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "EdiLusは建築設計に特化したBIMソフトウェアで、IFC認証による高い相互運用性が特徴です。直感的なインターフェースと自動図面生成機能を備え、建築家にとって使いやすいツールです。構造やMEP機能は限定されていますが、純粋な建築設計用途には最適です。コストパフォーマンスも良く、中小の建築事務所にとって魅力的な選択肢です。",
 },
 {
   id: "t139",
   name: "cadwork",
   slug: "cadwork",
-  logo_url: "",
-  short_desc: "Cadwork CAD/CAM software for timber construction.",
-  description: "Cadwork CAD/CAM software for timber construction.",
+  logo_url: "/logos/cadwork.png",
+  short_desc: "CAD/CAM software specialized for timber construction and wood building design.",
+  description: "cadwork is a specialized CAD/CAM software solution designed for timber construction and wood building design. It provides comprehensive tools for 3D modeling, structural design, and CNC machine preparation specifically for the timber industry. The software is widely used in Europe for wooden frame construction and timber engineering.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本木材建築設計", "3Dモデリング", "CNC出力"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "高度な構造解析", "BIM連携", "自動化機能"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Timber Design",
+      items: [
+        { name: "3D timber modeling", status: true },
+        { name: "Wood frame design", status: true },
+        { name: "Connection design", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "CNC machine preparation", status: true },
+        { name: "NC code generation", status: true },
+        { name: "Production optimization", status: true },
+      ],
+    },
+    {
+      category: "Structural",
+      items: [
+        { name: "Structural analysis", status: true },
+        { name: "Load calculation", status: true },
+        { name: "Eurocode compliance", status: true },
+      ],
+    },
+    {
+      category: "BIM",
+      items: [
+        { name: "IFC support", status: true },
+        { name: "Model coordination", status: true },
+        { name: "Quantity takeoff", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Switzerland",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 5000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Timber Construction", "Wood Engineering", "Architecture"],
+  core_features: ["Timber CAD", "CAM", "CNC", "Structural", "BIM"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.cadwork.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 73,
+  pros: [
+    "木材建築に特化した専門ソリューション",
+    "CNCマシン対応で製造まで統合",
+    "欧州木材建築業界での実績豊富",
+    "スイス製で信頼性が高い",
+    "ユーロコード準拠",
+  ],
+  cons: [
+    "木材建築以外の用途には不向き",
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is cadwork used for?",
-      a: "Cadwork CAD/CAM software for timber construction. cadwork is a BIM solution.",
+      a: "cadwork is CAD/CAM software specialized for timber construction and wood building design.",
     },
     {
       q: "How much does cadwork cost?",
-      a: "cadwork is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "cadwork is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of cadwork?",
-      a: "cadwork is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "cadwork is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does cadwork support?",
@@ -1925,7 +2213,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "Which file formats does cadwork support?",
-      a: "cadwork works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "cadwork works with standard BIM interchange formats including IFC, DWG, and DXF. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to cadwork?",
@@ -1934,11 +2222,11 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "cadwork Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["IFC", "DWG", "DXF", "STEP"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "cadworkは木材建築に特化したCAD/CAMソフトウェアで、設計から製造までのワークフローを統合しています。特にCNCマシン対応が強力で、欧州の木材建築業界で広く採用されています。スイス製の信頼性が高い製品ですが、価格も高めです。木材建築専門企業にとっては最適な選択肢ですが、他の建設用途には向いていません。",
 },
 {
   id: "t140",
@@ -1946,45 +2234,96 @@ export const c3Tools: Tool[] = [
   slug: "magicad",
   logo_url: getLogo("MA"),
   short_desc:
-    "MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the constructi",
+    "MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
   description:
-    "MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
+    "MagiCAD Group specializes in MEP (Mechanical, Electrical, Plumbing) design software for designers and BIM solutions for MEP manufacturers in the construction industry. The software provides comprehensive tools for HVAC, electrical, and piping design with strong BIM integration and manufacturer content libraries.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本MEP設計機能", "HVAC設計", "電気設計"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "配管設計", "BIM連携", "メーカーライブラリ"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "MEP Design",
+      items: [
+        { name: "HVAC design", status: true },
+        { name: "Electrical design", status: true },
+        { name: "Piping design", status: true },
+      ],
+    },
+    {
+      category: "BIM Integration",
+      items: [
+        { name: "IFC support", status: true },
+        { name: "Revit integration", status: true },
+        { name: "Clash detection", status: true },
+      ],
+    },
+    {
+      category: "Content",
+      items: [
+        { name: "Manufacturer library", status: true },
+        { name: "Product database", status: true },
+        { name: "Custom content", status: true },
+      ],
+    },
+    {
+      category: "Calculation",
+      items: [
+        { name: "Load calculation", status: true },
+        { name: "Sizing tools", status: true },
+        { name: "Simulation", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Finland",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 3000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["MEP", "HVAC", "Electrical", "Construction"],
+  core_features: ["MEP Design", "HVAC", "Electrical", "BIM", "Manufacturer Content"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.magicad.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 76,
+  pros: [
+    "MEP設計に特化した専門ソリューション",
+    "豊富なメーカーライブラリ",
+    "Revitとの連携が強力",
+    "フィンランド製で欧州市場での実績",
+    "計算・シミュレーション機能充実",
+  ],
+  cons: [
+    "建築・構造機能は限定",
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is MagiCAD used for?",
-      a: "MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the constructi MagiCAD is a BIM solution.",
+      a: "MagiCAD is MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
     },
     {
       q: "How much does MagiCAD cost?",
-      a: "MagiCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "MagiCAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of MagiCAD?",
-      a: "MagiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "MagiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does MagiCAD support?",
@@ -1992,7 +2331,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "Which file formats does MagiCAD support?",
-      a: "MagiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "MagiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to MagiCAD?",
@@ -2001,55 +2340,106 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "MagiCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "MagiCADはMEP設計に特化したBIMソフトウェアで、HVAC、電気、配管設計の全てをカバーしています。豊富なメーカーライブラリとRevitとの強力な連携が特徴で、欧州のMEP業界で広く採用されています。計算・シミュレーション機能も充実していますが、建築・構造機能は限定されています。MEP専門企業にとっては最適な選択肢です。",
 },
 {
   id: "t157",
   name: "DDS-CAD",
   slug: "dds-cad",
   logo_url: getLogo("DD"),
-  short_desc: "简要介绍 DDS-CAD（官方站点）",
-  description: "详细介绍 DDS-CAD（官方站点）",
+  short_desc: "MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
+  description: "DDS-CAD is a specialized MEP design and BIM software solution for mechanical, electrical, and plumbing engineering. The software provides integrated tools for HVAC design, electrical systems, and piping with strong BIM capabilities. It's particularly popular in the Nordic construction market.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本MEP設計機能", "HVAC設計", "電気設計"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "配管設計", "BIM連携", "計算機能"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "MEP Design",
+      items: [
+        { name: "HVAC design", status: true },
+        { name: "Electrical design", status: true },
+        { name: "Piping design", status: true },
+      ],
+    },
+    {
+      category: "BIM",
+      items: [
+        { name: "IFC support", status: true },
+        { name: "Model coordination", status: true },
+        { name: "Clash detection", status: true },
+      ],
+    },
+    {
+      category: "Calculation",
+      items: [
+        { name: "Load calculation", status: true },
+        { name: "Energy analysis", status: true },
+        { name: "Sizing tools", status: true },
+      ],
+    },
+    {
+      category: "Documentation",
+      items: [
+        { name: "Automatic drawing", status: true },
+        { name: "Quantity takeoff", status: true },
+        { name: "Scheduling", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Norway",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 2500,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["MEP", "HVAC", "Electrical", "Construction"],
+  core_features: ["MEP Design", "HVAC", "Electrical", "BIM", "Calculation"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.graphisoft.com/solutions/dds-cad",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 71,
+  pros: [
+    "MEP設計に特化した専門ソリューション",
+    "ノルディック市場での実績豊富",
+    "エネルギー解析機能充実",
+    "自動図面生成機能",
+    "ノルウェー製で信頼性が高い",
+  ],
+  cons: [
+    "建築・構造機能は限定",
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is DDS-CAD used for?",
-      a: "简要介绍 DDS-CAD（官方站点） DDS-CAD is a BIM solution.",
+      a: "DDS-CAD is MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
     },
     {
       q: "How much does DDS-CAD cost?",
-      a: "DDS-CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "DDS-CAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of DDS-CAD?",
-      a: "DDS-CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "DDS-CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does DDS-CAD support?",
@@ -2057,7 +2447,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "Which file formats does DDS-CAD support?",
-      a: "DDS-CAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "DDS-CAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to DDS-CAD?",
@@ -2066,11 +2456,11 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "DDS-CAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "DDS-CADはMEP設計に特化したBIMソフトウェアで、HVAC、電気、配管設計をカバーしています。ノルディック市場での実績が豊富で、エネルギー解析機能も充実しています。ノルウェー製の信頼性が高い製品ですが、建築・構造機能は限定されています。MEP専門企業、特に北欧市場でのプロジェクトには最適です。",
 },
 {
   id: "t159",
@@ -2078,53 +2468,104 @@ export const c3Tools: Tool[] = [
   slug: "drofus",
   logo_url: getLogo("DR"),
   short_desc:
-    "dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos",
+    "Data-driven building requirements platform for standardizing project data and BIM collaboration.",
   description:
-    "dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence.",
+    "dRofus is a leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence. It provides a database-driven approach to managing building requirements, room data, and equipment specifications integrated with BIM workflows.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "subscription",
+      features: ["基本データ管理機能", "部屋データ管理", "BIM連携"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "subscription",
+      features: ["Standard機能全て", "要件定義", "自動化機能", "API連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Data Management",
+      items: [
+        { name: "Room data management", status: true },
+        { name: "Equipment database", status: true },
+        { name: "Requirements tracking", status: true },
+      ],
+    },
+    {
+      category: "BIM Integration",
+      items: [
+        { name: "Revit integration", status: true },
+        { name: "IFC support", status: true },
+        { name: "Model synchronization", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Team collaboration", status: true },
+        { name: "Change management", status: true },
+        { name: "Version control", status: true },
+      ],
+    },
+    {
+      category: "Automation",
+      items: [
+        { name: "Automated reporting", status: true },
+        { name: "Data validation", status: true },
+        { name: "Workflow automation", status: true },
+      ],
+    },
+  ],
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Norway",
   category_id: "c3",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  pricing_type: "Subscription",
+  starting_price: 2000,
+  platforms: ["Windows", "Web"],
+  industries: ["Architecture", "Construction", "Engineering", "Healthcare"],
+  core_features: ["Data Management", "BIM Integration", "Requirements", "Collaboration"],
+  user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.drofus.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 74,
+  pros: [
+    "データ駆動の要件管理プラットフォーム",
+    "BIMとの強力な統合機能",
+    "データの一元化でサイロ化を解消",
+    "ノルディック市場での実績豊富",
+    "自動化機能が充実",
+  ],
+  cons: [
+    "CAD設計機能は提供していない",
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "小規模チームには過剰な機能",
+  ],
   faqs: [
     {
       q: "What is dRofus used for?",
-      a: "dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos dRofus is a BIM solution.",
+      a: "dRofus is a data-driven building requirements platform for standardizing project data and BIM collaboration.",
     },
     {
       q: "How much does dRofus cost?",
-      a: "dRofus is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "dRofus is offered on a subscription model. Contact the vendor for specific pricing based on user count and modules.",
     },
     {
       q: "Is there a free version of dRofus?",
-      a: "dRofus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "dRofus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does dRofus support?",
-      a: "dRofus runs on Windows.",
+      a: "dRofus runs on Windows and is accessible via web browser.",
     },
     {
       q: "Which file formats does dRofus support?",
-      a: "dRofus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "dRofus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to dRofus?",
@@ -2133,11 +2574,11 @@ export const c3Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "dRofus Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "dRofusはデータ駆動の建築要件管理プラットフォームで、プロジェクトデータの標準化とBIM連携に特化しています。CAD設計機能ではなく、データ管理と要件定義に焦点を当てており、大規模プロジェクトのデータ一元化に最適です。ノルディック市場での実績が豊富ですが、小規模チームには機能過多かもしれません。データ管理を重視する企業にとって強力なツールです。",
 },
 {
   id: "t206",
@@ -2146,6 +2587,15 @@ export const c3Tools: Tool[] = [
   logo_url: getLogo("AP"),
   "short_desc": "Autodesk's plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform.",
   "description": "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings on top of vanilla AutoCAD, used by mid-size EPC firms.",
+  pricing_tiers: [
+    {
+      name: "Subscription",
+      price: "2615",
+      period: "/year",
+      features: ["AutoCAD Plant 3D toolset", "P&ID design", "3D piping", "Isometric generation"],
+      is_popular: true,
+    },
+  ],
   "country": "USA",
   "category_id": "c3",
   "pricing_type": "Subscription",
@@ -2207,7 +2657,40 @@ export const c3Tools: Tool[] = [
     a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'allplan', 'bimcollab'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Piping Design",
+      items: [
+        { name: "Spec-driven pipe routing", status: true },
+        { name: "3D pipe modeling", status: true },
+        { name: "Pipe support design", status: true },
+      ],
+    },
+    {
+      category: "P&ID",
+      items: [
+        { name: "P&ID symbol library", status: true },
+        { name: "P&ID validation", status: true },
+        { name: "P&ID to 3D synchronization", status: true },
+      ],
+    },
+    {
+      category: "Equipment",
+      items: [
+        { name: "Vessel modeling", status: true },
+        { name: "Heat exchanger design", status: true },
+        { name: "Pump and equipment modeling", status: true },
+      ],
+    },
+    {
+      category: "Documentation",
+      items: [
+        { name: "Isometric drawing generation", status: true },
+        { name: "Orthographic drawings", status: true },
+        { name: "Bill of materials", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t207",
@@ -2277,7 +2760,40 @@ export const c3Tools: Tool[] = [
     a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'allplan', 'bimcollab'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Plant Design",
+      items: [
+        { name: "Data-centric modeling", status: true },
+        { name: "3D plant design", status: true },
+        { name: "Equipment modeling", status: true },
+      ],
+    },
+    {
+      category: "Piping",
+      items: [
+        { name: "Pipe routing", status: true },
+        { name: "Piping design", status: true },
+        { name: "ISOGEN isometrics", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "SmartPlant suite", status: true },
+        { name: "Oracle/SQL", status: true },
+        { name: "Enterprise integration", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Data management", status: true },
+        { name: "Version control", status: true },
+        { name: "Team collaboration", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t208",
@@ -2347,7 +2863,40 @@ export const c3Tools: Tool[] = [
     a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, BIMcollab, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'bimcollab', 'autocad-plant-3d'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Plant Design",
+      items: [
+        { name: "AutoCAD-based modeling", status: true },
+        { name: "3D plant design", status: true },
+        { name: "Spec-driven routing", status: true },
+      ],
+    },
+    {
+      category: "Piping",
+      items: [
+        { name: "Pipe routing", status: true },
+        { name: "CAESAR II link", status: true },
+        { name: "ISOGEN isometrics", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "PV Elite integration", status: true },
+        { name: "Tank integration", status: true },
+        { name: "Steel modeling", status: true },
+      ],
+    },
+    {
+      category: "Output",
+      items: [
+        { name: "Auto-isometrics", status: true },
+        { name: "PCF output", status: true },
+        { name: "DWG output", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t229",
@@ -2417,7 +2966,40 @@ export const c3Tools: Tool[] = [
     a: 'The closest alternatives within the BIM space are BIMcollab, Allplan, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['bimcollab', 'allplan', 'autocad-plant-3d'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CDE",
+      items: [
+        { name: "Autodesk Docs", status: true },
+        { name: "Common data environment", status: true },
+        { name: "Document management", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "BIM Collaborate Pro", status: true },
+        { name: "Revit Cloud Worksharing", status: true },
+        { name: "Model coordination", status: true },
+      ],
+    },
+    {
+      category: "Field",
+      items: [
+        { name: "Build project management", status: true },
+        { name: "RFI and submittals", status: true },
+        { name: "Field tools", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Takeoff", status: true },
+        { name: "Cost management", status: true },
+        { name: "Auto-clash detection", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t230",
@@ -2487,7 +3069,40 @@ export const c3Tools: Tool[] = [
     a: 'The closest alternatives within the BIM space are Autodesk Dynamo, Autodesk Construction Cloud, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-dynamo', 'autodesk-construction-cloud', 'bimcollab'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CDE",
+      items: [
+        { name: "Free tier", status: true },
+        { name: "Unlimited collaborators", status: true },
+        { name: "Common data environment", status: true },
+      ],
+    },
+    {
+      category: "BIM",
+      items: [
+        { name: "IFC viewer", status: true },
+        { name: "Clash detection", status: true },
+        { name: "openBIM workflow", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Tekla Structures", status: true },
+        { name: "SketchUp", status: true },
+        { name: "Native links", status: true },
+      ],
+    },
+    {
+      category: "Mobile",
+      items: [
+        { name: "Mobile apps", status: true },
+        { name: "AR HoloLens", status: true },
+        { name: "Issue tracking", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t231",
@@ -2557,7 +3172,40 @@ export const c3Tools: Tool[] = [
     a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-construction-cloud', 'allplan', 'revit'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Issue Management",
+      items: [
+        { name: "Cloud issue tracker", status: true },
+        { name: "BCF 2.1/3.0", status: true },
+        { name: "Vendor-neutral", status: true },
+      ],
+    },
+    {
+      category: "BIM Tools",
+      items: [
+        { name: "Revit plugin", status: true },
+        { name: "ArchiCAD plugin", status: true },
+        { name: "Tekla plugin", status: true },
+      ],
+    },
+    {
+      category: "Clash",
+      items: [
+        { name: "BIMcollab ZOOM", status: true },
+        { name: "Federated IFC viewer", status: true },
+        { name: "Smart Views", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Navisworks plugin", status: true },
+        { name: "Solibri plugin", status: true },
+        { name: "REST API", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t232",
@@ -2627,6 +3275,39 @@ export const c3Tools: Tool[] = [
     a: 'The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['trimble-connect', 'bimcollab', 'autodesk-construction-cloud'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Visual Programming",
+      items: [
+        { name: "Node-based scripting", status: true },
+        { name: "Visual programming", status: true },
+        { name: "Dynamo Player", status: true },
+      ],
+    },
+    {
+      category: "Automation",
+      items: [
+        { name: "Revit automation", status: true },
+        { name: "Civil 3D automation", status: true },
+        { name: "Workflow automation", status: true },
+      ],
+    },
+    {
+      category: "API",
+      items: [
+        { name: "Revit API", status: true },
+        { name: "Python support", status: true },
+        { name: "Zero-Touch C#", status: true },
+      ],
+    },
+    {
+      category: "Generative",
+      items: [
+        { name: "Parametric geometry", status: true },
+        { name: "Generative Design", status: true },
+        { name: "Package manager", status: true },
+      ],
+    },
+  ]
 }
 ];

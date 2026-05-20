@@ -1926,7 +1926,40 @@ export const c7Tools: Tool[] = [
   }],
 
   alternatives: ['bambu-studio', 'prusaslicer', 'd5-render'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        { name: "FDM slicing", status: true },
+        { name: "Support generation", status: true },
+        { name: "Infill patterns", status: true },
+      ],
+    },
+    {
+      category: "Compatibility",
+      items: [
+        { name: "400+ printer profiles", status: true },
+        { name: "Plugin marketplace", status: true },
+        { name: "Material profiles", status: true },
+      ],
+    },
+    {
+      category: "Optimization",
+      items: [
+        { name: "Adaptive layers", status: true },
+        { name: "Z-hop optimisation", status: true },
+        { name: "Mesh repair", status: true },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "Cloud account", status: true },
+        { name: "Shared profiles", status: true },
+        { name: "Cloud monitoring", status: true },
+      ],
+    },
+  ],
 
   external_ratings: [{
     source: "G2",
@@ -2010,7 +2043,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Bambu Studio, UltiMaker Cura, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['bambu-studio', 'ultimaker-cura', 'd5-render'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        { name: "Organic supports", status: true },
+        { name: "Tree supports", status: true },
+        { name: "FDM slicing", status: true },
+      ],
+    },
+    {
+      category: "SLA",
+      items: [
+        { name: "SLA slicing", status: true },
+        { name: "DLP slicing", status: true },
+        { name: "Multi-material", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Adaptive cubic infill", status: true },
+        { name: "Ironing", status: true },
+        { name: "MMU support", status: true },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "Cloud monitoring", status: true },
+        { name: "Printer profiles", status: true },
+        { name: "Connect cloud", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t215",
@@ -2080,7 +2146,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are UltiMaker Cura, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ultimaker-cura', 'prusaslicer', 'd5-render'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        { name: "High-speed profiles", status: true },
+        { name: "Tree supports", status: true },
+        { name: "FDM slicing", status: true },
+      ],
+    },
+    {
+      category: "Multi-Material",
+      items: [
+        { name: "AMS multi-color", status: true },
+        { name: "Multi-material", status: true },
+        { name: "Toolchanger support", status: true },
+      ],
+    },
+    {
+      category: "Calibration",
+      items: [
+        { name: "Input shaping", status: true },
+        { name: "Pressure advance", status: true },
+        { name: "Printer calibration", status: true },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "MakerWorld integration", status: true },
+        { name: "Cloud model library", status: true },
+        { name: "Third-party profiles", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t216",
@@ -2150,7 +2249,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are JewelCAD Pro, RhinoGold, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['jewelcad-pro', 'rhinogold', 'carlson-survey'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        { name: "Per-process slicing", status: true },
+        { name: "Stop-points", status: true },
+        { name: "Multi-extrusion", status: true },
+      ],
+    },
+    {
+      category: "Support",
+      items: [
+        { name: "Manual support placement", status: true },
+        { name: "Support generation", status: true },
+        { name: "Support optimization", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Pre-print simulation", status: true },
+        { name: "Mesh repair", status: true },
+        { name: "Layer analysis", status: true },
+      ],
+    },
+    {
+      category: "Profiles",
+      items: [
+        { name: "100+ printer profiles", status: true },
+        { name: "Custom profiles", status: true },
+        { name: "Fine-tuning controls", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t217",
@@ -2220,7 +2352,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Optitex, Lectra Modaris, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['optitex', 'lectra-modaris', 'gerber-accumark'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "AM Prep",
+      items: [
+        { name: "Build-plate packing", status: true },
+        { name: "Support generation", status: true },
+        { name: "Metal AM support", status: true },
+      ],
+    },
+    {
+      category: "Lattice",
+      items: [
+        { name: "Lattice generation", status: true },
+        { name: "Topology tools", status: true },
+        { name: "Lattice optimization", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "Distortion simulation", status: true },
+        { name: "Residual stress", status: true },
+        { name: "Print failure reduction", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Fusion 360 integration", status: true },
+        { name: "Inventor integration", status: true },
+        { name: "Mesh repair tools", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t218",
@@ -2290,7 +2455,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Browzwear, Trimble Business Center, Marvelous Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['browzwear', 'trimble-business-center', 'marvelous-designer'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Pattern Making",
+      items: [
+        { name: "2D pattern making", status: true },
+        { name: "PDS 2D", status: true },
+        { name: "Automatic marker making", status: true },
+      ],
+    },
+    {
+      category: "3D Simulation",
+      items: [
+        { name: "3D garment simulation", status: true },
+        { name: "Fabric simulation", status: true },
+        { name: "Physics simulation", status: true },
+      ],
+    },
+    {
+      category: "Rendering",
+      items: [
+        { name: "Photorealistic rendering", status: true },
+        { name: "Vidya rendering", status: true },
+        { name: "Virtual sampling", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "PLM integration", status: true },
+        { name: "2D to 3D workflow", status: true },
+        { name: "Marker optimisation", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t219",
@@ -2360,7 +2558,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['infraworks', '3ds-max', 'zbrush'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Pattern Making",
+      items: [
+        { name: "2D pattern design", status: true },
+        { name: "Grading", status: true },
+        { name: "Marker making", status: true },
+      ],
+    },
+    {
+      category: "3D",
+      items: [
+        { name: "AccuMark 3D", status: true },
+        { name: "Virtual sampling", status: true },
+        { name: "3D visualization", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Plotter integration", status: true },
+        { name: "Cutter integration", status: true },
+        { name: "PLM connector", status: true },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "Cloud-based library", status: true },
+        { name: "Easy Order", status: true },
+        { name: "Made-to-measure", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t220",
@@ -2430,7 +2661,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Autodesk Netfabb, Optitex, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-netfabb', 'optitex', 'gerber-accumark'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Pattern Design",
+      items: [
+        { name: "Pattern design", status: true },
+        { name: "Grading", status: true },
+        { name: "Diamino marker making", status: true },
+      ],
+    },
+    {
+      category: "3D",
+      items: [
+        { name: "Modaris 3D", status: true },
+        { name: "Virtual prototyping", status: true },
+        { name: "3D visualization", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Lectra cutters", status: true },
+        { name: "Direct connection", status: true },
+        { name: "PLM integration", status: true },
+      ],
+    },
+    {
+      category: "Custom",
+      items: [
+        { name: "Made-to-measure", status: true },
+        { name: "Templates", status: true },
+        { name: "Luxury couture", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t221",
@@ -2500,7 +2764,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Trimble Business Center, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['trimble-business-center', 'marvelous-designer', 'v-ray'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "3D Simulation",
+      items: [
+        { name: "VStitcher 3D", status: true },
+        { name: "Garment simulation", status: true },
+        { name: "Digital twins", status: true },
+      ],
+    },
+    {
+      category: "Cloud",
+      items: [
+        { name: "Lotta cloud", status: true },
+        { name: "Cloud collaboration", status: true },
+        { name: "Virtual sampling", status: true },
+      ],
+    },
+    {
+      category: "Fabric",
+      items: [
+        { name: "Fabric digitization", status: true },
+        { name: "True-to-Scale", status: true },
+        { name: "PBR rendering", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Animation simulation", status: true },
+        { name: "Pose simulation", status: true },
+        { name: "PLM connectors", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t222",
@@ -2570,7 +2867,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Adobe Substance 3D Painter, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['substance-painter', 'v-ray', 'browzwear'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "3D Garment",
+      items: [
+        { name: "Pattern-based creation", status: true },
+        { name: "Cloth physics", status: true },
+        { name: "Garment library", status: true },
+      ],
+    },
+    {
+      category: "Animation",
+      items: [
+        { name: "Avatars", status: true },
+        { name: "Animation", status: true },
+        { name: "Character clothing", status: true },
+      ],
+    },
+    {
+      category: "Export",
+      items: [
+        { name: "Maya exporter", status: true },
+        { name: "Blender exporter", status: true },
+        { name: "Unreal/Unity exporter", status: true },
+      ],
+    },
+    {
+      category: "Materials",
+      items: [
+        { name: "Texture editor", status: true },
+        { name: "PBR materials", status: true },
+        { name: "Presets", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t223",
@@ -2640,7 +2970,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are JewelCAD Pro, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['jewelcad-pro', 'simplify3d', 'carlson-survey'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Jewelry CAD",
+      items: [
+        { name: "Gem setting tools", status: true },
+        { name: "Parametric components", status: true },
+        { name: "Ring shanks", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Prongs", status: true },
+        { name: "Settings", status: true },
+        { name: "Jewelry library", status: true },
+      ],
+    },
+    {
+      category: "Rendering",
+      items: [
+        { name: "VRay engine", status: true },
+        { name: "Rendering pipeline", status: true },
+        { name: "STL export", status: true },
+      ],
+    },
+    {
+      category: "Platform",
+      items: [
+        { name: "Rhinoceros 3D", status: true },
+        { name: "Plugin architecture", status: true },
+        { name: "Asset library", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t224",
@@ -2710,7 +3073,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are RhinoGold, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['rhinogold', 'simplify3d', 'carlson-survey'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Jewelry CAD",
+      items: [
+        { name: "Parametric libraries", status: true },
+        { name: "Gem setting", status: true },
+        { name: "Prong/bezel/channel", status: true },
+      ],
+    },
+    {
+      category: "Modeling",
+      items: [
+        { name: "Sub-D modeling", status: true },
+        { name: "Jewelry templates", status: true },
+        { name: "Pavé setting", status: true },
+      ],
+    },
+    {
+      category: "Output",
+      items: [
+        { name: "Photoreal rendering", status: true },
+        { name: "STL export", status: true },
+        { name: "CAM toolpath", status: true },
+      ],
+    },
+    {
+      category: "Production",
+      items: [
+        { name: "High-resolution STL", status: true },
+        { name: "Casting output", status: true },
+        { name: "Toolpath generation", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t225",
@@ -2780,7 +3176,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are UltiMaker Cura, Corona Renderer, Bambu Studio. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ultimaker-cura', 'corona-renderer', 'bambu-studio'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Rendering",
+      items: [
+        { name: "Real-time ray tracing", status: true },
+        { name: "RTX GPU", status: true },
+        { name: "DLSS denoise", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "SketchUp link", status: true },
+        { name: "Revit link", status: true },
+        { name: "Rhino link", status: true },
+      ],
+    },
+    {
+      category: "Assets",
+      items: [
+        { name: "Asset library", status: true },
+        { name: "Materials", status: true },
+        { name: "Vegetation", status: true },
+      ],
+    },
+    {
+      category: "Output",
+      items: [
+        { name: "Animation", status: true },
+        { name: "Video sequencing", status: true },
+        { name: "Cloud rendering", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t226",
@@ -2850,7 +3279,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Marvelous Designer, Browzwear, Trimble Business Center. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['marvelous-designer', 'browzwear', 'trimble-business-center'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Rendering",
+      items: [
+        { name: "CPU + GPU rendering", status: true },
+        { name: "CUDA/RTX", status: true },
+        { name: "Distributed rendering", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "3ds Max plugin", status: true },
+        { name: "Maya plugin", status: true },
+        { name: "Revit plugin", status: true },
+      ],
+    },
+    {
+      category: "Assets",
+      items: [
+        { name: "VRayMtl", status: true },
+        { name: "VRayProxy", status: true },
+        { name: "Cosmos library", status: true },
+      ],
+    },
+    {
+      category: "Real-Time",
+      items: [
+        { name: "Chaos Vantage", status: true },
+        { name: "Real-time review", status: true },
+        { name: "Light cache", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t227",
@@ -2920,7 +3382,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Marvelous Designer, Adobe Substance 3D Painter, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['marvelous-designer', 'substance-painter', 'browzwear'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Rendering",
+      items: [
+        { name: "CPU path-tracer", status: true },
+        { name: "Unbiased rendering", status: true },
+        { name: "Interactive viewport", status: true },
+      ],
+    },
+    {
+      category: "Materials",
+      items: [
+        { name: "Corona Material", status: true },
+        { name: "Simple parameters", status: true },
+        { name: "Material library", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "3ds Max plugin", status: true },
+        { name: "Cinema 4D plugin", status: true },
+        { name: "Chaos Cosmos", status: true },
+      ],
+    },
+    {
+      category: "AI",
+      items: [
+        { name: "AI Denoise", status: true },
+        { name: "NVIDIA OptiX", status: true },
+        { name: "Intel Open Image", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t228",
@@ -2990,7 +3485,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Marvelous Designer, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['marvelous-designer', 'v-ray', 'browzwear'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Texturing",
+      items: [
+        { name: "PBR layer stack", status: true },
+        { name: "Smart materials", status: true },
+        { name: "Smart masks", status: true },
+      ],
+    },
+    {
+      category: "Procedural",
+      items: [
+        { name: "Procedural generators", status: true },
+        { name: "Bakers", status: true },
+        { name: "AO/normal/curvature", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "USD export", status: true },
+        { name: "glTF export", status: true },
+        { name: "Maya/Blender/3ds Max link", status: true },
+      ],
+    },
+    {
+      category: "Materials",
+      items: [
+        { name: "Material library", status: true },
+        { name: "Non-destructive", status: true },
+        { name: "DCC integration", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t239",
@@ -3056,7 +3584,40 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are RhinoGold, PC SCHEMATIC Automation, JewelCAD Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['rhinogold', 'pc-schematic', 'jewelcad-pro'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Surveying",
+      items: [
+        { name: "Field-to-finish", status: true },
+        { name: "GNSS support", status: true },
+        { name: "Total-station support", status: true },
+      ],
+    },
+    {
+      category: "CAD",
+      items: [
+        { name: "AutoCAD", status: true },
+        { name: "IntelliCAD", status: true },
+        { name: "CAD engine", status: true },
+      ],
+    },
+    {
+      category: "Data Collection",
+      items: [
+        { name: "SurvCE integration", status: true },
+        { name: "Data collector", status: true },
+        { name: "Field data", status: true },
+      ],
+    },
+    {
+      category: "Modules",
+      items: [
+        { name: "Roading modules", status: true },
+        { name: "Earthwork modules", status: true },
+        { name: "Drone/point-cloud", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t240",
@@ -3126,76 +3687,39 @@ export const c7Tools: Tool[] = [
     a: 'The closest alternatives within the Specialized space are Browzwear, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['browzwear', 'marvelous-designer', 'v-ray'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Surveying",
+      items: [
+        { name: "GNSS processing", status: true },
+        { name: "Total-station data", status: true },
+        { name: "Level data reduction", status: true },
+      ],
+    },
+    {
+      category: "Point Cloud",
+      items: [
+        { name: "Point-cloud processing", status: true },
+        { name: "Scanner data", status: true },
+        { name: "UAV photogrammetry", status: true },
+      ],
+    },
+    {
+      category: "Construction",
+      items: [
+        { name: "Stake-out reports", status: true },
+        { name: "Construction layout", status: true },
+        { name: "Field data fusion", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Trimble controllers", status: true },
+        { name: "LandXML export", status: true },
+        { name: "IFC/DWG export", status: true },
+      ],
+    },
+  ],
 },
-{
-  id: "t241",
-  "name": "Leica Cyclone",
-  "slug": "leica-cyclone",
-  logo_url: "",
-  "short_desc": "Leica's flagship terrestrial laser scanning point-cloud processing software.",
-  "description": "Leica Cyclone is Hexagon's flagship reality-capture software — terrestrial laser scan registration, point-cloud processing, modeling, and deliverable production for AEC and as-built workflows.",
-  "country": "Switzerland",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 6000,
-  "platforms": ["Windows"],
-  "industries": ["AEC", "Surveying", "Construction"],
-
-  "core_features": [
-    "Cloud-to-Cloud, Visual, Target registration",
-    "TruView and JetStream web/desktop viewers",
-    "Cyclone 3DR modeling and analysis",
-    "Plant 3D and Revit publishers",
-    "Cyclone Field for in-field scanning",
-    "Photogrammetry fusion (Leica BLK)",
-  ],
-
-  "user_scales": ["Mid-Market", "Enterprise"],
-  "official_url": "https://leica-geosystems.com/products/laser-scanners/software/leica-cyclone",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
-    "Industry default for terrestrial laser scan processing",
-    "Mature publishers to Revit / Plant 3D / Navisworks",
-    "Strong Leica BLK / RTC360 integration",
-  ],
-
-  "cons": [
-    "Windows-only",
-    "Best ROI when paired with Leica scanners",
-    "Subscription pricing is enterprise-tier",
-  ],
-
-  "tech_specs": {
-    "engine": "Cyclone",
-    "multicore": "Yes",
-    "gpu_optimization": "Yes",
-    "standards": ["E57", "LAS", "PTS", "IFC"],
-  },
-
-  "expert_verdict": "The reality-capture office software the as-built world runs on. Pair with BLK / RTC360 for a complete scan-to-BIM workflow.",
-  faqs: [{
-    q: 'What is Leica Cyclone used for?',
-    a: 'Leica\'s flagship terrestrial laser scanning point-cloud processing software. Leica Cyclone is a visualization and rendering solution widely adopted in AEC, Surveying, Construction.',
-  }, {
-    q: 'How much does Leica Cyclone cost?',
-    a: 'Leica Cyclone starts at $6,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Leica Cyclone?',
-    a: 'Leica Cyclone is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Leica Cyclone support?',
-    a: 'Leica Cyclone runs on Windows.',
-  }, {
-    q: 'Which file formats does Leica Cyclone support?',
-    a: 'Leica Cyclone works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Leica Cyclone?',
-    a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['infraworks', '3ds-max', 'zbrush'],
-  detailed_features: [],
-}
 ];

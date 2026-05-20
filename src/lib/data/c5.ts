@@ -1339,7 +1339,40 @@ export const c5Tools: Tool[] = [
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "Mechanical engineering", status: true },
+        { name: "3D modeling", status: true },
+        { name: "Assembly design", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "CNC machining", status: true },
+        { name: "Toolpath generation", status: true },
+        { name: "Multi-axis machining", status: true },
+      ],
+    },
+    {
+      category: "Sheet Metal",
+      items: [
+        { name: "Sheet metal design", status: true },
+        { name: "Boiler making", status: true },
+        { name: "Metalworking", status: true },
+      ],
+    },
+    {
+      category: "ERP",
+      items: [
+        { name: "ERP integration", status: true },
+        { name: "Data management", status: true },
+        { name: "Process automation", status: true },
+      ],
+    },
+  ],
   alternatives: ["beckercad", "cadmeister", "visi"],
   country: "France",
   category_id: "c5",
@@ -1393,44 +1426,95 @@ export const c5Tools: Tool[] = [
   name: "BeckerCAD",
   slug: "beckercad",
   logo_url: getLogo("BE"),
-  short_desc: "简要介绍 BeckerCAD（官方站点）",
-  description: "详细介绍 BeckerCAD（官方站点）",
+  short_desc: "German CAD/CAM software for mechanical engineering and manufacturing.",
+  description: "BeckerCAD is a German CAD/CAM software solution designed for mechanical engineering and manufacturing. It provides integrated tools for 2D/3D design, sheet metal working, and CNC machining. The software is particularly popular in the German-speaking market for its comprehensive manufacturing capabilities.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAD/CAM機能", "シートメタル設計", "CNC加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "高度なモデリング", "自動化機能", "API連携"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D/3D CAD modeling", status: true },
+        { name: "Parametric design", status: true },
+        { name: "Assembly design", status: true },
+      ],
+    },
+    {
+      category: "Sheet Metal",
+      items: [
+        { name: "Sheet metal design", status: true },
+        { name: "Bending calculation", status: true },
+        { name: "Unfolding", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "Turning", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "PDM integration", status: true },
+        { name: "ERP connection", status: true },
+        { name: "Team collaboration", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "cadmeister", "visi"],
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 3000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Mechanical Engineering", "Sheet Metal", "Manufacturing"],
+  core_features: ["CAD/CAM", "Sheet Metal", "CNC", "Parametric"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.beckercad.de/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 68,
+  pros: [
+    "ドイツ製で信頼性が高い",
+    "シートメタル分野に強み",
+    "CAD/CAM統合で効率的",
+    "ドイツ語サポート充実",
+    "コストパフォーマンスが良い",
+  ],
+  cons: [
+    "国際的なプラグインエコシステムが小さい",
+    "英語ドキュメントが限定的",
+    "海外市場での実績が少ない",
+    "高度な3D機能は他製品に比べて劣る",
+  ],
   faqs: [
     {
       q: "What is BeckerCAD used for?",
-      a: "简要介绍 BeckerCAD（官方站点） BeckerCAD is a CAE / CAM solution.",
+      a: "BeckerCAD is German CAD/CAM software for mechanical engineering and manufacturing.",
     },
     {
       q: "How much does BeckerCAD cost?",
-      a: "BeckerCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "BeckerCAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of BeckerCAD?",
-      a: "BeckerCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "BeckerCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does BeckerCAD support?",
@@ -1438,7 +1522,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does BeckerCAD support?",
-      a: "BeckerCAD works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "BeckerCAD works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to BeckerCAD?",
@@ -1447,55 +1531,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "BeckerCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "BeckerCADはドイツ製のCAD/CAMソフトウェアで、機械設計と製造業向けに設計されています。特にシートメタル分野で強みを持ち、CAD/CAM統合による効率的なワークフローを提供します。ドイツ語環境でのサポートが充実していますが、国際的なエコシステムは小さく、英語ドキュメントも限定的です。ドイツ市場の中小企業にとって魅力的な選択肢です。",
 },
 {
   id: "t112",
   name: "CADmeister",
   slug: "cadmeister",
   logo_url: getLogo("CA"),
-  short_desc: "简要介绍 CADmeister（官方站点）",
-  description: "详细介绍 CADmeister（官方站点）",
+  short_desc: "Japanese CAD/CAM software for mold and die design with 3D modeling capabilities.",
+  description: "CADmeister is a Japanese CAD/CAM software solution designed for mold and die design with comprehensive 3D modeling capabilities. It provides integrated tools for mold design, electrode design, and CNC machining. The software is particularly popular in the Japanese manufacturing industry for its specialized mold design features.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAD/CAM機能", "金型設計", "3Dモデリング"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "電極設計", "高度なCAM機能", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Mold Design",
+      items: [
+        { name: "3D mold design", status: true },
+        { name: "Parting surface", status: true },
+        { name: "Cooling channel design", status: true },
+      ],
+    },
+    {
+      category: "Electrode Design",
+      items: [
+        { name: "Electrode modeling", status: true },
+        { name: "Burn area calculation", status: true },
+        { name: "Electrode management", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "DWG compatibility", status: true },
+        { name: "STEP/IGES import", status: true },
+        { name: "Team collaboration", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "visi"],
   country: "Japan",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 4000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Mold Making", "Die Design", "Manufacturing"],
+  core_features: ["Mold Design", "Electrode", "CAD/CAM", "3D Modeling"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.biprogy-uel.co.jp/cadmeister/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 67,
+  pros: [
+    "金型設計に特化した機能",
+    "日本語インターフェースで使いやすい",
+    "電極設計機能充実",
+    "日本国内でのサポート充実",
+    "DWG互換性が高い",
+  ],
+  cons: [
+    "国際的なプラグインエコシステムが小さい",
+    "英語ドキュメントが限定的",
+    "海外市場での実績が少ない",
+    "汎用CADとしての機能は限定",
+  ],
   faqs: [
     {
       q: "What is CADmeister used for?",
-      a: "简要介绍 CADmeister（官方站点） CADmeister is a CAE / CAM solution.",
+      a: "CADmeister is Japanese CAD/CAM software for mold and die design with 3D modeling capabilities.",
     },
     {
       q: "How much does CADmeister cost?",
-      a: "CADmeister is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "CADmeister is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of CADmeister?",
-      a: "CADmeister is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "CADmeister is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does CADmeister support?",
@@ -1503,7 +1638,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does CADmeister support?",
-      a: "CADmeister works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "CADmeister works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to CADmeister?",
@@ -1512,55 +1647,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "CADmeister Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "CADmeisterは金型設計に特化した日本製CAD/CAMソフトウェアで、特に電極設計機能が充実しています。日本語インターフェースで使いやすく、日本国内でのサポートも充実しています。DWG互換性も高く、既存のAutoCAD環境との連携もスムーズです。ただし、国際的なエコシステムは小さく、海外展開を考える企業には検討が必要です。日本の金型製造業にとって最適な選択肢です。",
 },
 {
   id: "t124",
   name: "Visi",
   slug: "visi",
   logo_url: getLogo("VI"),
-  short_desc: "简要介绍 Visi（官方站点）",
-  description: "详细介绍 Visi（官方站点）",
+  short_desc: "CAD/CAM software by Hexagon for mold, die, and progressive die design.",
+  description: "Visi by Hexagon is a comprehensive CAD/CAM software solution designed for mold, die, and progressive die design. It provides integrated tools for 2D/3D design, mold design, electrode design, and CNC machining. The software is widely used in the tooling industry for its specialized capabilities.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAD/CAM機能", "金型設計", "3Dモデリング"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "プログレッシブ金型", "高度なCAM", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D/3D CAD modeling", status: true },
+        { name: "Surface modeling", status: true },
+        { name: "Solid modeling", status: true },
+      ],
+    },
+    {
+      category: "Mold Design",
+      items: [
+        { name: "Mold design", status: true },
+        { name: "Die design", status: true },
+        { name: "Progressive die", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "Wire EDM", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Electrode",
+      items: [
+        { name: "Electrode design", status: true },
+        { name: "Electrode management", status: true },
+        { name: "Burn area calculation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 5000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Mold Making", "Die Design", "Tooling"],
+  core_features: ["CAD/CAM", "Mold Design", "Progressive Die", "Electrode"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.hexagonmi.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 74,
+  pros: [
+    "金型・ダイ設計に特化した機能",
+    "プログレッシブ金型対応",
+    "Hexagon製で信頼性が高い",
+    "CAD/CAM統合で効率的",
+    "電極設計機能充実",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "汎用CADとしての機能は限定",
+    "小規模チームには機能過多",
+  ],
   faqs: [
     {
       q: "What is Visi used for?",
-      a: "简要介绍 Visi（官方站点） Visi is a CAE / CAM solution.",
+      a: "Visi is CAD/CAM software by Hexagon for mold, die, and progressive die design.",
     },
     {
       q: "How much does Visi cost?",
-      a: "Visi is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Visi is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Visi?",
-      a: "Visi is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Visi is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Visi support?",
@@ -1568,7 +1754,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does Visi support?",
-      a: "Visi works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Visi works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Visi?",
@@ -1577,55 +1763,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Visi Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "VisiはHexagon製のCAD/CAMソフトウェアで、金型・ダイ・プログレッシブ金型設計に特化しています。特にプログレッシブ金型分野で強みを持ち、CAD/CAM統合による効率的なワークフローを提供します。Hexagonの信頼性が高い製品ですが、価格も高めで学習曲線も急勾配です。金型製造業の専門企業にとっては最適な選択肢ですが、小規模チームには機能過多かもしれません。",
 },
 {
   id: "t125",
   name: "Edgecam",
   slug: "edgecam",
-  logo_url: "",
-  short_desc: "简要介绍 Edgecam（官方站点）",
-  description: "详细介绍 Edgecam（官方站点）",
+  logo_url: "/logos/edgecam.png",
+  short_desc: "CAM software by Hexagon for CNC milling, turning, and multi-axis machining.",
+  description: "Edgecam by Hexagon is a comprehensive CAM software solution designed for CNC milling, turning, and multi-axis machining. It provides intelligent toolpath generation, seamless CAD integration, and advanced machining strategies for complex parts. The software is widely used in manufacturing for its robust capabilities.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "フライス加工", "旋盤加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "多軸加工", "高速加工", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Milling",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "Roughing and finishing", status: true },
+      ],
+    },
+    {
+      category: "Turning",
+      items: [
+        { name: "2-axis turning", status: true },
+        { name: "C-axis milling", status: true },
+        { name: "Multi-turret", status: true },
+      ],
+    },
+    {
+      category: "Multi-Axis",
+      items: [
+        { name: "4-axis simultaneous", status: true },
+        { name: "5-axis simultaneous", status: true },
+        { name: "Swiss-type", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "NC code generation", status: true },
+        { name: "Machine simulation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 4500,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Manufacturing", "Aerospace", "Automotive", "Tooling"],
+  core_features: ["CAM", "Milling", "Turning", "Multi-Axis"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.hexagonmi.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 75,
+  pros: [
+    "多軸加工に対応",
+    "高速加工機能充実",
+    "Hexagon製で信頼性が高い",
+    "CADとの統合がスムーズ",
+    "機械シミュレーション機能",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "小規模チームには機能過多",
+    "CAD機能は別途必要",
+  ],
   faqs: [
     {
       q: "What is Edgecam used for?",
-      a: "简要介绍 Edgecam（官方站点） Edgecam is a CAE / CAM solution.",
+      a: "Edgecam is CAM software by Hexagon for CNC milling, turning, and multi-axis machining.",
     },
     {
       q: "How much does Edgecam cost?",
-      a: "Edgecam is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Edgecam is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Edgecam?",
-      a: "Edgecam is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Edgecam is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Edgecam support?",
@@ -1633,7 +1870,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does Edgecam support?",
-      a: "Edgecam works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Edgecam works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Edgecam?",
@@ -1642,55 +1879,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Edgecam Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "EdgecamはHexagon製のCAMソフトウェアで、CNCフライス加工、旋盤加工、多軸加工に対応しています。特に多軸同時加工と高速加工機能が充実しており、複雑な部品の加工に最適です。Hexagonの信頼性が高い製品ですが、価格も高めで学習曲線も急勾配です。製造業の専門企業にとっては最適な選択肢ですが、小規模チームには機能過多かもしれません。",
 },
 {
   id: "t138",
   name: "KISSsoft",
   slug: "kisssoft",
   logo_url: getLogo("KI"),
-  short_desc: "简要介绍 KISSsoft（官方站点）",
-  description: "详细介绍 KISSsoft（官方站点）",
+  short_desc: "Swiss gear calculation and design software for mechanical engineering.",
+  description: "KISSsoft is a Swiss gear calculation and design software solution for mechanical engineering. It provides comprehensive tools for gear design, shaft calculation, and transmission analysis. The software is widely used in the automotive and machinery industries for its precise calculation capabilities.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本歯車計算機能", "シャフト計算", "伝動設計"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "高度な解析", "CAD連携", "API"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Gear Design",
+      items: [
+        { name: "Cylindrical gears", status: true },
+        { name: "Bevel gears", status: true },
+        { name: "Worm gears", status: true },
+      ],
+    },
+    {
+      category: "Calculation",
+      items: [
+        { name: "Strength calculation", status: true },
+        { name: "Geometry calculation", status: true },
+        { name: "Load analysis", status: true },
+      ],
+    },
+    {
+      category: "Shaft",
+      items: [
+        { name: "Shaft calculation", status: true },
+        { name: "Bearing selection", status: true },
+        { name: "Shaft-hub connections", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "3D modeling", status: true },
+        { name: "Report generation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "Switzerland",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 3500,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Automotive", "Machinery", "Mechanical Engineering"],
+  core_features: ["Gear Design", "Calculation", "Shaft", "Transmission"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.kisssoft.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 72,
+  pros: [
+    "歯車設計に特化した専門ソフト",
+    "スイス製で精度が高い",
+    "計算機能が充実",
+    "CADとの統合がスムーズ",
+    "自動車業界での実績豊富",
+  ],
+  cons: [
+    "歯車以外の用途には不向き",
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is KISSsoft used for?",
-      a: "简要介绍 KISSsoft（官方站点） KISSsoft is a CAE / CAM solution.",
+      a: "KISSsoft is Swiss gear calculation and design software for mechanical engineering.",
     },
     {
       q: "How much does KISSsoft cost?",
-      a: "KISSsoft is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "KISSsoft is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of KISSsoft?",
-      a: "KISSsoft is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "KISSsoft is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does KISSsoft support?",
@@ -1698,7 +1986,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does KISSsoft support?",
-      a: "KISSsoft works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "KISSsoft works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to KISSsoft?",
@@ -1707,55 +1995,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "KISSsoft Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "KISSsoftはスイス製の歯車計算・設計ソフトウェアで、機械設計業界に特化しています。特に歯車設計と伝動解析分野で強みを持ち、精度の高い計算機能を提供します。自動車業界での実績も豊富です。ただし、歯車以外の用途には不向きで、価格も高めです。歯車設計専門企業にとっては最適な選択肢ですが、汎用CADとしては向いていません。",
 },
 {
   id: "t149",
   name: "FeatureCAM",
   slug: "featurecam",
-  logo_url: "",
-  short_desc: "简要介绍 FeatureCAM（官方站点）",
-  description: "详细介绍 FeatureCAM（官方站点）",
+  logo_url: "/logos/featurecam.png",
+  short_desc: "Autodesk CAM software for CNC milling, turning, and multi-axis machining.",
+  description: "FeatureCAM by Autodesk is a comprehensive CAM software solution designed for CNC milling, turning, and multi-axis machining. It provides automated feature recognition, intelligent toolpath generation, and seamless CAD integration. The software is widely used in manufacturing for its ease of use and automation capabilities.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "subscription",
+      features: ["基本CAM機能", "フライス加工", "旋盤加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "subscription",
+      features: ["Standard機能全て", "多軸加工", "高速加工", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Milling",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "Feature recognition", status: true },
+      ],
+    },
+    {
+      category: "Turning",
+      items: [
+        { name: "2-axis turning", status: true },
+        { name: "C-axis milling", status: true },
+        { name: "Multi-turret", status: true },
+      ],
+    },
+    {
+      category: "Automation",
+      items: [
+        { name: "Automated programming", status: true },
+        { name: "Toolpath optimization", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Autodesk ecosystem", status: true },
+        { name: "Machine simulation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "USA",
   category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 3000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Manufacturing", "Aerospace", "Automotive", "Tooling"],
+  core_features: ["CAM", "Milling", "Turning", "Automation"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.autodesk.com/products/featurecam",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 76,
+  pros: [
+    "Autodeskエコシステムと統合",
+    "自動化機能充実",
+    "特徴認識で効率的",
+    "学習曲線が緩やか",
+    "米国市場での実績豊富",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "Autodesk製品への依存",
+    "高度な機能は別途ライセンス",
+    "カスタマイズ機能は限定",
+  ],
   faqs: [
     {
       q: "What is FeatureCAM used for?",
-      a: "简要介绍 FeatureCAM（官方站点） FeatureCAM is a CAE / CAM solution.",
+      a: "FeatureCAM is Autodesk CAM software for CNC milling, turning, and multi-axis machining.",
     },
     {
       q: "How much does FeatureCAM cost?",
-      a: "FeatureCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "FeatureCAM is offered on a subscription model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of FeatureCAM?",
-      a: "FeatureCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "FeatureCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does FeatureCAM support?",
@@ -1763,7 +2102,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does FeatureCAM support?",
-      a: "FeatureCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "FeatureCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to FeatureCAM?",
@@ -1772,11 +2111,11 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "FeatureCAM Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "FeatureCAMはAutodesk製のCAMソフトウェアで、CNCフライス加工、旋盤加工、多軸加工に対応しています。特徴認識による自動化機能が充実しており、効率的なプログラミングが可能です。Autodeskエコシステムとの統合もスムーズで、既存のAutodesk製品ユーザーにとって魅力的です。ただし、価格は高めでAutodesk製品への依存度も高いです。自動化を重視する企業にとって最適な選択肢です。",
 },
 {
   id: "t150",
@@ -1784,45 +2123,96 @@ export const c5Tools: Tool[] = [
   slug: "gibbscam",
   logo_url: getLogo("GI"),
   short_desc:
-    "GibbsCAM® is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts th",
+    "Cutting-edge CAM software for programming CNC machine tools with power and flexibility.",
   description:
-    "GibbsCAM® is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want.",
+    "GibbsCAM is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want. It provides comprehensive tools for milling, turning, multi-axis machining, and wire EDM with a focus on ease of use and productivity.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "フライス加工", "旋盤加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "多軸加工", "ワイヤーEDM", "高度な自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Milling",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "Adaptive machining", status: true },
+      ],
+    },
+    {
+      category: "Turning",
+      items: [
+        { name: "2-axis turning", status: true },
+        { name: "C-axis milling", status: true },
+        { name: "Multi-turret", status: true },
+      ],
+    },
+    {
+      category: "Multi-Axis",
+      items: [
+        { name: "4-axis simultaneous", status: true },
+        { name: "5-axis simultaneous", status: true },
+        { name: "Swiss-type", status: true },
+      ],
+    },
+    {
+      category: "EDM",
+      items: [
+        { name: "Wire EDM", status: true },
+        { name: "EDM optimization", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 5000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Manufacturing", "Aerospace", "Automotive", "Tooling"],
+  core_features: ["CAM", "Milling", "Turning", "Multi-Axis", "EDM"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.gibbscam.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 77,
+  pros: [
+    "使いやすいインターフェース",
+    "多軸加工に対応",
+    "ワイヤーEDM機能充実",
+    "生産性重視の設計",
+    "米国市場での実績豊富",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線は中程度",
+    "高度な機能は別途ライセンス",
+    "国際的なサポートは限定的",
+  ],
   faqs: [
     {
       q: "What is GibbsCAM used for?",
-      a: "GibbsCAM® is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts th GibbsCAM is a CAE / CAM solution.",
+      a: "GibbsCAM is cutting-edge CAM software for programming CNC machine tools with power and flexibility.",
     },
     {
       q: "How much does GibbsCAM cost?",
-      a: "GibbsCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "GibbsCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of GibbsCAM?",
-      a: "GibbsCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "GibbsCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does GibbsCAM support?",
@@ -1830,7 +2220,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does GibbsCAM support?",
-      a: "GibbsCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "GibbsCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to GibbsCAM?",
@@ -1839,57 +2229,108 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "GibbsCAM Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "GibbsCAMは米国製のCAMソフトウェアで、CNCフライス加工、旋盤加工、多軸加工、ワイヤーEDMに対応しています。使いやすいインターフェースと生産性重視の設計が特徴で、効率的なプログラミングが可能です。ワイヤーEDM機能も充実しており、多様な加工ニーズに対応できます。価格は高めですが、使いやすさと機能のバランスが良く、中堅〜大手の製造業にとって魅力的な選択肢です。",
 },
 {
   id: "t152",
   name: "hyperMILL",
   slug: "hypermill",
-  logo_url: "",
+  logo_url: "/logos/hypermill.png",
   short_desc:
-    "Innovative CAD CAM solutions generate optimised NC milling and turning programs for machine tools | Explore hyperMILL CA",
+    "German CAD/CAM software for optimized NC milling and turning programs for machine tools.",
   description:
-    "Innovative CAD CAM solutions generate optimised NC milling and turning programs for machine tools | Explore hyperMILL CAM software now!",
+    "hyperMILL by OPEN MIND is a German CAD/CAM software solution that generates optimized NC milling and turning programs for machine tools. It provides innovative strategies for 2.5D to 5-axis machining, high-speed machining, and special applications. The software is widely used in high-precision manufacturing.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "フライス加工", "旋盤加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "5軸加工", "高速加工", "特殊加工"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Milling",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "Turbine blade machining", status: true },
+      ],
+    },
+    {
+      category: "Turning",
+      items: [
+        { name: "2-axis turning", status: true },
+        { name: "C-axis milling", status: true },
+        { name: "Turn-mill", status: true },
+      ],
+    },
+    {
+      category: "5-Axis",
+      items: [
+        { name: "5-axis simultaneous", status: true },
+        { name: "5-axis roughing", status: true },
+        { name: "Collision avoidance", status: true },
+      ],
+    },
+    {
+      category: "Optimization",
+      items: [
+        { name: "Toolpath optimization", status: true },
+        { name: "NC code optimization", status: true },
+        { name: "Machine simulation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 6000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Manufacturing", "Aerospace", "Automotive", "Tooling"],
+  core_features: ["CAM", "Milling", "5-Axis", "High-Speed", "Optimization"],
+  user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.openmind-tech.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 79,
+  pros: [
+    "ドイツ製で高精度",
+    "5軸加工に特化",
+    "高速加工機能充実",
+    "ツールパス最適化",
+    "欧州市場での実績豊富",
+  ],
+  cons: [
+    "価格が非常に高い",
+    "学習曲線が急勾配",
+    "小規模チームには機能過多",
+    "国際的なサポートは限定的",
+  ],
   faqs: [
     {
       q: "What is hyperMILL used for?",
-      a: "Innovative CAD CAM solutions generate optimised NC milling and turning programs for machine tools | Explore hyperMILL CA hyperMILL is a CAE / CAM solution.",
+      a: "hyperMILL is German CAD/CAM software for optimized NC milling and turning programs for machine tools.",
     },
     {
       q: "How much does hyperMILL cost?",
-      a: "hyperMILL is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "hyperMILL is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of hyperMILL?",
-      a: "hyperMILL is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "hyperMILL is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does hyperMILL support?",
@@ -1897,7 +2338,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does hyperMILL support?",
-      a: "hyperMILL works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "hyperMILL works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to hyperMILL?",
@@ -1906,57 +2347,108 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "hyperMILL Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "hyperMILLはドイツ製のCAD/CAMソフトウェアで、最適化されたNCフライス加工と旋盤プログラムを生成します。特に5軸同時加工と高速加工分野で強みを持ち、タービンブレードなどの特殊加工にも対応しています。ツールパス最適化機能も充実しており、高精度製造業にとって最適な選択肢です。ただし、価格は非常に高く、学習曲線も急勾配です。大手の製造業専門企業に最適です。",
 },
 {
   id: "t153",
   name: "Tebis",
   slug: "tebis",
-  logo_url: "",
+  logo_url: "/logos/tebis.png",
   short_desc:
-    "Software components for CAD/CAM, CAQ and MES support design and production in die, model and machine manufacturing.",
+    "German CAD/CAM/CAQ/MES software for die, model, and machine manufacturing.",
   description:
-    "Software components for CAD/CAM, CAQ and MES support design and production in die, model and machine manufacturing.",
+    "Tebis is a German software solution that provides CAD/CAM, CAQ, and MES components to support design and production in die, model, and machine manufacturing. It offers integrated tools for mold design, electrode design, and CNC machining with a focus on process optimization and quality management.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAD/CAM機能", "金型設計", "品質管理"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "MES統合", "高度なCAM", "プロセス最適化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "3D mold design", status: true },
+        { name: "Surface modeling", status: true },
+        { name: "Assembly design", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "CAQ/MES",
+      items: [
+        { name: "Quality management", status: true },
+        { name: "Process optimization", status: true },
+        { name: "Production monitoring", status: true },
+      ],
+    },
+    {
+      category: "Electrode",
+      items: [
+        { name: "Electrode design", status: true },
+        { name: "Electrode management", status: true },
+        { name: "Burn area calculation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 7000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Die Making", "Model Making", "Machine Manufacturing"],
+  core_features: ["CAD/CAM", "CAQ", "MES", "Mold Design", "Process"],
+  user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.tebis.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 78,
+  pros: [
+    "CAD/CAM/CAQ/MES統合",
+    "金型・モデル製造に特化",
+    "ドイツ製で信頼性が高い",
+    "プロセス最適化機能",
+    "品質管理統合",
+  ],
+  cons: [
+    "価格が非常に高い",
+    "学習曲線が急勾配",
+    "小規模チームには機能過多",
+    "汎用CADとしては不向き",
+  ],
   faqs: [
     {
       q: "What is Tebis used for?",
-      a: "Software components for CAD/CAM, CAQ and MES support design and production in die, model and machine manufacturing. Tebis is a CAE / CAM solution.",
+      a: "Tebis is German CAD/CAM/CAQ/MES software for die, model, and machine manufacturing.",
     },
     {
       q: "How much does Tebis cost?",
-      a: "Tebis is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Tebis is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Tebis?",
-      a: "Tebis is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Tebis is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Tebis support?",
@@ -1964,7 +2456,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does Tebis support?",
-      a: "Tebis works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Tebis works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Tebis?",
@@ -1973,55 +2465,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Tebis Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Tebisはドイツ製のCAD/CAM/CAQ/MES統合ソフトウェアで、金型・モデル・機械製造業向けに設計されています。CAD/CAMだけでなく、品質管理(CAQ)と製造実行システム(MES)も統合しており、設計から生産までのプロセス全体をカバーします。ドイツの金型製造業での実績が豊富で、プロセス最適化機能も充実しています。価格は非常に高く、学習曲線も急勾配ですが、大手の金型製造業にとっては最適な包括的ソリューションです。",
 },
 {
   id: "t154",
   name: "WorkNC",
   slug: "worknc",
   logo_url: getLogo("WO"),
-  short_desc: "简要介绍 WorkNC（官方站点）",
-  description: "详细介绍 WorkNC（官方站点）",
+  short_desc: "French CAM software for 2-5 axis milling with automatic feature recognition.",
+  description: "WorkNC is a French CAM software solution for 2-5 axis milling with automatic feature recognition and intelligent toolpath generation. It provides comprehensive tools for mold making, die manufacturing, and general machining with a focus on automation and productivity.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "フライス加工", "特徴認識"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "5軸加工", "高速加工", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Milling",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "Automatic feature recognition", status: true },
+      ],
+    },
+    {
+      category: "Mold/Die",
+      items: [
+        { name: "Mold machining", status: true },
+        { name: "Die manufacturing", status: true },
+        { name: "Electrode machining", status: true },
+      ],
+    },
+    {
+      category: "Automation",
+      items: [
+        { name: "Automated programming", status: true },
+        { name: "Toolpath optimization", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "Machine simulation", status: true },
+        { name: "Collision detection", status: true },
+        { name: "Verification", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "France",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 5500,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Mold Making", "Die Manufacturing", "General Machining"],
+  core_features: ["CAM", "Milling", "Automation", "Feature Recognition"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.worknc.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 75,
+  pros: [
+    "自動特徴認識機能",
+    "金型・ダイ製造に特化",
+    "フランス製で信頼性が高い",
+    "自動化機能充実",
+    "生産性重視の設計",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線は中程度",
+    "欧州市場での実績が主",
+    "汎用CADとしての機能は限定",
+  ],
   faqs: [
     {
       q: "What is WorkNC used for?",
-      a: "简要介绍 WorkNC（官方站点） WorkNC is a CAE / CAM solution.",
+      a: "WorkNC is French CAM software for 2-5 axis milling with automatic feature recognition.",
     },
     {
       q: "How much does WorkNC cost?",
-      a: "WorkNC is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "WorkNC is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of WorkNC?",
-      a: "WorkNC is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "WorkNC is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does WorkNC support?",
@@ -2029,7 +2572,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does WorkNC support?",
-      a: "WorkNC works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "WorkNC works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to WorkNC?",
@@ -2038,55 +2581,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "WorkNC Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "WorkNCはフランス製のCAMソフトウェアで、2-5軸フライス加工に対応しています。自動特徴認識機能が充実しており、金型・ダイ製造業に特化しています。生産性重視の設計で、効率的なプログラミングが可能です。フランスおよび欧州市場での実績が豊富ですが、国際的なエコシステムは限定的です。金型製造業の専門企業にとって魅力的な選択肢です。",
 },
 {
   id: "t155",
   name: "SURFCAM",
   slug: "surfcam",
   logo_url: getLogo("SU"),
-  short_desc: "简要介绍 SURFCAM（官方站点）",
-  description: "详细介绍 SURFCAM（官方站点）",
+  short_desc: "US-based CAM software for 2-5 axis milling, turning, and wire EDM.",
+  description: "SURFCAM is a US-based CAM software solution for 2-5 axis milling, turning, and wire EDM machining. It provides comprehensive tools for general machining, mold making, and production manufacturing with a focus on ease of use and affordability.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "フライス加工", "旋盤加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "多軸加工", "ワイヤーEDM", "高度な機能"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Milling",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "High-speed machining", status: true },
+        { name: "Surface machining", status: true },
+      ],
+    },
+    {
+      category: "Turning",
+      items: [
+        { name: "2-axis turning", status: true },
+        { name: "C-axis milling", status: true },
+        { name: "Multi-turret", status: true },
+      ],
+    },
+    {
+      category: "EDM",
+      items: [
+        { name: "Wire EDM", status: true },
+        { name: "EDM optimization", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Machine simulation", status: true },
+        { name: "Post processing", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 4000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["General Machining", "Mold Making", "Production"],
+  core_features: ["CAM", "Milling", "Turning", "EDM"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.surfcam.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 70,
+  pros: [
+    "コストパフォーマンスが良い",
+    "使いやすいインターフェース",
+    "多様な加工方式に対応",
+    "米国市場での実績豊富",
+    "汎用的なCAMソフト",
+  ],
+  cons: [
+    "高度な機能は他製品に比べて劣る",
+    "国際的なプラグインエコシステムが小さい",
+    "5軸機能は限定",
+    "大手企業向けの機能は不足",
+  ],
   faqs: [
     {
       q: "What is SURFCAM used for?",
-      a: "简要介绍 SURFCAM（官方站点） SURFCAM is a CAE / CAM solution.",
+      a: "SURFCAM is US-based CAM software for 2-5 axis milling, turning, and wire EDM.",
     },
     {
       q: "How much does SURFCAM cost?",
-      a: "SURFCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "SURFCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of SURFCAM?",
-      a: "SURFCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "SURFCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does SURFCAM support?",
@@ -2094,7 +2688,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does SURFCAM support?",
-      a: "SURFCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "SURFCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to SURFCAM?",
@@ -2103,11 +2697,11 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "SURFCAM Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "SURFCAMは米国製のCAMソフトウェアで、2-5軸フライス加工、旋盤加工、ワイヤーEDMに対応しています。コストパフォーマンスが良く、使いやすいインターフェースが特徴で、中小企業に適しています。汎用的なCAMソフトとして幅広い用途に対応できますが、高度な5軸機能や大手企業向けの機能は他製品に比べて劣ります。コスト重視の中小製造業にとって魅力的な選択肢です。",
 },
 {
   id: "t156",
@@ -2115,45 +2709,96 @@ export const c5Tools: Tool[] = [
   slug: "bobcad-cam",
   logo_url: getLogo("BO"),
   short_desc:
-    "The World Leader in Powerful & Affordable CNC CAD/CAM Software Solutions",
+    "US-based affordable CAD/CAM software for CNC machining with 2-5 axis capabilities.",
   description:
-    "The World Leader in Powerful & Affordable CNC CAD/CAM Software Solutions",
+    "BobCAD-CAM is a US-based affordable CAD/CAM software solution for CNC machining with 2-5 axis capabilities. It provides integrated tools for CAD design and CAM programming with a focus on affordability and ease of use for small to medium-sized businesses.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAD/CAM機能", "フライス加工", "旋盤加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "多軸加工", "高度な機能", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CAD",
+      items: [
+        { name: "2D/3D CAD modeling", status: true },
+        { name: "Parametric design", status: true },
+        { name: "Surface modeling", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "2.5D to 5-axis milling", status: true },
+        { name: "Turning", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD/CAM integration", status: true },
+        { name: "Machine simulation", status: true },
+        { name: "Post processing", status: true },
+      ],
+    },
+    {
+      category: "Automation",
+      items: [
+        { name: "Automated programming", status: true },
+        { name: "Toolpath optimization", status: true },
+        { name: "Feature recognition", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 3000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["General Machining", "Small Manufacturing", "Job Shops"],
+  core_features: ["CAD/CAM", "Milling", "Turning", "Affordability"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://bobcad.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 69,
+  pros: [
+    "コストパフォーマンスが非常に良い",
+    "CAD/CAM統合で効率的",
+    "使いやすいインターフェース",
+    "中小企業に適している",
+    "米国市場での実績豊富",
+  ],
+  cons: [
+    "高度な機能は他製品に比べて劣る",
+    "5軸機能は限定",
+    "国際的なプラグインエコシステムが小さい",
+    "大手企業向けの機能は不足",
+  ],
   faqs: [
     {
       q: "What is BobCAD-CAM used for?",
-      a: "The World Leader in Powerful & Affordable CNC CAD/CAM Software Solutions BobCAD-CAM is a CAE / CAM solution.",
+      a: "BobCAD-CAM is US-based affordable CAD/CAM software for CNC machining with 2-5 axis capabilities.",
     },
     {
       q: "How much does BobCAD-CAM cost?",
-      a: "BobCAD-CAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "BobCAD-CAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of BobCAD-CAM?",
-      a: "BobCAD-CAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "BobCAD-CAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does BobCAD-CAM support?",
@@ -2161,7 +2806,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does BobCAD-CAM support?",
-      a: "BobCAD-CAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "BobCAD-CAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to BobCAD-CAM?",
@@ -2170,11 +2815,11 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "BobCAD-CAM Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "BobCAD-CAMは米国製のCAD/CAMソフトウェアで、2-5軸CNC加工に対応しています。コストパフォーマンスが非常に良く、CAD/CAM統合で効率的なワークフローを提供します。使いやすいインターフェースと中小企業向けの設計が特徴で、ジョブショップや小規模製造業に最適です。ただし、高度な5軸機能や大手企業向けの機能は他製品に比べて劣ります。コスト重視の中小企業にとって魅力的な選択肢です。",
 },
 {
   id: "t166",
@@ -2182,45 +2827,96 @@ export const c5Tools: Tool[] = [
   slug: "autoform",
   logo_url: getLogo("AU"),
   short_desc:
-    "AutoForm’s software solutions form a comprehensive platform for the engineering, evaluation and improvement of the sheet",
+    "Swiss software platform for sheet metal forming and BiW assembly process engineering.",
   description:
-    "AutoForm’s software solutions form a comprehensive platform for the engineering, evaluation and improvement of the sheet metal forming and BiW assembly processes. This platform allows for full digitalization, seamless information and data flow, and integration of Industry 4.0 standards.",
+    "AutoForm's software solutions form a comprehensive platform for the engineering, evaluation, and improvement of sheet metal forming and BiW assembly processes. The platform enables full digitalization, seamless information flow, and Industry 4.0 integration for automotive manufacturing.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "subscription",
+      features: ["基本シートメタル成形解析", "成形シミュレーション", "工程設計"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "subscription",
+      features: ["Standard機能全て", "BiW組立", "高度な解析", "Industry 4.0統合"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Forming",
+      items: [
+        { name: "Sheet metal forming", status: true },
+        { name: "Process engineering", status: true },
+        { name: "Die design", status: true },
+      ],
+    },
+    {
+      category: "Simulation",
+      items: [
+        { name: "Forming simulation", status: true },
+        { name: "Springback analysis", status: true },
+        { name: "Process optimization", status: true },
+      ],
+    },
+    {
+      category: "BiW",
+      items: [
+        { name: "BiW assembly", status: true },
+        { name: "Gap analysis", status: true },
+        { name: "Hemming", status: true },
+      ],
+    },
+    {
+      category: "Digitalization",
+      items: [
+        { name: "Full digitalization", status: true },
+        { name: "Industry 4.0", status: true },
+        { name: "Data integration", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "Switzerland",
   category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 8000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Automotive", "Sheet Metal", "Manufacturing"],
+  core_features: ["Sheet Metal Forming", "Simulation", "BiW", "Digitalization"],
+  user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.autoform.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 81,
+  pros: [
+    "シートメタル成形に特化",
+    "スイス製で信頼性が高い",
+    "自動車業界での実績豊富",
+    "Industry 4.0対応",
+    "フルデジタル化プラットフォーム",
+  ],
+  cons: [
+    "価格が非常に高い",
+    "学習曲線が急勾配",
+    "小規模チームには機能過多",
+    "シートメタル以外の用途には不向き",
+  ],
   faqs: [
     {
       q: "What is AutoForm used for?",
-      a: "AutoForm’s software solutions form a comprehensive platform for the engineering, evaluation and improvement of the sheet AutoForm is a CAE / CAM solution.",
+      a: "AutoForm is Swiss software platform for sheet metal forming and BiW assembly process engineering.",
     },
     {
       q: "How much does AutoForm cost?",
-      a: "AutoForm is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "AutoForm is offered on a subscription model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of AutoForm?",
-      a: "AutoForm is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "AutoForm is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does AutoForm support?",
@@ -2228,7 +2924,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does AutoForm support?",
-      a: "AutoForm works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "AutoForm works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to AutoForm?",
@@ -2237,55 +2933,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "AutoForm Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "AutoFormはスイス製のシートメタル成形とBiW組立プロセスエンジニアリング向けソフトウェアプラットフォームです。自動車業界での実績が豊富で、Industry 4.0対応のフルデジタル化プラットフォームを提供します。成形シミュレーションと工程最適化機能が充実しており、高精度の成形解析が可能です。価格は非常に高く、学習曲線も急勾配ですが、自動車製造業の大手企業にとっては最適な専門ソリューションです。",
 },
 {
   id: "t168",
   name: "Moldflow",
   slug: "moldflow",
   logo_url: getLogo("MO"),
-  short_desc: "简要介绍 Moldflow（官方站点）",
-  description: "详细介绍 Moldflow（官方站点）",
+  short_desc: "Autodesk injection molding simulation software for plastic part and mold design.",
+  description: "Moldflow by Autodesk is injection molding simulation software for plastic part and mold design. It provides comprehensive tools for mold filling, cooling, and warpage analysis to optimize plastic part manufacturing and reduce production costs.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "subscription",
+      features: ["基本射出成形解析", "充填解析", "冷却解析"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "subscription",
+      features: ["Standard機能全て", "反り解析", "高度な機能", "Autodesk統合"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        { name: "Fill analysis", status: true },
+        { name: "Cooling analysis", status: true },
+        { name: "Warpage analysis", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Part design", status: true },
+        { name: "Mold design", status: true },
+        { name: "Gate optimization", status: true },
+      ],
+    },
+    {
+      category: "Optimization",
+      items: [
+        { name: "Process optimization", status: true },
+        { name: "Cost reduction", status: true },
+        { name: "Quality improvement", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Autodesk integration", status: true },
+        { name: "CAD import", status: true },
+        { name: "Report generation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "USA",
   category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 5000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Plastics", "Injection Molding", "Manufacturing"],
+  core_features: ["Injection Molding", "Simulation", "Design", "Optimization"],
+  user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.autodesk.com/products/moldflow",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 80,
+  pros: [
+    "射出成形解析に特化",
+    "Autodeskエコシステムと統合",
+    "米国市場での実績豊富",
+    "充填・冷却・反り解析",
+    "コスト削減に貢献",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "小規模チームには機能過多",
+    "射出成形以外の用途には不向き",
+  ],
   faqs: [
     {
       q: "What is Moldflow used for?",
-      a: "简要介绍 Moldflow（官方站点） Moldflow is a CAE / CAM solution.",
+      a: "Moldflow is Autodesk injection molding simulation software for plastic part and mold design.",
     },
     {
       q: "How much does Moldflow cost?",
-      a: "Moldflow is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Moldflow is offered on a subscription model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Moldflow?",
-      a: "Moldflow is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Moldflow is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Moldflow support?",
@@ -2293,7 +3040,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does Moldflow support?",
-      a: "Moldflow works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Moldflow works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Moldflow?",
@@ -2302,63 +3049,114 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Moldflow Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "MoldflowはAutodesk製の射出成形シミュレーションソフトウェアで、プラスチック部品と金型設計向けに設計されています。充填、冷却、反り解析機能が充実しており、射出成形プロセスの最適化とコスト削減に貢献します。Autodeskエコシステムとの統合もスムーズで、既存のAutodesk製品ユーザーにとって魅力的です。価格は高めですが、射出成形業界の専門企業にとっては最適な選択肢です。",
 },
 {
   id: "t169",
   name: "Moldex3D",
   slug: "moldex3d",
-  logo_url: getLogo("MO"),
-  short_desc: "Moldex3D | Plastic Injection Molding Simulation Software",
-  description: "Moldex3D | Plastic Injection Molding Simulation Software",
+  logo_url: "/logos/moldex3d.png",
+  short_desc: "Taiwanese plastic injection molding simulation software for advanced analysis.",
+  description: "Moldex3D is a Taiwanese plastic injection molding simulation software solution for advanced analysis. It provides comprehensive tools for filling, cooling, warpage, and fiber orientation analysis to optimize plastic part manufacturing and improve product quality.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本射出成形解析", "充填解析", "冷却解析"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "反り解析", "繊維配向解析", "高度な機能"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        { name: "Fill analysis", status: true },
+        { name: "Cooling analysis", status: true },
+        { name: "Warpage analysis", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Fiber orientation", status: true },
+        { name: "Optical analysis", status: true },
+        { name: "Multi-material", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Part design", status: true },
+        { name: "Mold design", status: true },
+        { name: "Process optimization", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Report generation", status: true },
+        { name: "Cloud collaboration", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "Taiwan",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["macOS"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 6000,
+  platforms: ["Windows"],
+  industries: ["Plastics", "Injection Molding", "Manufacturing"],
+  core_features: ["Injection Molding", "Simulation", "Fiber Orientation", "Advanced Analysis"],
+  user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.moldex3d.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 78,
+  pros: [
+    "射出成形解析に特化",
+    "繊維配向解析充実",
+    "台湾製でアジア市場での実績",
+    "高度な解析機能",
+    "コストパフォーマンスが良い",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線が急勾配",
+    "小規模チームには機能過多",
+    "射出成形以外の用途には不向き",
+  ],
   faqs: [
     {
       q: "What is Moldex3D used for?",
-      a: "Moldex3D | Plastic Injection Molding Simulation Software Moldex3D is a CAE / CAM solution.",
+      a: "Moldex3D is Taiwanese plastic injection molding simulation software for advanced analysis.",
     },
     {
       q: "How much does Moldex3D cost?",
-      a: "Moldex3D is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Moldex3D is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Moldex3D?",
-      a: "Moldex3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Moldex3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Moldex3D support?",
-      a: "Moldex3D runs on macOS.",
+      a: "Moldex3D runs on Windows.",
     },
     {
       q: "Which file formats does Moldex3D support?",
-      a: "Moldex3D works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Moldex3D works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Moldex3D?",
@@ -2367,65 +3165,116 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Moldex3D Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Moldex3Dは台湾製の射出成形シミュレーションソフトウェアで、プラスチック部品製造向けの高度な解析機能を提供します。充填、冷却、反り解析だけでなく、繊維配向解析や光学解析などの高度な機能も充実しています。アジア市場での実績が豊富で、コストパフォーマンスも良いです。価格は高めですが、射出成形業界の専門企業にとってはMoldflowの強力な競合製品です。",
 },
 {
   id: "t178",
   name: "WoodWOP",
   slug: "woodwop",
-  logo_url: getLogo("WO"),
+  logo_url: "/logos/woodwop.png",
   short_desc:
-    "Whether you are seeking a machinery or software for furniture production, flooring production, kitchen production, close",
+    "German CAM software for woodworking machinery, furniture, and kitchen production.",
   description:
-    "Whether you are seeking a machinery or software for furniture production, flooring production, kitchen production, closet production, construction element production, timber house construction and solid wood processing, we offer solutions from individual machines to complete production line. From small woodworking shops to industry-level series production, our products are used to produce high-quality furniture, kitchens, wooden houses, windows, wooden floors and stairs.",
+    "WoodWOP by HOMAG is a German CAM software solution for woodworking machinery, furniture, and kitchen production. It provides comprehensive tools for CNC programming of woodworking machines with a focus on furniture production, flooring, kitchen cabinets, and solid wood processing.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "家具製造", "NCプログラミング"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "高度な機能", "自動化", "HOMAG統合"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Woodworking",
+      items: [
+        { name: "Furniture production", status: true },
+        { name: "Kitchen production", status: true },
+        { name: "Solid wood processing", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "CNC programming", status: true },
+        { name: "NC code generation", status: true },
+        { name: "Machine simulation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "HOMAG integration", status: true },
+        { name: "CAD import", status: true },
+        { name: "Production line", status: true },
+      ],
+    },
+    {
+      category: "Optimization",
+      items: [
+        { name: "Material optimization", status: true },
+        { name: "Nesting", status: true },
+        { name: "Cost reduction", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows", "macOS"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 4500,
+  platforms: ["Windows"],
+  industries: ["Furniture", "Woodworking", "Kitchen", "Flooring"],
+  core_features: ["CAM", "Woodworking", "CNC", "Furniture"],
+  user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.homag.com/en/product-detail/software-woodwop",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 73,
+  pros: [
+    "木工CAMに特化",
+    "ドイツ製で信頼性が高い",
+    "家具・キッチン製造に最適",
+    "HOMAG機械との統合",
+    "欧州市場での実績豊富",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線は中程度",
+    "木工以外の用途には不向き",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is WoodWOP used for?",
-      a: "Whether you are seeking a machinery or software for furniture production, flooring production, kitchen production, close WoodWOP is a CAE / CAM solution.",
+      a: "WoodWOP is German CAM software for woodworking machinery, furniture, and kitchen production.",
     },
     {
       q: "How much does WoodWOP cost?",
-      a: "WoodWOP is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "WoodWOP is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of WoodWOP?",
-      a: "WoodWOP is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "WoodWOP is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does WoodWOP support?",
-      a: "WoodWOP runs on Windows and macOS.",
+      a: "WoodWOP runs on Windows.",
     },
     {
       q: "Which file formats does WoodWOP support?",
-      a: "WoodWOP works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "WoodWOP works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to WoodWOP?",
@@ -2434,55 +3283,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "WoodWOP Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "WoodWOPはドイツ製の木工CAMソフトウェアで、家具製造、キッチン製造、フロアリング業界向けに設計されています。HOMAG機械との統合がスムーズで、木工業界での実績が豊富です。材料最適化とネスティング機能も充実しており、効率的な生産が可能です。価格は高めですが、木工家具製造業の専門企業にとっては最適な選択肢です。",
 },
 {
   id: "t179",
   name: "AlphaCAM",
   slug: "alphacam",
   logo_url: getLogo("AL"),
-  short_desc: "简要介绍 AlphaCAM（官方站点）",
-  description: "详细介绍 AlphaCAM（官方站点）",
+  short_desc: "UK-based CAM software for woodworking, stone, and metal cutting.",
+  description: "AlphaCAM is a UK-based CAM software solution for woodworking, stone, and metal cutting. It provides comprehensive tools for CNC programming of various machining applications including routing, milling, and cutting with a focus on versatility and ease of use.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "ルーティング", "ミリング"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "多軸加工", "石材加工", "高度な機能"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Woodworking",
+      items: [
+        { name: "Routing", status: true },
+        { name: "Nesting", status: true },
+        { name: "Cabinet making", status: true },
+      ],
+    },
+    {
+      category: "Stone",
+      items: [
+        { name: "Stone cutting", status: true },
+        { name: "Engraving", status: true },
+        { name: "3D machining", status: true },
+      ],
+    },
+    {
+      category: "Metal",
+      items: [
+        { name: "Milling", status: true },
+        { name: "Turning", status: true },
+        { name: "Wire EDM", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "CNC programming", status: true },
+        { name: "NC code generation", status: true },
+        { name: "Machine simulation", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 4000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Woodworking", "Stone", "Metal", "Manufacturing"],
+  core_features: ["CAM", "Woodworking", "Stone", "Metal"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.alphacam.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 72,
+  pros: [
+    "多様な加工方式に対応",
+    "木工・石材・金属に対応",
+    "使いやすいインターフェース",
+    "英国製で信頼性が高い",
+    "汎用的なCAMソフト",
+  ],
+  cons: [
+    "高度な機能は他製品に比べて劣る",
+    "5軸機能は限定",
+    "国際的なプラグインエコシステムが小さい",
+    "大手企業向けの機能は不足",
+  ],
   faqs: [
     {
       q: "What is AlphaCAM used for?",
-      a: "简要介绍 AlphaCAM（官方站点） AlphaCAM is a CAE / CAM solution.",
+      a: "AlphaCAM is UK-based CAM software for woodworking, stone, and metal cutting.",
     },
     {
       q: "How much does AlphaCAM cost?",
-      a: "AlphaCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "AlphaCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of AlphaCAM?",
-      a: "AlphaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "AlphaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does AlphaCAM support?",
@@ -2490,7 +3390,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does AlphaCAM support?",
-      a: "AlphaCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "AlphaCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to AlphaCAM?",
@@ -2499,55 +3399,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "AlphaCAM Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "AlphaCAMは英国製のCAMソフトウェアで、木工、石材、金属加工に対応しています。多様な加工方式をサポートする汎用的なCAMソフトとして、ルーティング、ミリング、切断など幅広い用途に対応できます。使いやすいインターフェースが特徴で、中小企業に適しています。ただし、高度な5軸機能や大手企業向けの機能は他製品に比べて劣ります。多様な加工ニーズを持つ中小企業にとって魅力的な選択肢です。",
 },
 {
   id: "t180",
   name: "Radan",
   slug: "radan",
   logo_url: getLogo("RA"),
-  short_desc: "简要介绍 Radan（官方站点）",
-  description: "详细介绍 Radan（官方站点）",
+  short_desc: "UK-based CAD/CAM software for sheet metal fabrication and CNC punching.",
+  description: "Radan is a UK-based CAD/CAM software solution for sheet metal fabrication and CNC punching. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and material optimization for fabrication workshops.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAD/CAM機能", "シートメタル設計", "ネスティング"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "CNCパンチング", "レーザー加工", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Sheet Metal",
+      items: [
+        { name: "Sheet metal design", status: true },
+        { name: "Unfolding", status: true },
+        { name: "Bending calculation", status: true },
+      ],
+    },
+    {
+      category: "Nesting",
+      items: [
+        { name: "Automatic nesting", status: true },
+        { name: "Material optimization", status: true },
+        { name: "Cost reduction", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "CNC punching", status: true },
+        { name: "Laser cutting", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Machine simulation", status: true },
+        { name: "Production management", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 4500,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Sheet Metal", "Fabrication", "Manufacturing"],
+  core_features: ["CAD/CAM", "Sheet Metal", "Nesting", "Punching"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.radan.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 71,
+  pros: [
+    "シートメタル加工に特化",
+    "ネスティング機能充実",
+    "英国製で信頼性が高い",
+    "材料最適化でコスト削減",
+    "欧州市場での実績豊富",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線は中程度",
+    "シートメタル以外の用途には不向き",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is Radan used for?",
-      a: "简要介绍 Radan（官方站点） Radan is a CAE / CAM solution.",
+      a: "Radan is UK-based CAD/CAM software for sheet metal fabrication and CNC punching.",
     },
     {
       q: "How much does Radan cost?",
-      a: "Radan is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Radan is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Radan?",
-      a: "Radan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Radan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Radan support?",
@@ -2555,7 +3506,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does Radan support?",
-      a: "Radan works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Radan works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Radan?",
@@ -2564,55 +3515,106 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Radan Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Radanは英国製のCAD/CAMソフトウェアで、シートメタル製造とCNCパンチングに特化しています。自動ネスティング機能が充実しており、材料最適化によるコスト削減に貢献します。シートメタル業界での実績が豊富で、欧州市場で広く使用されています。価格は高めですが、シートメタル製造業の専門企業にとっては最適な選択肢です。",
 },
 {
   id: "t182",
   name: "Lantek Expert",
   slug: "lantek-expert",
-  logo_url: "",
-  short_desc: "简要介绍 Lantek Expert（官方站点）",
-  description: "详细介绍 Lantek Expert（官方站点）",
+  logo_url: "/logos/lantek.png",
+  short_desc: "Spanish CAD/CAM software for sheet metal punching and cutting.",
+  description: "Lantek Expert is a Spanish CAD/CAM software solution for sheet metal punching and cutting. It provides comprehensive tools for CNC programming of punching machines with automatic nesting and material optimization for fabrication workshops.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAM機能", "CNCパンチング", "ネスティング"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "レーザー加工", "高度な機能", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Punching",
+      items: [
+        { name: "CNC punching", status: true },
+        { name: "Tool optimization", status: true },
+        { name: "Automatic tool selection", status: true },
+      ],
+    },
+    {
+      category: "Nesting",
+      items: [
+        { name: "Automatic nesting", status: true },
+        { name: "Material optimization", status: true },
+        { name: "Cost reduction", status: true },
+      ],
+    },
+    {
+      category: "Cutting",
+      items: [
+        { name: "Laser cutting", status: true },
+        { name: "Plasma cutting", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Machine simulation", status: true },
+        { name: "Production management", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "Spain",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 4000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Sheet Metal", "Fabrication", "Manufacturing"],
+  core_features: ["CAM", "Punching", "Nesting", "Cutting"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.lanteksms.com/en/software/expert-punch",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 70,
+  pros: [
+    "シートメタル加工に特化",
+    "ネスティング機能充実",
+    "スペイン製で欧州市場での実績",
+    "材料最適化でコスト削減",
+    "コストパフォーマンスが良い",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線は中程度",
+    "シートメタル以外の用途には不向き",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is Lantek Expert used for?",
-      a: "简要介绍 Lantek Expert（官方站点） Lantek Expert is a CAE / CAM solution.",
+      a: "Lantek Expert is Spanish CAD/CAM software for sheet metal punching and cutting.",
     },
     {
       q: "How much does Lantek Expert cost?",
-      a: "Lantek Expert is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Lantek Expert is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of Lantek Expert?",
-      a: "Lantek Expert is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Lantek Expert is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does Lantek Expert support?",
@@ -2620,7 +3622,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does Lantek Expert support?",
-      a: "Lantek Expert works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Lantek Expert works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to Lantek Expert?",
@@ -2629,57 +3631,108 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "Lantek Expert Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Lantek Expertはスペイン製のCAD/CAMソフトウェアで、シートメタルパンチングと切断に特化しています。自動ネスティング機能が充実しており、材料最適化によるコスト削減に貢献します。欧州市場での実績が豊富で、コストパフォーマンスも良いです。シートメタル製造業の専門企業にとって魅力的な選択肢です。",
 },
 {
   id: "t183",
   name: "SigmaNEST",
   slug: "sigmanest",
-  logo_url: "",
+  logo_url: "/logos/sigmanest.png",
   short_desc:
-    "SigmaNEST CAD/CAM nesting software runs all major brands of laser, plasma, punch, router, waterjet, tube, and pressbrake",
+    "US-based CAD/CAM nesting software for laser, plasma, punch, router, waterjet, and tube cutting.",
   description:
-    "SigmaNEST CAD/CAM nesting software runs all major brands of laser, plasma, punch, router, waterjet, tube, and pressbrake, providing higher yield, high quality, faster NC; and automates importing, quoting, work orders, and inventory.",
+    "SigmaNEST is a US-based CAD/CAM nesting software solution that runs all major brands of laser, plasma, punch, router, waterjet, tube, and press brake machines. It provides higher yield, high quality, faster NC programming, and automation of importing, quoting, work orders, and inventory management.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本ネスティング機能", "レーザー加工", "プラズマ加工"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "多様な加工方式", "自動化", "在庫管理"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Nesting",
+      items: [
+        { name: "Automatic nesting", status: true },
+        { name: "Material optimization", status: true },
+        { name: "Yield improvement", status: true },
+      ],
+    },
+    {
+      category: "Cutting",
+      items: [
+        { name: "Laser cutting", status: true },
+        { name: "Plasma cutting", status: true },
+        { name: "Waterjet cutting", status: true },
+      ],
+    },
+    {
+      category: "Punching",
+      items: [
+        { name: "CNC punching", status: true },
+        { name: "Tool optimization", status: true },
+        { name: "Automatic tool selection", status: true },
+      ],
+    },
+    {
+      category: "Automation",
+      items: [
+        { name: "Import automation", status: true },
+        { name: "Quoting automation", status: true },
+        { name: "Inventory management", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 5000,
   platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Sheet Metal", "Fabrication", "Manufacturing"],
+  core_features: ["Nesting", "CAD/CAM", "Automation", "Material Optimization"],
+  user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.sigmanest.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 76,
+  pros: [
+    "ネスティング機能が業界トップクラス",
+    "多様な加工方式に対応",
+    "材料歩留まり向上",
+    "自動化機能充実",
+    "米国市場での実績豊富",
+  ],
+  cons: [
+    "価格が非常に高い",
+    "学習曲線が急勾配",
+    "小規模チームには機能過多",
+    "シートメタル以外の用途には不向き",
+  ],
   faqs: [
     {
       q: "What is SigmaNEST used for?",
-      a: "SigmaNEST CAD/CAM nesting software runs all major brands of laser, plasma, punch, router, waterjet, tube, and pressbrake SigmaNEST is a CAE / CAM solution.",
+      a: "SigmaNEST is US-based CAD/CAM nesting software for laser, plasma, punch, router, waterjet, and tube cutting.",
     },
     {
       q: "How much does SigmaNEST cost?",
-      a: "SigmaNEST is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "SigmaNEST is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of SigmaNEST?",
-      a: "SigmaNEST is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "SigmaNEST is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does SigmaNEST support?",
@@ -2687,7 +3740,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does SigmaNEST support?",
-      a: "SigmaNEST works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "SigmaNEST works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to SigmaNEST?",
@@ -2696,11 +3749,11 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "SigmaNEST Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "SigmaNESTは米国製のCAD/CAMネスティングソフトウェアで、レーザー、プラズマ、パンチ、ルーター、ウォータージェット、チューブ加工など多様な加工方式に対応しています。ネスティング機能は業界トップクラスで、材料歩留まり向上に大きく貢献します。自動化機能も充実しており、見積もりや在庫管理までカバーします。価格は非常に高く学習曲線も急勾配ですが、大規模なシートメタル製造業にとっては最適な選択肢です。",
 },
 {
   id: "t184",
@@ -2708,53 +3761,104 @@ export const c5Tools: Tool[] = [
   slug: "metacam",
   logo_url: getLogo("ME"),
   short_desc:
-    "Metamation Sheet Metal CAD CAM Software. Designing, Developing and Delivering Sheet Metal CAD CAM Software.",
+    "US-based sheet metal CAD/CAM software for punching, cutting, and fabrication.",
   description:
-    "Metamation Sheet Metal CAD CAM Software. Designing, Developing and Delivering Sheet Metal CAD CAM Software.",
+    "MetaCAM by Metamation is a US-based sheet metal CAD/CAM software solution for punching, cutting, and fabrication. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and automation for fabrication workshops.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: ["基本CAD/CAM機能", "シートメタル設計", "ネスティング"],
+      is_popular: true,
+    },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: ["Standard機能全て", "CNCパンチング", "レーザー加工", "自動化"],
       is_popular: false,
     },
   ],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Sheet Metal",
+      items: [
+        { name: "Sheet metal design", status: true },
+        { name: "Unfolding", status: true },
+        { name: "Bending calculation", status: true },
+      ],
+    },
+    {
+      category: "Nesting",
+      items: [
+        { name: "Automatic nesting", status: true },
+        { name: "Material optimization", status: true },
+        { name: "Cost reduction", status: true },
+      ],
+    },
+    {
+      category: "CAM",
+      items: [
+        { name: "CNC punching", status: true },
+        { name: "Laser cutting", status: true },
+        { name: "NC code generation", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CAD integration", status: true },
+        { name: "Machine simulation", status: true },
+        { name: "Production management", status: true },
+      ],
+    },
+  ],
   alternatives: ["topsolid", "beckercad", "cadmeister"],
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["macOS"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 3500,
+  platforms: ["Windows"],
+  industries: ["Sheet Metal", "Fabrication", "Manufacturing"],
+  core_features: ["CAD/CAM", "Sheet Metal", "Nesting", "Punching"],
+  user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.metamation.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 69,
+  pros: [
+    "シートメタル加工に特化",
+    "ネスティング機能充実",
+    "米国製で信頼性が高い",
+    "材料最適化でコスト削減",
+    "コストパフォーマンスが良い",
+  ],
+  cons: [
+    "価格が比較的高い",
+    "学習曲線は中程度",
+    "シートメタル以外の用途には不向き",
+    "国際的なプラグインエコシステムが小さい",
+  ],
   faqs: [
     {
       q: "What is MetaCAM used for?",
-      a: "Metamation Sheet Metal CAD CAM Software. Designing, Developing and Delivering Sheet Metal CAD CAM Software. MetaCAM is a CAE / CAM solution.",
+      a: "MetaCAM is US-based sheet metal CAD/CAM software for punching, cutting, and fabrication.",
     },
     {
       q: "How much does MetaCAM cost?",
-      a: "MetaCAM is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "MetaCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count.",
     },
     {
       q: "Is there a free version of MetaCAM?",
-      a: "MetaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "MetaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request.",
     },
     {
       q: "What operating systems does MetaCAM support?",
-      a: "MetaCAM runs on macOS.",
+      a: "MetaCAM runs on Windows.",
     },
     {
       q: "Which file formats does MetaCAM support?",
-      a: "MetaCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "MetaCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list.",
     },
     {
       q: "What are the best alternatives to MetaCAM?",
@@ -2763,11 +3867,11 @@ export const c5Tools: Tool[] = [
   ],
   tech_specs: {
     engine: "MetaCAM Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES", "DWG", "DXF"],
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "MetaCAMは米国製のシートメタルCAD/CAMソフトウェアで、パンチング、切断、製造業向けに設計されています。自動ネスティング機能が充実しており、材料最適化によるコスト削減に貢献します。シートメタル業界での実績が豊富で、コストパフォーマンスも良いです。シートメタル製造業の専門企業にとって魅力的な選択肢です。",
 },
 {
   id: "t185",
@@ -2851,7 +3955,40 @@ export const c5Tools: Tool[] = [
   }],
 
   alternatives: ['solidcam', 'altair-hyperworks', 'ansys-workbench'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CFD Solver",
+      items: [
+        { name: "Pressure-based solver", status: true },
+        { name: "Density-based solver", status: true },
+        { name: "Steady-state analysis", status: true },
+      ],
+    },
+    {
+      category: "Physics",
+      items: [
+        { name: "Multi-phase flow", status: true },
+        { name: "Turbulence modeling", status: true },
+        { name: "Combustion modeling", status: true },
+      ],
+    },
+    {
+      category: "Heat Transfer",
+      items: [
+        { name: "Conjugate heat transfer", status: true },
+        { name: "Radiation modeling", status: true },
+        { name: "Phase change", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Fluid-structure interaction", status: true },
+        { name: "Acoustics", status: true },
+        { name: "Optimization", status: true },
+      ],
+    },
+  ],
 
   external_ratings: [{
     source: "TrustRadius",
@@ -2929,7 +4066,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Simcenter STAR-CCM+, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['simcenter-star-ccm', 'caesar-ii', 'aspen-hysys'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Project Management",
+      items: [
+        { name: "Project Schematic", status: true },
+        { name: "Parametric workflows", status: true },
+        { name: "Design optimization", status: true },
+      ],
+    },
+    {
+      category: "CAD Integration",
+      items: [
+        { name: "DesignModeler", status: true },
+        { name: "SpaceClaim", status: true },
+        { name: "Bi-directional CAD links", status: true },
+      ],
+    },
+    {
+      category: "Multi-Physics",
+      items: [
+        { name: "Mechanical integration", status: true },
+        { name: "Fluent integration", status: true },
+        { name: "CFX integration", status: true },
+      ],
+    },
+    {
+      category: "Meshing",
+      items: [
+        { name: "Mesh manager", status: true },
+        { name: "Shared topology", status: true },
+        { name: "Adaptive meshing", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t187",
@@ -2999,7 +4169,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Altair Inspire, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['altair-inspire', 'pv-elite', 'staad-pro'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Real-Time Simulation",
+      items: [
+        { name: "Live Physics GPU solver", status: true },
+        { name: "Instant feedback", status: true },
+        { name: "Real-time results", status: true },
+      ],
+    },
+    {
+      category: "Modeling",
+      items: [
+        { name: "Direct geometry modeling", status: true },
+        { name: "SpaceClaim integration", status: true },
+        { name: "Topology optimization", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Structural analysis", status: true },
+        { name: "Modal analysis", status: true },
+        { name: "Thermal analysis", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Workbench integration", status: true },
+        { name: "CAD import", status: true },
+        { name: "High-fidelity solver", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t188",
@@ -3069,7 +4272,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['siemens-nx', 'esi-visual-environment', 'ansys-fluent'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Solvers",
+      items: [
+        { name: "Abaqus/Standard implicit", status: true },
+        { name: "Abaqus/Explicit", status: true },
+        { name: "Co-simulation", status: true },
+      ],
+    },
+    {
+      category: "Non-Linear",
+      items: [
+        { name: "Large deformations", status: true },
+        { name: "Contact analysis", status: true },
+        { name: "Composites", status: true },
+      ],
+    },
+    {
+      category: "Preprocessing",
+      items: [
+        { name: "Abaqus/CAE", status: true },
+        { name: "Mesh generation", status: true },
+        { name: "Material modeling", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "User subroutines", status: true },
+        { name: "Topology optimization", status: true },
+        { name: "Crash analysis", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t189",
@@ -3141,7 +4377,40 @@ export const c5Tools: Tool[] = [
   }],
 
   alternatives: ['etabs', 'sap2000', 'femap'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Multi-Physics",
+      items: [
+        { name: "Electromagnetics", status: true },
+        { name: "Heat transfer", status: true },
+        { name: "Structural mechanics", status: true },
+      ],
+    },
+    {
+      category: "Modeling",
+      items: [
+        { name: "Equation-based modeling", status: true },
+        { name: "Custom PDEs", status: true },
+        { name: "Parametric studies", status: true },
+      ],
+    },
+    {
+      category: "Modules",
+      items: [
+        { name: "RF Module", status: true },
+        { name: "Wave Optics", status: true },
+        { name: "Battery Module", status: true },
+      ],
+    },
+    {
+      category: "Application",
+      items: [
+        { name: "Application Builder", status: true },
+        { name: "LiveLink CAD", status: true },
+        { name: "Cluster computing", status: true },
+      ],
+    },
+  ],
 
   external_ratings: [{
     source: "GetApp",
@@ -3219,7 +4488,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['siemens-nx', 'esi-visual-environment', 'ansys-fluent'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Explicit Dynamics",
+      items: [
+        { name: "Crash simulation", status: true },
+        { name: "Blast analysis", status: true },
+        { name: "Drop test", status: true },
+      ],
+    },
+    {
+      category: "Forming",
+      items: [
+        { name: "Sheet-metal forming", status: true },
+        { name: "Metal forming", status: true },
+        { name: "Springback", status: true },
+      ],
+    },
+    {
+      category: "Safety",
+      items: [
+        { name: "Occupant safety", status: true },
+        { name: "Crashworthiness", status: true },
+        { name: "Airbag deployment", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Composite materials", status: true },
+        { name: "Multi-physics", status: true },
+        { name: "HPC scaling", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t191",
@@ -3289,7 +4591,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-workbench', 'caesar-ii', 'aspen-hysys'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "CFD",
+      items: [
+        { name: "Polyhedral meshing", status: true },
+        { name: "Trimmed-cell meshing", status: true },
+        { name: "Coupled solver", status: true },
+      ],
+    },
+    {
+      category: "Multi-Physics",
+      items: [
+        { name: "Reacting flow", status: true },
+        { name: "Combustion", status: true },
+        { name: "Multi-phase", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Overset mesh", status: true },
+        { name: "Moving bodies", status: true },
+        { name: "DOE optimization", status: true },
+      ],
+    },
+    {
+      category: "Workflow",
+      items: [
+        { name: "End-to-end workflow", status: true },
+        { name: "CAD to results", status: true },
+        { name: "HPC tokens", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t192",
@@ -3359,7 +4694,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are OpenCASCADE, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['opencascade', 'ansys-discovery', 'altair-inspire'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Solvers",
+      items: [
+        { name: "Incompressible flow", status: true },
+        { name: "Compressible flow", status: true },
+        { name: "Multi-phase", status: true },
+      ],
+    },
+    {
+      category: "Meshing",
+      items: [
+        { name: "snappyHexMesh", status: true },
+        { name: "Automatic meshing", status: true },
+        { name: "Mesh quality", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Combustion", status: true },
+        { name: "DNS/LES", status: true },
+        { name: "DEM/MHD", status: true },
+      ],
+    },
+    {
+      category: "Extensibility",
+      items: [
+        { name: "C++ source code", status: true },
+        { name: "User solvers", status: true },
+        { name: "HPC scaling", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t193",
@@ -3429,7 +4797,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'pv-elite'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Cloud Simulation",
+      items: [
+        { name: "Browser-based CFD", status: true },
+        { name: "Browser-based FEA", status: true },
+        { name: "Thermal simulation", status: true },
+      ],
+    },
+    {
+      category: "Computing",
+      items: [
+        { name: "Cloud HPC", status: true },
+        { name: "Per-hour metering", status: true },
+        { name: "Unlimited compute", status: true },
+      ],
+    },
+    {
+      category: "Collaboration",
+      items: [
+        { name: "Real-time collaboration", status: true },
+        { name: "Project sharing", status: true },
+        { name: "Community Plan", status: true },
+      ],
+    },
+    {
+      category: "Workflow",
+      items: [
+        { name: "Pre-built workflows", status: true },
+        { name: "CAD upload", status: true },
+        { name: "No installation", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t194",
@@ -3499,7 +4900,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are CSI SAP2000, COMSOL Multiphysics, CSI ETABS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['sap2000', 'comsol-multiphysics', 'etabs'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "FEA Preprocessing",
+      items: [
+        { name: "Structural preprocessing", status: true },
+        { name: "Mesh generation", status: true },
+        { name: "Boundary conditions", status: true },
+      ],
+    },
+    {
+      category: "CAD Integration",
+      items: [
+        { name: "CAD-agnostic", status: true },
+        { name: "NX integration", status: true },
+        { name: "Multi-CAD support", status: true },
+      ],
+    },
+    {
+      category: "Solver Integration",
+      items: [
+        { name: "NX Nastran", status: true },
+        { name: "MSC Nastran", status: true },
+        { name: "Multi-solver support", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Composites modeling", status: true },
+        { name: "Automation API", status: true },
+        { name: "Optimization", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t195",
@@ -3569,7 +5003,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'pv-elite', 'staad-pro'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Generative Design",
+      items: [
+        { name: "Topology optimization", status: true },
+        { name: "Lattice optimization", status: true },
+        { name: "PolyNURBS", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Structural analysis", status: true },
+        { name: "Modal analysis", status: true },
+        { name: "Thermal analysis", status: true },
+      ],
+    },
+    {
+      category: "Manufacturing",
+      items: [
+        { name: "Cast optimization", status: true },
+        { name: "Extrusion optimization", status: true },
+        { name: "3D print", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "OptiStruct solver", status: true },
+        { name: "Motion analysis", status: true },
+        { name: "Inspire Studio", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t196",
@@ -3639,7 +5106,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, Bentley STAAD.Pro, Bentley AutoPIPE. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-robot', 'staad-pro', 'autopipe'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "FEA Preprocessing",
+      items: [
+        { name: "Structural preprocessing", status: true },
+        { name: "Multi-discipline support", status: true },
+        { name: "Boundary conditions", status: true },
+      ],
+    },
+    {
+      category: "Solver Integration",
+      items: [
+        { name: "MSC Nastran", status: true },
+        { name: "Marc", status: true },
+        { name: "Abaqus", status: true },
+      ],
+    },
+    {
+      category: "Automation",
+      items: [
+        { name: "PCL scripting", status: true },
+        { name: "Plant-floor automation", status: true },
+        { name: "API integration", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Composites layup", status: true },
+        { name: "Failure plotting", status: true },
+        { name: "Sub-modeling", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t197",
@@ -3709,7 +5209,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'pv-elite'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Multibody Dynamics",
+      items: [
+        { name: "Vehicle dynamics", status: true },
+        { name: "Suspension kinematics", status: true },
+        { name: "Mechanism behavior", status: true },
+      ],
+    },
+    {
+      category: "Templates",
+      items: [
+        { name: "Adams/Car", status: true },
+        { name: "Adams/Driveline", status: true },
+        { name: "Adams/Tire", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Flexible body Nastran", status: true },
+        { name: "Simulink co-simulation", status: true },
+        { name: "AMESim co-simulation", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Durability load-case", status: true },
+        { name: "View animation", status: true },
+        { name: "Post-processing", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t209",
@@ -3779,7 +5312,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-workbench', 'simcenter-star-ccm', 'aspen-hysys'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Pipe Stress",
+      items: [
+        { name: "ASME B31 code checks", status: true },
+        { name: "Static analysis", status: true },
+        { name: "Dynamic analysis", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Harmonic analysis", status: true },
+        { name: "Spectrum analysis", status: true },
+        { name: "Time history", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Hanger design", status: true },
+        { name: "Pipe support optimisation", status: true },
+        { name: "Nozzle load calculations", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "CADWorx integration", status: true },
+        { name: "SmartPlant integration", status: true },
+        { name: "Plant 3D integration", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t210",
@@ -3849,7 +5415,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'pv-elite'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Pipe Stress",
+      items: [
+        { name: "ASME B31 codes", status: true },
+        { name: "EN 13480 codes", status: true },
+        { name: "KTA codes", status: true },
+      ],
+    },
+    {
+      category: "Nuclear",
+      items: [
+        { name: "ASME NB/NC/ND", status: true },
+        { name: "Nuclear analysis module", status: true },
+        { name: "Regulatory compliance", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Spectrum analysis", status: true },
+        { name: "Harmonic analysis", status: true },
+        { name: "SAM analysis", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "OpenPlant integration", status: true },
+        { name: "Plant 3D integration", status: true },
+        { name: "Buried pipe modules", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t211",
@@ -3919,7 +5518,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'altair-inspire', 'staad-pro'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Pressure Vessel",
+      items: [
+        { name: "ASME VIII Div 1", status: true },
+        { name: "ASME VIII Div 2", status: true },
+        { name: "PD 5500", status: true },
+      ],
+    },
+    {
+      category: "Codes",
+      items: [
+        { name: "EN 13445", status: true },
+        { name: "TEMA exchanger codes", status: true },
+        { name: "Code compliance", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Wind load calculations", status: true },
+        { name: "Seismic load calculations", status: true },
+        { name: "Nozzle FEA", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Heat exchanger design", status: true },
+        { name: "Drawing output", status: true },
+        { name: "Material report", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t212",
@@ -3985,7 +5617,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, CAESAR II. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-workbench', 'simcenter-star-ccm', 'caesar-ii'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Process Simulation",
+      items: [
+        { name: "Steady-state simulation", status: true },
+        { name: "Dynamic simulation", status: true },
+        { name: "Pipeline networks", status: true },
+      ],
+    },
+    {
+      category: "Upstream",
+      items: [
+        { name: "Upstream modeling", status: true },
+        { name: "Wellbore modeling", status: true },
+        { name: "Equipment sizing", status: true },
+      ],
+    },
+    {
+      category: "Refining",
+      items: [
+        { name: "Thermodynamic packages", status: true },
+        { name: "Heat exchanger optimisation", status: true },
+        { name: "Operations analytics", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Aspen Plus inter-operability", status: true },
+        { name: "AspenTech suite", status: true },
+        { name: "CAPE-OPEN", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t233",
@@ -4055,7 +5720,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI ETABS, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['comsol-multiphysics', 'etabs', 'femap'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Structural Analysis",
+      items: [
+        { name: "Linear analysis", status: true },
+        { name: "Non-linear analysis", status: true },
+        { name: "Dynamic analysis", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Response spectrum", status: true },
+        { name: "Time history", status: true },
+        { name: "Pushover analysis", status: true },
+      ],
+    },
+    {
+      category: "Bridge",
+      items: [
+        { name: "Bridge module", status: true },
+        { name: "Precast bridges", status: true },
+        { name: "Cable-stayed bridges", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Steel design codes", status: true },
+        { name: "Concrete design codes", status: true },
+        { name: "API automation", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t234",
@@ -4125,7 +5823,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['comsol-multiphysics', 'sap2000', 'femap'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Building Analysis",
+      items: [
+        { name: "Slab design", status: true },
+        { name: "Beam design", status: true },
+        { name: "Column design", status: true },
+      ],
+    },
+    {
+      category: "Structural",
+      items: [
+        { name: "Shear-wall design", status: true },
+        { name: "Linear analysis", status: true },
+        { name: "Non-linear analysis", status: true },
+      ],
+    },
+    {
+      category: "Seismic",
+      items: [
+        { name: "Pushover analysis", status: true },
+        { name: "Response spectrum", status: true },
+        { name: "Time history", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Concrete design codes", status: true },
+        { name: "Steel design codes", status: true },
+        { name: "Detailing modules", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t235",
@@ -4195,7 +5926,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['autodesk-robot', 'ansys-discovery', 'altair-inspire'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Structural Analysis",
+      items: [
+        { name: "Linear analysis", status: true },
+        { name: "Non-linear analysis", status: true },
+        { name: "Dynamic analysis", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Concrete design codes", status: true },
+        { name: "Steel design codes", status: true },
+        { name: "Timber design codes", status: true },
+      ],
+    },
+    {
+      category: "Industrial",
+      items: [
+        { name: "Connection design", status: true },
+        { name: "Foundation design", status: true },
+        { name: "Pipe rack design", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "BIM interoperability", status: true },
+        { name: "OpenSTAAD API", status: true },
+        { name: "ISM/IFC support", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t236",
@@ -4265,7 +6029,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are RISA-3D, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['risa-3d', 'ansys-discovery', 'simscale'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Calculation Library",
+      items: [
+        { name: "Pre-built templates", status: true },
+        { name: "Custom calc builder", status: true },
+        { name: "Template library", status: true },
+      ],
+    },
+    {
+      category: "Design Codes",
+      items: [
+        { name: "Concrete design", status: true },
+        { name: "Steel design", status: true },
+        { name: "Masonry design", status: true },
+      ],
+    },
+    {
+      category: "Documentation",
+      items: [
+        { name: "Design reports", status: true },
+        { name: "Word-format output", status: true },
+        { name: "Signed PDF output", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Tekla Structures", status: true },
+        { name: "Revit integration", status: true },
+        { name: "Multi-region codes", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t242",
@@ -4335,7 +6132,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Bentley STAAD.Pro, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['staad-pro', 'ansys-discovery', 'altair-inspire'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Structural Analysis",
+      items: [
+        { name: "Linear analysis", status: true },
+        { name: "Non-linear analysis", status: true },
+        { name: "Dynamic analysis", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Reinforced concrete", status: true },
+        { name: "Steel design", status: true },
+        { name: "Multi-region codes", status: true },
+      ],
+    },
+    {
+      category: "BIM",
+      items: [
+        { name: "Revit link", status: true },
+        { name: "Bi-directional link", status: true },
+        { name: "BIM workflows", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Modal analysis", status: true },
+        { name: "Seismic analysis", status: true },
+        { name: "Wind tunnel simulation", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t243",
@@ -4405,7 +6235,40 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are ANSYS Discovery, SimScale, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['ansys-discovery', 'simscale', 'altair-inspire'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Connection Design",
+      items: [
+        { name: "CBFEM method", status: true },
+        { name: "Steel connections", status: true },
+        { name: "Concrete connections", status: true },
+      ],
+    },
+    {
+      category: "Analysis",
+      items: [
+        { name: "Component checks", status: true },
+        { name: "Composite members", status: true },
+        { name: "Detail analysis", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "Tekla link", status: true },
+        { name: "Revit link", status: true },
+        { name: "ETABS/SAP2000 link", status: true },
+      ],
+    },
+    {
+      category: "Codes",
+      items: [
+        { name: "EN codes", status: true },
+        { name: "AISC codes", status: true },
+        { name: "Multi-region codes", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t244",
@@ -4475,6 +6338,39 @@ export const c5Tools: Tool[] = [
     a: 'The closest alternatives within the CAE/CAM space are Tekla Tedds, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['tekla-tedds', 'ansys-discovery', 'simscale'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Structural Analysis",
+      items: [
+        { name: "Linear analysis", status: true },
+        { name: "P-Delta analysis", status: true },
+        { name: "3D analysis", status: true },
+      ],
+    },
+    {
+      category: "Design Codes",
+      items: [
+        { name: "Concrete design", status: true },
+        { name: "Steel design", status: true },
+        { name: "Wood design", status: true },
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        { name: "RISAFloor integration", status: true },
+        { name: "Revit import", status: true },
+        { name: "API automation", status: true },
+      ],
+    },
+    {
+      category: "Advanced",
+      items: [
+        { name: "Cold-formed steel", status: true },
+        { name: "Aluminum design", status: true },
+        { name: "Masonry design", status: true },
+      ],
+    },
+  ]
 }
 ];

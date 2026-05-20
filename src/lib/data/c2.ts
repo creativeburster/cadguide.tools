@@ -3837,7 +3837,40 @@ export const c2Tools: Tool[] = [
     a: 'The closest alternatives within the 3D Modeling space are MoI3D, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['moi3d', 'alibre-design', 'zw3d'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Modeling",
+      items: [
+        { name: "3D modeling", status: true },
+        { name: "NURBS modeling", status: true },
+        { name: "Parasolid kernel", status: true },
+      ],
+    },
+    {
+      category: "Design",
+      items: [
+        { name: "Product design", status: true },
+        { name: "Industrial design", status: true },
+        { name: "Concept modeling", status: true },
+      ],
+    },
+    {
+      category: "UI",
+      items: [
+        { name: "Blender-like UI", status: true },
+        { name: "Rhino-like tools", status: true },
+        { name: "Modern interface", status: true },
+      ],
+    },
+    {
+      category: "Export",
+      items: [
+        { name: "STEP export", status: true },
+        { name: "IGES export", status: true },
+        { name: "Parasolid export", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t238",
@@ -3907,7 +3940,40 @@ export const c2Tools: Tool[] = [
     a: 'The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
   alternatives: ['plasticity', 'alibre-design', 'zw3d'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "NURBS",
+      items: [
+        { name: "NURBS modeling", status: true },
+        { name: "Solid modeling", status: true },
+        { name: "Surface modeling", status: true },
+      ],
+    },
+    {
+      category: "Concept",
+      items: [
+        { name: "Concept design", status: true },
+        { name: "Rapid modeling", status: true },
+        { name: "Sketchpad", status: true },
+      ],
+    },
+    {
+      category: "UI",
+      items: [
+        { name: "Elegant UI", status: true },
+        { name: "Simple interface", status: true },
+        { name: "Pen-tablet friendly", status: true },
+      ],
+    },
+    {
+      category: "Export",
+      items: [
+        { name: "Quad-mesh export", status: true },
+        { name: "STEP export", status: true },
+        { name: "3DM export", status: true },
+      ],
+    },
+  ],
 },
 {
   id: "t26",
