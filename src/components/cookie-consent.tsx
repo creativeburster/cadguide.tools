@@ -3,19 +3,52 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
+// 设置带过期时间的 localStorage
+const setCookieConsentWithExpiry = (value: string) => {
+  const now = new Date();
+  const expiry = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000); // 90天
+  const item = {
+    value,
+    expiry: expiry.getTime(),
+  };
+  localStorage.setItem('cookie-consent', JSON.stringify(item));
+};
+
+// 获取带过期时间的 localStorage
+const getCookieConsentWithExpiry = () => {
+  const itemStr = localStorage.getItem('cookie-consent');
+  if (!itemStr) return null;
+  try {
+    const item = JSON.parse(itemStr);
+    const now = new Date();
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem('cookie-consent');
+      return null;
+    }
+    return item.value;
+  } catch {
+    return null;
+  }
+};
+
 export function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
+    const consent = getCookieConsentWithExpiry();
     if (!consent) {
       const timer = setTimeout(() => setIsVisible(true), 1500);
       return () => clearTimeout(timer);
     }
   }, []);
 
+  const handleClose = () => {
+    setCookieConsentWithExpiry('closed');
+    setIsVisible(false);
+  };
+
   const accept = () => {
-    localStorage.setItem('cookie-consent', 'true');
+    setCookieConsentWithExpiry('accepted');
     setIsVisible(false);
   };
 
@@ -25,7 +58,7 @@ export function CookieConsent() {
     <div className="fixed bottom-6 left-6 z-[100] animate-in fade-in slide-in-from-bottom-5 duration-500 max-w-[320px]">
       <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-2xl border border-slate-700/50 backdrop-blur-xl relative">
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={handleClose}
           className="absolute top-2 right-2 w-5 h-5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-slate-800 rounded-full text-[10px] transition-colors"
           aria-label="Close cookie banner"
         >
@@ -44,7 +77,7 @@ export function CookieConsent() {
             <Button 
               size="sm"
               variant="ghost" 
-              onClick={() => setIsVisible(false)}
+              onClick={handleClose}
               className="flex-1 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg text-xs h-8"
             >
               Decline

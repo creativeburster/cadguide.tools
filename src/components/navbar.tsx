@@ -20,8 +20,8 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-[110] bg-white/95 backdrop-blur-md border-b border-slate-100 w-full h-16">
-        <div className="w-full h-full flex items-center justify-between px-4 sm:px-6 max-w-none md:max-w-[1360px] mx-auto">
+      <header className="sticky top-0 z-[110] bg-white/95 backdrop-blur-md border-b border-slate-100 w-full">
+        <div className="w-full flex items-center justify-between px-4 sm:px-6 max-w-none md:max-w-[1360px] mx-auto h-16">
           <Link href="/" className="text-xl font-bold text-slate-900 flex items-center gap-2 group shrink-0">
             <span className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white text-sm shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform font-black">CG</span>
             <span className="tracking-tight hidden sm:inline-block">CADGuide<span className="text-blue-600">.tools</span></span>
@@ -40,10 +40,10 @@ export function Navbar() {
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-blue-600 transition-all z-[210] relative"
+            className="md:hidden p-2 text-slate-600 hover:text-blue-600 transition-all z-[250] relative flex items-center justify-center"
             aria-label="Toggle Menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={cn("transition-opacity duration-200", isMobileMenuOpen ? "opacity-100" : "opacity-100")}>
               {isMobileMenuOpen ? (
                 <path d="M18 6L6 18M6 6l12 12" />
               ) : (

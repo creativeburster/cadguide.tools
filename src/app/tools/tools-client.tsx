@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense, useEffect } from 'react';
+import { useState, useMemo, Suspense, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { tools, categories } from '@/lib/data';
 import { Card } from '@/components/ui/card';
@@ -17,6 +17,15 @@ import { SlidersHorizontal, X } from 'lucide-react';
 // src/app/tools/page.tsx so canonical URLs and client pagination agree.
 const ITEMS_PER_PAGE = 24;
 
+// 防抖函数
+function debounce<T extends (...args: any[]) => any>(func: T, wait: number): (...args: Parameters<T>) => void {
+  let timeoutId: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func(...args), wait);
+  };
+}
+
 function ToolsList() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -26,7 +35,10 @@ function ToolsList() {
   // setState-in-effect anti-pattern that Next 16's react-hooks lint
   // forbids.
   const currentPage = Math.max(1, Number(searchParams.get('page')) || 1);
-  const searchQuery = searchParams.get('q') ?? '';
+  const initialQuery = searchParams.get('q') ?? '';
+  
+  // 使用本地状态管理输入框值，避免每次输入不立即更新 URL
+  const [localSearchQuery, setLocalSearchQuery] = useState(initialQuery);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
   // Lock body scroll while the mobile filters drawer is open.
@@ -40,10 +52,15 @@ function ToolsList() {
     }
   }, [isFiltersOpen]);
 
+  // 当 URL 变化时更新本地状态
+  useEffect(() => {
+    setLocalSearchQuery(initialQuery);
+  }, [initialQuery]);
+
   // Push search/page state into the URL. Uses `replace` so the user can
   // navigate back out of /tools in one click instead of stepping through
   // every intermediate page/query keystroke.
-  const syncUrl = (next: { page?: number; query?: string }) => {
+  const syncUrl = useCallback((next: { page?: number; query?: string }) => {
     const params = new URLSearchParams(searchParams.toString());
     if (next.query !== undefined) {
       if (next.query) params.set('q', next.query);
@@ -55,10 +72,19 @@ function ToolsList() {
     }
     const qs = params.toString();
     router.replace(qs ? `/tools?${qs}` : '/tools', { scroll: false });
-  };
+  }, [searchParams, router]);
+
+  // 创建防抖函数，延迟更新 URL
+  const debouncedSyncUrl = useMemo(
+    () => debounce((value: string) => {
+      syncUrl({ page: 1, query: value });
+    }, 300),
+    [syncUrl]
+  );
 
   const handleSearchChange = (value: string) => {
-    syncUrl({ page: 1, query: value });
+    setLocalSearchQuery(value);
+    debouncedSyncUrl(value);
   };
   const [filters, setFilters] = useState({
     pricing: [] as string[],
@@ -95,7 +121,7 @@ function ToolsList() {
   const normalize = (str: string) => str.toLowerCase().replace(/[-\s]+/g, '');
   
   const filteredTools = useMemo(() => {
-    const query = searchQuery.toLowerCase();
+    const query = localSearchQuery.toLowerCase();
     const normalizedQuery = normalize(query);
     const matchQuery = !query ||
       normalize(tool.name).includes(normalizedQuery) ||
@@ -167,10 +193,10 @@ function ToolsList() {
           onClear: () => setRating(filters.minRating),
         }]
       : []),
-    ...(searchQuery
+    ...(localSearchQuery
       ? [{
           key: 'query',
-          label: `“${searchQuery}”`,
+          label: `“${localSearchQuery}”`,
           onClear: () => handleSearchChange(''),
         }]
       : []),
@@ -179,6 +205,7 @@ function ToolsList() {
 
   const resetAll = () => {
     setFilters({ pricing: [], os: [], industry: [], category: [], userScale: [], kernel: [], minRating: 0 });
+    setLocalSearchQuery('');
     syncUrl({ page: 1, query: '' });
     setIsFiltersOpen(false);
   };
@@ -261,7 +288,7 @@ function ToolsList() {
           <div className="relative z-10">
             <Input
               placeholder="Find a specific tool..."
-              value={searchQuery}
+              value={localSearchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
               className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600"
             />
