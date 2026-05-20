@@ -977,7 +977,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.adra.com",
   affiliate_url: null,
-  score: 65,
+  score: 3.3,
   pros: [
     "Massive schematic speed for high-volume drafting",
     "Highly programmable with custom commands and scripts",
@@ -1406,7 +1406,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Freelance", "Small Business", "Education"],
   official_url: "https://www.qcad.org",
   affiliate_url: null,
-  score: 75,
+  score: 3.8,
   pros: [
     "Free open-source community edition",
     "Cross-platform: Windows, macOS, and Linux",
@@ -1608,7 +1608,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Freelance", "Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://nanocad.com",
   affiliate_url: null,
-  score: 78,
+  score: 3.9,
   pros: [
     "Native DWG compatibility with AutoCAD",
     "Free version available for basic 2D drafting",
@@ -1796,7 +1796,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Freelance", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.progecad.com",
   affiliate_url: null,
-  score: 72,
+  score: 3.6,
   pros: [
     "Built-in PDF-to-DWG conversion saves significant time",
     "Perpetual license with no subscription required",
@@ -1974,7 +1974,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Freelance", "Small Business", "Education"],
   official_url: "https://librecad.org",
   affiliate_url: null,
-  score: 70,
+  score: 3.5,
   pros: [
     "100% free for personal and commercial use",
     "Very lightweight with minimal system requirements",
@@ -2153,7 +2153,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Freelance", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.cadopia.com",
   affiliate_url: null,
-  score: 70,
+  score: 3.5,
   pros: [
     "Stable and reliable with proven ARES engine",
     "One-time perpetual payment, no subscription",
@@ -2399,7 +2399,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Freelance", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.coreldraw.com/en/product/corelcad/",
   affiliate_url: null,
-  score: 72,
+  score: 3.6,
   pros: [
     "Affordable perpetual license — no subscription required",
     "Full DWG compatibility with AutoCAD users",
@@ -2596,7 +2596,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.caxa.com/en/",
   affiliate_url: null,
-  score: 68,
+  score: 3.4,
   pros: [
     "Full DWG/DXF compatibility with AutoCAD",
     "Affordable perpetual license vs subscription models",
@@ -2875,7 +2875,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.3ds.com/",
   affiliate_url: null,
-  score: 85,
+  score: 4.3,
   pros: [
     "Unified cloud platform eliminates data silos",
     "Powerful virtual twin capabilities for digital continuity",
@@ -3045,7 +3045,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.cad-schroer.com/",
   affiliate_url: null,
-  score: 72,
+  score: 3.6,
   pros: [
     "強力なパラメトリック設計機能",
     "プラントエンジニアリング分野で強み",
@@ -3161,7 +3161,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Individual", "Small Business", "Mid-Sized Company"],
   official_url: "https://pcon-planner.com/",
   affiliate_url: null,
-  score: 78,
+  score: 3.9,
   pros: [
     "家具業界に特化した専門機能",
     "主要家具メーカーのカタログ統合",
@@ -3277,7 +3277,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.crowncad.com/",
   affiliate_url: null,
-  score: 68,
+  score: 3.4,
   pros: [
     "独自開発の幾何エンジンと制約ソルバー",
     "クラウドネイティブでリアルタイム協業が可能",
@@ -3393,7 +3393,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://sv.hoteamsoft.com/",
   affiliate_url: null,
-  score: 70,
+  score: 3.5,
   pros: [
     "金型・ダイ設計に特化した専門機能",
     "CAD/CAM統合で効率的なワークフロー",
@@ -3507,7 +3507,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.ijcad.jp/",
   affiliate_url: null,
-  score: 75,
+  score: 3.8,
   pros: [
     "AutoCADとの高い互換性で移行コストを削減",
     "日本語環境に完全対応、日本国内サポート充実",
@@ -3632,7 +3632,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Individual", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.rootprocad.com/",
   affiliate_url: null,
-  score: 70,
+  score: 3.5,
   pros: [
     "無料版で基本機能を試用可能",
     "WindowsとmacOS両対応で柔軟性が高い",
@@ -3766,7 +3766,7 @@ export const c1Tools: Tool[] = [
   user_scales: ["Freelance", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.kts.co.jp/",
   affiliate_url: null,
-  score: 62,
+  score: 3.1,
   pros: [
     "Affordable perpetual licensing for small Japanese firms",
     "Native Japanese language interface and documentation",
