@@ -72,9 +72,11 @@ export default function MatchmakerPage() {
       );
       
       // Search Fallback
+      const normalize = (str: string) => str.toLowerCase().replace(/[-\s]+/g, '');
+      const normalizedQuery = normalize(searchQuery);
       const matchSearch = !searchQuery || 
-        tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tool.short_desc.toLowerCase().includes(searchQuery.toLowerCase());
+        normalize(tool.name).includes(normalizedQuery) ||
+        normalize(tool.short_desc).includes(normalizedQuery);
 
       return matchIndustry && matchPlatform && matchBudget && matchOrg && matchWorkflow && matchSearch;
     }).sort((a, b) => b.score - a.score);

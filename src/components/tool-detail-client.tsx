@@ -889,9 +889,19 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         </div>
                       </div>
                     </div>
-                    <Badge className="bg-blue-600 text-white font-black px-6 py-2 rounded-xl text-sm">
-                      Highly Recommended
-                    </Badge>
+                    {tool.score >= 4.0 ? (
+                      <Badge className="bg-blue-600 text-white font-black px-6 py-2 rounded-xl text-sm">
+                        Highly Recommended
+                      </Badge>
+                    ) : tool.score >= 3.5 ? (
+                      <Badge className="bg-slate-600 text-white font-black px-6 py-2 rounded-xl text-sm">
+                        Recommended
+                      </Badge>
+                    ) : (
+                      <Badge className="bg-slate-400 text-white font-black px-6 py-2 rounded-xl text-sm">
+                        Good Option
+                      </Badge>
+                    )}
                   </div>
                 </div>
               </div>

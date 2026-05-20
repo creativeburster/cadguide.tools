@@ -91,13 +91,16 @@ function ToolsList() {
   const allKernels = useMemo(() => Array.from(new Set(tools.filter(t => t.tech_specs?.engine).map(t => t.tech_specs!.engine))).sort(), []);
   const allUserScales = useMemo(() => Array.from(new Set(tools.flatMap(t => t.user_scales))).sort(), []);
 
+  // 规范化字符串：移除连字符、空格、转成小写，用于模糊匹配
+  const normalize = (str: string) => str.toLowerCase().replace(/[-\s]+/g, '');
+  
   const filteredTools = useMemo(() => {
-    return tools.filter(tool => {
-      const query = searchQuery.toLowerCase();
-      const matchQuery = !query ||
-        tool.name.toLowerCase().includes(query) ||
-        tool.short_desc.toLowerCase().includes(query) ||
-        tool.industries.some(i => i.toLowerCase().includes(query));
+    const query = searchQuery.toLowerCase();
+    const normalizedQuery = normalize(query);
+    const matchQuery = !query ||
+      normalize(tool.name).includes(normalizedQuery) ||
+      normalize(tool.short_desc).includes(normalizedQuery) ||
+      tool.industries.some(i => normalize(i).includes(normalizedQuery));
 
       const matchPricing = filters.pricing.length === 0 || filters.pricing.includes(tool.pricing_type);
       const matchOS = filters.os.length === 0 || tool.platforms.some(p => filters.os.includes(p));
