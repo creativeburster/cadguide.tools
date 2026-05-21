@@ -6169,15 +6169,29 @@ export const c1Tools: Tool[] = [
   id: "t121",
   name: "AVEVA E3D Design",
   slug: "aveva-e3d-design",
-  logo_url: "",
-  short_desc: "At AVEVA, we work with you and harness the power of our ecosystem, to deliver solutions and expertise to optimize engine",
-  description: "At AVEVA, we work with you and harness the power of our ecosystem, to deliver solutions and expertise to optimize engineering, operations and performance.",
+  logo_url: "/logos/aveva-e3d-design.ico",
+  short_desc: "Advanced 3D plant design and engineering software for process, power, and marine industries with intelligent modeling capabilities.",
+  description: "AVEVA E3D Design is a leading 3D plant design and engineering software solution that provides intelligent modeling capabilities for process, power, and marine industries. The software offers comprehensive tools for 3D plant design, piping design, equipment modeling, structural design, and electrical design. E3D Design features rule-based design automation, clash detection, and real-time collaboration capabilities that streamline engineering workflows. The platform integrates seamlessly with the broader AVEVA ecosystem including engineering data management, project management, and operations solutions. E3D Design supports both perpetual and subscription licensing models, with enterprise-focused deployment options. The software is widely used in oil and gas, chemical processing, power generation, shipbuilding, and offshore industries for designing complex industrial facilities and plants.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "E3D Design Enterprise",
+      price: "$15,000+",
+      period: "annual",
+      features: ["Full 3D plant design", "Piping design", "Equipment modeling", "Structural design", "Electrical design", "Clash detection"],
+      is_popular: true
+    },
+    {
+      name: "E3D Design Standard",
+      price: "$8,000+",
+      period: "annual",
+      features: ["Basic 3D modeling", "Piping design", "Equipment modeling", "Design review"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
       is_popular: false
     }
   ],
@@ -6186,7 +6200,7 @@ export const c1Tools: Tool[] = [
       category: "Plant Design",
       items: [
         {
-          name: "3D plant design",
+          name: "Advanced 3D plant design",
           status: true
         },
         {
@@ -6196,39 +6210,38 @@ export const c1Tools: Tool[] = [
         {
           name: "Equipment modeling",
           status: true
-        }
-      ]
-    },
-    {
-      category: "Engineering",
-      items: [
+        },
         {
-          name: "Engineering optimization",
+          name: "Structural design",
           status: true
         },
         {
-          name: "Operations management",
-          status: true
-        },
-        {
-          name: "Performance tracking",
+          name: "Electrical design",
           status: true
         }
       ]
     },
     {
-      category: "Ecosystem",
+      category: "Design Automation",
       items: [
         {
-          name: "AVEVA ecosystem",
+          name: "Rule-based design",
           status: true
         },
         {
-          name: "Integration",
+          name: "Clash detection",
           status: true
         },
         {
-          name: "Data management",
+          name: "Design automation",
+          status: true
+        },
+        {
+          name: "Isometric generation",
+          status: true
+        },
+        {
+          name: "Material takeoff",
           status: true
         }
       ]
@@ -6237,7 +6250,7 @@ export const c1Tools: Tool[] = [
       category: "Collaboration",
       items: [
         {
-          name: "Team collaboration",
+          name: "Real-time collaboration",
           status: true
         },
         {
@@ -6245,7 +6258,32 @@ export const c1Tools: Tool[] = [
           status: true
         },
         {
-          name: "Real-time sync",
+          name: "Design review",
+          status: true
+        },
+        {
+          name: "Version control",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "AVEVA ecosystem",
+          status: true
+        },
+        {
+          name: "Engineering data management",
+          status: true
+        },
+        {
+          name: "ERP integration",
+          status: true
+        },
+        {
+          name: "PDM integration",
           status: true
         }
       ]

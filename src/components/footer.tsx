@@ -119,7 +119,6 @@ export function Footer() {
               <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">By Platform</Link></li>
               <li><Link href="/best" className="hover:text-blue-400 transition-colors">By Feature</Link></li>
               <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">By File Format</Link></li>
-              <li><Link href="/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
               <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open-Source CAD</Link></li>
             </ul>
           </div>
@@ -144,6 +143,7 @@ export function Footer() {
               <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support Desk</Link></li>
               <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy & Terms</Link></li>
               <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
 

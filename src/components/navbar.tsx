@@ -15,7 +15,6 @@ export function Navbar() {
     { name: 'Matchmaker', href: '/matchmaker' },
     { name: 'Deals', href: '/deals' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   return (

@@ -1296,18 +1296,26 @@ export const c6Tools: Tool[] = [
   ],
   detailed_features: [
     {
-      category: "PCB Design",
+      category: "Schematic Design",
       items: [
         {
-          name: "Schematic capture",
+          name: "Advanced schematic capture",
           status: true
         },
         {
-          name: "PCB layout",
+          name: "Hierarchical design",
           status: true
         },
         {
-          name: "Circuit simulation",
+          name: "Variant management",
+          status: true
+        },
+        {
+          name: "Design reuse",
+          status: true
+        },
+        {
+          name: "Constraint-driven design",
           status: true
         }
       ]
@@ -1316,15 +1324,48 @@ export const c6Tools: Tool[] = [
       category: "Simulation",
       items: [
         {
-          name: "PSpice simulation",
+          name: "PSpice analog simulation",
           status: true
         },
         {
-          name: "Analog simulation",
+          name: "Mixed-signal simulation",
           status: true
         },
         {
-          name: "Mixed-signal",
+          name: "Digital simulation",
+          status: true
+        },
+        {
+          name: "Advanced analysis",
+          status: true
+        },
+        {
+          name: "Monte Carlo analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PCB Layout",
+      items: [
+        {
+          name: "High-performance routing",
+          status: true
+        },
+        {
+          name: "Multi-layer design",
+          status: true
+        },
+        {
+          name: "Differential pair routing",
+          status: true
+        },
+        {
+          name: "Auto-routing",
+          status: true
+        },
+        {
+          name: "Design for manufacturability",
           status: true
         }
       ]
@@ -1333,7 +1374,7 @@ export const c6Tools: Tool[] = [
       category: "Analysis",
       items: [
         {
-          name: "Signal integrity",
+          name: "Signal integrity analysis",
           status: true
         },
         {
@@ -1341,24 +1382,36 @@ export const c6Tools: Tool[] = [
           status: true
         },
         {
-          name: "EMI/EMC",
+          name: "EMI/EMC analysis",
+          status: true
+        },
+        {
+          name: "Power integrity",
+          status: true
+        },
+        {
+          name: "Timing analysis",
           status: true
         }
       ]
     },
     {
-      category: "Integration",
+      category: "Library Management",
       items: [
         {
-          name: "Allegro integration",
+          name: "OrCAD CIS",
           status: true
         },
         {
-          name: "Cadence ecosystem",
+          name: "Component information system",
           status: true
         },
         {
-          name: "Manufacturing output",
+          name: "Cloud library access",
+          status: true
+        },
+        {
+          name: "Part search",
           status: true
         }
       ]
@@ -1371,107 +1424,178 @@ export const c6Tools: Tool[] = [
   ],
   country: "USA",
   category_id: "c6",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 2500,
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Consumer Electronics", "Automotive", "Aerospace", "Industrial Automation", "Medical Devices", "Telecommunications", "IoT", "Semiconductor"],
+  core_features: ["PSpice Simulation", "Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "OrCAD CIS", "Constraint-Driven Design", "Allegro Integration"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.orcad.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Industry-standard PSpice simulation", "Comprehensive PCB design capabilities", "Seamless Allegro integration for scalability", "Extensive component libraries", "Constraint-driven design workflow", "Mixed-signal simulation support", "Strong Cadence ecosystem", "Educational licensing available"],
+  cons: ["Higher cost compared to some alternatives", "Windows-only platform", "Steep learning curve for advanced features", "Subscription model may not suit all budgets", "Requires training for full utilization"],
+  version: "OrCAD X",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Chinese", "Japanese", "Korean", "German", "French"],
+  file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
+  file_formats_out: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "PDF", "STEP"],
+  integrations: ["Allegro PCB Designer", "Cadence Sigrity", "Cadence Liberate", "SAP", "Oracle", "Microsoft Dynamics"],
+  deployment_options: ["Desktop", "Cloud"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training", "Community"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "OrCAD X Standard",
+      price: "$2,500+/year",
+      notes: "Annual subscription with basic PCB design capabilities"
+    },
+    {
+      tier: "OrCAD X Premium",
+      price: "$5,000+/year",
+      notes: "Annual subscription with advanced simulation and analysis"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["PSpice Simulation", "Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "OrCAD CIS", "Constraint-Driven Design"],
   faqs: [
     {
       q: "What is OrCAD used for?",
-      a: "OrCAD is a comprehensive EDA suite used for schematic capture, circuit simulation, and printed circuit board routing in electrical design."
+      a: "OrCAD is a comprehensive PCB design and analysis suite used for schematic capture, circuit simulation using PSpice, and printed circuit board layout. It's widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from simple to complex multi-layer designs."
     },
     {
       q: "How much does OrCAD cost?",
-      a: "OrCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "OrCAD X Standard starts at approximately $2,500 per year for a subscription license. OrCAD X Premium with advanced simulation and analysis capabilities starts at approximately $5,000 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of OrCAD?",
-      a: "OrCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "OrCAD is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does OrCAD support?",
-      a: "OrCAD runs on Windows."
+      a: "OrCAD runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does OrCAD support?",
-      a: "OrCAD works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "OrCAD supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
     },
     {
       q: "What are the best alternatives to OrCAD?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include Altium Designer, KiCad, Eagle, Zuken CR-8000, and SolidWorks PCB. OrCAD distinguishes itself with its industry-standard PSpice simulation, seamless Allegro integration for scalability, and strong Cadence ecosystem."
     }
   ],
   tech_specs: {
-    engine: "OrCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "OrCAD X Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IPC", "IEEE", "JEDEC"]
   },
-  expert_verdict: "OrCAD is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "OrCAD is Cadence's professional PCB design suite that has established itself as a leading solution for schematic capture, circuit simulation, and PCB layout. Its standout feature is the industry-standard PSpice simulation engine, which provides accurate analog and mixed-signal analysis capabilities trusted by engineers worldwide. The software offers a comprehensive constraint-driven design workflow that ensures design intent is maintained throughout the development process. OrCAD's seamless integration with Allegro PCB Designer provides a clear upgrade path for users requiring high-end design capabilities, while the extensive component library through OrCAD CIS accelerates design cycles. Although the software requires significant investment and training, the combination of proven simulation technology, robust PCB layout tools, and strong Cadence ecosystem support makes it particularly attractive for mid-to-large enterprises in consumer electronics, automotive, and aerospace industries. The recent OrCAD X platform update has modernized the user interface and added cloud collaboration features, making it competitive with contemporary PCB design solutions."
 },
 {
   id: "t162",
   name: "PADS Professional",
   slug: "pads-professional",
-  logo_url: "",
-  short_desc: "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-read",
-  description: "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-ready Xpedition ecosystem.",
+  logo_url: "/logos/pads-professional.svg",
+  short_desc: "Siemens EDA's comprehensive PCB design solution for mid-to-high complexity designs with advanced simulation and analysis capabilities.",
+  description: "PADS Professional is a comprehensive PCB design platform from Siemens EDA (formerly Mentor Graphics) that provides advanced tools for schematic capture, PCB layout, simulation, and manufacturing output. Built on the modern Xpedition ecosystem, PADS Professional offers constraint-driven design, high-speed design capabilities, signal integrity analysis, power integrity analysis, and thermal analysis. The software features advanced routing including differential pair routing, auto-routing, and design for manufacturability checks. PADS Professional integrates seamlessly with the broader Siemens EDA ecosystem including Xpedition for high-end design requirements. The platform supports both perpetual and subscription licensing models, with educational options available. PADS Professional is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from moderate to high complexity.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "PADS Professional",
+      price: "$8,000+",
+      period: "annual",
+      features: ["Schematic capture", "PCB layout", "Signal integrity", "Power integrity", "Thermal analysis", "Library management"],
+      is_popular: true
+    },
+    {
+      name: "PADS Standard",
+      price: "$3,000+",
+      period: "annual",
+      features: ["Basic schematic", "PCB layout", "Auto-routing", "Manufacturing output"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "PCB Design",
+      category: "Schematic Design",
       items: [
         {
-          name: "PCB layout",
+          name: "Advanced schematic capture",
           status: true
         },
         {
-          name: "Schematic capture",
+          name: "Hierarchical design",
           status: true
         },
         {
-          name: "Circuit simulation",
+          name: "Constraint-driven design",
+          status: true
+        },
+        {
+          name: "Design reuse",
+          status: true
+        },
+        {
+          name: "Variant management",
           status: true
         }
       ]
     },
     {
-      category: "Advanced",
+      category: "PCB Layout",
       items: [
         {
-          name: "High-speed design",
+          name: "High-performance routing",
           status: true
         },
         {
-          name: "Signal integrity",
+          name: "Differential pair routing",
           status: true
         },
         {
-          name: "Power integrity",
+          name: "Auto-routing",
+          status: true
+        },
+        {
+          name: "Multi-layer design",
+          status: true
+        },
+        {
+          name: "Design for manufacturability",
           status: true
         }
       ]
     },
     {
-      category: "Analysis",
+      category: "Simulation & Analysis",
       items: [
+        {
+          name: "Signal integrity analysis",
+          status: true
+        },
+        {
+          name: "Power integrity analysis",
+          status: true
+        },
         {
           name: "Thermal analysis",
           status: true
@@ -1481,7 +1605,28 @@ export const c6Tools: Tool[] = [
           status: true
         },
         {
+          name: "Circuit simulation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Advanced Features",
+      items: [
+        {
+          name: "High-speed design",
+          status: true
+        },
+        {
           name: "Design verification",
+          status: true
+        },
+        {
+          name: "Library management",
+          status: true
+        },
+        {
+          name: "Manufacturing output",
           status: true
         }
       ]
@@ -1494,11 +1639,11 @@ export const c6Tools: Tool[] = [
           status: true
         },
         {
-          name: "Mentor Graphics",
+          name: "Siemens EDA integration",
           status: true
         },
         {
-          name: "Manufacturing output",
+          name: "ERP/PDM integration",
           status: true
         }
       ]
@@ -1511,52 +1656,85 @@ export const c6Tools: Tool[] = [
   ],
   country: "USA",
   category_id: "c6",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 8000,
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
-  official_url: "https://eda.sw.siemens.com/en-US/pcb/pads/",
+  industries: ["Consumer Electronics", "Automotive", "Aerospace", "Industrial Automation", "Medical Devices", "Telecommunications", "IoT", "Semiconductor"],
+  core_features: ["Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "Power Integrity Analysis", "Thermal Analysis", "Xpedition Ecosystem", "High-Speed Design"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
+  official_url: "https://www.sw.siemens.com/en-US/products/pads",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Comprehensive PCB design capabilities", "Advanced simulation and analysis tools", "Seamless Xpedition ecosystem integration", "High-speed design support", "Constraint-driven design workflow", "Strong Siemens EDA ecosystem", "Educational licensing available", "Robust library management"],
+  cons: ["Higher cost compared to some alternatives", "Windows-only platform", "Steep learning curve for advanced features", "Analysis computation can be slow", "Requires training for full utilization"],
+  version: "PADS Professional",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Chinese", "Japanese", "German", "French"],
+  file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
+  file_formats_out: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "PDF", "STEP"],
+  integrations: ["Xpedition", "Teamcenter", "SAP", "Oracle", "Microsoft Dynamics"],
+  deployment_options: ["Desktop", "On-Premise"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training", "Community"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "PADS Professional",
+      price: "$8,000+/year",
+      notes: "Annual subscription with advanced simulation and analysis"
+    },
+    {
+      tier: "PADS Standard",
+      price: "$3,000+/year",
+      notes: "Annual subscription with basic PCB design capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "Power Integrity Analysis", "Thermal Analysis", "Xpedition Ecosystem"],
   faqs: [
     {
       q: "What is PADS Professional used for?",
-      a: "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-read PADS Professional is an EDA solution."
+      a: "PADS Professional is a comprehensive PCB design platform used for schematic capture, PCB layout, simulation, and manufacturing output. It's widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from moderate to high complexity."
     },
     {
       q: "How much does PADS Professional cost?",
-      a: "PADS Professional is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "PADS Professional starts at approximately $8,000 per year for a subscription license. PADS Standard with basic capabilities starts at approximately $3,000 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of PADS Professional?",
-      a: "PADS Professional is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "PADS Professional is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does PADS Professional support?",
-      a: "PADS Professional runs on Windows."
+      a: "PADS Professional runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does PADS Professional support?",
-      a: "PADS Professional works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "PADS Professional supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
     },
     {
       q: "What are the best alternatives to PADS Professional?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include Altium Designer, OrCAD, Zuken CR-8000, and Eagle. PADS Professional distinguishes itself with its seamless Xpedition ecosystem integration, advanced simulation capabilities, and strong Siemens EDA support."
     }
   ],
   tech_specs: {
-    engine: "PADS Professional Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "PADS Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IPC", "IEEE", "JEDEC"]
   },
-  expert_verdict: "PADS Professional is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "PADS Professional is Siemens EDA's comprehensive PCB design solution that bridges the gap between entry-level tools and high-end enterprise platforms. Its standout feature is the seamless integration with the Xpedition ecosystem, providing a clear upgrade path for users requiring advanced capabilities. The software offers robust simulation and analysis tools including signal integrity, power integrity, and thermal analysis, which are essential for high-speed and high-complexity designs. PADS Professional features a constraint-driven design workflow that ensures design intent is maintained throughout the development process, while the advanced routing capabilities including differential pair routing and auto-routing accelerate layout tasks. Although the software requires significant investment and training, the combination of professional-grade features, Siemens EDA ecosystem support, and scalability makes it particularly attractive for mid-market companies growing their PCB design capabilities. The educational licensing options and strong support network further enhance its accessibility for organizations seeking a reliable PCB design solution."
 },
 {
   id: "t163",
@@ -1702,58 +1880,92 @@ export const c6Tools: Tool[] = [
   id: "t164",
   name: "Pulsonix",
   slug: "pulsonix",
-  logo_url: "",
-  short_desc: "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.",
-  description: "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.",
+  logo_url: "/logos/pulsonix.png",
+  short_desc: "Affordable, powerful, and intuitive schematic capture and PCB design software for professional electronic design automation.",
+  description: "Pulsonix is a comprehensive PCB design platform that offers affordable, powerful, and intuitive schematic capture and PCB layout capabilities. The software provides a complete design environment including schematic entry, PCB layout, circuit simulation, signal integrity analysis, thermal analysis, and design verification tools. Pulsonix features advanced routing capabilities including differential pair routing, auto-routing, and design for manufacturability checks. The platform supports standard EDA file formats and integrates with various CAD systems. Pulsonix offers both perpetual and subscription licensing models, with educational options available. The software is widely used in consumer electronics, industrial automation, and embedded systems industries for designing PCBs ranging from simple to moderate complexity.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Pulsonix Professional",
+      price: "$1,500+",
+      period: "annual",
+      features: ["Schematic capture", "PCB layout", "Signal integrity", "Thermal analysis", "Library management"],
+      is_popular: true
+    },
+    {
+      name: "Pulsonix Standard",
+      price: "$800+",
+      period: "annual",
+      features: ["Basic schematic", "PCB layout", "Auto-routing", "Manufacturing output"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "PCB Design",
+      category: "Schematic Design",
       items: [
         {
-          name: "Schematic capture",
+          name: "Advanced schematic capture",
           status: true
         },
         {
-          name: "PCB layout",
+          name: "Hierarchical design",
           status: true
         },
+        {
+          name: "Design reuse",
+          status: true
+        },
+        {
+          name: "Variant management",
+          status: true
+        },
+        {
+          name: "Library management",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PCB Layout",
+      items: [
+        {
+          name: "High-performance routing",
+          status: true
+        },
+        {
+          name: "Differential pair routing",
+          status: true
+        },
+        {
+          name: "Auto-routing",
+          status: true
+        },
+        {
+          name: "Multi-layer design",
+          status: true
+        },
+        {
+          name: "Design for manufacturability",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Simulation & Analysis",
+      items: [
         {
           name: "Circuit simulation",
           status: true
-        }
-      ]
-    },
-    {
-      category: "Features",
-      items: [
-        {
-          name: "Affordable",
-          status: true
         },
         {
-          name: "Powerful",
-          status: true
-        },
-        {
-          name: "Intuitive",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Analysis",
-      items: [
-        {
-          name: "Signal integrity",
+          name: "Signal integrity analysis",
           status: true
         },
         {
@@ -1791,52 +2003,85 @@ export const c6Tools: Tool[] = [
   ],
   country: "UK",
   category_id: "c6",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 800,
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Consumer Electronics", "Industrial Automation", "Embedded Systems", "IoT", "Automotive", "Medical Devices", "Telecommunications"],
+  core_features: ["Schematic Capture", "PCB Layout", "Circuit Simulation", "Signal Integrity Analysis", "Thermal Analysis", "Library Management", "Auto-Routing"],
+  user_scales: ["Small Business", "Mid-Market", "Freelancer"],
   official_url: "https://www.pulsonix.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Affordable pricing", "Intuitive user interface", "Comprehensive PCB design capabilities", "Good simulation and analysis tools", "Strong library management", "Educational licensing available", "Good file format support"],
+  cons: ["Windows-only platform", "Less advanced than enterprise tools", "Limited ecosystem compared to major vendors", "Steep learning curve for advanced features"],
+  version: "Pulsonix 10",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English"],
+  file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
+  file_formats_out: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "PDF", "STEP"],
+  integrations: ["AutoCAD", "SolidWorks", "Autodesk Inventor", "SAP", "Oracle"],
+  deployment_options: ["Desktop"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: false,
+    has_sdk: false
+  },
+  pricing_breakdown: [
+    {
+      tier: "Pulsonix Professional",
+      price: "$1,500+/year",
+      notes: "Annual subscription with advanced simulation and analysis"
+    },
+    {
+      tier: "Pulsonix Standard",
+      price: "$800+/year",
+      notes: "Annual subscription with basic PCB design capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["Schematic Capture", "PCB Layout", "Circuit Simulation", "Signal Integrity Analysis", "Thermal Analysis", "Library Management"],
   faqs: [
     {
       q: "What is Pulsonix used for?",
-      a: "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software. Pulsonix is an EDA solution."
+      a: "Pulsonix is an affordable, powerful, and intuitive schematic capture and PCB design software used for electronic design automation. It's widely used in consumer electronics, industrial automation, and embedded systems industries for designing PCBs ranging from simple to moderate complexity."
     },
     {
       q: "How much does Pulsonix cost?",
-      a: "Pulsonix is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "Pulsonix Professional starts at approximately $1,500 per year for a subscription license. Pulsonix Standard with basic capabilities starts at approximately $800 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of Pulsonix?",
-      a: "Pulsonix is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "Pulsonix is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does Pulsonix support?",
-      a: "Pulsonix runs on Windows."
+      a: "Pulsonix runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does Pulsonix support?",
-      a: "Pulsonix works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "Pulsonix supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
     },
     {
       q: "What are the best alternatives to Pulsonix?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include Altium Designer, KiCad, Eagle, OrCAD, and DipTrace. Pulsonix distinguishes itself with its affordable pricing, intuitive user interface, and comprehensive feature set for mid-market PCB design needs."
     }
   ],
   tech_specs: {
-    engine: "Pulsonix Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "Pulsonix Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IPC", "IEEE"]
   },
-  expert_verdict: "Pulsonix is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "Pulsonix is a cost-effective PCB design solution that delivers professional-grade capabilities at an affordable price point. Its standout feature is the intuitive user interface that makes it accessible to engineers transitioning from entry-level tools while providing the advanced features needed for serious design work. The software offers comprehensive PCB design capabilities including schematic capture, PCB layout, circuit simulation, signal integrity analysis, and thermal analysis, providing a complete design environment without the complexity and cost of enterprise solutions. Pulsonix's affordable pricing model, combined with educational licensing options, makes it particularly attractive for small businesses, freelancers, and educational institutions. Although it lacks the extensive ecosystem and advanced high-speed design capabilities of premium tools like Altium Designer or Cadence OrCAD, Pulsonix provides an excellent balance of functionality, usability, and value for mid-market PCB design requirements. The software's strong library management and good file format support ensure compatibility with existing design workflows while maintaining productivity."
 },
 {
   id: "t165",
