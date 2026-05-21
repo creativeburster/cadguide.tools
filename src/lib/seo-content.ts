@@ -645,9 +645,13 @@ export function getPlatformPage(slug: string): PlatformPage | undefined {
 }
 
 export function toolsForPlatform(p: PlatformPage): Tool[] {
-  return tools
+  const sorted = tools
     .filter((t) => t.platforms.includes(p.platformValue))
     .sort((a, b) => b.score - a.score);
+  if (p.slug === "windows") {
+    return sorted.slice(0, 20);
+  }
+  return sorted;
 }
 
 /** ---------- File-format pages -------------------------------------

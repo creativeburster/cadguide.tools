@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
 import { CookieConsent } from "@/components/cookie-consent";
 import { Navbar } from "@/components/navbar";
 import { PWARegistration } from "@/components/pwa-registration";
 import { SiteNotice } from "@/components/site-notice";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CADGuide.tools | Compare 235+ CAD & BIM Software (ASM vs Parasolid)",
@@ -41,7 +37,7 @@ export default function RootLayout({
           gtag('config', 'G-2NC8HV27GC');
         `}} />
       </head>
-      <body className={cn(inter.className, "min-h-screen w-full flex flex-col bg-slate-50 text-slate-900")}>
+      <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
         <PWARegistration />
         <SiteNotice />
         <Navbar />
