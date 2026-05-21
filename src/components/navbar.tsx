@@ -27,11 +27,11 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-6 2xl:gap-8 text-sm xl:text-base font-semibold text-slate-600">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm xl:text-base font-semibold text-slate-600">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-blue-600 transition-colors">{link.name}</Link>
             ))}
-            <Button asChild variant="outline" size="sm" className="rounded-xl px-3 border-blue-200 text-blue-600 hover:bg-blue-50 font-bold text-sm whitespace-nowrap">
+            <Button asChild variant="outline" size="sm" className="rounded-xl px-2 lg:px-3 border-blue-200 text-blue-600 hover:bg-blue-50 font-bold text-xs lg:text-sm whitespace-nowrap">
               <Link href="/sponsor">Sponsor Us</Link>
             </Button>
           </nav>
