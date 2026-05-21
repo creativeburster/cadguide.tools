@@ -351,7 +351,7 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING: external_ratings
 
   [t117] KOMPAS-3D (slug: kompas-3d)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -359,7 +359,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -376,11 +375,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t118] T-FLEX CAD (slug: t-flex-cad)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -388,7 +385,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -405,41 +401,15 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t120] Model Studio CS (slug: model-studio-cs)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (26 chars)
 
   [t121] AVEVA E3D Design (slug: aveva-e3d-design)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -447,7 +417,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -464,11 +433,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t122] DesignSpark Mechanical (slug: designspark-mechanical)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -476,7 +443,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -493,41 +459,15 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t123] LUSAS (slug: lusas)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (16 chars)
 
   [t126] midas Civil (slug: midas-civil)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -535,7 +475,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -552,11 +491,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t127] midas Gen (slug: midas-gen)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -564,7 +501,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -581,11 +517,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t128] CADian (slug: cadian)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -593,7 +527,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -610,41 +543,15 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t132] think3 (slug: think3)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (17 chars)
 
   [t133] Maptek Vulcan (slug: maptek-vulcan)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -652,7 +559,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -669,11 +575,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t134] Promine (slug: promine)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -681,7 +585,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -698,11 +601,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t135] OOFELIE (slug: oofelie)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -710,7 +611,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -727,11 +627,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t136] CYPECAD (slug: cypecad)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -739,7 +637,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -756,11 +653,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t137] TeKton3D (slug: tekton3d)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -768,7 +663,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -785,11 +679,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t141] Vertex BD (slug: vertex-bd)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -797,7 +689,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -814,11 +705,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t142] CET Designer (slug: cet-designer)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -826,7 +715,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -843,71 +731,20 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t143] ActCAD (slug: actcad)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
-      MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
-      MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (17 chars)
+  Issues found: 2
+      EMPTY_OPTIONAL: security_compliance
+      SINGLE_RATING (only 1 source)
 
   [t144] CADVision (slug: cadvision)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (20 chars)
 
   [t145] Eberick (slug: eberick)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -915,7 +752,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -932,11 +768,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t146] Promob (slug: promob)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -944,7 +778,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -961,11 +794,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t147] SCIA Engineer (slug: scia-engineer)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -973,7 +804,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -990,41 +820,14 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t148] PowerMill (slug: powermill)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
-      MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
-      MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (20 chars)
+  Issues found: 2
+      EMPTY_OPTIONAL: security_compliance
+      SINGLE_RATING (only 1 source)
 
   [t151] ESPRIT (slug: esprit)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -1032,7 +835,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -1049,71 +851,21 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t158] Planbar (slug: planbar)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (18 chars)
 
   [t167] PAM-STAMP (slug: pam-stamp)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (20 chars)
 
   [t170] ShipConstructor (slug: shipconstructor)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -1121,7 +873,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -1138,11 +889,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t171] NAPA (slug: napa)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -1150,7 +899,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -1167,41 +915,15 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t172] FORAN (slug: foran)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (16 chars)
 
   [t173] Pytha (slug: pytha)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -1209,7 +931,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -1226,11 +947,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t174] imos iX (slug: imos-ix)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -1238,7 +957,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -1255,11 +973,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t175] 20-20 Design (slug: 20-20-design)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -1267,7 +983,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -1284,11 +999,9 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t176] Palette CAD (slug: palette-cad)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -1296,7 +1009,6 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -1313,38 +1025,12 @@ CATEGORY c1: 2D CAD (60 tools). (63 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t177] KD Max (slug: kd-max)
-  Issues found: 27
-      EMPTY: logo_url
-      EMPTY: industries
-      EMPTY: core_features
-      EMPTY: user_scales
-      EMPTY: score
-      EMPTY: pros
-      EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
+  Issues found: 3
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: version
-      MISSING_OPTIONAL: last_updated
-      MISSING_OPTIONAL: free_trial_days
-      MISSING_OPTIONAL: languages
-      MISSING_OPTIONAL: file_formats_in
-      MISSING_OPTIONAL: file_formats_out
-      MISSING_OPTIONAL: integrations
-      MISSING_OPTIONAL: deployment_options
-      MISSING_OPTIONAL: license_types
-      MISSING_OPTIONAL: support_channels
-      MISSING_OPTIONAL: security_compliance
-      MISSING_OPTIONAL: api_sdk
-      MISSING_OPTIONAL: pricing_breakdown
-      MISSING_OPTIONAL: key_capabilities
+      EMPTY_OPTIONAL: security_compliance
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (17 chars)
 
   [t92] ArcSite (slug: arcsite)
   Issues found: 17
@@ -1757,21 +1443,10 @@ CATEGORY c2: 3D Modeling (25 tools). (28 tools)
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
 
-  [t237] 3D modeling (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t237] Plasticity (slug: plasticity)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -1787,25 +1462,12 @@ CATEGORY c2: 3D Modeling (25 tools). (28 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t238] NURBS modeling (slug: unknown)
-  Issues found: 31
+  [t238] MoI3D (slug: moi3d)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -1821,8 +1483,6 @@ CATEGORY c2: 3D Modeling (25 tools). (28 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
   [t26] Tinkercad (slug: tinkercad)
   Issues found: 17
@@ -2060,14 +1720,13 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING: external_ratings
 
   [t102] BIMoffice (slug: bimoffice)
-  Issues found: 26
+  Issues found: 22
       EMPTY: industries
       EMPTY: core_features
       EMPTY: user_scales
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -2084,9 +1743,6 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (20 chars)
 
   [t105] HiCAD (slug: hicad)
   Issues found: 16
@@ -2240,20 +1896,9 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
 
-  [t206] Subscription (slug: unknown)
-  Issues found: 29
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
-      MISSING_OPTIONAL: tech_specs
+  [t206] AutoCAD Plant 3D (slug: autocad-plant-3d)
+  Issues found: 16
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -2269,24 +1914,11 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t207] Data-centric modeling (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t207] Hexagon SmartPlant 3D (slug: smartplant-3d)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -2302,24 +1934,11 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t208] AutoCAD-based modeling (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t208] CADWorx Plant Professional (slug: cadworx)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -2335,25 +1954,12 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t229] Autodesk Docs (slug: unknown)
-  Issues found: 31
+  [t229] Autodesk Construction Cloud (slug: autodesk-construction-cloud)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -2369,24 +1975,11 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t230] Free tier (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t230] Trimble Connect (slug: trimble-connect)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -2402,24 +1995,11 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t231] Cloud issue tracker (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t231] BIMcollab (slug: bimcollab)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -2435,25 +2015,12 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t232] Node-based scripting (slug: unknown)
-  Issues found: 31
+  [t232] Autodesk Dynamo (slug: autodesk-dynamo)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -2469,8 +2036,6 @@ CATEGORY c3: BIM / Plant (26 tools). (26 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
 ============================================================
 CATEGORY c4: Viewer (7 tools). (7 tools)
@@ -2882,14 +2447,13 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING: external_ratings
 
   [t101] TopSolid (slug: topsolid)
-  Issues found: 25
+  Issues found: 22
       EMPTY: industries
       EMPTY: core_features
       EMPTY: user_scales
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -2906,8 +2470,6 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t106] BeckerCAD (slug: beckercad)
   Issues found: 16
@@ -3308,19 +2870,8 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
 
-  [t185] Pressure-based solver (slug: unknown)
-  Issues found: 28
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
-      MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
+  [t185] ANSYS Fluent (slug: ansys-fluent)
+  Issues found: 15
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3336,24 +2887,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       SINGLE_RATING (only 1 source)
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t186] Project Schematic (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t186] ANSYS Workbench (slug: ansys-workbench)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3369,24 +2907,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t187] Live Physics GPU solver (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t187] ANSYS Discovery (slug: ansys-discovery)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3402,24 +2927,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t188] Abaqus/Standard implicit (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t188] Abaqus (slug: abaqus)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3435,22 +2947,10 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t189] Electromagnetics (slug: unknown)
-  Issues found: 28
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t189] COMSOL Multiphysics (slug: comsol-multiphysics)
+  Issues found: 16
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3466,24 +2966,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       SINGLE_RATING (only 1 source)
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t190] Crash simulation (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t190] LS-DYNA (slug: ls-dyna)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3499,24 +2986,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t191] Polyhedral meshing (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t191] Simcenter STAR-CCM+ (slug: simcenter-star-ccm)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3532,24 +3006,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t192] Incompressible flow (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t192] OpenFOAM (slug: openfoam)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3565,25 +3026,12 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t193] Browser-based CFD (slug: unknown)
-  Issues found: 31
+  [t193] SimScale (slug: simscale)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3599,25 +3047,12 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t194] Structural preprocessing (slug: unknown)
-  Issues found: 31
+  [t194] Femap (slug: femap)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3633,24 +3068,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t195] Topology optimization (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t195] Altair Inspire (slug: altair-inspire)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3666,24 +3088,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t196] Structural preprocessing (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t196] MSC Patran (slug: msc-patran)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3699,24 +3108,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t197] Vehicle dynamics (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t197] MSC Adams (slug: msc-adams)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3732,25 +3128,12 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t209] ASME B31 code checks (slug: unknown)
-  Issues found: 31
+  [t209] CAESAR II (slug: caesar-ii)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3766,24 +3149,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t210] ASME B31 codes (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t210] Bentley AutoPIPE (slug: autopipe)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3799,24 +3169,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t211] ASME VIII Div 1 (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t211] PV Elite (slug: pv-elite)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3832,24 +3189,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t212] Steady-state simulation (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t212] AspenTech Aspen HYSYS (slug: aspen-hysys)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3865,24 +3209,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t233] Linear analysis (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t233] CSI SAP2000 (slug: sap2000)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3898,24 +3229,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t234] Slab design (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t234] CSI ETABS (slug: etabs)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3931,24 +3249,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t235] Linear analysis (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t235] Bentley STAAD.Pro (slug: staad-pro)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3964,24 +3269,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t236] Pre-built templates (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t236] Tekla Tedds (slug: tekla-tedds)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -3997,24 +3289,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t242] Linear analysis (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t242] Autodesk Robot Structural Analysis (slug: autodesk-robot)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4030,24 +3309,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t243] CBFEM method (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t243] IDEA StatiCa (slug: idea-statica)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4063,24 +3329,11 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t244] Linear analysis (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t244] RISA-3D (slug: risa-3d)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4096,8 +3349,6 @@ CATEGORY c5: CAE / CAM (59 tools). (59 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
 ============================================================
 CATEGORY c6: EDA (21 tools). (21 tools)
@@ -4173,7 +3424,7 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING: external_ratings
 
   [t103] EPLAN (slug: eplan)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -4181,7 +3432,6 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4198,18 +3448,15 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t111] CR-8000 (slug: cr-8000)
-  Issues found: 25
+  Issues found: 22
       EMPTY: industries
       EMPTY: core_features
       EMPTY: user_scales
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4226,18 +3473,15 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t114] Quadcept (slug: quadcept)
-  Issues found: 25
+  Issues found: 22
       EMPTY: industries
       EMPTY: core_features
       EMPTY: user_scales
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4254,18 +3498,15 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t160] Allegro PCB (slug: allegro-pcb)
-  Issues found: 26
+  Issues found: 22
       EMPTY: industries
       EMPTY: core_features
       EMPTY: user_scales
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4282,12 +3523,9 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (22 chars)
 
   [t161] OrCAD (slug: orcad)
-  Issues found: 27
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -4295,7 +3533,6 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4312,12 +3549,9 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (16 chars)
 
   [t162] PADS Professional (slug: pads-professional)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -4325,7 +3559,6 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4342,18 +3575,15 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t163] Xpedition (slug: xpedition)
-  Issues found: 25
+  Issues found: 22
       EMPTY: industries
       EMPTY: core_features
       EMPTY: user_scales
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4370,11 +3600,9 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t164] Pulsonix (slug: pulsonix)
-  Issues found: 26
+  Issues found: 23
       EMPTY: logo_url
       EMPTY: industries
       EMPTY: core_features
@@ -4382,7 +3610,6 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4399,18 +3626,15 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
 
   [t165] Target 3001! (slug: target-3001)
-  Issues found: 26
+  Issues found: 22
       EMPTY: industries
       EMPTY: core_features
       EMPTY: user_scales
       EMPTY: score
       EMPTY: pros
       EMPTY: cons
-      PLACEHOLDER: expert_verdict => 待补充专业评语。
       MISSING_OPTIONAL: external_ratings
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
@@ -4427,25 +3651,11 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      SHORT_VERDICT: (8 chars) 待补充专业评语。
-      PLACEHOLDER_VERDICT: 待补充专业评语。
-      SHORT_DESCRIPTION: (23 chars)
 
-  [t198] Schematic capture (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t198] KiCad (slug: kicad)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4461,24 +3671,11 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t199] Browser-based editor (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t199] EasyEDA (slug: easyeda)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4494,24 +3691,11 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t200] Schematic capture (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t200] DipTrace (slug: diptrace)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4527,24 +3711,11 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t201] SPICE simulation (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t201] NI Multisim (slug: multisim)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4560,25 +3731,12 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t202] SPICE3 solver (slug: unknown)
-  Issues found: 31
+  [t202] LTspice (slug: ltspice)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4594,25 +3752,12 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t203] SPICE simulation (slug: unknown)
-  Issues found: 31
+  [t203] Proteus Design Suite (slug: proteus-design-suite)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4628,22 +3773,10 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t204] Cloud workspace (slug: unknown)
-  Issues found: 28
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t204] Altium 365 (slug: altium-365)
+  Issues found: 16
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4659,24 +3792,11 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       SINGLE_RATING (only 1 source)
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t205] Altium engine (slug: unknown)
-  Issues found: 30
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
+  [t205] CircuitMaker (slug: circuitmaker)
+  Issues found: 17
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -4692,8 +3812,6 @@ CATEGORY c6: EDA (21 tools). (21 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
 ============================================================
 CATEGORY c7: Specialized (37 tools). (36 tools)
@@ -5101,20 +4219,10 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
 
-  [t213] FDM slicing (slug: unknown)
-  Issues found: 29
+  [t213] UltiMaker Cura (slug: ultimaker-cura)
+  Issues found: 17
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5130,25 +4238,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       OK: 2 external ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t214] Organic supports (slug: unknown)
-  Issues found: 31
+  [t214] PrusaSlicer (slug: prusaslicer)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5164,25 +4259,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t215] High-speed profiles (slug: unknown)
-  Issues found: 31
+  [t215] Bambu Studio (slug: bambu-studio)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5198,25 +4280,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t216] Per-process slicing (slug: unknown)
-  Issues found: 31
+  [t216] Simplify3D (slug: simplify3d)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5232,25 +4301,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t217] Build-plate packing (slug: unknown)
-  Issues found: 31
+  [t217] Autodesk Netfabb (slug: autodesk-netfabb)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5266,25 +4322,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t218] 2D pattern making (slug: unknown)
-  Issues found: 31
+  [t218] Optitex (slug: optitex)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5300,25 +4343,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t219] 2D pattern design (slug: unknown)
-  Issues found: 31
+  [t219] Gerber AccuMark (slug: gerber-accumark)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5334,25 +4364,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t220] Pattern design (slug: unknown)
-  Issues found: 31
+  [t220] Lectra Modaris (slug: lectra-modaris)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5368,25 +4385,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t221] VStitcher 3D (slug: unknown)
-  Issues found: 31
+  [t221] Browzwear (slug: browzwear)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5402,25 +4406,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t222] Pattern-based creation (slug: unknown)
-  Issues found: 31
+  [t222] Marvelous Designer (slug: marvelous-designer)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5436,25 +4427,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t223] Gem setting tools (slug: unknown)
-  Issues found: 31
+  [t223] RhinoGold (slug: rhinogold)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5470,25 +4448,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t224] Parametric libraries (slug: unknown)
-  Issues found: 31
+  [t224] JewelCAD Pro (slug: jewelcad-pro)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5504,25 +4469,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t225] Real-time ray tracing (slug: unknown)
-  Issues found: 31
+  [t225] D5 Render (slug: d5-render)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5538,25 +4490,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t226] CPU + GPU rendering (slug: unknown)
-  Issues found: 31
+  [t226] V-Ray (slug: v-ray)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5572,25 +4511,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t227] CPU path-tracer (slug: unknown)
-  Issues found: 31
+  [t227] Corona Renderer (slug: corona-renderer)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5606,25 +4532,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t228] PBR layer stack (slug: unknown)
-  Issues found: 31
+  [t228] Adobe Substance 3D Painter (slug: substance-painter)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5640,25 +4553,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t239] Field-to-finish (slug: unknown)
-  Issues found: 31
+  [t239] Carlson Survey (slug: carlson-survey)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5674,25 +4574,12 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
-  [t240] GNSS processing (slug: unknown)
-  Issues found: 31
+  [t240] Trimble Business Center (slug: trimble-business-center)
+  Issues found: 18
       EMPTY: logo_url
-      MISSING: industries
-      MISSING: core_features
-      MISSING: user_scales
-      MISSING: score
-      MISSING: pros
-      MISSING: cons
-      MISSING: expert_verdict
       MISSING_OPTIONAL: pricing_tiers
-      MISSING_OPTIONAL: tech_specs
       MISSING_OPTIONAL: external_ratings
-      MISSING_OPTIONAL: description
-      MISSING_OPTIONAL: short_desc
-      MISSING_OPTIONAL: country
       MISSING_OPTIONAL: version
       MISSING_OPTIONAL: last_updated
       MISSING_OPTIONAL: free_trial_days
@@ -5708,24 +4595,22 @@ CATEGORY c7: Specialized (37 tools). (36 tools)
       MISSING_OPTIONAL: pricing_breakdown
       MISSING_OPTIONAL: key_capabilities
       MISSING: external_ratings
-      MISSING: expert_verdict
-      MISSING: description
 
 ================================================================================
 SUMMARY
 ================================================================================
 Total tools scanned: 240
 Tools with issues: 240
-Total issues found: 4960
+Total issues found: 3845
 Completion rate: 0.0%
 
-  c1: 63 tools, 63 with issues, 1230 total issues
-  c2: 28 tools, 28 with issues, 370 total issues
-  c3: 26 tools, 26 with issues, 506 total issues
+  c1: 63 tools, 63 with issues, 916 total issues
+  c2: 28 tools, 28 with issues, 344 total issues
+  c3: 26 tools, 26 with issues, 411 total issues
   c4: 7 tools, 7 with issues, 123 total issues
-  c5: 59 tools, 59 with issues, 1298 total issues
-  c6: 21 tools, 21 with issues, 529 total issues
-  c7: 36 tools, 36 with issues, 904 total issues
+  c5: 59 tools, 59 with issues, 984 total issues
+  c6: 21 tools, 21 with issues, 396 total issues
+  c7: 36 tools, 36 with issues, 671 total issues
 
 ================================================================================
 FIELD DEFINITIONS

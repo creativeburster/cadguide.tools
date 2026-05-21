@@ -121,6 +121,110 @@ export function filterToolsByFeature(featureId: string): Tool[] {
       );
     }
     
+    if (featureId === 'sheet-metal') {
+      const explicitSlugs = ["solidworks", "fusion-360", "ptc-creo", "autodesk-inventor", "bricscad", "solid-edge"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["sheet metal", "flat pattern", "k-factor", "folding", "unfolding", "press brake", "bend allowance", "punching"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'generative-design') {
+      const explicitSlugs = ["fusion-360", "altair-inspire", "ptc-creo", "siemens-nx", "solidworks", "ntop", "ansys-discovery"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["generative design", "topology optimization", "structural optimization", "lattice structures", "additive manufacturing"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'reverse-engineering') {
+      const explicitSlugs = ["geomagic-design-x", "rhino-3d", "solidworks", "fusion-360", "siemens-nx", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["reverse engineering", "3d scan", "point cloud", "mesh to solid", "b-rep conversion", "deviation analysis"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'integrated-cam') {
+      const explicitSlugs = ["mastercam", "fusion-360", "solidcam", "camworks", "hypermill", "cimatron", "zw3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["cam", "cnc", "toolpath", "g-code", "milling", "turning", "multi-axis", "machining simulation"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'simulation-fea') {
+      const explicitSlugs = ["solidworks", "fusion-360", "ptc-creo", "siemens-nx", "autodesk-inventor", "ansys-discovery", "ansys-fluent", "comsol-multiphysics", "abaqus", "ansys-mechanical"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["simulation", "fea", "finite element analysis", "cfd", "thermal analysis", "stress analysis", "structural analysis", "live physics", "fatigue simulation", "fluid dynamics"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'subdivision-modeling') {
+      const explicitSlugs = ["rhino-3d", "blender", "fusion-360", "maya", "3ds-max", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["subdivision modeling", "subd", "subdivision surface", "organic shape", "freeform", "t-splines", "organic modeling", "ergonomic design"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'bim-integration') {
+      const explicitSlugs = ["revit", "archicad", "vectorworks", "bricscad", "tekla-structures"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["bim", "building information modeling", "ifc", "clash detection", "openbim", "bimcloud"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'direct-modeling') {
+      const explicitSlugs = ["rhino-3d", "sketchup", "spaceclaim", "bricscad", "shapr3d", "solid-edge", "fusion-360"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["direct modeling", "history-free", "push-pull", "direct design", "interactive modeling", "synchronous technology", "dynamic modeling"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
     return false;
   });
 

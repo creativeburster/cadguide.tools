@@ -5483,83 +5483,110 @@ export const c1Tools: Tool[] = [
   id: "t117",
   name: "KOMPAS-3D",
   slug: "kompas-3d",
-  logo_url: "",
-  short_desc: "The official website of ASCON, a leading software developer for design, manufacturing, and data management solutions.",
-  description: "The official website of ASCON, a leading software developer for design, manufacturing, and data management solutions.",
+  logo_url: "/logos/kompas-3d.png",
+  short_desc: "Professional 3D CAD software for mechanical engineering with parametric modeling, solid/surface/sheet metal design, and integrated analysis tools.",
+  description: "KOMPAS-3D is a professional CAD software system for three-dimensional design, developed by ASCON. It provides comprehensive tools for creating 3D associative models of individual parts and large assemblies containing both original and standardized structural elements. The software supports solid, surface, sheet metal, and object modeling, with its own geometric kernel and parametric technologies developed by ASCON specialists. KOMPAS-3D is widely used across industries including aerospace, automotive, shipbuilding, industrial machinery, energy, and construction, offering powerful functionality for managing projects with thousands of sub-assemblies and parts.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
+      name: "Perpetual License",
+      price: "$3,150",
       period: "initial",
-      features: [],
+      features: ["3D modeling", "Parametric design", "2D documentation", "Standard parts library", "Technical support"],
+      is_popular: true
+    },
+    {
+      name: "Educational",
+      price: "Free",
+      period: "annual",
+      features: ["Full functionality", "Student/Teacher license", "Academic support"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "CAD",
+      category: "Modeling",
       items: [
         {
-          name: "3D modeling",
+          name: "Solid modeling",
           status: true
         },
         {
-          name: "CAD design",
+          name: "Surface modeling",
           status: true
         },
         {
-          name: "Engineering design",
+          name: "Sheet metal design",
+          status: true
+        },
+        {
+          name: "Parametric modeling",
+          status: true
+        },
+        {
+          name: "Assembly modeling",
           status: true
         }
       ]
     },
     {
-      category: "Manufacturing",
+      category: "Analysis",
       items: [
         {
-          name: "Manufacturing solutions",
+          name: "FEM analysis (APM FEM)",
           status: true
         },
         {
-          name: "CAM integration",
+          name: "CFD analysis (KompasFlow)",
           status: true
         },
         {
-          name: "Production design",
+          name: "Strength calculations",
+          status: true
+        },
+        {
+          name: "Dimensional chain calculator",
           status: true
         }
       ]
     },
     {
-      category: "Data Management",
+      category: "Specialized Tools",
       items: [
         {
-          name: "Data management",
+          name: "Pipelines 3D",
           status: true
         },
         {
-          name: "PDM integration",
+          name: "Cables and harnesses",
           status: true
         },
         {
-          name: "Document control",
+          name: "Standard parts catalog",
+          status: true
+        },
+        {
+          name: "Materials library",
+          status: true
+        },
+        {
+          name: "Animation simulation",
           status: true
         }
       ]
     },
     {
-      category: "Design",
+      category: "Documentation",
       items: [
         {
-          name: "Parametric design",
+          name: "2D drawing generation",
           status: true
         },
         {
-          name: "Assembly design",
+          name: "Technical documentation",
           status: true
         },
         {
-          name: "Drawing creation",
+          name: "BOM generation",
           status: true
         }
       ]
@@ -5573,51 +5600,79 @@ export const c1Tools: Tool[] = [
   country: "Russia",
   category_id: "c1",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 3150,
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Aerospace", "Automotive", "Transportation", "Agriculture", "Energy", "Oil & Gas", "Shipbuilding", "Industrial Machinery", "Heavy Equipment", "Rail Transportation", "Metallurgy", "Construction"],
+  core_features: ["3D Parametric Modeling", "Solid/Surface/Sheet Metal Design", "Assembly Management", "2D Documentation", "FEM Analysis", "Standard Parts Library", "PDM Integration"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://ascon.net/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Lower total cost of ownership compared to major CAD tools", "Perpetual licensing model", "User-friendly interface", "Built-in FEM and CFD analysis tools", "Extensive standard parts library", "Supports both top-down and bottom-up design approaches", "Automated documentation generation", "Strong compatibility with other CAD systems"],
+  cons: ["No Linux support", "Limited third-party plugin ecosystem compared to major CAD platforms", "Smaller user community", "Learning curve for advanced features", "No subscription option (perpetual only)"],
+  version: "v24",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Russian"],
+  file_formats_in: ["DWG", "DXF", "PDF", "STEP", "IGES", "IDF", "SAT", "X_T"],
+  file_formats_out: ["DWG", "DXF", "PDF", "STEP", "IGES", "SAT", "X_T"],
+  integrations: ["PDM systems", "CAM software", "APM FEM", "KompasFlow"],
+  deployment_options: ["Desktop"],
+  license_types: ["Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: false,
+    has_sdk: false
+  },
+  pricing_breakdown: [
+    {
+      tier: "Perpetual License",
+      price: "$3,150+",
+      notes: "One-time purchase with annual maintenance options"
+    },
+    {
+      tier: "Educational",
+      price: "Free",
+      notes: "Free for verified students and teachers"
+    }
+  ],
+  key_capabilities: ["3D Parametric Modeling", "Solid/Surface/Sheet Metal Design", "Assembly Management", "FEM/CFD Analysis", "2D Documentation", "Standard Parts Library"],
   faqs: [
     {
       q: "What is KOMPAS-3D used for?",
-      a: "The official website of ASCON, a leading software developer for design, manufacturing, and data management solutions. KOMPAS-3D is a 2D CAD solution."
+      a: "KOMPAS-3D is a professional 3D CAD software for mechanical engineering, used for creating detailed 3D models of parts and assemblies, generating 2D technical documentation, and performing engineering analysis. It's widely used in aerospace, automotive, shipbuilding, industrial machinery, and construction industries."
     },
     {
       q: "How much does KOMPAS-3D cost?",
-      a: "KOMPAS-3D is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "KOMPAS-3D perpetual license starts at $3,150. Pricing varies based on modules, deployment type, and number of users. Educational licenses are available free for verified students and teachers."
     },
     {
       q: "Is there a free version of KOMPAS-3D?",
-      a: "KOMPAS-3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "KOMPAS-3D offers a free Light version with limited functionality. Educational licenses are free for students and teachers. Commercial users can request a 15-30 day evaluation period."
     },
     {
       q: "What operating systems does KOMPAS-3D support?",
-      a: "KOMPAS-3D runs on Windows."
+      a: "KOMPAS-3D runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does KOMPAS-3D support?",
-      a: "KOMPAS-3D works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "KOMPAS-3D supports standard CAD formats including DWG, DXF, PDF, STEP, IGES, and its native format. It also supports IDF format for importing PCB models from systems like Altium Designer and P-CAD."
     },
     {
       q: "What are the best alternatives to KOMPAS-3D?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include SolidWorks, Autodesk Inventor, PTC Creo, Siemens NX, and AutoCAD. The choice depends on your budget, industry requirements, and existing CAD ecosystem."
     }
   ],
   tech_specs: {
-    engine: "KOMPAS-3D Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "KOMPAS-3D Geometric Kernel",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["DIN", "ISO", "GOST"]
   },
-  expert_verdict: "KOMPAS-3D is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "KOMPAS-3D is a cost-effective alternative to major CAD platforms, offering comprehensive 3D modeling, parametric design, and integrated analysis tools. With 36 years of market presence and 400,000 seats sold, it provides professional-grade functionality at a lower total cost of ownership through perpetual licensing. While it lacks the extensive plugin ecosystem of market leaders, its built-in FEM, CFD, and specialized industry modules make it particularly attractive for mechanical engineering in aerospace, automotive, and heavy equipment industries. The software excels at handling large assemblies and offers strong compatibility with other CAD systems, making it a viable choice for companies seeking value without sacrificing essential engineering capabilities."
 },
 {
   id: "t118",
