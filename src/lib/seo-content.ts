@@ -24,6 +24,7 @@ export const BEST_OF_LIMIT = 12;
  *    "completeness" tiebreaker so well-documented tools rank ahead
  *    of stubs).
  */
+
 export function rankToolsForCategory(category: Category): Tool[] {
   const inCat = tools.filter((t) => t.category_id === category.id);
 
@@ -46,6 +47,42 @@ export function rankToolsForCategory(category: Category): Tool[] {
   }
 
   return [...inCat]
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      const rA = externalReviewWeight(a);
+      const rB = externalReviewWeight(b);
+      if (rB !== rA) return rB - rA;
+      return completenessScore(b) - completenessScore(a);
+    })
+    .slice(0, BEST_OF_LIMIT);
+}
+
+/**
+ * Filter tools by a feature ID and rank them using the same logic as categories.
+ * Returns a sorted array of tools that include the given feature ID.
+ */
+export function filterToolsByFeature(featureId: string): Tool[] {
+  const inFeature = tools.filter((t) => t.core_features?.includes(featureId));
+
+  // Reuse the same ranking helpers defined above.
+  function externalReviewWeight(t: Tool): number {
+    if (!t.external_ratings || t.external_ratings.length === 0) return 0;
+    return t.external_ratings.reduce((acc, r) => acc + (r.count ?? 0), 0);
+  }
+  function completenessScore(t: Tool): number {
+    let n = 0;
+    if (t.version) n++;
+    if (t.last_updated) n++;
+    if (t.languages && t.languages.length > 0) n++;
+    if (t.file_formats_in && t.file_formats_in.length > 0) n++;
+    if (t.integrations && t.integrations.length > 0) n++;
+    if (t.deployment_options && t.deployment_options.length > 0) n++;
+    if (t.security_compliance && t.security_compliance.length > 0) n++;
+    if (t.api_sdk?.has_api) n++;
+    return n;
+  }
+
+  return [...inFeature]
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
       const rA = externalReviewWeight(a);

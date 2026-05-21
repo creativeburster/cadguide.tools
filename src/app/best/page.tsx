@@ -61,6 +61,81 @@ export default function BestIndexPage() {
               </li>
             ))}
           </ul>
+
+          <section className="mt-16">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              Best CAD Tools by Feature & Technology
+            </h2>
+            <p className="text-slate-600 mb-6 leading-relaxed">
+              Looking for software with specific capabilities? Explore our technology spotlight pages, grouping the top tools in our directory based on core functional features.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-4">
+              <li>
+                <Link
+                  href="/best/feature/ai-assisted"
+                  className="block rounded-2xl bg-white border border-slate-200 hover:border-blue-300 p-6 transition-colors"
+                >
+                  <h3 className="text-lg font-bold text-slate-900">
+                    AI-Assisted CAD
+                  </h3>
+                  <p className="mt-2 text-slate-600 text-sm">
+                    Automate layouts, optimize topologies, and speed up drafting with AI-assisted software.
+                  </p>
+                  <span className="mt-4 inline-block text-sm font-semibold text-blue-600">
+                    See AI rankings →
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/best/feature/cloud-collaboration"
+                  className="block rounded-2xl bg-white border border-slate-200 hover:border-blue-300 p-6 transition-colors"
+                >
+                  <h3 className="text-lg font-bold text-slate-900">
+                    Cloud Collaboration CAD
+                  </h3>
+                  <p className="mt-2 text-slate-600 text-sm">
+                    Real-time multi-user co-authoring, SaaS databases, and zero-install browser modeling.
+                  </p>
+                  <span className="mt-4 inline-block text-sm font-semibold text-blue-600">
+                    See collaboration rankings →
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/best/feature/parametric-modeling"
+                  className="block rounded-2xl bg-white border border-slate-200 hover:border-blue-300 p-6 transition-colors"
+                >
+                  <h3 className="text-lg font-bold text-slate-900">
+                    Parametric Modeling CAD
+                  </h3>
+                  <p className="mt-2 text-slate-600 text-sm">
+                    History trees, dimension-driven constraints, and dynamic assembly math for mechanical design.
+                  </p>
+                  <span className="mt-4 inline-block text-sm font-semibold text-blue-600">
+                    See parametric rankings →
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/best/feature/rendering"
+                  className="block rounded-2xl bg-white border border-slate-200 hover:border-blue-300 p-6 transition-colors"
+                >
+                  <h3 className="text-lg font-bold text-slate-900">
+                    High-End Rendering CAD
+                  </h3>
+                  <p className="mt-2 text-slate-600 text-sm">
+                    Built-in GPU ray tracing, physically-based materials, and photorealistic spatial presentations.
+                  </p>
+                  <span className="mt-4 inline-block text-sm font-semibold text-blue-600">
+                    See rendering rankings →
+                  </span>
+                </Link>
+              </li>
+            </ul>
+          </section>
         </div>
       </main>
     </>
