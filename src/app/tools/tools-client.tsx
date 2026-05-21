@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense, useEffect } from 'react';
+import { useState, useMemo, Suspense, useEffect, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { tools, categories } from '@/lib/data';
 import { Card } from '@/components/ui/card';
@@ -28,6 +28,7 @@ function ToolsList() {
   const currentPage = Math.max(1, Number(searchParams.get('page')) || 1);
   const searchQuery = searchParams.get('q') ?? '';
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
 
   // Lock body scroll while the mobile filters drawer is open.
   useEffect(() => {
@@ -39,6 +40,22 @@ function ToolsList() {
       };
     }
   }, [isFiltersOpen]);
+
+  // Sync local search query with URL params (for back/forward navigation)
+  useEffect(() => {
+    setLocalSearchQuery(searchQuery);
+  }, [searchQuery]);
+
+  // Debounced search sync to URL
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (localSearchQuery !== searchQuery) {
+        syncUrl({ page: 1, query: localSearchQuery });
+      }
+    }, 300); // 300ms debounce delay
+
+    return () => clearTimeout(timeoutId);
+  }, [localSearchQuery, searchQuery]);
 
   // Push search/page state into the URL. Uses `replace` so the user can
   // navigate back out of /tools in one click instead of stepping through
@@ -58,7 +75,7 @@ function ToolsList() {
   };
 
   const handleSearchChange = (value: string) => {
-    syncUrl({ page: 1, query: value });
+    setLocalSearchQuery(value);
   };
   const [filters, setFilters] = useState({
     pricing: [] as string[],
@@ -258,7 +275,7 @@ function ToolsList() {
           <div className="relative z-10">
             <Input
               placeholder="Find a specific tool..."
-              value={searchQuery}
+              value={localSearchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
               className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600"
             />
