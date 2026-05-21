@@ -34,7 +34,7 @@ export default function Home() {
 
 function HomeBody() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section - Deep ocean blue */}
       <section className="bg-gradient-to-br from-blue-950 via-[#0a192f] to-blue-900 text-white pt-24 pb-32 relative overflow-hidden w-full px-4">
         {/* Abstract background elements - pure blue glow effect */}
@@ -220,12 +220,12 @@ function HomeBody() {
               <div className="mt-1 text-xs text-slate-500">Architects, engineers, students…</div>
             </Link>
             <Link href="/platforms" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">4 platforms</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6 platforms</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Platform</div>
-              <div className="mt-1 text-xs text-slate-500">Mac, Linux, Web, iPad</div>
+              <div className="mt-1 text-xs text-slate-500">Windows, Mac, Linux, Web, iOS, Android</div>
             </Link>
             <Link href="/file-formats" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">10 formats</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">12 formats</div>
               <div className="mt-1 text-lg font-black text-slate-900">By File Format</div>
               <div className="mt-1 text-xs text-slate-500">DWG, STEP, STL, IFC, …</div>
             </Link>
