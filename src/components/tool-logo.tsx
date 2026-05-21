@@ -33,28 +33,20 @@ function pickGradient(str: string) {
 
 function deriveCandidates(slug: string | undefined, src: string, websiteUrl?: string): string[] {
   const candidates: string[] = [];
-  // 1. Locally-hosted logo (preferred — no CLS, no third-party network).
   if (slug && LOGO_MANIFEST[slug]) {
     candidates.push(`/logos/${LOGO_MANIFEST[slug]}`);
   }
-  // 2-4. CDN fallbacks — used for tools missing from the manifest or whose
-  // local file ever fails to load. Ordered by reliability.
+  if (src) candidates.push(src);
   if (websiteUrl) {
     try {
       const host = new URL(websiteUrl).hostname.replace(/^www\./, '');
-      // icon.horse is more reliable than Google favicons for software logos
       candidates.push(`https://icon.horse/icon/${host}`);
-      // Google favicons as backup
       candidates.push(`https://www.google.com/s2/favicons?domain=${host}&sz=128`);
-      // Clearbit API as additional fallback (if available)
       candidates.push(`https://logo.clearbit.com/${host}?size=200&format=png`);
     } catch {
       /* malformed URL — fall through to placeholder. */
     }
   }
-  // 5. Original data.ts logo_url (ui-avatars placeholder) — last resort before
-  // dropping to the gradient initials.
-  if (src) candidates.push(src);
   return candidates;
 }
 
