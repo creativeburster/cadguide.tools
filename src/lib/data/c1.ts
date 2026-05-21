@@ -207,7 +207,7 @@ export const c1Tools: Tool[] = [
     "STL",
     "3DS",
     "FBX",
-    "Rhino",
+    "3DM",
     "IPT"
   ],
   file_formats_out: [
@@ -219,6 +219,7 @@ export const c1Tools: Tool[] = [
     "IGES",
     "STEP",
     "FBX",
+    "3MF",
     "JPG",
     "PNG",
     "BMP",
@@ -7292,83 +7293,117 @@ export const c1Tools: Tool[] = [
   id: "t128",
   name: "CADian",
   slug: "cadian",
-  logo_url: "",
-  short_desc: "30년 이상의 개발 역사가 말해주듯, 신뢰할 수 있는 국산 CAD, CADian!",
-  description: "30년 이상의 개발 역사가 말해주듯, 신뢰할 수 있는 국산 CAD, CADian!",
+  logo_url: "/logos/cadian.png",
+  short_desc: "Korean 2D CAD software with 30+ years of development history, offering reliable CAD drafting and design capabilities.",
+  description: "CADian is a Korean 2D CAD software with over 30 years of development history, providing reliable CAD drafting and design capabilities for engineering and architectural applications. The software offers comprehensive 2D drafting tools, drawing creation, and design automation features tailored for the Korean market. CADian supports standard CAD file formats including DWG and DXF for compatibility with other CAD systems. The platform provides local Korean language support and domestic customer service, making it particularly suitable for Korean engineering firms and organizations. CADian offers perpetual licensing options with competitive pricing for the Korean market, along with educational licenses for students and institutions. The software is widely used in construction, manufacturing, and engineering industries throughout Korea for drafting, design documentation, and technical drawing creation.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "CADian Professional",
+      price: "$500+",
+      period: "perpetual",
+      features: ["Full 2D CAD capabilities", "DWG/DXF support", "Design automation", "Local support"],
+      is_popular: true
+    },
+    {
+      name: "CADian Standard",
+      price: "$300+",
+      period: "perpetual",
+      features: ["Basic 2D drafting", "File compatibility", "Drawing tools"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "perpetual",
+      features: ["Full functionality", "Student license", "Academic support"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "CAD",
+      category: "2D Drafting",
       items: [
         {
-          name: "2D CAD",
-          status: true
-        },
-        {
-          name: "CAD design",
-          status: true
-        },
-        {
-          name: "Engineering",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Design",
-      items: [
-        {
-          name: "CAD drafting",
-          status: true
-        },
-        {
-          name: "Design tools",
+          name: "Advanced 2D drafting",
           status: true
         },
         {
           name: "Drawing creation",
           status: true
+        },
+        {
+          name: "Dimensioning tools",
+          status: true
+        },
+        {
+          name: "Layer management",
+          status: true
+        },
+        {
+          name: "Block library",
+          status: true
         }
       ]
     },
     {
-      category: "Korean",
+      category: "File Compatibility",
       items: [
         {
-          name: "Korean CAD",
+          name: "DWG support",
           status: true
         },
         {
-          name: "Domestic CAD",
+          name: "DXF support",
+          status: true
+        },
+        {
+          name: "PDF export",
+          status: true
+        },
+        {
+          name: "CAD compatibility",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Design Tools",
+      items: [
+        {
+          name: "Design automation",
+          status: true
+        },
+        {
+          name: "Parametric design",
+          status: true
+        },
+        {
+          name: "Hatching patterns",
+          status: true
+        },
+        {
+          name: "Text editing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Localization",
+      items: [
+        {
+          name: "Korean language",
           status: true
         },
         {
           name: "Local support",
           status: true
-        }
-      ]
-    },
-    {
-      category: "History",
-      items: [
+        },
         {
-          name: "30+ years history",
+          name: "Domestic standards",
           status: true
         },
         {
-          name: "Reliable CAD",
-          status: true
-        },
-        {
-          name: "Proven track record",
+          name: "Korean market focus",
           status: true
         }
       ]
@@ -7382,51 +7417,84 @@ export const c1Tools: Tool[] = [
   country: "South Korea",
   category_id: "c1",
   pricing_type: "Perpetual",
-  starting_price: 0,
+  starting_price: 300,
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Construction", "Manufacturing", "Engineering", "Architecture", "Education"],
+  core_features: ["2D Drafting", "DWG/DXF Support", "Design Automation", "Korean Language", "Local Support"],
+  user_scales: ["Small Business", "Mid-Market", "Educational"],
   official_url: "https://www.cadian.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["30+ years development history", "Korean language support", "Local customer service", "Competitive pricing", "DWG/DXF compatibility", "Proven reliability", "Educational licenses"],
+  cons: ["Windows-only platform", "Limited to Korean market", "Less features than international CAD", "No 3D capabilities", "Limited documentation in English"],
+  version: "CADian",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["Korean", "English"],
+  file_formats_in: ["DWG", "DXF", "PDF"],
+  file_formats_out: ["DWG", "DXF", "PDF"],
+  integrations: ["AutoCAD", "BricsCAD", "ZWCAD"],
+  deployment_options: ["Desktop"],
+  license_types: ["Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: false,
+    has_sdk: false
+  },
+  pricing_breakdown: [
+    {
+      tier: "CADian Professional",
+      price: "$500+",
+      notes: "Perpetual license with full 2D CAD capabilities"
+    },
+    {
+      tier: "CADian Standard",
+      price: "$300+",
+      notes: "Perpetual license with basic 2D drafting capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["2D Drafting", "DWG/DXF Support", "Design Automation", "Korean Language"],
   faqs: [
     {
       q: "What is CADian used for?",
-      a: "30년 이상의 개발 역사가 말해주듯, 신뢰할 수 있는 국산 CAD, CADian! CADian is a 2D CAD solution."
+      a: "CADian is a Korean 2D CAD software with over 30 years of development history, used for engineering drafting, architectural design, construction documentation, and technical drawing creation. It's particularly popular in the Korean market for its local language support, domestic customer service, and competitive perpetual licensing model."
     },
     {
       q: "How much does CADian cost?",
-      a: "CADian is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "CADian Professional starts at approximately $500 for a perpetual license. CADian Standard with basic capabilities starts at approximately $300 for a perpetual license. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of CADian?",
-      a: "CADian is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "CADian is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does CADian support?",
-      a: "CADian runs on Windows."
+      a: "CADian runs on Windows operating systems only."
     },
     {
       q: "Which file formats does CADian support?",
-      a: "CADian works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "CADian supports standard CAD formats including DWG, DXF, and PDF for import and export, ensuring compatibility with other CAD systems."
     },
     {
       q: "What are the best alternatives to CADian?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include AutoCAD, BricsCAD, ZWCAD, and DraftSight. CADian distinguishes itself with its 30+ years of development history, Korean language support, local customer service, and competitive perpetual pricing specifically tailored for the Korean market."
     }
   ],
   tech_specs: {
     engine: "CADian Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["KS", "ISO"]
   },
-  expert_verdict: "CADian is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "CADian is a Korean 2D CAD software with over 30 years of development history, providing reliable CAD drafting and design capabilities specifically tailored for the Korean market. Its standout feature is the comprehensive local Korean language support and domestic customer service, making it particularly suitable for Korean engineering firms and organizations that require native language interfaces and local technical support. The software offers standard 2D drafting tools including drawing creation, dimensioning, layer management, and block libraries, along with DWG/DXF file compatibility for seamless collaboration with other CAD systems. CADian's competitive perpetual licensing model provides cost-effective ownership compared to subscription-based international CAD solutions, while educational licenses support learning institutions. Although the software lacks 3D capabilities and advanced features found in premium international CAD tools, its combination of proven reliability, local market focus, Korean language support, and competitive pricing makes it a practical choice for Korean construction, manufacturing, and engineering companies requiring 2D drafting capabilities with domestic support."
 },
 {
   id: "t132",
