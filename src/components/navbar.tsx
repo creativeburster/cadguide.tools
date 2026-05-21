@@ -55,7 +55,7 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay - compact dropdown panel */}
       <div className={cn(
-        "fixed inset-x-4 top-[101px] bg-white z-[250] md:hidden transition-all duration-300 ease-in-out border border-slate-100 rounded-2xl shadow-2xl overflow-hidden",
+        "fixed inset-x-4 top-[106px] bg-white z-[250] md:hidden transition-all duration-300 ease-in-out border border-slate-100 rounded-2xl shadow-2xl overflow-hidden",
         isMobileMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible pointer-events-none -translate-y-4"
       )}>
         <nav className="flex flex-col p-4 bg-white">
