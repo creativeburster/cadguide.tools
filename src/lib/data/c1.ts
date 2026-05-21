@@ -9650,6 +9650,15 @@ export const c1Tools: Tool[] = [
     "Collision Detection",
     "Automated Toolpath Generation",
     "Large Assembly Support"
+  ],
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 17,
+      url: "https://www.g2.com/products/powermill/reviews"
+    }
   ]
 },
 {
