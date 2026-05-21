@@ -592,6 +592,48 @@ export const PLATFORM_PAGES: Record<string, PlatformPage> = {
       },
     ],
   },
+  windows: {
+    slug: "windows",
+    displayName: "Windows",
+    platformValue: "Windows",
+    intro:
+      "Windows remains the undisputed gold standard and primary development environment for the global CAD and engineering industry in 2026. Virtually 100% of advanced mechanical design, finite element analysis (FEA), computational fluid dynamics (CFD), and deep electronic design automation (EDA) suites are optimized natively for Windows architectures, taking full advantage of DirectX 12, Vulkan, and modern multi-threaded workstation CPUs. Below is the complete catalog of Windows-compatible CAD, BIM, CAE, and EDA software, sorted by expert score and review weight.",
+    faqs: [
+      {
+        q: "Why is Windows still the preferred OS for heavy CAD and CAE workloads?",
+        a: "Legacy software architectures, deep integration with proprietary graphics pipelines (like DirectX), and the vast majority of specialized third-party plugins (especially C++ and .NET libraries) remain exclusively compatible with Windows. High-end simulation solvers and PLM suites are heavily optimized for Windows Workstation environments.",
+      },
+      {
+        q: "Do Windows CAD applications require a dedicated graphics card?",
+        a: "Yes, for any serious 3D modeling, rendering, or large assembly work, a dedicated GPU with ISV-certified drivers (such as NVIDIA RTX Enterprise/Quadro or AMD Radeon Pro) is strongly recommended. However, modern integrated GPUs can run basic 2D drafting and light 3D design tasks.",
+      },
+      {
+        q: "Can I run all Windows CAD tools on Windows on ARM?",
+        a: "Many major applications are releasing native ARM64 builds or run via the built-in Windows 11 emulation layer. However, legacy tools, complex LISP/DLL integrations, and specialized hardware drivers may still require native x64 Intel/AMD environments in 2026.",
+      },
+    ],
+  },
+  android: {
+    slug: "android",
+    displayName: "Android",
+    platformValue: "Android",
+    intro:
+      "Android is rapidly growing from a simple model-viewer platform into an agile, on-site collaboration and redlining environment in 2026. Equipped with powerful mobile chips and high-resolution stylus support, modern Android tablets and smartphones allow architects, field engineers, and project managers to edit 2D DWGs, inspect massive 3D BIM models, and sync modifications directly to cloud-based design databases from the field. Below are the CAD, BIM, and visualization tools in our database that provide fully functional, native Android apps.",
+    faqs: [
+      {
+        q: "Can I do full 3D modeling and mechanical design on an Android tablet?",
+        a: "While intensive 3D CAD modeling is still primarily a desktop workstation task, Android apps like AutoCAD Mobile, GstarCAD Mobile, and various cloud-based viewers enable precise 2D drafting, measurements, annotations, and lightweight 3D inspections directly on mobile hardware.",
+      },
+      {
+        q: "Is an active internet connection required to run Android CAD apps?",
+        a: "Most professional Android CAD apps allow you to download drawing files locally for offline viewing, measurement, and basic editing. The changes will then sync back to your enterprise cloud repository as soon as you reconnect to the network.",
+      },
+      {
+        q: "Which Android devices are best for CAD workflows?",
+        a: "Large-screen Android tablets with high performance, high color accuracy, and precise active stylus support (such as the Samsung Galaxy Tab S series) provide the most productive and accurate experience for drafting, sketching, and markup review.",
+      },
+    ],
+  },
 };
 
 export function platformPagePaths(): { slug: string }[] {
@@ -788,6 +830,50 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
       {
         q: "JT vs STEP — when to use each?",
         a: "STEP for solid-model exchange (you'll edit the geometry). JT for visualisation, mockup, and large-assembly review (you'll only view and measure).",
+      },
+    ],
+  },
+  "3dm": {
+    slug: "3dm",
+    formatName: "3DM",
+    formatValues: ["3DM"],
+    fullName: "Rhino 3D Model",
+    intro:
+      "The 3DM format is the native file type of Rhinoceros 3D, the industry standard for NURBS-based mathematical 3D modeling, industrial design, and computational architecture. Because 3DM files store precise double-precision NURBS curves, surfaces, and solids, they maintain perfect geometric fidelity without the mesh tessellation loss of formats like STL. The format is open-source (via the openNURBS initiative), allowing a wide variety of CAD, rendering, and rapid prototyping tools to import and export Rhino models directly. Below are all the tools in our catalog that support the 3DM format.",
+    faqs: [
+      {
+        q: "What is the primary benefit of the 3DM format over STL or OBJ?",
+        a: "STL and OBJ represent 3D models as a collection of flat triangles (tessellated mesh), which introduces approximation errors. 3DM represents models using exact mathematical NURBS equations, providing infinite resolution and absolute precision, which is critical for industrial manufacturing and marine design.",
+      },
+      {
+        q: "Is the 3DM format open and accessible?",
+        a: "Yes. McNeil & Associates maintains the openNURBS toolkit, a free, open-source C++ and .NET software library that enables any software developer to read and write 3DM files natively without requiring Rhinoceros licenses.",
+      },
+      {
+        q: "Can I view a 3DM file without Rhino?",
+        a: "Absolutely. Many general CAD programs, standalone viewers (such as eDrawings or openNURBS-based viewers), and web-based portfolio platforms can view and inspect 3DM models without any active Rhino installation.",
+      },
+    ],
+  },
+  "3mf": {
+    slug: "3mf",
+    formatName: "3MF",
+    formatValues: ["3MF"],
+    fullName: "3D Manufacturing Format",
+    intro:
+      "The 3D Manufacturing Format (3MF) is the modern, open-standard file format designed specifically for additive manufacturing and 3D printing. Developed by the 3MF Consortium (which includes Autodesk, Microsoft, HP, and UltiMaker), 3MF addresses the severe limitations of the legacy STL format. It is a clean, XML-based format that packs full scene geometry, scale units, color gradients, materials, textures, and internal lattice structures into a single compressed archive. Below are the tools in our catalog that support importing, exporting, or slicing 3MF files.",
+    faqs: [
+      {
+        q: "Why is 3MF superior to STL for 3D printing?",
+        a: "Unlike STL, which only defines raw surface triangles with no scale or color data, 3MF stores precise physical units, multi-material specifications, color maps, texture coordinates, and even internal structural lattices. It is also highly compressed and less prone to mesh errors like self-intersections or holes.",
+      },
+      {
+        q: "Who supports and maintains the 3MF format?",
+        a: "The 3MF Consortium, a collaborative joint industry project composed of leading CAD developers, 3D printer manufacturers, and material companies, governs and continuously improves the open 3MF specification.",
+      },
+      {
+        q: "Can I use 3MF files in standard CAD and slicer programs?",
+        a: "Yes. Almost all modern 3D CAD platforms (like SolidWorks, Fusion 360) and standard slicers (such as PrusaSlicer, Bambu Studio, and Cura) fully support 3MF as a primary import and export format for 3D printing workflows.",
       },
     ],
   },

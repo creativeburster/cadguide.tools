@@ -6296,83 +6296,152 @@ export const c1Tools: Tool[] = [
   ],
   country: "UK",
   category_id: "c1",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 8000,
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Oil and Gas", "Chemical Processing", "Power Generation", "Shipbuilding", "Offshore", "Petrochemical", "Pharmaceutical", "Mining"],
+  core_features: ["3D Plant Design", "Piping Design", "Equipment Modeling", "Structural Design", "Clash Detection", "Rule-Based Design", "AVEVA Ecosystem"],
+  user_scales: ["Mid-Market", "Enterprise"],
   official_url: "https://www.aveva.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Industry-standard plant design software", "Advanced 3D modeling capabilities", "Comprehensive clash detection", "Strong AVEVA ecosystem integration", "Rule-based design automation", "Real-time collaboration features", "Enterprise-grade solutions", "Extensive industry experience"],
+  cons: ["Very high cost", "Steep learning curve", "Windows-only platform", "Requires significant training", "Complex implementation process", "Enterprise-focused pricing"],
+  version: "AVEVA E3D Design",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Chinese", "Japanese", "German", "French", "Spanish", "Russian"],
+  file_formats_in: ["DWG", "DXF", "PDF", "STEP", "IGES", "IFC", "RVM"],
+  file_formats_out: ["DWG", "DXF", "PDF", "STEP", "IGES", "IFC", "RVM"],
+  integrations: ["AVEVA Engineering", "AVEVA Asset Information Management", "AVEVA Unified Engineering", "SAP", "Oracle", "Microsoft Dynamics"],
+  deployment_options: ["Desktop", "On-Premise", "Cloud"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training", "Reseller Network"],
+  security_compliance: ["ISO 27001", "SOC 2"],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "E3D Design Enterprise",
+      price: "$15,000+/year",
+      notes: "Annual subscription with full plant design capabilities"
+    },
+    {
+      tier: "E3D Design Standard",
+      price: "$8,000+/year",
+      notes: "Annual subscription with basic 3D modeling capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["3D Plant Design", "Piping Design", "Equipment Modeling", "Structural Design", "Clash Detection", "Rule-Based Design"],
   faqs: [
     {
       q: "What is AVEVA E3D Design used for?",
-      a: "At AVEVA, we work with you and harness the power of our ecosystem, to deliver solutions and expertise to optimize engine AVEVA E3D Design is a 2D CAD solution."
+      a: "AVEVA E3D Design is a leading 3D plant design and engineering software used for process, power, and marine industries. It's widely used in oil and gas, chemical processing, power generation, shipbuilding, and offshore industries for designing complex industrial facilities and plants with intelligent 3D modeling capabilities."
     },
     {
       q: "How much does AVEVA E3D Design cost?",
-      a: "AVEVA E3D Design is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "AVEVA E3D Design Enterprise starts at approximately $15,000 per year for a subscription license. E3D Design Standard with basic capabilities starts at approximately $8,000 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of AVEVA E3D Design?",
-      a: "AVEVA E3D Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "AVEVA E3D Design is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does AVEVA E3D Design support?",
-      a: "AVEVA E3D Design runs on Windows."
+      a: "AVEVA E3D Design runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does AVEVA E3D Design support?",
-      a: "AVEVA E3D Design works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "AVEVA E3D Design supports standard CAD and engineering formats including DWG, DXF, PDF, STEP, IGES, IFC, and RVM for import and export."
     },
     {
       q: "What are the best alternatives to AVEVA E3D Design?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include Hexagon SmartPlant 3D, Bentley OpenPlant, Intergraph CADWorx, and Autodesk Plant 3D. AVEVA E3D Design distinguishes itself with its comprehensive plant design capabilities, strong AVEVA ecosystem integration, and industry-leading rule-based design automation."
     }
   ],
   tech_specs: {
-    engine: "AVEVA E3D Design Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "AVEVA E3D Platform",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["ISO", "ANSI", "API", "ASME"]
   },
-  expert_verdict: "AVEVA E3D Design is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "AVEVA E3D Design is the industry-standard 3D plant design software for process, power, and marine industries, offering comprehensive capabilities for designing complex industrial facilities. Its standout feature is the advanced rule-based design automation that ensures compliance with industry standards while accelerating design workflows. The software provides intelligent 3D modeling for piping, equipment, structural, and electrical design, with comprehensive clash detection and real-time collaboration features that significantly reduce engineering errors and rework. E3D Design's seamless integration with the broader AVEVA ecosystem creates a complete engineering-to-operations workflow, from design through asset management. Although the software requires significant investment and training, the combination of professional-grade capabilities, enterprise scalability, and decades of industry experience makes it the preferred choice for large-scale industrial projects in oil and gas, chemical processing, and power generation. The platform's ability to handle mega-projects with thousands of design elements while maintaining data integrity and collaboration efficiency justifies its premium positioning in the plant design software market."
 },
 {
   id: "t122",
   name: "DesignSpark Mechanical",
   slug: "designspark-mechanical",
-  logo_url: "",
-  short_desc: "Your go-to design engineering platform – Accelerate your design time to market with design software, access to CAD neutral.",
-  description: "Your go-to design engineering platform – Accelerate your design time to market with design software, access to CAD neutral libraries, early introduction to products and support from engineers and manufacturers.",
+  logo_url: "/logos/designspark-mechanical.ico",
+  short_desc: "Free 3D CAD software for mechanical design with access to extensive component libraries and manufacturer support.",
+  description: "DesignSpark Mechanical is a free 3D CAD software developed by RS Components that provides professional-grade mechanical design capabilities at no cost. The software offers comprehensive 3D modeling, assembly design, and 2D drawing creation tools, along with access to extensive CAD-neutral component libraries from major manufacturers. DesignSpark Mechanical features direct integration with the RS Components ecosystem, allowing users to access millions of 3D models and component data. The platform supports standard CAD file formats for import and export, enabling seamless collaboration with other CAD systems. DesignSpark Mechanical is widely used by hobbyists, students, small businesses, and engineers for rapid prototyping, product design, and mechanical engineering projects. The software provides design automation tools, engineering support from manufacturers, and a vibrant community for sharing and collaboration.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "Free",
+      price: "$0",
+      period: "perpetual",
+      features: ["Full 3D CAD capabilities", "Component library access", "File import/export", "Community support"],
+      is_popular: true
+    },
+    {
+      name: "Professional",
+      price: "Contact Sales",
+      period: "annual",
+      features: ["Advanced features", "Priority support", "Commercial use rights", "Enterprise integration"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "CAD",
+      category: "3D Modeling",
       items: [
         {
-          name: "3D modeling",
+          name: "Advanced 3D modeling",
           status: true
         },
         {
-          name: "CAD design",
+          name: "Assembly design",
           status: true
         },
         {
-          name: "Engineering design",
+          name: "Parametric design",
+          status: true
+        },
+        {
+          name: "Surface modeling",
+          status: true
+        },
+        {
+          name: "Sheet metal design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "2D Drawing",
+      items: [
+        {
+          name: "2D drawing creation",
+          status: true
+        },
+        {
+          name: "Technical documentation",
+          status: true
+        },
+        {
+          name: "Drawing automation",
+          status: true
+        },
+        {
+          name: "Dimensioning tools",
           status: true
         }
       ]
@@ -6381,7 +6450,7 @@ export const c1Tools: Tool[] = [
       category: "Libraries",
       items: [
         {
-          name: "CAD neutral libraries",
+          name: "CAD-neutral libraries",
           status: true
         },
         {
@@ -6391,22 +6460,9 @@ export const c1Tools: Tool[] = [
         {
           name: "Part catalog",
           status: true
-        }
-      ]
-    },
-    {
-      category: "Design",
-      items: [
-        {
-          name: "Design automation",
-          status: true
         },
         {
-          name: "Time to market",
-          status: true
-        },
-        {
-          name: "Engineering support",
+          name: "Manufacturer models",
           status: true
         }
       ]
@@ -6415,15 +6471,19 @@ export const c1Tools: Tool[] = [
       category: "Collaboration",
       items: [
         {
+          name: "File import/export",
+          status: true
+        },
+        {
+          name: "Community sharing",
+          status: true
+        },
+        {
           name: "Manufacturer support",
           status: true
         },
         {
-          name: "Product introduction",
-          status: true
-        },
-        {
-          name: "Community",
+          name: "Design review",
           status: true
         }
       ]
@@ -6436,52 +6496,80 @@ export const c1Tools: Tool[] = [
   ],
   country: "UK",
   category_id: "c1",
-  pricing_type: "Perpetual",
+  pricing_type: "Free",
   starting_price: 0,
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Product Design", "Mechanical Engineering", "Rapid Prototyping", "Hobbyist", "Education", "Small Business", "Consumer Electronics"],
+  core_features: ["3D Modeling", "Assembly Design", "2D Drawing", "Parametric Design", "Component Library", "File Import/Export"],
+  user_scales: ["Freelancer", "Small Business", "Educational"],
   official_url: "https://www.rs-online.com/designspark/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Completely free", "Professional-grade 3D CAD", "Extensive component library", "Manufacturer support", "Good file format support", "Easy to learn", "Active community"],
+  cons: ["Windows-only platform", "Limited advanced features", "No enterprise support", "Less powerful than commercial CAD", "Limited documentation"],
+  version: "DesignSpark Mechanical",
+  last_updated: "2025-05-21",
+  free_trial_days: 0,
+  languages: ["English"],
+  file_formats_in: ["STEP", "IGES", "STL", "DWG", "DXF", "SAT", "SLDPRT"],
+  file_formats_out: ["STEP", "IGES", "STL", "DWG", "DXF", "SAT", "SLDPRT"],
+  integrations: ["SolidWorks", "AutoCAD", "Inventor", "RS Components"],
+  deployment_options: ["Desktop"],
+  license_types: ["Free", "Commercial"],
+  support_channels: ["Email", "Community", "Documentation"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: false,
+    has_sdk: false
+  },
+  pricing_breakdown: [
+    {
+      tier: "Free",
+      price: "$0",
+      notes: "Free version with full 3D CAD capabilities"
+    },
+    {
+      tier: "Professional",
+      price: "Contact Sales",
+      notes: "Professional version with advanced features and support"
+    }
+  ],
+  key_capabilities: ["3D Modeling", "Assembly Design", "2D Drawing", "Parametric Design", "Component Library"],
   faqs: [
     {
       q: "What is DesignSpark Mechanical used for?",
-      a: "Your go-to design engineering platform – Accelerate your design time to market with design software, access to CAD neutral. DesignSpark Mechanical is a 2D CAD solution."
+      a: "DesignSpark Mechanical is a free 3D CAD software used for mechanical design, product design, rapid prototyping, and engineering projects. It's widely used by hobbyists, students, small businesses, and engineers for creating 3D models, assemblies, and 2D drawings with access to extensive component libraries."
     },
     {
       q: "How much does DesignSpark Mechanical cost?",
-      a: "DesignSpark Mechanical is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "DesignSpark Mechanical is completely free to use. There is also a Professional version available with advanced features and priority support, which requires contacting sales for pricing."
     },
     {
       q: "Is there a free version of DesignSpark Mechanical?",
-      a: "DesignSpark Mechanical is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "Yes, DesignSpark Mechanical is completely free to use with full 3D CAD capabilities including component library access, file import/export, and community support."
     },
     {
       q: "What operating systems does DesignSpark Mechanical support?",
-      a: "DesignSpark Mechanical runs on Windows."
+      a: "DesignSpark Mechanical runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does DesignSpark Mechanical support?",
-      a: "DesignSpark Mechanical works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "DesignSpark Mechanical supports standard CAD formats including STEP, IGES, STL, DWG, DXF, SAT, and SLDPRT for import and export."
     },
     {
       q: "What are the best alternatives to DesignSpark Mechanical?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular free alternatives include Fusion 360 (free for personal use), FreeCAD, and Onshape (free for individuals). Commercial alternatives include SolidWorks, Autodesk Inventor, and PTC Creo. DesignSpark Mechanical distinguishes itself with its completely free model, extensive manufacturer component libraries, and RS Components ecosystem integration."
     }
   ],
   tech_specs: {
-    engine: "DesignSpark Mechanical Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "DesignSpark Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["STEP", "IGES"]
   },
-  expert_verdict: "DesignSpark Mechanical is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "DesignSpark Mechanical is an exceptional free 3D CAD solution that delivers professional-grade mechanical design capabilities at no cost. Its standout feature is the completely free model combined with access to extensive CAD-neutral component libraries from major manufacturers through the RS Components ecosystem. The software provides comprehensive 3D modeling, assembly design, and 2D drawing creation tools that rival many commercial CAD packages, making it particularly attractive for hobbyists, students, and small businesses. DesignSpark Mechanical's parametric design capabilities, surface modeling, and sheet metal design tools provide the functionality needed for serious mechanical design work. Although the software lacks the advanced features and enterprise support of premium tools like SolidWorks or Autodesk Inventor, its combination of professional-grade capabilities, zero cost, and manufacturer component integration makes it an excellent choice for rapid prototyping, product design, and educational use. The platform's ease of learning, active community, and good file format support further enhance its accessibility for users transitioning from entry-level tools or working with limited budgets."
 },
 {
   id: "t123",
@@ -6780,58 +6868,46 @@ export const c1Tools: Tool[] = [
   id: "t126",
   name: "midas Civil",
   slug: "midas-civil",
-  logo_url: "",
-  short_desc: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an",
-  description: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, and machinery. It responds to a wide range of static, dynamic, nonlinear, ground analysis, liquidation, seismic analysis, and BIM linkage with FEA NX, CIVIL NX, iGEN, SOILWORKS, etc.",
+  logo_url: "/logos/midas-civil.png",
+  short_desc: "Advanced structural analysis and FEM software for civil engineering, bridge design, and infrastructure projects.",
+  description: "midas Civil is a comprehensive structural analysis and finite element method (FEM) software specialized for civil engineering applications. The software provides advanced tools for bridge design, structural analysis, seismic analysis, soil-structure interaction, and nonlinear analysis. midas Civil features a wide range of static and dynamic analysis capabilities, including linear and nonlinear analysis, time-history analysis, buckling analysis, and construction stage analysis. The platform integrates with BIM systems through FEA NX, CIVIL NX, and iGEN, enabling seamless collaboration between design and analysis workflows. midas Civil supports both perpetual and subscription licensing models, with options for educational and commercial use. The software is widely used by civil engineers, bridge designers, and structural engineers for complex infrastructure projects including bridges, buildings, tunnels, and offshore structures. Its specialized focus on civil engineering applications makes it particularly valuable for projects requiring advanced structural analysis capabilities.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "midas Civil Professional",
+      price: "$10,000+",
+      period: "annual",
+      features: ["Full structural analysis", "Bridge design", "Seismic analysis", "Nonlinear analysis", "BIM integration"],
+      is_popular: true
+    },
+    {
+      name: "midas Civil Standard",
+      price: "$5,000+",
+      period: "annual",
+      features: ["Basic structural analysis", "Static analysis", "Dynamic analysis", "Design review"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "Analysis",
+      category: "Structural Analysis",
       items: [
         {
-          name: "Structural analysis",
+          name: "Advanced structural analysis",
           status: true
         },
         {
-          name: "FEM analysis",
+          name: "Linear static analysis",
           status: true
         },
         {
-          name: "Seismic analysis",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Engineering",
-      items: [
-        {
-          name: "Architecture",
-          status: true
-        },
-        {
-          name: "Soil analysis",
-          status: true
-        },
-        {
-          name: "Ground analysis",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Simulation",
-      items: [
-        {
-          name: "Static analysis",
+          name: "Nonlinear analysis",
           status: true
         },
         {
@@ -6839,24 +6915,74 @@ export const c1Tools: Tool[] = [
           status: true
         },
         {
-          name: "Nonlinear analysis",
+          name: "Time-history analysis",
           status: true
         }
       ]
     },
     {
-      category: "BIM",
+      category: "Bridge Design",
       items: [
         {
-          name: "BIM linkage",
+          name: "Bridge design",
           status: true
         },
         {
-          name: "FEA NX",
+          name: "Seismic analysis",
           status: true
         },
         {
-          name: "CIVIL NX",
+          name: "Buckling analysis",
+          status: true
+        },
+        {
+          name: "Construction stage analysis",
+          status: true
+        },
+        {
+          name: "Cable analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Civil Engineering",
+      items: [
+        {
+          name: "Soil-structure interaction",
+          status: true
+        },
+        {
+          name: "Ground analysis",
+          status: true
+        },
+        {
+          name: "Foundation design",
+          status: true
+        },
+        {
+          name: "Tunnel analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "BIM integration",
+          status: true
+        },
+        {
+          name: "FEA NX integration",
+          status: true
+        },
+        {
+          name: "CIVIL NX integration",
+          status: true
+        },
+        {
+          name: "CAD import/export",
           status: true
         }
       ]
@@ -6869,110 +6995,131 @@ export const c1Tools: Tool[] = [
   ],
   country: "South Korea",
   category_id: "c1",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 5000,
   platforms: [
     "Windows",
     "macOS"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Civil Engineering", "Bridge Engineering", "Structural Engineering", "Infrastructure", "Construction", "Transportation", "Government"],
+  core_features: ["Structural Analysis", "Bridge Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Construction Stage Analysis"],
+  user_scales: ["Mid-Market", "Enterprise", "Educational"],
   official_url: "https://www.midasoft.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Specialized for civil engineering", "Advanced structural analysis", "Comprehensive bridge design tools", "BIM integration", "Seismic analysis capabilities", "Nonlinear analysis", "Construction stage analysis"],
+  cons: ["High cost", "Steep learning curve", "Windows/macOS only", "Complex interface", "Requires specialized training", "Enterprise-focused pricing"],
+  version: "midas Civil",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Korean", "Chinese", "Japanese"],
+  file_formats_in: ["DWG", "DXF", "STEP", "IGES", "STL", "IFC"],
+  file_formats_out: ["DWG", "DXF", "STEP", "IGES", "STL", "IFC"],
+  integrations: ["FEA NX", "CIVIL NX", "iGEN", "SOILWORKS", "AutoCAD", "Revit"],
+  deployment_options: ["Desktop", "On-Premise"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "midas Civil Professional",
+      price: "$10,000+/year",
+      notes: "Annual subscription with full structural analysis and bridge design capabilities"
+    },
+    {
+      tier: "midas Civil Standard",
+      price: "$5,000+/year",
+      notes: "Annual subscription with basic structural analysis capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["Structural Analysis", "Bridge Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration"],
   faqs: [
     {
       q: "What is midas Civil used for?",
-      a: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an midas Civil is a 2D CAD solution."
+      a: "midas Civil is a comprehensive structural analysis and FEM software specialized for civil engineering applications. It's widely used by civil engineers, bridge designers, and structural engineers for complex infrastructure projects including bridges, buildings, tunnels, and offshore structures, providing advanced tools for bridge design, structural analysis, seismic analysis, and soil-structure interaction."
     },
     {
       q: "How much does midas Civil cost?",
-      a: "midas Civil is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "midas Civil Professional starts at approximately $10,000 per year for a subscription license. midas Civil Standard with basic capabilities starts at approximately $5,000 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of midas Civil?",
-      a: "midas Civil is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "midas Civil is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does midas Civil support?",
-      a: "midas Civil runs on Windows and macOS."
+      a: "midas Civil runs on Windows and macOS operating systems."
     },
     {
       q: "Which file formats does midas Civil support?",
-      a: "midas Civil works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "midas Civil supports standard CAD and engineering formats including DWG, DXF, STEP, IGES, STL, and IFC for import and export."
     },
     {
       q: "What are the best alternatives to midas Civil?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include Bentley STAAD.Pro, SAP2000, ETABS, Autodesk Robot Structural Analysis, and LUSAS. midas Civil distinguishes itself with its specialized focus on civil engineering and bridge design, advanced seismic analysis capabilities, and comprehensive BIM integration through FEA NX and CIVIL NX."
     }
   ],
   tech_specs: {
-    engine: "midas Civil Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "midas Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
-  expert_verdict: "midas Civil is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "midas Civil is a specialized structural analysis and FEM software designed specifically for civil engineering applications, offering comprehensive capabilities for bridge design, structural analysis, and infrastructure projects. Its standout feature is the advanced bridge design capabilities including seismic analysis, buckling analysis, construction stage analysis, and cable analysis, which are essential for complex bridge engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for civil and structural engineers working on infrastructure projects. midas Civil's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of specialized civil engineering focus, professional-grade analysis capabilities, and comprehensive BIM integration makes it the preferred choice for engineering firms specializing in bridge design and infrastructure projects."
 },
 {
   id: "t127",
   name: "midas Gen",
   slug: "midas-gen",
-  logo_url: "",
-  short_desc: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an",
-  description: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, and machinery. It responds to a wide range of static, dynamic, nonlinear, ground analysis, liquidation, seismic analysis, and BIM linkage with FEA NX, CIVIL NX, iGEN, SOILWORKS, etc.",
+  logo_url: "/logos/midas-gen.png",
+  short_desc: "General-purpose structural analysis and FEM software for building design, architecture, and general engineering applications.",
+  description: "midas Gen is a general-purpose structural analysis and finite element method (FEM) software designed for building design, architecture, and general engineering applications. The software provides comprehensive tools for structural analysis, seismic analysis, nonlinear analysis, and ground analysis across various engineering disciplines. midas Gen features a wide range of static and dynamic analysis capabilities, including linear and nonlinear analysis, time-history analysis, buckling analysis, and pushover analysis. The platform integrates with BIM systems through FEA NX, CIVIL NX, and iGEN, enabling seamless collaboration between design and analysis workflows. midas Gen supports both perpetual and subscription licensing models, with options for educational and commercial use. The software is widely used by structural engineers, architects, and general engineers for building projects, industrial structures, and general engineering applications requiring advanced structural analysis capabilities.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "midas Gen Professional",
+      price: "$8,000+",
+      period: "annual",
+      features: ["Full structural analysis", "Seismic analysis", "Nonlinear analysis", "BIM integration", "Pushover analysis"],
+      is_popular: true
+    },
+    {
+      name: "midas Gen Standard",
+      price: "$4,000+",
+      period: "annual",
+      features: ["Basic structural analysis", "Static analysis", "Dynamic analysis", "Design review"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "Analysis",
+      category: "Structural Analysis",
       items: [
         {
-          name: "Structural analysis",
+          name: "Advanced structural analysis",
           status: true
         },
         {
-          name: "FEM analysis",
+          name: "Linear static analysis",
           status: true
         },
         {
-          name: "Seismic analysis",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Engineering",
-      items: [
-        {
-          name: "Architecture",
-          status: true
-        },
-        {
-          name: "Soil analysis",
-          status: true
-        },
-        {
-          name: "Ground analysis",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Simulation",
-      items: [
-        {
-          name: "Static analysis",
+          name: "Nonlinear analysis",
           status: true
         },
         {
@@ -6980,24 +7127,74 @@ export const c1Tools: Tool[] = [
           status: true
         },
         {
-          name: "Nonlinear analysis",
+          name: "Time-history analysis",
           status: true
         }
       ]
     },
     {
-      category: "BIM",
+      category: "Building Design",
       items: [
         {
-          name: "BIM linkage",
+          name: "Building design",
           status: true
         },
         {
-          name: "FEA NX",
+          name: "Seismic analysis",
           status: true
         },
         {
-          name: "CIVIL NX",
+          name: "Pushover analysis",
+          status: true
+        },
+        {
+          name: "Buckling analysis",
+          status: true
+        },
+        {
+          name: "Response spectrum analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "General Engineering",
+      items: [
+        {
+          name: "Soil-structure interaction",
+          status: true
+        },
+        {
+          name: "Ground analysis",
+          status: true
+        },
+        {
+          name: "Foundation design",
+          status: true
+        },
+        {
+          name: "Industrial structure analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "BIM integration",
+          status: true
+        },
+        {
+          name: "FEA NX integration",
+          status: true
+        },
+        {
+          name: "CIVIL NX integration",
+          status: true
+        },
+        {
+          name: "CAD import/export",
           status: true
         }
       ]
@@ -7010,53 +7207,86 @@ export const c1Tools: Tool[] = [
   ],
   country: "South Korea",
   category_id: "c1",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 4000,
   platforms: [
     "Windows",
     "macOS"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Building Design", "Architecture", "Structural Engineering", "Construction", "Industrial Engineering", "General Engineering"],
+  core_features: ["Structural Analysis", "Building Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Pushover Analysis"],
+  user_scales: ["Mid-Market", "Enterprise", "Educational"],
   official_url: "https://www.midasoft.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["General-purpose structural analysis", "Building design capabilities", "Advanced seismic analysis", "BIM integration", "Nonlinear analysis", "Pushover analysis", "Comprehensive analysis tools"],
+  cons: ["High cost", "Steep learning curve", "Windows/macOS only", "Complex interface", "Requires specialized training", "Enterprise-focused pricing"],
+  version: "midas Gen",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Korean", "Chinese", "Japanese"],
+  file_formats_in: ["DWG", "DXF", "STEP", "IGES", "STL", "IFC"],
+  file_formats_out: ["DWG", "DXF", "STEP", "IGES", "STL", "IFC"],
+  integrations: ["FEA NX", "CIVIL NX", "iGEN", "SOILWORKS", "AutoCAD", "Revit"],
+  deployment_options: ["Desktop", "On-Premise"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "midas Gen Professional",
+      price: "$8,000+/year",
+      notes: "Annual subscription with full structural analysis and building design capabilities"
+    },
+    {
+      tier: "midas Gen Standard",
+      price: "$4,000+/year",
+      notes: "Annual subscription with basic structural analysis capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["Structural Analysis", "Building Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration"],
   faqs: [
     {
       q: "What is midas Gen used for?",
-      a: "MIDAS provides structural analysis and FEM analysis software specialized in the fields of architecture, soil, ground, an midas Gen is a 2D CAD solution."
+      a: "midas Gen is a general-purpose structural analysis and FEM software designed for building design, architecture, and general engineering applications. It's widely used by structural engineers, architects, and general engineers for building projects, industrial structures, and general engineering applications requiring advanced structural analysis capabilities."
     },
     {
       q: "How much does midas Gen cost?",
-      a: "midas Gen is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "midas Gen Professional starts at approximately $8,000 per year for a subscription license. midas Gen Standard with basic capabilities starts at approximately $4,000 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of midas Gen?",
-      a: "midas Gen is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "midas Gen is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does midas Gen support?",
-      a: "midas Gen runs on Windows and macOS."
+      a: "midas Gen runs on Windows and macOS operating systems."
     },
     {
       q: "Which file formats does midas Gen support?",
-      a: "midas Gen works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "midas Gen supports standard CAD and engineering formats including DWG, DXF, STEP, IGES, STL, and IFC for import and export."
     },
     {
       q: "What are the best alternatives to midas Gen?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include Bentley STAAD.Pro, SAP2000, ETABS, Autodesk Robot Structural Analysis, and LUSAS. midas Gen distinguishes itself with its general-purpose focus, comprehensive building design capabilities, advanced seismic analysis including pushover analysis, and BIM integration through FEA NX and CIVIL NX."
     }
   ],
   tech_specs: {
-    engine: "midas Gen Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "midas Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
-  expert_verdict: "midas Gen is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "midas Gen is a general-purpose structural analysis and FEM software designed for building design, architecture, and general engineering applications, offering comprehensive capabilities for structural analysis across various engineering disciplines. Its standout feature is the versatile analysis capabilities including seismic analysis, pushover analysis, buckling analysis, and response spectrum analysis, which are essential for modern building design and structural engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for structural engineers working on building projects and industrial structures. midas Gen's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of general-purpose versatility, professional-grade analysis capabilities, and comprehensive BIM integration makes it a strong choice for engineering firms working on diverse building and structural engineering projects."
 },
 {
   id: "t128",

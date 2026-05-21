@@ -4,9 +4,9 @@ import { PLATFORM_PAGES, toolsForPlatform } from '@/lib/seo-content';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Software by Platform — Mac, Linux, Web, iPad',
+  title: 'CAD Software by Platform — Windows, Mac, Linux, Android, iOS',
   description:
-    'Find CAD, BIM, CAE, and EDA tools for your operating system. Mac, Linux, browser-based, and iPad CAD options — ranked by score and reviews.',
+    'Find CAD, BIM, CAE, and EDA tools for your operating system. Windows, macOS, Linux, Web, iPad/iOS, and Android CAD options — ranked by score and reviews.',
   path: '/platforms',
 });
 
