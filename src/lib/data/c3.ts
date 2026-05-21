@@ -8,7 +8,7 @@ export const c3Tools: Tool[] = [
   id: "t4",
   name: "Revit",
   slug: "revit",
-  logo_url: getLogo("RV"),
+  logo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Revit.svg/200px-Revit.svg.png",
   short_desc: "The de-facto standard for Building Information Modeling (BIM).",
   description: "Revit is Autodesk's flagship software built specifically for BIM, allowing architects and engineers to collaborate in a unified model.",
   pricing_tiers: [
@@ -287,7 +287,7 @@ export const c3Tools: Tool[] = [
   id: "t9",
   name: "ArchiCAD",
   slug: "archicad",
-  logo_url: getLogo("ACD"),
+  logo_url: "https://www.graphisoft.com/hubfs/Graphisoft-2021/images/icons/GS-logo.svg",
   short_desc: "The BIM software of choice for design-oriented architects.",
   description: "ArchiCAD, developed by Graphisoft, was the first BIM software for personal computers.",
   pricing_tiers: [
@@ -571,7 +571,7 @@ export const c3Tools: Tool[] = [
   id: "t15",
   name: "Tekla Structures",
   slug: "tekla-structures",
-  logo_url: getLogo("TS"),
+  logo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tekla_Structures_logo.svg/200px-Tekla_Structures_logo.svg.png",
   short_desc: "The world's most advanced structural BIM software.",
   description: "Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.",
   pricing_tiers: [
@@ -747,7 +747,7 @@ export const c3Tools: Tool[] = [
   id: "t17",
   name: "Vectorworks",
   slug: "vectorworks",
-  logo_url: "",
+  logo_url: "https://www.vectorworks.net/images/vw-logo.svg",
   short_desc: "The all-in-one BIM solution for landscape and entertainment design.",
   description: "Vectorworks is a versatile BIM and CAD software suite for architects and entertainment professionals.",
   pricing_tiers: [
