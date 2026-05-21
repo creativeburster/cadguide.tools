@@ -595,6 +595,194 @@ const FEATURE_CONTENTS: Record<string, FeatureContent> = {
         a: 'Yes. Direct modeling CAD platforms read and write all standard B-rep industrial file formats, including STEP, IGES, and DWG, ensuring complete compatibility with downstream CAM and production pipelines.'
       }
     ]
+  },
+  'mesh-modeling': {
+    title: `Best Mesh Modeling CAD Software in ${YEAR}: Top Polygon Tools`,
+    description: `Discover the best mesh modeling CAD software in ${YEAR}. Compare top tools for polygon manipulation, high-density STL/OBJ repair, and 3D scan optimization.`,
+    intro: `Mesh modeling and polygon editing have become essential in modern manufacturing and design pipelines. Unlike traditional B-rep solid CAD engines, mesh modeling tools manipulate high-density tessellated surfaces (represented by vertices, edges, and faces), making them highly suitable for organic product design, 3D printing preparation, polygon mesh repair, and scan-to-CAD optimization.`,
+    technologiesHeading: 'Core Mesh Modeling and Polygon Technologies',
+    technologiesIntro: 'Modern polygon engines use direct mesh topology, decimation algorithms, and organic sculpting tools to manipulate dense tessellated files:',
+    techTable: [
+      {
+        tech: 'Mesh Topology Editing',
+        app: 'Directly manipulating individual vertices, edges, and facets in viewport space to sculpt or alter shapes.',
+        benefit: 'Allows organic freeform modeling and rapid polygonal geometric conceptualization.'
+      },
+      {
+        tech: 'Mesh Repair & Watertight Audits',
+        app: 'Automatically identifying and sealing self-intersections, open boundaries, non-manifold edges, and holes in imported meshes.',
+        benefit: 'Prepares raw scans and bad exports for successful downstream 3D printing or solid conversions.'
+      },
+      {
+        tech: 'Decimation & Optimization',
+        app: 'Running intelligent algorithms to reduce vertex density while preserving visual features and surface boundaries.',
+        benefit: 'Dramatically reduces file sizes and improves system rendering performance for huge models.'
+      },
+      {
+        tech: 'Mesh-to-Solid B-Rep Conversion',
+        app: 'Fitting parametric NURBS surfaces over tessellated meshes to transform them into editable solid bodies.',
+        benefit: 'Creates a bridge between artistic polygonal models and production-grade parametric CAD workflows.'
+      }
+    ],
+    selectionGuideTitle: 'Selecting Your Mesh Modeling & STL Workspace',
+    selectionGuideIntro: 'Choose a mesh-centric tool depending on whether your primary goal is artistic sculpting, scan conversion, or 3D printing preparation:',
+    selectionItems: [
+      'For Creative Sculpting & Freeform Design: Blender is the ultimate open-source champion, delivering top-tier polygonal modeling, voxel sculpting, and mesh retopology tools.',
+      'For Scan-to-CAD & Professional Engineering: Geomagic Design X is the industry gold standard, boasting unmatched feature-extraction algorithms to convert complex mesh scans into parametric solids.',
+      'For Hybrid Engineering & STL Workflows: Rhino 3D and Autodesk Fusion 360 offer highly versatile mesh-editing tools, enabling smooth solid-mesh hybrid workflows.',
+      'For Quick Model Viewing & STL Diagnosis: MeshLab provides powerful, free, academic-grade mesh analysis, filtering, and polygon cleaning tools.'
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between B-Rep solid CAD and mesh modeling?',
+        a: 'B-Rep (Boundary Representation) solid CAD represents models using exact mathematical curves, surfaces, and solid volumes, making it perfect for precise mechanical engineering. Mesh modeling represents shapes as a collection of flat triangles or polygons, ideal for organic designs, video game assets, and 3D printing.'
+      },
+      {
+        q: 'Why do STL meshes need to be repaired before manufacturing?',
+        a: 'Raw STL mesh exports often contain geometric errors like non-manifold geometry, duplicate vertices, or open holes (naked edges). These errors make the model "non-watertight," which causes slicing engines to fail during 3D printing path generation.'
+      }
+    ]
+  },
+  'piping-routing': {
+    title: `Best Routing & Piping CAD Software in ${YEAR}: Piping & Cabling Tools`,
+    description: `Compare the best CAD software for piping and electrical routing in ${YEAR}. Discover top tools for wiring harness, automated piping, and HVAC layout design.`,
+    intro: `Routing and piping CAD applications have become the backbones of complex electromechanical systems and heavy industrial plant layout design. Rather than drawing individual pipes, cables, and wires manually, modern routing systems leverage intelligent parametric paths, standard component libraries, and automated connectivity schemas (P&ID) to streamline piping networks, electrical harness assemblies, and HVAC ducting layouts.`,
+    technologiesHeading: 'Core Piping, Cabling, and Routing Technologies',
+    technologiesIntro: 'Integrated routing systems use intelligent databases and physical spatial rules to automate the creation of 3D pipelines and electrical harnesses:',
+    techTable: [
+      {
+        tech: 'Automated Path Generation',
+        app: 'Setting start and end points and letting the CAD system calculate optimal pipe runs or cable tray paths based on obstacle avoidance rules.',
+        benefit: 'Reduces manual drafting time and optimizes material usage across complex paths.'
+      },
+      {
+        tech: 'Intelligent Library Catalogs',
+        app: 'Instantly inserting industry-standard components like elbows, flanges, valves, connectors, and cable brackets directly into routing paths.',
+        benefit: 'Guarantees full conformance with ASME, DIN, or ISO drafting standards without manual drawing.'
+      },
+      {
+        tech: 'Electrical Harness Flattening',
+        app: 'Converting 3D spatial wiring runs into flat 2D nailboard layouts for factory wire-harness manufacturing.',
+        benefit: 'Simplifies physical assembly creation and accurately calculates cut-lengths of all wiring runs.'
+      },
+      {
+        tech: 'P&ID to 3D Schema Sync',
+        app: 'Linking logical 2D piping and instrumentation diagrams directly to physical 3D routing environments to ensure design compliance.',
+        benefit: 'Prevents missing components or wrong piping sizes, aligning the diagram with physical reality.'
+      }
+    ],
+    selectionGuideTitle: 'Selecting Your Piping & Routing CAD Workspace',
+    selectionGuideIntro: 'Select a routing system based on your industry, ecosystem scale, and multidisciplinary design requirements:',
+    selectionItems: [
+      'For Electromechanical Assemblies & Wire Harnesses: SolidWorks and Autodesk Inventor offer excellent routing add-ons that seamlessly route wires, cables, and rigid/flexible tubes.',
+      'For Heavy Process Industry & Plant Layouts: AutoCAD Plant 3D and Bentley MicroStation represent the premier solutions for huge industrial piping networks and P&ID integration.',
+      'For Building AEC Services & MEP Coordination: Autodesk Revit is the undisputed BIM industry leader, offering dynamic mechanical, electrical, and plumbing coordination.',
+      'For High-End Industrial Systems & Large Teams: Siemens NX and PTC Creo provide exceptionally robust routing suites optimized for heavy machinery and aerospace cables.'
+    ],
+    faqs: [
+      {
+        q: 'What is a P&ID and how does it relate to 3D routing?',
+        a: 'A P&ID (Piping and Instrumentation Diagram) is a schematic drawing that illustrates the logical flow of a piping system. Modern CAD systems sync P&IDs with the 3D routing workspace to ensure that every physical pipe, valve, and instrument exactly matches the logical schematic.'
+      },
+      {
+        q: 'How do CAD tools calculate the exact length of routed electrical cables?',
+        a: 'Integrated routing engines track the 3D spline centerline of each cable as it winds through guides, brackets, and harnesses, factoring in minimum bend radii to automatically output the precise wire length needed for manufacturing.'
+      }
+    ]
+  },
+  'surface-modeling': {
+    title: `Best Class-A Surface Modeling CAD in ${YEAR}: Top Surfacing Tools`,
+    description: `Compare the best Class-A surface modeling CAD software in ${YEAR}. Discover top high-precision NURBS curve styling and freeform surface design tools.`,
+    intro: `Class-A surface modeling represents the absolute pinnacle of aesthetic and mathematical precision in industrial design. Primarily utilized in automotive exterior styling, premium consumer electronics, and aerospace aerodynamics, Class-A surfacing focuses on creating physical surfaces that not only look stunning but also guarantee G2/G3 curvature continuity, ensuring flawless reflections and smooth transitions across complex shapes.`,
+    technologiesHeading: 'Core Class-A Surfacing and NURBS Technologies',
+    technologiesIntro: 'High-precision surfacing engines utilize advanced mathematical curves and analytical display filters to manipulate freeform shapes with micron accuracy:',
+    techTable: [
+      {
+        tech: 'NURBS Curvature Continuity',
+        app: 'Establishing G0 (position), G1 (tangent), G2 (curvature), and G3 (flow) transitions across adjacent patch boundaries.',
+        benefit: 'Guarantees perfectly smooth reflections, eliminating visible seams and aesthetic highlights.'
+      },
+      {
+        tech: 'Control Point Manipulation',
+        app: 'Directly pulling and aligning individual surface control points (CVs) to tweak local aerodynamic or aesthetic flow.',
+        benefit: 'Provides absolute geometric control that automated feature-based extrusions cannot match.'
+      },
+      {
+        tech: 'Analytical Diagnostic Shading',
+        app: 'Using zebra stripe rendering, curvature maps, and reflection lines to inspect surfaces for micro-flaws.',
+        benefit: 'Uncovers surface defects, waviness, and flat spots instantly in the modeling viewport.'
+      },
+      {
+        tech: 'Advanced Lofting & Filleting',
+        app: 'Sweeping complex profiles along multi-directional guide rails with tight mathematical surface constraints.',
+        benefit: 'Enables designers to translate conceptual sketches into production-ready physical geometry.'
+      }
+    ],
+    selectionGuideTitle: 'Selecting Your Surface Modeling Workspace',
+    selectionGuideIntro: 'Choose a surfacing tool based on your production complexity, aesthetic requirements, and engineering integration:',
+    selectionItems: [
+      'For Creative Styling & Consumer Electronics: Rhino 3D is a highly popular, exceptionally flexible NURBS modeler that offers elite surfacing tools at an accessible price.',
+      'For Automotive Exterior & Premium Styling: Autodesk Alias is the undisputed global standard in design studios, specifically engineered for ultra-high-end Class-A vehicle surfacing.',
+      'For Integrated High-End CAD & Surfacing: Catia and Siemens NX deliver peerless industrial surface engines fully unified with heavy mechanical engineering platforms.',
+      'For Standard Product Engineering & Surfacing: SolidWorks and PTC Creo offer solid organic surfacing tools suitable for standard consumer products and structural housings.'
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between G1, G2, and G3 curvature continuity?',
+        a: 'G1 (Tangent) means two surfaces touch and share a direction at the boundary, but their curvature changes abruptly. G2 (Curvature) ensures the rate of curvature is continuous at the boundary, making reflections look smooth. G3 (Flow) guarantees that the rate of change of the curvature is also continuous, resulting in the most premium reflections for automotive exteriors.'
+      },
+      {
+        q: 'Is Rhino 3D a true Class-A surfacing tool?',
+        a: 'Rhino 3D is a fully capable NURBS modeler that can achieve Class-A standards when operated by an expert. However, specialized styling suites like Autodesk Alias provide more automated reflection analysis and micro-control point manipulation tools specifically optimized for automotive styling workflows.'
+      }
+    ]
+  },
+  'drafting-detailing': {
+    title: `Best 2D Drafting & Detailing CAD Software in ${YEAR}: Layout Tools`,
+    description: `Compare the best 2D drafting and detailing CAD software in ${YEAR}. Discover top technical drawing, blueprint layout, and GD&T drafting tools.`,
+    intro: `Even in a world dominated by 3D solids and BIM models, 2D drafting and detailing remain the legal and practical language of the manufacturing and construction industries. Technical drawings, dimensional blueprints, architectural details, and Geometric Dimensioning and Tolerancing (GD&T) sheets ensure that fabricators, builders, and CNC machinists can execute designs with absolute clarity and legal accountability.`,
+    technologiesHeading: 'Core 2D Drafting and Detailing Technologies',
+    technologiesIntro: '2D technical drafting engines are optimized for maximum vector performance, clean sheet layouts, and compliant dimensioning annotation standards:',
+    techTable: [
+      {
+        tech: 'Geometric Dimensioning & Tolerancing (GD&T)',
+        app: 'Applying standardized symbols to define the exact allowable variation of geometric features (e.g. flatness, concentricity).',
+        benefit: 'Ensures parts fit together during assembly and avoids over-tolerancing manufacturing costs.'
+      },
+      {
+        tech: 'Dynamic Block Annotations',
+        app: 'Creating reusable drawing symbols (screws, doors, weld symbols) that change size, state, or parameters dynamically on the sheet.',
+        benefit: 'Dramatically speeds up structural detailing and maintains blueprint consistency.'
+      },
+      {
+        tech: 'Sheet Set Management',
+        app: 'Organizing and publishing massive multi-page drawing sets with automatic page numbering and sheet indexing.',
+        benefit: 'Simplifies submittals and revisions across huge architectural or construction projects.'
+      },
+      {
+        tech: 'High-Performance Vector Engines',
+        app: 'Rendering millions of lines, hatches, and text blocks smoothly in real-time viewports without lag.',
+        benefit: 'Enables designers to work with huge civil, GIS, or structural DWG layouts instantly.'
+      }
+    ],
+    selectionGuideTitle: 'Selecting Your 2D Drafting & Detailing Workspace',
+    selectionGuideIntro: 'Choose a drafting workspace depending on your budget, drawing format, and DWG compatibility requirements:',
+    selectionItems: [
+      'For Industry-Standard DWG Drafting: Autodesk AutoCAD remains the global industry benchmark, offering the most mature, feature-rich drafting engine available.',
+      'For Cost-Effective DWG Parity: BricsCAD, ZWCAD, and DraftSight deliver exceptional 2D drafting performance with native DWG editing at a fraction of the cost.',
+      'For Civil & Infrastructure Projects: Bentley MicroStation provides elite high-performance 2D/3D drafting optimized for massive public infrastructure files.',
+      'For Free & Open-Source 2D Worksheets: QCAD and LibreCAD offer highly capable, lightweight 2D CAD drafting environments for hobbyists and simple technical layouts.'
+    ],
+    faqs: [
+      {
+        q: 'Why is GD&T important on a technical CAD drawing?',
+        a: 'GD&T (Geometric Dimensioning and Tolerancing) provides a precise, standardized language to define the exact geometry of parts. Unlike coordinate dimensioning, GD&T defines the functional relationship of features, ensuring parts fit perfectly while giving manufacturers clear, cost-effective tolerance limits.'
+      },
+      {
+        q: 'Can BricsCAD or ZWCAD completely replace AutoCAD for 2D drafting?',
+        a: 'Yes. For 95% of standard 2D drafting tasks, BricsCAD, ZWCAD, and DraftSight offer full command and menu parity, native DWG support, and support LISP routines, allowing firms to migrate easily without retraining staff.'
+      }
+    ]
   }
 };
 

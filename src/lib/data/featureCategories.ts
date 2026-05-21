@@ -79,4 +79,28 @@ export const featureCategories: FeatureCategory[] = [
     slug: 'direct-modeling',
     description: 'CAD software optimized for history-free direct modeling, permitting quick geometry push-pull adjustments without parametric tree constraints.',
   },
+  {
+    id: 'mesh-modeling',
+    name: 'Mesh Modeling CAD',
+    slug: 'mesh-modeling',
+    description: 'CAD software equipped with specialized polygon manipulation, mesh repair, and 3D scan optimization tools.',
+  },
+  {
+    id: 'piping-routing',
+    name: 'Routing & Piping CAD',
+    slug: 'piping-routing',
+    description: 'CAD software supporting automated piping, tubing, wiring harness, and HVAC routing design.',
+  },
+  {
+    id: 'surface-modeling',
+    name: 'Class-A Surface Modeling CAD',
+    slug: 'surface-modeling',
+    description: 'CAD software optimized for high-precision Class-A surfacing, industrial styling, and NURBS curves.',
+  },
+  {
+    id: 'drafting-detailing',
+    name: '2D Drafting & Detailing CAD',
+    slug: 'drafting-detailing',
+    description: 'CAD software tailored for high-speed technical drafting, detailing, standard layout blueprints, and GD&T.',
+  },
 ];

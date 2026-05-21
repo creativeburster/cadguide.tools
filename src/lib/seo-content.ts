@@ -224,6 +224,58 @@ export function filterToolsByFeature(featureId: string): Tool[] {
         detailedFeatures.some(df => df.includes(kw))
       );
     }
+
+    if (featureId === 'mesh-modeling') {
+      const explicitSlugs = ["blender", "rhino-3d", "geomagic-design-x", "siemens-nx", "fusion-360", "maya", "3ds-max", "zw3d", "meshlab"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["mesh modeling", "polygon editing", "polygon manipulation", "mesh repair", "stl mesh", "obj mesh", "3d scan mesh", "mesh optimization", "point cloud mesh", "mesh to solid", "polygon mesh"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'piping-routing') {
+      const explicitSlugs = ["solidworks", "autodesk-inventor", "ptc-creo", "siemens-nx", "autocad", "revit", "solid-edge", "microstation"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["piping", "cabling", "routing", "wiring harness", "hvac routing", "electrical routing", "piping design", "piping and instrumentation", "p&id", "cable tray", "conduit design"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'surface-modeling') {
+      const explicitSlugs = ["rhino-3d", "catia", "siemens-nx", "alias", "ptc-creo", "solidworks", "fusion-360"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["surface modeling", "class-a", "nurbs", "class-a surfacing", "freeform surface", "bezier curves", "lofting", "surfacing", "aesthetic shape", "styling engine"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'drafting-detailing') {
+      const explicitSlugs = ["autocad", "bricscad", "draftsight", "zwcad", "gstarcad", "qcad", "librecad", "microstation"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["drafting", "detailing", "2d drafting", "technical drawing", "blueprint", "gd&t", "geometric dimensioning", "tolerancing", "drafting tools", "sheet layout", "detailing viewport"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
     
     return false;
   });
