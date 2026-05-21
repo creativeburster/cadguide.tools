@@ -11,11 +11,11 @@ export function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Directory', href: '/tools' },
-    { name: 'Features', href: '/best' },
     { name: 'Compare', href: '/compare' },
     { name: 'Matchmaker', href: '/matchmaker' },
     { name: 'Deals', href: '/deals' },
     { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
