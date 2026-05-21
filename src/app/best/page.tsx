@@ -59,7 +59,7 @@ export default function BestIndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <main className="min-h-screen bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <nav className="text-sm text-slate-500 mb-6">
             <Link href="/" className="hover:underline">
               Home
@@ -83,7 +83,7 @@ export default function BestIndexPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
               Browse by Industry & Discipline
             </h2>
-            <ul className="grid sm:grid-cols-2 gap-4">
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {categories.map((c) => (
                 <li key={c.id}>
                   <Link
@@ -132,7 +132,7 @@ export default function BestIndexPage() {
                     </p>
                   </div>
 
-                  <ul className="grid sm:grid-cols-2 gap-4">
+                  <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {matchedFeatures.map((feat) => (
                       <li key={feat.id}>
                         <Link
