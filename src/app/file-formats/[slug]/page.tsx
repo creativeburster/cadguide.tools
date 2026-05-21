@@ -9,7 +9,7 @@ import {
   type FormatPage,
 } from '@/lib/seo-content';
 import type { Tool } from '@/lib/data';
-import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd, SITE_URL, softwareApplicationLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
 
 export const dynamicParams = false;
@@ -83,6 +83,7 @@ function articleLd(p: FormatPage, count: number) {
 }
 
 function faqLd(p: FormatPage) {
+  if (!p.faqs || p.faqs.length === 0) return null;
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -129,13 +130,17 @@ export default async function FileFormatPage(
     { name: 'File Formats', path: '/file-formats' },
     { name: p.formatName, path: `/file-formats/${p.slug}` },
   ]);
+  const faqsSchema = faqLd(p);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd(p, all)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd(p, total)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd(p)) }} />
+      {faqsSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqsSchema) }} />}
+      {all.slice(0, 5).map((t, i) => (
+        <script key={`software-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationLd(t)) }} />
+      ))}
 
       <main className="min-h-screen bg-slate-50">
         <article className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">

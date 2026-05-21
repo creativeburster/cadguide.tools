@@ -9,7 +9,7 @@ import {
   type PlatformPage,
 } from '@/lib/seo-content';
 import type { Tool } from '@/lib/data';
-import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd, SITE_URL, softwareApplicationLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
 
 export const dynamicParams = false;
@@ -82,6 +82,7 @@ function articleLd(p: PlatformPage, count: number) {
 }
 
 function faqLd(p: PlatformPage) {
+  if (!p.faqs || p.faqs.length === 0) return null;
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -106,13 +107,17 @@ export default async function PlatformPage(
     { name: 'Platforms', path: '/platforms' },
     { name: p.displayName, path: `/platforms/${p.slug}` },
   ]);
+  const faqsSchema = faqLd(p);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd(p, list)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd(p, list.length)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd(p)) }} />
+      {faqsSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqsSchema) }} />}
+      {list.slice(0, 5).map((t, i) => (
+        <script key={`software-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationLd(t)) }} />
+      ))}
 
       <main className="min-h-screen bg-slate-50">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">

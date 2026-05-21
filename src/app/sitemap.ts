@@ -30,10 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/free`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/open-source`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     // /deals intentionally omitted — page is noindex,follow until real partner deals are wired.
-    { url: `${BASE_URL}/sponsor`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   // Per-tool detail pages.
