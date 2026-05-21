@@ -239,10 +239,11 @@ function HomeBody() {
               <div className="mt-1 text-lg font-black text-slate-900">Free CAD</div>
               <div className="mt-1 text-xs text-slate-500">Truly free, no trial-ware</div>
             </Link>
-            <Link href="/best" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">7 lists</div>
-              <div className="mt-1 text-lg font-black text-slate-900">Best Lists</div>
-              <div className="mt-1 text-xs text-slate-500">Top picks per category</div>
+            <Link href="/best" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all relative overflow-hidden group">
+              <div className="absolute top-0 right-0 bg-blue-600 text-white text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded-bl-lg">New</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 Features</div>
+              <div className="mt-1 text-lg font-black text-slate-900 group-hover:text-blue-600 transition-colors">Best CAD by Feature</div>
+              <div className="mt-1 text-xs text-slate-500">16 technical spotlights + 7 discipline rankings</div>
             </Link>
           </div>
         </div>

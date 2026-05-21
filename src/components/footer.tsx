@@ -152,6 +152,29 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Feature Spotlights dynamic directory to ensure global discovery and indexing */}
+        <div className="pt-10 mb-10 border-t border-slate-900">
+          <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Feature Spotlights</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-x-4 gap-y-3 text-xs">
+            <Link href="/best/feature/ai-assisted" className="hover:text-blue-400 transition-colors">AI-Assisted CAD</Link>
+            <Link href="/best/feature/cloud-collaboration" className="hover:text-blue-400 transition-colors">Cloud Collaboration</Link>
+            <Link href="/best/feature/parametric-modeling" className="hover:text-blue-400 transition-colors">Parametric Modeling</Link>
+            <Link href="/best/feature/rendering" className="hover:text-blue-400 transition-colors">High-End Rendering</Link>
+            <Link href="/best/feature/sheet-metal" className="hover:text-blue-400 transition-colors">Sheet Metal Design</Link>
+            <Link href="/best/feature/generative-design" className="hover:text-blue-400 transition-colors">Generative Design</Link>
+            <Link href="/best/feature/reverse-engineering" className="hover:text-blue-400 transition-colors">Reverse Engineering</Link>
+            <Link href="/best/feature/integrated-cam" className="hover:text-blue-400 transition-colors">Integrated CAD/CAM</Link>
+            <Link href="/best/feature/simulation-fea" className="hover:text-blue-400 transition-colors">Simulation & FEA</Link>
+            <Link href="/best/feature/subdivision-modeling" className="hover:text-blue-400 transition-colors">Subdivision Modeling</Link>
+            <Link href="/best/feature/bim-integration" className="hover:text-blue-400 transition-colors">BIM Integrated CAD</Link>
+            <Link href="/best/feature/direct-modeling" className="hover:text-blue-400 transition-colors">Direct Modeling</Link>
+            <Link href="/best/feature/mesh-modeling" className="hover:text-blue-400 transition-colors">Mesh Modeling</Link>
+            <Link href="/best/feature/piping-routing" className="hover:text-blue-400 transition-colors">Routing & Piping</Link>
+            <Link href="/best/feature/surface-modeling" className="hover:text-blue-400 transition-colors">Class-A Surfacing</Link>
+            <Link href="/best/feature/drafting-detailing" className="hover:text-blue-400 transition-colors">2D Drafting</Link>
+          </div>
+        </div>
+
         <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-600">
           <div className="hidden md:block" />
           <div className="flex items-center gap-4 justify-center whitespace-nowrap">

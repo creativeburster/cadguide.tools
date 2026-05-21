@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { tools } from '@/lib/data';
+import { featureCategories } from '@/lib/data/featureCategories';
 import {
   bestOfPaths,
   comparisonPairs,
@@ -46,6 +47,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Per-category best-of pages (7 entries).
   const bestOfUrls: MetadataRoute.Sitemap = bestOfPaths().map(({ slug }) => ({
     url: `${BASE_URL}/best/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
+  // Feature spotlight pages (16 entries).
+  const featureUrls: MetadataRoute.Sitemap = featureCategories.map((f) => ({
+    url: `${BASE_URL}/best/feature/${f.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
@@ -102,6 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...toolUrls,
     ...bestOfUrls,
+    ...featureUrls,
     ...compareUrls,
     ...alternativesUrls,
     ...platformUrls,

@@ -618,49 +618,64 @@ export const c6Tools: Tool[] = [
   id: "t103",
   name: "EPLAN",
   slug: "eplan",
-  logo_url: "",
-  short_desc: "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing.",
-  description: "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing.",
+  logo_url: "/logos/eplan.png",
+  short_desc: "Comprehensive electrical engineering software for automated schematic design, panel building, and control system engineering with integrated CAE capabilities.",
+  description: "EPLAN is a leading electrical engineering software platform that provides automated solutions for panel building, switchgear manufacturing, and control system design. The software streamlines the entire engineering process from schematic design to documentation, featuring template-based design, automated wire connecting, cross-referencing, and access to millions of device data sets through the EPLAN Data Portal. EPLAN supports complete electrical engineering documentation including auto-generated reports, wire lists, and terminal diagrams. The platform integrates seamlessly with ERP and PDM systems, enabling fluid data flows from engineering to operations. EPLAN also includes fluid power engineering capabilities for pneumatic, hydraulic, cooling, and lubrication systems, making it a comprehensive solution for machine and plant engineering.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
+      name: "Perpetual License",
+      price: "Contact for pricing",
       period: "initial",
-      features: [],
+      features: ["Schematic design", "Panel building", "Documentation generation", "EPLAN Data Portal access", "ERP/PDM integration", "Technical support"],
+      is_popular: true
+    },
+    {
+      name: "Subscription",
+      price: "Contact for pricing",
+      period: "annual",
+      features: ["All perpetual features", "Regular updates", "Cloud collaboration"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "Electrical Design",
+      category: "Schematic Design",
       items: [
         {
-          name: "Automated engineering",
+          name: "Automated schematic creation",
           status: true
         },
         {
-          name: "Panel building",
+          name: "Auto wire connecting",
           status: true
         },
         {
-          name: "Switchgear manufacturing",
+          name: "Automated numbering",
+          status: true
+        },
+        {
+          name: "Cross-referencing",
+          status: true
+        },
+        {
+          name: "Template-based design",
           status: true
         }
       ]
     },
     {
-      category: "Schematics",
+      category: "Data Management",
       items: [
         {
-          name: "Circuit diagrams",
+          name: "EPLAN Data Portal access",
           status: true
         },
         {
-          name: "Control systems",
+          name: "Millions of device data sets",
           status: true
         },
         {
-          name: "PLC integration",
+          name: "Graphical and data-based engineering",
           status: true
         }
       ]
@@ -673,11 +688,23 @@ export const c6Tools: Tool[] = [
           status: true
         },
         {
+          name: "Wire lists",
+          status: true
+        },
+        {
+          name: "Parts lists",
+          status: true
+        },
+        {
           name: "Terminal diagrams",
           status: true
         },
         {
           name: "Cable documentation",
+          status: true
+        },
+        {
+          name: "Automated project generation",
           status: true
         }
       ]
@@ -690,11 +717,40 @@ export const c6Tools: Tool[] = [
           status: true
         },
         {
+          name: "PDM integration",
+          status: true
+        },
+        {
           name: "CAE integration",
           status: true
         },
         {
+          name: "PLC integration",
+          status: true
+        },
+        {
           name: "3D cabinet layout",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Fluid Power",
+      items: [
+        {
+          name: "Pneumatic system design",
+          status: true
+        },
+        {
+          name: "Hydraulic system design",
+          status: true
+        },
+        {
+          name: "Cooling systems",
+          status: true
+        },
+        {
+          name: "Lubrication technology",
           status: true
         }
       ]
@@ -712,47 +768,80 @@ export const c6Tools: Tool[] = [
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Machine Building", "Plant Engineering", "Panel Building", "Switchgear Manufacturing", "Automation", "Control Systems", "Automotive", "Energy", "Industrial Machinery"],
+  core_features: ["Automated Schematic Design", "EPLAN Data Portal", "Auto-Generated Documentation", "ERP/PDM Integration", "Fluid Power Engineering", "3D Cabinet Layout", "PLC Integration"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.eplan-software.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Industry standard for electrical engineering", "Extensive device data portal with millions of components", "Automated documentation saves significant time", "Seamless ERP/PDM integration", "Template-based design for consistency", "Supports fluid power engineering", "Multi-language support", "Strong global support network"],
+  cons: ["High cost compared to some alternatives", "Steep learning curve for advanced features", "Windows-only platform", "Pricing not publicly available", "Requires training for full utilization"],
+  version: "2026",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "German", "French", "Spanish", "Italian", "Chinese", "Japanese", "Russian"],
+  file_formats_in: ["DXF", "DWG", "PDF", "XML", "CSV", "Excel"],
+  file_formats_out: ["DXF", "DWG", "PDF", "XML", "CSV", "Excel"],
+  integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Teamcenter", "Windchill", "Autodesk Vault", "SolidWorks PDM"],
+  deployment_options: ["Desktop", "On-Premise", "Cloud"],
+  license_types: ["Perpetual", "Subscription", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training", "Reseller Network"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "Perpetual License",
+      price: "Contact for pricing",
+      notes: "One-time purchase with annual maintenance options available"
+    },
+    {
+      tier: "Subscription",
+      price: "Contact for pricing",
+      notes: "Annual subscription with regular updates and cloud collaboration"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for educational institutions"
+    }
+  ],
+  key_capabilities: ["Automated Schematic Design", "EPLAN Data Portal", "Auto-Generated Documentation", "ERP/PDM Integration", "Fluid Power Engineering", "3D Cabinet Layout"],
   faqs: [
     {
       q: "What is EPLAN used for?",
-      a: "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing. EPLAN is an EDA solution."
+      a: "EPLAN is a comprehensive electrical engineering software platform used for automated schematic design, panel building, switchgear manufacturing, and control system engineering. It's widely used in machine building, plant engineering, automation, and industrial machinery industries for creating electrical schematics, generating documentation, and integrating with ERP/PDM systems."
     },
     {
       q: "How much does EPLAN cost?",
-      a: "EPLAN is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "EPLAN is offered on both perpetual and subscription models. Pricing is not publicly available and must be requested from the vendor; pricing scales with module bundles, seat counts, and deployment options. Educational licenses are available at special rates for students and institutions."
     },
     {
       q: "Is there a free version of EPLAN?",
-      a: "EPLAN is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "EPLAN is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does EPLAN support?",
-      a: "EPLAN runs on Windows."
+      a: "EPLAN runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does EPLAN support?",
-      a: "EPLAN works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "EPLAN supports standard CAD and engineering formats including DXF, DWG, PDF, XML, CSV, and Excel for import and export. It also integrates with various ERP and PDM systems through dedicated interfaces."
     },
     {
       q: "What are the best alternatives to EPLAN?",
-      a: "The closest alternatives within the EDA space are CR-8000, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include AutoCAD Electrical, Zuken CR-8000, SolidWorks Electrical, and various EDA tools like Altium Designer and Eagle. EPLAN distinguishes itself with its comprehensive electrical engineering focus, extensive device data portal, and strong integration capabilities."
     }
   ],
   tech_specs: {
-    engine: "EPLAN Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "EPLAN Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IEC", "NFPA", "GB", "GOST"]
   },
-  expert_verdict: "EPLAN is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "EPLAN is the industry-standard electrical engineering software platform, widely adopted by machine builders, panel manufacturers, and industrial automation companies worldwide. Its standout feature is the EPLAN Data Portal, providing access to millions of device data sets that significantly accelerate design workflows. The automated documentation capabilities - from auto-generated reports to wire lists and terminal diagrams - dramatically reduce engineering time while ensuring accuracy and consistency. EPLAN's seamless integration with major ERP and PDM systems creates a continuous data flow from engineering to operations, eliminating manual data entry and reducing errors. Although the software requires significant investment and training, the productivity gains and standardization benefits make it particularly attractive for mid-to-large enterprises with complex electrical engineering requirements. The inclusion of fluid power engineering capabilities extends its utility beyond pure electrical design, making it a comprehensive solution for machine and plant engineering projects."
 },
 {
   id: "t111",

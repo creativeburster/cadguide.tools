@@ -5678,56 +5678,33 @@ export const c1Tools: Tool[] = [
   id: "t118",
   name: "T-FLEX CAD",
   slug: "t-flex-cad",
-  logo_url: "",
-  short_desc: "Top Systems offers the comprehensive set of integrated applications for T-FLEX Parametric CAD, including CAM, FEA and PD",
-  description: "Top Systems offers the comprehensive set of integrated applications for T-FLEX Parametric CAD, including CAM, FEA and PDM",
+  logo_url: "/logos/t-flex-cad.png",
+  short_desc: "Full-function parametric CAD software with Parasolid-based 3D modeling, powerful 2D drafting, and integrated analysis tools for mechanical design.",
+  description: "T-FLEX CAD is a full-function software system providing mechanical design professionals with comprehensive tools for complex design challenges. It unites powerful 3D modeling functionality using the Parasolid kernel with robust 2D drafting and drawing production tools. T-FLEX CAD features superior parametric design capabilities, assembly modeling, sheet metal design, mold design, and integrated Express FEA for stress analysis. The software supports both top-down and bottom-up design methodologies, with adaptive components and advanced design automation. T-FLEX is widely used for 3D/2D design, drafting, conceptual sketching, reverse engineering, tolerancing inspections, rapid prototyping, and downstream manufacturing across various industries.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
+      name: "Perpetual License",
+      price: "Contact for pricing",
       period: "initial",
-      features: [],
+      features: ["3D modeling", "Parametric design", "2D drafting", "Assembly modeling", "Express FEA", "Technical support"],
+      is_popular: true
+    },
+    {
+      name: "Educational",
+      price: "Free",
+      period: "annual",
+      features: ["Full functionality", "Student/Teacher license", "Academic support"],
       is_popular: false
     }
   ],
   detailed_features: [
     {
-      category: "CAD",
+      category: "Modeling",
       items: [
         {
-          name: "Parametric CAD",
+          name: "Parasolid-based 3D modeling",
           status: true
         },
-        {
-          name: "3D modeling",
-          status: true
-        },
-        {
-          name: "2D drafting",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Integration",
-      items: [
-        {
-          name: "CAM integration",
-          status: true
-        },
-        {
-          name: "FEA integration",
-          status: true
-        },
-        {
-          name: "PDM integration",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Design",
-      items: [
         {
           name: "Parametric design",
           status: true
@@ -5737,24 +5714,82 @@ export const c1Tools: Tool[] = [
           status: true
         },
         {
-          name: "Sheet metal",
+          name: "Sheet metal design",
+          status: true
+        },
+        {
+          name: "Surface modeling",
+          status: true
+        },
+        {
+          name: "Direct editing",
+          status: true
+        },
+        {
+          name: "Deformation commands",
           status: true
         }
       ]
     },
     {
-      category: "Engineering",
+      category: "Analysis",
       items: [
         {
-          name: "Engineering tools",
+          name: "Express FEA (stress analysis)",
           status: true
         },
         {
-          name: "Analysis",
+          name: "Motion simulation (T-FLEX Dynamics)",
           status: true
         },
         {
-          name: "Manufacturing",
+          name: "Design verification",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Specialized Tools",
+      items: [
+        {
+          name: "Mold design",
+          status: true
+        },
+        {
+          name: "Weldment design",
+          status: true
+        },
+        {
+          name: "Piping and cabling design",
+          status: true
+        },
+        {
+          name: "User-defined features",
+          status: true
+        },
+        {
+          name: "Adaptive components",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Documentation",
+      items: [
+        {
+          name: "2D parametric drafting",
+          status: true
+        },
+        {
+          name: "Associative BOM",
+          status: true
+        },
+        {
+          name: "Automatic drawing updates",
+          status: true
+        },
+        {
+          name: "Custom dialog boxes",
           status: true
         }
       ]
@@ -5772,47 +5807,75 @@ export const c1Tools: Tool[] = [
   platforms: [
     "Windows"
   ],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  industries: ["Aerospace", "Automotive", "Industrial Machinery", "Heavy Equipment", "Consumer Products", "Electronics", "Medical Devices", "Construction"],
+  core_features: ["Parasolid-based 3D Modeling", "Parametric Design", "Assembly Modeling", "Sheet Metal Design", "2D Parametric Drafting", "Express FEA", "Associative BOM"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.tflex.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Powerful Parasolid-based modeling kernel", "Superior parametric design capabilities", "Integrated Express FEA for stress analysis", "Robust 2D drafting tools", "Supports both top-down and bottom-up design", "Adaptive components for design automation", "User-defined features for customization", "Excellent for family-of-parts manufacturing"],
+  cons: ["Smaller market presence compared to major CAD platforms", "Limited third-party plugin ecosystem", "Learning curve for advanced parametric features", "No Mac or Linux support", "Pricing not publicly available (contact required)"],
+  version: "17",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Russian", "German", "French", "Italian", "Spanish", "Chinese"],
+  file_formats_in: ["Siemens NX", "CATIA", "Creo", "Autodesk Inventor", "Solid Edge", "SolidWorks", "Parasolid", "ACIS", "JT", "IGES", "STEP", "Rhino", "Revit", "IFC", "STL", "DWG", "DXF", "PDF"],
+  file_formats_out: ["Siemens NX", "CATIA", "Creo", "Autodesk Inventor", "Solid Edge", "SolidWorks", "Parasolid", "ACIS", "JT", "IGES", "STEP", "STL", "DWG", "DXF", "PDF"],
+  integrations: ["T-FLEX CAM", "T-FLEX Analysis", "T-FLEX Dynamics", "T-FLEX Gears", "T-FLEX Electrical", "T-FLEX Nesting", "PDM systems"],
+  deployment_options: ["Desktop"],
+  license_types: ["Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "Perpetual License",
+      price: "Contact for pricing",
+      notes: "Perpetual licensing with annual maintenance options available"
+    },
+    {
+      tier: "Educational",
+      price: "Free",
+      notes: "Free for verified students and teachers"
+    }
+  ],
+  key_capabilities: ["Parasolid-based 3D Modeling", "Parametric Design", "Assembly Modeling", "Sheet Metal Design", "2D Parametric Drafting", "Express FEA", "Motion Simulation"],
   faqs: [
     {
       q: "What is T-FLEX CAD used for?",
-      a: "Top Systems offers the comprehensive set of integrated applications for T-FLEX Parametric CAD, including CAM, FEA and PD T-FLEX CAD is a 2D CAD solution."
+      a: "T-FLEX CAD is a full-function parametric CAD software used for 3D modeling, 2D drafting, assembly design, and engineering analysis. It's widely used in aerospace, automotive, industrial machinery, and consumer products industries for mechanical design, reverse engineering, rapid prototyping, and downstream manufacturing."
     },
     {
       q: "How much does T-FLEX CAD cost?",
-      a: "T-FLEX CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "T-FLEX CAD is offered on a perpetual model. Pricing is not publicly available and must be requested from the vendor; pricing scales with module bundles and seat counts. Educational licenses are free for verified students and teachers."
     },
     {
       q: "Is there a free version of T-FLEX CAD?",
-      a: "T-FLEX CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "T-FLEX CAD is a commercial product without a free permanent tier. Educational licenses are free for students and teachers. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does T-FLEX CAD support?",
-      a: "T-FLEX CAD runs on Windows."
+      a: "T-FLEX CAD runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does T-FLEX CAD support?",
-      a: "T-FLEX CAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "T-FLEX CAD supports extensive interoperability with major CAD formats including Siemens NX, CATIA, Creo, Autodesk Inventor, Solid Edge, SolidWorks, Parasolid, ACIS, JT, IGES, STEP, Rhino, Revit, IFC, STL, DWG, DXF, and PDF."
     },
     {
       q: "What are the best alternatives to T-FLEX CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "Popular alternatives include SolidWorks, Autodesk Inventor, PTC Creo, Siemens NX, and Solid Edge. T-FLEX CAD distinguishes itself with superior parametric capabilities and integrated Express FEA at a competitive price point."
     }
   ],
   tech_specs: {
-    engine: "T-FLEX CAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
+    engine: "Parasolid (Siemens Digital Industries Software)",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: ["ISO", "DIN", "GOST", "ANSI"]
   },
-  expert_verdict: "T-FLEX CAD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+  expert_verdict: "T-FLEX CAD is a powerful parametric CAD system built on the production-proven Parasolid kernel, offering professional-grade 3D modeling and robust 2D drafting capabilities. Its standout feature is superior parametric design with adaptive components and user-defined features, making it particularly attractive for family-of-parts manufacturers and companies requiring extensive design automation. The integrated Express FEA provides built-in stress analysis without additional software, while motion simulation capabilities through T-FLEX Dynamics enable virtual prototyping. Although it lacks the extensive third-party ecosystem of market leaders like SolidWorks or Autodesk, T-FLEX CAD offers excellent value through perpetual licensing and comprehensive functionality in a single package. The software excels at handling large assemblies with thousands of components and provides exceptional interoperability with all major CAD formats, making it a viable choice for organizations seeking a flexible, cost-effective CAD solution with advanced parametric capabilities."
 },
 {
   id: "t120",
