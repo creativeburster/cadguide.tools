@@ -62,7 +62,67 @@ export function rankToolsForCategory(category: Category): Tool[] {
  * Returns a sorted array of tools that include the given feature ID.
  */
 export function filterToolsByFeature(featureId: string): Tool[] {
-  const inFeature = tools.filter((t) => t.core_features?.includes(featureId));
+  const inFeature = tools.filter((t) => {
+    const slug = t.slug.toLowerCase();
+    const shortDesc = (t.short_desc ?? '').toLowerCase();
+    const desc = (t.description ?? '').toLowerCase();
+    const coreFeatures = (t.core_features ?? []).map(f => f.toLowerCase());
+    const detailedFeatures = (t.detailed_features ?? []).flatMap(df => df.items ?? []).map(item => item.name.toLowerCase());
+    
+    if (featureId === 'ai-assisted') {
+      const explicitSlugs = ["bricscad", "autocad", "fusion-360", "ansys-discovery", "altair-inspire", "solidworks", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["ai-assisted", "ai-powered", "generative design", "artificial intelligence", "smart blocks", "smart mouse", "propagate", "bimify", "topology optimization", "live physics gpu solver"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'cloud-collaboration') {
+      const explicitSlugs = ["onshape", "fusion-360", "easyeda", "altium-designer", "revit", "archicad"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["cloud-collaboration", "cloud collaboration", "real-time collaboration", "multi-user", "co-authoring", "browser-based", "saas", "cloud storage", "bimcloud", "3dexperience", "projectwise", "cloud sync"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'parametric-modeling') {
+      const explicitSlugs = ["solidworks", "ptc-creo", "autodesk-inventor", "onshape", "fusion-360", "freecad", "siemens-nx", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["parametric modeling", "parametric design", "parametric", "history-based", "constraint-based", "dimension-driven", "equations & variables", "dynamic assembly mates"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'rendering') {
+      const explicitSlugs = ["lumion", "twinmotion", "enscape", "v-ray", "blender", "fusion-360", "solidworks", "sketchup", "3ds-max"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["rendering", "render", "ray tracing", "visualisation", "visualization", "photorealistic", "pbr", "gpu ray tracing", "cinerender", "twinmotion", "lumion", "enscape"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    return false;
+  });
 
   // Reuse the same ranking helpers defined above.
   function externalReviewWeight(t: Tool): number {
