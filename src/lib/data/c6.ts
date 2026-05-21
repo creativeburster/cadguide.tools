@@ -1268,15 +1268,29 @@ export const c6Tools: Tool[] = [
   id: "t161",
   name: "OrCAD",
   slug: "orcad",
-  logo_url: "",
-  short_desc: "Cadence's powerful, accessible PCB design suite featuring PSpice circuit simulation.",
-  description: "OrCAD is Cadence's professional PCB design and analysis suite. Integrating advanced schematic capture, PSpice circuit simulation, and high-performance PCB routing, it delivers a highly cohesive design workflow.",
+  logo_url: "/logos/orcad.png",
+  short_desc: "Cadence's professional PCB design suite featuring PSpice simulation, schematic capture, and high-performance routing for electronic design automation.",
+  description: "OrCAD is Cadence's comprehensive PCB design and analysis suite that integrates advanced schematic capture, industry-standard PSpice circuit simulation, and high-performance PCB routing into a cohesive design workflow. The software provides constraint-driven design, mixed-signal simulation, and advanced analysis capabilities including signal integrity, thermal analysis, and EMI/EMC verification. OrCAD features seamless integration with Allegro PCB Designer for scalability to high-end design requirements, and offers extensive component libraries through OrCAD CIS. The platform supports both perpetual and subscription licensing models, with educational options for students and institutions. OrCAD is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing printed circuit boards ranging from simple to complex multi-layer designs.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
+      name: "OrCAD X Standard",
+      price: "$2,500+",
+      period: "annual",
+      features: ["Schematic capture", "PCB layout", "PSpice simulation", "Signal integrity analysis", "Library management"],
+      is_popular: true
+    },
+    {
+      name: "OrCAD X Premium",
+      price: "$5,000+",
+      period: "annual",
+      features: ["All Standard features", "Advanced simulation", "Thermal analysis", "Constraint management", "Allegro integration"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
       is_popular: false
     }
   ],
