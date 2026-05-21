@@ -9,26 +9,20 @@ export const c2Tools: Tool[] = [
   name: "SolidWorks",
   slug: "solidworks",
   logo_url: "",
-  short_desc:
-    "The de-facto industry standard for 3D parametric mechanical design.",
-
-  description:
-    "SolidWorks is the flagship mechanical design software from Dassault Systèmes. It is renowned for its robust parametric feature-based modeling and ease of use.",
-
+  short_desc: "The de-facto industry standard for 3D parametric mechanical design.",
+  description: "SolidWorks is the flagship mechanical design software from Dassault Systèmes. It is renowned for its robust parametric feature-based modeling and ease of use.",
   pricing_tiers: [
     {
       name: "Term (Annual)",
       price: "2,700",
       period: "/yr",
-
       features: [
         "Full 3D Design",
         "Standard Library",
         "Sustainability tools",
-        "Cloud Services",
+        "Cloud Services"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Perpetual",
@@ -37,123 +31,137 @@ export const c2Tools: Tool[] = [
       features: [
         "Owned license",
         "Add-on required for Cloud",
-        "Maintenance extra",
+        "Maintenance extra"
       ],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Mechanical Design",
-
       items: [
         {
           name: "Parametric 3D Modeling",
-          status: true,
+          status: true
         },
         {
           name: "Advanced Assemblies",
-          status: true,
+          status: true
         },
         {
           name: "Sheet Metal Design",
-          status: true,
+          status: true
         },
         {
           name: "Mold Design Tools",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Analysis & PLM",
-
       items: [
         {
           name: "Integrated Simulation (FEA)",
-          status: true,
+          status: true
         },
         {
           name: "PDM Data Management",
-          status: true,
+          status: true
         },
         {
           name: "Automatic BOM Generation",
-          status: true,
+          status: true
         },
         {
           name: "3DEXPERIENCE Integration",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["autodesk-inventor", "onshape", "ptc-creo"],
+  alternatives: [
+    "autodesk-inventor",
+    "onshape",
+    "ptc-creo"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1295,
-  platforms: ["Windows"],
-  industries: ["Mechanical", "Manufacturing", "Automotive"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Mechanical",
+    "Manufacturing",
+    "Automotive"
+  ],
   core_features: [
     "Parametric 3D",
     "Assemblies",
     "Simulation",
     "Sheet Metal",
-    "PDM Support",
+    "PDM Support"
   ],
-  user_scales: ["Enterprise", "Mid-Market"],
+  user_scales: [
+    "Enterprise",
+    "Mid-Market"
+  ],
   official_url: "https://www.solidworks.com",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Intuitive workflow",
     "Superior Parasolid stability",
-    "Unmatched ecosystem",
+    "Unmatched ecosystem"
   ],
-  cons: ["Windows only", "Hardware hungry", "Legacy API"],
+  cons: [
+    "Windows only",
+    "Hardware hungry",
+    "Legacy API"
+  ],
   faqs: [
     {
       q: "What is SolidWorks used for?",
-      a: "The de-facto industry standard for 3D parametric mechanical design. SolidWorks is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Automotive.",
+      a: "The de-facto industry standard for 3D parametric mechanical design. SolidWorks is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Automotive."
     },
     {
       q: "How much does SolidWorks cost?",
-      a: "SolidWorks starts at $1,295 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "SolidWorks starts at $1,295 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does SolidWorks offer a free trial?",
-      a: "Yes — SolidWorks ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — SolidWorks ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does SolidWorks support?",
-      a: "SolidWorks runs on Windows. Deployment options include desktop, cloud.",
+      a: "SolidWorks runs on Windows. Deployment options include desktop, cloud."
     },
     {
       q: "Which file formats does SolidWorks support?",
-      a: "SolidWorks imports SLDPRT, SLDASM, SLDDRW, STEP, IGES, Parasolid and more. Export covers SLDPRT, STEP, IGES, Parasolid, STL, 3DXML and more.",
+      a: "SolidWorks imports SLDPRT, SLDASM, SLDDRW, STEP, IGES, Parasolid and more. Export covers SLDPRT, STEP, IGES, Parasolid, STL, 3DXML and more."
     },
     {
       q: "Does SolidWorks have an API for automation and customization?",
-      a: "Yes. SolidWorks exposes COM-based API with SDK bindings for C++, C#, VBA, .NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. SolidWorks exposes COM-based API with SDK bindings for C++, C#, VBA, .NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Low",
     gpu_optimization: "OpenGL",
-    standards: ["SLDPRT", "STEP", "IGES", "IFC"],
+    standards: [
+      "SLDPRT",
+      "STEP",
+      "IGES",
+      "IFC"
+    ]
   },
-
-  expert_verdict:
-    "If you are in mechanical design, SolidWorks is the most reliable choice.",
+  expert_verdict: "If you are in mechanical design, SolidWorks is the most reliable choice.",
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -168,9 +176,8 @@ export const c2Tools: Tool[] = [
     "Polish",
     "Czech",
     "Turkish",
-    "Brazilian Portuguese",
+    "Brazilian Portuguese"
   ],
-
   file_formats_in: [
     "SLDPRT",
     "SLDASM",
@@ -186,9 +193,8 @@ export const c2Tools: Tool[] = [
     "Pro/E",
     "Inventor",
     "NX",
-    "JT",
+    "JT"
   ],
-
   file_formats_out: [
     "SLDPRT",
     "STEP",
@@ -202,9 +208,8 @@ export const c2Tools: Tool[] = [
     "DXF",
     "JT",
     "OBJ",
-    "VRML",
+    "VRML"
   ],
-
   integrations: [
     "3DEXPERIENCE",
     "SolidWorks PDM",
@@ -213,191 +218,242 @@ export const c2Tools: Tool[] = [
     "eDrawings",
     "Visualize",
     "Excel",
-    "Microsoft 365",
+    "Microsoft 365"
   ],
-
-  deployment_options: ["Desktop", "Cloud"],
-  license_types: ["Subscription", "Perpetual", "Network", "Educational"],
-
+  deployment_options: [
+    "Desktop",
+    "Cloud"
+  ],
+  license_types: [
+    "Subscription",
+    "Perpetual",
+    "Network",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.4,
       max: 5,
       count: 1500,
-      url: "https://www.g2.com/products/solidworks/reviews",
+      url: "https://www.g2.com/products/solidworks/reviews"
     },
     {
       source: "Capterra",
       score: 4.6,
       max: 5,
       count: 1100,
-      url: "https://www.capterra.com/p/119921/SOLIDWORKS/",
+      url: "https://www.capterra.com/p/119921/SOLIDWORKS/"
     },
     {
       source: "TrustRadius",
       score: 8.8,
       max: 10,
       count: 950,
-      url: "https://www.trustradius.com/products/solidworks/reviews",
-    },
+      url: "https://www.trustradius.com/products/solidworks/reviews"
+    }
   ],
-
   support_channels: [
     "Phone",
     "Email",
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-
-  security_compliance: ["SOC 2 Type II", "ISO 27001", "GDPR"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "COM-based API",
-    sdk_languages: ["C++", "C#", "VBA", ".NET"],
-    docs_url:
-      "https://help.solidworks.com/2026/english/api/sldworksapiprogguide/welcome.htm",
-  },
+    sdk_languages: [
+      "C++",
+      "C#",
+      "VBA",
+      ".NET"
+    ],
+    docs_url: "https://help.solidworks.com/2026/english/api/sldworksapiprogguide/welcome.htm"
+  }
 },
 {
   id: "t3",
   name: "SketchUp",
   slug: "sketchup",
   logo_url: "",
-  short_desc:
-    "The world's most intuitive 3D design tool for architecture and interiors.",
-
-  description:
-    "SketchUp is famous for its unique 'Push/Pull' modeling logic, perfect for conceptual design and visualization.",
-
+  short_desc: "The world's most intuitive 3D design tool for architecture and interiors.",
+  description: "SketchUp is famous for its unique 'Push/Pull' modeling logic, perfect for conceptual design and visualization.",
   pricing_tiers: [
     {
       name: "Go",
       price: "119",
       period: "/yr",
-      features: ["Web Modeler", "iPad support", "Unlimited cloud storage"],
+      features: [
+        "Web Modeler",
+        "iPad support",
+        "Unlimited cloud storage"
+      ]
     },
     {
       name: "Pro",
       price: "349",
       period: "/yr",
-      features: ["Desktop Modeler", "LayOut 2D", "Style Builder"],
-      is_popular: true,
+      features: [
+        "Desktop Modeler",
+        "LayOut 2D",
+        "Style Builder"
+      ],
+      is_popular: true
     },
     {
       name: "Studio",
       price: "749",
       period: "/yr",
-      features: ["V-Ray Rendering", "Scan Data import", "Revit Importer"],
-    },
+      features: [
+        "V-Ray Rendering",
+        "Scan Data import",
+        "Revit Importer"
+      ]
+    }
   ],
-
   detailed_features: [
     {
       category: "Features",
       items: [
-        { name: "V-Ray Integration (Studio Tier)", status: true },
-        { name: "Point Cloud Modeling (Scan Essentials)", status: true },
-        { name: "Direct Revit File Import", status: true },
-        { name: "Sefaira for Energy & Carbon Analysis", status: true },
-        { name: "Advanced Solid Tools for 3D Printing", status: true },
-      ],
-    },
+        {
+          name: "V-Ray Integration (Studio Tier)",
+          status: true
+        },
+        {
+          name: "Point Cloud Modeling (Scan Essentials)",
+          status: true
+        },
+        {
+          name: "Direct Revit File Import",
+          status: true
+        },
+        {
+          name: "Sefaira for Energy & Carbon Analysis",
+          status: true
+        },
+        {
+          name: "Advanced Solid Tools for 3D Printing",
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["rhino-3d", "revit", "archicad"],
+  alternatives: [
+    "rhino-3d",
+    "revit",
+    "archicad"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 119,
-  platforms: ["Windows", "macOS", "Web"],
-  industries: ["Architecture", "Interior Design", "Landscape"],
+  platforms: [
+    "Windows",
+    "macOS",
+    "Web",
+    "Android",
+    "iOS"
+  ],
+  industries: [
+    "Architecture",
+    "Interior Design",
+    "Landscape"
+  ],
   core_features: [
     "Push/Pull Modeling",
     "3D Warehouse Library",
-    "LayOut Module",
+    "LayOut Module"
   ],
-  user_scales: ["Individuals", "Small Business"],
+  user_scales: [
+    "Individuals",
+    "Small Business"
+  ],
   official_url: "https://www.sketchup.com",
   affiliate_url: null,
   score: 4.7,
   pros: [
     "Low learning curve",
     "Millions of models",
-    "Great rendering support",
+    "Great rendering support"
   ],
-  cons: ["Large scene slowdown", "Weak curves", "Sluggish documentation"],
+  cons: [
+    "Large scene slowdown",
+    "Weak curves",
+    "Sluggish documentation"
+  ],
   faqs: [
     {
       q: "What is SketchUp used for?",
-      a: "The world's most intuitive 3D design tool for architecture and interiors. SketchUp is a 3D modeling solution widely adopted in Architecture, Interior Design, Landscape.",
+      a: "The world's most intuitive 3D design tool for architecture and interiors. SketchUp is a 3D modeling solution widely adopted in Architecture, Interior Design, Landscape."
     },
     {
       q: "How much does SketchUp cost?",
-      a: "SketchUp starts at $119 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "SketchUp starts at $119 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does SketchUp offer a free trial?",
-      a: "Yes — SketchUp ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — SketchUp ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does SketchUp support?",
-      a: "SketchUp runs on Windows, macOS, and Web. Deployment options include desktop, web, cloud.",
+      a: "SketchUp runs on Windows, macOS, and Web. Deployment options include desktop, web, cloud."
     },
     {
       q: "Which file formats does SketchUp support?",
-      a: "SketchUp imports SKP, DWG, DXF, 3DS, STL, KMZ and more. Export covers SKP, DWG, DXF, 3DS, STL, KMZ and more.",
+      a: "SketchUp imports SKP, DWG, DXF, 3DS, STL, KMZ and more. Export covers SKP, DWG, DXF, 3DS, STL, KMZ and more."
     },
     {
       q: "Does SketchUp have an API for automation and customization?",
-      a: "Yes. SketchUp exposes Ruby API / SketchUp SDK with SDK bindings for Ruby, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. SketchUp exposes Ruby API / SketchUp SDK with SDK bindings for Ruby, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Trimble Proprietary",
     multicore: "Very Low",
     gpu_optimization: "OpenGL",
-    standards: ["SKP", "DWG", "IFC", "STL"],
+    standards: [
+      "SKP",
+      "DWG",
+      "IFC",
+      "STL"
+    ]
   },
-
-  expert_verdict:
-    "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
-
+  expert_verdict: "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
   pricing_breakdown: [
     {
       tier: "Go",
       price: "$129/yr",
-      notes: "iPad & Web only",
+      notes: "iPad & Web only"
     },
     {
       tier: "Pro",
       price: "$349/yr",
-      notes: "Desktop + LayOut (Most popular)",
+      notes: "Desktop + LayOut (Most popular)"
     },
     {
       tier: "Studio",
       price: "$749/yr",
-      notes: "Includes V-Ray & Scan Essentials",
-    },
+      notes: "Includes V-Ray & Scan Essentials"
+    }
   ],
-
   key_capabilities: [
     "Intuitive 3D Concept Modeling",
     "2D Documentation with LayOut",
     "3D Warehouse (Millions of free models)",
     "Extension Warehouse (1000+ plugins)",
-    "Cloud Collaboration via Trimble Connect",
+    "Cloud Collaboration via Trimble Connect"
   ],
-
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -411,9 +467,8 @@ export const c2Tools: Tool[] = [
     "Russian",
     "Dutch",
     "Polish",
-    "Brazilian Portuguese",
+    "Brazilian Portuguese"
   ],
-
   file_formats_in: [
     "SKP",
     "DWG",
@@ -426,9 +481,8 @@ export const c2Tools: Tool[] = [
     "IFCZIP",
     "OBJ",
     "PNG",
-    "JPG",
+    "JPG"
   ],
-
   file_formats_out: [
     "SKP",
     "DWG",
@@ -444,9 +498,8 @@ export const c2Tools: Tool[] = [
     "WRL",
     "PDF",
     "PNG",
-    "JPG",
+    "JPG"
   ],
-
   integrations: [
     "Trimble Connect",
     "3D Warehouse",
@@ -456,54 +509,65 @@ export const c2Tools: Tool[] = [
     "V-Ray",
     "Enscape",
     "Twinmotion",
-    "Lumion",
+    "Lumion"
   ],
-
-  deployment_options: ["Desktop", "Web", "Cloud", "Mobile"],
-  license_types: ["Subscription", "Free", "Educational"],
-
+  deployment_options: [
+    "Desktop",
+    "Web",
+    "Cloud",
+    "Mobile"
+  ],
+  license_types: [
+    "Subscription",
+    "Free",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.5,
       max: 5,
       count: 1700,
-      url: "https://www.g2.com/products/sketchup/reviews",
+      url: "https://www.g2.com/products/sketchup/reviews"
     },
     {
       source: "Capterra",
       score: 4.6,
       max: 5,
       count: 1100,
-      url: "https://www.capterra.com/p/187433/SketchUp/",
+      url: "https://www.capterra.com/p/187433/SketchUp/"
     },
     {
       source: "TrustRadius",
       score: 8.8,
       max: 10,
       count: 450,
-      url: "https://www.trustradius.com/products/sketchup/reviews",
-    },
+      url: "https://www.trustradius.com/products/sketchup/reviews"
+    }
   ],
-
   support_channels: [
     "Email",
     "Chat",
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-
-  security_compliance: ["SOC 2 Type II", "GDPR", "ISO 27001"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "GDPR",
+    "ISO 27001"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "Ruby API / SketchUp SDK",
-    sdk_languages: ["Ruby", "C++"],
-    docs_url: "https://ruby.sketchup.com/",
-  },
+    sdk_languages: [
+      "Ruby",
+      "C++"
+    ],
+    docs_url: "https://ruby.sketchup.com/"
+  }
 },
 {
   id: "t5",
@@ -511,167 +575,175 @@ export const c2Tools: Tool[] = [
   slug: "fusion-360",
   logo_url: getLogo("F3"),
   short_desc: "The cloud-native powerhouse for integrated CAD, CAM, and CAE.",
-
-  description:
-    "Fusion 360 is a cloud-based platform that breaks down the silos between design and production.",
-
+  description: "Fusion 360 is a cloud-based platform that breaks down the silos between design and production.",
   pricing_tiers: [
     {
       name: "Fusion (Standard)",
       price: "57",
       period: "/mo",
-
       features: [
         "3D Design & Modeling",
         "Basic CAM (2.5 & 3-axis)",
         "PCB Design",
-        "Team Collaboration",
+        "Team Collaboration"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "For Manufacturing",
       price: "128",
       period: "/mo",
-
       features: [
         "All Standard features",
         "Advanced Machining (4 & 5-axis)",
         "Nesting & Fabrication",
-        "Steep & Shallow finishing",
+        "Steep & Shallow finishing"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "For Design",
       price: "137",
       period: "/mo",
-
       features: [
         "All Standard features",
         "Generative Design",
         "Advanced Simulation",
-        "Complex Surfacing",
+        "Complex Surfacing"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Unified Platform",
-
       items: [
         {
           name: "Integrated CAD/CAM/CAE",
-          status: true,
+          status: true
         },
         {
           name: "Cloud-native Data Management",
-          status: true,
+          status: true
         },
         {
           name: "Direct & Parametric Modeling",
-          status: true,
+          status: true
         },
         {
           name: "Unified Electronics Design",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Advanced Tech",
-
       items: [
         {
           name: "AI-powered Generative Design",
-          status: true,
+          status: true
         },
         {
           name: "Thermal & Stress Analysis",
-          status: true,
+          status: true
         },
         {
           name: "Additive Manufacturing support",
-          status: true,
+          status: true
         },
         {
           name: "Photorealistic Rendering",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["solidworks", "onshape", "shapr3d"],
+  alternatives: [
+    "solidworks",
+    "onshape",
+    "shapr3d"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 85,
-  platforms: ["Windows", "macOS"],
-  industries: ["Industrial Design", "Electronics", "Prototyping"],
-
+  platforms: [
+    "Windows",
+    "macOS",
+    "Android",
+    "iOS"
+  ],
+  industries: [
+    "Industrial Design",
+    "Electronics",
+    "Prototyping"
+  ],
   core_features: [
     "Cloud CAD/CAM",
     "Generative Design",
     "Integrated PCB",
     "Simulation",
-    "Collaboration",
+    "Collaboration"
   ],
-
-  user_scales: ["Small Business", "Startups", "Individuals"],
+  user_scales: [
+    "Small Business",
+    "Startups",
+    "Individuals"
+  ],
   official_url: "https://www.autodesk.com/fusion-360",
   affiliate_url: null,
   score: 4.8,
   pros: [
     "Seamless cloud sync",
     "Exceptional CAM value",
-    "Native Apple Silicon",
+    "Native Apple Silicon"
   ],
-  cons: ["Cloud dependency", "Subscription only", "Learning curve"],
+  cons: [
+    "Cloud dependency",
+    "Subscription only",
+    "Learning curve"
+  ],
   faqs: [
     {
       q: "What is Fusion 360 used for?",
-      a: "The cloud-native powerhouse for integrated CAD, CAM, and CAE. Fusion 360 is a 3D modeling solution widely adopted in Industrial Design, Electronics, Prototyping.",
+      a: "The cloud-native powerhouse for integrated CAD, CAM, and CAE. Fusion 360 is a 3D modeling solution widely adopted in Industrial Design, Electronics, Prototyping."
     },
     {
       q: "How much does Fusion 360 cost?",
-      a: "Fusion 360 starts at $85 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Fusion 360 starts at $85 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does Fusion 360 offer a free trial?",
-      a: "Yes — Fusion 360 ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — Fusion 360 ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does Fusion 360 support?",
-      a: "Fusion 360 runs on Windows and macOS. Deployment options include desktop, cloud, web.",
+      a: "Fusion 360 runs on Windows and macOS. Deployment options include desktop, cloud, web."
     },
     {
       q: "Which file formats does Fusion 360 support?",
-      a: "Fusion 360 imports F3D, STEP, IGES, SAT, STL, DWG and more. Export covers F3D, STEP, IGES, SAT, STL, DWG and more.",
+      a: "Fusion 360 imports F3D, STEP, IGES, SAT, STL, DWG and more. Export covers F3D, STEP, IGES, SAT, STL, DWG and more."
     },
     {
       q: "Does Fusion 360 have an API for automation and customization?",
-      a: "Yes. Fusion 360 exposes Fusion API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. Fusion 360 exposes Fusion API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Moderate",
     gpu_optimization: "DirectX / Metal",
-    standards: ["F3D", "STEP", "STL", "DXF"],
+    standards: [
+      "F3D",
+      "STEP",
+      "STL",
+      "DXF"
+    ]
   },
-
   expert_verdict: "Fusion 360 is the future of agile hardware design.",
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -686,9 +758,8 @@ export const c2Tools: Tool[] = [
     "Hungarian",
     "Polish",
     "Portuguese",
-    "Russian",
+    "Russian"
   ],
-
   file_formats_in: [
     "F3D",
     "STEP",
@@ -705,9 +776,8 @@ export const c2Tools: Tool[] = [
     "PRT",
     "3DM",
     "X_T",
-    "X_B",
+    "X_B"
   ],
-
   file_formats_out: [
     "F3D",
     "STEP",
@@ -720,9 +790,8 @@ export const c2Tools: Tool[] = [
     "FBX",
     "3MF",
     "USD",
-    "IPT",
+    "IPT"
   ],
-
   integrations: [
     "Fusion Manage",
     "Autodesk Drive",
@@ -732,81 +801,85 @@ export const c2Tools: Tool[] = [
     "GitHub",
     "Markforged",
     "Formlabs",
-    "Carbide",
+    "Carbide"
   ],
-
-  deployment_options: ["Desktop", "Cloud", "Web", "Mobile"],
-  license_types: ["Subscription", "Free", "Educational"],
-
+  deployment_options: [
+    "Desktop",
+    "Cloud",
+    "Web",
+    "Mobile"
+  ],
+  license_types: [
+    "Subscription",
+    "Free",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.6,
       max: 5,
       count: 1300,
-      url: "https://www.g2.com/products/fusion-360/reviews",
+      url: "https://www.g2.com/products/fusion-360/reviews"
     },
     {
       source: "Capterra",
       score: 4.5,
       max: 5,
       count: 850,
-      url: "https://www.capterra.com/p/166080/Autodesk-Fusion-360/",
+      url: "https://www.capterra.com/p/166080/Autodesk-Fusion-360/"
     },
     {
       source: "TrustRadius",
       score: 8.6,
       max: 10,
       count: 410,
-      url: "https://www.trustradius.com/products/autodesk-fusion-360/reviews",
-    },
+      url: "https://www.trustradius.com/products/autodesk-fusion-360/reviews"
+    }
   ],
-
   support_channels: [
     "Email",
     "Chat",
     "Community",
     "Documentation",
     "Training",
-    "Knowledge Base",
+    "Knowledge Base"
   ],
-
-  security_compliance: ["SOC 2 Type II", "ISO 27001", "GDPR"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "Fusion API",
-    sdk_languages: ["Python", "C++"],
-    docs_url:
-      "https://help.autodesk.com/view/fusion360/ENU/?guid=GUID-A92A4B10-3781-4925-94C6-47DA85A4F65A",
-  },
+    sdk_languages: [
+      "Python",
+      "C++"
+    ],
+    docs_url: "https://help.autodesk.com/view/fusion360/ENU/?guid=GUID-A92A4B10-3781-4925-94C6-47DA85A4F65A"
+  }
 },
 {
   id: "t6",
   name: "Rhino 3D",
   slug: "rhino-3d",
   logo_url: "",
-  short_desc:
-    "The industry standard for complex NURBS modeling and computational design.",
-
-  description:
-    "Rhino (Rhinoceros) is a versatile 3D modeler with deep integration with Grasshopper for generative design.",
-
+  short_desc: "The industry standard for complex NURBS modeling and computational design.",
+  description: "Rhino (Rhinoceros) is a versatile 3D modeler with deep integration with Grasshopper for generative design.",
   pricing_tiers: [
     {
       name: "Commercial (V8)",
       price: "995",
       period: "one-time",
-
       features: [
         "Full NURBS Modeling",
         "Grasshopper included",
         "SubD Modeling",
-        "Permanent License",
+        "Permanent License"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Upgrade from V7",
@@ -815,126 +888,138 @@ export const c2Tools: Tool[] = [
       features: [
         "Update existing license",
         "Latest V8 features",
-        "New render engine",
+        "New render engine"
       ],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Surface Modeling",
-
       items: [
         {
           name: "Complex NURBS surfaces",
-          status: true,
+          status: true
         },
         {
           name: "SubD (Subdivision) tools",
-          status: true,
+          status: true
         },
         {
           name: "Point Cloud processing",
-          status: true,
+          status: true
         },
         {
           name: "Mesh repair & editing",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Algorithm Design",
-
       items: [
         {
           name: "Grasshopper Integration",
-          status: true,
+          status: true
         },
         {
           name: "Kangaroo Physics engine",
-          status: true,
+          status: true
         },
         {
           name: "Python/C# Scripting",
-          status: true,
+          status: true
         },
         {
           name: "Cycles Rendering",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["sketchup", "maya", "blender"],
+  alternatives: [
+    "sketchup",
+    "maya",
+    "blender"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 995,
-  platforms: ["Windows", "macOS"],
-  industries: ["Architecture", "Industrial Design", "Jewelry"],
-
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Architecture",
+    "Industrial Design",
+    "Jewelry"
+  ],
   core_features: [
     "Free-form NURBS",
     "Grasshopper Visual Coding",
     "SubD Surfaces",
     "Render Integration",
-    "Rhino.Inside.Revit",
+    "Rhino.Inside.Revit"
   ],
-
-  user_scales: ["Mid-Market", "Individuals"],
+  user_scales: [
+    "Mid-Market",
+    "Individuals"
+  ],
   official_url: "https://www.rhino3d.com",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Best-in-class surfacing",
     "No subscription fees",
-    "Vibrant community",
+    "Vibrant community"
   ],
-  cons: ["Lacks native parametric history", "Basic 2D", "High hardware reqs"],
+  cons: [
+    "Lacks native parametric history",
+    "Basic 2D",
+    "High hardware reqs"
+  ],
   faqs: [
     {
       q: "What is Rhino 3D used for?",
-      a: "The industry standard for complex NURBS modeling and computational design. Rhino 3D is a 3D modeling solution widely adopted in Architecture, Industrial Design, Jewelry.",
+      a: "The industry standard for complex NURBS modeling and computational design. Rhino 3D is a 3D modeling solution widely adopted in Architecture, Industrial Design, Jewelry."
     },
     {
       q: "How much does Rhino 3D cost?",
-      a: "Rhino 3D starts at $995 per seat on a perpetual and educational license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Rhino 3D starts at $995 per seat on a perpetual and educational license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does Rhino 3D offer a free trial?",
-      a: "Yes — Rhino 3D ships with a 90-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — Rhino 3D ships with a 90-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does Rhino 3D support?",
-      a: "Rhino 3D runs on Windows and macOS. Deployment options include desktop.",
+      a: "Rhino 3D runs on Windows and macOS. Deployment options include desktop."
     },
     {
       q: "Which file formats does Rhino 3D support?",
-      a: "Rhino 3D imports 3DM, STEP, IGES, SAT, STL, DWG and more. Export covers 3DM, STEP, IGES, STL, DWG, DXF and more.",
+      a: "Rhino 3D imports 3DM, STEP, IGES, SAT, STL, DWG and more. Export covers 3DM, STEP, IGES, STL, DWG, DXF and more."
     },
     {
       q: "Does Rhino 3D have an API for automation and customization?",
-      a: "Yes. Rhino 3D exposes RhinoCommon / openNURBS with SDK bindings for C#, Python, C++, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. Rhino 3D exposes RhinoCommon / openNURBS with SDK bindings for C#, Python, C++, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "OpenNURBS",
     multicore: "Low",
     gpu_optimization: "OpenGL",
-    standards: ["3DM", "STEP", "IGES", "OBJ"],
+    standards: [
+      "3DM",
+      "STEP",
+      "IGES",
+      "OBJ"
+    ]
   },
-
-  expert_verdict:
-    "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
-
+  expert_verdict: "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
   version: "8",
   last_updated: "2025-11-15",
   free_trial_days: 90,
-
   languages: [
     "English",
     "Czech",
@@ -948,9 +1033,8 @@ export const c2Tools: Tool[] = [
     "Russian",
     "Spanish",
     "Simplified Chinese",
-    "Traditional Chinese",
+    "Traditional Chinese"
   ],
-
   file_formats_in: [
     "3DM",
     "STEP",
@@ -966,9 +1050,8 @@ export const c2Tools: Tool[] = [
     "PDF",
     "SKP",
     "X_T",
-    "X_B",
+    "X_B"
   ],
-
   file_formats_out: [
     "3DM",
     "STEP",
@@ -984,9 +1067,8 @@ export const c2Tools: Tool[] = [
     "KMZ",
     "GLB",
     "USDZ",
-    "X_T",
+    "X_T"
   ],
-
   integrations: [
     "Grasshopper",
     "V-Ray",
@@ -996,218 +1078,229 @@ export const c2Tools: Tool[] = [
     "Lumion",
     "Revit (Rhino.Inside)",
     "Unreal Engine",
-    "Unity",
+    "Unity"
   ],
-
-  deployment_options: ["Desktop"],
-  license_types: ["Perpetual", "Educational"],
-
+  deployment_options: [
+    "Desktop"
+  ],
+  license_types: [
+    "Perpetual",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.6,
       max: 5,
       count: 350,
-      url: "https://www.g2.com/products/rhinoceros/reviews",
+      url: "https://www.g2.com/products/rhinoceros/reviews"
     },
     {
       source: "Capterra",
       score: 4.7,
       max: 5,
       count: 180,
-      url: "https://www.capterra.com/p/175026/Rhinoceros/",
+      url: "https://www.capterra.com/p/175026/Rhinoceros/"
     },
     {
       source: "TrustRadius",
       score: 8.8,
       max: 10,
       count: 140,
-      url: "https://www.trustradius.com/products/rhinoceros-3d/reviews",
-    },
+      url: "https://www.trustradius.com/products/rhinoceros-3d/reviews"
+    }
   ],
-
-  support_channels: ["Email", "Community", "Documentation", "Training"],
-  security_compliance: ["GDPR"],
-
+  support_channels: [
+    "Email",
+    "Community",
+    "Documentation",
+    "Training"
+  ],
+  security_compliance: [
+    "GDPR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "RhinoCommon / openNURBS",
-    sdk_languages: ["C#", "Python", "C++", "VB.NET"],
-    docs_url: "https://developer.rhino3d.com/",
-  },
+    sdk_languages: [
+      "C#",
+      "Python",
+      "C++",
+      "VB.NET"
+    ],
+    docs_url: "https://developer.rhino3d.com/"
+  }
 },
 {
   id: "t7",
   name: "CATIA",
   slug: "catia",
   logo_url: getLogo("CT"),
-  short_desc:
-    "The high-end PLM standard for Aerospace and Automotive engineering.",
-
-  description:
-    "CATIA is the flagship PLM suite from Dassault Systèmes, capable of managing entire aircraft assemblies.",
-
+  short_desc: "The high-end PLM standard for Aerospace and Automotive engineering.",
+  description: "CATIA is the flagship PLM suite from Dassault Systèmes, capable of managing entire aircraft assemblies.",
   pricing_tiers: [
     {
       name: "3DEXPERIENCE Cloud",
       price: "2,700",
       period: "/yr",
-
       features: [
         "Social Collaboration",
         "3D Dashboard",
         "Base Part/Assembly Design",
-        "Version Control",
+        "Version Control"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Mechanical Engineer",
       price: "4,500",
       period: "/yr",
-
       features: [
         "Advanced Surfacing",
         "Sheet Metal Design",
         "Mechanism Simulation",
-        "Standard Catalogs",
+        "Standard Catalogs"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Systems Engineer",
       price: "Custom",
       period: "quote",
-
       features: [
         "Model-based Systems (MBSE)",
         "Electric/Electronic Systems",
-        "Lifecycle Analysis",
+        "Lifecycle Analysis"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "High-end Engineering",
-
       items: [
         {
           name: "Generative Shape Design (GSD)",
-          status: true,
+          status: true
         },
         {
           name: "Complex Assembly Management",
-          status: true,
+          status: true
         },
         {
           name: "Composite Part Design",
-          status: true,
+          status: true
         },
         {
           name: "Additive Manufacturing optimization",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Industry Verticals",
-
       items: [
         {
           name: "Aerospace Structures design",
-          status: true,
+          status: true
         },
         {
           name: "Automotive Class-A Surfacing",
-          status: true,
+          status: true
         },
         {
           name: "Systems Engineering (SysML)",
-          status: true,
+          status: true
         },
         {
           name: "Digital Mock-up (DMU)",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["siemens-nx", "ptc-creo", "solidworks"],
+  alternatives: [
+    "siemens-nx",
+    "ptc-creo",
+    "solidworks"
+  ],
   country: "France",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 4500,
-  platforms: ["Windows"],
-  industries: ["Aerospace", "Automotive", "Shipbuilding"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Aerospace",
+    "Automotive",
+    "Shipbuilding"
+  ],
   core_features: [
     "High-end Surfacing",
     "Aero & Auto Design",
     "Systems Engineering",
     "Digital Twin",
-    "Cloud PLM",
+    "Cloud PLM"
   ],
-
-  user_scales: ["Enterprise"],
+  user_scales: [
+    "Enterprise"
+  ],
   official_url: "https://www.3ds.com/products-services/catia/",
   affiliate_url: null,
   score: 4.7,
   pros: [
     "Complex assembly handling",
     "Superior surfacing",
-    "Deep PLM integration",
+    "Deep PLM integration"
   ],
   cons: [
     "Prohibitively expensive",
     "Steep learning curve",
-    "Extreme hardware reqs",
+    "Extreme hardware reqs"
   ],
   faqs: [
     {
       q: "What is CATIA used for?",
-      a: "The high-end PLM standard for Aerospace and Automotive engineering. CATIA is a 3D modeling solution widely adopted in Aerospace, Automotive, Shipbuilding.",
+      a: "The high-end PLM standard for Aerospace and Automotive engineering. CATIA is a 3D modeling solution widely adopted in Aerospace, Automotive, Shipbuilding."
     },
     {
       q: "How much does CATIA cost?",
-      a: "CATIA starts at $4,500 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "CATIA starts at $4,500 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does CATIA offer a free trial?",
-      a: "CATIA does not currently advertise a public time-boxed trial. The vendor typically arranges evaluation access on request through reseller partners.",
+      a: "CATIA does not currently advertise a public time-boxed trial. The vendor typically arranges evaluation access on request through reseller partners."
     },
     {
       q: "What operating systems does CATIA support?",
-      a: "CATIA runs on Windows. Deployment options include desktop, cloud, on-premise.",
+      a: "CATIA runs on Windows. Deployment options include desktop, cloud, on-premise."
     },
     {
       q: "Which file formats does CATIA support?",
-      a: "CATIA imports CATPart, CATProduct, CATDrawing, STEP, IGES, 3DXML and more. Export covers CATPart, CATProduct, STEP, IGES, 3DXML, STL and more.",
+      a: "CATIA imports CATPart, CATProduct, CATDrawing, STEP, IGES, 3DXML and more. Export covers CATPart, CATProduct, STEP, IGES, 3DXML, STL and more."
     },
     {
       q: "Does CATIA have an API for automation and customization?",
-      a: "Yes. CATIA exposes CAA / 3DEXPERIENCE API with SDK bindings for C++, C#, Java, VBScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. CATIA exposes CAA / 3DEXPERIENCE API with SDK bindings for C++, C#, Java, VBScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "CGM (Convergence Geometric Modeler)",
     multicore: "High",
     gpu_optimization: "High",
-    standards: ["CATPart", "STEP", "IGES", "VDA-FS"],
+    standards: [
+      "CATPart",
+      "STEP",
+      "IGES",
+      "VDA-FS"
+    ]
   },
-
   expert_verdict: "CATIA isn't just software; it's an industrial ecosystem.",
   version: "3DEXPERIENCE R2026x",
   last_updated: "2025-11-15",
   free_trial_days: 0,
-
   languages: [
     "English",
     "French",
@@ -1218,9 +1311,8 @@ export const c2Tools: Tool[] = [
     "Simplified Chinese",
     "Russian",
     "Spanish",
-    "Brazilian Portuguese",
+    "Brazilian Portuguese"
   ],
-
   file_formats_in: [
     "CATPart",
     "CATProduct",
@@ -1233,9 +1325,8 @@ export const c2Tools: Tool[] = [
     "JT",
     "SLDPRT",
     "DWG",
-    "DXF",
+    "DXF"
   ],
-
   file_formats_out: [
     "CATPart",
     "CATProduct",
@@ -1247,9 +1338,8 @@ export const c2Tools: Tool[] = [
     "PDF",
     "DWG",
     "DXF",
-    "CGR",
+    "CGR"
   ],
-
   integrations: [
     "3DEXPERIENCE",
     "ENOVIA",
@@ -1257,54 +1347,67 @@ export const c2Tools: Tool[] = [
     "SIMULIA",
     "NETVIBES",
     "EXALEAD",
-    "Microsoft 365",
+    "Microsoft 365"
   ],
-
-  deployment_options: ["Desktop", "Cloud", "On-Premise"],
-  license_types: ["Subscription", "Perpetual", "Network"],
-
+  deployment_options: [
+    "Desktop",
+    "Cloud",
+    "On-Premise"
+  ],
+  license_types: [
+    "Subscription",
+    "Perpetual",
+    "Network"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.4,
       max: 5,
       count: 230,
-      url: "https://www.g2.com/products/catia/reviews",
+      url: "https://www.g2.com/products/catia/reviews"
     },
     {
       source: "Capterra",
       score: 4.4,
       max: 5,
       count: 95,
-      url: "https://www.capterra.com/p/138802/CATIA/",
+      url: "https://www.capterra.com/p/138802/CATIA/"
     },
     {
       source: "TrustRadius",
       score: 8.5,
       max: 10,
       count: 280,
-      url: "https://www.trustradius.com/products/catia/reviews",
-    },
+      url: "https://www.trustradius.com/products/catia/reviews"
+    }
   ],
-
   support_channels: [
     "Phone",
     "Email",
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-
-  security_compliance: ["SOC 2 Type II", "ISO 27001", "GDPR", "ITAR"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR",
+    "ITAR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "CAA / 3DEXPERIENCE API",
-    sdk_languages: ["C++", "C#", "Java", "VBScript"],
-    docs_url: "https://www.3ds.com/products/catia/developer",
-  },
+    sdk_languages: [
+      "C++",
+      "C#",
+      "Java",
+      "VBScript"
+    ],
+    docs_url: "https://www.3ds.com/products/catia/developer"
+  }
 },
 {
   id: "t11",
@@ -1312,115 +1415,148 @@ export const c2Tools: Tool[] = [
   slug: "freecad",
   logo_url: "",
   short_desc: "The premier open-source 3D parametric modeler.",
-
-  description:
-    "FreeCAD is an open-source parametric 3D modeler made to design real-life objects of any size.",
-
+  description: "FreeCAD is an open-source parametric 3D modeler made to design real-life objects of any size.",
   pricing_tiers: [
     {
       name: "Community",
       price: "0",
       period: "/yr",
-      features: ["Full feature set", "Community support", "Open source"],
-      is_popular: true,
-    },
+      features: [
+        "Full feature set",
+        "Community support",
+        "Open source"
+      ],
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "Features",
       items: [
-        { name: "Extensible via Python API", status: true },
-        { name: "Modular Workbench-based UI", status: true },
+        {
+          name: "Extensible via Python API",
+          status: true
+        },
+        {
+          name: "Modular Workbench-based UI",
+          status: true
+        },
         {
           name: "Support for many formats (STEP, IGES, STL, DXF)",
-          status: true,
+          status: true
         },
-        { name: "Sketcher with constraint solver", status: true },
-        { name: "Path (CAM) module for CNC", status: true },
-      ],
-    },
+        {
+          name: "Sketcher with constraint solver",
+          status: true
+        },
+        {
+          name: "Path (CAM) module for CNC",
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["solidworks", "fusion-360", "solvespace"],
+  alternatives: [
+    "solidworks",
+    "fusion-360",
+    "solvespace"
+  ],
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["Hobbyist", "Education", "Engineering"],
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Hobbyist",
+    "Education",
+    "Engineering"
+  ],
   core_features: [
     "Parametric Modeling",
     "Modular Architecture",
-    "Python Scripting",
+    "Python Scripting"
   ],
-  user_scales: ["Individuals", "Education"],
+  user_scales: [
+    "Individuals",
+    "Education"
+  ],
   official_url: "https://www.freecad.org",
   affiliate_url: null,
   score: 4.2,
-  pros: ["Completely free", "Python scriptable", "Excellent cross-platform"],
-  cons: ["Cluttered UI", "Stability issues", "Steep learning curve"],
+  pros: [
+    "Completely free",
+    "Python scriptable",
+    "Excellent cross-platform"
+  ],
+  cons: [
+    "Cluttered UI",
+    "Stability issues",
+    "Steep learning curve"
+  ],
   faqs: [
     {
       q: "What is FreeCAD used for?",
-      a: "The premier open-source 3D parametric modeler. FreeCAD is a 3D modeling solution widely adopted in Hobbyist, Education, Engineering.",
+      a: "The premier open-source 3D parametric modeler. FreeCAD is a 3D modeling solution widely adopted in Hobbyist, Education, Engineering."
     },
     {
       q: "How much does FreeCAD cost?",
-      a: "FreeCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      a: "FreeCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
     },
     {
       q: "Is FreeCAD really free?",
-      a: "Yes — FreeCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      a: "Yes — FreeCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
     },
     {
       q: "What operating systems does FreeCAD support?",
-      a: "FreeCAD runs on Windows, macOS, and Linux. Deployment options include desktop.",
+      a: "FreeCAD runs on Windows, macOS, and Linux. Deployment options include desktop."
     },
     {
       q: "Which file formats does FreeCAD support?",
-      a: "FreeCAD imports FCStd, STEP, IGES, BREP, OBJ, STL and more. Export covers FCStd, STEP, IGES, BREP, OBJ, STL and more.",
+      a: "FreeCAD imports FCStd, STEP, IGES, BREP, OBJ, STL and more. Export covers FCStd, STEP, IGES, BREP, OBJ, STL and more."
     },
     {
       q: "Does FreeCAD have an API for automation and customization?",
-      a: "Yes. FreeCAD exposes Python API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. FreeCAD exposes Python API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "OpenCASCADE",
     multicore: "Low",
     gpu_optimization: "OpenGL",
-    standards: ["STEP", "IGES", "STL", "DXF"],
+    standards: [
+      "STEP",
+      "IGES",
+      "STL",
+      "DXF"
+    ]
   },
-
   expert_verdict: "The best free alternative to SolidWorks.",
-
   pricing_breakdown: [
     {
       tier: "Community",
       price: "$0",
-      notes: "Open Source (LGPL)",
+      notes: "Open Source (LGPL)"
     },
     {
       tier: "Contribution",
       price: "Donate",
-      notes: "Support developers",
-    },
+      notes: "Support developers"
+    }
   ],
-
   key_capabilities: [
     "Open-source Parametric 3D Modeling",
     "BIM/AEC Workbenches",
     "Finite Element Analysis (FEA)",
     "Robot Simulation Module",
-    "2D Technical Drawing (TechDraw)",
+    "2D Technical Drawing (TechDraw)"
   ],
-
   version: "1.0",
   last_updated: "2025-11-15",
   free_trial_days: 0,
-
   languages: [
     "English",
     "French",
@@ -1444,9 +1580,8 @@ export const c2Tools: Tool[] = [
     "Slovak",
     "Swedish",
     "Ukrainian",
-    "Vietnamese",
+    "Vietnamese"
   ],
-
   file_formats_in: [
     "FCStd",
     "STEP",
@@ -1459,9 +1594,8 @@ export const c2Tools: Tool[] = [
     "DXF",
     "SVG",
     "IFC",
-    "Collada",
+    "Collada"
   ],
-
   file_formats_out: [
     "FCStd",
     "STEP",
@@ -1475,72 +1609,74 @@ export const c2Tools: Tool[] = [
     "SVG",
     "IFC",
     "AMF",
-    "PDF",
+    "PDF"
   ],
-
   integrations: [
     "OpenSCAD",
     "Salome-Meca",
     "CalculiX",
     "OpenFOAM",
     "KiCad",
-    "LibreCAD",
+    "LibreCAD"
   ],
-  deployment_options: ["Desktop"],
-  license_types: ["Open-Source", "Free"],
-
+  deployment_options: [
+    "Desktop"
+  ],
+  license_types: [
+    "Open-Source",
+    "Free"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.3,
       max: 5,
       count: 70,
-      url: "https://www.g2.com/products/freecad/reviews",
+      url: "https://www.g2.com/products/freecad/reviews"
     },
     {
       source: "Capterra",
       score: 4.2,
       max: 5,
       count: 110,
-      url: "https://www.capterra.com/p/189000/FreeCAD/",
-    },
+      url: "https://www.capterra.com/p/189000/FreeCAD/"
+    }
   ],
-
-  support_channels: ["Community", "Documentation"],
+  support_channels: [
+    "Community",
+    "Documentation"
+  ],
   security_compliance: [],
-
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "Python API",
-    sdk_languages: ["Python", "C++"],
-    docs_url: "https://wiki.freecad.org/Python_scripting_tutorial",
-  },
+    sdk_languages: [
+      "Python",
+      "C++"
+    ],
+    docs_url: "https://wiki.freecad.org/Python_scripting_tutorial"
+  }
 },
 {
   id: "t14",
   name: "Onshape",
   slug: "onshape",
   logo_url: getLogo("OS"),
-  short_desc:
-    "The professional CAD system built for agile cloud development.",
-  description:
-    "Onshape is the first and only pure-cloud professional 3D CAD system.",
-
+  short_desc: "The professional CAD system built for agile cloud development.",
+  description: "Onshape is the first and only pure-cloud professional 3D CAD system.",
   pricing_tiers: [
     {
       name: "Professional",
       price: "2,500",
       period: "/yr",
-
       features: [
         "Cloud-native CAD",
         "Built-in PDM",
         "Real-time Collaboration",
-        "Advanced Surface",
+        "Advanced Surface"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Standard",
@@ -1550,128 +1686,139 @@ export const c2Tools: Tool[] = [
         "Core Modeling",
         "Team Management",
         "Standard Parts",
-        "Mobile apps",
+        "Mobile apps"
       ],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Cloud Platform",
-
       items: [
         {
           name: "Full Version History",
-          status: true,
+          status: true
         },
         {
           name: "Zero-install hardware",
-          status: true,
+          status: true
         },
         {
           name: "Simultaneous Editing",
-          status: true,
+          status: true
         },
         {
           name: "Built-in Release Mgmt",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Design Tools",
-
       items: [
         {
           name: "Parametric Part Studios",
-          status: true,
+          status: true
         },
         {
           name: "FeatureScript Customization",
-          status: true,
+          status: true
         },
         {
           name: "Integrated Simulation",
-          status: true,
+          status: true
         },
         {
           name: "Multi-device support",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["fusion-360", "solidworks", "shapr3d"],
+  alternatives: [
+    "fusion-360",
+    "solidworks",
+    "shapr3d"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1500,
-  platforms: ["Web", "iOS", "Android"],
-  industries: ["Startups", "Consumer Products", "Robotics"],
-
+  platforms: [
+    "Web",
+    "iOS",
+    "Android"
+  ],
+  industries: [
+    "Startups",
+    "Consumer Products",
+    "Robotics"
+  ],
   core_features: [
     "Cloud-Native CAD",
     "Version Control",
     "Agile Product Design",
     "Part Studios",
-    "Integrated Analysis",
+    "Integrated Analysis"
   ],
-
-  user_scales: ["Small Business", "Startups"],
+  user_scales: [
+    "Small Business",
+    "Startups"
+  ],
   official_url: "https://www.onshape.com",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Zero IT footprint",
     "Real-time collaboration",
-    "Superior version control",
+    "Superior version control"
   ],
   cons: [
     "Internet dependency",
     "Surfacing maturing",
-    "Expensive for occasional users",
+    "Expensive for occasional users"
   ],
   faqs: [
     {
       q: "What is Onshape used for?",
-      a: "The professional CAD system built for agile cloud development. Onshape is a 3D modeling solution widely adopted in Startups, Consumer Products, Robotics.",
+      a: "The professional CAD system built for agile cloud development. Onshape is a 3D modeling solution widely adopted in Startups, Consumer Products, Robotics."
     },
     {
       q: "How much does Onshape cost?",
-      a: "Onshape starts at $1,500 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Onshape starts at $1,500 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does Onshape offer a free trial?",
-      a: "Yes — Onshape ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — Onshape ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does Onshape support?",
-      a: "Onshape runs on Web, iOS, and Android. Deployment options include cloud, web, mobile.",
+      a: "Onshape runs on Web, iOS, and Android. Deployment options include cloud, web, mobile."
     },
     {
       q: "Which file formats does Onshape support?",
-      a: "Onshape imports STEP, IGES, Parasolid, STL, SLDPRT, SLDASM and more. Export covers STEP, IGES, Parasolid, STL, 3MF, DWG and more.",
+      a: "Onshape imports STEP, IGES, Parasolid, STL, SLDPRT, SLDASM and more. Export covers STEP, IGES, Parasolid, STL, 3MF, DWG and more."
     },
     {
       q: "Does Onshape have an API for automation and customization?",
-      a: "Yes. Onshape exposes REST with SDK bindings for Python, JavaScript, Java, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. Onshape exposes REST with SDK bindings for Python, JavaScript, Java, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Siemens Parasolid (Cloud)",
     multicore: "Unlimited",
     gpu_optimization: "WebGL 2.0",
-    standards: ["STEP", "IGES", "Parasolid", "DXF"],
+    standards: [
+      "STEP",
+      "IGES",
+      "Parasolid",
+      "DXF"
+    ]
   },
-
   expert_verdict: "Onshape is the 'Google Docs' of CAD.",
   version: "Continuous (cloud)",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -1684,9 +1831,8 @@ export const c2Tools: Tool[] = [
     "Traditional Chinese",
     "Russian",
     "Polish",
-    "Brazilian Portuguese",
+    "Brazilian Portuguese"
   ],
-
   file_formats_in: [
     "STEP",
     "IGES",
@@ -1704,9 +1850,8 @@ export const c2Tools: Tool[] = [
     "X_B",
     "ACIS",
     "JT",
-    "3MF",
+    "3MF"
   ],
-
   file_formats_out: [
     "STEP",
     "IGES",
@@ -1721,9 +1866,8 @@ export const c2Tools: Tool[] = [
     "X_B",
     "PDF",
     "JPG",
-    "PNG",
+    "PNG"
   ],
-
   integrations: [
     "Onshape PDM",
     "Slack",
@@ -1732,219 +1876,232 @@ export const c2Tools: Tool[] = [
     "Microsoft Teams",
     "Drift",
     "Bambu Studio",
-    "Markforged",
+    "Markforged"
   ],
-
-  deployment_options: ["Cloud", "Web", "Mobile"],
-  license_types: ["Subscription", "Free", "Educational"],
-
+  deployment_options: [
+    "Cloud",
+    "Web",
+    "Mobile"
+  ],
+  license_types: [
+    "Subscription",
+    "Free",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.6,
       max: 5,
       count: 380,
-      url: "https://www.g2.com/products/onshape/reviews",
+      url: "https://www.g2.com/products/onshape/reviews"
     },
     {
       source: "Capterra",
       score: 4.6,
       max: 5,
       count: 280,
-      url: "https://www.capterra.com/p/170018/Onshape/",
+      url: "https://www.capterra.com/p/170018/Onshape/"
     },
     {
       source: "TrustRadius",
       score: 8.7,
       max: 10,
       count: 120,
-      url: "https://www.trustradius.com/products/onshape/reviews",
-    },
+      url: "https://www.trustradius.com/products/onshape/reviews"
+    }
   ],
-
   support_channels: [
     "Email",
     "Chat",
     "Community",
     "Documentation",
-    "Training",
+    "Training"
   ],
-  security_compliance: ["SOC 2 Type II", "ISO 27001", "GDPR", "CCPA", "ITAR"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR",
+    "CCPA",
+    "ITAR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "REST",
-    sdk_languages: ["Python", "JavaScript", "Java", "C#"],
-    docs_url: "https://onshape-public.github.io/docs/",
-  },
+    sdk_languages: [
+      "Python",
+      "JavaScript",
+      "Java",
+      "C#"
+    ],
+    docs_url: "https://onshape-public.github.io/docs/"
+  }
 },
 {
   id: "t16",
   name: "Solid Edge",
   slug: "solid-edge",
   logo_url: getLogo("SE"),
-
-  short_desc:
-    "Professional 3D CAD with industry-leading Synchronous Technology.",
-
-  description:
-    "Solid Edge features Synchronous Technology for rapid direct and history-based modeling.",
-
+  short_desc: "Professional 3D CAD with industry-leading Synchronous Technology.",
+  description: "Solid Edge features Synchronous Technology for rapid direct and history-based modeling.",
   pricing_tiers: [
     {
       name: "Classic (Annual)",
       price: "2,500",
       period: "/yr",
-
       features: [
         "Synchronous Technology",
         "Advanced Assemblies",
         "Sheet Metal",
-        "Simulation",
+        "Simulation"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Premium",
       price: "4,500",
       period: "/yr",
-
       features: [
         "Full Simulation",
         "Generative Design",
         "Electrical Routing",
-        "Additive Mfg",
+        "Additive Mfg"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Core Modeling",
-
       items: [
         {
           name: "Synchronous Tech (Direct)",
-          status: true,
+          status: true
         },
         {
           name: "Convergent Modeling",
-          status: true,
+          status: true
         },
         {
           name: "Frame & Structure Design",
-          status: true,
+          status: true
         },
         {
           name: "Advanced Rendering",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Engineering",
-
       items: [
         {
           name: "Integrated FEA Analysis",
-          status: true,
+          status: true
         },
         {
           name: "Standard Parts Library",
-          status: true,
+          status: true
         },
         {
           name: "Wiring & Pipe Design",
-          status: true,
+          status: true
         },
         {
           name: "Teamcenter Integration",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["solidworks", "autodesk-inventor", "fusion-360"],
+  alternatives: [
+    "solidworks",
+    "autodesk-inventor",
+    "fusion-360"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription / Perpetual",
   starting_price: 1200,
-  platforms: ["Windows"],
-  industries: ["Mechanical", "Industrial Design"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Mechanical",
+    "Industrial Design"
+  ],
   core_features: [
     "Synchronous Technology",
     "Large Assembly Mgmt",
     "Sheet Metal Design",
     "Generative Design",
-    "CAD/CAM/CAE",
+    "CAD/CAM/CAE"
   ],
-
-  user_scales: ["Mid-Market", "Small Business"],
+  user_scales: [
+    "Mid-Market",
+    "Small Business"
+  ],
   official_url: "https://solidedge.siemens.com",
   affiliate_url: null,
   score: 4.7,
-
   pros: [
     "Hybrid modeling power",
     "Excellent sheet metal",
-    "Flexible pricing",
+    "Flexible pricing"
   ],
-
   cons: [
     "Smaller marketing presence",
     "Legacy UI areas",
-    "Smaller community",
+    "Smaller community"
   ],
-
   faqs: [
     {
       q: "What is Solid Edge used for?",
-      a: "Professional 3D CAD with industry-leading Synchronous Technology. Solid Edge is a 3D modeling solution widely adopted in Mechanical, Industrial Design.",
+      a: "Professional 3D CAD with industry-leading Synchronous Technology. Solid Edge is a 3D modeling solution widely adopted in Mechanical, Industrial Design."
     },
     {
       q: "How much does Solid Edge cost?",
-      a: "Solid Edge starts at $1,200 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Solid Edge starts at $1,200 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Solid Edge?",
-      a: "Solid Edge is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Solid Edge is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Solid Edge support?",
-      a: "Solid Edge runs on Windows.",
+      a: "Solid Edge runs on Windows."
     },
     {
       q: "Which file formats does Solid Edge support?",
-      a: "Solid Edge works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Solid Edge works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Solid Edge?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, Autodesk Inventor, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, Autodesk Inventor, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Moderate",
     gpu_optimization: "OpenGL",
-    standards: ["PAR", "STEP", "IGES", "JT"],
+    standards: [
+      "PAR",
+      "STEP",
+      "IGES",
+      "JT"
+    ]
   },
-
   expert_verdict: "Solid Edge is the 'thinking man's' SolidWorks.",
-
-  external_ratings: [{
-    source: "TrustRadius",
-    score: 7.9,
-    max: 10,
-    count: 55,
-    url: "https://www.trustradius.com/products/siemens-solid-edge/reviews"
-  }]
+  external_ratings: [
+    {
+      source: "TrustRadius",
+      score: 7.9,
+      max: 10,
+      count: 55,
+      url: "https://www.trustradius.com/products/siemens-solid-edge/reviews"
+    }
+  ]
 },
 {
   id: "t20",
@@ -1952,90 +2109,117 @@ export const c2Tools: Tool[] = [
   slug: "autodesk-inventor",
   logo_url: "",
   short_desc: "Professional-grade 3D mechanical design and simulation.",
-
-  description:
-    "Autodesk Inventor provides professional tools for product design and rendering, featuring iLogic automation and specialized toolsets.",
-
+  description: "Autodesk Inventor provides professional tools for product design and rendering, featuring iLogic automation and specialized toolsets.",
   pricing_tiers: [
     {
       name: "Monthly",
       price: "315",
       period: "/mo",
-      features: ["Full 3D modeling", "Simulation", "Rendering"],
+      features: [
+        "Full 3D modeling",
+        "Simulation",
+        "Rendering"
+      ]
     },
     {
       name: "Annual",
       price: "2435",
       period: "/yr",
-      features: ["Save 35%", "Priority Support", "Workflows Link"],
-      is_popular: true,
-    },
+      features: [
+        "Save 35%",
+        "Priority Support",
+        "Workflows Link"
+      ],
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "Modeling",
       items: [
-        { name: "Parametric Design", status: true },
-        { name: "Direct Edit", status: true },
-      ],
-    },
+        {
+          name: "Parametric Design",
+          status: true
+        },
+        {
+          name: "Direct Edit",
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["solidworks", "fusion-360"],
+  alternatives: [
+    "solidworks",
+    "fusion-360"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 315,
-  platforms: ["Windows"],
-  industries: ["Manufacturing"],
-  core_features: ["iLogic Automation", "Shared Views"],
-  user_scales: ["Enterprise", "Mid-Market"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Manufacturing"
+  ],
+  core_features: [
+    "iLogic Automation",
+    "Shared Views"
+  ],
+  user_scales: [
+    "Enterprise",
+    "Mid-Market"
+  ],
   official_url: "https://www.autodesk.com/inventor",
   affiliate_url: null,
   score: 4.7,
-  pros: ["iLogic design automation", "Eco-system integration"],
-  cons: ["Windows only", "Expensive"],
+  pros: [
+    "iLogic design automation",
+    "Eco-system integration"
+  ],
+  cons: [
+    "Windows only",
+    "Expensive"
+  ],
   faqs: [
     {
       q: "What is Autodesk Inventor used for?",
-      a: "Professional-grade 3D mechanical design and simulation. Autodesk Inventor is a 3D modeling solution widely adopted in Manufacturing.",
+      a: "Professional-grade 3D mechanical design and simulation. Autodesk Inventor is a 3D modeling solution widely adopted in Manufacturing."
     },
     {
       q: "How much does Autodesk Inventor cost?",
-      a: "Autodesk Inventor starts at $315 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Autodesk Inventor starts at $315 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does Autodesk Inventor offer a free trial?",
-      a: "Yes — Autodesk Inventor ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — Autodesk Inventor ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does Autodesk Inventor support?",
-      a: "Autodesk Inventor runs on Windows. Deployment options include desktop.",
+      a: "Autodesk Inventor runs on Windows. Deployment options include desktop."
     },
     {
       q: "Which file formats does Autodesk Inventor support?",
-      a: "Autodesk Inventor imports IPT, IAM, IDW, IDX, STEP, IGES and more. Export covers IPT, IAM, STEP, IGES, SAT, STL and more.",
+      a: "Autodesk Inventor imports IPT, IAM, IDW, IDX, STEP, IGES and more. Export covers IPT, IAM, STEP, IGES, SAT, STL and more."
     },
     {
       q: "Does Autodesk Inventor have an API for automation and customization?",
-      a: "Yes. Autodesk Inventor exposes .NET / COM API with SDK bindings for C#, VB.NET, C++, VBA. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. Autodesk Inventor exposes .NET / COM API with SDK bindings for C#, VB.NET, C++, VBA. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Moderate",
     gpu_optimization: "Direct3D",
-    standards: ["IPT", "IAM"],
+    standards: [
+      "IPT",
+      "IAM"
+    ]
   },
-
-  expert_verdict:
-    "The superior choice for mechanical design within the Autodesk ecosystem.",
+  expert_verdict: "The superior choice for mechanical design within the Autodesk ecosystem.",
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -2048,9 +2232,8 @@ export const c2Tools: Tool[] = [
     "Russian",
     "Czech",
     "Polish",
-    "Brazilian Portuguese",
+    "Brazilian Portuguese"
   ],
-
   file_formats_in: [
     "IPT",
     "IAM",
@@ -2066,9 +2249,8 @@ export const c2Tools: Tool[] = [
     "CATPart",
     "NX",
     "Parasolid",
-    "JT",
+    "JT"
   ],
-
   file_formats_out: [
     "IPT",
     "IAM",
@@ -2082,9 +2264,8 @@ export const c2Tools: Tool[] = [
     "OBJ",
     "FBX",
     "3MF",
-    "PDF",
+    "PDF"
   ],
-
   integrations: [
     "Vault",
     "AutoCAD",
@@ -2092,55 +2273,64 @@ export const c2Tools: Tool[] = [
     "BIM 360",
     "Autodesk Drive",
     "Nastran In-CAD",
-    "Inventor CAM",
+    "Inventor CAM"
   ],
-
-  deployment_options: ["Desktop"],
-  license_types: ["Subscription", "Network", "Educational"],
-
+  deployment_options: [
+    "Desktop"
+  ],
+  license_types: [
+    "Subscription",
+    "Network",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.5,
       max: 5,
       count: 410,
-      url: "https://www.g2.com/products/autodesk-inventor/reviews",
+      url: "https://www.g2.com/products/autodesk-inventor/reviews"
     },
     {
       source: "Capterra",
       score: 4.5,
       max: 5,
       count: 260,
-      url: "https://www.capterra.com/p/118923/Autodesk-Inventor/",
+      url: "https://www.capterra.com/p/118923/Autodesk-Inventor/"
     },
     {
       source: "TrustRadius",
       score: 8.6,
       max: 10,
       count: 350,
-      url: "https://www.trustradius.com/products/autodesk-inventor/reviews",
-    },
+      url: "https://www.trustradius.com/products/autodesk-inventor/reviews"
+    }
   ],
-
   support_channels: [
     "Phone",
     "Email",
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-
-  security_compliance: ["SOC 2 Type II", "ISO 27001", "GDPR"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: ".NET / COM API",
-    sdk_languages: ["C#", "VB.NET", "C++", "VBA"],
-    docs_url:
-      "https://www.autodesk.com/developer-network/platform-technologies/inventor",
-  },
+    sdk_languages: [
+      "C#",
+      "VB.NET",
+      "C++",
+      "VBA"
+    ],
+    docs_url: "https://www.autodesk.com/developer-network/platform-technologies/inventor"
+  }
 },
 {
   id: "t23",
@@ -2148,116 +2338,156 @@ export const c2Tools: Tool[] = [
   slug: "ptc-creo",
   logo_url: getLogo("CR"),
   short_desc: "The original parametric 3D CAD powerhouse.",
-
-  description:
-    "Creo (formerly Pro/ENGINEER) is a scalable, integrated suite of software that supports product design for discrete manufacturers.",
-
+  description: "Creo (formerly Pro/ENGINEER) is a scalable, integrated suite of software that supports product design for discrete manufacturers.",
   pricing_tiers: [
     {
       name: "Essentials",
       price: "2430",
       period: "/yr",
-      features: ["Parametric Modeling", "Sheet Metal", "Rendering"],
+      features: [
+        "Parametric Modeling",
+        "Sheet Metal",
+        "Rendering"
+      ]
     },
     {
       name: "Advanced",
       price: "5890",
       period: "/yr",
-      features: ["Mechanism Dynamics", "Tolerance Analysis", "Simulation"],
-      is_popular: true,
+      features: [
+        "Mechanism Dynamics",
+        "Tolerance Analysis",
+        "Simulation"
+      ],
+      is_popular: true
     },
     {
       name: "Enterprise",
       price: "9500",
       period: "/yr",
-      features: ["Multi-CAD Collab", "Advanced Surface", "Additive Manuf."],
-    },
+      features: [
+        "Multi-CAD Collab",
+        "Advanced Surface",
+        "Additive Manuf."
+      ]
+    }
   ],
-
   detailed_features: [
     {
       category: "Modeling",
       items: [
-        { name: "Parametric Modeling", status: true },
-        { name: "Direct Modeling", status: true },
-        { name: "Sheet Metal", status: true },
-      ],
+        {
+          name: "Parametric Modeling",
+          status: true
+        },
+        {
+          name: "Direct Modeling",
+          status: true
+        },
+        {
+          name: "Sheet Metal",
+          status: true
+        }
+      ]
     },
     {
       category: "Analysis",
       items: [
-        { name: "FEA Simulation", status: true },
-        { name: "Model-Based Definition", status: true },
-        { name: "Generative Design", status: true },
-      ],
-    },
+        {
+          name: "FEA Simulation",
+          status: true
+        },
+        {
+          name: "Model-Based Definition",
+          status: true
+        },
+        {
+          name: "Generative Design",
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["catia", "siemens-nx", "solidworks"],
+  alternatives: [
+    "catia",
+    "siemens-nx",
+    "solidworks"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 2430,
-  platforms: ["Windows"],
-  industries: ["Manufacturing", "High-Tech", "Medical"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Manufacturing",
+    "High-Tech",
+    "Medical"
+  ],
   core_features: [
     "Model-Based Definition",
     "Generative Design",
-    "Real-time Simulation",
+    "Real-time Simulation"
   ],
-  user_scales: ["Enterprise", "Mid-Market"],
+  user_scales: [
+    "Enterprise",
+    "Mid-Market"
+  ],
   official_url: "https://www.ptc.com",
   affiliate_url: null,
   score: 4.8,
   pros: [
     "Assembly management king",
     "World-class simulation",
-    "Deep manufacturing tools",
+    "Deep manufacturing tools"
   ],
   cons: [
     "Steep learning curve",
     "Overwhelming UI",
-    "Hardware workstation req",
+    "Hardware workstation req"
   ],
   faqs: [
     {
       q: "What is PTC Creo used for?",
-      a: "The original parametric 3D CAD powerhouse. PTC Creo is a 3D modeling solution widely adopted in Manufacturing, High-Tech, Medical.",
+      a: "The original parametric 3D CAD powerhouse. PTC Creo is a 3D modeling solution widely adopted in Manufacturing, High-Tech, Medical."
     },
     {
       q: "How much does PTC Creo cost?",
-      a: "PTC Creo starts at $2,430 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "PTC Creo starts at $2,430 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does PTC Creo offer a free trial?",
-      a: "Yes — PTC Creo ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — PTC Creo ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does PTC Creo support?",
-      a: "PTC Creo runs on Windows. Deployment options include desktop, cloud.",
+      a: "PTC Creo runs on Windows. Deployment options include desktop, cloud."
     },
     {
       q: "Which file formats does PTC Creo support?",
-      a: "PTC Creo imports PRT, ASM, DRW, STEP, IGES, STL and more. Export covers PRT, ASM, STEP, IGES, STL, DWG and more.",
+      a: "PTC Creo imports PRT, ASM, DRW, STEP, IGES, STL and more. Export covers PRT, ASM, STEP, IGES, STL, DWG and more."
     },
     {
       q: "Does PTC Creo have an API for automation and customization?",
-      a: "Yes. PTC Creo exposes Pro/TOOLKIT / J-Link / Web.Link with SDK bindings for C, C++, Java, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. PTC Creo exposes Pro/TOOLKIT / J-Link / Web.Link with SDK bindings for C, C++, Java, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Granite",
     multicore: "Excellent",
     gpu_optimization: "High",
-    standards: ["PRT", "STEP", "IGES", "STL"],
+    standards: [
+      "PRT",
+      "STEP",
+      "IGES",
+      "STL"
+    ]
   },
-
   expert_verdict: "Creo is for serious engineering at massive scales.",
   version: "11",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -2271,9 +2501,8 @@ export const c2Tools: Tool[] = [
     "Czech",
     "Russian",
     "Polish",
-    "Brazilian Portuguese",
+    "Brazilian Portuguese"
   ],
-
   file_formats_in: [
     "PRT",
     "ASM",
@@ -2286,9 +2515,8 @@ export const c2Tools: Tool[] = [
     "CATPart",
     "SLDPRT",
     "JT",
-    "Parasolid",
+    "Parasolid"
   ],
-
   file_formats_out: [
     "PRT",
     "ASM",
@@ -2301,63 +2529,75 @@ export const c2Tools: Tool[] = [
     "OBJ",
     "VRML",
     "PDF",
-    "3D PDF",
+    "3D PDF"
   ],
-
   integrations: [
     "Windchill",
     "ThingWorx",
     "Vuforia",
     "Creo Simulate",
     "Creo Generative Design",
-    "Mathcad",
+    "Mathcad"
   ],
-
-  deployment_options: ["Desktop", "Cloud"],
-  license_types: ["Subscription", "Perpetual", "Network", "Floating"],
-
+  deployment_options: [
+    "Desktop",
+    "Cloud"
+  ],
+  license_types: [
+    "Subscription",
+    "Perpetual",
+    "Network",
+    "Floating"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.3,
       max: 5,
       count: 460,
-      url: "https://www.g2.com/products/ptc-creo/reviews",
+      url: "https://www.g2.com/products/ptc-creo/reviews"
     },
     {
       source: "Capterra",
       score: 4.4,
       max: 5,
       count: 220,
-      url: "https://www.capterra.com/p/138691/Creo-Parametric/",
+      url: "https://www.capterra.com/p/138691/Creo-Parametric/"
     },
     {
       source: "TrustRadius",
       score: 8.4,
       max: 10,
       count: 380,
-      url: "https://www.trustradius.com/products/ptc-creo/reviews",
-    },
+      url: "https://www.trustradius.com/products/ptc-creo/reviews"
+    }
   ],
-
   support_channels: [
     "Phone",
     "Email",
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-
-  security_compliance: ["SOC 2 Type II", "ISO 27001", "GDPR", "ITAR"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR",
+    "ITAR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "Pro/TOOLKIT / J-Link / Web.Link",
-    sdk_languages: ["C", "C++", "Java", "JavaScript"],
-    docs_url: "https://support.ptc.com/help/creo/creo_pma/r11.0/",
-  },
+    sdk_languages: [
+      "C",
+      "C++",
+      "Java",
+      "JavaScript"
+    ],
+    docs_url: "https://support.ptc.com/help/creo/creo_pma/r11.0/"
+  }
 },
 {
   id: "t24",
@@ -2365,91 +2605,134 @@ export const c2Tools: Tool[] = [
   slug: "openscad",
   logo_url: getLogo("OSC"),
   short_desc: "The programmer's solid 3D CAD modeler.",
-  description:
-    "OpenSCAD is a software for creating solid 3D CAD objects. It is not an interactive modeler but a 3D-compiler based on a textual description language.",
+  description: "OpenSCAD is a software for creating solid 3D CAD objects. It is not an interactive modeler but a 3D-compiler based on a textual description language.",
   pricing_tiers: [
     {
       name: "Open Source",
       price: "0",
       period: "/yr",
-      features: ["Full feature set", "Community support", "Free forever"],
-      is_popular: true,
-    },
+      features: [
+        "Full feature set",
+        "Community support",
+        "Free forever"
+      ],
+      is_popular: true
+    }
   ],
   detailed_features: [
     {
       category: "Programming",
       items: [
-        { name: "Script-based CAD", status: true },
-        { name: "Variables/Loops", status: true },
-        { name: "Module System", status: true },
-      ],
+        {
+          name: "Script-based CAD",
+          status: true
+        },
+        {
+          name: "Variables/Loops",
+          status: true
+        },
+        {
+          name: "Module System",
+          status: true
+        }
+      ]
     },
     {
       category: "Geometry",
       items: [
-        { name: "CSG Modeling", status: true },
-        { name: "STL Export", status: true },
-        { name: "SVG Import", status: true },
-      ],
-    },
+        {
+          name: "CSG Modeling",
+          status: true
+        },
+        {
+          name: "STL Export",
+          status: true
+        },
+        {
+          name: "SVG Import",
+          status: true
+        }
+      ]
+    }
   ],
-  alternatives: ["freecad", "solvespace", "solvespace-pro"],
+  alternatives: [
+    "freecad",
+    "solvespace",
+    "solvespace-pro"
+  ],
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["Hobbyist", "Maker", "Research"],
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Hobbyist",
+    "Maker",
+    "Research"
+  ],
   core_features: [
     "Script-based Modeling",
     "CSG Geometry Engine",
-    "Parametric Variables",
+    "Parametric Variables"
   ],
-  user_scales: ["Individuals"],
+  user_scales: [
+    "Individuals"
+  ],
   official_url: "https://openscad.org",
   affiliate_url: null,
   score: 4.4,
   pros: [
     "Total code control",
     "Perfect for 3D printing",
-    "Extremely lightweight",
+    "Extremely lightweight"
   ],
-  cons: ["No interactive GUI", "Cody learning curve", "Poor organic shapes"],
+  cons: [
+    "No interactive GUI",
+    "Cody learning curve",
+    "Poor organic shapes"
+  ],
   faqs: [
     {
       q: "What is OpenSCAD used for?",
-      a: "The programmer's solid 3D CAD modeler. OpenSCAD is a 3D modeling solution widely adopted in Hobbyist, Maker, Research.",
+      a: "The programmer's solid 3D CAD modeler. OpenSCAD is a 3D modeling solution widely adopted in Hobbyist, Maker, Research."
     },
     {
       q: "How much does OpenSCAD cost?",
-      a: "OpenSCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      a: "OpenSCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
     },
     {
       q: "Is OpenSCAD really free?",
-      a: "Yes — OpenSCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      a: "Yes — OpenSCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
     },
     {
       q: "What operating systems does OpenSCAD support?",
-      a: "OpenSCAD runs on Windows, macOS, and Linux.",
+      a: "OpenSCAD runs on Windows, macOS, and Linux."
     },
     {
       q: "Which file formats does OpenSCAD support?",
-      a: "OpenSCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "OpenSCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to OpenSCAD?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolveSpace, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolveSpace, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "CGAL / OpenCSG",
     multicore: "Low",
     gpu_optimization: "None",
-    standards: ["STL", "OFF", "AMF", "CSG"],
+    standards: [
+      "STL",
+      "OFF",
+      "AMF",
+      "CSG"
+    ]
   },
-  expert_verdict:
-    "OpenSCAD is the ultimate tool for engineers who think in code.",
+  expert_verdict: "OpenSCAD is the ultimate tool for engineers who think in code."
 },
 {
   id: "t25",
@@ -2457,122 +2740,164 @@ export const c2Tools: Tool[] = [
   slug: "shapr3d",
   logo_url: getLogo("S3"),
   short_desc: "Professional CAD for mobile and desktop mobility.",
-
-  description:
-    "Shapr3D is a professional CAD tool built for iPad and desktop. It uses the Siemens Parasolid kernel for industrial-grade precision.",
-
+  description: "Shapr3D is a professional CAD tool built for iPad and desktop. It uses the Siemens Parasolid kernel for industrial-grade precision.",
   pricing_tiers: [
     {
       name: "Free",
       price: "0",
       period: "/yr",
-      features: ["2 Designs", "Low-res export", "Basic tools"],
+      features: [
+        "2 Designs",
+        "Low-res export",
+        "Basic tools"
+      ]
     },
     {
       name: "Pro",
       price: "299",
       period: "/yr",
-      features: ["Unlimited designs", "High-res export", "Parasolid engine"],
-      is_popular: true,
+      features: [
+        "Unlimited designs",
+        "High-res export",
+        "Parasolid engine"
+      ],
+      is_popular: true
     },
     {
       name: "Enterprise",
       price: "499",
       period: "/yr",
-      features: ["Network licensing", "Priority support", "Deployment tools"],
-    },
+      features: [
+        "Network licensing",
+        "Priority support",
+        "Deployment tools"
+      ]
+    }
   ],
-
   detailed_features: [
     {
       category: "Modeling",
       items: [
-        { name: "Direct Modeling", status: true },
-        { name: "Parasolid Core", status: true },
-        { name: "Apple Pencil Support", status: true },
-      ],
+        {
+          name: "Direct Modeling",
+          status: true
+        },
+        {
+          name: "Parasolid Core",
+          status: true
+        },
+        {
+          name: "Apple Pencil Support",
+          status: true
+        }
+      ]
     },
     {
       category: "Workflow",
       items: [
-        { name: "Desktop/iPad Sync", status: true },
-        { name: "Visualization Mode", status: true },
-        { name: "AR Preview", status: true },
-      ],
-    },
+        {
+          name: "Desktop/iPad Sync",
+          status: true
+        },
+        {
+          name: "Visualization Mode",
+          status: true
+        },
+        {
+          name: "AR Preview",
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["fusion-360", "solidworks", "onshape"],
+  alternatives: [
+    "fusion-360",
+    "solidworks",
+    "onshape"
+  ],
   country: "Hungary",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 299,
-  platforms: ["Windows", "macOS", "iOS"],
-  industries: ["Industrial Design", "Prototyping", "AEC"],
-
+  platforms: [
+    "Windows",
+    "macOS",
+    "iOS"
+  ],
+  industries: [
+    "Industrial Design",
+    "Prototyping",
+    "AEC"
+  ],
   core_features: [
     "Direct Modeling with Apple Pencil",
     "Parasolid Precision",
-    "Multi-Device Sync",
+    "Multi-Device Sync"
   ],
-
-  user_scales: ["Individuals", "Small Business"],
+  user_scales: [
+    "Individuals",
+    "Small Business"
+  ],
   official_url: "https://www.shapr3d.com",
   affiliate_url: null,
   score: 4.7,
-
   pros: [
     "Most intuitive UI",
     "Industrial Parasolid kernel",
-    "Offline mobility",
+    "Offline mobility"
   ],
-
-  cons: ["Subscription only", "Assembly maturing", "Pencil req for iPad"],
-
+  cons: [
+    "Subscription only",
+    "Assembly maturing",
+    "Pencil req for iPad"
+  ],
   faqs: [
     {
       q: "What is Shapr3D used for?",
-      a: "Professional CAD for mobile and desktop mobility. Shapr3D is a 3D modeling solution widely adopted in Industrial Design, Prototyping, AEC.",
+      a: "Professional CAD for mobile and desktop mobility. Shapr3D is a 3D modeling solution widely adopted in Industrial Design, Prototyping, AEC."
     },
     {
       q: "How much does Shapr3D cost?",
-      a: "Shapr3D starts at $299 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Shapr3D starts at $299 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Shapr3D?",
-      a: "Shapr3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Shapr3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Shapr3D support?",
-      a: "Shapr3D runs on Windows, macOS, and iOS.",
+      a: "Shapr3D runs on Windows, macOS, and iOS."
     },
     {
       q: "Which file formats does Shapr3D support?",
-      a: "Shapr3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Shapr3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Shapr3D?",
-      a: "The closest alternatives within the 3D Modeling space are Fusion 360, SolidWorks, Onshape. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are Fusion 360, SolidWorks, Onshape. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Moderate",
     gpu_optimization: "Metal / DirectX",
-    standards: ["STEP", "IGES", "XT", "STL"],
+    standards: [
+      "STEP",
+      "IGES",
+      "XT",
+      "STL"
+    ]
   },
-
-  expert_verdict:
-    "Shapr3D has done the impossible: made professional CAD fun.",
-
-  external_ratings: [{
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 22,
-    url: "https://www.capterra.com/p/184498/Shapr3D/"
-  }]
+  expert_verdict: "Shapr3D has done the impossible: made professional CAD fun.",
+  external_ratings: [
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 22,
+      url: "https://www.capterra.com/p/184498/Shapr3D/"
+    }
+  ]
 },
 {
   id: "t29",
@@ -2580,74 +2905,116 @@ export const c2Tools: Tool[] = [
   slug: "solvespace",
   logo_url: getLogo("SS"),
   short_desc: "A minimalist, open-source 2D/3D parametric CAD tool.",
-  description:
-    "SolveSpace is a free constraint-based parametric modeler. It is very lightweight and focuses on pure geometric logic.",
+  description: "SolveSpace is a free constraint-based parametric modeler. It is very lightweight and focuses on pure geometric logic.",
   pricing_tiers: [
     {
       name: "Open Source",
       price: "0",
       period: "/yr",
-      features: ["Full feature set", "Free forever", "No registration"],
-      is_popular: true,
-    },
+      features: [
+        "Full feature set",
+        "Free forever",
+        "No registration"
+      ],
+      is_popular: true
+    }
   ],
   detailed_features: [
     {
       category: "Modeling",
       items: [
-        { name: "Constraint Solver", status: true },
-        { name: "Sketching", status: true },
-        { name: "STEP Export", status: true },
-      ],
-    },
+        {
+          name: "Constraint Solver",
+          status: true
+        },
+        {
+          name: "Sketching",
+          status: true
+        },
+        {
+          name: "STEP Export",
+          status: true
+        }
+      ]
+    }
   ],
-  alternatives: ["freecad", "openscad", "solvespace-pro"],
+  alternatives: [
+    "freecad",
+    "openscad",
+    "solvespace-pro"
+  ],
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["Hobbyist", "Light Engineering", "Education"],
-  core_features: ["Constraint Solver", "Minimalist Footprint", "STEP Export"],
-  user_scales: ["Individuals"],
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Hobbyist",
+    "Light Engineering",
+    "Education"
+  ],
+  core_features: [
+    "Constraint Solver",
+    "Minimalist Footprint",
+    "STEP Export"
+  ],
+  user_scales: [
+    "Individuals"
+  ],
   official_url: "https://solvespace.com",
   affiliate_url: null,
   score: 4.1,
-  pros: ["Tiny file size", "Fast for simple parts", "Pure logic"],
-  cons: ["No assembly management", "Basic UI", "Limited rendering"],
+  pros: [
+    "Tiny file size",
+    "Fast for simple parts",
+    "Pure logic"
+  ],
+  cons: [
+    "No assembly management",
+    "Basic UI",
+    "Limited rendering"
+  ],
   faqs: [
     {
       q: "What is SolveSpace used for?",
-      a: "A minimalist, open-source 2D/3D parametric CAD tool. SolveSpace is a 3D modeling solution widely adopted in Hobbyist, Light Engineering, Education.",
+      a: "A minimalist, open-source 2D/3D parametric CAD tool. SolveSpace is a 3D modeling solution widely adopted in Hobbyist, Light Engineering, Education."
     },
     {
       q: "How much does SolveSpace cost?",
-      a: "SolveSpace is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      a: "SolveSpace is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
     },
     {
       q: "Is SolveSpace really free?",
-      a: "Yes — SolveSpace is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      a: "Yes — SolveSpace is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
     },
     {
       q: "What operating systems does SolveSpace support?",
-      a: "SolveSpace runs on Windows, macOS, and Linux.",
+      a: "SolveSpace runs on Windows, macOS, and Linux."
     },
     {
       q: "Which file formats does SolveSpace support?",
-      a: "SolveSpace works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "SolveSpace works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to SolveSpace?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "SolveSpace Custom Solver",
     multicore: "Low",
     gpu_optimization: "None",
-    standards: ["STEP", "STL", "DXF"],
+    standards: [
+      "STEP",
+      "STL",
+      "DXF"
+    ]
   },
-  expert_verdict: "A masterclass in minimalist parametric design.",
+  expert_verdict: "A masterclass in minimalist parametric design."
 },
 {
   id: "t30",
@@ -2655,92 +3022,143 @@ export const c2Tools: Tool[] = [
   slug: "alibre-design",
   logo_url: getLogo("AL"),
   short_desc: "Professional 3D CAD without the enterprise price tag.",
-  description:
-    "Alibre Design provides industrial-grade parametric modeling tools. It is a popular choice for those seeking a perpetual license instead of a subscription.",
+  description: "Alibre Design provides industrial-grade parametric modeling tools. It is a popular choice for those seeking a perpetual license instead of a subscription.",
   pricing_tiers: [
     {
       name: "Professional",
       price: "950",
       period: "initial",
-      features: ["3D Parametric", "2D Drafting", "Keyshot bundle"],
+      features: [
+        "3D Parametric",
+        "2D Drafting",
+        "Keyshot bundle"
+      ]
     },
     {
       name: "Expert",
       price: "1850",
       period: "initial",
-      features: ["Sheet Metal", "Motion Analysis", "Full Library"],
-      is_popular: true,
-    },
+      features: [
+        "Sheet Metal",
+        "Motion Analysis",
+        "Full Library"
+      ],
+      is_popular: true
+    }
   ],
   detailed_features: [
     {
       category: "Modeling",
       items: [
-        { name: "Parametric Design", status: true },
-        { name: "Global Variables", status: true },
-        { name: "Sheet Metal", status: true },
-      ],
+        {
+          name: "Parametric Design",
+          status: true
+        },
+        {
+          name: "Global Variables",
+          status: true
+        },
+        {
+          name: "Sheet Metal",
+          status: true
+        }
+      ]
     },
     {
       category: "Presentation",
       items: [
-        { name: "Keyshot Render", status: true },
-        { name: "2D Detailing", status: true },
-        { name: "Exploded Views", status: true },
-      ],
-    },
+        {
+          name: "Keyshot Render",
+          status: true
+        },
+        {
+          name: "2D Detailing",
+          status: true
+        },
+        {
+          name: "Exploded Views",
+          status: true
+        }
+      ]
+    }
   ],
-  alternatives: ["solidworks", "varicad", "zw3d"],
+  alternatives: [
+    "solidworks",
+    "varicad",
+    "zw3d"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 950,
-  platforms: ["Windows"],
-  industries: ["Mechanical", "Manufacturing", "Prototyping"],
-  core_features: ["Parametric Modeling", "Global Variables", "Sheet Metal"],
-  user_scales: ["Small Business", "Individuals"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Mechanical",
+    "Manufacturing",
+    "Prototyping"
+  ],
+  core_features: [
+    "Parametric Modeling",
+    "Global Variables",
+    "Sheet Metal"
+  ],
+  user_scales: [
+    "Small Business",
+    "Individuals"
+  ],
   official_url: "https://www.alibre.com",
   affiliate_url: null,
   score: 4.5,
   pros: [
     "Fair perpetual model",
     "SolidWorks-like workflow",
-    "Solid mid-range perf",
+    "Solid mid-range perf"
   ],
-  cons: ["Windows only", "Smaller add-on ecosystem", "Tiered simulation"],
+  cons: [
+    "Windows only",
+    "Smaller add-on ecosystem",
+    "Tiered simulation"
+  ],
   faqs: [
     {
       q: "What is Alibre Design used for?",
-      a: "Professional 3D CAD without the enterprise price tag. Alibre Design is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Prototyping.",
+      a: "Professional 3D CAD without the enterprise price tag. Alibre Design is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Prototyping."
     },
     {
       q: "How much does Alibre Design cost?",
-      a: "Alibre Design starts at $950 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Alibre Design starts at $950 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Alibre Design?",
-      a: "Alibre Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Alibre Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Alibre Design support?",
-      a: "Alibre Design runs on Windows.",
+      a: "Alibre Design runs on Windows."
     },
     {
       q: "Which file formats does Alibre Design support?",
-      a: "Alibre Design works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Alibre Design works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Alibre Design?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, VariCAD, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, VariCAD, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "ACIS",
     multicore: "Moderate",
     gpu_optimization: "DirectX",
-    standards: ["STEP", "IGES", "SAT", "STL"],
+    standards: [
+      "STEP",
+      "IGES",
+      "SAT",
+      "STL"
+    ]
   },
-  expert_verdict: "No mandatory subscriptions, just solid parametric tools.",
+  expert_verdict: "No mandatory subscriptions, just solid parametric tools."
 },
 {
   id: "t41",
@@ -2748,75 +3166,115 @@ export const c2Tools: Tool[] = [
   slug: "varicad",
   logo_url: getLogo("VC"),
   short_desc: "Compact CAD system for mechanical engineering.",
-  description:
-    "VariCAD is a compact 3D/2D CAD system for mechanical engineering.",
+  description: "VariCAD is a compact 3D/2D CAD system for mechanical engineering.",
   pricing_tiers: [
     {
       name: "Perpetual",
       price: "700",
       period: "initial",
-      features: ["Fast performance", "Native Linux", "Standard parts"],
-      is_popular: true,
-    },
+      features: [
+        "Fast performance",
+        "Native Linux",
+        "Standard parts"
+      ],
+      is_popular: true
+    }
   ],
   detailed_features: [
     {
       category: "Modeling",
       items: [
-        { name: "3D Modeling", status: true },
-        { name: "2D Drafting", status: true },
-        { name: "Standard Parts", status: true },
-      ],
-    },
+        {
+          name: "3D Modeling",
+          status: true
+        },
+        {
+          name: "2D Drafting",
+          status: true
+        },
+        {
+          name: "Standard Parts",
+          status: true
+        }
+      ]
+    }
   ],
-  alternatives: ["freecad", "solidworks", "alibre-design"],
+  alternatives: [
+    "freecad",
+    "solidworks",
+    "alibre-design"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 700,
-  platforms: ["Windows", "Linux"],
-  industries: ["Mechanical", "Hobbyist"],
-  core_features: ["3D Modeling", "2D Drafting", "Standard Parts Lib"],
-  user_scales: ["Individuals", "Small Business"],
+  platforms: [
+    "Windows",
+    "Linux"
+  ],
+  industries: [
+    "Mechanical",
+    "Hobbyist"
+  ],
+  core_features: [
+    "3D Modeling",
+    "2D Drafting",
+    "Standard Parts Lib"
+  ],
+  user_scales: [
+    "Individuals",
+    "Small Business"
+  ],
   official_url: "https://www.varicad.com",
   affiliate_url: null,
-  score: 4.0,
-  pros: ["Fast performance", "Native Linux support", "Affordable perpetual"],
-  cons: ["Non-standard UI", "Basic visuals", "Small community"],
+  score: 4,
+  pros: [
+    "Fast performance",
+    "Native Linux support",
+    "Affordable perpetual"
+  ],
+  cons: [
+    "Non-standard UI",
+    "Basic visuals",
+    "Small community"
+  ],
   faqs: [
     {
       q: "What is VariCAD used for?",
-      a: "Compact CAD system for mechanical engineering. VariCAD is a 3D modeling solution widely adopted in Mechanical, Hobbyist.",
+      a: "Compact CAD system for mechanical engineering. VariCAD is a 3D modeling solution widely adopted in Mechanical, Hobbyist."
     },
     {
       q: "How much does VariCAD cost?",
-      a: "VariCAD starts at $700 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "VariCAD starts at $700 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of VariCAD?",
-      a: "VariCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "VariCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does VariCAD support?",
-      a: "VariCAD runs on Windows and Linux.",
+      a: "VariCAD runs on Windows and Linux."
     },
     {
       q: "Which file formats does VariCAD support?",
-      a: "VariCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "VariCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to VariCAD?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolidWorks, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolidWorks, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "VariCAD Custom",
     multicore: "Low",
     gpu_optimization: "Basic",
-    standards: ["STEP", "IGES", "STL"],
+    standards: [
+      "STEP",
+      "IGES",
+      "STL"
+    ]
   },
-  expert_verdict:
-    "A robust choice for individual mechanical engineers on Linux.",
+  expert_verdict: "A robust choice for individual mechanical engineers on Linux."
 },
 {
   id: "t50",
@@ -2824,158 +3282,167 @@ export const c2Tools: Tool[] = [
   slug: "maya",
   logo_url: "",
   short_desc: "3D animation, modeling, and simulation software.",
-
-  description:
-    "Maya is professional 3D software for creating realistic characters and effects.",
-
+  description: "Maya is professional 3D software for creating realistic characters and effects.",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1875,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["VFX", "Gaming", "Animation"],
-
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "VFX",
+    "Gaming",
+    "Animation"
+  ],
   core_features: [
     "Character Animation",
     "3D Modeling",
     "Dynamics & Effects",
     "Rendering",
-    "Pipeline Integration",
+    "Pipeline Integration"
   ],
-
-  user_scales: ["Enterprise", "Agencies"],
+  user_scales: [
+    "Enterprise",
+    "Agencies"
+  ],
   official_url: "https://www.autodesk.com/maya",
   affiliate_url: null,
   score: 4.9,
-  pros: ["Industry VFX standard", "Node-based power", "Linux support"],
-  cons: ["Steep learning", "High cost", "Not for engineering"],
-
+  pros: [
+    "Industry VFX standard",
+    "Node-based power",
+    "Linux support"
+  ],
+  cons: [
+    "Steep learning",
+    "High cost",
+    "Not for engineering"
+  ],
   faqs: [
     {
       q: "What is Maya used for?",
-      a: "3D animation, modeling, and simulation software. Maya is a 3D modeling solution widely adopted in VFX, Gaming, Animation.",
+      a: "3D animation, modeling, and simulation software. Maya is a 3D modeling solution widely adopted in VFX, Gaming, Animation."
     },
     {
       q: "How much does Maya cost?",
-      a: "Maya starts at $1,875 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Maya starts at $1,875 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Maya?",
-      a: "Maya is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Maya is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Maya support?",
-      a: "Maya runs on Windows, macOS, and Linux.",
+      a: "Maya runs on Windows, macOS, and Linux."
     },
     {
       q: "Which file formats does Maya support?",
-      a: "Maya works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Maya works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Maya?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Maya Nucleus",
     multicore: "High",
     gpu_optimization: "CUDA",
-    standards: ["FBX", "USD", "OBJ"],
+    standards: [
+      "FBX",
+      "USD",
+      "OBJ"
+    ]
   },
-
   expert_verdict: "The power user's choice for Hollywood effects.",
-
   pricing_tiers: [
     {
       name: "Monthly",
       price: "235",
       period: "/mo",
-
       features: [
         "Character Animation",
         "Bifrost for Maya",
         "Arnold Renderer",
-        "Advanced Rigging",
+        "Advanced Rigging"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Annual",
       price: "1,875",
       period: "/yr",
-
       features: [
         "Full Motion Graphics",
         "USD integration",
         "Interactive Grooming",
-        "Technical Support",
+        "Technical Support"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Animation & Rigging",
-
       items: [
         {
           name: "Matrix-driven Rigging",
-          status: true,
+          status: true
         },
         {
           name: "Cached Playback",
-          status: true,
+          status: true
         },
         {
           name: "Automated Shape Authoring",
-          status: true,
+          status: true
         },
         {
           name: "Ghosting Editor",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Dynamics & Rendering",
-
       items: [
         {
           name: "Bifrost Visual Programming",
-          status: true,
+          status: true
         },
         {
           name: "Integrated Arnold Renderer",
-          status: true,
+          status: true
         },
         {
           name: "MASH Procedural effects",
-          status: true,
+          status: true
         },
         {
           name: "XGen Interactive Grooming",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 265,
-    url: "https://www.g2.com/products/maya/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 8,
-    url: "https://www.capterra.com/reviews/maya"
-  }]
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 265,
+      url: "https://www.g2.com/products/maya/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.4,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/reviews/maya"
+    }
+  ]
 },
 {
   id: "t51",
@@ -2983,66 +3450,82 @@ export const c2Tools: Tool[] = [
   slug: "blender",
   logo_url: "",
   short_desc: "The free and open-source 3D creation suite.",
-  description:
-    "Blender supports the entirety of the 3D pipeline for modeling and animation.",
+  description: "Blender supports the entirety of the 3D pipeline for modeling and animation.",
   country: "USA",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["Indie Games", "VFX", "Hobbyist"],
-
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Indie Games",
+    "VFX",
+    "Hobbyist"
+  ],
   core_features: [
     "Open Source 3D",
     "Geometry Nodes",
     "Sculpting",
     "VFX/Compositing",
-    "2D Animation (Grease Pencil)",
+    "2D Animation (Grease Pencil)"
   ],
-
-  user_scales: ["Individuals", "Startups"],
+  user_scales: [
+    "Individuals",
+    "Startups"
+  ],
   official_url: "https://www.blender.org",
   affiliate_url: null,
   score: 4.8,
-  pros: ["100% Free", "Cycles production renderer", "Rapid development"],
-  cons: ["Non-standard UI", "Lacks NURBS precision", "Not for CAD/CAM"],
+  pros: [
+    "100% Free",
+    "Cycles production renderer",
+    "Rapid development"
+  ],
+  cons: [
+    "Non-standard UI",
+    "Lacks NURBS precision",
+    "Not for CAD/CAM"
+  ],
   faqs: [
     {
       q: "What is Blender used for?",
-      a: "The free and open-source 3D creation suite. Blender is a 3D modeling solution widely adopted in Indie Games, VFX, Hobbyist.",
+      a: "The free and open-source 3D creation suite. Blender is a 3D modeling solution widely adopted in Indie Games, VFX, Hobbyist."
     },
     {
       q: "How much does Blender cost?",
-      a: "Blender is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      a: "Blender is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
     },
     {
       q: "Is Blender really free?",
-      a: "Yes — Blender is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      a: "Yes — Blender is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
     },
     {
       q: "What operating systems does Blender support?",
-      a: "Blender runs on Windows, macOS, and Linux. Deployment options include desktop.",
+      a: "Blender runs on Windows, macOS, and Linux. Deployment options include desktop."
     },
     {
       q: "Which file formats does Blender support?",
-      a: "Blender imports BLEND, OBJ, FBX, glTF, GLB, USD and more. Export covers BLEND, OBJ, FBX, glTF, GLB, USD and more.",
+      a: "Blender imports BLEND, OBJ, FBX, glTF, GLB, USD and more. Export covers BLEND, OBJ, FBX, glTF, GLB, USD and more."
     },
     {
       q: "Does Blender have an API for automation and customization?",
-      a: "Yes. Blender exposes Python API with SDK bindings for Python, C, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. Blender exposes Python API with SDK bindings for Python, C, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Cycles / Eevee",
     multicore: "High",
     gpu_optimization: "OptiX",
-    standards: ["BLEND", "FBX", "STL"],
+    standards: [
+      "BLEND",
+      "FBX",
+      "STL"
+    ]
   },
-
-  expert_verdict:
-    "Disrupting the professional 3D industry with open-source power.",
-
+  expert_verdict: "Disrupting the professional 3D industry with open-source power.",
   pricing_tiers: [
     {
       name: "Free & Open Source",
@@ -3052,63 +3535,58 @@ export const c2Tools: Tool[] = [
         "Full 3D Suite",
         "Cycles Renderer",
         "Geometry Nodes",
-        "Community Support",
+        "Community Support"
       ],
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "Creation Suite",
-
       items: [
         {
           name: "Cycles Path Tracer",
-          status: true,
+          status: true
         },
         {
           name: "Geometry Nodes (Procedural)",
-          status: true,
+          status: true
         },
         {
           name: "Grease Pencil (2D in 3D)",
-          status: true,
+          status: true
         },
         {
           name: "Real-time Eevee Engine",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Sculpting & VFX",
-
       items: [
         {
           name: "Dynamic Topology Sculpting",
-          status: true,
+          status: true
         },
         {
           name: "Integrated Compositor",
-          status: true,
+          status: true
         },
         {
           name: "Camera Tracking",
-          status: true,
+          status: true
         },
         {
           name: "Python API for addons",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   version: "4.5 LTS",
   last_updated: "2025-11-15",
   free_trial_days: 0,
-
   languages: [
     "English",
     "French",
@@ -3126,9 +3604,8 @@ export const c2Tools: Tool[] = [
     "Polish",
     "Portuguese",
     "Turkish",
-    "Ukrainian",
+    "Ukrainian"
   ],
-
   file_formats_in: [
     "BLEND",
     "OBJ",
@@ -3143,9 +3620,8 @@ export const c2Tools: Tool[] = [
     "X3D",
     "ABC",
     "DAE",
-    "SVG",
+    "SVG"
   ],
-
   file_formats_out: [
     "BLEND",
     "OBJ",
@@ -3161,9 +3637,8 @@ export const c2Tools: Tool[] = [
     "ABC",
     "MP4",
     "PNG",
-    "EXR",
+    "EXR"
   ],
-
   integrations: [
     "Cycles",
     "Eevee",
@@ -3173,46 +3648,55 @@ export const c2Tools: Tool[] = [
     "Unreal Engine",
     "Adobe Substance",
     "OpenColorIO",
-    "OpenSubdiv",
+    "OpenSubdiv"
   ],
-
-  deployment_options: ["Desktop"],
-  license_types: ["Open-Source", "Free"],
-
+  deployment_options: [
+    "Desktop"
+  ],
+  license_types: [
+    "Open-Source",
+    "Free"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.6,
       max: 5,
       count: 270,
-      url: "https://www.g2.com/products/blender/reviews",
+      url: "https://www.g2.com/products/blender/reviews"
     },
     {
       source: "Capterra",
       score: 4.6,
       max: 5,
       count: 1000,
-      url: "https://www.capterra.com/p/175170/Blender/",
+      url: "https://www.capterra.com/p/175170/Blender/"
     },
     {
       source: "TrustRadius",
       score: 9,
       max: 10,
       count: 120,
-      url: "https://www.trustradius.com/products/blender/reviews",
-    },
+      url: "https://www.trustradius.com/products/blender/reviews"
+    }
   ],
-
-  support_channels: ["Community", "Documentation", "Training"],
+  support_channels: [
+    "Community",
+    "Documentation",
+    "Training"
+  ],
   security_compliance: [],
-
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "Python API",
-    sdk_languages: ["Python", "C", "C++"],
-    docs_url: "https://docs.blender.org/api/current/",
-  },
+    sdk_languages: [
+      "Python",
+      "C",
+      "C++"
+    ],
+    docs_url: "https://docs.blender.org/api/current/"
+  }
 },
 {
   id: "t52",
@@ -3220,192 +3704,218 @@ export const c2Tools: Tool[] = [
   slug: "solvespace-pro",
   logo_url: getLogo("SSP"),
   short_desc: "Constraint-based 2D/3D parametric CAD.",
-  description:
-    "SolveSpace is a minimalist modeler for precise geometric parts.",
+  description: "SolveSpace is a minimalist modeler for precise geometric parts.",
   country: "USA",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["Education", "Makers", "Mechanical"],
-  core_features: ["Constraint Solver", "Geometric Logic", "STEP Export"],
-  user_scales: ["Individuals"],
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Education",
+    "Makers",
+    "Mechanical"
+  ],
+  core_features: [
+    "Constraint Solver",
+    "Geometric Logic",
+    "STEP Export"
+  ],
+  user_scales: [
+    "Individuals"
+  ],
   official_url: "https://solvespace.com",
   affiliate_url: null,
   score: 4.3,
-  pros: ["Extremely fast", "Pure geometric logic", "Completely free"],
-  cons: ["No assembly", "Hard for organic", "Slow complex rendering"],
+  pros: [
+    "Extremely fast",
+    "Pure geometric logic",
+    "Completely free"
+  ],
+  cons: [
+    "No assembly",
+    "Hard for organic",
+    "Slow complex rendering"
+  ],
   faqs: [
     {
       q: "What is SolveSpace Pro used for?",
-      a: "Constraint-based 2D/3D parametric CAD. SolveSpace Pro is a 3D modeling solution widely adopted in Education, Makers, Mechanical.",
+      a: "Constraint-based 2D/3D parametric CAD. SolveSpace Pro is a 3D modeling solution widely adopted in Education, Makers, Mechanical."
     },
     {
       q: "How much does SolveSpace Pro cost?",
-      a: "SolveSpace Pro is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      a: "SolveSpace Pro is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
     },
     {
       q: "Is SolveSpace Pro really free?",
-      a: "Yes — SolveSpace Pro is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      a: "Yes — SolveSpace Pro is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
     },
     {
       q: "What operating systems does SolveSpace Pro support?",
-      a: "SolveSpace Pro runs on Windows, macOS, and Linux.",
+      a: "SolveSpace Pro runs on Windows, macOS, and Linux."
     },
     {
       q: "Which file formats does SolveSpace Pro support?",
-      a: "SolveSpace Pro works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "SolveSpace Pro works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to SolveSpace Pro?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Custom",
     multicore: "Low",
     gpu_optimization: "None",
-    standards: ["STEP", "STL", "DXF"],
+    standards: [
+      "STEP",
+      "STL",
+      "DXF"
+    ]
   },
-  expert_verdict:
-    "The ultimate tool for engineers who value geometric purity.",
+  expert_verdict: "The ultimate tool for engineers who value geometric purity."
 },
 {
   id: "t58",
   name: "IronCAD",
   slug: "ironcad",
-  logo_url:
-    "https://www.ironcad.com/wp-content/uploads/2018/10/ironcad-logo-1.png",
+  logo_url: "https://www.ironcad.com/wp-content/uploads/2018/10/ironcad-logo-1.png",
   short_desc: "The fastest way to 3D design and manufacturing.",
-
-  description:
-    "IronCAD is a leading provider of innovative 3D design productivity solutions. Its creative design approach provides levels of agility that are unattainable with today's standard parametric systems.",
-
+  description: "IronCAD is a leading provider of innovative 3D design productivity solutions. Its creative design approach provides levels of agility that are unattainable with today's standard parametric systems.",
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 3950,
-  platforms: ["Windows"],
-  industries: ["Industrial Design", "Machine Design", "Packaging"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Industrial Design",
+    "Machine Design",
+    "Packaging"
+  ],
   core_features: [
     "Drag-and-Drop Design",
     "TriBall Interaction",
     "Unified Design Environment",
     "Non-history Modeling",
-    "Large Assembly",
+    "Large Assembly"
   ],
-
-  user_scales: ["Mid-Market", "Enterprise"],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.ironcad.com",
   affiliate_url: null,
   score: 4.8,
   pros: [
     "Unmatched design speed",
     "Dual-kernel precision",
-    "Flexible modeling",
+    "Flexible modeling"
   ],
-  cons: ["Expensive", "Smaller user base", "Requires high-end GPU"],
+  cons: [
+    "Expensive",
+    "Smaller user base",
+    "Requires high-end GPU"
+  ],
   faqs: [
     {
       q: "What is IronCAD used for?",
-      a: "The fastest way to 3D design and manufacturing. IronCAD is a 3D modeling solution widely adopted in Industrial Design, Machine Design, Packaging.",
+      a: "The fastest way to 3D design and manufacturing. IronCAD is a 3D modeling solution widely adopted in Industrial Design, Machine Design, Packaging."
     },
     {
       q: "How much does IronCAD cost?",
-      a: "IronCAD starts at $3,950 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "IronCAD starts at $3,950 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of IronCAD?",
-      a: "IronCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "IronCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does IronCAD support?",
-      a: "IronCAD runs on Windows.",
+      a: "IronCAD runs on Windows."
     },
     {
       q: "Which file formats does IronCAD support?",
-      a: "IronCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "IronCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to IronCAD?",
-      a: "The closest alternatives within the 3D Modeling space are Rhino 3D, ZW3D, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are Rhino 3D, ZW3D, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "ACIS & Parasolid",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["STEP", "SAT", "X_T"],
+    standards: [
+      "STEP",
+      "SAT",
+      "X_T"
+    ]
   },
-
-  expert_verdict:
-    "A radical alternative to history-based CAD that can triple design output for mechanical assemblies.",
-
+  expert_verdict: "A radical alternative to history-based CAD that can triple design output for mechanical assemblies.",
   pricing_tiers: [
     {
       name: "Annual",
       price: "1,500",
       period: "/yr",
-
       features: [
         "Drag & Drop Modeling",
         "Unified Design Env",
         "TriBall Tool",
-        "Full 3D Design",
+        "Full 3D Design"
       ],
-
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "Efficiency",
-
       items: [
         {
           name: "TriBall Versatile Tool",
-          status: true,
+          status: true
         },
         {
           name: "Catalog-based Design",
-          status: true,
+          status: true
         },
         {
           name: "Dual-engine (ACIS/Parasolid)",
-          status: true,
+          status: true
         },
         {
           name: "Dynamic Handles",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Workflow",
-
       items: [
         {
           name: "Single-scene Assembly",
-          status: true,
+          status: true
         },
         {
           name: "Direct Feature Editing",
-          status: true,
+          status: true
         },
         {
           name: "Automatic BOM Update",
-          status: true,
+          status: true
         },
         {
           name: "Sheet Metal & Frame",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t59",
@@ -3413,204 +3923,238 @@ export const c2Tools: Tool[] = [
   slug: "keycreator",
   logo_url: "https://www.kubotekkosmos.com/images/keycreator-logo.png",
   short_desc: "Direct modeling CAD for fast manufacturing design.",
-  description:
-    "KeyCreator is a professional CAD software for direct modeling. It is designed for engineers who need to work with geometry from any source without worrying about history or constraints.",
+  description: "KeyCreator is a professional CAD software for direct modeling. It is designed for engineers who need to work with geometry from any source without worrying about history or constraints.",
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1500,
-  platforms: ["Windows"],
-  industries: ["Tool & Die", "Mold Design", "Rapid Prototyping"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Tool & Die",
+    "Mold Design",
+    "Rapid Prototyping"
+  ],
   core_features: [
     "Direct Geometry Editing",
     "Universal CAD Importers",
     "Drafting & Detailing",
-    "Assembly Management",
+    "Assembly Management"
   ],
-  user_scales: ["Small Business", "Mid-Market"],
+  user_scales: [
+    "Small Business",
+    "Mid-Market"
+  ],
   official_url: "https://www.kubotekkosmos.com",
   affiliate_url: null,
   score: 4.6,
   pros: [
     "Handles any CAD file",
     "Fast geometry repair",
-    "No constraint issues",
+    "No constraint issues"
   ],
-  cons: ["Lacks parametric history", "Niche user base", "UI feels dated"],
+  cons: [
+    "Lacks parametric history",
+    "Niche user base",
+    "UI feels dated"
+  ],
   faqs: [
     {
       q: "What is KeyCreator used for?",
-      a: "Direct modeling CAD for fast manufacturing design. KeyCreator is a 3D modeling solution widely adopted in Tool & Die, Mold Design, Rapid Prototyping.",
+      a: "Direct modeling CAD for fast manufacturing design. KeyCreator is a 3D modeling solution widely adopted in Tool & Die, Mold Design, Rapid Prototyping."
     },
     {
       q: "How much does KeyCreator cost?",
-      a: "KeyCreator starts at $1,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "KeyCreator starts at $1,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of KeyCreator?",
-      a: "KeyCreator is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "KeyCreator is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does KeyCreator support?",
-      a: "KeyCreator runs on Windows.",
+      a: "KeyCreator runs on Windows."
     },
     {
       q: "Which file formats does KeyCreator support?",
-      a: "KeyCreator works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "KeyCreator works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to KeyCreator?",
-      a: "The closest alternatives within the 3D Modeling space are Autodesk Inventor, Fusion 360, PTC Creo. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are Autodesk Inventor, Fusion 360, PTC Creo. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Proprietary Direct",
     multicore: "Moderate",
     gpu_optimization: "Moderate",
-    standards: ["STEP", "IGES", "STL"],
+    standards: [
+      "STEP",
+      "IGES",
+      "STL"
+    ]
   },
-  expert_verdict:
-    "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
+  expert_verdict: "The absolute best tool for engineers who need to fix 'broken' geometry from other systems."
 },
 {
   id: "t79",
   name: "Geomagic Design X",
   slug: "geomagic-design-x",
-  logo_url:
-    "https://www.3dsystems.com/sites/default/files/logo-3d-systems.png",
+  logo_url: "https://www.3dsystems.com/sites/default/files/logo-3d-systems.png",
   short_desc: "The world's most comprehensive reverse engineering software.",
-  description:
-    "Geomagic Design X combines history-based CAD with 3D scan data processing so you can create feature-based, editable solid models compatible with your existing CAD software.",
+  description: "Geomagic Design X combines history-based CAD with 3D scan data processing so you can create feature-based, editable solid models compatible with your existing CAD software.",
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 5000,
-  platforms: ["Windows"],
-  industries: ["Reverse Engineering", "Quality Control"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Reverse Engineering",
+    "Quality Control"
+  ],
   core_features: [
     "Automatic Surface Fitting",
     "Mesh to Solid",
     "LiveTransfer to CAD",
-    "Point Cloud Analysis",
+    "Point Cloud Analysis"
   ],
-  user_scales: ["Mid-Market", "Enterprise"],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.3dsystems.com/software/geomagic-design-x",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Best scan-to-CAD workflow",
     "Feature-based modeling",
-    "Extremely accurate",
+    "Extremely accurate"
   ],
   cons: [
     "Very expensive",
     "High hardware requirements",
-    "Steep learning curve",
+    "Steep learning curve"
   ],
   faqs: [
     {
       q: "What is Geomagic Design X used for?",
-      a: "The world's most comprehensive reverse engineering software. Geomagic Design X is a 3D modeling solution widely adopted in Reverse Engineering, Quality Control.",
+      a: "The world's most comprehensive reverse engineering software. Geomagic Design X is a 3D modeling solution widely adopted in Reverse Engineering, Quality Control."
     },
     {
       q: "How much does Geomagic Design X cost?",
-      a: "Geomagic Design X starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Geomagic Design X starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Geomagic Design X?",
-      a: "Geomagic Design X is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Geomagic Design X is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Geomagic Design X support?",
-      a: "Geomagic Design X runs on Windows.",
+      a: "Geomagic Design X runs on Windows."
     },
     {
       q: "Which file formats does Geomagic Design X support?",
-      a: "Geomagic Design X works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Geomagic Design X works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Geomagic Design X?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, Autodesk Inventor. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, Autodesk Inventor. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Parasolid",
     multicore: "High",
     gpu_optimization: "Ultra",
-    standards: ["STEP", "IGES", "STL"],
+    standards: [
+      "STEP",
+      "IGES",
+      "STL"
+    ]
   },
-  expert_verdict:
-    "The professional standard for turning physical objects into digital CAD data.",
+  expert_verdict: "The professional standard for turning physical objects into digital CAD data."
 },
 {
   id: "t80",
   name: "Alias AutoStudio",
   slug: "alias-autostudio",
-  logo_url:
-    "https://www.autodesk.com/content/dam/autodesk/logos/alias-logo.svg",
+  logo_url: "https://www.autodesk.com/content/dam/autodesk/logos/alias-logo.svg",
   short_desc: "Industrial design and automotive styling software.",
-  description:
-    "Alias software provides surfacing, modeling, and visualization tools for industrial, product, and automotive design.",
+  description: "Alias software provides surfacing, modeling, and visualization tools for industrial, product, and automotive design.",
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 12000,
-  platforms: ["Windows", "macOS"],
-  industries: ["Automotive", "Industrial Design"],
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Automotive",
+    "Industrial Design"
+  ],
   core_features: [
     "Class-A Surfacing",
     "Conceptual Sketching",
     "VR Visualization",
-    "Dynamo Integration",
+    "Dynamo Integration"
   ],
-  user_scales: ["Enterprise", "Design Agencies"],
+  user_scales: [
+    "Enterprise",
+    "Design Agencies"
+  ],
   official_url: "https://www.autodesk.com/products/alias/overview",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Gold standard for Class-A surfaces",
     "Stunning visualization",
-    "Unified design workflow",
+    "Unified design workflow"
   ],
   cons: [
     "Extremely high cost",
     "Steepest learning curve in CAD",
-    "Niche expertise needed",
+    "Niche expertise needed"
   ],
   faqs: [
     {
       q: "What is Alias AutoStudio used for?",
-      a: "Industrial design and automotive styling software. Alias AutoStudio is a 3D modeling solution widely adopted in Automotive, Industrial Design.",
+      a: "Industrial design and automotive styling software. Alias AutoStudio is a 3D modeling solution widely adopted in Automotive, Industrial Design."
     },
     {
       q: "How much does Alias AutoStudio cost?",
-      a: "Alias AutoStudio starts at $12,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Alias AutoStudio starts at $12,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Alias AutoStudio?",
-      a: "Alias AutoStudio is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Alias AutoStudio is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Alias AutoStudio support?",
-      a: "Alias AutoStudio runs on Windows and macOS.",
+      a: "Alias AutoStudio runs on Windows and macOS."
     },
     {
       q: "Which file formats does Alias AutoStudio support?",
-      a: "Alias AutoStudio works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Alias AutoStudio works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Alias AutoStudio?",
-      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Alias Core",
     multicore: "High",
     gpu_optimization: "Ultra",
-    standards: ["STEP", "IGES", "VDAFS"],
+    standards: [
+      "STEP",
+      "IGES",
+      "VDAFS"
+    ]
   },
-  expert_verdict:
-    "The software behind almost every beautiful car you see on the road.",
+  expert_verdict: "The software behind almost every beautiful car you see on the road."
 },
 {
   id: "t89",
@@ -3618,83 +4162,93 @@ export const c2Tools: Tool[] = [
   slug: "zw3d",
   logo_url: "",
   short_desc: "All-in-one 3D CAD/CAM solution from ZWSOFT.",
-
-  description:
-    "ZW3D is an all-in-one CAD/CAM solution that delivers fast, stable, and precise 3D modeling, assembly, and 2.5-5 axis CNC machining in a single environment.",
-
+  description: "ZW3D is an all-in-one CAD/CAM solution that delivers fast, stable, and precise 3D modeling, assembly, and 2.5-5 axis CNC machining in a single environment.",
   country: "China",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 2995,
-  platforms: ["Windows"],
-  industries: ["Manufacturing", "Mechanical", "Mold Design"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Manufacturing",
+    "Mechanical",
+    "Mold Design"
+  ],
   core_features: [
     "CAD/CAM/CAE",
     "Overdrive Engine",
     "Mold Design",
     "Surface Modeling",
-    "Hybrid Modeling",
+    "Hybrid Modeling"
   ],
-
-  user_scales: ["Small Business", "Mid-Market"],
+  user_scales: [
+    "Small Business",
+    "Mid-Market"
+  ],
   official_url: "https://www.zwsoft.com/zw3d",
   affiliate_url: null,
   score: 4.5,
   pros: [
     "Integrated CAD+CAM",
     "Perpetual license available",
-    "Competitive pricing",
+    "Competitive pricing"
   ],
   cons: [
     "Less third-party integrations",
     "Smaller user community",
-    "UI not as polished as NX",
+    "UI not as polished as NX"
   ],
   faqs: [
     {
       q: "What is ZW3D used for?",
-      a: "All-in-one 3D CAD/CAM solution from ZWSOFT. ZW3D is a 3D modeling solution widely adopted in Manufacturing, Mechanical, Mold Design.",
+      a: "All-in-one 3D CAD/CAM solution from ZWSOFT. ZW3D is a 3D modeling solution widely adopted in Manufacturing, Mechanical, Mold Design."
     },
     {
       q: "How much does ZW3D cost?",
-      a: "ZW3D starts at $2,995 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "ZW3D starts at $2,995 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of ZW3D?",
-      a: "ZW3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "ZW3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does ZW3D support?",
-      a: "ZW3D runs on Windows.",
+      a: "ZW3D runs on Windows."
     },
     {
       q: "Which file formats does ZW3D support?",
-      a: "ZW3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "ZW3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to ZW3D?",
-      a: "The closest alternatives within the 3D Modeling space are Alibre Design, Rhino 3D, IronCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the 3D Modeling space are Alibre Design, Rhino 3D, IronCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Overdrive Kernel (Proprietary)",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["STEP", "IGES", "DXF", "STL"],
+    standards: [
+      "STEP",
+      "IGES",
+      "DXF",
+      "STL"
+    ]
   },
-
-  expert_verdict:
-    "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
-
+  expert_verdict: "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
   pricing_tiers: [
     {
       name: "Standard",
       price: "2,000",
       period: "/yr",
-      features: ["3D Modeling", "Assembly", "Drafting", "Data Exchange"],
-      is_popular: true,
+      features: [
+        "3D Modeling",
+        "Assembly",
+        "Drafting",
+        "Data Exchange"
+      ],
+      is_popular: true
     },
     {
       name: "Professional",
@@ -3704,9 +4258,9 @@ export const c2Tools: Tool[] = [
         "Mold Design",
         "Electrode design",
         "Reverse Engineering",
-        "Full Standard",
+        "Full Standard"
       ],
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Premium",
@@ -3716,197 +4270,753 @@ export const c2Tools: Tool[] = [
         "2-5 Axis CAM",
         "Full Professional",
         "Post-processing",
-        "Simulation",
+        "Simulation"
       ],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Design Power",
-
       items: [
         {
           name: "Hybrid Modeling (Solid/Surface)",
-          status: true,
+          status: true
         },
         {
           name: "Direct Editing Tools",
-          status: true,
+          status: true
         },
         {
           name: "PMI (Product Mfg Info)",
-          status: true,
+          status: true
         },
         {
           name: "Flexible Component Library",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Manufacturing",
-
       items: [
         {
           name: "Automated Mold Design",
-          status: true,
+          status: true
         },
         {
           name: "2-5 Axis Milling CAM",
-          status: true,
+          status: true
         },
         {
           name: "Toolpath Optimization",
-          status: true,
+          status: true
         },
         {
           name: "Drilling & Turning",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t237",
-  "name": "Plasticity",
-  "slug": "plasticity",
+  name: "Plasticity",
+  slug: "plasticity",
   logo_url: getLogo("PL"),
-  "short_desc": "New-generation 3D modeller blending the best of Rhino, Blender, and CAD — Parasolid under the hood.",
-  "description": "Plasticity is a young commercial 3D modeller designed for industrial designers and 3D artists who want CAD-quality NURBS surfaces with a modern, Blender-like UX. Parasolid kernel.",
-  "country": "USA",
-  "category_id": "c2",
-  "pricing_type": "Perpetual",
-  "starting_price": 149,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Product Design", "Games", "Industrial Design"],
-
-  "core_features": [
+  short_desc: "New-generation 3D modeller blending the best of Rhino, Blender, and CAD — Parasolid under the hood.",
+  description: "Plasticity is a young commercial 3D modeller designed for industrial designers and 3D artists who want CAD-quality NURBS surfaces with a modern, Blender-like UX. Parasolid kernel.",
+  country: "USA",
+  category_id: "c2",
+  pricing_type: "Perpetual",
+  starting_price: 149,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Product Design",
+    "Games",
+    "Industrial Design"
+  ],
+  core_features: [
     "Parasolid NURBS kernel",
     "Blender-style hotkey-driven workflow",
     "Solid / surface hybrid modeling",
     "Boolean operations with auto-fillet",
     "STEP, IGES, OBJ, X_T export",
-    "Indie license (≤$100k revenue)",
+    "Indie license (≤$100k revenue)"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB"],
-  "official_url": "https://www.plasticity.xyz",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://www.plasticity.xyz",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Fast, modern, hotkey-heavy UX",
     "Real Parasolid for clean STEP/IGES output",
-    "Perpetual indie license under $200",
+    "Perpetual indie license under $200"
   ],
-
-  "cons": [
+  cons: [
     "Young product — feature gaps vs Rhino/Fusion 360",
     "No assembly / drawing modules yet",
-    "Smaller community and plugin ecosystem",
+    "Smaller community and plugin ecosystem"
   ],
-
-  "tech_specs": {
-    "engine": "Parasolid",
-    "multicore": "Yes",
-    "gpu_optimization": "OpenGL",
-    "standards": ["STEP", "IGES", "Parasolid", "OBJ"],
+  tech_specs: {
+    engine: "Parasolid",
+    multicore: "Yes",
+    gpu_optimization: "OpenGL",
+    standards: [
+      "STEP",
+      "IGES",
+      "Parasolid",
+      "OBJ"
+    ]
   },
-
-  "expert_verdict": "The most exciting new 3D CAD in years. If you wished Rhino felt more like Blender, Plasticity is for you.",
-  faqs: [{
-    q: 'What is Plasticity used for?',
-    a: 'New-generation 3D modeller blending the best of Rhino, Blender, and CAD — Parasolid under the hood. Plasticity is a 3D modeling solution widely adopted in Product Design, Games, Industrial Design.',
-  }, {
-    q: 'How much does Plasticity cost?',
-    a: 'Plasticity starts at $149 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Plasticity?',
-    a: 'Plasticity is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Plasticity support?',
-    a: 'Plasticity runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does Plasticity support?',
-    a: 'Plasticity works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Plasticity?',
-    a: 'The closest alternatives within the 3D Modeling space are MoI3D, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['moi3d', 'alibre-design', 'zw3d'],
-  detailed_features: [],
+  expert_verdict: "The most exciting new 3D CAD in years. If you wished Rhino felt more like Blender, Plasticity is for you.",
+  faqs: [
+    {
+      q: "What is Plasticity used for?",
+      a: "New-generation 3D modeller blending the best of Rhino, Blender, and CAD — Parasolid under the hood. Plasticity is a 3D modeling solution widely adopted in Product Design, Games, Industrial Design."
+    },
+    {
+      q: "How much does Plasticity cost?",
+      a: "Plasticity starts at $149 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Plasticity?",
+      a: "Plasticity is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Plasticity support?",
+      a: "Plasticity runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does Plasticity support?",
+      a: "Plasticity works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Plasticity?",
+      a: "The closest alternatives within the 3D Modeling space are MoI3D, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "moi3d",
+    "alibre-design",
+    "zw3d"
+  ],
+  detailed_features: [
+    {
+      category: "Modeling",
+      items: [
+        {
+          name: "3D modeling",
+          status: true
+        },
+        {
+          name: "NURBS modeling",
+          status: true
+        },
+        {
+          name: "Parasolid kernel",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Design",
+      items: [
+        {
+          name: "Product design",
+          status: true
+        },
+        {
+          name: "Industrial design",
+          status: true
+        },
+        {
+          name: "Concept modeling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "UI",
+      items: [
+        {
+          name: "Blender-like UI",
+          status: true
+        },
+        {
+          name: "Rhino-like tools",
+          status: true
+        },
+        {
+          name: "Modern interface",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Export",
+      items: [
+        {
+          name: "STEP export",
+          status: true
+        },
+        {
+          name: "IGES export",
+          status: true
+        },
+        {
+          name: "Parasolid export",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t238",
-  "name": "MoI3D",
-  "slug": "moi3d",
+  name: "MoI3D",
+  slug: "moi3d",
   logo_url: "",
-  "short_desc": "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design.",
-  "description": "MoI3D (Moment of Inspiration) is a long-running solo-developer NURBS modeller — drawn from the same lineage as Rhino but with a famously elegant, simple UI focused on rapid concept modeling.",
-  "country": "USA",
-  "category_id": "c2",
-  "pricing_type": "Perpetual",
-  "starting_price": 295,
-  "platforms": ["Windows", "macOS"],
-  "industries": ["Product Design", "Industrial Design", "Games"],
-
-  "core_features": [
+  short_desc: "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design.",
+  description: "MoI3D (Moment of Inspiration) is a long-running solo-developer NURBS modeller — drawn from the same lineage as Rhino but with a famously elegant, simple UI focused on rapid concept modeling.",
+  country: "USA",
+  category_id: "c2",
+  pricing_type: "Perpetual",
+  starting_price: 295,
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Product Design",
+    "Industrial Design",
+    "Games"
+  ],
+  core_features: [
     "NURBS solid and surface modeling",
     "Pen-tablet friendly UI",
     "Excellent quad-mesh export for 3D printing / games",
     "Boolean operations",
     "Curve and surface manipulation",
-    "Robust STEP, IGES, OBJ, 3DM export",
+    "Robust STEP, IGES, OBJ, 3DM export"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB"],
-  "official_url": "https://moi3d.com",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://moi3d.com",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Famously elegant, simple UI",
     "Perpetual license at $295",
-    "Best NURBS-to-quad-mesh export in the industry",
+    "Best NURBS-to-quad-mesh export in the industry"
   ],
-
-  "cons": [
+  cons: [
     "Slow release pace (solo developer)",
     "No assemblies / drawings / parametric history",
-    "Smaller user base than Rhino",
+    "Smaller user base than Rhino"
   ],
-
-  "tech_specs": {
-    "engine": "MoI / SMLib",
-    "multicore": "Limited",
-    "gpu_optimization": "OpenGL",
-    "standards": ["STEP", "IGES", "OBJ", "3DM"],
+  tech_specs: {
+    engine: "MoI / SMLib",
+    multicore: "Limited",
+    gpu_optimization: "OpenGL",
+    standards: [
+      "STEP",
+      "IGES",
+      "OBJ",
+      "3DM"
+    ]
   },
-
-  "expert_verdict": "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
-  faqs: [{
-    q: 'What is MoI3D used for?',
-    a: 'Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design. MoI3D is a 3D modeling solution widely adopted in Product Design, Industrial Design, Games.',
-  }, {
-    q: 'How much does MoI3D cost?',
-    a: 'MoI3D starts at $295 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of MoI3D?',
-    a: 'MoI3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does MoI3D support?',
-    a: 'MoI3D runs on Windows and macOS.',
-  }, {
-    q: 'Which file formats does MoI3D support?',
-    a: 'MoI3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to MoI3D?',
-    a: 'The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['plasticity', 'alibre-design', 'zw3d'],
-  detailed_features: [],
+  expert_verdict: "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
+  faqs: [
+    {
+      q: "What is MoI3D used for?",
+      a: "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design. MoI3D is a 3D modeling solution widely adopted in Product Design, Industrial Design, Games."
+    },
+    {
+      q: "How much does MoI3D cost?",
+      a: "MoI3D starts at $295 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of MoI3D?",
+      a: "MoI3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does MoI3D support?",
+      a: "MoI3D runs on Windows and macOS."
+    },
+    {
+      q: "Which file formats does MoI3D support?",
+      a: "MoI3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to MoI3D?",
+      a: "The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "plasticity",
+    "alibre-design",
+    "zw3d"
+  ],
+  detailed_features: [
+    {
+      category: "NURBS",
+      items: [
+        {
+          name: "NURBS modeling",
+          status: true
+        },
+        {
+          name: "Solid modeling",
+          status: true
+        },
+        {
+          name: "Surface modeling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Concept",
+      items: [
+        {
+          name: "Concept design",
+          status: true
+        },
+        {
+          name: "Rapid modeling",
+          status: true
+        },
+        {
+          name: "Sketchpad",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "UI",
+      items: [
+        {
+          name: "Elegant UI",
+          status: true
+        },
+        {
+          name: "Simple interface",
+          status: true
+        },
+        {
+          name: "Pen-tablet friendly",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Export",
+      items: [
+        {
+          name: "Quad-mesh export",
+          status: true
+        },
+        {
+          name: "STEP export",
+          status: true
+        },
+        {
+          name: "3DM export",
+          status: true
+        }
+      ]
+    }
+  ]
+},
+{
+  id: "t26",
+  name: "Tinkercad",
+  slug: "tinkercad",
+  logo_url: "",
+  short_desc: "Free, browser-based 3D design tool for beginners and education.",
+  description: "Tinkercad is a free, easy-to-use web application for 3D design, electronics, and coding. It's designed for beginners, students, and educators, providing an intuitive block-based approach to 3D modeling without complex interfaces.",
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "0",
+      period: "forever",
+      features: [
+        "3D Design",
+        "Circuit Simulation",
+        "Code Blocks",
+        "Cloud Storage"
+      ],
+      is_popular: true
+    }
+  ],
+  detailed_features: [
+    {
+      category: "Core Features",
+      items: [
+        {
+          name: "Browser-based 3D Design",
+          status: true
+        },
+        {
+          name: "Shape Library",
+          status: true
+        },
+        {
+          name: "Circuit Simulation",
+          status: true
+        },
+        {
+          name: "Code Blocks",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "fusion-360",
+    "sketchup",
+    "onshape"
+  ],
+  country: "USA",
+  category_id: "c2",
+  pricing_type: "Free",
+  starting_price: 0,
+  platforms: [
+    "Web",
+    "Android",
+    "iOS"
+  ],
+  industries: [
+    "Education",
+    "Hobbyist",
+    "Prototyping"
+  ],
+  core_features: [
+    "3D Design",
+    "Electronics",
+    "Coding"
+  ],
+  user_scales: [
+    "Education",
+    "Individuals"
+  ],
+  official_url: "https://www.tinkercad.com",
+  affiliate_url: null,
+  score: 4.6,
+  pros: [
+    "Completely free",
+    "Easy to learn",
+    "Web-based"
+  ],
+  cons: [
+    "Limited for professional use",
+    "Basic features only"
+  ],
+  faqs: [
+    {
+      q: "What is Tinkercad used for?",
+      a: "Tinkercad is a free web-based 3D design tool for beginners, students, and educators, featuring 3D design, circuit simulation, and coding capabilities."
+    },
+    {
+      q: "How much does Tinkercad cost?",
+      a: "Tinkercad is completely free for all users."
+    },
+    {
+      q: "Is there a free version of Tinkercad?",
+      a: "Yes — Tinkercad is entirely free with no premium tiers."
+    },
+    {
+      q: "What operating systems does Tinkercad support?",
+      a: "Tinkercad runs on web browsers and has mobile apps for Android and iOS."
+    },
+    {
+      q: "Which file formats does Tinkercad support?",
+      a: "Tinkercad supports export to STL, OBJ, and SVG for 3D printing and manufacturing."
+    }
+  ],
+  tech_specs: {
+    engine: "Autodesk Tinkercad Engine",
+    multicore: "N/A",
+    gpu_optimization: "Basic",
+    standards: [
+      "STL",
+      "OBJ",
+      "SVG"
+    ]
+  },
+  expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics."
+},
+{
+  id: "t27",
+  name: "Glovius",
+  slug: "glovius",
+  logo_url: "",
+  short_desc: "Mobile 3D CAD file viewer for viewing and analyzing 3D models.",
+  description: "Glovius is a 3D CAD file viewer that allows users to view, measure, and analyze 3D models on mobile devices. It supports a wide range of CAD file formats and provides tools for inspection, measurement, and collaboration.",
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "0",
+      period: "forever",
+      features: [
+        "View 3D Files",
+        "Basic Measurement",
+        "File Sharing"
+      ],
+      is_popular: true
+    },
+    {
+      name: "Pro",
+      price: "15",
+      period: "/mo",
+      features: [
+        "Advanced Analysis",
+        "Export",
+        "Cloud Storage",
+        "No Watermark"
+      ],
+      is_popular: false
+    }
+  ],
+  detailed_features: [
+    {
+      category: "Viewing Features",
+      items: [
+        {
+          name: "Multi-format Support",
+          status: true
+        },
+        {
+          name: "Measurement Tools",
+          status: true
+        },
+        {
+          name: "Section Views",
+          status: true
+        },
+        {
+          name: "Annotation",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "cad-exchanger",
+    "dwg-fastview",
+    "autocad"
+  ],
+  country: "India",
+  category_id: "c2",
+  pricing_type: "Freemium",
+  starting_price: 0,
+  platforms: [
+    "Android",
+    "iOS"
+  ],
+  industries: [
+    "Engineering",
+    "Manufacturing",
+    "Automotive"
+  ],
+  core_features: [
+    "3D Viewing",
+    "Measurement",
+    "Format Support"
+  ],
+  user_scales: [
+    "Individuals",
+    "Small Business"
+  ],
+  official_url: "https://glovius.com",
+  affiliate_url: null,
+  score: 4.2,
+  pros: [
+    "Wide format support",
+    "Mobile-optimized",
+    "Free tier"
+  ],
+  cons: [
+    "Limited editing",
+    "Watermark in free version"
+  ],
+  faqs: [
+    {
+      q: "What is Glovius used for?",
+      a: "Glovius is a mobile 3D CAD file viewer for viewing, measuring, and analyzing 3D models on Android and iOS devices."
+    },
+    {
+      q: "How much does Glovius cost?",
+      a: "Glovius has a free tier for basic viewing. The Pro plan costs $15 per month for advanced analysis, export, and cloud storage."
+    },
+    {
+      q: "Is there a free version of Glovius?",
+      a: "Yes — Glovius offers a free version with 3D file viewing, basic measurement, and file sharing features."
+    },
+    {
+      q: "What operating systems does Glovius support?",
+      a: "Glovius runs on Android and iOS devices."
+    },
+    {
+      q: "Which file formats does Glovius support?",
+      a: "Glovius supports a wide range of 3D CAD formats including CATIA, NX, SolidWorks, Creo, Inventor, and more."
+    }
+  ],
+  tech_specs: {
+    engine: "HCL Glovius Engine",
+    multicore: "N/A",
+    gpu_optimization: "Basic",
+    standards: [
+      "CATIA",
+      "NX",
+      "SolidWorks",
+      "Creo",
+      "Inventor"
+    ]
+  },
+  expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats."
+},
+{
+  id: "t28",
+  name: "CAD Exchanger",
+  slug: "cad-exchanger",
+  logo_url: "",
+  short_desc: "Mobile 3D CAD viewer and converter for multiple file formats.",
+  description: "CAD Exchanger is a mobile application for viewing and converting 3D CAD files. It supports a wide range of formats including STEP, IGES, STL, and more, making it useful for engineers and designers who need to work with different CAD systems.",
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "0",
+      period: "forever",
+      features: [
+        "View 3D Files",
+        "Basic Conversion",
+        "File Sharing"
+      ],
+      is_popular: true
+    },
+    {
+      name: "Pro",
+      price: "12",
+      period: "/mo",
+      features: [
+        "Advanced Conversion",
+        "Batch Processing",
+        "Export Options",
+        "No Watermark"
+      ],
+      is_popular: false
+    }
+  ],
+  detailed_features: [
+    {
+      category: "Conversion Features",
+      items: [
+        {
+          name: "Multi-format Support",
+          status: true
+        },
+        {
+          name: "Batch Conversion",
+          status: true
+        },
+        {
+          name: "Quality Control",
+          status: true
+        },
+        {
+          name: "Metadata Preservation",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "glovius",
+    "dwg-fastview",
+    "autocad"
+  ],
+  country: "USA",
+  category_id: "c2",
+  pricing_type: "Freemium",
+  starting_price: 0,
+  platforms: [
+    "Android",
+    "iOS"
+  ],
+  industries: [
+    "Engineering",
+    "Manufacturing",
+    "Automotive"
+  ],
+  core_features: [
+    "3D Viewing",
+    "Format Conversion",
+    "Cross-platform"
+  ],
+  user_scales: [
+    "Individuals",
+    "Small Business"
+  ],
+  official_url: "https://cadexchanger.com",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
+    "Wide format support",
+    "Good conversion quality",
+    "Free tier"
+  ],
+  cons: [
+    "Limited editing",
+    "Watermark in free version"
+  ],
+  faqs: [
+    {
+      q: "What is CAD Exchanger used for?",
+      a: "CAD Exchanger is a mobile 3D CAD viewer and converter for viewing and converting 3D CAD files across multiple formats."
+    },
+    {
+      q: "How much does CAD Exchanger cost?",
+      a: "CAD Exchanger has a free tier for basic viewing and conversion. The Pro plan costs $12 per month for advanced conversion, batch processing, and export options."
+    },
+    {
+      q: "Is there a free version of CAD Exchanger?",
+      a: "Yes — CAD Exchanger offers a free version with 3D file viewing, basic conversion, and file sharing features."
+    },
+    {
+      q: "What operating systems does CAD Exchanger support?",
+      a: "CAD Exchanger runs on Android and iOS devices."
+    },
+    {
+      q: "Which file formats does CAD Exchanger support?",
+      a: "CAD Exchanger supports a wide range of 3D CAD formats including STEP, IGES, STL, JT, Parasolid, and more."
+    }
+  ],
+  tech_specs: {
+    engine: "CAD Exchanger SDK",
+    multicore: "N/A",
+    gpu_optimization: "Basic",
+    standards: [
+      "STEP",
+      "IGES",
+      "STL",
+      "JT",
+      "Parasolid"
+    ]
+  },
+  expert_verdict: "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion."
 }
 ];

@@ -10,168 +10,171 @@ export const c6Tools: Tool[] = [
   slug: "altium-designer",
   logo_url: "",
   short_desc: "The professional standard for PCB and electronics design.",
-
-  description:
-    "Altium Designer offers a unified design environment including schematic capture and 3D PCB layout.",
-
+  description: "Altium Designer offers a unified design environment including schematic capture and 3D PCB layout.",
   pricing_tiers: [
     {
       name: "Standard",
       price: "3,500",
       period: "/yr",
-
       features: [
         "Unified PCB Design",
         "Native 3D PCB",
         "Standard Component Mgmt",
-        "Altium 365 Core",
+        "Altium 365 Core"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Professional",
       price: "7,500",
       period: "/yr",
-
       features: [
         "Advanced Simulation",
         "Rigid-flex Design",
         "Multi-board Assembly",
-        "Team Configuration",
+        "Team Configuration"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Enterprise",
       price: "Custom",
       period: "quote",
-
       features: [
         "Lifecycle Management",
         "Centralized Libraries",
         "Global Team Workflow",
-        "Custom APIs",
+        "Custom APIs"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "PCB Design",
-
       items: [
         {
           name: "Interactive Routing Engine",
-          status: true,
+          status: true
         },
         {
           name: "Native 3D Visualization",
-          status: true,
+          status: true
         },
         {
           name: "Hierarchical Schematic Design",
-          status: true,
+          status: true
         },
         {
           name: "MCAD/ECAD Co-design",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Manufacturing",
-
       items: [
         {
           name: "Draftsman Documentation",
-          status: true,
+          status: true
         },
         {
           name: "BOM Management",
-          status: true,
+          status: true
         },
         {
           name: "ActiveBOM Supply Chain data",
-          status: true,
+          status: true
         },
         {
           name: "Gerber/ODB++ Output",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["eagle", "orcad", "eplan-electric-p8"],
+  alternatives: [
+    "eagle",
+    "orcad",
+    "eplan-electric-p8"
+  ],
   country: "Australia",
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 3850,
-  platforms: ["Windows"],
-  industries: ["Consumer Electronics", "Medical", "Automotive"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Consumer Electronics",
+    "Medical",
+    "Automotive"
+  ],
   core_features: [
     "Unified PCB Design",
     "Native 3D",
     "Altium 365",
     "Interactive Routing",
-    "Supply Chain Integration",
+    "Supply Chain Integration"
   ],
-
-  user_scales: ["Enterprise", "Mid-Market"],
+  user_scales: [
+    "Enterprise",
+    "Mid-Market"
+  ],
   official_url: "https://www.altium.com",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Industry-leading 3D PCB",
     "Schematic-layout sync",
-    "Extensive component library",
+    "Extensive component library"
   ],
-  cons: ["High subscription cost", "Steep learning curve", "Windows only"],
+  cons: [
+    "High subscription cost",
+    "Steep learning curve",
+    "Windows only"
+  ],
   faqs: [
     {
       q: "What is Altium Designer used for?",
-      a: "The professional standard for PCB and electronics design. Altium Designer is an EDA solution widely adopted in Consumer Electronics, Medical, Automotive.",
+      a: "The professional standard for PCB and electronics design. Altium Designer is an EDA solution widely adopted in Consumer Electronics, Medical, Automotive."
     },
     {
       q: "How much does Altium Designer cost?",
-      a: "Altium Designer starts at $3,850 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Altium Designer starts at $3,850 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does Altium Designer offer a free trial?",
-      a: "Yes — Altium Designer ships with a 15-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — Altium Designer ships with a 15-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does Altium Designer support?",
-      a: "Altium Designer runs on Windows. Deployment options include desktop, cloud.",
+      a: "Altium Designer runs on Windows. Deployment options include desktop, cloud."
     },
     {
       q: "Which file formats does Altium Designer support?",
-      a: "Altium Designer imports SchDoc, PcbDoc, PrjPcb, Gerber, ODB++, IPC-2581 and more. Export covers SchDoc, PcbDoc, Gerber, ODB++, IPC-2581, STEP and more.",
+      a: "Altium Designer imports SchDoc, PcbDoc, PrjPcb, Gerber, ODB++, IPC-2581 and more. Export covers SchDoc, PcbDoc, Gerber, ODB++, IPC-2581, STEP and more."
     },
     {
       q: "Does Altium Designer have an API for automation and customization?",
-      a: "Yes. Altium Designer exposes Delphi-based API / Altium 365 REST with SDK bindings for Delphi, JavaScript, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. Altium Designer exposes Delphi-based API / Altium 365 REST with SDK bindings for Delphi, JavaScript, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Altium Unified Modeler",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["Gerber", "ODB++", "STEP", "IPC"],
+    standards: [
+      "Gerber",
+      "ODB++",
+      "STEP",
+      "IPC"
+    ]
   },
-
-  expert_verdict:
-    "Altium is the 'Gold Standard' for professional PCB designers.",
+  expert_verdict: "Altium is the 'Gold Standard' for professional PCB designers.",
   version: "25",
   last_updated: "2025-11-15",
   free_trial_days: 15,
-
   languages: [
     "English",
     "French",
@@ -179,9 +182,8 @@ export const c6Tools: Tool[] = [
     "Japanese",
     "Korean",
     "Simplified Chinese",
-    "Russian",
+    "Russian"
   ],
-
   file_formats_in: [
     "SchDoc",
     "PcbDoc",
@@ -193,9 +195,8 @@ export const c6Tools: Tool[] = [
     "IGES",
     "DXF",
     "DWG",
-    "IDF",
+    "IDF"
   ],
-
   file_formats_out: [
     "SchDoc",
     "PcbDoc",
@@ -208,9 +209,8 @@ export const c6Tools: Tool[] = [
     "PDF",
     "BOM",
     "3D PDF",
-    "IDF",
+    "IDF"
   ],
-
   integrations: [
     "Altium 365",
     "Concord Pro",
@@ -218,36 +218,40 @@ export const c6Tools: Tool[] = [
     "SOLIDWORKS",
     "PTC Creo",
     "Autodesk Inventor",
-    "Component Search Engine",
+    "Component Search Engine"
   ],
-
-  deployment_options: ["Desktop", "Cloud"],
-  license_types: ["Subscription", "Perpetual", "Network"],
-
+  deployment_options: [
+    "Desktop",
+    "Cloud"
+  ],
+  license_types: [
+    "Subscription",
+    "Perpetual",
+    "Network"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.4,
       max: 5,
       count: 280,
-      url: "https://www.g2.com/products/altium-designer/reviews",
+      url: "https://www.g2.com/products/altium-designer/reviews"
     },
     {
       source: "Capterra",
       score: 4.5,
       max: 5,
       count: 130,
-      url: "https://www.capterra.com/p/238434/Altium-Designer/",
+      url: "https://www.capterra.com/p/238434/Altium-Designer/"
     },
     {
       source: "TrustRadius",
       score: 8.5,
       max: 10,
       count: 95,
-      url: "https://www.trustradius.com/products/altium-designer/reviews",
-    },
+      url: "https://www.trustradius.com/products/altium-designer/reviews"
+    }
   ],
-
   support_channels: [
     "Phone",
     "Email",
@@ -255,19 +259,24 @@ export const c6Tools: Tool[] = [
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-
-  security_compliance: ["SOC 2 Type II", "GDPR", "ISO 27001"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "GDPR",
+    "ISO 27001"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "Delphi-based API / Altium 365 REST",
-    sdk_languages: ["Delphi", "JavaScript", "C#"],
-    docs_url:
-      "https://www.altium.com/documentation/altium-designer/script-handbook",
-  },
+    sdk_languages: [
+      "Delphi",
+      "JavaScript",
+      "C#"
+    ],
+    docs_url: "https://www.altium.com/documentation/altium-designer/script-handbook"
+  }
 },
 {
   id: "t42",
@@ -275,227 +284,255 @@ export const c6Tools: Tool[] = [
   slug: "eagle",
   logo_url: getLogo("EG"),
   short_desc: "PCB design software integrated with Fusion 360.",
-  description:
-    "EAGLE is an EDA software for PCB design, now part of Autodesk Fusion 360.",
+  description: "EAGLE is an EDA software for PCB design, now part of Autodesk Fusion 360.",
   pricing_tiers: [
     {
       name: "Subscription",
       price: "680",
       period: "/yr",
-      features: ["Fusion 360 link", "SPICE", "Library"],
-      is_popular: true,
-    },
+      features: [
+        "Fusion 360 link",
+        "SPICE",
+        "Library"
+      ],
+      is_popular: true
+    }
   ],
   detailed_features: [
     {
       category: "Electronics",
       items: [
-        { name: "Schematic Edit", status: true },
-        { name: "PCB Layout", status: true },
-        { name: "Auto-router", status: true },
-      ],
-    },
+        {
+          name: "Schematic Edit",
+          status: true
+        },
+        {
+          name: "PCB Layout",
+          status: true
+        },
+        {
+          name: "Auto-router",
+          status: true
+        }
+      ]
+    }
   ],
   alternatives: [
     "altium-designer",
     "eplan-electric-p8",
-    "synopsys-fusion-compiler",
+    "synopsys-fusion-compiler"
   ],
   country: "USA",
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 680,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["Electronics", "IoT", "Education"],
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Electronics",
+    "IoT",
+    "Education"
+  ],
   core_features: [
     "Schematic-to-PCB Link",
     "Library Management",
-    "SPICE Simulation",
+    "SPICE Simulation"
   ],
-  user_scales: ["Individuals", "Small Business"],
+  user_scales: [
+    "Individuals",
+    "Small Business"
+  ],
   official_url: "https://www.autodesk.com/eagle",
   affiliate_url: null,
   score: 4.6,
-  pros: ["Fusion 360 MCAD link", "Massive library support", "Cross-platform"],
+  pros: [
+    "Fusion 360 MCAD link",
+    "Massive library support",
+    "Cross-platform"
+  ],
   cons: [
     "Subscription only",
     "Interface quirky",
-    "Replaced by Fusion Electronics",
+    "Replaced by Fusion Electronics"
   ],
   faqs: [
     {
       q: "What is Eagle used for?",
-      a: "PCB design software integrated with Fusion 360. Eagle is an EDA solution widely adopted in Electronics, IoT, Education.",
+      a: "PCB design software integrated with Fusion 360. Eagle is an EDA solution widely adopted in Electronics, IoT, Education."
     },
     {
       q: "How much does Eagle cost?",
-      a: "Eagle starts at $680 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Eagle starts at $680 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Eagle?",
-      a: "Eagle is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Eagle is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Eagle support?",
-      a: "Eagle runs on Windows, macOS, and Linux.",
+      a: "Eagle runs on Windows, macOS, and Linux."
     },
     {
       q: "Which file formats does Eagle support?",
-      a: "Eagle works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Eagle works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Eagle?",
-      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Synopsys Fusion Compiler. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Synopsys Fusion Compiler. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "EAGLE Core",
     multicore: "Low",
     gpu_optimization: "Basic",
-    standards: ["Gerber", "STEP", "IPC"],
+    standards: [
+      "Gerber",
+      "STEP",
+      "IPC"
+    ]
   },
-  expert_verdict: "The standard for mid-level professional PCB design.",
+  expert_verdict: "The standard for mid-level professional PCB design."
 },
 {
   id: "t63",
   name: "EPLAN Electric P8",
   slug: "eplan-electric-p8",
-  logo_url:
-    "https://www.eplan.com/typo3conf/ext/eplan/Resources/Public/Images/Logo.svg",
+  logo_url: "https://www.eplan.com/typo3conf/ext/eplan/Resources/Public/Images/Logo.svg",
   short_desc: "The global standard for electrical engineering.",
-
-  description:
-    "EPLAN Electric P8 is a consistent, integrated and fast system for the planning and design of electrical engineering for machines and plant systems.",
-
+  description: "EPLAN Electric P8 is a consistent, integrated and fast system for the planning and design of electrical engineering for machines and plant systems.",
   country: "USA",
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 2500,
-  platforms: ["Windows"],
-  industries: ["Electrical Engineering", "Automation"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Electrical Engineering",
+    "Automation"
+  ],
   core_features: [
     "Electrical CAE",
     "Schematic Design",
     "Panel Building",
     "Fluid Power Design",
-    "Mechatronics Integration",
+    "Mechatronics Integration"
   ],
-
-  user_scales: ["Enterprise", "Mid-Market"],
+  user_scales: [
+    "Enterprise",
+    "Mid-Market"
+  ],
   official_url: "https://www.eplan.com",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Unmatched automation",
     "Massive parts library",
-    "Industry standard in EU",
+    "Industry standard in EU"
   ],
   cons: [
     "Very high cost",
     "Steep learning curve",
-    "Requires specialized training",
+    "Requires specialized training"
   ],
   faqs: [
     {
       q: "What is EPLAN Electric P8 used for?",
-      a: "The global standard for electrical engineering. EPLAN Electric P8 is an EDA solution widely adopted in Electrical Engineering, Automation.",
+      a: "The global standard for electrical engineering. EPLAN Electric P8 is an EDA solution widely adopted in Electrical Engineering, Automation."
     },
     {
       q: "How much does EPLAN Electric P8 cost?",
-      a: "EPLAN Electric P8 starts at $2,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "EPLAN Electric P8 starts at $2,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of EPLAN Electric P8?",
-      a: "EPLAN Electric P8 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "EPLAN Electric P8 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does EPLAN Electric P8 support?",
-      a: "EPLAN Electric P8 runs on Windows.",
+      a: "EPLAN Electric P8 runs on Windows."
     },
     {
       q: "Which file formats does EPLAN Electric P8 support?",
-      a: "EPLAN Electric P8 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "EPLAN Electric P8 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to EPLAN Electric P8?",
-      a: "The closest alternatives within the EDA space are Altium Designer, Synopsys Fusion Compiler, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are Altium Designer, Synopsys Fusion Compiler, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Proprietary",
     multicore: "High",
     gpu_optimization: "Moderate",
-    standards: ["IEC", "NFPA", "JIC"],
+    standards: [
+      "IEC",
+      "NFPA",
+      "JIC"
+    ]
   },
-
-  expert_verdict:
-    "The gold standard for anyone serious about industrial electrical design.",
-
+  expert_verdict: "The gold standard for anyone serious about industrial electrical design.",
   pricing_tiers: [
     {
       name: "Subscription",
       price: "3,500",
       period: "/yr",
-
       features: [
         "Electrical Design",
         "Schematic Creation",
         "Standard Parts Data",
-        "Cloud services",
+        "Cloud services"
       ],
-
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "CAE Engineering",
-
       items: [
         {
           name: "Automated Schematic Check",
-          status: true,
+          status: true
         },
         {
           name: "EPLAN Data Portal access",
-          status: true,
+          status: true
         },
         {
           name: "PLC Management",
-          status: true,
+          status: true
         },
         {
           name: "Multi-user concurrent editing",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Manufacturing",
-
       items: [
         {
           name: "Smart Wiring support",
-          status: true,
+          status: true
         },
         {
           name: "Automatic BOM & Wire lists",
-          status: true,
+          status: true
         },
         {
           name: "Thermal Design integration",
-          status: true,
+          status: true
         },
         {
           name: "3D Panel Layout",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t92",
@@ -503,158 +540,408 @@ export const c6Tools: Tool[] = [
   slug: "synopsys-fusion-compiler",
   logo_url: "",
   short_desc: "Next-generation RTL-to-GDSII EDA compiler from Synopsys.",
-  description:
-    "Synopsys Fusion Compiler is an innovative RTL-to-GDSII implementation system that fuses synthesis, place and route, and signoff-driven optimization in a single, unified environment.",
+  description: "Synopsys Fusion Compiler is an innovative RTL-to-GDSII implementation system that fuses synthesis, place and route, and signoff-driven optimization in a single, unified environment.",
   country: "USA",
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 50000,
-  platforms: ["Linux"],
-  industries: ["Semiconductor", "IC Design", "Electronics"],
+  platforms: [
+    "Linux"
+  ],
+  industries: [
+    "Semiconductor",
+    "IC Design",
+    "Electronics"
+  ],
   core_features: [
     "RTL Synthesis",
     "Place & Route",
     "Signoff Closure",
-    "AI-Driven Optimization",
+    "AI-Driven Optimization"
   ],
-  user_scales: ["Enterprise"],
-  official_url:
-    "https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html",
+  user_scales: [
+    "Enterprise"
+  ],
+  official_url: "https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Industry-leading PPA results",
     "Unified RTL-to-GDSII flow",
-    "AI-powered optimization",
+    "AI-powered optimization"
   ],
-  cons: ["Extremely expensive", "Linux only", "Requires deep EDA expertise"],
+  cons: [
+    "Extremely expensive",
+    "Linux only",
+    "Requires deep EDA expertise"
+  ],
   faqs: [
     {
       q: "What is Synopsys Fusion Compiler used for?",
-      a: "Next-generation RTL-to-GDSII EDA compiler from Synopsys. Synopsys Fusion Compiler is an EDA solution widely adopted in Semiconductor, IC Design, Electronics.",
+      a: "Next-generation RTL-to-GDSII EDA compiler from Synopsys. Synopsys Fusion Compiler is an EDA solution widely adopted in Semiconductor, IC Design, Electronics."
     },
     {
       q: "How much does Synopsys Fusion Compiler cost?",
-      a: "Synopsys Fusion Compiler starts at $50,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Synopsys Fusion Compiler starts at $50,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Synopsys Fusion Compiler?",
-      a: "Synopsys Fusion Compiler is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Synopsys Fusion Compiler is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Synopsys Fusion Compiler support?",
-      a: "Synopsys Fusion Compiler runs on Linux.",
+      a: "Synopsys Fusion Compiler runs on Linux."
     },
     {
       q: "Which file formats does Synopsys Fusion Compiler support?",
-      a: "Synopsys Fusion Compiler works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Synopsys Fusion Compiler works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Synopsys Fusion Compiler?",
-      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, Eagle. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Synopsys Fusion Engine",
     multicore: "Ultra",
     gpu_optimization: "Ultra",
-    standards: ["GDSII", "LEF/DEF", "Liberty", "Verilog"],
+    standards: [
+      "GDSII",
+      "LEF/DEF",
+      "Liberty",
+      "Verilog"
+    ]
   },
-  expert_verdict:
-    "The most advanced chip implementation platform, powering designs at 3nm and below.",
+  expert_verdict: "The most advanced chip implementation platform, powering designs at 3nm and below."
 },
 {
   id: "t103",
   name: "EPLAN",
   slug: "eplan",
-  logo_url: "",
-  short_desc:
-    "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing.",
-  description:
-    "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing.",
+  logo_url: "/logos/eplan.png",
+  short_desc: "Comprehensive electrical engineering software for automated schematic design, panel building, and control system engineering with integrated CAE capabilities.",
+  description: "EPLAN is a leading electrical engineering software platform that provides automated solutions for panel building, switchgear manufacturing, and control system design. The software streamlines the entire engineering process from schematic design to documentation, featuring template-based design, automated wire connecting, cross-referencing, and access to millions of device data sets through the EPLAN Data Portal. EPLAN supports complete electrical engineering documentation including auto-generated reports, wire lists, and terminal diagrams. The platform integrates seamlessly with ERP and PDM systems, enabling fluid data flows from engineering to operations. EPLAN also includes fluid power engineering capabilities for pneumatic, hydraulic, cooling, and lubrication systems, making it a comprehensive solution for machine and plant engineering.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
+      name: "Perpetual License",
+      price: "Contact for pricing",
       period: "initial",
-      features: [],
-      is_popular: false,
+      features: ["Schematic design", "Panel building", "Documentation generation", "EPLAN Data Portal access", "ERP/PDM integration", "Technical support"],
+      is_popular: true
     },
+    {
+      name: "Subscription",
+      price: "Contact for pricing",
+      period: "annual",
+      features: ["All perpetual features", "Regular updates", "Cloud collaboration"],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["cr-8000", "quadcept", "allegro-pcb"],
+  detailed_features: [
+    {
+      category: "Schematic Design",
+      items: [
+        {
+          name: "Automated schematic creation",
+          status: true
+        },
+        {
+          name: "Auto wire connecting",
+          status: true
+        },
+        {
+          name: "Automated numbering",
+          status: true
+        },
+        {
+          name: "Cross-referencing",
+          status: true
+        },
+        {
+          name: "Template-based design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Data Management",
+      items: [
+        {
+          name: "EPLAN Data Portal access",
+          status: true
+        },
+        {
+          name: "Millions of device data sets",
+          status: true
+        },
+        {
+          name: "Graphical and data-based engineering",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Documentation",
+      items: [
+        {
+          name: "Auto-generated reports",
+          status: true
+        },
+        {
+          name: "Wire lists",
+          status: true
+        },
+        {
+          name: "Parts lists",
+          status: true
+        },
+        {
+          name: "Terminal diagrams",
+          status: true
+        },
+        {
+          name: "Cable documentation",
+          status: true
+        },
+        {
+          name: "Automated project generation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "ERP integration",
+          status: true
+        },
+        {
+          name: "PDM integration",
+          status: true
+        },
+        {
+          name: "CAE integration",
+          status: true
+        },
+        {
+          name: "PLC integration",
+          status: true
+        },
+        {
+          name: "3D cabinet layout",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Fluid Power",
+      items: [
+        {
+          name: "Pneumatic system design",
+          status: true
+        },
+        {
+          name: "Hydraulic system design",
+          status: true
+        },
+        {
+          name: "Cooling systems",
+          status: true
+        },
+        {
+          name: "Lubrication technology",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "cr-8000",
+    "quadcept",
+    "allegro-pcb"
+  ],
   country: "Germany",
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  platforms: [
+    "Windows"
+  ],
+  industries: ["Machine Building", "Plant Engineering", "Panel Building", "Switchgear Manufacturing", "Automation", "Control Systems", "Automotive", "Energy", "Industrial Machinery"],
+  core_features: ["Automated Schematic Design", "EPLAN Data Portal", "Auto-Generated Documentation", "ERP/PDM Integration", "Fluid Power Engineering", "3D Cabinet Layout", "PLC Integration"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.eplan-software.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Industry standard for electrical engineering", "Extensive device data portal with millions of components", "Automated documentation saves significant time", "Seamless ERP/PDM integration", "Template-based design for consistency", "Supports fluid power engineering", "Multi-language support", "Strong global support network"],
+  cons: ["High cost compared to some alternatives", "Steep learning curve for advanced features", "Windows-only platform", "Pricing not publicly available", "Requires training for full utilization"],
+  version: "2026",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "German", "French", "Spanish", "Italian", "Chinese", "Japanese", "Russian"],
+  file_formats_in: ["DXF", "DWG", "PDF", "XML", "CSV", "Excel"],
+  file_formats_out: ["DXF", "DWG", "PDF", "XML", "CSV", "Excel"],
+  integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Teamcenter", "Windchill", "Autodesk Vault", "SolidWorks PDM"],
+  deployment_options: ["Desktop", "On-Premise", "Cloud"],
+  license_types: ["Perpetual", "Subscription", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training", "Reseller Network"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "Perpetual License",
+      price: "Contact for pricing",
+      notes: "One-time purchase with annual maintenance options available"
+    },
+    {
+      tier: "Subscription",
+      price: "Contact for pricing",
+      notes: "Annual subscription with regular updates and cloud collaboration"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for educational institutions"
+    }
+  ],
+  key_capabilities: ["Automated Schematic Design", "EPLAN Data Portal", "Auto-Generated Documentation", "ERP/PDM Integration", "Fluid Power Engineering", "3D Cabinet Layout"],
   faqs: [
     {
       q: "What is EPLAN used for?",
-      a: "Eplan offers automated electrical engineering software for panel building and switchgear manufacturing. EPLAN is an EDA solution.",
+      a: "EPLAN is a comprehensive electrical engineering software platform used for automated schematic design, panel building, switchgear manufacturing, and control system engineering. It's widely used in machine building, plant engineering, automation, and industrial machinery industries for creating electrical schematics, generating documentation, and integrating with ERP/PDM systems."
     },
     {
       q: "How much does EPLAN cost?",
-      a: "EPLAN is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "EPLAN is offered on both perpetual and subscription models. Pricing is not publicly available and must be requested from the vendor; pricing scales with module bundles, seat counts, and deployment options. Educational licenses are available at special rates for students and institutions."
     },
     {
       q: "Is there a free version of EPLAN?",
-      a: "EPLAN is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "EPLAN is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does EPLAN support?",
-      a: "EPLAN runs on Windows.",
+      a: "EPLAN runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does EPLAN support?",
-      a: "EPLAN works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "EPLAN supports standard CAD and engineering formats including DXF, DWG, PDF, XML, CSV, and Excel for import and export. It also integrates with various ERP and PDM systems through dedicated interfaces."
     },
     {
       q: "What are the best alternatives to EPLAN?",
-      a: "The closest alternatives within the EDA space are CR-8000, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "Popular alternatives include AutoCAD Electrical, Zuken CR-8000, SolidWorks Electrical, and various EDA tools like Altium Designer and Eagle. EPLAN distinguishes itself with its comprehensive electrical engineering focus, extensive device data portal, and strong integration capabilities."
+    }
   ],
   tech_specs: {
-    engine: "EPLAN Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    engine: "EPLAN Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IEC", "NFPA", "GB", "GOST"]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "EPLAN is the industry-standard electrical engineering software platform, widely adopted by machine builders, panel manufacturers, and industrial automation companies worldwide. Its standout feature is the EPLAN Data Portal, providing access to millions of device data sets that significantly accelerate design workflows. The automated documentation capabilities - from auto-generated reports to wire lists and terminal diagrams - dramatically reduce engineering time while ensuring accuracy and consistency. EPLAN's seamless integration with major ERP and PDM systems creates a continuous data flow from engineering to operations, eliminating manual data entry and reducing errors. Although the software requires significant investment and training, the productivity gains and standardization benefits make it particularly attractive for mid-to-large enterprises with complex electrical engineering requirements. The inclusion of fluid power engineering capabilities extends its utility beyond pure electrical design, making it a comprehensive solution for machine and plant engineering projects."
 },
 {
   id: "t111",
   name: "CR-8000",
   slug: "cr-8000",
   logo_url: getLogo("CR"),
-  short_desc:
-    "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management o",
-  description:
-    "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management of PCB designs, electrical and fluid systems and 3D cabinet and wire harness layouts.",
+  short_desc: "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management o",
+  description: "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management of PCB designs, electrical and fluid systems and 3D cabinet and wire harness layouts.",
   pricing_tiers: [
     {
       name: "Perpetual",
       price: "N/A",
       period: "initial",
       features: [],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "quadcept", "allegro-pcb"],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        {
+          name: "PCB design",
+          status: true
+        },
+        {
+          name: "Electrical systems",
+          status: true
+        },
+        {
+          name: "Fluid systems",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "3D Layout",
+      items: [
+        {
+          name: "3D cabinet layout",
+          status: true
+        },
+        {
+          name: "Wire harness layout",
+          status: true
+        },
+        {
+          name: "Cable routing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Management",
+      items: [
+        {
+          name: "Design management",
+          status: true
+        },
+        {
+          name: "Version control",
+          status: true
+        },
+        {
+          name: "Collaboration",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "CAD integration",
+          status: true
+        },
+        {
+          name: "MCAD integration",
+          status: true
+        },
+        {
+          name: "PLM integration",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "quadcept",
+    "allegro-pcb"
+  ],
   country: "Japan",
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
-  platforms: ["Windows", "macOS"],
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
   industries: [],
   core_features: [],
   user_scales: [],
@@ -666,62 +953,135 @@ export const c6Tools: Tool[] = [
   faqs: [
     {
       q: "What is CR-8000 used for?",
-      a: "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management o CR-8000 is an EDA solution.",
+      a: "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management o CR-8000 is an EDA solution."
     },
     {
       q: "How much does CR-8000 cost?",
-      a: "CR-8000 is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "CR-8000 is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of CR-8000?",
-      a: "CR-8000 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "CR-8000 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does CR-8000 support?",
-      a: "CR-8000 runs on Windows and macOS.",
+      a: "CR-8000 runs on Windows and macOS."
     },
     {
       q: "Which file formats does CR-8000 support?",
-      a: "CR-8000 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "CR-8000 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to CR-8000?",
-      a: "The closest alternatives within the EDA space are EPLAN, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are EPLAN, Quadcept, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "CR-8000 Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "CR-8000 is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
 },
 {
   id: "t114",
   name: "Quadcept",
   slug: "quadcept",
   logo_url: getLogo("QU"),
-  short_desc:
-    "Quadcept is a pay as you go cloud based CAD system offering robust features.",
-  description:
-    "Quadcept is a pay as you go cloud based CAD system offering robust features.",
+  short_desc: "Quadcept is a pay as you go cloud based CAD system offering robust features.",
+  description: "Quadcept is a pay as you go cloud based CAD system offering robust features.",
   pricing_tiers: [
     {
       name: "Perpetual",
       price: "N/A",
       period: "initial",
       features: [],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "cr-8000", "allegro-pcb"],
+  detailed_features: [
+    {
+      category: "Cloud CAD",
+      items: [
+        {
+          name: "Cloud-based",
+          status: true
+        },
+        {
+          name: "Pay as you go",
+          status: true
+        },
+        {
+          name: "Robust features",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "EDA",
+      items: [
+        {
+          name: "PCB design",
+          status: true
+        },
+        {
+          name: "Schematic design",
+          status: true
+        },
+        {
+          name: "Circuit design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "Real-time collaboration",
+          status: true
+        },
+        {
+          name: "Cloud storage",
+          status: true
+        },
+        {
+          name: "Team sharing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "CAD integration",
+          status: true
+        },
+        {
+          name: "File compatibility",
+          status: true
+        },
+        {
+          name: "Export formats",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "cr-8000",
+    "allegro-pcb"
+  ],
   country: "Japan",
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
-  platforms: ["Windows"],
+  platforms: [
+    "Windows"
+  ],
   industries: [],
   core_features: [],
   user_scales: [],
@@ -733,65 +1093,139 @@ export const c6Tools: Tool[] = [
   faqs: [
     {
       q: "What is Quadcept used for?",
-      a: "Quadcept is a pay as you go cloud based CAD system offering robust features. Quadcept is an EDA solution.",
+      a: "Quadcept is a pay as you go cloud based CAD system offering robust features. Quadcept is an EDA solution."
     },
     {
       q: "How much does Quadcept cost?",
-      a: "Quadcept is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Quadcept is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Quadcept?",
-      a: "Quadcept is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Quadcept is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Quadcept support?",
-      a: "Quadcept runs on Windows.",
+      a: "Quadcept runs on Windows."
     },
     {
       q: "Which file formats does Quadcept support?",
-      a: "Quadcept works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Quadcept works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Quadcept?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Allegro PCB. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Quadcept Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Quadcept is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
 },
 {
   id: "t160",
   name: "Allegro PCB",
   slug: "allegro-pcb",
   logo_url: getLogo("AL"),
-  short_desc: "简要介绍 Allegro PCB（官方站点）",
-  description: "详细介绍 Allegro PCB（官方站点）",
+  short_desc: "Cadence's industry-leading enterprise PCB design and analysis platform for high-speed systems.",
+  description: "Allegro PCB Designer is Cadence's premium, enterprise-level electronic design automation (EDA) system. It delivers a robust, scalable layout solution featuring industry-leading constraint-driven design, real-time routing, signal and power integrity analysis, and seamless integration with the Cadence system design ecosystem.",
   pricing_tiers: [
     {
       name: "Perpetual",
-      price: "N/A",
+      price: "Contact",
       period: "initial",
       features: [],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "cr-8000", "quadcept"],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        {
+          name: "PCB layout",
+          status: true
+        },
+        {
+          name: "Schematic capture",
+          status: true
+        },
+        {
+          name: "Circuit simulation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Advanced",
+      items: [
+        {
+          name: "High-speed design",
+          status: true
+        },
+        {
+          name: "Signal integrity",
+          status: true
+        },
+        {
+          name: "Power integrity",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Analysis",
+      items: [
+        {
+          name: "Thermal analysis",
+          status: true
+        },
+        {
+          name: "EMI/EMC analysis",
+          status: true
+        },
+        {
+          name: "Design verification",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "OrCAD integration",
+          status: true
+        },
+        {
+          name: "Cadence ecosystem",
+          status: true
+        },
+        {
+          name: "Manufacturing output",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "cr-8000",
+    "quadcept"
+  ],
   country: "USA",
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
-  platforms: ["Windows"],
+  platforms: [
+    "Windows"
+  ],
   industries: [],
   core_features: [],
   user_scales: [],
-  official_url:
-    "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
+  official_url: "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -799,194 +1233,607 @@ export const c6Tools: Tool[] = [
   faqs: [
     {
       q: "What is Allegro PCB used for?",
-      a: "简要介绍 Allegro PCB（官方站点） Allegro PCB is an EDA solution.",
+      a: "Allegro PCB is used for high-speed, multi-layer circuit board layout and comprehensive design verification in automotive, aerospace, and consumer electronics."
     },
     {
       q: "How much does Allegro PCB cost?",
-      a: "Allegro PCB is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Allegro PCB is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Allegro PCB?",
-      a: "Allegro PCB is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Allegro PCB is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Allegro PCB support?",
-      a: "Allegro PCB runs on Windows.",
+      a: "Allegro PCB runs on Windows."
     },
     {
       q: "Which file formats does Allegro PCB support?",
-      a: "Allegro PCB works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Allegro PCB works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Allegro PCB?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Allegro PCB Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Allegro PCB is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
 },
 {
   id: "t161",
   name: "OrCAD",
   slug: "orcad",
-  logo_url: "",
-  short_desc: "简要介绍 OrCAD（官方站点）",
-  description: "详细介绍 OrCAD（官方站点）",
+  logo_url: "/logos/orcad.png",
+  short_desc: "Cadence's professional PCB design suite featuring PSpice simulation, schematic capture, and high-performance routing for electronic design automation.",
+  description: "OrCAD is Cadence's comprehensive PCB design and analysis suite that integrates advanced schematic capture, industry-standard PSpice circuit simulation, and high-performance PCB routing into a cohesive design workflow. The software provides constraint-driven design, mixed-signal simulation, and advanced analysis capabilities including signal integrity, thermal analysis, and EMI/EMC verification. OrCAD features seamless integration with Allegro PCB Designer for scalability to high-end design requirements, and offers extensive component libraries through OrCAD CIS. The platform supports both perpetual and subscription licensing models, with educational options for students and institutions. OrCAD is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing printed circuit boards ranging from simple to complex multi-layer designs.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "OrCAD X Standard",
+      price: "$2,500+",
+      period: "annual",
+      features: ["Schematic capture", "PCB layout", "PSpice simulation", "Signal integrity analysis", "Library management"],
+      is_popular: true
     },
+    {
+      name: "OrCAD X Premium",
+      price: "$5,000+",
+      period: "annual",
+      features: ["All Standard features", "Advanced simulation", "Thermal analysis", "Constraint management", "Allegro integration"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "cr-8000", "quadcept"],
+  detailed_features: [
+    {
+      category: "Schematic Design",
+      items: [
+        {
+          name: "Advanced schematic capture",
+          status: true
+        },
+        {
+          name: "Hierarchical design",
+          status: true
+        },
+        {
+          name: "Variant management",
+          status: true
+        },
+        {
+          name: "Design reuse",
+          status: true
+        },
+        {
+          name: "Constraint-driven design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Simulation",
+      items: [
+        {
+          name: "PSpice analog simulation",
+          status: true
+        },
+        {
+          name: "Mixed-signal simulation",
+          status: true
+        },
+        {
+          name: "Digital simulation",
+          status: true
+        },
+        {
+          name: "Advanced analysis",
+          status: true
+        },
+        {
+          name: "Monte Carlo analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PCB Layout",
+      items: [
+        {
+          name: "High-performance routing",
+          status: true
+        },
+        {
+          name: "Multi-layer design",
+          status: true
+        },
+        {
+          name: "Differential pair routing",
+          status: true
+        },
+        {
+          name: "Auto-routing",
+          status: true
+        },
+        {
+          name: "Design for manufacturability",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Analysis",
+      items: [
+        {
+          name: "Signal integrity analysis",
+          status: true
+        },
+        {
+          name: "Thermal analysis",
+          status: true
+        },
+        {
+          name: "EMI/EMC analysis",
+          status: true
+        },
+        {
+          name: "Power integrity",
+          status: true
+        },
+        {
+          name: "Timing analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Library Management",
+      items: [
+        {
+          name: "OrCAD CIS",
+          status: true
+        },
+        {
+          name: "Component information system",
+          status: true
+        },
+        {
+          name: "Cloud library access",
+          status: true
+        },
+        {
+          name: "Part search",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "cr-8000",
+    "quadcept"
+  ],
   country: "USA",
   category_id: "c6",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  pricing_type: "Subscription",
+  starting_price: 2500,
+  platforms: [
+    "Windows"
+  ],
+  industries: ["Consumer Electronics", "Automotive", "Aerospace", "Industrial Automation", "Medical Devices", "Telecommunications", "IoT", "Semiconductor"],
+  core_features: ["PSpice Simulation", "Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "OrCAD CIS", "Constraint-Driven Design", "Allegro Integration"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.orcad.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Industry-standard PSpice simulation", "Comprehensive PCB design capabilities", "Seamless Allegro integration for scalability", "Extensive component libraries", "Constraint-driven design workflow", "Mixed-signal simulation support", "Strong Cadence ecosystem", "Educational licensing available"],
+  cons: ["Higher cost compared to some alternatives", "Windows-only platform", "Steep learning curve for advanced features", "Subscription model may not suit all budgets", "Requires training for full utilization"],
+  version: "OrCAD X",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Chinese", "Japanese", "Korean", "German", "French"],
+  file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
+  file_formats_out: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "PDF", "STEP"],
+  integrations: ["Allegro PCB Designer", "Cadence Sigrity", "Cadence Liberate", "SAP", "Oracle", "Microsoft Dynamics"],
+  deployment_options: ["Desktop", "Cloud"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training", "Community"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "OrCAD X Standard",
+      price: "$2,500+/year",
+      notes: "Annual subscription with basic PCB design capabilities"
+    },
+    {
+      tier: "OrCAD X Premium",
+      price: "$5,000+/year",
+      notes: "Annual subscription with advanced simulation and analysis"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["PSpice Simulation", "Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "OrCAD CIS", "Constraint-Driven Design"],
   faqs: [
     {
       q: "What is OrCAD used for?",
-      a: "简要介绍 OrCAD（官方站点） OrCAD is an EDA solution.",
+      a: "OrCAD is a comprehensive PCB design and analysis suite used for schematic capture, circuit simulation using PSpice, and printed circuit board layout. It's widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from simple to complex multi-layer designs."
     },
     {
       q: "How much does OrCAD cost?",
-      a: "OrCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "OrCAD X Standard starts at approximately $2,500 per year for a subscription license. OrCAD X Premium with advanced simulation and analysis capabilities starts at approximately $5,000 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of OrCAD?",
-      a: "OrCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "OrCAD is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does OrCAD support?",
-      a: "OrCAD runs on Windows.",
+      a: "OrCAD runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does OrCAD support?",
-      a: "OrCAD works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "OrCAD supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
     },
     {
       q: "What are the best alternatives to OrCAD?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "Popular alternatives include Altium Designer, KiCad, Eagle, Zuken CR-8000, and SolidWorks PCB. OrCAD distinguishes itself with its industry-standard PSpice simulation, seamless Allegro integration for scalability, and strong Cadence ecosystem."
+    }
   ],
   tech_specs: {
-    engine: "OrCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    engine: "OrCAD X Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IPC", "IEEE", "JEDEC"]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "OrCAD is Cadence's professional PCB design suite that has established itself as a leading solution for schematic capture, circuit simulation, and PCB layout. Its standout feature is the industry-standard PSpice simulation engine, which provides accurate analog and mixed-signal analysis capabilities trusted by engineers worldwide. The software offers a comprehensive constraint-driven design workflow that ensures design intent is maintained throughout the development process. OrCAD's seamless integration with Allegro PCB Designer provides a clear upgrade path for users requiring high-end design capabilities, while the extensive component library through OrCAD CIS accelerates design cycles. Although the software requires significant investment and training, the combination of proven simulation technology, robust PCB layout tools, and strong Cadence ecosystem support makes it particularly attractive for mid-to-large enterprises in consumer electronics, automotive, and aerospace industries. The recent OrCAD X platform update has modernized the user interface and added cloud collaboration features, making it competitive with contemporary PCB design solutions."
 },
 {
   id: "t162",
   name: "PADS Professional",
   slug: "pads-professional",
-  logo_url: "",
-  short_desc:
-    "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-read",
-  description:
-    "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-ready Xpedition ecosystem.",
+  logo_url: "/logos/pads-professional.svg",
+  short_desc: "Siemens EDA's comprehensive PCB design solution for mid-to-high complexity designs with advanced simulation and analysis capabilities.",
+  description: "PADS Professional is a comprehensive PCB design platform from Siemens EDA (formerly Mentor Graphics) that provides advanced tools for schematic capture, PCB layout, simulation, and manufacturing output. Built on the modern Xpedition ecosystem, PADS Professional offers constraint-driven design, high-speed design capabilities, signal integrity analysis, power integrity analysis, and thermal analysis. The software features advanced routing including differential pair routing, auto-routing, and design for manufacturability checks. PADS Professional integrates seamlessly with the broader Siemens EDA ecosystem including Xpedition for high-end design requirements. The platform supports both perpetual and subscription licensing models, with educational options available. PADS Professional is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from moderate to high complexity.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "PADS Professional",
+      price: "$8,000+",
+      period: "annual",
+      features: ["Schematic capture", "PCB layout", "Signal integrity", "Power integrity", "Thermal analysis", "Library management"],
+      is_popular: true
     },
+    {
+      name: "PADS Standard",
+      price: "$3,000+",
+      period: "annual",
+      features: ["Basic schematic", "PCB layout", "Auto-routing", "Manufacturing output"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "cr-8000", "quadcept"],
+  detailed_features: [
+    {
+      category: "Schematic Design",
+      items: [
+        {
+          name: "Advanced schematic capture",
+          status: true
+        },
+        {
+          name: "Hierarchical design",
+          status: true
+        },
+        {
+          name: "Constraint-driven design",
+          status: true
+        },
+        {
+          name: "Design reuse",
+          status: true
+        },
+        {
+          name: "Variant management",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PCB Layout",
+      items: [
+        {
+          name: "High-performance routing",
+          status: true
+        },
+        {
+          name: "Differential pair routing",
+          status: true
+        },
+        {
+          name: "Auto-routing",
+          status: true
+        },
+        {
+          name: "Multi-layer design",
+          status: true
+        },
+        {
+          name: "Design for manufacturability",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Simulation & Analysis",
+      items: [
+        {
+          name: "Signal integrity analysis",
+          status: true
+        },
+        {
+          name: "Power integrity analysis",
+          status: true
+        },
+        {
+          name: "Thermal analysis",
+          status: true
+        },
+        {
+          name: "EMI/EMC analysis",
+          status: true
+        },
+        {
+          name: "Circuit simulation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Advanced Features",
+      items: [
+        {
+          name: "High-speed design",
+          status: true
+        },
+        {
+          name: "Design verification",
+          status: true
+        },
+        {
+          name: "Library management",
+          status: true
+        },
+        {
+          name: "Manufacturing output",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Xpedition ecosystem",
+          status: true
+        },
+        {
+          name: "Siemens EDA integration",
+          status: true
+        },
+        {
+          name: "ERP/PDM integration",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "cr-8000",
+    "quadcept"
+  ],
   country: "USA",
   category_id: "c6",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
-  official_url: "https://eda.sw.siemens.com/en-US/pcb/pads/",
+  pricing_type: "Subscription",
+  starting_price: 8000,
+  platforms: [
+    "Windows"
+  ],
+  industries: ["Consumer Electronics", "Automotive", "Aerospace", "Industrial Automation", "Medical Devices", "Telecommunications", "IoT", "Semiconductor"],
+  core_features: ["Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "Power Integrity Analysis", "Thermal Analysis", "Xpedition Ecosystem", "High-Speed Design"],
+  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
+  official_url: "https://www.sw.siemens.com/en-US/products/pads",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Comprehensive PCB design capabilities", "Advanced simulation and analysis tools", "Seamless Xpedition ecosystem integration", "High-speed design support", "Constraint-driven design workflow", "Strong Siemens EDA ecosystem", "Educational licensing available", "Robust library management"],
+  cons: ["Higher cost compared to some alternatives", "Windows-only platform", "Steep learning curve for advanced features", "Analysis computation can be slow", "Requires training for full utilization"],
+  version: "PADS Professional",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English", "Chinese", "Japanese", "German", "French"],
+  file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
+  file_formats_out: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "PDF", "STEP"],
+  integrations: ["Xpedition", "Teamcenter", "SAP", "Oracle", "Microsoft Dynamics"],
+  deployment_options: ["Desktop", "On-Premise"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training", "Community"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: true,
+    has_sdk: true
+  },
+  pricing_breakdown: [
+    {
+      tier: "PADS Professional",
+      price: "$8,000+/year",
+      notes: "Annual subscription with advanced simulation and analysis"
+    },
+    {
+      tier: "PADS Standard",
+      price: "$3,000+/year",
+      notes: "Annual subscription with basic PCB design capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "Power Integrity Analysis", "Thermal Analysis", "Xpedition Ecosystem"],
   faqs: [
     {
       q: "What is PADS Professional used for?",
-      a: "For 20 years, PADS has been your trusted choice for PCB design. We’re building on that legacy with a modern, future-read PADS Professional is an EDA solution.",
+      a: "PADS Professional is a comprehensive PCB design platform used for schematic capture, PCB layout, simulation, and manufacturing output. It's widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from moderate to high complexity."
     },
     {
       q: "How much does PADS Professional cost?",
-      a: "PADS Professional is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "PADS Professional starts at approximately $8,000 per year for a subscription license. PADS Standard with basic capabilities starts at approximately $3,000 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of PADS Professional?",
-      a: "PADS Professional is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "PADS Professional is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does PADS Professional support?",
-      a: "PADS Professional runs on Windows.",
+      a: "PADS Professional runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does PADS Professional support?",
-      a: "PADS Professional works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "PADS Professional supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
     },
     {
       q: "What are the best alternatives to PADS Professional?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "Popular alternatives include Altium Designer, OrCAD, Zuken CR-8000, and Eagle. PADS Professional distinguishes itself with its seamless Xpedition ecosystem integration, advanced simulation capabilities, and strong Siemens EDA support."
+    }
   ],
   tech_specs: {
-    engine: "PADS Professional Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    engine: "PADS Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IPC", "IEEE", "JEDEC"]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "PADS Professional is Siemens EDA's comprehensive PCB design solution that bridges the gap between entry-level tools and high-end enterprise platforms. Its standout feature is the seamless integration with the Xpedition ecosystem, providing a clear upgrade path for users requiring advanced capabilities. The software offers robust simulation and analysis tools including signal integrity, power integrity, and thermal analysis, which are essential for high-speed and high-complexity designs. PADS Professional features a constraint-driven design workflow that ensures design intent is maintained throughout the development process, while the advanced routing capabilities including differential pair routing and auto-routing accelerate layout tasks. Although the software requires significant investment and training, the combination of professional-grade features, Siemens EDA ecosystem support, and scalability makes it particularly attractive for mid-market companies growing their PCB design capabilities. The educational licensing options and strong support network further enhance its accessibility for organizations seeking a reliable PCB design solution."
 },
 {
   id: "t163",
   name: "Xpedition",
   slug: "xpedition",
   logo_url: getLogo("XP"),
-  short_desc:
-    "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent",
-  description:
-    "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent engineers to global enterprises.",
+  short_desc: "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent",
+  description: "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent engineers to global enterprises.",
   pricing_tiers: [
     {
       name: "Perpetual",
       price: "N/A",
       period: "initial",
       features: [],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "cr-8000", "quadcept"],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        {
+          name: "Scalable PCB design",
+          status: true
+        },
+        {
+          name: "Enterprise solutions",
+          status: true
+        },
+        {
+          name: "Team collaboration",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Advanced",
+      items: [
+        {
+          name: "High-speed design",
+          status: true
+        },
+        {
+          name: "Signal integrity",
+          status: true
+        },
+        {
+          name: "Power integrity",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Analysis",
+      items: [
+        {
+          name: "Thermal analysis",
+          status: true
+        },
+        {
+          name: "EMI/EMC analysis",
+          status: true
+        },
+        {
+          name: "Design verification",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Mentor Graphics",
+          status: true
+        },
+        {
+          name: "Siemens ecosystem",
+          status: true
+        },
+        {
+          name: "Manufacturing output",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "cr-8000",
+    "quadcept"
+  ],
   country: "USA",
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
-  platforms: ["Windows"],
+  platforms: [
+    "Windows"
+  ],
   industries: [],
   core_features: [],
   user_scales: [],
@@ -998,127 +1845,342 @@ export const c6Tools: Tool[] = [
   faqs: [
     {
       q: "What is Xpedition used for?",
-      a: "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent Xpedition is an EDA solution.",
+      a: "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent Xpedition is an EDA solution."
     },
     {
       q: "How much does Xpedition cost?",
-      a: "Xpedition is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Xpedition is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Xpedition?",
-      a: "Xpedition is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Xpedition is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Xpedition support?",
-      a: "Xpedition runs on Windows.",
+      a: "Xpedition runs on Windows."
     },
     {
       q: "Which file formats does Xpedition support?",
-      a: "Xpedition works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Xpedition works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Xpedition?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Xpedition Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Xpedition is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
 },
 {
   id: "t164",
   name: "Pulsonix",
   slug: "pulsonix",
-  logo_url: "",
-  short_desc:
-    "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.",
-  description:
-    "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software.",
+  logo_url: "/logos/pulsonix.png",
+  short_desc: "Affordable, powerful, and intuitive schematic capture and PCB design software for professional electronic design automation.",
+  description: "Pulsonix is a comprehensive PCB design platform that offers affordable, powerful, and intuitive schematic capture and PCB layout capabilities. The software provides a complete design environment including schematic entry, PCB layout, circuit simulation, signal integrity analysis, thermal analysis, and design verification tools. Pulsonix features advanced routing capabilities including differential pair routing, auto-routing, and design for manufacturability checks. The platform supports standard EDA file formats and integrates with various CAD systems. Pulsonix offers both perpetual and subscription licensing models, with educational options available. The software is widely used in consumer electronics, industrial automation, and embedded systems industries for designing PCBs ranging from simple to moderate complexity.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Pulsonix Professional",
+      price: "$1,500+",
+      period: "annual",
+      features: ["Schematic capture", "PCB layout", "Signal integrity", "Thermal analysis", "Library management"],
+      is_popular: true
     },
+    {
+      name: "Pulsonix Standard",
+      price: "$800+",
+      period: "annual",
+      features: ["Basic schematic", "PCB layout", "Auto-routing", "Manufacturing output"],
+      is_popular: false
+    },
+    {
+      name: "Educational",
+      price: "Free/Discounted",
+      period: "annual",
+      features: ["Full functionality", "Student license", "Academic support"],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "cr-8000", "quadcept"],
+  detailed_features: [
+    {
+      category: "Schematic Design",
+      items: [
+        {
+          name: "Advanced schematic capture",
+          status: true
+        },
+        {
+          name: "Hierarchical design",
+          status: true
+        },
+        {
+          name: "Design reuse",
+          status: true
+        },
+        {
+          name: "Variant management",
+          status: true
+        },
+        {
+          name: "Library management",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PCB Layout",
+      items: [
+        {
+          name: "High-performance routing",
+          status: true
+        },
+        {
+          name: "Differential pair routing",
+          status: true
+        },
+        {
+          name: "Auto-routing",
+          status: true
+        },
+        {
+          name: "Multi-layer design",
+          status: true
+        },
+        {
+          name: "Design for manufacturability",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Simulation & Analysis",
+      items: [
+        {
+          name: "Circuit simulation",
+          status: true
+        },
+        {
+          name: "Signal integrity analysis",
+          status: true
+        },
+        {
+          name: "Thermal analysis",
+          status: true
+        },
+        {
+          name: "Design verification",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "CAD integration",
+          status: true
+        },
+        {
+          name: "Manufacturing output",
+          status: true
+        },
+        {
+          name: "File compatibility",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "cr-8000",
+    "quadcept"
+  ],
   country: "UK",
   category_id: "c6",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  pricing_type: "Subscription",
+  starting_price: 800,
+  platforms: [
+    "Windows"
+  ],
+  industries: ["Consumer Electronics", "Industrial Automation", "Embedded Systems", "IoT", "Automotive", "Medical Devices", "Telecommunications"],
+  core_features: ["Schematic Capture", "PCB Layout", "Circuit Simulation", "Signal Integrity Analysis", "Thermal Analysis", "Library Management", "Auto-Routing"],
+  user_scales: ["Small Business", "Mid-Market", "Freelancer"],
   official_url: "https://www.pulsonix.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+  pros: ["Affordable pricing", "Intuitive user interface", "Comprehensive PCB design capabilities", "Good simulation and analysis tools", "Strong library management", "Educational licensing available", "Good file format support"],
+  cons: ["Windows-only platform", "Less advanced than enterprise tools", "Limited ecosystem compared to major vendors", "Steep learning curve for advanced features"],
+  version: "Pulsonix 10",
+  last_updated: "2025-05-21",
+  free_trial_days: 30,
+  languages: ["English"],
+  file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
+  file_formats_out: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "PDF", "STEP"],
+  integrations: ["AutoCAD", "SolidWorks", "Autodesk Inventor", "SAP", "Oracle"],
+  deployment_options: ["Desktop"],
+  license_types: ["Subscription", "Perpetual", "Educational"],
+  support_channels: ["Email", "Phone", "Documentation", "Training"],
+  security_compliance: [],
+  api_sdk: {
+    has_api: false,
+    has_sdk: false
+  },
+  pricing_breakdown: [
+    {
+      tier: "Pulsonix Professional",
+      price: "$1,500+/year",
+      notes: "Annual subscription with advanced simulation and analysis"
+    },
+    {
+      tier: "Pulsonix Standard",
+      price: "$800+/year",
+      notes: "Annual subscription with basic PCB design capabilities"
+    },
+    {
+      tier: "Educational",
+      price: "Free/Discounted",
+      notes: "Special pricing for students and institutions"
+    }
+  ],
+  key_capabilities: ["Schematic Capture", "PCB Layout", "Circuit Simulation", "Signal Integrity Analysis", "Thermal Analysis", "Library Management"],
   faqs: [
     {
       q: "What is Pulsonix used for?",
-      a: "Welcome to Pulsonix – affordable, powerful and intuitive Schematic Capture and PCB Design Software. Pulsonix is an EDA solution.",
+      a: "Pulsonix is an affordable, powerful, and intuitive schematic capture and PCB design software used for electronic design automation. It's widely used in consumer electronics, industrial automation, and embedded systems industries for designing PCBs ranging from simple to moderate complexity."
     },
     {
       q: "How much does Pulsonix cost?",
-      a: "Pulsonix is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Pulsonix Professional starts at approximately $1,500 per year for a subscription license. Pulsonix Standard with basic capabilities starts at approximately $800 per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of Pulsonix?",
-      a: "Pulsonix is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Pulsonix is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
     },
     {
       q: "What operating systems does Pulsonix support?",
-      a: "Pulsonix runs on Windows.",
+      a: "Pulsonix runs on Windows operating systems. It does not currently support Linux or macOS."
     },
     {
       q: "Which file formats does Pulsonix support?",
-      a: "Pulsonix works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Pulsonix supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
     },
     {
       q: "What are the best alternatives to Pulsonix?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "Popular alternatives include Altium Designer, KiCad, Eagle, OrCAD, and DipTrace. Pulsonix distinguishes itself with its affordable pricing, intuitive user interface, and comprehensive feature set for mid-market PCB design needs."
+    }
   ],
   tech_specs: {
-    engine: "Pulsonix Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    engine: "Pulsonix Platform",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: ["IPC", "IEEE"]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Pulsonix is a cost-effective PCB design solution that delivers professional-grade capabilities at an affordable price point. Its standout feature is the intuitive user interface that makes it accessible to engineers transitioning from entry-level tools while providing the advanced features needed for serious design work. The software offers comprehensive PCB design capabilities including schematic capture, PCB layout, circuit simulation, signal integrity analysis, and thermal analysis, providing a complete design environment without the complexity and cost of enterprise solutions. Pulsonix's affordable pricing model, combined with educational licensing options, makes it particularly attractive for small businesses, freelancers, and educational institutions. Although it lacks the extensive ecosystem and advanced high-speed design capabilities of premium tools like Altium Designer or Cadence OrCAD, Pulsonix provides an excellent balance of functionality, usability, and value for mid-market PCB design requirements. The software's strong library management and good file format support ensure compatibility with existing design workflows while maintaining productivity."
 },
 {
   id: "t165",
   name: "Target 3001!",
   slug: "target-3001",
   logo_url: getLogo("TA"),
-  short_desc: "简要介绍 Target 3001!（官方站点）",
-  description: "详细介绍 Target 3001!（官方站点）",
+  short_desc: "Integrated schematic, PCB layout, and 3D simulation suite popular in Europe.",
+  description: "Target 3001! is a fully integrated schematic capture, simulation, and PCB layout software developed by IBFriedrich. Popular in German-speaking Europe, it features a single-file database architecture that eliminates synchronization mismatches between schematics, PCBs, and 3D models.",
   pricing_tiers: [
     {
       name: "Perpetual",
       price: "N/A",
       period: "initial",
       features: [],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["eplan", "cr-8000", "quadcept"],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        {
+          name: "Schematic capture",
+          status: true
+        },
+        {
+          name: "PCB layout",
+          status: true
+        },
+        {
+          name: "Circuit simulation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Features",
+      items: [
+        {
+          name: "CAD software",
+          status: true
+        },
+        {
+          name: "Design automation",
+          status: true
+        },
+        {
+          name: "Component library",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Analysis",
+      items: [
+        {
+          name: "Signal integrity",
+          status: true
+        },
+        {
+          name: "Thermal analysis",
+          status: true
+        },
+        {
+          name: "Design verification",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Manufacturing output",
+          status: true
+        },
+        {
+          name: "File compatibility",
+          status: true
+        },
+        {
+          name: "CAD integration",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "eplan",
+    "cr-8000",
+    "quadcept"
+  ],
   country: "Germany",
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
-  platforms: ["Windows"],
+  platforms: [
+    "Windows"
+  ],
   industries: [],
   core_features: [],
   user_scales: [],
@@ -1130,605 +2192,1317 @@ export const c6Tools: Tool[] = [
   faqs: [
     {
       q: "What is Target 3001! used for?",
-      a: "简要介绍 Target 3001!（官方站点） Target 3001! is an EDA solution.",
+      a: "Target 3001! is a professional EDA software used for schematic drafting, PCB design, and 3D simulation of electronic components in a unified environment."
     },
     {
       q: "How much does Target 3001! cost?",
-      a: "Target 3001! is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Target 3001! is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Target 3001!?",
-      a: "Target 3001! is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Target 3001! is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Target 3001! support?",
-      a: "Target 3001! runs on Windows.",
+      a: "Target 3001! runs on Windows."
     },
     {
       q: "Which file formats does Target 3001! support?",
-      a: "Target 3001! works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Target 3001! works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Target 3001!?",
-      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the EDA space are EPLAN, CR-8000, Quadcept. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Target 3001! Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Target 3001! is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
 },
 {
   id: "t198",
-  "name": "KiCad",
-  "slug": "kicad",
+  name: "KiCad",
+  slug: "kicad",
   logo_url: getLogo("KI"),
-  "short_desc": "Free, open-source professional schematic capture and PCB layout suite.",
-  "description": "KiCad is the dominant open-source EDA suite — schematic capture, PCB layout, 3D viewer, SPICE simulation, and Gerber output — backed by CERN and used in hardware startups, education, and increasingly serious commercial work.",
-  "country": "Switzerland",
-  "category_id": "c6",
-  "pricing_type": "Open Source",
-  "starting_price": 0,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Electronics", "Hardware Startups", "Education"],
-
-  "core_features": [
+  short_desc: "Free, open-source professional schematic capture and PCB layout suite.",
+  description: "KiCad is the dominant open-source EDA suite — schematic capture, PCB layout, 3D viewer, SPICE simulation, and Gerber output — backed by CERN and used in hardware startups, education, and increasingly serious commercial work.",
+  country: "Switzerland",
+  category_id: "c6",
+  pricing_type: "Open Source",
+  starting_price: 0,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Electronics",
+    "Hardware Startups",
+    "Education"
+  ],
+  core_features: [
     "Eeschema schematic editor",
     "Pcbnew layout with push-and-shove router",
     "3D viewer with realistic rendering",
     "Built-in SPICE simulation",
     "Differential pair routing, length matching",
-    "Gerber, drill, IPC-2581, ODB++ output",
+    "Gerber, drill, IPC-2581, ODB++ output"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB"],
-  "official_url": "https://www.kicad.org",
-  "affiliate_url": null,
-  "score": 4.7,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://www.kicad.org",
+  affiliate_url: null,
+  score: 4.7,
+  pros: [
     "Zero license cost, no node-locking, no per-seat fees",
     "Quality has reached commercial parity since v6",
-    "Massive open-source library ecosystem",
+    "Massive open-source library ecosystem"
   ],
-
-  "cons": [
+  cons: [
     "High-speed design tools still behind Altium / Allegro",
     "No built-in supply-chain part availability check",
-    "Variants and DRC for ultra-dense boards lag commercial tools",
+    "Variants and DRC for ultra-dense boards lag commercial tools"
   ],
-
-  "tech_specs": {
-    "engine": "Custom KiCad engine",
-    "multicore": "Partial",
-    "gpu_optimization": "OpenGL rendering",
-    "standards": ["Gerber X2", "IPC-2581", "ODB++", "STEP"],
+  tech_specs: {
+    engine: "Custom KiCad engine",
+    multicore: "Partial",
+    gpu_optimization: "OpenGL rendering",
+    standards: [
+      "Gerber X2",
+      "IPC-2581",
+      "ODB++",
+      "STEP"
+    ]
   },
-
-  "expert_verdict": "The open-source EDA that finally caught up — competitive with mid-tier commercial tools for 90% of hardware projects.",
-  faqs: [{
-    q: 'What is KiCad used for?',
-    a: 'Free, open-source professional schematic capture and PCB layout suite. KiCad is an EDA solution widely adopted in Electronics, Hardware Startups, Education.',
-  }, {
-    q: 'How much does KiCad cost?',
-    a: 'KiCad is open-source and free to use. Vendor support and commercial services may be offered separately.',
-  }, {
-    q: 'Is KiCad really free?',
-    a: 'Yes — KiCad is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.',
-  }, {
-    q: 'What operating systems does KiCad support?',
-    a: 'KiCad runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does KiCad support?',
-    a: 'KiCad works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to KiCad?',
-    a: 'The closest alternatives within the EDA space are LTspice, EasyEDA, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['ltspice', 'easyeda', 'proteus-design-suite'],
-  detailed_features: [],
+  expert_verdict: "The open-source EDA that finally caught up — competitive with mid-tier commercial tools for 90% of hardware projects.",
+  faqs: [
+    {
+      q: "What is KiCad used for?",
+      a: "Free, open-source professional schematic capture and PCB layout suite. KiCad is an EDA solution widely adopted in Electronics, Hardware Startups, Education."
+    },
+    {
+      q: "How much does KiCad cost?",
+      a: "KiCad is open-source and free to use. Vendor support and commercial services may be offered separately."
+    },
+    {
+      q: "Is KiCad really free?",
+      a: "Yes — KiCad is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+    },
+    {
+      q: "What operating systems does KiCad support?",
+      a: "KiCad runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does KiCad support?",
+      a: "KiCad works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to KiCad?",
+      a: "The closest alternatives within the EDA space are LTspice, EasyEDA, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "ltspice",
+    "easyeda",
+    "proteus-design-suite"
+  ],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        {
+          name: "Schematic capture",
+          status: true
+        },
+        {
+          name: "PCB layout",
+          status: true
+        },
+        {
+          name: "3D viewer",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Simulation",
+      items: [
+        {
+          name: "SPICE simulation",
+          status: true
+        },
+        {
+          name: "Circuit simulation",
+          status: true
+        },
+        {
+          name: "Ngspice",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Routing",
+      items: [
+        {
+          name: "Push-and-shove router",
+          status: true
+        },
+        {
+          name: "Differential pairs",
+          status: true
+        },
+        {
+          name: "Length matching",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Output",
+      items: [
+        {
+          name: "Gerber output",
+          status: true
+        },
+        {
+          name: "IPC-2581",
+          status: true
+        },
+        {
+          name: "ODB++",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t199",
-  "name": "EasyEDA",
-  "slug": "easyeda",
+  name: "EasyEDA",
+  slug: "easyeda",
   logo_url: getLogo("EA"),
-  "short_desc": "Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog.",
-  "description": "EasyEDA is a free web-based schematic and PCB layout tool from JLCPCB — its killer feature is one-click order to JLCPCB fabrication with assembled-parts BOM picked from LCSC, making prototype-to-board cycle times days, not weeks.",
-  "country": "China",
-  "category_id": "c6",
-  "pricing_type": "Freemium",
-  "starting_price": 0,
-  "platforms": ["Web", "Windows", "macOS", "Linux"],
-  "industries": ["Electronics", "Hardware Startups", "Education"],
-
-  "core_features": [
+  short_desc: "Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog.",
+  description: "EasyEDA is a free web-based schematic and PCB layout tool from JLCPCB — its killer feature is one-click order to JLCPCB fabrication with assembled-parts BOM picked from LCSC, making prototype-to-board cycle times days, not weeks.",
+  country: "China",
+  category_id: "c6",
+  pricing_type: "Freemium",
+  starting_price: 0,
+  platforms: [
+    "Web",
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Electronics",
+    "Hardware Startups",
+    "Education"
+  ],
+  core_features: [
     "Browser-based schematic and PCB editor",
     "Direct integration with LCSC parts catalog",
     "One-click JLCPCB fabrication and assembly order",
     "Realtime collaboration on schematic/PCB",
     "Built-in simulator (NgSpice)",
-    "Importers for Altium, Eagle, KiCad",
+    "Importers for Altium, Eagle, KiCad"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB"],
-  "official_url": "https://easyeda.com",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://easyeda.com",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Zero-friction path from design to fabricated assembled PCB",
     "Massive LCSC component library with live availability",
-    "Free for most use cases",
+    "Free for most use cases"
   ],
-
-  "cons": [
+  cons: [
     "Tied to JLCPCB / LCSC supply chain",
     "Advanced features lag commercial tools",
-    "Cloud-only Standard Edition has project size limits",
+    "Cloud-only Standard Edition has project size limits"
   ],
-
-  "tech_specs": {
-    "engine": "EasyEDA cloud + Pro desktop",
-    "multicore": "Cloud-scaled",
-    "gpu_optimization": "WebGL",
-    "standards": ["Gerber", "STEP", "Altium import"],
+  tech_specs: {
+    engine: "EasyEDA cloud + Pro desktop",
+    multicore: "Cloud-scaled",
+    gpu_optimization: "WebGL",
+    standards: [
+      "Gerber",
+      "STEP",
+      "Altium import"
+    ]
   },
-
-  "expert_verdict": "The best free EDA for hobbyists who want a real PCB in their mailbox in a week.",
-  faqs: [{
-    q: 'What is EasyEDA used for?',
-    a: 'Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog. EasyEDA is an EDA solution widely adopted in Electronics, Hardware Startups, Education.',
-  }, {
-    q: 'How much does EasyEDA cost?',
-    a: 'EasyEDA is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.',
-  }, {
-    q: 'Is there a free version of EasyEDA?',
-    a: 'EasyEDA is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does EasyEDA support?',
-    a: 'EasyEDA runs on Web, Windows, macOS, and Linux. The browser-based experience requires no local install.',
-  }, {
-    q: 'Which file formats does EasyEDA support?',
-    a: 'EasyEDA works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to EasyEDA?',
-    a: 'The closest alternatives within the EDA space are Proteus Design Suite, NI Multisim, KiCad. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['proteus-design-suite', 'multisim', 'kicad'],
-  detailed_features: [],
+  expert_verdict: "The best free EDA for hobbyists who want a real PCB in their mailbox in a week.",
+  faqs: [
+    {
+      q: "What is EasyEDA used for?",
+      a: "Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog. EasyEDA is an EDA solution widely adopted in Electronics, Hardware Startups, Education."
+    },
+    {
+      q: "How much does EasyEDA cost?",
+      a: "EasyEDA is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+    },
+    {
+      q: "Is there a free version of EasyEDA?",
+      a: "EasyEDA is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does EasyEDA support?",
+      a: "EasyEDA runs on Web, Windows, macOS, and Linux. The browser-based experience requires no local install."
+    },
+    {
+      q: "Which file formats does EasyEDA support?",
+      a: "EasyEDA works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to EasyEDA?",
+      a: "The closest alternatives within the EDA space are Proteus Design Suite, NI Multisim, KiCad. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "proteus-design-suite",
+    "multisim",
+    "kicad"
+  ],
+  detailed_features: [
+    {
+      category: "Cloud PCB",
+      items: [
+        {
+          name: "Browser-based editor",
+          status: true
+        },
+        {
+          name: "Cloud collaboration",
+          status: true
+        },
+        {
+          name: "Real-time editing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "LCSC catalog",
+          status: true
+        },
+        {
+          name: "JLCPCB integration",
+          status: true
+        },
+        {
+          name: "One-click fabrication",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Simulation",
+      items: [
+        {
+          name: "NgSpice simulator",
+          status: true
+        },
+        {
+          name: "Circuit simulation",
+          status: true
+        },
+        {
+          name: "SPICE",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Import",
+      items: [
+        {
+          name: "Altium import",
+          status: true
+        },
+        {
+          name: "Eagle import",
+          status: true
+        },
+        {
+          name: "KiCad import",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t200",
-  "name": "DipTrace",
-  "slug": "diptrace",
+  name: "DipTrace",
+  slug: "diptrace",
   logo_url: getLogo("DI"),
-  "short_desc": "Affordable schematic capture and PCB design for small teams and consultants.",
-  "description": "DipTrace is a Ukrainian-developed schematic capture and PCB layout tool aimed at SMBs and individual designers — clean UI, perpetual licensing, and pricing that undercuts Altium by an order of magnitude.",
-  "country": "Ukraine",
-  "category_id": "c6",
-  "pricing_type": "Perpetual",
-  "starting_price": 145,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Electronics", "SMB", "Education"],
-
-  "core_features": [
+  short_desc: "Affordable schematic capture and PCB design for small teams and consultants.",
+  description: "DipTrace is a Ukrainian-developed schematic capture and PCB layout tool aimed at SMBs and individual designers — clean UI, perpetual licensing, and pricing that undercuts Altium by an order of magnitude.",
+  country: "Ukraine",
+  category_id: "c6",
+  pricing_type: "Perpetual",
+  starting_price: 145,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Electronics",
+    "SMB",
+    "Education"
+  ],
+  core_features: [
     "Schematic capture with hierarchical sheets",
     "Shape-based autorouter",
     "3D viewer with STEP export",
     "Component library with 200k+ parts",
     "Differential pair and length matching",
-    "ODB++, Gerber X2, NC drill output",
+    "ODB++, Gerber X2, NC drill output"
   ],
-
-  "user_scales": ["Freelancer", "SMB"],
-  "official_url": "https://diptrace.com",
-  "affiliate_url": null,
-  "score": 4.4,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://diptrace.com",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
     "Perpetual license at ~$300 for the Standard edition",
     "Friendly learning curve",
-    "Free Starter edition for non-profit use",
+    "Free Starter edition for non-profit use"
   ],
-
-  "cons": [
+  cons: [
     "Not aimed at high-speed digital or RF",
     "Smaller ecosystem than KiCad / Altium",
-    "Limited team-collaboration features",
+    "Limited team-collaboration features"
   ],
-
-  "tech_specs": {
-    "engine": "DipTrace native",
-    "multicore": "Limited",
-    "gpu_optimization": "Basic",
-    "standards": ["Gerber X2", "STEP", "DXF"],
+  tech_specs: {
+    engine: "DipTrace native",
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: [
+      "Gerber X2",
+      "STEP",
+      "DXF"
+    ]
   },
-
-  "expert_verdict": "A small-shop EDA workhorse — perpetual, affordable, and capable enough for 80% of real boards.",
-  faqs: [{
-    q: 'What is DipTrace used for?',
-    a: 'Affordable schematic capture and PCB design for small teams and consultants. DipTrace is an EDA solution widely adopted in Electronics, SMB, Education.',
-  }, {
-    q: 'How much does DipTrace cost?',
-    a: 'DipTrace starts at $145 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of DipTrace?',
-    a: 'DipTrace is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does DipTrace support?',
-    a: 'DipTrace runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does DipTrace support?',
-    a: 'DipTrace works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to DipTrace?',
-    a: 'The closest alternatives within the EDA space are Proteus Design Suite, EasyEDA, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['proteus-design-suite', 'easyeda', 'multisim'],
-  detailed_features: [],
+  expert_verdict: "A small-shop EDA workhorse — perpetual, affordable, and capable enough for 80% of real boards.",
+  faqs: [
+    {
+      q: "What is DipTrace used for?",
+      a: "Affordable schematic capture and PCB design for small teams and consultants. DipTrace is an EDA solution widely adopted in Electronics, SMB, Education."
+    },
+    {
+      q: "How much does DipTrace cost?",
+      a: "DipTrace starts at $145 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of DipTrace?",
+      a: "DipTrace is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does DipTrace support?",
+      a: "DipTrace runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does DipTrace support?",
+      a: "DipTrace works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to DipTrace?",
+      a: "The closest alternatives within the EDA space are Proteus Design Suite, EasyEDA, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "proteus-design-suite",
+    "easyeda",
+    "multisim"
+  ],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        {
+          name: "Schematic capture",
+          status: true
+        },
+        {
+          name: "Hierarchical sheets",
+          status: true
+        },
+        {
+          name: "PCB layout",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Routing",
+      items: [
+        {
+          name: "Shape-based autorouter",
+          status: true
+        },
+        {
+          name: "Differential pairs",
+          status: true
+        },
+        {
+          name: "Length matching",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "3D",
+      items: [
+        {
+          name: "3D viewer",
+          status: true
+        },
+        {
+          name: "STEP export",
+          status: true
+        },
+        {
+          name: "Component library",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Output",
+      items: [
+        {
+          name: "ODB++ output",
+          status: true
+        },
+        {
+          name: "Gerber X2",
+          status: true
+        },
+        {
+          name: "NC drill",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t201",
-  "name": "NI Multisim",
-  "slug": "multisim",
+  name: "NI Multisim",
+  slug: "multisim",
   logo_url: getLogo("NM"),
-  "short_desc": "Schematic capture with SPICE-based circuit simulation, popular in education and analog design.",
-  "description": "NI Multisim is the long-standing educational and engineering SPICE simulator (formerly Electronics Workbench) — used in thousands of universities for analog and mixed-signal circuit instruction and prototyping.",
-  "country": "USA",
-  "category_id": "c6",
-  "pricing_type": "Subscription",
-  "starting_price": 600,
-  "platforms": ["Windows"],
-  "industries": ["Electronics", "Education", "Aerospace"],
-
-  "core_features": [
+  short_desc: "Schematic capture with SPICE-based circuit simulation, popular in education and analog design.",
+  description: "NI Multisim is the long-standing educational and engineering SPICE simulator (formerly Electronics Workbench) — used in thousands of universities for analog and mixed-signal circuit instruction and prototyping.",
+  country: "USA",
+  category_id: "c6",
+  pricing_type: "Subscription",
+  starting_price: 600,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Electronics",
+    "Education",
+    "Aerospace"
+  ],
+  core_features: [
     "Interactive SPICE simulation with virtual instruments",
     "Mixed-signal A/D simulation",
     "Microcontroller co-simulation",
     "Ultiboard PCB layout pairing",
     "26,000+ component database",
-    "LabVIEW integration",
+    "LabVIEW integration"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB", "Education"],
-  "official_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
-  "affiliate_url": null,
-  "score": 4.2,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB",
+    "Education"
+  ],
+  official_url: "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
+  affiliate_url: null,
+  score: 4.2,
+  pros: [
     "Best-in-class interactive analog simulation UX",
     "Strong educational pedigree — used in many universities",
-    "Virtual instruments mimic real lab benches",
+    "Virtual instruments mimic real lab benches"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "PCB layout (Ultiboard) is the weak partner",
-    "Now under Emerson — future roadmap uncertain",
+    "Now under Emerson — future roadmap uncertain"
   ],
-
-  "tech_specs": {
-    "engine": "Berkeley SPICE + XSPICE extensions",
-    "multicore": "Limited",
-    "gpu_optimization": "No",
-    "standards": ["SPICE3", "IBIS"],
+  tech_specs: {
+    engine: "Berkeley SPICE + XSPICE extensions",
+    multicore: "Limited",
+    gpu_optimization: "No",
+    standards: [
+      "SPICE3",
+      "IBIS"
+    ]
   },
-
-  "expert_verdict": "Still the friendliest way to teach circuits — and a fine bench-side simulator for analog designers.",
-  faqs: [{
-    q: 'What is NI Multisim used for?',
-    a: 'Schematic capture with SPICE-based circuit simulation, popular in education and analog design. NI Multisim is an EDA solution widely adopted in Electronics, Education, Aerospace.',
-  }, {
-    q: 'How much does NI Multisim cost?',
-    a: 'NI Multisim starts at $600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of NI Multisim?',
-    a: 'NI Multisim is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does NI Multisim support?',
-    a: 'NI Multisim runs on Windows.',
-  }, {
-    q: 'Which file formats does NI Multisim support?',
-    a: 'NI Multisim works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to NI Multisim?',
-    a: 'The closest alternatives within the EDA space are Altium 365, Eagle, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['altium-365', 'eagle', 'altium-designer'],
-  detailed_features: [],
+  expert_verdict: "Still the friendliest way to teach circuits — and a fine bench-side simulator for analog designers.",
+  faqs: [
+    {
+      q: "What is NI Multisim used for?",
+      a: "Schematic capture with SPICE-based circuit simulation, popular in education and analog design. NI Multisim is an EDA solution widely adopted in Electronics, Education, Aerospace."
+    },
+    {
+      q: "How much does NI Multisim cost?",
+      a: "NI Multisim starts at $600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of NI Multisim?",
+      a: "NI Multisim is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does NI Multisim support?",
+      a: "NI Multisim runs on Windows."
+    },
+    {
+      q: "Which file formats does NI Multisim support?",
+      a: "NI Multisim works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to NI Multisim?",
+      a: "The closest alternatives within the EDA space are Altium 365, Eagle, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "altium-365",
+    "eagle",
+    "altium-designer"
+  ],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        {
+          name: "SPICE simulation",
+          status: true
+        },
+        {
+          name: "Virtual instruments",
+          status: true
+        },
+        {
+          name: "Interactive simulation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Mixed-Signal",
+      items: [
+        {
+          name: "Mixed-signal A/D",
+          status: true
+        },
+        {
+          name: "Microcontroller co-sim",
+          status: true
+        },
+        {
+          name: "Analog design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PCB",
+      items: [
+        {
+          name: "Ultiboard layout",
+          status: true
+        },
+        {
+          name: "Schematic capture",
+          status: true
+        },
+        {
+          name: "Component database",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "LabVIEW integration",
+          status: true
+        },
+        {
+          name: "Educational tools",
+          status: true
+        },
+        {
+          name: "Lab bench simulation",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t202",
-  "name": "LTspice",
-  "slug": "ltspice",
+  name: "LTspice",
+  slug: "ltspice",
   logo_url: "",
-  "short_desc": "Free SPICE simulator from Analog Devices, the de facto industry standard for analog design.",
-  "description": "LTspice is a free, high-performance SPICE simulator distributed by Analog Devices — the most widely used SPICE tool in industry for power-electronics, switching converters, and analog circuit design.",
-  "country": "USA",
-  "category_id": "c6",
-  "pricing_type": "Free",
-  "starting_price": 0,
-  "platforms": ["Windows", "macOS"],
-  "industries": ["Electronics", "Power", "Education"],
-
-  "core_features": [
+  short_desc: "Free SPICE simulator from Analog Devices, the de facto industry standard for analog design.",
+  description: "LTspice is a free, high-performance SPICE simulator distributed by Analog Devices — the most widely used SPICE tool in industry for power-electronics, switching converters, and analog circuit design.",
+  country: "USA",
+  category_id: "c6",
+  pricing_type: "Free",
+  starting_price: 0,
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Electronics",
+    "Power",
+    "Education"
+  ],
+  core_features: [
     "High-speed SPICE3 / SPICE4 solver",
     "Built-in Analog Devices part models",
     "Fast switching-regulator simulation",
     "Waveform viewer with math expressions",
     "Worst-case and Monte Carlo analyses",
-    "Behavioral models and SPICE directives",
+    "Behavioral models and SPICE directives"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
-  "affiliate_url": null,
-  "score": 4.8,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+  affiliate_url: null,
+  score: 4.8,
+  pros: [
     "Completely free — no node-lock, no per-seat",
     "Famously fast and stable SPICE solver",
-    "Huge community of models and example circuits",
+    "Huge community of models and example circuits"
   ],
-
-  "cons": [
+  cons: [
     "Schematic editor UI is utilitarian",
     "No PCB layout — strictly simulation",
-    "Documentation is sparse; learning is community-driven",
+    "Documentation is sparse; learning is community-driven"
   ],
-
-  "tech_specs": {
-    "engine": "Custom SPICE solver (Mike Engelhardt)",
-    "multicore": "Yes",
-    "gpu_optimization": "No",
-    "standards": ["SPICE3"],
+  tech_specs: {
+    engine: "Custom SPICE solver (Mike Engelhardt)",
+    multicore: "Yes",
+    gpu_optimization: "No",
+    standards: [
+      "SPICE3"
+    ]
   },
-
-  "expert_verdict": "The free SPICE that every analog engineer has installed — the industry's quietest, most-used EDA tool.",
-  faqs: [{
-    q: 'What is LTspice used for?',
-    a: 'Free SPICE simulator from Analog Devices, the de facto industry standard for analog design. LTspice is an EDA solution widely adopted in Electronics, Power, Education.',
-  }, {
-    q: 'How much does LTspice cost?',
-    a: 'LTspice is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.',
-  }, {
-    q: 'Is LTspice really free?',
-    a: 'Yes — LTspice is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.',
-  }, {
-    q: 'What operating systems does LTspice support?',
-    a: 'LTspice runs on Windows and macOS.',
-  }, {
-    q: 'Which file formats does LTspice support?',
-    a: 'LTspice works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to LTspice?',
-    a: 'The closest alternatives within the EDA space are CircuitMaker, KiCad, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['circuitmaker', 'kicad', 'altium-designer'],
-  detailed_features: [],
+  expert_verdict: "The free SPICE that every analog engineer has installed — the industry's quietest, most-used EDA tool.",
+  faqs: [
+    {
+      q: "What is LTspice used for?",
+      a: "Free SPICE simulator from Analog Devices, the de facto industry standard for analog design. LTspice is an EDA solution widely adopted in Electronics, Power, Education."
+    },
+    {
+      q: "How much does LTspice cost?",
+      a: "LTspice is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+    },
+    {
+      q: "Is LTspice really free?",
+      a: "Yes — LTspice is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+    },
+    {
+      q: "What operating systems does LTspice support?",
+      a: "LTspice runs on Windows and macOS."
+    },
+    {
+      q: "Which file formats does LTspice support?",
+      a: "LTspice works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to LTspice?",
+      a: "The closest alternatives within the EDA space are CircuitMaker, KiCad, Altium Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "circuitmaker",
+    "kicad",
+    "altium-designer"
+  ],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        {
+          name: "SPICE3 solver",
+          status: true
+        },
+        {
+          name: "SPICE4 solver",
+          status: true
+        },
+        {
+          name: "High-speed simulation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Power Electronics",
+      items: [
+        {
+          name: "Switching regulators",
+          status: true
+        },
+        {
+          name: "Power simulation",
+          status: true
+        },
+        {
+          name: "Analog design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Analysis",
+      items: [
+        {
+          name: "Waveform viewer",
+          status: true
+        },
+        {
+          name: "Monte Carlo",
+          status: true
+        },
+        {
+          name: "Worst-case analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Models",
+      items: [
+        {
+          name: "Analog Devices models",
+          status: true
+        },
+        {
+          name: "Behavioral models",
+          status: true
+        },
+        {
+          name: "SPICE directives",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t203",
-  "name": "Proteus Design Suite",
-  "slug": "proteus-design-suite",
+  name: "Proteus Design Suite",
+  slug: "proteus-design-suite",
   logo_url: "",
-  "short_desc": "Schematic, simulation, and PCB design with embedded-firmware co-simulation.",
-  "description": "Proteus from Labcenter Electronics combines schematic capture, mixed-signal SPICE simulation, PCB layout, and — uniquely — full microcontroller firmware co-simulation for AVR, PIC, ARM Cortex-M, and 8051 in a single tool.",
-  "country": "UK",
-  "category_id": "c6",
-  "pricing_type": "Perpetual",
-  "starting_price": 248,
-  "platforms": ["Windows"],
-  "industries": ["Electronics", "Embedded", "Education"],
-
-  "core_features": [
+  short_desc: "Schematic, simulation, and PCB design with embedded-firmware co-simulation.",
+  description: "Proteus from Labcenter Electronics combines schematic capture, mixed-signal SPICE simulation, PCB layout, and — uniquely — full microcontroller firmware co-simulation for AVR, PIC, ARM Cortex-M, and 8051 in a single tool.",
+  country: "UK",
+  category_id: "c6",
+  pricing_type: "Perpetual",
+  starting_price: 248,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Electronics",
+    "Embedded",
+    "Education"
+  ],
+  core_features: [
     "Schematic + SPICE simulation",
     "Microcontroller VSM co-simulation",
     "Peripheral models (LCDs, sensors, motors)",
     "ARES PCB layout with autorouter",
     "3D viewer and STEP export",
-    "Live IDE link with MPLAB X, Atmel Studio, Keil",
+    "Live IDE link with MPLAB X, Atmel Studio, Keil"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB", "Education"],
-  "official_url": "https://www.labcenter.com",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB",
+    "Education"
+  ],
+  official_url: "https://www.labcenter.com",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Unique microcontroller co-simulation",
     "Perpetual license model",
-    "Strong fit for embedded courses",
+    "Strong fit for embedded courses"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "PCB layout (ARES) is dated next to KiCad / Altium",
-    "Add-on libraries can stack up the price",
+    "Add-on libraries can stack up the price"
   ],
-
-  "tech_specs": {
-    "engine": "Proteus VSM",
-    "multicore": "Limited",
-    "gpu_optimization": "No",
-    "standards": ["SPICE", "Gerber", "STEP"],
+  tech_specs: {
+    engine: "Proteus VSM",
+    multicore: "Limited",
+    gpu_optimization: "No",
+    standards: [
+      "SPICE",
+      "Gerber",
+      "STEP"
+    ]
   },
-
-  "expert_verdict": "Still the best way to debug firmware against a virtual LCD or motor without touching hardware.",
-  faqs: [{
-    q: 'What is Proteus Design Suite used for?',
-    a: 'Schematic, simulation, and PCB design with embedded-firmware co-simulation. Proteus Design Suite is an EDA solution widely adopted in Electronics, Embedded, Education.',
-  }, {
-    q: 'How much does Proteus Design Suite cost?',
-    a: 'Proteus Design Suite starts at $248 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Proteus Design Suite?',
-    a: 'Proteus Design Suite is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Proteus Design Suite support?',
-    a: 'Proteus Design Suite runs on Windows.',
-  }, {
-    q: 'Which file formats does Proteus Design Suite support?',
-    a: 'Proteus Design Suite works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Proteus Design Suite?',
-    a: 'The closest alternatives within the EDA space are DipTrace, NI Multisim, EasyEDA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['diptrace', 'multisim', 'easyeda'],
-  detailed_features: [],
+  expert_verdict: "Still the best way to debug firmware against a virtual LCD or motor without touching hardware.",
+  faqs: [
+    {
+      q: "What is Proteus Design Suite used for?",
+      a: "Schematic, simulation, and PCB design with embedded-firmware co-simulation. Proteus Design Suite is an EDA solution widely adopted in Electronics, Embedded, Education."
+    },
+    {
+      q: "How much does Proteus Design Suite cost?",
+      a: "Proteus Design Suite starts at $248 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Proteus Design Suite?",
+      a: "Proteus Design Suite is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Proteus Design Suite support?",
+      a: "Proteus Design Suite runs on Windows."
+    },
+    {
+      q: "Which file formats does Proteus Design Suite support?",
+      a: "Proteus Design Suite works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Proteus Design Suite?",
+      a: "The closest alternatives within the EDA space are DipTrace, NI Multisim, EasyEDA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "diptrace",
+    "multisim",
+    "easyeda"
+  ],
+  detailed_features: [
+    {
+      category: "Simulation",
+      items: [
+        {
+          name: "SPICE simulation",
+          status: true
+        },
+        {
+          name: "Schematic capture",
+          status: true
+        },
+        {
+          name: "Mixed-signal sim",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Microcontroller",
+      items: [
+        {
+          name: "VSM co-simulation",
+          status: true
+        },
+        {
+          name: "Firmware debugging",
+          status: true
+        },
+        {
+          name: "Peripheral models",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PCB",
+      items: [
+        {
+          name: "ARES PCB layout",
+          status: true
+        },
+        {
+          name: "Autorouter",
+          status: true
+        },
+        {
+          name: "3D viewer",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "IDE link",
+          status: true
+        },
+        {
+          name: "MPLAB X",
+          status: true
+        },
+        {
+          name: "Atmel Studio",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t204",
-  "name": "Altium 365",
-  "slug": "altium-365",
+  name: "Altium 365",
+  slug: "altium-365",
   logo_url: getLogo("A3"),
-  "short_desc": "Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams.",
-  "description": "Altium 365 is the cloud platform around Altium Designer — workspace-based design data management, MCAD CoDesigner with SolidWorks/Creo, manufacturing portal, and Altium Concord Pro replacement.",
-  "country": "USA",
-  "category_id": "c6",
-  "pricing_type": "Subscription",
-  "starting_price": 295,
-  "platforms": ["Windows", "Web"],
-  "industries": ["Electronics", "Aerospace", "Industrial"],
-
-  "core_features": [
+  short_desc: "Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams.",
+  description: "Altium 365 is the cloud platform around Altium Designer — workspace-based design data management, MCAD CoDesigner with SolidWorks/Creo, manufacturing portal, and Altium Concord Pro replacement.",
+  country: "USA",
+  category_id: "c6",
+  pricing_type: "Subscription",
+  starting_price: 295,
+  platforms: [
+    "Windows",
+    "Web"
+  ],
+  industries: [
+    "Electronics",
+    "Aerospace",
+    "Industrial"
+  ],
+  core_features: [
     "Cloud workspace and version control",
     "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
     "Manufacturing release portal",
     "Live BOM, part lifecycle, supplier links",
     "Browser-based viewer for non-Altium reviewers",
-    "Component management with vault",
+    "Component management with vault"
   ],
-
-  "user_scales": ["SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://www.altium.com/altium-365",
-  "affiliate_url": null,
-  "score": 4.4,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.altium.com/altium-365",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
     "Eliminates file-shuffling between PCB and MCAD teams",
     "Modern web UI for stakeholders without Altium licenses",
-    "Tight live link to Octopart for supply-chain data",
+    "Tight live link to Octopart for supply-chain data"
   ],
-
-  "cons": [
+  cons: [
     "Adds to the already high Altium subscription cost",
     "Limited offline workflows",
-    "Concord Pro migration paths can be rough",
+    "Concord Pro migration paths can be rough"
   ],
-
-  "tech_specs": {
-    "engine": "Altium 365 cloud + Altium Designer client",
-    "multicore": "Cloud",
-    "gpu_optimization": "N/A",
-    "standards": ["Gerber X2", "IPC-2581", "ODB++", "STEP"],
+  tech_specs: {
+    engine: "Altium 365 cloud + Altium Designer client",
+    multicore: "Cloud",
+    gpu_optimization: "N/A",
+    standards: [
+      "Gerber X2",
+      "IPC-2581",
+      "ODB++",
+      "STEP"
+    ]
   },
-
-  "expert_verdict": "If you already use Altium Designer in a team, 365 has become almost mandatory for managing design data and MCAD handoff.",
-
-  faqs: [{
-    q: 'What is Altium 365 used for?',
-    a: 'Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams. Altium 365 is an EDA solution widely adopted in Electronics, Aerospace, Industrial.',
-  }, {
-    q: 'How much does Altium 365 cost?',
-    a: 'Altium 365 starts at $295 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Altium 365?',
-    a: 'Altium 365 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Altium 365 support?',
-    a: 'Altium 365 runs on Windows and Web. The browser-based experience requires no local install.',
-  }, {
-    q: 'Which file formats does Altium 365 support?',
-    a: 'Altium 365 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Altium 365?',
-    a: 'The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-
-  alternatives: ['altium-designer', 'eplan-electric-p8', 'multisim'],
-  detailed_features: [],
-
-  external_ratings: [{
-    source: "TrustRadius",
-    score: 8.5,
-    max: 10,
-    count: 30,
-    url: "https://www.trustradius.com/products/altium-365/reviews"
-  }]
+  expert_verdict: "If you already use Altium Designer in a team, 365 has become almost mandatory for managing design data and MCAD handoff.",
+  faqs: [
+    {
+      q: "What is Altium 365 used for?",
+      a: "Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams. Altium 365 is an EDA solution widely adopted in Electronics, Aerospace, Industrial."
+    },
+    {
+      q: "How much does Altium 365 cost?",
+      a: "Altium 365 starts at $295 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Altium 365?",
+      a: "Altium 365 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Altium 365 support?",
+      a: "Altium 365 runs on Windows and Web. The browser-based experience requires no local install."
+    },
+    {
+      q: "Which file formats does Altium 365 support?",
+      a: "Altium 365 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Altium 365?",
+      a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "altium-designer",
+    "eplan-electric-p8",
+    "multisim"
+  ],
+  detailed_features: [
+    {
+      category: "Cloud",
+      items: [
+        {
+          name: "Cloud workspace",
+          status: true
+        },
+        {
+          name: "Version control",
+          status: true
+        },
+        {
+          name: "Data management",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "MCAD CoDesigner",
+          status: true
+        },
+        {
+          name: "SolidWorks link",
+          status: true
+        },
+        {
+          name: "Creo link",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Supply Chain",
+      items: [
+        {
+          name: "Live BOM",
+          status: true
+        },
+        {
+          name: "Part lifecycle",
+          status: true
+        },
+        {
+          name: "Octopart link",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Management",
+      items: [
+        {
+          name: "Manufacturing portal",
+          status: true
+        },
+        {
+          name: "Component vault",
+          status: true
+        },
+        {
+          name: "Web viewer",
+          status: true
+        }
+      ]
+    }
+  ],
+  external_ratings: [
+    {
+      source: "TrustRadius",
+      score: 8.5,
+      max: 10,
+      count: 30,
+      url: "https://www.trustradius.com/products/altium-365/reviews"
+    }
+  ]
 },
 {
   id: "t205",
-  "name": "CircuitMaker",
-  "slug": "circuitmaker",
+  name: "CircuitMaker",
+  slug: "circuitmaker",
   logo_url: getLogo("CI"),
-  "short_desc": "Free community-edition PCB design from Altium, with public-cloud project sharing.",
-  "description": "CircuitMaker is Altium's free community PCB design tool — built on the same engine as Altium Designer but with cloud-only, public-by-default storage that has built a vibrant maker / hobbyist community.",
-  "country": "USA",
-  "category_id": "c6",
-  "pricing_type": "Free",
-  "starting_price": 0,
-  "platforms": ["Windows"],
-  "industries": ["Electronics", "Hobbyist", "Education"],
-
-  "core_features": [
+  short_desc: "Free community-edition PCB design from Altium, with public-cloud project sharing.",
+  description: "CircuitMaker is Altium's free community PCB design tool — built on the same engine as Altium Designer but with cloud-only, public-by-default storage that has built a vibrant maker / hobbyist community.",
+  country: "USA",
+  category_id: "c6",
+  pricing_type: "Free",
+  starting_price: 0,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Electronics",
+    "Hobbyist",
+    "Education"
+  ],
+  core_features: [
     "Altium-engine schematic and PCB layout",
     "Octopart-backed component library",
     "Public cloud project hosting",
     "Sandbox private repos (paid CircuitMaker Pro)",
     "STEP 3D export",
-    "Realtime project collaboration",
+    "Realtime project collaboration"
   ],
-
-  "user_scales": ["Hobbyist", "Education"],
-  "official_url": "https://circuitmaker.com",
-  "affiliate_url": null,
-  "score": 4.1,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Education"
+  ],
+  official_url: "https://circuitmaker.com",
+  affiliate_url: null,
+  score: 4.1,
+  pros: [
     "Real Altium engine for free",
     "Cloud project hosting is friction-free",
-    "Open-source-style sharing community",
+    "Open-source-style sharing community"
   ],
-
-  "cons": [
+  cons: [
     "Free tier requires public projects (no commercial confidentiality)",
     "Windows-only",
-    "Pro tier exists for private projects — not really free for industry use",
+    "Pro tier exists for private projects — not really free for industry use"
   ],
-
-  "tech_specs": {
-    "engine": "Altium engine",
-    "multicore": "Limited",
-    "gpu_optimization": "Basic",
-    "standards": ["Gerber X2", "STEP"],
+  tech_specs: {
+    engine: "Altium engine",
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: [
+      "Gerber X2",
+      "STEP"
+    ]
   },
-
-  "expert_verdict": "Free Altium for hobbyists who don't mind making their projects public — a great way to learn the Altium UI before paying.",
-  faqs: [{
-    q: 'What is CircuitMaker used for?',
-    a: 'Free community-edition PCB design from Altium, with public-cloud project sharing. CircuitMaker is an EDA solution widely adopted in Electronics, Hobbyist, Education.',
-  }, {
-    q: 'How much does CircuitMaker cost?',
-    a: 'CircuitMaker is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.',
-  }, {
-    q: 'Is CircuitMaker really free?',
-    a: 'Yes — CircuitMaker is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.',
-  }, {
-    q: 'What operating systems does CircuitMaker support?',
-    a: 'CircuitMaker runs on Windows.',
-  }, {
-    q: 'Which file formats does CircuitMaker support?',
-    a: 'CircuitMaker works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to CircuitMaker?',
-    a: 'The closest alternatives within the EDA space are LTspice, NI Multisim, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['ltspice', 'multisim', 'proteus-design-suite'],
-  detailed_features: [],
+  expert_verdict: "Free Altium for hobbyists who don't mind making their projects public — a great way to learn the Altium UI before paying.",
+  faqs: [
+    {
+      q: "What is CircuitMaker used for?",
+      a: "Free community-edition PCB design from Altium, with public-cloud project sharing. CircuitMaker is an EDA solution widely adopted in Electronics, Hobbyist, Education."
+    },
+    {
+      q: "How much does CircuitMaker cost?",
+      a: "CircuitMaker is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+    },
+    {
+      q: "Is CircuitMaker really free?",
+      a: "Yes — CircuitMaker is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+    },
+    {
+      q: "What operating systems does CircuitMaker support?",
+      a: "CircuitMaker runs on Windows."
+    },
+    {
+      q: "Which file formats does CircuitMaker support?",
+      a: "CircuitMaker works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to CircuitMaker?",
+      a: "The closest alternatives within the EDA space are LTspice, NI Multisim, Proteus Design Suite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "ltspice",
+    "multisim",
+    "proteus-design-suite"
+  ],
+  detailed_features: [
+    {
+      category: "PCB Design",
+      items: [
+        {
+          name: "Altium engine",
+          status: true
+        },
+        {
+          name: "Schematic capture",
+          status: true
+        },
+        {
+          name: "PCB layout",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Cloud",
+      items: [
+        {
+          name: "Cloud hosting",
+          status: true
+        },
+        {
+          name: "Public projects",
+          status: true
+        },
+        {
+          name: "Collaboration",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Components",
+      items: [
+        {
+          name: "Octopart library",
+          status: true
+        },
+        {
+          name: "Component library",
+          status: true
+        },
+        {
+          name: "STEP export",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Community",
+      items: [
+        {
+          name: "Open-source sharing",
+          status: true
+        },
+        {
+          name: "Maker community",
+          status: true
+        },
+        {
+          name: "Sandbox repos",
+          status: true
+        }
+      ]
+    }
+  ]
 }
 ];

@@ -153,12 +153,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     .slice(0, 3);
 
   return (
-    <div className="bg-[#fcfdfe] min-h-screen pb-20">
+    <div className="bg-[#fcfdfe] min-h-screen pb-20 w-full overflow-x-hidden">
       {/* Top Header - Standardized Width */}
-      <div className="bg-white border-b py-4 md:py-6">
-        <div className="w-full max-w-[1360px] mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="flex items-center text-sm font-bold text-slate-400">
+      <div className="bg-white border-b py-4 md:py-6 w-full overflow-x-hidden">
+        <div className="w-full max-w-none md:max-w-[1360px] mx-auto px-3 md:px-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 min-w-0">
+            <div className="flex items-center text-sm font-bold text-slate-400 min-w-0 flex-1">
               <Link href="/" className="hover:text-blue-600 transition-colors">
                 Home
               </Link>
@@ -169,17 +169,17 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               >
                 Tools
               </Link>
-              <ChevronRight className="w-4 h-4 mx-2 opacity-30" />
-              <span className="text-slate-900 font-black">{tool.name}</span>
+              <ChevronRight className="w-4 h-4 mx-2 opacity-30 shrink-0" />
+              <span className="text-slate-900 font-black truncate">{tool.name}</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="w-full max-w-[1360px] mx-auto px-4 py-6 md:py-12">
-        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
+      <div className="max-w-[1360px] mx-auto px-4 py-8 md:py-12 pt-12 md:pt-12 w-full">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start w-full">
           {/* Main Content Area (Two Column Layout) */}
-          <main className="flex-1 space-y-12 md:space-y-20 min-w-0">
+          <main className="flex-1 space-y-12 md:space-y-20 min-w-0 w-full overflow-x-hidden">
             {/* Hero Section */}
             <section
               id="overview"
@@ -270,27 +270,27 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   <div className="flex flex-wrap items-center gap-4 mb-10">
                     <Button
                       asChild
-                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 md:h-14 px-6 md:px-10 shadow-xl shadow-blue-200"
+                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-10 shadow-xl shadow-blue-200 text-sm sm:text-base md:text-lg"
                     >
                       <a
                         href={tool.affiliate_url || tool.official_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 md:gap-3 text-base md:text-lg"
+                        className="flex items-center gap-2 md:gap-3"
                       >
-                        Go to Website <ExternalLink className="w-5 h-5" />
+                        Go to Website <ExternalLink className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
                       </a>
                     </Button>
                     <Button
                       asChild
                       variant="outline"
-                      className="rounded-2xl border-blue-100 text-blue-600 hover:bg-blue-50 font-black h-12 md:h-14 px-5 md:px-8 text-base md:text-lg"
+                      className="rounded-2xl border-blue-100 text-blue-600 hover:bg-blue-50 font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 text-sm sm:text-base md:text-lg"
                     >
                       <Link
                         href={`/compare?ids=${tool.id}`}
-                        className="flex items-center gap-3"
+                        className="flex items-center gap-2 md:gap-3"
                       >
-                        <Scale className="w-5 h-5" /> Compare with another tool
+                        <Scale className="w-4 h-4 md:w-5 md:h-5 shrink-0" /> Compare with another tool
                       </Link>
                     </Button>
                   </div>
@@ -318,7 +318,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 - On lg+: gap widens so the bar fills the column.
                 The label still has `sr-only` on narrow widths so screen
                 readers and the title= tooltip both expose the full name. */}
-            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md">
+            <div className="sticky top-20 z-40 py-2 bg-[#fcfdfe]/80 backdrop-blur-md w-full">
               <div className="relative">
                 {/* Left & right fade gradients telegraph horizontal scroll. */}
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-6 z-10 bg-gradient-to-r from-white to-transparent rounded-l-[20px]" />
@@ -403,7 +403,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 {tool.pricing_tiers?.map((tier, i) => (
                   <Card
                     key={i}
-                    className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl md:scale-[1.03]" : "border-slate-100"}`}
+                    className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl" : "border-slate-100"}`}
                   >
                     {tier.is_popular && (
                       <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] text-center py-3">
@@ -437,9 +437,13 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         ))}
                       </ul>
                       <Button
+                        asChild
                         className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 text-white ${tier.is_popular ? "bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200" : "bg-slate-900 hover:bg-slate-800"}`}
                       >
-                        Choose {tier.name}
+                        <Link href={tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                          Choose {tier.name}
+                          <ExternalLink className="w-4 h-4 opacity-70" />
+                        </Link>
                       </Button>
                     </CardContent>
                   </Card>
@@ -465,7 +469,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       {cat.category}{" "}
                       <div className="h-px bg-slate-100 flex-1"></div>
                     </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-3">
                       {cat.items?.map((item, j) => (
                         <div key={j} className="flex items-center gap-2 group">
                           {item.status ? (
@@ -500,27 +504,27 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     Environment Support
                   </h4>
                   <div className="space-y-6">
-                    <div className="flex justify-between items-center text-base">
+                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
                       <span className="font-bold text-slate-500">
                         Certified OS
                       </span>
-                      <span className="font-black text-slate-900">
+                      <span className="font-black text-slate-900 text-right">
                         {tool.platforms.join(", ")}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center text-base">
+                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
                       <span className="font-bold text-slate-500">
                         Multi-threading
                       </span>
-                      <span className="font-black text-slate-900">
+                      <span className="font-black text-slate-900 text-right">
                         {tool.tech_specs?.multicore}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center text-base">
+                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
                       <span className="font-bold text-slate-500">
                         GPU Optimization
                       </span>
-                      <span className="font-black text-slate-900">
+                      <span className="font-black text-slate-900 text-right">
                         {tool.tech_specs?.gpu_optimization}
                       </span>
                     </div>
@@ -885,9 +889,19 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         </div>
                       </div>
                     </div>
-                    <Badge className="bg-blue-600 text-white font-black px-6 py-2 rounded-xl text-sm">
-                      Highly Recommended
-                    </Badge>
+                    {tool.score >= 4.0 ? (
+                      <Badge className="bg-blue-600 text-white font-black px-6 py-2 rounded-xl text-sm">
+                        Highly Recommended
+                      </Badge>
+                    ) : tool.score >= 3.5 ? (
+                      <Badge className="bg-slate-600 text-white font-black px-6 py-2 rounded-xl text-sm">
+                        Recommended
+                      </Badge>
+                    ) : (
+                      <Badge className="bg-slate-400 text-white font-black px-6 py-2 rounded-xl text-sm">
+                        Good Option
+                      </Badge>
+                    )}
                   </div>
                 </div>
               </div>
@@ -990,7 +1004,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
           </main>
 
           {/* Right Sidebar - Conversion & Tools */}
-          <aside className="w-full lg:w-[400px] space-y-6 md:space-y-10">
+          <aside className="w-full lg:w-96 lg:shrink-0 space-y-6 md:space-y-10">
             <div className="lg:sticky lg:top-28 space-y-6 md:space-y-10">
               {/* Primary Purchase Card */}
               <Card className="rounded-[24px] md:rounded-[40px] border-2 border-blue-600 shadow-2xl shadow-blue-900/10 overflow-hidden flex flex-col group bg-[#0f172a]">

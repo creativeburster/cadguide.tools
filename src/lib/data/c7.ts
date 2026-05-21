@@ -10,68 +10,77 @@ export const c7Tools: Tool[] = [
   slug: "pc-schematic",
   logo_url: "https://www.pcschematic.com/images/pcs_logo_new.png",
   short_desc: "Intelligent electrical CAD for automation.",
-  description:
-    "PC SCHEMATIC Automation is high-end electrical CAD software for drawing schematics for electrical wiring diagrams, control circuits, pneumatics and hydraulics.",
+  description: "PC SCHEMATIC Automation is high-end electrical CAD software for drawing schematics for electrical wiring diagrams, control circuits, pneumatics and hydraulics.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 1500,
-  platforms: ["Windows"],
-  industries: ["Automation", "Manufacturing"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Automation",
+    "Manufacturing"
+  ],
   core_features: [
     "Auto-generating Lists",
     "Component Database",
     "Smart Routing",
-    "PLC Management",
+    "PLC Management"
   ],
-  user_scales: ["Small Team", "Mid-Market"],
+  user_scales: [
+    "Small Team",
+    "Mid-Market"
+  ],
   official_url: "https://www.pcschematic.com",
   affiliate_url: null,
   score: 4.7,
   pros: [
     "User friendly",
     "Efficient parts management",
-    "One-time cost available",
+    "One-time cost available"
   ],
   cons: [
     "Smaller community than EPLAN",
     "Windows only",
-    "UI is very traditional",
+    "UI is very traditional"
   ],
   faqs: [
     {
       q: "What is PC SCHEMATIC Automation used for?",
-      a: "Intelligent electrical CAD for automation. PC SCHEMATIC Automation is a visualization and rendering solution widely adopted in Automation, Manufacturing.",
+      a: "Intelligent electrical CAD for automation. PC SCHEMATIC Automation is a visualization and rendering solution widely adopted in Automation, Manufacturing."
     },
     {
       q: "How much does PC SCHEMATIC Automation cost?",
-      a: "PC SCHEMATIC Automation starts at $1,500 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "PC SCHEMATIC Automation starts at $1,500 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of PC SCHEMATIC Automation?",
-      a: "PC SCHEMATIC Automation is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "PC SCHEMATIC Automation is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does PC SCHEMATIC Automation support?",
-      a: "PC SCHEMATIC Automation runs on Windows.",
+      a: "PC SCHEMATIC Automation runs on Windows."
     },
     {
       q: "Which file formats does PC SCHEMATIC Automation support?",
-      a: "PC SCHEMATIC Automation works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "PC SCHEMATIC Automation works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to PC SCHEMATIC Automation?",
-      a: "The closest alternatives within the Specialized space are Shoemaster, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Shoemaster, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Custom",
     multicore: "Moderate",
     gpu_optimization: "Basic",
-    standards: ["IEC 61346", "EN 81346"],
+    standards: [
+      "IEC 61346",
+      "EN 81346"
+    ]
   },
-  expert_verdict:
-    "The most efficient alternative to EPLAN for small to mid-sized automation firms.",
+  expert_verdict: "The most efficient alternative to EPLAN for small to mid-sized automation firms."
 },
 {
   id: "t65",
@@ -79,75 +88,78 @@ export const c7Tools: Tool[] = [
   slug: "matrixgold",
   logo_url: "https://www.gemvision.com/images/matrixgold-logo.png",
   short_desc: "The world's most advanced jewelry design software.",
-
-  description:
-    "MatrixGold combines the top features of Matrix and RhinoGold with a simplified interface to provide a powerful 3D jewelry design experience.",
-
+  description: "MatrixGold combines the top features of Matrix and RhinoGold with a simplified interface to provide a powerful 3D jewelry design experience.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 7900,
-  platforms: ["Windows"],
-  industries: ["Jewelry Design", "Manufacturing"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Jewelry Design",
+    "Manufacturing"
+  ],
   core_features: [
     "Jewelry Design",
     "Parametric Gem placement",
     "Ring Builders",
-    "High-end Rendering",
+    "High-end Rendering"
   ],
-
-  user_scales: ["Individual Artists", "High-end Jewelers"],
+  user_scales: [
+    "Individual Artists",
+    "High-end Jewelers"
+  ],
   official_url: "https://www.gemvision.com/matrixgold",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Ultimate precision",
     "Dynamic parametric history",
-    "Photorealistic rendering",
+    "Photorealistic rendering"
   ],
   cons: [
     "Extremely expensive",
     "Niche hardware requirements",
-    "Steep learning curve",
+    "Steep learning curve"
   ],
   faqs: [
     {
       q: "What is MatrixGold used for?",
-      a: "The world's most advanced jewelry design software. MatrixGold is a visualization and rendering solution widely adopted in Jewelry Design, Manufacturing.",
+      a: "The world's most advanced jewelry design software. MatrixGold is a visualization and rendering solution widely adopted in Jewelry Design, Manufacturing."
     },
     {
       q: "How much does MatrixGold cost?",
-      a: "MatrixGold starts at $7,900 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "MatrixGold starts at $7,900 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of MatrixGold?",
-      a: "MatrixGold is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "MatrixGold is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does MatrixGold support?",
-      a: "MatrixGold runs on Windows.",
+      a: "MatrixGold runs on Windows."
     },
     {
       q: "Which file formats does MatrixGold support?",
-      a: "MatrixGold works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "MatrixGold works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to MatrixGold?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Rhino 7 + Custom",
     multicore: "Moderate",
     gpu_optimization: "Ultra",
-    standards: ["STL", "OBJ", "3DM"],
+    standards: [
+      "STL",
+      "OBJ",
+      "3DM"
+    ]
   },
-
-  expert_verdict:
-    "If you are a professional jeweler, this is the only tool you will ever need.",
-
+  expert_verdict: "If you are a professional jeweler, this is the only tool you will ever need.",
   pricing_tiers: [
     {
       name: "Subscription",
@@ -156,97 +168,101 @@ export const c7Tools: Tool[] = [
       features: [
         "Parametric Jewelry Design",
         "Render Studio",
-        "Gems library",
+        "Gems library"
       ],
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "Jewelry",
-
       items: [
         {
           name: "Dynamic Rhino integration",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t66",
   name: "exocad DentalCAD",
   slug: "exocad",
-  logo_url:
-    "https://exocad.com/typo3conf/ext/exocad_site/Resources/Public/Images/exocad_logo.svg",
+  logo_url: "https://exocad.com/typo3conf/ext/exocad_site/Resources/Public/Images/exocad_logo.svg",
   short_desc: "Leading dental CAD software for labs.",
-
-  description:
-    "exocad DentalCAD is the tool for every dental technician who wants to be part of the future in digital dentistry.",
-
+  description: "exocad DentalCAD is the tool for every dental technician who wants to be part of the future in digital dentistry.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3000,
-  platforms: ["Windows"],
-  industries: ["Dental", "Medical"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Dental",
+    "Medical"
+  ],
   core_features: [
     "Digital Dentistry",
     "Crown & Bridge design",
     "Implant Planning",
-    "3D Scanning integration",
+    "3D Scanning integration"
   ],
-
-  user_scales: ["Dental Labs", "Clinics"],
+  user_scales: [
+    "Dental Labs",
+    "Clinics"
+  ],
   official_url: "https://exocad.com",
   affiliate_url: null,
   score: 4.8,
-  pros: ["Robust and reliable", "Huge module ecosystem", "Open architecture"],
+  pros: [
+    "Robust and reliable",
+    "Huge module ecosystem",
+    "Open architecture"
+  ],
   cons: [
     "Complex licensing",
     "Requires specific scanners",
-    "High total cost",
+    "High total cost"
   ],
   faqs: [
     {
       q: "What is exocad DentalCAD used for?",
-      a: "Leading dental CAD software for labs. exocad DentalCAD is a visualization and rendering solution widely adopted in Dental, Medical.",
+      a: "Leading dental CAD software for labs. exocad DentalCAD is a visualization and rendering solution widely adopted in Dental, Medical."
     },
     {
       q: "How much does exocad DentalCAD cost?",
-      a: "exocad DentalCAD starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "exocad DentalCAD starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of exocad DentalCAD?",
-      a: "exocad DentalCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "exocad DentalCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does exocad DentalCAD support?",
-      a: "exocad DentalCAD runs on Windows.",
+      a: "exocad DentalCAD runs on Windows."
     },
     {
       q: "Which file formats does exocad DentalCAD support?",
-      a: "exocad DentalCAD works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "exocad DentalCAD works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to exocad DentalCAD?",
-      a: "The closest alternatives within the Specialized space are CLO 3D, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are CLO 3D, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Proprietary",
     multicore: "High",
     gpu_optimization: "High",
-    standards: ["STL", "PLY", "OBJ"],
+    standards: [
+      "STL",
+      "PLY",
+      "OBJ"
+    ]
   },
-
-  expert_verdict:
-    "The software that defined the digital dental lab industry.",
-
+  expert_verdict: "The software that defined the digital dental lab industry.",
   pricing_tiers: [
     {
       name: "Flex License",
@@ -255,24 +271,22 @@ export const c7Tools: Tool[] = [
       features: [
         "DentalCAD Core",
         "Virtual Articulator",
-        "Provisional module",
+        "Provisional module"
       ],
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "Dental",
-
       items: [
         {
           name: "Open architecture support",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t67",
@@ -280,136 +294,156 @@ export const c7Tools: Tool[] = [
   slug: "cabinet-vision",
   logo_url: "https://www.cabinetvision.com/images/logo.png",
   short_desc: "Essential tool for the woodworking industry.",
-  description:
-    "Cabinet Vision is a unique solution for the woodworking industry, providing tools for design, rendering, and CNC manufacturing of cabinets.",
+  description: "Cabinet Vision is a unique solution for the woodworking industry, providing tools for design, rendering, and CNC manufacturing of cabinets.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 2000,
-  platforms: ["Windows"],
-  industries: ["Woodworking", "Furniture"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Woodworking",
+    "Furniture"
+  ],
   core_features: [
     "Auto-generation of Cut Lists",
     "CNC Integration",
     "3D Photo Rendering",
-    "Material Optimization",
+    "Material Optimization"
   ],
-  user_scales: ["Small Custom Shops", "Industrial Manufacturers"],
+  user_scales: [
+    "Small Custom Shops",
+    "Industrial Manufacturers"
+  ],
   official_url: "https://www.cabinetvision.com",
   affiliate_url: null,
   score: 4.7,
   pros: [
     "Seamless design-to-CNC",
     "Highly customizable",
-    "Large library of hardware",
+    "Large library of hardware"
   ],
   cons: [
     "Very complex setup",
     "Old-school UI",
-    "High cost of implementation",
+    "High cost of implementation"
   ],
   faqs: [
     {
       q: "What is Cabinet Vision used for?",
-      a: "Essential tool for the woodworking industry. Cabinet Vision is a visualization and rendering solution widely adopted in Woodworking, Furniture.",
+      a: "Essential tool for the woodworking industry. Cabinet Vision is a visualization and rendering solution widely adopted in Woodworking, Furniture."
     },
     {
       q: "How much does Cabinet Vision cost?",
-      a: "Cabinet Vision starts at $2,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Cabinet Vision starts at $2,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Cabinet Vision?",
-      a: "Cabinet Vision is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Cabinet Vision is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Cabinet Vision support?",
-      a: "Cabinet Vision runs on Windows.",
+      a: "Cabinet Vision runs on Windows."
     },
     {
       q: "Which file formats does Cabinet Vision support?",
-      a: "Cabinet Vision works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Cabinet Vision works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Cabinet Vision?",
-      a: "The closest alternatives within the Specialized space are exocad DentalCAD, CLO 3D, Land F/X. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are exocad DentalCAD, CLO 3D, Land F/X. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Proprietary",
     multicore: "Moderate",
     gpu_optimization: "Basic",
-    standards: ["DXF", "G-Code"],
+    standards: [
+      "DXF",
+      "G-Code"
+    ]
   },
-  expert_verdict: "The backbone of any modern professional woodworking shop.",
+  expert_verdict: "The backbone of any modern professional woodworking shop."
 },
 {
   id: "t68",
   name: "AVEVA Marine",
   slug: "aveva-marine",
-  logo_url:
-    "https://www.aveva.com/content/dam/aveva/images/logos/aveva-logo.svg",
+  logo_url: "https://www.aveva.com/content/dam/aveva/images/logos/aveva-logo.svg",
   short_desc: "Integrated engineering and design for shipbuilding.",
-  description:
-    "AVEVA Marine combines engineering and design for the world's most complex ships and offshore platforms.",
+  description: "AVEVA Marine combines engineering and design for the world's most complex ships and offshore platforms.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 15000,
-  platforms: ["Windows"],
-  industries: ["Shipbuilding", "Oil & Gas"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Shipbuilding",
+    "Oil & Gas"
+  ],
   core_features: [
     "Hull Design",
     "Outfitting",
     "3D Collaborative Environment",
-    "Project Management",
+    "Project Management"
   ],
-  user_scales: ["Enterprise", "Major Shipyards"],
+  user_scales: [
+    "Enterprise",
+    "Major Shipyards"
+  ],
   official_url: "https://www.aveva.com/en/products/marine/",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Handles massive assemblies",
     "Global collaboration",
-    "Deep engineering logic",
+    "Deep engineering logic"
   ],
   cons: [
     "Extremely expensive",
     "Huge learning curve",
-    "Requires specialized IT infrastructure",
+    "Requires specialized IT infrastructure"
   ],
   faqs: [
     {
       q: "What is AVEVA Marine used for?",
-      a: "Integrated engineering and design for shipbuilding. AVEVA Marine is a visualization and rendering solution widely adopted in Shipbuilding, Oil & Gas.",
+      a: "Integrated engineering and design for shipbuilding. AVEVA Marine is a visualization and rendering solution widely adopted in Shipbuilding, Oil & Gas."
     },
     {
       q: "How much does AVEVA Marine cost?",
-      a: "AVEVA Marine starts at $15,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "AVEVA Marine starts at $15,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of AVEVA Marine?",
-      a: "AVEVA Marine is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "AVEVA Marine is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does AVEVA Marine support?",
-      a: "AVEVA Marine runs on Windows.",
+      a: "AVEVA Marine runs on Windows."
     },
     {
       q: "Which file formats does AVEVA Marine support?",
-      a: "AVEVA Marine works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "AVEVA Marine works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to AVEVA Marine?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "AVEVA E3D",
     multicore: "Ultra",
     gpu_optimization: "High",
-    standards: ["STEP", "IFC", "SAT"],
+    standards: [
+      "STEP",
+      "IFC",
+      "SAT"
+    ]
   },
-  expert_verdict: "The undisputed king of heavy-duty maritime engineering.",
+  expert_verdict: "The undisputed king of heavy-duty maritime engineering."
 },
 {
   id: "t69",
@@ -417,76 +451,81 @@ export const c7Tools: Tool[] = [
   slug: "clo-3d",
   logo_url: "https://www.clo3d.com/images/common/logo_clo.png",
   short_desc: "3D garment visualization and design.",
-
-  description:
-    "CLO is a 3D fashion design software that creates virtual, true-to-life garment visualizations with cutting-edge simulation technologies.",
-
+  description: "CLO is a 3D fashion design software that creates virtual, true-to-life garment visualizations with cutting-edge simulation technologies.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 600,
-  platforms: ["Windows", "macOS"],
-  industries: ["Fashion", "Apparel", "Gaming"],
-
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Fashion",
+    "Apparel",
+    "Gaming"
+  ],
   core_features: [
     "3D Garment Design",
     "Fabric Simulation",
     "Virtual Fitting",
     "Pattern Grading",
-    "Modular Design",
+    "Modular Design"
   ],
-
-  user_scales: ["Indie Designers", "Global Fashion Brands"],
+  user_scales: [
+    "Indie Designers",
+    "Global Fashion Brands"
+  ],
   official_url: "https://www.clo3d.com",
   affiliate_url: null,
   score: 4.8,
   pros: [
     "Best-in-class simulation",
     "Easy to learn",
-    "Reduces physical samples",
+    "Reduces physical samples"
   ],
   cons: [
     "Requires strong GPU",
     "Subscription only",
-    "Learning curve for pattern making",
+    "Learning curve for pattern making"
   ],
   faqs: [
     {
       q: "What is CLO 3D used for?",
-      a: "3D garment visualization and design. CLO 3D is a visualization and rendering solution widely adopted in Fashion, Apparel, Gaming.",
+      a: "3D garment visualization and design. CLO 3D is a visualization and rendering solution widely adopted in Fashion, Apparel, Gaming."
     },
     {
       q: "How much does CLO 3D cost?",
-      a: "CLO 3D starts at $600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "CLO 3D starts at $600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of CLO 3D?",
-      a: "CLO 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "CLO 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does CLO 3D support?",
-      a: "CLO 3D runs on Windows and macOS.",
+      a: "CLO 3D runs on Windows and macOS."
     },
     {
       q: "Which file formats does CLO 3D support?",
-      a: "CLO 3D works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "CLO 3D works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to CLO 3D?",
-      a: "The closest alternatives within the Specialized space are exocad DentalCAD, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are exocad DentalCAD, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "CLO Simulation Engine",
     multicore: "High",
     gpu_optimization: "Ultra",
-    standards: ["DXF-ASTM", "OBJ", "FBX"],
+    standards: [
+      "DXF-ASTM",
+      "OBJ",
+      "FBX"
+    ]
   },
-
-  expert_verdict:
-    "Transforming the fashion industry by digitizing the entire sampling process.",
-
+  expert_verdict: "Transforming the fashion industry by digitizing the entire sampling process.",
   pricing_tiers: [
     {
       name: "Individual",
@@ -496,9 +535,9 @@ export const c7Tools: Tool[] = [
         "Full 3D Design",
         "Auto Grading",
         "Fabric Library",
-        "Cloud storage",
+        "Cloud storage"
       ],
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Business",
@@ -507,28 +546,26 @@ export const c7Tools: Tool[] = [
       features: [
         "Team collaboration",
         "Asset management",
-        "Priority support",
+        "Priority support"
       ],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Simulation",
-
       items: [
         {
           name: "Real-time fabric drape",
-          status: true,
+          status: true
         },
         {
           name: "Stress/Strain map",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t75",
@@ -536,199 +573,236 @@ export const c7Tools: Tool[] = [
   slug: "shoemaster",
   logo_url: "",
   short_desc: "Leading CAD/CAM for the global footwear industry.",
-  description:
-    "Shoemaster is a world-leading CAD/CAM system providing 2D and 3D solutions for the footwear industry, from initial design to manufacturing.",
+  description: "Shoemaster is a world-leading CAD/CAM system providing 2D and 3D solutions for the footwear industry, from initial design to manufacturing.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 5000,
-  platforms: ["Windows"],
-  industries: ["Footwear", "Apparel"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Footwear",
+    "Apparel"
+  ],
   core_features: [
     "3D Last Design",
     "Pattern Engineering",
     "Material Costing",
-    "Virtual Sampling",
+    "Virtual Sampling"
   ],
-  user_scales: ["Large Manufacturers", "Design Studios"],
+  user_scales: [
+    "Large Manufacturers",
+    "Design Studios"
+  ],
   official_url: "https://atom-shoemaster.com/",
   affiliate_url: null,
   score: 4.7,
   pros: [
     "Industry standard for shoes",
     "Integrated CAM",
-    "Highly specialized",
+    "Highly specialized"
   ],
-  cons: ["Very niche", "High cost", "Legacy UI"],
+  cons: [
+    "Very niche",
+    "High cost",
+    "Legacy UI"
+  ],
   faqs: [
     {
       q: "What is Shoemaster used for?",
-      a: "Leading CAD/CAM for the global footwear industry. Shoemaster is a visualization and rendering solution widely adopted in Footwear, Apparel.",
+      a: "Leading CAD/CAM for the global footwear industry. Shoemaster is a visualization and rendering solution widely adopted in Footwear, Apparel."
     },
     {
       q: "How much does Shoemaster cost?",
-      a: "Shoemaster starts at $5,000 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Shoemaster starts at $5,000 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Shoemaster?",
-      a: "Shoemaster is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Shoemaster is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Shoemaster support?",
-      a: "Shoemaster runs on Windows.",
+      a: "Shoemaster runs on Windows."
     },
     {
       q: "Which file formats does Shoemaster support?",
-      a: "Shoemaster works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Shoemaster works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Shoemaster?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Proprietary",
     multicore: "Moderate",
     gpu_optimization: "Basic",
-    standards: ["DXF", "STL"],
+    standards: [
+      "DXF",
+      "STL"
+    ]
   },
-  expert_verdict: "Essential software for global footwear production lines.",
+  expert_verdict: "Essential software for global footwear production lines."
 },
 {
   id: "t77",
   name: "WYSIWYG",
   slug: "wysiwyg",
-  logo_url:
-    "https://cast-soft.com/wp-content/themes/cast/images/wysiwyg_logo.png",
+  logo_url: "https://cast-soft.com/wp-content/themes/cast/images/wysiwyg_logo.png",
   short_desc: "The standard for lighting design and pre-visualization.",
-  description:
-    "WYSIWYG is an all-in-one lighting design software tool with CAD, data, visualization, and virtual show control features.",
+  description: "WYSIWYG is an all-in-one lighting design software tool with CAD, data, visualization, and virtual show control features.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 1200,
-  platforms: ["Windows"],
-  industries: ["Event Design", "Theatre", "Concerts"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Event Design",
+    "Theatre",
+    "Concerts"
+  ],
   core_features: [
     "Real-time Visualization",
     "Lighting Plotting",
     "Console Integration",
-    "VR Pre-viz",
+    "VR Pre-viz"
   ],
-  user_scales: ["Lighting Designers", "Production Houses"],
+  user_scales: [
+    "Lighting Designers",
+    "Production Houses"
+  ],
   official_url: "https://cast-soft.com/wysiwyg/",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Incredible realism",
     "Accurate beams",
-    "Industry standard for shows",
+    "Industry standard for shows"
   ],
   cons: [
     "High subscription cost",
     "Heavy hardware demand",
-    "Steep learning curve",
+    "Steep learning curve"
   ],
   faqs: [
     {
       q: "What is WYSIWYG used for?",
-      a: "The standard for lighting design and pre-visualization. WYSIWYG is a visualization and rendering solution widely adopted in Event Design, Theatre, Concerts.",
+      a: "The standard for lighting design and pre-visualization. WYSIWYG is a visualization and rendering solution widely adopted in Event Design, Theatre, Concerts."
     },
     {
       q: "How much does WYSIWYG cost?",
-      a: "WYSIWYG starts at $1,200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "WYSIWYG starts at $1,200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of WYSIWYG?",
-      a: "WYSIWYG is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "WYSIWYG is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does WYSIWYG support?",
-      a: "WYSIWYG runs on Windows.",
+      a: "WYSIWYG runs on Windows."
     },
     {
       q: "Which file formats does WYSIWYG support?",
-      a: "WYSIWYG works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "WYSIWYG works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to WYSIWYG?",
-      a: "The closest alternatives within the Specialized space are AVEVA Marine, exocad DentalCAD, CLO 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are AVEVA Marine, exocad DentalCAD, CLO 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Cast Core",
     multicore: "High",
     gpu_optimization: "Ultra",
-    standards: ["DWG", "OBJ", "SKP"],
+    standards: [
+      "DWG",
+      "OBJ",
+      "SKP"
+    ]
   },
-  expert_verdict:
-    "The only software you need to design and pre-program a world-class concert.",
+  expert_verdict: "The only software you need to design and pre-program a world-class concert."
 },
 {
   id: "t78",
   name: "3Design",
   slug: "3design",
-  logo_url:
-    "https://3design.com/wp-content/uploads/2019/06/Logo-3Design-Simple-Couleur.png",
+  logo_url: "https://3design.com/wp-content/uploads/2019/06/Logo-3Design-Simple-Couleur.png",
   short_desc: "Parametric 3D CAD for professional jewelry.",
-  description:
-    "3Design is a powerful 3D jewelry design software that allows for full parametric control, meaning you can change any parameter of your jewelry at any time.",
+  description: "3Design is a powerful 3D jewelry design software that allows for full parametric control, meaning you can change any parameter of your jewelry at any time.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 6000,
-  platforms: ["Windows", "macOS"],
-  industries: ["Jewelry Design"],
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Jewelry Design"
+  ],
   core_features: [
     "History Tree",
     "Pavé Wizard",
     "Automatic Ring Resizer",
-    "Built-in Rendering",
+    "Built-in Rendering"
   ],
-  user_scales: ["Jewelry Designers", "Luxury Brands"],
+  user_scales: [
+    "Jewelry Designers",
+    "Luxury Brands"
+  ],
   official_url: "https://3design.com",
   affiliate_url: null,
   score: 4.7,
-  pros: ["Full parametric history", "Mac support", "Specialized jewel tools"],
+  pros: [
+    "Full parametric history",
+    "Mac support",
+    "Specialized jewel tools"
+  ],
   cons: [
     "Learning curve for parametric",
     "Very expensive",
-    "Niche user base",
+    "Niche user base"
   ],
   faqs: [
     {
       q: "What is 3Design used for?",
-      a: "Parametric 3D CAD for professional jewelry. 3Design is a visualization and rendering solution widely adopted in Jewelry Design.",
+      a: "Parametric 3D CAD for professional jewelry. 3Design is a visualization and rendering solution widely adopted in Jewelry Design."
     },
     {
       q: "How much does 3Design cost?",
-      a: "3Design starts at $6,000 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "3Design starts at $6,000 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of 3Design?",
-      a: "3Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "3Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does 3Design support?",
-      a: "3Design runs on Windows and macOS.",
+      a: "3Design runs on Windows and macOS."
     },
     {
       q: "Which file formats does 3Design support?",
-      a: "3Design works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "3Design works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to 3Design?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Proprietary Parametric",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["STL", "OBJ", "3DM"],
+    standards: [
+      "STL",
+      "OBJ",
+      "3DM"
+    ]
   },
-  expert_verdict:
-    "The serious alternative to MatrixGold for those who prefer Mac or true parametric history.",
+  expert_verdict: "The serious alternative to MatrixGold for those who prefer Mac or true parametric history."
 },
 {
   id: "t82",
@@ -736,68 +810,77 @@ export const c7Tools: Tool[] = [
   slug: "land-fx",
   logo_url: "https://www.landfx.com/images/logo.png",
   short_desc: "Professional AutoCAD plugin for landscape architects.",
-  description:
-    "Land F/X is a powerful add-on for AutoCAD and SketchUp that provides smart tools for planting, irrigation, and site design.",
+  description: "Land F/X is a powerful add-on for AutoCAD and SketchUp that provides smart tools for planting, irrigation, and site design.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 500,
-  platforms: ["Windows"],
-  industries: ["Landscape Architecture", "Irrigation"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Landscape Architecture",
+    "Irrigation"
+  ],
   core_features: [
     "Plant Manager",
     "Irrigation Design",
     "Detail Management",
-    "SketchUp Connection",
+    "SketchUp Connection"
   ],
-  user_scales: ["Small Business", "Mid-Market"],
+  user_scales: [
+    "Small Business",
+    "Mid-Market"
+  ],
   official_url: "https://www.landfx.com",
   affiliate_url: null,
   score: 4.6,
   pros: [
     "Incredibly efficient",
     "Large plant database",
-    "Direct AutoCAD integration",
+    "Direct AutoCAD integration"
   ],
   cons: [
     "Requires AutoCAD",
     "Subscription based",
-    "Learning curve for automation",
+    "Learning curve for automation"
   ],
   faqs: [
     {
       q: "What is Land F/X used for?",
-      a: "Professional AutoCAD plugin for landscape architects. Land F/X is a visualization and rendering solution widely adopted in Landscape Architecture, Irrigation.",
+      a: "Professional AutoCAD plugin for landscape architects. Land F/X is a visualization and rendering solution widely adopted in Landscape Architecture, Irrigation."
     },
     {
       q: "How much does Land F/X cost?",
-      a: "Land F/X starts at $500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Land F/X starts at $500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Land F/X?",
-      a: "Land F/X is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Land F/X is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Land F/X support?",
-      a: "Land F/X runs on Windows.",
+      a: "Land F/X runs on Windows."
     },
     {
       q: "Which file formats does Land F/X support?",
-      a: "Land F/X works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Land F/X works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Land F/X?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "AutoCAD + Custom",
     multicore: "Low",
     gpu_optimization: "Basic",
-    standards: ["DWG", "CSV"],
+    standards: [
+      "DWG",
+      "CSV"
+    ]
   },
-  expert_verdict:
-    "The essential multiplier for landscape architects who use AutoCAD.",
+  expert_verdict: "The essential multiplier for landscape architects who use AutoCAD."
 },
 {
   id: "t83",
@@ -805,64 +888,77 @@ export const c7Tools: Tool[] = [
   slug: "icad3d-plus",
   logo_url: "https://www.icad3dplus.com/img/logo.png",
   short_desc: "3D design and pattern engineering for footwear.",
-  description:
-    "ICAD3D+ is a comprehensive 3D software for footwear design and pattern engineering, allowing users to work in a virtual environment with real physical constraints.",
+  description: "ICAD3D+ is a comprehensive 3D software for footwear design and pattern engineering, allowing users to work in a virtual environment with real physical constraints.",
   country: "USA",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 4500,
-  platforms: ["Windows"],
-  industries: ["Footwear"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Footwear"
+  ],
   core_features: [
     "Virtual Flattening",
     "Sole Design",
     "Material Consumption Analysis",
-    "Direct to Manufacturing",
+    "Direct to Manufacturing"
   ],
-  user_scales: ["Footwear Brands", "Pattern Houses"],
+  user_scales: [
+    "Footwear Brands",
+    "Pattern Houses"
+  ],
   official_url: "https://www.icad3dplus.com",
   affiliate_url: null,
   score: 4.7,
   pros: [
     "Precise pattern engineering",
     "Modern 3D engine",
-    "Direct manufacturing export",
+    "Direct manufacturing export"
   ],
-  cons: ["Very niche", "High cost", "Steep learning for non-tech designers"],
+  cons: [
+    "Very niche",
+    "High cost",
+    "Steep learning for non-tech designers"
+  ],
   faqs: [
     {
       q: "What is ICAD3D+ used for?",
-      a: "3D design and pattern engineering for footwear. ICAD3D+ is a visualization and rendering solution widely adopted in Footwear.",
+      a: "3D design and pattern engineering for footwear. ICAD3D+ is a visualization and rendering solution widely adopted in Footwear."
     },
     {
       q: "How much does ICAD3D+ cost?",
-      a: "ICAD3D+ starts at $4,500 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "ICAD3D+ starts at $4,500 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of ICAD3D+?",
-      a: "ICAD3D+ is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "ICAD3D+ is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does ICAD3D+ support?",
-      a: "ICAD3D+ runs on Windows.",
+      a: "ICAD3D+ runs on Windows."
     },
     {
       q: "Which file formats does ICAD3D+ support?",
-      a: "ICAD3D+ works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "ICAD3D+ works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to ICAD3D+?",
-      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Proprietary 3D",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["DXF", "STL", "IGES"],
+    standards: [
+      "DXF",
+      "STL",
+      "IGES"
+    ]
   },
-  expert_verdict:
-    "The most modern 3D alternative for footwear professionals.",
+  expert_verdict: "The most modern 3D alternative for footwear professionals."
 },
 {
   id: "ext-infraworks",
@@ -871,99 +967,96 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Infraworks.",
   description: "Detailed information about Infraworks.",
-
   pricing_tiers: [
     {
       name: "Monthly",
       price: "260",
       period: "/mo",
-
       features: [
         "Conceptual Design",
         "Context Modeling",
         "Traffic Simulation",
-        "Cloud Sharing",
+        "Cloud Sharing"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Annual",
       price: "2,075",
       period: "/yr",
-
       features: [
         "Advanced Bridge design",
         "Mobility Simulation",
         "Visual Storytelling",
-        "Autodesk Docs sync",
+        "Autodesk Docs sync"
       ],
-
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   core_features: [
     "Conceptual Design",
     "Infrastructure Planning",
     "Context Modeling",
     "Mobility Simulation",
-    "Visual Presentation",
+    "Visual Presentation"
   ],
-
   detailed_features: [
     {
       category: "Planning",
-
       items: [
         {
           name: "Aggregated Data Context",
-          status: true,
+          status: true
         },
         {
           name: "Concept Design of Roads/Bridges",
-          status: true,
+          status: true
         },
         {
           name: "Traffic & Mobility Simulation",
-          status: true,
+          status: true
         },
         {
           name: "Drainage Design Analysis",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Visuals & Collaboration",
-
       items: [
         {
           name: "Photorealistic Visualization",
-          status: true,
+          status: true
         },
         {
           name: "Cloud-based Shared Views",
-          status: true,
+          status: true
         },
         {
           name: "Real-time Scenario comparison",
-          status: true,
+          status: true
         },
         {
           name: "ArcGIS Integration",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: ["Engineering"],
-  user_scales: ["Mid-Market", "Enterprise"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Engineering"
+  ],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.autodesk.com/products/infraworks/overview",
   affiliate_url: null,
   score: 4.5,
@@ -972,38 +1065,36 @@ export const c7Tools: Tool[] = [
   faqs: [
     {
       q: "What is Infraworks used for?",
-      a: "Professional solution for Infraworks. Infraworks is a visualization and rendering solution widely adopted in Engineering.",
+      a: "Professional solution for Infraworks. Infraworks is a visualization and rendering solution widely adopted in Engineering."
     },
     {
       q: "How much does Infraworks cost?",
-      a: "Infraworks is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Infraworks is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Infraworks?",
-      a: "Infraworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Infraworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Infraworks support?",
-      a: "Infraworks runs on Windows.",
+      a: "Infraworks runs on Windows."
     },
     {
       q: "Which file formats does Infraworks support?",
-      a: "Infraworks works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Infraworks works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Infraworks?",
-      a: "The closest alternatives within the Specialized space are 3ds Max, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are 3ds Max, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "Professional choice for the industry."
 },
 {
   id: "ext-3ds-max",
@@ -1012,21 +1103,18 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for 3ds Max.",
   description: "Detailed information about 3ds Max.",
-
   pricing_tiers: [
     {
       name: "Monthly",
       price: "235",
       period: "/mo",
-
       features: [
         "High-end Rendering",
         "AEC Visualization",
         "Particle Flow",
-        "Smart Extrude",
+        "Smart Extrude"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Annual",
@@ -1036,122 +1124,122 @@ export const c7Tools: Tool[] = [
         "Retopology tools",
         "Bake to Texture",
         "USD support",
-        "Arnold integration",
+        "Arnold integration"
       ],
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   core_features: [
     "Architectural Visualization",
     "3D Modeling",
     "Texture Mapping",
     "Rendering",
-    "Dynamic Simulation",
+    "Dynamic Simulation"
   ],
-
   detailed_features: [
     {
       category: "AEC Visualization",
-
       items: [
         {
           name: "Smart Extrude system",
-          status: true,
+          status: true
         },
         {
           name: "Spline Workflows",
-          status: true,
+          status: true
         },
         {
           name: "Scene Layout & Tracking",
-          status: true,
+          status: true
         },
         {
           name: "Interactive Rendering",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Design & Texturing",
-
       items: [
         {
           name: "Advanced Retopology",
-          status: true,
+          status: true
         },
         {
           name: "Physical Camera support",
-          status: true,
+          status: true
         },
         {
           name: "PBR Material support",
-          status: true,
+          status: true
         },
         {
           name: "OSL (Open Shading Language)",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: ["Engineering"],
-  user_scales: ["Mid-Market", "Enterprise"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Engineering"
+  ],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.autodesk.com/products/3ds-max/overview",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
-
   faqs: [
     {
       q: "What is 3ds Max used for?",
-      a: "Professional solution for 3ds Max. 3ds Max is a visualization and rendering solution widely adopted in Engineering.",
+      a: "Professional solution for 3ds Max. 3ds Max is a visualization and rendering solution widely adopted in Engineering."
     },
     {
       q: "How much does 3ds Max cost?",
-      a: "3ds Max is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "3ds Max is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of 3ds Max?",
-      a: "3ds Max is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "3ds Max is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does 3ds Max support?",
-      a: "3ds Max runs on Windows.",
+      a: "3ds Max runs on Windows."
     },
     {
       q: "Which file formats does 3ds Max support?",
-      a: "3ds Max works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "3ds Max works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to 3ds Max?",
-      a: "The closest alternatives within the Specialized space are Infraworks, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-
   expert_verdict: "Professional choice for the industry.",
-
-  external_ratings: [{
-    source: "TrustRadius",
-    score: 8.8,
-    max: 10,
-    count: 39,
-    url: "https://www.trustradius.com/products/autodesk-3ds-max/reviews"
-  }]
+  external_ratings: [
+    {
+      source: "TrustRadius",
+      score: 8.8,
+      max: 10,
+      count: 39,
+      url: "https://www.trustradius.com/products/autodesk-3ds-max/reviews"
+    }
+  ]
 },
 {
   id: "ext-zbrush",
@@ -1160,7 +1248,6 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for ZBrush.",
   description: "Detailed information about ZBrush.",
-
   pricing_tiers: [
     {
       name: "Monthly",
@@ -1170,87 +1257,87 @@ export const c7Tools: Tool[] = [
         "Industry Standard Sculpt",
         "ZRemesher",
         "Dynamesh",
-        "PolyPaint",
+        "PolyPaint"
       ],
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Annual",
       price: "359",
       period: "/yr",
-
       features: [
         "Full license access",
         "All plugins included",
         "Maxon Cloud storage",
-        "Technical Support",
+        "Technical Support"
       ],
-
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   core_features: [
     "Digital Sculpting",
     "High-poly Modeling",
     "Texturing",
     "Concept Design",
-    "3D Printing Prep",
+    "3D Printing Prep"
   ],
-
   detailed_features: [
     {
       category: "Sculpting Tech",
-
       items: [
         {
           name: "Dynamesh (Real-time topology)",
-          status: true,
+          status: true
         },
         {
           name: "ZRemesher (Auto Retopology)",
-          status: true,
+          status: true
         },
         {
           name: "SubTool management",
-          status: true,
+          status: true
         },
         {
           name: "Live Boolean",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Artistic Tools",
-
       items: [
         {
           name: "PolyPaint (Brush-based texturing)",
-          status: true,
+          status: true
         },
         {
           name: "FiberMesh (Hair/Fur)",
-          status: true,
+          status: true
         },
         {
           name: "NanoMesh (Instancing)",
-          status: true,
+          status: true
         },
         {
           name: "Decimation Master (Optimization)",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: ["Engineering"],
-  user_scales: ["Mid-Market", "Enterprise"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Engineering"
+  ],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.maxon.net/en/zbrush",
   affiliate_url: null,
   score: 4.5,
@@ -1259,38 +1346,36 @@ export const c7Tools: Tool[] = [
   faqs: [
     {
       q: "What is ZBrush used for?",
-      a: "Professional solution for ZBrush. ZBrush is a visualization and rendering solution widely adopted in Engineering.",
+      a: "Professional solution for ZBrush. ZBrush is a visualization and rendering solution widely adopted in Engineering."
     },
     {
       q: "How much does ZBrush cost?",
-      a: "ZBrush is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "ZBrush is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of ZBrush?",
-      a: "ZBrush is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "ZBrush is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does ZBrush support?",
-      a: "ZBrush runs on Windows.",
+      a: "ZBrush runs on Windows."
     },
     {
       q: "Which file formats does ZBrush support?",
-      a: "ZBrush works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "ZBrush works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to ZBrush?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "Professional choice for the industry."
 },
 {
   id: "ext-keyshot",
@@ -1299,85 +1384,84 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for KeyShot.",
   description: "Detailed information about KeyShot.",
-
   pricing_tiers: [
     {
       name: "Pro (Annual)",
       price: "1,188",
       period: "/yr",
-
       features: [
         "Real-time Ray Tracing",
         "HDRI Editor",
         "Material Graph",
-        "Animation module",
+        "Animation module"
       ],
-
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   core_features: [
     "Real-time Rendering",
     "Product Visualization",
     "Scientific Accuracy",
     "Materials & Textures",
-    "VR Export",
+    "VR Export"
   ],
-
   detailed_features: [
     {
       category: "Rendering",
-
       items: [
         {
           name: "GPU & CPU Rendering",
-          status: true,
+          status: true
         },
         {
           name: "Scientific Material library",
-          status: true,
+          status: true
         },
         {
           name: "Caustics support",
-          status: true,
+          status: true
         },
         {
           name: "Real-time Denoising",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Workflow",
-
       items: [
         {
           name: "Direct CAD Import",
-          status: true,
+          status: true
         },
         {
           name: "Live Linking with CAD",
-          status: true,
+          status: true
         },
         {
           name: "Configurator Wizard",
-          status: true,
+          status: true
         },
         {
           name: "3D Paint tools",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: ["Engineering"],
-  user_scales: ["Mid-Market", "Enterprise"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Engineering"
+  ],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.keyshot.com",
   affiliate_url: null,
   score: 4.5,
@@ -1386,38 +1470,36 @@ export const c7Tools: Tool[] = [
   faqs: [
     {
       q: "What is KeyShot used for?",
-      a: "Professional solution for KeyShot. KeyShot is a visualization and rendering solution widely adopted in Engineering.",
+      a: "Professional solution for KeyShot. KeyShot is a visualization and rendering solution widely adopted in Engineering."
     },
     {
       q: "How much does KeyShot cost?",
-      a: "KeyShot is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "KeyShot is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of KeyShot?",
-      a: "KeyShot is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "KeyShot is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does KeyShot support?",
-      a: "KeyShot runs on Windows.",
+      a: "KeyShot runs on Windows."
     },
     {
       q: "Which file formats does KeyShot support?",
-      a: "KeyShot works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "KeyShot works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to KeyShot?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "Professional choice for the industry."
 },
 {
   id: "ext-lumion",
@@ -1426,21 +1508,18 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Lumion.",
   description: "Detailed information about Lumion.",
-
   pricing_tiers: [
     {
       name: "Standard",
       price: "749",
       period: "/yr",
-
       features: [
         "Core Library",
         "Real-time rendering",
         "Limited assets",
-        "Standard effects",
+        "Standard effects"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Pro",
@@ -1450,122 +1529,122 @@ export const c7Tools: Tool[] = [
         "Full Object Library",
         "Ray Tracing",
         "Sound effects",
-        "Real Skies",
+        "Real Skies"
       ],
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   core_features: [
     "Architectural Rendering",
     "Landscape Design",
     "Cinematic Animation",
     "LiveSync",
-    "Large Asset Library",
+    "Large Asset Library"
   ],
-
   detailed_features: [
     {
       category: "Visual Effects",
-
       items: [
         {
           name: "Ray Tracing Effect",
-          status: true,
+          status: true
         },
         {
           name: "Real Skies (HDR)",
-          status: true,
+          status: true
         },
         {
           name: "Weather & Seasons",
-          status: true,
+          status: true
         },
         {
           name: "Displacement Mapping",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Library & Assets",
-
       items: [
         {
           name: "6000+ Object Library",
-          status: true,
+          status: true
         },
         {
           name: "High-quality Foliage",
-          status: true,
+          status: true
         },
         {
           name: "Animated Characters",
-          status: true,
+          status: true
         },
         {
           name: "Sound environment",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: ["Engineering"],
-  user_scales: ["Mid-Market", "Enterprise"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Engineering"
+  ],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://lumion.com",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
-
   faqs: [
     {
       q: "What is Lumion used for?",
-      a: "Professional solution for Lumion. Lumion is a visualization and rendering solution widely adopted in Engineering.",
+      a: "Professional solution for Lumion. Lumion is a visualization and rendering solution widely adopted in Engineering."
     },
     {
       q: "How much does Lumion cost?",
-      a: "Lumion is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Lumion is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Lumion?",
-      a: "Lumion is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Lumion is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Lumion support?",
-      a: "Lumion runs on Windows.",
+      a: "Lumion runs on Windows."
     },
     {
       q: "Which file formats does Lumion support?",
-      a: "Lumion works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Lumion works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Lumion?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-
   expert_verdict: "Professional choice for the industry.",
-
-  external_ratings: [{
-    source: "Software Advice",
-    score: 4.7,
-    max: 5,
-    count: 155,
-    url: "https://www.softwareadvice.com/architecture/lumion-profile/"
-  }]
+  external_ratings: [
+    {
+      source: "Software Advice",
+      score: 4.7,
+      max: 5,
+      count: 155,
+      url: "https://www.softwareadvice.com/architecture/lumion-profile/"
+    }
+  ]
 },
 {
   id: "ext-enscape",
@@ -1574,21 +1653,18 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Enscape.",
   description: "Detailed information about Enscape.",
-
   pricing_tiers: [
     {
       name: "Floating License",
       price: "922",
       period: "/yr",
-
       features: [
         "Multi-machine use",
         "Real-time Walkthrough",
         "VR support",
-        "Asset library",
+        "Asset library"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Fixed Seat",
@@ -1598,122 +1674,122 @@ export const c7Tools: Tool[] = [
         "Single machine",
         "Plugin-only",
         "Full asset access",
-        "Technical support",
+        "Technical support"
       ],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   core_features: [
     "Real-time Walkthrough",
     "VR Integration",
     "Plugin Workflow",
     "Collaborative Annotation",
-    "Orthographic Views",
+    "Orthographic Views"
   ],
-
   detailed_features: [
     {
       category: "Plugin Workflow",
-
       items: [
         {
           name: "LiveSync for Revit/SketchUp",
-          status: true,
+          status: true
         },
         {
           name: "BIM Data integration",
-          status: true,
+          status: true
         },
         {
           name: "Asset Library (3000+)",
-          status: true,
+          status: true
         },
         {
           name: "Site Context tool",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Output",
-
       items: [
         {
           name: "VR (Virtual Reality) mode",
-          status: true,
+          status: true
         },
         {
           name: "Video Path Animation",
-          status: true,
+          status: true
         },
         {
           name: "360 Panorama export",
-          status: true,
+          status: true
         },
         {
           name: "Web Standalone viewer",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: ["Engineering"],
-  user_scales: ["Mid-Market", "Enterprise"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Engineering"
+  ],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://enscape3d.com",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
-
   faqs: [
     {
       q: "What is Enscape used for?",
-      a: "Professional solution for Enscape. Enscape is a visualization and rendering solution widely adopted in Engineering.",
+      a: "Professional solution for Enscape. Enscape is a visualization and rendering solution widely adopted in Engineering."
     },
     {
       q: "How much does Enscape cost?",
-      a: "Enscape is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Enscape is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Enscape?",
-      a: "Enscape is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Enscape is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Enscape support?",
-      a: "Enscape runs on Windows.",
+      a: "Enscape runs on Windows."
     },
     {
       q: "Which file formats does Enscape support?",
-      a: "Enscape works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Enscape works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Enscape?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-
   expert_verdict: "Professional choice for the industry.",
-
-  external_ratings: [{
-    source: "Software Advice",
-    score: 4.4,
-    max: 5,
-    count: 68,
-    url: "https://www.softwareadvice.com/architectural-cad/enscape-profile/"
-  }]
+  external_ratings: [
+    {
+      source: "Software Advice",
+      score: 4.4,
+      max: 5,
+      count: 68,
+      url: "https://www.softwareadvice.com/architectural-cad/enscape-profile/"
+    }
+  ]
 },
 {
   id: "ext-twinmotion",
@@ -1722,99 +1798,96 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Twinmotion.",
   description: "Detailed information about Twinmotion.",
-
   pricing_tiers: [
     {
       name: "Free (Low Revenue)",
       price: "0",
       period: "/forever",
-
       features: [
         "Full Engine Power",
         "Unlimited exports",
         "Revenue < $1M only",
-        "Learning use",
+        "Learning use"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Commercial Subscription",
       price: "445",
       period: "/yr",
-
       features: [
         "Cloud sharing",
         "Unreal Engine export",
         "High-res video",
-        "Priority support",
+        "Priority support"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   core_features: [
     "Real-time Visualization",
     "Unreal Engine Core",
     "Easy UI",
     "Large Asset Library",
-    "Quixel Megascans",
+    "Quixel Megascans"
   ],
-
   detailed_features: [
     {
       category: "Visual Power",
-
       items: [
         {
           name: "Lumen Dynamic Lighting",
-          status: true,
+          status: true
         },
         {
           name: "Quixel Megascans sync",
-          status: true,
+          status: true
         },
         {
           name: "Path Tracer",
-          status: true,
+          status: true
         },
         {
           name: "Auto-exposure/HDR",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Workflow",
-
       items: [
         {
           name: "Datasmith Direct Link",
-          status: true,
+          status: true
         },
         {
           name: "One-click sync with Revit",
-          status: true,
+          status: true
         },
         {
           name: "Point Cloud support",
-          status: true,
+          status: true
         },
         {
           name: "VR Exploration",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
-  platforms: ["Windows"],
-  industries: ["Engineering"],
-  user_scales: ["Mid-Market", "Enterprise"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Engineering"
+  ],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.twinmotion.com",
   affiliate_url: null,
   score: 4.5,
@@ -1823,1379 +1896,2908 @@ export const c7Tools: Tool[] = [
   faqs: [
     {
       q: "What is Twinmotion used for?",
-      a: "Professional solution for Twinmotion. Twinmotion is a visualization and rendering solution widely adopted in Engineering.",
+      a: "Professional solution for Twinmotion. Twinmotion is a visualization and rendering solution widely adopted in Engineering."
     },
     {
       q: "How much does Twinmotion cost?",
-      a: "Twinmotion is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Twinmotion is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of Twinmotion?",
-      a: "Twinmotion is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Twinmotion is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Twinmotion support?",
-      a: "Twinmotion runs on Windows.",
+      a: "Twinmotion runs on Windows."
     },
     {
       q: "Which file formats does Twinmotion support?",
-      a: "Twinmotion works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Twinmotion works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Twinmotion?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "Professional choice for the industry."
 },
 {
   id: "t213",
-  "name": "UltiMaker Cura",
-  "slug": "ultimaker-cura",
+  name: "UltiMaker Cura",
+  slug: "ultimaker-cura",
   logo_url: "",
-  "short_desc": "Free, open-source slicer — the most-used FDM 3D printing prep tool in the world.",
-  "description": "UltiMaker Cura is the dominant free, open-source slicer for FDM/FFF 3D printing — supports 400+ printer profiles out of the box, scripting via post-processing plugins, and a marketplace of third-party material profiles.",
-  "country": "Netherlands",
-  "category_id": "c7",
-  "pricing_type": "Open Source",
-  "starting_price": 0,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Maker", "Education", "Manufacturing"],
-
-  "core_features": [
+  short_desc: "Free, open-source slicer — the most-used FDM 3D printing prep tool in the world.",
+  description: "UltiMaker Cura is the dominant free, open-source slicer for FDM/FFF 3D printing — supports 400+ printer profiles out of the box, scripting via post-processing plugins, and a marketplace of third-party material profiles.",
+  country: "Netherlands",
+  category_id: "c7",
+  pricing_type: "Open Source",
+  starting_price: 0,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Maker",
+    "Education",
+    "Manufacturing"
+  ],
+  core_features: [
     "400+ printer profiles out of the box",
     "Tree, normal, and Cura Engine support generation",
     "Marketplace for plugins and material profiles",
     "Adaptive layers and Z-hop optimisation",
     "Mesh repair and infill patterns library",
-    "Cloud account for shared profiles",
+    "Cloud account for shared profiles"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB", "Education"],
-  "official_url": "https://ultimaker.com/software/ultimaker-cura/",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB",
+    "Education"
+  ],
+  official_url: "https://ultimaker.com/software/ultimaker-cura/",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Free, fast updates, huge community",
     "Marketplace makes extending trivial",
-    "Open source — any printer manufacturer can ship a profile",
+    "Open source — any printer manufacturer can ship a profile"
   ],
-
-  "cons": [
+  cons: [
     "Default supports are still inferior to PrusaSlicer's Organic Supports",
     "Less DLP/SLA support than dedicated tools",
-    "Cloud features pull users toward UltiMaker hardware",
+    "Cloud features pull users toward UltiMaker hardware"
   ],
-
-  "tech_specs": {
-    "engine": "CuraEngine",
-    "multicore": "Yes",
-    "gpu_optimization": "OpenGL preview",
-    "standards": ["STL", "3MF", "OBJ", "G-code"],
+  tech_specs: {
+    engine: "CuraEngine",
+    multicore: "Yes",
+    gpu_optimization: "OpenGL preview",
+    standards: [
+      "STL",
+      "3MF",
+      "OBJ",
+      "G-code"
+    ]
   },
-
-  "expert_verdict": "The slicer 70% of FDM printers in the world rely on. Free, fast, and good enough for nearly everything.",
-
-  faqs: [{
-    q: 'What is UltiMaker Cura used for?',
-    a: 'Free, open-source slicer — the most-used FDM 3D printing prep tool in the world. UltiMaker Cura is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing.',
-  }, {
-    q: 'How much does UltiMaker Cura cost?',
-    a: 'UltiMaker Cura is open-source and free to use. Vendor support and commercial services may be offered separately.',
-  }, {
-    q: 'Is UltiMaker Cura really free?',
-    a: 'Yes — UltiMaker Cura is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.',
-  }, {
-    q: 'What operating systems does UltiMaker Cura support?',
-    a: 'UltiMaker Cura runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does UltiMaker Cura support?',
-    a: 'UltiMaker Cura works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to UltiMaker Cura?',
-    a: 'The closest alternatives within the Specialized space are Bambu Studio, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-
-  alternatives: ['bambu-studio', 'prusaslicer', 'd5-render'],
-  detailed_features: [],
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 51,
-    url: "https://www.g2.com/products/ultimaker-cura/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 36,
-    url: "https://www.capterra.com/reviews/ultimaker-cura"
-  }]
+  expert_verdict: "The slicer 70% of FDM printers in the world rely on. Free, fast, and good enough for nearly everything.",
+  faqs: [
+    {
+      q: "What is UltiMaker Cura used for?",
+      a: "Free, open-source slicer — the most-used FDM 3D printing prep tool in the world. UltiMaker Cura is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing."
+    },
+    {
+      q: "How much does UltiMaker Cura cost?",
+      a: "UltiMaker Cura is open-source and free to use. Vendor support and commercial services may be offered separately."
+    },
+    {
+      q: "Is UltiMaker Cura really free?",
+      a: "Yes — UltiMaker Cura is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+    },
+    {
+      q: "What operating systems does UltiMaker Cura support?",
+      a: "UltiMaker Cura runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does UltiMaker Cura support?",
+      a: "UltiMaker Cura works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to UltiMaker Cura?",
+      a: "The closest alternatives within the Specialized space are Bambu Studio, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "bambu-studio",
+    "prusaslicer",
+    "d5-render"
+  ],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        {
+          name: "FDM slicing",
+          status: true
+        },
+        {
+          name: "Support generation",
+          status: true
+        },
+        {
+          name: "Infill patterns",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Compatibility",
+      items: [
+        {
+          name: "400+ printer profiles",
+          status: true
+        },
+        {
+          name: "Plugin marketplace",
+          status: true
+        },
+        {
+          name: "Material profiles",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Optimization",
+      items: [
+        {
+          name: "Adaptive layers",
+          status: true
+        },
+        {
+          name: "Z-hop optimisation",
+          status: true
+        },
+        {
+          name: "Mesh repair",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Cloud",
+      items: [
+        {
+          name: "Cloud account",
+          status: true
+        },
+        {
+          name: "Shared profiles",
+          status: true
+        },
+        {
+          name: "Cloud monitoring",
+          status: true
+        }
+      ]
+    }
+  ],
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.7,
+      max: 5,
+      count: 51,
+      url: "https://www.g2.com/products/ultimaker-cura/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.7,
+      max: 5,
+      count: 36,
+      url: "https://www.capterra.com/reviews/ultimaker-cura"
+    }
+  ]
 },
 {
   id: "t214",
-  "name": "PrusaSlicer",
-  "slug": "prusaslicer",
+  name: "PrusaSlicer",
+  slug: "prusaslicer",
   logo_url: "",
-  "short_desc": "Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery.",
-  "description": "PrusaSlicer is Prusa Research's open-source slicer, originally a Slic3r fork, now the slicer with the fastest pace of innovation — Organic Supports, ironing, multi-material with Prusa MMU, and SLA support.",
-  "country": "Czech Republic",
-  "category_id": "c7",
-  "pricing_type": "Open Source",
-  "starting_price": 0,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Maker", "Education", "Manufacturing"],
-
-  "core_features": [
+  short_desc: "Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery.",
+  description: "PrusaSlicer is Prusa Research's open-source slicer, originally a Slic3r fork, now the slicer with the fastest pace of innovation — Organic Supports, ironing, multi-material with Prusa MMU, and SLA support.",
+  country: "Czech Republic",
+  category_id: "c7",
+  pricing_type: "Open Source",
+  starting_price: 0,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Maker",
+    "Education",
+    "Manufacturing"
+  ],
+  core_features: [
     "Organic / tree supports with industry-best quality",
     "FDM and SLA / DLP slicing in one app",
     "Multi-material with MMU and toolchanger support",
     "Adaptive cubic infill",
     "Connect cloud printer monitoring",
-    "Profiles for 50+ printer brands",
+    "Profiles for 50+ printer brands"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB", "Education"],
-  "official_url": "https://www.prusa3d.com/page/prusaslicer_424/",
-  "affiliate_url": null,
-  "score": 4.7,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB",
+    "Education"
+  ],
+  official_url: "https://www.prusa3d.com/page/prusaslicer_424/",
+  affiliate_url: null,
+  score: 4.7,
+  pros: [
     "Best support generation in the industry (Organic Supports)",
     "Free and open-source under AGPL",
-    "Frequent major releases with real new features",
+    "Frequent major releases with real new features"
   ],
-
-  "cons": [
+  cons: [
     "Profile optimisation skewed toward Prusa hardware",
     "Some advanced features lag Bambu Studio for high-speed CoreXY",
-    "Cloud features tied to Prusa Connect",
+    "Cloud features tied to Prusa Connect"
   ],
-
-  "tech_specs": {
-    "engine": "PrusaSlicer (Slic3r-derived)",
-    "multicore": "Yes",
-    "gpu_optimization": "OpenGL",
-    "standards": ["STL", "3MF", "OBJ", "G-code"],
+  tech_specs: {
+    engine: "PrusaSlicer (Slic3r-derived)",
+    multicore: "Yes",
+    gpu_optimization: "OpenGL",
+    standards: [
+      "STL",
+      "3MF",
+      "OBJ",
+      "G-code"
+    ]
   },
-
-  "expert_verdict": "If you care about print quality, PrusaSlicer is the slicer to beat — and most don't.",
-  faqs: [{
-    q: 'What is PrusaSlicer used for?',
-    a: 'Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery. PrusaSlicer is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing.',
-  }, {
-    q: 'How much does PrusaSlicer cost?',
-    a: 'PrusaSlicer is open-source and free to use. Vendor support and commercial services may be offered separately.',
-  }, {
-    q: 'Is PrusaSlicer really free?',
-    a: 'Yes — PrusaSlicer is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.',
-  }, {
-    q: 'What operating systems does PrusaSlicer support?',
-    a: 'PrusaSlicer runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does PrusaSlicer support?',
-    a: 'PrusaSlicer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to PrusaSlicer?',
-    a: 'The closest alternatives within the Specialized space are Bambu Studio, UltiMaker Cura, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['bambu-studio', 'ultimaker-cura', 'd5-render'],
-  detailed_features: [],
+  expert_verdict: "If you care about print quality, PrusaSlicer is the slicer to beat — and most don't.",
+  faqs: [
+    {
+      q: "What is PrusaSlicer used for?",
+      a: "Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery. PrusaSlicer is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing."
+    },
+    {
+      q: "How much does PrusaSlicer cost?",
+      a: "PrusaSlicer is open-source and free to use. Vendor support and commercial services may be offered separately."
+    },
+    {
+      q: "Is PrusaSlicer really free?",
+      a: "Yes — PrusaSlicer is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+    },
+    {
+      q: "What operating systems does PrusaSlicer support?",
+      a: "PrusaSlicer runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does PrusaSlicer support?",
+      a: "PrusaSlicer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to PrusaSlicer?",
+      a: "The closest alternatives within the Specialized space are Bambu Studio, UltiMaker Cura, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "bambu-studio",
+    "ultimaker-cura",
+    "d5-render"
+  ],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        {
+          name: "Organic supports",
+          status: true
+        },
+        {
+          name: "Tree supports",
+          status: true
+        },
+        {
+          name: "FDM slicing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "SLA",
+      items: [
+        {
+          name: "SLA slicing",
+          status: true
+        },
+        {
+          name: "DLP slicing",
+          status: true
+        },
+        {
+          name: "Multi-material",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Advanced",
+      items: [
+        {
+          name: "Adaptive cubic infill",
+          status: true
+        },
+        {
+          name: "Ironing",
+          status: true
+        },
+        {
+          name: "MMU support",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Cloud",
+      items: [
+        {
+          name: "Cloud monitoring",
+          status: true
+        },
+        {
+          name: "Printer profiles",
+          status: true
+        },
+        {
+          name: "Connect cloud",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t215",
-  "name": "Bambu Studio",
-  "slug": "bambu-studio",
+  name: "Bambu Studio",
+  slug: "bambu-studio",
   logo_url: "",
-  "short_desc": "Bambu Lab's PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers.",
-  "description": "Bambu Studio is the slicer for Bambu Lab's high-speed CoreXY 3D printers — a PrusaSlicer fork tuned for very high accelerations, AMS multi-color, and cloud-connected workflows. Free and increasingly multi-vendor.",
-  "country": "China",
-  "category_id": "c7",
-  "pricing_type": "Open Source",
-  "starting_price": 0,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Maker", "Education", "Manufacturing"],
-
-  "core_features": [
+  short_desc: "Bambu Lab's PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers.",
+  description: "Bambu Studio is the slicer for Bambu Lab's high-speed CoreXY 3D printers — a PrusaSlicer fork tuned for very high accelerations, AMS multi-color, and cloud-connected workflows. Free and increasingly multi-vendor.",
+  country: "China",
+  category_id: "c7",
+  pricing_type: "Open Source",
+  starting_price: 0,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Maker",
+    "Education",
+    "Manufacturing"
+  ],
+  core_features: [
     "High-speed printer profiles (X1, P1, A1 series)",
     "AMS multi-color and multi-material slicing",
     "Input shaping and pressure advance calibration",
     "MakerWorld cloud model library integration",
     "Tree supports, ironing, fuzzy skin",
-    "Profiles for third-party CoreXY printers (Voron, etc.)",
+    "Profiles for third-party CoreXY printers (Voron, etc.)"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB", "Education"],
-  "official_url": "https://bambulab.com/en/download/studio",
-  "affiliate_url": null,
-  "score": 4.6,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB",
+    "Education"
+  ],
+  official_url: "https://bambulab.com/en/download/studio",
+  affiliate_url: null,
+  score: 4.6,
+  pros: [
     "Best out-of-box experience for high-speed CoreXY printing",
     "Robust multi-color AMS workflow",
-    "Active development, frequent updates",
+    "Active development, frequent updates"
   ],
-
-  "cons": [
+  cons: [
     "Cloud features push users toward Bambu Cloud",
     "Some profiles default to Bambu Lab hardware quirks",
-    "Multi-material on non-Bambu printers needs manual setup",
+    "Multi-material on non-Bambu printers needs manual setup"
   ],
-
-  "tech_specs": {
-    "engine": "Bambu Studio (PrusaSlicer fork)",
-    "multicore": "Yes",
-    "gpu_optimization": "OpenGL",
-    "standards": ["STL", "3MF", "OBJ", "G-code"],
+  tech_specs: {
+    engine: "Bambu Studio (PrusaSlicer fork)",
+    multicore: "Yes",
+    gpu_optimization: "OpenGL",
+    standards: [
+      "STL",
+      "3MF",
+      "OBJ",
+      "G-code"
+    ]
   },
-
-  "expert_verdict": "If you own a Bambu Lab printer it's a no-brainer; if you don't, it's still a solid third-party choice for high-speed prints.",
-  faqs: [{
-    q: 'What is Bambu Studio used for?',
-    a: 'Bambu Lab\'s PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers. Bambu Studio is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing.',
-  }, {
-    q: 'How much does Bambu Studio cost?',
-    a: 'Bambu Studio is open-source and free to use. Vendor support and commercial services may be offered separately.',
-  }, {
-    q: 'Is Bambu Studio really free?',
-    a: 'Yes — Bambu Studio is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.',
-  }, {
-    q: 'What operating systems does Bambu Studio support?',
-    a: 'Bambu Studio runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does Bambu Studio support?',
-    a: 'Bambu Studio works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Bambu Studio?',
-    a: 'The closest alternatives within the Specialized space are UltiMaker Cura, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['ultimaker-cura', 'prusaslicer', 'd5-render'],
-  detailed_features: [],
+  expert_verdict: "If you own a Bambu Lab printer it's a no-brainer; if you don't, it's still a solid third-party choice for high-speed prints.",
+  faqs: [
+    {
+      q: "What is Bambu Studio used for?",
+      a: "Bambu Lab's PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers. Bambu Studio is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing."
+    },
+    {
+      q: "How much does Bambu Studio cost?",
+      a: "Bambu Studio is open-source and free to use. Vendor support and commercial services may be offered separately."
+    },
+    {
+      q: "Is Bambu Studio really free?",
+      a: "Yes — Bambu Studio is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+    },
+    {
+      q: "What operating systems does Bambu Studio support?",
+      a: "Bambu Studio runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does Bambu Studio support?",
+      a: "Bambu Studio works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Bambu Studio?",
+      a: "The closest alternatives within the Specialized space are UltiMaker Cura, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "ultimaker-cura",
+    "prusaslicer",
+    "d5-render"
+  ],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        {
+          name: "High-speed profiles",
+          status: true
+        },
+        {
+          name: "Tree supports",
+          status: true
+        },
+        {
+          name: "FDM slicing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Multi-Material",
+      items: [
+        {
+          name: "AMS multi-color",
+          status: true
+        },
+        {
+          name: "Multi-material",
+          status: true
+        },
+        {
+          name: "Toolchanger support",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Calibration",
+      items: [
+        {
+          name: "Input shaping",
+          status: true
+        },
+        {
+          name: "Pressure advance",
+          status: true
+        },
+        {
+          name: "Printer calibration",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Cloud",
+      items: [
+        {
+          name: "MakerWorld integration",
+          status: true
+        },
+        {
+          name: "Cloud model library",
+          status: true
+        },
+        {
+          name: "Third-party profiles",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t216",
-  "name": "Simplify3D",
-  "slug": "simplify3d",
+  name: "Simplify3D",
+  slug: "simplify3d",
   logo_url: "",
-  "short_desc": "Veteran commercial slicer with manual fine-tuning controls beloved by power users.",
-  "description": "Simplify3D is a long-standing commercial FDM slicer that built its reputation on granular per-part settings, manual support placement, and stable output — now competing with rapid-evolving free slicers.",
-  "country": "USA",
-  "category_id": "c7",
-  "pricing_type": "Perpetual",
-  "starting_price": 199,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Maker", "Education", "Manufacturing"],
-
-  "core_features": [
+  short_desc: "Veteran commercial slicer with manual fine-tuning controls beloved by power users.",
+  description: "Simplify3D is a long-standing commercial FDM slicer that built its reputation on granular per-part settings, manual support placement, and stable output — now competing with rapid-evolving free slicers.",
+  country: "USA",
+  category_id: "c7",
+  pricing_type: "Perpetual",
+  starting_price: 199,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Maker",
+    "Education",
+    "Manufacturing"
+  ],
+  core_features: [
     "Per-process slicing with stop-points",
     "Manual support placement",
     "Multi-extrusion management",
     "Pre-print simulation",
     "Mesh repair tools",
-    "Profiles for 100+ printers",
+    "Profiles for 100+ printers"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB"],
-  "official_url": "https://www.simplify3d.com",
-  "affiliate_url": null,
-  "score": 3.9,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://www.simplify3d.com",
+  affiliate_url: null,
+  score: 3.9,
+  pros: [
     "Per-process settings still unmatched for complex prints",
     "Stable, fast slicer",
-    "Manual support placement gives the user full control",
+    "Manual support placement gives the user full control"
   ],
-
-  "cons": [
+  cons: [
     "Free open-source slicers now match or beat its quality",
     "Major releases are slow",
-    "Commercial price tag in a free-tool market",
+    "Commercial price tag in a free-tool market"
   ],
-
-  "tech_specs": {
-    "engine": "Simplify3D engine",
-    "multicore": "Yes",
-    "gpu_optimization": "OpenGL",
-    "standards": ["STL", "OBJ", "G-code"],
+  tech_specs: {
+    engine: "Simplify3D engine",
+    multicore: "Yes",
+    gpu_optimization: "OpenGL",
+    standards: [
+      "STL",
+      "OBJ",
+      "G-code"
+    ]
   },
-
-  "expert_verdict": "Power-user slicer for those who refuse to switch. New users should start with PrusaSlicer or Bambu Studio.",
-  faqs: [{
-    q: 'What is Simplify3D used for?',
-    a: 'Veteran commercial slicer with manual fine-tuning controls beloved by power users. Simplify3D is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing.',
-  }, {
-    q: 'How much does Simplify3D cost?',
-    a: 'Simplify3D starts at $199 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Simplify3D?',
-    a: 'Simplify3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Simplify3D support?',
-    a: 'Simplify3D runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does Simplify3D support?',
-    a: 'Simplify3D works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Simplify3D?',
-    a: 'The closest alternatives within the Specialized space are JewelCAD Pro, RhinoGold, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['jewelcad-pro', 'rhinogold', 'carlson-survey'],
-  detailed_features: [],
+  expert_verdict: "Power-user slicer for those who refuse to switch. New users should start with PrusaSlicer or Bambu Studio.",
+  faqs: [
+    {
+      q: "What is Simplify3D used for?",
+      a: "Veteran commercial slicer with manual fine-tuning controls beloved by power users. Simplify3D is a visualization and rendering solution widely adopted in Maker, Education, Manufacturing."
+    },
+    {
+      q: "How much does Simplify3D cost?",
+      a: "Simplify3D starts at $199 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Simplify3D?",
+      a: "Simplify3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Simplify3D support?",
+      a: "Simplify3D runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does Simplify3D support?",
+      a: "Simplify3D works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Simplify3D?",
+      a: "The closest alternatives within the Specialized space are JewelCAD Pro, RhinoGold, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "jewelcad-pro",
+    "rhinogold",
+    "carlson-survey"
+  ],
+  detailed_features: [
+    {
+      category: "Slicing",
+      items: [
+        {
+          name: "Per-process slicing",
+          status: true
+        },
+        {
+          name: "Stop-points",
+          status: true
+        },
+        {
+          name: "Multi-extrusion",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Support",
+      items: [
+        {
+          name: "Manual support placement",
+          status: true
+        },
+        {
+          name: "Support generation",
+          status: true
+        },
+        {
+          name: "Support optimization",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Analysis",
+      items: [
+        {
+          name: "Pre-print simulation",
+          status: true
+        },
+        {
+          name: "Mesh repair",
+          status: true
+        },
+        {
+          name: "Layer analysis",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Profiles",
+      items: [
+        {
+          name: "100+ printer profiles",
+          status: true
+        },
+        {
+          name: "Custom profiles",
+          status: true
+        },
+        {
+          name: "Fine-tuning controls",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t217",
-  "name": "Autodesk Netfabb",
-  "slug": "autodesk-netfabb",
+  name: "Autodesk Netfabb",
+  slug: "autodesk-netfabb",
   logo_url: "",
-  "short_desc": "Industrial additive manufacturing prep, lattice, and build-plate optimization.",
-  "description": "Autodesk Netfabb is the industrial-grade 3D-printing prep platform — used for metal AM, polymer SLS, and powder-bed fusion build-plate packing, support generation, lattice generation, and simulation of distortion.",
-  "country": "USA",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 4070,
-  "platforms": ["Windows"],
-  "industries": ["Aerospace", "Medical", "Manufacturing", "Automotive"],
-
-  "core_features": [
+  short_desc: "Industrial additive manufacturing prep, lattice, and build-plate optimization.",
+  description: "Autodesk Netfabb is the industrial-grade 3D-printing prep platform — used for metal AM, polymer SLS, and powder-bed fusion build-plate packing, support generation, lattice generation, and simulation of distortion.",
+  country: "USA",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 4070,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Aerospace",
+    "Medical",
+    "Manufacturing",
+    "Automotive"
+  ],
+  core_features: [
     "Build-plate packing optimisation",
     "Lattice generation",
     "Support generation for metal AM",
     "Distortion / residual stress simulation",
     "Mesh repair tools",
-    "Integration with Fusion 360 and Inventor",
+    "Integration with Fusion 360 and Inventor"
   ],
-
-  "user_scales": ["Mid-Market", "Enterprise"],
-  "official_url": "https://www.autodesk.com/products/netfabb",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.autodesk.com/products/netfabb",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Industrial AM workflow for metal and polymer powder beds",
     "Lattice and topology tools tightly integrated",
-    "Distortion simulation reduces print failures",
+    "Distortion simulation reduces print failures"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "Sold as subscription; pricey for occasional jobs",
-    "UI feels like a stack of acquired tools (legacy Materialise / Netfabb GmbH)",
+    "UI feels like a stack of acquired tools (legacy Materialise / Netfabb GmbH)"
   ],
-
-  "tech_specs": {
-    "engine": "Netfabb",
-    "multicore": "Yes",
-    "gpu_optimization": "OpenGL",
-    "standards": ["STL", "3MF", "AMF"],
+  tech_specs: {
+    engine: "Netfabb",
+    multicore: "Yes",
+    gpu_optimization: "OpenGL",
+    standards: [
+      "STL",
+      "3MF",
+      "AMF"
+    ]
   },
-
-  "expert_verdict": "The serious industrial AM prep tool — overkill for a desktop FDM, essential for production metal AM lines.",
-  faqs: [{
-    q: 'What is Autodesk Netfabb used for?',
-    a: 'Industrial additive manufacturing prep, lattice, and build-plate optimization. Autodesk Netfabb is a visualization and rendering solution widely adopted in Aerospace, Medical, Manufacturing.',
-  }, {
-    q: 'How much does Autodesk Netfabb cost?',
-    a: 'Autodesk Netfabb starts at $4,070 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Autodesk Netfabb?',
-    a: 'Autodesk Netfabb is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Autodesk Netfabb support?',
-    a: 'Autodesk Netfabb runs on Windows.',
-  }, {
-    q: 'Which file formats does Autodesk Netfabb support?',
-    a: 'Autodesk Netfabb works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Autodesk Netfabb?',
-    a: 'The closest alternatives within the Specialized space are Optitex, Lectra Modaris, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['optitex', 'lectra-modaris', 'gerber-accumark'],
-  detailed_features: [],
+  expert_verdict: "The serious industrial AM prep tool — overkill for a desktop FDM, essential for production metal AM lines.",
+  faqs: [
+    {
+      q: "What is Autodesk Netfabb used for?",
+      a: "Industrial additive manufacturing prep, lattice, and build-plate optimization. Autodesk Netfabb is a visualization and rendering solution widely adopted in Aerospace, Medical, Manufacturing."
+    },
+    {
+      q: "How much does Autodesk Netfabb cost?",
+      a: "Autodesk Netfabb starts at $4,070 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Autodesk Netfabb?",
+      a: "Autodesk Netfabb is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Autodesk Netfabb support?",
+      a: "Autodesk Netfabb runs on Windows."
+    },
+    {
+      q: "Which file formats does Autodesk Netfabb support?",
+      a: "Autodesk Netfabb works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Autodesk Netfabb?",
+      a: "The closest alternatives within the Specialized space are Optitex, Lectra Modaris, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "optitex",
+    "lectra-modaris",
+    "gerber-accumark"
+  ],
+  detailed_features: [
+    {
+      category: "AM Prep",
+      items: [
+        {
+          name: "Build-plate packing",
+          status: true
+        },
+        {
+          name: "Support generation",
+          status: true
+        },
+        {
+          name: "Metal AM support",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Lattice",
+      items: [
+        {
+          name: "Lattice generation",
+          status: true
+        },
+        {
+          name: "Topology tools",
+          status: true
+        },
+        {
+          name: "Lattice optimization",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Simulation",
+      items: [
+        {
+          name: "Distortion simulation",
+          status: true
+        },
+        {
+          name: "Residual stress",
+          status: true
+        },
+        {
+          name: "Print failure reduction",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Fusion 360 integration",
+          status: true
+        },
+        {
+          name: "Inventor integration",
+          status: true
+        },
+        {
+          name: "Mesh repair tools",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t218",
-  "name": "Optitex",
-  "slug": "optitex",
+  name: "Optitex",
+  slug: "optitex",
   logo_url: "",
-  "short_desc": "2D pattern making and 3D digital prototyping for fashion and apparel.",
-  "description": "Optitex is a leading apparel CAD suite for 2D pattern making, marker making, and 3D garment simulation — used by major brands to shorten the design-to-sample cycle with photoreal virtual sampling.",
-  "country": "Israel",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 3000,
-  "platforms": ["Windows"],
-  "industries": ["Fashion", "Apparel", "Textile"],
-
-  "core_features": [
+  short_desc: "2D pattern making and 3D digital prototyping for fashion and apparel.",
+  description: "Optitex is a leading apparel CAD suite for 2D pattern making, marker making, and 3D garment simulation — used by major brands to shorten the design-to-sample cycle with photoreal virtual sampling.",
+  country: "Israel",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 3000,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Fashion",
+    "Apparel",
+    "Textile"
+  ],
+  core_features: [
     "2D pattern making with PDS 2D",
     "3D garment simulation",
     "Automatic marker making",
     "Fabric simulation with physics",
     "Photorealistic rendering with Vidya",
-    "PLM integration",
+    "PLM integration"
   ],
-
-  "user_scales": ["SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://optitex.com",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://optitex.com",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Tight 2D ↔ 3D workflow",
     "Strong marker optimisation reduces fabric waste",
-    "Used by major global apparel brands",
+    "Used by major global apparel brands"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "Annual licensing is steep for individual designers",
-    "Learning curve for 3D simulation",
+    "Learning curve for 3D simulation"
   ],
-
-  "tech_specs": {
-    "engine": "Optitex PDS / 3D",
-    "multicore": "Yes",
-    "gpu_optimization": "Yes",
-    "standards": ["DXF-AAMA", "DXF-ASTM"],
+  tech_specs: {
+    engine: "Optitex PDS / 3D",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "DXF-AAMA",
+      "DXF-ASTM"
+    ]
   },
-
-  "expert_verdict": "The industrial-grade 2D-and-3D apparel CAD many global brands actually use.",
-  faqs: [{
-    q: 'What is Optitex used for?',
-    a: '2D pattern making and 3D digital prototyping for fashion and apparel. Optitex is a visualization and rendering solution widely adopted in Fashion, Apparel, Textile.',
-  }, {
-    q: 'How much does Optitex cost?',
-    a: 'Optitex starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Optitex?',
-    a: 'Optitex is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Optitex support?',
-    a: 'Optitex runs on Windows.',
-  }, {
-    q: 'Which file formats does Optitex support?',
-    a: 'Optitex works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Optitex?',
-    a: 'The closest alternatives within the Specialized space are Browzwear, Trimble Business Center, Marvelous Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['browzwear', 'trimble-business-center', 'marvelous-designer'],
-  detailed_features: [],
+  expert_verdict: "The industrial-grade 2D-and-3D apparel CAD many global brands actually use.",
+  faqs: [
+    {
+      q: "What is Optitex used for?",
+      a: "2D pattern making and 3D digital prototyping for fashion and apparel. Optitex is a visualization and rendering solution widely adopted in Fashion, Apparel, Textile."
+    },
+    {
+      q: "How much does Optitex cost?",
+      a: "Optitex starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Optitex?",
+      a: "Optitex is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Optitex support?",
+      a: "Optitex runs on Windows."
+    },
+    {
+      q: "Which file formats does Optitex support?",
+      a: "Optitex works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Optitex?",
+      a: "The closest alternatives within the Specialized space are Browzwear, Trimble Business Center, Marvelous Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "browzwear",
+    "trimble-business-center",
+    "marvelous-designer"
+  ],
+  detailed_features: [
+    {
+      category: "Pattern Making",
+      items: [
+        {
+          name: "2D pattern making",
+          status: true
+        },
+        {
+          name: "PDS 2D",
+          status: true
+        },
+        {
+          name: "Automatic marker making",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "3D Simulation",
+      items: [
+        {
+          name: "3D garment simulation",
+          status: true
+        },
+        {
+          name: "Fabric simulation",
+          status: true
+        },
+        {
+          name: "Physics simulation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Rendering",
+      items: [
+        {
+          name: "Photorealistic rendering",
+          status: true
+        },
+        {
+          name: "Vidya rendering",
+          status: true
+        },
+        {
+          name: "Virtual sampling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "PLM integration",
+          status: true
+        },
+        {
+          name: "2D to 3D workflow",
+          status: true
+        },
+        {
+          name: "Marker optimisation",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t219",
-  "name": "Gerber AccuMark",
-  "slug": "gerber-accumark",
+  name: "Gerber AccuMark",
+  slug: "gerber-accumark",
   logo_url: "",
-  "short_desc": "Lectra's Gerber AccuMark — the long-standing global standard for apparel pattern and marker making.",
-  "description": "Gerber AccuMark (now part of Lectra) is the historic global standard for apparel pattern making, grading, and marker making — deployed by virtually every global apparel manufacturer for decades.",
-  "country": "USA",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 3500,
-  "platforms": ["Windows"],
-  "industries": ["Fashion", "Apparel", "Textile"],
-
-  "core_features": [
+  short_desc: "Lectra's Gerber AccuMark — the long-standing global standard for apparel pattern and marker making.",
+  description: "Gerber AccuMark (now part of Lectra) is the historic global standard for apparel pattern making, grading, and marker making — deployed by virtually every global apparel manufacturer for decades.",
+  country: "USA",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 3500,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Fashion",
+    "Apparel",
+    "Textile"
+  ],
+  core_features: [
     "2D pattern design, grading, marker making",
     "AccuMark 3D virtual sampling",
     "Easy Order made-to-measure",
     "Plotter and cutter integration",
     "PLM connector",
-    "Cloud-based AccuMark Open Source library",
+    "Cloud-based AccuMark Open Source library"
   ],
-
-  "user_scales": ["Mid-Market", "Enterprise"],
-  "official_url": "https://www.lectra.com/en/fashion/products/accumark",
-  "affiliate_url": null,
-  "score": 4.4,
-
-  "pros": [
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.lectra.com/en/fashion/products/accumark",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
     "The de facto global pattern CAD — fluent talent pool everywhere",
     "Mature plotter / cutter integration",
-    "Strong PLM connector",
+    "Strong PLM connector"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "Subscription pricing not advertised — quote-only",
-    "3D module less polished than CLO / Browzwear",
+    "3D module less polished than CLO / Browzwear"
   ],
-
-  "tech_specs": {
-    "engine": "AccuMark",
-    "multicore": "Yes",
-    "gpu_optimization": "Limited",
-    "standards": ["DXF-AAMA", "DXF-ASTM"],
+  tech_specs: {
+    engine: "AccuMark",
+    multicore: "Yes",
+    gpu_optimization: "Limited",
+    standards: [
+      "DXF-AAMA",
+      "DXF-ASTM"
+    ]
   },
-
-  "expert_verdict": "If you work in any large apparel factory, AccuMark is already on the desk.",
-  faqs: [{
-    q: 'What is Gerber AccuMark used for?',
-    a: 'Lectra\'s Gerber AccuMark — the long-standing global standard for apparel pattern and marker making. Gerber AccuMark is a visualization and rendering solution widely adopted in Fashion, Apparel, Textile.',
-  }, {
-    q: 'How much does Gerber AccuMark cost?',
-    a: 'Gerber AccuMark starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Gerber AccuMark?',
-    a: 'Gerber AccuMark is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Gerber AccuMark support?',
-    a: 'Gerber AccuMark runs on Windows.',
-  }, {
-    q: 'Which file formats does Gerber AccuMark support?',
-    a: 'Gerber AccuMark works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Gerber AccuMark?',
-    a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['infraworks', '3ds-max', 'zbrush'],
-  detailed_features: [],
+  expert_verdict: "If you work in any large apparel factory, AccuMark is already on the desk.",
+  faqs: [
+    {
+      q: "What is Gerber AccuMark used for?",
+      a: "Lectra's Gerber AccuMark — the long-standing global standard for apparel pattern and marker making. Gerber AccuMark is a visualization and rendering solution widely adopted in Fashion, Apparel, Textile."
+    },
+    {
+      q: "How much does Gerber AccuMark cost?",
+      a: "Gerber AccuMark starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Gerber AccuMark?",
+      a: "Gerber AccuMark is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Gerber AccuMark support?",
+      a: "Gerber AccuMark runs on Windows."
+    },
+    {
+      q: "Which file formats does Gerber AccuMark support?",
+      a: "Gerber AccuMark works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Gerber AccuMark?",
+      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "infraworks",
+    "3ds-max",
+    "zbrush"
+  ],
+  detailed_features: [
+    {
+      category: "Pattern Making",
+      items: [
+        {
+          name: "2D pattern design",
+          status: true
+        },
+        {
+          name: "Grading",
+          status: true
+        },
+        {
+          name: "Marker making",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "3D",
+      items: [
+        {
+          name: "AccuMark 3D",
+          status: true
+        },
+        {
+          name: "Virtual sampling",
+          status: true
+        },
+        {
+          name: "3D visualization",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Plotter integration",
+          status: true
+        },
+        {
+          name: "Cutter integration",
+          status: true
+        },
+        {
+          name: "PLM connector",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Cloud",
+      items: [
+        {
+          name: "Cloud-based library",
+          status: true
+        },
+        {
+          name: "Easy Order",
+          status: true
+        },
+        {
+          name: "Made-to-measure",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t220",
-  "name": "Lectra Modaris",
-  "slug": "lectra-modaris",
+  name: "Lectra Modaris",
+  slug: "lectra-modaris",
   logo_url: "",
-  "short_desc": "Lectra's professional pattern design and grading tool for apparel manufacturing.",
-  "description": "Lectra Modaris is the European-favoured apparel CAD — strong in haute couture and luxury houses for pattern design, made-to-measure, and integration with Lectra's cutting hardware.",
-  "country": "France",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 3500,
-  "platforms": ["Windows"],
-  "industries": ["Fashion", "Apparel", "Luxury"],
-
-  "core_features": [
+  short_desc: "Lectra's professional pattern design and grading tool for apparel manufacturing.",
+  description: "Lectra Modaris is the European-favoured apparel CAD — strong in haute couture and luxury houses for pattern design, made-to-measure, and integration with Lectra's cutting hardware.",
+  country: "France",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 3500,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Fashion",
+    "Apparel",
+    "Luxury"
+  ],
+  core_features: [
     "Modaris pattern design and grading",
     "Modaris 3D virtual prototyping",
     "Diamino marker making",
     "Direct connection to Lectra cutters",
     "Made-to-measure templates",
-    "PLM (Furmark / Centric) integration",
+    "PLM (Furmark / Centric) integration"
   ],
-
-  "user_scales": ["Mid-Market", "Enterprise"],
-  "official_url": "https://www.lectra.com/en/fashion/products/modaris",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.lectra.com/en/fashion/products/modaris",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Long-standing European apparel standard",
     "Strong made-to-measure capability",
-    "Integration with Lectra cutting line",
+    "Integration with Lectra cutting line"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "Quote-only pricing",
-    "UI feels conservative compared with newer tools",
+    "UI feels conservative compared with newer tools"
   ],
-
-  "tech_specs": {
-    "engine": "Modaris",
-    "multicore": "Yes",
-    "gpu_optimization": "Limited",
-    "standards": ["DXF-AAMA", "DXF-ASTM"],
+  tech_specs: {
+    engine: "Modaris",
+    multicore: "Yes",
+    gpu_optimization: "Limited",
+    standards: [
+      "DXF-AAMA",
+      "DXF-ASTM"
+    ]
   },
-
-  "expert_verdict": "Lectra's flagship pattern CAD — particularly strong in European luxury / couture houses.",
-  faqs: [{
-    q: 'What is Lectra Modaris used for?',
-    a: 'Lectra\'s professional pattern design and grading tool for apparel manufacturing. Lectra Modaris is a visualization and rendering solution widely adopted in Fashion, Apparel, Luxury.',
-  }, {
-    q: 'How much does Lectra Modaris cost?',
-    a: 'Lectra Modaris starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Lectra Modaris?',
-    a: 'Lectra Modaris is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Lectra Modaris support?',
-    a: 'Lectra Modaris runs on Windows.',
-  }, {
-    q: 'Which file formats does Lectra Modaris support?',
-    a: 'Lectra Modaris works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Lectra Modaris?',
-    a: 'The closest alternatives within the Specialized space are Autodesk Netfabb, Optitex, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['autodesk-netfabb', 'optitex', 'gerber-accumark'],
-  detailed_features: [],
+  expert_verdict: "Lectra's flagship pattern CAD — particularly strong in European luxury / couture houses.",
+  faqs: [
+    {
+      q: "What is Lectra Modaris used for?",
+      a: "Lectra's professional pattern design and grading tool for apparel manufacturing. Lectra Modaris is a visualization and rendering solution widely adopted in Fashion, Apparel, Luxury."
+    },
+    {
+      q: "How much does Lectra Modaris cost?",
+      a: "Lectra Modaris starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Lectra Modaris?",
+      a: "Lectra Modaris is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Lectra Modaris support?",
+      a: "Lectra Modaris runs on Windows."
+    },
+    {
+      q: "Which file formats does Lectra Modaris support?",
+      a: "Lectra Modaris works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Lectra Modaris?",
+      a: "The closest alternatives within the Specialized space are Autodesk Netfabb, Optitex, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "autodesk-netfabb",
+    "optitex",
+    "gerber-accumark"
+  ],
+  detailed_features: [
+    {
+      category: "Pattern Design",
+      items: [
+        {
+          name: "Pattern design",
+          status: true
+        },
+        {
+          name: "Grading",
+          status: true
+        },
+        {
+          name: "Diamino marker making",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "3D",
+      items: [
+        {
+          name: "Modaris 3D",
+          status: true
+        },
+        {
+          name: "Virtual prototyping",
+          status: true
+        },
+        {
+          name: "3D visualization",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Lectra cutters",
+          status: true
+        },
+        {
+          name: "Direct connection",
+          status: true
+        },
+        {
+          name: "PLM integration",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Custom",
+      items: [
+        {
+          name: "Made-to-measure",
+          status: true
+        },
+        {
+          name: "Templates",
+          status: true
+        },
+        {
+          name: "Luxury couture",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t221",
-  "name": "Browzwear",
-  "slug": "browzwear",
+  name: "Browzwear",
+  slug: "browzwear",
   logo_url: "",
-  "short_desc": "Cloud-connected 3D fashion design software for virtual sampling and digital twins.",
-  "description": "Browzwear's VStitcher and Lotta are the leading 3D virtual-sampling tools for the apparel industry — letting brands replace physical samples with photoreal digital prototypes that can be reviewed and approved by stakeholders worldwide.",
-  "country": "Singapore",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 3600,
-  "platforms": ["Windows", "macOS"],
-  "industries": ["Fashion", "Apparel"],
-
-  "core_features": [
+  short_desc: "Cloud-connected 3D fashion design software for virtual sampling and digital twins.",
+  description: "Browzwear's VStitcher and Lotta are the leading 3D virtual-sampling tools for the apparel industry — letting brands replace physical samples with photoreal digital prototypes that can be reviewed and approved by stakeholders worldwide.",
+  country: "Singapore",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 3600,
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Fashion",
+    "Apparel"
+  ],
+  core_features: [
     "VStitcher 3D garment simulation",
     "Lotta cloud collaboration",
     "Fabric digitization with True-to-Scale",
     "Animation and pose simulation",
     "PBR fabric rendering",
-    "PLM and DAM connectors",
+    "PLM and DAM connectors"
   ],
-
-  "user_scales": ["SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://browzwear.com",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://browzwear.com",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Best-in-class 3D garment simulation realism",
     "Cloud collaboration (Lotta) reduces sample cycles",
-    "Strong adoption with major US/EU brands",
+    "Strong adoption with major US/EU brands"
   ],
-
-  "cons": [
+  cons: [
     "Subscription-only, premium pricing",
     "Best paired with Adobe Substance for material authoring",
-    "Steep learning curve",
+    "Steep learning curve"
   ],
-
-  "tech_specs": {
-    "engine": "VStitcher 3D",
-    "multicore": "Yes",
-    "gpu_optimization": "Yes",
-    "standards": ["DXF-AAMA", "GLB"],
+  tech_specs: {
+    engine: "VStitcher 3D",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "DXF-AAMA",
+      "GLB"
+    ]
   },
-
-  "expert_verdict": "Top-tier 3D apparel simulation. Browzwear and CLO 3D are the two real options for serious virtual sampling.",
-  faqs: [{
-    q: 'What is Browzwear used for?',
-    a: 'Cloud-connected 3D fashion design software for virtual sampling and digital twins. Browzwear is a visualization and rendering solution widely adopted in Fashion, Apparel.',
-  }, {
-    q: 'How much does Browzwear cost?',
-    a: 'Browzwear starts at $3,600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Browzwear?',
-    a: 'Browzwear is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Browzwear support?',
-    a: 'Browzwear runs on Windows and macOS.',
-  }, {
-    q: 'Which file formats does Browzwear support?',
-    a: 'Browzwear works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Browzwear?',
-    a: 'The closest alternatives within the Specialized space are Trimble Business Center, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['trimble-business-center', 'marvelous-designer', 'v-ray'],
-  detailed_features: [],
+  expert_verdict: "Top-tier 3D apparel simulation. Browzwear and CLO 3D are the two real options for serious virtual sampling.",
+  faqs: [
+    {
+      q: "What is Browzwear used for?",
+      a: "Cloud-connected 3D fashion design software for virtual sampling and digital twins. Browzwear is a visualization and rendering solution widely adopted in Fashion, Apparel."
+    },
+    {
+      q: "How much does Browzwear cost?",
+      a: "Browzwear starts at $3,600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Browzwear?",
+      a: "Browzwear is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Browzwear support?",
+      a: "Browzwear runs on Windows and macOS."
+    },
+    {
+      q: "Which file formats does Browzwear support?",
+      a: "Browzwear works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Browzwear?",
+      a: "The closest alternatives within the Specialized space are Trimble Business Center, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "trimble-business-center",
+    "marvelous-designer",
+    "v-ray"
+  ],
+  detailed_features: [
+    {
+      category: "3D Simulation",
+      items: [
+        {
+          name: "VStitcher 3D",
+          status: true
+        },
+        {
+          name: "Garment simulation",
+          status: true
+        },
+        {
+          name: "Digital twins",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Cloud",
+      items: [
+        {
+          name: "Lotta cloud",
+          status: true
+        },
+        {
+          name: "Cloud collaboration",
+          status: true
+        },
+        {
+          name: "Virtual sampling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Fabric",
+      items: [
+        {
+          name: "Fabric digitization",
+          status: true
+        },
+        {
+          name: "True-to-Scale",
+          status: true
+        },
+        {
+          name: "PBR rendering",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Animation simulation",
+          status: true
+        },
+        {
+          name: "Pose simulation",
+          status: true
+        },
+        {
+          name: "PLM connectors",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t222",
-  "name": "Marvelous Designer",
-  "slug": "marvelous-designer",
+  name: "Marvelous Designer",
+  slug: "marvelous-designer",
   logo_url: "",
-  "short_desc": "3D garment design used widely in games, animation, film, and apparel concepting.",
-  "description": "Marvelous Designer is the dominant 3D garment design tool in the games, film, and animation industry — and an approachable entry point for apparel designers exploring 3D before moving to CLO or Browzwear.",
-  "country": "South Korea",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 480,
-  "platforms": ["Windows", "macOS"],
-  "industries": ["Games", "Film & Animation", "Fashion"],
-
-  "core_features": [
+  short_desc: "3D garment design used widely in games, animation, film, and apparel concepting.",
+  description: "Marvelous Designer is the dominant 3D garment design tool in the games, film, and animation industry — and an approachable entry point for apparel designers exploring 3D before moving to CLO or Browzwear.",
+  country: "South Korea",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 480,
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Games",
+    "Film & Animation",
+    "Fashion"
+  ],
+  core_features: [
     "Pattern-based 3D garment creation",
     "Cloth physics simulation",
     "Avatars and animation",
     "Texture and PBR material editor",
     "Maya / Blender / Unreal / Unity exporters",
-    "Garment library and presets",
+    "Garment library and presets"
   ],
-
-  "user_scales": ["Freelancer", "SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://marvelousdesigner.com",
-  "affiliate_url": null,
-  "score": 4.6,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://marvelousdesigner.com",
+  affiliate_url: null,
+  score: 4.6,
+  pros: [
     "Dominant in 3D character / film clothing workflows",
     "Approachable to non-pattern-trained 3D artists",
-    "Strong exporters to all major DCC pipelines",
+    "Strong exporters to all major DCC pipelines"
   ],
-
-  "cons": [
+  cons: [
     "Subscription pricing pushed users away from prior perpetual model",
     "Less suited for production apparel manufacturing than CLO or Browzwear",
-    "No native plotter / cutter integration",
+    "No native plotter / cutter integration"
   ],
-
-  "tech_specs": {
-    "engine": "MD Cloth Simulator",
-    "multicore": "Yes",
-    "gpu_optimization": "Yes (CUDA)",
-    "standards": ["FBX", "OBJ", "Alembic", "USD"],
+  tech_specs: {
+    engine: "MD Cloth Simulator",
+    multicore: "Yes",
+    gpu_optimization: "Yes (CUDA)",
+    standards: [
+      "FBX",
+      "OBJ",
+      "Alembic",
+      "USD"
+    ]
   },
-
-  "expert_verdict": "The cross-industry 3D garment tool — equally at home dressing a Pixar character or a luxury-brand mannequin.",
-  faqs: [{
-    q: 'What is Marvelous Designer used for?',
-    a: '3D garment design used widely in games, animation, film, and apparel concepting. Marvelous Designer is a visualization and rendering solution widely adopted in Games, Film & Animation, Fashion.',
-  }, {
-    q: 'How much does Marvelous Designer cost?',
-    a: 'Marvelous Designer starts at $480 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Marvelous Designer?',
-    a: 'Marvelous Designer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Marvelous Designer support?',
-    a: 'Marvelous Designer runs on Windows and macOS.',
-  }, {
-    q: 'Which file formats does Marvelous Designer support?',
-    a: 'Marvelous Designer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Marvelous Designer?',
-    a: 'The closest alternatives within the Specialized space are Adobe Substance 3D Painter, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['substance-painter', 'v-ray', 'browzwear'],
-  detailed_features: [],
+  expert_verdict: "The cross-industry 3D garment tool — equally at home dressing a Pixar character or a luxury-brand mannequin.",
+  faqs: [
+    {
+      q: "What is Marvelous Designer used for?",
+      a: "3D garment design used widely in games, animation, film, and apparel concepting. Marvelous Designer is a visualization and rendering solution widely adopted in Games, Film & Animation, Fashion."
+    },
+    {
+      q: "How much does Marvelous Designer cost?",
+      a: "Marvelous Designer starts at $480 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Marvelous Designer?",
+      a: "Marvelous Designer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Marvelous Designer support?",
+      a: "Marvelous Designer runs on Windows and macOS."
+    },
+    {
+      q: "Which file formats does Marvelous Designer support?",
+      a: "Marvelous Designer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Marvelous Designer?",
+      a: "The closest alternatives within the Specialized space are Adobe Substance 3D Painter, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "substance-painter",
+    "v-ray",
+    "browzwear"
+  ],
+  detailed_features: [
+    {
+      category: "3D Garment",
+      items: [
+        {
+          name: "Pattern-based creation",
+          status: true
+        },
+        {
+          name: "Cloth physics",
+          status: true
+        },
+        {
+          name: "Garment library",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Animation",
+      items: [
+        {
+          name: "Avatars",
+          status: true
+        },
+        {
+          name: "Animation",
+          status: true
+        },
+        {
+          name: "Character clothing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Export",
+      items: [
+        {
+          name: "Maya exporter",
+          status: true
+        },
+        {
+          name: "Blender exporter",
+          status: true
+        },
+        {
+          name: "Unreal/Unity exporter",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Materials",
+      items: [
+        {
+          name: "Texture editor",
+          status: true
+        },
+        {
+          name: "PBR materials",
+          status: true
+        },
+        {
+          name: "Presets",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t223",
-  "name": "RhinoGold",
-  "slug": "rhinogold",
+  name: "RhinoGold",
+  slug: "rhinogold",
   logo_url: "",
-  "short_desc": "Rhino-based jewelry CAD plugin with gem setting, parametric jewelry libraries, and rendering.",
-  "description": "RhinoGold is a Rhino-based jewelry CAD plugin built around gem setting, parametric jewelry components, and a rendering pipeline — historically the dominant jewelry CAD before being superseded by MatrixGold from the same vendor.",
-  "country": "Spain",
-  "category_id": "c7",
-  "pricing_type": "Perpetual",
-  "starting_price": 2495,
-  "platforms": ["Windows"],
-  "industries": ["Jewelry"],
-
-  "core_features": [
+  short_desc: "Rhino-based jewelry CAD plugin with gem setting, parametric jewelry libraries, and rendering.",
+  description: "RhinoGold is a Rhino-based jewelry CAD plugin built around gem setting, parametric jewelry components, and a rendering pipeline — historically the dominant jewelry CAD before being superseded by MatrixGold from the same vendor.",
+  country: "Spain",
+  category_id: "c7",
+  pricing_type: "Perpetual",
+  starting_price: 2495,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Jewelry"
+  ],
+  core_features: [
     "Built on Rhinoceros 3D",
     "Gem setting tools",
     "Parametric ring shanks, prongs, settings",
     "Render with VRay-derived engine",
     "STL export for 3D printing",
-    "GemVision asset library compatibility",
+    "GemVision asset library compatibility"
   ],
-
-  "user_scales": ["Freelancer", "SMB"],
-  "official_url": "https://www.rhinogold.com",
-  "affiliate_url": null,
-  "score": 4.2,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://www.rhinogold.com",
+  affiliate_url: null,
+  score: 4.2,
+  pros: [
     "Rhino base means open ecosystem",
     "Perpetual licensing",
-    "Strong gem-setting library",
+    "Strong gem-setting library"
   ],
-
-  "cons": [
+  cons: [
     "No longer the vendor's flagship (replaced by MatrixGold)",
     "Windows-only",
-    "Roadmap stalled — most new investment goes to MatrixGold",
+    "Roadmap stalled — most new investment goes to MatrixGold"
   ],
-
-  "tech_specs": {
-    "engine": "Rhinoceros + RhinoGold plugin",
-    "multicore": "Limited",
-    "gpu_optimization": "OpenGL",
-    "standards": ["STL", "STEP", "OBJ"],
+  tech_specs: {
+    engine: "Rhinoceros + RhinoGold plugin",
+    multicore: "Limited",
+    gpu_optimization: "OpenGL",
+    standards: [
+      "STL",
+      "STEP",
+      "OBJ"
+    ]
   },
-
-  "expert_verdict": "Still in use at many small jewelry studios, but new buyers should look at MatrixGold or 3Design.",
-  faqs: [{
-    q: 'What is RhinoGold used for?',
-    a: 'Rhino-based jewelry CAD plugin with gem setting, parametric jewelry libraries, and rendering. RhinoGold is a visualization and rendering solution widely adopted in Jewelry.',
-  }, {
-    q: 'How much does RhinoGold cost?',
-    a: 'RhinoGold starts at $2,495 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of RhinoGold?',
-    a: 'RhinoGold is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does RhinoGold support?',
-    a: 'RhinoGold runs on Windows.',
-  }, {
-    q: 'Which file formats does RhinoGold support?',
-    a: 'RhinoGold works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to RhinoGold?',
-    a: 'The closest alternatives within the Specialized space are JewelCAD Pro, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['jewelcad-pro', 'simplify3d', 'carlson-survey'],
-  detailed_features: [],
+  expert_verdict: "Still in use at many small jewelry studios, but new buyers should look at MatrixGold or 3Design.",
+  faqs: [
+    {
+      q: "What is RhinoGold used for?",
+      a: "Rhino-based jewelry CAD plugin with gem setting, parametric jewelry libraries, and rendering. RhinoGold is a visualization and rendering solution widely adopted in Jewelry."
+    },
+    {
+      q: "How much does RhinoGold cost?",
+      a: "RhinoGold starts at $2,495 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of RhinoGold?",
+      a: "RhinoGold is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does RhinoGold support?",
+      a: "RhinoGold runs on Windows."
+    },
+    {
+      q: "Which file formats does RhinoGold support?",
+      a: "RhinoGold works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to RhinoGold?",
+      a: "The closest alternatives within the Specialized space are JewelCAD Pro, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "jewelcad-pro",
+    "simplify3d",
+    "carlson-survey"
+  ],
+  detailed_features: [
+    {
+      category: "Jewelry CAD",
+      items: [
+        {
+          name: "Gem setting tools",
+          status: true
+        },
+        {
+          name: "Parametric components",
+          status: true
+        },
+        {
+          name: "Ring shanks",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Design",
+      items: [
+        {
+          name: "Prongs",
+          status: true
+        },
+        {
+          name: "Settings",
+          status: true
+        },
+        {
+          name: "Jewelry library",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Rendering",
+      items: [
+        {
+          name: "VRay engine",
+          status: true
+        },
+        {
+          name: "Rendering pipeline",
+          status: true
+        },
+        {
+          name: "STL export",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Platform",
+      items: [
+        {
+          name: "Rhinoceros 3D",
+          status: true
+        },
+        {
+          name: "Plugin architecture",
+          status: true
+        },
+        {
+          name: "Asset library",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t224",
-  "name": "JewelCAD Pro",
-  "slug": "jewelcad-pro",
+  name: "JewelCAD Pro",
+  slug: "jewelcad-pro",
   logo_url: "",
-  "short_desc": "Asia-popular dedicated jewelry CAD with parametric setting and rendering.",
-  "description": "JewelCAD Pro from Jcadcam is the most widely used jewelry CAD in Asia — particularly Hong Kong, Mainland China, and India — with parametric jewelry templates, gem-setting tools, and high-resolution STL export.",
-  "country": "Hong Kong",
-  "category_id": "c7",
-  "pricing_type": "Perpetual",
-  "starting_price": 2200,
-  "platforms": ["Windows"],
-  "industries": ["Jewelry"],
-
-  "core_features": [
+  short_desc: "Asia-popular dedicated jewelry CAD with parametric setting and rendering.",
+  description: "JewelCAD Pro from Jcadcam is the most widely used jewelry CAD in Asia — particularly Hong Kong, Mainland China, and India — with parametric jewelry templates, gem-setting tools, and high-resolution STL export.",
+  country: "Hong Kong",
+  category_id: "c7",
+  pricing_type: "Perpetual",
+  starting_price: 2200,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Jewelry"
+  ],
+  core_features: [
     "Parametric jewelry libraries (rings, pendants, earrings)",
     "Gem setting with prong, bezel, channel, pavé",
     "Sub-D modeling",
     "Photoreal rendering",
     "High-resolution STL export for casting",
-    "CAM toolpath generation",
+    "CAM toolpath generation"
   ],
-
-  "user_scales": ["Freelancer", "SMB"],
-  "official_url": "https://www.jcadcam.com",
-  "affiliate_url": null,
-  "score": 4.1,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB"
+  ],
+  official_url: "https://www.jcadcam.com",
+  affiliate_url: null,
+  score: 4.1,
+  pros: [
     "Strong adoption in Hong Kong / mainland China / India jewelry hubs",
     "Perpetual license",
-    "Built-in CAM and STL output for casting",
+    "Built-in CAM and STL output for casting"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "Smaller global community than Rhino/MatrixGold",
-    "UI is utilitarian and dated",
+    "UI is utilitarian and dated"
   ],
-
-  "tech_specs": {
-    "engine": "JewelCAD",
-    "multicore": "Limited",
-    "gpu_optimization": "Basic",
-    "standards": ["STL", "OBJ", "DXF"],
+  tech_specs: {
+    engine: "JewelCAD",
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: [
+      "STL",
+      "OBJ",
+      "DXF"
+    ]
   },
-
-  "expert_verdict": "The pragmatic Asia-region jewelry CAD — perpetual, capable, and immediately productive for casters and setters.",
-  faqs: [{
-    q: 'What is JewelCAD Pro used for?',
-    a: 'Asia-popular dedicated jewelry CAD with parametric setting and rendering. JewelCAD Pro is a visualization and rendering solution widely adopted in Jewelry.',
-  }, {
-    q: 'How much does JewelCAD Pro cost?',
-    a: 'JewelCAD Pro starts at $2,200 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of JewelCAD Pro?',
-    a: 'JewelCAD Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does JewelCAD Pro support?',
-    a: 'JewelCAD Pro runs on Windows.',
-  }, {
-    q: 'Which file formats does JewelCAD Pro support?',
-    a: 'JewelCAD Pro works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to JewelCAD Pro?',
-    a: 'The closest alternatives within the Specialized space are RhinoGold, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['rhinogold', 'simplify3d', 'carlson-survey'],
-  detailed_features: [],
+  expert_verdict: "The pragmatic Asia-region jewelry CAD — perpetual, capable, and immediately productive for casters and setters.",
+  faqs: [
+    {
+      q: "What is JewelCAD Pro used for?",
+      a: "Asia-popular dedicated jewelry CAD with parametric setting and rendering. JewelCAD Pro is a visualization and rendering solution widely adopted in Jewelry."
+    },
+    {
+      q: "How much does JewelCAD Pro cost?",
+      a: "JewelCAD Pro starts at $2,200 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of JewelCAD Pro?",
+      a: "JewelCAD Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does JewelCAD Pro support?",
+      a: "JewelCAD Pro runs on Windows."
+    },
+    {
+      q: "Which file formats does JewelCAD Pro support?",
+      a: "JewelCAD Pro works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to JewelCAD Pro?",
+      a: "The closest alternatives within the Specialized space are RhinoGold, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "rhinogold",
+    "simplify3d",
+    "carlson-survey"
+  ],
+  detailed_features: [
+    {
+      category: "Jewelry CAD",
+      items: [
+        {
+          name: "Parametric libraries",
+          status: true
+        },
+        {
+          name: "Gem setting",
+          status: true
+        },
+        {
+          name: "Prong/bezel/channel",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Modeling",
+      items: [
+        {
+          name: "Sub-D modeling",
+          status: true
+        },
+        {
+          name: "Jewelry templates",
+          status: true
+        },
+        {
+          name: "Pavé setting",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Output",
+      items: [
+        {
+          name: "Photoreal rendering",
+          status: true
+        },
+        {
+          name: "STL export",
+          status: true
+        },
+        {
+          name: "CAM toolpath",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Production",
+      items: [
+        {
+          name: "High-resolution STL",
+          status: true
+        },
+        {
+          name: "Casting output",
+          status: true
+        },
+        {
+          name: "Toolpath generation",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t225",
-  "name": "D5 Render",
-  "slug": "d5-render",
+  name: "D5 Render",
+  slug: "d5-render",
   logo_url: "",
-  "short_desc": "Real-time ray-traced renderer for architecture, interiors, and product visualization.",
-  "description": "D5 Render is a real-time GPU ray-traced renderer aimed at architects and interior designers — live link to SketchUp, Revit, Rhino, ArchiCAD, and 3ds Max, with a free Community Edition that includes commercial use.",
-  "country": "China",
-  "category_id": "c7",
-  "pricing_type": "Freemium",
-  "starting_price": 38,
-  "platforms": ["Windows"],
-  "industries": ["AEC", "Interior Design", "Product Visualization"],
-
-  "core_features": [
+  short_desc: "Real-time ray-traced renderer for architecture, interiors, and product visualization.",
+  description: "D5 Render is a real-time GPU ray-traced renderer aimed at architects and interior designers — live link to SketchUp, Revit, Rhino, ArchiCAD, and 3ds Max, with a free Community Edition that includes commercial use.",
+  country: "China",
+  category_id: "c7",
+  pricing_type: "Freemium",
+  starting_price: 38,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "AEC",
+    "Interior Design",
+    "Product Visualization"
+  ],
+  core_features: [
     "Real-time ray tracing on RTX GPUs",
     "Live link to SketchUp, Revit, Rhino, ArchiCAD, 3ds Max",
     "Asset library (objects, materials, vegetation)",
     "Animation and video sequencing",
     "Cloud rendering for high-res stills",
-    "DLSS / AI denoise",
+    "DLSS / AI denoise"
   ],
-
-  "user_scales": ["Hobbyist", "Freelancer", "SMB", "Mid-Market"],
-  "official_url": "https://www.d5render.com",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "Hobbyist",
+    "Freelancer",
+    "SMB",
+    "Mid-Market"
+  ],
+  official_url: "https://www.d5render.com",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Real-time RTX ray tracing with friendly UI",
     "Free Community Edition includes commercial use",
-    "Live link plugins eliminate import/export friction",
+    "Live link plugins eliminate import/export friction"
   ],
-
-  "cons": [
+  cons: [
     "Requires NVIDIA RTX GPU for full functionality",
     "Windows-only",
-    "Less control than V-Ray / Corona for advanced users",
+    "Less control than V-Ray / Corona for advanced users"
   ],
-
-  "tech_specs": {
-    "engine": "D5 (RTX ray-traced)",
-    "multicore": "GPU-bound",
-    "gpu_optimization": "NVIDIA RTX, DLSS",
-    "standards": ["FBX", "OBJ", "glTF"],
+  tech_specs: {
+    engine: "D5 (RTX ray-traced)",
+    multicore: "GPU-bound",
+    gpu_optimization: "NVIDIA RTX, DLSS",
+    standards: [
+      "FBX",
+      "OBJ",
+      "glTF"
+    ]
   },
-
-  "expert_verdict": "The fastest path to good-looking architectural visuals — free tier alone makes it worth installing.",
-  faqs: [{
-    q: 'What is D5 Render used for?',
-    a: 'Real-time ray-traced renderer for architecture, interiors, and product visualization. D5 Render is a visualization and rendering solution widely adopted in AEC, Interior Design, Product Visualization.',
-  }, {
-    q: 'How much does D5 Render cost?',
-    a: 'D5 Render starts at $38 per seat on a freemium license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of D5 Render?',
-    a: 'D5 Render is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does D5 Render support?',
-    a: 'D5 Render runs on Windows.',
-  }, {
-    q: 'Which file formats does D5 Render support?',
-    a: 'D5 Render works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to D5 Render?',
-    a: 'The closest alternatives within the Specialized space are UltiMaker Cura, Corona Renderer, Bambu Studio. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['ultimaker-cura', 'corona-renderer', 'bambu-studio'],
-  detailed_features: [],
+  expert_verdict: "The fastest path to good-looking architectural visuals — free tier alone makes it worth installing.",
+  faqs: [
+    {
+      q: "What is D5 Render used for?",
+      a: "Real-time ray-traced renderer for architecture, interiors, and product visualization. D5 Render is a visualization and rendering solution widely adopted in AEC, Interior Design, Product Visualization."
+    },
+    {
+      q: "How much does D5 Render cost?",
+      a: "D5 Render starts at $38 per seat on a freemium license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of D5 Render?",
+      a: "D5 Render is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does D5 Render support?",
+      a: "D5 Render runs on Windows."
+    },
+    {
+      q: "Which file formats does D5 Render support?",
+      a: "D5 Render works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to D5 Render?",
+      a: "The closest alternatives within the Specialized space are UltiMaker Cura, Corona Renderer, Bambu Studio. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "ultimaker-cura",
+    "corona-renderer",
+    "bambu-studio"
+  ],
+  detailed_features: [
+    {
+      category: "Rendering",
+      items: [
+        {
+          name: "Real-time ray tracing",
+          status: true
+        },
+        {
+          name: "RTX GPU",
+          status: true
+        },
+        {
+          name: "DLSS denoise",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "SketchUp link",
+          status: true
+        },
+        {
+          name: "Revit link",
+          status: true
+        },
+        {
+          name: "Rhino link",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Assets",
+      items: [
+        {
+          name: "Asset library",
+          status: true
+        },
+        {
+          name: "Materials",
+          status: true
+        },
+        {
+          name: "Vegetation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Output",
+      items: [
+        {
+          name: "Animation",
+          status: true
+        },
+        {
+          name: "Video sequencing",
+          status: true
+        },
+        {
+          name: "Cloud rendering",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t226",
-  "name": "V-Ray",
-  "slug": "v-ray",
+  name: "V-Ray",
+  slug: "v-ray",
   logo_url: "",
-  "short_desc": "Chaos V-Ray — the long-standing industry-standard production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
-  "description": "V-Ray from Chaos is the world's most-used production renderer across architecture, automotive, and product visualization — host integrations for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Unreal, and Cinema 4D.",
-  "country": "Bulgaria",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 396,
-  "platforms": ["Windows", "macOS"],
-  "industries": ["AEC", "Automotive", "Film & Animation", "Product Visualization"],
-
-  "core_features": [
+  short_desc: "Chaos V-Ray — the long-standing industry-standard production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
+  description: "V-Ray from Chaos is the world's most-used production renderer across architecture, automotive, and product visualization — host integrations for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Unreal, and Cinema 4D.",
+  country: "Bulgaria",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 396,
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "AEC",
+    "Automotive",
+    "Film & Animation",
+    "Product Visualization"
+  ],
+  core_features: [
     "Hybrid CPU + GPU rendering (CUDA / RTX)",
     "Plugins for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Cinema 4D",
     "Chaos Vantage real-time review",
     "VRayMtl, VRayProxy, light cache",
     "Distributed rendering",
-    "Chaos Cosmos asset library",
+    "Chaos Cosmos asset library"
   ],
-
-  "user_scales": ["SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://www.chaos.com/vray",
-  "affiliate_url": null,
-  "score": 4.6,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.chaos.com/vray",
+  affiliate_url: null,
+  score: 4.6,
+  pros: [
     "Industry default for production renders",
     "Host-program coverage is unmatched",
-    "Mature material library and Cosmos assets",
+    "Mature material library and Cosmos assets"
   ],
-
-  "cons": [
+  cons: [
     "Subscription pricing (perpetual no longer sold)",
     "Setup complexity higher than D5 / Enscape",
-    "GPU mode still trails CPU in feature parity",
+    "GPU mode still trails CPU in feature parity"
   ],
-
-  "tech_specs": {
-    "engine": "V-Ray (CPU + GPU)",
-    "multicore": "Yes",
-    "gpu_optimization": "CUDA, RTX, OptiX",
-    "standards": ["FBX", "Alembic", "USD"],
+  tech_specs: {
+    engine: "V-Ray (CPU + GPU)",
+    multicore: "Yes",
+    gpu_optimization: "CUDA, RTX, OptiX",
+    standards: [
+      "FBX",
+      "Alembic",
+      "USD"
+    ]
   },
-
-  "expert_verdict": "Still the default production renderer in arch-viz studios worldwide. Pair with Chaos Vantage for real-time review.",
-  faqs: [{
-    q: 'What is V-Ray used for?',
-    a: 'Chaos V-Ray — the long-standing industry-standard production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp. V-Ray is a visualization and rendering solution widely adopted in AEC, Automotive, Film & Animation.',
-  }, {
-    q: 'How much does V-Ray cost?',
-    a: 'V-Ray starts at $396 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of V-Ray?',
-    a: 'V-Ray is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does V-Ray support?',
-    a: 'V-Ray runs on Windows and macOS.',
-  }, {
-    q: 'Which file formats does V-Ray support?',
-    a: 'V-Ray works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to V-Ray?',
-    a: 'The closest alternatives within the Specialized space are Marvelous Designer, Browzwear, Trimble Business Center. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['marvelous-designer', 'browzwear', 'trimble-business-center'],
-  detailed_features: [],
+  expert_verdict: "Still the default production renderer in arch-viz studios worldwide. Pair with Chaos Vantage for real-time review.",
+  faqs: [
+    {
+      q: "What is V-Ray used for?",
+      a: "Chaos V-Ray — the long-standing industry-standard production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp. V-Ray is a visualization and rendering solution widely adopted in AEC, Automotive, Film & Animation."
+    },
+    {
+      q: "How much does V-Ray cost?",
+      a: "V-Ray starts at $396 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of V-Ray?",
+      a: "V-Ray is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does V-Ray support?",
+      a: "V-Ray runs on Windows and macOS."
+    },
+    {
+      q: "Which file formats does V-Ray support?",
+      a: "V-Ray works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to V-Ray?",
+      a: "The closest alternatives within the Specialized space are Marvelous Designer, Browzwear, Trimble Business Center. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "marvelous-designer",
+    "browzwear",
+    "trimble-business-center"
+  ],
+  detailed_features: [
+    {
+      category: "Rendering",
+      items: [
+        {
+          name: "CPU + GPU rendering",
+          status: true
+        },
+        {
+          name: "CUDA/RTX",
+          status: true
+        },
+        {
+          name: "Distributed rendering",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "3ds Max plugin",
+          status: true
+        },
+        {
+          name: "Maya plugin",
+          status: true
+        },
+        {
+          name: "Revit plugin",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Assets",
+      items: [
+        {
+          name: "VRayMtl",
+          status: true
+        },
+        {
+          name: "VRayProxy",
+          status: true
+        },
+        {
+          name: "Cosmos library",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Real-Time",
+      items: [
+        {
+          name: "Chaos Vantage",
+          status: true
+        },
+        {
+          name: "Real-time review",
+          status: true
+        },
+        {
+          name: "Light cache",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t227",
-  "name": "Corona Renderer",
-  "slug": "corona-renderer",
+  name: "Corona Renderer",
+  slug: "corona-renderer",
   logo_url: "",
-  "short_desc": "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows.",
-  "description": "Corona Renderer (Chaos) is a CPU-based unbiased renderer that won the interior-visualization community with very fast interactive preview, simple material setup, and excellent out-of-box quality.",
-  "country": "Czech Republic",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 32,
-  "platforms": ["Windows"],
-  "industries": ["AEC", "Interior Design", "Product Visualization"],
-
-  "core_features": [
+  short_desc: "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows.",
+  description: "Corona Renderer (Chaos) is a CPU-based unbiased renderer that won the interior-visualization community with very fast interactive preview, simple material setup, and excellent out-of-box quality.",
+  country: "Czech Republic",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 32,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "AEC",
+    "Interior Design",
+    "Product Visualization"
+  ],
+  core_features: [
     "Path-traced unbiased CPU renderer",
     "Interactive viewport renderer",
     "Corona Material with simple parameters",
     "Plugins for 3ds Max and Cinema 4D",
     "Chaos Cosmos library",
-    "AI Denoise (NVIDIA OptiX or Intel Open Image)",
+    "AI Denoise (NVIDIA OptiX or Intel Open Image)"
   ],
-
-  "user_scales": ["Freelancer", "SMB", "Mid-Market"],
-  "official_url": "https://www.chaos.com/corona",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB",
+    "Mid-Market"
+  ],
+  official_url: "https://www.chaos.com/corona",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Best-in-class interior visualization out of the box",
     "Friendly UI with very few parameters",
-    "Strong CPU performance scales well in render farms",
+    "Strong CPU performance scales well in render farms"
   ],
-
-  "cons": [
+  cons: [
     "CPU-only — no GPU acceleration",
     "Plugin support narrower than V-Ray (3ds Max + C4D only)",
-    "Subscription only",
+    "Subscription only"
   ],
-
-  "tech_specs": {
-    "engine": "Corona path-tracer (CPU)",
-    "multicore": "Yes",
-    "gpu_optimization": "Denoiser only",
-    "standards": ["FBX", "Alembic"],
+  tech_specs: {
+    engine: "Corona path-tracer (CPU)",
+    multicore: "Yes",
+    gpu_optimization: "Denoiser only",
+    standards: [
+      "FBX",
+      "Alembic"
+    ]
   },
-
-  "expert_verdict": "Interior visualization shops love Corona — fast iteration and great default quality with minimal fiddling.",
-  faqs: [{
-    q: 'What is Corona Renderer used for?',
-    a: 'Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows. Corona Renderer is a visualization and rendering solution widely adopted in AEC, Interior Design, Product Visualization.',
-  }, {
-    q: 'How much does Corona Renderer cost?',
-    a: 'Corona Renderer starts at $32 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Corona Renderer?',
-    a: 'Corona Renderer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Corona Renderer support?',
-    a: 'Corona Renderer runs on Windows.',
-  }, {
-    q: 'Which file formats does Corona Renderer support?',
-    a: 'Corona Renderer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Corona Renderer?',
-    a: 'The closest alternatives within the Specialized space are Marvelous Designer, Adobe Substance 3D Painter, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['marvelous-designer', 'substance-painter', 'browzwear'],
-  detailed_features: [],
+  expert_verdict: "Interior visualization shops love Corona — fast iteration and great default quality with minimal fiddling.",
+  faqs: [
+    {
+      q: "What is Corona Renderer used for?",
+      a: "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows. Corona Renderer is a visualization and rendering solution widely adopted in AEC, Interior Design, Product Visualization."
+    },
+    {
+      q: "How much does Corona Renderer cost?",
+      a: "Corona Renderer starts at $32 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Corona Renderer?",
+      a: "Corona Renderer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Corona Renderer support?",
+      a: "Corona Renderer runs on Windows."
+    },
+    {
+      q: "Which file formats does Corona Renderer support?",
+      a: "Corona Renderer works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Corona Renderer?",
+      a: "The closest alternatives within the Specialized space are Marvelous Designer, Adobe Substance 3D Painter, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "marvelous-designer",
+    "substance-painter",
+    "browzwear"
+  ],
+  detailed_features: [
+    {
+      category: "Rendering",
+      items: [
+        {
+          name: "CPU path-tracer",
+          status: true
+        },
+        {
+          name: "Unbiased rendering",
+          status: true
+        },
+        {
+          name: "Interactive viewport",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Materials",
+      items: [
+        {
+          name: "Corona Material",
+          status: true
+        },
+        {
+          name: "Simple parameters",
+          status: true
+        },
+        {
+          name: "Material library",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "3ds Max plugin",
+          status: true
+        },
+        {
+          name: "Cinema 4D plugin",
+          status: true
+        },
+        {
+          name: "Chaos Cosmos",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "AI",
+      items: [
+        {
+          name: "AI Denoise",
+          status: true
+        },
+        {
+          name: "NVIDIA OptiX",
+          status: true
+        },
+        {
+          name: "Intel Open Image",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t228",
-  "name": "Adobe Substance 3D Painter",
-  "slug": "substance-painter",
+  name: "Adobe Substance 3D Painter",
+  slug: "substance-painter",
   logo_url: "",
-  "short_desc": "PBR texture-painting tool used industry-wide for games, film, and product visualization.",
-  "description": "Adobe Substance 3D Painter is the industry-default PBR texture-painting application — used to texture characters, vehicles, environments, and products with smart materials, generators, and a non-destructive layer stack.",
-  "country": "France",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 240,
-  "platforms": ["Windows", "macOS", "Linux"],
-  "industries": ["Games", "Film & Animation", "Product Visualization", "Automotive"],
-
-  "core_features": [
+  short_desc: "PBR texture-painting tool used industry-wide for games, film, and product visualization.",
+  description: "Adobe Substance 3D Painter is the industry-default PBR texture-painting application — used to texture characters, vehicles, environments, and products with smart materials, generators, and a non-destructive layer stack.",
+  country: "France",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 240,
+  platforms: [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  industries: [
+    "Games",
+    "Film & Animation",
+    "Product Visualization",
+    "Automotive"
+  ],
+  core_features: [
     "Non-destructive PBR layer stack",
     "Smart materials and smart masks",
     "Procedural generators",
     "Bakers (AO, normal, curvature, world-space)",
     "USD and glTF export",
-    "Live link with Substance Painter for Maya, Blender, 3ds Max",
+    "Live link with Substance Painter for Maya, Blender, 3ds Max"
   ],
-
-  "user_scales": ["Freelancer", "SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://www.adobe.com/products/substance3d-painter.html",
-  "affiliate_url": null,
-  "score": 4.7,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.adobe.com/products/substance3d-painter.html",
+  affiliate_url: null,
+  score: 4.7,
+  pros: [
     "Industry default for PBR texturing in games and film",
     "Excellent procedural generators",
-    "Mature integration with all major 3D DCCs",
+    "Mature integration with all major 3D DCCs"
   ],
-
-  "cons": [
+  cons: [
     "Adobe subscription pricing replaced cheaper Allegorithmic licensing",
     "Linux build trails Windows / macOS",
-    "Painter ≠ Designer — buying Substance Collection often needed",
+    "Painter ≠ Designer — buying Substance Collection often needed"
   ],
-
-  "tech_specs": {
-    "engine": "Substance Engine",
-    "multicore": "Yes",
-    "gpu_optimization": "Yes",
-    "standards": ["USD", "glTF", "FBX", "OBJ"],
+  tech_specs: {
+    engine: "Substance Engine",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "USD",
+      "glTF",
+      "FBX",
+      "OBJ"
+    ]
   },
-
-  "expert_verdict": "The default PBR texturing tool of the 3D industry. Adobe pricing aside, there is no real alternative at this maturity.",
-  faqs: [{
-    q: 'What is Adobe Substance 3D Painter used for?',
-    a: 'PBR texture-painting tool used industry-wide for games, film, and product visualization. Adobe Substance 3D Painter is a visualization and rendering solution widely adopted in Games, Film & Animation, Product Visualization.',
-  }, {
-    q: 'How much does Adobe Substance 3D Painter cost?',
-    a: 'Adobe Substance 3D Painter starts at $240 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Adobe Substance 3D Painter?',
-    a: 'Adobe Substance 3D Painter is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Adobe Substance 3D Painter support?',
-    a: 'Adobe Substance 3D Painter runs on Windows, macOS, and Linux.',
-  }, {
-    q: 'Which file formats does Adobe Substance 3D Painter support?',
-    a: 'Adobe Substance 3D Painter works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Adobe Substance 3D Painter?',
-    a: 'The closest alternatives within the Specialized space are Marvelous Designer, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['marvelous-designer', 'v-ray', 'browzwear'],
-  detailed_features: [],
+  expert_verdict: "The default PBR texturing tool of the 3D industry. Adobe pricing aside, there is no real alternative at this maturity.",
+  faqs: [
+    {
+      q: "What is Adobe Substance 3D Painter used for?",
+      a: "PBR texture-painting tool used industry-wide for games, film, and product visualization. Adobe Substance 3D Painter is a visualization and rendering solution widely adopted in Games, Film & Animation, Product Visualization."
+    },
+    {
+      q: "How much does Adobe Substance 3D Painter cost?",
+      a: "Adobe Substance 3D Painter starts at $240 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Adobe Substance 3D Painter?",
+      a: "Adobe Substance 3D Painter is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Adobe Substance 3D Painter support?",
+      a: "Adobe Substance 3D Painter runs on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats does Adobe Substance 3D Painter support?",
+      a: "Adobe Substance 3D Painter works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Adobe Substance 3D Painter?",
+      a: "The closest alternatives within the Specialized space are Marvelous Designer, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "marvelous-designer",
+    "v-ray",
+    "browzwear"
+  ],
+  detailed_features: [
+    {
+      category: "Texturing",
+      items: [
+        {
+          name: "PBR layer stack",
+          status: true
+        },
+        {
+          name: "Smart materials",
+          status: true
+        },
+        {
+          name: "Smart masks",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Procedural",
+      items: [
+        {
+          name: "Procedural generators",
+          status: true
+        },
+        {
+          name: "Bakers",
+          status: true
+        },
+        {
+          name: "AO/normal/curvature",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "USD export",
+          status: true
+        },
+        {
+          name: "glTF export",
+          status: true
+        },
+        {
+          name: "Maya/Blender/3ds Max link",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Materials",
+      items: [
+        {
+          name: "Material library",
+          status: true
+        },
+        {
+          name: "Non-destructive",
+          status: true
+        },
+        {
+          name: "DCC integration",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t239",
-  "name": "Carlson Survey",
-  "slug": "carlson-survey",
+  name: "Carlson Survey",
+  slug: "carlson-survey",
   logo_url: "",
-  "short_desc": "Field-to-finish surveying software running on AutoCAD or IntelliCAD.",
-  "description": "Carlson Survey is the field-to-finish surveying CAD popular with US land surveyors — runs on AutoCAD or the bundled IntelliCAD engine, with strong total-station, GNSS, and data-collector integration.",
-  "country": "USA",
-  "category_id": "c7",
-  "pricing_type": "Perpetual",
-  "starting_price": 1995,
-  "platforms": ["Windows"],
-  "industries": ["Civil Engineering", "Surveying", "Land Development"],
-
-  "core_features": [
+  short_desc: "Field-to-finish surveying software running on AutoCAD or IntelliCAD.",
+  description: "Carlson Survey is the field-to-finish surveying CAD popular with US land surveyors — runs on AutoCAD or the bundled IntelliCAD engine, with strong total-station, GNSS, and data-collector integration.",
+  country: "USA",
+  category_id: "c7",
+  pricing_type: "Perpetual",
+  starting_price: 1995,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Civil Engineering",
+    "Surveying",
+    "Land Development"
+  ],
+  core_features: [
     "AutoCAD or embedded IntelliCAD",
     "Field-to-finish processing",
     "GNSS and total-station support",
     "Carlson SurvCE data collector integration",
     "Roading and earthwork modules",
-    "Drone / point-cloud processing add-ons",
+    "Drone / point-cloud processing add-ons"
   ],
-
-  "user_scales": ["SMB", "Mid-Market"],
-  "official_url": "https://www.carlsonsw.com/products/survey/",
-  "affiliate_url": null,
-  "score": 4.4,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market"
+  ],
+  official_url: "https://www.carlsonsw.com/products/survey/",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
     "Field-tested workflow for US land surveying",
     "Perpetual licensing still available",
-    "Strong SurvCE data collector ecosystem",
+    "Strong SurvCE data collector ecosystem"
   ],
-
-  "cons": ["Windows-only", "UI is utilitarian", "Niche outside North America"],
-
-  "tech_specs": {
-    "engine": "AutoCAD or IntelliCAD",
-    "multicore": "Limited",
-    "gpu_optimization": "Basic",
-    "standards": ["DWG", "LandXML", "DXF"],
+  cons: [
+    "Windows-only",
+    "UI is utilitarian",
+    "Niche outside North America"
+  ],
+  tech_specs: {
+    engine: "AutoCAD or IntelliCAD",
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: [
+      "DWG",
+      "LandXML",
+      "DXF"
+    ]
   },
-
-  "expert_verdict": "If you do small-to-mid US land surveying, Carlson Survey + SurvCE is the workflow that just works.",
-  faqs: [{
-    q: 'What is Carlson Survey used for?',
-    a: 'Field-to-finish surveying software running on AutoCAD or IntelliCAD. Carlson Survey is a visualization and rendering solution widely adopted in Civil Engineering, Surveying, Land Development.',
-  }, {
-    q: 'How much does Carlson Survey cost?',
-    a: 'Carlson Survey starts at $1,995 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Carlson Survey?',
-    a: 'Carlson Survey is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Carlson Survey support?',
-    a: 'Carlson Survey runs on Windows.',
-  }, {
-    q: 'Which file formats does Carlson Survey support?',
-    a: 'Carlson Survey works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Carlson Survey?',
-    a: 'The closest alternatives within the Specialized space are RhinoGold, PC SCHEMATIC Automation, JewelCAD Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['rhinogold', 'pc-schematic', 'jewelcad-pro'],
-  detailed_features: [],
+  expert_verdict: "If you do small-to-mid US land surveying, Carlson Survey + SurvCE is the workflow that just works.",
+  faqs: [
+    {
+      q: "What is Carlson Survey used for?",
+      a: "Field-to-finish surveying software running on AutoCAD or IntelliCAD. Carlson Survey is a visualization and rendering solution widely adopted in Civil Engineering, Surveying, Land Development."
+    },
+    {
+      q: "How much does Carlson Survey cost?",
+      a: "Carlson Survey starts at $1,995 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Carlson Survey?",
+      a: "Carlson Survey is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Carlson Survey support?",
+      a: "Carlson Survey runs on Windows."
+    },
+    {
+      q: "Which file formats does Carlson Survey support?",
+      a: "Carlson Survey works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Carlson Survey?",
+      a: "The closest alternatives within the Specialized space are RhinoGold, PC SCHEMATIC Automation, JewelCAD Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "rhinogold",
+    "pc-schematic",
+    "jewelcad-pro"
+  ],
+  detailed_features: [
+    {
+      category: "Surveying",
+      items: [
+        {
+          name: "Field-to-finish",
+          status: true
+        },
+        {
+          name: "GNSS support",
+          status: true
+        },
+        {
+          name: "Total-station support",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "CAD",
+      items: [
+        {
+          name: "AutoCAD",
+          status: true
+        },
+        {
+          name: "IntelliCAD",
+          status: true
+        },
+        {
+          name: "CAD engine",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Data Collection",
+      items: [
+        {
+          name: "SurvCE integration",
+          status: true
+        },
+        {
+          name: "Data collector",
+          status: true
+        },
+        {
+          name: "Field data",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Modules",
+      items: [
+        {
+          name: "Roading modules",
+          status: true
+        },
+        {
+          name: "Earthwork modules",
+          status: true
+        },
+        {
+          name: "Drone/point-cloud",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t240",
-  "name": "Trimble Business Center",
-  "slug": "trimble-business-center",
+  name: "Trimble Business Center",
+  slug: "trimble-business-center",
   logo_url: "",
-  "short_desc": "Office software for processing survey, GIS, and construction-layout field data.",
-  "description": "Trimble Business Center (TBC) is the office-side companion to Trimble field instruments — processes GNSS, total-station, scanner, and UAV data into deliverables for survey, GIS, and construction-layout workflows.",
-  "country": "USA",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 2400,
-  "platforms": ["Windows"],
-  "industries": ["Civil Engineering", "Surveying", "Construction"],
-
-  "core_features": [
+  short_desc: "Office software for processing survey, GIS, and construction-layout field data.",
+  description: "Trimble Business Center (TBC) is the office-side companion to Trimble field instruments — processes GNSS, total-station, scanner, and UAV data into deliverables for survey, GIS, and construction-layout workflows.",
+  country: "USA",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 2400,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Civil Engineering",
+    "Surveying",
+    "Construction"
+  ],
+  core_features: [
     "GNSS baseline processing",
     "Total-station and level data reduction",
     "Point-cloud (Trimble SX / scanner) processing",
     "UAV photogrammetry",
     "Construction stake-out reports",
-    "LandXML / IFC / DWG / DXF export",
+    "LandXML / IFC / DWG / DXF export"
   ],
-
-  "user_scales": ["SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://geospatial.trimble.com/en/products/software/trimble-business-center",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Best-in-class GNSS post-processing",
     "Multi-source field data fusion (GNSS, TS, scanner, UAV)",
-    "Tight integration with Trimble field controllers",
+    "Tight integration with Trimble field controllers"
   ],
-
-  "cons": [
+  cons: [
     "Windows-only",
     "Subscription pricing",
-    "Most valuable when your field hardware is also Trimble",
+    "Most valuable when your field hardware is also Trimble"
   ],
-
-  "tech_specs": {
-    "engine": "Trimble Business Center",
-    "multicore": "Yes",
-    "gpu_optimization": "Yes",
-    "standards": ["LandXML", "IFC", "DWG", "DXF", "LAS"],
+  tech_specs: {
+    engine: "Trimble Business Center",
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "LandXML",
+      "IFC",
+      "DWG",
+      "DXF",
+      "LAS"
+    ]
   },
-
-  "expert_verdict": "The default office solution for surveyors who shoot with Trimble. Stays relevant as field tech keeps evolving.",
-  faqs: [{
-    q: 'What is Trimble Business Center used for?',
-    a: 'Office software for processing survey, GIS, and construction-layout field data. Trimble Business Center is a visualization and rendering solution widely adopted in Civil Engineering, Surveying, Construction.',
-  }, {
-    q: 'How much does Trimble Business Center cost?',
-    a: 'Trimble Business Center starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Trimble Business Center?',
-    a: 'Trimble Business Center is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Trimble Business Center support?',
-    a: 'Trimble Business Center runs on Windows.',
-  }, {
-    q: 'Which file formats does Trimble Business Center support?',
-    a: 'Trimble Business Center works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Trimble Business Center?',
-    a: 'The closest alternatives within the Specialized space are Browzwear, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['browzwear', 'marvelous-designer', 'v-ray'],
-  detailed_features: [],
-},
-{
-  id: "t241",
-  "name": "Leica Cyclone",
-  "slug": "leica-cyclone",
-  logo_url: "",
-  "short_desc": "Leica's flagship terrestrial laser scanning point-cloud processing software.",
-  "description": "Leica Cyclone is Hexagon's flagship reality-capture software — terrestrial laser scan registration, point-cloud processing, modeling, and deliverable production for AEC and as-built workflows.",
-  "country": "Switzerland",
-  "category_id": "c7",
-  "pricing_type": "Subscription",
-  "starting_price": 6000,
-  "platforms": ["Windows"],
-  "industries": ["AEC", "Surveying", "Construction"],
-
-  "core_features": [
-    "Cloud-to-Cloud, Visual, Target registration",
-    "TruView and JetStream web/desktop viewers",
-    "Cyclone 3DR modeling and analysis",
-    "Plant 3D and Revit publishers",
-    "Cyclone Field for in-field scanning",
-    "Photogrammetry fusion (Leica BLK)",
+  expert_verdict: "The default office solution for surveyors who shoot with Trimble. Stays relevant as field tech keeps evolving.",
+  faqs: [
+    {
+      q: "What is Trimble Business Center used for?",
+      a: "Office software for processing survey, GIS, and construction-layout field data. Trimble Business Center is a visualization and rendering solution widely adopted in Civil Engineering, Surveying, Construction."
+    },
+    {
+      q: "How much does Trimble Business Center cost?",
+      a: "Trimble Business Center starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Trimble Business Center?",
+      a: "Trimble Business Center is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Trimble Business Center support?",
+      a: "Trimble Business Center runs on Windows."
+    },
+    {
+      q: "Which file formats does Trimble Business Center support?",
+      a: "Trimble Business Center works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Trimble Business Center?",
+      a: "The closest alternatives within the Specialized space are Browzwear, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
-  "user_scales": ["Mid-Market", "Enterprise"],
-  "official_url": "https://leica-geosystems.com/products/laser-scanners/software/leica-cyclone",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
-    "Industry default for terrestrial laser scan processing",
-    "Mature publishers to Revit / Plant 3D / Navisworks",
-    "Strong Leica BLK / RTC360 integration",
+  alternatives: [
+    "browzwear",
+    "marvelous-designer",
+    "v-ray"
   ],
-
-  "cons": [
-    "Windows-only",
-    "Best ROI when paired with Leica scanners",
-    "Subscription pricing is enterprise-tier",
-  ],
-
-  "tech_specs": {
-    "engine": "Cyclone",
-    "multicore": "Yes",
-    "gpu_optimization": "Yes",
-    "standards": ["E57", "LAS", "PTS", "IFC"],
-  },
-
-  "expert_verdict": "The reality-capture office software the as-built world runs on. Pair with BLK / RTC360 for a complete scan-to-BIM workflow.",
-  faqs: [{
-    q: 'What is Leica Cyclone used for?',
-    a: 'Leica\'s flagship terrestrial laser scanning point-cloud processing software. Leica Cyclone is a visualization and rendering solution widely adopted in AEC, Surveying, Construction.',
-  }, {
-    q: 'How much does Leica Cyclone cost?',
-    a: 'Leica Cyclone starts at $6,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Leica Cyclone?',
-    a: 'Leica Cyclone is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Leica Cyclone support?',
-    a: 'Leica Cyclone runs on Windows.',
-  }, {
-    q: 'Which file formats does Leica Cyclone support?',
-    a: 'Leica Cyclone works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Leica Cyclone?',
-    a: 'The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['infraworks', '3ds-max', 'zbrush'],
-  detailed_features: [],
+  detailed_features: [
+    {
+      category: "Surveying",
+      items: [
+        {
+          name: "GNSS processing",
+          status: true
+        },
+        {
+          name: "Total-station data",
+          status: true
+        },
+        {
+          name: "Level data reduction",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Point Cloud",
+      items: [
+        {
+          name: "Point-cloud processing",
+          status: true
+        },
+        {
+          name: "Scanner data",
+          status: true
+        },
+        {
+          name: "UAV photogrammetry",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Construction",
+      items: [
+        {
+          name: "Stake-out reports",
+          status: true
+        },
+        {
+          name: "Construction layout",
+          status: true
+        },
+        {
+          name: "Field data fusion",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Trimble controllers",
+          status: true
+        },
+        {
+          name: "LandXML export",
+          status: true
+        },
+        {
+          name: "IFC/DWG export",
+          status: true
+        }
+      ]
+    }
+  ]
 }
 ];

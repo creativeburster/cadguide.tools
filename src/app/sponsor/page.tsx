@@ -51,7 +51,7 @@ function SponsorBody() {
           </CardContent>
         </Card>
 
-        <Card className="flex flex-col border-2 border-blue-600 relative">
+        <Card className="flex flex-col border-2 border-blue-600 relative overflow-visible">
           <Badge className="absolute -top-3 right-4 bg-blue-600 text-white">Most Effective</Badge>
           <CardHeader>
             <CardTitle className="text-2xl">Sponsored Placement</CardTitle>

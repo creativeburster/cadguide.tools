@@ -271,7 +271,7 @@ export function websiteLd() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Compare 175+ CAD, BIM, CAE/CAM, and EDA tools side by side. Unbiased reviews, real pricing, and deep technical specs.",
+      "Compare 235+ CAD, BIM, CAE/CAM, and EDA tools side by side. Unbiased reviews, real pricing, and deep technical specs.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -347,7 +347,7 @@ export function organizationLd() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Compare 175+ CAD, BIM, CAE/CAM, and EDA tools side by side. Unbiased reviews, real pricing, and deep technical specs.",
+      "Compare 235+ CAD, BIM, CAE/CAM, and EDA tools side by side. Unbiased reviews, real pricing, and deep technical specs.",
     logo: `${SITE_URL}/favicon.svg`,
     contactPoint: {
       "@type": "ContactPoint",

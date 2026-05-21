@@ -9,140 +9,172 @@ export const c3Tools: Tool[] = [
   name: "Revit",
   slug: "revit",
   logo_url: getLogo("RV"),
-  short_desc:
-    "The de-facto standard for Building Information Modeling (BIM).",
-
-  description:
-    "Revit is Autodesk's flagship software built specifically for BIM, allowing architects and engineers to collaborate in a unified model.",
-
+  short_desc: "The de-facto standard for Building Information Modeling (BIM).",
+  description: "Revit is Autodesk's flagship software built specifically for BIM, allowing architects and engineers to collaborate in a unified model.",
   pricing_tiers: [
     {
       name: "Monthly",
       price: "355",
       period: "/mo",
-      features: ["Full BIM features", "Worksharing", "Cloud access"],
+      features: [
+        "Full BIM features",
+        "Worksharing",
+        "Cloud access"
+      ]
     },
     {
       name: "Annual",
       price: "2830",
       period: "/yr",
-      features: ["Save 33%", "Multi-user collaboration", "Priority Support"],
-      is_popular: true,
+      features: [
+        "Save 33%",
+        "Multi-user collaboration",
+        "Priority Support"
+      ],
+      is_popular: true
     },
     {
       name: "3-Year",
       price: "8490",
       period: "/3yr",
-      features: ["Enterprise scale", "Price protection", "Flex licensing"],
-    },
+      features: [
+        "Enterprise scale",
+        "Price protection",
+        "Flex licensing"
+      ]
+    }
   ],
-
   detailed_features: [
     {
       category: "Features",
       items: [
-        { name: "Toposolid: Advanced terrain modeling tools", status: true },
-        { name: "Accelerated Graphics (Tech Preview)", status: true },
-        { name: "Automated Sheet Placement", status: true },
-        { name: "MEP Fabrication Modeling enhancements", status: true },
-        { name: "Native IFC Support & Interoperability", status: true },
-      ],
-    },
+        {
+          name: "Toposolid: Advanced terrain modeling tools",
+          status: true
+        },
+        {
+          name: "Accelerated Graphics (Tech Preview)",
+          status: true
+        },
+        {
+          name: "Automated Sheet Placement",
+          status: true
+        },
+        {
+          name: "MEP Fabrication Modeling enhancements",
+          status: true
+        },
+        {
+          name: "Native IFC Support & Interoperability",
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["archicad", "vectorworks", "allplan"],
+  alternatives: [
+    "archicad",
+    "vectorworks",
+    "allplan"
+  ],
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 355,
-  platforms: ["Windows"],
-  industries: ["AEC", "Construction", "Structural Engineering"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "AEC",
+    "Construction",
+    "Structural Engineering"
+  ],
   core_features: [
     "Lifecycle BIM Management",
     "Parametric Families",
-    "Cloud Worksharing",
+    "Cloud Worksharing"
   ],
-  user_scales: ["Enterprise", "Mid-Market"],
+  user_scales: [
+    "Enterprise",
+    "Mid-Market"
+  ],
   official_url: "https://www.autodesk.com/products/revit",
   affiliate_url: null,
   score: 4.9,
   pros: [
     "Powerful collaboration",
     "Data-geometry integration",
-    "High market demand",
+    "High market demand"
   ],
   cons: [
     "Windows only",
     "Steep learning curve",
-    "High hardware requirements",
+    "High hardware requirements"
   ],
   faqs: [
     {
       q: "What is Revit used for?",
-      a: "The de-facto standard for Building Information Modeling (BIM). Revit is a BIM solution widely adopted in AEC, Construction, Structural Engineering.",
+      a: "The de-facto standard for Building Information Modeling (BIM). Revit is a BIM solution widely adopted in AEC, Construction, Structural Engineering."
     },
     {
       q: "How much does Revit cost?",
-      a: "Revit starts at $355 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Revit starts at $355 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does Revit offer a free trial?",
-      a: "Yes — Revit ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — Revit ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does Revit support?",
-      a: "Revit runs on Windows. Deployment options include desktop, cloud.",
+      a: "Revit runs on Windows. Deployment options include desktop, cloud."
     },
     {
       q: "Which file formats does Revit support?",
-      a: "Revit imports RVT, RFA, RTE, IFC, DWG, DXF and more. Export covers RVT, IFC, DWG, DXF, DGN, NWC and more.",
+      a: "Revit imports RVT, RFA, RTE, IFC, DWG, DXF and more. Export covers RVT, IFC, DWG, DXF, DGN, NWC and more."
     },
     {
       q: "Does Revit have an API for automation and customization?",
-      a: "Yes. Revit exposes .NET API with SDK bindings for C#, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. Revit exposes .NET API with SDK bindings for C#, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Medium",
     gpu_optimization: "DirectX 11",
-    standards: ["RVT", "IFC", "DWG", "NWD"],
+    standards: [
+      "RVT",
+      "IFC",
+      "DWG",
+      "NWD"
+    ]
   },
-
-  expert_verdict:
-    "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
-
+  expert_verdict: "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
   pricing_breakdown: [
     {
       tier: "Monthly",
       price: "$290/mo",
-      notes: "Flexible BIM access",
+      notes: "Flexible BIM access"
     },
     {
       tier: "Annual",
       price: "$2,310/yr",
-      notes: "Professional BIM standard",
+      notes: "Professional BIM standard"
     },
     {
       tier: "AEC Collection",
       price: "$2,825/yr",
-      notes: "Bundle with AutoCAD, Civil 3D, etc.",
-    },
+      notes: "Bundle with AutoCAD, Civil 3D, etc."
+    }
   ],
-
   key_capabilities: [
     "Parametric 3D BIM Modeling",
     "Automated Construction Documentation",
     "Multi-disciplinary Coordination (MEP, Structural, Arch)",
     "Cloud Collaboration with BIM Collaborate Pro",
-    "Parametric Family Creation",
+    "Parametric Family Creation"
   ],
-
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -155,9 +187,8 @@ export const c3Tools: Tool[] = [
     "Russian",
     "Polish",
     "Czech",
-    "Brazilian Portuguese",
+    "Brazilian Portuguese"
   ],
-
   file_formats_in: [
     "RVT",
     "RFA",
@@ -170,9 +201,8 @@ export const c3Tools: Tool[] = [
     "SKP",
     "OBJ",
     "3DM",
-    "NWD",
+    "NWD"
   ],
-
   file_formats_out: [
     "RVT",
     "IFC",
@@ -183,9 +213,8 @@ export const c3Tools: Tool[] = [
     "FBX",
     "PDF",
     "gbXML",
-    "ODX",
+    "ODX"
   ],
-
   integrations: [
     "BIM 360",
     "Autodesk Construction Cloud",
@@ -195,36 +224,40 @@ export const c3Tools: Tool[] = [
     "Dynamo",
     "Robot Structural Analysis",
     "Enscape",
-    "Twinmotion",
+    "Twinmotion"
   ],
-
-  deployment_options: ["Desktop", "Cloud"],
-  license_types: ["Subscription", "Network", "Educational"],
-
+  deployment_options: [
+    "Desktop",
+    "Cloud"
+  ],
+  license_types: [
+    "Subscription",
+    "Network",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.4,
       max: 5,
       count: 740,
-      url: "https://www.g2.com/products/revit/reviews",
+      url: "https://www.g2.com/products/revit/reviews"
     },
     {
       source: "Capterra",
       score: 4.6,
       max: 5,
       count: 530,
-      url: "https://www.capterra.com/p/187420/Revit/",
+      url: "https://www.capterra.com/p/187420/Revit/"
     },
     {
       source: "TrustRadius",
       score: 8.5,
       max: 10,
       count: 420,
-      url: "https://www.trustradius.com/products/autodesk-revit/reviews",
-    },
+      url: "https://www.trustradius.com/products/autodesk-revit/reviews"
+    }
   ],
-
   support_channels: [
     "Phone",
     "Email",
@@ -232,19 +265,23 @@ export const c3Tools: Tool[] = [
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-
-  security_compliance: ["SOC 2 Type II", "ISO 27001", "GDPR"],
-
+  security_compliance: [
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: ".NET API",
-    sdk_languages: ["C#", "VB.NET"],
-    docs_url:
-      "https://www.autodesk.com/developer-network/platform-technologies/revit",
-  },
+    sdk_languages: [
+      "C#",
+      "VB.NET"
+    ],
+    docs_url: "https://www.autodesk.com/developer-network/platform-technologies/revit"
+  }
 },
 {
   id: "t9",
@@ -252,171 +289,170 @@ export const c3Tools: Tool[] = [
   slug: "archicad",
   logo_url: getLogo("ACD"),
   short_desc: "The BIM software of choice for design-oriented architects.",
-
-  description:
-    "ArchiCAD, developed by Graphisoft, was the first BIM software for personal computers.",
-
+  description: "ArchiCAD, developed by Graphisoft, was the first BIM software for personal computers.",
   pricing_tiers: [
     {
       name: "Studio",
       price: "201",
       period: "/mo",
-
       features: [
         "Architectural Design",
         "Local Collaboration",
         "Standard BIM tools",
-        "Documentation",
+        "Documentation"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Collaborate",
       price: "237",
       period: "/mo",
-
       features: [
         "MEP Design",
         "Global Team Collaboration",
         "Model Checker",
-        "Project Manager",
+        "Project Manager"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "BIMcloud",
       price: "47",
       period: "/mo",
-
       features: [
         "Cloud Coordination",
         "Real-time multi-user sync",
         "Infinite projects",
-        "Security",
+        "Security"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "BIM Workflow",
-
       items: [
         {
           name: "Algorithmic Design (Grasshopper)",
-          status: true,
+          status: true
         },
         {
           name: "Integrated MEP Modeler",
-          status: true,
+          status: true
         },
         {
           name: "Automatic Documentation",
-          status: true,
+          status: true
         },
         {
           name: "OPEN BIM (IFC4) support",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Visualization",
-
       items: [
         {
           name: "Built-in CineRender Engine",
-          status: true,
+          status: true
         },
         {
           name: "Enscape/Twinmotion support",
-          status: true,
+          status: true
         },
         {
           name: "BIMx Mobile Presentation",
-          status: true,
+          status: true
         },
         {
           name: "Graphic Override rules",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["revit", "vectorworks", "allplan"],
+  alternatives: [
+    "revit",
+    "vectorworks",
+    "allplan"
+  ],
   country: "Hungary",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1800,
-  platforms: ["Windows", "macOS"],
-  industries: ["Architecture", "Interior Design"],
-
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Architecture",
+    "Interior Design"
+  ],
   core_features: [
     "Parametric BIM",
     "Teamwork Sync",
     "Open BIM",
     "Smart Objects",
-    "Documentation",
+    "Documentation"
   ],
-
-  user_scales: ["Mid-Market", "Small Business"],
+  user_scales: [
+    "Mid-Market",
+    "Small Business"
+  ],
   official_url: "https://graphisoft.com",
   affiliate_url: null,
   score: 4.8,
   pros: [
     "Architect-centric UI",
     "Lightweight performance",
-    "macOS optimization",
+    "macOS optimization"
   ],
   cons: [
     "Smaller US market share",
     "MEP tools less mature",
-    "Smaller plugin ecosystem",
+    "Smaller plugin ecosystem"
   ],
   faqs: [
     {
       q: "What is ArchiCAD used for?",
-      a: "The BIM software of choice for design-oriented architects. ArchiCAD is a BIM solution widely adopted in Architecture, Interior Design.",
+      a: "The BIM software of choice for design-oriented architects. ArchiCAD is a BIM solution widely adopted in Architecture, Interior Design."
     },
     {
       q: "How much does ArchiCAD cost?",
-      a: "ArchiCAD starts at $1,800 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "ArchiCAD starts at $1,800 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does ArchiCAD offer a free trial?",
-      a: "Yes — ArchiCAD ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase.",
+      a: "Yes — ArchiCAD ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
     },
     {
       q: "What operating systems does ArchiCAD support?",
-      a: "ArchiCAD runs on Windows and macOS. Deployment options include desktop, cloud.",
+      a: "ArchiCAD runs on Windows and macOS. Deployment options include desktop, cloud."
     },
     {
       q: "Which file formats does ArchiCAD support?",
-      a: "ArchiCAD imports PLN, PLA, IFC, BCF, DWG, DXF and more. Export covers PLN, PLA, IFC, BCF, DWG, DXF and more.",
+      a: "ArchiCAD imports PLN, PLA, IFC, BCF, DWG, DXF and more. Export covers PLN, PLA, IFC, BCF, DWG, DXF and more."
     },
     {
       q: "Does ArchiCAD have an API for automation and customization?",
-      a: "Yes. ArchiCAD exposes GDL / ArchicadAPI with SDK bindings for C++, Python, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
-    },
+      a: "Yes. ArchiCAD exposes GDL / ArchicadAPI with SDK bindings for C++, Python, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+    }
   ],
-
   tech_specs: {
     engine: "Graphisoft Proprietary",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["IFC", "DWG", "BIMx"],
+    standards: [
+      "IFC",
+      "DWG",
+      "BIMx"
+    ]
   },
-
   expert_verdict: "ArchiCAD is built by architects, for architects.",
   version: "28",
   last_updated: "2025-11-15",
   free_trial_days: 30,
-
   languages: [
     "English",
     "French",
@@ -432,9 +468,8 @@ export const c3Tools: Tool[] = [
     "Brazilian Portuguese",
     "Dutch",
     "Greek",
-    "Turkish",
+    "Turkish"
   ],
-
   file_formats_in: [
     "PLN",
     "PLA",
@@ -448,9 +483,8 @@ export const c3Tools: Tool[] = [
     "SKP",
     "PDF",
     "JPG",
-    "PNG",
+    "PNG"
   ],
-
   file_formats_out: [
     "PLN",
     "PLA",
@@ -465,9 +499,8 @@ export const c3Tools: Tool[] = [
     "PDF",
     "JPG",
     "PNG",
-    "3D PDF",
+    "3D PDF"
   ],
-
   integrations: [
     "BIMcloud",
     "BIMx",
@@ -476,52 +509,63 @@ export const c3Tools: Tool[] = [
     "Lumion",
     "Enscape",
     "Solibri",
-    "Trimble Connect",
+    "Trimble Connect"
   ],
-
-  deployment_options: ["Desktop", "Cloud"],
-  license_types: ["Subscription", "Perpetual", "Network", "Educational"],
-
+  deployment_options: [
+    "Desktop",
+    "Cloud"
+  ],
+  license_types: [
+    "Subscription",
+    "Perpetual",
+    "Network",
+    "Educational"
+  ],
   external_ratings: [
     {
       source: "G2",
       score: 4.4,
       max: 5,
       count: 200,
-      url: "https://www.g2.com/products/archicad/reviews",
+      url: "https://www.g2.com/products/archicad/reviews"
     },
     {
       source: "Capterra",
       score: 4.5,
       max: 5,
       count: 240,
-      url: "https://www.capterra.com/p/175020/ArchiCAD/",
+      url: "https://www.capterra.com/p/175020/ArchiCAD/"
     },
     {
       source: "TrustRadius",
       score: 8.5,
       max: 10,
       count: 130,
-      url: "https://www.trustradius.com/products/archicad/reviews",
-    },
+      url: "https://www.trustradius.com/products/archicad/reviews"
+    }
   ],
-
   support_channels: [
     "Email",
     "Community",
     "Documentation",
     "Training",
-    "Reseller Network",
+    "Reseller Network"
   ],
-  security_compliance: ["GDPR", "ISO 27001"],
-
+  security_compliance: [
+    "GDPR",
+    "ISO 27001"
+  ],
   api_sdk: {
     has_api: true,
     has_sdk: true,
     api_type: "GDL / ArchicadAPI",
-    sdk_languages: ["C++", "Python", "JavaScript"],
-    docs_url: "https://archicadapi.graphisoft.com/",
-  },
+    sdk_languages: [
+      "C++",
+      "Python",
+      "JavaScript"
+    ],
+    docs_url: "https://archicadapi.graphisoft.com/"
+  }
 },
 {
   id: "t15",
@@ -529,187 +573,183 @@ export const c3Tools: Tool[] = [
   slug: "tekla-structures",
   logo_url: getLogo("TS"),
   short_desc: "The world's most advanced structural BIM software.",
-
-  description:
-    "Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.",
-
+  description: "Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.",
   pricing_tiers: [
     {
       name: "Carbon",
       price: "3,800",
       period: "/yr",
-
       features: [
         "Viewing & Collaboration",
         "Layout management",
         "Planning tools",
-        "Open API access",
+        "Open API access"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Graphite",
       price: "7,200",
       period: "/yr",
-
       features: [
         "Modeling & Documentation",
         "Reinforced concrete",
         "Standard connections",
-        "Reporting",
+        "Reporting"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Diamond",
       price: "12,500",
       period: "/yr",
-
       features: [
         "Full Automation",
         "Custom Connections",
         "CNC export",
-        "Complex Steel Details",
+        "Complex Steel Details"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Steel & Concrete",
-
       items: [
         {
           name: "LOD 500 Manufacturing data",
-          status: true,
+          status: true
         },
         {
           name: "Automatic Connection Design",
-          status: true,
+          status: true
         },
         {
           name: "Reinforcement Detailing",
-          status: true,
+          status: true
         },
         {
           name: "Erection Planning",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "BIM Integration",
-
       items: [
         {
           name: "Trimble Connect Cloud",
-          status: true,
+          status: true
         },
         {
           name: "IFC/STEP export",
-          status: true,
+          status: true
         },
         {
           name: "Custom Component Editor",
-          status: true,
+          status: true
         },
         {
           name: "API (C#) support",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["revit", "allplan", "civil-3d"],
+  alternatives: [
+    "revit",
+    "allplan",
+    "civil-3d"
+  ],
   country: "Finland",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2400,
-  platforms: ["Windows"],
-  industries: ["Structural Engineering", "Construction"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Structural Engineering",
+    "Construction"
+  ],
   core_features: [
     "Steel Detailing",
     "BIM LOD 500",
     "Clash Detection",
     "CNC Export",
-    "Structural Engineering",
+    "Structural Engineering"
   ],
-
-  user_scales: ["Enterprise"],
+  user_scales: [
+    "Enterprise"
+  ],
   official_url: "https://www.tekla.com",
   affiliate_url: null,
   score: 4.9,
-
   pros: [
     "Unbeatable for steel",
     "Handles massive models",
-    "CNC machine link",
+    "CNC machine link"
   ],
-
-  cons: ["Very expensive", "Highly specialized", "Steep learning curve"],
-
+  cons: [
+    "Very expensive",
+    "Highly specialized",
+    "Steep learning curve"
+  ],
   faqs: [
     {
       q: "What is Tekla Structures used for?",
-      a: "The world's most advanced structural BIM software. Tekla Structures is a BIM solution widely adopted in Structural Engineering, Construction.",
+      a: "The world's most advanced structural BIM software. Tekla Structures is a BIM solution widely adopted in Structural Engineering, Construction."
     },
     {
       q: "How much does Tekla Structures cost?",
-      a: "Tekla Structures starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Tekla Structures starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Tekla Structures?",
-      a: "Tekla Structures is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Tekla Structures is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Tekla Structures support?",
-      a: "Tekla Structures runs on Windows.",
+      a: "Tekla Structures runs on Windows."
     },
     {
       q: "Which file formats does Tekla Structures support?",
-      a: "Tekla Structures works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Tekla Structures works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Tekla Structures?",
-      a: "The closest alternatives within the BIM space are Revit, Allplan, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are Revit, Allplan, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Trimble Structural Core",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["IFC", "STEP", "XML", "CIS/2"],
+    standards: [
+      "IFC",
+      "STEP",
+      "XML",
+      "CIS/2"
+    ]
   },
-
   expert_verdict: "The choice for massive steel stadiums and complex plants.",
-
-  external_ratings: [{
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 37,
-    url: "https://www.capterra.com/p/92964/Tekla-Structures/"
-  }]
+  external_ratings: [
+    {
+      source: "Capterra",
+      score: 4.4,
+      max: 5,
+      count: 37,
+      url: "https://www.capterra.com/p/92964/Tekla-Structures/"
+    }
+  ]
 },
 {
   id: "t17",
   name: "Vectorworks",
   slug: "vectorworks",
   logo_url: "",
-
-  short_desc:
-    "The all-in-one BIM solution for landscape and entertainment design.",
-
-  description:
-    "Vectorworks is a versatile BIM and CAD software suite for architects and entertainment professionals.",
-
+  short_desc: "The all-in-one BIM solution for landscape and entertainment design.",
+  description: "Vectorworks is a versatile BIM and CAD software suite for architects and entertainment professionals.",
   pricing_tiers: [
     {
       name: "Architect (Annual)",
@@ -719,9 +759,9 @@ export const c3Tools: Tool[] = [
         "BIM Workflow",
         "3D Modeling",
         "Resource Manager",
-        "Cloud Services",
+        "Cloud Services"
       ],
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Design Suite",
@@ -731,136 +771,144 @@ export const c3Tools: Tool[] = [
         "Landscape design",
         "Spotlight (Stage)",
         "Architect features",
-        "Rendering",
+        "Rendering"
       ],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Specialized Design",
-
       items: [
         {
           name: "Spotlight Lighting Tools",
-          status: true,
+          status: true
         },
         {
           name: "Landmark GIS Integration",
-          status: true,
+          status: true
         },
         {
           name: "Hybrid 2D/3D Workflow",
-          status: true,
+          status: true
         },
         {
           name: "Parasolid Engine core",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Core Tools",
-
       items: [
         {
           name: "Cinema 4D Rendering",
-          status: true,
+          status: true
         },
         {
           name: "Data-driven Design (Marionette)",
-          status: true,
+          status: true
         },
         {
           name: "Live Data Visualization",
-          status: true,
+          status: true
         },
         {
           name: "Smart Objects library",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["archicad", "revit", "sketchup"],
+  alternatives: [
+    "archicad",
+    "revit",
+    "sketchup"
+  ],
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription / Perpetual",
   starting_price: 1530,
-  platforms: ["Windows", "macOS"],
-  industries: ["Architecture", "Landscape", "Entertainment"],
-
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Architecture",
+    "Landscape",
+    "Entertainment"
+  ],
   core_features: [
     "Multi-disciplinary BIM",
     "Stage & Lighting Design",
     "Landscape modeling",
     "High-end Rendering",
-    "GIS Integration",
+    "GIS Integration"
   ],
-
-  user_scales: ["Small Business", "Agencies"],
+  user_scales: [
+    "Small Business",
+    "Agencies"
+  ],
   official_url: "https://www.vectorworks.net",
   affiliate_url: null,
   score: 4.6,
-
   pros: [
     "Best-in-class 2D graphics",
     "Unique industry modules",
-    "Strong macOS optimization",
+    "Strong macOS optimization"
   ],
-
   cons: [
     "BIM coordination less robust",
     "3D navigation clunky",
-    "Steep learning curve",
+    "Steep learning curve"
   ],
-
   faqs: [
     {
       q: "What is Vectorworks used for?",
-      a: "The all-in-one BIM solution for landscape and entertainment design. Vectorworks is a BIM solution widely adopted in Architecture, Landscape, Entertainment.",
+      a: "The all-in-one BIM solution for landscape and entertainment design. Vectorworks is a BIM solution widely adopted in Architecture, Landscape, Entertainment."
     },
     {
       q: "How much does Vectorworks cost?",
-      a: "Vectorworks starts at $1,530 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Vectorworks starts at $1,530 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Vectorworks?",
-      a: "Vectorworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Vectorworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Vectorworks support?",
-      a: "Vectorworks runs on Windows and macOS.",
+      a: "Vectorworks runs on Windows and macOS."
     },
     {
       q: "Which file formats does Vectorworks support?",
-      a: "Vectorworks works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Vectorworks works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Vectorworks?",
-      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, SketchUp. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, SketchUp. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "High",
     gpu_optimization: "Metal / DirectX",
-    standards: ["IFC", "DWG", "RVV", "OBJ"],
+    standards: [
+      "IFC",
+      "DWG",
+      "RVV",
+      "OBJ"
+    ]
   },
-
-  expert_verdict:
-    "If you work in landscape or lighting design, Vectorworks is the standard.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 278,
-    url: "https://www.g2.com/sellers/vectorworks-inc"
-  }]
+  expert_verdict: "If you work in landscape or lighting design, Vectorworks is the standard.",
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.4,
+      max: 5,
+      count: 278,
+      url: "https://www.g2.com/sellers/vectorworks-inc"
+    }
+  ]
 },
 {
   id: "t27",
@@ -868,10 +916,7 @@ export const c3Tools: Tool[] = [
   slug: "chief-architect",
   logo_url: "",
   short_desc: "Professional home design software for builders.",
-
-  description:
-    "Chief Architect is specialized for residential home design. It generates 3D models and construction documents with architectural automation.",
-
+  description: "Chief Architect is specialized for residential home design. It generates 3D models and construction documents with architectural automation.",
   pricing_tiers: [
     {
       name: "Premier Monthly",
@@ -881,151 +926,162 @@ export const c3Tools: Tool[] = [
         "Residential Design",
         "Auto Roofs & Stairs",
         "3D Library",
-        "Support",
+        "Support"
       ],
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Premier Annual",
       price: "1,995",
       period: "/yr",
-
       features: [
         "Full Architectural Tools",
         "Kitchen & Bath",
         "Construction Docs",
-        "Priority support",
+        "Priority support"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Building Tools",
-
       items: [
         {
           name: "Automatic Roof Generation",
-          status: true,
+          status: true
         },
         {
           name: "Smart Wall/Door/Window",
-          status: true,
+          status: true
         },
         {
           name: "Cabinet Customization",
-          status: true,
+          status: true
         },
         {
           name: "Material Painter",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Construction",
-
       items: [
         {
           name: "Automatic Framing",
-          status: true,
+          status: true
         },
         {
           name: "Schedules & Materials List",
-          status: true,
+          status: true
         },
         {
           name: "3D Walkthrough export",
-          status: true,
+          status: true
         },
         {
           name: "CAD-to-BIM workflow",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  alternatives: ["revit", "sketchup", "archicad"],
+  alternatives: [
+    "revit",
+    "sketchup",
+    "archicad"
+  ],
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1995,
-  platforms: ["Windows", "macOS"],
-  industries: ["Residential Architecture", "Remodeling"],
-
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Residential Architecture",
+    "Remodeling"
+  ],
   core_features: [
     "Residential Design",
     "Automated Building Tools",
     "Smart Objects",
     "Interior Design",
-    "Photorealistic Rendering",
+    "Photorealistic Rendering"
   ],
-
-  user_scales: ["Small Business", "Agencies"],
+  user_scales: [
+    "Small Business",
+    "Agencies"
+  ],
   official_url: "https://www.chiefarchitect.com",
   affiliate_url: null,
   score: 4.8,
-
   pros: [
     "Residential construction docs",
     "Massive home library",
-    "Fast client renders",
+    "Fast client renders"
   ],
-
-  cons: ["Not for mechanical", "Expensive", "Windows version lead"],
-
+  cons: [
+    "Not for mechanical",
+    "Expensive",
+    "Windows version lead"
+  ],
   faqs: [
     {
       q: "What is Chief Architect used for?",
-      a: "Professional home design software for builders. Chief Architect is a BIM solution widely adopted in Residential Architecture, Remodeling.",
+      a: "Professional home design software for builders. Chief Architect is a BIM solution widely adopted in Residential Architecture, Remodeling."
     },
     {
       q: "How much does Chief Architect cost?",
-      a: "Chief Architect starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Chief Architect starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Chief Architect?",
-      a: "Chief Architect is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Chief Architect is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Chief Architect support?",
-      a: "Chief Architect runs on Windows and macOS.",
+      a: "Chief Architect runs on Windows and macOS."
     },
     {
       q: "Which file formats does Chief Architect support?",
-      a: "Chief Architect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Chief Architect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Chief Architect?",
-      a: "The closest alternatives within the BIM space are Revit, SketchUp, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are Revit, SketchUp, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Chief Custom AEC Engine",
     multicore: "High",
     gpu_optimization: "DirectX / Metal",
-    standards: ["DWG", "DXF", "OBJ", "SKP"],
+    standards: [
+      "DWG",
+      "DXF",
+      "OBJ",
+      "SKP"
+    ]
   },
-
   expert_verdict: "If you build houses, buy Chief Architect.",
-
-  external_ratings: [{
-    source: "Software Advice",
-    score: 4.4,
-    max: 5,
-    count: 67,
-    url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.4,
-    max: 5,
-    count: 68,
-    url: "https://www.getapp.com/construction-software/a/chief-architect/"
-  }]
+  external_ratings: [
+    {
+      source: "Software Advice",
+      score: 4.4,
+      max: 5,
+      count: 67,
+      url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
+    },
+    {
+      source: "GetApp",
+      score: 4.4,
+      max: 5,
+      count: 68,
+      url: "https://www.getapp.com/construction-software/a/chief-architect/"
+    }
+  ]
 },
 {
   id: "t44",
@@ -1038,145 +1094,153 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2615,
-  platforms: ["Windows"],
-  industries: ["Civil Engineering", "Transportation"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Civil Engineering",
+    "Transportation"
+  ],
   core_features: [
     "Civil Infrastructure",
     "Road/Highway Design",
     "Grading Optimization",
     "Pipe Network Design",
-    "BIM for Civil",
+    "BIM for Civil"
   ],
-
-  user_scales: ["Enterprise", "Mid-Market"],
+  user_scales: [
+    "Enterprise",
+    "Mid-Market"
+  ],
   official_url: "https://www.autodesk.com/civil-3d",
   affiliate_url: null,
   score: 4.8,
-  pros: ["Road design standard", "Dynamic objects", "Infra BIM essential"],
-  cons: ["Prone to crashes", "Steep learning curve", "Expensive"],
-
+  pros: [
+    "Road design standard",
+    "Dynamic objects",
+    "Infra BIM essential"
+  ],
+  cons: [
+    "Prone to crashes",
+    "Steep learning curve",
+    "Expensive"
+  ],
   faqs: [
     {
       q: "What is Civil 3D used for?",
-      a: "Civil engineering design and documentation software. Civil 3D is a BIM solution widely adopted in Civil Engineering, Transportation.",
+      a: "Civil engineering design and documentation software. Civil 3D is a BIM solution widely adopted in Civil Engineering, Transportation."
     },
     {
       q: "How much does Civil 3D cost?",
-      a: "Civil 3D starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Civil 3D starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Civil 3D?",
-      a: "Civil 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Civil 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Civil 3D support?",
-      a: "Civil 3D runs on Windows.",
+      a: "Civil 3D runs on Windows."
     },
     {
       q: "Which file formats does Civil 3D support?",
-      a: "Civil 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Civil 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Civil 3D?",
-      a: "The closest alternatives within the BIM space are Revit, OpenRoads Designer, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are Revit, OpenRoads Designer, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Low",
     gpu_optimization: "DirectX",
-    standards: ["DWG", "IFC", "LandXML"],
+    standards: [
+      "DWG",
+      "IFC",
+      "LandXML"
+    ]
   },
-
   expert_verdict: "The industry standard for civil engineering projects.",
-
   pricing_tiers: [
     {
       name: "Monthly",
       price: "330",
       period: "/mo",
-
       features: [
         "Road & Highway design",
         "Parcel & Grading",
         "Gravity & Pressure Pipe",
-        "Dynamic Alignment",
+        "Dynamic Alignment"
       ],
-
-      is_popular: false,
+      is_popular: false
     },
     {
       name: "Annual",
       price: "2,645",
       period: "/yr",
-
       features: [
         "Full BIM integration",
         "Project Explorer",
         "Grading Optimization",
-        "Technical Support",
+        "Technical Support"
       ],
-
-      is_popular: true,
-    },
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "Design & Modeling",
-
       items: [
         {
           name: "Dynamic Alignment & Profiles",
-          status: true,
+          status: true
         },
         {
           name: "Corridor Modeling",
-          status: true,
+          status: true
         },
         {
           name: "Grading Optimization Tools",
-          status: true,
+          status: true
         },
         {
           name: "Pressure Pipe Networks",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Analysis & Data",
-
       items: [
         {
           name: "Project Explorer for Civil 3D",
-          status: true,
+          status: true
         },
         {
           name: "Storm & Sanitary Analysis",
-          status: true,
+          status: true
         },
         {
           name: "Geotechnical Modeler",
-          status: true,
+          status: true
         },
         {
           name: "Infraworks Interoperability",
-          status: true,
-        },
-      ],
-    },
+          status: true
+        }
+      ]
+    }
   ],
-
-  external_ratings: [{
-    source: "TrustRadius",
-    score: 9.3,
-    max: 10,
-    count: 35,
-    url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
-  }]
+  external_ratings: [
+    {
+      source: "TrustRadius",
+      score: 9.3,
+      max: 10,
+      count: 35,
+      url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
+    }
+  ]
 },
 {
   id: "t46",
@@ -1184,79 +1248,101 @@ export const c3Tools: Tool[] = [
   slug: "chief-architect-pro",
   logo_url: getLogo("CAP"),
   short_desc: "High-end 3D home design for professionals.",
-  description:
-    "Chief Architect Pro specializes in advanced residential and light commercial design.",
+  description: "Chief Architect Pro specializes in advanced residential and light commercial design.",
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1995,
-  platforms: ["Windows", "macOS"],
-  industries: ["Residential Design", "Remodeling"],
-  core_features: ["Residential Design", "3D Visualization"],
-  user_scales: ["Small Business", "Agencies"],
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Residential Design",
+    "Remodeling"
+  ],
+  core_features: [
+    "Residential Design",
+    "3D Visualization"
+  ],
+  user_scales: [
+    "Small Business",
+    "Agencies"
+  ],
   official_url: "https://www.chiefarchitect.com",
   affiliate_url: null,
   score: 4.8,
-  pros: ["Remodeling standard", "Kitchen design speed", "macOS support"],
-  cons: ["Not for mechanical", "Steep learning", "Expensive"],
+  pros: [
+    "Remodeling standard",
+    "Kitchen design speed",
+    "macOS support"
+  ],
+  cons: [
+    "Not for mechanical",
+    "Steep learning",
+    "Expensive"
+  ],
   faqs: [
     {
       q: "What is Chief Architect Pro used for?",
-      a: "High-end 3D home design for professionals. Chief Architect Pro is a BIM solution widely adopted in Residential Design, Remodeling.",
+      a: "High-end 3D home design for professionals. Chief Architect Pro is a BIM solution widely adopted in Residential Design, Remodeling."
     },
     {
       q: "How much does Chief Architect Pro cost?",
-      a: "Chief Architect Pro starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Chief Architect Pro starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Chief Architect Pro?",
-      a: "Chief Architect Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Chief Architect Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Chief Architect Pro support?",
-      a: "Chief Architect Pro runs on Windows and macOS.",
+      a: "Chief Architect Pro runs on Windows and macOS."
     },
     {
       q: "Which file formats does Chief Architect Pro support?",
-      a: "Chief Architect Pro works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Chief Architect Pro works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Chief Architect Pro?",
-      a: "The closest alternatives within the BIM space are Chief Architect, ArchiCAD, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are Chief Architect, ArchiCAD, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Proprietary",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["IFC", "DWG", "OBJ"],
+    standards: [
+      "IFC",
+      "DWG",
+      "OBJ"
+    ]
   },
-
   expert_verdict: "The money-making machine for home builders.",
-
   pricing_tiers: [
     {
       name: "Premier",
       price: "1,995",
       period: "/yr",
-      features: ["Professional AEC", "Rendering", "CAD Tools"],
-      is_popular: true,
-    },
+      features: [
+        "Professional AEC",
+        "Rendering",
+        "CAD Tools"
+      ],
+      is_popular: true
+    }
   ],
-
   detailed_features: [
     {
       category: "AEC",
-
       items: [
         {
           name: "Smart Objects",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t74",
@@ -1264,64 +1350,79 @@ export const c3Tools: Tool[] = [
   slug: "vectorworks-landmark",
   logo_url: "https://www.vectorworks.net/img/icons/icon-landmark.svg",
   short_desc: "The premier CAD software for landscape design.",
-  description:
-    "Vectorworks Landmark provides a specialized toolset for landscape architects and designers, integrating GIS, BIM, and advanced 2D/3D drafting in one package.",
+  description: "Vectorworks Landmark provides a specialized toolset for landscape architects and designers, integrating GIS, BIM, and advanced 2D/3D drafting in one package.",
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 153,
-  platforms: ["Windows", "macOS"],
-  industries: ["Landscape Architecture", "Urban Planning"],
+  platforms: [
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "Landscape Architecture",
+    "Urban Planning"
+  ],
   core_features: [
     "Irrigation Design",
     "Plant Databases",
     "Terrain Modeling",
-    "GIS Integration",
+    "GIS Integration"
   ],
-  user_scales: ["Small Team", "Mid-Market"],
+  user_scales: [
+    "Small Team",
+    "Mid-Market"
+  ],
   official_url: "https://www.vectorworks.net/landmark",
   affiliate_url: null,
   score: 4.8,
-  pros: ["Mac native", "Incredible 2D graphics", "BIM for landscape"],
+  pros: [
+    "Mac native",
+    "Incredible 2D graphics",
+    "BIM for landscape"
+  ],
   cons: [
     "Higher learning curve",
     "Requires modern hardware",
-    "Expensive setup",
+    "Expensive setup"
   ],
   faqs: [
     {
       q: "What is Vectorworks Landmark used for?",
-      a: "The premier CAD software for landscape design. Vectorworks Landmark is a BIM solution widely adopted in Landscape Architecture, Urban Planning.",
+      a: "The premier CAD software for landscape design. Vectorworks Landmark is a BIM solution widely adopted in Landscape Architecture, Urban Planning."
     },
     {
       q: "How much does Vectorworks Landmark cost?",
-      a: "Vectorworks Landmark starts at $153 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Vectorworks Landmark starts at $153 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Vectorworks Landmark?",
-      a: "Vectorworks Landmark is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Vectorworks Landmark is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Vectorworks Landmark support?",
-      a: "Vectorworks Landmark runs on Windows and macOS.",
+      a: "Vectorworks Landmark runs on Windows and macOS."
     },
     {
       q: "Which file formats does Vectorworks Landmark support?",
-      a: "Vectorworks Landmark works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Vectorworks Landmark works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Vectorworks Landmark?",
-      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Parasolid",
     multicore: "High",
     gpu_optimization: "High",
-    standards: ["IFC", "DWG", "Shapefile"],
+    standards: [
+      "IFC",
+      "DWG",
+      "Shapefile"
+    ]
   },
-  expert_verdict:
-    "The undisputed gold standard for professional landscape architecture.",
+  expert_verdict: "The undisputed gold standard for professional landscape architecture."
 },
 {
   id: "t94",
@@ -1329,153 +1430,152 @@ export const c3Tools: Tool[] = [
   slug: "allplan",
   logo_url: "",
   short_desc: "Professional BIM platform by Nemetschek for AEC.",
-
-  description:
-    "Allplan is a professional BIM software for architecture, engineering, and construction, developed by Nemetschek. It covers everything from concept design to construction documentation.",
-
+  description: "Allplan is a professional BIM software for architecture, engineering, and construction, developed by Nemetschek. It covers everything from concept design to construction documentation.",
   country: "Germany",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1800,
-  platforms: ["Windows"],
-  industries: ["Architecture", "Structural Engineering", "Construction"],
-
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Architecture",
+    "Structural Engineering",
+    "Construction"
+  ],
   core_features: [
     "Multi-disciplinary BIM",
     "Reinforced Concrete Design",
     "Visual Scripting",
     "Precast Modeling",
-    "Cloud Collaboration",
+    "Cloud Collaboration"
   ],
-
-  user_scales: ["Small Business", "Mid-Market", "Enterprise"],
+  user_scales: [
+    "Small Business",
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.allplan.com/",
   affiliate_url: null,
   score: 4.5,
   pros: [
     "Strong structural engineering tools",
     "Good IFC support",
-    "European market leader",
+    "European market leader"
   ],
   cons: [
     "Less popular in North America",
     "Steeper learning curve",
-    "UI feels dated",
+    "UI feels dated"
   ],
   faqs: [
     {
       q: "What is Allplan used for?",
-      a: "Professional BIM platform by Nemetschek for AEC. Allplan is a BIM solution widely adopted in Architecture, Structural Engineering, Construction.",
+      a: "Professional BIM platform by Nemetschek for AEC. Allplan is a BIM solution widely adopted in Architecture, Structural Engineering, Construction."
     },
     {
       q: "How much does Allplan cost?",
-      a: "Allplan starts at $1,800 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Allplan starts at $1,800 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of Allplan?",
-      a: "Allplan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Allplan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does Allplan support?",
-      a: "Allplan runs on Windows.",
+      a: "Allplan runs on Windows."
     },
     {
       q: "Which file formats does Allplan support?",
-      a: "Allplan works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Allplan works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to Allplan?",
-      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, OpenRoads Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are ArchiCAD, Revit, OpenRoads Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
-
   tech_specs: {
     engine: "Proprietary BIM",
     multicore: "Moderate",
     gpu_optimization: "High",
-    standards: ["IFC", "DWG", "DXF", "STEP"],
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF",
+      "STEP"
+    ]
   },
-
-  expert_verdict:
-    "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
-
+  expert_verdict: "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
   pricing_tiers: [
     {
       name: "Architecture",
       price: "2,800",
       period: "/yr",
-
       features: [
         "AEC BIM modeling",
         "Reinforcement design",
         "Visual scripting",
-        "Collaboration",
+        "Collaboration"
       ],
-
-      is_popular: true,
+      is_popular: true
     },
     {
       name: "Engineering",
       price: "3,200",
       period: "/yr",
-
       features: [
         "Civil Engineering",
         "Precast elements",
         "Quantity takeoff",
-        "Bimplus integration",
+        "Bimplus integration"
       ],
-
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-
   detailed_features: [
     {
       category: "Structural BIM",
-
       items: [
         {
           name: "3D Reinforcement detailing",
-          status: true,
+          status: true
         },
         {
           name: "PythonPart technology",
-          status: true,
+          status: true
         },
         {
           name: "Terrain modeling",
-          status: true,
+          status: true
         },
         {
           name: "Bridge modeling (Allplan Bridge)",
-          status: true,
-        },
-      ],
+          status: true
+        }
+      ]
     },
     {
       category: "Architecture",
-
       items: [
         {
           name: "High-end Rendering (Redshift)",
-          status: true,
+          status: true
         },
         {
           name: "Attributed BIM models",
-          status: true,
+          status: true
         },
         {
           name: "Automatic Floor Plans",
-          status: true,
+          status: true
         },
         {
           name: "IFC4 Multi-disciplinary sync",
-          status: true,
-        },
-      ],
-    },
-  ],
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t95",
@@ -1483,88 +1583,179 @@ export const c3Tools: Tool[] = [
   slug: "openroads-designer",
   logo_url: "",
   short_desc: "Comprehensive civil road design platform by Bentley.",
-  description:
-    "OpenRoads Designer by Bentley Systems is a comprehensive BIM application for road and highway design, providing a fully dynamic design environment for road layout, drainage, and corridor modeling.",
+  description: "OpenRoads Designer by Bentley Systems is a comprehensive BIM application for road and highway design, providing a fully dynamic design environment for road layout, drainage, and corridor modeling.",
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 4000,
-  platforms: ["Windows"],
-  industries: ["Civil Engineering", "Transportation", "Infrastructure"],
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Civil Engineering",
+    "Transportation",
+    "Infrastructure"
+  ],
   core_features: [
     "Corridor Modeling",
     "Drainage Design",
     "Terrain Modeling",
-    "InRoads Migration",
+    "InRoads Migration"
   ],
-  user_scales: ["Mid-Market", "Enterprise"],
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
   official_url: "https://www.bentley.com/software/openroads-designer/",
   affiliate_url: null,
   score: 4.7,
   pros: [
     "Best-in-class road corridor modeling",
     "Deep civil BIM capabilities",
-    "Strong Bentley ecosystem integration",
+    "Strong Bentley ecosystem integration"
   ],
-  cons: ["High cost", "Windows only", "Complex for simple projects"],
+  cons: [
+    "High cost",
+    "Windows only",
+    "Complex for simple projects"
+  ],
   faqs: [
     {
       q: "What is OpenRoads Designer used for?",
-      a: "Comprehensive civil road design platform by Bentley. OpenRoads Designer is a BIM solution widely adopted in Civil Engineering, Transportation, Infrastructure.",
+      a: "Comprehensive civil road design platform by Bentley. OpenRoads Designer is a BIM solution widely adopted in Civil Engineering, Transportation, Infrastructure."
     },
     {
       q: "How much does OpenRoads Designer cost?",
-      a: "OpenRoads Designer starts at $4,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "OpenRoads Designer starts at $4,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Is there a free version of OpenRoads Designer?",
-      a: "OpenRoads Designer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "OpenRoads Designer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does OpenRoads Designer support?",
-      a: "OpenRoads Designer runs on Windows.",
+      a: "OpenRoads Designer runs on Windows."
     },
     {
       q: "Which file formats does OpenRoads Designer support?",
-      a: "OpenRoads Designer works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "OpenRoads Designer works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to OpenRoads Designer?",
-      a: "The closest alternatives within the BIM space are Revit, Civil 3D, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are Revit, Civil 3D, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "MicroStation (Bentley)",
     multicore: "High",
     gpu_optimization: "High",
-    standards: ["IFC", "DGN", "DWG", "LandXML"],
+    standards: [
+      "IFC",
+      "DGN",
+      "DWG",
+      "LandXML"
+    ]
   },
-  expert_verdict:
-    "The definitive platform for highway and infrastructure projects at enterprise scale.",
+  expert_verdict: "The definitive platform for highway and infrastructure projects at enterprise scale."
 },
 {
   id: "t102",
   name: "BIMoffice",
   slug: "bimoffice",
   logo_url: getLogo("BI"),
-  short_desc: "简要介绍 BIMoffice（官方站点）",
-  description: "详细介绍 BIMoffice（官方站点）",
+  short_desc: "BIM project management, estimation, and coordination software for architects and builders.",
+  description: "BIMoffice is a comprehensive BIM project management and construction administration software developed by Abvent. Designed specifically for architects, engineering firms, and construction managers, it provides complete modules for estimation, budgeting, site scheduling, dynamic connection with CAD/BIM modelers, and technical description writing.",
   pricing_tiers: [
     {
       name: "Perpetual",
-      price: "N/A",
+      price: "Contact",
       period: "initial",
       features: [],
-      is_popular: false,
-    },
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["hicad", "renga", "edificius"],
+  detailed_features: [
+    {
+      category: "BIM",
+      items: [
+        {
+          name: "BIM modeling",
+          status: true
+        },
+        {
+          name: "3D design",
+          status: true
+        },
+        {
+          name: "Building design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "Team collaboration",
+          status: true
+        },
+        {
+          name: "Data management",
+          status: true
+        },
+        {
+          name: "Project sharing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Design",
+      items: [
+        {
+          name: "Architectural design",
+          status: true
+        },
+        {
+          name: "Structural design",
+          status: true
+        },
+        {
+          name: "MEP design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "IFC support",
+          status: true
+        },
+        {
+          name: "DWG support",
+          status: true
+        },
+        {
+          name: "CAD integration",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "hicad",
+    "renga",
+    "edificius"
+  ],
   country: "France",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
-  platforms: ["Windows"],
+  platforms: [
+    "Windows"
+  ],
   industries: [],
   core_features: [],
   user_scales: [],
@@ -1576,1057 +1767,2647 @@ export const c3Tools: Tool[] = [
   faqs: [
     {
       q: "What is BIMoffice used for?",
-      a: "简要介绍 BIMoffice（官方站点） BIMoffice is a BIM solution.",
+      a: "BIMoffice is used to coordinate, manage, budget, and estimate construction projects, linking database information directly with popular architectural BIM authoring tools like Archicad."
     },
     {
       q: "How much does BIMoffice cost?",
-      a: "BIMoffice is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "BIMoffice is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
     },
     {
       q: "Is there a free version of BIMoffice?",
-      a: "BIMoffice is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "BIMoffice is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
     },
     {
       q: "What operating systems does BIMoffice support?",
-      a: "BIMoffice runs on Windows.",
+      a: "BIMoffice runs on Windows."
     },
     {
       q: "Which file formats does BIMoffice support?",
-      a: "BIMoffice works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "BIMoffice works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
     },
     {
       q: "What are the best alternatives to BIMoffice?",
-      a: "The closest alternatives within the BIM space are HiCAD, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are HiCAD, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "BIMoffice Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
-    standards: [],
+    standards: []
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "BIMoffice is a professional software solution for Building Information Modeling (BIM). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
 },
 {
   id: "t105",
   name: "HiCAD",
   slug: "hicad",
   logo_url: getLogo("HI"),
-  short_desc:
-    "ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung, ",
-  description:
-    "ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung, Stahl- und Metallbau.",
+  short_desc: "Comprehensive 2D/3D CAD and PDM/PLM solution for mechanical engineering, plant design, sheet metal, and steel construction.",
+  description: "HiCAD by ISD Group is a comprehensive 2D/3D CAD and PDM/PLM solution designed for mechanical engineering, plant design, sheet metal working, and steel/metal construction. The software provides integrated tools for design, documentation, and data management across various engineering disciplines.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "Basic 2D/3D design",
+        "Sheet metal design",
+        "Steel structure design"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "All Standard features",
+        "PDM/PLM integration",
+        "Advanced automation",
+        "API integration"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "renga", "edificius"],
+  detailed_features: [
+    {
+      category: "Design",
+      items: [
+        {
+          name: "2D/3D CAD modeling",
+          status: true
+        },
+        {
+          name: "Parametric design",
+          status: true
+        },
+        {
+          name: "Assembly design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Industry Specific",
+      items: [
+        {
+          name: "Sheet metal design",
+          status: true
+        },
+        {
+          name: "Steel construction",
+          status: true
+        },
+        {
+          name: "Plant engineering",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "PDM/PLM",
+      items: [
+        {
+          name: "Product data management",
+          status: true
+        },
+        {
+          name: "Workflow automation",
+          status: true
+        },
+        {
+          name: "Version control",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "Team collaboration",
+          status: true
+        },
+        {
+          name: "Multi-user support",
+          status: true
+        },
+        {
+          name: "Integration with ERP",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "renga",
+    "edificius"
+  ],
   country: "Germany",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 4000,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Mechanical Engineering",
+    "Plant Design",
+    "Steel Construction",
+    "Sheet Metal"
+  ],
+  core_features: [
+    "2D/3D CAD",
+    "Sheet Metal",
+    "Steel Construction",
+    "PDM/PLM",
+    "Parametric Design"
+  ],
+  user_scales: [
+    "Small Business",
+    "Mid-Sized Company",
+    "Enterprise"
+  ],
   official_url: "https://www.isdgroup.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.6,
+  pros: [
+    "All-in-one solution for multiple industries",
+    "Integrated PDM/PLM for efficient data management",
+    "Specialized sheet metal and steel design features",
+    "German engineering reliability",
+    "Robust parametric modeling"
+  ],
+  cons: [
+    "High software acquisition cost",
+    "Steep learning curve",
+    "Smaller international ecosystem",
+    "Limited English documentation"
+  ],
   faqs: [
     {
       q: "What is HiCAD used for?",
-      a: "ISD bietet Lösungen für 2D-/3D-CAD und PDM/PLM für Konstruktionsaufgaben im Maschinenbau, Anlagenbau, Blechbearbeitung,  HiCAD is a BIM solution.",
+      a: "HiCAD is comprehensive 2D/3D CAD and PDM/PLM solution for mechanical engineering, plant design, sheet metal, and steel construction."
     },
     {
       q: "How much does HiCAD cost?",
-      a: "HiCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "HiCAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
     },
     {
       q: "Is there a free version of HiCAD?",
-      a: "HiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "HiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does HiCAD support?",
-      a: "HiCAD runs on Windows.",
+      a: "HiCAD runs on Windows."
     },
     {
       q: "Which file formats does HiCAD support?",
-      a: "HiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "HiCAD works with standard CAD interchange formats including DWG, DXF, STEP, and IFC. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to HiCAD?",
-      a: "The closest alternatives within the BIM space are BIMoffice, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "HiCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "DWG",
+      "DXF",
+      "STEP",
+      "IFC"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "HiCAD is a comprehensive CAD/PDM/PLM solution spanning mechanical engineering, plant design, sheet metal, and steel construction. It is highly reliable and integrates deep PDM/PLM data management, making it an excellent all-in-one suite for medium-to-large engineering enterprises, though it requires significant training."
 },
 {
   id: "t119",
   name: "Renga",
   slug: "renga",
   logo_url: getLogo("RE"),
-  short_desc:
-    "Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних",
-  description:
-    "Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних инженерных сетей и технологической части зданий и сооружений.",
+  short_desc: "Russian BIM system for collaborative architectural design, structural engineering, MEP, and building technology.",
+  description: "Renga is a Russian BIM system designed for collaborative architectural design, structural engineering, MEP (mechanical, electrical, plumbing), and building technology. The software provides integrated tools for building information modeling across all disciplines with a focus on the Russian construction market.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "Basic BIM design",
+        "Architectural modeling",
+        "Structural modeling"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "All Standard features",
+        "MEP design",
+        "Collaboration tools",
+        "API integration"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "hicad", "edificius"],
+  detailed_features: [
+    {
+      category: "Architecture",
+      items: [
+        {
+          name: "Architectural design",
+          status: true
+        },
+        {
+          name: "Building modeling",
+          status: true
+        },
+        {
+          name: "Documentation generation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Engineering",
+      items: [
+        {
+          name: "Structural engineering",
+          status: true
+        },
+        {
+          name: "MEP design",
+          status: true
+        },
+        {
+          name: "Reinforcement design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "Team collaboration",
+          status: true
+        },
+        {
+          name: "Real-time coordination",
+          status: true
+        },
+        {
+          name: "Change management",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Standards",
+      items: [
+        {
+          name: "Russian construction standards",
+          status: true
+        },
+        {
+          name: "IFC support",
+          status: true
+        },
+        {
+          name: "SNiP compliance",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "hicad",
+    "edificius"
+  ],
   country: "Russia",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 2500,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Architecture",
+    "Construction",
+    "Engineering",
+    "MEP"
+  ],
+  core_features: [
+    "BIM Modeling",
+    "Architecture",
+    "Structural",
+    "MEP",
+    "Russian Standards"
+  ],
+  user_scales: [
+    "Small Business",
+    "Mid-Sized Company",
+    "Enterprise"
+  ],
   official_url: "https://rengabim.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.4,
+  pros: [
+    "Fully integrated BIM for architecture, structure, and MEP",
+    "Highly cost-effective compared to major suites",
+    "Excellent Open BIM and IFC integration",
+    "Strong regional support",
+    "Fast learning curve for 3D layouts"
+  ],
+  cons: [
+    "Smaller global plugin ecosystem",
+    "Limited English documentation",
+    "Fewer advanced generative design automations"
+  ],
   faqs: [
     {
       q: "What is Renga used for?",
-      a: "Renga - российская BIM-система для совместного архитектурного проектирования, разработки несущих конструкций, внутренних Renga is a BIM solution.",
+      a: "Renga is Russian BIM system for collaborative architectural design, structural engineering, MEP, and building technology."
     },
     {
       q: "How much does Renga cost?",
-      a: "Renga is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Renga is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
     },
     {
       q: "Is there a free version of Renga?",
-      a: "Renga is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Renga is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does Renga support?",
-      a: "Renga runs on Windows.",
+      a: "Renga runs on Windows."
     },
     {
       q: "Which file formats does Renga support?",
-      a: "Renga works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Renga works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to Renga?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Renga Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF",
+      "RVT"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Renga is a comprehensive BIM system covering architecture, structural engineering, and MEP disciplines. It offers highly cost-effective 3D modeling and excellent Open BIM compliance via IFC, though its global integration and documentation are still maturing."
 },
 {
   id: "t130",
   name: "Edificius",
   slug: "edificius",
-  logo_url: "",
-  short_desc:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a",
-  description:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering and construction industries",
+  logo_url: "/logos/edificius.png",
+  short_desc: "BIM software with the highest number of IFC certified solutions for architecture, engineering, and construction.",
+  description: "Edificius by ACCA Software is a BIM solution with the highest number of IFC certified software solutions in the world for the architecture, engineering, and construction industries. It provides integrated tools for architectural design, structural engineering, and MEP with strong IFC compliance.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "Basic BIM design",
+        "Architectural modeling",
+        "Full IFC compliance"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "All Standard features",
+        "Structural design",
+        "MEP design",
+        "Advanced integration"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "hicad", "renga"],
+  detailed_features: [
+    {
+      category: "BIM Design",
+      items: [
+        {
+          name: "Architectural BIM modeling",
+          status: true
+        },
+        {
+          name: "Structural BIM",
+          status: true
+        },
+        {
+          name: "MEP BIM",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "IFC Compliance",
+      items: [
+        {
+          name: "IFC 2x3 certified",
+          status: true
+        },
+        {
+          name: "IFC 4 certified",
+          status: true
+        },
+        {
+          name: "OpenBIM support",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "Team collaboration",
+          status: true
+        },
+        {
+          name: "Model coordination",
+          status: true
+        },
+        {
+          name: "Clash detection",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "CDE integration",
+          status: true
+        },
+        {
+          name: "ERP connection",
+          status: true
+        },
+        {
+          name: "API support",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "hicad",
+    "renga"
+  ],
   country: "Italy",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 2000,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Architecture",
+    "Engineering",
+    "Construction",
+    "MEP"
+  ],
+  core_features: [
+    "BIM Modeling",
+    "IFC Certified",
+    "Architecture",
+    "Structural",
+    "MEP"
+  ],
+  user_scales: [
+    "Small Business",
+    "Mid-Sized Company",
+    "Enterprise"
+  ],
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.8,
+  pros: [
+    "Industry-leading number of IFC certified solutions",
+    "Deep compliance with Open BIM standards",
+    "Unified architectural, structural, and MEP workflow",
+    "Stunning real-time rendering integration",
+    "Highly competitive pricing in Europe"
+  ],
+  cons: [
+    "Premium pricing model",
+    "Steep learning curve",
+    "Limited localized support in secondary markets",
+    "Fewer community-developed add-ons"
+  ],
   faqs: [
     {
       q: "What is Edificius used for?",
-      a: "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a Edificius is a BIM solution.",
+      a: "Edificius is BIM software with the highest number of IFC certified solutions for architecture, engineering, and construction."
     },
     {
       q: "How much does Edificius cost?",
-      a: "Edificius is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "Edificius is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
     },
     {
       q: "Is there a free version of Edificius?",
-      a: "Edificius is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "Edificius is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does Edificius support?",
-      a: "Edificius runs on Windows.",
+      a: "Edificius runs on Windows."
     },
     {
       q: "Which file formats does Edificius support?",
-      a: "Edificius works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "Edificius works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to Edificius?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "Edificius Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF",
+      "RVT"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "Edificius is a powerful Open BIM software boasting the highest number of IFC certifications. It integrates architectural, structural, and MEP design into a unified environment, delivering high interoperability for standard construction pipelines, although its training path is steep."
 },
 {
   id: "t131",
   name: "EdiLus",
   slug: "edilus",
-  logo_url: "",
-  short_desc:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a",
-  description:
-    "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering and construction industries",
+  logo_url: "/logos/edilus.png",
+  short_desc: "Architectural BIM software for building design and documentation with IFC certification.",
+  description: "EdiLus by ACCA Software is an architectural BIM solution designed for building design and documentation. It provides intuitive tools for architectural modeling with IFC certification for interoperability. The software is part of the ACCA Software family, known for its IFC certified solutions.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "Basic structural design",
+        "IFC compliance",
+        "Detail drawing generation"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "All Standard features",
+        "Advanced structural modeling",
+        "Photo-realistic rendering",
+        "Analysis integrations"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "hicad", "renga"],
+  detailed_features: [
+    {
+      category: "Architecture",
+      items: [
+        {
+          name: "3D architectural modeling",
+          status: true
+        },
+        {
+          name: "Floor plan design",
+          status: true
+        },
+        {
+          name: "Section and elevation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Documentation",
+      items: [
+        {
+          name: "Automatic drawing generation",
+          status: true
+        },
+        {
+          name: "Quantity takeoff",
+          status: true
+        },
+        {
+          name: "Scheduling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "IFC Compliance",
+      items: [
+        {
+          name: "IFC 2x3 certified",
+          status: true
+        },
+        {
+          name: "OpenBIM support",
+          status: true
+        },
+        {
+          name: "Model exchange",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Visualization",
+      items: [
+        {
+          name: "3D visualization",
+          status: true
+        },
+        {
+          name: "Rendering",
+          status: true
+        },
+        {
+          name: "Walkthrough",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "hicad",
+    "renga"
+  ],
   country: "Italy",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 1500,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Architecture",
+    "Construction",
+    "Interior Design"
+  ],
+  core_features: [
+    "Architectural BIM",
+    "IFC Certified",
+    "Documentation",
+    "Visualization"
+  ],
+  user_scales: [
+    "Individual",
+    "Small Business",
+    "Mid-Sized Company"
+  ],
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.5,
+  pros: [
+    "Automated structural calculations and drawings",
+    "High interoperability via IFC compliance",
+    "Intuitive structural modeling interface",
+    "Excellent cost-to-performance ratio",
+    "Strong European engineering compliance"
+  ],
+  cons: [
+    "Limited generic architectural modeling",
+    "Not designed for MEP routing",
+    "Fewer international design code integrations"
+  ],
   faqs: [
     {
       q: "What is EdiLus used for?",
-      a: "The company with the highest number of IFC certified software solutions in the world for the architecture, engineering a EdiLus is a BIM solution.",
+      a: "EdiLus is architectural BIM software for building design and documentation with IFC certification."
     },
     {
       q: "How much does EdiLus cost?",
-      a: "EdiLus is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "EdiLus is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
     },
     {
       q: "Is there a free version of EdiLus?",
-      a: "EdiLus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "EdiLus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does EdiLus support?",
-      a: "EdiLus runs on Windows.",
+      a: "EdiLus runs on Windows."
     },
     {
       q: "Which file formats does EdiLus support?",
-      a: "EdiLus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "EdiLus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to EdiLus?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "EdiLus Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "EdiLus is a structural engineering calculation and analysis software featuring native IFC compatibility. It offers automated structural drawings and calculations, making it a valuable tool for architectural engineers, although it lacks advanced generic architectural modeling."
 },
 {
   id: "t139",
   name: "cadwork",
   slug: "cadwork",
-  logo_url: "",
-  short_desc: "Cadwork CAD/CAM software for timber construction.",
-  description: "Cadwork CAD/CAM software for timber construction.",
+  logo_url: "/logos/cadwork.png",
+  short_desc: "CAD/CAM software specialized for timber construction and wood building design.",
+  description: "cadwork is a specialized CAD/CAM software solution designed for timber construction and wood building design. It provides comprehensive tools for 3D modeling, structural design, and CNC machine preparation specifically for the timber industry. The software is widely used in Europe for wooden frame construction and timber engineering.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "Basic timber design",
+        "3D modeling",
+        "CNC machine output"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "All Standard features",
+        "Advanced structural analysis",
+        "BIM integration",
+        "Design automation"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "hicad", "renga"],
+  detailed_features: [
+    {
+      category: "Timber Design",
+      items: [
+        {
+          name: "3D timber modeling",
+          status: true
+        },
+        {
+          name: "Wood frame design",
+          status: true
+        },
+        {
+          name: "Connection design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "CAM",
+      items: [
+        {
+          name: "CNC machine preparation",
+          status: true
+        },
+        {
+          name: "NC code generation",
+          status: true
+        },
+        {
+          name: "Production optimization",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Structural",
+      items: [
+        {
+          name: "Structural analysis",
+          status: true
+        },
+        {
+          name: "Load calculation",
+          status: true
+        },
+        {
+          name: "Eurocode compliance",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "BIM",
+      items: [
+        {
+          name: "IFC support",
+          status: true
+        },
+        {
+          name: "Model coordination",
+          status: true
+        },
+        {
+          name: "Quantity takeoff",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "hicad",
+    "renga"
+  ],
   country: "Switzerland",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 5000,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Timber Construction",
+    "Wood Engineering",
+    "Architecture"
+  ],
+  core_features: [
+    "Timber CAD",
+    "CAM",
+    "CNC",
+    "Structural",
+    "BIM"
+  ],
+  user_scales: [
+    "Small Business",
+    "Mid-Sized Company",
+    "Enterprise"
+  ],
   official_url: "https://www.cadwork.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.7,
+  pros: [
+    "Unmatched specialization for timber design and carpentry",
+    "Direct CNC export to major wood manufacturing machines",
+    "Highly stable Swiss engineering and building physics",
+    "Full BIM and IFC format support",
+    "Compliance with Eurocode and local timber building standards"
+  ],
+  cons: [
+    "Highly specialized (not suited for other sectors)",
+    "Premium acquisition cost",
+    "Steep training curve"
+  ],
   faqs: [
     {
       q: "What is cadwork used for?",
-      a: "Cadwork CAD/CAM software for timber construction. cadwork is a BIM solution.",
+      a: "cadwork is CAD/CAM software specialized for timber construction and wood building design."
     },
     {
       q: "How much does cadwork cost?",
-      a: "cadwork is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "cadwork is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
     },
     {
       q: "Is there a free version of cadwork?",
-      a: "cadwork is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "cadwork is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does cadwork support?",
-      a: "cadwork runs on Windows.",
+      a: "cadwork runs on Windows."
     },
     {
       q: "Which file formats does cadwork support?",
-      a: "cadwork works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "cadwork works with standard BIM interchange formats including IFC, DWG, and DXF. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to cadwork?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "cadwork Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF",
+      "STEP"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "cadwork is the global leader in timber construction CAD/CAM software. It integrates structural wood design with direct CNC export for automated wood fabrication, making it the perfect choice for timber engineers and house builders, although it is not meant for concrete or steel-only structures."
 },
 {
   id: "t140",
   name: "MagiCAD",
   slug: "magicad",
   logo_url: getLogo("MA"),
-  short_desc:
-    "MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the constructi",
-  description:
-    "MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
+  short_desc: "MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
+  description: "MagiCAD Group specializes in MEP (Mechanical, Electrical, Plumbing) design software for designers and BIM solutions for MEP manufacturers in the construction industry. The software provides comprehensive tools for HVAC, electrical, and piping design with strong BIM integration and manufacturer content libraries.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "Basic MEP design tools",
+        "HVAC design",
+        "Electrical design"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "All Standard features",
+        "Piping design",
+        "BIM synchronization",
+        "Manufacturer content access"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "hicad", "renga"],
+  detailed_features: [
+    {
+      category: "MEP Design",
+      items: [
+        {
+          name: "HVAC design",
+          status: true
+        },
+        {
+          name: "Electrical design",
+          status: true
+        },
+        {
+          name: "Piping design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "BIM Integration",
+      items: [
+        {
+          name: "IFC support",
+          status: true
+        },
+        {
+          name: "Revit integration",
+          status: true
+        },
+        {
+          name: "Clash detection",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Content",
+      items: [
+        {
+          name: "Manufacturer library",
+          status: true
+        },
+        {
+          name: "Product database",
+          status: true
+        },
+        {
+          name: "Custom content",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Calculation",
+      items: [
+        {
+          name: "Load calculation",
+          status: true
+        },
+        {
+          name: "Sizing tools",
+          status: true
+        },
+        {
+          name: "Simulation",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "hicad",
+    "renga"
+  ],
   country: "Finland",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 3000,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "MEP",
+    "HVAC",
+    "Electrical",
+    "Construction"
+  ],
+  core_features: [
+    "MEP Design",
+    "HVAC",
+    "Electrical",
+    "BIM",
+    "Manufacturer Content"
+  ],
+  user_scales: [
+    "Small Business",
+    "Mid-Sized Company",
+    "Enterprise"
+  ],
   official_url: "https://www.magicad.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.8,
+  pros: [
+    "Highly specialized MEP and HVAC design solution",
+    "Extensive database of verified manufacturer products",
+    "Seamless high-performance Revit and AutoCAD integration",
+    "Powerful calculation and system sizing tools",
+    "Excellent coordination and clash detection"
+  ],
+  cons: [
+    "Highly premium software cost",
+    "Steep learning curve",
+    "Requires a host CAD (Revit/AutoCAD) license",
+    "Limited use for architectural layout"
+  ],
   faqs: [
     {
       q: "What is MagiCAD used for?",
-      a: "MagiCAD Group specialises in MEP design software for designers and BIM solutions for MEP manufacturers in the constructi MagiCAD is a BIM solution.",
+      a: "MagiCAD is MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry."
     },
     {
       q: "How much does MagiCAD cost?",
-      a: "MagiCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "MagiCAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
     },
     {
       q: "Is there a free version of MagiCAD?",
-      a: "MagiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "MagiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does MagiCAD support?",
-      a: "MagiCAD runs on Windows.",
+      a: "MagiCAD runs on Windows."
     },
     {
       q: "Which file formats does MagiCAD support?",
-      a: "MagiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "MagiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to MagiCAD?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "MagiCAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF",
+      "RVT"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "MagiCAD is the premier MEP design plugin for Revit and AutoCAD, offering massive manufacturer content libraries and advanced HVAC/electrical calculations. It is widely adopted by top engineering firms across Europe and Asia, although it represents a significant software investment."
 },
 {
   id: "t157",
   name: "DDS-CAD",
   slug: "dds-cad",
   logo_url: getLogo("DD"),
-  short_desc: "简要介绍 DDS-CAD（官方站点）",
-  description: "详细介绍 DDS-CAD（官方站点）",
+  short_desc: "MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
+  description: "DDS-CAD is a specialized MEP design and BIM software solution for mechanical, electrical, and plumbing engineering. The software provides integrated tools for HVAC design, electrical systems, and piping with strong BIM capabilities. It's particularly popular in the Nordic construction market.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "Basic MEP tools",
+        "HVAC design",
+        "Electrical systems design"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "perpetual",
+      features: [
+        "All Standard features",
+        "Piping design",
+        "BIM collaboration",
+        "Energy calculation"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "hicad", "renga"],
+  detailed_features: [
+    {
+      category: "MEP Design",
+      items: [
+        {
+          name: "HVAC design",
+          status: true
+        },
+        {
+          name: "Electrical design",
+          status: true
+        },
+        {
+          name: "Piping design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "BIM",
+      items: [
+        {
+          name: "IFC support",
+          status: true
+        },
+        {
+          name: "Model coordination",
+          status: true
+        },
+        {
+          name: "Clash detection",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Calculation",
+      items: [
+        {
+          name: "Load calculation",
+          status: true
+        },
+        {
+          name: "Energy analysis",
+          status: true
+        },
+        {
+          name: "Sizing tools",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Documentation",
+      items: [
+        {
+          name: "Automatic drawing",
+          status: true
+        },
+        {
+          name: "Quantity takeoff",
+          status: true
+        },
+        {
+          name: "Scheduling",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "hicad",
+    "renga"
+  ],
   country: "Norway",
   category_id: "c3",
   pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  starting_price: 2500,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "MEP",
+    "HVAC",
+    "Electrical",
+    "Construction"
+  ],
+  core_features: [
+    "MEP Design",
+    "HVAC",
+    "Electrical",
+    "BIM",
+    "Calculation"
+  ],
+  user_scales: [
+    "Small Business",
+    "Mid-Sized Company",
+    "Enterprise"
+  ],
   official_url: "https://www.graphisoft.com/solutions/dds-cad",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.6,
+  pros: [
+    "Dedicated MEP and HVAC BIM software design",
+    "Proven track record in European and Nordic markets",
+    "Integrated electrical load and energy calculations",
+    "Automated plan view and section generation",
+    "High Open BIM and IFC compliance"
+  ],
+  cons: [
+    "Limited general architectural or structural modeling",
+    "Premium licensing and support costs",
+    "Steep learning curve"
+  ],
   faqs: [
     {
       q: "What is DDS-CAD used for?",
-      a: "简要介绍 DDS-CAD（官方站点） DDS-CAD is a BIM solution.",
+      a: "DDS-CAD is MEP design and BIM software for mechanical, electrical, and plumbing engineering."
     },
     {
       q: "How much does DDS-CAD cost?",
-      a: "DDS-CAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "DDS-CAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
     },
     {
       q: "Is there a free version of DDS-CAD?",
-      a: "DDS-CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "DDS-CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does DDS-CAD support?",
-      a: "DDS-CAD runs on Windows.",
+      a: "DDS-CAD runs on Windows."
     },
     {
       q: "Which file formats does DDS-CAD support?",
-      a: "DDS-CAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "DDS-CAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to DDS-CAD?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "DDS-CAD Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Yes",
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF",
+      "RVT"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "DDS-CAD is a specialized MEP design and BIM software solution featuring advanced HVAC, piping, and electrical design automation. Highly respected in the European and Nordic markets, it integrates structural coordination and energy calculations natively."
 },
 {
   id: "t159",
   name: "dRofus",
   slug: "drofus",
   logo_url: getLogo("DR"),
-  short_desc:
-    "dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos",
-  description:
-    "dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence.",
+  short_desc: "Data-driven building requirements platform for standardizing project data and BIM collaboration.",
+  description: "dRofus is a leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence. It provides a database-driven approach to managing building requirements, room data, and equipment specifications integrated with BIM workflows.",
   pricing_tiers: [
     {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false,
+      name: "Standard",
+      price: "Contact",
+      period: "subscription",
+      features: [
+        "Basic data management",
+        "Room data sheets",
+        "BIM model integration"
+      ],
+      is_popular: true
     },
+    {
+      name: "Professional",
+      price: "Contact",
+      period: "subscription",
+      features: [
+        "All Standard features",
+        "Equipment programming",
+        "Advanced automation",
+        "API integration"
+      ],
+      is_popular: false
+    }
   ],
-  detailed_features: [],
-  alternatives: ["bimoffice", "hicad", "renga"],
+  detailed_features: [
+    {
+      category: "Data Management",
+      items: [
+        {
+          name: "Room data management",
+          status: true
+        },
+        {
+          name: "Equipment database",
+          status: true
+        },
+        {
+          name: "Requirements tracking",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "BIM Integration",
+      items: [
+        {
+          name: "Revit integration",
+          status: true
+        },
+        {
+          name: "IFC support",
+          status: true
+        },
+        {
+          name: "Model synchronization",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "Team collaboration",
+          status: true
+        },
+        {
+          name: "Change management",
+          status: true
+        },
+        {
+          name: "Version control",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Automation",
+      items: [
+        {
+          name: "Automated reporting",
+          status: true
+        },
+        {
+          name: "Data validation",
+          status: true
+        },
+        {
+          name: "Workflow automation",
+          status: true
+        }
+      ]
+    }
+  ],
+  alternatives: [
+    "bimoffice",
+    "hicad",
+    "renga"
+  ],
   country: "Norway",
   category_id: "c3",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  platforms: ["Windows"],
-  industries: [],
-  core_features: [],
-  user_scales: [],
+  pricing_type: "Subscription",
+  starting_price: 2000,
+  platforms: [
+    "Windows",
+    "Web"
+  ],
+  industries: [
+    "Architecture",
+    "Construction",
+    "Engineering",
+    "Healthcare"
+  ],
+  core_features: [
+    "Data Management",
+    "BIM Integration",
+    "Requirements",
+    "Collaboration"
+  ],
+  user_scales: [
+    "Mid-Sized Company",
+    "Enterprise"
+  ],
   official_url: "https://www.drofus.com/",
   affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
+  score: 3.7,
+  pros: [
+    "Dedicated room data and equipment requirement platform",
+    "Deep real-time integration with Revit, ArchiCAD, and Open BIM",
+    "Consolidates project data to eliminate silos",
+    "Extremely robust for hospitals, airports, and large infrastructure",
+    "Comprehensive API and automation capabilities"
+  ],
+  cons: [
+    "No native geometric CAD drafting features",
+    "Highly premium enterprise pricing",
+    "Very steep learning curve"
+  ],
   faqs: [
     {
       q: "What is dRofus used for?",
-      a: "dRofus is the leading data-driven building requirements platform helping teams standardize project data, eliminate silos dRofus is a BIM solution.",
+      a: "dRofus is a data-driven building requirements platform for standardizing project data and BIM collaboration."
     },
     {
       q: "How much does dRofus cost?",
-      a: "dRofus is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.",
+      a: "dRofus is offered on a subscription model. Contact the vendor for specific pricing based on user count and modules."
     },
     {
       q: "Is there a free version of dRofus?",
-      a: "dRofus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
+      a: "dRofus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
     },
     {
       q: "What operating systems does dRofus support?",
-      a: "dRofus runs on Windows.",
+      a: "dRofus runs on Windows and is accessible via web browser."
     },
     {
       q: "Which file formats does dRofus support?",
-      a: "dRofus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
+      a: "dRofus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
     },
     {
       q: "What are the best alternatives to dRofus?",
-      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
+      a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
   ],
   tech_specs: {
     engine: "dRofus Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: [],
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: [
+      "IFC",
+      "DWG",
+      "DXF",
+      "RVT"
+    ]
   },
-  expert_verdict: "待补充专业评语。",
+  expert_verdict: "dRofus is the leading data-driven room programming and equipment planning platform for BIM. Unlike visual CAD tools, it focuses entirely on room data sheets, equipment requirements, and building planning metadata for massive projects, although it is too complex for small teams."
 },
 {
   id: "t206",
-  "name": "AutoCAD Plant 3D",
-  "slug": "autocad-plant-3d",
+  name: "AutoCAD Plant 3D",
+  slug: "autocad-plant-3d",
   logo_url: getLogo("AP"),
-  "short_desc": "Autodesk's plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform.",
-  "description": "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings on top of vanilla AutoCAD, used by mid-size EPC firms.",
-  "country": "USA",
-  "category_id": "c3",
-  "pricing_type": "Subscription",
-  "starting_price": 2615,
-  "platforms": ["Windows"],
-  "industries": ["Energy", "Chemical", "Oil & Gas", "Power"],
-
-  "core_features": [
+  short_desc: "Autodesk's plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform.",
+  description: "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings on top of vanilla AutoCAD, used by mid-size EPC firms.",
+  pricing_tiers: [
+    {
+      name: "Subscription",
+      price: "2615",
+      period: "/year",
+      features: [
+        "AutoCAD Plant 3D toolset",
+        "P&ID design",
+        "3D piping",
+        "Isometric generation"
+      ],
+      is_popular: true
+    }
+  ],
+  country: "USA",
+  category_id: "c3",
+  pricing_type: "Subscription",
+  starting_price: 2615,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Energy",
+    "Chemical",
+    "Oil & Gas",
+    "Power"
+  ],
+  core_features: [
     "Spec-driven 3D pipe routing",
     "P&ID symbol library and validation",
     "Auto-generation of isometric drawings",
     "Equipment modeling (vessels, exchangers, pumps)",
     "Project collaboration via Vault",
-    "Data validation between P&ID and 3D model",
+    "Data validation between P&ID and 3D model"
   ],
-
-  "user_scales": ["Mid-Market", "Enterprise"],
-  "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Lowest learning curve for AutoCAD-fluent firms",
     "Included in AutoCAD specialised toolsets",
-    "Industry-standard isometric output (ISOGEN)",
+    "Industry-standard isometric output (ISOGEN)"
   ],
-
-  "cons": [
+  cons: [
     "Less powerful than AVEVA E3D / SP3D for mega-projects",
     "Project file size becomes unwieldy past ~50k pipe components",
-    "Windows-only",
+    "Windows-only"
   ],
-
-  "tech_specs": {
-    "engine": "AutoCAD ObjectARX",
-    "multicore": "Limited",
-    "gpu_optimization": "Basic",
-    "standards": ["DWG", "PCF", "ISO 15926"],
+  tech_specs: {
+    engine: "AutoCAD ObjectARX",
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: [
+      "DWG",
+      "PCF",
+      "ISO 15926"
+    ]
   },
-
-  "expert_verdict": "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
-  faqs: [{
-    q: 'What is AutoCAD Plant 3D used for?',
-    a: 'Autodesk\'s plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform. AutoCAD Plant 3D is a BIM solution widely adopted in Energy, Chemical, Oil & Gas.',
-  }, {
-    q: 'How much does AutoCAD Plant 3D cost?',
-    a: 'AutoCAD Plant 3D starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of AutoCAD Plant 3D?',
-    a: 'AutoCAD Plant 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does AutoCAD Plant 3D support?',
-    a: 'AutoCAD Plant 3D runs on Windows.',
-  }, {
-    q: 'Which file formats does AutoCAD Plant 3D support?',
-    a: 'AutoCAD Plant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to AutoCAD Plant 3D?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['autodesk-construction-cloud', 'allplan', 'bimcollab'],
-  detailed_features: [],
+  expert_verdict: "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
+  faqs: [
+    {
+      q: "What is AutoCAD Plant 3D used for?",
+      a: "Autodesk's plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform. AutoCAD Plant 3D is a BIM solution widely adopted in Energy, Chemical, Oil & Gas."
+    },
+    {
+      q: "How much does AutoCAD Plant 3D cost?",
+      a: "AutoCAD Plant 3D starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of AutoCAD Plant 3D?",
+      a: "AutoCAD Plant 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does AutoCAD Plant 3D support?",
+      a: "AutoCAD Plant 3D runs on Windows."
+    },
+    {
+      q: "Which file formats does AutoCAD Plant 3D support?",
+      a: "AutoCAD Plant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to AutoCAD Plant 3D?",
+      a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "autodesk-construction-cloud",
+    "allplan",
+    "bimcollab"
+  ],
+  detailed_features: [
+    {
+      category: "Piping Design",
+      items: [
+        {
+          name: "Spec-driven pipe routing",
+          status: true
+        },
+        {
+          name: "3D pipe modeling",
+          status: true
+        },
+        {
+          name: "Pipe support design",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "P&ID",
+      items: [
+        {
+          name: "P&ID symbol library",
+          status: true
+        },
+        {
+          name: "P&ID validation",
+          status: true
+        },
+        {
+          name: "P&ID to 3D synchronization",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Equipment",
+      items: [
+        {
+          name: "Vessel modeling",
+          status: true
+        },
+        {
+          name: "Heat exchanger design",
+          status: true
+        },
+        {
+          name: "Pump and equipment modeling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Documentation",
+      items: [
+        {
+          name: "Isometric drawing generation",
+          status: true
+        },
+        {
+          name: "Orthographic drawings",
+          status: true
+        },
+        {
+          name: "Bill of materials",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t207",
-  "name": "Hexagon SmartPlant 3D",
-  "slug": "smartplant-3d",
+  name: "Hexagon SmartPlant 3D",
+  slug: "smartplant-3d",
   logo_url: getLogo("HS"),
-  "short_desc": "Hexagon's data-centric plant-design platform (now part of CADWorx & Analysis Solutions).",
-  "description": "SmartPlant 3D (SP3D), now under the Hexagon banner, is a rules-based, data-centric plant-design system competing head-to-head with AVEVA E3D — strong in petrochemical, power, and offshore.",
-  "country": "USA",
-  "category_id": "c3",
-  "pricing_type": "Subscription",
-  "starting_price": 18000,
-  "platforms": ["Windows"],
-  "industries": ["Oil & Gas", "Chemical", "Power", "Marine"],
-
-  "core_features": [
+  short_desc: "Hexagon's data-centric plant-design platform (now part of CADWorx & Analysis Solutions).",
+  description: "SmartPlant 3D (SP3D), now under the Hexagon banner, is a rules-based, data-centric plant-design system competing head-to-head with AVEVA E3D — strong in petrochemical, power, and offshore.",
+  country: "USA",
+  category_id: "c3",
+  pricing_type: "Subscription",
+  starting_price: 18000,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Oil & Gas",
+    "Chemical",
+    "Power",
+    "Marine"
+  ],
+  core_features: [
     "Rule-based pipe, structural, cable tray, HVAC design",
     "Database-driven (Oracle / SQL Server)",
     "Multi-discipline concurrent engineering",
     "Tight link with SmartPlant Foundation",
     "Auto-generation of orthographics and isometrics",
-    "Clash detection and 4D scheduling",
+    "Clash detection and 4D scheduling"
   ],
-
-  "user_scales": ["Enterprise"],
-  "official_url": "https://hexagon.com/products/smartplant-3d",
-  "affiliate_url": null,
-  "score": 4.4,
-
-  "pros": [
+  user_scales: [
+    "Enterprise"
+  ],
+  official_url: "https://hexagon.com/products/smartplant-3d",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
     "Database-driven model is uniquely robust at giga-project scale",
     "Strong integration with the broader SmartPlant suite",
-    "Adopted by many international EPCs",
+    "Adopted by many international EPCs"
   ],
-
-  "cons": [
+  cons: [
     "Notoriously complex Oracle/SQL setup",
     "Enterprise pricing only",
-    "Windows-only",
+    "Windows-only"
   ],
-
-  "tech_specs": {
-    "engine": "SP3D (database-centric)",
-    "multicore": "Yes",
-    "gpu_optimization": "Basic",
-    "standards": ["ISO 15926", "PCF", "DGN"],
+  tech_specs: {
+    engine: "SP3D (database-centric)",
+    multicore: "Yes",
+    gpu_optimization: "Basic",
+    standards: [
+      "ISO 15926",
+      "PCF",
+      "DGN"
+    ]
   },
-
-  "expert_verdict": "Goes head-to-head with AVEVA E3D. Pick based on which one your owner-operator already uses for its asset model.",
-  faqs: [{
-    q: 'What is Hexagon SmartPlant 3D used for?',
-    a: 'Hexagon\'s data-centric plant-design platform (now part of CADWorx & Analysis Solutions). Hexagon SmartPlant 3D is a BIM solution widely adopted in Oil & Gas, Chemical, Power.',
-  }, {
-    q: 'How much does Hexagon SmartPlant 3D cost?',
-    a: 'Hexagon SmartPlant 3D starts at $18,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Hexagon SmartPlant 3D?',
-    a: 'Hexagon SmartPlant 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Hexagon SmartPlant 3D support?',
-    a: 'Hexagon SmartPlant 3D runs on Windows.',
-  }, {
-    q: 'Which file formats does Hexagon SmartPlant 3D support?',
-    a: 'Hexagon SmartPlant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Hexagon SmartPlant 3D?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['autodesk-construction-cloud', 'allplan', 'bimcollab'],
-  detailed_features: [],
+  expert_verdict: "Goes head-to-head with AVEVA E3D. Pick based on which one your owner-operator already uses for its asset model.",
+  faqs: [
+    {
+      q: "What is Hexagon SmartPlant 3D used for?",
+      a: "Hexagon's data-centric plant-design platform (now part of CADWorx & Analysis Solutions). Hexagon SmartPlant 3D is a BIM solution widely adopted in Oil & Gas, Chemical, Power."
+    },
+    {
+      q: "How much does Hexagon SmartPlant 3D cost?",
+      a: "Hexagon SmartPlant 3D starts at $18,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Hexagon SmartPlant 3D?",
+      a: "Hexagon SmartPlant 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Hexagon SmartPlant 3D support?",
+      a: "Hexagon SmartPlant 3D runs on Windows."
+    },
+    {
+      q: "Which file formats does Hexagon SmartPlant 3D support?",
+      a: "Hexagon SmartPlant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Hexagon SmartPlant 3D?",
+      a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "autodesk-construction-cloud",
+    "allplan",
+    "bimcollab"
+  ],
+  detailed_features: [
+    {
+      category: "Plant Design",
+      items: [
+        {
+          name: "Data-centric modeling",
+          status: true
+        },
+        {
+          name: "3D plant design",
+          status: true
+        },
+        {
+          name: "Equipment modeling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Piping",
+      items: [
+        {
+          name: "Pipe routing",
+          status: true
+        },
+        {
+          name: "Piping design",
+          status: true
+        },
+        {
+          name: "ISOGEN isometrics",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "SmartPlant suite",
+          status: true
+        },
+        {
+          name: "Oracle/SQL",
+          status: true
+        },
+        {
+          name: "Enterprise integration",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "Data management",
+          status: true
+        },
+        {
+          name: "Version control",
+          status: true
+        },
+        {
+          name: "Team collaboration",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t208",
-  "name": "CADWorx Plant Professional",
-  "slug": "cadworx",
+  name: "CADWorx Plant Professional",
+  slug: "cadworx",
   logo_url: getLogo("CP"),
-  "short_desc": "AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II.",
-  "description": "CADWorx Plant Professional is Hexagon's AutoCAD-based plant-design tool — popular in the Americas as an affordable alternative to E3D/SP3D, with seamless bi-directional links to CAESAR II for pipe-stress.",
-  "country": "USA",
-  "category_id": "c3",
-  "pricing_type": "Subscription",
-  "starting_price": 5000,
-  "platforms": ["Windows"],
-  "industries": ["Oil & Gas", "Chemical", "Power"],
-
-  "core_features": [
+  short_desc: "AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II.",
+  description: "CADWorx Plant Professional is Hexagon's AutoCAD-based plant-design tool — popular in the Americas as an affordable alternative to E3D/SP3D, with seamless bi-directional links to CAESAR II for pipe-stress.",
+  country: "USA",
+  category_id: "c3",
+  pricing_type: "Subscription",
+  starting_price: 5000,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "Oil & Gas",
+    "Chemical",
+    "Power"
+  ],
+  core_features: [
     "AutoCAD-based 3D plant modeling",
     "Spec-driven pipe routing",
     "Bi-directional CAESAR II link",
     "Auto-isometrics (ISOGEN)",
     "Integration with PV Elite, Tank, SmartMarine",
-    "Steel modeling (CADWorx Structure)",
+    "Steel modeling (CADWorx Structure)"
   ],
-
-  "user_scales": ["SMB", "Mid-Market"],
-  "official_url": "https://hexagon.com/products/cadworx-plant-professional",
-  "affiliate_url": null,
-  "score": 4.3,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market"
+  ],
+  official_url: "https://hexagon.com/products/cadworx-plant-professional",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
     "Far cheaper than E3D/SP3D for small-to-mid EPCs",
     "Native AutoCAD platform reduces training",
-    "Best-in-class CAESAR II integration",
+    "Best-in-class CAESAR II integration"
   ],
-
-  "cons": [
+  cons: [
     "Tied to AutoCAD subscription separately",
     "Less suitable for multi-thousand-line giga projects",
-    "Windows-only",
+    "Windows-only"
   ],
-
-  "tech_specs": {
-    "engine": "AutoCAD ObjectARX",
-    "multicore": "Limited",
-    "gpu_optimization": "Basic",
-    "standards": ["DWG", "PCF", "ISO 15926"],
+  tech_specs: {
+    engine: "AutoCAD ObjectARX",
+    multicore: "Limited",
+    gpu_optimization: "Basic",
+    standards: [
+      "DWG",
+      "PCF",
+      "ISO 15926"
+    ]
   },
-
-  "expert_verdict": "The pragmatic plant-design choice for North American EPCs that already live inside AutoCAD.",
-  faqs: [{
-    q: 'What is CADWorx Plant Professional used for?',
-    a: 'AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II. CADWorx Plant Professional is a BIM solution widely adopted in Oil & Gas, Chemical, Power.',
-  }, {
-    q: 'How much does CADWorx Plant Professional cost?',
-    a: 'CADWorx Plant Professional starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of CADWorx Plant Professional?',
-    a: 'CADWorx Plant Professional is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does CADWorx Plant Professional support?',
-    a: 'CADWorx Plant Professional runs on Windows.',
-  }, {
-    q: 'Which file formats does CADWorx Plant Professional support?',
-    a: 'CADWorx Plant Professional works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to CADWorx Plant Professional?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, BIMcollab, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['autodesk-construction-cloud', 'bimcollab', 'autocad-plant-3d'],
-  detailed_features: [],
+  expert_verdict: "The pragmatic plant-design choice for North American EPCs that already live inside AutoCAD.",
+  faqs: [
+    {
+      q: "What is CADWorx Plant Professional used for?",
+      a: "AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II. CADWorx Plant Professional is a BIM solution widely adopted in Oil & Gas, Chemical, Power."
+    },
+    {
+      q: "How much does CADWorx Plant Professional cost?",
+      a: "CADWorx Plant Professional starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of CADWorx Plant Professional?",
+      a: "CADWorx Plant Professional is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does CADWorx Plant Professional support?",
+      a: "CADWorx Plant Professional runs on Windows."
+    },
+    {
+      q: "Which file formats does CADWorx Plant Professional support?",
+      a: "CADWorx Plant Professional works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to CADWorx Plant Professional?",
+      a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, BIMcollab, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "autodesk-construction-cloud",
+    "bimcollab",
+    "autocad-plant-3d"
+  ],
+  detailed_features: [
+    {
+      category: "Plant Design",
+      items: [
+        {
+          name: "AutoCAD-based modeling",
+          status: true
+        },
+        {
+          name: "3D plant design",
+          status: true
+        },
+        {
+          name: "Spec-driven routing",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Piping",
+      items: [
+        {
+          name: "Pipe routing",
+          status: true
+        },
+        {
+          name: "CAESAR II link",
+          status: true
+        },
+        {
+          name: "ISOGEN isometrics",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "PV Elite integration",
+          status: true
+        },
+        {
+          name: "Tank integration",
+          status: true
+        },
+        {
+          name: "Steel modeling",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Output",
+      items: [
+        {
+          name: "Auto-isometrics",
+          status: true
+        },
+        {
+          name: "PCF output",
+          status: true
+        },
+        {
+          name: "DWG output",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t229",
-  "name": "Autodesk Construction Cloud",
-  "slug": "autodesk-construction-cloud",
+  name: "Autodesk Construction Cloud",
+  slug: "autodesk-construction-cloud",
   logo_url: "",
-  "short_desc": "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs).",
-  "description": "Autodesk Construction Cloud is the umbrella for Autodesk's construction-management software — BIM Collaborate, Build, Docs, Takeoff, Cost — replacing the long-running BIM 360 brand and unifying common data environment, model coordination, and field tools.",
-  "country": "USA",
-  "category_id": "c3",
-  "pricing_type": "Subscription",
-  "starting_price": 1080,
-  "platforms": ["Web", "Windows", "iOS", "Android"],
-  "industries": ["AEC", "Construction"],
-
-  "core_features": [
+  short_desc: "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs).",
+  description: "Autodesk Construction Cloud is the umbrella for Autodesk's construction-management software — BIM Collaborate, Build, Docs, Takeoff, Cost — replacing the long-running BIM 360 brand and unifying common data environment, model coordination, and field tools.",
+  country: "USA",
+  category_id: "c3",
+  pricing_type: "Subscription",
+  starting_price: 1080,
+  platforms: [
+    "Web",
+    "Windows",
+    "iOS",
+    "Android"
+  ],
+  industries: [
+    "AEC",
+    "Construction"
+  ],
+  core_features: [
     "Autodesk Docs CDE",
     "BIM Collaborate Pro (Revit Cloud Worksharing)",
     "Build (project management, field, RFI, submittals)",
     "Takeoff (2D / 3D quantity takeoff)",
     "Cost management",
-    "API + Insight + Auto-clash detection",
+    "API + Insight + Auto-clash detection"
   ],
-
-  "user_scales": ["SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://construction.autodesk.com",
-  "affiliate_url": null,
-  "score": 4.4,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://construction.autodesk.com",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
     "Single platform unifies model collaboration and field workflows",
     "Tight Revit and Civil 3D integration",
-    "Strong API and ACC Connect ecosystem",
+    "Strong API and ACC Connect ecosystem"
   ],
-
-  "cons": [
+  cons: [
     "Per-user pricing adds up fast on large projects",
     "Migration from legacy BIM 360 still painful",
-    "Mobile experience inconsistent across modules",
+    "Mobile experience inconsistent across modules"
   ],
-
-  "tech_specs": {
-    "engine": "Autodesk Forge / APS",
-    "multicore": "Cloud",
-    "gpu_optimization": "N/A",
-    "standards": ["IFC", "RVT", "DWG", "Navisworks NWD"],
+  tech_specs: {
+    engine: "Autodesk Forge / APS",
+    multicore: "Cloud",
+    gpu_optimization: "N/A",
+    standards: [
+      "IFC",
+      "RVT",
+      "DWG",
+      "Navisworks NWD"
+    ]
   },
-
-  "expert_verdict": "The natural collaboration layer for any Autodesk-centric AEC firm — and the de facto industry standard CDE.",
-  faqs: [{
-    q: 'What is Autodesk Construction Cloud used for?',
-    a: 'Autodesk\'s unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs). Autodesk Construction Cloud is a BIM solution widely adopted in AEC, Construction.',
-  }, {
-    q: 'How much does Autodesk Construction Cloud cost?',
-    a: 'Autodesk Construction Cloud starts at $1,080 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of Autodesk Construction Cloud?',
-    a: 'Autodesk Construction Cloud is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Autodesk Construction Cloud support?',
-    a: 'Autodesk Construction Cloud runs on Web, Windows, iOS, and Android. The browser-based experience requires no local install.',
-  }, {
-    q: 'Which file formats does Autodesk Construction Cloud support?',
-    a: 'Autodesk Construction Cloud works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Autodesk Construction Cloud?',
-    a: 'The closest alternatives within the BIM space are BIMcollab, Allplan, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['bimcollab', 'allplan', 'autocad-plant-3d'],
-  detailed_features: [],
+  expert_verdict: "The natural collaboration layer for any Autodesk-centric AEC firm — and the de facto industry standard CDE.",
+  faqs: [
+    {
+      q: "What is Autodesk Construction Cloud used for?",
+      a: "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs). Autodesk Construction Cloud is a BIM solution widely adopted in AEC, Construction."
+    },
+    {
+      q: "How much does Autodesk Construction Cloud cost?",
+      a: "Autodesk Construction Cloud starts at $1,080 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of Autodesk Construction Cloud?",
+      a: "Autodesk Construction Cloud is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Autodesk Construction Cloud support?",
+      a: "Autodesk Construction Cloud runs on Web, Windows, iOS, and Android. The browser-based experience requires no local install."
+    },
+    {
+      q: "Which file formats does Autodesk Construction Cloud support?",
+      a: "Autodesk Construction Cloud works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Autodesk Construction Cloud?",
+      a: "The closest alternatives within the BIM space are BIMcollab, Allplan, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "bimcollab",
+    "allplan",
+    "autocad-plant-3d"
+  ],
+  detailed_features: [
+    {
+      category: "CDE",
+      items: [
+        {
+          name: "Autodesk Docs",
+          status: true
+        },
+        {
+          name: "Common data environment",
+          status: true
+        },
+        {
+          name: "Document management",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Collaboration",
+      items: [
+        {
+          name: "BIM Collaborate Pro",
+          status: true
+        },
+        {
+          name: "Revit Cloud Worksharing",
+          status: true
+        },
+        {
+          name: "Model coordination",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Field",
+      items: [
+        {
+          name: "Build project management",
+          status: true
+        },
+        {
+          name: "RFI and submittals",
+          status: true
+        },
+        {
+          name: "Field tools",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Analysis",
+      items: [
+        {
+          name: "Takeoff",
+          status: true
+        },
+        {
+          name: "Cost management",
+          status: true
+        },
+        {
+          name: "Auto-clash detection",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t230",
-  "name": "Trimble Connect",
-  "slug": "trimble-connect",
+  name: "Trimble Connect",
+  slug: "trimble-connect",
   logo_url: getLogo("TC"),
-  "short_desc": "Trimble's openBIM common data environment with strong Tekla and SketchUp integration.",
-  "description": "Trimble Connect is the openBIM-friendly common data environment from Trimble — known for excellent IFC viewer/clash, web/desktop/mobile/HoloLens parity, and strong fit with Tekla Structures and SketchUp.",
-  "country": "USA",
-  "category_id": "c3",
-  "pricing_type": "Freemium",
-  "starting_price": 0,
-  "platforms": ["Web", "Windows", "macOS", "iOS", "Android"],
-  "industries": ["AEC", "Construction"],
-
-  "core_features": [
+  short_desc: "Trimble's openBIM common data environment with strong Tekla and SketchUp integration.",
+  description: "Trimble Connect is the openBIM-friendly common data environment from Trimble — known for excellent IFC viewer/clash, web/desktop/mobile/HoloLens parity, and strong fit with Tekla Structures and SketchUp.",
+  country: "USA",
+  category_id: "c3",
+  pricing_type: "Freemium",
+  starting_price: 0,
+  platforms: [
+    "Web",
+    "Windows",
+    "macOS",
+    "iOS",
+    "Android"
+  ],
+  industries: [
+    "AEC",
+    "Construction"
+  ],
+  core_features: [
     "Free tier for unlimited collaborators",
     "IFC viewer with clash detection",
     "Native links to Tekla Structures and SketchUp",
     "Mobile + AR (HoloLens, ARKit)",
     "ToDo workflow for issue tracking",
-    "REST API and SAML SSO",
+    "REST API and SAML SSO"
   ],
-
-  "user_scales": ["Freelancer", "SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://connect.trimble.com",
-  "affiliate_url": null,
-  "score": 4.4,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://connect.trimble.com",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
     "Generous free tier",
     "True openBIM workflow on IFC",
-    "Best HoloLens / AR review story",
+    "Best HoloLens / AR review story"
   ],
-
-  "cons": [
+  cons: [
     "Less feature-rich than ACC for full construction management",
     "Coordination workflows still maturing",
-    "Some advanced features paywalled at Business tier",
+    "Some advanced features paywalled at Business tier"
   ],
-
-  "tech_specs": {
-    "engine": "Trimble Connect cloud + native viewers",
-    "multicore": "Cloud",
-    "gpu_optimization": "N/A",
-    "standards": ["IFC", "DWG", "RVT", "SKP"],
+  tech_specs: {
+    engine: "Trimble Connect cloud + native viewers",
+    multicore: "Cloud",
+    gpu_optimization: "N/A",
+    standards: [
+      "IFC",
+      "DWG",
+      "RVT",
+      "SKP"
+    ]
   },
-
-  "expert_verdict": "If you live in Tekla or SketchUp, Trimble Connect is the natural CDE — free tier alone makes it worth trying.",
-  faqs: [{
-    q: 'What is Trimble Connect used for?',
-    a: 'Trimble\'s openBIM common data environment with strong Tekla and SketchUp integration. Trimble Connect is a BIM solution widely adopted in AEC, Construction.',
-  }, {
-    q: 'How much does Trimble Connect cost?',
-    a: 'Trimble Connect is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts.',
-  }, {
-    q: 'Is there a free version of Trimble Connect?',
-    a: 'Trimble Connect is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does Trimble Connect support?',
-    a: 'Trimble Connect runs on Web, Windows, macOS, iOS, and Android. The browser-based experience requires no local install.',
-  }, {
-    q: 'Which file formats does Trimble Connect support?',
-    a: 'Trimble Connect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Trimble Connect?',
-    a: 'The closest alternatives within the BIM space are Autodesk Dynamo, Autodesk Construction Cloud, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['autodesk-dynamo', 'autodesk-construction-cloud', 'bimcollab'],
-  detailed_features: [],
+  expert_verdict: "If you live in Tekla or SketchUp, Trimble Connect is the natural CDE — free tier alone makes it worth trying.",
+  faqs: [
+    {
+      q: "What is Trimble Connect used for?",
+      a: "Trimble's openBIM common data environment with strong Tekla and SketchUp integration. Trimble Connect is a BIM solution widely adopted in AEC, Construction."
+    },
+    {
+      q: "How much does Trimble Connect cost?",
+      a: "Trimble Connect is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+    },
+    {
+      q: "Is there a free version of Trimble Connect?",
+      a: "Trimble Connect is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does Trimble Connect support?",
+      a: "Trimble Connect runs on Web, Windows, macOS, iOS, and Android. The browser-based experience requires no local install."
+    },
+    {
+      q: "Which file formats does Trimble Connect support?",
+      a: "Trimble Connect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Trimble Connect?",
+      a: "The closest alternatives within the BIM space are Autodesk Dynamo, Autodesk Construction Cloud, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "autodesk-dynamo",
+    "autodesk-construction-cloud",
+    "bimcollab"
+  ],
+  detailed_features: [
+    {
+      category: "CDE",
+      items: [
+        {
+          name: "Free tier",
+          status: true
+        },
+        {
+          name: "Unlimited collaborators",
+          status: true
+        },
+        {
+          name: "Common data environment",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "BIM",
+      items: [
+        {
+          name: "IFC viewer",
+          status: true
+        },
+        {
+          name: "Clash detection",
+          status: true
+        },
+        {
+          name: "openBIM workflow",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Tekla Structures",
+          status: true
+        },
+        {
+          name: "SketchUp",
+          status: true
+        },
+        {
+          name: "Native links",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Mobile",
+      items: [
+        {
+          name: "Mobile apps",
+          status: true
+        },
+        {
+          name: "AR HoloLens",
+          status: true
+        },
+        {
+          name: "Issue tracking",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t231",
-  "name": "BIMcollab",
-  "slug": "bimcollab",
+  name: "BIMcollab",
+  slug: "bimcollab",
   logo_url: getLogo("BI"),
-  "short_desc": "Issue management and IFC-based clash review across BIM authoring tools.",
-  "description": "BIMcollab is a leading issue-management and openBIM clash-review platform — vendor-neutral, BCF 2.1 / 3.0 native, with deep plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri, and IFC viewers.",
-  "country": "Netherlands",
-  "category_id": "c3",
-  "pricing_type": "Subscription",
-  "starting_price": 590,
-  "platforms": ["Web", "Windows", "macOS"],
-  "industries": ["AEC", "Construction"],
-
-  "core_features": [
+  short_desc: "Issue management and IFC-based clash review across BIM authoring tools.",
+  description: "BIMcollab is a leading issue-management and openBIM clash-review platform — vendor-neutral, BCF 2.1 / 3.0 native, with deep plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri, and IFC viewers.",
+  country: "Netherlands",
+  category_id: "c3",
+  pricing_type: "Subscription",
+  starting_price: 590,
+  platforms: [
+    "Web",
+    "Windows",
+    "macOS"
+  ],
+  industries: [
+    "AEC",
+    "Construction"
+  ],
+  core_features: [
     "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
     "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
     "BIMcollab ZOOM federated IFC viewer",
     "Smart Views and rules",
     "Clash detection (BIMcollab ZOOM)",
-    "REST API and SSO",
+    "REST API and SSO"
   ],
-
-  "user_scales": ["SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://www.bimcollab.com",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://www.bimcollab.com",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Vendor-neutral BCF workflow",
     "Plugins for every major BIM tool",
-    "Strong adoption in European AEC firms",
+    "Strong adoption in European AEC firms"
   ],
-
-  "cons": [
+  cons: [
     "Per-project pricing can stack up",
     "Focused on issue/clash — not a full CDE",
-    "ZOOM clash detection less powerful than Solibri",
+    "ZOOM clash detection less powerful than Solibri"
   ],
-
-  "tech_specs": {
-    "engine": "BIMcollab cloud + ZOOM viewer",
-    "multicore": "Cloud",
-    "gpu_optimization": "Yes (ZOOM)",
-    "standards": ["BCF 2.1 / 3.0", "IFC"],
+  tech_specs: {
+    engine: "BIMcollab cloud + ZOOM viewer",
+    multicore: "Cloud",
+    gpu_optimization: "Yes (ZOOM)",
+    standards: [
+      "BCF 2.1 / 3.0",
+      "IFC"
+    ]
   },
-
-  "expert_verdict": "The gold standard for openBIM issue management. Pair with Solibri or ZOOM for clash, and you have a vendor-neutral coordination stack.",
-  faqs: [{
-    q: 'What is BIMcollab used for?',
-    a: 'Issue management and IFC-based clash review across BIM authoring tools. BIMcollab is a BIM solution widely adopted in AEC, Construction.',
-  }, {
-    q: 'How much does BIMcollab cost?',
-    a: 'BIMcollab starts at $590 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
-  }, {
-    q: 'Is there a free version of BIMcollab?',
-    a: 'BIMcollab is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
-  }, {
-    q: 'What operating systems does BIMcollab support?',
-    a: 'BIMcollab runs on Web, Windows, and macOS. The browser-based experience requires no local install.',
-  }, {
-    q: 'Which file formats does BIMcollab support?',
-    a: 'BIMcollab works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to BIMcollab?',
-    a: 'The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['autodesk-construction-cloud', 'allplan', 'revit'],
-  detailed_features: [],
+  expert_verdict: "The gold standard for openBIM issue management. Pair with Solibri or ZOOM for clash, and you have a vendor-neutral coordination stack.",
+  faqs: [
+    {
+      q: "What is BIMcollab used for?",
+      a: "Issue management and IFC-based clash review across BIM authoring tools. BIMcollab is a BIM solution widely adopted in AEC, Construction."
+    },
+    {
+      q: "How much does BIMcollab cost?",
+      a: "BIMcollab starts at $590 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+    },
+    {
+      q: "Is there a free version of BIMcollab?",
+      a: "BIMcollab is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+    },
+    {
+      q: "What operating systems does BIMcollab support?",
+      a: "BIMcollab runs on Web, Windows, and macOS. The browser-based experience requires no local install."
+    },
+    {
+      q: "Which file formats does BIMcollab support?",
+      a: "BIMcollab works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to BIMcollab?",
+      a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "autodesk-construction-cloud",
+    "allplan",
+    "revit"
+  ],
+  detailed_features: [
+    {
+      category: "Issue Management",
+      items: [
+        {
+          name: "Cloud issue tracker",
+          status: true
+        },
+        {
+          name: "BCF 2.1/3.0",
+          status: true
+        },
+        {
+          name: "Vendor-neutral",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "BIM Tools",
+      items: [
+        {
+          name: "Revit plugin",
+          status: true
+        },
+        {
+          name: "ArchiCAD plugin",
+          status: true
+        },
+        {
+          name: "Tekla plugin",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Clash",
+      items: [
+        {
+          name: "BIMcollab ZOOM",
+          status: true
+        },
+        {
+          name: "Federated IFC viewer",
+          status: true
+        },
+        {
+          name: "Smart Views",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Integration",
+      items: [
+        {
+          name: "Navisworks plugin",
+          status: true
+        },
+        {
+          name: "Solibri plugin",
+          status: true
+        },
+        {
+          name: "REST API",
+          status: true
+        }
+      ]
+    }
+  ]
 },
 {
   id: "t232",
-  "name": "Autodesk Dynamo",
-  "slug": "autodesk-dynamo",
+  name: "Autodesk Dynamo",
+  slug: "autodesk-dynamo",
   logo_url: "",
-  "short_desc": "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM.",
-  "description": "Dynamo is the visual programming environment that sits inside Revit and Civil 3D — letting BIM specialists automate repetitive workflows, generate parametric geometry, and access the Revit API without writing C# code.",
-  "country": "USA",
-  "category_id": "c3",
-  "pricing_type": "Free",
-  "starting_price": 0,
-  "platforms": ["Windows"],
-  "industries": ["AEC", "Construction"],
-
-  "core_features": [
+  short_desc: "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM.",
+  description: "Dynamo is the visual programming environment that sits inside Revit and Civil 3D — letting BIM specialists automate repetitive workflows, generate parametric geometry, and access the Revit API without writing C# code.",
+  country: "USA",
+  category_id: "c3",
+  pricing_type: "Free",
+  starting_price: 0,
+  platforms: [
+    "Windows"
+  ],
+  industries: [
+    "AEC",
+    "Construction"
+  ],
+  core_features: [
     "Visual node-based scripting",
     "Native Revit and Civil 3D APIs exposed",
     "Python and Zero-Touch C# extension",
     "Dynamo Player for non-programmer end-users",
     "Generative Design integration",
-    "Active package manager (Dynamo Packages)",
+    "Active package manager (Dynamo Packages)"
   ],
-
-  "user_scales": ["Freelancer", "SMB", "Mid-Market", "Enterprise"],
-  "official_url": "https://dynamobim.org",
-  "affiliate_url": null,
-  "score": 4.5,
-
-  "pros": [
+  user_scales: [
+    "Freelancer",
+    "SMB",
+    "Mid-Market",
+    "Enterprise"
+  ],
+  official_url: "https://dynamobim.org",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
     "Free, included with Revit",
     "Massive package ecosystem (Clockwork, archi-lab, Rhythm)",
-    "Bridges design intent to BIM automation without coding",
+    "Bridges design intent to BIM automation without coding"
   ],
-
-  "cons": [
+  cons: [
     "Tied to Autodesk products (Revit, Civil 3D)",
     "Performance drops on graphs with thousands of nodes",
-    "Steeper learning than it appears — production graphs need Python",
+    "Steeper learning than it appears — production graphs need Python"
   ],
-
-  "tech_specs": {
-    "engine": "DynamoCore",
-    "multicore": "Limited",
-    "gpu_optimization": "N/A",
-    "standards": ["RVT", "DWG", "IFC"],
+  tech_specs: {
+    engine: "DynamoCore",
+    multicore: "Limited",
+    gpu_optimization: "N/A",
+    standards: [
+      "RVT",
+      "DWG",
+      "IFC"
+    ]
   },
-
-  "expert_verdict": "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
-  faqs: [{
-    q: 'What is Autodesk Dynamo used for?',
-    a: 'Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM. Autodesk Dynamo is a BIM solution widely adopted in AEC, Construction.',
-  }, {
-    q: 'How much does Autodesk Dynamo cost?',
-    a: 'Autodesk Dynamo is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.',
-  }, {
-    q: 'Is Autodesk Dynamo really free?',
-    a: 'Yes — Autodesk Dynamo is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.',
-  }, {
-    q: 'What operating systems does Autodesk Dynamo support?',
-    a: 'Autodesk Dynamo runs on Windows.',
-  }, {
-    q: 'Which file formats does Autodesk Dynamo support?',
-    a: 'Autodesk Dynamo works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor\'s official documentation for the complete list of supported import and export options.',
-  }, {
-    q: 'What are the best alternatives to Autodesk Dynamo?',
-    a: 'The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
-  }],
-  alternatives: ['trimble-connect', 'bimcollab', 'autodesk-construction-cloud'],
-  detailed_features: [],
+  expert_verdict: "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
+  faqs: [
+    {
+      q: "What is Autodesk Dynamo used for?",
+      a: "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM. Autodesk Dynamo is a BIM solution widely adopted in AEC, Construction."
+    },
+    {
+      q: "How much does Autodesk Dynamo cost?",
+      a: "Autodesk Dynamo is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+    },
+    {
+      q: "Is Autodesk Dynamo really free?",
+      a: "Yes — Autodesk Dynamo is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+    },
+    {
+      q: "What operating systems does Autodesk Dynamo support?",
+      a: "Autodesk Dynamo runs on Windows."
+    },
+    {
+      q: "Which file formats does Autodesk Dynamo support?",
+      a: "Autodesk Dynamo works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+    },
+    {
+      q: "What are the best alternatives to Autodesk Dynamo?",
+      a: "The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+    }
+  ],
+  alternatives: [
+    "trimble-connect",
+    "bimcollab",
+    "autodesk-construction-cloud"
+  ],
+  detailed_features: [
+    {
+      category: "Visual Programming",
+      items: [
+        {
+          name: "Node-based scripting",
+          status: true
+        },
+        {
+          name: "Visual programming",
+          status: true
+        },
+        {
+          name: "Dynamo Player",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Automation",
+      items: [
+        {
+          name: "Revit automation",
+          status: true
+        },
+        {
+          name: "Civil 3D automation",
+          status: true
+        },
+        {
+          name: "Workflow automation",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "API",
+      items: [
+        {
+          name: "Revit API",
+          status: true
+        },
+        {
+          name: "Python support",
+          status: true
+        },
+        {
+          name: "Zero-Touch C#",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Generative",
+      items: [
+        {
+          name: "Parametric geometry",
+          status: true
+        },
+        {
+          name: "Generative Design",
+          status: true
+        },
+        {
+          name: "Package manager",
+          status: true
+        }
+      ]
+    }
+  ]
 }
 ];

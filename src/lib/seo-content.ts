@@ -24,6 +24,7 @@ export const BEST_OF_LIMIT = 12;
  *    "completeness" tiebreaker so well-documented tools rank ahead
  *    of stubs).
  */
+
 export function rankToolsForCategory(category: Category): Tool[] {
   const inCat = tools.filter((t) => t.category_id === category.id);
 
@@ -46,6 +47,258 @@ export function rankToolsForCategory(category: Category): Tool[] {
   }
 
   return [...inCat]
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      const rA = externalReviewWeight(a);
+      const rB = externalReviewWeight(b);
+      if (rB !== rA) return rB - rA;
+      return completenessScore(b) - completenessScore(a);
+    })
+    .slice(0, BEST_OF_LIMIT);
+}
+
+/**
+ * Filter tools by a feature ID and rank them using the same logic as categories.
+ * Returns a sorted array of tools that include the given feature ID.
+ */
+export function filterToolsByFeature(featureId: string): Tool[] {
+  const inFeature = tools.filter((t) => {
+    const slug = t.slug.toLowerCase();
+    const shortDesc = (t.short_desc ?? '').toLowerCase();
+    const desc = (t.description ?? '').toLowerCase();
+    const coreFeatures = (t.core_features ?? []).map(f => f.toLowerCase());
+    const detailedFeatures = (t.detailed_features ?? []).flatMap(df => df.items ?? []).map(item => item.name.toLowerCase());
+    
+    if (featureId === 'ai-assisted') {
+      const explicitSlugs = ["bricscad", "autocad", "fusion-360", "ansys-discovery", "altair-inspire", "solidworks", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["ai-assisted", "ai-powered", "generative design", "artificial intelligence", "smart blocks", "smart mouse", "propagate", "bimify", "topology optimization", "live physics gpu solver"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'cloud-collaboration') {
+      const explicitSlugs = ["onshape", "fusion-360", "easyeda", "altium-designer", "revit", "archicad"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["cloud-collaboration", "cloud collaboration", "real-time collaboration", "multi-user", "co-authoring", "browser-based", "saas", "cloud storage", "bimcloud", "3dexperience", "projectwise", "cloud sync"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'parametric-modeling') {
+      const explicitSlugs = ["solidworks", "ptc-creo", "autodesk-inventor", "onshape", "fusion-360", "freecad", "siemens-nx", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["parametric modeling", "parametric design", "parametric", "history-based", "constraint-based", "dimension-driven", "equations & variables", "dynamic assembly mates"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'rendering') {
+      const explicitSlugs = ["lumion", "twinmotion", "enscape", "v-ray", "blender", "fusion-360", "solidworks", "sketchup", "3ds-max"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["rendering", "render", "ray tracing", "visualisation", "visualization", "photorealistic", "pbr", "gpu ray tracing", "cinerender", "twinmotion", "lumion", "enscape"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'sheet-metal') {
+      const explicitSlugs = ["solidworks", "fusion-360", "ptc-creo", "autodesk-inventor", "bricscad", "solid-edge"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["sheet metal", "flat pattern", "k-factor", "folding", "unfolding", "press brake", "bend allowance", "punching"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'generative-design') {
+      const explicitSlugs = ["fusion-360", "altair-inspire", "ptc-creo", "siemens-nx", "solidworks", "ntop", "ansys-discovery"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["generative design", "topology optimization", "structural optimization", "lattice structures", "additive manufacturing"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'reverse-engineering') {
+      const explicitSlugs = ["geomagic-design-x", "rhino-3d", "solidworks", "fusion-360", "siemens-nx", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["reverse engineering", "3d scan", "point cloud", "mesh to solid", "b-rep conversion", "deviation analysis"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    if (featureId === 'integrated-cam') {
+      const explicitSlugs = ["mastercam", "fusion-360", "solidcam", "camworks", "hypermill", "cimatron", "zw3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["cam", "cnc", "toolpath", "g-code", "milling", "turning", "multi-axis", "machining simulation"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'simulation-fea') {
+      const explicitSlugs = ["solidworks", "fusion-360", "ptc-creo", "siemens-nx", "autodesk-inventor", "ansys-discovery", "ansys-fluent", "comsol-multiphysics", "abaqus", "ansys-mechanical"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["simulation", "fea", "finite element analysis", "cfd", "thermal analysis", "stress analysis", "structural analysis", "live physics", "fatigue simulation", "fluid dynamics"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'subdivision-modeling') {
+      const explicitSlugs = ["rhino-3d", "blender", "fusion-360", "maya", "3ds-max", "shapr3d"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["subdivision modeling", "subd", "subdivision surface", "organic shape", "freeform", "t-splines", "organic modeling", "ergonomic design"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'bim-integration') {
+      const explicitSlugs = ["revit", "archicad", "vectorworks", "bricscad", "tekla-structures"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["bim", "building information modeling", "ifc", "clash detection", "openbim", "bimcloud"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'direct-modeling') {
+      const explicitSlugs = ["rhino-3d", "sketchup", "spaceclaim", "bricscad", "shapr3d", "solid-edge", "fusion-360"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["direct modeling", "history-free", "push-pull", "direct design", "interactive modeling", "synchronous technology", "dynamic modeling"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'mesh-modeling') {
+      const explicitSlugs = ["blender", "rhino-3d", "geomagic-design-x", "siemens-nx", "fusion-360", "maya", "3ds-max", "zw3d", "meshlab"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["mesh modeling", "polygon editing", "polygon manipulation", "mesh repair", "stl mesh", "obj mesh", "3d scan mesh", "mesh optimization", "point cloud mesh", "mesh to solid", "polygon mesh"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'piping-routing') {
+      const explicitSlugs = ["solidworks", "autodesk-inventor", "ptc-creo", "siemens-nx", "autocad", "revit", "solid-edge", "microstation"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["piping", "cabling", "routing", "wiring harness", "hvac routing", "electrical routing", "piping design", "piping and instrumentation", "p&id", "cable tray", "conduit design"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'surface-modeling') {
+      const explicitSlugs = ["rhino-3d", "catia", "siemens-nx", "alias", "ptc-creo", "solidworks", "fusion-360"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["surface modeling", "class-a", "nurbs", "class-a surfacing", "freeform surface", "bezier curves", "lofting", "surfacing", "aesthetic shape", "styling engine"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+
+    if (featureId === 'drafting-detailing') {
+      const explicitSlugs = ["autocad", "bricscad", "draftsight", "zwcad", "gstarcad", "qcad", "librecad", "microstation"];
+      if (explicitSlugs.includes(slug)) return true;
+      
+      const keywords = ["drafting", "detailing", "2d drafting", "technical drawing", "blueprint", "gd&t", "geometric dimensioning", "tolerancing", "drafting tools", "sheet layout", "detailing viewport"];
+      return keywords.some(kw => 
+        shortDesc.includes(kw) || 
+        desc.includes(kw) || 
+        coreFeatures.some(cf => cf.includes(kw)) ||
+        detailedFeatures.some(df => df.includes(kw))
+      );
+    }
+    
+    return false;
+  });
+
+  // Reuse the same ranking helpers defined above.
+  function externalReviewWeight(t: Tool): number {
+    if (!t.external_ratings || t.external_ratings.length === 0) return 0;
+    return t.external_ratings.reduce((acc, r) => acc + (r.count ?? 0), 0);
+  }
+  function completenessScore(t: Tool): number {
+    let n = 0;
+    if (t.version) n++;
+    if (t.last_updated) n++;
+    if (t.languages && t.languages.length > 0) n++;
+    if (t.file_formats_in && t.file_formats_in.length > 0) n++;
+    if (t.integrations && t.integrations.length > 0) n++;
+    if (t.deployment_options && t.deployment_options.length > 0) n++;
+    if (t.security_compliance && t.security_compliance.length > 0) n++;
+    if (t.api_sdk?.has_api) n++;
+    return n;
+  }
+
+  return [...inFeature]
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
       const rA = externalReviewWeight(a);
@@ -339,6 +592,48 @@ export const PLATFORM_PAGES: Record<string, PlatformPage> = {
       },
     ],
   },
+  windows: {
+    slug: "windows",
+    displayName: "Windows",
+    platformValue: "Windows",
+    intro:
+      "Windows remains the undisputed gold standard and primary development environment for the global CAD and engineering industry in 2026. Virtually 100% of advanced mechanical design, finite element analysis (FEA), computational fluid dynamics (CFD), and deep electronic design automation (EDA) suites are optimized natively for Windows architectures, taking full advantage of DirectX 12, Vulkan, and modern multi-threaded workstation CPUs. Below is the complete catalog of Windows-compatible CAD, BIM, CAE, and EDA software, sorted by expert score and review weight.",
+    faqs: [
+      {
+        q: "Why is Windows still the preferred OS for heavy CAD and CAE workloads?",
+        a: "Legacy software architectures, deep integration with proprietary graphics pipelines (like DirectX), and the vast majority of specialized third-party plugins (especially C++ and .NET libraries) remain exclusively compatible with Windows. High-end simulation solvers and PLM suites are heavily optimized for Windows Workstation environments.",
+      },
+      {
+        q: "Do Windows CAD applications require a dedicated graphics card?",
+        a: "Yes, for any serious 3D modeling, rendering, or large assembly work, a dedicated GPU with ISV-certified drivers (such as NVIDIA RTX Enterprise/Quadro or AMD Radeon Pro) is strongly recommended. However, modern integrated GPUs can run basic 2D drafting and light 3D design tasks.",
+      },
+      {
+        q: "Can I run all Windows CAD tools on Windows on ARM?",
+        a: "Many major applications are releasing native ARM64 builds or run via the built-in Windows 11 emulation layer. However, legacy tools, complex LISP/DLL integrations, and specialized hardware drivers may still require native x64 Intel/AMD environments in 2026.",
+      },
+    ],
+  },
+  android: {
+    slug: "android",
+    displayName: "Android",
+    platformValue: "Android",
+    intro:
+      "Android is rapidly growing from a simple model-viewer platform into an agile, on-site collaboration and redlining environment in 2026. Equipped with powerful mobile chips and high-resolution stylus support, modern Android tablets and smartphones allow architects, field engineers, and project managers to edit 2D DWGs, inspect massive 3D BIM models, and sync modifications directly to cloud-based design databases from the field. Below are the CAD, BIM, and visualization tools in our database that provide fully functional, native Android apps.",
+    faqs: [
+      {
+        q: "Can I do full 3D modeling and mechanical design on an Android tablet?",
+        a: "While intensive 3D CAD modeling is still primarily a desktop workstation task, Android apps like AutoCAD Mobile, GstarCAD Mobile, and various cloud-based viewers enable precise 2D drafting, measurements, annotations, and lightweight 3D inspections directly on mobile hardware.",
+      },
+      {
+        q: "Is an active internet connection required to run Android CAD apps?",
+        a: "Most professional Android CAD apps allow you to download drawing files locally for offline viewing, measurement, and basic editing. The changes will then sync back to your enterprise cloud repository as soon as you reconnect to the network.",
+      },
+      {
+        q: "Which Android devices are best for CAD workflows?",
+        a: "Large-screen Android tablets with high performance, high color accuracy, and precise active stylus support (such as the Samsung Galaxy Tab S series) provide the most productive and accurate experience for drafting, sketching, and markup review.",
+      },
+    ],
+  },
 };
 
 export function platformPagePaths(): { slug: string }[] {
@@ -350,9 +645,13 @@ export function getPlatformPage(slug: string): PlatformPage | undefined {
 }
 
 export function toolsForPlatform(p: PlatformPage): Tool[] {
-  return tools
+  const sorted = tools
     .filter((t) => t.platforms.includes(p.platformValue))
     .sort((a, b) => b.score - a.score);
+  if (p.slug === "windows") {
+    return sorted.slice(0, 20);
+  }
+  return sorted;
 }
 
 /** ---------- File-format pages -------------------------------------
@@ -535,6 +834,50 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
       {
         q: "JT vs STEP — when to use each?",
         a: "STEP for solid-model exchange (you'll edit the geometry). JT for visualisation, mockup, and large-assembly review (you'll only view and measure).",
+      },
+    ],
+  },
+  "3dm": {
+    slug: "3dm",
+    formatName: "3DM",
+    formatValues: ["3DM"],
+    fullName: "Rhino 3D Model",
+    intro:
+      "The 3DM format is the native file type of Rhinoceros 3D, the industry standard for NURBS-based mathematical 3D modeling, industrial design, and computational architecture. Because 3DM files store precise double-precision NURBS curves, surfaces, and solids, they maintain perfect geometric fidelity without the mesh tessellation loss of formats like STL. The format is open-source (via the openNURBS initiative), allowing a wide variety of CAD, rendering, and rapid prototyping tools to import and export Rhino models directly. Below are all the tools in our catalog that support the 3DM format.",
+    faqs: [
+      {
+        q: "What is the primary benefit of the 3DM format over STL or OBJ?",
+        a: "STL and OBJ represent 3D models as a collection of flat triangles (tessellated mesh), which introduces approximation errors. 3DM represents models using exact mathematical NURBS equations, providing infinite resolution and absolute precision, which is critical for industrial manufacturing and marine design.",
+      },
+      {
+        q: "Is the 3DM format open and accessible?",
+        a: "Yes. McNeil & Associates maintains the openNURBS toolkit, a free, open-source C++ and .NET software library that enables any software developer to read and write 3DM files natively without requiring Rhinoceros licenses.",
+      },
+      {
+        q: "Can I view a 3DM file without Rhino?",
+        a: "Absolutely. Many general CAD programs, standalone viewers (such as eDrawings or openNURBS-based viewers), and web-based portfolio platforms can view and inspect 3DM models without any active Rhino installation.",
+      },
+    ],
+  },
+  "3mf": {
+    slug: "3mf",
+    formatName: "3MF",
+    formatValues: ["3MF"],
+    fullName: "3D Manufacturing Format",
+    intro:
+      "The 3D Manufacturing Format (3MF) is the modern, open-standard file format designed specifically for additive manufacturing and 3D printing. Developed by the 3MF Consortium (which includes Autodesk, Microsoft, HP, and UltiMaker), 3MF addresses the severe limitations of the legacy STL format. It is a clean, XML-based format that packs full scene geometry, scale units, color gradients, materials, textures, and internal lattice structures into a single compressed archive. Below are the tools in our catalog that support importing, exporting, or slicing 3MF files.",
+    faqs: [
+      {
+        q: "Why is 3MF superior to STL for 3D printing?",
+        a: "Unlike STL, which only defines raw surface triangles with no scale or color data, 3MF stores precise physical units, multi-material specifications, color maps, texture coordinates, and even internal structural lattices. It is also highly compressed and less prone to mesh errors like self-intersections or holes.",
+      },
+      {
+        q: "Who supports and maintains the 3MF format?",
+        a: "The 3MF Consortium, a collaborative joint industry project composed of leading CAD developers, 3D printer manufacturers, and material companies, governs and continuously improves the open 3MF specification.",
+      },
+      {
+        q: "Can I use 3MF files in standard CAD and slicer programs?",
+        a: "Yes. Almost all modern 3D CAD platforms (like SolidWorks, Fusion 360) and standard slicers (such as PrusaSlicer, Bambu Studio, and Cura) fully support 3MF as a primary import and export format for 3D printing workflows.",
       },
     ],
   },

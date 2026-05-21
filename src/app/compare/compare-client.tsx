@@ -23,8 +23,10 @@ function CompareContent() {
 
   const filteredSearch = useMemo(() => {
     if (!searchTerm) return [];
+    const normalize = (str: string) => str.toLowerCase().replace(/[-\s]+/g, '');
+    const normalizedTerm = normalize(searchTerm);
     return tools.filter(t => 
-      t.name.toLowerCase().includes(searchTerm.toLowerCase()) && 
+      normalize(t.name).includes(normalizedTerm) && 
       !selectedToolIds.includes(t.id)
     ).slice(0, 5);
   }, [searchTerm, selectedToolIds]);

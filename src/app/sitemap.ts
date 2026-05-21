@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { tools } from '@/lib/data';
+import { featureCategories } from '@/lib/data/featureCategories';
 import {
   bestOfPaths,
   comparisonPairs,
@@ -28,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/for`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/free`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/open-source`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/deals`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    // /deals intentionally omitted — page is noindex,follow until real partner deals are wired.
     { url: `${BASE_URL}/sponsor`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
@@ -46,6 +47,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Per-category best-of pages (7 entries).
   const bestOfUrls: MetadataRoute.Sitemap = bestOfPaths().map(({ slug }) => ({
     url: `${BASE_URL}/best/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
+  // Feature spotlight pages (16 entries).
+  const featureUrls: MetadataRoute.Sitemap = featureCategories.map((f) => ({
+    url: `${BASE_URL}/best/feature/${f.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
@@ -102,6 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...toolUrls,
     ...bestOfUrls,
+    ...featureUrls,
     ...compareUrls,
     ...alternativesUrls,
     ...platformUrls,

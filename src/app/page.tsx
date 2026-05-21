@@ -8,9 +8,9 @@ import { ToolLogo } from '@/components/tool-logo';
 import { pageMetadata, websiteLd, organizationLd } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CADGuide.tools: Compare 175+ Best CAD Software 2026 (Free & Pro)',
+  title: 'CADGuide.tools: Compare 235+ Best CAD Software 2026 (Free & Pro)',
   description:
-    'Find the perfect design tool. Compare 175+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
+    'Find the perfect design tool. Compare 235+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
   path: '/',
 });
 
@@ -34,7 +34,7 @@ export default function Home() {
 
 function HomeBody() {
   return (
-    <main className="min-h-screen bg-white overflow-x-hidden">
+    <main className="min-h-screen bg-white overflow-x-hidden w-full">
       {/* Hero Section - Deep ocean blue */}
       <section className="bg-gradient-to-br from-blue-950 via-[#0a192f] to-blue-900 text-white pt-24 pb-32 relative overflow-hidden w-full px-4">
         {/* Abstract background elements - pure blue glow effect */}
@@ -47,13 +47,13 @@ function HomeBody() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
             </span>
-            Verified & Updated: April 2026
+            Verified & Updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1] break-words">
             Compare and Find Your <span className="text-blue-400">Perfect CAD</span> Software.
           </h1>
           <p className="text-lg sm:text-xl text-blue-100/70 mb-14 max-w-2xl mx-auto leading-relaxed">
-            Independent reviews, transparent pricing, and deep technical specs for 175+ professional CAD & BIM software.
+            Independent reviews, transparent pricing, and deep technical specs for 235+ professional CAD & BIM software.
           </p>
           
           {/* Advanced Search Mockup */}
@@ -69,11 +69,11 @@ function HomeBody() {
             </Button>
           </form>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 px-4">
-            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 border-none font-bold h-14 rounded-xl">
+            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-600 hover:text-white border-none font-bold h-14 rounded-xl transition-all">
               <Link href="/matchmaker">Try Smart Matchmaker</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-blue-400/50 text-white hover:bg-white/10 font-bold h-14 rounded-xl">
-              <Link href="/tools">Browse 175+ Tools</Link>
+              <Link href="/tools">Browse 235+ Tools</Link>
             </Button>
           </div>
         </div>
@@ -189,7 +189,7 @@ function HomeBody() {
           <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don't accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
-              <div className="text-blue-600 text-5xl font-black mb-2">175+</div>
+              <div className="text-blue-600 text-5xl font-black mb-2">235+</div>
               <div className="text-slate-900 font-black uppercase tracking-widest text-xs">Tools Indexed</div>
             </div>
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
@@ -239,10 +239,11 @@ function HomeBody() {
               <div className="mt-1 text-lg font-black text-slate-900">Free CAD</div>
               <div className="mt-1 text-xs text-slate-500">Truly free, no trial-ware</div>
             </Link>
-            <Link href="/best" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">7 lists</div>
-              <div className="mt-1 text-lg font-black text-slate-900">Best Lists</div>
-              <div className="mt-1 text-xs text-slate-500">Top picks per category</div>
+            <Link href="/best" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all relative overflow-hidden group">
+              <div className="absolute top-0 right-0 bg-blue-600 text-white text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded-bl-lg">New</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 Features</div>
+              <div className="mt-1 text-lg font-black text-slate-900 group-hover:text-blue-600 transition-colors">By Feature</div>
+              <div className="mt-1 text-xs text-slate-500">16 technical spotlights + 7 discipline rankings</div>
             </Link>
           </div>
         </div>
@@ -258,7 +259,7 @@ function HomeBody() {
             Our directory is growing every day. If you want us to review a specific tool, or if you're a vendor, let us know.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold px-10 h-14 text-lg rounded-2xl shadow-xl shadow-blue-900/20">
+            <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-600 hover:text-white font-bold px-10 h-14 text-lg rounded-2xl shadow-xl shadow-blue-900/20 transition-all">
               <Link href="/sponsor">Submit a Tool</Link>
             </Button>
             <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold px-10 h-14 text-lg rounded-2xl">
