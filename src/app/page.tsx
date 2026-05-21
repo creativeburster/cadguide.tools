@@ -99,7 +99,8 @@ function HomeBody() {
                   <ToolLogo 
                     slug={tool.slug} src={tool.logo_url} 
                     websiteUrl={tool.official_url}
-                    name={tool.name} 
+                    name={tool.name}
+                    priority={true}
                     className="w-16 h-16 border border-slate-100 rounded-2xl shrink-0 shadow-sm" 
                   />
                   <div>
