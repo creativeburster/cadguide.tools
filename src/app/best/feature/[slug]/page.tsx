@@ -418,7 +418,7 @@ export default async function BestFeaturePage(
                 return (
                   <li
                     key={tool.slug}
-                    className="rounded-2xl bg-white border border-slate-200 p-6 hover:border-blue-300 transition-colors shadow-sm"
+                    className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 hover:border-blue-300 transition-colors shadow-sm"
                   >
                     <div className="flex items-start gap-5">
                       <div className="flex-shrink-0">

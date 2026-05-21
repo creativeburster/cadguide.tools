@@ -3,10 +3,10 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
-// 设置带过期时间的 localStorage
+// Set localStorage with an expiry time
 const setCookieConsentWithExpiry = (value: string) => {
   const now = new Date();
-  const expiry = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000); // 90天
+  const expiry = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000); // 90 days
   const item = {
     value,
     expiry: expiry.getTime(),
@@ -14,7 +14,7 @@ const setCookieConsentWithExpiry = (value: string) => {
   localStorage.setItem('cookie-consent', JSON.stringify(item));
 };
 
-// 获取带过期时间的 localStorage
+// Get localStorage with an expiry time
 const getCookieConsentWithExpiry = () => {
   const itemStr = localStorage.getItem('cookie-consent');
   if (!itemStr) return null;
