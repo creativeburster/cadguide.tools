@@ -8,6 +8,7 @@ import {
   platformPagePaths,
   formatPagePaths,
   personaPagePaths,
+  sectorPagePaths,
 } from '@/lib/seo-content';
 
 const BASE_URL = 'https://cadguide.tools';
@@ -27,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/platforms`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/file-formats`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/for`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/sectors`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/free`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/open-source`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     // /deals intentionally omitted — page is noindex,follow until real partner deals are wired.
@@ -103,6 +105,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
+  // Sector / Industry vertical pages (16 entries).
+  const sectorUrls: MetadataRoute.Sitemap = sectorPagePaths().map(({ slug }) => ({
+    url: `${BASE_URL}/sectors/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticPages,
     ...toolUrls,
@@ -113,5 +123,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...platformUrls,
     ...formatUrls,
     ...personaUrls,
+    ...sectorUrls,
   ];
 }

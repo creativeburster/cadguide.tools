@@ -214,11 +214,16 @@ function HomeBody() {
               Slice the catalog by role, platform, file format, or pricing — every angle has its own curated guide.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
             <Link href="/for" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">10 roles</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Role</div>
               <div className="mt-1 text-xs text-slate-500">Architects, engineers, students…</div>
+            </Link>
+            <Link href="/sectors" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 sectors</div>
+              <div className="mt-1 text-lg font-black text-slate-900">By Sector</div>
+              <div className="mt-1 text-xs text-slate-500">Aerospace, automotive, sheet metal…</div>
             </Link>
             <Link href="/platforms" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">4 platforms</div>
@@ -261,7 +266,7 @@ function HomeBody() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-600 hover:text-white font-bold px-10 h-14 text-lg rounded-2xl shadow-xl shadow-blue-900/20 transition-all">
-              <Link href="/sponsor">Submit a Tool</Link>
+              <Link href="/sponsor">Submit or Claim a Tool</Link>
             </Button>
             <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold px-10 h-14 text-lg rounded-2xl">
               <Link href="/matchmaker">Talk to Expert</Link>

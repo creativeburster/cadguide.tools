@@ -1164,6 +1164,417 @@ export function toolsForPersona(p: PersonaPage): Tool[] {
   return tools.filter(p.filter).sort((a, b) => b.score - a.score);
 }
 
+/** ---------- Sector / Industry vertical pages ----------------------
+ * `/sectors/[slug]` — one page per industry vertical.
+ * Targets long-tail keywords: "best CAD for automotive design",
+ * "CAE and FEA software comparison", "woodworking CNC CAD", etc.
+ */
+export interface SectorPage {
+  slug: string;
+  /** Display name in H1 ("CAE & Simulation", "Automotive & Auto Parts"). */
+  displayName: string;
+  /** Singular noun for body copy ("simulation engineer", "automotive designer"). */
+  shortNoun: string;
+  /** Filter function for which tools belong on this list. */
+  filter: (t: Tool) => boolean;
+  /** ~120-word custom intro paragraph specific to this sector. */
+  intro: string;
+  faqs: { q: string; a: string }[];
+}
+
+export const SECTOR_PAGES: Record<string, SectorPage> = {
+  cae: {
+    slug: "cae",
+    displayName: "CAE & Simulation",
+    shortNoun: "simulation engineer",
+    filter: (t) => t.category_id === "c5" && (
+      (t.industries ?? []).some(i => ["CAE", "Simulation", "Aerospace", "Automotive", "Structural"].includes(i)) ||
+      (t.core_features ?? []).some(f => ["FEA", "Simulation", "CFD", "Thermal Analysis", "Structural Analysis"].includes(f)) ||
+      /cae|fea|finite element|simulation|cfd|multiphysics/i.test(t.name + " " + t.short_desc + " " + t.description)
+    ),
+    intro: "Computer-Aided Engineering (CAE) and Finite Element Analysis (FEA) are critical for validating designs before physical prototyping. In 2026, simulation is no longer a late-stage validation step; it is integrated directly into the design process with real-time solvers, generative design, and multiphysics capabilities. From structural mechanics to computational fluid dynamics (CFD) and electromagnetic analysis, these tools help engineers optimize performance, weight, and durability. Below are the top-rated CAE and simulation suites in our database, sorted by expert score and review depth.",
+    faqs: [
+      {
+        q: "What is the difference between FEA and CFD?",
+        a: "FEA (Finite Element Analysis) is primarily used for structural, thermal, and modal analysis of solid bodies. CFD (Computational Fluid Dynamics) simulates fluid flow (liquids and gases) and thermal interaction within or around complex geometries.",
+      },
+      {
+        q: "Is cloud-based simulation secure for sensitive intellectual property?",
+        a: "Yes. Modern cloud simulation platforms use military-grade end-to-end encryption, multi-tenant isolation, and comply with strict security standards like SOC 2 Type II and ISO 27001. Leading aerospace and defense companies regularly utilize secure cloud environments for simulation.",
+      },
+      {
+        q: "Do I need a high-end workstation to run CAE software?",
+        a: "For traditional desktop solvers, a high-core-count CPU, massive RAM (64GB+), and workstation-grade GPUs are required. However, cloud-native platforms offload solver calculations to remote HPC clusters, allowing you to run complex simulations on an ordinary laptop.",
+      },
+    ],
+  },
+  cam: {
+    slug: "cam",
+    displayName: "CAM & CNC Manufacturing",
+    shortNoun: "CNC machinist",
+    filter: (t) => t.category_id === "c5" && (
+      (t.industries ?? []).some(i => ["Manufacturing", "Machining", "Tooling"].includes(i)) ||
+      (t.core_features ?? []).some(f => ["CAM", "CNC", "Toolpath", "Milling", "Turning", "G-code"].includes(f)) ||
+      /cam|cnc|toolpath|machin|milling|turning|g-code/i.test(t.name + " " + t.short_desc + " " + t.description)
+    ),
+    intro: "Computer-Aided Manufacturing (CAM) bridges the gap between digital 3D design and physical production. Modern CAM tools translate complex 3D CAD geometry into precise G-code to drive CNC mills, lathes, EDM machines, and multi-axis machining centers. The 2026 manufacturing landscape demands seamless CAD/CAM integration to avoid translation errors, automated toolpath generation, dynamic collision avoidance, and specialized high-speed machining (HSM) cycles that reduce tool wear and cycle times. Below are the premier CAM software packages currently ranked.",
+    faqs: [
+      {
+        q: "What are the benefits of integrated CAD/CAM versus standalone CAM?",
+        a: "Integrated CAD/CAM (like Fusion 360 or SolidCAM inside SolidWorks) eliminates file conversion issues and maintains associativity. If you change the 3D model, the toolpaths automatically update. Standalone CAM is preferred by dedicated machine shops that receive file formats from multiple different client CAD tools.",
+      },
+      {
+        q: "What is high-speed machining (HSM) or dynamic milling?",
+        a: "These are advanced toolpath strategies that maintain a constant tool load and engagement angle. By avoiding sharp corners and heavy cuts, they allow the machine to run at much higher speeds, reducing cycle times by up to 70% and extending tool life.",
+      },
+      {
+        q: "How many axes of machining do I need?",
+        a: "2.5-axis and 3-axis cover basic flat or organic milling. 4-axis adds rotational capabilities for cylindrical parts. 5-axis allows the tool to approach the part from any angle, enabling complex aerospace/medical components in a single setup.",
+      },
+    ],
+  },
+  "3d-printing": {
+    slug: "3d-printing",
+    displayName: "3D Printing & Additive Manufacturing",
+    shortNoun: "additive specialist",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Additive Manufacturing", "3D Printing", "Hobbyist", "Maker"].includes(i)) ||
+      (t.core_features ?? []).some(f => ["Slicing", "Slicer", "3D Printing", "Mesh Repair"].includes(f)) ||
+      /3d print|slicer|slicing|stl|additive/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "3D printing and additive manufacturing have transitioned from simple hobbyist prototyping to high-volume industrial production in 2026. Designing for additive manufacturing (DfAM) requires a unique toolchain, blending geometric modeling (NURBS or subdivision surfaces), mesh repair (STL/3MF optimization), topology optimization, lattice structure generation, and slicing. Below is a curated selection of CAD modellers, structural optimization suites, and precision slicing engines tailored for both industrial metal/polymer printers and desktop makers.",
+    faqs: [
+      {
+        q: "Which file format is best for 3D printing in 2026?",
+        a: "While STL remains the most common, 3MF is the modern standard. 3MF is XML-based, compact, stores exact units, colors, material specifications, and internal lattice structures, eliminating typical mesh repair issues associated with STL.",
+      },
+      {
+        q: "What is topology optimization in additive manufacturing?",
+        a: "It is an algorithmic design method that strips away material from a non-critical load path, creating organic, bone-like shapes that are lightweight yet incredibly strong. These complex shapes can typically only be fabricated using 3D printing.",
+      },
+      {
+        q: "Do I need a dedicated slicer for my 3D printer?",
+        a: "Yes. Slicers slice the 3D mesh into horizontal layers and generate printer-specific G-code. Popular slicers include Ultimaker Cura, PrusaSlicer, and Bambu Studio, which are tailored to specific hardware architectures.",
+      },
+    ],
+  },
+  automotive: {
+    slug: "automotive",
+    displayName: "Automotive & Auto Parts",
+    shortNoun: "automotive designer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Automotive", "Transportation", "Vehicle"].includes(i)) ||
+      /automotive|vehicle|car |body-in-white/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "The automotive sector demands CAD/CAM software capable of handling massive assemblies, strict Class-A surface aesthetics, complex wiring harnesses, sheet metal press-forming, and rigorous safety simulation. From OEM-level vehicle layout to tier-1 auto parts engineering, automotive CAD tools integrate deeply with Product Lifecycle Management (PLM) systems. In 2026, the shift to electric vehicles and smart components requires multidisciplinary design platforms that unify mechanical, electronic, and software engineering.",
+    faqs: [
+      {
+        q: "Which CAD systems do major automotive OEMs use?",
+        a: "CATIA and Siemens NX are the industry standards for major automotive OEMs globally due to their high-end surface modeling, large assembly capabilities, and deep PLM integration. Tier-1 suppliers generally use SolidWorks, Creo, or Autodesk Inventor to align with OEM requirements.",
+      },
+      {
+        q: "What is a Class-A surface in automotive design?",
+        a: "A Class-A surface is a mathematically perfect surface with G3 curvature continuity, ensuring perfectly smooth highlights and reflections on visible parts like car body panels. This requires advanced NURBS surfacing tools found in CATIA, Alias, and Rhino.",
+      },
+      {
+        q: "How does PLM fit into automotive CAD?",
+        a: "Product Lifecycle Management (PLM) software (like Teamcenter or Windchill) tracks version control, bill of materials (BOM), supplier access, change orders, and manufacturing workflows across thousands of engineers working on the same vehicle platform.",
+      },
+    ],
+  },
+  "hydraulic-geotechnical": {
+    slug: "hydraulic-geotechnical",
+    displayName: "Hydraulic & Geotechnical",
+    shortNoun: "geotechnical engineer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Hydraulic", "Geotechnical", "Civil Engineering", "Water", "Earthworks"].includes(i)) ||
+      (t.core_features ?? []).some(f => ["Hydraulic", "Geotechnical", "Slope Stability", "Dam"].includes(f)) ||
+      /hydraulic|geotechnical|soil|slope stability|geostudio|plaxis|earthwork/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Hydraulic and geotechnical engineering CAD deals with the design and analysis of earthworks, foundations, retaining structures, tunnels, dams, and water resource infrastructure. Unlike structural design, geotechnical workflows require modeling complex subsurface geology, soil mechanics, groundwater flow, and slope stability. In 2026, integrating geotechnical data with building information modeling (BIM) via open formats like IFC is key to mitigating risk, reducing construction cost, and ensuring long-term structural safety.",
+    faqs: [
+      {
+        q: "Why do geotechnical engineers need specialized CAD software?",
+        a: "Soil and rock behave non-linearly, and subsurface layers are highly irregular. General-purpose CAD cannot analyze soil-structure interaction, slope failure slip surfaces, or groundwater seepage, requiring specialized FEM solvers like Plaxis or GeoStudio.",
+      },
+      {
+        q: "How is geotechnical data integrated into a BIM model?",
+        a: "Geotechnical data (borehole logs, soil profiles) is integrated using specialized BIM plugins or import tools that map subsurface layers to 3D surfaces. The emerging IFC4.3 standard natively supports geotechnical and infrastructure objects.",
+      },
+      {
+        q: "What is civil site design in hydraulic engineering?",
+        a: "It involves grading, stormwater management, retention pond layout, and drainage pipe design. These workflows require precise dynamic grading tools that calculate cut-and-fill volumes automatically to minimize site disturbance.",
+      },
+    ],
+  },
+  aerospace: {
+    slug: "aerospace",
+    displayName: "Aerospace & Defense",
+    shortNoun: "aerospace engineer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Aerospace", "Aviation", "Defense"].includes(i)) ||
+      /aerospace|aircraft|aviation|spacecraft|satellite/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Aerospace engineering CAD operates at the absolute cutting edge of precision, performance, and complexity. Developing aircraft, spacecraft, satellites, and propulsion systems requires tools that handle millions of parts, advanced composites, high-end aerodynamic surfaces, and extreme structural simulations (FEA/CFD). The 2026 aerospace ecosystem demands rigorous compliance tracking, model-based definition (MBD) to eliminate 2D drawings, and seamless collaboration throughout a global supply chain under strict defense security protocols.",
+    faqs: [
+      {
+        q: "Which CAD platforms dominate the aerospace industry?",
+        a: "CATIA (Dassault Systèmes) and Siemens NX are the absolute standard for major aerospace manufacturers (Boeing, Airbus, Lockheed Martin, SpaceX). They are chosen for their unbeatable assembly capacity, advanced surfacing, and deep PLM links.",
+      },
+      {
+        q: "What is Model-Based Definition (MBD)?",
+        a: "MBD is the practice of embedding Product Manufacturing Information (PMI), such as dimensions, tolerances, and surface finishes, directly within the 3D CAD model. This serves as the single source of truth, reducing drawing overhead and downstream errors.",
+      },
+      {
+        q: "How does composite design work in aerospace CAD?",
+        a: "Aerospace CAD includes specialized composite modules (like CATIA CPD or NX Laminate) that model the ply layup, orientation, and draping behavior of carbon fiber parts, simulating structural strength and manufacturing feasibility.",
+      },
+    ],
+  },
+  "rail-transit": {
+    slug: "rail-transit",
+    displayName: "Rail & Rail Transit",
+    shortNoun: "rail designer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Transportation", "Rail", "Rail Transportation", "Infrastructure"].includes(i)) ||
+      /railway|railroad|rail transit|metro |trackwork|locomotive/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Rail transit CAD focuses on the complex design of railway networks, high-speed rail lines, metro systems, and light rail corridors. This specialized infrastructure vertical involves alignment design (horizontal and vertical profiles), station and platform layout, structural bridge/tunnel integration, catenary systems, signaling schematics, and digital trackwork modeling. In 2026, the industry standard relies on specialized BIM-for-infrastructure workflows to maintain safety clearance envelopes and plan construction stages with minimal operational disruption.",
+    faqs: [
+      {
+        q: "What is alignment design in rail CAD?",
+        a: "Alignment design is the calculation of horizontal curves, vertical profiles, and transition spirals (cant/superelevation) that ensure trains can travel safely and smoothly at design speeds, obeying physics-based structural constraints.",
+      },
+      {
+        q: "How is clearance envelope analysis performed?",
+        a: "Rail CAD suites include specialized swept-path analysis tools that simulate the spatial movement of train cars along the track, verifying that the dynamic vehicle outline does not collide with tunnels, platforms, or catenary masts.",
+      },
+      {
+        q: "What software is preferred for rail infrastructure projects?",
+        a: "Bentley OpenRail Designer is the global leader in rail design, built on the stable MicroStation engine. Autodesk Civil 3D is also widely used for track design, along with specialized European suites like Card-1 or NovaPOINT.",
+      },
+    ],
+  },
+  "medical-devices": {
+    slug: "medical-devices",
+    displayName: "Medical Devices & Implants",
+    shortNoun: "medical device engineer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Medical", "Dental", "Healthcare", "Medical Devices", "Biomedical"].includes(i)) ||
+      /medical device|dental|implant|prosthetic|surgical|orthopedic|anatomical/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Designing medical devices, surgical instrumentation, and custom anatomical implants requires CAD software that bridges the gap between organic human anatomy and high-precision engineering. Workflows often start with patient CT/MRI scans, translating voxels into 3D polygon meshes or mathematical surfaces. In 2026, medical CAD tools must support advanced organic surfacing, bio-compatible material specifications, additive manufacturing build prep, and rigid version control to comply with FDA, CE, and ISO 13485 regulations.",
+    faqs: [
+      {
+        q: "How do medical CAD tools interface with CT or MRI scans?",
+        a: "CT/MRI scanners output DICOM files. Specialized software (like Materialise Mimics or Geomagic) imports DICOM data, segments the voxels, and converts anatomical structures into 3D meshes (STL/3MF) which can then be imported into CAD for custom implant design.",
+      },
+      {
+        q: "What is organic surfacing in medical device design?",
+        a: "Human bones and organs are freeform and non-symmetrical. Medical CAD must support subdivision (SubD) surfaces, organic NURBS, and direct mesh modeling to model ergonomic handles, joint prosthetics, and patient-specific implants.",
+      },
+      {
+        q: "What regulations affect medical CAD data?",
+        a: "ISO 13485 requires strict quality management and design controls. Medical CAD systems must operate alongside PDM/PLM systems that maintain a complete history of revisions, design reviews, electronic signatures, and verification testing.",
+      },
+    ],
+  },
+  "sheet-metal": {
+    slug: "sheet-metal",
+    displayName: "Sheet Metal & Fabrication",
+    shortNoun: "sheet metal designer",
+    filter: (t) =>
+      (t.core_features ?? []).some(f => ["Sheet Metal", "Unfolding", "Flat Pattern"].includes(f)) ||
+      /sheet metal|sheet-metal|flat pattern|unfolding|bending|press brake/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Sheet metal CAD is a specialized mechanical engineering discipline focusing on parts manufactured by cutting, punching, bending, and forming flat sheet metal panels. Designing sheet metal parts requires deep knowledge of material deformation, bend allowances, and K-factors. In 2026, sheet metal CAD tools must offer dynamic unfolding engines that generate perfectly accurate flat patterns for laser/waterjet cutting and CNC press brakes, ensuring that the physical bent part matches the digital 3D model.",
+    faqs: [
+      {
+        q: "What is a K-factor and why is it critical in sheet metal CAD?",
+        a: "The K-factor represents the ratio of the neutral axis position to the material thickness. When metal is bent, the outer surface stretches and the inner surface compresses. CAD needs the correct K-factor to calculate the exact flat pattern length.",
+      },
+      {
+        q: "Which CAD tools are best for sheet metal design?",
+        a: "SolidWorks, Autodesk Inventor, Solid Edge, and BricsCAD have industry-leading, dedicated sheet metal environments. They offer automatic corner relief, bend tables, dynamic flattening, and direct sheet metal feature conversion from solid bodies.",
+      },
+      {
+        q: "What is sheet metal nesting?",
+        a: "Nesting is the process of arranging multiple flat pattern parts on a single raw sheet of metal to minimize scrap waste. Modern sheet metal CAD suites include nested layout engines that calculate optimal yields for laser, plasma, or CNC punch cutters.",
+      },
+    ],
+  },
+  "steel-structures": {
+    slug: "steel-structures",
+    displayName: "Steel Structures & Detailing",
+    shortNoun: "structural detailer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Structural Engineering", "Steel Structures", "Construction"].includes(i)) ||
+      (t.core_features ?? []).some(f => ["Steel Detailing", "Connection Design", "Rebar"].includes(f)) ||
+      /steel structure|steel frame|structural steel|tekla structures/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Steel structures CAD is the backbone of industrial plants, multi-story buildings, bridges, and infrastructure framing. Designing steel structures requires specialized BIM modeling tools that can place standard rolled shapes (beams, columns, trusses), model complex structural connections (bolts, welds, gusset plates), and automatically generate CNC shop drawings. In 2026, deep integration with structural analysis solvers and open structural BIM formats (like CIS/2 or IFC) is mandatory for modern workflows.",
+    faqs: [
+      {
+        q: "What is the difference between structural design and steel detailing?",
+        a: "Structural design involves engineering calculations to size member profiles. Steel detailing is the creation of highly detailed 3D fabrication models showing every single plate, bolt, weld, and hole required to fabricate and erect the frame on site.",
+      },
+      {
+        q: "Which software is the industry standard for steel detailing?",
+        a: "Tekla Structures is the undisputed global leader in high-end steel detailing. Other strong professional choices include Autodesk Advance Steel, SDS2, and specialized structural detailing add-ons for general BIM tools like Revit.",
+      },
+      {
+        q: "How does structural analysis link to steel CAD?",
+        a: "Engineers analyze structural loads in CAE software (SAP2000, STAAD.Pro, midas Gen) and export structural profiles to steel detailing software. This bi-directional link ensures member sizes match calculation models perfectly.",
+      },
+    ],
+  },
+  "quantity-takeoff": {
+    slug: "quantity-takeoff",
+    displayName: "Quantity Takeoff & Cost Estimation",
+    shortNoun: "estimator",
+    filter: (t) =>
+      (t.core_features ?? []).some(f => ["Quantity Takeoff", "Estimation", "Cost Estimating", "Measurement"].includes(f)) ||
+      /quantity takeoff|takeoff|cost estimation|take-off|measurement|estimating/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Quantity takeoff (QTO) and cost estimation are critical components of the pre-construction bidding phase. Estimators must extract precise material quantities—such as concrete volumes, sheet metal weight, drywall areas, and pipe lengths—from 2D CAD blueprints and 3D BIM models. In 2026, automated QTO tools dramatically reduce human error, link 3D geometry directly to dynamic cost databases, and facilitate instant recalculations when design modifications occur.",
+    faqs: [
+      {
+        q: "What is 5D BIM in cost estimation?",
+        a: "5D BIM is the integration of cost estimation (5th dimension) directly with the 3D model geometry (3D) and the construction schedule (4D/time). As the model evolves, the cost and schedule update in real time.",
+      },
+      {
+        q: "How does a 2D takeoff work compared to a 3D takeoff?",
+        a: "2D takeoff involves manually tracing lines and polygons on PDF blueprints to calculate areas and lengths. 3D takeoff automatically queries BIM database properties, extracting exact volume, weight, and count metadata in seconds.",
+      },
+      {
+        q: "What software is preferred for quantity takeoff?",
+        a: "Bluebeam Revu is the standard for PDF-based 2D takeoff. Autodesk Takeoff (part of Construction Cloud) and CostX are market leaders for unified 2D and 3D takeoff workflows, while Trimble Nova and SCENE are used in heavy structural sectors.",
+      },
+    ],
+  },
+  "piping-pipeline": {
+    slug: "piping-pipeline",
+    displayName: "Piping & Pipelines",
+    shortNoun: "piping designer",
+    filter: (t) =>
+      (t.core_features ?? []).some(f => ["Piping", "Routing", "Cabling", "HVAC Routing", "Piping Design"].includes(f)) ||
+      /piping|routing|wiring harness|cabling|conduit|pipeline/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Piping and pipeline CAD handles the routing of pipes, valves, fittings, and supports in chemical plants, oil refineries, power stations, HVAC systems, and cross-country networks. Piping layout is governed by complex spatial constraints, chemical compatibility, and safety codes. In 2026, piping CAD relies on smart 3D routing engines that link directly to 2D Piping & Instrumentation Diagrams (P&IDs), automate isometric drawing generation, and run stress analysis to prevent thermal expansion failures.",
+    faqs: [
+      {
+        q: "What is a P&ID and how does it link to 3D piping?",
+        a: "A P&ID (Piping and Instrumentation Diagram) is a schematic drawing showing process flow and instrumentation. Modern piping CAD links the P&ID database directly to the 3D layout, highlighting routing discrepancies and ensuring all valves and instruments are placed correctly.",
+      },
+      {
+        q: "What is a piping isometric drawing?",
+        a: "A piping isometric is a simplified, non-scale 3D drawing of a single pipe run, showing exact cut lengths, fittings, weld locations, and a bill of materials (BOM). Fabricators use these drawings to pre-assemble pipe spools in a workshop.",
+      },
+      {
+        q: "Which software is best for plant piping design?",
+        a: "AutoCAD Plant 3D and AVEVA E3D Design are the leading tools for large-scale industrial plants. For mechanical assemblies, SolidWorks, Creo, and Siemens NX offer highly robust piping, cabling, and routing add-on modules.",
+      },
+    ],
+  },
+  "reverse-engineering": {
+    slug: "reverse-engineering",
+    displayName: "Reverse Engineering",
+    shortNoun: "metrology specialist",
+    filter: (t) =>
+      ["geomagic-design-x", "rhino-3d", "solidworks", "fusion-360", "siemens-nx", "shapr3d"].includes(t.slug) ||
+      (t.core_features ?? []).some(f => ["Reverse Engineering", "3D Scanning", "Point Cloud"].includes(f)) ||
+      /reverse engineering|3d scan|point cloud|geomagic/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Reverse engineering is the process of digitizing a physical part to create a precise CAD model. This workflow is critical for replacing worn or broken machine components, modifying existing products, or capturing clay mockups. In 2026, reverse engineering CAD combines metrology-grade 3D scanning, point cloud registration, triangle mesh optimization, and advanced B-Rep surface reconstruction to convert raw scan data into fully parametric CAD models.",
+    faqs: [
+      {
+        q: "How does reverse engineering CAD differ from standard 3D CAD?",
+        a: "Standard CAD designs from scratch using mathematical shapes. Reverse engineering CAD must import massive mesh files (millions of triangles), align them to coordinate systems, and fit exact NURBS surfaces or parametric features to the scan geometry.",
+      },
+      {
+        q: "What is a point cloud?",
+        a: "A point cloud is a collection of millions of individual XYZ coordinate points captured by a 3D laser scanner or photogrammetry system, representing the external shape of a scanned physical object.",
+      },
+      {
+        q: "Which software is recommended for Metrology and Reverse Engineering?",
+        a: "Geomagic Design X is the gold standard for scan-to-CAD parametric modeling. PolyWorks and GOM Inspect are widely used for quality control inspection, while Rhino 3D with specialized plugins is popular for aesthetic shape reconstruction.",
+      },
+    ],
+  },
+  "agricultural-machinery": {
+    slug: "agricultural-machinery",
+    displayName: "Agricultural Machinery",
+    shortNoun: "agricultural engineer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Agriculture", "Agricultural Machinery", "Heavy Equipment"].includes(i)) ||
+      /agriculture|agricultural|tractor|combine harvester|farm machinery/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Agricultural machinery CAD focuses on the engineering and manufacturing of tractors, combine harvesters, seeders, and smart farming attachments. Designing heavy agricultural equipment requires CAD platforms that can handle massive mechanical assemblies, model rugged sheet metal chassis, and simulate mechanical stress, fluid flow, and terrain interaction in harsh, dusty, and muddy environments. In 2026, tools must support rapid design loops and PDM databases to streamline supply chain coordination.",
+    faqs: [
+      {
+        q: "What challenges face agricultural machinery CAD designers?",
+        a: "Machines operate under extreme vibrational, structural, and environmental loads. Designers must perform complex dynamic simulations (FEA) to verify structural integrity and design sealed components that keep dirt and moisture out.",
+      },
+      {
+        q: "Which CAD systems do agricultural equipment OEMs use?",
+        a: "Major OEMs (like John Deere, AGCO, CNH Industrial) standardise on Siemens NX or PTC Creo due to their powerful top-down assembly planning, advanced modeling capabilities, and robust global PLM infrastructures.",
+      },
+      {
+        q: "How is IoT and smart tech integrated into agricultural CAD?",
+        a: "Modern tractors use advanced electronics, sensors, and GPS guidance. CAD tools with integrated EDA (electronics design automation) and wire harness routing allow engineers to plan physical routing alongside mechanical models.",
+      },
+    ],
+  },
+  "woodworking-customization": {
+    slug: "woodworking-customization",
+    displayName: "Woodworking & Customization",
+    shortNoun: "custom woodworker",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Woodworking", "Furniture", "Timber Construction", "Interior Design", "Whole-House Customization"].includes(i)) ||
+      (t.core_features ?? []).some(f => ["Timber CAD", "Cabinet Design", "Furniture Design"].includes(f)) ||
+      /woodworking|furniture|cabinet|timber|customization|panel cutting|wood design|全屋定制/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "Woodworking, cabinet making, and whole-house customization require CAD software that can design custom cabinetry, timber structures, and interior joinery while automatically generating production data. In 2026, this sector demands smart parametric models where changing room dimensions instantly updates cabinet widths, generates nested panel-cutting layouts for CNC wood routers, calculates hardware counts (hinges, drawer slides), and renders high-quality visualisations for client approvals.",
+    faqs: [
+      {
+        q: "What is whole-house customization in modern CAD?",
+        a: "It is the design of bespoke built-in wardrobes, kitchen cabinets, and wall paneling tailored to a specific home layout. Parameterization ensures that if the room width changes, the furniture scales dynamically according to predefined design rules.",
+      },
+      {
+        q: "Why do woodworkers need specialized CAD/CAM?",
+        a: "Standard CAD does not understand wood grain direction, board joint types (dowels, tenons), or edge-banding. Wood-specific CAD automates these details and links directly to CNC panel saws and nested router cutters.",
+      },
+      {
+        q: "What software is preferred for custom woodworking?",
+        a: "Top choices include Cabinet Vision and woodWOP for cabinetry. IMOS 3D and TopSolid Wood are leading high-end parametric systems. For architecture-heavy timber framing, cadwork is the standard, while SketchUp with plugins is highly popular for custom shops.",
+      },
+    ],
+  },
+  petrochemical: {
+    slug: "petrochemical",
+    displayName: "Petrochemicals & Plant Design",
+    shortNoun: "plant designer",
+    filter: (t) =>
+      (t.industries ?? []).some(i => ["Oil & Gas", "Chemical", "Petrochemical", "Energy", "Process Industry"].includes(i)) ||
+      /petrochemical|oil & gas|refinery|chemical plant|process piping|piping and instrumentation|p&id/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro: "The petrochemical and process plant industry is home to some of the largest, most complex 3D digital models on earth. Designing refineries, chemical processing units, offshore platforms, and storage terminals requires CAD software capable of organizing massive layouts with thousands of pipes, structural columns, instruments, and items of equipment. In 2026, plant design CAD relies on database-driven architectures that enforce strict process engineering rules, check spatial clearances, and generate piping isometrics automatically.",
+    faqs: [
+      {
+        q: "What are the core components of a petrochemical plant design suite?",
+        a: "A complete plant design suite unifies 2D P&IDs, 3D equipment layouts, 3D structural steel design, smart 3D piping routing, clash detection, and database links that track line lists, valve schedules, and instrumentation datasheets.",
+      },
+      {
+        q: "Which software systems lead the petrochemical plant design industry?",
+        a: "AVEVA E3D Design (formerly PDMS) and Hexagon Smart 3D (formerly Intergraph) are the absolute standards for massive global petrochemical EPC projects. For mid-range and package design, AutoCAD Plant 3D and Bentley OpenPlant are highly popular.",
+      },
+      {
+        q: "How is laser scanning used in petrochemical plant retrofits?",
+        a: "Retrofitting active refineries is high-risk. Engineers laser scan the plant, import massive point clouds directly into CAD (using Navisworks or Leica CloudWorx), and route new piping around existing physical obstacles, verifying clash-free installation.",
+      },
+    ],
+  },
+};
+
+export function sectorPagePaths(): { slug: string }[] {
+  return Object.values(SECTOR_PAGES).map((s) => ({ slug: s.slug }));
+}
+
+export function getSectorPage(slug: string): SectorPage | undefined {
+  return SECTOR_PAGES[slug];
+}
+
+export function toolsForSector(s: SectorPage): Tool[] {
+  return tools.filter(s.filter).sort((a, b) => b.score - a.score);
+}
+
+
 /** ---------- Pricing bucket pages ----------------------------------
  * `/free` and `/open-source` — single-route pricing-tier listicles.
  * Targets very high-volume long-tail: "free CAD software",

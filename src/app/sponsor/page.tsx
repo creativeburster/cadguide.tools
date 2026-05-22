@@ -47,7 +47,7 @@ function SponsorBody() {
               <li>• Link to official website</li>
               <li>• Community score inclusion</li>
             </ul>
-            <Button variant="outline" className="w-full mt-auto">Submit Your Tool (Free)</Button>
+            <Button variant="outline" className="w-full mt-auto">Submit or Claim Your Tool (Free)</Button>
           </CardContent>
         </Card>
 
