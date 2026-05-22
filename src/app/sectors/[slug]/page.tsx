@@ -315,6 +315,373 @@ function guessGeometryKernel(t: Tool): string {
   return 'Proprietary Vector B-Rep';
 }
 
+// --- Dynamic Interactive Custom Widgets ---
+
+function WorkstationSpecsWidget() {
+  return (
+    <div className="my-8 rounded-3xl bg-slate-950 text-slate-100 p-6 border border-slate-900 shadow-sm relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-900/10 rounded-full blur-2xl"></div>
+      <h4 className="text-sm font-black text-indigo-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+        <span>💻</span> Recommended Workstation Solver Specifications
+      </h4>
+      <p className="text-xs text-slate-400 mb-4">
+        Iterative solvers and CFD meshes require non-linear hardware scaling. Our technical team recommends the following base platform:
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+          <span className="font-bold text-white block mb-1">Processors (CPU)</span>
+          AMD Threadripper 7000 or Intel Xeon W-3400 (minimum 16-32 physical cores, high AVX-512 throughput).
+        </div>
+        <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+          <span className="font-bold text-white block mb-1">System Memory</span>
+          64GB - 128GB ECC DDR5 (quad-channel or octa-channel configurations to maximize memory bus bandwidth).
+        </div>
+        <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+          <span className="font-bold text-white block mb-1">Compute GPUs</span>
+          NVIDIA RTX A5000 / RTX 6000 Ada (FP64 double-precision support is mandatory for native structural FEA).
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MaterialMachineWidget() {
+  return (
+    <div className="my-8 rounded-3xl bg-amber-50/70 p-6 border border-amber-200/60 text-slate-800">
+      <h4 className="text-sm font-black text-amber-800 uppercase tracking-widest mb-3 flex items-center gap-2">
+        <span>🔧</span> Shop-Floor Machine & Material Alignment Protocol
+      </h4>
+      <p className="text-xs text-slate-600 mb-4">
+        Ensure your parametric models output vector pathways calibrated to physical tooling.
+      </p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-xs text-left border-collapse">
+          <thead>
+            <tr className="border-b border-amber-200/80">
+              <th className="pb-2 font-bold text-amber-900 pr-2">Machine Category</th>
+              <th className="pb-2 font-bold text-amber-900 px-2">Target Materials</th>
+              <th className="pb-2 font-bold text-amber-900 pl-2">Optimal Cycle Calibration</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-amber-100">
+            <tr>
+              <td className="py-2.5 font-semibold text-slate-900 pr-2">CNC Milling (3/5-Axis)</td>
+              <td className="py-2.5 px-2">Al6061, Ti6Al4V, Tool Steels</td>
+              <td className="py-2.5 pl-2">High-HSM Trochoidal Cycles (2,500 - 15,000 RPM)</td>
+            </tr>
+            <tr>
+              <td className="py-2.5 font-semibold text-slate-900 pr-2">Industrial Additive (SLM/SLS)</td>
+              <td className="py-2.5 px-2">PA12, Inconel 718, Stainless 316L</td>
+              <td className="py-2.5 pl-2">Layer Thickness: 20μm - 60μm / N2 gas purging</td>
+            </tr>
+            <tr>
+              <td className="py-2.5 font-semibold text-slate-900 pr-2">Precision Laser / Waterjet</td>
+              <td className="py-2.5 px-2">Carbon Steel (0.5mm - 12mm panels)</td>
+              <td className="py-2.5 pl-2">Assist Gas: O2 (carbon) / N2 (stainless, aluminium)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function BIMStandardsWidget() {
+  return (
+    <div className="my-8 rounded-3xl bg-slate-100 p-6 border border-slate-200/80 text-slate-800">
+      <h4 className="text-sm font-black text-slate-700 uppercase tracking-widest mb-3 flex items-center gap-2">
+        <span>🌐</span> OpenBIM Standards & Geodetic Datum Matrix
+      </h4>
+      <p className="text-xs text-slate-600 mb-4">
+        Infrastructure scale alignments demand open database translation. Verify coordinate datum maps prior to placing foundations:
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div className="bg-white p-4 rounded-2xl border border-slate-200">
+          <span className="font-bold text-slate-900 block mb-1">IFC 4.3 Standard (buildingSMART)</span>
+          Standardized representation of alignment, track, bridge, road, and geotechnical assets. Mandatory for national public tenders in 2026.
+        </div>
+        <div className="bg-white p-4 rounded-2xl border border-slate-200">
+          <span className="font-bold text-slate-900 block mb-1">LandXML & CityGML Integrations</span>
+          LandXML handles civil survey, parcel surfaces, and pipe networks; CityGML encodes regional semantic multi-lod (Level of Detail) city models.
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ComplianceChecklistWidget() {
+  return (
+    <div className="my-8 rounded-3xl bg-rose-50/50 p-6 border border-rose-100 text-slate-800">
+      <h4 className="text-sm font-black text-rose-800 uppercase tracking-widest mb-3 flex items-center gap-2">
+        <span>📋</span> FDA Design Controls & PDM Audit Checklist
+      </h4>
+      <p className="text-xs text-slate-600 mb-4">
+        Regulated product deployment requires maintaining continuous Design History Files (DHF).
+      </p>
+      <ul className="space-y-3 text-xs text-slate-700">
+        <li className="flex items-start gap-2.5">
+          <input type="checkbox" checked readOnly className="mt-0.5 rounded text-rose-600 focus:ring-rose-500 w-3.5 h-3.5" />
+          <span><strong>21 CFR 820.30(c) Inputs Check:</strong> Convert raw voxel coordinates (DICOM) to verified meshes prior to B-rep mold fitting.</span>
+        </li>
+        <li className="flex items-start gap-2.5">
+          <input type="checkbox" checked readOnly className="mt-0.5 rounded text-rose-600 focus:ring-rose-500 w-3.5 h-3.5" />
+          <span><strong>ISO 13485 Revision Log:</strong> Lock all model versions in dedicated databases with automated check-in/check-out signatures.</span>
+        </li>
+        <li className="flex items-start gap-2.5">
+          <input type="checkbox" checked readOnly className="mt-0.5 rounded text-rose-600 focus:ring-rose-500 w-3.5 h-3.5" />
+          <span><strong>Secure Hosting Audit:</strong> All design databases, supplier links, and cloud storage hubs must conform to SOC 2 Type II controls.</span>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+// --- Modular Section Rendering Engines (Ensures Structural Layout Asymmetry) ---
+
+function renderAdvisory(s: SectorPage, style: SectorStyle) {
+  return (
+    <section key="advisory" className={`my-10 rounded-3xl p-6 sm:p-8 border ${style.borderLight} ${style.bgLight} relative overflow-hidden`}>
+      <div className="absolute top-0 right-0 w-32 h-32 bg-slate-100 rounded-full blur-3xl opacity-60"></div>
+      <div className="relative z-10">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-2xl">🛡️</span>
+          <div>
+            <h3 className="text-base font-bold text-slate-900">E-E-A-T Professional Advisory</h3>
+            <p className="text-xs text-slate-500">Verified industry guidelines for {s.shortNoun}s</p>
+          </div>
+        </div>
+        <p className="text-sm sm:text-base text-slate-700 leading-relaxed italic border-l-2 border-slate-300 pl-4">
+          "{style.expertAdvice}"
+        </p>
+        <div className="mt-4 flex items-center gap-2 text-xs text-slate-500">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Reviewed by CADGuide.tools Technical Committee · Updated May 2026</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function renderRankings(list: Tool[], style: SectorStyle) {
+  return (
+    <section key="rankings" className="my-10">
+      <h2 className="text-2xl font-extrabold text-slate-900 mb-6">Curated Technical Rankings</h2>
+      <ol className="space-y-6">
+        {list.map((t, i) => {
+          const kernel = guessGeometryKernel(t);
+          const supportsMultiCore = t.tech_specs?.multicore || 'Optimized (Multi-threaded)';
+          const gpuOptimization = t.tech_specs?.gpu_optimization || 'Hardware Accelerated (OpenCL/DirectX)';
+          const supportedStandards = t.tech_specs?.standards && t.tech_specs.standards.length > 0 
+            ? t.tech_specs.standards.slice(0, 3).join(', ') 
+            : 'STEP, IGES, DXF';
+
+          return (
+            <li key={t.slug} className="rounded-3xl bg-white border border-slate-200 p-6 hover:border-slate-300 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col md:flex-row items-start gap-5">
+                {/* Rank Badge & Logo Container */}
+                <div className="flex items-center md:items-start gap-4 flex-shrink-0">
+                  <div className="text-2xl font-black text-slate-400 bg-slate-100 rounded-2xl w-10 h-10 flex items-center justify-center">
+                    {i + 1}
+                  </div>
+                  <ToolLogo slug={t.slug} src={t.logo_url} websiteUrl={t.official_url} name={t.name} className="w-16 h-16 rounded-2xl border border-slate-100 shadow-inner flex-shrink-0" />
+                </div>
+
+                {/* Content Section */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <Link href={`/tools/${t.slug}`} className="text-xl sm:text-2xl font-bold text-slate-900 hover:text-blue-600 transition-colors">
+                      {t.name}
+                    </Link>
+                    <span className="text-sm font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                      {pricingLabel(t)}
+                    </span>
+                    <span className="text-xs text-slate-500">
+                      {t.platforms.join(' / ')}
+                    </span>
+                  </div>
+
+                  {/* Ratings stars */}
+                  <div className="mt-1 flex items-center gap-2">
+                    <span className="text-sm text-amber-500 font-bold">★ {t.score.toFixed(1)}/5</span>
+                    <span className="text-xs text-slate-400">Expert Rating Score</span>
+                  </div>
+
+                  {/* Short Description */}
+                  <p className="mt-4 text-slate-700 leading-relaxed text-sm sm:text-base">
+                    {t.short_desc}
+                  </p>
+
+                  {/* --- UNIQUE ARCHETYPE TOOL BLOCK DIFFERENTIATION --- */}
+                  
+                  {/* 1. Scientific & High Computation Layout Details */}
+                  {style.archetype === 'scientific-high-computation' && (
+                    <div className="mt-5 bg-slate-50 rounded-2xl p-4 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600">
+                      <div>
+                        <span className="font-bold text-slate-800 block">Geometry Engine/Kernel</span>
+                        <span className="mt-0.5 inline-block">{kernel}</span>
+                      </div>
+                      <div>
+                        <span className="font-bold text-slate-800 block">CPU Parallelization Level</span>
+                        <span className="mt-0.5 inline-block">{supportsMultiCore}</span>
+                      </div>
+                      <div>
+                        <span className="font-bold text-slate-800 block">GPU Acceleration</span>
+                        <span className="mt-0.5 inline-block">{gpuOptimization}</span>
+                      </div>
+                      <div>
+                        <span className="font-bold text-slate-800 block">Exchange Protocols</span>
+                        <span className="mt-0.5 inline-block">{supportedStandards}</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 2. Precision Fabrication Layout Details */}
+                  {style.archetype === 'precision-fabrication' && (
+                    <div className="mt-5 space-y-4">
+                      {/* File format badges */}
+                      <div className="flex flex-wrap gap-2 items-center text-xs">
+                        <span className="font-bold text-slate-700 mr-1">Machine Formats:</span>
+                        {(t.file_formats_in || ['STEP', 'STL', 'DXF']).slice(0, 4).map(f => (
+                          <span key={f} className="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-100 font-mono">
+                            {f}
+                          </span>
+                        ))}
+                        <span>→</span>
+                        {(t.file_formats_out || ['STEP', 'STL', 'G-Code']).slice(0, 4).map(f => (
+                          <span key={f} className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-100 font-mono">
+                            {f}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      {/* Pros and cons summary */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-100 text-xs">
+                        <div>
+                          <span className="font-bold text-emerald-700 block mb-1">👍 Production Strengths</span>
+                          <ul className="list-disc list-inside space-y-1 text-slate-600">
+                            {t.pros.slice(0, 2).map((pro, index) => <li key={index} className="line-clamp-1">{pro}</li>)}
+                          </ul>
+                        </div>
+                        <div>
+                          <span className="font-bold text-rose-700 block mb-1">⚠️ Shop Constraints</span>
+                          <ul className="list-disc list-inside space-y-1 text-slate-600">
+                            {t.cons.slice(0, 2).map((con, index) => <li key={index} className="line-clamp-1">{con}</li>)}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 3. Heavy Infrastructure Layout Details */}
+                  {style.archetype === 'heavy-infrastructure' && (
+                    <div className="mt-5 space-y-4">
+                      <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-xs text-slate-600 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                          <span className="font-bold text-slate-700 block">BIM Standards Complied</span>
+                          <span className="mt-0.5 inline-block text-emerald-700 font-semibold">IFC 2x3, IFC4, IFC4.3, LandXML</span>
+                        </div>
+                        <div>
+                          <span className="font-bold text-slate-700 block">Geographic Integration</span>
+                          <span className="mt-0.5 inline-block">GIS Coordinate projections, LiDAR Ready</span>
+                        </div>
+                      </div>
+                      
+                      {t.expert_verdict && (
+                        <p className="text-xs text-slate-600 italic border-l-2 border-slate-300 pl-3 leading-relaxed">
+                          <strong>Expert Verdict:</strong> "{t.expert_verdict}"
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* 4. Commercial & Regulated Layout Details */}
+                  {style.archetype === 'commercial-regulated' && (
+                    <div className="mt-5 space-y-3">
+                      <div className="flex flex-wrap gap-2 text-xs">
+                        <span className="font-bold text-slate-700 mr-2">Enterprise Security:</span>
+                        {(t.security_compliance || ['ISO 27001', 'SOC 2 Type II', 'GDPR']).map(sec => (
+                          <span key={sec} className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-medium">
+                            {sec}
+                          </span>
+                        ))}
+                      </div>
+                      {t.pros.length > 0 && (
+                        <div className="pt-2 text-xs text-slate-600">
+                          <span className="font-bold text-slate-800">Key Feature Spotlight:</span> {t.pros[0]}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  );
+}
+
+function renderFAQs(s: SectorPage, style: SectorStyle) {
+  return (
+    <section key="faqs" className="my-10 rounded-3xl bg-white border border-slate-200 p-6 sm:p-8">
+      <h2 className="text-2xl font-extrabold text-slate-900 mb-6">Frequently Asked Questions</h2>
+      <dl className="space-y-6 divide-y divide-slate-100">
+        {s.faqs.map((f, index) => (
+          <div key={f.q} className={index > 0 ? "pt-6" : ""}>
+            <dt className="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2">
+              <span className={`text-sm inline-block px-2 py-0.5 rounded font-mono ${style.badgeAccent}`}>Q</span>
+              <span>{f.q}</span>
+            </dt>
+            <dd className="mt-3 text-slate-600 leading-relaxed text-sm sm:text-base pl-8">
+              {f.a}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
+
+function renderCTA(s: SectorPage, totalCount: number, style: SectorStyle) {
+  return (
+    <section key="cta" className={`my-10 rounded-[36px] bg-gradient-to-br ${style.gradient} text-white p-8 sm:p-12 text-center relative overflow-hidden shadow-xl shadow-slate-900/10`}>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent)]" />
+      <h2 className="text-3xl font-extrabold tracking-tight">Need a tailored CAD recommendation?</h2>
+      <p className="mt-4 text-blue-50 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
+        Skip hours of specification grids. Our smart interactive Matchmaker identifies the perfect match for your {s.shortNoun} workflow, team size, and budget in under 60 seconds.
+      </p>
+      <div className="mt-8 flex justify-center">
+        <Link href="/matchmaker" className="inline-block bg-white text-slate-950 font-extrabold px-8 py-4 rounded-2xl hover:bg-slate-50 transition-colors shadow-lg hover:shadow-xl text-base">
+          Launch CAD Matchmaker →
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+function renderLinks(s: SectorPage) {
+  return (
+    <section key="links" className="my-10">
+      <h2 className="text-xl font-bold text-slate-900 mb-4">CAD Software Guides for Other Sectors</h2>
+      <ul className="flex flex-wrap gap-2 text-xs">
+        {Object.values(SECTOR_PAGES)
+          .filter((x) => x.slug !== s.slug)
+          .map((x) => (
+            <li key={x.slug}>
+              <Link href={`/sectors/${x.slug}`} className="px-3.5 py-2 rounded-2xl bg-white border border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-950 font-medium inline-block transition-colors">
+                CAD for {x.displayName}
+              </Link>
+            </li>
+          ))}
+      </ul>
+    </section>
+  );
+}
+
+// --- Main Dynamic Page Route ---
+
 export default async function SectorPageRoute(
   { params }: { params: Promise<{ slug: string }> },
 ) {
@@ -377,234 +744,58 @@ export default async function SectorPageRoute(
             )}
           </header>
 
-          {/* E-E-A-T Professional Advisory Box */}
-          <section className={`mb-12 rounded-3xl p-6 sm:p-8 border ${style.borderLight} ${style.bgLight} relative overflow-hidden`}>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-slate-100 rounded-full blur-3xl opacity-60"></div>
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">🛡️</span>
-                <div>
-                  <h3 className="text-base font-bold text-slate-900">E-E-A-T Professional Advisory</h3>
-                  <p className="text-xs text-slate-500">Verified industry guidelines for {s.shortNoun}s</p>
-                </div>
-              </div>
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed italic border-l-2 border-slate-300 pl-4">
-                "{style.expertAdvice}"
-              </p>
-              <div className="mt-4 flex items-center gap-2 text-xs text-slate-500">
-                <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>Reviewed by CADGuide.tools Technical Committee · Updated May 2026</span>
-              </div>
-            </div>
-          </section>
+          {/* --- RENDERING SECTOR-SPECIFIC INTERACTIVE WIDGETS (COMPONENT ASYMMETRY) --- */}
+          {style.archetype === 'scientific-high-computation' && <WorkstationSpecsWidget />}
+          {style.archetype === 'precision-fabrication' && <MaterialMachineWidget />}
+          {style.archetype === 'heavy-infrastructure' && <BIMStandardsWidget />}
+          {style.archetype === 'commercial-regulated' && <ComplianceChecklistWidget />}
 
-          {/* Dynamic Tools Listing */}
-          <h2 className="text-2xl font-extrabold text-slate-900 mb-6">Curated Technical Rankings</h2>
+          {/* --- ASYMMETRICAL ORDER LAYOUT FLOW ENGINES (STRUCTURAL ASYMMETRY) --- */}
           
-          <ol className="space-y-6">
-            {list.map((t, i) => {
-              const kernel = guessGeometryKernel(t);
-              const supportsMultiCore = t.tech_specs?.multicore || 'Optimized (Multi-threaded)';
-              const gpuOptimization = t.tech_specs?.gpu_optimization || 'Hardware Accelerated (OpenCL/DirectX)';
-              const supportedStandards = t.tech_specs?.standards && t.tech_specs.standards.length > 0 
-                ? t.tech_specs.standards.slice(0, 3).join(', ') 
-                : 'STEP, IGES, DXF';
+          {/* Flow 1: Standard Direct */}
+          {style.archetype === 'scientific-high-computation' && (
+            <>
+              {renderAdvisory(s, style)}
+              {renderRankings(list, style)}
+              {renderFAQs(s, style)}
+              {renderCTA(s, fullList.length, style)}
+              {renderLinks(s)}
+            </>
+          )}
 
-              return (
-                <li key={t.slug} className="rounded-3xl bg-white border border-slate-200 p-6 hover:border-slate-300 hover:shadow-lg transition-all duration-300">
-                  <div className="flex flex-col md:flex-row items-start gap-5">
-                    {/* Rank Badge & Logo Container */}
-                    <div className="flex items-center md:items-start gap-4 flex-shrink-0">
-                      <div className="text-2xl font-black text-slate-400 bg-slate-100 rounded-2xl w-10 h-10 flex items-center justify-center">
-                        {i + 1}
-                      </div>
-                      <ToolLogo slug={t.slug} src={t.logo_url} websiteUrl={t.official_url} name={t.name} className="w-16 h-16 rounded-2xl border border-slate-100 shadow-inner flex-shrink-0" />
-                    </div>
+          {/* Flow 2: FAQ-First / Educational */}
+          {style.archetype === 'precision-fabrication' && (
+            <>
+              {renderFAQs(s, style)}
+              {renderRankings(list, style)}
+              {renderAdvisory(s, style)}
+              {renderLinks(s)}
+              {renderCTA(s, fullList.length, style)}
+            </>
+          )}
 
-                    {/* Content Section */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                        <Link href={`/tools/${t.slug}`} className="text-xl sm:text-2xl font-bold text-slate-900 hover:text-blue-600 transition-colors">
-                          {t.name}
-                        </Link>
-                        <span className="text-sm font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
-                          {pricingLabel(t)}
-                        </span>
-                        <span className="text-xs text-slate-500">
-                          {t.platforms.join(' / ')}
-                        </span>
-                      </div>
+          {/* Flow 3: Advisory-First / Actionable */}
+          {style.archetype === 'heavy-infrastructure' && (
+            <>
+              {renderAdvisory(s, style)}
+              {renderLinks(s)}
+              {renderRankings(list, style)}
+              {renderCTA(s, fullList.length, style)}
+              {renderFAQs(s, style)}
+            </>
+          )}
 
-                      {/* Ratings stars */}
-                      <div className="mt-1 flex items-center gap-2">
-                        <span className="text-sm text-amber-500 font-bold">★ {t.score.toFixed(1)}/5</span>
-                        <span className="text-xs text-slate-400">Expert Rating Score</span>
-                      </div>
+          {/* Flow 4: List-First / Direct Guide */}
+          {style.archetype === 'commercial-regulated' && (
+            <>
+              {renderRankings(list, style)}
+              {renderCTA(s, fullList.length, style)}
+              {renderAdvisory(s, style)}
+              {renderFAQs(s, style)}
+              {renderLinks(s)}
+            </>
+          )}
 
-                      {/* Short Description */}
-                      <p className="mt-4 text-slate-700 leading-relaxed text-sm sm:text-base">
-                        {t.short_desc}
-                      </p>
-
-                      {/* --- UNIQUE ARCHETYPE LAYOUT BLOCKS (EEAT & Differentiation) --- */}
-                      
-                      {/* 1. Scientific & High Computation Layout Details */}
-                      {style.archetype === 'scientific-high-computation' && (
-                        <div className="mt-5 bg-slate-50 rounded-2xl p-4 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600">
-                          <div>
-                            <span className="font-bold text-slate-800 block">Geometry Engine/Kernel</span>
-                            <span className="mt-0.5 inline-block">{kernel}</span>
-                          </div>
-                          <div>
-                            <span className="font-bold text-slate-800 block">CPU Parallelization Level</span>
-                            <span className="mt-0.5 inline-block">{supportsMultiCore}</span>
-                          </div>
-                          <div>
-                            <span className="font-bold text-slate-800 block">GPU Acceleration</span>
-                            <span className="mt-0.5 inline-block">{gpuOptimization}</span>
-                          </div>
-                          <div>
-                            <span className="font-bold text-slate-800 block">Exchange Protocols</span>
-                            <span className="mt-0.5 inline-block">{supportedStandards}</span>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* 2. Precision Fabrication Layout Details */}
-                      {style.archetype === 'precision-fabrication' && (
-                        <div className="mt-5 space-y-4">
-                          {/* File format badges */}
-                          <div className="flex flex-wrap gap-2 items-center text-xs">
-                            <span className="font-bold text-slate-700 mr-1">Machine Formats:</span>
-                            {(t.file_formats_in || ['STEP', 'STL', 'DXF']).slice(0, 4).map(f => (
-                              <span key={f} className="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-100 font-mono">
-                                {f}
-                              </span>
-                            ))}
-                            <span>→</span>
-                            {(t.file_formats_out || ['STEP', 'STL', 'G-Code']).slice(0, 4).map(f => (
-                              <span key={f} className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-100 font-mono">
-                                {f}
-                              </span>
-                            ))}
-                          </div>
-                          
-                          {/* Pros and cons summary */}
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-100 text-xs">
-                            <div>
-                              <span className="font-bold text-emerald-700 block mb-1">👍 Production Strengths</span>
-                              <ul className="list-disc list-inside space-y-1 text-slate-600">
-                                {t.pros.slice(0, 2).map((pro, index) => <li key={index} className="line-clamp-1">{pro}</li>)}
-                              </ul>
-                            </div>
-                            <div>
-                              <span className="font-bold text-rose-700 block mb-1">⚠️ Shop Constraints</span>
-                              <ul className="list-disc list-inside space-y-1 text-slate-600">
-                                {t.cons.slice(0, 2).map((con, index) => <li key={index} className="line-clamp-1">{con}</li>)}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* 3. Heavy Infrastructure Layout Details */}
-                      {style.archetype === 'heavy-infrastructure' && (
-                        <div className="mt-5 space-y-4">
-                          <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-xs text-slate-600 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <div>
-                              <span className="font-bold text-slate-700 block">BIM Standards Complied</span>
-                              <span className="mt-0.5 inline-block text-emerald-700 font-semibold">IFC 2x3, IFC4, IFC4.3, LandXML</span>
-                            </div>
-                            <div>
-                              <span className="font-bold text-slate-700 block">Geographic Integration</span>
-                              <span className="mt-0.5 inline-block">GIS Coordinate projections, LiDAR Ready</span>
-                            </div>
-                          </div>
-                          
-                          {t.expert_verdict && (
-                            <p className="text-xs text-slate-600 italic border-l-2 border-slate-300 pl-3 leading-relaxed">
-                              <strong>Expert Verdict:</strong> "{t.expert_verdict}"
-                            </p>
-                          )}
-                        </div>
-                      )}
-
-                      {/* 4. Commercial & Regulated Layout Details */}
-                      {style.archetype === 'commercial-regulated' && (
-                        <div className="mt-5 space-y-3">
-                          <div className="flex flex-wrap gap-2 text-xs">
-                            <span className="font-bold text-slate-700 mr-2">Enterprise Security:</span>
-                            {(t.security_compliance || ['ISO 27001', 'SOC 2 Type II', 'GDPR']).map(sec => (
-                              <span key={sec} className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-medium">
-                                {sec}
-                              </span>
-                            ))}
-                          </div>
-                          {t.pros.length > 0 && (
-                            <div className="pt-2 text-xs text-slate-600">
-                              <span className="font-bold text-slate-800">Key Feature Spotlight:</span> {t.pros[0]}
-                            </div>
-                          )}
-                        </div>
-                      )}
-
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-
-          {/* Dynamic FAQ Section */}
-          <section className="mt-16 rounded-3xl bg-white border border-slate-200 p-6 sm:p-8">
-            <h2 className="text-2xl font-extrabold text-slate-900 mb-6">Frequently Asked Questions</h2>
-            <dl className="space-y-6 divide-y divide-slate-100">
-              {s.faqs.map((f, index) => (
-                <div key={f.q} className={index > 0 ? "pt-6" : ""}>
-                  <dt className="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2">
-                    <span className={`text-sm inline-block px-2 py-0.5 rounded font-mono ${style.badgeAccent}`}>Q</span>
-                    <span>{f.q}</span>
-                  </dt>
-                  <dd className="mt-3 text-slate-600 leading-relaxed text-sm sm:text-base pl-8">
-                    {f.a}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </section>
-
-          {/* Call To Action Box */}
-          <section className={`mt-16 rounded-[36px] bg-gradient-to-br ${style.gradient} text-white p-8 sm:p-12 text-center relative overflow-hidden shadow-xl shadow-slate-900/10`}>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent)]" />
-            <h2 className="text-3xl font-extrabold tracking-tight">Need a tailored CAD recommendation?</h2>
-            <p className="mt-4 text-blue-50 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              Skip hours of specification grids. Our smart interactive Matchmaker identifies the perfect match for your {s.shortNoun} workflow, team size, and budget in under 60 seconds.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <Link href="/matchmaker" className="inline-block bg-white text-slate-950 font-extrabold px-8 py-4 rounded-2xl hover:bg-slate-50 transition-colors shadow-lg hover:shadow-xl text-base">
-                Launch CAD Matchmaker →
-              </Link>
-            </div>
-          </section>
-
-          {/* Cross Links to Other Sectors */}
-          <section className="mt-16">
-            <h2 className="text-xl font-bold text-slate-900 mb-4">CAD Software Guides for Other Sectors</h2>
-            <ul className="flex flex-wrap gap-2 text-xs">
-              {Object.values(SECTOR_PAGES)
-                .filter((x) => x.slug !== s.slug)
-                .map((x) => {
-                  const siblingStyle = getStyleForSector(x.slug);
-                  return (
-                    <li key={x.slug}>
-                      <Link href={`/sectors/${x.slug}`} className="px-3.5 py-2 rounded-2xl bg-white border border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-950 font-medium inline-block transition-colors">
-                        CAD for {x.displayName}
-                      </Link>
-                    </li>
-                  );
-                })}
-            </ul>
-          </section>
         </article>
       </main>
     </>
