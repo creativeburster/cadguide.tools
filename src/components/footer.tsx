@@ -80,7 +80,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-10 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-5">
-            <div className="text-xl font-black text-white flex items-center gap-2">
+            <div className="text-xl font-black text-white flex items-center">
               <span className="text-blue-500">CAD</span>Guide.tools
             </div>
             <p className="text-sm leading-relaxed">
