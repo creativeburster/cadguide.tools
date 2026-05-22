@@ -5,6 +5,7 @@ import { alternativesFor, alternativesPagePaths } from '@/lib/seo-content';
 import { getToolBySlug, type Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
+import React from 'react';
 
 export const dynamicParams = false;
 
@@ -158,6 +159,334 @@ function faqLd(tool: Tool, alts: Tool[]) {
   };
 }
 
+// --- CURATED STYLE SELECTOR BY COMPONENT ARCHETYPE ---
+interface AlternativeStyle {
+  archetype: 'technical-migration' | 'creative-styling' | 'open-specialized';
+  gradient: string;
+  badgeAccent: string;
+  accentText: string;
+  badgeBg: string;
+  themeBadgeText: string;
+}
+
+function getStyleForAlternatives(tool: Tool): AlternativeStyle {
+  const cat = tool.category_id;
+  const isFreeOrOS = tool.pricing_type === 'Open Source' || tool.pricing_type === 'Free' || tool.pricing_type === 'Freemium';
+
+  if (isFreeOrOS || cat === 'c6' || cat === 'c7') {
+    return {
+      archetype: 'open-specialized',
+      gradient: 'from-emerald-600 to-teal-850',
+      badgeAccent: 'bg-emerald-50 text-emerald-700 border-emerald-100',
+      accentText: 'text-emerald-700',
+      badgeBg: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+      themeBadgeText: 'Open & Specialized Standard',
+    };
+  }
+
+  if (cat === 'c1' || cat === 'c3' || cat === 'c5') {
+    return {
+      archetype: 'technical-migration',
+      gradient: 'from-slate-800 to-indigo-950',
+      badgeAccent: 'bg-indigo-50 text-indigo-700 border-indigo-100',
+      accentText: 'text-indigo-600',
+      badgeBg: 'bg-slate-100 text-slate-800 border-slate-200',
+      themeBadgeText: 'Enterprise Migration Focus',
+    };
+  }
+
+  return {
+    archetype: 'creative-styling',
+    gradient: 'from-rose-600 to-violet-950',
+    badgeAccent: 'bg-rose-50 text-rose-700 border-rose-100',
+    accentText: 'text-rose-600',
+    badgeBg: 'bg-rose-100 text-rose-800 border-rose-200',
+    themeBadgeText: 'Design & Curvature Focus',
+  };
+}
+
+// --- ARCHETYPE WIDGETS ---
+
+function MigrationRiskWidget({ tool }: { tool: Tool }) {
+  return (
+    <div className="my-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <div className="flex items-center gap-2 mb-4 text-slate-800 font-bold text-lg">
+        <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <span>{tool.name} Technical Migration Advisory</span>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">File Translation Risk</span>
+          <span className="text-xs text-amber-600 font-bold mt-1 inline-block">Moderate Risk</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Legacy drawing databases (.dwg, .rvt, native mechanical files) are highly complex. Vetted alternatives translate raw geometries accurately, but active parametric assembly links may need physical verification.
+          </p>
+        </div>
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Shortcut Muscle Memory</span>
+          <span className="text-xs text-indigo-600 font-bold mt-1 inline-block">High Affinity</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Industry standard alternatives fully support standard keyboard alias tables (.pgp command strings) allowing veteran draftspeople to maintain full drafting speed on day one.
+          </p>
+        </div>
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">LISP & Automation Macros</span>
+          <span className="text-xs text-rose-600 font-bold mt-1 inline-block">Verification Advised</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            If your workflow relies heavily on native custom scripts or proprietary LISP plugins, always verify whether the chosen alternative supports active LISP code execution before moving.
+          </p>
+        </div>
+      </div>
+      <div className="text-xs text-indigo-700 bg-indigo-50 border border-indigo-100 rounded-xl p-3 flex gap-2">
+        <span className="font-bold flex-shrink-0">Advisory:</span>
+        <span>Establish a dual-license grace period of 30 days. Export intricate models into neutral standard STEP/DXF structures to verify actual dimension preservation limits.</span>
+      </div>
+    </div>
+  );
+}
+
+function MeshNurbsFidelityWidget() {
+  return (
+    <div className="my-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <div className="flex items-center gap-2 mb-4 text-slate-800 font-bold text-lg">
+        <svg className="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.656 48.656 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3M3 12c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M3 12l-3 3m3-3l3 3M9 5.25L12 3m0 0l3 2.25M12 3v18" />
+        </svg>
+        <span>NURBS & Organic Subdivision Modeling Verification</span>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Surface Continuity</span>
+          <span className="text-xs text-rose-600 font-bold mt-1 inline-block">G0/G1/G2 Curvature</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Industrial designers must protect surface aesthetic curvature transitions. Ensure alternatives don&apos;t force immediate mesh decimation when importing highly accurate NURBS boundaries.
+          </p>
+        </div>
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Mesh Vertex Densities</span>
+          <span className="text-xs text-indigo-600 font-bold mt-1 inline-block">Subdivision Scales</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Poly sculpting thrives on seamless subdivision. Look for alternatives that offer real-time viewport optimization so hardware response stays crisp even at high polygon counts.
+          </p>
+        </div>
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Watertight Shell Constraints</span>
+          <span className="text-xs text-emerald-600 font-bold mt-1 inline-block">Manifold Export Prep</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Makers need watertight mesh shells for print slicing. Ensure exported files do not create self-intersecting boundaries, loose coordinate normals, or open shells during trans-coding.
+          </p>
+        </div>
+      </div>
+      <div className="text-xs text-rose-700 bg-rose-50 border border-rose-100 rounded-xl p-3 flex gap-2">
+        <span className="font-bold flex-shrink-0">Design Rule:</span>
+        <span>Audit exported organic shapes using a dedicated inspection tool before sending files to down-stream manufacturing pipelines.</span>
+      </div>
+    </div>
+  );
+}
+
+function OpenStandardsWidget() {
+  return (
+    <div className="my-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <div className="flex items-center gap-2 mb-4 text-slate-800 font-bold text-lg">
+        <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        <span>Open Source Standards & PCB Schematic Interoperability</span>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">PCB Fab Standards</span>
+          <span className="text-xs text-emerald-600 font-bold mt-1 inline-block">Gerber X2 Compliance</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Electronics tools demand micro-precision on layer outputs. Make sure your design candidates produce standard, production-ready ODB++ and Gerber files to prevent manufacturing halts.
+          </p>
+        </div>
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Zero Vendor Lock-In</span>
+          <span className="text-xs text-indigo-600 font-bold mt-1 inline-block">Absolute IP Privacy</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Switching to open-source software keeps your blueprints securely stored locally in open, human-readable schemas (like XML/JSON) rather than proprietary cloud silos.
+          </p>
+        </div>
+        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+          <span className="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Extensible Architecture</span>
+          <span className="text-xs text-amber-600 font-bold mt-1 inline-block">Python Plugin Support</span>
+          <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Engineering tasks benefit immensely from script automation. Opt for software that offers a robust, developer-accessible scripting interface to build custom design utilities.
+          </p>
+        </div>
+      </div>
+      <div className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-xl p-3 flex gap-2">
+        <span className="font-bold flex-shrink-0">Engineering Rule:</span>
+        <span>Keep your primary schematic drafts cataloged in standard formats to ensure readable archival files regardless of vendor status changes.</span>
+      </div>
+    </div>
+  );
+}
+
+// --- RENDER CONTROLLERS ---
+
+function renderAlternativesFAQs(tool: Tool, alts: Tool[], style: AlternativeStyle) {
+  const top = alts[0];
+  const cheapest = [...alts].sort((a, b) => a.starting_price - b.starting_price)[0];
+  const hasFree = cheapest && (cheapest.pricing_type === 'Free' || cheapest.pricing_type === 'Open Source' || cheapest.pricing_type === 'Freemium');
+
+  return (
+    <section className="mt-12 rounded-2xl bg-white border border-slate-200 p-6">
+      <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+        <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${style.gradient}`} />
+        Frequently Asked Questions
+      </h2>
+      <dl className="space-y-4">
+        <div className="border-b border-slate-100 pb-4">
+          <dt className="font-semibold text-slate-900 text-sm sm:text-base">What is the closest alternative to {tool.name}?</dt>
+          <dd className="mt-2 text-slate-600 text-sm leading-relaxed">
+            {top?.name ?? 'Our editors recommended tool'} is the closest direct alternative to {tool.name}, offering a highly comparable functional scope and targeting the same engineering workflows.
+          </dd>
+        </div>
+        <div className="border-b border-slate-100 pb-4">
+          <dt className="font-semibold text-slate-900 text-sm sm:text-base">Is there a free alternative to {tool.name}?</dt>
+          <dd className="mt-2 text-slate-600 text-sm leading-relaxed">
+            {hasFree ? (
+              <span>Yes — <strong>{cheapest.name}</strong> is {cheapest.pricing_type.toLowerCase()} and is the most cost-effective entry point on this alternatives list.</span>
+            ) : (
+              <span>While there are no fully free direct matches, several options on our curated list are significantly more budget-friendly than {tool.name}.</span>
+            )}
+          </dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-slate-900 text-sm sm:text-base">Why would I switch away from {tool.name}?</dt>
+          <dd className="mt-2 text-slate-600 text-sm leading-relaxed">
+            Most draftspeople switch due to rising subscription licensing costs, localized platform needs (e.g. running native Mac or Linux CAD engines), or sudden proprietary cloud storage mandates.
+          </dd>
+        </div>
+      </dl>
+    </section>
+  );
+}
+
+function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyle) {
+  return (
+    <section className="mb-12">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+          Ranked Alternatives to {tool.name}
+        </h2>
+        <span className={`px-2.5 py-1 text-xs font-bold rounded-lg border uppercase tracking-wider ${style.badgeAccent}`}>
+          {alts.length} Shortlists
+        </span>
+      </div>
+
+      <ol className="space-y-5">
+        {alts.map((alt, i) => (
+          <li
+            key={alt.slug}
+            className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 hover:border-slate-300 hover:shadow-sm transition-all"
+          >
+            <div className="flex items-start gap-4 sm:gap-5">
+              <div className="flex-shrink-0 text-2xl font-black text-slate-400 w-8 sm:w-10 text-center">
+                {i + 1}.
+              </div>
+              <ToolLogo
+                slug={alt.slug}
+                src={alt.logo_url}
+                websiteUrl={alt.official_url}
+                name={alt.name}
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex-shrink-0 border border-slate-100 shadow-inner"
+              />
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <Link
+                    href={`/tools/${alt.slug}`}
+                    className="text-lg sm:text-xl font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                  >
+                    {alt.name}
+                  </Link>
+                  <span className="text-xs font-semibold text-slate-500">
+                    {pricingLabel(alt)} · {alt.platforms.join(' / ')}
+                  </span>
+                </div>
+                <div className="mt-1 flex items-center gap-2">
+                  <span className="text-sm text-amber-500 font-bold">★ {alt.score.toFixed(1)}</span>
+                  <span className="text-xs text-slate-400">/ 5 Editor Rating</span>
+                </div>
+                <p className="mt-3 text-slate-700 leading-relaxed text-sm sm:text-base">
+                  {alt.short_desc}
+                </p>
+                <div className="mt-3 p-3 bg-slate-50/50 rounded-xl border border-slate-100 text-xs text-slate-600 font-medium italic flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                  <span>{whyTryInstead(tool, alt)}</span>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-4">
+                  <Link
+                    href={`/tools/${alt.slug}`}
+                    className="text-xs font-bold text-blue-600 hover:underline"
+                  >
+                    Full {alt.name} Profile →
+                  </Link>
+                  <Link
+                    href={`/compare/${[tool.slug, alt.slug].sort().join('-vs-')}`}
+                    className="text-xs font-bold text-slate-600 hover:underline"
+                  >
+                    Compare Side-by-Side
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+function renderAlternativesCTA(tool: Tool) {
+  return (
+    <section className="mt-12 rounded-2xl bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-8 text-center relative overflow-hidden shadow-lg">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.15),transparent)] pointer-events-none" />
+      <h2 className="text-2xl font-bold">Build Your Custom Shortlist</h2>
+      <p className="mt-3 text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+        Still undecided? Answer six rapid questions in our Smart Matchmaker to compare {tool.name} and these vetted competitors directly against your specific budget and machine limits.
+      </p>
+      <Link
+        href="/matchmaker"
+        className="inline-block mt-5 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all"
+      >
+        Launch Matchmaker →
+      </Link>
+    </section>
+  );
+}
+
+function renderRelatedLinks(tool: Tool) {
+  return (
+    <section className="mt-12 border-t border-slate-200 pt-8">
+      <h2 className="text-lg font-bold text-slate-900 mb-4">Related Engineering Resources</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Link
+          href={`/tools/${tool.slug}`}
+          className="block p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all"
+        >
+          <div className="text-xs uppercase tracking-wider text-slate-500 font-bold">Full Analysis</div>
+          <div className="mt-1 font-bold text-slate-900">{tool.name} Benchmark Profile</div>
+        </Link>
+        <Link
+          href="/compare"
+          className="block p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all"
+        >
+          <div className="text-xs uppercase tracking-wider text-slate-500 font-bold">Side-by-Side Comparison</div>
+          <div className="mt-1 font-bold text-slate-900">Custom Comparison Matrix</div>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+// --- MAIN CONTROLLER PAGE ---
+
 export default async function AlternativesPage(
   { params }: { params: Promise<{ slug: string }> },
 ) {
@@ -166,6 +495,8 @@ export default async function AlternativesPage(
   if (!tool) notFound();
 
   const alts = alternativesFor(tool);
+  const style = getStyleForAlternatives(tool);
+
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Tools', path: '/tools' },
@@ -180,142 +511,98 @@ export default async function AlternativesPage(
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd(tool, alts.length)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd(tool, alts)) }} />
 
-      <main className="min-h-screen bg-slate-50">
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-          <nav className="text-sm text-slate-500 mb-6">
-            <Link href="/" className="hover:underline">Home</Link>{' / '}
-            <Link href="/tools" className="hover:underline">Tools</Link>{' / '}
-            <Link href={`/tools/${tool.slug}`} className="hover:underline">{tool.name}</Link>{' / '}
-            <span className="text-slate-700">Alternatives</span>
+      <main className="min-h-screen bg-slate-50 pb-20">
+        {/* Dynamic Colorful Gradient Accent */}
+        <div className={`w-full py-1 bg-gradient-to-r ${style.gradient}`} />
+
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          {/* Breadcrumb nav */}
+          <nav className="text-sm text-slate-500 mb-6 flex items-center gap-2">
+            <Link href="/" className="hover:underline">Home</Link>
+            <span>/</span>
+            <Link href="/tools" className="hover:underline">Tools</Link>
+            <span>/</span>
+            <Link href={`/tools/${tool.slug}`} className="hover:underline">{tool.name}</Link>
+            <span>/</span>
+            <span className="text-slate-700 font-semibold">Alternatives</span>
           </nav>
 
           <header className="mb-10">
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+            <div className="flex items-center gap-3 mb-3">
+              <span className={`px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-widest ${style.badgeBg}`}>
+                {style.themeBadgeText}
+              </span>
+              <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                {alts.length} Evaluated Competitors
+              </span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
               {pageTitle(tool, alts.length)}
             </h1>
-            <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-              {tool.name} is a strong choice, but it&apos;s not the only one. Below are{' '}
-              {alts.length} editor-vetted alternatives to {tool.name} — every tool here
-              shares the same problem-space but differs on price, platform, target user,
-              or feature depth. We&apos;ve added a one-line &quot;why try this instead&quot;
-              callout for each so you can short-list the right next step in seconds.
+            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+              While {tool.name} is a powerful system, specific limitations or budget constraints often make other products a better fit. Below are {alts.length} hand-vetted alternatives to {tool.name}. Every option on this list shares a similar functional space but differs on starting cost, operating systems, and target capabilities. Check our editors&apos; quick comparison notes below to short-list your next choice.
             </p>
           </header>
 
-          <section className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 mb-10">
+          {/* Golden Standard Spotlight Card on Target Tool */}
+          <section className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 mb-10 shadow-sm">
             <div className="flex items-start gap-4">
               <ToolLogo
                 slug={tool.slug}
                 src={tool.logo_url}
                 websiteUrl={tool.official_url}
                 name={tool.name}
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex-shrink-0"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex-shrink-0 border border-slate-100 shadow-inner"
               />
               <div className="flex-1 min-w-0">
-                <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold">
-                  Looking for an alternative to
+                <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">
+                  Evaluating alternatives to
                 </div>
-                <Link href={`/tools/${tool.slug}`} className="text-xl font-bold text-slate-900 hover:text-blue-600">
+                <Link href={`/tools/${tool.slug}`} className="text-xl font-black text-slate-900 hover:text-blue-600 transition-colors">
                   {tool.name}
                 </Link>
-                <div className="mt-1 text-sm text-slate-500">
-                  {pricingLabel(tool)} · {tool.platforms.join(' / ')} · ★ {tool.score.toFixed(1)}/5
+                <div className="mt-1 text-xs text-slate-500 font-semibold">
+                  {pricingLabel(tool)} · {tool.platforms.join(' / ')} · Editor Score: ★ {tool.score.toFixed(1)}/5
                 </div>
               </div>
             </div>
           </section>
 
-          <ol className="space-y-5">
-            {alts.map((alt, i) => (
-              <li
-                key={alt.slug}
-                className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 hover:border-blue-300 transition-colors"
-              >
-                <div className="flex items-start gap-4 sm:gap-5">
-                  <div className="flex-shrink-0 text-2xl font-extrabold text-blue-600 w-8 sm:w-10 text-center">
-                    {i + 1}.
-                  </div>
-                  <ToolLogo
-                    slug={alt.slug}
-                    src={alt.logo_url}
-                    websiteUrl={alt.official_url}
-                    name={alt.name}
-                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex-shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                      <Link
-                        href={`/tools/${alt.slug}`}
-                        className="text-lg sm:text-xl font-bold text-slate-900 hover:text-blue-600"
-                      >
-                        {alt.name}
-                      </Link>
-                      <span className="text-sm text-slate-500">
-                        {pricingLabel(alt)} · {alt.platforms.join(' / ')}
-                      </span>
-                    </div>
-                    <div className="mt-1 text-sm text-amber-600 font-semibold">
-                      ★ {alt.score.toFixed(1)}/5
-                    </div>
-                    <p className="mt-3 text-slate-700 leading-relaxed">
-                      {alt.short_desc}
-                    </p>
-                    <p className="mt-3 text-sm text-slate-600 italic">
-                      {whyTryInstead(tool, alt)}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      <Link
-                        href={`/tools/${alt.slug}`}
-                        className="text-sm font-semibold text-blue-600 hover:underline"
-                      >
-                        Full {alt.name} profile →
-                      </Link>
-                      <Link
-                        href={`/compare/${[tool.slug, alt.slug].sort().join('-vs-')}`}
-                        className="text-sm font-semibold text-slate-600 hover:underline"
-                      >
-                        Compare side-by-side
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
+          {/* --- ASYMMETRICAL ORDER FLOW ENGINE BY ARCHETYPE --- */}
 
-          <section className="mt-12 rounded-2xl bg-blue-600 text-white p-8 text-center">
-            <h2 className="text-2xl font-bold">Not sure which to pick?</h2>
-            <p className="mt-3 text-blue-100 max-w-xl mx-auto">
-              Answer six quick questions and our Smart Matchmaker will rank these
-              alternatives — plus 220+ other tools — against your real workflow.
-            </p>
-            <Link
-              href="/matchmaker"
-              className="inline-block mt-5 bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-blue-50"
-            >
-              Launch Matchmaker →
-            </Link>
-          </section>
+          {/* Flow 1: Technical & Engineering (Migration risk first, list, FAQs, CTA) */}
+          {style.archetype === 'technical-migration' && (
+            <>
+              <MigrationRiskWidget tool={tool} />
+              {renderAlternativesList(tool, alts, style)}
+              {renderAlternativesFAQs(tool, alts, style)}
+              {renderAlternativesCTA(tool)}
+              {renderRelatedLinks(tool)}
+            </>
+          )}
 
-          <section className="mt-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Related</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link
-                href={`/tools/${tool.slug}`}
-                className="block p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-300"
-              >
-                <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold">Full review</div>
-                <div className="mt-1 font-semibold text-slate-900">{tool.name} profile</div>
-              </Link>
-              <Link
-                href="/compare"
-                className="block p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-300"
-              >
-                <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold">Side-by-side</div>
-                <div className="mt-1 font-semibold text-slate-900">Build a custom comparison</div>
-              </Link>
-            </div>
-          </section>
+          {/* Flow 2: Creative & Design (Mesh modeler first, list, FAQs, CTA) */}
+          {style.archetype === 'creative-styling' && (
+            <>
+              <MeshNurbsFidelityWidget />
+              {renderAlternativesList(tool, alts, style)}
+              {renderAlternativesFAQs(tool, alts, style)}
+              {renderAlternativesCTA(tool)}
+              {renderRelatedLinks(tool)}
+            </>
+          )}
+
+          {/* Flow 3: Open & Specialized (List first, Open standards guide, FAQs, CTA) */}
+          {style.archetype === 'open-specialized' && (
+            <>
+              {renderAlternativesList(tool, alts, style)}
+              <OpenStandardsWidget />
+              {renderAlternativesFAQs(tool, alts, style)}
+              {renderAlternativesCTA(tool)}
+              {renderRelatedLinks(tool)}
+            </>
+          )}
+
         </article>
       </main>
     </>

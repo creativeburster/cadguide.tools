@@ -103,7 +103,7 @@ export default function BestIndexPage() {
             </ul>
           </section>
 
-          <section className="mt-16 space-y-12">
+          <section id="by-feature" className="mt-16 space-y-12">
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
                 Best CAD Tools by Feature & Technology Spotlights
