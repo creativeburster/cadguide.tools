@@ -440,10 +440,10 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         asChild
                         className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 text-white ${tier.is_popular ? "bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200" : "bg-slate-900 hover:bg-slate-800"}`}
                       >
-                        <Link href={tool.pricing_url || tool.affiliate_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                        <a href={tool.pricing_url || tool.affiliate_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                           Choose {tier.name}
                           <ExternalLink className="w-4 h-4 opacity-70" />
-                        </Link>
+                        </a>
                       </Button>
                     </CardContent>
                   </Card>
