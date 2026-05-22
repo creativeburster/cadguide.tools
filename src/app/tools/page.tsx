@@ -40,7 +40,16 @@ export async function generateMetadata({
   });
 }
 
-export default function ToolsPage() {
+export default async function ToolsPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const params = await searchParams;
+  const rawPage = Array.isArray(params.page) ? params.page[0] : params.page;
+  const pageNum = Math.max(1, Number(rawPage) || 1);
+  const totalPages = Math.max(1, Math.ceil(tools.length / ITEMS_PER_PAGE));
+
   const collection = collectionPageLd({
     name: 'CAD & BIM Software Directory',
     description:
@@ -59,6 +68,8 @@ export default function ToolsPage() {
   void categories;
   return (
     <>
+      {pageNum > 1 && <link rel="prev" href={`https://cadguide.tools/tools${pageNum > 2 ? `?page=${pageNum - 1}` : ''}`} />}
+      {pageNum < totalPages && <link rel="next" href={`https://cadguide.tools/tools?page=${pageNum + 1}`} />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collection) }}

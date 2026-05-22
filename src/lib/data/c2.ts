@@ -193,7 +193,9 @@ export const c2Tools: Tool[] = [
     "Pro/E",
     "Inventor",
     "NX",
-    "JT"
+    "JT",
+    "3DM",
+    "3MF"
   ],
   file_formats_out: [
     "SLDPRT",
@@ -208,7 +210,9 @@ export const c2Tools: Tool[] = [
     "DXF",
     "JT",
     "OBJ",
-    "VRML"
+    "VRML",
+    "3DM",
+    "3MF"
   ],
   integrations: [
     "3DEXPERIENCE",
@@ -776,7 +780,8 @@ export const c2Tools: Tool[] = [
     "PRT",
     "3DM",
     "X_T",
-    "X_B"
+    "X_B",
+    "3MF"
   ],
   file_formats_out: [
     "F3D",
@@ -790,7 +795,8 @@ export const c2Tools: Tool[] = [
     "FBX",
     "3MF",
     "USD",
-    "IPT"
+    "IPT",
+    "3DM"
   ],
   integrations: [
     "Fusion Manage",
@@ -1050,7 +1056,8 @@ export const c2Tools: Tool[] = [
     "PDF",
     "SKP",
     "X_T",
-    "X_B"
+    "X_B",
+    "3MF"
   ],
   file_formats_out: [
     "3DM",
@@ -1067,7 +1074,8 @@ export const c2Tools: Tool[] = [
     "KMZ",
     "GLB",
     "USDZ",
-    "X_T"
+    "X_T",
+    "3MF"
   ],
   integrations: [
     "Grasshopper",
@@ -1594,7 +1602,9 @@ export const c2Tools: Tool[] = [
     "DXF",
     "SVG",
     "IFC",
-    "Collada"
+    "Collada",
+    "3DM",
+    "3MF"
   ],
   file_formats_out: [
     "FCStd",
@@ -1609,7 +1619,9 @@ export const c2Tools: Tool[] = [
     "SVG",
     "IFC",
     "AMF",
-    "PDF"
+    "PDF",
+    "3DM",
+    "3MF"
   ],
   integrations: [
     "OpenSCAD",
@@ -1850,7 +1862,8 @@ export const c2Tools: Tool[] = [
     "X_B",
     "ACIS",
     "JT",
-    "3MF"
+    "3MF",
+    "3DM"
   ],
   file_formats_out: [
     "STEP",
@@ -1866,7 +1879,8 @@ export const c2Tools: Tool[] = [
     "X_B",
     "PDF",
     "JPG",
-    "PNG"
+    "PNG",
+    "3DM"
   ],
   integrations: [
     "Onshape PDM",

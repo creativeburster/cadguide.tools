@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense, useEffect } from 'react';
+import { useState, useMemo, Suspense, useEffect, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { tools, categories } from '@/lib/data';
 import { Card } from '@/components/ui/card';
@@ -28,6 +28,7 @@ function ToolsList() {
   const currentPage = Math.max(1, Number(searchParams.get('page')) || 1);
   const searchQuery = searchParams.get('q') ?? '';
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
 
   // Lock body scroll while the mobile filters drawer is open.
   useEffect(() => {
@@ -39,6 +40,11 @@ function ToolsList() {
       };
     }
   }, [isFiltersOpen]);
+
+  // Sync local search query with URL params (for back/forward navigation)
+  useEffect(() => {
+    setLocalSearchQuery(searchQuery);
+  }, [searchQuery]);
 
   // Push search/page state into the URL. Uses `replace` so the user can
   // navigate back out of /tools in one click instead of stepping through
@@ -57,8 +63,9 @@ function ToolsList() {
     router.replace(qs ? `/tools?${qs}` : '/tools', { scroll: false });
   };
 
-  const handleSearchChange = (value: string) => {
-    syncUrl({ page: 1, query: value });
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    syncUrl({ page: 1, query: localSearchQuery });
   };
   const [filters, setFilters] = useState({
     pricing: [] as string[],
@@ -168,7 +175,7 @@ function ToolsList() {
       ? [{
           key: 'query',
           label: `“${searchQuery}”`,
-          onClear: () => handleSearchChange(''),
+          onClear: () => { setLocalSearchQuery(''); syncUrl({ page: 1, query: '' }); },
         }]
       : []),
   ];
@@ -256,15 +263,21 @@ function ToolsList() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-blue-600/20 transition-colors"></div>
           <h3 className="font-bold mb-4 uppercase text-[10px] tracking-widest text-blue-400 relative z-10">Smart Search</h3>
           <div className="relative z-10">
-            <Input
-              placeholder="Find a specific tool..."
-              value={searchQuery}
-              onChange={(e) => handleSearchChange(e.target.value)}
-              className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600"
-            />
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-            </div>
+            <form onSubmit={handleSearchSubmit}>
+              <Input
+                placeholder="Find a specific tool..."
+                value={localSearchQuery}
+                onChange={(e) => setLocalSearchQuery(e.target.value)}
+                className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600 pr-10"
+              />
+              <button 
+                type="submit"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-blue-400 transition-colors"
+                aria-label="Search"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              </button>
+            </form>
           </div>
         </div>
 

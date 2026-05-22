@@ -5,6 +5,7 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { Navbar } from "@/components/navbar";
 import { PWARegistration } from "@/components/pwa-registration";
 import { SiteNotice } from "@/components/site-notice";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "CADGuide.tools | Compare 235+ CAD & BIM Software (ASM vs Parasolid)",
@@ -29,15 +30,21 @@ export default function RootLayout({
         <meta name="theme-color" content="#020617" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
-        <script dangerouslySetInnerHTML={{__html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-2NC8HV27GC');
-        `}} />
+        
+        {/* DNS Preconnects for external resources */}
+        <link rel="preconnect" href="https://icon.horse" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://logo.clearbit.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2NC8HV27GC');
+          `}
+        </Script>
         <PWARegistration />
         <SiteNotice />
         <Navbar />

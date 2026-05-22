@@ -13,6 +13,8 @@ interface ToolLogoProps {
   websiteUrl?: string;
   name: string;
   className?: string;
+  /** If true, image will be loaded with eager and fetchpriority high */
+  priority?: boolean;
 }
 
 const gradients = [
@@ -50,7 +52,7 @@ function deriveCandidates(slug: string | undefined, src: string, websiteUrl?: st
   return candidates;
 }
 
-export function ToolLogo({ slug, src, websiteUrl, name, className }: ToolLogoProps) {
+export function ToolLogo({ slug, src, websiteUrl, name, className, priority }: ToolLogoProps) {
   const candidates = useMemo(
     () => deriveCandidates(slug, src, websiteUrl),
     [slug, src, websiteUrl]
@@ -109,8 +111,9 @@ export function ToolLogo({ slug, src, websiteUrl, name, className }: ToolLogoPro
           key={current}
           src={current}
           alt={`${name} logo`}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
           decoding="async"
+          fetchPriority={priority ? "high" : "auto"}
           width={96}
           height={96}
           className={cn(

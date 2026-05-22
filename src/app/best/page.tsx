@@ -59,7 +59,7 @@ export default function BestIndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <main className="min-h-screen bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <nav className="text-sm text-slate-500 mb-6">
             <Link href="/" className="hover:underline">
               Home
@@ -71,7 +71,7 @@ export default function BestIndexPage() {
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
               Best CAD Software in {YEAR}
             </h1>
-            <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-3xl">
               Curated rankings of the top tools in each CAD category. Each
               list is rebuilt from our 235-tool catalog using expert scores,
               real customer review volume from G2/Capterra/TrustRadius, and
@@ -83,7 +83,7 @@ export default function BestIndexPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
               Browse by Industry & Discipline
             </h2>
-            <ul className="grid sm:grid-cols-2 gap-4">
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {categories.map((c) => (
                 <li key={c.id}>
                   <Link
@@ -132,7 +132,7 @@ export default function BestIndexPage() {
                     </p>
                   </div>
 
-                  <ul className="grid sm:grid-cols-2 gap-4">
+                  <ul className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {matchedFeatures.map((feat) => (
                       <li key={feat.id}>
                         <Link
