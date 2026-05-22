@@ -224,38 +224,38 @@ function CompareContent() {
       {selectedTools.length > 0 ? (
         <div className="bg-white rounded-[48px] border border-slate-100 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] overflow-hidden">
           <div className="w-full overflow-x-auto lg:overflow-x-visible">
-            <table className="w-full border-collapse table-fixed">
+            <table className="min-w-max border-collapse">
               <thead>
                 <tr className="border-b border-slate-100">
-                  <th className="w-48 lg:w-64 p-10 bg-slate-50/50 text-left align-top">
+                  <th className="w-48 lg:w-64 p-6 lg:p-10 bg-slate-50/50 text-left align-top shrink-0">
                     <div className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-2">Technical Matrix</div>
                     <div className="text-xs text-slate-400 font-bold leading-relaxed">Detailed Head-to-Head Analysis</div>
                   </th>
                   {Array.from({ length: 4 }).map((_, i) => {
                     const tool = selectedTools[i];
                     return (
-                      <th key={tool?.id || `empty-${i}`} className={`p-10 border-l border-slate-100 align-top ${!tool ? 'bg-slate-50/20' : ''}`}>
+                      <th key={tool?.id || `empty-${i}`} className={`w-64 lg:w-80 p-6 lg:p-10 border-l border-slate-100 align-top shrink-0 ${!tool ? 'bg-slate-50/20' : ''}`}>
                         {tool ? (
                           <div className="relative group text-center">
                             <button 
                               onClick={() => removeTool(tool.id)}
-                              className="absolute -top-4 -right-4 w-10 h-10 bg-white shadow-lg border border-slate-100 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 active:scale-90"
+                              className="absolute -top-3 -right-3 w-8 h-8 lg:w-10 lg:h-10 bg-white shadow-lg border border-slate-100 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 active:scale-90"
                             >
-                              <X className="w-5 h-5" />
+                              <X className="w-4 h-4 lg:w-5 lg:h-5" />
                             </button>
-                            <ToolLogo slug={tool.slug} src={tool.logo_url} websiteUrl={tool.official_url} name={tool.name} className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-xl border border-slate-50" />
-                            <h3 className="text-2xl font-black text-slate-900 mb-3 tracking-tight">{tool.name}</h3>
-                            <div className="inline-flex items-center gap-2 bg-yellow-50 px-4 py-1.5 rounded-xl border border-yellow-100">
-                              <span className="text-yellow-600 font-black text-lg">★ {tool.score}</span>
+                            <ToolLogo slug={tool.slug} src={tool.logo_url} websiteUrl={tool.official_url} name={tool.name} className="w-14 h-14 lg:w-20 lg:h-20 mx-auto mb-5 lg:mb-8 rounded-2xl lg:rounded-3xl shadow-xl border border-slate-50" />
+                            <h3 className="text-lg lg:text-2xl font-black text-slate-900 mb-2 lg:mb-3 tracking-tight">{tool.name}</h3>
+                            <div className="inline-flex items-center gap-2 bg-yellow-50 px-3 lg:px-4 py-1 lg:py-1.5 rounded-lg lg:rounded-xl border border-yellow-100">
+                              <span className="text-yellow-600 font-black text-base lg:text-lg">★ {tool.score}</span>
                             </div>
                           </div>
                         ) : (
                           <button 
                             onClick={focusSearch}
-                            className="w-full text-center py-8 group/slot hover:bg-white transition-colors rounded-2xl"
+                            className="w-full text-center py-6 lg:py-8 group/slot hover:bg-white transition-colors rounded-xl lg:rounded-2xl"
                           >
-                            <div className="w-20 h-20 mx-auto mb-8 rounded-3xl border-4 border-dashed border-slate-100 group-hover/slot:border-blue-200 flex items-center justify-center text-slate-200 group-hover/slot:text-blue-200 transition-all">
-                              <SearchIcon className="w-8 h-8" />
+                            <div className="w-14 h-14 lg:w-20 lg:h-20 mx-auto mb-5 lg:mb-8 rounded-2xl lg:rounded-3xl border-4 border-dashed border-slate-100 group-hover/slot:border-blue-200 flex items-center justify-center text-slate-200 group-hover/slot:text-blue-200 transition-all">
+                              <SearchIcon className="w-6 h-6 lg:w-8 lg:h-8" />
                             </div>
                             <div className="text-slate-300 group-hover/slot:text-blue-400 font-black uppercase text-[10px] tracking-widest transition-colors">Add Tool</div>
                           </button>
@@ -268,23 +268,23 @@ function CompareContent() {
               <tbody>
                 {comparisonRows.map((row, idx) => (
                   <tr key={row.key} className={idx % 2 === 0 ? 'bg-white' : 'bg-[#fcfdfe]'}>
-                    <td className="p-10 border-r border-slate-100">
+                    <td className="p-6 lg:p-10 border-r border-slate-100 shrink-0">
                       <div className="font-black text-slate-900 text-sm tracking-tight">{row.label}</div>
                     </td>
                     {Array.from({ length: 4 }).map((_, i) => {
                       const tool = selectedTools[i];
                       const val = tool ? getNestedValue(tool, row.key) : null;
                       return (
-                        <td key={`${i}-${row.key}`} className="p-10 text-center border-r border-slate-100 last:border-r-0">
+                        <td key={`${i}-${row.key}`} className="p-6 lg:p-10 text-center border-r border-slate-100 last:border-r-0 shrink-0">
                           {tool ? (
                             <div className="flex flex-col items-center">
-                              {row.type === 'rating' && <span className="text-2xl font-black text-slate-900">★ {val}</span>}
-                              {row.type === 'price' && <span className="text-xl font-black text-slate-900">${val || 'TBA'}</span>}
+                              {row.type === 'rating' && <span className="text-xl lg:text-2xl font-black text-slate-900">★ {val}</span>}
+                              {row.type === 'price' && <span className="text-lg lg:text-xl font-black text-slate-900">${val || 'TBA'}</span>}
                               {row.type === 'badge' && <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-100 font-bold">{val}</Badge>}
                               {row.type === 'list' && (
-                                <div className="flex flex-wrap justify-center gap-2 max-w-[200px]">
+                                <div className="flex flex-wrap justify-center gap-2 max-w-[180px] lg:max-w-[200px]">
                                   {val?.slice(0, 4).map((item: string) => (
-                                    <span key={item} className="text-[10px] font-black uppercase tracking-widest bg-slate-100 text-slate-500 px-2.5 py-1 rounded-md">{item}</span>
+                                    <span key={item} className="text-[10px] font-black uppercase tracking-widest bg-slate-100 text-slate-500 px-2 py-1 rounded-md">{item}</span>
                                   ))}
                                 </div>
                               )}
@@ -297,19 +297,19 @@ function CompareContent() {
                   </tr>
                 ))}
                 <tr>
-                  <td className="p-10 border-r border-slate-100 bg-slate-50/30">
+                  <td className="p-6 lg:p-10 border-r border-slate-100 bg-slate-50/30 shrink-0">
                     <div className="font-black text-slate-900 text-sm tracking-tight">Verdict</div>
                   </td>
                   {Array.from({ length: 4 }).map((_, i) => {
                     const tool = selectedTools[i];
                     return (
-                      <td key={`v-${i}`} className="p-10 border-r border-slate-100 last:border-r-0 align-top">
+                      <td key={`v-${i}`} className="p-6 lg:p-10 border-r border-slate-100 last:border-r-0 align-top shrink-0">
                         {tool ? (
                           <div className="flex flex-col h-full">
-                            <p className="text-xs text-slate-500 font-bold italic leading-relaxed mb-8 line-clamp-4">
+                            <p className="text-xs text-slate-500 font-bold italic leading-relaxed mb-5 lg:mb-8 line-clamp-4">
                               "{tool.expert_verdict}"
                             </p>
-                            <Button asChild className="mt-auto w-full rounded-2xl bg-slate-900 hover:bg-blue-600 font-black h-12 text-sm transition-all shadow-lg hover:shadow-blue-200">
+                            <Button asChild className="mt-auto w-full rounded-xl lg:rounded-2xl bg-slate-900 hover:bg-blue-600 font-black h-10 lg:h-12 text-xs lg:text-sm transition-all shadow-lg hover:shadow-blue-200">
                               <Link href={`/tools/${tool.slug}`}>Full Analysis</Link>
                             </Button>
                           </div>
