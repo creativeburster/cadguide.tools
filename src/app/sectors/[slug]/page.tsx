@@ -647,7 +647,7 @@ function renderFAQs(s: SectorPage, style: SectorStyle) {
 function renderCTA(s: SectorPage, totalCount: number, style: SectorStyle) {
   return (
     <section key="cta" className={`my-10 rounded-[36px] bg-gradient-to-br ${style.gradient} text-white p-8 sm:p-12 text-center relative overflow-hidden shadow-xl shadow-slate-900/10`}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent)] pointer-events-none" />
       <h2 className="text-3xl font-extrabold tracking-tight">Need a tailored CAD recommendation?</h2>
       <p className="mt-4 text-blue-50 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
         Skip hours of specification grids. Our smart interactive Matchmaker identifies the perfect match for your {s.shortNoun} workflow, team size, and budget in under 60 seconds.
