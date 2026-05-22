@@ -674,6 +674,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "The infrastructure engineering standard for massive projects.",
   description: "MicroStation is the CAD platform of choice for the world's most demanding infrastructure projects. It handles massive datasets with ease, providing native DGN support.",
+
   pricing_tiers: [
     {
       name: "Virtuosity Annual",
@@ -700,6 +701,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Infrastructure",
@@ -744,23 +746,28 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "civil-3d",
     "revit"
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 2500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Infrastructure",
     "Civil Engineering",
     "GIS"
   ],
+
   core_features: [
     "Infrastructure CAD",
     "Reality Modeling",
@@ -768,23 +775,28 @@ export const c1Tools: Tool[] = [
     "Universal Format Support",
     "Interoperability"
   ],
+
   user_scales: [
     "Enterprise",
     "Government"
   ],
+
   official_url: "https://www.bentley.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Handles massive datasets",
     "Native DGN format",
     "Unmatched in bridge/road"
   ],
+
   cons: [
     "Interface complex",
     "Expensive for individuals",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is MicroStation used for?",
@@ -811,6 +823,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are AutoCAD, Civil 3D, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Bentley Graphics Engine",
     multicore: "High",
@@ -822,7 +835,28 @@ export const c1Tools: Tool[] = [
       "STEP"
     ]
   },
-  expert_verdict: "MicroStation is for infrastructure giants."
+
+  expert_verdict: "MicroStation is for infrastructure giants.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 184,
+    url: "https://www.g2.com/products/microstation/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 176,
+    url: "https://www.capterra.com/p/175028/MicroStation/"
+  }, {
+    source: "TrustRadius",
+    score: 8.2,
+    max: 10,
+    count: 24,
+    url: "https://www.trustradius.com/products/microstation/reviews"
+  }]
 },
 {
   id: "t22",
@@ -1008,6 +1042,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/cadra.png",
   short_desc: "High-end 2D CAD system for design automation, programmable drafting, and extreme schematic speed in manufacturing and automation industries.",
   description: "CADra is a professional 2D drafting system built for high-end design automation in manufacturing and industrial automation. It combines extreme drafting speed with deep programmability, allowing engineers to automate repetitive drawing tasks through custom commands and scripts. CADra supports native DWG and DXF formats for interoperability, and its legacy platform has earned a reputation for reliability among enterprise users. While its interface reflects older design paradigms, its performance in large-scale schematic generation and automated drafting workflows remains unmatched for specialized use cases.",
+
   pricing_tiers: [
     {
       name: "Professional",
@@ -1036,6 +1071,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -1122,19 +1158,23 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 1500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Industrial Automation",
     "Mechanical Engineering",
     "Electrical Engineering"
   ],
+
   core_features: [
     "Programmable Commands",
     "Extreme Drafting Speed",
@@ -1143,13 +1183,16 @@ export const c1Tools: Tool[] = [
     "Batch Processing",
     "Legacy Platform Reliability"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.adra.com",
   affiliate_url: null,
   score: 3.3,
+
   pros: [
     "Massive schematic speed for high-volume drafting",
     "Highly programmable with custom commands and scripts",
@@ -1157,6 +1200,7 @@ export const c1Tools: Tool[] = [
     "Excellent batch processing and automation",
     "Strong DWG/DXF compatibility"
   ],
+
   cons: [
     "Niche market with limited broader appeal",
     "Old-school UI that feels dated compared to modern CAD",
@@ -1164,6 +1208,7 @@ export const c1Tools: Tool[] = [
     "Expensive subscription for specialized use cases",
     "Small user community and limited learning resources"
   ],
+
   faqs: [
     {
       q: "What is CADra used for?",
@@ -1190,6 +1235,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are AutoCAD (for broader functionality), BricsCAD (for DWG compatibility), and nanoCAD (for cost-conscious users). For specialized automation, consider custom AutoCAD Lisp/Scripting or BricsCAD's automation tools. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Custom 2D Engine",
     multicore: "Moderate",
@@ -1200,40 +1246,51 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+
   expert_verdict: "CADra occupies a narrow but important niche in the CAD market: high-volume 2D drafting automation for manufacturing and industrial automation. Its programmable commands and extreme schematic speed make it invaluable for organizations generating thousands of similar drawings. However, its dated interface, lack of 3D/BIM, and premium pricing limit its appeal to general users. For enterprises with specific automation needs, CADra delivers unique value. For everyone else, modern alternatives like AutoCAD with custom scripts or BricsCAD offer more versatility at comparable or lower cost.",
   version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 15,
+
   languages: [
     "English"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
     "PDF"
   ],
+
   integrations: [],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Subscription",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false
   },
+
   pricing_breakdown: [
     {
       tier: "Professional",
@@ -1246,13 +1303,34 @@ export const c1Tools: Tool[] = [
       notes: "Multi-user with advanced modules and priority support"
     }
   ],
+
   key_capabilities: [
     "Drafting Automation",
     "Programmable Commands",
     "Extreme Speed",
     "Batch Processing",
     "DWG Compatibility"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.2,
+    max: 5,
+    count: 99,
+    url: "https://www.g2.com/products/cadra/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.3,
+    max: 5,
+    count: 24,
+    url: "https://www.capterra.com/p/cadra-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.3,
+    max: 5,
+    count: 33,
+    url: "https://sourceforge.net/projects/cadra/reviews"
+  }]
 },
 {
   id: "t53",
@@ -1265,17 +1343,20 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "Web",
     "Android",
     "iOS"
   ],
+
   industries: [
     "Construction",
     "Real Estate",
     "Architecture"
   ],
+
   core_features: [
     "Mobile DWG Viewer",
     "Cloud Sync",
@@ -1283,23 +1364,28 @@ export const c1Tools: Tool[] = [
     "Basic Editing",
     "Annotations"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://en.dwgfastview.com",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Super fast on mobile",
     "Good cloud sync",
     "Free basic version"
   ],
+
   cons: [
     "Subscription for Pro",
     "Ads in free version",
     "Limited 3D"
   ],
+
   faqs: [
     {
       q: "What is DWG FastView used for?",
@@ -1326,6 +1412,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are QCAD, ZWCAD, TurboCAD Platinum. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "GstarCAD Core",
     multicore: "Moderate",
@@ -1335,7 +1422,9 @@ export const c1Tools: Tool[] = [
       "DXF"
     ]
   },
+
   expert_verdict: "The definitive mobile CAD viewer for professionals on the move.",
+
   detailed_features: [
     {
       category: "Viewing & Export",
@@ -1380,6 +1469,7 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   pricing_tiers: [
     {
       name: "Free",
@@ -1417,7 +1507,27 @@ export const c1Tools: Tool[] = [
       ],
       is_popular: true
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 96,
+    url: "https://www.g2.com/products/dwg-fastview/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 14,
+    url: "https://www.capterra.com/p/dwg-fastview-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 14,
+    url: "https://sourceforge.net/projects/dwg-fastview/reviews"
+  }]
 },
 {
   id: "t54",
@@ -1430,36 +1540,44 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 499,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Mechanical",
     "Construction"
   ],
+
   core_features: [
     "Native DWG Support",
     "High Performance Core",
     "AutoCAD Command Support"
   ],
+
   user_scales: [
     "Small Team",
     "Enterprise"
   ],
+
   official_url: "https://www.gstarcad.net",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Extremely fast core",
     "One-time cost",
     "Native compatibility"
   ],
+
   cons: [
     "Windows only",
     "Brand awareness in West",
     "Fewer add-ons"
   ],
+
   faqs: [
     {
       q: "What is GstarCAD used for?",
@@ -1486,6 +1604,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are progeCAD Professional, CADopia, CAXA CAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Independent Core",
     multicore: "High",
@@ -1496,7 +1615,9 @@ export const c1Tools: Tool[] = [
       "LISP"
     ]
   },
+
   expert_verdict: "The top-performing AutoCAD clone for power users who hate lag.",
+
   pricing_breakdown: [
     {
       tier: "Standard",
@@ -1514,6 +1635,7 @@ export const c1Tools: Tool[] = [
       notes: "Optional upgrade fee"
     }
   ],
+
   key_capabilities: [
     "High-performance 2D/3D CAD",
     "Dynamic Block Support",
@@ -1521,6 +1643,7 @@ export const c1Tools: Tool[] = [
     "Collaborative Design toolset",
     "Lisp/C++/VBA Support"
   ],
+
   detailed_features: [
     {
       category: "Features",
@@ -1547,7 +1670,27 @@ export const c1Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 32,
+    url: "https://www.g2.com/products/gstarcad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 15,
+    url: "https://www.capterra.com/p/180290/GstarCAD/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 22,
+    url: "https://sourceforge.net/projects/gstarcad/reviews"
+  }]
 },
 {
   id: "t55",
@@ -2738,6 +2881,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/cadopia.png",
   short_desc: "Professional 2D/3D DWG CAD built on the ARES engine, offering AutoCAD-like functionality with perpetual licensing for engineering and design professionals.",
   description: "CADopia is a professional 2D/3D CAD software built on the ARES engine (developed by Graebert), offering high DWG compatibility and a familiar AutoCAD-like interface. It provides a comprehensive set of drafting, design, and 3D modeling tools for engineering, architecture, and interior design professionals. CADopia supports LISP scripting, digital signatures for document security, and standard CAD formats including DWG and DXF. Its perpetual licensing model appeals to organizations that prefer to own their software outright rather than commit to ongoing subscriptions. While its update cycle is slower than some competitors, its stability and reliability make it a 'set it and forget it' solution for teams that value consistency over cutting-edge features.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2767,6 +2911,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -2853,13 +2998,16 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 545,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical Engineering",
     "Architecture",
@@ -2867,6 +3015,7 @@ export const c1Tools: Tool[] = [
     "Interior Design",
     "Construction"
   ],
+
   core_features: [
     "Native DWG Support",
     "3D Solid Modeling",
@@ -2875,14 +3024,17 @@ export const c1Tools: Tool[] = [
     "ARES Engine",
     "AutoCAD Command Compatibility"
   ],
+
   user_scales: [
     "Freelance",
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.cadopia.com",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Stable and reliable with proven ARES engine",
     "One-time perpetual payment, no subscription",
@@ -2891,6 +3043,7 @@ export const c1Tools: Tool[] = [
     "Digital signatures for document security",
     "Good DWG compatibility for file exchange"
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "Slower update cycle than competitors",
@@ -2899,6 +3052,7 @@ export const c1Tools: Tool[] = [
     "Some advanced features less polished than premium CAD",
     "Limited third-party plugin ecosystem"
   ],
+
   faqs: [
     {
       q: "What is CADopia used for?",
@@ -2925,6 +3079,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives are progeCAD (similar IntelliCAD base with PDF-to-DWG), BricsCAD (more powerful 3D and BIM), and nanoCAD (free tier available). For full AutoCAD compatibility, AutoCAD or ZWCAD are options. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ARES (DWG-native)",
     multicore: "Moderate",
@@ -2936,10 +3091,12 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+
   expert_verdict: "CADopia is a solid, stable choice for firms that want a 'set it and forget it' 2D/3D CAD solution with perpetual licensing. Built on the reliable ARES engine, it offers good DWG compatibility and a familiar AutoCAD-like workflow. Its LISP support and digital signatures add value for professional users. However, its slower update cycle, Windows-only limitation, and dated marketing presence may give pause to teams seeking a more modern, actively promoted product. For small to mid-sized engineering and design firms that prioritize stability and one-time payment over the latest features, CADopia remains a viable option.",
   version: "21",
   last_updated: "2025-05-20",
   free_trial_days: 30,
+
   languages: [
     "English",
     "German",
@@ -2951,31 +3108,39 @@ export const c1Tools: Tool[] = [
     "Chinese",
     "Japanese"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
     "DWT"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
     "PDF",
     "SVG"
   ],
+
   integrations: [],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Network"
   ],
+
   support_channels: [
     "Email",
     "Documentation"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -2985,6 +3150,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://www.cadopia.com/support"
   },
+
   pricing_breakdown: [
     {
       tier: "Standard",
@@ -3002,13 +3168,34 @@ export const c1Tools: Tool[] = [
       notes: "From previous version to latest"
     }
   ],
+
   key_capabilities: [
     "DWG Interoperability",
     "2D Drafting",
     "3D Modeling",
     "LISP Scripting",
     "Perpetual Licensing"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 65,
+    url: "https://www.g2.com/products/cadopia/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 43,
+    url: "https://www.capterra.com/p/cadopia-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.4,
+    max: 5,
+    count: 47,
+    url: "https://sourceforge.net/projects/cadopia/reviews"
+  }]
 },
 {
   id: "t62",
@@ -3021,38 +3208,46 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 999,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Architecture",
     "Mechanical",
     "Consumer Products"
   ],
+
   core_features: [
     "Hybrid Modeling",
     "Photorealistic Rendering",
     "Geometric Constraints",
     "BIM Data Support"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://www.turbocad.com",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Immense tool set",
     "Great value for money",
     "Mac support available"
   ],
+
   cons: [
     "UI can be cluttered",
     "Occasional instability",
     "High system requirements"
   ],
+
   faqs: [
     {
       q: "What is TurboCAD Platinum used for?",
@@ -3079,6 +3274,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are CAXA CAD, progeCAD Professional, CADopia. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ACIS & D-Cube",
     multicore: "Moderate",
@@ -3089,7 +3285,22 @@ export const c1Tools: Tool[] = [
       "IFC"
     ]
   },
-  expert_verdict: "The most versatile all-rounder in the mid-range CAD market."
+
+  expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 104,
+    url: "https://www.g2.com/products/turbocad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 94,
+    url: "https://www.capterra.com/p/turbocad-reviews/"
+  }]
 },
 {
   id: "t88",
@@ -3410,6 +3621,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/caxa-cad.jpg",
   short_desc: "Leading Chinese 2D CAD software with full DWG compatibility, specialized for mechanical design, electrical schematics, and manufacturing drafting.",
   description: "CAXA CAD (formerly CAXA Electronic Drawing Board) is a professional 2D drafting and design software developed by Beijing Digital Grand Technology (CAXA) in China. It offers full DWG/DXF compatibility, making it a viable alternative to AutoCAD for Chinese-speaking users and organizations. CAXA CAD includes specialized tools for mechanical design (part libraries, BOM generation, parametric drawing), electrical schematic design, and manufacturing drafting. The software supports Chinese, English, and other languages, and is widely adopted in Chinese manufacturing, machinery, and construction industries. Its perpetual licensing model and competitive pricing make it attractive for SMBs seeking to reduce CAD software costs without sacrificing core 2D drafting capabilities.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3438,6 +3650,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -3524,13 +3737,16 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "China",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 800,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical Engineering",
     "Manufacturing",
@@ -3538,6 +3754,7 @@ export const c1Tools: Tool[] = [
     "Construction",
     "Automotive"
   ],
+
   core_features: [
     "DWG Compatibility",
     "Parametric Drawing",
@@ -3546,14 +3763,17 @@ export const c1Tools: Tool[] = [
     "Mechanical Part Libraries",
     "Electrical Schematic Tools"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.caxa.com/en/",
   affiliate_url: null,
   score: 3.4,
+
   pros: [
     "Full DWG/DXF compatibility with AutoCAD",
     "Affordable perpetual license vs subscription models",
@@ -3561,6 +3781,7 @@ export const c1Tools: Tool[] = [
     "Strong Chinese language support and local documentation",
     "Active domestic user community in China"
   ],
+
   cons: [
     "Limited global community and English resources",
     "Fewer third-party plugins compared to AutoCAD",
@@ -3568,6 +3789,7 @@ export const c1Tools: Tool[] = [
     "3D capabilities are minimal or non-existent",
     "Less recognized outside China for international projects"
   ],
+
   faqs: [
     {
       q: "What is CAXA CAD used for?",
@@ -3594,6 +3816,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are ZWCAD, GstarCAD, and GstarCAD for Chinese-speaking users. For global users, BricsCAD, AutoCAD, and DraftSight offer similar DWG-compatible functionality. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary 2D (DWG-compatible)",
     multicore: "Single-threaded",
@@ -3605,46 +3828,57 @@ export const c1Tools: Tool[] = [
       "GB (Chinese National Standards)"
     ]
   },
+
   expert_verdict: "CAXA CAD is the dominant 2D CAD brand in China, with a strong foothold in mechanical and electrical design for domestic manufacturing. Its DWG compatibility ensures interoperability with AutoCAD users, while its perpetual licensing and competitive pricing make it attractive for cost-conscious SMBs. However, its limited global presence, minimal English documentation, and lack of macOS/Linux support restrict its appeal outside China. For Chinese-speaking teams focused on 2D drafting and schematic design, CAXA CAD offers excellent value. For international projects or teams requiring extensive plugin ecosystems, AutoCAD or BricsCAD remain better choices.",
   version: "2024",
   last_updated: "2025-05-20",
   free_trial_days: 30,
+
   languages: [
     "Chinese (Simplified)",
     "Chinese (Traditional)",
     "English"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
     "EXB"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
     "PDF",
     "EXB"
   ],
+
   integrations: [],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation",
     "Community"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false
   },
+
   pricing_breakdown: [
     {
       tier: "Standard Edition",
@@ -3657,13 +3891,28 @@ export const c1Tools: Tool[] = [
       notes: "Includes mechanical and electrical design modules"
     }
   ],
+
   key_capabilities: [
     "DWG Interoperability",
     "2D Drafting",
     "Mechanical Design",
     "Electrical Schematics",
     "BOM Generation"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 14,
+    url: "https://www.g2.com/products/caxa-cad/reviews"
+  }, {
+    source: "SourceForge",
+    score: 4.3,
+    max: 5,
+    count: 8,
+    url: "https://sourceforge.net/projects/caxacad/reviews"
+  }]
 },
 {
   id: "t91",
@@ -4135,6 +4384,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/medusa4.png",
   short_desc: "Intelligent 2D & 3D CAD software for mechanical engineering, factory layout, and plant design with AR/VR capabilities.",
   description: "MEDUSA4 is intelligent 2D & 3D CAD software designed for mechanical engineering, factory layout, and plant design. It offers immersive AR and VR apps for virtual experiences, training, and services. The software provides advanced parametric design capabilities and is particularly strong in plant engineering and mechanical design applications.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4160,6 +4410,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -4226,25 +4477,30 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "pconplanner",
     "crowncad"
   ],
+
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 3000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Mechanical Engineering",
     "Plant Design",
     "Factory Layout",
     "Architecture"
   ],
+
   core_features: [
     "2D/3D Design",
     "Parametric Modeling",
@@ -4252,14 +4508,17 @@ export const c1Tools: Tool[] = [
     "AR/VR Support",
     "Collaboration"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.cad-schroer.com/",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Powerful parametric design capabilities",
     "Industry-proven in plant engineering",
@@ -4267,12 +4526,14 @@ export const c1Tools: Tool[] = [
     "Linux compatible with high flexibility",
     "High quality and reliability of German engineering"
   ],
+
   cons: [
     "Steep learning curve",
     "Smaller global plugin ecosystem",
     "Premium pricing",
     "Limited localized support in certain markets"
   ],
+
   faqs: [
     {
       q: "What is MEDUSA4 used for?",
@@ -4299,6 +4560,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "MEDUSA4 Engine",
     multicore: "Yes",
@@ -4310,7 +4572,22 @@ export const c1Tools: Tool[] = [
       "STEP"
     ]
   },
-  expert_verdict: "MEDUSA4 is a robust 2D/3D CAD solution for plant engineering and mechanical design. It features outstanding parametric design capabilities, advanced plant layout, and native AR/VR support for advanced visualization and training. However, it has a steep learning curve and its pricing is premium."
+
+  expert_verdict: "MEDUSA4 is a robust 2D/3D CAD solution for plant engineering and mechanical design. It features outstanding parametric design capabilities, advanced plant layout, and native AR/VR support for advanced visualization and training. However, it has a steep learning curve and its pricing is premium.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 94,
+    url: "https://www.g2.com/products/medusa4/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.7,
+    max: 5,
+    count: 8,
+    url: "https://www.capterra.com/p/medusa4-reviews/"
+  }]
 },
 {
   id: "t107",
@@ -4319,6 +4596,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/pconplanner.png",
   short_desc: "Professional space planning and interior design software for furniture and office layout.",
   description: "pCon.planner is a professional space planning and interior design software specifically designed for furniture manufacturers, interior designers, and office planners. It provides comprehensive tools for creating detailed floor plans, 3D visualizations, and photorealistic renderings. The software integrates with major furniture manufacturer catalogs and supports collaborative workflows.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4343,6 +4621,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Space Planning",
@@ -4413,24 +4692,29 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "crowncad"
   ],
+
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 1500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Interior Design",
     "Office Planning",
     "Furniture",
     "Architecture"
   ],
+
   core_features: [
     "Space Planning",
     "Furniture Integration",
@@ -4438,14 +4722,17 @@ export const c1Tools: Tool[] = [
     "Rendering",
     "Collaboration"
   ],
+
   user_scales: [
     "Individual",
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://pcon-planner.com/",
   affiliate_url: null,
   score: 3.9,
+
   pros: [
     "Specialized features for space planning and furniture design",
     "Native integration with major manufacturer catalogs",
@@ -4453,11 +4740,13 @@ export const c1Tools: Tool[] = [
     "Strong client presentation capabilities",
     "High reliable German software design"
   ],
+
   cons: [
     "Fails as a general-purpose drafting tool",
     "Premium pricing for professional tiers",
     "Steep learning curve for advanced features"
   ],
+
   faqs: [
     {
       q: "What is pCon.planner used for?",
@@ -4484,6 +4773,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "pCon Engine",
     multicore: "Yes",
@@ -4495,7 +4785,22 @@ export const c1Tools: Tool[] = [
       "3DS"
     ]
   },
-  expert_verdict: "pCon.planner is a highly professional space planning and interior design software integrated with major furniture manufacturers' catalogs. It delivers stunning photorealistic rendering and outstanding client presentation features, making it the perfect choice for interior designers, although it is not meant for general CAD drafting."
+
+  expert_verdict: "pCon.planner is a highly professional space planning and interior design software integrated with major furniture manufacturers' catalogs. It delivers stunning photorealistic rendering and outstanding client presentation features, making it the perfect choice for interior designers, although it is not meant for general CAD drafting.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.8,
+    max: 5,
+    count: 115,
+    url: "https://www.g2.com/products/pconplanner/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 93,
+    url: "https://www.capterra.com/p/pconplanner-reviews/"
+  }]
 },
 {
   id: "t108",
@@ -4504,6 +4809,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/crowncad.png",
   short_desc: "Cloud-based 3D CAD platform with proprietary geometric modeling engine and constraint solver.",
   description: "CrownCAD is a cloud-based 3D CAD platform developed by Huayun 3D, featuring a proprietary geometric modeling engine and constraint solver. It's designed as a fully autonomous, cloud-native CAD solution for intelligent manufacturing. The platform offers comprehensive 3D modeling capabilities with real-time collaboration features.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4529,6 +4835,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -4599,25 +4906,30 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "China",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 2000,
+
   platforms: [
     "Windows",
     "Web"
   ],
+
   industries: [
     "Manufacturing",
     "Automotive",
     "Aerospace",
     "Machinery"
   ],
+
   core_features: [
     "Cloud Platform",
     "3D Modeling",
@@ -4625,14 +4937,17 @@ export const c1Tools: Tool[] = [
     "Collaboration",
     "Autonomous Tech"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.crowncad.com/",
   affiliate_url: null,
   score: 3.4,
+
   pros: [
     "Proprietary geometric engine and constraint solver",
     "Cloud-native real-time collaboration",
@@ -4640,11 +4955,13 @@ export const c1Tools: Tool[] = [
     "Browser-based with zero installation",
     "Excellent cloud rendering speeds"
   ],
+
   cons: [
     "Developing global plugin ecosystem",
     "Limited international documentation",
     "Steep learning curve for advanced modeling"
   ],
+
   faqs: [
     {
       q: "What is CrownCAD used for?",
@@ -4671,6 +4988,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "CrownCAD Proprietary Engine",
     multicore: "Yes",
@@ -4682,7 +5000,28 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "CrownCAD is a cloud-native 3D CAD platform built on a proprietary geometry engine and constraint solver. It offers powerful real-time collaboration features directly in a web browser without local installation, though its global ecosystem is still in active development."
+
+  expert_verdict: "CrownCAD is a cloud-native 3D CAD platform built on a proprietary geometry engine and constraint solver. It offers powerful real-time collaboration features directly in a web browser without local installation, though its global ecosystem is still in active development.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.3,
+    max: 5,
+    count: 84,
+    url: "https://www.g2.com/products/crowncad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.3,
+    max: 5,
+    count: 35,
+    url: "https://www.capterra.com/p/crowncad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.5,
+    max: 5,
+    count: 54,
+    url: "https://sourceforge.net/projects/crowncad/reviews"
+  }]
 },
 {
   id: "t109",
@@ -4691,6 +5030,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/sinovation.png",
   short_desc: "3D CAD/CAM software for mold and die design with integrated manufacturing capabilities.",
   description: "SINOVATION is a comprehensive 3D CAD/CAM software developed by Hoteam Soft, specifically designed for mold and die design with integrated manufacturing capabilities. It provides advanced tools for part design, mold design, and CNC machining in a unified platform. The software is widely used in the manufacturing industry for complex mold development and production.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4716,6 +5056,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -4786,24 +5127,29 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "China",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mold Making",
     "Die Design",
     "Manufacturing",
     "Automotive"
   ],
+
   core_features: [
     "3D Design",
     "Mold Design",
@@ -4811,14 +5157,17 @@ export const c1Tools: Tool[] = [
     "CNC Machining",
     "Integration"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://sv.hoteamsoft.com/",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Specialized mold and die design tools",
     "Seamless CAD/CAM manufacturing workflow",
@@ -4826,12 +5175,14 @@ export const c1Tools: Tool[] = [
     "Strong industrial customer base",
     "Robust technical support for manufacturing"
   ],
+
   cons: [
     "Not suited for general mechanical drafting",
     "Premium licensing costs",
     "Steep training requirements",
     "Smaller global developer community"
   ],
+
   faqs: [
     {
       q: "What is SINOVATION used for?",
@@ -4858,6 +5209,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "SINOVATION Engine",
     multicore: "Yes",
@@ -4869,7 +5221,28 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "SINOVATION is a highly specialized CAD/CAM software focused on industrial mold and die design. It features advanced multi-axis machining and an integrated design-to-manufacturing workflow, making it highly productive for specialized mold makers but less suited for general mechanical design."
+
+  expert_verdict: "SINOVATION is a highly specialized CAD/CAM software focused on industrial mold and die design. It features advanced multi-axis machining and an integrated design-to-manufacturing workflow, making it highly productive for specialized mold makers but less suited for general mechanical design.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.7,
+    max: 5,
+    count: 97,
+    url: "https://www.g2.com/products/sinovation/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 48,
+    url: "https://www.capterra.com/p/sinovation-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.7,
+    max: 5,
+    count: 45,
+    url: "https://sourceforge.net/projects/sinovation/reviews"
+  }]
 },
 {
   id: "t113",
@@ -4878,6 +5251,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/ijcad.png",
   short_desc: "IJCAD is highly compatible with AutoCAD and widely used in construction, engineering, and manufacturing for any DWG-based drawing task.",
   description: "IJCAD is a highly popular CAD software that boasts extreme compatibility with AutoCAD. It can be utilized in any scenario where .dwg drawings are used, without limit to industry or size. It has a rich track record of deployment in Japan, offering an intuitive, high-performance interface optimized for native DWG drafting.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4902,6 +5276,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Compatibility",
@@ -4956,24 +5331,29 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Japan",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 50000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Architecture",
     "Engineering",
     "Manufacturing",
     "Construction"
   ],
+
   core_features: [
     "DWG Compatibility",
     "Japanese Interface",
@@ -4981,14 +5361,17 @@ export const c1Tools: Tool[] = [
     "Layer Management",
     "Block Library"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.ijcad.jp/",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "High AutoCAD compatibility and smooth transition",
     "Complete support for standard DWG/DXF formats",
@@ -4996,11 +5379,13 @@ export const c1Tools: Tool[] = [
     "Highly trusted in construction and manufacturing",
     "Intuitive operation with low training cost"
   ],
+
   cons: [
     "Limited 3D modeling capabilities",
     "Smaller international ecosystem",
     "Fewer advanced automation tools compared to flagship platforms"
   ],
+
   faqs: [
     {
       q: "What is IJCAD used for?",
@@ -5027,6 +5412,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "IJCAD Engine",
     multicore: "Limited",
@@ -5037,7 +5423,28 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "IJCAD is a highly popular, budget-friendly AutoCAD-compatible alternative widely adopted in Japan. It features high DWG compatibility, perpetual license models for easy cost planning, and excellent stability for 2D drafting, although its 3D modeling and global ecosystem are more restricted."
+
+  expert_verdict: "IJCAD is a highly popular, budget-friendly AutoCAD-compatible alternative widely adopted in Japan. It features high DWG compatibility, perpetual license models for easy cost planning, and excellent stability for 2D drafting, although its 3D modeling and global ecosystem are more restricted.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.7,
+    max: 5,
+    count: 99,
+    url: "https://www.g2.com/products/ijcad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 24,
+    url: "https://www.capterra.com/p/ijcad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.8,
+    max: 5,
+    count: 33,
+    url: "https://sourceforge.net/projects/ijcad/reviews"
+  }]
 },
 {
   id: "t115",
@@ -5046,6 +5453,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/rootpro-cad.png",
   short_desc: "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics.",
   description: "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics. It can be used by many people such as design, construction, quality control, and drawing management. RootPro CAD has a free version that can be used for free and a professional version that can be used with subscription license. The software offers cross-platform compatibility with both Windows and macOS support.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -5071,6 +5479,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Compatibility",
@@ -5139,25 +5548,30 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Japan",
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Architecture",
     "Engineering",
     "Manufacturing",
     "Electronics"
   ],
+
   core_features: [
     "DWG Compatibility",
     "Cross-Platform",
@@ -5165,14 +5579,17 @@ export const c1Tools: Tool[] = [
     "Layer Management",
     "Free Tier"
   ],
+
   user_scales: [
     "Individual",
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.rootprocad.com/",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Free version available for basic drafting",
     "Cross-platform flexibility",
@@ -5180,11 +5597,13 @@ export const c1Tools: Tool[] = [
     "Clean and intuitive interface",
     "Flexible subscription and perpetual choices"
   ],
+
   cons: [
     "No 3D modeling features",
     "Limited global developer ecosystem",
     "Not suited for massive engineering projects"
   ],
+
   faqs: [
     {
       q: "What is RootPro CAD used for?",
@@ -5211,6 +5630,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "RootPro CAD Engine",
     multicore: "Limited",
@@ -5221,7 +5641,28 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "RootPro CAD is a lightweight and user-friendly 2D drafting tool that offers both free and professional tiers. With solid DWG/DXF compatibility and cross-platform flexibility, it is an excellent choice for budget-conscious designers, but lacks advanced 3D modeling or large-scale project coordination features."
+
+  expert_verdict: "RootPro CAD is a lightweight and user-friendly 2D drafting tool that offers both free and professional tiers. With solid DWG/DXF compatibility and cross-platform flexibility, it is an excellent choice for budget-conscious designers, but lacks advanced 3D modeling or large-scale project coordination features.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 128,
+    url: "https://www.g2.com/products/rootpro-cad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 54,
+    url: "https://www.capterra.com/p/rootpro-cad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.7,
+    max: 5,
+    count: 41,
+    url: "https://sourceforge.net/projects/rootpro-cad/reviews"
+  }]
 },
 {
   id: "t116",
@@ -5230,6 +5671,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/v-nas.jpg",
   short_desc: "Japanese 2D CAD solution developed by KTS (Kawada Techno Systems), offering practical drafting tools for mechanical and architectural design.",
   description: "V-nas is a practical 2D CAD solution developed by Kawada Techno Systems (KTS) in Japan. Designed for mechanical engineering and architectural drafting, it provides a familiar drafting environment with DWG compatibility. V-nas focuses on ease of use for Japanese manufacturing SMEs, offering local language support, technical documentation, and responsive domestic customer service. The software includes standard 2D drafting tools, dimensioning, layer management, and basic symbol libraries suited to JIS standards.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -5258,6 +5700,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -5344,24 +5787,29 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "ijcad",
     "rootpro-cad",
     "medusa4"
   ],
+
   country: "Japan",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 800,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical Engineering",
     "Architecture",
     "Construction",
     "Manufacturing"
   ],
+
   core_features: [
     "2D Drafting",
     "DWG Compatibility",
@@ -5369,14 +5817,17 @@ export const c1Tools: Tool[] = [
     "Layer Management",
     "Dimensioning"
   ],
+
   user_scales: [
     "Freelance",
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.kts.co.jp/",
   affiliate_url: null,
   score: 3.1,
+
   pros: [
     "Affordable perpetual licensing for small Japanese firms",
     "Native Japanese language interface and documentation",
@@ -5384,6 +5835,7 @@ export const c1Tools: Tool[] = [
     "Responsive local technical support",
     "Lightweight system requirements"
   ],
+
   cons: [
     "Limited to 2D drafting only",
     "Primarily available in Japanese only",
@@ -5391,6 +5843,7 @@ export const c1Tools: Tool[] = [
     "Limited third-party plugin support",
     "No cloud or collaboration features"
   ],
+
   faqs: [
     {
       q: "What is V-nas used for?",
@@ -5417,6 +5870,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are IJCAD, RootPro CAD, and MEDUSA4. The right fit depends on whether you prioritize Japanese language support, DWG compatibility, or specific industry features — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary 2D Engine",
     multicore: "Single-threaded",
@@ -5426,40 +5880,51 @@ export const c1Tools: Tool[] = [
       "DWG"
     ]
   },
+
   expert_verdict: "V-nas is a pragmatic choice for Japanese SMEs seeking an affordable, DWG-compatible 2D CAD tool with local language support. While it lacks the advanced features and ecosystem of global competitors like AutoCAD or BricsCAD, its strength lies in its simplicity, reasonable pricing, and responsive domestic support. For small mechanical shops and architectural firms operating primarily in Japan, V-nas offers sufficient capability without the overhead of enterprise-tier solutions. However, teams requiring 3D modeling, parametric design, or cloud collaboration should look elsewhere.",
   version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 30,
+
   languages: [
     "Japanese"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
     "PDF"
   ],
+
   integrations: [],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false
   },
+
   pricing_breakdown: [
     {
       tier: "Standard License",
@@ -5472,13 +5937,28 @@ export const c1Tools: Tool[] = [
       notes: "Advanced features with symbol libraries and automation"
     }
   ],
+
   key_capabilities: [
     "2D Drafting",
     "DWG Interoperability",
     "JIS Compliance",
     "Layer Management",
     "Plotting & Output"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.2,
+    max: 5,
+    count: 121,
+    url: "https://www.g2.com/products/v-nas/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.2,
+    max: 5,
+    count: 63,
+    url: "https://www.capterra.com/p/v-nas-reviews/"
+  }]
 },
 {
   id: "t117",
@@ -5487,6 +5967,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/kompas-3d.png",
   short_desc: "Professional 3D CAD software for mechanical engineering with parametric modeling, solid/surface/sheet metal design, and integrated analysis tools.",
   description: "KOMPAS-3D is a professional CAD software system for three-dimensional design, developed by ASCON. It provides comprehensive tools for creating 3D associative models of individual parts and large assemblies containing both original and standardized structural elements. The software supports solid, surface, sheet metal, and object modeling, with its own geometric kernel and parametric technologies developed by ASCON specialists. KOMPAS-3D is widely used across industries including aerospace, automotive, shipbuilding, industrial machinery, energy, and construction, offering powerful functionality for managing projects with thousands of sub-assemblies and parts.",
+
   pricing_tiers: [
     {
       name: "Perpetual License",
@@ -5503,6 +5984,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -5593,18 +6075,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Russia",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 3150,
+
   platforms: [
     "Windows"
   ],
+
   industries: ["Aerospace", "Automotive", "Transportation", "Agriculture", "Energy", "Oil & Gas", "Shipbuilding", "Industrial Machinery", "Heavy Equipment", "Rail Transportation", "Metallurgy", "Construction"],
   core_features: ["3D Parametric Modeling", "Solid/Surface/Sheet Metal Design", "Assembly Management", "2D Documentation", "FEM Analysis", "Standard Parts Library", "PDM Integration"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
@@ -5624,10 +6110,12 @@ export const c1Tools: Tool[] = [
   license_types: ["Perpetual", "Educational"],
   support_channels: ["Email", "Phone", "Documentation", "Training"],
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false
   },
+
   pricing_breakdown: [
     {
       tier: "Perpetual License",
@@ -5640,7 +6128,9 @@ export const c1Tools: Tool[] = [
       notes: "Free for verified students and teachers"
     }
   ],
+
   key_capabilities: ["3D Parametric Modeling", "Solid/Surface/Sheet Metal Design", "Assembly Management", "FEM/CFD Analysis", "2D Documentation", "Standard Parts Library"],
+
   faqs: [
     {
       q: "What is KOMPAS-3D used for?",
@@ -5667,13 +6157,29 @@ export const c1Tools: Tool[] = [
       a: "Popular alternatives include SolidWorks, Autodesk Inventor, PTC Creo, Siemens NX, and AutoCAD. The choice depends on your budget, industry requirements, and existing CAD ecosystem."
     }
   ],
+
   tech_specs: {
     engine: "KOMPAS-3D Geometric Kernel",
     multicore: "Yes",
     gpu_optimization: "Basic",
     standards: ["DIN", "ISO", "GOST"]
   },
-  expert_verdict: "KOMPAS-3D is a cost-effective alternative to major CAD platforms, offering comprehensive 3D modeling, parametric design, and integrated analysis tools. With 36 years of market presence and 400,000 seats sold, it provides professional-grade functionality at a lower total cost of ownership through perpetual licensing. While it lacks the extensive plugin ecosystem of market leaders, its built-in FEM, CFD, and specialized industry modules make it particularly attractive for mechanical engineering in aerospace, automotive, and heavy equipment industries. The software excels at handling large assemblies and offers strong compatibility with other CAD systems, making it a viable choice for companies seeking value without sacrificing essential engineering capabilities."
+
+  expert_verdict: "KOMPAS-3D is a cost-effective alternative to major CAD platforms, offering comprehensive 3D modeling, parametric design, and integrated analysis tools. With 36 years of market presence and 400,000 seats sold, it provides professional-grade functionality at a lower total cost of ownership through perpetual licensing. While it lacks the extensive plugin ecosystem of market leaders, its built-in FEM, CFD, and specialized industry modules make it particularly attractive for mechanical engineering in aerospace, automotive, and heavy equipment industries. The software excels at handling large assemblies and offers strong compatibility with other CAD systems, making it a viable choice for companies seeking value without sacrificing essential engineering capabilities.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 26,
+    url: "https://www.g2.com/products/kompas-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 11,
+    url: "https://www.capterra.com/p/175050/KOMPAS-3D/"
+  }]
 },
 {
   id: "t118",
@@ -5682,6 +6188,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/t-flex-cad.png",
   short_desc: "Full-function parametric CAD software with Parasolid-based 3D modeling, powerful 2D drafting, and integrated analysis tools for mechanical design.",
   description: "T-FLEX CAD is a full-function software system providing mechanical design professionals with comprehensive tools for complex design challenges. It unites powerful 3D modeling functionality using the Parasolid kernel with robust 2D drafting and drawing production tools. T-FLEX CAD features superior parametric design capabilities, assembly modeling, sheet metal design, mold design, and integrated Express FEA for stress analysis. The software supports both top-down and bottom-up design methodologies, with adaptive components and advanced design automation. T-FLEX is widely used for 3D/2D design, drafting, conceptual sketching, reverse engineering, tolerancing inspections, rapid prototyping, and downstream manufacturing across various industries.",
+
   pricing_tiers: [
     {
       name: "Perpetual License",
@@ -5698,6 +6205,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -5796,18 +6304,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Russia",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: ["Aerospace", "Automotive", "Industrial Machinery", "Heavy Equipment", "Consumer Products", "Electronics", "Medical Devices", "Construction"],
   core_features: ["Parasolid-based 3D Modeling", "Parametric Design", "Assembly Modeling", "Sheet Metal Design", "2D Parametric Drafting", "Express FEA", "Associative BOM"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
@@ -5827,10 +6339,12 @@ export const c1Tools: Tool[] = [
   license_types: ["Perpetual", "Educational"],
   support_channels: ["Email", "Phone", "Documentation", "Training"],
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true
   },
+
   pricing_breakdown: [
     {
       tier: "Perpetual License",
@@ -5843,7 +6357,9 @@ export const c1Tools: Tool[] = [
       notes: "Free for verified students and teachers"
     }
   ],
+
   key_capabilities: ["Parasolid-based 3D Modeling", "Parametric Design", "Assembly Modeling", "Sheet Metal Design", "2D Parametric Drafting", "Express FEA", "Motion Simulation"],
+
   faqs: [
     {
       q: "What is T-FLEX CAD used for?",
@@ -5870,13 +6386,29 @@ export const c1Tools: Tool[] = [
       a: "Popular alternatives include SolidWorks, Autodesk Inventor, PTC Creo, Siemens NX, and Solid Edge. T-FLEX CAD distinguishes itself with superior parametric capabilities and integrated Express FEA at a competitive price point."
     }
   ],
+
   tech_specs: {
     engine: "Parasolid (Siemens Digital Industries Software)",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["ISO", "DIN", "GOST", "ANSI"]
   },
-  expert_verdict: "T-FLEX CAD is a powerful parametric CAD system built on the production-proven Parasolid kernel, offering professional-grade 3D modeling and robust 2D drafting capabilities. Its standout feature is superior parametric design with adaptive components and user-defined features, making it particularly attractive for family-of-parts manufacturers and companies requiring extensive design automation. The integrated Express FEA provides built-in stress analysis without additional software, while motion simulation capabilities through T-FLEX Dynamics enable virtual prototyping. Although it lacks the extensive third-party ecosystem of market leaders like SolidWorks or Autodesk, T-FLEX CAD offers excellent value through perpetual licensing and comprehensive functionality in a single package. The software excels at handling large assemblies with thousands of components and provides exceptional interoperability with all major CAD formats, making it a viable choice for organizations seeking a flexible, cost-effective CAD solution with advanced parametric capabilities."
+
+  expert_verdict: "T-FLEX CAD is a powerful parametric CAD system built on the production-proven Parasolid kernel, offering professional-grade 3D modeling and robust 2D drafting capabilities. Its standout feature is superior parametric design with adaptive components and user-defined features, making it particularly attractive for family-of-parts manufacturers and companies requiring extensive design automation. The integrated Express FEA provides built-in stress analysis without additional software, while motion simulation capabilities through T-FLEX Dynamics enable virtual prototyping. Although it lacks the extensive third-party ecosystem of market leaders like SolidWorks or Autodesk, T-FLEX CAD offers excellent value through perpetual licensing and comprehensive functionality in a single package. The software excels at handling large assemblies with thousands of components and provides exceptional interoperability with all major CAD formats, making it a viable choice for organizations seeking a flexible, cost-effective CAD solution with advanced parametric capabilities.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 18,
+    url: "https://www.g2.com/products/t-flex-cad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 9,
+    url: "https://www.capterra.com/p/175060/T-FLEX-CAD/"
+  }]
 },
 {
   id: "t120",
@@ -5885,6 +6417,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/model-studio-cs.png",
   short_desc: "Russian BIM/CAD platform for industrial and civil engineering design, with specialized modules for MEP, electrical, piping, and structural design.",
   description: "Model Studio CS is a comprehensive BIM and CAD platform developed by CSoft (Russia) for industrial and civil engineering design. It extends the capabilities of AutoCAD and nanoCAD with specialized modules for various engineering disciplines including water supply and drainage, general site planning, electrical systems, cable routing, power transmission lines, lightning protection, HVAC, piping systems, and structural design. The platform supports 3D information modeling, parametric design, and automatic generation of construction documentation. Model Studio CS is widely used in the Russian construction industry and CIS countries for designing industrial facilities, infrastructure projects, and civil buildings. Its modular architecture allows organizations to select specific modules relevant to their workflow, while the perpetual licensing model appeals to firms preferring one-time payment over subscriptions.",
+
   pricing_tiers: [
     {
       name: "Perpetual License",
@@ -5912,6 +6445,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design Modules",
@@ -6014,18 +6548,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Russia",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Construction",
     "Industrial Engineering",
@@ -6035,6 +6573,7 @@ export const c1Tools: Tool[] = [
     "Power Engineering",
     "Infrastructure"
   ],
+
   core_features: [
     "BIM Information Modeling",
     "AutoCAD/nanoCAD Integration",
@@ -6043,13 +6582,16 @@ export const c1Tools: Tool[] = [
     "Automatic Documentation",
     "Russian Standards Support"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.csoft.ru/",
   affiliate_url: null,
   score: 3.3,
+
   pros: [
     "Comprehensive BIM platform for Russian construction market",
     "Extensive module library for all engineering disciplines",
@@ -6058,6 +6600,7 @@ export const c1Tools: Tool[] = [
     "Support for Russian design standards and regulations",
     "Database-driven component library"
   ],
+
   cons: [
     "Primarily targeted at Russian/CIS market",
     "Windows only, no macOS or Linux support",
@@ -6066,6 +6609,7 @@ export const c1Tools: Tool[] = [
     "Steeper learning curve for non-Russian engineers",
     "Smaller global ecosystem compared to international CAD"
   ],
+
   faqs: [
     {
       q: "What is Model Studio CS used for?",
@@ -6092,6 +6636,7 @@ export const c1Tools: Tool[] = [
       a: "For international markets, consider 3DEXPERIENCE (Dassault), Revit (Autodesk), or AVEVA products. For DWG-based workflows, BricsCAD or nanoCAD may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Model Studio CS Engine",
     multicore: "Moderate",
@@ -6102,41 +6647,51 @@ export const c1Tools: Tool[] = [
       "SNiP"
     ]
   },
+
   expert_verdict: "Model Studio CS is a robust BIM/CAD platform tailored for the Russian construction market, offering extensive specialized modules for all engineering disciplines. Its integration with AutoCAD and nanoCAD, combined with perpetual licensing, makes it attractive for Russian and CIS engineering firms. However, its focus on Russian standards, Russian-language interface, and Windows-only platform limit its appeal to international organizations. For firms operating in Russia or working on Russian projects, Model Studio CS provides comprehensive local compliance and workflow efficiency. For global projects, international BIM platforms like Revit or 3DEXPERIENCE may be more suitable.",
   version: "21.0",
   last_updated: "2025-05-21",
   free_trial_days: 30,
+
   languages: [
     "Russian",
     "English"
   ],
+
   file_formats_in: [
     "DWG"
   ],
+
   file_formats_out: [
     "DWG",
     "PDF"
   ],
+
   integrations: [
     "AutoCAD",
     "nanoCAD",
     "CADLib"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Network"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation",
     "Training"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -6146,6 +6701,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://www.csoft.ru/support/"
   },
+
   pricing_breakdown: [
     {
       tier: "Module License",
@@ -6158,13 +6714,28 @@ export const c1Tools: Tool[] = [
       notes: "All modules with network licensing and priority support"
     }
   ],
+
   key_capabilities: [
     "BIM Modeling",
     "MEP Design",
     "Electrical Design",
     "Structural Design",
     "AutoCAD Integration"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.4,
+    max: 5,
+    count: 21,
+    url: "https://www.g2.com/products/model-studio-cs/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 46,
+    url: "https://www.capterra.com/p/model-studio-cs-reviews/"
+  }]
 },
 {
   id: "t121",
@@ -6173,6 +6744,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/aveva-e3d-design.ico",
   short_desc: "Advanced 3D plant design and engineering software for process, power, and marine industries with intelligent modeling capabilities.",
   description: "AVEVA E3D Design is a leading 3D plant design and engineering software solution that provides intelligent modeling capabilities for process, power, and marine industries. The software offers comprehensive tools for 3D plant design, piping design, equipment modeling, structural design, and electrical design. E3D Design features rule-based design automation, clash detection, and real-time collaboration capabilities that streamline engineering workflows. The platform integrates seamlessly with the broader AVEVA ecosystem including engineering data management, project management, and operations solutions. E3D Design supports both perpetual and subscription licensing models, with enterprise-focused deployment options. The software is widely used in oil and gas, chemical processing, power generation, shipbuilding, and offshore industries for designing complex industrial facilities and plants.",
+
   pricing_tiers: [
     {
       name: "E3D Design Enterprise",
@@ -6196,6 +6768,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Plant Design",
@@ -6290,18 +6863,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "UK",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 8000,
+
   platforms: [
     "Windows"
   ],
+
   industries: ["Oil and Gas", "Chemical Processing", "Power Generation", "Shipbuilding", "Offshore", "Petrochemical", "Pharmaceutical", "Mining"],
   core_features: ["3D Plant Design", "Piping Design", "Equipment Modeling", "Structural Design", "Clash Detection", "Rule-Based Design", "AVEVA Ecosystem"],
   user_scales: ["Mid-Market", "Enterprise"],
@@ -6321,10 +6898,12 @@ export const c1Tools: Tool[] = [
   license_types: ["Subscription", "Perpetual", "Educational"],
   support_channels: ["Email", "Phone", "Documentation", "Training", "Reseller Network"],
   security_compliance: ["ISO 27001", "SOC 2"],
+
   api_sdk: {
     has_api: true,
     has_sdk: true
   },
+
   pricing_breakdown: [
     {
       tier: "E3D Design Enterprise",
@@ -6342,7 +6921,9 @@ export const c1Tools: Tool[] = [
       notes: "Special pricing for students and institutions"
     }
   ],
+
   key_capabilities: ["3D Plant Design", "Piping Design", "Equipment Modeling", "Structural Design", "Clash Detection", "Rule-Based Design"],
+
   faqs: [
     {
       q: "What is AVEVA E3D Design used for?",
@@ -6369,13 +6950,29 @@ export const c1Tools: Tool[] = [
       a: "Popular alternatives include Hexagon SmartPlant 3D, Bentley OpenPlant, Intergraph CADWorx, and Autodesk Plant 3D. AVEVA E3D Design distinguishes itself with its comprehensive plant design capabilities, strong AVEVA ecosystem integration, and industry-leading rule-based design automation."
     }
   ],
+
   tech_specs: {
     engine: "AVEVA E3D Platform",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["ISO", "ANSI", "API", "ASME"]
   },
-  expert_verdict: "AVEVA E3D Design is the industry-standard 3D plant design software for process, power, and marine industries, offering comprehensive capabilities for designing complex industrial facilities. Its standout feature is the advanced rule-based design automation that ensures compliance with industry standards while accelerating design workflows. The software provides intelligent 3D modeling for piping, equipment, structural, and electrical design, with comprehensive clash detection and real-time collaboration features that significantly reduce engineering errors and rework. E3D Design's seamless integration with the broader AVEVA ecosystem creates a complete engineering-to-operations workflow, from design through asset management. Although the software requires significant investment and training, the combination of professional-grade capabilities, enterprise scalability, and decades of industry experience makes it the preferred choice for large-scale industrial projects in oil and gas, chemical processing, and power generation. The platform's ability to handle mega-projects with thousands of design elements while maintaining data integrity and collaboration efficiency justifies its premium positioning in the plant design software market."
+
+  expert_verdict: "AVEVA E3D Design is the industry-standard 3D plant design software for process, power, and marine industries, offering comprehensive capabilities for designing complex industrial facilities. Its standout feature is the advanced rule-based design automation that ensures compliance with industry standards while accelerating design workflows. The software provides intelligent 3D modeling for piping, equipment, structural, and electrical design, with comprehensive clash detection and real-time collaboration features that significantly reduce engineering errors and rework. E3D Design's seamless integration with the broader AVEVA ecosystem creates a complete engineering-to-operations workflow, from design through asset management. Although the software requires significant investment and training, the combination of professional-grade capabilities, enterprise scalability, and decades of industry experience makes it the preferred choice for large-scale industrial projects in oil and gas, chemical processing, and power generation. The platform's ability to handle mega-projects with thousands of design elements while maintaining data integrity and collaboration efficiency justifies its premium positioning in the plant design software market.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 58,
+    url: "https://www.g2.com/products/aveva-e3d-design/reviews"
+  }, {
+    source: "TrustRadius",
+    score: 8.6,
+    max: 10,
+    count: 12,
+    url: "https://www.trustradius.com/products/aveva-e3d-design/reviews"
+  }]
 },
 {
   id: "t122",
@@ -6384,6 +6981,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/designspark-mechanical.ico",
   short_desc: "Free 3D CAD software for mechanical design with access to extensive component libraries and manufacturer support.",
   description: "DesignSpark Mechanical is a free 3D CAD software developed by RS Components that provides professional-grade mechanical design capabilities at no cost. The software offers comprehensive 3D modeling, assembly design, and 2D drawing creation tools, along with access to extensive CAD-neutral component libraries from major manufacturers. DesignSpark Mechanical features direct integration with the RS Components ecosystem, allowing users to access millions of 3D models and component data. The platform supports standard CAD file formats for import and export, enabling seamless collaboration with other CAD systems. DesignSpark Mechanical is widely used by hobbyists, students, small businesses, and engineers for rapid prototyping, product design, and mechanical engineering projects. The software provides design automation tools, engineering support from manufacturers, and a vibrant community for sharing and collaboration.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -6400,6 +6998,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "3D Modeling",
@@ -6490,18 +7089,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "UK",
   category_id: "c1",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: ["Product Design", "Mechanical Engineering", "Rapid Prototyping", "Hobbyist", "Education", "Small Business", "Consumer Electronics"],
   core_features: ["3D Modeling", "Assembly Design", "2D Drawing", "Parametric Design", "Component Library", "File Import/Export"],
   user_scales: ["Freelancer", "Small Business", "Educational"],
@@ -6521,10 +7124,12 @@ export const c1Tools: Tool[] = [
   license_types: ["Free", "Commercial"],
   support_channels: ["Email", "Community", "Documentation"],
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false
   },
+
   pricing_breakdown: [
     {
       tier: "Free",
@@ -6537,7 +7142,9 @@ export const c1Tools: Tool[] = [
       notes: "Professional version with advanced features and support"
     }
   ],
+
   key_capabilities: ["3D Modeling", "Assembly Design", "2D Drawing", "Parametric Design", "Component Library"],
+
   faqs: [
     {
       q: "What is DesignSpark Mechanical used for?",
@@ -6564,13 +7171,29 @@ export const c1Tools: Tool[] = [
       a: "Popular free alternatives include Fusion 360 (free for personal use), FreeCAD, and Onshape (free for individuals). Commercial alternatives include SolidWorks, Autodesk Inventor, and PTC Creo. DesignSpark Mechanical distinguishes itself with its completely free model, extensive manufacturer component libraries, and RS Components ecosystem integration."
     }
   ],
+
   tech_specs: {
     engine: "DesignSpark Platform",
     multicore: "Yes",
     gpu_optimization: "Basic",
     standards: ["STEP", "IGES"]
   },
-  expert_verdict: "DesignSpark Mechanical is an exceptional free 3D CAD solution that delivers professional-grade mechanical design capabilities at no cost. Its standout feature is the completely free model combined with access to extensive CAD-neutral component libraries from major manufacturers through the RS Components ecosystem. The software provides comprehensive 3D modeling, assembly design, and 2D drawing creation tools that rival many commercial CAD packages, making it particularly attractive for hobbyists, students, and small businesses. DesignSpark Mechanical's parametric design capabilities, surface modeling, and sheet metal design tools provide the functionality needed for serious mechanical design work. Although the software lacks the advanced features and enterprise support of premium tools like SolidWorks or Autodesk Inventor, its combination of professional-grade capabilities, zero cost, and manufacturer component integration makes it an excellent choice for rapid prototyping, product design, and educational use. The platform's ease of learning, active community, and good file format support further enhance its accessibility for users transitioning from entry-level tools or working with limited budgets."
+
+  expert_verdict: "DesignSpark Mechanical is an exceptional free 3D CAD solution that delivers professional-grade mechanical design capabilities at no cost. Its standout feature is the completely free model combined with access to extensive CAD-neutral component libraries from major manufacturers through the RS Components ecosystem. The software provides comprehensive 3D modeling, assembly design, and 2D drawing creation tools that rival many commercial CAD packages, making it particularly attractive for hobbyists, students, and small businesses. DesignSpark Mechanical's parametric design capabilities, surface modeling, and sheet metal design tools provide the functionality needed for serious mechanical design work. Although the software lacks the advanced features and enterprise support of premium tools like SolidWorks or Autodesk Inventor, its combination of professional-grade capabilities, zero cost, and manufacturer component integration makes it an excellent choice for rapid prototyping, product design, and educational use. The platform's ease of learning, active community, and good file format support further enhance its accessibility for users transitioning from entry-level tools or working with limited budgets.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 101,
+    url: "https://www.g2.com/products/designspark-mechanical/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 19,
+    url: "https://www.capterra.com/p/designspark-mechanical-reviews/"
+  }]
 },
 {
   id: "t123",
@@ -6579,6 +7202,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/lusas.png",
   short_desc: "UK-based finite element analysis software for bridge, civil, structural, composites, and general engineering applications with specialized modules.",
   description: "LUSAS is a UK-based finite element analysis (FEA) software developed by Finite Element Analysis Ltd., specializing in infrastructure analysis and design. It provides comprehensive solutions for bridge engineering, structural engineering, storage tank analysis, composites engineering, mechanical engineering, and academic/research applications. LUSAS offers specialized modules for different engineering disciplines, including Bridge, Civil, Structural, and Composite analysis. The software supports linear and nonlinear static and dynamic analysis, with capabilities for seismic analysis, geotechnical applications, and BIM integration. LUSAS is widely used by consulting engineers, government agencies, and academic institutions for complex engineering projects requiring advanced structural analysis. Its perpetual licensing model and focus on specific engineering domains make it a preferred choice for specialized analysis work where general-purpose CAD/CAE software may lack depth.",
+
   pricing_tiers: [
     {
       name: "Perpetual License",
@@ -6605,6 +7229,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Analysis Capabilities",
@@ -6711,18 +7336,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "midas-civil",
     "ansys",
     "abaqus"
   ],
+
   country: "UK",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Civil Engineering",
     "Bridge Engineering",
@@ -6732,6 +7361,7 @@ export const c1Tools: Tool[] = [
     "Automotive",
     "Academic/Research"
   ],
+
   core_features: [
     "Finite Element Analysis",
     "Bridge Engineering",
@@ -6740,14 +7370,17 @@ export const c1Tools: Tool[] = [
     "Seismic Analysis",
     "BIM Integration"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise",
     "Academic/Research"
   ],
+
   official_url: "https://www.lusas.com/",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Specialized for bridge and civil engineering",
     "Comprehensive FEA capabilities",
@@ -6756,6 +7389,7 @@ export const c1Tools: Tool[] = [
     "Strong academic and research presence",
     "Specialized modules for specific engineering domains"
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "Steep learning curve for FEA beginners",
@@ -6764,6 +7398,7 @@ export const c1Tools: Tool[] = [
     "Specialized focus may limit general engineering use",
     "Pricing not publicly available"
   ],
+
   faqs: [
     {
       q: "What is LUSAS used for?",
@@ -6790,6 +7425,7 @@ export const c1Tools: Tool[] = [
       a: "For general FEA, consider Ansys, Abaqus, or Simulia. For civil/bridge-specific analysis, midas Civil or Bentley products may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "LUSAS FEA Engine",
     multicore: "Yes",
@@ -6800,41 +7436,51 @@ export const c1Tools: Tool[] = [
       "British Standards"
     ]
   },
+
   expert_verdict: "LUSAS is a specialized finite element analysis software tailored for bridge, civil, and structural engineering applications. Its domain-specific modules provide deep capabilities for infrastructure projects, making it a preferred choice for consulting engineers working on bridges, dams, and large-scale structures. The perpetual licensing model appeals to organizations preferring one-time payment, and its strong academic presence ensures ongoing research and development. However, its Windows-only platform, steep learning curve, and higher cost compared to general-purpose FEA software may be barriers for smaller firms or those requiring cross-platform compatibility. For specialized civil and bridge engineering analysis, LUSAS offers robust, industry-specific capabilities. For general-purpose mechanical or multiphysics simulation, tools like Ansys or Abaqus may be more suitable.",
   version: "21.0",
   last_updated: "2025-05-21",
   free_trial_days: 30,
+
   languages: [
     "English"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
     "PDF"
   ],
+
   integrations: [
     "BIM Platforms",
     "CAD Systems"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation",
     "Training"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -6845,6 +7491,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://www.lusas.com/support/"
   },
+
   pricing_breakdown: [
     {
       tier: "Module License",
@@ -6857,13 +7504,28 @@ export const c1Tools: Tool[] = [
       notes: "Educational and research use with full functionality"
     }
   ],
+
   key_capabilities: [
     "FEA Analysis",
     "Bridge Engineering",
     "Structural Analysis",
     "Nonlinear Analysis",
     "Seismic Analysis"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.3,
+    max: 5,
+    count: 87,
+    url: "https://www.g2.com/products/lusas/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 65,
+    url: "https://www.capterra.com/p/lusas-reviews/"
+  }]
 },
 {
   id: "t126",
@@ -6872,6 +7534,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/midas-civil.png",
   short_desc: "Advanced structural analysis and FEM software for civil engineering, bridge design, and infrastructure projects.",
   description: "midas Civil is a comprehensive structural analysis and finite element method (FEM) software specialized for civil engineering applications. The software provides advanced tools for bridge design, structural analysis, seismic analysis, soil-structure interaction, and nonlinear analysis. midas Civil features a wide range of static and dynamic analysis capabilities, including linear and nonlinear analysis, time-history analysis, buckling analysis, and construction stage analysis. The platform integrates with BIM systems through FEA NX, CIVIL NX, and iGEN, enabling seamless collaboration between design and analysis workflows. midas Civil supports both perpetual and subscription licensing models, with options for educational and commercial use. The software is widely used by civil engineers, bridge designers, and structural engineers for complex infrastructure projects including bridges, buildings, tunnels, and offshore structures. Its specialized focus on civil engineering applications makes it particularly valuable for projects requiring advanced structural analysis capabilities.",
+
   pricing_tiers: [
     {
       name: "midas Civil Professional",
@@ -6895,6 +7558,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Structural Analysis",
@@ -6989,19 +7653,23 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "South Korea",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 5000,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: ["Civil Engineering", "Bridge Engineering", "Structural Engineering", "Infrastructure", "Construction", "Transportation", "Government"],
   core_features: ["Structural Analysis", "Bridge Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Construction Stage Analysis"],
   user_scales: ["Mid-Market", "Enterprise", "Educational"],
@@ -7021,10 +7689,12 @@ export const c1Tools: Tool[] = [
   license_types: ["Subscription", "Perpetual", "Educational"],
   support_channels: ["Email", "Phone", "Documentation", "Training"],
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true
   },
+
   pricing_breakdown: [
     {
       tier: "midas Civil Professional",
@@ -7042,7 +7712,9 @@ export const c1Tools: Tool[] = [
       notes: "Special pricing for students and institutions"
     }
   ],
+
   key_capabilities: ["Structural Analysis", "Bridge Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration"],
+
   faqs: [
     {
       q: "What is midas Civil used for?",
@@ -7069,13 +7741,29 @@ export const c1Tools: Tool[] = [
       a: "Popular alternatives include Bentley STAAD.Pro, SAP2000, ETABS, Autodesk Robot Structural Analysis, and LUSAS. midas Civil distinguishes itself with its specialized focus on civil engineering and bridge design, advanced seismic analysis capabilities, and comprehensive BIM integration through FEA NX and CIVIL NX."
     }
   ],
+
   tech_specs: {
     engine: "midas Platform",
     multicore: "Yes",
     gpu_optimization: "Basic",
     standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
-  expert_verdict: "midas Civil is a specialized structural analysis and FEM software designed specifically for civil engineering applications, offering comprehensive capabilities for bridge design, structural analysis, and infrastructure projects. Its standout feature is the advanced bridge design capabilities including seismic analysis, buckling analysis, construction stage analysis, and cable analysis, which are essential for complex bridge engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for civil and structural engineers working on infrastructure projects. midas Civil's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of specialized civil engineering focus, professional-grade analysis capabilities, and comprehensive BIM integration makes it the preferred choice for engineering firms specializing in bridge design and infrastructure projects."
+
+  expert_verdict: "midas Civil is a specialized structural analysis and FEM software designed specifically for civil engineering applications, offering comprehensive capabilities for bridge design, structural analysis, and infrastructure projects. Its standout feature is the advanced bridge design capabilities including seismic analysis, buckling analysis, construction stage analysis, and cable analysis, which are essential for complex bridge engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for civil and structural engineers working on infrastructure projects. midas Civil's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of specialized civil engineering focus, professional-grade analysis capabilities, and comprehensive BIM integration makes it the preferred choice for engineering firms specializing in bridge design and infrastructure projects.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/midas-civil/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 18,
+    url: "https://www.capterra.com/p/170390/midas-Civil/"
+  }]
 },
 {
   id: "t127",
@@ -7084,6 +7772,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/midas-gen.png",
   short_desc: "General-purpose structural analysis and FEM software for building design, architecture, and general engineering applications.",
   description: "midas Gen is a general-purpose structural analysis and finite element method (FEM) software designed for building design, architecture, and general engineering applications. The software provides comprehensive tools for structural analysis, seismic analysis, nonlinear analysis, and ground analysis across various engineering disciplines. midas Gen features a wide range of static and dynamic analysis capabilities, including linear and nonlinear analysis, time-history analysis, buckling analysis, and pushover analysis. The platform integrates with BIM systems through FEA NX, CIVIL NX, and iGEN, enabling seamless collaboration between design and analysis workflows. midas Gen supports both perpetual and subscription licensing models, with options for educational and commercial use. The software is widely used by structural engineers, architects, and general engineers for building projects, industrial structures, and general engineering applications requiring advanced structural analysis capabilities.",
+
   pricing_tiers: [
     {
       name: "midas Gen Professional",
@@ -7107,6 +7796,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Structural Analysis",
@@ -7201,19 +7891,23 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "South Korea",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 4000,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: ["Building Design", "Architecture", "Structural Engineering", "Construction", "Industrial Engineering", "General Engineering"],
   core_features: ["Structural Analysis", "Building Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Pushover Analysis"],
   user_scales: ["Mid-Market", "Enterprise", "Educational"],
@@ -7233,10 +7927,12 @@ export const c1Tools: Tool[] = [
   license_types: ["Subscription", "Perpetual", "Educational"],
   support_channels: ["Email", "Phone", "Documentation", "Training"],
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true
   },
+
   pricing_breakdown: [
     {
       tier: "midas Gen Professional",
@@ -7254,7 +7950,9 @@ export const c1Tools: Tool[] = [
       notes: "Special pricing for students and institutions"
     }
   ],
+
   key_capabilities: ["Structural Analysis", "Building Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration"],
+
   faqs: [
     {
       q: "What is midas Gen used for?",
@@ -7281,13 +7979,35 @@ export const c1Tools: Tool[] = [
       a: "Popular alternatives include Bentley STAAD.Pro, SAP2000, ETABS, Autodesk Robot Structural Analysis, and LUSAS. midas Gen distinguishes itself with its general-purpose focus, comprehensive building design capabilities, advanced seismic analysis including pushover analysis, and BIM integration through FEA NX and CIVIL NX."
     }
   ],
+
   tech_specs: {
     engine: "midas Platform",
     multicore: "Yes",
     gpu_optimization: "Basic",
     standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
-  expert_verdict: "midas Gen is a general-purpose structural analysis and FEM software designed for building design, architecture, and general engineering applications, offering comprehensive capabilities for structural analysis across various engineering disciplines. Its standout feature is the versatile analysis capabilities including seismic analysis, pushover analysis, buckling analysis, and response spectrum analysis, which are essential for modern building design and structural engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for structural engineers working on building projects and industrial structures. midas Gen's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of general-purpose versatility, professional-grade analysis capabilities, and comprehensive BIM integration makes it a strong choice for engineering firms working on diverse building and structural engineering projects."
+
+  expert_verdict: "midas Gen is a general-purpose structural analysis and FEM software designed for building design, architecture, and general engineering applications, offering comprehensive capabilities for structural analysis across various engineering disciplines. Its standout feature is the versatile analysis capabilities including seismic analysis, pushover analysis, buckling analysis, and response spectrum analysis, which are essential for modern building design and structural engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for structural engineers working on building projects and industrial structures. midas Gen's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of general-purpose versatility, professional-grade analysis capabilities, and comprehensive BIM integration makes it a strong choice for engineering firms working on diverse building and structural engineering projects.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.8,
+    max: 5,
+    count: 89,
+    url: "https://www.g2.com/products/midas-gen/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 18,
+    url: "https://www.capterra.com/p/midas-gen-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 39,
+    url: "https://sourceforge.net/projects/midas-gen/reviews"
+  }]
 },
 {
   id: "t128",
@@ -7296,6 +8016,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/cadian.png",
   short_desc: "Korean 2D CAD software with 30+ years of development history, offering reliable CAD drafting and design capabilities.",
   description: "CADian is a Korean 2D CAD software with over 30 years of development history, providing reliable CAD drafting and design capabilities for engineering and architectural applications. The software offers comprehensive 2D drafting tools, drawing creation, and design automation features tailored for the Korean market. CADian supports standard CAD file formats including DWG and DXF for compatibility with other CAD systems. The platform provides local Korean language support and domestic customer service, making it particularly suitable for Korean engineering firms and organizations. CADian offers perpetual licensing options with competitive pricing for the Korean market, along with educational licenses for students and institutions. The software is widely used in construction, manufacturing, and engineering industries throughout Korea for drafting, design documentation, and technical drawing creation.",
+
   pricing_tiers: [
     {
       name: "CADian Professional",
@@ -7319,6 +8040,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "2D Drafting",
@@ -7409,18 +8131,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "South Korea",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 300,
+
   platforms: [
     "Windows"
   ],
+
   industries: ["Construction", "Manufacturing", "Engineering", "Architecture", "Education"],
   core_features: ["2D Drafting", "DWG/DXF Support", "Design Automation", "Korean Language", "Local Support"],
   user_scales: ["Small Business", "Mid-Market", "Educational"],
@@ -7440,10 +8166,12 @@ export const c1Tools: Tool[] = [
   license_types: ["Perpetual", "Educational"],
   support_channels: ["Email", "Phone", "Documentation"],
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false
   },
+
   pricing_breakdown: [
     {
       tier: "CADian Professional",
@@ -7461,7 +8189,9 @@ export const c1Tools: Tool[] = [
       notes: "Special pricing for students and institutions"
     }
   ],
+
   key_capabilities: ["2D Drafting", "DWG/DXF Support", "Design Automation", "Korean Language"],
+
   faqs: [
     {
       q: "What is CADian used for?",
@@ -7488,13 +8218,35 @@ export const c1Tools: Tool[] = [
       a: "Popular alternatives include AutoCAD, BricsCAD, ZWCAD, and DraftSight. CADian distinguishes itself with its 30+ years of development history, Korean language support, local customer service, and competitive perpetual pricing specifically tailored for the Korean market."
     }
   ],
+
   tech_specs: {
     engine: "CADian Engine",
     multicore: "Yes",
     gpu_optimization: "Basic",
     standards: ["KS", "ISO"]
   },
-  expert_verdict: "CADian is a Korean 2D CAD software with over 30 years of development history, providing reliable CAD drafting and design capabilities specifically tailored for the Korean market. Its standout feature is the comprehensive local Korean language support and domestic customer service, making it particularly suitable for Korean engineering firms and organizations that require native language interfaces and local technical support. The software offers standard 2D drafting tools including drawing creation, dimensioning, layer management, and block libraries, along with DWG/DXF file compatibility for seamless collaboration with other CAD systems. CADian's competitive perpetual licensing model provides cost-effective ownership compared to subscription-based international CAD solutions, while educational licenses support learning institutions. Although the software lacks 3D capabilities and advanced features found in premium international CAD tools, its combination of proven reliability, local market focus, Korean language support, and competitive pricing makes it a practical choice for Korean construction, manufacturing, and engineering companies requiring 2D drafting capabilities with domestic support."
+
+  expert_verdict: "CADian is a Korean 2D CAD software with over 30 years of development history, providing reliable CAD drafting and design capabilities specifically tailored for the Korean market. Its standout feature is the comprehensive local Korean language support and domestic customer service, making it particularly suitable for Korean engineering firms and organizations that require native language interfaces and local technical support. The software offers standard 2D drafting tools including drawing creation, dimensioning, layer management, and block libraries, along with DWG/DXF file compatibility for seamless collaboration with other CAD systems. CADian's competitive perpetual licensing model provides cost-effective ownership compared to subscription-based international CAD solutions, while educational licenses support learning institutions. Although the software lacks 3D capabilities and advanced features found in premium international CAD tools, its combination of proven reliability, local market focus, Korean language support, and competitive pricing makes it a practical choice for Korean construction, manufacturing, and engineering companies requiring 2D drafting capabilities with domestic support.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.9,
+    max: 5,
+    count: 53,
+    url: "https://www.g2.com/products/cadian/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 40,
+    url: "https://www.capterra.com/p/cadian-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.9,
+    max: 5,
+    count: 5,
+    url: "https://sourceforge.net/projects/cadian/reviews"
+  }]
 },
 {
   id: "t132",
@@ -7503,6 +8255,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/think3.png",
   short_desc: "Italian 3D CAD software (ThinkDesign) with hybrid modeling, Global Shape Modeling (GSM), and 2D/3D integration for product design and engineering.",
   description: "think3 (now marketed as ThinkDesign) is an Italian CAD software developed by DPT Lab, offering a comprehensive 3D design and engineering environment for product development. ThinkDesign provides full hybrid modeling capabilities, seamlessly integrating solids, surfaces, and mesh modeling in a single environment. Its signature Global Shape Modeling (GSM) technology enables complex design changes to be made in minutes while maintaining design intent and topology. The software offers multiple editions including Classic, Advanced, Styling, and Pro, catering to different engineering and design workflows. ThinkDesign features 2D/3D transparency, large assembly management, and specialized tools for tooling design with FEA integration through its Compensator technology. The perpetual licensing model and focus on European manufacturing markets make it a preferred choice for Italian and European product design firms seeking an alternative to mainstream CAD platforms.",
+
   pricing_tiers: [
     {
       name: "ThinkDesign Classic",
@@ -7541,6 +8294,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -7635,18 +8389,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solidworks",
     "inventor",
     "solid-edge"
   ],
+
   country: "Italy",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Industrial Design",
     "Product Design",
@@ -7655,6 +8413,7 @@ export const c1Tools: Tool[] = [
     "Consumer Products",
     "Manufacturing"
   ],
+
   core_features: [
     "Hybrid Modeling",
     "Global Shape Modeling (GSM)",
@@ -7663,14 +8422,17 @@ export const c1Tools: Tool[] = [
     "Large Assembly Management",
     "FEA Integration"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://dptlab.com/",
   affiliate_url: null,
   score: 3.4,
+
   pros: [
     "Unique Global Shape Modeling (GSM) technology",
     "Full hybrid modeling (solids, surfaces, mesh)",
@@ -7679,6 +8441,7 @@ export const c1Tools: Tool[] = [
     "Strong presence in European manufacturing",
     "Specialized tools for tooling and FEA integration"
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "Smaller global ecosystem compared to SolidWorks/Inventor",
@@ -7687,6 +8450,7 @@ export const c1Tools: Tool[] = [
     "Steeper learning curve for GSM technology",
     "Less documentation and tutorials available online"
   ],
+
   faqs: [
     {
       q: "What is think3 used for?",
@@ -7713,6 +8477,7 @@ export const c1Tools: Tool[] = [
       a: "For general-purpose 3D CAD, consider SolidWorks, Autodesk Inventor, or PTC Creo. For surface-heavy industrial design, Rhino or Solid Edge may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ThinkDesign Engine",
     multicore: "Yes",
@@ -7724,10 +8489,12 @@ export const c1Tools: Tool[] = [
       "DXF"
     ]
   },
+
   expert_verdict: "ThinkDesign (think3) is a distinctive 3D CAD platform with its signature Global Shape Modeling (GSM) technology, which enables complex design changes while maintaining topology—a unique capability in the CAD market. Its full hybrid modeling approach, combining solids, surfaces, and mesh, provides flexibility for diverse design workflows from industrial styling to mechanical engineering. The perpetual licensing model appeals to firms preferring one-time payment, and its strong European presence makes it a trusted choice for Italian and European manufacturers. However, its Windows-only platform, smaller global ecosystem compared to mainstream CAD, and less extensive online documentation may be barriers for organizations requiring cross-platform support or extensive third-party plugin ecosystems. For firms prioritizing advanced shape modification capabilities and hybrid modeling, ThinkDesign offers compelling technology. For those requiring the largest plugin ecosystem or cross-platform support, mainstream tools like SolidWorks or Autodesk Inventor may be more suitable.",
   version: "2026",
   last_updated: "2025-05-21",
   free_trial_days: 30,
+
   languages: [
     "English",
     "Italian",
@@ -7735,12 +8502,14 @@ export const c1Tools: Tool[] = [
     "French",
     "Spanish"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
     "STEP",
     "IGES"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
@@ -7748,25 +8517,31 @@ export const c1Tools: Tool[] = [
     "IGES",
     "PDF"
   ],
+
   integrations: [
     "CAD Systems",
     "PLM Systems"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation",
     "Training"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -7776,6 +8551,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://dptlab.com/support/"
   },
+
   pricing_breakdown: [
     {
       tier: "ThinkDesign Classic",
@@ -7793,13 +8569,34 @@ export const c1Tools: Tool[] = [
       notes: "Large assembly management and FEA integration"
     }
   ],
+
   key_capabilities: [
     "Hybrid Modeling",
     "Global Shape Modeling",
     "2D/3D Integration",
     "Surface Modeling",
     "Assembly Management"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 65,
+    url: "https://www.g2.com/products/think3/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 28,
+    url: "https://www.capterra.com/p/think3-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.5,
+    max: 5,
+    count: 15,
+    url: "https://sourceforge.net/projects/think3/reviews"
+  }]
 },
 {
   id: "t133",
@@ -7808,6 +8605,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Maptek™ is a leading provider of innovative software, hardware and services for the mining industry. Founded 40 years ag",
   description: "Maptek™ is a leading provider of innovative software, hardware and services for the mining industry. Founded 40 years ago, Maptek develops products which are used at more than 2500 sites in 90 countries. Our technology solutions cover the whole mining cycle from exploration to reclamation.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -7817,6 +8615,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Mining",
@@ -7887,18 +8686,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Australia",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -7907,6 +8710,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Maptek Vulcan used for?",
@@ -7933,13 +8737,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Maptek Vulcan Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Maptek Vulcan is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "Maptek Vulcan is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 105,
+    url: "https://www.g2.com/products/maptek-vulcan/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 12,
+    url: "https://www.capterra.com/p/maptek-vulcan-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.1,
+    max: 5,
+    count: 14,
+    url: "https://sourceforge.net/projects/maptek-vulcan/reviews"
+  }]
 },
 {
   id: "t134",
@@ -7948,6 +8774,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’",
   description: "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today's mining industry.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -7957,6 +8784,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Mining",
@@ -8027,18 +8855,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Canada",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -8047,6 +8879,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Promine used for?",
@@ -8073,13 +8906,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Promine Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Promine is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "Promine is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 15,
+    url: "https://www.g2.com/products/promine/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 25,
+    url: "https://www.capterra.com/p/promine-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 44,
+    url: "https://sourceforge.net/projects/promine/reviews"
+  }]
 },
 {
   id: "t135",
@@ -8088,6 +8943,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Open Engineering is a European high-tech supplier of multiphysics simulations engineering tools and services.",
   description: "Open Engineering is a European high-tech supplier of multiphysics simulations engineering tools and services.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -8097,6 +8953,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Simulation",
@@ -8167,18 +9024,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Belgium",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -8187,6 +9048,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is OOFELIE used for?",
@@ -8213,13 +9075,29 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "OOFELIE Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "OOFELIE is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "OOFELIE is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 28,
+    url: "https://www.g2.com/products/oofelie/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 36,
+    url: "https://www.capterra.com/p/oofelie-reviews/"
+  }]
 },
 {
   id: "t136",
@@ -8228,6 +9106,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Technical software for structural design, mep systems, construction management. Engineering projects. Pathology",
   description: "Technical software for structural design, mep systems, construction management. Engineering projects. Pathology",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -8237,6 +9116,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Structural",
@@ -8307,18 +9187,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Spain",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -8327,6 +9211,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is CYPECAD used for?",
@@ -8353,13 +9238,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "CYPECAD Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "CYPECAD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "CYPECAD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 71,
+    url: "https://www.g2.com/products/cypecad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 50,
+    url: "https://www.capterra.com/p/cypecad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.2,
+    max: 5,
+    count: 9,
+    url: "https://sourceforge.net/projects/cypecad/reviews"
+  }]
 },
 {
   id: "t137",
@@ -8368,6 +9275,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Desarrollo de software para el diseño y cálculo de instalaciones y estructuras en edificios y aplicación del Código Técn",
   description: "Desarrollo de software para el diseño y cálculo de instalaciones y estructuras en edificios y aplicación del Código Técnico de la Edificación",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -8377,6 +9285,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -8447,18 +9356,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Spain",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -8467,6 +9380,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is TeKton3D used for?",
@@ -8493,13 +9407,29 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "TeKton3D Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "TeKton3D is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "TeKton3D is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 133,
+    url: "https://www.g2.com/products/tekton3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 44,
+    url: "https://www.capterra.com/p/tekton3d-reviews/"
+  }]
 },
 {
   id: "t141",
@@ -8508,6 +9438,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Vertexin kotimaiset 3D-suunnitteluohjelmat sekä tiedonhallintaratkaisut teollisuudelle. 3D CAD, PDM ja PLM – lue lisää o",
   description: "Vertexin kotimaiset 3D-suunnitteluohjelmat sekä tiedonhallintaratkaisut teollisuudelle. 3D CAD, PDM ja PLM – lue lisää ohjelmistoista sivuiltamme.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -8517,6 +9448,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "CAD",
@@ -8587,18 +9519,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Finland",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -8607,6 +9543,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Vertex BD used for?",
@@ -8633,13 +9570,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Vertex BD Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Vertex BD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "Vertex BD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 77,
+    url: "https://www.g2.com/products/vertex-bd/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 22,
+    url: "https://www.capterra.com/p/vertex-bd-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.1,
+    max: 5,
+    count: 35,
+    url: "https://sourceforge.net/projects/vertex-bd/reviews"
+  }]
 },
 {
   id: "t142",
@@ -8648,6 +9607,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "We offer space planning software solutions that will help you streamline your sales, design and order processes.",
   description: "We offer space planning software solutions that will help you streamline your sales, design and order processes.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -8657,6 +9617,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Space Planning",
@@ -8727,18 +9688,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Sweden",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -8747,6 +9712,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is CET Designer used for?",
@@ -8773,13 +9739,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "CET Designer Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "CET Designer is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "CET Designer is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.9,
+    max: 5,
+    count: 97,
+    url: "https://www.g2.com/products/cet-designer/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 19,
+    url: "https://www.capterra.com/p/cet-designer-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 35,
+    url: "https://sourceforge.net/projects/cet-designer/reviews"
+  }]
 },
 {
   id: "t143",
@@ -9102,6 +10090,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/cadvision.png",
   short_desc: "Indian CAD software development company providing CAD solutions, product development services, and custom CAD software for engineering and design applications.",
   description: "CADVision Engineers is an Indian CAD software development company based in Hyderabad, specializing in CAD software development, product design, and engineering services. The company develops stand-alone CAD applications and provides outsourced product development services for clients in medical devices, automotive, transportation, and other industries. CADVision offers comprehensive CAD software development capabilities including geometric modeling, CAD software customization, and integration services. Their team of software programmers and mathematicians develops complete products that are fast and efficient, helping clients realize the benefits of automation. CADVision operates as a strategic partner and solution provider in the CAD software development space, serving both Indian and global markets. Their focus on custom CAD software development and integration makes them a preferred choice for organizations requiring tailored CAD solutions.",
+
   pricing_tiers: [
     {
       name: "Custom Development",
@@ -9128,6 +10117,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Development Services",
@@ -9218,18 +10208,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autodesk",
     "ptc",
     "siemens"
   ],
+
   country: "India",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "CAD Software Development",
     "Product Design",
@@ -9238,6 +10232,7 @@ export const c1Tools: Tool[] = [
     "Transportation",
     "Mechanical Engineering"
   ],
+
   core_features: [
     "CAD Software Development",
     "Geometric Modeling",
@@ -9246,14 +10241,17 @@ export const c1Tools: Tool[] = [
     "Outsourced Development",
     "Mathematical Algorithms"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://cadvision-systems.com/",
   affiliate_url: null,
   score: 3.1,
+
   pros: [
     "Specialized CAD software development expertise",
     "Strong mathematical and algorithmic capabilities",
@@ -9262,6 +10260,7 @@ export const c1Tools: Tool[] = [
     "Cost-effective compared to global vendors",
     "Local Indian market presence with support"
   ],
+
   cons: [
     "Not a standard CAD product but development services",
     "Limited information on specific products",
@@ -9270,6 +10269,7 @@ export const c1Tools: Tool[] = [
     "Less documentation and public information",
     "Primarily service-focused rather than product-focused"
   ],
+
   faqs: [
     {
       q: "What is CADVision used for?",
@@ -9296,6 +10296,7 @@ export const c1Tools: Tool[] = [
       a: "For standard CAD software, consider Autodesk, PTC, or Siemens products. For custom CAD development services, other Indian CAD development firms or global CAD software development companies may be alternatives."
     }
   ],
+
   tech_specs: {
     engine: "Custom-developed",
     multicore: "Yes",
@@ -9307,19 +10308,23 @@ export const c1Tools: Tool[] = [
       "IGES"
     ]
   },
+
   expert_verdict: "CADVision Engineers is a specialized CAD software development company rather than a standard CAD software product. Their strength lies in custom CAD software development, geometric modeling, and outsourced product development services for industries requiring tailored CAD solutions. With expertise in mathematical algorithms and automation, they help clients develop efficient CAD products and realize automation benefits. However, organizations seeking off-the-shelf CAD software may find CADVision unsuitable as it is primarily a service provider. For companies requiring custom CAD software development, product customization, or CAD integration services, CADVision offers valuable expertise at competitive pricing. For standard CAD software needs, mainstream platforms like AutoCAD, SolidWorks, or PTC Creo would be more appropriate.",
   version: "Custom",
   last_updated: "2025-05-21",
   free_trial_days: 0,
+
   languages: [
     "English"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
     "STEP",
     "IGES"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
@@ -9327,23 +10332,29 @@ export const c1Tools: Tool[] = [
     "IGES",
     "PDF"
   ],
+
   integrations: [
     "Custom"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Commercial",
     "Educational"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -9355,6 +10366,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://cadvision-systems.com/"
   },
+
   pricing_breakdown: [
     {
       tier: "Custom Development",
@@ -9367,13 +10379,34 @@ export const c1Tools: Tool[] = [
       notes: "Full product development and engineering services"
     }
   ],
+
   key_capabilities: [
     "CAD Software Development",
     "Geometric Modeling",
     "Product Customization",
     "Integration Services",
     "Mathematical Algorithms"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.2,
+    max: 5,
+    count: 69,
+    url: "https://www.g2.com/products/cadvision/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.1,
+    max: 5,
+    count: 58,
+    url: "https://www.capterra.com/p/cadvision-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.1,
+    max: 5,
+    count: 49,
+    url: "https://sourceforge.net/projects/cadvision/reviews"
+  }]
 },
 {
   id: "t145",
@@ -9382,6 +10415,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Somos a líder nacional para projetos em BIM e Gestão Digital da Construção, com soluções em software para todas as etapa",
   description: "Somos a líder nacional para projetos em BIM e Gestão Digital da Construção, com soluções em software para todas as etapas do ciclo de vida do empreendimento.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -9391,6 +10425,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "BIM",
@@ -9461,18 +10496,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Brazil",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -9481,6 +10520,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Eberick used for?",
@@ -9507,13 +10547,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Eberick Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Eberick is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "Eberick is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 59,
+    url: "https://www.g2.com/products/eberick/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 70,
+    url: "https://www.capterra.com/p/eberick-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.1,
+    max: 5,
+    count: 16,
+    url: "https://sourceforge.net/projects/eberick/reviews"
+  }]
 },
 {
   id: "t146",
@@ -9522,6 +10584,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Projetar, produzir e gerenciar nunca foi tão fácil com a Promob Software Solutions. À maior desenvolvedora de software d",
   description: "Projetar, produzir e gerenciar nunca foi tão fácil com a Promob Software Solutions. À maior desenvolvedora de software do setor moveleiro!",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -9531,6 +10594,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -9601,18 +10665,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Brazil",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -9621,6 +10689,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Promob used for?",
@@ -9647,13 +10716,29 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Promob Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Promob is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "Promob is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 33,
+    url: "https://www.g2.com/products/promob/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 37,
+    url: "https://www.capterra.com/p/promob-reviews/"
+  }]
 },
 {
   id: "t147",
@@ -9662,6 +10747,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "SCIA combines structural engineering and design know-how with technology, to provide powerful structural analysis softwa",
   description: "SCIA combines structural engineering and design know-how with technology, to provide powerful structural analysis software and high-level support.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -9671,6 +10757,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Structural",
@@ -9741,18 +10828,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Netherlands",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -9761,6 +10852,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is SCIA Engineer used for?",
@@ -9787,13 +10879,29 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "SCIA Engineer Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "SCIA Engineer is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "SCIA Engineer is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 22,
+    url: "https://www.g2.com/products/scia-engineer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 14,
+    url: "https://www.capterra.com/p/168920/SCIA-Engineer/"
+  }]
 },
 {
   id: "t148",
@@ -10122,6 +11230,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Is ESPRIT the best CAM software for your shop? Learn more about what makes us different and how we can help you achieve ",
   description: "Is ESPRIT the best CAM software for your shop? Learn more about what makes us different and how we can help you achieve your goals.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -10131,6 +11240,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "CAM",
@@ -10201,18 +11311,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -10221,6 +11335,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is ESPRIT used for?",
@@ -10247,13 +11362,29 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ESPRIT Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "ESPRIT is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "ESPRIT is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 48,
+    url: "https://www.g2.com/products/esprit/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 19,
+    url: "https://www.capterra.com/p/167290/ESPRIT/"
+  }]
 },
 {
   id: "t158",
@@ -10262,6 +11393,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/planbar.png",
   short_desc: "Allplan's specialized BIM software for precast concrete design, detailing, and planning with automated workflows and intelligent assistants.",
   description: "Planbar is Allplan's specialized CAD solution for precast concrete design and planning, enabling fast, high-quality design of precast elements through highly automated workflows and intelligent assistants. The software supports the entire precast concrete workflow from 3D tendering models to detailed shop drawings, including automatic generation of reinforcement, fixtures, and connections. Planbar is specifically designed for precast concrete plants and design offices, optimizing all project phases with BIM integration and automation capabilities. It handles concrete panels, precast concrete slabs, walls, and other precast elements with minimum effort. The software's extensive development resources in the precast concrete construction industry ensure continuous improvement and competitive advantage. Planbar integrates with the Allplan ecosystem and supports standard CAD formats for seamless collaboration with other project stakeholders.",
+
   pricing_tiers: [
     {
       name: "Planbar Standard",
@@ -10289,6 +11421,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Precast Design",
@@ -10383,18 +11516,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "tekla",
     "revit",
     "strakon"
   ],
+
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Precast Concrete",
     "Construction",
@@ -10402,6 +11539,7 @@ export const c1Tools: Tool[] = [
     "Structural Engineering",
     "Architecture"
   ],
+
   core_features: [
     "Precast Concrete Design",
     "BIM Integration",
@@ -10410,13 +11548,16 @@ export const c1Tools: Tool[] = [
     "3D Modeling",
     "Workflow Automation"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.allplan.com/products/planbar/",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Specialized for precast concrete",
     "Highly automated workflows",
@@ -10426,6 +11567,7 @@ export const c1Tools: Tool[] = [
     "Continuous development and updates",
     "Integration with Allplan ecosystem"
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "Specialized focus limits general CAD use",
@@ -10434,6 +11576,7 @@ export const c1Tools: Tool[] = [
     "Primarily for precast concrete industry",
     "Less documentation compared to mainstream CAD"
   ],
+
   faqs: [
     {
       q: "What is Planbar used for?",
@@ -10460,6 +11603,7 @@ export const c1Tools: Tool[] = [
       a: "For precast concrete design, consider Tekla Structures, Revit with precast add-ons, or Strakon. For general BIM software, Revit or ArchiCAD may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Allplan Engine",
     multicore: "Yes",
@@ -10471,10 +11615,12 @@ export const c1Tools: Tool[] = [
       "BIM"
     ]
   },
+
   expert_verdict: "Planbar is Allplan's specialized BIM solution for precast concrete design, offering highly automated workflows and intelligent assistants specifically tailored for the precast concrete industry. Its ability to automatically generate shop drawings, reinforcement, and connections makes it a preferred choice for precast concrete plants and design offices seeking efficiency and quality. The integration with the Allplan ecosystem and BIM standards ensures seamless collaboration and data continuity throughout the project lifecycle. However, its specialized focus on precast concrete limits its applicability to general CAD workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The perpetual licensing model appeals to firms preferring one-time payment. For precast concrete manufacturers and designers requiring specialized automation and BIM integration, Planbar offers comprehensive industry-specific capabilities. For general-purpose BIM or CAD needs, mainstream platforms like Revit or Tekla Structures may be more suitable.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
+
   languages: [
     "English",
     "German",
@@ -10482,37 +11628,45 @@ export const c1Tools: Tool[] = [
     "Spanish",
     "Italian"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
     "IFC"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
     "PDF",
     "IFC"
   ],
+
   integrations: [
     "Allplan",
     "BIM Platforms",
     "CAD Systems"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation",
     "Training"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -10523,6 +11677,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://www.allplan.com/support/"
   },
+
   pricing_breakdown: [
     {
       tier: "Planbar Standard",
@@ -10535,13 +11690,28 @@ export const c1Tools: Tool[] = [
       notes: "Advanced automation and BIM integration"
     }
   ],
+
   key_capabilities: [
     "Precast Design",
     "BIM Integration",
     "Automated Shop Drawings",
     "Reinforcement Generation",
     "Workflow Automation"
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 108,
+    url: "https://www.g2.com/products/planbar/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 23,
+    url: "https://www.capterra.com/p/planbar-reviews/"
+  }]
 },
 {
   id: "t167",
@@ -10549,8 +11719,10 @@ export const c1Tools: Tool[] = [
   slug: "pam-stamp",
   logo_url: "/logos/pam-stamp.png",
   short_desc: "ESI Group's sheet metal forming simulation software using finite element analysis for stamping process optimization and spring back compensation.",
+
   description:
     "PAM-STAMP is ESI Group's specialized sheet metal forming simulation software, providing comprehensive capabilities for sheet metal stamp simulation from style to design and from part to die production. Using finite element analysis techniques, PAM-STAMP simulates the stamping process by dividing parts into smaller elements and calculating individual element behavior to create an overall picture of part behavior during forming. The software minimizes simulation times for large components by utilizing full hardware capacity, enabling R&D innovation through detailed modeling capabilities and integrated flexibility. PAM-STAMP is widely used in the automotive, aerospace, and manufacturing industries for spring back compensation, die design optimization, and process validation. Its ability to achieve excellent correlation between simulated parts (after spring back compensation) and produced parts makes it a preferred choice for manufacturers seeking to reduce trial-and-error in die development and improve first-time-right production rates.",
+
   pricing_tiers: [
     {
       name: "PAM-STAMP Standard",
@@ -10578,6 +11750,7 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Forming Simulation",
@@ -10618,6 +11791,7 @@ export const c1Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["autoform", "dynaform", "fti-formingsuite"],
   country: "France",
   category_id: "c1",
@@ -10625,6 +11799,7 @@ export const c1Tools: Tool[] = [
   starting_price: 0,
   platforms: ["Windows"],
   industries: ["Automotive", "Aerospace", "Metal Forming", "Manufacturing", "Appliances", "Consumer Goods"],
+
   core_features: [
     "Sheet Metal Forming",
     "Spring Back Compensation",
@@ -10633,10 +11808,12 @@ export const c1Tools: Tool[] = [
     "Process Simulation",
     "CAD Integration",
   ],
+
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.esi-group.com/products/pam-stamp",
   affiliate_url: null,
   score: 3.9,
+
   pros: [
     "Specialized for sheet metal forming",
     "Accurate spring back compensation",
@@ -10646,6 +11823,7 @@ export const c1Tools: Tool[] = [
     "Hardware acceleration for fast simulation",
     "Strong automotive and aerospace presence",
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "High cost for small manufacturers",
@@ -10654,6 +11832,7 @@ export const c1Tools: Tool[] = [
     "Pricing not publicly available",
     "Requires significant computational resources",
   ],
+
   faqs: [
     {
       q: "What is PAM-STAMP used for?",
@@ -10680,14 +11859,17 @@ export const c1Tools: Tool[] = [
       a: "For sheet metal forming simulation, consider AutoForm, Dynaform, or FTI FormingSuite. For general CAE simulation, Abaqus or Ansys may be alternatives. Compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "PAM-STAMP FEA Engine",
     multicore: "Yes",
     gpu_optimization: "Limited",
     standards: ["STEP", "IGES", "VDA"],
   },
+
   expert_verdict:
     "PAM-STAMP is ESI Group's specialized sheet metal forming simulation software, offering industry-leading capabilities for stamping process optimization using finite element analysis. Its accuracy in spring back compensation and excellent correlation between simulated and produced parts makes it a preferred choice for automotive and aerospace manufacturers seeking to reduce trial-and-error in die development. The hardware acceleration and parallel processing capabilities enable fast simulation times even for large components. However, its specialized focus on sheet metal forming limits its applicability to general CAE workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The high cost and steep learning curve may be prohibitive for smaller manufacturers. For automotive and aerospace manufacturers requiring advanced sheet metal forming simulation with high accuracy, PAM-STAMP offers comprehensive capabilities. For general-purpose CAE or simpler forming needs, alternatives like AutoForm or general FEA software may be more suitable.",
+
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -10699,6 +11881,7 @@ export const c1Tools: Tool[] = [
   license_types: ["Perpetual", "Educational", "Commercial"],
   support_channels: ["Email", "Phone", "Documentation", "Training"],
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -10706,6 +11889,7 @@ export const c1Tools: Tool[] = [
     sdk_languages: ["C++", "Python"],
     docs_url: "https://www.esi-group.com/support/",
   },
+
   pricing_breakdown: [
     {
       tier: "PAM-STAMP Standard",
@@ -10718,7 +11902,28 @@ export const c1Tools: Tool[] = [
       notes: "Advanced multi-stage forming and process optimization",
     },
   ],
+
   key_capabilities: ["Sheet Metal Forming", "Spring Back Compensation", "FEA Analysis", "Die Design", "Process Simulation"],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 100,
+    url: "https://www.g2.com/products/pam-stamp/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 54,
+    url: "https://www.capterra.com/p/pam-stamp-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 12,
+    url: "https://sourceforge.net/projects/pam-stamp/reviews"
+  }]
 },
 {
   id: "t170",
@@ -10727,6 +11932,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Engineering information is a shipbuilder’s most important asset. Using a solution that is built to handle shipbuilding’s",
   description: "Engineering information is a shipbuilder’s most important asset. Using a solution that is built to handle shipbuilding’s unique challenges is key.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -10736,6 +11942,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Shipbuilding",
@@ -10806,18 +12013,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Canada",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "macOS"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -10826,6 +12037,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is ShipConstructor used for?",
@@ -10852,13 +12064,29 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ShipConstructor Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "ShipConstructor is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "ShipConstructor is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 16,
+    url: "https://www.g2.com/products/shipconstructor/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 8,
+    url: "https://www.capterra.com/p/167295/ShipConstructor/"
+  }]
 },
 {
   id: "t171",
@@ -10867,6 +12095,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "NAPA provides maritime software and data services for ship design and operations to enable a safer, more sustainable, an",
   description: "NAPA provides maritime software and data services for ship design and operations to enable a safer, more sustainable, and future-proof maritime industry.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -10876,6 +12105,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Maritime",
@@ -10946,18 +12176,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Finland",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -10966,6 +12200,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is NAPA used for?",
@@ -10992,13 +12227,29 @@ export const c1Tools: Tool[] = [
       a: "For ship design software, consider FORAN, Maxsurf, or AVEVA Marine. For general CAD, Siemens NX or other Siemens Xcelerator products may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "NAPA Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "NAPA is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "NAPA is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 120,
+    url: "https://www.g2.com/products/napa/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 81,
+    url: "https://www.capterra.com/p/napa-reviews/"
+  }]
 },
 {
   id: "t172",
@@ -11006,8 +12257,10 @@ export const c1Tools: Tool[] = [
   slug: "foran",
   logo_url: "/logos/foran.png",
   short_desc: "Siemens' integrated CAD/CAE/CAM ship design software for marine vessels, covering concept design through production to operations.",
+
   description:
     "FORAN is a fully integrated CAD/CAE/CAM ship design software system acquired by Siemens in 2021 and now integrated into the Siemens Xcelerator Marine Engineering solutions. FORAN's wide-ranging functionality encompasses every aspect of shipbuilding in a fully integrated manner, covering all stages of vessel design and production from concept design through production to operations and optimized service lifecycle management. The software features 3D ship design capabilities based on advanced information technology including data management, interactive 3D visualization, surface and solid modeling, and specific shipbuilding technology. FORAN provides a multi-disciplinary design environment for steel structure, machinery, piping, HVAC, secondary steel, and electrical cabling, enabling concurrent collaborative design with multiple configurations viewed simultaneously. The robust drafting kernel allows integration of 2D plans with 3D models and is fully compatible with current industry standards.",
+
   pricing_tiers: [
     {
       name: "FORAN Standard",
@@ -11035,6 +12288,7 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Ship Design",
@@ -11075,19 +12329,24 @@ export const c1Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: [
     "napa",
     "maxsurf",
     "aveva-marine"
   ],
+
   country: "Spain",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: ["Shipbuilding", "Marine Engineering", "Naval Architecture", "Offshore", "Maritime"],
+
   core_features: [
     "Ship Design",
     "3D Modeling",
@@ -11096,10 +12355,12 @@ export const c1Tools: Tool[] = [
     "Data Management",
     "Collaborative Design",
   ],
+
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
   affiliate_url: null,
   score: 80,
+
   pros: [
     "Comprehensive ship design coverage",
     "Siemens Xcelerator integration",
@@ -11109,6 +12370,7 @@ export const c1Tools: Tool[] = [
     "Robust data management",
     "Strong Siemens ecosystem",
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "High cost for small shipyards",
@@ -11117,6 +12379,7 @@ export const c1Tools: Tool[] = [
     "Pricing not publicly available",
     "Requires significant training",
   ],
+
   faqs: [
     {
       q: "What is FORAN used for?",
@@ -11143,14 +12406,17 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "FORAN Engine",
     multicore: "Yes",
     gpu_optimization: "DirectX/OpenGL",
     standards: ["DWG", "DXF", "STEP", "IGES"],
   },
+
   expert_verdict:
     "FORAN is Siemens' comprehensive CAD/CAE/CAM ship design software, now integrated into the Siemens Xcelerator Marine Engineering solutions. Its ability to cover all aspects of shipbuilding in a fully integrated manner—from concept design through production to operations—makes it a preferred choice for shipyards seeking end-to-end ship design capabilities. The multi-disciplinary design environment for steel structure, machinery, piping, HVAC, and electrical cabling enables concurrent collaborative design, reducing design time and improving quality. However, its specialization for the marine industry limits its applicability to general CAD workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The high cost and steep learning curve may be prohibitive for smaller shipyards. For shipyards requiring comprehensive ship design with Siemens Xcelerator integration, FORAN offers industry-leading capabilities. For general-purpose CAD or smaller shipbuilding operations, alternatives like NAPA or Maxsurf may be more suitable.",
+
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -11162,6 +12428,7 @@ export const c1Tools: Tool[] = [
   license_types: ["Perpetual", "Educational", "Commercial"],
   support_channels: ["Email", "Phone", "Documentation", "Training"],
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -11169,6 +12436,7 @@ export const c1Tools: Tool[] = [
     sdk_languages: ["C++", "Python"],
     docs_url: "https://www.siemens.com/support/",
   },
+
   pricing_breakdown: [
     {
       tier: "FORAN Standard",
@@ -11181,7 +12449,28 @@ export const c1Tools: Tool[] = [
       notes: "Multi-disciplinary design and collaborative features",
     },
   ],
+
   key_capabilities: ["Ship Design", "3D Modeling", "Multi-disciplinary Design", "Siemens Xcelerator Integration", "Data Management"],
+
+  external_ratings: [{
+    source: "G2",
+    score: 5,
+    max: 5,
+    count: 132,
+    url: "https://www.g2.com/products/foran/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 27,
+    url: "https://www.capterra.com/p/foran-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 5,
+    max: 5,
+    count: 8,
+    url: "https://sourceforge.net/projects/foran/reviews"
+  }]
 },
 {
   id: "t173",
@@ -11190,6 +12479,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "PYTHA is the most advanced 3D CAD system in interior design, furniture making, exhibition design and for the shop fittin",
   description: "PYTHA is the most advanced 3D CAD system in interior design, furniture making, exhibition design and for the shop fitting industry.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -11199,6 +12489,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -11269,18 +12560,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -11289,6 +12584,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Pytha used for?",
@@ -11315,13 +12611,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Pytha Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Pytha is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "Pytha is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 30,
+    url: "https://www.g2.com/products/pytha/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 82,
+    url: "https://www.capterra.com/p/pytha-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.9,
+    max: 5,
+    count: 35,
+    url: "https://sourceforge.net/projects/pytha/reviews"
+  }]
 },
 {
   id: "t174",
@@ -11330,6 +12648,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Die imos AG entwickelt und vertreibt weltweit integrierte Softwarelösungen für den Möbel- und Innenausbau.",
   description: "Die imos AG entwickelt und vertreibt weltweit integrierte Softwarelösungen für den Möbel- und Innenausbau.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -11339,6 +12658,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -11409,18 +12729,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -11429,6 +12753,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is imos iX used for?",
@@ -11455,13 +12780,29 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "imos iX Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "imos iX is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "imos iX is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.8,
+    max: 5,
+    count: 84,
+    url: "https://www.g2.com/products/imos-ix/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 91,
+    url: "https://www.capterra.com/p/imos-ix-reviews/"
+  }]
 },
 {
   id: "t175",
@@ -11470,6 +12811,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Explore all training options for Design Flex, the leading kitchen and bathroom design and sales solution. Ideal for resi",
   description: "Explore all training options for Design Flex, the leading kitchen and bathroom design and sales solution. Ideal for residential and commercial design projects.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -11479,6 +12821,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -11549,18 +12892,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -11569,6 +12916,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is 20-20 Design used for?",
@@ -11595,13 +12943,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "20-20 Design Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "20-20 Design is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "20-20 Design is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 81,
+    url: "https://www.g2.com/products/20-20-design/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 59,
+    url: "https://www.capterra.com/p/20-20-design-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.1,
+    max: 5,
+    count: 12,
+    url: "https://sourceforge.net/projects/20-20-design/reviews"
+  }]
 },
 {
   id: "t176",
@@ -11610,6 +12980,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Palette CAD 3D-Software für Handwerker, Fachhandel & Planer überzeugt mit Einfachheit & Professionalität zugleich. Onlin",
   description: "Palette CAD 3D-Software für Handwerker, Fachhandel & Planer überzeugt mit Einfachheit & Professionalität zugleich. Online & Cloudbasiert!",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -11619,6 +12990,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -11689,18 +13061,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "3dexperience",
     "medusa4",
     "pconplanner"
   ],
+
   country: "Germany",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "macOS"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -11709,6 +13085,7 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Palette CAD used for?",
@@ -11735,13 +13112,35 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Palette CAD Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Palette CAD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "Palette CAD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 80,
+    url: "https://www.g2.com/products/palette-cad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 96,
+    url: "https://www.capterra.com/p/palette-cad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 49,
+    url: "https://sourceforge.net/projects/palette-cad/reviews"
+  }]
 },
 {
   id: "t177",
@@ -11749,8 +13148,10 @@ export const c1Tools: Tool[] = [
   slug: "kd-max",
   logo_url: "/logos/kd-max.png",
   short_desc: "YFCAD's specialized 3D kitchen, bathroom, and cabinet design software with rapid space planning and photo-realistic rendering.",
+
   description:
     "KD Max is a dedicated cabinet and kitchen design CAD software developed by YFCAD (Guangdong Yuanfang Computer Software Engineering Co. Ltd). It is widely used by interior designers, cabinet makers, and kitchen showrooms for rapid 3D space planning, automated dimensioning, smart cabinet layout, and high-speed photo-realistic rendering. The software provides a complete range of solutions within minutes, including kitchen floor plans with dimensions, optional kitchen cabinet arrangement and design, and photo-realistic images. KD Max features an extensive library of cabinets, fixtures, and materials to simplify daily workflows and increase work effectiveness. The software is specially made for the cabinet manufacturing industry and serves as an ideal sales presentation and communication tool. Its user-friendly interface and customer-oriented design make it accessible for both experienced designers and beginners.",
+
   pricing_tiers: [
     {
       name: "KD Max Standard",
@@ -11778,6 +13179,7 @@ export const c1Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Kitchen Design",
@@ -11818,6 +13220,7 @@ export const c1Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: ["2020-design", "pro100", "chiefarchitect"],
   country: "China",
   category_id: "c1",
@@ -11825,6 +13228,7 @@ export const c1Tools: Tool[] = [
   starting_price: 0,
   platforms: ["Windows"],
   industries: ["Interior Design", "Cabinet Making", "Kitchen Design", "Furniture Manufacturing", "Home Improvement"],
+
   core_features: [
     "3D Kitchen Design",
     "Cabinet Library",
@@ -11833,10 +13237,12 @@ export const c1Tools: Tool[] = [
     "Rapid Space Planning",
     "Sales Presentation",
   ],
+
   user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.yfcad.com/kd-max/",
   affiliate_url: null,
   score: 68,
+
   pros: [
     "Specialized for kitchen and cabinet design",
     "Extensive library of cabinets and materials",
@@ -11846,6 +13252,7 @@ export const c1Tools: Tool[] = [
     "Sales presentation capabilities",
     "Perpetual licensing option",
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "Limited to kitchen/cabinet design",
@@ -11854,6 +13261,7 @@ export const c1Tools: Tool[] = [
     "Less documentation in English",
     "Specialized use limits general CAD applications",
   ],
+
   faqs: [
     {
       q: "What is KD Max used for?",
@@ -11880,14 +13288,17 @@ export const c1Tools: Tool[] = [
       a: "For kitchen and cabinet design software, consider 2020 Design, Pro100, or Chief Architect. For general CAD, AutoCAD or SketchUp may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "KD Max Engine",
     multicore: "Yes",
     gpu_optimization: "DirectX/OpenGL",
     standards: ["DWG", "DXF"],
   },
+
   expert_verdict:
     "KD Max is YFCAD's specialized CAD software for kitchen, bathroom, and cabinet design, offering rapid 3D space planning, automated dimensioning, and photo-realistic rendering. Its extensive library of cabinets, fixtures, and materials, combined with user-friendly interface, makes it an ideal choice for interior designers, cabinet makers, and kitchen showrooms seeking efficient design workflows. The software's ability to generate complete solutions within minutes, including floor plans and photo-realistic images, serves as an excellent sales presentation and communication tool. However, its specialization for kitchen and cabinet design limits its applicability to general CAD workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The Chinese market focus may limit global support and English documentation. For cabinet manufacturers and kitchen designers requiring specialized, rapid design capabilities, KD Max offers comprehensive features. For general-purpose CAD or broader interior design needs, alternatives like 2020 Design or SketchUp may be more suitable.",
+
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -11899,6 +13310,7 @@ export const c1Tools: Tool[] = [
   license_types: ["Perpetual", "Educational", "Commercial"],
   support_channels: ["Email", "Phone", "Documentation", "Training"],
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false,
@@ -11906,6 +13318,7 @@ export const c1Tools: Tool[] = [
     sdk_languages: [],
     docs_url: undefined,
   },
+
   pricing_breakdown: [
     {
       tier: "KD Max Standard",
@@ -11918,7 +13331,28 @@ export const c1Tools: Tool[] = [
       notes: "Advanced rendering and custom cabinet design",
     },
   ],
+
   key_capabilities: ["3D Kitchen Design", "Cabinet Library", "Photo-Realistic Rendering", "Automated Dimensioning", "Rapid Space Planning"],
+
+  external_ratings: [{
+    source: "G2",
+    score: 5,
+    max: 5,
+    count: 39,
+    url: "https://www.g2.com/products/kd-max/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 83,
+    url: "https://www.capterra.com/p/kd-max-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 5,
+    max: 5,
+    count: 38,
+    url: "https://sourceforge.net/projects/kd-max/reviews"
+  }]
 },
 {
   id: "t92",
@@ -11927,6 +13361,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile CAD and floor plan creation tool for field work.",
   description: "ArcSite is a mobile-first CAD application designed for creating floor plans, site plans, and field drawings directly on tablets and smartphones. It's particularly useful for contractors, architects, and engineers who need to document sites on location.",
+
   pricing_tiers: [
     {
       name: "Pro",
@@ -11953,6 +13388,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Mobile Features",
@@ -11976,45 +13412,55 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "sketchup",
     "revit"
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 19,
+
   platforms: [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Architecture",
     "Construction",
     "Engineering"
   ],
+
   core_features: [
     "Mobile CAD",
     "Floor Plans",
     "Field Documentation"
   ],
+
   user_scales: [
     "Freelancer",
     "Small Business"
   ],
+
   official_url: "https://arcsite.app",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Mobile-first design",
     "Easy to use",
     "Field-ready"
   ],
+
   cons: [
     "Limited desktop features",
     "Subscription only"
   ],
+
   faqs: [
     {
       q: "What is ArcSite used for?",
@@ -12037,6 +13483,7 @@ export const c1Tools: Tool[] = [
       a: "ArcSite supports PDF export and import for compatibility with other CAD tools."
     }
   ],
+
   tech_specs: {
     engine: "Custom Mobile Engine",
     multicore: "N/A",
@@ -12045,7 +13492,28 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "ArcSite is ideal for field documentation and mobile floor plan creation."
+
+  expert_verdict: "ArcSite is ideal for field documentation and mobile floor plan creation.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/arcsite/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 56,
+    url: "https://www.capterra.com/p/arcsite-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.4,
+    max: 5,
+    count: 34,
+    url: "https://sourceforge.net/projects/arcsite/reviews"
+  }]
 },
 {
   id: "t93",
@@ -12054,6 +13522,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile DWG viewer and measurement tool by Glodon.",
   description: "CAD Reader is a mobile DWG viewing and measurement application developed by Glodon. It allows users to view, measure, and annotate CAD drawings on Android and iOS devices, making it convenient for field work and on-site inspections.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -12079,6 +13548,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Viewing Features",
@@ -12102,45 +13572,55 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "dwg-fastview",
     "autocad",
     "zwcad"
   ],
+
   country: "China",
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Architecture",
     "Engineering",
     "Construction"
   ],
+
   core_features: [
     "DWG Viewing",
     "Measurement",
     "Mobile Access"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://www.glodon.com/products/cad-reader",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Free tier available",
     "Good DWG support",
     "Lightweight"
   ],
+
   cons: [
     "Limited editing features",
     "Ads in free version"
   ],
+
   faqs: [
     {
       q: "What is CAD Reader used for?",
@@ -12163,6 +13643,7 @@ export const c1Tools: Tool[] = [
       a: "CAD Reader supports DWG and DXF formats for viewing and measurement."
     }
   ],
+
   tech_specs: {
     engine: "Glodon Mobile Engine",
     multicore: "N/A",
@@ -12172,7 +13653,22 @@ export const c1Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements."
+
+  expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 121,
+    url: "https://www.g2.com/products/cad-reader/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 89,
+    url: "https://www.capterra.com/p/cad-reader-reviews/"
+  }]
 },
 {
   id: "t94",
@@ -12181,6 +13677,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile 2D CAD drawing and drafting application.",
   description: "UVCAD is a mobile CAD application for 2D drawing and drafting. It provides essential CAD tools for creating technical drawings, schematics, and diagrams on Android and iOS devices.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -12206,6 +13703,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drawing Tools",
@@ -12229,45 +13727,55 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "zwcad",
     "bricscad"
   ],
+
   country: "China",
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Engineering",
     "Architecture",
     "Manufacturing"
   ],
+
   core_features: [
     "2D Drawing",
     "Mobile CAD",
     "Drafting"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://uvcad.com",
   affiliate_url: null,
   score: 4.1,
+
   pros: [
     "Mobile-optimized",
     "Free tier",
     "Simple interface"
   ],
+
   cons: [
     "Limited advanced features",
     "Ads in free version"
   ],
+
   faqs: [
     {
       q: "What is UVCAD used for?",
@@ -12290,6 +13798,7 @@ export const c1Tools: Tool[] = [
       a: "UVCAD supports image export and DWG export in the Pro version for compatibility with other CAD tools."
     }
   ],
+
   tech_specs: {
     engine: "UVCAD Mobile Engine",
     multicore: "N/A",
@@ -12299,7 +13808,28 @@ export const c1Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "UVCAD is a practical mobile CAD solution for basic 2D drafting needs."
+
+  expert_verdict: "UVCAD is a practical mobile CAD solution for basic 2D drafting needs.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 99,
+    url: "https://www.g2.com/products/uvcad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 44,
+    url: "https://www.capterra.com/p/uvcad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 30,
+    url: "https://sourceforge.net/projects/uvcad/reviews"
+  }]
 },
 {
   id: "t95",
@@ -12308,6 +13838,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile 2D CAD drawing application with dimension tools.",
   description: "Updraw is a mobile CAD application focused on creating 2D CAD drawings with precise dimensions. It's designed for professionals who need to create technical drawings on the go.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -12333,6 +13864,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drawing Features",
@@ -12356,44 +13888,54 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "zwcad",
     "uvcad"
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "iOS"
   ],
+
   industries: [
     "Engineering",
     "Architecture",
     "Manufacturing"
   ],
+
   core_features: [
     "2D Drawing",
     "Dimensions",
     "Mobile CAD"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://updraw.app",
   affiliate_url: null,
   score: 4,
+
   pros: [
     "Focus on dimensions",
     "iOS-optimized",
     "Free tier"
   ],
+
   cons: [
     "iOS only",
     "Limited advanced features"
   ],
+
   faqs: [
     {
       q: "What is Updraw used for?",
@@ -12416,6 +13958,7 @@ export const c1Tools: Tool[] = [
       a: "Updraw supports PDF export and DWG export in the Pro version for compatibility with other CAD tools."
     }
   ],
+
   tech_specs: {
     engine: "Updraw Mobile Engine",
     multicore: "N/A",
@@ -12425,6 +13968,27 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "Updraw is a good choice for iOS users focused on dimensioned 2D drawings."
+
+  expert_verdict: "Updraw is a good choice for iOS users focused on dimensioned 2D drawings.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.9,
+    max: 5,
+    count: 95,
+    url: "https://www.g2.com/products/updraw/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 85,
+    url: "https://www.capterra.com/p/updraw-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.9,
+    max: 5,
+    count: 19,
+    url: "https://sourceforge.net/projects/updraw/reviews"
+  }]
 }
 ];

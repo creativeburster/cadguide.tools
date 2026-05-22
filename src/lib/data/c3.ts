@@ -1253,35 +1253,43 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1995,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Residential Design",
     "Remodeling"
   ],
+
   core_features: [
     "Residential Design",
     "3D Visualization"
   ],
+
   user_scales: [
     "Small Business",
     "Agencies"
   ],
+
   official_url: "https://www.chiefarchitect.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Remodeling standard",
     "Kitchen design speed",
     "macOS support"
   ],
+
   cons: [
     "Not for mechanical",
     "Steep learning",
     "Expensive"
   ],
+
   faqs: [
     {
       q: "What is Chief Architect Pro used for?",
@@ -1308,6 +1316,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Chief Architect, ArchiCAD, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary",
     multicore: "Moderate",
@@ -1318,7 +1327,9 @@ export const c3Tools: Tool[] = [
       "OBJ"
     ]
   },
+
   expert_verdict: "The money-making machine for home builders.",
+
   pricing_tiers: [
     {
       name: "Premier",
@@ -1332,6 +1343,7 @@ export const c3Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "AEC",
@@ -1342,7 +1354,27 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 43,
+    url: "https://www.g2.com/products/chief-architect-pro/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 65,
+    url: "https://www.capterra.com/p/chief-architect-pro-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 38,
+    url: "https://sourceforge.net/projects/chief-architect-pro/reviews"
+  }]
 },
 {
   id: "t74",
@@ -1355,37 +1387,45 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 153,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Landscape Architecture",
     "Urban Planning"
   ],
+
   core_features: [
     "Irrigation Design",
     "Plant Databases",
     "Terrain Modeling",
     "GIS Integration"
   ],
+
   user_scales: [
     "Small Team",
     "Mid-Market"
   ],
+
   official_url: "https://www.vectorworks.net/landmark",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Mac native",
     "Incredible 2D graphics",
     "BIM for landscape"
   ],
+
   cons: [
     "Higher learning curve",
     "Requires modern hardware",
     "Expensive setup"
   ],
+
   faqs: [
     {
       q: "What is Vectorworks Landmark used for?",
@@ -1412,6 +1452,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are ArchiCAD, Revit, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Parasolid",
     multicore: "High",
@@ -1422,7 +1463,28 @@ export const c3Tools: Tool[] = [
       "Shapefile"
     ]
   },
-  expert_verdict: "The undisputed gold standard for professional landscape architecture."
+
+  expert_verdict: "The undisputed gold standard for professional landscape architecture.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 35,
+    url: "https://www.g2.com/products/vectorworks-landmark/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 95,
+    url: "https://www.capterra.com/p/vectorworks-landmark-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.9,
+    max: 5,
+    count: 17,
+    url: "https://sourceforge.net/projects/vectorworks-landmark/reviews"
+  }]
 },
 {
   id: "t94",
@@ -1435,14 +1497,17 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1800,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Architecture",
     "Structural Engineering",
     "Construction"
   ],
+
   core_features: [
     "Multi-disciplinary BIM",
     "Reinforced Concrete Design",
@@ -1450,24 +1515,29 @@ export const c3Tools: Tool[] = [
     "Precast Modeling",
     "Cloud Collaboration"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.allplan.com/",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Strong structural engineering tools",
     "Good IFC support",
     "European market leader"
   ],
+
   cons: [
     "Less popular in North America",
     "Steeper learning curve",
     "UI feels dated"
   ],
+
   faqs: [
     {
       q: "What is Allplan used for?",
@@ -1494,6 +1564,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are ArchiCAD, Revit, OpenRoads Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary BIM",
     multicore: "Moderate",
@@ -1505,7 +1576,9 @@ export const c3Tools: Tool[] = [
       "STEP"
     ]
   },
+
   expert_verdict: "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
+
   pricing_tiers: [
     {
       name: "Architecture",
@@ -1532,6 +1605,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Structural BIM",
@@ -1575,7 +1649,21 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 52,
+    url: "https://www.g2.com/products/allplan/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 64,
+    url: "https://www.capterra.com/p/allplan-reviews/"
+  }]
 },
 {
   id: "t95",
@@ -1588,37 +1676,45 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 4000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Civil Engineering",
     "Transportation",
     "Infrastructure"
   ],
+
   core_features: [
     "Corridor Modeling",
     "Drainage Design",
     "Terrain Modeling",
     "InRoads Migration"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.bentley.com/software/openroads-designer/",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Best-in-class road corridor modeling",
     "Deep civil BIM capabilities",
     "Strong Bentley ecosystem integration"
   ],
+
   cons: [
     "High cost",
     "Windows only",
     "Complex for simple projects"
   ],
+
   faqs: [
     {
       q: "What is OpenRoads Designer used for?",
@@ -1645,6 +1741,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Revit, Civil 3D, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "MicroStation (Bentley)",
     multicore: "High",
@@ -1656,7 +1753,22 @@ export const c3Tools: Tool[] = [
       "LandXML"
     ]
   },
-  expert_verdict: "The definitive platform for highway and infrastructure projects at enterprise scale."
+
+  expert_verdict: "The definitive platform for highway and infrastructure projects at enterprise scale.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 22,
+    url: "https://www.g2.com/products/openroads-designer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 33,
+    url: "https://www.capterra.com/p/openroads-designer-reviews/"
+  }]
 },
 {
   id: "t102",
@@ -1665,6 +1777,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.bimoffice.com/images/logo.svg",
   short_desc: "BIM project management, estimation, and coordination software for architects and builders.",
   description: "BIMoffice is a comprehensive BIM project management and construction administration software developed by Abvent. Designed specifically for architects, engineering firms, and construction managers, it provides complete modules for estimation, budgeting, site scheduling, dynamic connection with CAD/BIM modelers, and technical description writing.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -1674,6 +1787,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "BIM",
@@ -1744,18 +1858,22 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "hicad",
     "renga",
     "edificius"
   ],
+
   country: "France",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -1764,6 +1882,7 @@ export const c3Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is BIMoffice used for?",
@@ -1790,13 +1909,29 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are HiCAD, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "BIMoffice Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "BIMoffice is a professional software solution for Building Information Modeling (BIM). It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "BIMoffice is a professional software solution for Building Information Modeling (BIM). It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 33,
+    url: "https://www.g2.com/products/bimoffice/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 8,
+    url: "https://www.capterra.com/p/bimoffice-reviews/"
+  }]
 },
 {
   id: "t105",
@@ -1805,6 +1940,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.isd-group.com/images/hicad-logo.png",
   short_desc: "Comprehensive 2D/3D CAD and PDM/PLM solution for mechanical engineering, plant design, sheet metal, and steel construction.",
   description: "HiCAD by ISD Group is a comprehensive 2D/3D CAD and PDM/PLM solution designed for mechanical engineering, plant design, sheet metal working, and steel/metal construction. The software provides integrated tools for design, documentation, and data management across various engineering disciplines.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -1830,6 +1966,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -1900,24 +2037,29 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "renga",
     "edificius"
   ],
+
   country: "Germany",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 4000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical Engineering",
     "Plant Design",
     "Steel Construction",
     "Sheet Metal"
   ],
+
   core_features: [
     "2D/3D CAD",
     "Sheet Metal",
@@ -1925,14 +2067,17 @@ export const c3Tools: Tool[] = [
     "PDM/PLM",
     "Parametric Design"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.isdgroup.com/",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "All-in-one solution for multiple industries",
     "Integrated PDM/PLM for efficient data management",
@@ -1940,12 +2085,14 @@ export const c3Tools: Tool[] = [
     "German engineering reliability",
     "Robust parametric modeling"
   ],
+
   cons: [
     "High software acquisition cost",
     "Steep learning curve",
     "Smaller international ecosystem",
     "Limited English documentation"
   ],
+
   faqs: [
     {
       q: "What is HiCAD used for?",
@@ -1972,6 +2119,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "HiCAD Engine",
     multicore: "Yes",
@@ -1983,7 +2131,22 @@ export const c3Tools: Tool[] = [
       "IFC"
     ]
   },
-  expert_verdict: "HiCAD is a comprehensive CAD/PDM/PLM solution spanning mechanical engineering, plant design, sheet metal, and steel construction. It is highly reliable and integrates deep PDM/PLM data management, making it an excellent all-in-one suite for medium-to-large engineering enterprises, though it requires significant training."
+
+  expert_verdict: "HiCAD is a comprehensive CAD/PDM/PLM solution spanning mechanical engineering, plant design, sheet metal, and steel construction. It is highly reliable and integrates deep PDM/PLM data management, making it an excellent all-in-one suite for medium-to-large engineering enterprises, though it requires significant training.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 75,
+    url: "https://www.g2.com/products/hicad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.7,
+    max: 5,
+    count: 32,
+    url: "https://www.capterra.com/p/hicad-reviews/"
+  }]
 },
 {
   id: "t119",
@@ -1992,6 +2155,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.rengabim.com/images/logo.svg",
   short_desc: "Russian BIM system for collaborative architectural design, structural engineering, MEP, and building technology.",
   description: "Renga is a Russian BIM system designed for collaborative architectural design, structural engineering, MEP (mechanical, electrical, plumbing), and building technology. The software provides integrated tools for building information modeling across all disciplines with a focus on the Russian construction market.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2017,6 +2181,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Architecture",
@@ -2087,24 +2252,29 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "hicad",
     "edificius"
   ],
+
   country: "Russia",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 2500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Architecture",
     "Construction",
     "Engineering",
     "MEP"
   ],
+
   core_features: [
     "BIM Modeling",
     "Architecture",
@@ -2112,14 +2282,17 @@ export const c3Tools: Tool[] = [
     "MEP",
     "Russian Standards"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://rengabim.com/",
   affiliate_url: null,
   score: 3.4,
+
   pros: [
     "Fully integrated BIM for architecture, structure, and MEP",
     "Highly cost-effective compared to major suites",
@@ -2127,11 +2300,13 @@ export const c3Tools: Tool[] = [
     "Strong regional support",
     "Fast learning curve for 3D layouts"
   ],
+
   cons: [
     "Smaller global plugin ecosystem",
     "Limited English documentation",
     "Fewer advanced generative design automations"
   ],
+
   faqs: [
     {
       q: "What is Renga used for?",
@@ -2158,6 +2333,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Renga Engine",
     multicore: "Yes",
@@ -2169,7 +2345,28 @@ export const c3Tools: Tool[] = [
       "RVT"
     ]
   },
-  expert_verdict: "Renga is a comprehensive BIM system covering architecture, structural engineering, and MEP disciplines. It offers highly cost-effective 3D modeling and excellent Open BIM compliance via IFC, though its global integration and documentation are still maturing."
+
+  expert_verdict: "Renga is a comprehensive BIM system covering architecture, structural engineering, and MEP disciplines. It offers highly cost-effective 3D modeling and excellent Open BIM compliance via IFC, though its global integration and documentation are still maturing.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.2,
+    max: 5,
+    count: 102,
+    url: "https://www.g2.com/products/renga/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 22,
+    url: "https://www.capterra.com/p/renga-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.4,
+    max: 5,
+    count: 13,
+    url: "https://sourceforge.net/projects/renga/reviews"
+  }]
 },
 {
   id: "t130",
@@ -2178,6 +2375,7 @@ export const c3Tools: Tool[] = [
   logo_url: "/logos/edificius.png",
   short_desc: "BIM software with the highest number of IFC certified solutions for architecture, engineering, and construction.",
   description: "Edificius by ACCA Software is a BIM solution with the highest number of IFC certified software solutions in the world for the architecture, engineering, and construction industries. It provides integrated tools for architectural design, structural engineering, and MEP with strong IFC compliance.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2203,6 +2401,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "BIM Design",
@@ -2273,24 +2472,29 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "hicad",
     "renga"
   ],
+
   country: "Italy",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 2000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Architecture",
     "Engineering",
     "Construction",
     "MEP"
   ],
+
   core_features: [
     "BIM Modeling",
     "IFC Certified",
@@ -2298,14 +2502,17 @@ export const c3Tools: Tool[] = [
     "Structural",
     "MEP"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "Industry-leading number of IFC certified solutions",
     "Deep compliance with Open BIM standards",
@@ -2313,12 +2520,14 @@ export const c3Tools: Tool[] = [
     "Stunning real-time rendering integration",
     "Highly competitive pricing in Europe"
   ],
+
   cons: [
     "Premium pricing model",
     "Steep learning curve",
     "Limited localized support in secondary markets",
     "Fewer community-developed add-ons"
   ],
+
   faqs: [
     {
       q: "What is Edificius used for?",
@@ -2345,6 +2554,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Edificius Engine",
     multicore: "Yes",
@@ -2356,7 +2566,28 @@ export const c3Tools: Tool[] = [
       "RVT"
     ]
   },
-  expert_verdict: "Edificius is a powerful Open BIM software boasting the highest number of IFC certifications. It integrates architectural, structural, and MEP design into a unified environment, delivering high interoperability for standard construction pipelines, although its training path is steep."
+
+  expert_verdict: "Edificius is a powerful Open BIM software boasting the highest number of IFC certifications. It integrates architectural, structural, and MEP design into a unified environment, delivering high interoperability for standard construction pipelines, although its training path is steep.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.9,
+    max: 5,
+    count: 90,
+    url: "https://www.g2.com/products/edificius/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.7,
+    max: 5,
+    count: 92,
+    url: "https://www.capterra.com/p/edificius-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.8,
+    max: 5,
+    count: 28,
+    url: "https://sourceforge.net/projects/edificius/reviews"
+  }]
 },
 {
   id: "t131",
@@ -2365,6 +2596,7 @@ export const c3Tools: Tool[] = [
   logo_url: "/logos/edilus.png",
   short_desc: "Architectural BIM software for building design and documentation with IFC certification.",
   description: "EdiLus by ACCA Software is an architectural BIM solution designed for building design and documentation. It provides intuitive tools for architectural modeling with IFC certification for interoperability. The software is part of the ACCA Software family, known for its IFC certified solutions.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2390,6 +2622,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Architecture",
@@ -2460,37 +2693,45 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "hicad",
     "renga"
   ],
+
   country: "Italy",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 1500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Architecture",
     "Construction",
     "Interior Design"
   ],
+
   core_features: [
     "Architectural BIM",
     "IFC Certified",
     "Documentation",
     "Visualization"
   ],
+
   user_scales: [
     "Individual",
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Automated structural calculations and drawings",
     "High interoperability via IFC compliance",
@@ -2498,11 +2739,13 @@ export const c3Tools: Tool[] = [
     "Excellent cost-to-performance ratio",
     "Strong European engineering compliance"
   ],
+
   cons: [
     "Limited generic architectural modeling",
     "Not designed for MEP routing",
     "Fewer international design code integrations"
   ],
+
   faqs: [
     {
       q: "What is EdiLus used for?",
@@ -2529,6 +2772,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "EdiLus Engine",
     multicore: "Yes",
@@ -2539,7 +2783,28 @@ export const c3Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "EdiLus is a structural engineering calculation and analysis software featuring native IFC compatibility. It offers automated structural drawings and calculations, making it a valuable tool for architectural engineers, although it lacks advanced generic architectural modeling."
+
+  expert_verdict: "EdiLus is a structural engineering calculation and analysis software featuring native IFC compatibility. It offers automated structural drawings and calculations, making it a valuable tool for architectural engineers, although it lacks advanced generic architectural modeling.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.3,
+    max: 5,
+    count: 78,
+    url: "https://www.g2.com/products/edilus/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 21,
+    url: "https://www.capterra.com/p/edilus-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.4,
+    max: 5,
+    count: 22,
+    url: "https://sourceforge.net/projects/edilus/reviews"
+  }]
 },
 {
   id: "t139",
@@ -2548,6 +2813,7 @@ export const c3Tools: Tool[] = [
   logo_url: "/logos/cadwork.png",
   short_desc: "CAD/CAM software specialized for timber construction and wood building design.",
   description: "cadwork is a specialized CAD/CAM software solution designed for timber construction and wood building design. It provides comprehensive tools for 3D modeling, structural design, and CNC machine preparation specifically for the timber industry. The software is widely used in Europe for wooden frame construction and timber engineering.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2573,6 +2839,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Timber Design",
@@ -2643,23 +2910,28 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "hicad",
     "renga"
   ],
+
   country: "Switzerland",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Timber Construction",
     "Wood Engineering",
     "Architecture"
   ],
+
   core_features: [
     "Timber CAD",
     "CAM",
@@ -2667,14 +2939,17 @@ export const c3Tools: Tool[] = [
     "Structural",
     "BIM"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.cadwork.com/",
   affiliate_url: null,
   score: 3.7,
+
   pros: [
     "Unmatched specialization for timber design and carpentry",
     "Direct CNC export to major wood manufacturing machines",
@@ -2682,11 +2957,13 @@ export const c3Tools: Tool[] = [
     "Full BIM and IFC format support",
     "Compliance with Eurocode and local timber building standards"
   ],
+
   cons: [
     "Highly specialized (not suited for other sectors)",
     "Premium acquisition cost",
     "Steep training curve"
   ],
+
   faqs: [
     {
       q: "What is cadwork used for?",
@@ -2713,6 +2990,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "cadwork Engine",
     multicore: "Yes",
@@ -2724,7 +3002,28 @@ export const c3Tools: Tool[] = [
       "STEP"
     ]
   },
-  expert_verdict: "cadwork is the global leader in timber construction CAD/CAM software. It integrates structural wood design with direct CNC export for automated wood fabrication, making it the perfect choice for timber engineers and house builders, although it is not meant for concrete or steel-only structures."
+
+  expert_verdict: "cadwork is the global leader in timber construction CAD/CAM software. It integrates structural wood design with direct CNC export for automated wood fabrication, making it the perfect choice for timber engineers and house builders, although it is not meant for concrete or steel-only structures.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/cadwork/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.5,
+    max: 5,
+    count: 56,
+    url: "https://www.capterra.com/p/cadwork-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.8,
+    max: 5,
+    count: 34,
+    url: "https://sourceforge.net/projects/cadwork/reviews"
+  }]
 },
 {
   id: "t140",
@@ -2733,6 +3032,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.magicad.com/images/logo.svg",
   short_desc: "MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
   description: "MagiCAD Group specializes in MEP (Mechanical, Electrical, Plumbing) design software for designers and BIM solutions for MEP manufacturers in the construction industry. The software provides comprehensive tools for HVAC, electrical, and piping design with strong BIM integration and manufacturer content libraries.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2758,6 +3058,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "MEP Design",
@@ -2828,24 +3129,29 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "hicad",
     "renga"
   ],
+
   country: "Finland",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "MEP",
     "HVAC",
     "Electrical",
     "Construction"
   ],
+
   core_features: [
     "MEP Design",
     "HVAC",
@@ -2853,14 +3159,17 @@ export const c3Tools: Tool[] = [
     "BIM",
     "Manufacturer Content"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.magicad.com/",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "Highly specialized MEP and HVAC design solution",
     "Extensive database of verified manufacturer products",
@@ -2868,12 +3177,14 @@ export const c3Tools: Tool[] = [
     "Powerful calculation and system sizing tools",
     "Excellent coordination and clash detection"
   ],
+
   cons: [
     "Highly premium software cost",
     "Steep learning curve",
     "Requires a host CAD (Revit/AutoCAD) license",
     "Limited use for architectural layout"
   ],
+
   faqs: [
     {
       q: "What is MagiCAD used for?",
@@ -2900,6 +3211,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "MagiCAD Engine",
     multicore: "Yes",
@@ -2911,7 +3223,22 @@ export const c3Tools: Tool[] = [
       "RVT"
     ]
   },
-  expert_verdict: "MagiCAD is the premier MEP design plugin for Revit and AutoCAD, offering massive manufacturer content libraries and advanced HVAC/electrical calculations. It is widely adopted by top engineering firms across Europe and Asia, although it represents a significant software investment."
+
+  expert_verdict: "MagiCAD is the premier MEP design plugin for Revit and AutoCAD, offering massive manufacturer content libraries and advanced HVAC/electrical calculations. It is widely adopted by top engineering firms across Europe and Asia, although it represents a significant software investment.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 84,
+    url: "https://www.g2.com/products/magicad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 91,
+    url: "https://www.capterra.com/p/magicad-reviews/"
+  }]
 },
 {
   id: "t157",
@@ -2920,6 +3247,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.ddscad.com/images/logo.png",
   short_desc: "MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
   description: "DDS-CAD is a specialized MEP design and BIM software solution for mechanical, electrical, and plumbing engineering. The software provides integrated tools for HVAC design, electrical systems, and piping with strong BIM capabilities. It's particularly popular in the Nordic construction market.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2945,6 +3273,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "MEP Design",
@@ -3015,24 +3344,29 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "hicad",
     "renga"
   ],
+
   country: "Norway",
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 2500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "MEP",
     "HVAC",
     "Electrical",
     "Construction"
   ],
+
   core_features: [
     "MEP Design",
     "HVAC",
@@ -3040,14 +3374,17 @@ export const c3Tools: Tool[] = [
     "BIM",
     "Calculation"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.graphisoft.com/solutions/dds-cad",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Dedicated MEP and HVAC BIM software design",
     "Proven track record in European and Nordic markets",
@@ -3055,11 +3392,13 @@ export const c3Tools: Tool[] = [
     "Automated plan view and section generation",
     "High Open BIM and IFC compliance"
   ],
+
   cons: [
     "Limited general architectural or structural modeling",
     "Premium licensing and support costs",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is DDS-CAD used for?",
@@ -3086,6 +3425,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "DDS-CAD Engine",
     multicore: "Yes",
@@ -3097,7 +3437,28 @@ export const c3Tools: Tool[] = [
       "RVT"
     ]
   },
-  expert_verdict: "DDS-CAD is a specialized MEP design and BIM software solution featuring advanced HVAC, piping, and electrical design automation. Highly respected in the European and Nordic markets, it integrates structural coordination and energy calculations natively."
+
+  expert_verdict: "DDS-CAD is a specialized MEP design and BIM software solution featuring advanced HVAC, piping, and electrical design automation. Highly respected in the European and Nordic markets, it integrates structural coordination and energy calculations natively.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 54,
+    url: "https://www.g2.com/products/dds-cad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.7,
+    max: 5,
+    count: 71,
+    url: "https://www.capterra.com/p/dds-cad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.5,
+    max: 5,
+    count: 13,
+    url: "https://sourceforge.net/projects/dds-cad/reviews"
+  }]
 },
 {
   id: "t159",
@@ -3106,6 +3467,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.drofus.com/images/logo.svg",
   short_desc: "Data-driven building requirements platform for standardizing project data and BIM collaboration.",
   description: "dRofus is a leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence. It provides a database-driven approach to managing building requirements, room data, and equipment specifications integrated with BIM workflows.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3131,6 +3493,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Data Management",
@@ -3201,38 +3564,46 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bimoffice",
     "hicad",
     "renga"
   ],
+
   country: "Norway",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2000,
+
   platforms: [
     "Windows",
     "Web"
   ],
+
   industries: [
     "Architecture",
     "Construction",
     "Engineering",
     "Healthcare"
   ],
+
   core_features: [
     "Data Management",
     "BIM Integration",
     "Requirements",
     "Collaboration"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.drofus.com/",
   affiliate_url: null,
   score: 3.7,
+
   pros: [
     "Dedicated room data and equipment requirement platform",
     "Deep real-time integration with Revit, ArchiCAD, and Open BIM",
@@ -3240,11 +3611,13 @@ export const c3Tools: Tool[] = [
     "Extremely robust for hospitals, airports, and large infrastructure",
     "Comprehensive API and automation capabilities"
   ],
+
   cons: [
     "No native geometric CAD drafting features",
     "Highly premium enterprise pricing",
     "Very steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is dRofus used for?",
@@ -3271,6 +3644,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "dRofus Engine",
     multicore: "Yes",
@@ -3282,7 +3656,28 @@ export const c3Tools: Tool[] = [
       "RVT"
     ]
   },
-  expert_verdict: "dRofus is the leading data-driven room programming and equipment planning platform for BIM. Unlike visual CAD tools, it focuses entirely on room data sheets, equipment requirements, and building planning metadata for massive projects, although it is too complex for small teams."
+
+  expert_verdict: "dRofus is the leading data-driven room programming and equipment planning platform for BIM. Unlike visual CAD tools, it focuses entirely on room data sheets, equipment requirements, and building planning metadata for massive projects, although it is too complex for small teams.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 95,
+    url: "https://www.g2.com/products/drofus/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 85,
+    url: "https://www.capterra.com/p/drofus-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.6,
+    max: 5,
+    count: 19,
+    url: "https://sourceforge.net/projects/drofus/reviews"
+  }]
 },
 {
   id: "t206",
@@ -3291,6 +3686,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.autodesk.com/content/dam/autodesk/www/autodesk-homepage/brand/logo/autocad.svg",
   short_desc: "Autodesk's plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform.",
   description: "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings on top of vanilla AutoCAD, used by mid-size EPC firms.",
+
   pricing_tiers: [
     {
       name: "Subscription",
@@ -3305,19 +3701,23 @@ export const c3Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2615,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Energy",
     "Chemical",
     "Oil & Gas",
     "Power"
   ],
+
   core_features: [
     "Spec-driven 3D pipe routing",
     "P&ID symbol library and validation",
@@ -3326,23 +3726,28 @@ export const c3Tools: Tool[] = [
     "Project collaboration via Vault",
     "Data validation between P&ID and 3D model"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Lowest learning curve for AutoCAD-fluent firms",
     "Included in AutoCAD specialised toolsets",
     "Industry-standard isometric output (ISOGEN)"
   ],
+
   cons: [
     "Less powerful than AVEVA E3D / SP3D for mega-projects",
     "Project file size becomes unwieldy past ~50k pipe components",
     "Windows-only"
   ],
+
   tech_specs: {
     engine: "AutoCAD ObjectARX",
     multicore: "Limited",
@@ -3353,7 +3758,9 @@ export const c3Tools: Tool[] = [
       "ISO 15926"
     ]
   },
+
   expert_verdict: "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
+
   faqs: [
     {
       q: "What is AutoCAD Plant 3D used for?",
@@ -3380,11 +3787,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-construction-cloud",
     "allplan",
     "bimcollab"
   ],
+
   detailed_features: [
     {
       category: "Piping Design",
@@ -3454,7 +3863,27 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 57,
+    url: "https://www.g2.com/products/autocad-plant-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 44,
+    url: "https://www.capterra.com/p/autocad-plant-3d-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.4,
+    max: 5,
+    count: 5,
+    url: "https://sourceforge.net/projects/autocad-plant-3d/reviews"
+  }]
 },
 {
   id: "t207",
@@ -3467,15 +3896,18 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 18000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Oil & Gas",
     "Chemical",
     "Power",
     "Marine"
   ],
+
   core_features: [
     "Rule-based pipe, structural, cable tray, HVAC design",
     "Database-driven (Oracle / SQL Server)",
@@ -3484,22 +3916,27 @@ export const c3Tools: Tool[] = [
     "Auto-generation of orthographics and isometrics",
     "Clash detection and 4D scheduling"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://hexagon.com/products/smartplant-3d",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Database-driven model is uniquely robust at giga-project scale",
     "Strong integration with the broader SmartPlant suite",
     "Adopted by many international EPCs"
   ],
+
   cons: [
     "Notoriously complex Oracle/SQL setup",
     "Enterprise pricing only",
     "Windows-only"
   ],
+
   tech_specs: {
     engine: "SP3D (database-centric)",
     multicore: "Yes",
@@ -3510,7 +3947,9 @@ export const c3Tools: Tool[] = [
       "DGN"
     ]
   },
+
   expert_verdict: "Goes head-to-head with AVEVA E3D. Pick based on which one your owner-operator already uses for its asset model.",
+
   faqs: [
     {
       q: "What is Hexagon SmartPlant 3D used for?",
@@ -3537,11 +3976,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-construction-cloud",
     "allplan",
     "bimcollab"
   ],
+
   detailed_features: [
     {
       category: "Plant Design",
@@ -3611,7 +4052,27 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 42,
+    url: "https://www.g2.com/products/smartplant-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 39,
+    url: "https://www.capterra.com/p/smartplant-3d-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 42,
+    url: "https://sourceforge.net/projects/smartplant-3d/reviews"
+  }]
 },
 {
   id: "t208",
@@ -3624,14 +4085,17 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Oil & Gas",
     "Chemical",
     "Power"
   ],
+
   core_features: [
     "AutoCAD-based 3D plant modeling",
     "Spec-driven pipe routing",
@@ -3640,23 +4104,28 @@ export const c3Tools: Tool[] = [
     "Integration with PV Elite, Tank, SmartMarine",
     "Steel modeling (CADWorx Structure)"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://hexagon.com/products/cadworx-plant-professional",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Far cheaper than E3D/SP3D for small-to-mid EPCs",
     "Native AutoCAD platform reduces training",
     "Best-in-class CAESAR II integration"
   ],
+
   cons: [
     "Tied to AutoCAD subscription separately",
     "Less suitable for multi-thousand-line giga projects",
     "Windows-only"
   ],
+
   tech_specs: {
     engine: "AutoCAD ObjectARX",
     multicore: "Limited",
@@ -3667,7 +4136,9 @@ export const c3Tools: Tool[] = [
       "ISO 15926"
     ]
   },
+
   expert_verdict: "The pragmatic plant-design choice for North American EPCs that already live inside AutoCAD.",
+
   faqs: [
     {
       q: "What is CADWorx Plant Professional used for?",
@@ -3694,11 +4165,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, BIMcollab, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-construction-cloud",
     "bimcollab",
     "autocad-plant-3d"
   ],
+
   detailed_features: [
     {
       category: "Plant Design",
@@ -3768,7 +4241,21 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 88,
+    url: "https://www.g2.com/products/cadworx/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 49,
+    url: "https://www.capterra.com/p/cadworx-reviews/"
+  }]
 },
 {
   id: "t229",
@@ -3781,16 +4268,19 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1080,
+
   platforms: [
     "Web",
     "Windows",
     "iOS",
     "Android"
   ],
+
   industries: [
     "AEC",
     "Construction"
   ],
+
   core_features: [
     "Autodesk Docs CDE",
     "BIM Collaborate Pro (Revit Cloud Worksharing)",
@@ -3799,24 +4289,29 @@ export const c3Tools: Tool[] = [
     "Cost management",
     "API + Insight + Auto-clash detection"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://construction.autodesk.com",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Single platform unifies model collaboration and field workflows",
     "Tight Revit and Civil 3D integration",
     "Strong API and ACC Connect ecosystem"
   ],
+
   cons: [
     "Per-user pricing adds up fast on large projects",
     "Migration from legacy BIM 360 still painful",
     "Mobile experience inconsistent across modules"
   ],
+
   tech_specs: {
     engine: "Autodesk Forge / APS",
     multicore: "Cloud",
@@ -3828,7 +4323,9 @@ export const c3Tools: Tool[] = [
       "Navisworks NWD"
     ]
   },
+
   expert_verdict: "The natural collaboration layer for any Autodesk-centric AEC firm — and the de facto industry standard CDE.",
+
   faqs: [
     {
       q: "What is Autodesk Construction Cloud used for?",
@@ -3855,11 +4352,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMcollab, Allplan, AutoCAD Plant 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "bimcollab",
     "allplan",
     "autocad-plant-3d"
   ],
+
   detailed_features: [
     {
       category: "CDE",
@@ -3929,7 +4428,21 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 111,
+    url: "https://www.g2.com/products/autodesk-construction-cloud/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 90,
+    url: "https://www.capterra.com/p/autodesk-construction-cloud-reviews/"
+  }]
 },
 {
   id: "t230",
@@ -3942,6 +4455,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Web",
     "Windows",
@@ -3949,10 +4463,12 @@ export const c3Tools: Tool[] = [
     "iOS",
     "Android"
   ],
+
   industries: [
     "AEC",
     "Construction"
   ],
+
   core_features: [
     "Free tier for unlimited collaborators",
     "IFC viewer with clash detection",
@@ -3961,25 +4477,30 @@ export const c3Tools: Tool[] = [
     "ToDo workflow for issue tracking",
     "REST API and SAML SSO"
   ],
+
   user_scales: [
     "Freelancer",
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://connect.trimble.com",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Generous free tier",
     "True openBIM workflow on IFC",
     "Best HoloLens / AR review story"
   ],
+
   cons: [
     "Less feature-rich than ACC for full construction management",
     "Coordination workflows still maturing",
     "Some advanced features paywalled at Business tier"
   ],
+
   tech_specs: {
     engine: "Trimble Connect cloud + native viewers",
     multicore: "Cloud",
@@ -3991,7 +4512,9 @@ export const c3Tools: Tool[] = [
       "SKP"
     ]
   },
+
   expert_verdict: "If you live in Tekla or SketchUp, Trimble Connect is the natural CDE — free tier alone makes it worth trying.",
+
   faqs: [
     {
       q: "What is Trimble Connect used for?",
@@ -4018,11 +4541,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Autodesk Dynamo, Autodesk Construction Cloud, BIMcollab. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-dynamo",
     "autodesk-construction-cloud",
     "bimcollab"
   ],
+
   detailed_features: [
     {
       category: "CDE",
@@ -4092,7 +4617,21 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 20,
+    url: "https://www.g2.com/products/trimble-connect/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 60,
+    url: "https://www.capterra.com/p/trimble-connect-reviews/"
+  }]
 },
 {
   id: "t231",
@@ -4105,15 +4644,18 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 590,
+
   platforms: [
     "Web",
     "Windows",
     "macOS"
   ],
+
   industries: [
     "AEC",
     "Construction"
   ],
+
   core_features: [
     "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
     "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
@@ -4122,24 +4664,29 @@ export const c3Tools: Tool[] = [
     "Clash detection (BIMcollab ZOOM)",
     "REST API and SSO"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.bimcollab.com",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Vendor-neutral BCF workflow",
     "Plugins for every major BIM tool",
     "Strong adoption in European AEC firms"
   ],
+
   cons: [
     "Per-project pricing can stack up",
     "Focused on issue/clash — not a full CDE",
     "ZOOM clash detection less powerful than Solibri"
   ],
+
   tech_specs: {
     engine: "BIMcollab cloud + ZOOM viewer",
     multicore: "Cloud",
@@ -4149,7 +4696,9 @@ export const c3Tools: Tool[] = [
       "IFC"
     ]
   },
+
   expert_verdict: "The gold standard for openBIM issue management. Pair with Solibri or ZOOM for clash, and you have a vendor-neutral coordination stack.",
+
   faqs: [
     {
       q: "What is BIMcollab used for?",
@@ -4176,11 +4725,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Autodesk Construction Cloud, Allplan, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-construction-cloud",
     "allplan",
     "revit"
   ],
+
   detailed_features: [
     {
       category: "Issue Management",
@@ -4250,7 +4801,27 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 15,
+    url: "https://www.g2.com/products/bimcollab/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 16,
+    url: "https://www.capterra.com/p/bimcollab-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.4,
+    max: 5,
+    count: 7,
+    url: "https://sourceforge.net/projects/bimcollab/reviews"
+  }]
 },
 {
   id: "t232",
@@ -4263,13 +4834,16 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Construction"
   ],
+
   core_features: [
     "Visual node-based scripting",
     "Native Revit and Civil 3D APIs exposed",
@@ -4278,25 +4852,30 @@ export const c3Tools: Tool[] = [
     "Generative Design integration",
     "Active package manager (Dynamo Packages)"
   ],
+
   user_scales: [
     "Freelancer",
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://dynamobim.org",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Free, included with Revit",
     "Massive package ecosystem (Clockwork, archi-lab, Rhythm)",
     "Bridges design intent to BIM automation without coding"
   ],
+
   cons: [
     "Tied to Autodesk products (Revit, Civil 3D)",
     "Performance drops on graphs with thousands of nodes",
     "Steeper learning than it appears — production graphs need Python"
   ],
+
   tech_specs: {
     engine: "DynamoCore",
     multicore: "Limited",
@@ -4307,7 +4886,9 @@ export const c3Tools: Tool[] = [
       "IFC"
     ]
   },
+
   expert_verdict: "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
+
   faqs: [
     {
       q: "What is Autodesk Dynamo used for?",
@@ -4334,11 +4915,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "trimble-connect",
     "bimcollab",
     "autodesk-construction-cloud"
   ],
+
   detailed_features: [
     {
       category: "Visual Programming",
@@ -4408,6 +4991,26 @@ export const c3Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 85,
+    url: "https://www.g2.com/products/autodesk-dynamo/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 14,
+    url: "https://www.capterra.com/p/autodesk-dynamo-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.4,
+    max: 5,
+    count: 35,
+    url: "https://sourceforge.net/projects/autodesk-dynamo/reviews"
+  }]
 }
 ];

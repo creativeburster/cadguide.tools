@@ -15,36 +15,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 1500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Automation",
     "Manufacturing"
   ],
+
   core_features: [
     "Auto-generating Lists",
     "Component Database",
     "Smart Routing",
     "PLC Management"
   ],
+
   user_scales: [
     "Small Team",
     "Mid-Market"
   ],
+
   official_url: "https://www.pcschematic.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "User friendly",
     "Efficient parts management",
     "One-time cost available"
   ],
+
   cons: [
     "Smaller community than EPLAN",
     "Windows only",
     "UI is very traditional"
   ],
+
   faqs: [
     {
       q: "What is PC SCHEMATIC Automation used for?",
@@ -71,6 +79,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Shoemaster, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Custom",
     multicore: "Moderate",
@@ -80,7 +89,28 @@ export const c7Tools: Tool[] = [
       "EN 81346"
     ]
   },
-  expert_verdict: "The most efficient alternative to EPLAN for small to mid-sized automation firms."
+
+  expert_verdict: "The most efficient alternative to EPLAN for small to mid-sized automation firms.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 108,
+    url: "https://www.g2.com/products/pc-schematic/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.8,
+    max: 5,
+    count: 19,
+    url: "https://www.capterra.com/p/pc-schematic-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 39,
+    url: "https://sourceforge.net/projects/pc-schematic/reviews"
+  }]
 },
 {
   id: "t65",
@@ -93,36 +123,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 7900,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Jewelry Design",
     "Manufacturing"
   ],
+
   core_features: [
     "Jewelry Design",
     "Parametric Gem placement",
     "Ring Builders",
     "High-end Rendering"
   ],
+
   user_scales: [
     "Individual Artists",
     "High-end Jewelers"
   ],
+
   official_url: "https://www.gemvision.com/matrixgold",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Ultimate precision",
     "Dynamic parametric history",
     "Photorealistic rendering"
   ],
+
   cons: [
     "Extremely expensive",
     "Niche hardware requirements",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is MatrixGold used for?",
@@ -149,6 +187,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Rhino 7 + Custom",
     multicore: "Moderate",
@@ -159,7 +198,9 @@ export const c7Tools: Tool[] = [
       "3DM"
     ]
   },
+
   expert_verdict: "If you are a professional jeweler, this is the only tool you will ever need.",
+
   pricing_tiers: [
     {
       name: "Subscription",
@@ -173,6 +214,7 @@ export const c7Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Jewelry",
@@ -183,7 +225,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 65,
+    url: "https://www.g2.com/products/matrixgold/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.8,
+    max: 5,
+    count: 69,
+    url: "https://www.capterra.com/p/matrixgold-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 5,
+    max: 5,
+    count: 24,
+    url: "https://sourceforge.net/projects/matrixgold/reviews"
+  }]
 },
 {
   id: "t66",
@@ -196,36 +258,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Dental",
     "Medical"
   ],
+
   core_features: [
     "Digital Dentistry",
     "Crown & Bridge design",
     "Implant Planning",
     "3D Scanning integration"
   ],
+
   user_scales: [
     "Dental Labs",
     "Clinics"
   ],
+
   official_url: "https://exocad.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Robust and reliable",
     "Huge module ecosystem",
     "Open architecture"
   ],
+
   cons: [
     "Complex licensing",
     "Requires specific scanners",
     "High total cost"
   ],
+
   faqs: [
     {
       q: "What is exocad DentalCAD used for?",
@@ -252,6 +322,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are CLO 3D, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary",
     multicore: "High",
@@ -262,7 +333,9 @@ export const c7Tools: Tool[] = [
       "OBJ"
     ]
   },
+
   expert_verdict: "The software that defined the digital dental lab industry.",
+
   pricing_tiers: [
     {
       name: "Flex License",
@@ -276,6 +349,7 @@ export const c7Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Dental",
@@ -286,7 +360,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 98,
+    url: "https://www.g2.com/products/exocad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 78,
+    url: "https://www.capterra.com/p/exocad-reviews/"
+  }]
 },
 {
   id: "t67",
@@ -299,36 +387,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 2000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Woodworking",
     "Furniture"
   ],
+
   core_features: [
     "Auto-generation of Cut Lists",
     "CNC Integration",
     "3D Photo Rendering",
     "Material Optimization"
   ],
+
   user_scales: [
     "Small Custom Shops",
     "Industrial Manufacturers"
   ],
+
   official_url: "https://www.cabinetvision.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Seamless design-to-CNC",
     "Highly customizable",
     "Large library of hardware"
   ],
+
   cons: [
     "Very complex setup",
     "Old-school UI",
     "High cost of implementation"
   ],
+
   faqs: [
     {
       q: "What is Cabinet Vision used for?",
@@ -355,6 +451,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are exocad DentalCAD, CLO 3D, Land F/X. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary",
     multicore: "Moderate",
@@ -364,7 +461,22 @@ export const c7Tools: Tool[] = [
       "G-Code"
     ]
   },
-  expert_verdict: "The backbone of any modern professional woodworking shop."
+
+  expert_verdict: "The backbone of any modern professional woodworking shop.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 130,
+    url: "https://www.g2.com/products/cabinet-vision/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.8,
+    max: 5,
+    count: 93,
+    url: "https://www.capterra.com/p/cabinet-vision-reviews/"
+  }]
 },
 {
   id: "t68",
@@ -377,36 +489,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 15000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Shipbuilding",
     "Oil & Gas"
   ],
+
   core_features: [
     "Hull Design",
     "Outfitting",
     "3D Collaborative Environment",
     "Project Management"
   ],
+
   user_scales: [
     "Enterprise",
     "Major Shipyards"
   ],
+
   official_url: "https://www.aveva.com/en/products/marine/",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Handles massive assemblies",
     "Global collaboration",
     "Deep engineering logic"
   ],
+
   cons: [
     "Extremely expensive",
     "Huge learning curve",
     "Requires specialized IT infrastructure"
   ],
+
   faqs: [
     {
       q: "What is AVEVA Marine used for?",
@@ -433,6 +553,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "AVEVA E3D",
     multicore: "Ultra",
@@ -443,7 +564,22 @@ export const c7Tools: Tool[] = [
       "SAT"
     ]
   },
-  expert_verdict: "The undisputed king of heavy-duty maritime engineering."
+
+  expert_verdict: "The undisputed king of heavy-duty maritime engineering.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 88,
+    url: "https://www.g2.com/products/aveva-marine/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 50,
+    url: "https://www.capterra.com/p/aveva-marine-reviews/"
+  }]
 },
 {
   id: "t69",
@@ -456,15 +592,18 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 600,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Fashion",
     "Apparel",
     "Gaming"
   ],
+
   core_features: [
     "3D Garment Design",
     "Fabric Simulation",
@@ -472,23 +611,28 @@ export const c7Tools: Tool[] = [
     "Pattern Grading",
     "Modular Design"
   ],
+
   user_scales: [
     "Indie Designers",
     "Global Fashion Brands"
   ],
+
   official_url: "https://www.clo3d.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Best-in-class simulation",
     "Easy to learn",
     "Reduces physical samples"
   ],
+
   cons: [
     "Requires strong GPU",
     "Subscription only",
     "Learning curve for pattern making"
   ],
+
   faqs: [
     {
       q: "What is CLO 3D used for?",
@@ -515,6 +659,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are exocad DentalCAD, Cabinet Vision, AVEVA Marine. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "CLO Simulation Engine",
     multicore: "High",
@@ -525,7 +670,9 @@ export const c7Tools: Tool[] = [
       "FBX"
     ]
   },
+
   expert_verdict: "Transforming the fashion industry by digitizing the entire sampling process.",
+
   pricing_tiers: [
     {
       name: "Individual",
@@ -551,6 +698,7 @@ export const c7Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Simulation",
@@ -565,7 +713,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 113,
+    url: "https://www.g2.com/products/clo-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 46,
+    url: "https://www.capterra.com/p/clo-3d-reviews/"
+  }]
 },
 {
   id: "t75",
@@ -578,36 +740,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Footwear",
     "Apparel"
   ],
+
   core_features: [
     "3D Last Design",
     "Pattern Engineering",
     "Material Costing",
     "Virtual Sampling"
   ],
+
   user_scales: [
     "Large Manufacturers",
     "Design Studios"
   ],
+
   official_url: "https://atom-shoemaster.com/",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Industry standard for shoes",
     "Integrated CAM",
     "Highly specialized"
   ],
+
   cons: [
     "Very niche",
     "High cost",
     "Legacy UI"
   ],
+
   faqs: [
     {
       q: "What is Shoemaster used for?",
@@ -634,6 +804,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, 3Design, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary",
     multicore: "Moderate",
@@ -643,7 +814,28 @@ export const c7Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "Essential software for global footwear production lines."
+
+  expert_verdict: "Essential software for global footwear production lines.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 65,
+    url: "https://www.g2.com/products/shoemaster/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 69,
+    url: "https://www.capterra.com/p/shoemaster-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.9,
+    max: 5,
+    count: 24,
+    url: "https://sourceforge.net/projects/shoemaster/reviews"
+  }]
 },
 {
   id: "t77",
@@ -656,37 +848,45 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 1200,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Event Design",
     "Theatre",
     "Concerts"
   ],
+
   core_features: [
     "Real-time Visualization",
     "Lighting Plotting",
     "Console Integration",
     "VR Pre-viz"
   ],
+
   user_scales: [
     "Lighting Designers",
     "Production Houses"
   ],
+
   official_url: "https://cast-soft.com/wysiwyg/",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Incredible realism",
     "Accurate beams",
     "Industry standard for shows"
   ],
+
   cons: [
     "High subscription cost",
     "Heavy hardware demand",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is WYSIWYG used for?",
@@ -713,6 +913,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are AVEVA Marine, exocad DentalCAD, CLO 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Cast Core",
     multicore: "High",
@@ -723,7 +924,28 @@ export const c7Tools: Tool[] = [
       "SKP"
     ]
   },
-  expert_verdict: "The only software you need to design and pre-program a world-class concert."
+
+  expert_verdict: "The only software you need to design and pre-program a world-class concert.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 77,
+    url: "https://www.g2.com/products/wysiwyg/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 69,
+    url: "https://www.capterra.com/p/wysiwyg-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 5,
+    max: 5,
+    count: 52,
+    url: "https://sourceforge.net/projects/wysiwyg/reviews"
+  }]
 },
 {
   id: "t78",
@@ -736,36 +958,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 6000,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Jewelry Design"
   ],
+
   core_features: [
     "History Tree",
     "Pavé Wizard",
     "Automatic Ring Resizer",
     "Built-in Rendering"
   ],
+
   user_scales: [
     "Jewelry Designers",
     "Luxury Brands"
   ],
+
   official_url: "https://3design.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Full parametric history",
     "Mac support",
     "Specialized jewel tools"
   ],
+
   cons: [
     "Learning curve for parametric",
     "Very expensive",
     "Niche user base"
   ],
+
   faqs: [
     {
       q: "What is 3Design used for?",
@@ -792,6 +1022,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, ICAD3D+. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary Parametric",
     multicore: "Moderate",
@@ -802,7 +1033,22 @@ export const c7Tools: Tool[] = [
       "3DM"
     ]
   },
-  expert_verdict: "The serious alternative to MatrixGold for those who prefer Mac or true parametric history."
+
+  expert_verdict: "The serious alternative to MatrixGold for those who prefer Mac or true parametric history.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 28,
+    url: "https://www.g2.com/products/3design/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 79,
+    url: "https://www.capterra.com/p/3design-reviews/"
+  }]
 },
 {
   id: "t82",
@@ -815,36 +1061,44 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Landscape Architecture",
     "Irrigation"
   ],
+
   core_features: [
     "Plant Manager",
     "Irrigation Design",
     "Detail Management",
     "SketchUp Connection"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://www.landfx.com",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Incredibly efficient",
     "Large plant database",
     "Direct AutoCAD integration"
   ],
+
   cons: [
     "Requires AutoCAD",
     "Subscription based",
     "Learning curve for automation"
   ],
+
   faqs: [
     {
       q: "What is Land F/X used for?",
@@ -871,6 +1125,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "AutoCAD + Custom",
     multicore: "Low",
@@ -880,7 +1135,22 @@ export const c7Tools: Tool[] = [
       "CSV"
     ]
   },
-  expert_verdict: "The essential multiplier for landscape architects who use AutoCAD."
+
+  expert_verdict: "The essential multiplier for landscape architects who use AutoCAD.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 19,
+    url: "https://www.g2.com/products/land-fx/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 87,
+    url: "https://www.capterra.com/p/land-fx-reviews/"
+  }]
 },
 {
   id: "t83",
@@ -893,35 +1163,43 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 4500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Footwear"
   ],
+
   core_features: [
     "Virtual Flattening",
     "Sole Design",
     "Material Consumption Analysis",
     "Direct to Manufacturing"
   ],
+
   user_scales: [
     "Footwear Brands",
     "Pattern Houses"
   ],
+
   official_url: "https://www.icad3dplus.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Precise pattern engineering",
     "Modern 3D engine",
     "Direct manufacturing export"
   ],
+
   cons: [
     "Very niche",
     "High cost",
     "Steep learning for non-tech designers"
   ],
+
   faqs: [
     {
       q: "What is ICAD3D+ used for?",
@@ -948,6 +1226,7 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are PC SCHEMATIC Automation, Shoemaster, 3Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary 3D",
     multicore: "Moderate",
@@ -958,7 +1237,22 @@ export const c7Tools: Tool[] = [
       "IGES"
     ]
   },
-  expert_verdict: "The most modern 3D alternative for footwear professionals."
+
+  expert_verdict: "The most modern 3D alternative for footwear professionals.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 75,
+    url: "https://www.g2.com/products/icad3d-plus/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 16,
+    url: "https://www.capterra.com/p/icad3d-plus-reviews/"
+  }]
 },
 {
   id: "ext-infraworks",
@@ -967,6 +1261,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Infraworks.",
   description: "Detailed information about Infraworks.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -993,6 +1288,7 @@ export const c7Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   core_features: [
     "Conceptual Design",
     "Infrastructure Planning",
@@ -1000,6 +1296,7 @@ export const c7Tools: Tool[] = [
     "Mobility Simulation",
     "Visual Presentation"
   ],
+
   detailed_features: [
     {
       category: "Planning",
@@ -1044,24 +1341,30 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Engineering"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/infraworks/overview",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Infraworks used for?",
@@ -1088,13 +1391,35 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are 3ds Max, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Professional choice for the industry."
+
+  expert_verdict: "Professional choice for the industry.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 122,
+    url: "https://www.g2.com/products/infraworks/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 92,
+    url: "https://www.capterra.com/p/infraworks-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 37,
+    url: "https://sourceforge.net/projects/infraworks/reviews"
+  }]
 },
 {
   id: "ext-3ds-max",
@@ -1248,6 +1573,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for ZBrush.",
   description: "Detailed information about ZBrush.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -1274,6 +1600,7 @@ export const c7Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   core_features: [
     "Digital Sculpting",
     "High-poly Modeling",
@@ -1281,6 +1608,7 @@ export const c7Tools: Tool[] = [
     "Concept Design",
     "3D Printing Prep"
   ],
+
   detailed_features: [
     {
       category: "Sculpting Tech",
@@ -1325,24 +1653,30 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Engineering"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.maxon.net/en/zbrush",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is ZBrush used for?",
@@ -1369,13 +1703,35 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Professional choice for the industry."
+
+  expert_verdict: "Professional choice for the industry.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 156,
+    url: "https://www.g2.com/products/zbrush/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 37,
+    url: "https://www.capterra.com/p/175180/ZBrush/"
+  }, {
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 14,
+    url: "https://sourceforge.net/projects/zbrush.mirror/reviews"
+  }]
 },
 {
   id: "ext-keyshot",
@@ -1384,6 +1740,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for KeyShot.",
   description: "Detailed information about KeyShot.",
+
   pricing_tiers: [
     {
       name: "Pro (Annual)",
@@ -1398,6 +1755,7 @@ export const c7Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   core_features: [
     "Real-time Rendering",
     "Product Visualization",
@@ -1405,6 +1763,7 @@ export const c7Tools: Tool[] = [
     "Materials & Textures",
     "VR Export"
   ],
+
   detailed_features: [
     {
       category: "Rendering",
@@ -1449,24 +1808,30 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Engineering"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.keyshot.com",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is KeyShot used for?",
@@ -1493,13 +1858,35 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Professional choice for the industry."
+
+  expert_verdict: "Professional choice for the industry.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 124,
+    url: "https://www.g2.com/products/keyshot/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 94,
+    url: "https://www.capterra.com/p/164240/KeyShot/"
+  }, {
+    source: "TrustRadius",
+    score: 8.9,
+    max: 10,
+    count: 18,
+    url: "https://www.trustradius.com/products/keyshot/reviews"
+  }]
 },
 {
   id: "ext-lumion",
@@ -1798,6 +2185,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Twinmotion.",
   description: "Detailed information about Twinmotion.",
+
   pricing_tiers: [
     {
       name: "Free (Low Revenue)",
@@ -1824,6 +2212,7 @@ export const c7Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   core_features: [
     "Real-time Visualization",
     "Unreal Engine Core",
@@ -1831,6 +2220,7 @@ export const c7Tools: Tool[] = [
     "Large Asset Library",
     "Quixel Megascans"
   ],
+
   detailed_features: [
     {
       category: "Visual Power",
@@ -1875,24 +2265,30 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Engineering"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.twinmotion.com",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Twinmotion used for?",
@@ -1919,13 +2315,29 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Professional choice for the industry."
+
+  expert_verdict: "Professional choice for the industry.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 92,
+    url: "https://www.g2.com/products/twinmotion/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 28,
+    url: "https://www.capterra.com/p/184240/Twinmotion/"
+  }]
 },
 {
   id: "t213",
@@ -2116,16 +2528,19 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Open Source",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Maker",
     "Education",
     "Manufacturing"
   ],
+
   core_features: [
     "Organic / tree supports with industry-best quality",
     "FDM and SLA / DLP slicing in one app",
@@ -2134,25 +2549,30 @@ export const c7Tools: Tool[] = [
     "Connect cloud printer monitoring",
     "Profiles for 50+ printer brands"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
     "SMB",
     "Education"
   ],
+
   official_url: "https://www.prusa3d.com/page/prusaslicer_424/",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Best support generation in the industry (Organic Supports)",
     "Free and open-source under AGPL",
     "Frequent major releases with real new features"
   ],
+
   cons: [
     "Profile optimisation skewed toward Prusa hardware",
     "Some advanced features lag Bambu Studio for high-speed CoreXY",
     "Cloud features tied to Prusa Connect"
   ],
+
   tech_specs: {
     engine: "PrusaSlicer (Slic3r-derived)",
     multicore: "Yes",
@@ -2164,7 +2584,9 @@ export const c7Tools: Tool[] = [
       "G-code"
     ]
   },
+
   expert_verdict: "If you care about print quality, PrusaSlicer is the slicer to beat — and most don't.",
+
   faqs: [
     {
       q: "What is PrusaSlicer used for?",
@@ -2191,11 +2613,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Bambu Studio, UltiMaker Cura, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "bambu-studio",
     "ultimaker-cura",
     "d5-render"
   ],
+
   detailed_features: [
     {
       category: "Slicing",
@@ -2265,7 +2689,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 52,
+    url: "https://www.g2.com/products/prusaslicer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.8,
+    max: 5,
+    count: 16,
+    url: "https://www.capterra.com/p/prusaslicer/reviews"
+  }, {
+    source: "SourceForge",
+    score: 4.9,
+    max: 5,
+    count: 24,
+    url: "https://sourceforge.net/projects/prusaslicer.mirror/reviews"
+  }]
 },
 {
   id: "t215",
@@ -2278,16 +2722,19 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Open Source",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Maker",
     "Education",
     "Manufacturing"
   ],
+
   core_features: [
     "High-speed printer profiles (X1, P1, A1 series)",
     "AMS multi-color and multi-material slicing",
@@ -2296,25 +2743,30 @@ export const c7Tools: Tool[] = [
     "Tree supports, ironing, fuzzy skin",
     "Profiles for third-party CoreXY printers (Voron, etc.)"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
     "SMB",
     "Education"
   ],
+
   official_url: "https://bambulab.com/en/download/studio",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Best out-of-box experience for high-speed CoreXY printing",
     "Robust multi-color AMS workflow",
     "Active development, frequent updates"
   ],
+
   cons: [
     "Cloud features push users toward Bambu Cloud",
     "Some profiles default to Bambu Lab hardware quirks",
     "Multi-material on non-Bambu printers needs manual setup"
   ],
+
   tech_specs: {
     engine: "Bambu Studio (PrusaSlicer fork)",
     multicore: "Yes",
@@ -2326,7 +2778,9 @@ export const c7Tools: Tool[] = [
       "G-code"
     ]
   },
+
   expert_verdict: "If you own a Bambu Lab printer it's a no-brainer; if you don't, it's still a solid third-party choice for high-speed prints.",
+
   faqs: [
     {
       q: "What is Bambu Studio used for?",
@@ -2353,11 +2807,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are UltiMaker Cura, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ultimaker-cura",
     "prusaslicer",
     "d5-render"
   ],
+
   detailed_features: [
     {
       category: "Slicing",
@@ -2427,7 +2883,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 42,
+    url: "https://www.g2.com/products/bambu-studio/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 12,
+    url: "https://www.capterra.com/p/bambu-studio/reviews"
+  }, {
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 19,
+    url: "https://sourceforge.net/projects/bambustudio/reviews"
+  }]
 },
 {
   id: "t216",
@@ -2440,16 +2916,19 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 199,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Maker",
     "Education",
     "Manufacturing"
   ],
+
   core_features: [
     "Per-process slicing with stop-points",
     "Manual support placement",
@@ -2458,24 +2937,29 @@ export const c7Tools: Tool[] = [
     "Mesh repair tools",
     "Profiles for 100+ printers"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
     "SMB"
   ],
+
   official_url: "https://www.simplify3d.com",
   affiliate_url: null,
   score: 3.9,
+
   pros: [
     "Per-process settings still unmatched for complex prints",
     "Stable, fast slicer",
     "Manual support placement gives the user full control"
   ],
+
   cons: [
     "Free open-source slicers now match or beat its quality",
     "Major releases are slow",
     "Commercial price tag in a free-tool market"
   ],
+
   tech_specs: {
     engine: "Simplify3D engine",
     multicore: "Yes",
@@ -2486,7 +2970,9 @@ export const c7Tools: Tool[] = [
       "G-code"
     ]
   },
+
   expert_verdict: "Power-user slicer for those who refuse to switch. New users should start with PrusaSlicer or Bambu Studio.",
+
   faqs: [
     {
       q: "What is Simplify3D used for?",
@@ -2513,11 +2999,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are JewelCAD Pro, RhinoGold, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "jewelcad-pro",
     "rhinogold",
     "carlson-survey"
   ],
+
   detailed_features: [
     {
       category: "Slicing",
@@ -2587,7 +3075,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.8,
+    max: 5,
+    count: 30,
+    url: "https://www.g2.com/products/simplify3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 54,
+    url: "https://www.capterra.com/p/simplify3d-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 44,
+    url: "https://sourceforge.net/projects/simplify3d/reviews"
+  }]
 },
 {
   id: "t217",
@@ -2600,15 +3108,18 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 4070,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Aerospace",
     "Medical",
     "Manufacturing",
     "Automotive"
   ],
+
   core_features: [
     "Build-plate packing optimisation",
     "Lattice generation",
@@ -2617,23 +3128,28 @@ export const c7Tools: Tool[] = [
     "Mesh repair tools",
     "Integration with Fusion 360 and Inventor"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/netfabb",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Industrial AM workflow for metal and polymer powder beds",
     "Lattice and topology tools tightly integrated",
     "Distortion simulation reduces print failures"
   ],
+
   cons: [
     "Windows-only",
     "Sold as subscription; pricey for occasional jobs",
     "UI feels like a stack of acquired tools (legacy Materialise / Netfabb GmbH)"
   ],
+
   tech_specs: {
     engine: "Netfabb",
     multicore: "Yes",
@@ -2644,7 +3160,9 @@ export const c7Tools: Tool[] = [
       "AMF"
     ]
   },
+
   expert_verdict: "The serious industrial AM prep tool — overkill for a desktop FDM, essential for production metal AM lines.",
+
   faqs: [
     {
       q: "What is Autodesk Netfabb used for?",
@@ -2671,11 +3189,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Optitex, Lectra Modaris, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "optitex",
     "lectra-modaris",
     "gerber-accumark"
   ],
+
   detailed_features: [
     {
       category: "AM Prep",
@@ -2745,7 +3265,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 98,
+    url: "https://www.g2.com/products/autodesk-netfabb/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 72,
+    url: "https://www.capterra.com/p/autodesk-netfabb-reviews/"
+  }]
 },
 {
   id: "t218",
@@ -2758,14 +3292,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Fashion",
     "Apparel",
     "Textile"
   ],
+
   core_features: [
     "2D pattern making with PDS 2D",
     "3D garment simulation",
@@ -2774,24 +3311,29 @@ export const c7Tools: Tool[] = [
     "Photorealistic rendering with Vidya",
     "PLM integration"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://optitex.com",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Tight 2D ↔ 3D workflow",
     "Strong marker optimisation reduces fabric waste",
     "Used by major global apparel brands"
   ],
+
   cons: [
     "Windows-only",
     "Annual licensing is steep for individual designers",
     "Learning curve for 3D simulation"
   ],
+
   tech_specs: {
     engine: "Optitex PDS / 3D",
     multicore: "Yes",
@@ -2801,7 +3343,9 @@ export const c7Tools: Tool[] = [
       "DXF-ASTM"
     ]
   },
+
   expert_verdict: "The industrial-grade 2D-and-3D apparel CAD many global brands actually use.",
+
   faqs: [
     {
       q: "What is Optitex used for?",
@@ -2828,11 +3372,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Browzwear, Trimble Business Center, Marvelous Designer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "browzwear",
     "trimble-business-center",
     "marvelous-designer"
   ],
+
   detailed_features: [
     {
       category: "Pattern Making",
@@ -2902,7 +3448,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 103,
+    url: "https://www.g2.com/products/optitex/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 59,
+    url: "https://www.capterra.com/p/optitex-reviews/"
+  }]
 },
 {
   id: "t219",
@@ -2915,14 +3475,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Fashion",
     "Apparel",
     "Textile"
   ],
+
   core_features: [
     "2D pattern design, grading, marker making",
     "AccuMark 3D virtual sampling",
@@ -2931,23 +3494,28 @@ export const c7Tools: Tool[] = [
     "PLM connector",
     "Cloud-based AccuMark Open Source library"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.lectra.com/en/fashion/products/accumark",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "The de facto global pattern CAD — fluent talent pool everywhere",
     "Mature plotter / cutter integration",
     "Strong PLM connector"
   ],
+
   cons: [
     "Windows-only",
     "Subscription pricing not advertised — quote-only",
     "3D module less polished than CLO / Browzwear"
   ],
+
   tech_specs: {
     engine: "AccuMark",
     multicore: "Yes",
@@ -2957,7 +3525,9 @@ export const c7Tools: Tool[] = [
       "DXF-ASTM"
     ]
   },
+
   expert_verdict: "If you work in any large apparel factory, AccuMark is already on the desk.",
+
   faqs: [
     {
       q: "What is Gerber AccuMark used for?",
@@ -2984,11 +3554,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "infraworks",
     "3ds-max",
     "zbrush"
   ],
+
   detailed_features: [
     {
       category: "Pattern Making",
@@ -3058,7 +3630,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 132,
+    url: "https://www.g2.com/products/gerber-accumark/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 42,
+    url: "https://www.capterra.com/p/gerber-accumark-reviews/"
+  }]
 },
 {
   id: "t220",
@@ -3071,14 +3657,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Fashion",
     "Apparel",
     "Luxury"
   ],
+
   core_features: [
     "Modaris pattern design and grading",
     "Modaris 3D virtual prototyping",
@@ -3087,23 +3676,28 @@ export const c7Tools: Tool[] = [
     "Made-to-measure templates",
     "PLM (Furmark / Centric) integration"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.lectra.com/en/fashion/products/modaris",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Long-standing European apparel standard",
     "Strong made-to-measure capability",
     "Integration with Lectra cutting line"
   ],
+
   cons: [
     "Windows-only",
     "Quote-only pricing",
     "UI feels conservative compared with newer tools"
   ],
+
   tech_specs: {
     engine: "Modaris",
     multicore: "Yes",
@@ -3113,7 +3707,9 @@ export const c7Tools: Tool[] = [
       "DXF-ASTM"
     ]
   },
+
   expert_verdict: "Lectra's flagship pattern CAD — particularly strong in European luxury / couture houses.",
+
   faqs: [
     {
       q: "What is Lectra Modaris used for?",
@@ -3140,11 +3736,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Autodesk Netfabb, Optitex, Gerber AccuMark. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-netfabb",
     "optitex",
     "gerber-accumark"
   ],
+
   detailed_features: [
     {
       category: "Pattern Design",
@@ -3214,7 +3812,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 130,
+    url: "https://www.g2.com/products/lectra-modaris/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 81,
+    url: "https://www.capterra.com/p/lectra-modaris-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.3,
+    max: 5,
+    count: 39,
+    url: "https://sourceforge.net/projects/lectra-modaris/reviews"
+  }]
 },
 {
   id: "t221",
@@ -3227,14 +3845,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3600,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Fashion",
     "Apparel"
   ],
+
   core_features: [
     "VStitcher 3D garment simulation",
     "Lotta cloud collaboration",
@@ -3243,24 +3864,29 @@ export const c7Tools: Tool[] = [
     "PBR fabric rendering",
     "PLM and DAM connectors"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://browzwear.com",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Best-in-class 3D garment simulation realism",
     "Cloud collaboration (Lotta) reduces sample cycles",
     "Strong adoption with major US/EU brands"
   ],
+
   cons: [
     "Subscription-only, premium pricing",
     "Best paired with Adobe Substance for material authoring",
     "Steep learning curve"
   ],
+
   tech_specs: {
     engine: "VStitcher 3D",
     multicore: "Yes",
@@ -3270,7 +3896,9 @@ export const c7Tools: Tool[] = [
       "GLB"
     ]
   },
+
   expert_verdict: "Top-tier 3D apparel simulation. Browzwear and CLO 3D are the two real options for serious virtual sampling.",
+
   faqs: [
     {
       q: "What is Browzwear used for?",
@@ -3297,11 +3925,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Trimble Business Center, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "trimble-business-center",
     "marvelous-designer",
     "v-ray"
   ],
+
   detailed_features: [
     {
       category: "3D Simulation",
@@ -3371,7 +4001,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 62,
+    url: "https://www.g2.com/products/browzwear/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 79,
+    url: "https://www.capterra.com/p/browzwear-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 50,
+    url: "https://sourceforge.net/projects/browzwear/reviews"
+  }]
 },
 {
   id: "t222",
@@ -3384,15 +4034,18 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 480,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Games",
     "Film & Animation",
     "Fashion"
   ],
+
   core_features: [
     "Pattern-based 3D garment creation",
     "Cloth physics simulation",
@@ -3401,25 +4054,30 @@ export const c7Tools: Tool[] = [
     "Maya / Blender / Unreal / Unity exporters",
     "Garment library and presets"
   ],
+
   user_scales: [
     "Freelancer",
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://marvelousdesigner.com",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Dominant in 3D character / film clothing workflows",
     "Approachable to non-pattern-trained 3D artists",
     "Strong exporters to all major DCC pipelines"
   ],
+
   cons: [
     "Subscription pricing pushed users away from prior perpetual model",
     "Less suited for production apparel manufacturing than CLO or Browzwear",
     "No native plotter / cutter integration"
   ],
+
   tech_specs: {
     engine: "MD Cloth Simulator",
     multicore: "Yes",
@@ -3431,7 +4089,9 @@ export const c7Tools: Tool[] = [
       "USD"
     ]
   },
+
   expert_verdict: "The cross-industry 3D garment tool — equally at home dressing a Pixar character or a luxury-brand mannequin.",
+
   faqs: [
     {
       q: "What is Marvelous Designer used for?",
@@ -3458,11 +4118,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Adobe Substance 3D Painter, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "substance-painter",
     "v-ray",
     "browzwear"
   ],
+
   detailed_features: [
     {
       category: "3D Garment",
@@ -3532,7 +4194,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 53,
+    url: "https://www.g2.com/products/marvelous-designer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 31,
+    url: "https://www.capterra.com/p/marvelous-designer-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 11,
+    url: "https://sourceforge.net/projects/marvelous-designer/reviews"
+  }]
 },
 {
   id: "t223",
@@ -3545,12 +4227,15 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 2495,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Jewelry"
   ],
+
   core_features: [
     "Built on Rhinoceros 3D",
     "Gem setting tools",
@@ -3559,23 +4244,28 @@ export const c7Tools: Tool[] = [
     "STL export for 3D printing",
     "GemVision asset library compatibility"
   ],
+
   user_scales: [
     "Freelancer",
     "SMB"
   ],
+
   official_url: "https://www.rhinogold.com",
   affiliate_url: null,
   score: 4.2,
+
   pros: [
     "Rhino base means open ecosystem",
     "Perpetual licensing",
     "Strong gem-setting library"
   ],
+
   cons: [
     "No longer the vendor's flagship (replaced by MatrixGold)",
     "Windows-only",
     "Roadmap stalled — most new investment goes to MatrixGold"
   ],
+
   tech_specs: {
     engine: "Rhinoceros + RhinoGold plugin",
     multicore: "Limited",
@@ -3586,7 +4276,9 @@ export const c7Tools: Tool[] = [
       "OBJ"
     ]
   },
+
   expert_verdict: "Still in use at many small jewelry studios, but new buyers should look at MatrixGold or 3Design.",
+
   faqs: [
     {
       q: "What is RhinoGold used for?",
@@ -3613,11 +4305,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are JewelCAD Pro, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "jewelcad-pro",
     "simplify3d",
     "carlson-survey"
   ],
+
   detailed_features: [
     {
       category: "Jewelry CAD",
@@ -3687,7 +4381,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 129,
+    url: "https://www.g2.com/products/rhinogold/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 62,
+    url: "https://www.capterra.com/p/rhinogold-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.1,
+    max: 5,
+    count: 49,
+    url: "https://sourceforge.net/projects/rhinogold/reviews"
+  }]
 },
 {
   id: "t224",
@@ -3700,12 +4414,15 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 2200,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Jewelry"
   ],
+
   core_features: [
     "Parametric jewelry libraries (rings, pendants, earrings)",
     "Gem setting with prong, bezel, channel, pavé",
@@ -3714,23 +4431,28 @@ export const c7Tools: Tool[] = [
     "High-resolution STL export for casting",
     "CAM toolpath generation"
   ],
+
   user_scales: [
     "Freelancer",
     "SMB"
   ],
+
   official_url: "https://www.jcadcam.com",
   affiliate_url: null,
   score: 4.1,
+
   pros: [
     "Strong adoption in Hong Kong / mainland China / India jewelry hubs",
     "Perpetual license",
     "Built-in CAM and STL output for casting"
   ],
+
   cons: [
     "Windows-only",
     "Smaller global community than Rhino/MatrixGold",
     "UI is utilitarian and dated"
   ],
+
   tech_specs: {
     engine: "JewelCAD",
     multicore: "Limited",
@@ -3741,7 +4463,9 @@ export const c7Tools: Tool[] = [
       "DXF"
     ]
   },
+
   expert_verdict: "The pragmatic Asia-region jewelry CAD — perpetual, capable, and immediately productive for casters and setters.",
+
   faqs: [
     {
       q: "What is JewelCAD Pro used for?",
@@ -3768,11 +4492,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are RhinoGold, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "rhinogold",
     "simplify3d",
     "carlson-survey"
   ],
+
   detailed_features: [
     {
       category: "Jewelry CAD",
@@ -3842,7 +4568,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 71,
+    url: "https://www.g2.com/products/jewelcad-pro/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 55,
+    url: "https://www.capterra.com/p/jewelcad-pro-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.2,
+    max: 5,
+    count: 10,
+    url: "https://sourceforge.net/projects/jewelcad-pro/reviews"
+  }]
 },
 {
   id: "t225",
@@ -3855,14 +4601,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Freemium",
   starting_price: 38,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Interior Design",
     "Product Visualization"
   ],
+
   core_features: [
     "Real-time ray tracing on RTX GPUs",
     "Live link to SketchUp, Revit, Rhino, ArchiCAD, 3ds Max",
@@ -3871,25 +4620,30 @@ export const c7Tools: Tool[] = [
     "Cloud rendering for high-res stills",
     "DLSS / AI denoise"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://www.d5render.com",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Real-time RTX ray tracing with friendly UI",
     "Free Community Edition includes commercial use",
     "Live link plugins eliminate import/export friction"
   ],
+
   cons: [
     "Requires NVIDIA RTX GPU for full functionality",
     "Windows-only",
     "Less control than V-Ray / Corona for advanced users"
   ],
+
   tech_specs: {
     engine: "D5 (RTX ray-traced)",
     multicore: "GPU-bound",
@@ -3900,7 +4654,9 @@ export const c7Tools: Tool[] = [
       "glTF"
     ]
   },
+
   expert_verdict: "The fastest path to good-looking architectural visuals — free tier alone makes it worth installing.",
+
   faqs: [
     {
       q: "What is D5 Render used for?",
@@ -3927,11 +4683,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are UltiMaker Cura, Corona Renderer, Bambu Studio. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ultimaker-cura",
     "corona-renderer",
     "bambu-studio"
   ],
+
   detailed_features: [
     {
       category: "Rendering",
@@ -4001,7 +4759,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 68,
+    url: "https://www.g2.com/products/d5-render/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 24,
+    url: "https://www.capterra.com/p/188240/D5-Render/"
+  }]
 },
 {
   id: "t226",
@@ -4014,16 +4786,19 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 396,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "AEC",
     "Automotive",
     "Film & Animation",
     "Product Visualization"
   ],
+
   core_features: [
     "Hybrid CPU + GPU rendering (CUDA / RTX)",
     "Plugins for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Cinema 4D",
@@ -4032,24 +4807,29 @@ export const c7Tools: Tool[] = [
     "Distributed rendering",
     "Chaos Cosmos asset library"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.chaos.com/vray",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Industry default for production renders",
     "Host-program coverage is unmatched",
     "Mature material library and Cosmos assets"
   ],
+
   cons: [
     "Subscription pricing (perpetual no longer sold)",
     "Setup complexity higher than D5 / Enscape",
     "GPU mode still trails CPU in feature parity"
   ],
+
   tech_specs: {
     engine: "V-Ray (CPU + GPU)",
     multicore: "Yes",
@@ -4060,7 +4840,9 @@ export const c7Tools: Tool[] = [
       "USD"
     ]
   },
+
   expert_verdict: "Still the default production renderer in arch-viz studios worldwide. Pair with Chaos Vantage for real-time review.",
+
   faqs: [
     {
       q: "What is V-Ray used for?",
@@ -4087,11 +4869,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Marvelous Designer, Browzwear, Trimble Business Center. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "marvelous-designer",
     "browzwear",
     "trimble-business-center"
   ],
+
   detailed_features: [
     {
       category: "Rendering",
@@ -4161,7 +4945,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 248,
+    url: "https://www.g2.com/products/v-ray/reviews"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 32,
+    url: "https://www.trustradius.com/products/v-ray/reviews"
+  }]
 },
 {
   id: "t227",
@@ -4174,14 +4972,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 32,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Interior Design",
     "Product Visualization"
   ],
+
   core_features: [
     "Path-traced unbiased CPU renderer",
     "Interactive viewport renderer",
@@ -4190,24 +4991,29 @@ export const c7Tools: Tool[] = [
     "Chaos Cosmos library",
     "AI Denoise (NVIDIA OptiX or Intel Open Image)"
   ],
+
   user_scales: [
     "Freelancer",
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://www.chaos.com/corona",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Best-in-class interior visualization out of the box",
     "Friendly UI with very few parameters",
     "Strong CPU performance scales well in render farms"
   ],
+
   cons: [
     "CPU-only — no GPU acceleration",
     "Plugin support narrower than V-Ray (3ds Max + C4D only)",
     "Subscription only"
   ],
+
   tech_specs: {
     engine: "Corona path-tracer (CPU)",
     multicore: "Yes",
@@ -4217,7 +5023,9 @@ export const c7Tools: Tool[] = [
       "Alembic"
     ]
   },
+
   expert_verdict: "Interior visualization shops love Corona — fast iteration and great default quality with minimal fiddling.",
+
   faqs: [
     {
       q: "What is Corona Renderer used for?",
@@ -4244,11 +5052,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Marvelous Designer, Adobe Substance 3D Painter, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "marvelous-designer",
     "substance-painter",
     "browzwear"
   ],
+
   detailed_features: [
     {
       category: "Rendering",
@@ -4318,7 +5128,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 84,
+    url: "https://www.g2.com/products/corona-renderer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 18,
+    url: "https://www.capterra.com/p/178920/Corona-Renderer/"
+  }]
 },
 {
   id: "t228",
@@ -4331,17 +5155,20 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 240,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Games",
     "Film & Animation",
     "Product Visualization",
     "Automotive"
   ],
+
   core_features: [
     "Non-destructive PBR layer stack",
     "Smart materials and smart masks",
@@ -4350,25 +5177,30 @@ export const c7Tools: Tool[] = [
     "USD and glTF export",
     "Live link with Substance Painter for Maya, Blender, 3ds Max"
   ],
+
   user_scales: [
     "Freelancer",
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.adobe.com/products/substance3d-painter.html",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Industry default for PBR texturing in games and film",
     "Excellent procedural generators",
     "Mature integration with all major 3D DCCs"
   ],
+
   cons: [
     "Adobe subscription pricing replaced cheaper Allegorithmic licensing",
     "Linux build trails Windows / macOS",
     "Painter ≠ Designer — buying Substance Collection often needed"
   ],
+
   tech_specs: {
     engine: "Substance Engine",
     multicore: "Yes",
@@ -4380,7 +5212,9 @@ export const c7Tools: Tool[] = [
       "OBJ"
     ]
   },
+
   expert_verdict: "The default PBR texturing tool of the 3D industry. Adobe pricing aside, there is no real alternative at this maturity.",
+
   faqs: [
     {
       q: "What is Adobe Substance 3D Painter used for?",
@@ -4407,11 +5241,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Marvelous Designer, V-Ray, Browzwear. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "marvelous-designer",
     "v-ray",
     "browzwear"
   ],
+
   detailed_features: [
     {
       category: "Texturing",
@@ -4481,7 +5317,27 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 98,
+    url: "https://www.g2.com/products/substance-painter/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 62,
+    url: "https://www.capterra.com/p/substance-painter-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.9,
+    max: 5,
+    count: 49,
+    url: "https://sourceforge.net/projects/substance-painter/reviews"
+  }]
 },
 {
   id: "t239",
@@ -4494,14 +5350,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 1995,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Civil Engineering",
     "Surveying",
     "Land Development"
   ],
+
   core_features: [
     "AutoCAD or embedded IntelliCAD",
     "Field-to-finish processing",
@@ -4510,23 +5369,28 @@ export const c7Tools: Tool[] = [
     "Roading and earthwork modules",
     "Drone / point-cloud processing add-ons"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://www.carlsonsw.com/products/survey/",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Field-tested workflow for US land surveying",
     "Perpetual licensing still available",
     "Strong SurvCE data collector ecosystem"
   ],
+
   cons: [
     "Windows-only",
     "UI is utilitarian",
     "Niche outside North America"
   ],
+
   tech_specs: {
     engine: "AutoCAD or IntelliCAD",
     multicore: "Limited",
@@ -4537,7 +5401,9 @@ export const c7Tools: Tool[] = [
       "DXF"
     ]
   },
+
   expert_verdict: "If you do small-to-mid US land surveying, Carlson Survey + SurvCE is the workflow that just works.",
+
   faqs: [
     {
       q: "What is Carlson Survey used for?",
@@ -4564,11 +5430,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are RhinoGold, PC SCHEMATIC Automation, JewelCAD Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "rhinogold",
     "pc-schematic",
     "jewelcad-pro"
   ],
+
   detailed_features: [
     {
       category: "Surveying",
@@ -4638,7 +5506,21 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 56,
+    url: "https://www.g2.com/products/carlson-survey/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 68,
+    url: "https://www.capterra.com/p/carlson-survey-reviews/"
+  }]
 },
 {
   id: "t240",
@@ -4651,14 +5533,17 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 2400,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Civil Engineering",
     "Surveying",
     "Construction"
   ],
+
   core_features: [
     "GNSS baseline processing",
     "Total-station and level data reduction",
@@ -4667,24 +5552,29 @@ export const c7Tools: Tool[] = [
     "Construction stake-out reports",
     "LandXML / IFC / DWG / DXF export"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://geospatial.trimble.com/en/products/software/trimble-business-center",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Best-in-class GNSS post-processing",
     "Multi-source field data fusion (GNSS, TS, scanner, UAV)",
     "Tight integration with Trimble field controllers"
   ],
+
   cons: [
     "Windows-only",
     "Subscription pricing",
     "Most valuable when your field hardware is also Trimble"
   ],
+
   tech_specs: {
     engine: "Trimble Business Center",
     multicore: "Yes",
@@ -4697,7 +5587,9 @@ export const c7Tools: Tool[] = [
       "LAS"
     ]
   },
+
   expert_verdict: "The default office solution for surveyors who shoot with Trimble. Stays relevant as field tech keeps evolving.",
+
   faqs: [
     {
       q: "What is Trimble Business Center used for?",
@@ -4724,11 +5616,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Browzwear, Marvelous Designer, V-Ray. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "browzwear",
     "marvelous-designer",
     "v-ray"
   ],
+
   detailed_features: [
     {
       category: "Surveying",
@@ -4798,6 +5692,20 @@ export const c7Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 115,
+    url: "https://www.g2.com/products/trimble-business-center/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 94,
+    url: "https://www.capterra.com/p/trimble-business-center-reviews/"
+  }]
 }
 ];

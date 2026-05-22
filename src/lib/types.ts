@@ -122,7 +122,8 @@ export interface Tool {
       | "TrustRadius"
       | "Gartner Peer Insights"
       | "Software Advice"
-      | "GetApp";
+      | "GetApp"
+      | "SourceForge";
     score: number;
     max: number;
     count: number;

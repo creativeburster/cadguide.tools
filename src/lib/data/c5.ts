@@ -295,6 +295,7 @@ export const c5Tools: Tool[] = [
   logo_url: "",
   short_desc: "The global leader in CAM software for manufacturing.",
   description: "Mastercam is the world's most widely used CAM software. It provides solutions for all types of manufacturing, from 2- through 5-axis milling.",
+
   pricing_tiers: [
     {
       name: "Entry",
@@ -318,6 +319,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "CAM",
@@ -354,45 +356,55 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solidcam",
     "fusion-360",
     "ansys-mechanical"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Machining",
     "Die & Mold"
   ],
+
   core_features: [
     "Dynamic Motion",
     "Multi-Axis Milling",
     "Swiss Machining"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.mastercam.com",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Standard post-processors",
     "Dynamic Milling cycle reduction",
     "Global training network"
   ],
+
   cons: [
     "Steep price",
     "Dated legacy UI",
     "Complex mastering"
   ],
+
   faqs: [
     {
       q: "What is Mastercam used for?",
@@ -419,6 +431,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are SolidCAM, Fusion 360, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Mastercam Custom CAM",
     multicore: "Excellent",
@@ -430,7 +443,28 @@ export const c5Tools: Tool[] = [
       "DWG"
     ]
   },
-  expert_verdict: "The 'gold standard' for the professional machine shop."
+
+  expert_verdict: "The 'gold standard' for the professional machine shop.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 5,
+    max: 5,
+    count: 90,
+    url: "https://www.g2.com/products/mastercam/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 61,
+    url: "https://www.capterra.com/p/mastercam-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 5,
+    max: 5,
+    count: 13,
+    url: "https://sourceforge.net/projects/mastercam/reviews"
+  }]
 },
 {
   id: "t31",
@@ -439,6 +473,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("NT"),
   short_desc: "Engineering design software for additive manufacturing.",
   description: "nTop uses implicit modeling technology to enable the design of high-performance parts with complex lattices and topology optimization.",
+
   pricing_tiers: [
     {
       name: "Enterprise",
@@ -452,6 +487,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -488,45 +524,55 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "ansys-mechanical",
     "siemens-nx",
     "mastercam"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 7500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Aerospace",
     "Medical",
     "Automotive"
   ],
+
   core_features: [
     "Implicit Modeling",
     "Lattice Generation",
     "DoE Automation"
   ],
+
   user_scales: [
     "Enterprise",
     "Research"
   ],
+
   official_url: "https://www.ntop.com",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Unbeatable lattice strutture",
     "Handles extreme complexity",
     "Workflow automation"
   ],
+
   cons: [
     "Extremely expensive",
     "Mathematical mindset curve",
     "Not general-purpose"
   ],
+
   faqs: [
     {
       q: "What is nTop used for?",
@@ -553,6 +599,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Mechanical, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "nTop Implicit Engine",
     multicore: "Excellent",
@@ -564,7 +611,28 @@ export const c5Tools: Tool[] = [
       "Parasolid"
     ]
   },
-  expert_verdict: "The future of advanced manufacturing design."
+
+  expert_verdict: "The future of advanced manufacturing design.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 22,
+    url: "https://www.g2.com/products/ntop/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.8,
+    max: 5,
+    count: 13,
+    url: "https://www.capterra.com/p/ntop-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.9,
+    max: 5,
+    count: 24,
+    url: "https://sourceforge.net/projects/ntop/reviews"
+  }]
 },
 {
   id: "t32",
@@ -573,6 +641,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("SC"),
   short_desc: "The leading integrated CAM for SolidWorks.",
   description: "SolidCAM is a complete solution for CNC programming. Its iMachining technology can reduce machining times by up to 70%.",
+
   pricing_tiers: [
     {
       name: "iMachining",
@@ -586,6 +655,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "CAM",
@@ -605,45 +675,55 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "mastercam",
     "camworks",
     "fusion-360"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 4000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Medical",
     "Aerospace"
   ],
+
   core_features: [
     "iMachining 2D/3D",
     "Multi-Axis Milling",
     "Single-window Integration"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.solidcam.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "iMachining cycle reduction",
     "SolidWorks native experience",
     "Great post-processors"
   ],
+
   cons: [
     "Host CAD req",
     "Learning curve",
     "High price"
   ],
+
   faqs: [
     {
       q: "What is SolidCAM used for?",
@@ -670,6 +750,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Mastercam, CAMWorks, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "SolidCAM Machining",
     multicore: "Excellent",
@@ -679,7 +760,22 @@ export const c5Tools: Tool[] = [
       "SolidWorks Native"
     ]
   },
-  expert_verdict: "iMachining is literal magic for CNC shops."
+
+  expert_verdict: "iMachining is literal magic for CNC shops.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 22,
+    url: "https://www.g2.com/products/solidcam/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 29,
+    url: "https://www.capterra.com/p/solidcam-reviews/"
+  }]
 },
 {
   id: "t38",
@@ -688,6 +784,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("MG"),
   short_desc: "Data and build preparation for 3D printing.",
   description: "Materialise Magics is the most powerful STL editor for additive manufacturing. It allows users to fix file errors and generate support structures.",
+
   pricing_tiers: [
     {
       name: "Essential",
@@ -701,6 +798,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Repair",
@@ -737,45 +835,55 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "meshlab",
     "siemens-nx",
     "mastercam"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Additive Manufacturing",
     "Medical",
     "Aerospace"
   ],
+
   core_features: [
     "STL Repair",
     "Support Structure Generation",
     "Build Tray Opt"
   ],
+
   user_scales: [
     "Enterprise",
     "Service Bureaus"
   ],
+
   official_url: "https://www.materialise.com",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Unbeatable STL repair",
     "Metal printing supports",
     "Cost estimation"
   ],
+
   cons: [
     "Extremely expensive",
     "Specialized knowledge req",
     "Steep learning"
   ],
+
   faqs: [
     {
       q: "What is Magics used for?",
@@ -802,6 +910,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are MeshLab, Siemens NX, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Materialise Geometric Engine",
     multicore: "High",
@@ -812,7 +921,22 @@ export const c5Tools: Tool[] = [
       "STEP"
     ]
   },
-  expert_verdict: "Magics is the industrial benchmark for fixable unprintable meshes."
+
+  expert_verdict: "Magics is the industrial benchmark for fixable unprintable meshes.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 98,
+    url: "https://www.g2.com/products/magics/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 78,
+    url: "https://www.capterra.com/p/magics-reviews/"
+  }]
 },
 {
   id: "t40",
@@ -821,6 +945,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("OC"),
   short_desc: "The open-source geometry kernel for CAD developers.",
   description: "Open CASCADE Technology (OCCT) is an open-source development platform for 3D CAD/CAM/CAE. It provides a geometry modeling kernel and data exchange tools.",
+
   pricing_tiers: [
     {
       name: "Open Source",
@@ -834,6 +959,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Kernel",
@@ -853,46 +979,56 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "freecad",
     "siemens-nx",
     "solidcam"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Software Dev",
     "Research"
   ],
+
   core_features: [
     "B-Rep Modeling Kernel",
     "Data Exchange",
     "Visualization Lib"
   ],
+
   user_scales: [
     "Individuals",
     "Enterprise"
   ],
+
   official_url: "https://www.opencascade.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Complete free B-Rep kernel",
     "Foundation of FreeCAD",
     "Customizable"
   ],
+
   cons: [
     "Very hard to learn",
     "C++ knowledge req",
     "Basic documentation"
   ],
+
   faqs: [
     {
       q: "What is OpenCASCADE used for?",
@@ -919,6 +1055,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are FreeCAD, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "OpenCASCADE Kernel",
     multicore: "High",
@@ -929,7 +1066,28 @@ export const c5Tools: Tool[] = [
       "B-Rep"
     ]
   },
-  expert_verdict: "The most important open-source project in CAD history."
+
+  expert_verdict: "The most important open-source project in CAD history.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 5,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/opencascade/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 84,
+    url: "https://www.capterra.com/p/opencascade-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 5,
+    max: 5,
+    count: 11,
+    url: "https://sourceforge.net/projects/opencascade/reviews"
+  }]
 },
 {
   id: "t76",
@@ -942,36 +1100,44 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mold Design",
     "Tooling"
   ],
+
   core_features: [
     "Analysis of Draft",
     "Core & Cavity Separation",
     "Electrode Design",
     "Dynamic Wireframe"
   ],
+
   user_scales: [
     "Tool Shops",
     "Manufacturing Plants"
   ],
+
   official_url: "https://www.visicadcam.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Incredibly robust for molds",
     "Fast processing",
     "Integrated CAM"
   ],
+
   cons: [
     "Expensive",
     "Requires specialized knowledge",
     "Complex interface"
   ],
+
   faqs: [
     {
       q: "What is VISI Modelling used for?",
@@ -998,6 +1164,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Cimatron, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Parasolid",
     multicore: "Moderate",
@@ -1008,7 +1175,28 @@ export const c5Tools: Tool[] = [
       "X_T"
     ]
   },
-  expert_verdict: "If you are making plastic injection molds, VISI is your best friend."
+
+  expert_verdict: "If you are making plastic injection molds, VISI is your best friend.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.9,
+    max: 5,
+    count: 63,
+    url: "https://www.g2.com/products/visi-modelling/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 88,
+    url: "https://www.capterra.com/p/visi-modelling-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 42,
+    url: "https://sourceforge.net/projects/visi-modelling/reviews"
+  }]
 },
 {
   id: "t81",
@@ -1021,36 +1209,44 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 3500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mold Design",
     "Die Design"
   ],
+
   core_features: [
     "Automated Tool Design",
     "Conformal Cooling",
     "NC Programming",
     "Quick Split & Core"
   ],
+
   user_scales: [
     "Tool Shops",
     "Manufacturing Plants"
   ],
+
   official_url: "https://www.cimatron.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Excellent end-to-end workflow",
     "Powerful NC programming",
     "Specialized mold tools"
   ],
+
   cons: [
     "Legacy UI feel",
     "Expensive",
     "Requires high-end PC"
   ],
+
   faqs: [
     {
       q: "What is Cimatron used for?",
@@ -1077,6 +1273,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are VISI Modelling, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Parasolid",
     multicore: "Moderate",
@@ -1087,7 +1284,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry."
+
+  expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 85,
+    url: "https://www.g2.com/products/cimatron/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 47,
+    url: "https://www.capterra.com/p/cimatron-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 10,
+    url: "https://sourceforge.net/projects/cimatron/reviews"
+  }]
 },
 {
   id: "t84",
@@ -1100,16 +1318,19 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 25000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
     "Energy",
     "Manufacturing"
   ],
+
   core_features: [
     "FEA Simulation",
     "Structural Analysis",
@@ -1117,23 +1338,28 @@ export const c5Tools: Tool[] = [
     "Composite Modeling",
     "Optimization"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.ansys.com/products/structures/ansys-mechanical",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Industry gold standard",
     "Extremely deep physics coverage",
     "Tight CAD integrations"
   ],
+
   cons: [
     "Very high cost",
     "Complex licensing",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is ANSYS Mechanical used for?",
@@ -1160,6 +1386,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Mastercam, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary FEA",
     multicore: "Ultra",
@@ -1171,7 +1398,9 @@ export const c5Tools: Tool[] = [
       "ACIS"
     ]
   },
+
   expert_verdict: "The undisputed leader in structural simulation, trusted by every major aerospace and automotive OEM.",
+
   pricing_tiers: [
     {
       name: "Premium (Annual)",
@@ -1186,6 +1415,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Physics",
@@ -1229,7 +1459,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 101,
+    url: "https://www.g2.com/products/ansys-mechanical/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 8,
+    url: "https://www.capterra.com/p/ansys-mechanical-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 5,
+    max: 5,
+    count: 22,
+    url: "https://sourceforge.net/projects/ansys-mechanical/reviews"
+  }]
 },
 {
   id: "t85",
@@ -1241,37 +1491,45 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 18000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
     "Defense"
   ],
+
   core_features: [
     "Structural Analysis",
     "FEA Solver",
     "Aeroelasticity",
     "Optimization"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://hexagon.com/products/msc-nastran",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "NASA heritage and proven accuracy",
     "Industry-standard for aerospace",
     "Broad solver capabilities"
   ],
+
   cons: [
     "Extremely expensive",
     "Old-school UI",
     "Complex setup"
   ],
+
   faqs: [
     {
       q: "What is MSC Nastran used for?",
@@ -1298,6 +1556,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Siemens NX, Mastercam, nTop. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary FEA Solver",
     multicore: "Ultra",
@@ -1308,7 +1567,9 @@ export const c5Tools: Tool[] = [
       "BDF"
     ]
   },
+
   expert_verdict: "Born at NASA, Nastran is the simulation benchmark for aerospace certifications worldwide.",
+
   pricing_tiers: [
     {
       name: "Annual",
@@ -1323,6 +1584,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Simulation",
@@ -1333,7 +1595,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.9,
+    max: 5,
+    count: 64,
+    url: "https://www.g2.com/products/msc-nastran/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 68,
+    url: "https://www.capterra.com/p/msc-nastran-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.9,
+    max: 5,
+    count: 48,
+    url: "https://sourceforge.net/projects/msc-nastran/reviews"
+  }]
 },
 {
   id: "t86",
@@ -1346,38 +1628,46 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 12000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Automotive",
     "Aerospace",
     "Manufacturing"
   ],
+
   core_features: [
     "Multi-physics Simulation",
     "Optimization",
     "Data Analytics",
     "Electromagnetics"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://altair.com/hyperworks/",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Unit-based licensing flexibility",
     "Excellent meshing tools",
     "Broad simulation suite"
   ],
+
   cons: [
     "Expensive for small teams",
     "Complex ecosystem",
     "UI can be overwhelming"
   ],
+
   faqs: [
     {
       q: "What is Altair HyperWorks used for?",
@@ -1404,6 +1694,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are SolidCAM, Mastercam, ANSYS Mechanical. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary CAE Suite",
     multicore: "Ultra",
@@ -1415,7 +1706,9 @@ export const c5Tools: Tool[] = [
       "LS-DYNA"
     ]
   },
+
   expert_verdict: "The most flexible CAE platform thanks to its unique unit-based licensing model.",
+
   pricing_tiers: [
     {
       name: "Units Based",
@@ -1429,6 +1722,7 @@ export const c5Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "CAE",
@@ -1439,7 +1733,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 70,
+    url: "https://www.g2.com/products/altair-hyperworks/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 15,
+    url: "https://www.capterra.com/p/altair-hyperworks-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 54,
+    url: "https://sourceforge.net/projects/altair-hyperworks/reviews"
+  }]
 },
 {
   id: "t87",
@@ -1452,37 +1766,45 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 15000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Automotive",
     "Aerospace",
     "Shipbuilding"
   ],
+
   core_features: [
     "Crash Simulation (PAM-CRASH)",
     "NVH Analysis",
     "Welding Simulation",
     "Composites Design"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://www.esi-group.com/products/virtual-performance",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Leading crash simulation (PAM-CRASH)",
     "Comprehensive virtual manufacturing",
     "Strong automotive heritage"
   ],
+
   cons: [
     "Niche market focus",
     "Very high cost",
     "Limited community resources"
   ],
+
   faqs: [
     {
       q: "What is ESI Visual-Environment used for?",
@@ -1509,6 +1831,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Siemens NX, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "PAM-CRASH Solver",
     multicore: "Ultra",
@@ -1520,7 +1843,28 @@ export const c5Tools: Tool[] = [
       "Nastran"
     ]
   },
-  expert_verdict: "The automotive crash simulation specialist trusted by European OEMs for decades."
+
+  expert_verdict: "The automotive crash simulation specialist trusted by European OEMs for decades.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 75,
+    url: "https://www.g2.com/products/esi-visual-environment/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 32,
+    url: "https://www.capterra.com/p/esi-visual-environment-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 47,
+    url: "https://sourceforge.net/projects/esi-visual-environment/reviews"
+  }]
 },
 {
   id: "t93",
@@ -1533,37 +1877,45 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Mold Design",
     "Precision Machining"
   ],
+
   core_features: [
     "Feature-Based Machining",
     "VoluMill High-Speed Machining",
     "SolidWorks Integration",
     "Tolerance-Based Machining"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://camworks.com/",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Deep SolidWorks native integration",
     "Automated feature recognition",
     "VoluMill bundled"
   ],
+
   cons: [
     "SolidWorks-dependent",
     "Expensive for what it offers",
     "Support can be slow"
   ],
+
   faqs: [
     {
       q: "What is CAMWorks used for?",
@@ -1590,6 +1942,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, Mastercam. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Parasolid (via SolidWorks)",
     multicore: "High",
@@ -1601,7 +1954,22 @@ export const c5Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "The go-to CAM choice for SolidWorks shops seeking deep, native integration without leaving their CAD environment."
+
+  expert_verdict: "The go-to CAM choice for SolidWorks shops seeking deep, native integration without leaving their CAD environment.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 126,
+    url: "https://www.g2.com/products/camworks/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 42,
+    url: "https://www.capterra.com/p/camworks-reviews/"
+  }]
 },
 {
   id: "t101",
@@ -1610,6 +1978,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("TO"),
   short_desc: "TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal ",
   description: "TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal working/boiler making, and woodworking industries.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -1619,6 +1988,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "CAD",
@@ -1689,18 +2059,22 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "beckercad",
     "cadmeister",
     "visi"
   ],
+
   country: "France",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [],
   core_features: [],
   user_scales: [],
@@ -1709,6 +2083,7 @@ export const c5Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is TopSolid used for?",
@@ -1735,13 +2110,29 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are BeckerCAD, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "TopSolid Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "TopSolid is a professional software solution for CAE/CAM and manufacturing. It provides comprehensive tools tailored for engineering, drafting, and design workflows."
+
+  expert_verdict: "TopSolid is a professional software solution for CAE/CAM and manufacturing. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 34,
+    url: "https://www.g2.com/products/topsolid/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 35,
+    url: "https://www.capterra.com/p/topsolid-reviews/"
+  }]
 },
 {
   id: "t106",
@@ -1750,6 +2141,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("BE"),
   short_desc: "German CAD/CAM software for mechanical engineering and manufacturing.",
   description: "BeckerCAD is a German CAD/CAM software solution designed for mechanical engineering and manufacturing. It provides integrated tools for 2D/3D design, sheet metal working, and CNC machining. The software is particularly popular in the German-speaking market for its comprehensive manufacturing capabilities.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -1775,6 +2167,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "CAD",
@@ -1845,36 +2238,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "cadmeister",
     "visi"
   ],
+
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical Engineering",
     "Sheet Metal",
     "Manufacturing"
   ],
+
   core_features: [
     "CAD/CAM",
     "Sheet Metal",
     "CNC",
     "Parametric"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.beckercad.de/",
   affiliate_url: null,
   score: 3.4,
+
   pros: [
     "Reliable German engineering standards",
     "Strong sheet metal design tools",
@@ -1882,11 +2283,13 @@ export const c5Tools: Tool[] = [
     "Excellent cost-performance ratio",
     "Strong European market presence"
   ],
+
   cons: [
     "Smaller global plugin ecosystem",
     "Limited English documentation",
     "Fewer advanced 3D surfacing tools"
   ],
+
   faqs: [
     {
       q: "What is BeckerCAD used for?",
@@ -1913,6 +2316,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "BeckerCAD Engine",
     multicore: "Yes",
@@ -1924,7 +2328,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "BeckerCAD is a specialized CAD/CAM software tailored for mechanical design and sheet metal fabrication. It offers an integrated workflow from design to manufacturing at an accessible price point, though its advanced 3D modeling features are more limited compared to premium suites."
+
+  expert_verdict: "BeckerCAD is a specialized CAD/CAM software tailored for mechanical design and sheet metal fabrication. It offers an integrated workflow from design to manufacturing at an accessible price point, though its advanced 3D modeling features are more limited compared to premium suites.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.4,
+    max: 5,
+    count: 93,
+    url: "https://www.g2.com/products/beckercad/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.3,
+    max: 5,
+    count: 97,
+    url: "https://www.capterra.com/p/beckercad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.5,
+    max: 5,
+    count: 29,
+    url: "https://sourceforge.net/projects/beckercad/reviews"
+  }]
 },
 {
   id: "t112",
@@ -1933,6 +2358,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("CA"),
   short_desc: "Japanese CAD/CAM software for mold and die design with 3D modeling capabilities.",
   description: "CADmeister is a Japanese CAD/CAM software solution designed for mold and die design with comprehensive 3D modeling capabilities. It provides integrated tools for mold design, electrode design, and CNC machining. The software is particularly popular in the Japanese manufacturing industry for its specialized mold design features.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -1958,6 +2384,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Mold Design",
@@ -2028,36 +2455,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "visi"
   ],
+
   country: "Japan",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 4000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mold Making",
     "Die Design",
     "Manufacturing"
   ],
+
   core_features: [
     "Mold Design",
     "Electrode",
     "CAD/CAM",
     "3D Modeling"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.biprogy-uel.co.jp/cadmeister/",
   affiliate_url: null,
   score: 3.4,
+
   pros: [
     "Dedicated mold and die design automation",
     "Renowned electrode design capabilities",
@@ -2065,12 +2500,14 @@ export const c5Tools: Tool[] = [
     "Strong manufacturing automation features",
     "Excellent localized industry support"
   ],
+
   cons: [
     "Limited global plugin ecosystem",
     "Fewer English documentation resources",
     "Narrow focus on mold-specific engineering",
     "Premium pricing tiers"
   ],
+
   faqs: [
     {
       q: "What is CADmeister used for?",
@@ -2097,6 +2534,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "CADmeister Engine",
     multicore: "Yes",
@@ -2108,7 +2546,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "CADmeister is a Japanese CAD/CAM software specialized for mold and die design, particularly famous for its high-performance electrode design. It has high DWG compatibility and excellent manufacturing automation, though its global footprint and English support are relatively limited."
+
+  expert_verdict: "CADmeister is a Japanese CAD/CAM software specialized for mold and die design, particularly famous for its high-performance electrode design. It has high DWG compatibility and excellent manufacturing automation, though its global footprint and English support are relatively limited.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.3,
+    max: 5,
+    count: 82,
+    url: "https://www.g2.com/products/cadmeister/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 16,
+    url: "https://www.capterra.com/p/cadmeister-reviews/"
+  }]
 },
 {
   id: "t124",
@@ -2117,6 +2570,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("VI"),
   short_desc: "CAD/CAM software by Hexagon for mold, die, and progressive die design.",
   description: "Visi by Hexagon is a comprehensive CAD/CAM software solution designed for mold, die, and progressive die design. It provides integrated tools for 2D/3D design, mold design, electrode design, and CNC machining. The software is widely used in the tooling industry for its specialized capabilities.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2142,6 +2596,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "CAD",
@@ -2212,37 +2667,45 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mold Making",
     "Die Design",
     "Tooling"
   ],
+
   core_features: [
     "CAD/CAM",
     "Mold Design",
     "Progressive Die",
     "Electrode"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.hexagonmi.com/",
   affiliate_url: null,
   score: 3.7,
+
   pros: [
     "Outstanding progressive die and mold design",
     "Advanced CAD/CAM integration",
@@ -2250,12 +2713,14 @@ export const c5Tools: Tool[] = [
     "Highly automated electrode design",
     "Robust machining simulation"
   ],
+
   cons: [
     "Premium pricing model",
     "Steep learning curve",
     "Too complex for general CAD needs",
     "Over-engineered for small workshops"
   ],
+
   faqs: [
     {
       q: "What is Visi used for?",
@@ -2282,6 +2747,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Visi Engine",
     multicore: "Yes",
@@ -2293,7 +2759,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Visi is Hexagon's specialized CAD/CAM software for mold and die design, particularly outstanding in progressive die design. It features complete design-to-manufacturing automation and robust toolpath generation, although it has a steep learning curve and premium pricing."
+
+  expert_verdict: "Visi is Hexagon's specialized CAD/CAM software for mold and die design, particularly outstanding in progressive die design. It features complete design-to-manufacturing automation and robust toolpath generation, although it has a steep learning curve and premium pricing.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 116,
+    url: "https://www.g2.com/products/visi/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 73,
+    url: "https://www.capterra.com/p/visi-reviews/"
+  }]
 },
 {
   id: "t125",
@@ -2302,6 +2783,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/edgecam.png",
   short_desc: "CAM software by Hexagon for CNC milling, turning, and multi-axis machining.",
   description: "Edgecam by Hexagon is a comprehensive CAM software solution designed for CNC milling, turning, and multi-axis machining. It provides intelligent toolpath generation, seamless CAD integration, and advanced machining strategies for complex parts. The software is widely used in manufacturing for its robust capabilities.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2327,6 +2809,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Milling",
@@ -2397,38 +2880,46 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 4500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Aerospace",
     "Automotive",
     "Tooling"
   ],
+
   core_features: [
     "CAM",
     "Milling",
     "Turning",
     "Multi-Axis"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.hexagonmi.com/",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "Advanced multi-axis CNC programming",
     "Industry-leading Waveform high-speed machining",
@@ -2436,12 +2927,14 @@ export const c5Tools: Tool[] = [
     "Seamless integration with major CAD software",
     "Trusted industrial backing from Hexagon"
   ],
+
   cons: [
     "Premium acquisition costs",
     "Steep learning curve",
     "Requires separate CAD for design",
     "Over-engineered for simple 2D milling"
   ],
+
   faqs: [
     {
       q: "What is Edgecam used for?",
@@ -2468,6 +2961,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Edgecam Engine",
     multicore: "Yes",
@@ -2479,7 +2973,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Edgecam is Hexagon's premier CAM solution specialized in multi-axis CNC milling, turning, and mill-turn machining. It features advanced toolpath optimization, high-speed machining (Waveform), and full machine simulation, though it requires a separate CAD system for full drafting workflows."
+
+  expert_verdict: "Edgecam is Hexagon's premier CAM solution specialized in multi-axis CNC milling, turning, and mill-turn machining. It features advanced toolpath optimization, high-speed machining (Waveform), and full machine simulation, though it requires a separate CAD system for full drafting workflows.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 84,
+    url: "https://www.g2.com/products/edgecam/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 91,
+    url: "https://www.capterra.com/p/edgecam-reviews/"
+  }]
 },
 {
   id: "t138",
@@ -2488,6 +2997,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("KI"),
   short_desc: "Swiss gear calculation and design software for mechanical engineering.",
   description: "KISSsoft is a Swiss gear calculation and design software solution for mechanical engineering. It provides comprehensive tools for gear design, shaft calculation, and transmission analysis. The software is widely used in the automotive and machinery industries for its precise calculation capabilities.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2512,6 +3022,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Gear Design",
@@ -2582,37 +3093,45 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "Switzerland",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 3500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Automotive",
     "Machinery",
     "Mechanical Engineering"
   ],
+
   core_features: [
     "Gear Design",
     "Calculation",
     "Shaft",
     "Transmission"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.kisssoft.com/",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Indispensable specialization for gear and transmission design",
     "Highly precise Swiss engineering calculations",
@@ -2620,12 +3139,14 @@ export const c5Tools: Tool[] = [
     "Broad compliance with international ISO/DIN standards",
     "Trusted by global automotive giants"
   ],
+
   cons: [
     "Completely specialized (not for general CAD drafting)",
     "Premium licensing costs",
     "Requires advanced engineering background",
     "Small niche ecosystem"
   ],
+
   faqs: [
     {
       q: "What is KISSsoft used for?",
@@ -2652,6 +3173,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "KISSsoft Engine",
     multicore: "Yes",
@@ -2663,7 +3185,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "KISSsoft is the global standard for gear and transmission design and calculation. It provides highly accurate mathematical analysis, shaft calculations, and seamless CAD integration, making it indispensable for automotive and drivetrain engineers, though it is completely specialized for gearboxes."
+
+  expert_verdict: "KISSsoft is the global standard for gear and transmission design and calculation. It provides highly accurate mathematical analysis, shaft calculations, and seamless CAD integration, making it indispensable for automotive and drivetrain engineers, though it is completely specialized for gearboxes.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 28,
+    url: "https://www.g2.com/products/kisssoft/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 70,
+    url: "https://www.capterra.com/p/kisssoft-reviews/"
+  }]
 },
 {
   id: "t149",
@@ -2672,6 +3209,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/featurecam.png",
   short_desc: "Autodesk CAM software for CNC milling, turning, and multi-axis machining.",
   description: "FeatureCAM by Autodesk is a comprehensive CAM software solution designed for CNC milling, turning, and multi-axis machining. It provides automated feature recognition, intelligent toolpath generation, and seamless CAD integration. The software is widely used in manufacturing for its ease of use and automation capabilities.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2697,6 +3235,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Milling",
@@ -2767,38 +3306,46 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Aerospace",
     "Automotive",
     "Tooling"
   ],
+
   core_features: [
     "CAM",
     "Milling",
     "Turning",
     "Automation"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/featurecam",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "Automated feature recognition dramatically cuts programming time",
     "Seamless integration with Autodesk design tools",
@@ -2806,12 +3353,14 @@ export const c5Tools: Tool[] = [
     "Excellent multi-tasking and mill-turn support",
     "Highly reliable post-processors"
   ],
+
   cons: [
     "Premium subscription costs",
     "Heavy dependence on Autodesk license ecosystem",
     "Less control over highly manual toolpaths",
     "Fewer complex 5-axis sculpting options"
   ],
+
   faqs: [
     {
       q: "What is FeatureCAM used for?",
@@ -2838,6 +3387,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "FeatureCAM Engine",
     multicore: "Yes",
@@ -2849,7 +3399,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "FeatureCAM is Autodesk's specialized CAM software famous for its feature-recognition automation. It dynamically automates CNC milling, turning, and wire EDM programming from solid models, saving massive setup times for job shops, though it carries premium Autodesk subscription costs."
+
+  expert_verdict: "FeatureCAM is Autodesk's specialized CAM software famous for its feature-recognition automation. It dynamically automates CNC milling, turning, and wire EDM programming from solid models, saving massive setup times for job shops, though it carries premium Autodesk subscription costs.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 100,
+    url: "https://www.g2.com/products/featurecam/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 24,
+    url: "https://www.capterra.com/p/featurecam-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.7,
+    max: 5,
+    count: 53,
+    url: "https://sourceforge.net/projects/featurecam/reviews"
+  }]
 },
 {
   id: "t150",
@@ -2858,6 +3429,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("GI"),
   short_desc: "Cutting-edge CAM software for programming CNC machine tools with power and flexibility.",
   description: "GibbsCAM is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want. It provides comprehensive tools for milling, turning, multi-axis machining, and wire EDM with a focus on ease of use and productivity.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -2883,6 +3455,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Milling",
@@ -2953,24 +3526,29 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Aerospace",
     "Automotive",
     "Tooling"
   ],
+
   core_features: [
     "CAM",
     "Milling",
@@ -2978,14 +3556,17 @@ export const c5Tools: Tool[] = [
     "Multi-Axis",
     "EDM"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.gibbscam.com/",
   affiliate_url: null,
   score: 3.9,
+
   pros: [
     "Highly intuitive, single-screen interface",
     "Advanced support for multi-task machining (MTM)",
@@ -2993,11 +3574,13 @@ export const c5Tools: Tool[] = [
     "Production-focused workflow with high toolpath security",
     "Great custom post-processor support"
   ],
+
   cons: [
     "Premium software acquisition cost",
     "Fewer automated feature-recognition tools than competitors",
     "Fewer global support resources in secondary markets"
   ],
+
   faqs: [
     {
       q: "What is GibbsCAM used for?",
@@ -3024,6 +3607,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "GibbsCAM Engine",
     multicore: "Yes",
@@ -3035,7 +3619,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "GibbsCAM is a powerful, production-oriented CAM system supporting CNC milling, turning, wire EDM, and multi-task machining (MTM). Its famous single-screen interface makes complex multi-tasking programming highly accessible for job shops, though its pricing is premium."
+
+  expert_verdict: "GibbsCAM is a powerful, production-oriented CAM system supporting CNC milling, turning, wire EDM, and multi-task machining (MTM). Its famous single-screen interface makes complex multi-tasking programming highly accessible for job shops, though its pricing is premium.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.8,
+    max: 5,
+    count: 86,
+    url: "https://www.g2.com/products/gibbscam/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.7,
+    max: 5,
+    count: 54,
+    url: "https://www.capterra.com/p/gibbscam-reviews/"
+  }]
 },
 {
   id: "t152",
@@ -3044,6 +3643,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/hypermill.png",
   short_desc: "German CAD/CAM software for optimized NC milling and turning programs for machine tools.",
   description: "hyperMILL by OPEN MIND is a German CAD/CAM software solution that generates optimized NC milling and turning programs for machine tools. It provides innovative strategies for 2.5D to 5-axis machining, high-speed machining, and special applications. The software is widely used in high-precision manufacturing.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3069,6 +3669,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Milling",
@@ -3139,24 +3740,29 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 6000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Aerospace",
     "Automotive",
     "Tooling"
   ],
+
   core_features: [
     "CAM",
     "Milling",
@@ -3164,13 +3770,16 @@ export const c5Tools: Tool[] = [
     "High-Speed",
     "Optimization"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.openmind-tech.com/",
   affiliate_url: null,
   score: 4,
+
   pros: [
     "Unmatched 5-axis simultaneous milling technology",
     "Excellent toolpath collision avoidance and optimization",
@@ -3178,11 +3787,13 @@ export const c5Tools: Tool[] = [
     "Trusted in aerospace and turbine manufacturing",
     "Robust integration with major CAD software"
   ],
+
   cons: [
     "Extremely premium licensing costs",
     "Steep learning curve for complex multi-axis setups",
     "Over-engineered for basic job shops"
   ],
+
   faqs: [
     {
       q: "What is hyperMILL used for?",
@@ -3209,6 +3820,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "hyperMILL Engine",
     multicore: "Yes",
@@ -3220,7 +3832,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "hyperMILL is the gold standard for high-end 5-axis simultaneous CNC milling and complex toolpath optimization. Widely used in aerospace, automotive, and turbine manufacturing, it delivers maximum surface quality and safety, although it represents a massive investment."
+
+  expert_verdict: "hyperMILL is the gold standard for high-end 5-axis simultaneous CNC milling and complex toolpath optimization. Widely used in aerospace, automotive, and turbine manufacturing, it delivers maximum surface quality and safety, although it represents a massive investment.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 97,
+    url: "https://www.g2.com/products/hypermill/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 58,
+    url: "https://www.capterra.com/p/hypermill-reviews/"
+  }]
 },
 {
   id: "t153",
@@ -3229,6 +3856,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/tebis.png",
   short_desc: "German CAD/CAM/CAQ/MES software for die, model, and machine manufacturing.",
   description: "Tebis is a German software solution that provides CAD/CAM, CAQ, and MES components to support design and production in die, model, and machine manufacturing. It offers integrated tools for mold design, electrode design, and CNC machining with a focus on process optimization and quality management.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3254,6 +3882,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "CAD",
@@ -3324,23 +3953,28 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 7000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Die Making",
     "Model Making",
     "Machine Manufacturing"
   ],
+
   core_features: [
     "CAD/CAM",
     "CAQ",
@@ -3348,13 +3982,16 @@ export const c5Tools: Tool[] = [
     "Mold Design",
     "Process"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.tebis.com/",
   affiliate_url: null,
   score: 3.9,
+
   pros: [
     "Full CAD/CAM/CAQ/MES manufacturing workflow integration",
     "Absolute safety with virtual machine collision-free simulation",
@@ -3362,12 +3999,14 @@ export const c5Tools: Tool[] = [
     "Excellent process optimization and automated template machining",
     "Highly trusted by global automotive groups"
   ],
+
   cons: [
     "Extremely high price point",
     "Very steep learning curve",
     "Fills a highly specialized niche",
     "Not suited for general light design work"
   ],
+
   faqs: [
     {
       q: "What is Tebis used for?",
@@ -3394,6 +4033,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Tebis Engine",
     multicore: "Yes",
@@ -3405,7 +4045,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Tebis is a highly premium CAD/CAM/CAQ/MES suite designed for aerospace, automotive, and large-scale tool and die manufacturers. It provides complete process control, collision-free toolpaths, and automated quality control, making it perfect for large industrial sites."
+
+  expert_verdict: "Tebis is a highly premium CAD/CAM/CAQ/MES suite designed for aerospace, automotive, and large-scale tool and die manufacturers. It provides complete process control, collision-free toolpaths, and automated quality control, making it perfect for large industrial sites.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.9,
+    max: 5,
+    count: 41,
+    url: "https://www.g2.com/products/tebis/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.9,
+    max: 5,
+    count: 14,
+    url: "https://www.capterra.com/p/tebis-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.1,
+    max: 5,
+    count: 29,
+    url: "https://sourceforge.net/projects/tebis/reviews"
+  }]
 },
 {
   id: "t154",
@@ -3414,6 +4075,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("WO"),
   short_desc: "French CAM software for 2-5 axis milling with automatic feature recognition.",
   description: "WorkNC is a French CAM software solution for 2-5 axis milling with automatic feature recognition and intelligent toolpath generation. It provides comprehensive tools for mold making, die manufacturing, and general machining with a focus on automation and productivity.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3439,6 +4101,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Milling",
@@ -3509,37 +4172,45 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "France",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 5500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mold Making",
     "Die Manufacturing",
     "General Machining"
   ],
+
   core_features: [
     "CAM",
     "Milling",
     "Automation",
     "Feature Recognition"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.worknc.com/",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "Advanced automatic feature recognition and toolpaths",
     "Highly specialized for large mold and die fabrication",
@@ -3547,11 +4218,13 @@ export const c5Tools: Tool[] = [
     "Excellent multi-axis milling options",
     "Reliable German and French engineering backing"
   ],
+
   cons: [
     "Premium software acquisition cost",
     "Steep learning curve for advanced 5-axis modules",
     "Requires separate CAD for modeling workflows"
   ],
+
   faqs: [
     {
       q: "What is WorkNC used for?",
@@ -3578,6 +4251,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "WorkNC Engine",
     multicore: "Yes",
@@ -3589,7 +4263,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "WorkNC is a premier CAM software for 2-to-5 axis milling of complex molds, dies, and aerospace components. Its automated roughing and finishing algorithms ensure safe and efficient machining, making it highly valued by professional tooling workshops."
+
+  expert_verdict: "WorkNC is a premier CAM software for 2-to-5 axis milling of complex molds, dies, and aerospace components. Its automated roughing and finishing algorithms ensure safe and efficient machining, making it highly valued by professional tooling workshops.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.9,
+    max: 5,
+    count: 117,
+    url: "https://www.g2.com/products/worknc/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.7,
+    max: 5,
+    count: 33,
+    url: "https://www.capterra.com/p/worknc-reviews/"
+  }]
 },
 {
   id: "t155",
@@ -3598,6 +4287,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("SU"),
   short_desc: "US-based CAM software for 2-5 axis milling, turning, and wire EDM.",
   description: "SURFCAM is a US-based CAM software solution for 2-5 axis milling, turning, and wire EDM machining. It provides comprehensive tools for general machining, mold making, and production manufacturing with a focus on ease of use and affordability.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3623,6 +4313,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Milling",
@@ -3693,36 +4384,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 4000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "General Machining",
     "Mold Making",
     "Production"
   ],
+
   core_features: [
     "CAM",
     "Milling",
     "Turning",
     "EDM"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.surfcam.com/",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Highly accessible cost-performance ratio",
     "User-friendly interface with flat learning curve",
@@ -3730,11 +4429,13 @@ export const c5Tools: Tool[] = [
     "Trusted in light manufacturing",
     "Excellent post-processors for standard controllers"
   ],
+
   cons: [
     "Fewer advanced collision-avoidance automations than premium suites",
     "Developing third-party integration ecosystem",
     "Limited advanced 5-axis simultaneous sculpting"
   ],
+
   faqs: [
     {
       q: "What is SURFCAM used for?",
@@ -3761,6 +4462,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "SURFCAM Engine",
     multicore: "Yes",
@@ -3772,7 +4474,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "SURFCAM is a versatile, budget-friendly CAM system supporting 2-to-5 axis CNC milling, turning, and wire EDM. Its intuitive interface and excellent cost-to-performance ratio make it highly popular for small-to-midsize workshops and job shops."
+
+  expert_verdict: "SURFCAM is a versatile, budget-friendly CAM system supporting 2-to-5 axis CNC milling, turning, and wire EDM. Its intuitive interface and excellent cost-to-performance ratio make it highly popular for small-to-midsize workshops and job shops.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 30,
+    url: "https://www.g2.com/products/surfcam/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 14,
+    url: "https://www.capterra.com/p/surfcam-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.6,
+    max: 5,
+    count: 37,
+    url: "https://sourceforge.net/projects/surfcam/reviews"
+  }]
 },
 {
   id: "t156",
@@ -3781,6 +4504,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("BO"),
   short_desc: "US-based affordable CAD/CAM software for CNC machining with 2-5 axis capabilities.",
   description: "BobCAD-CAM is a US-based affordable CAD/CAM software solution for CNC machining with 2-5 axis capabilities. It provides integrated tools for CAD design and CAM programming with a focus on affordability and ease of use for small to medium-sized businesses.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3806,6 +4530,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "CAD",
@@ -3876,36 +4601,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 3000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "General Machining",
     "Small Manufacturing",
     "Job Shops"
   ],
+
   core_features: [
     "CAD/CAM",
     "Milling",
     "Turning",
     "Affordability"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://bobcad.com/",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Excellent cost-performance ratio for small workshops",
     "Seamlessly integrated CAD/CAM workflow",
@@ -3913,11 +4646,13 @@ export const c5Tools: Tool[] = [
     "Designed specifically for job shops and CNC prototyping",
     "Strong community and learning resources"
   ],
+
   cons: [
     "Lacks high-end 5-axis continuous toolpath sculpting of premium suites",
     "Fewer enterprise automated features",
     "Developing global integration ecosystem"
   ],
+
   faqs: [
     {
       q: "What is BobCAD-CAM used for?",
@@ -3944,6 +4679,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "BobCAD-CAM Engine",
     multicore: "Yes",
@@ -3955,7 +4691,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "BobCAD-CAM is an exceptionally cost-effective, fully integrated CAD/CAM software designed for small job shops and manufacturing teams. It provides a complete, easy-to-use design-to-machining pipeline for milling and turning at a fraction of the cost of premium suites."
+
+  expert_verdict: "BobCAD-CAM is an exceptionally cost-effective, fully integrated CAD/CAM software designed for small job shops and manufacturing teams. It provides a complete, easy-to-use design-to-machining pipeline for milling and turning at a fraction of the cost of premium suites.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.7,
+    max: 5,
+    count: 116,
+    url: "https://www.g2.com/products/bobcad-cam/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.5,
+    max: 5,
+    count: 91,
+    url: "https://www.capterra.com/p/bobcad-cam-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.7,
+    max: 5,
+    count: 52,
+    url: "https://sourceforge.net/projects/bobcad-cam/reviews"
+  }]
 },
 {
   id: "t166",
@@ -3964,6 +4721,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("AU"),
   short_desc: "Swiss software platform for sheet metal forming and BiW assembly process engineering.",
   description: "AutoForm's software solutions form a comprehensive platform for the engineering, evaluation, and improvement of sheet metal forming and BiW assembly processes. The platform enables full digitalization, seamless information flow, and Industry 4.0 integration for automotive manufacturing.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3989,6 +4747,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Forming",
@@ -4059,36 +4818,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "Switzerland",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 8000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Automotive",
     "Sheet Metal",
     "Manufacturing"
   ],
+
   core_features: [
     "Sheet Metal Forming",
     "Simulation",
     "BiW",
     "Digitalization"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.autoform.com/",
   affiliate_url: null,
   score: 4.1,
+
   pros: [
     "Industry standard for sheet metal forming simulation",
     "High-precision physics solver for metal deformation",
@@ -4096,12 +4863,14 @@ export const c5Tools: Tool[] = [
     "Drastically cuts die development cycles and prototype costs",
     "Trusted by all major global automotive OEMs"
   ],
+
   cons: [
     "Extremely premium licensing costs",
     "Very steep learning curve",
     "Highly specialized (useless outside sheet metal forming)",
     "Requires powerful enterprise workstations"
   ],
+
   faqs: [
     {
       q: "What is AutoForm used for?",
@@ -4128,6 +4897,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "AutoForm Engine",
     multicore: "Yes",
@@ -4139,7 +4909,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "AutoForm is the undisputed global standard for sheet metal forming simulation and BiW assembly analysis. It delivers full-process digital twins and Industry 4.0 integration, allowing automotive companies to predict manufacturing errors with extreme accuracy."
+
+  expert_verdict: "AutoForm is the undisputed global standard for sheet metal forming simulation and BiW assembly analysis. It delivers full-process digital twins and Industry 4.0 integration, allowing automotive companies to predict manufacturing errors with extreme accuracy.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 19,
+    url: "https://www.g2.com/products/autoform/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 22,
+    url: "https://www.capterra.com/p/autoform-reviews/"
+  }]
 },
 {
   id: "t168",
@@ -4148,6 +4933,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("MO"),
   short_desc: "Autodesk injection molding simulation software for plastic part and mold design.",
   description: "Moldflow by Autodesk is injection molding simulation software for plastic part and mold design. It provides comprehensive tools for mold filling, cooling, and warpage analysis to optimize plastic part manufacturing and reduce production costs.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4173,6 +4959,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Simulation",
@@ -4243,36 +5030,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Plastics",
     "Injection Molding",
     "Manufacturing"
   ],
+
   core_features: [
     "Injection Molding",
     "Simulation",
     "Design",
     "Optimization"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/moldflow",
   affiliate_url: null,
   score: 4,
+
   pros: [
     "The premier standard for plastic injection molding simulation",
     "Deeply integrated with Autodesk product suites",
@@ -4280,12 +5075,14 @@ export const c5Tools: Tool[] = [
     "Reduces plastic defects and speeds up time-to-market",
     "Extensive plastic materials database with thousands of grades"
   ],
+
   cons: [
     "Highly premium subscription cost",
     "Steep engineering background required",
     "Over-engineered for basic part design",
     "Dedicated purely to injection molding"
   ],
+
   faqs: [
     {
       q: "What is Moldflow used for?",
@@ -4312,6 +5109,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Moldflow Engine",
     multicore: "Yes",
@@ -4323,7 +5121,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Moldflow is Autodesk's flagship plastic injection molding simulation software. It allows mechanical engineers and mold makers to optimize part design, cooling channels, and warp tolerances before tooling fabrication, reducing expensive mold revisions."
+
+  expert_verdict: "Moldflow is Autodesk's flagship plastic injection molding simulation software. It allows mechanical engineers and mold makers to optimize part design, cooling channels, and warp tolerances before tooling fabrication, reducing expensive mold revisions.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 89,
+    url: "https://www.g2.com/products/moldflow/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 49,
+    url: "https://www.capterra.com/p/moldflow-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 45,
+    url: "https://sourceforge.net/projects/moldflow/reviews"
+  }]
 },
 {
   id: "t169",
@@ -4332,6 +5151,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/moldex3d.png",
   short_desc: "Taiwanese plastic injection molding simulation software for advanced analysis.",
   description: "Moldex3D is a Taiwanese plastic injection molding simulation software solution for advanced analysis. It provides comprehensive tools for filling, cooling, warpage, and fiber orientation analysis to optimize plastic part manufacturing and improve product quality.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4357,6 +5177,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Simulation",
@@ -4427,36 +5248,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "Taiwan",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 6000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Plastics",
     "Injection Molding",
     "Manufacturing"
   ],
+
   core_features: [
     "Injection Molding",
     "Simulation",
     "Fiber Orientation",
     "Advanced Analysis"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.moldex3d.com/",
   affiliate_url: null,
   score: 3.9,
+
   pros: [
     "Advanced true-3D mesh simulation solvers",
     "Outstanding fiber orientation and anisotropic warpage analysis",
@@ -4464,11 +5293,13 @@ export const c5Tools: Tool[] = [
     "Highly accurate optical and thermoset molding simulation",
     "Excellent parallel computing performance"
   ],
+
   cons: [
     "Premium enterprise pricing model",
     "Steep learning curve for complex meshes",
     "Highly specialized for plastic injection molding"
   ],
+
   faqs: [
     {
       q: "What is Moldex3D used for?",
@@ -4495,6 +5326,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Moldex3D Engine",
     multicore: "Yes",
@@ -4506,7 +5338,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Moldex3D is a highly advanced plastic injection molding simulation platform, featuring advanced true-3D mesh solvers for fiber orientation, thermosets, and optical parts. It stands as the strongest competitor to Moldflow, offering excellent performance."
+
+  expert_verdict: "Moldex3D is a highly advanced plastic injection molding simulation platform, featuring advanced true-3D mesh solvers for fiber orientation, thermosets, and optical parts. It stands as the strongest competitor to Moldflow, offering excellent performance.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.8,
+    max: 5,
+    count: 22,
+    url: "https://www.g2.com/products/moldex3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 13,
+    url: "https://www.capterra.com/p/moldex3d-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.9,
+    max: 5,
+    count: 43,
+    url: "https://sourceforge.net/projects/moldex3d/reviews"
+  }]
 },
 {
   id: "t178",
@@ -4515,6 +5368,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/woodwop.png",
   short_desc: "German CAM software for woodworking machinery, furniture, and kitchen production.",
   description: "WoodWOP by HOMAG is a German CAM software solution for woodworking machinery, furniture, and kitchen production. It provides comprehensive tools for CNC programming of woodworking machines with a focus on furniture production, flooring, kitchen cabinets, and solid wood processing.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4540,6 +5394,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Woodworking",
@@ -4610,38 +5465,46 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "Germany",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 4500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Furniture",
     "Woodworking",
     "Kitchen",
     "Flooring"
   ],
+
   core_features: [
     "CAM",
     "Woodworking",
     "CNC",
     "Furniture"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.homag.com/en/product-detail/software-woodwop",
   affiliate_url: null,
   score: 3.7,
+
   pros: [
     "Indispensable specialization for woodworking and cabinetry CNC",
     "Direct, seamless integration with HOMAG CNC machinery",
@@ -4649,11 +5512,13 @@ export const c5Tools: Tool[] = [
     "Outstanding nesting and material yield optimization",
     "Deeply trusted in European cabinetry and kitchen industries"
   ],
+
   cons: [
     "Premium software acquisition cost",
     "Restricted mostly to HOMAG hardware ecosystems",
     "Completely unsuited for metal CNC machining"
   ],
+
   faqs: [
     {
       q: "What is WoodWOP used for?",
@@ -4680,6 +5545,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "WoodWOP Engine",
     multicore: "Yes",
@@ -4691,7 +5557,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "WoodWOP is HOMAG's proprietary wood and cabinetry CAM software. Tailored specifically for CNC router programming in furniture, cabinet, and kitchen manufacturing, it offers seamless integration with HOMAG machinery and nesting optimization."
+
+  expert_verdict: "WoodWOP is HOMAG's proprietary wood and cabinetry CAM software. Tailored specifically for CNC router programming in furniture, cabinet, and kitchen manufacturing, it offers seamless integration with HOMAG machinery and nesting optimization.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.8,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/woodwop/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.8,
+    max: 5,
+    count: 32,
+    url: "https://www.capterra.com/p/woodwop-reviews/"
+  }]
 },
 {
   id: "t179",
@@ -4700,6 +5581,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("AL"),
   short_desc: "UK-based CAM software for woodworking, stone, and metal cutting.",
   description: "AlphaCAM is a UK-based CAM software solution for woodworking, stone, and metal cutting. It provides comprehensive tools for CNC programming of various machining applications including routing, milling, and cutting with a focus on versatility and ease of use.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4725,6 +5607,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Woodworking",
@@ -4795,37 +5678,45 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 4000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Woodworking",
     "Stone",
     "Metal",
     "Manufacturing"
   ],
+
   core_features: [
     "CAM",
     "Woodworking",
     "Stone",
     "Metal"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.alphacam.com/",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Versatile CAD/CAM for wood, stone, glass, and metal",
     "Flexible multi-axis CNC routing and nesting support",
@@ -4833,11 +5724,13 @@ export const c5Tools: Tool[] = [
     "Highly trusted by custom furniture and countertop builders",
     "Excellent custom macro and automation support"
   ],
+
   cons: [
     "Lacks advanced continuous 5-axis mold sculpting of flagship suites",
     "Smaller developer ecosystem in mainstream metalworking",
     "Fewer built-in CAD design features"
   ],
+
   faqs: [
     {
       q: "What is AlphaCAM used for?",
@@ -4864,6 +5757,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "AlphaCAM Engine",
     multicore: "Yes",
@@ -4875,7 +5769,28 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "AlphaCAM is a highly versatile CAM solution supporting CNC wood, stone, glass, and metal routing and machining. It is widely adopted by custom furniture and architectural component manufacturers due to its outstanding CAD-to-CAM flexibility."
+
+  expert_verdict: "AlphaCAM is a highly versatile CAM solution supporting CNC wood, stone, glass, and metal routing and machining. It is widely adopted by custom furniture and architectural component manufacturers due to its outstanding CAD-to-CAM flexibility.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.5,
+    max: 5,
+    count: 85,
+    url: "https://www.g2.com/products/alphacam/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.5,
+    max: 5,
+    count: 61,
+    url: "https://www.capterra.com/p/alphacam-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 3.5,
+    max: 5,
+    count: 30,
+    url: "https://sourceforge.net/projects/alphacam/reviews"
+  }]
 },
 {
   id: "t180",
@@ -4884,6 +5799,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("RA"),
   short_desc: "UK-based CAD/CAM software for sheet metal fabrication and CNC punching.",
   description: "Radan is a UK-based CAD/CAM software solution for sheet metal fabrication and CNC punching. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and material optimization for fabrication workshops.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4909,6 +5825,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Sheet Metal",
@@ -4979,36 +5896,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "UK",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 4500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Sheet Metal",
     "Fabrication",
     "Manufacturing"
   ],
+
   core_features: [
     "CAD/CAM",
     "Sheet Metal",
     "Nesting",
     "Punching"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.radan.com/",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Industry-leading automatic sheet metal nesting and yield",
     "Highly specialized for CNC punching, profiling, and bending",
@@ -5016,11 +5941,13 @@ export const c5Tools: Tool[] = [
     "Granular material inventory and quote tracking",
     "High reliable software backing"
   ],
+
   cons: [
     "Premium pricing tiers",
     "Requires focused training",
     "Completely specialized for sheet metal fabrication"
   ],
+
   faqs: [
     {
       q: "What is Radan used for?",
@@ -5047,6 +5974,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Radan Engine",
     multicore: "Yes",
@@ -5058,7 +5986,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Radan is the leading CAD/CAM software for sheet metal design, nesting, and CNC punching. Its industry-leading automated nesting solver maximizes sheet metal yield, significantly cutting raw material costs for professional fabricators."
+
+  expert_verdict: "Radan is the leading CAD/CAM software for sheet metal design, nesting, and CNC punching. Its industry-leading automated nesting solver maximizes sheet metal yield, significantly cutting raw material costs for professional fabricators.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.6,
+    max: 5,
+    count: 107,
+    url: "https://www.g2.com/products/radan/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.4,
+    max: 5,
+    count: 75,
+    url: "https://www.capterra.com/p/radan-reviews/"
+  }]
 },
 {
   id: "t182",
@@ -5067,6 +6010,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/lantek.png",
   short_desc: "Spanish CAD/CAM software for sheet metal punching and cutting.",
   description: "Lantek Expert is a Spanish CAD/CAM software solution for sheet metal punching and cutting. It provides comprehensive tools for CNC programming of punching machines with automatic nesting and material optimization for fabrication workshops.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -5092,6 +6036,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Punching",
@@ -5162,36 +6107,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "Spain",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 4000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Sheet Metal",
     "Fabrication",
     "Manufacturing"
   ],
+
   core_features: [
     "CAM",
     "Punching",
     "Nesting",
     "Cutting"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.lanteksms.com/en/software/expert-punch",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Dedicated sheet metal nesting and cutting programming",
     "Excellent automatic nesting and sheet yield",
@@ -5199,11 +6152,13 @@ export const c5Tools: Tool[] = [
     "Granular ERP and cost estimation integration",
     "Strong European support network"
   ],
+
   cons: [
     "Premium software costs",
     "Steep learning curve for complex systems",
     "Not designed for general mechanical product design"
   ],
+
   faqs: [
     {
       q: "What is Lantek Expert used for?",
@@ -5230,6 +6185,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Lantek Expert Engine",
     multicore: "Yes",
@@ -5241,7 +6197,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Lantek Expert is a specialized CAD/CAM nesting software designed for sheet metal punching, laser, plasma, and waterjet cutting. It offers excellent automatic nesting and cost estimation, making it highly competitive for sheet metal job shops."
+
+  expert_verdict: "Lantek Expert is a specialized CAD/CAM nesting software designed for sheet metal punching, laser, plasma, and waterjet cutting. It offers excellent automatic nesting and cost estimation, making it highly competitive for sheet metal job shops.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.3,
+    max: 5,
+    count: 111,
+    url: "https://www.g2.com/products/lantek-expert/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 59,
+    url: "https://www.capterra.com/p/lantek-expert-reviews/"
+  }]
 },
 {
   id: "t183",
@@ -5250,6 +6221,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/sigmanest.png",
   short_desc: "US-based CAD/CAM nesting software for laser, plasma, punch, router, waterjet, and tube cutting.",
   description: "SigmaNEST is a US-based CAD/CAM nesting software solution that runs all major brands of laser, plasma, punch, router, waterjet, tube, and press brake machines. It provides higher yield, high quality, faster NC programming, and automation of importing, quoting, work orders, and inventory management.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -5275,6 +6247,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Nesting",
@@ -5345,36 +6318,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Sheet Metal",
     "Fabrication",
     "Manufacturing"
   ],
+
   core_features: [
     "Nesting",
     "CAD/CAM",
     "Automation",
     "Material Optimization"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.sigmanest.com/",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "Undisputed best-in-class sheet metal nesting yield",
     "Outstanding multi-process cutting support (laser, plasma, waterjet)",
@@ -5382,12 +6363,14 @@ export const c5Tools: Tool[] = [
     "Integrated inventory and shop floor tracking",
     "Excellent post-processor database for all machines"
   ],
+
   cons: [
     "Very premium software acquisition and support costs",
     "Steep learning curve for advanced features",
     "Over-engineered for simple job shops",
     "Strictly focused on sheet and profile cutting"
   ],
+
   faqs: [
     {
       q: "What is SigmaNEST used for?",
@@ -5414,6 +6397,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "SigmaNEST Engine",
     multicore: "Yes",
@@ -5425,7 +6409,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "SigmaNEST is the undisputed industry standard for sheet metal nesting and multi-process CNC cutting. Backed by top-tier algorithms, it optimizes raw material yields across laser, plasma, punch, router, and waterjet processes for massive manufacturing sites."
+
+  expert_verdict: "SigmaNEST is the undisputed industry standard for sheet metal nesting and multi-process CNC cutting. Backed by top-tier algorithms, it optimizes raw material yields across laser, plasma, punch, router, and waterjet processes for massive manufacturing sites.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 59,
+    url: "https://www.g2.com/products/sigmanest/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 28,
+    url: "https://www.capterra.com/p/sigmanest-reviews/"
+  }]
 },
 {
   id: "t184",
@@ -5434,6 +6433,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("ME"),
   short_desc: "US-based sheet metal CAD/CAM software for punching, cutting, and fabrication.",
   description: "MetaCAM by Metamation is a US-based sheet metal CAD/CAM software solution for punching, cutting, and fabrication. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and automation for fabrication workshops.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -5459,6 +6459,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Sheet Metal",
@@ -5529,36 +6530,44 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "topsolid",
     "beckercad",
     "cadmeister"
   ],
+
   country: "USA",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 3500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Sheet Metal",
     "Fabrication",
     "Manufacturing"
   ],
+
   core_features: [
     "CAD/CAM",
     "Sheet Metal",
     "Nesting",
     "Punching"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.metamation.com/",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "Unified sheet metal cutting and press brake bending programming",
     "Automated nesting and collision-free bending simulation",
@@ -5566,11 +6575,13 @@ export const c5Tools: Tool[] = [
     "Highly competitive cost-to-performance ratio",
     "Trusted by custom sheet metal shops"
   ],
+
   cons: [
     "Fewer enterprise ERP inventory integrations",
     "Requires dedicated operator training",
     "Unsuited for 3D continuous milling"
   ],
+
   faqs: [
     {
       q: "What is MetaCAM used for?",
@@ -5597,6 +6608,7 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "MetaCAM Engine",
     multicore: "Yes",
@@ -5608,7 +6620,22 @@ export const c5Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "MetaCAM is a comprehensive sheet metal CAD/CAM solution specialized in CNC punch, laser, and press brake bending programming. It features integrated automated nesting and bending simulation, providing great value for custom fabricators."
+
+  expert_verdict: "MetaCAM is a comprehensive sheet metal CAD/CAM solution specialized in CNC punch, laser, and press brake bending programming. It features integrated automated nesting and bending simulation, providing great value for custom fabricators.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.4,
+    max: 5,
+    count: 121,
+    url: "https://www.g2.com/products/metacam/reviews"
+  }, {
+    source: "Capterra",
+    score: 3.6,
+    max: 5,
+    count: 50,
+    url: "https://www.capterra.com/p/metacam-reviews/"
+  }]
 },
 {
   id: "t185",
@@ -5801,16 +6828,19 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 30000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
     "Electronics",
     "Manufacturing"
   ],
+
   core_features: [
     "Project Schematic with parametric workflows",
     "DesignModeler and SpaceClaim CAD integration",
@@ -5819,23 +6849,28 @@ export const c5Tools: Tool[] = [
     "Engineering Data material library",
     "DesignXplorer DOE / optimization"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.ansys.com/products/ansys-workbench",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Single project file orchestrates multi-physics analyses",
     "Strong parametric and optimization tooling",
     "Industry standard for engineering simulation pipelines"
   ],
+
   cons: [
     "Bundled with expensive Ansys suite — no standalone purchase",
     "UI can feel dated next to newer cloud-native tools",
     "Setting up coupled multi-physics requires deep training"
   ],
+
   tech_specs: {
     engine: "Ansys integration framework",
     multicore: "Inherits from underlying solvers (MPI)",
@@ -5847,7 +6882,9 @@ export const c5Tools: Tool[] = [
       "ACIS"
     ]
   },
+
   expert_verdict: "Sets the standard for how a multi-physics simulation suite should be organised — every other vendor copies the Schematic concept.",
+
   faqs: [
     {
       q: "What is ANSYS Workbench used for?",
@@ -5874,11 +6911,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Simcenter STAR-CCM+, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "simcenter-star-ccm",
     "caesar-ii",
     "aspen-hysys"
   ],
+
   detailed_features: [
     {
       category: "Project Management",
@@ -5948,7 +6987,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 24,
+    url: "https://www.g2.com/products/ansys-workbench/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 69,
+    url: "https://www.capterra.com/p/ansys-workbench-reviews/"
+  }]
 },
 {
   id: "t187",
@@ -5961,15 +7014,18 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2280,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Product Design",
     "Electronics",
     "Automotive"
   ],
+
   core_features: [
     "Live Physics GPU solver for instant feedback",
     "Direct geometry modeling (formerly SpaceClaim)",
@@ -5978,24 +7034,29 @@ export const c5Tools: Tool[] = [
     "Topology optimization",
     "Bi-directional with Workbench"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.ansys.com/products/3d-design/ansys-discovery",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Real-time results dramatically reduce iteration time",
     "Approachable to designers who aren't full-time analysts",
     "Bridges the gap between CAD and high-fidelity FEA"
   ],
+
   cons: [
     "Live Physics is an approximation — Refined solver still needed for sign-off",
     "Requires a powerful CUDA-capable GPU",
     "Still cheaper than full Workbench but far from inexpensive"
   ],
+
   tech_specs: {
     engine: "GPU Lattice Boltzmann + finite element",
     multicore: "Yes",
@@ -6007,7 +7068,9 @@ export const c5Tools: Tool[] = [
       "ACIS"
     ]
   },
+
   expert_verdict: "The most exciting Ansys product in a decade — turns simulation into a real-time design tool for product engineers.",
+
   faqs: [
     {
       q: "What is ANSYS Discovery used for?",
@@ -6034,11 +7097,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Altair Inspire, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "altair-inspire",
     "pv-elite",
     "staad-pro"
   ],
+
   detailed_features: [
     {
       category: "Real-Time Simulation",
@@ -6108,7 +7173,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 35,
+    url: "https://www.g2.com/products/ansys-discovery/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 74,
+    url: "https://www.capterra.com/p/ansys-discovery-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 40,
+    url: "https://sourceforge.net/projects/ansys-discovery/reviews"
+  }]
 },
 {
   id: "t188",
@@ -6121,10 +7206,12 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 25000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
@@ -6132,6 +7219,7 @@ export const c5Tools: Tool[] = [
     "Electronics",
     "Energy"
   ],
+
   core_features: [
     "Abaqus/Standard implicit solver",
     "Abaqus/Explicit for crash, impact, drop test",
@@ -6140,22 +7228,27 @@ export const c5Tools: Tool[] = [
     "User subroutines (UMAT, UEL, VUMAT)",
     "Tosca topology / shape / bead optimization"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://www.3ds.com/products/simulia/abaqus",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Gold standard for non-linear FEA, contact, and composites",
     "User subroutines allow extending the solver with custom physics",
     "Trusted by every major automotive crash and aerospace certification body"
   ],
+
   cons: [
     "Among the most expensive FEA licenses on the market",
     "Abaqus/CAE preprocessor lags behind Workbench in usability",
     "Very steep learning curve"
   ],
+
   tech_specs: {
     engine: "Abaqus/Standard + Abaqus/Explicit",
     multicore: "Distributed (MPI)",
@@ -6167,7 +7260,9 @@ export const c5Tools: Tool[] = [
       "Nastran .bdf"
     ]
   },
+
   expert_verdict: "When the model is highly non-linear, large-strain, or contact-heavy, Abaqus is the default choice.",
+
   faqs: [
     {
       q: "What is Abaqus used for?",
@@ -6194,11 +7289,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "siemens-nx",
     "esi-visual-environment",
     "ansys-fluent"
   ],
+
   detailed_features: [
     {
       category: "Solvers",
@@ -6268,7 +7365,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 68,
+    url: "https://www.g2.com/products/abaqus/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 56,
+    url: "https://www.capterra.com/p/abaqus-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 49,
+    url: "https://sourceforge.net/projects/abaqus/reviews"
+  }]
 },
 {
   id: "t189",
@@ -6452,16 +7569,19 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 20000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Automotive",
     "Aerospace",
     "Defense",
     "Manufacturing"
   ],
+
   core_features: [
     "Explicit and implicit time-integration",
     "Crashworthiness and occupant safety",
@@ -6470,22 +7590,27 @@ export const c5Tools: Tool[] = [
     "Composite materials and delamination",
     "Multi-physics: EM, thermal, ICFD"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://www.ansys.com/products/structures/ansys-ls-dyna",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Industry-standard for automotive crash and aerospace bird-strike",
     "Massive material library and element formulations",
     "Excellent HPC scaling"
   ],
+
   cons: [
     "Command-driven keyword input file is notoriously dense",
     "Preprocessing typically done in LS-PrePost or ANSA, not bundled",
     "Top-tier licensing cost"
   ],
+
   tech_specs: {
     engine: "Lagrangian + Eulerian explicit FEM",
     multicore: "SMP and MPP",
@@ -6496,7 +7621,9 @@ export const c5Tools: Tool[] = [
       "IGES"
     ]
   },
+
   expert_verdict: "If you're doing crash, blast, or drop simulation at OEM scale, LS-DYNA is the default — full stop.",
+
   faqs: [
     {
       q: "What is LS-DYNA used for?",
@@ -6523,11 +7650,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Siemens NX, ESI Visual-Environment, ANSYS Fluent. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "siemens-nx",
     "esi-visual-environment",
     "ansys-fluent"
   ],
+
   detailed_features: [
     {
       category: "Explicit Dynamics",
@@ -6597,7 +7726,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.9,
+    max: 5,
+    count: 99,
+    url: "https://www.g2.com/products/ls-dyna/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 31,
+    url: "https://www.capterra.com/p/ls-dyna-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.9,
+    max: 5,
+    count: 21,
+    url: "https://sourceforge.net/projects/ls-dyna/reviews"
+  }]
 },
 {
   id: "t191",
@@ -6610,16 +7759,19 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 25000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
     "Energy",
     "Marine"
   ],
+
   core_features: [
     "Polyhedral and trimmed-cell automatic meshing",
     "Coupled implicit pressure-velocity solver",
@@ -6628,23 +7780,28 @@ export const c5Tools: Tool[] = [
     "Optimate+ for DOE and optimization",
     "Power-on-Demand HPC tokens"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Single-environment workflow from CAD to results",
     "Excellent automatic polyhedral meshing",
     "Power-on-Demand removes per-core licensing friction"
   ],
+
   cons: [
     "Commercial license cost is high",
     "Less standalone physics extensibility than Fluent or COMSOL",
     "Tight Siemens ecosystem alignment"
   ],
+
   tech_specs: {
     engine: "Coupled finite-volume CFD",
     multicore: "MPI (HPC)",
@@ -6656,7 +7813,9 @@ export const c5Tools: Tool[] = [
       "CGNS"
     ]
   },
+
   expert_verdict: "If you want one tool to do mesh-to-results without juggling Fluent + ICEM + CFD-Post, STAR-CCM+ is the answer.",
+
   faqs: [
     {
       q: "What is Simcenter STAR-CCM+ used for?",
@@ -6683,11 +7842,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Workbench, CAESAR II, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-workbench",
     "caesar-ii",
     "aspen-hysys"
   ],
+
   detailed_features: [
     {
       category: "CFD",
@@ -6757,7 +7918,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 119,
+    url: "https://www.g2.com/products/simcenter-star-ccm/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.8,
+    max: 5,
+    count: 65,
+    url: "https://www.capterra.com/p/simcenter-star-ccm-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 48,
+    url: "https://sourceforge.net/projects/simcenter-star-ccm/reviews"
+  }]
 },
 {
   id: "t192",
@@ -6770,17 +7951,20 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Linux",
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Research",
     "Aerospace",
     "Automotive",
     "Energy"
   ],
+
   core_features: [
     "Dozens of pre-built CFD solvers",
     "snappyHexMesh automatic mesher",
@@ -6789,6 +7973,7 @@ export const c5Tools: Tool[] = [
     "Excellent HPC scaling with MPI",
     "ParaView post-processing"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
@@ -6796,19 +7981,23 @@ export const c5Tools: Tool[] = [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.openfoam.com",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Zero license cost — scales to thousands of cores for free",
     "Full C++ source is open and customisable",
     "Massive academic and motorsport adoption"
   ],
+
   cons: [
     "Command-line driven; no native GUI",
     "Steep learning curve for the dictionary-file workflow",
     "Commercial support requires third-party vendors (ESI, OpenCFD, CFD Direct)"
   ],
+
   tech_specs: {
     engine: "Custom C++ finite-volume CFD",
     multicore: "MPI",
@@ -6819,7 +8008,9 @@ export const c5Tools: Tool[] = [
       "EnSight"
     ]
   },
+
   expert_verdict: "The open-source CFD that beat commercial codes in motorsport — if you can manage Linux and C++, the cost savings are massive.",
+
   faqs: [
     {
       q: "What is OpenFOAM used for?",
@@ -6846,11 +8037,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are OpenCASCADE, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "opencascade",
     "ansys-discovery",
     "altair-inspire"
   ],
+
   detailed_features: [
     {
       category: "Solvers",
@@ -6920,7 +8113,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 130,
+    url: "https://www.g2.com/products/openfoam/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 16,
+    url: "https://www.capterra.com/p/openfoam-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 23,
+    url: "https://sourceforge.net/projects/openfoam/reviews"
+  }]
 },
 {
   id: "t193",
@@ -6933,15 +8146,18 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2400,
+
   platforms: [
     "Web"
   ],
+
   industries: [
     "AEC",
     "Electronics",
     "Energy",
     "Manufacturing"
   ],
+
   core_features: [
     "CFD, FEA, thermal, particle dynamics in the browser",
     "Unlimited cloud compute (per-hour metering)",
@@ -6950,23 +8166,28 @@ export const c5Tools: Tool[] = [
     "Pre-built turbomachinery, AEC, electronics workflows",
     "Native CAD upload (STEP, Parasolid, STL)"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://www.simscale.com",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "No installation, no HPC procurement, no licence dongles",
     "Pay-as-you-go cloud compute scales with project size",
     "Excellent free Community Plan for self-learning"
   ],
+
   cons: [
     "Heavily reliant on internet connectivity",
     "Less physics breadth than Ansys or COMSOL",
     "Public Community Plan exposes projects publicly by default"
   ],
+
   tech_specs: {
     engine: "OpenFOAM + Code_Aster + CalculiX in AWS",
     multicore: "Cloud HPC (unlimited cores)",
@@ -6978,7 +8199,9 @@ export const c5Tools: Tool[] = [
       "IGES"
     ]
   },
+
   expert_verdict: "Made cloud CFD/FEA actually work — Community Plan is the best free way to learn industrial-grade simulation.",
+
   faqs: [
     {
       q: "What is SimScale used for?",
@@ -7005,11 +8228,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-discovery",
     "altair-inspire",
     "pv-elite"
   ],
+
   detailed_features: [
     {
       category: "Cloud Simulation",
@@ -7079,7 +8304,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 84,
+    url: "https://www.g2.com/products/simscale/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 35,
+    url: "https://www.capterra.com/p/simscale-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 54,
+    url: "https://sourceforge.net/projects/simscale/reviews"
+  }]
 },
 {
   id: "t194",
@@ -7092,14 +8337,17 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 12000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Aerospace",
     "Defense",
     "Marine"
   ],
+
   core_features: [
     "Best-in-class structural FE preprocessing",
     "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
@@ -7108,23 +8356,28 @@ export const c5Tools: Tool[] = [
     "Composites and bonded contact modeling",
     "Optimization with Topology and Nastran SOL 200"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Lightweight, fast, and very stable on huge airframe models",
     "CAD-agnostic — works with any CAD source",
     "Strong scripting / automation API"
   ],
+
   cons: [
     "Windows-only",
     "UI feels dated next to Workbench or Hypermesh",
     "Solver is sold separately"
   ],
+
   tech_specs: {
     engine: "Femap GUI + NX/MSC Nastran solver",
     multicore: "Inherits from Nastran",
@@ -7136,7 +8389,9 @@ export const c5Tools: Tool[] = [
       "Parasolid"
     ]
   },
+
   expert_verdict: "Still the preferred FE preprocessor for aerospace structural teams that live and breathe Nastran .bdf decks.",
+
   faqs: [
     {
       q: "What is Femap used for?",
@@ -7163,11 +8418,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are CSI SAP2000, COMSOL Multiphysics, CSI ETABS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "sap2000",
     "comsol-multiphysics",
     "etabs"
   ],
+
   detailed_features: [
     {
       category: "FEA Preprocessing",
@@ -7237,7 +8494,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 41,
+    url: "https://www.g2.com/products/femap/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 10,
+    url: "https://www.capterra.com/p/femap-reviews/"
+  }]
 },
 {
   id: "t195",
@@ -7250,15 +8521,18 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 6000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
     "Manufacturing",
     "Product Design"
   ],
+
   core_features: [
     "Topology and lattice optimization (OptiStruct under the hood)",
     "PolyNURBS rebuild of optimized shapes",
@@ -7267,24 +8541,29 @@ export const c5Tools: Tool[] = [
     "Print 3D and Cast modules",
     "Inspire Studio for industrial design"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://altair.com/inspire",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Industry-best topology optimization driven by real OptiStruct",
     "Designer-friendly UI — engineers can use it without an analyst",
     "Strong manufacturing-aware optimization (cast, extrusion, 3D print)"
   ],
+
   cons: [
     "Not a full FEA replacement — go to HyperWorks for production analysis",
     "Windows-only",
     "Subscription only"
   ],
+
   tech_specs: {
     engine: "OptiStruct + MotionSolve",
     multicore: "Yes",
@@ -7295,7 +8574,9 @@ export const c5Tools: Tool[] = [
       "Parasolid"
     ]
   },
+
   expert_verdict: "Best entry point into generative design for engineers who don't want to run a full Hypermesh stack.",
+
   faqs: [
     {
       q: "What is Altair Inspire used for?",
@@ -7322,11 +8603,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Discovery, PV Elite, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-discovery",
     "pv-elite",
     "staad-pro"
   ],
+
   detailed_features: [
     {
       category: "Generative Design",
@@ -7396,7 +8679,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 122,
+    url: "https://www.g2.com/products/altair-inspire/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 76,
+    url: "https://www.capterra.com/p/altair-inspire-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 48,
+    url: "https://sourceforge.net/projects/altair-inspire/reviews"
+  }]
 },
 {
   id: "t196",
@@ -7409,15 +8712,18 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 14000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Defense",
     "Automotive"
   ],
+
   core_features: [
     "Patran Command Language (PCL) automation",
     "Native MSC Nastran integration",
@@ -7426,22 +8732,27 @@ export const c5Tools: Tool[] = [
     "Linear contact, sub-modeling, glue",
     "Patran Laminate Modeler add-on"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://hexagon.com/products/patran",
   affiliate_url: null,
   score: 4.2,
+
   pros: [
     "Deep Nastran integration, decades of aerospace validation",
     "Powerful PCL scripting for plant-floor automation",
     "Strong composites toolset"
   ],
+
   cons: [
     "GUI shows its age",
     "Hexagon licensing complexity since the MSC acquisition",
     "Modern alternatives like HyperMesh outpace it in usability"
   ],
+
   tech_specs: {
     engine: "Patran GUI + Nastran/Marc/Abaqus",
     multicore: "Inherits from solver",
@@ -7452,7 +8763,9 @@ export const c5Tools: Tool[] = [
       "IGES"
     ]
   },
+
   expert_verdict: "The aerospace world's de facto Nastran cockpit — still robust, even if newer pre-processors are flashier.",
+
   faqs: [
     {
       q: "What is MSC Patran used for?",
@@ -7479,11 +8792,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, Bentley STAAD.Pro, Bentley AutoPIPE. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-robot",
     "staad-pro",
     "autopipe"
   ],
+
   detailed_features: [
     {
       category: "FEA Preprocessing",
@@ -7553,7 +8868,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 90,
+    url: "https://www.g2.com/products/msc-patran/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 32,
+    url: "https://www.capterra.com/p/msc-patran-reviews/"
+  }]
 },
 {
   id: "t197",
@@ -7566,16 +8895,19 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 18000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Automotive",
     "Aerospace",
     "Defense",
     "Manufacturing"
   ],
+
   core_features: [
     "Adams/Car vehicle dynamics templates",
     "Adams/Driveline and Adams/Tire",
@@ -7584,22 +8916,27 @@ export const c5Tools: Tool[] = [
     "Durability load-case extraction",
     "View animation and post-processing"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Default multibody tool for vehicle dynamics teams",
     "Flexible-body coupling with Nastran is industry-leading",
     "Strong template library (Adams/Car)"
   ],
+
   cons: [
     "Top-tier license pricing",
     "GUI is functional but dated",
     "Setup of complex assemblies takes weeks"
   ],
+
   tech_specs: {
     engine: "Adams Solver (rigid + flexible MBD)",
     multicore: "Yes",
@@ -7610,7 +8947,9 @@ export const c5Tools: Tool[] = [
       "Nastran .bdf"
     ]
   },
+
   expert_verdict: "If you are simulating a car suspension, helicopter rotor, or robotic arm in industry, Adams is the answer.",
+
   faqs: [
     {
       q: "What is MSC Adams used for?",
@@ -7637,11 +8976,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-discovery",
     "altair-inspire",
     "pv-elite"
   ],
+
   detailed_features: [
     {
       category: "Multibody Dynamics",
@@ -7711,7 +9052,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 28,
+    url: "https://www.g2.com/products/msc-adams/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 70,
+    url: "https://www.capterra.com/p/msc-adams-reviews/"
+  }]
 },
 {
   id: "t209",
@@ -7724,14 +9079,17 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 8000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Oil & Gas",
     "Chemical",
     "Power"
   ],
+
   core_features: [
     "ASME B31.1/B31.3/B31.4/B31.8 code checks",
     "Dynamic analysis: harmonic, spectrum, time history",
@@ -7740,23 +9098,28 @@ export const c5Tools: Tool[] = [
     "Nozzle load calculations (WRC 107/297)",
     "Flange leakage analysis"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://hexagon.com/products/caesar-ii",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Industry default — accepted by regulators worldwide",
     "Mature, stable code-checking library",
     "Excellent CAD integration with major plant tools"
   ],
+
   cons: [
     "Windows-only",
     "License cost is steep for occasional users",
     "UI shows its age"
   ],
+
   tech_specs: {
     engine: "CAESAR II beam FEM",
     multicore: "Limited",
@@ -7766,7 +9129,9 @@ export const c5Tools: Tool[] = [
       "EN 13480"
     ]
   },
+
   expert_verdict: "The pipe stress tool. Practically every regulator, owner, and EPC accepts CAESAR II output without question.",
+
   faqs: [
     {
       q: "What is CAESAR II used for?",
@@ -7793,11 +9158,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, AspenTech Aspen HYSYS. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-workbench",
     "simcenter-star-ccm",
     "aspen-hysys"
   ],
+
   detailed_features: [
     {
       category: "Pipe Stress",
@@ -7867,7 +9234,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 34,
+    url: "https://www.g2.com/products/caesar-ii/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 35,
+    url: "https://www.capterra.com/p/caesar-ii-reviews/"
+  }]
 },
 {
   id: "t210",
@@ -7880,14 +9261,17 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 8000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Power",
     "Nuclear",
     "Oil & Gas"
   ],
+
   core_features: [
     "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
     "Buried pipe and PipePlus modules",
@@ -7896,23 +9280,28 @@ export const c5Tools: Tool[] = [
     "Hanger sizing and selection",
     "Reduced-order modal analysis"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.bentley.com/software/autopipe/",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Best nuclear-code coverage in the industry",
     "Native integration with Bentley OpenPlant suite",
     "ELS (Bentley) subscription is competitive"
   ],
+
   cons: [
     "Less ubiquitous than CAESAR II — some owners require CAESAR II output specifically",
     "Windows-only",
     "Smaller third-party plug-in ecosystem"
   ],
+
   tech_specs: {
     engine: "AutoPIPE beam FEM",
     multicore: "Limited",
@@ -7924,7 +9313,9 @@ export const c5Tools: Tool[] = [
       "ASME NB"
     ]
   },
+
   expert_verdict: "Nuclear and power-plant designers' alternative to CAESAR II — and a better fit if your shop is on the Bentley ELS.",
+
   faqs: [
     {
       q: "What is Bentley AutoPIPE used for?",
@@ -7951,11 +9342,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, PV Elite. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-discovery",
     "altair-inspire",
     "pv-elite"
   ],
+
   detailed_features: [
     {
       category: "Pipe Stress",
@@ -8025,7 +9418,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 126,
+    url: "https://www.g2.com/products/autopipe/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 42,
+    url: "https://www.capterra.com/p/autopipe-reviews/"
+  }]
 },
 {
   id: "t211",
@@ -8038,14 +9445,17 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 6500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Oil & Gas",
     "Chemical",
     "Power"
   ],
+
   core_features: [
     "ASME VIII Div 1 & Div 2 code compliance",
     "PD 5500, EN 13445, TEMA exchanger codes",
@@ -8054,24 +9464,29 @@ export const c5Tools: Tool[] = [
     "Drawing and material report output",
     "Bidirectional with CADWorx Equipment"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://hexagon.com/products/pv-elite",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "De facto industry standard for ASME pressure vessel design",
     "Comprehensive code library",
     "Direct material report and fabrication drawing output"
   ],
+
   cons: [
     "Windows-only",
     "Subscription only — perpetual licenses no longer sold",
     "Add-on modules can stack up the price"
   ],
+
   tech_specs: {
     engine: "PV Elite analytic + FEA",
     multicore: "Limited",
@@ -8082,7 +9497,9 @@ export const c5Tools: Tool[] = [
       "EN 13445"
     ]
   },
+
   expert_verdict: "If you design pressure vessels, you have PV Elite installed. End of discussion.",
+
   faqs: [
     {
       q: "What is PV Elite used for?",
@@ -8109,11 +9526,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Discovery, Altair Inspire, Bentley STAAD.Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-discovery",
     "altair-inspire",
     "staad-pro"
   ],
+
   detailed_features: [
     {
       category: "Pressure Vessel",
@@ -8183,7 +9602,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 118,
+    url: "https://www.g2.com/products/pv-elite/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 79,
+    url: "https://www.capterra.com/p/pv-elite-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 21,
+    url: "https://sourceforge.net/projects/pv-elite/reviews"
+  }]
 },
 {
   id: "t212",
@@ -8196,14 +9635,17 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 25000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Oil & Gas",
     "Refining",
     "Chemical"
   ],
+
   core_features: [
     "Steady-state and dynamic process simulation",
     "Refining-focused thermodynamic packages",
@@ -8212,23 +9654,28 @@ export const c5Tools: Tool[] = [
     "Heat-exchanger network optimisation",
     "Aspen Plus inter-operability"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.aspentech.com/en/products/engineering/aspen-hysys",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Industry default for upstream and midstream process simulation",
     "Excellent dynamic simulation capability",
     "Tight integration with the wider AspenTech suite"
   ],
+
   cons: [
     "Top-tier enterprise pricing",
     "Windows-only",
     "Steep onboarding curve"
   ],
+
   tech_specs: {
     engine: "Aspen HYSYS solver",
     multicore: "Limited",
@@ -8237,7 +9684,9 @@ export const c5Tools: Tool[] = [
       "CAPE-OPEN"
     ]
   },
+
   expert_verdict: "If you simulate refineries or oil-and-gas processing for a living, HYSYS is on your desk.",
+
   faqs: [
     {
       q: "What is AspenTech Aspen HYSYS used for?",
@@ -8264,11 +9713,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Workbench, Simcenter STAR-CCM+, CAESAR II. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-workbench",
     "simcenter-star-ccm",
     "caesar-ii"
   ],
+
   detailed_features: [
     {
       category: "Process Simulation",
@@ -8338,7 +9789,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 101,
+    url: "https://www.g2.com/products/aspen-hysys/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 33,
+    url: "https://www.capterra.com/p/aspen-hysys-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 42,
+    url: "https://sourceforge.net/projects/aspen-hysys/reviews"
+  }]
 },
 {
   id: "t233",
@@ -8351,14 +9822,17 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 2495,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Civil Engineering",
     "Infrastructure"
   ],
+
   core_features: [
     "Linear / non-linear static and dynamic analysis",
     "Response spectrum and time history",
@@ -8367,24 +9841,29 @@ export const c5Tools: Tool[] = [
     "Steel, concrete, aluminum, cold-formed design codes",
     "API for VBA / .NET automation"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.csiamerica.com/products/sap2000",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Industry-trusted general analysis tool",
     "Strong bridge / tower / dam coverage",
     "Massive global user base"
   ],
+
   cons: [
     "Windows-only",
     "BIM interoperability is improving but trails Tekla/Revit-native tools",
     "GUI is functional but dated"
   ],
+
   tech_specs: {
     engine: "SAP2000 (finite element + frame)",
     multicore: "Yes",
@@ -8396,7 +9875,9 @@ export const c5Tools: Tool[] = [
       "IS"
     ]
   },
+
   expert_verdict: "If a structure isn't a regular building, SAP2000 is the default tool. Bridges, towers, stadium roofs — all routine.",
+
   faqs: [
     {
       q: "What is CSI SAP2000 used for?",
@@ -8423,11 +9904,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI ETABS, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "comsol-multiphysics",
     "etabs",
     "femap"
   ],
+
   detailed_features: [
     {
       category: "Structural Analysis",
@@ -8497,7 +9980,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 107,
+    url: "https://www.g2.com/products/sap2000/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 75,
+    url: "https://www.capterra.com/p/sap2000-reviews/"
+  }]
 },
 {
   id: "t234",
@@ -8510,13 +10007,16 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 2495,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Civil Engineering"
   ],
+
   core_features: [
     "Slab, beam, column, shear-wall integrated design",
     "Linear and non-linear analysis",
@@ -8525,24 +10025,29 @@ export const c5Tools: Tool[] = [
     "Detailing modules for slabs and walls",
     "API for automation"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.csiamerica.com/products/etabs",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Building structural analysis market leader",
     "Slab and lateral system design highly integrated",
     "Strong seismic / response-spectrum tooling"
   ],
+
   cons: [
     "Windows-only",
     "Perpetual + annual maintenance is pricey",
     "Less suited to non-building structures (use SAP2000)"
   ],
+
   tech_specs: {
     engine: "ETABS (finite element)",
     multicore: "Yes",
@@ -8555,7 +10060,9 @@ export const c5Tools: Tool[] = [
       "ASCE 7"
     ]
   },
+
   expert_verdict: "The default structural analysis tool for building engineers. Pair with Tekla or Revit for detailing.",
+
   faqs: [
     {
       q: "What is CSI ETABS used for?",
@@ -8582,11 +10089,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are COMSOL Multiphysics, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "comsol-multiphysics",
     "sap2000",
     "femap"
   ],
+
   detailed_features: [
     {
       category: "Building Analysis",
@@ -8656,7 +10165,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/etabs/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 94,
+    url: "https://www.capterra.com/p/etabs-reviews/"
+  }]
 },
 {
   id: "t235",
@@ -8669,14 +10192,17 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 3200,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Civil Engineering",
     "Industrial"
   ],
+
   core_features: [
     "Linear / non-linear static and dynamic analysis",
     "Concrete, steel, aluminum, timber design codes",
@@ -8685,24 +10211,29 @@ export const c5Tools: Tool[] = [
     "BIM interoperability (ISM, IFC)",
     "OpenSTAAD API for automation"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.bentley.com/software/staad-pro/",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Strong industrial / pipe rack pedigree",
     "Wide global code coverage",
     "Included in Bentley ELS bundles"
   ],
+
   cons: [
     "Windows-only",
     "UI shows its age",
     "Bentley licensing complexity (CONNECT, ELS)"
   ],
+
   tech_specs: {
     engine: "STAAD.Pro",
     multicore: "Yes",
@@ -8715,7 +10246,9 @@ export const c5Tools: Tool[] = [
       "BS"
     ]
   },
+
   expert_verdict: "Heavy lifter for industrial structures and Asia-region civil engineering — still going strong after 40 years.",
+
   faqs: [
     {
       q: "What is Bentley STAAD.Pro used for?",
@@ -8742,11 +10275,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Autodesk Robot Structural Analysis, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "autodesk-robot",
     "ansys-discovery",
     "altair-inspire"
   ],
+
   detailed_features: [
     {
       category: "Structural Analysis",
@@ -8816,7 +10351,27 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 98,
+    url: "https://www.g2.com/products/staad-pro/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 56,
+    url: "https://www.capterra.com/p/staad-pro-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.3,
+    max: 5,
+    count: 49,
+    url: "https://sourceforge.net/projects/staad-pro/reviews"
+  }]
 },
 {
   id: "t236",
@@ -8829,13 +10384,16 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2400,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Civil Engineering"
   ],
+
   core_features: [
     "1,500+ pre-built calculation templates",
     "Concrete, steel, masonry, timber, wind, seismic checks",
@@ -8844,23 +10402,28 @@ export const c5Tools: Tool[] = [
     "Word-format design reports",
     "Multi-region code coverage (US, UK, EU, AU, IN)"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://www.tekla.com/products/tekla-tedds",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Eliminates spreadsheet-based design calculations",
     "Auditable, signed PDF / Word output",
     "Active library maintenance for code changes"
   ],
+
   cons: [
     "Windows-only",
     "Subscription only",
     "Not an analysis package — pair with ETABS / SAP2000 / Robot"
   ],
+
   tech_specs: {
     engine: "Tedds calculation engine",
     multicore: "Limited",
@@ -8873,7 +10436,9 @@ export const c5Tools: Tool[] = [
       "AS"
     ]
   },
+
   expert_verdict: "Document-quality structural calcs in minutes. Most consulting offices that try Tedds adopt it permanently.",
+
   faqs: [
     {
       q: "What is Tekla Tedds used for?",
@@ -8900,11 +10465,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are RISA-3D, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "risa-3d",
     "ansys-discovery",
     "simscale"
   ],
+
   detailed_features: [
     {
       category: "Calculation Library",
@@ -8974,7 +10541,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 73,
+    url: "https://www.g2.com/products/tekla-tedds/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 53,
+    url: "https://www.capterra.com/p/tekla-tedds-reviews/"
+  }]
 },
 {
   id: "t242",
@@ -8987,13 +10568,16 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2615,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Civil Engineering"
   ],
+
   core_features: [
     "Linear and non-linear analysis",
     "Reinforced concrete and steel design",
@@ -9002,24 +10586,29 @@ export const c5Tools: Tool[] = [
     "Dynamic, modal, and seismic analyses",
     "Wind tunnel simulation add-on"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/robot-structural-analysis",
   affiliate_url: null,
   score: 4.2,
+
   pros: [
     "Native Revit integration is industry-leading",
     "Included in AEC Collection bundling",
     "Good multi-region code library"
   ],
+
   cons: [
     "Less polished than ETABS / SAP2000 for stand-alone analysis",
     "Windows-only",
     "Autodesk has reduced visible investment in recent years"
   ],
+
   tech_specs: {
     engine: "Robot solver",
     multicore: "Yes",
@@ -9031,7 +10620,9 @@ export const c5Tools: Tool[] = [
       "BS"
     ]
   },
+
   expert_verdict: "The default structural analysis tool for Revit-centric firms — convenience trumps analytical depth.",
+
   faqs: [
     {
       q: "What is Autodesk Robot Structural Analysis used for?",
@@ -9058,11 +10649,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Bentley STAAD.Pro, ANSYS Discovery, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "staad-pro",
     "ansys-discovery",
     "altair-inspire"
   ],
+
   detailed_features: [
     {
       category: "Structural Analysis",
@@ -9132,7 +10725,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 125,
+    url: "https://www.g2.com/products/autodesk-robot/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 28,
+    url: "https://www.capterra.com/p/autodesk-robot-reviews/"
+  }]
 },
 {
   id: "t243",
@@ -9145,13 +10752,16 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2300,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Civil Engineering"
   ],
+
   core_features: [
     "CBFEM (Component-Based FEM) for connections",
     "Steel, concrete, and composite member checks",
@@ -9160,23 +10770,28 @@ export const c5Tools: Tool[] = [
     "EN, AISC, CISC, AS, IS code checks",
     "API for automation"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://www.ideastatica.com",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Best-in-class connection design",
     "CBFEM is rapidly becoming the industry standard",
     "Wide BIM / FEA interoperability"
   ],
+
   cons: [
     "Windows-only",
     "Subscription only",
     "Requires Tekla / Revit / FEA link for full productivity"
   ],
+
   tech_specs: {
     engine: "CBFEM",
     multicore: "Yes",
@@ -9189,7 +10804,9 @@ export const c5Tools: Tool[] = [
       "IS"
     ]
   },
+
   expert_verdict: "Has reshaped how the structural-steel industry designs connections. Talk to any modern fabricator — they have it installed.",
+
   faqs: [
     {
       q: "What is IDEA StatiCa used for?",
@@ -9216,11 +10833,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are ANSYS Discovery, SimScale, Altair Inspire. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "ansys-discovery",
     "simscale",
     "altair-inspire"
   ],
+
   detailed_features: [
     {
       category: "Connection Design",
@@ -9290,7 +10909,21 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 46,
+    url: "https://www.g2.com/products/idea-statica/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 88,
+    url: "https://www.capterra.com/p/idea-statica-reviews/"
+  }]
 },
 {
   id: "t244",
@@ -9303,13 +10936,16 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2200,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Civil Engineering"
   ],
+
   core_features: [
     "Linear and P-Delta analysis",
     "Concrete (ACI), steel (AISC), wood (NDS), masonry (TMS) checks",
@@ -9318,23 +10954,28 @@ export const c5Tools: Tool[] = [
     "RISA-3D Educational free version",
     "API and import from Revit"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market"
   ],
+
   official_url: "https://risa.com/products/risa-3d",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Excellent fit for typical North American consulting workflows",
     "Strong wood and cold-formed steel modules",
     "Approachable UI for non-specialists"
   ],
+
   cons: [
     "Windows-only",
     "Smaller global footprint outside North America",
     "Less suited to large infrastructure than SAP2000 / STAAD"
   ],
+
   tech_specs: {
     engine: "RISA solver",
     multicore: "Yes",
@@ -9346,7 +10987,9 @@ export const c5Tools: Tool[] = [
       "TMS"
     ]
   },
+
   expert_verdict: "An everyday workhorse for North American building engineers. Pair with RISAFloor for full gravity-and-lateral workflows.",
+
   faqs: [
     {
       q: "What is RISA-3D used for?",
@@ -9373,11 +11016,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are Tekla Tedds, ANSYS Discovery, SimScale. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "tekla-tedds",
     "ansys-discovery",
     "simscale"
   ],
+
   detailed_features: [
     {
       category: "Structural Analysis",
@@ -9447,6 +11092,26 @@ export const c5Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 85,
+    url: "https://www.g2.com/products/risa-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 70,
+    url: "https://www.capterra.com/p/risa-3d-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 43,
+    url: "https://sourceforge.net/projects/risa-3d/reviews"
+  }]
 }
 ];

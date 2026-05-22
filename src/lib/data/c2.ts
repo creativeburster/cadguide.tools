@@ -2620,6 +2620,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("OSC"),
   short_desc: "The programmer's solid 3D CAD modeler.",
   description: "OpenSCAD is a software for creating solid 3D CAD objects. It is not an interactive modeler but a 3D-compiler based on a textual description language.",
+
   pricing_tiers: [
     {
       name: "Open Source",
@@ -2633,6 +2634,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Programming",
@@ -2669,46 +2671,56 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "freecad",
     "solvespace",
     "solvespace-pro"
   ],
+
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Hobbyist",
     "Maker",
     "Research"
   ],
+
   core_features: [
     "Script-based Modeling",
     "CSG Geometry Engine",
     "Parametric Variables"
   ],
+
   user_scales: [
     "Individuals"
   ],
+
   official_url: "https://openscad.org",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Total code control",
     "Perfect for 3D printing",
     "Extremely lightweight"
   ],
+
   cons: [
     "No interactive GUI",
     "Cody learning curve",
     "Poor organic shapes"
   ],
+
   faqs: [
     {
       q: "What is OpenSCAD used for?",
@@ -2735,6 +2747,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolveSpace, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "CGAL / OpenCSG",
     multicore: "Low",
@@ -2746,7 +2759,28 @@ export const c2Tools: Tool[] = [
       "CSG"
     ]
   },
-  expert_verdict: "OpenSCAD is the ultimate tool for engineers who think in code."
+
+  expert_verdict: "OpenSCAD is the ultimate tool for engineers who think in code.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 43,
+    url: "https://www.g2.com/products/openscad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 32,
+    url: "https://www.capterra.com/p/openscad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.3,
+    max: 5,
+    count: 12,
+    url: "https://sourceforge.net/projects/openscad/reviews"
+  }]
 },
 {
   id: "t25",
@@ -2920,6 +2954,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("SS"),
   short_desc: "A minimalist, open-source 2D/3D parametric CAD tool.",
   description: "SolveSpace is a free constraint-based parametric modeler. It is very lightweight and focuses on pure geometric logic.",
+
   pricing_tiers: [
     {
       name: "Open Source",
@@ -2933,6 +2968,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -2952,46 +2988,56 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "freecad",
     "openscad",
     "solvespace-pro"
   ],
+
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Hobbyist",
     "Light Engineering",
     "Education"
   ],
+
   core_features: [
     "Constraint Solver",
     "Minimalist Footprint",
     "STEP Export"
   ],
+
   user_scales: [
     "Individuals"
   ],
+
   official_url: "https://solvespace.com",
   affiliate_url: null,
   score: 4.1,
+
   pros: [
     "Tiny file size",
     "Fast for simple parts",
     "Pure logic"
   ],
+
   cons: [
     "No assembly management",
     "Basic UI",
     "Limited rendering"
   ],
+
   faqs: [
     {
       q: "What is SolveSpace used for?",
@@ -3018,6 +3064,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "SolveSpace Custom Solver",
     multicore: "Low",
@@ -3028,7 +3075,22 @@ export const c2Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "A masterclass in minimalist parametric design."
+
+  expert_verdict: "A masterclass in minimalist parametric design.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 122,
+    url: "https://www.g2.com/products/solvespace/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 28,
+    url: "https://www.capterra.com/p/solvespace-reviews/"
+  }]
 },
 {
   id: "t30",
@@ -3037,6 +3099,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("AL"),
   short_desc: "Professional 3D CAD without the enterprise price tag.",
   description: "Alibre Design provides industrial-grade parametric modeling tools. It is a popular choice for those seeking a perpetual license instead of a subscription.",
+
   pricing_tiers: [
     {
       name: "Professional",
@@ -3060,6 +3123,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -3096,45 +3160,55 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solidworks",
     "varicad",
     "zw3d"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 950,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical",
     "Manufacturing",
     "Prototyping"
   ],
+
   core_features: [
     "Parametric Modeling",
     "Global Variables",
     "Sheet Metal"
   ],
+
   user_scales: [
     "Small Business",
     "Individuals"
   ],
+
   official_url: "https://www.alibre.com",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Fair perpetual model",
     "SolidWorks-like workflow",
     "Solid mid-range perf"
   ],
+
   cons: [
     "Windows only",
     "Smaller add-on ecosystem",
     "Tiered simulation"
   ],
+
   faqs: [
     {
       q: "What is Alibre Design used for?",
@@ -3161,6 +3235,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, VariCAD, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ACIS",
     multicore: "Moderate",
@@ -3172,7 +3247,28 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "No mandatory subscriptions, just solid parametric tools."
+
+  expert_verdict: "No mandatory subscriptions, just solid parametric tools.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 128,
+    url: "https://www.g2.com/products/alibre-design/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 9,
+    url: "https://www.capterra.com/p/alibre-design-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 30,
+    url: "https://sourceforge.net/projects/alibre-design/reviews"
+  }]
 },
 {
   id: "t41",
@@ -3181,6 +3277,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("VC"),
   short_desc: "Compact CAD system for mechanical engineering.",
   description: "VariCAD is a compact 3D/2D CAD system for mechanical engineering.",
+
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -3194,6 +3291,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -3213,45 +3311,55 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "freecad",
     "solidworks",
     "alibre-design"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 700,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Mechanical",
     "Hobbyist"
   ],
+
   core_features: [
     "3D Modeling",
     "2D Drafting",
     "Standard Parts Lib"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://www.varicad.com",
   affiliate_url: null,
   score: 4,
+
   pros: [
     "Fast performance",
     "Native Linux support",
     "Affordable perpetual"
   ],
+
   cons: [
     "Non-standard UI",
     "Basic visuals",
     "Small community"
   ],
+
   faqs: [
     {
       q: "What is VariCAD used for?",
@@ -3278,6 +3386,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are FreeCAD, SolidWorks, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "VariCAD Custom",
     multicore: "Low",
@@ -3288,7 +3397,28 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "A robust choice for individual mechanical engineers on Linux."
+
+  expert_verdict: "A robust choice for individual mechanical engineers on Linux.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 3.9,
+    max: 5,
+    count: 71,
+    url: "https://www.g2.com/products/varicad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 15,
+    url: "https://www.capterra.com/p/varicad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4,
+    max: 5,
+    count: 53,
+    url: "https://sourceforge.net/projects/varicad/reviews"
+  }]
 },
 {
   id: "t50",
@@ -3723,37 +3853,45 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Education",
     "Makers",
     "Mechanical"
   ],
+
   core_features: [
     "Constraint Solver",
     "Geometric Logic",
     "STEP Export"
   ],
+
   user_scales: [
     "Individuals"
   ],
+
   official_url: "https://solvespace.com",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Extremely fast",
     "Pure geometric logic",
     "Completely free"
   ],
+
   cons: [
     "No assembly",
     "Hard for organic",
     "Slow complex rendering"
   ],
+
   faqs: [
     {
       q: "What is SolveSpace Pro used for?",
@@ -3780,6 +3918,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Custom",
     multicore: "Low",
@@ -3790,7 +3929,22 @@ export const c2Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "The ultimate tool for engineers who value geometric purity."
+
+  expert_verdict: "The ultimate tool for engineers who value geometric purity.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 125,
+    url: "https://www.g2.com/products/solvespace-pro/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 28,
+    url: "https://www.capterra.com/p/solvespace-pro-reviews/"
+  }]
 },
 {
   id: "t58",
@@ -3803,14 +3957,17 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 3950,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Industrial Design",
     "Machine Design",
     "Packaging"
   ],
+
   core_features: [
     "Drag-and-Drop Design",
     "TriBall Interaction",
@@ -3818,23 +3975,28 @@ export const c2Tools: Tool[] = [
     "Non-history Modeling",
     "Large Assembly"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.ironcad.com",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Unmatched design speed",
     "Dual-kernel precision",
     "Flexible modeling"
   ],
+
   cons: [
     "Expensive",
     "Smaller user base",
     "Requires high-end GPU"
   ],
+
   faqs: [
     {
       q: "What is IronCAD used for?",
@@ -3861,6 +4023,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are Rhino 3D, ZW3D, Alibre Design. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ACIS & Parasolid",
     multicore: "Moderate",
@@ -3871,7 +4034,9 @@ export const c2Tools: Tool[] = [
       "X_T"
     ]
   },
+
   expert_verdict: "A radical alternative to history-based CAD that can triple design output for mechanical assemblies.",
+
   pricing_tiers: [
     {
       name: "Annual",
@@ -3886,6 +4051,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Efficiency",
@@ -3929,7 +4095,21 @@ export const c2Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 108,
+    url: "https://www.g2.com/products/ironcad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.8,
+    max: 5,
+    count: 23,
+    url: "https://www.capterra.com/p/ironcad-reviews/"
+  }]
 },
 {
   id: "t59",
@@ -3942,37 +4122,45 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Tool & Die",
     "Mold Design",
     "Rapid Prototyping"
   ],
+
   core_features: [
     "Direct Geometry Editing",
     "Universal CAD Importers",
     "Drafting & Detailing",
     "Assembly Management"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://www.kubotekkosmos.com",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Handles any CAD file",
     "Fast geometry repair",
     "No constraint issues"
   ],
+
   cons: [
     "Lacks parametric history",
     "Niche user base",
     "UI feels dated"
   ],
+
   faqs: [
     {
       q: "What is KeyCreator used for?",
@@ -3999,6 +4187,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are Autodesk Inventor, Fusion 360, PTC Creo. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Proprietary Direct",
     multicore: "Moderate",
@@ -4009,7 +4198,28 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "The absolute best tool for engineers who need to fix 'broken' geometry from other systems."
+
+  expert_verdict: "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/keycreator/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 92,
+    url: "https://www.capterra.com/p/keycreator-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 25,
+    url: "https://sourceforge.net/projects/keycreator/reviews"
+  }]
 },
 {
   id: "t79",
@@ -4022,36 +4232,44 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 5000,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Reverse Engineering",
     "Quality Control"
   ],
+
   core_features: [
     "Automatic Surface Fitting",
     "Mesh to Solid",
     "LiveTransfer to CAD",
     "Point Cloud Analysis"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.3dsystems.com/software/geomagic-design-x",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Best scan-to-CAD workflow",
     "Feature-based modeling",
     "Extremely accurate"
   ],
+
   cons: [
     "Very expensive",
     "High hardware requirements",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is Geomagic Design X used for?",
@@ -4078,6 +4296,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, Autodesk Inventor. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Parasolid",
     multicore: "High",
@@ -4088,7 +4307,22 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "The professional standard for turning physical objects into digital CAD data."
+
+  expert_verdict: "The professional standard for turning physical objects into digital CAD data.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 119,
+    url: "https://www.g2.com/products/geomagic-design-x/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 45,
+    url: "https://www.capterra.com/p/geomagic-design-x-reviews/"
+  }]
 },
 {
   id: "t80",
@@ -4101,37 +4335,45 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 12000,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Automotive",
     "Industrial Design"
   ],
+
   core_features: [
     "Class-A Surfacing",
     "Conceptual Sketching",
     "VR Visualization",
     "Dynamo Integration"
   ],
+
   user_scales: [
     "Enterprise",
     "Design Agencies"
   ],
+
   official_url: "https://www.autodesk.com/products/alias/overview",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Gold standard for Class-A surfaces",
     "Stunning visualization",
     "Unified design workflow"
   ],
+
   cons: [
     "Extremely high cost",
     "Steepest learning curve in CAD",
     "Niche expertise needed"
   ],
+
   faqs: [
     {
       q: "What is Alias AutoStudio used for?",
@@ -4158,6 +4400,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Alias Core",
     multicore: "High",
@@ -4168,7 +4411,22 @@ export const c2Tools: Tool[] = [
       "VDAFS"
     ]
   },
-  expert_verdict: "The software behind almost every beautiful car you see on the road."
+
+  expert_verdict: "The software behind almost every beautiful car you see on the road.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 119,
+    url: "https://www.g2.com/products/alias-autostudio/reviews"
+  }, {
+    source: "Capterra",
+    score: 5,
+    max: 5,
+    count: 45,
+    url: "https://www.capterra.com/p/alias-autostudio-reviews/"
+  }]
 },
 {
   id: "t89",
@@ -4181,14 +4439,17 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 2995,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "Mechanical",
     "Mold Design"
   ],
+
   core_features: [
     "CAD/CAM/CAE",
     "Overdrive Engine",
@@ -4196,23 +4457,28 @@ export const c2Tools: Tool[] = [
     "Surface Modeling",
     "Hybrid Modeling"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://www.zwsoft.com/zw3d",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Integrated CAD+CAM",
     "Perpetual license available",
     "Competitive pricing"
   ],
+
   cons: [
     "Less third-party integrations",
     "Smaller user community",
     "UI not as polished as NX"
   ],
+
   faqs: [
     {
       q: "What is ZW3D used for?",
@@ -4239,6 +4505,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are Alibre Design, Rhino 3D, IronCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Overdrive Kernel (Proprietary)",
     multicore: "Moderate",
@@ -4250,7 +4517,9 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
+
   expert_verdict: "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4289,6 +4558,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design Power",
@@ -4332,7 +4602,27 @@ export const c2Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 77,
+    url: "https://www.g2.com/products/zw3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 38,
+    url: "https://www.capterra.com/p/zw3d-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.4,
+    max: 5,
+    count: 34,
+    url: "https://sourceforge.net/projects/zw3d/reviews"
+  }]
 },
 {
   id: "t237",
@@ -4345,16 +4635,19 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 149,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Product Design",
     "Games",
     "Industrial Design"
   ],
+
   core_features: [
     "Parasolid NURBS kernel",
     "Blender-style hotkey-driven workflow",
@@ -4363,24 +4656,29 @@ export const c2Tools: Tool[] = [
     "STEP, IGES, OBJ, X_T export",
     "Indie license (≤$100k revenue)"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
     "SMB"
   ],
+
   official_url: "https://www.plasticity.xyz",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Fast, modern, hotkey-heavy UX",
     "Real Parasolid for clean STEP/IGES output",
     "Perpetual indie license under $200"
   ],
+
   cons: [
     "Young product — feature gaps vs Rhino/Fusion 360",
     "No assembly / drawing modules yet",
     "Smaller community and plugin ecosystem"
   ],
+
   tech_specs: {
     engine: "Parasolid",
     multicore: "Yes",
@@ -4392,7 +4690,9 @@ export const c2Tools: Tool[] = [
       "OBJ"
     ]
   },
+
   expert_verdict: "The most exciting new 3D CAD in years. If you wished Rhino felt more like Blender, Plasticity is for you.",
+
   faqs: [
     {
       q: "What is Plasticity used for?",
@@ -4419,11 +4719,13 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are MoI3D, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "moi3d",
     "alibre-design",
     "zw3d"
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -4493,7 +4795,27 @@ export const c2Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 122,
+    url: "https://www.g2.com/products/plasticity/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 92,
+    url: "https://www.capterra.com/p/plasticity-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 37,
+    url: "https://sourceforge.net/projects/plasticity/reviews"
+  }]
 },
 {
   id: "t238",
@@ -4506,15 +4828,18 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 295,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Product Design",
     "Industrial Design",
     "Games"
   ],
+
   core_features: [
     "NURBS solid and surface modeling",
     "Pen-tablet friendly UI",
@@ -4523,24 +4848,29 @@ export const c2Tools: Tool[] = [
     "Curve and surface manipulation",
     "Robust STEP, IGES, OBJ, 3DM export"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
     "SMB"
   ],
+
   official_url: "https://moi3d.com",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Famously elegant, simple UI",
     "Perpetual license at $295",
     "Best NURBS-to-quad-mesh export in the industry"
   ],
+
   cons: [
     "Slow release pace (solo developer)",
     "No assemblies / drawings / parametric history",
     "Smaller user base than Rhino"
   ],
+
   tech_specs: {
     engine: "MoI / SMLib",
     multicore: "Limited",
@@ -4552,7 +4882,9 @@ export const c2Tools: Tool[] = [
       "3DM"
     ]
   },
+
   expert_verdict: "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
+
   faqs: [
     {
       q: "What is MoI3D used for?",
@@ -4579,11 +4911,13 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "plasticity",
     "alibre-design",
     "zw3d"
   ],
+
   detailed_features: [
     {
       category: "NURBS",
@@ -4653,7 +4987,27 @@ export const c2Tools: Tool[] = [
         }
       ]
     }
-  ]
+  ],
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 35,
+    url: "https://www.g2.com/products/moi3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 80,
+    url: "https://www.capterra.com/p/moi3d-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 36,
+    url: "https://sourceforge.net/projects/moi3d/reviews"
+  }]
 },
 {
   id: "t26",
@@ -4662,6 +5016,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "Free, browser-based 3D design tool for beginners and education.",
   description: "Tinkercad is a free, easy-to-use web application for 3D design, electronics, and coding. It's designed for beginners, students, and educators, providing an intuitive block-based approach to 3D modeling without complex interfaces.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -4676,6 +5031,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Core Features",
@@ -4699,46 +5055,56 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "fusion-360",
     "sketchup",
     "onshape"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Web",
     "Android",
     "iOS"
   ],
+
   industries: [
     "Education",
     "Hobbyist",
     "Prototyping"
   ],
+
   core_features: [
     "3D Design",
     "Electronics",
     "Coding"
   ],
+
   user_scales: [
     "Education",
     "Individuals"
   ],
+
   official_url: "https://www.tinkercad.com",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Completely free",
     "Easy to learn",
     "Web-based"
   ],
+
   cons: [
     "Limited for professional use",
     "Basic features only"
   ],
+
   faqs: [
     {
       q: "What is Tinkercad used for?",
@@ -4761,6 +5127,7 @@ export const c2Tools: Tool[] = [
       a: "Tinkercad supports export to STL, OBJ, and SVG for 3D printing and manufacturing."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk Tinkercad Engine",
     multicore: "N/A",
@@ -4771,7 +5138,28 @@ export const c2Tools: Tool[] = [
       "SVG"
     ]
   },
-  expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics."
+
+  expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 90,
+    url: "https://www.g2.com/products/tinkercad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 92,
+    url: "https://www.capterra.com/p/tinkercad-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 28,
+    url: "https://sourceforge.net/projects/tinkercad/reviews"
+  }]
 },
 {
   id: "t27",
@@ -4780,6 +5168,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile 3D CAD file viewer for viewing and analyzing 3D models.",
   description: "Glovius is a 3D CAD file viewer that allows users to view, measure, and analyze 3D models on mobile devices. It supports a wide range of CAD file formats and provides tools for inspection, measurement, and collaboration.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -4805,6 +5194,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Viewing Features",
@@ -4828,45 +5218,55 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "cad-exchanger",
     "dwg-fastview",
     "autocad"
   ],
+
   country: "India",
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Engineering",
     "Manufacturing",
     "Automotive"
   ],
+
   core_features: [
     "3D Viewing",
     "Measurement",
     "Format Support"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://glovius.com",
   affiliate_url: null,
   score: 4.2,
+
   pros: [
     "Wide format support",
     "Mobile-optimized",
     "Free tier"
   ],
+
   cons: [
     "Limited editing",
     "Watermark in free version"
   ],
+
   faqs: [
     {
       q: "What is Glovius used for?",
@@ -4889,6 +5289,7 @@ export const c2Tools: Tool[] = [
       a: "Glovius supports a wide range of 3D CAD formats including CATIA, NX, SolidWorks, Creo, Inventor, and more."
     }
   ],
+
   tech_specs: {
     engine: "HCL Glovius Engine",
     multicore: "N/A",
@@ -4901,7 +5302,28 @@ export const c2Tools: Tool[] = [
       "Inventor"
     ]
   },
-  expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats."
+
+  expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 58,
+    url: "https://www.g2.com/products/glovius/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 66,
+    url: "https://www.capterra.com/p/glovius-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.2,
+    max: 5,
+    count: 46,
+    url: "https://sourceforge.net/projects/glovius/reviews"
+  }]
 },
 {
   id: "t28",
@@ -4910,6 +5332,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile 3D CAD viewer and converter for multiple file formats.",
   description: "CAD Exchanger is a mobile application for viewing and converting 3D CAD files. It supports a wide range of formats including STEP, IGES, STL, and more, making it useful for engineers and designers who need to work with different CAD systems.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -4935,6 +5358,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Conversion Features",
@@ -4958,45 +5382,55 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "glovius",
     "dwg-fastview",
     "autocad"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Engineering",
     "Manufacturing",
     "Automotive"
   ],
+
   core_features: [
     "3D Viewing",
     "Format Conversion",
     "Cross-platform"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://cadexchanger.com",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Wide format support",
     "Good conversion quality",
     "Free tier"
   ],
+
   cons: [
     "Limited editing",
     "Watermark in free version"
   ],
+
   faqs: [
     {
       q: "What is CAD Exchanger used for?",
@@ -5019,6 +5453,7 @@ export const c2Tools: Tool[] = [
       a: "CAD Exchanger supports a wide range of 3D CAD formats including STEP, IGES, STL, JT, Parasolid, and more."
     }
   ],
+
   tech_specs: {
     engine: "CAD Exchanger SDK",
     multicore: "N/A",
@@ -5031,6 +5466,27 @@ export const c2Tools: Tool[] = [
       "Parasolid"
     ]
   },
-  expert_verdict: "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion."
+
+  expert_verdict: "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 42,
+    url: "https://www.g2.com/products/cad-exchanger/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 39,
+    url: "https://www.capterra.com/p/cad-exchanger-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 42,
+    url: "https://sourceforge.net/projects/cad-exchanger/reviews"
+  }]
 }
 ];

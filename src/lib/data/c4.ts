@@ -352,6 +352,7 @@ export const c4Tools: Tool[] = [
   logo_url: "",
   short_desc: "The BIM quality assurance and QC leader.",
   description: "Solibri is the market leader in BIM Quality Assurance and Quality Control. It provides tools for BIM managers to check for model integrity and coordination issues.",
+
   pricing_tiers: [
     {
       name: "Office",
@@ -365,6 +366,7 @@ export const c4Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Checking",
@@ -401,45 +403,55 @@ export const c4Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "navisworks",
     "recap-pro",
     "bluebeam-revu"
   ],
+
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 3500,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "AEC",
     "BIM Management"
   ],
+
   core_features: [
     "Rule-based Checking",
     "Information Takeoff",
     "Clash Detection"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.solibri.com",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Deepest validation rules",
     "Clean UI",
     "Open BIM native"
   ],
+
   cons: [
     "Expensive",
     "IFC data quality dependent",
     "Complex rule custom"
   ],
+
   faqs: [
     {
       q: "What is Solibri used for?",
@@ -466,6 +478,7 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are Navisworks, Recap Pro, Bluebeam Revu. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Solibri IFC Engine",
     multicore: "Moderate",
@@ -476,7 +489,28 @@ export const c4Tools: Tool[] = [
       "DWG"
     ]
   },
-  expert_verdict: "Solibri finds logical errors that other tools miss."
+
+  expert_verdict: "Solibri finds logical errors that other tools miss.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 114,
+    url: "https://www.g2.com/products/solibri/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 74,
+    url: "https://www.capterra.com/p/solibri-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 13,
+    url: "https://sourceforge.net/projects/solibri/reviews"
+  }]
 },
 {
   id: "t37",
@@ -485,6 +519,7 @@ export const c4Tools: Tool[] = [
   logo_url: "",
   short_desc: "Open-source system for processing 3D meshes.",
   description: "MeshLab is an open-source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.",
+
   pricing_tiers: [
     {
       name: "Community",
@@ -498,6 +533,7 @@ export const c4Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Editing",
@@ -517,47 +553,57 @@ export const c4Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "magics",
     "blender",
     "solid-edge-viewer"
   ],
+
   country: "USA",
   category_id: "c4",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Research",
     "Archaeology",
     "3D Printing"
   ],
+
   core_features: [
     "Mesh Cleaning",
     "Surface Reconstruction",
     "Point Cloud to Mesh"
   ],
+
   user_scales: [
     "Individuals",
     "Education"
   ],
+
   official_url: "https://www.meshlab.net",
   affiliate_url: null,
   score: 4.1,
+
   pros: [
     "Vast mesh filters",
     "Completely free",
     "Point cloud handling"
   ],
+
   cons: [
     "Unstable (crashes)",
     "Complex UI",
     "Legacy UX"
   ],
+
   faqs: [
     {
       q: "What is MeshLab used for?",
@@ -584,6 +630,7 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are Magics, Blender, Solid Edge Viewer. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "VCG Library",
     multicore: "Low",
@@ -594,7 +641,22 @@ export const c4Tools: Tool[] = [
       "PLY"
     ]
   },
-  expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment."
+
+  expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 131,
+    url: "https://www.g2.com/products/meshlab/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 60,
+    url: "https://www.capterra.com/p/meshlab-reviews/"
+  }]
 },
 {
   id: "t39",
@@ -603,6 +665,7 @@ export const c4Tools: Tool[] = [
   logo_url: "",
   short_desc: "Reality capture and 3D scanning software.",
   description: "Autodesk ReCap Pro converts laser scans and photos into 3D models or point clouds. It is essential for scan-to-BIM workflows.",
+
   pricing_tiers: [
     {
       name: "Annual",
@@ -616,6 +679,7 @@ export const c4Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Scans",
@@ -635,45 +699,55 @@ export const c4Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "meshlab",
     "solibri",
     "navisworks"
   ],
+
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 360,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Surveying",
     "Infrastructure"
   ],
+
   core_features: [
     "Point Cloud Registration",
     "Photo to 3D",
     "Scan-to-BIM"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/recap",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Best Revit integration",
     "Modern UI",
     "Photogrammetry results"
   ],
+
   cons: [
     "Cloud credits dependency",
     "Limited manual editing",
     "Subscription only"
   ],
+
   faqs: [
     {
       q: "What is Recap Pro used for?",
@@ -700,6 +774,7 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are MeshLab, Solibri, Navisworks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk Reality",
     multicore: "Excellent",
@@ -710,7 +785,28 @@ export const c4Tools: Tool[] = [
       "E57"
     ]
   },
-  expert_verdict: "The gateway to reality capture in the BIM world."
+
+  expert_verdict: "The gateway to reality capture in the BIM world.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 102,
+    url: "https://www.g2.com/products/recap-pro/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 36,
+    url: "https://www.capterra.com/p/recap-pro-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 39,
+    url: "https://sourceforge.net/projects/recap-pro/reviews"
+  }]
 },
 {
   id: "t48",
@@ -723,35 +819,43 @@ export const c4Tools: Tool[] = [
   category_id: "c4",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "General"
   ],
+
   core_features: [
     "3D Rotation",
     "Measurement",
     "Sectioning"
   ],
+
   user_scales: [
     "Individuals",
     "Mid-Market"
   ],
+
   official_url: "https://www.siemens.com",
   affiliate_url: null,
   score: 4.2,
+
   pros: [
     "Free for all",
     "Official file support",
     "Measurement tools"
   ],
+
   cons: [
     "Windows only",
     "No editing",
     "Large install"
   ],
+
   faqs: [
     {
       q: "What is Solid Edge Viewer used for?",
@@ -778,6 +882,7 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are DWG TrueView, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Siemens JT",
     multicore: "Low",
@@ -788,7 +893,28 @@ export const c4Tools: Tool[] = [
       "DWG"
     ]
   },
-  expert_verdict: "The standard for viewing Solid Edge data in production."
+
+  expert_verdict: "The standard for viewing Solid Edge data in production.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 41,
+    url: "https://www.g2.com/products/solid-edge-viewer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 14,
+    url: "https://www.capterra.com/p/solid-edge-viewer-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.2,
+    max: 5,
+    count: 17,
+    url: "https://sourceforge.net/projects/solid-edge-viewer/reviews"
+  }]
 },
 {
   id: "t49",
@@ -801,35 +927,43 @@ export const c4Tools: Tool[] = [
   category_id: "c4",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Architecture",
     "Engineering"
   ],
+
   core_features: [
     "Native DWG viewing",
     "DWG conversion",
     "Layer control"
   ],
+
   user_scales: [
     "Individuals",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Most accurate viewer",
     "TrueConvert included",
     "100% Free"
   ],
+
   cons: [
     "Heavy install",
     "No macOS",
     "No mark-up"
   ],
+
   faqs: [
     {
       q: "What is DWG TrueView used for?",
@@ -856,6 +990,7 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are Solid Edge Viewer, MeshLab, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "AutoCAD Core",
     multicore: "Low",
@@ -865,6 +1000,27 @@ export const c4Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "The essential utility for DWG version management."
+
+  expert_verdict: "The essential utility for DWG version management.",
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 73,
+    url: "https://www.g2.com/products/dwg-trueview/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 69,
+    url: "https://www.capterra.com/p/dwg-trueview-reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.3,
+    max: 5,
+    count: 25,
+    url: "https://sourceforge.net/projects/dwg-trueview/reviews"
+  }]
 }
 ];
