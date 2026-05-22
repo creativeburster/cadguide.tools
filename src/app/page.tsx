@@ -141,20 +141,23 @@ function HomeBody() {
                <h2 className="text-3xl font-black text-slate-900 tracking-tight">Trending BIM Solutions</h2>
              </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tools.filter(t => t.category_id === 'c3').slice(0, 4).map((tool) => (
-              <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white p-6 rounded-[32px] border border-slate-200/60 hover:border-blue-100 hover:shadow-2xl transition-all flex flex-col h-full">
-                {/* Logo Area: Beautifully sized left-aligned container to keep logos crisp and premium */}
-                <div className="mb-6">
-                  <ToolLogo 
-                    slug={tool.slug} src={tool.logo_url} 
-                    websiteUrl={tool.official_url}
-                    name={tool.name} 
-                    className="w-20 h-20 rounded-2xl transition-all bg-white border border-slate-100 shadow-sm group-hover:scale-105 group-hover:shadow-md" 
-                  />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tools.filter(t => t.category_id === 'c3').slice(0, 9).map((tool) => (
+              <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white p-5 rounded-[24px] border border-slate-200/60 hover:border-blue-100 hover:shadow-xl transition-all flex items-start gap-4">
+                <ToolLogo 
+                  slug={tool.slug} src={tool.logo_url} 
+                  websiteUrl={tool.official_url}
+                  name={tool.name} 
+                  className="w-14 h-14 rounded-xl border border-slate-100 shadow-sm shrink-0 bg-white transition-all group-hover:scale-105 group-hover:shadow-md" 
+                />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-black text-slate-900 group-hover:text-blue-600 text-sm sm:text-base transition-colors truncate">{tool.name}</h3>
+                    <span className="text-yellow-500 text-xs font-black shrink-0">★ {tool.score}</span>
+                  </div>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">{tool.pricing_type} • AEC Industry</p>
+                  <p className="text-xs text-slate-500 line-clamp-1 mt-1.5 font-medium leading-relaxed">{tool.short_desc}</p>
                 </div>
-                <h3 className="font-black text-slate-900 group-hover:text-blue-600 text-lg transition-colors">{tool.name}</h3>
-                <p className="text-[11px] text-slate-400 font-bold uppercase tracking-widest mt-1">{tool.pricing_type} • AEC Industry</p>
               </Link>
             ))}
           </div>
