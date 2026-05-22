@@ -2,7 +2,7 @@
 
 import { useState, useMemo, Suspense, useRef } from 'react';
 import { tools } from '@/lib/data';
-import { editorPickPairs } from '@/lib/seo-content';
+import { editorPickPairs, comparisonPairs } from '@/lib/seo-content';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
@@ -16,10 +16,117 @@ function CompareContent() {
 
   const [selectedToolIds, setSelectedToolIds] = useState<string[]>(initialIds);
   const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState<string>('all');
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   // Editor-picked top comparisons. Static data — compute once.
   const editorPicks = useMemo(() => editorPickPairs(), []);
+
+  // Load all 67 comparison pairs
+  const allPairs = useMemo(() => comparisonPairs(), []);
+
+  const disciplines = useMemo(() => [
+    {
+      id: '2d-drafting',
+      name: '2D Drafting & CAD',
+      description: 'General-purpose 2D drafting, technical detailing, and legacy DWG drawing exchange.',
+      badgeBg: 'bg-sky-50 text-sky-700 border-sky-100',
+      bgGradient: 'from-sky-50/40 via-blue-50/10 to-transparent',
+      hoverBorder: 'hover:border-sky-300/80',
+      shadowColor: 'hover:shadow-sky-100/40',
+      iconColor: 'text-sky-500',
+      filterLabel: '2D CAD',
+      test: (a: any, b: any) => {
+        const has2D = a.category_id === 'c1' || b.category_id === 'c1';
+        const hasBIM = a.category_id === 'c3' || b.category_id === 'c3';
+        return has2D && !hasBIM;
+      }
+    },
+    {
+      id: '3d-mcad',
+      name: '3D MCAD & Product Modeling',
+      description: 'Parametric solid engineering, complex mechanical assemblies, and product design pipelines.',
+      badgeBg: 'bg-amber-50 text-amber-800 border-amber-100',
+      bgGradient: 'from-amber-50/40 via-orange-50/10 to-transparent',
+      hoverBorder: 'hover:border-amber-300/80',
+      shadowColor: 'hover:shadow-amber-100/40',
+      iconColor: 'text-amber-500',
+      filterLabel: '3D MCAD',
+      test: (a: any, b: any) => {
+        const has3D = a.category_id === 'c2' || b.category_id === 'c2';
+        const hasBIM = a.category_id === 'c3' || b.category_id === 'c3';
+        return has3D && !hasBIM;
+      }
+    },
+    {
+      id: 'bim-arch',
+      name: 'BIM & Architectural CAD',
+      description: 'Building information modeling, architectural visualization, and dynamic spatial coordination.',
+      badgeBg: 'bg-emerald-50 text-emerald-800 border-emerald-100',
+      bgGradient: 'from-emerald-50/40 via-teal-50/10 to-transparent',
+      hoverBorder: 'hover:border-emerald-300/80',
+      shadowColor: 'hover:shadow-emerald-100/40',
+      iconColor: 'text-emerald-500',
+      filterLabel: 'BIM & Architecture',
+      test: (a: any, b: any) => {
+        const hasBIM = a.category_id === 'c3' || b.category_id === 'c3';
+        const renderingSlugs = ['lumion', 'twinmotion', 'enscape', 'v-ray', 'corona-renderer'];
+        const hasRender = renderingSlugs.includes(a.slug) || renderingSlugs.includes(b.slug);
+        return hasBIM || hasRender;
+      }
+    },
+    {
+      id: 'cae-eda',
+      name: 'CAE, CAM & EDA Electronics',
+      description: 'Finite element analysis (FEA), fluid simulation (CFD), multi-axis CNC machining, and PCB layout.',
+      badgeBg: 'bg-violet-50 text-violet-800 border-violet-100',
+      bgGradient: 'from-violet-50/40 via-purple-50/10 to-transparent',
+      hoverBorder: 'hover:border-violet-300/80',
+      shadowColor: 'hover:shadow-violet-100/40',
+      iconColor: 'text-violet-500',
+      filterLabel: 'CAE / CAM / EDA',
+      test: (a: any, b: any) => {
+        return a.category_id === 'c5' || b.category_id === 'c5' || a.category_id === 'c6' || b.category_id === 'c6';
+      }
+    },
+    {
+      id: 'specialized-rendering',
+      name: 'Specialized Tools & Slicers',
+      description: 'Additive manufacturing slicers, robust layout viewers, and specialized vertical CAD engines.',
+      badgeBg: 'bg-rose-50 text-rose-800 border-rose-100',
+      bgGradient: 'from-rose-50/40 via-pink-50/10 to-transparent',
+      hoverBorder: 'hover:border-rose-300/80',
+      shadowColor: 'hover:shadow-rose-100/40',
+      iconColor: 'text-rose-500',
+      filterLabel: 'Slicers & Specialized',
+      test: (a: any, b: any) => true
+    }
+  ], []);
+
+  const categorizedPairsMap = useMemo(() => {
+    const groups: Record<string, typeof allPairs> = {
+      '2d-drafting': [],
+      '3d-mcad': [],
+      'bim-arch': [],
+      'cae-eda': [],
+      'specialized-rendering': []
+    };
+
+    allPairs.forEach(pair => {
+      for (const disc of disciplines) {
+        if (disc.id === 'specialized-rendering') {
+          groups[disc.id].push(pair);
+          break;
+        }
+        if (disc.test(pair.a, pair.b)) {
+          groups[disc.id].push(pair);
+          break;
+        }
+      }
+    });
+
+    return groups;
+  }, [allPairs, disciplines]);
 
   const filteredSearch = useMemo(() => {
     if (!searchTerm) return [];
@@ -297,6 +404,136 @@ function CompareContent() {
           >
             <Link href="/best">Browse Best-Of Lists by Category</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* Browse All Head-to-Head Comparison Guides */}
+      <section className="mt-24 md:mt-36 border-t border-slate-100 pt-20">
+        <div className="text-center mb-12 md:mb-16">
+          <Badge
+            variant="outline"
+            className="bg-blue-50 text-blue-700 border-blue-100 font-black uppercase tracking-widest text-[10px] mb-4"
+          >
+            Directory Catalog
+          </Badge>
+          <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
+            Browse Comparison Guides by Engineering Discipline
+          </h2>
+          <p className="text-slate-500 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            Direct indexing of our curated competitor pairings. Formulated to target high-value buyer decision queries with no doorway pages.
+          </p>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 max-w-4xl mx-auto">
+          <button
+            onClick={() => setActiveCategory('all')}
+            className={`px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-widest border transition-all ${
+              activeCategory === 'all'
+                ? 'bg-slate-900 border-slate-900 text-white shadow-lg shadow-slate-200'
+                : 'bg-white border-slate-100 hover:border-slate-300 text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            All Categories ({allPairs.length})
+          </button>
+          {disciplines.map(disc => {
+            const count = categorizedPairsMap[disc.id]?.length || 0;
+            if (count === 0) return null;
+            return (
+              <button
+                key={disc.id}
+                onClick={() => setActiveCategory(disc.id)}
+                className={`px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-widest border transition-all ${
+                  activeCategory === disc.id
+                    ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-200'
+                    : 'bg-white border-slate-100 hover:border-slate-300 text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                {disc.filterLabel} ({count})
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Discipline Grid */}
+        <div className="space-y-12">
+          {disciplines.map(disc => {
+            const list = categorizedPairsMap[disc.id] || [];
+            if (list.length === 0) return null;
+            
+            // If filtering and this discipline isn't active, skip it
+            if (activeCategory !== 'all' && activeCategory !== disc.id) return null;
+
+            return (
+              <div 
+                key={disc.id} 
+                className={`bg-white border border-slate-100 rounded-[32px] p-6 md:p-10 shadow-sm transition-all group hover:shadow-xl duration-500 bg-gradient-to-br ${disc.bgGradient} ${disc.hoverBorder} ${disc.shadowColor}`}
+              >
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 pb-6 border-b border-slate-100/60">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className={`w-2.5 h-2.5 rounded-full ${disc.iconColor} bg-current`} />
+                      <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight">
+                        {disc.name}
+                      </h3>
+                      <Badge className={`font-bold rounded-lg text-[10px] tracking-wider uppercase ${disc.badgeBg}`}>
+                        {list.length} Guides
+                      </Badge>
+                    </div>
+                    <p className="text-slate-500 text-sm max-w-3xl leading-relaxed">
+                      {disc.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {list.map(pair => (
+                    <Link
+                      key={pair.pairSlug}
+                      href={`/compare/${pair.pairSlug}`}
+                      className="group/pill relative flex items-center justify-between p-4 bg-white/70 backdrop-blur-sm border border-slate-100/80 rounded-2xl hover:border-blue-200 shadow-sm hover:shadow-[0_12px_24px_-8px_rgba(59,130,246,0.12)] transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-3 overflow-hidden">
+                        {/* Dynamic Double Logo overlap */}
+                        <div className="flex items-center -space-x-3.5 flex-shrink-0">
+                          <div className="relative z-10 transition-transform duration-300 group-hover/pill:translate-x-1">
+                            <ToolLogo
+                              slug={pair.a.slug}
+                              src={pair.a.logo_url}
+                              websiteUrl={pair.a.official_url}
+                              name={pair.a.name}
+                              className="w-9 h-9 rounded-lg shadow-sm border border-slate-100 bg-white"
+                            />
+                          </div>
+                          <div className="relative z-0 transition-transform duration-300 group-hover/pill:-translate-x-1">
+                            <ToolLogo
+                              slug={pair.b.slug}
+                              src={pair.b.logo_url}
+                              websiteUrl={pair.b.official_url}
+                              name={pair.b.name}
+                              className="w-9 h-9 rounded-lg shadow-sm border border-slate-100 bg-white"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Title text */}
+                        <div className="font-bold text-slate-800 text-sm group-hover/pill:text-blue-600 transition-colors truncate">
+                          {pair.a.name}
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded-md text-[9px] font-black bg-slate-50 text-slate-400 group-hover/pill:bg-blue-50 group-hover/pill:text-blue-500 uppercase tracking-widest transition-colors mx-1.5">
+                            vs
+                          </span>
+                          {pair.b.name}
+                        </div>
+                      </div>
+
+                      {/* Hover Arrow indicator */}
+                      <ArrowRight className="w-4 h-4 text-slate-300 group-hover/pill:text-blue-500 group-hover/pill:translate-x-0.5 transition-all opacity-0 group-hover/pill:opacity-100 flex-shrink-0" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </main>
