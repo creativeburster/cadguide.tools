@@ -464,8 +464,7 @@ const EDITOR_PICK_PAIRS: { a: string; b: string; blurb: string }[] = [
   { a: "catia", b: "siemens-nx", blurb: "High-end aerospace and automotive CAD, going toe to toe." },
   { a: "prusaslicer", b: "bambu-studio", blurb: "The ultimate open-source slicer vs the dominant high-speed plug-and-play printer ecosystem." },
   { a: "shapr3d", b: "rhino-3d", blurb: "iPad-native modern modeling vs the traditional desktop NURBS modeler." },
-  { a: "solidworks", b: "freecad", blurb: "The commercial engineering standard vs the leading open-source parametric CAD alternative." },
-  { a: "easyeda", b: "kicad", blurb: "Cloud-native web browser EDA vs the powerful offline open-source PCB layout environment." },
+  { a: "solidworks", b: "freecad", blurb: "The commercial engineering standard vs the leading open-source parametric CAD alternative." }
 ];
 
 export interface EditorPickPair extends ComparisonPair {

@@ -396,19 +396,10 @@ function CompareContent() {
             </Link>
           ))}
         </div>
-        <div className="text-center mt-10 md:mt-14">
-          <Button
-            asChild
-            variant="outline"
-            className="rounded-2xl border-slate-200 font-black text-xs uppercase tracking-widest h-12 px-6 hover:bg-white"
-          >
-            <Link href="/best">Browse Best-Of Lists by Category</Link>
-          </Button>
-        </div>
       </section>
 
       {/* Browse All Head-to-Head Comparison Guides */}
-      <section className="mt-24 md:mt-36 border-t border-slate-100 pt-20">
+      <section className="mt-14 md:mt-16 border-t border-slate-100 pt-14">
         <div className="text-center mb-12 md:mb-16">
           <Badge
             variant="outline"
@@ -534,6 +525,32 @@ function CompareContent() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Footer Convert CTA Banner */}
+      <section className="mt-20 max-w-4xl mx-auto">
+        <div className="relative rounded-[32px] p-8 md:p-12 text-center bg-slate-900 overflow-hidden shadow-2xl border border-slate-800 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-950 via-slate-900 to-slate-950">
+          <div className="relative z-10">
+            <Badge className="bg-blue-500/10 text-blue-400 border-blue-500/20 font-black uppercase tracking-widest text-[9px] mb-4">
+              Category Rankings
+            </Badge>
+            <h3 className="text-xl md:text-3xl font-black text-white mb-4 tracking-tight">
+              Looking for curated software rankings?
+            </h3>
+            <p className="text-slate-400 text-sm md:text-base max-w-xl mx-auto mb-8 font-medium leading-relaxed">
+              Explore our comprehensive expert Best-Of listicles, ranked by performance, features, and pricing across all engineering sectors.
+            </p>
+            <Button
+              asChild
+              className="rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-black text-xs uppercase tracking-widest h-12 px-8 transition-all shadow-lg shadow-blue-500/20 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <Link href="/best">Browse Best-Of Lists by Category</Link>
+            </Button>
+          </div>
+          {/* Decorative blur glow */}
+          <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/20 rounded-full blur-[80px]" />
+          <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-indigo-600/10 rounded-full blur-[80px]" />
         </div>
       </section>
     </main>
