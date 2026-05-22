@@ -118,9 +118,11 @@ async function run() {
     
     const destPath = path.join(PUBLIC_LOGOS_DIR, `${slug}.png`);
     
-    // We try Clearbit first, then fallback to Google favicon sz=128
+    // Try Clearbit first, then GFW-friendly domestic/foreign APIs (iowen.cn & yandex.net), then Google favicon
     const urls = [
       `https://logo.clearbit.com/${domain}?size=200&format=png`,
+      `https://api.iowen.cn/favicon/${domain}.png`,
+      `https://favicon.yandex.net/favicon/${domain}`,
       `https://www.google.com/s2/favicons?domain=${domain}&sz=128`
     ];
     
