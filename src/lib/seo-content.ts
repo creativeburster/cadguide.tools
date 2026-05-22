@@ -340,6 +340,11 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["autocad", "librecad"],
   ["bricscad", "draftsight"],
   ["bricscad", "zwcad"],
+  ["zwcad", "draftsight"],
+  ["nanocad", "autocad"],
+  ["nanocad", "bricscad"],
+  ["qcad", "librecad"],
+  ["librecad", "freecad"],
   // ---- 2D CAD <-> BIM (common cross-category buyer query) ----
   ["autocad", "revit"],
   ["autocad", "civil-3d"],
@@ -349,6 +354,9 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["solidworks", "fusion-360"],
   ["solidworks", "onshape"],
   ["solidworks", "solid-edge"],
+  ["solidworks", "catia"],
+  ["solidworks", "siemens-nx"],
+  ["solidworks", "freecad"],
   ["autodesk-inventor", "solid-edge"],
   ["autodesk-inventor", "fusion-360"],
   ["catia", "siemens-nx"],
@@ -359,6 +367,11 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["blender", "3ds-max"],
   ["rhino-3d", "blender"],
   ["rhino-3d", "sketchup"],
+  ["shapr3d", "rhino-3d"],
+  ["blender", "rhino-3d"],
+  ["sketchup", "rhino-3d"],
+  ["tinkercad", "sketchup"],
+  ["tinkercad", "openscad"],
   ["fusion-360", "onshape"],
   ["fusion-360", "shapr3d"],
   ["onshape", "shapr3d"],
@@ -369,12 +382,15 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["revit", "vectorworks"],
   ["revit", "sketchup"],
   ["archicad", "vectorworks"],
+  ["archicad", "sketchup"],
+  ["vectorworks", "sketchup"],
   ["tekla-structures", "revit"],
   // ---- Viewer ----
   ["bluebeam-revu", "navisworks"],
   // ---- CAE/CAM ----
   ["mastercam", "fusion-360"],
   ["mastercam", "hypermill"],
+  ["mastercam", "solidworks"],
   ["ansys-fluent", "comsol-multiphysics"],
   ["ansys-mechanical", "abaqus"],
   // ---- EDA ----
@@ -382,13 +398,18 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["kicad", "eagle"],
   ["altium-designer", "orcad"],
   ["altium-365", "altium-designer"],
+  ["altium-designer", "eagle"],
+  ["kicad", "orcad"],
+  ["easyeda", "kicad"],
   // ---- Specialized (render / slicer) ----
   ["lumion", "twinmotion"],
   ["lumion", "enscape"],
   ["enscape", "twinmotion"],
   ["v-ray", "corona-renderer"],
+  ["twinmotion", "v-ray"],
   ["ultimaker-cura", "prusaslicer"],
   ["ultimaker-cura", "bambu-studio"],
+  ["prusaslicer", "bambu-studio"],
 ];
 
 export interface ComparisonPair {
@@ -441,6 +462,10 @@ const EDITOR_PICK_PAIRS: { a: string; b: string; blurb: string }[] = [
   { a: "ansys-fluent", b: "comsol-multiphysics", blurb: "Dedicated CFD solver vs the multiphysics generalist." },
   { a: "ultimaker-cura", b: "prusaslicer", blurb: "The battle of the top open-source FDM slicers." },
   { a: "catia", b: "siemens-nx", blurb: "High-end aerospace and automotive CAD, going toe to toe." },
+  { a: "prusaslicer", b: "bambu-studio", blurb: "The ultimate open-source slicer vs the dominant high-speed plug-and-play printer ecosystem." },
+  { a: "shapr3d", b: "rhino-3d", blurb: "iPad-native modern modeling vs the traditional desktop NURBS modeler." },
+  { a: "solidworks", b: "freecad", blurb: "The commercial engineering standard vs the leading open-source parametric CAD alternative." },
+  { a: "easyeda", b: "kicad", blurb: "Cloud-native web browser EDA vs the powerful offline open-source PCB layout environment." },
 ];
 
 export interface EditorPickPair extends ComparisonPair {
