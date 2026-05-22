@@ -191,7 +191,35 @@ export const c4Tools: Tool[] = [
     max: 5,
     count: 975,
     url: "https://www.getapp.com/collaboration-software/a/bluebeam-pdf-revu/"
-  }]
+  },
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 445,
+      url: "https://www.g2.com/products/bluebeam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.7,
+      max: 5,
+      count: 987,
+      url: "https://www.capterra.com/p/121586/Bluebeam-PDF-Revu/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 9,
+      max: 10,
+      count: 396,
+      url: "https://www.trustradius.com/products/bluebeam-revu/reviews/all"
+    },
+    {
+      source: "Software Advice",
+      score: 4.7,
+      max: 5,
+      count: 987,
+      url: "https://www.softwareadvice.com/cms/bluebeam-revu-profile/reviews/"
+    }]
 },
 {
   id: "t35",
