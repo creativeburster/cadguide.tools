@@ -17,6 +17,69 @@ import { SlidersHorizontal, X } from 'lucide-react';
 // src/app/tools/page.tsx so canonical URLs and client pagination agree.
 const ITEMS_PER_PAGE = 24;
 
+/**
+ * Normalizes a string by converting it to lowercase, stripping diacritics,
+ * and removing all non-alphanumeric characters.
+ * E.g., "V-NAS" -> "vnas", "vnas" -> "vnas", "3D CAD" -> "3dcad"
+ */
+function normalizeString(str: string): string {
+  if (!str) return '';
+  return str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // remove diacritics
+    .replace(/[^a-z0-9]/g, '');      // keep only letters and numbers
+}
+
+/**
+ * Checks if a tool matches a search query using robust fuzzy logic.
+ * E.g., searching "vnas" matches "V-NAS", and searching "v-nas" matches "vnas".
+ * Supports multi-term space-separated AND matching: "3d cad" matches if both terms match fields.
+ */
+function fuzzyMatchTool(tool: any, query: string): boolean {
+  if (!query) return true;
+
+  const normalizedQuery = normalizeString(query);
+  if (!normalizedQuery) return true;
+
+  // Gather all searchable fields of the tool
+  const toolNameNormalized = normalizeString(tool.name);
+  const toolDescNormalized = normalizeString(tool.short_desc);
+  const toolCategoryNormalized = normalizeString(categories.find(c => c.id === tool.category_id)?.name ?? '');
+  const toolIndustriesNormalized = tool.industries.map(normalizeString).join(' ');
+  const toolFeaturesNormalized = tool.core_features.map(normalizeString).join(' ');
+
+  // 1. Direct match: Check if the normalized combined query exists in any major field
+  if (
+    toolNameNormalized.includes(normalizedQuery) ||
+    toolDescNormalized.includes(normalizedQuery) ||
+    toolCategoryNormalized.includes(normalizedQuery) ||
+    toolIndustriesNormalized.includes(normalizedQuery) ||
+    toolFeaturesNormalized.includes(normalizedQuery)
+  ) {
+    return true;
+  }
+
+  // 2. Tokenized match (AND query logic):
+  // Split search query by whitespace to support searching multi-term e.g., "3d cad"
+  const tokens = query.trim().split(/\s+/).filter(Boolean);
+  if (tokens.length > 1) {
+    return tokens.every(token => {
+      const normalizedToken = normalizeString(token);
+      if (!normalizedToken) return true;
+      return (
+        toolNameNormalized.includes(normalizedToken) ||
+        toolDescNormalized.includes(normalizedToken) ||
+        toolCategoryNormalized.includes(normalizedToken) ||
+        toolIndustriesNormalized.includes(normalizedToken) ||
+        toolFeaturesNormalized.includes(normalizedToken)
+      );
+    });
+  }
+
+  return false;
+}
+
 function ToolsList() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -28,7 +91,6 @@ function ToolsList() {
   const currentPage = Math.max(1, Number(searchParams.get('page')) || 1);
   const searchQuery = searchParams.get('q') ?? '';
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
-  const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
 
   // Lock body scroll while the mobile filters drawer is open.
   useEffect(() => {
@@ -41,15 +103,10 @@ function ToolsList() {
     }
   }, [isFiltersOpen]);
 
-  // Sync local search query with URL params (for back/forward navigation)
-  useEffect(() => {
-    setLocalSearchQuery(searchQuery);
-  }, [searchQuery]);
-
   // Push search/page state into the URL. Uses `replace` so the user can
   // navigate back out of /tools in one click instead of stepping through
   // every intermediate page/query keystroke.
-  const syncUrl = (next: { page?: number; query?: string }) => {
+  const syncUrl = useCallback((next: { page?: number; query?: string }) => {
     const params = new URLSearchParams(searchParams.toString());
     if (next.query !== undefined) {
       if (next.query) params.set('q', next.query);
@@ -61,12 +118,11 @@ function ToolsList() {
     }
     const qs = params.toString();
     router.replace(qs ? `/tools?${qs}` : '/tools', { scroll: false });
-  };
+  }, [searchParams, router]);
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    syncUrl({ page: 1, query: localSearchQuery });
-  };
+  const handleSearchQuerySubmit = useCallback((q: string) => {
+    syncUrl({ page: 1, query: q });
+  }, [syncUrl]);
   const [filters, setFilters] = useState({
     pricing: [] as string[],
     os: [] as string[],
@@ -100,11 +156,7 @@ function ToolsList() {
 
   const filteredTools = useMemo(() => {
     return tools.filter(tool => {
-      const query = searchQuery.toLowerCase();
-      const matchQuery = !query ||
-        tool.name.toLowerCase().includes(query) ||
-        tool.short_desc.toLowerCase().includes(query) ||
-        tool.industries.some(i => i.toLowerCase().includes(query));
+      const matchQuery = fuzzyMatchTool(tool, searchQuery);
 
       const matchPricing = filters.pricing.length === 0 || filters.pricing.includes(tool.pricing_type);
       const matchOS = filters.os.length === 0 || tool.platforms.some(p => filters.os.includes(p));
@@ -175,7 +227,7 @@ function ToolsList() {
       ? [{
           key: 'query',
           label: `“${searchQuery}”`,
-          onClear: () => { setLocalSearchQuery(''); syncUrl({ page: 1, query: '' }); },
+          onClear: () => { syncUrl({ page: 1, query: '' }); },
         }]
       : []),
   ];
@@ -259,27 +311,7 @@ function ToolsList() {
         </div>
 
         <div className="space-y-6">
-        <div className="bg-slate-900 p-6 rounded-[32px] shadow-2xl shadow-blue-900/10 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-blue-600/20 transition-colors"></div>
-          <h3 className="font-bold mb-4 uppercase text-[10px] tracking-widest text-blue-400 relative z-10">Smart Search</h3>
-          <div className="relative z-10">
-            <form onSubmit={handleSearchSubmit}>
-              <Input
-                placeholder="Find a specific tool..."
-                value={localSearchQuery}
-                onChange={(e) => setLocalSearchQuery(e.target.value)}
-                className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600 pr-10"
-              />
-              <button 
-                type="submit"
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-blue-400 transition-colors"
-                aria-label="Search"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-              </button>
-            </form>
-          </div>
-        </div>
+        <SmartSearchBox searchQuery={searchQuery} onSearchSubmit={handleSearchQuerySubmit} />
 
         <div className="space-y-6">
           <FilterSection title="Main Category">
@@ -680,5 +712,76 @@ export default function ToolsDirectoryPage() {
         <ToolsList />
       </Suspense>
     </main>
+  );
+}
+
+interface SmartSearchBoxProps {
+  searchQuery: string;
+  onSearchSubmit: (query: string) => void;
+}
+
+function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
+  const [inputValue, setInputValue] = useState(searchQuery);
+
+  // Sync state if searchQuery prop changes externally (e.g., when clicking active filter chips or resetting)
+  useEffect(() => {
+    setInputValue(searchQuery);
+  }, [searchQuery]);
+
+  // Debounce search update to parent URL
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (inputValue !== searchQuery) {
+        onSearchSubmit(inputValue);
+      }
+    }, 350);
+
+    return () => clearTimeout(timer);
+  }, [inputValue, searchQuery, onSearchSubmit]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSearchSubmit(inputValue);
+  };
+
+  const handleClear = () => {
+    setInputValue('');
+    onSearchSubmit('');
+  };
+
+  return (
+    <div className="bg-slate-900 p-6 rounded-[32px] shadow-2xl shadow-blue-900/10 relative overflow-hidden group">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-blue-600/20 transition-colors duration-500"></div>
+      <h3 className="font-bold mb-4 uppercase text-[10px] tracking-widest text-blue-400 relative z-10">Smart Search</h3>
+      <div className="relative z-10">
+        <form onSubmit={handleSubmit} className="relative">
+          <Input
+            placeholder="Find a specific tool..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600 pr-14 pl-4 h-11 transition-all"
+          />
+          {inputValue ? (
+            <button
+              type="button"
+              onClick={handleClear}
+              className="absolute right-9 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors"
+              aria-label="Clear search"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          ) : null}
+          <button 
+            type="submit"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-400 transition-colors"
+            aria-label="Search"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
