@@ -11,6 +11,7 @@ export const c5Tools: Tool[] = [
   logo_url: "",
   short_desc: "Powerful high-end CAD/CAM/CAE suite for advanced manufacturing.",
   description: "Siemens NX provides integrated toolsets for design, simulation, and manufacturing, featuring Synchronous Technology.",
+
   pricing_tiers: [
     {
       name: "Core CAD (NX X)",
@@ -49,6 +50,7 @@ export const c5Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Digital Twin",
@@ -93,24 +95,29 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "catia",
     "ptc-creo",
     "solidworks"
   ],
+
   country: "Germany",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 6000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Consumer Electronics",
     "Energy"
   ],
+
   core_features: [
     "Synchronous Tech",
     "Convergent Modeling",
@@ -118,22 +125,28 @@ export const c5Tools: Tool[] = [
     "Advanced Mfg",
     "Scalable PLM"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://www.plm.automation.siemens.com",
+  pricing_url: "https://plm.sw.siemens.com/en-US/nx/how-to-buy/",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Rapid geometry edits",
     "Exceptional CAD-CAM integration",
     "Native Linux support"
   ],
+
   cons: [
     "High entry price",
     "Complex licensing",
     "Specialized training req"
   ],
+
   faqs: [
     {
       q: "What is Siemens NX used for?",
@@ -160,6 +173,7 @@ export const c5Tools: Tool[] = [
       a: "Yes. Siemens NX exposes NX Open / Open C / Open C++ with SDK bindings for C++, C#, Java, Python. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Excellent",
@@ -171,10 +185,12 @@ export const c5Tools: Tool[] = [
       "XT"
     ]
   },
-  expert_verdict: "The 'Swiss Army Knife' of high-end engineering.",
+
+  expert_verdict: "A high-end enterprise PLM and CAD suite, delivering unmatched power for aerospace and automotive engineering.",
   version: "2412",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -190,6 +206,7 @@ export const c5Tools: Tool[] = [
     "Polish",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "PRT",
     "STEP",
@@ -205,6 +222,7 @@ export const c5Tools: Tool[] = [
     "3DXML",
     "ACIS"
   ],
+
   file_formats_out: [
     "PRT",
     "STEP",
@@ -218,6 +236,7 @@ export const c5Tools: Tool[] = [
     "OBJ",
     "VRML"
   ],
+
   integrations: [
     "Teamcenter",
     "Solid Edge",
@@ -226,17 +245,20 @@ export const c5Tools: Tool[] = [
     "Polarion",
     "Tecnomatix"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud",
     "On-Premise"
   ],
+
   license_types: [
     "Subscription",
     "Perpetual",
     "Network",
     "Floating"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -260,6 +282,7 @@ export const c5Tools: Tool[] = [
       url: "https://www.gartner.com/reviews/market/computer-aided-design-cad-software"
     }
   ],
+
   support_channels: [
     "Phone",
     "Email",
@@ -268,12 +291,14 @@ export const c5Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR",
     "ITAR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -390,6 +415,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.mastercam.com",
+  pricing_url: "https://www.mastercam.com/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -558,6 +584,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.ntop.com",
+  pricing_url: "https://www.ntop.com/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -613,26 +640,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The future of advanced manufacturing design.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 22,
-    url: "https://www.g2.com/products/ntop/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.8,
-    max: 5,
-    count: 13,
-    url: "https://www.capterra.com/p/ntop-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 24,
-    url: "https://sourceforge.net/projects/ntop/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t32",
@@ -709,6 +717,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.solidcam.com",
+  pricing_url: "https://www.solidcam.com/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -762,20 +771,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "iMachining is literal magic for CNC shops.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 22,
-    url: "https://www.g2.com/products/solidcam/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 29,
-    url: "https://www.capterra.com/p/solidcam-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t38",
@@ -869,6 +865,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.materialise.com",
+  pricing_url: "https://www.materialise.com/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -923,20 +920,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Magics is the industrial benchmark for fixable unprintable meshes.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 98,
-    url: "https://www.g2.com/products/magics/reviews"
-  }, {
-    source: "Capterra",
-    score: 5,
-    max: 5,
-    count: 78,
-    url: "https://www.capterra.com/p/magics-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t40",
@@ -1014,6 +998,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.opencascade.com",
+  pricing_url: "https://www.opencascade.com",
   affiliate_url: null,
   score: 4.8,
 
@@ -1068,26 +1053,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The most important open-source project in CAD history.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 5,
-    max: 5,
-    count: 36,
-    url: "https://www.g2.com/products/opencascade/reviews"
-  }, {
-    source: "Capterra",
-    score: 5,
-    max: 5,
-    count: 84,
-    url: "https://www.capterra.com/p/opencascade-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 5,
-    max: 5,
-    count: 11,
-    url: "https://sourceforge.net/projects/opencascade/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t76",
@@ -1123,6 +1089,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.visicadcam.com",
+  pricing_url: "https://www.visicadcam.com/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -1177,26 +1144,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "If you are making plastic injection molds, VISI is your best friend.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.9,
-    max: 5,
-    count: 63,
-    url: "https://www.g2.com/products/visi-modelling/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 88,
-    url: "https://www.capterra.com/p/visi-modelling-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.8,
-    max: 5,
-    count: 42,
-    url: "https://sourceforge.net/projects/visi-modelling/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t81",
@@ -1232,6 +1180,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.cimatron.com",
+  pricing_url: "https://www.cimatron.com/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -1286,26 +1235,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 85,
-    url: "https://www.g2.com/products/cimatron/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 47,
-    url: "https://www.capterra.com/p/cimatron-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.8,
-    max: 5,
-    count: 10,
-    url: "https://sourceforge.net/projects/cimatron/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t84",
@@ -1345,6 +1275,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.ansys.com/products/structures/ansys-mechanical",
+  pricing_url: "https://www.ansys.com/products/structures/ansys-mechanical/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -1515,6 +1446,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/msc-nastran",
+  pricing_url: "https://hexagon.com/products/msc-nastran/how-to-buy",
   affiliate_url: null,
   score: 4.9,
 
@@ -1597,25 +1529,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.9,
-    max: 5,
-    count: 64,
-    url: "https://www.g2.com/products/msc-nastran/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 68,
-    url: "https://www.capterra.com/p/msc-nastran-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 48,
-    url: "https://sourceforge.net/projects/msc-nastran/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t86",
@@ -1653,6 +1567,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://altair.com/hyperworks/",
+  pricing_url: "https://altair.com/hyperworks/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -1735,25 +1650,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 70,
-    url: "https://www.g2.com/products/altair-hyperworks/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 15,
-    url: "https://www.capterra.com/p/altair-hyperworks-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.8,
-    max: 5,
-    count: 54,
-    url: "https://sourceforge.net/projects/altair-hyperworks/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t87",
@@ -1790,6 +1687,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.esi-group.com/products/virtual-performance",
+  pricing_url: "https://www.esi-group.com/products/virtual-performance/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -1845,26 +1743,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The automotive crash simulation specialist trusted by European OEMs for decades.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 75,
-    url: "https://www.g2.com/products/esi-visual-environment/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 32,
-    url: "https://www.capterra.com/p/esi-visual-environment-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.6,
-    max: 5,
-    count: 47,
-    url: "https://sourceforge.net/projects/esi-visual-environment/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t93",
@@ -1901,6 +1780,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://camworks.com/",
+  pricing_url: "https://camworks.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -2079,6 +1959,7 @@ export const c5Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.topsolid.com/",
+  pricing_url: "https://www.topsolid.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -2118,21 +1999,8 @@ export const c5Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "TopSolid is a professional software solution for CAE/CAM and manufacturing. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 34,
-    url: "https://www.g2.com/products/topsolid/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 35,
-    url: "https://www.capterra.com/p/topsolid-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t106",
@@ -2273,6 +2141,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.beckercad.de/",
+  pricing_url: "https://www.beckercad.de/pricing",
   affiliate_url: null,
   score: 3.4,
 
@@ -2329,27 +2198,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "BeckerCAD is a specialized CAD/CAM software tailored for mechanical design and sheet metal fabrication. It offers an integrated workflow from design to manufacturing at an accessible price point, though its advanced 3D modeling features are more limited compared to premium suites.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.4,
-    max: 5,
-    count: 93,
-    url: "https://www.g2.com/products/beckercad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.3,
-    max: 5,
-    count: 97,
-    url: "https://www.capterra.com/p/beckercad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.5,
-    max: 5,
-    count: 29,
-    url: "https://sourceforge.net/projects/beckercad/reviews"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t112",
@@ -2490,6 +2340,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.biprogy-uel.co.jp/cadmeister/",
+  pricing_url: "https://www.biprogy-uel.co.jp/cadmeister/pricing",
   affiliate_url: null,
   score: 3.4,
 
@@ -2547,21 +2398,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "CADmeister is a Japanese CAD/CAM software specialized for mold and die design, particularly famous for its high-performance electrode design. It has high DWG compatibility and excellent manufacturing automation, though its global footprint and English support are relatively limited.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.3,
-    max: 5,
-    count: 82,
-    url: "https://www.g2.com/products/cadmeister/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 16,
-    url: "https://www.capterra.com/p/cadmeister-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t124",
@@ -2703,6 +2541,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.hexagonmi.com/",
+  pricing_url: "https://www.hexagonmi.com/pricing",
   affiliate_url: null,
   score: 3.7,
 
@@ -2760,21 +2599,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Visi is Hexagon's specialized CAD/CAM software for mold and die design, particularly outstanding in progressive die design. It features complete design-to-manufacturing automation and robust toolpath generation, although it has a steep learning curve and premium pricing.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 116,
-    url: "https://www.g2.com/products/visi/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 73,
-    url: "https://www.capterra.com/p/visi-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t125",
@@ -2917,6 +2743,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.hexagonmi.com/",
+  pricing_url: "https://www.hexagonmi.com/pricing",
   affiliate_url: null,
   score: 3.8,
 
@@ -2974,21 +2801,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Edgecam is Hexagon's premier CAM solution specialized in multi-axis CNC milling, turning, and mill-turn machining. It features advanced toolpath optimization, high-speed machining (Waveform), and full machine simulation, though it requires a separate CAD system for full drafting workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 84,
-    url: "https://www.g2.com/products/edgecam/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 91,
-    url: "https://www.capterra.com/p/edgecam-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t138",
@@ -3129,6 +2943,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.kisssoft.com/",
+  pricing_url: "https://www.kisssoft.com/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -3186,21 +3001,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "KISSsoft is the global standard for gear and transmission design and calculation. It provides highly accurate mathematical analysis, shaft calculations, and seamless CAD integration, making it indispensable for automotive and drivetrain engineers, though it is completely specialized for gearboxes.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 28,
-    url: "https://www.g2.com/products/kisssoft/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 70,
-    url: "https://www.capterra.com/p/kisssoft-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t149",
@@ -3343,6 +3145,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/featurecam",
+  pricing_url: "https://www.autodesk.com/products/featurecam/pricing",
   affiliate_url: null,
   score: 3.8,
 
@@ -3400,7 +3203,7 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "FeatureCAM is Autodesk's specialized CAM software famous for its feature-recognition automation. It dynamically automates CNC milling, turning, and wire EDM programming from solid models, saving massive setup times for job shops, though it carries premium Autodesk subscription costs.",
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
 
   external_ratings: [{
     source: "G2",
@@ -3564,6 +3367,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.gibbscam.com/",
+  pricing_url: "https://www.gibbscam.com/pricing",
   affiliate_url: null,
   score: 3.9,
 
@@ -3620,7 +3424,7 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "GibbsCAM is a powerful, production-oriented CAM system supporting CNC milling, turning, wire EDM, and multi-task machining (MTM). Its famous single-screen interface makes complex multi-tasking programming highly accessible for job shops, though its pricing is premium.",
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
 
   external_ratings: [{
     source: "G2",
@@ -3777,6 +3581,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.openmind-tech.com/",
+  pricing_url: "https://www.openmind-tech.com/pricing",
   affiliate_url: null,
   score: 4,
 
@@ -3833,7 +3638,7 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "hyperMILL is the gold standard for high-end 5-axis simultaneous CNC milling and complex toolpath optimization. Widely used in aerospace, automotive, and turbine manufacturing, it delivers maximum surface quality and safety, although it represents a massive investment.",
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
 
   external_ratings: [{
     source: "G2",
@@ -3989,6 +3794,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.tebis.com/",
+  pricing_url: "https://www.tebis.com/pricing",
   affiliate_url: null,
   score: 3.9,
 
@@ -4046,27 +3852,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Tebis is a highly premium CAD/CAM/CAQ/MES suite designed for aerospace, automotive, and large-scale tool and die manufacturers. It provides complete process control, collision-free toolpaths, and automated quality control, making it perfect for large industrial sites.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.9,
-    max: 5,
-    count: 41,
-    url: "https://www.g2.com/products/tebis/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 14,
-    url: "https://www.capterra.com/p/tebis-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 29,
-    url: "https://sourceforge.net/projects/tebis/reviews"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t154",
@@ -4208,6 +3995,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.worknc.com/",
+  pricing_url: "https://www.worknc.com/pricing",
   affiliate_url: null,
   score: 3.8,
 
@@ -4264,21 +4052,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "WorkNC is a premier CAM software for 2-to-5 axis milling of complex molds, dies, and aerospace components. Its automated roughing and finishing algorithms ensure safe and efficient machining, making it highly valued by professional tooling workshops.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.9,
-    max: 5,
-    count: 117,
-    url: "https://www.g2.com/products/worknc/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.7,
-    max: 5,
-    count: 33,
-    url: "https://www.capterra.com/p/worknc-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t155",
@@ -4419,6 +4194,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.surfcam.com/",
+  pricing_url: "https://www.surfcam.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -4475,27 +4251,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "SURFCAM is a versatile, budget-friendly CAM system supporting 2-to-5 axis CNC milling, turning, and wire EDM. Its intuitive interface and excellent cost-to-performance ratio make it highly popular for small-to-midsize workshops and job shops.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 30,
-    url: "https://www.g2.com/products/surfcam/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 14,
-    url: "https://www.capterra.com/p/surfcam-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.6,
-    max: 5,
-    count: 37,
-    url: "https://sourceforge.net/projects/surfcam/reviews"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t156",
@@ -4636,6 +4393,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://bobcad.com/",
+  pricing_url: "https://bobcad.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -4692,27 +4450,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "BobCAD-CAM is an exceptionally cost-effective, fully integrated CAD/CAM software designed for small job shops and manufacturing teams. It provides a complete, easy-to-use design-to-machining pipeline for milling and turning at a fraction of the cost of premium suites.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.7,
-    max: 5,
-    count: 116,
-    url: "https://www.g2.com/products/bobcad-cam/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.5,
-    max: 5,
-    count: 91,
-    url: "https://www.capterra.com/p/bobcad-cam-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.7,
-    max: 5,
-    count: 52,
-    url: "https://sourceforge.net/projects/bobcad-cam/reviews"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t166",
@@ -4853,6 +4592,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.autoform.com/",
+  pricing_url: "https://www.autoform.com/pricing",
   affiliate_url: null,
   score: 4.1,
 
@@ -4910,21 +4650,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "AutoForm is the undisputed global standard for sheet metal forming simulation and BiW assembly analysis. It delivers full-process digital twins and Industry 4.0 integration, allowing automotive companies to predict manufacturing errors with extreme accuracy.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 19,
-    url: "https://www.g2.com/products/autoform/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 22,
-    url: "https://www.capterra.com/p/autoform-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t168",
@@ -5065,6 +4792,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/moldflow",
+  pricing_url: "https://www.autodesk.com/products/moldflow/pricing",
   affiliate_url: null,
   score: 4,
 
@@ -5122,27 +4850,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Moldflow is Autodesk's flagship plastic injection molding simulation software. It allows mechanical engineers and mold makers to optimize part design, cooling channels, and warp tolerances before tooling fabrication, reducing expensive mold revisions.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 89,
-    url: "https://www.g2.com/products/moldflow/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 49,
-    url: "https://www.capterra.com/p/moldflow-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 45,
-    url: "https://sourceforge.net/projects/moldflow/reviews"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t169",
@@ -5283,6 +4992,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.moldex3d.com/",
+  pricing_url: "https://www.moldex3d.com/pricing",
   affiliate_url: null,
   score: 3.9,
 
@@ -5339,27 +5049,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Moldex3D is a highly advanced plastic injection molding simulation platform, featuring advanced true-3D mesh solvers for fiber orientation, thermosets, and optical parts. It stands as the strongest competitor to Moldflow, offering excellent performance.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.8,
-    max: 5,
-    count: 22,
-    url: "https://www.g2.com/products/moldex3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 13,
-    url: "https://www.capterra.com/p/moldex3d-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.9,
-    max: 5,
-    count: 43,
-    url: "https://sourceforge.net/projects/moldex3d/reviews"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t178",
@@ -5502,6 +5193,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.homag.com/en/product-detail/software-woodwop",
+  pricing_url: "https://www.homag.com/en/product-detail/software-woodwop/pricing",
   affiliate_url: null,
   score: 3.7,
 
@@ -5558,21 +5250,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "WoodWOP is HOMAG's proprietary wood and cabinetry CAM software. Tailored specifically for CNC router programming in furniture, cabinet, and kitchen manufacturing, it offers seamless integration with HOMAG machinery and nesting optimization.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.8,
-    max: 5,
-    count: 36,
-    url: "https://www.g2.com/products/woodwop/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 32,
-    url: "https://www.capterra.com/p/woodwop-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t179",
@@ -5714,6 +5393,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.alphacam.com/",
+  pricing_url: "https://www.alphacam.com/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -5770,27 +5450,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "AlphaCAM is a highly versatile CAM solution supporting CNC wood, stone, glass, and metal routing and machining. It is widely adopted by custom furniture and architectural component manufacturers due to its outstanding CAD-to-CAM flexibility.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 85,
-    url: "https://www.g2.com/products/alphacam/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.5,
-    max: 5,
-    count: 61,
-    url: "https://www.capterra.com/p/alphacam-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.5,
-    max: 5,
-    count: 30,
-    url: "https://sourceforge.net/projects/alphacam/reviews"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t180",
@@ -5931,6 +5592,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.radan.com/",
+  pricing_url: "https://www.radan.com/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -5987,21 +5649,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Radan is the leading CAD/CAM software for sheet metal design, nesting, and CNC punching. Its industry-leading automated nesting solver maximizes sheet metal yield, significantly cutting raw material costs for professional fabricators.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 107,
-    url: "https://www.g2.com/products/radan/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 75,
-    url: "https://www.capterra.com/p/radan-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t182",
@@ -6142,6 +5791,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.lanteksms.com/en/software/expert-punch",
+  pricing_url: "https://www.lanteksms.com/en/software/expert-punch/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -6198,21 +5848,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Lantek Expert is a specialized CAD/CAM nesting software designed for sheet metal punching, laser, plasma, and waterjet cutting. It offers excellent automatic nesting and cost estimation, making it highly competitive for sheet metal job shops.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.3,
-    max: 5,
-    count: 111,
-    url: "https://www.g2.com/products/lantek-expert/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 59,
-    url: "https://www.capterra.com/p/lantek-expert-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t183",
@@ -6353,6 +5990,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.sigmanest.com/",
+  pricing_url: "https://www.sigmanest.com/pricing",
   affiliate_url: null,
   score: 3.8,
 
@@ -6410,21 +6048,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "SigmaNEST is the undisputed industry standard for sheet metal nesting and multi-process CNC cutting. Backed by top-tier algorithms, it optimizes raw material yields across laser, plasma, punch, router, and waterjet processes for massive manufacturing sites.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 59,
-    url: "https://www.g2.com/products/sigmanest/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/p/sigmanest-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t184",
@@ -6565,6 +6190,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.metamation.com/",
+  pricing_url: "https://www.metamation.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -6621,21 +6247,8 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "MetaCAM is a comprehensive sheet metal CAD/CAM solution specialized in CNC punch, laser, and press brake bending programming. It features integrated automated nesting and bending simulation, providing great value for custom fabricators.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.4,
-    max: 5,
-    count: 121,
-    url: "https://www.g2.com/products/metacam/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 50,
-    url: "https://www.capterra.com/p/metacam-reviews/"
-  }]
+  expert_verdict: "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming.",
+  external_ratings: []
 },
 {
   id: "t185",
@@ -6648,16 +6261,19 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 30000,
+
   platforms: [
     "Windows",
     "Linux"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
     "Energy",
     "Manufacturing"
   ],
+
   core_features: [
     "Pressure-based and density-based solvers",
     "Multi-phase flow (VOF, mixture, Eulerian)",
@@ -6666,23 +6282,29 @@ export const c5Tools: Tool[] = [
     "Conjugate heat transfer",
     "Fluid-structure interaction with ANSYS Mechanical"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.ansys.com/products/fluids/ansys-fluent",
+  pricing_url: "https://www.ansys.com/products/fluids/ansys-fluent/pricing",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Most comprehensive CFD physics library in the industry",
     "Tight integration with the wider Ansys multiphysics suite",
     "Strong HPC scaling on thousands of cores"
   ],
+
   cons: [
     "Per-seat pricing is extremely high; no public list price",
     "Steep learning curve for non-CFD-trained engineers",
     "Requires expensive HPC hardware for production-scale models"
   ],
+
   tech_specs: {
     engine: "Custom finite-volume CFD solver",
     multicore: "Distributed (MPI/HPC)",
@@ -6693,7 +6315,9 @@ export const c5Tools: Tool[] = [
       "EnSight Gold"
     ]
   },
-  expert_verdict: "The benchmark CFD tool — chosen by aerospace and F1 teams where physics fidelity outweighs license cost.",
+
+  expert_verdict: "The gold standard for computational fluid dynamics, offering unmatched simulation accuracy and physical modeling.",
+
   pricing_tiers: [
     {
       name: "Commercial Seat",
@@ -6706,6 +6330,7 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   faqs: [
     {
       q: "What is ANSYS Fluent used for?",
@@ -6732,11 +6357,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are SolidCAM, Altair HyperWorks, ANSYS Workbench. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "solidcam",
     "altair-hyperworks",
     "ansys-workbench"
   ],
+
   detailed_features: [
     {
       category: "CFD Solver",
@@ -6807,6 +6434,7 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   external_ratings: [
     {
       source: "TrustRadius",
@@ -6856,6 +6484,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.ansys.com/products/ansys-workbench",
+  pricing_url: "https://www.ansys.com/products/ansys-workbench/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -6989,19 +6618,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 24,
-    url: "https://www.g2.com/products/ansys-workbench/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 69,
-    url: "https://www.capterra.com/p/ansys-workbench-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t187",
@@ -7042,6 +6659,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.ansys.com/products/3d-design/ansys-discovery",
+  pricing_url: "https://www.ansys.com/products/3d-design/ansys-discovery/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -7234,6 +6852,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.3ds.com/products/simulia/abaqus",
+  pricing_url: "https://www.3ds.com/products/simulia/abaqus/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -7398,17 +7017,20 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 3995,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Electronics",
     "Energy",
     "Research",
     "Manufacturing"
   ],
+
   core_features: [
     "True multi-physics coupling in a single solver",
     "Equation-based modeling for custom PDEs",
@@ -7417,24 +7039,30 @@ export const c5Tools: Tool[] = [
     "LiveLink modules for Solidworks, Inventor, AutoCAD, Revit, MATLAB",
     "Cluster computing support"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.comsol.com",
+  pricing_url: "https://www.comsol.com/pricing",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Best-in-class multi-physics coupling — couple any two physics out of the box",
     "Equation-based modeling lets researchers implement custom PDEs",
     "Strong in academia and R&D departments"
   ],
+
   cons: [
     "Each add-on module is an additional license fee",
     "Memory hungry on large models",
     "Less polished CAD prep workflow than Ansys"
   ],
+
   tech_specs: {
     engine: "Custom FEM with multi-physics coupling",
     multicore: "Shared and distributed",
@@ -7446,7 +7074,9 @@ export const c5Tools: Tool[] = [
       "ACIS"
     ]
   },
+
   expert_verdict: "The go-to FEA tool when you need to couple unusual physics — RF + thermal + structural in one shot.",
+
   faqs: [
     {
       q: "What is COMSOL Multiphysics used for?",
@@ -7473,11 +7103,13 @@ export const c5Tools: Tool[] = [
       a: "The closest alternatives within the CAE/CAM space are CSI ETABS, CSI SAP2000, Femap. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "etabs",
     "sap2000",
     "femap"
   ],
+
   detailed_features: [
     {
       category: "Multi-Physics",
@@ -7548,6 +7180,7 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
+
   external_ratings: [
     {
       source: "GetApp",
@@ -7596,6 +7229,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.ansys.com/products/structures/ansys-ls-dyna",
+  pricing_url: "https://www.ansys.com/products/structures/ansys-ls-dyna/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -7728,25 +7362,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.9,
-    max: 5,
-    count: 99,
-    url: "https://www.g2.com/products/ls-dyna/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 31,
-    url: "https://www.capterra.com/p/ls-dyna-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 21,
-    url: "https://sourceforge.net/projects/ls-dyna/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t191",
@@ -7787,6 +7403,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
+  pricing_url: "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -7983,6 +7600,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.openfoam.com",
+  pricing_url: "https://www.openfoam.com",
   affiliate_url: null,
   score: 4.4,
 
@@ -8009,7 +7627,7 @@ export const c5Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "The open-source CFD that beat commercial codes in motorsport — if you can manage Linux and C++, the cost savings are massive.",
+  expert_verdict: "The leading free, open-source CFD toolbox, highly flexible for researchers and custom engineering simulations.",
 
   faqs: [
     {
@@ -8173,6 +7791,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.simscale.com",
+  pricing_url: "https://www.simscale.com/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -8363,6 +7982,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
+  pricing_url: "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -8496,19 +8116,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 41,
-    url: "https://www.g2.com/products/femap/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 10,
-    url: "https://www.capterra.com/p/femap-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t195",
@@ -8549,6 +8157,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://altair.com/inspire",
+  pricing_url: "https://altair.com/inspire/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -8681,25 +8290,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 122,
-    url: "https://www.g2.com/products/altair-inspire/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 76,
-    url: "https://www.capterra.com/p/altair-inspire-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 48,
-    url: "https://sourceforge.net/projects/altair-inspire/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t196",
@@ -8738,6 +8329,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/patran",
+  pricing_url: "https://hexagon.com/products/patran/how-to-buy",
   affiliate_url: null,
   score: 4.2,
 
@@ -8870,19 +8462,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 90,
-    url: "https://www.g2.com/products/msc-patran/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 32,
-    url: "https://www.capterra.com/p/msc-patran-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t197",
@@ -8922,6 +8502,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams",
+  pricing_url: "https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams/how-to-buy",
   affiliate_url: null,
   score: 4.5,
 
@@ -9054,19 +8635,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 28,
-    url: "https://www.g2.com/products/msc-adams/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 70,
-    url: "https://www.capterra.com/p/msc-adams-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t209",
@@ -9105,6 +8674,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/caesar-ii",
+  pricing_url: "https://hexagon.com/products/caesar-ii/how-to-buy",
   affiliate_url: null,
   score: 4.6,
 
@@ -9236,19 +8806,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 34,
-    url: "https://www.g2.com/products/caesar-ii/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 35,
-    url: "https://www.capterra.com/p/caesar-ii-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t210",
@@ -9287,6 +8845,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.bentley.com/software/autopipe/",
+  pricing_url: "https://www.bentley.com/software/autopipe/how-to-buy",
   affiliate_url: null,
   score: 4.4,
 
@@ -9420,19 +8979,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 126,
-    url: "https://www.g2.com/products/autopipe/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 42,
-    url: "https://www.capterra.com/p/autopipe-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t211",
@@ -9472,6 +9019,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/pv-elite",
+  pricing_url: "https://hexagon.com/products/pv-elite/how-to-buy",
   affiliate_url: null,
   score: 4.5,
 
@@ -9604,25 +9152,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 118,
-    url: "https://www.g2.com/products/pv-elite/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 79,
-    url: "https://www.capterra.com/p/pv-elite-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 21,
-    url: "https://sourceforge.net/projects/pv-elite/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t212",
@@ -9661,6 +9191,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.aspentech.com/en/products/engineering/aspen-hysys",
+  pricing_url: "https://www.aspentech.com/en/products/engineering/aspen-hysys/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -9791,25 +9322,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 101,
-    url: "https://www.g2.com/products/aspen-hysys/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 33,
-    url: "https://www.capterra.com/p/aspen-hysys-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 42,
-    url: "https://sourceforge.net/projects/aspen-hysys/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t233",
@@ -9849,6 +9362,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.csiamerica.com/products/sap2000",
+  pricing_url: "https://www.csiamerica.com/products/sap2000/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -9982,19 +9496,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 107,
-    url: "https://www.g2.com/products/sap2000/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 75,
-    url: "https://www.capterra.com/p/sap2000-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t234",
@@ -10033,6 +9535,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.csiamerica.com/products/etabs",
+  pricing_url: "https://www.csiamerica.com/products/etabs/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -10167,19 +9670,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 36,
-    url: "https://www.g2.com/products/etabs/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 94,
-    url: "https://www.capterra.com/p/etabs-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t235",
@@ -10219,6 +9710,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.bentley.com/software/staad-pro/",
+  pricing_url: "https://www.bentley.com/software/staad-pro/how-to-buy",
   affiliate_url: null,
   score: 4.3,
 
@@ -10353,25 +9845,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 98,
-    url: "https://www.g2.com/products/staad-pro/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 56,
-    url: "https://www.capterra.com/p/staad-pro-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.3,
-    max: 5,
-    count: 49,
-    url: "https://sourceforge.net/projects/staad-pro/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t236",
@@ -10409,6 +9883,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.tekla.com/products/tekla-tedds",
+  pricing_url: "https://www.tekla.com/products/tekla-tedds/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -10543,19 +10018,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 73,
-    url: "https://www.g2.com/products/tekla-tedds/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 53,
-    url: "https://www.capterra.com/p/tekla-tedds-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t242",
@@ -10594,6 +10057,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/robot-structural-analysis",
+  pricing_url: "https://www.autodesk.com/products/robot-structural-analysis/pricing",
   affiliate_url: null,
   score: 4.2,
 
@@ -10727,19 +10191,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 125,
-    url: "https://www.g2.com/products/autodesk-robot/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/p/autodesk-robot-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t243",
@@ -10777,6 +10229,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://www.ideastatica.com",
+  pricing_url: "https://www.ideastatica.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -10911,19 +10364,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 46,
-    url: "https://www.g2.com/products/idea-statica/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 88,
-    url: "https://www.capterra.com/p/idea-statica-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t244",
@@ -10961,6 +10402,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://risa.com/products/risa-3d",
+  pricing_url: "https://risa.com/products/risa-3d/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -11094,24 +10536,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 85,
-    url: "https://www.g2.com/products/risa-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 70,
-    url: "https://www.capterra.com/p/risa-3d-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 43,
-    url: "https://sourceforge.net/projects/risa-3d/reviews"
-  }]
+  external_ratings: []
 }
 ];

@@ -11,6 +11,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "The de-facto industry standard for 3D parametric mechanical design.",
   description: "SolidWorks is the flagship mechanical design software from Dassault Systèmes. It is renowned for its robust parametric feature-based modeling and ease of use.",
+
   pricing_tiers: [
     {
       name: "Term (Annual)",
@@ -36,6 +37,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Mechanical Design",
@@ -80,23 +82,28 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autodesk-inventor",
     "onshape",
     "ptc-creo"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1295,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical",
     "Manufacturing",
     "Automotive"
   ],
+
   core_features: [
     "Parametric 3D",
     "Assemblies",
@@ -104,23 +111,29 @@ export const c2Tools: Tool[] = [
     "Sheet Metal",
     "PDM Support"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.solidworks.com",
+  pricing_url: "https://www.solidworks.com/how-to-buy",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Intuitive workflow",
     "Superior Parasolid stability",
     "Unmatched ecosystem"
   ],
+
   cons: [
     "Windows only",
     "Hardware hungry",
     "Legacy API"
   ],
+
   faqs: [
     {
       q: "What is SolidWorks used for?",
@@ -147,6 +160,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. SolidWorks exposes COM-based API with SDK bindings for C++, C#, VBA, .NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Low",
@@ -158,10 +172,12 @@ export const c2Tools: Tool[] = [
       "IFC"
     ]
   },
-  expert_verdict: "If you are in mechanical design, SolidWorks is the most reliable choice.",
+
+  expert_verdict: "The industry standard for parametric 3D mechanical design, featuring a vast ecosystem and strong manufacturing integration.",
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -178,6 +194,7 @@ export const c2Tools: Tool[] = [
     "Turkish",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "SLDPRT",
     "SLDASM",
@@ -197,6 +214,7 @@ export const c2Tools: Tool[] = [
     "3DM",
     "3MF"
   ],
+
   file_formats_out: [
     "SLDPRT",
     "STEP",
@@ -214,6 +232,7 @@ export const c2Tools: Tool[] = [
     "3DM",
     "3MF"
   ],
+
   integrations: [
     "3DEXPERIENCE",
     "SolidWorks PDM",
@@ -224,16 +243,19 @@ export const c2Tools: Tool[] = [
     "Excel",
     "Microsoft 365"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud"
   ],
+
   license_types: [
     "Subscription",
     "Perpetual",
     "Network",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -257,6 +279,7 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/solidworks/reviews"
     }
   ],
+
   support_channels: [
     "Phone",
     "Email",
@@ -265,11 +288,13 @@ export const c2Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -290,6 +315,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "The world's most intuitive 3D design tool for architecture and interiors.",
   description: "SketchUp is famous for its unique 'Push/Pull' modeling logic, perfect for conceptual design and visualization.",
+
   pricing_tiers: [
     {
       name: "Go",
@@ -323,6 +349,7 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   detailed_features: [
     {
       category: "Features",
@@ -350,15 +377,18 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "rhino-3d",
     "revit",
     "archicad"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 119,
+
   platforms: [
     "Windows",
     "macOS",
@@ -366,33 +396,41 @@ export const c2Tools: Tool[] = [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Architecture",
     "Interior Design",
     "Landscape"
   ],
+
   core_features: [
     "Push/Pull Modeling",
     "3D Warehouse Library",
     "LayOut Module"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://www.sketchup.com",
+  pricing_url: "https://www.sketchup.com/plans-and-pricing",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Low learning curve",
     "Millions of models",
     "Great rendering support"
   ],
+
   cons: [
     "Large scene slowdown",
     "Weak curves",
     "Sluggish documentation"
   ],
+
   faqs: [
     {
       q: "What is SketchUp used for?",
@@ -419,6 +457,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. SketchUp exposes Ruby API / SketchUp SDK with SDK bindings for Ruby, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Trimble Proprietary",
     multicore: "Very Low",
@@ -430,7 +469,9 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
+
+  expert_verdict: "An intuitive, fast 3D sketching tool excellent for architectural concepts, interior design, and rapid layout modeling.",
+
   pricing_breakdown: [
     {
       tier: "Go",
@@ -448,6 +489,7 @@ export const c2Tools: Tool[] = [
       notes: "Includes V-Ray & Scan Essentials"
     }
   ],
+
   key_capabilities: [
     "Intuitive 3D Concept Modeling",
     "2D Documentation with LayOut",
@@ -455,9 +497,11 @@ export const c2Tools: Tool[] = [
     "Extension Warehouse (1000+ plugins)",
     "Cloud Collaboration via Trimble Connect"
   ],
+
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -473,6 +517,7 @@ export const c2Tools: Tool[] = [
     "Polish",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "SKP",
     "DWG",
@@ -487,6 +532,7 @@ export const c2Tools: Tool[] = [
     "PNG",
     "JPG"
   ],
+
   file_formats_out: [
     "SKP",
     "DWG",
@@ -504,6 +550,7 @@ export const c2Tools: Tool[] = [
     "PNG",
     "JPG"
   ],
+
   integrations: [
     "Trimble Connect",
     "3D Warehouse",
@@ -515,17 +562,20 @@ export const c2Tools: Tool[] = [
     "Twinmotion",
     "Lumion"
   ],
+
   deployment_options: [
     "Desktop",
     "Web",
     "Cloud",
     "Mobile"
   ],
+
   license_types: [
     "Subscription",
     "Free",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -549,6 +599,7 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/sketchup/reviews"
     }
   ],
+
   support_channels: [
     "Email",
     "Chat",
@@ -557,11 +608,13 @@ export const c2Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "GDPR",
     "ISO 27001"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -580,6 +633,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("F3"),
   short_desc: "The cloud-native powerhouse for integrated CAD, CAM, and CAE.",
   description: "Fusion 360 is a cloud-based platform that breaks down the silos between design and production.",
+
   pricing_tiers: [
     {
       name: "Fusion (Standard)",
@@ -618,6 +672,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Unified Platform",
@@ -662,26 +717,31 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solidworks",
     "onshape",
     "shapr3d"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 85,
+
   platforms: [
     "Windows",
     "macOS",
     "Android",
     "iOS"
   ],
+
   industries: [
     "Industrial Design",
     "Electronics",
     "Prototyping"
   ],
+
   core_features: [
     "Cloud CAD/CAM",
     "Generative Design",
@@ -689,24 +749,30 @@ export const c2Tools: Tool[] = [
     "Simulation",
     "Collaboration"
   ],
+
   user_scales: [
     "Small Business",
     "Startups",
     "Individuals"
   ],
+
   official_url: "https://www.autodesk.com/fusion-360",
+  pricing_url: "https://www.autodesk.com/products/fusion-360/pricing",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Seamless cloud sync",
     "Exceptional CAM value",
     "Native Apple Silicon"
   ],
+
   cons: [
     "Cloud dependency",
     "Subscription only",
     "Learning curve"
   ],
+
   faqs: [
     {
       q: "What is Fusion 360 used for?",
@@ -733,6 +799,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. Fusion 360 exposes Fusion API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Moderate",
@@ -744,10 +811,12 @@ export const c2Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Fusion 360 is the future of agile hardware design.",
+
+  expert_verdict: "A versatile, cloud-integrated CAD/CAM/CAE platform, perfect for rapid prototyping and agile engineering teams.",
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -764,6 +833,7 @@ export const c2Tools: Tool[] = [
     "Portuguese",
     "Russian"
   ],
+
   file_formats_in: [
     "F3D",
     "STEP",
@@ -783,6 +853,7 @@ export const c2Tools: Tool[] = [
     "X_B",
     "3MF"
   ],
+
   file_formats_out: [
     "F3D",
     "STEP",
@@ -798,6 +869,7 @@ export const c2Tools: Tool[] = [
     "IPT",
     "3DM"
   ],
+
   integrations: [
     "Fusion Manage",
     "Autodesk Drive",
@@ -809,17 +881,20 @@ export const c2Tools: Tool[] = [
     "Formlabs",
     "Carbide"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud",
     "Web",
     "Mobile"
   ],
+
   license_types: [
     "Subscription",
     "Free",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -843,6 +918,7 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/autodesk-fusion-360/reviews"
     }
   ],
+
   support_channels: [
     "Email",
     "Chat",
@@ -851,11 +927,13 @@ export const c2Tools: Tool[] = [
     "Training",
     "Knowledge Base"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -874,6 +952,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "The industry standard for complex NURBS modeling and computational design.",
   description: "Rhino (Rhinoceros) is a versatile 3D modeler with deep integration with Grasshopper for generative design.",
+
   pricing_tiers: [
     {
       name: "Commercial (V8)",
@@ -899,6 +978,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Surface Modeling",
@@ -943,24 +1023,29 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "sketchup",
     "maya",
     "blender"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 995,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Architecture",
     "Industrial Design",
     "Jewelry"
   ],
+
   core_features: [
     "Free-form NURBS",
     "Grasshopper Visual Coding",
@@ -968,23 +1053,29 @@ export const c2Tools: Tool[] = [
     "Render Integration",
     "Rhino.Inside.Revit"
   ],
+
   user_scales: [
     "Mid-Market",
     "Individuals"
   ],
+
   official_url: "https://www.rhino3d.com",
+  pricing_url: "https://www.rhino3d.com/buy",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Best-in-class surfacing",
     "No subscription fees",
     "Vibrant community"
   ],
+
   cons: [
     "Lacks native parametric history",
     "Basic 2D",
     "High hardware reqs"
   ],
+
   faqs: [
     {
       q: "What is Rhino 3D used for?",
@@ -1011,6 +1102,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. Rhino 3D exposes RhinoCommon / openNURBS with SDK bindings for C#, Python, C++, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "OpenNURBS",
     multicore: "Low",
@@ -1022,10 +1114,12 @@ export const c2Tools: Tool[] = [
       "OBJ"
     ]
   },
-  expert_verdict: "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
+
+  expert_verdict: "The gold standard for NURBS-based organic 3D modeling, highly favored for freeform styling and industrial prototyping.",
   version: "8",
   last_updated: "2025-11-15",
   free_trial_days: 90,
+
   languages: [
     "English",
     "Czech",
@@ -1041,6 +1135,7 @@ export const c2Tools: Tool[] = [
     "Simplified Chinese",
     "Traditional Chinese"
   ],
+
   file_formats_in: [
     "3DM",
     "STEP",
@@ -1059,6 +1154,7 @@ export const c2Tools: Tool[] = [
     "X_B",
     "3MF"
   ],
+
   file_formats_out: [
     "3DM",
     "STEP",
@@ -1077,6 +1173,7 @@ export const c2Tools: Tool[] = [
     "X_T",
     "3MF"
   ],
+
   integrations: [
     "Grasshopper",
     "V-Ray",
@@ -1088,13 +1185,16 @@ export const c2Tools: Tool[] = [
     "Unreal Engine",
     "Unity"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -1118,15 +1218,18 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/rhinoceros-3d/reviews"
     }
   ],
+
   support_channels: [
     "Email",
     "Community",
     "Documentation",
     "Training"
   ],
+
   security_compliance: [
     "GDPR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -1147,6 +1250,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("CT"),
   short_desc: "The high-end PLM standard for Aerospace and Automotive engineering.",
   description: "CATIA is the flagship PLM suite from Dassault Systèmes, capable of managing entire aircraft assemblies.",
+
   pricing_tiers: [
     {
       name: "3DEXPERIENCE Cloud",
@@ -1184,6 +1288,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "High-end Engineering",
@@ -1228,23 +1333,28 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "siemens-nx",
     "ptc-creo",
     "solidworks"
   ],
+
   country: "France",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 4500,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
     "Shipbuilding"
   ],
+
   core_features: [
     "High-end Surfacing",
     "Aero & Auto Design",
@@ -1252,22 +1362,28 @@ export const c2Tools: Tool[] = [
     "Digital Twin",
     "Cloud PLM"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://www.3ds.com/products-services/catia/",
+  pricing_url: "https://www.3ds.com/products-services/catia/pricing",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Complex assembly handling",
     "Superior surfacing",
     "Deep PLM integration"
   ],
+
   cons: [
     "Prohibitively expensive",
     "Steep learning curve",
     "Extreme hardware reqs"
   ],
+
   faqs: [
     {
       q: "What is CATIA used for?",
@@ -1294,6 +1410,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. CATIA exposes CAA / 3DEXPERIENCE API with SDK bindings for C++, C#, Java, VBScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "CGM (Convergence Geometric Modeler)",
     multicore: "High",
@@ -1305,10 +1422,12 @@ export const c2Tools: Tool[] = [
       "VDA-FS"
     ]
   },
+
   expert_verdict: "CATIA isn't just software; it's an industrial ecosystem.",
   version: "3DEXPERIENCE R2026x",
   last_updated: "2025-11-15",
   free_trial_days: 0,
+
   languages: [
     "English",
     "French",
@@ -1321,6 +1440,7 @@ export const c2Tools: Tool[] = [
     "Spanish",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "CATPart",
     "CATProduct",
@@ -1335,6 +1455,7 @@ export const c2Tools: Tool[] = [
     "DWG",
     "DXF"
   ],
+
   file_formats_out: [
     "CATPart",
     "CATProduct",
@@ -1348,6 +1469,7 @@ export const c2Tools: Tool[] = [
     "DXF",
     "CGR"
   ],
+
   integrations: [
     "3DEXPERIENCE",
     "ENOVIA",
@@ -1357,39 +1479,21 @@ export const c2Tools: Tool[] = [
     "EXALEAD",
     "Microsoft 365"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud",
     "On-Premise"
   ],
+
   license_types: [
     "Subscription",
     "Perpetual",
     "Network"
   ],
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 230,
-      url: "https://www.g2.com/products/catia/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.4,
-      max: 5,
-      count: 95,
-      url: "https://www.capterra.com/p/138802/CATIA/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 280,
-      url: "https://www.trustradius.com/products/catia/reviews"
-    }
-  ],
+
+  external_ratings: [],
+
   support_channels: [
     "Phone",
     "Email",
@@ -1398,12 +1502,14 @@ export const c2Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR",
     "ITAR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -1424,6 +1530,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "The premier open-source 3D parametric modeler.",
   description: "FreeCAD is an open-source parametric 3D modeler made to design real-life objects of any size.",
+
   pricing_tiers: [
     {
       name: "Community",
@@ -1437,6 +1544,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Features",
@@ -1464,47 +1572,58 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solidworks",
     "fusion-360",
     "solvespace"
   ],
+
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Hobbyist",
     "Education",
     "Engineering"
   ],
+
   core_features: [
     "Parametric Modeling",
     "Modular Architecture",
     "Python Scripting"
   ],
+
   user_scales: [
     "Individuals",
     "Education"
   ],
+
   official_url: "https://www.freecad.org",
+  pricing_url: "https://www.freecad.org",
   affiliate_url: null,
   score: 4.2,
+
   pros: [
     "Completely free",
     "Python scriptable",
     "Excellent cross-platform"
   ],
+
   cons: [
     "Cluttered UI",
     "Stability issues",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is FreeCAD used for?",
@@ -1531,6 +1650,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. FreeCAD exposes Python API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "OpenCASCADE",
     multicore: "Low",
@@ -1542,7 +1662,9 @@ export const c2Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "The best free alternative to SolidWorks.",
+
+  expert_verdict: "The leading open-source parametric 3D modeler, invaluable for makers and open-source teams despite minor assembly quirks.",
+
   pricing_breakdown: [
     {
       tier: "Community",
@@ -1555,6 +1677,7 @@ export const c2Tools: Tool[] = [
       notes: "Support developers"
     }
   ],
+
   key_capabilities: [
     "Open-source Parametric 3D Modeling",
     "BIM/AEC Workbenches",
@@ -1562,9 +1685,11 @@ export const c2Tools: Tool[] = [
     "Robot Simulation Module",
     "2D Technical Drawing (TechDraw)"
   ],
+
   version: "1.0",
   last_updated: "2025-11-15",
   free_trial_days: 0,
+
   languages: [
     "English",
     "French",
@@ -1590,6 +1715,7 @@ export const c2Tools: Tool[] = [
     "Ukrainian",
     "Vietnamese"
   ],
+
   file_formats_in: [
     "FCStd",
     "STEP",
@@ -1606,6 +1732,7 @@ export const c2Tools: Tool[] = [
     "3DM",
     "3MF"
   ],
+
   file_formats_out: [
     "FCStd",
     "STEP",
@@ -1623,6 +1750,7 @@ export const c2Tools: Tool[] = [
     "3DM",
     "3MF"
   ],
+
   integrations: [
     "OpenSCAD",
     "Salome-Meca",
@@ -1631,13 +1759,16 @@ export const c2Tools: Tool[] = [
     "KiCad",
     "LibreCAD"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Open-Source",
     "Free"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -1654,11 +1785,14 @@ export const c2Tools: Tool[] = [
       url: "https://www.capterra.com/p/189000/FreeCAD/"
     }
   ],
+
   support_channels: [
     "Community",
     "Documentation"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -1677,6 +1811,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("OS"),
   short_desc: "The professional CAD system built for agile cloud development.",
   description: "Onshape is the first and only pure-cloud professional 3D CAD system.",
+
   pricing_tiers: [
     {
       name: "Professional",
@@ -1703,6 +1838,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Cloud Platform",
@@ -1747,25 +1883,30 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "fusion-360",
     "solidworks",
     "shapr3d"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1500,
+
   platforms: [
     "Web",
     "iOS",
     "Android"
   ],
+
   industries: [
     "Startups",
     "Consumer Products",
     "Robotics"
   ],
+
   core_features: [
     "Cloud-Native CAD",
     "Version Control",
@@ -1773,23 +1914,29 @@ export const c2Tools: Tool[] = [
     "Part Studios",
     "Integrated Analysis"
   ],
+
   user_scales: [
     "Small Business",
     "Startups"
   ],
+
   official_url: "https://www.onshape.com",
+  pricing_url: "https://www.onshape.com/en/pricing",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Zero IT footprint",
     "Real-time collaboration",
     "Superior version control"
   ],
+
   cons: [
     "Internet dependency",
     "Surfacing maturing",
     "Expensive for occasional users"
   ],
+
   faqs: [
     {
       q: "What is Onshape used for?",
@@ -1816,6 +1963,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. Onshape exposes REST with SDK bindings for Python, JavaScript, Java, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid (Cloud)",
     multicore: "Unlimited",
@@ -1827,10 +1975,12 @@ export const c2Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "Onshape is the 'Google Docs' of CAD.",
+
+  expert_verdict: "The premier cloud-native CAD and product data management system, allowing real-time multi-user editing directly in a browser.",
   version: "Continuous (cloud)",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -1845,6 +1995,7 @@ export const c2Tools: Tool[] = [
     "Polish",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "STEP",
     "IGES",
@@ -1865,6 +2016,7 @@ export const c2Tools: Tool[] = [
     "3MF",
     "3DM"
   ],
+
   file_formats_out: [
     "STEP",
     "IGES",
@@ -1882,6 +2034,7 @@ export const c2Tools: Tool[] = [
     "PNG",
     "3DM"
   ],
+
   integrations: [
     "Onshape PDM",
     "Slack",
@@ -1892,16 +2045,19 @@ export const c2Tools: Tool[] = [
     "Bambu Studio",
     "Markforged"
   ],
+
   deployment_options: [
     "Cloud",
     "Web",
     "Mobile"
   ],
+
   license_types: [
     "Subscription",
     "Free",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -1925,6 +2081,7 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/onshape/reviews"
     }
   ],
+
   support_channels: [
     "Email",
     "Chat",
@@ -1932,6 +2089,7 @@ export const c2Tools: Tool[] = [
     "Documentation",
     "Training"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
@@ -1939,6 +2097,7 @@ export const c2Tools: Tool[] = [
     "CCPA",
     "ITAR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -1959,6 +2118,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("SE"),
   short_desc: "Professional 3D CAD with industry-leading Synchronous Technology.",
   description: "Solid Edge features Synchronous Technology for rapid direct and history-based modeling.",
+
   pricing_tiers: [
     {
       name: "Classic (Annual)",
@@ -1985,6 +2145,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Core Modeling",
@@ -2029,22 +2190,27 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solidworks",
     "autodesk-inventor",
     "fusion-360"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription / Perpetual",
   starting_price: 1200,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical",
     "Industrial Design"
   ],
+
   core_features: [
     "Synchronous Technology",
     "Large Assembly Mgmt",
@@ -2052,23 +2218,29 @@ export const c2Tools: Tool[] = [
     "Generative Design",
     "CAD/CAM/CAE"
   ],
+
   user_scales: [
     "Mid-Market",
     "Small Business"
   ],
+
   official_url: "https://solidedge.siemens.com",
+  pricing_url: "https://solidedge.siemens.com/en/pricing/",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Hybrid modeling power",
     "Excellent sheet metal",
     "Flexible pricing"
   ],
+
   cons: [
     "Smaller marketing presence",
     "Legacy UI areas",
     "Smaller community"
   ],
+
   faqs: [
     {
       q: "What is Solid Edge used for?",
@@ -2095,6 +2267,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, Autodesk Inventor, Fusion 360. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Moderate",
@@ -2106,7 +2279,9 @@ export const c2Tools: Tool[] = [
       "JT"
     ]
   },
-  expert_verdict: "Solid Edge is the 'thinking man's' SolidWorks.",
+
+  expert_verdict: "A flexible mechanical modeling suite offering Synchronous Technology to merge parametric and direct editing.",
+
   external_ratings: [
     {
       source: "TrustRadius",
@@ -2124,6 +2299,7 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional-grade 3D mechanical design and simulation.",
   description: "Autodesk Inventor provides professional tools for product design and rendering, featuring iLogic automation and specialized toolsets.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -2147,6 +2323,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -2162,39 +2339,50 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solidworks",
     "fusion-360"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 315,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing"
   ],
+
   core_features: [
     "iLogic Automation",
     "Shared Views"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.autodesk.com/inventor",
+  pricing_url: "https://www.autodesk.com/products/inventor/pricing",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "iLogic design automation",
     "Eco-system integration"
   ],
+
   cons: [
     "Windows only",
     "Expensive"
   ],
+
   faqs: [
     {
       q: "What is Autodesk Inventor used for?",
@@ -2221,6 +2409,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. Autodesk Inventor exposes .NET / COM API with SDK bindings for C#, VB.NET, C++, VBA. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Moderate",
@@ -2230,10 +2419,12 @@ export const c2Tools: Tool[] = [
       "IAM"
     ]
   },
-  expert_verdict: "The superior choice for mechanical design within the Autodesk ecosystem.",
+
+  expert_verdict: "A comprehensive, professional parametric mechanical design system optimized for complex assembly styling.",
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -2248,6 +2439,7 @@ export const c2Tools: Tool[] = [
     "Polish",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "IPT",
     "IAM",
@@ -2265,6 +2457,7 @@ export const c2Tools: Tool[] = [
     "Parasolid",
     "JT"
   ],
+
   file_formats_out: [
     "IPT",
     "IAM",
@@ -2280,6 +2473,7 @@ export const c2Tools: Tool[] = [
     "3MF",
     "PDF"
   ],
+
   integrations: [
     "Vault",
     "AutoCAD",
@@ -2289,14 +2483,17 @@ export const c2Tools: Tool[] = [
     "Nastran In-CAD",
     "Inventor CAM"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Subscription",
     "Network",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -2320,6 +2517,7 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/autodesk-inventor/reviews"
     }
   ],
+
   support_channels: [
     "Phone",
     "Email",
@@ -2328,11 +2526,13 @@ export const c2Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -2353,6 +2553,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("CR"),
   short_desc: "The original parametric 3D CAD powerhouse.",
   description: "Creo (formerly Pro/ENGINEER) is a scalable, integrated suite of software that supports product design for discrete manufacturers.",
+
   pricing_tiers: [
     {
       name: "Essentials",
@@ -2386,6 +2587,7 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -2422,45 +2624,56 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "catia",
     "siemens-nx",
     "solidworks"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 2430,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Manufacturing",
     "High-Tech",
     "Medical"
   ],
+
   core_features: [
     "Model-Based Definition",
     "Generative Design",
     "Real-time Simulation"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.ptc.com",
+  pricing_url: "https://www.ptc.com/en/products/creo/pricing",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Assembly management king",
     "World-class simulation",
     "Deep manufacturing tools"
   ],
+
   cons: [
     "Steep learning curve",
     "Overwhelming UI",
     "Hardware workstation req"
   ],
+
   faqs: [
     {
       q: "What is PTC Creo used for?",
@@ -2487,6 +2700,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. PTC Creo exposes Pro/TOOLKIT / J-Link / Web.Link with SDK bindings for C, C++, Java, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Granite",
     multicore: "Excellent",
@@ -2498,10 +2712,12 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "Creo is for serious engineering at massive scales.",
+
+  expert_verdict: "An exceptionally powerful, highly scalable parametric 3D CAD suite built for complex product modeling.",
   version: "11",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -2517,6 +2733,7 @@ export const c2Tools: Tool[] = [
     "Polish",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "PRT",
     "ASM",
@@ -2531,6 +2748,7 @@ export const c2Tools: Tool[] = [
     "JT",
     "Parasolid"
   ],
+
   file_formats_out: [
     "PRT",
     "ASM",
@@ -2545,6 +2763,7 @@ export const c2Tools: Tool[] = [
     "PDF",
     "3D PDF"
   ],
+
   integrations: [
     "Windchill",
     "ThingWorx",
@@ -2553,16 +2772,19 @@ export const c2Tools: Tool[] = [
     "Creo Generative Design",
     "Mathcad"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud"
   ],
+
   license_types: [
     "Subscription",
     "Perpetual",
     "Network",
     "Floating"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -2586,6 +2808,7 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/ptc-creo/reviews"
     }
   ],
+
   support_channels: [
     "Phone",
     "Email",
@@ -2594,12 +2817,14 @@ export const c2Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR",
     "ITAR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -2706,6 +2931,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://openscad.org",
+  pricing_url: "https://openscad.org",
   affiliate_url: null,
   score: 4.4,
 
@@ -2761,26 +2987,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "OpenSCAD is the ultimate tool for engineers who think in code.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 43,
-    url: "https://www.g2.com/products/openscad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 32,
-    url: "https://www.capterra.com/p/openscad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.3,
-    max: 5,
-    count: 12,
-    url: "https://sourceforge.net/projects/openscad/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t25",
@@ -2789,6 +2996,7 @@ export const c2Tools: Tool[] = [
   logo_url: getLogo("S3"),
   short_desc: "Professional CAD for mobile and desktop mobility.",
   description: "Shapr3D is a professional CAD tool built for iPad and desktop. It uses the Siemens Parasolid kernel for industrial-grade precision.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -2822,6 +3030,7 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   detailed_features: [
     {
       category: "Modeling",
@@ -2858,47 +3067,58 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "fusion-360",
     "solidworks",
     "onshape"
   ],
+
   country: "Hungary",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 299,
+
   platforms: [
     "Windows",
     "macOS",
     "iOS"
   ],
+
   industries: [
     "Industrial Design",
     "Prototyping",
     "AEC"
   ],
+
   core_features: [
     "Direct Modeling with Apple Pencil",
     "Parasolid Precision",
     "Multi-Device Sync"
   ],
+
   user_scales: [
     "Individuals",
     "Small Business"
   ],
+
   official_url: "https://www.shapr3d.com",
+  pricing_url: "https://www.shapr3d.com/pricing",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Most intuitive UI",
     "Industrial Parasolid kernel",
     "Offline mobility"
   ],
+
   cons: [
     "Subscription only",
     "Assembly maturing",
     "Pencil req for iPad"
   ],
+
   faqs: [
     {
       q: "What is Shapr3D used for?",
@@ -2925,6 +3145,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are Fusion 360, SolidWorks, Onshape. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "Moderate",
@@ -2936,7 +3157,9 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "Shapr3D has done the impossible: made professional CAD fun.",
+
+  expert_verdict: "A revolutionary, cross-platform 3D modeling app tailored for iPad, Mac, and Windows with an intuitive pen interface.",
+
   external_ratings: [
     {
       source: "Capterra",
@@ -3023,6 +3246,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://solvespace.com",
+  pricing_url: "https://solvespace.com",
   affiliate_url: null,
   score: 4.1,
 
@@ -3077,20 +3301,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "A masterclass in minimalist parametric design.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 122,
-    url: "https://www.g2.com/products/solvespace/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/p/solvespace-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t30",
@@ -3194,6 +3405,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.alibre.com",
+  pricing_url: "https://www.alibre.com/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -3345,6 +3557,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.varicad.com",
+  pricing_url: "https://www.varicad.com/pricing",
   affiliate_url: null,
   score: 4,
 
@@ -3399,26 +3612,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "A robust choice for individual mechanical engineers on Linux.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.9,
-    max: 5,
-    count: 71,
-    url: "https://www.g2.com/products/varicad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 15,
-    url: "https://www.capterra.com/p/varicad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 53,
-    url: "https://sourceforge.net/projects/varicad/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t50",
@@ -3430,16 +3624,19 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1875,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "VFX",
     "Gaming",
     "Animation"
   ],
+
   core_features: [
     "Character Animation",
     "3D Modeling",
@@ -3447,23 +3644,29 @@ export const c2Tools: Tool[] = [
     "Rendering",
     "Pipeline Integration"
   ],
+
   user_scales: [
     "Enterprise",
     "Agencies"
   ],
+
   official_url: "https://www.autodesk.com/maya",
+  pricing_url: "https://www.autodesk.com/products/maya/pricing",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Industry VFX standard",
     "Node-based power",
     "Linux support"
   ],
+
   cons: [
     "Steep learning",
     "High cost",
     "Not for engineering"
   ],
+
   faqs: [
     {
       q: "What is Maya used for?",
@@ -3490,6 +3693,7 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Maya Nucleus",
     multicore: "High",
@@ -3500,7 +3704,9 @@ export const c2Tools: Tool[] = [
       "OBJ"
     ]
   },
-  expert_verdict: "The power user's choice for Hollywood effects.",
+
+  expert_verdict: "The industry standard for high-end 3D animation, character rigging, and VFX in film and game development.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -3527,6 +3733,7 @@ export const c2Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Animation & Rigging",
@@ -3571,6 +3778,7 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -3599,16 +3807,19 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Indie Games",
     "VFX",
     "Hobbyist"
   ],
+
   core_features: [
     "Open Source 3D",
     "Geometry Nodes",
@@ -3616,23 +3827,29 @@ export const c2Tools: Tool[] = [
     "VFX/Compositing",
     "2D Animation (Grease Pencil)"
   ],
+
   user_scales: [
     "Individuals",
     "Startups"
   ],
+
   official_url: "https://www.blender.org",
+  pricing_url: "https://www.blender.org",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "100% Free",
     "Cycles production renderer",
     "Rapid development"
   ],
+
   cons: [
     "Non-standard UI",
     "Lacks NURBS precision",
     "Not for CAD/CAM"
   ],
+
   faqs: [
     {
       q: "What is Blender used for?",
@@ -3659,6 +3876,7 @@ export const c2Tools: Tool[] = [
       a: "Yes. Blender exposes Python API with SDK bindings for Python, C, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Cycles / Eevee",
     multicore: "High",
@@ -3669,7 +3887,9 @@ export const c2Tools: Tool[] = [
       "STL"
     ]
   },
-  expert_verdict: "Disrupting the professional 3D industry with open-source power.",
+
+  expert_verdict: "The ultimate open-source 3D suite, offering world-class modeling, animation, rendering, and compositing with no cost.",
+
   pricing_tiers: [
     {
       name: "Free & Open Source",
@@ -3684,6 +3904,7 @@ export const c2Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Creation Suite",
@@ -3728,9 +3949,11 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
+
   version: "4.5 LTS",
   last_updated: "2025-11-15",
   free_trial_days: 0,
+
   languages: [
     "English",
     "French",
@@ -3750,6 +3973,7 @@ export const c2Tools: Tool[] = [
     "Turkish",
     "Ukrainian"
   ],
+
   file_formats_in: [
     "BLEND",
     "OBJ",
@@ -3766,6 +3990,7 @@ export const c2Tools: Tool[] = [
     "DAE",
     "SVG"
   ],
+
   file_formats_out: [
     "BLEND",
     "OBJ",
@@ -3783,6 +4008,7 @@ export const c2Tools: Tool[] = [
     "PNG",
     "EXR"
   ],
+
   integrations: [
     "Cycles",
     "Eevee",
@@ -3794,13 +4020,16 @@ export const c2Tools: Tool[] = [
     "OpenColorIO",
     "OpenSubdiv"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Open-Source",
     "Free"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -3824,12 +4053,15 @@ export const c2Tools: Tool[] = [
       url: "https://www.trustradius.com/products/blender/reviews"
     }
   ],
+
   support_channels: [
     "Community",
     "Documentation",
     "Training"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -3877,6 +4109,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://solvespace.com",
+  pricing_url: "https://solvespace.com",
   affiliate_url: null,
   score: 4.3,
 
@@ -3931,20 +4164,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "The ultimate tool for engineers who value geometric purity.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 125,
-    url: "https://www.g2.com/products/solvespace-pro/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/p/solvespace-pro-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t58",
@@ -3982,6 +4202,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.ironcad.com",
+  pricing_url: "https://www.ironcad.com/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -4146,6 +4367,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.kubotekkosmos.com",
+  pricing_url: "https://www.kubotekkosmos.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -4200,26 +4422,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 36,
-    url: "https://www.g2.com/products/keycreator/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 92,
-    url: "https://www.capterra.com/p/keycreator-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.6,
-    max: 5,
-    count: 25,
-    url: "https://sourceforge.net/projects/keycreator/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t79",
@@ -4255,6 +4458,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.3dsystems.com/software/geomagic-design-x",
+  pricing_url: "https://www.3dsystems.com/software/geomagic-design-x/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -4309,20 +4513,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "The professional standard for turning physical objects into digital CAD data.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 119,
-    url: "https://www.g2.com/products/geomagic-design-x/reviews"
-  }, {
-    source: "Capterra",
-    score: 5,
-    max: 5,
-    count: 45,
-    url: "https://www.capterra.com/p/geomagic-design-x-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t80",
@@ -4359,6 +4550,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/alias/overview",
+  pricing_url: "https://www.autodesk.com/products/alias/overview/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -4413,20 +4605,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "The software behind almost every beautiful car you see on the road.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 119,
-    url: "https://www.g2.com/products/alias-autostudio/reviews"
-  }, {
-    source: "Capterra",
-    score: 5,
-    max: 5,
-    count: 45,
-    url: "https://www.capterra.com/p/alias-autostudio-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t89",
@@ -4464,6 +4643,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.zwsoft.com/zw3d",
+  pricing_url: "https://www.zwsoft.com/zw3d/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -4604,25 +4784,7 @@ export const c2Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 77,
-    url: "https://www.g2.com/products/zw3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 38,
-    url: "https://www.capterra.com/p/zw3d-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.4,
-    max: 5,
-    count: 34,
-    url: "https://sourceforge.net/projects/zw3d/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t237",
@@ -4664,6 +4826,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.plasticity.xyz",
+  pricing_url: "https://www.plasticity.xyz/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -4797,25 +4960,7 @@ export const c2Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 122,
-    url: "https://www.g2.com/products/plasticity/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 92,
-    url: "https://www.capterra.com/p/plasticity-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 37,
-    url: "https://sourceforge.net/projects/plasticity/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t238",
@@ -4856,6 +5001,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://moi3d.com",
+  pricing_url: "https://moi3d.com/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -4883,7 +5029,7 @@ export const c2Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
+  expert_verdict: "A solid 3D modeling and visualization software built to streamline CAD shapes and mechanical assembly design.",
 
   faqs: [
     {
@@ -4989,25 +5135,7 @@ export const c2Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 35,
-    url: "https://www.g2.com/products/moi3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 80,
-    url: "https://www.capterra.com/p/moi3d-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 36,
-    url: "https://sourceforge.net/projects/moi3d/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t26",
@@ -5091,6 +5219,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.tinkercad.com",
+  pricing_url: "https://www.tinkercad.com",
   affiliate_url: null,
   score: 4.6,
 
@@ -5140,26 +5269,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 90,
-    url: "https://www.g2.com/products/tinkercad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 92,
-    url: "https://www.capterra.com/p/tinkercad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.6,
-    max: 5,
-    count: 28,
-    url: "https://sourceforge.net/projects/tinkercad/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t27",
@@ -5253,6 +5363,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://glovius.com",
+  pricing_url: "https://glovius.com/pricing",
   affiliate_url: null,
   score: 4.2,
 
@@ -5304,26 +5415,7 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 58,
-    url: "https://www.g2.com/products/glovius/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 66,
-    url: "https://www.capterra.com/p/glovius-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.2,
-    max: 5,
-    count: 46,
-    url: "https://sourceforge.net/projects/glovius/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t28",
@@ -5417,6 +5509,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://cadexchanger.com",
+  pricing_url: "https://cadexchanger.com/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -5468,25 +5561,6 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 42,
-    url: "https://www.g2.com/products/cad-exchanger/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 39,
-    url: "https://www.capterra.com/p/cad-exchanger-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 42,
-    url: "https://sourceforge.net/projects/cad-exchanger/reviews"
-  }]
+  external_ratings: []
 }
 ];

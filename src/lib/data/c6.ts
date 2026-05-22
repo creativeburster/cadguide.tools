@@ -11,6 +11,7 @@ export const c6Tools: Tool[] = [
   logo_url: "",
   short_desc: "The professional standard for PCB and electronics design.",
   description: "Altium Designer offers a unified design environment including schematic capture and 3D PCB layout.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -49,6 +50,7 @@ export const c6Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "PCB Design",
@@ -93,23 +95,28 @@ export const c6Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "eagle",
     "orcad",
     "eplan-electric-p8"
   ],
+
   country: "Australia",
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 3850,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Consumer Electronics",
     "Medical",
     "Automotive"
   ],
+
   core_features: [
     "Unified PCB Design",
     "Native 3D",
@@ -117,23 +124,29 @@ export const c6Tools: Tool[] = [
     "Interactive Routing",
     "Supply Chain Integration"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.altium.com",
+  pricing_url: "https://www.altium.com/pricing",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Industry-leading 3D PCB",
     "Schematic-layout sync",
     "Extensive component library"
   ],
+
   cons: [
     "High subscription cost",
     "Steep learning curve",
     "Windows only"
   ],
+
   faqs: [
     {
       q: "What is Altium Designer used for?",
@@ -160,6 +173,7 @@ export const c6Tools: Tool[] = [
       a: "Yes. Altium Designer exposes Delphi-based API / Altium 365 REST with SDK bindings for Delphi, JavaScript, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Altium Unified Modeler",
     multicore: "Moderate",
@@ -171,10 +185,12 @@ export const c6Tools: Tool[] = [
       "IPC"
     ]
   },
-  expert_verdict: "Altium is the 'Gold Standard' for professional PCB designers.",
+
+  expert_verdict: "The leading professional PCB design software, combining unified schematic capture, 3D routing, and layout.",
   version: "25",
   last_updated: "2025-11-15",
   free_trial_days: 15,
+
   languages: [
     "English",
     "French",
@@ -184,6 +200,7 @@ export const c6Tools: Tool[] = [
     "Simplified Chinese",
     "Russian"
   ],
+
   file_formats_in: [
     "SchDoc",
     "PcbDoc",
@@ -197,6 +214,7 @@ export const c6Tools: Tool[] = [
     "DWG",
     "IDF"
   ],
+
   file_formats_out: [
     "SchDoc",
     "PcbDoc",
@@ -211,6 +229,7 @@ export const c6Tools: Tool[] = [
     "3D PDF",
     "IDF"
   ],
+
   integrations: [
     "Altium 365",
     "Concord Pro",
@@ -220,15 +239,18 @@ export const c6Tools: Tool[] = [
     "Autodesk Inventor",
     "Component Search Engine"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud"
   ],
+
   license_types: [
     "Subscription",
     "Perpetual",
     "Network"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -252,6 +274,7 @@ export const c6Tools: Tool[] = [
       url: "https://www.trustradius.com/products/altium-designer/reviews"
     }
   ],
+
   support_channels: [
     "Phone",
     "Email",
@@ -261,11 +284,13 @@ export const c6Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "GDPR",
     "ISO 27001"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -355,6 +380,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/eagle",
+  pricing_url: "https://www.autodesk.com/eagle/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -465,6 +491,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.eplan.com",
+  pricing_url: "https://www.eplan.com/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -580,25 +607,7 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 47,
-    url: "https://www.g2.com/products/eplan-electric-p8/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 18,
-    url: "https://www.capterra.com/p/eplan-electric-p8-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 39,
-    url: "https://sourceforge.net/projects/eplan-electric-p8/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t92",
@@ -634,6 +643,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html",
+  pricing_url: "https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -689,20 +699,7 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "The most advanced chip implementation platform, powering designs at 3nm and below.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 5,
-    max: 5,
-    count: 122,
-    url: "https://www.g2.com/products/synopsys-fusion-compiler/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 88,
-    url: "https://www.capterra.com/p/synopsys-fusion-compiler-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t103",
@@ -868,6 +865,7 @@ export const c6Tools: Tool[] = [
   core_features: ["Automated Schematic Design", "EPLAN Data Portal", "Auto-Generated Documentation", "ERP/PDM Integration", "Fluid Power Engineering", "3D Cabinet Layout", "PLC Integration"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.eplan-software.com/",
+  pricing_url: "https://www.eplan-software.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Industry standard for electrical engineering", "Extensive device data portal with millions of components", "Automated documentation saves significant time", "Seamless ERP/PDM integration", "Template-based design for consistency", "Supports fluid power engineering", "Multi-language support", "Strong global support network"],
@@ -943,27 +941,8 @@ export const c6Tools: Tool[] = [
     standards: ["IEC", "NFPA", "GB", "GOST"]
   },
 
-  expert_verdict: "EPLAN is the industry-standard electrical engineering software platform, widely adopted by machine builders, panel manufacturers, and industrial automation companies worldwide. Its standout feature is the EPLAN Data Portal, providing access to millions of device data sets that significantly accelerate design workflows. The automated documentation capabilities - from auto-generated reports to wire lists and terminal diagrams - dramatically reduce engineering time while ensuring accuracy and consistency. EPLAN's seamless integration with major ERP and PDM systems creates a continuous data flow from engineering to operations, eliminating manual data entry and reducing errors. Although the software requires significant investment and training, the productivity gains and standardization benefits make it particularly attractive for mid-to-large enterprises with complex electrical engineering requirements. The inclusion of fluid power engineering capabilities extends its utility beyond pure electrical design, making it a comprehensive solution for machine and plant engineering projects.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 129,
-    url: "https://www.g2.com/products/eplan/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 43,
-    url: "https://www.capterra.com/p/eplan-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 8,
-    url: "https://sourceforge.net/projects/eplan/reviews"
-  }]
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
+  external_ratings: []
 },
 {
   id: "t111",
@@ -1074,6 +1053,7 @@ export const c6Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.zuken.com/",
+  pricing_url: "https://www.zuken.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -1113,27 +1093,8 @@ export const c6Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "CR-8000 is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 121,
-    url: "https://www.g2.com/products/cr-8000/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 71,
-    url: "https://www.capterra.com/p/cr-8000-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 42,
-    url: "https://sourceforge.net/projects/cr-8000/reviews"
-  }]
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
+  external_ratings: []
 },
 {
   id: "t114",
@@ -1243,6 +1204,7 @@ export const c6Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.quadcept.com/",
+  pricing_url: "https://www.quadcept.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -1282,27 +1244,8 @@ export const c6Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Quadcept is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 60,
-    url: "https://www.g2.com/products/quadcept/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 67,
-    url: "https://www.capterra.com/p/quadcept-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.9,
-    max: 5,
-    count: 9,
-    url: "https://sourceforge.net/projects/quadcept/reviews"
-  }]
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
+  external_ratings: []
 },
 {
   id: "t160",
@@ -1412,6 +1355,7 @@ export const c6Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
+  pricing_url: "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -1451,7 +1395,7 @@ export const c6Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Allegro PCB is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
 
   external_ratings: [{
     source: "G2",
@@ -1648,6 +1592,7 @@ export const c6Tools: Tool[] = [
   core_features: ["PSpice Simulation", "Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "OrCAD CIS", "Constraint-Driven Design", "Allegro Integration"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.orcad.com/",
+  pricing_url: "https://www.orcad.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Industry-standard PSpice simulation", "Comprehensive PCB design capabilities", "Seamless Allegro integration for scalability", "Extensive component libraries", "Constraint-driven design workflow", "Mixed-signal simulation support", "Strong Cadence ecosystem", "Educational licensing available"],
@@ -1723,7 +1668,7 @@ export const c6Tools: Tool[] = [
     standards: ["IPC", "IEEE", "JEDEC"]
   },
 
-  expert_verdict: "OrCAD is Cadence's professional PCB design suite that has established itself as a leading solution for schematic capture, circuit simulation, and PCB layout. Its standout feature is the industry-standard PSpice simulation engine, which provides accurate analog and mixed-signal analysis capabilities trusted by engineers worldwide. The software offers a comprehensive constraint-driven design workflow that ensures design intent is maintained throughout the development process. OrCAD's seamless integration with Allegro PCB Designer provides a clear upgrade path for users requiring high-end design capabilities, while the extensive component library through OrCAD CIS accelerates design cycles. Although the software requires significant investment and training, the combination of proven simulation technology, robust PCB layout tools, and strong Cadence ecosystem support makes it particularly attractive for mid-to-large enterprises in consumer electronics, automotive, and aerospace industries. The recent OrCAD X platform update has modernized the user interface and added cloud collaboration features, making it competitive with contemporary PCB design solutions.",
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
 
   external_ratings: [{
     source: "G2",
@@ -1906,6 +1851,7 @@ export const c6Tools: Tool[] = [
   core_features: ["Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "Power Integrity Analysis", "Thermal Analysis", "Xpedition Ecosystem", "High-Speed Design"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.sw.siemens.com/en-US/products/pads",
+  pricing_url: "https://www.sw.siemens.com/en-US/products/pads/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Comprehensive PCB design capabilities", "Advanced simulation and analysis tools", "Seamless Xpedition ecosystem integration", "High-speed design support", "Constraint-driven design workflow", "Strong Siemens EDA ecosystem", "Educational licensing available", "Robust library management"],
@@ -1981,7 +1927,7 @@ export const c6Tools: Tool[] = [
     standards: ["IPC", "IEEE", "JEDEC"]
   },
 
-  expert_verdict: "PADS Professional is Siemens EDA's comprehensive PCB design solution that bridges the gap between entry-level tools and high-end enterprise platforms. Its standout feature is the seamless integration with the Xpedition ecosystem, providing a clear upgrade path for users requiring advanced capabilities. The software offers robust simulation and analysis tools including signal integrity, power integrity, and thermal analysis, which are essential for high-speed and high-complexity designs. PADS Professional features a constraint-driven design workflow that ensures design intent is maintained throughout the development process, while the advanced routing capabilities including differential pair routing and auto-routing accelerate layout tasks. Although the software requires significant investment and training, the combination of professional-grade features, Siemens EDA ecosystem support, and scalability makes it particularly attractive for mid-market companies growing their PCB design capabilities. The educational licensing options and strong support network further enhance its accessibility for organizations seeking a reliable PCB design solution.",
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
 
   external_ratings: [{
     source: "G2",
@@ -2111,6 +2057,7 @@ export const c6Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
+  pricing_url: "https://eda.sw.siemens.com/en-US/pcb/xpedition/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -2150,27 +2097,8 @@ export const c6Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Xpedition is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 65,
-    url: "https://www.g2.com/products/xpedition/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 27,
-    url: "https://www.capterra.com/p/xpedition-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 39,
-    url: "https://sourceforge.net/projects/xpedition/reviews"
-  }]
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
+  external_ratings: []
 },
 {
   id: "t164",
@@ -2314,6 +2242,7 @@ export const c6Tools: Tool[] = [
   core_features: ["Schematic Capture", "PCB Layout", "Circuit Simulation", "Signal Integrity Analysis", "Thermal Analysis", "Library Management", "Auto-Routing"],
   user_scales: ["Small Business", "Mid-Market", "Freelancer"],
   official_url: "https://www.pulsonix.com/",
+  pricing_url: "https://www.pulsonix.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Affordable pricing", "Intuitive user interface", "Comprehensive PCB design capabilities", "Good simulation and analysis tools", "Strong library management", "Educational licensing available", "Good file format support"],
@@ -2389,21 +2318,8 @@ export const c6Tools: Tool[] = [
     standards: ["IPC", "IEEE"]
   },
 
-  expert_verdict: "Pulsonix is a cost-effective PCB design solution that delivers professional-grade capabilities at an affordable price point. Its standout feature is the intuitive user interface that makes it accessible to engineers transitioning from entry-level tools while providing the advanced features needed for serious design work. The software offers comprehensive PCB design capabilities including schematic capture, PCB layout, circuit simulation, signal integrity analysis, and thermal analysis, providing a complete design environment without the complexity and cost of enterprise solutions. Pulsonix's affordable pricing model, combined with educational licensing options, makes it particularly attractive for small businesses, freelancers, and educational institutions. Although it lacks the extensive ecosystem and advanced high-speed design capabilities of premium tools like Altium Designer or Cadence OrCAD, Pulsonix provides an excellent balance of functionality, usability, and value for mid-market PCB design requirements. The software's strong library management and good file format support ensure compatibility with existing design workflows while maintaining productivity.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 21,
-    url: "https://www.g2.com/products/pulsonix/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 35,
-    url: "https://www.capterra.com/p/pulsonix-reviews/"
-  }]
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
+  external_ratings: []
 },
 {
   id: "t165",
@@ -2513,6 +2429,7 @@ export const c6Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://ibfriedrich.com/",
+  pricing_url: "https://ibfriedrich.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -2552,27 +2469,8 @@ export const c6Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Target 3001! is a professional software solution for electronics design automation (EDA). It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 108,
-    url: "https://www.g2.com/products/target-3001/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/p/target-3001-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 40,
-    url: "https://sourceforge.net/projects/target-3001/reviews"
-  }]
+  expert_verdict: "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation.",
+  external_ratings: []
 },
 {
   id: "t198",
@@ -2614,6 +2512,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.kicad.org",
+  pricing_url: "https://www.kicad.org/donate/",
   affiliate_url: null,
   score: 4.7,
 
@@ -2641,7 +2540,7 @@ export const c6Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "The open-source EDA that finally caught up — competitive with mid-tier commercial tools for 90% of hardware projects.",
+  expert_verdict: "The premier open-source electronics design automation suite, providing robust schematic capture and PCB layout capabilities.",
 
   faqs: [
     {
@@ -2802,6 +2701,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://easyeda.com",
+  pricing_url: "https://easyeda.com/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -2828,7 +2728,7 @@ export const c6Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "The best free EDA for hobbyists who want a real PCB in their mailbox in a week.",
+  expert_verdict: "An accessible, browser-native PCB layout and schematic tool, tightly integrated with component distribution.",
 
   faqs: [
     {
@@ -2987,6 +2887,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://diptrace.com",
+  pricing_url: "https://diptrace.com/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -3119,19 +3020,7 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 22,
-    url: "https://www.g2.com/products/diptrace/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 29,
-    url: "https://www.capterra.com/p/diptrace-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t201",
@@ -3172,6 +3061,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
+  pricing_url: "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html/pricing",
   affiliate_url: null,
   score: 4.2,
 
@@ -3303,25 +3193,7 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 70,
-    url: "https://www.g2.com/products/multisim/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 63,
-    url: "https://www.capterra.com/p/multisim-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.2,
-    max: 5,
-    count: 10,
-    url: "https://sourceforge.net/projects/multisim/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t202",
@@ -3364,6 +3236,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+  pricing_url: "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
   affiliate_url: null,
   score: 4.8,
 
@@ -3494,25 +3367,7 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 114,
-    url: "https://www.g2.com/products/ltspice/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 74,
-    url: "https://www.capterra.com/p/ltspice-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 13,
-    url: "https://sourceforge.net/projects/ltspice/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t203",
@@ -3553,6 +3408,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.labcenter.com",
+  pricing_url: "https://www.labcenter.com/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -3710,15 +3566,18 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 295,
+
   platforms: [
     "Windows",
     "Web"
   ],
+
   industries: [
     "Electronics",
     "Aerospace",
     "Industrial"
   ],
+
   core_features: [
     "Cloud workspace and version control",
     "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
@@ -3727,24 +3586,30 @@ export const c6Tools: Tool[] = [
     "Browser-based viewer for non-Altium reviewers",
     "Component management with vault"
   ],
+
   user_scales: [
     "SMB",
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.altium.com/altium-365",
+  pricing_url: "https://www.altium.com/altium-365/pricing",
   affiliate_url: null,
   score: 4.4,
+
   pros: [
     "Eliminates file-shuffling between PCB and MCAD teams",
     "Modern web UI for stakeholders without Altium licenses",
     "Tight live link to Octopart for supply-chain data"
   ],
+
   cons: [
     "Adds to the already high Altium subscription cost",
     "Limited offline workflows",
     "Concord Pro migration paths can be rough"
   ],
+
   tech_specs: {
     engine: "Altium 365 cloud + Altium Designer client",
     multicore: "Cloud",
@@ -3756,7 +3621,9 @@ export const c6Tools: Tool[] = [
       "STEP"
     ]
   },
+
   expert_verdict: "If you already use Altium Designer in a team, 365 has become almost mandatory for managing design data and MCAD handoff.",
+
   faqs: [
     {
       q: "What is Altium 365 used for?",
@@ -3783,11 +3650,13 @@ export const c6Tools: Tool[] = [
       a: "The closest alternatives within the EDA space are Altium Designer, EPLAN Electric P8, NI Multisim. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "altium-designer",
     "eplan-electric-p8",
     "multisim"
   ],
+
   detailed_features: [
     {
       category: "Cloud",
@@ -3858,15 +3727,8 @@ export const c6Tools: Tool[] = [
       ]
     }
   ],
-  external_ratings: [
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 30,
-      url: "https://www.trustradius.com/products/altium-365/reviews"
-    }
-  ]
+
+  external_ratings: []
 },
 {
   id: "t205",
@@ -3905,6 +3767,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://circuitmaker.com",
+  pricing_url: "https://circuitmaker.com",
   affiliate_url: null,
   score: 4.1,
 
@@ -4036,24 +3899,6 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 127,
-    url: "https://www.g2.com/products/circuitmaker/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 41,
-    url: "https://www.capterra.com/p/circuitmaker-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 41,
-    url: "https://sourceforge.net/projects/circuitmaker/reviews"
-  }]
+  external_ratings: []
 }
 ];

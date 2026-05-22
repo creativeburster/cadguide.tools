@@ -11,6 +11,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Revit.svg/200px-Revit.svg.png",
   short_desc: "The de-facto standard for Building Information Modeling (BIM).",
   description: "Revit is Autodesk's flagship software built specifically for BIM, allowing architects and engineers to collaborate in a unified model.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -44,6 +45,7 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   detailed_features: [
     {
       category: "Features",
@@ -71,45 +73,56 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "archicad",
     "vectorworks",
     "allplan"
   ],
+
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 355,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Construction",
     "Structural Engineering"
   ],
+
   core_features: [
     "Lifecycle BIM Management",
     "Parametric Families",
     "Cloud Worksharing"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.autodesk.com/products/revit",
+  pricing_url: "https://www.autodesk.com/products/revit/pricing",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Powerful collaboration",
     "Data-geometry integration",
     "High market demand"
   ],
+
   cons: [
     "Windows only",
     "Steep learning curve",
     "High hardware requirements"
   ],
+
   faqs: [
     {
       q: "What is Revit used for?",
@@ -136,6 +149,7 @@ export const c3Tools: Tool[] = [
       a: "Yes. Revit exposes .NET API with SDK bindings for C#, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Medium",
@@ -147,7 +161,9 @@ export const c3Tools: Tool[] = [
       "NWD"
     ]
   },
-  expert_verdict: "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
+
+  expert_verdict: "The undisputed market-leading BIM platform, exceptional for multi-disciplinary architectural and structural coordination.",
+
   pricing_breakdown: [
     {
       tier: "Monthly",
@@ -165,6 +181,7 @@ export const c3Tools: Tool[] = [
       notes: "Bundle with AutoCAD, Civil 3D, etc."
     }
   ],
+
   key_capabilities: [
     "Parametric 3D BIM Modeling",
     "Automated Construction Documentation",
@@ -172,9 +189,11 @@ export const c3Tools: Tool[] = [
     "Cloud Collaboration with BIM Collaborate Pro",
     "Parametric Family Creation"
   ],
+
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -189,6 +208,7 @@ export const c3Tools: Tool[] = [
     "Czech",
     "Brazilian Portuguese"
   ],
+
   file_formats_in: [
     "RVT",
     "RFA",
@@ -203,6 +223,7 @@ export const c3Tools: Tool[] = [
     "3DM",
     "NWD"
   ],
+
   file_formats_out: [
     "RVT",
     "IFC",
@@ -215,6 +236,7 @@ export const c3Tools: Tool[] = [
     "gbXML",
     "ODX"
   ],
+
   integrations: [
     "BIM 360",
     "Autodesk Construction Cloud",
@@ -226,15 +248,18 @@ export const c3Tools: Tool[] = [
     "Enscape",
     "Twinmotion"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud"
   ],
+
   license_types: [
     "Subscription",
     "Network",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -258,6 +283,7 @@ export const c3Tools: Tool[] = [
       url: "https://www.trustradius.com/products/autodesk-revit/reviews"
     }
   ],
+
   support_channels: [
     "Phone",
     "Email",
@@ -267,11 +293,13 @@ export const c3Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -290,6 +318,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.graphisoft.com/hubfs/Graphisoft-2021/images/icons/GS-logo.svg",
   short_desc: "The BIM software of choice for design-oriented architects.",
   description: "ArchiCAD, developed by Graphisoft, was the first BIM software for personal computers.",
+
   pricing_tiers: [
     {
       name: "Studio",
@@ -328,6 +357,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "BIM Workflow",
@@ -372,23 +402,28 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "revit",
     "vectorworks",
     "allplan"
   ],
+
   country: "Hungary",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1800,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Architecture",
     "Interior Design"
   ],
+
   core_features: [
     "Parametric BIM",
     "Teamwork Sync",
@@ -396,23 +431,29 @@ export const c3Tools: Tool[] = [
     "Smart Objects",
     "Documentation"
   ],
+
   user_scales: [
     "Mid-Market",
     "Small Business"
   ],
+
   official_url: "https://graphisoft.com",
+  pricing_url: "https://graphisoft.com/archicad/pricing",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Architect-centric UI",
     "Lightweight performance",
     "macOS optimization"
   ],
+
   cons: [
     "Smaller US market share",
     "MEP tools less mature",
     "Smaller plugin ecosystem"
   ],
+
   faqs: [
     {
       q: "What is ArchiCAD used for?",
@@ -439,6 +480,7 @@ export const c3Tools: Tool[] = [
       a: "Yes. ArchiCAD exposes GDL / ArchicadAPI with SDK bindings for C++, Python, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Graphisoft Proprietary",
     multicore: "Moderate",
@@ -449,10 +491,12 @@ export const c3Tools: Tool[] = [
       "BIMx"
     ]
   },
-  expert_verdict: "ArchiCAD is built by architects, for architects.",
+
+  expert_verdict: "A highly responsive, designer-focused BIM solution renowned for its smooth interface and architectural documentation workflow.",
   version: "28",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -470,6 +514,7 @@ export const c3Tools: Tool[] = [
     "Greek",
     "Turkish"
   ],
+
   file_formats_in: [
     "PLN",
     "PLA",
@@ -485,6 +530,7 @@ export const c3Tools: Tool[] = [
     "JPG",
     "PNG"
   ],
+
   file_formats_out: [
     "PLN",
     "PLA",
@@ -501,6 +547,7 @@ export const c3Tools: Tool[] = [
     "PNG",
     "3D PDF"
   ],
+
   integrations: [
     "BIMcloud",
     "BIMx",
@@ -511,16 +558,19 @@ export const c3Tools: Tool[] = [
     "Solibri",
     "Trimble Connect"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud"
   ],
+
   license_types: [
     "Subscription",
     "Perpetual",
     "Network",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -544,6 +594,7 @@ export const c3Tools: Tool[] = [
       url: "https://www.trustradius.com/products/archicad/reviews"
     }
   ],
+
   support_channels: [
     "Email",
     "Community",
@@ -551,10 +602,12 @@ export const c3Tools: Tool[] = [
     "Training",
     "Reseller Network"
   ],
+
   security_compliance: [
     "GDPR",
     "ISO 27001"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -574,6 +627,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tekla_Structures_logo.svg/200px-Tekla_Structures_logo.svg.png",
   short_desc: "The world's most advanced structural BIM software.",
   description: "Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.",
+
   pricing_tiers: [
     {
       name: "Carbon",
@@ -612,6 +666,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Steel & Concrete",
@@ -656,22 +711,27 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "revit",
     "allplan",
     "civil-3d"
   ],
+
   country: "Finland",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2400,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Structural Engineering",
     "Construction"
   ],
+
   core_features: [
     "Steel Detailing",
     "BIM LOD 500",
@@ -679,22 +739,28 @@ export const c3Tools: Tool[] = [
     "CNC Export",
     "Structural Engineering"
   ],
+
   user_scales: [
     "Enterprise"
   ],
+
   official_url: "https://www.tekla.com",
+  pricing_url: "https://www.tekla.com/products/tekla-structures/pricing",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Unbeatable for steel",
     "Handles massive models",
     "CNC machine link"
   ],
+
   cons: [
     "Very expensive",
     "Highly specialized",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is Tekla Structures used for?",
@@ -721,6 +787,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Revit, Allplan, Civil 3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Trimble Structural Core",
     multicore: "Moderate",
@@ -732,7 +799,9 @@ export const c3Tools: Tool[] = [
       "CIS/2"
     ]
   },
-  expert_verdict: "The choice for massive steel stadiums and complex plants.",
+
+  expert_verdict: "The gold standard for structural steel and concrete detailing, offering parallel precision for constructible models.",
+
   external_ratings: [
     {
       source: "Capterra",
@@ -750,6 +819,7 @@ export const c3Tools: Tool[] = [
   logo_url: "https://www.vectorworks.net/images/vw-logo.svg",
   short_desc: "The all-in-one BIM solution for landscape and entertainment design.",
   description: "Vectorworks is a versatile BIM and CAD software suite for architects and entertainment professionals.",
+
   pricing_tiers: [
     {
       name: "Architect (Annual)",
@@ -776,6 +846,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Specialized Design",
@@ -820,24 +891,29 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "archicad",
     "revit",
     "sketchup"
   ],
+
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription / Perpetual",
   starting_price: 1530,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Architecture",
     "Landscape",
     "Entertainment"
   ],
+
   core_features: [
     "Multi-disciplinary BIM",
     "Stage & Lighting Design",
@@ -845,23 +921,29 @@ export const c3Tools: Tool[] = [
     "High-end Rendering",
     "GIS Integration"
   ],
+
   user_scales: [
     "Small Business",
     "Agencies"
   ],
+
   official_url: "https://www.vectorworks.net",
+  pricing_url: "https://www.vectorworks.net/buy",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Best-in-class 2D graphics",
     "Unique industry modules",
     "Strong macOS optimization"
   ],
+
   cons: [
     "BIM coordination less robust",
     "3D navigation clunky",
     "Steep learning curve"
   ],
+
   faqs: [
     {
       q: "What is Vectorworks used for?",
@@ -888,6 +970,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are ArchiCAD, Revit, SketchUp. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Siemens Parasolid",
     multicore: "High",
@@ -899,7 +982,9 @@ export const c3Tools: Tool[] = [
       "OBJ"
     ]
   },
-  expert_verdict: "If you work in landscape or lighting design, Vectorworks is the standard.",
+
+  expert_verdict: "A highly specialized, visually rich design and BIM platform tailored for architects, landscape designers, and stage planners.",
+
   external_ratings: [
     {
       source: "G2",
@@ -917,6 +1002,7 @@ export const c3Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional home design software for builders.",
   description: "Chief Architect is specialized for residential home design. It generates 3D models and construction documents with architectural automation.",
+
   pricing_tiers: [
     {
       name: "Premier Monthly",
@@ -943,6 +1029,7 @@ export const c3Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Building Tools",
@@ -987,23 +1074,28 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "revit",
     "sketchup",
     "archicad"
   ],
+
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1995,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Residential Architecture",
     "Remodeling"
   ],
+
   core_features: [
     "Residential Design",
     "Automated Building Tools",
@@ -1011,23 +1103,29 @@ export const c3Tools: Tool[] = [
     "Interior Design",
     "Photorealistic Rendering"
   ],
+
   user_scales: [
     "Small Business",
     "Agencies"
   ],
+
   official_url: "https://www.chiefarchitect.com",
+  pricing_url: "https://www.chiefarchitect.com/pricing",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Residential construction docs",
     "Massive home library",
     "Fast client renders"
   ],
+
   cons: [
     "Not for mechanical",
     "Expensive",
     "Windows version lead"
   ],
+
   faqs: [
     {
       q: "What is Chief Architect used for?",
@@ -1054,6 +1152,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Revit, SketchUp, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Chief Custom AEC Engine",
     multicore: "High",
@@ -1065,23 +1164,9 @@ export const c3Tools: Tool[] = [
       "SKP"
     ]
   },
+
   expert_verdict: "If you build houses, buy Chief Architect.",
-  external_ratings: [
-    {
-      source: "Software Advice",
-      score: 4.4,
-      max: 5,
-      count: 67,
-      url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
-    },
-    {
-      source: "GetApp",
-      score: 4.4,
-      max: 5,
-      count: 68,
-      url: "https://www.getapp.com/construction-software/a/chief-architect/"
-    }
-  ]
+  external_ratings: []
 },
 {
   id: "t44",
@@ -1094,13 +1179,16 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2615,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Civil Engineering",
     "Transportation"
   ],
+
   core_features: [
     "Civil Infrastructure",
     "Road/Highway Design",
@@ -1108,23 +1196,29 @@ export const c3Tools: Tool[] = [
     "Pipe Network Design",
     "BIM for Civil"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.autodesk.com/civil-3d",
+  pricing_url: "https://www.autodesk.com/civil-3d/pricing",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Road design standard",
     "Dynamic objects",
     "Infra BIM essential"
   ],
+
   cons: [
     "Prone to crashes",
     "Steep learning curve",
     "Expensive"
   ],
+
   faqs: [
     {
       q: "What is Civil 3D used for?",
@@ -1151,6 +1245,7 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are Revit, OpenRoads Designer, ArchiCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Low",
@@ -1161,7 +1256,9 @@ export const c3Tools: Tool[] = [
       "LandXML"
     ]
   },
+
   expert_verdict: "The industry standard for civil engineering projects.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -1188,6 +1285,7 @@ export const c3Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Design & Modeling",
@@ -1232,15 +1330,8 @@ export const c3Tools: Tool[] = [
       ]
     }
   ],
-  external_ratings: [
-    {
-      source: "TrustRadius",
-      score: 9.3,
-      max: 10,
-      count: 35,
-      url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
-    }
-  ]
+
+  external_ratings: []
 },
 {
   id: "t46",
@@ -1275,6 +1366,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.chiefarchitect.com",
+  pricing_url: "https://www.chiefarchitect.com/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -1356,25 +1448,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 43,
-    url: "https://www.g2.com/products/chief-architect-pro/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 65,
-    url: "https://www.capterra.com/p/chief-architect-pro-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 38,
-    url: "https://sourceforge.net/projects/chief-architect-pro/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t74",
@@ -1411,6 +1485,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.vectorworks.net/landmark",
+  pricing_url: "https://www.vectorworks.net/landmark/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -1465,26 +1540,7 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed gold standard for professional landscape architecture.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 35,
-    url: "https://www.g2.com/products/vectorworks-landmark/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 95,
-    url: "https://www.capterra.com/p/vectorworks-landmark-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 17,
-    url: "https://sourceforge.net/projects/vectorworks-landmark/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t94",
@@ -1523,6 +1579,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.allplan.com/",
+  pricing_url: "https://www.allplan.com/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -1577,7 +1634,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
+  expert_verdict: "A high-fidelity BIM suite tailored for European structural concrete and complex reinforcement drafting.",
 
   pricing_tiers: [
     {
@@ -1700,6 +1757,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.bentley.com/software/openroads-designer/",
+  pricing_url: "https://www.bentley.com/software/openroads-designer/how-to-buy",
   affiliate_url: null,
   score: 4.7,
 
@@ -1755,20 +1813,7 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "The definitive platform for highway and infrastructure projects at enterprise scale.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 22,
-    url: "https://www.g2.com/products/openroads-designer/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 33,
-    url: "https://www.capterra.com/p/openroads-designer-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t102",
@@ -1878,6 +1923,7 @@ export const c3Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.bimoffice.fr/",
+  pricing_url: "https://www.bimoffice.fr/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -1917,7 +1963,7 @@ export const c3Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "BIMoffice is a professional software solution for Building Information Modeling (BIM). It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
 
   external_ratings: [{
     source: "G2",
@@ -2075,6 +2121,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.isdgroup.com/",
+  pricing_url: "https://www.isdgroup.com/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -2132,21 +2179,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "HiCAD is a comprehensive CAD/PDM/PLM solution spanning mechanical engineering, plant design, sheet metal, and steel construction. It is highly reliable and integrates deep PDM/PLM data management, making it an excellent all-in-one suite for medium-to-large engineering enterprises, though it requires significant training.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 75,
-    url: "https://www.g2.com/products/hicad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.7,
-    max: 5,
-    count: 32,
-    url: "https://www.capterra.com/p/hicad-reviews/"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t119",
@@ -2290,6 +2324,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://rengabim.com/",
+  pricing_url: "https://rengabim.com/pricing",
   affiliate_url: null,
   score: 3.4,
 
@@ -2346,27 +2381,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Renga is a comprehensive BIM system covering architecture, structural engineering, and MEP disciplines. It offers highly cost-effective 3D modeling and excellent Open BIM compliance via IFC, though its global integration and documentation are still maturing.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.2,
-    max: 5,
-    count: 102,
-    url: "https://www.g2.com/products/renga/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 22,
-    url: "https://www.capterra.com/p/renga-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.4,
-    max: 5,
-    count: 13,
-    url: "https://sourceforge.net/projects/renga/reviews"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t130",
@@ -2510,6 +2526,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.accasoftware.com/",
+  pricing_url: "https://www.accasoftware.com/pricing",
   affiliate_url: null,
   score: 3.8,
 
@@ -2567,27 +2584,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Edificius is a powerful Open BIM software boasting the highest number of IFC certifications. It integrates architectural, structural, and MEP design into a unified environment, delivering high interoperability for standard construction pipelines, although its training path is steep.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.9,
-    max: 5,
-    count: 90,
-    url: "https://www.g2.com/products/edificius/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.7,
-    max: 5,
-    count: 92,
-    url: "https://www.capterra.com/p/edificius-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.8,
-    max: 5,
-    count: 28,
-    url: "https://sourceforge.net/projects/edificius/reviews"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t131",
@@ -2729,6 +2727,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.accasoftware.com/",
+  pricing_url: "https://www.accasoftware.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -2784,27 +2783,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "EdiLus is a structural engineering calculation and analysis software featuring native IFC compatibility. It offers automated structural drawings and calculations, making it a valuable tool for architectural engineers, although it lacks advanced generic architectural modeling.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.3,
-    max: 5,
-    count: 78,
-    url: "https://www.g2.com/products/edilus/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 21,
-    url: "https://www.capterra.com/p/edilus-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.4,
-    max: 5,
-    count: 22,
-    url: "https://sourceforge.net/projects/edilus/reviews"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t139",
@@ -2947,6 +2927,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.cadwork.com/",
+  pricing_url: "https://www.cadwork.com/pricing",
   affiliate_url: null,
   score: 3.7,
 
@@ -3003,27 +2984,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "cadwork is the global leader in timber construction CAD/CAM software. It integrates structural wood design with direct CNC export for automated wood fabrication, making it the perfect choice for timber engineers and house builders, although it is not meant for concrete or steel-only structures.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 36,
-    url: "https://www.g2.com/products/cadwork/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.5,
-    max: 5,
-    count: 56,
-    url: "https://www.capterra.com/p/cadwork-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.8,
-    max: 5,
-    count: 34,
-    url: "https://sourceforge.net/projects/cadwork/reviews"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t140",
@@ -3167,6 +3129,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.magicad.com/",
+  pricing_url: "https://www.magicad.com/pricing",
   affiliate_url: null,
   score: 3.8,
 
@@ -3224,21 +3187,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "MagiCAD is the premier MEP design plugin for Revit and AutoCAD, offering massive manufacturer content libraries and advanced HVAC/electrical calculations. It is widely adopted by top engineering firms across Europe and Asia, although it represents a significant software investment.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 84,
-    url: "https://www.g2.com/products/magicad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 91,
-    url: "https://www.capterra.com/p/magicad-reviews/"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t157",
@@ -3382,6 +3332,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.graphisoft.com/solutions/dds-cad",
+  pricing_url: "https://www.graphisoft.com/solutions/dds-cad/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -3438,27 +3389,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "DDS-CAD is a specialized MEP design and BIM software solution featuring advanced HVAC, piping, and electrical design automation. Highly respected in the European and Nordic markets, it integrates structural coordination and energy calculations natively.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 54,
-    url: "https://www.g2.com/products/dds-cad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.7,
-    max: 5,
-    count: 71,
-    url: "https://www.capterra.com/p/dds-cad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.5,
-    max: 5,
-    count: 13,
-    url: "https://sourceforge.net/projects/dds-cad/reviews"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t159",
@@ -3601,6 +3533,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.drofus.com/",
+  pricing_url: "https://www.drofus.com/pricing",
   affiliate_url: null,
   score: 3.7,
 
@@ -3657,27 +3590,8 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "dRofus is the leading data-driven room programming and equipment planning platform for BIM. Unlike visual CAD tools, it focuses entirely on room data sheets, equipment requirements, and building planning metadata for massive projects, although it is too complex for small teams.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 95,
-    url: "https://www.g2.com/products/drofus/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 85,
-    url: "https://www.capterra.com/p/drofus-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.6,
-    max: 5,
-    count: 19,
-    url: "https://sourceforge.net/projects/drofus/reviews"
-  }]
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  external_ratings: []
 },
 {
   id: "t206",
@@ -3733,6 +3647,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
+  pricing_url: "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -3865,25 +3780,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 57,
-    url: "https://www.g2.com/products/autocad-plant-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 44,
-    url: "https://www.capterra.com/p/autocad-plant-3d-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.4,
-    max: 5,
-    count: 5,
-    url: "https://sourceforge.net/projects/autocad-plant-3d/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t207",
@@ -3922,6 +3819,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/smartplant-3d",
+  pricing_url: "https://hexagon.com/products/smartplant-3d/how-to-buy",
   affiliate_url: null,
   score: 4.4,
 
@@ -4054,25 +3952,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 42,
-    url: "https://www.g2.com/products/smartplant-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 39,
-    url: "https://www.capterra.com/p/smartplant-3d-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.6,
-    max: 5,
-    count: 42,
-    url: "https://sourceforge.net/projects/smartplant-3d/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t208",
@@ -4111,6 +3991,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/cadworx-plant-professional",
+  pricing_url: "https://hexagon.com/products/cadworx-plant-professional/how-to-buy",
   affiliate_url: null,
   score: 4.3,
 
@@ -4243,19 +4124,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 88,
-    url: "https://www.g2.com/products/cadworx/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 49,
-    url: "https://www.capterra.com/p/cadworx-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t229",
@@ -4297,6 +4166,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://construction.autodesk.com",
+  pricing_url: "https://construction.autodesk.com/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -4430,19 +4300,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 111,
-    url: "https://www.g2.com/products/autodesk-construction-cloud/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 90,
-    url: "https://www.capterra.com/p/autodesk-construction-cloud-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t230",
@@ -4486,6 +4344,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://connect.trimble.com",
+  pricing_url: "https://connect.trimble.com/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -4672,6 +4531,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.bimcollab.com",
+  pricing_url: "https://www.bimcollab.com/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -4697,7 +4557,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "The gold standard for openBIM issue management. Pair with Solibri or ZOOM for clash, and you have a vendor-neutral coordination stack.",
+  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
 
   faqs: [
     {
@@ -4861,6 +4721,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://dynamobim.org",
+  pricing_url: "https://dynamobim.org",
   affiliate_url: null,
   score: 4.5,
 
@@ -4993,24 +4854,6 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 85,
-    url: "https://www.g2.com/products/autodesk-dynamo/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 14,
-    url: "https://www.capterra.com/p/autodesk-dynamo-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.4,
-    max: 5,
-    count: 35,
-    url: "https://sourceforge.net/projects/autodesk-dynamo/reviews"
-  }]
+  external_ratings: []
 }
 ];

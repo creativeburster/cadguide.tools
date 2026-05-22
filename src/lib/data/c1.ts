@@ -11,6 +11,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "The global industrial standard for 2D drafting and 3D modeling.",
   description: "AutoCAD is the industry-leading computer-aided design software developed by Autodesk. As the pioneer of the CAD industry, it defined the .DWG format standard and remains an essential foundation tool for AEC and manufacturing.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -48,6 +49,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Core Design",
@@ -92,15 +94,18 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "bricscad",
     "nanocad",
     "draftsight"
   ],
+
   country: "USA",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 255,
+
   platforms: [
     "Windows",
     "macOS",
@@ -108,11 +113,13 @@ export const c1Tools: Tool[] = [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Architecture",
     "Engineering",
     "Manufacturing"
   ],
+
   core_features: [
     "2D Drafting",
     "3D Modeling",
@@ -120,23 +127,29 @@ export const c1Tools: Tool[] = [
     "Sheet Sets",
     "Cloud Storage"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/autocad",
+  pricing_url: "https://www.autodesk.com/products/autocad/pricing",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Unmatched compatibility",
     "Vast plugin ecosystem",
     "High precision"
   ],
+
   cons: [
     "Expensive",
     "Non-parametric 3D",
     "Single-core modeling"
   ],
+
   faqs: [
     {
       q: "What is AutoCAD used for?",
@@ -163,6 +176,7 @@ export const c1Tools: Tool[] = [
       a: "Yes. AutoCAD exposes AutoLISP / ObjectARX / .NET / VBA with SDK bindings for C++, C#, .NET, LISP. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk ShapeManager (ASM)",
     multicore: "Limited",
@@ -175,10 +189,12 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "AutoCAD remains the definitive answer for global 2D drafting. Irreplaceable for firms reliant on the DWG format.",
+
+  expert_verdict: "The definitive global industry standard for 2D drafting and documentation, crucial for AEC standard compatibility.",
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
+
   languages: [
     "English",
     "Spanish",
@@ -195,6 +211,7 @@ export const c1Tools: Tool[] = [
     "Portuguese",
     "Russian"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
@@ -210,6 +227,7 @@ export const c1Tools: Tool[] = [
     "3DM",
     "IPT"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
@@ -225,6 +243,7 @@ export const c1Tools: Tool[] = [
     "BMP",
     "TIF"
   ],
+
   integrations: [
     "Autodesk Drive",
     "Autodesk Docs",
@@ -235,17 +254,20 @@ export const c1Tools: Tool[] = [
     "Dropbox",
     "Adobe PDF"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud",
     "Web",
     "Mobile"
   ],
+
   license_types: [
     "Subscription",
     "Network",
     "Educational"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -269,6 +291,7 @@ export const c1Tools: Tool[] = [
       url: "https://www.trustradius.com/products/autodesk-autocad/reviews"
     }
   ],
+
   support_channels: [
     "Phone",
     "Email",
@@ -279,12 +302,14 @@ export const c1Tools: Tool[] = [
     "Knowledge Base",
     "Reseller Network"
   ],
+
   security_compliance: [
     "SOC 2 Type II",
     "ISO 27001",
     "GDPR",
     "CCPA"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -306,6 +331,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "The most cost-effective and compatible alternative to AutoCAD.",
   description: "ZWCAD is a powerful 2D CAD solution with high compatibility with the .DWG format.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -339,6 +365,7 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   detailed_features: [
     {
       category: "Features",
@@ -366,48 +393,59 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "bricscad",
     "gstarcad"
   ],
+
   country: "China",
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
   starting_price: 899,
+
   platforms: [
     "Windows",
     "Linux",
     "Android",
     "iOS"
   ],
+
   industries: [
     "Architecture",
     "Engineering",
     "Interior Design"
   ],
+
   core_features: [
     "Smart Mouse / Smart Voice",
     "High DWG Compatibility",
     "LISP Support"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://www.zwsoft.com/zwcad",
+  pricing_url: "https://www.zwsoft.com/zwcad/buy",
   affiliate_url: null,
   score: 4.6,
+
   pros: [
     "Familiar to AutoCAD users",
     "Fast for large drawings",
     "Perpetual license option"
   ],
+
   cons: [
     "Basic 3D",
     "Cloud evolving",
     "Smaller plugin ecosystem"
   ],
+
   faqs: [
     {
       q: "What is ZWCAD used for?",
@@ -434,6 +472,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, GstarCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ZWSoft Custom",
     multicore: "Moderate",
@@ -445,7 +484,9 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "ZWCAD is the most logical switch from AutoCAD.",
+
+  expert_verdict: "A highly responsive, familiar AutoCAD clone offering perpetual licensing and native DWG interoperability.",
+
   pricing_breakdown: [
     {
       tier: "Standard",
@@ -463,6 +504,7 @@ export const c1Tools: Tool[] = [
       notes: "Annual maintenance option"
     }
   ],
+
   key_capabilities: [
     "Native DWG/DXF Compatibility",
     "Familiar AutoCAD-like UI/UX",
@@ -470,6 +512,7 @@ export const c1Tools: Tool[] = [
     "Smart Plotting & Annotations",
     "Multi-platform (Desktop & Mobile)"
   ],
+
   external_ratings: [
     {
       source: "Software Advice",
@@ -487,6 +530,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "The modern CAD platform for 2D, 3D, BIM, and Mechanical.",
   description: "BricsCAD uses AI-driven tools to speed up design workflows in a single environment.",
+
   pricing_tiers: [
     {
       name: "Lite (2D)",
@@ -520,6 +564,7 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   detailed_features: [
     {
       category: "Features",
@@ -547,47 +592,58 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "zwcad",
     "revit"
   ],
+
   country: "Belgium",
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
   starting_price: 590,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "AEC",
     "Mechanical",
     "GIS"
   ],
+
   core_features: [
     "AI-powered BIMify",
     "Direct Modeling",
     "Native DWG"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.bricsys.com",
+  pricing_url: "https://www.bricsys.com/bricscad/pricing",
   affiliate_url: null,
   score: 4.7,
+
   pros: [
     "Unified DWG platform",
     "Excellent AI implementation",
     "AutoCAD plugin support"
   ],
+
   cons: [
     "Lacks brand recognition",
     "Tier-locked BIM",
     "Direct Modeling curve"
   ],
+
   faqs: [
     {
       q: "What is BricsCAD used for?",
@@ -614,6 +670,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are AutoCAD, ZWCAD, Revit. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ACIS",
     multicore: "High",
@@ -625,7 +682,9 @@ export const c1Tools: Tool[] = [
       "IGES"
     ]
   },
-  expert_verdict: "The most technologically advanced 'DWG-based' software.",
+
+  expert_verdict: "A powerful, modern DWG-native alternative combining fast 2D CAD, direct 3D modeling, and BIM in one package.",
+
   pricing_breakdown: [
     {
       tier: "Lite",
@@ -643,6 +702,7 @@ export const c1Tools: Tool[] = [
       notes: "All-in-one BIM & Mechanical"
     }
   ],
+
   key_capabilities: [
     "Native DWG BIM & Mechanical Modeling",
     "AI-driven Design (BIMify, Propagate)",
@@ -650,6 +710,7 @@ export const c1Tools: Tool[] = [
     "Civil/Survey design tools",
     "Point Cloud viewing & modeling"
   ],
+
   external_ratings: [
     {
       source: "Capterra",
@@ -782,6 +843,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.bentley.com",
+  pricing_url: "https://www.bentley.com/software/microstation/how-to-buy/",
   affiliate_url: null,
   score: 4.8,
 
@@ -836,7 +898,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "MicroStation is for infrastructure giants.",
+  expert_verdict: "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering.",
 
   external_ratings: [{
     source: "G2",
@@ -865,6 +927,7 @@ export const c1Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional-grade 2D CAD solution from Dassault Systèmes.",
   description: "DraftSight is the go-to AutoCAD alternative for firms using SolidWorks. It offers a familiar interface and full DWG compatibility.",
+
   pricing_tiers: [
     {
       name: "Professional",
@@ -902,6 +965,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Productivity",
@@ -946,24 +1010,29 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "bricscad",
     "nanocad"
   ],
+
   country: "France",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 249,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Manufacturing",
     "Engineering",
     "AEC"
   ],
+
   core_features: [
     "2D/3D Drafting",
     "LISP Support",
@@ -971,23 +1040,29 @@ export const c1Tools: Tool[] = [
     "Toolbox Utilities",
     "DGN Support"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://www.draftsight.com",
+  pricing_url: "https://www.draftsight.com/pricing",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Cheaper than AutoCAD",
     "SolidWorks PDM integration",
     "Professional support"
   ],
+
   cons: [
     "No longer free",
     "Interface generic",
     "Lacks AutoCAD automation"
   ],
+
   faqs: [
     {
       q: "What is DraftSight used for?",
@@ -1014,6 +1089,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are AutoCAD, BricsCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ARES",
     multicore: "Low",
@@ -1024,7 +1100,9 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "The most 'professional' AutoCAD clone. Perfect companion for SolidWorks users.",
+
+  expert_verdict: "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans.",
+
   external_ratings: [
     {
       source: "Capterra",
@@ -1190,6 +1268,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.adra.com",
+  pricing_url: "https://www.adra.com/pricing",
   affiliate_url: null,
   score: 3.3,
 
@@ -1247,7 +1326,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "CADra occupies a narrow but important niche in the CAD market: high-volume 2D drafting automation for manufacturing and industrial automation. Its programmable commands and extreme schematic speed make it invaluable for organizations generating thousands of similar drawings. However, its dated interface, lack of 3D/BIM, and premium pricing limit its appeal to general users. For enterprises with specific automation needs, CADra delivers unique value. For everyone else, modern alternatives like AutoCAD with custom scripts or BricsCAD offer more versatility at comparable or lower cost.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 15,
@@ -1312,25 +1391,7 @@ export const c1Tools: Tool[] = [
     "DWG Compatibility"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.2,
-    max: 5,
-    count: 99,
-    url: "https://www.g2.com/products/cadra/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.3,
-    max: 5,
-    count: 24,
-    url: "https://www.capterra.com/p/cadra-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.3,
-    max: 5,
-    count: 33,
-    url: "https://sourceforge.net/projects/cadra/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t53",
@@ -1371,6 +1432,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://en.dwgfastview.com",
+  pricing_url: "https://en.dwgfastview.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -1509,25 +1571,7 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 96,
-    url: "https://www.g2.com/products/dwg-fastview/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 14,
-    url: "https://www.capterra.com/p/dwg-fastview-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 14,
-    url: "https://sourceforge.net/projects/dwg-fastview/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t54",
@@ -1563,6 +1607,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.gstarcad.net",
+  pricing_url: "https://www.gstarcad.net/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -1672,25 +1717,7 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 32,
-    url: "https://www.g2.com/products/gstarcad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 15,
-    url: "https://www.capterra.com/p/180290/GstarCAD/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 22,
-    url: "https://sourceforge.net/projects/gstarcad/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t55",
@@ -1699,6 +1726,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/qcad.png",
   short_desc: "Open-source 2D CAD application for creating technical drawings, praised for its simplicity, cross-platform support, and focused toolset.",
   description: "QCAD is an open-source 2D computer-aided design (CAD) application developed by RibbonSoft, designed for creating technical drawings such as architectural plans, mechanical parts, schematics, and diagrams. Built on the Qt framework, it runs natively on Windows, macOS, and Linux, making it one of the few truly cross-platform CAD solutions. QCAD offers a comprehensive set of 2D drafting tools including layers, blocks, hatching, dimensioning, and scripting via ECMAScript (JavaScript). While the community edition is open-source and free, a commercial Pro version adds DWG import/export support and additional features. Its small footprint, clean interface, and low cost make it ideal for hobbyists, students, small businesses, and professionals needing straightforward 2D drafting without subscription overhead.",
+
   pricing_tiers: [
     {
       name: "Community (Free)",
@@ -1727,6 +1755,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -1813,15 +1842,18 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "Germany",
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Architecture",
     "Mechanical Engineering",
@@ -1829,6 +1861,7 @@ export const c1Tools: Tool[] = [
     "Electrical Engineering",
     "Interior Design"
   ],
+
   core_features: [
     "Layer Management",
     "Block Support",
@@ -1837,14 +1870,18 @@ export const c1Tools: Tool[] = [
     "Cross-Platform",
     "Open Source Core"
   ],
+
   user_scales: [
     "Freelance",
     "Small Business",
     "Education"
   ],
+
   official_url: "https://www.qcad.org",
+  pricing_url: "https://www.qcad.org/pricing",
   affiliate_url: null,
   score: 3.8,
+
   pros: [
     "Free open-source community edition",
     "Cross-platform: Windows, macOS, and Linux",
@@ -1852,6 +1889,7 @@ export const c1Tools: Tool[] = [
     "Clean, uncluttered interface",
     "Low-cost Pro version with DWG support"
   ],
+
   cons: [
     "2D only, no 3D modeling",
     "DWG support requires paid Pro version",
@@ -1859,6 +1897,7 @@ export const c1Tools: Tool[] = [
     "Smaller user community and fewer tutorials",
     "UI style feels dated to some users"
   ],
+
   faqs: [
     {
       q: "What is QCAD used for?",
@@ -1885,6 +1924,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are LibreCAD (also open-source), DraftSight (freemium DWG CAD), and BricsCAD (paid DWG-compatible). For hobbyists, FreeCAD offers 2D and 3D capabilities. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Qt/QCAD",
     multicore: "Single-threaded",
@@ -1896,10 +1936,12 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "QCAD is the quintessential open-source 2D CAD tool for users who need straightforward drafting without the complexity and cost of commercial alternatives. Its cross-platform support (Windows, macOS, Linux) is a significant advantage for mixed-environment teams. The free Community Edition is sufficient for most hobbyist and educational needs, while the affordable Pro version unlocks DWG interoperability for professional workflows. QCAD's main limitation is its strict 2D focus—users requiring 3D modeling, BIM, or advanced parametric design should look elsewhere. For pure technical drafting, however, QCAD delivers exceptional value.",
+
+  expert_verdict: "The quintessential lightweight, cross-platform open-source 2D CAD tool for straightforward technical drafting.",
   version: "3.29",
   last_updated: "2025-05-20",
   free_trial_days: 0,
+
   languages: [
     "English",
     "German",
@@ -1911,31 +1953,39 @@ export const c1Tools: Tool[] = [
     "Chinese",
     "Japanese"
   ],
+
   file_formats_in: [
     "DXF",
     "DWG (Pro)"
   ],
+
   file_formats_out: [
     "DXF",
     "DWG (Pro)",
     "SVG",
     "PDF"
   ],
+
   integrations: [],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Free",
     "Perpetual",
     "Open-Source"
   ],
+
   support_channels: [
     "Email",
     "Community",
     "Documentation"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -1945,6 +1995,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://www.qcad.org/doc/qcad/latest/developer/index.html"
   },
+
   pricing_breakdown: [
     {
       tier: "Community Edition",
@@ -1957,6 +2008,7 @@ export const c1Tools: Tool[] = [
       notes: "Perpetual license with DWG support and commercial use"
     }
   ],
+
   key_capabilities: [
     "2D Drafting",
     "Cross-Platform",
@@ -1964,6 +2016,7 @@ export const c1Tools: Tool[] = [
     "Scripting",
     "DXF/DWG Support"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -1988,6 +2041,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/nanocad.png",
   short_desc: "Professional-grade 2D/3D CAD with native DWG compatibility, powerful API for customization, and competitive pricing.",
   description: "nanoCAD is a professional-grade CAD platform developed by Nanosoft, offering native DWG compatibility for seamless interoperability with AutoCAD. It features a familiar interface that reduces the learning curve for AutoCAD users, powerful 2D drafting and 3D modeling tools, and an open API (C++, .NET, JavaScript) for deep customization. nanoCAD supports parametric 3D modeling, Excel integration for BOM management, and industry-standard file formats including DWG, DXF, and IFC. Its flexible licensing options include perpetual and subscription models, making it an attractive choice for engineering, construction, and manufacturing firms seeking a cost-effective alternative to AutoCAD without sacrificing functionality.",
+
   pricing_tiers: [
     {
       name: "Free",
@@ -2030,6 +2084,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -2116,13 +2171,16 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "Russia",
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Mechanical Engineering",
     "Construction",
@@ -2130,6 +2188,7 @@ export const c1Tools: Tool[] = [
     "Civil Engineering",
     "Architecture"
   ],
+
   core_features: [
     "Native DWG Support",
     "Parametric 3D",
@@ -2138,15 +2197,19 @@ export const c1Tools: Tool[] = [
     "Lisp Compatibility",
     "IFC Support"
   ],
+
   user_scales: [
     "Freelance",
     "Small Business",
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://nanocad.com",
+  pricing_url: "https://nanocad.com/products/nanocad/pricing/",
   affiliate_url: null,
   score: 3.9,
+
   pros: [
     "Native DWG compatibility with AutoCAD",
     "Free version available for basic 2D drafting",
@@ -2155,6 +2218,7 @@ export const c1Tools: Tool[] = [
     "Competitive pricing vs AutoCAD subscription",
     "Active development with regular updates"
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "3D capabilities less advanced than premium CAD",
@@ -2162,6 +2226,7 @@ export const c1Tools: Tool[] = [
     "Some advanced features require Plus/Platform tier",
     "Documentation can be sparse for API developers"
   ],
+
   faqs: [
     {
       q: "What is nanoCAD used for?",
@@ -2188,6 +2253,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives are BricsCAD (DWG-compatible, more 3D power), AutoCAD (industry standard), and ZWCAD (another cost-effective DWG CAD). For open-source, LibreCAD and QCAD offer 2D drafting. Compare them using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "nanoCAD Core (DWG-native)",
     multicore: "High",
@@ -2199,10 +2265,12 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "nanoCAD is one of the strongest AutoCAD alternatives available, particularly for organizations that need DWG compatibility without subscription pricing. Its free version is remarkably capable for 2D drafting, while the Pro and Plus tiers unlock 3D modeling and advanced customization via a multi-language API. The familiar interface makes migration from AutoCAD straightforward. However, its Windows-only limitation and smaller plugin ecosystem may deter some users. For engineering and construction firms looking to reduce CAD costs while maintaining file compatibility, nanoCAD is a compelling choice.",
+
+  expert_verdict: "A strong DWG-compatible CAD suite with specialized engineering modules and a competitive perpetual licensing option.",
   version: "23.0",
   last_updated: "2025-05-20",
   free_trial_days: 0,
+
   languages: [
     "English",
     "Russian",
@@ -2215,10 +2283,12 @@ export const c1Tools: Tool[] = [
     "Japanese",
     "Korean"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
@@ -2226,12 +2296,15 @@ export const c1Tools: Tool[] = [
     "SVG",
     "IFC (Plus)"
   ],
+
   integrations: [
     "Microsoft Excel"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Free",
     "Perpetual",
@@ -2239,6 +2312,7 @@ export const c1Tools: Tool[] = [
     "Educational",
     "Network"
   ],
+
   support_channels: [
     "Email",
     "Phone",
@@ -2246,7 +2320,9 @@ export const c1Tools: Tool[] = [
     "Community",
     "Training"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -2259,6 +2335,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://nanocad.com/products/nanocad-developers-club/"
   },
+
   pricing_breakdown: [
     {
       tier: "Free",
@@ -2276,6 +2353,7 @@ export const c1Tools: Tool[] = [
       notes: "Enterprise with advanced 3D, IFC, volume licensing"
     }
   ],
+
   key_capabilities: [
     "DWG Interoperability",
     "2D Drafting",
@@ -2283,6 +2361,7 @@ export const c1Tools: Tool[] = [
     "Multi-Language API",
     "Parametric Design"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -2300,6 +2379,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/progecad.png",
   short_desc: "DWG-native 2D/3D CAD with built-in PDF-to-DWG conversion, perpetual licensing, and high AutoCAD compatibility for general-purpose drafting.",
   description: "progeCAD Professional is a DWG-native CAD software built on the IntelliCAD engine, offering high compatibility with AutoCAD files and commands. It includes a complete set of 2D drafting and 3D modeling tools, plus unique utilities like built-in PDF-to-DWG conversion, the EasyArch 3D architectural plugin, and the iCADLib block manager with thousands of standard parts. progeCAD operates on a perpetual licensing model, making it attractive for users who prefer to own their software rather than subscribe. Its familiar AutoCAD-like interface minimizes the learning curve, while its competitive price point makes it accessible to small teams and mid-market organizations in architecture, civil engineering, and mechanical design.",
+
   pricing_tiers: [
     {
       name: "Professional",
@@ -2329,6 +2409,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -2415,13 +2496,16 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "Italy",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 399,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Architecture",
     "Civil Engineering",
@@ -2429,6 +2513,7 @@ export const c1Tools: Tool[] = [
     "Construction",
     "Interior Design"
   ],
+
   core_features: [
     "PDF to DWG Converter",
     "3D Architectural Module",
@@ -2437,14 +2522,18 @@ export const c1Tools: Tool[] = [
     "DWG-Native Engine",
     "AutoCAD Command Compatibility"
   ],
+
   user_scales: [
     "Freelance",
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.progecad.com",
+  pricing_url: "https://www.progecad.com/pricing",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Built-in PDF-to-DWG conversion saves significant time",
     "Perpetual license with no subscription required",
@@ -2453,6 +2542,7 @@ export const c1Tools: Tool[] = [
     "Competitive price vs AutoCAD",
     "EasyArch 3D plugin for architectural design"
   ],
+
   cons: [
     "Windows only, no macOS or Linux support",
     "Can experience instability with very large files",
@@ -2461,6 +2551,7 @@ export const c1Tools: Tool[] = [
     "Some advanced 3D features less refined than premium CAD",
     "Customer support quality varies by region"
   ],
+
   faqs: [
     {
       q: "What is progeCAD Professional used for?",
@@ -2487,6 +2578,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives are BricsCAD (more powerful 3D), nanoCAD (free tier available), and CADopia (similar IntelliCAD base). For full AutoCAD compatibility, AutoCAD itself or ZWCAD are options. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "IntelliCAD (DWG-native)",
     multicore: "Moderate",
@@ -2497,10 +2589,12 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  expert_verdict: "progeCAD Professional is a solid AutoCAD alternative for small to mid-sized teams that prioritize perpetual licensing and built-in utilities like PDF-to-DWG conversion. Its IntelliCAD engine ensures good DWG compatibility, and the EasyArch plugin adds useful architectural capabilities. However, its Windows-only restriction, occasional stability issues with large files, and annual update cycle may concern some users. For budget-conscious teams needing AutoCAD-like functionality without subscription fees, progeCAD is a practical choice. For advanced 3D or BIM workflows, more powerful alternatives exist.",
+
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2024",
   last_updated: "2025-05-20",
   free_trial_days: 30,
+
   languages: [
     "English",
     "Italian",
@@ -2512,11 +2606,13 @@ export const c1Tools: Tool[] = [
     "Chinese",
     "Japanese"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
     "PDF"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
@@ -2524,21 +2620,27 @@ export const c1Tools: Tool[] = [
     "SVG",
     "WMF"
   ],
+
   integrations: [],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Network"
   ],
+
   support_channels: [
     "Email",
     "Documentation",
     "Community"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -2549,6 +2651,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://www.progecad.com/support/developers"
   },
+
   pricing_breakdown: [
     {
       tier: "Professional (Perpetual)",
@@ -2566,6 +2669,7 @@ export const c1Tools: Tool[] = [
       notes: "Multi-seat with network licensing and priority support"
     }
   ],
+
   key_capabilities: [
     "DWG Interoperability",
     "PDF-to-DWG",
@@ -2573,15 +2677,8 @@ export const c1Tools: Tool[] = [
     "3D Modeling",
     "Block Libraries"
   ],
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.1,
-      max: 5,
-      count: 21,
-      url: "https://www.g2.com/products/progecad-2022-professional/reviews"
-    }
-  ]
+
+  external_ratings: []
 },
 {
   id: "t60",
@@ -2590,6 +2687,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/librecad.ico",
   short_desc: "Free, open-source 2D CAD for Windows, macOS, and Linux with DXF native support, ideal for education, hobbyists, and small-scale drafting.",
   description: "LibreCAD is a free, open-source 2D CAD application forked from QCAD, offering a comprehensive set of drafting tools for technical drawings, schematics, and design documentation. Built on the Qt framework, it runs natively on Windows, macOS, and Linux, and is translated into over 30 languages by a global community of volunteers. LibreCAD uses DXF as its native format, ensuring broad interoperability with other CAD systems. Its lightweight core, familiar AutoCAD-like command line, and zero cost make it a popular choice for students, hobbyists, educators, and small businesses that need reliable 2D drafting without licensing fees. While it lacks DWG support and 3D capabilities, its active community and regular updates ensure it remains a viable option for pure 2D work.",
+
   pricing_tiers: [
     {
       name: "LibreCAD (Free)",
@@ -2607,6 +2705,7 @@ export const c1Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -2697,15 +2796,18 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "Community/International",
   category_id: "c1",
   pricing_type: "Free",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Education",
     "Mechanical Engineering",
@@ -2714,6 +2816,7 @@ export const c1Tools: Tool[] = [
     "Hobbyist",
     "Laser Cutting"
   ],
+
   core_features: [
     "Advanced Layering",
     "Block System",
@@ -2722,14 +2825,18 @@ export const c1Tools: Tool[] = [
     "Command-Line Interface",
     "Cross-Platform"
   ],
+
   user_scales: [
     "Freelance",
     "Small Business",
     "Education"
   ],
+
   official_url: "https://librecad.org",
+  pricing_url: "https://librecad.org",
   affiliate_url: null,
   score: 3.5,
+
   pros: [
     "100% free for personal and commercial use",
     "Very lightweight with minimal system requirements",
@@ -2738,6 +2845,7 @@ export const c1Tools: Tool[] = [
     "Familiar AutoCAD-like command line",
     "Translated into over 30 languages"
   ],
+
   cons: [
     "2D only, no 3D modeling capability",
     "No native DWG support (DXF only)",
@@ -2746,6 +2854,7 @@ export const c1Tools: Tool[] = [
     "Limited advanced automation and scripting",
     "No official commercial support available"
   ],
+
   faqs: [
     {
       q: "What is LibreCAD used for?",
@@ -2772,6 +2881,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives are QCAD (similar open-source 2D CAD with a paid Pro version), FreeCAD (open-source with 2D and 3D), and DraftSight (freemium DWG CAD). For DWG compatibility, consider BricsCAD or nanoCAD. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Qt/LibreCAD",
     multicore: "Single-threaded",
@@ -2782,10 +2892,12 @@ export const c1Tools: Tool[] = [
       "SVG"
     ]
   },
-  expert_verdict: "LibreCAD is the go-to choice for users who need a completely free, open-source 2D CAD solution without any licensing constraints. Its cross-platform support, lightweight footprint, and familiar AutoCAD-like command line make it accessible to beginners and students. However, its lack of DWG support and 3D capabilities limits its utility for professional workflows that require interoperability with AutoCAD users or 3D modeling. For pure 2D drafting in education, hobbyist projects, or small businesses with tight budgets, LibreCAD delivers exceptional value. For commercial projects requiring DWG compatibility or advanced features, paid alternatives like QCAD Pro, BricsCAD, or nanoCAD are more suitable.",
+
+  expert_verdict: "The go-to completely free, open-source 2D CAD tool for students, makers, and basic layout projects.",
   version: "2.2.0",
   last_updated: "2025-05-20",
   free_trial_days: 0,
+
   languages: [
     "English",
     "German",
@@ -2818,29 +2930,37 @@ export const c1Tools: Tool[] = [
     "Ukrainian",
     "Bulgarian"
   ],
+
   file_formats_in: [
     "DXF",
     "JWW"
   ],
+
   file_formats_out: [
     "DXF",
     "JWW",
     "SVG",
     "PDF"
   ],
+
   integrations: [],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Free",
     "Open-Source"
   ],
+
   support_channels: [
     "Community",
     "Documentation"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -2850,6 +2970,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://dokuwiki.librecad.org/"
   },
+
   pricing_breakdown: [
     {
       tier: "LibreCAD",
@@ -2857,6 +2978,7 @@ export const c1Tools: Tool[] = [
       notes: "Open Source (GPLv2), full 2D CAD for all platforms"
     }
   ],
+
   key_capabilities: [
     "Free 2D Drafting",
     "DXF Native Support",
@@ -2864,6 +2986,7 @@ export const c1Tools: Tool[] = [
     "Command-Line Input",
     "Lightweight"
   ],
+
   external_ratings: [
     {
       source: "Software Advice",
@@ -3032,6 +3155,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.cadopia.com",
+  pricing_url: "https://www.cadopia.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -3092,7 +3216,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "CADopia is a solid, stable choice for firms that want a 'set it and forget it' 2D/3D CAD solution with perpetual licensing. Built on the reliable ARES engine, it offers good DWG compatibility and a familiar AutoCAD-like workflow. Its LISP support and digital signatures add value for professional users. However, its slower update cycle, Windows-only limitation, and dated marketing presence may give pause to teams seeking a more modern, actively promoted product. For small to mid-sized engineering and design firms that prioritize stability and one-time payment over the latest features, CADopia remains a viable option.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "21",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -3177,25 +3301,7 @@ export const c1Tools: Tool[] = [
     "Perpetual Licensing"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 65,
-    url: "https://www.g2.com/products/cadopia/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 43,
-    url: "https://www.capterra.com/p/cadopia-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.4,
-    max: 5,
-    count: 47,
-    url: "https://sourceforge.net/projects/cadopia/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t62",
@@ -3233,6 +3339,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.turbocad.com",
+  pricing_url: "https://www.turbocad.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -3287,20 +3394,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 104,
-    url: "https://www.g2.com/products/turbocad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 94,
-    url: "https://www.capterra.com/p/turbocad-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t88",
@@ -3309,6 +3403,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/corelcad.png",
   short_desc: "Affordable DWG-compatible CAD software offering 2D drafting and 3D design tools for professionals on Windows and macOS.",
   description: "CorelCAD is a professional CAD software built on the ARES/IntelliCAD engine, delivering powerful 2D drafting and 3D design tools at a fraction of AutoCAD's price. It offers native DWG file compatibility, ensuring seamless collaboration with AutoCAD users. CorelCAD features a familiar ribbon-style interface, comprehensive drawing and editing tools, 3D solid modeling, and support for custom SHX fonts. Available on both Windows and macOS, it is particularly popular among freelancers and small businesses seeking a perpetual-license alternative to subscription-based CAD solutions. The software includes productivity features like Quick Input, annotation scaling, and layer management to streamline design workflows.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -3335,6 +3430,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting",
@@ -3421,14 +3517,17 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   country: "Canada",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 499,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Architecture",
     "Mechanical Engineering",
@@ -3436,6 +3535,7 @@ export const c1Tools: Tool[] = [
     "Manufacturing",
     "Interior Design"
   ],
+
   core_features: [
     "DWG Compatibility",
     "2D Drafting & Annotation",
@@ -3444,14 +3544,18 @@ export const c1Tools: Tool[] = [
     "Layer Management",
     "Quick Input Methods"
   ],
+
   user_scales: [
     "Freelance",
     "Small Business",
     "Mid-Sized Company"
   ],
+
   official_url: "https://www.coreldraw.com/en/product/corelcad/",
+  pricing_url: "https://www.coreldraw.com/en/product/corelcad/pricing",
   affiliate_url: null,
   score: 3.6,
+
   pros: [
     "Affordable perpetual license — no subscription required",
     "Full DWG compatibility with AutoCAD users",
@@ -3459,6 +3563,7 @@ export const c1Tools: Tool[] = [
     "Familiar ribbon-style interface reduces learning curve",
     "Lightweight and fast performance on modest hardware"
   ],
+
   cons: [
     "Limited plugin and extension ecosystem",
     "Less frequent feature updates compared to competitors",
@@ -3466,6 +3571,7 @@ export const c1Tools: Tool[] = [
     "3D capabilities not as advanced as premium tools",
     "Discontinued — no new versions after 2023"
   ],
+
   faqs: [
     {
       q: "What is CorelCAD used for?",
@@ -3492,6 +3598,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are BricsCAD, ZWCAD, and DraftSight for DWG-compatible perpetual licenses. For Mac users, AutoCAD for Mac and Vectorworks are viable alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ARES/IntelliCAD",
     multicore: "Single-threaded",
@@ -3505,10 +3612,12 @@ export const c1Tools: Tool[] = [
       "3DM"
     ]
   },
-  expert_verdict: "CorelCAD was the best-value perpetual-license AutoCAD alternative for Mac users, offering genuine DWG compatibility and a familiar interface at roughly one-third of AutoCAD's annual subscription cost. Its discontinuation in 2023 is a significant loss for the market, as it filled a unique niche for cross-platform CAD on a budget. Existing users can continue using it, but new buyers should consider BricsCAD or ZWCAD as alternatives. For pure 2D drafting and light 3D work, it remains capable, but teams requiring modern collaboration features or frequent updates should look elsewhere.",
+
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2023 (Final)",
   last_updated: "2025-05-20",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -3521,6 +3630,7 @@ export const c1Tools: Tool[] = [
     "Chinese",
     "Korean"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
@@ -3531,6 +3641,7 @@ export const c1Tools: Tool[] = [
     "CDR",
     "SVG"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
@@ -3542,18 +3653,22 @@ export const c1Tools: Tool[] = [
     "SVG",
     "CDR"
   ],
+
   integrations: [
     "CorelDRAW",
     "CorelDESIGNER"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
@@ -3561,11 +3676,14 @@ export const c1Tools: Tool[] = [
     "Knowledge Base",
     "Community"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: false,
     has_sdk: false
   },
+
   pricing_breakdown: [
     {
       tier: "Full License",
@@ -3583,6 +3701,7 @@ export const c1Tools: Tool[] = [
       notes: "For verified students and academic institutions"
     }
   ],
+
   key_capabilities: [
     "DWG Interoperability",
     "2D Drafting",
@@ -3590,29 +3709,8 @@ export const c1Tools: Tool[] = [
     "Cross-Platform",
     "Perpetual Licensing"
   ],
-  external_ratings: [
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 45,
-      url: "https://www.softwareadvice.com/architectural-cad/corelcad-profile/"
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 30,
-      url: "https://www.capterra.com/p/92736/CorelCAD/"
-    },
-    {
-      source: "GetApp",
-      score: 4.5,
-      max: 5,
-      count: 30,
-      url: "https://www.getapp.com/industries-software/a/corelcad/"
-    }
-  ]
+
+  external_ratings: []
 },
 {
   id: "t90",
@@ -3771,6 +3869,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.caxa.com/en/",
+  pricing_url: "https://www.caxa.com/en/pricing",
   affiliate_url: null,
   score: 3.4,
 
@@ -3829,7 +3928,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "CAXA CAD is the dominant 2D CAD brand in China, with a strong foothold in mechanical and electrical design for domestic manufacturing. Its DWG compatibility ensures interoperability with AutoCAD users, while its perpetual licensing and competitive pricing make it attractive for cost-conscious SMBs. However, its limited global presence, minimal English documentation, and lack of macOS/Linux support restrict its appeal outside China. For Chinese-speaking teams focused on 2D drafting and schematic design, CAXA CAD offers excellent value. For international projects or teams requiring extensive plugin ecosystems, AutoCAD or BricsCAD remain better choices.",
+  expert_verdict: "The leading 2D mechanical drafting solution in China, highly optimized for domestic manufacturing standards.",
   version: "2024",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -3925,6 +4024,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 200,
+
   platforms: [
     "Windows",
     "macOS",
@@ -3933,33 +4033,41 @@ export const c1Tools: Tool[] = [
     "Android",
     "iOS"
   ],
+
   industries: [
     "Architecture",
     "Mechanical",
     "General"
   ],
+
   core_features: [
     "DWG Drafting",
     "Cloud/Mobile CAD"
   ],
+
   user_scales: [
     "Freelancer",
     "Small Business",
     "Mid-Market"
   ],
+
   official_url: "https://www.graebert.com/cad-software/ares-commander/",
+  pricing_url: "https://www.graebert.com/cad-software/ares-commander/pricing",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Only CAD with Desktop+Mobile+Cloud sync",
     "Linux support",
     "Reasonable pricing"
   ],
+
   cons: [
     "Smaller plugin ecosystem",
     "Less known than BricsCAD",
     "Cloud features require subscription"
   ],
+
   faqs: [
     {
       q: "What is ARES Commander used for?",
@@ -3986,6 +4094,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are DraftSight, AutoCAD, nanoCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "ARES (IntelliCAD-derived)",
     multicore: "Moderate",
@@ -3996,7 +4105,9 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+
   expert_verdict: "The undisputed king of cross-platform DWG CAD — desktop, mobile, and cloud in perfect sync.",
+
   pricing_tiers: [
     {
       name: "Annual",
@@ -4010,6 +4121,7 @@ export const c1Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   detailed_features: [
     {
       category: "CAD",
@@ -4021,15 +4133,8 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
-  external_ratings: [
-    {
-      source: "Capterra",
-      score: 4.9,
-      max: 5,
-      count: 20,
-      url: "https://www.capterra.com/p/164140/ARES-Commander/"
-    }
-  ]
+
+  external_ratings: []
 },
 {
   id: "t100",
@@ -4038,6 +4143,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/3dexperience.png",
   short_desc: "Dassault Systèmes' cloud-based collaborative platform that unifies design, engineering, simulation, and manufacturing through virtual twin technology.",
   description: "3DEXPERIENCE is Dassault Systèmes' comprehensive cloud-based platform that integrates 3D design, engineering, simulation, and manufacturing capabilities. Built on virtual twin technology, it enables real-time collaboration across teams, disciplines, and geographies. The platform connects people, data, and processes in a single environment, supporting everything from concept design to production. With native CATIA and SOLIDWORKS integration, it serves industries from aerospace and automotive to consumer goods and life sciences.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -4079,6 +4185,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Design",
@@ -4165,19 +4272,23 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "medusa4",
     "pconplanner",
     "crowncad"
   ],
+
   country: "France",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 5000,
+
   platforms: [
     "Windows",
     "Web"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
@@ -4187,6 +4298,7 @@ export const c1Tools: Tool[] = [
     "Architecture",
     "Construction"
   ],
+
   core_features: [
     "3D Design",
     "Virtual Twin",
@@ -4195,13 +4307,17 @@ export const c1Tools: Tool[] = [
     "Real-time Collaboration",
     "Manufacturing Planning"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.3ds.com/",
+  pricing_url: "https://www.3ds.com/pricing",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Unified cloud platform eliminates data silos",
     "Powerful virtual twin capabilities for digital continuity",
@@ -4209,6 +4325,7 @@ export const c1Tools: Tool[] = [
     "Real-time collaboration across global teams",
     "Scalable from SMB to enterprise deployments"
   ],
+
   cons: [
     "High cost of entry for smaller organizations",
     "Steep learning curve for new users",
@@ -4216,6 +4333,7 @@ export const c1Tools: Tool[] = [
     "Complex licensing structure with many modules",
     "Migration from legacy systems can be challenging"
   ],
+
   faqs: [
     {
       q: "What is 3DEXPERIENCE used for?",
@@ -4242,6 +4360,7 @@ export const c1Tools: Tool[] = [
       a: "The closest alternatives within the 2D CAD space are MEDUSA4, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "CGM / Parasolid (hybrid)",
     multicore: "Multi-threaded rendering",
@@ -4254,10 +4373,12 @@ export const c1Tools: Tool[] = [
       "3DXML"
     ]
   },
-  expert_verdict: "3DEXPERIENCE represents the gold standard for cloud-native collaborative product development. Its virtual twin technology delivers unmatched digital continuity from design through manufacturing. While the cost and complexity may deter smaller teams, enterprises seeking a unified PLM and design environment will find exceptional value. The platform's strength lies in connecting disciplines that traditionally operate in silos, enabling real-time collaboration that dramatically reduces time-to-market.",
+
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2025x",
   last_updated: "2025-05-20",
   free_trial_days: 30,
+
   languages: [
     "English",
     "French",
@@ -4265,6 +4386,7 @@ export const c1Tools: Tool[] = [
     "Japanese",
     "Chinese"
   ],
+
   file_formats_in: [
     "STEP",
     "IGES",
@@ -4277,6 +4399,7 @@ export const c1Tools: Tool[] = [
     "SolidWorks",
     "Inventor"
   ],
+
   file_formats_out: [
     "STEP",
     "IGES",
@@ -4287,6 +4410,7 @@ export const c1Tools: Tool[] = [
     "3DXML",
     "STL"
   ],
+
   integrations: [
     "CATIA",
     "SOLIDWORKS",
@@ -4297,16 +4421,19 @@ export const c1Tools: Tool[] = [
     "Microsoft 365",
     "Salesforce"
   ],
+
   deployment_options: [
     "Cloud",
     "On-Premise",
     "Hybrid"
   ],
+
   license_types: [
     "Subscription",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
@@ -4317,12 +4444,14 @@ export const c1Tools: Tool[] = [
     "Knowledge Base",
     "Reseller Network"
   ],
+
   security_compliance: [
     "ISO 27001",
     "SOC 2",
     "GDPR",
     "FedRAMP (selected deployments)"
   ],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -4335,6 +4464,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://www.3ds.com/developers"
   },
+
   pricing_breakdown: [
     {
       tier: "Standard Role",
@@ -4352,6 +4482,7 @@ export const c1Tools: Tool[] = [
       notes: "Full platform with dedicated cloud infrastructure"
     }
   ],
+
   key_capabilities: [
     "Cloud-Native Design",
     "Virtual Twin Technology",
@@ -4360,22 +4491,8 @@ export const c1Tools: Tool[] = [
     "Advanced Simulation",
     "Manufacturing Planning"
   ],
-  external_ratings: [
-    {
-      source: "Gartner Peer Insights",
-      score: 3.4,
-      max: 5,
-      count: 46,
-      url: "https://www.gartner.com/reviews/product/3dexperience-platform"
-    },
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 37,
-      url: "https://www.g2.com/products/3dexperience-catia/reviews"
-    }
-  ]
+
+  external_ratings: []
 },
 {
   id: "t104",
@@ -4516,6 +4633,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.cad-schroer.com/",
+  pricing_url: "https://www.cad-schroer.com/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -4573,21 +4691,8 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "MEDUSA4 is a robust 2D/3D CAD solution for plant engineering and mechanical design. It features outstanding parametric design capabilities, advanced plant layout, and native AR/VR support for advanced visualization and training. However, it has a steep learning curve and its pricing is premium.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 94,
-    url: "https://www.g2.com/products/medusa4/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.7,
-    max: 5,
-    count: 8,
-    url: "https://www.capterra.com/p/medusa4-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t107",
@@ -4730,6 +4835,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://pcon-planner.com/",
+  pricing_url: "https://pcon-planner.com/pricing",
   affiliate_url: null,
   score: 3.9,
 
@@ -4786,21 +4892,8 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "pCon.planner is a highly professional space planning and interior design software integrated with major furniture manufacturers' catalogs. It delivers stunning photorealistic rendering and outstanding client presentation features, making it the perfect choice for interior designers, although it is not meant for general CAD drafting.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.8,
-    max: 5,
-    count: 115,
-    url: "https://www.g2.com/products/pconplanner/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 93,
-    url: "https://www.capterra.com/p/pconplanner-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t108",
@@ -4945,6 +5038,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.crowncad.com/",
+  pricing_url: "https://www.crowncad.com/pricing",
   affiliate_url: null,
   score: 3.4,
 
@@ -5001,27 +5095,8 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "CrownCAD is a cloud-native 3D CAD platform built on a proprietary geometry engine and constraint solver. It offers powerful real-time collaboration features directly in a web browser without local installation, though its global ecosystem is still in active development.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.3,
-    max: 5,
-    count: 84,
-    url: "https://www.g2.com/products/crowncad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.3,
-    max: 5,
-    count: 35,
-    url: "https://www.capterra.com/p/crowncad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.5,
-    max: 5,
-    count: 54,
-    url: "https://sourceforge.net/projects/crowncad/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t109",
@@ -5165,6 +5240,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://sv.hoteamsoft.com/",
+  pricing_url: "https://sv.hoteamsoft.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -5222,27 +5298,8 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "SINOVATION is a highly specialized CAD/CAM software focused on industrial mold and die design. It features advanced multi-axis machining and an integrated design-to-manufacturing workflow, making it highly productive for specialized mold makers but less suited for general mechanical design.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.7,
-    max: 5,
-    count: 97,
-    url: "https://www.g2.com/products/sinovation/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 48,
-    url: "https://www.capterra.com/p/sinovation-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.7,
-    max: 5,
-    count: 45,
-    url: "https://sourceforge.net/projects/sinovation/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t113",
@@ -5369,6 +5426,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.ijcad.jp/",
+  pricing_url: "https://www.ijcad.jp/pricing",
   affiliate_url: null,
   score: 3.8,
 
@@ -5424,27 +5482,8 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "IJCAD is a highly popular, budget-friendly AutoCAD-compatible alternative widely adopted in Japan. It features high DWG compatibility, perpetual license models for easy cost planning, and excellent stability for 2D drafting, although its 3D modeling and global ecosystem are more restricted.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.7,
-    max: 5,
-    count: 99,
-    url: "https://www.g2.com/products/ijcad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 24,
-    url: "https://www.capterra.com/p/ijcad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.8,
-    max: 5,
-    count: 33,
-    url: "https://sourceforge.net/projects/ijcad/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t115",
@@ -5587,6 +5626,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.rootprocad.com/",
+  pricing_url: "https://www.rootprocad.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -5642,27 +5682,8 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "RootPro CAD is a lightweight and user-friendly 2D drafting tool that offers both free and professional tiers. With solid DWG/DXF compatibility and cross-platform flexibility, it is an excellent choice for budget-conscious designers, but lacks advanced 3D modeling or large-scale project coordination features.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 128,
-    url: "https://www.g2.com/products/rootpro-cad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 54,
-    url: "https://www.capterra.com/p/rootpro-cad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.7,
-    max: 5,
-    count: 41,
-    url: "https://sourceforge.net/projects/rootpro-cad/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t116",
@@ -5825,6 +5846,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.kts.co.jp/",
+  pricing_url: "https://www.kts.co.jp/pricing",
   affiliate_url: null,
   score: 3.1,
 
@@ -5881,7 +5903,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "V-nas is a pragmatic choice for Japanese SMEs seeking an affordable, DWG-compatible 2D CAD tool with local language support. While it lacks the advanced features and ecosystem of global competitors like AutoCAD or BricsCAD, its strength lies in its simplicity, reasonable pricing, and responsive domestic support. For small mechanical shops and architectural firms operating primarily in Japan, V-nas offers sufficient capability without the overhead of enterprise-tier solutions. However, teams requiring 3D modeling, parametric design, or cloud collaboration should look elsewhere.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -5946,19 +5968,7 @@ export const c1Tools: Tool[] = [
     "Plotting & Output"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.2,
-    max: 5,
-    count: 121,
-    url: "https://www.g2.com/products/v-nas/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.2,
-    max: 5,
-    count: 63,
-    url: "https://www.capterra.com/p/v-nas-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t117",
@@ -6095,6 +6105,7 @@ export const c1Tools: Tool[] = [
   core_features: ["3D Parametric Modeling", "Solid/Surface/Sheet Metal Design", "Assembly Management", "2D Documentation", "FEM Analysis", "Standard Parts Library", "PDM Integration"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://ascon.net/",
+  pricing_url: "https://ascon.net/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Lower total cost of ownership compared to major CAD tools", "Perpetual licensing model", "User-friendly interface", "Built-in FEM and CFD analysis tools", "Extensive standard parts library", "Supports both top-down and bottom-up design approaches", "Automated documentation generation", "Strong compatibility with other CAD systems"],
@@ -6165,21 +6176,8 @@ export const c1Tools: Tool[] = [
     standards: ["DIN", "ISO", "GOST"]
   },
 
-  expert_verdict: "KOMPAS-3D is a cost-effective alternative to major CAD platforms, offering comprehensive 3D modeling, parametric design, and integrated analysis tools. With 36 years of market presence and 400,000 seats sold, it provides professional-grade functionality at a lower total cost of ownership through perpetual licensing. While it lacks the extensive plugin ecosystem of market leaders, its built-in FEM, CFD, and specialized industry modules make it particularly attractive for mechanical engineering in aerospace, automotive, and heavy equipment industries. The software excels at handling large assemblies and offers strong compatibility with other CAD systems, making it a viable choice for companies seeking value without sacrificing essential engineering capabilities.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 26,
-    url: "https://www.g2.com/products/kompas-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 11,
-    url: "https://www.capterra.com/p/175050/KOMPAS-3D/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t118",
@@ -6324,6 +6322,7 @@ export const c1Tools: Tool[] = [
   core_features: ["Parasolid-based 3D Modeling", "Parametric Design", "Assembly Modeling", "Sheet Metal Design", "2D Parametric Drafting", "Express FEA", "Associative BOM"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.tflex.com/",
+  pricing_url: "https://www.tflex.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Powerful Parasolid-based modeling kernel", "Superior parametric design capabilities", "Integrated Express FEA for stress analysis", "Robust 2D drafting tools", "Supports both top-down and bottom-up design", "Adaptive components for design automation", "User-defined features for customization", "Excellent for family-of-parts manufacturing"],
@@ -6394,21 +6393,8 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "DIN", "GOST", "ANSI"]
   },
 
-  expert_verdict: "T-FLEX CAD is a powerful parametric CAD system built on the production-proven Parasolid kernel, offering professional-grade 3D modeling and robust 2D drafting capabilities. Its standout feature is superior parametric design with adaptive components and user-defined features, making it particularly attractive for family-of-parts manufacturers and companies requiring extensive design automation. The integrated Express FEA provides built-in stress analysis without additional software, while motion simulation capabilities through T-FLEX Dynamics enable virtual prototyping. Although it lacks the extensive third-party ecosystem of market leaders like SolidWorks or Autodesk, T-FLEX CAD offers excellent value through perpetual licensing and comprehensive functionality in a single package. The software excels at handling large assemblies with thousands of components and provides exceptional interoperability with all major CAD formats, making it a viable choice for organizations seeking a flexible, cost-effective CAD solution with advanced parametric capabilities.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 18,
-    url: "https://www.g2.com/products/t-flex-cad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 9,
-    url: "https://www.capterra.com/p/175060/T-FLEX-CAD/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t120",
@@ -6589,6 +6575,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.csoft.ru/",
+  pricing_url: "https://www.csoft.ru/pricing",
   affiliate_url: null,
   score: 3.3,
 
@@ -6648,7 +6635,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Model Studio CS is a robust BIM/CAD platform tailored for the Russian construction market, offering extensive specialized modules for all engineering disciplines. Its integration with AutoCAD and nanoCAD, combined with perpetual licensing, makes it attractive for Russian and CIS engineering firms. However, its focus on Russian standards, Russian-language interface, and Windows-only platform limit its appeal to international organizations. For firms operating in Russia or working on Russian projects, Model Studio CS provides comprehensive local compliance and workflow efficiency. For global projects, international BIM platforms like Revit or 3DEXPERIENCE may be more suitable.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "21.0",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -6723,19 +6710,7 @@ export const c1Tools: Tool[] = [
     "AutoCAD Integration"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.4,
-    max: 5,
-    count: 21,
-    url: "https://www.g2.com/products/model-studio-cs/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 46,
-    url: "https://www.capterra.com/p/model-studio-cs-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t121",
@@ -6883,6 +6858,7 @@ export const c1Tools: Tool[] = [
   core_features: ["3D Plant Design", "Piping Design", "Equipment Modeling", "Structural Design", "Clash Detection", "Rule-Based Design", "AVEVA Ecosystem"],
   user_scales: ["Mid-Market", "Enterprise"],
   official_url: "https://www.aveva.com/",
+  pricing_url: "https://www.aveva.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Industry-standard plant design software", "Advanced 3D modeling capabilities", "Comprehensive clash detection", "Strong AVEVA ecosystem integration", "Rule-based design automation", "Real-time collaboration features", "Enterprise-grade solutions", "Extensive industry experience"],
@@ -6958,21 +6934,8 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "ANSI", "API", "ASME"]
   },
 
-  expert_verdict: "AVEVA E3D Design is the industry-standard 3D plant design software for process, power, and marine industries, offering comprehensive capabilities for designing complex industrial facilities. Its standout feature is the advanced rule-based design automation that ensures compliance with industry standards while accelerating design workflows. The software provides intelligent 3D modeling for piping, equipment, structural, and electrical design, with comprehensive clash detection and real-time collaboration features that significantly reduce engineering errors and rework. E3D Design's seamless integration with the broader AVEVA ecosystem creates a complete engineering-to-operations workflow, from design through asset management. Although the software requires significant investment and training, the combination of professional-grade capabilities, enterprise scalability, and decades of industry experience makes it the preferred choice for large-scale industrial projects in oil and gas, chemical processing, and power generation. The platform's ability to handle mega-projects with thousands of design elements while maintaining data integrity and collaboration efficiency justifies its premium positioning in the plant design software market.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 58,
-    url: "https://www.g2.com/products/aveva-e3d-design/reviews"
-  }, {
-    source: "TrustRadius",
-    score: 8.6,
-    max: 10,
-    count: 12,
-    url: "https://www.trustradius.com/products/aveva-e3d-design/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t122",
@@ -7109,6 +7072,7 @@ export const c1Tools: Tool[] = [
   core_features: ["3D Modeling", "Assembly Design", "2D Drawing", "Parametric Design", "Component Library", "File Import/Export"],
   user_scales: ["Freelancer", "Small Business", "Educational"],
   official_url: "https://www.rs-online.com/designspark/",
+  pricing_url: "https://www.rs-online.com/designspark/",
   affiliate_url: null,
   score: 0,
   pros: ["Completely free", "Professional-grade 3D CAD", "Extensive component library", "Manufacturer support", "Good file format support", "Easy to learn", "Active community"],
@@ -7179,21 +7143,8 @@ export const c1Tools: Tool[] = [
     standards: ["STEP", "IGES"]
   },
 
-  expert_verdict: "DesignSpark Mechanical is an exceptional free 3D CAD solution that delivers professional-grade mechanical design capabilities at no cost. Its standout feature is the completely free model combined with access to extensive CAD-neutral component libraries from major manufacturers through the RS Components ecosystem. The software provides comprehensive 3D modeling, assembly design, and 2D drawing creation tools that rival many commercial CAD packages, making it particularly attractive for hobbyists, students, and small businesses. DesignSpark Mechanical's parametric design capabilities, surface modeling, and sheet metal design tools provide the functionality needed for serious mechanical design work. Although the software lacks the advanced features and enterprise support of premium tools like SolidWorks or Autodesk Inventor, its combination of professional-grade capabilities, zero cost, and manufacturer component integration makes it an excellent choice for rapid prototyping, product design, and educational use. The platform's ease of learning, active community, and good file format support further enhance its accessibility for users transitioning from entry-level tools or working with limited budgets.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 101,
-    url: "https://www.g2.com/products/designspark-mechanical/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 19,
-    url: "https://www.capterra.com/p/designspark-mechanical-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t123",
@@ -7378,6 +7329,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.lusas.com/",
+  pricing_url: "https://www.lusas.com/pricing",
   affiliate_url: null,
   score: 3.5,
 
@@ -7437,7 +7389,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "LUSAS is a specialized finite element analysis software tailored for bridge, civil, and structural engineering applications. Its domain-specific modules provide deep capabilities for infrastructure projects, making it a preferred choice for consulting engineers working on bridges, dams, and large-scale structures. The perpetual licensing model appeals to organizations preferring one-time payment, and its strong academic presence ensures ongoing research and development. However, its Windows-only platform, steep learning curve, and higher cost compared to general-purpose FEA software may be barriers for smaller firms or those requiring cross-platform compatibility. For specialized civil and bridge engineering analysis, LUSAS offers robust, industry-specific capabilities. For general-purpose mechanical or multiphysics simulation, tools like Ansys or Abaqus may be more suitable.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "21.0",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -7513,19 +7465,7 @@ export const c1Tools: Tool[] = [
     "Seismic Analysis"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.3,
-    max: 5,
-    count: 87,
-    url: "https://www.g2.com/products/lusas/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 65,
-    url: "https://www.capterra.com/p/lusas-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t126",
@@ -7674,6 +7614,7 @@ export const c1Tools: Tool[] = [
   core_features: ["Structural Analysis", "Bridge Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Construction Stage Analysis"],
   user_scales: ["Mid-Market", "Enterprise", "Educational"],
   official_url: "https://www.midasoft.com/",
+  pricing_url: "https://www.midasoft.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["Specialized for civil engineering", "Advanced structural analysis", "Comprehensive bridge design tools", "BIM integration", "Seismic analysis capabilities", "Nonlinear analysis", "Construction stage analysis"],
@@ -7749,21 +7690,8 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
 
-  expert_verdict: "midas Civil is a specialized structural analysis and FEM software designed specifically for civil engineering applications, offering comprehensive capabilities for bridge design, structural analysis, and infrastructure projects. Its standout feature is the advanced bridge design capabilities including seismic analysis, buckling analysis, construction stage analysis, and cable analysis, which are essential for complex bridge engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for civil and structural engineers working on infrastructure projects. midas Civil's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of specialized civil engineering focus, professional-grade analysis capabilities, and comprehensive BIM integration makes it the preferred choice for engineering firms specializing in bridge design and infrastructure projects.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 36,
-    url: "https://www.g2.com/products/midas-civil/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 18,
-    url: "https://www.capterra.com/p/170390/midas-Civil/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t127",
@@ -7912,6 +7840,7 @@ export const c1Tools: Tool[] = [
   core_features: ["Structural Analysis", "Building Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Pushover Analysis"],
   user_scales: ["Mid-Market", "Enterprise", "Educational"],
   official_url: "https://www.midasoft.com/",
+  pricing_url: "https://www.midasoft.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["General-purpose structural analysis", "Building design capabilities", "Advanced seismic analysis", "BIM integration", "Nonlinear analysis", "Pushover analysis", "Comprehensive analysis tools"],
@@ -7987,27 +7916,8 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
 
-  expert_verdict: "midas Gen is a general-purpose structural analysis and FEM software designed for building design, architecture, and general engineering applications, offering comprehensive capabilities for structural analysis across various engineering disciplines. Its standout feature is the versatile analysis capabilities including seismic analysis, pushover analysis, buckling analysis, and response spectrum analysis, which are essential for modern building design and structural engineering projects. The software provides a wide range of static and dynamic analysis capabilities including linear and nonlinear analysis, time-history analysis, and soil-structure interaction, making it particularly valuable for structural engineers working on building projects and industrial structures. midas Gen's integration with BIM systems through FEA NX, CIVIL NX, and iGEN creates a seamless workflow between design and analysis, while its support for international standards ensures compliance with global engineering requirements. Although the software requires significant investment and training, the combination of general-purpose versatility, professional-grade analysis capabilities, and comprehensive BIM integration makes it a strong choice for engineering firms working on diverse building and structural engineering projects.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.8,
-    max: 5,
-    count: 89,
-    url: "https://www.g2.com/products/midas-gen/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 18,
-    url: "https://www.capterra.com/p/midas-gen-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 39,
-    url: "https://sourceforge.net/projects/midas-gen/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t128",
@@ -8151,6 +8061,7 @@ export const c1Tools: Tool[] = [
   core_features: ["2D Drafting", "DWG/DXF Support", "Design Automation", "Korean Language", "Local Support"],
   user_scales: ["Small Business", "Mid-Market", "Educational"],
   official_url: "https://www.cadian.com/",
+  pricing_url: "https://www.cadian.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: ["30+ years development history", "Korean language support", "Local customer service", "Competitive pricing", "DWG/DXF compatibility", "Proven reliability", "Educational licenses"],
@@ -8226,27 +8137,8 @@ export const c1Tools: Tool[] = [
     standards: ["KS", "ISO"]
   },
 
-  expert_verdict: "CADian is a Korean 2D CAD software with over 30 years of development history, providing reliable CAD drafting and design capabilities specifically tailored for the Korean market. Its standout feature is the comprehensive local Korean language support and domestic customer service, making it particularly suitable for Korean engineering firms and organizations that require native language interfaces and local technical support. The software offers standard 2D drafting tools including drawing creation, dimensioning, layer management, and block libraries, along with DWG/DXF file compatibility for seamless collaboration with other CAD systems. CADian's competitive perpetual licensing model provides cost-effective ownership compared to subscription-based international CAD solutions, while educational licenses support learning institutions. Although the software lacks 3D capabilities and advanced features found in premium international CAD tools, its combination of proven reliability, local market focus, Korean language support, and competitive pricing makes it a practical choice for Korean construction, manufacturing, and engineering companies requiring 2D drafting capabilities with domestic support.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.9,
-    max: 5,
-    count: 53,
-    url: "https://www.g2.com/products/cadian/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 40,
-    url: "https://www.capterra.com/p/cadian-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.9,
-    max: 5,
-    count: 5,
-    url: "https://sourceforge.net/projects/cadian/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t132",
@@ -8430,6 +8322,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://dptlab.com/",
+  pricing_url: "https://dptlab.com/pricing",
   affiliate_url: null,
   score: 3.4,
 
@@ -8490,7 +8383,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "ThinkDesign (think3) is a distinctive 3D CAD platform with its signature Global Shape Modeling (GSM) technology, which enables complex design changes while maintaining topology—a unique capability in the CAD market. Its full hybrid modeling approach, combining solids, surfaces, and mesh, provides flexibility for diverse design workflows from industrial styling to mechanical engineering. The perpetual licensing model appeals to firms preferring one-time payment, and its strong European presence makes it a trusted choice for Italian and European manufacturers. However, its Windows-only platform, smaller global ecosystem compared to mainstream CAD, and less extensive online documentation may be barriers for organizations requiring cross-platform support or extensive third-party plugin ecosystems. For firms prioritizing advanced shape modification capabilities and hybrid modeling, ThinkDesign offers compelling technology. For those requiring the largest plugin ecosystem or cross-platform support, mainstream tools like SolidWorks or Autodesk Inventor may be more suitable.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2026",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -8578,25 +8471,7 @@ export const c1Tools: Tool[] = [
     "Assembly Management"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.5,
-    max: 5,
-    count: 65,
-    url: "https://www.g2.com/products/think3/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.4,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/p/think3-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.5,
-    max: 5,
-    count: 15,
-    url: "https://sourceforge.net/projects/think3/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t133",
@@ -8706,6 +8581,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.maptek.com/",
+  pricing_url: "https://www.maptek.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -8745,27 +8621,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Maptek Vulcan is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 105,
-    url: "https://www.g2.com/products/maptek-vulcan/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 12,
-    url: "https://www.capterra.com/p/maptek-vulcan-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 14,
-    url: "https://sourceforge.net/projects/maptek-vulcan/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t134",
@@ -8875,6 +8732,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.promine.com/",
+  pricing_url: "https://www.promine.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -8914,27 +8772,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Promine is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 15,
-    url: "https://www.g2.com/products/promine/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 25,
-    url: "https://www.capterra.com/p/promine-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 44,
-    url: "https://sourceforge.net/projects/promine/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t135",
@@ -9044,6 +8883,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.open-engineering.com/",
+  pricing_url: "https://www.open-engineering.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9083,21 +8923,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "OOFELIE is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 28,
-    url: "https://www.g2.com/products/oofelie/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 36,
-    url: "https://www.capterra.com/p/oofelie-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t136",
@@ -9207,6 +9034,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.cype.com/",
+  pricing_url: "https://www.cype.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9246,27 +9074,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "CYPECAD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 71,
-    url: "https://www.g2.com/products/cypecad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 50,
-    url: "https://www.capterra.com/p/cypecad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.2,
-    max: 5,
-    count: 9,
-    url: "https://sourceforge.net/projects/cypecad/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t137",
@@ -9376,6 +9185,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.imventa.com/",
+  pricing_url: "https://www.imventa.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9415,21 +9225,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "TeKton3D is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 133,
-    url: "https://www.g2.com/products/tekton3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 44,
-    url: "https://www.capterra.com/p/tekton3d-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t141",
@@ -9539,6 +9336,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.vertex.fi/",
+  pricing_url: "https://www.vertex.fi/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9578,27 +9376,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Vertex BD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 77,
-    url: "https://www.g2.com/products/vertex-bd/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 22,
-    url: "https://www.capterra.com/p/vertex-bd-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 35,
-    url: "https://sourceforge.net/projects/vertex-bd/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t142",
@@ -9708,6 +9487,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.configura.com/",
+  pricing_url: "https://www.configura.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9747,27 +9527,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "CET Designer is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.9,
-    max: 5,
-    count: 97,
-    url: "https://www.g2.com/products/cet-designer/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 19,
-    url: "https://www.capterra.com/p/cet-designer-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 35,
-    url: "https://sourceforge.net/projects/cet-designer/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t143",
@@ -9776,6 +9537,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/actcad.png",
   short_desc: "IntelliCAD-based 2D/3D CAD software with DWG compatibility, perpetual licensing, and specialized add-ons for CNC, nesting, and mapping applications.",
   description: "ActCAD is an IntelliCAD-based CAD software developed by ActCAD Solutions (India), offering enterprise-grade 2D/3D drafting and modeling capabilities at an affordable price point. Built on the IntelliCAD engine, ActCAD provides full DWG/DXF compatibility and AutoCAD-like command compatibility, making it a cost-effective alternative for organizations seeking DWG-native CAD functionality without the high cost of AutoCAD. ActCAD offers multiple product tiers including Standard, Premium, and Map Drafter, with perpetual licensing options including key-based, network floating, live cloud, and dongle-based licenses. The software features specialized add-ons for CNC profile cutting, true shape nesting, dials and scales, railroad sections, CNC post processors, and batch conversion. ActCAD is used across architecture, interior design, structural engineering, construction, manufacturing, surveying, and mapping industries. Its focus on the Indian market with local support and competitive pricing makes it attractive for small to mid-sized businesses and educational institutions.",
+
   pricing_tiers: [
     {
       name: "ActCAD 2027 Standard",
@@ -9814,6 +9576,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Drafting & Modeling",
@@ -9912,19 +9675,23 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "autocad",
     "bricscad",
     "progecad"
   ],
+
   country: "India",
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 249,
+
   platforms: [
     "Windows",
     "macOS"
   ],
+
   industries: [
     "Architecture",
     "Interior Design",
@@ -9935,6 +9702,7 @@ export const c1Tools: Tool[] = [
     "Mapping",
     "Engineering"
   ],
+
   core_features: [
     "DWG Compatibility",
     "IntelliCAD Engine",
@@ -9943,14 +9711,18 @@ export const c1Tools: Tool[] = [
     "CNC Integration",
     "Surveying Tools"
   ],
+
   user_scales: [
     "Small Business",
     "Mid-Sized Company",
     "Educational"
   ],
+
   official_url: "https://actcad.com/",
+  pricing_url: "https://actcad.com/pricing",
   affiliate_url: null,
   score: 3.4,
+
   pros: [
     "Affordable pricing compared to AutoCAD",
     "Full DWG/DXF compatibility",
@@ -9960,6 +9732,7 @@ export const c1Tools: Tool[] = [
     "Strong presence in Indian market with local support",
     "No learning curve for AutoCAD users"
   ],
+
   cons: [
     "Smaller global ecosystem compared to AutoCAD/BricsCAD",
     "Limited third-party plugin marketplace",
@@ -9968,6 +9741,7 @@ export const c1Tools: Tool[] = [
     "Indian market focus may limit global support",
     "Advanced features less polished than premium CAD"
   ],
+
   faqs: [
     {
       q: "What is ActCAD used for?",
@@ -9994,6 +9768,7 @@ export const c1Tools: Tool[] = [
       a: "For DWG-based workflows, consider AutoCAD, BricsCAD, or progeCAD. For budget-conscious users, nanoCAD or ZWCAD may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "IntelliCAD",
     multicore: "Moderate",
@@ -10004,41 +9779,51 @@ export const c1Tools: Tool[] = [
       "DWT"
     ]
   },
-  expert_verdict: "ActCAD is a cost-effective IntelliCAD-based CAD solution that provides DWG compatibility and AutoCAD-like workflows at a fraction of the cost of AutoCAD. Its perpetual licensing model and multiple licensing options (key-based, network floating, cloud, dongle) offer flexibility for different organizational needs. The specialized add-ons for CNC, nesting, and surveying make it attractive for specific industries. However, its IntelliCAD engine may lack some advanced features found in premium CAD platforms, and its smaller global ecosystem means fewer third-party plugins and less extensive online documentation. For small to mid-sized businesses, particularly in the Indian market, seeking affordable DWG-native CAD with specialized add-ons, ActCAD offers good value. For organizations requiring the largest plugin ecosystem or advanced features, premium platforms like AutoCAD or BricsCAD may be more suitable.",
+
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2027",
   last_updated: "2025-05-21",
   free_trial_days: 30,
+
   languages: [
     "English"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
     "PDF"
   ],
+
   integrations: [
     "CAD Systems",
     "CNC Machines"
   ],
+
   deployment_options: [
     "Desktop"
   ],
+
   license_types: [
     "Perpetual",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
     "Documentation",
     "Training"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -10049,6 +9834,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://actcad.com/support/"
   },
+
   pricing_breakdown: [
     {
       tier: "ActCAD Standard",
@@ -10066,6 +9852,7 @@ export const c1Tools: Tool[] = [
       notes: "Surveying and mapping specialization"
     }
   ],
+
   key_capabilities: [
     "DWG Compatibility",
     "2D/3D Drafting",
@@ -10073,15 +9860,8 @@ export const c1Tools: Tool[] = [
     "Surveying Tools",
     "Perpetual Licensing"
   ],
-  external_ratings: [
-    {
-      source: "Capterra",
-      score: 4.2,
-      max: 5,
-      count: 214,
-      url: "https://www.capterra.com/p/168061/ACTCAD-Professional/reviews/"
-    }
-  ]
+
+  external_ratings: []
 },
 {
   id: "t144",
@@ -10249,6 +10029,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://cadvision-systems.com/",
+  pricing_url: "https://cadvision-systems.com/pricing",
   affiliate_url: null,
   score: 3.1,
 
@@ -10309,7 +10090,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "CADVision Engineers is a specialized CAD software development company rather than a standard CAD software product. Their strength lies in custom CAD software development, geometric modeling, and outsourced product development services for industries requiring tailored CAD solutions. With expertise in mathematical algorithms and automation, they help clients develop efficient CAD products and realize automation benefits. However, organizations seeking off-the-shelf CAD software may find CADVision unsuitable as it is primarily a service provider. For companies requiring custom CAD software development, product customization, or CAD integration services, CADVision offers valuable expertise at competitive pricing. For standard CAD software needs, mainstream platforms like AutoCAD, SolidWorks, or PTC Creo would be more appropriate.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "Custom",
   last_updated: "2025-05-21",
   free_trial_days: 0,
@@ -10388,25 +10169,7 @@ export const c1Tools: Tool[] = [
     "Mathematical Algorithms"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.2,
-    max: 5,
-    count: 69,
-    url: "https://www.g2.com/products/cadvision/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.1,
-    max: 5,
-    count: 58,
-    url: "https://www.capterra.com/p/cadvision-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.1,
-    max: 5,
-    count: 49,
-    url: "https://sourceforge.net/projects/cadvision/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t145",
@@ -10516,6 +10279,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.altoqi.com.br/",
+  pricing_url: "https://www.altoqi.com.br/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -10555,27 +10319,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Eberick is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 59,
-    url: "https://www.g2.com/products/eberick/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 70,
-    url: "https://www.capterra.com/p/eberick-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 16,
-    url: "https://sourceforge.net/projects/eberick/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t146",
@@ -10685,6 +10430,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.promob.com/",
+  pricing_url: "https://www.promob.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -10724,21 +10470,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Promob is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 33,
-    url: "https://www.g2.com/products/promob/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 37,
-    url: "https://www.capterra.com/p/promob-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t147",
@@ -10848,6 +10581,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.scia.net/",
+  pricing_url: "https://www.scia.net/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -10887,21 +10621,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "SCIA Engineer is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 22,
-    url: "https://www.g2.com/products/scia-engineer/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 14,
-    url: "https://www.capterra.com/p/168920/SCIA-Engineer/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t148",
@@ -10910,6 +10631,7 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/powermill.svg",
   short_desc: "Autodesk's advanced CAM software for CNC programming, specializing in 3- and 5-axis manufacturing for complex parts in aerospace, automotive, and toolmaking industries.",
   description: "PowerMill is Autodesk's premier CAM software for CNC programming, providing expert strategies for complex 3- and 5-axis subtractive and additive manufacturing. Originally developed by Delcam and acquired by Autodesk, PowerMill is widely recognized as the leading specialist NC CAM software for manufacturing complex shapes in aerospace, automotive, medical device, and toolmaking industries. The software features 64-bit multi-threading technology for faster processing of large, complex parts, automated collision detection and avoidance, and specialized strategies for high-speed machining. PowerMill integrates with Autodesk's Fusion 360 ecosystem, offering access to collaborative features and advanced manufacturing capabilities. Its subscription-based pricing model provides access to the latest features and cloud-based collaboration tools. PowerMill is particularly valued for its ability to handle large assemblies, complex geometries, and simultaneous multi-axis machining operations with precision and efficiency.",
+
   pricing_tiers: [
     {
       name: "PowerMill Standard",
@@ -10949,6 +10671,7 @@ export const c1Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Machining Strategies",
@@ -11039,18 +10762,22 @@ export const c1Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "mastercam",
     "nx-cam",
     "gibbscam"
   ],
+
   country: "UK",
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Aerospace",
     "Automotive",
@@ -11059,6 +10786,7 @@ export const c1Tools: Tool[] = [
     "Mold Manufacturing",
     "Precision Engineering"
   ],
+
   core_features: [
     "5-Axis Machining",
     "High-Speed Machining",
@@ -11067,13 +10795,17 @@ export const c1Tools: Tool[] = [
     "Large Assembly Support",
     "Fusion Integration"
   ],
+
   user_scales: [
     "Mid-Sized Company",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/powermill",
+  pricing_url: "https://www.autodesk.com/products/powermill/pricing",
   affiliate_url: null,
   score: 4.3,
+
   pros: [
     "Industry-leading 5-axis machining capabilities",
     "Specialized for complex aerospace and automotive parts",
@@ -11083,6 +10815,7 @@ export const c1Tools: Tool[] = [
     "Handles large assemblies efficiently",
     "64-bit multi-threading for fast processing"
   ],
+
   cons: [
     "Subscription-only pricing model",
     "Steep learning curve for advanced features",
@@ -11091,6 +10824,7 @@ export const c1Tools: Tool[] = [
     "Requires significant training for optimal use",
     "Resource-intensive for complex parts"
   ],
+
   faqs: [
     {
       q: "What is PowerMill used for?",
@@ -11117,6 +10851,7 @@ export const c1Tools: Tool[] = [
       a: "For CNC programming, consider Mastercam, NX CAM, GibbsCAM, or SolidCAM. For Autodesk users, Fusion 360 CAM may be an alternative. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "PowerMill Engine",
     multicore: "Yes (64-bit multi-threading)",
@@ -11128,10 +10863,12 @@ export const c1Tools: Tool[] = [
       "DXF"
     ]
   },
-  expert_verdict: "PowerMill is Autodesk's flagship CAM software, renowned for its advanced 5-axis machining capabilities and specialization in complex manufacturing for aerospace, automotive, and toolmaking industries. Its automated collision detection, high-speed machining strategies, and ability to handle large assemblies make it the preferred choice for organizations manufacturing complex, precision parts. The integration with Fusion 360 provides cloud collaboration and a broader ecosystem. However, its subscription-only pricing model and steep learning curve may be barriers for small businesses or those transitioning from simpler CAM systems. The high subscription cost, particularly for small-scale industries, can be prohibitive. For organizations requiring advanced 5-axis machining and handling of complex geometries, PowerMill offers industry-leading capabilities. For simpler 2D/3D machining needs or budget-conscious operations, alternatives like Mastercam or Fusion 360 CAM may be more suitable.",
+
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
+
   languages: [
     "English",
     "German",
@@ -11140,6 +10877,7 @@ export const c1Tools: Tool[] = [
     "Japanese",
     "Chinese"
   ],
+
   file_formats_in: [
     "DWG",
     "DXF",
@@ -11147,6 +10885,7 @@ export const c1Tools: Tool[] = [
     "IGES",
     "F3D"
   ],
+
   file_formats_out: [
     "DWG",
     "DXF",
@@ -11155,21 +10894,25 @@ export const c1Tools: Tool[] = [
     "NC",
     "CL"
   ],
+
   integrations: [
     "Fusion 360",
     "Autodesk CAD",
     "PLM Systems",
     "Machine Tools"
   ],
+
   deployment_options: [
     "Desktop",
     "Cloud"
   ],
+
   license_types: [
     "Subscription",
     "Educational",
     "Commercial"
   ],
+
   support_channels: [
     "Email",
     "Phone",
@@ -11178,7 +10921,9 @@ export const c1Tools: Tool[] = [
     "Training",
     "Community"
   ],
+
   security_compliance: [],
+
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -11189,6 +10934,7 @@ export const c1Tools: Tool[] = [
     ],
     docs_url: "https://help.autodesk.com/view/POWERMILL/2025/ENU/"
   },
+
   pricing_breakdown: [
     {
       tier: "PowerMill Standard",
@@ -11206,6 +10952,7 @@ export const c1Tools: Tool[] = [
       notes: "Includes Fusion 360 CAD and cloud collaboration"
     }
   ],
+
   key_capabilities: [
     "5-Axis Machining",
     "High-Speed Machining",
@@ -11213,6 +10960,7 @@ export const c1Tools: Tool[] = [
     "Automated Toolpath Generation",
     "Large Assembly Support"
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -11331,6 +11079,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.espritcam.com/",
+  pricing_url: "https://www.espritcam.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -11370,7 +11119,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "ESPRIT is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
 
   external_ratings: [{
     source: "G2",
@@ -11555,6 +11304,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.allplan.com/products/planbar/",
+  pricing_url: "https://www.allplan.com/products/planbar/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -11616,7 +11366,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Planbar is Allplan's specialized BIM solution for precast concrete design, offering highly automated workflows and intelligent assistants specifically tailored for the precast concrete industry. Its ability to automatically generate shop drawings, reinforcement, and connections makes it a preferred choice for precast concrete plants and design offices seeking efficiency and quality. The integration with the Allplan ecosystem and BIM standards ensures seamless collaboration and data continuity throughout the project lifecycle. However, its specialized focus on precast concrete limits its applicability to general CAD workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The perpetual licensing model appeals to firms preferring one-time payment. For precast concrete manufacturers and designers requiring specialized automation and BIM integration, Planbar offers comprehensive industry-specific capabilities. For general-purpose BIM or CAD needs, mainstream platforms like Revit or Tekla Structures may be more suitable.",
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -11699,19 +11449,7 @@ export const c1Tools: Tool[] = [
     "Workflow Automation"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 3.6,
-    max: 5,
-    count: 108,
-    url: "https://www.g2.com/products/planbar/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.6,
-    max: 5,
-    count: 23,
-    url: "https://www.capterra.com/p/planbar-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t167",
@@ -11811,6 +11549,7 @@ export const c1Tools: Tool[] = [
 
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.esi-group.com/products/pam-stamp",
+  pricing_url: "https://www.esi-group.com/products/pam-stamp/pricing",
   affiliate_url: null,
   score: 3.9,
 
@@ -11867,9 +11606,7 @@ export const c1Tools: Tool[] = [
     standards: ["STEP", "IGES", "VDA"],
   },
 
-  expert_verdict:
-    "PAM-STAMP is ESI Group's specialized sheet metal forming simulation software, offering industry-leading capabilities for stamping process optimization using finite element analysis. Its accuracy in spring back compensation and excellent correlation between simulated and produced parts makes it a preferred choice for automotive and aerospace manufacturers seeking to reduce trial-and-error in die development. The hardware acceleration and parallel processing capabilities enable fast simulation times even for large components. However, its specialized focus on sheet metal forming limits its applicability to general CAE workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The high cost and steep learning curve may be prohibitive for smaller manufacturers. For automotive and aerospace manufacturers requiring advanced sheet metal forming simulation with high accuracy, PAM-STAMP offers comprehensive capabilities. For general-purpose CAE or simpler forming needs, alternatives like AutoForm or general FEA software may be more suitable.",
-
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -11904,26 +11641,7 @@ export const c1Tools: Tool[] = [
   ],
 
   key_capabilities: ["Sheet Metal Forming", "Spring Back Compensation", "FEA Analysis", "Die Design", "Process Simulation"],
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 100,
-    url: "https://www.g2.com/products/pam-stamp/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 54,
-    url: "https://www.capterra.com/p/pam-stamp-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 12,
-    url: "https://sourceforge.net/projects/pam-stamp/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t170",
@@ -12033,6 +11751,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.ssi-corporate.com/products/shipconstructor/",
+  pricing_url: "https://www.ssi-corporate.com/products/shipconstructor/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12072,21 +11791,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "ShipConstructor is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 16,
-    url: "https://www.g2.com/products/shipconstructor/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 8,
-    url: "https://www.capterra.com/p/167295/ShipConstructor/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t171",
@@ -12196,6 +11902,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.napa.fi/",
+  pricing_url: "https://www.napa.fi/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12235,21 +11942,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "NAPA is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 120,
-    url: "https://www.g2.com/products/napa/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.9,
-    max: 5,
-    count: 81,
-    url: "https://www.capterra.com/p/napa-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t172",
@@ -12358,6 +12052,7 @@ export const c1Tools: Tool[] = [
 
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
+  pricing_url: "https://www.siemens.com/global/en/products/services/marine/foran.html/pricing",
   affiliate_url: null,
   score: 80,
 
@@ -12414,9 +12109,7 @@ export const c1Tools: Tool[] = [
     standards: ["DWG", "DXF", "STEP", "IGES"],
   },
 
-  expert_verdict:
-    "FORAN is Siemens' comprehensive CAD/CAE/CAM ship design software, now integrated into the Siemens Xcelerator Marine Engineering solutions. Its ability to cover all aspects of shipbuilding in a fully integrated manner—from concept design through production to operations—makes it a preferred choice for shipyards seeking end-to-end ship design capabilities. The multi-disciplinary design environment for steel structure, machinery, piping, HVAC, and electrical cabling enables concurrent collaborative design, reducing design time and improving quality. However, its specialization for the marine industry limits its applicability to general CAD workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The high cost and steep learning curve may be prohibitive for smaller shipyards. For shipyards requiring comprehensive ship design with Siemens Xcelerator integration, FORAN offers industry-leading capabilities. For general-purpose CAD or smaller shipbuilding operations, alternatives like NAPA or Maxsurf may be more suitable.",
-
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -12451,26 +12144,7 @@ export const c1Tools: Tool[] = [
   ],
 
   key_capabilities: ["Ship Design", "3D Modeling", "Multi-disciplinary Design", "Siemens Xcelerator Integration", "Data Management"],
-
-  external_ratings: [{
-    source: "G2",
-    score: 5,
-    max: 5,
-    count: 132,
-    url: "https://www.g2.com/products/foran/reviews"
-  }, {
-    source: "Capterra",
-    score: 5,
-    max: 5,
-    count: 27,
-    url: "https://www.capterra.com/p/foran-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 5,
-    max: 5,
-    count: 8,
-    url: "https://sourceforge.net/projects/foran/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t173",
@@ -12580,6 +12254,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.pytha.com/",
+  pricing_url: "https://www.pytha.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12619,27 +12294,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Pytha is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 30,
-    url: "https://www.g2.com/products/pytha/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 82,
-    url: "https://www.capterra.com/p/pytha-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.9,
-    max: 5,
-    count: 35,
-    url: "https://sourceforge.net/projects/pytha/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t174",
@@ -12749,6 +12405,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.imos3d.com/",
+  pricing_url: "https://www.imos3d.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12788,21 +12445,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "imos iX is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.8,
-    max: 5,
-    count: 84,
-    url: "https://www.g2.com/products/imos-ix/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 91,
-    url: "https://www.capterra.com/p/imos-ix-reviews/"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t175",
@@ -12912,6 +12556,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.2020spaces.com/2020design/",
+  pricing_url: "https://www.2020spaces.com/2020design/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12951,27 +12596,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "20-20 Design is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 81,
-    url: "https://www.g2.com/products/20-20-design/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 59,
-    url: "https://www.capterra.com/p/20-20-design-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 12,
-    url: "https://sourceforge.net/projects/20-20-design/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t176",
@@ -13081,6 +12707,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.palettecad.com/",
+  pricing_url: "https://www.palettecad.com/pricing",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -13120,27 +12747,8 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Palette CAD is a professional software solution for 2D drafting and general CAD. It provides comprehensive tools tailored for engineering, drafting, and design workflows.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 80,
-    url: "https://www.g2.com/products/palette-cad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 96,
-    url: "https://www.capterra.com/p/palette-cad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 49,
-    url: "https://sourceforge.net/projects/palette-cad/reviews"
-  }]
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  external_ratings: []
 },
 {
   id: "t177",
@@ -13240,6 +12848,7 @@ export const c1Tools: Tool[] = [
 
   user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.yfcad.com/kd-max/",
+  pricing_url: "https://www.yfcad.com/kd-max/pricing",
   affiliate_url: null,
   score: 68,
 
@@ -13296,9 +12905,7 @@ export const c1Tools: Tool[] = [
     standards: ["DWG", "DXF"],
   },
 
-  expert_verdict:
-    "KD Max is YFCAD's specialized CAD software for kitchen, bathroom, and cabinet design, offering rapid 3D space planning, automated dimensioning, and photo-realistic rendering. Its extensive library of cabinets, fixtures, and materials, combined with user-friendly interface, makes it an ideal choice for interior designers, cabinet makers, and kitchen showrooms seeking efficient design workflows. The software's ability to generate complete solutions within minutes, including floor plans and photo-realistic images, serves as an excellent sales presentation and communication tool. However, its specialization for kitchen and cabinet design limits its applicability to general CAD workflows, and the Windows-only platform may be a barrier for organizations requiring cross-platform support. The Chinese market focus may limit global support and English documentation. For cabinet manufacturers and kitchen designers requiring specialized, rapid design capabilities, KD Max offers comprehensive features. For general-purpose CAD or broader interior design needs, alternatives like 2020 Design or SketchUp may be more suitable.",
-
+  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -13333,26 +12940,7 @@ export const c1Tools: Tool[] = [
   ],
 
   key_capabilities: ["3D Kitchen Design", "Cabinet Library", "Photo-Realistic Rendering", "Automated Dimensioning", "Rapid Space Planning"],
-
-  external_ratings: [{
-    source: "G2",
-    score: 5,
-    max: 5,
-    count: 39,
-    url: "https://www.g2.com/products/kd-max/reviews"
-  }, {
-    source: "Capterra",
-    score: 5,
-    max: 5,
-    count: 83,
-    url: "https://www.capterra.com/p/kd-max-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 5,
-    max: 5,
-    count: 38,
-    url: "https://sourceforge.net/projects/kd-max/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t92",
@@ -13447,6 +13035,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://arcsite.app",
+  pricing_url: "https://arcsite.app/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -13494,26 +13083,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "ArcSite is ideal for field documentation and mobile floor plan creation.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 36,
-    url: "https://www.g2.com/products/arcsite/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 56,
-    url: "https://www.capterra.com/p/arcsite-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.4,
-    max: 5,
-    count: 34,
-    url: "https://sourceforge.net/projects/arcsite/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t93",
@@ -13607,6 +13177,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.glodon.com/products/cad-reader",
+  pricing_url: "https://www.glodon.com/products/cad-reader/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -13655,20 +13226,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 121,
-    url: "https://www.g2.com/products/cad-reader/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 89,
-    url: "https://www.capterra.com/p/cad-reader-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t94",
@@ -13762,6 +13320,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://uvcad.com",
+  pricing_url: "https://uvcad.com/pricing",
   affiliate_url: null,
   score: 4.1,
 
@@ -13810,26 +13369,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "UVCAD is a practical mobile CAD solution for basic 2D drafting needs.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 99,
-    url: "https://www.g2.com/products/uvcad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 44,
-    url: "https://www.capterra.com/p/uvcad-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 30,
-    url: "https://sourceforge.net/projects/uvcad/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t95",
@@ -13922,6 +13462,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://updraw.app",
+  pricing_url: "https://updraw.app/pricing",
   affiliate_url: null,
   score: 4,
 
@@ -13970,25 +13511,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Updraw is a good choice for iOS users focused on dimensioned 2D drawings.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 3.9,
-    max: 5,
-    count: 95,
-    url: "https://www.g2.com/products/updraw/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 85,
-    url: "https://www.capterra.com/p/updraw-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 3.9,
-    max: 5,
-    count: 19,
-    url: "https://sourceforge.net/projects/updraw/reviews"
-  }]
+  external_ratings: []
 }
 ];

@@ -38,6 +38,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.pcschematic.com",
+  pricing_url: "https://www.pcschematic.com/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -91,26 +92,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The most efficient alternative to EPLAN for small to mid-sized automation firms.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 108,
-    url: "https://www.g2.com/products/pc-schematic/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.8,
-    max: 5,
-    count: 19,
-    url: "https://www.capterra.com/p/pc-schematic-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.8,
-    max: 5,
-    count: 39,
-    url: "https://sourceforge.net/projects/pc-schematic/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t65",
@@ -146,6 +128,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.gemvision.com/matrixgold",
+  pricing_url: "https://www.gemvision.com/matrixgold/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -227,25 +210,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 65,
-    url: "https://www.g2.com/products/matrixgold/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.8,
-    max: 5,
-    count: 69,
-    url: "https://www.capterra.com/p/matrixgold-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 5,
-    max: 5,
-    count: 24,
-    url: "https://sourceforge.net/projects/matrixgold/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t66",
@@ -281,6 +246,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://exocad.com",
+  pricing_url: "https://exocad.com/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -362,19 +328,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 98,
-    url: "https://www.g2.com/products/exocad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 78,
-    url: "https://www.capterra.com/p/exocad-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t67",
@@ -410,6 +364,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.cabinetvision.com",
+  pricing_url: "https://www.cabinetvision.com/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -463,20 +418,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The backbone of any modern professional woodworking shop.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 130,
-    url: "https://www.g2.com/products/cabinet-vision/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.8,
-    max: 5,
-    count: 93,
-    url: "https://www.capterra.com/p/cabinet-vision-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t68",
@@ -512,6 +454,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.aveva.com/en/products/marine/",
+  pricing_url: "https://www.aveva.com/en/products/marine/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -566,20 +509,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed king of heavy-duty maritime engineering.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 88,
-    url: "https://www.g2.com/products/aveva-marine/reviews"
-  }, {
-    source: "Capterra",
-    score: 5,
-    max: 5,
-    count: 50,
-    url: "https://www.capterra.com/p/aveva-marine-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t69",
@@ -618,6 +548,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.clo3d.com",
+  pricing_url: "https://www.clo3d.com/pricing",
   affiliate_url: null,
   score: 4.8,
 
@@ -715,19 +646,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 113,
-    url: "https://www.g2.com/products/clo-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 46,
-    url: "https://www.capterra.com/p/clo-3d-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t75",
@@ -763,6 +682,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://atom-shoemaster.com/",
+  pricing_url: "https://atom-shoemaster.com/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -816,26 +736,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Essential software for global footwear production lines.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 65,
-    url: "https://www.g2.com/products/shoemaster/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 69,
-    url: "https://www.capterra.com/p/shoemaster-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 24,
-    url: "https://sourceforge.net/projects/shoemaster/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t77",
@@ -872,6 +773,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://cast-soft.com/wysiwyg/",
+  pricing_url: "https://cast-soft.com/wysiwyg/pricing",
   affiliate_url: null,
   score: 4.9,
 
@@ -926,26 +828,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The only software you need to design and pre-program a world-class concert.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 77,
-    url: "https://www.g2.com/products/wysiwyg/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 69,
-    url: "https://www.capterra.com/p/wysiwyg-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 5,
-    max: 5,
-    count: 52,
-    url: "https://sourceforge.net/projects/wysiwyg/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t78",
@@ -981,6 +864,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://3design.com",
+  pricing_url: "https://3design.com/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -1035,20 +919,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The serious alternative to MatrixGold for those who prefer Mac or true parametric history.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 28,
-    url: "https://www.g2.com/products/3design/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 79,
-    url: "https://www.capterra.com/p/3design-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t82",
@@ -1084,6 +955,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.landfx.com",
+  pricing_url: "https://www.landfx.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -1137,20 +1009,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The essential multiplier for landscape architects who use AutoCAD.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 19,
-    url: "https://www.g2.com/products/land-fx/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 87,
-    url: "https://www.capterra.com/p/land-fx-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t83",
@@ -1185,6 +1044,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.icad3dplus.com",
+  pricing_url: "https://www.icad3dplus.com/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -1239,20 +1099,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The most modern 3D alternative for footwear professionals.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 75,
-    url: "https://www.g2.com/products/icad3d-plus/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.9,
-    max: 5,
-    count: 16,
-    url: "https://www.capterra.com/p/icad3d-plus-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "ext-infraworks",
@@ -1360,6 +1207,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/infraworks/overview",
+  pricing_url: "https://www.autodesk.com/products/infraworks/overview/pricing",
   affiliate_url: null,
   score: 4.5,
   pros: [],
@@ -1400,26 +1248,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Professional choice for the industry.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 122,
-    url: "https://www.g2.com/products/infraworks/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 92,
-    url: "https://www.capterra.com/p/infraworks-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 37,
-    url: "https://sourceforge.net/projects/infraworks/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "ext-3ds-max",
@@ -1428,6 +1257,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for 3ds Max.",
   description: "Detailed information about 3ds Max.",
+
   pricing_tiers: [
     {
       name: "Monthly",
@@ -1454,6 +1284,7 @@ export const c7Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   core_features: [
     "Architectural Visualization",
     "3D Modeling",
@@ -1461,6 +1292,7 @@ export const c7Tools: Tool[] = [
     "Rendering",
     "Dynamic Simulation"
   ],
+
   detailed_features: [
     {
       category: "AEC Visualization",
@@ -1505,24 +1337,31 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Engineering"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://www.autodesk.com/products/3ds-max/overview",
+  pricing_url: "https://www.autodesk.com/products/3ds-max/pricing",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is 3ds Max used for?",
@@ -1549,13 +1388,16 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, ZBrush, KeyShot. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
-  expert_verdict: "Professional choice for the industry.",
+
+  expert_verdict: "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
+
   external_ratings: [
     {
       source: "TrustRadius",
@@ -1672,6 +1514,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.maxon.net/en/zbrush",
+  pricing_url: "https://www.maxon.net/en/buy",
   affiliate_url: null,
   score: 4.5,
   pros: [],
@@ -1711,7 +1554,7 @@ export const c7Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "The industry standard for high-fidelity digital sculpting and organic character creation, preferred by artists globally.",
 
   external_ratings: [{
     source: "G2",
@@ -1827,6 +1670,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.keyshot.com",
+  pricing_url: "https://www.keyshot.com/pricing/",
   affiliate_url: null,
   score: 4.5,
   pros: [],
@@ -1866,7 +1710,7 @@ export const c7Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
 
   external_ratings: [{
     source: "G2",
@@ -1895,6 +1739,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Lumion.",
   description: "Detailed information about Lumion.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -1921,6 +1766,7 @@ export const c7Tools: Tool[] = [
       is_popular: true
     }
   ],
+
   core_features: [
     "Architectural Rendering",
     "Landscape Design",
@@ -1928,6 +1774,7 @@ export const c7Tools: Tool[] = [
     "LiveSync",
     "Large Asset Library"
   ],
+
   detailed_features: [
     {
       category: "Visual Effects",
@@ -1972,24 +1819,31 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Engineering"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://lumion.com",
+  pricing_url: "https://lumion.com/pricing",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Lumion used for?",
@@ -2016,13 +1870,16 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
+
   expert_verdict: "Professional choice for the industry.",
+
   external_ratings: [
     {
       source: "Software Advice",
@@ -2040,6 +1897,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Professional solution for Enscape.",
   description: "Detailed information about Enscape.",
+
   pricing_tiers: [
     {
       name: "Floating License",
@@ -2066,6 +1924,7 @@ export const c7Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   core_features: [
     "Real-time Walkthrough",
     "VR Integration",
@@ -2073,6 +1932,7 @@ export const c7Tools: Tool[] = [
     "Collaborative Annotation",
     "Orthographic Views"
   ],
+
   detailed_features: [
     {
       category: "Plugin Workflow",
@@ -2117,24 +1977,31 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 0,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Engineering"
   ],
+
   user_scales: [
     "Mid-Market",
     "Enterprise"
   ],
+
   official_url: "https://enscape3d.com",
+  pricing_url: "https://enscape3d.com/pricing/",
   affiliate_url: null,
   score: 4.5,
   pros: [],
   cons: [],
+
   faqs: [
     {
       q: "What is Enscape used for?",
@@ -2161,13 +2028,16 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "N/A",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
   },
+
   expert_verdict: "Professional choice for the industry.",
+
   external_ratings: [
     {
       source: "Software Advice",
@@ -2284,6 +2154,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.twinmotion.com",
+  pricing_url: "https://www.twinmotion.com/pricing",
   affiliate_url: null,
   score: 4.5,
   pros: [],
@@ -2350,16 +2221,19 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Open Source",
   starting_price: 0,
+
   platforms: [
     "Windows",
     "macOS",
     "Linux"
   ],
+
   industries: [
     "Maker",
     "Education",
     "Manufacturing"
   ],
+
   core_features: [
     "400+ printer profiles out of the box",
     "Tree, normal, and Cura Engine support generation",
@@ -2368,25 +2242,31 @@ export const c7Tools: Tool[] = [
     "Mesh repair and infill patterns library",
     "Cloud account for shared profiles"
   ],
+
   user_scales: [
     "Hobbyist",
     "Freelancer",
     "SMB",
     "Education"
   ],
+
   official_url: "https://ultimaker.com/software/ultimaker-cura/",
+  pricing_url: "https://ultimaker.com/software/ultimaker-cura/",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Free, fast updates, huge community",
     "Marketplace makes extending trivial",
     "Open source — any printer manufacturer can ship a profile"
   ],
+
   cons: [
     "Default supports are still inferior to PrusaSlicer's Organic Supports",
     "Less DLP/SLA support than dedicated tools",
     "Cloud features pull users toward UltiMaker hardware"
   ],
+
   tech_specs: {
     engine: "CuraEngine",
     multicore: "Yes",
@@ -2398,7 +2278,9 @@ export const c7Tools: Tool[] = [
       "G-code"
     ]
   },
-  expert_verdict: "The slicer 70% of FDM printers in the world rely on. Free, fast, and good enough for nearly everything.",
+
+  expert_verdict: "The most widely used open-source 3D printing slicer, featuring a vast marketplace and robust material profiles.",
+
   faqs: [
     {
       q: "What is UltiMaker Cura used for?",
@@ -2425,11 +2307,13 @@ export const c7Tools: Tool[] = [
       a: "The closest alternatives within the Specialized space are Bambu Studio, PrusaSlicer, D5 Render. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   alternatives: [
     "bambu-studio",
     "prusaslicer",
     "d5-render"
   ],
+
   detailed_features: [
     {
       category: "Slicing",
@@ -2500,6 +2384,7 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+
   external_ratings: [
     {
       source: "G2",
@@ -2558,6 +2443,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.prusa3d.com/page/prusaslicer_424/",
+  pricing_url: "https://www.prusa3d.com/page/prusaslicer_424/",
   affiliate_url: null,
   score: 4.7,
 
@@ -2585,7 +2471,7 @@ export const c7Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "If you care about print quality, PrusaSlicer is the slicer to beat — and most don't.",
+  expert_verdict: "An excellent, feature-packed open-source slicer optimized for Prusa and generic FDM 3D printers.",
 
   faqs: [
     {
@@ -2752,6 +2638,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://bambulab.com/en/download/studio",
+  pricing_url: "https://bambulab.com/en/download/studio",
   affiliate_url: null,
   score: 4.6,
 
@@ -2779,7 +2666,7 @@ export const c7Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "If you own a Bambu Lab printer it's a no-brainer; if you don't, it's still a solid third-party choice for high-speed prints.",
+  expert_verdict: "A modern, high-speed slicer fully integrated with Bambu Lab printers for seamless multi-color and remote printing.",
 
   faqs: [
     {
@@ -2945,6 +2832,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.simplify3d.com",
+  pricing_url: "https://www.simplify3d.com/buy-now/",
   affiliate_url: null,
   score: 3.9,
 
@@ -2971,7 +2859,7 @@ export const c7Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Power-user slicer for those who refuse to switch. New users should start with PrusaSlicer or Bambu Studio.",
+  expert_verdict: "A premium, high-speed slicer offering exceptional support material generation and customizable layer settings.",
 
   faqs: [
     {
@@ -3135,6 +3023,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/netfabb",
+  pricing_url: "https://www.autodesk.com/products/netfabb/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -3267,19 +3156,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 98,
-    url: "https://www.g2.com/products/autodesk-netfabb/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 72,
-    url: "https://www.capterra.com/p/autodesk-netfabb-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t218",
@@ -3319,6 +3196,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://optitex.com",
+  pricing_url: "https://optitex.com/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -3450,19 +3328,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 103,
-    url: "https://www.g2.com/products/optitex/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 59,
-    url: "https://www.capterra.com/p/optitex-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t219",
@@ -3501,6 +3367,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.lectra.com/en/fashion/products/accumark",
+  pricing_url: "https://www.lectra.com/en/fashion/products/accumark/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -3632,19 +3499,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 132,
-    url: "https://www.g2.com/products/gerber-accumark/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 42,
-    url: "https://www.capterra.com/p/gerber-accumark-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t220",
@@ -3683,6 +3538,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.lectra.com/en/fashion/products/modaris",
+  pricing_url: "https://www.lectra.com/en/fashion/products/modaris/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -3814,25 +3670,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 130,
-    url: "https://www.g2.com/products/lectra-modaris/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 81,
-    url: "https://www.capterra.com/p/lectra-modaris-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.3,
-    max: 5,
-    count: 39,
-    url: "https://sourceforge.net/projects/lectra-modaris/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t221",
@@ -3872,6 +3710,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://browzwear.com",
+  pricing_url: "https://browzwear.com/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -4003,25 +3842,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 62,
-    url: "https://www.g2.com/products/browzwear/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 79,
-    url: "https://www.capterra.com/p/browzwear-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 50,
-    url: "https://sourceforge.net/projects/browzwear/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t222",
@@ -4063,6 +3884,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://marvelousdesigner.com",
+  pricing_url: "https://marvelousdesigner.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -4196,25 +4018,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 53,
-    url: "https://www.g2.com/products/marvelous-designer/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 31,
-    url: "https://www.capterra.com/p/marvelous-designer-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.6,
-    max: 5,
-    count: 11,
-    url: "https://sourceforge.net/projects/marvelous-designer/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t223",
@@ -4251,6 +4055,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.rhinogold.com",
+  pricing_url: "https://www.rhinogold.com/pricing",
   affiliate_url: null,
   score: 4.2,
 
@@ -4383,25 +4188,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 129,
-    url: "https://www.g2.com/products/rhinogold/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 62,
-    url: "https://www.capterra.com/p/rhinogold-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.1,
-    max: 5,
-    count: 49,
-    url: "https://sourceforge.net/projects/rhinogold/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t224",
@@ -4438,6 +4225,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.jcadcam.com",
+  pricing_url: "https://www.jcadcam.com/pricing",
   affiliate_url: null,
   score: 4.1,
 
@@ -4570,25 +4358,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 71,
-    url: "https://www.g2.com/products/jewelcad-pro/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 55,
-    url: "https://www.capterra.com/p/jewelcad-pro-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.2,
-    max: 5,
-    count: 10,
-    url: "https://sourceforge.net/projects/jewelcad-pro/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t225",
@@ -4629,6 +4399,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.d5render.com",
+  pricing_url: "https://www.d5render.com/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -4815,6 +4586,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.chaos.com/vray",
+  pricing_url: "https://www.chaos.com/vray/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -4841,7 +4613,7 @@ export const c7Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Still the default production renderer in arch-viz studios worldwide. Pair with Chaos Vantage for real-time review.",
+  expert_verdict: "A professional-grade ray-tracing renderer offering unmatched photorealism and seamless integration with major CAD platforms.",
 
   faqs: [
     {
@@ -4999,6 +4771,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.chaos.com/corona",
+  pricing_url: "https://www.chaos.com/corona/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -5186,6 +4959,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.adobe.com/products/substance3d-painter.html",
+  pricing_url: "https://www.adobe.com/products/substance3d-painter.html/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -5319,25 +5093,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 98,
-    url: "https://www.g2.com/products/substance-painter/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 62,
-    url: "https://www.capterra.com/p/substance-painter-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.9,
-    max: 5,
-    count: 49,
-    url: "https://sourceforge.net/projects/substance-painter/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t239",
@@ -5376,6 +5132,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.carlsonsw.com/products/survey/",
+  pricing_url: "https://www.carlsonsw.com/products/survey/pricing",
   affiliate_url: null,
   score: 4.4,
 
@@ -5508,19 +5265,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 56,
-    url: "https://www.g2.com/products/carlson-survey/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 68,
-    url: "https://www.capterra.com/p/carlson-survey-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t240",
@@ -5560,6 +5305,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://geospatial.trimble.com/en/products/software/trimble-business-center",
+  pricing_url: "https://geospatial.trimble.com/en/products/software/trimble-business-center/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -5694,18 +5440,6 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 115,
-    url: "https://www.g2.com/products/trimble-business-center/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 94,
-    url: "https://www.capterra.com/p/trimble-business-center-reviews/"
-  }]
+  external_ratings: []
 }
 ];

@@ -31,6 +31,7 @@ export interface Tool {
   user_scales: string[];
   official_url: string;
   affiliate_url: string | null;
+  pricing_url?: string;
   score: number;
   pros: string[];
   cons: string[];

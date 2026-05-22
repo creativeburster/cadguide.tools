@@ -11,6 +11,7 @@ export const c4Tools: Tool[] = [
   logo_url: "",
   short_desc: "The AEC standard for PDF markup and collaboration.",
   description: "Bluebeam Revu is a project efficiency and collaboration solution that allows users to markup, takeoff, and organize PDF files.",
+
   pricing_tiers: [
     {
       name: "Basics",
@@ -49,6 +50,7 @@ export const c4Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Collaboration",
@@ -93,23 +95,28 @@ export const c4Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "navisworks",
     "solibri",
     "recap-pro"
   ],
+
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 240,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "AEC",
     "Construction",
     "Estimating"
   ],
+
   core_features: [
     "AEC Collaboration",
     "Studio Sessions",
@@ -117,23 +124,29 @@ export const c4Tools: Tool[] = [
     "Quantity Takeoff",
     "Document Management"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.bluebeam.com",
+  pricing_url: "https://www.bluebeam.com/pricing",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Essential construction project hub",
     "Best PDF markup",
     "Estimating integration"
   ],
+
   cons: [
     "No longer free trial version",
     "Subscription shift",
     "Learning curve"
   ],
+
   faqs: [
     {
       q: "What is Bluebeam Revu used for?",
@@ -160,6 +173,7 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are Navisworks, Solibri, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Bluebeam Rendering",
     multicore: "High",
@@ -169,16 +183,9 @@ export const c4Tools: Tool[] = [
       "IFC"
     ]
   },
+
   expert_verdict: "You cannot run a modern construction project without Bluebeam.",
-  external_ratings: [
-    {
-      source: "GetApp",
-      score: 4.7,
-      max: 5,
-      count: 975,
-      url: "https://www.getapp.com/collaboration-software/a/bluebeam-pdf-revu/"
-    }
-  ]
+  external_ratings: []
 },
 {
   id: "t35",
@@ -187,6 +194,7 @@ export const c4Tools: Tool[] = [
   logo_url: "",
   short_desc: "Project review software for clash detection.",
   description: "Navisworks allows architecture, engineering, and construction professionals to holistically review integrated models and data with stakeholders to better control project outcomes.",
+
   pricing_tiers: [
     {
       name: "Manage (Annual)",
@@ -213,6 +221,7 @@ export const c4Tools: Tool[] = [
       is_popular: false
     }
   ],
+
   detailed_features: [
     {
       category: "Coordination",
@@ -257,23 +266,28 @@ export const c4Tools: Tool[] = [
       ]
     }
   ],
+
   alternatives: [
     "solibri",
     "bluebeam-revu",
     "recap-pro"
   ],
+
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 1050,
+
   platforms: [
     "Windows"
   ],
+
   industries: [
     "Construction",
     "AEC",
     "Oil & Gas"
   ],
+
   core_features: [
     "BIM Coordination",
     "Clash Detection",
@@ -281,23 +295,29 @@ export const c4Tools: Tool[] = [
     "Model Aggregation",
     "Cloud Collaboration"
   ],
+
   user_scales: [
     "Enterprise",
     "Mid-Market"
   ],
+
   official_url: "https://www.autodesk.com/navisworks",
+  pricing_url: "https://www.autodesk.com/navisworks/pricing",
   affiliate_url: null,
   score: 4.8,
+
   pros: [
     "Massive model handling",
     "BIM coordination standard",
     "Powerful reports"
   ],
+
   cons: [
     "Dated UI",
     "Steep learning",
     "Expensive viewer"
   ],
+
   faqs: [
     {
       q: "What is Navisworks used for?",
@@ -324,6 +344,7 @@ export const c4Tools: Tool[] = [
       a: "The closest alternatives within the Viewer space are Solibri, Bluebeam Revu, Recap Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
+
   tech_specs: {
     engine: "Autodesk Navisworks",
     multicore: "Moderate",
@@ -334,16 +355,9 @@ export const c4Tools: Tool[] = [
       "IFC"
     ]
   },
+
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
-  external_ratings: [
-    {
-      source: "TrustRadius",
-      score: 9.3,
-      max: 10,
-      count: 43,
-      url: "https://www.trustradius.com/products/navisworks/reviews"
-    }
-  ]
+  external_ratings: []
 },
 {
   id: "t36",
@@ -437,6 +451,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.solibri.com",
+  pricing_url: "https://www.solibri.com/pricing",
   affiliate_url: null,
   score: 4.7,
 
@@ -490,7 +505,7 @@ export const c4Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Solibri finds logical errors that other tools miss.",
+  expert_verdict: "The premier BIM quality assurance and clash detection utility, crucial for verifying model compliance.",
 
   external_ratings: [{
     source: "G2",
@@ -589,6 +604,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.meshlab.net",
+  pricing_url: "https://www.meshlab.net",
   affiliate_url: null,
   score: 4.1,
 
@@ -643,20 +659,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 131,
-    url: "https://www.g2.com/products/meshlab/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 60,
-    url: "https://www.capterra.com/p/meshlab-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t39",
@@ -733,6 +736,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/recap",
+  pricing_url: "https://www.autodesk.com/recap/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -787,26 +791,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The gateway to reality capture in the BIM world.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 102,
-    url: "https://www.g2.com/products/recap-pro/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 36,
-    url: "https://www.capterra.com/p/recap-pro-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 39,
-    url: "https://sourceforge.net/projects/recap-pro/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t48",
@@ -841,6 +826,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.siemens.com",
+  pricing_url: "https://www.siemens.com",
   affiliate_url: null,
   score: 4.2,
 
@@ -895,26 +881,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The standard for viewing Solid Edge data in production.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 41,
-    url: "https://www.g2.com/products/solid-edge-viewer/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 14,
-    url: "https://www.capterra.com/p/solid-edge-viewer-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.2,
-    max: 5,
-    count: 17,
-    url: "https://sourceforge.net/projects/solid-edge-viewer/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t49",
@@ -949,6 +916,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com",
+  pricing_url: "https://www.autodesk.com",
   affiliate_url: null,
   score: 4.3,
 
@@ -1002,25 +970,6 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The essential utility for DWG version management.",
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 73,
-    url: "https://www.g2.com/products/dwg-trueview/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 69,
-    url: "https://www.capterra.com/p/dwg-trueview-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.3,
-    max: 5,
-    count: 25,
-    url: "https://sourceforge.net/projects/dwg-trueview/reviews"
-  }]
+  external_ratings: []
 }
 ];
