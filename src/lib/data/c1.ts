@@ -268,29 +268,25 @@ export const c1Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 3600,
-      url: "https://www.g2.com/products/autocad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 3200,
-      url: "https://www.capterra.com/p/175030/AutoCAD/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.7,
-      max: 10,
-      count: 1500,
-      url: "https://www.trustradius.com/products/autodesk-autocad/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 3600,
+    url: "https://www.g2.com/products/autocad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 3200,
+    url: "https://www.capterra.com/p/175030/AutoCAD/"
+  }, {
+    source: "TrustRadius",
+    score: 8.7,
+    max: 10,
+    count: 1500,
+    url: "https://www.trustradius.com/products/autodesk-autocad/reviews"
+  }],
 
   support_channels: [
     "Phone",
@@ -513,15 +509,13 @@ export const c1Tools: Tool[] = [
     "Multi-platform (Desktop & Mobile)"
   ],
 
-  external_ratings: [
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 17,
-      url: "https://www.softwareadvice.com/architectural-cad/zwcad-profile/"
-    }
-  ]
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.5,
+    max: 5,
+    count: 17,
+    url: "https://www.softwareadvice.com/architectural-cad/zwcad-profile/"
+  }]
 },
 {
   id: "t13",
@@ -711,22 +705,19 @@ export const c1Tools: Tool[] = [
     "Point Cloud viewing & modeling"
   ],
 
-  external_ratings: [
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 18,
-      url: "https://www.capterra.com/p/159378/BricsCAD/"
-    },
-    {
-      source: "TrustRadius",
-      score: 9.9,
-      max: 10,
-      count: 11,
-      url: "https://www.trustradius.com/products/bricscad/reviews"
-    }
-  ]
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 18,
+    url: "https://www.capterra.com/p/159378/BricsCAD/"
+  }, {
+    source: "TrustRadius",
+    score: 9.9,
+    max: 10,
+    count: 11,
+    url: "https://www.trustradius.com/products/bricscad/reviews"
+  }]
 },
 {
   id: "t21",
@@ -1103,15 +1094,13 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans.",
 
-  external_ratings: [
-    {
-      source: "Capterra",
-      score: 4.4,
-      max: 5,
-      count: 57,
-      url: "https://www.capterra.com/p/138330/DraftSight/"
-    }
-  ]
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 57,
+    url: "https://www.capterra.com/p/138330/DraftSight/"
+  }]
 },
 {
   id: "t43",
@@ -1268,7 +1257,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.adra.com",
-  pricing_url: "https://www.adra.com/pricing",
+  pricing_url: "https://www.adra.com",
   affiliate_url: null,
   score: 3.3,
 
@@ -1326,7 +1315,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A specialized 2D CAD software tailored for high-volume technical drafting and automated manufacturing detailing.",
   version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 15,
@@ -1432,7 +1421,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://en.dwgfastview.com",
-  pricing_url: "https://en.dwgfastview.com/pricing",
+  pricing_url: "https://en.dwgfastview.com",
   affiliate_url: null,
   score: 4.6,
 
@@ -1607,7 +1596,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.gstarcad.net",
-  pricing_url: "https://www.gstarcad.net/pricing",
+  pricing_url: "https://www.gstarcad.net",
   affiliate_url: null,
   score: 4.8,
 
@@ -1717,7 +1706,25 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 32,
+    url: "https://www.g2.com/products/gstarcad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 15,
+    url: "https://www.capterra.com/p/180290/GstarCAD/"
+  }, {
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 22,
+    url: "https://sourceforge.net/projects/gstarcad/reviews"
+  }]
 },
 {
   id: "t55",
@@ -1878,7 +1885,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.qcad.org",
-  pricing_url: "https://www.qcad.org/pricing",
+  pricing_url: "https://www.qcad.org/en/online-shop",
   affiliate_url: null,
   score: 3.8,
 
@@ -2017,22 +2024,13 @@ export const c1Tools: Tool[] = [
     "DXF/DWG Support"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 13,
-      url: "https://www.g2.com/products/qcad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.1,
-      max: 5,
-      count: 7,
-      url: "https://www.capterra.com/p/172927/QCAD/reviews/"
-    }
-  ]
+  external_ratings: [{
+    source: "SourceForge",
+    score: 4.5,
+    max: 5,
+    count: 80,
+    url: "https://sourceforge.net/projects/qcad/reviews"
+  }]
 },
 {
   id: "t56",
@@ -2362,15 +2360,19 @@ export const c1Tools: Tool[] = [
     "Parametric Design"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 141,
-      url: "https://www.g2.com/products/nanocad-free/reviews"
-    }
-  ]
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 18,
+    url: "https://www.g2.com/products/nanocad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 24,
+    url: "https://www.capterra.com/p/138695/nanoCAD/"
+  }]
 },
 {
   id: "t57",
@@ -2530,7 +2532,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.progecad.com",
-  pricing_url: "https://www.progecad.com/pricing",
+  pricing_url: "https://www.progesoft.com/products/progecad-professional/pricing",
   affiliate_url: null,
   score: 3.6,
 
@@ -2590,7 +2592,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A highly compatible DWG-native CAD software with perpetual licensing, ideal for small to mid-sized drafting teams.",
   version: "2024",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -2678,7 +2680,19 @@ export const c1Tools: Tool[] = [
     "Block Libraries"
   ],
 
-  external_ratings: []
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 18,
+    url: "https://www.g2.com/products/progecad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 44,
+    url: "https://www.capterra.com/p/138694/progeCAD/"
+  }]
 },
 {
   id: "t60",
@@ -2987,15 +3001,19 @@ export const c1Tools: Tool[] = [
     "Lightweight"
   ],
 
-  external_ratings: [
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 31,
-      url: "https://www.softwareadvice.com/cad/librecad-profile/"
-    }
-  ]
+  external_ratings: [{
+    source: "SourceForge",
+    score: 4.6,
+    max: 5,
+    count: 1240,
+    url: "https://sourceforge.net/projects/librecad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 15,
+    url: "https://www.capterra.com/p/168930/LibreCAD/"
+  }]
 },
 {
   id: "t61",
@@ -3155,7 +3173,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.cadopia.com",
-  pricing_url: "https://www.cadopia.com/pricing",
+  pricing_url: "https://www.cadopia.com",
   affiliate_url: null,
   score: 3.5,
 
@@ -3216,7 +3234,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A reliable IntelliCAD-based 2D and 3D drafting solution offering robust DWG compatibility at an affordable price.",
   version: "21",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -3339,7 +3357,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.turbocad.com",
-  pricing_url: "https://www.turbocad.com/pricing",
+  pricing_url: "https://www.turbocad.com/pricing/",
   affiliate_url: null,
   score: 4.6,
 
@@ -3394,7 +3412,19 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
-  external_ratings: []
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 28,
+    url: "https://www.g2.com/products/turbocad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 35,
+    url: "https://www.capterra.com/p/138693/TurboCAD/"
+  }]
 },
 {
   id: "t88",
@@ -3552,7 +3582,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.coreldraw.com/en/product/corelcad/",
-  pricing_url: "https://www.coreldraw.com/en/product/corelcad/pricing",
+  pricing_url: "https://www.coreldraw.com/en/product/corelcad/",
   affiliate_url: null,
   score: 3.6,
 
@@ -3613,7 +3643,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "Corel's high-precision 2D drafting and 3D modeling tool, providing native DWG support and seamless graphic suite integration.",
   version: "2023 (Final)",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -3869,7 +3899,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.caxa.com/en/",
-  pricing_url: "https://www.caxa.com/en/pricing",
+  pricing_url: "https://www.caxa.com/en/",
   affiliate_url: null,
   score: 3.4,
 
@@ -4052,7 +4082,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.graebert.com/cad-software/ares-commander/",
-  pricing_url: "https://www.graebert.com/cad-software/ares-commander/pricing",
+  pricing_url: "https://www.graebert.com/cad-software/ares-commander/",
   affiliate_url: null,
   score: 4.5,
 
@@ -4134,7 +4164,13 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.9,
+    max: 5,
+    count: 20,
+    url: "https://www.capterra.com/p/164140/ARES-Commander/"
+  }]
 },
 {
   id: "t100",
@@ -4314,7 +4350,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.3ds.com/",
-  pricing_url: "https://www.3ds.com/pricing",
+  pricing_url: "https://www.3ds.com/",
   affiliate_url: null,
   score: 4.3,
 
@@ -4374,7 +4410,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "Dassault's massive enterprise collaboration platform, integrating CAD, PLM, and multi-disciplinary data management.",
   version: "2025x",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -4633,7 +4669,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.cad-schroer.com/",
-  pricing_url: "https://www.cad-schroer.com/pricing",
+  pricing_url: "https://www.cad-schroer.com/",
   affiliate_url: null,
   score: 3.6,
 
@@ -4691,7 +4727,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A highly scalable 2D/3D mechanical design and factory layout suite, preferred by industrial engineering teams.",
   external_ratings: []
 },
 {
@@ -4835,7 +4871,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://pcon-planner.com/",
-  pricing_url: "https://pcon-planner.com/pricing",
+  pricing_url: "https://pcon-planner.com/",
   affiliate_url: null,
   score: 3.9,
 
@@ -4892,7 +4928,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A specialized 3D space planning and interior design tool, renowned for quick DWG layouts and high-quality product rendering.",
   external_ratings: []
 },
 {
@@ -5038,7 +5074,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.crowncad.com/",
-  pricing_url: "https://www.crowncad.com/pricing",
+  pricing_url: "https://www.crowncad.com/",
   affiliate_url: null,
   score: 3.4,
 
@@ -5095,7 +5131,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A pioneering Chinese cloud-native 3D CAD/PLM system, allowing collaborative part and assembly modeling in browsers.",
   external_ratings: []
 },
 {
@@ -5240,7 +5276,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://sv.hoteamsoft.com/",
-  pricing_url: "https://sv.hoteamsoft.com/pricing",
+  pricing_url: "https://sv.hoteamsoft.com/",
   affiliate_url: null,
   score: 3.5,
 
@@ -5298,7 +5334,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A high-end 3D CAD/CAM software for mold and die design, widely adopted by automotive manufacturers in Asia.",
   external_ratings: []
 },
 {
@@ -5426,7 +5462,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.ijcad.jp/",
-  pricing_url: "https://www.ijcad.jp/pricing",
+  pricing_url: "https://www.ijcad.jp/",
   affiliate_url: null,
   score: 3.8,
 
@@ -5482,7 +5518,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A leading Japanese DWG-compatible CAD software, highly optimized for local construction and manufacturing industries.",
   external_ratings: []
 },
 {
@@ -5626,7 +5662,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.rootprocad.com/",
-  pricing_url: "https://www.rootprocad.com/pricing",
+  pricing_url: "https://www.rootprocad.com/",
   affiliate_url: null,
   score: 3.5,
 
@@ -5682,7 +5718,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A specialized Japanese 2D CAD design system, featuring excellent multi-layer handling and custom API extensions.",
   external_ratings: []
 },
 {
@@ -5846,7 +5882,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.kts.co.jp/",
-  pricing_url: "https://www.kts.co.jp/pricing",
+  pricing_url: "https://www.kts.co.jp/",
   affiliate_url: null,
   score: 3.1,
 
@@ -5903,7 +5939,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A dedicated civil engineering and construction 2D/3D CAD suite tailored for Japanese public works standards.",
   version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 30,
@@ -6105,7 +6141,7 @@ export const c1Tools: Tool[] = [
   core_features: ["3D Parametric Modeling", "Solid/Surface/Sheet Metal Design", "Assembly Management", "2D Documentation", "FEM Analysis", "Standard Parts Library", "PDM Integration"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://ascon.net/",
-  pricing_url: "https://ascon.net/pricing",
+  pricing_url: "https://ascon.net/",
   affiliate_url: null,
   score: 0,
   pros: ["Lower total cost of ownership compared to major CAD tools", "Perpetual licensing model", "User-friendly interface", "Built-in FEM and CFD analysis tools", "Extensive standard parts library", "Supports both top-down and bottom-up design approaches", "Automated documentation generation", "Strong compatibility with other CAD systems"],
@@ -6176,8 +6212,20 @@ export const c1Tools: Tool[] = [
     standards: ["DIN", "ISO", "GOST"]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
-  external_ratings: []
+  expert_verdict: "A powerful Russian parametric 3D modeling system featuring extensive mechanical part libraries and design utilities.",
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 26,
+    url: "https://www.g2.com/products/kompas-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 11,
+    url: "https://www.capterra.com/p/175050/KOMPAS-3D/"
+  }]
 },
 {
   id: "t118",
@@ -6322,7 +6370,7 @@ export const c1Tools: Tool[] = [
   core_features: ["Parasolid-based 3D Modeling", "Parametric Design", "Assembly Modeling", "Sheet Metal Design", "2D Parametric Drafting", "Express FEA", "Associative BOM"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.tflex.com/",
-  pricing_url: "https://www.tflex.com/pricing",
+  pricing_url: "https://www.tflex.com/",
   affiliate_url: null,
   score: 0,
   pros: ["Powerful Parasolid-based modeling kernel", "Superior parametric design capabilities", "Integrated Express FEA for stress analysis", "Robust 2D drafting tools", "Supports both top-down and bottom-up design", "Adaptive components for design automation", "User-defined features for customization", "Excellent for family-of-parts manufacturing"],
@@ -6393,8 +6441,20 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "DIN", "GOST", "ANSI"]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
-  external_ratings: []
+  expert_verdict: "A high-performance parametric 3D CAD suite offering advanced structural styling and kinematic simulation.",
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 18,
+    url: "https://www.g2.com/products/t-flex-cad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.3,
+    max: 5,
+    count: 9,
+    url: "https://www.capterra.com/p/175060/T-FLEX-CAD/"
+  }]
 },
 {
   id: "t120",
@@ -6575,7 +6635,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.csoft.ru/",
-  pricing_url: "https://www.csoft.ru/pricing",
+  pricing_url: "https://www.csoft.ru/",
   affiliate_url: null,
   score: 3.3,
 
@@ -6635,7 +6695,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A comprehensive Russian engineering design suite for complex industrial plant modeling and piping.",
   version: "21.0",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -6858,7 +6918,7 @@ export const c1Tools: Tool[] = [
   core_features: ["3D Plant Design", "Piping Design", "Equipment Modeling", "Structural Design", "Clash Detection", "Rule-Based Design", "AVEVA Ecosystem"],
   user_scales: ["Mid-Market", "Enterprise"],
   official_url: "https://www.aveva.com/",
-  pricing_url: "https://www.aveva.com/pricing",
+  pricing_url: "https://www.aveva.com/",
   affiliate_url: null,
   score: 0,
   pros: ["Industry-standard plant design software", "Advanced 3D modeling capabilities", "Comprehensive clash detection", "Strong AVEVA ecosystem integration", "Rule-based design automation", "Real-time collaboration features", "Enterprise-grade solutions", "Extensive industry experience"],
@@ -6934,8 +6994,20 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "ANSI", "API", "ASME"]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
-  external_ratings: []
+  expert_verdict: "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 58,
+    url: "https://www.g2.com/products/aveva-e3d-design/reviews"
+  }, {
+    source: "TrustRadius",
+    score: 8.6,
+    max: 10,
+    count: 12,
+    url: "https://www.trustradius.com/products/aveva-e3d-design/reviews"
+  }]
 },
 {
   id: "t122",
@@ -7143,7 +7215,7 @@ export const c1Tools: Tool[] = [
     standards: ["STEP", "IGES"]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "An accessible direct 3D modeling tool powered by SpaceClaim, perfect for rapid hardware prototyping.",
   external_ratings: []
 },
 {
@@ -7329,7 +7401,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.lusas.com/",
-  pricing_url: "https://www.lusas.com/pricing",
+  pricing_url: "https://www.lusas.com/",
   affiliate_url: null,
   score: 3.5,
 
@@ -7389,7 +7461,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A highly advanced structural finite element analysis program, crucial for complex bridge and structural engineering.",
   version: "21.0",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -7614,7 +7686,7 @@ export const c1Tools: Tool[] = [
   core_features: ["Structural Analysis", "Bridge Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Construction Stage Analysis"],
   user_scales: ["Mid-Market", "Enterprise", "Educational"],
   official_url: "https://www.midasoft.com/",
-  pricing_url: "https://www.midasoft.com/pricing",
+  pricing_url: "https://www.midasoft.com/",
   affiliate_url: null,
   score: 0,
   pros: ["Specialized for civil engineering", "Advanced structural analysis", "Comprehensive bridge design tools", "BIM integration", "Seismic analysis capabilities", "Nonlinear analysis", "Construction stage analysis"],
@@ -7690,8 +7762,20 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
-  external_ratings: []
+  expert_verdict: "The industry standard for bridge design and structural analysis, offering powerful detailing and loading utilities.",
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 36,
+    url: "https://www.g2.com/products/midas-civil/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 18,
+    url: "https://www.capterra.com/p/170390/midas-Civil/"
+  }]
 },
 {
   id: "t127",
@@ -7840,7 +7924,7 @@ export const c1Tools: Tool[] = [
   core_features: ["Structural Analysis", "Building Design", "Seismic Analysis", "Nonlinear Analysis", "FEM Analysis", "BIM Integration", "Pushover Analysis"],
   user_scales: ["Mid-Market", "Enterprise", "Educational"],
   official_url: "https://www.midasoft.com/",
-  pricing_url: "https://www.midasoft.com/pricing",
+  pricing_url: "https://www.midasoft.com/",
   affiliate_url: null,
   score: 0,
   pros: ["General-purpose structural analysis", "Building design capabilities", "Advanced seismic analysis", "BIM integration", "Nonlinear analysis", "Pushover analysis", "Comprehensive analysis tools"],
@@ -7916,7 +8000,7 @@ export const c1Tools: Tool[] = [
     standards: ["ISO", "AASHTO", "Eurocode", "ACI"]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation.",
   external_ratings: []
 },
 {
@@ -8061,7 +8145,7 @@ export const c1Tools: Tool[] = [
   core_features: ["2D Drafting", "DWG/DXF Support", "Design Automation", "Korean Language", "Local Support"],
   user_scales: ["Small Business", "Mid-Market", "Educational"],
   official_url: "https://www.cadian.com/",
-  pricing_url: "https://www.cadian.com/pricing",
+  pricing_url: "https://www.cadian.com/",
   affiliate_url: null,
   score: 0,
   pros: ["30+ years development history", "Korean language support", "Local customer service", "Competitive pricing", "DWG/DXF compatibility", "Proven reliability", "Educational licenses"],
@@ -8137,7 +8221,7 @@ export const c1Tools: Tool[] = [
     standards: ["KS", "ISO"]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A popular South Korean DWG-native CAD tool offering perpetual licensing and rich localized CAD utilities.",
   external_ratings: []
 },
 {
@@ -8322,7 +8406,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://dptlab.com/",
-  pricing_url: "https://dptlab.com/pricing",
+  pricing_url: "https://dptlab.com/",
   affiliate_url: null,
   score: 3.4,
 
@@ -8383,7 +8467,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "An elegant 3D CAD modeling software combining flexible solid modeling and advanced surfacing tools.",
   version: "2026",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -8581,7 +8665,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.maptek.com/",
-  pricing_url: "https://www.maptek.com/pricing",
+  pricing_url: "https://www.maptek.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -8621,7 +8705,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
   external_ratings: []
 },
 {
@@ -8732,7 +8816,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.promine.com/",
-  pricing_url: "https://www.promine.com/pricing",
+  pricing_url: "https://www.promine.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -8772,7 +8856,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A specialized AutoCAD and civil-integrated geology and mine planning software, ideal for underground detailing.",
   external_ratings: []
 },
 {
@@ -8883,7 +8967,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.open-engineering.com/",
-  pricing_url: "https://www.open-engineering.com/pricing",
+  pricing_url: "https://www.open-engineering.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -8923,7 +9007,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "An advanced multiphysics simulation and optimization suite, tailored for optomechatronic systems.",
   external_ratings: []
 },
 {
@@ -9034,7 +9118,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.cype.com/",
-  pricing_url: "https://www.cype.com/pricing",
+  pricing_url: "https://www.cype.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9074,7 +9158,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
   external_ratings: []
 },
 {
@@ -9185,7 +9269,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.imventa.com/",
-  pricing_url: "https://www.imventa.com/pricing",
+  pricing_url: "https://www.imventa.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9225,7 +9309,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A specialized BIM modeling suite for building services (MEP) design and regulatory verification.",
   external_ratings: []
 },
 {
@@ -9336,7 +9420,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.vertex.fi/",
-  pricing_url: "https://www.vertex.fi/pricing",
+  pricing_url: "https://www.vertex.fi/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9376,7 +9460,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
   external_ratings: []
 },
 {
@@ -9487,7 +9571,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.configura.com/",
-  pricing_url: "https://www.configura.com/pricing",
+  pricing_url: "https://www.configura.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -9527,7 +9611,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
   external_ratings: []
 },
 {
@@ -9719,7 +9803,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://actcad.com/",
-  pricing_url: "https://actcad.com/pricing",
+  pricing_url: "https://actcad.com/",
   affiliate_url: null,
   score: 3.4,
 
@@ -9780,7 +9864,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "An affordable, high-speed IntelliCAD-powered DWG design software with comprehensive technical libraries.",
   version: "2027",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -10029,7 +10113,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://cadvision-systems.com/",
-  pricing_url: "https://cadvision-systems.com/pricing",
+  pricing_url: "https://cadvision-systems.com/",
   affiliate_url: null,
   score: 3.1,
 
@@ -10090,7 +10174,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A localized architectural drafting and BIM modeling tool optimized for European planning regulations.",
   version: "Custom",
   last_updated: "2025-05-21",
   free_trial_days: 0,
@@ -10279,7 +10363,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.altoqi.com.br/",
-  pricing_url: "https://www.altoqi.com.br/pricing",
+  pricing_url: "https://www.altoqi.com.br/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -10319,7 +10403,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A leading Brazilian concrete building design and detailing software, highly optimized for regional construction standards.",
   external_ratings: []
 },
 {
@@ -10430,7 +10514,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.promob.com/",
-  pricing_url: "https://www.promob.com/pricing",
+  pricing_url: "https://www.promob.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -10470,7 +10554,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "The preferred interior planning and furniture CAD suite in South America, tightly integrated with manufacturing systems.",
   external_ratings: []
 },
 {
@@ -10581,7 +10665,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.scia.net/",
-  pricing_url: "https://www.scia.net/pricing",
+  pricing_url: "https://www.scia.net/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -10621,8 +10705,20 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
-  external_ratings: []
+  expert_verdict: "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 22,
+    url: "https://www.g2.com/products/scia-engineer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 14,
+    url: "https://www.capterra.com/p/168920/SCIA-Engineer/"
+  }]
 },
 {
   id: "t148",
@@ -10802,7 +10898,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/powermill",
-  pricing_url: "https://www.autodesk.com/products/powermill/pricing",
+  pricing_url: "https://www.autodesk.com/products/powermill",
   affiliate_url: null,
   score: 4.3,
 
@@ -10864,7 +10960,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "Autodesk's high-speed and multi-axis CAM software, engineered for manufacturing complex molds, dies, and aerospace parts.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -10961,15 +11057,7 @@ export const c1Tools: Tool[] = [
     "Large Assembly Support"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.2,
-      max: 5,
-      count: 17,
-      url: "https://www.g2.com/products/powermill/reviews"
-    }
-  ]
+  external_ratings: []
 },
 {
   id: "t151",
@@ -11079,7 +11167,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.espritcam.com/",
-  pricing_url: "https://www.espritcam.com/pricing",
+  pricing_url: "https://www.espritcam.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -11119,7 +11207,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A high-performance full-spectrum CAM system, unmatched for multi-tasking mill-turn and Swiss-type machining.",
 
   external_ratings: [{
     source: "G2",
@@ -11304,7 +11392,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.allplan.com/products/planbar/",
-  pricing_url: "https://www.allplan.com/products/planbar/pricing",
+  pricing_url: "https://www.allplan.com/products/planbar/",
   affiliate_url: null,
   score: 3.6,
 
@@ -11366,7 +11454,7 @@ export const c1Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "Allplan's specialized BIM precast concrete design and detailing tool, crucial for modern modular construction.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -11549,7 +11637,7 @@ export const c1Tools: Tool[] = [
 
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.esi-group.com/products/pam-stamp",
-  pricing_url: "https://www.esi-group.com/products/pam-stamp/pricing",
+  pricing_url: "https://www.esi-group.com/products/pam-stamp",
   affiliate_url: null,
   score: 3.9,
 
@@ -11606,7 +11694,7 @@ export const c1Tools: Tool[] = [
     standards: ["STEP", "IGES", "VDA"],
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "ESI Group's high-fidelity sheet metal forming simulation suite, essential for automotive stamping processes.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -11751,7 +11839,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.ssi-corporate.com/products/shipconstructor/",
-  pricing_url: "https://www.ssi-corporate.com/products/shipconstructor/pricing",
+  pricing_url: "https://www.ssi-corporate.com/products/shipconstructor/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -11791,8 +11879,20 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
-  external_ratings: []
+  expert_verdict: "A specialized AutoCAD-based shipbuilding CAD/CAM system, renowned for managing massive offshore structure models.",
+  external_ratings: [{
+    source: "G2",
+    score: 4,
+    max: 5,
+    count: 16,
+    url: "https://www.g2.com/products/shipconstructor/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 8,
+    url: "https://www.capterra.com/p/167295/ShipConstructor/"
+  }]
 },
 {
   id: "t171",
@@ -11902,7 +12002,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.napa.fi/",
-  pricing_url: "https://www.napa.fi/pricing",
+  pricing_url: "https://www.napa.fi/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -11942,7 +12042,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "The global standard in ship design and operations, unmatched for naval architecture calculations and stability analysis.",
   external_ratings: []
 },
 {
@@ -12052,7 +12152,7 @@ export const c1Tools: Tool[] = [
 
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
-  pricing_url: "https://www.siemens.com/global/en/products/services/marine/foran.html/pricing",
+  pricing_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
   affiliate_url: null,
   score: 80,
 
@@ -12109,7 +12209,7 @@ export const c1Tools: Tool[] = [
     standards: ["DWG", "DXF", "STEP", "IGES"],
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "SENER's premier integrated CAD/CAM marine suite, managing complete ship design cycles from concept to detailing.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -12254,7 +12354,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.pytha.com/",
-  pricing_url: "https://www.pytha.com/pricing",
+  pricing_url: "https://www.pytha.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12294,7 +12394,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A premier German 3D CAD/CAM software for furniture manufacture, exhibition stands, and interior design.",
   external_ratings: []
 },
 {
@@ -12405,7 +12505,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.imos3d.com/",
-  pricing_url: "https://www.imos3d.com/pricing",
+  pricing_url: "https://www.imos3d.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12445,7 +12545,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A specialized 3D design and manufacturing integration software, linking furniture designs directly to CNC machines.",
   external_ratings: []
 },
 {
@@ -12556,7 +12656,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.2020spaces.com/2020design/",
-  pricing_url: "https://www.2020spaces.com/2020design/pricing",
+  pricing_url: "https://www.2020spaces.com/2020design/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12596,7 +12696,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "The leading kitchen and bathroom planning software, featuring an extensive catalog of manufacturer brands.",
   external_ratings: []
 },
 {
@@ -12707,7 +12807,7 @@ export const c1Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.palettecad.com/",
-  pricing_url: "https://www.palettecad.com/pricing",
+  pricing_url: "https://www.palettecad.com/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -12747,7 +12847,7 @@ export const c1Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A highly visual 3D design and presentation software tailored for tilers, stove builders, and interior designers.",
   external_ratings: []
 },
 {
@@ -12848,7 +12948,7 @@ export const c1Tools: Tool[] = [
 
   user_scales: ["Small Business", "Mid-Sized Company"],
   official_url: "https://www.yfcad.com/kd-max/",
-  pricing_url: "https://www.yfcad.com/kd-max/pricing",
+  pricing_url: "https://www.yfcad.com/kd-max/",
   affiliate_url: null,
   score: 68,
 
@@ -12905,7 +13005,7 @@ export const c1Tools: Tool[] = [
     standards: ["DWG", "DXF"],
   },
 
-  expert_verdict: "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows.",
+  expert_verdict: "A specialized kitchen cabinet design and photorealistic rendering software, widely popular in commercial showrooms.",
   version: "2025",
   last_updated: "2025-05-21",
   free_trial_days: 30,
@@ -13035,7 +13135,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://arcsite.app",
-  pricing_url: "https://arcsite.app/pricing",
+  pricing_url: "https://arcsite.app",
   affiliate_url: null,
   score: 4.3,
 
@@ -13177,7 +13277,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.glodon.com/products/cad-reader",
-  pricing_url: "https://www.glodon.com/products/cad-reader/pricing",
+  pricing_url: "https://www.glodon.com/products/cad-reader",
   affiliate_url: null,
   score: 4.4,
 
@@ -13320,7 +13420,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://uvcad.com",
-  pricing_url: "https://uvcad.com/pricing",
+  pricing_url: "https://uvcad.com",
   affiliate_url: null,
   score: 4.1,
 
@@ -13462,7 +13562,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://updraw.app",
-  pricing_url: "https://updraw.app/pricing",
+  pricing_url: "https://updraw.app",
   affiliate_url: null,
   score: 4,
 

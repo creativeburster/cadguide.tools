@@ -131,7 +131,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.bluebeam.com",
-  pricing_url: "https://www.bluebeam.com/pricing",
+  pricing_url: "https://www.bluebeam.com",
   affiliate_url: null,
   score: 4.9,
 
@@ -185,7 +185,13 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "You cannot run a modern construction project without Bluebeam.",
-  external_ratings: []
+  external_ratings: [{
+    source: "GetApp",
+    score: 4.7,
+    max: 5,
+    count: 975,
+    url: "https://www.getapp.com/collaboration-software/a/bluebeam-pdf-revu/"
+  }]
 },
 {
   id: "t35",
@@ -302,7 +308,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/navisworks",
-  pricing_url: "https://www.autodesk.com/navisworks/pricing",
+  pricing_url: "https://www.autodesk.com/navisworks",
   affiliate_url: null,
   score: 4.8,
 
@@ -357,7 +363,13 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
-  external_ratings: []
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 9.3,
+    max: 10,
+    count: 43,
+    url: "https://www.trustradius.com/products/navisworks/reviews"
+  }]
 },
 {
   id: "t36",
@@ -509,22 +521,16 @@ export const c4Tools: Tool[] = [
 
   external_ratings: [{
     source: "G2",
-    score: 4.6,
+    score: 4.2,
     max: 5,
-    count: 114,
+    count: 12,
     url: "https://www.g2.com/products/solibri/reviews"
   }, {
     source: "Capterra",
     score: 4.5,
     max: 5,
-    count: 74,
-    url: "https://www.capterra.com/p/solibri-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.8,
-    max: 5,
-    count: 13,
-    url: "https://sourceforge.net/projects/solibri/reviews"
+    count: 8,
+    url: "https://www.capterra.com/p/138698/Solibri/"
   }]
 },
 {
@@ -736,7 +742,7 @@ export const c4Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/recap",
-  pricing_url: "https://www.autodesk.com/recap/pricing",
+  pricing_url: "https://www.autodesk.com/recap",
   affiliate_url: null,
   score: 4.6,
 

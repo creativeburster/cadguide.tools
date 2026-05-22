@@ -38,7 +38,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.pcschematic.com",
-  pricing_url: "https://www.pcschematic.com/pricing",
+  pricing_url: "https://www.pcschematic.com",
   affiliate_url: null,
   score: 4.7,
 
@@ -128,7 +128,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.gemvision.com/matrixgold",
-  pricing_url: "https://www.gemvision.com/matrixgold/pricing",
+  pricing_url: "https://www.gemvision.com/matrixgold",
   affiliate_url: null,
   score: 4.9,
 
@@ -246,7 +246,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://exocad.com",
-  pricing_url: "https://exocad.com/pricing",
+  pricing_url: "https://exocad.com",
   affiliate_url: null,
   score: 4.8,
 
@@ -364,7 +364,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.cabinetvision.com",
-  pricing_url: "https://www.cabinetvision.com/pricing",
+  pricing_url: "https://www.cabinetvision.com",
   affiliate_url: null,
   score: 4.7,
 
@@ -454,7 +454,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.aveva.com/en/products/marine/",
-  pricing_url: "https://www.aveva.com/en/products/marine/pricing",
+  pricing_url: "https://www.aveva.com/en/products/marine/",
   affiliate_url: null,
   score: 4.9,
 
@@ -548,7 +548,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.clo3d.com",
-  pricing_url: "https://www.clo3d.com/pricing",
+  pricing_url: "https://www.clo3d.com",
   affiliate_url: null,
   score: 4.8,
 
@@ -682,7 +682,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://atom-shoemaster.com/",
-  pricing_url: "https://atom-shoemaster.com/pricing",
+  pricing_url: "https://atom-shoemaster.com/",
   affiliate_url: null,
   score: 4.7,
 
@@ -773,7 +773,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://cast-soft.com/wysiwyg/",
-  pricing_url: "https://cast-soft.com/wysiwyg/pricing",
+  pricing_url: "https://cast-soft.com/wysiwyg/",
   affiliate_url: null,
   score: 4.9,
 
@@ -864,7 +864,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://3design.com",
-  pricing_url: "https://3design.com/pricing",
+  pricing_url: "https://3design.com",
   affiliate_url: null,
   score: 4.7,
 
@@ -955,7 +955,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.landfx.com",
-  pricing_url: "https://www.landfx.com/pricing",
+  pricing_url: "https://www.landfx.com",
   affiliate_url: null,
   score: 4.6,
 
@@ -1044,7 +1044,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.icad3dplus.com",
-  pricing_url: "https://www.icad3dplus.com/pricing",
+  pricing_url: "https://www.icad3dplus.com",
   affiliate_url: null,
   score: 4.7,
 
@@ -1207,7 +1207,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/infraworks/overview",
-  pricing_url: "https://www.autodesk.com/products/infraworks/overview/pricing",
+  pricing_url: "https://www.autodesk.com/products/infraworks/overview",
   affiliate_url: null,
   score: 4.5,
   pros: [],
@@ -1247,7 +1247,7 @@ export const c7Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
   external_ratings: []
 },
 {
@@ -1398,15 +1398,13 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
 
-  external_ratings: [
-    {
-      source: "TrustRadius",
-      score: 8.8,
-      max: 10,
-      count: 39,
-      url: "https://www.trustradius.com/products/autodesk-3ds-max/reviews"
-    }
-  ]
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 39,
+    url: "https://www.trustradius.com/products/autodesk-3ds-max/reviews"
+  }]
 },
 {
   id: "ext-zbrush",
@@ -1878,17 +1876,15 @@ export const c7Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
 
-  external_ratings: [
-    {
-      source: "Software Advice",
-      score: 4.7,
-      max: 5,
-      count: 155,
-      url: "https://www.softwareadvice.com/architecture/lumion-profile/"
-    }
-  ]
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.7,
+    max: 5,
+    count: 155,
+    url: "https://www.softwareadvice.com/architecture/lumion-profile/"
+  }]
 },
 {
   id: "ext-enscape",
@@ -2036,17 +2032,15 @@ export const c7Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
 
-  external_ratings: [
-    {
-      source: "Software Advice",
-      score: 4.4,
-      max: 5,
-      count: 68,
-      url: "https://www.softwareadvice.com/architectural-cad/enscape-profile/"
-    }
-  ]
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.4,
+    max: 5,
+    count: 68,
+    url: "https://www.softwareadvice.com/architectural-cad/enscape-profile/"
+  }]
 },
 {
   id: "ext-twinmotion",
@@ -2194,7 +2188,7 @@ export const c7Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "Professional choice for the industry.",
+  expert_verdict: "Epic Games' powerful real-time visualization tool, leveraging Unreal Engine for fast, photorealistic architectural rendering.",
 
   external_ratings: [{
     source: "G2",
@@ -2385,22 +2379,19 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.7,
-      max: 5,
-      count: 51,
-      url: "https://www.g2.com/products/ultimaker-cura/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.7,
-      max: 5,
-      count: 36,
-      url: "https://www.capterra.com/reviews/ultimaker-cura"
-    }
-  ]
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 51,
+    url: "https://www.g2.com/products/ultimaker-cura/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 36,
+    url: "https://www.capterra.com/reviews/ultimaker-cura"
+  }]
 },
 {
   id: "t214",
@@ -2969,20 +2960,14 @@ export const c7Tools: Tool[] = [
     source: "G2",
     score: 3.8,
     max: 5,
-    count: 30,
+    count: 44,
     url: "https://www.g2.com/products/simplify3d/reviews"
   }, {
     source: "Capterra",
     score: 4.1,
     max: 5,
-    count: 54,
-    url: "https://www.capterra.com/p/simplify3d-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4,
-    max: 5,
-    count: 44,
-    url: "https://sourceforge.net/projects/simplify3d/reviews"
+    count: 28,
+    url: "https://www.capterra.com/p/138710/Simplify3D/"
   }]
 },
 {
@@ -3023,7 +3008,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/netfabb",
-  pricing_url: "https://www.autodesk.com/products/netfabb/pricing",
+  pricing_url: "https://www.autodesk.com/products/netfabb",
   affiliate_url: null,
   score: 4.3,
 
@@ -3196,7 +3181,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://optitex.com",
-  pricing_url: "https://optitex.com/pricing",
+  pricing_url: "https://optitex.com",
   affiliate_url: null,
   score: 4.3,
 
@@ -3367,7 +3352,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.lectra.com/en/fashion/products/accumark",
-  pricing_url: "https://www.lectra.com/en/fashion/products/accumark/pricing",
+  pricing_url: "https://www.lectra.com/en/fashion/products/accumark",
   affiliate_url: null,
   score: 4.4,
 
@@ -3538,7 +3523,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.lectra.com/en/fashion/products/modaris",
-  pricing_url: "https://www.lectra.com/en/fashion/products/modaris/pricing",
+  pricing_url: "https://www.lectra.com/en/fashion/products/modaris",
   affiliate_url: null,
   score: 4.3,
 
@@ -3710,7 +3695,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://browzwear.com",
-  pricing_url: "https://browzwear.com/pricing",
+  pricing_url: "https://browzwear.com",
   affiliate_url: null,
   score: 4.5,
 
@@ -3884,7 +3869,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://marvelousdesigner.com",
-  pricing_url: "https://marvelousdesigner.com/pricing",
+  pricing_url: "https://marvelousdesigner.com",
   affiliate_url: null,
   score: 4.6,
 
@@ -4055,7 +4040,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.rhinogold.com",
-  pricing_url: "https://www.rhinogold.com/pricing",
+  pricing_url: "https://www.rhinogold.com",
   affiliate_url: null,
   score: 4.2,
 
@@ -4225,7 +4210,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.jcadcam.com",
-  pricing_url: "https://www.jcadcam.com/pricing",
+  pricing_url: "https://www.jcadcam.com",
   affiliate_url: null,
   score: 4.1,
 
@@ -4959,7 +4944,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.adobe.com/products/substance3d-painter.html",
-  pricing_url: "https://www.adobe.com/products/substance3d-painter.html/pricing",
+  pricing_url: "https://www.adobe.com/products/substance3d-painter.html",
   affiliate_url: null,
   score: 4.7,
 
@@ -5132,7 +5117,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.carlsonsw.com/products/survey/",
-  pricing_url: "https://www.carlsonsw.com/products/survey/pricing",
+  pricing_url: "https://www.carlsonsw.com/products/survey/",
   affiliate_url: null,
   score: 4.4,
 
@@ -5305,7 +5290,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://geospatial.trimble.com/en/products/software/trimble-business-center",
-  pricing_url: "https://geospatial.trimble.com/en/products/software/trimble-business-center/pricing",
+  pricing_url: "https://geospatial.trimble.com/en/products/software/trimble-business-center",
   affiliate_url: null,
   score: 4.5,
 

@@ -256,29 +256,25 @@ export const c2Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 1500,
-      url: "https://www.g2.com/products/solidworks/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 1100,
-      url: "https://www.capterra.com/p/119921/SOLIDWORKS/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.8,
-      max: 10,
-      count: 950,
-      url: "https://www.trustradius.com/products/solidworks/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 1500,
+    url: "https://www.g2.com/products/solidworks/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 1100,
+    url: "https://www.capterra.com/p/119921/SOLIDWORKS/"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 950,
+    url: "https://www.trustradius.com/products/solidworks/reviews"
+  }],
 
   support_channels: [
     "Phone",
@@ -576,29 +572,25 @@ export const c2Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 1700,
-      url: "https://www.g2.com/products/sketchup/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 1100,
-      url: "https://www.capterra.com/p/187433/SketchUp/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.8,
-      max: 10,
-      count: 450,
-      url: "https://www.trustradius.com/products/sketchup/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 1700,
+    url: "https://www.g2.com/products/sketchup/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 1100,
+    url: "https://www.capterra.com/p/187433/SketchUp/"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 450,
+    url: "https://www.trustradius.com/products/sketchup/reviews"
+  }],
 
   support_channels: [
     "Email",
@@ -895,29 +887,25 @@ export const c2Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 1300,
-      url: "https://www.g2.com/products/fusion-360/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 850,
-      url: "https://www.capterra.com/p/166080/Autodesk-Fusion-360/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.6,
-      max: 10,
-      count: 410,
-      url: "https://www.trustradius.com/products/autodesk-fusion-360/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 1300,
+    url: "https://www.g2.com/products/fusion-360/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 850,
+    url: "https://www.capterra.com/p/166080/Autodesk-Fusion-360/"
+  }, {
+    source: "TrustRadius",
+    score: 8.6,
+    max: 10,
+    count: 410,
+    url: "https://www.trustradius.com/products/autodesk-fusion-360/reviews"
+  }],
 
   support_channels: [
     "Email",
@@ -1195,29 +1183,25 @@ export const c2Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 350,
-      url: "https://www.g2.com/products/rhinoceros/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.7,
-      max: 5,
-      count: 180,
-      url: "https://www.capterra.com/p/175026/Rhinoceros/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.8,
-      max: 10,
-      count: 140,
-      url: "https://www.trustradius.com/products/rhinoceros-3d/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 350,
+    url: "https://www.g2.com/products/rhinoceros/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 180,
+    url: "https://www.capterra.com/p/175026/Rhinoceros/"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 140,
+    url: "https://www.trustradius.com/products/rhinoceros-3d/reviews"
+  }],
 
   support_channels: [
     "Email",
@@ -1368,7 +1352,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.3ds.com/products-services/catia/",
-  pricing_url: "https://www.3ds.com/products-services/catia/pricing",
+  pricing_url: "https://www.3ds.com/products-services/catia/",
   affiliate_url: null,
   score: 4.7,
 
@@ -1492,7 +1476,25 @@ export const c2Tools: Tool[] = [
     "Network"
   ],
 
-  external_ratings: [],
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 230,
+    url: "https://www.g2.com/products/catia/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 95,
+    url: "https://www.capterra.com/p/138802/CATIA/"
+  }, {
+    source: "TrustRadius",
+    score: 8.5,
+    max: 10,
+    count: 280,
+    url: "https://www.trustradius.com/products/catia/reviews"
+  }],
 
   support_channels: [
     "Phone",
@@ -1769,22 +1771,19 @@ export const c2Tools: Tool[] = [
     "Free"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 70,
-      url: "https://www.g2.com/products/freecad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.2,
-      max: 5,
-      count: 110,
-      url: "https://www.capterra.com/p/189000/FreeCAD/"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 70,
+    url: "https://www.g2.com/products/freecad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 110,
+    url: "https://www.capterra.com/p/189000/FreeCAD/"
+  }],
 
   support_channels: [
     "Community",
@@ -2058,29 +2057,25 @@ export const c2Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 380,
-      url: "https://www.g2.com/products/onshape/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 280,
-      url: "https://www.capterra.com/p/170018/Onshape/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.7,
-      max: 10,
-      count: 120,
-      url: "https://www.trustradius.com/products/onshape/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 380,
+    url: "https://www.g2.com/products/onshape/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 280,
+    url: "https://www.capterra.com/p/170018/Onshape/"
+  }, {
+    source: "TrustRadius",
+    score: 8.7,
+    max: 10,
+    count: 120,
+    url: "https://www.trustradius.com/products/onshape/reviews"
+  }],
 
   support_channels: [
     "Email",
@@ -2282,15 +2277,13 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "A flexible mechanical modeling suite offering Synchronous Technology to merge parametric and direct editing.",
 
-  external_ratings: [
-    {
-      source: "TrustRadius",
-      score: 7.9,
-      max: 10,
-      count: 55,
-      url: "https://www.trustradius.com/products/siemens-solid-edge/reviews"
-    }
-  ]
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 7.9,
+    max: 10,
+    count: 55,
+    url: "https://www.trustradius.com/products/siemens-solid-edge/reviews"
+  }]
 },
 {
   id: "t20",
@@ -2494,29 +2487,25 @@ export const c2Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 410,
-      url: "https://www.g2.com/products/autodesk-inventor/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 260,
-      url: "https://www.capterra.com/p/118923/Autodesk-Inventor/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.6,
-      max: 10,
-      count: 350,
-      url: "https://www.trustradius.com/products/autodesk-inventor/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 410,
+    url: "https://www.g2.com/products/autodesk-inventor/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 260,
+    url: "https://www.capterra.com/p/118923/Autodesk-Inventor/"
+  }, {
+    source: "TrustRadius",
+    score: 8.6,
+    max: 10,
+    count: 350,
+    url: "https://www.trustradius.com/products/autodesk-inventor/reviews"
+  }],
 
   support_channels: [
     "Phone",
@@ -2785,29 +2774,25 @@ export const c2Tools: Tool[] = [
     "Floating"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 460,
-      url: "https://www.g2.com/products/ptc-creo/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.4,
-      max: 5,
-      count: 220,
-      url: "https://www.capterra.com/p/138691/Creo-Parametric/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.4,
-      max: 10,
-      count: 380,
-      url: "https://www.trustradius.com/products/ptc-creo/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 460,
+    url: "https://www.g2.com/products/ptc-creo/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 220,
+    url: "https://www.capterra.com/p/138691/Creo-Parametric/"
+  }, {
+    source: "TrustRadius",
+    score: 8.4,
+    max: 10,
+    count: 380,
+    url: "https://www.trustradius.com/products/ptc-creo/reviews"
+  }],
 
   support_channels: [
     "Phone",
@@ -2931,7 +2916,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://openscad.org",
-  pricing_url: "https://openscad.org",
+  pricing_url: "https://openscad.org/downloads.html",
   affiliate_url: null,
   score: 4.4,
 
@@ -2987,7 +2972,19 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "OpenSCAD is the ultimate tool for engineers who think in code.",
-  external_ratings: []
+  external_ratings: [{
+    source: "SourceForge",
+    score: 4.8,
+    max: 5,
+    count: 340,
+    url: "https://sourceforge.net/projects/openscad/reviews"
+  }, {
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 25,
+    url: "https://www.g2.com/products/openscad/reviews"
+  }]
 },
 {
   id: "t25",
@@ -3160,15 +3157,13 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "A revolutionary, cross-platform 3D modeling app tailored for iPad, Mac, and Windows with an intuitive pen interface.",
 
-  external_ratings: [
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 22,
-      url: "https://www.capterra.com/p/184498/Shapr3D/"
-    }
-  ]
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 22,
+    url: "https://www.capterra.com/p/184498/Shapr3D/"
+  }]
 },
 {
   id: "t29",
@@ -3405,7 +3400,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.alibre.com",
-  pricing_url: "https://www.alibre.com/pricing",
+  pricing_url: "https://www.alibre.com",
   affiliate_url: null,
   score: 4.5,
 
@@ -3464,22 +3459,16 @@ export const c2Tools: Tool[] = [
 
   external_ratings: [{
     source: "G2",
-    score: 4.3,
+    score: 4.6,
     max: 5,
-    count: 128,
+    count: 25,
     url: "https://www.g2.com/products/alibre-design/reviews"
   }, {
     source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 9,
-    url: "https://www.capterra.com/p/alibre-design-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
+    score: 4.7,
     max: 5,
     count: 30,
-    url: "https://sourceforge.net/projects/alibre-design/reviews"
+    url: "https://www.capterra.com/p/138696/Alibre-Design/"
   }]
 },
 {
@@ -3557,7 +3546,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.varicad.com",
-  pricing_url: "https://www.varicad.com/pricing",
+  pricing_url: "https://www.varicad.com",
   affiliate_url: null,
   score: 4,
 
@@ -3779,22 +3768,19 @@ export const c2Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 265,
-      url: "https://www.g2.com/products/maya/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.4,
-      max: 5,
-      count: 8,
-      url: "https://www.capterra.com/reviews/maya"
-    }
-  ]
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 265,
+    url: "https://www.g2.com/products/maya/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 8,
+    url: "https://www.capterra.com/reviews/maya"
+  }]
 },
 {
   id: "t51",
@@ -4030,29 +4016,25 @@ export const c2Tools: Tool[] = [
     "Free"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 270,
-      url: "https://www.g2.com/products/blender/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 1000,
-      url: "https://www.capterra.com/p/175170/Blender/"
-    },
-    {
-      source: "TrustRadius",
-      score: 9,
-      max: 10,
-      count: 120,
-      url: "https://www.trustradius.com/products/blender/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 270,
+    url: "https://www.g2.com/products/blender/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 1000,
+    url: "https://www.capterra.com/p/175170/Blender/"
+  }, {
+    source: "TrustRadius",
+    score: 9,
+    max: 10,
+    count: 120,
+    url: "https://www.trustradius.com/products/blender/reviews"
+  }],
 
   support_channels: [
     "Community",
@@ -4202,7 +4184,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.ironcad.com",
-  pricing_url: "https://www.ironcad.com/pricing",
+  pricing_url: "https://www.ironcad.com",
   affiliate_url: null,
   score: 4.8,
 
@@ -4320,16 +4302,16 @@ export const c2Tools: Tool[] = [
 
   external_ratings: [{
     source: "G2",
-    score: 4.8,
+    score: 4.3,
     max: 5,
-    count: 108,
+    count: 22,
     url: "https://www.g2.com/products/ironcad/reviews"
   }, {
     source: "Capterra",
-    score: 4.8,
+    score: 4.4,
     max: 5,
-    count: 23,
-    url: "https://www.capterra.com/p/ironcad-reviews/"
+    count: 15,
+    url: "https://www.capterra.com/p/138697/IronCAD/"
   }]
 },
 {
@@ -4367,7 +4349,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.kubotekkosmos.com",
-  pricing_url: "https://www.kubotekkosmos.com/pricing",
+  pricing_url: "https://www.kubotekkosmos.com",
   affiliate_url: null,
   score: 4.6,
 
@@ -4458,7 +4440,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.3dsystems.com/software/geomagic-design-x",
-  pricing_url: "https://www.3dsystems.com/software/geomagic-design-x/pricing",
+  pricing_url: "https://www.3dsystems.com/software/geomagic-design-x",
   affiliate_url: null,
   score: 4.9,
 
@@ -4550,7 +4532,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/alias/overview",
-  pricing_url: "https://www.autodesk.com/products/alias/overview/pricing",
+  pricing_url: "https://www.autodesk.com/products/alias/overview",
   affiliate_url: null,
   score: 4.9,
 
@@ -4643,7 +4625,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.zwsoft.com/zw3d",
-  pricing_url: "https://www.zwsoft.com/zw3d/pricing",
+  pricing_url: "https://www.zwsoft.com/zw3d",
   affiliate_url: null,
   score: 4.5,
 
@@ -4826,7 +4808,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://www.plasticity.xyz",
-  pricing_url: "https://www.plasticity.xyz/pricing",
+  pricing_url: "https://www.plasticity.xyz",
   affiliate_url: null,
   score: 4.5,
 
@@ -5001,7 +4983,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://moi3d.com",
-  pricing_url: "https://moi3d.com/pricing",
+  pricing_url: "https://moi3d.com",
   affiliate_url: null,
   score: 4.3,
 
@@ -5363,7 +5345,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://glovius.com",
-  pricing_url: "https://glovius.com/pricing",
+  pricing_url: "https://glovius.com",
   affiliate_url: null,
   score: 4.2,
 
@@ -5509,7 +5491,7 @@ export const c2Tools: Tool[] = [
   ],
 
   official_url: "https://cadexchanger.com",
-  pricing_url: "https://cadexchanger.com/pricing",
+  pricing_url: "https://cadexchanger.com",
   affiliate_url: null,
   score: 4.3,
 

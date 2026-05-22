@@ -260,29 +260,25 @@ export const c3Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 740,
-      url: "https://www.g2.com/products/revit/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 530,
-      url: "https://www.capterra.com/p/187420/Revit/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 420,
-      url: "https://www.trustradius.com/products/autodesk-revit/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 740,
+    url: "https://www.g2.com/products/revit/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 530,
+    url: "https://www.capterra.com/p/187420/Revit/"
+  }, {
+    source: "TrustRadius",
+    score: 8.5,
+    max: 10,
+    count: 420,
+    url: "https://www.trustradius.com/products/autodesk-revit/reviews"
+  }],
 
   support_channels: [
     "Phone",
@@ -571,29 +567,25 @@ export const c3Tools: Tool[] = [
     "Educational"
   ],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 200,
-      url: "https://www.g2.com/products/archicad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 240,
-      url: "https://www.capterra.com/p/175020/ArchiCAD/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 130,
-      url: "https://www.trustradius.com/products/archicad/reviews"
-    }
-  ],
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 200,
+    url: "https://www.g2.com/products/archicad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 240,
+    url: "https://www.capterra.com/p/175020/ArchiCAD/"
+  }, {
+    source: "TrustRadius",
+    score: 8.5,
+    max: 10,
+    count: 130,
+    url: "https://www.trustradius.com/products/archicad/reviews"
+  }],
 
   support_channels: [
     "Email",
@@ -802,15 +794,13 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "The gold standard for structural steel and concrete detailing, offering parallel precision for constructible models.",
 
-  external_ratings: [
-    {
-      source: "Capterra",
-      score: 4.4,
-      max: 5,
-      count: 37,
-      url: "https://www.capterra.com/p/92964/Tekla-Structures/"
-    }
-  ]
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 37,
+    url: "https://www.capterra.com/p/92964/Tekla-Structures/"
+  }]
 },
 {
   id: "t17",
@@ -985,15 +975,13 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "A highly specialized, visually rich design and BIM platform tailored for architects, landscape designers, and stage planners.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 278,
-      url: "https://www.g2.com/sellers/vectorworks-inc"
-    }
-  ]
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 278,
+    url: "https://www.g2.com/sellers/vectorworks-inc"
+  }]
 },
 {
   id: "t27",
@@ -1110,7 +1098,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.chiefarchitect.com",
-  pricing_url: "https://www.chiefarchitect.com/pricing",
+  pricing_url: "https://www.chiefarchitect.com",
   affiliate_url: null,
   score: 4.8,
 
@@ -1166,7 +1154,19 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "If you build houses, buy Chief Architect.",
-  external_ratings: []
+  external_ratings: [{
+    source: "Software Advice",
+    score: 4.4,
+    max: 5,
+    count: 67,
+    url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.4,
+    max: 5,
+    count: 68,
+    url: "https://www.getapp.com/construction-software/a/chief-architect/"
+  }]
 },
 {
   id: "t44",
@@ -1203,7 +1203,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/civil-3d",
-  pricing_url: "https://www.autodesk.com/civil-3d/pricing",
+  pricing_url: "https://www.autodesk.com/civil-3d",
   affiliate_url: null,
   score: 4.8,
 
@@ -1331,7 +1331,13 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [{
+    source: "TrustRadius",
+    score: 9.3,
+    max: 10,
+    count: 35,
+    url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
+  }]
 },
 {
   id: "t46",
@@ -1366,7 +1372,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.chiefarchitect.com",
-  pricing_url: "https://www.chiefarchitect.com/pricing",
+  pricing_url: "https://www.chiefarchitect.com",
   affiliate_url: null,
   score: 4.8,
 
@@ -1485,7 +1491,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.vectorworks.net/landmark",
-  pricing_url: "https://www.vectorworks.net/landmark/pricing",
+  pricing_url: "https://www.vectorworks.net/landmark",
   affiliate_url: null,
   score: 4.8,
 
@@ -1708,19 +1714,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 52,
-    url: "https://www.g2.com/products/allplan/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 64,
-    url: "https://www.capterra.com/p/allplan-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t95",
@@ -1757,7 +1751,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.bentley.com/software/openroads-designer/",
-  pricing_url: "https://www.bentley.com/software/openroads-designer/how-to-buy",
+  pricing_url: "https://www.bentley.com/software/openroads-designer/",
   affiliate_url: null,
   score: 4.7,
 
@@ -1923,7 +1917,7 @@ export const c3Tools: Tool[] = [
   core_features: [],
   user_scales: [],
   official_url: "https://www.bimoffice.fr/",
-  pricing_url: "https://www.bimoffice.fr/pricing",
+  pricing_url: "https://www.bimoffice.fr/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -1963,21 +1957,9 @@ export const c3Tools: Tool[] = [
     standards: []
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "A specialized French-market BIM management and project administration platform for architects and quantity surveyors.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 33,
-    url: "https://www.g2.com/products/bimoffice/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 8,
-    url: "https://www.capterra.com/p/bimoffice-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t105",
@@ -2121,7 +2103,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.isdgroup.com/",
-  pricing_url: "https://www.isdgroup.com/pricing",
+  pricing_url: "https://www.isdgroup.com/",
   affiliate_url: null,
   score: 3.6,
 
@@ -2179,7 +2161,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "ISD Group's hybrid 2D/3D CAD suite, merging steel detailing, glass facades, and mechanical design in one platform.",
   external_ratings: []
 },
 {
@@ -2324,7 +2306,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://rengabim.com/",
-  pricing_url: "https://rengabim.com/pricing",
+  pricing_url: "https://rengabim.com/",
   affiliate_url: null,
   score: 3.4,
 
@@ -2381,7 +2363,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "A modern, lightweight BIM platform optimized for rapid architectural and structural detailing.",
   external_ratings: []
 },
 {
@@ -2526,7 +2508,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.accasoftware.com/",
-  pricing_url: "https://www.accasoftware.com/pricing",
+  pricing_url: "https://www.accasoftware.com/",
   affiliate_url: null,
   score: 3.8,
 
@@ -2584,7 +2566,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "ACCA's versatile architectural BIM software, integrating 3D modeling, rendering, and energy analysis in a single workflow.",
   external_ratings: []
 },
 {
@@ -2727,7 +2709,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.accasoftware.com/",
-  pricing_url: "https://www.accasoftware.com/pricing",
+  pricing_url: "https://www.accasoftware.com/",
   affiliate_url: null,
   score: 3.5,
 
@@ -2783,7 +2765,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "A structural engineering BIM suite specialized in masonry, concrete, steel, and timber building analysis.",
   external_ratings: []
 },
 {
@@ -2927,7 +2909,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.cadwork.com/",
-  pricing_url: "https://www.cadwork.com/pricing",
+  pricing_url: "https://www.cadwork.com/",
   affiliate_url: null,
   score: 3.7,
 
@@ -2984,7 +2966,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "The global market leader in 3D CAD/CAM for timber construction, framing, and wood engineering.",
   external_ratings: []
 },
 {
@@ -3129,7 +3111,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.magicad.com/",
-  pricing_url: "https://www.magicad.com/pricing",
+  pricing_url: "https://www.magicad.com/",
   affiliate_url: null,
   score: 3.8,
 
@@ -3187,7 +3169,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "The leading MEP design and calculation BIM plugin for AutoCAD and Revit, widely used in Europe.",
   external_ratings: []
 },
 {
@@ -3332,7 +3314,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.graphisoft.com/solutions/dds-cad",
-  pricing_url: "https://www.graphisoft.com/solutions/dds-cad/pricing",
+  pricing_url: "https://www.graphisoft.com/solutions/dds-cad",
   affiliate_url: null,
   score: 3.6,
 
@@ -3389,7 +3371,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "A powerful openBIM MEP design suite, providing independent schematic capture and building calculations.",
   external_ratings: []
 },
 {
@@ -3533,7 +3515,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.drofus.com/",
-  pricing_url: "https://www.drofus.com/pricing",
+  pricing_url: "https://www.drofus.com/",
   affiliate_url: null,
   score: 3.7,
 
@@ -3590,7 +3572,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "A collaborative building data management and equipment planning database, essential for large hospital and school projects.",
   external_ratings: []
 },
 {
@@ -3647,7 +3629,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
-  pricing_url: "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d/pricing",
+  pricing_url: "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
   affiliate_url: null,
   score: 4.3,
 
@@ -3819,7 +3801,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/smartplant-3d",
-  pricing_url: "https://hexagon.com/products/smartplant-3d/how-to-buy",
+  pricing_url: "https://hexagon.com/products/smartplant-3d",
   affiliate_url: null,
   score: 4.4,
 
@@ -3991,7 +3973,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://hexagon.com/products/cadworx-plant-professional",
-  pricing_url: "https://hexagon.com/products/cadworx-plant-professional/how-to-buy",
+  pricing_url: "https://hexagon.com/products/cadworx-plant-professional",
   affiliate_url: null,
   score: 4.3,
 
@@ -4166,7 +4148,7 @@ export const c3Tools: Tool[] = [
   ],
 
   official_url: "https://construction.autodesk.com",
-  pricing_url: "https://construction.autodesk.com/pricing",
+  pricing_url: "https://construction.autodesk.com",
   affiliate_url: null,
   score: 4.4,
 
@@ -4478,19 +4460,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 20,
-    url: "https://www.g2.com/products/trimble-connect/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 60,
-    url: "https://www.capterra.com/p/trimble-connect-reviews/"
-  }]
+  external_ratings: []
 },
 {
   id: "t231",
@@ -4557,7 +4527,7 @@ export const c3Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation.",
+  expert_verdict: "A dedicated cloud-native BIM issue tracking and model coordination platform, key for openBIM workflows.",
 
   faqs: [
     {
@@ -4663,25 +4633,7 @@ export const c3Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 15,
-    url: "https://www.g2.com/products/bimcollab/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 16,
-    url: "https://www.capterra.com/p/bimcollab-reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.4,
-    max: 5,
-    count: 7,
-    url: "https://sourceforge.net/projects/bimcollab/reviews"
-  }]
+  external_ratings: []
 },
 {
   id: "t232",
