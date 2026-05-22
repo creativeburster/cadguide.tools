@@ -144,13 +144,13 @@ function HomeBody() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {tools.filter(t => t.category_id === 'c3').slice(0, 4).map((tool) => (
               <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white p-6 rounded-[32px] border border-slate-200/60 hover:border-blue-100 hover:shadow-2xl transition-all flex flex-col h-full">
-                {/* Logo Area: Beautiful centered container with light background to prevent giant pixelated logos */}
-                <div className="w-full aspect-video bg-slate-50 border border-slate-100 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden transition-all group-hover:bg-slate-100/50">
+                {/* Logo Area: Beautifully sized left-aligned container to keep logos crisp and premium */}
+                <div className="mb-6">
                   <ToolLogo 
                     slug={tool.slug} src={tool.logo_url} 
                     websiteUrl={tool.official_url}
                     name={tool.name} 
-                    className="w-16 h-16 rounded-2xl transition-all bg-white shadow-md border border-slate-100/80 p-2.5 group-hover:scale-110" 
+                    className="w-20 h-20 rounded-2xl transition-all bg-white border border-slate-100 shadow-sm group-hover:scale-105 group-hover:shadow-md" 
                   />
                 </div>
                 <h3 className="font-black text-slate-900 group-hover:text-blue-600 text-lg transition-colors">{tool.name}</h3>
