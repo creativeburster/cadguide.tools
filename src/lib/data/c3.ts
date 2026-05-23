@@ -184,7 +184,7 @@ export const c3Tools: Tool[] = [
   ],
 
   version: "2026.4.1",
-  last_updated: "2026-04-16",
+  last_updated: "2025-11-20",
   free_trial_days: 30,
 
   languages: [
@@ -3485,7 +3485,7 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2023-01-10",
+  last_updated: "2026-01-25",
   version: "2024"
 },
 {

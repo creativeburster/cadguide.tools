@@ -541,7 +541,7 @@ export const c1Tools: Tool[] = [
     url: "https://www.softwareadvice.com/architectural-cad/zwcad-profile/"
   }],
 
-  last_updated: "2025-12-05",
+  last_updated: "2026-01-15",
   version: "2026"
 },
 {
@@ -746,7 +746,7 @@ export const c1Tools: Tool[] = [
     url: "https://www.trustradius.com/products/bricscad/reviews"
   }],
 
-  last_updated: "2024-10-09",
+  last_updated: "2026-04-10",
   version: "2024"
 },
 {
@@ -1439,7 +1439,7 @@ export const c1Tools: Tool[] = [
   logo_url: "https://en.dwgfastview.com/wp-content/themes/gstarcad-en/images/logo.png",
   short_desc: "Lightweight cross-platform CAD viewer & editor.",
   description: "DWG FastView allows you to view and edit CAD drawings on mobile, web, and desktop with extreme speed and cloud synchronization.",
-  country: "USA",
+  country: "China",
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
@@ -1627,8 +1627,9 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2023-06-27",
-  version: "2024"
+  last_updated: "2026-04-15",
+  version: "10.1.0",
+  free_trial_days: 0
 },
 {
   id: "t54",
@@ -1794,7 +1795,7 @@ export const c1Tools: Tool[] = [
     url: "https://sourceforge.net/projects/gstarcad/reviews"
   }],
 
-  last_updated: "2023-12-30",
+  last_updated: "2026-02-28",
   version: "2024"
 },
 {

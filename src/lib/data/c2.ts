@@ -195,7 +195,7 @@ export const c2Tools: Tool[] = [
     }
   ],
   version: "2026",
-  last_updated: "2025-11-15",
+  last_updated: "2026-02-18",
   free_trial_days: 30,
 
   languages: [
@@ -415,7 +415,7 @@ export const c2Tools: Tool[] = [
   ],
 
   version: "2026",
-  last_updated: "2025-11-05",
+  last_updated: "2026-01-25",
   free_trial_days: 30,
 
   languages: [
@@ -696,7 +696,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Fusion 360 is the future of agile hardware design.",
   version: "v.2702.1.58",
-  last_updated: "2026-04-23",
+  last_updated: "2025-12-10",
   free_trial_days: 30,
 
   languages: [
@@ -980,7 +980,7 @@ export const c2Tools: Tool[] = [
     "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
 
   version: "8",
-  last_updated: "2026-01-18",
+  last_updated: "2026-04-02",
   free_trial_days: 90,
 
   languages: [
@@ -3522,7 +3522,7 @@ export const c2Tools: Tool[] = [
   ],
 
   version: "5.1",
-  last_updated: "2026-03-17",
+  last_updated: "2026-03-05",
   free_trial_days: 0,
 
   languages: [
