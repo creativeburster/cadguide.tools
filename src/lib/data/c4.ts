@@ -185,6 +185,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "You cannot run a modern construction project without Bluebeam.",
+
   external_ratings: [{
     source: "GetApp",
     score: 4.7,
@@ -219,7 +220,10 @@ export const c4Tools: Tool[] = [
       max: 5,
       count: 987,
       url: "https://www.softwareadvice.com/cms/bluebeam-revu-profile/reviews/"
-    }]
+    }],
+
+  last_updated: "2023-07-16",
+  version: "2024"
 },
 {
   id: "t35",
@@ -391,13 +395,17 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
+
   external_ratings: [{
     source: "TrustRadius",
     score: 9.3,
     max: 10,
     count: 43,
     url: "https://www.trustradius.com/products/navisworks/reviews"
-  }]
+  }],
+
+  last_updated: "2025-09-21",
+  version: "2027"
 },
 {
   id: "t36",
@@ -559,7 +567,10 @@ export const c4Tools: Tool[] = [
     max: 5,
     count: 8,
     url: "https://www.capterra.com/p/138698/Solibri/"
-  }]
+  }],
+
+  last_updated: "2024-03-23",
+  version: "2024"
 },
 {
   id: "t37",
@@ -693,6 +704,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
+
   external_ratings: [
     {
       source: "G2",
@@ -708,7 +720,11 @@ export const c4Tools: Tool[] = [
       count: 10,
       url: "https://www.capterra.com/p/10006619/Recap-Pro/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-07-23",
+  version: "2024.12"
+},
 {
   id: "t39",
   name: "Recap Pro",
@@ -839,6 +855,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The gateway to reality capture in the BIM world.",
+
   external_ratings: [
     {
       source: "G2",
@@ -854,7 +871,11 @@ export const c4Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006620/Solid-Edge-Viewer/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-04-22",
+  version: "2024"
+},
 {
   id: "t48",
   name: "Solid Edge Viewer",
@@ -943,6 +964,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The standard for viewing Solid Edge data in production.",
+
   external_ratings: [
     {
       source: "G2",
@@ -958,7 +980,11 @@ export const c4Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006621/DWG-TrueView/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-04-12",
+  version: "2024"
+},
 {
   id: "t49",
   name: "DWG TrueView",
@@ -1046,6 +1072,8 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The essential utility for DWG version management.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-11-27",
+  version: "2024"
 }
 ];

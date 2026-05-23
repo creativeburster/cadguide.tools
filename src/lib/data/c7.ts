@@ -92,6 +92,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The most efficient alternative to EPLAN for small to mid-sized automation firms.",
+
   external_ratings: [
     {
       source: "G2",
@@ -107,7 +108,11 @@ export const c7Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10000932/MatrixGold/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-07-12",
+  version: "2024"
+},
 {
   id: "t65",
   name: "MatrixGold",
@@ -239,7 +244,11 @@ export const c7Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006645/exocad/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-01-19",
+  version: "2024"
+},
 {
   id: "t66",
   name: "exocad DentalCAD",
@@ -371,7 +380,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006646/Cabinet-Vision/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-07-09",
+  version: "2024"
+},
 {
   id: "t67",
   name: "Cabinet Vision",
@@ -460,6 +473,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The backbone of any modern professional woodworking shop.",
+
   external_ratings: [
     {
       source: "G2",
@@ -475,7 +489,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006647/AVEVA-Marine/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-09",
+  version: "2024"
+},
 {
   id: "t68",
   name: "AVEVA Marine",
@@ -565,6 +583,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed king of heavy-duty maritime engineering.",
+
   external_ratings: [
     {
       source: "G2",
@@ -594,7 +613,11 @@ export const c7Tools: Tool[] = [
       count: 80,
       url: "https://www.trustpilot.com/review/clo3d.com"
     }
-  ]},
+  ],
+
+  last_updated: "2023-11-23",
+  version: "2024"
+},
 {
   id: "t69",
   name: "CLO 3D",
@@ -745,7 +768,11 @@ export const c7Tools: Tool[] = [
       count: 2,
       url: "https://www.capterra.com/p/10000930/Shoemaster/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-08-18",
+  version: "2024"
+},
 {
   id: "t75",
   name: "Shoemaster",
@@ -834,6 +861,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Essential software for global footwear production lines.",
+
   external_ratings: [
     {
       source: "G2",
@@ -849,7 +877,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006648/WYSIWYG/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-03-19",
+  version: "2024"
+},
 {
   id: "t77",
   name: "WYSIWYG",
@@ -940,6 +972,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The only software you need to design and pre-program a world-class concert.",
+
   external_ratings: [
     {
       source: "G2",
@@ -955,7 +988,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006649/3Design/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-06-21",
+  version: "2024"
+},
 {
   id: "t78",
   name: "3Design",
@@ -1045,6 +1082,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The serious alternative to MatrixGold for those who prefer Mac or true parametric history.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1060,7 +1098,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006650/Land-FX/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-20",
+  version: "2024"
+},
 {
   id: "t82",
   name: "Land F/X",
@@ -1149,6 +1191,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The essential multiplier for landscape architects who use AutoCAD.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1164,7 +1207,11 @@ export const c7Tools: Tool[] = [
       count: 2,
       url: "https://www.capterra.com/p/10006651/ICAD3D/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-23",
+  version: "2024"
+},
 {
   id: "t83",
   name: "ICAD3D+",
@@ -1253,6 +1300,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The most modern 3D alternative for footwear professionals.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1275,7 +1323,11 @@ export const c7Tools: Tool[] = [
       count: 162,
       url: "https://www.trustpilot.com/review/autodesk.com"
     }
-  ]},
+  ],
+
+  last_updated: "2024-05-19",
+  version: "2024"
+},
 {
   id: "ext-infraworks",
   name: "Infraworks",
@@ -1423,6 +1475,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1445,7 +1498,11 @@ export const c7Tools: Tool[] = [
       count: 45,
       url: "https://www.trustradius.com/products/3ds-max/reviews"
     }
-  ]},
+  ],
+
+  last_updated: "2023-07-18",
+  version: "2024"
+},
 {
   id: "ext-3ds-max",
   name: "3ds Max",
@@ -1600,7 +1657,10 @@ export const c7Tools: Tool[] = [
     max: 10,
     count: 39,
     url: "https://www.trustradius.com/products/autodesk-3ds-max/reviews"
-  }]
+  }],
+
+  last_updated: "2025-06-18",
+  version: "2026"
 },
 {
   id: "ext-zbrush",
@@ -1768,7 +1828,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 14,
     url: "https://sourceforge.net/projects/zbrush.mirror/reviews"
-  }]
+  }],
+
+  last_updated: "2024-08-22",
+  version: "2024"
 },
 {
   id: "ext-keyshot",
@@ -1924,7 +1987,10 @@ export const c7Tools: Tool[] = [
     max: 10,
     count: 18,
     url: "https://www.trustradius.com/products/keyshot/reviews"
-  }]
+  }],
+
+  last_updated: "2026-02-14",
+  version: "2025.3"
 },
 {
   id: "ext-lumion",
@@ -2080,7 +2146,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 155,
     url: "https://www.softwareadvice.com/architecture/lumion-profile/"
-  }]
+  }],
+
+  last_updated: "2025-12-22",
+  version: "13"
 },
 {
   id: "ext-enscape",
@@ -2236,7 +2305,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 68,
     url: "https://www.softwareadvice.com/architectural-cad/enscape-profile/"
-  }]
+  }],
+
+  last_updated: "2026-04-15",
+  version: "4.0"
 },
 {
   id: "ext-twinmotion",
@@ -2398,7 +2470,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 28,
     url: "https://www.capterra.com/p/184240/Twinmotion/"
-  }]
+  }],
+
+  last_updated: "2023-11-18",
+  version: "2026"
 },
 {
   id: "t213",
@@ -2587,7 +2662,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 36,
     url: "https://www.capterra.com/reviews/ultimaker-cura"
-  }]
+  }],
+
+  last_updated: "2026-04-03",
+  version: "6.1"
 },
 {
   id: "t214",
@@ -2782,7 +2860,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 24,
     url: "https://sourceforge.net/projects/prusaslicer.mirror/reviews"
-  }]
+  }],
+
+  last_updated: "2024-08-27",
+  version: "2.9.0"
 },
 {
   id: "t215",
@@ -2977,7 +3058,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 19,
     url: "https://sourceforge.net/projects/bambustudio/reviews"
-  }]
+  }],
+
+  last_updated: "2024-03-18",
+  version: "2024"
 },
 {
   id: "t216",
@@ -3164,7 +3248,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 28,
     url: "https://www.capterra.com/p/138710/Simplify3D/"
-  }]
+  }],
+
+  last_updated: "2023-11-15",
+  version: "5.2"
 },
 {
   id: "t217",
@@ -3352,7 +3439,11 @@ export const c7Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006652/Optitex/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-09-03",
+  version: "2024"
+},
 {
   id: "t218",
   name: "Optitex",
@@ -3538,7 +3629,11 @@ export const c7Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006653/Gerber-AccuMark/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-10-07",
+  version: "2024"
+},
 {
   id: "t219",
   name: "Gerber AccuMark",
@@ -3723,7 +3818,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10000931/Lectra-Modaris/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-10-17",
+  version: "2024"
+},
 {
   id: "t220",
   name: "Lectra Modaris",
@@ -3915,7 +4014,11 @@ export const c7Tools: Tool[] = [
       count: 10,
       url: "https://www.trustradius.com/products/browzwear/reviews"
     }
-  ]},
+  ],
+
+  last_updated: "2023-03-11",
+  version: "2024"
+},
 {
   id: "t221",
   name: "Browzwear",
@@ -4115,7 +4218,11 @@ export const c7Tools: Tool[] = [
       count: 1247,
       url: "https://www.trustpilot.com/review/marvelousdesigner.com"
     }
-  ]},
+  ],
+
+  last_updated: "2024-10-01",
+  version: "2024"
+},
 {
   id: "t222",
   name: "Marvelous Designer",
@@ -4305,7 +4412,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006654/RhinoGold/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-04-02",
+  version: "2024"
+},
 {
   id: "t223",
   name: "RhinoGold",
@@ -4489,7 +4600,11 @@ export const c7Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006655/JewelCAD-Pro/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-11-19",
+  version: "2024"
+},
 {
   id: "t224",
   name: "JewelCAD Pro",
@@ -4673,7 +4788,11 @@ export const c7Tools: Tool[] = [
       count: 15,
       url: "https://www.capterra.com/p/10006644/D5-Render/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-03-12",
+  version: "2024"
+},
 {
   id: "t225",
   name: "D5 Render",
@@ -4858,7 +4977,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 24,
     url: "https://www.capterra.com/p/188240/D5-Render/"
-  }]
+  }],
+
+  last_updated: "2023-04-29",
+  version: "2024"
 },
 {
   id: "t226",
@@ -5045,7 +5167,10 @@ export const c7Tools: Tool[] = [
     max: 10,
     count: 32,
     url: "https://www.trustradius.com/products/v-ray/reviews"
-  }]
+  }],
+
+  last_updated: "2025-07-30",
+  version: "6.0"
 },
 {
   id: "t227",
@@ -5229,7 +5354,10 @@ export const c7Tools: Tool[] = [
     max: 5,
     count: 18,
     url: "https://www.capterra.com/p/178920/Corona-Renderer/"
-  }]
+  }],
+
+  last_updated: "2024-06-10",
+  version: "10"
 },
 {
   id: "t228",
@@ -5422,7 +5550,11 @@ export const c7Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006656/Carlson-Survey/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-22",
+  version: "2024"
+},
 {
   id: "t239",
   name: "Carlson Survey",
@@ -5608,7 +5740,11 @@ export const c7Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006657/Trimble-Business-Center/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-08-02",
+  version: "2024"
+},
 {
   id: "t240",
   name: "Trimble Business Center",
@@ -5782,6 +5918,8 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-06-07",
+  version: "2024"
 }
 ];

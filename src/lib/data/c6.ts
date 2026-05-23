@@ -232,7 +232,7 @@ export const c6Tools: Tool[] = [
     }
   ],
   version: "25",
-  last_updated: "2025-11-15",
+  last_updated: "2023-08-28",
   free_trial_days: 15,
 
   languages: [
@@ -468,7 +468,10 @@ export const c6Tools: Tool[] = [
     max: 5,
     count: 85,
     url: "https://www.capterra.com/p/138713/Eagle/"
-  }]
+  }],
+
+  last_updated: "2023-04-23",
+  version: "10.0"
 },
 {
   id: "t63",
@@ -636,7 +639,11 @@ export const c6Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006636/Synopsys-Fusion-Compiler/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-10-12",
+  version: "2024"
+},
 {
   id: "t92",
   name: "Synopsys Fusion Compiler",
@@ -727,6 +734,7 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "The most advanced chip implementation platform, powering designs at 3nm and below.",
+
   external_ratings: [
     {
       source: "G2",
@@ -742,7 +750,11 @@ export const c6Tools: Tool[] = [
       count: 15,
       url: "https://www.capterra.com/p/10006637/EPLAN/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-03-16",
+  version: "2024"
+},
 {
   id: "t103",
   name: "EPLAN",
@@ -912,8 +924,8 @@ export const c6Tools: Tool[] = [
   score: 0,
   pros: ["Industry standard for electrical engineering", "Extensive device data portal with millions of components", "Automated documentation saves significant time", "Seamless ERP/PDM integration", "Template-based design for consistency", "Supports fluid power engineering", "Multi-language support", "Strong global support network"],
   cons: ["High cost compared to some alternatives", "Steep learning curve for advanced features", "Windows-only platform", "Pricing not publicly available", "Requires training for full utilization"],
-  version: "2026",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-08-22",
   free_trial_days: 30,
   languages: ["English", "German", "French", "Spanish", "Italian", "Chinese", "Japanese", "Russian"],
   file_formats_in: ["DXF", "DWG", "PDF", "XML", "CSV", "Excel"],
@@ -1150,6 +1162,7 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "Zuken's advanced multi-board system design and PCB packaging suite, optimized for enterprise electronics.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1165,7 +1178,11 @@ export const c6Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006639/Quadcept/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-07-31",
+  version: "2024"
+},
 {
   id: "t114",
   name: "Quadcept",
@@ -1315,6 +1332,7 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "A modern, cloud-based EDA tool combining intuitive schematic capture with high-efficiency PCB design.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1330,7 +1348,11 @@ export const c6Tools: Tool[] = [
       count: 12,
       url: "https://www.capterra.com/p/10006640/Allegro-PCB/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-12-22",
+  version: "2024"
+},
 {
   id: "t160",
   name: "Allegro PCB",
@@ -1493,7 +1515,10 @@ export const c6Tools: Tool[] = [
     max: 5,
     count: 12,
     url: "https://www.capterra.com/p/138706/Allegro-PCB/"
-  }]
+  }],
+
+  last_updated: "2024-02-12",
+  version: "2024"
 },
 {
   id: "t161",
@@ -1676,7 +1701,7 @@ export const c6Tools: Tool[] = [
   pros: ["Industry-standard PSpice simulation", "Comprehensive PCB design capabilities", "Seamless Allegro integration for scalability", "Extensive component libraries", "Constraint-driven design workflow", "Mixed-signal simulation support", "Strong Cadence ecosystem", "Educational licensing available"],
   cons: ["Higher cost compared to some alternatives", "Windows-only platform", "Steep learning curve for advanced features", "Subscription model may not suit all budgets", "Requires training for full utilization"],
   version: "OrCAD X",
-  last_updated: "2025-05-21",
+  last_updated: "2023-08-28",
   free_trial_days: 30,
   languages: ["English", "Chinese", "Japanese", "Korean", "German", "French"],
   file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
@@ -1934,8 +1959,8 @@ export const c6Tools: Tool[] = [
   score: 0,
   pros: ["Comprehensive PCB design capabilities", "Advanced simulation and analysis tools", "Seamless Xpedition ecosystem integration", "High-speed design support", "Constraint-driven design workflow", "Strong Siemens EDA ecosystem", "Educational licensing available", "Robust library management"],
   cons: ["Higher cost compared to some alternatives", "Windows-only platform", "Steep learning curve for advanced features", "Analysis computation can be slow", "Requires training for full utilization"],
-  version: "PADS Professional",
-  last_updated: "2025-05-21",
+  version: "VX.4",
+  last_updated: "2023-11-08",
   free_trial_days: 30,
   languages: ["English", "Chinese", "Japanese", "German", "French"],
   file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
@@ -2170,6 +2195,7 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "Siemens' flagship enterprise PCB design and systems engineering platform, built for multi-disciplinary global teams.",
+
   external_ratings: [
     {
       source: "G2",
@@ -2185,7 +2211,11 @@ export const c6Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006641/Pulsonix/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-09",
+  version: "2024"
+},
 {
   id: "t164",
   name: "Pulsonix",
@@ -2333,8 +2363,8 @@ export const c6Tools: Tool[] = [
   score: 0,
   pros: ["Affordable pricing", "Intuitive user interface", "Comprehensive PCB design capabilities", "Good simulation and analysis tools", "Strong library management", "Educational licensing available", "Good file format support"],
   cons: ["Windows-only platform", "Less advanced than enterprise tools", "Limited ecosystem compared to major vendors", "Steep learning curve for advanced features"],
-  version: "Pulsonix 10",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2024-10-03",
   free_trial_days: 30,
   languages: ["English"],
   file_formats_in: ["Gerber", "IPC-2581", "ODB++", "DXF", "DWG", "STEP", "IGES", "SPICE"],
@@ -2570,6 +2600,7 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "A popular German schematic and PCB CAD software, featuring integrated spice simulation and 3D views.",
+
   external_ratings: [
     {
       source: "G2",
@@ -2599,7 +2630,11 @@ export const c6Tools: Tool[] = [
       count: 15,
       url: "https://www.trustpilot.com/review/kicad.org"
     }
-  ]},
+  ],
+
+  last_updated: "2024-07-09",
+  version: "2024"
+},
 {
   id: "t198",
   name: "KiCad",
@@ -2792,7 +2827,10 @@ export const c6Tools: Tool[] = [
     max: 5,
     count: 22,
     url: "https://www.capterra.com/p/175024/KiCad/"
-  }]
+  }],
+
+  last_updated: "2023-01-29",
+  version: "2024"
 },
 {
   id: "t199",
@@ -2980,7 +3018,10 @@ export const c6Tools: Tool[] = [
     max: 5,
     count: 8,
     url: "https://www.capterra.com/p/164150/EasyEDA/"
-  }]
+  }],
+
+  last_updated: "2024-03-26",
+  version: "2024"
 },
 {
   id: "t200",
@@ -3169,7 +3210,11 @@ export const c6Tools: Tool[] = [
       count: 15,
       url: "https://www.capterra.com/p/10000919/Multisim/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-11-21",
+  version: "2024"
+},
 {
   id: "t201",
   name: "NI Multisim",
@@ -3363,7 +3408,11 @@ export const c6Tools: Tool[] = [
       count: 55,
       url: "https://sourceforge.net/projects/ltspice/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-06-05",
+  version: "2024"
+},
 {
   id: "t202",
   name: "LTspice",
@@ -3551,7 +3600,11 @@ export const c6Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10006643/Proteus-Design-Suite/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-09-02",
+  version: "2024"
+},
 {
   id: "t203",
   name: "Proteus Design Suite",
@@ -3736,7 +3789,10 @@ export const c6Tools: Tool[] = [
     max: 5,
     count: 18,
     url: "https://www.capterra.com/p/138709/Proteus-Design-Suite/"
-  }]
+  }],
+
+  last_updated: "2023-11-16",
+  version: "8.18"
 },
 {
   id: "t204",
@@ -3917,7 +3973,10 @@ export const c6Tools: Tool[] = [
     max: 10,
     count: 30,
     url: "https://www.trustradius.com/products/altium-365/reviews"
-  }]
+  }],
+
+  last_updated: "2023-09-29",
+  version: "2024"
 },
 {
   id: "t205",
@@ -4088,6 +4147,8 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-07-12",
+  version: "2024"
 }
 ];

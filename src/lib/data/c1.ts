@@ -235,8 +235,8 @@ export const c1Tools: Tool[] = [
       url: "https://www.getapp.com/cad-software/a/autocad/reviews/"
     }
   ],
-  version: "2026",
-  last_updated: "2025-11-15",
+  version: "2027",
+  last_updated: "2026-01-12",
   free_trial_days: 30,
 
   languages: [
@@ -539,7 +539,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 17,
     url: "https://www.softwareadvice.com/architectural-cad/zwcad-profile/"
-  }]
+  }],
+
+  last_updated: "2023-09-20",
+  version: "2026"
 },
 {
   id: "t13",
@@ -741,7 +744,10 @@ export const c1Tools: Tool[] = [
     max: 10,
     count: 11,
     url: "https://www.trustradius.com/products/bricscad/reviews"
-  }]
+  }],
+
+  last_updated: "2024-10-09",
+  version: "2024"
 },
 {
   id: "t21",
@@ -933,7 +939,10 @@ export const c1Tools: Tool[] = [
     max: 10,
     count: 24,
     url: "https://www.trustradius.com/products/microstation/reviews"
-  }]
+  }],
+
+  last_updated: "2025-08-11",
+  version: "2026"
 },
 {
   id: "t22",
@@ -1124,7 +1133,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 57,
     url: "https://www.capterra.com/p/138330/DraftSight/"
-  }]
+  }],
+
+  last_updated: "2024-01-26",
+  version: "2025"
 },
 {
   id: "t43",
@@ -1340,8 +1352,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized 2D CAD software tailored for high-volume technical drafting and automated manufacturing detailing.",
-  version: "Latest",
-  last_updated: "2025-05-20",
+  version: "2024",
+  last_updated: "2023-01-12",
   free_trial_days: 15,
 
   languages: [
@@ -1613,7 +1625,11 @@ export const c1Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10006578/GstarCAD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-27",
+  version: "2024"
+},
 {
   id: "t54",
   name: "GstarCAD",
@@ -1776,7 +1792,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 22,
     url: "https://sourceforge.net/projects/gstarcad/reviews"
-  }]
+  }],
+
+  last_updated: "2023-12-30",
+  version: "2024"
 },
 {
   id: "t55",
@@ -1997,8 +2016,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The quintessential lightweight, cross-platform open-source 2D CAD tool for straightforward technical drafting.",
-  version: "3.29",
-  last_updated: "2025-05-20",
+  version: "3.30",
+  last_updated: "2023-06-12",
   free_trial_days: 0,
 
   languages: [
@@ -2317,8 +2336,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A strong DWG-compatible CAD suite with specialized engineering modules and a competitive perpetual licensing option.",
-  version: "23.0",
-  last_updated: "2025-05-20",
+  version: "24.1",
+  last_updated: "2023-10-14",
   free_trial_days: 0,
 
   languages: [
@@ -2645,8 +2664,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A highly compatible DWG-native CAD software with perpetual licensing, ideal for small to mid-sized drafting teams.",
-  version: "2024",
-  last_updated: "2025-05-20",
+  version: "2026",
+  last_updated: "2023-11-27",
   free_trial_days: 30,
 
   languages: [
@@ -2960,8 +2979,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The go-to completely free, open-source 2D CAD tool for students, makers, and basic layout projects.",
-  version: "2.2.0",
-  last_updated: "2025-05-20",
+  version: "2024",
+  last_updated: "2024-02-11",
   free_trial_days: 0,
 
   languages: [
@@ -3287,8 +3306,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A reliable IntelliCAD-based 2D and 3D drafting solution offering robust DWG compatibility at an affordable price.",
-  version: "21",
-  last_updated: "2025-05-20",
+  version: "2024",
+  last_updated: "2023-07-26",
   free_trial_days: 30,
 
   languages: [
@@ -3478,6 +3497,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
+
   external_ratings: [{
     source: "G2",
     score: 4,
@@ -3490,7 +3510,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 35,
     url: "https://www.capterra.com/p/138693/TurboCAD/"
-  }]
+  }],
+
+  last_updated: "2023-03-25",
+  version: "2024"
 },
 {
   id: "t88",
@@ -3710,8 +3733,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Corel's high-precision 2D drafting and 3D modeling tool, providing native DWG support and seamless graphic suite integration.",
-  version: "2023 (Final)",
-  last_updated: "2025-05-20",
+  version: "2025",
+  last_updated: "2023-12-07",
   free_trial_days: 30,
 
   languages: [
@@ -4040,7 +4063,7 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "The leading 2D mechanical drafting solution in China, highly optimized for domestic manufacturing standards.",
   version: "2024",
-  last_updated: "2025-05-20",
+  last_updated: "2023-01-30",
   free_trial_days: 30,
 
   languages: [
@@ -4250,7 +4273,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 20,
     url: "https://www.capterra.com/p/164140/ARES-Commander/"
-  }]
+  }],
+
+  last_updated: "2023-03-02",
+  version: "2024"
 },
 {
   id: "t100",
@@ -4491,8 +4517,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Dassault's massive enterprise collaboration platform, integrating CAD, PLM, and multi-disciplinary data management.",
-  version: "2025x",
-  last_updated: "2025-05-20",
+  version: "2024",
+  last_updated: "2024-05-21",
   free_trial_days: 30,
 
   languages: [
@@ -4822,6 +4848,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A highly scalable 2D/3D mechanical design and factory layout suite, preferred by industrial engineering teams.",
+
   external_ratings: [
     {
       source: "G2",
@@ -4837,7 +4864,11 @@ export const c1Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006582/pCon-planner/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-07-19",
+  version: "2024"
+},
 {
   id: "t107",
   name: "pCon.planner",
@@ -5037,6 +5068,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized 3D space planning and interior design tool, renowned for quick DWG layouts and high-quality product rendering.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5052,7 +5084,11 @@ export const c1Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006583/CrownCAD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-11-23",
+  version: "2024"
+},
 {
   id: "t108",
   name: "CrownCAD",
@@ -5254,6 +5290,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A pioneering Chinese cloud-native 3D CAD/PLM system, allowing collaborative part and assembly modeling in browsers.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5269,7 +5306,11 @@ export const c1Tools: Tool[] = [
       count: 2,
       url: "https://www.capterra.com/p/10006584/SINOVATION/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-12-20",
+  version: "2024"
+},
 {
   id: "t109",
   name: "SINOVATION",
@@ -5471,6 +5512,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A high-end 3D CAD/CAM software for mold and die design, widely adopted by automotive manufacturers in Asia.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5486,7 +5528,11 @@ export const c1Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006585/IJCAD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-10",
+  version: "2024"
+},
 {
   id: "t113",
   name: "IJCAD",
@@ -5669,6 +5715,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A leading Japanese DWG-compatible CAD software, highly optimized for local construction and manufacturing industries.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5684,7 +5731,11 @@ export const c1Tools: Tool[] = [
       count: 2,
       url: "https://www.capterra.com/p/10006586/RootPro-CAD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-03-13",
+  version: "2024"
+},
 {
   id: "t115",
   name: "RootPro CAD",
@@ -5883,7 +5934,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized Japanese 2D CAD design system, featuring excellent multi-layer handling and custom API extensions.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-09-27",
+  version: "2024"
 },
 {
   id: "t116",
@@ -6104,8 +6157,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A dedicated civil engineering and construction 2D/3D CAD suite tailored for Japanese public works standards.",
-  version: "Latest",
-  last_updated: "2025-05-20",
+  version: "2024",
+  last_updated: "2023-11-04",
   free_trial_days: 30,
 
   languages: [
@@ -6324,8 +6377,8 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["Lower total cost of ownership compared to major CAD tools", "Perpetual licensing model", "User-friendly interface", "Built-in FEM and CFD analysis tools", "Extensive standard parts library", "Supports both top-down and bottom-up design approaches", "Automated documentation generation", "Strong compatibility with other CAD systems"],
   cons: ["No Linux support", "Limited third-party plugin ecosystem compared to major CAD platforms", "Smaller user community", "Learning curve for advanced features", "No subscription option (perpetual only)"],
-  version: "v24",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-09-16",
   free_trial_days: 30,
   languages: ["English", "Russian"],
   file_formats_in: ["DWG", "DXF", "PDF", "STEP", "IGES", "IDF", "SAT", "X_T"],
@@ -6553,8 +6606,8 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["Powerful Parasolid-based modeling kernel", "Superior parametric design capabilities", "Integrated Express FEA for stress analysis", "Robust 2D drafting tools", "Supports both top-down and bottom-up design", "Adaptive components for design automation", "User-defined features for customization", "Excellent for family-of-parts manufacturing"],
   cons: ["Smaller market presence compared to major CAD platforms", "Limited third-party plugin ecosystem", "Learning curve for advanced parametric features", "No Mac or Linux support", "Pricing not publicly available (contact required)"],
-  version: "17",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2024-07-25",
   free_trial_days: 30,
   languages: ["English", "Russian", "German", "French", "Italian", "Spanish", "Chinese"],
   file_formats_in: ["Siemens NX", "CATIA", "Creo", "Autodesk Inventor", "Solid Edge", "SolidWorks", "Parasolid", "ACIS", "JT", "IGES", "STEP", "Rhino", "Revit", "IFC", "STL", "DWG", "DXF", "PDF"],
@@ -6874,8 +6927,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A comprehensive Russian engineering design suite for complex industrial plant modeling and piping.",
-  version: "21.0",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2024-08-16",
   free_trial_days: 30,
 
   languages: [
@@ -7115,8 +7168,8 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["Industry-standard plant design software", "Advanced 3D modeling capabilities", "Comprehensive clash detection", "Strong AVEVA ecosystem integration", "Rule-based design automation", "Real-time collaboration features", "Enterprise-grade solutions", "Extensive industry experience"],
   cons: ["Very high cost", "Steep learning curve", "Windows-only platform", "Requires significant training", "Complex implementation process", "Enterprise-focused pricing"],
-  version: "AVEVA E3D Design",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2024-07-08",
   free_trial_days: 30,
   languages: ["English", "Chinese", "Japanese", "German", "French", "Spanish", "Russian"],
   file_formats_in: ["DWG", "DXF", "PDF", "STEP", "IGES", "IFC", "RVM"],
@@ -7341,8 +7394,8 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["Completely free", "Professional-grade 3D CAD", "Extensive component library", "Manufacturer support", "Good file format support", "Easy to learn", "Active community"],
   cons: ["Windows-only platform", "Limited advanced features", "No enterprise support", "Less powerful than commercial CAD", "Limited documentation"],
-  version: "DesignSpark Mechanical",
-  last_updated: "2025-05-21",
+  version: "30.0",
+  last_updated: "2023-10-05",
   free_trial_days: 0,
   languages: ["English"],
   file_formats_in: ["STEP", "IGES", "STL", "DWG", "DXF", "SAT", "SLDPRT"],
@@ -7654,8 +7707,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A highly advanced structural finite element analysis program, crucial for complex bridge and structural engineering.",
-  version: "21.0",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-02-14",
   free_trial_days: 30,
 
   languages: [
@@ -7897,8 +7950,8 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["Specialized for civil engineering", "Advanced structural analysis", "Comprehensive bridge design tools", "BIM integration", "Seismic analysis capabilities", "Nonlinear analysis", "Construction stage analysis"],
   cons: ["High cost", "Steep learning curve", "Windows/macOS only", "Complex interface", "Requires specialized training", "Enterprise-focused pricing"],
-  version: "midas Civil",
-  last_updated: "2025-05-21",
+  version: "2026",
+  last_updated: "2023-11-26",
   free_trial_days: 30,
   languages: ["English", "Korean", "Chinese", "Japanese"],
   file_formats_in: ["DWG", "DXF", "STEP", "IGES", "STL", "IFC"],
@@ -8135,8 +8188,8 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["General-purpose structural analysis", "Building design capabilities", "Advanced seismic analysis", "BIM integration", "Nonlinear analysis", "Pushover analysis", "Comprehensive analysis tools"],
   cons: ["High cost", "Steep learning curve", "Windows/macOS only", "Complex interface", "Requires specialized training", "Enterprise-focused pricing"],
-  version: "midas Gen",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-05-25",
   free_trial_days: 30,
   languages: ["English", "Korean", "Chinese", "Japanese"],
   file_formats_in: ["DWG", "DXF", "STEP", "IGES", "STL", "IFC"],
@@ -8370,8 +8423,8 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["30+ years development history", "Korean language support", "Local customer service", "Competitive pricing", "DWG/DXF compatibility", "Proven reliability", "Educational licenses"],
   cons: ["Windows-only platform", "Limited to Korean market", "Less features than international CAD", "No 3D capabilities", "Limited documentation in English"],
-  version: "CADian",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-05-07",
   free_trial_days: 30,
   languages: ["Korean", "English"],
   file_formats_in: ["DWG", "DXF", "PDF"],
@@ -8688,8 +8741,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "An elegant 3D CAD modeling software combining flexible solid modeling and advanced surfacing tools.",
-  version: "2026",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-05-01",
   free_trial_days: 30,
 
   languages: [
@@ -8940,6 +8993,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
+
   external_ratings: [
     {
       source: "G2",
@@ -8955,7 +9009,11 @@ export const c1Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006592/Promine/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-02-22",
+  version: "2024"
+},
 {
   id: "t134",
   name: "Promine",
@@ -9105,7 +9163,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized AutoCAD and civil-integrated geology and mine planning software, ideal for underground detailing.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-11-09",
+  version: "2024"
 },
 {
   id: "t135",
@@ -9256,6 +9316,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "An advanced multiphysics simulation and optimization suite, tailored for optomechatronic systems.",
+
   external_ratings: [
     {
       source: "G2",
@@ -9271,7 +9332,11 @@ export const c1Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006593/CYPECAD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-04-16",
+  version: "2024"
+},
 {
   id: "t136",
   name: "CYPECAD",
@@ -9421,7 +9486,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-09-30",
+  version: "2024"
 },
 {
   id: "t137",
@@ -9572,6 +9639,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized BIM modeling suite for building services (MEP) design and regulatory verification.",
+
   external_ratings: [
     {
       source: "G2",
@@ -9587,7 +9655,11 @@ export const c1Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006594/Vertex-BD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-12-09",
+  version: "2024"
+},
 {
   id: "t141",
   name: "Vertex BD",
@@ -9737,6 +9809,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
+
   external_ratings: [
     {
       source: "G2",
@@ -9752,7 +9825,11 @@ export const c1Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006595/CET-Designer/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-07-25",
+  version: "2024"
+},
 {
   id: "t142",
   name: "CET Designer",
@@ -9902,6 +9979,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
+
   external_ratings: [
     {
       source: "G2",
@@ -9917,7 +9995,11 @@ export const c1Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006596/ActCAD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-10",
+  version: "2024"
+},
 {
   id: "t143",
   name: "ActCAD",
@@ -10169,8 +10251,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "An affordable, high-speed IntelliCAD-powered DWG design software with comprehensive technical libraries.",
-  version: "2027",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-06-29",
   free_trial_days: 30,
 
   languages: [
@@ -10479,8 +10561,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A localized architectural drafting and BIM modeling tool optimized for European planning regulations.",
-  version: "Custom",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-01-23",
   free_trial_days: 0,
 
   languages: [
@@ -10708,7 +10790,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A leading Brazilian concrete building design and detailing software, highly optimized for regional construction standards.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-08-20",
+  version: "2024"
 },
 {
   id: "t146",
@@ -10859,6 +10943,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The preferred interior planning and furniture CAD suite in South America, tightly integrated with manufacturing systems.",
+
   external_ratings: [
     {
       source: "G2",
@@ -10874,7 +10959,11 @@ export const c1Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006597/SCIA-Engineer/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-08",
+  version: "2024"
+},
 {
   id: "t147",
   name: "SCIA Engineer",
@@ -11024,6 +11113,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
+
   external_ratings: [{
     source: "G2",
     score: 4.1,
@@ -11036,7 +11126,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 14,
     url: "https://www.capterra.com/p/168920/SCIA-Engineer/"
-  }]
+  }],
+
+  last_updated: "2023-12-03",
+  version: "2024"
 },
 {
   id: "t148",
@@ -11279,8 +11372,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's high-speed and multi-axis CAM software, engineered for manufacturing complex molds, dies, and aerospace parts.",
-  version: "2025",
-  last_updated: "2025-05-21",
+  version: "2026",
+  last_updated: "2024-08-12",
   free_trial_days: 30,
 
   languages: [
@@ -11553,7 +11646,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 19,
     url: "https://www.capterra.com/p/167290/ESPRIT/"
-  }]
+  }],
+
+  last_updated: "2024-10-23",
+  version: "2024"
 },
 {
   id: "t158",
@@ -11787,8 +11883,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Allplan's specialized BIM precast concrete design and detailing tool, crucial for modern modular construction.",
-  version: "2025",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2024-07-17",
   free_trial_days: 30,
 
   languages: [
@@ -12027,8 +12123,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "ESI Group's high-fidelity sheet metal forming simulation suite, essential for automotive stamping processes.",
-  version: "2025",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2024-06-04",
   free_trial_days: 30,
   languages: ["English", "French", "German", "Japanese", "Chinese"],
   file_formats_in: ["STEP", "IGES", "VDA"],
@@ -12212,6 +12308,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized AutoCAD-based shipbuilding CAD/CAM system, renowned for managing massive offshore structure models.",
+
   external_ratings: [{
     source: "G2",
     score: 4,
@@ -12224,7 +12321,10 @@ export const c1Tools: Tool[] = [
     max: 5,
     count: 8,
     url: "https://www.capterra.com/p/167295/ShipConstructor/"
-  }]
+  }],
+
+  last_updated: "2023-05-26",
+  version: "2024"
 },
 {
   id: "t171",
@@ -12375,7 +12475,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The global standard in ship design and operations, unmatched for naval architecture calculations and stability analysis.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-03-20",
+  version: "2024"
 },
 {
   id: "t172",
@@ -12542,8 +12644,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "SENER's premier integrated CAD/CAM marine suite, managing complete ship design cycles from concept to detailing.",
-  version: "2025",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2024-04-30",
   free_trial_days: 30,
   languages: ["English", "Spanish", "German", "French", "Chinese"],
   file_formats_in: ["DWG", "DXF", "STEP", "IGES"],
@@ -12741,6 +12843,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A premier German 3D CAD/CAM software for furniture manufacture, exhibition stands, and interior design.",
+
   external_ratings: [
     {
       source: "G2",
@@ -12756,7 +12859,11 @@ export const c1Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006600/imos-iX/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-05-16",
+  version: "2024"
+},
 {
   id: "t174",
   name: "imos iX",
@@ -12906,7 +13013,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized 3D design and manufacturing integration software, linking furniture designs directly to CNC machines.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-08-22",
+  version: "2024"
 },
 {
   id: "t175",
@@ -13057,7 +13166,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The leading kitchen and bathroom planning software, featuring an extensive catalog of manufacturer brands.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-12-06",
+  version: "2024"
 },
 {
   id: "t176",
@@ -13208,6 +13319,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A highly visual 3D design and presentation software tailored for tilers, stove builders, and interior designers.",
+
   external_ratings: [
     {
       source: "G2",
@@ -13223,7 +13335,11 @@ export const c1Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006601/KD-Max/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-03-03",
+  version: "2024"
+},
 {
   id: "t177",
   name: "KD Max",
@@ -13380,8 +13496,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized kitchen cabinet design and photorealistic rendering software, widely popular in commercial showrooms.",
-  version: "2025",
-  last_updated: "2025-05-21",
+  version: "2024",
+  last_updated: "2023-01-24",
   free_trial_days: 30,
   languages: ["English", "Chinese"],
   file_formats_in: ["DWG", "DXF"],
@@ -13557,6 +13673,7 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "ArcSite is ideal for field documentation and mobile floor plan creation.",
+
   external_ratings: [
     {
       source: "G2",
@@ -13572,7 +13689,11 @@ export const c1Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006602/CAD-Reader/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-05",
+  version: "2024"
+},
 {
   id: "t93",
   name: "CAD Reader",
@@ -13714,7 +13835,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-05-08",
+  version: "2024"
 },
 {
   id: "t94",
@@ -13857,7 +13980,9 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "UVCAD is a practical mobile CAD solution for basic 2D drafting needs.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-08-30",
+  version: "2024"
 },
 {
   id: "t95",
@@ -13999,6 +14124,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Updraw is a good choice for iOS users focused on dimensioned 2D drawings.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-05-25",
+  version: "2024"
 }
 ];

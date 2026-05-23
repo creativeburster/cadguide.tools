@@ -231,8 +231,8 @@ export const c5Tools: Tool[] = [
       url: "https://www.getapp.com/cad-software/a/siemens-nx/reviews/"
     }
   ],
-  version: "2412",
-  last_updated: "2025-11-15",
+  version: "2512",
+  last_updated: "2026-05-17",
   free_trial_days: 30,
 
   languages: [
@@ -504,7 +504,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 42,
     url: "https://www.capterra.com/p/138692/Mastercam/"
-  }]
+  }],
+
+  last_updated: "2025-10-08",
+  version: "2026"
 },
 {
   id: "t31",
@@ -654,6 +657,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The future of advanced manufacturing design.",
+
   external_ratings: [
     {
       source: "G2",
@@ -669,7 +673,11 @@ export const c5Tools: Tool[] = [
       count: 10,
       url: "https://www.capterra.com/p/10000909/SolidCAM/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-08-30",
+  version: "2024"
+},
 {
   id: "t32",
   name: "SolidCAM",
@@ -799,6 +807,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "iMachining is literal magic for CNC shops.",
+
   external_ratings: [
     {
       source: "G2",
@@ -814,7 +823,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000910/Magics/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-11-26",
+  version: "2026"
+},
 {
   id: "t38",
   name: "Magics",
@@ -962,6 +975,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Magics is the industrial benchmark for fixable unprintable meshes.",
+
   external_ratings: [
     {
       source: "SourceForge",
@@ -970,7 +984,11 @@ export const c5Tools: Tool[] = [
       count: 40,
       url: "https://sourceforge.net/projects/opencascade/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-09-12",
+  version: "2024"
+},
 {
   id: "t40",
   name: "OpenCASCADE",
@@ -1102,6 +1120,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The most important open-source project in CAD history.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1117,7 +1136,11 @@ export const c5Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006626/VISI-Modelling/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-05-04",
+  version: "2024"
+},
 {
   id: "t76",
   name: "VISI Modelling",
@@ -1207,6 +1230,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "If you are making plastic injection molds, VISI is your best friend.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1222,7 +1246,11 @@ export const c5Tools: Tool[] = [
       count: 10,
       url: "https://www.capterra.com/p/10000911/Cimatron/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-09-14",
+  version: "2024"
+},
 {
   id: "t81",
   name: "Cimatron",
@@ -1312,6 +1340,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1334,7 +1363,11 @@ export const c5Tools: Tool[] = [
       count: 120,
       url: "https://www.trustradius.com/products/ansys-mechanical/reviews"
     }
-  ]},
+  ],
+
+  last_updated: "2023-05-29",
+  version: "2024"
+},
 {
   id: "t84",
   name: "ANSYS Mechanical",
@@ -1502,7 +1535,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 12,
     url: "https://www.capterra.com/p/138699/ANSYS-Mechanical/"
-  }]
+  }],
+
+  last_updated: "2024-12-30",
+  version: "2026 R1"
 },
 {
   id: "t85",
@@ -1636,7 +1672,11 @@ export const c5Tools: Tool[] = [
       count: 15,
       url: "https://www.capterra.com/p/10000913/Altair-HyperWorks/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-10",
+  version: "2024"
+},
 {
   id: "t86",
   name: "Altair HyperWorks",
@@ -1756,7 +1796,9 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-06-13",
+  version: "2024"
 },
 {
   id: "t87",
@@ -1849,6 +1891,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The automotive crash simulation specialist trusted by European OEMs for decades.",
+
   external_ratings: [
     {
       source: "G2",
@@ -1864,7 +1907,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000914/CAMWorks/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-01-30",
+  version: "2024"
+},
 {
   id: "t93",
   name: "CAMWorks",
@@ -1969,7 +2016,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 14,
     url: "https://www.capterra.com/p/138705/CAMWorks/"
-  }]
+  }],
+
+  last_updated: "2023-05-22",
+  version: "2026"
 },
 {
   id: "t101",
@@ -2120,6 +2170,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A comprehensive, high-end CAD/CAM/PDM suite, renowned for wood manufacturing and sheet metal fabrication modeling.",
+
   external_ratings: [
     {
       source: "G2",
@@ -2135,7 +2186,11 @@ export const c5Tools: Tool[] = [
       count: 2,
       url: "https://www.capterra.com/p/10006627/BeckerCAD/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-10-26",
+  version: "2024"
+},
 {
   id: "t106",
   name: "BeckerCAD",
@@ -2333,6 +2388,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "An accessible German 2D/3D CAD utility, excellent for architectural layouts and mechanical drafting.",
+
   external_ratings: [
     {
       source: "G2",
@@ -2348,7 +2404,11 @@ export const c5Tools: Tool[] = [
       count: 2,
       url: "https://www.capterra.com/p/10006628/CADmeister/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-30",
+  version: "2024"
+},
 {
   id: "t112",
   name: "CADmeister",
@@ -2547,7 +2607,9 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized Japanese CAD/CAM system for mold and die design, offering highly efficient tooling algorithms.",
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-05-04",
+  version: "2024"
 },
 {
   id: "t124",
@@ -2748,6 +2810,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's premier CAD/CAM software for the mold and die industries, offering exceptional progressive die design tools.",
+
   external_ratings: [
     {
       source: "G2",
@@ -2763,7 +2826,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10000915/Edgecam/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-04-14",
+  version: "2024"
+},
 {
   id: "t125",
   name: "Edgecam",
@@ -2964,6 +3031,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A market-leading CNC programming system, outstanding for high-efficiency production milling, turning, and wire EDM.",
+
   external_ratings: [
     {
       source: "G2",
@@ -2979,7 +3047,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006634/KISSsoft/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-06-19",
+  version: "2024"
+},
 {
   id: "t138",
   name: "KISSsoft",
@@ -3178,6 +3250,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized mechanical design program for sizing, optimizing, and calculating gears and drive systems.",
+
   external_ratings: [
     {
       source: "G2",
@@ -3193,7 +3266,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10000916/FeatureCAM/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-09",
+  version: "2024"
+},
 {
   id: "t149",
   name: "FeatureCAM",
@@ -3407,7 +3484,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 11,
     url: "https://www.capterra.com/p/138703/FeatureCAM/"
-  }]
+  }],
+
+  last_updated: "2023-09-15",
+  version: "2026"
 },
 {
   id: "t150",
@@ -3622,7 +3702,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 8,
     url: "https://www.capterra.com/p/138702/GibbsCAM/"
-  }]
+  }],
+
+  last_updated: "2024-09-23",
+  version: "2024"
 },
 {
   id: "t152",
@@ -3836,7 +3919,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 8,
     url: "https://www.capterra.com/p/138704/hyperMILL/"
-  }]
+  }],
+
+  last_updated: "2023-01-02",
+  version: "2026.1"
 },
 {
   id: "t153",
@@ -4037,6 +4123,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A high-end CAD/CAM software for model, mold, and tool manufacturing, featuring exceptionally safe machine simulation.",
+
   external_ratings: [
     {
       source: "G2",
@@ -4052,7 +4139,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006629/WorkNC/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-04-04",
+  version: "2024"
+},
 {
   id: "t154",
   name: "WorkNC",
@@ -4251,6 +4342,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's premier automated CNC software for 2-axis to 5-axis machining of complex aerospace and automotive components.",
+
   external_ratings: [
     {
       source: "G2",
@@ -4266,7 +4358,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10000917/SURFCAM/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-12-11",
+  version: "2024"
+},
 {
   id: "t155",
   name: "SURFCAM",
@@ -4464,6 +4560,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A widely utilized CNC programming tool, offering exceptionally robust toolpaths and high-speed machining algorithms.",
+
   external_ratings: [
     {
       source: "G2",
@@ -4479,7 +4576,11 @@ export const c5Tools: Tool[] = [
       count: 15,
       url: "https://www.capterra.com/p/10000921/BobCAD-CAM/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-02-17",
+  version: "2024"
+},
 {
   id: "t156",
   name: "BobCAD-CAM",
@@ -4677,6 +4778,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A budget-friendly, high-performance CAD/CAM solution with a very short learning curve for workshop machining.",
+
   external_ratings: [
     {
       source: "G2",
@@ -4692,7 +4794,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000935/AutoForm/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-09-25",
+  version: "2024"
+},
 {
   id: "t166",
   name: "AutoForm",
@@ -4891,6 +4997,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed global standard in sheet metal forming simulation, providing crucial feasibility and springback analysis.",
+
   external_ratings: [
     {
       source: "G2",
@@ -4906,7 +5013,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000922/Moldflow/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-04-01",
+  version: "2024"
+},
 {
   id: "t168",
   name: "Moldflow",
@@ -5105,6 +5216,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's premier plastic injection molding simulation software, essential for predicting manufacturing defects.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5120,7 +5232,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10000923/Moldex3D/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-09-28",
+  version: "2024"
+},
 {
   id: "t169",
   name: "Moldex3D",
@@ -5318,6 +5434,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A highly advanced true-3D plastic injection molding analysis tool, outstanding for predicting weld lines and warpage.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5333,7 +5450,11 @@ export const c5Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10000936/WoodWOP/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-05-30",
+  version: "2024"
+},
 {
   id: "t178",
   name: "WoodWOP",
@@ -5533,6 +5654,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "HOMAG's dedicated CNC programming system, engineered specifically for wood fabrication and router routing.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5548,7 +5670,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10000924/AlphaCAM/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-04-07",
+  version: "2024"
+},
 {
   id: "t179",
   name: "AlphaCAM",
@@ -5747,6 +5873,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A premier CAD/CAM system for wood, stone, and composite routing, delivering highly automated CNC programming.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5762,7 +5889,11 @@ export const c5Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10000925/Radan/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-02-14",
+  version: "2024"
+},
 {
   id: "t180",
   name: "Radan",
@@ -5960,6 +6091,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's leading sheet metal design and nesting software, optimizing sheet utilization and punch/laser toolpaths.",
+
   external_ratings: [
     {
       source: "G2",
@@ -5975,7 +6107,11 @@ export const c5Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10000937/Lantek-Expert/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-09-10",
+  version: "2024"
+},
 {
   id: "t182",
   name: "Lantek Expert",
@@ -6173,6 +6309,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized ERP-integrated nesting and sheet metal CAM suite, widely used in industrial laser cutting plants.",
+
   external_ratings: [
     {
       source: "G2",
@@ -6188,7 +6325,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10000926/SigmaNEST/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-08-20",
+  version: "2024"
+},
 {
   id: "t183",
   name: "SigmaNEST",
@@ -6387,6 +6528,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The premier sheet metal fabrication and profile nesting software, maximizing raw material utilization.",
+
   external_ratings: [
     {
       source: "G2",
@@ -6402,7 +6544,11 @@ export const c5Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006630/MetaCAM/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-29",
+  version: "2024"
+},
 {
   id: "t184",
   name: "MetaCAM",
@@ -6600,6 +6746,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "An advanced, enterprise-grade sheet metal CAD/CAM solution featuring outstanding automatic tooling calculations.",
+
   external_ratings: [
     {
       source: "G2",
@@ -6622,7 +6769,11 @@ export const c5Tools: Tool[] = [
       count: 80,
       url: "https://www.trustradius.com/products/ansys-fluent/reviews"
     }
-  ]},
+  ],
+
+  last_updated: "2023-09-06",
+  version: "2024"
+},
 {
   id: "t185",
   name: "ANSYS Fluent",
@@ -6814,7 +6965,10 @@ export const c5Tools: Tool[] = [
     max: 10,
     count: 8,
     url: "https://www.trustradius.com/products/ansys-fluent/reviews"
-  }]
+  }],
+
+  last_updated: "2024-11-26",
+  version: "2026 R1"
 },
 {
   id: "t186",
@@ -7004,7 +7158,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000938/ANSYS-Discovery/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-08-06",
+  version: "2024"
+},
 {
   id: "t187",
   name: "ANSYS Discovery",
@@ -7190,7 +7348,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 8,
     url: "https://www.capterra.com/p/138700/ANSYS-Discovery/"
-  }]
+  }],
+
+  last_updated: "2023-04-05",
+  version: "2024"
 },
 {
   id: "t188",
@@ -7377,7 +7538,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 32,
     url: "https://www.capterra.com/p/138711/Abaqus/"
-  }]
+  }],
+
+  last_updated: "2025-06-03",
+  version: "2025"
 },
 {
   id: "t189",
@@ -7560,7 +7724,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 35,
     url: "https://www.getapp.com/it-management-software/a/comsol-multiphysics/"
-  }]
+  }],
+
+  last_updated: "2025-07-08",
+  version: "6.3"
 },
 {
   id: "t190",
@@ -7748,7 +7915,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000939/Simcenter-STAR-CCM/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-05-11",
+  version: "2024"
+},
 {
   id: "t191",
   name: "Simcenter STAR-CCM+",
@@ -7934,7 +8105,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 14,
     url: "https://www.capterra.com/p/138712/Simcenter-STAR-CCM/"
-  }]
+  }],
+
+  last_updated: "2024-05-14",
+  version: "2412"
 },
 {
   id: "t192",
@@ -8124,7 +8298,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 18,
     url: "https://www.g2.com/products/openfoam/reviews"
-  }]
+  }],
+
+  last_updated: "2024-04-27",
+  version: "2024"
 },
 {
   id: "t193",
@@ -8310,7 +8487,10 @@ export const c5Tools: Tool[] = [
     max: 5,
     count: 22,
     url: "https://www.capterra.com/p/138701/SimScale/"
-  }]
+  }],
+
+  last_updated: "2024-06-30",
+  version: "2024"
 },
 {
   id: "t194",
@@ -8498,7 +8678,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000940/Altair-Inspire/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-05-28",
+  version: "2024"
+},
 {
   id: "t195",
   name: "Altair Inspire",
@@ -8671,7 +8855,9 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-09-22",
+  version: "2024"
 },
 {
   id: "t196",
@@ -8843,7 +9029,9 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2023-07-08",
+  version: "2024"
 },
 {
   id: "t197",
@@ -9031,7 +9219,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006631/CAESAR-II/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-09-08",
+  version: "2024"
+},
 {
   id: "t209",
   name: "CAESAR II",
@@ -9216,7 +9408,11 @@ export const c5Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006632/AutoPIPE/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-01-12",
+  version: "2024"
+},
 {
   id: "t210",
   name: "Bentley AutoPIPE",
@@ -9403,7 +9599,11 @@ export const c5Tools: Tool[] = [
       count: 3,
       url: "https://www.capterra.com/p/10006633/PV-Elite/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-06-17",
+  version: "2024"
+},
 {
   id: "t211",
   name: "PV Elite",
@@ -9590,7 +9790,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10000941/Aspen-HYSYS/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-09-29",
+  version: "2024"
+},
 {
   id: "t212",
   name: "AspenTech Aspen HYSYS",
@@ -9774,7 +9978,11 @@ export const c5Tools: Tool[] = [
       count: 10,
       url: "https://www.capterra.com/p/10000934/SAP2000/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-02-19",
+  version: "2024"
+},
 {
   id: "t233",
   name: "CSI SAP2000",
@@ -9962,7 +10170,11 @@ export const c5Tools: Tool[] = [
       count: 12,
       url: "https://www.capterra.com/p/10000929/ETABS/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-08-23",
+  version: "2024"
+},
 {
   id: "t234",
   name: "CSI ETABS",
@@ -10150,7 +10362,11 @@ export const c5Tools: Tool[] = [
       count: 15,
       url: "https://www.capterra.com/p/10000928/STAAD-Pro/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2023-05-01",
+  version: "2024"
+},
 {
   id: "t235",
   name: "Bentley STAAD.Pro",
@@ -10339,7 +10555,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006622/Tekla-Tedds/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-07-22",
+  version: "2024"
+},
 {
   id: "t236",
   name: "Tekla Tedds",
@@ -10526,7 +10746,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10006623/Autodesk-Robot-Structural-Analysis/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-08-17",
+  version: "2024"
+},
 {
   id: "t242",
   name: "Autodesk Robot Structural Analysis",
@@ -10713,7 +10937,11 @@ export const c5Tools: Tool[] = [
       count: 8,
       url: "https://www.capterra.com/p/10006624/IDEA-StatiCa/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-01-02",
+  version: "2024"
+},
 {
   id: "t243",
   name: "IDEA StatiCa",
@@ -10900,7 +11128,11 @@ export const c5Tools: Tool[] = [
       count: 5,
       url: "https://www.capterra.com/p/10006625/RISA-3D/reviews/"
     }
-  ]},
+  ],
+
+  last_updated: "2024-03-05",
+  version: "2024"
+},
 {
   id: "t244",
   name: "RISA-3D",
@@ -11071,6 +11303,8 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
+  external_ratings: [],
+  last_updated: "2024-03-14",
+  version: "2024"
 }
 ];
