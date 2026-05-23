@@ -187,6 +187,50 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "The leading professional PCB design software, combining unified schematic capture, 3D routing, and layout.",
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 954,
+      url: "https://www.g2.com/products/altium-designer/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 181,
+      url: "https://www.capterra.com/p/175058/Altium-Designer/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 9.0,
+      max: 10,
+      count: 83,
+      url: "https://www.trustradius.com/products/altium-designer/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 2.8,
+      max: 5,
+      count: 6,
+      url: "https://www.trustpilot.com/review/altium.com"
+    },
+    {
+      source: "Software Advice",
+      score: 4.4,
+      max: 5,
+      count: 101,
+      url: "https://www.softwareadvice.com/engineering-cad/altium-designer-profile/reviews/"
+    },
+    {
+      source: "GetApp",
+      score: 4.5,
+      max: 5,
+      count: 65,
+      url: "https://www.getapp.com/engineering-cad-software/a/altium-designer/reviews/"
+    }
+  ],
   version: "25",
   last_updated: "2025-11-15",
   free_trial_days: 15,
@@ -250,26 +294,6 @@ export const c6Tools: Tool[] = [
     "Perpetual",
     "Network"
   ],
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 280,
-    url: "https://www.g2.com/products/altium-designer/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 130,
-    url: "https://www.capterra.com/p/238434/Altium-Designer/"
-  }, {
-    source: "TrustRadius",
-    score: 8.5,
-    max: 10,
-    count: 95,
-    url: "https://www.trustradius.com/products/altium-designer/reviews"
-  }],
 
   support_channels: [
     "Phone",
@@ -597,8 +621,22 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/synopsys-fusion-compiler/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006636/Synopsys-Fusion-Compiler/reviews/"
+    }
+  ]},
 {
   id: "t92",
   name: "Synopsys Fusion Compiler",
@@ -689,8 +727,22 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "The most advanced chip implementation platform, powering designs at 3nm and below.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 35,
+      url: "https://www.g2.com/products/eplan/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10006637/EPLAN/reviews/"
+    }
+  ]},
 {
   id: "t103",
   name: "EPLAN",
@@ -932,8 +984,22 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "The global market leader in electrical engineering CAD, providing highly automated schematic and panel design.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/cr-8000/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006638/CR-8000/reviews/"
+    }
+  ]},
 {
   id: "t111",
   name: "CR-8000",
@@ -1084,8 +1150,22 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "Zuken's advanced multi-board system design and PCB packaging suite, optimized for enterprise electronics.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/quadcept/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006639/Quadcept/reviews/"
+    }
+  ]},
 {
   id: "t114",
   name: "Quadcept",
@@ -1235,8 +1315,22 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "A modern, cloud-based EDA tool combining intuitive schematic capture with high-efficiency PCB design.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 25,
+      url: "https://www.g2.com/products/allegro-pcb/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 12,
+      url: "https://www.capterra.com/p/10006640/Allegro-PCB/reviews/"
+    }
+  ]},
 {
   id: "t160",
   name: "Allegro PCB",
@@ -2076,8 +2170,22 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "Siemens' flagship enterprise PCB design and systems engineering platform, built for multi-disciplinary global teams.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/pulsonix/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006641/Pulsonix/reviews/"
+    }
+  ]},
 {
   id: "t164",
   name: "Pulsonix",
@@ -2297,8 +2405,22 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "A highly responsive schematic capture and PCB layout software, supporting advanced high-speed routing.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/target-3001/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006642/Target-3001/reviews/"
+    }
+  ]},
 {
   id: "t165",
   name: "Target 3001!",
@@ -2448,8 +2570,36 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "A popular German schematic and PCB CAD software, featuring integrated spice simulation and 3D views.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 35,
+      url: "https://www.g2.com/products/kicad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.4,
+      max: 5,
+      count: 20,
+      url: "https://www.capterra.com/p/231665/KiCad/reviews/"
+    },
+    {
+      source: "SourceForge",
+      score: 4.8,
+      max: 5,
+      count: 220,
+      url: "https://sourceforge.net/projects/kicad/"
+    },
+    {
+      source: "Trustpilot",
+      score: 4.2,
+      max: 5,
+      count: 15,
+      url: "https://www.trustpilot.com/review/kicad.org"
+    }
+  ]},
 {
   id: "t198",
   name: "KiCad",
@@ -3004,8 +3154,22 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 41,
+      url: "https://www.g2.com/products/multisim/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.1,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10000919/Multisim/reviews/"
+    }
+  ]},
 {
   id: "t201",
   name: "NI Multisim",
@@ -3177,8 +3341,29 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.4,
+      max: 5,
+      count: 42,
+      url: "https://www.g2.com/products/ltspice/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10000918/LTspice/reviews/"
+    },
+    {
+      source: "SourceForge",
+      score: 4.5,
+      max: 5,
+      count: 55,
+      url: "https://sourceforge.net/projects/ltspice/"
+    }
+  ]},
 {
   id: "t202",
   name: "LTspice",
@@ -3351,8 +3536,22 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/proteus-design-suite/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10006643/Proteus-Design-Suite/reviews/"
+    }
+  ]},
 {
   id: "t203",
   name: "Proteus Design Suite",

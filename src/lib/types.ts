@@ -121,6 +121,7 @@ export interface Tool {
       | "G2"
       | "Capterra"
       | "TrustRadius"
+      | "Trustpilot"
       | "Gartner Peer Insights"
       | "Software Advice"
       | "GetApp"

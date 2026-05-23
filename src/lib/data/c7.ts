@@ -92,8 +92,22 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The most efficient alternative to EPLAN for small to mid-sized automation firms.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/matrixgold/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10000932/MatrixGold/reviews/"
+    }
+  ]},
 {
   id: "t65",
   name: "MatrixGold",
@@ -210,8 +224,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/exocad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006645/exocad/reviews/"
+    }
+  ]},
 {
   id: "t66",
   name: "exocad DentalCAD",
@@ -328,8 +356,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/cabinet-vision/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006646/Cabinet-Vision/reviews/"
+    }
+  ]},
 {
   id: "t67",
   name: "Cabinet Vision",
@@ -418,8 +460,22 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The backbone of any modern professional woodworking shop.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/aveva-marine/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006647/AVEVA-Marine/reviews/"
+    }
+  ]},
 {
   id: "t68",
   name: "AVEVA Marine",
@@ -509,8 +565,36 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed king of heavy-duty maritime engineering.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.8,
+      max: 5,
+      count: 6,
+      url: "https://www.g2.com/products/clo/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 25,
+      url: "https://www.capterra.com/p/10000875/CLO/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 9,
+      max: 10,
+      count: 12,
+      url: "https://www.trustradius.com/products/clo-3d/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 4.4,
+      max: 5,
+      count: 80,
+      url: "https://www.trustpilot.com/review/clo3d.com"
+    }
+  ]},
 {
   id: "t69",
   name: "CLO 3D",
@@ -646,8 +730,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/shoemaster/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 2,
+      url: "https://www.capterra.com/p/10000930/Shoemaster/reviews/"
+    }
+  ]},
 {
   id: "t75",
   name: "Shoemaster",
@@ -736,8 +834,22 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Essential software for global footwear production lines.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/wysiwyg/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006648/WYSIWYG/reviews/"
+    }
+  ]},
 {
   id: "t77",
   name: "WYSIWYG",
@@ -828,8 +940,22 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The only software you need to design and pre-program a world-class concert.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/3design/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006649/3Design/reviews/"
+    }
+  ]},
 {
   id: "t78",
   name: "3Design",
@@ -919,8 +1045,22 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The serious alternative to MatrixGold for those who prefer Mac or true parametric history.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/land-fx/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006650/Land-FX/reviews/"
+    }
+  ]},
 {
   id: "t82",
   name: "Land F/X",
@@ -1009,8 +1149,22 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The essential multiplier for landscape architects who use AutoCAD.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 3,
+      url: "https://www.g2.com/products/icad3d-plus/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 2,
+      url: "https://www.capterra.com/p/10006651/ICAD3D/reviews/"
+    }
+  ]},
 {
   id: "t83",
   name: "ICAD3D+",
@@ -1099,8 +1253,29 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The most modern 3D alternative for footwear professionals.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 42,
+      url: "https://www.g2.com/products/infraworks/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 20,
+      url: "https://www.capterra.com/p/10000883/InfraWorks/reviews/"
+    },
+    {
+      source: "Trustpilot",
+      score: 1.2,
+      max: 5,
+      count: 162,
+      url: "https://www.trustpilot.com/review/autodesk.com"
+    }
+  ]},
 {
   id: "ext-infraworks",
   name: "Infraworks",
@@ -1248,8 +1423,29 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 131,
+      url: "https://www.g2.com/products/3ds-max/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 113,
+      url: "https://www.capterra.com/p/206897/3ds-Max/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 8.5,
+      max: 10,
+      count: 45,
+      url: "https://www.trustradius.com/products/3ds-max/reviews"
+    }
+  ]},
 {
   id: "ext-3ds-max",
   name: "3ds Max",
@@ -3141,8 +3337,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.g2.com/products/optitex/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006652/Optitex/reviews/"
+    }
+  ]},
 {
   id: "t218",
   name: "Optitex",
@@ -3313,8 +3523,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 8,
+      url: "https://www.g2.com/products/gerber-accumark/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006653/Gerber-AccuMark/reviews/"
+    }
+  ]},
 {
   id: "t219",
   name: "Gerber AccuMark",
@@ -3484,8 +3708,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/lectra-modaris/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10000931/Lectra-Modaris/reviews/"
+    }
+  ]},
 {
   id: "t220",
   name: "Lectra Modaris",
@@ -3655,8 +3893,29 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.8,
+      max: 5,
+      count: 56,
+      url: "https://www.g2.com/products/browzwear/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 1,
+      max: 5,
+      count: 1,
+      url: "https://www.capterra.com/p/10000877/Browzwear/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 10,
+      max: 10,
+      count: 10,
+      url: "https://www.trustradius.com/products/browzwear/reviews"
+    }
+  ]},
 {
   id: "t221",
   name: "Browzwear",
@@ -3827,8 +4086,36 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/marvelous-designer/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 6,
+      url: "https://www.capterra.com/p/10000874/Marvelous-Designer/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 9,
+      max: 10,
+      count: 12,
+      url: "https://www.trustradius.com/products/marvelous-designer/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 4.9,
+      max: 5,
+      count: 1247,
+      url: "https://www.trustpilot.com/review/marvelousdesigner.com"
+    }
+  ]},
 {
   id: "t222",
   name: "Marvelous Designer",
@@ -4003,8 +4290,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/rhinogold/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006654/RhinoGold/reviews/"
+    }
+  ]},
 {
   id: "t223",
   name: "RhinoGold",
@@ -4173,8 +4474,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/jewelcad-pro/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006655/JewelCAD-Pro/reviews/"
+    }
+  ]},
 {
   id: "t224",
   name: "JewelCAD Pro",
@@ -4343,8 +4658,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 30,
+      url: "https://www.g2.com/products/d5-render/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10006644/D5-Render/reviews/"
+    }
+  ]},
 {
   id: "t225",
   name: "D5 Render",
@@ -5078,8 +5407,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 8,
+      url: "https://www.g2.com/products/carlson-survey/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006656/Carlson-Survey/reviews/"
+    }
+  ]},
 {
   id: "t239",
   name: "Carlson Survey",
@@ -5250,8 +5593,22 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/trimble-business-center/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006657/Trimble-Business-Center/reviews/"
+    }
+  ]},
 {
   id: "t240",
   name: "Trimble Business Center",

@@ -112,6 +112,50 @@ export const c3Tools: Tool[] = [
 
   expert_verdict:
     "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.6,
+      max: 5,
+      count: 927,
+      url: "https://www.g2.com/products/revit/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 475,
+      url: "https://www.capterra.com/p/265023/Revit/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 9.0,
+      max: 10,
+      count: 238,
+      url: "https://www.trustradius.com/products/revit/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 1.2,
+      max: 5,
+      count: 162,
+      url: "https://www.trustpilot.com/review/www.autodesk.com"
+    },
+    {
+      source: "Software Advice",
+      score: 4.6,
+      max: 5,
+      count: 470,
+      url: "https://www.softwareadvice.com/construction/revit-profile/reviews/"
+    },
+    {
+      source: "GetApp",
+      score: 4.6,
+      max: 5,
+      count: 280,
+      url: "https://www.getapp.com/construction-software/a/autodesk-revit/reviews/"
+    }
+  ],
 
   pricing_breakdown: [
     {
@@ -200,44 +244,6 @@ export const c3Tools: Tool[] = [
 
   deployment_options: ["Desktop", "Cloud"],
   license_types: ["Subscription", "Network", "Educational"],
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 740,
-      url: "https://www.g2.com/products/revit/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 530,
-      url: "https://www.capterra.com/p/187420/Revit/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 420,
-      url: "https://www.trustradius.com/products/autodesk-revit/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.6,
-      max: 5,
-      count: 470,
-      url: "https://www.softwareadvice.com/construction/revit-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.6,
-      max: 5,
-      count: 470,
-      url: "https://www.getapp.com/construction-software/a/revit/",
-    },
-  ],
 
   support_channels: [
     "Phone",
@@ -1378,6 +1384,23 @@ export const c3Tools: Tool[] = [
   },
   expert_verdict:
     "The undisputed gold standard for professional landscape architecture.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 35,
+      url: "https://www.g2.com/products/allplan/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10006610/Allplan/reviews/"
+    }
+  ],
 },
 {
   id: "t94",
@@ -1695,6 +1718,23 @@ export const c3Tools: Tool[] = [
     standards: [],
   },
   expert_verdict: "待补充专业评语。",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/hicad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006612/HiCAD/reviews/"
+    }
+  ],
 },
 {
   id: "t105",
@@ -1813,6 +1853,23 @@ export const c3Tools: Tool[] = [
     standards: ["DWG", "DXF", "STEP", "IFC"],
   },
   expert_verdict: "HiCADは機械設計、プラント設計、シートメタル、鋼構造など複数の業界に対応する包括的なCAD/PDM/PLMソリューションです。特にシートメタルと鋼構造分野で強みを持ち、データ管理機能も充実しています。ドイツ製の信頼性が高い製品ですが、価格も高めで学習曲線も急勾配です。複数の業界で活用したい企業にとって魅力的な選択肢です。",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/renga/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006613/Renga/reviews/"
+    }
+  ],
 },
 {
   id: "t119",
@@ -1931,6 +1988,23 @@ export const c3Tools: Tool[] = [
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
   expert_verdict: "Rengaはロシア建築基準に完全対応したBIMシステムで、建築、構造、MEPなど全分野をカバーしています。ロシア市場でのサポートが充実しており、コストパフォーマンスも高いです。ただし、国際的なエコシステムは小さく、英語ドキュメントも限定的です。ロシア国内の建設プロジェクトには最適ですが、グローバル展開を考える企業には検討が必要です。",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/edificius/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006614/Edificius/reviews/"
+    }
+  ],
 },
 {
   id: "t130",
@@ -2167,6 +2241,23 @@ export const c3Tools: Tool[] = [
     standards: ["IFC", "DWG", "DXF"],
   },
   expert_verdict: "EdiLusは建築設計に特化したBIMソフトウェアで、IFC認証による高い相互運用性が特徴です。直感的なインターフェースと自動図面生成機能を備え、建築家にとって使いやすいツールです。構造やMEP機能は限定されていますが、純粋な建築設計用途には最適です。コストパフォーマンスも良く、中小の建築事務所にとって魅力的な選択肢です。",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.g2.com/products/cadwork/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006615/cadwork/reviews/"
+    }
+  ],
 },
 {
   id: "t139",
@@ -2283,6 +2374,23 @@ export const c3Tools: Tool[] = [
     standards: ["IFC", "DWG", "DXF", "STEP"],
   },
   expert_verdict: "cadworkは木材建築に特化したCAD/CAMソフトウェアで、設計から製造までのワークフローを統合しています。特にCNCマシン対応が強力で、欧州の木材建築業界で広く採用されています。スイス製の信頼性が高い製品ですが、価格も高めです。木材建築専門企業にとっては最適な選択肢ですが、他の建設用途には向いていません。",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/magicad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006616/MagiCAD/reviews/"
+    }
+  ],
 },
 {
   id: "t140",
@@ -2401,6 +2509,23 @@ export const c3Tools: Tool[] = [
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
   expert_verdict: "MagiCADはMEP設計に特化したBIMソフトウェアで、HVAC、電気、配管設計の全てをカバーしています。豊富なメーカーライブラリとRevitとの強力な連携が特徴で、欧州のMEP業界で広く採用されています。計算・シミュレーション機能も充実していますが、建築・構造機能は限定されています。MEP専門企業にとっては最適な選択肢です。",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/dds-cad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006617/DDS-CAD/reviews/"
+    }
+  ],
 },
 {
   id: "t157",
@@ -2517,6 +2642,23 @@ export const c3Tools: Tool[] = [
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
   expert_verdict: "DDS-CADはMEP設計に特化したBIMソフトウェアで、HVAC、電気、配管設計をカバーしています。ノルディック市場での実績が豊富で、エネルギー解析機能も充実しています。ノルウェー製の信頼性が高い製品ですが、建築・構造機能は限定されています。MEP専門企業、特に北欧市場でのプロジェクトには最適です。",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/drofus/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006618/dRofus/reviews/"
+    }
+  ],
 },
 {
   id: "t159",

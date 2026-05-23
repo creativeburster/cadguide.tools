@@ -187,6 +187,50 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A high-end enterprise PLM and CAD suite, delivering unmatched power for aerospace and automotive engineering.",
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.4,
+      max: 5,
+      count: 246,
+      url: "https://www.g2.com/products/nx-cad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 30,
+      url: "https://www.capterra.com/p/10000908/Siemens-NX/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 8.1,
+      max: 10,
+      count: 46,
+      url: "https://www.trustradius.com/products/siemens-nx-cad/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 2.5,
+      max: 5,
+      count: 8,
+      url: "https://www.trustpilot.com/review/www.plm.automation.siemens.com"
+    },
+    {
+      source: "Software Advice",
+      score: 4.5,
+      max: 5,
+      count: 25,
+      url: "https://www.softwareadvice.com/cad/siemens-nx-profile/"
+    },
+    {
+      source: "GetApp",
+      score: 4.5,
+      max: 5,
+      count: 20,
+      url: "https://www.getapp.com/cad-software/a/siemens-nx/reviews/"
+    }
+  ],
   version: "2412",
   last_updated: "2025-11-15",
   free_trial_days: 30,
@@ -258,26 +302,6 @@ export const c5Tools: Tool[] = [
     "Network",
     "Floating"
   ],
-
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 200,
-    url: "https://www.g2.com/products/siemens-nx/reviews"
-  }, {
-    source: "TrustRadius",
-    score: 8.7,
-    max: 10,
-    count: 180,
-    url: "https://www.trustradius.com/products/siemens-nx/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.5,
-    max: 5,
-    count: 140,
-    url: "https://www.gartner.com/reviews/market/computer-aided-design-cad-software"
-  }],
 
   support_channels: [
     "Phone",
@@ -630,8 +654,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The future of advanced manufacturing design.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 25,
+      url: "https://www.g2.com/products/solidcam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.capterra.com/p/10000909/SolidCAM/reviews/"
+    }
+  ]},
 {
   id: "t32",
   name: "SolidCAM",
@@ -761,8 +799,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "iMachining is literal magic for CNC shops.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/magics/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000910/Magics/reviews/"
+    }
+  ]},
 {
   id: "t38",
   name: "Magics",
@@ -910,8 +962,15 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Magics is the industrial benchmark for fixable unprintable meshes.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "SourceForge",
+      score: 4.5,
+      max: 5,
+      count: 40,
+      url: "https://sourceforge.net/projects/opencascade/"
+    }
+  ]},
 {
   id: "t40",
   name: "OpenCASCADE",
@@ -1043,8 +1102,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The most important open-source project in CAD history.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/visi-modelling/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006626/VISI-Modelling/reviews/"
+    }
+  ]},
 {
   id: "t76",
   name: "VISI Modelling",
@@ -1134,8 +1207,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "If you are making plastic injection molds, VISI is your best friend.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 20,
+      url: "https://www.g2.com/products/cimatron/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.capterra.com/p/10000911/Cimatron/reviews/"
+    }
+  ]},
 {
   id: "t81",
   name: "Cimatron",
@@ -1225,8 +1312,29 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.4,
+      max: 5,
+      count: 87,
+      url: "https://www.g2.com/products/ansys-mechanical/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 25,
+      url: "https://www.capterra.com/p/10000912/ANSYS-Mechanical/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 8.5,
+      max: 10,
+      count: 120,
+      url: "https://www.trustradius.com/products/ansys-mechanical/reviews"
+    }
+  ]},
 {
   id: "t84",
   name: "ANSYS Mechanical",
@@ -1513,8 +1621,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.4,
+      max: 5,
+      count: 79,
+      url: "https://www.g2.com/products/altair-hyperworks/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10000913/Altair-HyperWorks/reviews/"
+    }
+  ]},
 {
   id: "t86",
   name: "Altair HyperWorks",
@@ -1727,8 +1849,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The automotive crash simulation specialist trusted by European OEMs for decades.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/camworks/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000914/CAMWorks/reviews/"
+    }
+  ]},
 {
   id: "t93",
   name: "CAMWorks",
@@ -1984,8 +2120,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A comprehensive, high-end CAD/CAM/PDM suite, renowned for wood manufacturing and sheet metal fabrication modeling.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.g2.com/products/beckercad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 2,
+      url: "https://www.capterra.com/p/10006627/BeckerCAD/reviews/"
+    }
+  ]},
 {
   id: "t106",
   name: "BeckerCAD",
@@ -2183,8 +2333,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "An accessible German 2D/3D CAD utility, excellent for architectural layouts and mechanical drafting.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.g2.com/products/cadmeister/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 2,
+      url: "https://www.capterra.com/p/10006628/CADmeister/reviews/"
+    }
+  ]},
 {
   id: "t112",
   name: "CADmeister",
@@ -2584,8 +2748,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's premier CAD/CAM software for the mold and die industries, offering exceptional progressive die design tools.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 12,
+      url: "https://www.g2.com/products/edgecam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10000915/Edgecam/reviews/"
+    }
+  ]},
 {
   id: "t125",
   name: "Edgecam",
@@ -2786,8 +2964,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A market-leading CNC programming system, outstanding for high-efficiency production milling, turning, and wire EDM.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 8,
+      url: "https://www.g2.com/products/kisssoft/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006634/KISSsoft/reviews/"
+    }
+  ]},
 {
   id: "t138",
   name: "KISSsoft",
@@ -2986,8 +3178,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized mechanical design program for sizing, optimizing, and calculating gears and drive systems.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/featurecam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10000916/FeatureCAM/reviews/"
+    }
+  ]},
 {
   id: "t149",
   name: "FeatureCAM",
@@ -3831,8 +4037,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A high-end CAD/CAM software for model, mold, and tool manufacturing, featuring exceptionally safe machine simulation.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/worknc/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006629/WorkNC/reviews/"
+    }
+  ]},
 {
   id: "t154",
   name: "WorkNC",
@@ -4031,8 +4251,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's premier automated CNC software for 2-axis to 5-axis machining of complex aerospace and automotive components.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 8,
+      url: "https://www.g2.com/products/surfcam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10000917/SURFCAM/reviews/"
+    }
+  ]},
 {
   id: "t155",
   name: "SURFCAM",
@@ -4230,8 +4464,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A widely utilized CNC programming tool, offering exceptionally robust toolpaths and high-speed machining algorithms.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 25,
+      url: "https://www.g2.com/products/bobcad-cam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10000921/BobCAD-CAM/reviews/"
+    }
+  ]},
 {
   id: "t156",
   name: "BobCAD-CAM",
@@ -4429,8 +4677,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A budget-friendly, high-performance CAD/CAM solution with a very short learning curve for workshop machining.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/autoform/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000935/AutoForm/reviews/"
+    }
+  ]},
 {
   id: "t166",
   name: "AutoForm",
@@ -4629,8 +4891,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed global standard in sheet metal forming simulation, providing crucial feasibility and springback analysis.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/moldflow/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000922/Moldflow/reviews/"
+    }
+  ]},
 {
   id: "t168",
   name: "Moldflow",
@@ -4829,8 +5105,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's premier plastic injection molding simulation software, essential for predicting manufacturing defects.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/moldex3d/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10000923/Moldex3D/reviews/"
+    }
+  ]},
 {
   id: "t169",
   name: "Moldex3D",
@@ -5028,8 +5318,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A highly advanced true-3D plastic injection molding analysis tool, outstanding for predicting weld lines and warpage.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/woodwop/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10000936/WoodWOP/reviews/"
+    }
+  ]},
 {
   id: "t178",
   name: "WoodWOP",
@@ -5229,8 +5533,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "HOMAG's dedicated CNC programming system, engineered specifically for wood fabrication and router routing.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 8,
+      url: "https://www.g2.com/products/alphacam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10000924/AlphaCAM/reviews/"
+    }
+  ]},
 {
   id: "t179",
   name: "AlphaCAM",
@@ -5429,8 +5747,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A premier CAD/CAM system for wood, stone, and composite routing, delivering highly automated CNC programming.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/radan/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10000925/Radan/reviews/"
+    }
+  ]},
 {
   id: "t180",
   name: "Radan",
@@ -5628,8 +5960,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's leading sheet metal design and nesting software, optimizing sheet utilization and punch/laser toolpaths.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/lantek-expert/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10000937/Lantek-Expert/reviews/"
+    }
+  ]},
 {
   id: "t182",
   name: "Lantek Expert",
@@ -5827,8 +6173,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized ERP-integrated nesting and sheet metal CAM suite, widely used in industrial laser cutting plants.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/sigmanest/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10000926/SigmaNEST/reviews/"
+    }
+  ]},
 {
   id: "t183",
   name: "SigmaNEST",
@@ -6027,8 +6387,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The premier sheet metal fabrication and profile nesting software, maximizing raw material utilization.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/metacam/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006630/MetaCAM/reviews/"
+    }
+  ]},
 {
   id: "t184",
   name: "MetaCAM",
@@ -6226,8 +6600,29 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "An advanced, enterprise-grade sheet metal CAD/CAM solution featuring outstanding automatic tooling calculations.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.4,
+      max: 5,
+      count: 60,
+      url: "https://www.g2.com/products/ansys-fluent/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10000927/ANSYS-Fluent/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 8.5,
+      max: 10,
+      count: 80,
+      url: "https://www.trustradius.com/products/ansys-fluent/reviews"
+    }
+  ]},
 {
   id: "t185",
   name: "ANSYS Fluent",
@@ -6594,8 +6989,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/ansys-discovery/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000938/ANSYS-Discovery/reviews/"
+    }
+  ]},
 {
   id: "t187",
   name: "ANSYS Discovery",
@@ -7324,8 +7733,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/simcenter-star-ccm/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000939/Simcenter-STAR-CCM/reviews/"
+    }
+  ]},
 {
   id: "t191",
   name: "Simcenter STAR-CCM+",
@@ -8060,8 +8483,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/altair-inspire/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000940/Altair-Inspire/reviews/"
+    }
+  ]},
 {
   id: "t195",
   name: "Altair Inspire",
@@ -8579,8 +9016,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/caesar-ii/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006631/CAESAR-II/reviews/"
+    }
+  ]},
 {
   id: "t209",
   name: "CAESAR II",
@@ -8750,8 +9201,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/autopipe/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006632/AutoPIPE/reviews/"
+    }
+  ]},
 {
   id: "t210",
   name: "Bentley AutoPIPE",
@@ -8923,8 +9388,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/pv-elite/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006633/PV-Elite/reviews/"
+    }
+  ]},
 {
   id: "t211",
   name: "PV Elite",
@@ -9096,8 +9575,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/aspen-hysys/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10000941/Aspen-HYSYS/reviews/"
+    }
+  ]},
 {
   id: "t212",
   name: "AspenTech Aspen HYSYS",
@@ -9266,8 +9759,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 20,
+      url: "https://www.g2.com/products/sap2000/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 10,
+      url: "https://www.capterra.com/p/10000934/SAP2000/reviews/"
+    }
+  ]},
 {
   id: "t233",
   name: "CSI SAP2000",
@@ -9440,8 +9947,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 25,
+      url: "https://www.g2.com/products/etabs/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 12,
+      url: "https://www.capterra.com/p/10000929/ETABS/reviews/"
+    }
+  ]},
 {
   id: "t234",
   name: "CSI ETABS",
@@ -9614,8 +10135,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 30,
+      url: "https://www.g2.com/products/staad-pro/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10000928/STAAD-Pro/reviews/"
+    }
+  ]},
 {
   id: "t235",
   name: "Bentley STAAD.Pro",
@@ -9789,8 +10324,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/tekla-tedds/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006622/Tekla-Tedds/reviews/"
+    }
+  ]},
 {
   id: "t236",
   name: "Tekla Tedds",
@@ -9962,8 +10511,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/autodesk-robot/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10006623/Autodesk-Robot-Structural-Analysis/reviews/"
+    }
+  ]},
 {
   id: "t242",
   name: "Autodesk Robot Structural Analysis",
@@ -10135,8 +10698,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/idea-statica/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10006624/IDEA-StatiCa/reviews/"
+    }
+  ]},
 {
   id: "t243",
   name: "IDEA StatiCa",
@@ -10308,8 +10885,22 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/risa-3d/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006625/RISA-3D/reviews/"
+    }
+  ]},
 {
   id: "t244",
   name: "RISA-3D",

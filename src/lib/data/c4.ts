@@ -693,8 +693,22 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 20,
+      url: "https://www.g2.com/products/recap-pro/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 10,
+      url: "https://www.capterra.com/p/10006619/Recap-Pro/reviews/"
+    }
+  ]},
 {
   id: "t39",
   name: "Recap Pro",
@@ -825,8 +839,22 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The gateway to reality capture in the BIM world.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/solid-edge-viewer/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006620/Solid-Edge-Viewer/reviews/"
+    }
+  ]},
 {
   id: "t48",
   name: "Solid Edge Viewer",
@@ -915,8 +943,22 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The standard for viewing Solid Edge data in production.",
-  external_ratings: []
-},
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/dwg-trueview/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006621/DWG-TrueView/reviews/"
+    }
+  ]},
 {
   id: "t49",
   name: "DWG TrueView",

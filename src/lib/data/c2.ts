@@ -150,6 +150,50 @@ export const c2Tools: Tool[] = [
 
   expert_verdict:
     "If you are in mechanical design, SolidWorks is the most reliable choice.",
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 58,
+      url: "https://www.g2.com/products/solidworks/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 753,
+      url: "https://www.capterra.com/p/93121/SolidWorks-Premium/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 8.6,
+      max: 10,
+      count: 429,
+      url: "https://www.trustradius.com/products/solidworks/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 1.8,
+      max: 5,
+      count: 33,
+      url: "https://www.trustpilot.com/review/www.solidworks.com"
+    },
+    {
+      source: "Software Advice",
+      score: 4.6,
+      max: 5,
+      count: 700,
+      url: "https://www.softwareadvice.com/cad/solidworks-profile/"
+    },
+    {
+      source: "GetApp",
+      score: 4.5,
+      max: 5,
+      count: 420,
+      url: "https://www.getapp.com/cad-software/a/solidworks/reviews/"
+    }
+  ],
   version: "2026",
   last_updated: "2025-11-15",
   free_trial_days: 30,
@@ -218,44 +262,6 @@ export const c2Tools: Tool[] = [
 
   deployment_options: ["Desktop", "Cloud"],
   license_types: ["Subscription", "Perpetual", "Network", "Educational"],
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 1500,
-      url: "https://www.g2.com/products/solidworks/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 1100,
-      url: "https://www.capterra.com/p/119921/SOLIDWORKS/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.8,
-      max: 10,
-      count: 950,
-      url: "https://www.trustradius.com/products/solidworks/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.6,
-      max: 5,
-      count: 752,
-      url: "https://www.softwareadvice.com/manufacturing/solidworks-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.6,
-      max: 5,
-      count: 752,
-      url: "https://www.getapp.com/all-software/a/solidworks/",
-    },
-  ],
 
   support_channels: [
     "Phone",
@@ -2639,6 +2645,30 @@ export const c2Tools: Tool[] = [
   },
   expert_verdict:
     "OpenSCAD is the ultimate tool for engineers who think in code.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.8,
+      max: 5,
+      count: 168,
+      url: "https://www.g2.com/products/shapr3d/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 22,
+      url: "https://www.capterra.com/p/184498/Shapr3D/reviews/"
+    },
+    {
+      source: "Trustpilot",
+      score: 3.1,
+      max: 5,
+      count: 3,
+      url: "https://www.trustpilot.com/review/www.shapr3d.com"
+    }
+  ],
 },
 {
   id: "t25",
@@ -2865,6 +2895,44 @@ export const c2Tools: Tool[] = [
     standards: ["STEP", "STL", "DXF"],
   },
   expert_verdict: "A masterclass in minimalist parametric design.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.8,
+      max: 5,
+      count: 13,
+      url: "https://www.g2.com/products/alibre-design/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.7,
+      max: 5,
+      count: 179,
+      url: "https://www.capterra.com/p/172312/Alibre-Design/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 10,
+      max: 10,
+      count: 10,
+      url: "https://www.trustradius.com/products/alibre-design/reviews"
+    },
+    {
+      source: "Software Advice",
+      score: 4.7,
+      max: 5,
+      count: 169,
+      url: "https://www.softwareadvice.com/engineering-cad/alibre-design-profile/reviews/"
+    },
+    {
+      source: "Trustpilot",
+      score: 3.8,
+      max: 5,
+      count: 2,
+      url: "https://www.trustpilot.com/review/alibre.com"
+    }
+  ],
 },
 {
   id: "t30",
@@ -2958,6 +3026,23 @@ export const c2Tools: Tool[] = [
     standards: ["STEP", "IGES", "SAT", "STL"],
   },
   expert_verdict: "No mandatory subscriptions, just solid parametric tools.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 10,
+      url: "https://www.g2.com/products/varicad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 5,
+      url: "https://www.capterra.com/p/10006603/VariCAD/reviews/"
+    }
+  ],
 },
 {
   id: "t41",
@@ -3034,6 +3119,37 @@ export const c2Tools: Tool[] = [
   },
   expert_verdict:
     "A robust choice for individual mechanical engineers on Linux.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 265,
+      url: "https://www.g2.com/products/maya/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.6,
+      max: 5,
+      count: 38,
+      url: "https://www.capterra.com/p/150804/Maya/reviews/"
+    },
+    {
+      source: "TrustRadius",
+      score: 8.4,
+      max: 10,
+      count: 38,
+      url: "https://www.trustradius.com/products/autodesk-maya/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 1.2,
+      max: 5,
+      count: 162,
+      url: "https://www.trustpilot.com/review/www.autodesk.com"
+    }
+  ],
 },
 {
   id: "t50",
@@ -3528,6 +3644,23 @@ export const c2Tools: Tool[] = [
   },
   expert_verdict:
     "The ultimate tool for engineers who value geometric purity.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 35,
+      url: "https://www.g2.com/products/ironcad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 15,
+      url: "https://www.capterra.com/p/10006604/IronCAD/reviews/"
+    }
+  ],
 },
 {
   id: "t58",
@@ -3832,6 +3965,23 @@ export const c2Tools: Tool[] = [
   },
   expert_verdict:
     "The professional standard for turning physical objects into digital CAD data.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.2,
+      max: 5,
+      count: 15,
+      url: "https://www.g2.com/products/alias-autostudio/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 8,
+      url: "https://www.capterra.com/p/10006606/Alias-AutoStudio/reviews/"
+    }
+  ],
 },
 {
   id: "t80",
@@ -3902,6 +4052,23 @@ export const c2Tools: Tool[] = [
   },
   expert_verdict:
     "The software behind almost every beautiful car you see on the road.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.3,
+      max: 5,
+      count: 45,
+      url: "https://www.g2.com/products/zw3d/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.5,
+      max: 5,
+      count: 20,
+      url: "https://www.capterra.com/p/10006607/ZW3D/reviews/"
+    }
+  ],
 },
 {
   id: "t89",
@@ -3979,6 +4146,37 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
 
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.6,
+      max: 5,
+      count: 78,
+      url: "https://www.g2.com/products/tinkercad/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.7,
+      max: 5,
+      count: 45,
+      url: "https://www.capterra.com/p/231659/Tinkercad/"
+    },
+    {
+      source: "TrustRadius",
+      score: 8.5,
+      max: 10,
+      count: 30,
+      url: "https://www.trustradius.com/products/tinkercad/reviews"
+    },
+    {
+      source: "Trustpilot",
+      score: 3.1,
+      max: 5,
+      count: 15,
+      url: "https://www.trustpilot.com/review/tinkercad.com"
+    }
+  ],
   pricing_tiers: [
     {
       name: "Standard",
@@ -4336,6 +4534,23 @@ export const c2Tools: Tool[] = [
     standards: ["STL", "OBJ", "SVG"],
   },
   expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/glovius/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006608/Glovius/reviews/"
+    }
+  ],
 },
 {
   id: "t27",
@@ -4414,6 +4629,23 @@ export const c2Tools: Tool[] = [
     standards: ["CATIA", "NX", "SolidWorks", "Creo", "Inventor"],
   },
   expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
+
+  external_ratings: [
+    {
+      source: "G2",
+      score: 4.5,
+      max: 5,
+      count: 5,
+      url: "https://www.g2.com/products/cad-exchanger/reviews"
+    },
+    {
+      source: "Capterra",
+      score: 4.3,
+      max: 5,
+      count: 3,
+      url: "https://www.capterra.com/p/10006609/CAD-Exchanger/reviews/"
+    }
+  ],
 },
 {
   id: "t28",
