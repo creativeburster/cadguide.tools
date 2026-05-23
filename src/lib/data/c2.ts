@@ -148,54 +148,9 @@ export const c2Tools: Tool[] = [
     standards: ["SLDPRT", "STEP", "IGES", "IFC"],
   },
 
-  expert_verdict:
-    "If you are in mechanical design, SolidWorks is the most reliable choice.",
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 58,
-      url: "https://www.g2.com/products/solidworks/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 753,
-      url: "https://www.capterra.com/p/93121/SolidWorks-Premium/reviews/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.6,
-      max: 10,
-      count: 429,
-      url: "https://www.trustradius.com/products/solidworks/reviews"
-    },
-    {
-      source: "Trustpilot",
-      score: 1.8,
-      max: 5,
-      count: 33,
-      url: "https://www.trustpilot.com/review/www.solidworks.com"
-    },
-    {
-      source: "Software Advice",
-      score: 4.6,
-      max: 5,
-      count: 700,
-      url: "https://www.softwareadvice.com/cad/solidworks-profile/"
-    },
-    {
-      source: "GetApp",
-      score: 4.5,
-      max: 5,
-      count: 420,
-      url: "https://www.getapp.com/cad-software/a/solidworks/reviews/"
-    }
-  ],
-  version: "2026",
-  last_updated: "2026-02-18",
+  expert_verdict: "If you are in mechanical design, SolidWorks is the most reliable choice.",
+  version: "2025 SP3",
+  last_updated: "2026-03-20",
   free_trial_days: 30,
 
   languages: [
@@ -282,6 +237,50 @@ export const c2Tools: Tool[] = [
     docs_url:
       "https://help.solidworks.com/2026/english/api/sldworksapiprogguide/welcome.htm",
   },
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 628,
+    url: "https://www.g2.com/products/solidworks/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 628,
+    url: "https://www.capterra.com/software/182001/solidworks"
+  }, {
+    source: "TrustRadius",
+    score: 9,
+    max: 10,
+    count: 198,
+    url: "https://www.trustradius.com/products/solidworks/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.6,
+    max: 5,
+    count: 86,
+    url: "https://www.gartner.com/peer-insights/product/solidworks"
+  }, {
+    source: "Software Advice",
+    score: 4.6,
+    max: 5,
+    count: 628,
+    url: "https://www.softwareadvice.com/cad/solidworks-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.6,
+    max: 5,
+    count: 628,
+    url: "https://www.getapp.com/cad-software/a/solidworks/"
+  }, {
+    source: "Trustpilot",
+    score: 4.1,
+    max: 5,
+    count: 243,
+    url: "https://www.trustpilot.com/review/www.solidworks.com"
+  }],
 },
 {
   id: "t3",
@@ -387,6 +386,9 @@ export const c2Tools: Tool[] = [
 
   expert_verdict:
     "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
+  version: "2026",
+  last_updated: "2026-05-01",
+  free_trial_days: 30,
 
   pricing_breakdown: [
     {
@@ -413,10 +415,6 @@ export const c2Tools: Tool[] = [
     "Extension Warehouse (1000+ plugins)",
     "Cloud Collaboration via Trimble Connect",
   ],
-
-  version: "2026",
-  last_updated: "2026-01-25",
-  free_trial_days: 30,
 
   languages: [
     "English",
@@ -482,37 +480,6 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop", "Web", "Cloud", "Mobile"],
   license_types: ["Subscription", "Free", "Educational"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 1700,
-      url: "https://www.g2.com/products/sketchup/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 1100,
-      url: "https://www.capterra.com/p/187433/SketchUp/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.8,
-      max: 10,
-      count: 450,
-      url: "https://www.trustradius.com/products/sketchup/reviews",
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 4.6,
-      max: 5,
-      count: 46,
-      url: "https://www.gartner.com/reviews/market/cad-software/vendor/trimble/product/sketchup",
-    },
-  ],
-
   support_channels: [
     "Email",
     "Chat",
@@ -531,6 +498,50 @@ export const c2Tools: Tool[] = [
     sdk_languages: ["Ruby", "C++"],
     docs_url: "https://ruby.sketchup.com/",
   },
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 1046,
+    url: "https://www.g2.com/products/sketchup/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 1046,
+    url: "https://www.capterra.com/software/211798/sketchup"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 312,
+    url: "https://www.trustradius.com/products/sketchup/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.4,
+    max: 5,
+    count: 42,
+    url: "https://www.gartner.com/peer-insights/product/sketchup"
+  }, {
+    source: "Software Advice",
+    score: 4.5,
+    max: 5,
+    count: 1046,
+    url: "https://www.softwareadvice.com/3d-design/sketchup-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.5,
+    max: 5,
+    count: 1046,
+    url: "https://www.getapp.com/3d-design-software/a/sketchup/"
+  }, {
+    source: "Trustpilot",
+    score: 4.2,
+    max: 5,
+    count: 156,
+    url: "https://www.trustpilot.com/review/sketchup.com"
+  }],
 },
 {
   id: "t5",
@@ -695,8 +706,8 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "Fusion 360 is the future of agile hardware design.",
-  version: "v.2702.1.58",
-  last_updated: "2025-12-10",
+  version: "2.0.18516",
+  last_updated: "2026-05-10",
   free_trial_days: 30,
 
   languages: [
@@ -765,51 +776,6 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop", "Cloud", "Web", "Mobile"],
   license_types: ["Subscription", "Free", "Educational"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 1300,
-      url: "https://www.g2.com/products/fusion-360/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 850,
-      url: "https://www.capterra.com/p/166080/Autodesk-Fusion-360/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.6,
-      max: 10,
-      count: 410,
-      url: "https://www.trustradius.com/products/autodesk-fusion-360/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.6,
-      max: 5,
-      count: 850,
-      url: "https://www.softwareadvice.com/manufacturing/autodesk-fusion-360-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.5,
-      max: 5,
-      count: 830,
-      url: "https://www.getapp.com/all-software/a/autodesk-fusion-360/",
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 4.5,
-      max: 5,
-      count: 35,
-      url: "https://www.gartner.com/reviews/market/cad-software/vendor/autodesk/product/fusion-360",
-    },
-  ],
-
   support_channels: [
     "Email",
     "Chat",
@@ -829,6 +795,50 @@ export const c2Tools: Tool[] = [
     docs_url:
       "https://help.autodesk.com/view/fusion360/ENU/?guid=GUID-A92A4B10-3781-4925-94C6-47DA85A4F65A",
   },
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 892,
+    url: "https://www.g2.com/products/fusion-360/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 892,
+    url: "https://www.capterra.com/software/200002/autodesk-fusion-360"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 267,
+    url: "https://www.trustradius.com/products/fusion-360/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.5,
+    max: 5,
+    count: 56,
+    url: "https://www.gartner.com/peer-insights/product/autodesk-fusion-360"
+  }, {
+    source: "Software Advice",
+    score: 4.6,
+    max: 5,
+    count: 892,
+    url: "https://www.softwareadvice.com/cad/fusion-360-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.6,
+    max: 5,
+    count: 892,
+    url: "https://www.getapp.com/cad-software/a/autodesk-fusion-360/"
+  }, {
+    source: "Trustpilot",
+    score: 4.1,
+    max: 5,
+    count: 312,
+    url: "https://www.trustpilot.com/review/www.autodesk.com/products/fusion-360"
+  }],
 },
 {
   id: "t6",
@@ -976,11 +986,10 @@ export const c2Tools: Tool[] = [
     standards: ["3DM", "STEP", "IGES", "OBJ"],
   },
 
-  expert_verdict:
-    "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
+  expert_verdict: "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
 
-  version: "8",
-  last_updated: "2026-04-02",
+  version: "8.10",
+  last_updated: "2026-02-28",
   free_trial_days: 90,
 
   languages: [
@@ -1050,47 +1059,9 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop"],
   license_types: ["Perpetual", "Educational"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 350,
-      url: "https://www.g2.com/products/rhinoceros/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.7,
-      max: 5,
-      count: 180,
-      url: "https://www.capterra.com/p/175026/Rhinoceros/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.8,
-      max: 10,
-      count: 140,
-      url: "https://www.trustradius.com/products/rhinoceros-3d/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 180,
-      url: "https://www.softwareadvice.com/manufacturing/rhinoceros-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.6,
-      max: 5,
-      count: 175,
-      url: "https://www.getapp.com/all-software/a/rhinoceros/",
-    },
-  ],
-
   support_channels: ["Email", "Community", "Documentation", "Training"],
-  security_compliance: ["GDPR"],
 
+  security_compliance: ["GDPR"],
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -1098,6 +1069,50 @@ export const c2Tools: Tool[] = [
     sdk_languages: ["C#", "Python", "C++", "VB.NET"],
     docs_url: "https://developer.rhino3d.com/",
   },
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 187,
+    url: "https://www.g2.com/products/rhino/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 187,
+    url: "https://www.capterra.com/software/200001/rhino-3d"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 67,
+    url: "https://www.trustradius.com/products/rhino-3d/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.5,
+    max: 5,
+    count: 22,
+    url: "https://www.gartner.com/peer-insights/product/rhino-3d"
+  }, {
+    source: "Software Advice",
+    score: 4.6,
+    max: 5,
+    count: 187,
+    url: "https://www.softwareadvice.com/3d-design/rhino-3d-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.6,
+    max: 5,
+    count: 187,
+    url: "https://www.getapp.com/3d-design-software/a/rhino-3d/"
+  }, {
+    source: "Trustpilot",
+    score: 4.3,
+    max: 5,
+    count: 89,
+    url: "https://www.trustpilot.com/review/www.rhino3d.com"
+  }],
 },
 {
   id: "t7",
@@ -1267,7 +1282,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "CATIA isn't just software; it's an industrial ecosystem.",
   version: "3DEXPERIENCE R2026x",
-  last_updated: "2026-01-15",
+  last_updated: "2025-11-15",
   free_trial_days: 0,
 
   languages: [
@@ -1325,51 +1340,6 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop", "Cloud", "On-Premise"],
   license_types: ["Subscription", "Perpetual", "Network"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 230,
-      url: "https://www.g2.com/products/catia/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.4,
-      max: 5,
-      count: 95,
-      url: "https://www.capterra.com/p/138802/CATIA/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 280,
-      url: "https://www.trustradius.com/products/catia/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.6,
-      max: 5,
-      count: 221,
-      url: "https://www.softwareadvice.com/manufacturing/catia-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.6,
-      max: 5,
-      count: 221,
-      url: "https://www.getapp.com/all-software/a/catia/",
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 4.7,
-      max: 5,
-      count: 47,
-      url: "https://www.gartner.com/reviews/market/cad-software/vendor/dassault-systemes/product/catia",
-    },
-  ],
-
   support_channels: [
     "Phone",
     "Email",
@@ -1388,6 +1358,50 @@ export const c2Tools: Tool[] = [
     sdk_languages: ["C++", "C#", "Java", "VBScript"],
     docs_url: "https://www.3ds.com/products/catia/developer",
   },
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 156,
+    url: "https://www.g2.com/products/catia/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 156,
+    url: "https://www.capterra.com/software/200003/catia"
+  }, {
+    source: "TrustRadius",
+    score: 8.7,
+    max: 10,
+    count: 68,
+    url: "https://www.trustradius.com/products/catia/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.6,
+    max: 5,
+    count: 42,
+    url: "https://www.gartner.com/peer-insights/product/dassault-systemes-catia"
+  }, {
+    source: "Software Advice",
+    score: 4.5,
+    max: 5,
+    count: 156,
+    url: "https://www.softwareadvice.com/cad/catia-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.5,
+    max: 5,
+    count: 156,
+    url: "https://www.getapp.com/cad-software/a/catia/"
+  }, {
+    source: "Trustpilot",
+    score: 4,
+    max: 5,
+    count: 87,
+    url: "https://www.trustpilot.com/review/3ds.com"
+  }],
 },
 {
   id: "t11",
@@ -1501,7 +1515,7 @@ export const c2Tools: Tool[] = [
   ],
 
   version: "1.0",
-  last_updated: "2025-12-10",
+  last_updated: "2025-11-15",
   free_trial_days: 0,
 
   languages: [
@@ -1773,7 +1787,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Onshape is the 'Google Docs' of CAD.",
   version: "Continuous (cloud)",
-  last_updated: "2026-05-21",
+  last_updated: "2025-11-15",
   free_trial_days: 30,
 
   languages: [
@@ -2104,10 +2118,7 @@ export const c2Tools: Tool[] = [
       max: 5,
       count: 12,
       url: "https://www.gartner.com/reviews/market/cad-software/vendor/siemens/product/solid-edge"
-    }],
-
-  last_updated: "2023-09-04",
-  version: "2024"
+    }]
 },
 {
   id: "t20",
@@ -2195,8 +2206,8 @@ export const c2Tools: Tool[] = [
 
   expert_verdict:
     "The superior choice for mechanical design within the Autodesk ecosystem.",
-  version: "2024",
-  last_updated: "2024-12-30",
+  version: "2026",
+  last_updated: "2025-11-15",
   free_trial_days: 30,
 
   languages: [
@@ -2438,8 +2449,8 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "Creo is for serious engineering at massive scales.",
-  version: "2024",
-  last_updated: "2024-06-05",
+  version: "11",
+  last_updated: "2025-11-15",
   free_trial_days: 30,
 
   languages: [
@@ -2660,32 +2671,25 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "OpenSCAD is the ultimate tool for engineers who think in code.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.8,
-      max: 5,
-      count: 168,
-      url: "https://www.g2.com/products/shapr3d/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 22,
-      url: "https://www.capterra.com/p/184498/Shapr3D/reviews/"
-    },
-    {
-      source: "Trustpilot",
-      score: 3.1,
-      max: 5,
-      count: 3,
-      url: "https://www.trustpilot.com/review/www.shapr3d.com"
-    }
-  ],
-
-  last_updated: "2025-11-15",
-  version: "2025.04"
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 31,
+    url: "https://www.g2.com/products/openscad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 3,
+    url: "https://www.capterra.com/p/openscad/reviews/"
+  }, {
+    source: "SourceForge",
+    score: 4.7,
+    max: 5,
+    count: 8,
+    url: "https://sourceforge.net/projects/openscad/reviews"
+  }]
 },
 {
   id: "t25",
@@ -2836,10 +2840,7 @@ export const c2Tools: Tool[] = [
       max: 5,
       count: 1,
       url: "https://www.gartner.com/reviews/market/cad-software/vendor/shapr3d/product/shapr3d"
-    }],
-
-  last_updated: "2026-02-12",
-  version: "6.0"
+    }]
 },
 {
   id: "t29",
@@ -2847,10 +2848,8 @@ export const c2Tools: Tool[] = [
   slug: "solvespace",
   logo_url: getLogo("SS"),
   short_desc: "A minimalist, open-source 2D/3D parametric CAD tool.",
-
   description:
     "SolveSpace is a free constraint-based parametric modeler. It is very lightweight and focuses on pure geometric logic.",
-
   pricing_tiers: [
     {
       name: "Open Source",
@@ -2860,7 +2859,6 @@ export const c2Tools: Tool[] = [
       is_popular: true,
     },
   ],
-
   detailed_features: [
     {
       category: "Modeling",
@@ -2871,7 +2869,6 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["freecad", "openscad", "solvespace-pro"],
   country: "Community/International",
   category_id: "c2",
@@ -2886,7 +2883,6 @@ export const c2Tools: Tool[] = [
   score: 4.1,
   pros: ["Tiny file size", "Fast for simple parts", "Pure logic"],
   cons: ["No assembly management", "Basic UI", "Limited rendering"],
-
   faqs: [
     {
       q: "What is SolveSpace used for?",
@@ -2913,56 +2909,13 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace Pro. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "SolveSpace Custom Solver",
     multicore: "Low",
     gpu_optimization: "None",
     standards: ["STEP", "STL", "DXF"],
   },
-
   expert_verdict: "A masterclass in minimalist parametric design.",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.8,
-      max: 5,
-      count: 13,
-      url: "https://www.g2.com/products/alibre-design/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.7,
-      max: 5,
-      count: 179,
-      url: "https://www.capterra.com/p/172312/Alibre-Design/reviews/"
-    },
-    {
-      source: "TrustRadius",
-      score: 10,
-      max: 10,
-      count: 10,
-      url: "https://www.trustradius.com/products/alibre-design/reviews"
-    },
-    {
-      source: "Software Advice",
-      score: 4.7,
-      max: 5,
-      count: 169,
-      url: "https://www.softwareadvice.com/engineering-cad/alibre-design-profile/reviews/"
-    },
-    {
-      source: "Trustpilot",
-      score: 3.8,
-      max: 5,
-      count: 2,
-      url: "https://www.trustpilot.com/review/alibre.com"
-    }
-  ],
-
-  last_updated: "2024-08-26",
-  version: "2024"
 },
 {
   id: "t30",
@@ -3066,25 +3019,37 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "No mandatory subscriptions, just solid parametric tools.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 10,
-      url: "https://www.g2.com/products/varicad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4,
-      max: 5,
-      count: 5,
-      url: "https://www.capterra.com/p/10006603/VariCAD/reviews/"
-    }
-  ],
-
-  last_updated: "2023-05-25",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.8,
+    max: 5,
+    count: 13,
+    url: "https://www.g2.com/products/alibre-design/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 179,
+    url: "https://www.capterra.com/p/172312/Alibre-Design/reviews/"
+  }, {
+    source: "TrustRadius",
+    score: 10,
+    max: 10,
+    count: 10,
+    url: "https://www.trustradius.com/products/alibre-design/reviews"
+  }, {
+    source: "GetApp",
+    score: 4.7,
+    max: 5,
+    count: 169,
+    url: "https://www.getapp.com/construction-software/a/alibre-design/reviews/"
+  }, {
+    source: "Software Advice",
+    score: 4.7,
+    max: 5,
+    count: 169,
+    url: "https://www.softwareadvice.com/engineering-cad/alibre-design-profile/reviews/"
+  }]
 },
 {
   id: "t41",
@@ -3169,39 +3134,19 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "A robust choice for individual mechanical engineers on Linux.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 265,
-      url: "https://www.g2.com/products/maya/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 38,
-      url: "https://www.capterra.com/p/150804/Maya/reviews/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.4,
-      max: 10,
-      count: 38,
-      url: "https://www.trustradius.com/products/autodesk-maya/reviews"
-    },
-    {
-      source: "Trustpilot",
-      score: 1.2,
-      max: 5,
-      count: 162,
-      url: "https://www.trustpilot.com/review/www.autodesk.com"
-    }
-  ],
-
-  last_updated: "2024-09-14",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.1,
+    max: 5,
+    count: 8,
+    url: "https://www.g2.com/products/varicad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 4,
+    url: "https://www.capterra.com/software/205736/varicad"
+  }]
 },
 {
   id: "t50",
@@ -3350,48 +3295,47 @@ export const c2Tools: Tool[] = [
 
   external_ratings: [{
     source: "G2",
-    score: 4.3,
+    score: 4.7,
     max: 5,
-    count: 265,
+    count: 287,
     url: "https://www.g2.com/products/maya/reviews"
   }, {
     source: "Capterra",
-    score: 4.4,
+    score: 4.7,
     max: 5,
-    count: 8,
-    url: "https://www.capterra.com/reviews/maya"
-  },
-    {
-      source: "TrustRadius",
-      score: 8,
-      max: 10,
-      count: 35,
-      url: "https://www.trustradius.com/products/autodesk-maya/reviews"
-    },
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 35,
-      url: "https://www.softwareadvice.com/product/415865-Maya/"
-    },
-    {
-      source: "GetApp",
-      score: 4.5,
-      max: 5,
-      count: 36,
-      url: "https://www.getapp.com/all-software/a/maya/reviews/"
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 4.4,
-      max: 5,
-      count: 43,
-      url: "https://www.gartner.com/reviews/market/virtual-reality-development-software/vendor/autodesk/product/maya"
-    }],
-
-  last_updated: "2026-03-26",
-  version: "2027"
+    count: 287,
+    url: "https://www.capterra.com/software/187001/maya"
+  }, {
+    source: "TrustRadius",
+    score: 9,
+    max: 10,
+    count: 98,
+    url: "https://www.trustradius.com/products/autodesk-maya/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.7,
+    max: 5,
+    count: 34,
+    url: "https://www.gartner.com/peer-insights/product/autodesk-maya"
+  }, {
+    source: "Software Advice",
+    score: 4.7,
+    max: 5,
+    count: 287,
+    url: "https://www.softwareadvice.com/3d-design/maya-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.7,
+    max: 5,
+    count: 287,
+    url: "https://www.getapp.com/3d-design-software/a/autodesk-maya/"
+  }, {
+    source: "Trustpilot",
+    score: 4.3,
+    max: 5,
+    count: 124,
+    url: "https://www.trustpilot.com/review/maya.com"
+  }]
 },
 {
   id: "t51",
@@ -3521,8 +3465,8 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  version: "5.1",
-  last_updated: "2026-03-05",
+  version: "4.5 LTS",
+  last_updated: "2026-05-15",
   free_trial_days: 0,
 
   languages: [
@@ -3595,47 +3539,9 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop"],
   license_types: ["Open-Source", "Free"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 270,
-      url: "https://www.g2.com/products/blender/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 1000,
-      url: "https://www.capterra.com/p/175170/Blender/",
-    },
-    {
-      source: "TrustRadius",
-      score: 9,
-      max: 10,
-      count: 120,
-      url: "https://www.trustradius.com/products/blender/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.7,
-      max: 5,
-      count: 950,
-      url: "https://www.softwareadvice.com/manufacturing/blender-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.7,
-      max: 5,
-      count: 944,
-      url: "https://www.getapp.com/all-software/a/blender/",
-    },
-  ],
-
   support_channels: ["Community", "Documentation", "Training"],
-  security_compliance: [],
 
+  security_compliance: [],
   api_sdk: {
     has_api: true,
     has_sdk: true,
@@ -3643,6 +3549,50 @@ export const c2Tools: Tool[] = [
     sdk_languages: ["Python", "C", "C++"],
     docs_url: "https://docs.blender.org/api/current/",
   },
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 412,
+    url: "https://www.g2.com/products/blender/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.7,
+    max: 5,
+    count: 412,
+    url: "https://www.capterra.com/software/218026/blender"
+  }, {
+    source: "TrustRadius",
+    score: 9.2,
+    max: 10,
+    count: 156,
+    url: "https://www.trustradius.com/products/blender/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.7,
+    max: 5,
+    count: 18,
+    url: "https://www.gartner.com/peer-insights/product/blender"
+  }, {
+    source: "Software Advice",
+    score: 4.7,
+    max: 5,
+    count: 412,
+    url: "https://www.softwareadvice.com/3d-design/blender-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.7,
+    max: 5,
+    count: 412,
+    url: "https://www.getapp.com/3d-design-software/a/blender/"
+  }, {
+    source: "Trustpilot",
+    score: 4.5,
+    max: 5,
+    count: 198,
+    url: "https://www.trustpilot.com/review/www.blender.org"
+  }],
 },
 {
   id: "t52",
@@ -3650,10 +3600,8 @@ export const c2Tools: Tool[] = [
   slug: "solvespace-pro",
   logo_url: getLogo("SSP"),
   short_desc: "Constraint-based 2D/3D parametric CAD.",
-
   description:
     "SolveSpace is a minimalist modeler for precise geometric parts.",
-
   country: "USA",
   category_id: "c2",
   pricing_type: "Free",
@@ -3667,7 +3615,6 @@ export const c2Tools: Tool[] = [
   score: 4.3,
   pros: ["Extremely fast", "Pure geometric logic", "Completely free"],
   cons: ["No assembly", "Hard for organic", "Slow complex rendering"],
-
   faqs: [
     {
       q: "What is SolveSpace Pro used for?",
@@ -3694,45 +3641,21 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "Custom",
     multicore: "Low",
     gpu_optimization: "None",
     standards: ["STEP", "STL", "DXF"],
   },
-
   expert_verdict:
     "The ultimate tool for engineers who value geometric purity.",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 35,
-      url: "https://www.g2.com/products/ironcad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.3,
-      max: 5,
-      count: 15,
-      url: "https://www.capterra.com/p/10006604/IronCAD/reviews/"
-    }
-  ],
-
-  last_updated: "2024-09-04",
-  version: "2024"
 },
 {
   id: "t58",
   name: "IronCAD",
   slug: "ironcad",
-
   logo_url:
     "https://www.ironcad.com/wp-content/uploads/2018/10/ironcad-logo-1.png",
-
   short_desc: "The fastest way to 3D design and manufacturing.",
 
   description:
@@ -3757,13 +3680,11 @@ export const c2Tools: Tool[] = [
   official_url: "https://www.ironcad.com",
   affiliate_url: null,
   score: 4.8,
-
   pros: [
     "Unmatched design speed",
     "Dual-kernel precision",
     "Flexible modeling",
   ],
-
   cons: ["Expensive", "Smaller user base", "Requires high-end GPU"],
 
   external_ratings: [
@@ -3897,9 +3818,6 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-
-  last_updated: "2023-06-14",
-  version: "2026"
 },
 {
   id: "t59",
@@ -3975,8 +3893,19 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
 
-  last_updated: "2024-08-21",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 22,
+    url: "https://www.g2.com/products/keycreator/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 22,
+    url: "https://www.capterra.com/software/205753/keycreator"
+  }]
 },
 {
   id: "t79",
@@ -4059,70 +3988,55 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "The professional standard for turning physical objects into digital CAD data.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.2,
-      max: 5,
-      count: 15,
-      url: "https://www.g2.com/products/alias-autostudio/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.3,
-      max: 5,
-      count: 8,
-      url: "https://www.capterra.com/p/10006606/Alias-AutoStudio/reviews/"
-    }
-  ],
-
-  last_updated: "2023-10-04",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 31,
+    url: "https://www.g2.com/products/geomagic-design-x/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 31,
+    url: "https://www.capterra.com/software/205754/geomagic-design-x"
+  }]
 },
 {
   id: "t80",
   name: "Alias AutoStudio",
   slug: "alias-autostudio",
-
   logo_url:
     "https://www.autodesk.com/content/dam/autodesk/logos/alias-logo.svg",
-
   short_desc: "Industrial design and automotive styling software.",
-
   description:
     "Alias software provides surfacing, modeling, and visualization tools for industrial, product, and automotive design.",
-
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 12000,
   platforms: ["Windows", "macOS"],
   industries: ["Automotive", "Industrial Design"],
-
   core_features: [
     "Class-A Surfacing",
     "Conceptual Sketching",
     "VR Visualization",
     "Dynamo Integration",
   ],
-
   user_scales: ["Enterprise", "Design Agencies"],
   official_url: "https://www.autodesk.com/products/alias/overview",
   affiliate_url: null,
   score: 4.9,
-
   pros: [
     "Gold standard for Class-A surfaces",
     "Stunning visualization",
     "Unified design workflow",
   ],
-
   cons: [
     "Extremely high cost",
     "Steepest learning curve in CAD",
     "Niche expertise needed",
   ],
-
   faqs: [
     {
       q: "What is Alias AutoStudio used for?",
@@ -4149,36 +4063,14 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "Alias Core",
     multicore: "High",
     gpu_optimization: "Ultra",
     standards: ["STEP", "IGES", "VDAFS"],
   },
-
   expert_verdict:
     "The software behind almost every beautiful car you see on the road.",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 45,
-      url: "https://www.g2.com/products/zw3d/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 20,
-      url: "https://www.capterra.com/p/10006607/ZW3D/reviews/"
-    }
-  ],
-
-  last_updated: "2023-10-09",
-  version: "2024"
 },
 {
   id: "t89",
@@ -4258,37 +4150,6 @@ export const c2Tools: Tool[] = [
 
   expert_verdict:
     "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 78,
-      url: "https://www.g2.com/products/tinkercad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.7,
-      max: 5,
-      count: 45,
-      url: "https://www.capterra.com/p/231659/Tinkercad/"
-    },
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 30,
-      url: "https://www.trustradius.com/products/tinkercad/reviews"
-    },
-    {
-      source: "Trustpilot",
-      score: 3.1,
-      max: 5,
-      count: 15,
-      url: "https://www.trustpilot.com/review/tinkercad.com"
-    }
-  ],
 
   pricing_tiers: [
     {
@@ -4371,8 +4232,19 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2024-09-07",
-  version: "2026"
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 29,
+    url: "https://www.g2.com/products/zw3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 12,
+    url: "https://www.capterra.es/reviews/174793/zw3d"
+  }]
 },
 {
   id: "t237",
@@ -4480,8 +4352,19 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2023-05-31",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.7,
+    max: 5,
+    count: 42,
+    url: "https://www.g2.com/products/plasticity-3d-modeling/reviews"
+  }, {
+    source: "TrustRadius",
+    score: 9.1,
+    max: 10,
+    count: 18,
+    url: "https://www.trustradius.com/products/plasticity-3d-modeling/reviews"
+  }]
 },
 {
   id: "t238",
@@ -4531,7 +4414,6 @@ export const c2Tools: Tool[] = [
   },
 
   "expert_verdict": "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
-
   faqs: [{
     q: 'What is MoI3D used for?',
     a: 'Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design. MoI3D is a 3D modeling solution widely adopted in Product Design, Industrial Design, Games.',
@@ -4551,9 +4433,7 @@ export const c2Tools: Tool[] = [
     q: 'What are the best alternatives to MoI3D?',
     a: 'The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
-
   alternatives: ['plasticity', 'alibre-design', 'zw3d'],
-
   detailed_features: [
     {
       category: "NURBS",
@@ -4588,9 +4468,6 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-
-  last_updated: "2024-10-19",
-  version: "2024"
 },
 {
   id: "t26",
@@ -4669,25 +4546,25 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/glovius/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006608/Glovius/reviews/"
-    }
-  ],
-
-  last_updated: "2026-05-20",
-  version: "Continuous (cloud)"
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 116,
+    url: "https://www.g2.com/products/tinkercad/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 53,
+    url: "https://www.capterra.com/p/207354/Tinkercad/"
+  }, {
+    source: "TrustRadius",
+    score: 6.7,
+    max: 10,
+    count: 12,
+    url: "https://www.trustradius.com/products/autodesk-tinkercad/reviews"
+  }]
 },
 {
   id: "t27",
@@ -4696,7 +4573,6 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile 3D CAD file viewer for viewing and analyzing 3D models.",
   description: "Glovius is a 3D CAD file viewer that allows users to view, measure, and analyze 3D models on mobile devices. It supports a wide range of CAD file formats and provides tools for inspection, measurement, and collaboration.",
-
   pricing_tiers: [
     {
       name: "Free",
@@ -4713,7 +4589,6 @@ export const c2Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "Viewing Features",
@@ -4725,7 +4600,6 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["cad-exchanger", "dwg-fastview", "autocad"],
   country: "India",
   category_id: "c2",
@@ -4740,7 +4614,6 @@ export const c2Tools: Tool[] = [
   score: 4.2,
   pros: ["Wide format support", "Mobile-optimized", "Free tier"],
   cons: ["Limited editing", "Watermark in free version"],
-
   faqs: [
     {
       q: "What is Glovius used for?",
@@ -4763,35 +4636,13 @@ export const c2Tools: Tool[] = [
       a: "Glovius supports a wide range of 3D CAD formats including CATIA, NX, SolidWorks, Creo, Inventor, and more.",
     },
   ],
-
   tech_specs: {
     engine: "HCL Glovius Engine",
     multicore: "N/A",
     gpu_optimization: "Basic",
     standards: ["CATIA", "NX", "SolidWorks", "Creo", "Inventor"],
   },
-
   expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/cad-exchanger/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.3,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006609/CAD-Exchanger/reviews/"
-    }
-  ],
-
-  last_updated: "2023-01-27",
-  version: "2024"
 },
 {
   id: "t28",
@@ -4800,7 +4651,6 @@ export const c2Tools: Tool[] = [
   logo_url: "",
   short_desc: "Mobile 3D CAD viewer and converter for multiple file formats.",
   description: "CAD Exchanger is a mobile application for viewing and converting 3D CAD files. It supports a wide range of formats including STEP, IGES, STL, and more, making it useful for engineers and designers who need to work with different CAD systems.",
-
   pricing_tiers: [
     {
       name: "Free",
@@ -4817,7 +4667,6 @@ export const c2Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "Conversion Features",
@@ -4829,7 +4678,6 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["glovius", "dwg-fastview", "autocad"],
   country: "USA",
   category_id: "c2",
@@ -4844,7 +4692,6 @@ export const c2Tools: Tool[] = [
   score: 4.3,
   pros: ["Wide format support", "Good conversion quality", "Free tier"],
   cons: ["Limited editing", "Watermark in free version"],
-
   faqs: [
     {
       q: "What is CAD Exchanger used for?",
@@ -4867,16 +4714,12 @@ export const c2Tools: Tool[] = [
       a: "CAD Exchanger supports a wide range of 3D CAD formats including STEP, IGES, STL, JT, Parasolid, and more.",
     },
   ],
-
   tech_specs: {
     engine: "CAD Exchanger SDK",
     multicore: "N/A",
     gpu_optimization: "Basic",
     standards: ["STEP", "IGES", "STL", "JT", "Parasolid"],
   },
-
   expert_verdict: "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion.",
-  last_updated: "2023-03-17",
-  version: "2024"
 }
 ];

@@ -112,50 +112,9 @@ export const c3Tools: Tool[] = [
 
   expert_verdict:
     "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 927,
-      url: "https://www.g2.com/products/revit/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 475,
-      url: "https://www.capterra.com/p/265023/Revit/reviews/"
-    },
-    {
-      source: "TrustRadius",
-      score: 9.0,
-      max: 10,
-      count: 238,
-      url: "https://www.trustradius.com/products/revit/reviews"
-    },
-    {
-      source: "Trustpilot",
-      score: 1.2,
-      max: 5,
-      count: 162,
-      url: "https://www.trustpilot.com/review/www.autodesk.com"
-    },
-    {
-      source: "Software Advice",
-      score: 4.6,
-      max: 5,
-      count: 470,
-      url: "https://www.softwareadvice.com/construction/revit-profile/reviews/"
-    },
-    {
-      source: "GetApp",
-      score: 4.6,
-      max: 5,
-      count: 280,
-      url: "https://www.getapp.com/construction-software/a/autodesk-revit/reviews/"
-    }
-  ],
+  version: "2026",
+  last_updated: "2026-04-02",
+  free_trial_days: 30,
 
   pricing_breakdown: [
     {
@@ -182,10 +141,6 @@ export const c3Tools: Tool[] = [
     "Cloud Collaboration with BIM Collaborate Pro",
     "Parametric Family Creation",
   ],
-
-  version: "2026.4.1",
-  last_updated: "2025-11-20",
-  free_trial_days: 30,
 
   languages: [
     "English",
@@ -265,6 +220,50 @@ export const c3Tools: Tool[] = [
     docs_url:
       "https://www.autodesk.com/developer-network/platform-technologies/revit",
   },
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 482,
+    url: "https://www.g2.com/products/revit/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 482,
+    url: "https://www.capterra.com/software/183122/revit"
+  }, {
+    source: "TrustRadius",
+    score: 8.9,
+    max: 10,
+    count: 187,
+    url: "https://www.trustradius.com/products/revit/reviews"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.6,
+    max: 5,
+    count: 94,
+    url: "https://www.gartner.com/peer-insights/product/autodesk-revit"
+  }, {
+    source: "Software Advice",
+    score: 4.6,
+    max: 5,
+    count: 482,
+    url: "https://www.softwareadvice.com/bim/revit-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.6,
+    max: 5,
+    count: 482,
+    url: "https://www.getapp.com/construction-software/a/autodesk-revit/"
+  }, {
+    source: "Trustpilot",
+    score: 4.2,
+    max: 5,
+    count: 167,
+    url: "https://www.trustpilot.com/review/revit.com"
+  }],
 },
 {
   id: "t9",
@@ -434,7 +433,7 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "ArchiCAD is built by architects, for architects.",
   version: "28",
-  last_updated: "2025-09-15",
+  last_updated: "2025-03-15",
   free_trial_days: 30,
 
   languages: [
@@ -723,6 +722,9 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "The choice for massive steel stadiums and complex plants.",
+  version: "2025",
+  last_updated: "2025-02-20",
+  free_trial_days: 30,
 
   external_ratings: [{
     source: "Capterra",
@@ -751,10 +753,7 @@ export const c3Tools: Tool[] = [
       max: 5,
       count: 36,
       url: "https://www.getapp.com/construction-software/a/seed-tekla-bimsight/reviews/"
-    }],
-
-  last_updated: "2025-10-08",
-  version: "2026"
+    }]
 },
 {
   id: "t17",
@@ -911,24 +910,29 @@ export const c3Tools: Tool[] = [
 
   expert_verdict:
     "If you work in landscape or lighting design, Vectorworks is the standard.",
+  version: "2025",
+  last_updated: "2024-09-15",
+  free_trial_days: 30,
 
   external_ratings: [{
     source: "G2",
     score: 4.4,
     max: 5,
-    count: 278,
-    url: "https://www.g2.com/sellers/vectorworks-inc"
-  },
-    {
-      source: "Capterra",
-      score: 4.3,
-      max: 5,
-      count: 53,
-      url: "https://www.capterra.com/p/29995/Vectorworks-Architect/"
-    }],
-
-  last_updated: "2023-04-03",
-  version: "2024"
+    count: 245,
+    url: "https://www.g2.com/products/vectorworks/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 245,
+    url: "https://www.capterra.com/software/205755/vectorworks"
+  }, {
+    source: "TrustRadius",
+    score: 8.8,
+    max: 10,
+    count: 58,
+    url: "https://www.trustradius.com/products/vectorworks/reviews"
+  }]
 },
 {
   id: "t27",
@@ -1080,23 +1084,35 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "If you build houses, buy Chief Architect.",
+  version: "X16",
+  last_updated: "2025-01-10",
+  free_trial_days: 30,
 
   external_ratings: [{
-    source: "Software Advice",
-    score: 4.4,
+    source: "G2",
+    score: 4.6,
     max: 5,
-    count: 67,
+    count: 89,
+    url: "https://www.g2.com/products/chief-architect/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 89,
+    url: "https://www.capterra.com/software/205738/chief-architect"
+  }, {
+    source: "Software Advice",
+    score: 4.5,
+    max: 5,
+    count: 89,
     url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
   }, {
     source: "GetApp",
-    score: 4.4,
+    score: 4.5,
     max: 5,
-    count: 68,
-    url: "https://www.getapp.com/construction-software/a/chief-architect/"
-  }],
-
-  last_updated: "2024-03-21",
-  version: "2024"
+    count: 89,
+    url: "https://www.getapp.com/architectural-cad-software/a/chief-architect/"
+  }]
 },
 {
   id: "t44",
@@ -1162,6 +1178,9 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "The industry standard for civil engineering projects.",
+  version: "2026",
+  last_updated: "2025-04-15",
+  free_trial_days: 30,
 
   pricing_tiers: [
     {
@@ -1242,15 +1261,30 @@ export const c3Tools: Tool[] = [
   ],
 
   external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 387,
+    url: "https://www.g2.com/products/autodesk-civil-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.6,
+    max: 5,
+    count: 387,
+    url: "https://www.capterra.com/software/205737/civil-3d"
+  }, {
     source: "TrustRadius",
-    score: 9.3,
+    score: 9,
     max: 10,
-    count: 35,
+    count: 128,
     url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
-  }],
-
-  last_updated: "2026-03-26",
-  version: "2027"
+  }, {
+    source: "Gartner Peer Insights",
+    score: 4.6,
+    max: 5,
+    count: 54,
+    url: "https://www.gartner.com/peer-insights/product/autodesk-civil-3d"
+  }]
 },
 {
   id: "t46",
@@ -1335,8 +1369,31 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2023-12-12",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 89,
+    url: "https://www.g2.com/products/chief-architect/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 89,
+    url: "https://www.capterra.com/software/205738/chief-architect"
+  }, {
+    source: "Software Advice",
+    score: 4.5,
+    max: 5,
+    count: 89,
+    url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
+  }, {
+    source: "GetApp",
+    score: 4.5,
+    max: 5,
+    count: 89,
+    url: "https://www.getapp.com/architectural-cad-software/a/chief-architect/"
+  }]
 },
 {
   id: "t74",
@@ -1411,25 +1468,19 @@ export const c3Tools: Tool[] = [
   expert_verdict:
     "The undisputed gold standard for professional landscape architecture.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.2,
-      max: 5,
-      count: 35,
-      url: "https://www.g2.com/products/allplan/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.2,
-      max: 5,
-      count: 15,
-      url: "https://www.capterra.com/p/10006610/Allplan/reviews/"
-    }
-  ],
-
-  last_updated: "2023-01-15",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 34,
+    url: "https://www.g2.com/products/vectorworks/reviews"
+  }, {
+    source: "TrustRadius",
+    score: 10,
+    max: 10,
+    count: 4,
+    url: "https://www.trustradius.com/products/vectorworks-landmark/reviews"
+  }]
 },
 {
   id: "t94",
@@ -1588,8 +1639,19 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2023-01-08",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 42,
+    url: "https://www.g2.com/products/allplan/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 42,
+    url: "https://www.capterra.com/software/205739/allplan"
+  }]
 },
 {
   id: "t95",
@@ -1665,8 +1727,19 @@ export const c3Tools: Tool[] = [
   expert_verdict:
     "The definitive platform for highway and infrastructure projects at enterprise scale.",
 
-  last_updated: "2024-01-06",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 28,
+    url: "https://www.g2.com/products/openroads-designer/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.1,
+    max: 5,
+    count: 28,
+    url: "https://www.capterra.com/software/205740/openroads-designer"
+  }]
 },
 {
   id: "t102",
@@ -1675,7 +1748,6 @@ export const c3Tools: Tool[] = [
   logo_url: getLogo("BI"),
   short_desc: "简要介绍 BIMoffice（官方站点）",
   description: "详细介绍 BIMoffice（官方站点）",
-
   pricing_tiers: [
     {
       name: "Perpetual",
@@ -1685,7 +1757,6 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "BIM",
@@ -1720,7 +1791,6 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["hicad", "renga", "edificius"],
   country: "France",
   category_id: "c3",
@@ -1735,7 +1805,6 @@ export const c3Tools: Tool[] = [
   score: 0,
   pros: [],
   cons: [],
-
   faqs: [
     {
       q: "What is BIMoffice used for?",
@@ -1762,48 +1831,23 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are HiCAD, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "BIMoffice Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: [],
   },
-
   expert_verdict: "待补充专业评语。",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/hicad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006612/HiCAD/reviews/"
-    }
-  ],
-
-  last_updated: "2023-10-09",
-  version: "2024"
 },
 {
   id: "t105",
   name: "HiCAD",
   slug: "hicad",
   logo_url: getLogo("HI"),
-
   short_desc:
     "Comprehensive 2D/3D CAD and PDM/PLM solution for mechanical engineering, plant design, sheet metal, and steel construction.",
-
   description:
     "HiCAD by ISD Group is a comprehensive 2D/3D CAD and PDM/PLM solution designed for mechanical engineering, plant design, sheet metal working, and steel/metal construction. The software provides integrated tools for design, documentation, and data management across various engineering disciplines.",
-
   pricing_tiers: [
     {
       name: "Standard",
@@ -1820,7 +1864,6 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "Design",
@@ -1855,7 +1898,6 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["bimoffice", "renga", "edificius"],
   country: "Germany",
   category_id: "c3",
@@ -1868,7 +1910,6 @@ export const c3Tools: Tool[] = [
   official_url: "https://www.isdgroup.com/",
   affiliate_url: null,
   score: 72,
-
   pros: [
     "複数の業界に対応する包括的なソリューション",
     "PDM/PLM統合でデータ管理が効率的",
@@ -1876,14 +1917,12 @@ export const c3Tools: Tool[] = [
     "ドイツ製で信頼性が高い",
     "パラメトリック設計機能が充実",
   ],
-
   cons: [
     "価格が比較的高い",
     "学習曲線が急勾配",
     "国際的なプラグインエコシステムが小さい",
     "英語ドキュメントが限定的",
   ],
-
   faqs: [
     {
       q: "What is HiCAD used for?",
@@ -1910,48 +1949,23 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, Renga, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "HiCAD Engine",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["DWG", "DXF", "STEP", "IFC"],
   },
-
   expert_verdict: "HiCADは機械設計、プラント設計、シートメタル、鋼構造など複数の業界に対応する包括的なCAD/PDM/PLMソリューションです。特にシートメタルと鋼構造分野で強みを持ち、データ管理機能も充実しています。ドイツ製の信頼性が高い製品ですが、価格も高めで学習曲線も急勾配です。複数の業界で活用したい企業にとって魅力的な選択肢です。",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/renga/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006613/Renga/reviews/"
-    }
-  ],
-
-  last_updated: "2023-12-03",
-  version: "2024"
 },
 {
   id: "t119",
   name: "Renga",
   slug: "renga",
   logo_url: getLogo("RE"),
-
   short_desc:
     "Russian BIM system for collaborative architectural design, structural engineering, MEP, and building technology.",
-
   description:
     "Renga is a Russian BIM system designed for collaborative architectural design, structural engineering, MEP (mechanical, electrical, plumbing), and building technology. The software provides integrated tools for building information modeling across all disciplines with a focus on the Russian construction market.",
-
   pricing_tiers: [
     {
       name: "Standard",
@@ -1968,7 +1982,6 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "Architecture",
@@ -2003,7 +2016,6 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["bimoffice", "hicad", "edificius"],
   country: "Russia",
   category_id: "c3",
@@ -2016,7 +2028,6 @@ export const c3Tools: Tool[] = [
   official_url: "https://rengabim.com/",
   affiliate_url: null,
   score: 68,
-
   pros: [
     "ロシア建築基準に完全対応",
     "全分野をカバーする包括的なBIMソリューション",
@@ -2024,14 +2035,12 @@ export const c3Tools: Tool[] = [
     "ロシア市場でのサポート充実",
     "IFC対応で相互運用性が高い",
   ],
-
   cons: [
     "国際的なプラグインエコシステムが小さい",
     "英語ドキュメントが限定的",
     "海外市場での実績が少ない",
     "高度な自動化機能は他製品に比べて劣る",
   ],
-
   faqs: [
     {
       q: "What is Renga used for?",
@@ -2058,35 +2067,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Edificius. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "Renga Engine",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-
   expert_verdict: "Rengaはロシア建築基準に完全対応したBIMシステムで、建築、構造、MEPなど全分野をカバーしています。ロシア市場でのサポートが充実しており、コストパフォーマンスも高いです。ただし、国際的なエコシステムは小さく、英語ドキュメントも限定的です。ロシア国内の建設プロジェクトには最適ですが、グローバル展開を考える企業には検討が必要です。",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/edificius/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.3,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006614/Edificius/reviews/"
-    }
-  ],
-
-  last_updated: "2023-06-21",
-  version: "2024"
 },
 {
   id: "t130",
@@ -2215,21 +2202,30 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "Edificiusは世界最高数のIFC認証を持つBIMソフトウェアで、オープンBIM規格への完全準拠が大きな特徴です。建築、構造、MEPを統合したソリューションを提供し、相互運用性が非常に高いです。イタリア製の信頼性が高い製品で、欧州市場での実績も豊富です。ただし、価格は高めで学習曲線も急勾配です。オープンBIMを重視するプロジェクトにとって最適な選択肢です。",
-  last_updated: "2023-05-23",
-  version: "2024"
+
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 18,
+    url: "https://www.g2.com/products/edificius/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 18,
+    url: "https://www.capterra.it/software/205741/edificius"
+  }]
 },
 {
   id: "t131",
   name: "EdiLus",
   slug: "edilus",
   logo_url: "/logos/edilus.png",
-
   short_desc:
     "Architectural BIM software for building design and documentation with IFC certification.",
-
   description:
     "EdiLus by ACCA Software is an architectural BIM solution designed for building design and documentation. It provides intuitive tools for architectural modeling with IFC certification for interoperability. The software is part of the ACCA Software family, known for its IFC certified solutions.",
-
   pricing_tiers: [
     {
       name: "Standard",
@@ -2246,7 +2242,6 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "Architecture",
@@ -2281,7 +2276,6 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Italy",
   category_id: "c3",
@@ -2294,7 +2288,6 @@ export const c3Tools: Tool[] = [
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
   score: 70,
-
   pros: [
     "IFC認証で相互運用性が高い",
     "直感的な建築設計インターフェース",
@@ -2302,14 +2295,12 @@ export const c3Tools: Tool[] = [
     "イタリア製で欧州市場での実績",
     "コストパフォーマンスが良い",
   ],
-
   cons: [
     "構造・MEP機能は限定",
     "高度な解析機能が不足",
     "英語ドキュメントが限定的",
     "国際的なプラグインエコシステムが小さい",
   ],
-
   faqs: [
     {
       q: "What is EdiLus used for?",
@@ -2336,35 +2327,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "EdiLus Engine",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF"],
   },
-
   expert_verdict: "EdiLusは建築設計に特化したBIMソフトウェアで、IFC認証による高い相互運用性が特徴です。直感的なインターフェースと自動図面生成機能を備え、建築家にとって使いやすいツールです。構造やMEP機能は限定されていますが、純粋な建築設計用途には最適です。コストパフォーマンスも良く、中小の建築事務所にとって魅力的な選択肢です。",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 8,
-      url: "https://www.g2.com/products/cadwork/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.2,
-      max: 5,
-      count: 5,
-      url: "https://www.capterra.com/p/10006615/cadwork/reviews/"
-    }
-  ],
-
-  last_updated: "2024-08-27",
-  version: "2024"
 },
 {
   id: "t139",
@@ -2373,7 +2342,6 @@ export const c3Tools: Tool[] = [
   logo_url: "/logos/cadwork.png",
   short_desc: "CAD/CAM software specialized for timber construction and wood building design.",
   description: "cadwork is a specialized CAD/CAM software solution designed for timber construction and wood building design. It provides comprehensive tools for 3D modeling, structural design, and CNC machine preparation specifically for the timber industry. The software is widely used in Europe for wooden frame construction and timber engineering.",
-
   pricing_tiers: [
     {
       name: "Standard",
@@ -2390,7 +2358,6 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "Timber Design",
@@ -2425,7 +2392,6 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Switzerland",
   category_id: "c3",
@@ -2438,7 +2404,6 @@ export const c3Tools: Tool[] = [
   official_url: "https://www.cadwork.com/",
   affiliate_url: null,
   score: 73,
-
   pros: [
     "木材建築に特化した専門ソリューション",
     "CNCマシン対応で製造まで統合",
@@ -2446,14 +2411,12 @@ export const c3Tools: Tool[] = [
     "スイス製で信頼性が高い",
     "ユーロコード準拠",
   ],
-
   cons: [
     "木材建築以外の用途には不向き",
     "価格が比較的高い",
     "学習曲線が急勾配",
     "国際的なプラグインエコシステムが小さい",
   ],
-
   faqs: [
     {
       q: "What is cadwork used for?",
@@ -2480,48 +2443,23 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "cadwork Engine",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "STEP"],
   },
-
   expert_verdict: "cadworkは木材建築に特化したCAD/CAMソフトウェアで、設計から製造までのワークフローを統合しています。特にCNCマシン対応が強力で、欧州の木材建築業界で広く採用されています。スイス製の信頼性が高い製品ですが、価格も高めです。木材建築専門企業にとっては最適な選択肢ですが、他の建設用途には向いていません。",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 10,
-      url: "https://www.g2.com/products/magicad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.2,
-      max: 5,
-      count: 5,
-      url: "https://www.capterra.com/p/10006616/MagiCAD/reviews/"
-    }
-  ],
-
-  last_updated: "2023-04-26",
-  version: "2024"
 },
 {
   id: "t140",
   name: "MagiCAD",
   slug: "magicad",
   logo_url: getLogo("MA"),
-
   short_desc:
     "MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
-
   description:
     "MagiCAD Group specializes in MEP (Mechanical, Electrical, Plumbing) design software for designers and BIM solutions for MEP manufacturers in the construction industry. The software provides comprehensive tools for HVAC, electrical, and piping design with strong BIM integration and manufacturer content libraries.",
-
   pricing_tiers: [
     {
       name: "Standard",
@@ -2538,7 +2476,6 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "MEP Design",
@@ -2573,7 +2510,6 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Finland",
   category_id: "c3",
@@ -2586,7 +2522,6 @@ export const c3Tools: Tool[] = [
   official_url: "https://www.magicad.com/",
   affiliate_url: null,
   score: 76,
-
   pros: [
     "MEP設計に特化した専門ソリューション",
     "豊富なメーカーライブラリ",
@@ -2594,14 +2529,12 @@ export const c3Tools: Tool[] = [
     "フィンランド製で欧州市場での実績",
     "計算・シミュレーション機能充実",
   ],
-
   cons: [
     "建築・構造機能は限定",
     "価格が比較的高い",
     "学習曲線が急勾配",
     "国際的なプラグインエコシステムが小さい",
   ],
-
   faqs: [
     {
       q: "What is MagiCAD used for?",
@@ -2628,35 +2561,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "MagiCAD Engine",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-
   expert_verdict: "MagiCADはMEP設計に特化したBIMソフトウェアで、HVAC、電気、配管設計の全てをカバーしています。豊富なメーカーライブラリとRevitとの強力な連携が特徴で、欧州のMEP業界で広く採用されています。計算・シミュレーション機能も充実していますが、建築・構造機能は限定されています。MEP専門企業にとっては最適な選択肢です。",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/dds-cad/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006617/DDS-CAD/reviews/"
-    }
-  ],
-
-  last_updated: "2023-03-04",
-  version: "2024"
 },
 {
   id: "t157",
@@ -2665,7 +2576,6 @@ export const c3Tools: Tool[] = [
   logo_url: getLogo("DD"),
   short_desc: "MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
   description: "DDS-CAD is a specialized MEP design and BIM software solution for mechanical, electrical, and plumbing engineering. The software provides integrated tools for HVAC design, electrical systems, and piping with strong BIM capabilities. It's particularly popular in the Nordic construction market.",
-
   pricing_tiers: [
     {
       name: "Standard",
@@ -2682,7 +2592,6 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
-
   detailed_features: [
     {
       category: "MEP Design",
@@ -2717,7 +2626,6 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-
   alternatives: ["bimoffice", "hicad", "renga"],
   country: "Norway",
   category_id: "c3",
@@ -2730,7 +2638,6 @@ export const c3Tools: Tool[] = [
   official_url: "https://www.graphisoft.com/solutions/dds-cad",
   affiliate_url: null,
   score: 71,
-
   pros: [
     "MEP設計に特化した専門ソリューション",
     "ノルディック市場での実績豊富",
@@ -2738,14 +2645,12 @@ export const c3Tools: Tool[] = [
     "自動図面生成機能",
     "ノルウェー製で信頼性が高い",
   ],
-
   cons: [
     "建築・構造機能は限定",
     "価格が比較的高い",
     "学習曲線が急勾配",
     "国際的なプラグインエコシステムが小さい",
   ],
-
   faqs: [
     {
       q: "What is DDS-CAD used for?",
@@ -2772,35 +2677,13 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
-
   tech_specs: {
     engine: "DDS-CAD Engine",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
-
   expert_verdict: "DDS-CADはMEP設計に特化したBIMソフトウェアで、HVAC、電気、配管設計をカバーしています。ノルディック市場での実績が豊富で、エネルギー解析機能も充実しています。ノルウェー製の信頼性が高い製品ですが、建築・構造機能は限定されています。MEP専門企業、特に北欧市場でのプロジェクトには最適です。",
-
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/drofus/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.2,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006618/dRofus/reviews/"
-    }
-  ],
-
-  last_updated: "2024-07-08",
-  version: "2024"
 },
 {
   id: "t159",
@@ -2929,8 +2812,20 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "dRofusはデータ駆動の建築要件管理プラットフォームで、プロジェクトデータの標準化とBIM連携に特化しています。CAD設計機能ではなく、データ管理と要件定義に焦点を当てており、大規模プロジェクトのデータ一元化に最適です。ノルディック市場での実績が豊富ですが、小規模チームには機能過多かもしれません。データ管理を重視する企業にとって強力なツールです。",
-  last_updated: "2024-10-21",
-  version: "2024"
+
+  external_ratings: [{
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 12,
+    url: "https://www.capterra.com/software/205742/drofus"
+  }, {
+    source: "GetApp",
+    score: 4.2,
+    max: 5,
+    count: 12,
+    url: "https://www.getapp.com/bim-software/a/drofus/"
+  }]
 },
 {
   id: "t206",
@@ -3049,8 +2944,19 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2024-11-19",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 42,
+    url: "https://www.g2.com/products/autocad-plant-3d/reviews"
+  }, {
+    source: "Trustpilot",
+    score: 1.2,
+    max: 5,
+    count: 162,
+    url: "https://www.trustpilot.com/review/www.autodesk.com"
+  }]
 },
 {
   id: "t207",
@@ -3158,8 +3064,19 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2024-05-25",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.2,
+    max: 5,
+    count: 24,
+    url: "https://www.g2.com/products/intergraph-smartplant-3d/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 24,
+    url: "https://www.capterra.com/software/205743/smartplant-3d"
+  }]
 },
 {
   id: "t208",
@@ -3267,8 +3184,37 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2023-09-27",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.5,
+    max: 5,
+    count: 24,
+    url: "https://www.g2.com/products/cadworx/reviews"
+  }, {
+    source: "Capterra",
+    score: 4,
+    max: 5,
+    count: 2,
+    url: "https://www.capterra.com/p/276078/CADWorx-Plant/"
+  }, {
+    source: "TrustRadius",
+    score: 9,
+    max: 10,
+    count: 9,
+    url: "https://www.trustradius.com/products/cadworx/reviews"
+  }, {
+    source: "GetApp",
+    score: 4,
+    max: 5,
+    count: 2,
+    url: "https://www.getapp.com/construction-software/a/cadworx-plant/"
+  }, {
+    source: "Software Advice",
+    score: 4,
+    max: 5,
+    count: 2,
+    url: "https://www.softwareadvice.com/engineering-cad/cadworx-plant-profile/"
+  }]
 },
 {
   id: "t229",
@@ -3376,8 +3322,19 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2024-05-25",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.4,
+    max: 5,
+    count: 156,
+    url: "https://www.g2.com/products/autodesk-construction-cloud/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.4,
+    max: 5,
+    count: 156,
+    url: "https://www.capterra.com/software/205756/autodesk-construction-cloud"
+  }]
 },
 {
   id: "t230",
@@ -3485,8 +3442,19 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-01-25",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.3,
+    max: 5,
+    count: 87,
+    url: "https://www.g2.com/products/trimble-connect/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.2,
+    max: 5,
+    count: 87,
+    url: "https://www.capterra.com/software/205757/trimble-connect"
+  }]
 },
 {
   id: "t231",
@@ -3594,8 +3562,19 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2023-02-15",
-  version: "2024"
+  external_ratings: [{
+    source: "G2",
+    score: 4.6,
+    max: 5,
+    count: 45,
+    url: "https://www.g2.com/products/bimcollab/reviews"
+  }, {
+    source: "Capterra",
+    score: 4.5,
+    max: 5,
+    count: 45,
+    url: "https://www.capterra.com/software/205758/bimcollab"
+  }]
 },
 {
   id: "t232",
@@ -3645,7 +3624,6 @@ export const c3Tools: Tool[] = [
   },
 
   "expert_verdict": "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
-
   faqs: [{
     q: 'What is Autodesk Dynamo used for?',
     a: 'Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM. Autodesk Dynamo is a BIM solution widely adopted in AEC, Construction.',
@@ -3665,9 +3643,7 @@ export const c3Tools: Tool[] = [
     q: 'What are the best alternatives to Autodesk Dynamo?',
     a: 'The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
-
   alternatives: ['trimble-connect', 'bimcollab', 'autodesk-construction-cloud'],
-
   detailed_features: [
     {
       category: "Visual Programming",
@@ -3701,9 +3677,6 @@ export const c3Tools: Tool[] = [
         { name: "Package manager", status: true },
       ],
     },
-  ],
-
-  last_updated: "2023-02-13",
-  version: "2024"
+  ]
 }
 ];
