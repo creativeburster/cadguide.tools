@@ -11,7 +11,12 @@ import { Separator } from '@/components/ui/separator';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import { ToolLogo } from '@/components/tool-logo';
-import { SlidersHorizontal, X } from 'lucide-react';
+import { SlidersHorizontal, X, FileText, Sparkles } from 'lucide-react';
+import { 
+  searchArticles, 
+  determineSearchMode, 
+  type ArticleSearchItem 
+} from '@/lib/seo-content';
 
 // Items per page on the directory grid. Mirrors `ITEMS_PER_PAGE` in
 // src/app/tools/page.tsx so canonical URLs and client pagination agree.
@@ -720,8 +725,49 @@ interface SmartSearchBoxProps {
   onSearchSubmit: (query: string) => void;
 }
 
+function getArticleTypeLabel(type: string): string {
+  switch (type) {
+    case 'best': return 'Top List';
+    case 'compare': return 'Comparison';
+    case 'alternatives': return 'Alternatives';
+    case 'platform': return 'Platform Guide';
+    case 'file-format': return 'File Format';
+    case 'persona': return 'Use Case';
+    case 'sector': return 'Industry';
+    default: return 'Article';
+  }
+}
+
+function getArticleTypeIcon(type: string) {
+  switch (type) {
+    case 'best':
+      return (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      );
+    case 'compare':
+      return (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+      );
+    case 'alternatives':
+      return (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+      );
+    default:
+      return <FileText className="w-4 h-4" />;
+  }
+}
+
 function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
   const [inputValue, setInputValue] = useState(searchQuery);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const toolNames = useMemo(() => tools.map((t) => t.name), []);
 
   // Sync state if searchQuery prop changes externally (e.g., when clicking active filter chips or resetting)
   useEffect(() => {
@@ -739,26 +785,65 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
     return () => clearTimeout(timer);
   }, [inputValue, searchQuery, onSearchSubmit]);
 
+  const searchSuggestions = useMemo(() => {
+    if (!inputValue.trim()) {
+      return { tools: [], articles: [], mode: 'both' as const };
+    }
+
+    const mode = determineSearchMode(inputValue, toolNames);
+
+    // Search for tools
+    const matchingTools = tools
+      .filter((tool) => fuzzyMatchTool(tool, inputValue))
+      .slice(0, 5);
+
+    // Search for articles
+    const matchingArticles = mode !== 'tools' 
+      ? searchArticles(inputValue, 5) 
+      : [];
+
+    return { tools: matchingTools, articles: matchingArticles, mode };
+  }, [inputValue, toolNames]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSearchSubmit(inputValue);
+    setShowSuggestions(false);
   };
 
   const handleClear = () => {
     setInputValue('');
     onSearchSubmit('');
+    setShowSuggestions(false);
+  };
+
+  const handleInputFocus = () => {
+    setShowSuggestions(true);
+  };
+
+  const handleInputBlur = () => {
+    // Hide suggestions after a short delay to allow clicks on suggestions
+    setTimeout(() => setShowSuggestions(false), 200);
   };
 
   return (
     <div className="bg-slate-900 p-6 rounded-[32px] shadow-2xl shadow-blue-900/10 relative overflow-hidden group">
       <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-blue-600/20 transition-colors duration-500"></div>
-      <h3 className="font-bold mb-4 uppercase text-[10px] tracking-widest text-blue-400 relative z-10">Smart Search</h3>
+      <h3 className="font-bold mb-4 uppercase text-[10px] tracking-widest text-blue-400 relative z-10 flex items-center gap-2">
+        Smart Search
+        <div className="flex items-center gap-1 text-yellow-400 text-[9px] font-normal">
+          <Sparkles className="w-3 h-3" />
+          <span>AI</span>
+        </div>
+      </h3>
       <div className="relative z-10">
         <form onSubmit={handleSubmit} className="relative">
           <Input
-            placeholder="Find a specific tool..."
+            placeholder="Search for a tool or topic..."
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
             className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600 pr-14 pl-4 h-11 transition-all"
           />
           {inputValue ? (
@@ -771,7 +856,7 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
               <X className="w-4 h-4" />
             </button>
           ) : null}
-          <button 
+          <button
             type="submit"
             className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-400 transition-colors"
             aria-label="Search"
@@ -781,6 +866,95 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
             </svg>
           </button>
         </form>
+
+        {/* Search Suggestions Dropdown */}
+        {showSuggestions && inputValue.trim() && (
+          <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-xl shadow-xl overflow-hidden z-50 max-h-[400px] overflow-y-auto">
+            {/* Tools section */}
+            {searchSuggestions.tools.length > 0 && (
+              searchSuggestions.mode !== 'articles' && (
+                <div className="p-2">
+                  <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    Tools
+                  </div>
+                  {searchSuggestions.tools.map((tool) => (
+                    <Link
+                      key={tool.id}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center gap-3 px-3 py-2 hover:bg-slate-700 rounded-lg transition-colors"
+                      onClick={() => {
+                        setShowSuggestions(false);
+                      }}
+                    >
+                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center border border-slate-600">
+                        <ToolLogo
+                          slug={tool.slug}
+                          src={tool.logo_url}
+                          websiteUrl={tool.official_url}
+                          name={tool.name}
+                          className="w-5 h-5"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-semibold text-white truncate">
+                          {tool.name}
+                        </div>
+                        <div className="text-xs text-slate-400 truncate">
+                          {tool.short_desc}
+                        </div>
+                      </div>
+                      <div className="text-xs font-bold text-blue-400">
+                        {tool.score}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )
+            )}
+
+            {/* Articles section */}
+            {searchSuggestions.articles.length > 0 && (
+              searchSuggestions.mode !== 'tools' && (
+                <div className="border-t border-slate-700 p-2">
+                  <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 flex items-center gap-1">
+                    <FileText className="w-3 h-3" />
+                    Articles
+                  </div>
+                  {searchSuggestions.articles.map((article) => (
+                    <Link
+                      key={`${article.type}-${article.slug}`}
+                      href={article.url}
+                      className="block px-3 py-2 hover:bg-slate-700 rounded-lg transition-colors"
+                      onClick={() => {
+                        setShowSuggestions(false);
+                      }}
+                    >
+                      <div className="flex items-center gap-2 mb-1">
+                        <Badge className="bg-slate-700 border-slate-600 text-slate-300 text-[9px] uppercase tracking-widest font-bold px-2 py-0.5">
+                          {getArticleTypeLabel(article.type)}
+                        </Badge>
+                      </div>
+                      <div className="text-sm font-semibold text-white">
+                        {article.title}
+                      </div>
+                      <div className="text-xs text-slate-400 line-clamp-2">
+                        {article.description}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )
+            )}
+
+            {/* No results */}
+            {searchSuggestions.tools.length === 0 && searchSuggestions.articles.length === 0 && (
+              <div className="px-3 py-6 text-center">
+                <div className="text-sm text-slate-400">No results found</div>
+                <div className="text-xs text-slate-500 mt-1">Try a different search term</div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

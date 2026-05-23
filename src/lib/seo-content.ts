@@ -1617,3 +1617,236 @@ export function openSourceTools(): Tool[] {
     .filter((t) => t.pricing_type === "Open Source")
     .sort((a, b) => b.score - a.score);
 }
+
+/** ---------- Article Search System ---------------------------------
+ * Combine all article pages into a single searchable index
+ */
+export interface ArticleSearchItem {
+  type: "best" | "compare" | "alternatives" | "platform" | "file-format" | "persona" | "sector";
+  slug: string;
+  title: string;
+  description: string;
+  keywords: string[];
+  url: string;
+}
+
+function normalizeString(str: string): string {
+  return str.toLowerCase().replace(/[^a-z0-9]/g, " ");
+}
+
+function generateBestOfArticles(): ArticleSearchItem[] {
+  return categories.map((category) => ({
+    type: "best",
+    slug: category.slug,
+    title: `Best ${category.name} Software`,
+    description: `Top-rated ${category.name} tools, expertly reviewed and compared.`,
+    keywords: [
+      `best ${category.name}`,
+      category.name.toLowerCase(),
+      `top ${category.name}`,
+      `free ${category.name}`,
+    ],
+    url: `/best/${category.slug}`,
+  }));
+}
+
+function generateComparisonArticles(): ArticleSearchItem[] {
+  return comparisonPairs().map((pair) => {
+    const tool1Name = pair.a.name;
+    const tool2Name = pair.b.name;
+    return {
+      type: "compare",
+      slug: pair.pairSlug,
+      title: `${tool1Name} vs ${tool2Name}`,
+      description: `Expert comparison between ${tool1Name} and ${tool2Name}`,
+      keywords: [
+        `${tool1Name.toLowerCase()} vs ${tool2Name.toLowerCase()}`,
+        `${tool1Name.toLowerCase()} alternative`,
+        `${tool2Name.toLowerCase()} alternative`,
+      ],
+      url: `/compare/${pair.pairSlug}`,
+    };
+  });
+}
+
+function generateAlternativesArticles(): ArticleSearchItem[] {
+  return tools.map((tool) => ({
+    type: "alternatives",
+    slug: tool.slug,
+    title: `Best ${tool.name} Alternatives`,
+    description: `Top alternatives to ${tool.name} with expert reviews.`,
+    keywords: [
+      `${tool.name.toLowerCase()} alternative`,
+      `software like ${tool.name.toLowerCase()}`,
+      `${tool.name.toLowerCase()} competitor`,
+    ],
+    url: `/alternatives/${tool.slug}`,
+  }));
+}
+
+function generatePlatformArticles(): ArticleSearchItem[] {
+  return Object.values(PLATFORM_PAGES).map((platform) => ({
+    type: "platform",
+    slug: platform.slug,
+    title: `Best CAD Software for ${platform.displayName}`,
+    description: platform.intro.slice(0, 150) + "...",
+    keywords: [
+      `cad for ${platform.slug}`,
+      `${platform.slug.toLowerCase()} cad software`,
+    ],
+    url: `/platforms/${platform.slug}`,
+  }));
+}
+
+function generateFileFormatArticles(): ArticleSearchItem[] {
+  return Object.values(FILE_FORMAT_PAGES).map((format) => ({
+    type: "file-format",
+    slug: format.slug,
+    title: `Software for ${format.formatName} Files`,
+    description: format.intro.slice(0, 150) + "...",
+    keywords: [
+      `${format.formatName.toLowerCase()} viewer`,
+      `${format.formatName.toLowerCase()} editor`,
+      `${format.formatName.toLowerCase()} software`,
+    ],
+    url: `/file-formats/${format.slug}`,
+  }));
+}
+
+function generatePersonaArticles(): ArticleSearchItem[] {
+  return Object.values(PERSONA_PAGES).map((persona) => ({
+    type: "persona",
+    slug: persona.slug,
+    title: `Best CAD for ${persona.displayName}`,
+    description: persona.intro.slice(0, 150) + "...",
+    keywords: [
+      `cad for ${persona.shortNoun}`,
+      `${persona.slug.toLowerCase()} cad software`,
+    ],
+    url: `/for/${persona.slug}`,
+  }));
+}
+
+function generateSectorArticles(): ArticleSearchItem[] {
+  return Object.values(SECTOR_PAGES).map((sector) => ({
+    type: "sector",
+    slug: sector.slug,
+    title: `Best ${sector.displayName} Software`,
+    description: sector.intro.slice(0, 150) + "...",
+    keywords: [sector.slug.toLowerCase().replace(/-/g, " ")],
+    url: `/sectors/${sector.slug}`,
+  }));
+}
+
+export function getAllArticles(): ArticleSearchItem[] {
+  return [
+    ...generateBestOfArticles(),
+    ...generateComparisonArticles(),
+    ...generateAlternativesArticles(),
+    ...generatePlatformArticles(),
+    ...generateFileFormatArticles(),
+    ...generatePersonaArticles(),
+    ...generateSectorArticles(),
+  ];
+}
+
+export function searchArticles(query: string, maxResults: number = 5): ArticleSearchItem[] {
+  const normalizedQuery = normalizeString(query);
+  const queryWords = normalizedQuery.split(/\s+/).filter((w) => w.length > 0);
+
+  const articles = getAllArticles();
+
+  const scoredArticles = articles.map((article) => {
+    let score = 0;
+
+    const searchText = normalizeString(
+      article.title + " " + article.description + " " + article.keywords.join(" "),
+    );
+
+    // Exact matches
+    if (normalizeString(article.title).includes(normalizedQuery)) {
+      score += 50;
+    }
+
+    // Keyword matches
+    for (const word of queryWords) {
+      if (searchText.includes(word)) {
+        score += 10;
+      }
+    }
+
+    // Check if all words present
+    const allWordsPresent = queryWords.every((word) => searchText.includes(word));
+    if (allWordsPresent) {
+      score += 30;
+    }
+
+    // Boost for articles that are closer to the query
+    const queryLength = normalizedQuery.length;
+    const titleMatchLength = normalizeString(article.title).indexOf(normalizedQuery);
+    if (titleMatchLength >= 0) {
+      score += (queryLength / normalizeString(article.title).length) * 20;
+    }
+
+    return { ...article, score };
+  });
+
+  return scoredArticles
+    .filter((a) => a.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, maxResults);
+}
+
+export function shouldSearchArticles(query: string, toolNames: string[]): boolean {
+  const normalizedQuery = query.toLowerCase().trim();
+  
+  // Check if query is exactly a tool name
+  const isExactToolName = toolNames.some((name) => {
+    const normalizedName = name.toLowerCase().trim();
+    return normalizedName === normalizedQuery || 
+           normalizedName.includes(normalizedQuery) ||
+           normalizedQuery.includes(normalizedName);
+  });
+
+  if (isExactToolName) return false;
+
+  // Check query length and complexity
+  const wordCount = normalizedQuery.split(/\s+/).filter((w) => w.length > 0).length;
+  if (wordCount >= 3) return true;
+
+  // Check for article-specific keywords
+  const articleKeywords = [
+    "best", "top", "free", "vs", "vs.", "versus", "compare", "comparison", "alternative",
+    "alternatives", "like", "for", "how to", "what is", "which", "software", "cad",
+    "viewer", "editor", "platform", "mac", "linux", "web", "windows", "ios", "android",
+    "file format", "stl", "dwg", "step", "ifc", "for architect", "for engineer",
+  ];
+
+  const hasArticleKeyword = articleKeywords.some((kw) => normalizedQuery.includes(kw));
+  if (hasArticleKeyword) return true;
+
+  // Otherwise, prefer tools
+  return false;
+}
+
+export type SearchMode = "tools" | "articles" | "both";
+
+export function determineSearchMode(query: string, toolNames: string[]): SearchMode {
+  if (!query.trim()) return "both";
+  
+  const normalizedQuery = query.toLowerCase().trim();
+  
+  // Check if query is very short (1-2 words) and looks like a tool name
+  if (normalizedQuery.split(/\s+/).filter((w) => w.length > 0).length <= 2) {
+    const hasToolMatch = toolNames.some((name) => {
+      const normalizedName = name.toLowerCase().trim();
+      return normalizedName.includes(normalizedQuery) || normalizedQuery.includes(normalizedName);
+    });
+    if (hasToolMatch) return "tools";
+  }
+
+  // Check for article-specific patterns
+  if (shouldSearchArticles(query, toolNames)) return "articles";
+
+  return "both";
+}
