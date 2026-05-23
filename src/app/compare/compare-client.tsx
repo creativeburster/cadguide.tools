@@ -159,23 +159,13 @@ function CompareContent() {
 
   const comparisonRows = [
     { label: 'Expert Score', key: 'score', type: 'rating' },
-    { label: 'Latest Version', key: 'version', type: 'text' },
-    { label: 'Last Updated', key: 'last_updated', type: 'text' },
     { label: 'Origin Country', key: 'country', type: 'text' },
     { label: 'Pricing Model', key: 'pricing_type', type: 'badge' },
     { label: 'Starting Price', key: 'starting_price', type: 'price' },
-    { label: 'Free Trial (Days)', key: 'free_trial_days', type: 'text' },
     { label: 'Geometry Engine', key: 'tech_specs.engine', type: 'text' },
     { label: 'OS Compatibility', key: 'platforms', type: 'list' },
     { label: 'Core Industries', key: 'industries', type: 'list' },
     { label: 'Target User', key: 'user_scales', type: 'list' },
-    { label: 'Supported Languages', key: 'languages', type: 'list' },
-    { label: 'Deployment Options', key: 'deployment_options', type: 'list' },
-    { label: 'License Types', key: 'license_types', type: 'list' },
-    { label: 'Support Channels', key: 'support_channels', type: 'list' },
-    { label: 'File Formats (Import)', key: 'file_formats_in', type: 'list' },
-    { label: 'File Formats (Export)', key: 'file_formats_out', type: 'list' },
-    { label: 'External Ratings (G2/Capterra)', key: 'external_ratings', type: 'external_ratings' },
   ];
 
   const getNestedValue = (obj: any, path: string) => {
@@ -289,30 +279,16 @@ function CompareContent() {
                           {tool ? (
                             <div className="flex flex-col items-center">
                               {row.type === 'rating' && <span className="text-xl lg:text-2xl font-black text-slate-900">★ {val}</span>}
-                              {row.type === 'price' && <span className="text-lg lg:text-xl font-black text-slate-900">${val === 0 ? 'Free' : val || 'TBA'}</span>}
+                              {row.type === 'price' && <span className="text-lg lg:text-xl font-black text-slate-900">${val || 'TBA'}</span>}
                               {row.type === 'badge' && <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-100 font-bold">{val}</Badge>}
                               {row.type === 'list' && (
                                 <div className="flex flex-wrap justify-center gap-2 max-w-[180px] lg:max-w-[200px]">
                                   {val?.slice(0, 4).map((item: string) => (
                                     <span key={item} className="text-[10px] font-black uppercase tracking-widest bg-slate-100 text-slate-500 px-2 py-1 rounded-md">{item}</span>
                                   ))}
-                                  {!val || val.length === 0 ? '-' : ''}
                                 </div>
                               )}
                               {row.type === 'text' && <span className="text-slate-600 font-black text-sm">{val || '-'}</span>}
-                              {row.type === 'external_ratings' && (
-                                <div className="space-y-1">
-                                  {val?.slice(0, 3).map((rating: any) => (
-                                    <div key={rating.source} className="text-center">
-                                      <div className="text-[10px] font-bold uppercase text-slate-500">{rating.source}</div>
-                                      <div className="text-sm font-black text-slate-900">
-                                        {rating.score}/{rating.max} ({rating.count} reviews)
-                                      </div>
-                                    </div>
-                                  ))}
-                                  {!val || val.length === 0 ? <span className="text-slate-400">-</span> : ''}
-                                </div>
-                              )}
                             </div>
                           ) : '-'}
                         </td>
