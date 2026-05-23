@@ -787,20 +787,34 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
 
   const searchSuggestions = useMemo(() => {
     if (!inputValue.trim()) {
-      return { tools: [], articles: [], mode: 'both' as const };
+      return { tools: [], articles: [], mode: "both" as const };
     }
 
     const mode = determineSearchMode(inputValue, toolNames);
 
-    // Search for tools
+    // Search for tools - with better sorting
     const matchingTools = tools
       .filter((tool) => fuzzyMatchTool(tool, inputValue))
-      .slice(0, 5);
+      .sort((a, b) => {
+        // Exact name match first
+        const aExactName = normalizeString(a.name) === normalizeString(inputValue);
+        const bExactName = normalizeString(b.name) === normalizeString(inputValue);
+        if (aExactName && !bExactName) return -1;
+        if (!aExactName && bExactName) return 1;
+        
+        // Then name starts with query
+        const aStartsWith = normalizeString(a.name).startsWith(normalizeString(inputValue));
+        const bStartsWith = normalizeString(b.name).startsWith(normalizeString(inputValue));
+        if (aStartsWith && !bStartsWith) return -1;
+        if (!aStartsWith && bStartsWith) return 1;
+        
+        // Then higher score
+        return b.score - a.score;
+      })
+      .slice(0, 6);
 
-    // Search for articles
-    const matchingArticles = mode !== 'tools' 
-      ? searchArticles(inputValue, 5) 
-      : [];
+    // Search for articles - show even if mode is both, but prioritize
+    const matchingArticles = searchArticles(inputValue, 6);
 
     return { tools: matchingTools, articles: matchingArticles, mode };
   }, [inputValue, toolNames]);
@@ -869,81 +883,77 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
 
         {/* Search Suggestions Dropdown */}
         {showSuggestions && inputValue.trim() && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-xl shadow-xl overflow-hidden z-50 max-h-[400px] overflow-y-auto">
-            {/* Tools section */}
-            {searchSuggestions.tools.length > 0 && (
-              searchSuggestions.mode !== 'articles' && (
-                <div className="p-2">
-                  <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                    Tools
-                  </div>
-                  {searchSuggestions.tools.map((tool) => (
-                    <Link
-                      key={tool.id}
-                      href={`/tools/${tool.slug}`}
-                      className="flex items-center gap-3 px-3 py-2 hover:bg-slate-700 rounded-lg transition-colors"
-                      onClick={() => {
-                        setShowSuggestions(false);
-                      }}
-                    >
-                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center border border-slate-600">
-                        <ToolLogo
-                          slug={tool.slug}
-                          src={tool.logo_url}
-                          websiteUrl={tool.official_url}
-                          name={tool.name}
-                          className="w-5 h-5"
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-semibold text-white truncate">
-                          {tool.name}
-                        </div>
-                        <div className="text-xs text-slate-400 truncate">
-                          {tool.short_desc}
-                        </div>
-                      </div>
-                      <div className="text-xs font-bold text-blue-400">
-                        {tool.score}
-                      </div>
-                    </Link>
-                  ))}
+          <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-xl shadow-xl overflow-hidden z-50 max-h-[450px] overflow-y-auto">
+            {/* Articles section - show first if mode is articles */}
+            {searchSuggestions.articles.length > 0 && searchSuggestions.mode === 'articles' && (
+              <div className="p-2">
+                <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 flex items-center gap-1">
+                  <FileText className="w-3 h-3" />
+                  Articles
                 </div>
-              )
+                {searchSuggestions.articles.map((article) => (
+                  <Link
+                    key={`${article.type}-${article.slug}`}
+                    href={article.url}
+                    className="block px-3 py-2 hover:bg-slate-700 rounded-lg transition-colors"
+                    onClick={() => {
+                      setShowSuggestions(false);
+                    }}
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge className="bg-slate-700 border-slate-600 text-slate-300 text-[9px] uppercase tracking-widest font-bold px-2 py-0.5">
+                        {getArticleTypeLabel(article.type)}
+                      </Badge>
+                    </div>
+                    <div className="text-sm font-semibold text-white">
+                      {article.title}
+                    </div>
+                    <div className="text-xs text-slate-400 line-clamp-2">
+                      {article.description}
+                    </div>
+                  </Link>
+                ))}
+              </div>
             )}
-
-            {/* Articles section */}
-            {searchSuggestions.articles.length > 0 && (
-              searchSuggestions.mode !== 'tools' && (
-                <div className="border-t border-slate-700 p-2">
-                  <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 flex items-center gap-1">
-                    <FileText className="w-3 h-3" />
-                    Articles
-                  </div>
-                  {searchSuggestions.articles.map((article) => (
-                    <Link
-                      key={`${article.type}-${article.slug}`}
-                      href={article.url}
-                      className="block px-3 py-2 hover:bg-slate-700 rounded-lg transition-colors"
-                      onClick={() => {
-                        setShowSuggestions(false);
-                      }}
-                    >
-                      <div className="flex items-center gap-2 mb-1">
-                        <Badge className="bg-slate-700 border-slate-600 text-slate-300 text-[9px] uppercase tracking-widest font-bold px-2 py-0.5">
-                          {getArticleTypeLabel(article.type)}
-                        </Badge>
-                      </div>
-                      <div className="text-sm font-semibold text-white">
-                        {article.title}
-                      </div>
-                      <div className="text-xs text-slate-400 line-clamp-2">
-                        {article.description}
-                      </div>
-                    </Link>
-                  ))}
+            
+            {/* Tools section */}
+            {searchSuggestions.tools.length > 0 && searchSuggestions.mode === 'tools' && (
+              <div className="p-2">
+                <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                  Tools
                 </div>
-              )
+                {searchSuggestions.tools.map((tool) => (
+                  <Link
+                    key={tool.id}
+                    href={`/tools/${tool.slug}`}
+                    className="flex items-center gap-3 px-3 py-2 hover:bg-slate-700 rounded-lg transition-colors"
+                    onClick={() => {
+                      setShowSuggestions(false);
+                    }}
+                  >
+                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center border border-slate-600">
+                      <ToolLogo
+                        slug={tool.slug}
+                        src={tool.logo_url}
+                        websiteUrl={tool.official_url}
+                        name={tool.name}
+                        className="w-5 h-5"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-semibold text-white truncate">
+                        {tool.name}
+                      </div>
+                      <div className="text-xs text-slate-400 truncate">
+                        {tool.short_desc}
+                      </div>
+                    </div>
+                    <div className="text-xs font-bold text-blue-400">
+                      {tool.score}
+                    </div>
+                  </Link>
+                ))}
+              </div>
             )}
 
             {/* No results */}

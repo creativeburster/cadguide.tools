@@ -1630,8 +1630,13 @@ export interface ArticleSearchItem {
   url: string;
 }
 
-function normalizeString(str: string): string {
-  return str.toLowerCase().replace(/[^a-z0-9]/g, " ");
+function normalizeStringForSearch(str: string): string {
+  if (!str) return '';
+  return str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, ' ');
 }
 
 function generateBestOfArticles(): ArticleSearchItem[] {
@@ -1750,8 +1755,8 @@ export function getAllArticles(): ArticleSearchItem[] {
   ];
 }
 
-export function searchArticles(query: string, maxResults: number = 5): ArticleSearchItem[] {
-  const normalizedQuery = normalizeString(query);
+export function searchArticles(query: string, maxResults: number = 8): ArticleSearchItem[] {
+  const normalizedQuery = normalizeStringForSearch(query);
   const queryWords = normalizedQuery.split(/\s+/).filter((w) => w.length > 0);
 
   const articles = getAllArticles();
@@ -1759,33 +1764,33 @@ export function searchArticles(query: string, maxResults: number = 5): ArticleSe
   const scoredArticles = articles.map((article) => {
     let score = 0;
 
-    const searchText = normalizeString(
+    const searchText = normalizeStringForSearch(
       article.title + " " + article.description + " " + article.keywords.join(" "),
     );
 
-    // Exact matches
-    if (normalizeString(article.title).includes(normalizedQuery)) {
+    // 1. Exact title match gets highest priority
+    if (normalizeStringForSearch(article.title).includes(normalizedQuery)) {
+      score += 100;
+    }
+
+    // 2. Check if all query words are present (AND logic)
+    const allWordsPresent = queryWords.every((word) => searchText.includes(word));
+    if (allWordsPresent) {
       score += 50;
     }
 
-    // Keyword matches
+    // 3. Individual keyword matches
     for (const word of queryWords) {
       if (searchText.includes(word)) {
-        score += 10;
+        score += 15;
       }
     }
 
-    // Check if all words present
-    const allWordsPresent = queryWords.every((word) => searchText.includes(word));
-    if (allWordsPresent) {
-      score += 30;
-    }
-
-    // Boost for articles that are closer to the query
-    const queryLength = normalizedQuery.length;
-    const titleMatchLength = normalizeString(article.title).indexOf(normalizedQuery);
-    if (titleMatchLength >= 0) {
-      score += (queryLength / normalizeString(article.title).length) * 20;
+    // 4. Boost for free/open source queries
+    if (query.toLowerCase().includes("free") || query.toLowerCase().includes("open source")) {
+      if (article.type === "best" || article.type === "persona") {
+        score += 30;
+      }
     }
 
     return { ...article, score };
@@ -1800,26 +1805,25 @@ export function searchArticles(query: string, maxResults: number = 5): ArticleSe
 export function shouldSearchArticles(query: string, toolNames: string[]): boolean {
   const normalizedQuery = query.toLowerCase().trim();
   
-  // Check if query is exactly a tool name
+  // Check if query is exactly a single tool name (exact match first)
   const isExactToolName = toolNames.some((name) => {
     const normalizedName = name.toLowerCase().trim();
-    return normalizedName === normalizedQuery || 
-           normalizedName.includes(normalizedQuery) ||
-           normalizedQuery.includes(normalizedName);
+    return normalizedName === normalizedQuery;
   });
 
   if (isExactToolName) return false;
 
-  // Check query length and complexity
+  // Check query length and complexity - 3 or more words = article search
   const wordCount = normalizedQuery.split(/\s+/).filter((w) => w.length > 0).length;
   if (wordCount >= 3) return true;
 
   // Check for article-specific keywords
   const articleKeywords = [
-    "best", "top", "free", "vs", "vs.", "versus", "compare", "comparison", "alternative",
-    "alternatives", "like", "for", "how to", "what is", "which", "software", "cad",
-    "viewer", "editor", "platform", "mac", "linux", "web", "windows", "ios", "android",
-    "file format", "stl", "dwg", "step", "ifc", "for architect", "for engineer",
+    "best", "top", "free", "open source", "vs", "vs.", "versus", "compare", "comparison", 
+    "alternative", "alternatives", "like", "for", "how to", "what is", "which", 
+    "software", "cad", "viewer", "editor", "platform", "mac", "linux", "web", "windows", 
+    "ios", "android", "file format", "stl", "dwg", "step", "ifc", "for architect", 
+    "for engineer", "guide", "list", "review", "comparing",
   ];
 
   const hasArticleKeyword = articleKeywords.some((kw) => normalizedQuery.includes(kw));
@@ -1836,17 +1840,11 @@ export function determineSearchMode(query: string, toolNames: string[]): SearchM
   
   const normalizedQuery = query.toLowerCase().trim();
   
-  // Check if query is very short (1-2 words) and looks like a tool name
-  if (normalizedQuery.split(/\s+/).filter((w) => w.length > 0).length <= 2) {
-    const hasToolMatch = toolNames.some((name) => {
-      const normalizedName = name.toLowerCase().trim();
-      return normalizedName.includes(normalizedQuery) || normalizedQuery.includes(normalizedName);
-    });
-    if (hasToolMatch) return "tools";
-  }
-
-  // Check for article-specific patterns
+  // First check if we should search articles
   if (shouldSearchArticles(query, toolNames)) return "articles";
 
-  return "both";
+  // Otherwise search tools
+  return "tools";
 }
+
+
