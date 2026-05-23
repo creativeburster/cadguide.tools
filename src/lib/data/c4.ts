@@ -404,7 +404,7 @@ export const c4Tools: Tool[] = [
     url: "https://www.trustradius.com/products/navisworks/reviews"
   }],
 
-  last_updated: "2025-09-21",
+  last_updated: "2026-03-26",
   version: "2027"
 },
 {

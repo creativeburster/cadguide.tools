@@ -183,8 +183,8 @@ export const c3Tools: Tool[] = [
     "Parametric Family Creation",
   ],
 
-  version: "2027",
-  last_updated: "2026-02-13",
+  version: "2026.4.1",
+  last_updated: "2026-04-16",
   free_trial_days: 30,
 
   languages: [
@@ -434,7 +434,7 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "ArchiCAD is built by architects, for architects.",
   version: "28",
-  last_updated: "2026-01-23",
+  last_updated: "2025-09-15",
   free_trial_days: 30,
 
   languages: [
@@ -753,7 +753,7 @@ export const c3Tools: Tool[] = [
       url: "https://www.getapp.com/construction-software/a/seed-tekla-bimsight/reviews/"
     }],
 
-  last_updated: "2024-07-25",
+  last_updated: "2025-10-08",
   version: "2026"
 },
 {
@@ -1249,7 +1249,7 @@ export const c3Tools: Tool[] = [
     url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
   }],
 
-  last_updated: "2024-10-22",
+  last_updated: "2026-03-26",
   version: "2027"
 },
 {

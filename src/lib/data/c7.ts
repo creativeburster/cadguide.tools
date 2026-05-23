@@ -1659,8 +1659,8 @@ export const c7Tools: Tool[] = [
     url: "https://www.trustradius.com/products/autodesk-3ds-max/reviews"
   }],
 
-  last_updated: "2025-06-18",
-  version: "2026"
+  last_updated: "2026-03-26",
+  version: "2027"
 },
 {
   id: "ext-zbrush",
@@ -1989,7 +1989,7 @@ export const c7Tools: Tool[] = [
     url: "https://www.trustradius.com/products/keyshot/reviews"
   }],
 
-  last_updated: "2026-02-14",
+  last_updated: "2026-01-22",
   version: "2025.3"
 },
 {
@@ -2148,7 +2148,7 @@ export const c7Tools: Tool[] = [
     url: "https://www.softwareadvice.com/architecture/lumion-profile/"
   }],
 
-  last_updated: "2025-12-22",
+  last_updated: "2025-11-20",
   version: "13"
 },
 {
@@ -2307,7 +2307,7 @@ export const c7Tools: Tool[] = [
     url: "https://www.softwareadvice.com/architectural-cad/enscape-profile/"
   }],
 
-  last_updated: "2026-04-15",
+  last_updated: "2025-12-15",
   version: "4.0"
 },
 {
@@ -2472,7 +2472,7 @@ export const c7Tools: Tool[] = [
     url: "https://www.capterra.com/p/184240/Twinmotion/"
   }],
 
-  last_updated: "2023-11-18",
+  last_updated: "2026-01-05",
   version: "2026"
 },
 {
@@ -2664,7 +2664,7 @@ export const c7Tools: Tool[] = [
     url: "https://www.capterra.com/reviews/ultimaker-cura"
   }],
 
-  last_updated: "2026-04-03",
+  last_updated: "2026-01-25",
   version: "6.1"
 },
 {
@@ -2862,7 +2862,7 @@ export const c7Tools: Tool[] = [
     url: "https://sourceforge.net/projects/prusaslicer.mirror/reviews"
   }],
 
-  last_updated: "2024-08-27",
+  last_updated: "2025-11-10",
   version: "2.9.0"
 },
 {
@@ -3250,7 +3250,7 @@ export const c7Tools: Tool[] = [
     url: "https://www.capterra.com/p/138710/Simplify3D/"
   }],
 
-  last_updated: "2023-11-15",
+  last_updated: "2025-09-30",
   version: "5.2"
 },
 {
@@ -5169,7 +5169,7 @@ export const c7Tools: Tool[] = [
     url: "https://www.trustradius.com/products/v-ray/reviews"
   }],
 
-  last_updated: "2025-07-30",
+  last_updated: "2026-03-10",
   version: "6.0"
 },
 {

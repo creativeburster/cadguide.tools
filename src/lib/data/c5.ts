@@ -231,8 +231,8 @@ export const c5Tools: Tool[] = [
       url: "https://www.getapp.com/cad-software/a/siemens-nx/reviews/"
     }
   ],
-  version: "2512",
-  last_updated: "2026-05-17",
+  version: "NX 2512",
+  last_updated: "2026-01-08",
   free_trial_days: 30,
 
   languages: [
@@ -506,7 +506,7 @@ export const c5Tools: Tool[] = [
     url: "https://www.capterra.com/p/138692/Mastercam/"
   }],
 
-  last_updated: "2025-10-08",
+  last_updated: "2025-07-03",
   version: "2026"
 },
 {

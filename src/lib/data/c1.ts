@@ -236,7 +236,7 @@ export const c1Tools: Tool[] = [
     }
   ],
   version: "2027",
-  last_updated: "2026-01-12",
+  last_updated: "2026-03-26",
   free_trial_days: 30,
 
   languages: [
@@ -541,7 +541,7 @@ export const c1Tools: Tool[] = [
     url: "https://www.softwareadvice.com/architectural-cad/zwcad-profile/"
   }],
 
-  last_updated: "2023-09-20",
+  last_updated: "2025-12-05",
   version: "2026"
 },
 {
@@ -941,7 +941,7 @@ export const c1Tools: Tool[] = [
     url: "https://www.trustradius.com/products/microstation/reviews"
   }],
 
-  last_updated: "2025-08-11",
+  last_updated: "2025-11-02",
   version: "2026"
 },
 {
@@ -1135,7 +1135,7 @@ export const c1Tools: Tool[] = [
     url: "https://www.capterra.com/p/138330/DraftSight/"
   }],
 
-  last_updated: "2024-01-26",
+  last_updated: "2025-06-18",
   version: "2025"
 },
 {
@@ -2337,7 +2337,7 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "A strong DWG-compatible CAD suite with specialized engineering modules and a competitive perpetual licensing option.",
   version: "24.1",
-  last_updated: "2023-10-14",
+  last_updated: "2025-08-22",
   free_trial_days: 0,
 
   languages: [
@@ -11373,7 +11373,7 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "Autodesk's high-speed and multi-axis CAM software, engineered for manufacturing complex molds, dies, and aerospace parts.",
   version: "2026",
-  last_updated: "2024-08-12",
+  last_updated: "2025-08-15",
   free_trial_days: 30,
 
   languages: [

@@ -195,7 +195,7 @@ export const c2Tools: Tool[] = [
     }
   ],
   version: "2026",
-  last_updated: "2026-02-16",
+  last_updated: "2025-11-15",
   free_trial_days: 30,
 
   languages: [
@@ -415,7 +415,7 @@ export const c2Tools: Tool[] = [
   ],
 
   version: "2026",
-  last_updated: "2025-11-09",
+  last_updated: "2025-11-05",
   free_trial_days: 30,
 
   languages: [
@@ -695,8 +695,8 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "Fusion 360 is the future of agile hardware design.",
-  version: "2.0.2026",
-  last_updated: "2026-01-28",
+  version: "v.2702.1.58",
+  last_updated: "2026-04-23",
   free_trial_days: 30,
 
   languages: [
@@ -980,7 +980,7 @@ export const c2Tools: Tool[] = [
     "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
 
   version: "8",
-  last_updated: "2026-01-03",
+  last_updated: "2026-01-18",
   free_trial_days: 90,
 
   languages: [
@@ -1267,7 +1267,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "CATIA isn't just software; it's an industrial ecosystem.",
   version: "3DEXPERIENCE R2026x",
-  last_updated: "2025-10-19",
+  last_updated: "2026-01-15",
   free_trial_days: 0,
 
   languages: [
@@ -1501,7 +1501,7 @@ export const c2Tools: Tool[] = [
   ],
 
   version: "1.0",
-  last_updated: "2025-08-26",
+  last_updated: "2025-12-10",
   free_trial_days: 0,
 
   languages: [
@@ -1773,7 +1773,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Onshape is the 'Google Docs' of CAD.",
   version: "Continuous (cloud)",
-  last_updated: "2025-09-18",
+  last_updated: "2026-05-21",
   free_trial_days: 30,
 
   languages: [
@@ -2684,7 +2684,7 @@ export const c2Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2023-04-21",
+  last_updated: "2025-11-15",
   version: "2025.04"
 },
 {
@@ -2838,7 +2838,7 @@ export const c2Tools: Tool[] = [
       url: "https://www.gartner.com/reviews/market/cad-software/vendor/shapr3d/product/shapr3d"
     }],
 
-  last_updated: "2023-05-23",
+  last_updated: "2026-02-12",
   version: "6.0"
 },
 {
@@ -3390,8 +3390,8 @@ export const c2Tools: Tool[] = [
       url: "https://www.gartner.com/reviews/market/virtual-reality-development-software/vendor/autodesk/product/maya"
     }],
 
-  last_updated: "2026-03-15",
-  version: "2026"
+  last_updated: "2026-03-26",
+  version: "2027"
 },
 {
   id: "t51",
@@ -3521,8 +3521,8 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  version: "4.5",
-  last_updated: "2025-08-03",
+  version: "5.1",
+  last_updated: "2026-03-17",
   free_trial_days: 0,
 
   languages: [
@@ -4686,7 +4686,7 @@ export const c2Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2025-07-18",
+  last_updated: "2026-05-20",
   version: "Continuous (cloud)"
 },
 {
