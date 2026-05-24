@@ -54,11 +54,11 @@ export const PRICING_PAGES: Record<string, PricingPageContent> = {
   },
   "open-source": {
     slug: "open-source",
-    displayName: "Open-Source CAD",
-    seoTitle: "Top Open-Source CAD & BIM Software (2026) — Free & Source-Available",
-    seoDesc: "Compare professional open-source CAD, CAE, and EDA tools. Deep dive into geometry kernels, C++ customization, GPL compliance, and community health.",
-    intro: "Open-source CAD represents the ultimate freedom in software engineering: code transparency, zero licensing costs, and complete ownership of your intellectual property and data. Built by global developer communities and engineering researchers, these tools bypass proprietary licensing grids completely. Because they use open licensing (such as the GNU GPL or MIT licenses), they can be modified, packaged, and customized for proprietary in-house pipelines with zero licensing audits. While historically dismissed as academic projects, modern open-source modeling engines are establishing themselves as highly credible, production-ready alternatives.",
-    keyTakeaway: "Open-source platforms are the premier choice for organizations requiring extensive custom API/source modification, deep pipeline integration, or absolute protection against subscription cost hikes.",
+    displayName: "Open-Source CAD TCO",
+    seoTitle: "Zero-License CAD: Open-Source CAD TCO & Cost-Saving Analysis",
+    seoDesc: "Audit the financial benefits and total cost of ownership (TCO) of open-source CAD. Compare zero-licensing-audit savings, community support economics, and enterprise SLA contracts.",
+    intro: "Open-source CAD represents the ultimate strategy for corporate cost reduction: complete elimination of licensing audits, zero recurring seat rental fees, and permanent ownership of your software assets. In an era where proprietary CAD subscriptions rise by 8-15% annually, switching to open-source modeling bypasses commercial licensing tables entirely. However, engineering managers must calculate the true Total Cost of Ownership (TCO). While the software itself is free of charge, running open-source at scale requires budgeting for in-house developer customization, custom API scripting, workflow training, and voluntary community support contributions or commercial SLA agreements.",
+    keyTakeaway: "Open-source platforms are highly economical for scaling unlimited seats without license compliance audits, but require in-house engineering support for custom pipeline integration.",
     matrixColumns: [
       { label: "Source License", key: "license_type" },
       { label: "Geometry Engine", key: "kernel_type" },
@@ -67,16 +67,16 @@ export const PRICING_PAGES: Record<string, PricingPageContent> = {
     ],
     faqs: [
       {
-        q: "What geometric kernels do open-source CAD systems use?",
-        a: "Most open-source 3D CAD platforms rely on Open CASCADE Technology (OCCT) as their solid modeling engine. Unlike proprietary kernels (like Parasolid or ACIS), OCCT is open-source. For CSG (Constructive Solid Geometry), tools like OpenSCAD use custom polygon mesh engines. Understanding the kernel is key because it dictates file translation accuracy and topological robustness."
+        q: "How do you calculate the TCO of open-source CAD?",
+        a: "True Total Cost of Ownership (TCO) shifts from recurring licensing software fees (OpEx) to engineering personnel capabilities (CapEx). You save 100% on retail seat costs, but should budget for in-house C++/Python developers to maintain custom script wrappers and compile stable internal releases."
       },
       {
-        q: "Does using open-source CAD force me to share my proprietary design files?",
-        a: "No. Standard open-source licenses (like the GPL) only govern the software's source code, not the files or assets you create with it. The 3D models, DWG drawings, and assemblies you design are 100% your proprietary intellectual property; you are under no obligation to open-source them."
+        q: "Can I use open-source CAD tools in commercial environments for free?",
+        a: "Yes. Top open-source licenses (like GPL or MIT) grant unrestricted rights to use the software for commercial, proprietary design and production engineering without paying any fees or licensing royalties."
       },
       {
-        q: "How does support work for open-source engineering software?",
-        a: "Support is community-driven through forums, GitHub issue tracking, and wiki documentation. However, for enterprise deployments, several specialized engineering consultancies offer paid, SLA-backed support contract agreements, custom feature development, and workflow training."
+        q: "Are there professional support SLAs for open-source engineering software?",
+        a: "Yes. While community forums provide volunteer support, global engineering consultancies offer professional, SLA-backed commercial support contracts, custom CAD feature development, and enterprise training paths."
       }
     ]
   },
@@ -282,10 +282,10 @@ export const LICENSING_PAGES: Record<string, LicensingPageContent> = {
   "open-source": {
     slug: "open-source",
     displayName: "Open-Source License",
-    seoTitle: "Open-Source CAD Software — Copyleft & Permissive Licenses",
-    seoDesc: "Directory of CAD software running under verified open-source licenses (GPL, LGPL, BSD). Review legal compliance, commercial usage safety, and source forks.",
-    intro: "An open-source license establishes the legal framework that guarantees users the freedom to run, study, modify, and distribute the CAD software's source code. Governed by the Open Source Initiative (OSI), these licenses (such as the GNU General Public License, LGPL, or permissive licenses like MIT and BSD) eliminate any threat of vendor lock-in or licensing audits. For aerospace, medical, and defense companies, deploying open-source licensed tools ensures complete control over the compiler toolchain, allowing the software to be maintained and patched indefinitely even if the original developers disband.",
-    keyTakeaway: "Open-source licenses are highly secure for corporate deployments because they natively grant commercial usage rights and eliminate auditing liabilities.",
+    seoTitle: "Open-Source CAD Licensing Guide — GPL, Copyleft, & IP Compliance",
+    seoDesc: "Complete developer's guide to open-source CAD software licenses. Compare GPL copyleft constraints, permissive MIT/BSD usage, patent grants, and commercial compliance safety.",
+    intro: "An open-source license establishes the legal boundaries governing how your engineering team can run, modify, compile, and distribute CAD source code. Governed strictly by Open Source Initiative (OSI) compliance rules, these legal frameworks (ranging from copyleft licenses like the GNU GPL/LGPL to permissive licenses like MIT and BSD) eliminate any threat of audit litigation or vendor lock-in. For defense, aerospace, and medical engineering offices, deploying open-source licensed tools ensures complete control over compiling pipelines and secures your design systems from external server shutdowns, but requires strict compliance to ensure proprietary code changes are not unintentionally forced into the public domain.",
+    keyTakeaway: "Open-source licenses natively grant commercial usage rights and eliminate compliance audit liabilities, but require careful handling when blending proprietary code bindings.",
     matrixColumns: [
       { label: "OSI Approved", key: "osi_status" },
       { label: "Copyleft Level", key: "copyleft_type" },
@@ -298,12 +298,12 @@ export const LICENSING_PAGES: Record<string, LicensingPageContent> = {
         a: "Copyleft licenses (like the GNU GPL) require that if you modify the CAD software's source code and distribute the modified version, you must also release your modifications under the same open-source license. Permissive licenses (like MIT or BSD) allow you to modify the software and incorporate it into proprietary, closed-source commercial applications with minimal restrictions."
       },
       {
-        q: "Are open-source licensed CAD tools safe from corporate patent lawsuits?",
-        a: "Most modern open-source licenses (such as the Apache License 2.0 or GNU GPL v3) include explicit patent licensing clauses. When a developer contributes code to the project, they automatically grant users a perpetual, royalty-free patent license for their contributions, protecting corporate users against patent lawsuits."
+        q: "Does using a GPL-licensed CAD program force me to open-source my proprietary drawing designs?",
+        a: "No. The GPL copyleft rules strictly apply to the CAD program's source code compilation and software execution pathways, not to the assets or engineering geometries you design with it. Your private 2D drawings, 3D CAD files, and BIM models remain 100% your proprietary intellectual property."
       },
       {
-        q: "Can I sell a modified version of an open-source CAD software?",
-        a: "Yes, legally you can charge money for compiling and distributing open-source software, but under licenses like the GPL, your customers are entitled to receive the complete source code for free, meaning they can legally redistribute it to others without paying you."
+        q: "Are corporate developers protected against software patent lawsuits under open licenses?",
+        a: "Yes. Major modern open-source licenses (including Apache 2.0 and GPL v3) include built-in reciprocal patent grant clauses. Any developer contributing code automatically grants a royalty-free, perpetual patent license to all downstream users, safeguarding enterprises from patent litigation."
       }
     ]
   }
