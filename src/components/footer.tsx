@@ -123,7 +123,7 @@ export function Footer() {
               <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">Platforms</Link></li>
               <li><Link href="/best" className="hover:text-blue-400 transition-colors">Features</Link></li>
               <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">Formats</Link></li>
-              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open Source Hub</Link></li>
+              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
             </ul>
           </div>
 

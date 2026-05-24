@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { tools, categories } from '@/lib/data';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -22,6 +22,12 @@ export default function MatchmakerPage() {
     workflow: '',
     experience: '',
   });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [step]);
 
   const handleSelection = (key: string, value: string) => {
     setSelections((prev) => ({ ...prev, [key]: value }));
