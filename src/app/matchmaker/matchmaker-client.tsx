@@ -54,32 +54,172 @@ export default function MatchmakerPage() {
   };
 
   const filteredRecommendations = useMemo(() => {
-    return tools.filter((tool) => {
-      // Basic Filters (Step 1-3)
-      const matchIndustry = !selections.industry || tool.industries.some(i => i.toLowerCase().includes(selections.industry.toLowerCase()));
-      const matchPlatform = !selections.platform || tool.platforms.includes(selections.platform);
-      const matchBudget = !selections.budget || 
-        (selections.budget === 'free' && tool.starting_price === 0) ||
-        (selections.budget === 'low' && tool.starting_price < 1000) ||
-        (selections.budget === 'any');
-      
-      // Deep Filters (Step 4-6)
-      const matchOrg = !selections.orgSize || tool.user_scales.includes(selections.orgSize);
-      const matchWorkflow = !selections.workflow || (
-        (selections.workflow === '2D' && tool.category_id === 'c1') ||
-        (selections.workflow === '3D' && tool.category_id === 'c2') ||
-        (selections.workflow === 'BIM' && tool.category_id === 'c3')
-      );
-      
-      // Search Fallback
-      const normalize = (str: string) => str.toLowerCase().replace(/[-\s]+/g, '');
-      const normalizedQuery = normalize(searchQuery);
-      const matchSearch = !searchQuery || 
-        normalize(tool.name).includes(normalizedQuery) ||
-        normalize(tool.short_desc).includes(normalizedQuery);
+    return tools
+      .map((tool) => {
+        let score = 0;
+        const maxScore = 100;
 
-      return matchIndustry && matchPlatform && matchBudget && matchOrg && matchWorkflow && matchSearch;
-    }).sort((a, b) => b.score - a.score);
+        // 1. Industry Fit (30 points)
+        if (!selections.industry) {
+          score += 30;
+        } else {
+          const selectedInd = selections.industry.toLowerCase();
+          const hasExactIndustry = tool.industries.some((i) =>
+            i.toLowerCase().includes(selectedInd)
+          );
+          if (hasExactIndustry) {
+            score += 30;
+          } else {
+            // General drafting tools like AutoCAD, BricsCAD, DraftSight work for any industry
+            const isGeneralDrafting = tool.industries.some(
+              (i) =>
+                i.toLowerCase().includes('general') ||
+                i.toLowerCase().includes('drafting')
+            );
+            if (selectedInd === 'architecture' && tool.category_id === 'c3') {
+              score += 25; // BIM matches architecture closely
+            } else if (
+              selectedInd === 'manufacturing' &&
+              (tool.category_id === 'c2' || tool.category_id === 'c5')
+            ) {
+              score += 25; // 3D modeling and CAE match manufacturing
+            } else if (selectedInd === 'electrical engineering' && tool.category_id === 'c6') {
+              score += 25; // EDA matches electrical
+            } else if (isGeneralDrafting) {
+              score += 18; // general purpose tools are good backups
+            } else {
+              score += 5; // minimum fallback matching
+            }
+          }
+        }
+
+        // 2. Platform Compatibility (25 points)
+        if (!selections.platform) {
+          score += 25;
+        } else {
+          const hasNative = tool.platforms.includes(selections.platform);
+          if (hasNative) {
+            score += 25;
+          } else if (tool.platforms.includes('Web')) {
+            score += 22; // Web-native SaaS platforms run anywhere via browser
+          } else if (selections.platform === 'macOS' && (tool.platforms.includes('iOS') || tool.platforms.includes('iPadOS'))) {
+            score += 15; // Apple ecosystem synergy
+          } else {
+            score += 2; // emulation required
+          }
+        }
+
+        // 3. Budget Alignment (20 points)
+        if (!selections.budget || selections.budget === 'any') {
+          score += 20;
+        } else if (selections.budget === 'free') {
+          if (
+            tool.starting_price === 0 ||
+            tool.pricing_type === 'Free' ||
+            tool.pricing_type === 'Open Source'
+          ) {
+            score += 20;
+          } else if (tool.pricing_type === 'Freemium') {
+            score += 14; // Freemium offers a solid free layer
+          } else {
+            score += 0;
+          }
+        } else if (selections.budget === 'low') {
+          if (
+            tool.starting_price === 0 ||
+            tool.pricing_type === 'Free' ||
+            tool.pricing_type === 'Open Source'
+          ) {
+            score += 20; // free is low budget
+          } else if (tool.starting_price < 1000) {
+            score += 20; // meets criteria strictly
+          } else if (tool.starting_price < 2000) {
+            score += 12; // slightly higher budget but competitive
+          } else {
+            score += 0;
+          }
+        }
+
+        // 4. Core Workflow Matching (15 points)
+        if (!selections.workflow) {
+          score += 15;
+        } else {
+          const matchWF =
+            (selections.workflow === '2D' && tool.category_id === 'c1') ||
+            (selections.workflow === '3D' && tool.category_id === 'c2') ||
+            (selections.workflow === 'BIM' && tool.category_id === 'c3');
+          if (matchWF) {
+            score += 15;
+          } else {
+            // General drafting tools c1 support 3D/BIM workflows partially
+            if (selections.workflow === 'BIM' && tool.category_id === 'c1') {
+              score += 8;
+            } else if (selections.workflow === '3D' && tool.category_id === 'c1') {
+              score += 10;
+            } else if (selections.workflow === '3D' && tool.category_id === 'c7') {
+              score += 10; // rendering is highly related to 3D modeling
+            } else {
+              score += 4;
+            }
+          }
+        }
+
+        // 5. Team / Org Scale (5 points)
+        if (!selections.orgSize) {
+          score += 5;
+        } else {
+          if (tool.user_scales.includes(selections.orgSize)) {
+            score += 5;
+          } else {
+            score += 2;
+          }
+        }
+
+        // 6. Experience Level (5 points)
+        if (!selections.experience) {
+          score += 5;
+        } else {
+          const exp = selections.experience.toLowerCase();
+          if (exp === 'beginner') {
+            if (
+              tool.short_desc.toLowerCase().includes('easy') ||
+              tool.short_desc.toLowerCase().includes('simple') ||
+              tool.short_desc.toLowerCase().includes('intuitive') ||
+              tool.score > 4.5
+            ) {
+              score += 5;
+            } else {
+              score += 3;
+            }
+          } else {
+            score += 5; // Professionals can handle any tool in our database
+          }
+        }
+
+        // Normalize to percentage
+        const matchPercentage = Math.min(
+          100,
+          Math.max(0, Math.round((score / maxScore) * 100))
+        );
+
+        return {
+          ...tool,
+          matchPercentage,
+        };
+      })
+      .filter((tool) => {
+        // Apply search input query if typed in results
+        if (!searchQuery) return true;
+        const normalize = (str: string) =>
+          str.toLowerCase().replace(/[-\s]+/g, '');
+        const normalizedQuery = normalize(searchQuery);
+        return (
+          normalize(tool.name).includes(normalizedQuery) ||
+          normalize(tool.short_desc).includes(normalizedQuery)
+        );
+      })
+      // Sort primarily by match strength (percentage), then fall back to Editor Score
+      .sort((a, b) => b.matchPercentage - a.matchPercentage || b.score - a.score);
   }, [selections, searchQuery]);
 
   const topMatches = filteredRecommendations.slice(0, 3);
@@ -225,8 +365,11 @@ export default function MatchmakerPage() {
                           className="w-32 h-32 bg-white rounded-3xl border border-slate-50 shadow-xl shadow-slate-100 group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="text-center w-full">
-                          <div className="text-3xl font-black text-blue-600">{tool.score}</div>
-                          <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Match Score</div>
+                          <div className="text-3xl font-black text-blue-600">{(tool as any).matchPercentage}%</div>
+                          <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Match Strength</div>
+                          <div className="mt-2 text-xs font-bold text-amber-500 bg-amber-50 rounded-full py-1 px-2.5 inline-flex items-center gap-1 border border-amber-100">
+                            ★ {tool.score.toFixed(1)}
+                          </div>
                         </div>
                       </div>
                       

@@ -137,7 +137,6 @@ export function Footer() {
               <li><Link href="/pricing/freemium" className="hover:text-blue-400 transition-colors">Freemium</Link></li>
               <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
               <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
-              <li><Link href="/pricing" className="hover:text-blue-400 transition-colors font-bold text-slate-300">All Pricing Hub</Link></li>
             </ul>
           </div>
 
@@ -151,7 +150,6 @@ export function Footer() {
               <li><Link href="/licensing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
               <li><Link href="/licensing/network" className="hover:text-blue-400 transition-colors">Floating</Link></li>
               <li><Link href="/licensing/educational" className="hover:text-blue-400 transition-colors">Student</Link></li>
-              <li><Link href="/licensing" className="hover:text-blue-400 transition-colors font-bold text-slate-300">All Licenses Hub</Link></li>
             </ul>
           </div>
 
