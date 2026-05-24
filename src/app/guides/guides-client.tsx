@@ -568,167 +568,149 @@ const ARTICLES_LIST: GuideArticleCard[] = [
   }
 ];
 
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+// Folders database for the collapsible index directory (72 links total, 12 per folder)
+interface DirectoryFolder {
+  id: string;
+  title: string;
+  countLabel: string;
+  icon: string;
+  links: { title: string; href: string }[];
+}
 
-const mockDirectoryLinks: Record<string, string[]> = {
-  'A': [
-    'AutoCAD Fatal Error 0x0024 Fix',
-    'AutoCAD License Activation Registry Patch',
-    'ANSI Layer Naming Standards',
-    'Autodesk Inventor Performance Settings',
-    'AutoCAD LT Silent Deployments',
-    'AutoCAD for Mac Licensing Solutions'
-  ],
-  'B': [
-    'BricsCAD Pro Crossover Migration Guide',
-    'Batch Plotting Multi-Sheet Configurations',
-    'BIM Collaboration Format (BCF) Standards',
-    'BricsCAD LISP API Compatibility Matrix',
-    'Budgeting CAD Software Named User Seats'
-  ],
-  'C': [
-    'Crash on Launch troubleshooting for Revit',
-    'CTB Custom Pen tables and Line Weights',
-    'Concurrent FLEXlm License Server Setup',
-    'Corporate Named-User License Compliance',
-    'Civil 3D Corridor Modeling Best Practices'
-  ],
-  'D': [
-    'DraftSight High-Speed Printing Setup',
-    'DWG File Recovery and Audit Pathways',
-    'Drawing Scale Coefficients and Sheet Layouts',
-    'Deploying Quiet Network MSIs for Enterprise'
-  ],
-  'E': [
-    'Educational Watermark Removal Legal Policy',
-    'Enterprise CAD Identity Provisioning (SAML 2.0)',
-    'Electrical Schematic Drafting Guidelines (IEC)',
-    'EDA Software Licensing and Server Configuration'
-  ],
-  'F': [
-    'FLEXlm Server Daemon Ports Configuration',
-    'FreeCAD Custom Workstation Settings',
-    'Freemium CAD Hidden Commercial Liabilities',
-    'Fusion 360 Cloud Storage Offline Sync'
-  ],
-  'G': [
-    'GstarCAD Custom Menu and Hatch Import',
-    'GPL Compliance for Open Source CAD Kernels',
-    'GPU Hardware Acceleration Optimization',
-    'Graphics Stuttering and Driver Tuning'
-  ],
-  'H': [
-    'Hardware Specifications for Large Assemblies',
-    'Hatch Pattern Scale Custom Settings',
-    'High-Density Batch Plotting Servers',
-    'Hobbyist vs Professional CAD Feature Matrix'
-  ],
-  'I': [
-    'ISO Standard Dimension Scale Guidelines',
-    'IT Deployment Offline Silent Installers',
-    'Inventor Parametric Assembly Migration',
-    'Identity-Based Licensing Offline Grace Periods'
-  ],
-  'J': [
-    'Jewelry Design CAD Software Selection',
-    'Joint Parametric Constraints in FreeCAD',
-    'JSON-LD Structured Schemas for CAD Pages',
-    'Jobsite BIM Cloud Viewer Deployments'
-  ],
-  'K': [
-    'Kernel Independence for Open Cascade (OCCT)',
-    'Keyboard Shortcuts and Command Aliases Reclaim',
-    'K-Factor Calculations for Sheet Metal CAD'
-  ],
-  'L': [
-    'License Borrowing Max Durations (FLEXlm)',
-    'Line Weight Calibration for PDF Export',
-    'LISP Runtime Optimization in Alternatives',
-    'Laptop Graphics Tuning for SolidWorks Free'
-  ],
-  'M': [
-    'Migration Checklist: AutoCAD to BricsCAD Pro',
-    'Multi-Core Workstation Thread Allocations',
-    'Multi-Version Corporate Domain Licensing',
-    'MicroStation to AutoCAD Command Translation'
-  ],
-  'N': [
-    'Network Floating License Server Sockets',
-    'Named-User Subscription Compliance Sweeps',
-    'Net Stop AdskLicensingService Recovery',
-    'Native Parametric Constraint Rebuilds'
-  ],
-  'O': [
-    'Open CASCADE Technology (OCCT) Kernel Parameters',
-    'Offline Silent Installation of AutoCAD LT',
-    'Open-Source CAD GPL License Compliance',
-    'Onshape Free Document Privacy Legal Risks'
-  ],
-  'P': [
-    'Perpetual Buyout vs SaaS Rental Cost Analysis',
-    'Plotting Pen Weight Standards (ANSI/ISO)',
-    'Parametric Model Integrity and STEP Export',
-    'Performance Settings for Low-End Laptops'
-  ],
-  'Q': [
-    'Quiet Deployment Parameters for CAD MSIs',
-    'Quick Recovery of Unsaved AutoCAD Autosaves',
-    'Quality Assurance Guidelines for Drafting Teams'
-  ],
-  'R': [
-    'Registry Port Conflict Troubleshooting (2080)',
-    'Revit Crash on Launch Recovery Manual',
-    'Restoring Unsaved Temporary Drawing Backups',
-    'Reclaiming Custom LISP Menus and Command Aliases'
-  ],
-  'S': [
-    'SolidWorks Seat Allocation and compliance',
-    'SSO SAML 2.0 Named User Account Setup',
-    'Silent Command Directives for Silent Deployments',
-    'STEP File Translation Constraint Preservation'
-  ],
-  'T': [
-    'Tuning Hardware Accel for Solid Edge',
-    'Telemetry Control and Cloud Check-In Disables',
-    'Temporary sv$ and ac$ File Conversions',
-    'TCP Ports 27000 and 2080 Bind Fixes'
-  ],
-  'U': [
-    'Unsaved Drawing Backup Recovery Pathways',
-    'User Provisioning SAML Enterprise Identity',
-    'USB Dongle Licensing Driver Troubleshooting'
-  ],
-  'V': [
-    'Version Compatibility of DWG Formats',
-    'Vector Weight and Pen Priority Tables',
-    'Virtualization of Memory on Windows 11 CAD'
-  ],
-  'W': [
-    'Watermark Removal Compliance in Student Files',
-    'Windows 11 Background Memory Virtualization Fix',
-    'Workstation Graphics Card Configuration Guides'
-  ],
-  'X': [
-    'XML Drawing Schemata Custom Configs',
-    'XREF (External Reference) File Path Management',
-    'XServer Configuration for CAD Virtual Desktop'
-  ],
-  'Y': [
-    'Yearly CAD Software Cost Projections',
-    'Yield Strength Calculations for Sheet Metal',
-    'Y-Axis Orientation in CNC Modeling Exports'
-  ],
-  'Z': [
-    'Zero-Match Recommendation Scoring Systems',
-    'Z-Buffer Optimization in Real-Time 3D Rendering',
-    'ZWCAD command alias and LISP compatibility'
-  ]
-};
+const DIRECTORY_FOLDERS: DirectoryFolder[] = [
+  {
+    id: 'fol-trouble',
+    title: 'AutoCAD & 二维制图故障排查 (AutoCAD & 2D Troubleshooting)',
+    countLabel: '450+ 篇指南',
+    icon: '🔧',
+    links: [
+      { title: 'AutoCAD 致命错误 0x0024 完整企业级修复流程', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD 注册表激活失败与 Socket 端口死锁解决', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD LT 离线静默安装与企业大批量 silent 部署参数', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD for Mac 跨平台许可证服务器连接与端口绑定配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD Online 网页版图纸打印与笔宽 Pen Weights 配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD Architecture 命令行丢失与自定义菜单 CUIX 恢复', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD Electrical 继电器元件库与 IEC 图幅模版设置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '购买 AutoCAD 攻略：单用户订阅与并发网络版席位预算计算', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD 外部参照 (XREF) 路径失效与相对路径批量修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD Hatch 填充图案比例过密导致系统卡死解决方法', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD LT 与 Pro 版本功能深度对比及选型指南', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '恢复 AutoCAD 临时自动保存文件 (.sv$ / .ac$) 终极指南', href: '/guides/autocad-fatal-error-0x0024-fix' }
+    ]
+  },
+  {
+    id: 'fol-perf',
+    title: 'SolidWorks & 三维参数化造型优化 (SolidWorks & 3D Performance)',
+    countLabel: '380+ 篇指南',
+    icon: '🚀',
+    links: [
+      { title: 'SolidWorks Free 免费版与 Pro 专业版在低配笔记本上的性能优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 价格与 Named User 席位分配 EULA 合规审计避坑', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 大型装配体卡顿、轻量化加载与显卡硬件加速优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '解决 SolidWorks 运行时水滴水印提示与非商业版水印警告', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 零件建模几何约束 (Constraints) 丢失快速修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks Sheet Metal 钣金折弯系数与 K-Factor 算法计算', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 导出 STEP 文件装配体干涉与破面破线修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks PDM 客户端局域网同步延迟与本地缓存清理', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 焊件结构件属性库与型材切割清单自定义配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 图纸工程图 pen style weights 打印边距微调', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 与 Autodesk Inventor 协同设计数据无损双向转换', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 运行内存不足 (Resource Monitor) 警告解决策略', href: '/guides/autocad-fatal-error-0x0024-fix' }
+    ]
+  },
+  {
+    id: 'fol-standards',
+    title: 'BIM 建筑规范与图层制图标准 (BIM & Layer Standards)',
+    countLabel: '420+ 篇指南',
+    icon: '📐',
+    links: [
+      { title: 'Revit 启动时崩溃 (Crash on Launch) 本地 BIM 模型快速同步修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'BIM 协同设计 Execution Plan (BEP) 模版与 LOD 300/400 规范', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AIA 美国建筑师学会 CAD 图层命名标准与前缀分类过滤规则', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'ANSI 商业建筑制图图层分配标准与企业内部规范模版定制', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'ISO 机械制图标注比例与图幅字体大小标准规范', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Civil 3D 地形曲面与路线道路 Corridor 建模三维最佳实践', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Archicad Teamwork 协同服务器网络映射与多用户连接端口配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Navisworks 碰撞检测 (Clash Detection) 规则配置与冲突报告优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'BIM 协同格式 BCF 在不同设计软件间的导入导出接口标准', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SketchUp Pro 导入大型 DWG 矢量图卡死与孤立网格清理', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Rhino 3D 复杂 NURBS 曲面转 parametric 实体模型精度控制', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Geotechnical 三维地质分层在 Civil 3D 中的层序可视化配置', href: '/guides/autocad-fatal-error-0x0024-fix' }
+    ]
+  },
+  {
+    id: 'fol-deploy',
+    title: '企业 IT 许可证授权与 Mass 部署 (IT Licensing & Deploy)',
+    countLabel: '280+ 篇指南',
+    icon: '🖥️',
+    links: [
+      { title: 'FLEXlm 并发许可证服务器 TCP 27000/2080 端口占用冲突修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'FLEXlm Options 文件配置：按用户组 reserve 与 restrict 席位', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '企业单点登录 (SSO) SAML 2.0 在 Named User 订阅中的部署', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Autodesk Desktop Licensing Service background 挂起无法启动解决', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '企业 CAD 席位预算核算：并发与 named 混合授权成本模型', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Windows 11 后台内存虚拟化导致 CAD 授权失效 (EULA 报错) 修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '老版本 USB 加密狗 Dongle 驱动冲突导致工程系统闪退排查', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'CAD 软件网络安装包 MSI 封装与 Active Directory 静默部署', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '企业 CAD 网络防火墙设置：关闭遥测上传与保护隐私文件安全', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'LMTools 并发服务器状态查询与多套 vendor daemon 服务配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Named User 离线使用宽限期 (Grace Period) 企业域策略统一配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '防止商业违规审计：企业 named 账户实名合规配置指南', href: '/guides/autocad-fatal-error-0x0024-fix' }
+    ]
+  },
+  {
+    id: 'fol-printing',
+    title: '图纸打印、PDF 转换与笔宽 Pen Tables (Printing & PDF Options)',
+    countLabel: '320+ 篇指南',
+    icon: '🖨️',
+    links: [
+      { title: 'ISO 标准图纸边距与 pen styles pen weights 绘图机配置规格', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'DraftSight 2D 图纸多排版 layout 空间批量打印 (Batch Plot)', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '自定义 CTB 笔宽颜色映射表与 STB 命名颜色打印配置区别', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '修复 CAD 导出 PDF 格式后矢量文字乱码与线型中断 BUG', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '自动高清晰度 PDF 导出：命令行 LISP 脚本与文件系统自动生成', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '企业出图图纸数字章管理：矢量背景印章与电子签名绑定', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '解决巨幅图纸 PDF 导出因线型文件过大导致打印后台挂起', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'CAD 布局 model space 与 layout space 视口比例快速对齐校正', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '线条粗细比例失调：PDF 线宽在不同矢量查看器中的平滑配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '黑白工程图与彩色效果图快速出图：多配置 CTB 文件的灵活绑定', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'DGN 格式与 DWG 格式线型对照 pen weights 转换表配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '制图机自动裁纸与边距自动对齐配置：解决图纸边缘缺失 BUG', href: '/guides/autocad-fatal-error-0x0024-fix' }
+    ]
+  },
+  {
+    id: 'fol-migration',
+    title: 'CAD 软件无缝迁移与二开兼容性平移 (Crossover & API Mig)',
+    countLabel: '250+ 篇指南',
+    icon: '🔄',
+    links: [
+      { title: '从传统 AutoCAD 完美迁移至 BricsCAD Pro 的全套 checklist', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD 迁移至 GstarCAD：导入自定义 CUIX 菜单与 Hatch 填充', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks 转 Inventor：无缝重建 3D 参数化装配体装配关系', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'DraftSight 与 BricsCAD Pro 的 AutoLISP LISP 二次开发接口兼容性表', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '遗留 DGN 图纸完美转换 DWG 格式：解决层映射与符号转换偏差', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '国产 CAD 替代选型剖析：底层内核、API 接口与大型图纸运行对比', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '免费开源 FreeCAD 与商业 CAD 几何约束逻辑与二次开发对比', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '老旧 AutoCAD LISP 代码移植到廉价替代 CAD 的语法改写补丁', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'GstarCAD 快捷键 PGP 文件与自定义线型文件导入路径对照', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '网页云端 CAD 跨平台兼容性评估：性能瓶颈与网络要求', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'ZWCAD command alias 命令别名及 AutoLISP 运行速度优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '从三维 Catia V5 降级导出为二维 DWG 剖面图的映射规范', href: '/guides/autocad-fatal-error-0x0024-fix' }
+    ]
+  }
+];
 
 export default function GuidesClient() {
   const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'calculators'>('all');
-  const [activeLetter, setActiveLetter] = useState<string>('A');
+  const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({ 'fol-trouble': true });
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+
+  const toggleFolder = (id: string) => {
+    setOpenFolders(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   const toggleAccordion = (idx: number) => {
     setOpenAccordion(openAccordion === idx ? null : idx);
@@ -961,72 +943,83 @@ export default function GuidesClient() {
           </div>
         )}
 
-        {/* --- CRITICAL: THE 2,500-PAGE SEO ALPHABETICAL & SITE DIRECTORY INDEX --- */}
-        {/* We statically render all letters' content in the DOM and toggle display using class bindings. */}
-        {/* This makes 100% of sitemap pathways immediately crawlable by search engine bots in a single fetch! */}
+        {/* --- CRITICAL: THE 2,500-PAGE COLLAPSIBLE SITEMAP DIRECTORY (COLLAPSIBLE FOLDER ACCORDIONS WITH LITTLE TRIANGLES) --- */}
+        {/* Render folders in DOM to guarantee 100% crawl-friendliness for search engine indexing. */}
+        {/* The folders display a small folder icon, rotating triangle indicators (▶ to ▼) and open up to reveal dense links! */}
         <section className="mt-24 pt-16 border-t border-slate-200 space-y-8 max-w-4xl mx-auto">
           <div className="text-center">
             <Badge className="bg-emerald-600/10 text-emerald-700 border-none px-4 py-1 mb-4 font-bold uppercase tracking-widest text-[9px] rounded-full">
-              SEO Site Index
+              Sitemap Folders
             </Badge>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              2,500+ Guides Complete A-Z Alphabetical Directory
+              2,500+ Guides Collapsible Directory Sitemap
             </h2>
             <p className="text-slate-500 text-xs sm:text-sm font-medium mt-1 leading-relaxed">
-              To secure a flat crawl architecture, search crawlers and design managers can navigate all programmatic listings by title initial.
+              点击文件夹右侧的小三角 `▶` 展开高密度专业指南链接网格。全站索引在 DOM 中静态就绪，完美兼容搜索引擎（Googlebot）全量抓取。
             </p>
           </div>
 
-          {/* Alphabet bar */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            {alphabet.map((letter) => (
-              <button
-                key={letter}
-                onClick={() => setActiveLetter(letter)}
-                className={`w-8 h-8 rounded-lg text-xs font-black flex items-center justify-center transition-all ${
-                  activeLetter === letter
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'text-slate-500 hover:bg-slate-100 hover:text-slate-900'
-                }`}
-              >
-                {letter}
-              </button>
-            ))}
-          </div>
-
-          {/* Alphabet Directory Index Results Card */}
+          {/* Collapsible Folders Grid */}
           <div className="space-y-4">
-            {alphabet.map((letter) => {
-              const activeAlphabetList = mockDirectoryLinks[letter] || ['Additional Guides loading...', 'See Sitemap Index...'];
-              const isSelected = activeLetter === letter;
+            {DIRECTORY_FOLDERS.map((folder) => {
+              const isOpen = !!openFolders[folder.id];
 
               return (
                 <Card 
-                  key={letter} 
-                  className={cn(
-                    "p-6 rounded-[24px] border-none shadow-[0_16px_32px_-10px_rgba(0,0,0,0.03)] bg-white space-y-4 transition-all duration-300",
-                    isSelected ? "block" : "hidden"
-                  )}
+                  key={folder.id} 
+                  className="border-none shadow-[0_16px_32px_-12px_rgba(0,0,0,0.03)] rounded-[24px] bg-white overflow-hidden transition-all duration-300 border border-slate-100/50"
                 >
-                  <div className="flex items-center justify-between border-b border-slate-50 pb-3">
-                    <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
-                      Active Index: Letter &ldquo;{letter}&rdquo;
-                    </span>
-                    <span className="text-[10px] text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded">
-                      Flat Crawl Paths
-                    </span>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-                    {activeAlphabetList.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2 p-2 hover:bg-slate-50 rounded-xl transition-all group">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
-                        {/* Link is dummy preview pointing to AutoCAD fatal error */}
-                        <Link href="/guides/autocad-fatal-error-0x0024-fix" className="font-bold text-slate-800 group-hover:text-blue-600 hover:underline">
-                          {item}
-                        </Link>
+                  {/* Folder Accordion Trigger Header */}
+                  <button
+                    onClick={() => toggleFolder(folder.id)}
+                    className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50/50 transition-colors gap-4"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl sm:text-2xl shrink-0">{folder.icon}</span>
+                      <div>
+                        <h3 className="text-sm sm:text-base font-black text-slate-900 tracking-tight">
+                          {folder.title}
+                        </h3>
+                        <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">
+                          Pillar Category Directory
+                        </span>
                       </div>
-                    ))}
+                    </div>
+
+                    <div className="flex items-center gap-3 shrink-0">
+                      <Badge variant="outline" className="bg-slate-50 text-slate-500 text-[8px] font-bold border-slate-100 uppercase tracking-wide">
+                        {folder.countLabel}
+                      </Badge>
+                      {/* Rotating Small Triangle Indicator (折叠为 ▶, 展开旋转 90 度为 ▼) */}
+                      <span className={cn(
+                        "transform transition-transform text-blue-600 text-xs font-black shrink-0",
+                        isOpen ? "rotate-90" : ""
+                      )}>
+                        ▶
+                      </span>
+                    </div>
+                  </button>
+
+                  {/* Collapsed/Expanded high-density link list container */}
+                  <div
+                    className={cn(
+                      "transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-50 bg-slate-50/20",
+                      isOpen ? "max-h-[1200px] p-5 sm:p-6 opacity-100" : "max-h-0 p-0 opacity-0 pointer-events-none"
+                    )}
+                  >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                      {folder.links.map((link, lIdx) => (
+                        <div key={lIdx} className="flex items-start gap-2 p-2 hover:bg-white hover:shadow-sm rounded-xl transition-all group">
+                          <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
+                          <Link 
+                            href={link.href} 
+                            className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors hover:underline block leading-snug"
+                          >
+                            {link.title}
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </Card>
               );
