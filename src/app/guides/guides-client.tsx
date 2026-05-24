@@ -195,162 +195,162 @@ interface DirectoryFolder {
 const DIRECTORY_FOLDERS: DirectoryFolder[] = [
   {
     id: 'fol-trouble',
-    title: 'AutoCAD & 二维制图故障排查 (AutoCAD & 2D Troubleshooting)',
-    countLabel: '450+ 篇指南',
+    title: 'AutoCAD & 2D Troubleshooting',
+    countLabel: '450+ Guides',
     icon: '🔧',
     links: [
-      { title: 'AutoCAD 致命错误 0x0024 完整企业级修复流程', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD 注册表激活失败与 Socket 端口死锁解决', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD LT 离线静默安装与企业大批量 silent 部署参数', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD for Mac 跨平台许可证服务器连接与端口绑定配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD Online 网页版图纸打印与笔宽 Pen Weights 配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD Architecture 命令行丢失与自定义菜单 CUIX 恢复', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD Electrical 继电器元件库与 IEC 图幅模版设置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '购买 AutoCAD 攻略：单用户订阅与并发网络版席位预算计算', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD 外部参照 (XREF) 路径失效与相对路径批量修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD Hatch 填充图案比例过密导致系统卡死解决方法', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD LT 与 Pro 版本功能深度对比及选型指南', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '恢复 AutoCAD 临时自动保存文件 (.sv$ / .ac$) 终极指南', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: 'AutoCAD Fatal Error 0x0024 Complete Enterprise Patch Workflow', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Fix AutoCAD License Activation Failed & Registry Socket deadlocks', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD LT Offline Silent Installation & Mass MSI Deploy Parameters', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD for Mac: Cross-Platform License Server Port Configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD Online: Plotting Pen Weights and Layout Margins Calibration', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD Architecture Custom Menu CUIX and PGP Command Aliases Restore', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD Electrical Schema Libraries and IEC Template Integration', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Buy AutoCAD Seats: named user subscriptions vs FLEXlm budget estimators', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD External Reference (XREF) Lost Relative Paths batch repairs', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Fix AutoCAD Hatch Pattern Density freeze during solid drawing loads', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD LT vs AutoCAD Pro: Feature differences and procurement guides', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'How to Reclaim AutoCAD temporary autosave sv$ and ac$ files safely', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
   {
     id: 'fol-perf',
-    title: 'SolidWorks & 三维参数化造型优化 (SolidWorks & 3D Performance)',
-    countLabel: '380+ 篇指南',
+    title: 'SolidWorks & 3D Performance',
+    countLabel: '380+ Guides',
     icon: '🚀',
     links: [
-      { title: 'SolidWorks Free 免费版与 Pro 专业版在低配笔记本上的性能优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 价格与 Named User 席位分配 EULA 合规审计避坑', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 大型装配体卡顿、轻量化加载与显卡硬件加速优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '解决 SolidWorks 运行时水滴水印提示与非商业版水印警告', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 零件建模几何约束 (Constraints) 丢失快速修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks Sheet Metal 钣金折弯系数与 K-Factor 算法计算', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 导出 STEP 文件装配体干涉与破面破线修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks PDM 客户端局域网同步延迟与本地缓存清理', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 焊件结构件属性库与型材切割清单自定义配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 图纸工程图 pen style weights 打印边距微调', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 与 Autodesk Inventor 协同设计数据无损双向转换', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 运行内存不足 (Resource Monitor) 警告解决策略', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: 'Tuning SolidWorks Free & Pro Suites on Low-End Workstation Laptops', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Resolve SolidWorks Seat Allocation EULA named user compliance audits', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Tackling SolidWorks Massive Assembly lag and GPU acceleration settings', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Eliminate SolidWorks watermark warnings and non-commercialWatermark flags', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Fixing parametric assembly geometric constraints lost in SolidWorks', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks Sheet Metal K-Factor and Bending allowance parameters', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'STEP File export transformations: fixing dry assembly boundary faces', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks PDM concurrent server latency and local cache flushes', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks weldment cut lists and structural member custom profiling', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Calibrating SolidWorks drawing layout pen weights during physical print', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SolidWorks to Autodesk Inventor 3D Parametric file translation checklist', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'How to bypass SolidWorks Out of Memory Resource Monitor warnings', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
   {
     id: 'fol-standards',
-    title: 'BIM 建筑规范与图层制图标准 (BIM & Layer Standards)',
-    countLabel: '420+ 篇指南',
+    title: 'BIM & Layer Standards',
+    countLabel: '420+ Guides',
     icon: '📐',
     links: [
-      { title: 'Revit 启动时崩溃 (Crash on Launch) 本地 BIM 模型快速同步修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'BIM 协同设计 Execution Plan (BEP) 模版与 LOD 300/400 规范', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AIA 美国建筑师学会 CAD 图层命名标准与前缀分类过滤规则', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'ANSI 商业建筑制图图层分配标准与企业内部规范模版定制', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'ISO 机械制图标注比例与图幅字体大小标准规范', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Civil 3D 地形曲面与路线道路 Corridor 建模三维最佳实践', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Archicad Teamwork 协同服务器网络映射与多用户连接端口配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Navisworks 碰撞检测 (Clash Detection) 规则配置与冲突报告优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'BIM 协同格式 BCF 在不同设计软件间的导入导出接口标准', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SketchUp Pro 导入大型 DWG 矢量图卡死与孤立网格清理', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Rhino 3D 复杂 NURBS 曲面转 parametric 实体模型精度控制', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Geotechnical 三维地质分层在 Civil 3D 中的层序可视化配置', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: 'Revit Crash on Launch: Repairing local BIM database models safely', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'BIM Execution Plan (BEP) template configurations and LOD 300/400 rules', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AIA CAD Layer Naming Standards and standard corporate prefixes', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'ANSI standard architectural layer allocations for commercial projects', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'ISO Standard Dimension Scales and annotation font weights guidelines', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Civil 3D Geotechnical Surface alignments and Corridor best practices', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Archicad Teamwork Server Network port binding and multi-user configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Navisworks Clash Detection rule sets and unified coordination reports', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'BIM Collaboration Format (BCF) schema data export standard interfaces', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SketchUp Pro DWG imports: vector cleanups and mesh optimizations', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Rhino 3D organic NURBS to parametric solid B-Rep export tolerances', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Geotechnical layer modeling and alignment coordinates in Civil 3D', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
   {
     id: 'fol-deploy',
-    title: '企业 IT 许可证授权与 Mass 部署 (IT Licensing & Deploy)',
-    countLabel: '280+ 篇指南',
+    title: 'IT Licensing & Deploy',
+    countLabel: '280+ Guides',
     icon: '🖥️',
     links: [
-      { title: 'FLEXlm 并发许可证服务器 TCP 27000/2080 端口占用冲突修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'FLEXlm Options 文件配置：按用户组 reserve 与 restrict 席位', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '企业单点登录 (SSO) SAML 2.0 在 Named User 订阅中的部署', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Autodesk Desktop Licensing Service background 挂起无法启动解决', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '企业 CAD 席位预算核算：并发与 named 混合授权成本模型', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Windows 11 后台内存虚拟化导致 CAD 授权失效 (EULA 报错) 修复', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '老版本 USB 加密狗 Dongle 驱动冲突导致工程系统闪退排查', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'CAD 软件网络安装包 MSI 封装与 Active Directory 静默部署', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '企业 CAD 网络防火墙设置：关闭遥测上传与保护隐私文件安全', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'LMTools 并发服务器状态查询与多套 vendor daemon 服务配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Named User 离线使用宽限期 (Grace Period) 企业域策略统一配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '防止商业违规审计：企业 named 账户实名合规配置指南', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: 'FLEXlm Server Daemon Port conflict fixes (TCP 27000 and 2080)', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'FLEXlm Options File: reserve and restrict seat licenses for local groups', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Deploying Single Sign-On (SSO) SAML 2.0 for Named User subscriptions', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Troubleshoot Autodesk Desktop Licensing Service background agent crashes', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Corporate CAD Seat Budget analysis: concurrent licenses vs named users', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Windows 11 virtualized memory conflicts with CAD licensing agents', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'USB Dongle hardware licensing driver conflicts on legacy OS', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Packaging CAD software MSIs with quiet deployment parameters', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'CAD Firewall rules: disabling telemetry audits and cloud sync daemons', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'LMTools server status checks and multiple vendor daemon configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Configuring Named User offline grace periods via corporate domains', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'EULA audit compliance sweeps: user credentials validation checklist', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
   {
     id: 'fol-printing',
-    title: '图纸打印、PDF 转换与笔宽 Pen Tables (Printing & PDF Options)',
-    countLabel: '320+ 篇指南',
+    title: 'Printing & PDF Options',
+    countLabel: '320+ Guides',
     icon: '🖨️',
     links: [
-      { title: 'ISO 标准图纸边距与 pen styles pen weights 绘图机配置规格', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'DraftSight 2D 图纸多排版 layout 空间批量打印 (Batch Plot)', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '自定义 CTB 笔宽颜色映射表与 STB 命名颜色打印配置区别', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '修复 CAD 导出 PDF 格式后矢量文字乱码与线型中断 BUG', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '自动高清晰度 PDF 导出：命令行 LISP 脚本与文件系统自动生成', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '企业出图图纸数字章管理：矢量背景印章与电子签名绑定', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '解决巨幅图纸 PDF 导出因线型文件过大导致打印后台挂起', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'CAD 布局 model space 与 layout space 视口比例快速对齐校正', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '线条粗细比例失调：PDF 线宽在不同矢量查看器中的平滑配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '黑白工程图与彩色效果图快速出图：多配置 CTB 文件的灵活绑定', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'DGN 格式与 DWG 格式线型对照 pen weights 转换表配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '制图机自动裁纸与边距自动对齐配置：解决图纸边缘缺失 BUG', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: 'ISO Standard paper sizes and plot margin configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'DraftSight 2D layouts batch plotting across enterprise servers', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Custom CTB pen tables vs object-dependent STB color styles', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Fixing scrambled PDF fonts and missing vector lines after CAD export', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Automating PDF export via AutoLISP scripts and folder listeners', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Enterprise drawing stamps: vector watermark security and signatures', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Fixing print spooler crashes caused by large drawing raster lines', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Viewport scale matching between AutoCAD model and paper layouts', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Line weights calibration for PDF rendering in Acrobat Reader', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Mono vs Color plot style conversions using multiple CTB tables', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'DGN to DWG plot style translations and pen weights translation', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Print borders alignment and auto-trim parameters in plotter setups', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
   {
     id: 'fol-migration',
-    title: 'CAD 软件无缝迁移与二开兼容性平移 (Crossover & API Mig)',
-    countLabel: '250+ 篇指南',
+    title: 'Crossover & API Migration',
+    countLabel: '250+ Guides',
     icon: '🔄',
     links: [
-      { title: '从传统 AutoCAD 完美迁移至 BricsCAD Pro 的全套 checklist', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD 迁移至 GstarCAD：导入自定义 CUIX 菜单与 Hatch 填充', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks 转 Inventor：无缝重建 3D 参数化装配体装配关系', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'DraftSight 与 BricsCAD Pro 的 AutoLISP LISP 二次开发接口兼容性表', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '遗留 DGN 图纸完美转换 DWG 格式：解决层映射与符号转换偏差', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '国产 CAD 替代选型剖析：底层内核、API 接口与大型图纸运行对比', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '免费开源 FreeCAD 与商业 CAD 几何约束逻辑与二次开发对比', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '老旧 AutoCAD LISP 代码移植到廉价替代 CAD 的语法改写补丁', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'GstarCAD 快捷键 PGP 文件与自定义线型文件导入路径对照', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '网页云端 CAD 跨平台兼容性评估：性能瓶颈与网络要求', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'ZWCAD command alias 命令别名及 AutoLISP 运行速度优化', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '从三维 Catia V5 降级导出为二维 DWG 剖面图的映射规范', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: 'Complete migration checklist: AutoCAD to BricsCAD Pro crossover', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Transitioning legacy menus and hatch patterns from AutoCAD to GstarCAD', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'SW parametric constraint translations when migrating to Inventor', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'DraftSight to BricsCAD Pro: AutoLISP API compatibility matrices', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Legacy DGN to DWG drawings translation standards and layers alignment', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Evaluating domestic CAD alternatives: performance, prices and API specs', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'FreeCAD parameterized designs vs commercial mechanical CAD logics', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Reclaiming custom LISP files in alternative CAD setups', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'PGP custom aliases and LIN line types paths mapping in GstarCAD', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Web-based cloud CAD performance limits and network latency boundaries', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'ZWCAD command aliases and AutoLISP running speed optimization', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Catia V5 3D assembly coordinates downgrade to 2D DWG configurations', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
   {
     id: 'fol-procurement',
-    title: '企业采购、许可合规与成本分析 (Procurement & Compliance)',
-    countLabel: '180+ 篇指南',
+    title: 'Procurement & SAM Compliance',
+    countLabel: '180+ Guides',
     icon: '💰',
     links: [
-      { title: '企业级 CAD 3 年持有累计成本分析：SaaS 租赁与 Perpetual 终身买断对比', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '商业 EULA 合规审计风险排查：严防非商业水印与网络扫描处罚', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD LT 与 Pro 选型配比：精准定制团队席位优化采购预算', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '软件资产管理 (SAM) 合规审核指引：防范不合规浮动授权配置', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '解析单用户命名订阅与 Flex 灵活代币席位购买价值契合点', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '大客户采购攻略：回收闲置 named 用户许可凭证以削减支出', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '海外项目 CAD/BIM 异地合规与全球使用权 (Global Travel Rights) 采购', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '评测主流商业 CAD 的维护合同 (Maintenance Subscription) 升级政策', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '企业二次开发插件的知识产权法律保护与商业分发合规', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '中小企业低预算 CAD 批量采购谈判话术与返利通道拆解', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '多分支机构 Named 席位统一集中化控制与账单管理规范', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '解密 Autodesk 与 SolidWorks 官方合规函处理的最佳实践', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: '3-Year Cumulative Cost Analysis: Subscription vs Perpetual Buyout', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'EULA Audit Compliance: Restricting Watermarked Academic Watermarks', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'AutoCAD LT vs Pro: Optimizing seat budget allocations for large teams', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Enterprise Software Asset Management (SAM) concurrent seat strategies', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Understanding SAML SSO named user subscriptions vs Flex Token pools', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'IT Admin Guide: Reclaiming underutilized CAD seats to cut overheads', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Global Travel Rights: Purchasing multi-region CAD licensing coverage', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Reviewing maintenance subscription updates for lifetime perpetual seats', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Intellectual property protection when distributing custom LISP tools', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Small business CAD procurement: pricing tier negotiation techniques', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Consolidating CAD accounts under single domain corporate billings', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Best practices for handling formal compliance letters from software vendors', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
   {
     id: 'fol-manufacturing',
-    title: 'CAM 制造、3D 打印与数控精度规范 (CAM & 3D Printing)',
-    countLabel: '220+ 篇指南',
+    title: 'CAM & 3D Printing Production',
+    countLabel: '220+ Guides',
     icon: '⚙️',
     links: [
-      { title: '优化 STEP & IGES 空间拓扑精度转换：保障数控机床精细切削', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'STL 与 3MF 实体现模导出偏差校准：防范 3D 打印表面多面体失真', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '钣金折弯精准算法规范：K-Factor 折弯系数与展开长度计算', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'CAD/CAM 集成工艺：批量建立与验证标准 CNC G代码进给率', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '3D 打印实体建模技巧：如何从 CAD 导出 100% 密闭无缝的 B-Rep 零件', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '精密数控铣削公差配合：优化 CAD 三维几何内核导出配合参数', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '数控切割路径 (CAM Paths) 尖角过渡减速配置以防工件破损', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '从参数化 CAD 提取装配体防错干涉分析与自动化出图规范', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '激光与水射流切割图纸：闭合曲线扫描与多余重叠线段清理', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '三维打印 3MF 相比 STL 格式在保留材质信息与色彩坐标上的优势', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'CAD 模型尺寸与实际注塑成型收缩率配合的逆向调整公式', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '数控车削三维多阶螺纹配合面在 CAD 中的参数化精细刻画', href: '/guides/autocad-fatal-error-0x0024-fix' }
+      { title: 'Tuning STEP & IGES mathematical tolerances for precision CNC milling', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'STL vs 3MF export profiles: preventing polygon triangulation facets', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Sheet Metal Bending tolerances: precise K-Factor calculations in CAD', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'CAD/CAM Toolpath setups: validating feed rates and quiet G-codes', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'watertight B-Rep models: design parameters for additive manufacturing', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Calibrating coordinate kernel tolerances for high-precision milling', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'CNC cutting path feeds: feedrate deceleration rules on sharp angles', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Interference analysis in parametric CAD assemblies before CAM export', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Laser cutting vector cleanup: removing duplicate overlaid drawing lines', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: '3MF vs STL: maintaining textures and colors in additive formats', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Compensating CAD model sizing for plastic mold shrinkage percentages', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Parametric face thread design standards for CNC Lathe modeling', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   }
 ];
@@ -513,7 +513,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
 };
 
 export default function GuidesClient() {
-  const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing' | 'calculators'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing'>('all');
   
   // State to control collapsible drawer in All Category cards at top
   const [openCardAccordions, setOpenCardAccordions] = useState<Record<string, boolean>>({});
@@ -585,7 +585,8 @@ export default function GuidesClient() {
       {/* Main Grid Container */}
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 mt-8">
         
-        {/* --- CRITICAL: THE 10 HORIZONTAL TOP NAVIGATION TABS (Tab 1 to Tab 10) --- */}
+        {/* --- CRITICAL: THE 9 HORIZONTAL TOP NAVIGATION TABS (Tab 1 to Tab 9) --- */}
+        {/* Symmetric 1-to-1 matching with the 8 Category cards below! */}
         <div className="flex flex-wrap items-center justify-center gap-1.5 mb-12 border-b border-slate-200 pb-6 w-full">
           {[
             { id: 'all', label: 'All Guides' },
@@ -596,8 +597,7 @@ export default function GuidesClient() {
             { id: 'deployment', label: 'IT Deployment' },
             { id: 'migration', label: 'Crossover' },
             { id: 'procurement', label: 'Procurement' },
-            { id: 'manufacturing', label: 'CAM & 3D Print' },
-            { id: 'calculators', label: 'Calculators' }
+            { id: 'manufacturing', label: 'CAM & 3D Print' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -674,7 +674,7 @@ export default function GuidesClient() {
                       </ul>
                       
                       <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] font-black text-blue-600 hover:underline cursor-pointer">
-                        <span onClick={() => setActiveTab(p.category)}>查看该板块全量指南 (450+ 篇) →</span>
+                        <span onClick={() => setActiveTab(p.category)}>View all guides in this category (450+ guides) →</span>
                       </div>
                     </div>
                   </div>
@@ -692,14 +692,14 @@ export default function GuidesClient() {
                       )}>
                         ▶
                       </span>
-                      <span>{isCardOpen ? '收起热门指南' : `展开热门指南 (${p.articles.length} 篇)`}</span>
+                      <span>{isCardOpen ? 'Hide Featured Guides' : `Show Featured Guides (${p.articles.length} Guides)`}</span>
                     </button>
                     
                     <button 
                       onClick={() => setActiveTab(p.category)}
                       className="text-[10px] font-black text-slate-400 hover:text-blue-600 uppercase tracking-wider relative z-10"
                     >
-                      进入板块 →
+                      Explore Category →
                     </button>
                   </div>
                 </Card>
@@ -707,100 +707,64 @@ export default function GuidesClient() {
             })}
           </div>
         ) : (
-          /* STATE B: "Category Filtered" displaying 6 Popular Article/Calculators Cards */
+          /* STATE B: "Category Filtered" displaying 6 Popular Article Cards */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
-            {activeTab === 'calculators' ? (
-              /* Sub-Calculators View */
-              [
-                { name: 'CAD Scale & Plot Ratio Calculator', desc: 'Calculate exact scale ratios to prevent print size clipping errors.', slug: 'scale-calculator' },
-                { name: 'FLEXlm Concurrency Licensing Tool', desc: 'Verify server sockets and estimate named-user floating allocations.', slug: 'license-calculator' },
-                { name: 'ISO Standard Drawing Paper Setup Tool', desc: 'Calibrate paper width and margins for multi-sheet layouts.', slug: 'paper-calculator' },
-                { name: 'B-Rep Solid Kernel Tolerances Tool', desc: 'Evaluate coordinate gap thresholds for SolidWorks model exports.', slug: 'tolerance-calculator' },
-                { name: 'Enterprise CAD Seat Optimization Matcher', desc: 'Drip budget parameters to find cost-saving AutoCAD alternatives.', slug: 'seat-calculator' },
-                { name: 'DWG/STEP Cross-Compatibility Checker', desc: 'Scan and flag read/write file compatibility vectors per version.', slug: 'compatibility-calculator' }
-              ].map((calc, idx) => (
+            {displayArticles.map((art, idx) => {
+              const targetTool = tools.find(t => t.slug === art.softwareSlug);
+              return (
                 <Card
-                  key={idx}
-                  className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 bg-white flex flex-col justify-between hover:shadow-lg transition-all"
+                  key={art.id}
+                  className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-3 text-[10px] font-black uppercase text-slate-400">
-                      <span>Section {idx + 1} Calculator</span>
-                      <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded">Pure JS</span>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-rose-500 bg-rose-50 px-2 py-0.5 rounded">
+                        Section {idx + 1}
+                      </span>
+                      <span className="text-xs text-slate-400 font-semibold">{art.readTime}</span>
                     </div>
-                    <h3 className="text-lg font-black text-slate-900 tracking-tight mb-2 hover:text-blue-600 transition-colors">
-                      {calc.name}
+                    
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight mb-3 group-hover:text-blue-600 transition-colors">
+                      <Link href={`/guides/${art.slug}`}>{art.title}</Link>
                     </h3>
-                    <p className="text-xs text-slate-500 leading-relaxed font-medium">{calc.desc}</p>
+                    
+                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium line-clamp-3 mb-6">
+                      {art.excerpt}
+                    </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[10px] text-slate-400 font-bold">Category: CAD Practical Tools</span>
-                    <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[10px] px-4 rounded-lg">
-                      <Link href="/matchmaker">Launch Calculator →</Link>
-                    </Button>
+
+                  <div className="pt-4 border-t border-slate-100 space-y-4">
+                    {/* Target Software & Author info */}
+                    <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                      <div className="flex items-center gap-2">
+                        <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-black text-[9px] flex items-center justify-center">WP</span>
+                        <span className="font-semibold text-slate-700">{art.author}</span>
+                      </div>
+                      {targetTool && (
+                        <div className="flex items-center gap-2 bg-slate-50 px-2.5 py-1 rounded-xl border border-slate-100 text-[10px]">
+                          <span className="font-bold text-slate-500">Target: {targetTool.name}</span>
+                          <span className="text-amber-500 font-bold">★ {targetTool.score.toFixed(1)}</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex items-center justify-between pt-2">
+                      <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                        Keyword: {art.keyword}
+                      </span>
+                      <Link href={`/guides/${art.slug}`} className="text-xs font-black text-blue-600 hover:underline">
+                        Read Guide →
+                      </Link>
+                    </div>
                   </div>
                 </Card>
-              ))
-            ) : (
-              /* Specific Category Article Cards (Always showing exactly 6 high-density cards) */
-              displayArticles.map((art, idx) => {
-                const targetTool = tools.find(t => t.slug === art.softwareSlug);
-                return (
-                  <Card
-                    key={art.id}
-                    className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-[10px] font-black uppercase tracking-widest text-rose-500 bg-rose-50 px-2 py-0.5 rounded">
-                          Section {idx + 1}
-                        </span>
-                        <span className="text-xs text-slate-400 font-semibold">{art.readTime}</span>
-                      </div>
-                      
-                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight mb-3 group-hover:text-blue-600 transition-colors">
-                        <Link href={`/guides/${art.slug}`}>{art.title}</Link>
-                      </h3>
-                      
-                      <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium line-clamp-3 mb-6">
-                        {art.excerpt}
-                      </p>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-100 space-y-4">
-                      {/* Target Software & Author info */}
-                      <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-                        <div className="flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-black text-[9px] flex items-center justify-center">WP</span>
-                          <span className="font-semibold text-slate-700">{art.author}</span>
-                        </div>
-                        {targetTool && (
-                          <div className="flex items-center gap-2 bg-slate-50 px-2.5 py-1 rounded-xl border border-slate-100 text-[10px]">
-                            <span className="font-bold text-slate-500">Target: {targetTool.name}</span>
-                            <span className="text-amber-500 font-bold">★ {targetTool.score.toFixed(1)}</span>
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="flex items-center justify-between pt-2">
-                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                          Keyword: {art.keyword}
-                        </span>
-                        <Link href={`/guides/${art.slug}`} className="text-xs font-black text-blue-600 hover:underline">
-                          Read Guide →
-                        </Link>
-                      </div>
-                    </div>
-                  </Card>
-                );
-              })
-            )}
+              );
+            })}
           </div>
         )}
 
         {/* --- CRITICAL: THE 2,500-PAGE SEO ALPHABETICAL DIRECTORY (RESTORED & OPTIMIZED FOR 100% CRAWLABILITY) --- */}
-        {/* We statically render all letters' content in the DOM and toggle display using class bindings. */}
-        {/* This makes 100% of sitemap pathways immediately crawlable by search engine bots in a single fetch! */}
+        {/* Statically rendered to allow Googlebot to follow sitemap links. All placeholders are 100% in English. */}
         <section className="mt-24 pt-16 border-t border-slate-200 space-y-8 max-w-4xl mx-auto">
           <div className="text-center">
             <Badge className="bg-emerald-600/10 text-emerald-700 border-none px-4 py-1 mb-4 font-bold uppercase tracking-widest text-[9px] rounded-full">
@@ -882,7 +846,7 @@ export default function GuidesClient() {
               2,500+ Guides Collapsible Directory Sitemap
             </h2>
             <p className="text-slate-500 text-xs sm:text-sm font-medium mt-1 leading-relaxed">
-              点击文件夹右侧的小三角 `▶` 展开高密度专业指南链接网格。全站索引在 DOM 中静态就绪，完美兼容搜索引擎（Googlebot）全量抓取。
+              Click the little folder triangles to unfold high-density collections of technical article pathways. All directories are statically indexed in the HTML DOM for instant Google search crawling.
             </p>
           </div>
 
@@ -917,7 +881,7 @@ export default function GuidesClient() {
                       <Badge variant="outline" className="bg-slate-50 text-slate-500 text-[8px] font-bold border-slate-100 uppercase tracking-wide">
                         {folder.countLabel}
                       </Badge>
-                      {/* Rotating Small Triangle Indicator (折叠为 ▶, 展开旋转 90 度为 ▼) */}
+                      {/* Rotating Small Triangle Indicator (▶ to ▼) */}
                       <span className={cn(
                         "transform transition-transform text-blue-600 text-xs font-black shrink-0",
                         isOpen ? "rotate-90" : ""
