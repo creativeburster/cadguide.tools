@@ -49,7 +49,9 @@ function isFuzzyMatch(queryWord: string, targetWord: string): boolean {
   return distance <= 3; // 3 typos max for longer words
 }
 
-// Upgraded robust fuzzy match for tools
+const STOP_WORDS = new Set(['best', 'software', 'cad', 'tool', 'tools', 'top', 'for', 'vs', 'program', 'programs']);
+
+// Upgraded robust fuzzy match for tools with stop-words filtering
 function fuzzyMatchTool(tool: any, query: string): boolean {
   if (!query) return true;
   const normalizedQuery = normalizeString(query);
@@ -82,8 +84,15 @@ function fuzzyMatchTool(tool: any, query: string): boolean {
     }
   }
 
-  // 4. Tokenized AND matching with typo tolerance
-  const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  // 4. Tokenized AND matching with typo tolerance and stop-words filtering
+  let tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  
+  // Filter out common search noise words (stop words) if there are other terms to search
+  const filteredTokens = tokens.filter(t => !STOP_WORDS.has(t));
+  if (filteredTokens.length > 0) {
+    tokens = filteredTokens;
+  }
+
   if (tokens.length > 0) {
     const fieldsToMatch = [
       toolNameNormalized,
@@ -171,7 +180,12 @@ export function SmartSearch() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      router.push(`/tools?q=${encodeURIComponent(inputValue.trim())}`);
+      // If there is a highly matching article at the top in article mode, redirect directly to it!
+      if (searchSuggestions.articles.length > 0 && searchSuggestions.mode === 'articles') {
+        router.push(searchSuggestions.articles[0].url);
+      } else {
+        router.push(`/tools?q=${encodeURIComponent(inputValue.trim())}`);
+      }
     } else {
       router.push('/tools');
     }
