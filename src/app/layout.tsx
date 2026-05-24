@@ -34,23 +34,8 @@ export default function RootLayout({
         {/* DNS Preconnects for external resources */}
         <link rel="preconnect" href="https://icon.horse" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://logo.clearbit.com" crossOrigin="anonymous" />
-        
-        {/* Theme initialization script (prevents FOUC) */}
-        <Script id="theme-init" strategy="beforeInteractive">
-          {`
-            (function() {
-              try {
-                const savedTheme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                  document.documentElement.classList.add('dark');
-                }
-              } catch(e) {}
-            })();
-          `}
-        </Script>
       </head>
-      <body className="min-h-screen w-full flex flex-col font-sans">
+      <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
