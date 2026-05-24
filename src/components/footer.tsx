@@ -169,11 +169,11 @@ export function Footer() {
           <div>
             <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Org</h4>
             <ul className="space-y-3 text-sm">
+              <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">Methodology</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support</Link></li>
-              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact & Support</Link></li>
+              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
