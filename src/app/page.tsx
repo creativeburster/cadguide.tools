@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Metadata } from 'next';
 import { ToolLogo } from '@/components/tool-logo';
 import { pageMetadata, websiteLd, organizationLd } from '@/lib/seo';
+import { SmartSearch } from '@/components/SmartSearch';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CADGuide.tools: Compare 235+ Best CAD Software 2026 (Free & Pro)',
@@ -56,18 +57,10 @@ function HomeBody() {
             Independent reviews, transparent pricing, and deep technical specs for 235+ professional CAD & BIM software.
           </p>
           
-          {/* Advanced Search Mockup */}
-          <form action="/tools" method="GET" className="bg-white p-3 sm:p-2 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-3 max-w-3xl mx-auto w-full">
-            <input 
-              name="q"
-              type="text" 
-              placeholder="e.g. Free 2D CAD for Mac or Electrical..." 
-              className="flex-1 px-5 py-4 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 text-base"
-            />
-            <Button type="submit" className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-7 px-10 rounded-xl transition-all text-lg shadow-lg shadow-blue-200">
-              Search
-            </Button>
-          </form>
+          {/* Advanced Interactive Smart Search */}
+          <div className="max-w-3xl mx-auto w-full">
+            <SmartSearch />
+          </div>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 px-4">
             <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-600 hover:text-white border-none font-bold h-14 rounded-xl transition-all">
               <Link href="/matchmaker">Try Smart Matchmaker</Link>

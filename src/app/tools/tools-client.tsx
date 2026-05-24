@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense, useEffect, useCallback } from 'react';
+import { useState, useMemo, Suspense, useEffect, useCallback, useDeferredValue } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { tools, categories } from '@/lib/data';
 import { Card } from '@/components/ui/card';
@@ -31,49 +31,94 @@ function normalizeString(str: string): string {
     .replace(/[^a-z0-9]/g, '');      // keep only letters and numbers
 }
 
+// Levenshtein Distance for Typo-Tolerant Fuzzy Matching
+function getLevenshteinDistance(a: string, b: string): number {
+  const matrix: number[][] = [];
+  for (let i = 0; i <= a.length; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= b.length; j++) {
+    matrix[0][j] = j;
+  }
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1, // deletion
+        matrix[i][j - 1] + 1, // insertion
+        matrix[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1) // substitution
+      );
+    }
+  }
+  return matrix[a.length][b.length];
+}
+
+// Check if a query word fuzzy matches a target word with typo tolerance
+function isFuzzyMatch(queryWord: string, targetWord: string): boolean {
+  if (queryWord.length < 3) return targetWord.startsWith(queryWord);
+  
+  // Direct substring check
+  if (targetWord.includes(queryWord)) return true;
+  
+  // Check edit distance for typos
+  const distance = getLevenshteinDistance(queryWord, targetWord);
+  if (queryWord.length <= 4) return distance <= 1; // 1 typo max for short words
+  if (queryWord.length <= 7) return distance <= 2; // 2 typos max for medium words
+  return distance <= 3; // 3 typos max for longer words
+}
+
 /**
  * Checks if a tool matches a search query using robust fuzzy logic.
  * E.g., searching "vnas" matches "V-NAS", and searching "v-nas" matches "vnas".
- * Supports multi-term space-separated AND matching: "3d cad" matches if both terms match fields.
+ * Supports multi-term space-separated AND matching with typo tolerance.
  */
 function fuzzyMatchTool(tool: any, query: string): boolean {
   if (!query) return true;
-
   const normalizedQuery = normalizeString(query);
   if (!normalizedQuery) return true;
 
-  // Gather all searchable fields of the tool
   const toolNameNormalized = normalizeString(tool.name);
-  const toolDescNormalized = normalizeString(tool.short_desc);
-  const toolCategoryNormalized = normalizeString(categories.find(c => c.id === tool.category_id)?.name ?? '');
-  const toolIndustriesNormalized = tool.industries.map(normalizeString).join(' ');
-  const toolFeaturesNormalized = tool.core_features.map(normalizeString).join(' ');
+  
+  // 1. Direct name match (starts with or includes)
+  if (toolNameNormalized.includes(normalizedQuery)) return true;
+  
+  // 2. Fuzzy match on name (handling typos like "autoad" -> "autocad")
+  if (isFuzzyMatch(normalizedQuery, toolNameNormalized)) return true;
 
-  // 1. Direct match: Check if the normalized combined query exists in any major field
-  if (
-    toolNameNormalized.includes(normalizedQuery) ||
-    toolDescNormalized.includes(normalizedQuery) ||
-    toolCategoryNormalized.includes(normalizedQuery) ||
-    toolIndustriesNormalized.includes(normalizedQuery) ||
-    toolFeaturesNormalized.includes(normalizedQuery)
-  ) {
-    return true;
+  // Check aliases
+  if (tool.aliases) {
+    for (const alias of tool.aliases) {
+      const aliasNorm = normalizeString(alias);
+      if (aliasNorm.includes(normalizedQuery) || isFuzzyMatch(normalizedQuery, aliasNorm)) {
+        return true;
+      }
+    }
   }
 
-  // 2. Tokenized match (AND query logic):
-  // Split search query by whitespace to support searching multi-term e.g., "3d cad"
-  const tokens = query.trim().split(/\s+/).filter(Boolean);
-  if (tokens.length > 1) {
+  // 3. For multi-word queries (e.g. "solid woks" -> "solidworks"), check if removing spaces matches
+  const queryWords = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  if (queryWords.length > 1) {
+    const concatQuery = queryWords.join('');
+    if (toolNameNormalized.includes(concatQuery) || isFuzzyMatch(concatQuery, toolNameNormalized)) {
+      return true;
+    }
+  }
+
+  // 4. Tokenized AND matching with typo tolerance
+  const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  if (tokens.length > 0) {
+    const fieldsToMatch = [
+      toolNameNormalized,
+      normalizeString(tool.short_desc || ''),
+      normalizeString(tool.category_name || ''),
+      ...(tool.industries || []).map(normalizeString),
+      ...(tool.features || []).map(normalizeString),
+    ];
+    
+    // Check if every token matches at least one field (either as substring or fuzzy match)
     return tokens.every(token => {
-      const normalizedToken = normalizeString(token);
-      if (!normalizedToken) return true;
-      return (
-        toolNameNormalized.includes(normalizedToken) ||
-        toolDescNormalized.includes(normalizedToken) ||
-        toolCategoryNormalized.includes(normalizedToken) ||
-        toolIndustriesNormalized.includes(normalizedToken) ||
-        toolFeaturesNormalized.includes(normalizedToken)
-      );
+      const normToken = normalizeString(token);
+      if (!normToken) return true;
+      return fieldsToMatch.some(field => field.includes(normToken) || isFuzzyMatch(normToken, field));
     });
   }
 
@@ -84,13 +129,19 @@ function ToolsList() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // Derive paging + query from the URL so canonical URLs, browser
-  // back/forward, and the rendered state always agree. Avoids the
-  // setState-in-effect anti-pattern that Next 16's react-hooks lint
-  // forbids.
   const currentPage = Math.max(1, Number(searchParams.get('page')) || 1);
-  const searchQuery = searchParams.get('q') ?? '';
+  const urlQuery = searchParams.get('q') ?? '';
+  
+  // Decoupled local search query state for 100% smooth, non-blocking typing
+  const [localSearchQuery, setLocalSearchQuery] = useState(urlQuery);
+  const deferredSearchQuery = useDeferredValue(localSearchQuery);
+  
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+
+  // Sync state if search query parameter changes externally (e.g. back/forward navigation)
+  useEffect(() => {
+    setLocalSearchQuery(urlQuery);
+  }, [urlQuery]);
 
   // Lock body scroll while the mobile filters drawer is open.
   useEffect(() => {
@@ -120,7 +171,21 @@ function ToolsList() {
     router.replace(qs ? `/tools?${qs}` : '/tools', { scroll: false });
   }, [searchParams, router]);
 
+  // Debounce syncing the local search query to the URL.
+  // This completely prevents Next.js router transitions from blocking or lag-freezing active typing!
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const currentUrlQuery = searchParams.get('q') ?? '';
+      if (localSearchQuery !== currentUrlQuery) {
+        syncUrl({ query: localSearchQuery });
+      }
+    }, 1200); // 1.2 seconds of typing quietness before URL synchronization
+
+    return () => clearTimeout(timer);
+  }, [localSearchQuery, searchParams, syncUrl]);
+
   const handleSearchQuerySubmit = useCallback((q: string) => {
+    setLocalSearchQuery(q);
     syncUrl({ page: 1, query: q });
     setIsFiltersOpen(false);
   }, [syncUrl, setIsFiltersOpen]);
@@ -157,7 +222,7 @@ function ToolsList() {
 
   const filteredTools = useMemo(() => {
     return tools.filter(tool => {
-      const matchQuery = fuzzyMatchTool(tool, searchQuery);
+      const matchQuery = fuzzyMatchTool(tool, deferredSearchQuery);
 
       const matchPricing = filters.pricing.length === 0 || filters.pricing.includes(tool.pricing_type);
       const matchOS = filters.os.length === 0 || tool.platforms.some(p => filters.os.includes(p));
@@ -169,7 +234,7 @@ function ToolsList() {
 
       return matchQuery && matchPricing && matchOS && matchIndustry && matchCategory && matchUserScale && matchKernel && matchRating;
     });
-  }, [searchQuery, filters]);
+  }, [deferredSearchQuery, filters]);
 
   const totalPages = Math.max(1, Math.ceil(filteredTools.length / ITEMS_PER_PAGE));
   // Clamp the current page in case filters shrank the result set under us.
@@ -224,11 +289,11 @@ function ToolsList() {
           onClear: () => setRating(filters.minRating),
         }]
       : []),
-    ...(searchQuery
+    ...(localSearchQuery
       ? [{
           key: 'query',
-          label: `“${searchQuery}”`,
-          onClear: () => { syncUrl({ page: 1, query: '' }); },
+          label: `“${localSearchQuery}”`,
+          onClear: () => handleSearchQuerySubmit(''),
         }]
       : []),
   ];
@@ -312,7 +377,11 @@ function ToolsList() {
         </div>
 
         <div className="space-y-6">
-        <SmartSearchBox searchQuery={searchQuery} onSearchSubmit={handleSearchQuerySubmit} />
+        <SmartSearchBox 
+          searchQuery={localSearchQuery} 
+          onSearchChange={(q) => setLocalSearchQuery(q)}
+          onSearchSubmit={handleSearchQuerySubmit} 
+        />
 
         <div className="space-y-6">
           <FilterSection title="Main Category">
@@ -500,7 +569,7 @@ function ToolsList() {
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-tight hidden sm:block">Based on your preferences</div>
             </div>
           </div>
-          {(Object.values(filters).some(f => Array.isArray(f) ? f.length > 0 : f > 0) || searchQuery) && (
+          {(Object.values(filters).some(f => Array.isArray(f) ? f.length > 0 : f > 0) || localSearchQuery) && (
             <Button
               variant="ghost"
               size="sm"
@@ -718,10 +787,11 @@ export default function ToolsDirectoryPage() {
 
 interface SmartSearchBoxProps {
   searchQuery: string;
+  onSearchChange: (query: string) => void;
   onSearchSubmit: (query: string) => void;
 }
 
-function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
+function SmartSearchBox({ searchQuery, onSearchChange, onSearchSubmit }: SmartSearchBoxProps) {
   const [inputValue, setInputValue] = useState(searchQuery);
 
   // Sync state if searchQuery prop changes externally (e.g., when clicking active filter chips or resetting)
@@ -729,16 +799,11 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
     setInputValue(searchQuery);
   }, [searchQuery]);
 
-  // Debounce search update to parent URL
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (inputValue !== searchQuery) {
-        onSearchSubmit(inputValue);
-      }
-    }, 350);
-
-    return () => clearTimeout(timer);
-  }, [inputValue, searchQuery, onSearchSubmit]);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    setInputValue(val);
+    onSearchChange(val);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -747,6 +812,7 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
 
   const handleClear = () => {
     setInputValue('');
+    onSearchChange('');
     onSearchSubmit('');
   };
 
@@ -759,7 +825,7 @@ function SmartSearchBox({ searchQuery, onSearchSubmit }: SmartSearchBoxProps) {
           <Input
             placeholder="Find a specific tool..."
             value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={handleChange}
             className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 rounded-xl focus:ring-blue-600 focus:border-blue-600 pr-14 pl-4 h-11 transition-all"
           />
           {inputValue ? (
