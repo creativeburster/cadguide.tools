@@ -65,7 +65,7 @@ function getStyleForLicensing(slug: string): LicensingStyle {
 }
 
 function getFilteredTools(slug: string) {
-  return tools.filter((t) => {
+  const filtered = tools.filter((t) => {
     const tPrice = t.pricing_type?.toLowerCase() || '';
     const tLicenses = t.license_types?.map((l) => l.toLowerCase()) || [];
 
@@ -86,6 +86,8 @@ function getFilteredTools(slug: string) {
     }
     return false;
   }).sort((a, b) => b.score - a.score);
+
+  return filtered.slice(0, 10);
 }
 
 function pricingLabel(t: any): string {

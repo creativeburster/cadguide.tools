@@ -77,7 +77,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900 w-full">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-8 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-5">
             <div className="text-xl font-black text-white flex items-center">
@@ -101,48 +101,72 @@ export function Footer() {
 
           {/* Browse by Role */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">By Role</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">By Role</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/for/architects" className="hover:text-blue-400 transition-colors">Architects</Link></li>
-              <li><Link href="/for/mechanical-engineers" className="hover:text-blue-400 transition-colors">Mechanical Engineers</Link></li>
-              <li><Link href="/for/civil-engineers" className="hover:text-blue-400 transition-colors">Civil Engineers</Link></li>
+              <li><Link href="/for/mechanical-engineers" className="hover:text-blue-400 transition-colors">Mechanical</Link></li>
+              <li><Link href="/for/civil-engineers" className="hover:text-blue-400 transition-colors">Civil Eng</Link></li>
               <li><Link href="/for/students" className="hover:text-blue-400 transition-colors">Students</Link></li>
-              <li><Link href="/for/jewelry-designers" className="hover:text-blue-400 transition-colors">Jewelry Designers</Link></li>
+              <li><Link href="/for/jewelry-designers" className="hover:text-blue-400 transition-colors">Jewelry</Link></li>
             </ul>
           </div>
 
           {/* Browse Software */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Browse</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Browse</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/alternatives" className="hover:text-blue-400 transition-colors">Alternatives</Link></li>
-              <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">By Platform</Link></li>
-              <li><Link href="/best" className="hover:text-blue-400 transition-colors">By Feature</Link></li>
-              <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">By File Format</Link></li>
-              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open-Source CAD</Link></li>
+              <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">Platforms</Link></li>
+              <li><Link href="/best" className="hover:text-blue-400 transition-colors">Features</Link></li>
+              <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">Formats</Link></li>
+              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
+            </ul>
+          </div>
+
+          {/* Browse by Pricing */}
+          <div>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">By Pricing</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/pricing/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
+              <li><Link href="/pricing/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
+              <li><Link href="/pricing/freemium" className="hover:text-blue-400 transition-colors">Freemium</Link></li>
+              <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
+              <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
+            </ul>
+          </div>
+
+          {/* Browse by Licensing */}
+          <div>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">By License</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/licensing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
+              <li><Link href="/licensing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
+              <li><Link href="/licensing/network" className="hover:text-blue-400 transition-colors">Floating</Link></li>
+              <li><Link href="/licensing/educational" className="hover:text-blue-400 transition-colors">Student</Link></li>
+              <li><Link href="/licensing/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
             </ul>
           </div>
 
           {/* Ecosystem */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Ecosystem</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Ecosystem</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Smart Matchmaker</Link></li>
-              <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Tool Comparisons</Link></li>
-              <li><Link href="/deals" className="hover:text-blue-400 transition-colors">Active Software Deals</Link></li>
-              <li><Link href="/tools" className="hover:text-blue-400 transition-colors">Technical Directory</Link></li>
-              <li><Link href="/sponsor" className="hover:text-blue-400 transition-colors">List Your Software</Link></li>
+              <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Matchmaker</Link></li>
+              <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Comparisons</Link></li>
+              <li><Link href="/deals" className="hover:text-blue-400 transition-colors">Deals</Link></li>
+              <li><Link href="/tools" className="hover:text-blue-400 transition-colors">Directory</Link></li>
+              <li><Link href="/sponsor" className="hover:text-blue-400 transition-colors">List Tool</Link></li>
             </ul>
           </div>
 
           {/* Organization */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Organization</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Org</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/about" className="hover:text-blue-400 transition-colors">Our Methodology</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support Desk</Link></li>
-              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy & Terms</Link></li>
-              <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools Index</Link></li>
+              <li><Link href="/about" className="hover:text-blue-400 transition-colors">Methodology</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Support</Link></li>
+              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy</Link></li>
+              <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools</Link></li>
               <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -150,38 +174,6 @@ export function Footer() {
           {/* Newsletter */}
           <div className="lg:col-span-2">
             <NewsletterForm />
-          </div>
-        </div>
-
-        {/* Dynamic SEO Internal Linking Directory Clouds */}
-        <div className="pt-8 border-t border-slate-900 mb-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-[11px] leading-relaxed">
-          <div>
-            <h5 className="text-white font-black uppercase text-[10px] tracking-widest mb-3">CAD Software by Pricing</h5>
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-500 font-medium">
-              <Link href="/pricing/free" className="hover:text-blue-400 transition-colors">Free CAD Tools</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/pricing/open-source" className="hover:text-blue-400 transition-colors">Open-Source CAD</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/pricing/freemium" className="hover:text-blue-400 transition-colors">Freemium CAD</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription SaaS</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual Licenses</Link>
-            </div>
-          </div>
-          <div>
-            <h5 className="text-white font-black uppercase text-[10px] tracking-widest mb-3">CAD Software by Licensing</h5>
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-500 font-medium">
-              <Link href="/licensing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual Buyout</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/licensing/subscription" className="hover:text-blue-400 transition-colors">Subscription Licenses</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/licensing/network" className="hover:text-blue-400 transition-colors">Floating / Network Seats</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/licensing/educational" className="hover:text-blue-400 transition-colors">Student & Educator CAD</Link>
-              <span className="text-slate-800">•</span>
-              <Link href="/licensing/open-source" className="hover:text-blue-400 transition-colors">Open-Source License</Link>
-            </div>
           </div>
         </div>
 

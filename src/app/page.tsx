@@ -213,7 +213,7 @@ function HomeBody() {
               Slice the catalog by role, platform, file format, or pricing — every angle has its own curated guide.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             <Link href="/for" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">10 roles</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Role</div>
@@ -222,7 +222,7 @@ function HomeBody() {
             <Link href="/sectors" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 sectors</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Sector</div>
-              <div className="mt-1 text-xs text-slate-500">Aerospace, automotive, sheet metal…</div>
+              <div className="mt-1 text-xs text-slate-500">Aerospace, automotive, civil structures…</div>
             </Link>
             <Link href="/platforms" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6 platforms</div>
@@ -232,23 +232,28 @@ function HomeBody() {
             <Link href="/file-formats" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">12 formats</div>
               <div className="mt-1 text-lg font-black text-slate-900">By File Format</div>
-              <div className="mt-1 text-xs text-slate-500">DWG, STEP, STL, IFC, …</div>
+              <div className="mt-1 text-xs text-slate-500">DWG, STEP, STL, IFC, DXF…</div>
+            </Link>
+            <Link href="/pricing/free" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">5 categories</div>
+              <div className="mt-1 text-lg font-black text-slate-900">By Pricing</div>
+              <div className="mt-1 text-xs text-slate-500">Free, Open Source, Freemium, Buyout…</div>
+            </Link>
+            <Link href="/licensing/perpetual" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">5 models</div>
+              <div className="mt-1 text-lg font-black text-slate-900">By License</div>
+              <div className="mt-1 text-xs text-slate-500">Floating networks, Academic access, EULAs…</div>
             </Link>
             <Link href="/alternatives" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">235 guides</div>
               <div className="mt-1 text-lg font-black text-slate-900">Alternatives</div>
-              <div className="mt-1 text-xs text-slate-500">Switch-away guides per tool</div>
-            </Link>
-            <Link href="/free" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">20 free</div>
-              <div className="mt-1 text-lg font-black text-slate-900">Free CAD</div>
-              <div className="mt-1 text-xs text-slate-500">Truly free, no trial-ware</div>
+              <div className="mt-1 text-xs text-slate-500">Curated switch-away guides per tool</div>
             </Link>
             <Link href="/best#by-feature" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all relative overflow-hidden group">
               <div className="absolute top-0 right-0 bg-blue-600 text-white text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded-bl-lg">New</div>
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 Features</div>
               <div className="mt-1 text-lg font-black text-slate-900 group-hover:text-blue-600 transition-colors">By Feature</div>
-              <div className="mt-1 text-xs text-slate-500">16 technical spotlights + 7 discipline rankings</div>
+              <div className="mt-1 text-xs text-slate-500">16 technical spotlights + 7 discipline reviews</div>
             </Link>
           </div>
         </div>
