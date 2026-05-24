@@ -19,6 +19,7 @@ interface GuideCategorySection {
   countLabel: string;
   gradient: string;
   articles: { title: string; slug: string; keyword: string }[];
+  tags: string[];
 }
 
 const CATEGORY_SECTIONS: GuideCategorySection[] = [
@@ -36,7 +37,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'AutoCAD Architecture Fatal Error 0x0024 Recovery Workflow', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad architecture' },
       { title: 'Revit Crash on Launch: Repairing Damaged Local BIM Models', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'revit crash' },
       { title: 'How to Fix FLEXlm Server Socket Binding Error 10048', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm error' }
-    ]
+    ],
+    tags: ['#DWG-Recovery', '#FatalError-0x0024', '#LicensePatch']
   },
   {
     id: 'sec-perf',
@@ -52,7 +54,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'FreeCAD Custom Settings Migration for Multi-Core Workstations', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'freecad' },
       { title: 'Optimize Catia V6 3D Assembly Loading Cache Protocols', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'catia v6' },
       { title: 'Laptop RAM Allocation Rules for Complex Rhino 3D NURBS Modeling', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'rhino 3d' }
-    ]
+    ],
+    tags: ['#GPUDrivers', '#WorkstationTuning', '#RAM-Allocation']
   },
   {
     id: 'sec-print',
@@ -68,7 +71,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Fix PDF Missing Line Weights and Scrambled Fonts After CAD Export', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad software' },
       { title: 'Standardizing Plot Styles: CTB vs STB Pen Tables for Architects', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'plot styles' },
       { title: 'Automating High-Volume Blueprints PDF Plotting on Network Servers', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'batch plotting' }
-    ]
+    ],
+    tags: ['#PenTables-CTB', '#BatchPlot', '#PDF-Fonts']
   },
   {
     id: 'sec-stand',
@@ -84,7 +88,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Enterprise CAD File Archiving & Version Naming Convention Standard', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad programs' },
       { title: 'BIM Execution Plan (BEP) Modeling Standards for Public Tenders', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'bim standards' },
       { title: 'AIA CAD Layering Standards for Multi-Disciplinary Coordination', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'layer standards' }
-    ]
+    ],
+    tags: ['#AIA-Layers', '#ISO-Dimension', '#BIM-BEP']
   },
   {
     id: 'sec-deploy',
@@ -100,7 +105,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Managing Enterprise Single Sign-On (SSO) for Named CAD Subscriptions', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad license' },
       { title: 'FLEXlm Options File Custom Setup for Group-Based Seat Restrictions', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm options' },
       { title: 'Silent Deployment Checklists for Autodesk Network License Manager', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'network licensing' }
-    ]
+    ],
+    tags: ['#SilentInstall', '#SSO-SAML', '#OptionsFile']
   },
   {
     id: 'sec-mig',
@@ -116,7 +122,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Migrating Legacy AutoCAD Drawings to Online Cloud CAD Natively', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'online cad' },
       { title: 'DraftSight to BricsCAD Pro Migration: AutoLISP Command Compatibility', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'draftsight alternative' },
       { title: 'Legacy MicroStation DGN to DWG CAD Translation Standards', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'dwg translation' }
-    ]
+    ],
+    tags: ['#AutoLISP-Migrate', '#PGP-Aliases', '#BricsCAD-Transition']
   },
   {
     id: 'sec-pro',
@@ -132,7 +139,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Enterprise Software Asset Management (SAM) Compliance Checklists', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad software' },
       { title: 'Understanding EULA Seat Allocations for Named Subscriptions', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad license' },
       { title: 'B-End Procurement Guidelines: Reclaiming Idle Named User Tokens', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'buy autocad' }
-    ]
+    ],
+    tags: ['#SAM-Compliance', '#SaaS-vs-Perpetual', '#TokenReclaim']
   },
   {
     id: 'sec-man',
@@ -148,7 +156,8 @@ const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'CAD/CAM Integration: Enforcing Standard G-Code Feed Rates', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solid edge' },
       { title: '3D Printing Solid Modeling: Exporting Watertight B-Rep Assemblies', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'freecad' },
       { title: 'CNC Milling Tolerances: Calibrating CAD Geometry Kernels for Mills', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks free' }
-    ]
+    ],
+    tags: ['#CNC-GCode', '#STLExport', '#K-Factor']
   }
 ];
 
@@ -523,6 +532,11 @@ export default function GuidesClient() {
   const [activeLetter, setActiveLetter] = useState<string>('A');
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
+  // Enterprise Q&A Filter & Pagination States
+  const [faqTab, setFaqTab] = useState<'all' | 'licensing' | 'performance' | 'standards'>('all');
+  const [faqPage, setFaqPage] = useState<number>(1);
+  const [openFaqQuestion, setOpenFaqQuestion] = useState<string | null>(null);
+
   const toggleCardAccordion = (id: string) => {
     setOpenCardAccordions(prev => ({
       ...prev,
@@ -541,28 +555,71 @@ export default function GuidesClient() {
     setOpenAccordion(openAccordion === idx ? null : idx);
   };
 
+  const handleFaqTabChange = (tabId: 'all' | 'licensing' | 'performance' | 'standards') => {
+    setFaqTab(tabId);
+    setFaqPage(1);
+    setOpenFaqQuestion(null);
+  };
+
   const isAll = activeTab === 'all';
   
   const displayArticles = ARTICLES_LIST.filter(a => a.category === activeTab).slice(0, 6);
 
   const accordionFaqs = [
     {
+      category: 'licensing',
       q: 'How can our enterprise reduce annual CAD seat licensing costs safely?',
       a: 'Corporate offices can systematically audit named user logs to reclaim underutilized seats. Migrating general drawing groups from high-priced legacy solutions to modern, high-compatibility alternatives like BricsCAD Pro or GstarCAD can reduce licensing overhead by 50-70% while fully preserving legacy AutoLISP APIs, drawing templates, and key command shortcuts with zero retraining.'
     },
     {
+      category: 'performance',
       q: 'What are the compliance and security risks of deploying free CAD platforms?',
       a: 'Free cloud-based CAD engines typically require all user document repositories to remain public under their free tier plans, posing extreme security risks for proprietary engineering designs. Furthermore, using educational licenses for commercial drafting constitutes a direct EULA violation, making companies highly vulnerable to vendor network telemetry audits and sudden legal watermark infections.'
     },
     {
+      category: 'licensing',
       q: 'How does the named-user subscription offline grace period work for isolated job sites?',
       a: 'Modern named-user subscriptions require local CAD licensing agents to periodically ping licensing servers to verify active entitlements. If engineers work completely offline at isolated project sites, software typically grants a strict 14-day to 30-day offline grace window. Once this period expires, drawing edits are disabled until the computer establishes a secure network connection.'
     },
     {
+      category: 'standards',
       q: 'Can we run legacy AutoLISP scripts and custom command menus in cheaper alternatives?',
       a: 'Yes. Premium alternatives (including BricsCAD Pro, ZWCAD, and GstarCAD) feature highly robust LISP runtime environments. You can import your custom enterprise menus (CUIX), hatch patterns, line weights, and command aliases (PGP) directly into the new interface, maintaining complete team productivity from day one.'
+    },
+    {
+      category: 'licensing',
+      q: 'What are the legal EULA risks associated with academic watermarks inside commercial drawings?',
+      a: 'Commercial distribution of files containing student watermarks can lead to immediate audit fines. B-End organizations must restrict academic seat usage to certified environments and leverage automated DWG audit scripts to sweep external vendor blocks before database commits.'
+    },
+    {
+      category: 'performance',
+      q: 'Which graphic card driver tuning profile eliminates SolidWorks assembly screen stutters?',
+      a: 'Engineers should deploy certified workstation driver branch configurations instead of gaming drivers. Additionally, configuring graphic buffer pipelines inside SolidWorks options to enforce OpenGL drawing overrides will stabilize high-polygon renders on mid-range laptops.'
+    },
+    {
+      category: 'performance',
+      q: 'How much workstation RAM is recommended for 3D coordinate rendering in FreeCAD?',
+      a: 'For small assemblies, 16GB of DDR4 is sufficient. However, running multi-object mesh simulations or topological optimizations requires a minimum of 32GB RAM mapped directly to system swap allocations to prevent runtime garbage collector stalls.'
+    },
+    {
+      category: 'standards',
+      q: 'How do we automate ISO scaling pen weight standards across multi-disciplinary teams?',
+      a: 'Enterprise CAD administrators can establish uniform CTB (Color-Dependent) plot styles hosted on shared network directories. Integrating standard startup scripts into the custom CUIX layout ensures drafting scales remain synchronized for every user login.'
+    },
+    {
+      category: 'standards',
+      q: 'What is the optimal BEP (BIM Execution Plan) matrix for standardizing drawing levels?',
+      a: 'A high-precision BEP should establish strict Level of Development (LOD) parameters ranging from LOD 100 to LOD 500. It must document geometric modeling boundaries, parameter ownership matrices, and exact model exchange intervals using certified IFC schemas.'
     }
   ];
+
+  const filteredFaqs = faqTab === 'all' 
+    ? accordionFaqs 
+    : accordionFaqs.filter(f => f.category === faqTab);
+
+  const FAQS_PER_PAGE = 3;
+  const totalFaqPages = Math.ceil(filteredFaqs.length / FAQS_PER_PAGE);
+  const displayedFaqs = filteredFaqs.slice((faqPage - 1) * FAQS_PER_PAGE, faqPage * FAQS_PER_PAGE);
 
   return (
     <main className="min-h-screen bg-slate-50 pb-24">
@@ -622,11 +679,11 @@ export default function GuidesClient() {
               return (
                 <Card
                   key={p.id}
-                  className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white relative overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group animate-in fade-in"
+                  className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-7 bg-white relative overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300 group animate-in fade-in"
                 >
                   <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none opacity-40" />
 
-                  <div className="relative z-10 space-y-6">
+                  <div className="relative z-10 space-y-4">
                     <div>
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
@@ -645,6 +702,18 @@ export default function GuidesClient() {
                       <p className="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
                         {p.desc}
                       </p>
+
+                      {/* Technical Tags to fill empty space elegantly and look highly professional */}
+                      <div className="flex flex-wrap gap-1.5 mt-4">
+                        {p.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-[9px] font-black uppercase tracking-wider bg-slate-50 border border-slate-100 text-slate-400 hover:text-blue-600 hover:bg-blue-50/30 px-2 py-0.5 rounded-md transition-colors"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
 
                     {/* Collapsible Accordion Container inside Category Card (unfolds all 6 articles!) */}
@@ -680,7 +749,7 @@ export default function GuidesClient() {
                   </div>
 
                   {/* Accordion Toggle Trigger inside Card */}
-                  <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between w-full">
+                  <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between w-full">
                     <button
                       onClick={() => toggleCardAccordion(p.id)}
                       className="text-xs font-black text-blue-600 flex items-center gap-1.5 hover:text-blue-500 transition-colors relative z-10"
@@ -931,6 +1000,7 @@ export default function GuidesClient() {
 
         {/* --- CRITICAL: ENTERPRISE FAQ ACCORDION MENU SYSTEM --- */}
         {/* Interactive drawer drawers showing expert B-End procurement and legal advice */}
+        {/* Features beautiful horizontal pills tabs for category-based filtering & dynamic pagination */}
         <section className="mt-24 max-w-4xl mx-auto space-y-8">
           <div className="text-center">
             <Badge className="bg-indigo-600/10 text-indigo-700 border-none px-4 py-1 mb-4 font-bold uppercase tracking-widest text-[9px] rounded-full">
@@ -939,27 +1009,55 @@ export default function GuidesClient() {
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               Enterprise CAD Operations Q&A Board
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm font-medium mt-1">
-              Select an operational issue below to review detailed deployment recommendations and legal frameworks.
+            <p className="text-slate-500 text-xs sm:text-sm font-medium mt-1 leading-relaxed">
+              Select an operational category to filter professional recommendations, and navigate results using the pagination controls below.
             </p>
           </div>
 
-          <div className="space-y-4">
-            {accordionFaqs.map((faq, idx) => {
-              const isOpen = openAccordion === idx;
+          {/* FAQ Segmented Tabs for category-based filtering */}
+          <div className="flex flex-wrap items-center justify-center gap-1.5 border-b border-slate-200 pb-5 max-w-2xl mx-auto">
+            {[
+              { id: 'all', label: 'All Operations' },
+              { id: 'licensing', label: 'Licensing & SAM' },
+              { id: 'performance', label: 'Workstation Speed' },
+              { id: 'standards', label: 'Standards & API' }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => handleFaqTabChange(tab.id as any)}
+                className={`px-3.5 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all border ${
+                  faqTab === tab.id
+                    ? 'bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-100 scale-[1.02]'
+                    : 'bg-white text-slate-500 border-slate-200 hover:border-indigo-300 hover:text-indigo-600'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Accordion List */}
+          <div className="space-y-4 min-h-[290px] transition-all duration-300">
+            {displayedFaqs.map((faq) => {
+              const isOpen = openFaqQuestion === faq.q;
               return (
                 <div
-                  key={idx}
-                  className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm transition-all duration-300"
+                  key={faq.q}
+                  className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md animate-in fade-in zoom-in-95 duration-200"
                 >
                   {/* Accordion Trigger Header */}
                   <button
-                    onClick={() => toggleAccordion(idx)}
-                    className="w-full flex items-center justify-between p-5 text-left text-xs sm:text-sm font-black text-slate-900 hover:bg-slate-50 transition-colors gap-4"
+                    onClick={() => setOpenFaqQuestion(isOpen ? null : faq.q)}
+                    className="w-full flex items-center justify-between p-5 text-left text-xs sm:text-sm font-black text-slate-900 hover:bg-slate-50/50 transition-colors gap-4"
                   >
-                    <span>{faq.q}</span>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="text-[8px] font-black uppercase tracking-[0.15em] bg-indigo-50 text-indigo-600 border border-indigo-100/50 px-2 py-0.5 rounded-md shrink-0">
+                        {faq.category === 'licensing' ? 'Licensing & SAM' : faq.category === 'performance' ? 'Performance' : 'Standards'}
+                      </span>
+                      <span>{faq.q}</span>
+                    </div>
                     <span className={cn(
-                      "transform transition-transform text-blue-600 text-sm font-bold shrink-0",
+                      "transform transition-transform text-indigo-600 text-sm font-bold shrink-0",
                       isOpen ? "rotate-180" : ""
                     )}>
                       ▼
@@ -969,7 +1067,7 @@ export default function GuidesClient() {
                   {/* Accordion Collapsible Content panel */}
                   <div
                     className={cn(
-                      "transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-100 bg-slate-50/50",
+                      "transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-100 bg-slate-50/30",
                       isOpen ? "max-h-96 p-5 opacity-100" : "max-h-0 p-0 opacity-0 pointer-events-none"
                     )}
                   >
@@ -981,6 +1079,52 @@ export default function GuidesClient() {
               );
             })}
           </div>
+
+          {/* FAQ Pagination controls for smooth high-density index browsing */}
+          {totalFaqPages > 1 && (
+            <div className="flex items-center justify-center gap-2 pt-4 animate-in fade-in duration-300">
+              <button
+                disabled={faqPage === 1}
+                onClick={() => {
+                  setFaqPage(prev => Math.max(prev - 1, 1));
+                  setOpenFaqQuestion(null);
+                }}
+                className="w-8 h-8 rounded-lg border border-slate-200 bg-white text-slate-500 text-xs font-black flex items-center justify-center hover:border-slate-300 hover:text-indigo-600 transition-colors disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-500"
+              >
+                ◀
+              </button>
+              {Array.from({ length: totalFaqPages }).map((_, pIdx) => {
+                const pageNum = pIdx + 1;
+                const isSelected = faqPage === pageNum;
+                return (
+                  <button
+                    key={pageNum}
+                    onClick={() => {
+                      setFaqPage(pageNum);
+                      setOpenFaqQuestion(null);
+                    }}
+                    className={`w-8 h-8 rounded-lg text-xs font-black flex items-center justify-center transition-all ${
+                      isSelected
+                        ? 'bg-indigo-600 text-white shadow-sm'
+                        : 'border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600'
+                    }`}
+                  >
+                    {pageNum}
+                  </button>
+                );
+              })}
+              <button
+                disabled={faqPage === totalFaqPages}
+                onClick={() => {
+                  setFaqPage(prev => Math.min(prev + 1, totalFaqPages));
+                  setOpenFaqQuestion(null);
+                }}
+                className="w-8 h-8 rounded-lg border border-slate-200 bg-white text-slate-500 text-xs font-black flex items-center justify-center hover:border-slate-300 hover:text-indigo-600 transition-colors disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-500"
+              >
+                ▶
+              </button>
+            </div>
+          )}
         </section>
 
         {/* High Conversion Matchmaker CTA */}
