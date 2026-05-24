@@ -35,7 +35,19 @@ export default function RootLayout({
         <link rel="preconnect" href="https://icon.horse" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://logo.clearbit.com" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
+      <body className="min-h-screen w-full flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+        {/* Theme initialization to prevent flash */}
+        <Script id="theme-initialization" strategy="beforeInteractive">
+          {`
+            (function() {
+              const savedTheme = localStorage.getItem('theme');
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+              }
+            })();
+          `}
+        </Script>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
