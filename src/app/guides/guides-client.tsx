@@ -702,8 +702,20 @@ const DIRECTORY_FOLDERS: DirectoryFolder[] = [
 
 export default function GuidesClient() {
   const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'calculators'>('all');
-  const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({ 'fol-trouble': true });
+  
+  // State to control collapsible drawer in All Category cards at top
+  const [openCardAccordions, setOpenCardAccordions] = useState<Record<string, boolean>>({});
+  
+  // State to control sitemap folder accordions at bottom (collapsed by default for cleanliness)
+  const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({});
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+
+  const toggleCardAccordion = (id: string) => {
+    setOpenCardAccordions(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   const toggleFolder = (id: string) => {
     setOpenFolders(prev => ({
@@ -786,70 +798,94 @@ export default function GuidesClient() {
           ))}
         </div>
 
-        {/* --- CRITICAL: 2-COLUMN GRID CONTAINING 6 SECTION CARDS (Section 1 to Section 6) --- */}
+        {/* --- CRITICAL: 2-COLUMN GRID CONTAINING 6 SECTION CARDS WITH INTERNAL ACCORDIONS --- */}
         {isAll ? (
-          /* STATE A: "All Guides" displaying the 6 Core Category Cards */
+          /* STATE A: "All Guides" displaying the 6 Core Category Cards (Spacious & Clean, no trypophobia!) */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
-            {CATEGORY_SECTIONS.map((p, idx) => (
-              <Card
-                key={p.id}
-                className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white relative overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none opacity-40" />
-
-                <div className="relative z-10 space-y-6">
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                        Section {idx + 1} Category
-                      </span>
-                      <Badge variant="outline" className="bg-slate-50 text-slate-400 text-[9px] font-bold border-slate-100 uppercase tracking-wide">
-                        {p.countLabel}
-                      </Badge>
-                    </div>
-                    
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2 group-hover:text-blue-600 transition-colors">
-                      <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${p.gradient}`} />
-                      {p.title}
-                    </h3>
-                    
-                    <p className="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
-                      {p.desc}
-                    </p>
-                  </div>
-
-                  {/* Featured Sub-articles */}
-                  <div className="pt-4 border-t border-slate-100 space-y-3">
-                    <ul className="space-y-3 text-xs sm:text-sm">
-                      {p.articles.map((art) => (
-                        <li key={art.title} className="group/item flex items-start gap-2">
-                          <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
-                          <div className="flex-1 min-w-0">
-                            <Link 
-                              href={`/guides/${art.slug}`} 
-                              className="font-bold text-slate-800 hover:text-blue-600 transition-colors group-hover/item:underline block leading-snug"
-                            >
-                              {art.title}
-                            </Link>
-                            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
-                              Keyword Mapped: {art.keyword}
-                            </span>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div 
-                  onClick={() => setActiveTab(p.category)}
-                  className="mt-8 pt-4 border-t border-slate-100 text-xs font-black text-blue-600 flex items-center gap-1 cursor-pointer relative z-10 self-start hover:underline"
+            {CATEGORY_SECTIONS.map((p, idx) => {
+              const isCardOpen = !!openCardAccordions[p.id];
+              return (
+                <Card
+                  key={p.id}
+                  className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white relative overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
                 >
-                  <span>Explore Section {idx + 1} Guides</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-              </Card>
-            ))}
+                  <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none opacity-40" />
+
+                  <div className="relative z-10 space-y-6">
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                          Section {idx + 1} Category
+                        </span>
+                        <Badge variant="outline" className="bg-slate-50 text-slate-500 text-[9px] font-bold border-slate-100 uppercase tracking-wide">
+                          {p.countLabel}
+                        </Badge>
+                      </div>
+                      
+                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                        <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${p.gradient}`} />
+                        {p.title}
+                      </h3>
+                      
+                      <p className="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
+                        {p.desc}
+                      </p>
+                    </div>
+
+                    {/* Collapsible Accordion Container inside Category Card (DOM-resident for Googlebot) */}
+                    <div
+                      className={cn(
+                        "transition-all duration-300 ease-in-out overflow-hidden space-y-3",
+                        isCardOpen ? "max-h-[500px] pt-4 border-t border-slate-100 opacity-100" : "max-h-0 p-0 opacity-0 pointer-events-none"
+                      )}
+                    >
+                      <ul className="space-y-3 text-xs sm:text-sm">
+                        {p.articles.map((art) => (
+                          <li key={art.title} className="group/item flex items-start gap-2">
+                            <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
+                            <div className="flex-1 min-w-0">
+                              <Link 
+                                href={`/guides/${art.slug}`} 
+                                className="font-bold text-slate-800 hover:text-blue-600 transition-colors group-hover/item:underline block leading-snug"
+                              >
+                                {art.title}
+                              </Link>
+                              <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
+                                Keyword Mapped: {art.keyword}
+                              </span>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Accordion Toggle Trigger Trigger inside Card */}
+                  <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between w-full">
+                    <button
+                      onClick={() => toggleCardAccordion(p.id)}
+                      className="text-xs font-black text-blue-600 flex items-center gap-1.5 hover:text-blue-500 transition-colors relative z-10"
+                    >
+                      {/* Rotating Small Triangle Indicator (▶ to ▼) */}
+                      <span className={cn(
+                        "transform transition-transform text-[8px] font-black shrink-0",
+                        isCardOpen ? "rotate-90" : ""
+                      )}>
+                        ▶
+                      </span>
+                      <span>{isCardOpen ? '收起热门指南' : `展开热门指南 (${p.articles.length} 篇)`}</span>
+                    </button>
+                    
+                    <button 
+                      onClick={() => setActiveTab(p.category)}
+                      className="text-[10px] font-black text-slate-400 hover:text-blue-600 uppercase tracking-wider relative z-10"
+                    >
+                      进入板块 →
+                    </button>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
         ) : (
           /* STATE B: "Category Filtered" displaying 6 Popular Article/Calculators Cards */
@@ -945,7 +981,7 @@ export default function GuidesClient() {
 
         {/* --- CRITICAL: THE 2,500-PAGE COLLAPSIBLE SITEMAP DIRECTORY (COLLAPSIBLE FOLDER ACCORDIONS WITH LITTLE TRIANGLES) --- */}
         {/* Render folders in DOM to guarantee 100% crawl-friendliness for search engine indexing. */}
-        {/* The folders display a small folder icon, rotating triangle indicators (▶ to ▼) and open up to reveal dense links! */}
+        {/* All folders are collapsed by default to ensure maximum layout spaciousness and elegance. */}
         <section className="mt-24 pt-16 border-t border-slate-200 space-y-8 max-w-4xl mx-auto">
           <div className="text-center">
             <Badge className="bg-emerald-600/10 text-emerald-700 border-none px-4 py-1 mb-4 font-bold uppercase tracking-widest text-[9px] rounded-full">
