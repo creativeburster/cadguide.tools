@@ -153,6 +153,38 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Dynamic SEO Internal Linking Directory Clouds */}
+        <div className="pt-8 border-t border-slate-900 mb-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-[11px] leading-relaxed">
+          <div>
+            <h5 className="text-white font-black uppercase text-[10px] tracking-widest mb-3">CAD Software by Pricing</h5>
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-500 font-medium">
+              <Link href="/pricing/free" className="hover:text-blue-400 transition-colors">Free CAD Tools</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/pricing/open-source" className="hover:text-blue-400 transition-colors">Open-Source CAD</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/pricing/freemium" className="hover:text-blue-400 transition-colors">Freemium CAD</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription SaaS</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual Licenses</Link>
+            </div>
+          </div>
+          <div>
+            <h5 className="text-white font-black uppercase text-[10px] tracking-widest mb-3">CAD Software by Licensing</h5>
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-500 font-medium">
+              <Link href="/licensing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual Buyout</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/licensing/subscription" className="hover:text-blue-400 transition-colors">Subscription Licenses</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/licensing/network" className="hover:text-blue-400 transition-colors">Floating / Network Seats</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/licensing/educational" className="hover:text-blue-400 transition-colors">Student & Educator CAD</Link>
+              <span className="text-slate-800">•</span>
+              <Link href="/licensing/open-source" className="hover:text-blue-400 transition-colors">Open-Source License</Link>
+            </div>
+          </div>
+        </div>
+
         <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-600">
           <div className="hidden md:block" />
           <div className="flex items-center gap-4 justify-center whitespace-nowrap">

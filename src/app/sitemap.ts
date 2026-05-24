@@ -10,6 +10,7 @@ import {
   personaPagePaths,
   sectorPagePaths,
 } from '@/lib/seo-content';
+import { PRICING_PAGES, LICENSING_PAGES } from '@/lib/pricing-licensing-content';
 
 const BASE_URL = 'https://cadguide.tools';
 
@@ -113,6 +114,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Dynamic pricing catalog directories (5 entries).
+  const pricingUrls: MetadataRoute.Sitemap = Object.keys(PRICING_PAGES).map((slug) => ({
+    url: `${BASE_URL}/pricing/${slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
+  // Dynamic licensing catalog directories (5 entries).
+  const licensingUrls: MetadataRoute.Sitemap = Object.keys(LICENSING_PAGES).map((slug) => ({
+    url: `${BASE_URL}/licensing/${slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
   return [
     ...staticPages,
     ...toolUrls,
@@ -124,5 +141,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...formatUrls,
     ...personaUrls,
     ...sectorUrls,
+    ...pricingUrls,
+    ...licensingUrls,
   ];
 }
