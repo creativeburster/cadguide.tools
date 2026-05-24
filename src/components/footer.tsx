@@ -101,7 +101,9 @@ export function Footer() {
 
           {/* Browse by Role */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">By Role</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+              <Link href="/for" className="hover:text-blue-400 transition-colors">By Role</Link>
+            </h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/for/architects" className="hover:text-blue-400 transition-colors">Architects</Link></li>
               <li><Link href="/for/mechanical-engineers" className="hover:text-blue-400 transition-colors">Mechanical</Link></li>
@@ -113,22 +115,26 @@ export function Footer() {
 
           {/* Browse Software */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Browse</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+              <Link href="/tools" className="hover:text-blue-400 transition-colors">Browse</Link>
+            </h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/alternatives" className="hover:text-blue-400 transition-colors">Alternatives</Link></li>
               <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">Platforms</Link></li>
               <li><Link href="/best" className="hover:text-blue-400 transition-colors">Features</Link></li>
               <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">Formats</Link></li>
-              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
+              <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open Source Hub</Link></li>
             </ul>
           </div>
 
           {/* Browse by Pricing */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">By Pricing</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+              <Link href="/pricing" className="hover:text-blue-400 transition-colors">By Pricing</Link>
+            </h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/pricing/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
-              <li><Link href="/pricing/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
+              <li><Link href="/pricing/open-source" className="hover:text-blue-400 transition-colors">Open Source TCO</Link></li>
               <li><Link href="/pricing/freemium" className="hover:text-blue-400 transition-colors">Freemium</Link></li>
               <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
               <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
@@ -137,13 +143,15 @@ export function Footer() {
 
           {/* Browse by Licensing */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">By License</h4>
+            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+              <Link href="/licensing" className="hover:text-blue-400 transition-colors">By License</Link>
+            </h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/licensing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
               <li><Link href="/licensing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
               <li><Link href="/licensing/network" className="hover:text-blue-400 transition-colors">Floating</Link></li>
               <li><Link href="/licensing/educational" className="hover:text-blue-400 transition-colors">Student</Link></li>
-              <li><Link href="/licensing/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
+              <li><Link href="/licensing/open-source" className="hover:text-blue-400 transition-colors">Open Source EULA</Link></li>
             </ul>
           </div>
 

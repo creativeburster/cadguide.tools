@@ -121,6 +121,28 @@ export default function OpenSourceCadPage() {
               <Link href="/free" className="text-blue-600 hover:underline">Free CAD software</Link>{' '}
               covers the wider list.
             </p>
+
+            {/* Semantic Open-Source Dimension Hub Cards */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/pricing/open-source" className="block p-5 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all">
+                <span className="bg-emerald-100 text-emerald-800 text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded border border-emerald-200">
+                  Financial Analysis
+                </span>
+                <h3 className="mt-2 text-base font-bold text-slate-900">Open-Source TCO & Economics →</h3>
+                <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                  Evaluate the total cost of ownership (TCO) of open-source CAD. Compare zero-license seat savings with in-house developer customization and SLA support.
+                </p>
+              </Link>
+              <Link href="/licensing/open-source" className="block p-5 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all">
+                <span className="bg-teal-100 text-teal-800 text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded border border-teal-200">
+                  Legal Compliance
+                </span>
+                <h3 className="mt-2 text-base font-bold text-slate-900">GPL Copyleft & EULA Guide →</h3>
+                <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                  Navigate legal frameworks for copyleft GPL vs permissive MIT licenses. Review commercial usage rights and drawing file privacy compliance rules.
+                </p>
+              </Link>
+            </div>
           </header>
 
           <ol className="space-y-5">

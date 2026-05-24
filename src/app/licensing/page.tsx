@@ -1,0 +1,89 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { LICENSING_PAGES } from '@/lib/pricing-licensing-content';
+import { tools } from '@/lib/data';
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = pageMetadata({
+  title: 'CAD Software by Licensing Model — Perpetual, Network, Educational',
+  description:
+    'Explore CAD, BIM, CAE, and EDA platforms grouped by corporate license models. Filter by perpetual buyouts, named subscriptions, concurrent floating networks, and student access.',
+  path: '/licensing',
+});
+
+function getToolsCount(slug: string): number {
+  return tools.filter((t) => {
+    const tPrice = t.pricing_type?.toLowerCase() || '';
+    const tLicenses = t.license_types?.map((l) => l.toLowerCase()) || [];
+
+    if (slug === 'perpetual') {
+      return tLicenses.includes('perpetual') || tPrice === 'perpetual' || tPrice.includes('perpetual');
+    }
+    if (slug === 'subscription') {
+      return tLicenses.includes('subscription') || tPrice === 'subscription' || tPrice.includes('subscription');
+    }
+    if (slug === 'network') {
+      return tLicenses.includes('network') || tLicenses.includes('floating');
+    }
+    if (slug === 'educational') {
+      return tLicenses.includes('educational') || tLicenses.includes('student');
+    }
+    if (slug === 'open-source') {
+      return tLicenses.includes('open-source') || tLicenses.includes('open source') || tPrice === 'open source';
+    }
+    return false;
+  }).length;
+}
+
+export default function LicensingIndexPage() {
+  return (
+    <main className="min-h-screen bg-slate-50 pb-20">
+      {/* Visual Header Accent */}
+      <div className="w-full h-1.5 bg-gradient-to-r from-teal-500 via-indigo-500 to-purple-500" />
+
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <nav className="text-sm text-slate-500 mb-6 flex items-center gap-2">
+          <Link href="/" className="hover:underline">Home</Link>
+          <span>/</span>
+          <span className="text-slate-700 font-semibold">Licensing</span>
+        </nav>
+
+        <header className="mb-10">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+            CAD Software by Licensing Model
+          </h1>
+          <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-3xl">
+            Select a legal licensing structure below to discover compatible engineering and design suites. Find floating seat concurrency setups, standalone student licenses, perpetual asset buyouts, and GPL open-source compliance models, audited by our team of draftspeople and IT managers.
+          </p>
+        </header>
+
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {Object.values(LICENSING_PAGES).map((p) => {
+            const count = getToolsCount(p.slug);
+            return (
+              <li key={p.slug}>
+                <Link
+                  href={`/licensing/${p.slug}`}
+                  className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all h-full"
+                >
+                  <div className="text-xs font-black uppercase tracking-wider text-blue-600">
+                    {count} evaluated tools
+                  </div>
+                  <div className="mt-2 text-xl font-bold text-slate-900">
+                    {p.displayName} Directories
+                  </div>
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed line-clamp-3">
+                    {p.intro}
+                  </p>
+                  <div className="mt-4 text-xs font-bold text-blue-600 flex items-center gap-1">
+                    Explore Curated Top {Math.min(count, 10)} Tools →
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </article>
+    </main>
+  );
+}
