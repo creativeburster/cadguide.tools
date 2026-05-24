@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from 'react';
+import { ThemeToggle } from "@/components/theme-toggle";
 
 function NewsletterForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -153,14 +154,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-600">
-          <div className="hidden md:block" />
+        <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-600 relative">
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
+          </div>
           <div className="flex items-center gap-4 justify-center whitespace-nowrap">
             <span>© {new Date().getFullYear()} CADGuide.tools</span>
             <span>•</span>
             <span className="text-slate-500">Independent Analysis • No Paid Rankings</span>
           </div>
-          <div className="flex gap-8 justify-center md:justify-end">
+          <div className="flex gap-8 justify-center md:justify-end items-center">
             <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Twitter</Link>
             <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Facebook</Link>
             <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Reddit</Link>
