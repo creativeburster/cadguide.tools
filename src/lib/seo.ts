@@ -41,12 +41,38 @@ export function toolDescription(tool: Tool, category?: Category): string {
   return (prefix + suffix).trim();
 }
 
+const PRESERVED_INDEXED_SLUGS = [
+  // The 14 validated indexed tools (site:cadguide.tools intitle:from)
+  "allplan",
+  "gstarcad",
+  "magics",
+  "moi3d",
+  "icad3d-plus",
+  "synopsys-fusion-compiler",
+  "solibri",
+  "bluebeam-revu",
+  "archicad",
+  "varicad",
+  "cimatron",
+  "alias-autostudio",
+  "jewelcad-pro",
+  "woodwop"
+];
+
 /** Title for both the `<title>` tag and Open Graph. */
 export function toolTitle(tool: Tool, category?: Category): string {
   const categoryName = category?.name ?? "CAD";
+  const price = pricingSummary(tool);
 
-  // Unified, high-converting, and highly compact specs-oriented title layout 
-  // (conforming strictly to Google's 50-60 character limit while preserving the highly successful 'Review 2026' search intent keyword)
+  // If the tool is already indexed (in our whitelist), preserve its exact title pattern containing price to guarantee zero rank volatility
+  if (PRESERVED_INDEXED_SLUGS.includes(tool.slug)) {
+    return `${tool.name} Review 2026: ${categoryName} Software (${price}) | ${SITE_NAME}`;
+  }
+
+  // For the unindexed, longer tail tools, we avoid repetitive templated price brackets 
+  // (which Google's quality classifier flags as auto-generated thin content).
+  // Instead, we use a distinct, highly compact specs-oriented title layout (conforming to Google's 50-60 character limit)
+  // to establish high-quality authority and boost rapid indexing.
   return `${tool.name} Review 2026: ${categoryName} Tech Specs | ${SITE_NAME}`;
 }
 
