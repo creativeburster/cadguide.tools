@@ -28,7 +28,7 @@ export function ContactBody() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '122d71cd-cb54-4eac-9cd4-1c4b9087a180',
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '122d71cd-cb54-4eac-9cd4-1c4b9087a180',
           subject: data.subject,
           from_name: data.name,
           from_email: data.email,

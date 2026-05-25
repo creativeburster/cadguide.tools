@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
-import { tools } from '@/lib/data';
+import { useState, useMemo } from 'react';
+import tools from '@/lib/search-index.json';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -10,8 +10,7 @@ import { ToolLogo } from '@/components/tool-logo';
 import { FileText, Sparkles } from 'lucide-react';
 import { 
   searchArticles, 
-  determineSearchMode, 
-  type ArticleSearchItem 
+  determineSearchMode
 } from '@/lib/seo-content';
 
 // 1. Levenshtein Distance for Typo-Tolerant Fuzzy Matching
@@ -51,8 +50,23 @@ function isFuzzyMatch(queryWord: string, targetWord: string): boolean {
 
 const STOP_WORDS = new Set(['best', 'software', 'cad', 'tool', 'tools', 'top', 'for', 'vs', 'program', 'programs']);
 
+interface SearchTool {
+  id: string;
+  name: string;
+  slug: string;
+  short_desc: string;
+  score: number;
+  logo_url: string;
+  official_url: string;
+  category_id: string;
+  category_name?: string;
+  aliases?: string[];
+  industries?: string[];
+  features?: string[];
+}
+
 // Upgraded robust fuzzy match for tools with stop-words filtering
-function fuzzyMatchTool(tool: any, query: string): boolean {
+function fuzzyMatchTool(tool: SearchTool, query: string): boolean {
   if (!query) return true;
   const normalizedQuery = normalizeString(query);
   if (!normalizedQuery) return true;

@@ -12,6 +12,7 @@ import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import { ToolLogo } from '@/components/tool-logo';
 import { SlidersHorizontal, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 // Items per page on the directory grid. Mirrors `ITEMS_PER_PAGE` in
 // src/app/tools/page.tsx so canonical URLs and client pagination agree.
@@ -146,6 +147,32 @@ function ToolsList() {
   const deferredSearchQuery = useDeferredValue(localSearchQuery);
   
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  
+  // State to control A-Z flat HTML sitemap directory (collapsed by default, but always resident in DOM)
+  const [isSitemapOpen, setIsSitemapOpen] = useState(false);
+
+  // Group all tools by starting letter alphabetically (statically pre-rendered in HTML DOM for 100% crawl-friendliness)
+  const toolsGroupedByLetter = useMemo(() => {
+    const groups: Record<string, typeof tools> = {};
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(char => {
+      groups[char] = [];
+    });
+    
+    // Sort tools alphabetically by name
+    const sortedTools = [...tools].sort((a, b) => a.name.localeCompare(b.name));
+    
+    sortedTools.forEach(tool => {
+      const firstLetter = tool.name.trim().charAt(0).toUpperCase();
+      if (groups[firstLetter]) {
+        groups[firstLetter].push(tool);
+      } else {
+        if (!groups['#']) groups['#'] = [];
+        groups['#'].push(tool);
+      }
+    });
+    
+    return groups;
+  }, []);
 
   // Sync state if search query parameter changes externally (e.g. back/forward navigation)
   useEffect(() => {
@@ -767,6 +794,70 @@ function ToolsList() {
               </div>
             </div>
           )}
+
+          {/* --- CRITICAL: THE 235+ TOOL HTML DOM FLAT SITEMAP INTERLINKING DIRECTORY --- */}
+          {/* Statically renders 100% of leaf node tool links in the DOM to bypass dynamic pagination index gaps! */}
+          {/* Googlebot can instantly traverse and crawl all 235+ tools in a single fetch, collapsing crawl depth from 4 to 2. */}
+          <div className="mt-16 pt-8 border-t border-slate-100">
+            <Card className="border-none shadow-[0_16px_32px_-12px_rgba(0,0,0,0.03)] rounded-[24px] bg-slate-50/50 overflow-hidden border border-slate-100/50">
+              <button
+                type="button"
+                onClick={() => setIsSitemapOpen(!isSitemapOpen)}
+                className="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50/50 transition-colors gap-4"
+              >
+                <div>
+                  <h3 className="text-xs sm:text-sm font-black text-slate-800 tracking-tight uppercase tracking-widest">
+                    📁 Complete CAD & BIM Software Sitemap Directory (A-Z)
+                  </h3>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-1">
+                    Bypass pagination indexes. Flat crawling directory containing all 235+ tool pathways.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[9px] font-black uppercase tracking-wider bg-slate-200/50 text-slate-500 px-2 py-0.5 rounded">
+                    {tools.length} Tools
+                  </span>
+                  <span className={cn(
+                    "transform transition-transform text-slate-400 text-xs font-black shrink-0",
+                    isSitemapOpen ? "rotate-90" : ""
+                  )}>
+                    ▶
+                  </span>
+                </div>
+              </button>
+
+              <div
+                className={cn(
+                  "transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-100/40 bg-white",
+                  isSitemapOpen ? "max-h-[2500px] p-6 opacity-100" : "max-h-0 p-0 opacity-0 pointer-events-none"
+                )}
+              >
+                <div className="space-y-6">
+                  {Object.entries(toolsGroupedByLetter).map(([letter, letterTools]) => {
+                    if (letterTools.length === 0) return null;
+                    return (
+                      <div key={letter} className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-slate-50 last:border-none">
+                        <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 font-black text-sm flex items-center justify-center shrink-0 shadow-sm border border-blue-100/40">
+                          {letter}
+                        </span>
+                        <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs sm:text-sm pt-1.5">
+                          {letterTools.map(t => (
+                            <Link
+                              key={t.id}
+                              href={`/tools/${t.slug}`}
+                              className="font-bold text-slate-600 hover:text-blue-600 hover:underline transition-colors block"
+                            >
+                              {t.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
       </div>

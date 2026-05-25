@@ -77,9 +77,9 @@ export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900 w-full">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 xl:grid-cols-10 gap-8 lg:gap-6 mb-16">
           {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-5">
+          <div className="col-span-2 md:col-span-2 xl:col-span-2 space-y-5">
             <div className="text-xl font-black text-white flex items-center">
               <span className="text-blue-500">CAD</span>Guide.tools
             </div>
@@ -121,7 +121,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li><Link href="/alternatives" className="hover:text-blue-400 transition-colors">Alternatives</Link></li>
               <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">Platforms</Link></li>
-              <li><Link href="/best" className="hover:text-blue-400 transition-colors">Features</Link></li>
+              <li><Link href="/best#by-feature" className="hover:text-blue-400 transition-colors">Features</Link></li>
               <li><Link href="/file-formats" className="hover:text-blue-400 transition-colors">Formats</Link></li>
               <li><Link href="/open-source" className="hover:text-blue-400 transition-colors">Open Source</Link></li>
             </ul>
@@ -143,13 +143,13 @@ export function Footer() {
           {/* Browse by Licensing */}
           <div>
             <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
-              <Link href="/licensing" className="hover:text-blue-400 transition-colors">By License</Link>
+              <Link href="/pricing" className="hover:text-blue-400 transition-colors">By License</Link>
             </h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/licensing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
-              <li><Link href="/licensing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
-              <li><Link href="/licensing/network" className="hover:text-blue-400 transition-colors">Floating</Link></li>
-              <li><Link href="/licensing/educational" className="hover:text-blue-400 transition-colors">Student</Link></li>
+              <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
+              <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
+              <li><Link href="/pricing/network" className="hover:text-blue-400 transition-colors">Floating</Link></li>
+              <li><Link href="/pricing/educational" className="hover:text-blue-400 transition-colors">Student</Link></li>
             </ul>
           </div>
 
@@ -178,7 +178,7 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 md:col-span-2 xl:col-span-2">
             <NewsletterForm />
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/_next/', '/deals'],
+      disallow: ['/api/', '/_next/'],
     },
     sitemap: 'https://cadguide.tools/sitemap.xml',
     host: 'https://cadguide.tools',
