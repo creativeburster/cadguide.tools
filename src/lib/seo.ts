@@ -41,10 +41,8 @@ export function toolDescription(tool: Tool, category?: Category): string {
   return (prefix + suffix).trim();
 }
 
-// List of highly-popular core tools that are already well-indexed and ranking in Google.
-// We strictly PRESERVE their exact meta titles containing the pricing formulas to avoid
-// any ranking fluctuations or Googlebot index re-evaluations.
 const PRESERVED_INDEXED_SLUGS = [
+  // Core Industry Giants (Pre-seeded Whitelist)
   "autocad",
   "solidworks",
   "sketchup",
@@ -56,7 +54,22 @@ const PRESERVED_INDEXED_SLUGS = [
   "inventor",
   "rhino-3d",
   "archicad",
-  "zwcad"
+  "zwcad",
+
+  // Validated Indexed URLs (site:cadguide.tools intitle:from)
+  "allplan",
+  "gstarcad",
+  "magics",
+  "moi3d",
+  "icad3d-plus",
+  "synopsys-fusion-compiler",
+  "solibri",
+  "bluebeam-revu",
+  "varicad",
+  "cimatron",
+  "alias-autostudio",
+  "jewelcad-pro",
+  "woodwop"
 ];
 
 /** Title for both the `<title>` tag and Open Graph. */
