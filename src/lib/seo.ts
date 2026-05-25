@@ -41,11 +41,38 @@ export function toolDescription(tool: Tool, category?: Category): string {
   return (prefix + suffix).trim();
 }
 
+// List of highly-popular core tools that are already well-indexed and ranking in Google.
+// We strictly PRESERVE their exact meta titles containing the pricing formulas to avoid
+// any ranking fluctuations or Googlebot index re-evaluations.
+const PRESERVED_INDEXED_SLUGS = [
+  "autocad",
+  "solidworks",
+  "sketchup",
+  "revit",
+  "freecad",
+  "fusion-360",
+  "bricscad",
+  "draftsight",
+  "inventor",
+  "rhino-3d",
+  "archicad",
+  "zwcad"
+];
+
 /** Title for both the `<title>` tag and Open Graph. */
 export function toolTitle(tool: Tool, category?: Category): string {
   const categoryName = category?.name ?? "CAD";
   const price = pricingSummary(tool);
-  return `${tool.name} Review 2026: ${categoryName} Software (${price}) | ${SITE_NAME}`;
+
+  // If the tool is already indexed (in our whitelist), preserve its exact title pattern to guarantee zero rank volatility
+  if (PRESERVED_INDEXED_SLUGS.includes(tool.slug)) {
+    return `${tool.name} Review 2026: ${categoryName} Software (${price}) | ${SITE_NAME}`;
+  }
+
+  // For the unindexed, longer tail tools, we avoid repetitive templated price brackets 
+  // (which Google's quality classifier flags as auto-generated thin content).
+  // Instead, we use a distinct, specs-oriented title layout to establish high-quality authority.
+  return `${tool.name} Review 2026: Professional ${categoryName} Software & Technical Specs | ${SITE_NAME}`;
 }
 
 /** Canonical URL for the tool detail page. */
