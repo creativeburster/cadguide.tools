@@ -42,7 +42,7 @@ export function toolDescription(tool: Tool, category?: Category): string {
 }
 
 const PRESERVED_INDEXED_SLUGS = [
-  // The 14 validated indexed tools (site:cadguide.tools intitle:from)
+  // The 14 validated indexed tools plus newly discovered tools from site query
   "allplan",
   "gstarcad",
   "magics",
@@ -56,7 +56,12 @@ const PRESERVED_INDEXED_SLUGS = [
   "cimatron",
   "alias-autostudio",
   "jewelcad-pro",
-  "woodwop"
+  "woodwop",
+  "catia",
+  "topsolid",
+  "actcad",
+  "librecad",
+  "dwg-fastview"
 ];
 
 /** Title for both the `<title>` tag and Open Graph. */
