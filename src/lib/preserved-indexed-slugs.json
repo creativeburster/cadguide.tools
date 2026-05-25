@@ -1,0 +1,24 @@
+{
+  "_description": "Slugs of tools currently indexed in Google. Keep their existing 'Review YYYY: Category Software (Price)' title format to avoid rank volatility. Long-tail / unindexed tools use a different compact title format. Update this list as more tools get indexed (verify via 'site:cadguide.tools/tools/<slug>' Google query).",
+  "slugs": [
+    "allplan",
+    "gstarcad",
+    "magics",
+    "moi3d",
+    "icad3d-plus",
+    "synopsys-fusion-compiler",
+    "solibri",
+    "bluebeam-revu",
+    "archicad",
+    "varicad",
+    "cimatron",
+    "alias-autostudio",
+    "jewelcad-pro",
+    "woodwop",
+    "catia",
+    "topsolid",
+    "actcad",
+    "librecad",
+    "dwg-fastview"
+  ]
+}
