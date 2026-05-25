@@ -62,6 +62,7 @@ export interface Tool {
     notes: string;
   }[];
   key_capabilities?: string[];
+  features?: string[];
 
   // --- Extended product metadata (Phase 4) --------------------------------
   // All optional. Tools that have these populated render extra detail

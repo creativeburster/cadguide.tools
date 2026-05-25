@@ -63,16 +63,18 @@ export function rankToolsForCategory(category: Category): Tool[] {
  */
 export function filterToolsByFeature(featureId: string): Tool[] {
   const inFeature = tools.filter((t) => {
-    const slug = t.slug.toLowerCase();
+    // 1. Check self-reported features array (primary source of truth)
+    if (t.features && t.features.includes(featureId)) {
+      return true;
+    }
+
+    // 2. Keyword fallback check for backward compatibility
     const shortDesc = (t.short_desc ?? '').toLowerCase();
     const desc = (t.description ?? '').toLowerCase();
     const coreFeatures = (t.core_features ?? []).map(f => f.toLowerCase());
     const detailedFeatures = (t.detailed_features ?? []).flatMap(df => df.items ?? []).map(item => item.name.toLowerCase());
     
     if (featureId === 'ai-assisted') {
-      const explicitSlugs = ["bricscad", "autocad", "fusion-360", "ansys-discovery", "altair-inspire", "solidworks", "shapr3d"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["ai-assisted", "ai-powered", "generative design", "artificial intelligence", "smart blocks", "smart mouse", "propagate", "bimify", "topology optimization", "live physics gpu solver"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -83,9 +85,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
     
     if (featureId === 'cloud-collaboration') {
-      const explicitSlugs = ["onshape", "fusion-360", "easyeda", "altium-designer", "revit", "archicad"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["cloud-collaboration", "cloud collaboration", "real-time collaboration", "multi-user", "co-authoring", "browser-based", "saas", "cloud storage", "bimcloud", "3dexperience", "projectwise", "cloud sync"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -96,9 +95,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
     
     if (featureId === 'parametric-modeling') {
-      const explicitSlugs = ["solidworks", "ptc-creo", "autodesk-inventor", "onshape", "fusion-360", "freecad", "siemens-nx", "shapr3d"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["parametric modeling", "parametric design", "parametric", "history-based", "constraint-based", "dimension-driven", "equations & variables", "dynamic assembly mates"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -109,9 +105,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
     
     if (featureId === 'rendering') {
-      const explicitSlugs = ["lumion", "twinmotion", "enscape", "v-ray", "blender", "fusion-360", "solidworks", "sketchup", "3ds-max"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["rendering", "render", "ray tracing", "visualisation", "visualization", "photorealistic", "pbr", "gpu ray tracing", "cinerender", "twinmotion", "lumion", "enscape"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -122,9 +115,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
     
     if (featureId === 'sheet-metal') {
-      const explicitSlugs = ["solidworks", "fusion-360", "ptc-creo", "autodesk-inventor", "bricscad", "solid-edge"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["sheet metal", "flat pattern", "k-factor", "folding", "unfolding", "press brake", "bend allowance", "punching"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -135,9 +125,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
     
     if (featureId === 'generative-design') {
-      const explicitSlugs = ["fusion-360", "altair-inspire", "ptc-creo", "siemens-nx", "solidworks", "ntop", "ansys-discovery"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["generative design", "topology optimization", "structural optimization", "lattice structures", "additive manufacturing"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -148,9 +135,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
     
     if (featureId === 'reverse-engineering') {
-      const explicitSlugs = ["geomagic-design-x", "rhino-3d", "solidworks", "fusion-360", "siemens-nx", "shapr3d"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["reverse engineering", "3d scan", "point cloud", "mesh to solid", "b-rep conversion", "deviation analysis"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -161,9 +145,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
     
     if (featureId === 'integrated-cam') {
-      const explicitSlugs = ["mastercam", "fusion-360", "solidcam", "camworks", "hypermill", "cimatron", "zw3d"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["cam", "cnc", "toolpath", "g-code", "milling", "turning", "multi-axis", "machining simulation"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -174,9 +155,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'simulation-fea') {
-      const explicitSlugs = ["solidworks", "fusion-360", "ptc-creo", "siemens-nx", "autodesk-inventor", "ansys-discovery", "ansys-fluent", "comsol-multiphysics", "abaqus", "ansys-mechanical"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["simulation", "fea", "finite element analysis", "cfd", "thermal analysis", "stress analysis", "structural analysis", "live physics", "fatigue simulation", "fluid dynamics"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -187,9 +165,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'subdivision-modeling') {
-      const explicitSlugs = ["rhino-3d", "blender", "fusion-360", "maya", "3ds-max", "shapr3d"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["subdivision modeling", "subd", "subdivision surface", "organic shape", "freeform", "t-splines", "organic modeling", "ergonomic design"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -200,9 +175,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'bim-integration') {
-      const explicitSlugs = ["revit", "archicad", "vectorworks", "bricscad", "tekla-structures"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["bim", "building information modeling", "ifc", "clash detection", "openbim", "bimcloud"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -213,9 +185,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'direct-modeling') {
-      const explicitSlugs = ["rhino-3d", "sketchup", "spaceclaim", "bricscad", "shapr3d", "solid-edge", "fusion-360"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["direct modeling", "history-free", "push-pull", "direct design", "interactive modeling", "synchronous technology", "dynamic modeling"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -226,9 +195,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'mesh-modeling') {
-      const explicitSlugs = ["blender", "rhino-3d", "geomagic-design-x", "siemens-nx", "fusion-360", "maya", "3ds-max", "zw3d", "meshlab"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["mesh modeling", "polygon editing", "polygon manipulation", "mesh repair", "stl mesh", "obj mesh", "3d scan mesh", "mesh optimization", "point cloud mesh", "mesh to solid", "polygon mesh"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -239,9 +205,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'piping-routing') {
-      const explicitSlugs = ["solidworks", "autodesk-inventor", "ptc-creo", "siemens-nx", "autocad", "revit", "solid-edge", "microstation"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["piping", "cabling", "routing", "wiring harness", "hvac routing", "electrical routing", "piping design", "piping and instrumentation", "p&id", "cable tray", "conduit design"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -252,9 +215,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'surface-modeling') {
-      const explicitSlugs = ["rhino-3d", "catia", "siemens-nx", "alias", "ptc-creo", "solidworks", "fusion-360"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["surface modeling", "class-a", "nurbs", "class-a surfacing", "freeform surface", "bezier curves", "lofting", "surfacing", "aesthetic shape", "styling engine"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
@@ -265,9 +225,6 @@ export function filterToolsByFeature(featureId: string): Tool[] {
     }
 
     if (featureId === 'drafting-detailing') {
-      const explicitSlugs = ["autocad", "bricscad", "draftsight", "zwcad", "gstarcad", "qcad", "librecad", "microstation"];
-      if (explicitSlugs.includes(slug)) return true;
-      
       const keywords = ["drafting", "detailing", "2d drafting", "technical drawing", "blueprint", "gd&t", "geometric dimensioning", "tolerancing", "drafting tools", "sheet layout", "detailing viewport"];
       return keywords.some(kw => 
         shortDesc.includes(kw) || 
