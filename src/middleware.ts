@@ -5,7 +5,17 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const pathname = request.nextUrl.pathname;
 
-  // 301 redirect /licensing/* to /pricing/* to fix SEO cannibalization
+  // Direct redirects for free and open-source models (highest priority canonicals)
+  if (pathname === '/pricing/free' || pathname === '/licensing/free') {
+    url.pathname = '/free';
+    return NextResponse.redirect(url, 301);
+  }
+  if (pathname === '/pricing/open-source' || pathname === '/licensing/open-source') {
+    url.pathname = '/open-source';
+    return NextResponse.redirect(url, 301);
+  }
+
+  // 301 redirect remaining /licensing/* to /pricing/* to fix SEO cannibalization
   if (pathname.startsWith('/licensing')) {
     if (pathname === '/licensing') {
       url.pathname = '/pricing';
@@ -21,5 +31,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/licensing', '/licensing/:path*'],
+  matcher: ['/licensing', '/licensing/:path*', '/pricing/free', '/pricing/open-source'],
 };

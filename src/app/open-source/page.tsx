@@ -42,6 +42,36 @@ const FAQ = [
   },
 ];
 
+const TCO_FAQ = [
+  {
+    q: "How do you calculate the TCO of open-source CAD?",
+    a: "True Total Cost of Ownership (TCO) shifts from recurring licensing software fees (OpEx) to engineering personnel capabilities (CapEx). You save 100% on retail seat costs, but should budget for in-house C++/Python developers to maintain custom script wrappers and compile stable internal releases."
+  },
+  {
+    q: "Can I use open-source CAD tools in commercial environments for free?",
+    a: "Yes. Top open-source licenses (like GPL or MIT) grant unrestricted rights to use the software for commercial, proprietary design and production engineering without paying any fees or licensing royalties."
+  },
+  {
+    q: "Are there professional support SLAs for open-source engineering software?",
+    a: "Yes. While community forums provide volunteer support, global engineering consultancies offer professional, SLA-backed commercial support contracts, custom CAD feature development, and enterprise training paths."
+  }
+];
+
+const LICENSING_FAQ = [
+  {
+    q: "What is the difference between copyleft (GPL) and permissive (MIT/BSD) licenses?",
+    a: "Copyleft licenses (like the GNU GPL) require that if you modify the CAD software's source code and distribute the modified version, you must also release your modifications under the same open-source license. Permissive licenses (like MIT or BSD) allow you to modify the software and incorporate it into proprietary, closed-source commercial applications with minimal restrictions."
+  },
+  {
+    q: "Does using a GPL-licensed CAD program force me to open-source my proprietary drawing designs?",
+    a: "No. The GPL copyleft rules strictly apply to the CAD program's source code compilation and software execution pathways, not to the assets or engineering geometries you design with it. Your private 2D drawings, 3D CAD files, and BIM models remain 100% your proprietary intellectual property."
+  },
+  {
+    q: "Are corporate developers protected against software patent lawsuits under open licenses?",
+    a: "Yes. Major modern open-source licenses (including Apache 2.0 and GPL v3) include built-in reciprocal patent grant clauses. Any developer contributing code automatically grants a royalty-free, perpetual patent license to all downstream users, safeguarding enterprises from patent litigation."
+  }
+];
+
 function itemListLd(list: Tool[]) {
   return {
     '@context': 'https://schema.org',
@@ -68,7 +98,7 @@ function articleLd() {
     mainEntityOfPage: `${SITE_URL}/open-source`,
     publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
-    dateModified: '2026-05-15',
+    dateModified: '2026-05-25',
   };
 }
 
@@ -84,6 +114,97 @@ function faqLd() {
   };
 }
 
+// --- WIDGETS ---
+
+function OpenSourceTcoWidget() {
+  return (
+    <div className="my-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-teal-955 to-indigo-950 text-white border border-teal-900/40 shadow-xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.08),transparent)] pointer-events-none" />
+      <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="bg-teal-500/20 text-teal-300 text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-md border border-teal-500/30">
+            Financial Analysis
+          </span>
+          <span className="text-xs text-slate-400 font-medium">TCO & Cost-Saving Audit</span>
+        </div>
+
+        <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white mb-3">
+          Zero-License CAD: Financial Benefits & Enterprise TCO Analysis
+        </h3>
+        <p className="text-slate-300 text-sm leading-relaxed max-w-3xl mb-6">
+          Open-source CAD represents the ultimate strategy for corporate cost reduction: complete elimination of licensing audits, zero recurring seat rental fees, and permanent ownership of your software assets. In an era where proprietary CAD subscriptions rise by 8-15% annually, switching to open-source modeling bypasses commercial licensing tables entirely.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm mb-6">
+          <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-xs font-bold flex items-center justify-center">1</span>
+              <h4 className="font-extrabold text-white">OpEx to CapEx Shift</h4>
+            </div>
+            <p className="text-slate-300 text-xs leading-relaxed">
+              You save 100% on retail seat costs, but should budget for in-house C++/Python developers to maintain custom script wrappers, compile stable internal releases, and build localized pipelines.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 rounded-full bg-indigo-500/20 text-indigo-400 text-xs font-bold flex items-center justify-center">2</span>
+              <h4 className="font-extrabold text-white">Compliance Audit Zero</h4>
+            </div>
+            <p className="text-slate-300 text-xs leading-relaxed">
+              Open-source platforms eliminate any legal exposure to retroactive software audits, serial registration compliance issues, or user identity logging violations.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center">3</span>
+              <h4 className="font-extrabold text-white">Commercial Support SLAs</h4>
+            </div>
+            <p className="text-slate-300 text-xs leading-relaxed">
+              While community forums provide volunteer support, global engineering consultancies offer professional, SLA-backed commercial support contracts, custom CAD feature development, and enterprise training paths.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function OpenSourceLicensingWidget() {
+  return (
+    <div className="my-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 text-white border border-teal-900/40 shadow-xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.08),transparent)] pointer-events-none" />
+      <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="bg-teal-500/20 text-teal-300 text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-md border border-teal-500/30">
+            Legal Compliance
+          </span>
+          <span className="text-xs text-slate-400 font-medium">GPL & Copyleft Advisory</span>
+        </div>
+        <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white mb-3">
+          Solid Modeling Geometry Kernels & Compiler Independence
+        </h3>
+        <p className="text-slate-300 text-sm leading-relaxed max-w-3xl mb-6">
+          Unlike proprietary platforms running on closed commercial geometry kernels (such as Siemens Parasolid or Dassault ACIS), most open-source 3D CAD platforms rely on the Open CASCADE Technology (OCCT) engine. Utilizing open kernels secures long-term developer access and protects design offices against proprietary licensing changes:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-4 text-slate-300">
+          <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+            <span className="font-bold text-teal-300 block mb-1">GPL Copyleft Rules & Drawing Safety</span>
+            Under the GNU General Public License (GPL), any modifications to the CAD system&apos;s core source code must be shared with the community when distributed. However, your local engineering drawings, DWG vectors, and 3D geometric models remain 100% your private property.
+          </div>
+          <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+            <span className="font-bold text-teal-300 block mb-1">Permissive vs Reciprocal Grants</span>
+            While copyleft licenses require sharing core code updates, modern open-source licenses include built-in reciprocal patent grant clauses. Any developer contributing code automatically grants a royalty-free, perpetual patent license to all downstream users, safeguarding enterprises from patent litigation.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- MAIN PAGE COMPONENT ---
+
 export default function OpenSourceCadPage() {
   const list = openSourceTools();
   const breadcrumbs = siteBreadcrumbLd([
@@ -98,11 +219,11 @@ export default function OpenSourceCadPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd()) }} />
 
-      <main className="min-h-screen bg-slate-50">
+      <main className="min-h-screen bg-slate-50 pb-20">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
           <nav className="text-sm text-slate-500 mb-6">
             <Link href="/" className="hover:underline">Home</Link>{' / '}
-            <span className="text-slate-700">Open-Source CAD</span>
+            <span className="text-slate-700 font-semibold">Open-Source CAD</span>
           </nav>
 
           <header className="mb-10">
@@ -124,7 +245,7 @@ export default function OpenSourceCadPage() {
 
             {/* Semantic Open-Source Dimension Hub Cards */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/pricing/open-source" className="block p-5 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all">
+              <Link href="#tco-economics" className="block p-5 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all">
                 <span className="bg-emerald-100 text-emerald-800 text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded border border-emerald-200">
                   Financial Analysis
                 </span>
@@ -133,7 +254,7 @@ export default function OpenSourceCadPage() {
                   Evaluate the total cost of ownership (TCO) of open-source CAD. Compare zero-license seat savings with in-house developer customization and SLA support.
                 </p>
               </Link>
-              <Link href="/licensing/open-source" className="block p-5 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all">
+              <Link href="#licensing-compliance" className="block p-5 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all">
                 <span className="bg-teal-100 text-teal-800 text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded border border-teal-200">
                   Legal Compliance
                 </span>
@@ -164,16 +285,62 @@ export default function OpenSourceCadPage() {
             ))}
           </ol>
 
-          <section className="mt-12 rounded-2xl bg-white border border-slate-200 p-6">
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Frequently asked</h2>
-            <dl className="space-y-4">
-              {FAQ.map((f) => (
-                <div key={f.q}>
-                  <dt className="font-semibold text-slate-900">{f.q}</dt>
-                  <dd className="mt-1 text-slate-600 leading-relaxed">{f.a}</dd>
-                </div>
-              ))}
-            </dl>
+          {/* TCO & Economics Hub Section */}
+          <section id="tco-economics" className="mt-16 pt-10 border-t border-slate-200">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+              <span className="w-1.5 h-6 rounded-full bg-gradient-to-b from-emerald-500 to-teal-600" />
+              Open-Source TCO & Economics
+            </h2>
+            <OpenSourceTcoWidget />
+            <div className="mt-8 rounded-2xl bg-white border border-slate-200 p-6">
+              <h3 className="font-extrabold text-slate-900 mb-4">Financial & Economic FAQs</h3>
+              <dl className="space-y-4">
+                {TCO_FAQ.map((f) => (
+                  <div key={f.q} className="border-b border-slate-100 pb-4 last:border-b-0 last:pb-0">
+                    <dt className="font-semibold text-slate-900 text-sm sm:text-base">{f.q}</dt>
+                    <dd className="mt-2 text-slate-600 text-sm leading-relaxed">{f.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+
+          {/* Licensing & Compliance Hub Section */}
+          <section id="licensing-compliance" className="mt-16 pt-10 border-t border-slate-200">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+              <span className="w-1.5 h-6 rounded-full bg-gradient-to-b from-teal-500 to-indigo-600" />
+              GPL Copyleft & EULA Compliance
+            </h2>
+            <OpenSourceLicensingWidget />
+            <div className="mt-8 rounded-2xl bg-white border border-slate-200 p-6">
+              <h3 className="font-extrabold text-slate-900 mb-4">Legal & Licensing Compliance FAQs</h3>
+              <dl className="space-y-4">
+                {LICENSING_FAQ.map((f) => (
+                  <div key={f.q} className="border-b border-slate-100 pb-4 last:border-b-0 last:pb-0">
+                    <dt className="font-semibold text-slate-900 text-sm sm:text-base">{f.q}</dt>
+                    <dd className="mt-2 text-slate-600 text-sm leading-relaxed">{f.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+
+          {/* General FAQ Section */}
+          <section className="mt-16 pt-10 border-t border-slate-200">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+              <span className="w-1.5 h-6 rounded-full bg-blue-600" />
+              General Frequently Asked Questions
+            </h2>
+            <div className="rounded-2xl bg-white border border-slate-200 p-6">
+              <dl className="space-y-4">
+                {FAQ.map((f) => (
+                  <div key={f.q} className="border-b border-slate-100 pb-4 last:border-b-0 last:pb-0">
+                    <dt className="font-semibold text-slate-900 text-sm sm:text-base">{f.q}</dt>
+                    <dd className="mt-2 text-slate-600 text-sm leading-relaxed">{f.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </section>
         </article>
       </main>

@@ -10,7 +10,7 @@ import {
   personaPagePaths,
   sectorPagePaths,
 } from '@/lib/seo-content';
-import { PRICING_PAGES, LICENSING_PAGES } from '@/lib/pricing-licensing-content';
+import { PRICING_PAGES } from '@/lib/pricing-licensing-content';
 
 const BASE_URL = 'https://cadguide.tools';
 
@@ -33,7 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/free`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/open-source`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/licensing`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     // /deals intentionally omitted — page is noindex,follow until real partner deals are wired.
   ];
 
@@ -117,20 +116,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Dynamic pricing catalog directories (5 entries).
-  const pricingUrls: MetadataRoute.Sitemap = Object.keys(PRICING_PAGES).map((slug) => ({
-    url: `${BASE_URL}/pricing/${slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }));
-
-  // Dynamic licensing catalog directories (5 entries).
-  const licensingUrls: MetadataRoute.Sitemap = Object.keys(LICENSING_PAGES).map((slug) => ({
-    url: `${BASE_URL}/licensing/${slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }));
+  // Exclude free and open-source as they redirect to /free and /open-source canonical paths
+  const pricingUrls: MetadataRoute.Sitemap = Object.keys(PRICING_PAGES)
+    .filter((slug) => slug !== 'free' && slug !== 'open-source')
+    .map((slug) => ({
+      url: `${BASE_URL}/pricing/${slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    }));
 
   return [
     ...staticPages,
@@ -144,6 +138,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...personaUrls,
     ...sectorUrls,
     ...pricingUrls,
-    ...licensingUrls,
   ];
 }

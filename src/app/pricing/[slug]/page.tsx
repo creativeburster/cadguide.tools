@@ -52,6 +52,24 @@ function getStyleForPricing(slug: string): PricingStyle {
       badgeText: 'One-Time Buyout',
     };
   }
+  if (slug === 'network') {
+    return {
+      gradient: 'from-indigo-600 via-teal-600 to-emerald-600',
+      badgeAccent: 'bg-indigo-50 text-indigo-700 border-indigo-100',
+      accentText: 'text-indigo-700',
+      badgeBg: 'bg-indigo-100 text-indigo-800 border-indigo-200',
+      badgeText: 'Shared Floating Server',
+    };
+  }
+  if (slug === 'educational') {
+    return {
+      gradient: 'from-orange-500 via-red-500 to-pink-500',
+      badgeAccent: 'bg-orange-50 text-orange-700 border-orange-100',
+      accentText: 'text-orange-700',
+      badgeBg: 'bg-orange-100 text-orange-800 border-orange-200',
+      badgeText: 'Academic Access',
+    };
+  }
   return {
     gradient: 'from-violet-600 via-purple-600 to-indigo-700',
     badgeAccent: 'bg-violet-50 text-violet-700 border-violet-100',
@@ -64,6 +82,7 @@ function getStyleForPricing(slug: string): PricingStyle {
 function getFilteredTools(slug: string) {
   const filtered = tools.filter((t) => {
     const tPrice = t.pricing_type?.toLowerCase() || '';
+    const tLicenses = t.license_types?.map((l) => l.toLowerCase()) || [];
     if (slug === 'free') {
       return tPrice === 'free';
     }
@@ -74,10 +93,16 @@ function getFilteredTools(slug: string) {
       return tPrice === 'freemium';
     }
     if (slug === 'subscription') {
-      return tPrice === 'subscription' || tPrice.includes('subscription');
+      return tLicenses.includes('subscription') || tPrice === 'subscription' || tPrice.includes('subscription');
     }
     if (slug === 'perpetual') {
-      return tPrice === 'perpetual' || tPrice.includes('perpetual');
+      return tLicenses.includes('perpetual') || tPrice === 'perpetual' || tPrice.includes('perpetual');
+    }
+    if (slug === 'network') {
+      return tLicenses.includes('network') || tLicenses.includes('floating');
+    }
+    if (slug === 'educational') {
+      return tLicenses.includes('educational') || tLicenses.includes('student');
     }
     return false;
   }).sort((a, b) => b.score - a.score);
@@ -147,6 +172,106 @@ function faqLd(p: PricingPageContent) {
       acceptedAnswer: { '@type': 'Answer', text: f.a },
     })),
   };
+}
+
+// --- ASYMMETRICAL WIDGETS ---
+
+// Widget A: Shared floating server / network optimization guide
+function NetworkServerConfigurationWidget() {
+  return (
+    <div className="my-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-teal-950 to-indigo-950 text-white border border-teal-900/40 shadow-xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.08),transparent)] pointer-events-none" />
+      
+      <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="bg-teal-500/20 text-teal-300 text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-md border border-teal-500/30">
+            Enterprise Admin Guide
+          </span>
+          <span className="text-xs text-slate-400 font-medium">Floating License Server Setup</span>
+        </div>
+
+        <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white mb-3">
+          FLEXlm Server Daemon Optimization & Borrowing Pools
+        </h3>
+        <p className="text-slate-300 text-sm leading-relaxed max-w-3xl mb-6">
+          Deploying concurrent floating network licenses is the most efficient configuration for global teams. Centralizing license keys inside local server engines (like Revenera FLEXlm or LMTools) optimizes seat ratios. Review our systems engineering guidelines below:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm mb-6">
+          <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 text-xs font-bold flex items-center justify-center">1</span>
+              <h4 className="font-extrabold text-white">Options Files Setup</h4>
+            </div>
+            <p className="text-slate-300 text-xs leading-relaxed">
+              Configure `adskflex.opt` or local equivalents to reserve critical floating seats for lead project engineers and automatically reclaim idle seats after 15 minutes of viewport inactivity.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 rounded-full bg-indigo-500/20 text-indigo-400 text-xs font-bold flex items-center justify-center">2</span>
+              <h4 className="font-extrabold text-white">Borrow Parameters</h4>
+            </div>
+            <p className="text-slate-300 text-xs leading-relaxed">
+              Set the maximum borrowing duration to exactly 7 or 14 days instead of the 30-day default. This protects the floating seat pool from being locked on offline field laptops indefinitely.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center">3</span>
+              <h4 className="font-extrabold text-white">Dual-Daemon Ports</h4>
+            </div>
+            <p className="text-slate-300 text-xs leading-relaxed">
+              Always bind both the license manager (`lmgrd`, default port 27000) and the vendor-specific daemon (`adskflex`, etc.) to fixed TCP ports inside your firewall to allow stable VPN routing.
+            </p>
+          </div>
+        </div>
+
+        <div className="p-4 rounded-xl bg-teal-950/40 border border-teal-900 text-xs text-teal-300 leading-relaxed flex gap-2">
+          <span className="font-bold flex-shrink-0 uppercase tracking-wide">IT Savings:</span>
+          <span>Floating license sharing operates on an average 2.5:1 ratio. For a team of 100 designers, a pool of only 40 floating licenses is typically sufficient, shaving 60% off enterprise capital budgets.</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Widget B: Student academic license & SheerID clearinghouse warning
+function AcademicWatermarkAdvisoryWidget() {
+  return (
+    <div className="my-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-red-950 to-orange-950 text-white border border-red-900/40 shadow-xl relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.08),transparent)] pointer-events-none" />
+      
+      <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="bg-red-500/20 text-red-300 text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-md border border-red-500/30">
+            Academic Advisory
+          </span>
+          <span className="text-xs text-slate-400 font-medium">Educational Watermark Warning</span>
+        </div>
+
+        <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white mb-3">
+          Student Watermark Infection & SheerID Clearinghouses
+        </h3>
+        <p className="text-slate-300 text-sm leading-relaxed max-w-3xl mb-6">
+          While vendors provide complete, full-featured design suites to accredited students and educators, academic licenses contain strict compliance restrictions. Opening and editing drawings under student accounts permanently alerts future commercial users.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-4 text-slate-300">
+          <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+            <span className="font-bold text-red-300 block mb-1">Plot Watermark Infection</span>
+            If you open a commercial workspace file and copy-paste even a single line of vector geometry from a drawing created under a student license, the entire parent file becomes permanently infected. When plotted, all layout sheets will display the warning: &quot;PRODUCED BY AN AUTODESK EDUCATIONAL PRODUCT&quot;. Removing this watermark is legally forbidden.
+          </div>
+          <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+            <span className="font-bold text-red-300 block mb-1">Clearinghouse Authentication</span>
+            Verification is outsourced to third-party secure clearinghouses (such as SheerID). To activate your account, you must upload institutional documents, current class transcripts, or enrollment verification letters displaying your name and school seal.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // --- ASYMMETRICAL WIDGETS ---
@@ -425,6 +550,30 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                 if (key === 'lisp_compat') {
                   return t.name.includes('BricsCAD') || t.name.includes('ZWCAD') ? '100% LISP Compatible' : 'Not supported';
                 }
+                if (key === 'server_engine') {
+                  return t.name.includes('BricsCAD') || t.name.includes('AutoCAD') ? 'FLEXlm Server Daemon' : 'Cloud floating login';
+                }
+                if (key === 'borrow_days') {
+                  return 'Up to 30 Days offline';
+                }
+                if (key === 'price_premium') {
+                  return '15-20% floating key premium';
+                }
+                if (key === 'global_rights') {
+                  return t.score > 4.5 ? 'Included in enterprise seats' : 'Regional locks apply';
+                }
+                if (key === 'verification_method') {
+                  return 'SheerID / Institutional email';
+                }
+                if (key === 'license_term') {
+                  return '12-Month recurring free';
+                }
+                if (key === 'watermark_present') {
+                  return t.name.includes('AutoCAD') ? 'Yes (Print infected watermark)' : 'None (Watermark-free exports)';
+                }
+                if (key === 'cloud_access') {
+                  return t.platforms.includes('Web') ? 'Full multi-user cloud' : 'Local drafting only';
+                }
                 return 'Verified Standard';
               };
 
@@ -536,6 +685,22 @@ export default async function PricingDirectoryPage(
           {/* Flow D: Subscription Only (List first, SSO telemetry details at the bottom) */}
           {slug === 'subscription' && (
             <DynamicPricingMatrix pageContent={p} list={list} />
+          )}
+
+          {/* Flow F: Shared network / floating seats (Local configuration widgets at the top) */}
+          {slug === 'network' && (
+            <>
+              <NetworkServerConfigurationWidget />
+              <DynamicPricingMatrix pageContent={p} list={list} />
+            </>
+          )}
+
+          {/* Flow G: Student academic license (Watermark alerts at the top) */}
+          {slug === 'educational' && (
+            <>
+              <AcademicWatermarkAdvisoryWidget />
+              <DynamicPricingMatrix pageContent={p} list={list} />
+            </>
           )}
 
           {/* Ranked Catalog Section */}

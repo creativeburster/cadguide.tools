@@ -239,10 +239,10 @@ function HomeBody() {
               <div className="mt-1 text-lg font-black text-slate-900">By Pricing</div>
               <div className="mt-1 text-xs text-slate-500">Free, Open Source, Freemium, Buyout…</div>
             </Link>
-            <Link href="/licensing" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">5 models</div>
-              <div className="mt-1 text-lg font-black text-slate-900">By License</div>
-              <div className="mt-1 text-xs text-slate-500">Floating networks, Academic access, EULAs…</div>
+            <Link href="/pricing" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">7 categories</div>
+              <div className="mt-1 text-lg font-black text-slate-900">By Pricing & License</div>
+              <div className="mt-1 text-xs text-slate-500">Free, perpetual buyouts, floating networks, student access…</div>
             </Link>
             <Link href="/alternatives" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">235 guides</div>

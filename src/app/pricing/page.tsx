@@ -14,6 +14,7 @@ export const metadata: Metadata = pageMetadata({
 function getToolsCount(slug: string): number {
   return tools.filter((t) => {
     const tPrice = t.pricing_type?.toLowerCase() || '';
+    const tLicenses = t.license_types?.map((l) => l.toLowerCase()) || [];
     if (slug === 'free') {
       return tPrice === 'free';
     }
@@ -24,10 +25,16 @@ function getToolsCount(slug: string): number {
       return tPrice === 'freemium';
     }
     if (slug === 'subscription') {
-      return tPrice === 'subscription' || tPrice.includes('subscription');
+      return tLicenses.includes('subscription') || tPrice === 'subscription' || tPrice.includes('subscription');
     }
     if (slug === 'perpetual') {
-      return tPrice === 'perpetual' || tPrice.includes('perpetual');
+      return tLicenses.includes('perpetual') || tPrice === 'perpetual' || tPrice.includes('perpetual');
+    }
+    if (slug === 'network') {
+      return tLicenses.includes('network') || tLicenses.includes('floating');
+    }
+    if (slug === 'educational') {
+      return tLicenses.includes('educational') || tLicenses.includes('student');
     }
     return false;
   }).length;
@@ -61,7 +68,7 @@ export default function PricingIndexPage() {
             return (
               <li key={p.slug}>
                 <Link
-                  href={`/pricing/${p.slug}`}
+                  href={p.slug === 'free' ? '/free' : p.slug === 'open-source' ? '/open-source' : `/pricing/${p.slug}`}
                   className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all h-full"
                 >
                   <div className="text-xs font-black uppercase tracking-wider text-blue-600">

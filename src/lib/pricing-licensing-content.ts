@@ -163,8 +163,65 @@ export const PRICING_PAGES: Record<string, PricingPageContent> = {
         a: "While industry giants like Autodesk (AutoCAD, Revit) and PTC (Creo) have completely abolished perpetual licenses, many outstanding competitors—including BricsCAD, ZWCAD, GstarCAD, nanoCAD, Rhino 3D, and Vectorworks—still offer robust, fully supported perpetual licensing options."
       }
     ]
+  },
+  "network": {
+    slug: "network",
+    displayName: "Network / Floating License",
+    seoTitle: "Network & Floating License CAD (2026) — Shared Server Seats",
+    seoDesc: "Compare CAD systems offering floating network licensing. Learn how to set up local license servers (FLEXlm), manage seat pools, and minimize licensing costs.",
+    intro: "Network licensing—also known as Floating or Concurrent licensing—is the gold standard for enterprise CAD management. In this model, your company purchases a 'pool' of licenses (e.g., 20 seats) and installs them on a central license server on your local network. When an engineer launches the CAD software, the program requests a license from the server. If a seat is available, the server 'checks out' the license, and the engineer can work. When they close the program, the license is instantly returned to the server pool. This floating mechanism optimizes software utilization, allowing a team of 100 designers to work smoothly with a pool of only 30 or 40 floating licenses.",
+    keyTakeaway: "Network licensing is highly efficient for global engineering organizations with design offices in different time zones, allowing seats to float seamlessly across shifts.",
+    matrixColumns: [
+      { label: "License Server Tech", key: "server_engine" },
+      { label: "License Borrowing Limit", key: "borrow_days" },
+      { label: "Enterprise Premium", key: "price_premium" },
+      { label: "Global Rights Support", key: "global_rights" }
+    ],
+    faqs: [
+      {
+        q: "What is License Borrowing in network CAD setups?",
+        a: "License borrowing allows an engineer to disconnect their laptop from the corporate network and 'borrow' a license from the server for a set number of days (usually up to 30 days). The server locks that seat as checked out, and the engineer can work completely offline in the field. When the borrow period expires, the license automatically returns to the server pool, even if the laptop is not reconnected."
+      },
+      {
+        q: "Are floating licenses more expensive than named subscriptions?",
+        a: "Yes, vendors typically charge an upfront premium (often 1.5x to 2x the cost of a standard standalone license) for floating rights. However, because one floating license can easily serve 2 to 3 designers, the total cost for teams larger than 15 engineers is significantly lower than buying individual named subscriptions for everyone."
+      },
+      {
+        q: "What license servers do CAD systems use?",
+        a: "The most common local network license server technology is Revenera's FLEXlm (FlexNet Publisher) or LMTools, which uses secure encryption keys to monitor concurrency. Vendors also offer proprietary cloud-based floating servers that do not require local server hardware."
+      }
+    ]
+  },
+  "educational": {
+    slug: "educational",
+    displayName: "Educational License",
+    seoTitle: "Free CAD & BIM for Students (2026) — Educational Licenses",
+    seoDesc: "Verified list of CAD software offering free educational licenses for students, academic institutions, and educators. Compare terms, watermark rules, and verification.",
+    intro: "Educational licensing provides students, teachers, and accredited academic institutions with free or heavily discounted access to professional-grade CAD and BIM software. To support the next generation of engineers and architects, major software vendors open their full design suites for learning purposes. While these educational licenses typically contain 100% of the features found in the expensive commercial editions, they carry strict non-commercial usage terms. Files created under an educational license are legally protected against commercial exploitation, and drawing sheets often carry prominent headers indicating their academic status.",
+    keyTakeaway: "Educational licenses are an outstanding resource for learning professional engineering workflows, but never mix academic drawings with commercial directories, as the educational watermark can permanently infect commercial files.",
+    matrixColumns: [
+      { label: "Academic Verification", key: "verification_method" },
+      { label: "License Duration", key: "license_term" },
+      { label: "Plot Watermark", key: "watermark_present" },
+      { label: "BIMcloud Access", key: "cloud_access" }
+    ],
+    faqs: [
+      {
+        q: "How do vendors verify my student or educator status?",
+        a: "Vendors use specialized academic verification clearinghouses like SheerID. To qualify, you must submit a valid institutional email address (.edu), a current student ID card, or an official enrollment letter showing your name and the current academic term. Verification is usually approved within minutes."
+      },
+      {
+        q: "What is an 'educational watermark infection'?",
+        a: "In platforms like AutoCAD, if you open a commercial drawing and copy-paste any geometry from a student-licensed drawing, the entire commercial drawing file becomes 'infected' with the student watermark. When printed, all sheets will permanently display the warning: 'PRODUCED BY AN AUTODESK EDUCATIONAL PRODUCT'. Cleaning this watermark is legally and technically difficult."
+      },
+      {
+        q: "Can I use an educational license to design my portfolio?",
+        a: "Yes. Using academic licenses to design student portfolios, competitive team prototypes (such as Formula SAE), and academic research papers is fully permitted and encouraged under the educational licensing guidelines."
+      }
+    ]
   }
 };
+
 
 export const LICENSING_PAGES: Record<string, LicensingPageContent> = {
   "perpetual": {
