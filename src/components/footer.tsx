@@ -77,9 +77,9 @@ export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-12 border-t border-slate-900 w-full">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-10 gap-8 mb-16">
           {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-5">
+          <div className="col-span-2 lg:col-span-2 space-y-5">
             <div className="text-xl font-black text-white flex items-center">
               <span className="text-blue-500">CAD</span>Guide.tools
             </div>
@@ -177,7 +177,7 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 lg:col-span-2">
             <NewsletterForm />
           </div>
         </div>
