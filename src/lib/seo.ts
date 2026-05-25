@@ -42,21 +42,7 @@ export function toolDescription(tool: Tool, category?: Category): string {
 }
 
 const PRESERVED_INDEXED_SLUGS = [
-  // Core Industry Giants (Pre-seeded Whitelist)
-  "autocad",
-  "solidworks",
-  "sketchup",
-  "revit",
-  "freecad",
-  "fusion-360",
-  "bricscad",
-  "draftsight",
-  "inventor",
-  "rhino-3d",
-  "archicad",
-  "zwcad",
-
-  // Validated Indexed URLs (site:cadguide.tools intitle:from)
+  // The 14 validated indexed tools (site:cadguide.tools intitle:from)
   "allplan",
   "gstarcad",
   "magics",
@@ -65,6 +51,7 @@ const PRESERVED_INDEXED_SLUGS = [
   "synopsys-fusion-compiler",
   "solibri",
   "bluebeam-revu",
+  "archicad",
   "varicad",
   "cimatron",
   "alias-autostudio",
@@ -84,8 +71,9 @@ export function toolTitle(tool: Tool, category?: Category): string {
 
   // For the unindexed, longer tail tools, we avoid repetitive templated price brackets 
   // (which Google's quality classifier flags as auto-generated thin content).
-  // Instead, we use a distinct, specs-oriented title layout to establish high-quality authority.
-  return `${tool.name} Review 2026: Professional ${categoryName} Software & Technical Specs | ${SITE_NAME}`;
+  // Instead, we use a distinct, highly compact specs-oriented title layout (conforming to Google's 50-60 character limit)
+  // to establish high-quality authority and boost rapid indexing.
+  return `${tool.name} Review 2026: ${categoryName} Tech Specs | ${SITE_NAME}`;
 }
 
 /** Canonical URL for the tool detail page. */
