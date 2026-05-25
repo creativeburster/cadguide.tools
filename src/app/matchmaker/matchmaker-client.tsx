@@ -230,35 +230,6 @@ export default function MatchmakerPage() {
 
   const topMatches = filteredRecommendations.slice(0, 3);
 
-  const StepCard = ({ title, desc, children }: { title: string, desc: string, children: React.ReactNode }) => (
-    <Card className="border-none shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] rounded-[40px] p-8 md:p-12 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -mr-32 -mt-32 opacity-50"></div>
-      <div className="relative z-10">
-        <div className="flex items-center gap-4 mb-8">
-          <div className="bg-blue-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg shadow-blue-200">
-            {step}
-          </div>
-          <div>
-            <div className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1">Matchmaker Question</div>
-            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">{title}</h2>
-          </div>
-        </div>
-        <p className="text-slate-500 font-medium mb-10 text-lg">{desc}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {children}
-        </div>
-        <div className="mt-12 pt-8 border-t border-slate-50 flex items-center justify-between">
-          <Button variant="ghost" onClick={() => step > 1 && setStep(step - 1)} className="text-slate-400 font-bold hover:text-slate-900">
-            Previous Step
-          </Button>
-          <div className="text-[10px] font-black text-slate-300 uppercase tracking-widest">
-            {isDeepMatch ? `Step ${step} of 6` : `Step ${step} of 3`}
-          </div>
-        </div>
-      </div>
-    </Card>
-  );
-
   return (
     <main className="container mx-auto px-4 py-12 min-h-screen">
       <div className="max-w-[1360px] mx-auto px-6 md:px-12">
@@ -277,7 +248,13 @@ export default function MatchmakerPage() {
 
         {/* Quiz Steps */}
         {step === 1 && (
-          <StepCard title="What is your primary industry?" desc="We'll filter tools specialized for your specific field of work.">
+          <StepCard 
+            title="What is your primary industry?" 
+            desc="We'll filter tools specialized for your specific field of work."
+            step={step}
+            isDeepMatch={isDeepMatch}
+            onPreviousStep={() => step > 1 && setStep(step - 1)}
+          >
             {[
               'Architecture', 'Manufacturing', 'Civil Engineering', 
               'Electrical Engineering', 'Jewelry Design', 'Dental', 
@@ -294,7 +271,13 @@ export default function MatchmakerPage() {
         )}
 
         {step === 2 && (
-          <StepCard title="Which platform do you use?" desc="Native performance depends on choosing the right operating system.">
+          <StepCard 
+            title="Which platform do you use?" 
+            desc="Native performance depends on choosing the right operating system."
+            step={step}
+            isDeepMatch={isDeepMatch}
+            onPreviousStep={() => step > 1 && setStep(step - 1)}
+          >
             {['Windows', 'macOS', 'Linux', 'Web'].map(item => (
               <Button key={item} variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('platform', item)}>
                 {item}
@@ -304,7 +287,13 @@ export default function MatchmakerPage() {
         )}
 
         {step === 3 && (
-          <StepCard title="What is your budget preference?" desc="From free open-source to high-end enterprise solutions.">
+          <StepCard 
+            title="What is your budget preference?" 
+            desc="From free open-source to high-end enterprise solutions."
+            step={step}
+            isDeepMatch={isDeepMatch}
+            onPreviousStep={() => step > 1 && setStep(step - 1)}
+          >
             <Button variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('budget', 'free')}>Totally Free</Button>
             <Button variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('budget', 'low')}>Under $1,000/yr</Button>
             <Button variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('budget', 'any')}>Any Budget</Button>
@@ -312,7 +301,13 @@ export default function MatchmakerPage() {
         )}
 
         {step === 4 && (
-          <StepCard title="What is your team size?" desc="Some tools are built for solo makers, others for massive enterprises.">
+          <StepCard 
+            title="What is your team size?" 
+            desc="Some tools are built for solo makers, others for massive enterprises."
+            step={step}
+            isDeepMatch={isDeepMatch}
+            onPreviousStep={() => step > 1 && setStep(step - 1)}
+          >
             {['Individuals', 'Mid-Market', 'Enterprise'].map(item => (
               <Button key={item} variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('orgSize', item)}>
                 {item}
@@ -322,7 +317,13 @@ export default function MatchmakerPage() {
         )}
 
         {step === 5 && (
-          <StepCard title="What is your core workflow?" desc="Focusing on the right dimension speeds up your design process.">
+          <StepCard 
+            title="What is your core workflow?" 
+            desc="Focusing on the right dimension speeds up your design process."
+            step={step}
+            isDeepMatch={isDeepMatch}
+            onPreviousStep={() => step > 1 && setStep(step - 1)}
+          >
             {['2D', '3D', 'BIM'].map(item => (
               <Button key={item} variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('workflow', item)}>
                 {item === '2D' ? '2D Drafting' : item === '3D' ? '3D Modeling' : 'BIM Architecture'}
@@ -332,7 +333,13 @@ export default function MatchmakerPage() {
         )}
 
         {step === 6 && (
-          <StepCard title="What is your experience level?" desc="We'll match you with tools that fit your technical expertise.">
+          <StepCard 
+            title="What is your experience level?" 
+            desc="We'll match you with tools that fit your technical expertise."
+            step={step}
+            isDeepMatch={isDeepMatch}
+            onPreviousStep={() => step > 1 && setStep(step - 1)}
+          >
             {['Beginner', 'Intermediate', 'Professional'].map(item => (
               <Button key={item} variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('experience', item)}>
                 {item}
@@ -515,3 +522,44 @@ export default function MatchmakerPage() {
     </main>
   );
 }
+
+interface StepCardProps {
+  title: string;
+  desc: string;
+  step: number;
+  isDeepMatch: boolean;
+  onPreviousStep: () => void;
+  children: React.ReactNode;
+}
+
+function StepCard({ title, desc, step, isDeepMatch, onPreviousStep, children }: StepCardProps) {
+  return (
+    <Card className="border-none shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] rounded-[40px] p-8 md:p-12 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -mr-32 -mt-32 opacity-50"></div>
+      <div className="relative z-10">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="bg-blue-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg shadow-blue-200">
+            {step}
+          </div>
+          <div>
+            <div className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1">Matchmaker Question</div>
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">{title}</h2>
+          </div>
+        </div>
+        <p className="text-slate-500 font-medium mb-10 text-lg">{desc}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {children}
+        </div>
+        <div className="mt-12 pt-8 border-t border-slate-50 flex items-center justify-between">
+          <Button variant="ghost" onClick={onPreviousStep} className="text-slate-400 font-bold hover:text-slate-900">
+            Previous Step
+          </Button>
+          <div className="text-[10px] font-black text-slate-300 uppercase tracking-widest">
+            {isDeepMatch ? `Step ${step} of 6` : `Step ${step} of 3`}
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+}
+

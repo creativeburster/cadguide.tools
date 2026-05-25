@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from 'react';
+import Link from 'next/link';
 
 export function ContactBody() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,21 +64,21 @@ export function ContactBody() {
             <div className="mt-8 pt-8 border-t border-slate-200">
               <p className="text-sm font-bold text-slate-700 mb-4">Explore More</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <a href="/tools" className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium">
+                <Link href="/tools" className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium">
                   Browse Tools
-                </a>
-                <a href="/matchmaker" className="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium">
+                </Link>
+                <Link href="/matchmaker" className="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium">
                   Smart Matchmaker
-                </a>
-                <a href="/deals" className="inline-flex items-center px-4 py-2 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium">
+                </Link>
+                <Link href="/deals" className="inline-flex items-center px-4 py-2 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium">
                   Active Deals
-                </a>
-                <a href="/compare" className="inline-flex items-center px-4 py-2 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium">
+                </Link>
+                <Link href="/compare" className="inline-flex items-center px-4 py-2 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium">
                   Compare Tools
-                </a>
-                <a href="/best" className="inline-flex items-center px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 transition-colors text-sm font-medium">
+                </Link>
+                <Link href="/best" className="inline-flex items-center px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 transition-colors text-sm font-medium">
                   Best of Categories
-                </a>
+                </Link>
               </div>
             </div>
 
