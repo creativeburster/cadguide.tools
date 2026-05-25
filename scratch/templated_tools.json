@@ -1,0 +1,548 @@
+[
+  {
+    "slug": "cadra",
+    "name": "CADra",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "progecad",
+    "name": "progeCAD Professional",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "cadopia",
+    "name": "CADopia",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "corelcad",
+    "name": "CorelCAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "3dexperience",
+    "name": "3DEXPERIENCE",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "medusa4",
+    "name": "MEDUSA4",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "pconplanner",
+    "name": "pCon.planner",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "crowncad",
+    "name": "CrownCAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "sinovation",
+    "name": "SINOVATION",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "ijcad",
+    "name": "IJCAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "rootpro-cad",
+    "name": "RootPro CAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "v-nas",
+    "name": "V-nas",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "kompas-3d",
+    "name": "KOMPAS-3D",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "t-flex-cad",
+    "name": "T-FLEX CAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "model-studio-cs",
+    "name": "Model Studio CS",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "aveva-e3d-design",
+    "name": "AVEVA E3D Design",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "designspark-mechanical",
+    "name": "DesignSpark Mechanical",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "lusas",
+    "name": "LUSAS",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "midas-civil",
+    "name": "midas Civil",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "midas-gen",
+    "name": "midas Gen",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "cadian",
+    "name": "CADian",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "think3",
+    "name": "think3",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "maptek-vulcan",
+    "name": "Maptek Vulcan",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "promine",
+    "name": "Promine",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "oofelie",
+    "name": "OOFELIE",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "cypecad",
+    "name": "CYPECAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "tekton3d",
+    "name": "TeKton3D",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "vertex-bd",
+    "name": "Vertex BD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "cet-designer",
+    "name": "CET Designer",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "actcad",
+    "name": "ActCAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "cadvision",
+    "name": "CADVision",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "eberick",
+    "name": "Eberick",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "promob",
+    "name": "Promob",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "scia-engineer",
+    "name": "SCIA Engineer",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "powermill",
+    "name": "PowerMill",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "esprit",
+    "name": "ESPRIT",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "planbar",
+    "name": "Planbar",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "pam-stamp",
+    "name": "PAM-STAMP",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "shipconstructor",
+    "name": "ShipConstructor",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "napa",
+    "name": "NAPA",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "foran",
+    "name": "FORAN",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "pytha",
+    "name": "Pytha",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "imos-ix",
+    "name": "imos iX",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "20-20-design",
+    "name": "20-20 Design",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "palette-cad",
+    "name": "Palette CAD",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "kd-max",
+    "name": "KD Max",
+    "category": "c1",
+    "verdict": "A reliable, specialized 2D technical drafting utility optimized for standardized layouts and native DWG workflows."
+  },
+  {
+    "slug": "bimoffice",
+    "name": "BIMoffice",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "hicad",
+    "name": "HiCAD",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "renga",
+    "name": "Renga",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "edificius",
+    "name": "Edificius",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "edilus",
+    "name": "EdiLus",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "cadwork",
+    "name": "cadwork",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "magicad",
+    "name": "MagiCAD",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "dds-cad",
+    "name": "DDS-CAD",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "drofus",
+    "name": "dRofus",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "bimcollab",
+    "name": "BIMcollab",
+    "category": "c3",
+    "verdict": "An industry-specific BIM platform designed for architectural layouts, BIM coordination, and AEC documentation."
+  },
+  {
+    "slug": "topsolid",
+    "name": "TopSolid",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "beckercad",
+    "name": "BeckerCAD",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "cadmeister",
+    "name": "CADmeister",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "visi",
+    "name": "Visi",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "edgecam",
+    "name": "Edgecam",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "kisssoft",
+    "name": "KISSsoft",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "featurecam",
+    "name": "FeatureCAM",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "gibbscam",
+    "name": "GibbsCAM",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "hypermill",
+    "name": "hyperMILL",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "tebis",
+    "name": "Tebis",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "worknc",
+    "name": "WorkNC",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "surfcam",
+    "name": "SURFCAM",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "bobcad-cam",
+    "name": "BobCAD-CAM",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "autoform",
+    "name": "AutoForm",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "moldflow",
+    "name": "Moldflow",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "moldex3d",
+    "name": "Moldex3D",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "woodwop",
+    "name": "WoodWOP",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "alphacam",
+    "name": "AlphaCAM",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "radan",
+    "name": "Radan",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "lantek-expert",
+    "name": "Lantek Expert",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "sigmanest",
+    "name": "SigmaNEST",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "metacam",
+    "name": "MetaCAM",
+    "category": "c5",
+    "verdict": "A specialized engineering solution, delivering robust finite element analysis (CAE) or high-efficiency CNC CAM programming."
+  },
+  {
+    "slug": "eplan",
+    "name": "EPLAN",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "cr-8000",
+    "name": "CR-8000",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "quadcept",
+    "name": "Quadcept",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "allegro-pcb",
+    "name": "Allegro PCB",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "orcad",
+    "name": "OrCAD",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "pads-professional",
+    "name": "PADS Professional",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "xpedition",
+    "name": "Xpedition",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "pulsonix",
+    "name": "Pulsonix",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "target-3001",
+    "name": "Target 3001!",
+    "category": "c6",
+    "verdict": "A dedicated electronic design automation tool tailored for schematic capture, PCB layout routing, and circuit validation."
+  },
+  {
+    "slug": "infraworks",
+    "name": "Infraworks",
+    "category": "c7",
+    "verdict": "Professional choice for the industry."
+  },
+  {
+    "slug": "lumion",
+    "name": "Lumion",
+    "category": "c7",
+    "verdict": "Professional choice for the industry."
+  },
+  {
+    "slug": "enscape",
+    "name": "Enscape",
+    "category": "c7",
+    "verdict": "Professional choice for the industry."
+  },
+  {
+    "slug": "twinmotion",
+    "name": "Twinmotion",
+    "category": "c7",
+    "verdict": "Professional choice for the industry."
+  }
+]
