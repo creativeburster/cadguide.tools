@@ -10,7 +10,9 @@ import React from 'react';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Object.keys(PRICING_PAGES).map((slug) => ({ slug }));
+  return Object.keys(PRICING_PAGES)
+    .filter((slug) => slug !== 'free' && slug !== 'open-source')
+    .map((slug) => ({ slug }));
 }
 
 const YEAR = 2026;

@@ -4,6 +4,7 @@
 // (generateMetadata) and `opengraph-image.tsx`.
 import type { Metadata } from "next";
 import type { Tool, Category } from "./data";
+import preservedIndexedSlugs from "./preserved-indexed-slugs.json";
 
 export const SITE_URL = "https://cadguide.tools";
 export const SITE_NAME = "CADGuide.tools";
@@ -41,28 +42,9 @@ export function toolDescription(tool: Tool, category?: Category): string {
   return (prefix + suffix).trim();
 }
 
-const PRESERVED_INDEXED_SLUGS = [
-  // The 14 validated indexed tools plus newly discovered tools from site query
-  "allplan",
-  "gstarcad",
-  "magics",
-  "moi3d",
-  "icad3d-plus",
-  "synopsys-fusion-compiler",
-  "solibri",
-  "bluebeam-revu",
-  "archicad",
-  "varicad",
-  "cimatron",
-  "alias-autostudio",
-  "jewelcad-pro",
-  "woodwop",
-  "catia",
-  "topsolid",
-  "actcad",
-  "librecad",
-  "dwg-fastview"
-];
+// Sourced from src/lib/preserved-indexed-slugs.json. Edit that file (not this
+// array) to add or remove slugs as more tools get indexed by Google.
+const PRESERVED_INDEXED_SLUGS: readonly string[] = preservedIndexedSlugs.slugs;
 
 /** Title for both the `<title>` tag and Open Graph. */
 export function toolTitle(tool: Tool, category?: Category): string {
