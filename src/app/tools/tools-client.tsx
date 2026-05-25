@@ -135,6 +135,47 @@ function fuzzyMatchTool(tool: any, query: string): boolean {
   return false;
 }
 
+interface FilterSectionProps {
+  title: string;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+}
+
+function FilterSection({ title, children, defaultOpen = true }: FilterSectionProps) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
+  return (
+    <div className="px-2">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full font-bold mb-3 uppercase text-[10px] tracking-[0.15em] text-slate-400 flex items-center justify-between hover:text-blue-600 transition-colors text-left group/btn"
+      >
+        <span className="flex items-center gap-1.5">
+          <span className={cn(
+            "transform transition-transform text-[8px] text-slate-300 group-hover/btn:text-blue-500",
+            isOpen ? "rotate-90 text-blue-500" : ""
+          )}>
+            ▶
+          </span>
+          {title}
+        </span>
+        <span className="w-8 h-px bg-slate-100 flex-1 ml-3 group-hover/btn:bg-blue-100 transition-colors"></span>
+      </button>
+      <div
+        className={cn(
+          "transition-all duration-300 ease-in-out overflow-hidden",
+          isOpen ? "max-h-[1000px] opacity-100 mt-2 pb-2 visible" : "max-h-0 opacity-0 pointer-events-none invisible"
+        )}
+      >
+        <div className="space-y-2.5">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ToolsList() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -224,6 +265,11 @@ function ToolsList() {
     setLocalSearchQuery(q);
     syncUrl({ page: 1, query: q });
     setIsFiltersOpen(false);
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 80);
+    }
   }, [syncUrl, setIsFiltersOpen]);
   const [filters, setFilters] = useState({
     pricing: [] as string[],
@@ -244,11 +290,22 @@ function ToolsList() {
         ? (prev[type] as string[]).filter(v => v !== value)
         : [...(prev[type] as string[]), value]
     }));
+    // Smooth scroll to top on filter change so user can see immediate matched outcomes
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 80);
+    }
   };
 
   const setRating = (rating: number) => {
     syncUrl({ page: 1 });
     setFilters(prev => ({ ...prev, minRating: prev.minRating === rating ? 0 : rating }));
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 80);
+    }
   };
 
   // Extract unique filter options from data
@@ -282,7 +339,11 @@ function ToolsList() {
 
   const handlePageChange = (page: number) => {
     syncUrl({ page });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 80);
+    }
   };
 
   // ---------- Active filter chips (mobile + desktop) ----------
@@ -339,19 +400,12 @@ function ToolsList() {
     setFilters({ pricing: [], os: [], industry: [], category: [], userScale: [], kernel: [], minRating: 0 });
     syncUrl({ page: 1, query: '' });
     setIsFiltersOpen(false);
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 80);
+    }
   };
-
-  const FilterSection = ({ title, children }: { title: string, children: React.ReactNode }) => (
-    <div className="px-2">
-      <h3 className="font-bold mb-3 uppercase text-[10px] tracking-[0.15em] text-slate-400 flex items-center justify-between">
-        {title}
-        <span className="w-8 h-px bg-slate-100"></span>
-      </h3>
-      <div className="space-y-2">
-        {children}
-      </div>
-    </div>
-  );
 
   return (
     <>
@@ -454,7 +508,7 @@ function ToolsList() {
 
           <Separator className="bg-slate-100" />
 
-          <FilterSection title="Minimum Rating">
+          <FilterSection title="Minimum Rating" defaultOpen={false}>
             <div className="flex gap-2">
               {[4.5, 4.0, 3.5].map(rating => (
                 <button
@@ -474,7 +528,7 @@ function ToolsList() {
 
           <Separator className="bg-slate-100" />
 
-          <FilterSection title="Pricing Model">
+          <FilterSection title="Pricing Model" defaultOpen={true}>
             {['Free', 'Open Source', 'Freemium', 'Subscription', 'Perpetual'].map(type => (
               <div key={type} className="flex items-center group">
                 <Checkbox 
@@ -490,7 +544,7 @@ function ToolsList() {
 
           <Separator className="bg-slate-100" />
 
-          <FilterSection title="Operating System">
+          <FilterSection title="Operating System" defaultOpen={false}>
             <div className="flex flex-wrap gap-2">
               {['Windows', 'macOS', 'Linux', 'Web', 'Android', 'iOS'].map(os => (
                 <button
@@ -510,7 +564,7 @@ function ToolsList() {
 
           <Separator className="bg-slate-100" />
 
-          <FilterSection title="Geometry Kernel">
+          <FilterSection title="Geometry Kernel" defaultOpen={false}>
             <div className="space-y-2">
               {allKernels.map(k => (
                 <div key={k} className="flex items-center group">
@@ -528,7 +582,7 @@ function ToolsList() {
 
           <Separator className="bg-slate-100" />
 
-          <FilterSection title="Organization Size">
+          <FilterSection title="Organization Size" defaultOpen={false}>
             {allUserScales.map(scale => (
               <div key={scale} className="flex items-center group">
                 <Checkbox 
