@@ -149,18 +149,18 @@ function FilterSection({ title, children, defaultOpen = true }: FilterSectionPro
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full font-bold mb-3 uppercase text-[10px] tracking-[0.15em] text-slate-400 flex items-center justify-between hover:text-blue-600 transition-colors text-left group/btn"
+        className="w-full font-black mb-3.5 uppercase text-xs sm:text-[11px] tracking-[0.18em] text-slate-700 flex items-center justify-between hover:text-blue-600 transition-colors text-left group/btn"
       >
-        <span className="flex items-center gap-1.5">
+        <span className="flex items-center gap-2">
           <span className={cn(
-            "transform transition-transform text-[8px] text-slate-300 group-hover/btn:text-blue-500",
+            "transform transition-transform text-[10px] text-slate-400 group-hover/btn:text-blue-500 font-black",
             isOpen ? "rotate-90 text-blue-500" : ""
           )}>
             ▶
           </span>
           {title}
         </span>
-        <span className="w-8 h-px bg-slate-100 flex-1 ml-3 group-hover/btn:bg-blue-100 transition-colors"></span>
+        <span className="w-8 h-px bg-slate-200 flex-1 ml-3 group-hover/btn:bg-blue-200 transition-colors"></span>
       </button>
       <div
         className={cn(
@@ -857,22 +857,22 @@ function ToolsList() {
               <button
                 type="button"
                 onClick={() => setIsSitemapOpen(!isSitemapOpen)}
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50/50 transition-colors gap-4"
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50/70 transition-colors gap-4"
               >
                 <div>
-                  <h3 className="text-xs sm:text-sm font-black text-slate-800 tracking-tight uppercase tracking-widest">
+                  <h3 className="text-sm sm:text-base font-black text-slate-900 tracking-tight uppercase tracking-widest">
                     📁 Complete CAD & BIM Software Sitemap Directory (A-Z)
                   </h3>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-1">
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide mt-1.5">
                     Bypass pagination indexes. Flat crawling directory containing all 235+ tool pathways.
                   </p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[9px] font-black uppercase tracking-wider bg-slate-200/50 text-slate-500 px-2 py-0.5 rounded">
+                <div className="flex items-center gap-3">
+                  <span className="text-[10px] font-black uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-100/50 px-2.5 py-1 rounded-xl">
                     {tools.length} Tools
                   </span>
                   <span className={cn(
-                    "transform transition-transform text-slate-400 text-xs font-black shrink-0",
+                    "transform transition-transform text-slate-500 text-sm font-black shrink-0",
                     isSitemapOpen ? "rotate-90" : ""
                   )}>
                     ▶
