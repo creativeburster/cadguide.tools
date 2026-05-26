@@ -5,6 +5,16 @@ export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   const pathname = request.nextUrl.pathname;
 
+  // Root-level legacy pricing paths redirect to their modern canonicals
+  if (pathname === '/forever') {
+    url.pathname = '/pricing/perpetual';
+    return NextResponse.redirect(url, 301);
+  }
+  if (pathname === '/mo' || pathname === '/3yr') {
+    url.pathname = '/pricing/subscription';
+    return NextResponse.redirect(url, 301);
+  }
+
   // Direct redirects for free and open-source models (highest priority canonicals)
   if (pathname === '/pricing/free' || pathname === '/licensing/free') {
     url.pathname = '/free';
@@ -31,5 +41,13 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/licensing', '/licensing/:path*', '/pricing/free', '/pricing/open-source'],
+  matcher: [
+    '/licensing',
+    '/licensing/:path*',
+    '/pricing/free',
+    '/pricing/open-source',
+    '/forever',
+    '/mo',
+    '/3yr',
+  ],
 };
