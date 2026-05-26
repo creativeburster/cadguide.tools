@@ -1,4 +1,8 @@
 import Head from 'next/head';
+import type { Metadata } from 'next';
+import { tools, categories } from '@/lib/data';
+import { pageMetadata, siteBreadcrumbLd, collectionPageLd } from '@/lib/seo';
+import ToolsClient from './tools-client';
 
 // Items per page on the directory grid. Kept in sync with
 // `ITEMS_PER_PAGE` in tools-client.tsx — both reference the same constant
