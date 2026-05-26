@@ -1,11 +1,4 @@
-import { tools, categories } from '@/lib/data';
-import {
-  pageMetadata,
-  collectionPageLd,
-  siteBreadcrumbLd,
-} from '@/lib/seo';
-import type { Metadata } from 'next';
-import ToolsClient from './tools-client';
+import Head from 'next/head';
 
 // Items per page on the directory grid. Kept in sync with
 // `ITEMS_PER_PAGE` in tools-client.tsx — both reference the same constant
@@ -49,6 +42,7 @@ export default async function ToolsPage({
   const rawPage = Array.isArray(params.page) ? params.page[0] : params.page;
   const pageNum = Math.max(1, Number(rawPage) || 1);
   const totalPages = Math.max(1, Math.ceil(tools.length / ITEMS_PER_PAGE));
+  const path = pageNum > 1 ? `/tools?page=${pageNum}` : '/tools';
 
   const collection = collectionPageLd({
     name: 'CAD & BIM Software Directory',
@@ -68,6 +62,9 @@ export default async function ToolsPage({
   void categories;
   return (
     <>
+      <Head>
+        <link rel="canonical" href={path} />
+      </Head>
       {pageNum > 1 && <link rel="prev" href={`https://cadguide.tools/tools${pageNum > 2 ? `?page=${pageNum - 1}` : ''}`} />}
       {pageNum < totalPages && <link rel="next" href={`https://cadguide.tools/tools?page=${pageNum + 1}`} />}
       <script
