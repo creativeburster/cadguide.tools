@@ -293,13 +293,17 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["autocad", "bricscad"],
   ["autocad", "draftsight"],
   ["autocad", "zwcad"],
+  ["autocad", "gstarcad"],
   ["autocad", "microstation"],
   ["autocad", "librecad"],
   ["bricscad", "draftsight"],
   ["bricscad", "zwcad"],
+  ["gstarcad", "zwcad"],
+  ["gstarcad", "bricscad"],
   ["zwcad", "draftsight"],
   ["nanocad", "autocad"],
   ["nanocad", "bricscad"],
+  ["nanocad", "zwcad"],
   ["qcad", "librecad"],
   ["librecad", "freecad"],
   // ---- 2D CAD <-> BIM (common cross-category buyer query) ----
@@ -314,6 +318,7 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["solidworks", "catia"],
   ["solidworks", "siemens-nx"],
   ["solidworks", "freecad"],
+  ["solidworks", "solidcam"],
   ["autodesk-inventor", "solid-edge"],
   ["autodesk-inventor", "fusion-360"],
   ["catia", "siemens-nx"],
@@ -324,6 +329,7 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["blender", "3ds-max"],
   ["rhino-3d", "blender"],
   ["rhino-3d", "sketchup"],
+  ["rhino-3d", "matrixgold"],
   ["shapr3d", "rhino-3d"],
   ["blender", "rhino-3d"],
   ["sketchup", "rhino-3d"],
@@ -342,12 +348,16 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["archicad", "sketchup"],
   ["vectorworks", "sketchup"],
   ["tekla-structures", "revit"],
+  ["chief-architect", "revit"],
+  ["chief-architect", "sketchup"],
+  ["archicad", "chief-architect"],
   // ---- Viewer ----
   ["bluebeam-revu", "navisworks"],
   // ---- CAE/CAM ----
   ["mastercam", "fusion-360"],
   ["mastercam", "hypermill"],
   ["mastercam", "solidworks"],
+  ["mastercam", "solidcam"],
   ["ansys-fluent", "comsol-multiphysics"],
   ["ansys-mechanical", "abaqus"],
   // ---- EDA ----
@@ -358,6 +368,8 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["altium-designer", "eagle"],
   ["kicad", "orcad"],
   ["easyeda", "kicad"],
+  ["eplan-electric-p8", "kicad"],
+  ["altium-designer", "eplan-electric-p8"],
   // ---- Specialized (render / slicer) ----
   ["lumion", "twinmotion"],
   ["lumion", "enscape"],
@@ -367,6 +379,8 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["ultimaker-cura", "prusaslicer"],
   ["ultimaker-cura", "bambu-studio"],
   ["prusaslicer", "bambu-studio"],
+  ["3design", "matrixgold"],
+  ["clo-3d", "marvelous-designer"],
 ];
 
 export interface ComparisonPair {
