@@ -344,7 +344,7 @@ function CompareContent() {
           finished a custom matrix. Each card deep-links to a
           /compare/<a-vs-b> long-tail page that already has its own
           metadata + JSON-LD. */}
-      <section className="mt-20 md:mt-28">
+      <section id="popular" className="mt-20 md:mt-28 scroll-mt-24">
         <div className="text-center mb-10 md:mb-14">
           <Badge
             variant="outline"
@@ -399,7 +399,7 @@ function CompareContent() {
       </section>
 
       {/* Browse All Head-to-Head Comparison Guides */}
-      <section className="mt-14 md:mt-16 border-t border-slate-100 pt-14">
+      <section id="disciplines" className="mt-14 md:mt-16 border-t border-slate-100 pt-14 scroll-mt-24">
         <div className="text-center mb-12 md:mb-16">
           <Badge
             variant="outline"
