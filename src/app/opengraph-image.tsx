@@ -13,6 +13,7 @@ export const size = {
 };
 
 export const contentType = 'image/png';
+export const headers = { 'X-Robots-Tag': 'noindex, nofollow' };
 
 export default async function Image() {
   return new ImageResponse(

@@ -7,6 +7,7 @@ export const alt = 'CADGuide.tools Tool Review';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
+export const headers = { 'X-Robots-Tag': 'noindex, nofollow' };
 // Pre-generate one OG image per tool at build time.
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug }));
