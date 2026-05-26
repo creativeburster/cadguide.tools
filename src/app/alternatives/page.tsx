@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { tools } from '@/lib/data';
+import { tools, categories } from '@/lib/data';
 import { pageMetadata } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
 
@@ -33,8 +33,16 @@ function popularSwitchAwayTargets() {
 
 export default function AlternativesIndexPage() {
   const popular = popularSwitchAwayTargets();
+
+  // Helper to get sorted tools for a category
+  const getToolsInCategory = (catId: string) => {
+    return tools
+      .filter((t) => t.category_id === catId)
+      .sort((a, b) => a.name.localeCompare(b.name));
+  };
+
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="min-h-screen bg-slate-50 pb-20">
       <article className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <nav className="text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:underline">Home</Link>{' / '}
@@ -42,52 +50,107 @@ export default function AlternativesIndexPage() {
         </nav>
 
         <header className="mb-10">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            CAD Software Alternatives — 235 Switchover Guides
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            CAD Software Alternatives — {tools.length} Switchover Guides
           </h1>
           <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-3xl">
             Every tool in our catalog has a dedicated alternatives page that ranks
             5-8 editor-vetted competitors. Pick the tool you&apos;re considering moving
-            away from below, or browse all 235 in the{' '}
+            away from below, or browse all {tools.length} in the{' '}
             <Link href="/tools" className="text-blue-600 hover:underline">main directory</Link>.
           </p>
         </header>
 
-        <h2 className="text-xl font-bold text-slate-900 mb-5">
-          Most-searched alternatives
-        </h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {popular.map((t) => (
-            <li key={t.slug}>
-              <Link
-                href={`/alternatives/${t.slug}`}
-                className="flex items-center gap-3 p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-300 transition-colors"
-              >
-                <ToolLogo
-                  slug={t.slug}
-                  src={t.logo_url}
-                  websiteUrl={t.official_url}
-                  name={t.name}
-                  className="w-10 h-10 rounded-lg flex-shrink-0"
-                />
-                <div className="min-w-0">
-                  <div className="font-semibold text-slate-900 truncate">{t.name} alternatives</div>
-                  <div className="text-xs text-slate-500">Similar to {t.name}</div>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-slate-900 mb-5">
+            Most-searched alternatives
+          </h2>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {popular.map((t) => (
+              <li key={t.slug}>
+                <Link
+                  href={`/alternatives/${t.slug}`}
+                  className="flex items-center gap-3 p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all duration-200"
+                >
+                  <ToolLogo
+                    slug={t.slug}
+                    src={t.logo_url}
+                    websiteUrl={t.official_url}
+                    name={t.name}
+                    className="w-10 h-10 rounded-lg flex-shrink-0 border border-slate-100 shadow-inner"
+                  />
+                  <div className="min-w-0">
+                    <div className="font-semibold text-slate-900 truncate">{t.name} alternatives</div>
+                    <div className="text-xs text-slate-500">Similar to {t.name}</div>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-        <div className="mt-12 rounded-2xl bg-white border border-slate-200 p-6">
+        {/* Brand new Category Accordion Directory of all 240+ tools */}
+        <section className="border-t border-slate-200 pt-12 mb-12">
+          <h2 className="text-2xl font-black text-slate-900 tracking-tight">
+            Browse Alternatives for All {tools.length} Tools
+          </h2>
+          <p className="mt-2 text-slate-500 text-sm font-medium mb-8">
+            Select an industry sector below to discover verified alternatives and direct competitors for any design tool.
+          </p>
+
+          <div className="space-y-4">
+            {categories.map((cat) => {
+              const catTools = getToolsInCategory(cat.id);
+              if (catTools.length === 0) return null;
+
+              return (
+                <details
+                  key={cat.id}
+                  className="group bg-white rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300 shadow-sm [&_summary::-webkit-details-marker]:hidden"
+                >
+                  <summary className="flex items-center justify-between p-5 sm:p-6 cursor-pointer select-none list-none font-bold text-slate-900 hover:bg-slate-50/50 transition-colors">
+                    <div className="flex items-center gap-3">
+                      <span className="text-base sm:text-lg font-black tracking-tight">{cat.name} Sector</span>
+                      <span className="text-[10px] bg-slate-100 border border-slate-200 text-slate-500 px-2 py-0.5 rounded-full font-black uppercase tracking-wider">
+                        {catTools.length} Guides
+                      </span>
+                    </div>
+                    <span className="transition-transform duration-300 group-open:rotate-90 text-slate-400">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-5 sm:px-6 pb-6 pt-3 border-t border-slate-100 bg-slate-50/30">
+                    <p className="text-xs text-slate-400 font-bold mb-4 uppercase tracking-wider">
+                      {cat.description}
+                    </p>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                      {catTools.map((t) => (
+                        <li key={t.slug}>
+                          <Link
+                            href={`/alternatives/${t.slug}`}
+                            className="block py-2.5 px-4 rounded-xl border border-slate-200/50 bg-white hover:border-blue-400 hover:text-blue-600 hover:shadow-sm transition-all text-xs font-bold text-slate-700 truncate"
+                          >
+                            {t.name} Alternatives →
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </details>
+              );
+            })}
+          </div>
+        </section>
+
+        <div className="rounded-2xl bg-white border border-slate-200 p-6">
           <h2 className="text-lg font-bold text-slate-900">
             Looking for a tool not listed above?
           </h2>
           <p className="mt-2 text-sm text-slate-600">
-            We maintain alternatives pages for all 235 tools — just append the tool
-            slug to the URL, e.g. <code className="text-xs bg-slate-100 px-1.5 py-0.5 rounded">/alternatives/blender</code>, or
-            search the{' '}
-            <Link href="/tools" className="text-blue-600 hover:underline">directory</Link>.
+            We maintain alternatives pages for all {tools.length} tools. If you don&apos;t see your tool, you can search our{' '}
+            <Link href="/tools" className="text-blue-600 hover:underline">main directory</Link> or type <code className="text-xs bg-slate-100 px-1.5 py-0.5 rounded">/alternatives/&lt;tool-name&gt;</code> directly into the address bar.
           </p>
         </div>
       </article>
