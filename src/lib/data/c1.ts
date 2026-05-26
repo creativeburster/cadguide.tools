@@ -12250,7 +12250,7 @@ export const c1Tools: Tool[] = [
   official_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
   pricing_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
   affiliate_url: null,
-  score: 80,
+  score: 4.0,
 
   pros: [
     "Comprehensive ship design coverage",
@@ -13046,7 +13046,7 @@ export const c1Tools: Tool[] = [
   official_url: "https://www.yfcad.com/kd-max/",
   pricing_url: "https://www.yfcad.com/kd-max/",
   affiliate_url: null,
-  score: 68,
+  score: 3.4,
 
   pros: [
     "Specialized for kitchen and cabinet design",

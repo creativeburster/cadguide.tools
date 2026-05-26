@@ -1909,7 +1909,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.isdgroup.com/",
   affiliate_url: null,
-  score: 72,
+  score: 3.6,
   pros: [
     "複数の業界に対応する包括的なソリューション",
     "PDM/PLM統合でデータ管理が効率的",
@@ -2027,7 +2027,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://rengabim.com/",
   affiliate_url: null,
-  score: 68,
+  score: 3.4,
   pros: [
     "ロシア建築基準に完全対応",
     "全分野をカバーする包括的なBIMソリューション",
@@ -2150,7 +2150,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
-  score: 75,
+  score: 3.8,
 
   pros: [
     "世界最高数のIFC認証ソリューション",
@@ -2287,7 +2287,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Individual", "Small Business", "Mid-Sized Company"],
   official_url: "https://www.accasoftware.com/",
   affiliate_url: null,
-  score: 70,
+  score: 3.5,
   pros: [
     "IFC認証で相互運用性が高い",
     "直感的な建築設計インターフェース",
@@ -2403,7 +2403,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.cadwork.com/",
   affiliate_url: null,
-  score: 73,
+  score: 3.7,
   pros: [
     "木材建築に特化した専門ソリューション",
     "CNCマシン対応で製造まで統合",
@@ -2521,7 +2521,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.magicad.com/",
   affiliate_url: null,
-  score: 76,
+  score: 3.8,
   pros: [
     "MEP設計に特化した専門ソリューション",
     "豊富なメーカーライブラリ",
@@ -2637,7 +2637,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
   official_url: "https://www.graphisoft.com/solutions/dds-cad",
   affiliate_url: null,
-  score: 71,
+  score: 3.6,
   pros: [
     "MEP設計に特化した専門ソリューション",
     "ノルディック市場での実績豊富",
@@ -2760,7 +2760,7 @@ export const c3Tools: Tool[] = [
   user_scales: ["Mid-Sized Company", "Enterprise"],
   official_url: "https://www.drofus.com/",
   affiliate_url: null,
-  score: 74,
+  score: 3.7,
 
   pros: [
     "データ駆動の要件管理プラットフォーム",
