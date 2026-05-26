@@ -239,7 +239,7 @@ function HomeBody() {
               <div className="mt-1 text-lg font-black text-slate-900">By Pricing & License</div>
               <div className="mt-1 text-xs text-slate-500">Free, perpetual buyouts, floating networks, student access…</div>
             </Link>
-            <Link href="/compare#popular" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+            <Link href="/compare#disciplines" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">81 matchups</div>
               <div className="mt-1 text-lg font-black text-slate-900">Comparisons</div>
               <div className="mt-1 text-xs text-slate-500">Side-by-side specs, feature tables & expert verdicts…</div>
