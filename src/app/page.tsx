@@ -33,6 +33,42 @@ export default function Home() {
   );
 }
 
+const INDUSTRY_STANDARD_SLUGS = [
+  'autocad',
+  'solidworks',
+  'revit',
+  'rhino-3d',
+  'altium-designer',
+  'siemens-nx'
+];
+
+const BIM_SLUGS = [
+  'revit',
+  'tekla-structures',
+  'archicad',
+  'civil-3d',
+  'chief-architect',
+  'vectorworks',
+  'allplan',
+  'openroads-designer',
+  'vectorworks-landmark'
+];
+
+const VERTICAL_GEM_SLUGS = [
+  'matrixgold',
+  'exocad',
+  'clo-3d',
+  'cabinet-vision',
+  'substance-painter',
+  'marvelous-designer',
+  'aveva-marine',
+  'wysiwyg',
+  'land-fx',
+  'prusaslicer',
+  'bambu-studio',
+  '3design'
+];
+
 function HomeBody() {
   return (
     <main className="min-h-screen bg-white overflow-x-hidden w-full">
@@ -85,7 +121,7 @@ function HomeBody() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tools.filter(t => t.score >= 4.8).slice(0, 6).map((tool) => (
+          {INDUSTRY_STANDARD_SLUGS.map(slug => tools.find(t => t.slug === slug)).filter((t): t is typeof tools[number] => !!t).map((tool) => (
             <Card key={tool.id} className="overflow-hidden border-2 hover:border-blue-600 transition-all group relative rounded-[32px] bg-white shadow-sm hover:shadow-xl">
               <div className="p-8">
                 <div className="flex items-center gap-5 mb-6">
@@ -135,7 +171,7 @@ function HomeBody() {
              </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tools.filter(t => t.category_id === 'c3').slice(0, 9).map((tool) => (
+            {BIM_SLUGS.map(slug => tools.find(t => t.slug === slug)).filter((t): t is typeof tools[number] => !!t).map((tool) => (
               <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white p-5 rounded-[24px] border border-slate-200/60 hover:border-blue-100 hover:shadow-xl transition-all flex items-start gap-4">
                 <ToolLogo 
                   slug={tool.slug} src={tool.logo_url} 
@@ -166,7 +202,7 @@ function HomeBody() {
             <p className="text-blue-200/50 max-w-2xl mx-auto font-medium">Deep-industry specific tools that redefine professional efficiency in niche sectors.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {tools.filter(t => t.category_id === 'c7').slice(0, 12).map((tool) => (
+            {VERTICAL_GEM_SLUGS.map(slug => tools.find(t => t.slug === slug)).filter((t): t is typeof tools[number] => !!t).map((tool) => (
               <Link key={tool.id} href={`/tools/${tool.slug}`} className="group bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:bg-white/10 hover:border-blue-400/50 transition-all text-center">
                 <ToolLogo 
                   slug={tool.slug} src={tool.logo_url} 

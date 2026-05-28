@@ -3,10 +3,6 @@ import type { Metadata } from 'next';
 import { tools, categories } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, collectionPageLd } from '@/lib/seo';
 import ToolsClient from './tools-client';
-
-// Items per page on the directory grid. Kept in sync with
-// `ITEMS_PER_PAGE` in tools-client.tsx — both reference the same constant
-// via the canonical URL math below.
 const ITEMS_PER_PAGE = 24;
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
