@@ -443,7 +443,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         {toolComparisons.slice(0, 3).map((pair, pIdx) => {
                           const vsName = pair.a.slug === tool.slug ? pair.b.name : pair.a.name;
                           const vsSlug = pair.a.slug === tool.slug ? pair.b.slug : pair.a.slug;
-                          const compareSlug = `${pair.a.slug}-vs-${pair.b.slug}`;
+                          const compareSlug = pair.pairSlug;
                           return (
                             <Link href={`/compare/${compareSlug}`} key={pIdx}>
                               <Button
@@ -1344,7 +1344,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   <div className="space-y-4">
                     {toolComparisons.slice(0, 4).map((pair, pIdx) => {
                       const vsTool = pair.a.slug === tool.slug ? pair.b : pair.a;
-                      const compareSlug = `${pair.a.slug}-vs-${pair.b.slug}`;
+                      const compareSlug = pair.pairSlug;
                       return (
                         <Link
                           key={pIdx}
@@ -1360,6 +1360,35 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         </Link>
                       );
                     })}
+                  </div>
+                </div>
+              )}
+
+              {/* Related Playbooks & Guides Sidebar Card */}
+              {relatedGuides.length > 0 && (
+                <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm">
+                  <div className="flex items-center gap-3 mb-6">
+                    <FileText className="w-5 h-5 text-blue-600" />
+                    <h4 className="text-lg font-black text-slate-900 tracking-tight">
+                      Related Playbooks & Guides
+                    </h4>
+                  </div>
+                  <div className="space-y-4">
+                    {relatedGuides.slice(0, 3).map((g) => (
+                      <Link
+                        key={g.id}
+                        href={`/guides/${g.slug}`}
+                        className="block p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all group border border-slate-50 hover:border-blue-100"
+                      >
+                        <span className="font-bold text-slate-800 text-xs line-clamp-2 group-hover:text-blue-600 transition-colors leading-relaxed">
+                          {g.title}
+                        </span>
+                        <div className="flex items-center justify-between mt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                          <span>{g.category}</span>
+                          <span>{g.readTime}</span>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
               )}
