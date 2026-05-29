@@ -40,6 +40,7 @@ import {
 } from "lucide-react";
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
+import { comparisonPairs } from "@/lib/seo-content";
 
 interface Props {
   tool: Tool;
@@ -49,6 +50,60 @@ interface Props {
 
 export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
+
+  // Helper functions for dynamic tree capillaries
+  const getPlatformSlug = (platName: string): string | null => {
+    const name = platName.toLowerCase();
+    if (name.includes("mac")) return "mac";
+    if (name.includes("win")) return "windows";
+    if (name.includes("linux")) return "linux";
+    if (name.includes("ios") || name.includes("ipad")) return "ios";
+    if (name.includes("android")) return "android";
+    if (name.includes("web") || name.includes("browser")) return "web";
+    return null;
+  };
+
+  const getSectorLinks = (t: Tool) => {
+    const links: { name: string; href: string }[] = [];
+    const inds = t.industries ?? [];
+    
+    if (t.category_id === "c5") {
+      if (inds.some(i => ["CAE", "Simulation", "Structural"].includes(i)) || /cae|fea|simulation|cfd/i.test(t.name + " " + t.short_desc)) {
+        links.push({ name: "CAE & Simulation", href: "/sectors/cae" });
+      }
+      if (inds.some(i => ["Manufacturing", "Machining", "Tooling"].includes(i)) || /cam|cnc|toolpath|milling/i.test(t.name + " " + t.short_desc)) {
+        links.push({ name: "CAM & CNC Manufacturing", href: "/sectors/cam" });
+      }
+    }
+    
+    if (inds.some(i => ["Aerospace"].includes(i))) {
+      links.push({ name: "Aerospace Design", href: "/sectors/aerospace" });
+    }
+    if (inds.some(i => ["Automotive", "Transportation"].includes(i))) {
+      links.push({ name: "Automotive & Auto Parts", href: "/sectors/automotive" });
+    }
+    if (inds.some(i => ["Medical", "Healthcare"].includes(i))) {
+      links.push({ name: "Medical Devices", href: "/sectors/medical-devices" });
+    }
+    if (inds.some(i => ["Woodworking", "Furniture"].includes(i))) {
+      links.push({ name: "Woodworking", href: "/sectors/woodworking-customization" });
+    }
+    if (inds.some(i => ["Piping", "Petrochemical", "Oil & Gas"].includes(i))) {
+      links.push({ name: "Piping & Pipeline", href: "/sectors/piping-pipeline" });
+    }
+    if (inds.some(i => ["Infrastructure", "Civil Engineering"].includes(i))) {
+      links.push({ name: "Hydraulic & Geotechnical", href: "/sectors/hydraulic-geotechnical" });
+    }
+    if (inds.some(i => ["Additive Manufacturing", "3D Printing"].includes(i))) {
+      links.push({ name: "3D Printing & Additive", href: "/sectors/3d-printing" });
+    }
+    
+    return links.slice(0, 2);
+  };
+
+  const toolComparisons = comparisonPairs().filter(
+    (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
+  );
 
   // Surface Compatibility / Trust sub-nav entries only when at least
   // one of the underlying fields is populated. Avoids dead anchors on
@@ -196,16 +251,56 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     className="w-20 h-20 md:w-40 md:h-40 rounded-[24px] md:rounded-[40px] shadow-2xl border-2 md:border-4 border-white shrink-0 bg-white"
                   />
                   <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <div className="flex flex-wrap items-center gap-2 mb-6">
                       <Badge className="bg-blue-600 text-white border-none font-black px-4 py-1.5 uppercase tracking-[0.2em] text-[10px]">
                         {category?.name}
                       </Badge>
                       <Badge
                         variant="outline"
-                        className="bg-slate-50 text-slate-500 border-slate-100 font-bold px-4"
+                        className="bg-slate-50 text-slate-500 border-slate-100 font-bold px-4 py-1.5 text-[10px]"
                       >
                         {tool.pricing_type}
                       </Badge>
+                      
+                      {/* Dynamic Tree Arteries (Upward SEO Badges) */}
+                      {category && (
+                        <Link href={`/best/${category.slug}`}>
+                          <Badge className="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                            <Award className="w-3 h-3 text-indigo-500" /> Best {category.name} Guides
+                          </Badge>
+                        </Link>
+                      )}
+
+                      {(() => {
+                        const platformBadge = tool.platforms
+                          ? tool.platforms
+                              .map(p => ({ name: p, slug: getPlatformSlug(p) }))
+                              .find(p => p.slug !== null)
+                          : null;
+                        return platformBadge ? (
+                          <Link href={`/platforms/${platformBadge.slug}`}>
+                            <Badge className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border-emerald-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                              <Cloud className="w-3 h-3 text-emerald-500" /> CAD for {platformBadge.name}
+                            </Badge>
+                          </Link>
+                        ) : null;
+                      })()}
+
+                      {getSectorLinks(tool).map((sec, sIdx) => (
+                        <Link href={sec.href} key={sIdx}>
+                          <Badge className="bg-amber-50 hover:bg-amber-100 text-amber-700 border-amber-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                            <Cpu className="w-3 h-3 text-amber-500" /> {sec.name}
+                          </Badge>
+                        </Link>
+                      ))}
+
+                      {((tool.file_formats_in ?? []).some(f => f.toLowerCase() === 'dwg') || (tool.file_formats_out ?? []).some(f => f.toLowerCase() === 'dwg')) && (
+                        <Link href="/file-formats/dwg">
+                          <Badge className="bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                            <FileText className="w-3 h-3 text-rose-500" /> DWG Native
+                          </Badge>
+                        </Link>
+                      )}
                     </div>
                     <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight leading-tight break-words">
                       {tool.name}
@@ -305,6 +400,34 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       </span>
                     ))}
                   </div>
+
+                  {/* Horizontal Competitor PK Battles */}
+                  {toolComparisons.length > 0 && (
+                    <div className="mt-8 pt-6 border-t border-slate-100">
+                      <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-3">
+                        Direct Comparison Battles
+                      </span>
+                      <div className="flex flex-wrap gap-2.5">
+                        {toolComparisons.slice(0, 3).map((pair, pIdx) => {
+                          const vsName = pair.a.slug === tool.slug ? pair.b.name : pair.a.name;
+                          const vsSlug = pair.a.slug === tool.slug ? pair.b.slug : pair.a.slug;
+                          const compareSlug = `${pair.a.slug}-vs-${pair.b.slug}`;
+                          return (
+                            <Link href={`/compare/${compareSlug}`} key={pIdx}>
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                className="rounded-xl border-slate-100 bg-white shadow-sm hover:border-blue-600 text-slate-700 hover:text-blue-600 transition-all font-bold text-xs h-10 px-4 gap-2 flex items-center"
+                              >
+                                <Scale className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+                                {tool.name} <span className="text-slate-400 font-bold">vs</span> {vsName}
+                              </Button>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </section>
