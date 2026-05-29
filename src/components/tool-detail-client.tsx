@@ -743,14 +743,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                           Based on {r.count.toLocaleString()} reviews
                         </div>
                         {r.url && (
-                          <a
-                            href={r.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                          <Link
+                            href={`/go?url=${encodeURIComponent(r.url)}`}
                             className="inline-flex items-center gap-1 mt-4 text-xs font-black text-blue-600 hover:text-blue-700 uppercase tracking-wider"
                           >
                             Read reviews <ExternalLink className="w-3 h-3" />
-                          </a>
+                          </Link>
                         )}
                       </Card>
                     ))}
