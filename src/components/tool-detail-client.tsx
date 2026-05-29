@@ -411,7 +411,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         {toolComparisons.slice(0, 3).map((pair, pIdx) => {
                           const vsName = pair.a.slug === tool.slug ? pair.b.name : pair.a.name;
                           const vsSlug = pair.a.slug === tool.slug ? pair.b.slug : pair.a.slug;
-                          const compareSlug = `${pair.a.slug}-vs-${pair.b.slug}`;
+                          const compareSlug = pair.pairSlug;
                           return (
                             <Link href={`/compare/${compareSlug}`} key={pIdx}>
                               <Button
@@ -1244,7 +1244,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   <div className="space-y-4">
                     {toolComparisons.slice(0, 4).map((pair, pIdx) => {
                       const vsTool = pair.a.slug === tool.slug ? pair.b : pair.a;
-                      const compareSlug = `${pair.a.slug}-vs-${pair.b.slug}`;
+                      const compareSlug = pair.pairSlug;
                       return (
                         <Link
                           key={pIdx}
