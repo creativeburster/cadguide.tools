@@ -1232,6 +1232,38 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 </div>
               </div>
 
+              {/* Quick Comparison Battles Sidebar Card */}
+              {toolComparisons.length > 0 && (
+                <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm">
+                  <div className="flex items-center gap-3 mb-6">
+                    <Scale className="w-5 h-5 text-blue-600" />
+                    <h4 className="text-lg font-black text-slate-900 tracking-tight">
+                      Quick PK Battles
+                    </h4>
+                  </div>
+                  <div className="space-y-4">
+                    {toolComparisons.slice(0, 4).map((pair, pIdx) => {
+                      const vsTool = pair.a.slug === tool.slug ? pair.b : pair.a;
+                      const compareSlug = `${pair.a.slug}-vs-${pair.b.slug}`;
+                      return (
+                        <Link
+                          key={pIdx}
+                          href={`/compare/${compareSlug}`}
+                          className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all group border border-slate-50 hover:border-blue-100"
+                        >
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className="font-bold text-slate-800 text-xs truncate group-hover:text-blue-600 transition-colors">
+                              {tool.name} <span className="text-slate-400 font-bold">vs</span> {vsTool.name}
+                            </span>
+                          </div>
+                          <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {/* Trending in Category (Restored) */}
               <div className="bg-white p-10 rounded-[48px] border border-slate-100 shadow-sm">
                 <div className="flex items-center gap-3 mb-8">
