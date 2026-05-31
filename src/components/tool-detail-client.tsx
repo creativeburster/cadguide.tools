@@ -128,6 +128,26 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
       };
     })
     .slice(0, 4);
+
+  const sidebarTroubleshootingGuides = rawRelatedGuides
+    .filter((g) => g.category === "troubleshooting")
+    .map((g) => {
+      const isAutoCAD = g.softwareSlug === "autocad";
+      const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
+      
+      const newTitle = g.title.replace(replaceRegex, tool.name);
+      const newExcerpt = g.excerpt.replace(replaceRegex, tool.name);
+      const newKeyword = g.keyword.replace(replaceRegex, tool.name.toLowerCase());
+      
+      return {
+        ...g,
+        title: newTitle,
+        excerpt: newExcerpt,
+        keyword: newKeyword,
+        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
+      };
+    })
+    .slice(0, 3);
   // Surface Compatibility / Trust sub-nav entries only when at least
   // one of the underlying fields is populated. Avoids dead anchors on
   // tools that haven't been hand-enriched yet.
@@ -1365,16 +1385,16 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               )}
 
               {/* Related Playbooks & Guides Sidebar Card */}
-              {relatedGuides.length > 0 && (
+              {sidebarTroubleshootingGuides.length > 0 && (
                 <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm">
                   <div className="flex items-center gap-3 mb-6">
                     <FileText className="w-5 h-5 text-blue-600" />
                     <h4 className="text-lg font-black text-slate-900 tracking-tight">
-                      Related Playbooks & Guides
+                      Troubleshooting Playbooks
                     </h4>
                   </div>
                   <div className="space-y-4">
-                    {relatedGuides.slice(0, 3).map((g) => (
+                    {sidebarTroubleshootingGuides.map((g) => (
                       <Link
                         key={g.id}
                         href={`/guides/${g.slug}`}
