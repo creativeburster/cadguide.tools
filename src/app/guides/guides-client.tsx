@@ -236,6 +236,17 @@ export default function GuidesClient() {
 
   const selectedTool = tools.find(t => t.slug === selectedToolSlug) || null;
 
+  // Sync client-side document title for a flawless browser tab user experience
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      if (selectedTool) {
+        document.title = `${selectedTool.name} Guides & IT Deployment | CADGuide.tools`;
+      } else {
+        document.title = 'CAD Professional Guides & IT Deployment | CADGuide.tools';
+      }
+    }
+  }, [selectedTool]);
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);

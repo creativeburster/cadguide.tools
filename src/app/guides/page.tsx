@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { tools } from '@/lib/data';
 import GuidesClient from './guides-client';
 
+export const dynamic = 'force-dynamic';
+
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
 export async function generateMetadata({
