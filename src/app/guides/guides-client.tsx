@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -19,7 +19,7 @@ import {
   DIRECTORY_FOLDERS,
 } from '@/lib/guides-data';
 
-export const getProgrammaticLink = (title: string): string => {
+export const getProgrammaticLink = (title: string, forcedToolSlug?: string): string => {
   const titleLower = title.toLowerCase();
   
   // Find matching tool
@@ -27,7 +27,7 @@ export const getProgrammaticLink = (title: string): string => {
     .sort((a, b) => b.slug.length - a.slug.length)
     .find(t => titleLower.includes(t.slug) || titleLower.includes(t.name.toLowerCase()));
     
-  const toolSlug = matchedTool ? matchedTool.slug : 'autocad';
+  const toolSlug = forcedToolSlug || (matchedTool ? matchedTool.slug : 'autocad');
   
   // Determine category
   let category: 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing' = 'troubleshooting';
@@ -219,6 +219,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
 
 export default function GuidesClient() {
   const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing'>('all');
+  const [selectedToolSlug, setSelectedToolSlug] = useState<string>('all');
   
   // State to control collapsible drawer in All Category cards at top
   const [openCardAccordions, setOpenCardAccordions] = useState<Record<string, boolean>>({});
@@ -232,6 +233,21 @@ export default function GuidesClient() {
   const [faqTab, setFaqTab] = useState<'all' | 'licensing' | 'performance' | 'standards'>('all');
   const [faqPage, setFaqPage] = useState<number>(1);
   const [openFaqQuestion, setOpenFaqQuestion] = useState<string | null>(null);
+
+  const selectedTool = tools.find(t => t.slug === selectedToolSlug) || null;
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const toolParam = params.get('tool');
+      if (toolParam) {
+        const matched = tools.find(t => t.slug === toolParam);
+        if (matched) {
+          setSelectedToolSlug(toolParam);
+        }
+      }
+    }
+  }, []);
 
   const toggleCardAccordion = (id: string) => {
     setOpenCardAccordions(prev => ({
@@ -259,7 +275,19 @@ export default function GuidesClient() {
 
   const isAll = activeTab === 'all';
   
-  const displayArticles = ARTICLES_LIST.filter(a => a.category === activeTab).slice(0, 6);
+  const rawDisplayArticles = ARTICLES_LIST.filter(a => a.category === activeTab).slice(0, 6);
+  const displayArticles = rawDisplayArticles.map((art) => {
+    if (!selectedTool) return art;
+    const isAutoCAD = art.softwareSlug === 'autocad';
+    const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
+    return {
+      ...art,
+      title: art.title.replace(replaceRegex, selectedTool.name),
+      excerpt: art.excerpt.replace(replaceRegex, selectedTool.name),
+      keyword: art.keyword.replace(replaceRegex, selectedTool.name.toLowerCase()),
+      softwareSlug: selectedTool.slug
+    };
+  });
 
   const accordionFaqs = [
     {
@@ -330,9 +358,45 @@ export default function GuidesClient() {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-none">
           Professional CAD Guides
         </h1>
-        <p className="mt-4 text-sm sm:text-base text-slate-500 leading-relaxed max-w-3xl mx-auto font-medium">
+        <p className="mt-4 text-sm sm:text-base text-slate-500 leading-relaxed max-w-3xl mx-auto font-medium mb-8">
           Zero entry-level tutorials. Pure, B-End engineering blueprints, troubleshooting steps, and hardware tunings, curated by industry architects and IT administrators.
         </p>
+
+        {/* --- PREMIUM DYNAMIC SOFTWARE FILTER --- */}
+        <div className="max-w-md mx-auto mb-4 relative text-left">
+          <label className="block text-[10px] font-mono font-black uppercase tracking-widest text-slate-400 mb-2">
+            Filter Guides by Software:
+          </label>
+          <div className="relative">
+            <select
+              value={selectedToolSlug}
+              onChange={(e) => {
+                setSelectedToolSlug(e.target.value);
+                // Dynamically update query param
+                if (typeof window !== 'undefined') {
+                  const url = new URL(window.location.href);
+                  if (e.target.value === 'all') {
+                    url.searchParams.delete('tool');
+                  } else {
+                    url.searchParams.set('tool', e.target.value);
+                  }
+                  window.history.pushState({}, '', url.toString());
+                }
+              }}
+              className="w-full bg-white border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold rounded-2xl px-5 py-3.5 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-sm cursor-pointer transition-all hover:border-slate-300"
+            >
+              <option value="all">⚡ All CAD & BIM Software (Default Showcase)</option>
+              {[...tools].sort((a, b) => a.name.localeCompare(b.name)).map((t) => (
+                <option key={t.slug} value={t.slug}>
+                  {t.name} Guides
+                </option>
+              ))}
+            </select>
+            <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-400 text-xs">
+              ▼
+            </div>
+          </div>
+        </div>
       </header>
 
       {/* Main Grid Container */}
@@ -422,22 +486,32 @@ export default function GuidesClient() {
                       )}
                     >
                       <ul className="space-y-3 text-xs sm:text-sm">
-                        {p.articles.map((art) => (
-                          <li key={art.title} className="group/item flex items-start gap-2">
-                            <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
-                            <div className="flex-1 min-w-0">
-                              <Link 
-                                href={`/guides/${art.slug}`} 
-                                className="font-bold text-slate-800 hover:text-blue-600 transition-colors group-hover/item:underline block leading-snug"
-                              >
-                                {art.title}
-                              </Link>
-                              <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
-                                Keyword Mapped: {art.keyword}
-                              </span>
-                            </div>
-                          </li>
-                        ))}
+                        {p.articles.map((art, aIdx) => {
+                          const isAutoCAD = p.category === 'troubleshooting';
+                          const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
+                          const displayTitle = selectedTool 
+                            ? art.title.replace(replaceRegex, selectedTool.name)
+                            : art.title;
+                          const displaySlug = selectedTool
+                            ? `${selectedTool.slug}-${p.category}-${aIdx}`
+                            : `${isAutoCAD ? 'autocad' : 'solidworks'}-${p.category}-${aIdx}`;
+                          return (
+                            <li key={art.title} className="group/item flex items-start gap-2">
+                              <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
+                              <div className="flex-1 min-w-0">
+                                <Link 
+                                  href={`/guides/${displaySlug}`} 
+                                  className="font-bold text-slate-800 hover:text-blue-600 transition-colors group-hover/item:underline block leading-snug"
+                                >
+                                  {displayTitle}
+                                </Link>
+                                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
+                                  Keyword Mapped: {selectedTool ? art.keyword.replace(replaceRegex, selectedTool.name.toLowerCase()) : art.keyword}
+                                </span>
+                              </div>
+                            </li>
+                          );
+                        })}
                       </ul>
                       
                       <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] font-black text-blue-600 hover:underline cursor-pointer">
@@ -586,14 +660,19 @@ export default function GuidesClient() {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-                    {activeAlphabetList.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2 p-2 hover:bg-slate-50 rounded-xl transition-all group">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
-                        <Link href={getProgrammaticLink(item)} className="font-bold text-slate-800 group-hover:text-blue-600 hover:underline">
-                          {item}
-                        </Link>
-                      </div>
-                    ))}
+                    {activeAlphabetList.map((item, idx) => {
+                      const displayItem = selectedTool 
+                        ? item.replace(/autocad/gi, selectedTool.name).replace(/solidworks/gi, selectedTool.name)
+                        : item;
+                      return (
+                        <div key={idx} className="flex items-center gap-2 p-2 hover:bg-slate-50 rounded-xl transition-all group">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
+                          <Link href={getProgrammaticLink(item, selectedTool?.slug)} className="font-bold text-slate-800 group-hover:text-blue-600 hover:underline">
+                            {displayItem}
+                          </Link>
+                        </div>
+                      );
+                    })}
                   </div>
                 </Card>
               );
@@ -666,17 +745,22 @@ export default function GuidesClient() {
                     )}
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-                      {folder.links.map((link, lIdx) => (
-                        <div key={lIdx} className="flex items-start gap-2 p-2 hover:bg-white hover:shadow-sm rounded-xl transition-all group">
-                          <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
-                          <Link 
-                            href={getProgrammaticLink(link.title)} 
-                            className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors hover:underline block leading-snug"
-                          >
-                            {link.title}
-                          </Link>
-                        </div>
-                      ))}
+                      {folder.links.map((link, lIdx) => {
+                        const displayTitle = selectedTool 
+                          ? link.title.replace(/autocad/gi, selectedTool.name).replace(/solidworks/gi, selectedTool.name)
+                          : link.title;
+                        return (
+                          <div key={lIdx} className="flex items-start gap-2 p-2 hover:bg-white hover:shadow-sm rounded-xl transition-all group">
+                            <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
+                            <Link 
+                              href={getProgrammaticLink(link.title, selectedTool?.slug)} 
+                              className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors hover:underline block leading-snug"
+                            >
+                              {displayTitle}
+                            </Link>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </Card>

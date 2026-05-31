@@ -1169,10 +1169,10 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 </div>
                 <div className="text-center pt-2">
                   <Link
-                    href="/guides"
+                    href={`/guides?tool=${tool.slug}`}
                     className="inline-flex items-center gap-2 text-blue-600 font-black hover:underline"
                   >
-                    Explore all CAD & BIM expert guides in our library →
+                    Explore all {tool.name} expert guides in our library →
                   </Link>
                 </div>
               </section>
