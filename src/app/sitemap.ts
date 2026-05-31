@@ -11,6 +11,7 @@ import {
   sectorPagePaths,
 } from '@/lib/seo-content';
 import { PRICING_PAGES } from '@/lib/pricing-licensing-content';
+import { ARTICLES_LIST } from '@/lib/guides-data';
 
 const BASE_URL = 'https://cadguide.tools';
 
@@ -33,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/free`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/open-source`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/guides`, lastModified: now, changeFrequency: 'daily', priority: 0.95 },
     // /deals intentionally omitted — page is noindex,follow until real partner deals are wired.
   ];
 
@@ -126,6 +128,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     }));
 
+  // Core 8 Arteries (Category Landing Pages) — high priority technical specifications index directories.
+  const categoryKeys = ['troubleshooting', 'performance', 'printing', 'standards', 'deployment', 'migration', 'procurement', 'manufacturing'];
+  const categoryUrls: MetadataRoute.Sitemap = categoryKeys.map((cat) => ({
+    url: `${BASE_URL}/guides/${cat}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
+  // Dynamic guide pages (2,400 entries) - pre-render 10 guides per tool for maximum long-tail coverage
+  const guideUrls: MetadataRoute.Sitemap = [];
+  const selectedArticles = ARTICLES_LIST.slice(0, 10);
+  for (const tool of tools) {
+    for (const art of selectedArticles) {
+      const artIndex = art.id.split('-').pop();
+      guideUrls.push({
+        url: `${BASE_URL}/guides/${tool.slug}-${art.category}-${artIndex}`,
+        lastModified: now,
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+      });
+    }
+  }
+
   return [
     ...staticPages,
     ...toolUrls,
@@ -138,5 +164,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...personaUrls,
     ...sectorUrls,
     ...pricingUrls,
+    ...categoryUrls,
+    ...guideUrls,
   ];
 }
+

@@ -41,6 +41,7 @@ import {
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { comparisonPairs } from "@/lib/seo-content";
+import { ARTICLES_LIST } from "@/lib/guides-data";
 
 interface Props {
   tool: Tool;
@@ -105,6 +106,48 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
   );
 
+  const rawRelatedGuides = ARTICLES_LIST.filter(
+    (g) => g.softwareSlug === (tool.slug === "autocad" ? "autocad" : tool.slug === "solidworks" ? "solidworks" : g.softwareSlug)
+  );
+
+  const relatedGuides = rawRelatedGuides
+    .map((g) => {
+      const isAutoCAD = g.softwareSlug === "autocad";
+      const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
+      
+      const newTitle = g.title.replace(replaceRegex, tool.name);
+      const newExcerpt = g.excerpt.replace(replaceRegex, tool.name);
+      const newKeyword = g.keyword.replace(replaceRegex, tool.name.toLowerCase());
+      
+      return {
+        ...g,
+        title: newTitle,
+        excerpt: newExcerpt,
+        keyword: newKeyword,
+        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
+      };
+    })
+    .slice(0, 4);
+
+  const sidebarTroubleshootingGuides = rawRelatedGuides
+    .filter((g) => g.category === "troubleshooting")
+    .map((g) => {
+      const isAutoCAD = g.softwareSlug === "autocad";
+      const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
+      
+      const newTitle = g.title.replace(replaceRegex, tool.name);
+      const newExcerpt = g.excerpt.replace(replaceRegex, tool.name);
+      const newKeyword = g.keyword.replace(replaceRegex, tool.name.toLowerCase());
+      
+      return {
+        ...g,
+        title: newTitle,
+        excerpt: newExcerpt,
+        keyword: newKeyword,
+        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
+      };
+    })
+    .slice(0, 3);
   // Surface Compatibility / Trust sub-nav entries only when at least
   // one of the underlying fields is populated. Avoids dead anchors on
   // tools that haven't been hand-enriched yet.
@@ -158,6 +201,15 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
       icon: <MessageSquare className="w-3.5 h-3.5" />,
     },
     { id: "faq", label: "FAQ", icon: <HelpCircle className="w-3.5 h-3.5" /> },
+    ...(relatedGuides.length > 0
+      ? [
+          {
+            id: "guides",
+            label: "Guides",
+            icon: <FileText className="w-3.5 h-3.5" />,
+          },
+        ]
+      : []),
     {
       id: "alternatives",
       label: "Alternatives",
@@ -1058,6 +1110,74 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
             </section>
 
+            {/* Guides Section */}
+            {relatedGuides.length > 0 && (
+              <section id="guides" className="scroll-mt-36 space-y-6 md:space-y-10">
+                <div className="flex items-center gap-5">
+                  <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600">
+                    <FileText className="w-6 h-6" />
+                  </div>
+                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
+                    Troubleshooting & Technical Guides
+                  </h2>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {relatedGuides.map((g) => (
+                    <Card
+                      key={g.id}
+                      className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-4">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-lg">
+                            Expert Guide
+                          </span>
+                          <span className="text-xs text-slate-400 font-semibold">{g.readTime}</span>
+                        </div>
+                        
+                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight mb-3 group-hover:text-blue-600 transition-colors">
+                          <Link href={`/guides/${g.slug}`}>{g.title}</Link>
+                        </h3>
+                        
+                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium line-clamp-3 mb-6">
+                          {g.excerpt}
+                        </p>
+                      </div>
+
+                      <div className="pt-4 border-t border-slate-100 space-y-4">
+                        <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                          <div className="flex items-center gap-2">
+                            <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-black text-[9px] flex items-center justify-center">WP</span>
+                            <span className="font-semibold text-slate-700">{g.author}</span>
+                          </div>
+                          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">
+                            Date: {g.date}
+                          </div>
+                        </div>
+
+                        <div className="flex items-center justify-between pt-2">
+                          <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                            Intent: {g.keyword}
+                          </span>
+                          <Link href={`/guides/${g.slug}`} className="text-xs font-black text-blue-600 hover:underline">
+                            Read Guide →
+                          </Link>
+                        </div>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+                <div className="text-center pt-2">
+                  <Link
+                    href="/guides"
+                    className="inline-flex items-center gap-2 text-blue-600 font-black hover:underline"
+                  >
+                    Explore all CAD & BIM expert guides in our library →
+                  </Link>
+                </div>
+              </section>
+            )}
+
             {/* Alternatives Section */}
             <section id="alternatives" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="flex items-center justify-between">
@@ -1260,6 +1380,35 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         </Link>
                       );
                     })}
+                  </div>
+                </div>
+              )}
+
+              {/* Related Playbooks & Guides Sidebar Card */}
+              {sidebarTroubleshootingGuides.length > 0 && (
+                <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm">
+                  <div className="flex items-center gap-3 mb-6">
+                    <FileText className="w-5 h-5 text-blue-600" />
+                    <h4 className="text-lg font-black text-slate-900 tracking-tight">
+                      Troubleshooting Playbooks
+                    </h4>
+                  </div>
+                  <div className="space-y-4">
+                    {sidebarTroubleshootingGuides.map((g) => (
+                      <Link
+                        key={g.id}
+                        href={`/guides/${g.slug}`}
+                        className="block p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all group border border-slate-50 hover:border-blue-100"
+                      >
+                        <span className="font-bold text-slate-800 text-xs line-clamp-2 group-hover:text-blue-600 transition-colors leading-relaxed">
+                          {g.title}
+                        </span>
+                        <div className="flex items-center justify-between mt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                          <span>{g.category}</span>
+                          <span>{g.readTime}</span>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
               )}

@@ -1,0 +1,4073 @@
+{
+  "summary": {
+    "total": 451,
+    "accessible": 0,
+    "dead_404": 0,
+    "blocked_403_503": 451,
+    "timeout": 0,
+    "other_errors": 0
+  },
+  "dead_links": [],
+  "error_links": [],
+  "all_results": [
+    {
+      "toolName": "AutoCAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/174021/autocad",
+      "status": 403,
+      "duration": 274,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD",
+      "category": "C1",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/autocad/reviews",
+      "status": 403,
+      "duration": 274,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD",
+      "category": "C1",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/cad/autocad-profile/",
+      "status": 403,
+      "duration": 272,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autocad/reviews",
+      "status": 403,
+      "duration": 325,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD",
+      "category": "C1",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/autocad",
+      "status": 403,
+      "duration": 336,
+      "success": false
+    },
+    {
+      "toolName": "ZWCAD",
+      "category": "C1",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/zwcad/competitors",
+      "status": 403,
+      "duration": 279,
+      "success": false
+    },
+    {
+      "toolName": "ZWCAD",
+      "category": "C1",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/architectural-cad/zwcad-profile/",
+      "status": 403,
+      "duration": 296,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD",
+      "category": "C1",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/cad-software/a/autocad/",
+      "status": 403,
+      "duration": 319,
+      "success": false
+    },
+    {
+      "toolName": "ZWCAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/zwcad/reviews",
+      "status": 403,
+      "duration": 324,
+      "success": false
+    },
+    {
+      "toolName": "ZWCAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/176603/ZWCAD/reviews",
+      "status": 403,
+      "duration": 630,
+      "success": false
+    },
+    {
+      "toolName": "BricsCAD",
+      "category": "C1",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/bricscad/reviews",
+      "status": 403,
+      "duration": 398,
+      "success": false
+    },
+    {
+      "toolName": "BricsCAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/bricscad/reviews",
+      "status": 403,
+      "duration": 438,
+      "success": false
+    },
+    {
+      "toolName": "MicroStation",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/microstation/reviews",
+      "status": 403,
+      "duration": 554,
+      "success": false
+    },
+    {
+      "toolName": "BricsCAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/159378/BricsCAD/reviews",
+      "status": 403,
+      "duration": 706,
+      "success": false
+    },
+    {
+      "toolName": "ZWCAD",
+      "category": "C1",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/zwsoft.com",
+      "status": 403,
+      "duration": 1258,
+      "success": false
+    },
+    {
+      "toolName": "MicroStation",
+      "category": "C1",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/microstation/reviews",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "MicroStation",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/175028/MicroStation/",
+      "status": 403,
+      "duration": 238,
+      "success": false
+    },
+    {
+      "toolName": "DraftSight",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205735/draftsight",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "DraftSight",
+      "category": "C1",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/draftsight/reviews",
+      "status": 403,
+      "duration": 242,
+      "success": false
+    },
+    {
+      "toolName": "DraftSight",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/draftsight/reviews",
+      "status": 403,
+      "duration": 270,
+      "success": false
+    },
+    {
+      "toolName": "GstarCAD",
+      "category": "C1",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/gstarcad/reviews",
+      "status": 403,
+      "duration": 230,
+      "success": false
+    },
+    {
+      "toolName": "GstarCAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/gstarcad/reviews",
+      "status": 403,
+      "duration": 259,
+      "success": false
+    },
+    {
+      "toolName": "GstarCAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/180290/GstarCAD/",
+      "status": 403,
+      "duration": 336,
+      "success": false
+    },
+    {
+      "toolName": "QCAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.co.nz/software/172927/qcad",
+      "status": 403,
+      "duration": 553,
+      "success": false
+    },
+    {
+      "toolName": "QCAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/qcad/reviews",
+      "status": 403,
+      "duration": 573,
+      "success": false
+    },
+    {
+      "toolName": "progeCAD Professional",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205745/progecad",
+      "status": 403,
+      "duration": 277,
+      "success": false
+    },
+    {
+      "toolName": "QCAD",
+      "category": "C1",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/qcad/",
+      "status": 403,
+      "duration": 282,
+      "success": false
+    },
+    {
+      "toolName": "nanoCAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205744/nanocad",
+      "status": 403,
+      "duration": 281,
+      "success": false
+    },
+    {
+      "toolName": "nanoCAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/nanocad/reviews",
+      "status": 403,
+      "duration": 298,
+      "success": false
+    },
+    {
+      "toolName": "progeCAD Professional",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/progecad/reviews",
+      "status": 403,
+      "duration": 319,
+      "success": false
+    },
+    {
+      "toolName": "LibreCAD",
+      "category": "C1",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/librecad/",
+      "status": 403,
+      "duration": 231,
+      "success": false
+    },
+    {
+      "toolName": "TurboCAD Platinum",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.co.nz/software/167524/turbocad-professional",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "LibreCAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205746/librecad",
+      "status": 403,
+      "duration": 238,
+      "success": false
+    },
+    {
+      "toolName": "LibreCAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/librecad/reviews",
+      "status": 403,
+      "duration": 254,
+      "success": false
+    },
+    {
+      "toolName": "TurboCAD Platinum",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/turbocad/reviews",
+      "status": 403,
+      "duration": 263,
+      "success": false
+    },
+    {
+      "toolName": "CAXA CAD",
+      "category": "C1",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/caxa/",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "ARES Commander",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/215973/ares-commander",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "CAXA CAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/caxa-cad/reviews",
+      "status": 403,
+      "duration": 270,
+      "success": false
+    },
+    {
+      "toolName": "KOMPAS-3D",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/kompas-3d/reviews",
+      "status": 403,
+      "duration": 270,
+      "success": false
+    },
+    {
+      "toolName": "ARES Commander",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ares-commander/reviews",
+      "status": 403,
+      "duration": 275,
+      "success": false
+    },
+    {
+      "toolName": "KOMPAS-3D",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205747/kompas-3d",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "T-FLEX CAD",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205748/t-flex-cad",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "AVEVA E3D Design",
+      "category": "C1",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/aveva-e3d-design/reviews",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "AVEVA E3D Design",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/aveva-e3d-design/reviews",
+      "status": 403,
+      "duration": 261,
+      "success": false
+    },
+    {
+      "toolName": "T-FLEX CAD",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/t-flex-cad/reviews",
+      "status": 403,
+      "duration": 265,
+      "success": false
+    },
+    {
+      "toolName": "SCIA Engineer",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205750/scia-engineer",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "midas Civil",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/midas-civil/reviews",
+      "status": 403,
+      "duration": 259,
+      "success": false
+    },
+    {
+      "toolName": "SCIA Engineer",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/scia-engineer/reviews",
+      "status": 403,
+      "duration": 264,
+      "success": false
+    },
+    {
+      "toolName": "ESPRIT",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/esprit/reviews",
+      "status": 403,
+      "duration": 264,
+      "success": false
+    },
+    {
+      "toolName": "midas Civil",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205749/midas-civil",
+      "status": 403,
+      "duration": 326,
+      "success": false
+    },
+    {
+      "toolName": "ESPRIT",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205751/esprit",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "ShipConstructor",
+      "category": "C1",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205752/shipconstructor",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "SolidWorks",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/182001/solidworks",
+      "status": 403,
+      "duration": 237,
+      "success": false
+    },
+    {
+      "toolName": "SolidWorks",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/solidworks/reviews",
+      "status": 403,
+      "duration": 250,
+      "success": false
+    },
+    {
+      "toolName": "ShipConstructor",
+      "category": "C1",
+      "source": "G2",
+      "url": "https://www.g2.com/products/shipconstructor/reviews",
+      "status": 403,
+      "duration": 352,
+      "success": false
+    },
+    {
+      "toolName": "SolidWorks",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/solidworks/reviews",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "SolidWorks",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/cad-software/a/solidworks/",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "SolidWorks",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/cad/solidworks-profile/",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "SolidWorks",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/solidworks",
+      "status": 403,
+      "duration": 341,
+      "success": false
+    },
+    {
+      "toolName": "SolidWorks",
+      "category": "C2",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/www.solidworks.com",
+      "status": 403,
+      "duration": 725,
+      "success": false
+    },
+    {
+      "toolName": "SketchUp",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/211798/sketchup",
+      "status": 403,
+      "duration": 237,
+      "success": false
+    },
+    {
+      "toolName": "SketchUp",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/3d-design/sketchup-profile/",
+      "status": 403,
+      "duration": 242,
+      "success": false
+    },
+    {
+      "toolName": "SketchUp",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/sketchup/reviews",
+      "status": 403,
+      "duration": 252,
+      "success": false
+    },
+    {
+      "toolName": "SketchUp",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/sketchup/reviews",
+      "status": 403,
+      "duration": 261,
+      "success": false
+    },
+    {
+      "toolName": "SketchUp",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/sketchup",
+      "status": 403,
+      "duration": 330,
+      "success": false
+    },
+    {
+      "toolName": "SketchUp",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/3d-design-software/a/sketchup/",
+      "status": 403,
+      "duration": 231,
+      "success": false
+    },
+    {
+      "toolName": "Fusion 360",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/fusion-360/reviews",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Fusion 360",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/200002/autodesk-fusion-360",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "Fusion 360",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/fusion-360/reviews",
+      "status": 403,
+      "duration": 256,
+      "success": false
+    },
+    {
+      "toolName": "SketchUp",
+      "category": "C2",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/sketchup.com",
+      "status": 403,
+      "duration": 723,
+      "success": false
+    },
+    {
+      "toolName": "Fusion 360",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/cad/fusion-360-profile/",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "Fusion 360",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/cad-software/a/autodesk-fusion-360/",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "Rhino 3D",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/rhino/reviews",
+      "status": 403,
+      "duration": 256,
+      "success": false
+    },
+    {
+      "toolName": "Fusion 360",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/autodesk-fusion-360",
+      "status": 403,
+      "duration": 327,
+      "success": false
+    },
+    {
+      "toolName": "Fusion 360",
+      "category": "C2",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/www.autodesk.com/products/fusion-360",
+      "status": 403,
+      "duration": 718,
+      "success": false
+    },
+    {
+      "toolName": "Rhino 3D",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/200001/rhino-3d",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "Rhino 3D",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/3d-design-software/a/rhino-3d/",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "Rhino 3D",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/rhino-3d/reviews",
+      "status": 403,
+      "duration": 242,
+      "success": false
+    },
+    {
+      "toolName": "Rhino 3D",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/3d-design/rhino-3d-profile/",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "Rhino 3D",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/rhino-3d",
+      "status": 403,
+      "duration": 672,
+      "success": false
+    },
+    {
+      "toolName": "CATIA",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/200003/catia",
+      "status": 403,
+      "duration": 355,
+      "success": false
+    },
+    {
+      "toolName": "CATIA",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/catia/reviews",
+      "status": 403,
+      "duration": 377,
+      "success": false
+    },
+    {
+      "toolName": "CATIA",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/dassault-systemes-catia",
+      "status": 403,
+      "duration": 421,
+      "success": false
+    },
+    {
+      "toolName": "CATIA",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/catia/reviews",
+      "status": 403,
+      "duration": 785,
+      "success": false
+    },
+    {
+      "toolName": "Rhino 3D",
+      "category": "C2",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/www.rhino3d.com",
+      "status": 403,
+      "duration": 987,
+      "success": false
+    },
+    {
+      "toolName": "CATIA",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/cad-software/a/catia/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "CATIA",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/cad/catia-profile/",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "FreeCAD",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/freecad/reviews",
+      "status": 403,
+      "duration": 580,
+      "success": false
+    },
+    {
+      "toolName": "FreeCAD",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/189000/FreeCAD/",
+      "status": 403,
+      "duration": 671,
+      "success": false
+    },
+    {
+      "toolName": "CATIA",
+      "category": "C2",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/3ds.com",
+      "status": 403,
+      "duration": 748,
+      "success": false
+    },
+    {
+      "toolName": "FreeCAD",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/all-software/a/freecad/",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "FreeCAD",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/freecad/reviews",
+      "status": 403,
+      "duration": 247,
+      "success": false
+    },
+    {
+      "toolName": "FreeCAD",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/manufacturing/freecad-profile/reviews/",
+      "status": 403,
+      "duration": 248,
+      "success": false
+    },
+    {
+      "toolName": "Onshape",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/onshape/reviews",
+      "status": 403,
+      "duration": 252,
+      "success": false
+    },
+    {
+      "toolName": "Onshape",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/170018/Onshape/",
+      "status": 403,
+      "duration": 579,
+      "success": false
+    },
+    {
+      "toolName": "Onshape",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/onshape/reviews",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "Onshape",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/manufacturing/onshape-profile/reviews/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "Onshape",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/all-software/a/onshape/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/siemens-solid-edge/reviews",
+      "status": 403,
+      "duration": 242,
+      "success": false
+    },
+    {
+      "toolName": "Onshape",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/reviews/market/cad-software/vendor/ptc/product/onshape",
+      "status": 403,
+      "duration": 324,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/105942/Solid-Edge/reviews/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/manufacturing/solid-edge-profile/reviews/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/all-software/a/solid-edge/",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/solid-edge/reviews",
+      "status": 403,
+      "duration": 258,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/reviews/market/cad-software/vendor/siemens/product/solid-edge",
+      "status": 403,
+      "duration": 318,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Inventor",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/autodesk-inventor/reviews",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Inventor",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/all-software/a/autodesk-inventor/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Inventor",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/manufacturing/autodesk-inventor-profile/reviews/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Inventor",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/118923/Autodesk-Inventor/",
+      "status": 403,
+      "duration": 541,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Inventor",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autodesk-inventor/reviews",
+      "status": 403,
+      "duration": 606,
+      "success": false
+    },
+    {
+      "toolName": "PTC Creo",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138691/Creo-Parametric/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "PTC Creo",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/manufacturing/ptc-creo-profile/reviews/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "PTC Creo",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/ptc-creo/reviews",
+      "status": 403,
+      "duration": 238,
+      "success": false
+    },
+    {
+      "toolName": "PTC Creo",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ptc-creo/reviews",
+      "status": 403,
+      "duration": 253,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Inventor",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/reviews/market/cad-software/vendor/autodesk/product/inventor",
+      "status": 403,
+      "duration": 353,
+      "success": false
+    },
+    {
+      "toolName": "OpenSCAD",
+      "category": "C2",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/openscad/reviews",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "OpenSCAD",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/openscad/reviews/",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Shapr3D",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/184498/Shapr3D/",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "PTC Creo",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/all-software/a/ptc-creo/",
+      "status": 403,
+      "duration": 254,
+      "success": false
+    },
+    {
+      "toolName": "OpenSCAD",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/openscad/reviews",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "Shapr3D",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/product/463843-Shapr3D/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Shapr3D",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/construction-software/a/shapr3d/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Shapr3D",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/shapr3d/reviews",
+      "status": 403,
+      "duration": 262,
+      "success": false
+    },
+    {
+      "toolName": "Alibre Design",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/alibre-design/reviews",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "Shapr3D",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/reviews/market/cad-software/vendor/shapr3d/product/shapr3d",
+      "status": 403,
+      "duration": 366,
+      "success": false
+    },
+    {
+      "toolName": "Alibre Design",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/construction-software/a/alibre-design/reviews/",
+      "status": 403,
+      "duration": 296,
+      "success": false
+    },
+    {
+      "toolName": "Alibre Design",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/alibre-design/reviews",
+      "status": 403,
+      "duration": 304,
+      "success": false
+    },
+    {
+      "toolName": "Alibre Design",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/engineering-cad/alibre-design-profile/reviews/",
+      "status": 403,
+      "duration": 302,
+      "success": false
+    },
+    {
+      "toolName": "Alibre Design",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/172312/Alibre-Design/reviews/",
+      "status": 403,
+      "duration": 307,
+      "success": false
+    },
+    {
+      "toolName": "VariCAD",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/varicad/reviews",
+      "status": 403,
+      "duration": 321,
+      "success": false
+    },
+    {
+      "toolName": "VariCAD",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205736/varicad",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "Maya",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/autodesk-maya/reviews",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "Maya",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/187001/maya",
+      "status": 403,
+      "duration": 237,
+      "success": false
+    },
+    {
+      "toolName": "Maya",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/maya/reviews",
+      "status": 403,
+      "duration": 255,
+      "success": false
+    },
+    {
+      "toolName": "Maya",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/autodesk-maya",
+      "status": 403,
+      "duration": 784,
+      "success": false
+    },
+    {
+      "toolName": "Maya",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/3d-design-software/a/autodesk-maya/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Blender",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/218026/blender",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "Blender",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/blender/reviews",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "Maya",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/3d-design/maya-profile/",
+      "status": 403,
+      "duration": 547,
+      "success": false
+    },
+    {
+      "toolName": "Maya",
+      "category": "C2",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/maya.com",
+      "status": 403,
+      "duration": 720,
+      "success": false
+    },
+    {
+      "toolName": "Blender",
+      "category": "C2",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/3d-design-software/a/blender/",
+      "status": 403,
+      "duration": 229,
+      "success": false
+    },
+    {
+      "toolName": "Blender",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/3d-design/blender-profile/",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "Blender",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/blender/reviews",
+      "status": 403,
+      "duration": 245,
+      "success": false
+    },
+    {
+      "toolName": "Blender",
+      "category": "C2",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/blender",
+      "status": 403,
+      "duration": 317,
+      "success": false
+    },
+    {
+      "toolName": "Blender",
+      "category": "C2",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/www.blender.org",
+      "status": 403,
+      "duration": 716,
+      "success": false
+    },
+    {
+      "toolName": "IronCAD",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ironcad/reviews",
+      "status": 403,
+      "duration": 253,
+      "success": false
+    },
+    {
+      "toolName": "IronCAD",
+      "category": "C2",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/manufacturing/ironcad-profile/reviews/",
+      "status": 403,
+      "duration": 270,
+      "success": false
+    },
+    {
+      "toolName": "IronCAD",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/140396/IronCAD/",
+      "status": 403,
+      "duration": 274,
+      "success": false
+    },
+    {
+      "toolName": "IronCAD",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/ironcad/reviews",
+      "status": 403,
+      "duration": 283,
+      "success": false
+    },
+    {
+      "toolName": "KeyCreator",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/keycreator/reviews",
+      "status": 403,
+      "duration": 290,
+      "success": false
+    },
+    {
+      "toolName": "Geomagic Design X",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205754/geomagic-design-x",
+      "status": 403,
+      "duration": 238,
+      "success": false
+    },
+    {
+      "toolName": "Geomagic Design X",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/geomagic-design-x/reviews",
+      "status": 403,
+      "duration": 263,
+      "success": false
+    },
+    {
+      "toolName": "ZW3D",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/zw3d/reviews",
+      "status": 403,
+      "duration": 274,
+      "success": false
+    },
+    {
+      "toolName": "KeyCreator",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205753/keycreator",
+      "status": 403,
+      "duration": 333,
+      "success": false
+    },
+    {
+      "toolName": "ZW3D",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.es/reviews/174793/zw3d",
+      "status": 403,
+      "duration": 454,
+      "success": false
+    },
+    {
+      "toolName": "3D modeling",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/plasticity-3d-modeling/reviews",
+      "status": 403,
+      "duration": 231,
+      "success": false
+    },
+    {
+      "toolName": "Tinkercad",
+      "category": "C2",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/207354/Tinkercad/",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "Tinkercad",
+      "category": "C2",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/autodesk-tinkercad/reviews",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Tinkercad",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/tinkercad/reviews",
+      "status": 403,
+      "duration": 258,
+      "success": false
+    },
+    {
+      "toolName": "3D modeling",
+      "category": "C2",
+      "source": "G2",
+      "url": "https://www.g2.com/products/plasticity-3d-modeling/reviews",
+      "status": 403,
+      "duration": 282,
+      "success": false
+    },
+    {
+      "toolName": "Revit",
+      "category": "C3",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/revit/reviews",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "Revit",
+      "category": "C3",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/bim/revit-profile/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Revit",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/183122/revit",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "Revit",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/revit/reviews",
+      "status": 403,
+      "duration": 255,
+      "success": false
+    },
+    {
+      "toolName": "Revit",
+      "category": "C3",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/autodesk-revit",
+      "status": 403,
+      "duration": 346,
+      "success": false
+    },
+    {
+      "toolName": "Revit",
+      "category": "C3",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/construction-software/a/autodesk-revit/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "ArchiCAD",
+      "category": "C3",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/archicad/reviews",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "ArchiCAD",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/175020/ArchiCAD/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "ArchiCAD",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/archicad/reviews",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "Revit",
+      "category": "C3",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/revit.com",
+      "status": 403,
+      "duration": 722,
+      "success": false
+    },
+    {
+      "toolName": "ArchiCAD",
+      "category": "C3",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/construction/archicad-profile/reviews/",
+      "status": 403,
+      "duration": 252,
+      "success": false
+    },
+    {
+      "toolName": "Tekla Structures",
+      "category": "C3",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/construction/tekla-structures-profile/reviews/",
+      "status": 403,
+      "duration": 251,
+      "success": false
+    },
+    {
+      "toolName": "Tekla Structures",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/92964/Tekla-Structures/",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "ArchiCAD",
+      "category": "C3",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/construction-software/a/archicad/reviews/",
+      "status": 403,
+      "duration": 275,
+      "success": false
+    },
+    {
+      "toolName": "Tekla Structures",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/tekla-structures/reviews",
+      "status": 403,
+      "duration": 307,
+      "success": false
+    },
+    {
+      "toolName": "Vectorworks",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205755/vectorworks",
+      "status": 403,
+      "duration": 266,
+      "success": false
+    },
+    {
+      "toolName": "Vectorworks",
+      "category": "C3",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/vectorworks/reviews",
+      "status": 403,
+      "duration": 267,
+      "success": false
+    },
+    {
+      "toolName": "Tekla Structures",
+      "category": "C3",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/construction-software/a/seed-tekla-bimsight/reviews/",
+      "status": 403,
+      "duration": 274,
+      "success": false
+    },
+    {
+      "toolName": "Chief Architect",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/chief-architect/reviews",
+      "status": 403,
+      "duration": 286,
+      "success": false
+    },
+    {
+      "toolName": "Vectorworks",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/vectorworks/reviews",
+      "status": 403,
+      "duration": 301,
+      "success": false
+    },
+    {
+      "toolName": "Chief Architect",
+      "category": "C3",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Chief Architect",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205738/chief-architect",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Civil 3D",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205737/civil-3d",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "Chief Architect",
+      "category": "C3",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/architectural-cad-software/a/chief-architect/",
+      "status": 403,
+      "duration": 244,
+      "success": false
+    },
+    {
+      "toolName": "Civil 3D",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autodesk-civil-3d/reviews",
+      "status": 403,
+      "duration": 254,
+      "success": false
+    },
+    {
+      "toolName": "Vectorworks Landmark",
+      "category": "C3",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/vectorworks-landmark/reviews",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "Civil 3D",
+      "category": "C3",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/autodesk-civil-3d/reviews",
+      "status": 403,
+      "duration": 242,
+      "success": false
+    },
+    {
+      "toolName": "Allplan",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205739/allplan",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "Allplan",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/allplan/reviews",
+      "status": 403,
+      "duration": 253,
+      "success": false
+    },
+    {
+      "toolName": "Civil 3D",
+      "category": "C3",
+      "source": "Gartner Peer Insights",
+      "url": "https://www.gartner.com/peer-insights/product/autodesk-civil-3d",
+      "status": 403,
+      "duration": 327,
+      "success": false
+    },
+    {
+      "toolName": "OpenRoads Designer",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205740/openroads-designer",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "dRofus",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205742/drofus",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "Edificius",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/edificius/reviews",
+      "status": 403,
+      "duration": 245,
+      "success": false
+    },
+    {
+      "toolName": "OpenRoads Designer",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/openroads-designer/reviews",
+      "status": 403,
+      "duration": 398,
+      "success": false
+    },
+    {
+      "toolName": "Edificius",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.it/software/205741/edificius",
+      "status": 403,
+      "duration": 534,
+      "success": false
+    },
+    {
+      "toolName": "dRofus",
+      "category": "C3",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/bim-software/a/drofus/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Data-centric modeling",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205743/smartplant-3d",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "Data-centric modeling",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/intergraph-smartplant-3d/reviews",
+      "status": 403,
+      "duration": 255,
+      "success": false
+    },
+    {
+      "toolName": "Subscription",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autocad-plant-3d/reviews",
+      "status": 403,
+      "duration": 371,
+      "success": false
+    },
+    {
+      "toolName": "Subscription",
+      "category": "C3",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/www.autodesk.com",
+      "status": 403,
+      "duration": 722,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD-based modeling",
+      "category": "C3",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/construction-software/a/cadworx-plant/",
+      "status": 403,
+      "duration": 230,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD-based modeling",
+      "category": "C3",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/cadworx/reviews",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD-based modeling",
+      "category": "C3",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/engineering-cad/cadworx-plant-profile/",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD-based modeling",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/276078/CADWorx-Plant/",
+      "status": 403,
+      "duration": 244,
+      "success": false
+    },
+    {
+      "toolName": "AutoCAD-based modeling",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/cadworx/reviews",
+      "status": 403,
+      "duration": 267,
+      "success": false
+    },
+    {
+      "toolName": "Free tier",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205757/trimble-connect",
+      "status": 403,
+      "duration": 231,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Docs",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205756/autodesk-construction-cloud",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Cloud issue tracker",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/bimcollab/reviews",
+      "status": 403,
+      "duration": 252,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Docs",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autodesk-construction-cloud/reviews",
+      "status": 403,
+      "duration": 258,
+      "success": false
+    },
+    {
+      "toolName": "Free tier",
+      "category": "C3",
+      "source": "G2",
+      "url": "https://www.g2.com/products/trimble-connect/reviews",
+      "status": 403,
+      "duration": 256,
+      "success": false
+    },
+    {
+      "toolName": "Bluebeam Revu",
+      "category": "C4",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/collaboration-software/a/bluebeam-pdf-revu/",
+      "status": 403,
+      "duration": 238,
+      "success": false
+    },
+    {
+      "toolName": "Cloud issue tracker",
+      "category": "C3",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/software/205758/bimcollab",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Bluebeam Revu",
+      "category": "C4",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/bluebeam-revu/reviews/all",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Bluebeam Revu",
+      "category": "C4",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/121586/Bluebeam-PDF-Revu/reviews/",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "Bluebeam Revu",
+      "category": "C4",
+      "source": "G2",
+      "url": "https://www.g2.com/products/bluebeam/reviews",
+      "status": 403,
+      "duration": 264,
+      "success": false
+    },
+    {
+      "toolName": "Solibri",
+      "category": "C4",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138698/Solibri/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Navisworks",
+      "category": "C4",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/navisworks/reviews",
+      "status": 403,
+      "duration": 253,
+      "success": false
+    },
+    {
+      "toolName": "MeshLab",
+      "category": "C4",
+      "source": "G2",
+      "url": "https://www.g2.com/products/recap-pro/reviews",
+      "status": 403,
+      "duration": 268,
+      "success": false
+    },
+    {
+      "toolName": "Solibri",
+      "category": "C4",
+      "source": "G2",
+      "url": "https://www.g2.com/products/solibri/reviews",
+      "status": 403,
+      "duration": 273,
+      "success": false
+    },
+    {
+      "toolName": "Bluebeam Revu",
+      "category": "C4",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/cms/bluebeam-revu-profile/reviews/",
+      "status": 403,
+      "duration": 340,
+      "success": false
+    },
+    {
+      "toolName": "MeshLab",
+      "category": "C4",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006619/Recap-Pro/reviews/",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "Recap Pro",
+      "category": "C4",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006620/Solid-Edge-Viewer/reviews/",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge Viewer",
+      "category": "C4",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006621/DWG-TrueView/reviews/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Solid Edge Viewer",
+      "category": "C4",
+      "source": "G2",
+      "url": "https://www.g2.com/products/dwg-trueview/reviews",
+      "status": 403,
+      "duration": 251,
+      "success": false
+    },
+    {
+      "toolName": "Recap Pro",
+      "category": "C4",
+      "source": "G2",
+      "url": "https://www.g2.com/products/solid-edge-viewer/reviews",
+      "status": 403,
+      "duration": 276,
+      "success": false
+    },
+    {
+      "toolName": "Siemens NX",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000908/Siemens-NX/reviews/",
+      "status": 403,
+      "duration": 245,
+      "success": false
+    },
+    {
+      "toolName": "Siemens NX",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/nx-cad/reviews",
+      "status": 403,
+      "duration": 249,
+      "success": false
+    },
+    {
+      "toolName": "Siemens NX",
+      "category": "C5",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/siemens-nx-cad/reviews",
+      "status": 403,
+      "duration": 248,
+      "success": false
+    },
+    {
+      "toolName": "Siemens NX",
+      "category": "C5",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/cad/siemens-nx-profile/",
+      "status": 403,
+      "duration": 246,
+      "success": false
+    },
+    {
+      "toolName": "Siemens NX",
+      "category": "C5",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/www.plm.automation.siemens.com",
+      "status": 403,
+      "duration": 1030,
+      "success": false
+    },
+    {
+      "toolName": "Siemens NX",
+      "category": "C5",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/cad-software/a/siemens-nx/reviews/",
+      "status": 403,
+      "duration": 238,
+      "success": false
+    },
+    {
+      "toolName": "nTop",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000909/SolidCAM/reviews/",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "Mastercam",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138692/Mastercam/",
+      "status": 403,
+      "duration": 247,
+      "success": false
+    },
+    {
+      "toolName": "Mastercam",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/mastercam/reviews",
+      "status": 403,
+      "duration": 268,
+      "success": false
+    },
+    {
+      "toolName": "nTop",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/solidcam/reviews",
+      "status": 403,
+      "duration": 273,
+      "success": false
+    },
+    {
+      "toolName": "SolidCAM",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000910/Magics/reviews/",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "Magics",
+      "category": "C5",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/opencascade/",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "OpenCASCADE",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006626/VISI-Modelling/reviews/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "OpenCASCADE",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/visi-modelling/reviews",
+      "status": 403,
+      "duration": 252,
+      "success": false
+    },
+    {
+      "toolName": "SolidCAM",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/magics/reviews",
+      "status": 403,
+      "duration": 265,
+      "success": false
+    },
+    {
+      "toolName": "VISI Modelling",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000911/Cimatron/reviews/",
+      "status": 403,
+      "duration": 280,
+      "success": false
+    },
+    {
+      "toolName": "Cimatron",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000912/ANSYS-Mechanical/reviews/",
+      "status": 403,
+      "duration": 280,
+      "success": false
+    },
+    {
+      "toolName": "Cimatron",
+      "category": "C5",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/ansys-mechanical/reviews",
+      "status": 403,
+      "duration": 283,
+      "success": false
+    },
+    {
+      "toolName": "VISI Modelling",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/cimatron/reviews",
+      "status": 403,
+      "duration": 306,
+      "success": false
+    },
+    {
+      "toolName": "Cimatron",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ansys-mechanical/reviews",
+      "status": 403,
+      "duration": 335,
+      "success": false
+    },
+    {
+      "toolName": "ANSYS Mechanical",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138699/ANSYS-Mechanical/",
+      "status": 403,
+      "duration": 273,
+      "success": false
+    },
+    {
+      "toolName": "ESI Visual-Environment",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000914/CAMWorks/reviews/",
+      "status": 403,
+      "duration": 270,
+      "success": false
+    },
+    {
+      "toolName": "MSC Nastran",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000913/Altair-HyperWorks/reviews/",
+      "status": 403,
+      "duration": 278,
+      "success": false
+    },
+    {
+      "toolName": "MSC Nastran",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/altair-hyperworks/reviews",
+      "status": 403,
+      "duration": 351,
+      "success": false
+    },
+    {
+      "toolName": "ESI Visual-Environment",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/camworks/reviews",
+      "status": 403,
+      "duration": 350,
+      "success": false
+    },
+    {
+      "toolName": "TopSolid",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006627/BeckerCAD/reviews/",
+      "status": 403,
+      "duration": 227,
+      "success": false
+    },
+    {
+      "toolName": "CAMWorks",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138705/CAMWorks/",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "BeckerCAD",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006628/CADmeister/reviews/",
+      "status": 403,
+      "duration": 230,
+      "success": false
+    },
+    {
+      "toolName": "BeckerCAD",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/cadmeister/reviews",
+      "status": 403,
+      "duration": 248,
+      "success": false
+    },
+    {
+      "toolName": "TopSolid",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/beckercad/reviews",
+      "status": 403,
+      "duration": 257,
+      "success": false
+    },
+    {
+      "toolName": "Visi",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000915/Edgecam/reviews/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Edgecam",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006634/KISSsoft/reviews/",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "Edgecam",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/kisssoft/reviews",
+      "status": 403,
+      "duration": 254,
+      "success": false
+    },
+    {
+      "toolName": "KISSsoft",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/featurecam/reviews",
+      "status": 403,
+      "duration": 255,
+      "success": false
+    },
+    {
+      "toolName": "Visi",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/edgecam/reviews",
+      "status": 403,
+      "duration": 273,
+      "success": false
+    },
+    {
+      "toolName": "GibbsCAM",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138702/GibbsCAM/",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "FeatureCAM",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138703/FeatureCAM/",
+      "status": 403,
+      "duration": 265,
+      "success": false
+    },
+    {
+      "toolName": "KISSsoft",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000916/FeatureCAM/reviews/",
+      "status": 403,
+      "duration": 273,
+      "success": false
+    },
+    {
+      "toolName": "GibbsCAM",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/gibbscam/reviews",
+      "status": 403,
+      "duration": 296,
+      "success": false
+    },
+    {
+      "toolName": "hyperMILL",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/hypermill/reviews",
+      "status": 403,
+      "duration": 296,
+      "success": false
+    },
+    {
+      "toolName": "hyperMILL",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138704/hyperMILL/",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "WorkNC",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000917/SURFCAM/reviews/",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "Tebis",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006629/WorkNC/reviews/",
+      "status": 403,
+      "duration": 237,
+      "success": false
+    },
+    {
+      "toolName": "WorkNC",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/surfcam/reviews",
+      "status": 403,
+      "duration": 257,
+      "success": false
+    },
+    {
+      "toolName": "Tebis",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/worknc/reviews",
+      "status": 403,
+      "duration": 349,
+      "success": false
+    },
+    {
+      "toolName": "BobCAD-CAM",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000935/AutoForm/reviews/",
+      "status": 403,
+      "duration": 231,
+      "success": false
+    },
+    {
+      "toolName": "SURFCAM",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/bobcad-cam/reviews",
+      "status": 403,
+      "duration": 256,
+      "success": false
+    },
+    {
+      "toolName": "BobCAD-CAM",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autoform/reviews",
+      "status": 403,
+      "duration": 271,
+      "success": false
+    },
+    {
+      "toolName": "AutoForm",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/moldflow/reviews",
+      "status": 403,
+      "duration": 271,
+      "success": false
+    },
+    {
+      "toolName": "SURFCAM",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000921/BobCAD-CAM/reviews/",
+      "status": 403,
+      "duration": 325,
+      "success": false
+    },
+    {
+      "toolName": "Moldex3D",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000936/WoodWOP/reviews/",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "Moldflow",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000923/Moldex3D/reviews/",
+      "status": 403,
+      "duration": 237,
+      "success": false
+    },
+    {
+      "toolName": "AutoForm",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000922/Moldflow/reviews/",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Moldflow",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/moldex3d/reviews",
+      "status": 403,
+      "duration": 252,
+      "success": false
+    },
+    {
+      "toolName": "Moldex3D",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/woodwop/reviews",
+      "status": 403,
+      "duration": 273,
+      "success": false
+    },
+    {
+      "toolName": "WoodWOP",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000924/AlphaCAM/reviews/",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "AlphaCAM",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000925/Radan/reviews/",
+      "status": 403,
+      "duration": 234,
+      "success": false
+    },
+    {
+      "toolName": "AlphaCAM",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/radan/reviews",
+      "status": 403,
+      "duration": 253,
+      "success": false
+    },
+    {
+      "toolName": "Radan",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/lantek-expert/reviews",
+      "status": 403,
+      "duration": 254,
+      "success": false
+    },
+    {
+      "toolName": "WoodWOP",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/alphacam/reviews",
+      "status": 403,
+      "duration": 353,
+      "success": false
+    },
+    {
+      "toolName": "Radan",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000937/Lantek-Expert/reviews/",
+      "status": 403,
+      "duration": 294,
+      "success": false
+    },
+    {
+      "toolName": "Lantek Expert",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/sigmanest/reviews",
+      "status": 403,
+      "duration": 305,
+      "success": false
+    },
+    {
+      "toolName": "SigmaNEST",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/metacam/reviews",
+      "status": 403,
+      "duration": 314,
+      "success": false
+    },
+    {
+      "toolName": "Lantek Expert",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000926/SigmaNEST/reviews/",
+      "status": 403,
+      "duration": 579,
+      "success": false
+    },
+    {
+      "toolName": "SigmaNEST",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006630/MetaCAM/reviews/",
+      "status": 403,
+      "duration": 728,
+      "success": false
+    },
+    {
+      "toolName": "MetaCAM",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000927/ANSYS-Fluent/reviews/",
+      "status": 403,
+      "duration": 232,
+      "success": false
+    },
+    {
+      "toolName": "MetaCAM",
+      "category": "C5",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/ansys-fluent/reviews",
+      "status": 403,
+      "duration": 236,
+      "success": false
+    },
+    {
+      "toolName": "ANSYS Workbench",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000938/ANSYS-Discovery/reviews/",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "ANSYS Workbench",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ansys-discovery/reviews",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "MetaCAM",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ansys-fluent/reviews",
+      "status": 403,
+      "duration": 266,
+      "success": false
+    },
+    {
+      "toolName": "Abaqus",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138711/Abaqus/",
+      "status": 403,
+      "duration": 390,
+      "success": false
+    },
+    {
+      "toolName": "ANSYS Discovery",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138700/ANSYS-Discovery/",
+      "status": 403,
+      "duration": 393,
+      "success": false
+    },
+    {
+      "toolName": "Abaqus",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/abaqus/reviews",
+      "status": 403,
+      "duration": 662,
+      "success": false
+    },
+    {
+      "toolName": "COMSOL Multiphysics",
+      "category": "C5",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/it-management-software/a/comsol-multiphysics/",
+      "status": 403,
+      "duration": 780,
+      "success": false
+    },
+    {
+      "toolName": "LS-DYNA",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/simcenter-star-ccm/reviews",
+      "status": 403,
+      "duration": 794,
+      "success": false
+    },
+    {
+      "toolName": "Simcenter STAR-CCM+",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138712/Simcenter-STAR-CCM/",
+      "status": 403,
+      "duration": 331,
+      "success": false
+    },
+    {
+      "toolName": "OpenFOAM",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/openfoam/reviews",
+      "status": 403,
+      "duration": 421,
+      "success": false
+    },
+    {
+      "toolName": "LS-DYNA",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000939/Simcenter-STAR-CCM/reviews/",
+      "status": 403,
+      "duration": 459,
+      "success": false
+    },
+    {
+      "toolName": "OpenFOAM",
+      "category": "C5",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/openfoam/reviews",
+      "status": 403,
+      "duration": 528,
+      "success": false
+    },
+    {
+      "toolName": "SimScale",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/simscale/reviews",
+      "status": 403,
+      "duration": 531,
+      "success": false
+    },
+    {
+      "toolName": "Femap",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000940/Altair-Inspire/reviews/",
+      "status": 403,
+      "duration": 233,
+      "success": false
+    },
+    {
+      "toolName": "SimScale",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138701/SimScale/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "MSC Adams",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006631/CAESAR-II/reviews/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Femap",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/altair-inspire/reviews",
+      "status": 403,
+      "duration": 252,
+      "success": false
+    },
+    {
+      "toolName": "MSC Adams",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/caesar-ii/reviews",
+      "status": 403,
+      "duration": 253,
+      "success": false
+    },
+    {
+      "toolName": "CAESAR II",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006632/AutoPIPE/reviews/",
+      "status": 403,
+      "duration": 746,
+      "success": false
+    },
+    {
+      "toolName": "Bentley AutoPIPE",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006633/PV-Elite/reviews/",
+      "status": 403,
+      "duration": 751,
+      "success": false
+    },
+    {
+      "toolName": "CAESAR II",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autopipe/reviews",
+      "status": 403,
+      "duration": 773,
+      "success": false
+    },
+    {
+      "toolName": "Bentley AutoPIPE",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/pv-elite/reviews",
+      "status": 403,
+      "duration": 772,
+      "success": false
+    },
+    {
+      "toolName": "PV Elite",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/aspen-hysys/reviews",
+      "status": 403,
+      "duration": 777,
+      "success": false
+    },
+    {
+      "toolName": "PV Elite",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000941/Aspen-HYSYS/reviews/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "AspenTech Aspen HYSYS",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000934/SAP2000/reviews/",
+      "status": 403,
+      "duration": 257,
+      "success": false
+    },
+    {
+      "toolName": "CSI SAP2000",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000929/ETABS/reviews/",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "CSI SAP2000",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/etabs/reviews",
+      "status": 403,
+      "duration": 304,
+      "success": false
+    },
+    {
+      "toolName": "AspenTech Aspen HYSYS",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/sap2000/reviews",
+      "status": 403,
+      "duration": 415,
+      "success": false
+    },
+    {
+      "toolName": "CSI ETABS",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000928/STAAD-Pro/reviews/",
+      "status": 403,
+      "duration": 230,
+      "success": false
+    },
+    {
+      "toolName": "Bentley STAAD.Pro",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006622/Tekla-Tedds/reviews/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Tekla Tedds",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/autodesk-robot/reviews",
+      "status": 403,
+      "duration": 254,
+      "success": false
+    },
+    {
+      "toolName": "Bentley STAAD.Pro",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/tekla-tedds/reviews",
+      "status": 403,
+      "duration": 258,
+      "success": false
+    },
+    {
+      "toolName": "CSI ETABS",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/staad-pro/reviews",
+      "status": 403,
+      "duration": 355,
+      "success": false
+    },
+    {
+      "toolName": "Tekla Tedds",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006623/Autodesk-Robot-Structural-Analysis/reviews/",
+      "status": 403,
+      "duration": 229,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Robot Structural Analysis",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006624/IDEA-StatiCa/reviews/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "IDEA StatiCa",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/risa-3d/reviews",
+      "status": 403,
+      "duration": 273,
+      "success": false
+    },
+    {
+      "toolName": "IDEA StatiCa",
+      "category": "C5",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006625/RISA-3D/reviews/",
+      "status": 403,
+      "duration": 333,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Robot Structural Analysis",
+      "category": "C5",
+      "source": "G2",
+      "url": "https://www.g2.com/products/idea-statica/reviews",
+      "status": 403,
+      "duration": 563,
+      "success": false
+    },
+    {
+      "toolName": "Altium Designer",
+      "category": "C6",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/engineering-cad/altium-designer-profile/reviews/",
+      "status": 403,
+      "duration": 231,
+      "success": false
+    },
+    {
+      "toolName": "Altium Designer",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/175058/Altium-Designer/reviews/",
+      "status": 403,
+      "duration": 235,
+      "success": false
+    },
+    {
+      "toolName": "Altium Designer",
+      "category": "C6",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/altium-designer/reviews",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "Altium Designer",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/altium-designer/reviews",
+      "status": 403,
+      "duration": 261,
+      "success": false
+    },
+    {
+      "toolName": "Altium Designer",
+      "category": "C6",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/altium.com",
+      "status": 403,
+      "duration": 721,
+      "success": false
+    },
+    {
+      "toolName": "Altium Designer",
+      "category": "C6",
+      "source": "GetApp",
+      "url": "https://www.getapp.com/engineering-cad-software/a/altium-designer/reviews/",
+      "status": 403,
+      "duration": 301,
+      "success": false
+    },
+    {
+      "toolName": "EPLAN Electric P8",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006636/Synopsys-Fusion-Compiler/reviews/",
+      "status": 403,
+      "duration": 298,
+      "success": false
+    },
+    {
+      "toolName": "Eagle",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138713/Eagle/",
+      "status": 403,
+      "duration": 300,
+      "success": false
+    },
+    {
+      "toolName": "Eagle",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/eagle/reviews",
+      "status": 403,
+      "duration": 308,
+      "success": false
+    },
+    {
+      "toolName": "EPLAN Electric P8",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/synopsys-fusion-compiler/reviews",
+      "status": 403,
+      "duration": 351,
+      "success": false
+    },
+    {
+      "toolName": "Synopsys Fusion Compiler",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006637/EPLAN/reviews/",
+      "status": 403,
+      "duration": 452,
+      "success": false
+    },
+    {
+      "toolName": "EPLAN",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/cr-8000/reviews",
+      "status": 403,
+      "duration": 458,
+      "success": false
+    },
+    {
+      "toolName": "Synopsys Fusion Compiler",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/eplan/reviews",
+      "status": 403,
+      "duration": 464,
+      "success": false
+    },
+    {
+      "toolName": "CR-8000",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/quadcept/reviews",
+      "status": 403,
+      "duration": 473,
+      "success": false
+    },
+    {
+      "toolName": "EPLAN",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006638/CR-8000/reviews/",
+      "status": 403,
+      "duration": 1066,
+      "success": false
+    },
+    {
+      "toolName": "CR-8000",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006639/Quadcept/reviews/",
+      "status": 403,
+      "duration": 762,
+      "success": false
+    },
+    {
+      "toolName": "Allegro PCB",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138706/Allegro-PCB/",
+      "status": 403,
+      "duration": 769,
+      "success": false
+    },
+    {
+      "toolName": "Quadcept",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006640/Allegro-PCB/reviews/",
+      "status": 403,
+      "duration": 785,
+      "success": false
+    },
+    {
+      "toolName": "OrCAD",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/orcad/reviews",
+      "status": 403,
+      "duration": 817,
+      "success": false
+    },
+    {
+      "toolName": "Quadcept",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/allegro-pcb/reviews",
+      "status": 403,
+      "duration": 826,
+      "success": false
+    },
+    {
+      "toolName": "PADS Professional",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138708/PADS-Professional/",
+      "status": 403,
+      "duration": 1221,
+      "success": false
+    },
+    {
+      "toolName": "OrCAD",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138707/OrCAD/",
+      "status": 403,
+      "duration": 1230,
+      "success": false
+    },
+    {
+      "toolName": "Xpedition",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/pulsonix/reviews",
+      "status": 403,
+      "duration": 2137,
+      "success": false
+    },
+    {
+      "toolName": "Xpedition",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006641/Pulsonix/reviews/",
+      "status": 403,
+      "duration": 2337,
+      "success": false
+    },
+    {
+      "toolName": "PADS Professional",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/pads-professional/reviews",
+      "status": 403,
+      "duration": 2774,
+      "success": false
+    },
+    {
+      "toolName": "Target 3001!",
+      "category": "C6",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/kicad/",
+      "status": 403,
+      "duration": 557,
+      "success": false
+    },
+    {
+      "toolName": "Target 3001!",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/231665/KiCad/reviews/",
+      "status": 403,
+      "duration": 564,
+      "success": false
+    },
+    {
+      "toolName": "Pulsonix",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006642/Target-3001/reviews/",
+      "status": 403,
+      "duration": 568,
+      "success": false
+    },
+    {
+      "toolName": "Target 3001!",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/kicad/reviews",
+      "status": 403,
+      "duration": 570,
+      "success": false
+    },
+    {
+      "toolName": "Pulsonix",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/target-3001/reviews",
+      "status": 403,
+      "duration": 582,
+      "success": false
+    },
+    {
+      "toolName": "EasyEDA",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/164150/EasyEDA/",
+      "status": 403,
+      "duration": 586,
+      "success": false
+    },
+    {
+      "toolName": "EasyEDA",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/easyeda/reviews",
+      "status": 403,
+      "duration": 596,
+      "success": false
+    },
+    {
+      "toolName": "KiCad",
+      "category": "C6",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/kicad/reviews",
+      "status": 403,
+      "duration": 871,
+      "success": false
+    },
+    {
+      "toolName": "KiCad",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/175024/KiCad/",
+      "status": 403,
+      "duration": 874,
+      "success": false
+    },
+    {
+      "toolName": "Target 3001!",
+      "category": "C6",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/kicad.org",
+      "status": 403,
+      "duration": 2365,
+      "success": false
+    },
+    {
+      "toolName": "NI Multisim",
+      "category": "C6",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/ltspice/",
+      "status": 403,
+      "duration": 567,
+      "success": false
+    },
+    {
+      "toolName": "DipTrace",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000919/Multisim/reviews/",
+      "status": 403,
+      "duration": 581,
+      "success": false
+    },
+    {
+      "toolName": "NI Multisim",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000918/LTspice/reviews/",
+      "status": 403,
+      "duration": 584,
+      "success": false
+    },
+    {
+      "toolName": "DipTrace",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/multisim/reviews",
+      "status": 403,
+      "duration": 616,
+      "success": false
+    },
+    {
+      "toolName": "NI Multisim",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ltspice/reviews",
+      "status": 403,
+      "duration": 1122,
+      "success": false
+    },
+    {
+      "toolName": "Proteus Design Suite",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138709/Proteus-Design-Suite/",
+      "status": 403,
+      "duration": 409,
+      "success": false
+    },
+    {
+      "toolName": "LTspice",
+      "category": "C6",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006643/Proteus-Design-Suite/reviews/",
+      "status": 403,
+      "duration": 411,
+      "success": false
+    },
+    {
+      "toolName": "Altium 365",
+      "category": "C6",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/altium-365/reviews",
+      "status": 403,
+      "duration": 413,
+      "success": false
+    },
+    {
+      "toolName": "LTspice",
+      "category": "C6",
+      "source": "G2",
+      "url": "https://www.g2.com/products/proteus-design-suite/reviews",
+      "status": 403,
+      "duration": 430,
+      "success": false
+    },
+    {
+      "toolName": "PC SCHEMATIC Automation",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/matrixgold/reviews",
+      "status": 403,
+      "duration": 435,
+      "success": false
+    },
+    {
+      "toolName": "MatrixGold",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006645/exocad/reviews/",
+      "status": 403,
+      "duration": 419,
+      "success": false
+    },
+    {
+      "toolName": "PC SCHEMATIC Automation",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000932/MatrixGold/reviews/",
+      "status": 403,
+      "duration": 423,
+      "success": false
+    },
+    {
+      "toolName": "MatrixGold",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/exocad/reviews",
+      "status": 403,
+      "duration": 427,
+      "success": false
+    },
+    {
+      "toolName": "exocad DentalCAD",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006646/Cabinet-Vision/reviews/",
+      "status": 403,
+      "duration": 427,
+      "success": false
+    },
+    {
+      "toolName": "exocad DentalCAD",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/cabinet-vision/reviews",
+      "status": 403,
+      "duration": 453,
+      "success": false
+    },
+    {
+      "toolName": "Cabinet Vision",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006647/AVEVA-Marine/reviews/",
+      "status": 403,
+      "duration": 385,
+      "success": false
+    },
+    {
+      "toolName": "AVEVA Marine",
+      "category": "C7",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/clo-3d/reviews",
+      "status": 403,
+      "duration": 391,
+      "success": false
+    },
+    {
+      "toolName": "AVEVA Marine",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000875/CLO/reviews/",
+      "status": 403,
+      "duration": 393,
+      "success": false
+    },
+    {
+      "toolName": "AVEVA Marine",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/clo/reviews",
+      "status": 403,
+      "duration": 396,
+      "success": false
+    },
+    {
+      "toolName": "Cabinet Vision",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/aveva-marine/reviews",
+      "status": 403,
+      "duration": 415,
+      "success": false
+    },
+    {
+      "toolName": "CLO 3D",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000930/Shoemaster/reviews/",
+      "status": 403,
+      "duration": 305,
+      "success": false
+    },
+    {
+      "toolName": "Shoemaster",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006648/WYSIWYG/reviews/",
+      "status": 403,
+      "duration": 317,
+      "success": false
+    },
+    {
+      "toolName": "CLO 3D",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/shoemaster/reviews",
+      "status": 403,
+      "duration": 349,
+      "success": false
+    },
+    {
+      "toolName": "Shoemaster",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/wysiwyg/reviews",
+      "status": 403,
+      "duration": 353,
+      "success": false
+    },
+    {
+      "toolName": "AVEVA Marine",
+      "category": "C7",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/clo3d.com",
+      "status": 403,
+      "duration": 1637,
+      "success": false
+    },
+    {
+      "toolName": "WYSIWYG",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006649/3Design/reviews/",
+      "status": 403,
+      "duration": 313,
+      "success": false
+    },
+    {
+      "toolName": "WYSIWYG",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/3design/reviews",
+      "status": 403,
+      "duration": 329,
+      "success": false
+    },
+    {
+      "toolName": "Land F/X",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/icad3d-plus/reviews",
+      "status": 403,
+      "duration": 429,
+      "success": false
+    },
+    {
+      "toolName": "3Design",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/land-fx/reviews",
+      "status": 403,
+      "duration": 437,
+      "success": false
+    },
+    {
+      "toolName": "3Design",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006650/Land-FX/reviews/",
+      "status": 403,
+      "duration": 938,
+      "success": false
+    },
+    {
+      "toolName": "Land F/X",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006651/ICAD3D/reviews/",
+      "status": 403,
+      "duration": 240,
+      "success": false
+    },
+    {
+      "toolName": "ICAD3D+",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000883/InfraWorks/reviews/",
+      "status": 403,
+      "duration": 239,
+      "success": false
+    },
+    {
+      "toolName": "Infraworks",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/3ds-max/reviews",
+      "status": 403,
+      "duration": 260,
+      "success": false
+    },
+    {
+      "toolName": "ICAD3D+",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/infraworks/reviews",
+      "status": 403,
+      "duration": 264,
+      "success": false
+    },
+    {
+      "toolName": "ICAD3D+",
+      "category": "C7",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/autodesk.com",
+      "status": 403,
+      "duration": 745,
+      "success": false
+    },
+    {
+      "toolName": "Infraworks",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/206897/3ds-Max/reviews/",
+      "status": 403,
+      "duration": 295,
+      "success": false
+    },
+    {
+      "toolName": "Infraworks",
+      "category": "C7",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/3ds-max/reviews",
+      "status": 403,
+      "duration": 300,
+      "success": false
+    },
+    {
+      "toolName": "ZBrush",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/175180/ZBrush/",
+      "status": 403,
+      "duration": 299,
+      "success": false
+    },
+    {
+      "toolName": "3ds Max",
+      "category": "C7",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/autodesk-3ds-max/reviews",
+      "status": 403,
+      "duration": 304,
+      "success": false
+    },
+    {
+      "toolName": "ZBrush",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/zbrush/reviews",
+      "status": 403,
+      "duration": 317,
+      "success": false
+    },
+    {
+      "toolName": "ZBrush",
+      "category": "C7",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/zbrush.mirror/reviews",
+      "status": 403,
+      "duration": 315,
+      "success": false
+    },
+    {
+      "toolName": "Lumion",
+      "category": "C7",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/architecture/lumion-profile/",
+      "status": 403,
+      "duration": 323,
+      "success": false
+    },
+    {
+      "toolName": "KeyShot",
+      "category": "C7",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/keyshot/reviews",
+      "status": 403,
+      "duration": 335,
+      "success": false
+    },
+    {
+      "toolName": "KeyShot",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/keyshot/reviews",
+      "status": 403,
+      "duration": 358,
+      "success": false
+    },
+    {
+      "toolName": "KeyShot",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/164240/KeyShot/",
+      "status": 403,
+      "duration": 704,
+      "success": false
+    },
+    {
+      "toolName": "Twinmotion",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/184240/Twinmotion/",
+      "status": 403,
+      "duration": 276,
+      "success": false
+    },
+    {
+      "toolName": "UltiMaker Cura",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/ultimaker-cura/reviews",
+      "status": 403,
+      "duration": 303,
+      "success": false
+    },
+    {
+      "toolName": "UltiMaker Cura",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/reviews/ultimaker-cura",
+      "status": 403,
+      "duration": 398,
+      "success": false
+    },
+    {
+      "toolName": "Twinmotion",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/twinmotion/reviews",
+      "status": 403,
+      "duration": 675,
+      "success": false
+    },
+    {
+      "toolName": "Enscape",
+      "category": "C7",
+      "source": "Software Advice",
+      "url": "https://www.softwareadvice.com/architectural-cad/enscape-profile/",
+      "status": 403,
+      "duration": 1465,
+      "success": false
+    },
+    {
+      "toolName": "PrusaSlicer",
+      "category": "C7",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/prusaslicer.mirror/reviews",
+      "status": 403,
+      "duration": 243,
+      "success": false
+    },
+    {
+      "toolName": "PrusaSlicer",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/prusaslicer/reviews",
+      "status": 403,
+      "duration": 274,
+      "success": false
+    },
+    {
+      "toolName": "Bambu Studio",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/bambu-studio/reviews",
+      "status": 403,
+      "duration": 287,
+      "success": false
+    },
+    {
+      "toolName": "Bambu Studio",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/bambu-studio/reviews",
+      "status": 403,
+      "duration": 569,
+      "success": false
+    },
+    {
+      "toolName": "PrusaSlicer",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/prusaslicer/reviews",
+      "status": 403,
+      "duration": 580,
+      "success": false
+    },
+    {
+      "toolName": "Simplify3D",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/138710/Simplify3D/",
+      "status": 403,
+      "duration": 282,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Netfabb",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/optitex/reviews",
+      "status": 403,
+      "duration": 292,
+      "success": false
+    },
+    {
+      "toolName": "Autodesk Netfabb",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006652/Optitex/reviews/",
+      "status": 403,
+      "duration": 306,
+      "success": false
+    },
+    {
+      "toolName": "Simplify3D",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/simplify3d/reviews",
+      "status": 403,
+      "duration": 341,
+      "success": false
+    },
+    {
+      "toolName": "Bambu Studio",
+      "category": "C7",
+      "source": "SourceForge",
+      "url": "https://sourceforge.net/projects/bambustudio/reviews",
+      "status": 403,
+      "duration": 392,
+      "success": false
+    },
+    {
+      "toolName": "Gerber AccuMark",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000931/Lectra-Modaris/reviews/",
+      "status": 403,
+      "duration": 344,
+      "success": false
+    },
+    {
+      "toolName": "Optitex",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006653/Gerber-AccuMark/reviews/",
+      "status": 403,
+      "duration": 351,
+      "success": false
+    },
+    {
+      "toolName": "Optitex",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/gerber-accumark/reviews",
+      "status": 403,
+      "duration": 371,
+      "success": false
+    },
+    {
+      "toolName": "Gerber AccuMark",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/lectra-modaris/reviews",
+      "status": 403,
+      "duration": 372,
+      "success": false
+    },
+    {
+      "toolName": "Lectra Modaris",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/browzwear/reviews",
+      "status": 403,
+      "duration": 412,
+      "success": false
+    },
+    {
+      "toolName": "Lectra Modaris",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000877/Browzwear/reviews/",
+      "status": 403,
+      "duration": 272,
+      "success": false
+    },
+    {
+      "toolName": "Browzwear",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10000874/Marvelous-Designer/reviews/",
+      "status": 403,
+      "duration": 280,
+      "success": false
+    },
+    {
+      "toolName": "Lectra Modaris",
+      "category": "C7",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/browzwear/reviews",
+      "status": 403,
+      "duration": 287,
+      "success": false
+    },
+    {
+      "toolName": "Browzwear",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/marvelous-designer/reviews",
+      "status": 403,
+      "duration": 287,
+      "success": false
+    },
+    {
+      "toolName": "Browzwear",
+      "category": "C7",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/marvelous-designer/reviews",
+      "status": 403,
+      "duration": 586,
+      "success": false
+    },
+    {
+      "toolName": "RhinoGold",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006655/JewelCAD-Pro/reviews/",
+      "status": 403,
+      "duration": 263,
+      "success": false
+    },
+    {
+      "toolName": "Marvelous Designer",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/rhinogold/reviews",
+      "status": 403,
+      "duration": 283,
+      "success": false
+    },
+    {
+      "toolName": "RhinoGold",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/jewelcad-pro/reviews",
+      "status": 403,
+      "duration": 303,
+      "success": false
+    },
+    {
+      "toolName": "Marvelous Designer",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006654/RhinoGold/reviews/",
+      "status": 403,
+      "duration": 493,
+      "success": false
+    },
+    {
+      "toolName": "Browzwear",
+      "category": "C7",
+      "source": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/marvelousdesigner.com",
+      "status": 403,
+      "duration": 747,
+      "success": false
+    },
+    {
+      "toolName": "JewelCAD Pro",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006644/D5-Render/reviews/",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "D5 Render",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/188240/D5-Render/",
+      "status": 403,
+      "duration": 262,
+      "success": false
+    },
+    {
+      "toolName": "V-Ray",
+      "category": "C7",
+      "source": "TrustRadius",
+      "url": "https://www.trustradius.com/products/v-ray/reviews",
+      "status": 403,
+      "duration": 265,
+      "success": false
+    },
+    {
+      "toolName": "V-Ray",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/v-ray/reviews",
+      "status": 403,
+      "duration": 301,
+      "success": false
+    },
+    {
+      "toolName": "JewelCAD Pro",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/d5-render/reviews",
+      "status": 403,
+      "duration": 587,
+      "success": false
+    },
+    {
+      "toolName": "Corona Renderer",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/178920/Corona-Renderer/",
+      "status": 403,
+      "duration": 241,
+      "success": false
+    },
+    {
+      "toolName": "Adobe Substance 3D Painter",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006656/Carlson-Survey/reviews/",
+      "status": 403,
+      "duration": 245,
+      "success": false
+    },
+    {
+      "toolName": "Corona Renderer",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/corona-renderer/reviews",
+      "status": 403,
+      "duration": 265,
+      "success": false
+    },
+    {
+      "toolName": "Adobe Substance 3D Painter",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/carlson-survey/reviews",
+      "status": 403,
+      "duration": 262,
+      "success": false
+    },
+    {
+      "toolName": "Carlson Survey",
+      "category": "C7",
+      "source": "G2",
+      "url": "https://www.g2.com/products/trimble-business-center/reviews",
+      "status": 403,
+      "duration": 645,
+      "success": false
+    },
+    {
+      "toolName": "Carlson Survey",
+      "category": "C7",
+      "source": "Capterra",
+      "url": "https://www.capterra.com/p/10006657/Trimble-Business-Center/reviews/",
+      "status": 403,
+      "duration": 230,
+      "success": false
+    }
+  ]
+}
