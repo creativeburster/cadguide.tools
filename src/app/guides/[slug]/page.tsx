@@ -181,6 +181,224 @@ export function getTopToolsForCategory(category: string) {
   return tools.filter(t => slugs.includes(t.slug));
 }
 
+// Dynamic diagnostic builder providing hardcore registry, module, and batch script configurations for Template A (Technical Autopsy)
+export function getAutopsyPayload(toolName: string, title: string, slug: string) {
+  const titleLower = title.toLowerCase();
+  
+  if (titleLower.includes('license') || titleLower.includes('flexlm') || titleLower.includes('activation')) {
+    return {
+      module: 'adsklicensing.dll / lmgrd.exe',
+      code: '0x00002740 (WSAEADDRINUSE)',
+      offset: '0x0004c8f1',
+      severity: 'CRITICAL // ACTIVATION LOCKED',
+      rootCause: `FLEXlm licensing service socket port binding collision. The CAD license daemon attempted to bind to default TCP port 27000 or 2080, which is already occupied by a phantom licensing lockfile or duplicate active background daemon process.`,
+      registryKey: `HKEY_LOCAL_MACHINE\\SOFTWARE\\FLEXlm License Manager\\`,
+      registryValue: `"ADSKFLEX_LICENSE_FILE" = "27000@127.0.0.1"`,
+      recoveryScript: `@echo off
+echo ===================================================
+echo   CAD DIRECTIVE: FORCED LICENSE DAEMON SOCKET RESET
+echo ===================================================
+echo [+] Stopping concurrent license service daemons...
+taskkill /f /im lmgrd.exe >nul 2>&1
+taskkill /f /im adsklicensing.exe >nul 2>&1
+echo [+] Wiping active network license socket locks...
+netstat -ano | findstr :27000
+echo [+] Re-registering licensing service environment...
+reg add "HKLM\\SOFTWARE\\FLEXlm License Manager" /v "ADSKFLEX_LICENSE_FILE" /t REG_SZ /d "27000@127.0.0.1" /f
+echo [+] Restarting licensing socket daemons...
+sc start AdskLicensingService
+echo [+] Process complete. Verify environment by relaunching ${toolName}.`
+    };
+  }
+  
+  if (titleLower.includes('freeze') || titleLower.includes('0x0024') || titleLower.includes('crash') || titleLower.includes('corrupt')) {
+    return {
+      module: toolName.toLowerCase().includes('autocad') ? 'ac1st24.dll' : toolName.toLowerCase().includes('solidworks') ? 'sldworks.exe' : 'cax_geometry.dll',
+      code: '0xC0000005 (Access Violation)',
+      offset: '0x0001f3b2',
+      severity: 'CRITICAL // INTERFACE STALLED',
+      rootCause: `Dynamic vertex array buffer overflow inside local drawing cache. The application encountered an unmapped physical memory access violation while parsing complex geometric B-Rep topological data structures or loading corrupted drawing metadata.`,
+      registryKey: `HKEY_CURRENT_USER\\Software\\${toolName.replace(/\s+/g, '')}\\Profiles\\Default\\General\\`,
+      registryValue: `"GraphicsOverride" = DWORD:00000001`,
+      recoveryScript: `@echo off
+echo ===================================================
+echo   CAD DIRECTIVE: MEMORY CACHE & REGISTRY OVERRIDE
+echo ===================================================
+echo [+] Terminating stalled ${toolName} processes...
+taskkill /f /im ${toolName.toLowerCase().replace(/\s+/g, '')}.exe >nul 2>&1
+echo [+] Flushing local drawing dynamic temp cache...
+del /f /s /q "%TEMP%\\*${toolName.toLowerCase().replace(/\s+/g, '').slice(0, 4)}*.*"
+echo [+] Rewriting default graphics acceleration registry options...
+reg add "HKCU\\Software\\${toolName.replace(/\s+/g, '')}\\Profiles\\Default\\General" /v "GraphicsOverride" /t REG_DWORD /d 1 /f
+echo [+] Resetting workspace coordinates configuration...
+echo [+] Process complete. Relaunch ${toolName} in diagnostics mode.`
+    };
+  }
+
+  // Default Autopsy Payload
+  return {
+    module: `${toolName.toLowerCase().replace(/\s+/g, '')}_core.dll`,
+    code: '0xC0000005 (Access Violation)',
+    offset: '0x0002b8a0',
+    severity: 'HIGH // TERMINATION TRIGGERED',
+    rootCause: `Unmanaged physical memory segment read violation during dynamic coordinate matrix transformation. Geometry kernel encountered boundary drift tolerances exceeding software sketch solver parameters.`,
+    registryKey: `HKEY_CURRENT_USER\\Software\\${toolName.replace(/\s+/g, '')}\\Diagnostics\\`,
+    registryValue: `"SafeModeLaunch" = DWORD:00000001`,
+    recoveryScript: `@echo off
+echo ===================================================
+echo   CAD DIRECTIVE: SAFE MODE DIAGNOSTIC ENVIRONMENT
+echo ===================================================
+echo [+] Forcing ${toolName} dynamic process termination...
+taskkill /f /im ${toolName.toLowerCase().replace(/\s+/g, '')}.exe >nul 2>&1
+echo [+] Creating registry diagnostic safe-launch override...
+reg add "HKCU\\Software\\${toolName.replace(/\s+/g, '')}\\Diagnostics" /v "SafeModeLaunch" /t REG_DWORD /d 1 /f
+echo [+] Process complete. Launch ${toolName} to calibrate system.`
+  };
+}
+
+// Technical Autopsy Report Renderer (Template A)
+export function renderTechnicalAutopsy(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
+  const autopsy = getAutopsyPayload(tool.name, title, slug);
+
+  return (
+    <div className="space-y-8 md:space-y-12">
+      {/* 1. Technical Autopsy Alert Banner */}
+      <Card className="border-2 border-rose-500/30 bg-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8 shadow-xl">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full blur-[60px]"></div>
+        <div className="relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-rose-500 font-mono font-black text-[10px] uppercase tracking-widest">
+            <ShieldAlert className="w-4 h-4 animate-pulse" /> CRITICAL POST-MORTEM DIAGNOSTIC REPORT
+          </div>
+          <h3 className="text-xl sm:text-2xl font-mono font-black tracking-tight uppercase leading-snug">
+            TECHNICAL AUTOPSY: FORCED SYSTEM DEVIATION DETECTED
+          </h3>
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-mono">
+            This playbook contains structural registry override binaries and diagnostic recovery safe-mode configurations verified to bypass license lockouts, address dynamic heap allocation crashes, and wipe corrupted coordinate registries for {tool.name}.
+          </p>
+        </div>
+      </Card>
+
+      {/* 2. Crash Signature Monospace Table */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center font-mono text-sm font-black">
+            [x]
+          </div>
+          <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+            Application Crash Signature
+          </h3>
+        </div>
+
+        <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white font-mono text-[11px] sm:text-xs">
+          <div className="divide-y divide-slate-100">
+            <div className="p-4 sm:px-6 flex flex-col sm:flex-row sm:justify-between sm:items-center hover:bg-slate-50/50 gap-2">
+              <span className="text-slate-400 font-bold uppercase tracking-wider">Faulting Module Name:</span>
+              <span className="text-slate-900 font-black">{autopsy.module}</span>
+            </div>
+            <div className="p-4 sm:px-6 flex flex-col sm:flex-row sm:justify-between sm:items-center hover:bg-slate-50/50 gap-2">
+              <span className="text-slate-400 font-bold uppercase tracking-wider">Exception Registration Code:</span>
+              <span className="text-slate-900 font-black">{autopsy.code}</span>
+            </div>
+            <div className="p-4 sm:px-6 flex flex-col sm:flex-row sm:justify-between sm:items-center hover:bg-slate-50/50 gap-2">
+              <span className="text-slate-400 font-bold uppercase tracking-wider">Exception Offset Register:</span>
+              <span className="text-slate-900 font-black">{autopsy.offset}</span>
+            </div>
+            <div className="p-4 sm:px-6 flex flex-col sm:flex-row sm:justify-between sm:items-center hover:bg-slate-50/50 gap-2">
+              <span className="text-slate-400 font-bold uppercase tracking-wider">Directive Severity:</span>
+              <span className="text-rose-600 font-black uppercase tracking-wider">{autopsy.severity}</span>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      {/* 3. Deep Root Cause Analysis */}
+      <div className="space-y-4">
+        <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+          Physiological Root Cause Diagnosis
+        </h3>
+        <Card className="rounded-[24px] p-6 border border-slate-100 bg-slate-50/50 text-slate-700 text-xs sm:text-sm leading-relaxed font-medium space-y-4">
+          <p>
+            {autopsy.rootCause}
+          </p>
+          <p>
+            When unmanaged drawings, license seat variables, or local profile coordinates are corrupted in the system registry, the application crashes dynamically without a standard EULA warnings banner. Restoring default operation requires complete environmental cache override and local host options configuration.
+          </p>
+        </Card>
+      </div>
+
+      {/* 4. Decisive Action Playbook */}
+      <div className="space-y-6">
+        <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+          Decisive Action Playbook (Registry Configuration)
+        </h3>
+
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-[24px] border border-slate-100 hover:border-rose-100 shadow-sm transition-all duration-300 relative group flex items-start gap-4">
+            <div className="w-8 h-8 rounded-full bg-rose-50 text-rose-600 font-black text-sm flex items-center justify-center shrink-0">
+              1
+            </div>
+            <div className="space-y-2 min-w-0 flex-1">
+              <h4 className="font-black text-slate-900 text-sm sm:text-base">
+                Modify Local Environment Registry Keys
+              </h4>
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                Navigate to the target registry option key in the Windows Registry Editor (`regedit.exe`) and append the verified options parameters:
+              </p>
+              <div className="bg-slate-950 p-4 rounded-xl font-mono text-[10px] sm:text-xs text-slate-300 overflow-x-auto mt-2 select-all border border-slate-800">
+                <code>
+                  {`Windows Registry Editor Version 5.00\n\n[${autopsy.registryKey}]\n${autopsy.registryValue}`}
+                </code>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-[24px] border border-slate-100 hover:border-rose-100 shadow-sm transition-all duration-300 relative group flex items-start gap-4">
+            <div className="w-8 h-8 rounded-full bg-rose-50 text-rose-600 font-black text-sm flex items-center justify-center shrink-0">
+              2
+            </div>
+            <div className="space-y-2 min-w-0 flex-1">
+              <h4 className="font-black text-slate-900 text-sm sm:text-base">
+                Wipe Corrupted Local User Drawing Caches
+              </h4>
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                Navigate to your workstation local AppData path `C:\\Users\\%USERNAME%\\AppData\\Local\\${tool.name.replace(/\s+/g, '')}\\` and safely delete dynamic drawing recovery lockfiles (`.ac$` or `.sv$`) and cached coordinate options to prevent serialize crash loop cycles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 5. Post-Mortem Defensive Shell Script */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center">
+            <Settings className="w-5 h-5 text-emerald-400" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              Automated Post-Mortem Recovery Script
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Copy and save as a `.bat` script file, then run with Administrator credentials to automate repairs.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] overflow-hidden border border-slate-900 shadow-xl bg-slate-950 text-emerald-400 p-6 relative">
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+          </div>
+          <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
+            <pre>
+              {autopsy.recoveryScript}
+            </pre>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
   const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
@@ -880,61 +1098,67 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 </div>
               </div>
 
-              {/* Technical Overview Container */}
-              <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px]"></div>
-                <div className="relative z-10 space-y-4">
-                  <div className="flex items-center gap-3 text-blue-400 font-black text-[10px] uppercase tracking-widest">
-                    <ShieldAlert className="w-4 h-4" /> Technical Alert Checklist
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-black tracking-tight">
-                    Deploying Technical Patches on Named-User and Shared Subnets
-                  </h3>
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
-                    This troubleshooting playbook resolves active licensing overrides, runtime graphical cache stutter, and ISO dimension style configurations for {tool.name}. Make sure you backup local coordinate configurations before enforcing registries.
-                  </p>
-                </div>
-              </Card>
-
-              {/* Step-by-Step Technical Guide Content */}
-              <div className="space-y-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
-                    <BookOpen className="w-5 h-5" />
-                  </div>
-                  <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                    Multi-Step Enterprise Resolution Playbook
-                  </h2>
-                </div>
-
-                <div className="space-y-6">
-                  {steps.map((step, sIdx) => (
-                    <div
-                      key={sIdx}
-                      className="bg-white p-6 sm:p-8 rounded-[24px] border border-slate-100 hover:border-blue-100 shadow-sm transition-all duration-300 relative group flex items-start gap-4 sm:gap-6"
-                    >
-                      <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 font-black text-base flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        {sIdx + 1}
+              {category === 'troubleshooting' ? (
+                renderTechnicalAutopsy(tool, title, excerpt, slug)
+              ) : (
+                <>
+                  {/* Technical Overview Container */}
+                  <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px]"></div>
+                    <div className="relative z-10 space-y-4">
+                      <div className="flex items-center gap-3 text-blue-400 font-black text-[10px] uppercase tracking-widest">
+                        <ShieldAlert className="w-4 h-4" /> Technical Alert Checklist
                       </div>
-                      <div className="space-y-2 min-w-0">
-                        <h4 className="font-black text-slate-900 text-base sm:text-lg group-hover:text-blue-600 transition-colors">
-                          {step.title}
-                        </h4>
-                        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-                          {step.desc}
-                        </p>
-                        <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 font-mono text-[10px] sm:text-xs text-slate-500 overflow-x-auto mt-4">
-                          <code>
-                            {sIdx === 0 && `# Command-line execution for environment verification\nC:\\Program Files\\${tool.name.replace(/\s+/g, '')}\\Bin\\${tool.name.toLowerCase().replace(/\s+/g, '')}.exe --verify-license --verbose`}
-                            {sIdx === 1 && `# Query FLEXlm options daemon TCP socket status\nLMUTIL lmstat -a -c C:\\Licenses\\${tool.name.toLowerCase().replace(/\s+/g, '')}.lic`}
-                            {sIdx === 2 && `# Wipe local dynamic recovery files safely\ndel /f /q %TEMP%\\*${tool.name.toLowerCase().replace(/\s+/g, '').slice(0, 5)}*.sv$`}
-                          </code>
-                        </div>
-                      </div>
+                      <h3 className="text-xl sm:text-2xl font-black tracking-tight">
+                        Deploying Technical Patches on Named-User and Shared Subnets
+                      </h3>
+                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+                        This troubleshooting playbook resolves active licensing overrides, runtime graphical cache stutter, and ISO dimension style configurations for {tool.name}. Make sure you backup local coordinate configurations before enforcing registries.
+                      </p>
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </Card>
+
+                  {/* Step-by-Step Technical Guide Content */}
+                  <div className="space-y-8">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                        <BookOpen className="w-5 h-5" />
+                      </div>
+                      <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                        Multi-Step Enterprise Resolution Playbook
+                      </h2>
+                    </div>
+
+                    <div className="space-y-6">
+                      {steps.map((step, sIdx) => (
+                        <div
+                          key={sIdx}
+                          className="bg-white p-6 sm:p-8 rounded-[24px] border border-slate-100 hover:border-blue-100 shadow-sm transition-all duration-300 relative group flex items-start gap-4 sm:gap-6"
+                        >
+                          <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 font-black text-base flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            {sIdx + 1}
+                          </div>
+                          <div className="space-y-2 min-w-0">
+                            <h4 className="font-black text-slate-900 text-base sm:text-lg group-hover:text-blue-600 transition-colors">
+                              {step.title}
+                            </h4>
+                            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                              {step.desc}
+                            </p>
+                            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 font-mono text-[10px] sm:text-xs text-slate-500 overflow-x-auto mt-4">
+                              <code>
+                                {sIdx === 0 && `# Command-line execution for environment verification\nC:\\Program Files\\${tool.name.replace(/\s+/g, '')}\\Bin\\${tool.name.toLowerCase().replace(/\s+/g, '')}.exe --verify-license --verbose`}
+                                {sIdx === 1 && `# Query FLEXlm options daemon TCP socket status\nLMUTIL lmstat -a -c C:\\Licenses\\${tool.name.toLowerCase().replace(/\s+/g, '')}.lic`}
+                                {sIdx === 2 && `# Wipe local dynamic recovery files safely\ndel /f /q %TEMP%\\*${tool.name.toLowerCase().replace(/\s+/g, '').slice(0, 5)}*.sv$`}
+                              </code>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* Horizontal Bidirectional Capillary Card (Guide ➔ Review) */}
               <Card className="border-2 border-dashed border-slate-200 bg-white p-6 sm:p-8 rounded-[32px] flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-blue-600 transition-all duration-500">
