@@ -392,7 +392,9 @@ export default function GuidesClient() {
                       
                       <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2 group-hover:text-blue-600 transition-colors">
                         <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${p.gradient}`} />
-                        {p.title}
+                        <Link href={`/guides/${p.category}`} className="hover:underline hover:text-blue-600 transition-colors">
+                          {p.title}
+                        </Link>
                       </h3>
                       
                       <p className="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">

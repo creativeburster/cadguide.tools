@@ -127,6 +127,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     }));
 
+  // Core 8 Arteries (Category Landing Pages) — high priority technical specifications index directories.
+  const categoryKeys = ['troubleshooting', 'performance', 'printing', 'standards', 'deployment', 'migration', 'procurement', 'manufacturing'];
+  const categoryUrls: MetadataRoute.Sitemap = categoryKeys.map((cat) => ({
+    url: `${BASE_URL}/guides/${cat}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
   // Dynamic guide pages (2,400 entries) - pre-render 10 guides per tool for maximum long-tail coverage
   const guideUrls: MetadataRoute.Sitemap = [];
   const selectedArticles = ARTICLES_LIST.slice(0, 10);
@@ -154,6 +163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...personaUrls,
     ...sectorUrls,
     ...pricingUrls,
+    ...categoryUrls,
     ...guideUrls,
   ];
 }

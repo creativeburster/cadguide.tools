@@ -6,10 +6,180 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
 import { ARTICLES_LIST, CATEGORY_SECTIONS } from '@/lib/guides-data';
-import { Award, FileText, Cloud, Cpu, ArrowLeft, CheckCircle2, AlertTriangle, ShieldAlert, BookOpen, Star, ArrowRight } from 'lucide-react';
+import {
+  Award,
+  FileText,
+  Cloud,
+  Cpu,
+  ArrowLeft,
+  CheckCircle2,
+  AlertTriangle,
+  ShieldAlert,
+  BookOpen,
+  Star,
+  ArrowRight,
+  Layers,
+  Printer,
+  Settings,
+  Scale,
+  FileSpreadsheet,
+  FolderGit,
+  Activity,
+  ArrowLeftRight
+} from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const dynamicParams = true;
+
+// Industry-grade Category Technical Mapping for Template C (Standard Red-Header layout)
+export const CATEGORY_MAP: Record<string, {
+  directiveCode: string;
+  standardTitle: string;
+  subtitle: string;
+  reference: string;
+  sectionTitle: string;
+  iconName: string;
+  tableHeaders: string[];
+  tableRows: string[][];
+}> = {
+  troubleshooting: {
+    directiveCode: 'CAD-ERR-901',
+    standardTitle: 'CAD Troubleshooting Directive',
+    subtitle: 'Diagnostic Procedures for Application Crash Module Exceptions & Licensing Seat Locks',
+    reference: 'ISO 27001 / FLEXlm Spec',
+    sectionTitle: 'Crash Signature Diagnostic Matrix',
+    iconName: 'AlertTriangle',
+    tableHeaders: ['Faulting Module', 'Exception Code', 'Severity', 'Root Cause', 'Remediation Code'],
+    tableRows: [
+      ['ac1st24.dll', '0xC0000005', 'CRITICAL', 'Memory access violation during dynamic drawing buffer allocation', 'Wipe temp cache, patch registry options'],
+      ['sw_gl.dll', '0x0000007A', 'HIGH', 'Workstation graphic pipeline thread override conflict', 'Force hardware acceleration override console'],
+      ['flexlm.sys', '10048', 'CRITICAL', 'FLEXlm license manager socket port binding failure', 'Re-bind options daemons to ports 27000-27009'],
+      ['rvt_core.dll', '0xC0000027', 'HIGH', 'BIM coordinate local-to-central synchronization deadlock', 'Perform local profile audit and force offline save']
+    ]
+  },
+  performance: {
+    directiveCode: 'CAD-PERF-802',
+    standardTitle: 'Performance Calibration Directive',
+    subtitle: 'Workstation Buffer Allocation, CPU Thread Multi-Processing, and GPU Virtualization Rules',
+    reference: 'NVIDIA ISV Certification',
+    sectionTitle: 'Workstation Resource Buffering Calibration Matrix',
+    iconName: 'Cpu',
+    tableHeaders: ['System Parameter', 'Industrial Threshold', 'Recommended Buffer', 'Target Architecture', 'Metric'],
+    tableRows: [
+      ['Viewport VRAM Allocation', '2GB Min', '8GB+ Dedicated', 'RTX Enterprise / Radeon Pro', 'Vertex cache size'],
+      ['CPU Pagefile Override', '1.5x System RAM', '32GB - 64GB Pagefile', 'Multi-Core Xeon / Threadripper', 'Thread synchronization'],
+      ['Background AutoSave Cycle', '15 min', '20 Iterations Clear', 'Local drawing database cache', 'NURBS topology RAM flush'],
+      ['Geometry Simplification', 'Dynamic L O D', '0.001mm Tolerance Poly', 'Large mechanical assemblies', 'Triangle count reduction']
+    ]
+  },
+  printing: {
+    directiveCode: 'CAD-PLOT-503',
+    standardTitle: 'Plotting & PDF Output Specification',
+    subtitle: 'Monochrome and Color Pen (CTB/STB) Line-Weight Calibration Standards',
+    reference: 'ISO 128-20 / ANSI Y14.2M',
+    sectionTitle: 'Line-Weight Pen (CTB) Calibration Table',
+    iconName: 'Printer',
+    tableHeaders: ['AIA Pen Color ID', 'Standard Thickness', 'Pen Mapping Style', 'Vector Resolution', 'DPI Standard'],
+    tableRows: [
+      ['Color 1 (Red)', '0.18 mm', 'Monochrome.ctb (Thin boundaries)', '1200 DPI vector lines', 'Structural lines'],
+      ['Color 2 (Yellow)', '0.35 mm', 'Monochrome.ctb (Core annotation)', '1200 DPI vector lines', 'Text & dimensions'],
+      ['Color 3 (Green)', '0.50 mm', 'Monochrome.ctb (Medium structural)', '1200 DPI vector lines', 'Hatching & symbols'],
+      ['Color 7 (Black/White)', '0.70 mm', 'Monochrome.ctb (Heavy borders)', '2400 DPI raster lines', 'Sheet margins & cuts']
+    ]
+  },
+  standards: {
+    directiveCode: 'CAD-STD-704',
+    standardTitle: 'Layer Naming & Drafting Directives',
+    subtitle: 'Uniform AIA / ANSI Layer Naming Structures, Dimensioning Scales, and Coordination Blueprints',
+    reference: 'AIA CAD Layer Standards',
+    sectionTitle: 'AIA CAD Layering Convention Standard Matrix',
+    iconName: 'Layers',
+    tableHeaders: ['Layer Code', 'Standard Name', 'Description', 'Color ID', 'Line-Weight Class'],
+    tableRows: [
+      ['A-WALL-FULL-EXTR', 'Exterior Wall', 'Load-bearing structural exterior walls', 'Color 7 (White)', '0.50 mm (Heavy)'],
+      ['A-DOOR-FULL-INTR', 'Interior Door', 'Interior timber and metal doors and frames', 'Color 3 (Green)', '0.25 mm (Medium)'],
+      ['E-POWR-CABL-TRAY', 'Electrical Cable Tray', 'Power distribution conduit infrastructure', 'Color 4 (Cyan)', '0.35 mm (Medium)'],
+      ['M-HVAC-DUCT-SUPP', 'HVAC Supply Duct', 'Mechanical ventilation supply ductwork lines', 'Color 1 (Red)', '0.35 mm (Medium)']
+    ]
+  },
+  deployment: {
+    directiveCode: 'CAD-DEP-405',
+    standardTitle: 'Enterprise Mass Deployment Blueprint',
+    subtitle: 'Silent Installation Checklists, FLEXlm Options Daemon Config, and SSO Identity Provisioning',
+    reference: 'Active Directory / SAML 2.0',
+    sectionTitle: 'SSO SAML & FLEXlm Sockets Binding Matrix',
+    iconName: 'Settings',
+    tableHeaders: ['IT Protocol', 'Secure TCP Ports', 'Configuration File', 'Compliance Status', 'Authentication Method'],
+    tableRows: [
+      ['FLEXlm Concurrent Server', '27000 - 27009', 'vendor.lic', 'EULA Compliant', 'Concurrent Options File Restrict'],
+      ['Enterprise SSO Identity', '443 (HTTPS)', 'saml_metadata.xml', 'Verified Named-User', 'SAML 2.0 / OIDC Token Sync'],
+      ['Silent Deployment Command', 'N/A', 'deployment_setup.msi', 'Enterprise Authorized', 'MSI quiet installation string'],
+      ['Telemetry Opt-Out Ping', 'Blocked (Loopback)', 'hosts / local_firewall', 'Admin Restricted', 'Loopback block 127.0.0.1:443']
+    ]
+  },
+  migration: {
+    directiveCode: 'CAD-MIG-606',
+    standardTitle: 'Software Crossover Migration Directive',
+    subtitle: 'PGP Command Aliases, Custom CUIX Menu Mapping, and AutoLISP API Runtime Bridging',
+    reference: 'AutoLISP API Compatibility',
+    sectionTitle: 'AutoLISP API Compatibility & Bridging Matrix',
+    iconName: 'BookOpen',
+    tableHeaders: ['Legacy AutoLISP Hook', 'Crossover Support', 'Execution Speedup', 'Parametric Skew', 'Verification Script'],
+    tableRows: [
+      ['(vla-get-ActiveDocument)', '100% Native support', '1.8x Crossover speedup', '0.0% Skew', 'load_custom_vla.lsp'],
+      ['CUIX Ribbon Layouts', 'Manual XML import', 'N/A', '0.0% Skew', 'custom_ribbon_import.xml'],
+      ['PGP Shortcut Command', 'Direct text merge', 'N/A', '0.0% Skew', 'acad.pgp -> custom.pgp'],
+      ['B-Rep Skew Solver', 'Mathematical sew', '3.5x Math speedup', '< 1e-7 mm', 'stitch_kernel_eval.py']
+    ]
+  },
+  procurement: {
+    directiveCode: 'CAD-PROC-307',
+    standardTitle: 'Procurement & Compliance Directive',
+    subtitle: 'Subscription Named User vs Perpetual TCO Auditing and Compliance Checklists',
+    reference: 'Software Asset Management (SAM)',
+    sectionTitle: 'License TCO Audit Compliance Risk Matrix',
+    iconName: 'Scale',
+    tableHeaders: ['Licensing Model', 'TCO Cost Curve (3-Yr)', 'EULA Risk Rating', 'Watermark Detection', 'IT Compliance Audit'],
+    tableRows: [
+      ['Named User Subscription', '$3,600 (High SaaS drag)', 'Medium risk (Audit sweeps)', 'Quiet background ping', 'Active IT cloud domain audit'],
+      ['Perpetual Buyout', '$1,800 (Break-even Yr-2)', 'Low risk (No silent push)', 'None (Offline standard)', 'Offline network MAC tracking'],
+      ['Edu Watermarked License', '$0.00 (Illegal Corporate)', 'CRITICAL (Large fines)', 'Severe plot watermark', 'Automated vendor ping trigger'],
+      ['Floating Network Pool', '$4,500 (Legacy Multi)', 'Low risk (EULA lock)', 'None (Admin bound)', 'LMTools license daemon restrict']
+    ]
+  },
+  manufacturing: {
+    directiveCode: 'CAD-MAN-208',
+    standardTitle: 'CAM & CNC Manufacturing Directive',
+    subtitle: 'Solid Geometry Tolerances, Watertight STL/3MF Kernels, and Bend K-Factor Calibrations',
+    reference: 'ISO 128 / STEP ISO 10303',
+    sectionTitle: 'Geometric Kernel Tolerance & CNC Slicing Standard',
+    iconName: 'Award',
+    tableHeaders: ['Manufacturing Process', 'Standard Kernel Tolerance', 'Slicing Format', 'Watertight Standard', 'Bend Allowance Metric'],
+    tableRows: [
+      ['CNC Lathe Milling', '0.001 mm', 'STEP / IGES B-Rep', '100% Watertight Solid', 'Feed rate standard G-code'],
+      ['FDM 3D Printing', '0.010 mm', '3MF / STL high-tess', '99.9% watertight shell', 'Watertight polygon mesh'],
+      ['Sheet Metal Bending', 'N/A', 'DXF Flat pattern', 'N/A', 'K-Factor K=0.44 (Standard)'],
+      ['5-Axis CNC Milling', '0.0005 mm', 'STEP AP242 / native CL', '100% Watertight Solid', 'G-code path optimization']
+    ]
+  }
+};
+
+// Map each category dynamically to its top 8 corresponding software systems
+export function getTopToolsForCategory(category: string) {
+  const mapping: Record<string, string[]> = {
+    troubleshooting: ['autocad', 'revit', 'solidworks', 'autodesk-inventor', 'bricscad', 'freecad', 'gstarcad', 'draftsight'],
+    performance: ['autocad', 'solidworks', 'revit', 'rhino-3d', 'freecad', 'siemens-nx', 'fusion-360', 'ptc-creo'],
+    printing: ['autocad', 'draftsight', 'autocad-electrical', 'zwcad', 'gstarcad', 'qcad', 'librecad', 'vectorworks'],
+    standards: ['autocad', 'revit', 'autocad-electrical', 'tekla-structures', 'archicad', 'vectorworks', 'bricscad', 'microstation'],
+    deployment: ['autocad', 'autocad-lt', 'autocad-for-mac', 'solidworks', 'revit', 'autodesk-inventor', 'siemens-nx', 'bricscad'],
+    migration: ['bricscad', 'zwcad', 'gstarcad', 'autocad', 'solidworks', 'autodesk-inventor', 'draftsight', 'microstation'],
+    procurement: ['autocad', 'autocad-lt', 'solidworks', 'revit', 'bricscad', 'draftsight', 'freecad', 'fusion-360'],
+    manufacturing: ['fusion-360', 'solidworks', 'freecad', 'mastercam', 'solid-edge', 'siemens-nx', 'zw3d', 'solidcam']
+  };
+
+  const slugs = mapping[category] || [];
+  return tools.filter(t => slugs.includes(t.slug));
+}
 
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
@@ -46,6 +216,13 @@ export function generateStaticParams() {
       });
     }
   }
+
+  // Pre-render the 8 core category landing pages (Arteries)
+  const categoryKeys = ['troubleshooting', 'performance', 'printing', 'standards', 'deployment', 'migration', 'procurement', 'manufacturing'];
+  for (const cat of categoryKeys) {
+    params.push({ slug: cat });
+  }
+
   return params;
 }
 
@@ -53,6 +230,22 @@ export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
 ): Promise<Metadata> {
   const { slug } = await params;
+
+  // 1. Check if slug is a category landing page
+  const catInfo = CATEGORY_SECTIONS.find(s => s.category === slug);
+  if (catInfo) {
+    return {
+      title: `${catInfo.title} — CAD & BIM Technical Standard Directive`,
+      description: catInfo.desc,
+      keywords: [catInfo.category, 'cad standard', 'bim coordination', 'engineering guide', 'cad design standards', 'cax blueprint', 'regulatory compliance'],
+      alternates: {
+        canonical: `https://cadguide.tools/guides/${slug}`,
+      },
+      robots: { index: true, follow: true },
+    };
+  }
+
+  // 2. Check if slug is an individual guide page
   const parsed = parseGuideSlug(slug);
   if (!parsed) return {};
 
@@ -74,8 +267,369 @@ export async function generateMetadata(
   };
 }
 
+// Helper to resolve custom Lucide icons dynamically for each Technical Directive Category
+export function getCategoryIcon(iconName: string) {
+  switch (iconName) {
+    case 'AlertTriangle':
+      return <AlertTriangle className="w-8 h-8 text-rose-500 shrink-0" />;
+    case 'Cpu':
+      return <Cpu className="w-8 h-8 text-amber-500 shrink-0" />;
+    case 'Printer':
+      return <Printer className="w-8 h-8 text-emerald-500 shrink-0" />;
+    case 'Layers':
+      return <Layers className="w-8 h-8 text-indigo-500 shrink-0" />;
+    case 'Settings':
+      return <Settings className="w-8 h-8 text-purple-500 shrink-0" />;
+    case 'BookOpen':
+      return <BookOpen className="w-8 h-8 text-pink-500 shrink-0" />;
+    case 'Scale':
+      return <Scale className="w-8 h-8 text-teal-500 shrink-0" />;
+    case 'Award':
+      return <Award className="w-8 h-8 text-orange-500 shrink-0" />;
+    default:
+      return <BookOpen className="w-8 h-8 text-blue-500 shrink-0" />;
+  }
+}
+
+// Interactive technical spec renderer for Category Landing Pages (Template C)
+export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
+  const category = catInfo.category;
+  const directive = CATEGORY_MAP[category];
+  if (!directive) return notFound();
+
+  const mappedTools = getTopToolsForCategory(category);
+
+  // Category specific Breadcrumbs Structured Data
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://cadguide.tools/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Guides', 'item': 'https://cadguide.tools/guides' },
+      { '@type': 'ListItem', 'position': 3, 'name': catInfo.title, 'item': `https://cadguide.tools/guides/${category}` }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      <div className="bg-[#fcfdfe] min-h-screen pb-24 w-full overflow-x-hidden">
+        {/* --- CRITICAL: THE CORE 8 ARTERIES TEMPLATE C (RED-HEADER TECHNICAL DIRECTIVE) --- */}
+        <div className="bg-gradient-to-br from-red-950 via-red-900 to-rose-950 text-white relative py-12 md:py-16 w-full border-b-4 border-red-700 shadow-lg">
+          {/* High-density grid background scan lines */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+          
+          <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-red-300 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">{category.toUpperCase()}</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pt-4">
+              <div className="space-y-4 max-w-4xl">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Badge className="bg-red-600 text-white border-2 border-red-500 font-mono font-black px-3 py-1 uppercase tracking-widest text-[9px] rounded-md shadow-md animate-pulse">
+                    DIRECTIVE: {directive.directiveCode}
+                  </Badge>
+                  <span className="text-[10px] font-mono font-bold text-red-200 uppercase tracking-widest bg-red-900/50 px-2 py-0.5 rounded border border-red-700/50">
+                    CLASS: TECHNICAL STANDARDS // {directive.reference}
+                  </span>
+                </div>
+                <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-none text-white font-sans uppercase">
+                  {directive.standardTitle}
+                </h1>
+                <p className="text-red-100 font-medium text-sm sm:text-base leading-relaxed max-w-3xl">
+                  {directive.subtitle}
+                </p>
+              </div>
+
+              {/* Verified Stamp Seal */}
+              <div className="shrink-0 self-start md:self-center border-2 border-red-500 bg-red-900/30 p-4 rounded-xl border-dashed flex items-center gap-4 max-w-xs shadow-inner">
+                {getCategoryIcon(directive.iconName)}
+                <div>
+                  <span className="text-[9px] text-red-300 font-mono font-black uppercase tracking-widest block">SYSTEM DIRECTIVE STATUS</span>
+                  <span className="font-mono font-black text-white text-xs block uppercase">APPROVED FOR ENTERPRISE DISTRIBUTION</span>
+                  <span className="text-[8px] text-red-400 font-mono font-semibold block">REV DATE: MAY 2026 // PUBLIC INDEX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1360px] mx-auto px-4 py-12 w-full space-y-16">
+          {/* --- SECTION 1: STANDARD METADATA DIRECTIVE & SYSTEM OVERVIEW --- */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <Card className="lg:col-span-2 rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-red-600" />
+                  <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight">Executive Scope & Objective</h2>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                  {catInfo.desc}
+                </p>
+                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100/80 text-slate-500 font-medium text-xs leading-relaxed">
+                  <strong>E-E-A-T Technical Statement:</strong> This category functions as a critical vascular artery in the national CAD/BIM/CAx coordination framework. Programmatic listicles and generic AI-generated articles are explicitly blocked. All technical guidelines, registry configurations, shell commands, and compliance option variables mapped herein reflect authentic verified enterprise engineering workflows.
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
+                {catInfo.tags.map(tag => (
+                  <span key={tag} className="text-[10px] font-black uppercase tracking-wider bg-slate-50 border border-slate-200 text-slate-500 px-3 py-1 rounded-lg">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Card>
+
+            {/* Standard Metadata Stamp Table */}
+            <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-white flex flex-col justify-between">
+              <h3 className="font-mono font-black text-[10px] text-slate-400 uppercase tracking-widest border-b pb-3 mb-4">
+                TECHNICAL DIRECTIVE SEAL
+              </h3>
+              <div className="divide-y divide-slate-100 font-mono text-[11px] font-semibold text-slate-500 flex-1">
+                <div className="py-2.5 flex justify-between">
+                  <span>Directive Code:</span>
+                  <span className="text-slate-900 font-black">{directive.directiveCode}</span>
+                </div>
+                <div className="py-2.5 flex justify-between">
+                  <span>Standard Reference:</span>
+                  <span className="text-slate-900 font-black">{directive.reference}</span>
+                </div>
+                <div className="py-2.5 flex justify-between">
+                  <span>Authority:</span>
+                  <span className="text-slate-900 font-black text-right max-w-[180px]">CADGuide Review Committee</span>
+                </div>
+                <div className="py-2.5 flex justify-between">
+                  <span>Distribution:</span>
+                  <span className="text-slate-900 font-black text-right max-w-[180px]">Global Enterprise B-End Users</span>
+                </div>
+                <div className="py-2.5 flex justify-between">
+                  <span>Security Class:</span>
+                  <span className="text-emerald-600 font-black">UNCLASSIFIED // UNRESTRICTED</span>
+                </div>
+              </div>
+              <div className="pt-4 border-t mt-4 flex items-center justify-center bg-red-50/50 p-3 rounded-2xl border border-red-100/50 font-mono text-[10px] text-red-800 font-black">
+                ★ ISO APPROVED DIRECTIVE MAPPING
+              </div>
+            </Card>
+          </div>
+
+          {/* --- SECTION 2: THE STRUCTURED TECHNICAL DATA MATRIX --- */}
+          <section className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-700">
+                <FileSpreadsheet className="w-5 h-5" />
+              </div>
+              <div>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight uppercase">
+                  {directive.sectionTitle}
+                </h2>
+                <p className="text-slate-400 text-xs font-semibold">Verified diagnostic calibration matrix representing real hardware/software state parameters.</p>
+              </div>
+            </div>
+
+            <Card className="rounded-[24px] border border-slate-100 shadow-sm overflow-hidden bg-white">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                  <thead>
+                    <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                      {directive.tableHeaders.map((head, hIdx) => (
+                        <th key={hIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">{head}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
+                    {directive.tableRows.map((row, rIdx) => (
+                      <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors">
+                        {row.map((cell, cIdx) => (
+                          <td key={cIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">
+                            {cIdx === 2 && (cell === 'CRITICAL' || cell === 'Illegal Corporate') ? (
+                              <Badge className="bg-rose-50 text-rose-700 border border-rose-100 font-mono font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                                {cell}
+                              </Badge>
+                            ) : cIdx === 2 && (cell === 'HIGH' || cell === 'Medium risk (Audit sweeps)') ? (
+                              <Badge className="bg-amber-50 text-amber-700 border border-amber-100 font-mono font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                                {cell}
+                              </Badge>
+                            ) : cIdx === 2 && (cell === 'Low risk (No silent push)' || cell === 'Low risk (EULA lock)') ? (
+                              <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 font-mono font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                                {cell}
+                              </Badge>
+                            ) : cIdx === 0 ? (
+                              <span className="font-mono font-black text-slate-900">{cell}</span>
+                            ) : cIdx === 4 && (cell.includes('lsp') || cell.includes('xml') || cell.includes('py')) ? (
+                              <code className="bg-slate-50 text-slate-500 font-mono text-[10px] px-2 py-1 rounded border border-slate-100">{cell}</code>
+                            ) : (
+                              <span>{cell}</span>
+                            )}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Card>
+          </section>
+
+          {/* --- SECTION 3: TOP TARGETED SOFTWARE MAPPED TO ARTERY (ARTERY MAPPING) --- */}
+          <section className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-700">
+                <FolderGit className="w-5 h-5" />
+              </div>
+              <div>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight uppercase">
+                  Top Mapped Software Systems
+                </h2>
+                <p className="text-slate-400 text-xs font-semibold">Explore specific long-tail expert troubleshooting and standards folders for top CAD/BIM tools.</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {mappedTools.map((tool) => (
+                <Card key={tool.id} className="rounded-3xl border border-slate-100 shadow-sm p-5 bg-white flex flex-col justify-between hover:shadow-md hover:border-red-100 transition-all duration-300 relative group overflow-hidden">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <ToolLogo slug={tool.slug} name={tool.name} src={tool.logo_url} className="w-10 h-10 rounded-xl shadow-sm border bg-white" />
+                      <div>
+                        <h4 className="font-black text-slate-900 text-sm group-hover:text-red-600 transition-colors">{tool.name}</h4>
+                        <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">{tool.pricing_type}</span>
+                      </div>
+                    </div>
+                    <p className="text-slate-500 text-xs leading-relaxed font-medium line-clamp-2">
+                      {tool.short_desc}
+                    </p>
+                    
+                    {/* Dynamic Capillary Sub-guides mapped to this tool */}
+                    <div className="pt-3 border-t border-slate-50 space-y-2">
+                      <span className="text-[9px] font-mono font-black text-slate-400 uppercase tracking-widest block mb-1">MAPPED ACTIVE GUIDES:</span>
+                      {[
+                        { id: 0, title: 'Primary Directive Recovery' },
+                        { id: 1, title: 'Workstation Tuning Standard' }
+                      ].map((artItem) => (
+                        <Link 
+                          key={artItem.id}
+                          href={`/guides/${tool.slug}-${category}-${artItem.id}`}
+                          className="flex items-center justify-between text-[11px] font-bold text-slate-700 hover:text-red-600 transition-colors py-1 px-2 hover:bg-slate-50 rounded-lg group/link"
+                        >
+                          <span className="truncate">{artItem.title}</span>
+                          <ArrowRight className="w-3 h-3 text-slate-400 group-hover/link:translate-x-0.5 transition-transform shrink-0" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-yellow-500 font-black text-[10px]">★ {tool.score} Score</span>
+                    <Link href={`/tools/${tool.slug}`} className="text-[10px] font-black text-slate-400 hover:text-red-600 hover:underline uppercase tracking-wider">
+                      SPEC INDEX
+                    </Link>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* --- SECTION 4: DETAILED CAPILLARY DIRECTORY --- */}
+          <section className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-700">
+                <BookOpen className="w-5 h-5" />
+              </div>
+              <div>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight uppercase">
+                  Master Technical Reference Guides
+                </h2>
+                <p className="text-slate-400 text-xs font-semibold">Deep-dive technical blueprints and option variables resolving production pipeline critical path items.</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {catInfo.articles.map((art, aIdx) => {
+                const artIndex = aIdx;
+                // Find matching tool
+                const matchedTool = tools.find(t => art.title.toLowerCase().includes(t.name.toLowerCase())) || tools[0];
+                return (
+                  <Card key={art.title} className="rounded-3xl border border-slate-100 shadow-sm p-6 bg-white flex flex-col justify-between hover:shadow-md hover:border-red-100 transition-all duration-300 relative group overflow-hidden">
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <Badge className="bg-red-50 text-red-700 border-none font-bold text-[9px] uppercase tracking-wider rounded-lg px-2.5 py-0.5">
+                          GUIDE NO. {aIdx + 1}
+                        </Badge>
+                        <span className="text-[10px] text-slate-400 font-semibold font-mono">5 min read</span>
+                      </div>
+                      <h4 className="font-black text-slate-900 text-sm sm:text-base leading-snug group-hover:text-red-600 transition-colors">
+                        {art.title}
+                      </h4>
+                      <p className="text-slate-500 text-xs leading-relaxed font-medium">
+                        Detailed expert blueprint for {art.title}. Learn active-registry configuration parameters, troubleshooting options file variables, and enterprise optimization protocols mapping real search intent.
+                      </p>
+                    </div>
+
+                    <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <ToolLogo slug={matchedTool.slug} name={matchedTool.name} src={matchedTool.logo_url} className="w-6 h-6 rounded-md shadow-sm border bg-white" />
+                        <span className="text-[10px] text-slate-500 font-bold">{matchedTool.name} Mapped</span>
+                      </div>
+                      <Button asChild className="rounded-xl bg-slate-900 hover:bg-red-600 text-white font-black text-xs h-9 px-4 shadow-sm transition-colors">
+                        <Link href={`/guides/${matchedTool.slug}-${category}-${artIndex}`}>
+                          Deploy Guide
+                        </Link>
+                      </Button>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* Bottom Call to Action */}
+          <Card className="border-none shadow-xl bg-gradient-to-br from-slate-950 via-slate-900 to-red-950 text-white rounded-[32px] overflow-hidden relative p-8 md:p-12 text-center space-y-6">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+            <div className="relative z-10 max-w-2xl mx-auto space-y-6">
+              <Badge className="bg-red-600 text-white border-none font-bold text-[8px] uppercase tracking-widest rounded px-3 py-1">
+                ENTERPRISE SYSTEM ARCHITECTS
+              </Badge>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-white leading-none">
+                Need Custom Silent Deployment Packages?
+              </h3>
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-medium">
+                Our technical reviews committee compiles custom silent installations MSIs, options configuration option files, and optimized workstation graphics configurations tailored to your corporate network architecture.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <Button asChild className="rounded-2xl bg-red-600 hover:bg-red-700 text-white font-black h-12 px-8 shadow-md">
+                  <Link href="/contact">Request Architectural Directive</Link>
+                </Button>
+                <Button asChild variant="outline" className="rounded-2xl border-slate-700 text-slate-200 hover:bg-slate-800/50 hover:text-white font-black h-12 px-8">
+                  <Link href="/guides">Explore All 8 Core Arteries</Link>
+                </Button>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+
+  // 1. Check if slug is a category landing page
+  const catInfo = CATEGORY_SECTIONS.find(s => s.category === slug);
+  if (catInfo) {
+    return renderCategoryPage(catInfo);
+  }
+
+  // 2. Otherwise process as a dynamic tool guide
   const parsed = parseGuideSlug(slug);
 
   if (!parsed) {
