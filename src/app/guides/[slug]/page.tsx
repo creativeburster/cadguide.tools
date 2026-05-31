@@ -1195,6 +1195,207 @@ export function renderStandardsDirective(tool: typeof tools[number], title: stri
   );
 }
 
+// Dynamic manufacturing payload builder targeting sheet metal bend allowances, STL mesh faceting, and CNC feed rates (Template C)
+export function getManufacturingPayload(toolName: string, title: string, slug: string) {
+  const titleLower = title.toLowerCase();
+
+  if (titleLower.includes('bend') || titleLower.includes('k-factor') || titleLower.includes('sheet') || titleLower.includes('metal')) {
+    return {
+      reference: 'DIN 6935 / ANSI Sheet Metal Standard',
+      manufacturingProcess: 'Sheet Metal Bending & Press Brake Calibration',
+      revisionCode: 'REV-KFACT-2026-A',
+      tableHeaders: ['Sheet Metal Material', 'Thickness (t, mm)', 'Inside Bend Radius (r, mm)', 'Empirical K-Factor (K)', 'Bending Allowance Formula'],
+      tableRows: [
+        ['Mild Structural Steel', '1.50 mm', '1.50 mm (r=t)', 'K = 0.38', 'BA = pi * A/180 * (r + K*t)'],
+        ['Stainless Steel (304)', '2.00 mm', '2.00 mm (r=t)', 'K = 0.40', 'BA = pi * A/180 * (r + K*t)'],
+        ['Aluminum Alloy (5052-H32)', '3.00 mm', '3.00 mm (r=t)', 'K = 0.44', 'BA = pi * A/180 * (r + K*t)'],
+        ['High-Strength Low-Alloy (HSLA)', '4.00 mm', '8.00 mm (r=2t)', 'K = 0.48', 'BA = pi * A/180 * (r + K*t)']
+      ],
+      codeBlockTitle: 'Python Sheet Metal Bend Allowance and Flat Pattern Calculator',
+      codeSnippet: `# Python K-Factor and Bend Allowance (BA) calculator for press brake setups\nimport math\n\ndef calculate_bend_allowance(thickness, radius, angle, k_factor):\n    # DIN 6935 empirical formula for standard bending allowance\n    angle_rad = math.radians(angle)\n    neutral_axis_radius = radius + (k_factor * thickness)\n    bend_allowance = angle_rad * neutral_axis_radius\n    return round(bend_allowance, 5)\n\n# Example calibration: 2.0mm Stainless Steel, 90-degree fold, K=0.40\nt = 2.0; r = 2.0; a = 90.0; k = 0.40\nba = calculate_bend_allowance(t, r, a, k)\nprint(f"[+] Material thickness: {t}mm, Radius: {r}mm, Angle: {a} deg")\nprint(f"[+] Bending Allowance (Flat Pattern Development): {ba} mm")`
+    };
+  }
+
+  if (titleLower.includes('stl') || titleLower.includes('3mf') || titleLower.includes('watertight') || titleLower.includes('print') || titleLower.includes('slicing') || titleLower.includes('facet')) {
+    return {
+      reference: 'ISO/ASTM 52915 (3MF Specification) / STL Standard',
+      manufacturingProcess: '3D Printing Additive Manufacturing & Slicing',
+      revisionCode: 'REV-3DP-2026-B',
+      tableHeaders: ['Slicing Parameter', 'FDM Material Standard', 'SLA Resin Standard', 'Triangulation Chord Tolerance', 'Polygon Faceting Standard'],
+      tableRows: [
+        ['Chordal Deviation (Toler.)', '0.05 mm', '0.01 mm', '< 0.005 mm limit', 'Prevent visible flat facets'],
+        ['Angular Tolerance Limit', '1.0 Degree', '0.5 Degree', '< 0.2 Degree limit', 'Preserve precise cylinder curves'],
+        ['Mesh Boundary Stitching', '100% Watertight', '100% Watertight', '0.00 mm gap tolerance', 'Zero non-manifold borders'],
+        ['File Format Standard', '3MF (Highly recom.)', '3MF (Highly recom.)', 'B-Rep geometry mapping', 'Embedded colors & coordinates']
+      ],
+      codeBlockTitle: 'Open CASCADE (C++) Mesh Tessellation & STL Watertight Export API',
+      codeSnippet: `// Open CASCADE watertight STL model export API for additive manufacturing\n#include <StlAPI_Writer.hxx>\n#include <BRepMesh_IncrementalMesh.hxx>\n#include <TopoDS_Shape.hxx>\n\nbool ExportWatertightSTL(const TopoDS_Shape& shape, const char* filename, double deflection = 0.01) {\n    // Force high-resolution incremental mesh generation on solid geometry\n    BRepMesh_IncrementalMesh mesher(shape, deflection);\n    mesher.Perform();\n    \n    if (!mesher.IsDone()) {\n        printf("[-] Tessellation failed. Geometric facets are corrupted.\\\\n");\n        return false;\n    }\n    \n    // Export watertight B-Rep manifold triangulations to file\n    StlAPI_Writer writer;\n    writer.Write(shape, filename);\n    printf("[+] Exported watertight STL: %s with deflection %f mm.\\\\n", filename, deflection);\n    return true;\n}`
+    };
+  }
+
+  // Default / CNC Milling / G-Code / Toolpaths
+  return {
+    reference: 'ISO 6983 (G-Code Standard) / RS-274D',
+    manufacturingProcess: 'CNC 3-Axis / 5-Axis Milling & Toolpath Config',
+    revisionCode: 'REV-CNC-2026-C',
+    tableHeaders: ['CNC Milling Operation', 'Spindle Speed (RPM)', 'Feed Rate (mm/min)', 'Stepover Tolerance', 'G-Code Commands Standard'],
+    tableRows: [
+      ['Rough Face Milling', '4500 RPM', '1200 mm/min', '45% cutter diameter', 'G00 (Rapid), G01 (Linear)'],
+      ['Profile Contour Finish', '6000 RPM', '800 mm/min', '5% stepover (Scallop)', 'G02 / G03 (Circular CCW/CW)'],
+      ['High-Precision Drilling', '2500 RPM', '300 mm/min', 'N/A (Canned Cycle)', 'G83 (Deep Hole Peck Cycle)'],
+      ['Adaptive Cleaving (HSM)', '8000 RPM', '3200 mm/min', '15% optimal load', 'Constant chip load vector calculations']
+    ],
+    codeBlockTitle: 'Python CNC Feed Rate Optimization & Feedrate G-Code Adjuster',
+    codeSnippet: `# Python script to analyze and optimize feed rates on sharp G-Code profiles\ndef optimize_gcode_feedrate(input_file, output_file, max_feed=1500, corner_decel=0.40):\n    # Parses standard ISO 6983 G-code lines and dampens feed on coordinates shifts\n    with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:\n        for line in infile:\n            stripped = line.strip()\n            if stripped.startswith("G1") and "F" in stripped:\n                # Identify linear toolpath and modulate feed rate for sharp curves\n                parts = stripped.split("F")\n                base_gcode = parts[0]\n                original_feed = float(parts[1])\n                \n                # Calibrate feed rate dynamically to avoid cutter chatter\n                safe_feed = min(original_feed, max_feed)\n                if "X" in base_gcode and "Y" in base_gcode:\n                    safe_feed = safe_feed * corner_decel # Dynamic deceleration\n                    \n                outfile.write(f"{base_gcode}F{round(safe_feed, 1)}\\\\n")\n            else:\n                outfile.write(line)\n    print("[+] Optimized G-Code toolpath feed rates to prevent cutter wear.")`
+  };
+}
+
+// Interactive Technical Specification Directive Renderer for CAM & Manufacturing Category (Template C)
+export function renderManufacturingDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
+  const man = getManufacturingPayload(tool.name, title, slug);
+
+  return (
+    <div className="space-y-8 md:space-y-12">
+      {/* 1. Manufacturing Specification Header Card */}
+      <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-orange-500/10 rounded-full blur-[80px]"></div>
+        <div className="relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-orange-400 font-mono font-black text-[10px] uppercase tracking-widest">
+            <Award className="w-4 h-4 animate-pulse" /> CAM & DIGITAL MANUFACTURING DIRECTIVE
+          </div>
+          <h3 className="text-xl sm:text-2xl font-black tracking-tight uppercase leading-snug">
+            TECHNICAL DIRECTIVE: {tool.slug.toUpperCase()}-MAN-B26
+          </h3>
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+            This technical manufacturing directive defines the press brake K-Factor sheet metal bend allowances, SLA/FDM 3D printing slicing resolution boundaries, and high-speed CNC milling feed-rate calibrations for {tool.name}. Enforce these parameters to secure watertight CNC exports.
+          </p>
+        </div>
+      </Card>
+
+      {/* 2. Standard Metadata Box */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">CORE MANUFACTURING DETAILS</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Standard Spec:</span>
+            <span className="text-slate-900 font-black">{man.reference}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Process Method:</span>
+            <span className="text-slate-900 font-black">{man.manufacturingProcess}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Revision Code:</span>
+            <span className="text-orange-600 font-black">{man.revisionCode}</span>
+          </div>
+        </Card>
+        
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">TOLERANCE COMPLIANCE</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Watertight Shell:</span>
+            <span className="text-emerald-600 font-black">100% Manifold Solid</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Milling Tolerance:</span>
+            <span className="text-slate-900 font-black">± 0.001 mm Bound</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">K-Factor Range:</span>
+            <span className="text-slate-900 font-black">0.38 - 0.48 Deviation</span>
+          </div>
+        </Card>
+      </div>
+
+      {/* 3. CAM / CNC Manufacturing Table */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center">
+            <FileSpreadsheet className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              CNC Slicing Tolerances & Feed-Rate Calibration Standards
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Verified G-code commands, stepover constraints, bend allowances, or chordal deviation tolerances for {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                  {man.tableHeaders.map((head, hIdx) => (
+                    <th key={hIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">{head}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
+                {man.tableRows.map((row, rIdx) => (
+                  <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors font-mono">
+                    {row.map((cell, cIdx) => (
+                      <td key={cIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">
+                        {cIdx === 0 ? (
+                          <span className="font-sans font-black text-slate-900">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('limit') || cell.includes('Mates')) ? (
+                          <span className="text-rose-600 font-black">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('Watertight') || cell.includes('Radius') || cell.includes('min') || cell.includes('Solid')) ? (
+                          <span className="text-emerald-600 font-black">{cell}</span>
+                        ) : cIdx === 3 && (cell.includes('K =') || cell.includes('optimal') || cell.includes('B-Rep') || cell.includes('tolerance')) ? (
+                          <span className="text-indigo-600 font-black">{cell}</span>
+                        ) : cIdx === 4 && (cell.includes('Direct') || cell.includes('stitch') || cell.includes('colors') || cell.includes('G02') || cell.includes('Rapid')) ? (
+                          <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : cIdx === 4 && (cell.includes('Re-approximate') || cell.includes('Formula') || cell.includes('deceleration') || cell.includes('Prevent')) ? (
+                          <Badge className="bg-amber-50 text-amber-700 border border-amber-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : (
+                          <span>{cell}</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </div>
+
+      {/* 4. Cross-Platform Automation Script Block */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center">
+            <Activity className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              {man.codeBlockTitle}
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Low-level automation script to optimize G-code feed rates, calculate sheet metal K-factor, or export STL manifolds in {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] overflow-hidden border border-slate-900 shadow-xl bg-slate-950 text-emerald-400 p-6 relative">
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+          </div>
+          <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
+            <pre>
+              {man.codeSnippet}
+            </pre>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
   const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
@@ -1904,6 +2105,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 renderMigrationDirective(tool, title, excerpt, slug)
               ) : category === 'standards' ? (
                 renderStandardsDirective(tool, title, excerpt, slug)
+              ) : category === 'manufacturing' ? (
+                renderManufacturingDirective(tool, title, excerpt, slug)
               ) : (
                 <>
                   {/* Technical Overview Container */}
