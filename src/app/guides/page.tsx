@@ -7,6 +7,33 @@ export const dynamic = 'force-dynamic';
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
+export function getDynamicTitle(tool: any): string {
+  const name = tool.name;
+  const industries = tool.industries || [];
+  const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
+  const isMechanical = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
+  const isOpenSource = tool.pricing_type === 'Open Source' || tool.pricing_type === 'Free';
+
+  if (isOpenSource) {
+    return `${name} Free Guides & Custom Configs`;
+  }
+  if (isBIM) {
+    return `${name} BIM Guides & Enterprise Setup`;
+  }
+  if (isMechanical) {
+    return `${name} 3D Specs & Workstation Tuning`;
+  }
+  return `${name} CAD Guides & IT Deployment`;
+}
+
+export function getDynamicDescription(tool: any): string {
+  const name = tool.name;
+  const platformStr = tool.platforms?.slice(0, 2).join('/') || 'Windows/macOS';
+  const indList = tool.industries?.slice(0, 2).join('/') || 'CAD/BIM';
+
+  return `Professional B-End guides for ${name}. Fix fatal errors, tune graphics drivers for ${platformStr}, and optimize licensing for ${indList} teams.`;
+}
+
 export async function generateMetadata({
   searchParams,
 }: {
@@ -22,8 +49,8 @@ export async function generateMetadata({
   if (tool) {
     const matchedTool = tools.find(t => t.slug === tool);
     if (matchedTool) {
-      title = `${matchedTool.name} Guides & IT Deployment`;
-      description = `Deep-dive technical guides for ${matchedTool.name} software. Fix fatal errors, optimize performance, enforce printing standards, and manage enterprise licensing.`;
+      title = getDynamicTitle(matchedTool);
+      description = getDynamicDescription(matchedTool);
       path = `/guides?tool=${matchedTool.slug}`;
     }
   }

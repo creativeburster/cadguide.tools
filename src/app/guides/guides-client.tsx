@@ -240,7 +240,21 @@ export default function GuidesClient() {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       if (selectedTool) {
-        document.title = `${selectedTool.name} Guides & IT Deployment | CADGuide.tools`;
+        const industries = selectedTool.industries || [];
+        const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || selectedTool.category_id === 'bim';
+        const isMechanical = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || selectedTool.category_id === 'mfg';
+        const isOpenSource = selectedTool.pricing_type === 'Open Source' || selectedTool.pricing_type === 'Free';
+
+        let customTitle = `${selectedTool.name} CAD Guides & IT Deployment`;
+        if (isOpenSource) {
+          customTitle = `${selectedTool.name} Free Guides & Custom Configs`;
+        } else if (isBIM) {
+          customTitle = `${selectedTool.name} BIM Guides & Enterprise Setup`;
+        } else if (isMechanical) {
+          customTitle = `${selectedTool.name} 3D Specs & Workstation Tuning`;
+        }
+
+        document.title = `${customTitle} | CADGuide.tools`;
       } else {
         document.title = 'CAD Professional Guides & IT Deployment | CADGuide.tools';
       }
