@@ -13,14 +13,14 @@ export async function generateMetadata({
   const params = await searchParams;
   const tool = Array.isArray(params.tool) ? params.tool[0] : params.tool;
 
-  let title = 'CAD Professional Guides — Troubleshooting, Hardware & Deployment';
+  let title = 'CAD Professional Guides & IT Deployment';
   let description = 'Deep-dive technical guides for enterprise CAD, BIM, CAE, and EDA software. Fix fatal errors, optimize hardware performance, enforce printing standards, and migrate concurrent licensing.';
   let path = '/guides';
 
   if (tool) {
     const matchedTool = tools.find(t => t.slug === tool);
     if (matchedTool) {
-      title = `${matchedTool.name} Professional Guides — Troubleshooting & Deployment`;
+      title = `${matchedTool.name} Guides & IT Deployment`;
       description = `Deep-dive technical guides for ${matchedTool.name} software. Fix fatal errors, optimize performance, enforce printing standards, and manage enterprise licensing.`;
       path = `/guides?tool=${matchedTool.slug}`;
     }
