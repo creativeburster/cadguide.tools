@@ -11,6 +11,7 @@ import {
   sectorPagePaths,
 } from '@/lib/seo-content';
 import { PRICING_PAGES } from '@/lib/pricing-licensing-content';
+import { ARTICLES_LIST } from '@/lib/guides-data';
 
 const BASE_URL = 'https://cadguide.tools';
 
@@ -126,6 +127,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     }));
 
+  // Dynamic guide pages (2,400 entries) - pre-render 10 guides per tool for maximum long-tail coverage
+  const guideUrls: MetadataRoute.Sitemap = [];
+  const selectedArticles = ARTICLES_LIST.slice(0, 10);
+  for (const tool of tools) {
+    for (const art of selectedArticles) {
+      const artIndex = art.id.split('-').pop();
+      guideUrls.push({
+        url: `${BASE_URL}/guides/${tool.slug}-${art.category}-${artIndex}`,
+        lastModified: now,
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+      });
+    }
+  }
+
   return [
     ...staticPages,
     ...toolUrls,
@@ -138,5 +154,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...personaUrls,
     ...sectorUrls,
     ...pricingUrls,
+    ...guideUrls,
   ];
 }
+
