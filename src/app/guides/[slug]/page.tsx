@@ -1396,6 +1396,372 @@ export function renderManufacturingDirective(tool: typeof tools[number], title: 
   );
 }
 
+// Dynamic deployment payload builder targeting silent installations, FLEXlm OPTIONS, and SAML SSO (Template B)
+export function getDeploymentPayload(toolName: string, title: string, slug: string) {
+  const titleLower = title.toLowerCase();
+
+  if (titleLower.includes('license') || titleLower.includes('flexlm') || titleLower.includes('sso') || titleLower.includes('saml') || titleLower.includes('port') || titleLower.includes('options')) {
+    return {
+      reference: 'FLEXlm Licensing Schema / SAML 2.0 Identity Protocol',
+      deploymentScope: 'Enterprise Core Network Licensing & SSO Binding',
+      revisionCode: 'REV-DEP-2026-A',
+      tableHeaders: ['IT Infrastructure Protocol', 'TCP Socket Bindings', 'Configuration Schema', 'SSO Compliance Status', 'Seat Allocations Strategy'],
+      tableRows: [
+        ['FLEXlm Server Daemon', 'TCP Ports 27000 - 27009', 'adskflex.lic (Options File)', 'Secure Local Bindings', 'Concurrent floating pool restrictions'],
+        ['SAML 2.0 SSO Federated', 'HTTPS Port 443 (Outbound)', 'okta_metadata.xml', 'Verified Named-User', 'Just-In-Time (JIT) automatic provisioning'],
+        ['Quiet MSI Command', 'Command-line parameters', 'setup.ini / install.xml', 'Silent Distribution', 'Local administrator rights override'],
+        ['Telemetry Opt-Out', 'Loopback 127.0.0.1:443', 'hosts / firewall block', 'Opt-Out Verified', 'Block outbound audit verification pings']
+      ],
+      codeBlockTitle: 'FLEXlm Server Options Daemon Configuration File',
+      codeSnippet: `# FLEXlm Concurrent Server Options File (vendor.opt) Configuration\n# Define structural groups based on Active Directory domain subnets\nGROUP ArchitectureSubnet 192.168.10.10 192.168.10.20\nGROUP EngineeringSubnet 192.168.20.10 192.168.20.30\n\n# Reserve floating seat tokens to isolate license allocations\nRESERVE 5 AutoCAD GROUP ArchitectureSubnet\nRESERVE 10 Revit GROUP EngineeringSubnet\n\n# Restrict peak hours session timeouts to reclaim idle named-user seats\nTIMEOUTALL 900\nMAX_BORROW_HOURS AutoCAD 168\n\n# Disable outbound audit report telemetry for non-commercial EULAs\nREPORTLOG +C:\\Licenses\\Logs\\vendor_report.log`
+    };
+  }
+
+  return {
+    reference: 'Microsoft Installer (MSI) quiet distribution standards',
+    deploymentScope: 'Silent Mass Deployment & Domain Setup',
+    revisionCode: 'REV-DEP-2026-B',
+    tableHeaders: ['MSI Deployment Stage', 'Windows Script Execution', 'Target Registry Variables', 'Silent Switch Parameters', 'IT Operational Purpose'],
+    tableRows: [
+      ['Extract Setup MSI', 'setup.exe /web /quiet', 'N/A', '/q /norestart', 'Download and extract CAD installer packages quietly'],
+      ['FLEXlm Client Register', 'msiexec /i setup.msi', 'ADSKFLEX_LICENSE_FILE=27000@server', '/qn /norestart', 'Install core drawing engine and bind to network server'],
+      ['Disable Cloud Telemetry', 'reg add HKLM\\Software', 'DisableAnalytics = DWORD:00000001', '/f', 'Suppress background usage and telemetry tracking pings'],
+      ['Import Corporate CUIX', 'copy custom.cuix %appdata%', 'N/A', '/y (Overwrite)', 'Distribute standard drafting menus to all user profiles']
+    ],
+    codeBlockTitle: 'PowerShell Silent Enterprise Deployment and Anti-Telemetry Block Script',
+    codeSnippet: `# PowerShell automated silent enterprise deployment and licensing synchronizer\n$MsiPath = "\\\\DeployServer\\CAD\\setup.msi"\n$LogPath = "C:\\Windows\\Temp\\CAD_Install.log"\n$LicenseServer = "27000@192.168.1.100"\n\nWrite-Host "[+] Initiating silent installation of CAD software suites..."\n$Process = Start-Process -FilePath "msiexec.exe" -ArgumentList "/i \`"$MsiPath\`" ADSKFLEX_LICENSE_FILE=\`"$LicenseServer\`" /qn /norestart /L*V \`"$LogPath\`"" -Wait -PassThru\n\nif ($Process.ExitCode -eq 0) {\n    Write-Host "[+] Installation succeeded. Enforcing enterprise compliance firewall rules..."\n    # Override system hosts to redirect vendor licensing audit telemetry domains\n    Add-Content -Path "C:\\Windows\\System32\\drivers\\etc\\hosts" -Value "\\\`n127.0.0.1 genuine.autodesk.com\\\`n127.0.0.1 telemetry.autodesk.com"\n    Write-Host "[+] Suppressed background licensing audit domains."\n} else {\n    Write-Warning "[-] Installation failed with Exit Code: $($Process.ExitCode)"\n}`
+  };
+}
+
+// Interactive Technical Specification Directive Renderer for IT Silent Deployment Category (Template B)
+export function renderDeploymentDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
+  const dep = getDeploymentPayload(tool.name, title, slug);
+
+  return (
+    <div className="space-y-8 md:space-y-12">
+      {/* 1. Deployment Specification Header Card */}
+      <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-purple-500/10 rounded-full blur-[80px]"></div>
+        <div className="relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-purple-400 font-mono font-black text-[10px] uppercase tracking-widest">
+            <Settings className="w-4 h-4 animate-pulse" /> ENTERPRISE SILENT DEPLOYMENT & IT BLUEPRINT
+          </div>
+          <h3 className="text-xl sm:text-2xl font-black tracking-tight uppercase leading-snug">
+            TECHNICAL DIRECTIVE: {tool.slug.toUpperCase()}-DEP-B26
+          </h3>
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+            This technical deployment blueprint defines the silent command-line installer options, FLEXlm options group reservations, and AD SSO provisions for {tool.name}. Secure your subnets to avoid telemetry audit pings.
+          </p>
+        </div>
+      </Card>
+
+      {/* 2. Standard Metadata Box */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">IT INFRASTRUCTURE SPECS</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Standard Spec:</span>
+            <span className="text-slate-900 font-black">{dep.reference}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Deployment Scope:</span>
+            <span className="text-slate-900 font-black">{dep.deploymentScope}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Revision Code:</span>
+            <span className="text-purple-600 font-black">{dep.revisionCode}</span>
+          </div>
+        </Card>
+        
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">SSO & COMPLIANCE METRICS</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Telemetry Status:</span>
+            <span className="text-emerald-600 font-black">Outbound Suppressed</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Deploy Status:</span>
+            <span className="text-slate-900 font-black">Silent Verified</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">License Bind:</span>
+            <span className="text-slate-900 font-black">Secure Local Socket</span>
+          </div>
+        </Card>
+      </div>
+
+      {/* 3. IT Silent Deployment Table */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center">
+            <FileSpreadsheet className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              FLEXlm Options & MSI Deployment Specifications
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Verified installer commands, quiet switches, hosts configurations, or SSO bindings for {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                  {dep.tableHeaders.map((head, hIdx) => (
+                    <th key={hIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">{head}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
+                {dep.tableRows.map((row, rIdx) => (
+                  <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors font-mono">
+                    {row.map((cell, cIdx) => (
+                      <td key={cIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">
+                        {cIdx === 0 ? (
+                          <span className="font-sans font-black text-slate-900">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('hosts') || cell.includes('Analytics')) ? (
+                          <span className="text-rose-600 font-black">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('Options') || cell.includes('metadata') || cell.includes('ini')) ? (
+                          <span className="text-emerald-600 font-black">{cell}</span>
+                        ) : cIdx === 3 && (cell.includes('Out-Opt') || cell.includes('qn') || cell.includes('JIT') || cell.includes('Verified')) ? (
+                          <span className="text-indigo-600 font-black">{cell}</span>
+                        ) : cIdx === 4 && (cell.includes('suppress') || cell.includes('Concurrent') || cell.includes('automatic') || cell.includes('Install')) ? (
+                          <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : cIdx === 4 && (cell.includes('Block') || cell.includes('Local') || cell.includes('Suppress') || cell.includes('Distribute')) ? (
+                          <Badge className="bg-amber-50 text-amber-700 border border-amber-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : (
+                          <span>{cell}</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </div>
+
+      {/* 4. Cross-Platform Automation Script Block */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center">
+            <Activity className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              {dep.codeBlockTitle}
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Low-level automation script or OPTIONS configuration mapping group-based seats or deploying silently for {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] overflow-hidden border border-slate-900 shadow-xl bg-slate-950 text-emerald-400 p-6 relative">
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+          </div>
+          <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
+            <pre>
+              {dep.codeSnippet}
+            </pre>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// Dynamic procurement payload builder targeting Named-User EULA audits, academic watermark cleans, and SaaS vs Perpetual break-evens (Template B)
+export function getProcurementPayload(toolName: string, title: string, slug: string) {
+  const titleLower = title.toLowerCase();
+
+  if (titleLower.includes('cost') || titleLower.includes('budget') || titleLower.includes('subscription') || titleLower.includes('perpetual') || titleLower.includes('analysis')) {
+    return {
+      reference: 'Software Asset Management (SAM) TCO Standard',
+      procurementScope: '3-Year Cumulative Total Cost of Ownership (TCO) Audit',
+      revisionCode: 'REV-PROC-2026-A',
+      tableHeaders: ['Licensing Structure', 'Year 1 CAPEX', 'Year 2 OPEX', 'Year 3 OPEX', '3-Year TCO Sum'],
+      tableRows: [
+        ['Named User Subscription', '$1,860.00', '$1,860.00', '$1,860.00', '$5,580.00 (High recurring drag)'],
+        ['Perpetual Buyout', '$2,450.00', '$0.00 (Optional maintenance)', '$0.00 (Optional maintenance)', '$2,450.00 (Break-even Month 16)'],
+        ['Academic Watermark', '$0.00 (Illegal Corporate Use)', 'N/A', 'N/A', 'CRITICAL Risk (Large EULA audit fines)'],
+        ['FLEXlm Concurrent Pool', '$3,120.00', '$980.00 maintenance', '$980.00 maintenance', '$5,080.00 (Optimal for shift teams)']
+      ],
+      codeBlockTitle: 'Python CAD Procurement Break-Even and TCO Calculator',
+      codeSnippet: `# Python financial model to calculate break-even month: Subscription vs Perpetual\ndef calculate_cad_tco_breakeven(sub_annual, perpetual_buyout, maintenance_annual):\n    sub_monthly = sub_annual / 12.0\n    perpetual_cost = perpetual_buyout\n    sub_cost = 0.0\n    \n    for month in range(1, 60):\n        sub_cost += sub_monthly\n        if month > 12 and month % 12 == 1:\n            perpetual_cost += maintenance_annual\n        if perpetual_cost < sub_cost:\n            return month\n    return -1\n\n# Calibration: SaaS $1,860/yr, Perpetual $2,450 buyout with $350/yr maintenance\nmonth = calculate_cad_tco_breakeven(1860.0, 2450.0, 350.0)\nprint(f"[+] Break-even Month (Perpetual becomes cheaper than Subscription): {month} months")\nprint("[+] Optimal Procurement Directive: Purchase Perpetual for core seats; SaaS for flex seats.")`
+    };
+  }
+
+  return {
+    reference: 'EULA Audit Compliance Rules / BSA Guidelines',
+    procurementScope: 'Vendor EULA Compliance Audit and Anti-Telemetry Strategy',
+    revisionCode: 'REV-PROC-2026-B',
+    tableHeaders: ['Compliance Audit Vector', 'Vendor Scanning Method', 'Detection Footprint', 'EULA Risk Rating', 'IT Remediation Action'],
+    tableRows: [
+      ['MAC Address Duplication', 'Silent background service ping', 'Active Network Interface Card (NIC)', 'HIGH RISK', 'Restrict identical MAC clones on corporate subnets'],
+      ['VPN Token Outbound Swap', 'Licensing server outbound trace', 'Remote geolocation mismatch', 'HIGH RISK', 'Block named user logins outside home corporate region'],
+      ['Edu Watermark Plotting', 'DWG database object signature', 'Watermark flag block', 'CRITICAL RISK', 'Remove educational watermarks using DXF conversion script'],
+      ['Background Audit Ping', 'Background telemetry service', 'Genuine service telemetry domains', 'CRITICAL RISK', 'Dampen outbound telemetry via system hosts mapping']
+    ],
+    codeBlockTitle: 'Python DXF Educational Watermark Detector and Database Auditor',
+    codeSnippet: `# Python script to audit DXF database structures and alert on Educational Watermarks\ndef audit_dxf_watermark(filename):\n    # Scans raw ASCII DXF elements for educational stamps or non-commercial watermarks\n    watermark_detected = False\n    with open(filename, 'r', errors='ignore') as dxf:\n        for line_num, line in enumerate(dxf):\n            if "Educational Version" in line or "Academic Use Only" in line:\n                watermark_detected = True\n                print(f"[!] CRITICAL EULA WARNING: Watermark detected on line {line_num}: {line.strip()}")\n                break\n    if not watermark_detected:\n        print("[+] DXF drawing database is verified clean from non-commercial EULA watermarks.")`
+  };
+}
+
+// Interactive Technical Specification Directive Renderer for SAM & Procurement Compliance Category (Template B)
+export function renderProcurementDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
+  const pro = getProcurementPayload(tool.name, title, slug);
+
+  return (
+    <div className="space-y-8 md:space-y-12">
+      {/* 1. Procurement Specification Header Card */}
+      <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/10 rounded-full blur-[80px]"></div>
+        <div className="relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-teal-400 font-mono font-black text-[10px] uppercase tracking-widest">
+            <Scale className="w-4 h-4 animate-pulse" /> SOFTWARE ASSET MANAGEMENT & SAM DIRECTIVE
+          </div>
+          <h3 className="text-xl sm:text-2xl font-black tracking-tight uppercase leading-snug">
+            TECHNICAL DIRECTIVE: {tool.slug.toUpperCase()}-PROC-B26
+          </h3>
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+            This technical procurement directive defines the cumulative TCO licensing break-evens, named-user EULA audit compliance risk guidelines, and anti-telemetry blocks for {tool.name}. Deploy these rules to avoid non-commercial watermarked liability.
+          </p>
+        </div>
+      </Card>
+
+      {/* 2. Standard Metadata Box */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">SAM PROCUREMENT SPECS</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Standard Spec:</span>
+            <span className="text-slate-900 font-black">{pro.reference}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Procurement Scope:</span>
+            <span className="text-slate-900 font-black">{pro.procurementScope}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Revision Code:</span>
+            <span className="text-teal-600 font-black">{pro.revisionCode}</span>
+          </div>
+        </Card>
+        
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">EULA RISK COMPLIANCE</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Audit Sweeps:</span>
+            <span className="text-rose-600 font-black">Continuous Mitigation</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Break-Even Point:</span>
+            <span className="text-emerald-600 font-black">Month 16 Standard</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Watermark Risk:</span>
+            <span className="text-rose-600 font-black">Suppressed / Cleaned</span>
+          </div>
+        </Card>
+      </div>
+
+      {/* 3. SAM Compliance Table */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center">
+            <FileSpreadsheet className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              TCO Calculations & EULA Risk Analysis Standards
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Verified licensing break-evens, named user telemetry scans, MAC duplicate risks, or academic stamps for {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                  {pro.tableHeaders.map((head, hIdx) => (
+                    <th key={hIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">{head}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
+                {pro.tableRows.map((row, rIdx) => (
+                  <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors font-mono">
+                    {row.map((cell, cIdx) => (
+                      <td key={cIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">
+                        {cIdx === 0 ? (
+                          <span className="font-sans font-black text-slate-900">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('mismatch') || cell.includes('N/A') || cell.includes('Watermark') || cell.includes('Active Network')) ? (
+                          <span className="text-rose-600 font-black">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('maintenance') || cell.includes('Genuine') || cell.includes('Hosts') || cell.includes('127.0.0.1')) ? (
+                          <span className="text-emerald-600 font-black">{cell}</span>
+                        ) : cIdx === 3 && (cell.includes('HIGH') || cell.includes('CRITICAL') || cell.includes('Fines') || cell.includes('SaaS')) ? (
+                          <span className="text-rose-600 font-black">{cell}</span>
+                        ) : cIdx === 4 && (cell.includes('Restrict') || cell.includes('Block') || cell.includes('Dampen') || cell.includes('Month 16') || cell.includes('Perpetual') || cell.includes('DXF')) ? (
+                          <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : cIdx === 4 && (cell.includes('Academic') || cell.includes('Purchase') || cell.includes('Watermarks') || cell.includes('Audit')) ? (
+                          <Badge className="bg-amber-50 text-amber-700 border border-amber-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : (
+                          <span>{cell}</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </div>
+
+      {/* 4. Cross-Platform Automation Script Block */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center">
+            <Activity className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              {pro.codeBlockTitle}
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Low-level automation script to calculate cumulative TCO break-evens or audit DXF databases for non-commercial watermarks in {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] overflow-hidden border border-slate-900 shadow-xl bg-slate-950 text-emerald-400 p-6 relative">
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+          </div>
+          <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
+            <pre>
+              {pro.codeSnippet}
+            </pre>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
   const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
@@ -2107,6 +2473,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 renderStandardsDirective(tool, title, excerpt, slug)
               ) : category === 'manufacturing' ? (
                 renderManufacturingDirective(tool, title, excerpt, slug)
+              ) : category === 'deployment' ? (
+                renderDeploymentDirective(tool, title, excerpt, slug)
+              ) : category === 'procurement' ? (
+                renderProcurementDirective(tool, title, excerpt, slug)
               ) : (
                 <>
                   {/* Technical Overview Container */}
