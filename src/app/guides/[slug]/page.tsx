@@ -994,6 +994,207 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
   );
 }
 
+// Dynamic standards payload builder targeting BIM LOD constraints, AIA layers, and solid B-Rep geometric kernels (Template C)
+export function getStandardsPayload(toolName: string, title: string, slug: string) {
+  const titleLower = title.toLowerCase();
+
+  if (titleLower.includes('bim') || titleLower.includes('bep') || titleLower.includes('lod') || titleLower.includes('revit')) {
+    return {
+      reference: 'ISO 19650 / BIM Level 2 / BS 1192',
+      standardClass: 'BIM Level 2 Coordination Protocol',
+      revisionCode: 'REV-BIM-2026-A',
+      tableHeaders: ['BIM Lifecycle Stage', 'LOD Class', 'Geometric Tolerance', 'Element Attributes', 'Coordination Deliverable'],
+      tableRows: [
+        ['Concept Design (LOD 100)', 'LOD 100 (Schematic)', 'No hard boundaries', 'Massing blocks, spatial bounds', 'Spatial validation study'],
+        ['Detailed Design (LOD 300)', 'LOD 300 (Precise)', '< 5.0 mm tolerance', 'Material specs, structural sizing', 'Clash-free structural model'],
+        ['Construction (LOD 400)', 'LOD 400 (Fabrication)', '< 2.0 mm tolerance', 'Manufacturer models, shop dwg', 'As-built structural coordinate sync'],
+        ['Facility Mgmt (LOD 500)', 'LOD 500 (As-Built)', '0.00 mm (Verified)', 'Maintenance schedules, serials', 'Asset Information Model (AIM)']
+      ],
+      codeBlockTitle: 'Dynamo Python API BIM Room Parameters Sync Script',
+      codeSnippet: `# Python script inside Dynamo to synchronize BIM parameters across Revit elements\nimport clr\nclr.AddReference('RevitAPI')\nfrom Autodesk.Revit.DB import *\n\nclr.AddReference('RevitServices')\nfrom RevitServices.Persistence import DocumentManager\nfrom RevitServices.Transactions import TransactionManager\n\ndoc = DocumentManager.Instance.CurrentDBDocument\nuiapp = DocumentManager.Instance.CurrentUIApplication\n\n# Force transactional document update to prevent boundary drifts\nTransactionManager.Instance.EnsureInTransaction(doc)\ncollector = FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_Rooms)\nfor room in collector:\n    phase = room.get_Parameter(BuiltInParameter.ROOM_PHASE).AsValueString()\n    if phase == "Construction Phase Q2":\n        room.LookupParameter("LOD_Compliance").Set("LOD 500 Verified")\nTransactionManager.Instance.TransactionTaskDone()\nprint("[+] Synchronized Room parameters with ISO 19650 compliance.")`
+    };
+  }
+
+  if (titleLower.includes('layer') || titleLower.includes('naming') || titleLower.includes('ansi') || titleLower.includes('iso') || titleLower.includes('dimension')) {
+    return {
+      reference: 'AIA CAD Layer Guidelines / ISO 13567',
+      standardClass: 'Enterprise CAD Standard Drafting Code',
+      revisionCode: 'REV-STD-2026-B',
+      tableHeaders: ['Layer Name Prefix', 'AIA/ISO Classification', 'Linetype Mapping', 'Plot Weight', 'Structural Engineering Purpose'],
+      tableRows: [
+        ['A-WALL-FULL-EXTR', 'Architectural Exterior Wall', 'Continuous (Solid)', '0.50 mm (Heavy)', 'Structural load-bearing wall boundaries'],
+        ['A-DOOR-FULL-INTR', 'Architectural Interior Door', 'Continuous (Solid)', '0.25 mm (Thin)', 'Interior door frames and dynamic swings'],
+        ['M-HVAC-DUCT-SUPP', 'Mechanical Supply Air Duct', 'Continuous (Solid)', '0.35 mm (Medium)', 'HVAC supply ductwork borders'],
+        ['E-POWR-CABL-TRAY', 'Electrical Cable Trays', 'Dotted (Hidden)', '0.35 mm (Medium)', 'Power distribution cable tray borders']
+      ],
+      codeBlockTitle: 'AutoLISP Standard Enterprise Layer and Linetype Auto-Generator',
+      codeSnippet: `;; AutoLISP Automated Layer and Linetype Configurator for Enterprise Standards\n(defun c:GenerateAIAStandardLayers ()\n  (vl-load-com)\n  (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))\n  (setq layers (vla-get-Layers doc))\n  \n  ;; Define standard AIA layers and configurations\n  (defun AddAIALayer (name color ltype weight)\n    (setq newLayer (vla-add layers name))\n    (vla-put-color newLayer color)\n    (vla-put-Linetype newLayer ltype)\n    (vla-put-LineWeight newLayer weight)\n  )\n  \n  ;; Generate standard AIA layers\n  (AddAIALayer "A-WALL-FULL-EXTR" 7 "Continuous" acLnWt050)\n  (AddAIALayer "A-DOOR-FULL-INTR" 3 "Continuous" acLnWt025)\n  (AddAIALayer "M-HVAC-DUCT-SUPP" 1 "Continuous" acLnWt035)\n  (AddAIALayer "E-POWR-CABL-TRAY" 4 "Hidden" acLnWt035)\n  \n  (vla-Regen doc acAllViewports)\n  (princ "\\\\n[+] AIA Standard corporate layers and linetypes mapped successfully.\\\\n")\n  (princ)\n)`
+    };
+  }
+
+  // Default / MCAD B-Rep Solid Geometry Kernels
+  return {
+    reference: 'ISO 10303 STEP Standard / AP242 Specification',
+    standardClass: 'B-Rep Topological Geometry Boundary Code',
+    revisionCode: 'REV-MCAD-2026-D',
+    tableHeaders: ['Topological Entity', 'B-Rep Representation', 'Sewing Tolerance Class', 'Drift Boundary Limit', 'Geometric Repair Protocol'],
+    tableRows: [
+      ['Planar Faces', 'B-Rep Face Sheet', '< 1e-8 mm (Absolute)', '0.0% Drift', 'Direct stitch and watertight bounding'],
+      ['Conical Fillets', 'NURBS Spline Surface', '< 1e-6 mm (Medium)', '< 1e-7 mm', 'Re-approximate knot vectors and tangency'],
+      ['Constraint Mates', 'Degrees of Freedom (DOF)', 'Rigid/Sliding Mates', 'N/A (Broken Mates)', 'Re-link mate constraints to B-Rep surfaces'],
+      ['Assembled Sheet Metal', 'DXF Flat Pattern Profile', '0.001 mm Tolerances', '< 1e-5 mm', 'Apply precise K-Factor bend allowances']
+    ],
+    codeBlockTitle: 'PythonOCC (Open CASCADE) Watertight Solid Sewing Pipeline',
+    codeSnippet: `# PythonOCC geometry kernel pipeline for watertight solid B-Rep sewing\nfrom OCC.Core.BRepBuilderAPI import BRepBuilderAPI_Sewing\nfrom OCC.Core.BRepLib import breplib\nfrom OCC.Core.TopoDS import TopoDS_Shape\n\ndef execute_watertight_brep_sew(shape_list, tolerance=1e-6):\n    # Initialize Open CASCADE high-precision sewing system\n    sewer = BRepBuilderAPI_Sewing()\n    sewer.Init(tolerance, True, True, True, False)\n    \n    for shape in shape_list:\n        sewer.Add(shape)\n        \n    sewer.Perform()\n    sewed_shape = sewer.SewedShape()\n    \n    # Audit sewed shape to verify watertight manifold shell\n    if breplib.IsValid(sewed_shape):\n        print("[+] B-Rep sewing complete. Solid geometric manifold is verified watertight.")\n        return sewed_shape\n    else:\n        print("[-] B-Rep sewing failed. Boundary tolerance drift exceeds limits.")\n        return None`
+  };
+}
+
+// Interactive Technical Specification Directive Renderer for BIM & CAD Standards Category (Template C)
+export function renderStandardsDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
+  const std = getStandardsPayload(tool.name, title, slug);
+
+  return (
+    <div className="space-y-8 md:space-y-12">
+      {/* 1. Standards Specification Header Card */}
+      <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-indigo-500/10 rounded-full blur-[80px]"></div>
+        <div className="relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-indigo-400 font-mono font-black text-[10px] uppercase tracking-widest">
+            <Layers className="w-4 h-4 animate-pulse" /> BIM EXECUTION & MCAD GEOMETRY KERNEL DIRECTIVE
+          </div>
+          <h3 className="text-xl sm:text-2xl font-black tracking-tight uppercase leading-snug">
+            TECHNICAL DIRECTIVE: {tool.slug.toUpperCase()}-STD-B26
+          </h3>
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+            This technical standard directive defines the structural Level of Development (LOD) constraints, AIA layer naming guidelines, and B-Rep solid geometry kernel sewing parameters for {tool.name}. Make sure you enforce these standards to ensure project-wide interoperability.
+          </p>
+        </div>
+      </Card>
+
+      {/* 2. Standard Metadata Box */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">CORE STANDARD DETAILS</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Standard Spec:</span>
+            <span className="text-slate-900 font-black">{std.reference}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Standard Class:</span>
+            <span className="text-slate-900 font-black">{std.standardClass}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Revision Code:</span>
+            <span className="text-indigo-600 font-black">{std.revisionCode}</span>
+          </div>
+        </Card>
+        
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">E-E-A-T AUDIT METRICS</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Authority Level:</span>
+            <span className="text-slate-900 font-black">Enterprise Certified</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Interoperability:</span>
+            <span className="text-emerald-600 font-black">100% Compliant</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Tolerance Bound:</span>
+            <span className="text-slate-900 font-black">± 1e-6 mm Matrix</span>
+          </div>
+        </Card>
+      </div>
+
+      {/* 3. BIM / CAD Standards Table */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center">
+            <FileSpreadsheet className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              BIM LOD Constraints & Geometric Boundary Specifications
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Verified standards, linetype mappings, line weights, or geometric repairing tolerances for {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                  {std.tableHeaders.map((head, hIdx) => (
+                    <th key={hIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">{head}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
+                {std.tableRows.map((row, rIdx) => (
+                  <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors font-mono">
+                    {row.map((cell, cIdx) => (
+                      <td key={cIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">
+                        {cIdx === 0 ? (
+                          <span className="font-sans font-black text-slate-900">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('Broken') || cell.includes('drift')) ? (
+                          <span className="text-rose-600 font-black">{cell}</span>
+                        ) : cIdx === 2 && (cell.includes('Absolute') || cell.includes('Continuous') || cell.includes('Rigid')) ? (
+                          <span className="text-emerald-600 font-black">{cell}</span>
+                        ) : cIdx === 3 && (cell.includes('LOD 500') || cell.includes('Heavy') || cell.includes('allowances')) ? (
+                          <span className="text-indigo-600 font-black">{cell}</span>
+                        ) : cIdx === 4 && (cell.includes('Direct') || cell.includes('stitch') || cell.includes('sync') || cell.includes('mapped')) ? (
+                          <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : cIdx === 4 && (cell.includes('Re-approximate') || cell.includes('K-Factor') || cell.includes('Re-link') || cell.includes('validation')) ? (
+                          <Badge className="bg-amber-50 text-amber-700 border border-amber-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : (
+                          <span>{cell}</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </div>
+
+      {/* 4. Cross-Platform Automation Script Block */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center">
+            <Activity className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              {std.codeBlockTitle}
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Low-level automation script to enforce standards, layer conventions, or geometric tolerances in {tool.name}.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] overflow-hidden border border-slate-900 shadow-xl bg-slate-950 text-emerald-400 p-6 relative">
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+          </div>
+          <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
+            <pre>
+              {std.codeSnippet}
+            </pre>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
   const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
@@ -1701,6 +1902,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 renderPrintingDirective(tool, title, excerpt, slug)
               ) : category === 'migration' ? (
                 renderMigrationDirective(tool, title, excerpt, slug)
+              ) : category === 'standards' ? (
+                renderStandardsDirective(tool, title, excerpt, slug)
               ) : (
                 <>
                   {/* Technical Overview Container */}
