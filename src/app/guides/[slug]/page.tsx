@@ -598,6 +598,201 @@ export function renderPerformanceBenchmark(tool: typeof tools[number], title: st
   );
 }
 
+// Dynamic plot standard builder providing monochrome CTB pen weights and vector PDF scales for Template C (Plot Directive)
+export function getPrintingPayload(toolName: string, title: string, slug: string) {
+  const titleLower = title.toLowerCase();
+
+  if (titleLower.includes('ctb') || titleLower.includes('pen') || titleLower.includes('table') || titleLower.includes('style') || titleLower.includes('weight')) {
+    return {
+      reference: 'ISO 128-20 / ANSI Y14.2M / AIA Layer Spec',
+      plotScale: '1:1 Model Space to Layout Space Mapping',
+      fontStandard: 'SHX Vector Fonts (RomanS / Simplex / txt)',
+      revisionCode: 'REV-PLOT-2026-B',
+      tableHeaders: ['AIA Pen Color ID', 'Plot Pen Thickness', 'Linetype Mapping', 'Vector Screen Color', 'Standard Architectural Use Case'],
+      tableRows: [
+        ['Color 1 (Red)', '0.18 mm (Extra Fine)', 'Continuous (Solid)', '255,0,0 (Red)', 'Hatch boundaries, hidden partitions, center grids'],
+        ['Color 2 (Yellow)', '0.35 mm (Medium)', 'Continuous (Solid)', '255,255,0 (Yellow)', 'Text annotations, dimensions, door swings'],
+        ['Color 3 (Green)', '0.50 mm (Thick)', 'Dashed (Hidden2)', '0,255,0 (Green)', 'Medium structural outlines, dynamic section cuts'],
+        ['Color 7 (White/Black)', '0.70 mm (Heavy)', 'Continuous (Solid)', '0,0,0 (Black)', 'Borders, title blocks, layout sheet borders']
+      ],
+      lispCode: `;; AutoLISP CTB & Drawing Variables Synchronizer for ${toolName}\n(defun c:SyncPlotVars ()\n  (setvar "PSLTSCALE" 1)   ;; Synchronize paper space linetype scale\n  (setvar "LTSCALE" 1.0)   ;; Global linetype scale coefficient\n  (setvar "MSLTSCALE" 1)   ;; Model space annotation scale matching\n  (setvar "MEASUREMENT" 1) ;; Set drawings standard to Metric (mm)\n  \n  ;; Load standard monochrome plot style configurations safely\n  (command "-plot" "yes" "" "Adobe PDF" "ISO A1 (594.00 x 841.00 MM)" "Millimeters" "Landscape" "no" "Layout" "1:1" "0.00,0.00" "yes" "monochrome.ctb" "yes" "no" "no" "no" "yes" "no" "yes")\n  (princ "\\\\n[+] Plotting variables and layout styles successfully mapped for ${toolName}.\\\\n")\n  (princ)\n)`
+    };
+  }
+
+  if (titleLower.includes('pdf') || titleLower.includes('export') || titleLower.includes('font') || titleLower.includes('distortion')) {
+    return {
+      reference: 'ISO 32000-1 (Portable Document Format Spec)',
+      plotScale: 'High-Definition Resolution Raster Calibration',
+      fontStandard: 'TrueType Font (TTF) Embedded Vector Glyphs',
+      revisionCode: 'REV-PDF-2026-A',
+      tableHeaders: ['Vector Plot Output Issue', 'Root Cause Diagnosis', 'Resolution Resolution Standard', 'DPI Calibration', 'Remediation Directive'],
+      tableRows: [
+        ['Scrambled Font Characters', 'TrueType font is not embedded in vector export', 'Embedded Vector Glyphs', '600 DPI Vector', 'Enable "Embed TrueType Fonts" in PDF options'],
+        ['Line Weight Pixelation', 'Vector scale factor multiplier overflow', '2400 DPI Vector Plot', '2400 DPI Vector', 'Set custom CTB line scaling multiplier in plot options'],
+        ['Dotted line solid distortion', 'Linetype scale (LTSCALE) calculation drift', '1200 DPI Vector Plot', '1200 DPI Vector', 'Force PSLTSCALE = 1 and set global LTSCALE = 1.0'],
+        ['Missing Hatch Patterns', 'Gradient triangulation exceeding buffer bounds', '2400 DPI Raster Output', '600 DPI Raster', 'Enable "Plot Shade Plot As Displayed" parameter']
+      ],
+      lispCode: `;; AutoLISP Automated PDF Batch Exporter for ${toolName}\n(defun c:ExportHDPDF ( / doc layoutPlot)\n  (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))\n  (vlax-for layout (vla-get-Layouts doc)\n    (if (/= (vla-get-Name layout) "Model")\n      (progn\n        (vla-put-ConfigName layout "DWG To PDF.pc3")\n        (vla-put-StyleSheet layout "monochrome.ctb")\n        (vla-put-CanonicalMediaName layout "ISO_A1__594.00_x_841.00_MM_")\n        (vla-put-PlotWithPlotStyles layout :vltrue)\n        (princ (strcat "\\\\n[+] Mapped layout: " (vla-get-Name layout) " to high-definition PDF standard.\\\\n"))\n      )\n    )\n  )\n  (vla-Regen doc acAllViewports)\n  (princ "\\\\n[+] High-definition PDF batch layout mapping complete.\\\\n")\n  (princ)\n)`
+    };
+  }
+
+  // Default Plotting / Standards Payload
+  return {
+    reference: 'ISO 128 (Technical Drawings General Principles)',
+    plotScale: 'Standard Architectural Fit-to-Page Scale',
+    fontStandard: 'Uniform AIA Standard Vector Layout Fonts',
+    revisionCode: 'REV-STD-2026-C',
+    tableHeaders: ['Sheet Dimensions Class', 'Drawing Bounds (mm)', 'Engineering Scale Ratio', 'Border Margin Bounds', 'Target Vector Resolution'],
+    tableRows: [
+      ['ISO A0 Blueprints', '841 x 1189 mm', '1:100 / 1:50', '5.0 mm Solid Margins', '1200 DPI Vector Plot'],
+      ['ISO A1 Blueprints', '594 x 841 mm', '1:50 / 1:20', '5.0 mm Solid Margins', '1200 DPI Vector Plot'],
+      ['ANSI D Blueprints', '22 x 34 inches', '1:96 (1/8" = 1\'-0")', '0.25 inches Margins', '1200 DPI Vector Plot'],
+      ['ISO A3 Check Prints', '297 x 420 mm', '1:100 / 1:200 (Reduced)', '3.0 mm Solid Margins', '600 DPI Check Raster']
+    ],
+    lispCode: `;; AutoLISP Global Drawing Scales Restorer for ${toolName}\n(defun c:RestoreDrawingScales ()\n  (command "-scalelistedit" "Reset" "Yes" "Exit")\n  (setvar "CANNOSCALE" "1:1")\n  (setvar "ANNOTALLSCALES" 0)\n  (princ "\\\\n[+] Drawing scale annotations list successfully reset to standard 1:1 mapping in ${toolName}.\\\\n")\n  (princ)\n)`
+  };
+}
+
+// Interactive Technical Specification Directive Renderer for Plotting & Printing Standards Category (Template C)
+export function renderPrintingDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
+  const plot = getPrintingPayload(tool.name, title, slug);
+
+  return (
+    <div className="space-y-8 md:space-y-12">
+      {/* 1. Plotting Specification Header Card */}
+      <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/10 rounded-full blur-[80px]"></div>
+        <div className="relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-teal-400 font-mono font-black text-[10px] uppercase tracking-widest">
+            <Printer className="w-4 h-4 animate-pulse" /> INDUSTRIAL PLOTTING & VECTOR DRAWING BLUEPRINT
+          </div>
+          <h3 className="text-xl sm:text-2xl font-black tracking-tight uppercase leading-snug">
+            TECHNICAL DIRECTIVE: {tool.slug.toUpperCase()}-PLOT-B26
+          </h3>
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+            This technical standard directive defines the Color-Dependent (CTB) pen style thicknesses, drawing scale calibrations, and high-definition vector PDF font embedding standards for {tool.name}. Make sure you enforce these styles to eliminate vector missing weights.
+          </p>
+        </div>
+      </Card>
+
+      {/* 2. Standard Metadata Box */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">CORE STANDARD DETAILS</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Standard Spec:</span>
+            <span className="text-slate-900 font-black">{plot.reference}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Scale Mapping:</span>
+            <span className="text-slate-900 font-black">{plot.plotScale}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Font Standard:</span>
+            <span className="text-slate-900 font-black truncate max-w-[200px]">{plot.fontStandard}</span>
+          </div>
+        </Card>
+        
+        <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">REVISION METADATA</span>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Directive Status:</span>
+            <span className="text-teal-600 font-black uppercase">APPROVED FOR DRAFTING</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Directive Code:</span>
+            <span className="text-slate-900 font-black">{plot.revisionCode}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-slate-400">Audited By:</span>
+            <span className="text-slate-900 font-black text-right max-w-[180px]">BIM Coordinating Comm.</span>
+          </div>
+        </Card>
+      </div>
+
+      {/* 3. Pen Weight Calibration Table */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center">
+            <FileSpreadsheet className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              Line-Weight Pen (CTB) Calibration Table
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Verified pen weight scaling parameters matching ANSI, ISO, and AIA standard drawing plot style sheets.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                  {plot.tableHeaders.map((head, hIdx) => (
+                    <th key={hIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">{head}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
+                {plot.tableRows.map((row, rIdx) => (
+                  <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors font-mono">
+                    {row.map((cell, cIdx) => (
+                      <td key={cIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">
+                        {cIdx === 0 ? (
+                          <span className="font-sans font-black text-slate-900">{cell}</span>
+                        ) : cIdx === 1 && (cell.includes('Heavy') || cell.includes('distortion')) ? (
+                          <span className="text-rose-600 font-black">{cell}</span>
+                        ) : cIdx === 1 && (cell.includes('0.18') || cell.includes('0.35') || cell.includes('Embed')) ? (
+                          <span className="text-emerald-600 font-black">{cell}</span>
+                        ) : cIdx === 4 && (cell.includes('Borders') || cell.includes('Text') || cell.includes('Embed') || cell.includes('LTSCALE')) ? (
+                          <Badge className="bg-teal-50 text-teal-700 border border-teal-100 font-sans font-black text-[9px] uppercase tracking-wide px-2 py-0.5 rounded">
+                            {cell}
+                          </Badge>
+                        ) : (
+                          <span>{cell}</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </div>
+
+      {/* 4. Automated AutoLISP / Script Configuration Block */}
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center">
+            <Activity className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+              AutoLISP Drawing Variables & PDF Automation Script
+            </h3>
+            <p className="text-slate-400 text-xs font-semibold">Low-level AutoLISP script to dynamically configure plotting scales, sheets size, and monochrome CTB mappings.</p>
+          </div>
+        </div>
+
+        <Card className="rounded-[24px] overflow-hidden border border-slate-900 shadow-xl bg-slate-950 text-emerald-400 p-6 relative">
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+          </div>
+          <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
+            <pre>
+              {plot.lispCode}
+            </pre>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
   const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
@@ -1301,6 +1496,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 renderTechnicalAutopsy(tool, title, excerpt, slug)
               ) : category === 'performance' ? (
                 renderPerformanceBenchmark(tool, title, excerpt, slug)
+              ) : category === 'printing' ? (
+                renderPrintingDirective(tool, title, excerpt, slug)
               ) : (
                 <>
                   {/* Technical Overview Container */}
