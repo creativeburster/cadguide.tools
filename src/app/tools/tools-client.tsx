@@ -120,6 +120,7 @@ function fuzzyMatchTool(tool: any, query: string): boolean {
       toolNameNormalized,
       normalizeString(tool.short_desc || ''),
       normalizeString(tool.category_name || ''),
+      normalizeString(tool.country || ''),
       ...(tool.industries || []).map(normalizeString),
       ...(tool.features || []).map(normalizeString),
     ];
