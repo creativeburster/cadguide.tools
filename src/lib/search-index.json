@@ -19,7 +19,8 @@
       "ai-assisted",
       "piping-routing",
       "drafting-detailing"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t2",
@@ -48,7 +49,8 @@
       "simulation-fea",
       "piping-routing",
       "surface-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t3",
@@ -69,7 +71,8 @@
     "features": [
       "rendering",
       "direct-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t4",
@@ -91,7 +94,8 @@
       "cloud-collaboration",
       "bim-integration",
       "piping-routing"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t5",
@@ -123,7 +127,8 @@
       "direct-modeling",
       "mesh-modeling",
       "surface-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t6",
@@ -147,7 +152,8 @@
       "direct-modeling",
       "mesh-modeling",
       "surface-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t7",
@@ -167,7 +173,8 @@
     ],
     "features": [
       "surface-modeling"
-    ]
+    ],
+    "country": "France"
   },
   {
     "id": "t8",
@@ -193,7 +200,8 @@
       "mesh-modeling",
       "piping-routing",
       "surface-modeling"
-    ]
+    ],
+    "country": "Germany"
   },
   {
     "id": "t9",
@@ -213,7 +221,8 @@
     "features": [
       "cloud-collaboration",
       "bim-integration"
-    ]
+    ],
+    "country": "Hungary"
   },
   {
     "id": "t10",
@@ -233,7 +242,8 @@
     ],
     "features": [
       "cloud-collaboration"
-    ]
+    ],
+    "country": "Australia"
   },
   {
     "id": "t11",
@@ -253,7 +263,8 @@
     ],
     "features": [
       "parametric-modeling"
-    ]
+    ],
+    "country": "Community/International"
   },
   {
     "id": "t12",
@@ -273,7 +284,8 @@
     ],
     "features": [
       "drafting-detailing"
-    ]
+    ],
+    "country": "China"
   },
   {
     "id": "t13",
@@ -297,7 +309,8 @@
       "bim-integration",
       "direct-modeling",
       "drafting-detailing"
-    ]
+    ],
+    "country": "Belgium"
   },
   {
     "id": "t14",
@@ -318,7 +331,8 @@
     "features": [
       "cloud-collaboration",
       "parametric-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t15",
@@ -337,7 +351,8 @@
     ],
     "features": [
       "bim-integration"
-    ]
+    ],
+    "country": "Finland"
   },
   {
     "id": "t16",
@@ -359,7 +374,8 @@
       "simulation-fea",
       "direct-modeling",
       "piping-routing"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t17",
@@ -379,7 +395,8 @@
     ],
     "features": [
       "bim-integration"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t20",
@@ -400,7 +417,8 @@
       "sheet-metal",
       "simulation-fea",
       "piping-routing"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t21",
@@ -421,7 +439,8 @@
     "features": [
       "piping-routing",
       "drafting-detailing"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t22",
@@ -441,7 +460,8 @@
     ],
     "features": [
       "drafting-detailing"
-    ]
+    ],
+    "country": "France"
   },
   {
     "id": "t23",
@@ -466,7 +486,8 @@
       "simulation-fea",
       "piping-routing",
       "surface-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t24",
@@ -484,7 +505,8 @@
       "Maker",
       "Research"
     ],
-    "features": []
+    "features": [],
+    "country": "Community/International"
   },
   {
     "id": "t25",
@@ -508,7 +530,8 @@
       "reverse-engineering",
       "subdivision-modeling",
       "direct-modeling"
-    ]
+    ],
+    "country": "Hungary"
   },
   {
     "id": "t26",
@@ -526,7 +549,8 @@
       "Hobbyist",
       "Prototyping"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t27",
@@ -544,7 +568,8 @@
       "Manufacturing",
       "Automotive"
     ],
-    "features": []
+    "features": [],
+    "country": "India"
   },
   {
     "id": "t27",
@@ -561,7 +586,8 @@
       "Residential Architecture",
       "Remodeling"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t28",
@@ -579,7 +605,8 @@
       "Manufacturing",
       "Automotive"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t28",
@@ -599,7 +626,8 @@
     ],
     "features": [
       "integrated-cam"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t29",
@@ -617,7 +645,8 @@
       "Light Engineering",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "Community/International"
   },
   {
     "id": "t30",
@@ -635,7 +664,8 @@
       "Manufacturing",
       "Prototyping"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t31",
@@ -655,7 +685,8 @@
     ],
     "features": [
       "generative-design"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t32",
@@ -675,7 +706,8 @@
     ],
     "features": [
       "integrated-cam"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t34",
@@ -693,7 +725,8 @@
       "Construction",
       "Estimating"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t35",
@@ -711,7 +744,8 @@
       "AEC",
       "Oil & Gas"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t36",
@@ -728,7 +762,8 @@
       "AEC",
       "BIM Management"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t37",
@@ -748,7 +783,8 @@
     ],
     "features": [
       "mesh-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t38",
@@ -766,7 +802,8 @@
       "Medical",
       "Aerospace"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t39",
@@ -784,7 +821,8 @@
       "Surveying",
       "Infrastructure"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t40",
@@ -801,7 +839,8 @@
       "Software Dev",
       "Research"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t41",
@@ -818,7 +857,8 @@
       "Mechanical",
       "Hobbyist"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t42",
@@ -836,7 +876,8 @@
       "IoT",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t43",
@@ -855,7 +896,8 @@
       "Mechanical Engineering",
       "Electrical Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t44",
@@ -872,7 +914,8 @@
       "Civil Engineering",
       "Transportation"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t46",
@@ -889,7 +932,8 @@
       "Residential Design",
       "Remodeling"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t48",
@@ -906,7 +950,8 @@
       "Manufacturing",
       "General"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t49",
@@ -923,7 +968,8 @@
       "Architecture",
       "Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t50",
@@ -944,7 +990,8 @@
     "features": [
       "subdivision-modeling",
       "mesh-modeling"
-    ]
+    ],
+    "country": ""
   },
   {
     "id": "t51",
@@ -966,7 +1013,8 @@
       "rendering",
       "subdivision-modeling",
       "mesh-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t52",
@@ -984,7 +1032,8 @@
       "Makers",
       "Mechanical"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t53",
@@ -1002,7 +1051,8 @@
       "Real Estate",
       "Architecture"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t54",
@@ -1022,7 +1072,8 @@
     ],
     "features": [
       "drafting-detailing"
-    ]
+    ],
+    "country": "China"
   },
   {
     "id": "t55",
@@ -1044,7 +1095,8 @@
     ],
     "features": [
       "drafting-detailing"
-    ]
+    ],
+    "country": "Germany"
   },
   {
     "id": "t56",
@@ -1064,7 +1116,8 @@
       "Civil Engineering",
       "Architecture"
     ],
-    "features": []
+    "features": [],
+    "country": "Russia"
   },
   {
     "id": "t57",
@@ -1084,7 +1137,8 @@
       "Construction",
       "Interior Design"
     ],
-    "features": []
+    "features": [],
+    "country": "Italy"
   },
   {
     "id": "t58",
@@ -1102,7 +1156,8 @@
       "Machine Design",
       "Packaging"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t59",
@@ -1120,7 +1175,8 @@
       "Mold Design",
       "Rapid Prototyping"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t60",
@@ -1143,7 +1199,8 @@
     ],
     "features": [
       "drafting-detailing"
-    ]
+    ],
+    "country": "Community/International"
   },
   {
     "id": "t61",
@@ -1163,7 +1220,8 @@
       "Interior Design",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t62",
@@ -1181,7 +1239,8 @@
       "Mechanical",
       "Consumer Products"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t63",
@@ -1198,7 +1257,8 @@
       "Electrical Engineering",
       "Automation"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t64",
@@ -1215,7 +1275,8 @@
       "Automation",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t65",
@@ -1232,7 +1293,8 @@
       "Jewelry Design",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t66",
@@ -1249,7 +1311,8 @@
       "Dental",
       "Medical"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t67",
@@ -1266,7 +1329,8 @@
       "Woodworking",
       "Furniture"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t68",
@@ -1283,7 +1347,8 @@
       "Shipbuilding",
       "Oil & Gas"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t69",
@@ -1301,7 +1366,8 @@
       "Apparel",
       "Gaming"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t74",
@@ -1318,7 +1384,8 @@
       "Landscape Architecture",
       "Urban Planning"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t75",
@@ -1335,7 +1402,8 @@
       "Footwear",
       "Apparel"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t76",
@@ -1352,7 +1420,8 @@
       "Mold Design",
       "Tooling"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t77",
@@ -1370,7 +1439,8 @@
       "Theatre",
       "Concerts"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t78",
@@ -1386,7 +1456,8 @@
     "industries": [
       "Jewelry Design"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t79",
@@ -1406,7 +1477,8 @@
     "features": [
       "reverse-engineering",
       "mesh-modeling"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t80",
@@ -1423,7 +1495,8 @@
       "Automotive",
       "Industrial Design"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t81",
@@ -1442,7 +1515,8 @@
     ],
     "features": [
       "integrated-cam"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t82",
@@ -1459,7 +1533,8 @@
       "Landscape Architecture",
       "Irrigation"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t83",
@@ -1475,7 +1550,8 @@
     "industries": [
       "Footwear"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t84",
@@ -1496,7 +1572,8 @@
     ],
     "features": [
       "simulation-fea"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t85",
@@ -1514,7 +1591,8 @@
       "Automotive",
       "Defense"
     ],
-    "features": []
+    "features": [],
+    "country": ""
   },
   {
     "id": "t86",
@@ -1532,7 +1610,8 @@
       "Aerospace",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t87",
@@ -1550,7 +1629,8 @@
       "Aerospace",
       "Shipbuilding"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t88",
@@ -1570,7 +1650,8 @@
       "Manufacturing",
       "Interior Design"
     ],
-    "features": []
+    "features": [],
+    "country": "Canada"
   },
   {
     "id": "t89",
@@ -1591,7 +1672,8 @@
     "features": [
       "integrated-cam",
       "mesh-modeling"
-    ]
+    ],
+    "country": "China"
   },
   {
     "id": "t90",
@@ -1611,7 +1693,8 @@
       "Construction",
       "Automotive"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t91",
@@ -1629,7 +1712,8 @@
       "Mechanical",
       "General"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t92",
@@ -1647,7 +1731,8 @@
       "Construction",
       "Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t92",
@@ -1665,7 +1750,8 @@
       "IC Design",
       "Electronics"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t93",
@@ -1683,7 +1769,8 @@
       "Engineering",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t93",
@@ -1703,7 +1790,8 @@
     ],
     "features": [
       "integrated-cam"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t94",
@@ -1721,7 +1809,8 @@
       "Architecture",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t94",
@@ -1739,7 +1828,8 @@
       "Structural Engineering",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t95",
@@ -1757,7 +1847,8 @@
       "Architecture",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t95",
@@ -1775,7 +1866,8 @@
       "Transportation",
       "Infrastructure"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t100",
@@ -1797,7 +1889,8 @@
       "Architecture",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t101",
@@ -1811,7 +1904,8 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t102",
@@ -1825,7 +1919,8 @@
     "category_name": "BIM",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t103",
@@ -1849,7 +1944,8 @@
       "Energy",
       "Industrial Machinery"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t104",
@@ -1868,7 +1964,8 @@
       "Factory Layout",
       "Architecture"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t105",
@@ -1887,7 +1984,8 @@
       "Steel Construction",
       "Sheet Metal"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t106",
@@ -1905,7 +2003,8 @@
       "Sheet Metal",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t107",
@@ -1924,7 +2023,8 @@
       "Furniture",
       "Architecture"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t108",
@@ -1943,7 +2043,8 @@
       "Aerospace",
       "Machinery"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t109",
@@ -1962,7 +2063,8 @@
       "Manufacturing",
       "Automotive"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t111",
@@ -1976,7 +2078,8 @@
     "category_name": "EDA",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Japan"
   },
   {
     "id": "t112",
@@ -1994,7 +2097,8 @@
       "Die Design",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Japan"
   },
   {
     "id": "t113",
@@ -2013,7 +2117,8 @@
       "Manufacturing",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "Japan"
   },
   {
     "id": "t114",
@@ -2027,7 +2132,8 @@
     "category_name": "EDA",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Japan"
   },
   {
     "id": "t115",
@@ -2046,7 +2152,8 @@
       "Manufacturing",
       "Electronics"
     ],
-    "features": []
+    "features": [],
+    "country": "Japan"
   },
   {
     "id": "t116",
@@ -2065,7 +2172,8 @@
       "Construction",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Japan"
   },
   {
     "id": "t117",
@@ -2092,7 +2200,8 @@
       "Metallurgy",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "Russia"
   },
   {
     "id": "t118",
@@ -2115,7 +2224,8 @@
       "Medical Devices",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "Russia"
   },
   {
     "id": "t119",
@@ -2134,7 +2244,8 @@
       "Engineering",
       "MEP"
     ],
-    "features": []
+    "features": [],
+    "country": "Russia"
   },
   {
     "id": "t120",
@@ -2156,7 +2267,8 @@
       "Power Engineering",
       "Infrastructure"
     ],
-    "features": []
+    "features": [],
+    "country": "Russia"
   },
   {
     "id": "t121",
@@ -2179,7 +2291,8 @@
       "Pharmaceutical",
       "Mining"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t122",
@@ -2201,7 +2314,8 @@
       "Small Business",
       "Consumer Electronics"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t123",
@@ -2223,7 +2337,8 @@
       "Automotive",
       "Academic/Research"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t124",
@@ -2241,7 +2356,8 @@
       "Die Design",
       "Tooling"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t125",
@@ -2260,7 +2376,8 @@
       "Automotive",
       "Tooling"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t126",
@@ -2282,7 +2399,8 @@
       "Transportation",
       "Government"
     ],
-    "features": []
+    "features": [],
+    "country": "South Korea"
   },
   {
     "id": "t127",
@@ -2303,7 +2421,8 @@
       "Industrial Engineering",
       "General Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "South Korea"
   },
   {
     "id": "t128",
@@ -2323,7 +2442,8 @@
       "Architecture",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "South Korea"
   },
   {
     "id": "t130",
@@ -2342,7 +2462,8 @@
       "Construction",
       "MEP"
     ],
-    "features": []
+    "features": [],
+    "country": "Italy"
   },
   {
     "id": "t131",
@@ -2360,7 +2481,8 @@
       "Construction",
       "Interior Design"
     ],
-    "features": []
+    "features": [],
+    "country": "Italy"
   },
   {
     "id": "t132",
@@ -2381,7 +2503,8 @@
       "Consumer Products",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Italy"
   },
   {
     "id": "t133",
@@ -2395,7 +2518,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Australia"
   },
   {
     "id": "t134",
@@ -2409,7 +2533,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Canada"
   },
   {
     "id": "t135",
@@ -2423,7 +2548,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Belgium"
   },
   {
     "id": "t136",
@@ -2437,7 +2563,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Spain"
   },
   {
     "id": "t137",
@@ -2451,7 +2578,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Spain"
   },
   {
     "id": "t138",
@@ -2469,7 +2597,8 @@
       "Machinery",
       "Mechanical Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "Switzerland"
   },
   {
     "id": "t139",
@@ -2487,7 +2616,8 @@
       "Wood Engineering",
       "Architecture"
     ],
-    "features": []
+    "features": [],
+    "country": "Switzerland"
   },
   {
     "id": "t140",
@@ -2506,7 +2636,8 @@
       "Electrical",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "Finland"
   },
   {
     "id": "t141",
@@ -2520,7 +2651,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Finland"
   },
   {
     "id": "t142",
@@ -2534,7 +2666,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Sweden"
   },
   {
     "id": "t143",
@@ -2557,7 +2690,8 @@
       "Mapping",
       "Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "India"
   },
   {
     "id": "t144",
@@ -2578,7 +2712,8 @@
       "Transportation",
       "Mechanical Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "India"
   },
   {
     "id": "t145",
@@ -2592,7 +2727,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Brazil"
   },
   {
     "id": "t146",
@@ -2606,7 +2742,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Brazil"
   },
   {
     "id": "t147",
@@ -2620,7 +2757,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Netherlands"
   },
   {
     "id": "t148",
@@ -2641,7 +2779,8 @@
       "Mold Manufacturing",
       "Precision Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t149",
@@ -2660,7 +2799,8 @@
       "Automotive",
       "Tooling"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t150",
@@ -2679,7 +2819,8 @@
       "Automotive",
       "Tooling"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t151",
@@ -2693,7 +2834,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t152",
@@ -2714,7 +2856,8 @@
     ],
     "features": [
       "integrated-cam"
-    ]
+    ],
+    "country": "Germany"
   },
   {
     "id": "t153",
@@ -2732,7 +2875,8 @@
       "Model Making",
       "Machine Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t154",
@@ -2750,7 +2894,8 @@
       "Die Manufacturing",
       "General Machining"
     ],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t155",
@@ -2768,7 +2913,8 @@
       "Mold Making",
       "Production"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t156",
@@ -2786,7 +2932,8 @@
       "Small Manufacturing",
       "Job Shops"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t157",
@@ -2805,7 +2952,8 @@
       "Electrical",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "Norway"
   },
   {
     "id": "t158",
@@ -2825,7 +2973,8 @@
       "Structural Engineering",
       "Architecture"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t159",
@@ -2844,7 +2993,8 @@
       "Engineering",
       "Healthcare"
     ],
-    "features": []
+    "features": [],
+    "country": "Norway"
   },
   {
     "id": "t160",
@@ -2858,7 +3008,8 @@
     "category_name": "EDA",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t161",
@@ -2881,7 +3032,8 @@
       "IoT",
       "Semiconductor"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t162",
@@ -2904,7 +3056,8 @@
       "IoT",
       "Semiconductor"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t163",
@@ -2918,7 +3071,8 @@
     "category_name": "EDA",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t164",
@@ -2940,7 +3094,8 @@
       "Medical Devices",
       "Telecommunications"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t165",
@@ -2954,7 +3109,8 @@
     "category_name": "EDA",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t166",
@@ -2972,7 +3128,8 @@
       "Sheet Metal",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Switzerland"
   },
   {
     "id": "t167",
@@ -2993,7 +3150,8 @@
       "Appliances",
       "Consumer Goods"
     ],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t168",
@@ -3011,7 +3169,8 @@
       "Injection Molding",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t169",
@@ -3029,7 +3188,8 @@
       "Injection Molding",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Taiwan"
   },
   {
     "id": "t170",
@@ -3043,7 +3203,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Canada"
   },
   {
     "id": "t171",
@@ -3057,7 +3218,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Finland"
   },
   {
     "id": "t172",
@@ -3077,7 +3239,8 @@
       "Offshore",
       "Maritime"
     ],
-    "features": []
+    "features": [],
+    "country": "Spain"
   },
   {
     "id": "t173",
@@ -3091,7 +3254,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t174",
@@ -3105,7 +3269,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t175",
@@ -3119,7 +3284,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t176",
@@ -3133,7 +3299,8 @@
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t177",
@@ -3153,7 +3320,8 @@
       "Furniture Manufacturing",
       "Home Improvement"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t178",
@@ -3172,7 +3340,8 @@
       "Kitchen",
       "Flooring"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t179",
@@ -3191,7 +3360,8 @@
       "Metal",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t180",
@@ -3209,7 +3379,8 @@
       "Fabrication",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t182",
@@ -3227,7 +3398,8 @@
       "Fabrication",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Spain"
   },
   {
     "id": "t183",
@@ -3245,7 +3417,8 @@
       "Fabrication",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t184",
@@ -3263,7 +3436,8 @@
       "Fabrication",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t185",
@@ -3284,7 +3458,8 @@
     ],
     "features": [
       "simulation-fea"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t186",
@@ -3303,7 +3478,8 @@
       "Electronics",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t187",
@@ -3326,7 +3502,8 @@
       "ai-assisted",
       "generative-design",
       "simulation-fea"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t188",
@@ -3348,7 +3525,8 @@
     ],
     "features": [
       "simulation-fea"
-    ]
+    ],
+    "country": "France"
   },
   {
     "id": "t189",
@@ -3369,7 +3547,8 @@
     ],
     "features": [
       "simulation-fea"
-    ]
+    ],
+    "country": "Sweden"
   },
   {
     "id": "t190",
@@ -3388,7 +3567,8 @@
       "Defense",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t191",
@@ -3407,7 +3587,8 @@
       "Energy",
       "Marine"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t192",
@@ -3426,7 +3607,8 @@
       "Automotive",
       "Energy"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t193",
@@ -3445,7 +3627,8 @@
       "Energy",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t194",
@@ -3463,7 +3646,8 @@
       "Defense",
       "Marine"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t195",
@@ -3485,7 +3669,8 @@
     "features": [
       "ai-assisted",
       "generative-design"
-    ]
+    ],
+    "country": "USA"
   },
   {
     "id": "t196",
@@ -3503,7 +3688,8 @@
       "Defense",
       "Automotive"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t197",
@@ -3522,7 +3708,8 @@
       "Defense",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t198",
@@ -3540,7 +3727,8 @@
       "Hardware Startups",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "Switzerland"
   },
   {
     "id": "t199",
@@ -3560,7 +3748,8 @@
     ],
     "features": [
       "cloud-collaboration"
-    ]
+    ],
+    "country": "China"
   },
   {
     "id": "t200",
@@ -3578,7 +3767,8 @@
       "SMB",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "Ukraine"
   },
   {
     "id": "t201",
@@ -3596,7 +3786,8 @@
       "Education",
       "Aerospace"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t202",
@@ -3614,7 +3805,8 @@
       "Power",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t203",
@@ -3632,7 +3824,8 @@
       "Embedded",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "UK"
   },
   {
     "id": "t204",
@@ -3650,7 +3843,8 @@
       "Aerospace",
       "Industrial"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t205",
@@ -3668,7 +3862,8 @@
       "Hobbyist",
       "Education"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t206",
@@ -3687,7 +3882,8 @@
       "Oil & Gas",
       "Power"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t207",
@@ -3706,7 +3902,8 @@
       "Power",
       "Marine"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t208",
@@ -3724,7 +3921,8 @@
       "Chemical",
       "Power"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t209",
@@ -3742,7 +3940,8 @@
       "Chemical",
       "Power"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t210",
@@ -3760,7 +3959,8 @@
       "Nuclear",
       "Oil & Gas"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t211",
@@ -3778,7 +3978,8 @@
       "Chemical",
       "Power"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t212",
@@ -3796,7 +3997,8 @@
       "Refining",
       "Chemical"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t213",
@@ -3814,7 +4016,8 @@
       "Education",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Netherlands"
   },
   {
     "id": "t214",
@@ -3832,7 +4035,8 @@
       "Education",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "Czech Republic"
   },
   {
     "id": "t215",
@@ -3850,7 +4054,8 @@
       "Education",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t216",
@@ -3868,7 +4073,8 @@
       "Education",
       "Manufacturing"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t217",
@@ -3887,7 +4093,8 @@
       "Manufacturing",
       "Automotive"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t218",
@@ -3905,7 +4112,8 @@
       "Apparel",
       "Textile"
     ],
-    "features": []
+    "features": [],
+    "country": "Israel"
   },
   {
     "id": "t219",
@@ -3923,7 +4131,8 @@
       "Apparel",
       "Textile"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t220",
@@ -3941,7 +4150,8 @@
       "Apparel",
       "Luxury"
     ],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t221",
@@ -3958,7 +4168,8 @@
       "Fashion",
       "Apparel"
     ],
-    "features": []
+    "features": [],
+    "country": "Singapore"
   },
   {
     "id": "t222",
@@ -3976,7 +4187,8 @@
       "Film & Animation",
       "Fashion"
     ],
-    "features": []
+    "features": [],
+    "country": "South Korea"
   },
   {
     "id": "t223",
@@ -3992,7 +4204,8 @@
     "industries": [
       "Jewelry"
     ],
-    "features": []
+    "features": [],
+    "country": "Spain"
   },
   {
     "id": "t224",
@@ -4008,7 +4221,8 @@
     "industries": [
       "Jewelry"
     ],
-    "features": []
+    "features": [],
+    "country": "Hong Kong"
   },
   {
     "id": "t225",
@@ -4026,7 +4240,8 @@
       "Interior Design",
       "Product Visualization"
     ],
-    "features": []
+    "features": [],
+    "country": "China"
   },
   {
     "id": "t226",
@@ -4047,7 +4262,8 @@
     ],
     "features": [
       "rendering"
-    ]
+    ],
+    "country": "Bulgaria"
   },
   {
     "id": "t227",
@@ -4065,7 +4281,8 @@
       "Interior Design",
       "Product Visualization"
     ],
-    "features": []
+    "features": [],
+    "country": "Czech Republic"
   },
   {
     "id": "t228",
@@ -4084,7 +4301,8 @@
       "Product Visualization",
       "Automotive"
     ],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t229",
@@ -4101,7 +4319,8 @@
       "AEC",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t230",
@@ -4118,7 +4337,8 @@
       "AEC",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t231",
@@ -4135,7 +4355,8 @@
       "AEC",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "Netherlands"
   },
   {
     "id": "t232",
@@ -4152,7 +4373,8 @@
       "AEC",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t233",
@@ -4170,7 +4392,8 @@
       "Civil Engineering",
       "Infrastructure"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t234",
@@ -4187,7 +4410,8 @@
       "AEC",
       "Civil Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t235",
@@ -4205,7 +4429,8 @@
       "Civil Engineering",
       "Industrial"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t236",
@@ -4222,7 +4447,8 @@
       "AEC",
       "Civil Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t237",
@@ -4240,7 +4466,8 @@
       "Games",
       "Industrial Design"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t238",
@@ -4258,7 +4485,8 @@
       "Industrial Design",
       "Games"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t239",
@@ -4276,7 +4504,8 @@
       "Surveying",
       "Land Development"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t240",
@@ -4294,7 +4523,8 @@
       "Surveying",
       "Construction"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "t242",
@@ -4311,7 +4541,8 @@
       "AEC",
       "Civil Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "France"
   },
   {
     "id": "t243",
@@ -4328,7 +4559,8 @@
       "AEC",
       "Civil Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "Czech Republic"
   },
   {
     "id": "t244",
@@ -4345,7 +4577,8 @@
       "AEC",
       "Civil Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": "USA"
   },
   {
     "id": "ext-infraworks",
@@ -4361,7 +4594,8 @@
     "industries": [
       "Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": ""
   },
   {
     "id": "ext-3ds-max",
@@ -4381,7 +4615,8 @@
       "rendering",
       "subdivision-modeling",
       "mesh-modeling"
-    ]
+    ],
+    "country": ""
   },
   {
     "id": "ext-zbrush",
@@ -4397,7 +4632,8 @@
     "industries": [
       "Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": ""
   },
   {
     "id": "ext-keyshot",
@@ -4413,7 +4649,8 @@
     "industries": [
       "Engineering"
     ],
-    "features": []
+    "features": [],
+    "country": ""
   },
   {
     "id": "ext-lumion",
@@ -4431,7 +4668,8 @@
     ],
     "features": [
       "rendering"
-    ]
+    ],
+    "country": ""
   },
   {
     "id": "ext-enscape",
@@ -4449,7 +4687,8 @@
     ],
     "features": [
       "rendering"
-    ]
+    ],
+    "country": ""
   },
   {
     "id": "ext-twinmotion",
@@ -4467,6 +4706,7 @@
     ],
     "features": [
       "rendering"
-    ]
+    ],
+    "country": ""
   }
 ]

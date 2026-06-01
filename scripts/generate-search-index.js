@@ -101,7 +101,8 @@ const searchIndex = allTools.map(t => {
     category_name: categoryMap[t.category_id] || '',
     aliases: t.aliases || [],
     industries: t.industries || [],
-    features: features
+    features: features,
+    country: t.country || ''
   };
 });
 

@@ -63,6 +63,7 @@ interface SearchTool {
   aliases?: string[];
   industries?: string[];
   features?: string[];
+  country?: string;
 }
 
 // Upgraded robust fuzzy match for tools with stop-words filtering
@@ -112,6 +113,7 @@ function fuzzyMatchTool(tool: SearchTool, query: string): boolean {
       toolNameNormalized,
       normalizeString(tool.short_desc || ''),
       normalizeString(tool.category_name || ''),
+      normalizeString(tool.country || ''),
       ...(tool.industries || []).map(normalizeString),
       ...(tool.features || []).map(normalizeString),
     ];
