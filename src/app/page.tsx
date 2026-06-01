@@ -251,7 +251,7 @@ function HomeBody() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             <Link href="/for" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">10 roles</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">11 roles</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Role</div>
               <div className="mt-1 text-xs text-slate-500">Architects, engineers, students…</div>
             </Link>
@@ -266,7 +266,7 @@ function HomeBody() {
               <div className="mt-1 text-xs text-slate-500">Windows, Mac, Linux, Web, iOS, Android</div>
             </Link>
             <Link href="/file-formats" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">12 formats</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">20 formats</div>
               <div className="mt-1 text-lg font-black text-slate-900">By File Format</div>
               <div className="mt-1 text-xs text-slate-500">DWG, STEP, STL, IFC, DXF…</div>
             </Link>

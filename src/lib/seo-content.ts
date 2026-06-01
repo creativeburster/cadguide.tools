@@ -876,6 +876,150 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
       },
     ],
   },
+  sldprt: {
+    slug: "sldprt",
+    formatName: "SLDPRT",
+    formatValues: ["SLDPRT", "SLDASM"],
+    fullName: "SolidWorks Part and Assembly",
+    intro:
+      "SLDPRT and SLDASM are the native, proprietary file formats used by Dassault Systèmes SolidWorks to store individual part files and multi-component assembly data. Since SolidWorks is the most widely adopted mechanical CAD program in the world, these formats contain critical feature-history trees, equations, assembly mates, and design parameters. Because they are native and proprietary, direct interoperability with other CAD kernels often requires translation, making them the most frequently searched formats for viewing and format conversion. Below are the tools in our database that support or convert SolidWorks files.",
+    faqs: [
+      {
+        q: "How can I open a SolidWorks file (.sldprt / .sldasm) without SolidWorks?",
+        a: "You can view these files for free using Autodesk Viewer or Dassault's official free eDrawings Viewer. If you need to edit or import them into other CAD platforms (like Fusion 360, Rhino, or Onshape), these platforms have built-in importers that convert them to their native geometries.",
+      },
+      {
+        q: "What is the best way to convert SLDPRT files to a universal format?",
+        a: "The industry standard is to export the file from SolidWorks as a STEP (.step) or Parasolid (.x_t) file, which preserves high-fidelity 3D solid geometry without design history.",
+      },
+    ],
+  },
+  ipt: {
+    slug: "ipt",
+    formatName: "IPT",
+    formatValues: ["IPT", "IAM"],
+    fullName: "Autodesk Inventor Part and Assembly",
+    intro:
+      "IPT and IAM are the native file formats for Autodesk Inventor, storing 2D/3D sketches, parametric features, physical material properties, and complex hierarchical assemblies (IAM). Highly optimized for Autodesk's proprietary modeling engine, these files maintain design history and constraints. While sharing them with non-Autodesk users often requires translation to neutral formats, their direct support in modern downstream simulation (CAE) and manufacturing (CAM) pipelines is vital for collaborative industrial engineering.",
+    faqs: [
+      {
+        q: "What is the difference between an IPT and an IAM file?",
+        a: "An IPT file represents a single solid part with its individual features. An IAM file is an assembly file that references multiple IPT files (or other sub-assemblies) and defines the spatial relationships (mates and constraints) between them.",
+      },
+      {
+        q: "How do I view IPT or IAM files without an Inventor license?",
+        a: "Autodesk offers the free Autodesk Viewer online, which allows you to inspect, measure, and section Inventor parts in a browser. You can also use free CAD viewers like eDrawings or CAD Exchanger.",
+      },
+    ],
+  },
+  rvt: {
+    slug: "rvt",
+    formatName: "RVT",
+    formatValues: ["RVT"],
+    fullName: "Autodesk Revit Project File",
+    intro:
+      "RVT is the native project file format of Autodesk Revit, the industry-dominant BIM authoring platform. A single RVT file acts as a relational database, storing all structural designs, architectural components (walls, windows, doors), MEP pipe routings, sheets, scheduling, and 3D visualization data. Because Revit models are extremely complex and carry rich semantic metadata, opening and sharing RVT files without software incompatibility is one of the most critical challenges in modern AEC project coordination.",
+    faqs: [
+      {
+        q: "Can I open an RVT file in AutoCAD or other 2D CAD programs?",
+        a: "No, RVT is a proprietary BIM database file. To open it in AutoCAD or other non-BIM CAD applications, you must first export it from Revit to DWG (for 2D plans) or IFC (for 3D BIM coordination).",
+      },
+      {
+        q: "How can I view a Revit RVT file for free?",
+        a: "You can upload it to the free web-based Autodesk Viewer to inspect the 3D model, view 2D sheets, and read BIM properties. Alternatively, you can use coordination tools like Autodesk BIM 360 or Navisworks Freedom.",
+      },
+    ],
+  },
+  dgn: {
+    slug: "dgn",
+    formatName: "DGN",
+    formatValues: ["DGN"],
+    fullName: "MicroStation Design File",
+    intro:
+      "DGN is the native file format of Bentley Systems MicroStation and its vertical civil infrastructure design suites. Originally developed in the 1980s, the DGN format (specifically V8 DGN) is widely recognized as the format of record for large-scale, long-lifecycle civil engineering projects, including highways, railways, bridges, and plant designs. Known for its incredible stability with massive datasets, DGN is the standard format for major transport departments and civil engineering consortia globally.",
+    faqs: [
+      {
+        q: "What is the difference between DGN and DWG formats?",
+        a: "While DWG (Autodesk) dominates general AEC and building design, DGN (Bentley) is optimized for massive infrastructure projects. DGN V8 has no file size limitations and handles high-precision geospatial coordinates much better than standard DWG.",
+      },
+      {
+        q: "How do I convert a DGN file to DWG or DXF?",
+        a: "Bentley MicroStation has a built-in batch converter to export DGN directly to DWG. Autodesk AutoCAD can also import DGN files using the DGNIMPORT command, converting DGN elements into DWG entities.",
+      },
+    ],
+  },
+  gcode: {
+    slug: "gcode",
+    formatName: "GCODE",
+    formatValues: ["GCODE", "G-CODE"],
+    fullName: "G-Code Machine Instruction File",
+    intro:
+      "G-Code (often saved as .gcode, .nc, or .cnc) is the universal, standardized programming language used to control automated machine tools. Generated by CAM (Computer-Aided Manufacturing) software or 3D printer slicers, a G-Code file contains line-by-line coordinates, speeds, feeds, tool changes, and temperature parameters that command a CNC mill, lathe, laser cutter, or FDM 3D printer exactly how to move and fabricate a physical object from digital geometry.",
+    faqs: [
+      {
+        q: "Can I edit a G-Code file directly?",
+        a: "Yes. G-Code is standard ASCII text. You can open and edit it in any basic text editor (like Notepad) or specialized G-code editors that include toolpath backplotting and visual simulation.",
+      },
+      {
+        q: "How do I convert a CAD model (STEP/STL) to G-Code?",
+        a: "You cannot convert a CAD model to G-Code directly. You must import the 3D model into a Slicer (for 3D printing) or CAM software (for CNC machining) to calculate the toolpaths, speeds, and tool specifications, which are then 'post-processed' to output the final G-Code.",
+      },
+    ],
+  },
+  x_t: {
+    slug: "x_t",
+    formatName: "X_T",
+    formatValues: ["X_T", "X_B", "Parasolid"],
+    fullName: "Parasolid Model Text/Binary",
+    intro:
+      "X_T (ASCII) and X_B (Binary) are the native geometric kernel formats for Siemens Parasolid, the modeling engine that powers SolidWorks, Siemens NX, Solid Edge, Onshape, and over 300 other commercial CAD applications. Because it represents precise boundary representation (B-Rep) solid geometry, Parasolid files are the highest-fidelity neutral exchange format for transferring models between systems sharing the Parasolid kernel. Using X_T avoids the typical translation errors and topology issues that occur when converting to generic formats.",
+    faqs: [
+      {
+        q: "Why is X_T preferred over STEP for exchanging models between SolidWorks and Solid Edge?",
+        a: "Because both SolidWorks and Solid Edge are built on the Parasolid geometric kernel, transferring files via X_T is native and lossless. Converting to STEP introduces a translator layer that can occasionally fail or create minor face errors.",
+      },
+      {
+        q: "Can X_T files store parametric feature design history?",
+        a: "No. While X_T preserves mathematically perfect boundary surfaces, volumes, colors, and assembly hierarchies, it does not store the parametric feature history tree or assembly constraints.",
+      },
+    ],
+  },
+  sat: {
+    slug: "sat",
+    formatName: "SAT",
+    formatValues: ["SAT", "SAB", "ACIS"],
+    fullName: "ACIS Solid Model Text/Binary",
+    intro:
+      "SAT (ASCII) and SAB (Binary) are the native geometric kernel exchange formats of the ACIS modeler, developed by Spatial Corporation (a Dassault Systèmes subsidiary). ACIS is the core geometric engine behind Autodesk AutoCAD, BricsCAD, Inventor (partially), and various specialized CAE/CAM applications. SAT files store precise mathematical descriptions of 3D solids and surfaces, providing robust interop for applications utilizing the ACIS kernel.",
+    faqs: [
+      {
+        q: "What is the difference between SAT and SAB?",
+        a: "SAT files are standard ASCII text, making them readable by developers and easier to debug. SAB files are compressed binary equivalents, which are much smaller in file size and load faster in CAD software.",
+      },
+      {
+        q: "Which major software suites natively support ACIS SAT files?",
+        a: "AutoCAD, BricsCAD, DraftSight, and various industry-standard CAM and analysis tools support importing and exporting ACIS SAT/SAB formats natively.",
+      },
+    ],
+  },
+  usd: {
+    slug: "usd",
+    formatName: "USD",
+    formatValues: ["USD", "USDZ", "USDC"],
+    fullName: "Universal Scene Description",
+    intro:
+      "Universal Scene Description (USD), developed by Pixar and standardized for web/mobile as USDZ by Apple, is an open, extensible, and high-performance 3D scene description format. While traditional CAD formats focus strictly on solid geometry, USD is designed for collaborative, multi-layered 3D scenes—packing meshes, materials, lighting, cameras, animations, and AR capabilities. In 2026, USD is rapidly becoming the standard for exporting architectural designs and industrial CAD assets into real-time rendering engines, VR/AR platforms, and spatial computing environments.",
+    faqs: [
+      {
+        q: "What is the difference between USD, USDC, and USDZ?",
+        a: "USD is the general ASCII/text file format. USDC is the binary, high-performance optimized version. USDZ is a zero-compression zip archive that packages the USDC file along with all textures and audio, making it the standard for AR quick-look on iOS devices.",
+      },
+      {
+        q: "Can USD replace formats like STEP or DWG for engineering?",
+        a: "No, USD is not designed for engineering manufacturing or parametric drafting. It is optimized for lightweight visualization, material rendering, and real-time collaboration. Use STEP for manufacturing and USD/USDZ for client presentations, AR, and animation pipelines.",
+      },
+    ],
+  },
 };
 
 export function formatPagePaths(): { slug: string }[] {
@@ -1142,6 +1286,32 @@ export const PERSONA_PAGES: Record<string, PersonaPage> = {
       {
         q: "Is there still perpetual-licence CAD in 2026?",
         a: "Yes — BricsCAD, Vectorworks, Rhino, NanoCAD, and ZWCAD all still offer perpetual licences. Avoid Autodesk's tools if perpetual is a hard requirement.",
+      },
+    ],
+  },
+  "landscape-architects": {
+    slug: "landscape-architects",
+    displayName: "Landscape Architects",
+    shortNoun: "landscape architect",
+    filter: (t) =>
+      hasAny(t.industries, [
+        "Landscape",
+        "Landscape Architecture",
+        "Urban Planning",
+        "Site Design",
+        "GIS",
+      ]) ||
+      /landscape|garden|terrain|urban planning|gis|planting/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro:
+      "Landscape architecture and urban design require CAD tools that blend 3D architectural modeling with precise site terrain grading, GIS data integration, stormwater runoff analysis, and comprehensive planting schedules. Unlike standard building architects, landscape designers deal with living materials, non-linear terrains, and large-scale geographic coordinates. The 2026 landscape ecosystem is led by Vectorworks Landmark, dedicated Rhino plugins (like Lands Design), and GIS-enabled civil platforms that automate site-specific workflows. Below are the premier landscape design and site grading tools.",
+    faqs: [
+      {
+        q: "What is the best software for landscape architecture?",
+        a: "Vectorworks Landmark is widely considered the industry standard for dedicated landscape architecture, offering integrated GIS, terrain modeling, and vast botanical databases. For 3D concept designs, Rhino 3D combined with Lands Design is incredibly popular, while Revit remains the choice for landscape teams collaborating closely with BIM consultants.",
+      },
+      {
+        q: "How does GIS data integrate with landscape CAD?",
+        a: "Modern landscape CAD platforms can connect directly to Esri ArcGIS servers or import Shapefiles (SHP) and geo-referenced images. This automatically aligns the site plan with real-world geographic coordinates, elevation surveys, and regional environmental datasets.",
       },
     ],
   },
