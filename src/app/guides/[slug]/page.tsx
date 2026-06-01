@@ -1807,6 +1807,68 @@ export function generateStaticParams() {
   return params;
 }
 
+export function getLocalizedTitleAndExcerpt(title: string, excerpt: string, keyword: string, category: string, toolName: string) {
+  let newTitle = title;
+  let newExcerpt = excerpt;
+  let newKeyword = keyword;
+
+  if (category === 'migration' || category === 'crossover') {
+    const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
+    for (const target of targets) {
+      const regex = new RegExp(target, 'gi');
+      if (regex.test(newTitle)) {
+        newTitle = newTitle.replace(regex, toolName);
+        newExcerpt = newExcerpt.replace(regex, toolName);
+        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
+        return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
+      }
+    }
+  }
+
+  const allSoftware = [
+    'AutoCAD Architecture',
+    'AutoCAD Electrical',
+    'AutoCAD for Mac',
+    'AutoCAD LT',
+    'Autodesk AutoCAD',
+    'AutoCAD Online',
+    'AutoCAD',
+    'SolidWorks',
+    'BricsCAD Pro',
+    'BricsCAD',
+    'GstarCAD',
+    'Autodesk Inventor',
+    'Inventor',
+    'Solid Edge',
+    'FreeCAD',
+    'Catia V6',
+    'Catia',
+    'Rhino 3D',
+    'DraftSight',
+    'MicroStation',
+    'Revit',
+    'ZWCAD',
+    'BIM',
+    'Commercial CAD',
+    'Schematic CAD',
+    'Enterprise CAD',
+    'Named CAD',
+    'Autodesk'
+  ];
+
+  for (const sw of allSoftware) {
+    const regex = new RegExp(sw, 'gi');
+    if (regex.test(newTitle)) {
+      newTitle = newTitle.replace(regex, toolName);
+      newExcerpt = newExcerpt.replace(regex, toolName);
+      newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
+      break;
+    }
+  }
+
+  return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
+}
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
 ): Promise<Metadata> {
@@ -1830,17 +1892,13 @@ export async function generateMetadata(
   const parsed = parseGuideSlug(slug);
   if (!parsed) return {};
 
-  const { tool, template } = parsed;
-  const isAutoCAD = template.softwareSlug === 'autocad';
-  const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
-
-  const title = template.title.replace(replaceRegex, tool.name);
-  const description = template.excerpt.replace(replaceRegex, tool.name);
+  const { tool, template, category } = parsed;
+  const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool.name);
 
   return {
-    title: `${title} — CAD Expert Troubleshooting`,
-    description,
-    keywords: [tool.name.toLowerCase(), `${tool.name.toLowerCase()} guide`, `${tool.name.toLowerCase()} tutorial`, template.keyword.replace(replaceRegex, tool.name.toLowerCase())],
+    title: `${localized.title} — CAD Expert Troubleshooting`,
+    description: localized.excerpt,
+    keywords: [tool.name.toLowerCase(), `${tool.name.toLowerCase()} guide`, `${tool.name.toLowerCase()} tutorial`, localized.keyword],
     alternates: {
       canonical: `https://cadguide.tools/guides/${slug}`,
     },
@@ -2218,12 +2276,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   }
 
   const { tool, template, category, artIndex } = parsed;
-  const isAutoCAD = template.softwareSlug === 'autocad';
-  const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
-
-  const title = template.title.replace(replaceRegex, tool.name);
-  const excerpt = template.excerpt.replace(replaceRegex, tool.name);
-  const keyword = template.keyword.replace(replaceRegex, tool.name.toLowerCase());
+  const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool.name);
+  const title = localized.title;
+  const excerpt = localized.excerpt;
+  const keyword = localized.keyword;
 
   // Renders distinct detailed technical guides based on category sections
   const getDynamicSteps = (cat: string, name: string) => {

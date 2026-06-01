@@ -60,6 +60,72 @@ export const getProgrammaticLink = (title: string, forcedToolSlug?: string): str
   return `/guides/${toolSlug}-${category}-${index}`;
 };
 
+export function getLocalizedTitleAndExcerpt(title: string, excerpt: string, keyword: string, category: string, toolName: string) {
+  let newTitle = title;
+  let newExcerpt = excerpt;
+  let newKeyword = keyword;
+
+  if (category === 'migration' || category === 'crossover') {
+    const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
+    for (const target of targets) {
+      const regex = new RegExp(target, 'gi');
+      if (regex.test(newTitle)) {
+        newTitle = newTitle.replace(regex, toolName);
+        newExcerpt = newExcerpt.replace(regex, toolName);
+        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
+        return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
+      }
+    }
+  }
+
+  const allSoftware = [
+    'AutoCAD Architecture',
+    'AutoCAD Electrical',
+    'AutoCAD for Mac',
+    'AutoCAD LT',
+    'Autodesk AutoCAD',
+    'AutoCAD Online',
+    'AutoCAD',
+    'SolidWorks',
+    'BricsCAD Pro',
+    'BricsCAD',
+    'GstarCAD',
+    'Autodesk Inventor',
+    'Inventor',
+    'Solid Edge',
+    'FreeCAD',
+    'Catia V6',
+    'Catia',
+    'Rhino 3D',
+    'DraftSight',
+    'MicroStation',
+    'Revit',
+    'ZWCAD',
+    'BIM',
+    'Commercial CAD',
+    'Schematic CAD',
+    'Enterprise CAD',
+    'Named CAD',
+    'Autodesk'
+  ];
+
+  for (const sw of allSoftware) {
+    const regex = new RegExp(sw, 'gi');
+    if (regex.test(newTitle)) {
+      newTitle = newTitle.replace(regex, toolName);
+      newExcerpt = newExcerpt.replace(regex, toolName);
+      newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
+      break;
+    }
+  }
+
+  return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
+}
+
+export function getLocalizedTitle(title: string, category: string, toolName: string): string {
+  return getLocalizedTitleAndExcerpt(title, '', '', category, toolName).title;
+}
+
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const mockDirectoryLinks: Record<string, string[]> = {
@@ -303,13 +369,12 @@ export default function GuidesClient() {
   const rawDisplayArticles = ARTICLES_LIST.filter(a => a.category === activeTab).slice(0, 6);
   const displayArticles = rawDisplayArticles.map((art) => {
     if (!selectedTool) return art;
-    const isAutoCAD = art.softwareSlug === 'autocad';
-    const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
+    const localized = getLocalizedTitleAndExcerpt(art.title, art.excerpt, art.keyword, art.category, selectedTool.name);
     return {
       ...art,
-      title: art.title.replace(replaceRegex, selectedTool.name),
-      excerpt: art.excerpt.replace(replaceRegex, selectedTool.name),
-      keyword: art.keyword.replace(replaceRegex, selectedTool.name.toLowerCase()),
+      title: localized.title,
+      excerpt: localized.excerpt,
+      keyword: localized.keyword,
       softwareSlug: selectedTool.slug
     };
   });
@@ -512,14 +577,15 @@ export default function GuidesClient() {
                     >
                       <ul className="space-y-3 text-xs sm:text-sm">
                         {p.articles.map((art, aIdx) => {
-                          const isAutoCAD = p.category === 'troubleshooting';
-                          const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
                           const displayTitle = selectedTool 
-                            ? art.title.replace(replaceRegex, selectedTool.name)
+                            ? getLocalizedTitle(art.title, p.category, selectedTool.name)
                             : art.title;
+                          const displayKeyword = selectedTool
+                            ? getLocalizedTitleAndExcerpt('', '', art.keyword, p.category, selectedTool.name).keyword
+                            : art.keyword;
                           const displaySlug = selectedTool
                             ? `${selectedTool.slug}-${p.category}-${aIdx}`
-                            : `${isAutoCAD ? 'autocad' : 'solidworks'}-${p.category}-${aIdx}`;
+                            : `${p.category === 'troubleshooting' ? 'autocad' : 'solidworks'}-${p.category}-${aIdx}`;
                           return (
                             <li key={art.title} className="group/item flex items-start gap-2">
                               <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
@@ -531,7 +597,7 @@ export default function GuidesClient() {
                                   {displayTitle}
                                 </Link>
                                 <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
-                                  Keyword Mapped: {selectedTool ? art.keyword.replace(replaceRegex, selectedTool.name.toLowerCase()) : art.keyword}
+                                  Keyword Mapped: {displayKeyword}
                                 </span>
                               </div>
                             </li>
@@ -687,7 +753,7 @@ export default function GuidesClient() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                     {activeAlphabetList.map((item, idx) => {
                       const displayItem = selectedTool 
-                        ? item.replace(/autocad/gi, selectedTool.name).replace(/solidworks/gi, selectedTool.name)
+                        ? getLocalizedTitle(item, 'all', selectedTool.name)
                         : item;
                       return (
                         <div key={idx} className="flex items-center gap-2 p-2 hover:bg-slate-50 rounded-xl transition-all group">
@@ -772,7 +838,7 @@ export default function GuidesClient() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                       {folder.links.map((link, lIdx) => {
                         const displayTitle = selectedTool 
-                          ? link.title.replace(/autocad/gi, selectedTool.name).replace(/solidworks/gi, selectedTool.name)
+                          ? getLocalizedTitle(link.title, folder.id.replace('fol-', ''), selectedTool.name)
                           : link.title;
                         return (
                           <div key={lIdx} className="flex items-start gap-2 p-2 hover:bg-white hover:shadow-sm rounded-xl transition-all group">
