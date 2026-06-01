@@ -3,10 +3,10 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
 import { tools } from '@/lib/data';
 import Link from 'next/link';
 import { ToolLogo } from '@/components/tool-logo';
+import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
 
 interface Deal {
   id: string;
@@ -210,26 +210,8 @@ export default function DealsPage() {
         </div>
 
         {/* Newsletter / Alert Section */}
-        <section className="mt-24 bg-blue-600 rounded-[48px] p-10 md:p-20 text-white text-center relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -ml-48 -mt-48"></div>
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight leading-tight">Never miss a massive CAD discount again.</h2>
-            <p className="text-blue-100 text-lg mb-10 font-medium">
-              We notify you about flash sales, Black Friday early access, and secret coupon codes directly to your inbox.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input 
-                placeholder="Enter your email..." 
-                className="h-16 bg-white/20 border-white/30 text-white placeholder:text-blue-200 rounded-2xl px-6 focus:ring-4 focus:ring-white/20 outline-none transition-all"
-              />
-              <Button className="h-16 bg-white text-blue-600 hover:bg-blue-50 px-10 rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl shadow-blue-900/20">
-                Join Alerts
-              </Button>
-            </form>
-            <p className="text-blue-200 text-[10px] font-bold mt-6 uppercase tracking-widest">
-              Zero spam. Only valid deals. Unsubscribe anytime.
-            </p>
-          </div>
+        <section className="mt-24">
+          <NewsletterSubscribe variant="banner" />
         </section>
       </section>
     </main>

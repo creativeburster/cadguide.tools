@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ToolLogo } from "@/components/tool-logo";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import { NewsletterSubscribe } from "@/components/newsletter-subscribe";
 import {
   CheckCircle2,
   XCircle,
@@ -23,7 +24,7 @@ import {
   HelpCircle,
   BarChart3,
   Search,
-  Mail,
+
   Scale,
   Sparkles,
   TrendingUp,
@@ -1329,28 +1330,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
 
               {/* Newsletter Subscription */}
-              <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm text-center">
-                <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-[24px] flex items-center justify-center mx-auto mb-6">
-                  <Mail className="w-8 h-8" />
-                </div>
-                <h4 className="text-2xl font-black text-slate-900 mb-3">
-                  CAD Insider
-                </h4>
-                <p className="text-sm text-slate-500 mb-8 font-medium leading-relaxed px-4">
-                  Join 15,000+ professionals. Get weekly license deals and
-                  software updates.
-                </p>
-                <div className="space-y-4">
-                  <input
-                    type="email"
-                    placeholder="Enter your work email"
-                    className="w-full h-14 px-6 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 transition-all"
-                  />
-                  <Button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black rounded-2xl h-14 shadow-lg shadow-slate-200">
-                    Subscribe Free
-                  </Button>
-                </div>
-              </div>
+              <NewsletterSubscribe variant="sidebar" />
 
               {/* Quick Comparison Battles Sidebar Card */}
               {toolComparisons.length > 0 && (

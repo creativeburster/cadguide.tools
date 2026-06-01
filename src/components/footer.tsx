@@ -1,77 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useState } from 'react';
-
-function NewsletterForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const formData = new FormData(e.currentTarget);
-
-    try {
-      const response = await fetch('https://14c0c158.sibforms.com/serve/MUIFAKIxKpcA9tVcGMHLoh1hj5E5nIDzAq2znbxbzvMcjfkPq3hEYLFBQ6sT2Ay_pV6p6i-dyE3A8DmKpCbG0_NJhlCfZAWOGziY94NmSKC3hLU9V-pzratM4gdnUu9F3wbBUtqS6MRh0bCipP7gT4bjwmbMgIQ-qRcdy70QNBdaipZGyXI0rnYnvZAxAELcDVqpvofktMOrSCoM', {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors',
-      });
-
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error('Newsletter submission error:', error);
-      setIsSubmitted(true);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  if (isSubmitted) {
-    return (
-      <div className="text-center">
-        <div className="text-green-400 text-2xl mb-2">✓</div>
-        <p className="text-white font-medium">Thanks for subscribing!</p>
-        <p className="text-sm text-slate-500 mt-1">Check your inbox for confirmation.</p>
-      </div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-3">
-      <h4 className="text-white font-black mb-4 uppercase text-xs tracking-[0.2em]">Newsletter</h4>
-      <p className="text-[11px] text-slate-500 leading-tight">
-        Monthly digest: new tool reviews, fresh deals, and curated picks.
-      </p>
-      <div className="space-y-2">
-        <Input
-          type="email"
-          name="EMAIL"
-          placeholder="you@company.com"
-          required
-          disabled={isSubmitting}
-          className="bg-slate-900 border-slate-800 text-white placeholder:text-slate-600 h-8 rounded-lg text-[11px] w-full"
-        />
-        <input type="text" name="email_address_check" value="" className="hidden" />
-        <input type="hidden" name="locale" value="en" />
-        <input type="hidden" name="html_type" value="simple" />
-        <div className="flex justify-center">
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="bg-blue-600 hover:bg-blue-700 h-8 px-8 rounded-lg font-black text-[9px] uppercase tracking-widest whitespace-nowrap"
-          >
-            {isSubmitting ? '...' : 'Subscribe'}
-          </Button>
-        </div>
-      </div>
-    </form>
-  );
-}
+import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
 
 export function Footer() {
   return (
@@ -180,7 +110,7 @@ export function Footer() {
 
           {/* Newsletter */}
           <div className="col-span-2 md:col-span-2 xl:col-span-2">
-            <NewsletterForm />
+            <NewsletterSubscribe variant="footer" />
           </div>
         </div>
 
