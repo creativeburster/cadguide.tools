@@ -23,7 +23,7 @@ const YEAR = 2026;
 const PERSONA_LIMIT = 18;
 
 interface PersonaStyle {
-  archetype: 'technical-engineering' | 'creative-design' | 'academic-individual';
+  archetype: 'technical-engineering' | 'creative-design' | 'business-management' | 'academic-individual';
   gradient: string;
   badgeAccent: string;
   accentText: string;
@@ -32,8 +32,9 @@ interface PersonaStyle {
 }
 
 function getStyleForPersona(slug: string): PersonaStyle {
-  const tech = ['mechanical-engineers', 'civil-engineers', 'electrical-engineers'];
-  const creative = ['architects', 'jewelry-designers', 'animators', '3d-printing'];
+  const tech = ['mechanical-engineers', 'civil-engineers', 'electrical-engineers', 'hvac-engineers', 'cnc-machinists'];
+  const creative = ['architects', 'jewelry-designers', 'animators', '3d-printing', 'landscape-architects', 'interior-designers', 'industrial-designers'];
+  const business = ['startups', 'freelancers', 'construction-managers', 'cad-managers'];
   
   if (tech.includes(slug)) {
     return {
@@ -53,6 +54,16 @@ function getStyleForPersona(slug: string): PersonaStyle {
       accentText: 'text-rose-600',
       badgeBg: 'bg-rose-100 text-rose-800 border-rose-200',
       roleBadgeText: 'Creative Showcase',
+    };
+  }
+  if (business.includes(slug)) {
+    return {
+      archetype: 'business-management',
+      gradient: 'from-blue-700 via-indigo-800 to-slate-900',
+      badgeAccent: 'bg-blue-50 text-blue-700 border-blue-100',
+      accentText: 'text-blue-600',
+      badgeBg: 'bg-blue-100 text-blue-800 border-blue-200',
+      roleBadgeText: 'Enterprise & Strategy',
     };
   }
   return {
@@ -165,6 +176,22 @@ function PersonaHardwareWidget({ slug }: { slug: string }) {
       gpu: "NVIDIA RTX 4060 or integrated Intel Iris Xe (for pure schematic work)",
       storage: "1TB NVMe SSD",
       tip: "Schematic routing and PCB layer tracing benefit from high horizontal resolution. Dual 27-inch 4K monitors or a single 38-inch curved screen significantly cut zooming time."
+    },
+    'hvac-engineers': {
+      title: "Recommended HVAC/MEP Workstation Setup",
+      cpu: "Intel Core i7-14700K or AMD Ryzen 9 7900X (High clock speeds speed up dynamic duct/pipe routing calculations)",
+      ram: "64GB DDR5 (Critical for loading large multi-link architectural coordination reference files)",
+      gpu: "NVIDIA RTX 4060 Ti or AMD Radeon Pro W7500 (ISV-certified drivers ensure stability in complex workspaces)",
+      storage: "1TB NVMe PCIe Gen4 SSD",
+      tip: "MEP modeling is heavily dependent on cross-model linking. If your system RAM is insufficient, linked structural models will cause severe viewport performance lag."
+    },
+    'cnc-machinists': {
+      title: "Recommended CNC/CAM Workstation Setup",
+      cpu: "Intel Core i7-14700K or AMD Ryzen 7 7700X (High clock speeds minimize toolpath calculation wait times)",
+      ram: "32GB DDR5 RAM",
+      gpu: "NVIDIA RTX A2000 or RTX 4060 (Optimized for smooth toolpath backplotting and dynamic material removal simulation)",
+      storage: "1TB NVMe SSD",
+      tip: "CAM simulations run directly on local GPU and CPU. Dedicated graphics memory (VRAM of 6GB+) is essential for simulating multi-axis stock removal without visual stuttering."
     }
   }[slug] as { title: string; cpu: string; ram: string; gpu: string; storage: string; tip: string } | undefined;
 
@@ -237,6 +264,30 @@ function CreativeWorkflowWidget({ slug }: { slug: string }) {
         { name: "2. Mesh Integrity Check", tool: "MeshLab / Netfabb", desc: "Scanning for self-intersecting shells, holes, and non-manifold edges." },
         { name: "3. G-Code Generation", tool: "PrusaSlicer / Cura", desc: "Layer slicing, defining infill patterns, wall perimeters, and nozzle heat schedules." }
       ]
+    },
+    'landscape-architects': {
+      title: "Site Grading & BIM Landscape Pipeline",
+      stages: [
+        { name: "1. GIS & Survey Import", tool: "Civil 3D / Vectorworks Landmark", desc: "Acquiring topographic contour data, geospatial shapefiles, and drone scan point clouds." },
+        { name: "2. Terrain Grading Design", tool: "Vectorworks Landmark", desc: "Designing grading pads, retaining walls, and executing automated cut-and-fill soil calculations." },
+        { name: "3. Planting & Presentation", tool: "Lands Design / Twinmotion", desc: "Populating botanical planting plans with age/growth parameters and rendering natural environment views." }
+      ]
+    },
+    'interior-designers': {
+      title: "Interior Space Planning & FF&E Pipeline",
+      stages: [
+        { name: "1. Space Planning (2D/3D)", tool: "SketchUp / Chief Architect", desc: "Sketching quick wall layouts, furniture spatial arrangements, and clearances." },
+        { name: "2. Millwork Construction Detailing", tool: "AutoCAD / SketchUp Pro", desc: "Drafting precise elevation and section sheets of custom cabinetry for manufacturing hand-off." },
+        { name: "3. Photorealistic Presentation", tool: "Enscape / V-Ray", desc: "Setting up real-time ray-traced client walk-throughs and texture rendering." }
+      ]
+    },
+    'industrial-designers': {
+      title: "Industrial Product Concept-to-Production Pipeline",
+      stages: [
+        { name: "1. Concept Styling & SubD", tool: "Rhino / Shapr3D", desc: "Organic freeform styling, ergonomic contour exploration, and subdivision modeling." },
+        { name: "2. Precise NURBS Reconstruction", tool: "Rhino / Alias", desc: "Converting concept meshes to double-precision math NURBS surfaces with G2/G3 continuity." },
+        { name: "3. Parametric MCAD Hand-off", tool: "SolidWorks / STEP Export", desc: "Exporting precise surface data to mechanical engineering teams for internal structural parts." }
+      ]
     }
   }[slug] as { title: string; stages: { name: string; tool: string; desc: string }[] } | undefined;
 
@@ -273,22 +324,6 @@ function LicensingGuideWidget({ slug }: { slug: string }) {
         "Onshape Education Standard: Pure cloud CAD is completely free for K-12 and college students. No install required — runs instantly in Chrome/Safari.",
         "Open-Source Perpetual Safety: Tools like FreeCAD, KiCad, and Blender are 100% free with zero time limits, allowing you to use them post-graduation."
       ]
-    },
-    'startups': {
-      title: "Pricing Hacks & Free Tiers for Hardware Startups",
-      points: [
-        "Autodesk Startup Program: Eligible early-stage hardware innovators can access Fusion 360 at a highly discounted tier ($150/year instead of commercial rates).",
-        "Onshape Startup Program: Provides qualifying pre-revenue startups with full-featured enterprise SaaS seats free of charge for up to one year.",
-        "SaaS Billing Safeguards: Keep a close eye on multi-user seat configurations in cloud CAD. Inactive seats are often auto-billed on monthly roll-overs."
-      ]
-    },
-    'freelancers': {
-      title: "Licensing Strategies to Keep Freelance Work Profitable",
-      points: [
-        "Bypass Subscription Traps: If you want to own your tool without ongoing bills, choose perpetual CAD suites like BricsCAD Pro, Rhino 3D, or ZWCAD Pro.",
-        "Protect Client Interoperability: Keep a free tier of Fusion 360 Personal or Onshape Free active to import occasional SolidWorks or Inventor native files from clients.",
-        "Include Licensing in Contracts: If a client requires you to model in a highly specialized, expensive suite, charge the license seat rental directly to their invoice."
-      ]
     }
   }[slug] as { title: string; points: string[] } | undefined;
 
@@ -310,6 +345,67 @@ function LicensingGuideWidget({ slug }: { slug: string }) {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+function BusinessChecklistWidget({ slug }: { slug: string }) {
+  const checklist = {
+    'startups': {
+      title: "Startup CAD Stack Setup & ROI Checklist",
+      points: [
+        { label: "IP Access Protection", desc: "Enforce multi-user cloud CAD permissions (e.g. Onshape, Fusion 360) with role-based access levels to prevent proprietary design database leakage." },
+        { label: "SaaS Scaling Flexibility", desc: "Select subscription tiers with monthly rolling agreements to dynamically adjust seat counts according to product milestones." },
+        { label: "Downstream PLM Connectivity", desc: "Verify that your selected CAD stack can hook directly into ECAD/MCAD cloud databases (Altium 365, Arena PLM) to streamline supply chain releases." }
+      ]
+    },
+    'freelancers': {
+      title: "Freelance Overhead & Interop Checklist",
+      points: [
+        { label: "Perpetual License Evaluation", desc: "Assess perpetual license buyouts (like BricsCAD Pro, Rhino 3D) to eliminate fixed software bills during slower contract months." },
+        { label: "Universal Export Capabilities", desc: "Verify that your primary CAD stack exports exact neutral solid models (STEP) and drawing formats (DWG/DXF) to match whatever clients request." },
+        { label: "Version Check Audits", desc: "Confirm the client's software release version before starting work to avoid backward-compatibility file opening issues." }
+      ]
+    },
+    'construction-managers': {
+      title: "Construction Coordination & Model Takeoff Checklist",
+      points: [
+        { label: "Multi-Disciplinary Integration", desc: "Consolidate structural, architectural, and MEP files inside coordination suites (Navisworks) to run interference checks before framing." },
+        { label: "Vector Calibration Verification", desc: "Confirm that imported PDF drawings contain clean vector lines to enable automatic snap metrics for quantity estimation." },
+        { label: "Field Database Access", desc: "Deploy tablet-ready model viewers to the site so inspectors can reference live coordinated design updates instantly." }
+      ]
+    },
+    'cad-managers': {
+      title: "Enterprise Standardization & License Audit Checklist",
+      points: [
+        { label: "Floating License Allocation", desc: "Establish floating network pools to share high-cost CAD licenses among designers, reducing overall seat overhead." },
+        { label: "Standardized CAD Templates", desc: "Implement unified layered standards, plot styles, title blocks, and dyn-blocks to guarantee consistent print sets." },
+        { label: "Information Governance Compliance", desc: "Confirm that cloud CAD databases and on-prem repositories conform to corporate IT governance standards (SOC 2, ISO 27001)." }
+      ]
+    }
+  }[slug] as { title: string; points: { label: string; desc: string }[] } | undefined;
+
+  if (!checklist) return null;
+
+  return (
+    <div className="my-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <div className="flex items-center gap-2 mb-4 text-slate-800 font-bold text-lg">
+        <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+        <span>{checklist.title}</span>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {checklist.points.map((pt, idx) => (
+          <div key={idx} className="p-4 bg-indigo-50/20 rounded-xl border border-indigo-100 relative">
+            <h4 className="font-bold text-slate-900 text-sm flex gap-1.5 items-center">
+              <span className="w-4 h-4 rounded-full bg-indigo-100 text-indigo-800 text-[10px] font-bold flex items-center justify-center flex-shrink-0">{idx+1}</span>
+              {pt.label}
+            </h4>
+            <p className="text-xs text-slate-500 mt-2 leading-relaxed">{pt.desc}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -497,7 +593,18 @@ export default async function PersonaPageRoute(
             </>
           )}
 
-          {/* Flow 3: Academic & Individual (FAQ first, list, Licensing Guide, CTA) */}
+          {/* Flow 3: Business & Management (Checklist first, list, FAQs, CTA) */}
+          {style.archetype === 'business-management' && (
+            <>
+              <BusinessChecklistWidget slug={slug} />
+              {renderPersonaList(list, style, fullList.length, p)}
+              {renderPersonaFAQs(p, style)}
+              {renderPersonaCTA(p, fullList.length)}
+              {renderPersonaLinks(p)}
+            </>
+          )}
+
+          {/* Flow 4: Academic & Individual (FAQ first, list, Licensing Guide, CTA) */}
           {style.archetype === 'academic-individual' && (
             <>
               {renderPersonaFAQs(p, style)}

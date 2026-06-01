@@ -22,7 +22,7 @@ export function generateStaticParams() {
 const YEAR = 2026;
 
 interface FormatStyle {
-  archetype: 'vector-drafting' | 'solid-mechanical' | 'tessellated-mesh';
+  archetype: 'vector-drafting' | 'solid-mechanical' | 'tessellated-mesh' | 'bim-coordination' | 'machine-instruction';
   gradient: string;
   badgeAccent: string;
   accentText: string;
@@ -31,8 +31,11 @@ interface FormatStyle {
 }
 
 function getStyleForFormat(slug: string): FormatStyle {
-  const vector = ['dwg', 'dxf', 'pdf'];
-  const solid = ['step', 'iges', 'jt', '3dm'];
+  const vector = ['dwg', 'dxf', 'pdf', 'dgn', 'dwf', 'exb', 'slddrw', 'idw'];
+  const solid = ['step', 'iges', 'jt', '3dm', 'sldprt', 'ipt', 'sat', 'vda', 'catpart', 'nxprt', 'creoprt', 'f3d'];
+  const mesh = ['stl', 'obj', 'fbx', '3mf', 'usd', 'cgr'];
+  const bim = ['ifc', 'rvt'];
+  const machine = ['gcode'];
   
   if (vector.includes(slug)) {
     return {
@@ -52,6 +55,26 @@ function getStyleForFormat(slug: string): FormatStyle {
       accentText: 'text-amber-700',
       badgeBg: 'bg-amber-100 text-amber-800 border-amber-200',
       formatBadgeText: '3D Solid & B-Rep Standard',
+    };
+  }
+  if (bim.includes(slug)) {
+    return {
+      archetype: 'bim-coordination',
+      gradient: 'from-indigo-600 via-blue-700 to-sky-800',
+      badgeAccent: 'bg-indigo-50 text-indigo-700 border-indigo-100',
+      accentText: 'text-indigo-600',
+      badgeBg: 'bg-indigo-100 text-indigo-800 border-indigo-200',
+      formatBadgeText: 'BIM & AEC Database Standard',
+    };
+  }
+  if (machine.includes(slug)) {
+    return {
+      archetype: 'machine-instruction',
+      gradient: 'from-rose-600 via-red-700 to-orange-800',
+      badgeAccent: 'bg-rose-50 text-rose-700 border-rose-100',
+      accentText: 'text-rose-600',
+      badgeBg: 'bg-rose-100 text-rose-800 border-rose-200',
+      formatBadgeText: 'Machine Control & G-Code',
     };
   }
   return {
@@ -186,6 +209,46 @@ function VectorLayerSpecsWidget({ slug }: { slug: string }) {
         "Scale Calibration: Set up scale bars inside sheet templates. Review tools like Bluebeam require manual two-point calibration to verify precise field dimensions.",
         "Font Embedding: Embed TrueType or OpenType fonts directly inside the PDF export to prevent standard architectural text overlaps or symbol corruption on other OS viewports."
       ]
+    },
+    'dgn': {
+      title: "DGN Geospatial & Large-Scale Design Standards",
+      points: [
+        "64-bit Element Database: DGN V8 utilizes a 64-bit coordinate space, letting infrastructure designers place millions of assets across vast geographic systems without coordinate degradation.",
+        "Master vs Sub-Units Mapping: Always map working units (e.g. Survey Feet vs Meters) explicitly when importing DGN datasets into AutoCAD to prevent scale shifts.",
+        "Integrated History Tracking: DGN archives support delta history logs, enabling CAD administrators to audit and rollback design modifications to older timestamps."
+      ]
+    },
+    'dwf': {
+      title: "DWF Plan Review & Takeoff Specifications",
+      points: [
+        "Locked Vector Coordinates: DWF acts as an unmodifiable blueprint, securing native vector geometries from modifications while permitting precise stakeholder measurements.",
+        "XML Container Architecture: DWFx is packaged as an XML Paper Specification (XPS) container, allowing Windows users to print and inspect files natively in a web browser.",
+        "Takeoff Metadata Binding: Estimatation databases can pull area dimensions, layer names, and custom sheet scale properties directly from DWF headers."
+      ]
+    },
+    'exb': {
+      title: "EXB Localized GB Drafting Standards",
+      points: [
+        "GB Standard Component Templates: EXB integrates Chinese drafting standards natively. Border frames, weld symbols, and roughness callouts automatically format to GB syntax.",
+        "Dynamic ERP Integration: Title blocks and structural bill of materials inside EXB map directly to local manufacturing resource planning software.",
+        "Dual-Kernel AutoCAD Mapping: CAXA's engine handles DWG imports using a dual-kernel framework, rendering complex dynamic blocks cleanly."
+      ]
+    },
+    'slddrw': {
+      title: "SolidWorks Drawing Associativity Standards",
+      points: [
+        "Live Bidirectional Constraints: SLDDRW files remain actively linked to parent assembly geometries. Model revisions automatically redraw orthographic projected views.",
+        "Detailing Mode Compilation: Open heavy multi-sheet SLDDRW drawings in Detailing Mode to quickly inspect and print layouts without rendering the heavy 3D assembly models.",
+        "Broken Pointer Resolution: If views display empty spaces, trace component paths under File -> Replace and target the corresponding `.sldprt` files."
+      ]
+    },
+    'idw': {
+      title: "Inventor Drawing Documentation Standards",
+      points: [
+        "IPT/IAM Model Linking: IDW sheets read material data and volume matrices from IPT files, dynamically filling drawing title block weight profiles.",
+        "Raster View Optimization: For massive industrial layouts, configure views as raster drafts to keep local drawing files lightweight during sketch creation.",
+        "DWG Sheet Interoperability: Choose Inventor-DWG instead of IDW if you frequently share vector drawing files directly with standard AutoCAD environments."
+      ]
     }
   }[slug] as { title: string; points: string[] } | undefined;
 
@@ -244,6 +307,70 @@ function BRepIntegrityWidget({ slug }: { slug: string }) {
         "Embedded Mesh Cache: 3DM files cache custom viewport meshes to speed up drawing. Modify render settings to control local file size without affecting solid precision.",
         "OpenNURBS Integration: Because McNeel provides the openNURBS library freely, third-party CAM and rendering tools can pull precise mathematical geometry without file translation."
       ]
+    },
+    'sldprt': {
+      title: "SLDPRT SolidWorks Feature Tree Guidelines",
+      points: [
+        "Parasolid Modeler Alignment: SLDPRT solids run natively on the Siemens Parasolid engine. Exporting as Parasolid format (.x_t) maintains perfect coordinate structure.",
+        "Rebuild Sequence Rules: SolidWorks generates features sequentially. Place complex fillets and structural drafts at the end of the history tree to prevent rebuild breaks.",
+        "Assembly Mate Caching: Large assemblies save local boundary representations in SLDASM. Lock external references to bypass cycle recalculation slowdowns."
+      ]
+    },
+    'ipt': {
+      title: "Inventor IPT ShapeManager Specifications",
+      points: [
+        "ShapeManager Solid Engine: IPT files are built on Autodesk's proprietary ShapeManager kernel (derived from ACIS), using double-precision solid parameters.",
+        "Model-Based Definition (MBD): Inventor IPT files natively support 3D dimensioning and geometric tolerance symbols, facilitating paperless downstream manufacturing.",
+        "Adaptive Feature Restrictions: Adaptive parts dynamically alter lengths based on mating assemblies. Lock adaptivity once dimensions are finalized to avoid CPU load."
+      ]
+    },
+    'sat': {
+      title: "ACIS SAT Geometry Translation Guidelines",
+      points: [
+        "ACIS Modeler Coordination: SAT stores precise mathematical B-Rep curves and solid regions utilizing Spatial Corporation's ACIS modeling engine.",
+        "ASCII Troubleshooting: Because SAT is a text format, developers can debug boundary loops and coordinate matrix errors using a simple text viewer.",
+        "Version Level Settings: Match the exported SAT version to the receiver's ACIS engine level (e.g. export as R18 to guarantee support on older tools)."
+      ]
+    },
+    'vda': {
+      title: "VDA-FS German Automotive surface Matrix",
+      points: [
+        "German Car Styling Standards: VDA-FS represents high-end Class-A freeform surfaces with zero topological solid definitions, specialized for automotive body panels.",
+        "NURBS Surface Continuity: Ensure your surfacing tool achieves G2 (Curvature) or G3 (Acceleration) continuity to avoid visible highlight breaks on panels.",
+        "Modern STEP Transition: Translate VDA-FS files to STEP AP214 or AP242 to incorporate modern solid properties and geometric tolerances for production."
+      ]
+    },
+    'catpart': {
+      title: "CATIA CGM Kernel Geometric Specifications",
+      points: [
+        "CGM Kernel Precision: CATPart models are created on Dassault's Convergence Geometric Modeler, optimized to handle advanced aeronautical surface deviations.",
+        "Hybrid Modeling Containers: A single CATPart file hosts precise wireframe, complex NURBS styling surfaces, and structural manufacturing solid bodies.",
+        "Backward Translation Limits: CATIA V5 is file-dependent. Models compiled on newer releases cannot be opened in older releases without using utility utilities."
+      ]
+    },
+    'nxprt': {
+      title: "Siemens NX Unified Part Architecture",
+      points: [
+        "Single File Multi-Application: NX uses a unified .prt extension for parts, assemblies, simulation FEA meshes, and CAM post-processor toolpath setups.",
+        "WAVE Geometry Linker: NX PRT uses WAVE links to copy coordinates between parts, letting design updates propagate while preventing cyclic reference crashes.",
+        "Synchronous technology Direct Editing: Push and pull boundary surfaces of imported static solid geometry directly without requiring a feature history tree."
+      ]
+    },
+    'creoprt': {
+      title: "Creo PRT Parametric History Guidelines",
+      points: [
+        "Strict Feature Hierarchy: Creo PRT models depend on sequential parent-child relationships. Modifying early base sketches requires careful rebuild checkups.",
+        "Creo Purge Suffix System: Creo saves files with incremented suffixes (e.g. `.prt.1`, `.prt.2`). Deploy the `purge` command line tool regularly to clean storage.",
+        "Skeleton Assembly Planning: Build coordinate skeletons inside Creo assemblies to share reference geometries down to child parts, preventing loop errors."
+      ]
+    },
+    'f3d': {
+      title: "Fusion 360 Local Archive Specifications",
+      points: [
+        "Unified Parametric Containers: F3D local backup files bundle 2D sketches, modeling history, simulation properties, and CAM tooling parameters in one database.",
+        "Assembly Reference Packing: When archiving assemblies containing external links, export as a `.f3z` package to zip all referenced components together.",
+        "Offline Database Synchronization: Import local F3D files directly into the Fusion desktop client. Changes made offline will sync back to the cloud on reconnect."
+      ]
     }
   }[slug] as { title: string; points: string[] } | undefined;
 
@@ -295,20 +422,28 @@ function MeshValidationWidget({ slug }: { slug: string }) {
         { label: "Embedded Texture Settings", desc: "Select 'Embed Media' on export so that diffuse maps, normal maps, and bump files are stored inside the binary file rather than as broken absolute paths." }
       ]
     },
-    'ifc': {
-      title: "IFC Semantic BIM Validation Matrix",
-      checks: [
-        { label: "Spatial Hierarchy Mapping", desc: "BIM objects must belong to a clear structure: Project -> Site -> Building -> Storey -> Element. Floating walls will fail structural coordination." },
-        { label: "MVD Compliance Profiles", desc: "Select the correct Model View Definition (e.g., Coordination View 2.0 or Design Transfer MVD) to match the coordination firm's expected parameters." },
-        { label: "Property Set Mapping", desc: "Ensure thermal resistance coefficients, concrete strengths, and fire-ratings are saved on standard IFC properties (Pset_WallCommon)." }
-      ]
-    },
     '3mf': {
       title: "3MF Multi-Material Printing Specifications",
       checks: [
         { label: "Voxel and Gradients", desc: "3MF files support voxel-based color gradients. Verify your slicer supports gradient infills to utilize advanced physical shading." },
         { label: "Native Lattice Structures", desc: "Lighter structures can be mathematically generated without huge STL file sizes, as 3MF stores lattice nodes directly in XML syntax." },
         { label: "Multi-material Tool Offset", desc: "Store distinct physical extruder designations inside the 3MF package to cleanly map dual or quad printhead color changes." }
+      ]
+    },
+    'usd': {
+      title: "USD Collaborative Scene Layering Guidelines",
+      checks: [
+        { label: "Non-Destructive Overrides", desc: "USD separates geometry modifications into non-destructive overlay files, letting modelers edit textures without breaking coordinates." },
+        { label: "AR Ready USDZ Archives", desc: "Combine binary USDC geometry and diffuse texture maps inside a zero-compression zip archive to run native AR Quick Look on Apple devices." },
+        { label: "Universal Real-Time Syncing", desc: "USD handles asset databases within collaborative ray-tracers like NVIDIA Omniverse, enabling cross-application layout updates." }
+      ]
+    },
+    'cgr': {
+      title: "CGR Visualization Mockup Quality Standards",
+      checks: [
+        { label: "CGM Tessellation Level", desc: "CGR files strip CGM B-Rep boundaries, saving optimized mesh graphics to verify mechanical assembly spacing." },
+        { label: "Lightweight DMU Loading", desc: "Designers use CGR mesh envelopes inside CATIA to run clash analysis across thousands of components concurrently without running out of RAM." },
+        { label: "Solid Data Protection", desc: "Distributing CGR visualization files protects critical enterprise IP, since mathematically exact solid boundaries cannot be extracted." }
       ]
     }
   }[slug] as { title: string; checks: { label: string; desc: string }[] } | undefined;
@@ -328,6 +463,83 @@ function MeshValidationWidget({ slug }: { slug: string }) {
           <div key={idx} className="p-4 bg-teal-50/20 rounded-xl border border-teal-100 relative">
             <h4 className="font-bold text-slate-900 text-sm">{c.label}</h4>
             <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">{c.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function BIMCoordinationWidget({ slug }: { slug: string }) {
+  const data = {
+    'ifc': {
+      title: "IFC Semantic OpenBIM Coordination Standards",
+      points: [
+        "Spatial Hierarchy Binding: Every BIM object must inherit a structured project path: IfcProject -> IfcSite -> IfcBuilding -> IfcBuildingStorey to pass grid checks.",
+        "Model View Definition (MVD) Profiles: Set the export wizard to Reference View 2.0 if the recipient only needs to coordinate positions, or Design Transfer MVD for edits.",
+        "Semantic Class Mapping: Confirm elements map to correct classifications (e.g. IfcWall, IfcSlab). Avoid generic BuildingElementProxy fallbacks to clear validation checks."
+      ]
+    },
+    'rvt': {
+      title: "Revit RVT Database & Worksharing Standards",
+      points: [
+        "Relational Project Database: RVT stores geometry coordinates, 2D sheet layouts, and scheduling tables in one dynamic relational database container.",
+        "Concurrent Central Worksharing: Design teams use local project replicas to synchronize edits to a central RVT database hosted on Revit Server or Autodesk Construction Cloud.",
+        "Strict Release Compatibility: Revit databases cannot save back to older versions. Confirm the project year release before saving to avoid format lockout."
+      ]
+    }
+  }[slug] as { title: string; points: string[] } | undefined;
+
+  if (!data) return null;
+
+  return (
+    <div className="my-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <div className="flex items-center gap-2 mb-4 text-indigo-800 font-bold text-lg">
+        <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+        <span>{data.title}</span>
+      </div>
+      <div className="space-y-3">
+        {data.points.map((pt, idx) => (
+          <div key={idx} className="p-3 bg-indigo-50/20 rounded-xl border border-indigo-100 text-sm text-slate-600 leading-relaxed flex items-start gap-3">
+            <span className="font-bold text-indigo-700 flex-shrink-0">Standard {idx + 1}:</span>
+            <span>{pt}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MachineControlWidget({ slug }: { slug: string }) {
+  const specs = {
+    'gcode': {
+      title: "G-Code Numerical Machine Toolpath Specifications",
+      points: [
+        "Post-Processor Dialects: G-code instructions must run through custom post-processor scripts to output compatible coordinates for Fanuc, Haas, or GRBL controllers.",
+        "Coordinate Mode Alignment: Verify if the G-code uses absolute coordinates (G90) or incremental movements (G91) to prevent machining head collision.",
+        "Instruction Sequence Safety: Keep start-up operations (homing, spindle heating) and termination offsets (retract tools, shut coolants) configured to protect CNC hardware."
+      ]
+    }
+  }[slug] as { title: string; points: string[] } | undefined;
+
+  if (!specs) return null;
+
+  return (
+    <div className="my-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <div className="flex items-center gap-2 mb-4 text-rose-800 font-bold text-lg">
+        <svg className="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span>{specs.title}</span>
+      </div>
+      <div className="space-y-3">
+        {specs.points.map((pt, idx) => (
+          <div key={idx} className="p-3 bg-rose-50/20 rounded-xl border border-rose-100 text-sm text-slate-600 leading-relaxed flex items-start gap-3">
+            <span className="font-bold text-rose-700 flex-shrink-0">Rule {idx + 1}:</span>
+            <span>{pt}</span>
           </div>
         ))}
       </div>
@@ -538,6 +750,28 @@ export default async function FileFormatPage(
               {renderFormatFAQs(p, style)}
               {renderFormatToolLists(both, reads, writes, total, style, p)}
               <MeshValidationWidget slug={slug} />
+              {renderFormatCTA(p, total)}
+              {renderFormatLinks(p)}
+            </>
+          )}
+
+          {/* Flow 4: BIM Coordination (Tool list first, BIM widget, FAQs, CTA, links) */}
+          {style.archetype === 'bim-coordination' && (
+            <>
+              {renderFormatToolLists(both, reads, writes, total, style, p)}
+              <BIMCoordinationWidget slug={slug} />
+              {renderFormatFAQs(p, style)}
+              {renderFormatCTA(p, total)}
+              {renderFormatLinks(p)}
+            </>
+          )}
+
+          {/* Flow 5: Machine Instruction (Machine control widget first, FAQs, tool list, CTA, links) */}
+          {style.archetype === 'machine-instruction' && (
+            <>
+              <MachineControlWidget slug={slug} />
+              {renderFormatFAQs(p, style)}
+              {renderFormatToolLists(both, reads, writes, total, style, p)}
               {renderFormatCTA(p, total)}
               {renderFormatLinks(p)}
             </>
