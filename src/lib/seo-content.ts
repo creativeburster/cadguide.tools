@@ -1026,15 +1026,19 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["DWF", "DWFX"],
     fullName: "Design Web Format",
     intro:
-      "DWF and DWFx are highly compressed, secure file formats developed by Autodesk for sharing rich 2D and 3D design data, maps, and models. Unlike raw DWG files, DWF files are lightweight and preserve metadata without exposing the underlying CAD geometry. This makes them ideal for project managers, field contractors, and clients who need to review, measure, and redline drawings without requiring fully licensed CAD software or endangering intellectual property.",
+      "DWF and DWFx are highly compressed, secure, and metadata-rich file formats developed by Autodesk specifically for multi-disciplinary design review, construction estimation, and secure plan distribution. Unlike raw DWG files, which carry complete editable CAD coordinate history and proprietary block geometry, DWF acts as a 'digital blueprint'. It preserves exact vector scale, layer names, and hierarchical block attributes while locking down coordinates from direct drawing modifications, making it the standard for sending construction sets to subcontractors and quantity surveyors.",
     faqs: [
       {
-        q: "What is the difference between DWF and DWFx?",
-        a: "DWFx is the newer version based on the XML Paper Specification (XPS). DWFx files can be opened and viewed natively inside standard Windows web browsers without installing any specialized Autodesk viewers.",
+        q: "What is the key technical difference between DWF and DWFx?",
+        a: "Standard DWF requires Autodesk Design Review or another proprietary viewer to read. DWFx is based on Microsoft's XML Paper Specification (XPS), meaning it can be opened and printed natively in any standard Windows web browser without installing additional plug-ins, while retaining full 2D/3D vector scale and sheet properties.",
       },
       {
-        q: "Can I convert a DWF file back to an editable DWG?",
-        a: "Yes, but since DWF is a lossy, flattened visualization format, some CAD intelligence (like dynamic blocks and parametric history) will be lost. You can import DWF files into AutoCAD using the PDF/DWF import command to convert vector layers back to lines.",
+        q: "Can I convert a DWF file back to an editable DWG, and what are the limitations?",
+        a: "Yes, you can import DWF vectors back into AutoCAD using the DWFATTACH and subsequent DWFIMPORT commands. However, because DWF is a flattened output format, advanced CAD objects (such as parametric dynamic blocks, hatch associations, and dimension constraints) are stripped. The imported geometry will be standard lines, arcs, and simple text.",
+      },
+      {
+        q: "Why do estimators prefer DWF over PDF for quantity takeoff?",
+        a: "DWF files embed true object data (such as area boundaries, thickness attributes, and sheet scale parameters) directly from the authoring CAD engine. Estimation tools like Autodesk Takeoff or Bluebeam can read these metadata sheets directly, allowing for automated and highly accurate material count extraction.",
       },
     ],
   },
@@ -1044,11 +1048,15 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["EXB", "CAXA"],
     fullName: "CAXA Electronic Draft File",
     intro:
-      "EXB is the native file format of CAXA CAD, a highly popular Chinese 2D/3D drafting and manufacturing software package widely used in China's industrial manufacturing, machinery, and vocational education sectors. Highly compatible with DWG/DXF standards, the EXB format stores detailed production drawings, engineering annotations, and BOM sheets tailored to Chinese industrial drafting standards.",
+      "EXB is the native file format of CAXA Electronic Draft, a leading Chinese CAD platform widely deployed across China's heavy industrial manufacturing, machining, and engineering education sectors. Built to align strictly with Chinese national drafting standards (GB standards), EXB files house detailed 2D production plans, localized dimension styles, annotated welding symbols, and structured BOM (Bill of Materials) systems that map directly to enterprise ERP systems.",
     faqs: [
       {
-        q: "How can I open or edit an EXB file?",
-        a: "EXB files are natively opened using CAXA Electronic Draft. If you are using AutoCAD or other CAD tools, the file must be batch-converted within CAXA to standard DWG or DXF formats first.",
+        q: "Is there a direct viewer for EXB files in non-Chinese CAD environments?",
+        a: "No, EXB is a highly proprietary structure. To view or edit EXB files in AutoCAD, BricsCAD, or GstarCAD, you must use CAXA's built-in batch conversion utility to export the sheets as standard DWG or DXF files first.",
+      },
+      {
+        q: "How does EXB maintain compatibility with legacy DWG data?",
+        a: "CAXA's graphics engine uses a dual-kernel database structure. When importing DWGs, it maps AutoCAD elements to native EXB drafting entities with extremely high fidelity. When exporting, it generates standard DWG containers, allowing Chinese manufacturers to exchange data with international partners.",
       },
     ],
   },
@@ -1058,11 +1066,15 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["VDA", "VDAFS", "VDA-FS"],
     fullName: "VDA-FS Surface Interface File",
     intro:
-      "VDA-FS (often saved as .vda) is a neutral 3D CAD exchange format defined by the German Association of the Automotive Industry (VDA). Specifically designed for exchanging complex Class-A surface geometry (like car body panel curves and molds) between different proprietary CAD systems, it is still supported by high-end automotive CAD, CAM, and inspection tools for legacy compatibility.",
+      "VDA-FS (often saved as .vda) is a neutral 3D CAD data exchange specification defined by the German Association of the Automotive Industry (Verband der Automobilindustrie). Developed specifically to bypass geometric modeling engine discrepancies between CATIA and Siemens NX at the OEM level, VDA-FS is specialized for transferring highly complex mathematical Class-A surface geometry, freeform styling contours, and injection mold parting surfaces without translation errors.",
     faqs: [
       {
-        q: "Why is VDA-FS rarely used for new projects?",
-        a: "VDA-FS only handles surface boundary curves and faces (NURBS); it does not support modern 3D solid topology, assemblies, or product manufacturing metadata. Modern automotive supply chains have transitioned almost entirely to STEP (AP214/AP242) and JT.",
+        q: "What is the primary technical limitation of VDA-FS compared to STEP?",
+        a: "VDA-FS is strictly a surface format. It represents geometry as mathematical NURBS curves and faces; it cannot store solid model topology (B-Rep structures), assembly constraints, sheet metal properties, or Product Manufacturing Information (PMI). Supply chains have largely replaced it with STEP AP214 and AP242.",
+      },
+      {
+        q: "Which industries still maintain active support for VDA-FS files?",
+        a: "The German automotive sector (including Mercedes-Benz, BMW, Audi and their Tier-1 stamping mold suppliers) maintains VDA-FS compatibility inside high-end CAM systems and metrology software to verify stamping die geometries against legacy surface models.",
       },
     ],
   },
@@ -1072,11 +1084,15 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["CGR", "3DXML"],
     fullName: "CATIA Graphical Representation",
     intro:
-      "CGR (CATIA Graphical Representation) and 3DXML are lightweight, tessellated 3D visualization formats developed by Dassault Systèmes. Optimized for viewing massive aerospace and automotive assembly models within CATIA and ENOVIA PLM systems, these files strip away precise mathematical solid geometry, leaving only a high-speed faceted representation suitable for digital mockups, clearance checks, and layout planning.",
+      "CGR (CATIA Graphical Representation) and its web-friendly packaging format, 3DXML, are lightweight, tessellated 3D visualization formats developed by Dassault Systèmes. Engineered to enable digital mockup (DMU) reviews of massive industrial assemblies, CGR files strip away the heavy, precise mathematical B-Rep (boundary representation) solid definitions. What remains is a highly optimized polygonal mesh shell that can be loaded in thousands of instances concurrently inside CATIA, ENOVIA, or web-based PLM platforms to perform clearance checks, clash analysis, and layout coordination.",
     faqs: [
       {
-        q: "Can I convert a CGR file back into a solid CATPart?",
-        a: "Generally no. CGR only contains mesh facet (triangulated) data. To turn it back into a solid B-Rep model, you must use reverse engineering tools to recreate the mathematical surfaces over the mesh coordinates.",
+        q: "Can a CGR or 3DXML file be edited or parsed back into solid geometry?",
+        a: "Direct editing is not possible because the exact solid boundaries are replaced with a flat triangulated mesh. However, designers use specialized CATIA reverse engineering modules or third-party mesh-to-solid tools to rebuild exact NURBS surfaces on top of the CGR polygonal shell.",
+      },
+      {
+        q: "What is the role of 3DXML in modern enterprise PLM systems?",
+        a: "3DXML acts as the universal viewing standard inside Dassault's 3DEXPERIENCE platform. It allows purchasing managers, structural testers, and executive stakeholders to view, rotate, section, and measure full multi-level product models directly in their web browsers without a local CAD license.",
       },
     ],
   },
@@ -1086,11 +1102,15 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["CATPART", "CATPRODUCT"],
     fullName: "CATIA Part and Product File",
     intro:
-      "CATPart and CATProduct are the native file formats of Dassault Systèmes CATIA, the premier high-end 3D CAD suite used globally in aerospace, defense, and automotive OEM manufacturing. CATPart stores precise mathematical solid/surface models, complex Class-A styling curves, and composite ply layups, while CATProduct defines hierarchical assemblies and PLM constraints. Due to the high complexity of CATIA designs, opening these files directly in other systems requires advanced, certified translators.",
+      "CATPart and CATProduct are the native geometric modeling formats of Dassault Systèmes CATIA, the high-end PLM software suite dominant in the global aerospace, defense, and automotive OEM sectors. A CATPart stores mathematically perfect solid models, complex multi-patch Class-A surfaces, functional tolerances, and tooling definitions built on Dassault's proprietary CGM (Convergence Geometric Modeler) engine. A CATProduct manages the assembly hierarchies, positioning coordinates, and links to external parts. Because of their advanced mathematical structure, opening these files directly in mid-range CAD engines requires certified translation layers.",
     faqs: [
       {
-        q: "Why are CATIA files difficult to open in standard CAD software?",
-        a: "CATIA is built on Dassault's proprietary CGM geometric engine. Converting files to other kernels (like Parasolid or ACIS) without licensed translators often causes surface deviations or missing assembly structures.",
+        q: "Why do CATIA files require specialized translation compared to SolidWorks files?",
+        a: "Mid-range CAD tools like SolidWorks use the Parasolid kernel. CATIA uses the proprietary CGM engine. Translating CATPart geometry to Parasolid requires mapping complex NURBS face continuities (G2/G3). Without a certified CGM-to-Parasolid translator, the imported model often exhibits missing faces, open edges, or self-intersecting surfaces.",
+      },
+      {
+        q: "What is the difference between CATIA V5 and V6 file structures?",
+        a: "CATIA V5 uses standard file-based document trees (.CATPart and .CATProduct saved on local drives). CATIA V6 (and 3DEXPERIENCE) uses a database-driven architecture, saving design components as discrete database entries, allowing for real-time collaborative concurrent design without file locking.",
       },
     ],
   },
@@ -1100,11 +1120,15 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["NXPRT", "NX-PRT"],
     fullName: "Siemens NX Part and Assembly",
     intro:
-      "NX PRT is the native file format of Siemens NX (formerly Unigraphics), a dominant high-end CAD/CAM/CAE platform. Unlike other systems that separate parts from assemblies, NX uses the .prt extension for individual components, manufacturing toolpaths, and massive assemblies. Built natively on the Parasolid kernel, NX files carry precise solids, high-speed toolpaths, and structural analysis meshes, integrated deeply with Teamcenter PLM systems.",
+      "NX PRT is the native database file format of Siemens NX (formerly Unigraphics), a high-end enterprise CAD/CAM/CAE system. Unlike mid-range CAD platforms that split components into separate part (.sldprt) and assembly (.sldasm) formats, NX uses a unified .prt extension for parts, assemblies, CNC toolpaths, and finite element meshes. Built natively on the Parasolid geometric kernel, NX PRT files are designed to manage massive product structures and maintain absolute downstream parametric associativity throughout the entire lifecycle.",
     faqs: [
       {
-        q: "Are NX PRT files compatible with SolidWorks PRT files?",
-        a: "No. Although both SolidWorks and NX share the Parasolid kernel, they use different file wrappers. SolidWorks parts end in .sldprt; NX parts end in .prt and contain NX-specific parametric features.",
+        q: "Can SolidWorks open an NX PRT file natively since both share the Parasolid kernel?",
+        a: "Yes, SolidWorks can read the 3D solid geometry from an NX .prt file natively. However, because each software wraps the Parasolid data in its own proprietary feature history wrapper, the parametric design tree (history of steps) will not be imported. The model will appear as a static solid body.",
+      },
+      {
+        q: "How does NX manage huge assemblies within a single PRT file structure?",
+        a: "NX utilizes 'Assembly Component' references. The master assembly .prt file does not copy the geometry of the sub-parts; instead, it saves pointer links to the independent component .prt files and records spatial position matrices, keeping file sizes small and enabling concurrent engineering.",
       },
     ],
   },
@@ -1114,11 +1138,15 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["CREOPRT", "CREO-PRT", "CREO-ASM"],
     fullName: "PTC Creo Part and Assembly",
     intro:
-      "Creo PRT and ASM (originally Pro/ENGINEER) are the native formats of PTC Creo, the pioneer of parametric 3D CAD modeling. Creo files store feature history trees, dimension relations, and assembly constraints with double-precision accuracy. Highly valued in consumer electronics and heavy machinery, Creo files maintain strict associativity between design, analysis, and tooling pipelines.",
+      "Creo PRT and ASM are the native formats of PTC Creo (historically Pro/ENGINEER), the platform that pioneered history-based parametric 3D CAD modeling. These files store precise double-precision boundary representation (B-Rep) solids, parametric relationships, equations, and assembly constraints. Known for its mathematically rigorous handling of complex mechanisms and sheet metal flat patterns, the Creo file format maintains active, bi-directional links between the 3D model, downstream structural simulations, and CNC manufacturing toolpaths.",
     faqs: [
       {
-        q: "Why do Creo files sometimes have a number suffix (like part.prt.1)?",
-        a: "Creo uses a unique version-saving system. Every time you save, it creates a new file (e.g., .prt.1, .prt.2) instead of overwriting the previous file, providing built-in revision history.",
+        q: "Why do Creo files have numbers appended to their extensions (e.g., part.prt.1, part.prt.2)?",
+        a: "Creo uses a built-in version backup system. Instead of overwriting the file on disk during a save, it increments the number suffix. To open the latest version, the CAD system automatically selects the highest number. Older versions can be purged using Creo's cleanup utility.",
+      },
+      {
+        q: "How do Creo parts maintain external references across assemblies?",
+        a: "Creo uses a system of 'Skeleton Models' and 'Copy Geometry' features. Designers reference a skeleton file representing the master assembly dimensions, ensuring that any top-level dimension change propagates down to the individual Creo part files automatically without creating cyclic errors.",
       },
     ],
   },
@@ -1128,11 +1156,15 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["SLDDRW"],
     fullName: "SolidWorks Drawing",
     intro:
-      "SLDDRW is the native 2D technical drawing format of Dassault Systèmes SolidWorks. While sldprt and sldasm represent the 3D model, SLDDRW files store the associated 2D projection views, section cuts, dimensions, annotations, and Bill of Materials (BOM) tables. SLDDRW files maintain a live, bidirectional link to the 3D files: if you change a dimension on the 3D part, the 2D drawing automatically updates.",
+      "SLDDRW is the native 2D technical drawing sheet format utilized by Dassault Systèmes SolidWorks to generate manufacturing-ready documentation. While sldprt and sldasm represent the 3D model, SLDDRW files store the associated 2D projection views, detailed section cuts, dimensions, welding symbols, and BOM tables. SLDDRW files maintain a live, bidirectional link to the 3D database: if you modify a sketch dimension on the 3D part, the 2D sheet dimensions update automatically.",
     faqs: [
       {
-        q: "Can I open an SLDDRW file without the corresponding SLDPRT file?",
-        a: "You can open it in read-only mode using eDrawings or in 'detailing mode' inside SolidWorks. However, to fully edit views or update dimensions, the CAD software requires access to the original 3D part/assembly files.",
+        q: "Can I open and print an SLDDRW drawing file without having the original SLDPRT files?",
+        a: "Yes. SolidWorks has a detailing mode and a free eDrawings viewer that allows you to open, measure, print, and annotate SLDDRW files without local access to the 3D geometry. However, you cannot make model-driven dimension changes or update projected views without the 3D files.",
+      },
+      {
+        q: "How do CAD managers prevent broken link issues with SLDDRW sheets?",
+        a: "By using SolidWorks PDM (Product Data Management) or strict folder naming conventions. PDM maintains database pointer associations, ensuring that if a 3D part is renamed or moved to another directory, the drawing sheet's references are updated automatically.",
       },
     ],
   },
@@ -1142,11 +1174,11 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["IDW"],
     fullName: "Autodesk Inventor Drawing",
     intro:
-      "IDW is the native 2D engineering drawing format used by Autodesk Inventor. It is used to generate manufacturing documentation, manufacturing tolerances, orthographic projections, and assembly detail sheets. Similar to SolidWorks drawing formats, IDW maintains active links to the 3D Inventor components, ensuring that engineering changes propagate automatically to the production floor blueprints.",
+      "IDW is the native 2D drafting sheet format used by Autodesk Inventor to compile production-ready blueprints, section specifications, and assembly detail bills. It maps 3D parametric components directly onto 2D drawing sheets. IDW files maintain absolute associativity with the parent IPT (parts) and IAM (assemblies) files, automatically redrawing viewport projections, centerlines, and dimension callouts whenever the parent 3D components are modified.",
     faqs: [
       {
-        q: "Should I use IDW or DWG for Autodesk Inventor drawings?",
-        a: "Use IDW if you work strictly inside the Inventor environment. Use Inventor-DWG if you need to share the drawing sheets directly with AutoCAD users for viewing and minor edits without exporting them.",
+        q: "Should I select IDW or Inventor-DWG when creating drawings in Autodesk Inventor?",
+        a: "Use IDW if your workspace is purely Inventor-based, as it yields slightly smaller file sizes. Use Inventor-DWG if you need to share drawing sheets with AutoCAD users, allowing them to open, view, and print the sheets natively in 2D without exporting.",
       },
     ],
   },
@@ -1156,11 +1188,11 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
     formatValues: ["F3D", "F3Z"],
     fullName: "Autodesk Fusion 360 Archive",
     intro:
-      "F3D (individual archive) and F3Z (assembly archive referencing external parts) are the native export formats of Autodesk Fusion 360, a cloud-first CAD/CAM/CAE platform. Because Fusion 360 stores files by default in the Autodesk cloud, F3D acts as a local backup file containing all parametric modeling history, joint definitions, rendering setups, and manufacturing CAM toolpaths in a single compressed container.",
+      "F3D and F3Z are the native export formats of Autodesk Fusion 360, a cloud-first CAD/CAM/CAE platform. Since Fusion 360 stores projects by default in Autodesk's cloud servers, F3D acts as a local backup archive for an individual part. F3Z is a zipped container used for assemblies, archiving the top-level model along with all externally referenced part files. These archives contain full parametric feature trees, multi-body geometry, simulation meshes, rendering parameters, and CNC CAM toolpaths.",
     faqs: [
       {
         q: "How do I open an F3D file offline?",
-        a: "You can import F3D files directly into the Fusion 360 desktop app. Once cached, they can be viewed and edited in offline mode, and will sync back to your cloud hub once internet access is restored.",
+        a: "You can import F3D files directly into the Fusion 360 desktop client. Once loaded, you can edit the models in offline mode; the software will automatically queue changes and sync the design back to your cloud hub once internet connection is re-established.",
       },
     ],
   },
