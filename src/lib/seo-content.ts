@@ -1020,6 +1020,150 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
       },
     ],
   },
+  dwf: {
+    slug: "dwf",
+    formatName: "DWF",
+    formatValues: ["DWF", "DWFX"],
+    fullName: "Design Web Format",
+    intro:
+      "DWF and DWFx are highly compressed, secure file formats developed by Autodesk for sharing rich 2D and 3D design data, maps, and models. Unlike raw DWG files, DWF files are lightweight and preserve metadata without exposing the underlying CAD geometry. This makes them ideal for project managers, field contractors, and clients who need to review, measure, and redline drawings without requiring fully licensed CAD software or endangering intellectual property.",
+    faqs: [
+      {
+        q: "What is the difference between DWF and DWFx?",
+        a: "DWFx is the newer version based on the XML Paper Specification (XPS). DWFx files can be opened and viewed natively inside standard Windows web browsers without installing any specialized Autodesk viewers.",
+      },
+      {
+        q: "Can I convert a DWF file back to an editable DWG?",
+        a: "Yes, but since DWF is a lossy, flattened visualization format, some CAD intelligence (like dynamic blocks and parametric history) will be lost. You can import DWF files into AutoCAD using the PDF/DWF import command to convert vector layers back to lines.",
+      },
+    ],
+  },
+  exb: {
+    slug: "exb",
+    formatName: "EXB",
+    formatValues: ["EXB", "CAXA"],
+    fullName: "CAXA Electronic Draft File",
+    intro:
+      "EXB is the native file format of CAXA CAD, a highly popular Chinese 2D/3D drafting and manufacturing software package widely used in China's industrial manufacturing, machinery, and vocational education sectors. Highly compatible with DWG/DXF standards, the EXB format stores detailed production drawings, engineering annotations, and BOM sheets tailored to Chinese industrial drafting standards.",
+    faqs: [
+      {
+        q: "How can I open or edit an EXB file?",
+        a: "EXB files are natively opened using CAXA Electronic Draft. If you are using AutoCAD or other CAD tools, the file must be batch-converted within CAXA to standard DWG or DXF formats first.",
+      },
+    ],
+  },
+  vda: {
+    slug: "vda",
+    formatName: "VDA",
+    formatValues: ["VDA", "VDAFS", "VDA-FS"],
+    fullName: "VDA-FS Surface Interface File",
+    intro:
+      "VDA-FS (often saved as .vda) is a neutral 3D CAD exchange format defined by the German Association of the Automotive Industry (VDA). Specifically designed for exchanging complex Class-A surface geometry (like car body panel curves and molds) between different proprietary CAD systems, it is still supported by high-end automotive CAD, CAM, and inspection tools for legacy compatibility.",
+    faqs: [
+      {
+        q: "Why is VDA-FS rarely used for new projects?",
+        a: "VDA-FS only handles surface boundary curves and faces (NURBS); it does not support modern 3D solid topology, assemblies, or product manufacturing metadata. Modern automotive supply chains have transitioned almost entirely to STEP (AP214/AP242) and JT.",
+      },
+    ],
+  },
+  cgr: {
+    slug: "cgr",
+    formatName: "CGR",
+    formatValues: ["CGR", "3DXML"],
+    fullName: "CATIA Graphical Representation",
+    intro:
+      "CGR (CATIA Graphical Representation) and 3DXML are lightweight, tessellated 3D visualization formats developed by Dassault Systèmes. Optimized for viewing massive aerospace and automotive assembly models within CATIA and ENOVIA PLM systems, these files strip away precise mathematical solid geometry, leaving only a high-speed faceted representation suitable for digital mockups, clearance checks, and layout planning.",
+    faqs: [
+      {
+        q: "Can I convert a CGR file back into a solid CATPart?",
+        a: "Generally no. CGR only contains mesh facet (triangulated) data. To turn it back into a solid B-Rep model, you must use reverse engineering tools to recreate the mathematical surfaces over the mesh coordinates.",
+      },
+    ],
+  },
+  catpart: {
+    slug: "catpart",
+    formatName: "CATPART",
+    formatValues: ["CATPART", "CATPRODUCT"],
+    fullName: "CATIA Part and Product File",
+    intro:
+      "CATPart and CATProduct are the native file formats of Dassault Systèmes CATIA, the premier high-end 3D CAD suite used globally in aerospace, defense, and automotive OEM manufacturing. CATPart stores precise mathematical solid/surface models, complex Class-A styling curves, and composite ply layups, while CATProduct defines hierarchical assemblies and PLM constraints. Due to the high complexity of CATIA designs, opening these files directly in other systems requires advanced, certified translators.",
+    faqs: [
+      {
+        q: "Why are CATIA files difficult to open in standard CAD software?",
+        a: "CATIA is built on Dassault's proprietary CGM geometric engine. Converting files to other kernels (like Parasolid or ACIS) without licensed translators often causes surface deviations or missing assembly structures.",
+      },
+    ],
+  },
+  nxprt: {
+    slug: "nxprt",
+    formatName: "NXPRT",
+    formatValues: ["NXPRT", "NX-PRT"],
+    fullName: "Siemens NX Part and Assembly",
+    intro:
+      "NX PRT is the native file format of Siemens NX (formerly Unigraphics), a dominant high-end CAD/CAM/CAE platform. Unlike other systems that separate parts from assemblies, NX uses the .prt extension for individual components, manufacturing toolpaths, and massive assemblies. Built natively on the Parasolid kernel, NX files carry precise solids, high-speed toolpaths, and structural analysis meshes, integrated deeply with Teamcenter PLM systems.",
+    faqs: [
+      {
+        q: "Are NX PRT files compatible with SolidWorks PRT files?",
+        a: "No. Although both SolidWorks and NX share the Parasolid kernel, they use different file wrappers. SolidWorks parts end in .sldprt; NX parts end in .prt and contain NX-specific parametric features.",
+      },
+    ],
+  },
+  creoprt: {
+    slug: "creoprt",
+    formatName: "CREOPRT",
+    formatValues: ["CREOPRT", "CREO-PRT", "CREO-ASM"],
+    fullName: "PTC Creo Part and Assembly",
+    intro:
+      "Creo PRT and ASM (originally Pro/ENGINEER) are the native formats of PTC Creo, the pioneer of parametric 3D CAD modeling. Creo files store feature history trees, dimension relations, and assembly constraints with double-precision accuracy. Highly valued in consumer electronics and heavy machinery, Creo files maintain strict associativity between design, analysis, and tooling pipelines.",
+    faqs: [
+      {
+        q: "Why do Creo files sometimes have a number suffix (like part.prt.1)?",
+        a: "Creo uses a unique version-saving system. Every time you save, it creates a new file (e.g., .prt.1, .prt.2) instead of overwriting the previous file, providing built-in revision history.",
+      },
+    ],
+  },
+  slddrw: {
+    slug: "slddrw",
+    formatName: "SLDDRW",
+    formatValues: ["SLDDRW"],
+    fullName: "SolidWorks Drawing",
+    intro:
+      "SLDDRW is the native 2D technical drawing format of Dassault Systèmes SolidWorks. While sldprt and sldasm represent the 3D model, SLDDRW files store the associated 2D projection views, section cuts, dimensions, annotations, and Bill of Materials (BOM) tables. SLDDRW files maintain a live, bidirectional link to the 3D files: if you change a dimension on the 3D part, the 2D drawing automatically updates.",
+    faqs: [
+      {
+        q: "Can I open an SLDDRW file without the corresponding SLDPRT file?",
+        a: "You can open it in read-only mode using eDrawings or in 'detailing mode' inside SolidWorks. However, to fully edit views or update dimensions, the CAD software requires access to the original 3D part/assembly files.",
+      },
+    ],
+  },
+  idw: {
+    slug: "idw",
+    formatName: "IDW",
+    formatValues: ["IDW"],
+    fullName: "Autodesk Inventor Drawing",
+    intro:
+      "IDW is the native 2D engineering drawing format used by Autodesk Inventor. It is used to generate manufacturing documentation, manufacturing tolerances, orthographic projections, and assembly detail sheets. Similar to SolidWorks drawing formats, IDW maintains active links to the 3D Inventor components, ensuring that engineering changes propagate automatically to the production floor blueprints.",
+    faqs: [
+      {
+        q: "Should I use IDW or DWG for Autodesk Inventor drawings?",
+        a: "Use IDW if you work strictly inside the Inventor environment. Use Inventor-DWG if you need to share the drawing sheets directly with AutoCAD users for viewing and minor edits without exporting them.",
+      },
+    ],
+  },
+  f3d: {
+    slug: "f3d",
+    formatName: "F3D",
+    formatValues: ["F3D", "F3Z"],
+    fullName: "Autodesk Fusion 360 Archive",
+    intro:
+      "F3D (individual archive) and F3Z (assembly archive referencing external parts) are the native export formats of Autodesk Fusion 360, a cloud-first CAD/CAM/CAE platform. Because Fusion 360 stores files by default in the Autodesk cloud, F3D acts as a local backup file containing all parametric modeling history, joint definitions, rendering setups, and manufacturing CAM toolpaths in a single compressed container.",
+    faqs: [
+      {
+        q: "How do I open an F3D file offline?",
+        a: "You can import F3D files directly into the Fusion 360 desktop app. Once cached, they can be viewed and edited in offline mode, and will sync back to your cloud hub once internet access is restored.",
+      },
+    ],
+  },
 };
 
 export function formatPagePaths(): { slug: string }[] {
@@ -1312,6 +1456,132 @@ export const PERSONA_PAGES: Record<string, PersonaPage> = {
       {
         q: "How does GIS data integrate with landscape CAD?",
         a: "Modern landscape CAD platforms can connect directly to Esri ArcGIS servers or import Shapefiles (SHP) and geo-referenced images. This automatically aligns the site plan with real-world geographic coordinates, elevation surveys, and regional environmental datasets.",
+      },
+    ],
+  },
+  "hvac-engineers": {
+    slug: "hvac-engineers",
+    displayName: "HVAC & MEP Engineers",
+    shortNoun: "MEP engineer",
+    filter: (t) =>
+      hasAny(t.industries, ["MEP", "HVAC", "Plumbing", "Piping", "AEC", "Construction"]) &&
+      (hasAny(t.core_features, ["Piping", "Harness", "Wiring", "BIM Integration", "Simulation"]) ||
+        /hvac|pipe|duct|mep|plumbing|ventilation|clash detection/i.test(t.name + " " + t.short_desc + " " + t.description)),
+    intro:
+      "HVAC, electrical, and plumbing (MEP) engineers design the complex systems that make buildings function. In 2026, MEP CAD has moved entirely into 3D BIM integration, allowing engineers to route ductwork, calculate piping flows, and map electrical runs directly inside a virtual model. The primary focus is clash detection—preventing physical pipes and ducts from occupying the same space as structural beams before construction begins. Below are the top MEP, piping, and HVAC design tools in our database.",
+    faqs: [
+      {
+        q: "Why is 3D BIM coordination critical for MEP engineers?",
+        a: "In traditional 2D drafting, it is incredibly difficult to spot when a large HVAC duct collides with a steel beam or structural column. 3D BIM tools automatically detect these clashes during the design phase, saving thousands of dollars in construction rework.",
+      },
+      {
+        q: "What is the difference between Revit MEP and other specialized MEP software?",
+        a: "Revit MEP is integrated directly into the core Revit building model, ensuring real-time coordination with the architects. Other tools like MagiCAD or DDS-CAD operate as specialized add-ons or standalone platforms with highly optimized calculation engines for airflow and pipe pressure drops.",
+      },
+    ],
+  },
+  "interior-designers": {
+    slug: "interior-designers",
+    displayName: "Interior Designers",
+    shortNoun: "interior designer",
+    filter: (t) =>
+      hasAny(t.industries, ["Interior Design", "Architecture", "Furniture", "AEC"]) ||
+      /interior|furniture|kitchen|bath|rendering|space planning/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro:
+      "Interior designers require CAD tools that emphasize fast 3D space planning, extensive libraries of furniture, fixtures, and equipment (FF&E), and high-quality photorealistic rendering for client presentations. While architects focus on structural integrity and building regulations, interior designers focus on aesthetic layouts, material specifications, and spatial flow. From simple 2D layouts to advanced VR walkthroughs, these are the top interior design tools.",
+    faqs: [
+      {
+        q: "What is the best CAD software for interior design layout and styling?",
+        a: "SketchUp is highly popular for quick concept design, space planning, and importing custom 3D warehouse furniture models. For high-end professional firms collaborating on construction documents, Revit and AutoCad remain standard, while dedicated tools like Chief Architect specialize in kitchen and bath modeling.",
+      },
+      {
+        q: "Do interior designers need to output CAD drawings?",
+        a: "Yes. Interior designers produce construction documentation including partition layouts, lighting plans, finish schedules, and detailed elevation drawings of custom cabinetry (millwork) for contractors to build from.",
+      },
+    ],
+  },
+  "construction-managers": {
+    slug: "construction-managers",
+    displayName: "Construction Managers",
+    shortNoun: "construction manager",
+    filter: (t) =>
+      t.category_id === "c4" ||
+      hasAny(t.industries, ["Construction", "AEC", "Project Management"]) ||
+      /construction|takeoff|estimating|viewer|bluebeam|navisworks|redline|markup/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro:
+      "Construction managers and general contractors rely on CAD/BIM tools not for designing, but for execution, coordination, cost estimation, and schedule validation. In 2026, the construction site uses digital models for quantity takeoff (extracting materials and dimensions), 4D simulation (linking the model to construction schedules), and real-time site inspection. These tools focus on PDF markup, multi-discipline model consolidation, and high-fidelity file viewing. Below are the top construction coordination and estimation tools.",
+    faqs: [
+      {
+        q: "Why do construction managers use Navisworks or Bluebeam?",
+        a: "Navisworks allows managers to combine architectural, structural, and MEP models from different software into one file to run clash detection and construction sequences. Bluebeam Revu is the standard for marking up 2D PDF blueprints, tracking RFIs, and performing digital material estimates.",
+      },
+      {
+        q: "What is 4D and 5D BIM in construction?",
+        a: "4D BIM adds the element of time (linking the CAD model to a Gantt scheduling chart to animate construction progress). 5D BIM adds cost estimation, dynamically calculating material quantities and budgets directly from the model components.",
+      },
+    ],
+  },
+  "industrial-designers": {
+    slug: "industrial-designers",
+    displayName: "Industrial Designers",
+    shortNoun: "industrial designer",
+    filter: (t) =>
+      hasAny(t.industries, ["Industrial Design", "Product Design", "Consumer Electronics", "Automotive"]) &&
+      (hasAny(t.core_features, ["Surface Modeling", "Direct Modeling", "Subdivision Modeling", "Rendering"]) ||
+        /industrial design|styling|ergonomic|nurbs|surface|concept model/i.test(t.name + " " + t.short_desc + " " + t.description)),
+    intro:
+      "Industrial designers bridge the gap between aesthetics, human factors, and engineering feasibility. Their CAD workflows demand advanced freeform modeling tools (like NURBS and subdivision surfaces) to design complex ergonomic curves and organic shapes, combined with fast photorealistic rendering to present design concepts. In 2026, tools like Rhino 3D, Alias, and Shapr3D allow industrial designers to iterate concepts rapidly before exporting precise solid geometry to mechanical engineering teams. Below are the top product and industrial design tools.",
+    faqs: [
+      {
+        q: "What is the difference between industrial design CAD and mechanical CAD?",
+        a: "Industrial design CAD (like Alias or Rhino) focuses on aesthetic styling, shape exploration, and Class-A surfacing using mathematical curves. Mechanical CAD (like SolidWorks or Inventor) focuses on parametric accuracy, mechanical assemblies, drawings, and manufacturing constraints.",
+      },
+      {
+        q: "Why is Rhino 3D highly favored by industrial designers?",
+        a: "Rhino offers an incredibly flexible command structure and precise NURBS modeling at an accessible price point. It allows designers to model almost any shape imaginable without the strict history-tree constraints of traditional parametric software.",
+      },
+    ],
+  },
+  "cnc-machinists": {
+    slug: "cnc-machinists",
+    displayName: "CNC Machinists & CAM",
+    shortNoun: "CNC machinist",
+    filter: (t) =>
+      hasAny(t.industries, ["Manufacturing", "Machining", "Tooling"]) ||
+      hasAny(t.core_features, ["CAM", "CNC", "Toolpath", "Milling", "Turning", "G-code"]) ||
+      /machinist|cam |cnc |toolpath|milling|turning|g-code/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro:
+      "CNC Machinists and Computer-Aided Manufacturing (CAM) engineers translate digital 3D designs into physical metal or plastic parts. In 2026, the machinist's toolchain uses CAM software to analyze 3D geometry, define cutting tool selections, calculate optimal toolpaths (cutting trajectories), and simulate the machining sequence to prevent collisions. Below are the premier CAM programming and machine toolpath simulation tools in our catalog.",
+    faqs: [
+      {
+        q: "What is a post-processor in CAM software?",
+        a: "A post-processor is a translator script within CAM software that converts the universal cutting paths into the specific G-code dialect required by your specific CNC machine controller (like Fanuc, Haas, or Heidenhain).",
+      },
+      {
+        q: "What is the benefit of high-speed machining (HSM) toolpaths?",
+        a: "HSM toolpaths use continuous, smooth trochoidal loops rather than sharp angles. This maintains a constant load on the cutter, allowing much faster feeds, reducing cycle times, and preventing tool breakage.",
+      },
+    ],
+  },
+  "cad-managers": {
+    slug: "cad-managers",
+    displayName: "CAD & BIM Managers",
+    shortNoun: "CAD manager",
+    filter: (t) =>
+      t.category_id === "c1" ||
+      t.category_id === "c3" ||
+      hasAny(t.industries, ["AEC", "Mechanical", "Manufacturing"]) &&
+      /manager|enterprise|standard|admin|licensing|deployment/i.test(t.name + " " + t.short_desc + " " + t.description),
+    intro:
+      "CAD and BIM Managers oversee a firm's design technology stack, license compliance, network deployments, template standardization, and training protocols. Rather than modeling, they focus on inter-operability, cost ROI of software subscriptions (such as Autodesk enterprise plans versus perpetual alternative buyouts), and workflow integration across large drafting teams. Below are the major industry-standard platforms managed by design IT administrators globally.",
+    faqs: [
+      {
+        q: "What is a primary challenge for modern CAD managers?",
+        a: "Managing the transition from local desktop hardware to cloud-based CAD/BIM environments while maintaining strict data governance, active directory (SSO) security, and budgeting variable subscription costs.",
+      },
+      {
+        q: "How do CAD managers reduce licensing costs?",
+        a: "By auditing software usage, deploying network/floating licenses where possible, and strategically replacing expensive Autodesk seats with high-compatibility alternative CAD engines (like BricsCAD or ZWCAD) for basic 2D drafters.",
       },
     ],
   },
