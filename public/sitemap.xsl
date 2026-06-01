@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" 
+                xmlns:html="http://www.w3.org/TR/REC-html40"
+                xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+                xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
+  <xsl:template match="/">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <title>XML Sitemap | CADGuide Tools</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style type="text/css">
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            color: #334155;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 40px 20px;
+          }
+          .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+          }
+          h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+          }
+          .subtitle {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 30px;
+            line-height: 1.5;
+          }
+          .subtitle a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+          }
+          .subtitle a:hover {
+            text-decoration: underline;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            margin-top: 10px;
+          }
+          th {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 14px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #e2e8f0;
+          }
+          tr:hover td {
+            background-color: #f8fafc;
+          }
+          td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 14px;
+            line-height: 1.5;
+            word-break: break-all;
+          }
+          td a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+          }
+          td a:hover {
+            text-decoration: underline;
+          }
+          .priority-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <h1>XML Sitemap</h1>
+          <p class="subtitle">
+            Generated programmatically by <a href="https://cadguide.tools">CADGuide Tools</a>. This XML sitemap is structured for consumption by Google and other search engine crawlers. Learn more on <a href="https://sitemaps.org">sitemaps.org</a>.
+          </p>
+          
+          <xsl:if test="sitemap:sitemapindex">
+            <p class="subtitle" style="font-weight: bold; color: #0f172a; margin-bottom: 15px;">
+              This XML Sitemap Index contains <xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/> sitemaps.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Sitemap URL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <xsl:for-each select="sitemap:sitemapindex/sitemap:sitemap">
+                  <tr>
+                    <td>
+                      <a href="{sitemap:loc}"><xsl:value-of select="sitemap:loc"/></a>
+                    </td>
+                  </tr>
+                </xsl:for-each>
+              </tbody>
+            </table>
+          </xsl:if>
+          
+          <xsl:if test="sitemap:urlset">
+            <p class="subtitle" style="font-weight: bold; color: #0f172a; margin-bottom: 15px;">
+              This sitemap contains <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URLs.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>URL</th>
+                  <th style="width: 150px;">Change Freq</th>
+                  <th style="width: 100px; text-align: center;">Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                <xsl:for-each select="sitemap:urlset/sitemap:url">
+                  <tr>
+                    <td>
+                      <a href="{sitemap:loc}"><xsl:value-of select="sitemap:loc"/></a>
+                    </td>
+                    <td>
+                      <xsl:value-of select="sitemap:changefreq"/>
+                    </td>
+                    <td style="text-align: center;">
+                      <span class="priority-badge">
+                        <xsl:value-of select="sitemap:priority"/>
+                      </span>
+                    </td>
+                  </tr>
+                </xsl:for-each>
+              </tbody>
+            </table>
+          </xsl:if>
+        </div>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
