@@ -43,6 +43,7 @@ import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { comparisonPairs } from "@/lib/seo-content";
 import { ARTICLES_LIST } from "@/lib/guides-data";
+import { getLocalizedTitleAndExcerpt } from "@/app/guides/guides-client";
 
 interface Props {
   tool: Tool;
@@ -113,18 +114,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
   const relatedGuides = rawRelatedGuides
     .map((g) => {
-      const isAutoCAD = g.softwareSlug === "autocad";
-      const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
-      
-      const newTitle = g.title.replace(replaceRegex, tool.name);
-      const newExcerpt = g.excerpt.replace(replaceRegex, tool.name);
-      const newKeyword = g.keyword.replace(replaceRegex, tool.name.toLowerCase());
-      
+      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool.name);
       return {
         ...g,
-        title: newTitle,
-        excerpt: newExcerpt,
-        keyword: newKeyword,
+        title: localized.title,
+        excerpt: localized.excerpt,
+        keyword: localized.keyword,
         slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
       };
     })
@@ -133,18 +128,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const sidebarTroubleshootingGuides = rawRelatedGuides
     .filter((g) => g.category === "troubleshooting")
     .map((g) => {
-      const isAutoCAD = g.softwareSlug === "autocad";
-      const replaceRegex = isAutoCAD ? /autocad/gi : /solidworks/gi;
-      
-      const newTitle = g.title.replace(replaceRegex, tool.name);
-      const newExcerpt = g.excerpt.replace(replaceRegex, tool.name);
-      const newKeyword = g.keyword.replace(replaceRegex, tool.name.toLowerCase());
-      
+      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool.name);
       return {
         ...g,
-        title: newTitle,
-        excerpt: newExcerpt,
-        keyword: newKeyword,
+        title: localized.title,
+        excerpt: localized.excerpt,
+        keyword: localized.keyword,
         slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
       };
     })
