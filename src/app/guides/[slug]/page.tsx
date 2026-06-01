@@ -2379,6 +2379,19 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     },
   };
 
+  const jsonLdHowTo = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    'name': title,
+    'description': excerpt,
+    'step': steps.map((step, idx) => ({
+      '@type': 'HowToStep',
+      'position': idx + 1,
+      'name': step.title,
+      'text': step.desc,
+    })),
+  };
+
   return (
     <>
       <script
@@ -2388,6 +2401,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }}
       />
 
       <div className="bg-[#fcfdfe] min-h-screen pb-20 w-full overflow-x-hidden">

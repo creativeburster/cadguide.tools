@@ -110,7 +110,7 @@ export function ToolLogo({ slug, src, websiteUrl, name, className, priority }: T
           ref={imgRef}
           key={current}
           src={current}
-          alt={`${name} logo`}
+          alt={`${name} CAD software logo`}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
           fetchPriority={priority ? "high" : "auto"}

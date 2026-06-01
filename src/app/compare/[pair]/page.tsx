@@ -278,6 +278,66 @@ function articleLd(a: Tool, b: Tool, pairSlug: string) {
   };
 }
 
+function productCompareLd(a: Tool, b: Tool, pairSlug: string) {
+  const images: string[] = [];
+  if (a.logo_url) images.push(a.logo_url);
+  if (b.logo_url) images.push(b.logo_url);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: `${a.name} vs ${b.name} Comparison`,
+    image: images,
+    description: `Side-by-side comparison of ${a.name} and ${b.name} CAD/BIM software properties: pricing, platforms, features, and expert score ratings.`,
+    brand: {
+      '@type': 'Brand',
+      name: 'CADGuide.tools'
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      highPrice: Math.max(a.starting_price, b.starting_price).toString(),
+      lowPrice: Math.min(a.starting_price, b.starting_price).toString(),
+      offerCount: '2'
+    }
+  };
+}
+
+function faqCompareLd(a: Tool, b: Tool) {
+  const decision = decisionText(a, b);
+  const aPrice = a.starting_price > 0 ? `from $${a.starting_price}` : a.pricing_type;
+  const bPrice = b.starting_price > 0 ? `from $${b.starting_price}` : b.pricing_type;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `Is ${a.name} or ${b.name} better?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${a.name} has an expert score of ${a.score.toFixed(1)}/5, while ${b.name} is rated ${b.score.toFixed(1)}/5. Pick ${a.name} if you need: ${decision.pickA}. Pick ${b.name} if you need: ${decision.pickB}.`
+        }
+      },
+      {
+        '@type': 'Question',
+        name: `How does the pricing of ${a.name} compare to ${b.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${a.name} is available ${aPrice}, while ${b.name} is priced ${bPrice}.`
+        }
+      },
+      {
+        '@type': 'Question',
+        name: `What operating systems do ${a.name} and ${b.name} support?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${a.name} is compatible with ${a.platforms.join(' / ')}, while ${b.name} supports ${b.platforms.join(' / ')}.`
+        }
+      }
+    ]
+  };
+}
+
 interface RowSpec {
   label: string;
   render: (t: Tool) => string;
@@ -647,6 +707,18 @@ export default async function ComparePairPage(
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(articleLd(a, b, pair)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productCompareLd(a, b, pair)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqCompareLd(a, b)),
         }}
       />
 

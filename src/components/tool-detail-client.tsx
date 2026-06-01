@@ -1398,7 +1398,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 <div className="flex items-center gap-3 mb-8">
                   <TrendingUp className="w-6 h-6 text-blue-600" />
                   <h4 className="text-xl font-black text-slate-900 tracking-tight">
-                    Trending AEC Tools
+                    Trending {category?.name || 'CAD'} Tools
                   </h4>
                 </div>
                 <div className="space-y-6">
