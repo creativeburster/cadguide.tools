@@ -42,8 +42,7 @@ import {
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { comparisonPairs } from "@/lib/seo-content";
-import { ARTICLES_LIST } from "@/lib/guides-data";
-import { getLocalizedTitleAndExcerpt } from "@/app/guides/guides-client";
+import { ARTICLES_LIST, getLocalizedTitleAndExcerpt } from "@/lib/guides-data";
 
 interface Props {
   tool: Tool;
@@ -114,7 +113,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
   const relatedGuides = rawRelatedGuides
     .map((g) => {
-      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool.name);
+      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
       return {
         ...g,
         title: localized.title,
@@ -128,7 +127,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const sidebarTroubleshootingGuides = rawRelatedGuides
     .filter((g) => g.category === "troubleshooting")
     .map((g) => {
-      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool.name);
+      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
       return {
         ...g,
         title: localized.title,

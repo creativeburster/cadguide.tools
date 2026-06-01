@@ -17,6 +17,10 @@ import {
   ARTICLES_LIST,
   DirectoryFolder,
   DIRECTORY_FOLDERS,
+  ArchetypeMetadata,
+  getArchetypeMetadata,
+  getLocalizedTitleAndExcerpt,
+  getLocalizedTitle,
 } from '@/lib/guides-data';
 
 export const getProgrammaticLink = (title: string, forcedToolSlug?: string): string => {
@@ -60,71 +64,6 @@ export const getProgrammaticLink = (title: string, forcedToolSlug?: string): str
   return `/guides/${toolSlug}-${category}-${index}`;
 };
 
-export function getLocalizedTitleAndExcerpt(title: string, excerpt: string, keyword: string, category: string, toolName: string) {
-  let newTitle = title;
-  let newExcerpt = excerpt;
-  let newKeyword = keyword;
-
-  if (category === 'migration' || category === 'crossover') {
-    const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
-    for (const target of targets) {
-      const regex = new RegExp(target, 'gi');
-      if (regex.test(newTitle)) {
-        newTitle = newTitle.replace(regex, toolName);
-        newExcerpt = newExcerpt.replace(regex, toolName);
-        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
-        return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
-      }
-    }
-  }
-
-  const allSoftware = [
-    'AutoCAD Architecture',
-    'AutoCAD Electrical',
-    'AutoCAD for Mac',
-    'AutoCAD LT',
-    'Autodesk AutoCAD',
-    'AutoCAD Online',
-    'AutoCAD',
-    'SolidWorks',
-    'BricsCAD Pro',
-    'BricsCAD',
-    'GstarCAD',
-    'Autodesk Inventor',
-    'Inventor',
-    'Solid Edge',
-    'FreeCAD',
-    'Catia V6',
-    'Catia',
-    'Rhino 3D',
-    'DraftSight',
-    'MicroStation',
-    'Revit',
-    'ZWCAD',
-    'BIM',
-    'Commercial CAD',
-    'Schematic CAD',
-    'Enterprise CAD',
-    'Named CAD',
-    'Autodesk'
-  ];
-
-  for (const sw of allSoftware) {
-    const regex = new RegExp(sw, 'gi');
-    if (regex.test(newTitle)) {
-      newTitle = newTitle.replace(regex, toolName);
-      newExcerpt = newExcerpt.replace(regex, toolName);
-      newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
-      break;
-    }
-  }
-
-  return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
-}
-
-export function getLocalizedTitle(title: string, category: string, toolName: string): string {
-  return getLocalizedTitleAndExcerpt(title, '', '', category, toolName).title;
-}
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -301,6 +240,16 @@ export default function GuidesClient() {
   const [openFaqQuestion, setOpenFaqQuestion] = useState<string | null>(null);
 
   const selectedTool = tools.find(t => t.slug === selectedToolSlug) || null;
+  const meta = selectedTool ? getArchetypeMetadata(selectedTool.category_id) : null;
+
+  const sortedCategorySections = React.useMemo(() => {
+    if (!meta) return CATEGORY_SECTIONS;
+    return [...CATEGORY_SECTIONS].sort((a, b) => {
+      const indexA = meta.categoryOrder.indexOf(a.category);
+      const indexB = meta.categoryOrder.indexOf(b.category);
+      return indexA - indexB;
+    });
+  }, [meta]);
 
   // Sync client-side document title for a flawless browser tab user experience
   useEffect(() => {
@@ -369,7 +318,7 @@ export default function GuidesClient() {
   const rawDisplayArticles = ARTICLES_LIST.filter(a => a.category === activeTab).slice(0, 6);
   const displayArticles = rawDisplayArticles.map((art) => {
     if (!selectedTool) return art;
-    const localized = getLocalizedTitleAndExcerpt(art.title, art.excerpt, art.keyword, art.category, selectedTool.name);
+    const localized = getLocalizedTitleAndExcerpt(art.title, art.excerpt, art.keyword, art.category, selectedTool);
     return {
       ...art,
       title: localized.title,
@@ -438,11 +387,21 @@ export default function GuidesClient() {
   return (
     <main className="min-h-screen bg-slate-50 pb-24">
       {/* Decorative Visual Header Accent Line */}
-      <div className="w-full h-1.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
+      <div className={cn(
+        "w-full h-1.5 bg-gradient-to-r",
+        meta?.id === 'drafting-aec' && "from-slate-500 via-slate-600 to-slate-700",
+        meta?.id === 'mechanical-simulation' && "from-amber-500 via-amber-600 to-amber-700",
+        meta?.id === 'creative-visual' && "from-indigo-500 via-indigo-600 to-indigo-700",
+        meta?.id === 'electronics-hardware' && "from-emerald-500 via-emerald-600 to-emerald-700",
+        !meta && "from-blue-500 via-indigo-500 to-purple-500"
+      )} />
 
       {/* Header Area */}
       <header className="max-w-[1360px] mx-auto px-4 sm:px-6 pt-12 lg:pt-16 pb-6 text-center">
-        <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1 mb-6 font-bold uppercase tracking-widest text-[10px] rounded-full">
+        <Badge className={cn(
+          "border-none px-4 py-1 mb-6 font-bold uppercase tracking-widest text-[10px] rounded-full",
+          meta ? `${meta.theme.badgeBg} border` : "bg-blue-600/10 text-blue-700"
+        )}>
           CAD Professional Library
         </Badge>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-none">
@@ -511,8 +470,12 @@ export default function GuidesClient() {
               onClick={() => setActiveTab(tab.id as any)}
               className={`px-3.5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all border ${
                 activeTab === tab.id
-                  ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-100 scale-[1.02]'
-                  : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:text-blue-600'
+                  ? meta
+                    ? `${meta.theme.buttonBg} text-white shadow-md scale-[1.02]`
+                    : 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-100 scale-[1.02]'
+                  : meta
+                    ? `bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:${meta.theme.accentText}`
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:text-blue-600'
               }`}
             >
               {tab.label}
@@ -524,12 +487,15 @@ export default function GuidesClient() {
         {isAll ? (
           /* STATE A: "All Guides" displaying 8 Category Cards (Symmetric grid of 4 rows and 2 columns!) */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
-            {CATEGORY_SECTIONS.map((p, idx) => {
+            {sortedCategorySections.map((p, idx) => {
               const isCardOpen = !!openCardAccordions[p.id];
               return (
                 <Card
                   key={p.id}
-                  className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-7 bg-white relative overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300 group animate-in fade-in"
+                  className={cn(
+                    "border shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-7 bg-white relative overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300 group animate-in fade-in",
+                    meta ? `${meta.theme.cardBorder} border-slate-100` : "hover:border-blue-300 border-slate-100/50"
+                  )}
                 >
                   <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none opacity-40" />
 
@@ -544,9 +510,18 @@ export default function GuidesClient() {
                         </Badge>
                       </div>
                       
-                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                      <h3 className={cn(
+                        "text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2 transition-colors",
+                        meta ? `group-hover:${meta.theme.accentText}` : "group-hover:text-blue-600"
+                      )}>
                         <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${p.gradient}`} />
-                        <Link href={`/guides/${p.category}`} className="hover:underline hover:text-blue-600 transition-colors">
+                        <Link 
+                          href={`/guides/${p.category}`} 
+                          className={cn(
+                            "hover:underline transition-colors",
+                            meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600"
+                          )}
+                        >
                           {p.title}
                         </Link>
                       </h3>
@@ -560,7 +535,10 @@ export default function GuidesClient() {
                         {p.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-[9px] font-black uppercase tracking-wider bg-slate-50 border border-slate-100 text-slate-400 hover:text-blue-600 hover:bg-blue-50/30 px-2 py-0.5 rounded-md transition-colors"
+                            className={cn(
+                              "text-[9px] font-black uppercase tracking-wider bg-slate-50 border border-slate-100 text-slate-400 px-2 py-0.5 rounded-md transition-colors",
+                              meta ? `hover:${meta.theme.accentText} hover:bg-slate-100/50` : "hover:text-blue-600 hover:bg-blue-50/30"
+                            )}
                           >
                             {tag}
                           </span>
@@ -578,21 +556,27 @@ export default function GuidesClient() {
                       <ul className="space-y-3 text-xs sm:text-sm">
                         {p.articles.map((art, aIdx) => {
                           const displayTitle = selectedTool 
-                            ? getLocalizedTitle(art.title, p.category, selectedTool.name)
+                            ? getLocalizedTitle(art.title, p.category, selectedTool)
                             : art.title;
                           const displayKeyword = selectedTool
-                            ? getLocalizedTitleAndExcerpt('', '', art.keyword, p.category, selectedTool.name).keyword
+                            ? getLocalizedTitleAndExcerpt('', '', art.keyword, p.category, selectedTool).keyword
                             : art.keyword;
                           const displaySlug = selectedTool
                             ? `${selectedTool.slug}-${p.category}-${aIdx}`
                             : `${p.category === 'troubleshooting' ? 'autocad' : 'solidworks'}-${p.category}-${aIdx}`;
                           return (
                             <li key={art.title} className="group/item flex items-start gap-2">
-                              <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
+                              <span className={cn(
+                                "font-bold shrink-0 mt-0.5",
+                                meta ? meta.theme.accentText : "text-blue-600"
+                              )}>→</span>
                               <div className="flex-1 min-w-0">
                                 <Link 
                                   href={`/guides/${displaySlug}`} 
-                                  className="font-bold text-slate-800 hover:text-blue-600 transition-colors group-hover/item:underline block leading-snug"
+                                  className={cn(
+                                    "font-bold text-slate-800 transition-colors group-hover/item:underline block leading-snug",
+                                    meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600"
+                                  )}
                                 >
                                   {displayTitle}
                                 </Link>
@@ -753,7 +737,7 @@ export default function GuidesClient() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                     {activeAlphabetList.map((item, idx) => {
                       const displayItem = selectedTool 
-                        ? getLocalizedTitle(item, 'all', selectedTool.name)
+                        ? getLocalizedTitle(item, 'all', selectedTool)
                         : item;
                       return (
                         <div key={idx} className="flex items-center gap-2 p-2 hover:bg-slate-50 rounded-xl transition-all group">
@@ -838,7 +822,7 @@ export default function GuidesClient() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                       {folder.links.map((link, lIdx) => {
                         const displayTitle = selectedTool 
-                          ? getLocalizedTitle(link.title, folder.id.replace('fol-', ''), selectedTool.name)
+                          ? getLocalizedTitle(link.title, folder.id.replace('fol-', ''), selectedTool)
                           : link.title;
                         return (
                           <div key={lIdx} className="flex items-start gap-2 p-2 hover:bg-white hover:shadow-sm rounded-xl transition-all group">

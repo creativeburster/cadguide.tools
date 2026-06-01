@@ -1,11 +1,18 @@
 import { tools } from '@/lib/data';
+import { cn } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
-import { ARTICLES_LIST, CATEGORY_SECTIONS } from '@/lib/guides-data';
+import {
+  ARTICLES_LIST,
+  CATEGORY_SECTIONS,
+  getArchetypeMetadata,
+  getLocalizedTitleAndExcerpt,
+  getLocalizedTitle
+} from '@/lib/guides-data';
 import {
   Award,
   FileText,
@@ -1807,68 +1814,6 @@ export function generateStaticParams() {
   return params;
 }
 
-export function getLocalizedTitleAndExcerpt(title: string, excerpt: string, keyword: string, category: string, toolName: string) {
-  let newTitle = title;
-  let newExcerpt = excerpt;
-  let newKeyword = keyword;
-
-  if (category === 'migration' || category === 'crossover') {
-    const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
-    for (const target of targets) {
-      const regex = new RegExp(target, 'gi');
-      if (regex.test(newTitle)) {
-        newTitle = newTitle.replace(regex, toolName);
-        newExcerpt = newExcerpt.replace(regex, toolName);
-        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
-        return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
-      }
-    }
-  }
-
-  const allSoftware = [
-    'AutoCAD Architecture',
-    'AutoCAD Electrical',
-    'AutoCAD for Mac',
-    'AutoCAD LT',
-    'Autodesk AutoCAD',
-    'AutoCAD Online',
-    'AutoCAD',
-    'SolidWorks',
-    'BricsCAD Pro',
-    'BricsCAD',
-    'GstarCAD',
-    'Autodesk Inventor',
-    'Inventor',
-    'Solid Edge',
-    'FreeCAD',
-    'Catia V6',
-    'Catia',
-    'Rhino 3D',
-    'DraftSight',
-    'MicroStation',
-    'Revit',
-    'ZWCAD',
-    'BIM',
-    'Commercial CAD',
-    'Schematic CAD',
-    'Enterprise CAD',
-    'Named CAD',
-    'Autodesk'
-  ];
-
-  for (const sw of allSoftware) {
-    const regex = new RegExp(sw, 'gi');
-    if (regex.test(newTitle)) {
-      newTitle = newTitle.replace(regex, toolName);
-      newExcerpt = newExcerpt.replace(regex, toolName);
-      newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
-      break;
-    }
-  }
-
-  return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
-}
-
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
 ): Promise<Metadata> {
@@ -1893,7 +1838,7 @@ export async function generateMetadata(
   if (!parsed) return {};
 
   const { tool, template, category } = parsed;
-  const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool.name);
+  const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
 
   return {
     title: `${localized.title} — CAD Expert Troubleshooting`,
@@ -2276,7 +2221,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   }
 
   const { tool, template, category, artIndex } = parsed;
-  const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool.name);
+  const meta = getArchetypeMetadata(tool.category_id);
+  const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
   const title = localized.title;
   const excerpt = localized.excerpt;
   const keyword = localized.keyword;
@@ -2468,21 +2414,27 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <div className="bg-white border-b py-6 w-full">
           <div className="max-w-[1360px] mx-auto px-4">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-400 mb-4">
-              <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+              <Link href="/" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Home</Link>
               <span>/</span>
-              <Link href="/guides" className="hover:text-blue-600 transition-colors">Guides</Link>
+              <Link href="/guides" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Guides</Link>
               <span>/</span>
               <span className="text-slate-900 truncate">{tool.name} Technical Guide</span>
             </div>
 
-            <Link href="/guides" className="inline-flex items-center gap-2 text-xs font-black text-blue-600 mb-6 hover:underline group">
+            <Link 
+              href="/guides" 
+              className={cn(
+                "inline-flex items-center gap-2 text-xs font-black mb-6 hover:underline group",
+                meta ? meta.theme.accentText : "text-blue-600"
+              )}
+            >
               <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" /> Back to Guides Library
             </Link>
 
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="space-y-4 max-w-4xl">
                 <div className="flex flex-wrap items-center gap-2">
-                  <Badge className="bg-blue-600 text-white border-none font-black px-3 py-1 uppercase tracking-widest text-[9px] rounded-lg">
+                  <Badge className={cn("text-white border-none font-black px-3 py-1 uppercase tracking-widest text-[9px] rounded-lg", meta ? meta.theme.buttonBg : "bg-blue-600")}>
                     {category.toUpperCase()}
                   </Badge>
                   <Badge variant="outline" className="bg-slate-50 border-slate-100 font-bold px-3 py-1 text-[10px] text-slate-500">
@@ -2501,7 +2453,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 <ToolLogo slug={tool.slug} name={tool.name} src={tool.logo_url} className="w-16 h-16 rounded-2xl shadow bg-white border border-slate-100" />
                 <div>
                   <span className="text-[10px] text-slate-400 font-black uppercase tracking-wider block">Target Software</span>
-                  <Link href={`/tools/${tool.slug}`} className="font-black text-slate-900 hover:text-blue-600 hover:underline block text-lg">
+                  <Link href={`/tools/${tool.slug}`} className={cn("font-black text-slate-900 hover:underline block text-lg", meta ? meta.theme.accentText : "hover:text-blue-600")}>
                     {tool.name}
                   </Link>
                   <span className="text-xs text-slate-500 font-bold">Expert Score: ★ {tool.score}</span>
@@ -2519,7 +2471,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               {/* Author Banner */}
               <div className="bg-white p-5 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 text-white font-black text-xs flex items-center justify-center shadow-lg shadow-blue-200">
+                  <div className={cn("w-10 h-10 rounded-full text-white font-black text-xs flex items-center justify-center shadow-lg", meta ? `${meta.theme.buttonBg} shadow-${meta.theme.accentText.split('-')[1]}-200` : "bg-blue-600 shadow-blue-200")}>
                     WP
                   </div>
                   <div>
@@ -2554,9 +2506,23 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 <>
                   {/* Technical Overview Container */}
                   <Card className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.03)] bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-[32px] overflow-hidden relative p-6 sm:p-8">
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px]"></div>
+                    <div className={cn(
+                      "absolute top-0 right-0 w-48 h-48 rounded-full blur-[80px] opacity-20",
+                      meta?.id === 'drafting-aec' && "bg-slate-500",
+                      meta?.id === 'mechanical-simulation' && "bg-amber-500",
+                      meta?.id === 'creative-visual' && "bg-indigo-500",
+                      meta?.id === 'electronics-hardware' && "bg-emerald-500",
+                      !meta && "bg-blue-500"
+                    )}></div>
                     <div className="relative z-10 space-y-4">
-                      <div className="flex items-center gap-3 text-blue-400 font-black text-[10px] uppercase tracking-widest">
+                      <div className={cn(
+                        "flex items-center gap-3 font-black text-[10px] uppercase tracking-widest",
+                        meta?.id === 'drafting-aec' && "text-slate-400",
+                        meta?.id === 'mechanical-simulation' && "text-amber-400",
+                        meta?.id === 'creative-visual' && "text-indigo-400",
+                        meta?.id === 'electronics-hardware' && "text-emerald-400",
+                        !meta && "text-blue-400"
+                      )}>
                         <ShieldAlert className="w-4 h-4" /> Technical Alert Checklist
                       </div>
                       <h3 className="text-xl sm:text-2xl font-black tracking-tight">
@@ -2571,7 +2537,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   {/* Step-by-Step Technical Guide Content */}
                   <div className="space-y-8">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                      <div className={cn(
+                        "w-10 h-10 rounded-xl flex items-center justify-center",
+                        meta?.id === 'drafting-aec' && "bg-slate-100 text-slate-700",
+                        meta?.id === 'mechanical-simulation' && "bg-amber-100 text-amber-700",
+                        meta?.id === 'creative-visual' && "bg-indigo-100 text-indigo-700",
+                        meta?.id === 'electronics-hardware' && "bg-emerald-100 text-emerald-700",
+                        !meta && "bg-blue-100 text-blue-600"
+                      )}>
                         <BookOpen className="w-5 h-5" />
                       </div>
                       <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
@@ -2583,13 +2556,34 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                       {steps.map((step, sIdx) => (
                         <div
                           key={sIdx}
-                          className="bg-white p-6 sm:p-8 rounded-[24px] border border-slate-100 hover:border-blue-100 shadow-sm transition-all duration-300 relative group flex items-start gap-4 sm:gap-6"
+                          className={cn(
+                            "bg-white p-6 sm:p-8 rounded-[24px] border shadow-sm transition-all duration-300 relative group flex items-start gap-4 sm:gap-6",
+                            meta?.id === 'drafting-aec' && "border-slate-100 hover:border-slate-300",
+                            meta?.id === 'mechanical-simulation' && "border-slate-100 hover:border-amber-200",
+                            meta?.id === 'creative-visual' && "border-slate-100 hover:border-indigo-200",
+                            meta?.id === 'electronics-hardware' && "border-slate-100 hover:border-emerald-200",
+                            !meta && "border-slate-100 hover:border-blue-100"
+                          )}
                         >
-                          <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 font-black text-base flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                          <div className={cn(
+                            "w-10 h-10 rounded-full font-black text-base flex items-center justify-center shrink-0 transition-colors duration-300",
+                            meta?.id === 'drafting-aec' && "bg-slate-50 text-slate-600 group-hover:bg-slate-700 group-hover:text-white",
+                            meta?.id === 'mechanical-simulation' && "bg-amber-50 text-amber-600 group-hover:bg-amber-600 group-hover:text-white",
+                            meta?.id === 'creative-visual' && "bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white",
+                            meta?.id === 'electronics-hardware' && "bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white",
+                            !meta && "bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white"
+                          )}>
                             {sIdx + 1}
                           </div>
                           <div className="space-y-2 min-w-0">
-                            <h4 className="font-black text-slate-900 text-base sm:text-lg group-hover:text-blue-600 transition-colors">
+                            <h4 className={cn(
+                              "font-black text-slate-900 text-base sm:text-lg transition-colors",
+                              meta?.id === 'drafting-aec' && "group-hover:text-slate-700",
+                              meta?.id === 'mechanical-simulation' && "group-hover:text-amber-700",
+                              meta?.id === 'creative-visual' && "group-hover:text-indigo-700",
+                              meta?.id === 'electronics-hardware' && "group-hover:text-emerald-700",
+                              !meta && "group-hover:text-blue-600"
+                            )}>
                               {step.title}
                             </h4>
                             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
@@ -2611,7 +2605,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               )}
 
               {/* Horizontal Bidirectional Capillary Card (Guide ➔ Review) */}
-              <Card className="border-2 border-dashed border-slate-200 bg-white p-6 sm:p-8 rounded-[32px] flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-blue-600 transition-all duration-500">
+              <Card className={cn(
+                "border-2 border-dashed border-slate-200 bg-white p-6 sm:p-8 rounded-[32px] flex flex-col sm:flex-row items-center justify-between gap-6 transition-all duration-500",
+                meta?.id === 'drafting-aec' && "hover:border-slate-500",
+                meta?.id === 'mechanical-simulation' && "hover:border-amber-500",
+                meta?.id === 'creative-visual' && "hover:border-indigo-500",
+                meta?.id === 'electronics-hardware' && "hover:border-emerald-500",
+                !meta && "hover:border-blue-600"
+              )}>
                 <div className="space-y-2">
                   <Badge className="bg-amber-600/10 text-amber-700 font-bold px-3 py-0.5 text-[9px] uppercase tracking-wider rounded-lg">
                     Full Analysis Guide
@@ -2623,7 +2624,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                     Want to know if {tool.name} is the best investment for your enterprise CAD workflows? Check out ratings, pros & cons, and licensing plans.
                   </p>
                 </div>
-                <Button asChild className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 sm:h-14 px-8 shadow-md">
+                <Button asChild className={cn("rounded-2xl text-white font-black h-12 sm:h-14 px-8 shadow-md transition-all hover:scale-105 active:scale-95", meta ? meta.theme.buttonBg : "bg-blue-600 hover:bg-blue-700")}>
                   <Link href={`/tools/${tool.slug}`} className="flex items-center gap-2">
                     Open Review <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -2666,7 +2667,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   )}
                 </div>
 
-                <Button asChild variant="outline" className="w-full h-12 rounded-2xl border-blue-100 text-blue-600 hover:bg-blue-50 font-black transition-colors">
+                <Button asChild variant="outline" className={cn("w-full h-12 rounded-2xl font-black transition-colors border", meta?.id === 'drafting-aec' ? "border-slate-200 text-slate-700 hover:bg-slate-50" : meta?.id === 'mechanical-simulation' ? "border-amber-200 text-amber-700 hover:bg-amber-50" : meta?.id === 'creative-visual' ? "border-indigo-200 text-indigo-700 hover:bg-indigo-50" : meta?.id === 'electronics-hardware' ? "border-emerald-200 text-emerald-700 hover:bg-emerald-50" : "border-blue-100 text-blue-600 hover:bg-blue-50")}>
                   <Link href={`/tools/${tool.slug}`}>Check Full Specifications</Link>
                 </Button>
               </Card>
@@ -2681,7 +2682,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                     Looking to crossover from legacy platforms or evaluate cheaper alternatives? Match similar software in the same industry.
                   </p>
                   <div className="space-y-2">
-                    <Button asChild className="w-full h-12 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs gap-2 flex items-center justify-center">
+                    <Button asChild className={cn("w-full h-12 rounded-2xl text-white font-black text-xs gap-2 flex items-center justify-center transition-colors", meta ? meta.theme.buttonBg : "bg-slate-900 hover:bg-slate-800")}>
                       <Link href={`/alternatives/${tool.slug}`}>
                         Compare {tool.name} Alternatives <ArrowRight className="w-3.5 h-3.5" />
                       </Link>

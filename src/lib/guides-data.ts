@@ -350,3 +350,231 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
     ]
   }
 ];
+
+export interface ArchetypeMetadata {
+  id: 'drafting-aec' | 'mechanical-simulation' | 'creative-visual' | 'electronics-hardware';
+  name: string;
+  theme: {
+    accentText: string;
+    badgeBg: string;
+    buttonBg: string;
+    gradientHeader: string;
+    cardBorder: string;
+  };
+  categoryOrder: string[];
+  jargonMap: Record<string, string>;
+}
+
+export function getArchetypeMetadata(category_id: string): ArchetypeMetadata {
+  if (category_id === 'c1' || category_id === 'c3') {
+    return {
+      id: 'drafting-aec',
+      name: 'AEC & Drafting',
+      theme: {
+        accentText: 'text-slate-700',
+        badgeBg: 'bg-slate-50 border-slate-200 text-slate-800',
+        buttonBg: 'bg-slate-700 hover:bg-slate-800 border-slate-700',
+        gradientHeader: 'from-slate-700 via-slate-800 to-zinc-900',
+        cardBorder: 'hover:border-slate-300'
+      },
+      categoryOrder: ['troubleshooting', 'printing', 'standards', 'deployment', 'procurement', 'migration', 'performance', 'manufacturing'],
+      jargonMap: {
+        'large dwg files': 'complex construction DWG layouts',
+        'free cad platforms': 'free drafting engines',
+        'cad software': 'AEC drafting software',
+        'cad design': 'architectural drafting',
+        'cad designs': 'building blueprint layouts',
+        'cad designs standards': 'BIM standards',
+        'nurbs modeling': 'IFC component mapping',
+        'assembly loading': 'BIM model linking',
+        'mechanical production': 'architectural details drafting',
+        '3d printing': 'BIM coordination',
+        'watertight': 'fully coordinated structural'
+      }
+    };
+  }
+
+  if (category_id === 'c2' || category_id === 'c5') {
+    return {
+      id: 'mechanical-simulation',
+      name: 'Mechanical & Simulation',
+      theme: {
+        accentText: 'text-amber-700',
+        badgeBg: 'bg-amber-50 border-amber-200 text-amber-950',
+        buttonBg: 'bg-amber-600 hover:bg-amber-700 border-amber-600',
+        gradientHeader: 'from-amber-600 via-amber-700 to-stone-900',
+        cardBorder: 'hover:border-amber-300'
+      },
+      categoryOrder: ['performance', 'manufacturing', 'standards', 'procurement', 'troubleshooting', 'migration', 'deployment', 'printing'],
+      jargonMap: {
+        'large dwg files': 'heavy parametric assemblies',
+        'free cad platforms': 'free mechanical modelers',
+        'cad software': '3D mechanical CAD',
+        'cad design': '3D parametric design',
+        'cad designs': 'watertight solid parts',
+        'cad designs standards': 'ISO mechanical limits',
+        'nurbs modeling': 'NURBS B-Rep solid kernels',
+        'assembly loading': 'large assembly interference solvers',
+        'mechanical production': 'watertight manufacturing CNC steps',
+        '3d printing': 'sub-micron CNC tooling',
+        'watertight': 'watertight solid B-Rep'
+      }
+    };
+  }
+
+  if (category_id === 'c4') {
+    return {
+      id: 'creative-visual',
+      name: 'Creative Visualization',
+      theme: {
+        accentText: 'text-indigo-700',
+        badgeBg: 'bg-indigo-50 border-indigo-200 text-indigo-950',
+        buttonBg: 'bg-indigo-600 hover:bg-indigo-700 border-indigo-600',
+        gradientHeader: 'from-indigo-700 via-indigo-800 to-violet-900',
+        cardBorder: 'hover:border-indigo-300'
+      },
+      categoryOrder: ['performance', 'troubleshooting', 'procurement', 'printing', 'migration', 'standards', 'deployment', 'manufacturing'],
+      jargonMap: {
+        'large dwg files': 'high-density poly scene files',
+        'free cad platforms': 'free rendering software',
+        'cad software': '3D rendering software',
+        'cad design': '3D scene visualization',
+        'cad designs': 'high-fidelity PBR assets',
+        'cad designs standards': 'production render profiles',
+        'nurbs modeling': 'PBR materials and textures mapping',
+        'assembly loading': 'viewport vertex shader cache',
+        'mechanical production': 'real-time raytraced views',
+        '3d printing': 'RTX GPU hardware allocation',
+        'watertight': 'fully manifold photorealistic mesh'
+      }
+    };
+  }
+
+  return {
+    id: 'electronics-hardware',
+    name: 'Electronics & Production',
+    theme: {
+      accentText: 'text-emerald-700',
+      badgeBg: 'bg-emerald-50 border-emerald-200 text-emerald-950',
+      buttonBg: 'bg-emerald-600 hover:bg-emerald-700 border-emerald-600',
+      gradientHeader: 'from-emerald-600 via-emerald-700 to-teal-900',
+      cardBorder: 'hover:border-emerald-300'
+    },
+    categoryOrder: ['manufacturing', 'performance', 'procurement', 'troubleshooting', 'deployment', 'standards', 'migration', 'printing'],
+    jargonMap: {
+      'large dwg files': 'multi-layer PCB layouts',
+      'free cad platforms': 'free electronics EDA modelers',
+      'cad software': 'PCB design EDA software',
+      'cad design': 'circuit board layout drafting',
+      'cad designs': 'JLCPCB watertight footprints',
+      'cad designs standards': 'IPC electrical schematic guidelines',
+      'nurbs modeling': 'slicer infill mesh layers',
+      'assembly loading': 'G-code post-processing speedups',
+      'mechanical production': 'circuit schematic traces',
+      '3d printing': '3D slicer wall layers speed',
+      'watertight': 'fully watertight copper traces'
+    }
+  };
+}
+
+export function getLocalizedTitleAndExcerpt(
+  title: string,
+  excerpt: string,
+  keyword: string,
+  category: string,
+  tool: any
+) {
+  let newTitle = title;
+  let newExcerpt = excerpt;
+  let newKeyword = keyword;
+
+  if (!tool) {
+    return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
+  }
+
+  const toolName = tool.name;
+
+  // 1. Perform primary software replacements
+  if (category === 'migration' || category === 'crossover') {
+    const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
+    let replaced = false;
+    for (const target of targets) {
+      const regex = new RegExp(target, 'gi');
+      if (regex.test(newTitle)) {
+        newTitle = newTitle.replace(regex, toolName);
+        newExcerpt = newExcerpt.replace(regex, toolName);
+        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
+        replaced = true;
+        break;
+      }
+    }
+    if (!replaced) {
+      const allSoftware = ['AutoCAD', 'SolidWorks', 'DraftSight', 'MicroStation'];
+      for (const sw of allSoftware) {
+        const regex = new RegExp(sw, 'gi');
+        if (regex.test(newTitle)) {
+          newTitle = newTitle.replace(regex, toolName);
+          newExcerpt = newExcerpt.replace(regex, toolName);
+          newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
+          break;
+        }
+      }
+    }
+  } else {
+    const allSoftware = [
+      'AutoCAD Architecture',
+      'AutoCAD Electrical',
+      'AutoCAD for Mac',
+      'AutoCAD LT',
+      'Autodesk AutoCAD',
+      'AutoCAD Online',
+      'AutoCAD',
+      'SolidWorks',
+      'BricsCAD Pro',
+      'BricsCAD',
+      'GstarCAD',
+      'Autodesk Inventor',
+      'Inventor',
+      'Solid Edge',
+      'FreeCAD',
+      'Catia V6',
+      'Catia',
+      'Rhino 3D',
+      'DraftSight',
+      'MicroStation',
+      'Revit',
+      'ZWCAD',
+      'BIM',
+      'Commercial CAD',
+      'Schematic CAD',
+      'Enterprise CAD',
+      'Named CAD',
+      'Autodesk'
+    ];
+
+    for (const sw of allSoftware) {
+      const regex = new RegExp(sw, 'gi');
+      if (regex.test(newTitle)) {
+        newTitle = newTitle.replace(regex, toolName);
+        newExcerpt = newExcerpt.replace(regex, toolName);
+        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
+        break;
+      }
+    }
+  }
+
+  // 2. Perform advanced archetype-specific jargon replacements
+  const meta = getArchetypeMetadata(tool.category_id);
+  for (const [key, val] of Object.entries(meta.jargonMap)) {
+    const regex = new RegExp(key, 'gi');
+    newTitle = newTitle.replace(regex, val);
+    newExcerpt = newExcerpt.replace(regex, val);
+    newKeyword = newKeyword.replace(regex, val.toLowerCase());
+  }
+
+  return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
+}
+
+export function getLocalizedTitle(title: string, category: string, tool: any): string {
+  return getLocalizedTitleAndExcerpt(title, '', '', category, tool).title;
+}
