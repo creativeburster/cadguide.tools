@@ -4,6 +4,8 @@ import { openSourceTools } from '@/lib/seo-content';
 import type { Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
+import { FoldingList } from '@/components/folding-list';
+import React from 'react';
 
 const YEAR = 2026;
 
@@ -266,7 +268,10 @@ export default function OpenSourceCadPage() {
             </div>
           </header>
 
-          <ol className="space-y-5">
+          <FoldingList
+            itemType="ol"
+            className="space-y-5"
+          >
             {list.map((t, i) => (
               <li key={t.slug} className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 hover:border-blue-300 transition-colors">
                 <div className="flex items-start gap-4 sm:gap-5">
@@ -283,7 +288,7 @@ export default function OpenSourceCadPage() {
                 </div>
               </li>
             ))}
-          </ol>
+          </FoldingList>
 
           {/* TCO & Economics Hub Section */}
           <section id="tco-economics" className="mt-16 pt-10 border-t border-slate-200">

@@ -11,6 +11,7 @@ import {
 import type { Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL, softwareApplicationLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
+import { FoldingList } from '@/components/folding-list';
 import React from 'react';
 
 export const dynamicParams = false;
@@ -565,9 +566,12 @@ function renderFormatToolLists(
             <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${style.gradient}`} />
             Full read & write support ({both.length})
           </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <FoldingList
+            itemType="ul"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+          >
             {both.map((t) => <ToolCard key={t.slug} t={t} capability="both" />)}
-          </ul>
+          </FoldingList>
         </section>
       )}
 
@@ -577,9 +581,12 @@ function renderFormatToolLists(
             <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${style.gradient}`} />
             Read-only / viewers ({reads.length})
           </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <FoldingList
+            itemType="ul"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+          >
             {reads.map((t) => <ToolCard key={t.slug} t={t} capability="read" />)}
-          </ul>
+          </FoldingList>
         </section>
       )}
 
@@ -589,9 +596,12 @@ function renderFormatToolLists(
             <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${style.gradient}`} />
             Write / export ({writes.length})
           </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <FoldingList
+            itemType="ul"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+          >
             {writes.map((t) => <ToolCard key={t.slug} t={t} capability="write" />)}
-          </ul>
+          </FoldingList>
         </section>
       )}
 

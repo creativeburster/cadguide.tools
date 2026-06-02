@@ -11,6 +11,7 @@ import {
 import type { Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
+import { FoldingList } from '@/components/folding-list';
 
 export const dynamicParams = false;
 
@@ -466,7 +467,10 @@ function renderRankings(list: Tool[], style: SectorStyle) {
   return (
     <section key="rankings" className="my-10">
       <h2 className="text-2xl font-extrabold text-slate-900 mb-6">Curated Technical Rankings</h2>
-      <ol className="space-y-6">
+      <FoldingList
+        itemType="ol"
+        className="space-y-6"
+      >
         {list.map((t, i) => {
           const kernel = guessGeometryKernel(t);
           const supportsMultiCore = t.tech_specs?.multicore || 'Optimized (Multi-threaded)';
@@ -618,7 +622,7 @@ function renderRankings(list: Tool[], style: SectorStyle) {
             </li>
           );
         })}
-      </ol>
+      </FoldingList>
     </section>
   );
 }

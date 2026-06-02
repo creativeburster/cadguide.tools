@@ -11,6 +11,7 @@ import {
 import type { Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL, softwareApplicationLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
+import { FoldingList } from '@/components/folding-list';
 import React from 'react';
 
 export const dynamicParams = false;
@@ -302,7 +303,10 @@ function renderPlatformList(list: Tool[], style: PlatformStyle, p: PlatformPage)
         </span>
       </div>
 
-      <ol className="space-y-5">
+      <FoldingList
+        itemType="ol"
+        className="space-y-5"
+      >
         {list.map((t, i) => (
           <li key={t.slug} className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 hover:border-slate-300 hover:shadow-sm transition-all">
             <div className="flex items-start gap-4 sm:gap-5">
@@ -327,7 +331,7 @@ function renderPlatformList(list: Tool[], style: PlatformStyle, p: PlatformPage)
             </div>
           </li>
         ))}
-      </ol>
+      </FoldingList>
     </section>
   );
 }
