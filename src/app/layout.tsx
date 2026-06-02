@@ -45,6 +45,18 @@ export default function RootLayout({
             gtag('config', 'G-2NC8HV27GC');
           `}
         </Script>
+        <Script id="brandreward-sdk" strategy="afterInteractive">
+          {`
+            var _BRConf = { key: '81f9b4c973e1fb37a704344789dc0719' };
+            window._BRConf = _BRConf;
+            (function(d, t) {
+              var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+              var scheme = (document.location.protocol == 'https:')?'https':'http';
+              s.src = scheme+'://n.brandreward.com/js/br.js';
+              var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+            }(document, 'script'));
+          `}
+        </Script>
         <PWARegistration />
         <SiteNotice />
         <Navbar />
