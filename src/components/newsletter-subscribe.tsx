@@ -15,6 +15,10 @@ interface NewsletterSubscribeProps {
   successMessage?: string;
   /** Custom className for the wrapper */
   className?: string;
+  /** Custom title for banner variant */
+  title?: string;
+  /** Custom description for banner variant */
+  description?: string;
 }
 
 export function NewsletterSubscribe({
@@ -23,6 +27,8 @@ export function NewsletterSubscribe({
   buttonText = 'Subscribe',
   successMessage,
   className = '',
+  title,
+  description,
 }: NewsletterSubscribeProps) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -173,9 +179,11 @@ export function NewsletterSubscribe({
     <div className={`bg-blue-600 rounded-[48px] p-10 md:p-20 text-white text-center relative overflow-hidden ${className}`}>
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -ml-48 -mt-48"></div>
       <div className="relative z-10 max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight leading-tight">Never miss a massive CAD discount again.</h2>
+        <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
+          {title || "Never miss a massive CAD discount again."}
+        </h2>
         <p className="text-blue-100 text-lg mb-10 font-medium">
-          We notify you about flash sales, Black Friday early access, and secret coupon codes directly to your inbox.
+          {description || "We notify you about flash sales, Black Friday early access, and secret coupon codes directly to your inbox."}
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
           <Input

@@ -430,13 +430,6 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         <Scale className="w-4 h-4 md:w-5 md:h-5 shrink-0" /> Compare with another tool
                       </Link>
                     </Button>
-                    
-                    <Link
-                      href="/affiliate-disclosure"
-                      className="text-[11px] text-slate-400 hover:text-blue-500 font-medium transition-colors flex items-center gap-1.5 ml-2 cursor-pointer whitespace-nowrap"
-                    >
-                      <Info className="w-3.5 h-3.5" /> Ad Disclosure
-                    </Link>
                   </div>
 
                   <div className="flex flex-wrap gap-3">

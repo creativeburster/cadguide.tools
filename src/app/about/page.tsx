@@ -1,5 +1,6 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
+import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
 
 export const metadata: Metadata = pageMetadata({
   title: 'About CADGuide.tools — Independent CAD Software Reviews',
@@ -135,12 +136,14 @@ function AboutBody() {
             We believe that software should be a tool that empowers your creativity, not a barrier. Whether you are a student looking for a free alternative to AutoCAD or a large enterprise coordinating a multi-billion dollar BIM project, we are here to provide the insights you need.
           </p>
           
-          <div className="bg-blue-600 text-white p-12 rounded-3xl mt-16 shadow-2xl shadow-blue-200">
-            <h3 className="text-2xl font-bold mb-4 text-white">Join Our Community</h3>
-            <p className="text-blue-100 mb-0 leading-relaxed">
-              CADGuide.tools is a growing community. We invite vendors and users to contribute to our database to ensure the information remains the most accurate in the industry.
-            </p>
-          </div>
+          <NewsletterSubscribe
+            variant="banner"
+            title="Join Our CAD Community"
+            description="Subscribe to get the latest software updates, newly-discovered specialized engineering tools, and licensing guides directly in your inbox."
+            buttonText="Join Community"
+            placeholder="Enter your work email"
+            className="mt-16 not-prose"
+          />
         </div>
       </section>
     </main>
