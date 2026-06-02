@@ -244,7 +244,7 @@ function HomeBody() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100 font-black uppercase text-[10px] tracking-[0.25em] py-1 px-3 rounded-full">Discover</Badge>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Browse CAD Tools by …</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Browse Tools & Guides by …</h2>
             <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
               Slice the catalog by role, platform, file format, or pricing — every angle has its own curated guide.
             </p>
