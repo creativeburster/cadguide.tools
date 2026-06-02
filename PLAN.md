@@ -6,6 +6,8 @@
 
 ## 1. 权威指南板块扩张计划 (Guides Hub Content Plan)
 
+> 详细的 8 大领域、48 个技术模板与 2400+ 页面长尾规划详见：[权威指南内容丰富计划 (guides_enrichment_plan.md)](file:///f:/cad%20tools%20io/cadtools-cc/guides_enrichment_plan.md)
+
 我们将指南体系划分为 **8 大核心大动脉**，专为 B-End 企业级专业用户提供硬核技术解决方案：
 
 1.  **Troubleshooting（故障分析）**：解决致命崩溃、Exception Code 签名分析与注册表残留清理。
@@ -18,7 +20,7 @@
 8.  **SAM & Compliance（合规审计）**：FLEXlm 授权管理、Named-User 许可证合规审计防范对抗。
 
 ### 差异化内容排版模板
-针对不同分类指南，我们设计了四套去 AI 化的技术模板以满足 Google 的 E-E-A-T 质量门槛：
+针对不同分类指南，我们 design 了四套去 AI 化的技术模板以满足 Google 的 E-E-A-T 质量门槛：
 *   **模板 A (技术尸检)**：包含 Exception Code 表格、病因诊断、Windows 注册表路径及修复代码块。
 *   **模板 B (合规风控)**：包含合规风险晴雨表、EULA 协议条款漏洞分析、3 年 TCO 成本复利矩阵。
 *   **模板 C (工业标准)**：包含 ISO/ANSI 标准元数据框、线宽对应对照表、一键部署脚本。
@@ -27,6 +29,8 @@
 ---
 
 ## 2. 纯前端交互式微工具蓝图 (Interactive Calculators & Tools Blueprint)
+
+> 详细的 8 大分类共 80 款交互式工具及 SEO 关键字定位详见：[交互式计算器与微工具蓝图 (calculators_domain_blueprint.md)](file:///f:/cad%20tools%20io/cadtools-cc/calculators_domain_blueprint.md)
 
 为了提升用户页面停留时间 (Dwell Time)，我们计划推出 **5 款纯前端执行的交互微工具**。基于数据隐私保护，所有计算、文件解析均在**客户端浏览器本地**完成（零服务器上传，100% 数据安全）：
 

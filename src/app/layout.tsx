@@ -8,8 +8,8 @@ import { SiteNotice } from "@/components/site-notice";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "CADGuide.tools | Compare 235+ CAD & BIM Software (ASM vs Parasolid)",
-  description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, and pricing for 235+ professional 2D/3D design tools.",
+  title: "CADGuide.tools | Compare CAD & BIM Software Side-by-Side (ASM vs Parasolid)",
+  description: "The ultimate objective directory for CAD pros. Deep-dive into technical specs, kernel engines, expert verdicts, deals, and pricing for professional 2D/3D design tools.",
   metadataBase: new URL('https://cadguide.tools'),
   alternates: {
     canonical: 'https://cadguide.tools',
