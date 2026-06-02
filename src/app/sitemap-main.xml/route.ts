@@ -21,6 +21,10 @@ export async function GET() {
     { url: '/open-source', priority: 0.9, changefreq: 'monthly' },
     { url: '/pricing', priority: 0.9, changefreq: 'monthly' },
     { url: '/guides', priority: 0.95, changefreq: 'daily' },
+    { url: '/about', priority: 0.50, changefreq: 'monthly' },
+    { url: '/contact', priority: 0.50, changefreq: 'monthly' },
+    { url: '/privacy', priority: 0.30, changefreq: 'monthly' },
+    { url: '/affiliate-disclosure', priority: 0.30, changefreq: 'monthly' },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

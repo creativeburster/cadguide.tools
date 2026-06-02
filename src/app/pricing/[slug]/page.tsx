@@ -5,6 +5,7 @@ import { tools } from '@/lib/data';
 import { PRICING_PAGES, type PricingPageContent } from '@/lib/pricing-licensing-content';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL, softwareApplicationLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
+import { FoldingList } from '@/components/folding-list';
 import React from 'react';
 
 export const dynamicParams = false;
@@ -714,8 +715,10 @@ export default async function PricingDirectoryPage(
               <p className="text-slate-500 py-8 text-center border border-dashed border-slate-200 rounded-2xl">
                 No active CAD platforms in our registry match this specific pricing tag.
               </p>
-            ) : (
-              <ol className="space-y-5">
+            ) : (              <FoldingList
+                itemType="ol"
+                className="space-y-5"
+              >
                 {list.map((t, i) => (
                   <li key={t.slug} className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-6 hover:border-slate-300 hover:shadow-sm transition-all">
                     <div className="flex items-start gap-4 sm:gap-5">
@@ -747,7 +750,7 @@ export default async function PricingDirectoryPage(
                     </div>
                   </li>
                 ))}
-              </ol>
+              </FoldingList>
             )}
           </section>
 

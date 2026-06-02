@@ -104,6 +104,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">Methodology</Link></li>
               <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact & Support</Link></li>
               <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/affiliate-disclosure" className="hover:text-blue-400 transition-colors">Affiliate Disclosure</Link></li>
               <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools</Link></li>
             </ul>
           </div>

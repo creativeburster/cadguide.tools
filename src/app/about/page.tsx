@@ -1,5 +1,6 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
+import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
 
 export const metadata: Metadata = pageMetadata({
   title: 'About CADGuide.tools — Independent CAD Software Reviews',
@@ -69,17 +70,80 @@ function AboutBody() {
             </div>
           </div>
 
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 mt-16">Our Scoring & Evaluation Methodology</h2>
+          <p>
+            To eliminate bias and avoid the pay-to-play rankings that plague many review platforms, CADGuide.tools utilizes a strict, multi-dimensional scoring rubric. Every software listed on our platform receives an <strong>Expert Score (from 1.0 to 5.0)</strong>, calculated based on the following weights:
+          </p>
+          
+          <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 my-10 not-prose">
+            <div className="space-y-6">
+              <div>
+                <div className="flex justify-between font-bold text-slate-800 mb-2">
+                  <span>🛠️ Feature Coverage & Ecosystem</span>
+                  <span>40%</span>
+                </div>
+                <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div className="bg-blue-600 h-full rounded-full" style={{ width: '40%' }}></div>
+                </div>
+                <span className="text-xs text-slate-500 block mt-1">Native format support (DWG, DXF, STEP, IFC), layout flexibility, and OS compatibility.</span>
+              </div>
+              
+              <div>
+                <div className="flex justify-between font-bold text-slate-800 mb-2">
+                  <span>💰 Pricing Transparency & Licensing Value</span>
+                  <span>30%</span>
+                </div>
+                <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div className="bg-blue-600 h-full rounded-full" style={{ width: '30%' }}></div>
+                </div>
+                <span className="text-xs text-slate-500 block mt-1">Availability of clear pricing, perpetual licensing options, free trials, and education versions.</span>
+              </div>
+              
+              <div>
+                <div className="flex justify-between font-bold text-slate-800 mb-2">
+                  <span>⚙️ Performance & Stability</span>
+                  <span>20%</span>
+                </div>
+                <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div className="bg-blue-600 h-full rounded-full" style={{ width: '20%' }}></div>
+                </div>
+                <span className="text-xs text-slate-500 block mt-1">GPU/hardware acceleration, post-processor stability, and memory efficiency under heavy models.</span>
+              </div>
+              
+              <div>
+                <div className="flex justify-between font-bold text-slate-800 mb-2">
+                  <span>💬 Professional User Sentiment</span>
+                  <span>10%</span>
+                </div>
+                <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div className="bg-blue-600 h-full rounded-full" style={{ width: '10%' }}></div>
+                </div>
+                <span className="text-xs text-slate-500 block mt-1">Aggregated verified reviews from engineering forums, CAD communities, and industry veterans.</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-bold text-slate-900 mb-4">Human Editorial Review</h3>
+          <p>
+            While our scoring system is backed by structured technical databases, all narrative reviews, pros &amp; cons, and 
+            industry comparisons are curated, written, and double-checked by <strong>CAD specialists and engineers</strong>. 
+            We actively monitor software updates and coordinate with developer communities to keep file format compatibilities, 
+            API features, and licensing options perfectly up to date.
+          </p>
+
           <h2 className="text-3xl font-bold text-slate-900 mb-8 mt-16">Our Philosophy</h2>
           <p>
             We believe that software should be a tool that empowers your creativity, not a barrier. Whether you are a student looking for a free alternative to AutoCAD or a large enterprise coordinating a multi-billion dollar BIM project, we are here to provide the insights you need.
           </p>
           
-          <div className="bg-blue-600 text-white p-12 rounded-3xl mt-16 shadow-2xl shadow-blue-200">
-            <h3 className="text-2xl font-bold mb-4 text-white">Join Our Community</h3>
-            <p className="text-blue-100 mb-0 leading-relaxed">
-              CADGuide.tools is a growing community. We invite vendors and users to contribute to our database to ensure the information remains the most accurate in the industry.
-            </p>
-          </div>
+          <NewsletterSubscribe
+            variant="banner"
+            title="Join Our CAD Community"
+            description="Subscribe to get the latest software updates, newly-discovered specialized engineering tools, and licensing guides directly in your inbox."
+            buttonText="Join Community"
+            placeholder="Enter your work email"
+            className="mt-16 not-prose"
+          />
         </div>
       </section>
     </main>

@@ -38,6 +38,7 @@ import {
   Code2,
   Lock,
   Star,
+  Info,
 } from "lucide-react";
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";

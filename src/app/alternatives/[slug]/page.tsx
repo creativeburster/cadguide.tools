@@ -5,6 +5,7 @@ import { alternativesFor, alternativesPagePaths } from '@/lib/seo-content';
 import { getToolBySlug, type Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
+import { FoldingList } from '@/components/folding-list';
 import React from 'react';
 
 export const dynamicParams = false;
@@ -380,7 +381,10 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
         </span>
       </div>
 
-      <ol className="space-y-5">
+      <FoldingList
+        itemType="ol"
+        className="space-y-5"
+      >
         {alts.map((alt, i) => (
           <li
             key={alt.slug}
@@ -438,7 +442,7 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
             </div>
           </li>
         ))}
-      </ol>
+      </FoldingList>
     </section>
   );
 }

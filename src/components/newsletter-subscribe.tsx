@@ -15,6 +15,10 @@ interface NewsletterSubscribeProps {
   successMessage?: string;
   /** Custom className for the wrapper */
   className?: string;
+  /** Custom title for banner variant */
+  title?: string;
+  /** Custom description for banner variant */
+  description?: string;
 }
 
 export function NewsletterSubscribe({
@@ -23,6 +27,8 @@ export function NewsletterSubscribe({
   buttonText = 'Subscribe',
   successMessage,
   className = '',
+  title,
+  description,
 }: NewsletterSubscribeProps) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -172,12 +178,14 @@ export function NewsletterSubscribe({
   return (
     <div className={`bg-blue-600 rounded-[48px] p-10 md:p-20 text-white text-center relative overflow-hidden ${className}`}>
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -ml-48 -mt-48"></div>
-      <div className="relative z-10 max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight leading-tight">Never miss a massive CAD discount again.</h2>
+      <div className="relative z-10 max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
+          {title || "Never miss a massive CAD discount again."}
+        </h2>
         <p className="text-blue-100 text-lg mb-10 font-medium">
-          We notify you about flash sales, Black Friday early access, and secret coupon codes directly to your inbox.
+          {description || "We notify you about flash sales, Black Friday early access, and secret coupon codes directly to your inbox."}
         </p>
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
           <Input
             type="email"
             value={email}
@@ -185,7 +193,7 @@ export function NewsletterSubscribe({
             placeholder={placeholder || 'Enter your email...'}
             required
             disabled={status === 'submitting'}
-            className="h-16 bg-white/20 border-white/30 text-white placeholder:text-blue-200 rounded-2xl px-6 focus:ring-4 focus:ring-white/20 outline-none transition-all"
+            className="h-16 flex-1 w-full bg-white/20 border-white/30 text-white placeholder:text-blue-200 rounded-2xl px-6 focus:ring-4 focus:ring-white/20 outline-none transition-all"
           />
           <Button
             type="submit"

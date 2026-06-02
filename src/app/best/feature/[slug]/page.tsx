@@ -6,6 +6,7 @@ import { featureCategories } from '@/lib/data/featureCategories';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import type { Tool } from '@/lib/data';
 import { ToolLogo } from '@/components/tool-logo';
+import { FoldingList } from '@/components/folding-list';
 import React from 'react';
 
 export const dynamicParams = false;
@@ -1512,7 +1513,10 @@ export default async function BestFeaturePage(
       <p className="text-slate-700 leading-relaxed mb-6">
         Our editor team evaluated every tool in the catalog based on their native {feature.name.toLowerCase()} capabilities. Here are the top-performing packages:
       </p>
-      <ol className="space-y-6">
+      <FoldingList
+        itemType="ol"
+        className="space-y-6"
+      >
         {ranked.map((tool, i) => {
           const totalReviews = (tool.external_ratings ?? []).reduce(
             (acc, r) => acc + (r.count ?? 0),
@@ -1586,7 +1590,7 @@ export default async function BestFeaturePage(
             </li>
           );
         })}
-      </ol>
+      </FoldingList>
     </section>
   );
 
