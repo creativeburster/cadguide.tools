@@ -1,45 +1,50 @@
-# 📋 CADGuide.tools Niche Expansion & Content Roadmap
+# 📋 CADGuide.tools Development & Content Expansion Plan
 
-本文件详细记录了 `cadguide.tools` 的长期内容规划、交互计算器子系统，以及长尾 SEO 攻坚战的落地计划。本规划与 [WIKIHUB_PRD.md](file:///f:/cad%20tools%20io/cadtools-cc/docs/WIKIHUB_PRD.md) 保持一致。
-
----
-
-## 1. 交互式计算器子系统 (Interactive Calculators)
-
-为了大幅度拉升用户在网页上的**停留时间 (Dwell Time)**，从而提升谷歌对整站权重的评分，我们计划在 `/calculators` 下推出 **5 款纯前端免下载的 React 交互计算器**。计算器在输入数值变化时，会利用 SVG Canvas 动态重绘示意图，实现零延迟、强交互体验。
-
-| 计算器名称 | 核心数学模型与功能 | SEO 目标关键词 |
-| :--- | :--- | :--- |
-| **1. 尺寸与单位换算器** | 建筑级英制（Feet-Fractional Inches，如 `12'-6 1/2"`）与公制（Millimeters, Meters）之间的高精度双向换算。支持复制并直接粘贴回 CAD 标注。 | `cad unit converter`, `feet to mm cad` |
-| **2. 绘图比例因子换算器** | 输入图纸真实尺寸和目标打印纸张大小（A0 - A4），智能算出视口比例（Viewport Scale）、标注特征比例参数（DIMSCALE）和线型比例参数（LTSCALE）。 | `cad scale factor calculator`, `ltscale viewport` |
-| **3. ISO/ANSI 公差与配合速查器**| 输入基本尺寸（如 50）与公差配合代号（如 H7/g6），即时输出最大/最小极限尺寸、上下偏差。通过 SVG 动态重绘公差带，直观显示间隙或过盈。 | `iso tolerance calculator`, `shaft hole fit lookup` |
-| **4. 螺纹标准规格速查器** | 提供公制 (Metric M系列) 与美制 (UNC/UNF) 螺纹规格的完整牙距、公称直径、底孔钻头尺寸速查，免去翻阅机械设计手册。 | `tap drill size chart`, `metric thread specifications` |
-| **5. 角度度分秒 (DMS) 转换器** | 十进制角度（如 `45.75°`）、度分秒（`45°45'00"`）及弧度之间的双向高精度毫秒级转换。 | `degrees minutes seconds converter`, `dms to decimal` |
+本文件记录了 `cadguide.tools` 的长期内容扩张计划、交互式计算器子系统，以及长尾 SEO 攻坚规划。
 
 ---
 
-## 2. 跨软件与工作流长尾内容规划 (Cross-Software & Workflow SEO Plan)
+## 1. 权威指南板块扩张计划 (Guides Hub Content Plan)
 
-由于全球 CAD/BIM 软件目录已臻物理上限（已收录 240+ 款工具），我们将内容增量瞄准了**数万个日常工作流痛点的长尾搜索词**。通过提供跨软件迁移指南与工作流排错百科，获取高意图、高转化的精准流量。
+我们将指南体系划分为 **8 大核心大动脉**，专为 B-End 企业级专业用户提供硬核技术解决方案：
 
-### 2.1 跨软件迁移指南 (Migration Playbooks)
-重点针对“从 AutoCAD 迁移到性价比平替（GstarCAD, BricsCAD, ZWCAD）”的企业 IT 管理员和绘图员：
-*   **AutoCAD 快捷键别名兼容映射表 (.pgp)**：提供在线解析与转换工具，方便用户将个人快捷键习惯无缝导入新软件。
-*   **AutoLISP / VBA 插件二次开发接口移植手册**：评估各平台 LISP/GRX 接口的兼容度，帮助企业技术部门评估迁移成本。
+1.  **Troubleshooting（故障分析）**：解决致命崩溃、Exception Code 签名分析与注册表残留清理。
+2.  **Performance（性能调优）**：图形加速设置、多线程分配基准、ISV 显卡驱动匹配。
+3.  **Print & PDF（矢量出图）**：CTB/STB 打印线宽校准、PDF 转换中文字体乱码与线条丢失修复。
+4.  **Standards & APIs（开发与标准）**：AutoLISP API 兼容性对照、CUIX 菜单与自定义 Hatch 导入。
+5.  **BIM & Coordination（协同规范）**：BIM 执行计划 (BEP) 模板、LOD 300 到 LOD 500 精度边界约束。
+6.  **MCAD & Geometry（内核与拓扑）**：Parasolid 与 ACIS 内核转换误差、NURBS 拓扑缝合（Topological Sewing）指南。
+7.  **CAM & 3D Print（数字制造）**：CNC 刀路优化、G-Code 切片算法与 K-Factor 折弯系数。
+8.  **SAM & Compliance（合规审计）**：FLEXlm 授权管理、Named-User 许可证合规审计防范对抗。
 
-### 2.2 核心制图工作流指南 (Evergreen Workflow Guides)
-*   **打印与线宽控制 (Plotting Standards)**：CTB（颜色相关打印样式）与 STB（命名打印样式）精密转换指南，解决“打印 PDF 线条丢失或中文字体显示为问号”的经典问题。
-*   **制图图层标准 (Layer Standards)**：AIA（美国建筑师协会）图层命名规范与机械加工图标准图层设置指南。
-*   **硬件配置推荐 (Hardware Specifications)**：针对 CAD 图纸大装配和渲染（如 Rhino+Grasshopper、SolidWorks）的单核 CPU 与显卡选购指南。
+### 差异化内容排版模板
+针对不同分类指南，我们设计了四套去 AI 化的技术模板以满足 Google 的 E-E-A-T 质量门槛：
+*   **模板 A (技术尸检)**：包含 Exception Code 表格、病因诊断、Windows 注册表路径及修复代码块。
+*   **模板 B (合规风控)**：包含合规风险晴雨表、EULA 协议条款漏洞分析、3 年 TCO 成本复利矩阵。
+*   **模板 C (工业标准)**：包含 ISO/ANSI 标准元数据框、线宽对应对照表、一键部署脚本。
+*   **模板 D (内核基准)**：包含几何精度丢失率（Tolerance Drift）表、C++ 或 Python 底层 API 示例。
 
 ---
 
-## 3. 开发阶段状态跟踪 (Implementation Status)
+## 2. 纯前端交互式微工具蓝图 (Interactive Calculators & Tools Blueprint)
 
-结合 PRD 中的 **100 阶段落地蓝图**，当前项目的整体开发进度如下：
+为了提升用户页面停留时间 (Dwell Time)，我们计划推出 **5 款纯前端执行的交互微工具**。基于数据隐私保护，所有计算、文件解析均在**客户端浏览器本地**完成（零服务器上传，100% 数据安全）：
 
-*   `[x]` **Phase 1 - 10 (技术基础建设)**：完成主路由配置（`/wiki`、`/calculators`）、导航栏和脚手架设计。
-*   `[ ]` **Phase 11 - 20 (计算器模块开发)**：优先启动“尺寸单位换算器”与“绘图比例换算器”的前端数学模型与 React 组件开发。
-*   `[ ]` **Phase 21 - 30 (SQLite 只读引擎)**：配置本地 `wikihub.db` 静态 SQLite 结构以支撑后续上万级 Wiki 页面的超低编译延迟。
-*   `[ ]` **Phase 31 - 40 (Mega-Wiki 模板与交互组件)**：开发三合一多功能 Tab 切换面板与虚拟键盘快捷键过滤交互器。
-*   `[ ]` **Phase 41 - 100 (数据填充、SEO 调优与上线)**：批量填充报错手册、快捷键数据、常青指南并最终上线部署。
+| 工具名称 | 输入参数 | 核心输出与交互 | SEO 目标 |
+| :--- | :--- | :--- | :--- |
+| **1. DXF 头文件与水印扫描器** | 拖拽上传本地 `.dxf` 文件 | 提取 CAD 版本代号、解析图层表（Layer List）并扫描是否带有教育版水印戳（Watermark Detection）。 | `online dxf viewer`, `dxf educational watermark detector` |
+| **2. CTB 打印样式转换器** | 上传本地 `.ctb` 线型文件 | 动态渲染 255 色矩阵，点击色块查看笔宽、颜色覆盖、线性等参数，并提供 clean PDF 和 JSON 导出。 | `cad ctb reader`, `convert ctb line weights` |
+| **3. 钣金折弯系数计算器** | 板材厚度 $T$、折弯半径 $R$、折弯角度 $A$、K-Factor | 基于 DIN 6935 标准计算弯曲补偿（BA）和扣除值（BD）。使用 SVG 2D Canvas 动态演示折弯受力与 Neutral Fiber 偏移。 | `k-factor sheet metal calculation`, `bend allowance calculator` |
+| **4. 3D 打印弦高偏差优化器** | 孔径半径 (mm)、STL 导出角度 (deg)、打印机层高 | 计算 Chordal Deviation 弦高偏差（S），判断三维网格是否达到 Watertight 标准。SVG 可视化圆弧的多边形近似步长。 | `stl export tolerance calculator`, `mesh density optimizer` |
+| **5. FLEXlm Options 配置生成器** | Daemon 端口、Feature Code、用户组列表 | 纯前端可视化选项编译器，支持 RESERVE, INCLUDE, TIMEOUT 等配置，一键下载标准 options.opt 文件。 | `flexlm options file builder`, `cad license reservation` |
+
+---
+
+## 3. 开发阶段状态跟踪 (Implementation Roadmap)
+
+目前我们正处于**第一阶段基础建设与 Deals 页面上线**完成期：
+
+*   `[x]` **Phase I (Deals 页升级)**：Deals 页面完成 19 个真实折扣整理、Tabs 分类器、复制功能，并开放搜索引擎 index。
+*   `[x]` **Phase II (全局 Notice 优化)**：更新顶部 SiteNotice，向用户准确传递 cadguide.tools 定位。
+*   `[ ]` **Phase III (交互计算器开发)**：优先启动“CTB 打印样式转换器”与“钣金折弯系数计算器”的纯前端 React 组件开发。
+*   `[ ]` **Phase IV (企业级长尾指南铺设)**：按照 8 大核心领域逐步编写长尾叶子页并实现全站内链闭环。

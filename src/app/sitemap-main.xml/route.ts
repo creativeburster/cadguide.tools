@@ -20,6 +20,7 @@ export async function GET() {
     { url: '/free', priority: 0.9, changefreq: 'monthly' },
     { url: '/open-source', priority: 0.9, changefreq: 'monthly' },
     { url: '/pricing', priority: 0.9, changefreq: 'monthly' },
+    { url: '/deals', priority: 0.90, changefreq: 'daily' },
     { url: '/guides', priority: 0.95, changefreq: 'daily' },
     { url: '/about', priority: 0.50, changefreq: 'monthly' },
     { url: '/contact', priority: 0.50, changefreq: 'monthly' },

@@ -24,8 +24,8 @@ export function SiteNotice() {
   return (
     <div className="bg-blue-600 text-white text-sm relative z-[300]">
       <div className="container mx-auto px-4 py-2.5 flex items-center justify-center gap-2">
-        <span>
-          The <Link href="/deals" className="underline font-medium hover:text-sky-100 transition-colors">Deals</Link> page is currently in demo mode and will be fully operational soon.
+        <span className="font-medium text-center pr-6">
+          Discover, compare, and master 235+ CAD & BIM tools. Explore side-by-side comparisons, active <Link href="/deals" className="underline font-bold hover:text-sky-100 transition-colors">deals</Link>, and professional guides.
         </span>
         <button
           onClick={handleDismiss}
