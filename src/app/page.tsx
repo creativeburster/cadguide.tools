@@ -90,7 +90,7 @@ function HomeBody() {
             Compare and Find Your <span className="text-blue-400">Perfect CAD</span> Software.
           </h1>
           <p className="text-lg sm:text-xl text-blue-100/70 mb-14 max-w-2xl mx-auto leading-relaxed">
-            Independent reviews, transparent pricing, and deep technical specs for 235+ professional CAD & BIM software.
+            Independent reviews, transparent pricing, and deep technical specs for professional CAD & BIM software.
           </p>
           
           {/* Advanced Interactive Smart Search */}
@@ -102,7 +102,7 @@ function HomeBody() {
               <Link href="/matchmaker">Try Smart Matchmaker</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-blue-400/50 text-white hover:bg-white/10 font-bold h-14 rounded-xl">
-              <Link href="/tools">Browse 235+ Tools</Link>
+              <Link href="/tools">Explore All Tools</Link>
             </Button>
           </div>
         </div>
@@ -244,7 +244,7 @@ function HomeBody() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100 font-black uppercase text-[10px] tracking-[0.25em] py-1 px-3 rounded-full">Discover</Badge>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Browse 235 Tools by …</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Browse CAD Tools by …</h2>
             <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
               Slice the catalog by role, platform, file format, or pricing — every angle has its own curated guide.
             </p>
@@ -281,7 +281,7 @@ function HomeBody() {
               <div className="mt-1 text-xs text-slate-500">Side-by-side spec matches and competitor guides by engineering field…</div>
             </Link>
             <Link href="/alternatives" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">235 guides</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">Switchover Guides</div>
               <div className="mt-1 text-lg font-black text-slate-900">Alternatives</div>
               <div className="mt-1 text-xs text-slate-500">Curated switch-away guides per tool</div>
             </Link>
