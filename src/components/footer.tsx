@@ -14,7 +14,7 @@ export function Footer() {
               <span className="text-blue-500">CAD</span>Guide.tools
             </div>
             <p className="text-sm leading-relaxed">
-              The world&apos;s premier independent directory for CAD, BIM, & Engineering software. Deep-diving into CAD & BIM tools to help professionals make smarter tech decisions.
+              The world&apos;s premier independent directory for CAD, BIM, & Engineering software. Deep-diving into 235+ tools to help professionals make smarter tech decisions.
             </p>
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
