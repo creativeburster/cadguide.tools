@@ -6,7 +6,7 @@
 
 ## 1. 权威指南板块扩张计划 (Guides Hub Content Plan)
 
-> 详细的 8 大领域、48 个技术模板与 2400+ 页面长尾规划详见：[权威指南内容丰富计划 (guides_enrichment_plan.md)](file:///f:/cad%20tools%20io/cadtools-cc/guides_enrichment_plan.md)
+> 详细的 8 大领域与 10 阶段指南生成规划详见：[权威指南内容规划与扩张方案 (guide_content_planning.md)](file:///f:/cad%20tools%20io/cadtools-cc/guide_content_planning.md)
 
 我们将指南体系划分为 **8 大核心大动脉**，专为 B-End 企业级专业用户提供硬核技术解决方案：
 
@@ -30,7 +30,7 @@
 
 ## 2. 纯前端交互式微工具蓝图 (Interactive Calculators & Tools Blueprint)
 
-> 详细的 8 大分类共 80 款交互式工具及 SEO 关键字定位详见：[交互式计算器与微工具蓝图 (calculators_domain_blueprint.md)](file:///f:/cad%20tools%20io/cadtools-cc/calculators_domain_blueprint.md)
+> 详细的 5 大纯前端交互小工具设计蓝图详见：[交互式计算器与微工具蓝图 (calculators_tools_blueprint.md)](file:///f:/cad%20tools%20io/cadtools-cc/calculators_tools_blueprint.md)
 
 为了提升用户页面停留时间 (Dwell Time)，我们计划推出 **5 款纯前端执行的交互微工具**。基于数据隐私保护，所有计算、文件解析均在**客户端浏览器本地**完成（零服务器上传，100% 数据安全）：
 
