@@ -7,7 +7,7 @@
 ### 核心功能模块：
 1.  **软件大厅 (Directory)**：收录 240+ 款专业 CAD/BIM/CAx/EDA 工具，支持精细化的分类、平台、许可证类型筛选。
 2.  **选型PK (Comparisons)**：提供 side-by-side 对比页面（`/compare/[pair]`），动态输出详细的技术规格、功能跑分和价格趋势。
-3.  **权威指南 (Guides Hub)**：针对 B-End 工程师在出图、打印、性能加速、IT 静默分发与反审计等方面的日常工作流痛点，提供 high E-E-A-T 的长尾长文指南（详见 [权威指南内容规划与扩张方案 (guide_content_planning.md)](file:///f:/cad%20tools%20io/cadtools-cc/guide_content_planning.md)）。
+3.  **权威指南 (Guides Hub)**：针对 B-End 工程师在出图、打印、性能加速、IT 静默分发与反审计等方面的日常工作流痛点，提供 high E-E-A-T 的长尾长文指南（详见 [权威指南内容规划与扩张方案 (guide_content_planning.md)](file:///f:/cad%20tools%20io/cadtools-cc/guide_content_planning.md) 与 [未来内容扩张战略 (future_expansion_strategy.md)](file:///f:/cad%20tools%20io/cadtools-cc/future_expansion_strategy.md)）。
 4.  **特惠中心 (Deals)**：收录真实、长期有效的官方年付折扣、学生免费授权及主流平替软件的真实优惠券码。
 5.  **交互微工具 (Interactive Calculators)**：100% 运行于客户端浏览器本地的高质微型工具，通过计算与 SVG 可视化交互，直接拉长用户单次停留时间（详见 [交互式计算器与微工具蓝图 (calculators_tools_blueprint.md)](file:///f:/cad%20tools%20io/cadtools-cc/calculators_tools_blueprint.md)）。
 

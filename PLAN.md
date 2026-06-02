@@ -6,7 +6,8 @@
 
 ## 1. 权威指南板块扩张计划 (Guides Hub Content Plan)
 
-> 详细的 8 大领域与 10 阶段指南生成规划详见：[权威指南内容规划与扩张方案 (guide_content_planning.md)](file:///f:/cad%20tools%20io/cadtools-cc/guide_content_planning.md)
+> 详细的 8 大领域与 10 阶段指南生成规划详见：[权威指南内容规划与扩张方案 (guide_content_planning.md)](file:///f:/cad%20tools%20io/cadtools-cc/guide_content_planning.md)  
+> 详细的中高阶专业人群与三大内容核心扩张支柱详见：[未来内容扩张战略 (future_expansion_strategy.md)](file:///f:/cad%20tools%20io/cadtools-cc/future_expansion_strategy.md)
 
 我们将指南体系划分为 **8 大核心大动脉**，专为 B-End 企业级专业用户提供硬核技术解决方案：
 
