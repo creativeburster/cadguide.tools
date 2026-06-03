@@ -4,7 +4,7 @@ import { FILE_FORMAT_PAGES, toolsForFormat } from '@/lib/seo-content';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD File Formats — Which Tools Open & Edit Each Format',
+  title: 'CAD File Formats Compatibility Guide',
   description:
     'Find software that opens, edits, and exports CAD formats like DWG, STEP, DXF, STL, and IFC. Read/write support is flagged for each tool in our catalog.',
   path: '/file-formats',

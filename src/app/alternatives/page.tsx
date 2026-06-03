@@ -5,7 +5,7 @@ import { pageMetadata } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Software Alternatives — Hand-Vetted Switchover Guides',
+  title: 'Vetted CAD Software Alternatives & Guides',
   description:
     'Every tool in our catalog has a dedicated alternatives page. Find similar CAD, BIM, CAE, and EDA software ranked by price, platform, and target use case.',
   path: '/alternatives',

@@ -42,8 +42,8 @@ const THEMATIC_GROUPS = [
 ];
 
 export const metadata: Metadata = pageMetadata({
-  title: `Best CAD Software in ${YEAR} — Top Tools by Category`,
-  description: `Expert-curated ${YEAR} rankings: top 2D CAD, 3D modeling, BIM, CAE/CAM, EDA tools. Validated against real customer reviews.`,
+  title: `Best CAD Software Rankings & Reviews (${YEAR})`,
+  description: `Expert-curated ${YEAR} rankings: top 2D CAD, 3D modeling, BIM, simulation, and viewer tools.`,
   path: '/best',
 });
 

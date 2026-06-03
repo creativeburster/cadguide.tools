@@ -26,9 +26,9 @@ export async function generateMetadata({
   // Canonical URL should always point to the base tools page (no pagination)
   const canonicalPath = '/tools';
   return pageMetadata({
-    title: `All CAD & BIM Software — Filter by Category, Price, Platform${titleSuffix}`,
+    title: `All CAD & BIM Software Directory${titleSuffix}`,
     description:
-      'Browse professional CAD, BIM, CAE/CAM, EDA tools. Filter by category, price, OS, industry, and expert ratings.',
+      'Browse professional CAD, BIM, CAE/CAM, and EDA tools. Filter by price, OS, industry vertical, and expert ratings to find the right design software.',
     path: canonicalPath,
   });
 }

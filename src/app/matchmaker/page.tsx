@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import MatchmakerClient from './matchmaker-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Software Matchmaker — Find Your Perfect Tool in 60 Seconds',
+  title: 'Find Your Perfect CAD Tool in 60 Seconds',
   description:
     'Answer 6 quick questions about your industry, platform, budget, team size, workflow, and CAD experience. Get a personalised shortlist of CAD tools.',
   path: '/matchmaker',

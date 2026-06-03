@@ -4,7 +4,7 @@ import { PERSONA_PAGES, toolsForPersona } from '@/lib/seo-content';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Software by Role — Architects, Engineers, Designers, Students',
+  title: 'CAD Software Recommendations by Role',
   description:
     'Hand-curated CAD tool shortlists for every role. Architects, mechanical engineers, civil engineers, students, jewelry designers, animators, and more.',
   path: '/for',
