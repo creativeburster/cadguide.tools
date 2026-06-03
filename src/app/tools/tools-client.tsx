@@ -768,7 +768,7 @@ function ToolsList() {
                         <Link href={`/tools/${tool.slug}`}>Review Details</Link>
                       </Button>
                       <Button asChild className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black px-8 h-12 text-xs uppercase tracking-widest shadow-xl shadow-blue-100 transition-all hover:scale-105">
-                        <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow noopener">Try Now</a>
+                        <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow noopener noreferrer">Try Now</a>
                       </Button>
                     </div>
                   </div>

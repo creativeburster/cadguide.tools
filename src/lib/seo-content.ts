@@ -395,8 +395,11 @@ export function pairSlugFor(a: string, b: string): string {
   return `${first}-vs-${second}`;
 }
 
+let cachedPairs: ComparisonPair[] | null = null;
+
 /** Build the validated comparison pair list (drops pairs with unknown slugs). */
 export function comparisonPairs(): ComparisonPair[] {
+  if (cachedPairs) return cachedPairs;
   const seen = new Set<string>();
   const out: ComparisonPair[] = [];
   for (const [aSlug, bSlug] of RAW_COMPARISON_PAIRS) {
@@ -409,6 +412,7 @@ export function comparisonPairs(): ComparisonPair[] {
     seen.add(pairSlug);
     out.push({ pairSlug, a, b });
   }
+  cachedPairs = out;
   return out;
 }
 
@@ -2186,8 +2190,11 @@ function generateSectorArticles(): ArticleSearchItem[] {
   }));
 }
 
+let cachedAllArticles: ArticleSearchItem[] | null = null;
+
 export function getAllArticles(): ArticleSearchItem[] {
-  return [
+  if (cachedAllArticles) return cachedAllArticles;
+  cachedAllArticles = [
     ...generateBestOfArticles(),
     ...generateComparisonArticles(),
     ...generateAlternativesArticles(),
@@ -2196,6 +2203,7 @@ export function getAllArticles(): ArticleSearchItem[] {
     ...generatePersonaArticles(),
     ...generateSectorArticles(),
   ];
+  return cachedAllArticles;
 }
 
 export function searchArticles(query: string, maxResults: number = 8): ArticleSearchItem[] {

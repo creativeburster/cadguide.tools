@@ -1,5 +1,18 @@
 import { tools } from '@/lib/data';
 
+const REGEX_CACHE = new Map<string, RegExp>();
+
+function getCachedRegex(pattern: string, flags = 'gi'): RegExp {
+  const cacheKey = `${pattern}_${flags}`;
+  let regex = REGEX_CACHE.get(cacheKey);
+  if (!regex) {
+    regex = new RegExp(pattern, flags);
+    REGEX_CACHE.set(cacheKey, regex);
+  }
+  regex.lastIndex = 0;
+  return regex;
+}
+
 export interface GuideCategorySection {
   id: string;
   category: 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing';
@@ -499,7 +512,7 @@ export function getLocalizedTitleAndExcerpt(
     const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
     let replaced = false;
     for (const target of targets) {
-      const regex = new RegExp(target, 'gi');
+      const regex = getCachedRegex(target, 'gi');
       if (regex.test(newTitle)) {
         newTitle = newTitle.replace(regex, toolName);
         newExcerpt = newExcerpt.replace(regex, toolName);
@@ -511,7 +524,7 @@ export function getLocalizedTitleAndExcerpt(
     if (!replaced) {
       const allSoftware = ['AutoCAD', 'SolidWorks', 'DraftSight', 'MicroStation'];
       for (const sw of allSoftware) {
-        const regex = new RegExp(sw, 'gi');
+        const regex = getCachedRegex(sw, 'gi');
         if (regex.test(newTitle)) {
           newTitle = newTitle.replace(regex, toolName);
           newExcerpt = newExcerpt.replace(regex, toolName);
@@ -553,7 +566,7 @@ export function getLocalizedTitleAndExcerpt(
     ];
 
     for (const sw of allSoftware) {
-      const regex = new RegExp(sw, 'gi');
+      const regex = getCachedRegex(sw, 'gi');
       if (regex.test(newTitle)) {
         newTitle = newTitle.replace(regex, toolName);
         newExcerpt = newExcerpt.replace(regex, toolName);
@@ -566,7 +579,7 @@ export function getLocalizedTitleAndExcerpt(
   // 2. Perform advanced archetype-specific jargon replacements
   const meta = getArchetypeMetadata(tool.category_id);
   for (const [key, val] of Object.entries(meta.jargonMap)) {
-    const regex = new RegExp(key, 'gi');
+    const regex = getCachedRegex(key, 'gi');
     newTitle = newTitle.replace(regex, val);
     newExcerpt = newExcerpt.replace(regex, val);
     newKeyword = newKeyword.replace(regex, val.toLowerCase());

@@ -150,7 +150,7 @@ function HomeBody() {
                     <Link href={`/tools/${tool.slug}`}>Review</Link>
                   </Button>
                   <Button asChild className="flex-1 bg-slate-900 hover:bg-blue-600 text-white rounded-xl font-bold text-xs h-11">
-                    <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow">Website</a>
+                    <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow noopener noreferrer">Website</a>
                   </Button>
                 </div>
               </div>

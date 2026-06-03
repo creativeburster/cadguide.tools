@@ -354,7 +354,7 @@ export default function DealsPage() {
                     <a
                       href={deal.link}
                       target="_blank"
-                      rel="nofollow noopener"
+                      rel="nofollow noopener noreferrer"
                     >
                       Activate Deal
                     </a>
