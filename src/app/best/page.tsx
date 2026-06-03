@@ -73,7 +73,7 @@ export default function BestIndexPage() {
             </h1>
             <p className="mt-4 text-lg text-slate-600 leading-relaxed max-w-3xl">
               Curated rankings of the top tools in each CAD category. Each
-              list is rebuilt from our 235-tool catalog using expert scores,
+              list is rebuilt from our extensive tool catalog using expert scores,
               real customer review volume from G2/Capterra/TrustRadius, and
               feature-coverage tiebreakers.
             </p>

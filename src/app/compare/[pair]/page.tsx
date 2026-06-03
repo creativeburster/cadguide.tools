@@ -616,7 +616,7 @@ export default async function ComparePairPage(
       </h2>
       <p className="text-slate-400 text-sm md:text-base mb-6 max-w-xl font-medium leading-relaxed">
         Compare more than two tools side-by-side, or answer a short
-        quiz and let our matchmaker filter the 240-tool catalog for
+        quiz and let our matchmaker filter our extensive tool catalog for
         your team.
       </p>
       <div className="flex flex-wrap gap-3">

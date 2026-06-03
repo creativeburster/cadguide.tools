@@ -5,7 +5,7 @@ import { pageMetadata } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Software Alternatives — 235 Hand-Vetted Switchover Guides',
+  title: 'CAD Software Alternatives — Hand-Vetted Switchover Guides',
   description:
     'Every tool in our catalog has a dedicated alternatives page. Find similar CAD, BIM, CAE, and EDA software ranked by price, platform, and target use case.',
   path: '/alternatives',
@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
 
 // Tools most likely to be the target of an "alternatives" search — top by
 // expert score with an external review presence, capped at 24 for the
-// landing-page grid. Full list of 235 is still in /sitemap.xml.
+// landing-page grid. Full list of tools is still in /sitemap.xml.
 function popularSwitchAwayTargets() {
   return [...tools]
     .map((t) => ({
@@ -89,7 +89,7 @@ export default function AlternativesIndexPage() {
           </ul>
         </section>
 
-        {/* Brand new Category Accordion Directory of all 240+ tools */}
+        {/* Brand new Category Accordion Directory of all tools */}
         <section className="border-t border-slate-200 pt-12 mb-12">
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">
             Browse Alternatives for All {tools.length} Tools

@@ -28,7 +28,7 @@ export async function generateMetadata({
   return pageMetadata({
     title: `All CAD & BIM Software — Filter by Category, Price, Platform${titleSuffix}`,
     description:
-      'Browse 235+ CAD, BIM, CAE/CAM, EDA tools. Filter by category, price, OS, industry, and expert ratings.',
+      'Browse professional CAD, BIM, CAE/CAM, EDA tools. Filter by category, price, OS, industry, and expert ratings.',
     path: canonicalPath,
   });
 }
@@ -47,7 +47,7 @@ export default async function ToolsPage({
   const collection = collectionPageLd({
     name: 'CAD & BIM Software Directory',
     description:
-      'Compare 235+ professional CAD, BIM, CAE/CAM, EDA, and viewer tools side by side.',
+      'Compare professional CAD, BIM, CAE/CAM, EDA, and viewer tools side by side.',
     path: '/tools',
     numItems: tools.length,
   });
@@ -57,7 +57,7 @@ export default async function ToolsPage({
   ]);
   // The category list is useful as a sub-ItemList for crawler context —
   // but we already emit `numberOfItems` on the CollectionPage above, so
-  // listing 235 LiteralItems would blow up the JSON-LD payload size for
+  // listing all LiteralItems would blow up the JSON-LD payload size for
   // little SEO gain. Keep it compact.
   void categories;
   return (

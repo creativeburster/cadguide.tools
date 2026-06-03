@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   ...pageMetadata({
     title: 'Page Not Found (404)',
     description:
-      'The page you are looking for could not be found. Browse our directory of 235+ CAD, BIM, CAE/CAM and EDA tools, or use the smart Matchmaker to find your next CAD tool.',
+      'The page you are looking for could not be found. Browse our directory of professional CAD, BIM, CAE/CAM and EDA tools, or use the smart Matchmaker to find your next CAD tool.',
     path: '/404',
   }),
   robots: { index: false, follow: true },
@@ -38,7 +38,7 @@ export default function NotFound() {
                 Browse the Directory
               </div>
               <div className="mt-2 text-slate-900 font-semibold">
-                235+ CAD, BIM, CAE/CAM, and EDA tools
+                Professional CAD, BIM, CAE/CAM, and EDA tools
               </div>
               <div className="mt-1 text-sm text-slate-500">
                 Filter by category, platform, price, and industry.

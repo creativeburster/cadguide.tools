@@ -850,9 +850,9 @@ function ToolsList() {
             </div>
           )}
 
-          {/* --- CRITICAL: THE 235+ TOOL HTML DOM FLAT SITEMAP INTERLINKING DIRECTORY --- */}
+          {/* --- CRITICAL: THE FULL TOOL HTML DOM FLAT SITEMAP INTERLINKING DIRECTORY --- */}
           {/* Statically renders 100% of leaf node tool links in the DOM to bypass dynamic pagination index gaps! */}
-          {/* Googlebot can instantly traverse and crawl all 235+ tools in a single fetch, collapsing crawl depth from 4 to 2. */}
+          {/* Googlebot can instantly traverse and crawl all tools in a single fetch, collapsing crawl depth from 4 to 2. */}
           <div className="mt-16 pt-8 border-t border-slate-100">
             <Card className="border-none shadow-[0_16px_32px_-12px_rgba(0,0,0,0.03)] rounded-[24px] bg-slate-50/50 overflow-hidden border border-slate-100/50">
               <button
@@ -865,7 +865,7 @@ function ToolsList() {
                     📁 Complete CAD & BIM Software Sitemap Directory (A-Z)
                   </h3>
                   <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide mt-1.5">
-                    Bypass pagination indexes. Flat crawling directory containing all 235+ tool pathways.
+                    Bypass pagination indexes. Flat crawling directory containing all tool pathways.
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -929,7 +929,7 @@ export default function ToolsDirectoryPage() {
         </Badge>
         <h1 className="text-4xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">Professional CAD Software</h1>
         <p className="text-slate-500 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-          Deep-dive into 235+ tools with technical specs, expert verdicts, and community reviews.
+          Deep-dive into CAD and BIM tools with technical specs, expert verdicts, and community reviews.
         </p>
       </div>
 

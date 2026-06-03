@@ -75,7 +75,7 @@ export default async function Image() {
             lineHeight: '1.4',
           }}
         >
-          Compare 235+ CAD, BIM & Engineering Tools. 
+          Compare Professional CAD, BIM & Engineering Tools. 
           Unbiased Reviews, Real Pricing & Technical Data.
         </div>
 
