@@ -9,9 +9,9 @@ import { pageMetadata, websiteLd, organizationLd } from '@/lib/seo';
 import { SmartSearch } from '@/components/SmartSearch';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CADGuide.tools: Compare 235+ Best CAD Software 2026 (Free & Pro)',
+  title: `CADGuide.tools: Compare & Find the Best CAD Software ${new Date().getFullYear()} (Free & Pro)`,
   description:
-    'Find the perfect design tool. Compare 235+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
+    'Find the perfect design tool. Compare professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
   path: '/',
 });
 

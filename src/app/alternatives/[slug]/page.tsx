@@ -14,7 +14,7 @@ export function generateStaticParams() {
   return alternativesPagePaths();
 }
 
-const YEAR = 2026;
+const YEAR = new Date().getFullYear();
 
 function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';

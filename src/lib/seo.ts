@@ -50,17 +50,18 @@ const PRESERVED_INDEXED_SLUGS: readonly string[] = preservedIndexedSlugs.slugs;
 export function toolTitle(tool: Tool, category?: Category): string {
   const categoryName = category?.name ?? "CAD";
   const price = pricingSummary(tool);
+  const currentYear = new Date().getFullYear();
 
   // If the tool is already indexed (in our whitelist), preserve its exact title pattern containing price to guarantee zero rank volatility
   if (PRESERVED_INDEXED_SLUGS.includes(tool.slug)) {
-    return `${tool.name} Review 2026: ${categoryName} Software (${price}) | ${SITE_NAME}`;
+    return `${tool.name} Review ${currentYear}: ${categoryName} Software (${price}) | ${SITE_NAME}`;
   }
 
   // For the unindexed, longer tail tools, we avoid repetitive templated price brackets 
   // (which Google's quality classifier flags as auto-generated thin content).
   // Instead, we use a distinct, highly compact specs-oriented title layout (conforming to Google's 50-60 character limit)
   // to establish high-quality authority and boost rapid indexing.
-  return `${tool.name} Review 2026: ${categoryName} Tech Specs | ${SITE_NAME}`;
+  return `${tool.name} Review ${currentYear}: ${categoryName} Tech Specs | ${SITE_NAME}`;
 }
 
 /** Canonical URL for the tool detail page. */
