@@ -6,7 +6,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: 'CAD File Formats — Which Tools Open & Edit Each Format',
   description:
-    'Find software that opens, edits, and exports each CAD file format. DWG, STEP, STL, IFC, DXF, OBJ, PDF, 3DM, 3MF, and more — with read/write capability flagged per tool.',
+    'Find software that opens, edits, and exports CAD formats like DWG, STEP, DXF, STL, and IFC. Read/write support is flagged for each tool in our catalog.',
   path: '/file-formats',
 });
 

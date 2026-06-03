@@ -5,9 +5,9 @@ import { tools } from '@/lib/data';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Software by Pricing Model — Free, Open Source, Perpetual Buyouts',
+  title: 'CAD Software Pricing Models | CADGuide.tools',
   description:
-    'Find CAD, BIM, CAE, and EDA tools matching your budget constraints. Compare free platforms, open-source software, freemium options, subscription-only SaaS, and perpetual buyout licenses.',
+    'Compare CAD, BIM, CAE, and EDA software by pricing model. Browse directories of free, open-source, subscription, and perpetual license tools.',
   path: '/pricing',
 });
 

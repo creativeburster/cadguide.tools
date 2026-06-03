@@ -6,7 +6,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Software by Sector & Industry Vertical',
   description:
-    'Hand-curated CAD tool shortlists for 16 specialized industry sectors. Automotive, aerospace, CAE/CAM, 3D printing, medical devices, sheet metal, steel detailing, and more.',
+    'Hand-curated CAD tool shortlists for 16 specialized sectors, from automotive and aerospace to 3D printing, sheet metal, and medical devices.',
   path: '/sectors',
 });
 

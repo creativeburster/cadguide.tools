@@ -4,9 +4,9 @@ import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: 'Page Not Found (404)',
+    title: 'Page Not Found (404) | CADGuide.tools',
     description:
-      'The page you are looking for could not be found. Browse our directory of professional CAD, BIM, CAE/CAM and EDA tools, or use the smart Matchmaker to find your next CAD tool.',
+      'The page you requested could not be found. Browse our directory of professional CAD & BIM software, or try the Matchmaker to find your tool.',
     path: '/404',
   }),
   robots: { index: false, follow: true },
