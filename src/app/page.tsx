@@ -9,7 +9,7 @@ import { pageMetadata, websiteLd, organizationLd } from '@/lib/seo';
 import { SmartSearch } from '@/components/SmartSearch';
 
 export const metadata: Metadata = pageMetadata({
-  title: `Compare & Find the Best CAD & BIM Software ${new Date().getFullYear()} | CADGuide`,
+  title: `Compare & Find the Best CAD & BIM Software ${new Date().getFullYear()} | CADGuide.tools`,
   description:
     'Find the perfect design tool. Compare professional 2D/3D CAD & BIM software by technical specs, pricing, expert reviews, and our smart Matchmaker.',
   path: '/',
