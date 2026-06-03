@@ -1200,6 +1200,24 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
       },
     ],
   },
+  skp: {
+    slug: "skp",
+    formatName: "SKP",
+    formatValues: ["SKP"],
+    fullName: "SketchUp Document",
+    intro:
+      "SKP is the native file format utilized by Trimble SketchUp, a widely popular 3D modeling application used in architecture, interior design, civil engineering, and video game development. SKP files store 3D models composed of faces and edges (polygon mesh representation) rather than parametric solid kernels. SKP documents are designed for rapid conceptual sketching, supporting custom materials, component libraries, scenes, and geographic styles.",
+    faqs: [
+      {
+        q: "How do I open and view SKP files for free?",
+        a: "SketchUp offers 'SketchUp Viewer' (available for free on Windows, macOS, iOS, and Android) to view and present 3D models. Alternatively, Trimble publishes 'SketchUp Free', a web browser-based modeler that lets you open, view, and make basic edits to SKP files directly without any desktop installation.",
+      },
+      {
+        q: "How can I import SKP files into other CAD software like Revit or AutoCAD?",
+        a: "Autodesk Revit and AutoCAD support direct SKP imports. When importing into Revit, SKP components are mapped as Revit families, and textures can be customized in the materials editor. Alternatively, you can export SketchUp models to DWG, DXF, or IFC formats to preserve structured metadata.",
+      },
+    ],
+  },
 };
 
 export function formatPagePaths(): { slug: string }[] {
