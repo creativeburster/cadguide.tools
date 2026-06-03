@@ -9,9 +9,9 @@ import { pageMetadata, websiteLd, organizationLd } from '@/lib/seo';
 import { SmartSearch } from '@/components/SmartSearch';
 
 export const metadata: Metadata = pageMetadata({
-  title: `CADGuide.tools: Compare 235+ Best CAD Software ${new Date().getFullYear()} (Free & Pro)`,
+  title: `CADGuide.tools: Compare & Find the Best CAD Software ${new Date().getFullYear()} (Free & Pro)`,
   description:
-    'Find the perfect design tool. Compare 235+ professional CAD software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
+    'Find the perfect design tool. Compare professional CAD & BIM software for 2D/3D, BIM, and specialized industries. Expert reviews, pricing, and our smart Matchmaker.',
   path: '/',
 });
 
@@ -225,7 +225,7 @@ function HomeBody() {
           <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don't accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
-              <div className="text-blue-600 text-5xl font-black mb-2">240+</div>
+              <div className="text-blue-600 text-5xl font-black mb-2">235+</div>
               <div className="text-slate-900 font-black uppercase tracking-widest text-xs">Tools Indexed</div>
             </div>
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
