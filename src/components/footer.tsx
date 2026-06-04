@@ -57,29 +57,31 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Browse by Pricing */}
+          {/* Pricing & License */}
           <div>
             <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
-              <Link href="/pricing" className="hover:text-blue-400 transition-colors">By Pricing</Link>
+              <Link href="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
             </h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/pricing/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
-              <li><Link href="/pricing/freemium" className="hover:text-blue-400 transition-colors">Freemium</Link></li>
-              <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
               <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
+              <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
+              <li><Link href="/pricing/network" className="hover:text-blue-400 transition-colors">Floating Net</Link></li>
+              <li><Link href="/pricing/educational" className="hover:text-blue-400 transition-colors">Student License</Link></li>
             </ul>
           </div>
 
-          {/* Browse by Licensing */}
+          {/* Toolbox */}
           <div>
             <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
-              <Link href="/pricing" className="hover:text-blue-400 transition-colors">By License</Link>
+              <Link href="/toolbox" className="hover:text-blue-400 transition-colors">Toolbox</Link>
             </h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
-              <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
-              <li><Link href="/pricing/network" className="hover:text-blue-400 transition-colors">Floating</Link></li>
-              <li><Link href="/pricing/educational" className="hover:text-blue-400 transition-colors">Student</Link></li>
+              <li><Link href="/toolbox/dwg-version-checker" className="hover:text-blue-400 transition-colors">DWG Checker</Link></li>
+              <li><Link href="/toolbox/shortcuts" className="hover:text-blue-400 transition-colors">CAD Shortcuts</Link></li>
+              <li><Link href="/toolbox/k-factor-calculator" className="hover:text-blue-400 transition-colors">K-Factor Calc</Link></li>
+              <li><Link href="/toolbox/flexlm-concurrent-seats-queue" className="hover:text-blue-400 transition-colors">FLEXlm Calc</Link></li>
+              <li><Link href="/toolbox/3d-printing-chordal-deviation" className="hover:text-blue-400 transition-colors">Mesh Optimizer</Link></li>
             </ul>
           </div>
 
