@@ -15,7 +15,7 @@ export const TOOLBOX_CATEGORIES = [
   { id: 'cheatsheet', name: 'Cheat Sheets & References' },
   { id: 'calculator', name: 'Engineering Calculators' },
   { id: 'converter', name: 'Parsers & File Converters' },
-  { id: 'troubleshoot', name: 'Troubleshooting Guides' },
+  { id: 'troubleshoot', name: 'Troubleshooting Wizards' },
 ] as const;
 
 export const TOOLBOX_DATA: ToolboxItem[] = [

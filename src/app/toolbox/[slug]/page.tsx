@@ -56,7 +56,7 @@ export default async function ToolboxDetailPlaceholderPage({ params }: { params:
       case 'converter':
         return 'File Parser & Converter';
       case 'troubleshoot':
-        return 'Troubleshooting Guide';
+        return 'Troubleshooting Wizard';
     }
   };
 
