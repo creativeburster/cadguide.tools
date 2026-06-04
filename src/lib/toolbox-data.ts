@@ -223,8 +223,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Optimize software licensing budgets by calculating the minimum floating licenses required using Erlang-C.',
     detailDesc: 'Input your team size, peak CAD drafting hour overlap, and license denial tolerance. The calculator uses the Erlang-C queuing algorithm to find the ideal license seat pool to minimize costs.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['flexlm license calculator', 'floating licenses', 'concurrent license optimization', 'erlang c server']
   },
   {
