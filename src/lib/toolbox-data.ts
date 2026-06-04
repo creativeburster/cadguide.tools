@@ -332,7 +332,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Input your AutoCAD crash memory address codes to diagnose the crash cause and get fixes.',
     detailDesc: 'A diagnostic wizard mapped to over 100 common AutoCAD crash addresses (e.g. e06d7363h, Access Violation). Gives solutions for graphics acceleration, registry issues, or corrupt DLLs.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['autocad fatal error', 'crash diagnostic code', 'e06d7363h crash fix', 'cad access violation']
   },
@@ -342,7 +343,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'An interactive diagnostic path to solve server port blocks, network timeouts, and firewall licensing issues.',
     detailDesc: 'Resolve licensing issues (e.g., "Cannot connect to license server"). Tests port 27000-27009 status, firewall exclusions, and configures the ADSKFLEX_LICENSE_FILE environment variables.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['flexlm error 15', 'network license connection failed', 'port 27000 block', 'adskflex license file']
   },
@@ -352,7 +354,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Diagnose laggy viewports and massive dwg files by scanning for scales, regapps, and bloat.',
     detailDesc: 'Analyze your lag symptoms. Guides you through purge commands, removing excessive scale lists (SCALELISTEDIT), binding corrupt Xrefs, and cleaning orphan regapp blocks.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['slow dwg file', 'cad viewport lag', 'cleanup scalelistedit', 'orphan regapps bloat']
   },
@@ -372,7 +375,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Resolve plotting issues where Chinese characters show as scrambled letters, question marks, or gibberish in PDF exports.',
     detailDesc: 'Step-by-step diagnostic guide for resolving TTF/SHX font embedding issues in PDF plotter drivers. Covers setting "Capture Fonts" options, system font variables, and switching to DWG to PDF.pc3 config.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['cad pdf gibberish', 'garbled text pdf plotting', 'chinese characters pdf question mark', 'pc3 plotter font capture']
   },
@@ -442,7 +446,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Create a customized Windows command script to safely reset AutoCAD settings and clean profiles.',
     detailDesc: 'Generate a clean .bat batch script to remove orphaned registry paths, cached license locks, and configuration settings when performing clean CAD reinstalls.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['clean uninstall autocad', 'reset cad registry batch', 'remove licensing cache', 'autocad bat reset']
   },
@@ -462,7 +467,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Parse network license debug logs locally to audit usage statistics and license denials.',
     detailDesc: 'Drag your lmgrd debug log files locally in your browser. Analyzes denied checkouts, concurrent usage peaks, and seat hogging without uploading sensitive server logs.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['flexlm log analyzer', 'lmgrd debug log audit', 'license denials report', 'floating license usage chart']
   },
