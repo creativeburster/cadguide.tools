@@ -243,8 +243,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate viewport scale factor multipliers and the exact XP command input for AutoCAD layout viewports.',
     detailDesc: 'Choose your model space units (mm, cm, m, inches), paper space layouts, and target print scales (e.g. 1:50). The tool outputs the exact Zoom XP multiplier (e.g., 1/50xp) for your drawing window.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['viewport scale calculator', 'cad scale factor', 'zoom xp command', 'layout plotting scale']
   },
   {
