@@ -316,8 +316,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert standard RGB or Hex color codes to their closest matching AutoCAD Index Color (1-255).',
     detailDesc: 'Enter RGB or Hex values. The algorithm calculates color distance (Delta E) to match your color to the nearest standard ACI code used in CTB line weight indexing.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['rgb to aci', 'autocad index color converter', 'cad hex color matching', 'aci color list']
   },
   {
