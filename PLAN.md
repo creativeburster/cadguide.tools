@@ -51,5 +51,5 @@
 
 *   `[x]` **Phase I (Deals 页升级)**：Deals 页面完成 19 个真实折扣整理、Tabs 分类器、复制功能，并开放搜索引擎 index。
 *   `[x]` **Phase II (全局 Notice 优化)**：更新顶部 SiteNotice，向用户准确传递 cadguide.tools 定位。
-*   `[ ]` **Phase III (交互计算器开发)**：优先启动“CTB 打印样式转换器”与“钣金折弯系数计算器”的纯前端 React 组件开发。
-*   `[ ]` **Phase IV (企业级长尾指南铺设)**：按照 8 大核心领域逐步编写长尾叶子页并实现全站内链闭环。
+*   `[x]` **Phase III (交互计算器开发)**：全量自研交互计算器与诊断工具（包含 limits-and-fits、flexlm-error-15、k-factor、shortcuts 等全部 12 款原生工具）已全部 100% 开发完成并通过 Next.js 静态生产 build 编译。
+*   `[ ]` **Phase IV (企业级长尾指南铺设)**：【下一步行动】按照 8 大核心领域逐步编写长尾叶子页并实现全站内链闭环（启动 Guides 模块 Trunk 骨架激活与 A-Z 索引数据库的建构）。
