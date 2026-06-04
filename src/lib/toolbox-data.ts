@@ -277,8 +277,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Determine load-bearing limits, maximum deflection, and section modulus for structural H-Beams.',
     detailDesc: 'Input span length, point loads, and steel beam cross-sections to check bending stress and maximum deflections under AISC construction standards.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['beam deflection calculator', 'section modulus steel', 'i-beam bending limits', 'aisc load limits']
   },
   {
