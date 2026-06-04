@@ -253,8 +253,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Enter shaft and hole dimensions to instantly calculate engineering tolerances and fit classifications.',
     detailDesc: 'Calculates maximum/minimum clearance or interference, fundamental deviations, and tolerance bands for metric shafts and holes. Visualizes standard tolerances in real-time.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['fits calculator', 'tolerance calculator', 'iso 286 fit calculator', 'mechanical clearance']
   },
   {
