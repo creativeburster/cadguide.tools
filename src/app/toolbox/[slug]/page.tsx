@@ -15,8 +15,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     return {};
   }
 
+  const prefix = tool.origin === 'third-party' ? 'Best Online' : 'Free Online';
   return pageMetadata({
-    title: `${tool.title} — Free Online CAD Utility & Guide`,
+    title: `${prefix} ${tool.title} & Evaluation Guide`,
     description: tool.description,
     path: `/toolbox/${slug}`,
   });
@@ -78,9 +79,15 @@ export default async function ToolboxDetailPlaceholderPage({ params }: { params:
             <span className="text-xs font-black text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100/50">
               {renderCategoryLabel(tool.category)}
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-amber-500/10 text-amber-600 border border-amber-500/20">
-              🛠️ In Development
-            </span>
+            {tool.origin === 'native' ? (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-amber-500/10 text-amber-600 border border-amber-500/20">
+                🛠️ Native Development
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-indigo-500/10 text-indigo-600 border border-indigo-500/20">
+                🔍 Cloud Referral Hub
+              </span>
+            )}
           </div>
 
           {/* Heading */}
@@ -89,34 +96,49 @@ export default async function ToolboxDetailPlaceholderPage({ params }: { params:
               {tool.title}
             </h1>
             <p className="text-sm text-slate-500 font-medium leading-relaxed">
-              We are actively developing this utility. It runs 100% locally in your browser with complete client-side data privacy (no server uploads).
+              {tool.origin === 'native'
+                ? 'We are actively developing this utility. It runs 100% locally in your browser with complete client-side data privacy (no server uploads).'
+                : 'For tasks that require heavy cloud computing or proprietary engines, we evaluate and recommend the best-performing commercial providers. Learn how to process files without license audits or security risks.'}
             </p>
           </div>
 
           {/* Description of What it will do */}
           <div className="bg-slate-50 border border-slate-100/50 rounded-3xl p-6 space-y-3">
-            <h4 className="text-xs font-black text-slate-400 uppercase tracking-wider">Features & Specs Preview</h4>
+            <h4 className="text-xs font-black text-slate-400 uppercase tracking-wider">
+              {tool.origin === 'native' ? 'Features & Specs Preview' : 'Evaluation & Integration Benchmark'}
+            </h4>
             <p className="text-xs text-slate-600 leading-relaxed font-semibold">
               {tool.detailDesc}
             </p>
           </div>
 
-          {/* Dynamic Launch Info */}
+          {/* Dynamic Info */}
           <div className="flex items-center gap-4 text-xs font-bold text-slate-400">
-            <span>Expected Release: Q3 2026</span>
+            <span>{tool.origin === 'native' ? 'Expected Release: Q3 2026' : 'Updates: Verified Links'}</span>
             <span className="text-slate-200">|</span>
-            <span>Developer: Antigravity AI</span>
+            <span>Ecosystem: {tool.origin === 'native' ? 'CADGuide Native' : 'Curated Cloud Directory'}</span>
           </div>
 
           {/* Lead Capture form */}
-          <NewsletterSubscribe
-            variant="banner"
-            title="Get notified when this utility launches"
-            description="Enter your email below. We will send you a one-time notification the second this tool goes live, along with early access."
-            buttonText="Notify Me"
-            placeholder="Enter your work email"
-            className="pt-6 border-t border-slate-100 rounded-none bg-transparent text-slate-900 p-0"
-          />
+          {tool.origin === 'native' ? (
+            <NewsletterSubscribe
+              variant="banner"
+              title="Get notified when this utility launches"
+              description="Enter your email below. We will send you a one-time notification the second this tool goes live, along with early access."
+              buttonText="Notify Me"
+              placeholder="Enter your work email"
+              className="pt-6 border-t border-slate-100 rounded-none bg-transparent text-slate-900 p-0"
+            />
+          ) : (
+            <NewsletterSubscribe
+              variant="banner"
+              title="Get the curated recommendations checklist"
+              description="Receive our monthly CAD insider digest containing evaluated cloud tools, coupon discounts codes, and anti-telemetry setup files."
+              buttonText="Get Recommendations"
+              placeholder="Enter your work email"
+              className="pt-6 border-t border-slate-100 rounded-none bg-transparent text-slate-900 p-0"
+            />
+          )}
         </div>
       </main>
     </>
