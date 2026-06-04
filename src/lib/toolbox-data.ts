@@ -306,7 +306,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Load your color-dependent plot style (CTB) files to visualize and export pen width calibrations.',
     detailDesc: 'Upload custom .ctb style sheets. The client-side parser decodes index colors to display pen weights (mm), screening, and linestyles in a searchable 255-color grid. Export as printable PDF or JSON.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['ctb file reader', 'plot style visualizer', 'ctb pen weights table', 'autocad print style sheet']
   },
