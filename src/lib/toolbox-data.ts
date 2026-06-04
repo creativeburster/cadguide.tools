@@ -52,7 +52,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Printable list of SolidWorks sketch, assembly, and drawing hotkeys and mouse gestures.',
     detailDesc: 'A comprehensive, searchable index of SolidWorks shortcuts, including standard hotkeys, S-key shortcuts, and customizable mouse gestures. Highly optimized for print and quick lookup.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['solidworks shortcuts', 'solidworks hotkeys', 'solidworks cheat sheet', 'sketch gestures']
   },
