@@ -303,8 +303,8 @@ function HomeBody() {
                   <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-115 transition duration-300">
                     🧮
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-slate-100 text-slate-400 border border-slate-200">
-                    Coming Soon
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-emerald-50 text-emerald-600 border border-emerald-100">
+                    ● Try Free
                   </span>
                 </div>
                 <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -314,8 +314,8 @@ function HomeBody() {
                   Calculate sheet metal bend allowances and deductions using DIN 6935 formulas with interactive neutral axis shifting.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-xs font-black text-slate-400 gap-1.5 group-hover:text-blue-600">
-                View Previews
+              <div className="mt-8 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
+                Launch Calculator
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
