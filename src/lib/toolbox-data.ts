@@ -296,7 +296,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Inspect ASCII DXF files locally to scan for Autodesk educational plotting watermarks and extract layer tables.',
     detailDesc: 'Upload a DXF drawing to scan for educational version registry signatures that trigger printing border stamps. Extracts all active layer tables and colors without uploading files.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['dxf educational watermark', 'dxf layer parser', 'remove educational plot stamp', 'dxf registry scanner']
   },
