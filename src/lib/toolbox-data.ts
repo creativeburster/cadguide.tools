@@ -212,8 +212,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate sheet metal bend deduction, bend allowance, and flat pattern blank size.',
     detailDesc: 'Apply standard DIN 6935 metal bending formulas to compute sheet metal flat lengths. Featuring dynamic SVG visualizations of inner bend radius, thickness, and neutral fiber shifting.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['k-factor calculator', 'bend allowance', 'bend deduction', 'sheet metal flat length', 'din 6935']
   },
   {
