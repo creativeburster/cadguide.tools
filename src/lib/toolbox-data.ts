@@ -458,7 +458,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Edit, customize, and compile AutoCAD PGP command shortcut files directly in your browser.',
     detailDesc: 'Upload your existing acad.pgp or gcad.pgp, edit aliases in an interactive table, detect duplicate hotkeys, and download a syntactically verified output PGP file.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['edit acad pgp', 'cad command alias compiler', 'pgp alias editor online', 'reinit pgp shortcuts']
   },
@@ -479,7 +480,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate safe macro script commands to clean orphan registered application blocks.',
     detailDesc: 'If your drawings are bloated and laggy, generate a custom LISP macro script to purge excessive registered applications (-PURGE > R) in automated batch routines.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['purge regapps command', 'dwg bloat script', 'registered application cleanup', 'lisp purge regapp']
   },
@@ -489,7 +491,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Resolve drawing lag caused by custom scale lists using automated command script builders.',
     detailDesc: 'Custom scale lists often bloat drawings through external references. Generate the exact script routine command to restore standard default scale lists in any CAD interface.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-04',
     origin: 'native',
     keywords: ['scale list reset utility', 'scalelistedit bloat fix', 'cad plotting scale reset', 'xref scale cleanup']
   },
