@@ -233,8 +233,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Optimize STEP/IGES to STL export resolution by calculating chordal sagitta deviation.',
     detailDesc: 'Input cylinder radius and angular export tolerances to calculate chordal deviation. Tells you if your STL export mesh will show faceted stepping on circular holes.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['chordal deviation', 'stl resolution calculator', 'watertight mesh export', '3d print faceting']
   },
   {
