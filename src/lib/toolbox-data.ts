@@ -265,8 +265,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Search recommended drill sizes for metric (M) and unified (UNC/UNF) threads based on engagement percentages.',
     detailDesc: 'Calculates the ideal pilot hole drill diameter for tapping threads. Supports 50% to 75% thread engagement tolerances for steel, aluminum, and brass.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
     origin: 'native',
+    releasedDate: '2026-06-04',
     keywords: ['tap drill size calculator', 'metric thread drill', 'unc clearance hole', 'machining tap guide']
   },
   {
