@@ -63,7 +63,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable database of Rhino 3D hotkeys, mouse modifiers, and customize command aliases.',
     detailDesc: 'Find all keyboard shortcuts and command aliases for Rhinoceros 3D. Compare defaults with popular industrial design keymaps and download custom .txt alias files.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['rhino shortcuts', 'rhino aliases', 'rhinoceros 3d hotkeys', 'industrial design hotkeys']
   },
@@ -73,7 +74,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Quick reference sheet for Revit BIM modeling commands, modification tools, and view controls.',
     detailDesc: 'Searchable index of two-character Revit shortcuts. Categorized by Architecture, Structure, MEP, and View tabs to speed up your parametric BIM drafting workflow.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['revit shortcuts', 'bim keyboard shortcuts', 'revit keys', 'revit cheat sheet']
   },
@@ -83,7 +85,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Quick lookup table for SketchUp drawing axes, tool keys, and view manipulation shortcuts.',
     detailDesc: 'Learn the primary drawing, camera, and layout shortcuts for SketchUp Pro. Includes key combinations for Windows and macOS.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['sketchup shortcuts', 'sketchup hotkeys', 'sketchup cheat sheet', 'sketchup mac shortcuts']
   },
@@ -93,7 +96,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Printable list of Inventor assembly, drawing, and sheet metal design shortcut hotkeys.',
     detailDesc: 'Quickly find shortcuts in Inventor. Includes common keys for 2D/3D sketching, component placement, constraint options, and standard presentation tools.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['inventor shortcuts', 'inventor keys', 'autodesk inventor hotkeys', 'cad assembly shortcuts']
   },
@@ -103,7 +107,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable index of MicroStation keyboard shortcuts, mouse shortcuts, and workspace mappings.',
     detailDesc: 'Learn the core key-ins and mouse shortcuts for MicroStation. Compare the drawing engine mappings to standard AutoCAD controls.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['microstation shortcuts', 'microstation hotkeys', 'microstation cheat sheet', 'bentley keys']
   },
@@ -113,7 +118,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Quick lookup cheat sheet for Archicad drawing, object placement, and 3D modeling shortcuts.',
     detailDesc: 'Explore all shortcut keys in Archicad Pro. Includes standard hotkeys, navigator modifiers, and custom keyboard layouts.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['archicad shortcuts', 'archicad hotkeys', 'graphisoft shortcuts', 'bim tool shortcuts']
   },
@@ -123,7 +129,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Printable cheat sheet for CATIA Sketcher, Part Design, and Generative Shape Design shortcuts.',
     detailDesc: 'Quickly lookup shortcuts in CATIA. Optimize your mechanical assembly design workflows with customized mouse/keyboard modifiers.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['catia shortcuts', 'catia hotkeys', 'part design hotkeys', 'sketcher hotkeys']
   },
@@ -133,7 +140,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Essential keyboard shortcuts and mouse modifiers reference for PTC Creo 3D modeling and assembly.',
     detailDesc: 'Search all keyboard commands in Creo. Categorized by sketching, modeling, configuration variables, and custom macro triggers.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['creo shortcuts', 'creo parametric hotkeys', 'ptc creo cheat sheet', 'assembly hotkeys']
   },
@@ -143,7 +151,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable index of FreeCAD shortcuts for PartDesign, Draft, and TechDraw workbenches.',
     detailDesc: 'A complete index of hotkeys in FreeCAD. Includes navigation styles like Blender, CAD, and Inventor presets.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['freecad shortcuts', 'freecad workbenches', 'open source cad keys', 'partdesign hotkeys']
   },
@@ -153,7 +162,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Printable reference for Fusion 360 sculpting, modeling, CAM path planning, and rendering tools.',
     detailDesc: 'Quickly search all shortcut keys in Fusion 360. Includes shortcuts for the parametric modeling environment, generative design, and CAM toolpaths.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['fusion 360 shortcuts', 'fusion 360 hotkeys', 'fusion 360 cheat sheet', 'cam hotkeys']
   },
@@ -163,7 +173,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete comparison of DraftSight keyboard commands and default aliases for AutoCAD switchers.',
     detailDesc: 'DraftSight matches AutoCAD command-for-command. Learn the key mappings and how to load AutoCAD .pgp alias files to transition seamlessly.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['draftsight shortcuts', 'draftsight aliases', 'draftsight vs autocad', 'cad key mappings']
   },
@@ -173,7 +184,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Interactive index of BricsCAD Lite, Pro, and BIM keyboard commands and quad cursor controls.',
     detailDesc: 'Compare BricsCAD shortcuts to standard CAD models. Includes quad cursor settings, shortcut customization paths, and custom command macros.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['bricscad shortcuts', 'quad cursor controls', 'bricscad command aliases', 'bricscad hotkeys']
   },
@@ -183,7 +195,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable cheat sheet for Vectorworks Architect, Landmark, and Spotlight drawing tools.',
     detailDesc: 'Quickly find Vectorworks tool shortcuts. Organized by tool palettes, rendering options, and view navigation settings.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['vectorworks shortcuts', 'vectorworks hotkeys', 'landmark tool keys', 'architect shortcuts']
   },
@@ -193,7 +206,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Detailed comparison highlighting the command differences and alias mappings between AutoCAD and GstarCAD.',
     detailDesc: 'While 99% of aliases are identical, some specialized commands differ. Use this diff comparison to transition your drafting office smoothly without breaking your muscle memory.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['autocad vs gstarcad', 'gstarcad command aliases', 'cad migration list', 'alias mapping']
   },
@@ -203,7 +217,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Identify the exact command and alias variations between AutoCAD and ZWCAD platforms.',
     detailDesc: 'Provides ZWCAD-specific aliases (e.g. SmartSelect) and compare them side-by-side with AutoCAD standard commands to prevent productivity loss.',
     category: 'cheatsheet',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['autocad vs zwcad', 'zwcad aliases', 'zwcad command difference', 'drafting migration']
   },
