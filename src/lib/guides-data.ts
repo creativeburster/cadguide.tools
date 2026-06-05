@@ -361,6 +361,31 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
       { title: 'Compensating CAD model sizing for plastic mold shrinkage percentages', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Parametric face thread design standards for CNC Lathe modeling', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
+  },
+  {
+    id: 'fol-cheatsheets',
+    title: 'Shortcuts & Reference Sheets',
+    countLabel: '17 Sheets',
+    icon: '📝',
+    links: [
+      { title: 'Cross-Platform CAD Shortcuts Matrix', href: '/guides/shortcuts' },
+      { title: 'SolidWorks Essential Keyboard Shortcuts List', href: '/guides/solidworks-shortcuts-sheet' },
+      { title: 'Rhino 3D Shortcut Keys & Command Aliases Guide', href: '/guides/rhino-shortcuts-sheet' },
+      { title: 'Revit Keyboard Shortcuts & Command Codes Table', href: '/guides/revit-shortcuts-sheet' },
+      { title: 'SketchUp Pro Quick Reference Hotkeys Cheat Sheet', href: '/guides/sketchup-shortcuts-sheet' },
+      { title: 'Autodesk Inventor Keyboard Shortcuts Reference', href: '/guides/inventor-shortcuts-sheet' },
+      { title: 'Bentley MicroStation V8i Keyboard Shortcuts Guide', href: '/guides/microstation-shortcuts-sheet' },
+      { title: 'Graphisoft Archicad Keyboard Shortcuts Chart', href: '/guides/archicad-shortcuts-sheet' },
+      { title: 'Dassault CATIA V5/V6 Key Shortcuts Table', href: '/guides/catia-shortcuts-sheet' },
+      { title: 'PTC Creo Parametric Shortcut Keys Reference', href: '/guides/creo-shortcuts-sheet' },
+      { title: 'FreeCAD Open-Source CAD Hotkeys & Mouse Navigation', href: '/guides/freecad-shortcuts-sheet' },
+      { title: 'Autodesk Fusion 360 Keyboard Hotkeys Reference', href: '/guides/fusion360-shortcuts-sheet' },
+      { title: 'DraftSight Keyboard Shortcuts & Command Aliases', href: '/guides/draftsight-shortcuts-sheet' },
+      { title: 'BricsCAD Hotkeys & Command Customization Guide', href: '/guides/bricscad-shortcuts-sheet' },
+      { title: 'Vectorworks Keyboard Shortcuts Reference Chart', href: '/guides/vectorworks-shortcuts-sheet' },
+      { title: 'AutoCAD vs. GstarCAD Shortcut Command Diff Table', href: '/guides/autocad-vs-gstarcad-shortcuts' },
+      { title: 'AutoCAD vs. ZWCAD Command Shortcut Diff Guide', href: '/guides/autocad-vs-zwcad-shortcuts' }
+    ]
   }
 ];
 

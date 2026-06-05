@@ -908,14 +908,17 @@ export default function GuidesClient() {
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                       {folder.links.map((link, lIdx) => {
-                        const displayTitle = selectedTool 
+                        const displayTitle = (selectedTool && folder.id !== 'fol-cheatsheets')
                           ? getLocalizedTitle(link.title, folder.id.replace('fol-', ''), selectedTool)
                           : link.title;
+                        const linkHref = folder.id === 'fol-cheatsheets'
+                          ? link.href
+                          : getProgrammaticLink(link.title, selectedTool?.slug);
                         return (
                           <div key={lIdx} className="flex items-start gap-2 p-2 hover:bg-white hover:shadow-sm rounded-xl transition-all group">
                             <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
                             <Link 
-                              href={getProgrammaticLink(link.title, selectedTool?.slug)} 
+                              href={linkHref} 
                               className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors hover:underline block leading-snug"
                             >
                               {displayTitle}
