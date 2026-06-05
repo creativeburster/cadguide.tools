@@ -36,7 +36,7 @@ export default function FlexlmDebuggerPage() {
               FLEXlm Network License <span className="text-blue-400">Error -15</span> Troubleshooter
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              解决 CAD 网络版最常见联机错误. 交互式引导, PowerShell 脚本一键诊断与配置生成, 100% 本地运行保护隐私. 
+              Solve the most common online errors in CAD online version. Interactive boot, PowerShell script one-click diagnosis and configuration generation, 100% Run locally to protect privacy. 
             </p>
           </div>
         </section>

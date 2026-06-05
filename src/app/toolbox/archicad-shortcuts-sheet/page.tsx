@@ -32,10 +32,10 @@ export default function GraphisoftArchiCADPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Graphisoft ArchiCAD <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Graphisoft ArchiCAD <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              建筑大厂 BIM 方案. 收录 ArchiCAD 平面图绘制, 智能魔术棒捕捉, 多重墙体切换及 3D 编辑热键. 
+              BIM solutions for major construction companies. Includes ArchiCAD plan drawing, Smart magic wand capture, multiple wall switching and 3D Edit hotkeys. 
             </p>
           </div>
         </section>

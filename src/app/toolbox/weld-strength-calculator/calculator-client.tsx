@@ -2,13 +2,13 @@
 
 import { useState, useMemo } from 'react';
 import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, Layers, Percent } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 const WELD_ELECTRODES = [
-  { name: 'GB E43 / Q235 (中国国标级)', strength: 160, desc: '常用于普通 Q235 碳素结构钢搭接' },
-  { name: 'GB E50 / Q345 (低合金高强钢)', strength: 200, desc: '适用于 Q345 (Q355) 等低合金高强度钢结构' },
-  { name: 'AISC E60XX (美标级)', strength: 124, desc: 'AISC 标准下 E60 焊丝设计容许剪切应力' },
-  { name: 'AISC E70XX (美标高强级)', strength: 145, desc: '美标最广泛使用的重载钢结构角焊条' },
+  { name: 'GB E43 / Q235 (China National Standard Grade)', strength: 160, desc: 'Commonly used in ordinary Q235 Carbon structural steel lap joint' },
+  { name: 'GB E50 / Q345 (Low alloy high strength steel)', strength: 200, desc: 'Applicable to Q345 (Q355) Low alloy high strength steel structure' },
+  { name: 'AISC E60XX (American Standard)', strength: 124, desc: 'AISC standard E60 Welding wire design allowable shear stress' },
+  { name: 'AISC E70XX (American standard high-strength grade)', strength: 145, desc: "American standard's most widely used heavy-duty steel structure fillet welding rod" },
 ];
 
 export default function WeldStrengthClient() {
@@ -76,14 +76,14 @@ Generated via CADGuide.tools`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Layers className="w-5 h-5 text-blue-400" />
-            <span>角焊缝尺寸与荷载设定</span>
+            <span>Fillet weld size and load setting</span>
           </h2>
         </div>
 
         {/* Electrode Strength */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            1. 焊条与结构钢规范强度 (Weld Electrode)
+            1. Weld Electrode and Structural Steel Specification Strength (Weld Electrode)
           </label>
           <select
             value={electrodeIdx}
@@ -92,19 +92,19 @@ Generated via CADGuide.tools`;
           >
             {WELD_ELECTRODES.map((el, i) => (
               <option key={el.name} value={i}>
-                {el.name} (强度: {el.strength} N/mm²)
+                {el.name} (Strength: {el.strength} N/mm²)
               </option>
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            焊缝设计强度: {electrode.name} ({electrode.strength} N/mm²)
+            Weld design strength: {electrode.name} ({electrode.strength} N/mm²)
           </div>
         </div>
 
         {/* Weld Leg Size */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">2. 焊脚尺寸 (Leg Size hf)</span>
+            <span className="text-slate-400 uppercase tracking-wider">2. Leg Size hf</span>
             <span className="text-blue-400 font-mono">{legSize} mm</span>
           </div>
           <input
@@ -127,7 +127,7 @@ Generated via CADGuide.tools`;
         {/* Weld Length */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">3. 焊缝设计长度 (Weld Length L)</span>
+            <span className="text-slate-400 uppercase tracking-wider">3. Weld design length (Weld Length L)</span>
             <span className="text-blue-400 font-mono">{length} mm</span>
           </div>
           <input
@@ -149,7 +149,7 @@ Generated via CADGuide.tools`;
               className="rounded border-slate-850 text-blue-600 focus:ring-blue-500 w-4 h-4 bg-slate-850 accent-blue-500 cursor-pointer"
             />
             <label htmlFor="craters" className="text-xs font-bold text-slate-300 cursor-pointer select-none">
-              扣除起落弧弧坑边界缺陷 (扣除 2×hf)
+              Deduction of crater boundary defects (deduction of 2×hf)
             </label>
           </div>
         </div>
@@ -157,7 +157,7 @@ Generated via CADGuide.tools`;
         {/* External Applied Load */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. 剪切/拉伸外载荷 (Load P)</span>
+            <span className="text-slate-400 uppercase tracking-wider">4. Shear/tensile external load (Load P)</span>
             <span className="text-blue-400 font-mono">{appliedLoad} kN</span>
           </div>
           <input
@@ -185,51 +185,51 @@ Generated via CADGuide.tools`;
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
               <Percent className="w-5 h-5 text-blue-500" />
-              <span>结构接头承载力评估</span>
+              <span>Structural Joint Bearing Capacity Assessment</span>
             </h3>
             <button
               onClick={copyToClipboard}
               className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
-              <span>{copied ? '已复制' : '复制报告'}</span>
+              <span>{copied ? 'Copied' : 'Copy report'}</span>
             </button>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                设计抗拉极限 (Allowable Load)
+                Design tensile limit (Allowable Load)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
                 {physics.maxCapacity.toFixed(2)} <span className="text-xs text-slate-500 font-sans">kN</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                焊缝最大安全承载力
+                Maximum safe bearing capacity of welds
               </p>
             </div>
 
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                有效喉厚 (Throat Size a)
+                Effective throat thickness (Throat Size a)
               </span>
               <div className="text-2xl font-black font-mono text-slate-800">
                 {physics.throat.toFixed(2)} <span className="text-xs text-slate-500 font-sans">mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                最小承载面计算厚度
+                Calculated thickness of minimum bearing surface
               </p>
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                焊缝应力强度利用率
+                Weld stress intensity utilization rate
               </span>
               <div className={`text-2xl font-black font-mono ${isSafetyDanger ? 'text-red-500' : (isSafetyWarning ? 'text-amber-500' : 'text-emerald-600')}`}>
                 {physics.stressRatio.toFixed(1)} <span className="text-xs text-slate-500 font-sans">%</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                实际设计负荷比
+                actual design load ratio
               </p>
             </div>
           </div>
@@ -239,9 +239,9 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">焊缝超载剪切破坏警告! </strong>
+                <strong className="font-black">Weld overload shear damage warning! </strong>
                 <p className="mt-0.5 text-red-700">
-                  当前外力荷载为 {appliedLoad} kN, 已超越焊缝设计承载限值 {physics.maxCapacity.toFixed(2)} kN (负荷比 {physics.stressRatio.toFixed(1)}%). 焊缝容易发生剪切断裂. 建议增大焊脚尺寸或加长焊缝. 
+                  The current external force load is {appliedLoad} kN, which has exceeded the design load limit of the weld. {physics.maxCapacity.toFixed(2)} kN (Load ratio {physics.stressRatio.toFixed(1)}%). Welds are prone to shear fracture. It is recommended to increase the welding leg size or lengthen the welding seam. 
                 </p>
               </div>
             </div>
@@ -251,9 +251,9 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
-                <strong className="font-black">高负荷预警 (Weld Highly Stressed)</strong>
+                <strong className="font-black">Weld Highly Stressed</strong>
                 <p className="mt-0.5 text-amber-700">
-                  负荷应力比已处于 {physics.stressRatio.toFixed(1)}% 的高负荷运转带, 建议增大安全冗余. 
+                  The load-stress ratio is already in the high-load operating zone of {physics.stressRatio.toFixed(1)}%, It is recommended to increase safety redundancy. 
                 </p>
               </div>
             </div>
@@ -264,7 +264,7 @@ Generated via CADGuide.tools`;
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
-              焊缝受力喉厚与破坏带受剪截面模拟
+              Simulation of the throat thickness of the weld and the shear section of the damage zone
             </span>
           </div>
 
@@ -322,7 +322,7 @@ Generated via CADGuide.tools`;
                 fontSize="9"
                 fontWeight="bold"
               >
-                a={physics.throat.toFixed(1)}mm (有效喉厚)
+                a={physics.throat.toFixed(1)}mm (Effective throat thickness)
               </text>
 
               {/* Tensile pulling force */}
@@ -330,18 +330,18 @@ Generated via CADGuide.tools`;
                 <path d="M 40 70 L 10 70 M 15 65 L 10 70 L 15 75" />
                 <path d="M 90 70 L 120 70 M 115 65 L 120 70 L 115 75" />
               </g>
-              <text x="5" y="60" fill="#60a5fa" fontSize="8.5" fontWeight="bold">拉伸载荷 P</text>
+              <text x="5" y="60" fill="#60a5fa" fontSize="8.5" fontWeight="bold">Tensile load P</text>
             </svg>
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-650">
-            * 物理图示: 角焊缝的承载剪切断面是其 45 度角平分线处的"有效喉厚面" (即图中绿/红色虚线) . 当外载荷过高, 这层截面会因应力剪切而开裂. 使用 GB 50017 和 AISC 极限承载规范精确估算安全冗余. 
+            * Physical diagram: The load-bearing shear section of a fillet weld is its 45 The "effective throat thickness surface at the angle bisector"" (That is the green/red dotted line in the picture) . When the external load is too high, this section will crack due to stress shear.. Use GB 50017 and AISC Ultimate load-bearing specifications accurately estimate safety redundancy. 
           </p>
         </div>
       </div>
 
       <div className="lg:col-span-12 mt-4 print:hidden">
-        <NewsletterSubscribe />
+        <RelatedTools />
       </div>
     </div>
 );

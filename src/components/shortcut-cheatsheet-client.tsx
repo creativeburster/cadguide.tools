@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { Search, Printer, Download, Sparkles, Info, Check } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 export interface ShortcutItem {
   keys: string;
@@ -79,10 +79,10 @@ export default function ShortcutCheatsheetClient({
 
   return (
     <div className="flex flex-col gap-8">
-      {/* 快捷键搜索与多 Tab 筛选列表 */}
+      {/* Shortcut Search and Multi-tab Category Filters */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm print:shadow-none print:border-none print:p-0">
         
-        {/* 控制排版: 搜索与下载/打印按钮 */}
+        {/* Search Input & Action Buttons */}
         <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-6 print:hidden">
           <div className="relative flex-1 max-w-md">
             <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -92,7 +92,7 @@ export default function ShortcutCheatsheetClient({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="搜索按键或指令 (如: Ctrl, Line, Extrude)..."
+              placeholder="Search keys or commands (e.g. Ctrl, Line, Extrude)..."
               className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-slate-50/50"
             />
           </div>
@@ -104,20 +104,20 @@ export default function ShortcutCheatsheetClient({
                 className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all cursor-pointer"
               >
                 <Download className="w-4 h-4" />
-                下载别名配置
+                Download Aliases
               </button>
-)}
+            )}
             <button
               onClick={handlePrint}
               className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md transition-all cursor-pointer"
             >
               <Printer className="w-4 h-4" />
-              打印速查表 (A4)
+              Print Cheatsheet (A4)
             </button>
           </div>
         </div>
 
-        {/* 过滤分类标签 */}
+        {/* Filter Category Tabs */}
         <div className="flex flex-wrap gap-2 mb-6 print:hidden">
           <button
             onClick={() => setActiveCategory('all')}
@@ -127,7 +127,7 @@ export default function ShortcutCheatsheetClient({
                 : 'bg-slate-50/80 border-slate-100 text-slate-600 hover:bg-slate-100'
             }`}
           >
-            全部命令
+            All Commands
           </button>
           {categories.map((cat) => (
             <button
@@ -141,24 +141,24 @@ export default function ShortcutCheatsheetClient({
             >
               {cat.name}
             </button>
-))}
+          ))}
         </div>
 
-        {/* 快捷键呈现表格 */}
+        {/* Shortcut Cheatsheet Table */}
         <div className="overflow-x-auto print:overflow-visible">
-          <table className="w-full text-left border-collapse text-xs font-semibold text-slate-600">
+          <table className="w-full text-left border-collapse text-sm font-semibold text-slate-700">
             <thead>
-              <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-[10px] tracking-wider font-bold">
-                <th className="py-3 px-4 w-[180px]">快捷键 (Hotkeys)</th>
-                <th className="py-3 px-4 w-[200px]">映射指令 (Command)</th>
-                <th className="py-3 px-4">功能描述 (Description)</th>
+              <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-xs tracking-wider font-bold">
+                <th className="py-3 px-4 w-[180px]">Hotkeys</th>
+                <th className="py-3 px-4 w-[200px]">Command</th>
+                <th className="py-3 px-4">Description</th>
               </tr>
             </thead>
             <tbody>
               {filteredShortcuts.map((item, idx) => (
                 <tr key={idx} className="border-b border-slate-50 hover:bg-slate-50/40 print:hover:bg-transparent transition-colors">
                   <td className="py-3 px-4">
-                    <span className="font-mono bg-slate-900 text-white px-2.5 py-1 rounded-lg font-black tracking-tight text-[10px] shadow-sm select-all">
+                    <span className="font-mono bg-slate-900 text-white px-2.5 py-1.5 rounded-lg font-black tracking-tight text-xs shadow-sm select-all">
                       {item.keys}
                     </span>
                   </td>
@@ -170,26 +170,26 @@ export default function ShortcutCheatsheetClient({
                       {item.command}
                       {isCopied === idx ? (
                         <Check className="w-3.5 h-3.5 text-emerald-500" />
-) : (
-                        <span className="text-[9px] font-bold text-slate-300 opacity-0 group-hover:opacity-100 print:hidden">复制</span>
-)}
+                      ) : (
+                        <span className="text-[9px] font-bold text-slate-300 opacity-0 group-hover:opacity-100 print:hidden">Copy</span>
+                      )}
                     </span>
                   </td>
-                  <td className="py-3 px-4 text-slate-500 font-medium leading-relaxed">{item.description}</td>
+                  <td className="py-3 px-4 text-slate-600 font-medium leading-relaxed">{item.description}</td>
                 </tr>
-))}
+              ))}
               {filteredShortcuts.length === 0 && (
                 <tr>
                   <td colSpan={3} className="py-8 text-center text-slate-400 font-medium">
-                    未找到匹配该关键字的快捷键, 请尝试其他词汇. 
+                    No matching shortcuts found. Please try other terms.
                   </td>
                 </tr>
-)}
+              )}
             </tbody>
           </table>
         </div>
 
-        {/* @media print 打印专用 CSS 规则 */}
+        {/* @media print styles */}
         <style jsx global>{`
           @media print {
             body {
@@ -228,13 +228,13 @@ export default function ShortcutCheatsheetClient({
 
       </div>
 
-      {/* 极客效率指南卡片 */}
+      {/* Advanced Efficiency Guide Card */}
       {tips.length > 0 && (
         <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6 print:hidden">
           <div>
             <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-blue-500 animate-pulse" />
-              {title} 极客进阶效率指南
+              {title} Advanced Efficiency Guide
             </h3>
             <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">
               {title} Efficiency Optimization & Best Practices
@@ -250,12 +250,12 @@ export default function ShortcutCheatsheetClient({
                 </h4>
                 <p className="pl-3">{tip.content}</p>
               </div>
-))}
+            ))}
           </div>
         </div>
-)}
+      )}
 
-      <NewsletterSubscribe />
+      <RelatedTools />
     </div>
 );
 }

@@ -32,10 +32,10 @@ export default function VectorworksProPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Vectorworks Pro <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Vectorworks Pro <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              舞美, 景观与高端建筑设计利器. 提供 Vectorworks 智能吸附, 绘图坐标变换与图层组合快捷键. 
+              Stage beauty, landscape and high-end architectural design tools. Provides Vectorworks smart snapping, Drawing coordinate transformation and layer combination shortcut keys. 
             </p>
           </div>
         </section>

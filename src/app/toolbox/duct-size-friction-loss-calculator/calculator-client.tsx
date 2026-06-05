@@ -2,13 +2,13 @@
 
 import { useState, useMemo } from 'react';
 import { HelpCircle, Info, Copy, Check, Shield, Activity, Sliders, Wind } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 const ROUGHNESS_PRESETS = [
-  { name: 'Galvanized Steel (镀锌钢板)', value: 0.15 },
-  { name: 'Aluminum (铝板)', value: 0.12 },
-  { name: 'PVC / Plastic (塑料/聚氯乙烯)', value: 0.005 },
-  { name: 'Flexible Duct (软管/金属波纹管)', value: 1.0 },
+  { name: 'Galvanized Steel (Galvanized steel sheet)', value: 0.15 },
+  { name: 'Aluminum (Aluminum plate)', value: 0.12 },
+  { name: 'PVC / Plastic (Plastic/PVC)', value: 0.005 },
+  { name: 'Flexible Duct (Hoses/metal bellows)', value: 1.0 },
 ];
 
 export default function DuctSizeClient() {
@@ -116,7 +116,7 @@ Generated via CADGuide.tools`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Sliders className="w-5 h-5 text-blue-400" />
-            <span>输入参数 (Parameters)</span>
+            <span>Input parameters (Parameters)</span>
           </h2>
           <span className="text-[10px] text-slate-400 font-bold bg-slate-800 px-2.5 py-1 rounded-full uppercase tracking-wider">
             MEP Configurator
@@ -126,7 +126,7 @@ Generated via CADGuide.tools`;
         {/* Duct Type */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block print:hidden">
-            1. 风管截面形状 (Duct Shape)
+            1. Duct Shape
           </label>
           <div className="grid grid-cols-2 gap-3 print:hidden">
             <button
@@ -138,7 +138,7 @@ Generated via CADGuide.tools`;
               }`}
             >
               <span className="text-sm">●</span>
-              <span>圆形风管 (Round)</span>
+              <span>Round duct (Round)</span>
             </button>
             <button
               onClick={() => setShape('rectangular')}
@@ -149,18 +149,18 @@ Generated via CADGuide.tools`;
               }`}
             >
               <span className="text-sm">■</span>
-              <span>矩形风管 (Rectangular)</span>
+              <span>Rectangular duct (Rectangular)</span>
             </button>
           </div>
           <div className="hidden print:block font-bold">
-            风管类型: {shape === 'round' ? '圆形风管' : '矩形风管'}
+            Duct type: {shape === 'round' ? 'Round duct' : 'Rectangular duct'}
           </div>
         </div>
 
         {/* Airflow */}
         <div className="space-y-3">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">2. 设计风量 (Airflow Q)</span>
+            <span className="text-slate-400 uppercase tracking-wider">2. Design air volume (Airflow Q)</span>
             <span className="text-blue-400 font-mono">{flowRate} m³/h</span>
           </div>
           <input
@@ -197,13 +197,13 @@ Generated via CADGuide.tools`;
         {/* Dimensions Inputs */}
         <div className="border-t border-slate-800/80 pt-5 space-y-4">
           <div className="text-xs font-black text-slate-400 uppercase tracking-wider">
-            3. 风管物理规格 (Duct Dimensions)
+            3. Duct Dimensions
           </div>
 
           {shape === 'round' ? (
             <div className="space-y-3">
               <div className="flex justify-between items-center text-xs font-bold">
-                <span>直径 (Diameter D)</span>
+                <span>Diameter D</span>
                 <span className="font-mono text-blue-400">{diameter} mm</span>
               </div>
               <input
@@ -226,7 +226,7 @@ Generated via CADGuide.tools`;
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="text-[10px] text-slate-400 font-bold flex justify-between">
-                  <span>宽度 (Width a)</span>
+                  <span>Width a</span>
                   <span className="font-mono text-blue-400">{width} mm</span>
                 </label>
                 <input
@@ -238,7 +238,7 @@ Generated via CADGuide.tools`;
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] text-slate-400 font-bold flex justify-between">
-                  <span>高度 (Height b)</span>
+                  <span>Height b</span>
                   <span className="font-mono text-blue-400">{height} mm</span>
                 </label>
                 <input
@@ -255,7 +255,7 @@ Generated via CADGuide.tools`;
         {/* Roughness Presets */}
         <div className="border-t border-slate-800/80 pt-5 space-y-4">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            4. 材质绝对粗糙度 (Roughness)
+            4. Material absolute roughness (Roughness)
           </label>
           <select
             value={roughnessIdx}
@@ -267,7 +267,7 @@ Generated via CADGuide.tools`;
                 {p.name} ({p.value} mm)
               </option>
 ))}
-            <option value={ROUGHNESS_PRESETS.length}>Custom (自定义数值)</option>
+            <option value={ROUGHNESS_PRESETS.length}>Custom (Custom value)</option>
           </select>
 
           {roughnessIdx === ROUGHNESS_PRESETS.length && (
@@ -283,7 +283,7 @@ Generated via CADGuide.tools`;
             </div>
 )}
           <div className="hidden print:block font-bold">
-            管壁粗糙度: {roughness} mm
+            Pipe wall roughness: {roughness} mm
           </div>
         </div>
       </div>
@@ -295,7 +295,7 @@ Generated via CADGuide.tools`;
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
               <Activity className="w-5 h-5 text-blue-500" />
-              <span>计算结果 (Flow Physics Report)</span>
+              <span>Calculation results (Flow Physics Report)</span>
             </h3>
             <button
               onClick={copyToClipboard}
@@ -304,12 +304,12 @@ Generated via CADGuide.tools`;
               {copied ? (
                 <>
                   <Check className="w-3.5 h-3.5" />
-                  <span>已复制</span>
+                  <span>Copied</span>
                 </>
 ) : (
                 <>
                   <Copy className="w-3.5 h-3.5" />
-                  <span>复制报告</span>
+                  <span>Copy report</span>
                 </>
 )}
             </button>
@@ -318,38 +318,38 @@ Generated via CADGuide.tools`;
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1">
-                <span>流速 (Velocity)</span>
+                <span>Velocity</span>
                 <Wind className="w-3 h-3 text-slate-400" />
               </div>
               <div className="text-2xl font-black font-mono text-slate-800">
                 {physics.velocity.toFixed(2)} <span className="text-xs text-slate-500 font-sans">m/s</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                限制参考值: &lt; {velocityLimit} m/s
+                Limit reference value: &lt; {velocityLimit} m/s
               </p>
             </div>
 
             <div className="space-y-1">
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                单位摩擦阻力 (Head Loss)
+                Unit friction resistance (Head Loss)
               </div>
               <div className={`text-2xl font-black font-mono ${physics.pressureDrop > 1.2 ? 'text-amber-600' : 'text-emerald-600'}`}>
                 {physics.pressureDrop.toFixed(3)} <span className="text-xs font-sans text-slate-500">Pa/m</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                推荐上限: 1.0 Pa/m
+                Recommended upper limit: 1.0 Pa/m
               </p>
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                等效水力直径 (Hydraulic Diam.)
+                Equivalent hydraulic diameter (Hydraulic Diam.)
               </div>
               <div className="text-2xl font-black font-mono text-slate-850">
                 {Math.round(physics.hydraulicDiameter * 1000)} <span className="text-xs text-slate-500 font-sans">mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                截面积: {physics.area.toFixed(4)} m²
+                Cross-sectional area: {physics.area.toFixed(4)} m²
               </p>
             </div>
           </div>
@@ -359,8 +359,8 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
-                <strong className="font-black">警告: 实际风速超出推荐限制! </strong>
-                <p className="mt-0.5 text-amber-700">当前风速 {physics.velocity.toFixed(2)} m/s 超过了设定的 {velocityLimit} m/s 阈值. 这会导致严重的管道风噪和高静压损失. 建议增大风管截面尺寸. </p>
+                <strong className="font-black">WARNING: Actual wind speed exceeds recommended limits! </strong>
+                <p className="mt-0.5 text-amber-700">The current wind speed {physics.velocity.toFixed(2)} m/s exceeds the set {velocityLimit} m/s threshold. This results in severe duct wind noise and high static pressure losses. It is recommended to increase the cross-section size of the air duct. </p>
               </div>
             </div>
 )}
@@ -370,7 +370,7 @@ Generated via CADGuide.tools`;
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-4">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
-              风管物理气流截面预览 (Dynamic Flow Visualizer)
+              Duct physical airflow section preview (Dynamic Flow Visualizer)
             </span>
             <span className="text-[9px] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded font-mono font-bold uppercase print:hidden">
               Re = {Math.round(physics.reynoldsNumber)}
@@ -457,7 +457,7 @@ Generated via CADGuide.tools`;
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-600">
-            * 动画展示的是风管中心气流线的流速模拟. 流线由蓝转红暗示管道内的压力损失加大 (红为高损失区) . 使用 Haaland 方程和 Colebrook 管道阻力流体动力学进行精确解算. 
+            * The animation shows the flow velocity simulation of the air flow line in the center of the air duct. The flow line changes from blue to red, indicating that the pressure loss in the pipe is increasing. (Red is the high loss area). Use Haaland Equations and Colebrook Pipe Resistance Fluid Dynamics for accurate solution. 
           </p>
         </div>
       </div>
@@ -473,7 +473,7 @@ Generated via CADGuide.tools`;
       
       {/* Newsletter signup section */}
       <div className="lg:col-span-12 mt-4 print:hidden">
-        <NewsletterSubscribe />
+        <RelatedTools />
       </div>
     </div>
 );

@@ -5,7 +5,7 @@ import AcadPgpEditorClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'AutoCAD PGP Command Alias Editor & Compiler Online | CADGuide.tools',
   description:
-    '在线编辑, 修改和编译 AutoCAD acad.pgp 或浩辰/中望 CAD 别名文件. 提供本地解析, 重复快捷键冲突校验以及一键打包下载. 所有数据均在浏览器本地安全运行, 不上传服务器. ',
+    'Online editing, modification and compilation AutoCAD acad.pgp Or Haochen/Zhongwang CAD Alias file. Provides local resolution, Repeat shortcut key conflict verification and one-click package download. All data is run safely locally in the browser, Not uploading to server. ',
   path: '/toolbox/acad-pgp-alias-editor',
 });
 
@@ -33,10 +33,10 @@ export default function AcadPgpEditorPage() {
               CAD Configuration & Deployment Helper
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              AutoCAD <span className="text-blue-400">PGP 快捷键别名编辑器</span>
+              AutoCAD <span className="text-blue-400">PGP Shortcut Key Alias Editor</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              在线上传并解析本地 acad.pgp / gcad.pgp 配置文件. 实时冲突红字警告, 轻松增删改, 并一键编译下载纯净的 PGP 文本. 
+              Upload and parse local acad.pgp / gcad.pgp configuration files online. Real-time conflict red text warning, easy addition, deletion and modification, And compile and download pure PGP text with one click. 
             </p>
           </div>
         </section>

@@ -4,109 +4,109 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "NC Viewer (在线 G-Code 可视化与模拟器)",
+    "name": "NC Viewer (Online G-Code Visualization and Simulator)",
     "rating": 9.9,
     "metrics": [
       {
-        "name": "仿真精度",
+        "name": "Simulation accuracy",
         "score": 5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       },
       {
-        "name": "易用性",
+        "name": "Ease of use",
         "score": 5
       }
     ],
     "pros": [
-      "纯前端解析 G-Code 并呈现 3D 刀线轨迹",
-      "提供实时的三维仿真走刀动画"
+      "Pure front-end parses G-Code and renders it 3D Knife line trajectory",
+      "Provide real-time 3D simulation tool animation"
     ],
     "cons": [
-      "仅做仿真, 不提供 DXF 转 G-Code 服务"
+      "Only for simulation, not provided DXF Convert G-Code service"
     ],
     "officialUrl": "https://ncviewer.com/",
-    "verdict": "目前最优秀, 最安全的在线刀轨核对平台, 在将 G-Code 送入机床前推荐在此进行空跑模拟. "
+    "verdict": "Currently the best and most secure online tool path verification platform, It is recommended to perform a dry run simulation here before sending G-Code to the machine tool.. "
   },
   {
-    "name": "Carbide Create (轻量级刀轨设计器)",
+    "name": "Carbide Create (Lightweight tool path designer)",
     "rating": 9.3,
     "metrics": [
       {
-        "name": "刀路控制",
+        "name": "Tool path control",
         "score": 4.5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       },
       {
-        "name": "易用性",
+        "name": "Ease of use",
         "score": 4.5
       }
     ],
     "pros": [
-      "界面简单直观, 本地运行无泄密风险",
-      "支持指定刀具半径补偿与雕刻深度"
+      "The interface is simple and intuitive, and there is no risk of leakage when running locally.",
+      "Supports specifying tool radius compensation and engraving depth"
     ],
     "cons": [
-      "高级三维雕刻需要购买 Pro 版本"
+      "Advanced 3D engraving requires purchasing the Pro version"
     ],
     "officialUrl": "https://carbide3d.com/carbidecreate/",
-    "verdict": "极适合创客和小型 DIY 雕刻, 本地运行非常安全, 能够进行简单边缘切割的快速转换. "
+    "verdict": "Great for makers and small DIY sculpting, Very safe to run locally, enabling fast changeovers for simple edge cuts. "
   },
   {
-    "name": "jscut (开源 Web 刀轨编译器)",
+    "name": "jscut (Open source web toolpath compiler)",
     "rating": 9.5,
     "metrics": [
       {
-        "name": "本地隐私",
+        "name": "local privacy",
         "score": 5
       },
       {
-        "name": "路径精度",
+        "name": "path accuracy",
         "score": 4.5
       },
       {
-        "name": "配置灵活度",
+        "name": "Configuration flexibility",
         "score": 4
       }
     ],
     "pros": [
-      "100% 浏览器本地运算, 数据不上传服务器",
-      "支持 SVG/DXF, 可精细设置切削步距与下刀量"
+      "100% Browser local computing, data is not uploaded to the server",
+      "Supports SVG/DXF, and can finely set the cutting step distance and cutting amount"
     ],
     "cons": [
-      "初次使用需要熟悉参数概念, 有一定的专业门槛"
+      "For first-time use, you need to be familiar with the concept of parameters and have a certain professional threshold."
     ],
     "officialUrl": "http://jscut.org/",
-    "verdict": "最安全的在线开源切削编译器, 不依赖服务器, 是工程技术人员首选的轻量级工具. "
+    "verdict": "The most secure online open source cutting compiler, does not rely on servers, It is the lightweight tool of choice for engineering and technical personnel. "
   }
 ];
 const BEST_PRACTICES = [
   {
-    "title": "设置合理引入引出线 (Lead-In/Out)",
-    "desc": "为防止激光在零件边缘起刀点留下烧灼凹坑, 应配置引入引出圆弧或斜线, 使起刀点位于废料区. "
+    "title": "Set up reasonable lead-in/out",
+    "desc": "In order to prevent the laser from leaving burning pits at the starting point of the edge of the part, lead-in and lead-out arcs or diagonal lines should be configured, Position the starting point in the scrap area. "
   },
   {
-    "title": "圆弧转换为真正 G02/G03",
-    "desc": "检查转换器是否支持将多段线圆弧拟合为 G2/G3 圆弧插补命令, 这可以显著减小 G-Code 文件体积, 避免机床抖动. "
+    "title": "Arc converted to true G02/G03",
+    "desc": "Check if the converter supports fitting polyline arcs to G2/G3 arc interpolation commands, This can significantly reduce the G-Code file size, Avoid machine vibration. "
   },
   {
-    "title": "安全高度 (Safe Height) 校验",
-    "desc": "务必将 G00 快速移动的安全高度 (通常为 Z5-Z10) 设置得大于夹具高度, 杜绝横移撞刀风险. "
+    "title": "Safe Height Verification",
+    "desc": "Be sure to set the safe height for rapid movement of G00 (Usually Z5-Z10) set larger than the fixture height, Eliminate the risk of lateral movement and knife collision. "
   }
 ];
 const FAQS = [
   {
-    "question": "为什么转换出的 G-code 文件在我的雕刻机上无法运行? ",
-    "answer": "这通常是因为转换器输出的 G-code 格式 (方言) 与您的控制器 (如 GRBL, Mach3, Syntec 新代) 不匹配. 需要在转换时选择正确的后处理器 (Post Processor). "
+    "question": "Why can’t the converted G-code file be run on my engraving machine?? ",
+    "answer": "This is usually due to the G-code format of the converter output (dialect) with your controller (Such as GRBL, Mach3, Syntec new generation) No match. Need to select the correct post-processor when converting (Post Processor). "
   },
   {
-    "question": "如何解决转换后圆弧变成折线段的问题? ",
-    "answer": "这是因为原 DXF 图纸中的圆弧被转换器强行打散 (Explode) 为了直线微小段. 确保在 CAD 中保存为圆弧对象, 或在转换器中开启圆弧插补优化. "
+    "question": "How to solve the problem of converting arcs into polyline segments? ",
+    "answer": "This is because the arcs in the original DXF drawing were forcibly broken up by the converter. (Explode) For tiny segments of straight lines. Make sure the CAD Save as an arc object in the converter, or enable arc interpolation optimization in the converter. "
   }
 ];
 
@@ -114,10 +114,10 @@ export default function CloudDxfToGcodeLaserConverterClient() {
   return (
     <CloudReferralClient
       title="Online DXF to CNC G-Code Path Planner"
-      subtitle="客观深度评测与防审计直达导航. "
+      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="Engineering & Design Calculator"
-      painPointDesc="数字制造与激光切割中, 将 2D 矢量 DXF 图纸转化为雕刻机, 水刀, 等离子或激光切割机可读的 G-Code (G代码) 是核心链路. 市面上云端转换器品质不一, 不合理的刀轨计算常导致空跑, 材料烧焦, 撞刀或圆弧插补 (G02/G03) 解析错误. "
-      riskWarning="转换的 DXF 轮廓往往代表精密钣金, 机械传动件等商业设计. 在免费的第三方在线转换器上传时, 图纸会被云端服务器解析并存储, 可能泄露几何知识产权. 对于高机密零件图, 强烈建议使用本地离线 CNC 编程软件 (如 Fusion 360, Vectric, Carbide Create) 或开源离线转换器. "
+      painPointDesc="In digital manufacturing and laser cutting, the 2D Convert vector DXF drawings to engraving machine, Readable by waterjet, plasma or laser cutters G-Code (Gcode) is the core link. The quality of cloud converters on the market varies, and unreasonable tool path calculations often lead to empty runs., Material burnt, tool impact or arc interpolation (G02/G03) Parsing error. "
+      riskWarning="Converted DXF outlines often represent precision sheet metal, Commercial designs such as mechanical transmission parts. When uploaded to a free third-party online converter, The drawings will be parsed and stored by the cloud server, which may leak geometric intellectual property rights.. For high-confidential part drawings, it is highly recommended to use local offline CNC Programming software (such as Fusion 360, Vectric, Carbide Create) Or open source offline converter. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

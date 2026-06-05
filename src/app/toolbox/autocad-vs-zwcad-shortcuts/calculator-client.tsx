@@ -9,7 +9,7 @@ const DIFF_DATA = [
     "secondaryCmd": "LINE",
     "isSame": true,
     "diffNote": "",
-    "useCase": "绘制二维直线. "
+    "useCase": "Draw a two-dimensional straight line. "
   },
   {
     "shortcut": "C",
@@ -17,31 +17,31 @@ const DIFF_DATA = [
     "secondaryCmd": "CIRCLE",
     "isSame": true,
     "diffNote": "",
-    "useCase": "绘制圆形. "
+    "useCase": "Draw a circle."
   },
   {
     "shortcut": "SS",
     "primaryCmd": "QSELECT",
     "secondaryCmd": "SMARTSELECT",
     "isSame": false,
-    "diffNote": "中望自主研发的智能选择工具 (SmartSelect) , 相较于 CAD 原生 QSELECT, 能在独立面板中通过拖动属性进行高频批量图元过滤. ",
-    "useCase": "根据图元颜色, 图层, 类型等属性快速全选并过滤实体. "
+    "diffNote": "ZW’s independently developed smart selection tool (SmartSelect), compared to CAD Native QSELECT, capable of high-frequency batch filtering of primitives by dragging attributes in an independent panel. ",
+    "useCase": "According to the primitive color, the layer, Use attributes such as type to quickly select and filter entities. "
   },
   {
     "shortcut": "FC",
     "primaryCmd": "N/A",
     "secondaryCmd": "FILECOMPARE",
     "isSame": false,
-    "diffNote": "中望独创图纸比对命令, 直接在当前视口将新旧两版图纸重合叠加, 用不同高亮色标记改动图元. AutoCAD 中对应需使用 COMPARE 命令. ",
-    "useCase": "快速对比双版本图纸变更. "
+    "diffNote": "ZW's original drawing comparison command directly overlays the old and new drawings in the current viewport., Use different highlight colors to mark modified entities. Use the corresponding ones in AutoCAD COMPARE command. ",
+    "useCase": "Quickly compare drawing changes between two versions. "
   },
   {
     "shortcut": "MX",
     "primaryCmd": "N/A",
     "secondaryCmd": "MESSENGER",
     "isSame": false,
-    "diffNote": "中望专有机电与协同通讯助手别名, 可在图纸内与当前局域网下的其他设计师收发消息与协同备注. ",
-    "useCase": "设计师在线即时沟通备注. "
+    "diffNote": "ZW's proprietary electromechanical and collaborative communication assistant alias can send and receive messages and collaborative notes within the drawing with other designers under the current local area network.. ",
+    "useCase": "Designers’ online instant communication notes. "
   },
   {
     "shortcut": "CO",
@@ -49,7 +49,7 @@ const DIFF_DATA = [
     "secondaryCmd": "COPY",
     "isSame": true,
     "diffNote": "",
-    "useCase": "克隆复制. "
+    "useCase": "Clone copy."
   },
   {
     "shortcut": "TR",
@@ -57,7 +57,7 @@ const DIFF_DATA = [
     "secondaryCmd": "TRIM",
     "isSame": true,
     "diffNote": "",
-    "useCase": "修剪几何线段. "
+    "useCase": "Trim geometric segments. "
   }
 ];
 

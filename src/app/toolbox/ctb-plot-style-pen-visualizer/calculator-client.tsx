@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import { 
   Info, Download, HelpCircle, Layers, Copy, Check, FileText, 
   Settings, Sliders, Eye, RefreshCw, Grid, CheckSquare, XSquare, Plus
@@ -1307,14 +1307,7 @@ export default function CtbPlotStyleClient() {
       </div>
 
       {/* Lead Capture form NewsletterSubscribe */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Download Premium AutoCAD Templates & CTBs"
-        description="Subscribe to receive our industry standard plot styles cheat sheet, custom print configurations, and monthly professional CAD design guidelines."
-        buttonText="Get CAD Templates Package"
-        placeholder="Enter your professional email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

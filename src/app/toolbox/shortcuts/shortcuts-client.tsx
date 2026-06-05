@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { SHORTCUTS_DATA, SHORTCUT_CATEGORIES } from '@/lib/shortcuts-data';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 export default function CADShortcutsClient() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -103,32 +103,32 @@ export default function CADShortcutsClient() {
                     <td className="px-6 py-4">
                       <button
                         onClick={() => handleCopy(item.shortcut)}
-                        className="group flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-600 font-mono font-bold text-xs border border-slate-200/50 hover:border-blue-200 transition duration-200"
+                        className="group flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-600 font-mono font-bold text-sm border border-slate-200/50 hover:border-blue-200 transition duration-200"
                         title="Click to copy shortcut"
                       >
                         {item.shortcut}
-                        <span className="text-[9px] text-slate-400 group-hover:text-blue-400 opacity-0 group-hover:opacity-100 transition duration-200">
+                        <span className="text-[10px] text-slate-400 group-hover:text-blue-400 opacity-0 group-hover:opacity-100 transition duration-200">
                           {copiedShortcut === item.shortcut ? 'Copied!' : 'Copy'}
                         </span>
                       </button>
                     </td>
-                    <td className="px-6 py-4 font-black text-slate-900 font-mono text-xs">
+                    <td className="px-6 py-4 font-black text-slate-900 font-mono text-sm">
                       {item.command}
                     </td>
                     <td className="px-6 py-4">
-                      <div className="text-slate-700 text-xs font-semibold">{item.description}</div>
-                      <div className="text-[10px] text-slate-400 mt-1 font-medium italic">{item.notes}</div>
+                      <div className="text-slate-700 text-sm font-semibold">{item.description}</div>
+                      <div className="text-xs text-slate-400 mt-1 font-medium italic">{item.notes}</div>
                     </td>
-                    <td className="px-6 py-4 text-center text-xs font-bold text-slate-600 font-mono">
+                    <td className="px-6 py-4 text-center text-sm font-bold text-slate-600 font-mono">
                       {item.autocad}
                     </td>
-                    <td className="px-6 py-4 text-center text-xs font-bold text-slate-600 font-mono">
+                    <td className="px-6 py-4 text-center text-sm font-bold text-slate-600 font-mono">
                       {item.gstarcad}
                     </td>
-                    <td className="px-6 py-4 text-center text-xs font-bold text-slate-600 font-mono">
+                    <td className="px-6 py-4 text-center text-sm font-bold text-slate-600 font-mono">
                       {item.zwcad}
                     </td>
-                    <td className="px-6 py-4 text-center text-[10px] font-bold text-slate-500">
+                    <td className="px-6 py-4 text-center text-xs font-bold text-slate-500">
                       {item.dwgfastview}
                     </td>
                   </tr>
@@ -162,14 +162,7 @@ export default function CADShortcutsClient() {
       </div>
 
       {/* Newsletter Alert Banner */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Become a CAD Power User"
-        description="Join 15,000+ designers. Get monthly shortcut guides, LISP automation libraries, and exclusive CAD license coupons."
-        buttonText="Subscribe Now"
-        placeholder="Enter your work email"
-        className="mt-8"
-      />
+      <RelatedTools />
 
       {/* Print-specific style tag injected locally */}
       <style jsx global>{`

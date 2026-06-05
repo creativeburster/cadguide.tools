@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import {
   HelpCircle,
   Info,
@@ -25,11 +25,11 @@ import {
 
 // Steps Definitions
 const DIAGNOSTIC_STEPS = [
-  { id: 'scenario', name: '场景确认' },
-  { id: 'dns', name: 'DNS与网络连通性' },
-  { id: 'ports', name: '端口与防火墙' },
-  { id: 'env', name: '客户端环境变量' },
-  { id: 'server', name: '服务端锁端口配置' }
+  { id: 'scenario', name: 'Scene confirmation' },
+  { id: 'dns', name: 'DNSwith network connectivity' },
+  { id: 'ports', name: 'Ports and Firewalls' },
+  { id: 'env', name: 'Client environment variables' },
+  { id: 'server', name: 'Server lock port configuration' }
 ];
 
 export default function FlexlmDebuggerClient() {
@@ -87,45 +87,45 @@ $Server = "${serverAddress || 'license-server'}"
 $LmgrdPort = ${lmgrdPort || '27000'}
 $VendorPort = ${vendorPort || '2080'}
 
-Write-Host "--- 开始诊断 FLEXlm 客户端许可证连接环境 ---" -ForegroundColor Cyan
+Write-Host "--- Begin diagnosing the FLEXlm client license connection environment ---" -ForegroundColor Cyan
 
-# 1. 验证主机名解析
-Write-Host "[1/4] 正在解析域名/主机 IP: $Server ..."
+# 1. Verify hostname resolution
+Write-Host "[1/4] Resolving domain name/host IP: $Server ..."
 try {
     $IP = [System.Net.Dns]::GetHostAddresses($Server) | Select-Object -ExpandProperty IPAddressToString -First 1
-    Write-Host "✓ 域名解析成功: $Server ➔ $IP" -ForegroundColor Green
+    Write-Host "✓ Domain name resolution successful: $Server ➔ $IP" -ForegroundColor Green
 } catch {
-    Write-Warning "✗ 域名解析失败! 无法将 $Server 解析为 IP 地址. 请检查 DNS 配置或修改 C:\\Windows\\System32\\drivers\\etc\\hosts 文件. "
+    Write-Warning "✗ Domain name resolution failed! Unable to resolve $Server Resolves to IP address. Please check DNS configuration or modify C:\\Windows\\System32\\drivers\\etc\\hosts File. "
 }
 
-# 2. 检查环境变量
-Write-Host "[2/4] 正在读取系统环境变量 ..."
+# 2. Check environment variables
+Write-Host "[2/4] Reading system environment variables..."
 $EnvVars = @("ADSKFLEX_LICENSE_FILE", "SOLIDW_LICENSE_FILE", "FLEXLM_TIMEOUT")
 foreach ($var in $EnvVars) {
     $val = [System.Environment]::GetEnvironmentVariable($var, "Machine")
     if (-not $val) { $val = [System.Environment]::GetEnvironmentVariable($var, "User") }
     if ($val) {
-        Write-Host "✓ 发现环境变量 $var = $val" -ForegroundColor Green
+        Write-Host "✓ Found environment variable $var = $val" -ForegroundColor Green
     } else {
-        Write-Host "i 未配置环境变量 $var" -ForegroundColor Gray
+        Write-Host "i Environment variable $var" -ForegroundColor Gray is not configured
     }
 }
 
-# 3. 检查注册表 FLEXlm 缓存
-Write-Host "[3/4] 正在读取注册表用户配置缓存 ..."
+# 3. Check the registry FLEXlm cache
+Write-Host "[3/4] Reading registry user configuration cache..."
 $RegPath = "HKCU:\\Software\\FLEXlm License Manager"
 if (Test-Path $RegPath) {
     Get-ItemProperty -Path $RegPath -ErrorAction SilentlyContinue | Get-Member -MemberType NoteProperty | ForEach-Object {
         $name = $_.Name
         $val = (Get-ItemProperty -Path $RegPath).$name
-        Write-Host "✓ 注册表缓存: $name = $val" -ForegroundColor Green
+        Write-Host "✓ Registry cache: $name = $val" -ForegroundColor Green
     }
 } else {
-    Write-Host "i 未检测到注册表 FLEXlm License Manager 配置缓存" -ForegroundColor Gray
+    Write-Host "i Registry FLEXlm License Manager configuration cache not detected" -ForegroundColor Gray
 }
 
-# 4. TCP 端口握手检测
-Write-Host "[4/4] 正在建立 TCP 连接测试 ..."
+# 4. TCP Port handshake detection
+Write-Host "[4/4] Establishing TCP connection test ..."
 function Test-Port {
     param($p, $name)
     $tcp = New-Object System.Net.Sockets.TcpClient
@@ -133,22 +133,22 @@ function Test-Port {
     $wait = $connect.AsyncWaitHandle.WaitOne(2000, $false)
     if (-not $wait) {
         $tcp.Close()
-        Write-Warning "✗ 端口 $p ($name) 无法连接! 超时或被防火墙拦截. "
+        Write-Warning "✗ Port $p ($name) cannot be connected! Timed out or blocked by firewall. "
     } else {
         try {
             $tcp.EndConnect($connect) | Out-Null
-            Write-Host "✓ 端口 $p ($name) 连接成功! 通路畅通. " -ForegroundColor Green
+            Write-Host "✓ Port $p ($name) connected successfully! The path is clear. " -ForegroundColor Green
         } catch {
-            Write-Warning "✗ 端口 $p ($name) 连接被拒绝! 服务未启动. "
+            Write-Warning "✗ Connection refused for port $p ($name)! The service is not started. "
         } finally {
             $tcp.Close()
         }
     }
 }
 
-Test-Port $LmgrdPort "lmgrd 主授权服务"
-Test-Port $VendorPort "adskflex 厂商授权服务"
-Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
+Test-Port $LmgrdPort "lmgrd Master Authorization Service"
+Test-Port $VendorPort "adskflex Manufacturer Authorization Service"
+Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
 `;
 
   // PowerShell repair command
@@ -193,14 +193,14 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
 
   return (
     <div className="flex flex-col gap-8">
-      {/* 顶部动态 SVG 网络连通性拓扑面板 */}
+      {/* Top dynamic SVG network connectivity topology panel */}
       <div className="bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/50 to-transparent pointer-events-none"></div>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 z-10 relative">
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-              <h2 className="text-white font-black text-lg tracking-tight">网络许可链路拓扑监测</h2>
+              <h2 className="text-white font-black text-lg tracking-tight">Network permission link topology monitoring</h2>
             </div>
             <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
               Network Licensing Link Path Topology
@@ -211,7 +211,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-black text-slate-300 border border-slate-700/60 transition-all cursor-pointer"
           >
             <RotateCcw className="w-3 h-3" />
-            重置诊断
+            reset diagnostics
           </button>
         </div>
 
@@ -296,7 +296,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
               <g transform="translate(-10, -10)">
                 <Cpu className="w-5 h-5 text-blue-400" />
               </g>
-              <text y="35" textAnchor="middle" fill="#94a3b8" fontSize="10" fontWeight="bold">客户端</text>
+              <text y="35" textAnchor="middle" fill="#94a3b8" fontSize="10" fontWeight="bold">Client</text>
             </g>
 
             {/* Node 2: DNS Server */}
@@ -319,7 +319,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
               <g transform="translate(-8, -8)">
                 <ShieldAlert className="w-4 h-4 text-emerald-400" />
               </g>
-              <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="bold">本地防火墙</text>
+              <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="bold">Local firewall</text>
             </g>
 
             {/* Node 4: Network Cloud */}
@@ -333,7 +333,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
               <g transform="translate(-10, -10)">
                 <Activity className={`w-5 h-5 ${nodeStates.network === 'success' ? 'text-emerald-400' : 'text-slate-400'}`} />
               </g>
-              <text y="35" textAnchor="middle" fill="#94a3b8" fontSize="10" fontWeight="bold">企业网络</text>
+              <text y="35" textAnchor="middle" fill="#94a3b8" fontSize="10" fontWeight="bold">Enterprise Network</text>
             </g>
 
             {/* Node 5: Server Firewall */}
@@ -347,7 +347,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
               <g transform="translate(-8, -8)">
                 <ShieldAlert className={`w-4 h-4 ${nodeStates.serverFirewall === 'success' ? 'text-emerald-400' : nodeStates.serverFirewall === 'danger' ? 'text-red-400' : 'text-slate-400'}`} />
               </g>
-              <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="bold">服务器防火墙</text>
+              <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="bold">Server firewall</text>
             </g>
 
             {/* Node 6: lmgrd Daemon (27000) */}
@@ -394,15 +394,15 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
         </div>
       </div>
 
-      {/* 主面板布局 */}
+      {/* Main panel layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* 左边: 多步向导步骤条 (Navigation Step list) */}
+        {/* Left: Multi-step wizard step bar (Navigation Step list) */}
         <div className="lg:col-span-1 flex flex-col gap-4">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
             <h3 className="text-slate-800 font-black text-base tracking-tight mb-4 flex items-center gap-2">
               <Activity className="w-4 h-4 text-blue-500" />
-              诊断流程进度
+              Diagnostic process progress
             </h3>
             <div className="flex flex-col gap-2">
               {DIAGNOSTIC_STEPS.map((step, idx) => {
@@ -440,42 +440,42 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
             </div>
           </div>
 
-          {/* 全局变量输入参数卡片 (Global Variable Inputs) */}
+          {/* Global Variable Inputs */}
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <Info className="w-4 h-4 text-slate-500" />
-              <h3 className="text-slate-800 font-black text-sm uppercase tracking-wider">服务器参数设定</h3>
+              <h3 className="text-slate-800 font-black text-sm uppercase tracking-wider">Server parameter settings</h3>
             </div>
             
             {/* Input 1: Server Address */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="serverAddress" className="text-xs font-black text-slate-500 uppercase">服务器 IP/主机名</label>
+              <label htmlFor="serverAddress" className="text-xs font-black text-slate-500 uppercase">Server IP/Hostname</label>
               <input
                 id="serverAddress"
                 type="text"
                 value={serverAddress}
                 onChange={(e) => setServerAddress(e.target.value)}
-                placeholder="例如: license-server"
+                placeholder="For example: license-server"
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
               />
             </div>
 
             {/* Input 2: lmgrd Port */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="lmgrdPort" className="text-xs font-black text-slate-500 uppercase">lmgrd 主端口</label>
+              <label htmlFor="lmgrdPort" className="text-xs font-black text-slate-500 uppercase">lmgrd Main port</label>
               <input
                 id="lmgrdPort"
                 type="text"
                 value={lmgrdPort}
                 onChange={(e) => setLmgrdPort(e.target.value)}
-                placeholder="默认: 27000"
+                placeholder="Default: 27000"
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
               />
             </div>
 
             {/* Input 3: Vendor daemon select */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="vendorName" className="text-xs font-black text-slate-500 uppercase">厂商插件服务名</label>
+              <label htmlFor="vendorName" className="text-xs font-black text-slate-500 uppercase">Vendor plug-in service name</label>
               <select
                 id="vendorName"
                 value={vendorName}
@@ -489,35 +489,35 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                 <option value="adskflex">adskflex (Autodesk/AutoCAD)</option>
                 <option value="swutil">swutil / saltxd (SolidWorks)</option>
                 <option value="ugslmd">ugslmd (Siemens NX)</option>
-                <option value="custom">其他/自定义</option>
+                <option value="custom">Other/custom</option>
               </select>
             </div>
 
             {/* Input 4: Vendor Lock Port */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="vendorPort" className="text-xs font-black text-slate-500 uppercase">Vendor 锁定端口</label>
+              <label htmlFor="vendorPort" className="text-xs font-black text-slate-500 uppercase">Vendor Lock port</label>
               <input
                 id="vendorPort"
                 type="text"
                 value={vendorPort}
                 onChange={(e) => setVendorPort(e.target.value)}
-                placeholder="例如: 2080"
+                placeholder="For example: 2080"
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
               />
             </div>
           </div>
         </div>
 
-        {/* 右边二联: 诊断各步详细内容展示 (Detail Wizard Pane) */}
+        {/* Two lines on the right: Detailed content display of each step of diagnosis (Detail Wizard Pane) */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm min-h-[460px] flex flex-col">
             
-            {/* Step 0: 场景确认 */}
+            {/* Step 0: Scene confirmation */}
             {currentStep === 0 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第一步: 选择您的故障场景</h3>
-                  <p className="text-sm text-slate-500 mt-1">根据具体故障表现, 推荐对应的排查切入点. </p>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 1: Select your failure scenario</h3>
+                  <p className="text-sm text-slate-500 mt-1">Recommend corresponding troubleshooting entry points based on specific fault symptoms.. </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-auto">
@@ -535,14 +535,14 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                     <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-4 group-hover:scale-110 transition-transform">
                       <Cpu className="w-5 h-5" />
                     </div>
-                    <h4 className="text-slate-800 font-bold text-base">客户端连接报错 (终端电脑)</h4>
+                    <h4 className="text-slate-800 font-bold text-base">Client connection error (terminal computer)</h4>
                     <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                      客户端 CAD 启动时卡在"正在检查许可"界面, 最终弹出: <br />
+                      Client CAD stuck on startup"Checking license" interface, Final popup: <br />
                       <span className="font-mono text-red-500 font-black">Error -15: Cannot connect to license server</span><br />
-                      或者检测到授权过期挂机. 
+                      Or it is detected that the authorization has expired and hung up. 
                     </p>
                     <div className="mt-4 flex items-center gap-1 text-xs font-black text-blue-600">
-                      开始诊断
+                      Start diagnosis
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </button>
@@ -561,12 +561,12 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                     <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-600 mb-4 group-hover:scale-110 transition-transform">
                       <Server className="w-5 h-5" />
                     </div>
-                    <h4 className="text-slate-800 font-bold text-base">服务端端口变动 (IT管理员)</h4>
+                    <h4 className="text-slate-800 font-bold text-base">Server port changes (IT administrator)</h4>
                     <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                      服务端 lmgrd 服务可以正常启动并运行. 但客户端总是偶尔报错, 需要反复重启服务, 且因为 Vendor 插件端口随机变化导致防火墙规则频繁失效. 
+                      The server-side lmgrd service can start and run normally.. But the client always reports errors occasionally and needs to restart the service repeatedly., And because the Vendor plug-in port changes randomly, the firewall rules frequently fail.. 
                     </p>
                     <div className="mt-4 flex items-center gap-1 text-xs font-black text-violet-600">
-                      锁定服务器端口
+                      Lock server port
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </button>
@@ -578,34 +578,34 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
             {currentStep === 1 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第二步: 检测 DNS 域名解析与连通性</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 2: Detection DNS Domain Name Resolution and Connectivity</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    确保客户端电脑能够识别并翻译您输入的许可证服务器地址 (主机名或 IP) . 
+                    Make sure that the client computer can recognize and translate the license server address (hostname or IP) . 
                   </p>
                 </div>
 
                 <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> Windows CMD / PowerShell 诊断指令</span>
+                    <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> Windows CMD / PowerShell Diagnostic commands</span>
                     <button
                       onClick={() => handleCopy(`${psPingCommand}\n${psNslookupCommand}`, 'dnsCmd')}
                       className="text-slate-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       {copiedText === 'dnsCmd' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                      {copiedText === 'dnsCmd' ? '已复制' : '复制命令'}
+                      {copiedText === 'dnsCmd' ? 'Copied ' : 'Copy command'}
                     </button>
                   </div>
                   <pre className="overflow-x-auto text-slate-200 select-all p-1 bg-slate-950/40 rounded-lg">
-                    {`# 1. 验证主机是否在线以及响应延迟
+                    {`# 1. Verify host is online and response delays
 ${psPingCommand}
 
-# 2. 验证 DNS 域名解析是否正常, 是否返回了正确的服务器 IP
+# 2. Verify whether DNS domain name resolution is normal, Is the correct server IP returned?
 ${psNslookupCommand}`}
                   </pre>
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <span className="text-xs font-black text-slate-500 uppercase">选择本地测试结果: </span>
+                  <span className="text-xs font-black text-slate-500 uppercase">Select local test results: </span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <button
                       onClick={() => {
@@ -618,7 +618,7 @@ ${psNslookupCommand}`}
                           : 'border-slate-100 bg-slate-50/20 text-slate-700 hover:bg-slate-100/50'
                       }`}
                     >
-                      ✓ Ping 畅通且 IP 正确
+                      ✓ Ping Smooth and correct IP
                     </button>
                     <button
                       onClick={() => setPingStatus('unknown_host')}
@@ -628,7 +628,7 @@ ${psNslookupCommand}`}
                           : 'border-slate-100 bg-slate-50/20 text-slate-700 hover:bg-slate-100/50'
                       }`}
                     >
-                      ✗ 提示 "Ping request could not find host..."
+                      ✗ Prompt "Ping request could not find host..."
                     </button>
                     <button
                       onClick={() => setPingStatus('timeout')}
@@ -638,22 +638,22 @@ ${psNslookupCommand}`}
                           : 'border-slate-100 bg-slate-50/20 text-slate-700 hover:bg-slate-100/50'
                       }`}
                     >
-                      ! 请求超时 / 丢包严重
+                      ! Request timeout/serious packet loss
                     </button>
                   </div>
                 </div>
 
-                {/* 针对诊断结果的修复指引 */}
+                {/* Repair instructions for diagnostic results */}
                 {pingStatus === 'unknown_host' && (
                   <div className="bg-red-50 rounded-2xl border border-red-100 p-5 flex gap-3 text-red-800">
                     <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                     <div className="text-xs leading-relaxed">
-                      <p className="font-bold mb-1">域名解析失败 (DNS 故障) </p>
-                      <p>客户端无法将主机名 <span className="font-mono bg-red-100/80 px-1 rounded font-black">{serverAddress}</span> 翻译为 IP 地址. 这属于网络基础错误. </p>
+                      <p className="font-bold mb-1">Domain name resolution failed (DNS failure) </p>
+                      <p>The client cannot translate hostname <span className="font-mono bg-red-100/80 px-1 rounded font-black">{serverAddress}</span> to IP Address. This is a network basic error. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
-                        <li>请检查服务器名字是否拼写正确. </li>
-                        <li><b>临时修复</b>: 若您知晓服务器 IP, 可在客户端配置环境变量时直接写 IP, 例如 <span className="font-mono bg-red-100/80 px-1 rounded font-black">27000@192.168.1.100</span>. </li>
-                        <li><b>永久修复</b>: 在客户端的 <span className="font-mono bg-red-100/80 px-1 rounded">C:\Windows\System32\drivers\etc\hosts</span> 文件中追加一行: <br />
+                        <li>Please check that the server name is spelled correctly. </li>
+                        <li><b>Temporary fix</b>: If you know the server IP, You can directly write the IP when configuring environment variables on the client, for example <span className="font-mono bg-red-100/80 px-1 rounded font-black">27000@192.168.1.100</span>. </li>
+                        <li><b>Permanent fix</b>: On the client side <span className="font-mono bg-red-100/80 px-1 rounded">C:\Windows\System32\drivers\etc\hosts</span> Append a line to the file: <br />
                           <span className="font-mono bg-slate-900 text-slate-200 px-2 py-0.5 rounded text-[10px] mt-1 inline-block select-all">192.168.1.100  {serverAddress}</span>
                         </li>
                       </ul>
@@ -665,12 +665,12 @@ ${psNslookupCommand}`}
                   <div className="bg-orange-50 rounded-2xl border border-orange-100 p-5 flex gap-3 text-orange-800">
                     <AlertTriangle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
                     <div className="text-xs leading-relaxed">
-                      <p className="font-bold mb-1">物理链路超时或禁 Ping</p>
-                      <p>说明客户端与服务器之间的物理连通有问题, 或对方启用了 ICMP 禁 Ping 策略. </p>
+                      <p className="font-bold mb-1">Physical link times out or Ping disabled</p>
+                      <p>It means there is a problem with the physical connection between the client and the server, or the other party has enabled ICMP Ban Ping Policy. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
-                        <li>如果是无线网络, 请检查是否处于公司同一个内网/局域网段. </li>
-                        <li>通过 VPN 接入时, 请验证 VPN 连接是否掉线, 以及路由策略是否包含服务器网段. </li>
-                        <li>如果确定物理通路没断, 且只是禁 Ping, 您可以直接点击上面的<b>"Ping 畅通且 IP 正确"</b>强行跳入下一步测试 TCP 端口可达性. </li>
+                        <li>If it is a wireless network, please check whether it is on the same intranet of the company/LAN segment. </li>
+                        <li>When accessing via VPN, Please verify that the VPN connection is not dropped, And whether the routing policy includes the server network segment. </li>
+                        <li>If it is determined that the physical path is not broken and is only disabled Ping, You can directly click on<b>"Ping is smooth and IP Correct"</b>forcibly jump to the next test TCP Port reachability. </li>
                       </ul>
                     </div>
                   </div>
@@ -681,14 +681,14 @@ ${psNslookupCommand}`}
                     onClick={() => setCurrentStep(0)}
                     className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
                   >
-                    上一步
+                    Previous step
                   </button>
                   <button
                     onClick={() => setCurrentStep(2)}
                     disabled={pingStatus === 'untested'}
                     className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
-                    下一步: 诊断端口
+                    Next step: Diagnostic port
                   </button>
                 </div>
               </div>
@@ -698,29 +698,29 @@ ${psNslookupCommand}`}
             {currentStep === 2 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第三步: 验证 TCP 端口开放与防火墙状态</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 3: Verify TCP Port opening and firewall status</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    FLEXlm 授权服务包含 **lmgrd 主服务端口** (默认 27000-27009) 与 **Vendor 厂商特定端口** (默认随机, 在此假定为 {vendorPort}) . 如果只开主服务端口而拦截了 Vendor 端口, 就会产生 Error -15 连接故障. 
+                    FLEXlm Authorization service contains **lmgrd main service port** (Default 27000-27009) and **Vendor Vendor specific port** (default random, Here it is assumed to be {vendorPort}). If only the main service port is opened and intercepted Vendor port, will generate Error -15 Connection failure. 
                   </p>
                 </div>
 
                 {/* PowerShell Command Block */}
                 <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> PowerShell 一键 TCP 连接性握手</span>
+                    <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> PowerShell One-click TCP connectivity handshake</span>
                     <button
                       onClick={() => handleCopy(`${psPortTest27000}\n${psPortTestVendor}`, 'portTestCmd')}
                       className="text-slate-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       {copiedText === 'portTestCmd' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                      {copiedText === 'portTestCmd' ? '已复制' : '复制命令'}
+                      {copiedText === 'portTestCmd' ? 'Copied ' : 'Copy command'}
                     </button>
                   </div>
                   <pre className="overflow-x-auto text-slate-200 select-all p-1 bg-slate-950/40 rounded-lg">
-                    {`# 1. 探测服务器上的 lmgrd 主服务端口连通状态
+                    {`# 1. Detect the connection status of the lmgrd main service port on the server
 ${psPortTest27000}
 
-# 2. 探测服务器上的 ${vendorName} 供应商端口连通状态
+# 2. Detect the ${vendorName} vendor port connectivity status on the server
 ${psPortTestVendor}`}
                   </pre>
                 </div>
@@ -728,7 +728,7 @@ ${psPortTestVendor}`}
                 {/* Port Selection Options */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
-                    <span className="text-xs font-black text-slate-500 uppercase">lmgrd 端口测试结果 (Port {lmgrdPort})</span>
+                    <span className="text-xs font-black text-slate-500 uppercase">lmgrd Port test results (Port {lmgrdPort})</span>
                     <div className="flex gap-2">
                       <button
                         onClick={() => setPort27000Status('open')}
@@ -738,7 +738,7 @@ ${psPortTestVendor}`}
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
                         }`}
                       >
-                        TcpTestSucceeded: True (通)
+                        TcpTestSucceeded: True (pass)
                       </button>
                       <button
                         onClick={() => setPort27000Status('closed')}
@@ -748,13 +748,13 @@ ${psPortTestVendor}`}
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
                         }`}
                       >
-                        False (不通)
+                        False (No way)
                       </button>
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <span className="text-xs font-black text-slate-500 uppercase">Vendor 端口测试结果 (Port {vendorPort})</span>
+                    <span className="text-xs font-black text-slate-500 uppercase">Vendor Port test results (Port {vendorPort})</span>
                     <div className="flex gap-2">
                       <button
                         onClick={() => setPortVendorStatus('open')}
@@ -764,7 +764,7 @@ ${psPortTestVendor}`}
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
                         }`}
                       >
-                        TcpTestSucceeded: True (通)
+                        TcpTestSucceeded: True (pass)
                       </button>
                       <button
                         onClick={() => setPortVendorStatus('closed')}
@@ -774,27 +774,27 @@ ${psPortTestVendor}`}
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
                         }`}
                       >
-                        False (不通)
+                        False (No way)
                       </button>
                     </div>
                   </div>
                 </div>
 
-                {/* 针对端口阻断的解决方案 */}
+                {/* Solutions for port blocking */}
                 {(port27000Status === 'closed' || portVendorStatus === 'closed') && (
                   <div className="bg-amber-50 rounded-2xl border border-amber-100 p-5 text-amber-900 flex gap-3">
                     <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                     <div className="text-xs leading-relaxed flex-1">
-                      <p className="font-bold mb-1">发现端口被屏蔽! 请按以下顺序排查防火墙与服务状态: </p>
+                      <p className="font-bold mb-1">The port is found to be blocked! Please check the firewall and service status in the following order: </p>
                       
                       <ul className="list-decimal list-inside space-y-2 mt-2">
                         <li>
-                          <b>检查服务器端的 lmgrd 服务是否启动成功</b>: <br />
-                          若服务尚未启动, 所有端口状态均为 False. 应登录服务器检查 LMTOOLS 里的日志, 确认服务状态为 "Server Started". 
+                          <b>Check whether the lmgrd service on the server side is started successfully</b>: <br />
+                          If the service has not been started, the status of all ports is False. You should log in to the server and check the logs in LMTOOLS, Confirm that the service status is "Server Started". 
                         </li>
                         <li>
-                          <b>在服务器防火墙上开放端口 (IT 人员在服务器执行) </b>: <br />
-                          如果服务已启但依旧不通, 说明被 Windows Defender 防火墙入站规则拦截. 请在服务器的 PowerShell 中以<b>管理员身份</b>执行以下命令快速放行: 
+                          <b>Open ports on the server firewall (IT staff perform) </b>: <br />
+                          If the service is started but still unavailable, it means that Windows Defender Firewall inbound rule interception. Please set the PowerShell China as<b>administrator</b>Execute the following command to quickly release: 
                           <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[10px] mt-2 relative select-all flex justify-between items-start gap-4">
                             <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{serverFirewallCmd}</pre>
                             <button
@@ -806,8 +806,8 @@ ${psPortTestVendor}`}
                           </div>
                         </li>
                         <li>
-                          <b>锁定 Vendor 端口</b>: <br />
-                          如果 lmgrd 端口 (27000) 通了, 而 Vendor 端口不通, 通常是因为没有在 LIC 文件里锁死 Vendor 端口, 导致每次服务重启端口随机漂移. 请参考本工具<b>"步骤五"</b>锁定端口. 
+                          <b>Lock Vendor Port</b>: <br />
+                          If lmgrd port (27000) Passed, and Vendor The port is blocked, usually because there is no LIC The Vendor port is locked in the file, This causes the port to drift randomly every time the service is restarted. Please refer to this tool.<b>"Step Five"</b>Lock the Port. 
                         </li>
                       </ul>
                     </div>
@@ -819,14 +819,14 @@ ${psPortTestVendor}`}
                     onClick={() => setCurrentStep(1)}
                     className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
                   >
-                    上一步
+                    Previous step
                   </button>
                   <button
                     onClick={() => setCurrentStep(3)}
                     disabled={port27000Status === 'untested' && portVendorStatus === 'untested'}
                     className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
-                    下一步: 配置客户端变量
+                    Next step: Configure client variables
                   </button>
                 </div>
               </div>
@@ -836,34 +836,34 @@ ${psPortTestVendor}`}
             {currentStep === 3 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第四步: 检查并修复客户端环境变量与注册表</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 4: Check and repair client environment variables and registry</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    即使网络畅通, 如果客户端配置了错误或冲突的旧服务器环境变量, 也会报 Error -15. 
+                    Even if the network is open, if the client is configured with incorrect or conflicting old server environment variables, Error -15 will also be reported. 
                   </p>
                 </div>
 
-                {/* 客户端诊断脚本 */}
+                {/* Client diagnostic script */}
                 <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> 客户端一键诊断环境脚本 (PowerShell)</span>
+                    <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> Client-side one-click diagnostic environment script (PowerShell)</span>
                     <button
                       onClick={() => handleCopy(psClientDiagnosticScript, 'diagScript')}
                       className="text-slate-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       {copiedText === 'diagScript' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                      {copiedText === 'diagScript' ? '已复制' : '复制脚本'}
+                      {copiedText === 'diagScript' ? 'Copied ' : 'Copy script'}
                     </button>
                   </div>
                   <div className="max-h-[140px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-[10px]">
                     <pre className="whitespace-pre">{psClientDiagnosticScript}</pre>
                   </div>
-                  <p className="text-[10px] text-slate-400 italic">用法: 复制整段代码, 在客户端电脑上搜索并以"管理员身份"打开 PowerShell, 粘贴并回车执行. 即可一眼看清所有配错的环境变量和缓存条目. </p>
+                  <p className="text-[10px] text-slate-400 italic">Usage: Copy the entire code, Search on the client computer and enter as "administrator""Open PowerShell, paste and press Enter to execute. You can see all misconfigured environment variables and cache entries at a glance. </p>
                 </div>
 
-                {/* 写入建议的环境变量 */}
+                {/* Write recommended environment variables */}
                 <div className="bg-blue-50 rounded-2xl border border-blue-100 p-5 text-blue-900">
-                  <h4 className="font-bold text-xs mb-2 flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> 修复配置: 一键写入环境变量</h4>
-                  <p className="text-xs leading-relaxed mb-3">若发现未配置或配错, 请在客户端以<b>管理员身份</b>运行以下命令将当前服务器绑定至系统环境变量中 (无需重启, 即时生效) : </p>
+                  <h4 className="font-bold text-xs mb-2 flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> Repair configuration: write environment variables with one click</h4>
+                  <p className="text-xs leading-relaxed mb-3">If it is found that it is not configured or misconfigured, please use<b>As an administrator</b>run the following command to bind the current server to the system environment variable (No need to restart, effective immediately) : </p>
                   
                   <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[10px] select-all flex justify-between items-start gap-4">
                     <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{clientRepairCmd}</pre>
@@ -875,9 +875,9 @@ ${psPortTestVendor}`}
                     </button>
                   </div>
                   <ul className="list-disc list-inside text-[10px] text-blue-800/80 mt-3 space-y-1">
-                    <li>对于 Autodesk/AutoCAD 系列: 环境变量名为 <span className="font-mono bg-blue-100 px-1 rounded">ADSKFLEX_LICENSE_FILE</span></li>
-                    <li>对于 SolidWorks: 环境变量名通常为 <span className="font-mono bg-blue-100 px-1 rounded">SW_D_LICENSE_FILE</span> 或直接在设置中指定 <span className="font-mono bg-blue-100 px-1 rounded">25734@服务器</span></li>
-                    <li>若使用的是非标准主端口, 需要带上端口前缀, 例如: <span className="font-mono bg-blue-100 px-1 font-bold">@{serverAddress}</span> 或者 <span className="font-mono bg-blue-100 px-1 font-bold">{lmgrdPort}@{serverAddress}</span>. </li>
+                    <li>For Autodesk/AutoCAD series: The environment variable is named <span className="font-mono bg-blue-100 px-1 rounded">ADSKFLEX_LICENSE_FILE</span></li>
+                    <li>For SolidWorks: The environment variable name is usually <span className="font-mono bg-blue-100 px-1 rounded">SW_D_LICENSE_FILE</span> Or specify <span className="font-mono bg-blue-100 px-1 rounded">25734@server directly in the settings</span></li>
+                    <li>If you are using a non-standard main port, you need to bring the port prefix, For example: <span className="font-mono bg-blue-100 px-1 font-bold">@{serverAddress}</span> or <span className="font-mono bg-blue-100 px-1 font-bold">{lmgrdPort}@{serverAddress}</span>. </li>
                   </ul>
                 </div>
 
@@ -886,13 +886,13 @@ ${psPortTestVendor}`}
                     onClick={() => setCurrentStep(2)}
                     className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
                   >
-                    上一步
+                    Previous step
                   </button>
                   <button
                     onClick={() => setCurrentStep(4)}
                     className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold cursor-pointer"
                   >
-                    下一步: 配置许可服务器锁端口
+                    Next step: Configure the license server lock port
                   </button>
                 </div>
               </div>
@@ -902,30 +902,30 @@ ${psPortTestVendor}`}
             {currentStep === 4 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第五步: 锁定 FLEXlm License 供应商端口 (Vendor Daemon Port)</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 5: Lock FLEXlm License Vendor Daemon Port</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    这是根治 Error -15 的核心办法. 如果不显式锁定端口, 每次服务器重启后, Vendor 端口均是随机的 (比如变到 62890) , 由于管理员没有在防火墙里开该随机端口, 就会再次连接失败. 
+                    This is the core method to cure Error -15. If you do not explicitly lock the port, every time the server restarts, Vendor The ports are all randomized (such as changing to 62890) , Because the administrator did not open the random port in the firewall, the connection will fail again.. 
                   </p>
                 </div>
 
                 <div className="bg-slate-50 rounded-2xl border border-slate-100 p-5 flex flex-col gap-4">
                   <h4 className="text-slate-800 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5">
                     <Lock className="w-3.5 h-3.5 text-blue-600" />
-                    LIC 许可证首部生成器
+                    LIC License header generator
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    打开您服务器上的许可证文件 (通常是 `.lic` 或 `.dat` 格式) , 定位到文件最顶部的几行 (通常以 SERVER 和 VENDOR 或 DAEMON 开头) , 将它们修改替换为下方生成的配置: 
+                    Open the license file on your server (usually `.lic` or `.dat` format) , Locate the top few lines of the file (usually starting with SERVER and VENDOR or DAEMON at the beginning), modify and replace them with the configuration generated below: 
                   </p>
 
                   <div className="bg-slate-900 text-slate-300 p-4 rounded-xl font-mono text-xs flex flex-col gap-3">
                     <div className="flex justify-between items-center text-[10px] text-slate-500">
-                      <span>LIC 文件替换头部示例 (建议端口)</span>
+                      <span>LIC File replacement header example (recommended port)</span>
                       <button
                         onClick={() => handleCopy(`SERVER ${serverAddress || 'license-server'} ANY ${lmgrdPort || '27000'}\nVENDOR ${vendorName} port=${vendorPort || '2080'}`, 'licHead')}
                         className="text-slate-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                       >
                         {copiedText === 'licHead' ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3" />}
-                        {copiedText === 'licHead' ? '已复制' : '复制配置'}
+                        {copiedText === 'licHead' ? 'Copied' : 'Copy configuration'}
                       </button>
                     </div>
                     <pre className="text-emerald-400 select-all p-1 bg-slate-950/40 rounded-lg">
@@ -935,12 +935,12 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
                   </div>
 
                   <div className="text-xs leading-relaxed text-slate-600 border-l-2 border-blue-500 pl-3">
-                    <p className="font-bold text-slate-800 mb-1">实施步骤: </p>
+                    <p className="font-bold text-slate-800 mb-1">Implementation steps: </p>
                     <ol className="list-decimal list-inside space-y-1 text-slate-600">
-                      <li>停止服务器的 FLEXlm / LMTOOLS 授权服务. </li>
-                      <li>编辑修改许可证文件, 将前两行替换为上述代码 (请注意保持其中的主机名和 MAC 地址与您的旧配置匹配, ANY 可替换为真实 MAC 地址) . </li>
-                      <li>在许可证服务器防火墙入站规则中, 同时放行 TCP <span className="font-bold text-blue-600 font-mono">{lmgrdPort}</span> 与 <span className="font-bold text-blue-600 font-mono">{vendorPort}</span> 两个端口. </li>
-                      <li>在 LMTOOLS 重新加载配置文件 (Re-read License File) 并启动服务. </li>
+                      <li>Stop the server's FLEXlm / LMTOOLS licensing service. </li>
+                      <li>Edit and modify the license file and replace the first two lines with the above code (Be careful to keep the hostname and MAC address in it matching your old configuration, ANY Can be replaced with real MAC address) . </li>
+                      <li>In the license server firewall inbound rules, also allow TCP <span className="font-bold text-blue-600 font-mono">{lmgrdPort}</span> With <span className="font-bold text-blue-600 font-mono">{vendorPort}</span> two ports. </li>
+                      <li>Reload configuration file in LMTOOLS (Re-read License File) and start the service. </li>
                     </ol>
                   </div>
                 </div>
@@ -950,14 +950,14 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
                     onClick={() => setCurrentStep(3)}
                     className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
                   >
-                    上一步
+                    Previous step
                   </button>
                   <button
                     onClick={handleReset}
                     className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-bold flex items-center gap-1 cursor-pointer"
                   >
                     <Check className="w-4 h-4" />
-                    完成诊断
+                    Complete diagnosis
                   </button>
                 </div>
               </div>
@@ -968,12 +968,12 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
 
       </div>
 
-      {/* 底部详细技术文章排错面板, 符合 E-E-A-T 工业指南 */}
+      {/* Detailed technical article troubleshooting panel at the bottom, consistent with E-E-A-T Industry Guide */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
         <div>
           <h2 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
             <Code className="w-5 h-5 text-blue-500" />
-            FLEXlm 网络版 -15 报错深度原理与故障排查知识库
+            FLEXlm Online version -15 Depth error reporting principles and troubleshooting knowledge base
           </h2>
           <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
             FLEXlm Error -15 In-depth Technical Principles & Solution Hub
@@ -983,38 +983,38 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-slate-600">
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">为什么双端口都会触发 -15 报错? </h3>
+              <h3 className="font-bold text-slate-800 text-base mb-1.5">Why do both ports trigger -15 errors?? </h3>
               <p>
-                很多网络管理员在部署 CAD 浮动服务器时, 习惯性只在防火墙中开辟了 `lmgrd.exe` 的服务端口 (通常是 27000) . 当客户端发起连接时, 主进程会回应客户端一个随机选择的 Vendor 供应商进程 (例如 `adskflex.exe`) 的端口. 由于该端口被服务器防火墙阻断, 客户端最终产生握手超时, 返回 `Error -15: Cannot connect to license server`. 因此, 锁定 Vendor 端口是保障稳定的首要举措. 
+                Many network administrators deploy CAD floating servers, I habitually only open the service port of `lmgrd.exe` in the firewall. (Usually 27000). When the client initiates a connection, The main process will respond to the client with a randomly selected Vendor supplier process. (For example, the port of `adskflex.exe`). Because the port is blocked by the server firewall, the client eventually generates a handshake timeout., Returns `Error -15: Cannot connect to license server`. Therefore, Locking the Vendor port is the first step to ensure stability. 
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">主机名/DNS解析为何是排错的第一关? </h3>
+              <h3 className="font-bold text-slate-800 text-base mb-1.5">Why hostname/DNS resolution is the first step in troubleshooting? </h3>
               <p>
-                CAD 客户端在启动并查询环境变量 (如 `ADSKFLEX_LICENSE_FILE=@my-server`) 时, 首先调用操作系统的 DNS 解析模块去获得 `my-server` 的内网 IP. 如果网络中没有部署 WINS/DNS 服务, 或者客户端在宿主 Hosts 中找不到对应的记录, 连接就会直接在域名解析阶段中断. 若出现此类故障, 直接使用 IP 往往是最快的临时替代方案. 
+                CAD The client starts up and queries environment variables such as `ADSKFLEX_LICENSE_FILE=@my-server`) When, first call the operating system's DNS Parse the module to obtain the intranet of `my-server` IP. If WINS/DNS services are not deployed on the network, Or the client cannot find the corresponding record in the host Hosts, The connection will be interrupted directly during the domain name resolution stage. If such a failure occurs, Using IP directly is often the fastest temporary alternative. 
               </p>
             </div>
           </div>
 
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">客户端环境变量优先级原则</h3>
+              <h3 className="font-bold text-slate-800 text-base mb-1.5">Client environment variable priority principle</h3>
               <p>
-                在 Windows 环境下, FLEXlm 读取许可配置遵循特定次序: 系统环境变量 (System Environment Variables) ➔ 用户环境变量 (User Environment Variables) ➔ 注册表缓存配置. 如果企业用户更换了授权服务器, 但客户端残留有以前老旧服务器的注册表配置, CAD 会先尝试连接旧服务进而引发报错. 使用 PowerShell 诊断脚本能够完美扫除这类配置死角. 
+                In Windows environment, FLEXlm Reading the licensing configuration follows a specific order: System environment variables (System Environment Variables) ➔ User Environment Variables ➔ Registry Cache Configuration. If an enterprise user changes the authorization server, but the client still has the registry configuration of the old server, CAD It will first try to connect to the old service and cause an error. Use PowerShell Diagnostic scripts can perfectly eliminate such configuration dead ends. 
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">网络延时与超时机制 (FLEXLM_TIMEOUT)</h3>
+              <h3 className="font-bold text-slate-800 text-base mb-1.5">Network delay and timeout mechanism (FLEXLM_TIMEOUT)</h3>
               <p>
-                如果客户端处于异地办公 (远程拨号 VPN) 或者无线网络信号不稳定状态, FLEXlm 默认的握手响应超时时间 (大约 0.1 秒) 可能会过低. 可以通过在客户端系统环境变量中新建一个名为 <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">FLEXLM_TIMEOUT</span> 的系统变量, 值设定为 <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">1000000</span> (单位为微秒, 即 1.0 秒) , 能够有效规避由于网络物理延迟引起的 -15 联机失败. 
+                If the client is working remotely (remote dial-up VPN) Or the wireless network signal is unstable, FLEXlm’s default handshake response timeout (About 0.1 seconds) It may be too low. You can create a new file named <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">FLEXLM_TIMEOUT</span> system variable, the value is set to <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">1000000</span> (The unit is microseconds, that is 1.0 seconds), can effectively avoid network physical delays caused by -15 Connection failed. 
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 订阅部分 */}
-      <NewsletterSubscribe />
+      {/* Subscription section */}
+      <RelatedTools />
     </div>
 );
 }

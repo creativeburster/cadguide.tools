@@ -32,10 +32,10 @@ export default function AutodeskFusion360Page() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Autodesk Fusion 360 <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Autodesk Fusion 360 <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              云端协作设计轻量三维方案. 提供 Fusion 360 雕刻面, 三维拉伸与 CAM 制造刀路快捷代码, A4 打印优化. 
+              Cloud collaborative design of lightweight 3D solutions. Provided Fusion 360 Sculpted surfaces, 3D extrusions &amp; CAM Manufacturing tool path shortcut code, A4 printing optimization. 
             </p>
           </div>
         </section>

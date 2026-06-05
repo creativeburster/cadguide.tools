@@ -32,10 +32,10 @@ export default function HexagonBricsCADPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Hexagon BricsCAD <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Hexagon BricsCAD <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              高性能专业 2D/3D CAD. 收录 BricsCAD 智能 Quad 快捷工具盘命令, 多段线和三维轴侧速查. 
+              High-performance professional 2D/3D CAD. Included BricsCAD Smart Quad shortcut tool tray commands, Polyline and 3D axis side quick check. 
             </p>
           </div>
         </section>

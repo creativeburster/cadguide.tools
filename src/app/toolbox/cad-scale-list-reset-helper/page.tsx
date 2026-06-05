@@ -5,7 +5,7 @@ import CadScaleListResetClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Plotting Scale List Reset LISP Automation Helper | CADGuide.tools',
   description:
-    '在线编写重置 CAD 图纸自定义比例尺别名臃肿 (Scale List) 的 AutoLISP 宏脚本. 清除无效视口参照比例字典, 解决保存图纸卡顿, 无法写外块和开图假死问题. ',
+    'Online writing resets CAD drawing custom scale aliases are bloated (Scale List) The AutoLISP macro script. Clear the invalid viewport reference proportion dictionary to solve the problem of saving drawings., Unable to write external blocks and open the map to cause death problem. ',
   path: '/toolbox/cad-scale-list-reset-helper',
 });
 
@@ -33,10 +33,10 @@ export default function CadScaleListResetPage() {
               CAD Performance & Annotation Optimizer
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              CAD <span className="text-blue-400">视口比例尺重置与清理器</span>
+              CAD <span className="text-blue-400">Viewport scale reset and cleaner</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              解决由于外部参照 (Xref) 循环嵌套导入的上千个垃圾比例尺导致的复制卡顿. 一键生成重置默认值并按需重建常用标准比例的 LISP 清理程序. 
+              Resolve copy lag caused by thousands of garbage scales imported from external reference (Xref) loop nesting. One-click generation of LISP cleaners that reset defaults and rebuild common standard scales on demand. 
             </p>
           </div>
         </section>

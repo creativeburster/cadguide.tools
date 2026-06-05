@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 export function Footer() {
   return (
@@ -113,7 +113,7 @@ export function Footer() {
 
           {/* Newsletter */}
           <div className="col-span-2 md:col-span-2 xl:col-span-2">
-            <NewsletterSubscribe variant="footer" />
+            <RelatedTools />
           </div>
         </div>
 

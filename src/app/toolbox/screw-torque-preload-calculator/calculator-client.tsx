@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, Cpu, Wrench } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 const BOLT_SIZES = [
   { name: 'M4', d: 4, As: 8.78 },
@@ -18,18 +18,18 @@ const BOLT_SIZES = [
 ];
 
 const BOLT_GRADES = [
-  { name: 'Grade 4.8 (普通碳钢)', yield: 320, tensile: 400 },
-  { name: 'Grade 5.8 (低碳合金钢)', yield: 400, tensile: 500 },
-  { name: 'Grade 8.8 (高强中碳钢)', yield: 640, tensile: 800 },
-  { name: 'Grade 10.9 (合金钢调质)', yield: 900, tensile: 1000 },
-  { name: 'Grade 12.9 (超高强度合金钢)', yield: 1080, tensile: 1200 },
+  { name: 'Grade 4.8 (Ordinary carbon steel)', yield: 320, tensile: 400 },
+  { name: 'Grade 5.8 (Low carbon alloy steel)', yield: 400, tensile: 500 },
+  { name: 'Grade 8.8 (High strength medium carbon steel)', yield: 640, tensile: 800 },
+  { name: 'Grade 10.9 (Alloy steel quenched and tempered)', yield: 900, tensile: 1000 },
+  { name: 'Grade 12.9 (Ultra-high strength alloy steel)', yield: 1080, tensile: 1200 },
 ];
 
 const FRICTION_COEFFICIENTS = [
-  { name: 'Dry Steel (干燥无润滑钢表面)', K: 0.20 },
-  { name: 'Lubricated Oil (机油润滑)', K: 0.15 },
-  { name: 'Zinc Plated (镀锌防腐表面)', K: 0.18 },
-  { name: 'PTFE / MoS2 (特氟龙/二硫化钼干膜润滑)', K: 0.10 },
+  { name: 'Dry Steel (Dry non-lubricated steel surface)', K: 0.20 },
+  { name: 'Lubricated Oil (Oil lubrication)', K: 0.15},
+  { name: 'Zinc Plated (Galvanized anti-corrosion surface)', K: 0.18 },
+  { name: 'PTFE / MoS2 (Teflon/molybdenum disulfide dry film lubrication)', K: 0.10 },
 ];
 
 export default function BoltTorqueClient() {
@@ -103,14 +103,14 @@ Generated via CADGuide.tools`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Wrench className="w-5 h-5 text-blue-400" />
-            <span>紧固参数设计 (Inputs)</span>
+            <span>Fastening parameter design (Inputs)</span>
           </h2>
         </div>
 
         {/* Bolt size selection */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            1. 螺栓规格 (Bolt Size)
+            1. Bolt Size
           </label>
           <select
             value={boltIdx}
@@ -119,19 +119,19 @@ Generated via CADGuide.tools`;
           >
             {BOLT_SIZES.map((b, i) => (
               <option key={b.name} value={i}>
-                {b.name} (公称直径: {b.d} mm / 应力面积: {b.As} mm²)
+                {b.name} (Nominal diameter: {b.d} mm / stress area: {b.As} mm²)
               </option>
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            螺栓规格: {bolt.name}
+            Bolt specification: {bolt.name}
           </div>
         </div>
 
         {/* Strength Class */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            2. 螺栓强度等级 (Bolt Grade)
+            2. Bolt Grade
           </label>
           <select
             value={gradeIdx}
@@ -140,19 +140,19 @@ Generated via CADGuide.tools`;
           >
             {BOLT_GRADES.map((g, i) => (
               <option key={g.name} value={i}>
-                {g.name} (屈服强度: {g.yield} MPa)
+                {g.name} (Yield strength: {g.yield} MPa)
               </option>
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            强度等级: {grade.name}
+            Property Class: {grade.name}
           </div>
         </div>
 
         {/* Friction / Surface condition */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            3. 装配表面摩擦状态 (Friction Condition)
+            3. Assembly surface friction condition (Friction Condition)
           </label>
           <select
             value={frictionIdx}
@@ -166,16 +166,16 @@ Generated via CADGuide.tools`;
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            摩擦系数 (K): {friction.K}
+            Friction coefficient (K): {friction.K}
           </div>
         </div>
 
         {/* Preload ratio */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. 设定张紧力比例 (Preload Rate)</span>
+            <span className="text-slate-400 uppercase tracking-wider">4. Set tension ratio (Preload Rate)</span>
             <span className={`${isYieldDanger ? 'text-red-400' : (isYieldWarning ? 'text-amber-400' : 'text-blue-400')} font-mono`}>
-              {preloadRatio}% (屈服极限)
+              {preloadRatio}% (Yield limit)
             </span>
           </div>
           <input
@@ -188,7 +188,7 @@ Generated via CADGuide.tools`;
             className="w-full h-1.5 bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-500 print:hidden"
           />
           <p className="text-[10px] text-slate-500">
-            * 机械工程行业标准安装推荐值为 70% 至 85% 屈服极限. 
+            * Mechanical engineering industry standard installation recommendations are 70% to 85% yield limit. 
           </p>
         </div>
       </div>
@@ -200,51 +200,51 @@ Generated via CADGuide.tools`;
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
               <Cpu className="w-5 h-5 text-blue-500" />
-              <span>螺栓防脱紧固力学报告</span>
+              <span>Bolt anti-loosening fastening mechanics report</span>
             </h3>
             <button
               onClick={copyToClipboard}
               className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
-              <span>{copied ? '已复制' : '复制数据'}</span>
+              <span>{copied ? 'Copied' : 'Copy data'}</span>
             </button>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                目标拧紧扭矩 (Torque T)
+                Target tightening torque (Torque T)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
                 {results.torque.toFixed(2)} <span className="text-xs text-slate-500 font-sans">N·m</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                扭矩扳手设定目标值
+                Torque wrench setting target value
               </p>
             </div>
 
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                所需预紧力 (Preload Force F)
+                Required preload force (Preload Force F)
               </span>
               <div className="text-2xl font-black font-mono text-slate-800">
                 {results.preloadForce.toFixed(2)} <span className="text-xs text-slate-500 font-sans">kN</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                螺栓受拉拉伸拉力
+                Bolt tension tensile force
               </p>
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                极限屈服承载能力
+                ultimate yield bearing capacity
               </span>
               <div className="text-2xl font-black font-mono text-slate-700">
                 {results.yieldLoad.toFixed(1)} <span className="text-xs text-slate-500 font-sans">kN</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                材料拉力屈服阈值
+                Material tensile yield threshold
               </p>
             </div>
           </div>
@@ -254,9 +254,9 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">屈服断裂警报 (Bolt Yield Danger)! </strong>
+                <strong className="font-black">Bolt Yield Danger! </strong>
                 <p className="mt-0.5 text-red-700 font-medium">
-                  张拉预紧力已高达 {preloadRatio}%. 在承受工作外界动载荷 (振动或拉力) 时, 螺栓极易产生永久性塑性伸长 (颈缩) 导致预紧力崩溃, 或者直接剪切/抗拉拉断. 
+                  The tension preload force has reached {preloadRatio}%. When bearing the external dynamic load at work, (vibration or tension), Bolts are prone to permanent plastic elongation (necking) Causes preload force to collapse, or direct shearing/Tensile breaking. 
                 </p>
               </div>
             </div>
@@ -266,9 +266,9 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
-                <strong className="font-black">临界过载警告 (Overload Risk)</strong>
+                <strong className="font-black">Critical Overload Warning (Overload Risk)</strong>
                 <p className="mt-0.5 text-amber-700">
-                  预紧力偏高 (已在屈服限的 {preloadRatio}% 处) . 装配时如果扭矩控制精度较差, 易局部屈服, 建议下调装配预紧力百分比. 
+                  The preload is too high (already at the yield limit) {preloadRatio}% ). If the torque control accuracy is poor during assembly, Easy to yield locally, it is recommended to lower the assembly preload percentage.. 
                 </p>
               </div>
             </div>
@@ -279,7 +279,7 @@ Generated via CADGuide.tools`;
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
-              紧固副受力拉伸模拟器
+              Fastening pair force tensile simulator
             </span>
           </div>
 
@@ -326,26 +326,26 @@ Generated via CADGuide.tools`;
                 <path d="M 200 175 L 200 150 M 195 155 L 200 150 L 205 155" />
               </g>
               
-              <text x="235" y="32" fill="#60a5fa" fontSize="9" fontWeight="bold">F (张紧力)</text>
-              <text x="235" y="172" fill="#60a5fa" fontSize="9" fontWeight="bold">F (预紧力)</text>
+              <text x="235" y="32" fill="#60a5fa" fontSize="9" fontWeight="bold">F (Tension)</text>
+              <text x="235" y="172" fill="#60a5fa" fontSize="9" fontWeight="bold">F (Preload)</text>
 
               {/* Elongation Label if stretching */}
               {preloadRatio > 20 && (
                 <text x="285" y="105" fill={isYieldDanger ? '#ef4444' : '#64748b'} fontSize="9.5" fontWeight="bold">
-                  {isYieldDanger ? '螺栓颈缩变形' : '微量弹性拉伸'}
+                  {isYieldDanger ? 'Bolt necking deformation': 'Small elastic tension'}
                 </text>
 )}
             </svg>
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-650">
-            * 仿真说明: 张力箭线代表螺栓内部的拉力预紧. 螺栓中间蓝色/橙色杆件随滑块变化模拟真实的金属受拉伸长. 当进入 90% 以上的极限区, 杆件被绘制为明显的变细收缩 (颈缩模拟) 以警示塑性损坏风险. 
+            * Simulation description: The tension arrow represents the tension pre-tightening inside the bolt.. The blue/orange rod in the middle of the bolt changes with the slider to simulate real metal tensile elongation.. When entering the limit area of more than 90%, The member is drawn with a pronounced tapering (necking simulation) To warn of the risk of plastic damage. 
           </p>
         </div>
       </div>
 
       <div className="lg:col-span-12 mt-4 print:hidden">
-        <NewsletterSubscribe />
+        <RelatedTools />
       </div>
     </div>
 );

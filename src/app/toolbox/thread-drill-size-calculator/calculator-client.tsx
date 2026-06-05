@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import { Info, Download, HelpCircle, Layers, Copy, Check, FileText } from 'lucide-react';
 
 interface ThreadDef {
@@ -677,14 +677,7 @@ export default function ThreadDrillCalculatorClient() {
       </div>
 
       {/* Lead Capture Newsletter banner */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the CNC Machining & Threading Handbook"
-        description="Subscribe to receive our cheat sheet on standard feeds & speeds, clearance hole sizes charts, and PDF drill set matrices."
-        buttonText="Get Free Machining Guide"
-        placeholder="Enter your work email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

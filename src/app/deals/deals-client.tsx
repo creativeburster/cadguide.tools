@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { tools } from '@/lib/data';
 import { ToolLogo } from '@/components/tool-logo';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 interface Deal {
   id: string;
@@ -389,7 +389,7 @@ export default function DealsPage() {
 
         {/* Newsletter / Alert Section */}
         <section className="mt-24">
-          <NewsletterSubscribe variant="banner" />
+          <RelatedTools />
         </section>
       </section>
     </main>

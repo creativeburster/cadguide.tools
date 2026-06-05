@@ -32,10 +32,10 @@ export default function DassaultDraftSightPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Dassault DraftSight <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Dassault DraftSight <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              AutoCAD 平替高性价比方案. 整理 DraftSight 2D 绘图快捷别名, 层表管理命令与视口配置. 
+              AutoCAD Competitive cost-effective solution. Organized DraftSight 2D Drawing shortcut aliases, layer table management commands and viewport configuration. 
             </p>
           </div>
         </section>

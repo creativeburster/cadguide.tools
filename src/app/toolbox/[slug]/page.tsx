@@ -2,7 +2,7 @@ import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { TOOLBOX_DATA } from '@/lib/toolbox-data';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 type Params = Promise<{ slug: string }>;
 
@@ -121,23 +121,9 @@ export default async function ToolboxDetailPlaceholderPage({ params }: { params:
 
           {/* Lead Capture form */}
           {tool.origin === 'native' ? (
-            <NewsletterSubscribe
-              variant="banner"
-              title="Get notified when this utility launches"
-              description="Enter your email below. We will send you a one-time notification the second this tool goes live, along with early access."
-              buttonText="Notify Me"
-              placeholder="Enter your work email"
-              className="pt-6 border-t border-slate-100 rounded-none bg-transparent text-slate-900 p-0"
-            />
+            <RelatedTools />
           ) : (
-            <NewsletterSubscribe
-              variant="banner"
-              title="Get the curated recommendations checklist"
-              description="Receive our monthly CAD insider digest containing evaluated cloud tools, coupon discounts codes, and anti-telemetry setup files."
-              buttonText="Get Recommendations"
-              placeholder="Enter your work email"
-              className="pt-6 border-t border-slate-100 rounded-none bg-transparent text-slate-900 p-0"
-            />
+            <RelatedTools />
           )}
         </div>
       </main>

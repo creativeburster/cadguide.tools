@@ -5,71 +5,71 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "navigation",
-    "name": "🖱️ 鼠标导航 preset"
+    "name": "🖱️ Mouse navigation preset"
   },
   {
     "id": "part",
-    "name": "⚙️ PartDesign 建模"
+    "name": "⚙️ PartDesign Modeling"
   },
   {
     "id": "view",
-    "name": "👁️ 视角切换"
+    "name": "👁️ View switching"
   }
 ];
 const SHORTCUTS = [
   {
-    "keys": "Shift + 右键",
-    "command": "Rotate View (CAD 模式)",
+    "keys": "Shift + Right click",
+    "command": "Rotate View (CAD mode)",
     "category": "navigation",
-    "description": "在默认 CAD 鼠标风格下, 按住 Shift 配合右键拖动可旋转视口. "
+    "description": "In default CAD mouse style, Hold down Shift and right-drag to rotate the viewport. "
   },
   {
-    "keys": "中键 + 右键",
+    "keys": "Middle click + right click",
     "command": "Rotate View (Alternative)",
     "category": "navigation",
-    "description": "在部分 Linux 或单手模式下使用的旋转中继组合. "
+    "description": "Rotary relay combination for use in some Linux or one-handed modes. "
   },
   {
     "keys": "Space",
     "command": "Toggle Visibility",
     "category": "part",
-    "description": "极高频按键! 一键显示或隐藏当前所选实体或草图. "
+    "description": "Extremely high-frequency keystrokes! Show or hide the currently selected entity or sketch with one click. "
   },
   {
     "keys": "Ctrl + R",
     "command": "Refine Shape",
     "category": "part",
-    "description": "优化几何形体, 清除布尔运算产生的冗余线面. "
+    "description": "Optimize geometric shapes and eliminate redundant lines and surfaces produced by Boolean operations. "
   },
   {
     "keys": "F5",
     "command": "Recompute",
     "category": "part",
-    "description": "重新计算几何模型, 将未应用的约束参数强制重绘生效. "
+    "description": "Recalculate the geometric model and force redrawing of unapplied constraint parameters to take effect. "
   },
   {
     "keys": "0",
     "command": "Isometric View",
     "category": "view",
-    "description": "切换到三维等轴测透视. "
+    "description": "Switch to 3D isometric perspective. "
   },
   {
     "keys": "1",
     "command": "Front View",
     "category": "view",
-    "description": "切换到正前平视图. "
+    "description": "Switch to front view. "
   },
   {
     "keys": "2",
     "command": "Top View",
     "category": "view",
-    "description": "切换到正顶平视图. "
+    "description": "Switch to top view. "
   }
 ];
 const TIPS = [
   {
-    "title": "巧用空格键 (Space) 控制图层显示",
-    "content": "FreeCAD 是通过树状特征进行管理的. 在左侧树状视图中, 选中任意零件或草图并按下 `空格键`, 即可快速在显示/隐藏状态之间切换, 无需右键选择. "
+    "title": "Use the space bar (Space) to control layer display",
+    "content": "FreeCAD are managed through tree features. In the tree view on the left, Select any part or sketch and press `Spacebar`, You can quickly switch between show/hide status, No need to right-click to select. "
   }
 ];
 
@@ -77,7 +77,7 @@ export default function FreeCADClient() {
   return (
     <ShortcutCheatsheetClient
       title="FreeCAD"
-      subtitle="开源三维建模极客速查. 收录 FreeCAD 零部件, 草图约束与视图导航键盘热键, 完美适配 A4 纸张打印. "
+      subtitle="Open source 3D modeling geek quick check. Included FreeCAD Components, Sketch Constraints and View Navigation Keyboard Hotkeys, Perfectly adapted to A4 paper printing. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

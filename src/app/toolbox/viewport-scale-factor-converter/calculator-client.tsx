@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import { Info, Download, HelpCircle, Layers, Copy, Check, FileText } from 'lucide-react';
 
 interface ScalePreset {
@@ -363,7 +363,7 @@ export default function ViewportScaleCalculatorClient() {
             <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
               <div className="w-full flex items-center justify-between border-b border-slate-50 pb-4 mb-4">
                 <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
-                  <Layers className="w-4 h-4 text-blue-600" /> Print Sheet Layout Mockup (纸张视口预览)
+                  <Layers className="w-4 h-4 text-blue-600" /> Print Sheet Layout Mockup (Paper viewport preview)
                 </h3>
                 {svgPreview.isOverflow && (
                   <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-[10px] font-black bg-rose-50 text-rose-600 border border-rose-100">
@@ -595,14 +595,7 @@ export default function ViewportScaleCalculatorClient() {
       </div>
 
       {/* Lead Capture Newsletter banner */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the CAD Layout & Plotting handbook"
-        description="Subscribe to receive our cheat sheet on plotting pen weights, standard layout borders (A0-A4), and custom Page setup profiles."
-        buttonText="Get Plotting Cheat Sheet"
-        placeholder="Enter your work email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

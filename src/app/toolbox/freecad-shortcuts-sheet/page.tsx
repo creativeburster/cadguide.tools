@@ -32,10 +32,10 @@ export default function FreeCADPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              FreeCAD <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              FreeCAD <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              开源三维建模极客速查. 收录 FreeCAD 零部件, 草图约束与视图导航键盘热键, 完美适配 A4 纸张打印. 
+              Open source 3D modeling geek quick check. Included FreeCAD Components, Sketch Constraints and View Navigation Keyboard Hotkeys, Perfectly adapted to A4 paper printing. 
             </p>
           </div>
         </section>

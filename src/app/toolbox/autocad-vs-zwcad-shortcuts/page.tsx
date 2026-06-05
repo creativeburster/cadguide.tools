@@ -32,10 +32,10 @@ export default function AutocadVsZwcadShortcutsPage() {
               CAD Platforms Command Comparison Matrix
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              AutoCAD <span className="text-blue-400">vs. ZWCAD</span> 命令别名差异表
+              AutoCAD <span className="text-blue-400">vs. ZWCAD</span> Command alias difference table
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              中望 CAD 移植兼容别名速查手册. 对比 AutoCAD 与 中望CAD 常用绘图与协同管理命令别名, 解决切换习惯出入. 
+              ZWCAD Migration Compatible Alias Quick Reference Manual. Compare AutoCAD vs. Common drawing and collaborative management command aliases of ZWCAD, Solve the problem of switching habits. 
             </p>
           </div>
         </section>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import { Info, Download, HelpCircle, Layers, RefreshCw, FileText } from 'lucide-react';
 
 interface Preset {
@@ -734,14 +734,7 @@ export default function KFactorCalculatorClient() {
       </div>
 
       {/* Lead Capture Newsletter banner */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the CAD Bending & Press Brake handbook"
-        description="Subscribe to receive our cheat sheet on sheet metal minimum bend radii charts, K-factor registers for major materials, and premium AutoLISP scripts."
-        buttonText="Get Free PDF Handbook"
-        placeholder="Enter your work email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

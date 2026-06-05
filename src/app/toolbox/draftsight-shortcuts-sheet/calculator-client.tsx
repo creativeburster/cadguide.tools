@@ -5,15 +5,15 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "draw",
-    "name": "✏️ 二维绘图"
+    "name": "✏️ 2D drawing"
   },
   {
     "id": "modify",
-    "name": "🛠️ 修改命令"
+    "name": "🛠️ Modify command"
   },
   {
     "id": "view",
-    "name": "👁️ 视口查看"
+    "name": "👁️ viewport view"
   }
 ];
 const SHORTCUTS = [
@@ -21,79 +21,79 @@ const SHORTCUTS = [
     "keys": "L",
     "command": "LINE",
     "category": "draw",
-    "description": "绘制二维直线. "
+    "description": "Draw a two-dimensional straight line. "
   },
   {
     "keys": "C",
     "command": "CIRCLE",
     "category": "draw",
-    "description": "绘制指定心半径圆. "
+    "description": "Draw a circle with a specified center radius. "
   },
   {
     "keys": "PL",
     "command": "POLYLINE",
     "category": "draw",
-    "description": "绘制连续的多段线. "
+    "description": "Draws a continuous polyline."
   },
   {
     "keys": "REC",
     "command": "RECTANGLE",
     "category": "draw",
-    "description": "绘制闭合矩形折线. "
+    "description": "Draw a closed rectangular polyline. "
   },
   {
     "keys": "H",
     "command": "HATCH",
     "category": "draw",
-    "description": "为闭合区域填充自定义图案. "
+    "description": "Fill closed areas with a custom pattern. "
   },
   {
     "keys": "M",
     "command": "MOVE",
     "category": "modify",
-    "description": "移动图纸中的实体. "
+    "description": "Move entities in the drawing. "
   },
   {
     "keys": "CO",
     "command": "COPY",
     "category": "modify",
-    "description": "复制选中图元. "
+    "description": "Copy the selected elements. "
   },
   {
     "keys": "RO",
     "command": "ROTATE",
     "category": "modify",
-    "description": "旋转实体. "
+    "description": "Rotate the entity."
   },
   {
     "keys": "TR",
     "command": "TRIM",
     "category": "modify",
-    "description": "修剪多余线段. "
+    "description": "Trim excess line segments. "
   },
   {
     "keys": "O",
     "command": "OFFSET",
     "category": "modify",
-    "description": "等距偏移复制线段. "
+    "description": "Copy the line segments with offset offset. "
   },
   {
     "keys": "Z",
     "command": "ZOOM",
     "category": "view",
-    "description": "缩放视口图纸. "
+    "description": "Zoom viewport drawing. "
   },
   {
     "keys": "P",
     "command": "PAN",
     "category": "view",
-    "description": "平移移动当前视口. "
+    "description": "Pan moves the current viewport. "
   }
 ];
 const TIPS = [
   {
-    "title": "完全对标 AutoCAD 的快捷别名",
-    "content": "DraftSight 的底层逻辑与 AutoCAD 完全吻合. 它完全兼容外部加载的 `acad.pgp` 别名配置, 可实现肌肉记忆的无缝过渡. "
+    "title": "Quick alias fully aligned with AutoCAD",
+    "content": "DraftSight The underlying logic is completely consistent with AutoCAD. It is fully compatible with externally loaded `acad.pgp` alias configurations, Allows for a seamless transition of muscle memory. "
   }
 ];
 
@@ -101,7 +101,7 @@ export default function DassaultDraftSightClient() {
   return (
     <ShortcutCheatsheetClient
       title="Dassault DraftSight"
-      subtitle="AutoCAD 平替高性价比方案. 整理 DraftSight 2D 绘图快捷别名, 层表管理命令与视口配置. "
+      subtitle="AutoCAD Competitive cost-effective solution. Organized DraftSight 2D Drawing shortcut aliases, layer table management commands and viewport configuration. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

@@ -5,65 +5,65 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "mouse",
-    "name": "🖱️ 鼠标与视口"
+    "name": "🖱️ Mouse and Viewport"
   },
   {
     "id": "sketch",
-    "name": "📐 草图设计"
+    "name": "📐 Sketch design"
   },
   {
     "id": "system",
-    "name": "💻 系统操控"
+    "name": "💻 System control"
   }
 ];
 const SHORTCUTS = [
   {
-    "keys": "MB2 (鼠标中键)",
-    "command": "Pan (平移)",
+    "keys": "MB2 (middle mouse button)",
+    "command": "Pan (Pan)",
     "category": "mouse",
-    "description": "按住鼠标中键并拖动, 可在视口中平移整个图纸模型. "
+    "description": "Hold down the middle mouse button and drag to pan the entire drawing model in the viewport. "
   },
   {
-    "keys": "MB2 + MB1 (或 MB3)",
-    "command": "Rotate (旋转)",
+    "keys": "MB2 + MB1 (or MB3)",
+    "command": "Rotate (Rotate)",
     "category": "mouse",
-    "description": "按住鼠标中键的同时按住左键 (或右键) 进行拖动, 即可触发三维环绕视角. "
+    "description": "While holding down the middle mouse button, hold down the left button (or right button) Drag to trigger the three-dimensional surround view. "
   },
   {
     "keys": "MB2 + Click MB1",
-    "command": "Zoom (缩放)",
+    "command": "Zoom (Zoom)",
     "category": "mouse",
-    "description": "按住中键, 点击一下左键, 然后上下拖动鼠标, 可实现无极焦距平滑缩放. "
+    "description": "Hold down the middle button and click the left button, Then drag the mouse up and down to achieve smooth zooming with infinite focal length.. "
   },
   {
     "keys": "C",
-    "command": "Constraint (约束)",
+    "command": "Constraint (constraint)",
     "category": "sketch",
-    "description": "激活几何约束标注工具. "
+    "description": "Activate the Geometric Constraint Dimension tool. "
   },
   {
     "keys": "P",
-    "command": "Point (画点)",
+    "command": "Point (draw dots)",
     "category": "sketch",
-    "description": "在平面草图中插入定位点. "
+    "description": "Insert anchor points in the plan sketch. "
   },
   {
     "keys": "Alt + Enter",
-    "command": "Properties (属性)",
+    "command": "Properties (properties)",
     "category": "system",
-    "description": "查看当前选定的实体特征或几何线段的物理属性. "
+    "description": "View the physical properties of the currently selected solid feature or geometry segment. "
   },
   {
     "keys": "Ctrl + U",
-    "command": "Update (更新模型)",
+    "command": "Update (Update model)",
     "category": "system",
-    "description": "当修改草图参数后, 一键重构更新实体装配. "
+    "description": "After modifying the sketch parameters, reconstruct and update the solid assembly with one click. "
   }
 ];
 const TIPS = [
   {
-    "title": "CATIA 三键鼠标的缩放神操作",
-    "content": "CATIA 的视角缩放与普通 CAD 用轮子滚动不同: 先按住 `中键` 不松, 然后快速按一下 `左键`, 接着上下移动鼠标, 即可实现极高灵敏度的微距焦距缩放, 省去频繁滚轮带来的卡顿. "
+    "title": "CATIA The magic zoom operation of the three-button mouse",
+    "content": "CATIA The viewing angle zoom is different from ordinary CAD wheel scrolling.: First press and hold the `middle button` without loosening, then press quickly `Left click, then move the mouse up and down, You can achieve extremely sensitive macro focus zooming, eliminating the lag caused by frequent scrolling.. "
   }
 ];
 
@@ -71,7 +71,7 @@ export default function DassaultCATIAClient() {
   return (
     <ShortcutCheatsheetClient
       title="Dassault CATIA"
-      subtitle="航空与高端制造机械装配. 整理 CATIA 零件草图设计, 轴心约束与三维视口拖拽, 打印优化. "
+      subtitle="Aviation and high-end manufacturing machinery assembly. Finishing CATIA Part sketch design, axis constraints and 3D viewport dragging, Print optimization. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

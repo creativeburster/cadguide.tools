@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, DragEvent, ChangeEvent } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 interface VersionInfo {
   code: string;
@@ -149,12 +149,17 @@ export default function DwgVersionCheckerClient() {
     
     reader.onload = (e) => {
       try {
-        const text = e.target?.result as string;
-        if (!text || text.length < 6) {
+        const buffer = e.target?.result as ArrayBuffer;
+        if (!buffer || buffer.byteLength < 6) {
           throw new Error('File is too small to be a valid DWG file.');
         }
 
-        const magic = text.slice(0, 6);
+        const bytes = new Uint8Array(buffer);
+        let magic = '';
+        for (let i = 0; i < 6; i++) {
+          magic += String.fromCharCode(bytes[i]);
+        }
+
         if (!magic.startsWith('AC')) {
           throw new Error('This file does not appear to be a standard AutoCAD DWG drawing. Magic header prefix is missing.');
         }
@@ -193,7 +198,7 @@ export default function DwgVersionCheckerClient() {
 
     // Slice first 6 bytes to read fast
     const slice = file.slice(0, 6);
-    reader.readAsText(slice);
+    reader.readAsArrayBuffer(slice);
   };
 
   const handleDrag = (e: DragEvent<HTMLDivElement>) => {
@@ -449,14 +454,7 @@ export default function DwgVersionCheckerClient() {
       </div>
 
       {/* Newsletter Hook */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Never deal with broken CAD files again"
-        description="Subscribe to get monthly drafting guides, dwg converters recommendations, and major CAD alternatives discount codes."
-        buttonText="Subscribe Free"
-        placeholder="Enter your work email"
-        className="mt-8"
-      />
+      <RelatedTools />
     </div>
 );
 }

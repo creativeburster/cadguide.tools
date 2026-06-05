@@ -34,10 +34,10 @@ export default function MissingFontResolverPage() {
               CAD Native Utility
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              缺失 CAD 字体与 <span className="text-blue-400">SHX 替代代换</span> 匹配箱
+              Missing CAD fonts and <span className="text-blue-400">SHX Substitution</span> Matching box
             </h1>
             <p className="text-base text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              解决开图满纸问号 (?) 与文字乱码. 输入缺失字体名, 匹配最优免版权代换方案及一键配置脚本. 
+              Solving the issue of drawings that are full of question marks (?) and garbled text. Enter the missing font name, match the best copyright-free replacement solution and one-click configuration script. 
             </p>
           </div>
         </section>

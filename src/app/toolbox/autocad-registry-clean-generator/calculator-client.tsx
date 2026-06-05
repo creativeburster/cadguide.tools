@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import {
   HelpCircle,
   Info,
@@ -47,56 +47,56 @@ export default function RegistryCleanClient() {
 chcp 65001 > nul
 echo ===================================================
 echo   CADGuide.tools AutoCAD Clean Registry Reset Utility
-echo   本脚本将备份并清理 ${activeVer.label} 的配置残留
+echo   This script will back up and clean up the configuration residue of ${activeVer.label}
 echo ===================================================
 echo.
-echo [警告] 请在运行前关闭所有正在运行的 AutoCAD 进程! 
+echo [WARNING] Please close all running AutoCAD Process! 
 pause
 echo.
 
-:: 创建备份文件夹
+:: Create backup folder
 set "BACKUP_DIR=%USERPROFILE%\\Desktop\\CAD_Registry_Backup"
 if not exist "%BACKUP_DIR%" mkdir "%BACKUP_DIR%"
-echo ✓ 已在桌面创建备份文件夹: %BACKUP_DIR%
+echo ✓ A backup folder has been created on the desktop: %BACKUP_DIR%
 echo.
 
 `;
 
     // HKCU registry reset
     if (cleanHkcu) {
-      script += `:: 1. 备份并清理 HKCU 注册表配置
-echo 正在备份 HKCU 注册表配置...
+      script += `:: 1. Back up and clean HKCU registry configuration
+echo Backing up HKCU registry configuration...
 reg export "HKCU\\Software\\Autodesk\\AutoCAD\\${activeVer.regKey}" "%BACKUP_DIR%\\HKCU_AutoCAD_${activeVer.regKey}_Backup.reg" /y > nul
-echo 正在删除 HKCU 注册表配置...
+echo Removing HKCU registry configuration...
 reg delete "HKCU\\Software\\Autodesk\\AutoCAD\\${activeVer.regKey}" /f > nul
-echo ✓ HKCU 注册表清理完成. 
+echo ✓ HKCU Registry cleanup completed. 
 echo.
 `;
     }
 
     // HKLM registry reset
     if (cleanHklm) {
-      script += `:: 2. 备份并清理 HKLM 注册表系统环境
-echo 正在备份 HKLM 注册表配置 (需要管理员权限) ...
+      script += `:: 2. Back up and clean the HKLM registry system environment
+echo Backing up HKLM registry configuration (Admin rights required)...
 reg export "HKLM\\Software\\Autodesk\\AutoCAD\\${activeVer.regKey}" "%BACKUP_DIR%\\HKLM_AutoCAD_${activeVer.regKey}_Backup.reg" /y > nul
-echo 正在删除 HKLM 注册表配置...
+echo Removing HKLM registry configuration...
 reg delete "HKLM\\Software\\Autodesk\\AutoCAD\\${activeVer.regKey}" /f > nul
-echo ✓ HKLM 注册表清理完成. 
+echo ✓ HKLM Registry cleanup completed. 
 echo.
 `;
     }
 
     // Local files and AppData
     if (cleanAppData) {
-      script += `:: 3. 清理用户 AppData 漫游与本地缓存文件夹
-echo 正在清理 AppData 缓存目录...
+      script += `:: 3. Clean user AppData roaming and local cache folders
+echo Cleaning AppData cache directory...
 if exist "%APPDATA%\\Autodesk\\${activeVer.folderKey}" (
     rmdir /s /q "%APPDATA%\\Autodesk\\${activeVer.folderKey}"
-    echo ✓ 已删除 Roaming AppData 中的 ${activeVer.folderKey} 文件夹
+    echo ✓ Removed from Roaming AppData ${activeVer.folderKey} folder
 )
 if exist "%LOCALAPPDATA%\\Autodesk\\${activeVer.folderKey}" (
     rmdir /s /q "%LOCALAPPDATA%\\Autodesk\\${activeVer.folderKey}"
-    echo ✓ 已删除 Local AppData 中的 ${activeVer.folderKey} 文件夹
+    echo ✓ Removed from Local AppData ${activeVer.folderKey} folder
 )
 echo.
 `;
@@ -104,13 +104,13 @@ echo.
 
     // FLEXlm activation local files
     if (cleanFlexlm) {
-      script += `:: 4. 清理 FLEXlm 授权服务本地缓存 (注意: 此步将清除激活状态, 需重新注册)
-echo 正在备份并移除 FLEXlm 激活状态特征文件...
+      script += `:: 4. Clean FLEXlm authorization service local cache (Note: This step will clear the activation status, Need to re-register)
+echo Backing up and removing FLEXlm activation profile...
 set "FLEX_DIR=%ProgramData%\\FLEXnet"
 if exist "%FLEX_DIR%" (
     copy "%FLEX_DIR%\\adskflex*" "%BACKUP_DIR%\\" > nul
     del /f /q "%FLEX_DIR%\\adskflex*"
-    echo ✓ 已安全移除 FLEXnet 目录下的 adsk 激活特征文件
+    echo ✓ Safely removed from FLEXnet directory adsk Activate profile
 )
 echo.
 `;
@@ -118,18 +118,18 @@ echo.
 
     // Temp folder clean
     if (cleanTemp) {
-      script += `:: 5. 清理 Windows 临时垃圾缓存
-echo 正在清空系统临时 Temp 目录...
+      script += `:: 5. Clean Windows temporary junk cache
+echo Clearing the system temporary Temp directory...
 del /s /f /q "%TEMP%\\*.*" > nul
-echo ✓ 临时系统垃圾清理完毕. 
+echo ✓ Temporary system garbage cleanup is completed. 
 echo.
 `;
     }
 
     script += `echo ===================================================
-echo ✓ 恭喜! AutoCAD ${activeVer.label} 注册表配置及缓存已全部重置完毕. 
-echo 备份的旧配置已存放在桌面: %BACKUP_DIR% 文件夹下. 
-echo 若想还原, 双击对应的 .reg 注册表备份文件导入即可. 
+echo ✓ Congratulations! AutoCAD ${activeVer.label} registry configuration and cache have been reset. 
+echo The backed up old configuration has been stored on the desktop: %BACKUP_DIR% folder. 
+echo If you want to restore, double-click the corresponding .reg Just import the registry backup file. 
 echo ===================================================
 pause`;
 
@@ -155,21 +155,21 @@ pause`;
 
   return (
     <div className="flex flex-col gap-8">
-      {/* 顶部模拟 Windows CMD 命令运行终端的 SVG */}
+      {/* Top emulation of Windows CMD commands running in Terminal SVG */}
       <div className="bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/50 to-transparent pointer-events-none"></div>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 z-10 relative">
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-              <h2 className="text-white font-black text-lg tracking-tight">Windows 部署控制台仿真</h2>
+              <h2 className="text-white font-black text-lg tracking-tight">Windows Deploy console emulation</h2>
             </div>
             <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
               CMD Batch Reset Execution Simulation
             </p>
           </div>
           <div className="px-3 py-1 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-black">
-            BAT 脚本编译器
+            BAT Script compiler
           </div>
         </div>
 
@@ -193,37 +193,37 @@ pause`;
               <text y="10" fill="#94a3b8">Microsoft Windows [Version 10.0.22631]</text>
               <text y="24" fill="#38bdf8">C:\Users\Administrator&gt; reset_autocad.bat</text>
               
-              <text y="42" fill="#e2e8f0">正在备份并删除 {activeVer.label} 注册表配置...</text>
+              <text y="42" fill="#e2e8f0">Backing up and deleting {activeVer.label} registry configuration...</text>
               <text y="54" fill="#fbbf24">reg export "HKCU\\Software\\Autodesk\\AutoCAD\\{activeVer.regKey}" backup.reg</text>
               
               {cleanAppData && (
-                <text y="68" fill="#10b981">✓ 已删除: AppData\\Autodesk\\{activeVer.folderKey} 缓存文件夹</text>
+                <text y="68" fill="#10b981">✓ Deleted: AppData\\Autodesk\\{activeVer.folderKey} cache folder</text>
 )}
               {cleanFlexlm && (
-                <text y="82" fill="#f43f5e">⚠ 警告: 正在清空 C:\\ProgramData\\FLEXnet 授权缓存...</text>
+                <text y="82" fill="#f43f5e">⚠ Warning: Clearing C:\\ProgramData\\FLEXnet Authorization cache...</text>
 )}
               
-              <text y="98" fill="#38bdf8">✓ 脚本重置执行完毕. 按任意键继续退出...</text>
+              <text y="98" fill="#38bdf8">✓ The script reset execution is completed. Press any key to continue exiting...</text>
               <text y="112" fill="#a7f3d0">C:\Users\Administrator&gt; _</text>
             </g>
           </svg>
         </div>
       </div>
 
-      {/* 主面板布局 */}
+      {/* Main panel layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* 左侧: 可视化配置参数面板 */}
+        {/* Left: Visual configuration parameter panel */}
         <div className="lg:col-span-1 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-5">
             <h3 className="text-slate-800 font-black text-base tracking-tight flex items-center gap-2">
               <Settings className="w-4 h-4 text-blue-500" />
-              自定义重置配置
+              Custom reset configuration
             </h3>
             
             {/* Version Select */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="cadVersion" className="text-xs font-black text-slate-500 uppercase">目标 CAD 软件版本</label>
+              <label htmlFor="cadVersion" className="text-xs font-black text-slate-500 uppercase">Target CAD software version</label>
               <select
                 id="cadVersion"
                 value={versionIdx}
@@ -240,7 +240,7 @@ pause`;
 
             {/* Checkbox Options */}
             <div className="flex flex-col gap-3">
-              <span className="text-xs font-black text-slate-400 uppercase tracking-wider">选择重置清理范围</span>
+              <span className="text-xs font-black text-slate-400 uppercase tracking-wider">Select Reset Cleanup Scope</span>
 
               {/* Option 1: HKCU */}
               <label className="flex items-start gap-3 cursor-pointer">
@@ -251,8 +251,8 @@ pause`;
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
                 <div className="text-xs">
-                  <span className="font-bold text-slate-700 block">用户个性化配置注册表 (HKCU)</span>
-                  <span className="text-slate-400">重置布局, 窗口尺寸, 自定义快捷键等用户设定. </span>
+                  <span className="font-bold text-slate-700 block">User Personalization Configuration Registry (HKCU)</span>
+                  <span className="text-slate-400">Reset layout, window size, Customized shortcut keys and other user settings. </span>
                 </div>
               </label>
 
@@ -265,8 +265,8 @@ pause`;
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
                 <div className="text-xs">
-                  <span className="font-bold text-slate-700 block">系统全局环境注册表 (HKLM)</span>
-                  <span className="text-slate-400">清理安装路径残留. 注意: 执行此脚本需管理员身份. </span>
+                  <span className="font-bold text-slate-700 block">System Global Environment Registry (HKLM)</span>
+                  <span className="text-slate-400">Clean up the installation path remnants. Note: Administrator status is required to execute this script. </span>
                 </div>
               </label>
 
@@ -279,8 +279,8 @@ pause`;
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
                 <div className="text-xs">
-                  <span className="font-bold text-slate-700 block">本地配置缓存文件夹 (AppData)</span>
-                  <span className="text-slate-400">清理 Roaming 和 Local 目录中损坏的 CAD 用户缓存文件夹. </span>
+                  <span className="font-bold text-slate-700 block">Local configuration cache folder (AppData)</span>
+                  <span className="text-slate-400">Clean Roaming and Local Corrupted CAD user cache folder in directory. </span>
                 </div>
               </label>
 
@@ -293,8 +293,8 @@ pause`;
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
                 <div className="text-xs">
-                  <span className="font-bold text-red-500 block">FLEXnet 许可激活缓存 (重置许可)</span>
-                  <span className="text-slate-400">当遇到"许可证验证失败"重装依旧提示激活错误时勾选, 清除本地许可锁. </span>
+                  <span className="font-bold text-red-500 block">FLEXnet License activation cache (reset license)</span>
+                  <span className="text-slate-400">When encountering "License verification failed"If reinstallation still prompts an activation error, check the box and clear the local license lock.. </span>
                 </div>
               </label>
 
@@ -307,44 +307,44 @@ pause`;
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
                 <div className="text-xs">
-                  <span className="font-bold text-slate-700 block">Windows 系统 Temp 临时目录</span>
-                  <span className="text-slate-400">清理 CAD 运行中遗留的未自动擦除的多余 `.tmp` 临时文件. </span>
+                  <span className="font-bold text-slate-700 block">Windows System Temp temporary directory</span>
+                  <span className="text-slate-400">Clean up excess left over from the CAD run that was not automatically erased `.tmp` Temporary files. </span>
                 </div>
               </label>
             </div>
           </div>
         </div>
 
-        {/* 右侧二联: 生成代码块与使用手册 */}
+        {/* Double couplet on the right: Generate code blocks and user manuals */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex-1 flex flex-col justify-between min-h-[460px]">
             
             <div className="flex flex-col gap-5">
               <div>
-                <h3 className="text-slate-900 font-black text-xl tracking-tight">重置脚本代码查看与生成</h3>
+                <h3 className="text-slate-900 font-black text-xl tracking-tight">Reset script code viewing and generation</h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  自动拼装完成的安全批处理命令, 可在 Windows 下双击或静默执行. 
+                  Automatically assembled secure batch commands can be found at Windows Double-click or execute silently. 
                 </p>
               </div>
 
               {/* Batch Code viewer */}
               <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
                 <div className="flex justify-between items-center text-[10px] text-slate-500">
-                  <span className="flex items-center gap-1"><FileCode className="w-3.5 h-3.5" /> reset_autocad.bat 源代码</span>
+                  <span className="flex items-center gap-1"><FileCode className="w-3.5 h-3.5" /> reset_autocad.bat Source code</span>
                   <div className="flex items-center gap-3">
                     <button
                       onClick={() => handleCopy(generatedBatchScript, 'batCode')}
                       className="text-slate-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       {copiedText === 'batCode' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                      {copiedText === 'batCode' ? '已复制' : '复制命令'}
+                      {copiedText === 'batCode' ? 'Copied ' : 'Copy command'}
                     </button>
                     <button
                       onClick={handleDownload}
                       className="text-blue-400 hover:text-blue-300 flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       <Download className="w-3.5 h-3.5" />
-                      下载 .bat 文件
+                      Download .bat file
                     </button>
                   </div>
                 </div>
@@ -353,15 +353,15 @@ pause`;
                 </div>
               </div>
 
-              {/* 使用安全警示手册 */}
+              {/* Use Safety Warning Manual */}
               <div className="bg-amber-50 rounded-2xl border border-amber-100 p-5 flex gap-3 text-amber-900">
                 <ShieldCheck className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                 <div className="text-xs leading-relaxed">
-                  <p className="font-black text-slate-800 mb-1">使用安全规范守则: </p>
+                  <p className="font-black text-slate-800 mb-1">Use safety guidelines: </p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-slate-600 font-medium">
-                    <li><b>安全备份第一</b>: 本脚本在开始清理前, 会在您的桌面生成名为 <span className="font-mono bg-amber-100 px-1 rounded font-black">CAD_Registry_Backup</span> 的文件夹, 将旧注册表项完整导出备份. 如需恢复配置, 只需双击该文件夹内的 `.reg` 文件重新写入即可. </li>
-                    <li>若您勾选了<b>"系统全局 HKLM"</b>或<b>"FLEXnet"</b>选项, 运行时必须<b>"右键 {'->'} 以管理员身份运行"</b>该 `.bat` 文件, 否则 Windows 防火墙及注册表防御机制会拒绝删除请求导致失效. </li>
-                    <li>运行前请务必确认已经将 AutoCAD 软件彻底关闭, 否则可能导致正在占用的注册表项损坏. </li>
+                    <li><b>Safe backup first</b>: This script before starting the cleanup, A folder named <span className="font-mono bg-amber-100 px-1 rounded font-black">CAD_Registry_Backup</span> will be generated on your desktop, Export the old registry keys for backup. If you need to restore the configuration, Just double-click the `.reg` file in the folder and re-write it.. </li>
+                    <li>If you checked<b>"System Global HKLM"</b>or the <b>"FLEXnet"</b> option, When running, you must<b>right click {'->'} Run as administrator"</b>the `.bat` file, otherwise Windows Firewall and registry defense mechanisms will reject deletion requests and cause failure. </li>
+                    <li>Please make sure you have completely closed the AutoCAD software before running it., Otherwise, the registry key being occupied may be damaged. </li>
                   </ul>
                 </div>
               </div>
@@ -372,7 +372,7 @@ pause`;
 
       </div>
 
-      <NewsletterSubscribe />
+      <RelatedTools />
     </div>
 );
 }

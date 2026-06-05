@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { HelpCircle, Info, Copy, Check, Shield, FileText, ChevronRight, Settings } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 const PAPER_SIZES = [
   { name: 'ISO A0', width: 1189, height: 841 },
@@ -110,14 +110,14 @@ All`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Settings className="w-5 h-5 text-blue-400" />
-            <span>页面与比例设置</span>
+            <span>Page and scale settings</span>
           </h2>
         </div>
 
         {/* Paper Size */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            1. 标准图纸规格 (Paper Size)
+            1. Standard drawing specifications (Paper Size)
           </label>
           <select
             value={paperIdx}
@@ -131,7 +131,7 @@ All`;
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            图纸规格: {paper.name}
+            Drawing specifications: {paper.name}
           </div>
         </div>
 
@@ -139,7 +139,7 @@ All`;
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-              2. 纸张摆放 (Orientation)
+              2. Orientation
             </label>
             <div className="flex gap-2 print:hidden">
               <button
@@ -150,7 +150,7 @@ All`;
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
                 }`}
               >
-                横向
+                Horizontal
               </button>
               <button
                 onClick={() => setOrientation('portrait')}
@@ -160,17 +160,17 @@ All`;
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
                 }`}
               >
-                纵向
+                portrait
               </button>
             </div>
             <div className="hidden print:block font-bold">
-              纸张摆放: {orientation === 'landscape' ? '横向' : '纵向'}
+              Paper placement: {orientation === 'landscape' ? 'Landscape' : 'Portrait'}
             </div>
           </div>
 
           <div className="space-y-2">
             <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-              3. 绘图单位 (CAD Unit)
+              3. CAD Unit
             </label>
             <div className="flex gap-2 print:hidden">
               <button
@@ -181,7 +181,7 @@ All`;
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
                 }`}
               >
-                毫米 (mm)
+                Millimeters (mm)
               </button>
               <button
                 onClick={() => setUnit('m')}
@@ -191,11 +191,11 @@ All`;
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
                 }`}
               >
-                米 (m)
+                Meter (m)
               </button>
             </div>
             <div className="hidden print:block font-bold">
-              绘图单位: {unit === 'mm' ? '毫米 (mm)' : '米 (m)'}
+              Drawing unit: {unit === 'mm' ? 'mm (mm)' : 'Meters (m)'}
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ All`;
         {/* Output Scale */}
         <div className="space-y-3">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. 打印输出比例 (Output Scale)</span>
+            <span className="text-slate-400 uppercase tracking-wider">4. Output Scale</span>
             <span className="text-blue-400 font-mono">{scale.label}</span>
           </div>
           <select
@@ -218,7 +218,7 @@ All`;
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            打印比例: {scale.label}
+            Print scale: {scale.label}
           </div>
         </div>
       </div>
@@ -230,32 +230,32 @@ All`;
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
               <FileText className="w-5 h-5 text-blue-500" />
-              <span>LIMITS 与网格参数报告</span>
+              <span>LIMITS Reporting with Grid Parameters</span>
             </h3>
           </div>
 
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-black uppercase tracking-wider">
-                界限范围 (LIMITS Coordinate)
+                LIMITS Coordinate
               </span>
               <div className="text-xl font-black font-mono text-slate-800">
-                0,0 至 {dims.modelW.toFixed(1)},{dims.modelH.toFixed(1)}
+                0,0 to {dims.modelW.toFixed(1)},{dims.modelH.toFixed(1)}
               </div>
               <p className="text-[9.5px] text-slate-400">
-                模型空间总尺寸: {dims.modelW.toFixed(0)} x {dims.modelH.toFixed(0)} {unit}
+                Total size of model space: {dims.modelW.toFixed(0)} x {dims.modelH.toFixed(0)} {unit}
               </p>
             </div>
 
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-black uppercase tracking-wider">
-                推荐网格步长 (GRID / SNAP)
+                Recommended grid step size (GRID / SNAP)
               </span>
               <div className="text-xl font-black font-mono text-blue-600">
                 GRID: {dims.grid} / SNAP: {dims.snap.toFixed(2)}
               </div>
               <p className="text-[9.5px] text-slate-400">
-                建议按 5:1 的子步长设置捕捉对齐
+                It is recommended to set snap alignment with a substep size of 5:1
               </p>
             </div>
           </div>
@@ -264,14 +264,14 @@ All`;
           <div className="space-y-2 border-t border-slate-100 pt-5">
             <div className="flex items-center justify-between">
               <span className="text-xs font-black text-slate-500 uppercase tracking-wide">
-                AutoCAD 命令行一键生成配置
+                AutoCAD One-click configuration generation from the command line
               </span>
               <button
                 onClick={copyMacro}
                 className="px-2.5 py-1 rounded bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-[10px] font-black flex items-center gap-1 border border-slate-200/50 print:hidden"
               >
                 {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copied ? '已复制' : '复制命令'}</span>
+                <span>{copied ? 'Copied ' : 'Copy command'}</span>
               </button>
             </div>
             <pre className="bg-slate-900 text-slate-300 font-mono text-[11px] p-4 rounded-2xl overflow-x-auto border border-slate-800 leading-relaxed shadow-inner">
@@ -284,7 +284,7 @@ All`;
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-              模型空间图纸纸张边界与 Grid 预览
+              Model space sheet paper boundaries and Grid preview
             </span>
           </div>
 
@@ -338,14 +338,14 @@ All`;
           <div className="text-[10px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>LIMITS 核心提示: </strong>配置图纸界限的目的是限制超出图纸范围的误绘, 并使得 AutoCAD 的 `GRID` (网格) 只在图纸打印区内呈现. 当在布局视口 (Viewport) 内对齐模型空间时, 确保 `LIMITS` 比例与视口 XP 比例倒数一致, 可避免"网格超出屏幕"或"网格过密不显示"的现象. 
+              <strong>LIMITS Core tip: </strong>The purpose of configuring drawing limits is to limit misdrawing beyond the drawing range., and enable AutoCAD's `GRID` (Grid) is only displayed in the drawing printing area. When aligning model space within a layout viewport, Make sure the `LIMITS` scale matches the viewport XP The reciprocal proportions are consistent and can be avoided"Grid exceeds screen" or""The grid is too dense and does not display" phenomenon. 
             </span>
           </div>
         </div>
       </div>
 
       <div className="lg:col-span-12 mt-4 print:hidden">
-        <NewsletterSubscribe />
+        <RelatedTools />
       </div>
     </div>
 );

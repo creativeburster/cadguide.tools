@@ -1,35 +1,35 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import {
   HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Settings, Activity, Sliders, Shield
 } from 'lucide-react';
 
 // Materials configuration
 const MATERIALS = [
-  { name: 'Structural Steel (结构钢)', E: 200, yield: 250 }, // E in GPa, yield in MPa
-  { name: 'Aluminum 6061-T6 (铝合金)', E: 70, yield: 276 },
-  { name: 'Timber / Softwood (木材)', E: 11, yield: 12 },
-  { name: 'Custom (自定义)', E: 200, yield: 250 },
+  { name: 'Structural Steel (Structural steel)', E: 200, yield: 250 }, // E in GPa, yield in MPa
+  { name: 'Aluminum 6061-T6 (Aluminum alloy)', E: 70, yield: 276 },
+  { name: 'Timber / Softwood (wood)', E: 11, yield: 12 },
+  { name: 'Custom (Custom)', E: 200, yield: 250 },
 ];
 
 // Profile types
 const PROFILE_TYPES = [
-  { id: 'i-beam', name: 'I-Beam (工字钢/H型钢)' },
-  { id: 'box', name: 'Box Section (方管/箱型梁)' },
-  { id: 'solid-rect', name: 'Solid Rectangular (实心矩形)' },
-  { id: 'pipe', name: 'Round Pipe (圆管/钢管)' },
+  { id: 'i-beam', name: 'I-Beam (I-beam/H-beam)' },
+  { id: 'box', name: 'Box Section (Square tube/box beam)' },
+  { id: 'solid-rect', name: 'Solid Rectangular (solid rectangle)' },
+  { id: 'pipe', name: 'Round Pipe (Round pipe/steel pipe)' },
 ];
 
 // Support & load setups
 const LOAD_CONDITIONS = [
-  { id: 'ss-point', name: 'Simply Supported + Center Point Load (简支梁 + 中心集中力)', support: 'simply', load: 'point' },
-  { id: 'ss-dist', name: 'Simply Supported + Uniform Load (简支梁 + 均布荷载)', support: 'simply', load: 'distributed' },
-  { id: 'cant-point', name: 'Cantilever + End Point Load (悬臂梁 + 端点集中力)', support: 'cantilever', load: 'point' },
-  { id: 'cant-dist', name: 'Cantilever + Uniform Load (悬臂梁 + 均布荷载)', support: 'cantilever', load: 'distributed' },
-  { id: 'ff-point', name: 'Fixed-Fixed + Center Point Load (双端固定 + 中心集中力)', support: 'fixed', load: 'point' },
-  { id: 'ff-dist', name: 'Fixed-Fixed + Uniform Load (双端固定 + 均布荷载)', support: 'fixed', load: 'distributed' },
+  { id: 'ss-point', name: 'Simply Supported + Center Point Load (Simply supported beam + central concentrated force)', support: 'simply', load: 'point' },
+  { id: 'ss-dist', name: 'Simply Supported + Uniform Load (Simply supported beam + uniform load)', support: 'simply', load: 'distributed' },
+  { id: 'cant-point', name: 'Cantilever + End Point Load (Cantilever beam + endpoint concentrated force)', support: 'cantilever', load: 'point' },
+  { id: 'cant-dist', name: 'Cantilever + Uniform Load (Cantilever beam + uniform load)', support: 'cantilever', load: 'distributed' },
+  { id: 'ff-point', name: 'Fixed-Fixed + Center Point Load (Double-ended fixation + central concentration)', support: 'fixed', load: 'point' },
+  { id: 'ff-dist', name: 'Fixed-Fixed + Uniform Load (Double-end fixation + uniform load)', support: 'fixed', load: 'distributed' },
 ];
 
 export default function BeamDeflectionClient() {
@@ -267,7 +267,7 @@ export default function BeamDeflectionClient() {
       `Max Bending Stress: ${structuralOutputs.maxStress.toFixed(2)} MPa (Yield: ${material.yield} MPa)`,
       `Max Deflection: ${structuralOutputs.maxDeflection.toFixed(2)} mm (Limit: ${structuralOutputs.targetLimit.toFixed(2)} mm)`,
       `Safety Factor: ${structuralOutputs.safetyFactor.toFixed(2)}`,
-      `Structural Assessment: ${structuralOutputs.isStressSafe && structuralOutputs.isDeflectionSafe ? 'SAFE (通过)' : 'DANGER (警告)'}`,
+      `Structural Assessment: ${structuralOutputs.isStressSafe && structuralOutputs.isDeflectionSafe ? 'SAFE (Pass)' : 'DANGER (warning)'}`,
     ].join('\n');
 
     navigator.clipboard.writeText(summary).then(() => {
@@ -450,9 +450,9 @@ export default function BeamDeflectionClient() {
                 )}
                 <div>
                   <div className="font-black text-sm uppercase tracking-wide">
-                    {status === 'safe' && 'Structural Assessment: SAFE (结构安全)'}
-                    {status === 'danger' && 'Structural Assessment: DANGER (承载力及刚度超标!)'}
-                    {status === 'warning' && (!isDefSafe ? 'Assessment: DEFLECTION LIMIT EXCEEDED (挠度超限)' : 'Assessment: FLEXURAL STRESS EXCEEDED (应力超限)')}
+                    {status === 'safe' && 'Structural Assessment: SAFE (structural safety)'}
+                    {status === 'danger' && 'Structural Assessment: DANGER (The bearing capacity and stiffness exceed the standard!)'}
+                    {status === 'warning' && (!isDefSafe ? 'Assessment: DEFLECTION LIMIT EXCEEDED' : 'Assessment: FLEXURAL STRESS EXCEEDED')}
                   </div>
                   <p className="text-xs text-slate-500 font-semibold mt-0.5 leading-relaxed">
                     {status === 'safe' && `Bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) are within the material limits for ${material.name}.`}
@@ -1069,14 +1069,7 @@ export default function BeamDeflectionClient() {
         </div>
       </div>
 
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the Beam Design & Section Tables Cheat Sheet"
-        description="Subscribe to receive our structural engineering reference guides, AISC steel shape charts, and custom CAD calculation templates."
-        buttonText="Get Structural Cheat Sheet"
-        placeholder="Enter your professional email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

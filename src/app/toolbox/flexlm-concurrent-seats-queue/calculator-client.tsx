@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import {
   HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Settings, Sliders, Users, DollarSign, Terminal, Activity
 } from 'lucide-react';
@@ -12,7 +12,7 @@ const SOFTWARE_PRESETS = [
   { name: 'SolidWorks (Dassault)', cost: 4150, premiumFactor: 1.5 },
   { name: 'Revit (Autodesk)', cost: 2820, premiumFactor: 1.4 },
   { name: 'NX (Siemens)', cost: 7500, premiumFactor: 1.6 },
-  { name: 'Custom (自定义)', cost: 2000, premiumFactor: 1.3 },
+  { name: 'Custom (Custom)', cost: 2000, premiumFactor: 1.3 },
 ];
 
 export default function FlexlmQueueClient() {
@@ -783,14 +783,7 @@ export default function FlexlmQueueClient() {
         </div>
       </div>
       
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the CAD License Management Guide"
-        description="Subscribe to receive our options.opt configuration cheat sheet, license usage script templates, and monthly IT budget optimization tips."
-        buttonText="Get License Admin Guide"
-        placeholder="Enter your professional IT email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

@@ -32,10 +32,10 @@ export default function RevitBIMPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Revit BIM <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Revit BIM <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              BIM 三维协同建模效率表. 精选 Revit 建筑, 结构, 机电 (MEP) 双字母常用快捷代码, 支持一键搜索与 A4 打印. 
+              BIM Three-dimensional collaborative modeling efficiency table. Selected Revit architecture, structure, Electromechanical (MEP) two-letter common shortcut codes, Supports one-click search and A4 printing. 
             </p>
           </div>
         </section>

@@ -5,19 +5,19 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "draw",
-    "name": "✏️ 曲线绘制"
+    "name": "✏️ Curve Drawing"
   },
   {
     "id": "modeling",
-    "name": "⚙️ 三维建模"
+    "name": "⚙️ 3D modeling"
   },
   {
     "id": "modify",
-    "name": "🛠️ 实体编辑"
+    "name": "🛠️ Entity Edit"
   },
   {
     "id": "system",
-    "name": "💻 系统控制"
+    "name": "💻 System Control"
   }
 ];
 const SHORTCUTS = [
@@ -25,101 +25,101 @@ const SHORTCUTS = [
     "keys": "L",
     "command": "Line",
     "category": "draw",
-    "description": "绘制单条直线段. "
+    "description": "Draw a single straight line segment. "
   },
   {
     "keys": "PL",
     "command": "Polyline",
     "category": "draw",
-    "description": "绘制连续的多重折线. "
+    "description": "Draws continuous polylines. "
   },
   {
     "keys": "C",
     "command": "Circle",
     "category": "draw",
-    "description": "通过指定圆心和半径绘制圆. "
+    "description": "Draws a circle by specifying the center and radius. "
   },
   {
     "keys": "EL",
     "command": "Ellipse",
     "category": "draw",
-    "description": "绘制椭圆曲线. "
+    "description": "Draw an elliptic curve."
   },
   {
     "keys": "E",
     "command": "ExtrudeCrv",
     "category": "modeling",
-    "description": "沿直线方向挤出曲线生成实体表面. "
+    "description": "Extrudes curves along a straight line to generate solid surfaces."
   },
   {
     "keys": "LOFT",
     "command": "Loft",
     "category": "modeling",
-    "description": "通过多段断面曲线放样生成过渡曲面. "
+    "description": "Generate transition surfaces through multi-section section curve lofting. "
   },
   {
     "keys": "M",
     "command": "Move",
     "category": "modify",
-    "description": "移动选定的曲面或物件. "
+    "description": "Move selected surfaces or objects. "
   },
   {
     "keys": "CO / CP",
     "command": "Copy",
     "category": "modify",
-    "description": "克隆并复制选中物件. "
+    "description": "Clone and copy the selected object. "
   },
   {
     "keys": "RO",
     "command": "Rotate",
     "category": "modify",
-    "description": "围绕指定原点和基准角旋转物件. "
+    "description": "Rotates an object about a specified origin and base angle. "
   },
   {
     "keys": "TR",
     "command": "Trim",
     "category": "modify",
-    "description": "用剪切物体修剪多余的部分. "
+    "description": "Use a clipping object to trim the excess. "
   },
   {
     "keys": "S",
     "command": "Scale",
     "category": "modify",
-    "description": "等比例缩放三维模型体积. "
+    "description": "Scale the volume of the 3D model proportionally. "
   },
   {
     "keys": "F",
     "command": "FilletEdge",
     "category": "modify",
-    "description": "对实体倒角倒圆角. "
+    "description": "Chamfer a solid body. "
   },
   {
     "keys": "Ctrl + G",
     "command": "Group",
     "category": "system",
-    "description": "将多个物件组合为一个整体组. "
+    "description": "Group multiple objects into an overall group. "
   },
   {
     "keys": "Ctrl + H",
     "command": "Hide",
     "category": "system",
-    "description": "在视口中隐藏当前选择的所有物件. "
+    "description": "Hide all currently selected objects in the viewport. "
   },
   {
     "keys": "Ctrl + Alt + H",
     "command": "Show",
     "category": "system",
-    "description": "使所有被隐藏的物件重新浮现. "
+    "description": "Makes all hidden objects resurface. "
   }
 ];
 const TIPS = [
   {
-    "title": "右键与空格快速重复上次命令",
-    "content": "Rhino 设计的精髓在于右手不离开鼠标. 每一次命令结束后, 轻点鼠标右键或敲击键盘空格键即可快速重复执行上一次命令. "
+    "title": "Right click and space to quickly repeat the last command",
+    "content": "Rhino The essence of the design is that the right hand does not leave the mouse. After each command, Tap the right mouse button or hit the space bar on your keyboard to quickly repeat the last command. "
   },
   {
-    "title": "自定义命令别名实现 CAD 迁移",
-    "content": "在'首选项 ➔ 别名'设置中, 您可以加载自定义的 `.txt` 别名配置, 将常用的挤出拉伸等映射为单字母热键, 极大缩短击键次数. "
+    "title": "Custom command aliases for CAD migration",
+    "content": "In 'Preferences' ➔ Alias' setting, You can load custom `.txt` alias configurations, Map commonly used extrusion, stretching, etc. to single-letter hotkeys, greatly reducing the number of keystrokes. "
   }
 ];
 
@@ -127,7 +127,7 @@ export default function Rhino3DClient() {
   return (
     <ShortcutCheatsheetClient
       title="Rhino 3D"
-      subtitle="工业设计与曲面建模效率利器. 精选 Rhino 键盘热键, 视图切换指令, 支持快速搜索及 PDF 打印备忘录. "
+      subtitle="An efficient tool for industrial design and surface modeling. Selected Rhino Keyboard hotkeys, view switching commands, Supports quick search and PDF printing of memos. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

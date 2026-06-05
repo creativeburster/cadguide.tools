@@ -32,10 +32,10 @@ export default function SketchUpProPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              SketchUp Pro <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              SketchUp Pro <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              草图大师极速方案. 包含 SketchUp 常用绘图笔刷, 群组设置与相机环绕快捷键, 支持在线过滤及 A4 Landscape 打印. 
+              Sketch Master Quick Solution. Contains SketchUp Commonly used drawing brushes, group settings and camera surround shortcut keys, Supports online filtering and A4 Landscape printing. 
             </p>
           </div>
         </section>

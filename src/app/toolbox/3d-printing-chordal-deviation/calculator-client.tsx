@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import {
   HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Layers, Settings, Printer
 } from 'lucide-react';
@@ -511,14 +511,7 @@ export default function ChordalDeviationClient() {
         </div>
       </div>
 
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the 3D Printing Engineering Checklist"
-        description="Subscribe to receive our STEP-to-STL export quality assurance guide, tolerance lookup tables, and monthly CAD prototyping design tips."
-        buttonText="Get 3D Print QA Checklist"
-        placeholder="Enter your professional email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

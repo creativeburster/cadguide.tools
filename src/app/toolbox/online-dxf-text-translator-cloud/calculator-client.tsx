@@ -4,109 +4,109 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "CADText Translator LISP Script (本地离线脚本)",
+    "name": "CADText Translator LISP Script (Local offline script)",
     "rating": 9.8,
     "metrics": [
       {
-        "name": "原点保留度",
+        "name": "Origin retention",
         "score": 5
       },
       {
-        "name": "字体匹配度",
+        "name": "Font matching",
         "score": 5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       }
     ],
     "pros": [
-      "纯本地执行, 数据 100% 安全",
-      "自动过滤坐标和标高数值"
+      "Pure local execution, data 100% safe",
+      "Automatically filter coordinate and elevation values"
     ],
     "cons": [
-      "需要挂载翻译引擎的 API 密钥"
+      "Need to mount the API key of the translation engine"
     ],
     "officialUrl": "https://github.com/",
-    "verdict": "基于 CAD 本地 API 编写的批量文本导出与原位替换脚本, 是安全保密性最高的高效方案. "
+    "verdict": "CAD-based native API The batch text export and in-situ replacement scripts written are the most secure and efficient solutions.. "
   },
   {
-    "name": "SDL Trados CAD Plugin (专业工程翻译套件)",
+    "name": "SDL Trados CAD Plugin (Professional Engineering Translation Suite)",
     "rating": 9.6,
     "metrics": [
       {
-        "name": "原点保留度",
+        "name": "Origin retention",
         "score": 4.5
       },
       {
-        "name": "字体匹配度",
+        "name": "Font matching",
         "score": 4.5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       }
     ],
     "pros": [
-      "支持建立专业的工程翻译记忆库",
-      "翻译一致性高"
+      "Support the establishment of professional engineering translation memory database",
+      "Translation consistency is high"
     ],
     "cons": [
-      "需要购买 Trados 商业版软件授权"
+      "Requires purchase of Trados commercial version software license"
     ],
     "officialUrl": "https://www.rws.com/",
-    "verdict": "全球翻译软件巨头为 CAD 格式定制的翻译扩展, 支持直接读取并导出译文 DWG, 还原度极高. "
+    "verdict": "Customized translation extensions for CAD formats from the global translation software giant, Supports direct reading and export of translation DWG, with extremely high degree of restoration. "
   },
   {
-    "name": "Allinpdf Translator Cloud (云看图与翻译平台)",
+    "name": "Allinpdf Translator Cloud (Cloud Viewing and Translation Platform)",
     "rating": 9.1,
     "metrics": [
       {
-        "name": "原点保留度",
+        "name": "Origin retention",
         "score": 4
       },
       {
-        "name": "字体匹配度",
+        "name": "Font matching",
         "score": 3.5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 3
       }
     ],
     "pros": [
-      "纯网页版拖拽极速翻译",
-      "提供双语对照预览"
+      "Pure web version drag and drop for extremely fast translation",
+      "Provide bilingual preview"
     ],
     "cons": [
-      "免费版对大文件及复杂图层支持有限"
+      "The free version has limited support for large files and complex layers"
     ],
     "officialUrl": "https://allinpdf.com/",
-    "verdict": "适合个人设计师对非涉密零件草图或产品包装平面图进行快速的小语种标注翻译转换. "
+    "verdict": "It is suitable for individual designers to quickly translate and convert small language annotations on non-confidential parts sketches or product packaging plans. "
   }
 ];
 const BEST_PRACTICES = [
   {
-    "title": "提取纯文本至 TMX 进行翻译",
-    "desc": "使用脚本提取图纸中所有的 Text/MText/Attribute 文本输出为标准的文本文件, 在翻译软件中翻译后再原位导入, 这样可以确保图纸几何结构绝不受损. "
+    "title": "Extract plain text to TMX for translation",
+    "desc": "Use a script to extract all Text/MText/Attribute text in the drawing and output it to a standard text file, Translate in the translation software and then import it in place to ensure that the geometric structure of the drawing is never damaged.. "
   },
   {
-    "title": "采用双字节 SHX 大字体",
-    "desc": "翻译出的文字如果是多国语种 (如西里尔字母或日语) , 在 CAD 样式中必须为其挂载支持对应 Unicode 编码的 SHX 大字体 (如 gbcbig.shx) , 防止出现问号. "
+    "title": "Using double-byte SHX large font",
+    "desc": "If the translated text is in multiple languages (such as Cyrillic or Japanese) , The corresponding mount support must be provided in the CAD style Unicode Encoded SHX large font (Such as gbcbig.shx) to prevent question marks from appearing. "
   },
   {
-    "title": "加密隧道传输隔离",
-    "desc": "企业在涉及多国协同图纸翻译时应完全建立代理安全网络通道, 防范泄密. "
+    "title": "Encrypted tunnel transmission isolation",
+    "desc": "Enterprises should fully establish agency secure network channels when translating collaborative drawings from multiple countries to prevent leaks.. "
   }
 ];
 const FAQS = [
   {
-    "question": "翻译后的文字把尺寸标注线给压住了怎么办? ",
-    "answer": "这多是由于不同语种的字符长度差异过大 (例如中文'阀门'两个字, 翻译成英文是'Valve'五个字符) . 建议在代换前, 使用 LISP 脚本限制字宽因子 (Width Factor) 或将多行文本设置为自适应换行. "
+    "question": "What should I do if the translated text suppresses the dimension line? ",
+    "answer": "This may be due to the large difference in character length between different languages (for example, Chinese 'The word \"valve\"', Translated into English is the five characters of 'Valve') . It is recommended to use LISP Scripts limit the width factor (Width Factor) or set multi-line text to adaptive wrapping. "
   },
   {
-    "question": "为什么标注属性块 (Attribute Blocks) 里的字翻译不过来? ",
-    "answer": "普通的文本翻译命令通常只能识别普通的 TEXT 或 MTEXT 图元, 而定义在图层块 (Blocks) 内部的属性文字 (ATTRIB) 需要使用深层嵌套解析 API. 您必须选用支持属性块递归提取的翻译工具. "
+    "question": "Why can’t the words in Attribute Blocks be translated?? ",
+    "answer": "Ordinary text translation commands usually only recognize ordinary TEXT or MTEXT Primitives, defined in layer blocks (Blocks) Internal attribute literals (ATTRIB) require deep nesting parsing API. You must select a translation tool that supports recursive extraction of attribute blocks. "
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineDxfTextTranslatorCloudClient() {
   return (
     <CloudReferralClient
       title="Online DXF/DWG Drawing Multi-Language Batch Translator"
-      subtitle="客观深度评测与防审计直达导航. "
+      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="在开展跨国工程或工业设备发包时, 常需要将中文 DXF/DWG 图纸内的工艺文字和标注批量翻译成英语, 俄语, 日语等语种. 普通在线翻译往往会导致文字的坐标原点发生漂移 (错位) , 字体由于编码不兼容显示为问号, 或者把单行文本翻译成超长段落导致遮挡图纸. "
-      riskWarning="图纸中标注的技术要求, 明细表 (BOM) 及尺寸公差涵盖了产品的核心制造工艺与专利. 大批量上传至未经安全隔离的公共翻译网站存在极高的敏感数据泄漏风险. 对于机密项目, 推荐在本地 CAD 内使用专业离线插件进行文本翻译. "
+      painPointDesc="When carrying out transnational engineering or industrial equipment outsourcing, it is often necessary to provide Chinese DXF/DWG Batch translation of process text and annotations in drawings into English and Russian, Japanese and other languages. Ordinary online translation often causes the coordinate origin of the text to drift. (misalignment), the font is displayed as a question mark due to incompatible encoding, Or translating a single line of text into an overly long paragraph causing the drawing to be obscured. "
+      riskWarning="Technical requirements marked in drawings, detailed list (BOM) and dimensional tolerances cover the core manufacturing process and patents of the product. Uploading large batches to public translation websites without security isolation has a very high risk of sensitive data leakage. For confidential projects, local is recommended CAD Use professional offline plug-ins for text translation. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

@@ -32,10 +32,10 @@ export default function Rhino3DPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Rhino 3D <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Rhino 3D <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              工业设计与曲面建模效率利器. 精选 Rhino 键盘热键, 视图切换指令, 支持快速搜索及 PDF 打印备忘录. 
+              An efficient tool for industrial design and surface modeling. Selected Rhino Keyboard hotkeys, view switching commands, Supports quick search and PDF printing of memos. 
             </p>
           </div>
         </section>

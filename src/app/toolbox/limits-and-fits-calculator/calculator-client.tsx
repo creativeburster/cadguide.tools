@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import { Info, Download, HelpCircle, Layers, RefreshCw, FileText } from 'lucide-react';
 
 interface PresetFit {
@@ -13,15 +13,15 @@ interface PresetFit {
 }
 
 const PRESET_FITS: PresetFit[] = [
-  { hole: 'H7', shaft: 'g6', name: 'H7/g6 - Sliding Fit (间隙配合 - 旋转精密滑动配合)', type: 'clearance', desc: 'Used for shafts that must turn freely, e.g. gearboxes, precision linkages, and sliding pulleys.' },
-  { hole: 'H7', shaft: 'h6', name: 'H7/h6 - Locating Clearance Fit (间隙配合 - 定位间隙配合)', type: 'clearance', desc: 'Close clearance fit for parts that do not rotate, but must slide easily for assembly (spindles, sleeves).' },
-  { hole: 'H8', shaft: 'f7', name: 'H8/f7 - Easy Running Fit (间隙配合 - 宽间隙运转配合)', type: 'clearance', desc: 'Recommended for bearings running at higher speeds with wide temperature variations (pumps, fans).' },
-  { hole: 'H8', shaft: 'd9', name: 'H8/d9 - Loose Running Fit (间隙配合 - 松转动配合)', type: 'clearance', desc: 'Loose running fits with wide tolerances, suitable for exposed parts or coarse agricultural machinery.' },
-  { hole: 'H7', shaft: 'js6', name: 'H7/js6 - Close Transition Fit (过渡配合 - 定位过渡配合)', type: 'transition', desc: 'Symmetric transition fit providing accurate location. Assembly can be done by light tapping.' },
-  { hole: 'H7', shaft: 'k6', name: 'H7/k6 - Locating Transition Fit (过渡配合 - 紧密定位配合)', type: 'transition', desc: 'Used where accurate alignment is vital, but slight interference is possible. Assembly requires a mallet.' },
-  { hole: 'H7', shaft: 'n6', name: 'H7/n6 - Heavy Transition Fit (过渡配合 - 重型定位配合)', type: 'transition', desc: 'Provides tight location. Assembly requires light press force or tight mallet taps.' },
-  { hole: 'H7', shaft: 'p6', name: 'H7/p6 - Press Fit (过盈配合 - 轻型压入过盈配合)', type: 'interference', desc: 'Interference fit used for standard press assemblies where keys are not required (gears, bushings).' },
-  { hole: 'H7', shaft: 's6', name: 'H7/s6 - Medium Drive Fit (过盈配合 - 中型打入过盈配合)', type: 'interference', desc: 'Tight press fit requiring hydraulic presses or heat shrinking. A permanent joint.' },
+  { hole: 'H7', shaft: 'g6', name: 'H7/g6 - Sliding Fit (Clearance Fit - Rotating Precision Sliding Fit)', type: 'clearance', desc: 'Used for shafts that must turn freely, e.g. gearboxes, precision linkages, and sliding pulleys.' },
+  { hole: 'H7', shaft: 'h6', name: 'H7/h6 - Locating Clearance Fit (Clearance Fit - Locating Clearance Fit)', type: 'clearance', desc: 'Close clearance fit for parts that do not rotate, but must slide easily for assembly (spindles, sleeves).' },
+  { hole: 'H8', shaft: 'f7', name: 'H8/f7 - Easy Running Fit (Clearance Fit – Wide Clearance Running Fit)', type: 'clearance', desc: 'Recommended for bearings running at higher speeds with wide temperature variations (pumps, fans).' },
+  { hole: 'H8', shaft: 'd9', name: 'H8/d9 - Loose Running Fit (Clearance fit - loose rotational fit)', type: 'clearance', desc: 'Loose running fits with wide tolerances, suitable for exposed parts or coarse agricultural machinery.' },
+  { hole: 'H7', shaft: 'js6', name: 'H7/js6 - Close Transition Fit (Transition Fits - Positioning Transition Fits)', type: 'transition', desc: 'Symmetric transition fit providing accurate location. Assembly can be done by light tapping.' },
+  { hole: 'H7', shaft: 'k6', name: 'H7/k6 - Locating Transition Fit (Transition fit - tight positioning fit)', type: 'transition', desc: 'Used where accurate alignment is vital, but slight interference is possible. Assembly requires a mallet.' },
+  { hole: 'H7', shaft: 'n6', name: 'H7/n6 - Heavy Transition Fit (Transition Fit - Heavy Duty Positioning Fit)', type: 'transition', desc: 'Provides tight location. Assembly requires light press force or tight mallet taps.' },
+  { hole: 'H7', shaft: 'p6', name: 'H7/p6 - Press Fit (Interference Fit – Light Press-In Interference Fit)', type: 'interference', desc: 'Interference fit used for standard press assemblies where keys are not required (gears, bushings).' },
+  { hole: 'H7', shaft: 's6', name: 'H7/s6 - Medium Drive Fit (Interference Fit - Medium Type Insertion Interference Fit)', type: 'interference', desc: 'Tight press fit requiring hydraulic presses or heat shrinking. A permanent joint.' },
 ];
 
 const SIZE_RANGES = [
@@ -558,17 +558,17 @@ export default function LimitsAndFitsCalculatorClient() {
                 </div>
                 {results.fitType === 'clearance' && (
                   <div className="text-3xl font-black tracking-tight text-emerald-400">
-                    Clearance Fit (间隙配合)
+                    Clearance Fit (clearance fit)
                   </div>
                 )}
                 {results.fitType === 'transition' && (
                   <div className="text-3xl font-black tracking-tight text-amber-400">
-                    Transition Fit (过渡配合)
+                    Transition Fit (transition fit)
                   </div>
                 )}
                 {results.fitType === 'interference' && (
                   <div className="text-3xl font-black tracking-tight text-rose-400">
-                    Interference Fit (过盈配合)
+                    Interference Fit (interference fit)
                   </div>
                 )}
                 
@@ -661,13 +661,13 @@ export default function LimitsAndFitsCalculatorClient() {
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">1. Understanding fit Types</h4>
             <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
               <p>
-                <strong>Clearance Fit (间隙配合)</strong>: The hole is always larger than the shaft. This allows rotational or axial sliding movement between the parts. Common examples include H7/g6, H8/f7.
+                <strong>Clearance Fit</strong> (Clearance fit: The hole is always larger than the shaft. This allows rotational or axial sliding movement between the parts. Common examples include H7/g6, H8/f7.
               </p>
               <p>
-                <strong>Transition Fit (过渡配合)</strong>: The tolerance bands overlap. Depending on the actual manufactured size, the parts might have a clearance or an interference fit. Used for precise locating keys, pulleys, and centering pins. Common examples include H7/js6, H7/k6.
+                <strong>Transition Fit</strong> (Transition fit: The tolerance bands overlap. Depending on the actual manufactured size, the parts might have a clearance or an interference fit. Used for precise locating keys, pulleys, and centering pins. Common examples include H7/js6, H7/k6.
               </p>
               <p>
-                <strong>Interference Fit (过盈配合)</strong>: The shaft is always larger than the hole. The parts must be pressed together using hydraulic pressure or thermal expansion (heat shrinking). Provides a rigid joint without keyways. Common examples include H7/p6, H7/s6.
+                <strong>Interference Fit</strong> (Interference fit: The shaft is always larger than the hole. The parts must be pressed together using hydraulic pressure or thermal expansion (heat shrinking). Provides a rigid joint without keyways. Common examples include H7/p6, H7/s6.
               </p>
             </div>
           </div>
@@ -693,14 +693,7 @@ export default function LimitsAndFitsCalculatorClient() {
       </div>
 
       {/* Lead Capture Newsletter banner */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the CAD Tolerances & Fits handbook"
-        description="Subscribe to receive our cheat sheet on standard engineering fits, minimum machining clearances, and interactive CAD layout templates."
-        buttonText="Get Tolerances Cheat Sheet"
-        placeholder="Enter your work email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

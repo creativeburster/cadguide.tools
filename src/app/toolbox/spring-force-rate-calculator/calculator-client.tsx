@@ -2,13 +2,13 @@
 
 import { useState, useMemo } from 'react';
 import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, Layers, Percent } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 const SPRING_MATERIALS = [
-  { name: 'Music Wire / ASTM A228 (高频弹簧钢琴线)', G: 78500, desc: '制造小直径高精密弹簧的最佳之选, 拉伸强度极高' },
-  { name: 'Carbon Steel / ASTM A229 (碳素弹簧钢线)', G: 79300, desc: '最普遍的工业用弹簧钢材料' },
-  { name: 'Stainless 302 / ASTM A313 (不锈钢弹簧线)', G: 69000, desc: '耐酸碱, 抗腐蚀, 在潮湿工况下表现稳定' },
-  { name: 'Phosphor Bronze / ASTM B159 (磷青铜线)', G: 41000, desc: '常用于导电性能要求的电子仪器弹簧片' },
+  { name: 'Music Wire / ASTM A228 (High frequency spring piano wire)', G: 78500, desc: 'The best choice for manufacturing small diameter high precision springs, Extremely high tensile strength'},
+  { name: 'Carbon Steel / ASTM A229 (Carbon spring steel wire)', G: 79300, desc: 'The most common industrial spring steel material' },
+  { name: 'Stainless 302 / ASTM A313 (Stainless steel spring wire)', G: 69000, desc: 'Acid and alkali resistant, Anti-corrosion, stable performance in wet conditions' },
+  { name: 'Phosphor Bronze / ASTM B159 (Phosphor bronze wire)', G: 41000, desc: 'Commonly used in electronic instrument springs with conductive performance requirements' },
 ];
 
 export default function SpringForceClient() {
@@ -148,14 +148,14 @@ Generated via CADGuide.tools`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Layers className="w-5 h-5 text-blue-400" />
-            <span>弹簧设计尺寸设定</span>
+            <span>Spring design size setting</span>
           </h2>
         </div>
 
         {/* G Modulus Preset */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            1. 弹簧丝材质模量 (Wire Material)
+            1. Spring wire material modulus (Wire Material)
           </label>
           <select
             value={materialIdx}
@@ -169,14 +169,14 @@ Generated via CADGuide.tools`;
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            线材材质: {material.name} (G = {material.G} MPa)
+            Wire material: {material.name} (G = {material.G} MPa)
           </div>
         </div>
 
         {/* Wire Diameter */}
         <div className="space-y-2.5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">2. 钢丝线径 (Wire Diam. d)</span>
+            <span className="text-slate-400 uppercase tracking-wider">2. Wire Diam. d</span>
             <span className="text-blue-400 font-mono">{wireDiameter} mm</span>
           </div>
           <input
@@ -193,7 +193,7 @@ Generated via CADGuide.tools`;
         {/* Outer Diameter */}
         <div className="space-y-2.5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">3. 弹簧外径 (Outer Diam. D_out)</span>
+            <span className="text-slate-400 uppercase tracking-wider">3. Spring outer diameter (Outer Diam. D_out)</span>
             <span className="text-blue-400 font-mono">{outerDiameter} mm</span>
           </div>
           <input
@@ -210,8 +210,8 @@ Generated via CADGuide.tools`;
         {/* Active Coils */}
         <div className="space-y-2.5 border-t border-slate-800/80 pt-4">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. 弹簧有效圈数 (Coils n)</span>
-            <span className="text-blue-400 font-mono">{activeCoils} 圈</span>
+            <span className="text-slate-400 uppercase tracking-wider">4. Effective number of spring coils (Coils n)</span>
+            <span className="text-blue-400 font-mono">{activeCoils} circle</span>
           </div>
           <input
             type="range"
@@ -227,7 +227,7 @@ Generated via CADGuide.tools`;
         {/* Free Height */}
         <div className="space-y-2.5 border-t border-slate-800/80 pt-4">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">5. 弹簧自由高度 (Free Height Hf)</span>
+            <span className="text-slate-400 uppercase tracking-wider">5. Spring Free Height (Free Height Hf)</span>
             <span className="text-blue-400 font-mono">{freeHeight} mm</span>
           </div>
           <input
@@ -244,7 +244,7 @@ Generated via CADGuide.tools`;
         {/* Deflection displacement */}
         <div className="space-y-2.5 border-t border-slate-800/80 pt-4">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">6. 装配压缩位移 (Deflection s)</span>
+            <span className="text-slate-400 uppercase tracking-wider">6. Assembly compression displacement (Deflection s)</span>
             <span className="text-amber-400 font-mono">{deflection} mm</span>
           </div>
           <input
@@ -266,51 +266,51 @@ Generated via CADGuide.tools`;
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
               <Percent className="w-5 h-5 text-blue-500" />
-              <span>压缩弹簧力学报告 (Mechanical Verdict)</span>
+              <span>Compression Spring Mechanical Verdict</span>
             </h3>
             <button
               onClick={copyToClipboard}
               className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
-              <span>{copied ? '已复制' : '复制报告'}</span>
+              <span>{copied ? 'Copied' : 'Copy report'}</span>
             </button>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                压缩弹力回复 (Load Force)
+                Compression elastic recovery (Load Force)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
                 {spring.force.toFixed(2)} <span className="text-xs text-slate-500 font-sans">N</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                等效于: {(spring.force / 9.81).toFixed(2)} kg 重力
+                Equivalent to: {(spring.force / 9.81).toFixed(2)} kg gravity
               </p>
             </div>
 
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                弹簧刚度系数 (Stiffness)
+                Spring stiffness coefficient (Stiffness)
               </span>
               <div className="text-2xl font-black font-mono text-slate-800">
                 {spring.rate.toFixed(3)} <span className="text-xs text-slate-500 font-sans">N/mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                每压下 1mm 所需作用力
+                Required force for each 1mm press
               </p>
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                并紧高度界限 (Solid Height)
+                Solid Height
               </span>
               <div className="text-2xl font-black font-mono text-slate-700">
                 {spring.solidHeight.toFixed(1)} <span className="text-xs text-slate-500 font-sans">mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                极限位移: {spring.maxDeflection.toFixed(1)} mm
+                Limit displacement: {spring.maxDeflection.toFixed(1)} mm
               </p>
             </div>
           </div>
@@ -320,9 +320,9 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">弹簧完全压实失效 (Solid Height Reached)! </strong>
+                <strong className="font-black">Spring completely compacted failure (Solid Height Reached)! </strong>
                 <p className="mt-0.5 text-red-700">
-                  当前压缩行程已达到极限位移 ({spring.maxDeflection.toFixed(1)} mm) . 弹簧圈与圈已紧密贴合, 丧失了所有的弹性行程缓冲能力, 继续施压将作为钢柱刚性受力. 
+                  The current compression stroke has reached the limit displacement ({spring.maxDeflection.toFixed(1)} mm). The spring coils are in close contact with each other., All elastic travel buffering capabilities have been lost, and continued pressure will act as a rigid force on the steel column.. 
                 </p>
               </div>
             </div>
@@ -332,11 +332,11 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-amber-50 border border-amber-250 p-4 rounded-2xl text-amber-800 text-xs">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
-                <strong className="font-black">弹簧旋绕比不佳 (Spring Index Warning)</strong>
+                <strong className="font-black">Spring Index Warning</strong>
                 <p className="mt-0.5 text-amber-700">
-                  当前旋绕比 (D/d) 为 {spring.springIndex.toFixed(1)}. 机械工程标准规定旋绕比应在 4 至 12 之间. 
-                  {spring.springIndex < 4 && ' 旋绕比过小代表弹簧圈太紧, 钢丝弯曲应力过大, 极其难卷制制造. '}
-                  {spring.springIndex > 12 && ' 旋绕比过大代表圈径太松, 弹簧工作易倾斜, 压紧时极易产生失稳扭曲. '}
+                  The current spin ratio (D/d) is {spring.springIndex.toFixed(1)}. Mechanical engineering standards specify that the convolution ratio should be between 4 and 12 between. 
+                  {spring.springIndex < 4 && ' If the winding ratio is too small, it means that the spring coil is too tight and the bending stress of the steel wire is too large., Extremely difficult to roll and manufacture. '}
+                  {spring.springIndex > 12 && ' If the winding ratio is too large, it means that the ring diameter is too loose, and the spring will tend to tilt during operation., It is easy to cause instability and distortion when compressed. '}
                 </p>
               </div>
             </div>
@@ -347,7 +347,7 @@ Generated via CADGuide.tools`;
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
-              物理弹簧压缩几何截面预览 (Deflection Simulator)
+              Physical spring compression geometry section preview (Deflection Simulator)
             </span>
           </div>
 
@@ -365,7 +365,7 @@ Generated via CADGuide.tools`;
                 
                 {/* Arrow representing downward displacement */}
                 <path d="M 200 0 L 200 15 M 195 10 L 200 15 L 205 10" stroke="#f59e0b" strokeWidth="2.5" fill="none" />
-                <text x="220" y="10" fill="#f59e0b" fontSize="8.5" fontWeight="bold">压缩行程: {deflection} mm</text>
+                <text x="220" y="10" fill="#f59e0b" fontSize="8.5" fontWeight="bold">Compression stroke: {deflection} mm</text>
               </g>
 
               {/* Spring coils path */}
@@ -383,19 +383,19 @@ Generated via CADGuide.tools`;
 
               {/* Stress color scale indicator */}
               <text x="380" y="180" fill="#94a3b8" fontSize="8.5" textAnchor="end">
-                剪切应力: {spring.shearStress.toFixed(1)} MPa
+                Shear stress: {spring.shearStress.toFixed(1)} MPa
               </text>
             </svg>
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-655">
-            * 物理仿真: 弹簧螺线基于自由高度与实际位移的关系实时重算. 圈距的物理聚拢生动展示了刚度反力与应力的富集. 应力超过极限时, 钢丝螺线呈红色 (安全隐患区) . 
+            * Physical simulation: The spring spiral is recalculated in real time based on the relationship between free height and actual displacement.. The physical gathering of the circle distance vividly demonstrates the enrichment of stiffness reaction and stress. When the stress exceeds the limit, The wire spiral is red (safety hazard area) . 
           </p>
         </div>
       </div>
 
       <div className="lg:col-span-12 mt-4 print:hidden">
-        <NewsletterSubscribe />
+        <RelatedTools />
       </div>
     </div>
 );

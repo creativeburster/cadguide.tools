@@ -5,83 +5,83 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "sketch",
-    "name": "📐 草图绘制"
+    "name": "📐 Sketching"
   },
   {
     "id": "part",
-    "name": "⚙️ 零件建模"
+    "name": "⚙️ Part modeling"
   },
   {
     "id": "assembly",
-    "name": "🔗 装配约束"
+    "name": "🔗 Assembly constraints"
   }
 ];
 const SHORTCUTS = [
   {
     "keys": "L",
-    "command": "Line (直线)",
+    "command": "Line (straight line)",
     "category": "sketch",
-    "description": "创建二维或三维草图直线. "
+    "description": "Create 2D or 3D sketch lines. "
   },
   {
     "keys": "C",
     "command": "Center Point Circle",
     "category": "sketch",
-    "description": "绘制以指定点为圆心的圆. "
+    "description": "Draws a circle with the specified point as the center. "
   },
   {
     "keys": "D",
-    "command": "Dimension (尺寸)",
+    "command": "Dimension (size)",
     "category": "sketch",
-    "description": "对草图几何体进行尺寸驱动标注约束. "
+    "description": "Dimension-driven dimension constraints on sketch geometry. "
   },
   {
     "keys": "F",
-    "command": "Fillet (圆角)",
+    "command": "Fillet (rounded corners)",
     "category": "sketch",
-    "description": "在草图两相交线之间创建圆角.. "
+    "description": "Create a fillet between two intersecting lines in the sketch.. "
   },
   {
     "keys": "E",
-    "command": "Extrude (拉伸)",
+    "command": "Extrude (Stretch)",
     "category": "part",
-    "description": "将封闭草图轮廓挤出为特征实体. "
+    "description": "Extrude a closed sketch outline into a feature solid."
   },
   {
     "keys": "R",
-    "command": "Revolve (旋转)",
+    "command": "Revolve (Rotate)",
     "category": "part",
-    "description": "通过将二维草图围绕某轴旋转生成特征. "
+    "description": "Create features by rotating a 2D sketch about an axis. "
   },
   {
     "keys": "H",
-    "command": "Hole (打孔)",
+    "command": "Hole (punch)",
     "category": "part",
-    "description": "在实体面上以指定点快速创建螺纹孔, 沉头孔等. "
+    "description": "Quickly create threaded holes, countersunk holes, etc. at specified points on the solid surface. "
   },
   {
     "keys": "F3",
     "command": "Toggle Visibility",
     "category": "part",
-    "description": "快速切换当前鼠标悬浮构件的可见性状态. "
+    "description": "Quickly switch the visibility state of the current mouseover component. "
   },
   {
     "keys": "C",
-    "command": "Constraint (约束)",
+    "command": "Constraint (constraint)",
     "category": "assembly",
-    "description": "在装配体环境调出面贴合, 同轴心等约束面板. "
+    "description": "Call up the surface fitting, coaxial center and other constraint panels in the assembly environment. "
   },
   {
     "keys": "P",
     "command": "Place Component",
     "category": "assembly",
-    "description": "从本地硬盘或库中插入现有的三维零件. "
+    "description": "Insert an existing 3D part from your local hard drive or library. "
   }
 ];
 const TIPS = [
   {
-    "title": "草图标注快捷键 D 的魔力",
-    "content": "键入 D 命令可以快速开始尺寸标注. 如果是标注圆弧, 它会自动默认为半径标注; 如果是两个圆, 它会自动默认为中心距标注, 极度智能化. "
+    "title": "The magic of sketch annotation shortcut key D",
+    "content": "Type the D command to quickly start dimensioning. If it is an arc dimension, it will automatically default to a radius dimension.; If it is two circles, it will automatically default to the center distance dimension., Extremely intelligent. "
   }
 ];
 
@@ -89,7 +89,7 @@ export default function AutodeskInventorClient() {
   return (
     <ShortcutCheatsheetClient
       title="Autodesk Inventor"
-      subtitle="三维机械装配建模速查. 整理 Inventor 草图约束, 零件特征与大型装配体约束快捷键, 支持搜索和 A4 打印. "
+      subtitle="Quick review of 3D mechanical assembly modeling. Organized Inventor Shortcut keys for sketch constraints, part features, and large assembly constraints, Supports search and A4 printing. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

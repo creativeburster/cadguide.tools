@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 export interface RecommendedTool {
   name: string;
@@ -48,7 +48,7 @@ export default function CloudReferralClient({
       <div className="grid md:grid-cols-3 gap-8 items-start">
         <div className="md:col-span-2 space-y-4">
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-            为何需要专业转换与评测? 
+            Why Do You Need Professional Evaluation? 
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed font-semibold">
             {painPointDesc}
@@ -56,10 +56,10 @@ export default function CloudReferralClient({
         </div>
         <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 space-y-3 print:border-slate-300">
           <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-            Referral Audit Standard
+            Referral Evaluation Standard
           </h4>
           <p className="text-[11px] text-slate-500 leading-relaxed font-bold">
-            我们针对全球各主流 CAD 云服务商进行了性能测试, 所有推荐均经过真实可用性评估. 链接直达官方渠道, 绝不进行恶意中间重定向. 
+            We perform rigorous performance benchmarks on global CAD cloud services. All recommendations are based on real-world test results. Links go directly to official channels. 
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function CloudReferralClient({
           <span className="text-2xl select-none leading-none">⚠️</span>
           <div className="space-y-2">
             <h3 className="text-base font-black text-amber-900 tracking-tight">
-              企业级数据安全与反盗版合规预警 (Enterprise Security & Compliance Warning)
+              Enterprise Security & Anti-Piracy Compliance Warning
             </h3>
             <p className="text-xs text-amber-800 leading-relaxed font-semibold">
               {riskWarning}
@@ -85,10 +85,10 @@ export default function CloudReferralClient({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-              推荐云端转换工具与服务评测矩阵
+              Recommended Cloud Tools & Services Matrix
             </h2>
             <p className="text-xs text-slate-500 font-bold mt-1">
-              由 CAD 专家根据转换保真度, 运行速度及隐私系数综合打分评估
+              Evaluated by CAD experts based on rendering fidelity, speed, and privacy controls.
             </p>
           </div>
           <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-100 print:hidden">
@@ -133,7 +133,7 @@ export default function CloudReferralClient({
                   {/* Pros */}
                   <div className="space-y-1">
                     <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">
-                      优点 (Pros)
+                      Pros
                     </h5>
                     {tool.pros.map((pro, pIdx) => (
                       <div key={pIdx} className="flex items-start gap-1.5 text-xs text-slate-600 leading-relaxed font-semibold">
@@ -146,7 +146,7 @@ export default function CloudReferralClient({
                   {/* Cons */}
                   <div className="space-y-1 pt-2">
                     <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">
-                      缺点 (Cons)
+                      Cons
                     </h5>
                     {tool.cons.map((con, cIdx) => (
                       <div key={cIdx} className="flex items-start gap-1.5 text-xs text-slate-600 leading-relaxed font-semibold">
@@ -160,7 +160,7 @@ export default function CloudReferralClient({
                 {/* Verdict */}
                 <div className="pt-3 border-t border-slate-50 space-y-1">
                   <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                    专家结论 (Verdict)
+                    Verdict
                   </h5>
                   <p className="text-xs text-slate-500 leading-relaxed font-medium">
                     {tool.verdict}
@@ -176,13 +176,13 @@ export default function CloudReferralClient({
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-2xl font-black text-xs text-white bg-slate-900 hover:bg-blue-600 active:scale-[0.98] transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-blue-500/20"
                 >
-                  直达官方通道 →
+                  Visit Official Site →
                 </a>
                 <button
                   onClick={() => handleCopyLink(tool.officialUrl, idx)}
                   className="w-full py-2.5 px-6 rounded-2xl border border-slate-200 text-slate-500 hover:text-slate-800 text-xs font-black transition-all hover:bg-slate-50 active:scale-[0.98]"
                 >
-                  {copiedIndex === idx ? '✓ 已复制链接' : '🔗 复制干净网址'}
+                  {copiedIndex === idx ? '✓ Link Copied' : '🔗 Copy Clean URL'}
                 </button>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function CloudReferralClient({
       {/* 4. Best Practices Guide */}
       <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 md:p-8 space-y-6 print:border-slate-300 print:bg-white">
         <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-          企业数据转换与安全防查水表指南 (Best Practices Guide)
+          Enterprise Data Conversion Best Practices Guide
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
           {bestPractices.map((bp, i) => (
@@ -215,7 +215,7 @@ export default function CloudReferralClient({
       {/* 5. Hardcore FAQ Section */}
       <div className="space-y-6">
         <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-          技术常见问题 (Technical FAQ)
+          Technical FAQ
         </h2>
         <div className="grid gap-4 print:grid-cols-1">
           {faqs.map((faq, i) => (
@@ -240,14 +240,7 @@ export default function CloudReferralClient({
       </div>
 
       {/* 6. Newsletter Hook (Hidden during printing) */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="订阅我们的企业 CAD 极客内参"
-        description="每月为您推送最新的企业防遥测配置, 主流工具的优惠分销礼券, 以及防盗版审计合规白皮书. "
-        buttonText="免费订阅内参"
-        placeholder="输入您的企业电子邮箱"
-        className="mt-8 print:hidden"
-      />
+      <RelatedTools />
     </div>
 );
 }

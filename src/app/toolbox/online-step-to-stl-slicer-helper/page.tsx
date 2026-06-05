@@ -35,7 +35,7 @@ export default function OnlineStepToStlSlicerHelperPage() {
               STEP to Sliced STL Mesh Resolution Cloud Helper
             </h1>
             <p className="text-base text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              客观深度评测与防审计直达导航. 
+              Direct navigation to objective in-depth evaluation and anti-audit. 
             </p>
           </div>
         </section>

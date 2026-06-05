@@ -32,10 +32,10 @@ export default function PTCCreoPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              PTC Creo <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              PTC Creo <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              精密结构设计与参数化建模. 提供 Creo 草图绘制, 实体剪裁及装配约束常用代码, 支持一键过滤搜索. 
+              Precision structural design and parametric modeling. Provided Creo Common codes for sketching, solid trimming and assembly constraints, Supports one-click filter search. 
             </p>
           </div>
         </section>

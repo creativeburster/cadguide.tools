@@ -32,10 +32,10 @@ export default function AutocadVsGstarcadShortcutsPage() {
               CAD Platforms Command Comparison Matrix
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              AutoCAD <span className="text-blue-400">vs. GstarCAD</span> 命令别名差异表
+              AutoCAD <span className="text-blue-400">vs. GstarCAD</span> Command alias difference table
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              浩辰 CAD 迁移兼容性速查手册. 展示 AutoCAD 与 浩辰CAD 常用绘图别名在各引擎下的指令映射差异. 
+              Haochen CAD Migration Compatibility Quick Guide. Showcase AutoCAD with Differences in command mapping of Haochen CAD common drawing aliases under each engine. 
             </p>
           </div>
         </section>

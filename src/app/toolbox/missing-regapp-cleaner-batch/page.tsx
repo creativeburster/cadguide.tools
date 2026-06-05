@@ -5,7 +5,7 @@ import MissingRegappCleanerClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'AutoCAD Massive Regapp Bloat LISP Cleaner Batch Generator | CADGuide.tools',
   description:
-    '在线生成批量清理 CAD 注册应用 (Regapp) 臃肿残留的 AutoLISP 宏代码与 .scr 批量开图控制脚本. 帮助图纸体积缩水 80%, 彻底解决视口卡顿和图纸打开慢的问题. ',
+    'Online generation of batch cleaning CAD registration applications (Regapp) Bloated residual AutoLISP macro code and .scr Batch drawing control script. Helps shrink drawing size 80%, Completely solve the problem of viewport freezing and slow drawing opening. ',
   path: '/toolbox/missing-regapp-cleaner-batch',
 });
 
@@ -33,10 +33,10 @@ export default function MissingRegappCleanerPage() {
               CAD Performance Tuning Wizard
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Regapp <span className="text-blue-400">图纸注册应用瘦身脚本生成器</span>
+              Regapp <span className="text-blue-400">Drawing registration application slimming script generator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              解决 CAD 图纸莫名增大, 视口平移卡死克星. 自定义生成静默清理 Regapp 垃圾的 AutoLISP 插件, 并获取一键全自动扫描多图批量清理脚本. 
+              Solve the problem of inexplicable increase in the size of CAD drawings, Viewport panning stuck nemesis. Custom generated silent cleaning Regapp Rubbish AutoLISP plugin, And get a one-click fully automatic scanning and batch cleaning script for multiple images. 
             </p>
           </div>
         </section>

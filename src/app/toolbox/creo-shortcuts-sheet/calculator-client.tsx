@@ -5,65 +5,65 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "sketch",
-    "name": "📐 草图常用"
+    "name": "📐 Commonly used sketches"
   },
   {
     "id": "modeling",
-    "name": "⚙️ 建模修改"
+    "name": "⚙️ Modeling modification"
   },
   {
     "id": "view",
-    "name": "👁️ 视图对齐"
+    "name": "👁️ View Alignment"
   }
 ];
 const SHORTCUTS = [
   {
     "keys": "L",
-    "command": "Line (直线)",
+    "command": "Line (straight line)",
     "category": "sketch",
-    "description": "在平面草图中绘制连续直线段. "
+    "description": "Draw continuous straight segments in a plan sketch. "
   },
   {
     "keys": "C",
-    "command": "Circle (圆)",
+    "command": "Circle (circle)",
     "category": "sketch",
-    "description": "绘制以指定位置为中心的圆. "
+    "description": "Draws a circle centered at the specified location. "
   },
   {
     "keys": "R",
-    "command": "Rectangle (矩形)",
+    "command": "Rectangle (rectangle)",
     "category": "sketch",
-    "description": "通过边界对角线指定矩形. "
+    "description": "Specify a rectangle by its bounding diagonals. "
   },
   {
     "keys": "Ctrl + G",
     "command": "Regenerate",
     "category": "modeling",
-    "description": "重构并更新三维特征树模型, 防止显示异常. "
+    "description": "Reconstruct and update the 3D feature tree model to prevent display abnormalities. "
   },
   {
     "keys": "Ctrl + D",
-    "command": "Default View (默认视角)",
+    "command": "Default View (Default perspective)",
     "category": "view",
-    "description": "瞬间将三维工作视口对正并重置回标准等轴测默认视角. "
+    "description": "Instantly align the 3D working viewport and reset it back to the standard isometric default perspective. "
   },
   {
     "keys": "Ctrl + R",
     "command": "Repaint",
     "category": "view",
-    "description": "强制刷新当前工作屏幕, 消除绘图垃圾像素虚影. "
+    "description": "Force refresh of the current working screen to eliminate drawing junk pixel artifacts. "
   },
   {
-    "keys": "Shift + 中键",
+    "keys": "Shift + middle button",
     "command": "Pan View",
     "category": "view",
-    "description": "按住键盘 Shift 键配合鼠标中键拖动, 平移视口. "
+    "description": "Hold down the Shift key on your keyboard and drag with the middle mouse button, Pan the viewport."
   }
 ];
 const TIPS = [
   {
-    "title": "一键重置默认三维视角 (Ctrl+D)",
-    "content": "当在三维装配体内旋转得晕头转向时, 直接按下 `Ctrl + D`, Creo 会一秒将视角对齐并归位到标准的立体轴测图, 方便重新定位. "
+    "title": "Reset the default 3D perspective with one click (Ctrl+D)",
+    "content": "When you feel dizzy rotating inside the three-dimensional assembly, just press `Ctrl + D`, Creo The perspective will be aligned and returned to the standard three-dimensional axonometric view in one second, making it easy to reposition.. "
   }
 ];
 
@@ -71,7 +71,7 @@ export default function PTCCreoClient() {
   return (
     <ShortcutCheatsheetClient
       title="PTC Creo"
-      subtitle="精密结构设计与参数化建模. 提供 Creo 草图绘制, 实体剪裁及装配约束常用代码, 支持一键过滤搜索. "
+      subtitle="Precision structural design and parametric modeling. Provided Creo Common codes for sketching, solid trimming and assembly constraints, Supports one-click filter search. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

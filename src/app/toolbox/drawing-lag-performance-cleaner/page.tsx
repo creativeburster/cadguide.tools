@@ -36,7 +36,7 @@ export default function DrawingLagCleanerPage() {
               Drawing Lag & <span className="text-blue-400">DWG Performance</span> Cleaner
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              解决 CAD 视口缩放卡顿, DWG 文件虚大, 开图极其缓慢. 交互选择卡顿特征, 自动生成深度清理的 AutoLISP 静默优化宏. 
+              Solve CAD viewport zoom lag, DWG The file is too large and the image opening is extremely slow. Interactively select stuck features and automatically generate deep cleaning AutoLISP Silently optimize macros. 
             </p>
           </div>
         </section>

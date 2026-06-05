@@ -2,14 +2,14 @@
 
 import { useState, useMemo } from 'react';
 import { HelpCircle, Info, Copy, Check, Shield, Activity, Sliders, Droplets } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 const PIPE_MATERIALS = [
-  { name: 'PVC / Plastic (塑料/聚氯乙烯)', C: 150, desc: '内壁极光滑, 抗腐蚀性好' },
-  { name: 'Copper / Stainless Steel (铜管/不锈钢管)', C: 140, desc: '流体阻力极低, 常用于冷热水管' },
-  { name: 'Welded Steel (普通焊接钢管)', C: 120, desc: '工业循环水, 采暖常备' },
-  { name: 'New Cast Iron (新铸铁管)', C: 100, desc: '市政供水主管道常见' },
-  { name: 'Old Corroded Cast Iron (旧锈蚀铸铁管)', C: 80, desc: '管道结垢, 内壁阻力大' },
+  { name: 'PVC / Plastic (Plastic/PVC)', C: 150, desc: 'The inner wall is extremely smooth and has good corrosion resistance' },
+  { name: 'Copper / Stainless Steel (Copper tube/stainless steel tube)', C: 140, desc: 'Very low fluid resistance, often used in hot and cold water pipes' },
+  { name: 'Welded Steel (Ordinary welded steel pipe)', C: 120, desc: 'Industrial circulating water, Heating ready' },
+  { name: 'New Cast Iron (New cast iron pipe)', C: 100, desc: 'Common in municipal water supply main pipes' },
+  { name: 'Old Corroded Cast Iron (Old rusted cast iron pipe)', C: 80, desc: 'Pipe scaling, The inner wall resistance is large'},
 ];
 
 export default function PipeFrictionClient() {
@@ -88,14 +88,14 @@ Generated via CADGuide.tools`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Sliders className="w-5 h-5 text-blue-400" />
-            <span>输入参数 (Parameters)</span>
+            <span>Input parameters (Parameters)</span>
           </h2>
         </div>
 
         {/* Material C Coefficient */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            1. 管道材质参数 (Pipe Material & C-Value)
+            1. Pipe Material & C-Value
           </label>
           <select
             value={materialIdx}
@@ -109,17 +109,17 @@ Generated via CADGuide.tools`;
 ))}
           </select>
           <p className="text-[10px] text-slate-500 print:hidden">
-            * C 因子 (Hazen-Williams 常数) 越大代表管壁越光滑. 
+            * C factor (Hazen-Williams constant) The larger the value, the smoother the pipe wall. 
           </p>
           <div className="hidden print:block font-bold">
-            材质: {material.name} (C = {material.C})
+            Material: {material.name} (C = {material.C})
           </div>
         </div>
 
         {/* Flow Rate */}
         <div className="space-y-3">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">2. 设计流量 (Flow Rate Q)</span>
+            <span className="text-slate-400 uppercase tracking-wider">2. Design flow (Flow Rate Q)</span>
             <span className="text-blue-400 font-mono">{flowRate} m³/h</span>
           </div>
           <input
@@ -157,7 +157,7 @@ Generated via CADGuide.tools`;
         {/* Internal Diameter */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">3. 管道实际内径 (Inner Diameter d)</span>
+            <span className="text-slate-400 uppercase tracking-wider">3. Actual inner diameter of pipe (Inner Diameter d)</span>
             <span className="text-blue-400 font-mono">{diameter} mm</span>
           </div>
           <input
@@ -180,7 +180,7 @@ Generated via CADGuide.tools`;
         {/* Pipe Length */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. 管道总物理长度 (Length L)</span>
+            <span className="text-slate-400 uppercase tracking-wider">4. Total physical length of pipe (Length L)</span>
             <span className="text-blue-400 font-mono">{length} m</span>
           </div>
           <input
@@ -208,51 +208,51 @@ Generated via CADGuide.tools`;
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
               <Activity className="w-5 h-5 text-blue-500" />
-              <span>水力学阻力计算报告 (Hydraulics Report)</span>
+              <span>Hydraulics Report</span>
             </h3>
             <button
               onClick={copyToClipboard}
               className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
-              <span>{copied ? '已复制' : '复制报告'}</span>
+              <span>{copied ? 'Copied' : 'Copy report'}</span>
             </button>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                流体流速 (Flow Velocity)
+                Flow Velocity
               </span>
               <div className={`text-2xl font-black font-mono ${isVelocityHigh ? 'text-amber-600' : 'text-slate-800'}`}>
                 {hydraulics.velocity.toFixed(2)} <span className="text-xs text-slate-500 font-sans">m/s</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                重力供水推荐: 0.8 - 1.5 m/s
+                Gravity water supply recommendation: 0.8 - 1.5 m/s
               </p>
             </div>
 
             <div className="space-y-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                摩擦水头损失 (Static Head Loss)
+                Frictional head loss (Static Head Loss)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
                 {hydraulics.headLoss.toFixed(2)} <span className="text-xs text-slate-500 font-sans">mH₂O</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                对应总压力损失: {hydraulics.pressureDrop.toFixed(1)} kPa
+                Corresponding total pressure loss: {hydraulics.pressureDrop.toFixed(1)} kPa
               </p>
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                单位水阻梯度 (Unit Loss)
+                Unit Friction Gradient (Unit Loss)
               </span>
               <div className={`text-2xl font-black font-mono ${isLossSevere ? 'text-red-500' : 'text-emerald-600'}`}>
                 {hydraulics.unitPressureDrop.toFixed(4)} <span className="text-xs text-slate-500 font-sans">kPa/m</span>
               </div>
               <p className="text-[9px] text-slate-400">
-                舒适界限: &lt; 0.35 kPa/m
+                Comfort limit: &lt; 0.35 kPa/m
               </p>
             </div>
           </div>
@@ -262,10 +262,10 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-100 p-4 rounded-2xl text-red-800 text-xs">
               <Info className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">警告: 管线压力损失过大或风噪异常! </strong>
+                <strong className="font-black">Warning: Excessive pipeline pressure loss or abnormal wind noise! </strong>
                 <p className="mt-0.5 text-red-700">
-                  {isLossSevere && `单位摩擦梯度为 ${hydraulics.unitPressureDrop.toFixed(3)} kPa/m, 大幅超越推荐规范界限 (0.35 kPa/m) , 泵站选型需要较大扬程扬程冗余. `}
-                  {isVelocityHigh && ` 另外流体流速 ${hydraulics.velocity.toFixed(2)} m/s 偏高, 这极易引发管道水击及磨损噪音. 建议增加管道内径. `}
+                  {isLossSevere && `The unit friction gradient is ${hydraulics.unitPressureDrop.toFixed(3)} kPa/m, which greatly exceeds the recommended specification limit (0.35 kPa/m), and the pump station selection will require a larger head redundancy. `}
+                  {isVelocityHigh && ` In addition, the fluid flow rate ${hydraulics.velocity.toFixed(2)} m/s is too high, which can easily cause pipe water hammer and wear noise. It is recommended to increase the inner diameter of the pipe. `}
                 </p>
               </div>
             </div>
@@ -276,7 +276,7 @@ Generated via CADGuide.tools`;
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
-              流体阻力与剪切梯度模拟器
+              Fluid resistance and shear gradient simulator
             </span>
             <span className="text-[9px] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded font-mono font-bold uppercase print:hidden">
               H-W MODEL ACTIVE
@@ -341,15 +341,15 @@ Generated via CADGuide.tools`;
 
               {/* Dimensions overlays */}
               <text x="200" y="152" fill="#94a3b8" fontSize="10" textAnchor="middle" fontWeight="bold">
-                管道直径 (d): {diameter} mm
+                Pipe diameter (d): {diameter} mm
               </text>
               
               {/* Pressure labels */}
               <text x="45" y="55" fill="#38bdf8" fontSize="9.5" fontWeight="bold">
-                高静压端
+                High static pressure end
               </text>
               <text x="355" y="55" fill={isLossSevere ? '#ef4444' : '#22c55e'} fontSize="9.5" fontWeight="bold" textAnchor="end">
-                {isLossSevere ? '高摩擦阻力损失端' : '流阻正常端'}
+                {isLossSevere ? 'High Friction Loss' : 'Normal Flow Resistance'}
               </text>
             </svg>
           </div>
@@ -357,14 +357,14 @@ Generated via CADGuide.tools`;
           <div className="text-[10px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Droplets className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>流动物理提示: </strong>流速动画通过管道内流线的移动展示流体的动能变化. 管道材质的 C 因子决定管道阻力系数; 当管内表面生锈或结垢 (如 C 从 150 下滑到 80) , 管壁边界阻力大幅提升, 同流量下的单位摩擦水头损失会以指数倍上涨. 
+              <strong>Flow Physics Tip: </strong>Flow velocity animation shows the change in kinetic energy of the fluid through the movement of streamlines in the pipe.. The C factor of the pipe material determines the pipe resistance coefficient; When the inner surface of the pipe is rusted or scaled (e.g. C sliding from 150 to 80) , The boundary resistance of the pipe wall increases significantly, and the unit friction head loss under the same flow rate will increase exponentially.. 
             </span>
           </div>
         </div>
       </div>
 
       <div className="lg:col-span-12 mt-4 print:hidden">
-        <NewsletterSubscribe />
+        <RelatedTools />
       </div>
     </div>
 );

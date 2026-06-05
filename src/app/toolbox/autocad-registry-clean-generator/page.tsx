@@ -36,7 +36,7 @@ export default function RegistryCleanPage() {
               AutoCAD Clean <span className="text-blue-400">Registry Reset</span> Generator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              可视化配置并生成安全的 Windows 批处理 (.bat) 脚本. 一键备份并清理残留的 AutoCAD 注册表项, 激活缓存及用户临时文件. 
+              Visually configure and generate secure Windows batches (.bat) Script. One-click backup and clean up residual AutoCAD Registry keys, activation cache and user temporary files. 
             </p>
           </div>
         </section>

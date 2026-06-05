@@ -36,7 +36,7 @@ export default function FatalErrorWizardPage() {
               AutoCAD <span className="text-blue-400">Fatal Error</span> Diagnostic Wizard
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              根据崩溃内存地址 (如 e06d7363h, Access Violation) 一键反查故障病因. 提供显卡加速, C++ 依赖和注册表冲突全套解决方案. 
+              Based on the crash memory address (e.g. e06d7363h, Access Violation) Check the cause of the fault with one click. Provide graphics card acceleration, C++ A complete solution to dependency and registry conflicts. 
             </p>
           </div>
         </section>

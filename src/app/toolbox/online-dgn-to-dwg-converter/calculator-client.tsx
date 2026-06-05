@@ -4,109 +4,109 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "Bentley MicroStation (官方桌面内核另存为)",
+    "name": "Bentley MicroStation (Official desktop kernel saved as)",
     "rating": 9.9,
     "metrics": [
       {
-        "name": "单元库还原",
+        "name": "Cell Library Restore",
         "score": 5
       },
       {
-        "name": "层级映射度",
+        "name": "Level mapping degree",
         "score": 5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       }
     ],
     "pros": [
-      "Bentley 官方原生几何重组",
-      "支持挂载 CSV 批量对照表"
+      "Bentley Official native geometry reorganization",
+      "Supports mounting CSV batch comparison table"
     ],
     "cons": [
-      "商业版授权极为昂贵"
+      "Commercial version licensing is extremely expensive"
     ],
     "officialUrl": "https://www.bentley.com/",
-    "verdict": "毋庸置疑的最高精度转换方案. 利用其内置转换向导能精确定义 DGN levels 到 DWG layers 的逻辑. "
+    "verdict": "Undoubtedly the most accurate conversion solution. Use its built-in conversion wizard to precisely define DGN levels Logic to DWG layers. "
   },
   {
-    "name": "ODA File Converter (官方数据联盟转换器)",
+    "name": "ODA File Converter (Official Data Alliance Converter)",
     "rating": 9.7,
     "metrics": [
       {
-        "name": "单元库还原",
+        "name": "Cell Library Restore",
         "score": 4.5
       },
       {
-        "name": "层级映射度",
+        "name": "Level mapping degree",
         "score": 4.5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       }
     ],
     "pros": [
-      "免费无需商业授权",
-      "提供底层 C++ SDK 级别的算法"
+      "Free without commercial license",
+      "Provides underlying C++ SDK-level algorithms"
     ],
     "cons": [
-      "没有可视化 GUI 图元参数微调"
+      "No visual GUI primitive parameter fine-tuning"
     ],
     "officialUrl": "https://www.opendesign.com/",
-    "verdict": "开放设计联盟 (ODA) 维护的专业底层格式转换器, 对 DGN V7/V8 和 DWG 各版本的映射机制非常完美. "
+    "verdict": "Professional low-level format converter maintained by the Open Design Alliance (ODA), For DGN V7/V8 and DWG The mapping mechanism between versions is perfect. "
   },
   {
     "name": "Any DGN to DWG Converter",
     "rating": 9.2,
     "metrics": [
       {
-        "name": "单元库还原",
+        "name": "Cell Library Restore",
         "score": 4
       },
       {
-        "name": "层级映射度",
+        "name": "Level mapping degree",
         "score": 4
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       }
     ],
     "pros": [
-      "绿色轻量级批量导出",
-      "运行速度极快"
+      "Green lightweight batch export",
+      "Runs extremely fast"
     ],
     "cons": [
-      "对 Bentley 专属线型的拟合需要手动配置"
+      "Fitting Bentley-specific line styles requires manual configuration"
     ],
     "officialUrl": "https://anydwg.com/",
-    "verdict": "专业的第三方转换小工具, 运行独立, 适合日常跨软件协作时的快速交付. "
+    "verdict": "Professional third-party conversion gadget, runs independently, Suitable for rapid delivery during daily cross-software collaboration. "
   }
 ];
 const BEST_PRACTICES = [
   {
-    "title": "挂载 Remap CSV 映射文件",
-    "desc": "在 MicroStation 导出时, 配置 .csv 控制表, 将 Levels, Colors, LineWeights 一一指定为对应的 CAD 图层和标准索引颜色 (ACI) . "
+    "title": "Mount the Remap CSV mapping file",
+    "desc": "When exporting from MicroStation, Configure .csv control table, Specify Levels, Colors, LineWeights one by one as the corresponding CAD Layers and Standard Color Index (ACI)."
   },
   {
-    "title": "处理共享单元 (Shared Cells)",
-    "desc": "在导出选项中, 将'共享单元'展开为普通'块 (Blocks)', 防止在 AutoCAD 中图纸被破坏为零星图元. "
+    "title": "Handling Shared Cells",
+    "desc": "In the export options, change'Shared unit' expands to normal'Blocks', prevents the AutoCAD The drawing was destroyed into sporadic primitives. "
   },
   {
-    "title": "统一使用真彩色 (True Color)",
-    "desc": "避免使用 Bentley 专用的颜色表, 在转换前将元素色值切换为通用的 RGB 真彩色, 防止导入 CAD 后全部发黑. "
+    "title": "Uniformly use True Color",
+    "desc": "Avoid using Bentley-specific color tables, Switch element color values to generic RGB true color before conversion, Prevent everything from turning black after importing CAD. "
   }
 ];
 const FAQS = [
   {
-    "question": "转换出的图元显示'OLE 容器错误'是什么原因? ",
-    "answer": "这代表您的 DGN 图纸中内嵌了外部的 Excel 数据表或非矢量图. CAD 对此接口不兼容, 建议导出前在 Bentley 里将其截图固化为普通像素图层. "
+    "question": "Converted primitives show 'OLE container error'What is the reason? ",
+    "answer": "This means that your DGN drawing has external Excel Datasheet or non-vector drawing. CAD is not compatible with this interface, It is recommended to solidify the screenshot into a normal pixel layer in Bentley before exporting.. "
   },
   {
-    "question": "DGN 的 V7 和 V8 格式对转换有影响吗? ",
-    "answer": "有. V7 是历史旧版本, 有文件大小及图层数量上限限制; V8 是 2001 年后通用的 64 位三维数据库格式. 转换前需确认目标 DWG 平台是否能识别对应 ODA 驱动. "
+    "question": "DGN The V7 and V8 Does the format affect conversion? ",
+    "answer": "Yes. V7 is an old historical version, There are upper limits on file size and number of layers; V8 is 2001 A common 64-bit three-dimensional database format in the future. Before conversion, you need to confirm whether the target DWG platform can recognize the corresponding ODA Drive."
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineDgnToDwgConverterClient() {
   return (
     <CloudReferralClient
       title="Online Bentley DGN to AutoCAD DWG Layer Converter"
-      subtitle="客观深度评测与防审计直达导航. "
+      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="Bentley MicroStation DGN 图纸在向 AutoCAD DWG 图纸转换时, 由于两个平台底座原理完全不同, 通常会导致 MicroStation 的'层级 (Levels) '无法对齐到 CAD'图层 (Layers) ', 专有的单元库 (Cells) 退化为破碎线段, 以及 Bentley 标志性的手写连续线型样式崩塌. "
-      riskWarning="DGN 格式一般用于国家大型桥梁, 轨道交通及市政网管等基础设施设计, 涉及极为严格的物理安全和项目敏感性. 请优先使用 MicroStation 本地内置的'另存为 DWG'功能进行高精度匹配, 并挂载正规图层对照表 (CSV) , 避免使用公共转换网站进行大批量转换. "
+      painPointDesc="Bentley MicroStation DGN When converting drawings to AutoCAD DWG drawings, Since the base principles of the two platforms are completely different, this usually results in MicroStation 's level (Levels) 'Unable to snap to CAD' layer (Layers) ', Proprietary cell libraries (Cells) degenerate into broken line segments, and the collapse of Bentley’s signature handwritten continuous line style. "
+      riskWarning="DGN The format is generally used in infrastructure design such as national large bridges, rail transit and municipal network management., Involves extremely strict physical security and project sensitivity. Please give priority to use MicroStation Local built-in 'Save as DWG'Function to perform high-precision matching and mount a regular layer comparison table (CSV) , Avoid using public conversion websites for high-volume conversions. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

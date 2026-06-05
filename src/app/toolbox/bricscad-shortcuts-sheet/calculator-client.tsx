@@ -5,15 +5,15 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "quad",
-    "name": "🌀 Quad 智能光标"
+    "name": "🌀 Quad Smart Cursor"
   },
   {
     "id": "draw",
-    "name": "✏️ 绘图命令"
+    "name": "✏️ Drawing commands"
   },
   {
     "id": "modify",
-    "name": "🛠️ 修改与编辑"
+    "name": "🛠️ Modify and edit"
   }
 ];
 const SHORTCUTS = [
@@ -21,67 +21,67 @@ const SHORTCUTS = [
     "keys": "Ctrl",
     "command": "Toggle Quad Display",
     "category": "quad",
-    "description": "BricsCAD 核心特色, 显示或隐藏悬浮智能工具盘. "
+    "description": "BricsCAD Core feature, show or hide floating smart tool tray. "
   },
   {
     "keys": "L",
     "command": "LINE",
     "category": "draw",
-    "description": "绘制直线段. "
+    "description": "Draw a straight line segment."
   },
   {
     "keys": "C",
     "command": "CIRCLE",
     "category": "draw",
-    "description": "绘制指定心圆. "
+    "description": "Draw the specified center circle. "
   },
   {
     "keys": "PL",
     "command": "PLINE",
     "category": "draw",
-    "description": "绘制平面多段线. "
+    "description": "Draws a planar polyline. "
   },
   {
     "keys": "REC",
     "command": "RECTANGLE",
     "category": "draw",
-    "description": "绘制矩形闭合曲线. "
+    "description": "Draw a rectangular closed curve. "
   },
   {
     "keys": "M",
     "command": "MOVE",
     "category": "modify",
-    "description": "移动选定的图元实体. "
+    "description": "Move selected primitive entities."
   },
   {
     "keys": "CO",
     "command": "COPY",
     "category": "modify",
-    "description": "克隆复制图形. "
+    "description": "Clone the graphic. "
   },
   {
     "keys": "RO",
     "command": "ROTATE",
     "category": "modify",
-    "description": "旋转物体对齐. "
+    "description": "Alignment of rotating objects. "
   },
   {
     "keys": "TR",
     "command": "TRIM",
     "category": "modify",
-    "description": "修剪相交几何线条. "
+    "description": "Trim intersecting geometric lines. "
   },
   {
     "keys": "X",
     "command": "EXPLODE",
     "category": "modify",
-    "description": "打散块或复合折线为单条几何线. "
+    "description": "Break up the block or compound polyline into a single geometric line. "
   }
 ];
 const TIPS = [
   {
-    "title": "使用 Quad 智能轮盘提效 2 倍",
-    "content": "BricsCAD 特有的 Quad 智能浮动工具盘, 会根据您当前光标所悬停的图元类型, 自动计算并推荐最可能需要的 5 个工具 (如修剪, 倒角, 图层属性) , 彻底减少把手移向顶部菜单的次数. "
+    "title": "Improve performance with Quad Smart Roulette 2 times",
+    "content": "BricsCAD Unique Quad smart floating tool tray, It will automatically calculate and recommend the most likely needed elements based on the type of primitive your cursor is currently hovering over. 5 tools (such as pruning, chamfer, layer properties) , Drastically reduce the number of times you move your hands to the top menu. "
   }
 ];
 
@@ -89,7 +89,7 @@ export default function HexagonBricsCADClient() {
   return (
     <ShortcutCheatsheetClient
       title="Hexagon BricsCAD"
-      subtitle="高性能专业 2D/3D CAD. 收录 BricsCAD 智能 Quad 快捷工具盘命令, 多段线和三维轴侧速查. "
+      subtitle="High-performance professional 2D/3D CAD. Included BricsCAD Smart Quad shortcut tool tray commands, Polyline and 3D axis side quick check. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

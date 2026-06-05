@@ -4,109 +4,109 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "AutoCAD DWG Compare (官方本地内置命令)",
+    "name": "AutoCAD DWG Compare (Official local built-in command)",
     "rating": 9.9,
     "metrics": [
       {
-        "name": "比对精确度",
+        "name": "Comparison accuracy",
         "score": 5
       },
       {
-        "name": "红绿高亮保真",
+        "name": "Red and green highlighting fidelity",
         "score": 5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       }
     ],
     "pros": [
-      "本地运行无需连网",
-      "支持把比对差异另存为新图"
+      "No need to connect to the Internet to run locally",
+      "Supports saving comparison differences as new images"
     ],
     "cons": [
-      "需要安装 CAD 本地客户端"
+      "Requires installation of CAD local client"
     ],
     "officialUrl": "https://www.autodesk.com/",
-    "verdict": "官方底层的图形比较功能, 算法最强, 不仅能识别几毫米的线条移动, 还能识别块属性的改动. "
+    "verdict": "The official bottom-level graphics comparison function has the strongest algorithm, Not only can it identify line movements of a few millimeters, but also changes in block attributes.. "
   },
   {
     "name": "Autodesk Viewer Compare Services",
     "rating": 9.6,
     "metrics": [
       {
-        "name": "比对精确度",
+        "name": "Comparison accuracy",
         "score": 4.5
       },
       {
-        "name": "红绿高亮保真",
+        "name": "Red and green highlighting fidelity",
         "score": 4.5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       }
     ],
     "pros": [
-      "网页端即可运行",
-      "支持布局空间比较"
+      "It can be run on the web page",
+      "Support layout space comparison"
     ],
     "cons": [
-      "需要注册账号登录"
+      "Need to register an account to log in"
     ],
     "officialUrl": "https://viewer.autodesk.com/",
-    "verdict": "欧特克云端看图器提供的免费比对扩展, 能够极好地把两个版次的图纸重叠并调整透明度进行校验. "
+    "verdict": "The free comparison extension provided by Autodesk Cloud Viewer can effectively overlap two versions of drawings and adjust the transparency for verification.. "
   },
   {
     "name": "DraftSight Compare Drawings Utility",
     "rating": 9.2,
     "metrics": [
       {
-        "name": "比对精确度",
+        "name": "Comparison accuracy",
         "score": 4
       },
       {
-        "name": "红绿高亮保真",
+        "name": "Red and green highlighting fidelity",
         "score": 4
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       }
     ],
     "pros": [
-      "轻量级独立桌面级比对",
-      "对平替软件用户最友好"
+      "Lightweight stand-alone desktop level comparison",
+      "Most friendly to replacement software users"
     ],
     "cons": [
-      "对嵌套块 (Nested Blocks) 的深层更改识别有限"
+      "Limited deep change recognition for Nested Blocks"
     ],
     "officialUrl": "https://www.draftsight.com/",
-    "verdict": "性能优秀的本地图纸版本比对套件, 对大文件运行依然有良好支持. "
+    "verdict": "A local map version comparison suite with excellent performance and still has good support for large files.. "
   }
 ];
 const BEST_PRACTICES = [
   {
-    "title": "对齐原点与基准点",
-    "desc": "比对前, 必须确保两个版次图纸的模型空间原点 (0,0,0) 完全对齐. 如果原点发生偏差, 比对结果会误报全图图元都在移动. "
+    "title": "Align origin and reference point",
+    "desc": "Before comparison, the origin of the model space of the two versions of the drawings must be ensured. (0,0,0) Perfectly aligned. If the origin is offset, The comparison result will falsely report that all the elements in the image are moving. "
   },
   {
-    "title": "本地炸开嵌套引用",
-    "desc": "对于复杂的图纸, 比对前可以先执行 EXPLODE (炸开) 那些自定义块和嵌套的外部参照 (Xrefs) , 以防比对算法将它们直接算作单一删除动作. "
+    "title": "Explode nested references locally",
+    "desc": "For complex drawings, you can perform the comparison first EXPLODE (explode) those custom blocks and nested xrefs (Xrefs) , To prevent the comparison algorithm from counting them directly as a single deletion action. "
   },
   {
-    "title": "脱网单机校验保障",
-    "desc": "敏感的招标图纸应在没有网络访问的专机上进行 AutoCAD 本地图纸比对. "
+    "title": "Off-grid stand-alone verification guarantee",
+    "desc": "Sensitive bidding drawings should be compared with AutoCAD local drawings on a dedicated machine without network access. "
   }
 ];
 const FAQS = [
   {
-    "question": "比对结果里的红, 绿, 灰三种颜色都代表什么? ",
-    "answer": "根据官方通用规范: 绿色代表仅在当前新版图纸中存在的图元 (新增) ; 红色代表仅在旧版图纸中存在 (已被删除) ; 灰色代表两个版次完全一致没有改动的图元. "
+    "question": "Red and green in comparison results, What do the three colors of gray represent? ",
+    "answer": "According to the official general specification: green represents elements that only exist in the current new version of the drawing (Newly added); red means only exists in old version of drawings (has been deleted); gray indicates that the two versions are completely identical and have not been changed.. "
   },
   {
-    "question": "比对能识别到表格里的文字文字改动吗? ",
-    "answer": "可以. 只要是以 MTEXT (多行文字) 或 DTEXT (单行文字) 存储的实体, 位置或内容发生哪怕一个标点符号的修改, 都会被高亮圈出来. "
+    "question": "Can the comparison recognize text changes in the table? ",
+    "answer": "Yes. As long as it is based on MTEXT (multiline text) or DTEXT (single line of text) stored entity, If even a single punctuation mark is modified in the position or content, it will be highlighted.. "
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineDwgCompareDiffViewerClient() {
   return (
     <CloudReferralClient
       title="Cloud DWG Revision Difference & Compare Visualizer"
-      subtitle="客观深度评测与防审计直达导航. "
+      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="在处理大型建筑或机电工程的多次版次变更时, 找出两版 DWG 图纸的微小物理变化是一大难题. 单纯靠人工校对极易遗漏. 利用云端 DWG Revision Compare 差异比对程序, 可以实现高精度的叠图比对, 自动使用红, 绿两色高亮标注新图纸的增, 删和修改实体. "
-      riskWarning="改动图纸往往代表着工程的核心变更和商业预算底牌. 将两版 DWG 集中上传到不知名看图对比网站非常危险. 如果条件允许, 请优先在本地运行 AutoCAD 的 COMPARE (图形比较) 命令, 严禁使用非受信公共云服务以防商业机密泄露. "
+      painPointDesc="When dealing with multiple revision changes for large construction or electrical and mechanical projects, find two revisions DWG Small physical changes in drawings are a big problem. It is easy to miss them simply by manual proofreading.. Using the cloud-based DWG Revision Compare diff program, It can achieve high-precision overlay comparison and automatically use red, Green highlights add, delete and modify entities in new drawings. "
+      riskWarning="Changes to drawings often represent core changes to the project and business budget cards. Combine the two versions DWG It is very dangerous to centrally upload to unknown picture comparison websites. If conditions permit, Please run AutoCAD locally first COMPARE (graph compare) command, It is strictly prohibited to use untrusted public cloud services to prevent the leakage of business secrets. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

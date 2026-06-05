@@ -5,105 +5,105 @@ import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
 const CATEGORIES = [
   {
     "id": "tools",
-    "name": "✏️ 绘图工具"
+    "name": "✏️ drawing tools"
   },
   {
     "id": "camera",
-    "name": "🎥 相机与视图"
+    "name": "🎥 Camera and view"
   },
   {
     "id": "system",
-    "name": "💻 组与系统"
+    "name": "💻 Groups and Systems"
   }
 ];
 const SHORTCUTS = [
   {
     "keys": "Space",
-    "command": "Select (选择)",
+    "command": "Select (Select)",
     "category": "tools",
-    "description": "激活普通指针框选工具, 退出其它编辑指令. "
+    "description": "Activate the normal pointer selection tool and exit other editing commands. "
   },
   {
     "keys": "L",
-    "command": "Line (直线)",
+    "command": "Line (straight line)",
     "category": "tools",
-    "description": "在坐标平面内绘制一段直线. "
+    "description": "Draw a straight line in the coordinate plane. "
   },
   {
     "keys": "C",
-    "command": "Circle (圆)",
+    "command": "Circle (circle)",
     "category": "tools",
-    "description": "绘制正多边形逼近的圆形. "
+    "description": "Draw a circle approximated by a regular polygon. "
   },
   {
     "keys": "R",
-    "command": "Rectangle (矩形)",
+    "command": "Rectangle (rectangle)",
     "category": "tools",
-    "description": "通过对角线两点绘制矩形. "
+    "description": "Draw a rectangle through two diagonal points. "
   },
   {
     "keys": "P",
-    "command": "Push/Pull (推拉)",
+    "command": "Push/Pull (Push and pull)",
     "category": "tools",
-    "description": "草图大师精髓, 将二维面拉伸为三维实体. "
+    "description": "The essence of Sketch Master, extruding a two-dimensional surface into a three-dimensional solid. "
   },
   {
     "keys": "M",
-    "command": "Move (移动)",
+    "command": "Move (move)",
     "category": "tools",
-    "description": "移动所选几何体, 配合 Ctrl 键可激活阵列复制. "
+    "description": "Move selected geometry to match Ctrl key to activate array copying. "
   },
   {
     "keys": "Q",
-    "command": "Rotate (旋转)",
+    "command": "Rotate (Rotate)",
     "category": "tools",
-    "description": "旋转选定的平面或实体. "
+    "description": "Rotate the selected plane or solid. "
   },
   {
     "keys": "S",
-    "command": "Scale (缩放)",
+    "command": "Scale (Zoom)",
     "category": "tools",
-    "description": "对选定几何体进行拉伸缩放. "
+    "description": "Stretch and scale selected geometry. "
   },
   {
     "keys": "O",
-    "command": "Orbit (环绕)",
+    "command": "Orbit (Surround)",
     "category": "camera",
-    "description": "三维环绕旋转视口, 按住鼠标中键同样可触发. "
+    "description": "Three-dimensional rotation of the viewport can also be triggered by holding down the middle mouse button.. "
   },
   {
     "keys": "H",
-    "command": "Pan (手掌平移)",
+    "command": "Pan (Palm translation)",
     "category": "camera",
-    "description": "水平平移视口视图. "
+    "description": "Pans the viewport view horizontally. "
   },
   {
     "keys": "Z",
-    "command": "Zoom (缩放)",
+    "command": "Zoom (Zoom)",
     "category": "camera",
-    "description": "实时前后拖动鼠标缩放视口焦距. "
+    "description": "Drag the mouse back and forth in real time to zoom the viewport focus. "
   },
   {
     "keys": "G",
-    "command": "Make Component (建组件)",
+    "command": "Make Component (Build component)",
     "category": "system",
-    "description": "将选中的几何体归纳为可以关联克隆的'组件'. "
+    "description": "Group selected geometry into 'components' that can be associatively cloned'. "
   },
   {
     "keys": "Ctrl + G",
-    "command": "Make Group (建群组)",
+    "command": "Make Group (Create a group)",
     "category": "system",
-    "description": "将选中的独立线面打组, 防止相互粘连变形. "
+    "description": "Group selected independent lines and surfaces to prevent mutual adhesion and deformation. "
   }
 ];
 const TIPS = [
   {
-    "title": "按住 Ctrl 拖动进行阵列复制",
-    "content": "在使用'移动 (M)'工具时, 按一下键盘 `Ctrl` 键, 鼠标旁会多出一个加号. 此时拖动构件即可复制. 输入 `*5` 或 `/5` 并回车, 能实现等距克隆 5 个物体或在区间内等距平分. "
+    "title": "Ctrl-drag to copy array",
+    "content": "Using 'Mobile' (M)'tool, press the keyboard `Ctrl` key, there will be an extra plus sign next to the mouse. At this point, drag the component to copy it. Enter `*5` or `/5` and press enter, Ability to clone 5 objects equidistantly or divide them equidistantly within an interval. "
   },
   {
-    "title": "三维轴向锁定技巧",
-    "content": "在绘制线段或移动物体时, 按键盘的 `↑` (锁定蓝轴) , `←` (锁定绿轴) , `→` (锁定红轴) , 可强制在三维空间中绝对正交移动, 绝对不会飘线. "
+    "title": "Three-dimensional axial locking techniques",
+    "content": "When drawing a line segment or moving an object, press `↑` (Lock the blue axis), `←` (Lock the green axis) , `→` (Lock the red axis), which can force absolutely orthogonal movement in three-dimensional space, It will definitely not drift. "
   }
 ];
 
@@ -111,7 +111,7 @@ export default function SketchUpProClient() {
   return (
     <ShortcutCheatsheetClient
       title="SketchUp Pro"
-      subtitle="草图大师极速方案. 包含 SketchUp 常用绘图笔刷, 群组设置与相机环绕快捷键, 支持在线过滤及 A4 Landscape 打印. "
+      subtitle="Sketch Master Quick Solution. Contains SketchUp Commonly used drawing brushes, group settings and camera surround shortcut keys, Supports online filtering and A4 Landscape printing. "
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}

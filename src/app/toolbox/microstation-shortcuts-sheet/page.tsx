@@ -32,10 +32,10 @@ export default function BentleyMicroStationPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Bentley MicroStation <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Bentley MicroStation <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              基建与路桥设计速查指南. 提供 MicroStation 常用键盘 Key-in 指令, AccuDraw 轴锁定快捷键及视口管理, 支持 A4 打印. 
+              A quick guide to infrastructure and road and bridge design. Provided MicroStation Commonly used keyboard Key-in commands, AccuDraw Axis lock shortcut keys and viewport management, supported A4 Print. 
             </p>
           </div>
         </section>

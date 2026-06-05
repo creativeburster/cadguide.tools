@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import {
   HelpCircle,
   Info,
@@ -21,21 +21,21 @@ import {
 const SYMPTOMS = [
   {
     id: 'question_mark',
-    name: '中文字符全部显示为问号 (?)',
-    desc: '最常见于打开外部图纸, 中文字体 (尤其是大字体 SHX) 在本地电脑上缺失. ',
-    badge: 'SHX 缺失'
+    name: 'All Chinese characters are displayed as question marks (?)',
+    desc: 'Most commonly used when opening external drawings, Chinese fonts (Especially large fonts SHX) are missing on the local computer. ',
+    badge: 'SHX missing'
   },
   {
     id: 'scrambled_gibberish',
-    name: '文字变成毫无逻辑的奇怪乱码',
-    desc: '打印生成的 PDF 打开后, 文字变为 scrambled 乱字符, 且无法正常复制. ',
-    badge: '编码/PDFSHX 变量冲突'
+    name: 'The text becomes a strange gibberish with no logic',
+    desc: 'After printing the generated PDF, open it, The text becomes scrambled., And cannot be copied normally. ',
+    badge: 'Encoding/PDFSHX variable conflict'
   },
   {
     id: 'outline_geometry',
-    name: '文字显示正常, 但变成空心线且文件极大',
-    desc: '中文字体显示没有问题, 但放大后发现文字变成了折线, 无法选中, 导致打印极其卡顿. ',
-    badge: '字体未嵌入/转换为几何图形'
+    name: 'The text displays normally, but becomes hollow lines and the file is very large',
+    desc: 'There is no problem with displaying Chinese fonts, but after zooming in, I found that the text turned into polylines., Unable to select, resulting in extremely stuck printing. ',
+    badge: 'Fonts not embedded/converted to geometry'
   }
 ];
 
@@ -55,24 +55,24 @@ export default function PdfFontGibberishClient() {
     let commands = '';
     if (symptomId === 'question_mark') {
       commands = `(setvar "FONTALT" "${fontAltVal}")
-(princ "\\n✓ 成功设置缺省替换字体为 ${fontAltVal}, 重新打开图纸即可消除中文 (?). \\n")`;
+(princ "\\n✓ The default replacement font is successfully set to ${fontAltVal}, and the Chinese characters can be eliminated by reopening the drawing. (?). \\n")`;
     } else if (symptomId === 'scrambled_gibberish') {
       commands = `(setvar "PDFSHX" 0)
-(princ "\\n✓ 成功设置 PDFSHX 为 0. 现在打印 PDF 时, SHX 文字将不会作为文本注释输出, 杜绝乱码. \\n")`;
+(princ "\\n✓ Successfully set PDFSHX to 0. Now when printing PDF, SHX The text will not be output as text comments, eliminating garbled characters.. \\n")`;
     } else {
       commands = `(setvar "PDFSHX" 0)
 (setvar "TEXTFILL" 1)
-(princ "\\n✓ 成功设置 TEXTFILL 为 1 且 PDFSHX 为 0. 请在打印机 .pc3 设置中将 [TrueType 字体] 选项修改为 [嵌入 TrueType] 即可解决空心字. \\n")`;
+(princ "\\n✓ Successfully set TEXTFILL to 1 and PDFSHX is 0. Please change the [TrueType Font] option is modified to [Embed TrueType] to solve the problem of hollow words. \\n")`;
     }
 
-    return `; CADGuide.tools PDF 乱码修复指令一键加载
+    return `; CADGuide.tools PDF One-click loading of garbled code repair instructions
 (defun c:FIXPDFFONT ()
   (setvar "CMDECHO" 0)
   ${commands}
   (setvar "CMDECHO" 1)
   (princ)
 )
-(princ "\\n输入 FIXPDFFONT 并回车以执行修复...\\n") (princ)`;
+(princ "\\nType FIXPDFFONT and press Enter to perform the repair...\\n") (princ)`;
   }, [symptomId, fontAltVal]);
 
   // Diagram States based on selection
@@ -103,21 +103,21 @@ export default function PdfFontGibberishClient() {
 
   return (
     <div className="flex flex-col gap-8">
-      {/* 顶部 SVG 模拟打印流程管道 */}
+      {/* Top SVG simulates printing process pipeline */}
       <div className="bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/50 to-transparent pointer-events-none"></div>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 z-10 relative">
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></span>
-              <h2 className="text-white font-black text-lg tracking-tight">PDF 出图与字体嵌入链路检测</h2>
+              <h2 className="text-white font-black text-lg tracking-tight">PDF Picture rendering and font embedding link detection</h2>
             </div>
             <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
               PDF Plotting & Font Integration Pipeline
             </p>
           </div>
           <div className="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-black">
-            交互诊断状态
+            interactive diagnostic status
           </div>
         </div>
 
@@ -157,7 +157,7 @@ export default function PdfFontGibberishClient() {
               <g transform="translate(-10, -10)">
                 <Layers className="w-5 h-5 text-blue-400" />
               </g>
-              <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="8" fontWeight="bold">DWG 图纸模型</text>
+              <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="8" fontWeight="bold">DWG Drawing model</text>
             </g>
 
             {/* Node 2: Font Library */}
@@ -167,7 +167,7 @@ export default function PdfFontGibberishClient() {
                 <FileText className={`w-5 h-5 ${diagramStates.search === 'danger' ? 'text-red-400' : 'text-emerald-400'}`} />
               </g>
               <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="8" fontWeight="bold">
-                {diagramStates.search === 'danger' ? 'SHX 字体丢失!' : '字体库映射'}
+                {diagramStates.search === 'danger' ? 'SHX Font missing!' : 'Font library mapping'}
               </text>
             </g>
 
@@ -178,7 +178,7 @@ export default function PdfFontGibberishClient() {
                 <Settings className={`w-5 h-5 ${diagramStates.pc3 === 'danger' ? 'text-red-400' : diagramStates.pc3 === 'warning' ? 'text-amber-400' : 'text-slate-400'}`} />
               </g>
               <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="8" fontWeight="bold">
-                {diagramStates.pc3 === 'danger' ? 'PDFSHX 格式冲突' : diagramStates.pc3 === 'warning' ? '配置未嵌入' : 'PDF 驱动配置'}
+                {diagramStates.pc3 === 'danger' ? 'PDFSHX Format conflict': diagramStates.pc3 === 'warning' ? 'Configuration is not embedded' : 'PDF Driver configuration'}
               </text>
             </g>
 
@@ -189,22 +189,22 @@ export default function PdfFontGibberishClient() {
                 <Sparkles className={`w-5 h-5 ${diagramStates.pdf === 'danger' ? 'text-red-400' : diagramStates.pdf === 'warning' ? 'text-amber-400' : 'text-emerald-400'}`} />
               </g>
               <text y="32" textAnchor="middle" fill="#94a3b8" fontSize="8" fontWeight="bold">
-                {diagramStates.pdf === 'danger' ? '输出乱码 PDF' : diagramStates.pdf === 'warning' ? '输出空心线' : '高保真矢量PDF'}
+                {diagramStates.pdf === 'danger' ? 'Output garbled PDF': diagramStates.pdf === 'warning' ? 'Output hollow lines' : 'High fidelity vector PDF'}
               </text>
             </g>
           </svg>
         </div>
       </div>
 
-      {/* 主面板布局 */}
+      {/* Main panel layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* 左侧: 选择您的乱码现象 */}
+        {/* Left: Select your garbled characters */}
         <div className="lg:col-span-1 flex flex-col gap-4">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
             <h3 className="text-slate-800 font-black text-base tracking-tight mb-4 flex items-center gap-2">
               <Activity className="w-4 h-4 text-blue-500" />
-              请选择您的乱码现象
+              Please select your garbled code phenomenon
             </h3>
             <div className="flex flex-col gap-2">
               {SYMPTOMS.map((sym) => {
@@ -234,53 +234,53 @@ export default function PdfFontGibberishClient() {
             </div>
           </div>
 
-          {/* 可选附加参数配置 */}
+          {/* Optional additional parameter configuration */}
           {symptomId === 'question_mark' && (
             <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <Info className="w-4 h-4 text-slate-500" />
-                <h3 className="text-slate-800 font-black text-sm uppercase tracking-wider">缺省大字体配置</h3>
+                <h3 className="text-slate-800 font-black text-sm uppercase tracking-wider">Default large font configuration</h3>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="fontAlt" className="text-xs font-black text-slate-500 uppercase">替换大字体名字 (SHX)</label>
+                <label htmlFor="fontAlt" className="text-xs font-black text-slate-500 uppercase">Replace large font name (SHX)</label>
                 <input
                   id="fontAlt"
                   type="text"
                   value={fontAltVal}
                   onChange={(e) => setFontAltVal(e.target.value)}
-                  placeholder="默认: gbcbig.shx"
+                  placeholder="Default: gbcbig.shx"
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
                 />
                 <p className="text-[10px] text-slate-400 mt-1 leading-normal">
-                  AutoCAD 打开图纸时, 若找不到对应的大字体 (中文字体) , 会使用 `FONTALT` 变量指定的字体自动替换. 常用推荐 `gbcbig.shx` (国标大字体) 或 `hztxt.shx`. 
+                  AutoCAD When opening a drawing, if the corresponding large font cannot be found (Chinese font), will use `FONTALT` The font specified by the variable is automatically replaced. Commonly used recommendations `gbcbig.shx` (National standard large font) or `hztxt.shx`. 
                 </p>
               </div>
             </div>
 )}
         </div>
 
-        {/* 右侧二联: 修复建议与代码生成 */}
+        {/* Double couplet on the right: Repair suggestions and code generation */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex-1 flex flex-col justify-between min-h-[400px]">
             
-            {/* 诊断正文 */}
+            {/* Diagnosis text */}
             <div className="flex flex-col gap-5">
               <h3 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
                 <AlertTriangle className="w-5 h-5 text-amber-500" />
-                修复指引及原理诊断
+                Repair guide and principle diagnosis
               </h3>
               
               {/* Question Mark Fix */}
               {symptomId === 'question_mark' && (
                 <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-3">
-                  <p className="font-bold text-slate-800">故障成因 (为什么显示为问号) : </p>
-                  <p>中文字符在 CAD 中由大字体 (Big Font) 形式渲染. 当加载外部传入图纸时, 如果对方使用的特殊中文字体在您本地的 `Fonts` 文件夹内不存在 (或者未在全局注册替换) , CAD 引擎会将这些缺失字符渲染为 `?`. </p>
+                  <p className="font-bold text-slate-800">Cause of failure (Why is it displayed as a question mark?) : </p>
+                  <p>Chinese characters are represented by large fonts in CAD (Big Font) Form rendering. When loading external incoming drawings, If the special Chinese font used by the other party does not exist in your local `Fonts` folder (or the replacement is not registered globally), the CAD engine will render these missing characters as `?`. </p>
                   
-                  <p className="font-bold text-slate-800 mt-2">手动修复方案: </p>
+                  <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">
-                    <li>在 CAD 命令栏输入并回车执行 <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">FONTALT</span> 系统变量. </li>
-                    <li>将其输入修改为指定替换的大字体: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">{fontAltVal}</span>. </li>
-                    <li>保存当前图纸, 关闭 CAD 软件重新打开. 缺失的字体将自动映射为 {fontAltVal}, 解决乱码. </li>
+                    <li>Enter in the CAD command bar and press Enter to execute <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">FONTALT</span> System variables. </li>
+                    <li>Modify its input to specify the replacement large font: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">{fontAltVal}</span>. </li>
+                    <li>Save current drawing, close CAD The software reopens. Missing fonts will be automatically mapped to {fontAltVal}, Solve garbled characters. </li>
                   </ol>
                 </div>
 )}
@@ -288,14 +288,14 @@ export default function PdfFontGibberishClient() {
               {/* Scrambled Gibberish Fix */}
               {symptomId === 'scrambled_gibberish' && (
                 <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-3">
-                  <p className="font-bold text-slate-800">故障成因 (为什么变成乱字符) : </p>
-                  <p>在较新版本的 AutoCAD 中, 系统引进了 `PDFSHX` 变量 (默认值为 1) . 开启该变量后, 打印导出的 PDF 内部, 每一个 SHX 中文字体会同时以 PDF 注释的形式导出, 以便可以在 PDF 软件中搜索. 然而由于编码解析冲突, 这会导致很多 PDF 浏览器中呈现出杂乱的英文字符与大片乱码. </p>
+                  <p className="font-bold text-slate-800">Cause of failure (why the characters become garbled characters)) : </p>
+                  <p>In newer versions of AutoCAD, The system introduces the `PDFSHX` variable (The default value is 1). After turning on this variable, Print inside the exported PDF, Each SHX Chinese font will also be PDF Exported as comments so that they can be PDF Search in the software. However, due to encoding parsing conflicts, This will cause messy English characters and large garbled characters to appear in many PDF browsers.. </p>
                   
-                  <p className="font-bold text-slate-800 mt-2">手动修复方案: </p>
+                  <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">
-                    <li>在 CAD 命令栏中直接输入: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">PDFSHX</span> 并回车. </li>
-                    <li>将其属性修改置为: <span className="font-mono bg-blue-100 text-blue-800 px-1 rounded font-bold">0</span> (关闭生成 SHX 文字批注功能) . </li>
-                    <li>再次使用 `PLOT` 打印出图, 所有的多余注释字符乱码将全部消失. </li>
+                    <li>Enter directly into the CAD command bar: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">PDFSHX</span> and press Enter. </li>
+                    <li>Modify its properties to: <span className="font-mono bg-blue-100 text-blue-800 px-1 rounded font-bold">0</span> (turn off generation SHX Text annotation function). </li>
+                    <li>Use `PLOT` again to print out the plot, All extra garbled comment characters will disappear. </li>
                   </ol>
                 </div>
 )}
@@ -303,36 +303,36 @@ export default function PdfFontGibberishClient() {
               {/* Outline Geometry Fix */}
               {symptomId === 'outline_geometry' && (
                 <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-3">
-                  <p className="font-bold text-slate-800">故障成因 (为什么变成空心字且极卡) : </p>
-                  <p>当打印机驱动 (如 `DWG to PDF.pc3`) 未能识别当前图纸里的 TrueType 字体, 或者配置为将文字"转换为几何图形 (Geometries) "时, CAD 会把所有字体文字炸碎成多根碎线. 这不仅导致文件体积比正常文字大出数倍且放大后中空, 也使得移动和阅览极慢. </p>
+                  <p className="font-bold text-slate-800">Cause of failure (why it becomes hollow and extremely stuck) : </p>
+                  <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, Or configure it to convert "text" into geometry (Geometries) ", CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow.. </p>
                   
-                  <p className="font-bold text-slate-800 mt-2">手动修复方案: </p>
+                  <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">
-                    <li>在 CAD 输入系统变量: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">TEXTFILL</span> 并将其设为 <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">1</span> (启用文字填充) . </li>
-                    <li>键入 `PLOT` 打开打印面板, 在打印机名称选择 <span className="font-mono bg-slate-100 px-1 rounded font-bold">DWG to PDF.pc3</span>, 点击右侧的 <b>[特性 (Properties)]</b>. </li>
-                    <li>展开 <b>[设备和文档设置]</b> ➔ 选择 <b>[自定义特性]</b> ➔ 点击下方的 <b>[自定义特性]</b> 按钮. </li>
-                    <li>在字体选项卡中, 确保勾选了: <b>[捕获图形中使用的字体 (Capture fonts used in drawing)]</b>, 并且在 TrueType 字体选项中选择 <b>[TrueType 文本]</b> 而非 [TrueType 几何图形]. </li>
+                    <li>Enter system variables in CAD: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">TEXTFILL</span> and set it to <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">1</span> (enable text padding) . </li>
+                    <li>Type `PLOT` to open the print panel, Select <span className="font-mono bg-slate-100 px-1 rounded font-bold">DWG to PDF.pc3</span> in the printer name, click on the right <b>[Properties]</b>. </li>
+                    <li>Expand<b>[Device and Document Settings]</b> ➔ Select <b>[Custom Properties]</b> ➔ Click <b>[Custom Properties] below]</b> button. </li>
+                    <li>In the Fonts tab, make sure that: <b>[Capture fonts used in drawing]</b>, and in TrueType Select <b>[TrueType Text] in the font options]</b> instead of [TrueType Geometry]. </li>
                   </ol>
                 </div>
 )}
             </div>
 
-            {/* 一键 AutoLISP 脚本区域 */}
+            {/* One-click AutoLISP script area */}
             <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4 mt-6">
               <div className="flex justify-between items-center text-[10px] text-slate-500">
-                <span>AutoLISP 一键修复指令 (命令行粘贴即可)</span>
+                <span>AutoLISP One-click repair instructions (just paste from the command line)</span>
                 <button
                   onClick={() => handleCopy(lispFixCommand, 'lispFix')}
                   className="text-slate-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                 >
                   {copiedText === 'lispFix' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                  {copiedText === 'lispFix' ? '已复制' : '复制修复代码'}
+                  {copiedText === 'lispFix' ? 'Copied ' : 'Copy fix code'}
                 </button>
               </div>
               <pre className="overflow-x-auto text-emerald-400 select-all p-1 bg-slate-950/40 rounded-lg max-h-[120px] text-[10px]">
                 {lispFixCommand}
               </pre>
-              <p className="text-[10px] text-slate-400 italic">用法: 点击复制, 在 CAD 命令行中直接按 Ctrl+V 粘贴所有内容并回车. 即可静默加载该修复宏, 并在命令行直接调用命令进行一键批量修复. </p>
+              <p className="text-[10px] text-slate-400 italic">Usage: Click to copy, From the CAD command line just press Ctrl+V Paste all the content and press Enter. The repair macro will be loaded silently, And directly call the command on the command line to perform one-click batch repair. </p>
             </div>
 
           </div>
@@ -340,7 +340,7 @@ export default function PdfFontGibberishClient() {
 
       </div>
 
-      <NewsletterSubscribe />
+      <RelatedTools />
     </div>
 );
 }

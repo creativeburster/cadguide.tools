@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import { Info, Download, HelpCircle, Layers, Copy, Check, FileText } from 'lucide-react';
 
 interface AciColor {
@@ -548,14 +548,7 @@ export default function ColorMatchboxClient() {
       </div>
 
       {/* Lead Capture Newsletter banner */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the CAD Layer Standards & CTB Handbook"
-        description="Subscribe to receive our cheat sheet on plotting pen styles, standard color index layer mapping guidelines, and free premium plot style files."
-        buttonText="Get Plot Styles Cheat Sheet"
-        placeholder="Enter your work email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

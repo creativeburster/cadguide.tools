@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useRef } from 'react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 import { 
   FileText, Shield, AlertTriangle, CheckCircle, Search, 
   Download, Copy, Check, Layers, AlertCircle, RefreshCw, Info, Lock, Unlock, Eye, EyeOff, Printer
@@ -657,14 +657,7 @@ export default function DxfParserClient() {
       </div>
 
       {/* Lead Capture Newsletter */}
-      <NewsletterSubscribe
-        variant="banner"
-        title="Get the CAD Standards & Clean-up Toolkit"
-        description="Subscribe to receive professional AutoLISP clean-up scripts, purge commands sheet, and monthly guidelines on AutoCAD file compatibility diagnostics."
-        buttonText="Get Clean-up scripts"
-        placeholder="Enter your professional email"
-        className="mt-12"
-      />
+      <RelatedTools />
     </div>
   );
 }

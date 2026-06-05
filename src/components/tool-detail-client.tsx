@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ToolLogo } from "@/components/tool-logo";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
-import { NewsletterSubscribe } from "@/components/newsletter-subscribe";
+import { RelatedTools } from '@/components/related-tools';
 import {
   CheckCircle2,
   XCircle,
@@ -1339,7 +1339,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
 
               {/* Newsletter Subscription */}
-              <NewsletterSubscribe variant="sidebar" />
+              <RelatedTools />
 
               {/* Quick Comparison Battles Sidebar Card */}
               {toolComparisons.length > 0 && (

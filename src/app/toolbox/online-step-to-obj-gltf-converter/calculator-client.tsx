@@ -4,109 +4,109 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "CAD Exchanger (B-Rep 网格多边形编译器)",
+    "name": "CAD Exchanger (B-Rep Mesh Polygon Compiler)",
     "rating": 9.9,
     "metrics": [
       {
-        "name": "多边形化质量",
+        "name": "Polygonization quality",
         "score": 5
       },
       {
-        "name": "网格平滑度",
+        "name": "Grid Smoothness",
         "score": 5
       },
       {
-        "name": "贴图法线保真",
+        "name": "Texture normal fidelity",
         "score": 4.5
       }
     ],
     "pros": [
-      "完美处理大装配体缝合",
-      "生成高精度 glTF 格式"
+      "Perfect for sewing large assemblies",
+      "Generate high-precision glTF format"
     ],
     "cons": [
-      "商业桌面版费用较高"
+      "The commercial desktop version is more expensive"
     ],
     "officialUrl": "https://cadexchanger.com/",
-    "verdict": "业界公认三维几何格式解析力最强的底座程序之一, 其网格化拟合算法极度平滑, 法线无暇. "
+    "verdict": "It is recognized in the industry as one of the base programs with the strongest analytical power for three-dimensional geometric formats, and its grid fitting algorithm is extremely smooth., The normal line is flawless. "
   },
   {
-    "name": "CAD Assistant (官方免费离线转换程序)",
+    "name": "CAD Assistant (Official free offline conversion program)",
     "rating": 9.7,
     "metrics": [
       {
-        "name": "多边形化质量",
+        "name": "Polygonization quality",
         "score": 4.5
       },
       {
-        "name": "网格平滑度",
+        "name": "Grid Smoothness",
         "score": 4.5
       },
       {
-        "name": "贴图法线保真",
+        "name": "Texture normal fidelity",
         "score": 5
       }
     ],
     "pros": [
-      "OCCT 官方底层, 完全免费",
-      "支持拖拽秒开, 完全本地化"
+      "OCCT Official bottom layer, completely free",
+      "Supports drag and drop to open instantly, fully localized"
     ],
     "cons": [
-      "没有网页版, 需要手动下载"
+      "There is no web version, you need to download it manually"
     ],
     "officialUrl": "https://www.opencascade.com/",
-    "verdict": "基于 Open Cascade 核心的免费 3D 查阅和格式转换神器, 无网络上传风险, 安全性一流. "
+    "verdict": "Free based on Open Cascade core 3D Search and format conversion artifact, no risk of network upload, Security is top notch. "
   },
   {
     "name": "AnyConv STEP to OBJ",
     "rating": 9.1,
     "metrics": [
       {
-        "name": "多边形化质量",
+        "name": "Polygonization quality",
         "score": 4
       },
       {
-        "name": "网格平滑度",
+        "name": "Grid Smoothness",
         "score": 3.5
       },
       {
-        "name": "贴图法线保真",
+        "name": "Texture normal fidelity",
         "score": 4
       }
     ],
     "pros": [
-      "浏览器免注册一键转换",
-      "处理速度极快"
+      "Browser registration-free one-click conversion",
+      "Extremely fast processing speed"
     ],
     "cons": [
-      "对高度嵌套的装配体容易丢失组件树"
+      "It is easy to lose the component tree for highly nested assemblies"
     ],
     "officialUrl": "https://anyconv.com/",
-    "verdict": "便利的在线多格式转化平台, 适合设计师用来对单个非机密零件进行快速渲染格式转换. "
+    "verdict": "Convenient online multi-format conversion platform, suitable for designers to quickly convert rendering formats of single non-confidential parts. "
   }
 ];
 const BEST_PRACTICES = [
   {
-    "title": "精细调整弦高公差 (Chordal Deviation)",
-    "desc": "多边形化时, 弦高偏差限制决定了圆柱面的面片数. 通常设置 0.05-0.1mm 即可兼顾渲染平滑度和文件大小. "
+    "title": "Fine Tuning Chord Height Tolerance (Chordal Deviation)",
+    "desc": "When polygonizing, the chord height deviation limit determines the number of patches on the cylindrical surface.. Usually setting 0.05-0.1mm can balance rendering smoothness and file size.. "
   },
   {
-    "title": "优先选择压缩型 glTF (GLB) 格式",
-    "desc": "glTF 格式支持物理渲染材质 (PBR) 且体积远小于 OBJ, 是 WebWebGL 和 VR 开发的最佳首选. "
+    "title": "Prefer compressed glTF (GLB) format",
+    "desc": "glTF The format supports Physically Rendered Materials (PBR) and is much smaller than OBJ, is WebWebGL and VR The best choice for development. "
   },
   {
-    "title": "脱网单机 CAD Assistant 倒手",
-    "desc": "核心商业结构件的转换需彻底断开外网, 使用 CAD Assistant 纯本地转换. "
+    "title": "Off-network stand-alone CAD Assistant is discontinued",
+    "desc": "The conversion of core commercial structural components requires completely disconnecting the external network and using CAD Assistant Purely local conversion. "
   }
 ];
 const FAQS = [
   {
-    "question": "转换出来的 OBJ 在 Blender 里有很多破面接缝怎么处理? ",
-    "answer": "这多是由于原 STEP 导出时曲面片拓扑未完全缝合 (Sewing) . 建议在 Blender 中选中所有顶点, 执行'合并按距离 (Merge by Distance) '命令进行缝合. "
+    "question": "The converted OBJ is in Blender What to do if there are a lot of broken seams inside? ",
+    "answer": "This may be due to the fact that the surface patch topology was not completely stitched when the original STEP was exported. (Sewing) . It is recommended to select all vertices in Blender, Do 'merge by distance' (Merge by Distance) 'Command to stitch."
   },
   {
-    "question": "STEP 的 AP203 和 AP214 对网格化有何影响? ",
-    "answer": "AP203 不含颜色信息, 网格化后全图呈统一灰白; AP214 完整保留了部件颜色和结构层级, 推荐优先使用 AP214 进行转换. "
+    "question": "STEP The AP203 and AP214 What impact does meshing have? ",
+    "answer": "AP203 No color information is included. After gridding, the entire image appears uniformly gray and white.; AP214 Part colors and structural levels are completely retained, and it is recommended to use it first. AP214 Make the conversion."
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineStepToObjGltfConverterClient() {
   return (
     <CloudReferralClient
       title="Online STEP to glTF/OBJ Rendering Mesh Converter"
-      subtitle="客观深度评测与防审计直达导航. "
+      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="工业 STEP (AP203/AP214) 格式是基于高度数学逻辑的边界表示法 (B-Rep) 存储的, 其曲面在 WebGL 网页端 (如 Three.js, Babylon.js) 或三维渲染器 (如 Unity, Blender) 中无法直接直接解析渲染. 必须将其多边形化 (Polygonization) 为三角网格格式 (如 OBJ, glTF) . 在重组中, 面片接缝裂开以及网格密度过大卡死网页是常见痛点. "
-      riskWarning="工业级 STEP 三维模型涉及极其严密的产品机密设计与几何拓扑. 使用在线网站将 STEP 转换成渲染格式时, 极易被云端后台拦截并泄漏核心机密. 针对绝密部件, 请在本地使用 CAD Assistant 运行离线转换. "
+      painPointDesc="The Industrial STEP (AP203/AP214) format is a boundary representation based on highly mathematical logic (B-Rep) stored, whose surface is in WebGL Web version (such as Three.js, Babylon.js) or a 3D renderer such as Unity, Blender) cannot be parsed directly in rendering. It must be polygonized (Polygonization) in triangular mesh format (e.g. OBJ, glTF) . During reorganization, common pain points are cracking of patch seams and excessive mesh density causing stuck web pages.. "
+      riskWarning="Industrial-grade STEP 3D models involve extremely strict product confidentiality design and geometric topology. When converting STEP to rendering format using an online website, It is extremely easy to be intercepted by the cloud backend and leak core secrets. Targeting top secret components, Please use CAD Assistant locally to run the offline conversion. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

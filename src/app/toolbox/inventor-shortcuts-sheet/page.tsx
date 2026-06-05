@@ -32,10 +32,10 @@ export default function AutodeskInventorPage() {
               Keyboard Shortcuts Cheatsheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Autodesk Inventor <span className="text-blue-400">键盘快捷键与命令</span> 速查表
+              Autodesk Inventor <span className="text-blue-400">Keyboard Shortcuts and Commands</span> Cheat Sheet
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              三维机械装配建模速查. 整理 Inventor 草图约束, 零件特征与大型装配体约束快捷键, 支持搜索和 A4 打印. 
+              Quick review of 3D mechanical assembly modeling. Organized Inventor Shortcut keys for sketch constraints, part features, and large assembly constraints, Supports search and A4 printing. 
             </p>
           </div>
         </section>

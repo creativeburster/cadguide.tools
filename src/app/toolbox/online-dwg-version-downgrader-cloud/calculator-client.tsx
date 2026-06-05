@@ -4,109 +4,109 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "Autodesk DWG TrueView (官方桌面转换器)",
+    "name": "Autodesk DWG TrueView (Official Desktop Converter)",
     "rating": 9.9,
     "metrics": [
       {
-        "name": "降级保真度",
+        "name": "Downgrade Fidelity",
         "score": 5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 5
       },
       {
-        "name": "批量操作",
+        "name": "Batch operation",
         "score": 4
       }
     ],
     "pros": [
-      "官方底层数据库重写",
-      "无损转换动态块"
+      "Official underlying database rewriting",
+      "Lossless conversion of dynamic blocks"
     ],
     "cons": [
-      "仅支持 Windows 且安装包较大"
+      "Only supports Windows and the installation package is large"
     ],
     "officialUrl": "https://www.autodesk.com/",
-    "verdict": "欧特克官方提供的免费看图与图纸版本转换器, 安全系数最高, 保证 CAD 数据库节点无缺损. "
+    "verdict": "Autodesk officially provides free image viewing and drawing version converter, with the highest safety factor, Ensure that the CAD database nodes are intact. "
   },
   {
     "name": "Any DWG Version Converter",
     "rating": 9.6,
     "metrics": [
       {
-        "name": "降级保真度",
+        "name": "Downgrade Fidelity",
         "score": 4.5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       },
       {
-        "name": "批量操作",
+        "name": "Batch operation",
         "score": 5
       }
     ],
     "pros": [
-      "支持批量后台静默降级",
-      "兼容所有 AutoCAD 历史代码"
+      "Support batch background silent downgrade",
+      "Compatible with all AutoCAD historical codes"
     ],
     "cons": [
-      "商业版需要许可购买"
+      "Commercial version requires license purchase"
     ],
     "officialUrl": "https://anydwg.com/",
-    "verdict": "非常经典的批量图纸版本重构程序, 操作纯粹利落, 降级后数据兼容良好. "
+    "verdict": "A very classic batch drawing version reconstruction program, the operation is pure and neat, Data compatibility is good after downgrading. "
   },
   {
     "name": "CADSoftTools Version Converter",
     "rating": 9.2,
     "metrics": [
       {
-        "name": "降级保真度",
+        "name": "Downgrade Fidelity",
         "score": 4
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       },
       {
-        "name": "批量操作",
+        "name": "Batch operation",
         "score": 3
       }
     ],
     "pros": [
-      "云端极速解包",
-      "支持 DXF-DWG 互转"
+      "Extremely fast unpacking in the cloud",
+      "Support DXF-DWG mutual conversion"
     ],
     "cons": [
-      "大文件偶尔出现自定义实体转换丢失"
+      "Occasionally custom entity conversion is lost in large files"
     ],
     "officialUrl": "https://cadsofttools.com/",
-    "verdict": "性能优秀的专业云端降级平台, 满足日常工程配合时的快速倒手. "
+    "verdict": "A professional cloud downgrade platform with excellent performance to meet the needs of rapid handover during daily engineering cooperation.. "
   }
 ];
 const BEST_PRACTICES = [
   {
-    "title": "建议降级至 2013 格式 (AC1027)",
-    "desc": "这是目前全行业兼容性与数据结构最平衡的版本, 几乎 100% 的替代 CAD 引擎都能流畅读写. "
+    "title": "It is recommended to downgrade to 2013 format (AC1027)",
+    "desc": "This is currently the most balanced version of compatibility and data structure in the entire industry, almost 100% All alternative CAD engines can read and write smoothly. "
   },
   {
-    "title": "警惕参数化实体降解",
-    "desc": "降级后, 请核对复杂的关联标注, 三维剖切以及三维模型表面的曲率参数是否被炸开 (Exploded) 为碎线. "
+    "title": "Be wary of parameterized entity degradation",
+    "desc": "After downgrading, please check complex association annotations, Whether the curvature parameters of the 3D section and the 3D model surface are exploded as broken lines. "
   },
   {
-    "title": "使用隔离虚拟机转换",
-    "desc": "对于来路不明的客户图纸, 建议在隔离的虚拟机环境下转换, 防范宏病毒和遥测抓取. "
+    "title": "Use isolated virtual machine conversion",
+    "desc": "For customer drawings of unknown origin, it is recommended to convert them in an isolated virtual machine environment., Protect against macro viruses and telemetry scraping. "
   }
 ];
 const FAQS = [
   {
-    "question": "AC1032, AC1027, AC1024 都是些什么代码? ",
-    "answer": "这些是 DWG 文件的首部魔数标志 (Magic Number) . 例如 AC1032 代表 2018-2027 版本的图纸数据库, 老版软件因为无法识别该头部结构, 会直接报文件损坏或版本不支持. "
+    "question": "AC1032, AC1027, AC1024 What are the codes? ",
+    "answer": "These are the first magic number marks of the DWG file (Magic Number) . For example AC1032 represents 2018-2027 version of the drawing database, because the old version of the software cannot recognize the head structure., It will directly report that the file is damaged or the version is not supported. "
   },
   {
-    "question": "降级后动态块 (Dynamic Blocks) 失效了怎么回事? ",
-    "answer": "一些基于新型约束关系的动态块在高版本才支持. 在强制降级后, CAD 数据库会将其转化为退化的静态普通匿名块. "
+    "question": "What happened if Dynamic Blocks failed after downgrading?? ",
+    "answer": "Some dynamic blocks based on new constraint relationships are only supported in higher versions. After forced downgrade, CAD The database will convert this into a degenerate static plain anonymous block. "
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineDwgVersionDowngraderCloudClient() {
   return (
     <CloudReferralClient
       title="Online DWG Format Version Downgrader"
-      subtitle="客观深度评测与防审计直达导航. "
+      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="遭遇'图形文件版本不支持'错误时, 您可能拿到了高版本 AutoCAD (如 2018-2027 保存的 AC1032 编码) 的图纸, 而本地仅有老版本 CAD 软件. 利用云端格式降级工具可以快速将文件重写为广泛兼容的 AC1027 (2013 格式) 或 AC1021 (2007 格式) . "
-      riskWarning="频繁的格式降级不仅可能导致特殊的参数化'动态块'和约束关系丢失, 甚至可能触发反盗版合规审查. 请确保降级行为是在企业授权的安全边界下进行. 对于核心机密设计, 推荐下载官方免费的桌面端 DWG TrueView 软件完成本地转换. "
+      painPointDesc="Encountered 'Graph file version not supported''When the error occurs, you may have obtained a higher version AutoCAD (As saved in 2018-2027 AC1032 coding) drawings, However, there are only old versions of CAD software available locally.. Use cloud-based format downgrade tools to quickly rewrite files to the broadly compatible AC1027 (2013) format) or AC1021 (2007 format) . "
+      riskWarning="Frequent format degradation may not only result in special parameterized 'dynamic blocks''and the constraint relationship is lost, it may even trigger an anti-piracy compliance review. Please ensure that the downgrade behavior is carried out within the security boundary of enterprise authorization. For core confidential design, It is recommended to download the official free desktop DWG TrueView software to complete local conversion. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

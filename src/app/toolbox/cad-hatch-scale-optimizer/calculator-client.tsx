@@ -2,19 +2,19 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, RefreshCw, Layers } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 const DRAWING_UNITS = [
-  { name: 'Metric: Millimeters (公制: 毫米)', key: 'mm', factor: 1.0 },
-  { name: 'Metric: Meters (公制: 米)', key: 'm', factor: 1000.0 },
-  { name: 'Imperial: Inches (英制: 英寸)', key: 'inch', factor: 25.4 },
+  { name: 'Metric: Millimeters (Metric: mm)', key: 'mm', factor: 1.0 },
+  { name: 'Metric: Meters (Metric: Meter)', key: 'm', factor: 1000.0 },
+  { name: 'Imperial: Inches (Imperial: inches)', key: 'inch', factor: 25.4 },
 ];
 
 const HATCH_PATTERNS = [
-  { name: 'ANSI31 (斜平行线 / Iron-Steel)', key: 'ansi31', baseSpacing: 6, desc: '标准金属, 剖面线' },
-  { name: 'NET (网格线 / Grid-Tile)', key: 'net', baseSpacing: 10, desc: '瓷砖, 防滑网格' },
-  { name: 'AR-CONC (混凝土 / Concrete)', key: 'arconc', baseSpacing: 16, desc: '粗集料, 水泥沙浆' },
-  { name: 'GRAVEL (碎石 / Pebbles)', key: 'gravel', baseSpacing: 20, desc: '鹅卵石填料, 散水' },
+  { name: 'ANSI31 (Oblique parallel lines / Iron-Steel)', key: 'ansi31', baseSpacing: 6, desc: 'Standard Metal, Section line' },
+  { name: 'NET (Grid Line / Grid-Tile)', key: 'net', baseSpacing: 10, desc: 'Tile, anti-slip mesh' },
+  { name: 'AR-CONC (Concrete / Concrete)', key: 'arconc', baseSpacing: 16, desc: 'Coarse aggregate, cement mortar' },
+  { name: 'GRAVEL (Pebbles)', key: 'gravel', baseSpacing: 20, desc: 'Pebbles, loose water' },
 ];
 
 export default function HatchScaleClient() {
@@ -61,30 +61,30 @@ export default function HatchScaleClient() {
     if (ratio < 0.08) {
       return {
         level: 'danger',
-        label: 'MAXHATCH 崩溃危险 (Too Dense)',
+        label: 'MAXHATCH Too Dense',
         color: 'text-red-500 border-red-500/20 bg-red-500/10',
-        desc: '线段密度极大! 容易触发 AutoCAD MAXHATCH 限制 (默认 100,000 条线) , 这会导致图纸保存卡死, 视口闪退或强制转换为 Solid 填充. '
+        desc: 'The density of line segments is extremely high! Easy to trigger AutoCAD MAXHATCH limits (default 100,000 lines), this will cause the drawing to be saved and stuck., Viewport crashes or casts to Solid fill. '
       };
     } else if (ratio < 0.35) {
       return {
         level: 'warning',
-        label: '密度过大 (Relatively Dense)',
+        label: 'Relatively Dense',
         color: 'text-amber-500 border-amber-500/20 bg-amber-500/10',
-        desc: '填充较密, 在打印或视口缩放时会导致严重的 CPU 渲染卡顿, 文件体积会有所膨胀. 建议适当调大比例. '
+        desc: 'Dense padding can cause severe artifacts when printing or viewport zooming CPU Rendering is lagging and file size will expand.. It is recommended to increase the proportion appropriately. '
       };
     } else if (ratio > 8.0) {
       return {
         level: 'empty',
-        label: '图案过稀或空白 (Too Sparse)',
+        label: 'The pattern is too sparse or blank (Too Sparse)',
         color: 'text-sky-500 border-sky-500/20 bg-sky-500/10',
-        desc: '填充图案比例过大, 填充线之间间距过宽, 在视口中可能呈现为空白 (看不见填充线条) , 让人误以为填充丢失. '
+        desc: 'The proportion of the fill pattern is too large and the spacing between fill lines is too wide., May appear blank in the viewport (no fill lines visible)) , Giving the impression that the padding is missing. '
       };
     } else {
       return {
         level: 'safe',
-        label: '完美匹配 (Optimal Density)',
+        label: 'Perfect Match (Optimal Density)',
         color: 'text-emerald-500 border-emerald-500/20 bg-emerald-500/10',
-        desc: '当前比例符合该图纸打印比例, 出图线条宽度及渲染性能达到最优状态. '
+        desc: 'The current proportion conforms to the printing proportion of the drawing, and the line width and rendering performance of the drawing are optimal.. '
       };
     }
   }, [hatchScale, recommendation, currentUnit]);
@@ -235,14 +235,14 @@ Generated via CADGuide.tools`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Layers className="w-5 h-5 text-blue-400" />
-            <span>输入参数 (Parameters)</span>
+            <span>Input parameters (Parameters)</span>
           </h2>
         </div>
 
         {/* Units */}
         <div className="space-y-2">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            1. 图纸当前绘图单位 (Drawing Unit)
+            1. Current drawing unit of the drawing (Drawing Unit)
           </label>
           <select
             value={unitIdx}
@@ -262,14 +262,14 @@ Generated via CADGuide.tools`;
 ))}
           </select>
           <div className="hidden print:block font-bold">
-            绘图单位: {currentUnit.name}
+            Drawing unit: {currentUnit.name}
           </div>
         </div>
 
         {/* Viewport Scale */}
         <div className="space-y-3">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">2. 目标打印比例分母 (Scale 1:X)</span>
+            <span className="text-slate-400 uppercase tracking-wider">2. Target print scale denominator (Scale 1:X)</span>
             <span className="text-blue-400 font-mono">1 : {viewportScale}</span>
           </div>
           <input
@@ -292,7 +292,7 @@ Generated via CADGuide.tools`;
         {/* Pattern Select */}
         <div className="space-y-2 border-t border-slate-800/80 pt-5">
           <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-            3. CAD 图案填充样式 (Pattern)
+            3. CAD Pattern
           </label>
           <div className="grid grid-cols-2 gap-2.5 print:hidden">
             {HATCH_PATTERNS.map((p, i) => (
@@ -310,14 +310,14 @@ Generated via CADGuide.tools`;
 ))}
           </div>
           <div className="hidden print:block font-bold">
-            填充样式: {currentPattern.name}
+            Fill pattern: {currentPattern.name}
           </div>
         </div>
 
         {/* Live Adjusting User Hatch Scale */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
           <div className="flex justify-between items-center text-xs font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. 调试 HATCH 比例因子 (Scale Input)</span>
+            <span className="text-slate-400 uppercase tracking-wider">4. Debugging HATCH scale factors (Scale Input)</span>
             <span className="text-blue-400 font-mono">{hatchScale}</span>
           </div>
           <div className="flex gap-2">
@@ -325,7 +325,7 @@ Generated via CADGuide.tools`;
               onClick={() => setHatchScale(Number(recommendation.optimal.toFixed(3)))}
               className="px-2.5 py-1 rounded bg-slate-850 hover:bg-blue-650 border border-slate-800 text-[10px] font-black text-slate-300 print:hidden"
             >
-              应用推荐值
+              Apply recommendations
             </button>
           </div>
           <input
@@ -354,39 +354,39 @@ Generated via CADGuide.tools`;
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
               <Layers className="w-5 h-5 text-blue-500" />
-              <span>最佳填充比例计算 (CAD Hatch Scale Verdict)</span>
+              <span>Optimum Hatch Scale Verdict</span>
             </h3>
             <button
               onClick={copyToClipboard}
               className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
-              <span>{copied ? '已复制' : '复制数据'}</span>
+              <span>{copied ? 'Copied' : 'Copy data'}</span>
             </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-2xl border border-slate-150/40">
             <div>
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                最佳推荐填充比例 (Optimal HATCH Scale)
+                Optimal HATCH Scale
               </div>
               <div className="text-3xl font-black font-mono text-blue-600 mt-1">
                 {recommendation.optimal.toFixed(3)}
               </div>
               <p className="text-[10px] text-slate-500 mt-1">
-                在 CAD 填充对话框的 &quot;Scale&quot; 中输入该值
+                In the CAD Fill dialog box &quot;Scale&quot; Enter this value in
               </p>
             </div>
             
             <div className="space-y-1.5">
               <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                安全比例区间 (Safety Scale Range)
+                Safety Scale Range
               </div>
               <div className="font-mono text-xs text-slate-700 font-semibold mt-1">
-                {recommendation.minSafe.toFixed(3)} 至 {recommendation.maxSafe.toFixed(3)}
+                {recommendation.minSafe.toFixed(3)} to {recommendation.maxSafe.toFixed(3)}
               </div>
               <div className="text-[9px] text-slate-400">
-                如果低于最小安全比例, 极易导致图纸卡顿崩溃! 
+                If it is lower than the minimum safe ratio, it will easily cause the drawing to freeze and collapse.! 
               </div>
             </div>
           </div>
@@ -405,7 +405,7 @@ Generated via CADGuide.tools`;
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-              实时图案渲染视口 (Live Hatch Canvas Viewport)
+              Live Hatch Canvas Viewport
             </span>
             <span className="text-[9px] text-slate-500 font-mono">
               Viewport Size: 100mm x 100mm
@@ -424,14 +424,14 @@ Generated via CADGuide.tools`;
           <div className="text-[9.5px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2 print:text-slate-600">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>崩溃原理提示: </strong>在 AutoCAD 中, 如果 Hatch 比例太小, 软件会自动触发 `HPMAXLINES` (默认 100000) 警报. 为了防止崩溃, CAD 会将填充强行渲染为 solid (纯色), 或引发长达数分钟的运算死锁. 请务必使用优化器提供的安全范围! 
+              <strong>Crash principle tips: </strong>In AutoCAD in if Hatch If the ratio is too small, the software will automatically trigger `HPMAXLINES` (Default 100000) Alerts. To prevent crashes, CAD will force the fill to render as solid (solid color), or cause a computational deadlock lasting several minutes. Be sure to use the safety bounds provided by the optimizer! 
             </span>
           </div>
         </div>
       </div>
 
       <div className="lg:col-span-12 mt-4 print:hidden">
-        <NewsletterSubscribe />
+        <RelatedTools />
       </div>
     </div>
 );

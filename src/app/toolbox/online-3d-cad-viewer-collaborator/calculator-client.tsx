@@ -4,109 +4,109 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "Autodesk Viewer (欧特克官方云看图)",
+    "name": "Autodesk Viewer (Autodesk official cloud view picture)",
     "rating": 9.9,
     "metrics": [
       {
-        "name": "渲染保真度",
+        "name": "Rendering Fidelity",
         "score": 5
       },
       {
-        "name": "剖切测量力",
+        "name": "Cutting Measurement Force",
         "score": 5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       }
     ],
     "pros": [
-      "支持超 80 种工程格式",
-      "完全保留参数属性层次树"
+      "Supports over 80 project formats",
+      "Completely retain the parameter attribute hierarchical tree"
     ],
     "cons": [
-      "不支持实时双向在线批注对讲"
+      "Real-time two-way online annotation intercom is not supported"
     ],
     "officialUrl": "https://viewer.autodesk.com/",
-    "verdict": "完全免费且最强大的在线 WebGL 看图平台, 其 Forge/APS 引擎对各类 3D 格式图纸拟合程度无与伦比. "
+    "verdict": "Completely free and the most powerful online WebGL image viewing platform, Its Forge/APS engine is suitable for all types of 3D The fit of the format drawings is unparalleled. "
   },
   {
     "name": "GrabCAD Viewer / Workbench",
     "rating": 9.5,
     "metrics": [
       {
-        "name": "渲染保真度",
+        "name": "Rendering Fidelity",
         "score": 4
       },
       {
-        "name": "剖切测量力",
+        "name": "Cutting Measurement Force",
         "score": 4
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       }
     ],
     "pros": [
-      "集成了社区版本控制",
-      "尺寸测量精度极佳"
+      "Integrated community version control",
+      "Excellent dimensional measurement accuracy"
     ],
     "cons": [
-      "需要登录且对移动端性能要求高"
+      "Requires login and requires high mobile performance"
     ],
     "officialUrl": "https://grabcad.com/",
-    "verdict": "机械设计师最爱的免费协同看板, 对大型 SLDASM 或 STEP 结构的加载平滑度极高. "
+    "verdict": "Mechanical designers’ favorite free collaborative bulletin board, perfect for large-scale SLDASM or STEP structure has extremely smooth loading. "
   },
   {
     "name": "SketchUp Viewer for Web",
     "rating": 9.2,
     "metrics": [
       {
-        "name": "渲染保真度",
+        "name": "Rendering Fidelity",
         "score": 4
       },
       {
-        "name": "剖切测量力",
+        "name": "Cutting Measurement Force",
         "score": 3.5
       },
       {
-        "name": "数据安全性",
+        "name": "Data Security",
         "score": 4
       }
     ],
     "pros": [
-      "网页端秒开 SKP 场景",
-      "自带场景样式与阴影调整"
+      "Open the SKP scene instantly on the web page",
+      "Comes with scene style and shadow adjustment"
     ],
     "cons": [
-      "对 SolidWorks 等工业装配支持一般"
+      "General support for industrial assembly such as SolidWorks"
     ],
     "officialUrl": "https://www.sketchup.com/",
-    "verdict": "专为景观, 家装及舞美设计师提供的云端方案, 完美同步图层可见性与场景页面. "
+    "verdict": "A cloud solution specially provided for landscape, home decoration and stage design designers, Perfect synchronization of layer visibility with scene page. "
   }
 ];
 const BEST_PRACTICES = [
   {
-    "title": "务必启用分享链接失效机制",
-    "desc": "在向客户分享 WebGL 视角链接时, 请务必设置访问有效期 (如 7 天后失效) 以及防下载保护. "
+    "title": "Be sure to enable the sharing link expiration mechanism",
+    "desc": "When sharing WebGL perspective links to clients, Be sure to set an access validity period (e.g. 7 Queen of Heaven expires) and anti-download protection. "
   },
   {
-    "title": "轻量化减面后再上传",
-    "desc": "对于极大的机械零件, 上传前建议在本地运行'降噪 (Simplify Mesh) '处理, 去除无谓的螺纹, 齿轮细部以防止网页崩溃. "
+    "title": "Lighten up and reduce the size before uploading",
+    "desc": "For extremely large mechanical parts, it is recommended to run them locally before uploading.'Noise Reduction (Simplify Mesh) 'Processing, Remove unnecessary threads, gear details to prevent webpage crashes. "
   },
   {
-    "title": "禁止未授权外部索引",
-    "desc": "企业共享平台需配置 robots.txt 及访问权限策略, 彻底屏蔽搜索引擎的探测. "
+    "title": "Unauthorized external indexing is prohibited",
+    "desc": "The enterprise sharing platform needs to configure robots.txt and access permission policies, Completely block search engine detection. "
   }
 ];
 const FAQS = [
   {
-    "question": "网页旋转模型时画面闪烁卡顿怎么解决? ",
-    "answer": "这多是因为您的浏览器没有开启硬件加速, 导致 WebGL 处于 CPU 软解渲染状态. 建议在 Chrome 设置 ➔ 系统中勾选'使用硬件加速'. "
+    "question": "How to solve the problem of screen flickering and freezing when rotating a model on a web page? ",
+    "answer": "This may be because your browser does not have hardware acceleration turned on. WebGL In CPU soft rendering state. It is recommended to set it in Chrome ➔ Check 'Use hardware acceleration' in the system'. "
   },
   {
-    "question": "为什么装配体导入后很多零件显示缺失? ",
-    "answer": "像 SolidWorks 的 `.sldasm` 装配体文件本身不含几何实体, 而是引用了同级目录下的 `.sldprt` 零件. 您需要将整个装配体和所有引用的零件文件打包成 `.zip` 压缩包一并上传解析. "
+    "question": "Why do many parts appear missing after the assembly is imported? ",
+    "answer": "Like SolidWorks `.sldasm` The assembly file itself does not contain geometric entities, but refers to the `.sldprt` parts. You need to package the entire assembly and all referenced part files into `.zip` Upload the compressed package together for analysis. "
   }
 ];
 
@@ -114,10 +114,10 @@ export default function Online3dCadViewerCollaboratorClient() {
   return (
     <CloudReferralClient
       title="Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal"
-      subtitle="客观深度评测与防审计直达导航. "
+      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="与客户或团队共享复杂的 3D CAD 装配体 (如 CATIA, NX, SolidWorks, STEP) 或 Revit BIM 模型进行现场评审时, 普通用户电脑往往没有专业建模软件. 利用云端 WebGL 3D 浏览器, 可以免安装加载大型模型, 实现在线旋转, 剖切, 红线标注与尺寸测量. "
-      riskWarning="3D CAD 装配体包含零部件的所有加工尺寸, 内部拓扑与工程装配链接. 将这些文件直接上传到不知名的云端看图网站, 很容易遭遇'数据脱水拦截'和商业盗取. 推荐使用具有企业安全权限管控和动态水印加密的高端协作平台. "
+      painPointDesc="Share complex 3D CAD assemblies with clients or teams (such as CATIA, NX, SolidWorks, STEP) or Revit BIM When models are reviewed on-site, ordinary users often do not have professional modeling software on their computers.. Leveraging a cloud-based WebGL 3D browser, Large models can be loaded without installation and can be rotated online, Sectioning, red line marking and dimension measurement. "
+      riskWarning="3D CAD The assembly contains all machining dimensions of the components, internal topology and engineering assembly links. Uploading these files directly to unknown cloud photo viewing websites is easy to encounter'Data Dehydration Interception' and Commercial Theft. It is recommended to use a high-end collaboration platform with enterprise security permission control and dynamic watermark encryption. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

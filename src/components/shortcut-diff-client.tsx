@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Printer, AlertTriangle, Check, Info, Copy, Sparkles } from 'lucide-react';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { Search, Printer, AlertTriangle, Check, Sparkles } from 'lucide-react';
+import { RelatedTools } from '@/components/related-tools';
 
 export interface DiffItem {
   shortcut: string;
@@ -60,10 +60,10 @@ export default function ShortcutDiffClient({
 
   return (
     <div className="flex flex-col gap-8">
-      {/* 核心比对与搜索区 */}
+      {/* Comparison & Search Section */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm print:shadow-none print:border-none print:p-0">
         
-        {/* 控制面板: 搜索, 过滤与打印 */}
+        {/* Control Panel: Search, Filter & Print */}
         <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-6 print:hidden">
           <div className="relative flex-grow max-w-md">
             <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -73,7 +73,7 @@ export default function ShortcutDiffClient({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={`搜索快捷键或命令 (如: L, Line, Copy)...`}
+              placeholder={`Search shortcuts or commands (e.g. L, Line, Copy)...`}
               className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-slate-50/50"
             />
           </div>
@@ -84,12 +84,12 @@ export default function ShortcutDiffClient({
               className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md transition-all cursor-pointer"
             >
               <Printer className="w-4 h-4" />
-              打印对比表 (A4)
+              Print Comparison (A4)
             </button>
           </div>
         </div>
 
-        {/* 差异状态过滤开关 */}
+        {/* Difference Status Toggle Switch */}
         <div className="flex gap-2 mb-6 print:hidden">
           <button
             onClick={() => setFilterType('all')}
@@ -99,7 +99,7 @@ export default function ShortcutDiffClient({
                 : 'bg-slate-50/80 border-slate-100 text-slate-600 hover:bg-slate-100'
             }`}
           >
-            全部指令 ({diffData.length})
+            All Commands ({diffData.length})
           </button>
           <button
             onClick={() => setFilterType('diff')}
@@ -109,7 +109,7 @@ export default function ShortcutDiffClient({
                 : 'bg-slate-50/80 border-slate-100 text-slate-600 hover:bg-slate-100'
             }`}
           >
-            仅看差异项 ({diffData.filter((i) => !i.isSame).length})
+            Differences Only ({diffData.filter((i) => !i.isSame).length})
           </button>
           <button
             onClick={() => setFilterType('same')}
@@ -119,20 +119,20 @@ export default function ShortcutDiffClient({
                 : 'bg-slate-50/80 border-slate-100 text-slate-600 hover:bg-slate-100'
             }`}
           >
-            仅看完全一致 ({diffData.filter((i) => i.isSame).length})
+            Identical Only ({diffData.filter((i) => i.isSame).length})
           </button>
         </div>
 
-        {/* 比对数据表格 */}
+        {/* Comparison Data Table */}
         <div className="overflow-x-auto print:overflow-visible">
-          <table className="w-full text-left border-collapse text-xs font-semibold text-slate-600">
+          <table className="w-full text-left border-collapse text-sm font-semibold text-slate-700">
             <thead>
-              <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-[10px] tracking-wider font-bold">
-                <th className="py-3 px-4 w-[110px]">快捷别名</th>
-                <th className="py-3 px-4 w-[160px]">{primaryApp} 命令</th>
-                <th className="py-3 px-4 w-[160px]">{secondaryApp} 命令</th>
-                <th className="py-3 px-4 w-[100px] text-center">别名状态</th>
-                <th className="py-3 px-4">核心用途 & 差异说明</th>
+              <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-xs tracking-wider font-bold">
+                <th className="py-3 px-4 w-[110px]">Alias</th>
+                <th className="py-3 px-4 w-[160px]">{primaryApp} Cmd</th>
+                <th className="py-3 px-4 w-[160px]">{secondaryApp} Cmd</th>
+                <th className="py-3 px-4 w-[100px] text-center">Status</th>
+                <th className="py-3 px-4">Core Use Case & Differences</th>
               </tr>
             </thead>
             <tbody>
@@ -144,7 +144,7 @@ export default function ShortcutDiffClient({
                   }`}
                 >
                   <td className="py-3 px-4">
-                    <span className="font-mono bg-slate-900 text-white px-2.5 py-1 rounded-lg font-black tracking-tight text-[10px] shadow-sm select-all">
+                    <span className="font-mono bg-slate-900 text-white px-2.5 py-1.5 rounded-lg font-black tracking-tight text-xs shadow-sm select-all">
                       {item.shortcut}
                     </span>
                   </td>
@@ -158,7 +158,7 @@ export default function ShortcutDiffClient({
                       {item.primaryCmd}
                       {copiedIndex?.row === idx && copiedIndex?.app === 'primary' && (
                         <Check className="w-3.5 h-3.5 text-emerald-500" />
-)}
+                      )}
                     </span>
                   </td>
 
@@ -173,7 +173,7 @@ export default function ShortcutDiffClient({
                       {item.secondaryCmd}
                       {copiedIndex?.row === idx && copiedIndex?.app === 'secondary' && (
                         <Check className="w-3.5 h-3.5 text-emerald-500" />
-)}
+                      )}
                     </span>
                   </td>
 
@@ -182,39 +182,39 @@ export default function ShortcutDiffClient({
                     {item.isSame ? (
                       <span className="inline-flex items-center gap-1 text-[10px] font-black text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
                         <Check className="w-3 h-3" />
-                        完全一致
+                        Identical
                       </span>
-) : (
+                    ) : (
                       <span className="inline-flex items-center gap-1 text-[10px] font-black text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-100">
                         <AlertTriangle className="w-3 h-3" />
-                        存在差异
+                        Different
                       </span>
-)}
+                    )}
                   </td>
 
                   {/* Descriptions */}
                   <td className="py-3 px-4 leading-relaxed">
-                    <div className="text-slate-900 font-bold text-[11px]">{item.useCase}</div>
+                    <div className="text-slate-900 font-bold text-xs">{item.useCase}</div>
                     {!item.isSame && (
-                      <div className="text-rose-600/80 font-medium mt-1 text-[10px] bg-rose-50/50 p-2 rounded-lg border border-rose-100/30">
+                      <div className="text-rose-600/80 font-medium mt-1 text-xs bg-rose-50/50 p-2 rounded-lg border border-rose-100/30">
                         ⚠️ {item.diffNote}
                       </div>
-)}
+                    )}
                   </td>
                 </tr>
-))}
+              ))}
               {filteredData.length === 0 && (
                 <tr>
                   <td colSpan={5} className="py-8 text-center text-slate-400 font-medium">
-                    无匹配的比对指令. 
+                    No matching comparison commands found.
                   </td>
                 </tr>
-)}
+              )}
             </tbody>
           </table>
         </div>
 
-        {/* @media print 打印专用 CSS 规则 */}
+        {/* @media print styles */}
         <style jsx global>{`
           @media print {
             body {
@@ -253,12 +253,12 @@ export default function ShortcutDiffClient({
 
       </div>
 
-      {/* 迁移与提效指南 */}
+      {/* Migration & Efficiency Guides */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6 print:hidden">
         <div>
           <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-blue-500 animate-pulse" />
-            {primaryApp} ➔ {secondaryApp} 极速平替迁移指南
+            {primaryApp} ➔ {secondaryApp} Migration Guide
           </h3>
           <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">
             Seamless Migration & Compatibility Strategy Guide
@@ -269,34 +269,34 @@ export default function ShortcutDiffClient({
           <div>
             <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              1. 99% 的常用命令肌肉记忆完全通用
+              1. 99% Common Shortcuts are Identical
             </h4>
             <p>
-              浩辰 CAD (GstarCAD) 与中望 CAD (ZWCAD) 在开发之初便深度对标 AutoCAD. 几乎所有的高频绘图别名 (如 L-直线, C-圆, CO-复制, M-移动, RO-旋转) 均 100% 相同. 设计师无需担心更换平台引起绘图速度下降. 
+              Most alternative CAD engines like GstarCAD and ZWCAD are deeply aligned with AutoCAD. High-frequency alias commands (such as L-Line, C-Circle, CO-Copy, M-Move, RO-Rotate) are 100% identical. Habits require zero adjustment.
             </p>
           </div>
           <div>
             <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              2. 导入已有 pgp 别名实现 100% 同步
+              2. Seamless PGP Settings Import
             </h4>
             <p>
-              如果您有高度客制化的 `acad.pgp` 别名配置, 完全不用在国产 CAD 里手动重新配置. 直接在国产 CAD 的"工具 ➔ 自定义 ➔ 编辑程序别名 (PGP)"中, 将您的 `acad.pgp` 文本复制粘贴覆盖进去, 或者加载我们 Tool 1 生成的自定义 PGP, 即可瞬间恢复您多年积攒的键盘别名习惯. 
+              If you have heavily customized `acad.pgp` files, you can copy-paste your aliases directly into the alternative CAD application via "Tools ➔ Customize ➔ Edit Aliases (PGP)" or load custom PGPs dynamically.
             </p>
           </div>
           <div>
             <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              3. 独有命令别名与特殊替换
+              3. Minor Platform Deviations
             </h4>
             <p>
-              某些软件有其独特的平台特性, 例如 GstarCAD 拥有独特的图纸工作空间切换指令 `GWS`, 而 ZWCAD 则有独特的智能选择指令. 针对比对中标记为 **"存在差异"** 的项目, 请多加留心并在实际图纸绘制中稍作肌肉记忆微调. 
+              Some commands have minor platform differences (e.g. workspace setups or custom selection features). Pay attention to rows marked as "Different" to smoothly adapt your workflow.
             </p>
           </div>
         </div>
       </div>
 
-      <NewsletterSubscribe />
+      <RelatedTools />
     </div>
-);
+  );
 }
