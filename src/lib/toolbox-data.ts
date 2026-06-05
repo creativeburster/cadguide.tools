@@ -305,7 +305,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate rectangular and round duct sizes, air velocity, and static friction head loss.',
     detailDesc: 'For mechanical MEP engineers. Enter targeted airflow (CFM) and friction limits to instantly calculate equivalent duct sizes and flow velocity.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['duct sizing calculator', 'hvac friction loss', 'duct velocity calculator', 'mep air flow']
   },
@@ -403,7 +404,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Optimize drawing patterns density to prevent viewport freezes and empty hatches.',
     detailDesc: 'Calculate recommended hatch scales based on current drawing units (Metric vs Imperial) and targeted sheet scales to prevent solid hatch scaling crashes (MAXHATCH limit exceeded).',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['hatch scale optimizer', 'maxhatch fix', 'autocad hatch scale', 'hatch density limit']
   },
@@ -413,7 +415,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Quickly set up grid limits for architectural plotting and standard paper sizes in model space.',
     detailDesc: 'Input target standard paper size (A0-A4, Arch E) and drawing scale to get exact coordinates for setting the LIMITS and GRID limits in model space.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['cad limits calculator', 'autocad drawing limits', 'grid boundaries A3', 'paper limits coordinate']
   },
@@ -423,7 +426,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate pipe flow velocity, piping friction losses, and pump sizing head adjustments.',
     detailDesc: 'Uses Hazen-Williams formulas to calculate pressure drops in commercial piping systems. Supports copper, PVC, steel, and cast iron parameters.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['pipe head loss calculator', 'hazen williams pressure drop', 'piping friction loss', 'pump head sizing']
   },
@@ -433,7 +437,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Find required assembly torque, bolt preloads, and tightening standards for high-tensile fasteners.',
     detailDesc: 'Apply standard mechanical bolt torque equations (T=KFD) to determine target installation preloads based on friction coefficients and bolt grades (8.8, 10.9, 12.9).',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['bolt torque calculator', 'fastener preload tension', 'tightening torque 10.9', 'mechanical screw preload']
   },
@@ -443,7 +448,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate throat thickness, joint stress limits, and load capacity for structural steel welds.',
     detailDesc: 'Determine mechanical load limits for standard fillet and butt welds under AISC structural guidelines based on electrode strengths (E70XX) and plate thickness.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['weld strength calculator', 'fillet weld throat size', 'aisc weld capacity', 'joint stress calculator']
   },
@@ -453,7 +459,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate spring stiffness, deflection limits, and wire sizing configurations.',
     detailDesc: 'Compute spring rates, shear stress, and coil deflections based on active wire diameters, coil counts, and shear modulus of materials.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['spring rate calculator', 'compression spring force', 'coil stiffness calculator', 'spring deflection limits']
   },
@@ -619,7 +626,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线将 DXF 轮廓图转化为雕刻机、激光切割机可执行的 G-Code 刀轨。',
     detailDesc: 'For digital fabricators. We evaluate cloud toolpath compilers that take standard 2D DXF contours and generate G-code commands, configuring lead-in, lead-out, and cutting speeds.',
     category: 'calculator',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['dxf to gcode converter', 'online laser cutter path', 'cnc toolpath generator', 'plasma cutting gcode']
   },

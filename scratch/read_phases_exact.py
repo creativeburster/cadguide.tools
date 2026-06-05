@@ -1,0 +1,24 @@
+import re
+
+log_path = r"C:\Users\willp\.gemini\antigravity\brain\fb827cad-57e6-4ce5-a633-176f04488cd7\.system_generated\logs\transcript.jsonl"
+with open(log_path, "r", encoding="utf-8") as f:
+    content = f.read()
+
+m = re.search(r'We are breaking down the implementation of the remaining client-side CAD utilities into four specialized phases[\s\S]*?### Phase 4:[^\"]*', content)
+if m:
+    raw_text = m.group(0)
+    clean_text = raw_text.replace("\\n", "\n").replace('\\"', '"').replace("\\\\", "\\")
+    
+    # Let's find all lines containing Phase 1, Phase 2, Phase 3, Phase 4 and their tools
+    lines = clean_text.split("\n")
+    print_lines = []
+    capture = False
+    for line in lines:
+        if "### Phase" in line or "## " in line:
+            print_lines.append(line)
+        elif re.match(r'^\d+\.', line.strip()) or re.match(r'^\*\s', line.strip()):
+            print_lines.append(line)
+            
+    print("\n".join(print_lines))
+else:
+    print("Not found")
