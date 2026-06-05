@@ -519,7 +519,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：将 PDF 图纸无损还原为包含图层和矢量线段的 DWG/DXF 文件。',
     detailDesc: 'When you need to restore vector geometries from structural PDF drawings, converting them to standard DWG is critical. We review the top 5 cloud-based converters, highlighting conversion accuracy, text recognition (OCR) fidelity, and layering outputs.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['pdf to dwg converter', 'vector pdf to dxf', 'online pdf conversion reviews', 'cad tracing tools']
   },
@@ -529,7 +530,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：无需安装 CAD 软件，云端批量将 DWG 图纸高保真转化为 PDF 格式。',
     detailDesc: 'Need to print high-resolution PDF sets from DWG files without desktop CAD? We evaluate cloud plotters that preserve CTB line weights, layout tabs, viewport scales, and support batch queues.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['dwg to pdf online', 'cloud pc3 plotter', 'batch dwg printing', 'ctb vector printing']
   },
@@ -539,7 +541,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：快速将最新的 AC1032 图纸在线保存降级为低版本 CAD 兼容格式。',
     detailDesc: 'If your local drafting software throws "version unsupported" errors, use these verified cloud conversion pipelines to quickly convert AutoCAD 2027 format DWG files down to legacy AutoCAD 2013 (AC1027) or 2004 (AC1018) compatible formats.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['downgrade dwg version', 'convert cad version online', 'ac1032 to ac1027 converter', 'autocad file converter']
   },
@@ -549,7 +552,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：将 DWG 三维实体模型转化为通用制造格式（STEP/IGES）以进行 CNC 加工。',
     detailDesc: 'Evaluate commercial cloud CAD translators that take 3D solids inside DWG and export watertight STEP or IGES mesh files suitable for SolidWorks, Rhino, or CNC CAM path planning tools.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['dwg to step converter', '3d dwg to iges translator', 'cad format conversion cloud', 'cnc mesh translation']
   },
@@ -559,7 +563,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：将 Autodesk Revit (RVT) 专有文件转为 openBIM 开放式 IFC 标准模型。',
     detailDesc: 'BIM model exchange requires open standard compatibility. We benchmark cloud compilation engines that parse Revit families and output clean, compliant buildingSmart IFC models without losing property parameters.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['rvt to ifc cloud', 'revit openbim exporter', 'ifc validation utility', 'bim model translation']
   },
@@ -569,7 +574,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线将 Bentley MicroStation DGN 图纸高精度转换为 DWG/DXF 格式。',
     detailDesc: 'MicroStation and AutoCAD handle geometries differently. We benchmark cloud tools that map DGN levels to DWG layers, maintaining complex custom line styles and shared cell structures without geometric data corruption.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['dgn to dwg online', 'microstation to autocad conversion', 'map dgn levels to layers', 'shared cells mapping']
   },
@@ -589,7 +595,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线看图与协同评审，支持各类 3D CAD 格式直接导入和红线标注。',
     detailDesc: 'Review the top cloud CAD visualization platforms that let clients interact with complex 3D CAD assemblies (CATIA, NX, Inventor) or Revit models directly in browsers, without active software licenses.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['cloud 3d cad viewer', 'share revit model online', 'mobile bim viewer', 'redline markup tool']
   },
@@ -599,7 +606,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线将激光雷达点云数据转化为可在 CAD 里编辑的封闭网格曲面。',
     detailDesc: 'LiDAR scanning outputs massive coordinates lists. We evaluate cloud-scale point cloud meshing servers that convert raw LAS or PTS data into standard OBJ or DXF meshes.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['point cloud to mesh converter', 'las file to obj converter', 'convert scanner data online', 'dxf terrain generator']
   },
@@ -629,7 +637,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：免安装软件，云端大批量实现 DWG 与 DXF 文件格式的相互转换。',
     detailDesc: 'We evaluate batch cloud conversion portals that let you upload hundreds of DWG drawings, converting them to DXF formatting and maintaining script execution safety.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['batch dwg to dxf', 'online dxf converter', 'drawing conversion server', 'script safe converters']
   },
@@ -669,7 +678,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线验证与查看 IFC 建筑模型，自动分析实体关系与合规性。',
     detailDesc: 'Ensure buildingSmart compliance. We review web-based IFC validators that check geometric watertighthness, space relations, and metadata completeness according to IFC 2x3 and IFC 4 standards.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['ifc file validator', 'openbim validation online', 'check ifc file structure', 'buildingsmart standard']
   },
@@ -679,7 +689,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：云端将测绘雷达点云（LAS）直接提取生成为 CAD 等高线图纸。',
     detailDesc: 'Evaluate online mapping portals that extract ground elevation levels from raw LAS coordinates and generate smooth topograhic contour vectors in DXF formats for road designs.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['point cloud terrain generator', 'las file to contour online', 'dxf contour generator', 'civil mapping tool']
   },
@@ -689,7 +700,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：无需安装任何插件，在线查看并标注 SolidWorks 零件与装配体。',
     detailDesc: 'Compare cloud viewers that load SolidWorks SLDPRT or SLDASM files in WebGL layers, letting you inspect model structure, rotate assemblies, and perform cross-section mockups.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['sldprt file viewer online', 'view solidworks assemblies browser', 'web edrawings viewer', 'machining model viewer']
   },
@@ -699,7 +711,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线对比两版 DWG 图纸的差异，自动用红绿两色高亮改动实体。',
     detailDesc: 'We evaluate cloud tools that parse two dwg files and visually overlay them. Highlight insertions, deletions, and metadata updates in layout files to speed up drafting reviews.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['dwg comparison online', 'compare drawing versions', 'cad diff tool', 'revision highlighter']
   },
@@ -709,7 +722,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线将 JPG/PNG 图片无损描摹转换为 CAD 适用的 DXF 矢量线条。',
     detailDesc: 'Review cloud tracing engines that take raster scans of plans or hand-drawn schematics, converting them into smooth bezier arcs and vector line segments in DXF formats.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['raster to vector converter', 'jpg to dxf tracer online', 'convert blueprint to dxf', 'vectorize plan scans']
   },
@@ -719,7 +733,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：将工业 STEP 格式转换为轻量级 OBJ 或 glTF 用于 WebGL 或 VR 渲染。',
     detailDesc: 'Benchmark CAD conversion pipelines that polygonize nurbs boundary representations in STEP models, generating texture-mapped glTF mesh outputs for VR, AR, or Three.js environments.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['step to gltf converter', 'convert step to obj online', 'webgl mesh translator', 'step to mesh converter']
   },
@@ -739,7 +754,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：云端大图纸按图层拆分为多个独立的子 DWG 文件。',
     detailDesc: 'Evaluate online scripts that parse multi-layered drawings (e.g. electrical + mechanical Xrefs), slicing them down layer-by-layer into clean, separate sub-drawings.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['split dwg layers online', 'dwg divider cloud', 'batch layer separator', 'cad batch exporting']
   },
@@ -759,7 +775,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：云端将 SketchUp 场景（SKP）转换为带贴图材质的 FBX 渲染网格文件。',
     detailDesc: 'Evaluate cloud polygonization utilities that take architectural SKP files and output render-ready FBX models with matching texture coordinates, ready for Twinmotion or Lumion rendering.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['skp to fbx online', 'sketchup rendering export', 'convert skp scene to mesh', 'fbx texture mapping']
   }
