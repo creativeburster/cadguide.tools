@@ -264,7 +264,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     origin: 'native',
     releasedDate: '2026-06-04',
-    keywords: ['viewport scale calculator', 'cad scale factor', 'zoom xp command', 'layout plotting scale']
+    keywords: [
+      'viewport scale calculator',
+      'cad scale factor',
+      'zoom xp command',
+      'layout plotting scale',
+      'AutoCAD scale factor calculator online',
+      'drawing scale converter for architectural plans',
+      'plot scale calculator for CAD printing',
+      'viewport zoom xp factor converter'
+    ]
   },
   {
     slug: 'limits-and-fits-calculator',
@@ -275,7 +284,17 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     origin: 'native',
     releasedDate: '2026-06-04',
-    keywords: ['fits calculator', 'tolerance calculator', 'iso 286 fit calculator', 'mechanical clearance']
+    keywords: [
+      'fits calculator',
+      'tolerance calculator',
+      'iso 286 fit calculator',
+      'mechanical clearance',
+      'engineering tolerance calculator ISO 2768',
+      'shaft and hole fit calculator for CAD',
+      'ISO 286 tolerance limits online',
+      'hole and shaft clearance fit table',
+      'limits and fits metric calculator'
+    ]
   },
   {
     slug: 'thread-drill-size-calculator',
@@ -286,7 +305,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     origin: 'native',
     releasedDate: '2026-06-04',
-    keywords: ['tap drill size calculator', 'metric thread drill', 'unc clearance hole', 'machining tap guide']
+    keywords: [
+      'tap drill size calculator',
+      'metric thread drill',
+      'unc clearance hole',
+      'machining tap guide',
+      'thread size calculator metric imperial',
+      'tap drill size calculator online',
+      'metric thread tolerance chart',
+      'internal thread pitch diameter calculator'
+    ]
   },
   {
     slug: 'beam-deflection-structural-calculator',
@@ -308,7 +336,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
-    keywords: ['duct sizing calculator', 'hvac friction loss', 'duct velocity calculator', 'mep air flow']
+    keywords: [
+      'duct sizing calculator',
+      'hvac friction loss',
+      'duct velocity calculator',
+      'mep air flow',
+      'hvac air duct sizing tool friction loss',
+      'rectangular duct equivalent diameter calculator',
+      'ashrae duct velocity limits online',
+      'colebrook equation air duct pressure drop'
+    ]
   },
   {
     slug: 'dxf-watermark-layer-parser',
@@ -330,7 +367,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-04',
     origin: 'native',
-    keywords: ['ctb file reader', 'plot style visualizer', 'ctb pen weights table', 'autocad print style sheet']
+    keywords: [
+      'ctb file reader',
+      'plot style visualizer',
+      'ctb pen weights table',
+      'autocad print style sheet',
+      'CAD line weight calculator for printing',
+      'CTB file settings calculator for AutoCAD',
+      'plot style pen thickness visualizer',
+      'color dependent plot style table reader'
+    ]
   },
   {
     slug: 'color-rgb-to-aci-matchbox',
@@ -341,7 +387,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     origin: 'native',
     releasedDate: '2026-06-04',
-    keywords: ['rgb to aci', 'autocad index color converter', 'cad hex color matching', 'aci color list']
+    keywords: [
+      'rgb to aci',
+      'autocad index color converter',
+      'cad hex color matching',
+      'aci color list',
+      'rgb hex to aci index color converter',
+      'closest matching ACI code calculator',
+      'color distance delta E calculation CAD',
+      'aci lines weights index matching'
+    ]
   },
   {
     slug: 'fatal-error-diagnostic-wizard',
@@ -385,7 +440,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
-    keywords: ['missing shx font', 'cad text question mark', 'gbcbig shx download', 'font substitution map']
+    keywords: [
+      'missing shx font',
+      'cad text question mark',
+      'gbcbig shx download',
+      'font substitution map',
+      'AutoCAD font question mark fix LISP',
+      'missing shx font download alternative',
+      'gbcbig shx substitution setup',
+      'hztxt missing text style rebuild'
+    ]
   },
   {
     slug: 'pdf-plot-chinese-gibberish-resolver',
@@ -396,7 +460,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-04',
     origin: 'native',
-    keywords: ['cad pdf gibberish', 'garbled text pdf plotting', 'chinese characters pdf question mark', 'pc3 plotter font capture']
+    keywords: [
+      'cad pdf gibberish',
+      'garbled text pdf plotting',
+      'chinese characters pdf question mark',
+      'pc3 plotter font capture',
+      'missing lines fix PDF export from CAD',
+      'autocad pdf print chinese question mark',
+      'gibberish font characters plotter PC3',
+      'font capture pdf translation error'
+    ]
   },
   {
     slug: 'cad-hatch-scale-optimizer',
@@ -407,7 +480,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
-    keywords: ['hatch scale optimizer', 'maxhatch fix', 'autocad hatch scale', 'hatch density limit']
+    keywords: [
+      'hatch scale optimizer',
+      'maxhatch fix',
+      'autocad hatch scale',
+      'hatch density limit',
+      'hatch density limit exceeded fix',
+      'maxhatch limit autocad crash warning',
+      'cad hatch scale factor optimizer',
+      'solid hatch pattern scale generator'
+    ]
   },
   {
     slug: 'cad-limits-checker',
@@ -418,7 +500,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
-    keywords: ['cad limits calculator', 'autocad drawing limits', 'grid boundaries A3', 'paper limits coordinate']
+    keywords: [
+      'cad limits calculator',
+      'autocad drawing limits',
+      'grid boundaries A3',
+      'paper limits coordinate',
+      'paper size to scale converter ANSI ISO',
+      'AutoCAD limits and grid boundaries calculator',
+      'A3 layout model space coordinates',
+      'zoom all limits autocad script generator'
+    ]
   },
   {
     slug: 'pipe-friction-head-loss',
@@ -440,7 +531,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
-    keywords: ['bolt torque calculator', 'fastener preload tension', 'tightening torque 10.9', 'mechanical screw preload']
+    keywords: [
+      'bolt torque calculator',
+      'fastener preload tension',
+      'tightening torque 10.9',
+      'mechanical screw preload',
+      'bolt tightening torque standards calculator',
+      'mechanical screw preload tension calculator',
+      'VDI 2230 bolt torque guide',
+      'high-tensile fasteners torque values chart'
+    ]
   },
   {
     slug: 'weld-strength-calculator',
@@ -451,7 +551,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
-    keywords: ['weld strength calculator', 'fillet weld throat size', 'aisc weld capacity', 'joint stress calculator']
+    keywords: [
+      'weld strength calculator',
+      'fillet weld throat size',
+      'aisc weld capacity',
+      'joint stress calculator',
+      'weld strength calculator AISC ASD',
+      'fillet weld throat thickness calculator',
+      'steel joint fillet weld load capacity',
+      'effective throat weld sizing standard'
+    ]
   },
   {
     slug: 'spring-force-rate-calculator',
@@ -462,7 +571,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
-    keywords: ['spring rate calculator', 'compression spring force', 'coil stiffness calculator', 'spring deflection limits']
+    keywords: [
+      'spring rate calculator',
+      'compression spring force',
+      'coil stiffness calculator',
+      'spring deflection limits',
+      'helical compression spring rate calculator',
+      'spring stiffness calculation online',
+      'solid height limit spring deflection force',
+      'torsional shear stress wahl factor'
+    ]
   },
   {
     slug: 'autocad-registry-clean-generator',
@@ -640,7 +758,16 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'third-party',
-    keywords: ['step to stl converter', 'mesh resolution optimizer', '3d printing export cloud', 'parametric stl slicer']
+    keywords: [
+      'step to stl converter',
+      'mesh resolution optimizer',
+      '3d printing export cloud',
+      'parametric stl slicer',
+      'step to stl converter mesh resolution',
+      '3d printing chordal deviation slicer',
+      'convert step to stl online watertight',
+      'parametric stp to polygonal mesh'
+    ]
   },
   {
     slug: 'online-dwg-to-dxf-batch-converter',
