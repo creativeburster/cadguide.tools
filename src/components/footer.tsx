@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-5 xl:grid-cols-10 gap-8 lg:gap-6 mb-16">
           {/* Brand Info */}
-          <div className="col-span-2 md:col-span-4 xl:col-span-4 space-y-5">
+          <div className="col-span-2 md:col-span-2 xl:col-span-2 space-y-5">
             <div className="text-xl font-black text-white flex items-center">
               <span className="text-blue-500">CAD</span>Guide.tools
             </div>
@@ -108,6 +109,11 @@ export function Footer() {
               <li><Link href="/affiliate-disclosure" className="hover:text-blue-400 transition-colors">Affiliate Disclosure</Link></li>
               <li><Link href="/all-tools" className="hover:text-blue-400 transition-colors">All Tools</Link></li>
             </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="col-span-2 md:col-span-2 xl:col-span-2">
+            <NewsletterSubscribe variant="footer" />
           </div>
 
         </div>
