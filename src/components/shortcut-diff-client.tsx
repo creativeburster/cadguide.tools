@@ -27,6 +27,7 @@ export default function ShortcutDiffClient({
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState<'all' | 'diff' | 'same'>('all');
   const [copiedIndex, setCopiedIndex] = useState<{ row: number; app: 'primary' | 'secondary' } | null>(null);
+  const [viewMode, setViewMode] = useState<'card' | 'table'>('card');
 
   // Search and filter logic
   const filteredData = useMemo(() => {
@@ -74,14 +75,38 @@ export default function ShortcutDiffClient({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={`Search shortcuts or commands (e.g. L, Line, Copy)...`}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-slate-50/50"
+              className="w-full h-12 pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-slate-50/50"
             />
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            {/* View Mode Toggle */}
+            <div className="flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200/50">
+              <button
+                onClick={() => setViewMode('card')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-black flex items-center gap-1 transition-all cursor-pointer ${
+                  viewMode === 'card'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                Cards
+              </button>
+              <button
+                onClick={() => setViewMode('table')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-black flex items-center gap-1 transition-all cursor-pointer ${
+                  viewMode === 'table'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                Table
+              </button>
+            </div>
+
             <button
               onClick={handlePrint}
-              className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md transition-all cursor-pointer"
+              className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md transition-all cursor-pointer h-11"
             >
               <Printer className="w-4 h-4" />
               Print Comparison (A4)
@@ -123,8 +148,88 @@ export default function ShortcutDiffClient({
           </button>
         </div>
 
+        {/* Premium Collectible Card Grid View */}
+        {viewMode === 'card' && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 print:hidden">
+            {filteredData.map((item, idx) => (
+              <div
+                key={idx}
+                className={`relative group border rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] ${
+                  item.isSame ? 'bg-white border-slate-100 hover:border-blue-200' : 'bg-rose-50/20 border-rose-100/60 hover:border-rose-300'
+                }`}
+              >
+                <div>
+                  <div className="flex items-start justify-between mb-4">
+                    <span className="font-mono bg-slate-900 text-white px-2.5 py-1.5 rounded-lg font-black tracking-tight text-xs shadow-sm select-all border border-slate-800">
+                      {item.shortcut}
+                    </span>
+                    {item.isSame ? (
+                      <span className="inline-flex items-center gap-1 text-[10px] font-black text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
+                        Identical
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 text-[10px] font-black text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-100">
+                        Different
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Commands Comparison */}
+                  <div className="grid grid-cols-2 gap-4 mb-3 font-mono text-sm">
+                    <div>
+                      <div className="text-[9px] uppercase font-bold text-slate-400 mb-0.5">{primaryApp}</div>
+                      <div
+                        onClick={() => copyToClipboard(item.primaryCmd, idx, 'primary')}
+                        className="font-black text-slate-900 hover:text-blue-600 cursor-pointer select-all truncate"
+                      >
+                        {item.primaryCmd}
+                        {copiedIndex?.row === idx && copiedIndex?.app === 'primary' && (
+                          <span className="text-[9px] text-emerald-500 font-bold block">Copied!</span>
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[9px] uppercase font-bold text-slate-400 mb-0.5">{secondaryApp}</div>
+                      <div
+                        onClick={() => copyToClipboard(item.secondaryCmd, idx, 'secondary')}
+                        className={`font-black cursor-pointer select-all truncate ${
+                          item.isSame ? 'text-slate-900 hover:text-blue-600' : 'text-rose-600 hover:text-rose-700'
+                        }`}
+                      >
+                        {item.secondaryCmd}
+                        {copiedIndex?.row === idx && copiedIndex?.app === 'secondary' && (
+                          <span className="text-[9px] text-emerald-500 font-bold block">Copied!</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-xs font-bold text-slate-500 leading-relaxed mt-2 select-all">
+                    {item.useCase}
+                  </p>
+                </div>
+
+                {!item.isSame && (
+                  <div className="text-[11px] text-rose-700 font-semibold mt-3 bg-white/80 p-2.5 rounded-xl border border-rose-100/50 leading-relaxed shadow-sm">
+                    ⚠️ {item.diffNote}
+                  </div>
+                )}
+              </div>
+            ))}
+            {filteredData.length === 0 && (
+              <div className="col-span-full py-8 text-center text-slate-400 font-medium bg-slate-50/50 rounded-2xl border border-slate-100">
+                No matching comparison commands found.
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Comparison Data Table */}
-        <div className="overflow-x-auto print:overflow-visible">
+        <div
+          className={`overflow-x-auto print:overflow-visible ${
+            viewMode === 'card' ? 'hidden print:block' : 'block'
+          }`}
+        >
           <table className="w-full text-left border-collapse text-sm font-semibold text-slate-700">
             <thead>
               <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-xs tracking-wider font-bold">

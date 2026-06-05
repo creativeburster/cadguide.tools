@@ -267,7 +267,9 @@ export default function DwgVersionCheckerClient() {
           onDragOver={handleDrag}
           onDragLeave={handleDrag}
           onDrop={handleDrop}
-          className={`relative border-2 border-dashed rounded-[32px] p-12 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[320px] backdrop-blur-md bg-white/60 dark:bg-slate-900/60 shadow-lg ${
+          className={`relative border-2 border-dashed rounded-[32px] text-center transition-all duration-300 flex flex-col items-center justify-center backdrop-blur-md bg-white/60 dark:bg-slate-900/60 shadow-lg ${
+            result ? 'min-h-[110px] p-6' : 'min-h-[320px] p-12'
+          } ${
             isDragging
               ? 'border-blue-600 bg-blue-50/50 scale-[0.99]'
               : 'border-slate-200 hover:border-blue-500/50'
@@ -281,22 +283,42 @@ export default function DwgVersionCheckerClient() {
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
           />
 
-          <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-            </svg>
-          </div>
+          {result ? (
+            <div className="flex flex-col md:flex-row items-center gap-4 w-full justify-center">
+              <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+              </div>
+              <div className="text-center md:text-left">
+                <h4 className="text-sm font-bold text-slate-800">
+                  Analyze another DWG drawing?
+                </h4>
+                <p className="text-xs text-slate-500 font-medium">
+                  Drag & drop here or <span className="text-blue-600 font-bold underline">browse files</span>. Client-side local processing.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+              </div>
 
-          <h3 className="text-xl font-bold text-slate-800 mb-2">
-            Drag & Drop your DWG file here
-          </h3>
-          <p className="text-sm text-slate-500 mb-6 max-w-sm">
-            Or <span className="text-blue-600 font-bold underline">browse files</span> on your device.
-            Processing is 100% local — your data never leaves your browser.
-          </p>
-          <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
-            Pure client-side WebAssembly / JS
-          </div>
+              <h3 className="text-xl font-bold text-slate-800 mb-2">
+                Drag & Drop your DWG file here
+              </h3>
+              <p className="text-sm text-slate-500 mb-6 max-w-sm">
+                Or <span className="text-blue-600 font-bold underline">browse files</span> on your device.
+                Processing is 100% local — your data never leaves your browser.
+              </p>
+              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
+                Pure client-side WebAssembly / JS
+              </div>
+            </>
+          )}
         </div>
       </div>
 

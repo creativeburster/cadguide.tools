@@ -642,7 +642,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-pdf-to-dwg-converter',
     title: 'Online Vector PDF to CAD DWG Converter Portal',
-    description: '客观评测与直达：将 PDF 图纸无损还原为包含图层和矢量线段的 DWG/DXF 文件。',
+    description: 'Objective reviews & direct portal: Losslessly restore vector PDF drawings back to CAD DWG/DXF files with intact layers.',
     detailDesc: 'When you need to restore vector geometries from structural PDF drawings, converting them to standard DWG is critical. We review the top 5 cloud-based converters, highlighting conversion accuracy, text recognition (OCR) fidelity, and layering outputs.',
     category: 'converter',
     status: 'released',
@@ -653,7 +653,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-dwg-to-pdf-cloud-printer',
     title: 'Online DWG to Vector PDF Batch Cloud Printer',
-    description: '客观评测与直达：无需安装 CAD 软件，云端批量将 DWG 图纸高保真转化为 PDF 格式。',
+    description: 'Objective reviews & direct portal: Batch convert DWG drawings to high-fidelity PDF sheets in the cloud without local software installations.',
     detailDesc: 'Need to print high-resolution PDF sets from DWG files without desktop CAD? We evaluate cloud plotters that preserve CTB line weights, layout tabs, viewport scales, and support batch queues.',
     category: 'converter',
     status: 'released',
@@ -664,7 +664,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-dwg-version-downgrader-cloud',
     title: 'Online DWG Format Version Downgrader',
-    description: '客观评测与直达：快速将最新的 AC1032 图纸在线保存降级为低版本 CAD 兼容格式。',
+    description: 'Objective reviews & direct portal: Quickly save down latest AutoCAD drawings to legacy CAD compatible version formats online.',
     detailDesc: 'If your local drafting software throws "version unsupported" errors, use these verified cloud conversion pipelines to quickly convert AutoCAD 2027 format DWG files down to legacy AutoCAD 2013 (AC1027) or 2004 (AC1018) compatible formats.',
     category: 'converter',
     status: 'released',
@@ -675,7 +675,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cloud-dwg-to-step-iges-converter',
     title: 'Online 3D DWG to STEP/IGES CAD Translator',
-    description: '客观评测与直达：将 DWG 三维实体模型转化为通用制造格式（STEP/IGES）以进行 CNC 加工。',
+    description: 'Objective reviews & direct portal: Translate 3D solid geometries from DWG models to universal manufacturing files (STEP/IGES) for CAM toolpaths.',
     detailDesc: 'Evaluate commercial cloud CAD translators that take 3D solids inside DWG and export watertight STEP or IGES mesh files suitable for SolidWorks, Rhino, or CNC CAM path planning tools.',
     category: 'converter',
     status: 'released',
@@ -686,7 +686,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cloud-bim-rvt-to-ifc-converter',
     title: 'Online Revit RVT to openBIM IFC Standard Converter',
-    description: '客观评测与直达：将 Autodesk Revit (RVT) 专有文件转为 openBIM 开放式 IFC 标准模型。',
+    description: 'Objective reviews & direct portal: Convert proprietary Autodesk Revit (.RVT) models to buildingSmart openBIM IFC formats.',
     detailDesc: 'BIM model exchange requires open standard compatibility. We benchmark cloud compilation engines that parse Revit families and output clean, compliant buildingSmart IFC models without losing property parameters.',
     category: 'converter',
     status: 'released',
@@ -697,7 +697,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-dgn-to-dwg-converter',
     title: 'Online Bentley DGN to AutoCAD DWG Layer Converter',
-    description: '客观评测与直达：在线将 Bentley MicroStation DGN 图纸高精度转换为 DWG/DXF 格式。',
+    description: 'Objective reviews & direct portal: Convert Bentley MicroStation DGN drawings to standard AutoCAD DWG/DXF formatting.',
     detailDesc: 'MicroStation and AutoCAD handle geometries differently. We benchmark cloud tools that map DGN levels to DWG layers, maintaining complex custom line styles and shared cell structures without geometric data corruption.',
     category: 'converter',
     status: 'released',
@@ -708,7 +708,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cloud-dwg-drawing-recovery-service',
     title: 'Online Damaged DWG Drawing Recovery & Repair Portal',
-    description: '客观评测与直达：云端修复损坏、打不开或提示 "Drawing file is not valid" 的 DWG 文件。',
+    description: 'Objective reviews & direct portal: Repair broken or corrupt DWG files online when local CAD recovery commands fail.',
     detailDesc: 'When drawings get corrupt and local RECOVER commands fail, cloud recovery services can reconstruct the drawing database. We review portals that repair header metadata and salvage drawing layers.',
     category: 'troubleshoot',
     status: 'released',
@@ -719,7 +719,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-3d-cad-viewer-collaborator',
     title: 'Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal',
-    description: '客观评测与直达：在线看图与协同评审，支持各类 3D CAD 格式直接导入和红线标注。',
+    description: 'Objective reviews & direct portal: Collaborative review and viewing of complex 3D CAD assemblies inside any modern web browser.',
     detailDesc: 'Review the top cloud CAD visualization platforms that let clients interact with complex 3D CAD assemblies (CATIA, NX, Inventor) or Revit models directly in browsers, without active software licenses.',
     category: 'converter',
     status: 'released',
@@ -730,7 +730,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-point-cloud-to-mesh-converter',
     title: 'Online Point Cloud (LAS/PTS) to Watertight Mesh Converter',
-    description: '客观评测与直达：在线将激光雷达点云数据转化为可在 CAD 里编辑的封闭网格曲面。',
+    description: 'Objective reviews & direct portal: Convert raw LiDAR scanner coordinate points into editable watertight mesh surfaces for CAD.',
     detailDesc: 'LiDAR scanning outputs massive coordinates lists. We evaluate cloud-scale point cloud meshing servers that convert raw LAS or PTS data into standard OBJ or DXF meshes.',
     category: 'converter',
     status: 'released',
@@ -741,7 +741,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cloud-dxf-to-gcode-laser-converter',
     title: 'Online DXF to CNC G-Code Path Planner',
-    description: '客观评测与直达：在线将 DXF 轮廓图转化为雕刻机、激光切割机可执行的 G-Code 刀轨。',
+    description: 'Objective reviews & direct portal: Convert 2D DXF profiles into CNC G-Code toolpaths for laser, waterjet, or plasma cutting.',
     detailDesc: 'For digital fabricators. We evaluate cloud toolpath compilers that take standard 2D DXF contours and generate G-code commands, configuring lead-in, lead-out, and cutting speeds.',
     category: 'calculator',
     status: 'released',
@@ -752,7 +752,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-step-to-stl-slicer-helper',
     title: 'STEP to Sliced STL Mesh Resolution Cloud Helper',
-    description: '客观评测与直达：在线将三维工程格式 (STEP) 转换为适合 3D 打印的 STL 网格。',
+    description: 'Objective reviews & direct portal: Mesh parametric STEP files to polygonal STL models optimized for 3D printing.',
     detailDesc: 'Benchmark converters that handle high-fidelity parametric STEP models, converting them to optimized polygonal STL meshes while letting you control chordal deviation and slice limits.',
     category: 'converter',
     status: 'released',
@@ -772,7 +772,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-dwg-to-dxf-batch-converter',
     title: 'Online Bulk DWG / DXF Format Mutual Converter',
-    description: '客观评测与直达：免安装软件，云端大批量实现 DWG 与 DXF 文件格式的相互转换。',
+    description: 'Objective reviews & direct portal: Batch convert DWG drawings to DXF syntax and vice versa without any local CAD tools.',
     detailDesc: 'We evaluate batch cloud conversion portals that let you upload hundreds of DWG drawings, converting them to DXF formatting and maintaining script execution safety.',
     category: 'converter',
     status: 'released',
@@ -783,7 +783,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cloud-cad-telemetry-blocker-wizard',
     title: 'Enterprise CAD Telemetry Blocker Configuration Portal',
-    description: '客观评测与直达：为企业 IT 阻断 CAD 软件的静默联网遥测与反盗版合规回传。',
+    description: 'Objective reviews & direct portal: Build custom firewall rules to block background telemetry phone-home requests from CAD software.',
     detailDesc: 'Evaluate firewall config builders and network scripts that restrict AutoCAD or SolidWorks from making silent outbound telemetry calls, preventing audits and network licensing server timeouts.',
     category: 'troubleshoot',
     status: 'released',
@@ -794,7 +794,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-lisp-script-compiler-protector',
     title: 'AutoLISP LSP Script Encryption (FAS/VLX) Online Portal',
-    description: '客观评测与直达：在线将 AutoLISP 源代码加密编译为 FAS 或 VLX 字节码保护知识产权。',
+    description: 'Objective reviews & direct portal: Encrypt AutoLISP source code into compiled FAS or VLX bytecode blocks online to protect IP.',
     detailDesc: 'If you want to protect your custom LISP scripts from plagiarism before distribution, use these online compilation wizards to convert ASCII .lsp scripts into compiled .fas executable blocks.',
     category: 'troubleshoot',
     status: 'released',
@@ -805,7 +805,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-revit-family-checker-audit',
     title: 'BIM Revit Family File Integrity & Parameter Auditor',
-    description: '客观评测与直达：在线上传 Revit 族文件 (.rfa) 审计其图元数据、垃圾积压及共享参数。',
+    description: 'Objective reviews & direct portal: Audit shared parameters, orphan objects, and geometry file weights inside Revit family files (.rfa).',
     detailDesc: 'Benchmark online BIM auditors that inspect Revit family files for redundant parameters, unpurged objects, and parameter naming compliance, optimizing BIM models performance before ingestion.',
     category: 'troubleshoot',
     status: 'released',
@@ -816,7 +816,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-ifc-viewer-validator',
     title: 'Online openBIM IFC Standard File Validator & Viewer',
-    description: '客观评测与直达：在线验证与查看 IFC 建筑模型，自动分析实体关系与合规性。',
+    description: 'Objective reviews & direct portal: Inspect and validate openBIM IFC structures against official schema definitions online.',
     detailDesc: 'Ensure buildingSmart compliance. We review web-based IFC validators that check geometric watertighthness, space relations, and metadata completeness according to IFC 2x3 and IFC 4 standards.',
     category: 'converter',
     status: 'released',
@@ -827,7 +827,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-point-cloud-las-to-dxf-contour',
     title: 'Online Point Cloud LAS to DXF Terrain Contour Generator',
-    description: '客观评测与直达：云端将测绘雷达点云（LAS）直接提取生成为 CAD 等高线图纸。',
+    description: 'Objective reviews & direct portal: Extract terrain contours and topographic curves in DXF formats from raw geospatial LAS coordinates.',
     detailDesc: 'Evaluate online mapping portals that extract ground elevation levels from raw LAS coordinates and generate smooth topograhic contour vectors in DXF formats for road designs.',
     category: 'converter',
     status: 'released',
@@ -838,7 +838,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-solidworks-e-drawings-cloud-viewer',
     title: 'Online SolidWorks eDrawings (SLDPRT/SLDASM) Viewer',
-    description: '客观评测与直达：无需安装任何插件，在线查看并标注 SolidWorks 零件与装配体。',
+    description: 'Objective reviews & direct portal: View and markup SolidWorks parts and assemblies online in WebGL layers without software licenses.',
     detailDesc: 'Compare cloud viewers that load SolidWorks SLDPRT or SLDASM files in WebGL layers, letting you inspect model structure, rotate assemblies, and perform cross-section mockups.',
     category: 'converter',
     status: 'released',
@@ -849,7 +849,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-dwg-compare-diff-viewer',
     title: 'Cloud DWG Revision Difference & Compare Visualizer',
-    description: '客观评测与直达：在线对比两版 DWG 图纸的差异，自动用红绿两色高亮改动实体。',
+    description: 'Objective reviews & direct portal: Compare revision differences between two DWG files visually with red-and-green highlighted overlays.',
     detailDesc: 'We evaluate cloud tools that parse two dwg files and visually overlay them. Highlight insertions, deletions, and metadata updates in layout files to speed up drafting reviews.',
     category: 'converter',
     status: 'released',
@@ -860,7 +860,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-image-jpg-to-dxf-vectorizer',
     title: 'Online Image Raster (JPG/PNG) to Vector DXF Tracer',
-    description: '客观评测与直达：在线将 JPG/PNG 图片无损描摹转换为 CAD 适用的 DXF 矢量线条。',
+    description: 'Objective reviews & direct portal: Vectorize raster image plans (JPG/PNG) into CAD-ready DXF drawing curves.',
     detailDesc: 'Review cloud tracing engines that take raster scans of plans or hand-drawn schematics, converting them into smooth bezier arcs and vector line segments in DXF formats.',
     category: 'converter',
     status: 'released',
@@ -871,7 +871,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-step-to-obj-gltf-converter',
     title: 'Online STEP to glTF/OBJ Rendering Mesh Converter',
-    description: '客观评测与直达：将工业 STEP 格式转换为轻量级 OBJ 或 glTF 用于 WebGL 或 VR 渲染。',
+    description: 'Objective reviews & direct portal: Optimize heavy industrial STEP models to lightweight glTF/OBJ mesh assets for web visualization.',
     detailDesc: 'Benchmark CAD conversion pipelines that polygonize nurbs boundary representations in STEP models, generating texture-mapped glTF mesh outputs for VR, AR, or Three.js environments.',
     category: 'converter',
     status: 'released',
@@ -882,7 +882,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-cad-license-audit-shield',
     title: 'Enterprise CAD Software Anti-Piracy Audit Shield Guide',
-    description: '客观评测与直达：企业如何应对 Autodesk 或 SolidWorks 的反盗版合规审查与罚款。',
+    description: 'Objective reviews & direct portal: Navigate anti-piracy licensing audits, software compliance letters, and mitigation strategies.',
     detailDesc: 'We review defensive legal checklists, license scanning utilities, and network proxy setups that help enterprise SAM administrators identify and resolve unlicensed software liabilities before audit letters arrive.',
     category: 'troubleshoot',
     status: 'released',
@@ -893,7 +893,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-dwg-layer-splitter-cloud',
     title: 'Online DWG Layer Splitter & Batch Drawing Separator',
-    description: '客观评测与直达：云端大图纸按图层拆分为多个独立的子 DWG 文件。',
+    description: 'Objective reviews & direct portal: Batch split multi-layered drawings into separate sub-drawings by layer configuration.',
     detailDesc: 'Evaluate online scripts that parse multi-layered drawings (e.g. electrical + mechanical Xrefs), slicing them down layer-by-layer into clean, separate sub-drawings.',
     category: 'converter',
     status: 'released',
@@ -904,7 +904,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-dxf-text-translator-cloud',
     title: 'Online DXF/DWG Drawing Multi-Language Batch Translator',
-    description: '客观评测与直达：云端批量将 DXF 图纸中的标注和文本进行中英文及多语种互译。',
+    description: 'Objective reviews & direct portal: Batch translate text and annotations inside DXF drawings across multiple languages.',
     detailDesc: 'Review localization servers that batch-translate text and block attributes in dxf files without corrupting coordinate parameters, outputting correctly encoded SHX formatting.',
     category: 'troubleshoot',
     status: 'released',
@@ -915,7 +915,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'online-skp-to-fbx-cloud-converter',
     title: 'Online SketchUp SKP to FBX Render Mesh Converter',
-    description: '客观评测与直达：云端将 SketchUp 场景（SKP）转换为带贴图材质的 FBX 渲染网格文件。',
+    description: 'Objective reviews & direct portal: Export SketchUp (.SKP) scenes to FBX meshes with intact texture coordinate mapping.',
     detailDesc: 'Evaluate cloud polygonization utilities that take architectural SKP files and output render-ready FBX models with matching texture coordinates, ready for Twinmotion or Lumion rendering.',
     category: 'converter',
     status: 'released',

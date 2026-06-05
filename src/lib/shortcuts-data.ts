@@ -12,10 +12,10 @@ export interface ShortcutItem {
 
 export const SHORTCUT_CATEGORIES = [
   { id: 'all', name: 'All Shortcuts' },
-  { id: 'draw', name: 'Draw (绘图)' },
-  { id: 'modify', name: 'Modify (修改)' },
-  { id: 'annotate', name: 'Annotate & Dimension (标注/文字)' },
-  { id: 'utility', name: 'Utility & Tools (工具/设置)' },
+  { id: 'draw', name: 'Draw Commands' },
+  { id: 'modify', name: 'Modify Commands' },
+  { id: 'annotate', name: 'Annotate & Dimension' },
+  { id: 'utility', name: 'Utility & Settings' },
 ] as const;
 
 export const SHORTCUTS_DATA: ShortcutItem[] = [

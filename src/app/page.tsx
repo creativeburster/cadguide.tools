@@ -266,7 +266,7 @@ function HomeBody() {
 
             {/* Tool 2 */}
             <Link
-              href="/toolbox/shortcuts"
+              href="/guides/shortcuts"
               className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
             >
               <div>

@@ -15,9 +15,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     return {};
   }
 
-  const prefix = tool.origin === 'third-party' ? 'Best Online' : 'Free Online';
   return pageMetadata({
-    title: `${prefix} ${tool.title} & Evaluation Guide`,
+    title: `${tool.title} ${tool.origin === 'third-party' ? 'Specs' : 'Utility'}`,
     description: tool.description,
     path: `/toolbox/${slug}`,
   });

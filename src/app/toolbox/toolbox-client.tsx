@@ -83,7 +83,7 @@ export default function ToolboxClient() {
           filteredTools.map((item) => (
             <Link
               key={item.slug}
-              href={`/toolbox/${item.slug}`}
+              href={item.category === 'cheatsheet' ? `/guides/${item.slug}` : `/toolbox/${item.slug}`}
               className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 overflow-hidden"
             >
               {/* Decorative gradient corner */}

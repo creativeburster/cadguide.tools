@@ -1,19 +1,19 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
-import DwgVersionCheckerClient from './checker-client';
+import CADShortcutsClient from './shortcuts-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'DWG Version Checker & Compatibility Matrix',
+  title: 'Ultimate CAD Shortcuts & Cheat Sheet',
   description:
-    'Identify your CAD DWG file version instantly. Upload or drag-and-drop a .dwg drawing to detect its AutoCAD format (e.g. AC1032, AC1027) and test software support tables.',
-  path: '/toolbox/dwg-version-checker',
+    'Search and compare essential drafting command shortcuts across AutoCAD, GstarCAD, ZWCAD, and DWG FastView. Print the optimized cheat sheet instantly.',
+  path: '/guides/shortcuts',
 });
 
-export default function DwgVersionCheckerPage() {
+export default function CADShortcutsPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
-    { name: 'Toolbox', path: '/toolbox' },
-    { name: 'DWG Version Checker', path: '/toolbox/dwg-version-checker' },
+    { name: 'Guides', path: '/guides' },
+    { name: 'CAD Shortcuts Cheat Sheet', path: '/guides/shortcuts' },
   ]);
 
   return (
@@ -32,20 +32,20 @@ export default function DwgVersionCheckerPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Free Utility
+              Free Cheat Sheet
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              AutoCAD <span className="text-blue-400">DWG Version</span> Checker
+              Cross-Platform <span className="text-blue-400">CAD Shortcuts</span> Matrix
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
-              Struggling to open a drawing file? Drag and drop your `.dwg` file here to instantly identify its internal release version and check software compatibility without uploading.
+              Compare drafting keyboard shortcuts across AutoCAD, GstarCAD, ZWCAD, and DWG FastView side-by-side. Find commands, copy aliases, or print the layout as your office desk cheat sheet.
             </p>
           </div>
         </section>
 
         {/* Main Content Component */}
         <section className="py-16 max-w-[1000px] mx-auto px-6 md:px-12">
-          <DwgVersionCheckerClient />
+          <CADShortcutsClient />
         </section>
       </main>
     </>
