@@ -381,7 +381,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Identify unknown missing fonts on drawing opening and download/map safe SHX substitutes.',
     detailDesc: 'When opening drawings with question marks (?) on Chinese/Japanese text or missing symbols, enter the missing font name. Matches it to standard substitutes like gbcbig.shx or hztxt.shx.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'native',
     keywords: ['missing shx font', 'cad text question mark', 'gbcbig shx download', 'font substitution map']
   },
@@ -585,7 +586,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：云端修复损坏、打不开或提示 "Drawing file is not valid" 的 DWG 文件。',
     detailDesc: 'When drawings get corrupt and local RECOVER commands fail, cloud recovery services can reconstruct the drawing database. We review portals that repair header metadata and salvage drawing layers.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['repair corrupt dwg', 'drawing file is not valid online', 'recover broken cad drawing', 'dwg header repair cloud']
   },
@@ -648,7 +650,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：为企业 IT 阻断 CAD 软件的静默联网遥测与反盗版合规回传。',
     detailDesc: 'Evaluate firewall config builders and network scripts that restrict AutoCAD or SolidWorks from making silent outbound telemetry calls, preventing audits and network licensing server timeouts.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['block autodesk telemetry', 'solidworks license check block', 'cad firewall rules builder', 'network license security']
   },
@@ -658,7 +661,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线将 AutoLISP 源代码加密编译为 FAS 或 VLX 字节码保护知识产权。',
     detailDesc: 'If you want to protect your custom LISP scripts from plagiarism before distribution, use these online compilation wizards to convert ASCII .lsp scripts into compiled .fas executable blocks.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['encrypt lisp code', 'compile lsp to fas online', 'autolisp code protector', 'vlx script compiler']
   },
@@ -668,7 +672,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线上传 Revit 族文件 (.rfa) 审计其图元数据、垃圾积压及共享参数。',
     detailDesc: 'Benchmark online BIM auditors that inspect Revit family files for redundant parameters, unpurged objects, and parameter naming compliance, optimizing BIM models performance before ingestion.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['revit family auditor', 'rfa file check online', 'shared parameters compliance', 'bim model optimization']
   },
@@ -744,7 +749,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：企业如何应对 Autodesk 或 SolidWorks 的反盗版合规审查与罚款。',
     detailDesc: 'We review defensive legal checklists, license scanning utilities, and network proxy setups that help enterprise SAM administrators identify and resolve unlicensed software liabilities before audit letters arrive.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['autodesk license audit defense', 'solidworks anti piracy letter', 'cad compliance shield', 'unlicensed software audit help']
   },
@@ -765,7 +771,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：云端批量将 DXF 图纸中的标注和文本进行中英文及多语种互译。',
     detailDesc: 'Review localization servers that batch-translate text and block attributes in dxf files without corrupting coordinate parameters, outputting correctly encoded SHX formatting.',
     category: 'troubleshoot',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['translate cad drawing online', 'translate dxf text', 'dwg multi language localization', 'shx text translation']
   },
