@@ -637,7 +637,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: '客观评测与直达：在线将三维工程格式 (STEP) 转换为适合 3D 打印的 STL 网格。',
     detailDesc: 'Benchmark converters that handle high-fidelity parametric STEP models, converting them to optimized polygonal STL meshes while letting you control chordal deviation and slice limits.',
     category: 'converter',
-    status: 'coming-soon',
+    status: 'released',
+    releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['step to stl converter', 'mesh resolution optimizer', '3d printing export cloud', 'parametric stl slicer']
   },
