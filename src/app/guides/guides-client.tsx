@@ -24,8 +24,31 @@ import {
   getLocalizedTitle,
 } from '@/lib/guides-data';
 
+const cheatsheetRedirects: Record<string, string> = {
+  'cross-platform cad shortcuts matrix': '/guides/shortcuts',
+  'solidworks essential keyboard shortcuts list': '/guides/solidworks-shortcuts-sheet',
+  'rhino 3d shortcut keys & command aliases guide': '/guides/rhino-shortcuts-sheet',
+  'revit keyboard shortcuts & command codes table': '/guides/revit-shortcuts-sheet',
+  'sketchup pro quick reference hotkeys cheat sheet': '/guides/sketchup-shortcuts-sheet',
+  'autodesk inventor keyboard shortcuts reference': '/guides/inventor-shortcuts-sheet',
+  'bentley microstation v8i keyboard shortcuts guide': '/guides/microstation-shortcuts-sheet',
+  'graphisoft archicad keyboard shortcuts chart': '/guides/archicad-shortcuts-sheet',
+  'dassault catia v5/v6 key shortcuts table': '/guides/catia-shortcuts-sheet',
+  'ptc creo parametric shortcut keys reference': '/guides/creo-shortcuts-sheet',
+  'freecad open-source cad hotkeys & mouse navigation': '/guides/freecad-shortcuts-sheet',
+  'autodesk fusion 360 keyboard hotkeys reference': '/guides/fusion360-shortcuts-sheet',
+  'draftsight keyboard shortcuts & command aliases': '/guides/draftsight-shortcuts-sheet',
+  'bricscad hotkeys & command customization guide': '/guides/bricscad-shortcuts-sheet',
+  'vectorworks keyboard shortcuts reference chart': '/guides/vectorworks-shortcuts-sheet',
+  'autocad vs. gstarcad shortcut command diff table': '/guides/autocad-vs-gstarcad-shortcuts',
+  'autocad vs. zwcad command shortcut diff guide': '/guides/autocad-vs-zwcad-shortcuts'
+};
+
 export const getProgrammaticLink = (title: string, forcedToolSlug?: string): string => {
-  const titleLower = title.toLowerCase();
+  const titleLower = title.toLowerCase().trim();
+  if (cheatsheetRedirects[titleLower]) {
+    return cheatsheetRedirects[titleLower];
+  }
   
   // Find matching tool
   const matchedTool = [...tools]
@@ -70,6 +93,10 @@ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const mockDirectoryLinks: Record<string, string[]> = {
   'A': [
+    'Autodesk Inventor Keyboard Shortcuts Reference',
+    'Autodesk Fusion 360 Keyboard Hotkeys Reference',
+    'AutoCAD vs. GstarCAD Shortcut Command Diff Table',
+    'AutoCAD vs. ZWCAD Command Shortcut Diff Guide',
     'AutoCAD Fatal Error 0x0024 Fix',
     'AutoCAD License Activation Registry Patch',
     'ANSI Layer Naming Standards',
@@ -78,6 +105,8 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'AutoCAD for Mac Licensing Solutions'
   ],
   'B': [
+    'BricsCAD Hotkeys & Command Customization Guide',
+    'Bentley MicroStation V8i Keyboard Shortcuts Guide',
     'BricsCAD Pro Crossover Migration Guide',
     'Batch Plotting Multi-Sheet Configurations',
     'BIM Collaboration Format (BCF) Standards',
@@ -85,6 +114,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Budgeting CAD Software Named User Seats'
   ],
   'C': [
+    'Cross-Platform CAD Shortcuts Matrix',
     'Crash on Launch troubleshooting for Revit',
     'CTB Custom Pen tables and Line Weights',
     'Concurrent FLEXlm License Server Setup',
@@ -92,6 +122,8 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Civil 3D Corridor Modeling Best Practices'
   ],
   'D': [
+    'DraftSight Keyboard Shortcuts & Command Aliases',
+    'Dassault CATIA V5/V6 Key Shortcuts Table',
     'DraftSight High-Speed Printing Setup',
     'DWG File Recovery and Audit Pathways',
     'Drawing Scale Coefficients and Sheet Layouts',
@@ -104,12 +136,13 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'EDA Software Licensing and Server Configuration'
   ],
   'F': [
-    'FLEXlm Server Daemon Ports Configuration',
+    'FreeCAD Open-Source CAD Hotkeys & Mouse Navigation',
     'FreeCAD Custom Workstation Settings',
     'Freemium CAD Hidden Commercial Liabilities',
     'Fusion 360 Cloud Storage Offline Sync'
   ],
   'G': [
+    'Graphisoft Archicad Keyboard Shortcuts Chart',
     'GstarCAD Custom Menu and Hatch Import',
     'GPL Compliance for Open Source CAD Kernels',
     'GPU Hardware Acceleration Optimization',
@@ -163,6 +196,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Onshape Free Document Privacy Legal Risks'
   ],
   'P': [
+    'PTC Creo Parametric Shortcut Keys Reference',
     'Perpetual Buyout vs SaaS Rental Cost Analysis',
     'Plotting Pen Weight Standards (ANSI/ISO)',
     'Parametric Model Integrity and STEP Export',
@@ -174,12 +208,16 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Quality Assurance Guidelines for Drafting Teams'
   ],
   'R': [
+    'Rhino 3D Shortcut Keys & Command Aliases Guide',
+    'Revit Keyboard Shortcuts & Command Codes Table',
     'Registry Port Conflict Troubleshooting (2080)',
     'Revit Crash on Launch Recovery Manual',
     'Restoring Unsaved Temporary Drawing Backups',
     'Reclaiming Custom LISP Menus and Command Aliases'
   ],
   'S': [
+    'SolidWorks Essential Keyboard Shortcuts List',
+    'SketchUp Pro Quick Reference Hotkeys Cheat Sheet',
     'SolidWorks Seat Allocation and compliance',
     'SSO SAML 2.0 Named User Account Setup',
     'Silent Command Directives for Silent Deployments',
@@ -197,6 +235,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'USB Dongle Licensing Driver Troubleshooting'
   ],
   'V': [
+    'Vectorworks Keyboard Shortcuts Reference Chart',
     'Version Compatibility of DWG Formats',
     'Vector Weight and Pen Priority Tables',
     'Virtualization of Memory on Windows 11 CAD'
@@ -823,7 +862,8 @@ export default function GuidesClient() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                     {activeAlphabetList.map((item, idx) => {
-                      const displayItem = selectedTool 
+                      const isCheatsheet = Object.keys(cheatsheetRedirects).includes(item.toLowerCase().trim());
+                      const displayItem = (selectedTool && !isCheatsheet)
                         ? getLocalizedTitle(item, 'all', selectedTool)
                         : item;
                       return (
