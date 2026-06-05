@@ -35,7 +35,7 @@ export default function FreeCADPage() {
               FreeCAD <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              开源三维建模极客速查。收录 FreeCAD 零部件、草图约束与视图导航键盘热键，完美适配 A4 纸张打印。
+              开源三维建模极客速查. 收录 FreeCAD 零部件, 草图约束与视图导航键盘热键, 完美适配 A4 纸张打印. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function FreeCADPage() {
         </section>
       </main>
     </>
-  );
+);
 }

@@ -82,7 +82,7 @@ export default function ShortcutCheatsheetClient({
       {/* 快捷键搜索与多 Tab 筛选列表 */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm print:shadow-none print:border-none print:p-0">
         
-        {/* 控制排版：搜索与下载/打印按钮 */}
+        {/* 控制排版: 搜索与下载/打印按钮 */}
         <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-6 print:hidden">
           <div className="relative flex-1 max-w-md">
             <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -106,7 +106,7 @@ export default function ShortcutCheatsheetClient({
                 <Download className="w-4 h-4" />
                 下载别名配置
               </button>
-            )}
+)}
             <button
               onClick={handlePrint}
               className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md transition-all cursor-pointer"
@@ -141,7 +141,7 @@ export default function ShortcutCheatsheetClient({
             >
               {cat.name}
             </button>
-          ))}
+))}
         </div>
 
         {/* 快捷键呈现表格 */}
@@ -170,21 +170,21 @@ export default function ShortcutCheatsheetClient({
                       {item.command}
                       {isCopied === idx ? (
                         <Check className="w-3.5 h-3.5 text-emerald-500" />
-                      ) : (
+) : (
                         <span className="text-[9px] font-bold text-slate-300 opacity-0 group-hover:opacity-100 print:hidden">复制</span>
-                      )}
+)}
                     </span>
                   </td>
                   <td className="py-3 px-4 text-slate-500 font-medium leading-relaxed">{item.description}</td>
                 </tr>
-              ))}
+))}
               {filteredShortcuts.length === 0 && (
                 <tr>
                   <td colSpan={3} className="py-8 text-center text-slate-400 font-medium">
-                    未找到匹配该关键字的快捷键，请尝试其他词汇。
+                    未找到匹配该关键字的快捷键, 请尝试其他词汇. 
                   </td>
                 </tr>
-              )}
+)}
             </tbody>
           </table>
         </div>
@@ -250,12 +250,12 @@ export default function ShortcutCheatsheetClient({
                 </h4>
                 <p className="pl-3">{tip.content}</p>
               </div>
-            ))}
+))}
           </div>
         </div>
-      )}
+)}
 
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

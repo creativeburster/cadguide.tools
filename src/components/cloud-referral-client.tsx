@@ -48,7 +48,7 @@ export default function CloudReferralClient({
       <div className="grid md:grid-cols-3 gap-8 items-start">
         <div className="md:col-span-2 space-y-4">
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-            为何需要专业转换与评测？
+            为何需要专业转换与评测? 
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed font-semibold">
             {painPointDesc}
@@ -59,7 +59,7 @@ export default function CloudReferralClient({
             Referral Audit Standard
           </h4>
           <p className="text-[11px] text-slate-500 leading-relaxed font-bold">
-            我们针对全球各主流 CAD 云服务商进行了性能测试，所有推荐均经过真实可用性评估。链接直达官方渠道，绝不进行恶意中间重定向。
+            我们针对全球各主流 CAD 云服务商进行了性能测试, 所有推荐均经过真实可用性评估. 链接直达官方渠道, 绝不进行恶意中间重定向. 
           </p>
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function CloudReferralClient({
               推荐云端转换工具与服务评测矩阵
             </h2>
             <p className="text-xs text-slate-500 font-bold mt-1">
-              由 CAD 专家根据转换保真度、运行速度及隐私系数综合打分评估
+              由 CAD 专家根据转换保真度, 运行速度及隐私系数综合打分评估
             </p>
           </div>
           <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-100 print:hidden">
@@ -125,7 +125,7 @@ export default function CloudReferralClient({
                         {'★'.repeat(m.score)}{'☆'.repeat(5 - m.score)}
                       </span>
                     </div>
-                  ))}
+))}
                 </div>
 
                 {/* Pros and Cons */}
@@ -140,7 +140,7 @@ export default function CloudReferralClient({
                         <span className="text-emerald-500 font-black">✓</span>
                         <span>{pro}</span>
                       </div>
-                    ))}
+))}
                   </div>
 
                   {/* Cons */}
@@ -153,7 +153,7 @@ export default function CloudReferralClient({
                         <span className="text-rose-500 font-black">×</span>
                         <span>{con}</span>
                       </div>
-                    ))}
+))}
                   </div>
                 </div>
 
@@ -186,7 +186,7 @@ export default function CloudReferralClient({
                 </button>
               </div>
             </div>
-          ))}
+))}
         </div>
       </div>
 
@@ -208,7 +208,7 @@ export default function CloudReferralClient({
                 {bp.desc}
               </p>
             </div>
-          ))}
+))}
         </div>
       </div>
 
@@ -235,7 +235,7 @@ export default function CloudReferralClient({
                 {faq.answer}
               </p>
             </details>
-          ))}
+))}
         </div>
       </div>
 
@@ -243,11 +243,11 @@ export default function CloudReferralClient({
       <NewsletterSubscribe
         variant="banner"
         title="订阅我们的企业 CAD 极客内参"
-        description="每月为您推送最新的企业防遥测配置、主流工具的优惠分销礼券、以及防盗版审计合规白皮书。"
+        description="每月为您推送最新的企业防遥测配置, 主流工具的优惠分销礼券, 以及防盗版审计合规白皮书. "
         buttonText="免费订阅内参"
         placeholder="输入您的企业电子邮箱"
         className="mt-8 print:hidden"
       />
     </div>
-  );
+);
 }

@@ -35,7 +35,7 @@ export default function VectorworksProPage() {
               Vectorworks Pro <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              舞美、景观与高端建筑设计利器。提供 Vectorworks 智能吸附、绘图坐标变换与图层组合快捷键。
+              舞美, 景观与高端建筑设计利器. 提供 Vectorworks 智能吸附, 绘图坐标变换与图层组合快捷键. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function VectorworksProPage() {
         </section>
       </main>
     </>
-  );
+);
 }

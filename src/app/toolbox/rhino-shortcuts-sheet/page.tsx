@@ -35,7 +35,7 @@ export default function Rhino3DPage() {
               Rhino 3D <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              工业设计与曲面建模效率利器。精选 Rhino 键盘热键、视图切换指令，支持快速搜索及 PDF 打印备忘录。
+              工业设计与曲面建模效率利器. 精选 Rhino 键盘热键, 视图切换指令, 支持快速搜索及 PDF 打印备忘录. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function Rhino3DPage() {
         </section>
       </main>
     </>
-  );
+);
 }

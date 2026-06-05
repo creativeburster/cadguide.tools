@@ -35,7 +35,7 @@ export default function DassaultDraftSightPage() {
               Dassault DraftSight <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              AutoCAD 平替高性价比方案。整理 DraftSight 2D 绘图快捷别名、层表管理命令与视口配置。
+              AutoCAD 平替高性价比方案. 整理 DraftSight 2D 绘图快捷别名, 层表管理命令与视口配置. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function DassaultDraftSightPage() {
         </section>
       </main>
     </>
-  );
+);
 }

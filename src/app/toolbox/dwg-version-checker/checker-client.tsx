@@ -236,19 +236,19 @@ export default function DwgVersionCheckerClient() {
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
             ● Read & Write (Full)
           </span>
-        );
+);
       case 'partial':
         return (
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-amber-500/10 text-amber-600 border border-amber-500/20">
             ▲ Read Only / Viewer
           </span>
-        );
+);
       case 'none':
         return (
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-rose-500/10 text-rose-600 border border-rose-500/20">
             × Unsupported
           </span>
-        );
+);
     }
   };
 
@@ -301,7 +301,7 @@ export default function DwgVersionCheckerClient() {
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mb-4"></div>
           <p className="text-sm text-slate-500 font-bold">Analyzing file bytes...</p>
         </div>
-      )}
+)}
 
       {/* Error State */}
       {error && (
@@ -312,7 +312,7 @@ export default function DwgVersionCheckerClient() {
             <p className="text-sm text-rose-600">{error}</p>
           </div>
         </div>
-      )}
+)}
 
       {/* Result Display */}
       {result && (
@@ -329,7 +329,7 @@ export default function DwgVersionCheckerClient() {
                 <p className="text-sm text-slate-500 mt-2 font-medium">
                   File: <span className="text-slate-800 font-bold">{fileName}</span> ({fileSize})
                 </p>
-              )}
+)}
             </div>
             <div className="bg-slate-50 px-6 py-4 rounded-2xl border border-slate-100 text-center md:text-right">
               <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Released Year</div>
@@ -388,7 +388,7 @@ export default function DwgVersionCheckerClient() {
             </div>
           </div>
         </div>
-      )}
+)}
 
       {/* Manual Selection Dropdown */}
       <div className="bg-slate-50 rounded-3xl border border-slate-100 p-8 space-y-6">
@@ -413,7 +413,7 @@ export default function DwgVersionCheckerClient() {
             >
               {code} ({VERSION_MAP[code].year.split(' ')[0]})
             </button>
-          ))}
+))}
         </div>
       </div>
 
@@ -436,7 +436,7 @@ export default function DwgVersionCheckerClient() {
           <div className="bg-white border border-slate-100 rounded-2xl p-6">
             <h4 className="font-bold text-slate-800 mb-2">Are alternative CAD tools 100% compatible?</h4>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Modern IntelliCAD and ODA-based engines (GstarCAD, ZWCAD, etc.) are native DWG systems. They can read and write standard DWG formats directly without conversion, matching Autodesk’s structural fidelity.
+              Modern IntelliCAD and ODA-based engines (GstarCAD, ZWCAD, etc.) are native DWG systems. They can read and write standard DWG formats directly without conversion, matching Autodesk's structural fidelity.
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6">
@@ -458,5 +458,5 @@ export default function DwgVersionCheckerClient() {
         className="mt-8"
       />
     </div>
-  );
+);
 }

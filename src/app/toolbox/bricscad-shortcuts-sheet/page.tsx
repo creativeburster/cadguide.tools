@@ -35,7 +35,7 @@ export default function HexagonBricsCADPage() {
               Hexagon BricsCAD <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              高性能专业 2D/3D CAD。收录 BricsCAD 智能 Quad 快捷工具盘命令、多段线和三维轴侧速查。
+              高性能专业 2D/3D CAD. 收录 BricsCAD 智能 Quad 快捷工具盘命令, 多段线和三维轴侧速查. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function HexagonBricsCADPage() {
         </section>
       </main>
     </>
-  );
+);
 }

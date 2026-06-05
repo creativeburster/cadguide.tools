@@ -11,10 +11,10 @@ const DRAWING_UNITS = [
 ];
 
 const HATCH_PATTERNS = [
-  { name: 'ANSI31 (斜平行线 / Iron-Steel)', key: 'ansi31', baseSpacing: 6, desc: '标准金属、剖面线' },
-  { name: 'NET (网格线 / Grid-Tile)', key: 'net', baseSpacing: 10, desc: '瓷砖、防滑网格' },
-  { name: 'AR-CONC (混凝土 / Concrete)', key: 'arconc', baseSpacing: 16, desc: '粗集料、水泥沙浆' },
-  { name: 'GRAVEL (碎石 / Pebbles)', key: 'gravel', baseSpacing: 20, desc: '鹅卵石填料、散水' },
+  { name: 'ANSI31 (斜平行线 / Iron-Steel)', key: 'ansi31', baseSpacing: 6, desc: '标准金属, 剖面线' },
+  { name: 'NET (网格线 / Grid-Tile)', key: 'net', baseSpacing: 10, desc: '瓷砖, 防滑网格' },
+  { name: 'AR-CONC (混凝土 / Concrete)', key: 'arconc', baseSpacing: 16, desc: '粗集料, 水泥沙浆' },
+  { name: 'GRAVEL (碎石 / Pebbles)', key: 'gravel', baseSpacing: 20, desc: '鹅卵石填料, 散水' },
 ];
 
 export default function HatchScaleClient() {
@@ -63,28 +63,28 @@ export default function HatchScaleClient() {
         level: 'danger',
         label: 'MAXHATCH 崩溃危险 (Too Dense)',
         color: 'text-red-500 border-red-500/20 bg-red-500/10',
-        desc: '线段密度极大！容易触发 AutoCAD MAXHATCH 限制（默认 100,000 条线），这会导致图纸保存卡死、视口闪退或强制转换为 Solid 填充。'
+        desc: '线段密度极大! 容易触发 AutoCAD MAXHATCH 限制 (默认 100,000 条线) , 这会导致图纸保存卡死, 视口闪退或强制转换为 Solid 填充. '
       };
     } else if (ratio < 0.35) {
       return {
         level: 'warning',
         label: '密度过大 (Relatively Dense)',
         color: 'text-amber-500 border-amber-500/20 bg-amber-500/10',
-        desc: '填充较密，在打印或视口缩放时会导致严重的 CPU 渲染卡顿，文件体积会有所膨胀。建议适当调大比例。'
+        desc: '填充较密, 在打印或视口缩放时会导致严重的 CPU 渲染卡顿, 文件体积会有所膨胀. 建议适当调大比例. '
       };
     } else if (ratio > 8.0) {
       return {
         level: 'empty',
         label: '图案过稀或空白 (Too Sparse)',
         color: 'text-sky-500 border-sky-500/20 bg-sky-500/10',
-        desc: '填充图案比例过大，填充线之间间距过宽，在视口中可能呈现为空白（看不见填充线条），让人误以为填充丢失。'
+        desc: '填充图案比例过大, 填充线之间间距过宽, 在视口中可能呈现为空白 (看不见填充线条) , 让人误以为填充丢失. '
       };
     } else {
       return {
         level: 'safe',
         label: '完美匹配 (Optimal Density)',
         color: 'text-emerald-500 border-emerald-500/20 bg-emerald-500/10',
-        desc: '当前比例符合该图纸打印比例，出图线条宽度及渲染性能达到最优状态。'
+        desc: '当前比例符合该图纸打印比例, 出图线条宽度及渲染性能达到最优状态. '
       };
     }
   }, [hatchScale, recommendation, currentUnit]);
@@ -259,7 +259,7 @@ Generated via CADGuide.tools`;
               <option key={u.key} value={i}>
                 {u.name}
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             绘图单位: {currentUnit.name}
@@ -307,7 +307,7 @@ Generated via CADGuide.tools`;
               >
                 {p.name}
               </button>
-            ))}
+))}
           </div>
           <div className="hidden print:block font-bold">
             填充样式: {currentPattern.name}
@@ -386,7 +386,7 @@ Generated via CADGuide.tools`;
                 {recommendation.minSafe.toFixed(3)} 至 {recommendation.maxSafe.toFixed(3)}
               </div>
               <div className="text-[9px] text-slate-400">
-                如果低于最小安全比例，极易导致图纸卡顿崩溃！
+                如果低于最小安全比例, 极易导致图纸卡顿崩溃! 
               </div>
             </div>
           </div>
@@ -424,7 +424,7 @@ Generated via CADGuide.tools`;
           <div className="text-[9.5px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2 print:text-slate-600">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>崩溃原理提示：</strong>在 AutoCAD 中，如果 Hatch 比例太小，软件会自动触发 `HPMAXLINES` (默认 100000) 警报。为了防止崩溃，CAD 会将填充强行渲染为 solid (纯色)，或引发长达数分钟的运算死锁。请务必使用优化器提供的安全范围！
+              <strong>崩溃原理提示: </strong>在 AutoCAD 中, 如果 Hatch 比例太小, 软件会自动触发 `HPMAXLINES` (默认 100000) 警报. 为了防止崩溃, CAD 会将填充强行渲染为 solid (纯色), 或引发长达数分钟的运算死锁. 请务必使用优化器提供的安全范围! 
             </span>
           </div>
         </div>
@@ -434,5 +434,5 @@ Generated via CADGuide.tools`;
         <NewsletterSubscribe />
       </div>
     </div>
-  );
+);
 }

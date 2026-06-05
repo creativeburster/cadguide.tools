@@ -63,7 +63,7 @@ export default function ShortcutDiffClient({
       {/* 核心比对与搜索区 */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm print:shadow-none print:border-none print:p-0">
         
-        {/* 控制面板：搜索、过滤与打印 */}
+        {/* 控制面板: 搜索, 过滤与打印 */}
         <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-6 print:hidden">
           <div className="relative flex-grow max-w-md">
             <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -158,7 +158,7 @@ export default function ShortcutDiffClient({
                       {item.primaryCmd}
                       {copiedIndex?.row === idx && copiedIndex?.app === 'primary' && (
                         <Check className="w-3.5 h-3.5 text-emerald-500" />
-                      )}
+)}
                     </span>
                   </td>
 
@@ -173,7 +173,7 @@ export default function ShortcutDiffClient({
                       {item.secondaryCmd}
                       {copiedIndex?.row === idx && copiedIndex?.app === 'secondary' && (
                         <Check className="w-3.5 h-3.5 text-emerald-500" />
-                      )}
+)}
                     </span>
                   </td>
 
@@ -184,12 +184,12 @@ export default function ShortcutDiffClient({
                         <Check className="w-3 h-3" />
                         完全一致
                       </span>
-                    ) : (
+) : (
                       <span className="inline-flex items-center gap-1 text-[10px] font-black text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-100">
                         <AlertTriangle className="w-3 h-3" />
                         存在差异
                       </span>
-                    )}
+)}
                   </td>
 
                   {/* Descriptions */}
@@ -199,17 +199,17 @@ export default function ShortcutDiffClient({
                       <div className="text-rose-600/80 font-medium mt-1 text-[10px] bg-rose-50/50 p-2 rounded-lg border border-rose-100/30">
                         ⚠️ {item.diffNote}
                       </div>
-                    )}
+)}
                   </td>
                 </tr>
-              ))}
+))}
               {filteredData.length === 0 && (
                 <tr>
                   <td colSpan={5} className="py-8 text-center text-slate-400 font-medium">
-                    无匹配的比对指令。
+                    无匹配的比对指令. 
                   </td>
                 </tr>
-              )}
+)}
             </tbody>
           </table>
         </div>
@@ -272,7 +272,7 @@ export default function ShortcutDiffClient({
               1. 99% 的常用命令肌肉记忆完全通用
             </h4>
             <p>
-              浩辰 CAD (GstarCAD) 与中望 CAD (ZWCAD) 在开发之初便深度对标 AutoCAD。几乎所有的高频绘图别名（如 L-直线、C-圆、CO-复制、M-移动、RO-旋转）均 100% 相同。设计师无需担心更换平台引起绘图速度下降。
+              浩辰 CAD (GstarCAD) 与中望 CAD (ZWCAD) 在开发之初便深度对标 AutoCAD. 几乎所有的高频绘图别名 (如 L-直线, C-圆, CO-复制, M-移动, RO-旋转) 均 100% 相同. 设计师无需担心更换平台引起绘图速度下降. 
             </p>
           </div>
           <div>
@@ -281,7 +281,7 @@ export default function ShortcutDiffClient({
               2. 导入已有 pgp 别名实现 100% 同步
             </h4>
             <p>
-              如果您有高度客制化的 `acad.pgp` 别名配置，完全不用在国产 CAD 里手动重新配置。直接在国产 CAD 的“工具 ➔ 自定义 ➔ 编辑程序别名 (PGP)”中，将您的 `acad.pgp` 文本复制粘贴覆盖进去，或者加载我们 Tool 1 生成的自定义 PGP，即可瞬间恢复您多年积攒的键盘别名习惯。
+              如果您有高度客制化的 `acad.pgp` 别名配置, 完全不用在国产 CAD 里手动重新配置. 直接在国产 CAD 的"工具 ➔ 自定义 ➔ 编辑程序别名 (PGP)"中, 将您的 `acad.pgp` 文本复制粘贴覆盖进去, 或者加载我们 Tool 1 生成的自定义 PGP, 即可瞬间恢复您多年积攒的键盘别名习惯. 
             </p>
           </div>
           <div>
@@ -290,7 +290,7 @@ export default function ShortcutDiffClient({
               3. 独有命令别名与特殊替换
             </h4>
             <p>
-              某些软件有其独特的平台特性，例如 GstarCAD 拥有独特的图纸工作空间切换指令 `GWS`，而 ZWCAD 则有独特的智能选择指令。针对比对中标记为 **“存在差异”** 的项目，请多加留心并在实际图纸绘制中稍作肌肉记忆微调。
+              某些软件有其独特的平台特性, 例如 GstarCAD 拥有独特的图纸工作空间切换指令 `GWS`, 而 ZWCAD 则有独特的智能选择指令. 针对比对中标记为 **"存在差异"** 的项目, 请多加留心并在实际图纸绘制中稍作肌肉记忆微调. 
             </p>
           </div>
         </div>
@@ -298,5 +298,5 @@ export default function ShortcutDiffClient({
 
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

@@ -35,7 +35,7 @@ export default function DassaultCATIAPage() {
               Dassault CATIA <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              航空与高端制造机械装配。整理 CATIA 零件草图设计、轴心约束与三维视口拖拽，打印优化。
+              航空与高端制造机械装配. 整理 CATIA 零件草图设计, 轴心约束与三维视口拖拽, 打印优化. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function DassaultCATIAPage() {
         </section>
       </main>
     </>
-  );
+);
 }

@@ -39,13 +39,13 @@ export default function DrawingLagCleanerClient() {
     if (cleanScalelist) {
       internalCommands += `  (princ "\\n正在重置多余的注释比例列表 (Scale List Edit)...")
   (if (dictremove (namedobjdict) "ACAD_SCALELIST")
-    (princ "\\n✓ 比例列表字典重置成功。")
-    (princ "\\n- 未检测到冗余比例字典。")
-  )\n`;
+    (princ "\\n✓ 比例列表字典重置成功. ")
+    (princ "\\n- 未检测到冗余比例字典. ")
+)\n`;
     }
 
     if (cleanOrphanBlock) {
-      internalCommands += `  (princ "\\n正在执行三轮强力 PURGE 清理孤立块、图层与线型...")
+      internalCommands += `  (princ "\\n正在执行三轮强力 PURGE 清理孤立块, 图层与线型...")
   (command "-PURGE" "A" "*" "N")
   (command "-PURGE" "A" "*" "N")
   (command "-PURGE" "A" "*" "N")\n`;
@@ -73,11 +73,11 @@ ${internalCommands}
   (setvar "EXPERT" 0)
   (setvar "CMDECHO" 1)
   (princ "\\n==================================================")
-  (princ "\\n✓ 恭喜！图纸优化清理完毕。文件体积已显著瘦身。")
+  (princ "\\n✓ 恭喜! 图纸优化清理完毕. 文件体积已显著瘦身. ")
   (princ "\\n==================================================")
   (princ)
 )
-(princ "\\n加载成功！输入 [ CLEANDWG ] 并回车以执行深度清理。\\n") (princ)`;
+(princ "\\n加载成功! 输入 [ CLEANDWG ] 并回车以执行深度清理. \\n") (princ)`;
   }, [cleanRegapp, cleanScalelist, cleanOrphanBlock, runAudit, indexDgnLine]);
 
   const handleCopy = (text: string, id: string) => {
@@ -88,7 +88,7 @@ ${internalCommands}
 
   return (
     <div className="flex flex-col gap-8">
-      {/* 顶部动态 SVG 展示图纸优化“吸尘器”扫描效果 */}
+      {/* 顶部动态 SVG 展示图纸优化"吸尘器"扫描效果 */}
       <div className="bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/50 to-transparent pointer-events-none"></div>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 z-10 relative">
@@ -126,7 +126,7 @@ ${internalCommands}
                 <path d="M 80 40 L 120 80 M 110 30 L 70 90" stroke="#f43f5e" strokeWidth="1" strokeDasharray="1 2" opacity="0.6" />
                 <circle cx="280" cy="50" r="15" fill="none" stroke="#f43f5e" strokeWidth="1" strokeDasharray="2 2" opacity="0.5" />
               </>
-            )}
+)}
             
             {/* Cleaned entities */}
             <path d="M 180 80 Q 250 30 320 80 M 150 50 L 380 50" stroke="#10b981" strokeWidth="1.5" />
@@ -157,7 +157,7 @@ ${internalCommands}
       {/* 主面板布局 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* 左侧：卡顿特征选择配置 */}
+        {/* 左侧: 卡顿特征选择配置 */}
         <div className="lg:col-span-1 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-5">
             <h3 className="text-slate-800 font-black text-base tracking-tight flex items-center gap-2">
@@ -178,7 +178,7 @@ ${internalCommands}
                 />
                 <div className="text-xs">
                   <span className="font-bold text-slate-700 block">注册应用程序清理 (Regapps)</span>
-                  <span className="text-slate-400">针对容量虚大（几十行线有几百MB）的图纸进行深度清理。</span>
+                  <span className="text-slate-400">针对容量虚大 (几十行线有几百MB) 的图纸进行深度清理. </span>
                 </div>
               </label>
 
@@ -192,7 +192,7 @@ ${internalCommands}
                 />
                 <div className="text-xs">
                   <span className="font-bold text-slate-700 block">重置比例列表 (Scale List)</span>
-                  <span className="text-slate-400">解决视口缩放、切换布局时图纸卡住无响应数秒的现象。</span>
+                  <span className="text-slate-400">解决视口缩放, 切换布局时图纸卡住无响应数秒的现象. </span>
                 </div>
               </label>
 
@@ -206,7 +206,7 @@ ${internalCommands}
                 />
                 <div className="text-xs">
                   <span className="font-bold text-slate-700 block">强力 PURGE 冗余垃圾</span>
-                  <span className="text-slate-400">执行三轮深度 PURGE，清空隐藏在底层无关联的块和空图层。</span>
+                  <span className="text-slate-400">执行三轮深度 PURGE, 清空隐藏在底层无关联的块和空图层. </span>
                 </div>
               </label>
 
@@ -220,7 +220,7 @@ ${internalCommands}
                 />
                 <div className="text-xs">
                   <span className="font-bold text-slate-700 block">数据库物理核验 (AUDIT)</span>
-                  <span className="text-slate-400">核对三维图元节点坐标，自动删除损坏、错位的畸形数据。</span>
+                  <span className="text-slate-400">核对三维图元节点坐标, 自动删除损坏, 错位的畸形数据. </span>
                 </div>
               </label>
 
@@ -234,7 +234,7 @@ ${internalCommands}
                 />
                 <div className="text-xs">
                   <span className="font-bold text-red-500 block">脱壳 DGN 臃肿线型 (DGN Style)</span>
-                  <span className="text-slate-400">针对从 MicroStation 导入残留的超大型线型字典进行剥离。</span>
+                  <span className="text-slate-400">针对从 MicroStation 导入残留的超大型线型字典进行剥离. </span>
                 </div>
               </label>
 
@@ -242,7 +242,7 @@ ${internalCommands}
           </div>
         </div>
 
-        {/* 右侧二联：生成的 AutoLISP 代码 */}
+        {/* 右侧二联: 生成的 AutoLISP 代码 */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex-1 flex flex-col justify-between min-h-[460px]">
             
@@ -250,7 +250,7 @@ ${internalCommands}
               <div>
                 <h3 className="text-slate-900 font-black text-xl tracking-tight">AutoLISP 宏代码实时编译</h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  可在 CAD 内部以 `.lsp` 文件加载或直接在命令行中粘贴运行。
+                  可在 CAD 内部以 `.lsp` 文件加载或直接在命令行中粘贴运行. 
                 </p>
               </div>
 
@@ -275,12 +275,12 @@ ${internalCommands}
               <div className="bg-blue-50 rounded-2xl border border-blue-100 p-5 flex gap-3 text-blue-900">
                 <Zap className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <div className="text-xs leading-relaxed">
-                  <p className="font-black text-slate-800 mb-1">使用和操作指引说明：</p>
+                  <p className="font-black text-slate-800 mb-1">使用和操作指引说明: </p>
                   <ol className="list-decimal list-inside space-y-1 mt-2 text-slate-700 font-medium">
-                    <li>复制上方生成的代码，在桌面创建纯文本文件，重命名为 <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">cleandwg.lsp</span>。</li>
-                    <li>在 AutoCAD 中打开需要瘦身清理的图纸，拖动刚才保存的 `cleandwg.lsp` 文件到绘图视口中。</li>
-                    <li>在 CAD 命令栏输入：<span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">CLEANDWG</span> 并回车即可静默净化并重组图纸数据库。</li>
-                    <li><b>懒人方案</b>：也可以直接复制全部代码，在 CAD 命令行中按 Ctrl+V 粘贴直接运行。</li>
+                    <li>复制上方生成的代码, 在桌面创建纯文本文件, 重命名为 <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">cleandwg.lsp</span>. </li>
+                    <li>在 AutoCAD 中打开需要瘦身清理的图纸, 拖动刚才保存的 `cleandwg.lsp` 文件到绘图视口中. </li>
+                    <li>在 CAD 命令栏输入: <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">CLEANDWG</span> 并回车即可静默净化并重组图纸数据库. </li>
+                    <li><b>懒人方案</b>: 也可以直接复制全部代码, 在 CAD 命令行中按 Ctrl+V 粘贴直接运行. </li>
                   </ol>
                 </div>
               </div>
@@ -293,5 +293,5 @@ ${internalCommands}
 
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

@@ -33,8 +33,8 @@ const ERROR_DATABASE: ErrorPreset[] = [
     address: 'e06d7363h',
     title: 'Unhandled Exception e06d7363h (Microsoft C++ Exception)',
     source: 'Visual C++ / .NET Framework',
-    reason: '这是 AutoCAD 最常遇到的崩溃。说明 CAD 主程序在加载外部组件或调用 Windows Runtime 时，由于本地 Microsoft Visual C++ 依赖库丢失、损坏，或者 .NET Framework 版本冲突，触发了底层 C++ 运行时异常。',
-    solution: '1. 修复或重新安装全套 Microsoft Visual C++ Redistributable (2005到2022版本)。\n2. 检查 .NET Framework 4.8 或 3.5 的系统启用状态，在“启用或关闭 Windows 功能”中勾选。\n3. 安装当前 AutoCAD 的官方安全及 Bug 更新补丁 (Hotfix/Update)。',
+    reason: '这是 AutoCAD 最常遇到的崩溃. 说明 CAD 主程序在加载外部组件或调用 Windows Runtime 时, 由于本地 Microsoft Visual C++ 依赖库丢失, 损坏, 或者 .NET Framework 版本冲突, 触发了底层 C++ 运行时异常. ',
+    solution: '1. 修复或重新安装全套 Microsoft Visual C++ Redistributable (2005到2022版本). \n2. 检查 .NET Framework 4.8 或 3.5 的系统启用状态, 在"启用或关闭 Windows 功能"中勾选. \n3. 安装当前 AutoCAD 的官方安全及 Bug 更新补丁 (Hotfix/Update). ',
     command: 'DISM.exe /Online /Cleanup-Image /RestoreHealth',
     commandDesc: '在 Windows 管理员 CMD 中运行以扫描并修复受损的 Windows 系统依赖组件'
   },
@@ -42,8 +42,8 @@ const ERROR_DATABASE: ErrorPreset[] = [
     address: 'c0000005',
     title: 'Access Violation Reading/Writing Location c0000005',
     source: '内存冲突 / 显卡硬件加速',
-    reason: '表示 CAD 进程试图读取或写入未分配给它的系统内存地址。通常由于 DirectX 硬件加速模块在渲染复杂 3D 实体现型时，与您的核显/独立显卡驱动底层指令发生冲突；亦或由于本地内存条硬件微小故障、坏盘坏道引起。',
-    solution: '1. **禁用显卡硬件加速**：在 CAD 桌面快捷方式右键“属性”，在“目标”输入框末尾加上空格并追加参数 `/nohardware`（见下方复制）。这能强制让 CAD 绕过显卡直连，完成紧急启动！\n2. 升级您的显卡驱动程序到最新认证的 Studio 稳定版本，或切换为 DX11 兼容模式运行。',
+    reason: '表示 CAD 进程试图读取或写入未分配给它的系统内存地址. 通常由于 DirectX 硬件加速模块在渲染复杂 3D 实体现型时, 与您的核显/独立显卡驱动底层指令发生冲突; 亦或由于本地内存条硬件微小故障, 坏盘坏道引起. ',
+    solution: '1. **禁用显卡硬件加速**: 在 CAD 桌面快捷方式右键"属性", 在"目标"输入框末尾加上空格并追加参数 `/nohardware` (见下方复制) . 这能强制让 CAD 绕过显卡直连, 完成紧急启动! \n2. 升级您的显卡驱动程序到最新认证的 Studio 稳定版本, 或切换为 DX11 兼容模式运行. ',
     command: '"C:\\Program Files\\Autodesk\\AutoCAD 2024\\acad.exe" /product ACAD /language "zh-CN" /nohardware',
     commandDesc: '带有 /nohardware 无硬件加速紧急启动标志的 acad 快捷方式参数示例'
   },
@@ -51,17 +51,17 @@ const ERROR_DATABASE: ErrorPreset[] = [
     address: 'd3d11.dll',
     title: 'Crash module: d3d11.dll / d3d9.dll',
     source: 'Direct3D 渲染图形引擎',
-    reason: 'CAD 在调用 Direct3D 11 或 9 图形 API 时发生崩溃。常由于笔记本电脑的独显/核显双显卡切换冲突，或者当前系统使用的 DirectX 组件损坏导致。',
-    solution: '1. 强制在 Windows 显卡面板中将 acad.exe 设置为“高性能”（独立显卡模式），避免核显集显智能切换出错。\n2. 下载并安装 DirectX 最终用户运行时安装程序 (DirectX End-User Runtime) 修复环境 DLL。',
+    reason: 'CAD 在调用 Direct3D 11 或 9 图形 API 时发生崩溃. 常由于笔记本电脑的独显/核显双显卡切换冲突, 或者当前系统使用的 DirectX 组件损坏导致. ',
+    solution: '1. 强制在 Windows 显卡面板中将 acad.exe 设置为"高性能" (独立显卡模式) , 避免核显集显智能切换出错. \n2. 下载并安装 DirectX 最终用户运行时安装程序 (DirectX End-User Runtime) 修复环境 DLL. ',
     command: 'setx GSDEVICE "Dx9"',
-    commandDesc: '在 CMD 中粘贴此命令设置环境变量，可强制 CAD 降级回使用 D3D9 经典稳定引擎渲染'
+    commandDesc: '在 CMD 中粘贴此命令设置环境变量, 可强制 CAD 降级回使用 D3D9 经典稳定引擎渲染'
   },
   {
     address: '0x00000000',
     title: 'Unhandled Exception at 0x00000000',
     source: '注册表空指针或图纸损坏',
-    reason: '空指针崩溃。通常由于 AutoCAD 插件（如天正、三维插件）调用了非标准 API，或者当前的 DWG 图纸存在逻辑几何错误（如节点坐标溢出、无限图块关联），触发内存零值引用。',
-    solution: '1. **图纸修复**：在启动 CAD 后，输入 `RECOVER` 指令选择异常崩溃的 DWG 图纸进行数据库底层重构和自动修复。\n2. 暂时卸载最近安装的所有 CAD 第三方插件与 LSP 工具，确认是否为插件引起。'
+    reason: '空指针崩溃. 通常由于 AutoCAD 插件 (如天正, 三维插件) 调用了非标准 API, 或者当前的 DWG 图纸存在逻辑几何错误 (如节点坐标溢出, 无限图块关联) , 触发内存零值引用. ',
+    solution: '1. **图纸修复**: 在启动 CAD 后, 输入 `RECOVER` 指令选择异常崩溃的 DWG 图纸进行数据库底层重构和自动修复. \n2. 暂时卸载最近安装的所有 CAD 第三方插件与 LSP 工具, 确认是否为插件引起. '
   }
 ];
 
@@ -83,7 +83,7 @@ export default function FatalErrorWizardClient() {
         (err) =>
           err.address.toLowerCase().includes(customCode.toLowerCase()) ||
           err.title.toLowerCase().includes(customCode.toLowerCase())
-      );
+);
       if (found) return found;
       
       // Dynamic response for custom search
@@ -91,8 +91,8 @@ export default function FatalErrorWizardClient() {
         address: customCode,
         title: `自定义检索: ${customCode}`,
         source: '未知模块 / 第三方软件冲突',
-        reason: '未在核心数据库中匹配到完全一致的代码。这通常属于特定非标准图块、劣质二次开发插件，或者 Windows 用户配置权限不足（被安全卫士隔离软件模块）引起的偶发性非法地址读取。',
-        solution: '1. 以管理员权限运行 AutoCAD（右键选择以管理员身份运行）。\n2. 清空 Windows `%temp%` 目录，腾出系统缓存。\n3. 使用重置工具生成 Windows bat 清理注册表（参考 Phase 4 注册表清理器）。'
+        reason: '未在核心数据库中匹配到完全一致的代码. 这通常属于特定非标准图块, 劣质二次开发插件, 或者 Windows 用户配置权限不足 (被安全卫士隔离软件模块) 引起的偶发性非法地址读取. ',
+        solution: '1. 以管理员权限运行 AutoCAD (右键选择以管理员身份运行) . \n2. 清空 Windows `%temp%` 目录, 腾出系统缓存. \n3. 使用重置工具生成 Windows bat 清理注册表 (参考 Phase 4 注册表清理器) . '
       };
     }
     return ERROR_DATABASE[selectedIdx];
@@ -163,7 +163,7 @@ export default function FatalErrorWizardClient() {
       {/* 主面板布局 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* 左侧：搜索或选择地址 */}
+        {/* 左侧: 搜索或选择地址 */}
         <div className="lg:col-span-1 flex flex-col gap-4">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-4">
             <h3 className="text-slate-800 font-black text-base tracking-tight flex items-center gap-2">
@@ -210,13 +210,13 @@ export default function FatalErrorWizardClient() {
                     </div>
                     {isActive && <ArrowRight className="w-4 h-4 text-red-600 animate-pulse" />}
                   </button>
-                );
+);
               })}
             </div>
           </div>
         </div>
 
-        {/* 右侧二联：修复建议与代码生成 */}
+        {/* 右侧二联: 修复建议与代码生成 */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex-1 flex flex-col justify-between min-h-[420px]">
             
@@ -224,7 +224,7 @@ export default function FatalErrorWizardClient() {
             <div className="flex flex-col gap-5">
               <div>
                 <span className="px-2 py-0.5 rounded text-[9px] font-black uppercase bg-red-100 text-red-600">
-                  冲突模块：{activeError.source}
+                  冲突模块: {activeError.source}
                 </span>
                 <h3 className="text-slate-900 font-black text-xl tracking-tight mt-2">
                   {activeError.title}
@@ -234,7 +234,7 @@ export default function FatalErrorWizardClient() {
               <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100/80 text-xs text-slate-600 leading-relaxed">
                 <p className="font-black text-slate-800 mb-1 flex items-center gap-1">
                   <ShieldAlert className="w-4 h-4 text-red-500" />
-                  异常成因解密：
+                  异常成因解密: 
                 </p>
                 <p>{activeError.reason}</p>
               </div>
@@ -242,7 +242,7 @@ export default function FatalErrorWizardClient() {
               <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-2">
                 <p className="font-black text-slate-800 flex items-center gap-1">
                   <Settings2 className="w-4 h-4 text-blue-500" />
-                  Tailored 解决方案：
+                  Tailored 解决方案: 
                 </p>
                 <div className="whitespace-pre-line pl-1 space-y-1">{activeError.solution}</div>
               </div>
@@ -265,7 +265,7 @@ export default function FatalErrorWizardClient() {
                   {activeError.command}
                 </pre>
               </div>
-            )}
+)}
 
           </div>
         </div>
@@ -274,5 +274,5 @@ export default function FatalErrorWizardClient() {
 
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

@@ -35,7 +35,7 @@ export default function AutocadVsGstarcadShortcutsPage() {
               AutoCAD <span className="text-blue-400">vs. GstarCAD</span> 命令别名差异表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              浩辰 CAD 迁移兼容性速查手册。展示 AutoCAD 与 浩辰CAD 常用绘图别名在各引擎下的指令映射差异。
+              浩辰 CAD 迁移兼容性速查手册. 展示 AutoCAD 与 浩辰CAD 常用绘图别名在各引擎下的指令映射差异. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function AutocadVsGstarcadShortcutsPage() {
         </section>
       </main>
     </>
-  );
+);
 }

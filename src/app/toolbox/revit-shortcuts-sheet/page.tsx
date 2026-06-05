@@ -35,7 +35,7 @@ export default function RevitBIMPage() {
               Revit BIM <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              BIM 三维协同建模效率表。精选 Revit 建筑、结构、机电（MEP）双字母常用快捷代码，支持一键搜索与 A4 打印。
+              BIM 三维协同建模效率表. 精选 Revit 建筑, 结构, 机电 (MEP) 双字母常用快捷代码, 支持一键搜索与 A4 打印. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function RevitBIMPage() {
         </section>
       </main>
     </>
-  );
+);
 }

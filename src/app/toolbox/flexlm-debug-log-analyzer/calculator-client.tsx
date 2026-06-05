@@ -214,7 +214,7 @@ export default function FlexlmLogAnalyzerClient() {
       {/* 离线拖拽与加载面板 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* 左侧：文件解析卡片 */}
+        {/* 左侧: 文件解析卡片 */}
         <div className="lg:col-span-1 flex flex-col gap-6">
           <div
             onDragOver={handleDragOver}
@@ -246,7 +246,7 @@ export default function FlexlmLogAnalyzerClient() {
                 <FileText className="w-4 h-4 text-slate-500" />
                 <span className="truncate max-w-[150px]">{fileName}</span>
               </div>
-            )}
+)}
 
             <button
               onClick={loadDemoData}
@@ -261,23 +261,23 @@ export default function FlexlmLogAnalyzerClient() {
           <div className="bg-emerald-50/50 rounded-3xl border border-emerald-100/60 p-6 flex gap-3 text-emerald-800">
             <Shield className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
             <div className="text-xs leading-relaxed">
-              <p className="font-bold mb-1">100% 浏览器本地解析（数据零外流）</p>
-              <p>为了保障企业网络架构与员工隐私安全，本分析器完全基于 HTML5 FileReader 技术。所有文本的归纳和图标生成均在<b>您本地浏览器沙箱中</b>完成，不会将您的任何日志内容上传到任何服务器。</p>
+              <p className="font-bold mb-1">100% 浏览器本地解析 (数据零外流) </p>
+              <p>为了保障企业网络架构与员工隐私安全, 本分析器完全基于 HTML5 FileReader 技术. 所有文本的归纳和图标生成均在<b>您本地浏览器沙箱中</b>完成, 不会将您的任何日志内容上传到任何服务器. </p>
             </div>
           </div>
         </div>
 
-        {/* 右侧：统计分析面板 */}
+        {/* 右侧: 统计分析面板 */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           {!analysisResults ? (
             <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm flex flex-col items-center justify-center text-center flex-1 min-h-[300px]">
               <HelpCircle className="w-12 h-12 text-slate-300 mb-4" />
               <h3 className="text-slate-800 font-black text-lg">等待日志数据导入...</h3>
               <p className="text-sm text-slate-400 max-w-sm mt-2 leading-relaxed">
-                请在左侧上传您的 FLEXlm (`lmgrd`) 服务调试日志文件，或直接点击“加载演示日志”一键体验离线统计面板。
+                请在左侧上传您的 FLEXlm (`lmgrd`) 服务调试日志文件, 或直接点击'加载演示日志'一键体验离线统计面板. 
               </p>
             </div>
-          ) : (
+) : (
             <div className="flex flex-col gap-6">
               
               {/* 四个核心大指标面板 */}
@@ -331,9 +331,9 @@ export default function FlexlmLogAnalyzerClient() {
                         <text x="25" y="83" fill="#94a3b8" fontSize="7" textAnchor="end">0</text>
                         <text x="310" y="90" fill="#94a3b8" fontSize="7" textAnchor="end">时间轴➔</text>
                       </svg>
-                    ) : (
+) : (
                       <span className="text-xs text-slate-400">无并发点位数据</span>
-                    )}
+)}
                   </div>
                 </div>
 
@@ -359,13 +359,13 @@ export default function FlexlmLogAnalyzerClient() {
                             ></div>
                           </div>
                         </div>
-                      ))
-                    ) : (
+))
+) : (
                       <div className="flex flex-col items-center justify-center py-6 text-slate-400 text-xs gap-1.5">
                         <CheckCircle className="w-8 h-8 text-emerald-500" />
-                        安全！未检测到任何拒绝借出事件
+                        安全! 未检测到任何拒绝借出事件
                       </div>
-                    )}
+)}
                   </div>
                 </div>
 
@@ -383,13 +383,13 @@ export default function FlexlmLogAnalyzerClient() {
                         <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
                         <div>
                           <p className="font-black font-mono">{reason}</p>
-                          <p className="text-[10px] text-amber-700/80 mt-1">共出现 {count} 次 ➔ 推荐：核对 License 配置文件及选项组设置。</p>
+                          <p className="text-[10px] text-amber-700/80 mt-1">共出现 {count} 次 ➔ 推荐: 核对 License 配置文件及选项组设置. </p>
                         </div>
                       </div>
-                    ))}
+))}
                     {analysisResults.topDeniedReasons.length === 0 && (
                       <span className="text-xs text-slate-400 text-center block py-6">无原因记录</span>
-                    )}
+)}
                   </div>
                 </div>
 
@@ -407,16 +407,16 @@ export default function FlexlmLogAnalyzerClient() {
                         </div>
                         <span className="font-black text-red-500">{num} 次被拒</span>
                       </div>
-                    ))}
+))}
                     {analysisResults.topDeniedUsers.length === 0 && (
                       <span className="text-xs text-slate-400 text-center block py-6">无用户记录</span>
-                    )}
+)}
                   </div>
                 </div>
 
               </div>
 
-              {/* 底部详细日志详情表格（前10条） */}
+              {/* 底部详细日志详情表格 (前10条)  */}
               {analysisResults.denialsRecords.length > 0 && (
                 <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm overflow-hidden">
                   <h4 className="text-slate-800 font-black text-sm mb-4">拒绝日志分析流水 (Denials Log Stream)</h4>
@@ -438,20 +438,20 @@ export default function FlexlmLogAnalyzerClient() {
                             <td className="py-3 font-mono">{rec.user}</td>
                             <td className="py-3 text-red-500 font-mono text-[10px]">{rec.reason}</td>
                           </tr>
-                        ))}
+))}
                       </tbody>
                     </table>
                   </div>
                 </div>
-              )}
+)}
 
             </div>
-          )}
+)}
         </div>
 
       </div>
 
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

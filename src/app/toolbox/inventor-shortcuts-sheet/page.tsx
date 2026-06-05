@@ -35,7 +35,7 @@ export default function AutodeskInventorPage() {
               Autodesk Inventor <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              三维机械装配建模速查。整理 Inventor 草图约束、零件特征与大型装配体约束快捷键，支持搜索和 A4 打印。
+              三维机械装配建模速查. 整理 Inventor 草图约束, 零件特征与大型装配体约束快捷键, 支持搜索和 A4 打印. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function AutodeskInventorPage() {
         </section>
       </main>
     </>
-  );
+);
 }

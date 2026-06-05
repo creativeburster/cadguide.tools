@@ -36,7 +36,7 @@ export default function PdfFontGibberishPage() {
               PDF Plotting <span className="text-blue-400">Chinese Font Gibberish</span> Resolver
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              彻底修复 CAD 打印 PDF 时中文字体乱码、问号或线条丢失。多分支交互诊断，一键生成 AutoLISP 系统变量修复配置。
+              彻底修复 CAD 打印 PDF 时中文字体乱码, 问号或线条丢失. 多分支交互诊断, 一键生成 AutoLISP 系统变量修复配置. 
             </p>
           </div>
         </section>
@@ -46,5 +46,5 @@ export default function PdfFontGibberishPage() {
         </section>
       </main>
     </>
-  );
+);
 }

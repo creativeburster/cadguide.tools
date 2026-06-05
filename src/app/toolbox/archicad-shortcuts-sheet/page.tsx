@@ -35,7 +35,7 @@ export default function GraphisoftArchiCADPage() {
               Graphisoft ArchiCAD <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              建筑大厂 BIM 方案。收录 ArchiCAD 平面图绘制、智能魔术棒捕捉、多重墙体切换及 3D 编辑热键。
+              建筑大厂 BIM 方案. 收录 ArchiCAD 平面图绘制, 智能魔术棒捕捉, 多重墙体切换及 3D 编辑热键. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function GraphisoftArchiCADPage() {
         </section>
       </main>
     </>
-  );
+);
 }

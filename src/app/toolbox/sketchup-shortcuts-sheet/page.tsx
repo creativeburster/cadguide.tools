@@ -35,7 +35,7 @@ export default function SketchUpProPage() {
               SketchUp Pro <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              草图大师极速方案。包含 SketchUp 常用绘图笔刷、群组设置与相机环绕快捷键，支持在线过滤及 A4 Landscape 打印。
+              草图大师极速方案. 包含 SketchUp 常用绘图笔刷, 群组设置与相机环绕快捷键, 支持在线过滤及 A4 Landscape 打印. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function SketchUpProPage() {
         </section>
       </main>
     </>
-  );
+);
 }

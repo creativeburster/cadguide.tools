@@ -222,7 +222,7 @@ Generated via CADGuide.tools`;
                 className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
               />
             </div>
-          ) : (
+) : (
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="text-[10px] text-slate-400 font-bold flex justify-between">
@@ -249,7 +249,7 @@ Generated via CADGuide.tools`;
                 />
               </div>
             </div>
-          )}
+)}
         </div>
 
         {/* Roughness Presets */}
@@ -266,7 +266,7 @@ Generated via CADGuide.tools`;
               <option key={p.name} value={i}>
                 {p.name} ({p.value} mm)
               </option>
-            ))}
+))}
             <option value={ROUGHNESS_PRESETS.length}>Custom (自定义数值)</option>
           </select>
 
@@ -281,7 +281,7 @@ Generated via CADGuide.tools`;
               />
               <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-500">mm</span>
             </div>
-          )}
+)}
           <div className="hidden print:block font-bold">
             管壁粗糙度: {roughness} mm
           </div>
@@ -306,12 +306,12 @@ Generated via CADGuide.tools`;
                   <Check className="w-3.5 h-3.5" />
                   <span>已复制</span>
                 </>
-              ) : (
+) : (
                 <>
                   <Copy className="w-3.5 h-3.5" />
                   <span>复制报告</span>
                 </>
-              )}
+)}
             </button>
           </div>
 
@@ -359,11 +359,11 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
-                <strong className="font-black">警告：实际风速超出推荐限制！</strong>
-                <p className="mt-0.5 text-amber-700">当前风速 {physics.velocity.toFixed(2)} m/s 超过了设定的 {velocityLimit} m/s 阈值。这会导致严重的管道风噪和高静压损失。建议增大风管截面尺寸。</p>
+                <strong className="font-black">警告: 实际风速超出推荐限制! </strong>
+                <p className="mt-0.5 text-amber-700">当前风速 {physics.velocity.toFixed(2)} m/s 超过了设定的 {velocityLimit} m/s 阈值. 这会导致严重的管道风噪和高静压损失. 建议增大风管截面尺寸. </p>
               </div>
             </div>
-          )}
+)}
         </div>
 
         {/* Visual feedback - Live SVG flow physics */}
@@ -422,7 +422,7 @@ Generated via CADGuide.tools`;
                     }}
                   />
                 </>
-              )}
+)}
 
               {/* Duct shape boundary overlay */}
               {shape === 'round' ? (
@@ -435,7 +435,7 @@ Generated via CADGuide.tools`;
                   {/* Right pipe opening */}
                   <ellipse cx="360" cy="100" rx="15" ry="50" stroke="#64748b" strokeWidth="3.5" fill="none" />
                 </g>
-              ) : (
+) : (
                 // Rectangular duct projection
                 <g>
                   {/* Left rectangular opening */}
@@ -452,12 +452,12 @@ Generated via CADGuide.tools`;
                     {height}mm (b)
                   </text>
                 </g>
-              )}
+)}
             </svg>
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-600">
-            * 动画展示的是风管中心气流线的流速模拟。流线由蓝转红暗示管道内的压力损失加大（红为高损失区）。使用 Haaland 方程和 Colebrook 管道阻力流体动力学进行精确解算。
+            * 动画展示的是风管中心气流线的流速模拟. 流线由蓝转红暗示管道内的压力损失加大 (红为高损失区) . 使用 Haaland 方程和 Colebrook 管道阻力流体动力学进行精确解算. 
           </p>
         </div>
       </div>
@@ -476,5 +476,5 @@ Generated via CADGuide.tools`;
         <NewsletterSubscribe />
       </div>
     </div>
-  );
+);
 }

@@ -5,11 +5,11 @@ import { HelpCircle, Info, Copy, Check, Shield, Activity, Sliders, Droplets } fr
 import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
 
 const PIPE_MATERIALS = [
-  { name: 'PVC / Plastic (塑料/聚氯乙烯)', C: 150, desc: '内壁极光滑，抗腐蚀性好' },
-  { name: 'Copper / Stainless Steel (铜管/不锈钢管)', C: 140, desc: '流体阻力极低，常用于冷热水管' },
-  { name: 'Welded Steel (普通焊接钢管)', C: 120, desc: '工业循环水、采暖常备' },
+  { name: 'PVC / Plastic (塑料/聚氯乙烯)', C: 150, desc: '内壁极光滑, 抗腐蚀性好' },
+  { name: 'Copper / Stainless Steel (铜管/不锈钢管)', C: 140, desc: '流体阻力极低, 常用于冷热水管' },
+  { name: 'Welded Steel (普通焊接钢管)', C: 120, desc: '工业循环水, 采暖常备' },
   { name: 'New Cast Iron (新铸铁管)', C: 100, desc: '市政供水主管道常见' },
-  { name: 'Old Corroded Cast Iron (旧锈蚀铸铁管)', C: 80, desc: '管道结垢、内壁阻力大' },
+  { name: 'Old Corroded Cast Iron (旧锈蚀铸铁管)', C: 80, desc: '管道结垢, 内壁阻力大' },
 ];
 
 export default function PipeFrictionClient() {
@@ -106,10 +106,10 @@ Generated via CADGuide.tools`;
               <option key={m.name} value={i}>
                 {m.name} (C={m.C})
               </option>
-            ))}
+))}
           </select>
           <p className="text-[10px] text-slate-500 print:hidden">
-            * C 因子（Hazen-Williams 常数）越大代表管壁越光滑。
+            * C 因子 (Hazen-Williams 常数) 越大代表管壁越光滑. 
           </p>
           <div className="hidden print:block font-bold">
             材质: {material.name} (C = {material.C})
@@ -262,14 +262,14 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-100 p-4 rounded-2xl text-red-800 text-xs">
               <Info className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">警告：管线压力损失过大或风噪异常！</strong>
+                <strong className="font-black">警告: 管线压力损失过大或风噪异常! </strong>
                 <p className="mt-0.5 text-red-700">
-                  {isLossSevere && `单位摩擦梯度为 ${hydraulics.unitPressureDrop.toFixed(3)} kPa/m，大幅超越推荐规范界限（0.35 kPa/m），泵站选型需要较大扬程扬程冗余。`}
-                  {isVelocityHigh && ` 另外流体流速 ${hydraulics.velocity.toFixed(2)} m/s 偏高，这极易引发管道水击及磨损噪音。建议增加管道内径。`}
+                  {isLossSevere && `单位摩擦梯度为 ${hydraulics.unitPressureDrop.toFixed(3)} kPa/m, 大幅超越推荐规范界限 (0.35 kPa/m) , 泵站选型需要较大扬程扬程冗余. `}
+                  {isVelocityHigh && ` 另外流体流速 ${hydraulics.velocity.toFixed(2)} m/s 偏高, 这极易引发管道水击及磨损噪音. 建议增加管道内径. `}
                 </p>
               </div>
             </div>
-          )}
+)}
         </div>
 
         {/* Dynamic Pipe SVG */}
@@ -334,7 +334,7 @@ Generated via CADGuide.tools`;
                     opacity="0.6"
                   />
                 </>
-              )}
+)}
 
               {/* Solid Pipe Outline */}
               <rect x="30" y="65" width="340" height="70" stroke="#64748b" strokeWidth="4.5" fill="none" rx="5" />
@@ -357,7 +357,7 @@ Generated via CADGuide.tools`;
           <div className="text-[10px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Droplets className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>流动物理提示：</strong>流速动画通过管道内流线的移动展示流体的动能变化。管道材质的 C 因子决定管道阻力系数；当管内表面生锈或结垢（如 C 从 150 下滑到 80），管壁边界阻力大幅提升，同流量下的单位摩擦水头损失会以指数倍上涨。
+              <strong>流动物理提示: </strong>流速动画通过管道内流线的移动展示流体的动能变化. 管道材质的 C 因子决定管道阻力系数; 当管内表面生锈或结垢 (如 C 从 150 下滑到 80) , 管壁边界阻力大幅提升, 同流量下的单位摩擦水头损失会以指数倍上涨. 
             </span>
           </div>
         </div>
@@ -367,5 +367,5 @@ Generated via CADGuide.tools`;
         <NewsletterSubscribe />
       </div>
     </div>
-  );
+);
 }

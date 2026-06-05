@@ -36,7 +36,7 @@ export default function FlexlmLogAnalyzerPage() {
               FLEXlm License Log <span className="text-blue-400">Offline Analyzer</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              100% 浏览器本地解析 lmgrd 调试日志。图形化统计授权拒绝率、许可并发峰值与闲置用户，保障企业日志隐私合规。
+              100% 浏览器本地解析 lmgrd 调试日志. 图形化统计授权拒绝率, 许可并发峰值与闲置用户, 保障企业日志隐私合规. 
             </p>
           </div>
         </section>
@@ -46,5 +46,5 @@ export default function FlexlmLogAnalyzerPage() {
         </section>
       </main>
     </>
-  );
+);
 }

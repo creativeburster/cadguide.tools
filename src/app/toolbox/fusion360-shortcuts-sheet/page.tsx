@@ -35,7 +35,7 @@ export default function AutodeskFusion360Page() {
               Autodesk Fusion 360 <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              云端协作设计轻量三维方案。提供 Fusion 360 雕刻面、三维拉伸与 CAM 制造刀路快捷代码，A4 打印优化。
+              云端协作设计轻量三维方案. 提供 Fusion 360 雕刻面, 三维拉伸与 CAM 制造刀路快捷代码, A4 打印优化. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function AutodeskFusion360Page() {
         </section>
       </main>
     </>
-  );
+);
 }

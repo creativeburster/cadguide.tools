@@ -5,7 +5,7 @@ import AcadPgpEditorClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'AutoCAD PGP Command Alias Editor & Compiler Online | CADGuide.tools',
   description:
-    '在线编辑、修改和编译 AutoCAD acad.pgp 或浩辰/中望 CAD 别名文件。提供本地解析、重复快捷键冲突校验以及一键打包下载。所有数据均在浏览器本地安全运行，不上传服务器。',
+    '在线编辑, 修改和编译 AutoCAD acad.pgp 或浩辰/中望 CAD 别名文件. 提供本地解析, 重复快捷键冲突校验以及一键打包下载. 所有数据均在浏览器本地安全运行, 不上传服务器. ',
   path: '/toolbox/acad-pgp-alias-editor',
 });
 
@@ -36,7 +36,7 @@ export default function AcadPgpEditorPage() {
               AutoCAD <span className="text-blue-400">PGP 快捷键别名编辑器</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              在线上传并解析本地 acad.pgp / gcad.pgp 配置文件。实时冲突红字警告，轻松增删改，并一键编译下载纯净的 PGP 文本。
+              在线上传并解析本地 acad.pgp / gcad.pgp 配置文件. 实时冲突红字警告, 轻松增删改, 并一键编译下载纯净的 PGP 文本. 
             </p>
           </div>
         </section>
@@ -46,5 +46,5 @@ export default function AcadPgpEditorPage() {
         </section>
       </main>
     </>
-  );
+);
 }

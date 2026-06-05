@@ -121,7 +121,7 @@ Generated via CADGuide.tools`;
               <option key={b.name} value={i}>
                 {b.name} (公称直径: {b.d} mm / 应力面积: {b.As} mm²)
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             螺栓规格: {bolt.name}
@@ -142,7 +142,7 @@ Generated via CADGuide.tools`;
               <option key={g.name} value={i}>
                 {g.name} (屈服强度: {g.yield} MPa)
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             强度等级: {grade.name}
@@ -163,7 +163,7 @@ Generated via CADGuide.tools`;
               <option key={f.name} value={i}>
                 {f.name} (K = {f.K})
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             摩擦系数 (K): {friction.K}
@@ -188,7 +188,7 @@ Generated via CADGuide.tools`;
             className="w-full h-1.5 bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-500 print:hidden"
           />
           <p className="text-[10px] text-slate-500">
-            * 机械工程行业标准安装推荐值为 70% 至 85% 屈服极限。
+            * 机械工程行业标准安装推荐值为 70% 至 85% 屈服极限. 
           </p>
         </div>
       </div>
@@ -254,13 +254,13 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">屈服断裂警报 (Bolt Yield Danger)！</strong>
+                <strong className="font-black">屈服断裂警报 (Bolt Yield Danger)! </strong>
                 <p className="mt-0.5 text-red-700 font-medium">
-                  张拉预紧力已高达 {preloadRatio}%。在承受工作外界动载荷（振动或拉力）时，螺栓极易产生永久性塑性伸长（颈缩）导致预紧力崩溃，或者直接剪切/抗拉拉断。
+                  张拉预紧力已高达 {preloadRatio}%. 在承受工作外界动载荷 (振动或拉力) 时, 螺栓极易产生永久性塑性伸长 (颈缩) 导致预紧力崩溃, 或者直接剪切/抗拉拉断. 
                 </p>
               </div>
             </div>
-          )}
+)}
 
           {isYieldWarning && !isYieldDanger && (
             <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
@@ -268,11 +268,11 @@ Generated via CADGuide.tools`;
               <div>
                 <strong className="font-black">临界过载警告 (Overload Risk)</strong>
                 <p className="mt-0.5 text-amber-700">
-                  预紧力偏高（已在屈服限的 {preloadRatio}% 处）。装配时如果扭矩控制精度较差，易局部屈服，建议下调装配预紧力百分比。
+                  预紧力偏高 (已在屈服限的 {preloadRatio}% 处) . 装配时如果扭矩控制精度较差, 易局部屈服, 建议下调装配预紧力百分比. 
                 </p>
               </div>
             </div>
-          )}
+)}
         </div>
 
         {/* Bolt stress visualizer */}
@@ -334,12 +334,12 @@ Generated via CADGuide.tools`;
                 <text x="285" y="105" fill={isYieldDanger ? '#ef4444' : '#64748b'} fontSize="9.5" fontWeight="bold">
                   {isYieldDanger ? '螺栓颈缩变形' : '微量弹性拉伸'}
                 </text>
-              )}
+)}
             </svg>
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-650">
-            * 仿真说明：张力箭线代表螺栓内部的拉力预紧。螺栓中间蓝色/橙色杆件随滑块变化模拟真实的金属受拉伸长。当进入 90% 以上的极限区，杆件被绘制为明显的变细收缩（颈缩模拟）以警示塑性损坏风险。
+            * 仿真说明: 张力箭线代表螺栓内部的拉力预紧. 螺栓中间蓝色/橙色杆件随滑块变化模拟真实的金属受拉伸长. 当进入 90% 以上的极限区, 杆件被绘制为明显的变细收缩 (颈缩模拟) 以警示塑性损坏风险. 
           </p>
         </div>
       </div>
@@ -348,5 +348,5 @@ Generated via CADGuide.tools`;
         <NewsletterSubscribe />
       </div>
     </div>
-  );
+);
 }

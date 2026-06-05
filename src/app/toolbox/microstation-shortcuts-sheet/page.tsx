@@ -35,7 +35,7 @@ export default function BentleyMicroStationPage() {
               Bentley MicroStation <span className="text-blue-400">键盘快捷键与命令</span> 速查表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              基建与路桥设计速查指南。提供 MicroStation 常用键盘 Key-in 指令、AccuDraw 轴锁定快捷键及视口管理，支持 A4 打印。
+              基建与路桥设计速查指南. 提供 MicroStation 常用键盘 Key-in 指令, AccuDraw 轴锁定快捷键及视口管理, 支持 A4 打印. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function BentleyMicroStationPage() {
         </section>
       </main>
     </>
-  );
+);
 }

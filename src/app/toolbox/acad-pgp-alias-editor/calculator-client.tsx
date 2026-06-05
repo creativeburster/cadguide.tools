@@ -89,8 +89,8 @@ export default function AcadPgpEditorClient() {
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalHistory, setTerminalHistory] = useState<string[]>([
     'AutoCAD Command Terminal Simulator v1.0',
-    '输入快捷键别名，按回车模拟 CAD 命令行命令执行机制。',
-    '键入 REINIT 可以模拟重载 PGP 文件过程。'
+    '输入快捷键别名, 按回车模拟 CAD 命令行命令执行机制. ',
+    '键入 REINIT 可以模拟重载 PGP 文件过程. '
   ]);
   const [activeTab, setActiveTab] = useState<'presets' | 'editor'>('editor');
   const [lastExecutedCommand, setLastExecutedCommand] = useState<string | null>(null);
@@ -139,11 +139,11 @@ export default function AcadPgpEditorClient() {
         setAliases(parsed);
         setTerminalHistory((prev) => [
           ...prev,
-          `>>> 成功导入本地 PGP 文件：解析出 ${parsed.length} 个别名。`
+          `>>> 成功导入本地 PGP 文件: 解析出 ${parsed.length} 个别名. `
         ]);
         setActiveTab('editor');
       } else {
-        alert('未解析到有效的 CAD 别名定义。请确保文件符合 "别名, *命令" 的格式。');
+        alert('未解析到有效的 CAD 别名定义. 请确保文件符合 "别名, *命令" 的格式. ');
       }
     };
     reader.readAsText(file);
@@ -175,7 +175,7 @@ export default function AcadPgpEditorClient() {
     link.click();
     URL.revokeObjectURL(url);
 
-    setTerminalHistory((prev) => [...prev, '>>> acad.pgp 编译并下载成功！']);
+    setTerminalHistory((prev) => [...prev, '>>> acad.pgp 编译并下载成功! ']);
   };
 
   // Pre-scan duplicate keys
@@ -196,7 +196,7 @@ export default function AcadPgpEditorClient() {
     if (!cleanAlias || !cleanCmd) return;
 
     if (cleanAlias.includes(',') || cleanCmd.includes(',')) {
-      alert('别名或命令中不能包含逗号！');
+      alert('别名或命令中不能包含逗号! ');
       return;
     }
 
@@ -243,7 +243,7 @@ export default function AcadPgpEditorClient() {
 
     let response = '';
     if (cmd === 'REINIT') {
-      response = '正在重新加载 PGP 别名数据库... 重载成功！当前已加载 ' + aliases.length + ' 个别名指令。';
+      response = '正在重新加载 PGP 别名数据库... 重载成功! 当前已加载 ' + aliases.length + ' 个别名指令. ';
       setTerminalInput('');
       setTerminalHistory((prev) => [...prev, `COMMAND: ${cmd}`, response]);
       return;
@@ -274,10 +274,10 @@ export default function AcadPgpEditorClient() {
   const loadPreset = (presetName: 'autocad' | 'gstarcad') => {
     if (presetName === 'autocad') {
       setAliases(DEFAULT_AUTOCAD_ALIASES);
-      setTerminalHistory((prev) => [...prev, '>>> 已恢复默认 AutoCAD PGP 配置。']);
+      setTerminalHistory((prev) => [...prev, '>>> 已恢复默认 AutoCAD PGP 配置. ']);
     } else if (presetName === 'gstarcad') {
       setAliases(DEFAULT_GSTARCAD_ALIASES);
-      setTerminalHistory((prev) => [...prev, '>>> 已加载浩辰 GstarCAD 别名配置预设。']);
+      setTerminalHistory((prev) => [...prev, '>>> 已加载浩辰 GstarCAD 别名配置预设. ']);
     }
   };
 
@@ -288,7 +288,7 @@ export default function AcadPgpEditorClient() {
       return (
         item.alias.toLowerCase().includes(query) ||
         item.command.toLowerCase().includes(query)
-      );
+);
     });
   }, [aliases, searchQuery]);
 
@@ -305,7 +305,7 @@ export default function AcadPgpEditorClient() {
               PGP Loader & Compiler
             </p>
             <p className="text-xs text-slate-500 mt-3 leading-relaxed">
-              支持上传您本机的 <b>`acad.pgp`</b> / <b>`gcad.pgp`</b> 进行离线编辑。编辑完毕后，一键生成全新 PGP 文件。
+              支持上传您本机的 <b>`acad.pgp`</b> / <b>`gcad.pgp`</b> 进行离线编辑. 编辑完毕后, 一键生成全新 PGP 文件. 
             </p>
           </div>
 
@@ -363,7 +363,7 @@ export default function AcadPgpEditorClient() {
               <div key={index} className="leading-relaxed whitespace-pre-wrap">
                 {log}
               </div>
-            ))}
+))}
           </div>
 
           {/* 图纸渲染微交互 */}
@@ -371,26 +371,26 @@ export default function AcadPgpEditorClient() {
             <svg viewBox="0 0 100 100" className="w-12 h-12">
               {lastExecutedCommand === 'CIRCLE' && (
                 <circle cx="50" cy="50" r="30" fill="none" stroke="#60a5fa" strokeWidth="4" className="animate-[dash_1.5s_ease-in-out_infinite]" strokeDasharray="200" strokeDashoffset="0" />
-              )}
+)}
               {lastExecutedCommand === 'LINE' && (
                 <line x1="15" y1="85" x2="85" y2="15" stroke="#60a5fa" strokeWidth="4" className="animate-[dash_1.5s_ease-in-out_infinite]" strokeDasharray="200" />
-              )}
+)}
               {lastExecutedCommand === 'ARC' && (
                 <path d="M 20 80 A 40 40 0 0 1 80 80" fill="none" stroke="#60a5fa" strokeWidth="4" className="animate-[dash_1.5s_ease-in-out_infinite]" strokeDasharray="200" />
-              )}
+)}
               {lastExecutedCommand === 'RECTANGLE' && (
                 <rect x="20" y="20" width="60" height="60" fill="none" stroke="#60a5fa" strokeWidth="4" className="animate-[dash_1.5s_ease-in-out_infinite]" strokeDasharray="200" />
-              )}
+)}
               {lastExecutedCommand && !['CIRCLE', 'LINE', 'ARC', 'RECTANGLE'].includes(lastExecutedCommand) && (
                 <text x="50" y="55" fontSize="10" textAnchor="middle" fill="#60a5fa" className="animate-bounce font-mono">
                   {lastExecutedCommand}
                 </text>
-              )}
+)}
               {!lastExecutedCommand && (
                 <text x="50" y="55" fontSize="8" textAnchor="middle" fill="#475569" className="font-mono">
                   WAITING
                 </text>
-              )}
+)}
             </svg>
           </div>
 
@@ -460,14 +460,14 @@ export default function AcadPgpEditorClient() {
           <div className="py-6 flex flex-col gap-6">
             <div>
               <h3 className="text-slate-800 font-bold text-sm">选择基础开发预设</h3>
-              <p className="text-xs text-slate-400 mt-1">您可在此一键加载各大主流 CAD 平台的出厂默认别名库，以此为蓝本进行二次客制化。</p>
+              <p className="text-xs text-slate-400 mt-1">您可在此一键加载各大主流 CAD 平台的出厂默认别名库, 以此为蓝本进行二次客制化. </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between gap-4">
                 <div>
                   <span className="text-xs font-black bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md">AutoCAD Official</span>
                   <h4 className="font-bold text-slate-800 text-sm mt-2">AutoCAD 官方默认快捷键预设</h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">包含 C (Circle), L (Line), PL (Pline) 等在内的近 30 个官方高频别名。</p>
+                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">包含 C (Circle), L (Line), PL (Pline) 等在内的近 30 个官方高频别名. </p>
                 </div>
                 <button
                   onClick={() => { loadPreset('autocad'); setActiveTab('editor'); }}
@@ -481,7 +481,7 @@ export default function AcadPgpEditorClient() {
                 <div>
                   <span className="text-xs font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">GstarCAD Official</span>
                   <h4 className="font-bold text-slate-800 text-sm mt-2">浩辰 CAD 官方默认快捷键预设</h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">融合了浩辰特有指令（如工作空间切换、扩展命令等）的快捷别名。</p>
+                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">融合了浩辰特有指令 (如工作空间切换, 扩展命令等) 的快捷别名. </p>
                 </div>
                 <button
                   onClick={() => { loadPreset('gstarcad'); setActiveTab('editor'); }}
@@ -492,7 +492,7 @@ export default function AcadPgpEditorClient() {
               </div>
             </div>
           </div>
-        )}
+)}
 
         {/* 表格编辑器 Tab 视图 */}
         {activeTab === 'editor' && (
@@ -576,12 +576,12 @@ export default function AcadPgpEditorClient() {
                               <AlertTriangle className="w-3 h-3" />
                               别名冲突
                             </span>
-                          ) : (
+) : (
                             <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
                               <Check className="w-3 h-3" />
                               正常
                             </span>
-                          )}
+)}
                         </td>
                         <td className="py-2.5 px-4 text-center">
                           <button
@@ -592,21 +592,21 @@ export default function AcadPgpEditorClient() {
                           </button>
                         </td>
                       </tr>
-                    );
+);
                   })}
                   {filteredAliases.length === 0 && (
                     <tr>
                       <td colSpan={4} className="py-8 text-center text-slate-400 font-medium">
-                        无匹配的别名记录，请尝试更改搜索词或添加新项。
+                        无匹配的别名记录, 请尝试更改搜索词或添加新项. 
                       </td>
                     </tr>
-                  )}
+)}
                 </tbody>
               </table>
             </div>
 
           </div>
-        )}
+)}
 
       </div>
 
@@ -629,7 +629,7 @@ export default function AcadPgpEditorClient() {
               1. 命令行直接重载 REINIT 机制
             </h4>
             <p>
-              修改好并替换 `acad.pgp` 后，你<b>完全不需要</b>关闭并重新启动 CAD 软件。只需在 AutoCAD / 浩辰 CAD 命令行输入 <b>`REINIT`</b>，在弹出的“重新初始化”小对话框中勾选 <b>“PGP 文件”</b> 选项并确定，软件就会在毫秒内重新编译内存中的快捷键索引，使修改立即生效。
+              修改好并替换 `acad.pgp` 后, 你<b>完全不需要</b>关闭并重新启动 CAD 软件. 只需在 AutoCAD / 浩辰 CAD 命令行输入 <b>`REINIT`</b>, 在弹出的"重新初始化"小对话框中勾选 <b>"PGP 文件"</b> 选项并确定, 软件就会在毫秒内重新编译内存中的快捷键索引, 使修改立即生效. 
             </p>
           </div>
           <div>
@@ -638,7 +638,7 @@ export default function AcadPgpEditorClient() {
               2. 别名冲突与优先覆盖规则
             </h4>
             <p>
-              如果 PGP 文件中同一个别名定义了多次（例如上一行定义 `C, *CIRCLE`，下一行定义 `C, *COPY`），CAD 并不会崩溃。它的内部读取逻辑遵循 <b>“后置覆盖前置”</b> 规则。为了保证您的图纸清理和命令行体验足够清爽且体积没有垃圾，建议使用冲突校验剔除重复冗余项。
+              如果 PGP 文件中同一个别名定义了多次 (例如上一行定义 `C, *CIRCLE`, 下一行定义 `C, *COPY`) , CAD 并不会崩溃. 它的内部读取逻辑遵循 <b>"后置覆盖前置"</b> 规则. 为了保证您的图纸清理和命令行体验足够清爽且体积没有垃圾, 建议使用冲突校验剔除重复冗余项. 
             </p>
           </div>
           <div>
@@ -647,7 +647,7 @@ export default function AcadPgpEditorClient() {
               3. 外部命令扩展字段
             </h4>
             <p>
-              PGP 文件除定义键盘快捷键别名外，还能定义外部系统 Shell 命令（如调用 Windows 记事本、运行计算器等），语法格式为 `[指令], [系统Shell执行路径], [标志/Flag]`。本编辑器专门针对核心 Command 进行了纯净化剔除过滤，只编译下载最关键的图形绘制类命令。
+              PGP 文件除定义键盘快捷键别名外, 还能定义外部系统 Shell 命令 (如调用 Windows 记事本, 运行计算器等) , 语法格式为 `[指令], [系统Shell执行路径], [标志/Flag]`. 本编辑器专门针对核心 Command 进行了纯净化剔除过滤, 只编译下载最关键的图形绘制类命令. 
             </p>
           </div>
         </div>
@@ -655,5 +655,5 @@ export default function AcadPgpEditorClient() {
 
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

@@ -94,7 +94,7 @@ Generated via CADGuide.tools`;
               <option key={el.name} value={i}>
                 {el.name} (强度: {el.strength} N/mm²)
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             焊缝设计强度: {electrode.name} ({electrode.strength} N/mm²)
@@ -239,13 +239,13 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">焊缝超载剪切破坏警告！</strong>
+                <strong className="font-black">焊缝超载剪切破坏警告! </strong>
                 <p className="mt-0.5 text-red-700">
-                  当前外力荷载为 {appliedLoad} kN，已超越焊缝设计承载限值 {physics.maxCapacity.toFixed(2)} kN (负荷比 {physics.stressRatio.toFixed(1)}%)。焊缝容易发生剪切断裂。建议增大焊脚尺寸或加长焊缝。
+                  当前外力荷载为 {appliedLoad} kN, 已超越焊缝设计承载限值 {physics.maxCapacity.toFixed(2)} kN (负荷比 {physics.stressRatio.toFixed(1)}%). 焊缝容易发生剪切断裂. 建议增大焊脚尺寸或加长焊缝. 
                 </p>
               </div>
             </div>
-          )}
+)}
 
           {isSafetyWarning && !isSafetyDanger && (
             <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
@@ -253,11 +253,11 @@ Generated via CADGuide.tools`;
               <div>
                 <strong className="font-black">高负荷预警 (Weld Highly Stressed)</strong>
                 <p className="mt-0.5 text-amber-700">
-                  负荷应力比已处于 {physics.stressRatio.toFixed(1)}% 的高负荷运转带，建议增大安全冗余。
+                  负荷应力比已处于 {physics.stressRatio.toFixed(1)}% 的高负荷运转带, 建议增大安全冗余. 
                 </p>
               </div>
             </div>
-          )}
+)}
         </div>
 
         {/* Weld 2D Section SVG */}
@@ -335,7 +335,7 @@ Generated via CADGuide.tools`;
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-650">
-            * 物理图示：角焊缝的承载剪切断面是其 45 度角平分线处的“有效喉厚面”（即图中绿/红色虚线）。当外载荷过高，这层截面会因应力剪切而开裂。使用 GB 50017 和 AISC 极限承载规范精确估算安全冗余。
+            * 物理图示: 角焊缝的承载剪切断面是其 45 度角平分线处的"有效喉厚面" (即图中绿/红色虚线) . 当外载荷过高, 这层截面会因应力剪切而开裂. 使用 GB 50017 和 AISC 极限承载规范精确估算安全冗余. 
           </p>
         </div>
       </div>
@@ -344,5 +344,5 @@ Generated via CADGuide.tools`;
         <NewsletterSubscribe />
       </div>
     </div>
-  );
+);
 }

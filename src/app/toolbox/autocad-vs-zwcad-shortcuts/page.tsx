@@ -35,7 +35,7 @@ export default function AutocadVsZwcadShortcutsPage() {
               AutoCAD <span className="text-blue-400">vs. ZWCAD</span> 命令别名差异表
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              中望 CAD 移植兼容别名速查手册。对比 AutoCAD 与 中望CAD 常用绘图与协同管理命令别名，解决切换习惯出入。
+              中望 CAD 移植兼容别名速查手册. 对比 AutoCAD 与 中望CAD 常用绘图与协同管理命令别名, 解决切换习惯出入. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function AutocadVsZwcadShortcutsPage() {
         </section>
       </main>
     </>
-  );
+);
 }

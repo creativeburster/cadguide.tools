@@ -5,7 +5,7 @@ import CadScaleListResetClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Plotting Scale List Reset LISP Automation Helper | CADGuide.tools',
   description:
-    '在线编写重置 CAD 图纸自定义比例尺别名臃肿 (Scale List) 的 AutoLISP 宏脚本。清除无效视口参照比例字典，解决保存图纸卡顿、无法写外块和开图假死问题。',
+    '在线编写重置 CAD 图纸自定义比例尺别名臃肿 (Scale List) 的 AutoLISP 宏脚本. 清除无效视口参照比例字典, 解决保存图纸卡顿, 无法写外块和开图假死问题. ',
   path: '/toolbox/cad-scale-list-reset-helper',
 });
 
@@ -36,7 +36,7 @@ export default function CadScaleListResetPage() {
               CAD <span className="text-blue-400">视口比例尺重置与清理器</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              解决由于外部参照 (Xref) 循环嵌套导入的上千个垃圾比例尺导致的复制卡顿。一键生成重置默认值并按需重建常用标准比例的 LISP 清理程序。
+              解决由于外部参照 (Xref) 循环嵌套导入的上千个垃圾比例尺导致的复制卡顿. 一键生成重置默认值并按需重建常用标准比例的 LISP 清理程序. 
             </p>
           </div>
         </section>
@@ -46,5 +46,5 @@ export default function CadScaleListResetPage() {
         </section>
       </main>
     </>
-  );
+);
 }

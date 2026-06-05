@@ -95,7 +95,7 @@ try {
     $IP = [System.Net.Dns]::GetHostAddresses($Server) | Select-Object -ExpandProperty IPAddressToString -First 1
     Write-Host "✓ 域名解析成功: $Server ➔ $IP" -ForegroundColor Green
 } catch {
-    Write-Warning "✗ 域名解析失败！无法将 $Server 解析为 IP 地址。请检查 DNS 配置或修改 C:\\Windows\\System32\\drivers\\etc\\hosts 文件。"
+    Write-Warning "✗ 域名解析失败! 无法将 $Server 解析为 IP 地址. 请检查 DNS 配置或修改 C:\\Windows\\System32\\drivers\\etc\\hosts 文件. "
 }
 
 # 2. 检查环境变量
@@ -133,13 +133,13 @@ function Test-Port {
     $wait = $connect.AsyncWaitHandle.WaitOne(2000, $false)
     if (-not $wait) {
         $tcp.Close()
-        Write-Warning "✗ 端口 $p ($name) 无法连接！超时或被防火墙拦截。"
+        Write-Warning "✗ 端口 $p ($name) 无法连接! 超时或被防火墙拦截. "
     } else {
         try {
             $tcp.EndConnect($connect) | Out-Null
-            Write-Host "✓ 端口 $p ($name) 连接成功！通路畅通。" -ForegroundColor Green
+            Write-Host "✓ 端口 $p ($name) 连接成功! 通路畅通. " -ForegroundColor Green
         } catch {
-            Write-Warning "✗ 端口 $p ($name) 连接被拒绝！服务未启动。"
+            Write-Warning "✗ 端口 $p ($name) 连接被拒绝! 服务未启动. "
         } finally {
             $tcp.Close()
         }
@@ -397,7 +397,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
       {/* 主面板布局 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* 左边：多步向导步骤条 (Navigation Step list) */}
+        {/* 左边: 多步向导步骤条 (Navigation Step list) */}
         <div className="lg:col-span-1 flex flex-col gap-4">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
             <h3 className="text-slate-800 font-black text-base tracking-tight mb-4 flex items-center gap-2">
@@ -435,7 +435,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                     {isCompleted && <Check className="w-4 h-4 text-emerald-600" />}
                     {isActive && <ArrowRight className="w-4 h-4 text-blue-600 animate-pulse" />}
                   </button>
-                );
+);
               })}
             </div>
           </div>
@@ -508,7 +508,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
           </div>
         </div>
 
-        {/* 右边二联：诊断各步详细内容展示 (Detail Wizard Pane) */}
+        {/* 右边二联: 诊断各步详细内容展示 (Detail Wizard Pane) */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm min-h-[460px] flex flex-col">
             
@@ -516,8 +516,8 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
             {currentStep === 0 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第一步：选择您的故障场景</h3>
-                  <p className="text-sm text-slate-500 mt-1">根据具体故障表现，推荐对应的排查切入点。</p>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第一步: 选择您的故障场景</h3>
+                  <p className="text-sm text-slate-500 mt-1">根据具体故障表现, 推荐对应的排查切入点. </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-auto">
@@ -537,9 +537,9 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                     </div>
                     <h4 className="text-slate-800 font-bold text-base">客户端连接报错 (终端电脑)</h4>
                     <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                      客户端 CAD 启动时卡在“正在检查许可”界面，最终弹出：<br />
+                      客户端 CAD 启动时卡在"正在检查许可"界面, 最终弹出: <br />
                       <span className="font-mono text-red-500 font-black">Error -15: Cannot connect to license server</span><br />
-                      或者检测到授权过期挂机。
+                      或者检测到授权过期挂机. 
                     </p>
                     <div className="mt-4 flex items-center gap-1 text-xs font-black text-blue-600">
                       开始诊断
@@ -563,7 +563,7 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                     </div>
                     <h4 className="text-slate-800 font-bold text-base">服务端端口变动 (IT管理员)</h4>
                     <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                      服务端 lmgrd 服务可以正常启动并运行。但客户端总是偶尔报错，需要反复重启服务，且因为 Vendor 插件端口随机变化导致防火墙规则频繁失效。
+                      服务端 lmgrd 服务可以正常启动并运行. 但客户端总是偶尔报错, 需要反复重启服务, 且因为 Vendor 插件端口随机变化导致防火墙规则频繁失效. 
                     </p>
                     <div className="mt-4 flex items-center gap-1 text-xs font-black text-violet-600">
                       锁定服务器端口
@@ -572,15 +572,15 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                   </button>
                 </div>
               </div>
-            )}
+)}
 
             {/* Step 1: DNS & Ping */}
             {currentStep === 1 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第二步：检测 DNS 域名解析与连通性</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第二步: 检测 DNS 域名解析与连通性</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    确保客户端电脑能够识别并翻译您输入的许可证服务器地址（主机名或 IP）。
+                    确保客户端电脑能够识别并翻译您输入的许可证服务器地址 (主机名或 IP) . 
                   </p>
                 </div>
 
@@ -599,13 +599,13 @@ Write-Host "--- 诊断结束 ---" -ForegroundColor Cyan
                     {`# 1. 验证主机是否在线以及响应延迟
 ${psPingCommand}
 
-# 2. 验证 DNS 域名解析是否正常，是否返回了正确的服务器 IP
+# 2. 验证 DNS 域名解析是否正常, 是否返回了正确的服务器 IP
 ${psNslookupCommand}`}
                   </pre>
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <span className="text-xs font-black text-slate-500 uppercase">选择本地测试结果：</span>
+                  <span className="text-xs font-black text-slate-500 uppercase">选择本地测试结果: </span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <button
                       onClick={() => {
@@ -648,33 +648,33 @@ ${psNslookupCommand}`}
                   <div className="bg-red-50 rounded-2xl border border-red-100 p-5 flex gap-3 text-red-800">
                     <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                     <div className="text-xs leading-relaxed">
-                      <p className="font-bold mb-1">域名解析失败（DNS 故障）</p>
-                      <p>客户端无法将主机名 <span className="font-mono bg-red-100/80 px-1 rounded font-black">{serverAddress}</span> 翻译为 IP 地址。这属于网络基础错误。</p>
+                      <p className="font-bold mb-1">域名解析失败 (DNS 故障) </p>
+                      <p>客户端无法将主机名 <span className="font-mono bg-red-100/80 px-1 rounded font-black">{serverAddress}</span> 翻译为 IP 地址. 这属于网络基础错误. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
-                        <li>请检查服务器名字是否拼写正确。</li>
-                        <li><b>临时修复</b>：若您知晓服务器 IP，可在客户端配置环境变量时直接写 IP，例如 <span className="font-mono bg-red-100/80 px-1 rounded font-black">27000@192.168.1.100</span>。</li>
-                        <li><b>永久修复</b>：在客户端的 <span className="font-mono bg-red-100/80 px-1 rounded">C:\Windows\System32\drivers\etc\hosts</span> 文件中追加一行：<br />
+                        <li>请检查服务器名字是否拼写正确. </li>
+                        <li><b>临时修复</b>: 若您知晓服务器 IP, 可在客户端配置环境变量时直接写 IP, 例如 <span className="font-mono bg-red-100/80 px-1 rounded font-black">27000@192.168.1.100</span>. </li>
+                        <li><b>永久修复</b>: 在客户端的 <span className="font-mono bg-red-100/80 px-1 rounded">C:\Windows\System32\drivers\etc\hosts</span> 文件中追加一行: <br />
                           <span className="font-mono bg-slate-900 text-slate-200 px-2 py-0.5 rounded text-[10px] mt-1 inline-block select-all">192.168.1.100  {serverAddress}</span>
                         </li>
                       </ul>
                     </div>
                   </div>
-                )}
+)}
 
                 {pingStatus === 'timeout' && (
                   <div className="bg-orange-50 rounded-2xl border border-orange-100 p-5 flex gap-3 text-orange-800">
                     <AlertTriangle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
                     <div className="text-xs leading-relaxed">
                       <p className="font-bold mb-1">物理链路超时或禁 Ping</p>
-                      <p>说明客户端与服务器之间的物理连通有问题，或对方启用了 ICMP 禁 Ping 策略。</p>
+                      <p>说明客户端与服务器之间的物理连通有问题, 或对方启用了 ICMP 禁 Ping 策略. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
-                        <li>如果是无线网络，请检查是否处于公司同一个内网/局域网段。</li>
-                        <li>通过 VPN 接入时，请验证 VPN 连接是否掉线，以及路由策略是否包含服务器网段。</li>
-                        <li>如果确定物理通路没断，且只是禁 Ping，您可以直接点击上面的<b>“Ping 畅通且 IP 正确”</b>强行跳入下一步测试 TCP 端口可达性。</li>
+                        <li>如果是无线网络, 请检查是否处于公司同一个内网/局域网段. </li>
+                        <li>通过 VPN 接入时, 请验证 VPN 连接是否掉线, 以及路由策略是否包含服务器网段. </li>
+                        <li>如果确定物理通路没断, 且只是禁 Ping, 您可以直接点击上面的<b>"Ping 畅通且 IP 正确"</b>强行跳入下一步测试 TCP 端口可达性. </li>
                       </ul>
                     </div>
                   </div>
-                )}
+)}
 
                 <div className="mt-auto pt-4 flex justify-between border-t border-slate-100">
                   <button
@@ -688,19 +688,19 @@ ${psNslookupCommand}`}
                     disabled={pingStatus === 'untested'}
                     className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
-                    下一步：诊断端口
+                    下一步: 诊断端口
                   </button>
                 </div>
               </div>
-            )}
+)}
 
             {/* Step 2: Ports & Firewall */}
             {currentStep === 2 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第三步：验证 TCP 端口开放与防火墙状态</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第三步: 验证 TCP 端口开放与防火墙状态</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    FLEXlm 授权服务包含 **lmgrd 主服务端口**（默认 27000-27009）与 **Vendor 厂商特定端口**（默认随机，在此假定为 {vendorPort}）。如果只开主服务端口而拦截了 Vendor 端口，就会产生 Error -15 连接故障。
+                    FLEXlm 授权服务包含 **lmgrd 主服务端口** (默认 27000-27009) 与 **Vendor 厂商特定端口** (默认随机, 在此假定为 {vendorPort}) . 如果只开主服务端口而拦截了 Vendor 端口, 就会产生 Error -15 连接故障. 
                   </p>
                 </div>
 
@@ -785,16 +785,16 @@ ${psPortTestVendor}`}
                   <div className="bg-amber-50 rounded-2xl border border-amber-100 p-5 text-amber-900 flex gap-3">
                     <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                     <div className="text-xs leading-relaxed flex-1">
-                      <p className="font-bold mb-1">发现端口被屏蔽！请按以下顺序排查防火墙与服务状态：</p>
+                      <p className="font-bold mb-1">发现端口被屏蔽! 请按以下顺序排查防火墙与服务状态: </p>
                       
                       <ul className="list-decimal list-inside space-y-2 mt-2">
                         <li>
-                          <b>检查服务器端的 lmgrd 服务是否启动成功</b>：<br />
-                          若服务尚未启动，所有端口状态均为 False。应登录服务器检查 LMTOOLS 里的日志，确认服务状态为 "Server Started"。
+                          <b>检查服务器端的 lmgrd 服务是否启动成功</b>: <br />
+                          若服务尚未启动, 所有端口状态均为 False. 应登录服务器检查 LMTOOLS 里的日志, 确认服务状态为 "Server Started". 
                         </li>
                         <li>
-                          <b>在服务器防火墙上开放端口（IT 人员在服务器执行）</b>：<br />
-                          如果服务已启但依旧不通，说明被 Windows Defender 防火墙入站规则拦截。请在服务器的 PowerShell 中以<b>管理员身份</b>执行以下命令快速放行：
+                          <b>在服务器防火墙上开放端口 (IT 人员在服务器执行) </b>: <br />
+                          如果服务已启但依旧不通, 说明被 Windows Defender 防火墙入站规则拦截. 请在服务器的 PowerShell 中以<b>管理员身份</b>执行以下命令快速放行: 
                           <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[10px] mt-2 relative select-all flex justify-between items-start gap-4">
                             <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{serverFirewallCmd}</pre>
                             <button
@@ -806,13 +806,13 @@ ${psPortTestVendor}`}
                           </div>
                         </li>
                         <li>
-                          <b>锁定 Vendor 端口</b>：<br />
-                          如果 lmgrd 端口（27000）通了，而 Vendor 端口不通，通常是因为没有在 LIC 文件里锁死 Vendor 端口，导致每次服务重启端口随机漂移。请参考本工具<b>“步骤五”</b>锁定端口。
+                          <b>锁定 Vendor 端口</b>: <br />
+                          如果 lmgrd 端口 (27000) 通了, 而 Vendor 端口不通, 通常是因为没有在 LIC 文件里锁死 Vendor 端口, 导致每次服务重启端口随机漂移. 请参考本工具<b>"步骤五"</b>锁定端口. 
                         </li>
                       </ul>
                     </div>
                   </div>
-                )}
+)}
 
                 <div className="mt-auto pt-4 flex justify-between border-t border-slate-100">
                   <button
@@ -826,19 +826,19 @@ ${psPortTestVendor}`}
                     disabled={port27000Status === 'untested' && portVendorStatus === 'untested'}
                     className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
-                    下一步：配置客户端变量
+                    下一步: 配置客户端变量
                   </button>
                 </div>
               </div>
-            )}
+)}
 
             {/* Step 3: Client Env Var Fix */}
             {currentStep === 3 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第四步：检查并修复客户端环境变量与注册表</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第四步: 检查并修复客户端环境变量与注册表</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    即使网络畅通，如果客户端配置了错误或冲突的旧服务器环境变量，也会报 Error -15。
+                    即使网络畅通, 如果客户端配置了错误或冲突的旧服务器环境变量, 也会报 Error -15. 
                   </p>
                 </div>
 
@@ -857,13 +857,13 @@ ${psPortTestVendor}`}
                   <div className="max-h-[140px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-[10px]">
                     <pre className="whitespace-pre">{psClientDiagnosticScript}</pre>
                   </div>
-                  <p className="text-[10px] text-slate-400 italic">用法：复制整段代码，在客户端电脑上搜索并以“管理员身份”打开 PowerShell，粘贴并回车执行。即可一眼看清所有配错的环境变量和缓存条目。</p>
+                  <p className="text-[10px] text-slate-400 italic">用法: 复制整段代码, 在客户端电脑上搜索并以"管理员身份"打开 PowerShell, 粘贴并回车执行. 即可一眼看清所有配错的环境变量和缓存条目. </p>
                 </div>
 
                 {/* 写入建议的环境变量 */}
                 <div className="bg-blue-50 rounded-2xl border border-blue-100 p-5 text-blue-900">
-                  <h4 className="font-bold text-xs mb-2 flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> 修复配置：一键写入环境变量</h4>
-                  <p className="text-xs leading-relaxed mb-3">若发现未配置或配错，请在客户端以<b>管理员身份</b>运行以下命令将当前服务器绑定至系统环境变量中（无需重启，即时生效）：</p>
+                  <h4 className="font-bold text-xs mb-2 flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> 修复配置: 一键写入环境变量</h4>
+                  <p className="text-xs leading-relaxed mb-3">若发现未配置或配错, 请在客户端以<b>管理员身份</b>运行以下命令将当前服务器绑定至系统环境变量中 (无需重启, 即时生效) : </p>
                   
                   <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[10px] select-all flex justify-between items-start gap-4">
                     <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{clientRepairCmd}</pre>
@@ -875,9 +875,9 @@ ${psPortTestVendor}`}
                     </button>
                   </div>
                   <ul className="list-disc list-inside text-[10px] text-blue-800/80 mt-3 space-y-1">
-                    <li>对于 Autodesk/AutoCAD 系列：环境变量名为 <span className="font-mono bg-blue-100 px-1 rounded">ADSKFLEX_LICENSE_FILE</span></li>
-                    <li>对于 SolidWorks：环境变量名通常为 <span className="font-mono bg-blue-100 px-1 rounded">SW_D_LICENSE_FILE</span> 或直接在设置中指定 <span className="font-mono bg-blue-100 px-1 rounded">25734@服务器</span></li>
-                    <li>若使用的是非标准主端口，需要带上端口前缀，例如：<span className="font-mono bg-blue-100 px-1 font-bold">@{serverAddress}</span> 或者 <span className="font-mono bg-blue-100 px-1 font-bold">{lmgrdPort}@{serverAddress}</span>。</li>
+                    <li>对于 Autodesk/AutoCAD 系列: 环境变量名为 <span className="font-mono bg-blue-100 px-1 rounded">ADSKFLEX_LICENSE_FILE</span></li>
+                    <li>对于 SolidWorks: 环境变量名通常为 <span className="font-mono bg-blue-100 px-1 rounded">SW_D_LICENSE_FILE</span> 或直接在设置中指定 <span className="font-mono bg-blue-100 px-1 rounded">25734@服务器</span></li>
+                    <li>若使用的是非标准主端口, 需要带上端口前缀, 例如: <span className="font-mono bg-blue-100 px-1 font-bold">@{serverAddress}</span> 或者 <span className="font-mono bg-blue-100 px-1 font-bold">{lmgrdPort}@{serverAddress}</span>. </li>
                   </ul>
                 </div>
 
@@ -892,19 +892,19 @@ ${psPortTestVendor}`}
                     onClick={() => setCurrentStep(4)}
                     className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold cursor-pointer"
                   >
-                    下一步：配置许可服务器锁端口
+                    下一步: 配置许可服务器锁端口
                   </button>
                 </div>
               </div>
-            )}
+)}
 
             {/* Step 4: Server Lock Port Configuration */}
             {currentStep === 4 && (
               <div className="flex flex-col gap-6 flex-1">
                 <div>
-                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第五步：锁定 FLEXlm License 供应商端口 (Vendor Daemon Port)</h3>
+                  <h3 className="text-slate-800 font-black text-xl tracking-tight">第五步: 锁定 FLEXlm License 供应商端口 (Vendor Daemon Port)</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    这是根治 Error -15 的核心办法。如果不显式锁定端口，每次服务器重启后，Vendor 端口均是随机的（比如变到 62890），由于管理员没有在防火墙里开该随机端口，就会再次连接失败。
+                    这是根治 Error -15 的核心办法. 如果不显式锁定端口, 每次服务器重启后, Vendor 端口均是随机的 (比如变到 62890) , 由于管理员没有在防火墙里开该随机端口, 就会再次连接失败. 
                   </p>
                 </div>
 
@@ -914,7 +914,7 @@ ${psPortTestVendor}`}
                     LIC 许可证首部生成器
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    打开您服务器上的许可证文件（通常是 `.lic` 或 `.dat` 格式），定位到文件最顶部的几行（通常以 SERVER 和 VENDOR 或 DAEMON 开头），将它们修改替换为下方生成的配置：
+                    打开您服务器上的许可证文件 (通常是 `.lic` 或 `.dat` 格式) , 定位到文件最顶部的几行 (通常以 SERVER 和 VENDOR 或 DAEMON 开头) , 将它们修改替换为下方生成的配置: 
                   </p>
 
                   <div className="bg-slate-900 text-slate-300 p-4 rounded-xl font-mono text-xs flex flex-col gap-3">
@@ -935,12 +935,12 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
                   </div>
 
                   <div className="text-xs leading-relaxed text-slate-600 border-l-2 border-blue-500 pl-3">
-                    <p className="font-bold text-slate-800 mb-1">实施步骤：</p>
+                    <p className="font-bold text-slate-800 mb-1">实施步骤: </p>
                     <ol className="list-decimal list-inside space-y-1 text-slate-600">
-                      <li>停止服务器的 FLEXlm / LMTOOLS 授权服务。</li>
-                      <li>编辑修改许可证文件，将前两行替换为上述代码（请注意保持其中的主机名和 MAC 地址与您的旧配置匹配，ANY 可替换为真实 MAC 地址）。</li>
-                      <li>在许可证服务器防火墙入站规则中，同时放行 TCP <span className="font-bold text-blue-600 font-mono">{lmgrdPort}</span> 与 <span className="font-bold text-blue-600 font-mono">{vendorPort}</span> 两个端口。</li>
-                      <li>在 LMTOOLS 重新加载配置文件 (Re-read License File) 并启动服务。</li>
+                      <li>停止服务器的 FLEXlm / LMTOOLS 授权服务. </li>
+                      <li>编辑修改许可证文件, 将前两行替换为上述代码 (请注意保持其中的主机名和 MAC 地址与您的旧配置匹配, ANY 可替换为真实 MAC 地址) . </li>
+                      <li>在许可证服务器防火墙入站规则中, 同时放行 TCP <span className="font-bold text-blue-600 font-mono">{lmgrdPort}</span> 与 <span className="font-bold text-blue-600 font-mono">{vendorPort}</span> 两个端口. </li>
+                      <li>在 LMTOOLS 重新加载配置文件 (Re-read License File) 并启动服务. </li>
                     </ol>
                   </div>
                 </div>
@@ -961,14 +961,14 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
                   </button>
                 </div>
               </div>
-            )}
+)}
 
           </div>
         </div>
 
       </div>
 
-      {/* 底部详细技术文章排错面板，符合 E-E-A-T 工业指南 */}
+      {/* 底部详细技术文章排错面板, 符合 E-E-A-T 工业指南 */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
         <div>
           <h2 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
@@ -983,15 +983,15 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-slate-600">
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">为什么双端口都会触发 -15 报错？</h3>
+              <h3 className="font-bold text-slate-800 text-base mb-1.5">为什么双端口都会触发 -15 报错? </h3>
               <p>
-                很多网络管理员在部署 CAD 浮动服务器时，习惯性只在防火墙中开辟了 `lmgrd.exe` 的服务端口（通常是 27000）。当客户端发起连接时，主进程会回应客户端一个随机选择的 Vendor 供应商进程（例如 `adskflex.exe`）的端口。由于该端口被服务器防火墙阻断，客户端最终产生握手超时，返回 `Error -15: Cannot connect to license server`。因此，锁定 Vendor 端口是保障稳定的首要举措。
+                很多网络管理员在部署 CAD 浮动服务器时, 习惯性只在防火墙中开辟了 `lmgrd.exe` 的服务端口 (通常是 27000) . 当客户端发起连接时, 主进程会回应客户端一个随机选择的 Vendor 供应商进程 (例如 `adskflex.exe`) 的端口. 由于该端口被服务器防火墙阻断, 客户端最终产生握手超时, 返回 `Error -15: Cannot connect to license server`. 因此, 锁定 Vendor 端口是保障稳定的首要举措. 
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">主机名/DNS解析为何是排错的第一关？</h3>
+              <h3 className="font-bold text-slate-800 text-base mb-1.5">主机名/DNS解析为何是排错的第一关? </h3>
               <p>
-                CAD 客户端在启动并查询环境变量（如 `ADSKFLEX_LICENSE_FILE=@my-server`）时，首先调用操作系统的 DNS 解析模块去获得 `my-server` 的内网 IP。如果网络中没有部署 WINS/DNS 服务，或者客户端在宿主 Hosts 中找不到对应的记录，连接就会直接在域名解析阶段中断。若出现此类故障，直接使用 IP 往往是最快的临时替代方案。
+                CAD 客户端在启动并查询环境变量 (如 `ADSKFLEX_LICENSE_FILE=@my-server`) 时, 首先调用操作系统的 DNS 解析模块去获得 `my-server` 的内网 IP. 如果网络中没有部署 WINS/DNS 服务, 或者客户端在宿主 Hosts 中找不到对应的记录, 连接就会直接在域名解析阶段中断. 若出现此类故障, 直接使用 IP 往往是最快的临时替代方案. 
               </p>
             </div>
           </div>
@@ -1000,13 +1000,13 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
             <div>
               <h3 className="font-bold text-slate-800 text-base mb-1.5">客户端环境变量优先级原则</h3>
               <p>
-                在 Windows 环境下，FLEXlm 读取许可配置遵循特定次序：系统环境变量 (System Environment Variables) ➔ 用户环境变量 (User Environment Variables) ➔ 注册表缓存配置。如果企业用户更换了授权服务器，但客户端残留有以前老旧服务器的注册表配置，CAD 会先尝试连接旧服务进而引发报错。使用 PowerShell 诊断脚本能够完美扫除这类配置死角。
+                在 Windows 环境下, FLEXlm 读取许可配置遵循特定次序: 系统环境变量 (System Environment Variables) ➔ 用户环境变量 (User Environment Variables) ➔ 注册表缓存配置. 如果企业用户更换了授权服务器, 但客户端残留有以前老旧服务器的注册表配置, CAD 会先尝试连接旧服务进而引发报错. 使用 PowerShell 诊断脚本能够完美扫除这类配置死角. 
               </p>
             </div>
             <div>
               <h3 className="font-bold text-slate-800 text-base mb-1.5">网络延时与超时机制 (FLEXLM_TIMEOUT)</h3>
               <p>
-                如果客户端处于异地办公（远程拨号 VPN）或者无线网络信号不稳定状态，FLEXlm 默认的握手响应超时时间（大约 0.1 秒）可能会过低。可以通过在客户端系统环境变量中新建一个名为 <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">FLEXLM_TIMEOUT</span> 的系统变量，值设定为 <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">1000000</span>（单位为微秒，即 1.0 秒），能够有效规避由于网络物理延迟引起的 -15 联机失败。
+                如果客户端处于异地办公 (远程拨号 VPN) 或者无线网络信号不稳定状态, FLEXlm 默认的握手响应超时时间 (大约 0.1 秒) 可能会过低. 可以通过在客户端系统环境变量中新建一个名为 <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">FLEXLM_TIMEOUT</span> 的系统变量, 值设定为 <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">1000000</span> (单位为微秒, 即 1.0 秒) , 能够有效规避由于网络物理延迟引起的 -15 联机失败. 
               </p>
             </div>
           </div>
@@ -1016,5 +1016,5 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
       {/* 订阅部分 */}
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

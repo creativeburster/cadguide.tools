@@ -128,7 +128,7 @@ All`;
               <option key={p.name} value={i}>
                 {p.name} ({Math.round(p.width)} x {Math.round(p.height)} mm)
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             图纸规格: {paper.name}
@@ -215,7 +215,7 @@ All`;
               <option key={s.label} value={i}>
                 {s.label}
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             打印比例: {scale.label}
@@ -338,7 +338,7 @@ All`;
           <div className="text-[10px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>LIMITS 核心提示：</strong>配置图纸界限的目的是限制超出图纸范围的误绘，并使得 AutoCAD 的 `GRID` (网格) 只在图纸打印区内呈现。当在布局视口（Viewport）内对齐模型空间时，确保 `LIMITS` 比例与视口 XP 比例倒数一致，可避免“网格超出屏幕”或“网格过密不显示”的现象。
+              <strong>LIMITS 核心提示: </strong>配置图纸界限的目的是限制超出图纸范围的误绘, 并使得 AutoCAD 的 `GRID` (网格) 只在图纸打印区内呈现. 当在布局视口 (Viewport) 内对齐模型空间时, 确保 `LIMITS` 比例与视口 XP 比例倒数一致, 可避免"网格超出屏幕"或"网格过密不显示"的现象. 
             </span>
           </div>
         </div>
@@ -348,5 +348,5 @@ All`;
         <NewsletterSubscribe />
       </div>
     </div>
-  );
+);
 }

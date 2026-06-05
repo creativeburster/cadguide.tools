@@ -36,7 +36,7 @@ export default function SolidWorksShortcutsPage() {
               SolidWorks <span className="text-blue-400">Shortcuts & Mouse Gestures</span> List
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              专业三维建模效率利器。键盘热键检索、交互式 8 方向鼠标手势轮盘展示，支持 Ctrl+P 快捷打印 A4 纸质速查表。
+              专业三维建模效率利器. 键盘热键检索, 交互式 8 方向鼠标手势轮盘展示, 支持 Ctrl+P 快捷打印 A4 纸质速查表. 
             </p>
           </div>
         </section>
@@ -46,5 +46,5 @@ export default function SolidWorksShortcutsPage() {
         </section>
       </main>
     </>
-  );
+);
 }

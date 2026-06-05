@@ -37,7 +37,7 @@ export default function MissingFontResolverPage() {
               缺失 CAD 字体与 <span className="text-blue-400">SHX 替代代换</span> 匹配箱
             </h1>
             <p className="text-base text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              解决开图满纸问号（?）与文字乱码。输入缺失字体名，匹配最优免版权代换方案及一键配置脚本。
+              解决开图满纸问号 (?) 与文字乱码. 输入缺失字体名, 匹配最优免版权代换方案及一键配置脚本. 
             </p>
           </div>
         </section>
@@ -48,5 +48,5 @@ export default function MissingFontResolverPage() {
         </section>
       </main>
     </>
-  );
+);
 }

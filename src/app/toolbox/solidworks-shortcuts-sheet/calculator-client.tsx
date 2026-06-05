@@ -23,44 +23,44 @@ interface ShortcutItem {
 
 const SHORTCUTS_DATA: ShortcutItem[] = [
   // System shortcuts
-  { keys: 'Ctrl + N', command: '新建文件', category: 'system', description: '新建零件、装配体或工程图文件。' },
-  { keys: 'Ctrl + O', command: '打开文件', category: 'system', description: '浏览并打开已有的模型。' },
-  { keys: 'Ctrl + S', command: '保存文件', category: 'system', description: '快速保存当前文档。' },
-  { keys: 'Ctrl + Q', command: '强行重建模型 (Force Rebuild)', category: 'system', description: '最硬核快捷键，强制彻底重建特征树所有实体，解决模型显示异常错误。' },
-  { keys: 'Ctrl + B', command: '重建模型 (Rebuild)', category: 'system', description: '重构当前已更改的特征及装配。' },
-  { keys: 'S', command: '快捷弹窗菜单', category: 'system', description: 'SolidWorks 效率精髓，在鼠标处弹出高度自定义快捷栏（草图、特征、装配各不同）。' },
-  { keys: 'D', command: '确定角落选项 (Confirmation Corner)', category: 'system', description: '直接将确认/取消对勾移至鼠标光标处，快速退出当前草图或特征编辑。' },
-  { keys: 'F', command: '整页显示 (Zoom to Fit)', category: 'system', description: '将所有视图内实体居中缩放全屏显示。' },
-  { keys: 'G', command: '局部放大镜 (Magnifier)', category: 'system', description: '在鼠标位置弹出局部放大镜，无需缩放视口即可选取精细面和边缘。' },
-  { keys: 'Space (空格键)', command: '视图定向菜单 (Orientation)', category: 'system', description: '调出视图定向立方体面板，双击快速切面。' },
+  { keys: 'Ctrl + N', command: '新建文件', category: 'system', description: '新建零件, 装配体或工程图文件. ' },
+  { keys: 'Ctrl + O', command: '打开文件', category: 'system', description: '浏览并打开已有的模型. ' },
+  { keys: 'Ctrl + S', command: '保存文件', category: 'system', description: '快速保存当前文档. ' },
+  { keys: 'Ctrl + Q', command: '强行重建模型 (Force Rebuild)', category: 'system', description: '最硬核快捷键, 强制彻底重建特征树所有实体, 解决模型显示异常错误. ' },
+  { keys: 'Ctrl + B', command: '重建模型 (Rebuild)', category: 'system', description: '重构当前已更改的特征及装配. ' },
+  { keys: 'S', command: '快捷弹窗菜单', category: 'system', description: 'SolidWorks 效率精髓, 在鼠标处弹出高度自定义快捷栏 (草图, 特征, 装配各不同) . ' },
+  { keys: 'D', command: '确定角落选项 (Confirmation Corner)', category: 'system', description: '直接将确认/取消对勾移至鼠标光标处, 快速退出当前草图或特征编辑. ' },
+  { keys: 'F', command: '整页显示 (Zoom to Fit)', category: 'system', description: '将所有视图内实体居中缩放全屏显示. ' },
+  { keys: 'G', command: '局部放大镜 (Magnifier)', category: 'system', description: '在鼠标位置弹出局部放大镜, 无需缩放视口即可选取精细面和边缘. ' },
+  { keys: 'Space (空格键)', command: '视图定向菜单 (Orientation)', category: 'system', description: '调出视图定向立方体面板, 双击快速切面. ' },
   
   // Views
-  { keys: 'Ctrl + 1', command: '前视 (Front View)', category: 'part', description: '切换至正前投影方向。' },
-  { keys: 'Ctrl + 2', command: '后视 (Back View)', category: 'part', description: '切换至正后投影方向。' },
-  { keys: 'Ctrl + 3', command: '左视 (Left View)', category: 'part', description: '切换至正左投影方向。' },
+  { keys: 'Ctrl + 1', command: '前视 (Front View)', category: 'part', description: '切换至正前投影方向. ' },
+  { keys: 'Ctrl + 2', command: '后视 (Back View)', category: 'part', description: '切换至正后投影方向. ' },
+  { keys: 'Ctrl + 3', command: '左视 (Left View)', category: 'part', description: '切换至正左投影方向. ' },
   { keys: 'Ctrl + 4', command: '右视 (Right View)', category: 'part', description: '切换至正右投影方向' },
-  { keys: 'Ctrl + 5', command: '上视 (Top View)', category: 'part', description: '切换至正上平视方向。' },
-  { keys: 'Ctrl + 6', command: '下视 (Bottom View)', category: 'part', description: '切换至正底平视方向。' },
-  { keys: 'Ctrl + 7', command: '等轴测 (Isometric View)', category: 'part', description: '切换至标准等轴三维三面倾斜投影。' },
-  { keys: 'Ctrl + 8', command: '正视于 (Normal To)', category: 'part', description: '将当前选定的草图基准面或实体平面对正于屏幕。' },
+  { keys: 'Ctrl + 5', command: '上视 (Top View)', category: 'part', description: '切换至正上平视方向. ' },
+  { keys: 'Ctrl + 6', command: '下视 (Bottom View)', category: 'part', description: '切换至正底平视方向. ' },
+  { keys: 'Ctrl + 7', command: '等轴测 (Isometric View)', category: 'part', description: '切换至标准等轴三维三面倾斜投影. ' },
+  { keys: 'Ctrl + 8', command: '正视于 (Normal To)', category: 'part', description: '将当前选定的草图基准面或实体平面对正于屏幕. ' },
   
   // Sketching shortcuts
-  { keys: 'Esc', command: '取消选择 / 退出工具', category: 'sketch', description: '退出当前的绘图工具，返回普通框选鼠标。' },
-  { keys: 'Enter', command: '重复上次命令', category: 'sketch', description: '重新激活上一轮使用过的草图或绘图指令。' },
-  { keys: 'L', command: '绘制直线 (Line)', category: 'sketch', description: '在当前激活的草图面绘制一段线。' },
-  { keys: 'Ctrl + Drag', command: '等距复制实体', category: 'sketch', description: '框选草图对象后按住 Ctrl 拖动即可原样克隆实体。' },
+  { keys: 'Esc', command: '取消选择 / 退出工具', category: 'sketch', description: '退出当前的绘图工具, 返回普通框选鼠标. ' },
+  { keys: 'Enter', command: '重复上次命令', category: 'sketch', description: '重新激活上一轮使用过的草图或绘图指令. ' },
+  { keys: 'L', command: '绘制直线 (Line)', category: 'sketch', description: '在当前激活的草图面绘制一段线. ' },
+  { keys: 'Ctrl + Drag', command: '等距复制实体', category: 'sketch', description: '框选草图对象后按住 Ctrl 拖动即可原样克隆实体. ' },
   
   // Assembly shortcuts
-  { keys: 'Tab', command: '隐藏悬停组件 (Hide)', category: 'assembly', description: '鼠标在装配体任意零件上悬停时按 Tab，能瞬间静默隐藏它，露出内部零件。' },
-  { keys: 'Shift + Tab', command: '显示隐藏组件 (Show)', category: 'assembly', description: '鼠标移动到零件被隐藏的空白处，按住 Shift+Tab 即可重新浮现。' },
-  { keys: 'Alt + Drag', command: '智能配合 (Smart Mates)', category: 'assembly', description: '按住 Alt 键拖动零件轴孔到另一个零件上，会自动创建同轴心/重合配合，极其高效！' },
-  { keys: 'Ctrl + Drag (组件)', command: '快速复制零件', category: 'assembly', description: '拖动装配体内的零件并按住 Ctrl，可直接拖出复制品。' },
+  { keys: 'Tab', command: '隐藏悬停组件 (Hide)', category: 'assembly', description: '鼠标在装配体任意零件上悬停时按 Tab, 能瞬间静默隐藏它, 露出内部零件. ' },
+  { keys: 'Shift + Tab', command: '显示隐藏组件 (Show)', category: 'assembly', description: '鼠标移动到零件被隐藏的空白处, 按住 Shift+Tab 即可重新浮现. ' },
+  { keys: 'Alt + Drag', command: '智能配合 (Smart Mates)', category: 'assembly', description: '按住 Alt 键拖动零件轴孔到另一个零件上, 会自动创建同轴心/重合配合, 极其高效! ' },
+  { keys: 'Ctrl + Drag (组件)', command: '快速复制零件', category: 'assembly', description: '拖动装配体内的零件并按住 Ctrl, 可直接拖出复制品. ' },
   
   // Drawing shortcuts
-  { keys: 'R', command: '最近文档列表', category: 'system', description: '在主界面调出最近使用过的历史工程文档列表。' },
-  { keys: 'C', command: '折叠特征树 (Collapse)', category: 'system', description: '一键将 FeatureManager 左侧复杂的装配特征树收拢折叠起来。' },
-  { keys: 'Alt + Click', command: '解除尺寸对齐锁定', category: 'drawing', description: '在工程图中标注尺寸时，按住 Alt 移动可绕过自动网格对齐附着。' },
-  { keys: 'Shift + Click', command: '尺寸标注切点锁定', category: 'drawing', description: '标注圆弧和圆时按住 Shift，可以锁定标注最大/最小切线间距。' }
+  { keys: 'R', command: '最近文档列表', category: 'system', description: '在主界面调出最近使用过的历史工程文档列表. ' },
+  { keys: 'C', command: '折叠特征树 (Collapse)', category: 'system', description: '一键将 FeatureManager 左侧复杂的装配特征树收拢折叠起来. ' },
+  { keys: 'Alt + Click', command: '解除尺寸对齐锁定', category: 'drawing', description: '在工程图中标注尺寸时, 按住 Alt 移动可绕过自动网格对齐附着. ' },
+  { keys: 'Shift + Click', command: '尺寸标注切点锁定', category: 'drawing', description: '标注圆弧和圆时按住 Shift, 可以锁定标注最大/最小切线间距. ' }
 ];
 
 // Mouse Gesture Definition (4-direction and 8-direction presets for SW)
@@ -214,7 +214,7 @@ export default function SolidWorksShortcutsClient() {
         {/* 轮盘主图与控制布局 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
-          {/* 左侧：轮盘环境切换 */}
+          {/* 左侧: 轮盘环境切换 */}
           <div className="flex flex-col gap-4">
             <span className="text-xs font-black text-slate-400 uppercase tracking-wider">选择手势工作环境</span>
             <div className="grid grid-cols-2 gap-3">
@@ -235,20 +235,20 @@ export default function SolidWorksShortcutsClient() {
                   >
                     {label}
                   </button>
-                );
+);
               })}
             </div>
 
             <div className="bg-slate-950/60 rounded-2xl border border-slate-800/80 p-5 mt-2 flex gap-3 text-xs leading-relaxed text-slate-400">
               <Compass className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-slate-300">什么是鼠标手势？</p>
-                <p className="mt-1">在 SolidWorks 中，按住<b>鼠标右键并朝特定方向拖动</b>，即可快速激活对应指令。将鼠标悬停在右侧的 SVG 轮盘上即可探索配置。</p>
+                <p className="font-bold text-slate-300">什么是鼠标手势? </p>
+                <p className="mt-1">在 SolidWorks 中, 按住<b>鼠标右键并朝特定方向拖动</b>, 即可快速激活对应指令. 将鼠标悬停在右侧的 SVG 轮盘上即可探索配置. </p>
               </div>
             </div>
           </div>
 
-          {/* 右侧：SVG 动态手势轮盘 */}
+          {/* 右侧: SVG 动态手势轮盘 */}
           <div className="flex flex-col items-center justify-center min-h-[220px]">
             <div className="w-[200px] h-[200px] relative">
               <svg viewBox="0 0 200 200" className="w-full h-full select-none">
@@ -311,7 +311,7 @@ export default function SolidWorksShortcutsClient() {
                       className="cursor-pointer transition-colors duration-150"
                     />
                   </>
-                )}
+)}
 
                 {/* 8-direction Sector Triggers (using standard octant polygon approximate bounds for performance) */}
                 {gestureMode === 8 && (
@@ -413,7 +413,7 @@ export default function SolidWorksShortcutsClient() {
                       className="cursor-pointer transition-colors duration-150"
                     />
                   </>
-                )}
+)}
 
                 {/* Symbols overlay */}
                 {activeGestures.map((gesture) => {
@@ -441,7 +441,7 @@ export default function SolidWorksShortcutsClient() {
                     >
                       {gesture.symbol}
                     </text>
-                  );
+);
                 })}
               </svg>
 
@@ -454,14 +454,14 @@ export default function SolidWorksShortcutsClient() {
                       {activeHoverInfo.command}
                     </span>
                   </>
-                ) : (
+) : (
                   <>
                     <MousePointer className="w-3.5 h-3.5 text-slate-500 mb-0.5" />
                     <span className="text-[7px] font-bold text-slate-500 uppercase tracking-widest leading-none">
                       Hover me
                     </span>
                   </>
-                )}
+)}
               </div>
             </div>
           </div>
@@ -472,7 +472,7 @@ export default function SolidWorksShortcutsClient() {
       {/* 快捷键搜索与多 Tab 筛选列表 */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm print:shadow-none print:border-none print:p-0">
         
-        {/* 控制排版：搜索与打印按钮 */}
+        {/* 控制排版: 搜索与打印按钮 */}
         <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-6 print:hidden">
           <div className="relative flex-1 max-w-md">
             <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -512,7 +512,7 @@ export default function SolidWorksShortcutsClient() {
               >
                 {label}
               </button>
-            );
+);
           })}
         </div>
 
@@ -537,14 +537,14 @@ export default function SolidWorksShortcutsClient() {
                   <td className="py-3 px-4 text-slate-900 font-black text-sm">{item.command}</td>
                   <td className="py-3 px-4 text-slate-500 font-medium leading-relaxed">{item.description}</td>
                 </tr>
-              ))}
+))}
               {filteredShortcuts.length === 0 && (
                 <tr>
                   <td colSpan={3} className="py-8 text-center text-slate-400">
-                    未找到匹配该关键字的快捷键，请尝试其他词汇。
+                    未找到匹配该关键字的快捷键, 请尝试其他词汇. 
                   </td>
                 </tr>
-              )}
+)}
             </tbody>
           </table>
         </div>
@@ -605,13 +605,13 @@ export default function SolidWorksShortcutsClient() {
           <div>
             <h4 className="font-bold text-slate-800 text-sm mb-1.5">1. 鼠标手势与快捷工具栏的黄金配合</h4>
             <p>
-              在 SolidWorks 中，强烈建议将鼠标手势配置为 8 方向，并把最频繁的“绘制直线”、“圆”、“智能尺寸”、“裁剪”和“正视于”放在其中。将不太频繁但关键的建构工具（如拉伸、切除、放样、基准面）放入 <b>`S 键快捷面板`</b> 中。这样你在设计时，右手用鼠标右键拖动完成草图，左手只需按一下 S 键即可一键生成三维体，实现“双手均不离开键盘鼠标重心”的极速体验。
+              在 SolidWorks 中, 强烈建议将鼠标手势配置为 8 方向, 并把最频繁的"绘制直线", "圆", "智能尺寸", "裁剪"和"正视于"放在其中. 将不太频繁但关键的建构工具 (如拉伸, 切除, 放样, 基准面) 放入 <b>`S 键快捷面板`</b> 中. 这样你在设计时, 右手用鼠标右键拖动完成草图, 左手只需按一下 S 键即可一键生成三维体, 实现"双手均不离开键盘鼠标重心"的极速体验. 
             </p>
           </div>
           <div>
             <h4 className="font-bold text-slate-800 text-sm mb-1.5">2. 强制重建 (Ctrl+Q) 与普通重建 (Ctrl+B) 的差异</h4>
             <p>
-              常规的重建模型（Ctrl+B）仅仅在当前发生修改的草图特征上重新构建生成实体，虽然计算速度快，但当装配关系非常多时，容易引起配合报错或部分草图关系无法更新。而<b>强制重建（Ctrl+Q）</b>是直接清空内存缓存，从 FeatureManager 特征树的最顶层基准面开始，对所有装配图元和几何约束进行逐行反编译与底盘重建。凡是遇到尺寸改了但实体不变、或者装配体出图缺失的情况，按 Ctrl+Q 是最直接彻底的自我修复命令。
+              常规的重建模型 (Ctrl+B) 仅仅在当前发生修改的草图特征上重新构建生成实体, 虽然计算速度快, 但当装配关系非常多时, 容易引起配合报错或部分草图关系无法更新. 而<b>强制重建 (Ctrl+Q) </b>是直接清空内存缓存, 从 FeatureManager 特征树的最顶层基准面开始, 对所有装配图元和几何约束进行逐行反编译与底盘重建. 凡是遇到尺寸改了但实体不变, 或者装配体出图缺失的情况, 按 Ctrl+Q 是最直接彻底的自我修复命令. 
             </p>
           </div>
         </div>
@@ -619,5 +619,5 @@ export default function SolidWorksShortcutsClient() {
 
       <NewsletterSubscribe />
     </div>
-  );
+);
 }

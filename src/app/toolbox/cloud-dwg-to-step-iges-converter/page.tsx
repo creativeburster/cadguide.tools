@@ -35,7 +35,7 @@ export default function CloudDwgToStepIgesConverterPage() {
               Online 3D DWG to STEP/IGES CAD Translator
             </h1>
             <p className="text-base text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              客观深度评测与防审计直达导航。
+              客观深度评测与防审计直达导航. 
             </p>
           </div>
         </section>
@@ -45,5 +45,5 @@ export default function CloudDwgToStepIgesConverterPage() {
         </section>
       </main>
     </>
-  );
+);
 }

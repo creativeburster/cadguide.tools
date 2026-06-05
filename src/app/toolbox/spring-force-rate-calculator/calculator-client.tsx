@@ -5,9 +5,9 @@ import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, Layers, Percent }
 import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
 
 const SPRING_MATERIALS = [
-  { name: 'Music Wire / ASTM A228 (高频弹簧钢琴线)', G: 78500, desc: '制造小直径高精密弹簧的最佳之选，拉伸强度极高' },
+  { name: 'Music Wire / ASTM A228 (高频弹簧钢琴线)', G: 78500, desc: '制造小直径高精密弹簧的最佳之选, 拉伸强度极高' },
   { name: 'Carbon Steel / ASTM A229 (碳素弹簧钢线)', G: 79300, desc: '最普遍的工业用弹簧钢材料' },
-  { name: 'Stainless 302 / ASTM A313 (不锈钢弹簧线)', G: 69000, desc: '耐酸碱、抗腐蚀，在潮湿工况下表现稳定' },
+  { name: 'Stainless 302 / ASTM A313 (不锈钢弹簧线)', G: 69000, desc: '耐酸碱, 抗腐蚀, 在潮湿工况下表现稳定' },
   { name: 'Phosphor Bronze / ASTM B159 (磷青铜线)', G: 41000, desc: '常用于导电性能要求的电子仪器弹簧片' },
 ];
 
@@ -166,7 +166,7 @@ Generated via CADGuide.tools`;
               <option key={sm.name} value={i}>
                 {sm.name} (G={sm.G} MPa)
               </option>
-            ))}
+))}
           </select>
           <div className="hidden print:block font-bold">
             线材材质: {material.name} (G = {material.G} MPa)
@@ -320,13 +320,13 @@ Generated via CADGuide.tools`;
             <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
-                <strong className="font-black">弹簧完全压实失效 (Solid Height Reached)！</strong>
+                <strong className="font-black">弹簧完全压实失效 (Solid Height Reached)! </strong>
                 <p className="mt-0.5 text-red-700">
-                  当前压缩行程已达到极限位移（{spring.maxDeflection.toFixed(1)} mm）。弹簧圈与圈已紧密贴合，丧失了所有的弹性行程缓冲能力，继续施压将作为钢柱刚性受力。
+                  当前压缩行程已达到极限位移 ({spring.maxDeflection.toFixed(1)} mm) . 弹簧圈与圈已紧密贴合, 丧失了所有的弹性行程缓冲能力, 继续施压将作为钢柱刚性受力. 
                 </p>
               </div>
             </div>
-          )}
+)}
 
           {isIndexWarn && (
             <div className="flex gap-3 bg-amber-50 border border-amber-250 p-4 rounded-2xl text-amber-800 text-xs">
@@ -334,13 +334,13 @@ Generated via CADGuide.tools`;
               <div>
                 <strong className="font-black">弹簧旋绕比不佳 (Spring Index Warning)</strong>
                 <p className="mt-0.5 text-amber-700">
-                  当前旋绕比 (D/d) 为 {spring.springIndex.toFixed(1)}。机械工程标准规定旋绕比应在 4 至 12 之间。
-                  {spring.springIndex < 4 && ' 旋绕比过小代表弹簧圈太紧，钢丝弯曲应力过大，极其难卷制制造。'}
-                  {spring.springIndex > 12 && ' 旋绕比过大代表圈径太松，弹簧工作易倾斜，压紧时极易产生失稳扭曲。'}
+                  当前旋绕比 (D/d) 为 {spring.springIndex.toFixed(1)}. 机械工程标准规定旋绕比应在 4 至 12 之间. 
+                  {spring.springIndex < 4 && ' 旋绕比过小代表弹簧圈太紧, 钢丝弯曲应力过大, 极其难卷制制造. '}
+                  {spring.springIndex > 12 && ' 旋绕比过大代表圈径太松, 弹簧工作易倾斜, 压紧时极易产生失稳扭曲. '}
                 </p>
               </div>
             </div>
-          )}
+)}
         </div>
 
         {/* Dynamic Spring SVG */}
@@ -389,7 +389,7 @@ Generated via CADGuide.tools`;
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-655">
-            * 物理仿真：弹簧螺线基于自由高度与实际位移的关系实时重算。圈距的物理聚拢生动展示了刚度反力与应力的富集。应力超过极限时，钢丝螺线呈红色（安全隐患区）。
+            * 物理仿真: 弹簧螺线基于自由高度与实际位移的关系实时重算. 圈距的物理聚拢生动展示了刚度反力与应力的富集. 应力超过极限时, 钢丝螺线呈红色 (安全隐患区) . 
           </p>
         </div>
       </div>
@@ -398,5 +398,5 @@ Generated via CADGuide.tools`;
         <NewsletterSubscribe />
       </div>
     </div>
-  );
+);
 }
