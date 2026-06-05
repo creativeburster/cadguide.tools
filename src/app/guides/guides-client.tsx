@@ -9,6 +9,7 @@ import { ToolLogo } from '@/components/tool-logo';
 import { tools } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 
 import {
   GuideCategorySection,
@@ -223,7 +224,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
 };
 
 export default function GuidesClient() {
-  const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing' | 'cheatsheets'>('all');
   const [selectedToolSlug, setSelectedToolSlug] = useState<string>('all');
   
   // State to control collapsible drawer in All Category cards at top
@@ -463,7 +464,8 @@ export default function GuidesClient() {
             { id: 'deployment', label: 'IT Deployment' },
             { id: 'migration', label: 'Crossover' },
             { id: 'procurement', label: 'Procurement' },
-            { id: 'manufacturing', label: 'CAM & 3D Print' }
+            { id: 'manufacturing', label: 'CAM & 3D Print' },
+            { id: 'cheatsheets', label: 'Shortcuts & References' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -484,7 +486,35 @@ export default function GuidesClient() {
         </div>
 
         {/* --- CRITICAL: 2-COLUMN GRID CONTAINING EIGHT CORE SECTION CARDS WITH INTERNAL ACCORDIONS --- */}
-        {isAll ? (
+        {activeTab === 'cheatsheets' ? (
+          /* STATE C: "Shortcuts & References" displaying migrated sheets */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
+            {TOOLBOX_DATA.filter((t) => t.category === 'cheatsheet' && t.status === 'released').map((sheet) => (
+              <Card
+                key={sheet.slug}
+                className="border border-slate-100 hover:border-blue-300 shadow-sm hover:shadow-lg rounded-[24px] p-6 bg-white flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1"
+              >
+                <div>
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
+                    📝
+                  </div>
+                  <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    <Link href={`/guides/${sheet.slug}`}>{sheet.title}</Link>
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                    {sheet.description}
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
+                  <span>View Reference Sheet</span>
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Card>
+            ))}
+          </div>
+        ) : isAll ? (
           /* STATE A: "All Guides" displaying 8 Category Cards (Symmetric grid of 4 rows and 2 columns!) */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
             {sortedCategorySections.map((p, idx) => {
