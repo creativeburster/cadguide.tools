@@ -10,7 +10,6 @@ export default function ToolboxClient() {
 
   const filteredTools = useMemo(() => {
     return TOOLBOX_DATA.filter((item) => {
-      if (item.category === 'cheatsheet') return false;
       const matchesSearch =
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -55,15 +54,15 @@ export default function ToolboxClient() {
         </div>
 
         <div className="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-4 py-2 rounded-2xl border border-slate-100">
-          <span>Total Utilities: {TOOLBOX_DATA.filter(t => t.category !== 'cheatsheet').length}</span>
+          <span>Total Utilities: {TOOLBOX_DATA.length}</span>
           <span className="text-slate-200">|</span>
-          <span className="text-blue-600">Active: {TOOLBOX_DATA.filter(t => t.status === 'released' && t.category !== 'cheatsheet').length}</span>
+          <span className="text-blue-600">Active: {TOOLBOX_DATA.filter(t => t.status === 'released').length}</span>
         </div>
       </div>
 
       {/* Category Navigation */}
       <div className="flex flex-wrap gap-2 pb-2">
-        {TOOLBOX_CATEGORIES.filter(cat => cat.id !== 'cheatsheet').map((cat) => (
+        {TOOLBOX_CATEGORIES.map((cat) => (
           <button
             key={cat.id}
             onClick={() => setActiveCategory(cat.id)}
@@ -84,7 +83,7 @@ export default function ToolboxClient() {
           filteredTools.map((item) => (
             <Link
               key={item.slug}
-              href={item.category === 'cheatsheet' ? `/guides/${item.slug}` : `/toolbox/${item.slug}`}
+              href={`/toolbox/${item.slug}`}
               className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 overflow-hidden"
             >
               {/* Decorative gradient corner */}
