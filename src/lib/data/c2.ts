@@ -2925,7 +2925,7 @@ export const c2Tools: Tool[] = [
   short_desc: "Professional 3D CAD without the enterprise price tag.",
 
   description:
-    "Alibre Design provides industrial-grade parametric modeling tools. It is a popular choice for those seeking a perpetual license instead of a subscription.",
+    "Alibre Design provides industrial-grade parametric modeling tools. It is used for those seeking a perpetual license instead of a subscription.",
 
   pricing_tiers: [
     {

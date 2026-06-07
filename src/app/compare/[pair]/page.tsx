@@ -83,11 +83,36 @@ const CONTRAST_NOTES: Record<string, string> = {
 function getDynamicEditorialVerdict(a: Tool, b: Tool): string {
   const higherScoreTool = a.score >= b.score ? a : b;
   const lowerScoreTool = a.score >= b.score ? b : a;
+
+  const isC1 = a.category_id === 'c1' || b.category_id === 'c1';
+  const isBim = a.category_id === 'c3' || b.category_id === 'c3';
+  const isCaeEda = a.category_id === 'c5' || b.category_id === 'c5' || a.category_id === 'c6' || b.category_id === 'c6';
   
-  const aPriceInfo = a.pricing_type === 'Free' || a.pricing_type === 'Open Source' ? 'free of charge' : `starting at $${a.starting_price}`;
-  const bPriceInfo = b.pricing_type === 'Free' || b.pricing_type === 'Open Source' ? 'free of charge' : `starting at $${b.starting_price}`;
-  
-  return `Comparing ${a.name} and ${b.name} reveals clear strategic tradeoffs. ${higherScoreTool.name} holds the edge in overall design maturity with an expert score of ${higherScoreTool.score.toFixed(1)}/5, compared to ${lowerScoreTool.score.toFixed(1)}/5 for ${lowerScoreTool.name}. Financially, ${a.name} is positioned ${aPriceInfo} while ${b.name} is available ${bPriceInfo}. When deciding between them, teams should prioritize ${higherScoreTool.name} if they require its class-leading industry performance and specialized ${higherScoreTool.pros?.slice(0,2).join(' or ') || 'capabilities'}. Conversely, ${lowerScoreTool.name} remains an excellent selection for users heavily invested in ${lowerScoreTool.platforms.join(' and ')} environments who value its strength in ${lowerScoreTool.pros?.[0] || 'streamlined design workflows'}.`;
+  const mcadTools = ["solidworks", "fusion-360", "onshape", "autodesk-inventor", "ptc-creo", "siemens-nx", "catia", "freecad", "shapr3d", "solid-edge"];
+  const isMcad = mcadTools.includes(a.slug) || mcadTools.includes(b.slug) || a.category_id === 'c2' || b.category_id === 'c2';
+
+  // 1. 2D Drafting & Detailing Category (isC1)
+  if (isC1) {
+    return `Evaluating the 2D drafting pipelines of ${a.name} and ${b.name} highlights distinct platform alignments. ${higherScoreTool.name} commands a higher rating of ${higherScoreTool.score.toFixed(1)}/5 for its mature AutoLISP execution speed and legacy .dwg font weight preservation, whereas ${lowerScoreTool.name} stands out as a highly cost-effective alternative for teams focused on standard viewport layouts and batch CTB plotting. If your workflow requires high-speed LISP scripts and deep external reference (XREF) path recovery, ${higherScoreTool.name} remains the robust choice. For lightweight drafting seats without heavy subscription overheads, ${lowerScoreTool.name} offers a smooth command-line crossover.`;
+  }
+
+  // 2. BIM & Structural Coordination Category (isBim)
+  if (isBim) {
+    return `For multi-disciplinary coordination, comparing the BIM authoring capabilities of ${a.name} and ${b.name} reveals clear architectural tradeoffs. ${higherScoreTool.name} provides class-leading performance in central-to-local model synchronization and IFC4 schema mapping, rating at ${higherScoreTool.score.toFixed(1)}/5. ${lowerScoreTool.name} provides a highly specialized environment for parametric design, making it an excellent fit for firms looking to streamline LOD 300/400 structural details. Choose ${higherScoreTool.name} if your team runs complex building execution plans requiring multi-user Worksharing. Opt for ${lowerScoreTool.name} to leverage intuitive architectural modeling and coordinate layouts on ${lowerScoreTool.platforms.join(' or ')} environments.`;
+  }
+
+  // 3. 3D Mechanical parametric modeling Category (isMcad)
+  if (isMcad) {
+    return `Analyzing 3D mechanical modeling pipelines between ${a.name} and ${b.name} reveals distinct parametric assembly workflows. ${higherScoreTool.name} holds the technical edge with an expert score of ${higherScoreTool.score.toFixed(1)}/5, excelling in large assembly interference analysis and geometric kernel integrity (delivering solid B-Rep topology). Meanwhile, ${lowerScoreTool.name} focuses on sheet metal unfold tolerances and direct solid editing. For teams requiring strict parametric design history and high-volume sheet metal bend K-factor calculations, ${higherScoreTool.name} is the industrial choice. If rapid direct modeling or integrated CAM toolpath setups on ${lowerScoreTool.platforms.join(' or ')} are key, ${lowerScoreTool.name} provides a highly agile alternative.`;
+  }
+
+  // 4. Engineering simulation & EDA Category (isCaeEda)
+  if (isCaeEda) {
+    return `In high-fidelity engineering simulations and board layouts, the comparison between ${a.name} and ${b.name} emphasizes rigorous solving capacity. ${higherScoreTool.name} represents the industrial standard with a score of ${higherScoreTool.score.toFixed(1)}/5, optimized for complex multi-phase solver iterations and high-speed PCB trace routing. ${lowerScoreTool.name} remains highly competitive for teams seeking streamlined board schematics or rapid thermal dissipation checks. Choose ${higherScoreTool.name} to handle heavy HPC parallel mesh solving and ActiveBOM automation. Prefer ${lowerScoreTool.name} for rapid circuit prototyping and layout coordination.`;
+  }
+
+  // 5. Creative Rendering & Visualizations Category (Default / Creative)
+  return `Comparing the creative visualization capabilities of ${a.name} and ${b.name} highlights clear rendering pipeline differences. ${higherScoreTool.name} scores ${higherScoreTool.score.toFixed(1)}/5, providing top-tier real-time PBR material mapping and GPU-accelerated ray tracing. ${lowerScoreTool.name} focuses on rapid viewport vertex shading and lightweight polygon exports. If your workflow centers on photorealistic VR presentation-ready environments, ${higherScoreTool.name} is unmatched. For rapid concept modeling and high-poly asset exports on ${lowerScoreTool.platforms.join(' or ')}, ${lowerScoreTool.name} remains a highly competitive driver.`;
 }
 
 function getCompareLayoutStyle(a: Tool, b: Tool): {
