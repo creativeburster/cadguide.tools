@@ -608,10 +608,14 @@ export default function GuidesClient() {
 
         {/* --- CRITICAL: 2-COLUMN GRID CONTAINING EIGHT CORE SECTION CARDS WITH INTERNAL ACCORDIONS --- */}
         {activeTab === 'cheatsheets' ? (
-          /* STATE C: "Shortcuts & References" displaying migrated sheets with matching highlights and custom sorting */
+          /* STATE C: "Shortcuts & References" displaying migrated sheets with matching highlights and custom filtering */
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
             {[...TOOLBOX_DATA]
               .filter((t) => t.category === 'cheatsheet' && t.status === 'released')
+              .filter((sheet) => {
+                if (!selectedTool) return true; // 未选特定软件时，展示全量 17 个
+                return isCheatsheetRelated(sheet, selectedTool); // 选中软件时，严格只展示与该软件相关的快捷键表
+              })
               .sort((a, b) => {
                 if (!selectedTool) return 0;
                 const aRelated = isCheatsheetRelated(a, selectedTool);
