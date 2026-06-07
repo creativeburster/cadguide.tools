@@ -43,7 +43,7 @@ import {
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { comparisonPairs } from "@/lib/seo-content";
-import { ARTICLES_LIST, getLocalizedTitleAndExcerpt } from "@/lib/guides-data";
+import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from "@/lib/guides-data";
 
 interface Props {
   tool: Tool;
@@ -108,25 +108,31 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
   );
 
-  const rawRelatedGuides = ARTICLES_LIST.filter(
-    (g) => g.softwareSlug === (tool.slug === "autocad" ? "autocad" : tool.slug === "solidworks" ? "solidworks" : g.softwareSlug)
+  // 1. 获取所有与当前工具兼容的指南
+  const allCompatibleGuides = ARTICLES_LIST.filter((g) =>
+    isArticleCompatibleWithTool(g.title, g.category, tool)
   );
 
-  const relatedGuides = rawRelatedGuides
-    .map((g) => {
-      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
-      return {
-        ...g,
-        title: localized.title,
-        excerpt: localized.excerpt,
-        keyword: localized.keyword,
-        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
-      };
-    })
-    .slice(0, 4);
+  // 2. 切出前 10 篇（这 10 篇是在 guides/[slug] 的 generateStaticParams 中为该工具渲染出来的全部有效路由）
+  // 为了防止某些极其特殊或严格熔断条件下的工具导致文章过少，这里加入防空置兜底：
+  // 若少于 4 篇（极端边缘情况），则从 ARTICLES_LIST 借调非商业、安全的通用指南进行补位。
+  let safeAvailableGuides = allCompatibleGuides.slice(0, 10);
+  
+  if (safeAvailableGuides.length < 4) {
+    const fallbackPool = ARTICLES_LIST.filter(
+      (g) =>
+        !safeAvailableGuides.some((existing) => existing.id === g.id) &&
+        !g.title.toLowerCase().includes("license") &&
+        !g.title.toLowerCase().includes("flexlm") &&
+        !g.title.toLowerCase().includes("ssot") &&
+        !g.title.toLowerCase().includes("procurement")
+    );
+    safeAvailableGuides = [...safeAvailableGuides, ...fallbackPool].slice(0, 10);
+  }
 
-  const sidebarTroubleshootingGuides = rawRelatedGuides
-    .filter((g) => g.category === "troubleshooting")
+  // 3. 底部关联的 4 篇相关指南，直接取前 4 篇并进行本地化翻译
+  const relatedGuides = safeAvailableGuides
+    .slice(0, 4)
     .map((g) => {
       const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
       return {
@@ -136,8 +142,30 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
         keyword: localized.keyword,
         slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
       };
-    })
-    .slice(0, 3);
+    });
+
+  // 4. 侧边栏的 3 篇排错指南，优先取 category === "troubleshooting" 的文章
+  const sidebarTroubleshootRaw = safeAvailableGuides.filter((g) => g.category === "troubleshooting");
+  // 如果排错指南不足 3 篇，用其他类别的兼容文章补位，以保证 UI 饱满
+  const sidebarGuidesPool = sidebarTroubleshootRaw.length >= 3
+    ? sidebarTroubleshootRaw
+    : [
+        ...sidebarTroubleshootRaw,
+        ...safeAvailableGuides.filter((g) => g.category !== "troubleshooting")
+      ];
+
+  const sidebarTroubleshootingGuides = sidebarGuidesPool
+    .slice(0, 3)
+    .map((g) => {
+      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
+      return {
+        ...g,
+        title: localized.title,
+        excerpt: localized.excerpt,
+        keyword: localized.keyword,
+        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
+      };
+    });
   // Surface Compatibility / Trust sub-nav entries only when at least
   // one of the underlying fields is populated. Avoids dead anchors on
   // tools that haven't been hand-enriched yet.

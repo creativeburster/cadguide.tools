@@ -38,7 +38,8 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Resolve SolidWorks Price Seat Allocation & EULA Compliance Warnings', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks price' },
       { title: 'AutoCAD Architecture Fatal Error 0x0024 Recovery Workflow', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad architecture' },
       { title: 'Revit Crash on Launch: Repairing Damaged Local BIM Models', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'revit crash' },
-      { title: 'How to Fix FLEXlm Server Socket Binding Error 10048', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm error' }
+      { title: 'How to Fix FLEXlm Server Socket Binding Error 10048', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm error' },
+      { title: 'Resolve FLEXlm Error -15: Cannot Connect to License Server', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm error' }
     ],
     tags: ['#DWG-Recovery', '#FatalError-0x0024', '#LicensePatch']
   },
@@ -89,7 +90,8 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'IEC Electrical Schematic CAD Drawing Best Practices', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad electrical' },
       { title: 'Enterprise CAD File Archiving & Version Naming Convention Standard', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad programs' },
       { title: 'BIM Execution Plan (BEP) Modeling Standards for Public Tenders', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'bim standards' },
-      { title: 'AIA CAD Layering Standards for Multi-Disciplinary Coordination', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'layer standards' }
+      { title: 'AIA CAD Layering Standards for Multi-Disciplinary Coordination', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'layer standards' },
+      { title: 'Revit RVT to Archicad PLN via IFC4: Attribute Mapping & LOD Preservation', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'revit to archicad' }
     ],
     tags: ['#AIA-Layers', '#ISO-Dimension', '#BIM-BEP']
   },
@@ -123,7 +125,9 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'SolidWorks to Inventor Migration: Reclaiming 3D Parametric CAD Integrity', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autodesk inventor' },
       { title: 'Migrating Legacy AutoCAD Drawings to Online Cloud CAD Natively', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'online cad' },
       { title: 'DraftSight to BricsCAD Pro Migration: AutoLISP Command Compatibility', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'draftsight alternative' },
-      { title: 'Legacy MicroStation DGN to DWG CAD Translation Standards', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'dwg translation' }
+      { title: 'Legacy MicroStation DGN to DWG CAD Translation Standards', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'dwg translation' },
+      { title: 'SolidWorks XT (Parasolid) to AutoCAD SAT (ACIS): Topology Integrity Recovery', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks to autocad' },
+      { title: 'CATIA V5 to SolidWorks: Kinematic Constraints Translation Workflows', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'catia to solidworks' }
     ],
     tags: ['#AutoLISP-Migrate', '#PGP-Aliases', '#BricsCAD-Transition']
   },
@@ -157,7 +161,8 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Sheet Metal Bending Allowances: Precision K-Factor Calculations', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks free' },
       { title: 'CAD/CAM Integration: Enforcing Standard G-Code Feed Rates', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solid edge' },
       { title: '3D Printing Solid Modeling: Exporting Watertight B-Rep Assemblies', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'freecad' },
-      { title: 'CNC Milling Tolerances: Calibrating CAD Geometry Kernels for Mills', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks free' }
+      { title: 'CNC Milling Tolerances: Calibrating CAD Geometry Kernels for Mills', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks free' },
+      { title: 'Rhino Organic NURBS to Inventor Parametric B-Rep Sewing Tolerances', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'rhino to inventor' }
     ],
     tags: ['#CNC-GCode', '#STLExport', '#K-Factor']
   }
@@ -508,10 +513,13 @@ export function getLocalizedTitleAndExcerpt(
   const toolName = tool.name;
 
   // 1. Perform primary software replacements
-  if (category === 'migration' || category === 'crossover') {
+  if (title.includes('Revit RVT to Archicad PLN') || title.toLowerCase().includes('revit to archicad')) {
+    // Keep cross-software BIM standard titles intact to preserve EEAT and prevent incorrect substitutions
+  } else if (category === 'migration' || category === 'crossover') {
     const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
     let replaced = false;
     for (const target of targets) {
+      if (target.toLowerCase() === toolName.toLowerCase()) continue;
       const regex = getCachedRegex(target, 'gi');
       if (regex.test(newTitle)) {
         newTitle = newTitle.replace(regex, toolName);
@@ -526,6 +534,10 @@ export function getLocalizedTitleAndExcerpt(
       for (const sw of allSoftware) {
         const regex = getCachedRegex(sw, 'gi');
         if (regex.test(newTitle)) {
+          // 防止同名自指碰撞，例如避免出现 "SolidWorks to SolidWorks" 的穿帮
+          if (newTitle.toLowerCase().includes(toolName.toLowerCase()) && sw.toLowerCase() !== toolName.toLowerCase()) {
+            continue;
+          }
           newTitle = newTitle.replace(regex, toolName);
           newExcerpt = newExcerpt.replace(regex, toolName);
           newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
@@ -591,3 +603,106 @@ export function getLocalizedTitleAndExcerpt(
 export function getLocalizedTitle(title: string, category: string, tool: any): string {
   return getLocalizedTitleAndExcerpt(title, '', '', category, tool).title;
 }
+
+export function isArticleCompatibleWithTool(articleTitle: string, articleCategory: string, tool: any): boolean {
+  const titleLower = articleTitle.toLowerCase();
+  const categoryLower = articleCategory.toLowerCase();
+  const pricingType = tool.pricing_type || 'Commercial';
+  const isOpenSource = pricingType === 'Open Source' || pricingType === 'Free';
+  
+  const industries = tool.industries || [];
+  const features = tool.features || [];
+  const categoryId = tool.category_id || '';
+
+  // 辅助判定工具特征
+  const isBIM = categoryId === 'bim' || industries.some((i: string) => /bim|architect|construction|building/i.test(i)) || features.includes('bim-integration');
+  const isMechanical = categoryId === 'mfg' || industries.some((i: string) => /mechanical|mfg|automotive|aerospace|industrial/i.test(i)) || features.includes('parametric-modeling') || features.includes('integrated-cam') || features.includes('simulation-fea');
+  const is2D = categoryId === '2d-cad' || features.includes('drafting-detailing');
+  const isRendering = features.includes('rendering') || industries.some((i: string) => /visual|render|creative/i.test(i));
+  const is3D = features.some((f: string) => /parametric|surface|mesh|subdivision|direct/i.test(f)) || isMechanical || isBIM || isRendering;
+
+  // 1. 开源/免费软件熔断：不生成商业授权、采购、FLEXlm、EULA 审计相关文章
+  if (isOpenSource) {
+    if (
+      titleLower.includes('license') ||
+      titleLower.includes('flexlm') ||
+      titleLower.includes('eula') ||
+      titleLower.includes('seat') ||
+      titleLower.includes('subscription') ||
+      titleLower.includes('procurement') ||
+      titleLower.includes('buy') ||
+      titleLower.includes('audit') ||
+      categoryLower === 'procurement' ||
+      categoryLower === 'deployment'
+    ) {
+      return false;
+    }
+  }
+
+  // 2. 特殊高价值长尾文章的精细化强类型特征熔断
+  
+  // (A) BIM IFC4 属性协同指南 -> 只允许在真正的 3D BIM 建模与协同软件（category_id = c3）中生成，绝对屏蔽普通 2D CAD 和机械软件
+  if (titleLower.includes('ifc4') || titleLower.includes('revit to archicad') || titleLower.includes('rvt to archicad')) {
+    if (categoryId !== 'c3') return false;
+  }
+
+  // (B) Rhino NURBS 到 Inventor 实体缝合 -> 必须是 3D 且支持曲面/参数化造型的机械或工业设计软件
+  if (titleLower.includes('nurbs') || titleLower.includes('sewing') || titleLower.includes('brep')) {
+    const supportsSurfacesOrSolids = features.includes('surface-modeling') || features.includes('parametric-modeling') || features.includes('direct-modeling') || tool.slug === 'rhino-3d';
+    if (!is3D || !supportsSurfacesOrSolids || isRendering || isBIM) return false;
+  }
+
+  // (C) SolidWorks to AutoCAD 跨内核数据转换 -> 必须是 3D 实体/工程图机械软件，屏蔽纯渲染、BIM协同
+  if (titleLower.includes('solidworks xt') || titleLower.includes('solidworks to autocad')) {
+    if (isRendering || isBIM || !is3D) return false;
+  }
+
+  // (D) CATIA V5 to SolidWorks 约束迁移 -> 必须是主流中高端三维参数化机械装配体建模软件，绝对不用于 2D 或纯分析软件
+  if (titleLower.includes('catia v5') || titleLower.includes('catia to solidworks')) {
+    const allowedMechanicalAssemblySlugs = [
+      'solidworks', 'autodesk-inventor', 'siemens-nx', 'solid-edge', 'ptc-creo', 'catia', 'freecad', 'onshape', 'fusion-360'
+    ];
+    if (!allowedMechanicalAssemblySlugs.includes(tool.slug)) return false;
+  }
+
+  // (E) FLEXlm Server -15 / 10048 报错排错 -> 必须是大型企业级商业套件，熔断轻量级渲染/家装/2D小软件及开源免费版
+  if (titleLower.includes('flexlm') || titleLower.includes('options file')) {
+    if (isOpenSource || tool.starting_price === 0) return false;
+    const excludedFLEXlmSlugs = [
+      'qcad', 'librecad', 'sketchup', 'sweet-home-3d', 'planner-5d', 
+      'cedar-architect', 'homestyler', 'floorplanner', 'roomle', 
+      'live-home-3d', 'coohom', 'foyr-neo', 'chief-architect', 
+      'softplan', 'punch-cad', 'turbocad', 'ashampoo-3d-cad', 
+      'delta-cad', 'draftsight-standard', 'nanocad-free'
+    ];
+    if (excludedFLEXlmSlugs.includes(tool.slug)) return false;
+  }
+
+  // (F) 3D 打印 K-Factor / G-Code / STL / 3MF -> 必须是 CAM 制造或 3D 打印相关软件
+  if (titleLower.includes('k-factor') || titleLower.includes('g-code') || titleLower.includes('slicing') || titleLower.includes('watertight b-rep')) {
+    const supportsCAMorPrint = features.includes('integrated-cam') || industries.some((i: string) => /cam|3d-printing|milling|machining/i.test(i)) || tool.slug === 'freecad' || tool.slug === 'fusion-360' || tool.slug === 'solidworks';
+    if (!supportsCAMorPrint) return false;
+  }
+
+  // 3. 基础行业熔断守卫：
+  // 纯二维 CAD 绝不生成三维曲面/网格/CAM加工/B-Rep/G-Code 相关的文章
+  if (is2D && !is3D) {
+    if (
+      titleLower.includes('nurbs') ||
+      titleLower.includes('sewing') ||
+      titleLower.includes('step') ||
+      titleLower.includes('iges') ||
+      titleLower.includes('brep') ||
+      titleLower.includes('manifold') ||
+      titleLower.includes('k-factor') ||
+      titleLower.includes('bending') ||
+      titleLower.includes('slicing') ||
+      titleLower.includes('g-code')
+    ) {
+      return false;
+    }
+  }
+
+  return true;
+}
+

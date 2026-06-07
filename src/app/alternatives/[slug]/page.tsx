@@ -491,6 +491,16 @@ function renderRelatedLinks(tool: Tool) {
 
 // --- MAIN CONTROLLER PAGE ---
 
+function getDynamicAlternativesIntro(tool: Tool, count: number, archetype: string): string {
+  if (archetype === 'technical-migration') {
+    return `Evaluating alternatives to ${tool.name} centers on mitigating licensing overheads and securing file-format compatibility for enterprise teams. Below are ${count} hand-vetted CAD/BIM tools capable of replacing ${tool.name} in production. These editors' picks are analyzed by command-line AutoLISP compatibility, DWG/RVT reference integrity, and the feasibility of concurrent network deployment.`;
+  }
+  if (archetype === 'creative-styling') {
+    return `Finding a substitute for ${tool.name} requires matching its specific curvature controls and mesh density pipeline response. Below, we review ${count} top alternatives for 3D modeling and rendering. Our evaluation focuses on G2 surface continuity preservation, viewport GPU shaders, and how cleanly each modeller exports watertight shells for visualization or manufacturing.`;
+  }
+  return `Switching away from ${tool.name} is often motivated by a desire for zero vendor lock-in or specialized EDA/CAM workflows. Below are ${count} open-source and professional alternatives offering maximum file schema transparency (avoiding proprietary cloud silos). Compare them by library management flexibility, Python scripting extensibility, and export format compliance.`;
+}
+
 export default async function AlternativesPage(
   { params }: { params: Promise<{ slug: string }> },
 ) {
@@ -544,7 +554,7 @@ export default async function AlternativesPage(
               {pageTitle(tool, alts.length)}
             </h1>
             <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-              While {tool.name} is a powerful system, specific limitations or budget constraints often make other products a better fit. Below are {alts.length} hand-vetted alternatives to {tool.name}. Every option on this list shares a similar functional space but differs on starting cost, operating systems, and target capabilities. Check our editors&apos; quick comparison notes below to short-list your next choice.
+              {getDynamicAlternativesIntro(tool, alts.length, style.archetype)}
             </p>
           </header>
 
