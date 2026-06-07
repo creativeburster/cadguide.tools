@@ -613,8 +613,13 @@ export default function GuidesClient() {
             {[...TOOLBOX_DATA]
               .filter((t) => t.category === 'cheatsheet' && t.status === 'released')
               .filter((sheet) => {
-                if (!selectedTool) return true; // 未选特定软件时，展示全量 17 个
-                return isCheatsheetRelated(sheet, selectedTool); // 选中软件时，严格只展示与该软件相关的快捷键表
+                if (!selectedTool) {
+                  // 当不选择具体软件时，只展示通用的 cheatsheets 与对比表卡片，精简视觉噪音
+                  const universalSlugs = ['shortcuts', 'autocad-vs-gstarcad-shortcuts', 'autocad-vs-zwcad-shortcuts'];
+                  return universalSlugs.includes(sheet.slug);
+                }
+                // 当选择具体软件时，严格只展示与该软件相关的快捷键表
+                return isCheatsheetRelated(sheet, selectedTool);
               })
               .sort((a, b) => {
                 if (!selectedTool) return 0;
