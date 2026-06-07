@@ -1,9 +1,18 @@
 import { NextResponse } from 'next/server';
+import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 
 const BASE_URL = 'https://cadguide.tools';
 
 export async function GET() {
   const now = new Date().toISOString();
+  
+  const toolboxTools = TOOLBOX_DATA.filter((t) => t.category !== 'cheatsheet');
+  const toolboxUrls = toolboxTools.map((tool) => `  <url>
+    <loc>${BASE_URL}/toolbox/${tool.slug}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>`);
 
   const pages = [
     { url: '', priority: 1.0, changefreq: 'daily' },
@@ -41,6 +50,7 @@ export async function GET() {
   </url>`
     )
     .join('\n')}
+${toolboxUrls.join('\n')}
 </urlset>`;
 
   return new NextResponse(xml, {

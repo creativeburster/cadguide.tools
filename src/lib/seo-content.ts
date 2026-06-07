@@ -2009,7 +2009,7 @@ export const SECTOR_PAGES: Record<string, SectorPage> = {
     filter: (t) =>
       (t.industries ?? []).some(i => ["Woodworking", "Furniture", "Timber Construction", "Interior Design", "Whole-House Customization"].includes(i)) ||
       (t.core_features ?? []).some(f => ["Timber CAD", "Cabinet Design", "Furniture Design"].includes(f)) ||
-      /woodworking|furniture|cabinet|timber|customization|panel cutting|wood design|全屋定制/i.test(t.name + " " + t.short_desc + " " + t.description),
+      /woodworking|furniture|cabinet|timber|customization|panel cutting|wood design/i.test(t.name + " " + t.short_desc + " " + t.description),
     intro: "Woodworking, cabinet making, and whole-house customization require CAD software that can design custom cabinetry, timber structures, and interior joinery while automatically generating production data. In 2026, this sector demands smart parametric models where changing room dimensions instantly updates cabinet widths, generates nested panel-cutting layouts for CNC wood routers, calculates hardware counts (hinges, drawer slides), and renders high-quality visualisations for client approvals.",
     faqs: [
       {

@@ -14,46 +14,43 @@ interface ToolItem {
 export function RelatedTools() {
   const tools: ToolItem[] = [
     {
-      name: 'Cross-Platform CAD Shortcuts Matrix',
-      desc: 'Compare and print keyboard command shortcuts across AutoCAD, GstarCAD, ZWCAD, and DWG FastView.',
-      link: '/guides/shortcuts',
-      icon: LayoutGrid,
-      tag: 'Core'
-    },
-    {
-      name: 'AutoCAD vs. ZWCAD Command Diff',
-      desc: 'Identify the exact command and alias variations between AutoCAD and ZWCAD platforms to transition smoothly.',
-      link: '/guides/autocad-vs-zwcad-shortcuts',
+      name: 'DWG Version Checker',
+      desc: 'Identify the exact release version (AC1032, AC1027, etc.) and software compatibility matrix of any DWG file instantly.',
+      link: '/toolbox/dwg-version-checker',
       icon: FileSearch,
-      tag: 'Migration'
+      tag: 'Popular'
     },
     {
-      name: 'AutoCAD vs. GstarCAD Command Diff',
-      desc: 'Detailed comparison highlighting the command differences and alias mappings between AutoCAD and GstarCAD.',
-      link: '/guides/autocad-vs-gstarcad-shortcuts',
-      icon: Ruler,
-      tag: 'Migration'
-    },
-    {
-      name: 'SolidWorks Keyboard Shortcuts',
-      desc: 'Printable list of SolidWorks sketch, assembly, and drawing hotkeys and mouse gestures.',
-      link: '/guides/solidworks-shortcuts-sheet',
+      name: 'Drawing Lag Cleaner',
+      desc: 'Clean redundant regapps, DGN linestyles, and database bloat to restore slow CAD drawing performance.',
+      link: '/toolbox/drawing-lag-performance-cleaner',
       icon: Zap,
-      tag: '3D MCAD'
+      tag: 'Speed'
     },
     {
-      name: 'Revit Keyboard Shortcuts Table',
-      desc: 'Quick reference sheet for Revit BIM modeling commands, modification tools, and view controls.',
-      link: '/guides/revit-shortcuts-sheet',
-      icon: Type,
-      tag: 'BIM'
-    },
-    {
-      name: 'Rhino 3D Command Aliases Guide',
-      desc: 'Searchable database of Rhino 3D hotkeys, mouse modifiers, and custom command aliases.',
-      link: '/guides/rhino-shortcuts-sheet',
+      name: 'Fatal Error Crash Diagnoser',
+      desc: 'Debug memory violations, graphics card hardware acceleration crashes, and unhandled access exceptions.',
+      link: '/toolbox/fatal-error-diagnostic-wizard',
       icon: AlertTriangle,
-      tag: 'Design'
+      tag: 'Critical'
+    },
+    {
+      name: 'AutoCAD pgp Alias Editor',
+      desc: 'Customize, clean, and download your keyboard shortcut settings file (PGP) in a visual client-side dashboard.',
+      link: '/toolbox/acad-pgp-alias-editor',
+      icon: LayoutGrid,
+    },
+    {
+      name: 'SHX Font & Gibberish Resolver',
+      desc: 'Resolve missing text blocks, big fonts, compile SHX files, and map codepages to fix Chinese text errors.',
+      link: '/toolbox/missing-font-shx-resolver',
+      icon: Type,
+    },
+    {
+      name: 'Hatch Scale Factor Calculator',
+      desc: 'Compute precise scale factors and line spacings for custom PAT hatch files based on metric plot sizes.',
+      link: '/toolbox/cad-hatch-scale-optimizer',
+      icon: Ruler,
     }
   ];
 
@@ -62,10 +59,10 @@ export function RelatedTools() {
       <div>
         <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
           <LayoutGrid className="w-6 h-6 text-blue-600" />
-          Related Shortcuts & Reference Sheets
+          Related CAD & BIM Utilities
         </h3>
         <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">
-          Handpicked reference sheets to streamline CAD & BIM drafting workflows
+          Handpicked browser tools to streamline engineering drafting workflows
         </p>
       </div>
 
@@ -97,7 +94,7 @@ export function RelatedTools() {
                 </p>
               </div>
               <div className="mt-4 flex items-center text-xs font-black text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity gap-1">
-                View Sheet
+                Launch Tool
                 <span>→</span>
               </div>
             </Link>

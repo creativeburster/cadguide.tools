@@ -63,6 +63,7 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${categoryUrls.join('\n')}
 ${guideUrls.join('\n')}
+${cheatsheetUrls.join('\n')}
 </urlset>`;
 
   return new NextResponse(xml, {

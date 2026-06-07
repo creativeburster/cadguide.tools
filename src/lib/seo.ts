@@ -256,9 +256,23 @@ export function pageMetadata(opts: {
   ogType?: "website" | "article";
 }): Metadata {
   const url = `${SITE_URL}${opts.path}`;
-  const fullTitle = opts.title.includes(SITE_NAME)
-    ? opts.title
-    : `${opts.title} | ${SITE_NAME}`;
+  
+  // Format title to satisfy Google's 50-60 character display limit
+  let fullTitle = opts.title.trim();
+  if (!fullTitle.includes(SITE_NAME)) {
+    if (fullTitle.length + 3 + SITE_NAME.length <= 60) {
+      fullTitle = `${fullTitle} | ${SITE_NAME}`;
+    } else if (fullTitle.length + 3 + 8 <= 60) {
+      fullTitle = `${fullTitle} | CADGuide`;
+    } else if (fullTitle.length > 60) {
+      fullTitle = fullTitle.slice(0, 57) + "...";
+    }
+  } else {
+    if (fullTitle.length > 60) {
+      fullTitle = fullTitle.slice(0, 57) + "...";
+    }
+  }
+
   return {
     title: fullTitle,
     description: opts.description,

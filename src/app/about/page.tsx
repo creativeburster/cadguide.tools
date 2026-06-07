@@ -1,6 +1,6 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
-import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import { RelatedTools } from '@/components/related-tools';
 
 export const metadata: Metadata = pageMetadata({
   title: 'About CADGuide.tools — Independent CAD Software Reviews',
@@ -136,14 +136,7 @@ function AboutBody() {
             We believe that software should be a tool that empowers your creativity, not a barrier. Whether you are a student looking for a free alternative to AutoCAD or a large enterprise coordinating a multi-billion dollar BIM project, we are here to provide the insights you need.
           </p>
           
-          <NewsletterSubscribe
-            variant="banner"
-            title="Join Our CAD Community"
-            description="Subscribe to get the latest software updates, newly-discovered specialized engineering tools, and licensing guides directly in your inbox."
-            buttonText="Join Community"
-            placeholder="Enter your work email"
-            className="mt-16 not-prose"
-          />
+          <RelatedTools />
         </div>
       </section>
     </main>

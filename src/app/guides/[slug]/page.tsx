@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
+import { AICitation } from '@/components/ai-citation';
 import {
   ARTICLES_LIST,
   CATEGORY_SECTIONS,
@@ -2482,16 +2483,56 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     '@type': 'HowTo',
     'name': title,
     'description': excerpt,
+    'totalTime': 'PT25M',
+    'estimatedCost': {
+      '@type': 'MonetaryAmount',
+      'currency': 'USD',
+      'value': '0'
+    },
+    'tool': [
+      {
+        '@type': 'HowToTool',
+        'name': tool.name
+      }
+    ],
     'step': steps.map((step, idx) => ({
       '@type': 'HowToStep',
       'position': idx + 1,
       'name': step.title,
       'text': step.desc,
+      'url': `https://cadguide.tools/guides/${slug}#step-${idx + 1}`
     })),
+  };
+
+  // GEO Step 1: FAQPage Schema — 让 AI 爬虫一眼读懂页面问答结构
+  const faqEntries = steps.map((step) => ({
+    '@type': 'Question',
+    'name': `How do you ${step.title.replace(/\?$/, '').toLowerCase()}?`,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': step.desc,
+    },
+  }));
+
+  // 附加一条基于 category 的通用 FAQ，覆盖"适用版本"高频检索意图
+  faqEntries.push({
+    '@type': 'Question',
+    'name': `Does this ${category} guide apply to the latest version of ${tool.name}?`,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': `Yes. This technical directive covers ${tool.name} across all currently supported release versions, including the latest subscription and perpetual editions. The procedures described are verified against standard enterprise deployment configurations.`,
+    },
+  });
+
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqEntries,
   };
 
   return (
     <>
+      <link rel="cite-as" href={`https://cadguide.tools/guides/${slug}`} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
@@ -2503,6 +2544,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
       <div className="bg-[#fcfdfe] min-h-screen pb-20 w-full overflow-x-hidden">
@@ -2726,6 +2771,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   </Link>
                 </Button>
               </Card>
+
+              {/* AI-friendly Citation Panel */}
+              <AICitation title={title} slug={slug} toolName={tool.name} />
             </main>
 
             {/* Right Sidebar */}

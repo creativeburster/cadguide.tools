@@ -25,7 +25,25 @@ import {
   isArticleCompatibleWithTool,
 } from '@/lib/guides-data';
 
-const cheatsheetRedirects: Record<string, string> = {};
+const cheatsheetRedirects: Record<string, string> = {
+  'cross-platform cad shortcuts matrix': '/toolbox/shortcuts',
+  'solidworks essential keyboard shortcuts list': '/toolbox/solidworks-shortcuts-sheet',
+  'rhino 3d shortcut keys & command aliases guide': '/toolbox/rhino-shortcuts-sheet',
+  'revit keyboard shortcuts & command codes table': '/toolbox/revit-shortcuts-sheet',
+  'sketchup pro quick reference hotkeys cheat sheet': '/toolbox/sketchup-shortcuts-sheet',
+  'autodesk inventor keyboard shortcuts reference': '/toolbox/inventor-shortcuts-sheet',
+  'bentley microstation v8i keyboard shortcuts guide': '/toolbox/microstation-shortcuts-sheet',
+  'graphisoft archicad keyboard shortcuts chart': '/toolbox/archicad-shortcuts-sheet',
+  'dassault catia v5/v6 key shortcuts table': '/toolbox/catia-shortcuts-sheet',
+  'ptc creo parametric shortcut keys reference': '/toolbox/creo-shortcuts-sheet',
+  'freecad open-source cad hotkeys & mouse navigation': '/toolbox/freecad-shortcuts-sheet',
+  'autodesk fusion 360 keyboard hotkeys reference': '/toolbox/fusion360-shortcuts-sheet',
+  'draftsight keyboard shortcuts & command aliases': '/toolbox/draftsight-shortcuts-sheet',
+  'bricscad hotkeys & command customization guide': '/toolbox/bricscad-shortcuts-sheet',
+  'vectorworks keyboard shortcuts reference chart': '/toolbox/vectorworks-shortcuts-sheet',
+  'autocad vs. gstarcad shortcut command diff table': '/toolbox/autocad-vs-gstarcad-shortcuts',
+  'autocad vs. zwcad command shortcut diff guide': '/toolbox/autocad-vs-zwcad-shortcuts'
+};
 
 export const getProgrammaticLink = (title: string, forcedToolSlug?: string): string => {
   const titleLower = title.toLowerCase().trim();

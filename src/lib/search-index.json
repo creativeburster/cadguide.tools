@@ -1911,7 +1911,7 @@
     "id": "t102",
     "name": "BIMoffice",
     "slug": "bimoffice",
-    "short_desc": "简要介绍 BIMoffice（官方站点）",
+    "short_desc": "BIMoffice is a comprehensive BIM project management and estimation platform.",
     "score": 0,
     "logo_url": "/logos/bi.png",
     "official_url": "https://www.bimoffice.fr/",
