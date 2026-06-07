@@ -52,7 +52,7 @@ export async function GET() {
     'autocad-vs-zwcad-shortcuts'
   ];
   const cheatsheetUrls = cheatsheetSlugs.map((slug) => `  <url>
-    <loc>${BASE_URL}/guides/${slug}</loc>
+    <loc>${BASE_URL}/toolbox/${slug}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -63,7 +63,6 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${categoryUrls.join('\n')}
 ${guideUrls.join('\n')}
-${cheatsheetUrls.join('\n')}
 </urlset>`;
 
   return new NextResponse(xml, {

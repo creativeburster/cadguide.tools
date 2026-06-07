@@ -25,25 +25,7 @@ import {
   isArticleCompatibleWithTool,
 } from '@/lib/guides-data';
 
-const cheatsheetRedirects: Record<string, string> = {
-  'cross-platform cad shortcuts matrix': '/guides/shortcuts',
-  'solidworks essential keyboard shortcuts list': '/guides/solidworks-shortcuts-sheet',
-  'rhino 3d shortcut keys & command aliases guide': '/guides/rhino-shortcuts-sheet',
-  'revit keyboard shortcuts & command codes table': '/guides/revit-shortcuts-sheet',
-  'sketchup pro quick reference hotkeys cheat sheet': '/guides/sketchup-shortcuts-sheet',
-  'autodesk inventor keyboard shortcuts reference': '/guides/inventor-shortcuts-sheet',
-  'bentley microstation v8i keyboard shortcuts guide': '/guides/microstation-shortcuts-sheet',
-  'graphisoft archicad keyboard shortcuts chart': '/guides/archicad-shortcuts-sheet',
-  'dassault catia v5/v6 key shortcuts table': '/guides/catia-shortcuts-sheet',
-  'ptc creo parametric shortcut keys reference': '/guides/creo-shortcuts-sheet',
-  'freecad open-source cad hotkeys & mouse navigation': '/guides/freecad-shortcuts-sheet',
-  'autodesk fusion 360 keyboard hotkeys reference': '/guides/fusion360-shortcuts-sheet',
-  'draftsight keyboard shortcuts & command aliases': '/guides/draftsight-shortcuts-sheet',
-  'bricscad hotkeys & command customization guide': '/guides/bricscad-shortcuts-sheet',
-  'vectorworks keyboard shortcuts reference chart': '/guides/vectorworks-shortcuts-sheet',
-  'autocad vs. gstarcad shortcut command diff table': '/guides/autocad-vs-gstarcad-shortcuts',
-  'autocad vs. zwcad command shortcut diff guide': '/guides/autocad-vs-zwcad-shortcuts'
-};
+const cheatsheetRedirects: Record<string, string> = {};
 
 export const getProgrammaticLink = (title: string, forcedToolSlug?: string): string => {
   const titleLower = title.toLowerCase().trim();
@@ -585,8 +567,7 @@ export default function GuidesClient() {
             { id: 'deployment', label: 'IT Deployment' },
             { id: 'migration', label: 'Crossover' },
             { id: 'procurement', label: 'Procurement' },
-            { id: 'manufacturing', label: 'CAM & 3D Print' },
-            { id: 'cheatsheets', label: 'Shortcuts & References' }
+            { id: 'manufacturing', label: 'CAM & 3D Print' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -607,72 +588,7 @@ export default function GuidesClient() {
         </div>
 
         {/* --- CRITICAL: 2-COLUMN GRID CONTAINING EIGHT CORE SECTION CARDS WITH INTERNAL ACCORDIONS --- */}
-        {activeTab === 'cheatsheets' ? (
-          /* STATE C: "Shortcuts & References" displaying migrated sheets with matching highlights and custom filtering */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
-            {[...TOOLBOX_DATA]
-              .filter((t) => t.category === 'cheatsheet' && t.status === 'released')
-              .filter((sheet) => {
-                if (!selectedTool) {
-                  // 当不选择具体软件时，只展示通用的 cheatsheets 与对比表卡片，精简视觉噪音
-                  const universalSlugs = ['shortcuts', 'autocad-vs-gstarcad-shortcuts', 'autocad-vs-zwcad-shortcuts'];
-                  return universalSlugs.includes(sheet.slug);
-                }
-                // 当选择具体软件时，严格只展示与该软件相关的快捷键表
-                return isCheatsheetRelated(sheet, selectedTool);
-              })
-              .sort((a, b) => {
-                if (!selectedTool) return 0;
-                const aRelated = isCheatsheetRelated(a, selectedTool);
-                const bRelated = isCheatsheetRelated(b, selectedTool);
-                if (aRelated && !bRelated) return -1;
-                if (!aRelated && bRelated) return 1;
-                return 0;
-              })
-              .map((sheet) => {
-                const isRelated = selectedTool ? isCheatsheetRelated(sheet, selectedTool) : false;
-                return (
-                  <Card
-                    key={sheet.slug}
-                    className={cn(
-                      "border shadow-sm hover:shadow-lg rounded-[24px] p-6 bg-white flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden",
-                      isRelated 
-                        ? "border-blue-500/40 bg-gradient-to-br from-blue-50/10 via-white to-blue-50/30 hover:border-blue-500" 
-                        : "border-slate-100 hover:border-blue-300"
-                    )}
-                  >
-                    {isRelated && (
-                      <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl -mr-12 -mt-12 pointer-events-none" />
-                    )}
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-12 h-12 rounded-2xl group-hover:scale-110 transition duration-300 overflow-hidden shrink-0">
-                          <ShortcutSoftwareIcon slug={sheet.slug} className="w-12 h-12" />
-                        </div>
-                        {isRelated && (
-                          <Badge className="bg-blue-600 hover:bg-blue-600 text-white font-mono font-black text-[8px] uppercase tracking-widest px-2 py-0.5 rounded-md shrink-0">
-                            Target Software Match
-                          </Badge>
-                        )}
-                      </div>
-                      <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        <Link href={`/guides/${sheet.slug}`}>{sheet.title}</Link>
-                      </h3>
-                      <p className="text-xs text-slate-500 leading-relaxed font-semibold">
-                        {sheet.description}
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
-                      <span>View Reference Sheet</span>
-                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </Card>
-                );
-              })}
-          </div>
-        ) : isAll ? (
+        {isAll ? (
           /* STATE A: "All Guides" displaying 8 Category Cards (Symmetric grid of 4 rows and 2 columns!) */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
             {sortedCategorySections.map((p, idx) => {
