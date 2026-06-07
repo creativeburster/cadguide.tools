@@ -1,0 +1,291 @@
+--- ALL TOOLBOX PAGE TITLES SUMMARY (SORTED BY LENGTH DESCENDING) ---
+[❌ TOO LONG] Length: 67 | File: src\app\toolbox\acad-pgp-alias-editor\page.tsx
+   Raw: "AutoCAD PGP Command Alias Editor & Compiler Online | CADGuide.tools"
+   Full: "AutoCAD PGP Command Alias Editor & Compiler Online | CADGuide.tools"
+
+[✅ OK] Length: 60 | File: src\app\toolbox\archicad-shortcuts-sheet\page.tsx
+   Raw: "ArchiCAD Keyboard Shortcuts & Hotkeys Guide"
+   Full: "ArchiCAD Keyboard Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 60 | File: src\app\toolbox\bricscad-shortcuts-sheet\page.tsx
+   Raw: "BricsCAD Keyboard Shortcuts & Hotkeys Guide"
+   Full: "BricsCAD Keyboard Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 60 | File: src\app\toolbox\inventor-shortcuts-sheet\page.tsx
+   Raw: "Inventor Keyboard Shortcuts & Hotkeys Guide"
+   Full: "Inventor Keyboard Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 60 | File: src\app\toolbox\missing-font-shx-resolver\page.tsx
+   Raw: "Missing CAD Fonts & SHX Substitute Matchbox | CADGuide.tools"
+   Full: "Missing CAD Fonts & SHX Substitute Matchbox | CADGuide.tools"
+
+[✅ OK] Length: 60 | File: src\app\toolbox\rhino-shortcuts-sheet\page.tsx
+   Raw: "Rhino 3D Keyboard Shortcuts & Hotkeys Guide"
+   Full: "Rhino 3D Keyboard Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 60 | File: src\app\toolbox\sketchup-shortcuts-sheet\page.tsx
+   Raw: "SketchUp Keyboard Shortcuts & Hotkeys Guide"
+   Full: "SketchUp Keyboard Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 59 | File: src\app\toolbox\cloud-dwg-drawing-recovery-service\page.tsx
+   Raw: "Best Online DWG Recovery & Repair Services"
+   Full: "Best Online DWG Recovery & Repair Services | CADGuide.tools"
+
+[✅ OK] Length: 59 | File: src\app\toolbox\fatal-error-diagnostic-wizard\page.tsx
+   Raw: "AutoCAD Fatal Error & Crash Log Diagnostic"
+   Full: "AutoCAD Fatal Error & Crash Log Diagnostic | CADGuide.tools"
+
+[✅ OK] Length: 59 | File: src\app\toolbox\freecad-shortcuts-sheet\page.tsx
+   Raw: "FreeCAD Keyboard Shortcuts & Hotkeys Guide"
+   Full: "FreeCAD Keyboard Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 59 | File: src\app\toolbox\online-skp-to-fbx-cloud-converter\page.tsx
+   Raw: "Best SketchUp SKP to FBX Online Converters"
+   Full: "Best SketchUp SKP to FBX Online Converters | CADGuide.tools"
+
+[✅ OK] Length: 59 | File: src\app\toolbox\page.tsx
+   Raw: "CAD & BIM Toolbox: Free Online Calculators"
+   Full: "CAD & BIM Toolbox: Free Online Calculators | CADGuide.tools"
+
+[✅ OK] Length: 59 | File: src\app\toolbox\[slug]\page.tsx
+   Raw: "${prefix} ${tool.title} & Evaluation Guide"
+   Full: "${prefix} ${tool.title} & Evaluation Guide | CADGuide.tools"
+
+[✅ OK] Length: 58 | File: src\app\toolbox\cloud-cad-telemetry-blocker-wizard\page.tsx
+   Raw: "Best CAD Telemetry Blockers & Proxy Rules"
+   Full: "Best CAD Telemetry Blockers & Proxy Rules | CADGuide.tools"
+
+[✅ OK] Length: 58 | File: src\app\toolbox\creo-shortcuts-sheet\page.tsx
+   Raw: "Creo Parametric Shortcuts & Hotkeys Guide"
+   Full: "Creo Parametric Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 58 | File: src\app\toolbox\microstation-shortcuts-sheet\page.tsx
+   Raw: "MicroStation Keyboard Shortcuts & Hotkeys"
+   Full: "MicroStation Keyboard Shortcuts & Hotkeys | CADGuide.tools"
+
+[✅ OK] Length: 58 | File: src\app\toolbox\online-point-cloud-las-to-dxf-contour\page.tsx
+   Raw: "Best Point Cloud LAS to DXF Contour Tools"
+   Full: "Best Point Cloud LAS to DXF Contour Tools | CADGuide.tools"
+
+[✅ OK] Length: 58 | File: src\app\toolbox\pdf-plot-chinese-gibberish-resolver\page.tsx
+   Raw: "CAD PDF Chinese Font Scrambled Text Fixer"
+   Full: "CAD PDF Chinese Font Scrambled Text Fixer | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\3d-printing-chordal-deviation\page.tsx
+   Raw: "3D Printing Chordal Deviation Calculator"
+   Full: "3D Printing Chordal Deviation Calculator | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\autocad-vs-gstarcad-shortcuts\page.tsx
+   Raw: "AutoCAD vs GstarCAD Shortcuts Diff Table"
+   Full: "AutoCAD vs GstarCAD Shortcuts Diff Table | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\catia-shortcuts-sheet\page.tsx
+   Raw: "CATIA V5/V6 Keyboard Shortcuts & Hotkeys"
+   Full: "CATIA V5/V6 Keyboard Shortcuts & Hotkeys | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\online-dgn-to-dwg-converter\page.tsx
+   Raw: "Best DGN to DWG Online Converters Review"
+   Full: "Best DGN to DWG Online Converters Review | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\online-pdf-to-dwg-converter\page.tsx
+   Raw: "Best Vector PDF to DWG Converters Online"
+   Full: "Best Vector PDF to DWG Converters Online | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\online-solidworks-e-drawings-cloud-viewer\page.tsx
+   Raw: "Best SolidWorks eDrawings SLDPRT Viewers"
+   Full: "Best SolidWorks eDrawings SLDPRT Viewers | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\revit-shortcuts-sheet\page.tsx
+   Raw: "Revit Keyboard Shortcuts & Hotkeys Guide"
+   Full: "Revit Keyboard Shortcuts & Hotkeys Guide | CADGuide.tools"
+
+[✅ OK] Length: 57 | File: src\app\toolbox\vectorworks-shortcuts-sheet\page.tsx
+   Raw: "Vectorworks Keyboard Shortcuts & Hotkeys"
+   Full: "Vectorworks Keyboard Shortcuts & Hotkeys | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\cloud-bim-rvt-to-ifc-converter\page.tsx
+   Raw: "Best Revit RVT to IFC Converters Online"
+   Full: "Best Revit RVT to IFC Converters Online | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\cloud-dwg-to-step-iges-converter\page.tsx
+   Raw: "Best DWG to STEP/IGES Online Converters"
+   Full: "Best DWG to STEP/IGES Online Converters | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\cloud-dxf-to-gcode-laser-converter\page.tsx
+   Raw: "Best DXF to CNC G-Code Laser Converters"
+   Full: "Best DXF to CNC G-Code Laser Converters | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\draftsight-shortcuts-sheet\page.tsx
+   Raw: "DraftSight Keyboard Shortcuts & Hotkeys"
+   Full: "DraftSight Keyboard Shortcuts & Hotkeys | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\flexlm-error-15-debugger\page.tsx
+   Raw: "FLEXlm License Error -15 Troubleshooter"
+   Full: "FLEXlm License Error -15 Troubleshooter | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\fusion360-shortcuts-sheet\page.tsx
+   Raw: "Fusion 360 Keyboard Shortcuts & Hotkeys"
+   Full: "Fusion 360 Keyboard Shortcuts & Hotkeys | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\online-step-to-obj-gltf-converter\page.tsx
+   Raw: "Best STEP to glTF/OBJ Online Converters"
+   Full: "Best STEP to glTF/OBJ Online Converters | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\pipe-friction-head-loss\page.tsx
+   Raw: "Pipe Flow Friction Head Loss Calculator"
+   Full: "Pipe Flow Friction Head Loss Calculator | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\shortcuts\page.tsx
+   Raw: "Ultimate CAD Shortcuts Comparison Sheet"
+   Full: "Ultimate CAD Shortcuts Comparison Sheet | CADGuide.tools"
+
+[✅ OK] Length: 56 | File: src\app\toolbox\solidworks-shortcuts-sheet\page.tsx
+   Raw: "SolidWorks Keyboard Shortcuts & Hotkeys"
+   Full: "SolidWorks Keyboard Shortcuts & Hotkeys | CADGuide.tools"
+
+[✅ OK] Length: 55 | File: src\app\toolbox\autocad-registry-clean-generator\page.tsx
+   Raw: "AutoCAD Clean Registry Batch Generator"
+   Full: "AutoCAD Clean Registry Batch Generator | CADGuide.tools"
+
+[✅ OK] Length: 55 | File: src\app\toolbox\online-cad-license-audit-shield\page.tsx
+   Raw: "Best CAD Software License Audit Shield"
+   Full: "Best CAD Software License Audit Shield | CADGuide.tools"
+
+[✅ OK] Length: 55 | File: src\app\toolbox\online-dwg-to-dxf-batch-converter\page.tsx
+   Raw: "Best DWG to DXF Bulk Online Converters"
+   Full: "Best DWG to DXF Bulk Online Converters | CADGuide.tools"
+
+[✅ OK] Length: 55 | File: src\app\toolbox\online-dwg-to-pdf-cloud-printer\page.tsx
+   Raw: "Best DWG to Vector PDF Online Printers"
+   Full: "Best DWG to Vector PDF Online Printers | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\autocad-vs-zwcad-shortcuts\page.tsx
+   Raw: "AutoCAD vs ZWCAD Shortcuts Diff Guide"
+   Full: "AutoCAD vs ZWCAD Shortcuts Diff Guide | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\cad-limits-checker\page.tsx
+   Raw: "CAD Limits & Grid Boundary Calculator"
+   Full: "CAD Limits & Grid Boundary Calculator | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\dxf-watermark-layer-parser\page.tsx
+   Raw: "DXF Watermark Detector & Layer Parser"
+   Full: "DXF Watermark Detector & Layer Parser | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\missing-regapp-cleaner-batch\page.tsx
+   Raw: "AutoCAD Regapp LISP Cleaner Generator"
+   Full: "AutoCAD Regapp LISP Cleaner Generator | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\online-3d-cad-viewer-collaborator\page.tsx
+   Raw: "Best 3D CAD/BIM Online Viewers Review"
+   Full: "Best 3D CAD/BIM Online Viewers Review | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\online-image-jpg-to-dxf-vectorizer\page.tsx
+   Raw: "Best Image JPG/PNG to DXF Vectorizers"
+   Full: "Best Image JPG/PNG to DXF Vectorizers | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\online-point-cloud-to-mesh-converter\page.tsx
+   Raw: "Best Point Cloud to Mesh Online Tools"
+   Full: "Best Point Cloud to Mesh Online Tools | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\screw-torque-preload-calculator\page.tsx
+   Raw: "Bolt Tightening Torque & Preload Tool"
+   Full: "Bolt Tightening Torque & Preload Tool | CADGuide.tools"
+
+[✅ OK] Length: 54 | File: src\app\toolbox\spring-force-rate-calculator\page.tsx
+   Raw: "Helical Compression Spring Calculator"
+   Full: "Helical Compression Spring Calculator | CADGuide.tools"
+
+[✅ OK] Length: 53 | File: src\app\toolbox\duct-size-friction-loss-calculator\page.tsx
+   Raw: "HVAC Air Duct Sizing & Friction Loss"
+   Full: "HVAC Air Duct Sizing & Friction Loss | CADGuide.tools"
+
+[✅ OK] Length: 53 | File: src\app\toolbox\online-dwg-compare-diff-viewer\page.tsx
+   Raw: "Best Online DWG Compare & Diff Tools"
+   Full: "Best Online DWG Compare & Diff Tools | CADGuide.tools"
+
+[✅ OK] Length: 53 | File: src\app\toolbox\online-dwg-layer-splitter-cloud\page.tsx
+   Raw: "Best Online DWG Layer Splitter Tools"
+   Full: "Best Online DWG Layer Splitter Tools | CADGuide.tools"
+
+[✅ OK] Length: 53 | File: src\app\toolbox\online-dxf-text-translator-cloud\page.tsx
+   Raw: "Best DXF/DWG Online Text Translators"
+   Full: "Best DXF/DWG Online Text Translators | CADGuide.tools"
+
+[✅ OK] Length: 53 | File: src\app\toolbox\online-ifc-viewer-validator\page.tsx
+   Raw: "Best Online IFC Validators & Viewers"
+   Full: "Best Online IFC Validators & Viewers | CADGuide.tools"
+
+[✅ OK] Length: 53 | File: src\app\toolbox\weld-strength-calculator\page.tsx
+   Raw: "Fillet Weld Strength & Load Capacity"
+   Full: "Fillet Weld Strength & Load Capacity | CADGuide.tools"
+
+[✅ OK] Length: 52 | File: src\app\toolbox\flexlm-concurrent-seats-queue\page.tsx
+   Raw: "FLEXlm Concurrent License Optimizer"
+   Full: "FLEXlm Concurrent License Optimizer | CADGuide.tools"
+
+[✅ OK] Length: 52 | File: src\app\toolbox\flexlm-debug-log-analyzer\page.tsx
+   Raw: "FLEXlm License Log Offline Analyzer"
+   Full: "FLEXlm License Log Offline Analyzer | CADGuide.tools"
+
+[✅ OK] Length: 52 | File: src\app\toolbox\online-dwg-version-downgrader-cloud\page.tsx
+   Raw: "Best DWG Version Downgraders Online"
+   Full: "Best DWG Version Downgraders Online | CADGuide.tools"
+
+[✅ OK] Length: 52 | File: src\app\toolbox\online-revit-family-checker-audit\page.tsx
+   Raw: "Best Revit Family RFA File Checkers"
+   Full: "Best Revit Family RFA File Checkers | CADGuide.tools"
+
+[✅ OK] Length: 52 | File: src\app\toolbox\viewport-scale-factor-converter\page.tsx
+   Raw: "CAD Viewport Scale Factor Converter"
+   Full: "CAD Viewport Scale Factor Converter | CADGuide.tools"
+
+[✅ OK] Length: 51 | File: src\app\toolbox\beam-deflection-structural-calculator\page.tsx
+   Raw: "Steel I-Beam Deflection Calculator"
+   Full: "Steel I-Beam Deflection Calculator | CADGuide.tools"
+
+[✅ OK] Length: 51 | File: src\app\toolbox\dwg-version-checker\page.tsx
+   Raw: "AutoCAD DWG Version Checker Matrix"
+   Full: "AutoCAD DWG Version Checker Matrix | CADGuide.tools"
+
+[✅ OK] Length: 51 | File: src\app\toolbox\limits-and-fits-calculator\page.tsx
+   Raw: "ISO 286 Limits and Fits Calculator"
+   Full: "ISO 286 Limits and Fits Calculator | CADGuide.tools"
+
+[✅ OK] Length: 51 | File: src\app\toolbox\online-lisp-script-compiler-protector\page.tsx
+   Raw: "Best AutoLISP LSP to FAS Compilers"
+   Full: "Best AutoLISP LSP to FAS Compilers | CADGuide.tools"
+
+[✅ OK] Length: 51 | File: src\app\toolbox\online-step-to-stl-slicer-helper\page.tsx
+   Raw: "Best STEP to STL Online Converters"
+   Full: "Best STEP to STL Online Converters | CADGuide.tools"
+
+[✅ OK] Length: 51 | File: src\app\toolbox\thread-drill-size-calculator\page.tsx
+   Raw: "Thread Tap & Drill Size Calculator"
+   Full: "Thread Tap & Drill Size Calculator | CADGuide.tools"
+
+[✅ OK] Length: 50 | File: src\app\toolbox\cad-hatch-scale-optimizer\page.tsx
+   Raw: "CAD Hatch Pattern Scale Optimizer | CADGuide.tools"
+   Full: "CAD Hatch Pattern Scale Optimizer | CADGuide.tools"
+
+[✅ OK] Length: 50 | File: src\app\toolbox\ctb-plot-style-pen-visualizer\page.tsx
+   Raw: "CAD CTB Plot Style Pen Visualizer"
+   Full: "CAD CTB Plot Style Pen Visualizer | CADGuide.tools"
+
+[✅ OK] Length: 50 | File: src\app\toolbox\drawing-lag-performance-cleaner\page.tsx
+   Raw: "Slow DWG Performance LISP Cleaner"
+   Full: "Slow DWG Performance LISP Cleaner | CADGuide.tools"
+
+[✅ OK] Length: 49 | File: src\app\toolbox\cad-scale-list-reset-helper\page.tsx
+   Raw: "CAD Scale List Reset LISP Helper"
+   Full: "CAD Scale List Reset LISP Helper | CADGuide.tools"
+
+[✅ OK] Length: 48 | File: src\app\toolbox\k-factor-calculator\page.tsx
+   Raw: "Sheet Metal K-Factor Calculator"
+   Full: "Sheet Metal K-Factor Calculator | CADGuide.tools"
+
+[✅ OK] Length: 47 | File: src\app\toolbox\color-rgb-to-aci-matchbox\page.tsx
+   Raw: "Hex/RGB to ACI Color Converter"
+   Full: "Hex/RGB to ACI Color Converter | CADGuide.tools"
+
+Total checked: 72
+Too long (> 60 chars): 1

@@ -1,0 +1,2 @@
+--- SCANNING FOR CHINESE CHARACTERS ---
+Scan complete. Found Chinese characters in 0 files.

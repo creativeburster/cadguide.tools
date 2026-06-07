@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ToolLogo } from "@/components/tool-logo";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
-import { NewsletterSubscribe } from "@/components/newsletter-subscribe";
+import { RelatedTools } from '@/components/related-tools';
 import {
   CheckCircle2,
   XCircle,
@@ -1346,8 +1346,28 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 </div>
               </div>
 
+              {/* Free CAD Toolbox Sidebar Card */}
+              <div className="bg-slate-900 border border-slate-800 p-6 md:p-8 rounded-[24px] md:rounded-[40px] text-white relative overflow-hidden shadow-xl group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                <div className="relative z-10">
+                  <div className="text-blue-400 font-black uppercase text-[9px] tracking-[0.25em] mb-4">Free Design Utilities</div>
+                  <h4 className="text-xl font-black mb-3 leading-tight">
+                    Try Free CAD Toolbox
+                  </h4>
+                  <p className="text-slate-400 text-xs font-medium mb-6 leading-relaxed">
+                    Verify drawing compatibility, search custom shortcuts matrix, and calculate DIN bend allowances offline.
+                  </p>
+                  <Button
+                    asChild
+                    className="w-full bg-white text-slate-950 hover:bg-slate-150 font-black rounded-2xl h-12 shadow-lg hover:bg-blue-50 transition-colors text-xs"
+                  >
+                    <Link href="/toolbox">Open Toolbox (25+ Tools) →</Link>
+                  </Button>
+                </div>
+              </div>
+
               {/* Newsletter Subscription */}
-              <NewsletterSubscribe variant="sidebar" />
+              <RelatedTools />
 
               {/* Quick Comparison Battles Sidebar Card */}
               {toolComparisons.length > 0 && (

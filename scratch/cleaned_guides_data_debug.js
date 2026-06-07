@@ -1,8 +1,8 @@
-import { tools } from '@/lib/data';
 
-const REGEX_CACHE = new Map<string, RegExp>();
 
-function getCachedRegex(pattern: string, flags = 'gi'): RegExp {
+const REGEX_CACHE = new Map();
+
+function getCachedRegex(pattern, flags = 'gi') {
   const cacheKey = `${pattern}_${flags}`;
   let regex = REGEX_CACHE.get(cacheKey);
   if (!regex) {
@@ -13,18 +13,9 @@ function getCachedRegex(pattern: string, flags = 'gi'): RegExp {
   return regex;
 }
 
-export interface GuideCategorySection {
-  id: string;
-  category: 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing';
-  title: string;
-  desc: string;
-  countLabel: string;
-  gradient: string;
-  articles: { title: string; slug: string; keyword: string }[];
-  tags: string[];
-}
 
-export const CATEGORY_SECTIONS: GuideCategorySection[] = [
+
+const CATEGORY_SECTIONS = [
   {
     id: 'sec-trouble',
     category: 'troubleshooting',
@@ -126,7 +117,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Migrating Legacy AutoCAD Drawings to Online Cloud CAD Natively', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'online cad' },
       { title: 'DraftSight to BricsCAD Pro Migration: AutoLISP Command Compatibility', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'draftsight alternative' },
       { title: 'Legacy MicroStation DGN to DWG CAD Translation Standards', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'dwg translation' },
-      { title: 'SolidWorks XT (Parasolid) to AutoCAD SAT (ACIS): Topology Integrity Recovery', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks to autocad' },
+      { title: 'SolidWorks XT (Parasolid) to AutoCAD SAT (ACIS) Integrity Recovery', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks to autocad' },
       { title: 'CATIA V5 to SolidWorks: Kinematic Constraints Translation Workflows', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'catia to solidworks' }
     ],
     tags: ['#AutoLISP-Migrate', '#PGP-Aliases', '#BricsCAD-Transition']
@@ -152,7 +143,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     id: 'sec-man',
     category: 'manufacturing',
     title: 'CAM & 3D Printing Production',
-    desc: 'Align CAD to CNC G-code conversions, evaluate STL/3MF solid kernel export tolerances, calculate sheet metal folding bend allowances, and optimize 3D slicing standards. Calibrate watertight parametric solid geometries.',
+    desc: 'Align CAD to CNC G-code conversions, evaluate STL/3MF solid kernel tolerances, calculate sheet metal folding bend allowances, and optimize 3D slicing standards. Calibrate watertight parametric solid geometries.',
     countLabel: '220+ Active Guides',
     gradient: 'from-orange-500 via-amber-600 to-yellow-600',
     articles: [
@@ -168,20 +159,9 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
   }
 ];
 
-export interface GuideArticleCard {
-  id: string;
-  category: 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing';
-  title: string;
-  excerpt: string;
-  author: string;
-  readTime: string;
-  date: string;
-  softwareSlug: string;
-  keyword: string;
-  slug: string;
-}
 
-export const ARTICLES_LIST: GuideArticleCard[] = [
+
+const ARTICLES_LIST = [
   ...CATEGORY_SECTIONS.flatMap(sec => 
     sec.articles.map((art, aIdx) => ({
       id: `${sec.id}-art-${aIdx}`,
@@ -198,15 +178,9 @@ export const ARTICLES_LIST: GuideArticleCard[] = [
   )
 ];
 
-export interface DirectoryFolder {
-  id: string;
-  title: string;
-  countLabel: string;
-  icon: string;
-  links: { title: string; href: string }[];
-}
 
-export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
+
+const DIRECTORY_FOLDERS = [
   {
     id: 'fol-trouble',
     title: 'AutoCAD & 2D Troubleshooting',
@@ -239,7 +213,7 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
       { title: 'Eliminate SolidWorks watermark warnings and non-commercialWatermark flags', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Fixing parametric assembly geometric constraints lost in SolidWorks', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'SolidWorks Sheet Metal K-Factor and Bending allowance parameters', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'STEP File export transformations: fixing dry assembly boundary faces', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'STEP File transformations: fixing dry assembly boundary faces', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'SolidWorks PDM concurrent server latency and local cache flushes', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'SolidWorks weldment cut lists and structural member custom profiling', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Calibrating SolidWorks drawing layout pen weights during physical print', href: '/guides/autocad-fatal-error-0x0024-fix' },
@@ -261,9 +235,9 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
       { title: 'Civil 3D Geotechnical Surface alignments and Corridor best practices', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Archicad Teamwork Server Network port binding and multi-user configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Navisworks Clash Detection rule sets and unified coordination reports', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'BIM Collaboration Format (BCF) schema data export standard interfaces', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'BIM Collaboration Format (BCF) schema data standard interfaces', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'SketchUp Pro DWG imports: vector cleanups and mesh optimizations', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Rhino 3D organic NURBS to parametric solid B-Rep export tolerances', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Rhino 3D organic NURBS to parametric solid B-Rep tolerances', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Geotechnical layer modeling and alignment coordinates in Civil 3D', href: '/guides/autocad-fatal-error-0x0024-fix' }
     ]
   },
@@ -297,7 +271,7 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
       { title: 'DraftSight 2D layouts batch plotting across enterprise servers', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Custom CTB pen tables vs object-dependent STB color styles', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Fixing scrambled PDF fonts and missing vector lines after CAD export', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Automating PDF export via AutoLISP scripts and folder listeners', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'Automating PDF via AutoLISP scripts and folder listeners', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Enterprise drawing stamps: vector watermark security and signatures', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Fixing print spooler crashes caused by large drawing raster lines', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Viewport scale matching between AutoCAD model and paper layouts', href: '/guides/autocad-fatal-error-0x0024-fix' },
@@ -354,7 +328,7 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
     icon: '⚙️',
     links: [
       { title: 'Tuning STEP & IGES mathematical tolerances for precision CNC milling', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'STL vs 3MF export profiles: preventing polygon triangulation facets', href: '/guides/autocad-fatal-error-0x0024-fix' },
+      { title: 'STL vs 3MF profiles: preventing polygon triangulation facets', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'Sheet Metal Bending tolerances: precise K-Factor calculations in CAD', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'CAD/CAM Toolpath setups: validating feed rates and quiet G-codes', href: '/guides/autocad-fatal-error-0x0024-fix' },
       { title: 'watertight B-Rep models: design parameters for additive manufacturing', href: '/guides/autocad-fatal-error-0x0024-fix' },
@@ -394,21 +368,9 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
   }
 ];
 
-export interface ArchetypeMetadata {
-  id: 'drafting-aec' | 'mechanical-simulation' | 'creative-visual' | 'electronics-hardware';
-  name: string;
-  theme: {
-    accentText: string;
-    badgeBg: string;
-    buttonBg: string;
-    gradientHeader: string;
-    cardBorder: string;
-  };
-  categoryOrder: string[];
-  jargonMap: Record<string, string>;
-}
 
-export function getArchetypeMetadata(category_id: string): ArchetypeMetadata {
+
+function getArchetypeMetadata(category_id) {
   if (category_id === 'c1' || category_id === 'c3') {
     return {
       id: 'drafting-aec',
@@ -520,12 +482,12 @@ export function getArchetypeMetadata(category_id: string): ArchetypeMetadata {
   };
 }
 
-export function getLocalizedTitleAndExcerpt(
-  title: string,
-  excerpt: string,
-  keyword: string,
-  category: string,
-  tool: any
+function getLocalizedTitleAndExcerpt(
+  title,
+  excerpt,
+  keyword,
+  category,
+  tool
 ) {
   let newTitle = title;
   let newExcerpt = excerpt;
@@ -625,11 +587,11 @@ export function getLocalizedTitleAndExcerpt(
   return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
 }
 
-export function getLocalizedTitle(title: string, category: string, tool: any): string {
+function getLocalizedTitle(title, category, tool) {
   return getLocalizedTitleAndExcerpt(title, '', '', category, tool).title;
 }
 
-export function isArticleCompatibleWithTool(articleTitle: string, articleCategory: string, tool: any): boolean {
+function isArticleCompatibleWithTool(articleTitle, articleCategory, tool) {
   const titleLower = articleTitle.toLowerCase();
   const categoryLower = articleCategory.toLowerCase();
   const pricingType = tool.pricing_type || 'Commercial';
@@ -640,11 +602,11 @@ export function isArticleCompatibleWithTool(articleTitle: string, articleCategor
   const categoryId = tool.category_id || '';
 
   // 辅助判定工具特征
-  const isBIM = categoryId === 'bim' || industries.some((i: string) => /bim|architect|construction|building/i.test(i)) || features.includes('bim-integration');
-  const isMechanical = categoryId === 'mfg' || industries.some((i: string) => /mechanical|mfg|automotive|aerospace|industrial/i.test(i)) || features.includes('parametric-modeling') || features.includes('integrated-cam') || features.includes('simulation-fea');
+  const isBIM = categoryId === 'bim' || industries.some((i) => /bim|architect|construction|building/i.test(i)) || features.includes('bim-integration');
+  const isMechanical = categoryId === 'mfg' || industries.some((i) => /mechanical|mfg|automotive|aerospace|industrial/i.test(i)) || features.includes('parametric-modeling') || features.includes('integrated-cam') || features.includes('simulation-fea');
   const is2D = categoryId === '2d-cad' || features.includes('drafting-detailing');
-  const isRendering = features.includes('rendering') || industries.some((i: string) => /visual|render|creative/i.test(i));
-  const is3D = features.some((f: string) => /parametric|surface|mesh|subdivision|direct/i.test(f)) || isMechanical || isBIM || isRendering;
+  const isRendering = features.includes('rendering') || industries.some((i) => /visual|render|creative/i.test(i));
+  const is3D = features.some((f) => /parametric|surface|mesh|subdivision|direct/i.test(f)) || isMechanical || isBIM || isRendering;
 
   // 1. 开源/免费软件熔断：不生成商业授权、采购、FLEXlm、EULA 审计相关文章
   if (isOpenSource) {
@@ -705,7 +667,7 @@ export function isArticleCompatibleWithTool(articleTitle: string, articleCategor
 
   // (F) 3D 打印 K-Factor / G-Code / STL / 3MF -> 必须是 CAM 制造或 3D 打印相关软件
   if (titleLower.includes('k-factor') || titleLower.includes('g-code') || titleLower.includes('slicing') || titleLower.includes('watertight b-rep')) {
-    const supportsCAMorPrint = features.includes('integrated-cam') || industries.some((i: string) => /cam|3d-printing|milling|machining/i.test(i)) || tool.slug === 'freecad' || tool.slug === 'fusion-360' || tool.slug === 'solidworks';
+    const supportsCAMorPrint = features.includes('integrated-cam') || industries.some((i) => /cam|3d-printing|milling|machining/i.test(i)) || tool.slug === 'freecad' || tool.slug === 'fusion-360' || tool.slug === 'solidworks';
     if (!supportsCAMorPrint) return false;
   }
 
@@ -731,3 +693,5 @@ export function isArticleCompatibleWithTool(articleTitle: string, articleCategor
   return true;
 }
 
+
+; ({ ARTICLES_LIST, isArticleCompatibleWithTool });

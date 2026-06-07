@@ -5,10 +5,11 @@ import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ToolLogo } from '@/components/tool-logo';
+import ShortcutSoftwareIcon from '@/components/shortcut-software-icon';
 import { tools } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 
 import {
   GuideCategorySection,
@@ -21,19 +22,83 @@ import {
   getArchetypeMetadata,
   getLocalizedTitleAndExcerpt,
   getLocalizedTitle,
+  isArticleCompatibleWithTool,
 } from '@/lib/guides-data';
 
+const cheatsheetRedirects: Record<string, string> = {
+  'cross-platform cad shortcuts matrix': '/guides/shortcuts',
+  'solidworks essential keyboard shortcuts list': '/guides/solidworks-shortcuts-sheet',
+  'rhino 3d shortcut keys & command aliases guide': '/guides/rhino-shortcuts-sheet',
+  'revit keyboard shortcuts & command codes table': '/guides/revit-shortcuts-sheet',
+  'sketchup pro quick reference hotkeys cheat sheet': '/guides/sketchup-shortcuts-sheet',
+  'autodesk inventor keyboard shortcuts reference': '/guides/inventor-shortcuts-sheet',
+  'bentley microstation v8i keyboard shortcuts guide': '/guides/microstation-shortcuts-sheet',
+  'graphisoft archicad keyboard shortcuts chart': '/guides/archicad-shortcuts-sheet',
+  'dassault catia v5/v6 key shortcuts table': '/guides/catia-shortcuts-sheet',
+  'ptc creo parametric shortcut keys reference': '/guides/creo-shortcuts-sheet',
+  'freecad open-source cad hotkeys & mouse navigation': '/guides/freecad-shortcuts-sheet',
+  'autodesk fusion 360 keyboard hotkeys reference': '/guides/fusion360-shortcuts-sheet',
+  'draftsight keyboard shortcuts & command aliases': '/guides/draftsight-shortcuts-sheet',
+  'bricscad hotkeys & command customization guide': '/guides/bricscad-shortcuts-sheet',
+  'vectorworks keyboard shortcuts reference chart': '/guides/vectorworks-shortcuts-sheet',
+  'autocad vs. gstarcad shortcut command diff table': '/guides/autocad-vs-gstarcad-shortcuts',
+  'autocad vs. zwcad command shortcut diff guide': '/guides/autocad-vs-zwcad-shortcuts'
+};
+
 export const getProgrammaticLink = (title: string, forcedToolSlug?: string): string => {
-  const titleLower = title.toLowerCase();
+  const titleLower = title.toLowerCase().trim();
+  if (cheatsheetRedirects[titleLower]) {
+    return cheatsheetRedirects[titleLower];
+  }
   
-  // Find matching tool
-  const matchedTool = [...tools]
-    .sort((a, b) => b.slug.length - a.slug.length)
-    .find(t => titleLower.includes(t.slug) || titleLower.includes(t.name.toLowerCase()));
+  // Find matching template article
+  const art = ARTICLES_LIST.find(a => {
+    const artTitleLower = a.title.toLowerCase().trim();
+    return artTitleLower === titleLower ||
+           titleLower.includes(artTitleLower) ||
+           artTitleLower.includes(titleLower) ||
+           a.title.toLowerCase().split(' ').some(word => word.length > 4 && titleLower.includes(word));
+  });
+
+  if (art) {
+    const artIndex = art.id.split('-').pop();
     
-  const toolSlug = forcedToolSlug || (matchedTool ? matchedTool.slug : 'autocad');
+    if (forcedToolSlug && forcedToolSlug !== 'all') {
+      const forcedTool = tools.find(t => t.slug === forcedToolSlug);
+      if (forcedTool) {
+        // Calculate safe available guides for forcedTool
+        const allCompatible = ARTICLES_LIST.filter(g =>
+          isArticleCompatibleWithTool(g.title, g.category, forcedTool)
+        );
+        let safe = allCompatible.slice(0, 10);
+        if (safe.length < 4) {
+          const fallbackPool = ARTICLES_LIST.filter(
+            g => !safe.some(existing => existing.id === g.id) &&
+                 !g.title.toLowerCase().includes("license") &&
+                 !g.title.toLowerCase().includes("flexlm") &&
+                 !g.title.toLowerCase().includes("ssot") &&
+                 !g.title.toLowerCase().includes("procurement")
+          );
+          safe = [...safe, ...fallbackPool].slice(0, 10);
+        }
+        
+        const isAvailable = safe.some(g => g.id === art.id);
+        if (isAvailable) {
+          return `/guides/${forcedToolSlug}-${art.category}-${artIndex}`;
+        }
+      }
+    }
+    
+    // Fallback: If forcedTool is missing or incompatible, map to default compatible tool
+    const matchedTool = [...tools]
+      .sort((a, b) => b.slug.length - a.slug.length)
+      .find(t => isArticleCompatibleWithTool(art.title, art.category, t));
+      
+    const fallbackSlug = matchedTool ? matchedTool.slug : (art.category === 'troubleshooting' ? 'autocad' : 'solidworks');
+    return `/guides/${fallbackSlug}-${art.category}-${artIndex}`;
+  }
   
-  // Determine category
+  // Default parsing fallback
   let category: 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing' = 'troubleshooting';
   if (titleLower.includes('perf') || titleLower.includes('tune') || titleLower.includes('lag') || titleLower.includes('speed') || titleLower.includes('stutter')) {
     category = 'performance';
@@ -51,17 +116,8 @@ export const getProgrammaticLink = (title: string, forcedToolSlug?: string): str
     category = 'manufacturing';
   }
   
-  // Find index in category section
-  const section = CATEGORY_SECTIONS.find(s => s.category === category);
-  let index = 0;
-  if (section) {
-    const artIdx = section.articles.findIndex(art => 
-      art.title.toLowerCase().split(' ').some(word => word.length > 3 && titleLower.includes(word))
-    );
-    if (artIdx >= 0) index = artIdx;
-  }
-  
-  return `/guides/${toolSlug}-${category}-${index}`;
+  const toolSlug = forcedToolSlug && forcedToolSlug !== 'all' ? forcedToolSlug : 'autocad';
+  return `/guides/${toolSlug}-${category}-0`;
 };
 
 
@@ -69,6 +125,10 @@ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const mockDirectoryLinks: Record<string, string[]> = {
   'A': [
+    'Autodesk Inventor Keyboard Shortcuts Reference',
+    'Autodesk Fusion 360 Keyboard Hotkeys Reference',
+    'AutoCAD vs. GstarCAD Shortcut Command Diff Table',
+    'AutoCAD vs. ZWCAD Command Shortcut Diff Guide',
     'AutoCAD Fatal Error 0x0024 Fix',
     'AutoCAD License Activation Registry Patch',
     'ANSI Layer Naming Standards',
@@ -77,6 +137,8 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'AutoCAD for Mac Licensing Solutions'
   ],
   'B': [
+    'BricsCAD Hotkeys & Command Customization Guide',
+    'Bentley MicroStation V8i Keyboard Shortcuts Guide',
     'BricsCAD Pro Crossover Migration Guide',
     'Batch Plotting Multi-Sheet Configurations',
     'BIM Collaboration Format (BCF) Standards',
@@ -84,6 +146,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Budgeting CAD Software Named User Seats'
   ],
   'C': [
+    'Cross-Platform CAD Shortcuts Matrix',
     'Crash on Launch troubleshooting for Revit',
     'CTB Custom Pen tables and Line Weights',
     'Concurrent FLEXlm License Server Setup',
@@ -91,6 +154,8 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Civil 3D Corridor Modeling Best Practices'
   ],
   'D': [
+    'DraftSight Keyboard Shortcuts & Command Aliases',
+    'Dassault CATIA V5/V6 Key Shortcuts Table',
     'DraftSight High-Speed Printing Setup',
     'DWG File Recovery and Audit Pathways',
     'Drawing Scale Coefficients and Sheet Layouts',
@@ -103,12 +168,13 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'EDA Software Licensing and Server Configuration'
   ],
   'F': [
-    'FLEXlm Server Daemon Ports Configuration',
+    'FreeCAD Open-Source CAD Hotkeys & Mouse Navigation',
     'FreeCAD Custom Workstation Settings',
     'Freemium CAD Hidden Commercial Liabilities',
     'Fusion 360 Cloud Storage Offline Sync'
   ],
   'G': [
+    'Graphisoft Archicad Keyboard Shortcuts Chart',
     'GstarCAD Custom Menu and Hatch Import',
     'GPL Compliance for Open Source CAD Kernels',
     'GPU Hardware Acceleration Optimization',
@@ -162,6 +228,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Onshape Free Document Privacy Legal Risks'
   ],
   'P': [
+    'PTC Creo Parametric Shortcut Keys Reference',
     'Perpetual Buyout vs SaaS Rental Cost Analysis',
     'Plotting Pen Weight Standards (ANSI/ISO)',
     'Parametric Model Integrity and STEP Export',
@@ -173,12 +240,16 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'Quality Assurance Guidelines for Drafting Teams'
   ],
   'R': [
+    'Rhino 3D Shortcut Keys & Command Aliases Guide',
+    'Revit Keyboard Shortcuts & Command Codes Table',
     'Registry Port Conflict Troubleshooting (2080)',
     'Revit Crash on Launch Recovery Manual',
     'Restoring Unsaved Temporary Drawing Backups',
     'Reclaiming Custom LISP Menus and Command Aliases'
   ],
   'S': [
+    'SolidWorks Essential Keyboard Shortcuts List',
+    'SketchUp Pro Quick Reference Hotkeys Cheat Sheet',
     'SolidWorks Seat Allocation and compliance',
     'SSO SAML 2.0 Named User Account Setup',
     'Silent Command Directives for Silent Deployments',
@@ -196,6 +267,7 @@ const mockDirectoryLinks: Record<string, string[]> = {
     'USB Dongle Licensing Driver Troubleshooting'
   ],
   'V': [
+    'Vectorworks Keyboard Shortcuts Reference Chart',
     'Version Compatibility of DWG Formats',
     'Vector Weight and Pen Priority Tables',
     'Virtualization of Memory on Windows 11 CAD'
@@ -222,8 +294,9 @@ const mockDirectoryLinks: Record<string, string[]> = {
   ]
 };
 
+
 export default function GuidesClient() {
-  const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing' | 'cheatsheets'>('all');
   const [selectedToolSlug, setSelectedToolSlug] = useState<string>('all');
   
   // State to control collapsible drawer in All Category cards at top
@@ -315,18 +388,67 @@ export default function GuidesClient() {
 
   const isAll = activeTab === 'all';
   
-  const rawDisplayArticles = ARTICLES_LIST.filter(a => a.category === activeTab).slice(0, 6);
-  const displayArticles = rawDisplayArticles.map((art) => {
-    if (!selectedTool) return art;
-    const localized = getLocalizedTitleAndExcerpt(art.title, art.excerpt, art.keyword, art.category, selectedTool);
-    return {
-      ...art,
-      title: localized.title,
-      excerpt: localized.excerpt,
-      keyword: localized.keyword,
-      softwareSlug: selectedTool.slug
-    };
-  });
+  // 1. 获取当前选中工具的安全可用指南 Memo (对应 generateStaticParams 的 10 篇限制)
+  const safeAvailableGuides = React.useMemo(() => {
+    if (!selectedTool) return [];
+    
+    const allCompatible = ARTICLES_LIST.filter((g) =>
+      isArticleCompatibleWithTool(g.title, g.category, selectedTool)
+    );
+    
+    // Fallback 通用指南补位，与详情页完全一致，保证至少有 4 篇
+    let safe = allCompatible.slice(0, 10);
+    if (safe.length < 4) {
+      const fallbackPool = ARTICLES_LIST.filter(
+        (g) =>
+          !safe.some((existing) => existing.id === g.id) &&
+          !g.title.toLowerCase().includes("license") &&
+          !g.title.toLowerCase().includes("flexlm") &&
+          !g.title.toLowerCase().includes("ssot") &&
+          !g.title.toLowerCase().includes("procurement")
+      );
+      safe = [...safe, ...fallbackPool].slice(0, 10);
+    }
+    
+    return safe.map((g) => {
+      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, selectedTool);
+      return {
+        ...g,
+        title: localized.title,
+        excerpt: localized.excerpt,
+        keyword: localized.keyword,
+        slug: `${selectedTool.slug}-${g.category}-${g.id.split('-').pop()}`
+      };
+    });
+  }, [selectedTool]);
+
+  // 2. 过滤具体分类 Tab 的文章列表
+  const displayArticles = React.useMemo(() => {
+    if (selectedTool) {
+      return safeAvailableGuides.filter(art => art.category === activeTab);
+    } else {
+      const rawDisplayArticles = ARTICLES_LIST.filter(a => a.category === activeTab).slice(0, 6);
+      return rawDisplayArticles.map((art) => {
+        return {
+          ...art,
+          slug: `${art.softwareSlug}-${art.category}-${art.id.split('-').pop()}`
+        };
+      });
+    }
+  }, [selectedTool, activeTab, safeAvailableGuides]);
+
+  // 3. 判断快捷键表是否与当前工具相关
+  const isCheatsheetRelated = React.useCallback((sheet: typeof TOOLBOX_DATA[number], tool: typeof tools[number]) => {
+    const slugLower = sheet.slug.toLowerCase();
+    const titleLower = sheet.title.toLowerCase();
+    const toolSlug = tool.slug.toLowerCase();
+    const toolName = tool.name.toLowerCase();
+    
+    return slugLower.includes(toolSlug) || 
+           titleLower.includes(toolSlug) || 
+           titleLower.includes(toolName) ||
+           sheet.keywords.some(k => k.toLowerCase().includes(toolSlug) || k.toLowerCase().includes(toolName));
+  }, []);
 
   const accordionFaqs = [
     {
@@ -463,7 +585,8 @@ export default function GuidesClient() {
             { id: 'deployment', label: 'IT Deployment' },
             { id: 'migration', label: 'Crossover' },
             { id: 'procurement', label: 'Procurement' },
-            { id: 'manufacturing', label: 'CAM & 3D Print' }
+            { id: 'manufacturing', label: 'CAM & 3D Print' },
+            { id: 'cheatsheets', label: 'Shortcuts & References' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -484,7 +607,63 @@ export default function GuidesClient() {
         </div>
 
         {/* --- CRITICAL: 2-COLUMN GRID CONTAINING EIGHT CORE SECTION CARDS WITH INTERNAL ACCORDIONS --- */}
-        {isAll ? (
+        {activeTab === 'cheatsheets' ? (
+          /* STATE C: "Shortcuts & References" displaying migrated sheets with matching highlights and custom sorting */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
+            {[...TOOLBOX_DATA]
+              .filter((t) => t.category === 'cheatsheet' && t.status === 'released')
+              .sort((a, b) => {
+                if (!selectedTool) return 0;
+                const aRelated = isCheatsheetRelated(a, selectedTool);
+                const bRelated = isCheatsheetRelated(b, selectedTool);
+                if (aRelated && !bRelated) return -1;
+                if (!aRelated && bRelated) return 1;
+                return 0;
+              })
+              .map((sheet) => {
+                const isRelated = selectedTool ? isCheatsheetRelated(sheet, selectedTool) : false;
+                return (
+                  <Card
+                    key={sheet.slug}
+                    className={cn(
+                      "border shadow-sm hover:shadow-lg rounded-[24px] p-6 bg-white flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden",
+                      isRelated 
+                        ? "border-blue-500/40 bg-gradient-to-br from-blue-50/10 via-white to-blue-50/30 hover:border-blue-500" 
+                        : "border-slate-100 hover:border-blue-300"
+                    )}
+                  >
+                    {isRelated && (
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl -mr-12 -mt-12 pointer-events-none" />
+                    )}
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-12 h-12 rounded-2xl group-hover:scale-110 transition duration-300 overflow-hidden shrink-0">
+                          <ShortcutSoftwareIcon slug={sheet.slug} className="w-12 h-12" />
+                        </div>
+                        {isRelated && (
+                          <Badge className="bg-blue-600 hover:bg-blue-600 text-white font-mono font-black text-[8px] uppercase tracking-widest px-2 py-0.5 rounded-md shrink-0">
+                            Target Software Match
+                          </Badge>
+                        )}
+                      </div>
+                      <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        <Link href={`/guides/${sheet.slug}`}>{sheet.title}</Link>
+                      </h3>
+                      <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                        {sheet.description}
+                      </p>
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
+                      <span>View Reference Sheet</span>
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </Card>
+                );
+              })}
+          </div>
+        ) : isAll ? (
           /* STATE A: "All Guides" displaying 8 Category Cards (Symmetric grid of 4 rows and 2 columns!) */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
             {sortedCategorySections.map((p, idx) => {
@@ -498,7 +677,7 @@ export default function GuidesClient() {
                   )}
                 >
                   <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none opacity-40" />
-
+ 
                   <div className="relative z-10 space-y-4">
                     <div>
                       <div className="flex items-center justify-between mb-3">
@@ -529,7 +708,7 @@ export default function GuidesClient() {
                       <p className="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
                         {p.desc}
                       </p>
-
+ 
                       {/* Technical Tags to fill empty space elegantly and look highly professional */}
                       <div className="flex flex-wrap gap-1.5 mt-4">
                         {p.tags.map((tag) => (
@@ -545,7 +724,7 @@ export default function GuidesClient() {
                         ))}
                       </div>
                     </div>
-
+ 
                     {/* Collapsible Accordion Container inside Category Card (unfolds all 6 articles!) */}
                     <div
                       className={cn(
@@ -553,41 +732,68 @@ export default function GuidesClient() {
                         isCardOpen ? "max-h-[700px] pt-4 border-t border-slate-100 opacity-100" : "max-h-0 p-0 opacity-0 pointer-events-none"
                       )}
                     >
-                      <ul className="space-y-3 text-xs sm:text-sm">
-                        {p.articles.map((art, aIdx) => {
-                          const displayTitle = selectedTool 
-                            ? getLocalizedTitle(art.title, p.category, selectedTool)
-                            : art.title;
-                          const displayKeyword = selectedTool
-                            ? getLocalizedTitleAndExcerpt('', '', art.keyword, p.category, selectedTool).keyword
-                            : art.keyword;
-                          const displaySlug = selectedTool
-                            ? `${selectedTool.slug}-${p.category}-${aIdx}`
-                            : `${p.category === 'troubleshooting' ? 'autocad' : 'solidworks'}-${p.category}-${aIdx}`;
-                          return (
-                            <li key={art.title} className="group/item flex items-start gap-2">
-                              <span className={cn(
-                                "font-bold shrink-0 mt-0.5",
-                                meta ? meta.theme.accentText : "text-blue-600"
-                              )}>→</span>
-                              <div className="flex-1 min-w-0">
-                                <Link 
-                                  href={`/guides/${displaySlug}`} 
-                                  className={cn(
-                                    "font-bold text-slate-800 transition-colors group-hover/item:underline block leading-snug",
-                                    meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600"
-                                  )}
-                                >
-                                  {displayTitle}
-                                </Link>
-                                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
-                                  Keyword Mapped: {displayKeyword}
-                                </span>
-                              </div>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      {selectedTool ? (
+                        /* 如果选了特定软件，只渲染跟该软件兼容且处于前10个安全路由里的文章！ */
+                        safeAvailableGuides.filter(art => art.category === p.category).length > 0 ? (
+                          <ul className="space-y-3 text-xs sm:text-sm">
+                            {safeAvailableGuides
+                              .filter(art => art.category === p.category)
+                              .map((art) => (
+                                <li key={art.title} className="group/item flex items-start gap-2">
+                                  <span className={cn(
+                                    "font-bold shrink-0 mt-0.5",
+                                    meta ? meta.theme.accentText : "text-blue-600"
+                                  )}>→</span>
+                                  <div className="flex-1 min-w-0">
+                                    <Link 
+                                      href={`/guides/${art.slug}`} 
+                                      className={cn(
+                                        "font-bold text-slate-800 transition-colors group-hover/item:underline block leading-snug",
+                                        meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600"
+                                      )}
+                                    >
+                                      {art.title}
+                                    </Link>
+                                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
+                                      Keyword Mapped: {art.keyword}
+                                    </span>
+                                  </div>
+                                </li>
+                              ))}
+                          </ul>
+                        ) : (
+                          <div className="text-xs text-slate-400 py-2 font-semibold italic flex items-center gap-1.5">
+                            <span>No specific troubleshooting directives for {selectedTool.name} under this section.</span>
+                            <span onClick={() => setActiveTab(p.category)} className="text-blue-600 not-italic hover:underline cursor-pointer">
+                              Explore standard directive →
+                            </span>
+                          </div>
+                        )
+                      ) : (
+                        /* 如果没有选特定软件，退回到原本的静态骨架文章列表，链接安全Fallback */
+                        <ul className="space-y-3 text-xs sm:text-sm">
+                          {p.articles.map((art, aIdx) => {
+                            const defaultSoftwareSlug = p.category === 'troubleshooting' ? 'autocad' : 'solidworks';
+                            const displaySlug = `${defaultSoftwareSlug}-${p.category}-${aIdx}`;
+                            return (
+                              <li key={art.title} className="group/item flex items-start gap-2">
+                                <span className="font-bold shrink-0 mt-0.5 text-blue-600">→</span>
+                                <div className="flex-1 min-w-0">
+                                  <Link 
+                                    href={`/guides/${displaySlug}`} 
+                                    className="font-bold text-slate-800 transition-colors group-hover/item:underline block leading-snug hover:text-blue-600"
+                                  >
+                                    {art.title}
+                                  </Link>
+                                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wide">
+                                    Keyword Mapped: {art.keyword}
+                                  </span>
+                                </div>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
                       
                       <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] font-black text-blue-600 hover:underline cursor-pointer">
                         <span onClick={() => setActiveTab(p.category)}>View all guides in this category (450+ guides) →</span>
@@ -624,59 +830,70 @@ export default function GuidesClient() {
           </div>
         ) : (
           /* STATE B: "Category Filtered" displaying 6 Popular Article Cards */
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
-            {displayArticles.map((art, idx) => {
-              const targetTool = tools.find(t => t.slug === art.softwareSlug);
-              return (
-                <Card
-                  key={art.id}
-                  className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-rose-500 bg-rose-50 px-2 py-0.5 rounded">
-                        Section {idx + 1}
-                      </span>
-                      <span className="text-xs text-slate-400 font-semibold">{art.readTime}</span>
-                    </div>
-                    
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight mb-3 group-hover:text-blue-600 transition-colors">
-                      <Link href={`/guides/${art.softwareSlug}-${art.category}-${art.id.split('-').pop()}`}>{art.title}</Link>
-                    </h3>
-                    
-                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium line-clamp-3 mb-6">
-                      {art.excerpt}
-                    </p>
-                  </div>
-
-                  <div className="pt-4 border-t border-slate-100 space-y-4">
-                    {/* Target Software & Author info */}
-                    <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-                      <div className="flex items-center gap-2">
-                        <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-black text-[9px] flex items-center justify-center">WP</span>
-                        <span className="font-semibold text-slate-700">{art.author}</span>
+          displayArticles.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
+              {displayArticles.map((art, idx) => {
+                const targetTool = tools.find(t => t.slug === (art.softwareSlug || selectedToolSlug));
+                return (
+                  <Card
+                    key={art.id}
+                    className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-[10px] font-black uppercase tracking-widest text-rose-500 bg-rose-50 px-2 py-0.5 rounded">
+                          Section {idx + 1}
+                        </span>
+                        <span className="text-xs text-slate-400 font-semibold">{art.readTime}</span>
                       </div>
-                      {targetTool && (
-                        <div className="flex items-center gap-2 bg-slate-50 px-2.5 py-1 rounded-xl border border-slate-100 text-[10px]">
-                          <span className="font-bold text-slate-500">Target: {targetTool.name}</span>
-                          <span className="text-amber-500 font-bold">★ {targetTool.score.toFixed(1)}</span>
-                        </div>
-                      )}
+                      
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight mb-3 group-hover:text-blue-600 transition-colors">
+                        <Link href={`/guides/${art.slug}`}>{art.title}</Link>
+                      </h3>
+                      
+                      <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium line-clamp-3 mb-6">
+                        {art.excerpt}
+                      </p>
                     </div>
 
-                    <div className="flex items-center justify-between pt-2">
-                      <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                        Keyword: {art.keyword}
-                      </span>
-                      <Link href={`/guides/${art.softwareSlug}-${art.category}-${art.id.split('-').pop()}`} className="text-xs font-black text-blue-600 hover:underline">
-                        Read Guide →
-                      </Link>
+                    <div className="pt-4 border-t border-slate-100 space-y-4">
+                      {/* Target Software & Author info */}
+                      <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                        <div className="flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-black text-[9px] flex items-center justify-center">WP</span>
+                          <span className="font-semibold text-slate-700">{art.author}</span>
+                        </div>
+                        {targetTool && (
+                          <div className="flex items-center gap-2 bg-slate-50 px-2.5 py-1 rounded-xl border border-slate-100 text-[10px]">
+                            <span className="font-bold text-slate-500">Target: {targetTool.name}</span>
+                            <span className="text-amber-500 font-bold">★ {targetTool.score.toFixed(1)}</span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="flex items-center justify-between pt-2">
+                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                          Keyword: {art.keyword}
+                        </span>
+                        <Link href={`/guides/${art.slug}`} className="text-xs font-black text-blue-600 hover:underline">
+                          Read Guide →
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
+                  </Card>
+                );
+              })}
+            </div>
+          ) : (
+            <Card className="p-8 text-center rounded-[32px] border border-slate-200 bg-white max-w-lg mx-auto shadow-sm">
+              <p className="text-sm text-slate-500 font-bold mb-4">
+                No specific {activeTab} articles found for {selectedTool?.name || 'this software'}.
+              </p>
+              <Button onClick={() => setActiveTab('all')} className="rounded-xl bg-blue-600 text-white text-xs uppercase tracking-wider font-black px-6 py-2">
+                View All Categories & Guides
+              </Button>
+            </Card>
+          )
         )}
 
         {/* --- CRITICAL: THE 2,500-PAGE SEO ALPHABETICAL DIRECTORY (RESTORED & OPTIMIZED FOR 100% CRAWLABILITY) --- */}
@@ -736,7 +953,8 @@ export default function GuidesClient() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                     {activeAlphabetList.map((item, idx) => {
-                      const displayItem = selectedTool 
+                      const isCheatsheet = Object.keys(cheatsheetRedirects).includes(item.toLowerCase().trim());
+                      const displayItem = (selectedTool && !isCheatsheet)
                         ? getLocalizedTitle(item, 'all', selectedTool)
                         : item;
                       return (
@@ -821,14 +1039,17 @@ export default function GuidesClient() {
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                       {folder.links.map((link, lIdx) => {
-                        const displayTitle = selectedTool 
+                        const displayTitle = (selectedTool && folder.id !== 'fol-cheatsheets')
                           ? getLocalizedTitle(link.title, folder.id.replace('fol-', ''), selectedTool)
                           : link.title;
+                        const linkHref = folder.id === 'fol-cheatsheets'
+                          ? link.href
+                          : getProgrammaticLink(link.title, selectedTool?.slug);
                         return (
                           <div key={lIdx} className="flex items-start gap-2 p-2 hover:bg-white hover:shadow-sm rounded-xl transition-all group">
                             <span className="text-blue-600 font-bold shrink-0 mt-0.5">→</span>
                             <Link 
-                              href={getProgrammaticLink(link.title, selectedTool?.slug)} 
+                              href={linkHref} 
                               className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors hover:underline block leading-snug"
                             >
                               {displayTitle}
