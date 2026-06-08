@@ -378,7 +378,7 @@ export default function MatchmakerPage() {
                           className="w-32 h-32 bg-white rounded-3xl border border-slate-50 shadow-xl shadow-slate-100 group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="text-center w-full">
-                          <div className="text-3xl font-black text-blue-600">{(tool as any).matchPercentage}%</div>
+                          <div className="text-3xl font-black text-blue-600">{tool.matchPercentage}%</div>
                           <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Match Strength</div>
                           <div className="mt-2 text-xs font-bold text-amber-500 bg-amber-50 rounded-full py-1 px-2.5 inline-flex items-center gap-1 border border-amber-100">
                             ★ {tool.score.toFixed(1)}

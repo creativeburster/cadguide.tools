@@ -2307,8 +2307,6 @@ export type SearchMode = "tools" | "articles" | "both";
 export function determineSearchMode(query: string, toolNames: string[]): SearchMode {
   if (!query.trim()) return "both";
   
-  const normalizedQuery = query.toLowerCase().trim();
-  
   // First check if we should search articles
   if (shouldSearchArticles(query, toolNames)) return "articles";
 

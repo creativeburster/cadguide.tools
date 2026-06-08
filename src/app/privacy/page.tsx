@@ -38,7 +38,7 @@ function PrivacyBody() {
             <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">1. Information We Collect</h2>
             <p>We may collect information in the following ways:</p>
             <ul>
-              <li><strong>Direct Information:</strong> When you use our "Contact Us" form or subscribe to our newsletter, we collect your name and email address.</li>
+              <li><strong>Direct Information:</strong> When you use our &quot;Contact Us&quot; form or subscribe to our newsletter, we collect your name and email address.</li>
               <li><strong>Usage Data:</strong> We automatically collect information about your interactions with our site (e.g., pages visited, software clicked, search queries).</li>
               <li><strong>Cookies:</strong> We use cookies to enhance your browsing experience and analyze site traffic.</li>
             </ul>
@@ -47,7 +47,7 @@ function PrivacyBody() {
             <p>We use the collected information to:</p>
             <ul>
               <li>Provide and maintain our CAD software directory.</li>
-              <li>Improve our "Smart Matchmaker" algorithm based on user preferences.</li>
+              <li>Improve our &quot;Smart Matchmaker&quot; algorithm based on user preferences.</li>
               <li>Respond to your inquiries and support requests.</li>
               <li>Send you updates or promotional offers (only if you opt-in).</li>
             </ul>

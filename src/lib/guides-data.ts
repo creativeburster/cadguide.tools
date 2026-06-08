@@ -1,4 +1,4 @@
-import { tools } from '@/lib/data';
+import { Tool } from '@/lib/data';
 
 const REGEX_CACHE = new Map<string, RegExp>();
 
@@ -525,7 +525,7 @@ export function getLocalizedTitleAndExcerpt(
   excerpt: string,
   keyword: string,
   category: string,
-  tool: any
+  tool: Tool
 ) {
   let newTitle = title;
   let newExcerpt = excerpt;
@@ -625,11 +625,11 @@ export function getLocalizedTitleAndExcerpt(
   return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
 }
 
-export function getLocalizedTitle(title: string, category: string, tool: any): string {
+export function getLocalizedTitle(title: string, category: string, tool: Tool): string {
   return getLocalizedTitleAndExcerpt(title, '', '', category, tool).title;
 }
 
-export function isArticleCompatibleWithTool(articleTitle: string, articleCategory: string, tool: any): boolean {
+export function isArticleCompatibleWithTool(articleTitle: string, articleCategory: string, tool: Tool): boolean {
   const titleLower = articleTitle.toLowerCase();
   const categoryLower = articleCategory.toLowerCase();
   const pricingType = tool.pricing_type || 'Commercial';

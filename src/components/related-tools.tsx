@@ -1,5 +1,6 @@
 'use client';
 
+import type { ComponentType, SVGProps } from 'react';
 import Link from 'next/link';
 import { LayoutGrid, FileSearch, Zap, AlertTriangle, Type, Ruler } from 'lucide-react';
 
@@ -7,7 +8,7 @@ interface ToolItem {
   name: string;
   desc: string;
   link: string;
-  icon: any;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   tag?: string;
 }
 

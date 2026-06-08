@@ -13,6 +13,29 @@ interface FontMapping {
   fmpEntry: string; // Mapping entry for acad.fmp
 }
 
+const SHX_FAQS: { question: string; answer: string }[] = [
+  {
+    question: 'What is the difference between a question mark (?) and garbled text?',
+    answer:
+      'A question mark (?) means the CAD engine cannot find the SHX font specified in your Fonts folder, or its mapping rules cannot match special symbols. Garbled text means the code page (Codepage) or font style (Style) declared inside the drawing conflicts during parsing — for example using a Western font to force-parse a double-byte Chinese big font.',
+  },
+  {
+    question: 'Can I download font packages online and import them?',
+    answer:
+      'It is strongly discouraged to download multi-gigabyte "full CAD font packages" from the internet. They contain many duplicate, damaged and redundant fonts that can crash CAD startup speed, break coordinate snapping, and may even bundle macro trojans. Configuring targeted FONTALT alternate mappings on demand is the standard enterprise IT practice.',
+  },
+  {
+    question: 'How do I configure Big Font and a Western regular font in CAD?',
+    answer:
+      'The AutoCAD text style (STYLE) allows a combined mount: the left "SHX font" box handles English letters and numbers (e.g. simplex.shx); after checking "Use Big Font", the right "Big Font" box handles CJK characters (e.g. gbcbig.shx). Drawings only restore correctly when both are configured.',
+  },
+  {
+    question: 'Why can Tianzheng or Structure Explorer auto-detect the fonts?',
+    answer:
+      'These customized CAD secondary-development kits add their dedicated Fonts folders to AutoCAD\'s Support File Search Path automatically. To view such drawings in vanilla CAD, copy and add their Fonts paths to your local CAD options search path.',
+  },
+];
+
 const FONTS_REGISTRY: FontMapping[] = [
   {
     name: 'HZTXT',
@@ -356,7 +379,7 @@ export default function MissingFontResolverClient() {
                 <div>
                   <h5 className="font-bold text-slate-100 print:text-slate-800">Set alternate default font</h5>
                   <p className="text-slate-400 print:text-slate-500 mt-0.5">
-                    Copy the `(setvar "FONTALT" "gbcbig.shx")` command on the left above. Paste directly into the CAD command line and press Enter key. This specifies the fallback for the default missing font to be GB large font. 
+                    Copy the `(setvar &quot;FONTALT&quot; &quot;gbcbig.shx&quot;)` command on the left above. Paste directly into the CAD command line and press Enter key. This specifies the fallback for the default missing font to be GB large font. 
                   </p>
                 </div>
               </li>
@@ -399,6 +422,20 @@ export default function MissingFontResolverClient() {
 
       {/* FAQ Section */}
       <div className="space-y-6">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: SHX_FAQS.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+              })),
+            }),
+          }}
+        />
         <h3 className="text-2xl font-black text-slate-900">Troubleshooting missing fonts and garbled characters (SHX Font FAQ)</h3>
         <div className="grid md:grid-cols-2 gap-6 print:grid-cols-1">
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
@@ -411,19 +448,19 @@ export default function MissingFontResolverClient() {
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
             <h4 className="font-bold text-slate-800 mb-2 text-sm">Can I download font packages online and import them? </h4>
             <p className="text-xs text-slate-500 leading-relaxed font-medium">
-              It is highly not recommended to download batches of several gigabytes from the Internet in batches."CADFull font package". This type of package contains a large number of duplicate names, Damaged and redundant fonts, prone to triggering CAD Startup speed plummets, coordinate capture fails, Even bundled with macro Trojans. Targeted configuration on demand FONTALT Alternate mapping is the standard specification for enterprise IT operations. 
+              It is highly not recommended to download batches of several gigabytes from the Internet in batches.&quot;CADFull font package&quot;. This type of package contains a large number of duplicate names, Damaged and redundant fonts, prone to triggering CAD Startup speed plummets, coordinate capture fails, Even bundled with macro Trojans. Targeted configuration on demand FONTALT Alternate mapping is the standard specification for enterprise IT operations. 
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
             <h4 className="font-bold text-slate-800 mb-2 text-sm">Big Font and Spanish regular font in CAD How to configure it? </h4>
             <p className="text-xs text-slate-500 leading-relaxed font-medium">
-              AutoCAD The text style (STYLE) allows combined mounting: "SHX font on the left"The box is responsible for English letters and numbers (such as simplex.shx) ; Check "Use large fonts""rear, right"The large font "box is responsible for Chinese, Japanese and Korean characters (Such as gbcbig.shx). Only if both are configured correctly, The drawings can be restored correctly. 
+              AutoCAD The text style (STYLE) allows combined mounting: &quot;SHX font on the left&quot;The box is responsible for English letters and numbers (such as simplex.shx) ; Check &quot;Use large fonts&quot;&quot;rear, right&quot;The large font &quot;box is responsible for Chinese, Japanese and Korean characters (Such as gbcbig.shx). Only if both are configured correctly, The drawings can be restored correctly. 
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
             <h4 className="font-bold text-slate-800 mb-2 text-sm">Why can Tianzheng Software or Structure Explorer automatically identify it? </h4>
             <p className="text-xs text-slate-500 leading-relaxed font-medium">
-              These customized CAD secondary development kits will be installed with their dedicated Fonts Folders are automatically added to AutoCAD's"Support File Search Path "Medium. To view in bare CAD, Just copy and add their Fonts paths to your local CAD within the options search path. 
+              These customized CAD secondary development kits will be installed with their dedicated Fonts Folders are automatically added to AutoCAD&apos;s&quot;Support File Search Path &quot;Medium. To view in bare CAD, Just copy and add their Fonts paths to your local CAD within the options search path. 
             </p>
           </div>
         </div>

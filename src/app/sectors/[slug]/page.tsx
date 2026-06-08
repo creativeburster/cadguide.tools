@@ -242,7 +242,7 @@ function pageTitle(s: SectorPage, count: number): string {
   return `Best CAD Software for ${s.displayName} in ${YEAR} (${count} Tools Reviewed)`;
 }
 
-function pageDescription(s: SectorPage, count: number): string {
+function pageDescription(s: SectorPage): string {
   return `Curated list of the best CAD, CAE, CAM, and BIM tools for ${s.displayName} workflows. Expert reviews, ratings, pricing, and system requirements for each ${s.shortNoun}.`;
 }
 
@@ -255,7 +255,7 @@ export async function generateMetadata(
   const list = toolsForSector(s).slice(0, SECTOR_LIMIT);
   return pageMetadata({
     title: pageTitle(s, list.length),
-    description: pageDescription(s, list.length),
+    description: pageDescription(s),
     path: `/sectors/${s.slug}`,
     ogType: 'article',
   });
@@ -266,7 +266,7 @@ function itemListLd(s: SectorPage, list: Tool[]) {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: pageTitle(s, list.length),
-    description: pageDescription(s, list.length),
+    description: pageDescription(s),
     numberOfItems: list.length,
     itemListOrder: 'https://schema.org/ItemListOrderDescending',
     itemListElement: list.map((t, i) => ({
@@ -283,7 +283,7 @@ function articleLd(s: SectorPage, count: number) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: pageTitle(s, count),
-    description: pageDescription(s, count),
+    description: pageDescription(s),
     mainEntityOfPage: `${SITE_URL}/sectors/${s.slug}`,
     publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
@@ -452,7 +452,7 @@ function renderAdvisory(s: SectorPage, style: SectorStyle) {
           </div>
         </div>
         <p className="text-sm sm:text-base text-slate-700 leading-relaxed italic border-l-2 border-slate-300 pl-4">
-          "{style.expertAdvice}"
+          &quot;{style.expertAdvice}&quot;
         </p>
         <div className="mt-4 flex items-center gap-2 text-xs text-slate-500">
           <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -592,7 +592,7 @@ function renderRankings(list: Tool[], style: SectorStyle) {
                       
                       {t.expert_verdict && (
                         <p className="text-xs text-slate-600 italic border-l-2 border-slate-300 pl-3 leading-relaxed">
-                          <strong>Expert Verdict:</strong> "{t.expert_verdict}"
+                          <strong>Expert Verdict:</strong> &quot;{t.expert_verdict}&quot;
                         </p>
                       )}
                     </div>

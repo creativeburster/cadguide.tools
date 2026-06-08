@@ -2,10 +2,7 @@
 
 import { useState, useMemo, useRef } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { 
-  FileText, Shield, AlertTriangle, CheckCircle, Search, 
-  Download, Copy, Check, Layers, AlertCircle, RefreshCw, Info, Lock, Unlock, Eye, EyeOff, Printer
-} from 'lucide-react';
+import { FileText, Shield, AlertTriangle, CheckCircle, Search, Download, Copy, Check, Layers, AlertCircle, RefreshCw, Info, Lock, Unlock, EyeOff, Printer } from 'lucide-react';
 
 interface DxfLayer {
   name: string;
@@ -221,7 +218,7 @@ export default function DxfParserClient() {
           layers: layers.sort((a, b) => a.name.localeCompare(b.name)),
           scanTimeMs: Math.round(endTime - startTime)
         });
-      } catch (err) {
+      } catch {
         alert('File parsing failed. Please upload a standard ASCII DXF format drawing.');
       } finally {
         setIsLoading(false);
@@ -504,7 +501,7 @@ export default function DxfParserClient() {
                 ].map((f) => (
                   <button
                     key={f.id}
-                    onClick={() => setLayerFilter(f.id as any)}
+                    onClick={() => setLayerFilter(f.id as typeof layerFilter)}
                     className={`px-3.5 py-1.5 rounded-lg text-[10px] font-black transition-all ${
                       layerFilter === f.id ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
                     }`}
@@ -633,7 +630,7 @@ export default function DxfParserClient() {
                 <strong>The Propagation Effect</strong>: If you copy even a single line, block symbol, or layer from a drawing that was created using an educational CAD license into a clean commercial project, the entire project will become infected.
               </p>
               <p>
-                <strong>Plot Stamp Stampings</strong>: When plotting, AutoCAD will append border texts stating <em className="text-slate-800 font-bold bg-slate-50 px-1 py-0.5 border border-slate-100">"PRODUCED BY AN AUTODESK EDUCATIONAL PRODUCT"</em> to all 4 print margins, making blueprints unacceptable for official building permit submissions.
+                <strong>Plot Stamp Stampings</strong>: When plotting, AutoCAD will append border texts stating <em className="text-slate-800 font-bold bg-slate-50 px-1 py-0.5 border border-slate-100">&quot;PRODUCED BY AN AUTODESK EDUCATIONAL PRODUCT&quot;</em> to all 4 print margins, making blueprints unacceptable for official building permit submissions.
               </p>
             </div>
           </div>

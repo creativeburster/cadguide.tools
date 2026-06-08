@@ -2,21 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  HelpCircle,
-  Info,
-  Copy,
-  Check,
-  AlertTriangle,
-  CheckCircle,
-  Code2,
-  Cpu,
-  Layers,
-  Sparkles,
-  Zap,
-  Activity,
-  Gauge
-} from 'lucide-react';
+import { Copy, Check, Code2, Zap, Gauge } from 'lucide-react';
 
 export default function DrawingLagCleanerClient() {
   const [cleanRegapp, setCleanRegapp] = useState(true);

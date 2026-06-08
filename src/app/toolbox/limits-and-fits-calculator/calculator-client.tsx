@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, Download, HelpCircle, Layers, RefreshCw, FileText } from 'lucide-react';
+import { Download, HelpCircle, Layers, FileText } from 'lucide-react';
 
 interface PresetFit {
   hole: string;
@@ -676,13 +676,13 @@ export default function LimitsAndFitsCalculatorClient() {
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Standard ISO 286 Nomenclature</h4>
             <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
-                <span className="text-slate-400">// Fit Designation: e.g. H7/g6</span>
+                <span className="text-slate-400">{'// Fit Designation: e.g. H7/g6'}</span>
                 <div>Capital Letter &quot;H&quot; represents Hole Tolerance.</div>
                 <div>Lowercase Letter &quot;g&quot; represents Shaft Tolerance.</div>
                 <div>Number &quot;7&quot; or &quot;6&quot; represents the International Tolerance (IT) Grade.</div>
               </div>
               <div className="pt-2 border-t border-slate-200/50">
-                <span className="text-slate-400">// IT Grade scale</span>
+                <span className="text-slate-400">{'// IT Grade scale'}</span>
                 <div>Lower IT number = Tighter tolerance band (harder to machine, higher cost).</div>
                 <div>IT5-IT7: Precision machining (grinding, boring).</div>
                 <div>IT8-IT11: Standard general machining (turning, milling).</div>

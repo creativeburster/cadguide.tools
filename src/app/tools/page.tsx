@@ -42,7 +42,6 @@ export default async function ToolsPage({
   const rawPage = Array.isArray(params.page) ? params.page[0] : params.page;
   const pageNum = Math.max(1, Number(rawPage) || 1);
   const totalPages = Math.max(1, Math.ceil(tools.length / ITEMS_PER_PAGE));
-  const path = pageNum > 1 ? `/tools?page=${pageNum}` : '/tools';
 
   const collection = collectionPageLd({
     name: 'CAD & BIM Software Directory',

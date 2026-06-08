@@ -56,7 +56,7 @@ function AboutBody() {
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center">
               <div className="text-3xl mb-4 text-blue-600">📊</div>
               <h3 className="font-bold text-slate-900 mb-2">Neutral Data</h3>
-              <p className="text-sm text-slate-600">We don't accept paid rankings. Our scores are based on technical specs and community feedback.</p>
+              <p className="text-sm text-slate-600">We don&apos;t accept paid rankings. Our scores are based on technical specs and community feedback.</p>
             </div>
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center">
               <div className="text-3xl mb-4 text-blue-600">🔍</div>

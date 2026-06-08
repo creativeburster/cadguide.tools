@@ -5,25 +5,11 @@ import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import ShortcutSoftwareIcon from '@/components/shortcut-software-icon';
 import { tools } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 
-import {
-  GuideCategorySection,
-  CATEGORY_SECTIONS,
-  GuideArticleCard,
-  ARTICLES_LIST,
-  DirectoryFolder,
-  DIRECTORY_FOLDERS,
-  ArchetypeMetadata,
-  getArchetypeMetadata,
-  getLocalizedTitleAndExcerpt,
-  getLocalizedTitle,
-  isArticleCompatibleWithTool,
-} from '@/lib/guides-data';
+import { CATEGORY_SECTIONS, ARTICLES_LIST, DIRECTORY_FOLDERS, getArchetypeMetadata, getLocalizedTitleAndExcerpt, getLocalizedTitle, isArticleCompatibleWithTool } from '@/lib/guides-data';
 
 const cheatsheetRedirects: Record<string, string> = {
   'cross-platform cad shortcuts matrix': '/toolbox/shortcuts',
@@ -305,7 +291,6 @@ export default function GuidesClient() {
   // State to control sitemap folder accordions at bottom (collapsed by default for cleanliness)
   const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({});
   const [activeLetter, setActiveLetter] = useState<string>('A');
-  const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
   // Enterprise Q&A Filter & Pagination States
   const [faqTab, setFaqTab] = useState<'all' | 'licensing' | 'performance' | 'standards'>('all');
@@ -356,6 +341,8 @@ export default function GuidesClient() {
       if (toolParam) {
         const matched = tools.find(t => t.slug === toolParam);
         if (matched) {
+          // Client-only sync from window.location; runs once on mount.
+          // eslint-disable-next-line react-hooks/set-state-in-effect
           setSelectedToolSlug(toolParam);
         }
       }
@@ -374,10 +361,6 @@ export default function GuidesClient() {
       ...prev,
       [id]: !prev[id]
     }));
-  };
-
-  const toggleAccordion = (idx: number) => {
-    setOpenAccordion(openAccordion === idx ? null : idx);
   };
 
   const handleFaqTabChange = (tabId: 'all' | 'licensing' | 'performance' | 'standards') => {
@@ -438,17 +421,6 @@ export default function GuidesClient() {
   }, [selectedTool, activeTab, safeAvailableGuides]);
 
   // 3. 判断快捷键表是否与当前工具相关
-  const isCheatsheetRelated = React.useCallback((sheet: typeof TOOLBOX_DATA[number], tool: typeof tools[number]) => {
-    const slugLower = sheet.slug.toLowerCase();
-    const titleLower = sheet.title.toLowerCase();
-    const toolSlug = tool.slug.toLowerCase();
-    const toolName = tool.name.toLowerCase();
-    
-    return slugLower.includes(toolSlug) || 
-           titleLower.includes(toolSlug) || 
-           titleLower.includes(toolName) ||
-           sheet.keywords.some(k => k.toLowerCase().includes(toolSlug) || k.toLowerCase().includes(toolName));
-  }, []);
 
   const accordionFaqs = [
     {
@@ -589,7 +561,7 @@ export default function GuidesClient() {
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`px-3.5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all border ${
                 activeTab === tab.id
                   ? meta
@@ -1045,7 +1017,7 @@ export default function GuidesClient() {
             ].map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => handleFaqTabChange(tab.id as any)}
+                onClick={() => handleFaqTabChange(tab.id as Parameters<typeof handleFaqTabChange>[0])}
                 className={`px-3.5 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all border ${
                   faqTab === tab.id
                     ? 'bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-100 scale-[1.02]'

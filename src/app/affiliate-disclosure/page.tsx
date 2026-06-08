@@ -55,7 +55,7 @@ function DisclosureBody() {
               metrics such as file format compatibility, supported platforms, features, pricing models, and public professional reviews.
             </p>
             <ul>
-              <li>We do not accept payments to increase a software's rating or rating position.</li>
+              <li>We do not accept payments to increase a software&apos;s rating or rating position.</li>
               <li>We list open-source and free alternatives alongside commercial software, even though we receive no compensation for them.</li>
               <li>Whether a software vendor has an affiliate program or not has zero impact on our evaluation.</li>
             </ul>

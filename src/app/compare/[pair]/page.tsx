@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { Award, CheckCircle2, HelpCircle, AlertCircle, Sparkles } from 'lucide-react';
+import { Award, CheckCircle2, Sparkles } from 'lucide-react';
 import {
   comparisonPairs,
   parseComparisonPair,
@@ -303,7 +303,7 @@ function articleLd(a: Tool, b: Tool, pairSlug: string) {
   };
 }
 
-function productCompareLd(a: Tool, b: Tool, pairSlug: string) {
+function productCompareLd(a: Tool, b: Tool) {
   const images: string[] = [];
   if (a.logo_url) images.push(a.logo_url);
   if (b.logo_url) images.push(b.logo_url);
@@ -737,7 +737,7 @@ export default async function ComparePairPage(
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productCompareLd(a, b, pair)),
+          __html: JSON.stringify(productCompareLd(a, b)),
         }}
       />
       <script

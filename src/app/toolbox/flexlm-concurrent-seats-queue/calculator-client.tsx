@@ -2,9 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Settings, Sliders, Users, DollarSign, Terminal, Activity
-} from 'lucide-react';
+import { HelpCircle, Copy, Check, AlertTriangle, CheckCircle, Settings, Sliders, Users, Terminal, Activity } from 'lucide-react';
 
 // Common CAD software presets
 const SOFTWARE_PRESETS = [

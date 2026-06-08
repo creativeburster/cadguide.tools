@@ -2,7 +2,7 @@
 
 import { useState, useMemo, Suspense, useEffect, useCallback, useDeferredValue } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { tools, categories } from '@/lib/data';
+import { tools, categories, Tool } from '@/lib/data';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -74,7 +74,7 @@ const STOP_WORDS = new Set(['best', 'software', 'cad', 'tool', 'tools', 'top', '
  * E.g., searching "vnas" matches "V-NAS", and searching "v-nas" matches "vnas".
  * Supports multi-term space-separated AND matching with typo tolerance and stop-words filtering.
  */
-function fuzzyMatchTool(tool: any, query: string): boolean {
+function fuzzyMatchTool(tool: Tool, query: string): boolean {
   if (!query) return true;
   const normalizedQuery = normalizeString(query);
   if (!normalizedQuery) return true;
@@ -87,9 +87,10 @@ function fuzzyMatchTool(tool: any, query: string): boolean {
   // 2. Fuzzy match on name (handling typos like "autoad" -> "autocad")
   if (isFuzzyMatch(normalizedQuery, toolNameNormalized)) return true;
 
-  // Check aliases
-  if (tool.aliases) {
-    for (const alias of tool.aliases) {
+  // Check aliases (optional field not present on all tool records)
+  const aliases = (tool as { aliases?: string[] }).aliases;
+  if (aliases) {
+    for (const alias of aliases) {
       const aliasNorm = normalizeString(alias);
       if (aliasNorm.includes(normalizedQuery) || isFuzzyMatch(normalizedQuery, aliasNorm)) {
         return true;
@@ -119,7 +120,7 @@ function fuzzyMatchTool(tool: any, query: string): boolean {
     const fieldsToMatch = [
       toolNameNormalized,
       normalizeString(tool.short_desc || ''),
-      normalizeString(tool.category_name || ''),
+      normalizeString(categories.find((c) => c.id === tool.category_id)?.name || ''),
       normalizeString(tool.country || ''),
       ...(tool.industries || []).map(normalizeString),
       ...(tool.features || []).map(normalizeString),
@@ -218,6 +219,8 @@ function ToolsList() {
 
   // Sync state if search query parameter changes externally (e.g. back/forward navigation)
   useEffect(() => {
+    // External sync: mirror URL query into local state on navigation.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLocalSearchQuery(urlQuery);
   }, [urlQuery]);
 
@@ -783,7 +786,7 @@ function ToolsList() {
                 <svg className="w-10 h-10 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
               </div>
               <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">Zero Matches Found</h2>
-              <p className="text-slate-500 font-medium mb-10 max-w-md mx-auto leading-relaxed">We couldn't find any tools matching your specific combination of filters. Try broadening your criteria.</p>
+              <p className="text-slate-500 font-medium mb-10 max-w-md mx-auto leading-relaxed">We couldn&apos;t find any tools matching your specific combination of filters. Try broadening your criteria.</p>
               <Button
                 variant="outline"
                 className="rounded-[20px] font-black px-10 h-14 text-xs uppercase tracking-widest border-slate-200 hover:bg-white"
@@ -951,6 +954,8 @@ function SmartSearchBox({ searchQuery, onSearchChange, onSearchSubmit }: SmartSe
 
   // Sync state if searchQuery prop changes externally (e.g., when clicking active filter chips or resetting)
   useEffect(() => {
+    // External sync: mirror searchQuery prop into local input state.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setInputValue(searchQuery);
   }, [searchQuery]);
 

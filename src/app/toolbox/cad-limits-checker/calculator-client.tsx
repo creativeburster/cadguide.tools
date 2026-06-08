@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { HelpCircle, Info, Copy, Check, Shield, FileText, ChevronRight, Settings } from 'lucide-react';
+import { Info, Copy, Check, FileText, Settings } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 const PAPER_SIZES = [
@@ -338,7 +338,7 @@ All`;
           <div className="text-[10px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>LIMITS Core tip: </strong>The purpose of configuring drawing limits is to limit misdrawing beyond the drawing range., and enable AutoCAD's `GRID` (Grid) is only displayed in the drawing printing area. When aligning model space within a layout viewport, Make sure the `LIMITS` scale matches the viewport XP The reciprocal proportions are consistent and can be avoided"Grid exceeds screen" or""The grid is too dense and does not display" phenomenon. 
+              <strong>LIMITS Core tip: </strong>The purpose of configuring drawing limits is to limit misdrawing beyond the drawing range., and enable AutoCAD&apos;s `GRID` (Grid) is only displayed in the drawing printing area. When aligning model space within a layout viewport, Make sure the `LIMITS` scale matches the viewport XP The reciprocal proportions are consistent and can be avoided&quot;Grid exceeds screen&quot; or&quot;&quot;The grid is too dense and does not display&quot; phenomenon. 
             </span>
           </div>
         </div>

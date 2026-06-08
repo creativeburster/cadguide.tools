@@ -59,7 +59,7 @@ export function ContactBody() {
           <div className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/60 border border-white text-center">
             <div className="text-green-500 text-6xl mb-4">✓</div>
             <h1 className="text-3xl font-bold text-slate-900 mb-4">Message Sent!</h1>
-            <p className="text-lg text-slate-600">Thank you for contacting us. We'll get back to you within 24-48 business hours.</p>
+            <p className="text-lg text-slate-600">Thank you for contacting us. We&apos;ll get back to you within 24-48 business hours.</p>
             
             <div className="mt-8 pt-8 border-t border-slate-200">
               <p className="text-sm font-bold text-slate-700 mb-4">Explore More</p>
@@ -103,7 +103,7 @@ export function ContactBody() {
             <div>
               <h1 className="text-4xl font-extrabold text-slate-900 mb-6">Get in Touch</h1>
               <p className="text-xl text-slate-600 leading-relaxed">
-                Have a question about a specific CAD tool? Want to sponsor our directory? Or found an error in our data? We'd love to hear from you.
+                Have a question about a specific CAD tool? Want to sponsor our directory? Or found an error in our data? We&apos;d love to hear from you.
               </p>
             </div>
 

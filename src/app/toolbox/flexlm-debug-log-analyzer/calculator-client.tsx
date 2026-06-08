@@ -2,20 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  FileText,
-  Upload,
-  AlertTriangle,
-  CheckCircle,
-  BarChart3,
-  Users,
-  Activity,
-  ArrowRight,
-  TrendingUp,
-  Shield,
-  HelpCircle,
-  Play
-} from 'lucide-react';
+import { FileText, Upload, AlertTriangle, CheckCircle, TrendingUp, Shield, HelpCircle, Play } from 'lucide-react';
 
 interface DenialRecord {
   time: string;
@@ -274,7 +261,7 @@ export default function FlexlmLogAnalyzerClient() {
               <HelpCircle className="w-12 h-12 text-slate-300 mb-4" />
               <h3 className="text-slate-800 font-black text-lg">Waiting for log data to be imported...</h3>
               <p className="text-sm text-slate-400 max-w-sm mt-2 leading-relaxed">
-                Please upload your FLEXlm (`lmgrd`) service debug log file on the left, Or directly click 'Load Demo Log''Experience the offline statistics panel with one click. 
+                Please upload your FLEXlm (`lmgrd`) service debug log file on the left, Or directly click &apos;Load Demo Log&apos;&apos;Experience the offline statistics panel with one click. 
               </p>
             </div>
 ) : (

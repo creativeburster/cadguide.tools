@@ -182,8 +182,8 @@ export default function DwgVersionCheckerClient() {
             desc: `Recognized header '${magic}', but it does not map to a standard release year. It could be an export from an incompatible 3rd party CAD system or an extremely early version.`,
           });
         }
-      } catch (err: any) {
-        setError(err.message || 'An error occurred while parsing the DWG header.');
+      } catch (err: unknown) {
+        setError((err instanceof Error ? err.message : '') || 'An error occurred while parsing the DWG header.');
       } finally {
         setLoading(false);
       }
@@ -463,7 +463,7 @@ export default function DwgVersionCheckerClient() {
           <div className="bg-white border border-slate-100 rounded-2xl p-6">
             <h4 className="font-bold text-slate-800 mb-2">Are alternative CAD tools 100% compatible?</h4>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Modern IntelliCAD and ODA-based engines (GstarCAD, ZWCAD, etc.) are native DWG systems. They can read and write standard DWG formats directly without conversion, matching Autodesk's structural fidelity.
+              Modern IntelliCAD and ODA-based engines (GstarCAD, ZWCAD, etc.) are native DWG systems. They can read and write standard DWG formats directly without conversion, matching Autodesk&apos;s structural fidelity.
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6">

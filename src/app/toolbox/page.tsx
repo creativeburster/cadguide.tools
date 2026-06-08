@@ -40,7 +40,7 @@ export default function ToolboxPage() {
               The Interactive <span className="text-blue-400">CAD Toolbox</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
-              A comprehensive library of 100% client-side calculators, converters, cheat sheets, and diagnostics to accelerate your engineering workflow. Zero downloads, complete privacy.
+              A comprehensive library of privacy-first, client-side calculators, parsers, cheat sheets, and diagnostics — plus expert-vetted recommendations for cloud services when heavy server-side processing is required.
             </p>
           </div>
         </section>

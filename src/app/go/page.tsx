@@ -20,7 +20,7 @@ function isTrustedUrl(urlString: string): boolean {
     return TRUSTED_DOMAINS.some(domain => 
       hostname === domain || hostname.endsWith('.' + domain)
     );
-  } catch (e) {
+  } catch {
     return false;
   }
 }
@@ -37,6 +37,8 @@ function RedirectBridge() {
       try {
         const decoded = decodeURIComponent(rawUrl);
         if (decoded.startsWith('http://') || decoded.startsWith('https://')) {
+          // Client-only sync from URL search params; safe on mount.
+          // eslint-disable-next-line react-hooks/set-state-in-effect
           setUrl(decoded);
           setIsTrusted(isTrustedUrl(decoded));
         }

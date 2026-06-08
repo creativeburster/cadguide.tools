@@ -10,6 +10,8 @@ export function SiteNotice() {
   useEffect(() => {
     const dismissed = localStorage.getItem('site-notice-dismissed');
     if (!dismissed) {
+      // Reads localStorage on mount; client-only by design.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
     }
   }, []);

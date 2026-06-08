@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, Download, HelpCircle, Layers, Copy, Check, FileText } from 'lucide-react';
+import { HelpCircle, Layers, Copy, Check, FileText } from 'lucide-react';
 
 interface ScalePreset {
   label: string;
@@ -81,7 +81,6 @@ export default function ViewportScaleCalculatorClient() {
       xpCommandString = `${xpValue}XP`;
     } else {
       // Show as fraction if decimal is complicated
-      const decimalStr = xpValue.toFixed(4);
       if (modelUnit === 'm' && paperUnit === 'mm') {
         xpCommandString = `${1000}/${ratio}XP`;
       } else if (modelUnit === 'cm' && paperUnit === 'mm') {
@@ -579,13 +578,13 @@ export default function ViewportScaleCalculatorClient() {
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Why is the XP factor not always 1/Scale?</h4>
             <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
-                <span className="text-slate-400">// Unit Mismatch Correction</span>
+                <span className="text-slate-400">{'// Unit Mismatch Correction'}</span>
                 <div>Layout paper space sheets are always drawn in Millimeters (or Inches).</div>
                 <div className="pt-2">If your model is drawn in Meters (common for civil and floor plans), 1 unit = 1000mm. To print at 1:100 scale, the multiplier is:</div>
                 <div className="text-blue-600 font-bold font-mono pt-1 text-[11px]">XP = (1000 mm / 1 m) / 100 = 10XP</div>
               </div>
               <div className="pt-2 border-t border-slate-200/50">
-                <span className="text-slate-400">// Command Macro workflow</span>
+                <span className="text-slate-400">{'// Command Macro workflow'}</span>
                 <div>Double click viewport, paste:</div>
                 <div className="text-slate-800 font-mono font-bold text-[11px]">_zoom _scale {results?.xpCommandString || '20XP'}</div>
               </div>

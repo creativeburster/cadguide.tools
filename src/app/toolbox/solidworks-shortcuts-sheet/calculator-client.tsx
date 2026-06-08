@@ -2,17 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  Search,
-  Printer,
-  MousePointer,
-  Keyboard,
-  Info,
-  Maximize2,
-  Compass,
-  ArrowRight,
-  Sparkles
-} from 'lucide-react';
+import { Search, Printer, MousePointer, Compass, Sparkles } from 'lucide-react';
 
 interface ShortcutItem {
   keys: string;
@@ -605,7 +595,7 @@ export default function SolidWorksShortcutsClient() {
           <div>
             <h4 className="font-bold text-slate-800 text-sm mb-1.5">1. The perfect combination of mouse gestures and shortcut toolbar</h4>
             <p>
-              In SolidWorks, It is strongly recommended to configure mouse gestures to 8 directions, and put the most frequent "draw straight line"", "Circle", "Smart Size", "Crop" and"face up to "put it in". Incorporate less frequent but critical construction tools such as Stretch, cut off, stake out, datum) put in <b>`S Key Shortcut Panel`</b> Medium. In this way, when you are designing, you can right-drag with the right mouse to complete the sketch., Just press the S key with your left hand to generate a three-dimensional body with one click, Realize that "both hands do not leave the center of gravity of the keyboard and mouse""Extremely fast experience. 
+              In SolidWorks, It is strongly recommended to configure mouse gestures to 8 directions, and put the most frequent &quot;draw straight line&quot;&quot;, &quot;Circle&quot;, &quot;Smart Size&quot;, &quot;Crop&quot; and&quot;face up to &quot;put it in&quot;. Incorporate less frequent but critical construction tools such as Stretch, cut off, stake out, datum) put in <b>`S Key Shortcut Panel`</b> Medium. In this way, when you are designing, you can right-drag with the right mouse to complete the sketch., Just press the S key with your left hand to generate a three-dimensional body with one click, Realize that &quot;both hands do not leave the center of gravity of the keyboard and mouse&quot;&quot;Extremely fast experience. 
             </p>
           </div>
           <div>

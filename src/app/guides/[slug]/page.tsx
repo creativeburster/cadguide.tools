@@ -7,35 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
 import { AICitation } from '@/components/ai-citation';
-import {
-  ARTICLES_LIST,
-  CATEGORY_SECTIONS,
-  getArchetypeMetadata,
-  getLocalizedTitleAndExcerpt,
-  getLocalizedTitle,
-  isArticleCompatibleWithTool
-} from '@/lib/guides-data';
-import {
-  Award,
-  FileText,
-  Cloud,
-  Cpu,
-  ArrowLeft,
-  CheckCircle2,
-  AlertTriangle,
-  ShieldAlert,
-  BookOpen,
-  Star,
-  ArrowRight,
-  Layers,
-  Printer,
-  Settings,
-  Scale,
-  FileSpreadsheet,
-  FolderGit,
-  Activity,
-  ArrowLeftRight
-} from 'lucide-react';
+import { ARTICLES_LIST, CATEGORY_SECTIONS, getArchetypeMetadata, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from '@/lib/guides-data';
+import { Award, Cpu, ArrowLeft, AlertTriangle, ShieldAlert, BookOpen, ArrowRight, Layers, Printer, Settings, Scale, FileSpreadsheet, FolderGit, Activity } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const dynamicParams = true;
@@ -191,7 +164,7 @@ export function getTopToolsForCategory(category: string) {
 }
 
 // Dynamic diagnostic builder providing hardcore registry, module, and batch script configurations for Template A (Technical Autopsy)
-export function getAutopsyPayload(toolName: string, title: string, slug: string) {
+export function getAutopsyPayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
   
   if (titleLower.includes('error-15') || titleLower.includes('error -15') || titleLower.includes('flexlm-error-15')) {
@@ -291,8 +264,8 @@ echo [+] Process complete. Launch ${toolName} to calibrate system.`
 }
 
 // Technical Autopsy Report Renderer (Template A)
-export function renderTechnicalAutopsy(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const autopsy = getAutopsyPayload(tool.name, title, slug);
+export function renderTechnicalAutopsy(tool: typeof tools[number], title: string) {
+  const autopsy = getAutopsyPayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -434,7 +407,7 @@ export function renderTechnicalAutopsy(tool: typeof tools[number], title: string
 }
 
 // Dynamic performance payload builder targeting viewport and memory allocations for Template D (Geek Benchmark)
-export function getPerformancePayload(toolName: string, title: string, slug: string) {
+export function getPerformancePayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('gpu') || titleLower.includes('graphics') || titleLower.includes('accelerat') || titleLower.includes('card') || titleLower.includes('driver')) {
@@ -489,8 +462,8 @@ export function getPerformancePayload(toolName: string, title: string, slug: str
 }
 
 // Interactive technical benchmark renderer for Workstation Speed & Performance Category (Template D)
-export function renderPerformanceBenchmark(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const perf = getPerformancePayload(tool.name, title, slug);
+export function renderPerformanceBenchmark(tool: typeof tools[number], title: string) {
+  const perf = getPerformancePayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -633,7 +606,7 @@ export function renderPerformanceBenchmark(tool: typeof tools[number], title: st
 }
 
 // Dynamic plot standard builder providing monochrome CTB pen weights and vector PDF scales for Template C (Plot Directive)
-export function getPrintingPayload(toolName: string, title: string, slug: string) {
+export function getPrintingPayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('ctb') || titleLower.includes('pen') || titleLower.includes('table') || titleLower.includes('style') || titleLower.includes('weight')) {
@@ -688,8 +661,8 @@ export function getPrintingPayload(toolName: string, title: string, slug: string
 }
 
 // Interactive Technical Specification Directive Renderer for Plotting & Printing Standards Category (Template C)
-export function renderPrintingDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const plot = getPrintingPayload(tool.name, title, slug);
+export function renderPrintingDirective(tool: typeof tools[number], title: string) {
+  const plot = getPrintingPayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -828,7 +801,7 @@ export function renderPrintingDirective(tool: typeof tools[number], title: strin
 }
 
 // Dynamic migration standard builder providing LISP ActiveX wrappers and CUIX XML maps for Template D (Migration Evaluation)
-export function getMigrationPayload(toolName: string, title: string, slug: string) {
+export function getMigrationPayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('solidworks to autocad') || titleLower.includes('solidworks xt')) {
@@ -917,8 +890,8 @@ export function getMigrationPayload(toolName: string, title: string, slug: strin
 }
 
 // Interactive Technical Specification Directive Renderer for Software Migration & API Compatibility Category (Template D)
-export function renderMigrationDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const mig = getMigrationPayload(tool.name, title, slug);
+export function renderMigrationDirective(tool: typeof tools[number], title: string) {
+  const mig = getMigrationPayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1063,7 +1036,7 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
 }
 
 // Dynamic standards payload builder targeting BIM LOD constraints, AIA layers, and solid B-Rep geometric kernels (Template C)
-export function getStandardsPayload(toolName: string, title: string, slug: string) {
+export function getStandardsPayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('revit to archicad') || titleLower.includes('ifc4')) {
@@ -1135,8 +1108,8 @@ export function getStandardsPayload(toolName: string, title: string, slug: strin
 }
 
 // Interactive Technical Specification Directive Renderer for BIM & CAD Standards Category (Template C)
-export function renderStandardsDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const std = getStandardsPayload(tool.name, title, slug);
+export function renderStandardsDirective(tool: typeof tools[number], title: string) {
+  const std = getStandardsPayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1281,7 +1254,7 @@ export function renderStandardsDirective(tool: typeof tools[number], title: stri
 }
 
 // Dynamic manufacturing payload builder targeting sheet metal bend allowances, STL mesh faceting, and CNC feed rates (Template C)
-export function getManufacturingPayload(toolName: string, title: string, slug: string) {
+export function getManufacturingPayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('rhino') || titleLower.includes('nurbs to inventor') || titleLower.includes('sewing tolerances')) {
@@ -1353,8 +1326,8 @@ export function getManufacturingPayload(toolName: string, title: string, slug: s
 }
 
 // Interactive Technical Specification Directive Renderer for CAM & Manufacturing Category (Template C)
-export function renderManufacturingDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const man = getManufacturingPayload(tool.name, title, slug);
+export function renderManufacturingDirective(tool: typeof tools[number], title: string) {
+  const man = getManufacturingPayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1499,7 +1472,7 @@ export function renderManufacturingDirective(tool: typeof tools[number], title: 
 }
 
 // Dynamic deployment payload builder targeting silent installations, FLEXlm OPTIONS, and SAML SSO (Template B)
-export function getDeploymentPayload(toolName: string, title: string, slug: string) {
+export function getDeploymentPayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('license') || titleLower.includes('flexlm') || titleLower.includes('sso') || titleLower.includes('saml') || titleLower.includes('port') || titleLower.includes('options')) {
@@ -1536,8 +1509,8 @@ export function getDeploymentPayload(toolName: string, title: string, slug: stri
 }
 
 // Interactive Technical Specification Directive Renderer for IT Silent Deployment Category (Template B)
-export function renderDeploymentDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const dep = getDeploymentPayload(tool.name, title, slug);
+export function renderDeploymentDirective(tool: typeof tools[number], title: string) {
+  const dep = getDeploymentPayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1682,7 +1655,7 @@ export function renderDeploymentDirective(tool: typeof tools[number], title: str
 }
 
 // Dynamic procurement payload builder targeting Named-User EULA audits, academic watermark cleans, and SaaS vs Perpetual break-evens (Template B)
-export function getProcurementPayload(toolName: string, title: string, slug: string) {
+export function getProcurementPayload(toolName: string, title: string) {
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('cost') || titleLower.includes('budget') || titleLower.includes('subscription') || titleLower.includes('perpetual') || titleLower.includes('analysis')) {
@@ -1719,8 +1692,8 @@ export function getProcurementPayload(toolName: string, title: string, slug: str
 }
 
 // Interactive Technical Specification Directive Renderer for SAM & Procurement Compliance Category (Template B)
-export function renderProcurementDirective(tool: typeof tools[number], title: string, excerpt: string, slug: string) {
-  const pro = getProcurementPayload(tool.name, title, slug);
+export function renderProcurementDirective(tool: typeof tools[number], title: string) {
+  const pro = getProcurementPayload(tool.name, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -2317,12 +2290,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     notFound();
   }
 
-  const { tool, template, category, artIndex } = parsed;
+  const { tool, template, category } = parsed;
   const meta = getArchetypeMetadata(tool.category_id);
   const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
   const title = localized.title;
   const excerpt = localized.excerpt;
-  const keyword = localized.keyword;
 
   // Renders distinct detailed technical guides based on category sections
   const getDynamicSteps = (cat: string, name: string) => {
@@ -2628,21 +2600,21 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               </div>
 
               {category === 'troubleshooting' ? (
-                renderTechnicalAutopsy(tool, title, excerpt, slug)
+                renderTechnicalAutopsy(tool, title)
               ) : category === 'performance' ? (
-                renderPerformanceBenchmark(tool, title, excerpt, slug)
+                renderPerformanceBenchmark(tool, title)
               ) : category === 'printing' ? (
-                renderPrintingDirective(tool, title, excerpt, slug)
+                renderPrintingDirective(tool, title)
               ) : category === 'migration' ? (
-                renderMigrationDirective(tool, title, excerpt, slug)
+                renderMigrationDirective(tool, title)
               ) : category === 'standards' ? (
-                renderStandardsDirective(tool, title, excerpt, slug)
+                renderStandardsDirective(tool, title)
               ) : category === 'manufacturing' ? (
-                renderManufacturingDirective(tool, title, excerpt, slug)
+                renderManufacturingDirective(tool, title)
               ) : category === 'deployment' ? (
-                renderDeploymentDirective(tool, title, excerpt, slug)
+                renderDeploymentDirective(tool, title)
               ) : category === 'procurement' ? (
-                renderProcurementDirective(tool, title, excerpt, slug)
+                renderProcurementDirective(tool, title)
               ) : (
                 <>
                   {/* Technical Overview Container */}

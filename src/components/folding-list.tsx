@@ -42,7 +42,7 @@ export function FoldingList({
         {visibleList}
         
         {/* Render folded items, adding the hidden class when collapsed */}
-        {foldedList.map((item, index) => {
+        {foldedList.map((item) => {
           if (React.isValidElement(item)) {
             const element = item as React.ReactElement<{ className?: string }>;
             return React.cloneElement(element, {

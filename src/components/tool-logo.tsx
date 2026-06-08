@@ -106,6 +106,7 @@ export function ToolLogo({ slug, src, websiteUrl, name, className, priority }: T
         // dangerouslyAllowSVG). All logos are small (4-180KB), and the
         // explicit width/height on the container plus loading="lazy" gives us
         // CLS=0 and on-demand loading. Remote images are optimized via Next.js config.
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           ref={imgRef}
           key={current}

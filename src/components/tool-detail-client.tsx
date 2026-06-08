@@ -3,43 +3,12 @@
 import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ToolLogo } from "@/components/tool-logo";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { RelatedTools } from '@/components/related-tools';
-import {
-  CheckCircle2,
-  XCircle,
-  ExternalLink,
-  ChevronRight,
-  Globe,
-  Cpu,
-  Layers,
-  ShieldCheck,
-  CreditCard,
-  MessageSquare,
-  Zap,
-  ArrowRight,
-  HelpCircle,
-  BarChart3,
-  Search,
-
-  Scale,
-  Sparkles,
-  TrendingUp,
-  Plug,
-  Award,
-  FileText,
-  Calendar,
-  Tag,
-  Languages,
-  Cloud,
-  Code2,
-  Lock,
-  Star,
-  Info,
-} from "lucide-react";
+import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, ShieldCheck, CreditCard, MessageSquare, Zap, HelpCircle, BarChart3, Search, Scale, Sparkles, TrendingUp, Plug, Award, FileText, Calendar, Tag, Languages, Cloud, Code2, Lock, Star } from "lucide-react";
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { comparisonPairs } from "@/lib/seo-content";
@@ -251,6 +220,8 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+    // menuItems is deterministic per mount; the listener only needs to attach once.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const scrollTo = (id: string) => {
@@ -480,7 +451,6 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       <div className="flex flex-wrap gap-2.5">
                         {toolComparisons.slice(0, 3).map((pair, pIdx) => {
                           const vsName = pair.a.slug === tool.slug ? pair.b.name : pair.a.name;
-                          const vsSlug = pair.a.slug === tool.slug ? pair.b.slug : pair.a.slug;
                           const compareSlug = pair.pairSlug;
                           return (
                             <Link href={`/compare/${compareSlug}`} key={pIdx}>
@@ -1060,7 +1030,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     </div>
                   </div>
                   <p className="text-lg md:text-3xl lg:text-4xl text-blue-50 font-black leading-tight italic mb-8 md:mb-12">
-                    "{tool.expert_verdict}"
+                    &quot;{tool.expert_verdict}&quot;
                   </p>
                   <div className="flex flex-col md:flex-row md:items-center justify-between border-t border-white/5 pt-6 md:pt-12 gap-6 md:gap-8">
                     <div className="flex items-center gap-4">
