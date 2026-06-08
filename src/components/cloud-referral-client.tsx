@@ -36,6 +36,21 @@ export default function CloudReferralClient({
 }: CloudReferralProps) {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
+  const faqJsonLd = faqs.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
+
   const handleCopyLink = (url: string, index: number) => {
     navigator.clipboard.writeText(url);
     setCopiedIndex(index);
@@ -173,7 +188,7 @@ export default function CloudReferralClient({
                 <a
                   href={tool.officialUrl}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="sponsored nofollow noopener noreferrer"
                   className="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-2xl font-black text-xs text-white bg-slate-900 hover:bg-blue-600 active:scale-[0.98] transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-blue-500/20"
                 >
                   Visit Official Site →
@@ -214,6 +229,12 @@ export default function CloudReferralClient({
 
       {/* 5. Hardcore FAQ Section */}
       <div className="space-y-6">
+        {faqJsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        )}
         <h2 className="text-2xl font-black text-slate-900 tracking-tight">
           Technical FAQ
         </h2>

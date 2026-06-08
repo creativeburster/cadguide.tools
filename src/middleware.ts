@@ -1,9 +1,41 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// Cheatsheet/shortcut pages were consolidated under /toolbox. The legacy
+// /guides/* twins are 301'd to their /toolbox/* canonicals to retain link
+// equity and eliminate duplicate content.
+const GUIDES_TO_TOOLBOX_SLUGS = new Set([
+  'shortcuts',
+  'archicad-shortcuts-sheet',
+  'autocad-vs-gstarcad-shortcuts',
+  'autocad-vs-zwcad-shortcuts',
+  'bricscad-shortcuts-sheet',
+  'catia-shortcuts-sheet',
+  'creo-shortcuts-sheet',
+  'draftsight-shortcuts-sheet',
+  'freecad-shortcuts-sheet',
+  'fusion360-shortcuts-sheet',
+  'inventor-shortcuts-sheet',
+  'microstation-shortcuts-sheet',
+  'revit-shortcuts-sheet',
+  'rhino-shortcuts-sheet',
+  'sketchup-shortcuts-sheet',
+  'solidworks-shortcuts-sheet',
+  'vectorworks-shortcuts-sheet',
+]);
+
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const pathname = request.nextUrl.pathname;
+
+  // Legacy /guides cheatsheet pages → /toolbox canonicals (301)
+  if (pathname.startsWith('/guides/')) {
+    const slug = pathname.slice('/guides/'.length);
+    if (GUIDES_TO_TOOLBOX_SLUGS.has(slug)) {
+      url.pathname = `/toolbox/${slug}`;
+      return NextResponse.redirect(url, 301);
+    }
+  }
 
   // Root-level legacy pricing paths redirect to their modern canonicals
   if (pathname === '/forever') {
@@ -42,6 +74,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    '/guides/:path*',
     '/licensing',
     '/licensing/:path*',
     '/pricing/free',

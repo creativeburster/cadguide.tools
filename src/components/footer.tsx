@@ -78,7 +78,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/toolbox/dwg-version-checker" className="hover:text-blue-400 transition-colors">DWG Checker</Link></li>
-              <li><Link href="/guides/shortcuts" className="hover:text-blue-400 transition-colors">CAD Shortcuts</Link></li>
+              <li><Link href="/toolbox/shortcuts" className="hover:text-blue-400 transition-colors">CAD Shortcuts</Link></li>
               <li><Link href="/toolbox/k-factor-calculator" className="hover:text-blue-400 transition-colors">K-Factor Calc</Link></li>
               <li><Link href="/toolbox/flexlm-concurrent-seats-queue" className="hover:text-blue-400 transition-colors">FLEXlm Calc</Link></li>
               <li><Link href="/toolbox/3d-printing-chordal-deviation" className="hover:text-blue-400 transition-colors">Mesh Optimizer</Link></li>

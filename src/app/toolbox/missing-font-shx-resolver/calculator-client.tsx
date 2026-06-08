@@ -13,6 +13,29 @@ interface FontMapping {
   fmpEntry: string; // Mapping entry for acad.fmp
 }
 
+const SHX_FAQS: { question: string; answer: string }[] = [
+  {
+    question: 'What is the difference between a question mark (?) and garbled text?',
+    answer:
+      'A question mark (?) means the CAD engine cannot find the SHX font specified in your Fonts folder, or its mapping rules cannot match special symbols. Garbled text means the code page (Codepage) or font style (Style) declared inside the drawing conflicts during parsing — for example using a Western font to force-parse a double-byte Chinese big font.',
+  },
+  {
+    question: 'Can I download font packages online and import them?',
+    answer:
+      'It is strongly discouraged to download multi-gigabyte "full CAD font packages" from the internet. They contain many duplicate, damaged and redundant fonts that can crash CAD startup speed, break coordinate snapping, and may even bundle macro trojans. Configuring targeted FONTALT alternate mappings on demand is the standard enterprise IT practice.',
+  },
+  {
+    question: 'How do I configure Big Font and a Western regular font in CAD?',
+    answer:
+      'The AutoCAD text style (STYLE) allows a combined mount: the left "SHX font" box handles English letters and numbers (e.g. simplex.shx); after checking "Use Big Font", the right "Big Font" box handles CJK characters (e.g. gbcbig.shx). Drawings only restore correctly when both are configured.',
+  },
+  {
+    question: 'Why can Tianzheng or Structure Explorer auto-detect the fonts?',
+    answer:
+      'These customized CAD secondary-development kits add their dedicated Fonts folders to AutoCAD\'s Support File Search Path automatically. To view such drawings in vanilla CAD, copy and add their Fonts paths to your local CAD options search path.',
+  },
+];
+
 const FONTS_REGISTRY: FontMapping[] = [
   {
     name: 'HZTXT',
@@ -399,6 +422,20 @@ export default function MissingFontResolverClient() {
 
       {/* FAQ Section */}
       <div className="space-y-6">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: SHX_FAQS.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+              })),
+            }),
+          }}
+        />
         <h3 className="text-2xl font-black text-slate-900">Troubleshooting missing fonts and garbled characters (SHX Font FAQ)</h3>
         <div className="grid md:grid-cols-2 gap-6 print:grid-cols-1">
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
