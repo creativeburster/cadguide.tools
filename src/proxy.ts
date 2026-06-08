@@ -24,7 +24,7 @@ const GUIDES_TO_TOOLBOX_SLUGS = new Set([
   'vectorworks-shortcuts-sheet',
 ]);
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   const pathname = request.nextUrl.pathname;
 
