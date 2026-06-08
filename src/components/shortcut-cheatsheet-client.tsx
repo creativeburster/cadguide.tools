@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Printer, Download, Sparkles, Info, Check } from 'lucide-react';
+import { Search, Printer, Download, Sparkles, Check } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 export interface ShortcutItem {
@@ -33,7 +33,6 @@ interface ShortcutCheatsheetClientProps {
 
 export default function ShortcutCheatsheetClient({
   title,
-  subtitle,
   categories,
   shortcuts,
   tips,

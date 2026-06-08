@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, Layers, Percent } from 'lucide-react';
+import { Info, Check, AlertTriangle, Layers, Percent } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 const SPRING_MATERIALS = [

@@ -2,18 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  Sparkles,
-  Download,
-  CheckCircle,
-  HelpCircle,
-  FileCode,
-  Grid,
-  Info,
-  RefreshCw,
-  Sliders,
-  Trash2
-} from 'lucide-react';
+import { Sparkles, Download, FileCode, Info, RefreshCw } from 'lucide-react';
 
 interface ScaleItem {
   name: string;
@@ -42,7 +31,6 @@ const INITIAL_SCALES: ScaleItem[] = [
 
 export default function CadScaleListResetClient() {
   const [scales, setScales] = useState<ScaleItem[]>(INITIAL_SCALES);
-  const [activeTab, setActiveTab] = useState<'lisp' | 'guide'>('lisp');
   const [cleanStatus, setCleanStatus] = useState<'idle' | 'cleaning' | 'done'>('idle');
 
   // Toggle selection
@@ -335,7 +323,7 @@ export default function CadScaleListResetClient() {
               2. Dictionary cleaning command with -SCALELISTEDIT
             </h4>
             <p>
-              AutoCAD Starting from the 2008 version, a file called <b>`ACAD_SCALELIST`</b> Exclusive Named Object Dictionary. Regular cleanup commands cannot delete this system-level container dictionary.. So in AutoLISP, We use the underlying forced removal command <b>`(dictremove (namedobjdict) "ACAD_SCALELIST")`</b> to force logout, Force CAD to release all invalid references, Then call `-SCALELISTEDIT` to rebuild. 
+              AutoCAD Starting from the 2008 version, a file called <b>`ACAD_SCALELIST`</b> Exclusive Named Object Dictionary. Regular cleanup commands cannot delete this system-level container dictionary.. So in AutoLISP, We use the underlying forced removal command <b>`(dictremove (namedobjdict) &quot;ACAD_SCALELIST&quot;)`</b> to force logout, Force CAD to release all invalid references, Then call `-SCALELISTEDIT` to rebuild. 
             </p>
           </div>
           <div>

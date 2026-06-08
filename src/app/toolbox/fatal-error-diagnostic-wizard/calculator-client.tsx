@@ -2,21 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  HelpCircle,
-  Info,
-  Copy,
-  Check,
-  AlertTriangle,
-  CheckCircle,
-  Search,
-  Cpu,
-  ShieldAlert,
-  Terminal,
-  Activity,
-  ArrowRight,
-  Settings2
-} from 'lucide-react';
+import { Copy, Check, Search, ShieldAlert, ArrowRight, Settings2 } from 'lucide-react';
 
 interface ErrorPreset {
   address: string;

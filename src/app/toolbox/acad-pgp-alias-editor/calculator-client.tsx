@@ -2,20 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  Upload,
-  Download,
-  AlertTriangle,
-  Check,
-  Plus,
-  Trash2,
-  Terminal,
-  HelpCircle,
-  Sparkles,
-  Search,
-  Info,
-  RefreshCw
-} from 'lucide-react';
+import { Upload, Download, AlertTriangle, Check, Plus, Trash2, Terminal, Sparkles, Search, RefreshCw } from 'lucide-react';
 
 interface AliasItem {
   alias: string;
@@ -481,7 +468,7 @@ export default function AcadPgpEditorClient() {
                 <div>
                   <span className="text-xs font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">GstarCAD Official</span>
                   <h4 className="font-bold text-slate-800 text-sm mt-2">Haochen CAD official default shortcut key presets</h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">Integrated Haochen's unique instructions (such as workspace switching, shortcut alias for extended commands, etc.). </p>
+                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">Integrated Haochen&apos;s unique instructions (such as workspace switching, shortcut alias for extended commands, etc.). </p>
                 </div>
                 <button
                   onClick={() => { loadPreset('gstarcad'); setActiveTab('editor'); }}
@@ -629,7 +616,7 @@ export default function AcadPgpEditorClient() {
               1. Directly overload the REINIT mechanism from the command line
             </h4>
             <p>
-              After modifying and replacing `acad.pgp`, You<b>don't need it at all</b>Close and restart the CAD software. Just use AutoCAD / Haochen CAD Enter <b>`REINIT`</b> on the command line, and in the pop-up"Check "Reinitialize" in the small dialog box. <b>"PGP File"</b> option and OK, The software will recompile the shortcut key index in the memory within milliseconds, making the modifications effective immediately.. 
+              After modifying and replacing `acad.pgp`, You<b>don&apos;t need it at all</b>Close and restart the CAD software. Just use AutoCAD / Haochen CAD Enter <b>`REINIT`</b> on the command line, and in the pop-up&quot;Check &quot;Reinitialize&quot; in the small dialog box. <b>&quot;PGP File&quot;</b> option and OK, The software will recompile the shortcut key index in the memory within milliseconds, making the modifications effective immediately.. 
             </p>
           </div>
           <div>
@@ -638,7 +625,7 @@ export default function AcadPgpEditorClient() {
               2. Alias conflicts and priority override rules
             </h4>
             <p>
-              If the same alias is defined multiple times in a PGP file (For example, the previous line defines `C, *CIRCLE`, and the next line defines `C, *COPY`) , CAD and will not crash. Its internal read logic follows <b>"Post-override-precede"</b> rule. In order to ensure that your drawing cleaning and command line experience is refreshing enough and free of garbage, it is recommended to use conflict checking to eliminate duplicate and redundant items.. 
+              If the same alias is defined multiple times in a PGP file (For example, the previous line defines `C, *CIRCLE`, and the next line defines `C, *COPY`) , CAD and will not crash. Its internal read logic follows <b>&quot;Post-override-precede&quot;</b> rule. In order to ensure that your drawing cleaning and command line experience is refreshing enough and free of garbage, it is recommended to use conflict checking to eliminate duplicate and redundant items.. 
             </p>
           </div>
           <div>

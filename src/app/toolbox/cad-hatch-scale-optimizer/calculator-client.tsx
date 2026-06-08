@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, RefreshCw, Layers } from 'lucide-react';
+import { Info, Check, AlertTriangle, Layers } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 const DRAWING_UNITS = [
@@ -51,13 +51,6 @@ export default function HatchScaleClient() {
   const status = useMemo(() => {
     const ratio = hatchScale / recommendation.optimal;
     
-    // Line count approximation for Canvas rendering
-    let densityScore = 1 / (hatchScale || 0.001);
-    // If unit is in meters, relative scale is shifted
-    if (currentUnit.key === 'm') {
-      densityScore = densityScore / 1000;
-    }
-
     if (ratio < 0.08) {
       return {
         level: 'danger',
@@ -87,7 +80,7 @@ export default function HatchScaleClient() {
         desc: 'The current proportion conforms to the printing proportion of the drawing, and the line width and rendering performance of the drawing are optimal.. '
       };
     }
-  }, [hatchScale, recommendation, currentUnit]);
+  }, [hatchScale, recommendation]);
 
   // Draw pattern inside HTML5 canvas
   useEffect(() => {

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, Download, HelpCircle, Layers, Copy, Check, FileText } from 'lucide-react';
+import { Info, HelpCircle, Layers, Copy, Check } from 'lucide-react';
 
 interface AciColor {
   index: number;
@@ -532,15 +532,15 @@ export default function ColorMatchboxClient() {
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Color translation log</h4>
             <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
-                <span className="text-slate-400">// XYZ D65 reference conversion</span>
+                <span className="text-slate-400">{'// XYZ D65 reference conversion'}</span>
                 <div>X = {rgbR * 0.4124 + rgbG * 0.3576 + rgbB * 0.1805}</div>
                 <div>Y = {rgbR * 0.2126 + rgbG * 0.7152 + rgbB * 0.0722}</div>
               </div>
               <div className="pt-2 border-t border-slate-200/50">
-                <span className="text-slate-400">// Matched CTB stylesheet tip</span>
+                <span className="text-slate-400">{'// Matched CTB stylesheet tip'}</span>
                 <div>To avoid overriding global drawing styles:</div>
                 <div className="text-slate-800 font-mono font-bold text-[11px]">Specify layer color index: {bestMatch?.index}</div>
-                <div className="text-slate-400 font-mono text-[9px] pt-1">// Set Layer Color in Command line: -LAYER C {bestMatch?.index} [layerName]</div>
+                <div className="text-slate-400 font-mono text-[9px] pt-1">{'// Set Layer Color in Command line: -LAYER C {bestMatch?.index} [layerName]'}</div>
               </div>
             </div>
           </div>

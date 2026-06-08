@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { filterToolsByFeature, BEST_OF_LIMIT } from '@/lib/seo-content';
+import { filterToolsByFeature } from '@/lib/seo-content';
 import { featureCategories } from '@/lib/data/featureCategories';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import type { Tool } from '@/lib/data';

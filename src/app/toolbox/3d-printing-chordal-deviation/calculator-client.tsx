@@ -124,7 +124,7 @@ export default function ChordalDeviationClient() {
       pts.push(`${x.toFixed(2)},${y.toFixed(2)}`);
     }
     return pts.join(' ');
-  }, [calculations.N]);
+  }, [calculations.N, svgCenter, svgRadius]);
 
   // Sagitta indicator line (show deviation at top of circle)
   const sagittaVisualScale = Math.min(1, calculations.sagitta / calculations.R);

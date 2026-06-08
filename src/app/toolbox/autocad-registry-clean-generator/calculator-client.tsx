@@ -2,21 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  HelpCircle,
-  Info,
-  Copy,
-  Check,
-  AlertTriangle,
-  CheckCircle,
-  FileCode,
-  Download,
-  Terminal,
-  Activity,
-  ArrowRight,
-  ShieldCheck,
-  Settings
-} from 'lucide-react';
+import { Copy, Check, FileCode, Download, ShieldCheck, Settings } from 'lucide-react';
 
 const CAD_VERSIONS = [
   { label: 'AutoCAD 2027', regKey: 'R25.2', folderKey: 'AutoCAD 2027' },
@@ -194,7 +180,7 @@ pause`;
               <text y="24" fill="#38bdf8">C:\Users\Administrator&gt; reset_autocad.bat</text>
               
               <text y="42" fill="#e2e8f0">Backing up and deleting {activeVer.label} registry configuration...</text>
-              <text y="54" fill="#fbbf24">reg export "HKCU\\Software\\Autodesk\\AutoCAD\\{activeVer.regKey}" backup.reg</text>
+              <text y="54" fill="#fbbf24">reg export &quot;HKCU\\Software\\Autodesk\\AutoCAD\\{activeVer.regKey}&quot; backup.reg</text>
               
               {cleanAppData && (
                 <text y="68" fill="#10b981">✓ Deleted: AppData\\Autodesk\\{activeVer.folderKey} cache folder</text>
@@ -294,7 +280,7 @@ pause`;
                 />
                 <div className="text-xs">
                   <span className="font-bold text-red-500 block">FLEXnet License activation cache (reset license)</span>
-                  <span className="text-slate-400">When encountering "License verification failed"If reinstallation still prompts an activation error, check the box and clear the local license lock.. </span>
+                  <span className="text-slate-400">When encountering &quot;License verification failed&quot;If reinstallation still prompts an activation error, check the box and clear the local license lock.. </span>
                 </div>
               </label>
 
@@ -360,7 +346,7 @@ pause`;
                   <p className="font-black text-slate-800 mb-1">Use safety guidelines: </p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-slate-600 font-medium">
                     <li><b>Safe backup first</b>: This script before starting the cleanup, A folder named <span className="font-mono bg-amber-100 px-1 rounded font-black">CAD_Registry_Backup</span> will be generated on your desktop, Export the old registry keys for backup. If you need to restore the configuration, Just double-click the `.reg` file in the folder and re-write it.. </li>
-                    <li>If you checked<b>"System Global HKLM"</b>or the <b>"FLEXnet"</b> option, When running, you must<b>right click {'->'} Run as administrator"</b>the `.bat` file, otherwise Windows Firewall and registry defense mechanisms will reject deletion requests and cause failure. </li>
+                    <li>If you checked<b>&quot;System Global HKLM&quot;</b>or the <b>&quot;FLEXnet&quot;</b> option, When running, you must<b>right click {'->'} Run as administrator&quot;</b>the `.bat` file, otherwise Windows Firewall and registry defense mechanisms will reject deletion requests and cause failure. </li>
                     <li>Please make sure you have completely closed the AutoCAD software before running it., Otherwise, the registry key being occupied may be damaged. </li>
                   </ul>
                 </div>

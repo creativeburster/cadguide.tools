@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { HelpCircle, Info, Copy, Check, Shield, Activity, Sliders, Wind } from 'lucide-react';
+import { Info, Copy, Check, Activity, Sliders, Wind } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 const ROUGHNESS_PRESETS = [
@@ -14,7 +14,7 @@ const ROUGHNESS_PRESETS = [
 export default function DuctSizeClient() {
   const [shape, setShape] = useState<'round' | 'rectangular'>('round');
   const [flowRate, setFlowRate] = useState(1500); // m³/h
-  const [velocityLimit, setVelocityLimit] = useState(6.0); // m/s (Limit or Target)
+  const [velocityLimit] = useState(6.0); // m/s (Limit or Target)
   
   // Rectangular dimensions
   const [width, setWidth] = useState(400); // mm

@@ -329,7 +329,7 @@ function HomeBody() {
       <section className="bg-white text-slate-900 py-24 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-4 tracking-tight">Independent & Objective Analysis</h2>
-          <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don't accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
+          <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don&apos;t accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
               <div className="text-blue-600 text-5xl font-black mb-2">235+</div>
@@ -407,9 +407,9 @@ function HomeBody() {
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-700 rounded-full blur-3xl opacity-50 -ml-32 -mb-32"></div>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6">Can't Find Your Preferred Software?</h2>
+          <h2 className="text-4xl font-bold mb-6">Can&apos;t Find Your Preferred Software?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Our directory is growing every day. If you want us to review a specific tool, or if you're a vendor, let us know.
+            Our directory is growing every day. If you want us to review a specific tool, or if you&apos;re a vendor, let us know.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-600 hover:text-white font-bold px-10 h-14 text-lg rounded-2xl shadow-xl shadow-blue-900/20 transition-all">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { HelpCircle, CheckCircle2, AlertTriangle, ChevronDown, Cpu, Zap, Layers, Network, Database, Shield, LayoutGrid, FileText } from 'lucide-react';
+import { HelpCircle, ChevronDown, Cpu, Zap, Layers, Network, Database, Shield, LayoutGrid, FileText } from 'lucide-react';
 
 interface Tool {
   name: string;
@@ -32,7 +32,7 @@ interface CompareWidgetProps {
 interface MetricItem {
   id: string;
   name: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   description: string;
   aDetail: string;
   bDetail: string;
@@ -394,7 +394,7 @@ export function CompareWidget({ a, b, archetype }: CompareWidgetProps) {
 }
 
 // Simple local subcomponent to prevent import problems
-function CodeIcon(props: any) {
+function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

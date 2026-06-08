@@ -2,26 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  HelpCircle,
-  Info,
-  Copy,
-  Check,
-  AlertTriangle,
-  CheckCircle2,
-  Terminal,
-  Activity,
-  ArrowRight,
-  RefreshCw,
-  Server,
-  Cpu,
-  ShieldAlert,
-  Network,
-  RotateCcw,
-  Layers,
-  Lock,
-  Code
-} from 'lucide-react';
+import { Info, Copy, Check, AlertTriangle, CheckCircle2, Terminal, Activity, ArrowRight, Server, Cpu, ShieldAlert, Network, RotateCcw, Layers, Lock, Code } from 'lucide-react';
 
 // Steps Definitions
 const DIAGNOSTIC_STEPS = [
@@ -47,7 +28,7 @@ export default function FlexlmDebuggerClient() {
   const [pingStatus, setPingStatus] = useState<'untested' | 'success' | 'unknown_host' | 'timeout'>('untested');
   const [port27000Status, setPort27000Status] = useState<'untested' | 'open' | 'closed'>('untested');
   const [portVendorStatus, setPortVendorStatus] = useState<'untested' | 'open' | 'closed'>('untested');
-  const [envStatus, setEnvStatus] = useState<'untested' | 'correct' | 'missing' | 'wrong_port'>('untested');
+  const [, setEnvStatus] = useState<'untested' | 'correct' | 'missing' | 'wrong_port'>('untested');
 
   // Copy helpers
   const [copiedText, setCopiedText] = useState<string | null>(null);
@@ -537,7 +518,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                     </div>
                     <h4 className="text-slate-800 font-bold text-base">Client connection error (terminal computer)</h4>
                     <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                      Client CAD stuck on startup"Checking license" interface, Final popup: <br />
+                      Client CAD stuck on startup&quot;Checking license&quot; interface, Final popup: <br />
                       <span className="font-mono text-red-500 font-black">Error -15: Cannot connect to license server</span><br />
                       Or it is detected that the authorization has expired and hung up. 
                     </p>
@@ -628,7 +609,7 @@ ${psNslookupCommand}`}
                           : 'border-slate-100 bg-slate-50/20 text-slate-700 hover:bg-slate-100/50'
                       }`}
                     >
-                      ✗ Prompt "Ping request could not find host..."
+                      ✗ Prompt &quot;Ping request could not find host...&quot;
                     </button>
                     <button
                       onClick={() => setPingStatus('timeout')}
@@ -670,7 +651,7 @@ ${psNslookupCommand}`}
                       <ul className="list-disc list-inside mt-2 space-y-1">
                         <li>If it is a wireless network, please check whether it is on the same intranet of the company/LAN segment. </li>
                         <li>When accessing via VPN, Please verify that the VPN connection is not dropped, And whether the routing policy includes the server network segment. </li>
-                        <li>If it is determined that the physical path is not broken and is only disabled Ping, You can directly click on<b>"Ping is smooth and IP Correct"</b>forcibly jump to the next test TCP Port reachability. </li>
+                        <li>If it is determined that the physical path is not broken and is only disabled Ping, You can directly click on<b>&quot;Ping is smooth and IP Correct&quot;</b>forcibly jump to the next test TCP Port reachability. </li>
                       </ul>
                     </div>
                   </div>
@@ -790,7 +771,7 @@ ${psPortTestVendor}`}
                       <ul className="list-decimal list-inside space-y-2 mt-2">
                         <li>
                           <b>Check whether the lmgrd service on the server side is started successfully</b>: <br />
-                          If the service has not been started, the status of all ports is False. You should log in to the server and check the logs in LMTOOLS, Confirm that the service status is "Server Started". 
+                          If the service has not been started, the status of all ports is False. You should log in to the server and check the logs in LMTOOLS, Confirm that the service status is &quot;Server Started&quot;. 
                         </li>
                         <li>
                           <b>Open ports on the server firewall (IT staff perform) </b>: <br />
@@ -807,7 +788,7 @@ ${psPortTestVendor}`}
                         </li>
                         <li>
                           <b>Lock Vendor Port</b>: <br />
-                          If lmgrd port (27000) Passed, and Vendor The port is blocked, usually because there is no LIC The Vendor port is locked in the file, This causes the port to drift randomly every time the service is restarted. Please refer to this tool.<b>"Step Five"</b>Lock the Port. 
+                          If lmgrd port (27000) Passed, and Vendor The port is blocked, usually because there is no LIC The Vendor port is locked in the file, This causes the port to drift randomly every time the service is restarted. Please refer to this tool.<b>&quot;Step Five&quot;</b>Lock the Port. 
                         </li>
                       </ul>
                     </div>
@@ -857,7 +838,7 @@ ${psPortTestVendor}`}
                   <div className="max-h-[140px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-[10px]">
                     <pre className="whitespace-pre">{psClientDiagnosticScript}</pre>
                   </div>
-                  <p className="text-[10px] text-slate-400 italic">Usage: Copy the entire code, Search on the client computer and enter as "administrator""Open PowerShell, paste and press Enter to execute. You can see all misconfigured environment variables and cache entries at a glance. </p>
+                  <p className="text-[10px] text-slate-400 italic">Usage: Copy the entire code, Search on the client computer and enter as &quot;administrator&quot;&quot;Open PowerShell, paste and press Enter to execute. You can see all misconfigured environment variables and cache entries at a glance. </p>
                 </div>
 
                 {/* Write recommended environment variables */}
@@ -937,7 +918,7 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
                   <div className="text-xs leading-relaxed text-slate-600 border-l-2 border-blue-500 pl-3">
                     <p className="font-bold text-slate-800 mb-1">Implementation steps: </p>
                     <ol className="list-decimal list-inside space-y-1 text-slate-600">
-                      <li>Stop the server's FLEXlm / LMTOOLS licensing service. </li>
+                      <li>Stop the server&apos;s FLEXlm / LMTOOLS licensing service. </li>
                       <li>Edit and modify the license file and replace the first two lines with the above code (Be careful to keep the hostname and MAC address in it matching your old configuration, ANY Can be replaced with real MAC address) . </li>
                       <li>In the license server firewall inbound rules, also allow TCP <span className="font-bold text-blue-600 font-mono">{lmgrdPort}</span> With <span className="font-bold text-blue-600 font-mono">{vendorPort}</span> two ports. </li>
                       <li>Reload configuration file in LMTOOLS (Re-read License File) and start the service. </li>
@@ -991,7 +972,7 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
             <div>
               <h3 className="font-bold text-slate-800 text-base mb-1.5">Why hostname/DNS resolution is the first step in troubleshooting? </h3>
               <p>
-                CAD The client starts up and queries environment variables such as `ADSKFLEX_LICENSE_FILE=@my-server`) When, first call the operating system's DNS Parse the module to obtain the intranet of `my-server` IP. If WINS/DNS services are not deployed on the network, Or the client cannot find the corresponding record in the host Hosts, The connection will be interrupted directly during the domain name resolution stage. If such a failure occurs, Using IP directly is often the fastest temporary alternative. 
+                CAD The client starts up and queries environment variables such as `ADSKFLEX_LICENSE_FILE=@my-server`) When, first call the operating system&apos;s DNS Parse the module to obtain the intranet of `my-server` IP. If WINS/DNS services are not deployed on the network, Or the client cannot find the corresponding record in the host Hosts, The connection will be interrupted directly during the domain name resolution stage. If such a failure occurs, Using IP directly is often the fastest temporary alternative. 
               </p>
             </div>
           </div>

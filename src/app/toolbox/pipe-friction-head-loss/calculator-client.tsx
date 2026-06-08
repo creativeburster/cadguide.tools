@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { HelpCircle, Info, Copy, Check, Shield, Activity, Sliders, Droplets } from 'lucide-react';
+import { Info, Check, Activity, Sliders, Droplets } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 const PIPE_MATERIALS = [

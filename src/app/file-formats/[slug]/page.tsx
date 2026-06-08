@@ -34,7 +34,6 @@ interface FormatStyle {
 function getStyleForFormat(slug: string): FormatStyle {
   const vector = ['dwg', 'dxf', 'pdf', 'dgn', 'dwf', 'exb', 'slddrw', 'idw'];
   const solid = ['step', 'iges', 'jt', '3dm', 'sldprt', 'ipt', 'sat', 'vda', 'catpart', 'nxprt', 'creoprt', 'f3d'];
-  const mesh = ['stl', 'obj', 'fbx', '3mf', 'usd', 'cgr'];
   const bim = ['ifc', 'rvt'];
   const machine = ['gcode'];
   

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, Download, HelpCircle, Layers, RefreshCw, FileText } from 'lucide-react';
+import { Info, Download, HelpCircle, Layers, FileText } from 'lucide-react';
 
 interface Preset {
   name: string;
@@ -203,7 +203,6 @@ export default function KFactorCalculatorClient() {
     };
 
     // Apex intersection coords
-    const osVal = calcResults.os * scaleFactor;
     const apexInner = { x: cx + R * Math.tan((alpha / 2) * (Math.PI / 180)), y: cy + R };
     const apexOuter = { x: cx + (R + T) * Math.tan((alpha / 2) * (Math.PI / 180)), y: cy + R + T };
 
@@ -712,20 +711,20 @@ export default function KFactorCalculatorClient() {
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Real-Time Math Log</h4>
             <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
-                <span className="text-slate-400">// Conversion to radians</span>
+                <span className="text-slate-400">{'// Conversion to radians'}</span>
                 <div>{angle}° = {(angle * Math.PI / 180).toFixed(4)} rad</div>
               </div>
               <div>
-                <span className="text-slate-400">// Bend Allowance Calculation</span>
+                <span className="text-slate-400">{'// Bend Allowance Calculation'}</span>
                 <div>BA = {(angle * Math.PI / 180).toFixed(4)} * ({radius.toFixed(1)} + {activeK.toFixed(2)} * {thickness.toFixed(1)}) = <span className="text-blue-600 font-bold">{calcResults.ba.toFixed(3)} mm</span></div>
               </div>
               <div>
-                <span className="text-slate-400">// Setback & Deduction</span>
+                <span className="text-slate-400">{'// Setback & Deduction'}</span>
                 <div>OS = tan({(angle / 2)}°) * ({radius.toFixed(1)} + {thickness.toFixed(1)}) = <span className="text-slate-900 font-bold">{calcResults.os.toFixed(3)} mm</span></div>
                 <div>BD = 2 * {calcResults.os.toFixed(3)} - {calcResults.ba.toFixed(3)} = <span className="text-rose-600 font-bold">{calcResults.bd.toFixed(3)} mm</span></div>
               </div>
               <div className="pt-2 border-t border-slate-200/50">
-                <span className="text-slate-400">// Flat Pattern Output</span>
+                <span className="text-slate-400">{'// Flat Pattern Output'}</span>
                 <div>L = {flange1} + {flange2} - {calcResults.bd.toFixed(3)} = <span className="text-emerald-600 font-bold">{calcResults.flatLength.toFixed(3)} mm</span></div>
               </div>
             </div>

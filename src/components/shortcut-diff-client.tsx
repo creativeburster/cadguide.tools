@@ -386,7 +386,7 @@ export default function ShortcutDiffClient({
               2. Seamless PGP Settings Import
             </h4>
             <p>
-              If you have heavily customized `acad.pgp` files, you can copy-paste your aliases directly into the alternative CAD application via "Tools ➔ Customize ➔ Edit Aliases (PGP)" or load custom PGPs dynamically.
+              If you have heavily customized `acad.pgp` files, you can copy-paste your aliases directly into the alternative CAD application via &quot;Tools ➔ Customize ➔ Edit Aliases (PGP)&quot; or load custom PGPs dynamically.
             </p>
           </div>
           <div>
@@ -395,7 +395,7 @@ export default function ShortcutDiffClient({
               3. Minor Platform Deviations
             </h4>
             <p>
-              Some commands have minor platform differences (e.g. workspace setups or custom selection features). Pay attention to rows marked as "Different" to smoothly adapt your workflow.
+              Some commands have minor platform differences (e.g. workspace setups or custom selection features). Pay attention to rows marked as &quot;Different&quot; to smoothly adapt your workflow.
             </p>
           </div>
         </div>

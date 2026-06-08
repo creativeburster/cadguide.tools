@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { tools } from '@/lib/data';
+import { tools, Tool } from '@/lib/data';
 import { PRICING_PAGES, type PricingPageContent } from '@/lib/pricing-licensing-content';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL, softwareApplicationLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
@@ -16,7 +16,6 @@ export function generateStaticParams() {
     .map((slug) => ({ slug }));
 }
 
-const YEAR = 2026;
 
 // Style definitions for different pricing slugs
 interface PricingStyle {
@@ -113,7 +112,7 @@ function getFilteredTools(slug: string) {
   return filtered.slice(0, 10);
 }
 
-function pricingLabel(t: any): string {
+function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
@@ -135,7 +134,7 @@ export async function generateMetadata(
   });
 }
 
-function itemListLd(p: PricingPageContent, list: any[]) {
+function itemListLd(p: PricingPageContent, list: Tool[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -280,7 +279,7 @@ function AcademicWatermarkAdvisoryWidget() {
 // --- ASYMMETRICAL WIDGETS ---
 
 // Widget 1: Free & Freemium Licensing Compliance Warning
-function LicensingComplianceWidget({ slug }: { slug: string }) {
+function LicensingComplianceWidget() {
   return (
     <div className="my-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-teal-950 to-emerald-950 text-white border border-teal-900/50 shadow-xl relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.1),transparent)] pointer-events-none" />
@@ -469,7 +468,7 @@ function OpenSourceKernelWidget() {
 }
 
 // Custom side-by-side comparative column table for pricing list
-function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageContent; list: any[] }) {
+function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageContent; list: Tool[] }) {
   const sampleData = list.slice(0, 4);
   if (sampleData.length === 0) return null;
 
@@ -664,7 +663,7 @@ export default async function PricingDirectoryPage(
           {/* Flow A: Free & Freemium Tiers (Advisory Alert at the top) */}
           {(slug === 'free' || slug === 'freemium') && (
             <>
-              <LicensingComplianceWidget slug={slug} />
+              <LicensingComplianceWidget />
               <DynamicPricingMatrix pageContent={p} list={list} />
             </>
           )}

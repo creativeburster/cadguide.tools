@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, Download, HelpCircle, Layers, Copy, Check, FileText } from 'lucide-react';
+import { HelpCircle, Layers, FileText } from 'lucide-react';
 
 interface ThreadDef {
   id: string;
@@ -661,13 +661,13 @@ export default function ThreadDrillCalculatorClient() {
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Machinists Formulas</h4>
             <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
-                <span className="text-slate-400">// Metric Thread Formula</span>
+                <span className="text-slate-400">{'// Metric Thread Formula'}</span>
                 <div>Drill = D - (Engagement / 76.98) * P</div>
-                <div className="text-slate-400 pt-1">// Imperial UNC/UNF Formula</div>
+                <div className="text-slate-400 pt-1">{'// Imperial UNC/UNF Formula'}</div>
                 <div>Drill = D - (Engagement / (76.98 * TPI))</div>
               </div>
               <div className="pt-2 border-t border-slate-200/50">
-                <span className="text-slate-400">// Clearance Hole Standard</span>
+                <span className="text-slate-400">{'// Clearance Hole Standard'}</span>
                 <div>Close clearance = Nominal * 1.04</div>
                 <div>Medium clearance = Nominal * 1.08</div>
               </div>

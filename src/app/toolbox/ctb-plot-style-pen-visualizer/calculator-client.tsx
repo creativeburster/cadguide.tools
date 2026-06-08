@@ -2,10 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { 
-  Info, Download, HelpCircle, Layers, Copy, Check, FileText, 
-  Settings, Sliders, Eye, RefreshCw, Grid, CheckSquare, XSquare, Plus
-} from 'lucide-react';
+import { Info, Download, HelpCircle, Copy, Check, FileText, Settings, Sliders, Eye, Grid, CheckSquare, XSquare, Plus } from 'lucide-react';
 
 interface AciColor {
   index: number;
@@ -228,6 +225,8 @@ export default function CtbPlotStyleClient() {
 
   // Run initial loading
   useEffect(() => {
+    // Initializes derived config from the selected preset.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     initPreset(selectedPreset);
   }, [selectedPreset]);
 
@@ -325,7 +324,7 @@ export default function CtbPlotStyleClient() {
   }, [selectedIndices, configs]);
 
   // Bulk update properties for all selected indices
-  const updateSelectedConfig = (key: keyof PlotStyleConfig, value: any) => {
+  const updateSelectedConfig = <K extends keyof PlotStyleConfig>(key: K, value: PlotStyleConfig[K]) => {
     setConfigs((prev) => {
       const updated = { ...prev };
       selectedIndices.forEach((idx) => {
@@ -679,7 +678,7 @@ export default function CtbPlotStyleClient() {
         } else {
           alert('Invalid file format. Please upload a configuration file previously exported by this tool.');
         }
-      } catch (err) {
+      } catch {
         alert('Error parsing config file.');
       }
     };
@@ -984,7 +983,7 @@ export default function CtbPlotStyleClient() {
                   ].map((lt) => (
                     <button
                       key={lt.id}
-                      onClick={() => updateSelectedConfig('linetype', lt.id)}
+                      onClick={() => updateSelectedConfig('linetype', lt.id as PlotStyleConfig['linetype'])}
                       className={`py-2.5 px-1 rounded-xl text-[10px] font-black border transition-all ${
                         editConfig.linetype === lt.id
                           ? 'bg-blue-600 text-white border-blue-600'

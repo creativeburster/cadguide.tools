@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, Layers, Percent } from 'lucide-react';
+import { Info, Check, AlertTriangle, Layers, Percent } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 const WELD_ELECTRODES = [
@@ -335,7 +335,7 @@ Generated via CADGuide.tools`;
           </div>
 
           <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-650">
-            * Physical diagram: The load-bearing shear section of a fillet weld is its 45 The "effective throat thickness surface at the angle bisector"" (That is the green/red dotted line in the picture) . When the external load is too high, this section will crack due to stress shear.. Use GB 50017 and AISC Ultimate load-bearing specifications accurately estimate safety redundancy. 
+            * Physical diagram: The load-bearing shear section of a fillet weld is its 45 The &quot;effective throat thickness surface at the angle bisector&quot;&quot; (That is the green/red dotted line in the picture) . When the external load is too high, this section will crack due to stress shear.. Use GB 50017 and AISC Ultimate load-bearing specifications accurately estimate safety redundancy. 
           </p>
         </div>
       </div>

@@ -1,13 +1,13 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
-import { tools } from '@/lib/data';
+import { tools, Tool } from '@/lib/data';
 import GuidesClient from './guides-client';
 
 export const dynamic = 'force-dynamic';
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
-export function getDynamicTitle(tool: any): string {
+export function getDynamicTitle(tool: Tool): string {
   const name = tool.name;
   const industries = tool.industries || [];
   const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
@@ -26,7 +26,7 @@ export function getDynamicTitle(tool: any): string {
   return `${name} CAD Guides & IT Deployment`;
 }
 
-export function getDynamicDescription(tool: any): string {
+export function getDynamicDescription(tool: Tool): string {
   const name = tool.name;
   const platformStr = tool.platforms?.slice(0, 2).join('/') || 'Windows/macOS';
   const indList = tool.industries?.slice(0, 2).join('/') || 'CAD/BIM';

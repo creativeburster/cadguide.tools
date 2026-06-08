@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, Suspense, useRef } from 'react';
-import { tools } from '@/lib/data';
+import { tools, Tool } from '@/lib/data';
 import { editorPickPairs, comparisonPairs } from '@/lib/seo-content';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -36,7 +36,7 @@ function CompareContent() {
       shadowColor: 'hover:shadow-sky-100/40',
       iconColor: 'text-sky-500',
       filterLabel: '2D CAD',
-      test: (a: any, b: any) => {
+      test: (a: Tool, b: Tool) => {
         const has2D = a.category_id === 'c1' || b.category_id === 'c1';
         const hasBIM = a.category_id === 'c3' || b.category_id === 'c3';
         return has2D && !hasBIM;
@@ -52,7 +52,7 @@ function CompareContent() {
       shadowColor: 'hover:shadow-amber-100/40',
       iconColor: 'text-amber-500',
       filterLabel: '3D MCAD',
-      test: (a: any, b: any) => {
+      test: (a: Tool, b: Tool) => {
         const has3D = a.category_id === 'c2' || b.category_id === 'c2';
         const hasBIM = a.category_id === 'c3' || b.category_id === 'c3';
         return has3D && !hasBIM;
@@ -68,7 +68,7 @@ function CompareContent() {
       shadowColor: 'hover:shadow-emerald-100/40',
       iconColor: 'text-emerald-500',
       filterLabel: 'BIM & Architecture',
-      test: (a: any, b: any) => {
+      test: (a: Tool, b: Tool) => {
         const hasBIM = a.category_id === 'c3' || b.category_id === 'c3';
         const renderingSlugs = ['lumion', 'twinmotion', 'enscape', 'v-ray', 'corona-renderer'];
         const hasRender = renderingSlugs.includes(a.slug) || renderingSlugs.includes(b.slug);
@@ -85,7 +85,7 @@ function CompareContent() {
       shadowColor: 'hover:shadow-violet-100/40',
       iconColor: 'text-violet-500',
       filterLabel: 'CAE / CAM / EDA',
-      test: (a: any, b: any) => {
+      test: (a: Tool, b: Tool) => {
         return a.category_id === 'c5' || b.category_id === 'c5' || a.category_id === 'c6' || b.category_id === 'c6';
       }
     },
@@ -99,7 +99,7 @@ function CompareContent() {
       shadowColor: 'hover:shadow-rose-100/40',
       iconColor: 'text-rose-500',
       filterLabel: 'Slicers & Specialized',
-      test: (a: any, b: any) => true
+      test: () => true
     }
   ], []);
 
@@ -168,8 +168,14 @@ function CompareContent() {
     { label: 'Target User', key: 'user_scales', type: 'list' },
   ];
 
-  const getNestedValue = (obj: any, path: string) => {
-    return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+  const getNestedValue = (obj: Tool, path: string): unknown => {
+    return path.split('.').reduce<unknown>(
+      (acc, part) =>
+        acc && typeof acc === 'object'
+          ? (acc as Record<string, unknown>)[part]
+          : undefined,
+      obj as unknown,
+    );
   };
 
   return (
@@ -278,17 +284,17 @@ function CompareContent() {
                         <td key={`${i}-${row.key}`} className="p-6 lg:p-10 text-center border-r border-slate-100 last:border-r-0 shrink-0">
                           {tool ? (
                             <div className="flex flex-col items-center">
-                              {row.type === 'rating' && <span className="text-xl lg:text-2xl font-black text-slate-900">★ {val}</span>}
-                              {row.type === 'price' && <span className="text-lg lg:text-xl font-black text-slate-900">${val || 'TBA'}</span>}
-                              {row.type === 'badge' && <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-100 font-bold">{val}</Badge>}
+                              {row.type === 'rating' && <span className="text-xl lg:text-2xl font-black text-slate-900">★ {val as number}</span>}
+                              {row.type === 'price' && <span className="text-lg lg:text-xl font-black text-slate-900">${(val as number) || 'TBA'}</span>}
+                              {row.type === 'badge' && <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-100 font-bold">{val as string}</Badge>}
                               {row.type === 'list' && (
                                 <div className="flex flex-wrap justify-center gap-2 max-w-[180px] lg:max-w-[200px]">
-                                  {val?.slice(0, 4).map((item: string) => (
+                                  {(val as string[])?.slice(0, 4).map((item: string) => (
                                     <span key={item} className="text-[10px] font-black uppercase tracking-widest bg-slate-100 text-slate-500 px-2 py-1 rounded-md">{item}</span>
                                   ))}
                                 </div>
                               )}
-                              {row.type === 'text' && <span className="text-slate-600 font-black text-sm">{val || '-'}</span>}
+                              {row.type === 'text' && <span className="text-slate-600 font-black text-sm">{(val as string) || '-'}</span>}
                             </div>
                           ) : '-'}
                         </td>
@@ -307,7 +313,7 @@ function CompareContent() {
                         {tool ? (
                           <div className="flex flex-col h-full">
                             <p className="text-xs text-slate-500 font-bold italic leading-relaxed mb-5 lg:mb-8 line-clamp-4">
-                              "{tool.expert_verdict}"
+                              &quot;{tool.expert_verdict}&quot;
                             </p>
                             <Button asChild className="mt-auto w-full rounded-xl lg:rounded-2xl bg-slate-900 hover:bg-blue-600 font-black h-10 lg:h-12 text-xs lg:text-sm transition-all shadow-lg hover:shadow-blue-200">
                               <Link href={`/tools/${tool.slug}`}>Full Analysis</Link>

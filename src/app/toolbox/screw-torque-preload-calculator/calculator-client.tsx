@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { HelpCircle, Info, Copy, Check, Shield, AlertTriangle, Cpu, Wrench } from 'lucide-react';
+import { Info, Check, AlertTriangle, Cpu, Wrench } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 const BOLT_SIZES = [

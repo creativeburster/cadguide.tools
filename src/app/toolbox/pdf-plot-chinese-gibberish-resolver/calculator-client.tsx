@@ -2,21 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import {
-  HelpCircle,
-  Info,
-  Copy,
-  Check,
-  AlertTriangle,
-  CheckCircle,
-  FileText,
-  Terminal,
-  Activity,
-  ArrowRight,
-  Settings,
-  Layers,
-  Sparkles
-} from 'lucide-react';
+import { Info, Copy, Check, AlertTriangle, FileText, Activity, Settings, Layers, Sparkles } from 'lucide-react';
 
 const SYMPTOMS = [
   {
@@ -212,7 +198,7 @@ export default function PdfFontGibberishClient() {
                 return (
                   <button
                     key={sym.id}
-                    onClick={() => setSymptomId(sym.id as any)}
+                    onClick={() => setSymptomId(sym.id as typeof symptomId)}
                     className={`w-full flex flex-col items-start p-4 rounded-2xl border text-left transition-all ${
                       isActive
                         ? 'bg-blue-500/10 border-blue-500/20 text-blue-700 font-bold'
@@ -304,7 +290,7 @@ export default function PdfFontGibberishClient() {
               {symptomId === 'outline_geometry' && (
                 <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (why it becomes hollow and extremely stuck) : </p>
-                  <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, Or configure it to convert "text" into geometry (Geometries) ", CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow.. </p>
+                  <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, Or configure it to convert &quot;text&quot; into geometry (Geometries) &quot;, CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow.. </p>
                   
                   <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">

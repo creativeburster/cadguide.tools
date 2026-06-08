@@ -25,9 +25,6 @@ export interface CloudReferralProps {
 }
 
 export default function CloudReferralClient({
-  title,
-  subtitle,
-  categoryLabel,
   painPointDesc,
   riskWarning,
   recommendedTools,
