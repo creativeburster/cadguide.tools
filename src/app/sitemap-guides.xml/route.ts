@@ -31,39 +31,11 @@ export async function GET() {
     }
   }
 
-  // 3. Migrated Cheatsheet & Reference Sheets (17 entries)
-  const cheatsheetSlugs = [
-    'shortcuts',
-    'solidworks-shortcuts-sheet',
-    'rhino-shortcuts-sheet',
-    'revit-shortcuts-sheet',
-    'sketchup-shortcuts-sheet',
-    'inventor-shortcuts-sheet',
-    'microstation-shortcuts-sheet',
-    'archicad-shortcuts-sheet',
-    'catia-shortcuts-sheet',
-    'creo-shortcuts-sheet',
-    'freecad-shortcuts-sheet',
-    'fusion360-shortcuts-sheet',
-    'draftsight-shortcuts-sheet',
-    'bricscad-shortcuts-sheet',
-    'vectorworks-shortcuts-sheet',
-    'autocad-vs-gstarcad-shortcuts',
-    'autocad-vs-zwcad-shortcuts'
-  ];
-  const cheatsheetUrls = cheatsheetSlugs.map((slug) => `  <url>
-    <loc>${BASE_URL}/toolbox/${slug}</loc>
-    <lastmod>${now}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>`);
-
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${categoryUrls.join('\n')}
 ${guideUrls.join('\n')}
-${cheatsheetUrls.join('\n')}
 </urlset>`;
 
   return new NextResponse(xml, {

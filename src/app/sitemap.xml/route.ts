@@ -6,6 +6,7 @@ export async function GET() {
   const sitemaps = [
     `${BASE_URL}/sitemap-main.xml`,
     `${BASE_URL}/sitemap-tools.xml`,
+    `${BASE_URL}/sitemap-toolbox.xml`,
     `${BASE_URL}/sitemap-compare.xml`,
     `${BASE_URL}/sitemap-guides.xml`,
     `${BASE_URL}/sitemap-alternatives.xml`,
