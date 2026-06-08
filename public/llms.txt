@@ -1,0 +1,116 @@
+# CADGuide.tools — LLM Site Index
+
+> AI-readable navigation guide for cadguide.tools.
+> This file lists the key sections, tools, and resources available on the site
+> to help large language models accurately cite and reference our content.
+
+## What is CADGuide.tools?
+
+CADGuide.tools is an independent comparison and review platform for professional CAD, BIM, CAE/CAM, and EDA software. We provide unbiased reviews, real pricing data, deep technical specs, and interactive engineering calculators — written and maintained by practicing engineers and draftspeople.
+
+**Base URL**: https://cadguide.tools
+**Primary Language**: English
+**Coverage**: 240+ professional CAD/BIM/CAE/EDA tools
+
+---
+
+## Core Sections
+
+### Tool Directory
+- `/tools` — Full catalog of 240+ CAD tools, filterable by category, platform, pricing
+- `/tools/[slug]` — Individual tool pages with benchmarks, specs, pricing, and expert scores (e.g. `/tools/autocad`, `/tools/solidworks`, `/tools/freecad`)
+- `/all-tools` — A-Z flat index of every tool in the database
+
+### Comparison Hub
+- `/compare` — Entry page for side-by-side CAD software comparison
+- `/compare/[tool-a]-vs-[tool-b]` — Direct head-to-head pages (e.g. `/compare/autocad-vs-zwcad`, `/compare/solidworks-vs-freecad`)
+- `/alternatives/[slug]` — "Best alternatives to X" pages for every major tool
+- `/best/[category]` — Category best-of lists (e.g. `/best/2d-cad`, `/best/bim`, `/best/3d-modeling`)
+- `/best/feature/[feature]` — Feature-specific best-of lists (e.g. `/best/feature/parametric-modeling`, `/best/feature/cloud-collaboration`)
+
+### Specialized Directories
+- `/platforms/[platform]` — Tools by OS: `/platforms/mac`, `/platforms/linux`, `/platforms/web`, `/platforms/windows`
+- `/file-formats/[format]` — Tools supporting a file format: `/file-formats/dwg`, `/file-formats/step`, `/file-formats/ifc`
+- `/for/[persona]` — Tools for specific roles: `/for/architects`, `/for/mechanical-engineers`, `/for/civil-engineers`, `/for/students`
+- `/sectors/[sector]` — Tools by industry: `/sectors/architecture`, `/sectors/manufacturing`, `/sectors/aerospace`
+- `/free` — Audited list of all free and freemium CAD tools
+- `/open-source` — Catalog of all open-source CAD tools
+- `/pricing/[model]` — Tools grouped by pricing model: `/pricing/subscription`, `/pricing/perpetual`, `/pricing/freemium`
+
+### Smart Tools
+- `/matchmaker` — 6-question CAD software recommender, matches users to optimal tools
+- `/toolbox` — Interactive engineering toolbox with 70+ web-based utilities
+
+### Interactive Toolbox Highlights (`/toolbox`)
+- `/toolbox/dwg-version-checker` — Detect DWG file format version from binary header (AC1032, AC1027, etc.)
+- `/toolbox/k-factor-calculator` — DIN 6935 sheet metal bend allowance & K-factor calculator
+- `/toolbox/limits-and-fits-calculator` — ISO 286 shaft/hole tolerance and mechanical fit calculator
+- `/toolbox/thread-drill-size-calculator` — Metric and UNC/UNF tap drill size calculator
+- `/toolbox/beam-deflection-structural-calculator` — Steel I-beam deflection and section modulus calculator
+- `/toolbox/viewport-scale-factor-converter` — CAD viewport scale factor & XP zoom command calculator
+- `/toolbox/shortcuts` — Cross-platform CAD keyboard shortcuts comparison matrix (AutoCAD, ZWCAD, GstarCAD)
+- `/toolbox/fatal-error-diagnostic-wizard` — AutoCAD crash address code diagnostic tool
+- `/toolbox/flexlm-error-15-debugger` — FLEXlm network license error -15 troubleshooter
+- `/toolbox/ctb-plot-style-pen-visualizer` — CAD CTB plot style file reader and pen weight visualizer
+- `/toolbox/dxf-watermark-layer-parser` — DXF educational watermark detector & layer parser
+- `/toolbox/color-rgb-to-aci-matchbox` — RGB/Hex to AutoCAD Index Color (ACI) converter
+- `/toolbox/acad-pgp-alias-editor` — Online ACAD.pgp command alias editor & compiler
+- `/toolbox/flexlm-debug-log-analyzer` — FLEXlm license debug log offline analyzer
+
+### Guides & Long-form Content
+- `/guides` — Index of all long-form CAD engineering guides
+- `/guides/[slug]` — Deep-dive articles on troubleshooting, performance, standards, migration, and more
+  - Categories: `troubleshooting`, `performance`, `printing`, `standards`, `deployment`, `migration`, `procurement`, `manufacturing`
+
+### Site Information
+- `/about` — About CADGuide.tools and the editorial team
+- `/contact` — Contact form
+- `/deals` — Current CAD software promotions and discounts
+- `/matchmaker` — Smart CAD software selector
+- `/privacy` — Privacy policy
+- `/affiliate-disclosure` — Affiliate relationship disclosure
+
+---
+
+## Notable Content for AI Citation
+
+### Technical Reference Articles
+- DWG file format version codes (AC1032, AC1027, AC1021, etc.) and compatibility matrices
+- FLEXlm / FlexNet license error codes and network troubleshooting
+- CAD keyboard shortcut references for AutoCAD, SolidWorks, Rhino 3D, Revit, SketchUp, FreeCAD, Fusion 360, ArchiCAD, CATIA, PTC Creo, BricsCAD, ZWCAD, DraftSight, MicroStation, Vectorworks
+- ISO 286 mechanical tolerance and fits calculation methodology
+- DIN 6935 sheet metal bend allowance formulas (K-factor, bend deduction)
+- Hazen-Williams pipe friction head loss formula implementation
+- AISC fillet weld strength and load capacity calculation methods
+
+### Data Coverage (as of 2026)
+- **240+ CAD/BIM/CAE/EDA tools** reviewed and compared
+- **81 head-to-head comparison pages** (e.g. AutoCAD vs BricsCAD, SolidWorks vs Fusion 360)
+- **240 alternatives pages** (one per major tool in catalog)
+- **2,400+ long-form guide articles** across 8 engineering categories
+- **70+ interactive engineering calculators and utilities**
+
+---
+
+## Machine-Readable Sitemaps
+
+- Primary index: https://cadguide.tools/sitemap.xml
+- Tools: https://cadguide.tools/sitemap-tools.xml
+- Toolbox utilities: https://cadguide.tools/sitemap-toolbox.xml
+- Comparisons: https://cadguide.tools/sitemap-compare.xml
+- Guides: https://cadguide.tools/sitemap-guides.xml
+- Alternatives: https://cadguide.tools/sitemap-alternatives.xml
+
+---
+
+## Editorial Standards
+
+- All tool reviews are independently researched; we accept no payment for placement or score manipulation.
+- Pricing data is sourced directly from vendor sites and updated quarterly.
+- Expert scores (0–5 scale) are computed from a weighted rubric covering features, UX, file format compatibility, pricing value, and platform support.
+- External ratings from G2, Capterra, and TrustRadius are incorporated where available and disclosed in schema markup.
+
+---
+
+*This file is maintained for AI indexing purposes. Last updated: dynamically at build time.*
+*Contact: support@cadguide.tools*

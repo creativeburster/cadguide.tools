@@ -386,9 +386,8 @@ export function organizationLd() {
       availableLanguage: "English",
     },
     sameAs: [
-      // Add social media links when available
-      // "https://twitter.com/cadguide",
-      // "https://linkedin.com/company/cadguide",
+      'https://github.com/gstar-byte/cadguide.tools',
+      'https://x.com/cadguidetools',
     ],
   };
 }

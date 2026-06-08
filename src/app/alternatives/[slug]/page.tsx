@@ -15,6 +15,7 @@ export function generateStaticParams() {
 }
 
 const YEAR = new Date().getFullYear();
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
@@ -119,7 +120,7 @@ function articleLd(tool: Tool, count: number) {
       url: SITE_URL,
     },
     datePublished: '2026-01-01',
-    dateModified: '2026-05-15',
+    dateModified: BUILD_DATE,
   };
 }
 

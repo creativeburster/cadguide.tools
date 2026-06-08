@@ -299,7 +299,7 @@ function articleLd(a: Tool, b: Tool, pairSlug: string) {
       },
     ],
     datePublished: '2026-01-01',
-    dateModified: '2026-05-22',
+    dateModified: new Date().toISOString().slice(0, 10),
   };
 }
 

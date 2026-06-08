@@ -145,7 +145,7 @@ function articleLd(p: FormatPage, count: number) {
     mainEntityOfPage: `${SITE_URL}/file-formats/${p.slug}`,
     publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
-    dateModified: '2026-05-15',
+    dateModified: new Date().toISOString().slice(0, 10),
   };
 }
 
