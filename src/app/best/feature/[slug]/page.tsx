@@ -859,7 +859,7 @@ function articleLd(slug: string, title: string, description: string) {
       url: SITE_URL,
     },
     datePublished: '2026-01-01',
-    dateModified: '2026-05-21',
+    dateModified: new Date().toISOString().slice(0, 10),
   };
 }
 

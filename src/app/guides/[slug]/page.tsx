@@ -2469,7 +2469,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       },
     },
     'datePublished': '2026-05-01',
-    'dateModified': '2026-05-29',
+    'dateModified': new Date().toISOString().slice(0, 10),
     'about': {
       '@type': 'SoftwareApplication',
       'name': tool.name,

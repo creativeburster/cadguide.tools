@@ -100,7 +100,7 @@ function articleLd() {
     mainEntityOfPage: `${SITE_URL}/open-source`,
     publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
-    dateModified: '2026-05-25',
+    dateModified: new Date().toISOString().slice(0, 10),
   };
 }
 
