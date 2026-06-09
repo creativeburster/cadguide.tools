@@ -1337,7 +1337,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
 
               {/* Newsletter Subscription */}
-              <RelatedTools gridCols="grid grid-cols-1 gap-5" limit={3} />
+              <RelatedTools compact limit={3} />
 
               {/* Quick Comparison Battles Sidebar Card */}
               {toolComparisons.length > 0 && (
