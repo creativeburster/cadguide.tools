@@ -290,12 +290,12 @@ function articleLd(a: Tool, b: Tool, pairSlug: string) {
       {
         '@type': 'SoftwareApplication',
         name: a.name,
-        url: `${SITE_URL}/tools/${a.slug}`,
+        '@id': `${SITE_URL}/tools/${a.slug}#software`,
       },
       {
         '@type': 'SoftwareApplication',
         name: b.name,
-        url: `${SITE_URL}/tools/${b.slug}`,
+        '@id': `${SITE_URL}/tools/${b.slug}#software`,
       },
     ],
     datePublished: '2026-01-01',

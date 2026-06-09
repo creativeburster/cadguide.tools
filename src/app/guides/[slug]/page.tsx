@@ -1958,9 +1958,8 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     'itemListElement': [
-      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://cadguide.tools/' },
-      { '@type': 'ListItem', 'position': 2, 'name': 'Guides', 'item': 'https://cadguide.tools/guides' },
-      { '@type': 'ListItem', 'position': 3, 'name': catInfo.title, 'item': `https://cadguide.tools/guides/${category}` }
+      { '@type': 'ListItem', 'position': 1, 'name': 'Guides', 'item': 'https://cadguide.tools/guides' },
+      { '@type': 'ListItem', 'position': 2, 'name': catInfo.title, 'item': `https://cadguide.tools/guides/${category}` }
     ]
   };
 
@@ -2402,7 +2401,6 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   // Generate breadcrumb links for crawlers
   const breadcrumbs = [
-    { name: 'Home', item: 'https://cadguide.tools/' },
     { name: 'Guides', item: 'https://cadguide.tools/guides' },
     { name: title, item: `https://cadguide.tools/guides/${slug}` },
   ];

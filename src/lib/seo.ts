@@ -175,6 +175,7 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": `${toolCanonical(tool)}#software`,
     name: tool.name,
     description:
       tool.description ||
@@ -206,10 +207,9 @@ export function breadcrumbLd(tool: Tool, category?: Category) {
     name: string;
     item: string;
   }[] = [
-    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
     {
       "@type": "ListItem",
-      position: 2,
+      position: 1,
       name: "Tools",
       item: `${SITE_URL}/tools`,
     },
@@ -217,20 +217,20 @@ export function breadcrumbLd(tool: Tool, category?: Category) {
   if (category) {
     items.push({
       "@type": "ListItem",
-      position: 3,
+      position: 2,
       name: category.name,
       item: `${SITE_URL}/tools?category=${category.id}`,
     });
     items.push({
       "@type": "ListItem",
-      position: 4,
+      position: 3,
       name: tool.name,
       item: toolCanonical(tool),
     });
   } else {
     items.push({
       "@type": "ListItem",
-      position: 3,
+      position: 2,
       name: tool.name,
       item: toolCanonical(tool),
     });
@@ -340,10 +340,11 @@ export function collectionPageLd(opts: {
 
 /** Simple breadcrumb payload for non-tool pages. */
 export function siteBreadcrumbLd(items: { name: string; path: string }[]) {
+  const filtered = items.filter((it) => it.path !== "/" && it.path !== "");
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((it, i) => ({
+    itemListElement: filtered.map((it, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
