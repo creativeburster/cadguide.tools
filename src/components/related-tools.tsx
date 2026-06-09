@@ -12,8 +12,8 @@ interface ToolItem {
   tag?: string;
 }
 
-export function RelatedTools() {
-  const tools: ToolItem[] = [
+export function RelatedTools({ gridCols, limit }: { gridCols?: string; limit?: number } = {}) {
+  const allTools: ToolItem[] = [
     {
       name: 'DWG Version Checker',
       desc: 'Identify the exact release version (AC1032, AC1027, etc.) and software compatibility matrix of any DWG file instantly.',
@@ -55,6 +55,8 @@ export function RelatedTools() {
     }
   ];
 
+  const tools = limit ? allTools.slice(0, limit) : allTools;
+
   return (
     <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm flex flex-col gap-8">
       <div>
@@ -67,7 +69,7 @@ export function RelatedTools() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className={gridCols || "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"}>
         {tools.map((tool) => {
           const Icon = tool.icon;
           return (
