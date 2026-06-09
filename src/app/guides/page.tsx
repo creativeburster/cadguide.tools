@@ -58,7 +58,7 @@ export async function generateMetadata({
   return pageMetadata({
     title,
     description,
-    path,
+    path: '/guides',
   });
 }
 
