@@ -413,6 +413,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 md:gap-3"
+                        aria-label={`Visit official website of ${tool.name}`}
                       >
                         Go to Website <ExternalLink className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
                       </a>

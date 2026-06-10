@@ -113,7 +113,7 @@ function HomeBody() {
         <div className="flex items-center justify-between mb-10 gap-4 border-b border-slate-100 pb-6">
           <div>
             <h2 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">Industry Standards</h2>
-            <p className="text-sm text-slate-400 font-medium mt-1">The most trusted and highest-rated CAD platforms worldwide.</p>
+            <p className="text-sm text-slate-500 font-medium mt-1">The most trusted and highest-rated CAD platforms worldwide.</p>
           </div>
           <Button asChild variant="ghost" className="text-blue-600 font-bold p-0 hover:bg-transparent shrink-0">
             <Link href="/tools" className="flex items-center gap-1 text-sm sm:text-base transition-transform hover:translate-x-1">Full Directory →</Link>
@@ -142,15 +142,15 @@ function HomeBody() {
                     </div>
                   </div>
                 </div>
-                <p className="text-slate-500 text-sm font-medium line-clamp-2 mb-8 leading-relaxed">
+                <p className="text-slate-600 text-sm font-medium line-clamp-2 mb-8 leading-relaxed">
                   {tool.short_desc}
                 </p>
                 <div className="flex gap-3">
                   <Button asChild variant="outline" className="flex-1 rounded-xl font-bold text-xs h-11">
-                    <Link href={`/tools/${tool.slug}`}>Review</Link>
+                    <Link href={`/tools/${tool.slug}`} aria-label={`Read full expert review of ${tool.name}`}>Review</Link>
                   </Button>
                   <Button asChild className="flex-1 bg-slate-900 hover:bg-blue-600 text-white rounded-xl font-bold text-xs h-11">
-                    <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow noopener noreferrer">Website</a>
+                    <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow noopener noreferrer" aria-label={`Visit official website of ${tool.name}`}>Website</a>
                   </Button>
                 </div>
               </div>
@@ -184,8 +184,8 @@ function HomeBody() {
                     <h3 className="font-black text-slate-900 group-hover:text-blue-600 text-sm sm:text-base transition-colors truncate">{tool.name}</h3>
                     <span className="text-yellow-500 text-xs font-black shrink-0">★ {tool.score}</span>
                   </div>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">{tool.pricing_type} • AEC Industry</p>
-                  <p className="text-xs text-slate-500 line-clamp-1 mt-1.5 font-medium leading-relaxed">{tool.short_desc}</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-0.5">{tool.pricing_type} • AEC Industry</p>
+                  <p className="text-xs text-slate-600 line-clamp-1 mt-1.5 font-medium leading-relaxed">{tool.short_desc}</p>
                 </div>
               </Link>
             ))}
@@ -225,7 +225,7 @@ function HomeBody() {
             <div>
               <div className="text-xs font-black text-blue-600 uppercase tracking-widest mb-2">Free Online Utilities</div>
               <h2 className="text-3xl font-black text-slate-900 tracking-tight">Interactive CAD Toolbox</h2>
-              <p className="text-sm text-slate-400 font-medium mt-1">100% client-side calculators, templates, and error-checkers for drawing rooms.</p>
+              <p className="text-sm text-slate-500 font-medium mt-1">100% client-side calculators, templates, and error-checkers for drawing rooms.</p>
             </div>
             <Button asChild variant="ghost" className="text-blue-600 font-bold p-0 hover:bg-transparent shrink-0">
               <Link href="/toolbox" className="flex items-center gap-1 text-sm sm:text-base transition-transform hover:translate-x-1">
@@ -252,7 +252,7 @@ function HomeBody() {
                 <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                   DWG Version Checker
                 </h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                <p className="text-xs text-slate-600 leading-relaxed font-semibold">
                   Drag and drop drawing files to instantly identify their AutoCAD DWG format headers locally in your browser.
                 </p>
               </div>
@@ -281,7 +281,7 @@ function HomeBody() {
                 <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                   CAD Shortcuts Cheat Sheet
                 </h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                <p className="text-xs text-slate-600 leading-relaxed font-semibold">
                   Compare keyboard shortcuts across AutoCAD, GstarCAD, ZWCAD, and DWG FastView. Clean print-ready Layouts.
                 </p>
               </div>
@@ -310,7 +310,7 @@ function HomeBody() {
                 <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                   K-Factor Bending Calculator
                 </h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                <p className="text-xs text-slate-600 leading-relaxed font-semibold">
                   Calculate sheet metal bend allowances and deductions using DIN 6935 formulas with interactive neutral axis shifting.
                 </p>
               </div>
@@ -329,7 +329,7 @@ function HomeBody() {
       <section className="bg-white text-slate-900 py-24 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-4 tracking-tight">Independent & Objective Analysis</h2>
-          <p className="text-slate-500 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don&apos;t accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
+          <p className="text-slate-600 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don&apos;t accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 shadow-sm">
               <div className="text-blue-600 text-5xl font-black mb-2">235+</div>
@@ -360,43 +360,43 @@ function HomeBody() {
             <Link href="/for" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">17 roles</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Role</div>
-              <div className="mt-1 text-xs text-slate-500">Architects, engineers, students…</div>
+              <div className="mt-1 text-xs text-slate-600">Architects, engineers, students…</div>
             </Link>
             <Link href="/sectors" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 sectors</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Sector</div>
-              <div className="mt-1 text-xs text-slate-500">Aerospace, automotive, civil structures…</div>
+              <div className="mt-1 text-xs text-slate-600">Aerospace, automotive, civil structures…</div>
             </Link>
             <Link href="/platforms" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6 platforms</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Platform</div>
-              <div className="mt-1 text-xs text-slate-500">Windows, Mac, Linux, Web, iOS, Android</div>
+              <div className="mt-1 text-xs text-slate-600">Windows, Mac, Linux, Web, iOS, Android</div>
             </Link>
             <Link href="/file-formats" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">29 formats</div>
               <div className="mt-1 text-lg font-black text-slate-900">By File Format</div>
-              <div className="mt-1 text-xs text-slate-500">DWG, STEP, STL, IFC, DXF…</div>
+              <div className="mt-1 text-xs text-slate-600">DWG, STEP, STL, IFC, DXF…</div>
             </Link>
             <Link href="/pricing" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">7 categories</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Pricing & License</div>
-              <div className="mt-1 text-xs text-slate-500">Free, perpetual buyouts, floating networks, student access…</div>
+              <div className="mt-1 text-xs text-slate-600">Free, perpetual buyouts, floating networks, student access…</div>
             </Link>
             <Link href="/compare#disciplines" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">5 disciplines</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Discipline</div>
-              <div className="mt-1 text-xs text-slate-500">Side-by-side spec matches and competitor guides by engineering field…</div>
+              <div className="mt-1 text-xs text-slate-600">Side-by-side spec matches and competitor guides by engineering field…</div>
             </Link>
             <Link href="/alternatives" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">Switchover Guides</div>
               <div className="mt-1 text-lg font-black text-slate-900">Alternatives</div>
-              <div className="mt-1 text-xs text-slate-500">Curated switch-away guides per tool</div>
+              <div className="mt-1 text-xs text-slate-600">Curated switch-away guides per tool</div>
             </Link>
             <Link href="/best#by-feature" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all relative overflow-hidden group">
               <div className="absolute top-0 right-0 bg-blue-600 text-white text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded-bl-lg">New</div>
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 Features</div>
               <div className="mt-1 text-lg font-black text-slate-900 group-hover:text-blue-600 transition-colors">By Feature</div>
-              <div className="mt-1 text-xs text-slate-500">16 technical spotlights + 7 discipline reviews</div>
+              <div className="mt-1 text-xs text-slate-600">16 technical spotlights + 7 discipline reviews</div>
             </Link>
           </div>
         </div>

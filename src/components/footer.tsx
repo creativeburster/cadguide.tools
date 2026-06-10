@@ -118,17 +118,17 @@ export function Footer() {
 
         </div>
 
-        <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-600">
+        <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-400">
           <div className="hidden md:block" />
           <div className="flex items-center gap-4 justify-center whitespace-nowrap">
             <span>© {new Date().getFullYear()} CADGuide.tools</span>
             <span>•</span>
-            <span className="text-slate-500">Independent Analysis • No Paid Rankings</span>
+            <span className="text-slate-400">Independent Analysis • No Paid Rankings</span>
           </div>
           <div className="flex gap-8 justify-center md:justify-end">
-            <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Twitter</Link>
-            <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Facebook</Link>
-            <Link href="#" className="hover:text-white transition-colors uppercase tracking-widest">Reddit</Link>
+            <Link href="#" aria-label="Follow CADGuide.tools on Twitter" className="hover:text-white transition-colors uppercase tracking-widest">Twitter</Link>
+            <Link href="#" aria-label="Follow CADGuide.tools on Facebook" className="hover:text-white transition-colors uppercase tracking-widest">Facebook</Link>
+            <Link href="#" aria-label="Join CADGuide.tools community on Reddit" className="hover:text-white transition-colors uppercase tracking-widest">Reddit</Link>
           </div>
         </div>
       </div>

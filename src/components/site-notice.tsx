@@ -5,26 +5,27 @@ import Link from 'next/link';
 import { X } from 'lucide-react';
 
 export function SiteNotice() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const dismissed = localStorage.getItem('site-notice-dismissed');
-    if (!dismissed) {
-      // Reads localStorage on mount; client-only by design.
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setIsVisible(true);
+    if (dismissed === 'true') {
+      setIsVisible(false);
     }
   }, []);
 
   const handleDismiss = () => {
     setIsVisible(false);
     localStorage.setItem('site-notice-dismissed', 'true');
+    try {
+      document.documentElement.classList.add('site-notice-dismissed');
+    } catch (_) {}
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="bg-blue-600 text-white text-sm relative z-[300]">
+    <div className="bg-blue-600 text-white text-sm relative z-[300] site-notice">
       <div className="container mx-auto px-4 py-2.5 flex items-center justify-center gap-2">
         <span className="font-medium text-center pr-6">
           Find and compare CAD & BIM software. Access objective reviews, active <Link href="/deals" className="underline font-bold hover:text-sky-100 transition-colors">deals</Link>, and professional troubleshooting guides.

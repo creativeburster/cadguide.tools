@@ -404,7 +404,7 @@ export default function MatchmakerPage() {
                             <Link href={`/tools/${tool.slug}`}>Read Full Expert Review</Link>
                           </Button>
                           <Button asChild variant="outline" className="h-14 rounded-2xl border-slate-200 font-black text-xs uppercase tracking-widest flex-1 hover:bg-slate-50">
-                            <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow noopener noreferrer">Go to Website</a>
+                            <a href={tool.affiliate_url || tool.official_url} target="_blank" rel="nofollow noopener noreferrer" aria-label={`Visit official website of ${tool.name}`}>Go to Website</a>
                           </Button>
                         </div>
                       </div>

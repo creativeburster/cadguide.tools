@@ -94,3 +94,8 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+/* Prevent notice CLS Layout Shift */
+.site-notice-dismissed .site-notice {
+  display: none !important;
+}
