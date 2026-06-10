@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { CookieConsent } from "@/components/cookie-consent";
@@ -6,6 +7,11 @@ import { Navbar } from "@/components/navbar";
 import { PWARegistration } from "@/components/pwa-registration";
 import { SiteNotice } from "@/components/site-notice";
 import Script from "next/script";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "CADGuide.tools | Compare CAD & BIM Software (ASM vs Parasolid)",
@@ -49,8 +55,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
-        <Script id="google-analytics" strategy="afterInteractive">
+      <body className={`${inter.className} min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans`}>
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             if (window.location.hostname === 'cadguide.tools' || window.location.hostname === 'www.cadguide.tools') {
               var script = document.createElement('script');
@@ -65,7 +71,7 @@ export default function RootLayout({
             }
           `}
         </Script>
-        <Script id="brandreward-sdk" strategy="afterInteractive">
+        <Script id="brandreward-sdk" strategy="lazyOnload">
           {`
             if (window.location.hostname === 'cadguide.tools' || window.location.hostname === 'www.cadguide.tools') {
               var _BRConf = { key: '81f9b4c973e1fb37a704344789dc0719' };
