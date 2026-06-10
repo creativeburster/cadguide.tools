@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { tools } from '@/lib/data';
-import { ARTICLES_LIST } from '@/lib/guides-data';
+import { ARTICLES_LIST, isArticleCompatibleWithTool } from '@/lib/guides-data';
 
 const BASE_URL = 'https://cadguide.tools';
 
@@ -16,10 +16,12 @@ export async function GET() {
     <priority>0.90</priority>
   </url>`);
 
-  // 2. Dynamic long-tail guides (2,400 entries)
+  // 2. Dynamic long-tail guides — filter per tool to match generateStaticParams
   const guideUrls: string[] = [];
-  const selectedArticles = ARTICLES_LIST.slice(0, 10);
   for (const tool of tools) {
+    const selectedArticles = ARTICLES_LIST
+      .filter(art => isArticleCompatibleWithTool(art.title, art.category, tool))
+      .slice(0, 10);
     for (const art of selectedArticles) {
       const artIndex = art.id.split('-').pop();
       guideUrls.push(`  <url>

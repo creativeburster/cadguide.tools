@@ -10,6 +10,7 @@ import { AICitation } from '@/components/ai-citation';
 import { ARTICLES_LIST, CATEGORY_SECTIONS, getArchetypeMetadata, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from '@/lib/guides-data';
 import { Award, Cpu, ArrowLeft, AlertTriangle, ShieldAlert, BookOpen, ArrowRight, Layers, Printer, Settings, Scale, FileSpreadsheet, FolderGit, Activity } from 'lucide-react';
 import type { Metadata } from 'next';
+import { comparisonPairs } from '@/lib/seo-content';
 
 export const dynamicParams = true;
 
@@ -2399,6 +2400,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   const steps = getDynamicSteps(category, tool.name);
 
+  // Metropolitan Interlink: Compare PK battles for sidebar
+  const toolComparisons = comparisonPairs().filter(
+    (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
+  ).slice(0, 4);
+
   // Generate breadcrumb links for crawlers
   const breadcrumbs = [
     { name: 'Guides', item: 'https://cadguide.tools/guides' },
@@ -2804,6 +2810,32 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   </div>
                 </div>
               </Card>
+
+              {/* Metropolitan Interlink: Direct Comparison Battles */}
+              {toolComparisons.length > 0 && (
+                <Card className="rounded-[24px] md:rounded-[32px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-5">
+                  <h3 className="font-black text-slate-900 text-base border-b border-slate-50 pb-3 uppercase tracking-wider text-[11px] text-slate-400 flex items-center gap-2">
+                    <Scale className="w-4 h-4" /> Direct PK Battles
+                  </h3>
+                  <div className="space-y-3">
+                    {toolComparisons.map((pair, pIdx) => {
+                      const vsTool = pair.a.slug === tool.slug ? pair.b : pair.a;
+                      return (
+                        <Link
+                          key={pIdx}
+                          href={`/compare/${pair.pairSlug}`}
+                          className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all group border border-slate-50 hover:border-blue-100"
+                        >
+                          <span className="font-bold text-slate-800 text-xs truncate group-hover:text-blue-600 transition-colors">
+                            {tool.name} <span className="text-slate-400 font-bold">vs</span> {vsTool.name}
+                          </span>
+                          <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </Card>
+              )}
 
               {/* Enterprise IT Deployment Banner */}
               <Card className="rounded-[24px] md:rounded-[32px] p-6 sm:p-8 bg-[#0f172a] text-white border-none shadow-xl relative overflow-hidden">
