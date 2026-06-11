@@ -510,6 +510,54 @@ export default function MatchmakerPage() {
           </div>
         )}
 
+        {/* Why Choose Our Matchmaker - Only shown during quiz steps */}
+        {step <= 6 && (
+          <div className="mt-16 pt-16 border-t border-slate-100 animate-in fade-in duration-500">
+            <div className="text-center mb-12">
+              <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1 mb-6 font-bold uppercase tracking-widest text-[10px]">
+                Our Commitments
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
+                Why Use Our CAD Matchmaker?
+              </h2>
+              <p className="text-slate-500 font-medium max-w-2xl mx-auto">
+                We design our tools to respect your privacy and provide genuine value, free from marketing traps.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:border-blue-200 transition-all group">
+                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">100% Privacy, Zero Spam</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  We will never ask for your email address or personal contact details. Get instant access to your recommendations without gatekeeping.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:border-blue-200 transition-all group">
+                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">EULA Audit Prevention</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Avoid costly software audit penalties. We evaluate tools against licensing risks and commercial policies to ensure compliance.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:border-blue-200 transition-all group">
+                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">Objective & Unbiased</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Our algorithm processes technical benchmarks, active licensing formats, and hardware requirements, not vendor sponsorships.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Best Lists Section - Always visible */}
         <div className="mt-16 pt-16 border-t border-slate-100">
           <div className="text-center mb-12">
@@ -542,6 +590,50 @@ export default function MatchmakerPage() {
             <Button asChild variant="outline" className="rounded-xl border-slate-200 font-bold text-xs uppercase tracking-widest">
               <Link href="/best">View All Best Lists</Link>
             </Button>
+          </div>
+        </div>
+
+        {/* FAQ Section - Always visible */}
+        <div className="mt-16 pt-16 border-t border-slate-100">
+          <div className="text-center mb-12">
+            <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1 mb-6 font-bold uppercase tracking-widest text-[10px]">
+              Matchmaker Help & FAQ
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-slate-500 font-medium max-w-2xl mx-auto">
+              Find quick answers to common questions about our matching process and CAD compatibility.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto grid gap-6">
+            <div className="bg-white rounded-[24px] p-6 md:p-8 border border-slate-100 shadow-xs">
+              <h3 className="text-base font-extrabold text-slate-900 mb-2">How does the matching algorithm work?</h3>
+              <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                Our recommendation engine uses a weighted scoring model to match your inputs. Industry requirements account for 30% of the score, operating system compatibility represents 25%, budget preferences take up 20%, and your specific drafting workflow contributes 15%. The remaining 10% is divided between team size fit and user experience levels.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-[24px] p-6 md:p-8 border border-slate-100 shadow-xs">
+              <h3 className="text-base font-extrabold text-slate-900 mb-2">What is the difference between Quick Match and Deep Match?</h3>
+              <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                Quick Match is designed for speed, asking 3 critical questions (Industry, OS, and Budget) to immediately identify your top recommendations. Deep Match expands this checklist to 6 questions, factoring in team scalability, native 2D/3D workflows, and CAD drafting experience to pinpoint highly-specialized alternatives.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-[24px] p-6 md:p-8 border border-slate-100 shadow-xs">
+              <h3 className="text-base font-extrabold text-slate-900 mb-2">Are the recommended CAD tools fully compatible with DWG/DXF?</h3>
+              <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                Yes. Seamless data exchange is critical for CAD workflows. Every recommended tool in our index natively supports DWG and DXF standard formats, allowing you to import and export drawings without losing parametric blocks, layers, or scale factors when collaborating with other engineering teams.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-[24px] p-6 md:p-8 border border-slate-100 shadow-xs">
+              <h3 className="text-base font-extrabold text-slate-900 mb-2">Is the CAD Matchmaker tool free to use?</h3>
+              <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                Yes, our Matchmaker service is completely free to use. We do not lock results behind paywalls or require email sign-ups. Our primary goal is to guide CAD professionals toward the most efficient and cost-effective software solutions for their design environments.
+              </p>
+            </div>
           </div>
         </div>
       </div>
