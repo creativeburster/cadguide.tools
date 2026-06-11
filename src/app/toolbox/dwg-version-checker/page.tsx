@@ -1,5 +1,6 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import DwgVersionCheckerClient from './checker-client';
 
 export const metadata: Metadata = pageMetadata({
@@ -44,8 +45,18 @@ export default function DwgVersionCheckerPage() {
         </section>
 
         {/* Main Content Component */}
-        <section className="py-16 max-w-[1000px] mx-auto px-6 md:px-12">
+        <section className="py-16 max-w-[1000px] mx-auto px-6 md:px-12 space-y-12">
           <DwgVersionCheckerClient />
+
+          {/* Subtle guide recommendation link */}
+          <div className="pt-8 text-center border-t border-slate-200">
+            <p className="text-sm text-slate-400 font-semibold">
+              Trouble opening drawing files or configuring plotter layouts? Read our{' '}
+              <Link href="/guides/troubleshooting" className="text-blue-600 hover:text-blue-700 hover:underline">
+                Expert CAD Troubleshooting Guides →
+              </Link>
+            </p>
+          </div>
         </section>
       </main>
     </>
