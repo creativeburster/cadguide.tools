@@ -115,28 +115,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
       };
     });
 
-  // 4. 侧边栏的 3 篇排错指南，优先取 category === "troubleshooting" 的文章
-  const sidebarTroubleshootRaw = safeAvailableGuides.filter((g) => g.category === "troubleshooting");
-  // 如果排错指南不足 3 篇，用其他类别的兼容文章补位，以保证 UI 饱满
-  const sidebarGuidesPool = sidebarTroubleshootRaw.length >= 3
-    ? sidebarTroubleshootRaw
-    : [
-        ...sidebarTroubleshootRaw,
-        ...safeAvailableGuides.filter((g) => g.category !== "troubleshooting")
-      ];
 
-  const sidebarTroubleshootingGuides = sidebarGuidesPool
-    .slice(0, 3)
-    .map((g) => {
-      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
-      return {
-        ...g,
-        title: localized.title,
-        excerpt: localized.excerpt,
-        keyword: localized.keyword,
-        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
-      };
-    });
   // Surface Compatibility / Trust sub-nav entries only when at least
   // one of the underlying fields is populated. Avoids dead anchors on
   // tools that haven't been hand-enriched yet.
@@ -1315,14 +1294,14 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                         <span className="font-black text-sm tracking-wider">{bestDeal.code}</span>
                       </div>
                     )}
-                    <Button
-                      asChild
-                      className="w-full bg-white text-emerald-700 hover:bg-emerald-50 font-black rounded-2xl h-12 shadow-lg shadow-emerald-900/20 text-xs"
+                    <a
+                      href={bestDeal.link}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      className="w-full flex items-center justify-center bg-white text-emerald-700 hover:bg-emerald-50/90 font-black rounded-2xl h-12 shadow-lg shadow-emerald-900/20 text-xs transition-all active:scale-95"
                     >
-                      <a href={bestDeal.link} target="_blank" rel="nofollow noopener noreferrer">
-                        Claim This Deal →
-                      </a>
-                    </Button>
+                      Claim This Deal →
+                    </a>
                     <Link href="/deals" className="block text-center mt-3 text-emerald-200 text-[10px] font-bold uppercase tracking-widest hover:text-white transition-colors">
                       See All Active Deals →
                     </Link>
@@ -1342,12 +1321,12 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     Our AI-powered Matchmaker can find you a more efficient tool
                     in under 60 seconds.
                   </p>
-                  <Button
-                    asChild
-                    className="w-full bg-white text-blue-600 hover:bg-blue-50 font-black rounded-2xl h-14 shadow-lg shadow-blue-900/20"
+                  <Link
+                    href="/matchmaker"
+                    className="w-full flex items-center justify-center bg-white text-blue-600 hover:bg-blue-50 font-black rounded-2xl h-14 shadow-lg shadow-blue-900/20 transition-all active:scale-95 text-sm"
                   >
-                    <Link href="/matchmaker">Launch Matchmaker</Link>
-                  </Button>
+                    Launch Matchmaker
+                  </Link>
                 </div>
               </div>
 
@@ -1362,78 +1341,17 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   <p className="text-slate-400 text-xs font-medium mb-6 leading-relaxed">
                     Verify drawing compatibility, search custom shortcuts matrix, and calculate DIN bend allowances offline.
                   </p>
-                  <Button
-                    asChild
-                    className="w-full bg-white text-slate-950 hover:bg-slate-150 font-black rounded-2xl h-12 shadow-lg hover:bg-blue-50 transition-colors text-xs"
+                  <Link
+                    href="/toolbox"
+                    className="w-full flex items-center justify-center bg-white text-slate-950 hover:bg-blue-50 font-black rounded-2xl h-12 shadow-lg transition-all active:scale-95 text-xs"
                   >
-                    <Link href="/toolbox">Open Toolbox (25+ Tools) →</Link>
-                  </Button>
+                    Open Toolbox (25+ Tools) →
+                  </Link>
                 </div>
               </div>
 
               {/* Newsletter Subscription */}
               <RelatedTools compact limit={3} />
-
-              {/* Quick Comparison Battles Sidebar Card */}
-              {toolComparisons.length > 0 && (
-                <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm">
-                  <div className="flex items-center gap-3 mb-6">
-                    <Scale className="w-5 h-5 text-blue-600" />
-                    <h4 className="text-lg font-black text-slate-900 tracking-tight">
-                      Quick PK Battles
-                    </h4>
-                  </div>
-                  <div className="space-y-4">
-                    {toolComparisons.slice(0, 4).map((pair, pIdx) => {
-                      const vsTool = pair.a.slug === tool.slug ? pair.b : pair.a;
-                      const compareSlug = pair.pairSlug;
-                      return (
-                        <Link
-                          key={pIdx}
-                          href={`/compare/${compareSlug}`}
-                          className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all group border border-slate-50 hover:border-blue-100"
-                        >
-                          <div className="flex items-center gap-2 min-w-0">
-                            <span className="font-bold text-slate-800 text-xs truncate group-hover:text-blue-600 transition-colors">
-                              {tool.name} <span className="text-slate-400 font-bold">vs</span> {vsTool.name}
-                            </span>
-                          </div>
-                          <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-
-              {/* Related Playbooks & Guides Sidebar Card */}
-              {sidebarTroubleshootingGuides.length > 0 && (
-                <div className="bg-white p-6 md:p-10 rounded-[24px] md:rounded-[48px] border border-slate-100 shadow-sm">
-                  <div className="flex items-center gap-3 mb-6">
-                    <FileText className="w-5 h-5 text-blue-600" />
-                    <h4 className="text-lg font-black text-slate-900 tracking-tight">
-                      Troubleshooting Playbooks
-                    </h4>
-                  </div>
-                  <div className="space-y-4">
-                    {sidebarTroubleshootingGuides.map((g) => (
-                      <Link
-                        key={g.id}
-                        href={`/guides/${g.slug}`}
-                        className="block p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all group border border-slate-50 hover:border-blue-100"
-                      >
-                        <span className="font-bold text-slate-800 text-xs line-clamp-2 group-hover:text-blue-600 transition-colors leading-relaxed">
-                          {g.title}
-                        </span>
-                        <div className="flex items-center justify-between mt-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                          <span>{g.category}</span>
-                          <span>{g.readTime}</span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
 
               {/* Trending in Category (Restored) */}
               <div className="bg-white p-10 rounded-[48px] border border-slate-100 shadow-sm">
