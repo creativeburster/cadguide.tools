@@ -7,199 +7,9 @@ import { Card } from '@/components/ui/card';
 import { tools } from '@/lib/data';
 import { ToolLogo } from '@/components/tool-logo';
 import { NewsletterSubscribe } from '@/components/newsletter-subscribe';
+import Link from 'next/link';
 
-interface Deal {
-  id: string;
-  toolId: string;
-  title: string;
-  description: string;
-  discount: string;
-  code?: string;
-  expires?: string;
-  type: 'Promo' | 'Evergreen' | 'FreeStudent';
-  link: string;
-}
-
-const activeDeals: Deal[] = [
-  // 1. Promo Codes & Sales
-  {
-    id: 'd-progecad',
-    toolId: 't57', // progeCAD Pro
-    title: 'progeCAD Professional Discount',
-    description: 'Get the highly versatile, DWG-compatible AutoCAD alternative with an additional discount for new perpetual licenses.',
-    discount: '15% OFF Perpetual',
-    type: 'Promo',
-    code: 'PROGE15',
-    link: 'https://www.progecad.com/buy',
-  },
-  {
-    id: 'd-dwgfastview',
-    toolId: 't53', // DWG FastView
-    title: 'DWG FastView Premium Upgrade',
-    description: 'Unlock full features, cloud storage, and remove ads across mobile, web, and desktop clients.',
-    discount: '30% OFF Annual',
-    type: 'Promo',
-    code: 'FASTVIEW30',
-    link: 'https://en.dwgfastview.com/upgrade',
-  },
-  {
-    id: 'd-nanocad',
-    toolId: 't56', // nanoCAD
-    title: 'nanoCAD Pro Subscription Sale',
-    description: 'Introductory price for new professional subscribers. Pro-grade CAD with parametric 3D modeling and 3D constraints.',
-    discount: '20% OFF New Sub',
-    type: 'Promo',
-    link: 'https://nanocad.com/buy/',
-  },
-  {
-    id: 'd-turbocad',
-    toolId: 't62', // TurboCAD
-    title: 'TurboCAD Platinum Discount',
-    description: 'Special pricing on the all-in-one professional design suite. Powerful 2D drafting and 3D surface/solid modeling.',
-    discount: 'Save $150 Today',
-    type: 'Promo',
-    link: 'https://www.turbocad.com/turbocad-windows/turbocad-platinum.html',
-  },
-  {
-    id: 'd-zwcad-promo',
-    toolId: 't12', // ZWCAD
-    title: 'ZWCAD Perpetual License Promotion',
-    description: 'Save big on lightweight, fast, and fully DWG-compatible CAD. Enjoy perpetual licensing with no forced updates.',
-    discount: '15% OFF New License',
-    type: 'Promo',
-    link: 'https://www.zwsoft.com/zwcad',
-  },
-  {
-    id: 'd-bricscad-promo',
-    toolId: 't13', // BricsCAD
-    title: 'BricsCAD Upgrade & Competitor Trade-in',
-    description: 'Switch from any other CAD to BricsCAD or upgrade your existing perpetual license for exclusive discounts.',
-    discount: 'Up to 20% OFF',
-    type: 'Promo',
-    link: 'https://www.bricsys.com/bricscad',
-  },
-  {
-    id: 'd-gstarcad-tradein',
-    toolId: 't54', // GstarCAD
-    title: 'GstarCAD Competitor Trade-in Bonus',
-    description: 'Switch your AutoCAD or other CAD seat to a GstarCAD perpetual license and claim a 20% discount bonus.',
-    discount: '20% Trade-in Bonus',
-    type: 'Promo',
-    link: 'https://www.gstarcad.net/buy',
-  },
-
-  // 2. Evergreen Commercial Savings
-  {
-    id: 'd-autocad-annual',
-    toolId: 't1', // AutoCAD
-    title: 'AutoCAD Annual Plan Discount',
-    description: 'Save 10% compared to monthly payments by choosing the AutoCAD annual subscription plan.',
-    discount: 'Save 10% Annually',
-    type: 'Evergreen',
-    link: 'https://www.autodesk.com/products/autocad/overview',
-  },
-  {
-    id: 'd-sketchup-annual',
-    toolId: 't3', // SketchUp
-    title: 'SketchUp Pro Annual Plan',
-    description: 'Save on 3D modeling and layout documentation by selecting the annual subscription billing option.',
-    discount: 'Save ~12% on Pro',
-    type: 'Evergreen',
-    link: 'https://www.sketchup.com/plans-and-pricing/higher-education',
-  },
-  {
-    id: 'd-fusion-annual',
-    toolId: 't5', // Fusion 360
-    title: 'Autodesk Fusion Annual Plan',
-    description: 'Save around 33% by billing the unified CAD/CAM/CAE workspace annually instead of monthly.',
-    discount: 'Save 33% Annually',
-    type: 'Evergreen',
-    link: 'https://www.autodesk.com/products/fusion-360',
-  },
-  {
-    id: 'd-rhino-edu',
-    toolId: 't6', // Rhino 3D
-    title: 'Rhino 3D Student & Faculty License',
-    description: 'Get the full commercial version of Rhino 3D at a massive discount. Perpetual license, no subscription fees, no expiry.',
-    discount: '80% OFF License',
-    type: 'Evergreen',
-    link: 'https://www.rhino3d.com/',
-  },
-  {
-    id: 'd-vectorworks-edu',
-    toolId: 't17', // Vectorworks
-    title: 'Vectorworks Academic Pricing',
-    description: 'Deep student discounts on professional BIM, landscape design, and entertainment architecture design tools.',
-    discount: 'Over 90% OFF',
-    type: 'Evergreen',
-    link: 'https://www.vectorworks.net/',
-  },
-
-  // 3. Free & Student Plans
-  {
-    id: 'd-autocad-student',
-    toolId: 't1', // AutoCAD
-    title: 'AutoCAD Student Free Access',
-    description: 'Get free 1-year renewable access to Autodesk software and services for educational purposes.',
-    discount: '100% FREE / Student',
-    type: 'FreeStudent',
-    link: 'https://www.autodesk.com/education/edu-software',
-  },
-  {
-    id: 'd-solidworks-student',
-    toolId: 't2', // SolidWorks
-    title: 'SolidWorks for Students',
-    description: 'Access the complete CAD/CAE suite for education, including free CSWA/CSWP exam certification vouchers.',
-    discount: '90% OFF / Free CSWA',
-    type: 'FreeStudent',
-    link: 'https://www.solidworks.com/solution/organization-type/students',
-  },
-  {
-    id: 'd-fusion-hobbyist',
-    toolId: 't5', // Fusion 360
-    title: 'Autodesk Fusion for Personal Use',
-    description: 'Free version for non-commercial projects, qualifying hobbyists, and startups generating under $1,000/year.',
-    discount: 'FREE for Hobbyists',
-    type: 'FreeStudent',
-    link: 'https://www.autodesk.com/products/fusion-360/personal',
-  },
-  {
-    id: 'd-onshape-free',
-    toolId: 't14', // Onshape
-    title: 'Onshape Free Non-Commercial Plan',
-    description: 'Professional cloud-native parametric CAD for makers, hobbyists, and open-source project designers.',
-    discount: 'FREE / Public Docs',
-    type: 'FreeStudent',
-    link: 'https://www.onshape.com/en/products/free',
-  },
-  {
-    id: 'd-freecad-free',
-    toolId: 't11', // FreeCAD
-    title: 'FreeCAD Open Source Desktop CAD',
-    description: '100% free and open-source parametric 3D CAD modeling software. Perpetual access with no restrictions.',
-    discount: '100% FREE Forever',
-    type: 'FreeStudent',
-    link: 'https://www.freecad.org/',
-  },
-  {
-    id: 'd-qcad-free',
-    toolId: 't55', // QCAD
-    title: 'QCAD Community Edition',
-    description: 'Community-driven, free, open-source 2D CAD systems for drafting, schematics, and vector engineering.',
-    discount: '100% FREE Core',
-    type: 'FreeStudent',
-    link: 'https://qcad.org/',
-  },
-  {
-    id: 'd-blender-free',
-    toolId: 't51', // Blender
-    title: 'Blender 3D Suite',
-    description: 'Free open-source 3D software for modeling, rigging, animation, rendering, simulation, and compositing.',
-    discount: '100% FREE Creator Suite',
-    type: 'FreeStudent',
-    link: 'https://www.blender.org/',
-  }
-];
+import { activeDeals, type Deal } from '@/lib/deals-data';
 
 export default function DealsPage() {
   const [activeTab, setActiveTab] = useState<'all' | 'Promo' | 'Evergreen' | 'FreeStudent'>('all');
@@ -322,9 +132,21 @@ export default function DealsPage() {
                   <div className="text-2xl font-black text-blue-600 mb-4 tracking-tight">
                     {deal.discount}
                   </div>
-                  <p className="text-slate-500 text-sm font-medium leading-relaxed mb-6">
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed mb-4">
                     {deal.description}
                   </p>
+
+                  {tool && (
+                    <Link
+                      href={`/tools/${tool.slug}`}
+                      className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700 mb-6 transition-colors group/link"
+                    >
+                      Read Full {tool.name} Review
+                      <svg className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </Link>
+                  )}
 
                   {deal.expires && (
                     <div className="flex items-center gap-2 text-[10px] font-bold text-red-500 uppercase tracking-widest mb-4">

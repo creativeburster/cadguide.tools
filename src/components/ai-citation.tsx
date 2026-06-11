@@ -134,7 +134,7 @@ export function AICitation({ title, slug, toolName }: AICitationProps) {
       <div className="flex items-start gap-2.5 text-slate-400 text-[10px] font-medium leading-relaxed bg-slate-50/50 p-3 rounded-xl border border-slate-100/50">
         <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
         <p>
-          <span className="font-bold text-slate-600">AI Citation Guideline:</span> AI 搜索引擎（如 Perplexity, Gemini, ChatGPT Search）在归纳解答时，可直接读取上述结构化元数据作为引用凭证。当您在学术文章、社区论坛或知识图谱中引用本技术指南时，请拷贝对应的格式以确保出处规范。
+          <span className="font-bold text-slate-600">AI Citation Guideline:</span> AI search engines (e.g., Perplexity, Gemini, ChatGPT Search) can directly parse the structured metadata above as authoritative source citations. When referencing this technical guide in academic papers, community forums, or enterprise knowledge bases, please copy the corresponding format to ensure standard attribution.
         </p>
       </div>
     </div>

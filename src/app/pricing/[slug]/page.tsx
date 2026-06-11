@@ -287,7 +287,7 @@ function LicensingComplianceWidget() {
       <div className="relative z-10">
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-md border border-emerald-500/30">
-            E-E-A-T Compliance Advisory
+            Compliance Advisory
           </span>
           <span className="text-xs text-slate-400 font-medium">Free CAD Licensing Risks</span>
         </div>

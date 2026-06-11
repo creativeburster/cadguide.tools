@@ -1,4 +1,24 @@
+const fs = require('fs');
+const path = require('path');
 
+// 收集所有具有 generateStaticParams 的路由文件
+const pageFiles = [
+  'src/app/alternatives/[slug]/page.tsx',
+  'src/app/best/feature/[slug]/page.tsx',
+  'src/app/best/[slug]/page.tsx',
+  'src/app/compare/[pair]/page.tsx',
+  'src/app/file-formats/[slug]/page.tsx',
+  'src/app/for/[slug]/page.tsx',
+  'src/app/guides/[slug]/page.tsx',
+  'src/app/platforms/[slug]/page.tsx',
+  'src/app/pricing/[slug]/page.tsx',
+  'src/app/sectors/[slug]/page.tsx',
+  'src/app/toolbox/[slug]/page.tsx',
+  'src/app/tools/[slug]/page.tsx'
+];
+
+// 写入一个临时的 tsx 执行脚本，直接在真实 Node 环境中 import 这些函数并计算它们返回的 params.length
+const runnerContent = `
 import { tools } from '../src/lib/data';
 import { TOOLBOX_DATA } from '../src/lib/toolbox-data';
 
@@ -57,3 +77,7 @@ async function main() {
 }
 
 main().catch(console.error);
+`;
+
+fs.writeFileSync('./scratch/run_count_static.ts', runnerContent, 'utf8');
+console.log('Static pages runner written.');

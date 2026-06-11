@@ -187,7 +187,7 @@ export const ARTICLES_LIST: GuideArticleCard[] = [
       id: `${sec.id}-art-${aIdx}`,
       category: sec.category,
       title: art.title,
-      excerpt: `Detailed expert blueprint for ${art.title}. Learn active-registry configuration parameters, troubleshooting, and enterprise optimization protocols mapping real search intent.`,
+      excerpt: `Detailed expert blueprint for ${art.title}. Learn active-registry configuration parameters, troubleshooting, and enterprise optimization protocols tailored for enterprise engineering workflows.`,
       author: 'Will P. (BIM Architect)',
       readTime: `${5 + (aIdx % 3) * 2} min read`,
       date: 'May 2026',

@@ -710,6 +710,30 @@ export default async function ComparePairPage(
     </section>
   );
 
+  // Metropolitan Interlink Phase 2: Keep Exploring cross-links
+  const categoryForA = categories.find(c => c.id === a.category_id);
+  const exploreBlock = (
+    <section key="explore-block" className="mt-10 pt-6 border-t border-slate-100">
+      <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Keep Exploring</h3>
+      <div className="flex flex-wrap gap-2">
+        <Link href={`/alternatives/${a.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-xl text-xs font-bold text-slate-600 transition-all">
+          {a.name} Alternatives
+        </Link>
+        <Link href={`/alternatives/${b.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-xl text-xs font-bold text-slate-600 transition-all">
+          {b.name} Alternatives
+        </Link>
+        <Link href="/toolbox" className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-xl text-xs font-bold text-slate-600 transition-all">
+          Free CAD Toolbox
+        </Link>
+        {categoryForA && (
+          <Link href={`/best/${categoryForA.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-xl text-xs font-bold text-slate-600 transition-all">
+            Best {categoryForA.name}
+          </Link>
+        )}
+      </div>
+    </section>
+  );
+
   // Dynamic layout sorting based on category archetype
   const renderSortedBlocks = () => {
     switch (layout.archetype) {
@@ -723,6 +747,7 @@ export default async function ComparePairPage(
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {exploreBlock}
           </>
         );
       case 'mcad':
@@ -735,6 +760,7 @@ export default async function ComparePairPage(
             <div className="mt-8">{tableBlock}</div>
             <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {exploreBlock}
           </>
         );
       case 'bim':
@@ -747,6 +773,7 @@ export default async function ComparePairPage(
             <div className="mt-8">{quickSpecsBlock}</div>
             <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {exploreBlock}
           </>
         );
       case 'simulation':
@@ -759,6 +786,7 @@ export default async function ComparePairPage(
             <div className="mt-8">{quickSpecsBlock}</div>
             <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {exploreBlock}
           </>
         );
       default:
@@ -771,6 +799,7 @@ export default async function ComparePairPage(
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {exploreBlock}
           </>
         );
     }

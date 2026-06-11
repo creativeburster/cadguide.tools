@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 import { RelatedTools } from '@/components/related-tools';
+import Link from 'next/link';
 
 type Params = Promise<{ slug: string }>;
 
@@ -124,6 +125,44 @@ export default async function ToolboxDetailPlaceholderPage({ params }: { params:
           ) : (
             <RelatedTools />
           )}
+        </div>
+
+        {/* Metropolitan Interlink: Cross-type navigation */}
+        <div className="max-w-[700px] w-full mt-8 space-y-4">
+          <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest px-2">Continue Exploring</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href={`/guides/${(() => {
+                const s = slug.toLowerCase();
+                if (s.includes('dwg') || s.includes('dxf') || s.includes('font') || s.includes('version') || s.includes('regapp')) return 'troubleshooting';
+                if (s.includes('pdf') || s.includes('print') || s.includes('viewport')) return 'printing';
+                if (s.includes('step') || s.includes('stl') || s.includes('obj') || s.includes('gltf') || s.includes('k-factor') || s.includes('thread') || s.includes('weld') || s.includes('spring') || s.includes('screw') || s.includes('pipe')) return 'manufacturing';
+                if (s.includes('ifc') || s.includes('revit') || s.includes('skp') || s.includes('fbx')) return 'standards';
+                if (s.includes('license') || s.includes('audit')) return 'procurement';
+                if (s.includes('compare') || s.includes('diff') || s.includes('layer')) return 'standards';
+                if (s.includes('point-cloud') || s.includes('las') || s.includes('mesh')) return 'manufacturing';
+                return 'troubleshooting';
+              })()}`}
+              className="flex-1 min-w-[140px] p-4 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group text-center"
+            >
+              <div className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1">📖 Expert Guides</div>
+              <div className="text-xs font-bold text-slate-600 group-hover:text-blue-600 transition-colors">Related Tutorials</div>
+            </Link>
+            <Link
+              href="/matchmaker"
+              className="flex-1 min-w-[140px] p-4 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group text-center"
+            >
+              <div className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1">✨ AI Matchmaker</div>
+              <div className="text-xs font-bold text-slate-600 group-hover:text-blue-600 transition-colors">Find Your CAD Tool</div>
+            </Link>
+            <Link
+              href="/compare"
+              className="flex-1 min-w-[140px] p-4 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group text-center"
+            >
+              <div className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1">⚔️ Compare</div>
+              <div className="text-xs font-bold text-slate-600 group-hover:text-blue-600 transition-colors">Head-to-Head PK</div>
+            </Link>
+          </div>
         </div>
       </main>
     </>

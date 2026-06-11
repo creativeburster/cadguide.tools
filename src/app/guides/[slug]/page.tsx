@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
 import { AICitation } from '@/components/ai-citation';
 import { ARTICLES_LIST, CATEGORY_SECTIONS, getArchetypeMetadata, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from '@/lib/guides-data';
-import { Award, Cpu, ArrowLeft, AlertTriangle, ShieldAlert, BookOpen, ArrowRight, Layers, Printer, Settings, Scale, FileSpreadsheet, FolderGit, Activity } from 'lucide-react';
+import { Award, Cpu, ArrowLeft, AlertTriangle, ShieldAlert, BookOpen, ArrowRight, Layers, Printer, Settings, Scale, FileSpreadsheet, FolderGit, Activity, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 import { comparisonPairs } from '@/lib/seo-content';
 
@@ -1149,7 +1149,7 @@ export function renderStandardsDirective(tool: typeof tools[number], title: stri
         </Card>
         
         <Card className="rounded-[24px] p-5 border border-slate-100 shadow-sm bg-white font-mono text-[11px] space-y-3">
-          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">E-E-A-T AUDIT METRICS</span>
+          <span className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-2">TECHNICAL AUDIT METRICS</span>
           <div className="flex justify-between">
             <span className="text-slate-400">Authority Level:</span>
             <span className="text-slate-900 font-black">Enterprise Certified</span>
@@ -2030,7 +2030,7 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
                   {catInfo.desc}
                 </p>
                 <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100/80 text-slate-500 font-medium text-xs leading-relaxed">
-                  <strong>E-E-A-T Technical Statement:</strong> This category functions as a critical vascular artery in the national CAD/BIM/CAx coordination framework. Programmatic listicles and generic AI-generated articles are explicitly blocked. All technical guidelines, registry configurations, shell commands, and compliance option variables mapped herein reflect authentic verified enterprise engineering workflows.
+                  <strong>Technical Compliance Statement:</strong> This category functions as a critical vascular artery in the national CAD/BIM/CAx coordination framework. Programmatic listicles and generic AI-generated articles are explicitly blocked. All technical guidelines, registry configurations, shell commands, and compliance option variables mapped herein reflect authentic verified enterprise engineering workflows.
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
@@ -2224,7 +2224,7 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
                         {art.title}
                       </h4>
                       <p className="text-slate-500 text-xs leading-relaxed font-medium">
-                        Detailed expert blueprint for {art.title}. Learn active-registry configuration parameters, troubleshooting options file variables, and enterprise optimization protocols mapping real search intent.
+                        Detailed expert blueprint for {art.title}. Learn active-registry configuration parameters, troubleshooting options file variables, and enterprise optimization protocols tailored for enterprise engineering workflows.
                       </p>
                     </div>
 
@@ -2853,6 +2853,77 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   </Button>
                 </div>
               </Card>
+
+              {/* Metropolitan Interlink: Related Toolbox Utilities */}
+              <Card className="rounded-[24px] md:rounded-[32px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <h3 className="text-[11px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                  <Settings className="w-4 h-4" /> Free Online Tools
+                </h3>
+                <div className="space-y-2">
+                  {(() => {
+                    const toolboxMap: Record<string, { slug: string; label: string }[]> = {
+                      troubleshooting: [
+                        { slug: 'dwg-version-checker', label: 'DWG Version Checker' },
+                        { slug: 'missing-font-shx-resolver', label: 'Missing Font Resolver' },
+                      ],
+                      printing: [
+                        { slug: 'online-dwg-to-pdf-cloud-printer', label: 'DWG to PDF Printer' },
+                        { slug: 'viewport-scale-factor-converter', label: 'Viewport Scale Converter' },
+                      ],
+                      standards: [
+                        { slug: 'online-dwg-compare-diff-viewer', label: 'DWG Compare Viewer' },
+                        { slug: 'online-dwg-layer-splitter-cloud', label: 'Layer Splitter' },
+                      ],
+                      migration: [
+                        { slug: 'online-dwg-to-dxf-batch-converter', label: 'DWG to DXF Converter' },
+                        { slug: 'online-step-to-stl-slicer-helper', label: 'STEP to STL Helper' },
+                      ],
+                      manufacturing: [
+                        { slug: 'k-factor-calculator', label: 'K-Factor Calculator' },
+                        { slug: 'thread-drill-size-calculator', label: 'Thread Drill Size Calculator' },
+                      ],
+                      performance: [
+                        { slug: 'online-dwg-compare-diff-viewer', label: 'DWG Compare Viewer' },
+                        { slug: 'missing-regapp-cleaner-batch', label: 'RegApp Cleaner Batch' },
+                      ],
+                      procurement: [
+                        { slug: 'online-cad-license-audit-shield', label: 'License Audit Shield' },
+                      ],
+                      deployment: [
+                        { slug: 'online-cad-license-audit-shield', label: 'License Audit Shield' },
+                        { slug: 'dwg-version-checker', label: 'DWG Version Checker' },
+                      ],
+                    };
+                    const items = toolboxMap[category] || toolboxMap['troubleshooting'];
+                    return items.map((item) => (
+                      <Link
+                        key={item.slug}
+                        href={`/toolbox/${item.slug}`}
+                        className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all group border border-slate-50 hover:border-blue-100"
+                      >
+                        <span className="font-bold text-slate-800 text-xs truncate group-hover:text-blue-600 transition-colors">
+                          {item.label}
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
+                      </Link>
+                    ));
+                  })()}
+                </div>
+                <Link href="/toolbox" className="block text-center text-[10px] font-bold text-slate-400 hover:text-blue-600 uppercase tracking-widest transition-colors pt-2">
+                  Browse All 25+ Tools →
+                </Link>
+              </Card>
+
+              {/* Metropolitan Interlink: AI Matchmaker CTA */}
+              <Link href="/matchmaker" className="block rounded-[24px] md:rounded-[32px] p-5 sm:p-6 bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-200/50 hover:shadow-xl hover:-translate-y-0.5 transition-all group">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="w-8 h-8 text-blue-200 group-hover:rotate-12 transition-transform" />
+                  <div>
+                    <div className="font-black text-sm">Not sure which tool?</div>
+                    <div className="text-blue-200 text-xs font-medium">Try AI Matchmaker →</div>
+                  </div>
+                </div>
+              </Link>
             </aside>
           </div>
         </div>

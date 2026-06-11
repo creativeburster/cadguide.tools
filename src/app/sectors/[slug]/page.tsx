@@ -447,7 +447,7 @@ function renderAdvisory(s: SectorPage, style: SectorStyle) {
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">🛡️</span>
           <div>
-            <h3 className="text-base font-bold text-slate-900">E-E-A-T Professional Advisory</h3>
+            <h3 className="text-base font-bold text-slate-900">Professional Advisory</h3>
             <p className="text-xs text-slate-500">Verified industry guidelines for {s.shortNoun}s</p>
           </div>
         </div>

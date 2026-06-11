@@ -13,6 +13,7 @@ import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { comparisonPairs } from "@/lib/seo-content";
 import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from "@/lib/guides-data";
+import { getBestDealForTool } from '@/lib/deals-data';
 
 interface Props {
   tool: Tool;
@@ -22,6 +23,7 @@ interface Props {
 
 export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
+  const bestDeal = getBestDealForTool(tool.id);
 
   // Helper functions for dynamic tree capillaries
   const getPlatformSlug = (platName: string): string | null => {
@@ -1146,7 +1148,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
 
                         <div className="flex items-center justify-between pt-2">
                           <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                            Intent: {g.keyword}
+                            Focus: {g.keyword}
                           </span>
                           <Link href={`/guides/${g.slug}`} className="text-xs font-black text-blue-600 hover:underline">
                             Read Guide →
@@ -1295,6 +1297,38 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   </p>
                 </CardContent>
               </Card>
+
+              {/* Special Offer Card */}
+              {bestDeal && (
+                <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-6 md:p-8 rounded-[24px] md:rounded-[40px] text-white relative overflow-hidden shadow-xl shadow-emerald-200 group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                  <div className="relative z-10">
+                    <div className="text-emerald-100 font-black uppercase text-[9px] tracking-[0.25em] mb-2 flex items-center gap-1.5">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+                      Active Deal
+                    </div>
+                    <div className="text-2xl font-black mb-2 tracking-tight">{bestDeal.discount}</div>
+                    <p className="text-emerald-100 text-xs font-medium mb-4 leading-relaxed line-clamp-2">{bestDeal.description}</p>
+                    {bestDeal.code && (
+                      <div className="bg-white/20 backdrop-blur rounded-xl px-3 py-2 mb-4 text-center">
+                        <span className="text-[9px] font-bold text-emerald-100 uppercase tracking-widest">Code: </span>
+                        <span className="font-black text-sm tracking-wider">{bestDeal.code}</span>
+                      </div>
+                    )}
+                    <Button
+                      asChild
+                      className="w-full bg-white text-emerald-700 hover:bg-emerald-50 font-black rounded-2xl h-12 shadow-lg shadow-emerald-900/20 text-xs"
+                    >
+                      <a href={bestDeal.link} target="_blank" rel="nofollow noopener noreferrer">
+                        Claim This Deal →
+                      </a>
+                    </Button>
+                    <Link href="/deals" className="block text-center mt-3 text-emerald-200 text-[10px] font-bold uppercase tracking-widest hover:text-white transition-colors">
+                      See All Active Deals →
+                    </Link>
+                  </div>
+                </div>
+              )}
 
               {/* AI Matchmaker Sidebar Card (Restored) */}
               <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-6 md:p-10 rounded-[24px] md:rounded-[48px] text-white relative overflow-hidden shadow-xl shadow-blue-200 group">
