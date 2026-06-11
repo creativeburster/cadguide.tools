@@ -414,7 +414,7 @@ function CompareContent() {
             Directory Catalog
           </Badge>
           <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
-            Browse Comparison Guides by Engineering Discipline
+            Browse Comparisons by Engineering Discipline
           </h2>
           <p className="text-slate-500 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
             Direct indexing of our curated competitor pairings. Formulated to target high-value buyer decision queries with no doorway pages.
@@ -474,7 +474,7 @@ function CompareContent() {
                         {disc.name}
                       </h3>
                       <Badge className={`font-bold rounded-lg text-[10px] tracking-wider uppercase ${disc.badgeBg}`}>
-                        {list.length} Guides
+                        {list.length} Comparisons
                       </Badge>
                     </div>
                     <p className="text-slate-500 text-sm max-w-3xl leading-relaxed">
