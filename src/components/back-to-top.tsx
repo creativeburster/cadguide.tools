@@ -7,8 +7,8 @@ export function BackToTop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Toggle visibility based on scroll depth (300px threshold)
-      if (window.scrollY > 300) {
+      // Toggle visibility based on scroll depth (2000px threshold for long pages only)
+      if (window.scrollY > 2000) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
