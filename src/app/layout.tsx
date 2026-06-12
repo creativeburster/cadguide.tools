@@ -6,6 +6,7 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { Navbar } from "@/components/navbar";
 import { PWARegistration } from "@/components/pwa-registration";
 import { SiteNotice } from "@/components/site-notice";
+import { BackToTop } from "@/components/back-to-top";
 import Script from "next/script";
 
 const inter = Inter({
@@ -93,6 +94,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
+        <BackToTop />
       </body>
     </html>
   );
