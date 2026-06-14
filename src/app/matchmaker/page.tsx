@@ -1,5 +1,6 @@
 import { pageMetadata, siteBreadcrumbLd, howToLd } from '@/lib/seo';
 import type { Metadata } from 'next';
+import { comparisonPairs } from '@/lib/seo-content';
 import MatchmakerClient from './matchmaker-client';
 
 export const metadata: Metadata = pageMetadata({
@@ -15,6 +16,8 @@ export default function Page() {
     { name: 'Matchmaker', path: '/matchmaker' },
   ]);
   const howTo = howToLd();
+  const validCompareSlugs = comparisonPairs().map((p) => p.pairSlug);
+
   return (
     <>
       <script
@@ -25,7 +28,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}
       />
-      <MatchmakerClient />
+      <MatchmakerClient validCompareSlugs={validCompareSlugs} />
     </>
   );
 }

@@ -9,10 +9,11 @@ import { Input } from '@/components/ui/input';
 import { ToolLogo } from '@/components/tool-logo';
 import Link from 'next/link';
 
-export default function MatchmakerPage() {
+export default function MatchmakerPage({ validCompareSlugs = [] }: { validCompareSlugs?: string[] }) {
   const [step, setStep] = useState(1);
   const [isDeepMatch, setIsDeepMatch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const validCompareSet = useMemo(() => new Set(validCompareSlugs), [validCompareSlugs]);
   
   const [selections, setSelections] = useState({
     industry: '',
@@ -409,15 +410,20 @@ export default function MatchmakerPage() {
                         </div>
                         {/* Cross-type exploration pills */}
                         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-50">
-                          {idx === 0 && topMatches.length >= 2 && (
-                            <Link
-                              href={`/compare/${[tool.slug, topMatches[1].slug].sort().join('-vs-')}`}
-                              className="inline-flex items-center gap-1 px-3 py-1.5 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-[10px] font-bold text-slate-500 transition-all"
-                            >
-                              <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
-                              Compare with #{idx + 2}
-                            </Link>
-                          )}
+                          {(() => {
+                            if (idx !== 0 || topMatches.length < 2) return null;
+                            const compareSlug = [tool.slug, topMatches[1].slug].sort().join('-vs-');
+                            if (!validCompareSet.has(compareSlug)) return null;
+                            return (
+                              <Link
+                                href={`/compare/${compareSlug}`}
+                                className="inline-flex items-center gap-1 px-3 py-1.5 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-[10px] font-bold text-slate-500 transition-all"
+                              >
+                                <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                                Compare with #{idx + 2}
+                              </Link>
+                            );
+                          })()}
                           <Link
                             href={`/alternatives/${tool.slug}`}
                             className="inline-flex items-center gap-1 px-3 py-1.5 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-[10px] font-bold text-slate-500 transition-all"

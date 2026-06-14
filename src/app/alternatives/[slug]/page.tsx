@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from '@/lib/guides-data';
-import { alternativesFor, alternativesPagePaths } from '@/lib/seo-content';
+import { alternativesFor, alternativesPagePaths, comparisonPairs } from '@/lib/seo-content';
 import { getToolBySlug, type Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
@@ -372,6 +372,8 @@ function renderAlternativesFAQs(tool: Tool, alts: Tool[], style: AlternativeStyl
 }
 
 function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyle) {
+  const validCompareSlugs = new Set(comparisonPairs().map((p) => p.pairSlug));
+
   return (
     <section className="mb-12">
       <div className="flex items-center justify-between mb-6">
@@ -433,12 +435,18 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
                   >
                     Full {alt.name} Profile →
                   </Link>
-                  <Link
-                    href={`/compare/${[tool.slug, alt.slug].sort().join('-vs-')}`}
-                    className="text-xs font-bold text-slate-600 hover:underline"
-                  >
-                    Compare Side-by-Side
-                  </Link>
+                  {(() => {
+                    const compareSlug = [tool.slug, alt.slug].sort().join('-vs-');
+                    if (!validCompareSlugs.has(compareSlug)) return null;
+                    return (
+                      <Link
+                        href={`/compare/${compareSlug}`}
+                        className="text-xs font-bold text-slate-600 hover:underline"
+                      >
+                        Compare Side-by-Side
+                      </Link>
+                    );
+                  })()}
                 </div>
               </div>
             </div>
