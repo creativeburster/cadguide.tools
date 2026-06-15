@@ -201,7 +201,7 @@
 
 | 平台 | URL | 状态 | 收录日期 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
-| **LinkedIn** | `https://linkedin.com` | `[ ] 待创建` | - | 公司页面 |
+| **LinkedIn** | `https://linkedin.com` | `[x] 已创建` | 2026-06-15 | 公司页面，已添加 Visit Website 按钮 |
 | **Medium Profile** | `https://medium.com` | `[ ] 待创建` | - | 个人简介 |
 | **Pinterest** | `https://pinterest.com` | `[x] 已创建` | 2026-06-04 | CAD Resources Board |
 | **About.me** | `https://about.me` | `[ ] 待创建` | - | 个人页面 |
