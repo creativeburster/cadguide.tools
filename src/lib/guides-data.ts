@@ -709,6 +709,24 @@ export function isArticleCompatibleWithTool(articleTitle: string, articleCategor
     if (!supportsCAMorPrint) return false;
   }
 
+  // (G) 电气原理图 (Electrical/Schematic/IEC) -> 限通用 CAD 及 EDA，屏蔽创意/渲染软件 (如 V-Ray, Keyshot, Blender 等)
+  if (titleLower.includes('electrical') || titleLower.includes('schematic') || titleLower.includes('iec')) {
+    const isCreativeOrRender = isRendering || industries.some((i: string) => /rendering|animation|creative|game/i.test(i)) || ['v-ray', 'lumion', 'keyshot', 'corona-renderer', 'octane-render', 'blender', 'zbrush', 'maya', '3ds-max', 'cinema-4d'].includes(tool.slug);
+    if (isCreativeOrRender) return false;
+  }
+
+  // (H) BIM / BEP 协同标准 -> 屏蔽纯机械 CAD (如 SolidWorks, Creo, CATIA, Solid Edge) 与纯 EDA 电子软件 (如 Altium Designer, EPLAN)
+  if (titleLower.includes('bim execution') || titleLower.includes('bep') || titleLower.includes('lod 300')) {
+    const isPureMechanicalOrEda = ['solidworks', 'ptc-creo', 'catia', 'solid-edge', 'altium-designer', 'eplan', 'orcad'].includes(tool.slug);
+    if (isPureMechanicalOrEda) return false;
+  }
+
+  // (I) LISP / PGP / CUIX 配置指南 -> 必须是支持 LISP 引擎与 PGP 别名的 DWG 大类工具及 Rhino，屏蔽纯 BIM (Revit) 和纯机械
+  if (titleLower.includes('lisp') || titleLower.includes('pgp') || titleLower.includes('cuix')) {
+    const isDwgOrRhino = ['autocad', 'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad', 'qcad', 'rhino-3d'].includes(tool.slug);
+    if (!isDwgOrRhino) return false;
+  }
+
   // 3. 基础行业熔断守卫：
   // 纯二维 CAD 绝不生成三维曲面/网格/CAM加工/B-Rep/G-Code 相关的文章
   if (is2D && !is3D) {
