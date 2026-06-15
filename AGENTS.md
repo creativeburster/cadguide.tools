@@ -10,6 +10,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 欢迎来到 `cadguide.tools` 的协作空间！为了保证多 Agent 协作的一致性、对用户表达的流畅性以及系统架构的纯净度，所有进入本项目的 AI 编码智能体必须严格遵循以下开发原则。
 
+> [!IMPORTANT]
+> **🌟 终极红线原则：绝对禁止擅自推送代码 (Strict Git Push Ban)**
+> 无论在何种情况下，智能体**绝对不允许自主执行 `git push` 命令**！
+> 必须在本地完成修改、本地通过 `npx tsc --noEmit` 和 `npm run build` 验证无误、提交 `git commit` 后，将状态呈报给用户。
+> **只有当用户在对话中明确下达“push”或“推送”指令时，智能体方可执行推送。** 屡教不改者将被直接熔断或终止运行。
+
 ---
 
 ## 🇨🇳 1. 核心交互原则：必须使用中文回复用户 (Must Respond in Chinese)
@@ -26,7 +32,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 *   **项目灵魂与人格契约**：[SOUL.md](file:///f:/cad%20tools%20io/cadtools-cc/SOUL.md) — 记录了 Antigravity 的人格规范、已完成的重要里程碑和代码习惯。
 *   **产品百科与计算器 PRD**：[WIKIHUB_PRD.md](file:///f:/cad%20tools%20io/cadtools-cc/docs/WIKIHUB_PRD.md) — 包含百科全量方案、只读静态 SQLite 架构设计以及 100 阶段落地开发计划。
 *   **开发路线与内容生成计划**：[PLAN.md](file:///f:/cad%20tools%20io/cadtools-cc/PLAN.md) — 记录了五大交互计算器指标、跨软件长尾排错内容规划与开发阶段跟踪。
-*   **用户画像与分销变现模型**：[PERSONA.md](file:///f:/cad%20tools%20io/cadtools-cc/PERSONA.md) — 记录了四类靶向设计师画像，以及基于客户端拦截的子联盟网络（Brandreward / Sovrn）的无缝转化逻辑。
+*   **用户画像与分销变现模型**：[PERSONA.md](file:///f:/cad%20tools%20io/cadtools-cc/PERSONA.md) — 记录了四类靶向设计师画像，以及基于客户端拦截 of 子联盟网络（Brandreward / Sovrn）的无缝转化逻辑。
 *   **外链建设与推广指南**：[LINKBUILDING.md](file:///f:/cad%20tools%20io/cadtools-cc/LINKBUILDING.md) — 记录了海外高权重目录、替代平台提交文案包以及社交引流策略。
 
 ---
@@ -44,9 +50,21 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 *   **严禁无脑随机拼凑**：全站禁止进行任何形式的“随机抓取词库、段落胡乱拼接”的灌水生成。所有长尾 Guides 技术指南必须基于逻辑 100% 自洽、合理的专业文章母版，通过属性分发实现规模化。
 *   **强类型特征物理熔断**：在 `isArticleCompatibleWithTool` 过滤引擎中，必须以硬代码写死特征熔断，从源头杜绝“秦琼战关公”的不合理配置：
-    *   *开源/免费软件*（如 FreeCAD, LibreCAD）：绝对不允许生成任何商业授权（License/FLEXlm/EULA 审计/Seat 采购）相关网页。
+    *   *开源/免费软件*（如 FreeCAD, LibreCAD）：绝对不允许生成 any 商业授权（License/FLEXlm/EULA 审计/Seat 采购）相关网页。
     *   *纯 2D 绘图 CAD*（如 QCAD, DraftSight）：绝对不允许生成 3D 实体（STEP/IGES/B-Rep）缝合、3D 打印切片、钣金折弯系数（K-Factor/G-Code）相关网页。
     *   *纯创意动画/渲染软件*（如 V-Ray, KeyShot, Blender）：绝对不允许生成电气原理图（IEC/Schematic）或建筑属性协同（IFC4/BEP）相关网页。
     *   *不支持 LISP/PGP 引擎软件*（如 Revit, SolidWorks）：绝对不允许生成 AutoLISP 脚本运行、PGP 命令简写别名配置、CUIX 菜单修改相关网页。
 *   **行话方言映射适配 (Jargon Map)**：针对不同的软件门类（MCAD, BIM, AEC, Creative），必须调用其专属词汇字典进行本地化重写（如 AEC 替换为图纸/图层，MCAD 替换为 Feature Tree/Sketch），确保术语符合该领域高工的真实工作习惯。
 *   **上线前的“极端用例”脑补推演**：AI 智能体在完成任何涉及网页数量扩增（如本轮 Guides 从 10 篇放宽至 20 篇）后，**必须在脑海中把最极端的工具配对（如 Revit 运行 LISP、V-Ray 配置电气原理图、Altium Designer 配置建筑 BEP）强行带入测试**，一旦有万分之一的张冠李戴风险，必须立刻加固熔断逻辑，否则严禁提交或部署。
+
+---
+
+## 🚫 5. 严格的 Git 推送禁令与 Vercel 额度守护 (Strict Git Push Ban & Vercel Shield)
+
+*   **绝对禁止擅自 Git Push**：在任何情况下，AI 智能体**绝对不允许自主执行 `git push` 命令**。
+*   **额度风控与成本控制**：由于 Vercel 部署存在构建配额与服务成本限制，且 6,160+ 个静态页面的项目全量渲染极为耗时，严禁以任何理由“抢跑推送”。
+*   **标准工作流**：
+    1. 智能体仅在本地 Workspace 修改代码，并通过 `npx tsc --noEmit` 和 `npm run build` 进行类型与构建校验。
+    2. 校验成功后，只在本地完成 `git commit`，并在对话框中将构建输出呈报给用户。
+    3. **有且仅有当用户在聊天对话中发出明确的“推送”或“push”字样时，智能体方可执行 `git push`**。
+*   **违反后果**：未经用户首肯擅自执行 push 将被视为严重违规与逻辑越权故障。
