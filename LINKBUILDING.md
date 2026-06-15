@@ -186,10 +186,10 @@
 
 | 平台 | URL | 状态 | 收录日期 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
-| **GitHub Awesome List** | `https://github.com` | `[ ] 待创建` | - | 创建 awesome-cad-resources 仓库 |
-| **Dev.to** | `https://dev.to` | `[ ] 待发文` | - | 注册即发，Nofollow |
+| **GitHub Awesome List** | `https://github.com` | `[x] 已创建` | 2026-06-07 | 创建 awesome-cad-resources 仓库 |
+| **Dev.to** | `https://dev.to` | `[x] 已创建` | 2026-06-07 | 注册即发，已发布第一篇文章 |
 | **Hashnode** | `https://hashnode.com` | `[ ] 待发文` | - | 注册即发，Dofollow |
-| **Medium** | `https://medium.com` | `[ ] 待发文` | - | 注册即发，Nofollow |
+| **Medium** | `https://medium.com` | `[x] 已创建` | 2026-06-15 | 注册即发，已发布 AutoCAD 选型干货文章 |
 | **HackerNoon** | `https://hackernoon.com` | `[ ] 待投稿` | - | 24h 审核，Dofollow |
 | **SaaSHub** | `https://www.saashub.com` | `[x] 已创建` | 2026-06-15 | 1-2 天审核，已完成验证 |
 | **ToolPilot.ai** | `https://www.toolpilot.ai` | `[ ] 待提交` | - | 当天通过 |
@@ -202,7 +202,7 @@
 | 平台 | URL | 状态 | 收录日期 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
 | **LinkedIn** | `https://linkedin.com` | `[x] 已创建` | 2026-06-15 | 公司页面，已添加 Visit Website 按钮 |
-| **Medium Profile** | `https://medium.com` | `[ ] 待创建` | - | 个人简介 |
+| **Medium Profile** | `https://medium.com` | `[x] 已创建` | 2026-06-15 | 个人简介，已添加 cadguide.tools 链接 |
 | **Pinterest** | `https://pinterest.com` | `[x] 已创建` | 2026-06-04 | CAD Resources Board |
 | **About.me** | `https://about.me` | `[ ] 待创建` | - | 个人页面 |
 | **Crunchbase** | `https://crunchbase.com` | `[ ] 待创建` | - | 公司 Profile |
