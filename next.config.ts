@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
     return [
       // 1. Redirect standards-iso-128-* to standards-iso-*
       {
-        source: '/guides/standards-iso-128-:tool*',
-        destination: '/guides/standards-iso-:tool*',
+        source: '/guides/standards-iso-128-:tool',
+        destination: '/guides/standards-iso-:tool',
         permanent: true, // 301 redirect to transfer GSC SEO weights
       },
       // 2. Redirect industry-high-frequency-pcb-design to industry-pcb-design
