@@ -191,7 +191,7 @@
 | **Hashnode** | `https://hashnode.com` | `[ ] 待发文` | - | 注册即发，Dofollow |
 | **Medium** | `https://medium.com` | `[ ] 待发文` | - | 注册即发，Nofollow |
 | **HackerNoon** | `https://hackernoon.com` | `[ ] 待投稿` | - | 24h 审核，Dofollow |
-| **SaaSHub** | `https://www.saashub.com` | `[ ] 待提交` | - | 1-2 天审核 |
+| **SaaSHub** | `https://www.saashub.com` | `[x] 已创建` | 2026-06-15 | 1-2 天审核，已完成验证 |
 | **ToolPilot.ai** | `https://www.toolpilot.ai` | `[ ] 待提交` | - | 当天通过 |
 | **SideProjectors** | `https://www.sideprojectors.com` | `[ ] 待提交` | - | 即时生效 |
 | **Launching Next** | `https://www.launchingnext.com` | `[ ] 待提交` | - | 即时生效 |
