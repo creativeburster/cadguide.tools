@@ -3381,9 +3381,21 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {catInfo.articles.map((art, aIdx) => {
-                const artIndex = aIdx;
-                // Find matching tool
-                const matchedTool = tools.find(t => art.title.toLowerCase().includes(t.name.toLowerCase())) || tools[0];
+                const templateArt = ARTICLES_LIST.find(a => 
+                  a.title.toLowerCase().trim() === art.title.toLowerCase().trim()
+                );
+                const realIndex = templateArt ? templateArt.id.split('-').pop() : aIdx;
+                
+                // Find a tool that is COMPATIBLE with this article
+                const matchedTool = tools.find(t => 
+                  art.title.toLowerCase().includes(t.name.toLowerCase()) && 
+                  templateArt && isArticleCompatibleWithTool(templateArt.title, templateArt.category, t)
+                ) || tools.find(t => 
+                  templateArt && isArticleCompatibleWithTool(templateArt.title, templateArt.category, t)
+                ) || tools.find(t => 
+                  art.title.toLowerCase().includes(t.name.toLowerCase())
+                ) || tools[0];
+
                 return (
                   <Card key={art.title} className="rounded-3xl border border-slate-100 shadow-sm p-6 bg-white flex flex-col justify-between hover:shadow-md hover:border-red-100 transition-all duration-300 relative group overflow-hidden">
                     <div className="space-y-4">
@@ -3407,7 +3419,7 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
                         <span className="text-[10px] text-slate-500 font-bold">{matchedTool.name} Mapped</span>
                       </div>
                       <Button asChild className="rounded-xl bg-slate-900 hover:bg-red-600 text-white font-black text-xs h-9 px-4 shadow-sm transition-colors">
-                        <Link href={`/guides/${matchedTool.slug}-${category}-${artIndex}`}>
+                        <Link href={`/guides/${matchedTool.slug}-${category}-${realIndex}`}>
                           Deploy Guide
                         </Link>
                       </Button>
@@ -3627,6 +3639,19 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const toolComparisons = comparisonPairs().filter(
     (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
   ).slice(0, 4);
+
+  // Metropolitan Interlink: Other relevant guides for sidebar
+  const otherGuides = ARTICLES_LIST
+    .filter(g => g.id !== template.id && isArticleCompatibleWithTool(g.title, g.category, tool))
+    .slice(0, 3)
+    .map(g => {
+      const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
+      return {
+        ...g,
+        title: loc.title,
+        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
+      };
+    });
 
   // Generate breadcrumb links for crawlers
   const breadcrumbs = [
@@ -4033,6 +4058,31 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   </div>
                 </div>
               </Card>
+
+              {/* Related Technical Guides */}
+              {otherGuides.length > 0 && (
+                <Card className="rounded-[24px] md:rounded-[32px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                  <h3 className="text-[11px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" /> Related Guides
+                  </h3>
+                  <div className="space-y-3">
+                    {otherGuides.map(g => (
+                      <Link
+                        key={g.slug}
+                        href={`/guides/${g.slug}`}
+                        className="block p-3 rounded-2xl bg-slate-50 hover:bg-red-50/50 hover:text-red-600 transition-all border border-slate-50 hover:border-red-100 group"
+                      >
+                        <span className="text-[8px] font-mono font-black text-red-600 uppercase tracking-widest block mb-1">
+                          {g.category}
+                        </span>
+                        <h4 className="font-bold text-slate-800 text-xs line-clamp-2 leading-snug group-hover:text-red-600 transition-colors">
+                          {g.title}
+                        </h4>
+                      </Link>
+                    ))}
+                  </div>
+                </Card>
+              )}
 
               {/* Metropolitan Interlink: Direct Comparison Battles */}
               {toolComparisons.length > 0 && (
