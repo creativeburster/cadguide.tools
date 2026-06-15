@@ -37,3 +37,16 @@ This version has breaking changes — APIs, conventions, and file structure may 
 *   **构建期 SQLite 动态生成**：当页面达到上万级时，应采用构建期 SQLite 读取方案（读取本地 `wikihub.db` 并在静态编译期 `generateStaticParams` 渲染为 HTML），绝不能打包进客户端 JS 中。
 *   **联盟转链对爬虫透明**：所有外部商户链接在 HTML 源码中必须呈现为直接、干净的官网 URL。禁止在源码里直接写死带有各种复杂参数的跳转链接，从而规避谷歌对门页（Doorway Page）和低质分销站点的算法降权。
 *   **极度注重设计美学 (Premium Aesthetics)**：UI 必须使用 curated、HSL 调制的配色、精致的毛玻璃效果（Glassmorphism）和流畅的微交互。拒绝任何简陋粗糙的默认组件。
+
+---
+
+## 🛡️ 4. 零穿帮、强自洽内容质量红线 (Zero-Degradation Content & Logic Constraints)
+
+*   **严禁无脑随机拼凑**：全站禁止进行任何形式的“随机抓取词库、段落胡乱拼接”的灌水生成。所有长尾 Guides 技术指南必须基于逻辑 100% 自洽、合理的专业文章母版，通过属性分发实现规模化。
+*   **强类型特征物理熔断**：在 `isArticleCompatibleWithTool` 过滤引擎中，必须以硬代码写死特征熔断，从源头杜绝“秦琼战关公”的不合理配置：
+    *   *开源/免费软件*（如 FreeCAD, LibreCAD）：绝对不允许生成任何商业授权（License/FLEXlm/EULA 审计/Seat 采购）相关网页。
+    *   *纯 2D 绘图 CAD*（如 QCAD, DraftSight）：绝对不允许生成 3D 实体（STEP/IGES/B-Rep）缝合、3D 打印切片、钣金折弯系数（K-Factor/G-Code）相关网页。
+    *   *纯创意动画/渲染软件*（如 V-Ray, KeyShot, Blender）：绝对不允许生成电气原理图（IEC/Schematic）或建筑属性协同（IFC4/BEP）相关网页。
+    *   *不支持 LISP/PGP 引擎软件*（如 Revit, SolidWorks）：绝对不允许生成 AutoLISP 脚本运行、PGP 命令简写别名配置、CUIX 菜单修改相关网页。
+*   **行话方言映射适配 (Jargon Map)**：针对不同的软件门类（MCAD, BIM, AEC, Creative），必须调用其专属词汇字典进行本地化重写（如 AEC 替换为图纸/图层，MCAD 替换为 Feature Tree/Sketch），确保术语符合该领域高工的真实工作习惯。
+*   **上线前的“极端用例”脑补推演**：AI 智能体在完成任何涉及网页数量扩增（如本轮 Guides 从 10 篇放宽至 20 篇）后，**必须在脑海中把最极端的工具配对（如 Revit 运行 LISP、V-Ray 配置电气原理图、Altium Designer 配置建筑 BEP）强行带入测试**，一旦有万分之一的张冠李戴风险，必须立刻加固熔断逻辑，否则严禁提交或部署。
