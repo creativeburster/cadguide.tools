@@ -201,10 +201,10 @@
 
 | 平台 | URL | 状态 | 收录日期 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
-| **LinkedIn** | `https://linkedin.com` | `[x] 已创建` | 2026-06-04 | 公司页面 |
-| **Medium Profile** | `https://medium.com` | `[x] 已创建` | 2026-06-04 | 个人简介 |
+| **LinkedIn** | `https://linkedin.com` | `[ ] 待创建` | - | 公司页面 |
+| **Medium Profile** | `https://medium.com` | `[ ] 待创建` | - | 个人简介 |
 | **Pinterest** | `https://pinterest.com` | `[x] 已创建` | 2026-06-04 | CAD Resources Board |
-| **About.me** | `https://about.me` | `[x] 已创建` | 2026-06-04 | 个人页面 |
+| **About.me** | `https://about.me` | `[ ] 待创建` | - | 个人页面 |
 | **Crunchbase** | `https://crunchbase.com` | `[ ] 待创建` | - | 公司 Profile |
 | **Gravatar** | `https://gravatar.com` | `[x] 已创建` | 2026-06-04 | 个人资料 |
 | **AngelList** | `https://wellfound.com` | `[ ] 待创建` | - | 公司 Profile |
