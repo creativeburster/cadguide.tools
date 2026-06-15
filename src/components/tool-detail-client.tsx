@@ -87,7 +87,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   // 2. 切出前 10 篇（这 10 篇是在 guides/[slug] 的 generateStaticParams 中为该工具渲染出来的全部有效路由）
   // 为了防止某些极其特殊或严格熔断条件下的工具导致文章过少，这里加入防空置兜底：
   // 若少于 4 篇（极端边缘情况），则从 ARTICLES_LIST 借调非商业、安全的通用指南进行补位。
-  let safeAvailableGuides = allCompatibleGuides.slice(0, 10);
+  let safeAvailableGuides = allCompatibleGuides.slice(0, 20);
   
   if (safeAvailableGuides.length < 4) {
     const fallbackPool = ARTICLES_LIST.filter(
@@ -98,7 +98,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
         !g.title.toLowerCase().includes("ssot") &&
         !g.title.toLowerCase().includes("procurement")
     );
-    safeAvailableGuides = [...safeAvailableGuides, ...fallbackPool].slice(0, 10);
+    safeAvailableGuides = [...safeAvailableGuides, ...fallbackPool].slice(0, 20);
   }
 
   // 3. 底部关联的 4 篇相关指南，直接取前 4 篇并进行本地化翻译

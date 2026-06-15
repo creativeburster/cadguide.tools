@@ -56,7 +56,7 @@ export const getProgrammaticLink = (title: string, forcedToolSlug?: string): str
         const allCompatible = ARTICLES_LIST.filter(g =>
           isArticleCompatibleWithTool(g.title, g.category, forcedTool)
         );
-        let safe = allCompatible.slice(0, 10);
+        let safe = allCompatible.slice(0, 20);
         if (safe.length < 4) {
           const fallbackPool = ARTICLES_LIST.filter(
             g => !safe.some(existing => existing.id === g.id) &&
@@ -65,7 +65,7 @@ export const getProgrammaticLink = (title: string, forcedToolSlug?: string): str
                  !g.title.toLowerCase().includes("ssot") &&
                  !g.title.toLowerCase().includes("procurement")
           );
-          safe = [...safe, ...fallbackPool].slice(0, 10);
+          safe = [...safe, ...fallbackPool].slice(0, 20);
         }
         
         const isAvailable = safe.some(g => g.id === art.id);
@@ -380,7 +380,7 @@ export default function GuidesClient() {
     );
     
     // Fallback 通用指南补位，与详情页完全一致，保证至少有 4 篇
-    let safe = allCompatible.slice(0, 10);
+    let safe = allCompatible.slice(0, 20);
     if (safe.length < 4) {
       const fallbackPool = ARTICLES_LIST.filter(
         (g) =>
@@ -390,7 +390,7 @@ export default function GuidesClient() {
           !g.title.toLowerCase().includes("ssot") &&
           !g.title.toLowerCase().includes("procurement")
       );
-      safe = [...safe, ...fallbackPool].slice(0, 10);
+      safe = [...safe, ...fallbackPool].slice(0, 20);
     }
     
     return safe.map((g) => {

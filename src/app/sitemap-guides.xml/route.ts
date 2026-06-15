@@ -21,7 +21,7 @@ export async function GET() {
   for (const tool of tools) {
     const selectedArticles = ARTICLES_LIST
       .filter(art => isArticleCompatibleWithTool(art.title, art.category, tool))
-      .slice(0, 10);
+      .slice(0, 20);
     for (const art of selectedArticles) {
       const artIndex = art.id.split('-').pop();
       guideUrls.push(`  <url>

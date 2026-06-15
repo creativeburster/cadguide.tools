@@ -11,6 +11,10 @@ import { ARTICLES_LIST, CATEGORY_SECTIONS, getArchetypeMetadata, getLocalizedTit
 import { Award, Cpu, ArrowLeft, AlertTriangle, ShieldAlert, BookOpen, ArrowRight, Layers, Printer, Settings, Scale, FileSpreadsheet, FolderGit, Activity, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 import { comparisonPairs } from '@/lib/seo-content';
+import { PROCUREMENT_LIST, getProcurementBySlug, ProcurementIndustry } from '@/lib/procurement-data';
+import { getStandardPageData, STANDARDS_LIST, DRAFTING_TOOLS, DraftingStandardPage } from '@/lib/standards-data';
+import { getLicensingShieldData, LICENSING_TOOLS, LicensingShieldPage } from '@/lib/licensing-data';
+import { getKernelPageData, KERNEL_TOOLS, KernelPageData } from '@/lib/kernel-data';
 
 export const dynamicParams = true;
 
@@ -1838,6 +1842,1057 @@ export function renderProcurementDirective(tool: typeof tools[number], title: st
   );
 }
 
+// 3.9. Geometry Kernel Pipelines Template (Template Kernel)
+export function renderKernelPage(k: KernelPageData) {
+  // Breadcrumbs Structured Data
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Guides', 'item': 'https://cadguide.tools/guides' },
+      { '@type': 'ListItem', 'position': 2, 'name': `${k.sourceName} to ${k.targetName} Kernel Pipeline`, 'item': `https://cadguide.tools/guides/kernel-${k.sourceSlug}-${k.targetSlug}` }
+    ]
+  };
+
+  const isSame = k.sourceSlug === k.targetSlug;
+
+  // Resolve 3D tool recommendations for the sidebar to increase Dwell Time
+  const toolRec = k.bestExchange.toLowerCase().includes('step')
+    ? { label: 'Online STEP to OBJ Converter', href: '/toolbox/online-step-to-obj-gltf-converter' }
+    : { label: '3D Printing Chordal Deviation Cleaner', href: '/toolbox/3d-printing-chordal-deviation' };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      <div className="bg-[#fcfdfe] min-h-screen pb-24 w-full overflow-x-hidden">
+        {/* --- HIGH-PRECISION PURPLE BLUEPRINT HEADER --- */}
+        <div className="bg-gradient-to-br from-slate-955 via-slate-900 to-violet-955 text-white relative py-12 md:py-20 w-full border-b-4 border-violet-850 shadow-2xl">
+          {/* Topology mesh scan lines background */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+          
+          <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">KERNEL-PIPELINE</span>
+              <span>/</span>
+              <span className="text-violet-400 font-black">{k.sourceSlug.toUpperCase()}</span>
+              {!isSame && (
+                <>
+                  <span>/</span>
+                  <span className="text-slate-300 font-black">{k.targetSlug.toUpperCase()}</span>
+                </>
+              )}
+            </div>
+
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
+              <div className="space-y-4 max-w-4xl">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Badge className="bg-violet-700 text-white border-2 border-violet-500 font-mono font-black px-3 py-1 uppercase tracking-widest text-[9px] rounded-md shadow-md">
+                    PIPELINE: {k.sourceSlug.toUpperCase()}-TO-{k.targetSlug.toUpperCase()}
+                  </Badge>
+                  <span className="text-[10px] font-mono font-bold text-slate-300 uppercase tracking-widest bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/50">
+                    EXCHANGE: {k.bestExchange}
+                  </span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none text-white font-sans uppercase">
+                  {isSame ? `${k.sourceName} Native Kernel & Tolerance Calibration` : `${k.sourceName} to ${k.targetName} Lossless 3D Translation`}
+                </h1>
+                <p className="text-violet-200 font-medium text-sm sm:text-base leading-relaxed max-w-3xl">
+                  {k.tagline}
+                </p>
+              </div>
+
+              {/* Topology Seal */}
+              <div className="shrink-0 self-start lg:self-center border-2 border-violet-500/50 bg-violet-500/5 p-4 rounded-2xl border-dashed flex items-center gap-4 max-w-xs shadow-inner">
+                <Layers className="w-8 h-8 text-violet-400 shrink-0" />
+                <div>
+                  <span className="text-[9px] text-violet-400 font-mono font-black uppercase tracking-widest block">TOPOLOGY RATING</span>
+                  <span className="font-mono font-black text-white text-xs block uppercase">B-REP EDGE STITCHING</span>
+                  <span className="text-[8px] text-slate-400 font-mono block">ZERO ACCIDENTAL POLYGON DEGRADATION</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1360px] mx-auto px-4 py-12 w-full space-y-16">
+          {/* --- MAIN DOUBLE-COLUMN LAYOUT --- */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-12">
+              {/* Overview & Issue Analysis */}
+              <Card className="rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-violet-600" />
+                  <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight">Geometric Interoperability Scope</h2>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                  {k.issue}
+                </p>
+                <div className="bg-violet-50/50 p-4 rounded-2xl border border-violet-100/50 text-violet-850 font-medium text-xs leading-relaxed">
+                  <strong>Geometric Kernels Statement:</strong> Multi-CAD collaborative systems require mapping the mathematical boundaries of B-Representation solids. Gaps in translation occur when exporting topological solids without aligning local linear tolerances.
+                </div>
+              </Card>
+
+              {/* Tolerance & Stitching Matrix Table */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <FileSpreadsheet className="w-5 h-5 text-violet-600" /> Kernel & Tolerance Specification Matrix
+                </h3>
+                <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                      <thead>
+                        <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                          <th className="p-4 sm:p-5 first:pl-6">Software Entity</th>
+                          <th className="p-4 sm:p-5">Geometry Kernel</th>
+                          <th className="p-4 sm:p-5">Native Format</th>
+                          <th className="p-4 sm:p-5">Exchange Standard</th>
+                          <th className="p-4 sm:p-5 last:pr-6">Linear Tolerance</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 text-slate-700 font-medium font-mono">
+                        <tr className="hover:bg-slate-50/50 transition-colors">
+                          <td className="p-4 sm:p-5 first:pl-6 font-sans font-black text-slate-900">Source: {k.sourceName}</td>
+                          <td className="p-4 sm:p-5">{k.sourceKernel}</td>
+                          <td className="p-4 sm:p-5 text-slate-500">{isSame ? k.bestExchange : '.dwg / .sat / .3dm / .step'}</td>
+                          <td className="p-4 sm:p-5 font-black text-violet-600">{k.bestExchange}</td>
+                          <td className="p-4 sm:p-5 last:pr-6">{k.sourceTolerance}</td>
+                        </tr>
+                        {!isSame && (
+                          <tr className="hover:bg-slate-50/50 transition-colors">
+                            <td className="p-4 sm:p-5 first:pl-6 font-sans font-black text-slate-900">Target: {k.targetName}</td>
+                            <td className="p-4 sm:p-5">{k.targetKernel}</td>
+                            <td className="p-4 sm:p-5 text-slate-500">.dwg / .sat / .step</td>
+                            <td className="p-4 sm:p-5 font-black text-violet-600">{k.bestExchange}</td>
+                            <td className="p-4 sm:p-5 last:pr-6">{k.targetTolerance}</td>
+                          </tr>
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                </Card>
+              </div>
+
+              {/* Remediation Guide */}
+              <Card className="rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <div className="flex items-center gap-2">
+                  <Settings className="w-5 h-5 text-violet-600" />
+                  <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight">Step-by-Step Resolution Blueprint</h2>
+                </div>
+                <div className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium whitespace-pre-line">
+                  {k.remediation}
+                </div>
+              </Card>
+
+              {/* Precision Optimization Script Console */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-violet-600" /> Precision Calibration Script
+                </h3>
+                <p className="text-slate-500 text-xs font-semibold">
+                  Execute the following script inside your source CAD macro editor or script console to override default document absolute tolerances and align the B-Rep boundary curves.
+                </p>
+                <Card className="rounded-[24px] border border-slate-900 overflow-hidden bg-slate-950 text-slate-100 p-6 relative group shadow-lg">
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+                    <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest">
+                      Script: Calibrate_Tolerance.${k.codeLanguage === 'lisp' ? 'lsp' : k.codeLanguage === 'python' ? 'py' : 'txt'} // PRECISION OVERRIDE
+                    </span>
+                    <div 
+                      dangerouslySetInnerHTML={{ __html: `
+                        <button 
+                          onclick="navigator.clipboard.writeText(this.parentNode.parentNode.nextElementSibling.innerText); this.innerHTML = 'COPIED!'; this.classList.remove('bg-slate-800'); this.classList.add('bg-violet-600'); setTimeout(() => { this.innerHTML = 'COPY SCRIPT'; this.classList.remove('bg-violet-600'); this.classList.add('bg-slate-800'); }, 2000)" 
+                          class="bg-slate-800 hover:bg-slate-700 text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300 transition-all uppercase tracking-wider"
+                        >
+                          Copy Script
+                        </button>
+                      `.trim() }}
+                    />
+                  </div>
+                  <pre className="overflow-x-auto text-[11px] font-mono leading-relaxed text-slate-300 p-2 bg-slate-900/50 rounded-xl border border-slate-900">
+                    <code>{k.codeSnippet}</code>
+                  </pre>
+                </Card>
+              </div>
+
+            </div>
+
+            {/* --- SIDEBAR --- */}
+            <div className="space-y-6">
+              {/* High-Converting Deals link */}
+              <Card className="rounded-[24px] p-6 border-2 border-violet-500 bg-violet-500/5 shadow-xl space-y-4 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                <div className="relative z-10 space-y-3">
+                  <div className="text-[9px] font-black text-violet-500 uppercase tracking-[0.2em] flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5" /> Software License
+                  </div>
+                  <h3 className="font-black text-slate-900 text-base leading-snug">Resolve Translation Limits Legally</h3>
+                  <p className="text-slate-500 text-xs font-semibold leading-relaxed">
+                    Need direct integration features without exporting intermediate file extensions? Secure the lowest subscription or perpetual license rates by visiting our verified deals database.
+                  </p>
+                  <Button asChild className="w-full bg-violet-600 hover:bg-violet-700 text-white font-black rounded-xl h-11 text-xs shadow-md shadow-violet-900/10 transition-all duration-300">
+                    <Link href={`/deals#${k.sourceSlug}`}>
+                      Claim {k.sourceName} Deals →
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Assessment and Alternatives */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-white space-y-4">
+                <h3 className="font-black text-slate-900 text-xs border-b border-slate-50 pb-3 uppercase tracking-wider text-[11px] text-slate-400 flex items-center gap-2">
+                  <Settings className="w-4 h-4" /> Tool Assessment
+                </h3>
+                <div className="space-y-2">
+                  <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black rounded-xl h-10 text-xs">
+                    <Link href={`/tools/${k.sourceSlug}`}>
+                      Read {k.sourceName} Review →
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full text-slate-700 hover:bg-slate-50 font-black rounded-xl h-10 text-xs">
+                    <Link href={`/alternatives/${k.sourceSlug}`}>
+                      See alternatives →
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Interactive Tool Rec - Breakthrough Interlink! */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-slate-50 space-y-4">
+                <h3 className="font-black text-slate-900 text-[10px] uppercase tracking-widest text-slate-400">Related Interactive Tool</h3>
+                <h4 className="font-black text-base text-slate-900 leading-snug">{toolRec.label}</h4>
+                <p className="text-slate-500 text-xs leading-relaxed font-semibold">
+                  Test and validate your exported geometries directly in our secure web canvas converter before distributing blueprints to clients.
+                </p>
+                <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black rounded-xl h-10 text-xs shadow-md">
+                  <Link href={toolRec.href}>
+                    Open Interactive Tool →
+                  </Link>
+                </Button>
+              </Card>
+
+              {/* Metropolitan Interlink - Cross-links */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-white space-y-4">
+                <h3 className="font-black text-slate-900 text-xs border-b border-slate-50 pb-3 uppercase tracking-wider text-[11px] text-slate-400 flex items-center gap-2">
+                  <Scale className="w-4 h-4" /> Other Conversion Pipelines
+                </h3>
+                <p className="text-slate-500 text-xs font-medium leading-relaxed">
+                  Map the topological translation guidelines from {k.sourceName} into other mainstream CAD/BIM engines.
+                </p>
+                <div className="space-y-2">
+                  {k.metropolitanLinks.map((link, idx) => (
+                    <Link
+                      key={idx}
+                      href={link.href}
+                      className="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-violet-50/50 hover:text-violet-700 transition-all border border-slate-50 hover:border-violet-100 group"
+                    >
+                      <span className="font-bold text-slate-800 text-[11px] group-hover:text-violet-700 transition-colors font-mono">
+                        {link.label}
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-violet-700 shrink-0 transition-colors" />
+                    </Link>
+                  ))}
+                </div>
+              </Card>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+// 3.8. Licensing Security Shield Template (Template Shield)
+export function renderLicensingShieldPage(shield: LicensingShieldPage) {
+  // Breadcrumbs Structured Data
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Guides', 'item': 'https://cadguide.tools/guides' },
+      { '@type': 'ListItem', 'position': 2, 'name': `${shield.toolName} Licensing Shield`, 'item': `https://cadguide.tools/guides/shield-${shield.toolSlug}` }
+    ]
+  };
+
+  const otherShieldTools = LICENSING_TOOLS.filter(t => t !== shield.toolSlug).slice(0, 3);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      <div className="bg-[#fcfdfe] min-h-screen pb-24 w-full overflow-x-hidden">
+        {/* --- CRIMSON-DARK SECURITY SYSTEM HEADER --- */}
+        <div className="bg-gradient-to-br from-slate-955 via-slate-900 to-rose-950 text-white relative py-12 md:py-20 w-full border-b-4 border-rose-800 shadow-2xl">
+          {/* Outbound telemetry scan lines background */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+          
+          <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">SECURITY</span>
+              <span>/</span>
+              <span className="text-rose-400 font-black">LICENSING-SHIELD</span>
+              <span>/</span>
+              <span className="text-slate-300 font-black">{shield.toolSlug.toUpperCase()}</span>
+            </div>
+
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
+              <div className="space-y-4 max-w-4xl">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Badge className="bg-rose-700 text-white border-2 border-rose-500 font-mono font-black px-3 py-1 uppercase tracking-widest text-[9px] rounded-md shadow-md">
+                    SHIELD DIRECTIVE: {shield.toolSlug.toUpperCase()}-AUDIT-911
+                  </Badge>
+                  <span className="text-[10px] font-mono font-bold text-slate-300 uppercase tracking-widest bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/50">
+                    DAEMON: {shield.daemonName}
+                  </span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none text-white font-sans uppercase">
+                  {shield.toolName} License Security & Anti-Telemetry Shield
+                </h1>
+                <p className="text-rose-200 font-medium text-sm sm:text-base leading-relaxed max-w-3xl">
+                  {shield.tagline}
+                </p>
+              </div>
+
+              {/* Safety Shield Trust Seal */}
+              <div className="shrink-0 self-start lg:self-center border-2 border-rose-500/50 bg-rose-500/5 p-4 rounded-2xl border-dashed flex items-center gap-4 max-w-xs shadow-inner">
+                <ShieldAlert className="w-8 h-8 text-rose-400 shrink-0" />
+                <div>
+                  <span className="text-[9px] text-rose-400 font-mono font-black uppercase tracking-widest block">FIREWALL ACTIVE</span>
+                  <span className="font-mono font-black text-white text-xs block uppercase">EULA AUDIT PREVENTION</span>
+                  <span className="text-[8px] text-slate-400 font-mono block">NAMED-USER TELEMETRY DEACTIVATION</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1360px] mx-auto px-4 py-12 w-full space-y-16">
+          {/* --- MAIN DOUBLE-COLUMN LAYOUT --- */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-12">
+              {/* Introduction Scope */}
+              <Card className="rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-rose-600" />
+                  <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight">Enterprise Audit Vulnerability Analysis</h2>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                  {shield.excerpt}
+                </p>
+                <div className="bg-rose-50/50 p-4 rounded-2xl border border-rose-100/50 text-rose-800 font-medium text-xs leading-relaxed">
+                  <strong>IT Administrator Warning:</strong> Background service licensing daemons for major CAD/BIM tools execute mandatory outbound named-user telemetry tracking. This gathers local adapter MAC addresses, host domain logs, and registry keys, sending reports back to software vendors. Unmonitored virtualization or multi-user seat allocation will trigger massive compliance audit fines.
+                </div>
+              </Card>
+
+              {/* EULA Compliance Audit Checklist */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-rose-600" /> EULA Compliance Audit Prevention Checklist
+                </h3>
+                <div className="grid grid-cols-1 gap-4">
+                  {shield.complianceChecklist.map((item, idx) => (
+                    <Card key={idx} className="rounded-2xl p-5 border border-slate-100 bg-white flex gap-4 items-start shadow-xs">
+                      <div className="w-6 h-6 rounded-full bg-rose-50 text-rose-600 font-mono font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                        {idx + 1}
+                      </div>
+                      <p className="text-slate-600 font-medium text-xs sm:text-sm leading-relaxed">
+                        {item}
+                      </p>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              {/* Anti-Telemetry Firewall configuration */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-rose-600" /> Outbound Telemetry Block Terminal Script
+                </h3>
+                <p className="text-slate-500 text-xs font-semibold">
+                  Copy and execute the following batch command script in Administrator Command Prompt to map loopback values for remote telemetry servers and inject network block firewalls.
+                </p>
+                <Card className="rounded-[24px] border border-rose-900 overflow-hidden bg-slate-950 text-slate-100 p-6 relative group shadow-lg">
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+                    <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest">
+                      Script: Outbound_Block.bat // AUDIT PREVENTION CORE
+                    </span>
+                    <div 
+                      dangerouslySetInnerHTML={{ __html: `
+                        <button 
+                          onclick="navigator.clipboard.writeText(this.parentNode.parentNode.nextElementSibling.innerText); this.innerHTML = 'COPIED!'; this.classList.remove('bg-slate-800'); this.classList.add('bg-rose-600'); setTimeout(() => { this.innerHTML = 'COPY SCRIPT'; this.classList.remove('bg-rose-600'); this.classList.add('bg-slate-800'); }, 2000)" 
+                          class="bg-slate-800 hover:bg-slate-700 text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300 transition-all uppercase tracking-wider"
+                        >
+                          Copy Script
+                        </button>
+                      `.trim() }}
+                    />
+                  </div>
+                  <pre className="overflow-x-auto text-[11px] font-mono leading-relaxed text-slate-300 p-2 bg-slate-900/50 rounded-xl border border-slate-900">
+                    <code>{shield.netshScript}</code>
+                  </pre>
+                </Card>
+              </div>
+
+              {/* FLEXlm Options Server Config */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <Settings className="w-5 h-5 text-rose-600" /> Options Daemon / License Configuration File (.opt)
+                </h3>
+                <p className="text-slate-500 text-xs font-semibold">
+                  Restrict available network licenses by user or department in your active local daemon server configuration to guarantee compliance and block unauthorized license drainage.
+                </p>
+                <Card className="rounded-[24px] border border-rose-900 overflow-hidden bg-slate-950 text-slate-100 p-6 relative group shadow-lg">
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+                    <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest">
+                      Config: options.opt // DAEMON RESERVATION RULES
+                    </span>
+                    <div 
+                      dangerouslySetInnerHTML={{ __html: `
+                        <button 
+                          onclick="navigator.clipboard.writeText(this.parentNode.parentNode.nextElementSibling.innerText); this.innerHTML = 'COPIED!'; this.classList.remove('bg-slate-800'); this.classList.add('bg-rose-600'); setTimeout(() => { this.innerHTML = 'COPY CONFIG'; this.classList.remove('bg-rose-600'); this.classList.add('bg-slate-800'); }, 2000)" 
+                          class="bg-slate-800 hover:bg-slate-700 text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300 transition-all uppercase tracking-wider"
+                        >
+                          Copy Config
+                        </button>
+                      `.trim() }}
+                    />
+                  </div>
+                  <pre className="overflow-x-auto text-[11px] font-mono leading-relaxed text-slate-300 p-2 bg-slate-900/50 rounded-xl border border-slate-900">
+                    <code>{shield.optionsTemplate}</code>
+                  </pre>
+                </Card>
+              </div>
+
+              {/* Silent Installation Arguments */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <Cpu className="w-5 h-5 text-rose-600" /> Silent Enterprise Deployment Arguments
+                </h3>
+                <p className="text-slate-500 text-xs font-semibold">
+                  Deploy software packages globally via Active Directory Group Policies or Endpoint Managers silently, without triggering telemetry setup requests or prompt dialogues.
+                </p>
+                <Card className="rounded-[24px] border border-rose-900 overflow-hidden bg-slate-950 text-slate-100 p-6 relative group shadow-lg">
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+                    <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest">
+                      Command: Silent_Deploy.txt // ENTERPRISE MASS ROLLOUT
+                    </span>
+                    <div 
+                      dangerouslySetInnerHTML={{ __html: `
+                        <button 
+                          onclick="navigator.clipboard.writeText(this.parentNode.parentNode.nextElementSibling.innerText); this.innerHTML = 'COPIED!'; this.classList.remove('bg-slate-800'); this.classList.add('bg-rose-600'); setTimeout(() => { this.innerHTML = 'COPY COMMAND'; this.classList.remove('bg-rose-600'); this.classList.add('bg-slate-800'); }, 2000)" 
+                          class="bg-slate-800 hover:bg-slate-700 text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300 transition-all uppercase tracking-wider"
+                        >
+                          Copy Command
+                        </button>
+                      `.trim() }}
+                    />
+                  </div>
+                  <pre className="overflow-x-auto text-[11px] font-mono leading-relaxed text-slate-300 p-2 bg-slate-900/50 rounded-xl border border-slate-900">
+                    <code>{shield.silentCommand}</code>
+                  </pre>
+                </Card>
+              </div>
+
+            </div>
+
+            {/* --- SIDEBAR --- */}
+            <div className="space-y-6">
+              {/* Metropolitan Interlink to Deals - High Converting Link */}
+              <Card className="rounded-[24px] p-6 border-2 border-rose-500 bg-rose-500/5 shadow-xl space-y-4 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                <div className="relative z-10 space-y-3">
+                  <div className="text-[9px] font-black text-rose-500 uppercase tracking-[0.2em] flex items-center gap-1.5">
+                    <ShieldAlert className="w-3.5 h-3.5" /> Compliance Remedy
+                  </div>
+                  <h3 className="font-black text-slate-900 text-base leading-snug">Resolve Stale Licenses & Purchase Legitimate Entitlements</h3>
+                  <p className="text-slate-500 text-xs font-semibold leading-relaxed">
+                    Under active EULA audits, missing seats must be resolved immediately. Claim the active verified coupon deals below to lock in the lowest cost of ownership legally.
+                  </p>
+                  <Button asChild className="w-full bg-rose-600 hover:bg-rose-700 text-white font-black rounded-xl h-11 text-xs shadow-md shadow-rose-900/10 transition-all duration-300">
+                    <Link href={shield.dealLink}>
+                      Claim Legitimate {shield.toolName} Deals →
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Assessment and Alternatives */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-white space-y-4">
+                <h3 className="font-black text-slate-900 text-xs border-b border-slate-50 pb-3 uppercase tracking-wider text-[11px] text-slate-400 flex items-center gap-2">
+                  <Settings className="w-4 h-4" /> Tool Assessment
+                </h3>
+                <div className="space-y-2">
+                  <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black rounded-xl h-10 text-xs">
+                    <Link href={`/tools/${shield.toolSlug}`}>
+                      Read {shield.toolName} Review →
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full text-slate-700 hover:bg-slate-50 font-black rounded-xl h-10 text-xs">
+                    <Link href={`/alternatives/${shield.toolSlug}`}>
+                      See alternatives →
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Metropolitan Interlink - Other Shield Pages */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-white space-y-4">
+                <h3 className="font-black text-slate-900 text-xs border-b border-slate-50 pb-3 uppercase tracking-wider text-[11px] text-slate-400 flex items-center gap-2">
+                  <Scale className="w-4 h-4" /> Compare Audit Shields
+                </h3>
+                <p className="text-slate-500 text-xs font-medium leading-relaxed">
+                  Map the EULA compliance auditing risks and anti-telemetry blocks across other commercial engineering platform suites.
+                </p>
+                <div className="space-y-2">
+                  {otherShieldTools.map((tSlug, idx) => {
+                    const t = tools.find(x => x.slug === tSlug);
+                    return (
+                      <Link
+                        key={idx}
+                        href={`/guides/shield-${tSlug}`}
+                        className="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-rose-50/50 hover:text-rose-700 transition-all border border-slate-50 hover:border-rose-100 group"
+                      >
+                        <span className="font-bold text-slate-800 text-[11px] group-hover:text-rose-700 transition-colors">
+                          {t ? t.name : tSlug} Shield
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-rose-700 shrink-0 transition-colors" />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </Card>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+// 3.5. Drafting Standards Template (Template S)
+export function renderStandardsPage(std: DraftingStandardPage) {
+  // Breadcrumbs Structured Data
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Guides', 'item': 'https://cadguide.tools/guides' },
+      { '@type': 'ListItem', 'position': 2, 'name': `${std.standardName} in ${std.toolName}`, 'item': `https://cadguide.tools/guides/standards-${std.standardId}-${std.toolSlug}` }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      <div className="bg-[#fcfdfe] min-h-screen pb-24 w-full overflow-x-hidden">
+        {/* --- SLATE-GREEN TECHNICAL BLUEPRINT HEADER --- */}
+        <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950 text-white relative py-12 md:py-20 w-full border-b-4 border-slate-700 shadow-xl">
+          {/* High-density grid background scan lines */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+          
+          <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">STANDARDS</span>
+              <span>/</span>
+              <span className="text-emerald-400 font-black">{std.standardId.toUpperCase()}</span>
+              <span>/</span>
+              <span className="text-slate-300 font-black">{std.toolSlug.toUpperCase()}</span>
+            </div>
+
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
+              <div className="space-y-4 max-w-4xl">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Badge className="bg-emerald-600 text-white border-2 border-emerald-500 font-mono font-black px-3 py-1 uppercase tracking-widest text-[9px] rounded-md shadow-md">
+                    STANDARD: {std.standardName}
+                  </Badge>
+                  <span className="text-[10px] font-mono font-bold text-slate-300 uppercase tracking-widest bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/50">
+                    ORG: {std.standardOrg}
+                  </span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none text-white font-sans uppercase">
+                  {std.standardName} Layer Rules in {std.toolName}
+                </h1>
+                <p className="text-slate-300 font-medium text-sm sm:text-base leading-relaxed max-w-3xl">
+                  {std.tagline}
+                </p>
+              </div>
+
+              {/* Standards Trust Seal */}
+              <div className="shrink-0 self-start lg:self-center border-2 border-emerald-500/50 bg-emerald-500/5 p-4 rounded-2xl border-dashed flex items-center gap-4 max-w-xs shadow-inner">
+                <BookOpen className="w-8 h-8 text-emerald-400 shrink-0" />
+                <div>
+                  <span className="text-[9px] text-emerald-400 font-mono font-black uppercase tracking-widest block">COMPLIANCE CODE</span>
+                  <span className="font-mono font-black text-white text-xs block uppercase">VERIFIED DRAFTING DIRECTIVE</span>
+                  <span className="text-[8px] text-slate-400 font-mono block">100% ALIGNED WITH OFFICIAL PROTOCOLS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1360px] mx-auto px-4 py-12 w-full space-y-16">
+          {/* --- MAIN DOUBLE-COLUMN LAYOUT --- */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-12">
+              {/* Overview Card */}
+              <Card className="rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-emerald-600" />
+                  <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight">Scope & Objectives</h2>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                  {std.standardDesc}
+                </p>
+                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-slate-500 font-medium text-xs leading-relaxed">
+                  <strong>Technical Standard Statement:</strong> Plotting drawing layouts under standard regulations requires strict configuration of pen weight mapping, layer naming boundaries, and line conventions. Incorrect configurations will trigger sub-standard plotting line-weights in vector PDF output and audit failure in BIM/CAD coordination stages.
+                </div>
+              </Card>
+
+              {/* Standard Layer Matrix Table */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <FileSpreadsheet className="w-5 h-5 text-emerald-600" /> Standard Layer & Pen Mapping Specification Matrix
+                </h3>
+                <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                      <thead>
+                        <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                          <th className="p-4 sm:p-5 first:pl-6">Layer Code</th>
+                          <th className="p-4 sm:p-5">Name / Element</th>
+                          <th className="p-4 sm:p-5">Description</th>
+                          <th className="p-4 sm:p-5">Color ID</th>
+                          <th className="p-4 sm:p-5">Pen Weight</th>
+                          <th className="p-4 sm:p-5 last:pr-6">Primary Usage</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 text-slate-700 font-medium font-mono">
+                        {std.layers.map((l, lIdx) => (
+                          <tr key={lIdx} className="hover:bg-slate-50/50 transition-colors">
+                            <td className="p-4 sm:p-5 first:pl-6">
+                              <span className="bg-slate-100 text-slate-800 px-2 py-1 rounded font-mono font-black text-[11px] border border-slate-200">
+                                {l.code}
+                              </span>
+                            </td>
+                            <td className="p-4 sm:p-5 text-slate-900 font-sans font-black">{l.name}</td>
+                            <td className="p-4 sm:p-5 text-slate-500 font-sans">{l.desc}</td>
+                            <td className="p-4 sm:p-5">{l.colorId}</td>
+                            <td className="p-4 sm:p-5 text-emerald-600 font-black">{l.weight}</td>
+                            <td className="p-4 sm:p-5 last:pr-6 font-sans text-slate-500">{l.usage}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </Card>
+              </div>
+
+              {/* Software Integration Guide */}
+              <Card className="rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <div className="flex items-center gap-2">
+                  <Settings className="w-5 h-5 text-emerald-600" />
+                  <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight">{std.toolName} Integration Guidelines</h2>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                  {std.softwareGuide}
+                </p>
+              </Card>
+
+              {/* Automation Console Script Card */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-emerald-600" /> Automation Console Script
+                  </h3>
+                </div>
+                
+                <Card className="rounded-[24px] border border-slate-900 overflow-hidden bg-slate-950 text-slate-100 p-6 relative group shadow-lg">
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+                    <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest">
+                      Script Language: {std.codeLanguage.toUpperCase()} // CADGUIDE CLI v1.0
+                    </span>
+                    <div 
+                      dangerouslySetInnerHTML={{ __html: `
+                        <button 
+                          onclick="navigator.clipboard.writeText(this.parentNode.parentNode.nextElementSibling.innerText); this.innerHTML = 'COPIED!'; this.classList.remove('bg-slate-800'); this.classList.add('bg-emerald-600'); setTimeout(() => { this.innerHTML = 'COPY SCRIPT'; this.classList.remove('bg-emerald-600'); this.classList.add('bg-slate-800'); }, 2000)" 
+                          class="bg-slate-800 hover:bg-slate-700 text-[10px] font-mono font-bold px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300 transition-all uppercase tracking-wider"
+                        >
+                          Copy Script
+                        </button>
+                      `.trim() }}
+                    />
+                  </div>
+                  <pre className="overflow-x-auto text-[11px] font-mono leading-relaxed text-slate-300 p-2 bg-slate-900/50 rounded-xl border border-slate-900">
+                    <code>{std.codeSnippet}</code>
+                  </pre>
+                </Card>
+              </div>
+
+            </div>
+
+            {/* --- SIDEBAR --- */}
+            <div className="space-y-6">
+              {/* Link to Tool Details Review */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-white space-y-4">
+                <h3 className="font-black text-slate-900 text-xs border-b border-slate-50 pb-3 uppercase tracking-wider text-[11px] text-slate-400 flex items-center gap-2">
+                  <Settings className="w-4 h-4" /> Tool Assessment
+                </h3>
+                <p className="text-slate-500 text-xs font-medium leading-relaxed">
+                  Analyze active pricing models, expert verdicts, alternatives and telemetry data for {std.toolName}.
+                </p>
+                <div className="space-y-3">
+                  <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black rounded-xl h-10 text-xs">
+                    <Link href={`/tools/${std.toolSlug}`}>
+                      Read {std.toolName} Review →
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full text-slate-700 hover:bg-slate-50 font-black rounded-xl h-10 text-xs">
+                    <Link href={`/alternatives/${std.toolSlug}`}>
+                      See Alternatives →
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Metropolitan Interlink Standard Matrix */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-white space-y-4">
+                <h3 className="font-black text-slate-900 text-xs border-b border-slate-50 pb-3 uppercase tracking-wider text-[11px] text-slate-400 flex items-center gap-2">
+                  <Scale className="w-4 h-4" /> Compare Other Tools
+                </h3>
+                <p className="text-slate-500 text-xs font-medium leading-relaxed">
+                  Map the {std.standardName} technical drawing and drafting rules across other mainstream industry CAD/BIM engines.
+                </p>
+                <div className="space-y-2">
+                  {std.metropolitanLinks.map((link, idx) => (
+                    <Link
+                      key={idx}
+                      href={link.href}
+                      className="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-emerald-50/50 hover:text-emerald-700 transition-all border border-slate-50 hover:border-emerald-100 group"
+                    >
+                      <span className="font-bold text-slate-800 text-[11px] group-hover:text-emerald-700 transition-colors">
+                        {link.label}
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 shrink-0 transition-colors" />
+                    </Link>
+                  ))}
+                </div>
+              </Card>
+
+              {/* CAD Toolbox CTA Card */}
+              <Card className="rounded-[24px] p-6 border border-slate-100 shadow-sm bg-gradient-to-br from-slate-900 to-emerald-950 text-white space-y-4 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+                <h3 className="font-black text-[10px] text-emerald-400 uppercase tracking-widest">Free Tool Spotlight</h3>
+                <h4 className="font-black text-base tracking-tight leading-snug">AutoCAD Drawing Performance Cleaner</h4>
+                <p className="text-slate-300 text-xs leading-relaxed font-medium">
+                  Plotting standard drawings sluggish? Load our free lag remover to wipe corrupt DGN line types and wipe unregistered scale groups.
+                </p>
+                <Button asChild className="w-full bg-white text-slate-900 hover:bg-slate-100 font-black rounded-xl h-10 text-xs shadow-md">
+                  <Link href="/toolbox">
+                    Open Free CAD Toolbox →
+                  </Link>
+                </Button>
+              </Card>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+// 3. Industry Procurement Matrix Template (Template P)
+export function renderProcurementPage(pro: ProcurementIndustry) {
+  // Breadcrumbs Structured Data
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Guides', 'item': 'https://cadguide.tools/guides' },
+      { '@type': 'ListItem', 'position': 2, 'name': pro.title, 'item': `https://cadguide.tools/guides/industry-${pro.slug}` }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      <div className="bg-[#fcfdfe] min-h-screen pb-24 w-full overflow-x-hidden">
+        {/* --- BLUE-GOLD ENTERPRISE EXECUTIVE HEADER --- */}
+        <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-indigo-950 text-white relative py-12 md:py-20 w-full border-b-4 border-slate-700 shadow-xl">
+          {/* High-density grid background scan lines */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+          
+          <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">PROCUREMENT</span>
+              <span>/</span>
+              <span className="text-amber-400 font-black">{pro.slug.toUpperCase()}</span>
+            </div>
+
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
+              <div className="space-y-4 max-w-4xl">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Badge className="bg-amber-600 text-white border-2 border-amber-500 font-mono font-black px-3 py-1 uppercase tracking-widest text-[9px] rounded-md shadow-md">
+                    DIRECTIVE: {pro.directiveCode}
+                  </Badge>
+                  <span className="text-[10px] font-mono font-bold text-slate-300 uppercase tracking-widest bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/50">
+                    CLASS: TCO PROCUREMENT INDEX // {pro.reference}
+                  </span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none text-white font-sans uppercase">
+                  {pro.title}
+                </h1>
+                <p className="text-slate-300 font-medium text-sm sm:text-base leading-relaxed max-w-3xl">
+                  {pro.tagline}
+                </p>
+              </div>
+
+              {/* Verified Trust Seal */}
+              <div className="shrink-0 self-start lg:self-center border-2 border-amber-500/50 bg-amber-500/5 p-4 rounded-2xl border-dashed flex items-center gap-4 max-w-xs shadow-inner">
+                <Scale className="w-8 h-8 text-amber-400 shrink-0" />
+                <div>
+                  <span className="text-[9px] text-amber-400 font-mono font-black uppercase tracking-widest block">COMPLIANCE RATING</span>
+                  <span className="font-mono font-black text-white text-xs block uppercase">UNBIASED THIRD-PARTY EVALUATION</span>
+                  <span className="text-[8px] text-slate-400 font-mono block">NO VENDOR SPONSORSHIP // AUDITED Q2 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1360px] mx-auto px-4 py-12 w-full space-y-16">
+          {/* --- MAIN DOUBLE-COLUMN LAYOUT --- */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-12">
+              {/* Introduction Card */}
+              <Card className="rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-indigo-600" />
+                  <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight">Executive Scope & Analysis</h2>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+                  {pro.intro}
+                </p>
+                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-slate-500 font-medium text-xs leading-relaxed">
+                  <strong>Procurement Standards Statement:</strong> Software selection for high-precision engineering workflows requires auditing total cost of ownership (TCO), network floating licensing server administration, and EULA named-user compliance telemetry. Mapped below is the audited comparative matrix across the top 5 industry choices.
+                </div>
+              </Card>
+
+              {/* TCO Matrix Table */}
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                  <FileSpreadsheet className="w-5 h-5 text-indigo-600" /> Procurement & TCO Comparative Matrix
+                </h3>
+                <Card className="rounded-[24px] border border-slate-200 overflow-hidden shadow-sm bg-white">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                      <thead>
+                        <tr className="bg-slate-900 text-white font-mono font-bold uppercase tracking-wider text-[10px]">
+                          {pro.tableHeaders.map((h, hIdx) => (
+                            <th key={hIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 text-slate-700 font-medium font-mono">
+                        {pro.tableRows.map((row, rIdx) => (
+                          <tr key={rIdx} className="hover:bg-slate-50/50 transition-colors">
+                            {row.map((cell, cIdx) => (
+                              <td key={cIdx} className="p-4 sm:p-5 first:pl-6 last:pr-6">
+                                {cIdx === 0 ? (
+                                  <span className="font-sans font-black text-slate-900">{cell}</span>
+                                ) : cIdx === 3 && (cell.includes('High') || cell.includes('Critical')) ? (
+                                  <span className="text-rose-600 font-black">{cell}</span>
+                                ) : cIdx === 3 && cell.includes('Zero') ? (
+                                  <span className="text-emerald-600 font-black">{cell}</span>
+                                ) : (
+                                  cell
+                                )}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </Card>
+              </div>
+
+              {/* Detailed Platforms Review with Metropolitan Interlink */}
+              <div className="space-y-6">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
+                  Platform Pros & Cons Breakdown
+                </h3>
+                <div className="space-y-6">
+                  {pro.platforms.map((plat, pIdx) => {
+                    const matchedTool = tools.find(t => t.slug === plat.toolSlug);
+                    return (
+                      <Card key={pIdx} className="rounded-[24px] p-6 border border-slate-100 bg-white hover:shadow-md transition-all duration-300 space-y-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-50 pb-4">
+                          <div className="flex items-center gap-3">
+                            {matchedTool ? (
+                              <div className="w-10 h-10 shrink-0">
+                                <ToolLogo slug={matchedTool.slug} src={matchedTool.logo_url} name={matchedTool.name} className="w-10 h-10" />
+                              </div>
+                            ) : (
+                              <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-slate-500 text-sm">
+                                {plat.name.slice(0, 2).toUpperCase()}
+                              </div>
+                            )}
+                            <div>
+                              <h4 className="font-black text-slate-900 text-base">{plat.name}</h4>
+                              <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">
+                                Kernel Score: {plat.kernelScore} // TCO: {plat.tco3Yr}
+                              </span>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-center gap-2">
+                            <span className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">
+                              EULA Audit Risk:
+                            </span>
+                            <Badge className={cn(
+                              "font-mono font-black text-[9px] px-2 py-0.5 rounded border uppercase",
+                              plat.auditRisk === 'Low' && "bg-emerald-50 text-emerald-700 border-emerald-100",
+                              plat.auditRisk === 'Medium' && "bg-amber-50 text-amber-700 border-amber-100",
+                              plat.auditRisk === 'High' && "bg-rose-50 text-rose-700 border-rose-100",
+                              plat.auditRisk === 'Critical' && "bg-red-600 text-white border-red-500 animate-pulse"
+                            )}>
+                              {plat.auditRisk}
+                            </Badge>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                          <div className="space-y-1.5">
+                            <span className="font-black text-emerald-600 uppercase tracking-wider text-[9px] block">✓ Key Advantage</span>
+                            <p className="text-slate-600 font-medium leading-relaxed">{plat.pros}</p>
+                          </div>
+                          <div className="space-y-1.5">
+                            <span className="font-black text-rose-500 uppercase tracking-wider text-[9px] block">✗ Key Limitation</span>
+                            <p className="text-slate-600 font-medium leading-relaxed">{plat.cons}</p>
+                          </div>
+                        </div>
+
+                        {/* Metropolitan Interlink Buttons */}
+                        {matchedTool && (
+                          <div className="flex flex-wrap gap-2 pt-3 border-t border-slate-50">
+                            <Button asChild variant="outline" className="rounded-xl border-slate-200 text-slate-700 hover:bg-slate-50 h-8 px-4 text-xs font-bold shadow-xs">
+                              <Link href={`/tools/${plat.toolSlug}`}>
+                                Read {matchedTool.name} Review
+                              </Link>
+                            </Button>
+                            <Button asChild variant="outline" className="rounded-xl border-slate-200 text-slate-700 hover:bg-slate-50 h-8 px-4 text-xs font-bold shadow-xs">
+                              <Link href={`/alternatives/${plat.toolSlug}`}>
+                                Alternatives & Competitors
+                              </Link>
+                            </Button>
+                            <Button asChild variant="ghost" className="rounded-xl text-slate-500 hover:text-slate-900 h-8 px-4 text-xs font-bold">
+                              <Link href={`/guides?tool=${plat.toolSlug}`}>
+                                Technical Guides
+                              </Link>
+                            </Button>
+                          </div>
+                        )}
+                      </Card>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* --- RIGHT COLUMN SIDEBAR --- */}
+            <div className="space-y-8">
+              {/* E-E-A-T Objective Audit Seal */}
+              <Card className="rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
+                <div className="flex items-center gap-2 border-b border-slate-50 pb-3">
+                  <Award className="w-5 h-5 text-amber-500" />
+                  <h3 className="font-black text-slate-900 text-sm uppercase tracking-wider">TCO TRUST GUARANTEE</h3>
+                </div>
+                <p className="text-slate-500 text-xs leading-relaxed font-semibold">
+                  This multi-platform matrix compiles authentic market subscription pricing, named-user background data collection audit risk ratings, and file format interoperability tolerances. 
+                </p>
+                <p className="text-slate-400 text-[10px] leading-relaxed font-mono">
+                  All analyses remain 100% objective, based on IT telemetry logs and verified engineers feedback.
+                </p>
+              </Card>
+
+              {/* Automated Telemetry Shield & Registry Tweak Code */}
+              {pro.complianceShieldTitle && (
+                <Card className="rounded-[24px] p-6 border border-slate-900 shadow-xl bg-slate-950 text-white space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center">
+                      <Settings className="w-4 h-4 text-emerald-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-black text-xs uppercase tracking-wider text-slate-200">{pro.complianceShieldTitle}</h4>
+                      <span className="text-[9px] text-slate-500 font-mono">Automated Shell / Hosts Script</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-slate-400 text-[11px] leading-relaxed font-medium">
+                    {pro.complianceShieldDesc} Save the code snippet below as a `.bat` script file and execute with Administrator privileges.
+                  </p>
+
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4 font-mono text-[9px] leading-relaxed text-emerald-400 overflow-x-auto select-all">
+                    <pre>{pro.codeSnippet}</pre>
+                  </div>
+                </Card>
+              )}
+
+              {/* Deals Center Navigation Banner */}
+              <Link href="/deals" className="block rounded-[24px] p-6 bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-100 hover:shadow-xl hover:-translate-y-0.5 transition-all group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-xl -mr-8 -mt-8"></div>
+                <div className="relative z-10 space-y-2">
+                  <div className="text-emerald-100 font-mono font-black text-[9px] uppercase tracking-widest">
+                    ACTIVE COMMERCIAL OFFERS
+                  </div>
+                  <h4 className="font-black text-sm group-hover:underline">
+                    Save on CAD/BIM Licensing →
+                  </h4>
+                  <p className="text-emerald-100 text-xs leading-relaxed font-medium">
+                    Check active coupon codes, discounts, and verified perpetual alternatives to cut down software expenses.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
   const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
@@ -1863,11 +2918,11 @@ function parseGuideSlug(slug: string) {
 
 export function generateStaticParams() {
   const params: { slug: string }[] = [];
-  // For static builds, pre-render exactly 10 guides per tool to generate 2,400+ fast static routes
+  // For static builds, pre-render exactly 20 guides per tool to generate 4,800+ fast static routes
   for (const tool of tools) {
     const selectedArticles = ARTICLES_LIST
       .filter(art => isArticleCompatibleWithTool(art.title, art.category, tool))
-      .slice(0, 10);
+      .slice(0, 20);
     for (const art of selectedArticles) {
       const artIndex = art.id.split('-').pop();
       params.push({
@@ -1880,6 +2935,30 @@ export function generateStaticParams() {
   const categoryKeys = ['troubleshooting', 'performance', 'printing', 'standards', 'deployment', 'migration', 'procurement', 'manufacturing'];
   for (const cat of categoryKeys) {
     params.push({ slug: cat });
+  }
+
+  // Pre-render the 20 industry procurement pages
+  for (const pro of PROCUREMENT_LIST) {
+    params.push({ slug: `industry-${pro.slug}` });
+  }
+
+  // Pre-render the 200 standards pages (10 standards x 20 tools)
+  for (const std of STANDARDS_LIST) {
+    for (const tool of DRAFTING_TOOLS) {
+      params.push({ slug: `standards-${std.id}-${tool}` });
+    }
+  }
+
+  // Pre-render the 30 licensing shield pages
+  for (const tool of LICENSING_TOOLS) {
+    params.push({ slug: `shield-${tool}` });
+  }
+
+  // Pre-render the 100 kernel conversion pages (10 source x 10 target tools)
+  for (const src of KERNEL_TOOLS) {
+    for (const tgt of KERNEL_TOOLS) {
+      params.push({ slug: `kernel-${src.slug}-${tgt.slug}` });
+    }
   }
 
   return params;
@@ -1901,6 +2980,98 @@ export async function generateMetadata(
         canonical: `https://cadguide.tools/guides/${slug}`,
       },
       robots: { index: true, follow: true },
+    };
+  }
+
+  // 1.5. Check if slug is an industry procurement page
+  if (slug.startsWith('industry-')) {
+    const pro = getProcurementBySlug(slug.substring(9));
+    if (pro) {
+      return {
+        title: `${pro.title} — 3-Yr TCO & Procurement Platform Comparison`,
+        description: pro.excerpt,
+        keywords: [pro.keyword, 'cad procurement', 'cad comparison', 'cax tco matrix', 'software selection', 'license audit compliance'],
+        alternates: {
+          canonical: `https://cadguide.tools/guides/${slug}`,
+        },
+        robots: { index: true, follow: true },
+      };
+    } else {
+      return {
+        title: 'Not Found — CADGuide',
+        robots: { index: false, follow: false },
+      };
+    }
+  }
+
+  // 1.7. Check if slug is a drafting standard page
+  if (slug.startsWith('standards-')) {
+    const parts = slug.split('-');
+    if (parts.length >= 3) {
+      const standardId = parts[1];
+      const toolSlug = parts.slice(2).join('-');
+      const stdData = getStandardPageData(standardId, toolSlug);
+      if (stdData) {
+        return {
+          title: `${stdData.standardName} in ${stdData.toolName} — Drafting & Layering Standards`,
+          description: stdData.excerpt,
+          keywords: [stdData.keyword, 'cad standards', 'bim layers', 'lineweight mapping', 'technical drafting', 'export configuration'],
+          alternates: {
+            canonical: `https://cadguide.tools/guides/${slug}`,
+          },
+          robots: { index: true, follow: true },
+        };
+      }
+    }
+    return {
+      title: 'Not Found — CADGuide',
+      robots: { index: false, follow: false },
+    };
+  }
+
+  // 1.8. Check if slug is an IT licensing shield page
+  if (slug.startsWith('shield-')) {
+    const toolSlug = slug.substring(7);
+    const shieldData = getLicensingShieldData(toolSlug);
+    if (shieldData) {
+      return {
+        title: `${shieldData.toolName} Licensing Security & Anti-Telemetry Shield`,
+        description: shieldData.excerpt,
+        keywords: [`${shieldData.toolName.toLowerCase()} audit`, `${shieldData.toolName.toLowerCase()} license`, 'flexlm options', 'silent deploy', 'block telemetry', 'eula compliance'],
+        alternates: {
+          canonical: `https://cadguide.tools/guides/${slug}`,
+        },
+        robots: { index: true, follow: true },
+      };
+    }
+    return {
+      title: 'Not Found — CADGuide',
+      robots: { index: false, follow: false },
+    };
+  }
+
+  // 1.9. Check if slug is a geometry kernel pipeline page
+  if (slug.startsWith('kernel-')) {
+    const parts = slug.split('-');
+    if (parts.length >= 3) {
+      const sourceSlug = parts[1];
+      const targetSlug = parts.slice(2).join('-');
+      const kData = getKernelPageData(sourceSlug, targetSlug);
+      if (kData) {
+        return {
+          title: `${kData.sourceName} to ${kData.targetName} Kernel Conversion & Tolerance Stitching`,
+          description: kData.excerpt,
+          keywords: ['geometry kernel', 'parasolid acis conversion', 'linear tolerance', 'surface stitching error', 'brep topology', '3d model healing'],
+          alternates: {
+            canonical: `https://cadguide.tools/guides/${slug}`,
+          },
+          robots: { index: true, follow: true },
+        };
+      }
+    }
+    return {
+      title: 'Not Found — CADGuide',
+      robots: { index: false, follow: false },
     };
   }
 
@@ -2281,6 +3452,54 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const catInfo = CATEGORY_SECTIONS.find(s => s.category === slug);
   if (catInfo) {
     return renderCategoryPage(catInfo);
+  }
+
+  // 1.5. Check if slug is an industry procurement page
+  if (slug.startsWith('industry-')) {
+    const pro = getProcurementBySlug(slug.substring(9));
+    if (pro) {
+      return renderProcurementPage(pro);
+    } else {
+      notFound();
+    }
+  }
+
+  // 1.7. Check if slug is a drafting standard page
+  if (slug.startsWith('standards-')) {
+    const parts = slug.split('-');
+    if (parts.length >= 3) {
+      const standardId = parts[1];
+      const toolSlug = parts.slice(2).join('-');
+      const stdData = getStandardPageData(standardId, toolSlug);
+      if (stdData) {
+        return renderStandardsPage(stdData);
+      }
+    }
+    notFound();
+  }
+
+  // 1.8. Check if slug is an IT licensing shield page
+  if (slug.startsWith('shield-')) {
+    const toolSlug = slug.substring(7);
+    const shieldData = getLicensingShieldData(toolSlug);
+    if (shieldData) {
+      return renderLicensingShieldPage(shieldData);
+    }
+    notFound();
+  }
+
+  // 1.9. Check if slug is a geometry kernel pipeline page
+  if (slug.startsWith('kernel-')) {
+    const parts = slug.split('-');
+    if (parts.length >= 3) {
+      const sourceSlug = parts[1];
+      const targetSlug = parts.slice(2).join('-');
+      const kData = getKernelPageData(sourceSlug, targetSlug);
+      if (kData) {
+        return renderKernelPage(kData);
+      }
+    }
+    notFound();
   }
 
   // 2. Otherwise process as a dynamic tool guide

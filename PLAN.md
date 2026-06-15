@@ -1,55 +1,83 @@
-# 📋 CADGuide.tools Development & Content Expansion Plan
+# 📋 CADGuide.tools 内容生成、注入与规模扩张计划
+*(Optimized Content Generation, Injection & Architectural Plan)*
 
-本文件记录了 `cadguide.tools` 的长期内容扩张计划、交互式计算器子系统，以及长尾 SEO 攻坚规划。
-
----
-
-## 1. 权威指南板块扩张计划 (Guides Hub Content Plan)
-
-> 详细的 8 大领域与 10 阶段指南生成规划详见：[权威指南内容规划与扩张方案 (guide_content_planning.md)](file:///f:/cad%20tools%20io/cadtools-cc/guide_content_planning.md)  
-> 详细的中高阶专业人群与三大内容核心扩张支柱详见：[未来内容扩张战略 (future_expansion_strategy.md)](file:///f:/cad%20tools%20io/cadtools-cc/future_expansion_strategy.md)
-
-我们将指南体系划分为 **8 大核心大动脉**，专为 B-End 企业级专业用户提供硬核技术解决方案：
-
-1.  **Troubleshooting（故障分析）**：解决致命崩溃、Exception Code 签名分析与注册表残留清理。
-2.  **Performance（性能调优）**：图形加速设置、多线程分配基准、ISV 显卡驱动匹配。
-3.  **Print & PDF（矢量出图）**：CTB/STB 打印线宽校准、PDF 转换中文字体乱码与线条丢失修复。
-4.  **Standards & APIs（开发与标准）**：AutoLISP API 兼容性对照、CUIX 菜单与自定义 Hatch 导入。
-5.  **BIM & Coordination（协同规范）**：BIM 执行计划 (BEP) 模板、LOD 300 到 LOD 500 精度边界约束。
-6.  **MCAD & Geometry（内核与拓扑）**：Parasolid 与 ACIS 内核转换误差、NURBS 拓扑缝合（Topological Sewing）指南。
-7.  **CAM & 3D Print（数字制造）**：CNC 刀路优化、G-Code 切片算法与 K-Factor 折弯系数。
-8.  **SAM & Compliance（合规审计）**：FLEXlm 授权管理、Named-User 许可证合规审计防范对抗。
-
-### 差异化内容排版模板
-针对不同分类指南，我们 design 了四套去 AI 化的技术模板以满足 Google 的 E-E-A-T 质量门槛：
-*   **模板 A (技术尸检)**：包含 Exception Code 表格、病因诊断、Windows 注册表路径及修复代码块。
-*   **模板 B (合规风控)**：包含合规风险晴雨表、EULA 协议条款漏洞分析、3 年 TCO 成本复利矩阵。
-*   **模板 C (工业标准)**：包含 ISO/ANSI 标准元数据框、线宽对应对照表、一键部署脚本。
-*   **模板 D (内核基准)**：包含几何精度丢失率（Tolerance Drift）表、C++ 或 Python 底层 API 示例。
+本计划是针对 `cadguide.tools` 如何在确保 **E-E-A-T 质量规范与零 AI 灌水** 的前提下，通过六大攻坚阶段，将全站独特（Unique）页面规模平滑推进至 **5,800+ 个** 物理与动态路由的高阶扩张路线图。
 
 ---
 
-## 2. 纯前端交互式微工具蓝图 (Interactive Calculators & Tools Blueprint)
+## Ⅰ. 内容生成与注入的六大攻坚阶段 (Six-Phase Roadmap)
 
-> 详细的 5 大纯前端交互小工具设计蓝图详见：[交互式计算器与微工具蓝图 (calculators_tools_blueprint.md)](file:///f:/cad%20tools%20io/cadtools-cc/calculators_tools_blueprint.md)
+我们将全站的内容生成与注入划分为 **6 个阶梯式演进阶段**。每个阶段专注于解决特定的 B-End 痛点，并通过算法和模板提供完全不同的独特页面：
 
-为了提升用户页面停留时间 (Dwell Time)，我们计划推出 **5 款纯前端执行的交互微工具**。基于数据隐私保护，所有计算、文件解析均在**客户端浏览器本地**完成（零服务器上传，100% 数据安全）：
+### 阶段 1：Trunk Activation & Dynamic Linking (骨架激活与心脏纽枢) — [已完成]
+*   **攻坚目标**：激活 A-Z 索引主页与动态交叉连线逻辑，完成 3,000 级静态页面的预渲染编译。
+*   **生成内容**：
+    *   动态交叉生成 240 款软件在 8 大类别下的基础排障/性能/打印指南骨架。
+*   **独特页面数 (Unique Pages)**：**2,400 个** 动态长尾指南叶片页。
+*   **Interlink 入口**：在 `/guides` 主页上线 A-Z 字母索引抽屉，蜘蛛可从此核心节点秒级爬行抓取全部长尾页面。
 
-| 工具名称 | 输入参数 | 核心输出与交互 | SEO 目标 |
-| :--- | :--- | :--- | :--- |
-| **1. DXF 头文件与水印扫描器** | 拖拽上传本地 `.dxf` 文件 | 提取 CAD 版本代号、解析图层表（Layer List）并扫描是否带有教育版水印戳（Watermark Detection）。 | `online dxf viewer`, `dxf educational watermark detector` |
-| **2. CTB 打印样式转换器** | 上传本地 `.ctb` 线型文件 | 动态渲染 255 色矩阵，点击色块查看笔宽、颜色覆盖、线性等参数，并提供 clean PDF 和 JSON 导出。 | `cad ctb reader`, `convert ctb line weights` |
-| **3. 钣金折弯系数计算器** | 板材厚度 $T$、折弯半径 $R$、折弯角度 $A$、K-Factor | 基于 DIN 6935 标准计算弯曲补偿（BA）和扣除值（BD）。使用 SVG 2D Canvas 动态演示折弯受力与 Neutral Fiber 偏移。 | `k-factor sheet metal calculation`, `bend allowance calculator` |
-| **4. 3D 打印弦高偏差优化器** | 孔径半径 (mm)、STL 导出角度 (deg)、打印机层高 | 计算 Chordal Deviation 弦高偏差（S），判断三维网格是否达到 Watertight 标准。SVG 可视化圆弧的多边形近似步长。 | `stl export tolerance calculator`, `mesh density optimizer` |
-| **5. FLEXlm Options 配置生成器** | Daemon 端口、Feature Code、用户组列表 | 纯前端可视化选项编译器，支持 RESERVE, INCLUDE, TIMEOUT 等配置，一键下载标准 options.opt 文件。 | `flexlm options file builder`, `cad license reservation` |
+### 阶段 2：Adaptive CAx Diagnosis Engine (自适应崩溃与技术尸检部署) — [进行中]
+*   **攻坚目标**：对 `getAutopsyPayload` 进行重构，摆脱通用模板，针对 50 款主流软件在 Windows 11 下的 15 个最常见致命崩溃报错（Fatal Error）进行一对一的精准尸检。
+*   **生成内容**：
+    *   针对 AutoCAD, SolidWorks, Revit, Inventor, Rhino, CATIA, Creo, NX 等 50 款高流量软件，精准录入诸如 `0xC0000005` (Access Violation)、`0xc0000409` (Stack Overrun)、`lmgrd.exe` 端口绑定冲突、三维坐标对齐死锁等真实排错签名与专用的 `.bat` 修复脚本。
+*   **独特页面数 (Unique Pages)**：**750 个**（在 2,400 个叶片页中，有 750 个高流量页面会被这套自适应硬核诊断报告完全替换与重写，彻底告别程序化重复感）。
+*   **Interlink 入口**：绑定在 `/tools/[slug]`（软件评测详情页）右侧 Sidebar。当用户看 Revit 评测时，侧栏只调取并推荐这 15 个精准的 Revit 尸检排错页。
+
+### 阶段 3：Multi-Platform Procurement & TCO Matrices (行业选型采购与多边比对)
+*   **攻坚目标**：攻占企业采购总监与 BIM/CAD 主管的“平台迁移与批量选型”高客单价痛点。
+*   **生成内容**：
+    *   撰写 **20 个细分行业**（如高频 PCB 设计、重工业管道建模、高端机械有限元 FEA 求解等）的 5+ 平台横向多边对比百科。
+*   **独特页面数 (Unique Pages)**：**20 个** 超高权重的主动脉横向 PK 页面。
+*   **Interlink 入口**：将多边对比页作为枢纽，底部直链这 5 款软件各自的 Alternatives 与 Guides 页面，实现 PageRank 权重的大规模流动。
+
+### 阶段 4：Regional Drafting Standards & Templates (国家标准规范与图层笔宽)
+*   **攻坚目标**：拦截日常设计院绘图员与工程师每天搜索的“图层规范与 CTB 笔宽”刚需流量。
+*   **生成内容**：
+    *   撰写全球 **10 个主要标准体系**（ISO, AIA, ANSI, DIN, JIS, GB/T 等）在 20 款主要制图软件下的标准图层、笔宽配置规范。
+*   **独特页面数 (Unique Pages)**：**200 个** 独特的标准映射指南页。
+*   **Interlink 入口**：在在线小工具（如图纸卡顿清理器、CTB 笔宽可视化板、K-Factor 折弯计算器）下方，根据情境锚定这 200 个页面（“*Trouble exporting standardized ISO PDF? Read our Standards Directory →*”），将工具访客转化为指南读者。
+
+### 阶段 5：Licensing Security & Anti-Telemetry Shields (静默安装与 FLEXlm 防合规审计)
+*   **攻坚目标**：为企业 IT 资产管理员（SAM）提供防止厂商静默审计、网络抓包以及快速域静默部署的终极策略。
+*   **生成内容**：
+    *   撰写针对 Named-User Telemetry (软件商网络数据收集) 的静默屏蔽指南、FLEXlm options 文件限制规则，以及 EULA 许可避雷指南。
+*   **独特页面数 (Unique Pages)**：**30 个** 专属的安全对抗指南页。
+*   **Interlink 入口**：悬浮挂载在 Deals 优惠折扣页面左侧及 Tools 详情页醒目位置，通过“降本增效与防风控”的联锁，将 IT 主管平滑分流至 Deals 商业转化链路。
+
+### 阶段 6：Cross-Software Geometry Kernel Pipelines (跨软件三维内核转换工作流)
+*   **攻坚目标**：满足机械设计与精密制造中对于“无损格式转换”的极客化算法求知欲。
+*   **生成内容**：
+    *   针对主流 10 款三维软件（SolidWorks, Inventor, Creo, NX, Rhino 等）之间的 Parasolid、ACIS、NURBS 和 B-Rep 网格实体转换与精度丢失控制指南。
+*   **独特页面数 (Unique Pages)**：**100 个** 独特精度校准指南页。
+*   **Interlink 入口**：在毛细血管指南页的正文直接引入 3D 打印弦高偏差、折弯系数等交互式小工具，极大提高 Dwell Time（停留时间）。
 
 ---
 
-## 3. 开发阶段状态跟踪 (Implementation Roadmap)
+## Ⅱ. 页面规模与构成预测 (Unique Page Count Estimates)
 
-目前我们正处于**第一阶段基础建设与 Deals 页面上线**完成期：
+通过在 Next.js 全静态渲染下执行本计划，我们在六大阶段完成后，全站独特（Unique）页面构成的预计如下：
 
-*   `[x]` **Phase I (Deals 页升级)**：Deals 页面完成 19 个真实折扣整理、Tabs 分类器、复制功能，并开放搜索引擎 index。
-*   `[x]` **Phase II (全局 Notice 优化)**：更新顶部 SiteNotice，向用户准确传递 cadguide.tools 定位。
-*   `[x]` **Phase III (交互计算器开发)**：全量自研交互计算器与诊断工具（包含 limits-and-fits、flexlm-error-15、k-factor、shortcuts 等全部 12 款原生工具）已全部 100% 开发完成并通过 Next.js 静态生产 build 编译。
-*   `[ ]` **Phase IV (企业级长尾指南铺设)**：【下一步行动】按照 8 大核心领域逐步编写长尾叶子页并实现全站内链闭环（启动 Guides 模块 Trunk 骨架激活与 A-Z 索引数据库的建构）。
+| 页面类型 | 物理目录/路由机制 | 当前数量 | Phase 1-6 推进后数量 | 变化与扩增详情 |
+| :--- | :--- | :---: | :---: | :--- |
+| **基础 Tools 评测页** | `/tools/[slug]` | 240 | **240** | 保持不变，包含 240 款主流 CAD/BIM/CAE 软件。 |
+| **Alternatives 替代品页** | `/alternatives/[slug]` | 240 | **240** | 保持不变，包含 240 款软件的平替推荐。 |
+| **Compare PK 详情页** | `/compare/[pair]` | 81 | **81** | 保持不变，包含 81 对经典双雄 PK 决斗页。 |
+| **在线交互小工具** | `/toolbox/[slug]` | 70+ | **70+** | 保持不变，包含 5 个爆款升级重构及占位页面。 |
+| **Deals 优惠中心** | `/deals` | 1 | **1** | 全局唯一优惠 Hub 页面。 |
+| **Matchmaker 选型匹配** | `/matchmaker` | 1 | **1** | 全局唯一多步骤问答匹配页面。 |
+| **Guides 动脉着陆页** | `/guides` | 8 | **8** | 8 大核心领域分类主页。 |
+| **Guides 长尾叶片页** | `/guides/[slug]` | 2,400 | **4,800** | **[翻倍]** 将 240 款软件的预设长尾指南基准从目前的 10 篇扩展至 **20 篇**。 |
+| **自适应定制尸检页** | 动态注入覆盖 | (通配兜底) | **750** | **[精细化]** 其中 750 个页面将被 50 款软件专属的真实报错与 `.bat` 修复脚本 100% 独立重写。 |
+| **新增多边对比 & 行业标准等** | `/guides/industry-...` 等 | 0 | **350** | **[新增]** 包括 20 个采购PK、200 个图层标准、30 个防审计及 100 个内核转换页。 |
+| **全站独特页面总量** | **静态构建池总计** | **3,413** | **5,891 ~ 6,000+** | **通过对 Guides 指南量和专业领域长尾页的扩容，页面数一举冲破 5,800+，后期极易扩充至 10,000+。** |
+
+---
+
+## Ⅲ. 全阶段完成后的架构收益
+
+1.  **零服务器托管成本 (Zero-Server-Load)**：
+    即使页面从 3,000 个扩张到 6,000 个以上，得益于我们采用的静态编译（SSG）和构建期静态读取，服务器托管成本依然保持为 **$0**，且在 CDN 边缘节点实现秒开。
+2.  **规避 Helpful Content 算法降权**：
+    由于采用了“自适应诊断矩阵”和“行业采购/制图标准模板”，我们避免了 AI 自动生成的单一乏味重复感，极高保真地模拟了拥有 10 年工程经验的总工手写排错指南，完美符合 Google E-E-A-T 标准。
+3.  **实现 PageRank 流量自闭环**：
+    通过 Metropolitan Interlink 对流量和权重的精细分配，我们将长尾的长尾流量（毛细血管）汇聚流向 Tools、Compare 和 Deals 等商业转化层（主动脉与心脏），构建起牢不可破的变现壁垒。
