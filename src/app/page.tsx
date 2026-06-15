@@ -218,6 +218,110 @@ function HomeBody() {
         </div>
       </section>
 
+      {/* 3.5. EXPERT KNOWLEDGE CENTER & SUB-ENCYCLOPEDIA GATEWAY */}
+      <section className="bg-white py-24 border-b border-slate-100">
+        <div className="max-w-[1360px] mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="max-w-2xl">
+              <div className="text-xs font-black text-blue-600 uppercase tracking-widest mb-2">
+                Knowledge & Sub-Encyclopedias
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+                CAD & BIM Expert Guides Center
+              </h2>
+              <p className="text-sm text-slate-500 font-medium mt-2 leading-relaxed">
+                Unlock over 6,100+ programmatically indexed professional troubleshooting manuals, official drafting layer templates, and licensing audit strategies.
+              </p>
+            </div>
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold h-12 rounded-xl shrink-0 shadow-md shadow-blue-100">
+              <Link href="/guides">Browse Library (6,160+ Guides) →</Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1 */}
+            <Link
+              href="/guides/kernel-solidworks-siemens-nx"
+              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-violet-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-violet-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="w-10 h-10 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center mb-5 font-bold text-lg group-hover:scale-110 transition-transform">
+                📐
+              </div>
+              <span className="text-[10px] font-black uppercase tracking-wider text-violet-600 block mb-1">
+                Geometry Kernel
+              </span>
+              <h3 className="text-base font-black text-slate-900 leading-snug group-hover:text-violet-600 transition-colors">
+                3D Geometry & Kernel Rules
+              </h3>
+              <p className="text-xs text-slate-500 mt-2.5 leading-relaxed font-semibold">
+                Lossless B-Rep solids, Parasolid vs ACIS, and OpenCascade translation pipelines with precision stitching.
+              </p>
+            </Link>
+
+            {/* Card 2 */}
+            <Link
+              href="/guides/standards-iso-128-autocad"
+              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-emerald-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 font-bold text-lg group-hover:scale-110 transition-transform">
+                🗂️
+              </div>
+              <span className="text-[10px] font-black uppercase tracking-wider text-emerald-600 block mb-1">
+                Layer Standards
+              </span>
+              <h3 className="text-base font-black text-slate-900 leading-snug group-hover:text-emerald-600 transition-colors">
+                Drafting & ISO Standards
+              </h3>
+              <p className="text-xs text-slate-500 mt-2.5 leading-relaxed font-semibold">
+                Official AIA, ISO 128, and GB/T CAD layer templates. Deploy standardized drafting conventions.
+              </p>
+            </Link>
+
+            {/* Card 3 */}
+            <Link
+              href="/guides/shield-autocad"
+              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-rose-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center mb-5 font-bold text-lg group-hover:scale-110 transition-transform">
+                🛡️
+              </div>
+              <span className="text-[10px] font-black uppercase tracking-wider text-rose-600 block mb-1">
+                EULA Compliance
+              </span>
+              <h3 className="text-base font-black text-slate-900 leading-snug group-hover:text-rose-600 transition-colors">
+                License Audit Shield
+              </h3>
+              <p className="text-xs text-slate-500 mt-2.5 leading-relaxed font-semibold">
+                FLEXlm security configs, registry blocks, and protection guidelines against Autodesk telemetry sweeps.
+              </p>
+            </Link>
+
+            {/* Card 4 */}
+            <Link
+              href="/guides/industry-high-frequency-pcb-design"
+              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 font-bold text-lg group-hover:scale-110 transition-transform">
+                📊
+              </div>
+              <span className="text-[10px] font-black uppercase tracking-wider text-blue-600 block mb-1">
+                Procurement TCO
+              </span>
+              <h3 className="text-base font-black text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
+                Enterprise TCO Matrix
+              </h3>
+              <p className="text-xs text-slate-500 mt-2.5 leading-relaxed font-semibold">
+                Calculate licensing cost efficiency. Smart 3-year SaaS vs perpetual buyout evaluation matrices.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 4. FREE INTERACTIVE TOOLBOX SHELF */}
       <section className="bg-slate-50 py-24 border-y border-slate-100/50">
         <div className="max-w-[1360px] mx-auto px-6">

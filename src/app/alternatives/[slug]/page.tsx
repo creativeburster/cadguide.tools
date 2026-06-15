@@ -521,10 +521,26 @@ function renderAlternativesGuides(tool: Tool, style: AlternativeStyle) {
 }
 
 function renderRelatedLinks(tool: Tool) {
+  const licensingTools = [
+    'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
+    'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
+    'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
+    'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad'
+  ];
+  const draftingTools = [
+    'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
+    'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
+    'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
+    'bricscad', 'draftsight', 'gstarcad', 'zwcad'
+  ];
+
+  const hasShield = licensingTools.includes(tool.slug);
+  const hasStandards = draftingTools.includes(tool.slug);
+
   return (
     <section className="mt-12 border-t border-slate-200 pt-8">
       <h2 className="text-lg font-bold text-slate-900 mb-4">Related Engineering Resources</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <Link
           href={`/tools/${tool.slug}`}
           className="block p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all"
@@ -539,6 +555,24 @@ function renderRelatedLinks(tool: Tool) {
           <div className="text-xs uppercase tracking-wider text-slate-500 font-bold">Side-by-Side Comparison</div>
           <div className="mt-1 font-bold text-slate-900">Custom Comparison Matrix</div>
         </Link>
+        {hasShield && (
+          <Link
+            href={`/guides/shield-${tool.slug}`}
+            className="block p-4 rounded-2xl bg-white border border-rose-200 hover:border-rose-300 hover:shadow-sm transition-all"
+          >
+            <div className="text-xs uppercase tracking-wider text-rose-500 font-bold">License Security</div>
+            <div className="mt-1 font-bold text-slate-900">{tool.name} EULA Audit Guard</div>
+          </Link>
+        )}
+        {hasStandards && (
+          <Link
+            href={`/guides/standards-iso-128-${tool.slug}`}
+            className="block p-4 rounded-2xl bg-white border border-emerald-200 hover:border-emerald-300 hover:shadow-sm transition-all"
+          >
+            <div className="text-xs uppercase tracking-wider text-emerald-600 font-bold">Drafting Standard</div>
+            <div className="mt-1 font-bold text-slate-900">{tool.name} ISO Layer Mapping</div>
+          </Link>
+        )}
       </div>
     </section>
   );

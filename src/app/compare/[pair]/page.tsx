@@ -712,6 +712,22 @@ export default async function ComparePairPage(
 
   // Metropolitan Interlink Phase 2: Keep Exploring cross-links
   const categoryForA = categories.find(c => c.id === a.category_id);
+  
+  const kernelTools = [
+    'solidworks', 'siemens-nx', 'autodesk-inventor', 'ptc-creo', 'catia',
+    'rhino-3d', 'fusion-360', 'freecad', 'solid-edge', 'autocad'
+  ];
+  const licensingTools = [
+    'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
+    'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
+    'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
+    'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad'
+  ];
+
+  const is3DMCAD = kernelTools.includes(a.slug) && kernelTools.includes(b.slug);
+  const hasShieldA = licensingTools.includes(a.slug);
+  const hasShieldB = licensingTools.includes(b.slug);
+
   const exploreBlock = (
     <section key="explore-block" className="mt-10 pt-6 border-t border-slate-100">
       <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Keep Exploring</h3>
@@ -728,6 +744,21 @@ export default async function ComparePairPage(
         {categoryForA && (
           <Link href={`/best/${categoryForA.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-100 hover:bg-blue-50 hover:text-blue-600 rounded-xl text-xs font-bold text-slate-600 transition-all">
             Best {categoryForA.name}
+          </Link>
+        )}
+        {is3DMCAD && (
+          <Link href={`/guides/kernel-${a.slug}-${b.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-violet-50 hover:bg-violet-100 border border-violet-100 hover:border-violet-200 rounded-xl text-xs font-bold text-violet-700 transition-all">
+            ⚡ {a.name} &gt; {b.name} 3D Conversion
+          </Link>
+        )}
+        {hasShieldA && (
+          <Link href={`/guides/shield-${a.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-100 hover:border-rose-200 rounded-xl text-xs font-bold text-rose-700 transition-all">
+            🛡️ {a.name} Audit Shield
+          </Link>
+        )}
+        {hasShieldB && a.slug !== b.slug && (
+          <Link href={`/guides/shield-${b.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-100 hover:border-rose-200 rounded-xl text-xs font-bold text-rose-700 transition-all">
+            🛡️ {b.name} Audit Shield
           </Link>
         )}
       </div>
