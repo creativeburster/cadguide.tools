@@ -25,6 +25,21 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
   const bestDeal = getBestDealForTool(tool.id);
 
+  // Helper flags to render contextual B-End compliance & standards guides inside sidebar
+  const hasLicensingShield = [
+    'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
+    'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
+    'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
+    'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad'
+  ].includes(tool.slug);
+
+  const hasDraftingStandards = [
+    'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
+    'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
+    'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
+    'bricscad', 'draftsight', 'gstarcad', 'zwcad'
+  ].includes(tool.slug);
+
   // Helper functions for dynamic tree capillaries
   const getPlatformSlug = (platName: string): string | null => {
     const name = platName.toLowerCase();
@@ -1349,6 +1364,54 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   </Link>
                 </div>
               </div>
+
+              {/* Contextual EULA Compliance Shield (Metropolitan Interlink Entry) */}
+              {hasLicensingShield && (
+                <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-zinc-955 border border-red-900/30 p-6 md:p-8 rounded-[24px] md:rounded-[40px] text-white relative overflow-hidden shadow-xl group">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-red-600/5 rounded-full blur-xl -mr-12 -mt-12 group-hover:scale-150 transition-all duration-700"></div>
+                  <div className="relative z-10 space-y-3">
+                    <div className="text-red-400 font-mono font-black uppercase text-[8px] tracking-[0.25em] flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5" /> EULA Compliance
+                    </div>
+                    <h4 className="text-base font-black leading-tight text-slate-100 group-hover:text-red-400 transition-colors">
+                      {tool.name} Audit Shield
+                    </h4>
+                    <p className="text-slate-400 text-[11px] font-medium leading-relaxed">
+                      Facing vendor telemetry sweeps or subscription audit warnings? Get silent deployment configurations and port block rules.
+                    </p>
+                    <Link
+                      href={`/guides/shield-${tool.slug}`}
+                      className="w-full flex items-center justify-center bg-red-950/40 text-red-300 hover:text-red-200 border border-red-900/50 hover:bg-red-900/30 font-black rounded-2xl h-11 text-[10px] uppercase tracking-wider transition-all active:scale-95"
+                    >
+                      Configure Telemetry Blocker →
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* Contextual Drafting Standards Mapping (Metropolitan Interlink Entry) */}
+              {hasDraftingStandards && (
+                <div className="bg-gradient-to-br from-slate-955 via-slate-900 to-zinc-955 border border-teal-900/30 p-6 md:p-8 rounded-[24px] md:rounded-[40px] text-white relative overflow-hidden shadow-xl group">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-teal-600/5 rounded-full blur-xl -mr-12 -mt-12 group-hover:scale-150 transition-all duration-700"></div>
+                  <div className="relative z-10 space-y-3">
+                    <div className="text-teal-400 font-mono font-black uppercase text-[8px] tracking-[0.25em] flex items-center gap-1.5">
+                      <Layers className="w-3.5 h-3.5" /> Detailing Standards
+                    </div>
+                    <h4 className="text-base font-black leading-tight text-slate-100 group-hover:text-teal-400 transition-colors">
+                      {tool.name} Layer & Pen Styles
+                    </h4>
+                    <p className="text-slate-400 text-[11px] font-medium leading-relaxed">
+                      Deploy official ISO 128, AIA & Chinese GB/T line weight rules. Import native layer scripts directly inside {tool.name}.
+                    </p>
+                    <Link
+                      href={`/guides/standards-iso-128-${tool.slug}`}
+                      className="w-full flex items-center justify-center bg-teal-950/40 text-teal-300 hover:text-teal-200 border border-teal-900/50 hover:bg-teal-900/30 font-black rounded-2xl h-11 text-[10px] uppercase tracking-wider transition-all active:scale-95"
+                    >
+                      Import Layers Standard →
+                    </Link>
+                  </div>
+                </div>
+              )}
 
               {/* Newsletter Subscription */}
               <RelatedTools compact limit={3} />

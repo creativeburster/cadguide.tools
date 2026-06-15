@@ -505,6 +505,49 @@ export default function GuidesClient() {
           Zero entry-level tutorials. Pure, B-End engineering blueprints, troubleshooting steps, and hardware tunings, curated by industry architects and IT administrators.
         </p>
 
+        {/* --- FOUR SPECIALIZED DIRECTORIES GATEWAY --- */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10 text-left">
+          <Link
+            href="/guides/kernel-solidworks-siemens-nx"
+            className="group block p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all hover:border-violet-200 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-16 h-16 bg-violet-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
+            <span className="text-[9px] font-mono font-black text-violet-600 uppercase tracking-wider block mb-1">Geometry Kernel</span>
+            <h3 className="text-xs font-bold text-slate-800 leading-snug group-hover:text-violet-600 transition-colors">3D Kernel Pipelines →</h3>
+            <p className="text-[10px] text-slate-400 mt-1 line-clamp-2">Lossless B-Rep solids & tolerance stitching macro rules.</p>
+          </Link>
+          
+          <Link
+            href="/guides/standards-iso-128-autocad"
+            className="group block p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all hover:border-emerald-200 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
+            <span className="text-[9px] font-mono font-black text-emerald-600 uppercase tracking-wider block mb-1">Layer Standards</span>
+            <h3 className="text-xs font-bold text-slate-800 leading-snug group-hover:text-emerald-600 transition-colors">Drafting Standards →</h3>
+            <p className="text-[10px] text-slate-400 mt-1 line-clamp-2">Official ISO, AIA & GB/T CAD layer templates.</p>
+          </Link>
+
+          <Link
+            href="/guides/shield-autocad"
+            className="group block p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all hover:border-rose-200 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-16 h-16 bg-rose-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
+            <span className="text-[9px] font-mono font-black text-rose-600 uppercase tracking-wider block mb-1">EULA Compliance</span>
+            <h3 className="text-xs font-bold text-slate-800 leading-snug group-hover:text-rose-600 transition-colors">License Audit Shield →</h3>
+            <p className="text-[10px] text-slate-400 mt-1 line-clamp-2">FLEXlm security setup & silent deploy configs.</p>
+          </Link>
+
+          <Link
+            href="/guides/industry-high-frequency-pcb-design"
+            className="group block p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all hover:border-blue-200 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
+            <span className="text-[9px] font-mono font-black text-blue-600 uppercase tracking-wider block mb-1">Procurement TCO</span>
+            <h3 className="text-xs font-bold text-slate-800 leading-snug group-hover:text-blue-600 transition-colors">Enterprise TCO Matrix →</h3>
+            <p className="text-[10px] text-slate-400 mt-1 line-clamp-2">3-Yr TCO analysis & multi-platform comparisons.</p>
+          </Link>
+        </div>
+
         {/* --- PREMIUM DYNAMIC SOFTWARE FILTER --- */}
         <div className="max-w-md mx-auto mb-4 relative text-left">
           <label className="block text-[10px] font-mono font-black uppercase tracking-widest text-slate-400 mb-2">
