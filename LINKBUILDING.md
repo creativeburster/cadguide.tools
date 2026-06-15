@@ -177,7 +177,7 @@
 
 | 平台 | URL | 状态 | 收录日期 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
-| **AlternativeTo** | `https://alternativeto.net` | `[ ] 待提交` | - | 审核约需 1-3 天 |
+| **AlternativeTo** | `https://alternativeto.net` | `[x] 已提交` | 2026-06-15 | 审核中，约需 1-3 天 |
 | **Product Hunt** | `https://www.producthunt.com` | `[ ] 待提交` | - | 提交后当天生效 |
 | **Slant.co** | `https://www.slant.co` | `[ ] 待提交` | - | 直接关联到 AutoCAD 替代问题 |
 | **BetaList** | `https://betalist.com` | `[ ] 待提交` | - | 免费排队审核较慢 |
