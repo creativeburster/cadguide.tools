@@ -261,8 +261,8 @@ function HomeBody() {
 
             {/* Card 2 */}
             <Link
-              href="/guides/standards-iso-128-autocad"
-              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-emerald-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              href="/guides/standards-iso-autocad"
+              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-emerald-350 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
               <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 font-bold text-lg group-hover:scale-110 transition-transform">
@@ -282,7 +282,7 @@ function HomeBody() {
             {/* Card 3 */}
             <Link
               href="/guides/shield-autocad"
-              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-rose-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-rose-350 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
               <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center mb-5 font-bold text-lg group-hover:scale-110 transition-transform">
@@ -301,8 +301,8 @@ function HomeBody() {
 
             {/* Card 4 */}
             <Link
-              href="/guides/industry-high-frequency-pcb-design"
-              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              href="/guides/industry-pcb-design"
+              className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-blue-350 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
               <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 font-bold text-lg group-hover:scale-110 transition-transform">
@@ -338,29 +338,29 @@ function HomeBody() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Tool 1 */}
             <Link
               href="/toolbox/dwg-version-checker"
-              className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
+              className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-115 transition duration-300">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition duration-300">
                     📂
                   </div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-emerald-50 text-emerald-600 border border-emerald-100">
                     ● Try Free
                   </span>
                 </div>
-                <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                   DWG Version Checker
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-semibold">
+                <p className="text-xs text-slate-500 leading-relaxed font-semibold">
                   Drag and drop drawing files to instantly identify their AutoCAD DWG format headers locally in your browser.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
+              <div className="mt-6 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
                 Launch Utility
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -371,25 +371,25 @@ function HomeBody() {
             {/* Tool 2 */}
             <Link
               href="/toolbox/shortcuts"
-              className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
+              className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-115 transition duration-300">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition duration-300">
                     📝
                   </div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-emerald-50 text-emerald-600 border border-emerald-100">
                     ● Try Free
                   </span>
                 </div>
-                <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                   CAD Shortcuts Cheat Sheet
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-semibold">
+                <p className="text-xs text-slate-500 leading-relaxed font-semibold">
                   Compare keyboard shortcuts across AutoCAD, GstarCAD, ZWCAD, and DWG FastView. Clean print-ready Layouts.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
+              <div className="mt-6 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
                 Open Matrix
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -400,26 +400,55 @@ function HomeBody() {
             {/* Tool 3 */}
             <Link
               href="/toolbox/k-factor-calculator"
-              className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
+              className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-115 transition duration-300">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition duration-300">
                     🧮
                   </div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-emerald-50 text-emerald-600 border border-emerald-100">
                     ● Try Free
                   </span>
                 </div>
-                <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  K-Factor Bending Calculator
+                <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  K-Factor Calculator
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-semibold">
+                <p className="text-xs text-slate-500 leading-relaxed font-semibold">
                   Calculate sheet metal bend allowances and deductions using DIN 6935 formulas with interactive neutral axis shifting.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
+              <div className="mt-6 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
                 Launch Calculator
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
+
+            {/* Tool 4 */}
+            <Link
+              href="/toolbox/drawing-lag-performance-cleaner"
+              className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition duration-300">
+                    ⚡
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-emerald-50 text-emerald-600 border border-emerald-100">
+                    ● Try Free
+                  </span>
+                </div>
+                <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  DWG Performance Cleaner
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                  Clean bloated DGN linestyle dictionaries and regapps locally inside your DXF drawings. Instantly eliminate viewport lag.
+                </p>
+              </div>
+              <div className="mt-6 flex items-center text-xs font-black text-blue-600 gap-1.5 group-hover:underline">
+                Run Cleaner
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -460,7 +489,7 @@ function HomeBody() {
               Slice the catalog by role, platform, file format, or pricing — every angle has its own curated guide.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             <Link href="/for" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">17 roles</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Role</div>
@@ -501,6 +530,18 @@ function HomeBody() {
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">16 Features</div>
               <div className="mt-1 text-lg font-black text-slate-900 group-hover:text-blue-600 transition-colors">By Feature</div>
               <div className="mt-1 text-xs text-slate-600">16 technical spotlights + 7 discipline reviews</div>
+            </Link>
+            {/* Added Box 9: Guides Library */}
+            <Link href="/guides" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6,160+ Directives</div>
+              <div className="mt-1 text-lg font-black text-slate-900">Guides Library</div>
+              <div className="mt-1 text-xs text-slate-600">Troubleshooting playbooks, custom setup scripts…</div>
+            </Link>
+            {/* Added Box 10: Interactive Toolbox */}
+            <Link href="/toolbox" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">25+ Tools</div>
+              <div className="mt-1 text-lg font-black text-slate-900">Toolbox</div>
+              <div className="mt-1 text-xs text-slate-600">Free online calculators, checkers & wallpaper templates…</div>
             </Link>
           </div>
         </div>
