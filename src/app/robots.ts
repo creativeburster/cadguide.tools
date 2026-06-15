@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        disallow: ['/api/'],
       },
       // 显式放行主流 AI 搜索引擎与 LLM 爬虫，增强在生成式搜索引擎 (GEO) 中的数据收录效率
       {
