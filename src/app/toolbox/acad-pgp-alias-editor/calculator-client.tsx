@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Upload, Download, AlertTriangle, Check, Plus, Trash2, Terminal, Sparkles, Search, RefreshCw } from 'lucide-react';
+import { Upload, Download, AlertTriangle, Check, Plus, Trash2, Terminal, Sparkles, Search, RefreshCw, Eye, Image as ImageIcon } from 'lucide-react';
 
 interface AliasItem {
   alias: string;
@@ -81,6 +81,253 @@ export default function AcadPgpEditorClient() {
   ]);
   const [activeTab, setActiveTab] = useState<'presets' | 'editor'>('editor');
   const [lastExecutedCommand, setLastExecutedCommand] = useState<string | null>(null);
+
+  // Wallpaper generation states
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [wallpaperTheme, setWallpaperTheme] = useState<'minimalist' | 'blueprint' | 'cyberpunk'>('blueprint');
+  const [wallpaperResolution, setWallpaperResolution] = useState<'4k' | '1080p' | 'phone'>('4k');
+  const [selectedAliases, setSelectedAliases] = useState<string[]>(DEFAULT_AUTOCAD_ALIASES.slice(0, 16).map(a => a.alias));
+
+  // Sync selected aliases when aliases list changes
+  useEffect(() => {
+    const allExisting = aliases.map(a => a.alias);
+    const validSelected = selectedAliases.filter(alias => allExisting.includes(alias));
+    if (validSelected.length === 0) {
+      setSelectedAliases(aliases.slice(0, 16).map(a => a.alias));
+    } else {
+      setSelectedAliases(validSelected);
+    }
+  }, [aliases]);
+
+  // Canvas Drawing logic
+  const drawWallpaperToCanvas = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let width = 3840;
+    let height = 2160;
+    if (wallpaperResolution === '1080p') {
+      width = 1920;
+      height = 1080;
+    } else if (wallpaperResolution === 'phone') {
+      width = 1080;
+      height = 1920;
+    }
+    canvas.width = width;
+    canvas.height = height;
+
+    ctx.clearRect(0, 0, width, height);
+
+    if (wallpaperTheme === 'minimalist') {
+      ctx.fillStyle = '#f8fafc';
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.strokeStyle = '#e2e8f0';
+      ctx.lineWidth = 1;
+      const gridSize = Math.round(width / 40);
+      for (let x = 0; x < width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+    } else if (wallpaperTheme === 'blueprint') {
+      ctx.fillStyle = '#0f1e36';
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.strokeStyle = '#1e2d4a';
+      ctx.lineWidth = 1.5;
+      const gridSize = Math.round(width / 50);
+      for (let x = 0; x < width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+    } else {
+      ctx.fillStyle = '#090d16';
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.strokeStyle = '#111827';
+      ctx.lineWidth = 1;
+      const gridSize = Math.round(width / 30);
+      for (let x = 0; x < width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+    }
+
+    const padding = Math.round(width * 0.04);
+    ctx.strokeStyle = wallpaperTheme === 'minimalist' ? '#64748b' : (wallpaperTheme === 'blueprint' ? '#3b82f6' : '#10b981');
+    ctx.lineWidth = Math.round(width * 0.002);
+    ctx.strokeRect(padding, padding, width - padding * 2, height - padding * 2);
+
+    const halfWidth = width / 2;
+    const halfHeight = height / 2;
+    const ticksSize = Math.round(width * 0.01);
+    ctx.beginPath();
+    ctx.moveTo(halfWidth, padding);
+    ctx.lineTo(halfWidth, padding + ticksSize);
+    ctx.moveTo(halfWidth, height - padding);
+    ctx.lineTo(halfWidth, height - padding - ticksSize);
+    ctx.moveTo(padding, halfHeight);
+    ctx.lineTo(padding + ticksSize, halfHeight);
+    ctx.moveTo(width - padding, halfHeight);
+    ctx.lineTo(width - padding - ticksSize, halfHeight);
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    const titleFontSize = Math.round(width * 0.022);
+    ctx.font = `bold ${titleFontSize}px monospace, system-ui`;
+    ctx.fillStyle = wallpaperTheme === 'minimalist' ? '#0f172a' : (wallpaperTheme === 'blueprint' ? '#ffffff' : '#06b6d4');
+    
+    const isMobile = wallpaperResolution === 'phone';
+    const titleY = Math.round(height * 0.08);
+    ctx.fillText('AutoCAD Shortcut Commands Reference'.toUpperCase(), halfWidth, titleY);
+
+    const subTitleFontSize = Math.round(width * 0.01);
+    ctx.font = `bold ${subTitleFontSize}px monospace, system-ui`;
+    ctx.fillStyle = wallpaperTheme === 'minimalist' ? '#64748b' : (wallpaperTheme === 'blueprint' ? '#f59e0b' : '#10b981');
+    ctx.fillText(`LAYOUT MODE: ${wallpaperResolution.toUpperCase()} | ENGINE: ONLINE PGP COMPILER | DATE: ${new Date().toLocaleDateString()}`, halfWidth, titleY + titleFontSize + 15);
+
+    const renderList = aliases.filter(item => selectedAliases.includes(item.alias));
+    
+    if (renderList.length > 0) {
+      let cols = 3;
+      if (isMobile) {
+        cols = 1;
+      } else {
+        if (renderList.length <= 8) cols = 2;
+        else if (renderList.length <= 18) cols = 3;
+        else if (renderList.length <= 32) cols = 4;
+        else cols = 5;
+      }
+
+      const rows = Math.ceil(renderList.length / cols);
+      const startX = padding * 1.5;
+      const endX = width - padding * 1.5;
+      const startY = titleY + titleFontSize + subTitleFontSize + Math.round(height * 0.06);
+      const endY = height - padding * 2;
+      
+      const colWidth = (endX - startX) / cols;
+      const rowHeight = (endY - startY) / rows;
+
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+
+      const aliasFontSize = Math.round(Math.min(colWidth * 0.12, rowHeight * 0.35));
+      const descFontSize = Math.round(aliasFontSize * 0.75);
+
+      renderList.forEach((item, index) => {
+        const c = index % cols;
+        const r = Math.floor(index / cols);
+
+        const x = startX + c * colWidth;
+        const y = startY + r * rowHeight + rowHeight / 2;
+
+        if (wallpaperTheme === 'cyberpunk') {
+          ctx.shadowBlur = 10;
+          ctx.shadowColor = '#06b6d4';
+        }
+
+        ctx.font = `black ${aliasFontSize}px monospace, system-ui`;
+        ctx.fillStyle = wallpaperTheme === 'minimalist' ? '#0f172a' : (wallpaperTheme === 'blueprint' ? '#f59e0b' : '#10b981');
+        const aliasText = item.alias.padEnd(4, ' ');
+        ctx.fillText(aliasText, x + 20, y);
+
+        ctx.shadowBlur = 0;
+
+        ctx.font = `bold ${descFontSize}px monospace, system-ui`;
+        ctx.fillStyle = wallpaperTheme === 'minimalist' ? '#334155' : (wallpaperTheme === 'blueprint' ? '#ffffff' : '#e2e8f0');
+        ctx.fillText(`➔  ${item.command}`, x + 20 + ctx.measureText(aliasText).width + 10, y);
+
+        ctx.strokeStyle = wallpaperTheme === 'minimalist' ? '#e2e8f0' : (wallpaperTheme === 'blueprint' ? '#1e2d4a' : '#1e293b');
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x + 20, y + rowHeight * 0.25);
+        ctx.lineTo(x + colWidth - 20, y + rowHeight * 0.25);
+        ctx.stroke();
+      });
+    }
+
+    if (!isMobile) {
+      const ucsX = width - padding * 2;
+      const ucsY = height - padding * 2;
+      const ucsSize = Math.round(width * 0.02);
+
+      ctx.strokeStyle = wallpaperTheme === 'minimalist' ? '#64748b' : (wallpaperTheme === 'blueprint' ? '#3b82f6' : '#10b981');
+      ctx.lineWidth = 2;
+      
+      ctx.beginPath();
+      ctx.moveTo(ucsX, ucsY);
+      ctx.lineTo(ucsX + ucsSize, ucsY);
+      ctx.stroke();
+      ctx.font = 'bold 10px monospace';
+      ctx.fillStyle = ctx.strokeStyle;
+      ctx.fillText('X', ucsX + ucsSize + 2, ucsY - 2);
+
+      ctx.beginPath();
+      ctx.moveTo(ucsX, ucsY);
+      ctx.lineTo(ucsX, ucsY - ucsSize);
+      ctx.stroke();
+      ctx.fillText('Y', ucsX - 8, ucsY - ucsSize - 2);
+
+      ctx.beginPath();
+      ctx.arc(ucsX, ucsY, 3, 0, Math.PI * 2);
+      ctx.fillStyle = ctx.strokeStyle;
+      ctx.fill();
+    }
+
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.font = `bold ${Math.round(width * 0.0075)}px monospace`;
+    ctx.fillStyle = wallpaperTheme === 'minimalist' ? '#94a3b8' : (wallpaperTheme === 'blueprint' ? '#475569' : '#374151');
+    ctx.fillText('DESIGNED VIA CADGUIDE.TOOLS | ONLINE COMMAND ALIAS COMPILER', halfWidth, height - padding - 10);
+  };
+
+  // Re-draw on configuration updates
+  useEffect(() => {
+    drawWallpaperToCanvas();
+  }, [aliases, wallpaperTheme, wallpaperResolution, selectedAliases]);
+
+  // Handle wallpaper download
+  const handleDownloadWallpaper = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const url = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `cadguide_wallpaper_${wallpaperTheme}_${wallpaperResolution}.png`;
+    link.click();
+
+    setTerminalHistory((prev) => [
+      ...prev,
+      `>>> High-resolution wallpaper downloaded successfully! Theme: ${wallpaperTheme.toUpperCase()}, Res: ${wallpaperResolution.toUpperCase()}`
+    ]);
+  };
 
   // File parse routine
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -399,6 +646,157 @@ export default function AcadPgpEditorClient() {
             </button>
           </form>
 
+        </div>
+      </div>
+
+      {/* Premium Wallpaper Generator Section */}
+      <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
+        <div>
+          <h2 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
+            <ImageIcon className="w-5 h-5 text-blue-600" /> CAD Command Line Shortcut Wallpaper Designer
+          </h2>
+          <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            High-Resolution Desktop & Mobile Wallpaper Generator (Linkable Asset)
+          </p>
+          <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+            Configure your customized command line aliases into a beautiful minimalist, engineering blueprint, or retro cyberpunk desktop wallpaper. Display your daily drawing cheatsheet on your screen for quick lookup.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Left: Canvas Live Preview Area */}
+          <div className="lg:col-span-5 bg-slate-950 rounded-2xl p-4 flex flex-col justify-center items-center border border-slate-800 shadow-inner min-h-[280px]">
+            <span className="text-[10px] font-mono text-slate-500 mb-3 flex items-center gap-1.5 uppercase tracking-widest">
+              <Eye className="w-3.5 h-3.5" /> Real-time Live Preview Thumbnail
+            </span>
+            <div className="w-full flex justify-center items-center flex-1">
+              <canvas
+                ref={canvasRef}
+                className={`border border-slate-800 rounded-xl shadow-lg bg-slate-900 cursor-pointer max-w-full transition-all duration-300 ${
+                  wallpaperResolution === 'phone' ? 'aspect-[9/16] max-h-[280px] w-auto' : 'aspect-[16/9] max-h-[220px] w-full'
+                }`}
+              />
+            </div>
+            <span className="text-[9px] font-mono text-slate-500 mt-2">
+              Dimensions: {wallpaperResolution === 'phone' ? '1080 × 1920 (Mobile)' : wallpaperResolution === '1080p' ? '1920 × 1080 (FHD)' : '3840 × 2160 (4K UHD)'}
+            </span>
+          </div>
+
+          {/* Right: Customization Controls */}
+          <div className="lg:col-span-7 flex flex-col justify-between gap-6">
+            <div className="space-y-5">
+              {/* 1. Theme Picker */}
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">1. Wallpaper Aesthetics Theme</label>
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { id: 'minimalist', name: 'Minimalist Tech', desc: 'Clean Light Gray', bg: 'bg-slate-50 border-slate-200 text-slate-800' },
+                    { id: 'blueprint', name: 'Classic Blueprint', desc: 'Engineering Blue', bg: 'bg-blue-950 border-blue-900 text-blue-200' },
+                    { id: 'cyberpunk', name: 'Cyber Neon', desc: 'Terminal Dark', bg: 'bg-emerald-950/45 border-emerald-900/40 text-emerald-300' }
+                  ].map(theme => (
+                    <button
+                      key={theme.id}
+                      onClick={() => setWallpaperTheme(theme.id as any)}
+                      className={`p-3 rounded-xl border text-left flex flex-col justify-between h-20 transition-all active:scale-95 cursor-pointer ${theme.bg} ${
+                        wallpaperTheme === theme.id ? 'ring-2 ring-blue-500 ring-offset-2 scale-[1.02] shadow-sm' : 'opacity-75 hover:opacity-100'
+                      }`}
+                    >
+                      <span className="font-bold text-xs">{theme.name}</span>
+                      <span className="text-[9px] opacity-75">{theme.desc}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 2. Resolution Picker */}
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">2. Canvas Dimension Ratio</label>
+                <div className="bg-slate-100 p-1 rounded-xl flex gap-1 w-full sm:w-auto inline-flex">
+                  {[
+                    { id: '4k', label: '4K UHD (3840x2160)' },
+                    { id: '1080p', label: '1080p (1920x1080)' },
+                    { id: 'phone', label: 'Phone Portrait (1080x1920)' }
+                  ].map(res => (
+                    <button
+                      key={res.id}
+                      onClick={() => setWallpaperResolution(res.id as any)}
+                      className={`px-4 py-2 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${
+                        wallpaperResolution === res.id ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-900'
+                      }`}
+                    >
+                      {res.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 3. Aliases Selector list */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">3. Select Shortcuts to Render ({selectedAliases.length} selected)</label>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setSelectedAliases(aliases.slice(0, 16).map(a => a.alias))}
+                      className="text-[9px] font-bold text-blue-600 hover:underline cursor-pointer"
+                    >
+                      Default Top 16
+                    </button>
+                    <button
+                      onClick={() => setSelectedAliases(aliases.map(a => a.alias))}
+                      className="text-[9px] font-bold text-blue-600 hover:underline cursor-pointer"
+                    >
+                      Select All
+                    </button>
+                    <button
+                      onClick={() => setSelectedAliases([])}
+                      className="text-[9px] font-bold text-slate-500 hover:underline cursor-pointer"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </div>
+                {/* Scrollable list of aliases checkable */}
+                <div className="border border-slate-100 rounded-xl p-3 bg-slate-50 max-h-[120px] overflow-y-auto grid grid-cols-2 sm:grid-cols-4 gap-2 scrollbar-thin">
+                  {aliases.map(item => {
+                    const isChecked = selectedAliases.includes(item.alias);
+                    return (
+                      <label
+                        key={item.alias}
+                        className={`flex items-center gap-1.5 p-1.5 rounded-lg border text-[10px] cursor-pointer transition-all hover:bg-white select-none ${
+                          isChecked ? 'border-blue-100 bg-white font-black text-slate-900' : 'border-slate-100 text-slate-500'
+                        }`}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setSelectedAliases(prev => [...prev, item.alias]);
+                            } else {
+                              setSelectedAliases(prev => prev.filter(a => a !== item.alias));
+                            }
+                          }}
+                          className="rounded border-slate-300 text-blue-600 focus:ring-blue-500 w-3 h-3 cursor-pointer"
+                        />
+                        <span className="font-mono">{item.alias}</span>
+                        <span className="opacity-60 truncate">({item.command})</span>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Download wallpaper button */}
+            <button
+              onClick={handleDownloadWallpaper}
+              disabled={selectedAliases.length === 0}
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-black text-sm shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer w-full text-center"
+            >
+              <Download className="w-4 h-4" />
+              Generate & Download High-Resolution Wallpaper (.PNG)
+            </button>
+          </div>
         </div>
       </div>
 

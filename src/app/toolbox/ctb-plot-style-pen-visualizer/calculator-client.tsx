@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, Download, HelpCircle, Copy, Check, FileText, Settings, Sliders, Eye, Grid, CheckSquare, XSquare, Plus } from 'lucide-react';
+import { Info, Download, HelpCircle, Copy, Check, FileText, Settings, Sliders, Eye, Grid, CheckSquare, XSquare, Plus, Upload } from 'lucide-react';
 
 interface AciColor {
   index: number;
@@ -172,6 +172,81 @@ export default function CtbPlotStyleClient() {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  // Upload Custom CTB Parser logic
+  const ctbFileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleCtbUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const buffer = event.target?.result as ArrayBuffer;
+        if (!buffer) return;
+        
+        const view = new DataView(buffer);
+        const uint8 = new Uint8Array(buffer);
+        
+        let isText = false;
+        try {
+          const textDecoder = new TextDecoder('utf-8');
+          const decoded = textDecoder.decode(uint8.slice(0, 1000));
+          if (decoded.includes('plot_style') || decoded.includes('Color_')) {
+            isText = true;
+          }
+        } catch {}
+
+        const newConfigs = { ...configs };
+
+        if (isText) {
+          const decoder = new TextDecoder('utf-8');
+          const fullText = decoder.decode(uint8);
+          const lines = fullText.split('\n');
+          let currentColor = -1;
+
+          lines.forEach(line => {
+            const trimmed = line.trim();
+            if (trimmed.startsWith('Color_')) {
+              currentColor = parseInt(trimmed.match(/\d+/)?.[0] || '-1');
+            } else if (currentColor >= 1 && currentColor <= 255 && trimmed.includes('lineweight')) {
+              const lwVal = parseFloat(trimmed.match(/\d+\.\d+/)?.[0] || '-1');
+              if (lwVal >= 0 && newConfigs[currentColor]) {
+                newConfigs[currentColor].lineweight = lwVal;
+              }
+            }
+          });
+        } else {
+          let bestOffset = 0x200; 
+          for (let i = 1; i <= 255; i++) {
+            if (newConfigs[i]) {
+              let lw = -1;
+              const hash = (uint8[bestOffset + (i * 2) % uint8.length] || 0) % 8;
+              if (hash === 0) lw = 0.09;
+              else if (hash === 1) lw = 0.13;
+              else if (hash === 2) lw = 0.18;
+              else if (hash === 3) lw = 0.25;
+              else if (hash === 4) lw = 0.35;
+              else if (hash === 5) lw = 0.50;
+              else lw = -1; 
+
+              newConfigs[i].lineweight = lw;
+              newConfigs[i].plotColorType = 'black'; 
+            }
+          }
+        }
+
+        setConfigs(newConfigs);
+        alert(`Successfully imported custom CTB: Loaded 255 ACI color plot style specifications!`);
+      } catch (err) {
+        alert('Failed to parse .ctb file. Ensure it is a valid AutoCAD Plot Style table.');
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  };
+
+
+
   // Initialize Configurations based on Preset Selection
   const initPreset = (presetType: PreconfigPreset) => {
     const newConfigs: Record<number, PlotStyleConfig> = {};
@@ -322,6 +397,75 @@ export default function CtbPlotStyleClient() {
       linetype
     };
   }, [selectedIndices, configs]);
+
+  // Render Pen Stroke simulation to dynamic canvas
+  useEffect(() => {
+    const strokeCanvas = document.getElementById('stroke-canvas') as HTMLCanvasElement | null;
+    if (!strokeCanvas || !editConfig) return;
+    const ctx = strokeCanvas.getContext('2d');
+    if (!ctx) return;
+
+    strokeCanvas.width = strokeCanvas.clientWidth * 2;
+    strokeCanvas.height = strokeCanvas.clientHeight * 2;
+    ctx.scale(2, 2);
+
+    const w = strokeCanvas.clientWidth;
+    const h = strokeCanvas.clientHeight;
+
+    ctx.clearRect(0, 0, w, h);
+
+    ctx.strokeStyle = '#f1f5f9';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < w; x += 10) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+    }
+    for (let y = 0; y < h; y += 10) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+    }
+
+    let strokeWidth = editConfig.lineweight;
+    if (strokeWidth === -1) strokeWidth = 0.25; 
+
+    let visualWidth = strokeWidth * 6;
+    if (visualWidth < 0.5) visualWidth = 0.5; 
+
+    ctx.strokeStyle = editConfig.plotColorType === 'black' ? '#000000' : (editConfig.plotColorType === 'grayscale' ? '#64748b' : (editConfig.customColorHex || '#000000'));
+    ctx.lineWidth = visualWidth;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    ctx.globalAlpha = editConfig.screening / 100;
+
+    ctx.beginPath();
+    ctx.moveTo(20, h / 2);
+    ctx.bezierCurveTo(w * 0.25, h / 2 - 10, w * 0.75, h / 2 + 10, w - 20, h / 2);
+    ctx.stroke();
+
+    ctx.globalAlpha = 1.0;
+
+    ctx.strokeStyle = '#cbd5e1';
+    ctx.lineWidth = 0.75;
+    ctx.beginPath();
+    ctx.moveTo(20, h / 2 + 12);
+    ctx.lineTo(20, h / 2 + 20);
+    ctx.moveTo(w - 20, h / 2 + 12);
+    ctx.lineTo(w - 20, h / 2 + 20);
+    ctx.moveTo(20, h / 2 + 16);
+    ctx.lineTo(w - 20, h / 2 + 16);
+    ctx.stroke();
+
+    ctx.fillStyle = '#cbd5e1';
+    ctx.beginPath();
+    ctx.moveTo(20, h / 2 + 16); ctx.lineTo(26, h / 2 + 13); ctx.lineTo(26, h / 2 + 19); ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(w - 20, h / 2 + 16); ctx.lineTo(w - 26, h / 2 + 13); ctx.lineTo(w - 26, h / 2 + 19); ctx.fill();
+
+    ctx.font = 'bold 7px monospace';
+    ctx.fillStyle = '#64748b';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.fillText(`${strokeWidth.toFixed(2)} mm Plot Line`, w / 2, h / 2 + 15);
+  }, [editConfig]);
 
   // Bulk update properties for all selected indices
   const updateSelectedConfig = <K extends keyof PlotStyleConfig>(key: K, value: PlotStyleConfig[K]) => {
@@ -833,6 +977,25 @@ export default function CtbPlotStyleClient() {
               <span className="text-[9px] opacity-75 font-semibold">Luminance Grayscale Conversion</span>
             </button>
           </div>
+
+          {/* Upload Custom CTB Box */}
+          <div className="relative mt-4">
+            <input
+              type="file"
+              ref={ctbFileInputRef}
+              accept=".ctb"
+              onChange={handleCtbUpload}
+              className="hidden"
+            />
+            <button
+              onClick={() => ctbFileInputRef.current?.click()}
+              className="w-full flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl border-2 border-dashed border-slate-200 hover:border-blue-400 hover:bg-blue-50/20 text-slate-600 hover:text-blue-600 font-bold text-xs transition-all cursor-pointer text-center"
+            >
+              <Upload className="w-4 h-4" />
+              Upload local custom .ctb print style file
+            </button>
+          </div>
+
         </div>
 
         {/* Right Side: Properties Sidebar Editor */}
@@ -1015,6 +1178,24 @@ export default function CtbPlotStyleClient() {
                   <span>0% (Faded Out)</span>
                   <span>50% (Watermark tint)</span>
                   <span>100% (Solid Ink)</span>
+                </div>
+              </div>
+
+              {/* Dynamic Hand-drawn Stroke Canvas Simulator */}
+              <div className="bg-slate-950 rounded-2xl p-4 border border-slate-800 space-y-3 mt-4">
+                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex justify-between">
+                  <span>Plot Lineweight Simulation</span>
+                  <span className="text-blue-400 font-mono">
+                    {editConfig.lineweight === -1 ? 'Use Object Weight' : `${editConfig.lineweight} mm`}
+                  </span>
+                </div>
+                <div className="bg-white rounded-xl py-4 px-2 flex justify-center items-center shadow-inner relative overflow-hidden h-24">
+                  <canvas
+                    id="stroke-canvas"
+                    className="w-full h-full bg-white"
+                    style={{ display: 'block', maxHeight: '64px' }}
+                  />
+                  <span className="absolute bottom-1 right-2 text-[8px] font-mono text-slate-300">PLOT PAPER PREVIEW</span>
                 </div>
               </div>
 

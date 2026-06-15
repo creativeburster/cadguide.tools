@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { RelatedTools } from '@/components/related-tools';
 import { Info, Download, HelpCircle, Layers, FileText } from 'lucide-react';
 
@@ -32,6 +32,28 @@ export default function KFactorCalculatorClient() {
   const [flange1, setFlange1] = useState<number>(50);
   const [flange2, setFlange2] = useState<number>(50);
   const [customK, setCustomK] = useState<number>(0.44);
+
+  // Animation states for flat pattern transitions
+  const [isFlattened, setIsFlattened] = useState<boolean>(false);
+  const [flattenProgress, setFlattenProgress] = useState<number>(0);
+
+  useEffect(() => {
+    let animationFrameId: number;
+    const target = isFlattened ? 1 : 0;
+    
+    const animate = () => {
+      setFlattenProgress((prev) => {
+        if (Math.abs(prev - target) < 0.01) {
+          return target;
+        }
+        return prev + (target - prev) * 0.15;
+      });
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isFlattened]);
 
   // Apply Preset
   const handleApplyPreset = (preset: Preset) => {
@@ -150,6 +172,7 @@ export default function KFactorCalculatorClient() {
   };
 
   // Bending coordinates calculation for dynamic SVG
+  // Bending coordinates calculation for dynamic SVG with flattening transition
   const svgCoords = useMemo(() => {
     const cx = 140;
     const cy = 200;
@@ -165,46 +188,96 @@ export default function KFactorCalculatorClient() {
     const scaleFactor = maxVisualTangent / Math.max(flange1, flange2, 20);
     const L_t1 = calcResults.tangent1 * scaleFactor;
     const L_t2 = calcResults.tangent2 * scaleFactor;
+    const BA_visual = calcResults.ba * 7;
 
-    // Inner surface coords
-    const innerT1 = { x: cx, y: cy + R };
-    const innerStart = { x: cx - R - L_t1, y: cy + R };
-    const innerArcEnd = {
+    // --- State 0: Bended (Normal) ---
+    const innerStart_0 = { x: cx - R - L_t1, y: cy + R };
+    const innerT1_0 = { x: cx, y: cy + R };
+    const innerArcEnd_0 = {
       x: cx + R * Math.cos(thetaEnd),
       y: cy + R * Math.sin(thetaEnd),
     };
-    const innerEnd = {
-      x: innerArcEnd.x + L_t2 * Math.sin(thetaEnd),
-      y: innerArcEnd.y - L_t2 * Math.cos(thetaEnd),
+    const innerEnd_0 = {
+      x: innerArcEnd_0.x + L_t2 * Math.sin(thetaEnd),
+      y: innerArcEnd_0.y - L_t2 * Math.cos(thetaEnd),
     };
 
-    // Outer surface coords
-    const outerT1 = { x: cx, y: cy + R + T };
-    const outerStart = { x: cx - R - L_t1, y: cy + R + T };
-    const outerArcEnd = {
+    const outerStart_0 = { x: cx - R - L_t1, y: cy + R + T };
+    const outerT1_0 = { x: cx, y: cy + R + T };
+    const outerArcEnd_0 = {
       x: cx + (R + T) * Math.cos(thetaEnd),
       y: cy + (R + T) * Math.sin(thetaEnd),
     };
-    const outerEnd = {
-      x: outerArcEnd.x + L_t2 * Math.sin(thetaEnd),
-      y: outerArcEnd.y - L_t2 * Math.cos(thetaEnd),
+    const outerEnd_0 = {
+      x: outerArcEnd_0.x + L_t2 * Math.sin(thetaEnd),
+      y: outerArcEnd_0.y - L_t2 * Math.cos(thetaEnd),
     };
 
-    // Neutral Axis coords
-    const neutralStart = { x: cx - R - L_t1, y: cy + R + K * T };
-    const neutralT1 = { x: cx, y: cy + R + K * T };
-    const neutralArcEnd = {
+    const neutralStart_0 = { x: cx - R - L_t1, y: cy + R + K * T };
+    const neutralT1_0 = { x: cx, y: cy + R + K * T };
+    const neutralArcEnd_0 = {
       x: cx + (R + K * T) * Math.cos(thetaEnd),
       y: cy + (R + K * T) * Math.sin(thetaEnd),
     };
-    const neutralEnd = {
-      x: neutralArcEnd.x + L_t2 * Math.sin(thetaEnd),
-      y: neutralArcEnd.y - L_t2 * Math.cos(thetaEnd),
+    const neutralEnd_0 = {
+      x: neutralArcEnd_0.x + L_t2 * Math.sin(thetaEnd),
+      y: neutralArcEnd_0.y - L_t2 * Math.cos(thetaEnd),
     };
 
-    // Apex intersection coords
-    const apexInner = { x: cx + R * Math.tan((alpha / 2) * (Math.PI / 180)), y: cy + R };
-    const apexOuter = { x: cx + (R + T) * Math.tan((alpha / 2) * (Math.PI / 180)), y: cy + R + T };
+    const apexInner_0 = { x: cx + R * Math.tan((alpha / 2) * (Math.PI / 180)), y: cy + R };
+    const apexOuter_0 = { x: cx + (R + T) * Math.tan((alpha / 2) * (Math.PI / 180)), y: cy + R + T };
+
+    // --- State 1: Flattened ---
+    // In flattened state, we lay out everything horizontally starting from innerStart_0
+    const innerStart_1 = { x: innerStart_0.x, y: innerStart_0.y };
+    const innerT1_1 = { x: innerT1_0.x, y: innerT1_0.y };
+    const innerArcEnd_1 = { x: innerT1_1.x + BA_visual, y: innerT1_1.y };
+    const innerEnd_1 = { x: innerArcEnd_1.x + L_t2, y: innerArcEnd_1.y };
+
+    const outerStart_1 = { x: outerStart_0.x, y: outerStart_0.y };
+    const outerT1_1 = { x: outerT1_0.x, y: outerT1_0.y };
+    const outerArcEnd_1 = { x: outerT1_1.x + BA_visual, y: outerT1_1.y };
+    const outerEnd_1 = { x: outerArcEnd_1.x + L_t2, y: outerArcEnd_1.y };
+
+    const neutralStart_1 = { x: neutralStart_0.x, y: neutralStart_0.y };
+    const neutralT1_1 = { x: neutralT1_0.x, y: neutralT1_0.y };
+    const neutralArcEnd_1 = { x: neutralT1_1.x + BA_visual, y: neutralT1_1.y };
+    const neutralEnd_1 = { x: neutralArcEnd_1.x + L_t2, y: neutralArcEnd_1.y };
+
+    const apexInner_1 = { x: innerArcEnd_1.x, y: innerArcEnd_1.y };
+    const apexOuter_1 = { x: outerArcEnd_1.x, y: outerArcEnd_1.y };
+
+    // --- Interpolation Helper ---
+    const lerp = (start: number, end: number, t: number) => start + (end - start) * t;
+    const lerpPoint = (p0: { x: number; y: number }, p1: { x: number; y: number }, t: number) => ({
+      x: lerp(p0.x, p1.x, t),
+      y: lerp(p0.y, p1.y, t),
+    });
+
+    const p = flattenProgress;
+
+    const innerStart = lerpPoint(innerStart_0, innerStart_1, p);
+    const innerT1 = lerpPoint(innerT1_0, innerT1_1, p);
+    const innerArcEnd = lerpPoint(innerArcEnd_0, innerArcEnd_1, p);
+    const innerEnd = lerpPoint(innerEnd_0, innerEnd_1, p);
+
+    const outerStart = lerpPoint(outerStart_0, outerStart_1, p);
+    const outerT1 = lerpPoint(outerT1_0, outerT1_1, p);
+    const outerArcEnd = lerpPoint(outerArcEnd_0, outerArcEnd_1, p);
+    const outerEnd = lerpPoint(outerEnd_0, outerEnd_1, p);
+
+    const neutralStart = lerpPoint(neutralStart_0, neutralStart_1, p);
+    const neutralT1 = lerpPoint(neutralT1_0, neutralT1_1, p);
+    const neutralArcEnd = lerpPoint(neutralArcEnd_0, neutralArcEnd_1, p);
+    const neutralEnd = lerpPoint(neutralEnd_0, neutralEnd_1, p);
+
+    const apexInner = lerpPoint(apexInner_0, apexInner_1, p);
+    const apexOuter = lerpPoint(apexOuter_0, apexOuter_1, p);
+
+    // Dynamic radius for SVG Arc command: interpolation towards a huge number to make it straight
+    const currentR = lerp(R, 200000, p);
+    const currentROut = lerp(R + T, 200000, p);
+    const currentRNeutral = lerp(R + K * T, 200000, p);
 
     return {
       innerStart,
@@ -228,8 +301,14 @@ export default function KFactorCalculatorClient() {
       thetaEnd,
       largeArcFlag: 0,
       sweepFlag: 0,
+      currentR,
+      currentROut,
+      currentRNeutral,
+      BA_visual,
+      L_t1,
+      L_t2,
     };
-  }, [radius, thickness, activeK, angle, flange1, flange2, calcResults]);
+  }, [radius, thickness, activeK, angle, flange1, flange2, calcResults, flattenProgress]);
 
   return (
     <div className="space-y-12">
@@ -484,38 +563,62 @@ export default function KFactorCalculatorClient() {
               <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
                 <Layers className="w-4 h-4 text-blue-600" /> Bending Profile Visualizer
               </h3>
-              <button
-                onClick={downloadSvg}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-50 border border-slate-100 text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all"
-                title="Download SVG file"
-              >
-                <Download className="w-3.5 h-3.5" /> SVG
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setIsFlattened(!isFlattened)}
+                  className={`flex items-center gap-1.5 px-4 py-1.5 rounded-xl text-xs font-black transition-all ${
+                    isFlattened
+                      ? 'bg-emerald-600 border border-emerald-600 text-white shadow-md shadow-emerald-100 hover:bg-emerald-700'
+                      : 'bg-blue-50 border border-blue-100 text-blue-600 hover:bg-blue-100'
+                  }`}
+                >
+                  <Layers className={`w-3.5 h-3.5 ${isFlattened ? 'rotate-180' : ''} transition-transform duration-300`} />
+                  {isFlattened ? 'Bend Profile' : 'Flatten Profile'}
+                </button>
+                <button
+                  onClick={downloadSvg}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-50 border border-slate-100 text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all"
+                  title="Download SVG file"
+                >
+                  <Download className="w-3.5 h-3.5" /> SVG
+                </button>
+              </div>
             </div>
 
             {/* Dynamic Bending SVG */}
-            <div className="w-full flex items-center justify-center bg-slate-900/2 rounded-2xl border border-slate-50 p-4 relative min-h-[300px]">
+            <div className="w-full flex items-center justify-center bg-slate-900 rounded-2xl border border-slate-950 p-4 relative min-h-[300px]">
               <svg
                 id="k-factor-svg"
                 viewBox="0 0 420 350"
-                className="w-full max-w-[420px] h-auto drop-shadow-sm font-sans"
+                className="w-full max-w-[420px] h-auto drop-shadow-lg font-sans"
               >
                 {/* Grid Gridlines Background */}
                 <defs>
                   <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f1f5f9" strokeWidth="0.8" />
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" strokeWidth="0.8" opacity="0.6" />
                   </pattern>
+                  {/* Dimension Line Arrows */}
+                  <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
+                  </marker>
+                  <marker id="arrow-emerald" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 2 L 10 5 L 0 8 z" fill="#10b981" />
+                  </marker>
+                  <marker id="arrow-amber" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 2 L 10 5 L 0 8 z" fill="#f59e0b" />
+                  </marker>
                 </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" rx="16" />
+                <rect width="100%" height="100%" fill="#0f172a" rx="24" />
+                <rect width="100%" height="100%" fill="url(#grid)" rx="24" />
 
                 {/* Inner Sheet Path */}
                 <path
                   d={`M ${svgCoords.innerStart.x} ${svgCoords.innerStart.y}
                      L ${svgCoords.innerT1.x} ${svgCoords.innerT1.y}
-                     A ${svgCoords.R} ${svgCoords.R} 0 ${svgCoords.largeArcFlag} ${svgCoords.sweepFlag} ${svgCoords.innerArcEnd.x} ${svgCoords.innerArcEnd.y}
+                     A ${svgCoords.currentR} ${svgCoords.currentR} 0 ${svgCoords.largeArcFlag} ${svgCoords.sweepFlag} ${svgCoords.innerArcEnd.x} ${svgCoords.innerArcEnd.y}
                      L ${svgCoords.innerEnd.x} ${svgCoords.innerEnd.y}`}
                   fill="none"
-                  stroke="#3b82f6"
+                  stroke="#38bdf8"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                 />
@@ -524,10 +627,10 @@ export default function KFactorCalculatorClient() {
                 <path
                   d={`M ${svgCoords.outerStart.x} ${svgCoords.outerStart.y}
                      L ${svgCoords.outerT1.x} ${svgCoords.outerT1.y}
-                     A ${svgCoords.R + svgCoords.T} ${svgCoords.R + svgCoords.T} 0 ${svgCoords.largeArcFlag} ${svgCoords.sweepFlag} ${svgCoords.outerArcEnd.x} ${svgCoords.outerArcEnd.y}
+                     A ${svgCoords.currentROut} ${svgCoords.currentROut} 0 ${svgCoords.largeArcFlag} ${svgCoords.sweepFlag} ${svgCoords.outerArcEnd.x} ${svgCoords.outerArcEnd.y}
                      L ${svgCoords.outerEnd.x} ${svgCoords.outerEnd.y}`}
                   fill="none"
-                  stroke="#1d4ed8"
+                  stroke="#6366f1"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                 />
@@ -538,7 +641,7 @@ export default function KFactorCalculatorClient() {
                   y1={svgCoords.innerStart.y}
                   x2={svgCoords.outerStart.x}
                   y2={svgCoords.outerStart.y}
-                  stroke="#1e3a8a"
+                  stroke="#818cf8"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                 />
@@ -549,83 +652,119 @@ export default function KFactorCalculatorClient() {
                   y1={svgCoords.innerEnd.y}
                   x2={svgCoords.outerEnd.x}
                   y2={svgCoords.outerEnd.y}
-                  stroke="#1e3a8a"
+                  stroke="#818cf8"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                 />
 
-                {/* Shaded Neutral Fiber Axis (dashed red) */}
+                {/* Shaded Neutral Fiber Axis (dashed yellow with neon drop shadow) */}
                 <path
                   d={`M ${svgCoords.neutralStart.x} ${svgCoords.neutralStart.y}
                      L ${svgCoords.neutralT1.x} ${svgCoords.neutralT1.y}
-                     A ${svgCoords.R + (thickness * 7 * activeK)} ${svgCoords.R + (thickness * 7 * activeK)} 0 ${svgCoords.largeArcFlag} ${svgCoords.sweepFlag} ${svgCoords.neutralArcEnd.x} ${svgCoords.neutralArcEnd.y}
+                     A ${svgCoords.currentRNeutral} ${svgCoords.currentRNeutral} 0 ${svgCoords.largeArcFlag} ${svgCoords.sweepFlag} ${svgCoords.neutralArcEnd.x} ${svgCoords.neutralArcEnd.y}
                      L ${svgCoords.neutralEnd.x} ${svgCoords.neutralEnd.y}`}
                   fill="none"
-                  stroke="#f43f5e"
+                  stroke="#f59e0b"
                   strokeWidth="1.8"
                   strokeDasharray="4,4"
+                  style={{ filter: 'drop-shadow(0 0 4px #f59e0b)' }}
                 />
 
-                {/* Apex Helper Lines (Outside intersect) */}
-                {angle === 90 && (
-                  <>
-                    <line
-                      x1={svgCoords.outerStart.x}
-                      y1={svgCoords.outerStart.y}
-                      x2={svgCoords.outerT1.x + svgCoords.R + svgCoords.T}
-                      y2={svgCoords.outerStart.y}
-                      stroke="#cbd5e1"
-                      strokeWidth="1.2"
-                      strokeDasharray="2,2"
-                    />
-                    <line
-                      x1={svgCoords.outerEnd.x}
-                      y1={svgCoords.outerEnd.y}
-                      x2={svgCoords.outerEnd.x}
-                      y2={svgCoords.outerStart.y}
-                      stroke="#cbd5e1"
-                      strokeWidth="1.2"
-                      strokeDasharray="2,2"
-                    />
-                    <circle cx={svgCoords.outerT1.x + svgCoords.R + svgCoords.T} cy={svgCoords.outerStart.y} r="3" fill="#64748b" />
-                  </>
+                {/* Inside Center Mark (cross) */}
+                {flattenProgress < 0.1 && (
+                  <g className="transition-opacity duration-300">
+                    <line x1={svgCoords.cx - 5} y1={svgCoords.cy} x2={svgCoords.cx + 5} y2={svgCoords.cy} stroke="#475569" strokeWidth="1" />
+                    <line x1={svgCoords.cx} y1={svgCoords.cy - 5} x2={svgCoords.cx} y2={svgCoords.cy + 5} stroke="#475569" strokeWidth="1" />
+                    <circle cx={svgCoords.cx} cy={svgCoords.cy} r="1.5" fill="#475569" />
+                  </g>
                 )}
 
-                {/* Inside Center Mark (cross) */}
-                <line x1={svgCoords.cx - 5} y1={svgCoords.cy} x2={svgCoords.cx + 5} y2={svgCoords.cy} stroke="#64748b" strokeWidth="1" />
-                <line x1={svgCoords.cx} y1={svgCoords.cy - 5} x2={svgCoords.cx} y2={svgCoords.cy + 5} stroke="#64748b" strokeWidth="1" />
-                <circle cx={svgCoords.cx} cy={svgCoords.cy} r="1.5" fill="#64748b" />
+                {/* 1. Sheet Thickness (T) Dimensioning */}
+                <g opacity={1 - flattenProgress * 0.3}>
+                  <line x1={svgCoords.innerStart.x} y1={svgCoords.innerStart.y} x2={svgCoords.innerStart.x - 20} y2={svgCoords.innerStart.y} stroke="#475569" strokeWidth="0.8" strokeDasharray="2,2" />
+                  <line x1={svgCoords.outerStart.x} y1={svgCoords.outerStart.y} x2={svgCoords.outerStart.x - 20} y2={svgCoords.outerStart.y} stroke="#475569" strokeWidth="0.8" strokeDasharray="2,2" />
+                  <line x1={svgCoords.innerStart.x - 12} y1={svgCoords.innerStart.y} x2={svgCoords.innerStart.x - 12} y2={svgCoords.outerStart.y} stroke="#94a3b8" strokeWidth="1" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+                  <text x={svgCoords.innerStart.x - 16} y={(svgCoords.innerStart.y + svgCoords.outerStart.y) / 2 + 4} fill="#94a3b8" fontSize="10" fontWeight="bold" textAnchor="end">T={thickness.toFixed(1)}</text>
+                </g>
 
-                {/* Labels and Arrows */}
-                {/* R Label */}
-                <line x1={svgCoords.cx} y1={svgCoords.cy} x2={svgCoords.cx - svgCoords.R + 8} y2={svgCoords.cy + svgCoords.R - 8} stroke="#3b82f6" strokeWidth="1.2" strokeDasharray="1,1" />
-                <text
-                  x={svgCoords.cx - (svgCoords.R / 2)}
-                  y={svgCoords.cy + (svgCoords.R / 2)}
-                  fill="#2563eb"
-                  className="text-[10px] font-black"
-                >
-                  R={radius.toFixed(1)}
-                </text>
+                {/* 2. Inner Bend Radius (R) Dimensioning */}
+                {flattenProgress < 0.1 && (
+                  <g className="transition-opacity duration-300">
+                    <line 
+                      x1={svgCoords.cx} 
+                      y1={svgCoords.cy} 
+                      x2={svgCoords.cx - svgCoords.R * Math.cos(Math.PI / 4)} 
+                      y2={svgCoords.cy + svgCoords.R * Math.sin(Math.PI / 4)} 
+                      stroke="#38bdf8" 
+                      strokeWidth="1.2" 
+                      marker-end="url(#arrow)" 
+                    />
+                    <text 
+                      x={svgCoords.cx - (svgCoords.R / 2) * Math.cos(Math.PI / 4) + 5} 
+                      y={svgCoords.cy + (svgCoords.R / 2) * Math.sin(Math.PI / 4) - 5} 
+                      fill="#38bdf8" 
+                      fontSize="9" 
+                      fontWeight="bold"
+                    >
+                      R={radius.toFixed(1)}
+                    </text>
+                  </g>
+                )}
 
-                {/* T Label */}
-                <line x1={svgCoords.innerStart.x + 10} y1={svgCoords.innerStart.y} x2={svgCoords.innerStart.x + 10} y2={svgCoords.outerStart.y} stroke="#1d4ed8" strokeWidth="1" />
-                <text
-                  x={svgCoords.innerStart.x + 15}
-                  y={svgCoords.innerStart.y + (svgCoords.T / 2) + 3}
-                  fill="#1d4ed8"
-                  className="text-[10px] font-black"
-                >
-                  T={thickness.toFixed(1)}
-                </text>
+                {/* 3. Bending Angle (alpha) Dimensioning */}
+                {flattenProgress < 0.1 && (
+                  <g className="transition-opacity duration-300">
+                    <path
+                      d={`M ${svgCoords.cx + 35} ${svgCoords.cy} A 35 35 0 0 0 ${svgCoords.cx + 35 * Math.cos(svgCoords.thetaEnd)} ${svgCoords.cy + 35 * Math.sin(svgCoords.thetaEnd)}`}
+                      fill="none"
+                      stroke="#cbd5e1"
+                      strokeWidth="1"
+                      marker-end="url(#arrow)"
+                    />
+                    <text
+                      x={svgCoords.cx + 45 * Math.cos(svgCoords.thetaEnd / 2)}
+                      y={svgCoords.cy + 45 * Math.sin(svgCoords.thetaEnd / 2) + 3}
+                      fill="#cbd5e1"
+                      fontSize="9"
+                      fontWeight="bold"
+                    >
+                      α={angle}°
+                    </text>
+                  </g>
+                )}
+
+                {/* 4. Neutral Axis K-Factor Shift (K*T) Dimensioning */}
+                {flattenProgress < 0.1 && (
+                  <g className="transition-opacity duration-300">
+                    <line x1={svgCoords.innerStart.x + 35} y1={svgCoords.innerStart.y} x2={svgCoords.innerStart.x + 55} y2={svgCoords.innerStart.y} stroke="#f59e0b" strokeWidth="0.8" opacity="0.7" />
+                    <line x1={svgCoords.neutralStart.x + 35} y1={svgCoords.neutralStart.y} x2={svgCoords.neutralStart.x + 55} y2={svgCoords.neutralStart.y} stroke="#f59e0b" strokeWidth="0.8" opacity="0.7" />
+                    <line x1={svgCoords.innerStart.x + 48} y1={svgCoords.innerStart.y} x2={svgCoords.neutralStart.x + 48} y2={svgCoords.neutralStart.y} stroke="#f59e0b" strokeWidth="0.8" marker-start="url(#arrow-amber)" marker-end="url(#arrow-amber)" />
+                    <text x={svgCoords.innerStart.x + 58} y={(svgCoords.innerStart.y + svgCoords.neutralStart.y) / 2 + 3} fill="#f59e0b" fontSize="8" fontWeight="bold">K×T</text>
+                  </g>
+                )}
+
+                {/* 5. Flattened Pattern Length (L) Dimensioning */}
+                <g opacity={flattenProgress}>
+                  <line x1={svgCoords.outerStart.x} y1={svgCoords.outerStart.y + 5} x2={svgCoords.outerStart.x} y2={svgCoords.outerStart.y + 35} stroke="#475569" strokeWidth="0.8" strokeDasharray="2,2" />
+                  <line x1={svgCoords.outerEnd.x} y1={svgCoords.outerEnd.y + 5} x2={svgCoords.outerEnd.x} y2={svgCoords.outerEnd.y + 35} stroke="#475569" strokeWidth="0.8" strokeDasharray="2,2" />
+                  <line x1={svgCoords.outerStart.x} y1={svgCoords.outerStart.y + 25} x2={svgCoords.outerEnd.x} y2={svgCoords.outerEnd.y + 25} stroke="#10b981" strokeWidth="1.2" marker-start="url(#arrow-emerald)" marker-end="url(#arrow-emerald)" />
+                  <text x={(svgCoords.outerStart.x + svgCoords.outerEnd.x) / 2} y={svgCoords.outerStart.y + 20} fill="#10b981" fontSize="11" fontWeight="extrabold" textAnchor="middle">Flat Length L = {calcResults.flatLength.toFixed(2)} mm</text>
+                </g>
+
+                {/* Custom Blueprint Title Block */}
+                <text x="20" y="35" fill="#475569" className="text-[10px] font-black uppercase tracking-widest font-mono">CADGuide.tools // Bending Blueprint</text>
 
                 {/* Axis Labels */}
-                <text x="20" y="325" fill="#64748b" className="text-[10px] font-black uppercase tracking-wider">
-                  Blue: Sheet Boundaries
-                </text>
-                <text x="240" y="325" fill="#f43f5e" className="text-[10px] font-black uppercase tracking-wider">
-                  Red: Neutral Axis (K={activeK.toFixed(2)})
-                </text>
+                <g transform="translate(20, 310)">
+                  <rect x="0" y="0" width="8" height="8" fill="#38bdf8" rx="2" />
+                  <text x="14" y="8" fill="#94a3b8" className="text-[9px] font-bold uppercase tracking-wider">Inner Radius</text>
+
+                  <rect x="100" y="0" width="8" height="8" fill="#6366f1" rx="2" />
+                  <text x="114" y="8" fill="#94a3b8" className="text-[9px] font-bold uppercase tracking-wider">Outer Surface</text>
+
+                  <rect x="200" y="0" width="8" height="8" fill="#f59e0b" rx="2" />
+                  <text x="214" y="8" fill="#f59e0b" className="text-[9px] font-bold uppercase tracking-wider" style={{ filter: 'drop-shadow(0 0 2px #f59e0b)' }}>Neutral Axis (K={activeK.toFixed(2)})</text>
+                </g>
               </svg>
             </div>
           </div>

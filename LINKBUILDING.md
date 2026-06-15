@@ -204,7 +204,7 @@
 | **LinkedIn** | `https://linkedin.com` | `[x] 已创建` | 2026-06-15 | 公司页面，已添加 Visit Website 按钮 |
 | **Medium Profile** | `https://medium.com` | `[x] 已创建` | 2026-06-15 | 个人简介，已添加 cadguide.tools 链接 |
 | **Pinterest** | `https://pinterest.com` | `[x] 已创建` | 2026-06-04 | CAD Resources Board |
-| **About.me** | `https://about.me` | `[ ] 待创建` | - | 个人页面 |
+| **About.me** | `https://about.me` | `[x] 已创建` | 2026-06-15 | 个人页面，已挂网站链接 |
 | **Crunchbase** | `https://crunchbase.com` | `[ ] 待创建` | - | 公司 Profile |
 | **Gravatar** | `https://gravatar.com` | `[x] 已创建` | 2026-06-04 | 个人资料 |
 | **AngelList** | `https://wellfound.com` | `[ ] 待创建` | - | 公司 Profile |
