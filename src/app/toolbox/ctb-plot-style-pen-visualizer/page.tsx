@@ -65,7 +65,7 @@ export default function CtbPlotStylePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link 
-                href="/guides/standards-iso-128-autocad"
+                href="/guides/standards-iso-autocad"
                 className="group p-6 rounded-2xl bg-white border border-slate-150 hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>

@@ -566,7 +566,7 @@ function renderRelatedLinks(tool: Tool) {
         )}
         {hasStandards && (
           <Link
-            href={`/guides/standards-iso-128-${tool.slug}`}
+            href={`/guides/standards-iso-${tool.slug}`}
             className="block p-4 rounded-2xl bg-white border border-emerald-200 hover:border-emerald-300 hover:shadow-sm transition-all"
           >
             <div className="text-xs uppercase tracking-wider text-emerald-600 font-bold">Drafting Standard</div>

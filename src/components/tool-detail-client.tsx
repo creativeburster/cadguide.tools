@@ -1404,7 +1404,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                       Deploy official ISO 128, AIA & Chinese GB/T line weight rules. Import native layer scripts directly inside {tool.name}.
                     </p>
                     <Link
-                      href={`/guides/standards-iso-128-${tool.slug}`}
+                      href={`/guides/standards-iso-${tool.slug}`}
                       className="w-full flex items-center justify-center bg-teal-950/40 text-teal-300 hover:text-teal-200 border border-teal-900/50 hover:bg-teal-900/30 font-black rounded-2xl h-11 text-[10px] uppercase tracking-wider transition-all active:scale-95"
                     >
                       Import Layers Standard →
