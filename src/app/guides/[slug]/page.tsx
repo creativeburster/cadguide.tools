@@ -3006,10 +3006,11 @@ export async function generateMetadata(
 
   // 1.7. Check if slug is a drafting standard page
   if (slug.startsWith('standards-')) {
-    const parts = slug.split('-');
-    if (parts.length >= 3) {
-      const standardId = parts[1];
-      const toolSlug = parts.slice(2).join('-');
+    const raw = slug.substring(10);
+    const standard = STANDARDS_LIST.find(s => raw.startsWith(s.id + '-'));
+    if (standard) {
+      const standardId = standard.id;
+      const toolSlug = raw.substring(standardId.length + 1);
       const stdData = getStandardPageData(standardId, toolSlug);
       if (stdData) {
         return {
@@ -3052,10 +3053,11 @@ export async function generateMetadata(
 
   // 1.9. Check if slug is a geometry kernel pipeline page
   if (slug.startsWith('kernel-')) {
-    const parts = slug.split('-');
-    if (parts.length >= 3) {
-      const sourceSlug = parts[1];
-      const targetSlug = parts.slice(2).join('-');
+    const raw = slug.substring(7);
+    const sourceTool = KERNEL_TOOLS.find(t => raw.startsWith(t.slug + '-'));
+    if (sourceTool) {
+      const sourceSlug = sourceTool.slug;
+      const targetSlug = raw.substring(sourceSlug.length + 1);
       const kData = getKernelPageData(sourceSlug, targetSlug);
       if (kData) {
         return {
@@ -3466,10 +3468,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   // 1.7. Check if slug is a drafting standard page
   if (slug.startsWith('standards-')) {
-    const parts = slug.split('-');
-    if (parts.length >= 3) {
-      const standardId = parts[1];
-      const toolSlug = parts.slice(2).join('-');
+    const raw = slug.substring(10);
+    const standard = STANDARDS_LIST.find(s => raw.startsWith(s.id + '-'));
+    if (standard) {
+      const standardId = standard.id;
+      const toolSlug = raw.substring(standardId.length + 1);
       const stdData = getStandardPageData(standardId, toolSlug);
       if (stdData) {
         return renderStandardsPage(stdData);
@@ -3490,10 +3493,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   // 1.9. Check if slug is a geometry kernel pipeline page
   if (slug.startsWith('kernel-')) {
-    const parts = slug.split('-');
-    if (parts.length >= 3) {
-      const sourceSlug = parts[1];
-      const targetSlug = parts.slice(2).join('-');
+    const raw = slug.substring(7);
+    const sourceTool = KERNEL_TOOLS.find(t => raw.startsWith(t.slug + '-'));
+    if (sourceTool) {
+      const sourceSlug = sourceTool.slug;
+      const targetSlug = raw.substring(sourceSlug.length + 1);
       const kData = getKernelPageData(sourceSlug, targetSlug);
       if (kData) {
         return renderKernelPage(kData);
