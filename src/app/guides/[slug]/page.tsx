@@ -4027,7 +4027,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                   <div className="space-y-2">
                     <Button asChild className={cn("w-full h-12 rounded-2xl text-white font-black text-xs gap-2 flex items-center justify-center transition-colors", meta ? meta.theme.buttonBg : "bg-slate-900 hover:bg-slate-800")}>
                       <Link href={`/alternatives/${tool.slug}`}>
-                        Compare {tool.name} Alternatives <ArrowRight className="w-3.5 h-3.5" />
+                        Check {tool.name} Alternatives <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </Button>
                   </div>

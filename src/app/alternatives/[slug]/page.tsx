@@ -537,6 +537,16 @@ function renderRelatedLinks(tool: Tool) {
   const hasShield = licensingTools.includes(tool.slug);
   const hasStandards = draftingTools.includes(tool.slug);
 
+  // Find a specific PK pair involving this tool to make this block highly relevant
+  const matchedPair = comparisonPairs().find(
+    pair => pair.a.slug === tool.slug || pair.b.slug === tool.slug
+  );
+  
+  const comparisonHref = matchedPair ? `/compare/${matchedPair.pairSlug}` : '/compare';
+  const comparisonLabel = matchedPair 
+    ? `Compare vs ${matchedPair.a.slug === tool.slug ? matchedPair.b.name : matchedPair.a.name}` 
+    : 'Custom Comparison Matrix';
+
   return (
     <section className="mt-12 border-t border-slate-200 pt-8">
       <h2 className="text-lg font-bold text-slate-900 mb-4">Related Engineering Resources</h2>
@@ -549,11 +559,11 @@ function renderRelatedLinks(tool: Tool) {
           <div className="mt-1 font-bold text-slate-900">{tool.name} Benchmark Profile</div>
         </Link>
         <Link
-          href="/compare"
+          href={comparisonHref}
           className="block p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all"
         >
           <div className="text-xs uppercase tracking-wider text-slate-500 font-bold">Side-by-Side Comparison</div>
-          <div className="mt-1 font-bold text-slate-900">Custom Comparison Matrix</div>
+          <div className="mt-1 font-bold text-slate-900">{comparisonLabel}</div>
         </Link>
         {hasShield && (
           <Link
