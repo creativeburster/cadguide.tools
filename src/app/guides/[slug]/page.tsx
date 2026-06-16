@@ -656,8 +656,29 @@ export function renderPerformanceBenchmark(tool: typeof tools[number], title: st
 }
 
 // Dynamic plot standard builder providing monochrome CTB pen weights and vector PDF scales for Template C (Plot Directive)
-export function getPrintingPayload(toolName: string, title: string) {
+export function getPrintingPayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
+
+  const isLispCompatible = tool.pricing_type !== 'Open Source' && tool.platforms.some(p => p.toLowerCase().includes('windows'));
+
+  if (!isLispCompatible) {
+    return {
+      reference: 'PDF/X-4 & ISO 32000-2 (Open PDF Standard)',
+      plotScale: 'High-Definition Resolution Raster/Vector Hybrid',
+      fontStandard: 'OpenType Font (OTF/TTF) Path Embedding',
+      revisionCode: 'REV-PDF-2026-F',
+      tableHeaders: ['Sheet Dimensions Class', 'Drawing Bounds (mm)', 'Engineering Scale Ratio', 'Border Margin Bounds', 'Target Resolution'],
+      tableRows: [
+        ['ISO A0 Blueprints', '841 x 1189 mm', '1:100 / 1:50', '5.0 mm Solid Margins', '1200 DPI Vector Plot'],
+        ['ISO A1 Blueprints', '594 x 841 mm', '1:50 / 1:20', '5.0 mm Solid Margins', '1200 DPI Vector Plot'],
+        ['ANSI D Blueprints', '22 x 34 inches', '1:96 (1/8" = 1\'-0")', '0.25 inches Margins', '1200 DPI Vector Plot'],
+        ['ISO A3 Check Prints', '297 x 420 mm', '1:100 / 1:200 (Reduced)', '3.0 mm Solid Margins', '600 DPI Check Raster']
+      ],
+      codeBlockTitle: `Python Headless PDF Vector Exporter for ${toolName}`,
+      codeSnippet: `# Python headless PDF vector exporter for ${toolName}\nimport os\nimport subprocess\n\ndef batch_export_pdf(directory):\n    # Iterates and converts standard CAD drawings to PDF via headless CLI\n    print(f"[+] Scanning {directory} for drawing layouts...")\n    cmd = ["${toolName.toLowerCase()}-cli", "--headless", "--export-pdf", "--dpi=1200", "--margin=5", directory]\n    subprocess.run(cmd, check=True)\n    print(f"[+] Batch vector PDF export complete for {toolName}.")`
+    };
+  }
 
   if (titleLower.includes('ctb') || titleLower.includes('pen') || titleLower.includes('table') || titleLower.includes('style') || titleLower.includes('weight')) {
     return {
@@ -672,7 +693,8 @@ export function getPrintingPayload(toolName: string, title: string) {
         ['Color 3 (Green)', '0.50 mm (Thick)', 'Dashed (Hidden2)', '0,255,0 (Green)', 'Medium structural outlines, dynamic section cuts'],
         ['Color 7 (White/Black)', '0.70 mm (Heavy)', 'Continuous (Solid)', '0,0,0 (Black)', 'Borders, title blocks, layout sheet borders']
       ],
-      lispCode: `;; AutoLISP CTB & Drawing Variables Synchronizer for ${toolName}\n(defun c:SyncPlotVars ()\n  (setvar "PSLTSCALE" 1)   ;; Synchronize paper space linetype scale\n  (setvar "LTSCALE" 1.0)   ;; Global linetype scale coefficient\n  (setvar "MSLTSCALE" 1)   ;; Model space annotation scale matching\n  (setvar "MEASUREMENT" 1) ;; Set drawings standard to Metric (mm)\n  \n  ;; Load standard monochrome plot style configurations safely\n  (command "-plot" "yes" "" "Adobe PDF" "ISO A1 (594.00 x 841.00 MM)" "Millimeters" "Landscape" "no" "Layout" "1:1" "0.00,0.00" "yes" "monochrome.ctb" "yes" "no" "no" "no" "yes" "no" "yes")\n  (princ "\\\\n[+] Plotting variables and layout styles successfully mapped for ${toolName}.\\\\n")\n  (princ)\n)`
+      codeBlockTitle: `AutoLISP CTB & Drawing Variables Synchronizer`,
+      codeSnippet: `;; AutoLISP CTB & Drawing Variables Synchronizer for ${toolName}\n(defun c:SyncPlotVars ()\n  (setvar "PSLTSCALE" 1)   ;; Synchronize paper space linetype scale\n  (setvar "LTSCALE" 1.0)   ;; Global linetype scale coefficient\n  (setvar "MSLTSCALE" 1)   ;; Model space annotation scale matching\n  (setvar "MEASUREMENT" 1) ;; Set drawings standard to Metric (mm)\n  \n  ;; Load standard monochrome plot style configurations safely\n  (command "-plot" "yes" "" "Adobe PDF" "ISO A1 (594.00 x 841.00 MM)" "Millimeters" "Landscape" "no" "Layout" "1:1" "0.00,0.00" "yes" "monochrome.ctb" "yes" "no" "no" "no" "yes" "no" "yes")\n  (princ "\\\\n[+] Plotting variables and layout styles successfully mapped for ${toolName}.\\\\n")\n  (princ)\n)`
     };
   }
 
@@ -689,7 +711,8 @@ export function getPrintingPayload(toolName: string, title: string) {
         ['Dotted line solid distortion', 'Linetype scale (LTSCALE) calculation drift', '1200 DPI Vector Plot', '1200 DPI Vector', 'Force PSLTSCALE = 1 and set global LTSCALE = 1.0'],
         ['Missing Hatch Patterns', 'Gradient triangulation exceeding buffer bounds', '2400 DPI Raster Output', '600 DPI Raster', 'Enable "Plot Shade Plot As Displayed" parameter']
       ],
-      lispCode: `;; AutoLISP Automated PDF Batch Exporter for ${toolName}\n(defun c:ExportHDPDF ( / doc layoutPlot)\n  (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))\n  (vlax-for layout (vla-get-Layouts doc)\n    (if (/= (vla-get-Name layout) "Model")\n      (progn\n        (vla-put-ConfigName layout "DWG To PDF.pc3")\n        (vla-put-StyleSheet layout "monochrome.ctb")\n        (vla-put-CanonicalMediaName layout "ISO_A1__594.00_x_841.00_MM_")\n        (vla-put-PlotWithPlotStyles layout :vltrue)\n        (princ (strcat "\\\\n[+] Mapped layout: " (vla-get-Name layout) " to high-definition PDF standard.\\\\n"))\n      )\n    )\n  )\n  (vla-Regen doc acAllViewports)\n  (princ "\\\\n[+] High-definition PDF batch layout mapping complete.\\\\n")\n  (princ)\n)`
+      codeBlockTitle: `AutoLISP Automated PDF Batch Exporter`,
+      codeSnippet: `;; AutoLISP Automated PDF Batch Exporter for ${toolName}\n(defun c:ExportHDPDF ( / doc layoutPlot)\n  (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))\n  (vlax-for layout (vla-get-Layouts doc)\n    (if (/= (vla-get-Name layout) "Model")\n      (progn\n        (vla-put-ConfigName layout "DWG To PDF.pc3")\n        (vla-put-StyleSheet layout "monochrome.ctb")\n        (vla-put-CanonicalMediaName layout "ISO_A1__594.00_x_841.00_MM_")\n        (vla-put-PlotWithPlotStyles layout :vltrue)\n        (princ (strcat "\\\\n[+] Mapped layout: " (vla-get-Name layout) " to high-definition PDF standard.\\\\n"))\n      )\n    )\n  )\n  (vla-Regen doc acAllViewports)\n  (princ "\\\\n[+] High-definition PDF batch layout mapping complete.\\\\n")\n  (princ)\n)`
     };
   }
 
@@ -706,13 +729,14 @@ export function getPrintingPayload(toolName: string, title: string) {
       ['ANSI D Blueprints', '22 x 34 inches', '1:96 (1/8" = 1\'-0")', '0.25 inches Margins', '1200 DPI Vector Plot'],
       ['ISO A3 Check Prints', '297 x 420 mm', '1:100 / 1:200 (Reduced)', '3.0 mm Solid Margins', '600 DPI Check Raster']
     ],
-    lispCode: `;; AutoLISP Global Drawing Scales Restorer for ${toolName}\n(defun c:RestoreDrawingScales ()\n  (command "-scalelistedit" "Reset" "Yes" "Exit")\n  (setvar "CANNOSCALE" "1:1")\n  (setvar "ANNOTALLSCALES" 0)\n  (princ "\\\\n[+] Drawing scale annotations list successfully reset to standard 1:1 mapping in ${toolName}.\\\\n")\n  (princ)\n)`
+    codeBlockTitle: `AutoLISP Global Drawing Scales Restorer`,
+    codeSnippet: `;; AutoLISP Global Drawing Scales Restorer for ${toolName}\n(defun c:RestoreDrawingScales ()\n  (command "-scalelistedit" "Reset" "Yes" "Exit")\n  (setvar "CANNOSCALE" "1:1")\n  (setvar "ANNOTALLSCALES" 0)\n  (princ "\\\\n[+] Drawing scale annotations list successfully reset to standard 1:1 mapping in ${toolName}.\\\\n")\n  (princ)\n)`
   };
 }
 
 // Interactive Technical Specification Directive Renderer for Plotting & Printing Standards Category (Template C)
 export function renderPrintingDirective(tool: typeof tools[number], title: string) {
-  const plot = getPrintingPayload(tool.name, title);
+  const plot = getPrintingPayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -827,9 +851,9 @@ export function renderPrintingDirective(tool: typeof tools[number], title: strin
           </div>
           <div>
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
-              AutoLISP Drawing Variables & PDF Automation Script
+              {plot.codeBlockTitle}
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Low-level AutoLISP script to dynamically configure plotting scales, sheets size, and monochrome CTB mappings.</p>
+            <p className="text-slate-400 text-xs font-semibold">Low-level automation script to dynamically configure plotting scales, layout sheets size, and vector mappings.</p>
           </div>
         </div>
 
@@ -841,7 +865,7 @@ export function renderPrintingDirective(tool: typeof tools[number], title: strin
           </div>
           <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
             <pre>
-              {plot.lispCode}
+              {plot.codeSnippet}
             </pre>
           </div>
         </Card>
@@ -851,8 +875,28 @@ export function renderPrintingDirective(tool: typeof tools[number], title: strin
 }
 
 // Dynamic migration standard builder providing LISP ActiveX wrappers and CUIX XML maps for Template D (Migration Evaluation)
-export function getMigrationPayload(toolName: string, title: string) {
+export function getMigrationPayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
+
+  const isPosixOrOpenSource = tool.pricing_type === 'Open Source' || (tool.platforms && tool.platforms.length > 0 && !tool.platforms.some(p => p.toLowerCase().includes('windows')));
+
+  if (isPosixOrOpenSource) {
+    return {
+      reference: 'STEP AP242 / Open CASCADE B-Rep Translators',
+      engine: 'Open CASCADE Technology (OCCT) Kernel',
+      compatRating: '95.6% Direct Boundary preservation',
+      revisionCode: 'REV-KRN-2026-X',
+      tableHeaders: ['Source MCAD Entity', 'OCCT Equivalent', 'Tolerance Shift', 'Conversion Result', 'Remediation Action'],
+      tableRows: [
+        ['PK_BODY_type_solid', 'TopoDS_Solid', '< 1e-7 mm', 'Watertight Solid', 'Direct import, no stitching required'],
+        ['Proprietary NURBS', 'Geom_BSplineSurface', '< 1e-4 mm (Knot drift)', 'Split boundaries', 'Re-approximate spline surface in kernel'],
+        ['Macro Mates', 'Python API Constraints', 'N/A', 'Mates broken', 'Map kinematic constraints using PythonOCC']
+      ],
+      codeBlockTitle: `PythonOCC Migration Topology Fix Script for ${toolName}`,
+      codeSnippet: `# PythonOCC Script to repair broken topology after crossover migration\nfrom OCC.Core.BRepBuilderAPI import BRepBuilderAPI_Sewing\n\ndef repair_migration_topology(shape_list):\n    sewer = BRepBuilderAPI_Sewing()\n    sewer.Init(1e-5, True, True, True, False)\n    for shape in shape_list:\n        sewer.Add(shape)\n    sewer.Perform()\n    return sewer.SewedShape()`
+    };
+  }
 
   if (titleLower.includes('solidworks to autocad') || titleLower.includes('solidworks xt')) {
     return {
@@ -867,7 +911,8 @@ export function getMigrationPayload(toolName: string, title: string) {
         ['PK_EDGE_type_blend', 'AcisBlendEdge (Fillet)', '< 1e-3 mm (Gaps)', 'Broken fillet edges', 'Re-fillet edges in AutoCAD using tolerance override'],
         ['PK_ASSEMBLY_structure', 'AcisAssemblyGroup', 'N/A', 'Flat components list', 'Manually rebuild assembly constraint hierarchy']
       ],
-      lispCode: `;; AutoLISP ACIS Kernel Import Tolerance Calibration for \${toolName}\n(defun c:CalibrateACISImport ()\n  (setvar "FACETRES" 8.0)  ;; Maximize viewport render quality for 3D solids\n  (setvar "ISOLINES" 16)   ;; Increase wireframe resolution on curved faces\n  (setvar "DISPSILH" 1)    ;; Hide mesh silhouette lines in shaded modes\n  \n  ;; Set ACIS import boundary stitch tolerance to sub-micron\n  (command "_ACISIN" "_Tolerance" "0.001")\n  (princ "\\\\n[+] ACIS kernel import boundary tolerances set to 0.001mm for \${toolName}.\\\\n")\n  (princ)\n)`
+      codeBlockTitle: `AutoLISP ACIS Kernel Import Tolerance Calibration`,
+      codeSnippet: `;; AutoLISP ACIS Kernel Import Tolerance Calibration for \${toolName}\n(defun c:CalibrateACISImport ()\n  (setvar "FACETRES" 8.0)  ;; Maximize viewport render quality for 3D solids\n  (setvar "ISOLINES" 16)   ;; Increase wireframe resolution on curved faces\n  (setvar "DISPSILH" 1)    ;; Hide mesh silhouette lines in shaded modes\n  \n  ;; Set ACIS import boundary stitch tolerance to sub-micron\n  (command "_ACISIN" "_Tolerance" "0.001")\n  (princ "\\\\n[+] ACIS kernel import boundary tolerances set to 0.001mm for \${toolName}.\\\\n")\n  (princ)\n)`
     };
   }
 
@@ -884,7 +929,8 @@ export function getMigrationPayload(toolName: string, title: string) {
         ['Offset Mate (Distance)', 'Distance Mate', 'Partial Support (Broken)', '< 1e-5 mm', 'Reset distance value in SolidWorks mate properties'],
         ['Angle Mate', 'Angle Mate', 'Broken (Axis lost)', 'N/A', 'Re-select reference faces and define angle constraints']
       ],
-      lispCode: `;; VBA Macro template to re-establish broken mates in SolidWorks after CATIA import\n' Paste this inside SolidWorks Macro Editor (VBA)\nDim swApp As Object\nDim swModel As Object\nDim swAssy As Object\n\nSub RebuildMatesAfterCatiaImport()\n    Set swApp = Application.SldWorks\n    Set swModel = swApp.ActiveDoc\n    \n    If swModel.GetType = 2 Then ' Verify if active doc is Assembly\n        Set swAssy = swModel\n        ' Purge invalid dynamic mate offsets and force constraint rebuild\n        swAssy.ForceRebuild\n        MsgBox "SolidWorks Assembly mates rebuilt from CATIA import boundaries successfully.", vbInformation\n    End If\nEnd Sub`
+      codeBlockTitle: `VBA Macro template to re-establish broken mates`,
+      codeSnippet: `;; VBA Macro template to re-establish broken mates in SolidWorks after CATIA import\n' Paste this inside SolidWorks Macro Editor (VBA)\nDim swApp As Object\nDim swModel As Object\nDim swAssy As Object\n\nSub RebuildMatesAfterCatiaImport()\n    Set swApp = Application.SldWorks\n    Set swModel = swApp.ActiveDoc\n    \n    If swModel.GetType = 2 Then ' Verify if active doc is Assembly\n        Set swAssy = swModel\n        ' Purge invalid dynamic mate offsets and force constraint rebuild\n        swAssy.ForceRebuild\n        MsgBox "SolidWorks Assembly mates rebuilt from CATIA import boundaries successfully.", vbInformation\n    End If\nEnd Sub`
     };
   }
 
@@ -901,7 +947,8 @@ export function getMigrationPayload(toolName: string, title: string) {
         ['(vl-registry-read)', '100% Native', 'Direct OS Registry Read', '1.0x Speed (Equal)', 'No code modification required'],
         ['(vla-AddCustomObject)', '100% Native', 'Partial Support (ActiveX)', 'N/A (Stall)', 'Port custom dynamic blocks via C++ BRX wrapper']
       ],
-      lispCode: `;; AutoLISP Cross-Platform API Bridge Wrapper for ${toolName}\n(defun c:CrossPlatformStitch ( / prodName doc)\n  (vl-load-com)\n  (setq prodName (getvar "PRODUCT")) ;; Read host CAD software engine name\n  (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))\n  \n  (cond\n    ((vl-string-search "BricsCAD" prodName)\n     (princ "\\\\n[+] Engine: BricsCAD. Invoking native fast LISP interpreter...\\\\n")\n     ;; BricsCAD fast-path vector adjustments\n    )\n    ((vl-string-search "GstarCAD" prodName)\n     (princ "\\\\n[+] Engine: GstarCAD. Allocating GRX coordinate memory...\\\\n")\n    )\n    (t\n     (princ "\\\\n[+] Engine: AutoCAD. Initiating standard Visual LISP loop...\\\\n")\n    )\n  )\n  (princ "\\\\n[+] Cross-platform LISP coordinate stitching compiled successfully.\\\\n")\n  (princ)\n)`
+      codeBlockTitle: `AutoLISP Cross-Platform API Bridge Wrapper`,
+      codeSnippet: `;; AutoLISP Cross-Platform API Bridge Wrapper for ${toolName}\n(defun c:CrossPlatformStitch ( / prodName doc)\n  (vl-load-com)\n  (setq prodName (getvar "PRODUCT")) ;; Read host CAD software engine name\n  (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))\n  \n  (cond\n    ((vl-string-search "BricsCAD" prodName)\n     (princ "\\\\n[+] Engine: BricsCAD. Invoking native fast LISP interpreter...\\\\n")\n     ;; BricsCAD fast-path vector adjustments\n    )\n    ((vl-string-search "GstarCAD" prodName)\n     (princ "\\\\n[+] Engine: GstarCAD. Allocating GRX coordinate memory...\\\\n")\n    )\n    (t\n     (princ "\\\\n[+] Engine: AutoCAD. Initiating standard Visual LISP loop...\\\\n")\n    )\n  )\n  (princ "\\\\n[+] Cross-platform LISP coordinate stitching compiled successfully.\\\\n")\n  (princ)\n)`
     };
   }
 
@@ -918,7 +965,8 @@ export function getMigrationPayload(toolName: string, title: string) {
         ['HATCH (H)', 'HATCH (H)', 'XML Hatch Ribbon', 'XML Transfer Tab CUIX merge', 'H *HATCH'],
         ['CUSTOM-MACRO', 'Alternative Macro', 'Ribbon custom command', 'Manual macro script copy', 'Define custom alias in PGP file']
       ],
-      lispCode: `;; AutoLISP Legacy PGP Command Aliases Importer to ${toolName}\n(defun c:ImportLegacyPGP ( / pgpFile aliasLine)\n  (setq pgpFile (open (findfile "acad.pgp") "r"))\n  (if pgpFile\n    (progn\n      (while (setq aliasLine (read-line pgpFile))\n        ;; Parse legacy command alias line strings and append to ${toolName} runtime\n        (if (and (/= aliasLine "") (/= (substr aliasLine 1 1) ";"))\n          (princ (strcat "\\\\n[+] Mapped legacy command alias: " aliasLine))\n        )\n      )\n      (close pgpFile)\n      (command "reinit" "16") ;; Force PGP command aliases reload dynamically\n    )\n  )\n  (princ "\\\\n[+] PGP Command Aliases successfully ported.\\\\n")\n  (princ)\n)`
+      codeBlockTitle: `AutoLISP Legacy PGP Command Aliases Importer`,
+      codeSnippet: `;; AutoLISP Legacy PGP Command Aliases Importer to ${toolName}\n(defun c:ImportLegacyPGP ( / pgpFile aliasLine)\n  (setq pgpFile (open (findfile "acad.pgp") "r"))\n  (if pgpFile\n    (progn\n      (while (setq aliasLine (read-line pgpFile))\n        ;; Parse legacy command alias line strings and append to ${toolName} runtime\n        (if (and (/= aliasLine "") (/= (substr aliasLine 1 1) ";"))\n          (princ (strcat "\\\\n[+] Mapped legacy command alias: " aliasLine))\n        )\n      )\n      (close pgpFile)\n      (command "reinit" "16") ;; Force PGP command aliases reload dynamically\n    )\n  )\n  (princ "\\\\n[+] PGP Command Aliases successfully ported.\\\\n")\n  (princ)\n)`
     };
   }
 
@@ -935,13 +983,14 @@ export function getMigrationPayload(toolName: string, title: string) {
       ['Parametric Assemblies', 'Direct Assembly Mate Map', '< 1e-5 mm (Mates)', 'Parametric mates broken', 'Re-map assembly coordinate mates'],
       ['DGN Complex Elements', 'DGN-to-DWG Vector Map', '0.00 mm (Vector)', 'Layers preserved', 'Re-bind linestyle tables on load']
     ],
-    lispCode: `;; AutoLISP Solid Geometry Watertight Sewer for ${toolName}\n(defun c:SewBRepSolids ( / ss)\n  (vl-load-com)\n  (setq ss (ssget '((0 . "3DSOLID"))))\n  (if ss\n    (progn\n      ;; Invokes deep boundary representation solver to align tolerances\n      (command "_SURFSCULPT" ss "")\n      (princ "\\\\n[+] Watertight solid B-Rep sewing executed successfully.\\\\n")\n    )\n    (princ "\\\\n[+] No 3D Solids detected in selection set.\\\\n")\n  )\n  (princ)\n)`
+    codeBlockTitle: `AutoLISP Solid Geometry Watertight Sewer`,
+    codeSnippet: `;; AutoLISP Solid Geometry Watertight Sewer for ${toolName}\n(defun c:SewBRepSolids ( / ss)\n  (vl-load-com)\n  (setq ss (ssget '((0 . "3DSOLID"))))\n  (if ss\n    (progn\n      ;; Invokes deep boundary representation solver to align tolerances\n      (command "_SURFSCULPT" ss "")\n      (princ "\\\\n[+] Watertight solid B-Rep sewing executed successfully.\\\\n")\n    )\n    (princ "\\\\n[+] No 3D Solids detected in selection set.\\\\n")\n  )\n  (princ)\n)`
   };
 }
 
 // Interactive Technical Specification Directive Renderer for Software Migration & API Compatibility Category (Template D)
 export function renderMigrationDirective(tool: typeof tools[number], title: string) {
-  const mig = getMigrationPayload(tool.name, title);
+  const mig = getMigrationPayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1062,9 +1111,9 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
           </div>
           <div>
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
-              Cross-Platform API Bridge AutoLISP Code
+              {mig.codeBlockTitle}
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Low-level AutoLISP code automatically identifying the host CAD engine at runtime to load corresponding DLL functions.</p>
+            <p className="text-slate-400 text-xs font-semibold">Low-level scripts automating the crossover transition and mapping engine boundaries or legacy API logic.</p>
           </div>
         </div>
 
@@ -1076,7 +1125,7 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
           </div>
           <div className="font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed select-all">
             <pre>
-              {mig.lispCode}
+              {mig.codeSnippet}
             </pre>
           </div>
         </Card>
@@ -1086,10 +1135,13 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
 }
 
 // Dynamic standards payload builder targeting BIM LOD constraints, AIA layers, and solid B-Rep geometric kernels (Template C)
-export function getStandardsPayload(toolName: string, title: string) {
+export function getStandardsPayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
 
-  if (titleLower.includes('revit to archicad') || titleLower.includes('ifc4')) {
+  const isBIM = tool.tech_specs?.engine?.toLowerCase().includes('bim') || tool.features?.some(f => f.toLowerCase().includes('bim')) || toolName.toLowerCase().includes('revit') || toolName.toLowerCase().includes('archicad');
+
+  if (isBIM && (titleLower.includes('revit to archicad') || titleLower.includes('ifc4'))) {
     return {
       reference: 'ISO 19650 / IFC4 Schema / buildingSMART',
       standardClass: 'BIM IFC4 Interoperability Protocol',
@@ -1106,7 +1158,7 @@ export function getStandardsPayload(toolName: string, title: string) {
     };
   }
 
-  if (titleLower.includes('bim') || titleLower.includes('bep') || titleLower.includes('lod') || titleLower.includes('revit')) {
+  if (isBIM && (titleLower.includes('bim') || titleLower.includes('bep') || titleLower.includes('lod') || titleLower.includes('revit'))) {
     return {
       reference: 'ISO 19650 / BIM Level 2 / BS 1192',
       standardClass: 'BIM Level 2 Coordination Protocol',
@@ -1123,7 +1175,9 @@ export function getStandardsPayload(toolName: string, title: string) {
     };
   }
 
-  if (titleLower.includes('layer') || titleLower.includes('naming') || titleLower.includes('ansi') || titleLower.includes('iso') || titleLower.includes('dimension')) {
+  const isDrafting = tool.platforms?.some(p => p.toLowerCase().includes('windows') || p.toLowerCase().includes('mac')) && (tool.pricing_type !== 'Open Source' || titleLower.includes('dxf'));
+
+  if (isDrafting && (titleLower.includes('layer') || titleLower.includes('naming') || titleLower.includes('ansi') || titleLower.includes('iso') || titleLower.includes('dimension'))) {
     return {
       reference: 'AIA CAD Layer Guidelines / ISO 13567',
       standardClass: 'Enterprise CAD Standard Drafting Code',
@@ -1159,7 +1213,7 @@ export function getStandardsPayload(toolName: string, title: string) {
 
 // Interactive Technical Specification Directive Renderer for BIM & CAD Standards Category (Template C)
 export function renderStandardsDirective(tool: typeof tools[number], title: string) {
-  const std = getStandardsPayload(tool.name, title);
+  const std = getStandardsPayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1304,7 +1358,8 @@ export function renderStandardsDirective(tool: typeof tools[number], title: stri
 }
 
 // Dynamic manufacturing payload builder targeting sheet metal bend allowances, STL mesh faceting, and CNC feed rates (Template C)
-export function getManufacturingPayload(toolName: string, title: string) {
+export function getManufacturingPayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('rhino') || titleLower.includes('nurbs to inventor') || titleLower.includes('sewing tolerances')) {
@@ -1375,9 +1430,9 @@ export function getManufacturingPayload(toolName: string, title: string) {
   };
 }
 
-// Interactive Technical Specification Directive Renderer for CAM & Manufacturing Category (Template C)
+// Interactive Technical Specification Directive Renderer for Digital Manufacturing & Prototyping Category (Template C)
 export function renderManufacturingDirective(tool: typeof tools[number], title: string) {
-  const man = getManufacturingPayload(tool.name, title);
+  const man = getManufacturingPayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1522,8 +1577,28 @@ export function renderManufacturingDirective(tool: typeof tools[number], title: 
 }
 
 // Dynamic deployment payload builder targeting silent installations, FLEXlm OPTIONS, and SAML SSO (Template B)
-export function getDeploymentPayload(toolName: string, title: string) {
+export function getDeploymentPayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
+
+  const isOpenSource = tool.pricing_type === 'Open Source' || tool.pricing_type === 'Free';
+
+  if (isOpenSource) {
+    return {
+      reference: 'POSIX / Linux Standard Base / Package Managers',
+      deploymentScope: 'Headless Compilation & System Package Deployment',
+      revisionCode: 'REV-OSS-2026-X',
+      tableHeaders: ['OS Architecture', 'Package Protocol', 'Silent Command', 'Dependencies', 'Operational Purpose'],
+      tableRows: [
+        ['Debian / Ubuntu', 'APT Package Manager', 'sudo apt-get install -y', 'libc6, libgl1-mesa-glx', 'Distribute via centralized enterprise repository'],
+        ['Red Hat / CentOS', 'DNF / YUM Package', 'sudo dnf install -y', 'Mesa-libGL', 'Enterprise Linux secure distribution'],
+        ['Containerized', 'Docker / Podman', 'docker run -d --restart=always', 'X11 / Wayland Bridge', 'Headless backend geometry rendering'],
+        ['Windows / macOS', 'Cross-Platform Build', 'cmake --build . --target install', 'Qt5, OpenCASCADE', 'Compile natively from source code']
+      ],
+      codeBlockTitle: 'Bash Silent Server-Side Provisioning Script',
+      codeSnippet: `#!/bin/bash\n# Enterprise headless provisioning script for ${toolName}\n\necho "[+] Updating local repository indexes..."\napt-get update -qq\n\necho "[+] Installing ${toolName.toLowerCase()} and headless dependencies..."\nDEBIAN_FRONTEND=noninteractive apt-get install -yq ${toolName.toLowerCase()} xvfb libgl1-mesa-glx\n\necho "[+] Establishing X11 virtual frame buffer for headless rendering..."\nXvfb :99 -screen 0 1024x768x16 &\nexport DISPLAY=:99\n\necho "[+] ${toolName} headless deployment successful."`
+    };
+  }
 
   if (titleLower.includes('license') || titleLower.includes('flexlm') || titleLower.includes('sso') || titleLower.includes('saml') || titleLower.includes('port') || titleLower.includes('options')) {
     return {
@@ -1560,7 +1635,7 @@ export function getDeploymentPayload(toolName: string, title: string) {
 
 // Interactive Technical Specification Directive Renderer for IT Silent Deployment Category (Template B)
 export function renderDeploymentDirective(tool: typeof tools[number], title: string) {
-  const dep = getDeploymentPayload(tool.name, title);
+  const dep = getDeploymentPayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1575,7 +1650,7 @@ export function renderDeploymentDirective(tool: typeof tools[number], title: str
             TECHNICAL DIRECTIVE: {tool.slug.toUpperCase()}-DEP-B26
           </h3>
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
-            This technical deployment blueprint defines the silent command-line installer options, FLEXlm options group reservations, and AD SSO provisions for {tool.name}. Secure your subnets to avoid telemetry audit pings.
+            This technical deployment blueprint defines the silent command-line installer options, automated configuration mappings, and distribution standards for {tool.name}.
           </p>
         </div>
       </Card>
@@ -1705,8 +1780,28 @@ export function renderDeploymentDirective(tool: typeof tools[number], title: str
 }
 
 // Dynamic procurement payload builder targeting Named-User EULA audits, academic watermark cleans, and SaaS vs Perpetual break-evens (Template B)
-export function getProcurementPayload(toolName: string, title: string) {
+export function getProcurementPayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
+
+  const isFree = tool.pricing_type === 'Open Source' || tool.pricing_type === 'Free';
+
+  if (isFree) {
+    return {
+      reference: 'Open Source Initiative (OSI) / Corporate Security Audit',
+      procurementScope: 'Zero-Cost License Audit & Enterprise Sponsorship',
+      revisionCode: 'REV-PROC-OSS-2026',
+      tableHeaders: ['Procurement Vector', 'Cost Structure', 'Compliance Status', 'Support Protocol', 'Action Required'],
+      tableRows: [
+        ['Software License', '$0.00 (Free Forever)', 'GPL / MIT / Apache 2.0', 'Community Forums', 'Audit OSS license compliance (e.g., GPL viral effect)'],
+        ['Official Maintenance', '$0.00 (Self-supported)', 'N/A', 'Internal IT Team', 'Allocate budget for internal engineering hours'],
+        ['Corporate Sponsorship', '$5,000.00 (Optional)', 'Tax Deductible', 'Priority Bug Fixes', 'Fund foundation to ensure long-term stability'],
+        ['EULA Restrictions', 'None', 'Commercial Use Allowed', 'N/A', 'Verify no proprietary IP contamination']
+      ],
+      codeBlockTitle: 'Python Open Source Dependency Vulnerability Scanner',
+      codeSnippet: `# Python script to audit ${toolName} open-source dependencies for enterprise security compliance\nimport subprocess\nimport json\n\ndef scan_oss_vulnerabilities(target_path):\n    print(f"[+] Initiating CVE security audit for {toolName} dependencies...")\n    # Simulate Syft/Grype vulnerability scanning\n    result = subprocess.run(['grype', target_path, '-o', 'json'], capture_output=True, text=True)\n    if result.returncode != 0:\n        print("[-] Audit failed: Vulnerability scanner not installed.")\n        return\n    \n    report = json.loads(result.stdout)\n    high_vulns = [v for v in report.get('matches', []) if v['vulnerability']['severity'] in ('High', 'Critical')]\n    \n    if high_vulns:\n        print(f"[!] WARNING: Detected {len(high_vulns)} Critical/High CVEs in dependencies.")\n        print("[!] Action: Isolate software network access or patch from source before deployment.")\n    else:\n        print("[+] SUCCESS: Zero critical vulnerabilities detected. Approved for corporate procurement.")\n\nscan_oss_vulnerabilities("/opt/${toolName.toLowerCase()}")`
+    };
+  }
 
   if (titleLower.includes('cost') || titleLower.includes('budget') || titleLower.includes('subscription') || titleLower.includes('perpetual') || titleLower.includes('analysis')) {
     return {
@@ -1743,7 +1838,7 @@ export function getProcurementPayload(toolName: string, title: string) {
 
 // Interactive Technical Specification Directive Renderer for SAM & Procurement Compliance Category (Template B)
 export function renderProcurementDirective(tool: typeof tools[number], title: string) {
-  const pro = getProcurementPayload(tool.name, title);
+  const pro = getProcurementPayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -1758,7 +1853,7 @@ export function renderProcurementDirective(tool: typeof tools[number], title: st
             TECHNICAL DIRECTIVE: {tool.slug.toUpperCase()}-PROC-B26
           </h3>
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
-            This technical procurement directive defines the cumulative TCO licensing break-evens, named-user EULA audit compliance risk guidelines, and anti-telemetry blocks for {tool.name}. Deploy these rules to avoid non-commercial watermarked liability.
+            This technical procurement directive defines the IT compliance, licensing audit risk guidelines, and deployment provisions for {tool.name}.
           </p>
         </div>
       </Card>
