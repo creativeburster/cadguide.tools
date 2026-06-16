@@ -3666,7 +3666,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   }
 
   const { tool, template, category } = parsed;
-  const meta = getArchetypeMetadata(tool.category_id);
+  const meta = getArchetypeMetadata(tool.category_id, tool);
   const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
   const title = localized.title;
   const excerpt = localized.excerpt;
