@@ -1,6 +1,20 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// 拦截常见的无用爬虫与消耗资源的商业分析工具
+const BLOCKED_USER_AGENTS = [
+  'ahrefsbot',
+  'semrushbot',
+  'dotbot',
+  'blexbot',
+  'mj12bot',
+  'megaindex',
+  'dataforseobot',
+  'bytespider',
+  'petalbot',
+  'baiduspider'
+];
+
 // Cheatsheet/shortcut pages were consolidated under /toolbox. The legacy
 // /guides/* twins are 301'd to their /toolbox/* canonicals to retain link
 // equity and eliminate duplicate content.
@@ -25,9 +39,24 @@ const GUIDES_TO_TOOLBOX_SLUGS = new Set([
 ]);
 
 export function proxy(request: NextRequest) {
+  // 1. 拦截垃圾爬虫
+  const userAgent = request.headers.get('user-agent') || '';
+  const lowerUserAgent = userAgent.toLowerCase();
+  const isBlocked = BLOCKED_USER_AGENTS.some(ua => lowerUserAgent.includes(ua));
+
+  if (isBlocked) {
+    return new NextResponse('Access Denied: Your bot is blocked to conserve server resources.', {
+      status: 403,
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+    });
+  }
+
   const url = request.nextUrl.clone();
   const pathname = request.nextUrl.pathname;
 
+  // 2. 路由重定向逻辑
   // Legacy /guides cheatsheet pages → /toolbox canonicals (301)
   if (pathname.startsWith('/guides/')) {
     const slug = pathname.slice('/guides/'.length);
@@ -72,15 +101,9 @@ export function proxy(request: NextRequest) {
   return NextResponse.next();
 }
 
+// 合并 matcher：覆盖所有路径（除了静态资源），以便触发爬虫拦截，同时也能触发重定向
 export const config = {
   matcher: [
-    '/guides/:path*',
-    '/licensing',
-    '/licensing/:path*',
-    '/pricing/free',
-    '/pricing/open-source',
-    '/forever',
-    '/mo',
-    '/3yr',
+    '/((?!_next/static|_next/image|favicon.ico|sitemap\\.xml|robots\\.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
