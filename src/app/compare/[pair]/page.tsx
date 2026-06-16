@@ -92,24 +92,34 @@ function getDynamicEditorialVerdict(a: Tool, b: Tool): string {
   const mcadTools = ["solidworks", "fusion-360", "onshape", "autodesk-inventor", "ptc-creo", "siemens-nx", "catia", "freecad", "shapr3d", "solid-edge"];
   const isMcad = mcadTools.includes(a.slug) || mcadTools.includes(b.slug) || a.category_id === 'c2' || b.category_id === 'c2';
 
+  // Helpers to prevent absurd claims
+  const checkLisp = (t: Tool) => !['sketchup', 'freecad', 'librecad', 'qcad', 'fusion-360', 'onshape', 'solidworks', 'shapr3d'].includes(t.slug.toLowerCase());
+  const checkFree = (t: Tool) => t.pricing_type === 'Free' || t.pricing_type === 'Open Source';
+
   // 1. 2D Drafting & Detailing Category (isC1)
   if (isC1) {
-    return `Evaluating the 2D drafting pipelines of ${a.name} and ${b.name} highlights distinct platform alignments. ${higherScoreTool.name} commands a higher rating of ${higherScoreTool.score.toFixed(1)}/5 for its mature AutoLISP execution speed and legacy .dwg font weight preservation, whereas ${lowerScoreTool.name} stands out as a highly cost-effective alternative for teams focused on standard viewport layouts and batch CTB plotting. If your workflow requires high-speed LISP scripts and deep external reference (XREF) path recovery, ${higherScoreTool.name} remains the robust choice. For lightweight drafting seats without heavy subscription overheads, ${lowerScoreTool.name} offers a smooth command-line crossover.`;
+    const higherLisp = checkLisp(higherScoreTool) ? "its mature AutoLISP execution speed and legacy .dwg font weight preservation" : "its lightweight vector geometry engine and standardized 2D drafting accuracy";
+    const lowerCost = checkFree(lowerScoreTool) ? "a zero-cost open-source alternative without subscription overheads" : "a highly cost-effective alternative for teams focused on standard viewport layouts";
+    
+    return `Evaluating the 2D drafting pipelines of ${a.name} and ${b.name} highlights distinct platform alignments. ${higherScoreTool.name} commands a higher rating of ${higherScoreTool.score.toFixed(1)}/5 for ${higherLisp}, whereas ${lowerScoreTool.name} stands out as ${lowerCost}. If your workflow requires deep external reference (XREF) path recovery and robust layout coordination, ${higherScoreTool.name} remains the stronger choice. For lightweight drafting seats and rapid command-line crossover, ${lowerScoreTool.name} offers a smooth transition.`;
   }
 
   // 2. BIM & Structural Coordination Category (isBim)
   if (isBim) {
-    return `For multi-disciplinary coordination, comparing the BIM authoring capabilities of ${a.name} and ${b.name} reveals clear architectural tradeoffs. ${higherScoreTool.name} provides class-leading performance in central-to-local model synchronization and IFC4 schema mapping, rating at ${higherScoreTool.score.toFixed(1)}/5. ${lowerScoreTool.name} provides a highly specialized environment for parametric design, making it an excellent fit for firms looking to streamline LOD 300/400 structural details. Choose ${higherScoreTool.name} if your team runs complex building execution plans requiring multi-user Worksharing. Opt for ${lowerScoreTool.name} to leverage intuitive architectural modeling and coordinate layouts on ${lowerScoreTool.platforms.join(' or ')} environments.`;
+    const higherBim = checkLisp(higherScoreTool) ? "multi-disciplinary Worksharing and IFC4 schema mapping" : "central-to-local model synchronization and rich architectural parametric coordination";
+    return `For multi-disciplinary coordination, comparing the BIM authoring capabilities of ${a.name} and ${b.name} reveals clear architectural tradeoffs. ${higherScoreTool.name} provides class-leading performance in ${higherBim}, rating at ${higherScoreTool.score.toFixed(1)}/5. ${lowerScoreTool.name} provides a highly specialized environment for parametric design, making it an excellent fit for firms looking to streamline LOD 300/400 structural details. Choose ${higherScoreTool.name} if your team runs complex building execution plans requiring multi-user coordination. Opt for ${lowerScoreTool.name} to leverage intuitive modeling layouts on ${lowerScoreTool.platforms.join(' or ')} environments.`;
   }
 
   // 3. 3D Mechanical parametric modeling Category (isMcad)
   if (isMcad) {
-    return `Analyzing 3D mechanical modeling pipelines between ${a.name} and ${b.name} reveals distinct parametric assembly workflows. ${higherScoreTool.name} holds the technical edge with an expert score of ${higherScoreTool.score.toFixed(1)}/5, excelling in large assembly interference analysis and geometric kernel integrity (delivering solid B-Rep topology). Meanwhile, ${lowerScoreTool.name} focuses on sheet metal unfold tolerances and direct solid editing. For teams requiring strict parametric design history and high-volume sheet metal bend K-factor calculations, ${higherScoreTool.name} is the industrial choice. If rapid direct modeling or integrated CAM toolpath setups on ${lowerScoreTool.platforms.join(' or ')} are key, ${lowerScoreTool.name} provides a highly agile alternative.`;
+    const higherMcad = checkFree(higherScoreTool) ? "open-source constraint solvers and versatile direct modeling" : "large assembly interference analysis and geometric kernel integrity (delivering solid B-Rep topology)";
+    const lowerMcad = checkFree(lowerScoreTool) ? "rapid direct solid editing and parametric workflows" : "sheet metal unfold tolerances and advanced constraint editing";
+    return `Analyzing 3D mechanical modeling pipelines between ${a.name} and ${b.name} reveals distinct parametric assembly workflows. ${higherScoreTool.name} holds the technical edge with an expert score of ${higherScoreTool.score.toFixed(1)}/5, excelling in ${higherMcad}. Meanwhile, ${lowerScoreTool.name} focuses on ${lowerMcad}. For teams requiring strict parametric design history and high-volume constraints calculation, ${higherScoreTool.name} is the industrial choice. If rapid iteration or agile toolpath setups on ${lowerScoreTool.platforms.join(' or ')} are key, ${lowerScoreTool.name} provides a highly capable alternative.`;
   }
 
   // 4. Engineering simulation & EDA Category (isCaeEda)
   if (isCaeEda) {
-    return `In high-fidelity engineering simulations and board layouts, the comparison between ${a.name} and ${b.name} emphasizes rigorous solving capacity. ${higherScoreTool.name} represents the industrial standard with a score of ${higherScoreTool.score.toFixed(1)}/5, optimized for complex multi-phase solver iterations and high-speed PCB trace routing. ${lowerScoreTool.name} remains highly competitive for teams seeking streamlined board schematics or rapid thermal dissipation checks. Choose ${higherScoreTool.name} to handle heavy HPC parallel mesh solving and ActiveBOM automation. Prefer ${lowerScoreTool.name} for rapid circuit prototyping and layout coordination.`;
+    return `In high-fidelity engineering simulations and board layouts, the comparison between ${a.name} and ${b.name} emphasizes rigorous solving capacity. ${higherScoreTool.name} represents the industrial standard with a score of ${higherScoreTool.score.toFixed(1)}/5, optimized for complex multi-phase solver iterations and robust trace routing. ${lowerScoreTool.name} remains highly competitive for teams seeking streamlined schematics or rapid dissipation checks. Choose ${higherScoreTool.name} to handle heavy HPC parallel mesh solving and automation. Prefer ${lowerScoreTool.name} for rapid prototyping and layout coordination.`;
   }
 
   // 5. Creative Rendering & Visualizations Category (Default / Creative)
