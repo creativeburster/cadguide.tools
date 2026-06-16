@@ -397,6 +397,21 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
 // 渲染 / 可视化类工具（应归入 creative-visual 档，而非电子/PCB 档）
 export const RENDER_VISUAL_SLUGS = ['v-ray', 'lumion', 'enscape', 'twinmotion', 'd5-render', 'corona-renderer', 'octane-render', 'keyshot', 'substance-painter', '3ds-max', 'zbrush', 'maya', 'cinema-4d', 'blender'];
 
+// c5 中的纯仿真 / 分析求解器（CFD、FEA、结构、管道应力、压力容器、流程、模流、齿轮计算等）。
+// 这些工具不产出 CNC 刀路 / G-code / 钣金展开，也不画 AEC 图层蓝图，因此 manufacturing /
+// printing / standards / migration 母版对它们都是"驴唇不对马嘴"。区别于同属 c5 的 CAD/CAM 工具
+// （Mastercam、SolidCAM、hyperMILL 等），后者的制造母版是合理的。
+export const SIMULATION_ANALYSIS_SLUGS = [
+  // CFD / 多物理场
+  'ansys-fluent', 'ansys-cfx', 'ansys-workbench', 'ansys-discovery', 'simcenter-star-ccm', 'openfoam', 'simscale', 'comsol-multiphysics',
+  // 通用 FEA 求解器 / 显式动力学
+  'ansys-mechanical', 'abaqus', 'ls-dyna', 'msc-nastran', 'msc-patran', 'femap', 'altair-hyperworks', 'altair-inspire', 'esi-visual-environment', 'msc-adams',
+  // 结构分析
+  'sap2000', 'etabs', 'staad-pro', 'tekla-tedds', 'autodesk-robot', 'idea-statica', 'risa-3d',
+  // 管道应力 / 压力容器 / 流程 / 模流 / 齿轮
+  'caesar-ii', 'autopipe', 'pv-elite', 'aspen-hysys', 'moldflow', 'moldex3d', 'kisssoft',
+];
+
 export interface ArchetypeMetadata {
   id: 'drafting-aec' | 'mechanical-simulation' | 'creative-visual' | 'electronics-hardware' | 'specialized-design';
   name: string;
@@ -703,11 +718,17 @@ export function isArticleCompatibleWithTool(articleTitle: string, articleCategor
   const isShip = /ship|marine|naval/i.test(indStr);
   const isWoodwork = /woodwork|furniture|cabinet/i.test(indStr);
   const isPureRender = (RENDER_VISUAL_SLUGS.includes(slug) || (isRendering && !isMechanical && !isBIM && !is2D)) && !isSlicer;
+  const isSimAnalysis = SIMULATION_ANALYSIS_SLUGS.includes(slug);
 
   // 各领域允许生成的类目白名单（未列出的类目一律熔断）。troubleshooting / performance /
   // procurement 是相对通用的（崩溃、显卡调优、选型预算），其余高度领域绑定的母版按需放行。
   let allowedCategories: string[] | null = null;
-  if (isViewer) {
+  if (isSimAnalysis) {
+    // 纯仿真/分析求解器：不产出刀路/钣金/AEC图纸/几何内核迁移，屏蔽 manufacturing /
+    // printing / standards / migration。保留 troubleshooting（多用 FlexLM）、performance
+    //（HPC/多核/内存调优高度相关）、procurement、deployment。
+    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
+  } else if (isViewer) {
     // 纯看图/批注/校审工具：不做创作，屏蔽创作类（标准/打印/制造/迁移/部署）母版
     allowedCategories = ['troubleshooting', 'performance', 'procurement'];
   } else if (isEDA) {
