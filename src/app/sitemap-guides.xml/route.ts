@@ -9,7 +9,10 @@ import { KERNEL_TOOLS } from '@/lib/kernel-data';
 const BASE_URL = 'https://cadguide.tools';
 
 export async function GET() {
-  const now = new Date().toISOString();
+  // Fixed content-version date — only update this when content is substantively changed.
+  // Do NOT use new Date() here; a dynamic timestamp causes Googlebot to re-crawl unchanged
+  // pages every time the sitemap is fetched, wasting crawl budget.
+  const now = '2026-06-16T00:00:00.000Z';
 
   // 1. Core 8 Arteries Landing Pages
   const categoryKeys = ['troubleshooting', 'performance', 'printing', 'standards', 'deployment', 'migration', 'procurement', 'manufacturing'];
@@ -66,10 +69,12 @@ export async function GET() {
     <priority>0.80</priority>
   </url>`);
 
-  // 6. Geometry Kernel Conversion Pages (100 entries)
+  // 6. Geometry Kernel Conversion Pages — exclude self-to-self pairs (e.g. kernel-autocad-autocad)
+  // which have zero semantic value and waste crawl budget.
   const kernelUrls: string[] = [];
   for (const src of KERNEL_TOOLS) {
     for (const tgt of KERNEL_TOOLS) {
+      if (src.slug === tgt.slug) continue; // Skip self-to-self conversions
       kernelUrls.push(`  <url>
     <loc>${BASE_URL}/guides/kernel-${src.slug}-${tgt.slug}</loc>
     <lastmod>${now}</lastmod>

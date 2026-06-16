@@ -4,7 +4,10 @@ import { tools } from '@/lib/data';
 const BASE_URL = 'https://cadguide.tools';
 
 export async function GET() {
-  const now = new Date().toISOString();
+  // Fixed content-version date — only update this when content is substantively changed.
+  // Do NOT use new Date() here; a dynamic timestamp causes Googlebot to re-crawl unchanged
+  // pages every time the sitemap is fetched, wasting crawl budget.
+  const now = '2026-06-16T00:00:00.000Z';
 
   // Tool Detail Pages
   const toolUrls = tools.map((tool) => {
