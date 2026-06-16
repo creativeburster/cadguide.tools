@@ -725,4 +725,4 @@ export default async function AlternativesPage(
   );
 }
 
-export const revalidate = 86400;
+export const dynamic = 'force-static';

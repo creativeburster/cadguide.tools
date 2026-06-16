@@ -792,4 +792,4 @@ export default async function FileFormatPage(
   );
 }
 
-export const revalidate = 86400;
+export const dynamic = 'force-static';

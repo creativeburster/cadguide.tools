@@ -10,6 +10,22 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/'],
       },
+      // 拦截常见的无用爬虫与消耗资源的分析工具
+      {
+        userAgent: [
+          'AhrefsBot',
+          'SemrushBot',
+          'DotBot',
+          'BLEXBot',
+          'MJ12bot',
+          'MegaIndex.ru',
+          'DataForSeoBot',
+          'Bytespider',
+          'PetalBot',
+          'Baiduspider'
+        ],
+        disallow: '/',
+      },
       // 显式放行主流 AI 搜索引擎与 LLM 爬虫，增强在生成式搜索引擎 (GEO) 中的数据收录效率
       {
         userAgent: [
@@ -24,9 +40,7 @@ export default function robots(): MetadataRoute.Robots {
           'YouBot',
           'Applebot-Extended',
           'Meta-ExternalAgent',
-          'Amazonbot',
-          'Bytespider',
-          'PetalBot'
+          'Amazonbot'
         ],
         allow: '/',
       }

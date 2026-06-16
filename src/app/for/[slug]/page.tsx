@@ -625,4 +625,4 @@ export default async function PersonaPageRoute(
   );
 }
 
-export const revalidate = 86400;
+export const dynamic = 'force-static';
