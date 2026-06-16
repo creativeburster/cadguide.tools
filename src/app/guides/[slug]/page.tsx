@@ -24,6 +24,29 @@ export const dynamicParams = true;
 const GUIDE_CONTENT_PUBLISHED = '2026-05-01';
 const GUIDE_CONTENT_UPDATED = '2026-06-15';
 
+// 故障排查母版此前对所有工具写死 Autodesk 专属的授权栈（ADSKFLEX_LICENSE_FILE /
+// adsklicensing / AdskLicensingService）和 AutoCAD 专属的图纸恢复文件（.sv$ / .ac$）。
+// 对非 Autodesk / 非 DWG 工具这是穿帮。下面按品牌/家族给出正确的标识符。
+function isAutodeskProduct(tool: typeof tools[number]): boolean {
+  return /autocad|autodesk|revit|inventor|civil 3d|fusion 360|navisworks|3ds max|\bmaya\b|recap|infraworks|advance steel|netfabb|mudbox|\balias\b|vault|fabrication/i.test(tool.name);
+}
+
+function licenseStack(tool: typeof tools[number]) {
+  if (isAutodeskProduct(tool)) {
+    return { envVar: 'ADSKFLEX_LICENSE_FILE', dll: 'adsklicensing.dll', proc: 'adsklicensing.exe', service: 'AdskLicensingService' };
+  }
+  // 通用 FlexNet/FLEXlm 授权栈（适用于大多数商业 CAD/CAE 厂商）
+  return { envVar: 'LM_LICENSE_FILE', dll: 'lmgrd.exe', proc: 'lmgrd.exe', service: 'FlexNet Licensing Service' };
+}
+
+function recoveryArtifact(tool: typeof tools[number]) {
+  const coreFeat = (tool.core_features || []).join(' ').toLowerCase();
+  const isDwgFamily = tool.category_id === 'c1' || /autolisp|\bdwg\b|\blisp\b/.test(coreFeat) || isAutodeskProduct(tool);
+  return isDwgFamily
+    ? { files: '`.ac$` or `.sv$`', glob: 'sv$', noun: 'drawing recovery lockfiles', cache: 'drawing cache' }
+    : { files: '`.bak` or autosave', glob: 'bak', noun: 'autosave/backup recovery files', cache: 'model cache' };
+}
+
 // Industry-grade Category Technical Mapping for Template C (Standard Red-Header layout)
 export const CATEGORY_MAP: Record<string, {
   directiveCode: string;
@@ -178,6 +201,8 @@ export function getTopToolsForCategory(category: string) {
 export function getAutopsyPayload(tool: typeof tools[number], title: string) {
   const toolName = tool.name;
   const titleLower = title.toLowerCase();
+  const lic = licenseStack(tool);
+  const rec = recoveryArtifact(tool);
   
   if (titleLower.includes('error-15') || titleLower.includes('error -15') || titleLower.includes('flexlm-error-15')) {
     return {
@@ -206,26 +231,26 @@ echo [+] Process complete. Verify server latency and relaunch ${toolName}.`
   
   if (titleLower.includes('license') || titleLower.includes('flexlm') || titleLower.includes('activation')) {
     return {
-      module: 'adsklicensing.dll / lmgrd.exe',
+      module: `${lic.dll} / lmgrd.exe`,
       code: '0x00002740 (WSAEADDRINUSE)',
       offset: '0x0004c8f1',
       severity: 'CRITICAL // ACTIVATION LOCKED',
-      rootCause: `FLEXlm licensing service socket port binding collision. The CAD license daemon attempted to bind to default TCP port 27000 or 2080, which is already occupied by a phantom licensing lockfile or duplicate active background daemon process.`,
+      rootCause: `FLEXlm licensing service socket port binding collision. The license daemon attempted to bind to default TCP port 27000 or 2080, which is already occupied by a phantom licensing lockfile or duplicate active background daemon process.`,
       registryKey: `HKEY_LOCAL_MACHINE\\SOFTWARE\\FLEXlm License Manager\\`,
-      registryValue: `"ADSKFLEX_LICENSE_FILE" = "27000@127.0.0.1"`,
+      registryValue: `"${lic.envVar}" = "27000@127.0.0.1"`,
       recoveryScript: `@echo off
 echo ===================================================
 echo   CAD DIRECTIVE: FORCED LICENSE DAEMON SOCKET RESET
 echo ===================================================
 echo [+] Stopping concurrent license service daemons...
 taskkill /f /im lmgrd.exe >nul 2>&1
-taskkill /f /im adsklicensing.exe >nul 2>&1
+taskkill /f /im ${lic.proc} >nul 2>&1
 echo [+] Wiping active network license socket locks...
 netstat -ano | findstr :27000
 echo [+] Re-registering licensing service environment...
-reg add "HKLM\\SOFTWARE\\FLEXlm License Manager" /v "ADSKFLEX_LICENSE_FILE" /t REG_SZ /d "27000@127.0.0.1" /f
+reg add "HKLM\\SOFTWARE\\FLEXlm License Manager" /v "${lic.envVar}" /t REG_SZ /d "27000@127.0.0.1" /f
 echo [+] Restarting licensing socket daemons...
-sc start AdskLicensingService
+sc start "${lic.service}"
 echo [+] Process complete. Verify environment by relaunching ${toolName}.`
     };
   }
@@ -236,7 +261,7 @@ echo [+] Process complete. Verify environment by relaunching ${toolName}.`
       code: '0xC0000005 (Access Violation)',
       offset: '0x0001f3b2',
       severity: 'CRITICAL // INTERFACE STALLED',
-      rootCause: `Dynamic vertex array buffer overflow inside local drawing cache. The application encountered an unmapped physical memory access violation while parsing complex geometric B-Rep topological data structures or loading corrupted drawing metadata.`,
+      rootCause: `Dynamic vertex array buffer overflow inside the local ${rec.cache}. The application encountered an unmapped physical memory access violation while parsing complex geometric B-Rep topological data structures or loading corrupted model metadata.`,
       registryKey: `HKEY_CURRENT_USER\\Software\\${toolName.replace(/\s+/g, '')}\\Profiles\\Default\\General\\`,
       registryValue: `"GraphicsOverride" = DWORD:00000001`,
       recoveryScript: `@echo off
@@ -302,6 +327,7 @@ echo [+] Process complete. Launch ${toolName} to calibrate system.`
 // Technical Autopsy Report Renderer (Template A)
 export function renderTechnicalAutopsy(tool: typeof tools[number], title: string) {
   const autopsy = getAutopsyPayload(tool, title);
+  const rec = recoveryArtifact(tool);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -401,10 +427,10 @@ export function renderTechnicalAutopsy(tool: typeof tools[number], title: string
             </div>
             <div className="space-y-2 min-w-0 flex-1">
               <h4 className="font-black text-slate-900 text-sm sm:text-base">
-                Wipe Corrupted Local User Drawing Caches
+                Wipe Corrupted Local User {rec.cache === 'drawing cache' ? 'Drawing Caches' : 'Model Caches'}
               </h4>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-                Navigate to your workstation local AppData path `C:\\Users\\%USERNAME%\\AppData\\Local\\${tool.name.replace(/\s+/g, '')}\\` and safely delete dynamic drawing recovery lockfiles (`.ac$` or `.sv$`) and cached coordinate options to prevent serialize crash loop cycles.
+                {`Navigate to your workstation local AppData path \`C:\\Users\\%USERNAME%\\AppData\\Local\\${tool.name.replace(/\s+/g, '')}\\\` and safely delete dynamic ${rec.noun} (${rec.files}) and cached options to prevent serialize crash loop cycles.`}
               </p>
             </div>
           </div>
@@ -3703,6 +3729,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const excerpt = localized.excerpt;
 
   // Renders distinct detailed technical guides based on category sections
+  const recArtifact = recoveryArtifact(tool);
   const getDynamicSteps = (cat: string, name: string) => {
     switch (cat) {
       case 'troubleshooting':
@@ -3717,7 +3744,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           },
           {
             title: `Wipe Temporary Drawing Cache & Restore Recovered Assets`,
-            desc: `Wipe all background cache assets under Windows Temp folder and locate temporary recovery databases (.sv$ or .ac$ formats). Copy files to an isolated backup subnet to prevent background serialization overwrites.`,
+            desc: `Wipe all background cache assets under the Windows Temp folder and locate temporary recovery files (${recArtifact.files}). Copy files to an isolated backup subnet to prevent background serialization overwrites.`,
           },
         ];
       case 'performance':
@@ -4130,7 +4157,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                               <code>
                                 {sIdx === 0 && `# Command-line execution for environment verification\nC:\\Program Files\\${tool.name.replace(/\s+/g, '')}\\Bin\\${tool.name.toLowerCase().replace(/\s+/g, '')}.exe --verify-license --verbose`}
                                 {sIdx === 1 && `# Query FLEXlm options daemon TCP socket status\nLMUTIL lmstat -a -c C:\\Licenses\\${tool.name.toLowerCase().replace(/\s+/g, '')}.lic`}
-                                {sIdx === 2 && `# Wipe local dynamic recovery files safely\ndel /f /q %TEMP%\\*${tool.name.toLowerCase().replace(/\s+/g, '').slice(0, 5)}*.sv$`}
+                                {sIdx === 2 && `# Wipe local dynamic recovery files safely\ndel /f /q %TEMP%\\*${tool.name.toLowerCase().replace(/\s+/g, '').slice(0, 5)}*.${recArtifact.glob}`}
                               </code>
                             </div>
                           </div>
