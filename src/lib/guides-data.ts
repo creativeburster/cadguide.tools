@@ -744,10 +744,20 @@ export function isArticleCompatibleWithTool(articleTitle: string, articleCategor
     // 3D 打印切片器：增材而非减材，屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金/CNC 制造、内核迁移
     allowedCategories = ['troubleshooting', 'performance', 'procurement'];
   } else if (isPureRender) {
-    // 纯渲染/可视化：屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金CNC 制造
-    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment', 'migration'];
+    // 纯渲染/可视化：屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金CNC 制造、DWG 内核迁移
+    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
   }
   if (allowedCategories && !allowedCategories.includes(categoryLower)) {
+    return false;
+  }
+
+  // 0.5 migration 母版熔断：迁移类母版写死的是 AutoLISP / CUIX / PGP 命令别名 + DWG 内核交叉
+  // 兼容内容，属于 DWG/AutoCAD 生态特有（BricsCAD/ZWCAD/GstarCAD 等 DWG 克隆同样支持 LISP/PGP）。
+  // 对非 DWG 家族工具（渲染器、纯机械 MCAD、电子、垂直领域等）生成这类内容是穿帮的——例如
+  // V-Ray 谈“导入 AutoLISP CUIX 自定义”。按规则仅放行 DWG 家族 + Rhino。
+  const coreFeatStr = (tool.core_features || []).join(' ').toLowerCase();
+  const isDwgLispFamily = categoryId === 'c1' || /autolisp|\blisp\b|\bdwg\b|\bpgp\b|\bcuix\b/.test(coreFeatStr) || slug === 'rhino-3d';
+  if (categoryLower === 'migration' && !isDwgLispFamily) {
     return false;
   }
 
