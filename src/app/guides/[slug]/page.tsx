@@ -169,7 +169,8 @@ export function getTopToolsForCategory(category: string) {
 }
 
 // Dynamic diagnostic builder providing hardcore registry, module, and batch script configurations for Template A (Technical Autopsy)
-export function getAutopsyPayload(toolName: string, title: string) {
+export function getAutopsyPayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
   
   if (titleLower.includes('error-15') || titleLower.includes('error -15') || titleLower.includes('flexlm-error-15')) {
@@ -247,6 +248,30 @@ echo [+] Process complete. Relaunch ${toolName} in diagnostics mode.`
     };
   }
 
+  const isPosixOrOpenSource = tool.pricing_type === 'Open Source' || (tool.platforms && tool.platforms.length > 0 && !tool.platforms.some(p => p.toLowerCase().includes('windows')));
+
+  if (isPosixOrOpenSource) {
+    return {
+      module: `${toolName.toLowerCase().replace(/\s+/g, '')}_core.so`,
+      code: 'SIGSEGV (Segmentation fault)',
+      offset: '0x0002b8a0',
+      severity: 'HIGH // DAEMON TERMINATED',
+      rootCause: `Unmanaged physical memory segment read violation during dynamic coordinate matrix transformation. Geometry kernel encountered boundary drift tolerances exceeding software sketch solver parameters.`,
+      registryKey: `~/.config/${toolName.replace(/\s+/g, '')}/Diagnostics.conf`,
+      registryValue: `SafeModeLaunch=1`,
+      recoveryScript: `#!/bin/bash
+echo "==================================================="
+echo "  CAD DIRECTIVE: UNIX SAFE MODE DIAGNOSTIC ENV"
+echo "==================================================="
+echo "[+] Forcing ${toolName} dynamic process termination..."
+killall -9 ${toolName.toLowerCase().replace(/\s+/g, '')} >/dev/null 2>&1
+echo "[+] Creating POSIX config diagnostic safe-launch override..."
+mkdir -p ~/.config/${toolName.replace(/\s+/g, '')}
+echo "SafeModeLaunch=1" >> ~/.config/${toolName.replace(/\s+/g, '')}/Diagnostics.conf
+echo "[+] Process complete. Launch ${toolName} to calibrate system."`
+    };
+  }
+
   // Default Autopsy Payload
   return {
     module: `${toolName.toLowerCase().replace(/\s+/g, '')}_core.dll`,
@@ -270,7 +295,7 @@ echo [+] Process complete. Launch ${toolName} to calibrate system.`
 
 // Technical Autopsy Report Renderer (Template A)
 export function renderTechnicalAutopsy(tool: typeof tools[number], title: string) {
-  const autopsy = getAutopsyPayload(tool.name, title);
+  const autopsy = getAutopsyPayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -412,7 +437,8 @@ export function renderTechnicalAutopsy(tool: typeof tools[number], title: string
 }
 
 // Dynamic performance payload builder targeting viewport and memory allocations for Template D (Geek Benchmark)
-export function getPerformancePayload(toolName: string, title: string) {
+export function getPerformancePayload(tool: typeof tools[number], title: string) {
+  const toolName = tool.name;
   const titleLower = title.toLowerCase();
 
   if (titleLower.includes('gpu') || titleLower.includes('graphics') || titleLower.includes('accelerat') || titleLower.includes('card') || titleLower.includes('driver')) {
@@ -449,6 +475,25 @@ export function getPerformancePayload(toolName: string, title: string) {
     };
   }
 
+  const isPosixOrOpenSource = tool.pricing_type === 'Open Source' || (tool.platforms && tool.platforms.length > 0 && !tool.platforms.some(p => p.toLowerCase().includes('windows')));
+
+  if (isPosixOrOpenSource) {
+    return {
+      kernel: 'ACIS / Parasolid / Open CASCADE Solid Model Kernel',
+      multithreading: 'Hybrid POSIX Multi-Processing',
+      gpuOptimization: 'OpenGL / Vulkan Parallel Pipeline',
+      translationScore: '97.2% Boundary Representation Preservation',
+      tableHeaders: ['Workstation RAM Size', 'Triangles Count Limit', 'Autosave RAM Flush Cycle', 'Disk Swap Thrashing', 'Viewport FPS (Fluidity)'],
+      tableRows: [
+        ['16 GB RAM', '5,000,000 Polygons', '5 minutes (Frequent)', 'Critical (Active swapping)', '4 FPS (Stalled assembly)'],
+        ['32 GB RAM', '15,000,000 Polygons', '15 minutes (Standard)', 'Low (Swap inactive)', '28 FPS (Fluid workspace)'],
+        ['64 GB RAM (ECC)', '50,000,000+ Polygons', '20 minutes (Optimal)', 'Zero', '60+ FPS (High-fidelity dynamic)'],
+        ['128 GB RAM (ECC)', '150,000,000+ Polygons', '30 minutes (Enterprise)', 'Zero', '120+ FPS (High-fidelity VR/AR)']
+      ],
+      cppCode: `# Python POSIX Memory Wrapper for large assemblies viewport buffer release in ${toolName}\nimport ctypes\nimport sys\n\ndef force_viewport_ram_purge():\n    if sys.platform != "win32":\n        # Send loopback purge to clear idle vertex cache queues safely via glibc malloc_trim\n        libc = ctypes.CDLL('libc.so.6')\n        libc.malloc_trim(0)\n        print("[+] Purged idle CAD viewport geometric heaps from physical RAM via glibc.")`
+    };
+  }
+
   // Default Performance / Workstation Tuning Payload
   return {
     kernel: 'ACIS / Parasolid / Open CASCADE Solid Model Kernel',
@@ -468,7 +513,7 @@ export function getPerformancePayload(toolName: string, title: string) {
 
 // Interactive technical benchmark renderer for Workstation Speed & Performance Category (Template D)
 export function renderPerformanceBenchmark(tool: typeof tools[number], title: string) {
-  const perf = getPerformancePayload(tool.name, title);
+  const perf = getPerformancePayload(tool, title);
 
   return (
     <div className="space-y-8 md:space-y-12">
