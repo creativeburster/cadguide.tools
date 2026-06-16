@@ -11,12 +11,18 @@ import { ARTICLES_LIST, CATEGORY_SECTIONS, getArchetypeMetadata, getLocalizedTit
 import { Award, Cpu, ArrowLeft, AlertTriangle, ShieldAlert, BookOpen, ArrowRight, Layers, Printer, Settings, Scale, FileSpreadsheet, FolderGit, Activity, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 import { comparisonPairs } from '@/lib/seo-content';
+import { pricingSummary } from '@/lib/seo';
 import { PROCUREMENT_LIST, getProcurementBySlug, ProcurementIndustry } from '@/lib/procurement-data';
 import { getStandardPageData, STANDARDS_LIST, DRAFTING_TOOLS, DraftingStandardPage } from '@/lib/standards-data';
 import { getLicensingShieldData, LICENSING_TOOLS, LicensingShieldPage } from '@/lib/licensing-data';
 import { getKernelPageData, KERNEL_TOOLS, KernelPageData } from '@/lib/kernel-data';
 
 export const dynamicParams = true;
+
+// 稳定的内容日期常量。此前 dateModified 用 new Date() 每次请求都刷成"今天"，向爬虫
+// 伪造内容新鲜度；改为固定的内容版本日期，仅在内容实质性更新时手动调整。
+const GUIDE_CONTENT_PUBLISHED = '2026-05-01';
+const GUIDE_CONTENT_UPDATED = '2026-06-15';
 
 // Industry-grade Category Technical Mapping for Template C (Standard Red-Header layout)
 export const CATEGORY_MAP: Record<string, {
@@ -3224,12 +3230,37 @@ export async function generateMetadata(
   const { tool, template, category } = parsed;
   const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
 
+  // 标题后缀按 category 动态化（此前所有类目都写死 "CAD Expert Troubleshooting"，词不对题）。
+  const CATEGORY_TITLE_SUFFIX: Record<string, string> = {
+    troubleshooting: 'Troubleshooting Guide',
+    performance: 'Performance Tuning Guide',
+    printing: 'Plotting & Output Guide',
+    standards: 'Drafting Standards Guide',
+    deployment: 'Deployment & IT Guide',
+    migration: 'Migration Guide',
+    procurement: 'Procurement Guide',
+    manufacturing: 'Manufacturing Guide',
+  };
+  const suffix = CATEGORY_TITLE_SUFFIX[category] || 'Technical Guide';
+
+  // meta description 去重：在模板摘要后附加随工具变化的事实性信息（平台/定价），
+  // 降低 ~4800 个长尾页面之间近乎完全重复的描述，规避 HCU 薄内容判定。
+  const platformText = (tool.platforms && tool.platforms.length > 0) ? tool.platforms.join(', ') : 'desktop';
+  const description = `${localized.excerpt} ${tool.name} (${pricingSummary(tool)}, ${platformText}).`.trim();
+
   return {
-    title: `${localized.title} — CAD Expert Troubleshooting`,
-    description: localized.excerpt,
-    keywords: [tool.name.toLowerCase(), `${tool.name.toLowerCase()} guide`, `${tool.name.toLowerCase()} tutorial`, localized.keyword],
+    title: `${localized.title} — ${suffix}`,
+    description,
+    keywords: [tool.name.toLowerCase(), `${tool.name.toLowerCase()} ${category}`, `${tool.name.toLowerCase()} guide`, localized.keyword],
     alternates: {
       canonical: `https://cadguide.tools/guides/${slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      url: `https://cadguide.tools/guides/${slug}`,
+      title: `${localized.title} — ${suffix}`,
+      description,
+      siteName: 'CADGuide.tools',
     },
     robots: { index: true, follow: true },
   };
@@ -3821,8 +3852,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       '@id': `https://cadguide.tools/guides/${slug}`,
     },
     'author': {
-      '@type': 'Person',
-      'name': 'Will P. (BIM Architect)',
+      '@type': 'Organization',
+      'name': 'CADGuide Tools Editorial Team',
+      'url': 'https://cadguide.tools',
     },
     'publisher': {
       '@type': 'Organization',
@@ -3832,8 +3864,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         'url': 'https://cadguide.tools/icon.svg',
       },
     },
-    'datePublished': '2026-05-01',
-    'dateModified': new Date().toISOString().slice(0, 10),
+    'datePublished': GUIDE_CONTENT_PUBLISHED,
+    'dateModified': GUIDE_CONTENT_UPDATED,
     'about': {
       '@type': 'SoftwareApplication',
       'name': tool.name,
@@ -3884,7 +3916,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     'name': `Does this ${category} guide apply to the latest version of ${tool.name}?`,
     'acceptedAnswer': {
       '@type': 'Answer',
-      'text': `Yes. This technical directive covers ${tool.name} across all currently supported release versions, including the latest subscription and perpetual editions. The procedures described are verified against standard enterprise deployment configurations.`,
+      'text': `This guide targets ${tool.name} across currently supported release versions. The procedures describe standard enterprise deployment configurations; always confirm against your specific version and environment before applying.`,
     },
   });
 
@@ -3977,17 +4009,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="bg-white p-5 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className={cn("w-10 h-10 rounded-full text-white font-black text-xs flex items-center justify-center shadow-lg", meta ? `${meta.theme.buttonBg} shadow-${meta.theme.accentText.split('-')[1]}-200` : "bg-blue-600 shadow-blue-200")}>
-                    WP
+                    CG
                   </div>
                   <div>
-                    <span className="font-black text-slate-900 block text-sm">Will P. (BIM Architect)</span>
-                    <span className="text-[10px] text-slate-400 font-bold block uppercase tracking-wider">Enterprise Systems Lead</span>
+                    <span className="font-black text-slate-900 block text-sm">CADGuide Tools Editorial Team</span>
+                    <span className="text-[10px] text-slate-400 font-bold block uppercase tracking-wider">Editorial Team</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 text-xs text-slate-500 font-bold">
                   <div>Read Time: <span className="text-slate-900 font-black">7 min</span></div>
                   <div>Published: <span className="text-slate-900 font-black">May 2026</span></div>
-                  <div>Status: <span className="text-emerald-600 font-black flex items-center gap-1">● Verified</span></div>
+                  <div>Status: <span className="text-slate-700 font-black flex items-center gap-1">Editorial Review</span></div>
                 </div>
               </div>
 

@@ -157,16 +157,11 @@ function aggregateRatingFor(tool: Tool) {
       };
     }
   }
-  return {
-    "@type": "AggregateRating",
-    ratingValue: tool.score?.toFixed(1) ?? "0",
-    bestRating: "5",
-    worstRating: "0",
-    // Schema.org requires a non-zero count. Until external_ratings are
-    // populated for a given tool, fall back to a conservative placeholder.
-    ratingCount: "24",
-    reviewCount: "24",
-  };
+  // No real external review data: do NOT fabricate a rating count. Emitting a
+  // placeholder reviewCount (e.g. 24) on tools that have no actual user reviews
+  // is exactly the kind of fake structured data that risks a Google manual
+  // action. Omit aggregateRating entirely until real external_ratings exist.
+  return undefined;
 }
 
 /** Schema.org SoftwareApplication payload. */
