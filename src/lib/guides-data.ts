@@ -394,8 +394,11 @@ export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
   }
 ];
 
+// 渲染 / 可视化类工具（应归入 creative-visual 档，而非电子/PCB 档）
+export const RENDER_VISUAL_SLUGS = ['v-ray', 'lumion', 'enscape', 'twinmotion', 'd5-render', 'corona-renderer', 'octane-render', 'keyshot', 'substance-painter', '3ds-max', 'zbrush', 'maya', 'cinema-4d', 'blender'];
+
 export interface ArchetypeMetadata {
-  id: 'drafting-aec' | 'mechanical-simulation' | 'creative-visual' | 'electronics-hardware';
+  id: 'drafting-aec' | 'mechanical-simulation' | 'creative-visual' | 'electronics-hardware' | 'specialized-design';
   name: string;
   theme: {
     accentText: string;
@@ -408,7 +411,7 @@ export interface ArchetypeMetadata {
   jargonMap: Record<string, string>;
 }
 
-export function getArchetypeMetadata(category_id: string): ArchetypeMetadata {
+export function getArchetypeMetadata(category_id: string, tool?: Tool): ArchetypeMetadata {
   if (category_id === 'c1' || category_id === 'c3') {
     return {
       id: 'drafting-aec',
@@ -465,7 +468,9 @@ export function getArchetypeMetadata(category_id: string): ArchetypeMetadata {
     };
   }
 
-  if (category_id === 'c4') {
+  // c4 看图/校审 与 c7 中的渲染/可视化类工具，统一归入创意可视化档（避免被错误套上电子/PCB 话术）
+  const isRenderVisual = !!tool && (RENDER_VISUAL_SLUGS.includes(tool.slug) || (tool.industries || []).some((i) => /render|visual|film|animation|game|interior/i.test(i)));
+  if (category_id === 'c4' || (category_id === 'c7' && isRenderVisual)) {
     return {
       id: 'creative-visual',
       name: 'Creative Visualization',
@@ -489,6 +494,36 @@ export function getArchetypeMetadata(category_id: string): ArchetypeMetadata {
         'mechanical production': 'real-time raytraced views',
         '3d printing': 'RTX GPU hardware allocation',
         'watertight': 'fully manifold photorealistic mesh'
+      }
+    };
+  }
+
+  // c7 中的非渲染垂直领域工具（服装/珠宝/牙科/切片器/船舶/木工/测绘等）：使用中性术语字典，
+  // 既不注入 AEC/BIM，也不注入 PCB/EDA 话术，避免"驴唇不对马嘴"的领域错配。
+  if (category_id === 'c7') {
+    return {
+      id: 'specialized-design',
+      name: 'Specialized Design',
+      theme: {
+        accentText: 'text-teal-700',
+        badgeBg: 'bg-teal-50 border-teal-200 text-teal-950',
+        buttonBg: 'bg-teal-600 hover:bg-teal-700 border-teal-600',
+        gradientHeader: 'from-teal-700 via-teal-800 to-slate-900',
+        cardBorder: 'hover:border-teal-300'
+      },
+      categoryOrder: ['troubleshooting', 'performance', 'procurement', 'deployment', 'standards', 'migration', 'printing', 'manufacturing'],
+      jargonMap: {
+        'large dwg files': 'large project files',
+        'free cad platforms': 'free design tools',
+        'cad software': 'design software',
+        'cad design': 'digital design',
+        'cad designs': 'design models',
+        'cad designs standards': 'design standards',
+        'nurbs modeling': '3D modeling',
+        'assembly loading': 'project loading',
+        'mechanical production': 'production output',
+        '3d printing': '3D output',
+        'watertight': 'high-quality'
       }
     };
   }
@@ -614,7 +649,7 @@ export function getLocalizedTitleAndExcerpt(
   }
 
   // 2. Perform advanced archetype-specific jargon replacements
-  const meta = getArchetypeMetadata(tool.category_id);
+  const meta = getArchetypeMetadata(tool.category_id, tool);
   for (const [key, val] of Object.entries(meta.jargonMap)) {
     const regex = getCachedRegex(key, 'gi');
     newTitle = newTitle.replace(regex, val);
@@ -645,6 +680,55 @@ export function isArticleCompatibleWithTool(articleTitle: string, articleCategor
   const is2D = categoryId === '2d-cad' || features.includes('drafting-detailing');
   const isRendering = features.includes('rendering') || industries.some((i: string) => /visual|render|creative/i.test(i));
   const is3D = features.some((f: string) => /parametric|surface|mesh|subdivision|direct/i.test(f)) || isMechanical || isBIM || isRendering;
+
+  // 0. 领域级类目熔断 (Domain-level category guard)
+  // 全站长尾 Guides 的"标准/打印/制造/迁移"母版内容是写死的 AEC 图层 / MCAD 钣金CNC /
+  // DWG 内核转换话术。对于完全不属于 AEC/机械主航道的垂直领域工具（服装、珠宝、牙科、
+  // 渲染器、切片器、看图器、EDA、测绘、舞美、船舶、木工等），这些母版会产出"驴唇不对马嘴"
+  // 的穿帮内容（如 KiCad 谈 BIM 建筑图层、exocad 谈建筑图层、Bluebeam 看图器谈 STEP/IGES
+  // CNC）。这里基于 category_id + industries + slug 做强类型领域判定，从源头屏蔽整类不相关母版。
+  const slug = tool.slug || '';
+  const indStr = industries.join(' ').toLowerCase();
+  const VIEWER_SLUGS = ['bluebeam-revu', 'navisworks', 'solibri', 'meshlab', 'dwg-trueview', 'solid-edge-viewer', 'glovius', 'cad-exchanger', 'cad-reader', 'recap-pro'];
+  const SLICER_SLUGS = ['ultimaker-cura', 'prusaslicer', 'bambu-studio', 'simplify3d', 'autodesk-netfabb', 'magics'];
+
+  const isViewer = VIEWER_SLUGS.includes(slug);
+  const isSlicer = SLICER_SLUGS.includes(slug);
+  const isEDA = categoryId === 'c6' || slug === 'pc-schematic' || /pcb|electronic|circuit|schematic|eda/i.test(indStr);
+  const isFashion = /fashion|apparel|textile|footwear|garment/i.test(indStr) || ['clo-3d', 'optitex', 'gerber-accumark', 'lectra-modaris', 'browzwear', 'marvelous-designer', 'shoemaster', 'icad3d-plus'].includes(slug);
+  const isJewelry = /jewel/i.test(indStr) || ['matrixgold', '3design', 'rhinogold', 'jewelcad-pro'].includes(slug);
+  const isDentalMedical = /dental|medical|prosthet|orthop/i.test(indStr);
+  const isSurvey = /survey|geospatial|land development|land dev|gis/i.test(indStr) || ['carlson-survey', 'trimble-business-center'].includes(slug);
+  const isEvent = /event|theatre|theater|concert|stage|lighting design/i.test(indStr);
+  const isShip = /ship|marine|naval/i.test(indStr);
+  const isWoodwork = /woodwork|furniture|cabinet/i.test(indStr);
+  const isPureRender = (RENDER_VISUAL_SLUGS.includes(slug) || (isRendering && !isMechanical && !isBIM && !is2D)) && !isSlicer;
+
+  // 各领域允许生成的类目白名单（未列出的类目一律熔断）。troubleshooting / performance /
+  // procurement 是相对通用的（崩溃、显卡调优、选型预算），其余高度领域绑定的母版按需放行。
+  let allowedCategories: string[] | null = null;
+  if (isViewer) {
+    // 纯看图/批注/校审工具：不做创作，屏蔽创作类（标准/打印/制造/迁移/部署）母版
+    allowedCategories = ['troubleshooting', 'performance', 'procurement'];
+  } else if (isEDA) {
+    // EDA 电子设计：屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金CNC制造、几何内核迁移
+    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
+  } else if (isFashion || isJewelry || isDentalMedical || isEvent || isShip || isWoodwork) {
+    // 服装/珠宝/牙科/舞美/船舶/木工：与 AEC 图层、MCAD 钣金CNC、DWG 内核迁移模板完全不相关
+    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
+  } else if (isSurvey) {
+    // 测绘/土木外业：屏蔽 MCAD 钣金CNC、几何内核缝合迁移
+    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment', 'standards', 'printing'];
+  } else if (isSlicer) {
+    // 3D 打印切片器：增材而非减材，屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金/CNC 制造、内核迁移
+    allowedCategories = ['troubleshooting', 'performance', 'procurement'];
+  } else if (isPureRender) {
+    // 纯渲染/可视化：屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金CNC 制造
+    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment', 'migration'];
+  }
+  if (allowedCategories && !allowedCategories.includes(categoryLower)) {
+    return false;
+  }
 
   // 1. 开源/免费软件熔断：不生成商业授权、采购、FLEXlm、EULA 审计相关文章
   if (isOpenSource) {
