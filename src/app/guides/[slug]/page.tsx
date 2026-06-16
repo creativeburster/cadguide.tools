@@ -342,7 +342,7 @@ export function renderTechnicalAutopsy(tool: typeof tools[number], title: string
             TECHNICAL AUTOPSY: FORCED SYSTEM DEVIATION DETECTED
           </h3>
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-mono">
-            This playbook contains structural registry override binaries and diagnostic recovery safe-mode configurations verified to bypass license lockouts, address dynamic heap allocation crashes, and wipe corrupted coordinate registries for {tool.name}.
+            This playbook contains structural registry override binaries and diagnostic recovery safe-mode configurations intended to address license lockouts, dynamic heap allocation crashes, and wipe corrupted coordinate registries for {tool.name}.
           </p>
         </div>
       </Card>
@@ -610,7 +610,7 @@ export function renderPerformanceBenchmark(tool: typeof tools[number], title: st
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               Thread Load Balancing & Viewport Latency Matrix
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Verified workstation core allocations and memory thrashing boundaries during complex CAD tasks.</p>
+            <p className="text-slate-400 text-xs font-semibold">Reference workstation core allocations and memory thrashing boundaries during complex CAD tasks.</p>
           </div>
         </div>
 
@@ -833,7 +833,7 @@ export function renderPrintingDirective(tool: typeof tools[number], title: strin
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               Line-Weight Pen (CTB) Calibration Table
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Verified pen weight scaling parameters matching ANSI, ISO, and AIA standard drawing plot style sheets.</p>
+            <p className="text-slate-400 text-xs font-semibold">Reference pen weight scaling parameters matching ANSI, ISO, and AIA standard drawing plot style sheets.</p>
           </div>
         </div>
 
@@ -1072,7 +1072,7 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
           </div>
           <div className="flex justify-between">
             <span className="text-slate-400">Crossover Audit:</span>
-            <span className="text-slate-900 font-black flex-1 text-right">100% Verified Runtimes</span>
+            <span className="text-slate-900 font-black flex-1 text-right">Documented Runtimes</span>
           </div>
         </Card>
       </div>
@@ -1087,7 +1087,7 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               AutoLISP API Compatibility & Bridging Matrix
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Verified API functions, executing speedups, and required code remediation directives during crossover.</p>
+            <p className="text-slate-400 text-xs font-semibold">Reference API functions, executing speedups, and required code remediation directives during crossover.</p>
           </div>
         </div>
 
@@ -1310,7 +1310,7 @@ export function renderStandardsDirective(tool: typeof tools[number], title: stri
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               BIM LOD Constraints & Geometric Boundary Specifications
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Verified standards, linetype mappings, line weights, or geometric repairing tolerances for {tool.name}.</p>
+            <p className="text-slate-400 text-xs font-semibold">Reference standards, linetype mappings, line weights, or geometric repairing tolerances for {tool.name}.</p>
           </div>
         </div>
 
@@ -1529,7 +1529,7 @@ export function renderManufacturingDirective(tool: typeof tools[number], title: 
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               CNC Slicing Tolerances & Feed-Rate Calibration Standards
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Verified G-code commands, stepover constraints, bend allowances, or chordal deviation tolerances for {tool.name}.</p>
+            <p className="text-slate-400 text-xs font-semibold">Reference G-code commands, stepover constraints, bend allowances, or chordal deviation tolerances for {tool.name}.</p>
           </div>
         </div>
 
