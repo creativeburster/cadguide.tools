@@ -3945,11 +3945,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     },
     'publisher': {
       '@type': 'Organization',
-      'name': 'CADGuide Tools',
+      'name': 'CADGuide Tools Editorial Team',
+      'url': 'https://cadguide.tools',
       'logo': {
         '@type': 'ImageObject',
         'url': 'https://cadguide.tools/icon.svg',
       },
+      'sameAs': [
+        'https://github.com/gstar-byte/cadguide.tools',
+        'https://x.com/cadguidetools'
+      ]
     },
     'datePublished': GUIDE_CONTENT_PUBLISHED,
     'dateModified': GUIDE_CONTENT_UPDATED,

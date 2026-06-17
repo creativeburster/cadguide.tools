@@ -164,9 +164,38 @@ function aggregateRatingFor(tool: Tool) {
   return undefined;
 }
 
+// Custom official association metadata for Gstarsoft/DWG FastView (EEAT booster)
+export const GSTARSOFT_PUBLISHER = {
+  "@type": "Organization",
+  "name": "Gstarsoft Co., Ltd.",
+  "url": "https://www.gstarcad.net/",
+  "sameAs": [
+    "https://en.wikipedia.org/wiki/Gstarsoft",
+    "https://twitter.com/gstarcad",
+    "https://github.com/gstar-byte"
+  ]
+};
+
+// Independent platform publisher with implicit Gstarsoft developer background sameAs links
+export const SITE_PUBLISHER = {
+  "@type": "Organization",
+  "name": "CADGuide Tools Editorial Team",
+  "url": SITE_URL,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${SITE_URL}/favicon.svg`
+  },
+  "sameAs": [
+    "https://github.com/gstar-byte/cadguide.tools",
+    "https://x.com/cadguidetools"
+  ]
+};
+
 /** Schema.org SoftwareApplication payload. */
 export function softwareApplicationLd(tool: Tool, category?: Category) {
   const categoryName = category?.name ?? "CAD";
+  const isGstarProduct = tool.slug === 'gstarcad' || tool.slug === 'dwg-fastview';
+
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -185,12 +214,12 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     dateModified: tool.last_updated || undefined,
     offers: offerForTool(tool),
     aggregateRating: aggregateRatingFor(tool),
-    publisher: tool.country
-      ? {
-          "@type": "Organization",
-          name: tool.country,
-        }
-      : undefined,
+    author: isGstarProduct ? GSTARSOFT_PUBLISHER : undefined,
+    brand: isGstarProduct ? {
+      "@type": "Brand",
+      "name": "Gstarsoft"
+    } : undefined,
+    publisher: SITE_PUBLISHER,
   };
 }
 
@@ -370,7 +399,7 @@ export function organizationLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: SITE_NAME,
+    name: "CADGuide Tools Editorial Team",
     url: SITE_URL,
     description:
       "Compare professional CAD, BIM, CAE/CAM, and EDA tools side by side. Unbiased reviews, real pricing, and deep technical specs.",
@@ -382,6 +411,8 @@ export function organizationLd() {
       availableLanguage: "English",
     },
     sameAs: [
+      'https://en.wikipedia.org/wiki/Gstarsoft',
+      'https://twitter.com/gstarcad',
       'https://github.com/gstar-byte/cadguide.tools',
       'https://x.com/cadguidetools',
     ],
