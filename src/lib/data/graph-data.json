@@ -21,7 +21,10 @@
     { "id": "registry-socket", "name": "Registry Socket Tuning", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Windows Registry optimization adjusting MaxUserPort to prevent socket depletion stutters." },
     { "id": "hatch-leak", "name": "Hatch Render Leak", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Severe viewport stutters and drawing memory leakage caused by ultra-dense hatch boundaries." },
     { "id": "sw-swap", "name": "System Swap Tuning", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Windows Pagefile and system commit charge tuning preventing SolidWorks out-of-memory crashes." },
-    { "id": "parasolid-knit", "name": "Parasolid Sheet Knitting", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Parasolid tolerance mismatch and knitting diagnostics resolving imported non-native geometry gaps." }
+    { "id": "parasolid-knit", "name": "Parasolid Sheet Knitting", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Parasolid tolerance mismatch and knitting diagnostics resolving imported non-native geometry gaps." },
+    { "id": "revit-coords", "name": "BIM Shared Coordinates", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Shared coordinates alignment and survey point offset resolution preventing model drift in federated BIM links." },
+    { "id": "revit-ifc-export", "name": "BIM IFC4 Export Schema", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "IFC4/IFC2x3 schema class mapping and property set (Pset) configuration ensuring lossless openBIM export." },
+    { "id": "revit-family-purge", "name": "BIM RFA Family Purge", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Revit family size optimization and parameter purge protocols resolving severe view redraw stutters." }
   ],
   "links": [
     { "source": "autocad", "target": "asm", "value": 2 },
@@ -52,6 +55,11 @@
     { "source": "solidworks", "target": "sw-swap", "value": 1.5 },
     { "source": "solidworks", "target": "parasolid-knit", "value": 2 },
     { "source": "parasolid", "target": "parasolid-knit", "value": 1.5 },
-    { "source": "step", "target": "parasolid-knit", "value": 1.2 }
+    { "source": "step", "target": "parasolid-knit", "value": 1.2 },
+    { "source": "revit", "target": "revit-coords", "value": 2 },
+    { "source": "revit", "target": "revit-ifc-export", "value": 2 },
+    { "source": "revit", "target": "revit-family-purge", "value": 2 },
+    { "source": "ifc", "target": "revit-ifc-export", "value": 1.5 },
+    { "source": "asm", "target": "revit-family-purge", "value": 1 }
   ]
 }

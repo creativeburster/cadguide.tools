@@ -630,6 +630,21 @@ export default function GuidesClient() {
       a: 'SolidWorks PDM cache lockups happen when local file versions drift from the database vault metadata, especially when working offline. To fix this: 1. Right-click the vault directory, choose \'Clear Local Cache\' to remove un-checked-out files. 2. If files remain locked, open PDM Administration, go to User Settings, and select \'Force Get Latest Version\' on drawing open. 3. Kill the PDM service processes (EdmServer.exe, ConisioAdmin.exe) via Task Manager and delete the hidden \'.lock\' metadata files in the local workspace directory.'
     },
     {
+      category: 'standards',
+      q: 'How to resolve model position drift and alignment shifts in linked Revit models?',
+      a: 'BIM link coordinate offset happens when separate discipline files use misaligned Project Base Points or Survey Points. To resolve: 1. Open the host architectural model. 2. Insert the linked structural/MEP model via Link Revit, selecting Auto - Origin to Internal Origin or Auto - Project Base Point. 3. Select the link instance in the viewport, look at the Properties palette, and click Acquire Coordinates. This pulls the shared coordinate system from the host to the link. 4. Pin both Survey Points and Project Base Points to lock coordinates against accidental manual drag.'
+    },
+    {
+      category: 'standards',
+      q: 'How to configure Revit IFC4 export settings to prevent missing parameter sets and class mapping errors?',
+      a: 'Revit category parameters often drop during standard IFC exports, and entities can map incorrectly. Fix this by: 1. Navigating to File > Export > Options > IFC Options to check the class mapping table (e.g., ensure Revit Columns map to IfcColumn and generic models map to IfcBuildingElementProxy only where appropriate). 2. Choose IFC4 Design Transfer View or IFC2x3 Coordination View 2.0. 3. Under export setup, check \'Export Revit property sets\' and \'Export user-defined property sets\'. 4. Check \'Export base quantities\' to generate net volume and surface area parameters for downstream schedule verification.'
+    },
+    {
+      category: 'performance',
+      q: 'How to optimize bloated Revit families and resolve view redraw lags in heavy project models?',
+      a: 'Importing heavy, un-optimized families (containing millions of polygons or deep multi-level nestings) will bloat the .rvt file and freeze viewports. To clean them: 1. Open the family file (.rfa), run the Purge Unused command at least three times. 2. Select complex 3D geometry and use Visibility/Graphics Overrides to hide detailed geometries in Coarse and Medium views, drawing lightweight 2D symbolic lines for general layouts instead. 3. Avoid deep nested family levels; flag necessary nested sub-families as Shared to reuse resources across instances. 4. Convert un-parameterized imported CAD meshes into native Revit solid extrusions.'
+    },
+    {
       category: 'licensing',
       q: 'What are the compliance and security risks of deploying free CAD platforms?',
       a: 'Free cloud-based CAD engines typically require all user document repositories to remain public under their free tier plans, posing extreme security risks for proprietary engineering designs. Furthermore, using educational licenses for commercial drafting constitutes a direct EULA violation, making companies highly vulnerable to vendor network telemetry audits and sudden legal watermark infections.'
@@ -1171,7 +1186,10 @@ export default function GuidesClient() {
                           'registry-socket': 'How to resolve AutoCAD viewport freezes caused by Windows Registry port socket leakage?',
                           'hatch-leak': 'How to prevent stutters and memory leakage caused by high-density hatch patterns?',
                           'sw-swap': 'How to prevent SolidWorks Out of Memory and system resource depletion crashes on large assemblies?',
-                          'parasolid-knit': 'How to repair imported STEP/IGES broken faces and sheet knitting tolerance failures in SolidWorks?'
+                          'parasolid-knit': 'How to repair imported STEP/IGES broken faces and sheet knitting tolerance failures in SolidWorks?',
+                          'revit-coords': 'How to resolve model position drift and alignment shifts in linked Revit models?',
+                          'revit-ifc-export': 'How to configure Revit IFC4 export settings to prevent missing parameter sets and class mapping errors?',
+                          'revit-family-purge': 'How to optimize bloated Revit families and resolve view redraw lags in heavy project models?'
                         };
                         const targetFaqQ = troubleFaqMap[selectedGraphNode.id];
                         if (targetFaqQ) {
