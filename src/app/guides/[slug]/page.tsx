@@ -2107,18 +2107,18 @@ export function renderKernelPage(k: KernelPageData) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              <span>/</span>
-              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
-              <span>/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-300 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-slate-300">HOME</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-300">GUIDES</Link>
+              <span className="text-slate-500">/</span>
               <span className="text-white font-black">KERNEL-PIPELINE</span>
-              <span>/</span>
-              <span className="text-violet-400 font-black">{k.sourceSlug.toUpperCase()}</span>
+              <span className="text-slate-500">/</span>
+              <span className="text-violet-300 font-black">{k.sourceSlug.toUpperCase()}</span>
               {!isSame && (
                 <>
-                  <span>/</span>
-                  <span className="text-slate-300 font-black">{k.targetSlug.toUpperCase()}</span>
+                  <span className="text-slate-500">/</span>
+                  <span className="text-white font-black">{k.targetSlug.toUpperCase()}</span>
                 </>
               )}
             </div>
@@ -2369,16 +2369,16 @@ export function renderLicensingShieldPage(shield: LicensingShieldPage) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              <span>/</span>
-              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
-              <span>/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-300 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-slate-300">HOME</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-300">GUIDES</Link>
+              <span className="text-slate-500">/</span>
               <span className="text-white font-black">SECURITY</span>
-              <span>/</span>
-              <span className="text-rose-400 font-black">LICENSING-SHIELD</span>
-              <span>/</span>
-              <span className="text-slate-300 font-black">{shield.toolSlug.toUpperCase()}</span>
+              <span className="text-slate-500">/</span>
+              <span className="text-rose-300 font-black">LICENSING-SHIELD</span>
+              <span className="text-slate-500">/</span>
+              <span className="text-white font-black">{shield.toolSlug.toUpperCase()}</span>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
