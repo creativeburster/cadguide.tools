@@ -16,6 +16,33 @@ const nextConfig: NextConfig = {
         source: '/guides/industry-high-frequency-pcb-design',
         destination: '/guides/industry-pcb-design',
         permanent: true,
+      },
+      // 3. Redirect haochen-cad to gstarcad (tool renaming)
+      {
+        source: '/tools/haochen-cad',
+        destination: '/tools/gstarcad',
+        permanent: true,
+      },
+      {
+        source: '/alternatives/haochen-cad',
+        destination: '/alternatives/gstarcad',
+        permanent: true,
+      },
+      // 4. Redirect root-level legacy pricing paths
+      {
+        source: '/forever',
+        destination: '/pricing/perpetual',
+        permanent: true,
+      },
+      {
+        source: '/3yr',
+        destination: '/pricing/subscription',
+        permanent: true,
+      },
+      {
+        source: '/mo',
+        destination: '/pricing/subscription',
+        permanent: true,
       }
     ];
   },
