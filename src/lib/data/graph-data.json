@@ -19,7 +19,9 @@
     { "id": "viewport-lag", "name": "Viewport OpenGL Lag", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "SolidWorks display stutter bug resolved by certified workstation graphics drivers or registry overrides." },
     { "id": "flexlm-15", "name": "FLEXlm Error -15", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Network license error -15,10 indicating the client cannot reach the license server manager port." },
     { "id": "registry-socket", "name": "Registry Socket Tuning", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Windows Registry optimization adjusting MaxUserPort to prevent socket depletion stutters." },
-    { "id": "hatch-leak", "name": "Hatch Render Leak", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Severe viewport stutters and drawing memory leakage caused by ultra-dense hatch boundaries." }
+    { "id": "hatch-leak", "name": "Hatch Render Leak", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Severe viewport stutters and drawing memory leakage caused by ultra-dense hatch boundaries." },
+    { "id": "sw-swap", "name": "System Swap Tuning", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Windows Pagefile and system commit charge tuning preventing SolidWorks out-of-memory crashes." },
+    { "id": "parasolid-knit", "name": "Parasolid Sheet Knitting", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Parasolid tolerance mismatch and knitting diagnostics resolving imported non-native geometry gaps." }
   ],
   "links": [
     { "source": "autocad", "target": "asm", "value": 2 },
@@ -46,6 +48,10 @@
     { "source": "autocad", "target": "registry-socket", "value": 1.5 },
     { "source": "autocad", "target": "hatch-leak", "value": 2 },
     { "source": "flexlm", "target": "flexlm-15", "value": 1.5 },
-    { "source": "dwg", "target": "hatch-leak", "value": 1.5 }
+    { "source": "dwg", "target": "hatch-leak", "value": 1.5 },
+    { "source": "solidworks", "target": "sw-swap", "value": 1.5 },
+    { "source": "solidworks", "target": "parasolid-knit", "value": 2 },
+    { "source": "parasolid", "target": "parasolid-knit", "value": 1.5 },
+    { "source": "step", "target": "parasolid-knit", "value": 1.2 }
   ]
 }

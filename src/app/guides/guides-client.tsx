@@ -606,6 +606,16 @@ export default function GuidesClient() {
     },
     {
       category: 'performance',
+      q: 'How to prevent SolidWorks Out of Memory and system resource depletion crashes on large assemblies?',
+      a: 'When working with large assemblies, SolidWorks can exhaust Windows commit charge limits even with high physical RAM. Resolve this by: 1. Navigating to Windows System Properties > Performance Settings > Advanced > Virtual Memory. 2. Uncheck \'Automatically manage paging file size for all drives\'. 3. Manually configure a custom Pagefile (Swap) size set to 1.5x to 2x your physical RAM (e.g., Min 49152MB, Max 98304MB for a 64GB RAM workstation) on your fastest NVMe SSD. Restart Windows to prevent GDI leak and memory allocation lockups.'
+    },
+    {
+      category: 'standards',
+      q: 'How to repair imported STEP/IGES broken faces and sheet knitting tolerance failures in SolidWorks?',
+      a: 'Imported non-native files often contain sheet gaps due to mathematical modeler tolerance drift. To form a solid body: 1. Right-click the imported body in the FeatureManager Tree and launch Import Diagnostics to automatically detect gap boundaries and overlap faces. 2. Adjust the Heal Tolerance slider or manually run the Knit Surface command. 3. Check \'Try to form solid\' and set a custom knitting tolerance of 0.025mm to 0.1mm (do not exceed 0.25mm to avoid geometry distortion). 4. If knitting fails, delete the problematic faces and use Boundary Surface or Filled Surface to manually patch the open loop before re-knitting.'
+    },
+    {
+      category: 'performance',
       q: 'How to eliminate SolidWorks assembly viewport stutter and graphics lag?',
       a: 'SolidWorks viewport lag is usually caused by uncertified graphics drivers or suboptimal performance options. Resolve it by: 1. Navigating to System Options > Performance, and check \'Use Software OpenGL\' to test if the graphics card driver is the bottleneck. 2. Ensure you are using certified ISV Workstation graphics drivers (NVIDIA RTX/Quadro or AMD Radeon Pro) instead of mainstream gaming drivers. 3. Open NVIDIA Control Panel, go to Manage 3D Settings, locate SolidWorks, and set Threaded Optimization to OFF and Power Management to Prefer Maximum Performance.'
     },
@@ -1159,7 +1169,9 @@ export default function GuidesClient() {
                           'viewport-lag': 'How to eliminate SolidWorks assembly viewport stutter and graphics lag?',
                           'flexlm-15': 'How to diagnose and resolve FLEXlm Network License Error -15,10?',
                           'registry-socket': 'How to resolve AutoCAD viewport freezes caused by Windows Registry port socket leakage?',
-                          'hatch-leak': 'How to prevent stutters and memory leakage caused by high-density hatch patterns?'
+                          'hatch-leak': 'How to prevent stutters and memory leakage caused by high-density hatch patterns?',
+                          'sw-swap': 'How to prevent SolidWorks Out of Memory and system resource depletion crashes on large assemblies?',
+                          'parasolid-knit': 'How to repair imported STEP/IGES broken faces and sheet knitting tolerance failures in SolidWorks?'
                         };
                         const targetFaqQ = troubleFaqMap[selectedGraphNode.id];
                         if (targetFaqQ) {
