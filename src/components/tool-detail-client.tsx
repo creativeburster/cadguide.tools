@@ -1324,49 +1324,6 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                 </div>
               )}
 
-              {/* Metropolitan Interlink: Related Expert Guides Card */}
-              {(() => {
-                const compatibleGuides = ARTICLES_LIST
-                  .filter(g => isArticleCompatibleWithTool(g.title, g.category, tool))
-                  .slice(0, 3)
-                  .map(g => {
-                    const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
-                    return {
-                      ...g,
-                      title: loc.title,
-                      slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
-                    };
-                  });
-
-                if (compatibleGuides.length === 0) return null;
-
-                return (
-                  <div className="bg-white border border-slate-200 p-6 md:p-8 rounded-[24px] md:rounded-[40px] shadow-sm space-y-4">
-                    <div className="flex items-center gap-2 border-b border-slate-50 pb-3">
-                      <FileText className="w-4 h-4 text-blue-600 animate-pulse" />
-                      <h4 className="font-black text-slate-900 text-sm uppercase tracking-wider text-[11px] text-slate-400">
-                        Related Expert Guides
-                      </h4>
-                    </div>
-                    <div className="space-y-3">
-                      {compatibleGuides.map((g) => (
-                        <Link
-                          key={g.slug}
-                          href={`/guides/${g.slug}`}
-                          className="block p-3 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50/20 transition-all group"
-                        >
-                          <span className="text-[8px] font-mono font-black text-blue-600 uppercase tracking-widest block mb-1">
-                            {g.category}
-                          </span>
-                          <h5 className="font-black text-slate-800 text-xs line-clamp-2 leading-snug group-hover:text-blue-600 transition-colors">
-                            {g.title}
-                          </h5>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })()}
 
               {/* AI Matchmaker Sidebar Card (Restored) */}
               <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-6 md:p-10 rounded-[24px] md:rounded-[48px] text-white relative overflow-hidden shadow-xl shadow-blue-200 group">
