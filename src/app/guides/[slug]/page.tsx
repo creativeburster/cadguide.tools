@@ -2107,20 +2107,33 @@ export function renderKernelPage(k: KernelPageData) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
-              <span className="text-white/30">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
-              <span className="text-white/30">/</span>
-              <span className="text-white font-black">KERNEL-PIPELINE</span>
-              <span className="text-white/30">/</span>
-              <span className="text-violet-300 font-black">{k.sourceSlug.toUpperCase()}</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-200 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-slate-200 hover:underline">HOME</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-200 hover:underline">GUIDES</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-200 hover:underline">KERNEL-PIPELINE</Link>
+              <span className="text-slate-500">/</span>
+              <Link href={`/tools/${k.sourceSlug}`} className="hover:text-white transition-colors text-violet-300 font-black hover:underline">{k.sourceSlug.toUpperCase()}</Link>
               {!isSame && (
                 <>
-                  <span className="text-white/30">/</span>
-                  <span className="text-white font-black">{k.targetSlug.toUpperCase()}</span>
+                  <span className="text-slate-500">/</span>
+                  <Link href={`/tools/${k.targetSlug}`} className="hover:text-white transition-colors text-white font-black hover:underline">{k.targetSlug.toUpperCase()}</Link>
                 </>
               )}
+            </div>
+
+            {/* Quick Micro-Gateway Navigation Bar */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none text-[10px] font-mono font-bold tracking-wider pt-2 border-t border-white/5">
+              <span className="text-white/40 uppercase text-[9px] shrink-0 mr-1">Quick Directories:</span>
+              <Link href="/guides/kernel-solidworks-siemens-nx" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">3D Kernel Pipelines</Link>
+              <Link href="/guides/standards-iso-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Drafting Standards</Link>
+              <Link href="/guides/shield-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">License Audit Shield</Link>
+              <Link href="/guides/industry-pcb-design" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Enterprise TCO Matrix</Link>
+              <Link href="/guides/standards-aia-revit" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">AIA Revit Layering</Link>
+              <Link href="/guides/shield-solidworks" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">SW Telemetry Shield</Link>
+              <Link href="/guides/kernel-rhino-3d-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Rhino to ACIS DWG</Link>
+              <Link href="/guides/industry-hvac-mep" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">HVAC TCO Matrix</Link>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -2369,16 +2382,29 @@ export function renderLicensingShieldPage(shield: LicensingShieldPage) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
-              <span className="text-white/30">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
-              <span className="text-white/30">/</span>
-              <span className="text-white font-black">SECURITY</span>
-              <span className="text-white/30">/</span>
-              <span className="text-rose-300 font-black">LICENSING-SHIELD</span>
-              <span className="text-white/30">/</span>
-              <span className="text-white font-black">{shield.toolSlug.toUpperCase()}</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-200 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-slate-200 hover:underline">HOME</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-200 hover:underline">GUIDES</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-200 hover:underline">SECURITY</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-rose-300 font-black hover:underline">LICENSING-SHIELD</Link>
+              <span className="text-slate-500">/</span>
+              <Link href={`/tools/${shield.toolSlug}`} className="hover:text-white transition-colors text-white font-black hover:underline">{shield.toolSlug.toUpperCase()}</Link>
+            </div>
+
+            {/* Quick Micro-Gateway Navigation Bar */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none text-[10px] font-mono font-bold tracking-wider pt-2 border-t border-white/5">
+              <span className="text-white/40 uppercase text-[9px] shrink-0 mr-1">Quick Directories:</span>
+              <Link href="/guides/kernel-solidworks-siemens-nx" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">3D Kernel Pipelines</Link>
+              <Link href="/guides/standards-iso-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Drafting Standards</Link>
+              <Link href="/guides/shield-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">License Audit Shield</Link>
+              <Link href="/guides/industry-pcb-design" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Enterprise TCO Matrix</Link>
+              <Link href="/guides/standards-aia-revit" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">AIA Revit Layering</Link>
+              <Link href="/guides/shield-solidworks" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">SW Telemetry Shield</Link>
+              <Link href="/guides/kernel-rhino-3d-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Rhino to ACIS DWG</Link>
+              <Link href="/guides/industry-hvac-mep" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">HVAC TCO Matrix</Link>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -2642,16 +2668,29 @@ export function renderStandardsPage(std: DraftingStandardPage) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
-              <span className="text-white/30">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
-              <span className="text-white/30">/</span>
-              <span className="text-white font-black">STANDARDS</span>
-              <span className="text-white/30">/</span>
-              <span className="text-emerald-300 font-black">{std.standardId.toUpperCase()}</span>
-              <span className="text-white/30">/</span>
-              <span className="text-white font-black">{std.toolSlug.toUpperCase()}</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-200 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-slate-200 hover:underline">HOME</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-200 hover:underline">GUIDES</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides/standards" className="hover:text-white transition-colors text-slate-200 hover:underline">STANDARDS</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides/standards" className="hover:text-white transition-colors text-emerald-300 font-black hover:underline">{std.standardId.toUpperCase()}</Link>
+              <span className="text-slate-500">/</span>
+              <Link href={`/tools/${std.toolSlug}`} className="hover:text-white transition-colors text-white font-black hover:underline">{std.toolSlug.toUpperCase()}</Link>
+            </div>
+
+            {/* Quick Micro-Gateway Navigation Bar */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none text-[10px] font-mono font-bold tracking-wider pt-2 border-t border-white/5">
+              <span className="text-white/40 uppercase text-[9px] shrink-0 mr-1">Quick Directories:</span>
+              <Link href="/guides/kernel-solidworks-siemens-nx" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">3D Kernel Pipelines</Link>
+              <Link href="/guides/standards-iso-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Drafting Standards</Link>
+              <Link href="/guides/shield-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">License Audit Shield</Link>
+              <Link href="/guides/industry-pcb-design" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Enterprise TCO Matrix</Link>
+              <Link href="/guides/standards-aia-revit" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">AIA Revit Layering</Link>
+              <Link href="/guides/shield-solidworks" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">SW Telemetry Shield</Link>
+              <Link href="/guides/kernel-rhino-3d-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Rhino to ACIS DWG</Link>
+              <Link href="/guides/industry-hvac-mep" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">HVAC TCO Matrix</Link>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -2882,14 +2921,27 @@ export function renderProcurementPage(pro: ProcurementIndustry) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
-              <span className="text-white/30">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
-              <span className="text-white/30">/</span>
-              <span className="text-white font-black">PROCUREMENT</span>
-              <span className="text-white/30">/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-200 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-slate-200 hover:underline">HOME</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-200 hover:underline">GUIDES</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides/procurement" className="hover:text-white transition-colors text-slate-200 hover:underline">PROCUREMENT</Link>
+              <span className="text-slate-500">/</span>
               <span className="text-amber-300 font-black">{pro.slug.toUpperCase()}</span>
+            </div>
+
+            {/* Quick Micro-Gateway Navigation Bar */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none text-[10px] font-mono font-bold tracking-wider pt-2 border-t border-white/5">
+              <span className="text-white/40 uppercase text-[9px] shrink-0 mr-1">Quick Directories:</span>
+              <Link href="/guides/kernel-solidworks-siemens-nx" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">3D Kernel Pipelines</Link>
+              <Link href="/guides/standards-iso-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Drafting Standards</Link>
+              <Link href="/guides/shield-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">License Audit Shield</Link>
+              <Link href="/guides/industry-pcb-design" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Enterprise TCO Matrix</Link>
+              <Link href="/guides/standards-aia-revit" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">AIA Revit Layering</Link>
+              <Link href="/guides/shield-solidworks" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">SW Telemetry Shield</Link>
+              <Link href="/guides/kernel-rhino-3d-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Rhino to ACIS DWG</Link>
+              <Link href="/guides/industry-hvac-mep" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">HVAC TCO Matrix</Link>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -3408,12 +3460,25 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
-              <span className="text-white/30">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
-              <span className="text-white/30">/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-200 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-slate-200 hover:underline">HOME</Link>
+              <span className="text-slate-500">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-slate-200 hover:underline">GUIDES</Link>
+              <span className="text-slate-500">/</span>
               <span className="text-white font-black">{category.toUpperCase()}</span>
+            </div>
+
+            {/* Quick Micro-Gateway Navigation Bar */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none text-[10px] font-mono font-bold tracking-wider pt-2 border-t border-white/5">
+              <span className="text-white/40 uppercase text-[9px] shrink-0 mr-1">Quick Directories:</span>
+              <Link href="/guides/kernel-solidworks-siemens-nx" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">3D Kernel Pipelines</Link>
+              <Link href="/guides/standards-iso-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Drafting Standards</Link>
+              <Link href="/guides/shield-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">License Audit Shield</Link>
+              <Link href="/guides/industry-pcb-design" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Enterprise TCO Matrix</Link>
+              <Link href="/guides/standards-aia-revit" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">AIA Revit Layering</Link>
+              <Link href="/guides/shield-solidworks" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">SW Telemetry Shield</Link>
+              <Link href="/guides/kernel-rhino-3d-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Rhino to ACIS DWG</Link>
+              <Link href="/guides/industry-hvac-mep" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">HVAC TCO Matrix</Link>
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pt-4">
@@ -4042,12 +4107,27 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         {/* Dynamic Header */}
         <div className="bg-white border-b py-6 w-full">
           <div className="max-w-[1360px] mx-auto px-4">
-            <div className="flex items-center gap-2 text-xs font-bold text-slate-400 mb-4">
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-500 mb-4">
               <Link href="/" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Home</Link>
               <span>/</span>
               <Link href="/guides" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Guides</Link>
               <span>/</span>
-              <span className="text-slate-900 truncate">{tool.name} Technical Guide</span>
+              <span className="text-slate-900 truncate">
+                <Link href={`/tools/${tool.slug}`} className={cn("hover:underline transition-colors font-bold", meta ? meta.theme.accentText : "text-blue-600")}>{tool.name}</Link> Technical Guide
+              </span>
+            </div>
+
+            {/* Quick Micro-Gateway Navigation Bar */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none text-[10px] font-mono font-bold tracking-wider pt-2 border-t border-slate-100">
+              <span className="text-slate-400 uppercase text-[9px] shrink-0 mr-1">Quick Directories:</span>
+              <Link href="/guides/kernel-solidworks-siemens-nx" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">3D Kernel Pipelines</Link>
+              <Link href="/guides/standards-iso-autocad" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">Drafting Standards</Link>
+              <Link href="/guides/shield-autocad" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">License Audit Shield</Link>
+              <Link href="/guides/industry-pcb-design" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">Enterprise TCO Matrix</Link>
+              <Link href="/guides/standards-aia-revit" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">AIA Revit Layering</Link>
+              <Link href="/guides/shield-solidworks" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">SW Telemetry Shield</Link>
+              <Link href="/guides/kernel-rhino-3d-autocad" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">Rhino to ACIS DWG</Link>
+              <Link href="/guides/industry-hvac-mep" className="px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200/60 hover:bg-slate-100 text-slate-600 hover:text-slate-900 shrink-0 transition-all">HVAC TCO Matrix</Link>
             </div>
 
             <Link 
