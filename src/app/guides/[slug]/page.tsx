@@ -2107,17 +2107,17 @@ export function renderKernelPage(k: KernelPageData) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-300 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors text-slate-300">HOME</Link>
-              <span className="text-slate-500">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors text-slate-300">GUIDES</Link>
-              <span className="text-slate-500">/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
+              <span className="text-white/30">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
+              <span className="text-white/30">/</span>
               <span className="text-white font-black">KERNEL-PIPELINE</span>
-              <span className="text-slate-500">/</span>
+              <span className="text-white/30">/</span>
               <span className="text-violet-300 font-black">{k.sourceSlug.toUpperCase()}</span>
               {!isSame && (
                 <>
-                  <span className="text-slate-500">/</span>
+                  <span className="text-white/30">/</span>
                   <span className="text-white font-black">{k.targetSlug.toUpperCase()}</span>
                 </>
               )}
@@ -2369,15 +2369,15 @@ export function renderLicensingShieldPage(shield: LicensingShieldPage) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-300 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors text-slate-300">HOME</Link>
-              <span className="text-slate-500">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors text-slate-300">GUIDES</Link>
-              <span className="text-slate-500">/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
+              <span className="text-white/30">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
+              <span className="text-white/30">/</span>
               <span className="text-white font-black">SECURITY</span>
-              <span className="text-slate-500">/</span>
+              <span className="text-white/30">/</span>
               <span className="text-rose-300 font-black">LICENSING-SHIELD</span>
-              <span className="text-slate-500">/</span>
+              <span className="text-white/30">/</span>
               <span className="text-white font-black">{shield.toolSlug.toUpperCase()}</span>
             </div>
 
@@ -2642,16 +2642,16 @@ export function renderStandardsPage(std: DraftingStandardPage) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              <span>/</span>
-              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
-              <span>/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
+              <span className="text-white/30">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
+              <span className="text-white/30">/</span>
               <span className="text-white font-black">STANDARDS</span>
-              <span>/</span>
-              <span className="text-emerald-400 font-black">{std.standardId.toUpperCase()}</span>
-              <span>/</span>
-              <span className="text-slate-300 font-black">{std.toolSlug.toUpperCase()}</span>
+              <span className="text-white/30">/</span>
+              <span className="text-emerald-300 font-black">{std.standardId.toUpperCase()}</span>
+              <span className="text-white/30">/</span>
+              <span className="text-white font-black">{std.toolSlug.toUpperCase()}</span>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -2882,14 +2882,14 @@ export function renderProcurementPage(pro: ProcurementIndustry) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              <span>/</span>
-              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
-              <span>/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
+              <span className="text-white/30">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
+              <span className="text-white/30">/</span>
               <span className="text-white font-black">PROCUREMENT</span>
-              <span>/</span>
-              <span className="text-amber-400 font-black">{pro.slug.toUpperCase()}</span>
+              <span className="text-white/30">/</span>
+              <span className="text-amber-300 font-black">{pro.slug.toUpperCase()}</span>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -3408,11 +3408,11 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-red-300 tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              <span>/</span>
-              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
-              <span>/</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white/60 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors text-white/60">HOME</Link>
+              <span className="text-white/30">/</span>
+              <Link href="/guides" className="hover:text-white transition-colors text-white/60">GUIDES</Link>
+              <span className="text-white/30">/</span>
               <span className="text-white font-black">{category.toUpperCase()}</span>
             </div>
 
