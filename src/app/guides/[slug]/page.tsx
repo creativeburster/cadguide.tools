@@ -3211,7 +3211,7 @@ export async function generateMetadata(
       alternates: {
         canonical: `https://cadguide.tools/guides/${slug}`,
       },
-      robots: { index: true, follow: true },
+      robots: { index: false, follow: true },
     };
   }
 
@@ -3226,7 +3226,7 @@ export async function generateMetadata(
         alternates: {
           canonical: `https://cadguide.tools/guides/${slug}`,
         },
-        robots: { index: true, follow: true },
+        robots: { index: false, follow: true },
       };
     } else {
       return {
@@ -3252,7 +3252,7 @@ export async function generateMetadata(
           alternates: {
             canonical: `https://cadguide.tools/guides/${slug}`,
           },
-          robots: { index: true, follow: true },
+          robots: { index: false, follow: true },
         };
       }
     }
@@ -3274,7 +3274,7 @@ export async function generateMetadata(
         alternates: {
           canonical: `https://cadguide.tools/guides/${slug}`,
         },
-        robots: { index: true, follow: true },
+        robots: { index: false, follow: true },
       };
     }
     return {
@@ -3299,7 +3299,7 @@ export async function generateMetadata(
           alternates: {
             canonical: `https://cadguide.tools/guides/${slug}`,
           },
-          robots: { index: true, follow: true },
+          robots: { index: false, follow: true },
         };
       }
     }
@@ -3348,7 +3348,7 @@ export async function generateMetadata(
       description,
       siteName: 'CADGuide.tools',
     },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },
   };
 }
 

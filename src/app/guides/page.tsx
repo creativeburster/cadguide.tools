@@ -55,11 +55,14 @@ export async function generateMetadata({
     }
   }
 
-  return pageMetadata({
-    title,
-    description,
-    path: '/guides',
-  });
+  return {
+    ...pageMetadata({
+      title,
+      description,
+      path: '/guides',
+    }),
+    robots: { index: false, follow: true },
+  };
 }
 
 export default function Page() {
