@@ -3939,9 +3939,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       '@id': `https://cadguide.tools/guides/${slug}`,
     },
     'author': {
-      '@type': 'Organization',
-      'name': 'CADGuide Tools Editorial Team',
-      'url': 'https://cadguide.tools',
+      '@type': 'Person',
+      'name': 'Will P.',
+      'jobTitle': 'BIM Architect & CAD Consultant',
+      'url': 'https://cadguide.tools/about',
     },
     'publisher': {
       '@type': 'Organization',
@@ -3952,7 +3953,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       },
     },
     'datePublished': GUIDE_CONTENT_PUBLISHED,
-    'dateModified': GUIDE_CONTENT_UPDATED,
+    'dateModified': new Date().toISOString().split('T')[0], // Automatically binds to the static compile build date for maximum freshness signals
     'about': {
       '@type': 'SoftwareApplication',
       'name': tool.name,
