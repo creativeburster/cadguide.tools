@@ -24,6 +24,8 @@ export const dynamicParams = true;
 const GUIDE_CONTENT_PUBLISHED = '2026-05-01';
 const GUIDE_CONTENT_UPDATED = '2026-06-15';
 
+const homeHref = process.env.NODE_ENV === 'development' ? '/guides' : '/';
+
 // 故障排查母版此前对所有工具写死 Autodesk 专属的授权栈（ADSKFLEX_LICENSE_FILE /
 // adsklicensing / AdskLicensingService）和 AutoCAD 专属的图纸恢复文件（.sv$ / .ac$）。
 // 对非 Autodesk / 非 DWG 工具这是穿帮。下面按品牌/家族给出正确的标识符。
@@ -2108,7 +2110,7 @@ export function renderKernelPage(k: KernelPageData) {
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
+              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
               <span className="!text-slate-400">/</span>
               <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
               <span className="!text-slate-400">/</span>
@@ -2370,7 +2372,7 @@ export function renderLicensingShieldPage(shield: LicensingShieldPage) {
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
+              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
               <span className="!text-slate-400">/</span>
               <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
               <span className="!text-slate-400">/</span>
@@ -2643,7 +2645,7 @@ export function renderStandardsPage(std: DraftingStandardPage) {
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
+              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
               <span className="!text-slate-400">/</span>
               <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
               <span className="!text-slate-400">/</span>
@@ -2883,7 +2885,7 @@ export function renderProcurementPage(pro: ProcurementIndustry) {
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
+              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
               <span className="!text-slate-400">/</span>
               <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
               <span className="!text-slate-400">/</span>
@@ -3409,7 +3411,7 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href="/" className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
+              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
               <span className="!text-slate-400">/</span>
               <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
               <span className="!text-slate-400">/</span>
@@ -3731,6 +3733,33 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
 
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className="min-h-screen bg-[#0f172a] text-slate-200 flex flex-col items-center justify-center p-6 relative overflow-hidden" style={{
+        backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 0)',
+        backgroundSize: '24px 24px'
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#020617] via-[#1e1b4b] to-[#0f172a] opacity-80 z-0 pointer-events-none" />
+        <div className="relative z-10 max-w-md w-full bg-slate-900/60 border border-slate-800/80 rounded-3xl p-8 text-center backdrop-blur-md shadow-2xl">
+          <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mx-auto mb-6 animate-pulse">
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h1 className="text-xl font-black text-white tracking-tight">Sandbox Active</h1>
+          <p className="text-xs text-slate-400 mt-3 leading-relaxed font-medium">
+            During the 30-Day Knowledge Graph development phase, all historical guide render pipelines are offline locally to prevent duplication HCU penalties.
+          </p>
+          <div className="mt-6 pt-6 border-t border-slate-800">
+            <a href="/guides" className="inline-flex items-center justify-center px-5 py-2.5 bg-blue-600 hover:bg-blue-750 text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-blue-950/50">
+              Return to Knowledge Graph
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // 1. Check if slug is a category landing page
   const catInfo = CATEGORY_SECTIONS.find(s => s.category === slug);
@@ -4056,7 +4085,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <div className="bg-white border-b py-6 w-full">
           <div className="max-w-[1360px] mx-auto px-4">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-500 mb-4">
-              <Link href="/" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Home</Link>
+              <Link href={homeHref} className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Home</Link>
               <span>/</span>
               <Link href="/guides" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Guides</Link>
               <span>/</span>

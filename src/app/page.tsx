@@ -241,7 +241,7 @@ function HomeBody() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
             <Link
-              href="/guides/kernel-solidworks-siemens-nx"
+              href={process.env.NODE_ENV === 'development' ? "/guides" : "/guides/kernel-solidworks-siemens-nx"}
               className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-violet-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-violet-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
@@ -261,7 +261,7 @@ function HomeBody() {
 
             {/* Card 2 */}
             <Link
-              href="/guides/standards-iso-autocad"
+              href={process.env.NODE_ENV === 'development' ? "/guides" : "/guides/standards-iso-autocad"}
               className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-emerald-350 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
@@ -281,7 +281,7 @@ function HomeBody() {
 
             {/* Card 3 */}
             <Link
-              href="/guides/shield-autocad"
+              href={process.env.NODE_ENV === 'development' ? "/guides" : "/guides/shield-autocad"}
               className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-rose-350 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>
@@ -301,7 +301,7 @@ function HomeBody() {
 
             {/* Card 4 */}
             <Link
-              href="/guides/industry-pcb-design"
+              href={process.env.NODE_ENV === 'development' ? "/guides" : "/guides/industry-pcb-design"}
               className="group relative block p-6 rounded-3xl border border-slate-100 bg-white hover:border-blue-350 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:scale-150 transition-transform duration-500"></div>

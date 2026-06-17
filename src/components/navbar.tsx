@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -28,26 +30,36 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm xl:text-base font-semibold text-slate-600">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="hover:text-blue-600 transition-colors"
-                onClick={(e) => {
-                  if (
-                    link.href === '/matchmaker' &&
-                    typeof window !== 'undefined' &&
-                    window.location.pathname === '/matchmaker'
-                  ) {
-                    e.preventDefault();
-                    window.location.reload();
-                  }
-                }}
-              >
-                {link.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm xl:text-base font-semibold">
+            {navLinks.map((link) => {
+              const isActive = link.href === '/' 
+                ? pathname === '/' 
+                : pathname === link.href || pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "transition-colors font-bold",
+                    isActive 
+                      ? "text-blue-600 font-extrabold" 
+                      : "text-slate-650 hover:text-blue-600"
+                  )}
+                  onClick={(e) => {
+                    if (
+                      link.href === '/matchmaker' &&
+                      typeof window !== 'undefined' &&
+                      window.location.pathname === '/matchmaker'
+                    ) {
+                      e.preventDefault();
+                      window.location.reload();
+                    }
+                  }}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             <Button asChild variant="outline" size="sm" className="rounded-xl px-2 lg:px-3 border-blue-200 text-blue-600 hover:bg-blue-50 font-bold text-xs lg:text-sm whitespace-nowrap">
               <Link href="/sponsor">Sponsor Us</Link>
             </Button>
@@ -77,26 +89,37 @@ export function Navbar() {
       )}>
         <nav className="flex flex-col p-4 bg-white">
           <div className="flex flex-col">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
-                href={link.href} 
-                onClick={(e) => {
-                  setIsMobileMenuOpen(false);
-                  if (
-                    link.href === '/matchmaker' &&
-                    typeof window !== 'undefined' &&
-                    window.location.pathname === '/matchmaker'
-                  ) {
-                    e.preventDefault();
-                    window.location.reload();
-                  }
-                }}
-                className="px-4 py-3 text-lg font-bold text-slate-900 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-all"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href === '/' 
+                ? pathname === '/' 
+                : pathname === link.href || pathname.startsWith(link.href);
+              return (
+                <Link 
+                  key={link.href} 
+                  href={link.href} 
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    if (
+                      link.href === '/matchmaker' &&
+                      typeof window !== 'undefined' &&
+                      window.location.pathname === '/matchmaker'
+                    ) {
+                      e.preventDefault();
+                      window.location.reload();
+                    }
+                  }}
+                  className={cn(
+                    "px-4 py-3 text-lg font-bold rounded-xl transition-all flex items-center justify-between",
+                    isActive
+                      ? "bg-blue-50 text-blue-600 font-extrabold"
+                      : "text-slate-900 hover:bg-slate-50 hover:text-blue-600"
+                  )}
+                >
+                  <span>{link.name}</span>
+                  {isActive && <span className="w-1.5 h-1.5 bg-blue-600 rounded-full" />}
+                </Link>
+              );
+            })}
           </div>
           <div className="mt-2 p-2">
             <Button asChild size="lg" className="w-full rounded-xl bg-blue-600 text-white font-bold h-12 text-base">

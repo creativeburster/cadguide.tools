@@ -476,6 +476,9 @@ function renderAlternativesCTA(tool: Tool) {
 }
 
 function renderAlternativesGuides(tool: Tool, style: AlternativeStyle) {
+  if (process.env.NODE_ENV === 'development') {
+    return null;
+  }
   const compatibleGuides = ARTICLES_LIST
     .filter(g => isArticleCompatibleWithTool(g.title, g.category, tool))
     .slice(0, 3);
@@ -534,8 +537,8 @@ function renderRelatedLinks(tool: Tool) {
     'bricscad', 'draftsight', 'gstarcad', 'zwcad'
   ];
 
-  const hasShield = licensingTools.includes(tool.slug);
-  const hasStandards = draftingTools.includes(tool.slug);
+  const hasShield = process.env.NODE_ENV !== 'development' && licensingTools.includes(tool.slug);
+  const hasStandards = process.env.NODE_ENV !== 'development' && draftingTools.includes(tool.slug);
 
   // Find a specific PK pair involving this tool to make this block highly relevant
   const matchedPair = comparisonPairs().find(
