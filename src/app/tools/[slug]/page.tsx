@@ -25,7 +25,11 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
   const tool = tools.find((t) => t.slug === slug);
-  if (!tool) return {};
+  if (!tool) {
+    return {
+      robots: { index: false, follow: false }
+    };
+  }
 
   const category = categories.find((c) => c.id === tool.category_id);
   const title = toolTitle(tool, category);

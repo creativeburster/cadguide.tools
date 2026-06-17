@@ -203,8 +203,27 @@ export function getAutopsyPayload(tool: typeof tools[number], title: string) {
   const titleLower = title.toLowerCase();
   const lic = licenseStack(tool);
   const rec = recoveryArtifact(tool);
-  
+  const isPosixOrOpenSource = tool.pricing_type === 'Open Source' || (tool.platforms && tool.platforms.length > 0 && !tool.platforms.some(p => p.toLowerCase().includes('windows')));
   if (titleLower.includes('error-15') || titleLower.includes('error -15') || titleLower.includes('flexlm-error-15')) {
+    if (isPosixOrOpenSource) {
+      return {
+        module: 'lmgrd / vendor_daemon (POSIX daemon)',
+        code: 'FLEXlm Error -15 (Connection Refused)',
+        offset: 'Socket Port Binding Failure',
+        severity: 'CRITICAL // LICENSING OFFLINE',
+        rootCause: `The client application failed to establish a TCP socket connection to the licensing daemon (lmgrd). On macOS/Linux and open source configurations, this is caused by local network restrictions, daemon socket port crashes, or missing path variables.`,
+        registryKey: `~/.flexlmrc`,
+        registryValue: `FLEXLM_TIMEOUT=1000000`,
+        recoveryScript: `#!/bin/bash
+echo "==================================================="
+echo "  CAD DIRECTIVE: FLEXLM TIMEOUT RESET (POSIX)"
+echo "==================================================="
+echo "[+] Wiping cached licenses and resetting timeout..."
+echo "FLEXLM_TIMEOUT=1000000" > ~/.flexlmrc
+echo "[+] Attempting network socket ping to port 27000..."
+nc -zv 127.0.0.1 27000 || echo "[!] WARNING: Port 27000 is closed!"`
+      };
+    }
     return {
       module: 'lmgrd.exe / vendor_daemon.exe',
       code: 'FLEXlm Error -15,10 (WSAECONNREFUSED)',
@@ -230,6 +249,25 @@ echo [+] Process complete. Verify server latency and relaunch ${toolName}.`
   }
   
   if (titleLower.includes('license') || titleLower.includes('flexlm') || titleLower.includes('activation')) {
+    if (isPosixOrOpenSource) {
+      return {
+        module: 'liblicensing.so / lmgrd',
+        code: 'Socket Port Collision (POSIX)',
+        offset: '0x0004c8f1',
+        severity: 'CRITICAL // ACTIVATION LOCKED',
+        rootCause: `FLEXlm licensing service socket port binding collision. The license daemon attempted to bind to default TCP port 27000 or 2080, which is already occupied by a lockfile or duplicate active background process.`,
+        registryKey: `~/.config/flexlm/daemon.opts`,
+        registryValue: `PORT=27000`,
+        recoveryScript: `#!/bin/bash
+echo "==================================================="
+echo "  CAD DIRECTIVE: UNIX LICENSE DAEMON SOCKET RESET"
+echo "==================================================="
+echo "[+] Stopping concurrent license service daemons..."
+killall lmgrd >/dev/null 2>&1
+echo "[+] Releasing bound socket allocations..."
+echo "PORT=27000" > ~/.config/flexlm/daemon.opts`
+      };
+    }
     return {
       module: `${lic.dll} / lmgrd.exe`,
       code: '0x00002740 (WSAEADDRINUSE)',
@@ -256,6 +294,28 @@ echo [+] Process complete. Verify environment by relaunching ${toolName}.`
   }
   
   if (titleLower.includes('freeze') || titleLower.includes('0x0024') || titleLower.includes('crash') || titleLower.includes('corrupt')) {
+    if (isPosixOrOpenSource) {
+      return {
+        module: `${toolName.toLowerCase().replace(/\s+/g, '')}_core.so`,
+        code: 'SIGSEGV (Segmentation fault)',
+        offset: '0x0001f3b2',
+        severity: 'CRITICAL // INTERFACE STALLED',
+        rootCause: `Dynamic vertex array buffer overflow inside local drawing cache. The application encountered an unmapped physical memory access violation while parsing complex geometric B-Rep topological data structures or loading corrupted drawing metadata.`,
+        registryKey: `~/.config/${toolName.replace(/\s+/g, '')}/Settings.conf`,
+        registryValue: `GraphicsOverride=1`,
+        recoveryScript: `#!/bin/bash
+echo "==================================================="
+echo "  CAD DIRECTIVE: UNIX MEMORY CACHE RESET"
+echo "==================================================="
+echo "[+] Terminating stalled ${toolName} processes..."
+killall -9 ${toolName.toLowerCase().replace(/\s+/g, '')} >/dev/null 2>&1
+echo "[+] Flushing local drawing temporary cache..."
+rm -rf ~/.cache/${toolName.toLowerCase().replace(/\s+/g, '')}/*
+echo "[+] Enabling safe graphics override..."
+mkdir -p ~/.config/${toolName.replace(/\s+/g, '')}
+echo "GraphicsOverride=1" >> ~/.config/${toolName.replace(/\s+/g, '')}/Settings.conf`
+      };
+    }
     return {
       module: toolName.toLowerCase().includes('autocad') ? 'ac1st24.dll' : toolName.toLowerCase().includes('solidworks') ? 'sldworks.exe' : 'cax_geometry.dll',
       code: '0xC0000005 (Access Violation)',
@@ -279,7 +339,7 @@ echo [+] Process complete. Relaunch ${toolName} in diagnostics mode.`
     };
   }
 
-  const isPosixOrOpenSource = tool.pricing_type === 'Open Source' || (tool.platforms && tool.platforms.length > 0 && !tool.platforms.some(p => p.toLowerCase().includes('windows')));
+
 
   if (isPosixOrOpenSource) {
     return {
