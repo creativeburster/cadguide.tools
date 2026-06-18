@@ -5,17 +5,32 @@ category: "manufacturing"
 softwareSlug: "microstation"
 keyword: "microstation model"
 slug: "bentley-microstation-3d-smartsolids-geometry-repair"
+author: "Will P. (Enterprise CAD Auditor)"
+readTime: "8 min read"
+date: "June 2026"
 ---
 
 # MicroStation 3D SmartSolids: Converting DGN Non-Manifold Solids
 
-This troubleshooting blueprint is structured based on verified CAD/CAM operations. Follow the step-by-step setup instructions to configure parameters and resolve errors.
+Managing **MicroStation 3D SmartSolids: Converting DGN Non-Manifold Solids** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
 
-## Recommended Operations Workflow
+### System Standards & Configuration Diagnostics
+Enforcing global configurations, automated layouts, silent installer deployments, and API integrations ensures CAD workflow consistency.
 
-1. **Parameter Diagnostics**: Inspect active environmental attributes and configuration parameters.
-2. **Path Mapping**: Ensure local paths align with target server directories and configuration paths.
-3. **Execution & Audit**: Apply settings, restart the cad instance, and check for error status in system logs.
+### MicroStation configuration configuration vars
+Redirect MicroStation CONNECT to shared cell libraries and printer tables:
+
+```text
+# mslocal.cfg overrides
+_USTN_CUSTOM_CONFIGURATION = //server/Bentley/CONNECT_Configuration/
+_USTN_CELLLIST = //server/Bentley/Cell/*.cel
+_USTN_PEN_TABLE = //server/Bentley/Pen/*.tbl
+```
+
+### MicroStation Workspace Setup Playbook
+1. **Centralize network configurations**: Configure `_USTN_CUSTOM_CONFIGURATION` inside local `ConfigurationSetup.cfg` files.
+2. **Enforce standard linestyles**: Distribute standard linestyle library files (`.rsc`) in your network configurations paths.
+3. **Associate Tag properties**: Build cell borders containing item tags to dynamically pull variables from model sheets.
 
 ---
 

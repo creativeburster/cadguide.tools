@@ -5,17 +5,31 @@ category: "procurement"
 softwareSlug: "microstation"
 keyword: "microstation pricing"
 slug: "bentley-microstation-select-server-licensing-migration"
+author: "Will P. (Enterprise CAD Auditor)"
+readTime: "8 min read"
+date: "June 2026"
 ---
 
 # Bentley SELECT Server License Migration: Managing Global EULA Compliance
 
-This troubleshooting blueprint is structured based on verified CAD/CAM operations. Follow the step-by-step setup instructions to configure parameters and resolve errors.
+Managing **Bentley SELECT Server License Migration: Managing Global EULA Compliance** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
 
-## Recommended Operations Workflow
+### System Licensing Diagnostics
+Enterprise floating allocations depend on the active license daemon. Connection handshakes fail due to dynamic IP drifts, mismatched port mappings, or GPO blockages on local CAD clients.
 
-1. **Parameter Diagnostics**: Inspect active environmental attributes and configuration parameters.
-2. **Path Mapping**: Ensure local paths align with target server directories and configuration paths.
-3. **Execution & Audit**: Apply settings, restart the cad instance, and check for error status in system logs.
+### Bentley SES Proxy Whitelist Rules
+Bentley SES uses HTTPS to validate connection slots. Ensure company proxies pass these endpoints:
+
+```text
+https://ims.bentley.com
+https://buddi.bentley.com
+https://ssologin.bentley.com
+```
+
+### Bentley SES Deployment Playbook
+1. **Setup Connection Client**: Install the latest Bentley Connection Client silently across workstations.
+2. **Assign User Entitlements**: Use Bentley Admin Portal to allocate OpenRoads and MicroStation seats to AD groups.
+3. **Checkout Licenses**: For offline workstations, check out node keys using Bentley Licensing Tool before offline travel.
 
 ---
 

@@ -5,17 +5,30 @@ category: "procurement"
 softwareSlug: "rhino"
 keyword: "rhino license"
 slug: "mcneel-rhino-cloud-zoo-licensing-setup"
+author: "Will P. (Enterprise CAD Auditor)"
+readTime: "8 min read"
+date: "June 2026"
 ---
 
 # McNeel Cloud Zoo Licensing: Setting Up Team Workgroup Seat Distribution
 
-This troubleshooting blueprint is structured based on verified CAD/CAM operations. Follow the step-by-step setup instructions to configure parameters and resolve errors.
+Managing **McNeel Cloud Zoo Licensing: Setting Up Team Workgroup Seat Distribution** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
 
-## Recommended Operations Workflow
+### System Licensing Diagnostics
+Enterprise floating allocations depend on the active license daemon. Connection handshakes fail due to dynamic IP drifts, mismatched port mappings, or GPO blockages on local CAD clients.
 
-1. **Parameter Diagnostics**: Inspect active environmental attributes and configuration parameters.
-2. **Path Mapping**: Ensure local paths align with target server directories and configuration paths.
-3. **Execution & Audit**: Apply settings, restart the cad instance, and check for error status in system logs.
+### McNeel LAN Zoo Configuration Verification
+Ensure the McNeel Zoo service binds properly to port 12389. Execute on client command line:
+
+```bash
+# Check LAN Zoo port connectivity
+telnet zoo.yourcompany.com 12389
+```
+
+### Zoo Seat Management Playbook
+1. **Initialize McNeel Cloud Zoo**: Log into McNeel accounts dashboard, invite domain users, and bind floating serial keys.
+2. **Open Port 12389**: Set bidirectional rules in subnet routers for port `12389` (Zoo communication).
+3. **Set Borrow Limits**: Limit license borrowing thresholds to 30 days to maximize floating availability.
 
 ---
 

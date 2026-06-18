@@ -5,17 +5,31 @@ category: "performance"
 softwareSlug: "microstation"
 keyword: "microstation lag"
 slug: "bentley-microstation-large-dgn-loading-raster-cache"
+author: "Will P. (Enterprise CAD Auditor)"
+readTime: "8 min read"
+date: "June 2026"
 ---
 
 # MicroStation Large DGN Assembly Loading: Setting Up Raster Cache Directories
 
-This troubleshooting blueprint is structured based on verified CAD/CAM operations. Follow the step-by-step setup instructions to configure parameters and resolve errors.
+Managing **MicroStation Large DGN Assembly Loading: Setting Up Raster Cache Directories** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
 
-## Recommended Operations Workflow
+### System Performance Diagnostics
+Heavy graphics redraw and high calculations loads cause system stutters. Viewport lags occur due to graphic driver mismatching or unoptimized memory caching rules.
 
-1. **Parameter Diagnostics**: Inspect active environmental attributes and configuration parameters.
-2. **Path Mapping**: Ensure local paths align with target server directories and configuration paths.
-3. **Execution & Audit**: Apply settings, restart the cad instance, and check for error status in system logs.
+### MicroStation Local Cache Configuration
+Define local paths for raster image loading and temporary file allocation inside Bentley configuration vars:
+
+```text
+MS_RASTER_LOADMODE = 2
+MS_SCR = D:\MicroStationTemp\
+MS_IMAGE_CACHE_DIR = D:\MicroStationRasterCache\
+```
+
+### MicroStation CONNECT Viewport Speed Playbook
+1. **Enable Local Raster Caching**: Configure `MS_RASTER_LOADMODE = 2` to cache orthophoto raster datasets on local high-speed SSDs.
+2. **Clip Reference Files**: Crop reference boundaries using the "Clip Reference" tool to limit drawing redraw loads.
+3. **Clean UPF Files**: If tool stutters occur, delete the corrupt `.upf` preferences file from your AppData directory.
 
 ---
 

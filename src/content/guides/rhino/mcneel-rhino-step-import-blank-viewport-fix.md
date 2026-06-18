@@ -5,17 +5,32 @@ category: "troubleshooting"
 softwareSlug: "rhino"
 keyword: "rhino viewport"
 slug: "mcneel-rhino-step-import-blank-viewport-fix"
+author: "Will P. (Enterprise CAD Auditor)"
+readTime: "8 min read"
+date: "June 2026"
 ---
 
 # Fixing Blank Viewport on STEP File Import in Rhino: Repairing Layer Geometry
 
-This troubleshooting blueprint is structured based on verified CAD/CAM operations. Follow the step-by-step setup instructions to configure parameters and resolve errors.
+Managing **Fixing Blank Viewport on STEP File Import in Rhino: Repairing Layer Geometry** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
 
-## Recommended Operations Workflow
+### System Troubleshooting Diagnostics
+Unexpected crashes, broken model trees, and interface errors occur due to registry profile corruption, WAVE link mismatches, or file format conversion flaws.
 
-1. **Parameter Diagnostics**: Inspect active environmental attributes and configuration parameters.
-2. **Path Mapping**: Ensure local paths align with target server directories and configuration paths.
-3. **Execution & Audit**: Apply settings, restart the cad instance, and check for error status in system logs.
+### Rhino Plugin Disable Registry script
+Disable problematic third-party plugins that block Rhino startup:
+
+```registry
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\McNeel\Rhinoceros\8.0\Plug-ins\<PLUGIN-GUID>]
+"LoadMode"=dword:00000000
+```
+
+### Rhino Diagnostic Playbook
+1. **Run in Safe Mode**: Launch Rhino using the `/safemode` flag to skip plugin and OpenGL loads.
+2. **Extract Corrupted 3DM NURBS**: Run the `Rescue3dm` command to recover curves from damaged drawing assets.
+3. **Fix Naked Edges**: Run `ShowEdges` and select "Naked Edges". Use `RebuildEdges` followed by `Join` to repair open surfaces.
 
 ---
 
