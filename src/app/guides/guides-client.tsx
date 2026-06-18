@@ -393,7 +393,7 @@ export default function GuidesClient() {
               {/* Category tabs inside Tool Guide */}
               <Card className="p-4 rounded-2xl bg-white border border-slate-200/60 shadow-sm">
                 <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-4xl mx-auto">
-                  {getCategoryTabsForTool(selectedTool).map((tab) => (
+                  {getCategoryTabsForTool(selectedTool, safeAvailableGuides).map((tab) => (
                     <button
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id as any)}
@@ -479,7 +479,7 @@ export default function GuidesClient() {
                           <div className="space-y-3">
                             <div className="flex items-center justify-between">
                               <span className="text-[8px] font-black uppercase tracking-[0.15em] bg-blue-50 text-blue-750 border border-blue-100 px-2 py-0.5 rounded-md">
-                                {art.category === 'procurement' ? 'Procurement & TCO' : art.category === 'performance' ? 'Performance' : art.category === 'standards' ? 'Standards' : art.category === 'troubleshooting' ? 'Troubleshooting' : art.category === 'deployment' ? 'IT Deployment' : art.category === 'migration' ? 'Migration & API' : art.category === 'manufacturing' ? 'Specialized Toolsets' : 'Printing & Plotting'}
+                                {getJargonLabelForCategory(art.category, selectedTool)}
                               </span>
                               <span className="text-[9px] text-slate-400 font-bold">{art.keyword}</span>
                             </div>
@@ -514,24 +514,42 @@ export default function GuidesClient() {
             <section className="space-y-6 animate-in fade-in duration-300">
               <Card className="p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm">
                 <div className="flex flex-wrap items-center justify-center gap-1.5 border-b border-slate-200 pb-5 max-w-2xl mx-auto">
-                  {[
-                    { id: 'all', label: 'All Operations' },
-                    { id: 'licensing', label: 'Licensing & SAM' },
-                    { id: 'performance', label: 'Workstation Speed' },
-                    { id: 'standards', label: 'Standards & API' }
-                  ].map((tab) => (
-                    <button
-                      key={tab.id}
-                      onClick={() => handleFaqTabChange(tab.id as Parameters<typeof handleFaqTabChange>[0])}
-                      className={`px-3.5 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all border ${
-                        faqTab === tab.id
-                          ? 'bg-[#1e293b] text-white border-[#1e293b] shadow-md shadow-slate-100 scale-[1.02]'
-                          : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300 hover:text-slate-800'
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
+                  {(() => {
+                    const toolFaqs = accordionFaqs.filter(f => {
+                      if (selectedToolSlug !== 'all') {
+                        return f.tools.includes(selectedToolSlug);
+                      }
+                      return true;
+                    });
+                    const activeFaqCategories = new Set(toolFaqs.map(f => f.category));
+                    const faqTabs = [
+                      { id: 'all', label: 'All Operations' },
+                      ...[
+                        { id: 'licensing', label: 'Licensing & SAM' },
+                        { id: 'performance', label: 'Workstation Speed' },
+                        { id: 'standards', label: 'Standards & API' }
+                      ].filter(t => activeFaqCategories.has(t.id as any))
+                    ].map(t => {
+                      if (t.id === 'all') return t;
+                      return {
+                        id: t.id,
+                        label: getJargonLabelForCategory(t.id, selectedTool)
+                      };
+                    });
+                    return faqTabs.map((tab) => (
+                      <button
+                        key={tab.id}
+                        onClick={() => handleFaqTabChange(tab.id as Parameters<typeof handleFaqTabChange>[0])}
+                        className={`px-3.5 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all border ${
+                          faqTab === tab.id
+                            ? 'bg-[#1e293b] text-white border-[#1e293b] shadow-md shadow-slate-100 scale-[1.02]'
+                            : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300 hover:text-slate-800'
+                        }`}
+                      >
+                        {tab.label}
+                      </button>
+                    ));
+                  })()}
                 </div>
 
                 <div className="space-y-4 mt-6">
@@ -545,7 +563,7 @@ export default function GuidesClient() {
                         >
                           <div className="flex flex-wrap items-center gap-2">
                             <span className="text-[8px] font-black uppercase tracking-[0.15em] bg-indigo-50 text-indigo-600 border border-indigo-100/50 px-2 py-0.5 rounded-md shrink-0">
-                              {faq.category === 'licensing' ? 'Licensing & SAM' : faq.category === 'performance' ? 'Performance' : 'Standards'}
+                              {getJargonLabelForCategory(faq.category, selectedTool)}
                             </span>
                             <span>{faq.q}</span>
                           </div>
@@ -610,7 +628,304 @@ export default function GuidesClient() {
   );
 }
 
-function getCategoryTabsForTool(tool: any): { id: string; label: string }[] {
+function getJargonLabelForCategory(category: string, tool: any): string {
+  if (!tool) {
+    switch (category) {
+      case 'procurement':
+      case 'licensing':
+        return 'Licensing & TCO';
+      case 'troubleshooting':
+        return 'Troubleshooting';
+      case 'performance':
+        return 'Workstation Speed';
+      case 'standards':
+        return 'Standards';
+      case 'deployment':
+        return 'IT Deployment';
+      case 'migration':
+        return 'Migration & API';
+      case 'manufacturing':
+        return 'Specialized Toolsets';
+      case 'printing':
+        return 'Printing & Plotting';
+      default:
+        return category;
+    }
+  }
+
+  const industries = tool.industries || [];
+  const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
+  const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
+  const isEDA = industries.some((i: string) => /electronics|eda|pcb|hardware/i.test(i)) || tool.category_id === 'c6' || tool.category_id === 'eda' || tool.slug === 'altium-designer';
+  const isCAE = industries.some((i: string) => /simulation|analysis|cae|finite/i.test(i)) || tool.category_id === 'cae' || tool.slug === 'ansys';
+  const isFreeCAD = tool.slug === 'freecad';
+
+  if (tool.slug === 'catia') {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'DSLS Cost & TCO';
+      case 'troubleshooting':
+        return 'ENOVIA & GSD Repair';
+      case 'performance':
+        return 'Cache Mode & V5 Graphics';
+      case 'standards':
+        return 'DSLS & CAD Formats';
+      case 'deployment':
+        return 'DSLS Server Installation';
+      case 'migration':
+        return 'CAA API & ENOVIA Sync';
+      case 'manufacturing':
+        return 'GSD Surfaces & NC Toolpath';
+      case 'printing':
+        return 'Drafting Sheet Formats';
+    }
+  }
+
+  if (tool.slug === 'ansys') {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'Ansys Licensing & TCO';
+      case 'troubleshooting':
+        return 'Mesh & Solver Debugging';
+      case 'performance':
+        return 'GPU Solver Acceleration';
+      case 'standards':
+        return 'FEA Mesh & Solver Standards';
+      case 'deployment':
+        return 'MPI & Cluster Deployment';
+      case 'migration':
+        return 'APDL & ACT Scripting';
+      case 'manufacturing':
+        return 'HPC Solver & Cluster Tuning';
+      case 'printing':
+        return 'Post-Processing Reports';
+    }
+  }
+
+  if (tool.slug === 'creo') {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'Creo Licensing & TCO';
+      case 'troubleshooting':
+        return 'Skeleton Loops & PLM Fix';
+      case 'performance':
+        return 'Windchill Cache & Speed';
+      case 'standards':
+        return 'config.pro & Drawing Specs';
+      case 'deployment':
+        return 'Windchill Server Setup';
+      case 'migration':
+        return 'OTK C++ & Toolkit API';
+      case 'manufacturing':
+        return 'Skeleton Top-down & Sheetmetal';
+      case 'printing':
+        return 'config.pro Output templates';
+    }
+  }
+
+  if (isFreeCAD) {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'Open Source Compliance';
+      case 'troubleshooting':
+        return 'Topo Naming & Sketcher Debug';
+      case 'performance':
+        return 'Coin3D Viewport Speed';
+      case 'standards':
+        return 'OpenCASCADE Topology & STEP';
+      case 'deployment':
+        return 'AppImage & Python Env';
+      case 'migration':
+        return 'Python Macro Scripting';
+      case 'manufacturing':
+        return 'PartDesign sketcher & CAM';
+      case 'printing':
+        return 'TechDraw 2D Sheet Templates';
+    }
+  }
+
+  if (tool.slug === 'autocad') {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'Autodesk Licensing & TCO';
+      case 'troubleshooting':
+        return 'Plot Styles & Font Repair';
+      case 'performance':
+        return 'Graphics Hardware Speed';
+      case 'standards':
+        return 'CAD Layer & CTB Standards';
+      case 'deployment':
+        return 'Network License Deployment';
+      case 'migration':
+        return 'AutoLISP & ObjectARX API';
+      case 'manufacturing':
+        return 'Specialized Toolsets & Blocks';
+      case 'printing':
+        return 'Plot Style & Printing';
+    }
+  }
+
+  if (tool.slug === 'revit') {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'Autodesk Cloud Licensing';
+      case 'troubleshooting':
+        return 'Coordinates & Link Model Repair';
+      case 'performance':
+        return 'BIM Model & View Performance';
+      case 'standards':
+        return 'BIM Standards & Coordinates';
+      case 'deployment':
+        return 'Revit Server & Network Setup';
+      case 'migration':
+        return 'Dynamo & Revit API Scripting';
+      case 'manufacturing':
+        return 'MEP & Structural Detailing';
+      case 'printing':
+        return 'PDF Sheet Printing';
+    }
+  }
+
+  if (tool.slug === 'altium-designer') {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'Altium 365 Licensing TCO';
+      case 'troubleshooting':
+        return 'DRC Violations & Git Merge';
+      case 'performance':
+        return 'PCB Viewport & DRC Lag';
+      case 'standards':
+        return 'DRC Rules & OutJob Templates';
+      case 'deployment':
+        return 'Altium 365 Workspace Setup';
+      case 'migration':
+        return 'Library Sync & Database API';
+      case 'manufacturing':
+        return 'PCB Layout & Gerber Setup';
+      case 'printing':
+        return 'OutJob Output Generation';
+    }
+  }
+
+  if (isBIM) {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'BIM Subscription TCO';
+      case 'troubleshooting':
+        return 'BIM Coordination Debugging';
+      case 'performance':
+        return 'BIM Viewport & Model Speed';
+      case 'standards':
+        return 'BIM Standards & Coordinates';
+      case 'deployment':
+        return 'BIM IT & Network Deployment';
+      case 'migration':
+        return 'BIM Automation & API Scripting';
+      case 'manufacturing':
+        return 'MEP & Construction Detailing';
+      case 'printing':
+        return 'BIM PDF Sheet Printing';
+    }
+  }
+
+  if (isMCAD) {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'MCAD Licensing TCO';
+      case 'troubleshooting':
+        return 'MCAD Part & Model Repair';
+      case 'performance':
+        return 'MCAD Assembly & Drawing Speed';
+      case 'standards':
+        return 'MCAD Formats & Standards';
+      case 'deployment':
+        return 'MCAD PDM & Server Setup';
+      case 'migration':
+        return 'MCAD PDM & API Customization';
+      case 'manufacturing':
+        return 'Sheet Metal & CAM Toolpaths';
+      case 'printing':
+        return 'MCAD Drawing & Pen Styles';
+    }
+  }
+
+  if (isEDA) {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'EDA Software Licensing TCO';
+      case 'troubleshooting':
+        return 'DRC Violation & Design Healing';
+      case 'performance':
+        return 'EDA Viewport & Check Speed';
+      case 'standards':
+        return 'Clearance & Trace Standards';
+      case 'deployment':
+        return 'EDA Server & DB Configuration';
+      case 'migration':
+        return 'Library & Database API';
+      case 'manufacturing':
+        return 'PCB Gerber & Layout Setup';
+      case 'printing':
+        return 'OutJob Output Templates';
+    }
+  }
+
+  if (isCAE) {
+    switch (category) {
+      case 'licensing':
+      case 'procurement':
+        return 'CAE Simulation TCO';
+      case 'troubleshooting':
+        return 'CAE Solver Troubleshooting';
+      case 'performance':
+        return 'CAE HPC & GPU Acceleration';
+      case 'standards':
+        return 'FEA Mesh & Convergence';
+      case 'deployment':
+        return 'CAE HPC Cluster Deployment';
+      case 'migration':
+        return 'Solver Scripting & API Extensions';
+      case 'manufacturing':
+        return 'CAE Simulation & Model Setup';
+      case 'printing':
+        return 'Post-Processing Reports';
+    }
+  }
+
+  switch (category) {
+    case 'procurement':
+    case 'licensing':
+      return 'Licensing & TCO';
+    case 'troubleshooting':
+      return 'Troubleshooting';
+    case 'performance':
+      return 'Workstation Speed';
+    case 'standards':
+      return 'Standards';
+    case 'deployment':
+      return 'IT Deployment';
+    case 'migration':
+      return 'Migration & API';
+    case 'manufacturing':
+      return 'Specialized Toolsets';
+    case 'printing':
+      return 'Printing & Plotting';
+    default:
+      return category;
+  }
+}
+
+function getCategoryTabsForTool(tool: any, safeAvailableGuides: any[]): { id: string; label: string }[] {
   const defaultTabs = [
     { id: 'all', label: 'All Operations' },
     { id: 'procurement', label: 'Procurement & TCO' },
@@ -625,74 +940,24 @@ function getCategoryTabsForTool(tool: any): { id: string; label: string }[] {
 
   if (!tool) return defaultTabs;
 
-  const industries = tool.industries || [];
-  const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
-  const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
-  const isEDA = industries.some((i: string) => /electronics|eda|pcb|hardware/i.test(i)) || tool.category_id === 'c6' || tool.category_id === 'eda' || tool.slug === 'altium-designer';
-  const isCAE = industries.some((i: string) => /simulation|analysis|cae|finite/i.test(i)) || tool.category_id === 'cae' || tool.slug === 'ansys';
-  const isFreeCAD = tool.slug === 'freecad';
-  const isOpenSource = (tool.pricing_type as string) === 'Open Source' || (tool.pricing_type as string) === 'Free';
-
-  let filtered = defaultTabs;
-  if (isOpenSource) {
-    filtered = filtered.filter(t => t.id !== 'procurement');
-  }
+  const activeCategories = new Set(safeAvailableGuides.map(g => g.category));
+  const filtered = defaultTabs.filter(t => t.id === 'all' || activeCategories.has(t.id as any));
 
   return filtered.map(t => {
-    if (isFreeCAD) {
-      if (t.id === 'migration') return { id: t.id, label: 'Python Macro Scripting' };
-      if (t.id === 'manufacturing') return { id: t.id, label: 'PartDesign sketcher & CAM' };
-      if (t.id === 'printing') return { id: t.id, label: 'TechDraw 2D Sheet Templates' };
-      if (t.id === 'standards') return { id: t.id, label: 'OpenCASCADE healing & config' };
-    }
-    if (isCAE) {
-      if (t.id === 'migration') return { id: t.id, label: 'APDL & Solver Scripting' };
-      if (t.id === 'manufacturing') return { id: t.id, label: 'HPC Solver & GPU Tuning' };
-      if (t.id === 'printing') return { id: t.id, label: 'Post-Processing Reports' };
-      if (t.id === 'standards') return { id: t.id, label: 'FEA Mesh & Licensing Setup' };
-    }
-    if (tool.slug === 'catia') {
-      if (t.id === 'migration') return { id: t.id, label: 'CAA API & ENOVIA Sync' };
-      if (t.id === 'manufacturing') return { id: t.id, label: 'GSD Surfaces & NC Toolpath' };
-      if (t.id === 'printing') return { id: t.id, label: 'Drafting Sheet Formats' };
-      if (t.id === 'standards') return { id: t.id, label: 'DSLS & CAD Formats' };
-    }
-    if (tool.slug === 'creo') {
-      if (t.id === 'migration') return { id: t.id, label: 'OTK API & J-Link Customization' };
-      if (t.id === 'manufacturing') return { id: t.id, label: 'Skeleton Top-down & Sheet Metal' };
-      if (t.id === 'printing') return { id: t.id, label: 'config.pro Drawing Outputs' };
-      if (t.id === 'standards') return { id: t.id, label: 'Windchill PLM & Licensing' };
-    }
-    if (isBIM) {
-      if (t.id === 'migration') return { id: t.id, label: 'Dynamo & API Automation' };
-      if (t.id === 'manufacturing') return { id: t.id, label: 'MEP & Structural Detailing' };
-      if (t.id === 'printing') return { id: t.id, label: 'PDF Sheet Printing' };
-      if (t.id === 'standards') return { id: t.id, label: 'BIM Standards & Coordinates' };
-    }
-    if (isMCAD) {
-      if (t.id === 'migration') return { id: t.id, label: 'API & PDM Customization' };
-      if (t.id === 'manufacturing') return { id: t.id, label: 'Sheet Metal & Solid Detailing' };
-      if (t.id === 'printing') return { id: t.id, label: 'Drawing & Pen Styles' };
-      if (t.id === 'standards') return { id: t.id, label: 'MCAD Formats & Standards' };
-    }
-    if (isEDA) {
-      if (t.id === 'migration') return { id: t.id, label: 'Library & Database Sync' };
-      if (t.id === 'manufacturing') return { id: t.id, label: 'PCB Layout & Gerber Setup' };
-      if (t.id === 'printing') return { id: t.id, label: 'OutJob Output Generation' };
-      if (t.id === 'standards') return { id: t.id, label: 'Signal Integrity & DRC Rules' };
-    }
-    if (tool.slug === 'autocad') {
-      if (t.id === 'migration') return { id: t.id, label: 'AutoLISP & ObjectARX' };
-      if (t.id === 'printing') return { id: t.id, label: 'Plot Style & Printing' };
-      if (t.id === 'standards') return { id: t.id, label: 'CAD Layer Standards' };
-    }
-    return t;
+    if (t.id === 'all') return t;
+    return {
+      id: t.id,
+      label: getJargonLabelForCategory(t.id, tool)
+    };
   });
 }
 
 function getMappedCategoryInfo(category: string, tool: any, originalTitle: string, originalDesc: string) {
   if (!tool) return { title: originalTitle, desc: originalDesc };
 
+  const title = getJargonLabelForCategory(category, tool);
+  let desc = originalDesc;
+
   const industries = tool.industries || [];
   const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
   const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
@@ -700,117 +965,113 @@ function getMappedCategoryInfo(category: string, tool: any, originalTitle: strin
   const isCAE = industries.some((i: string) => /simulation|analysis|cae|finite/i.test(i)) || tool.category_id === 'cae' || tool.slug === 'ansys';
   const isFreeCAD = tool.slug === 'freecad';
 
-  let title = originalTitle;
-  let desc = originalDesc;
-
   if (isFreeCAD) {
     if (category === 'migration') {
-      title = 'Python Macro Scripting';
       desc = `Write Python macro scripts, run headless background geometry audits, and customize FreeCAD interfaces.`;
     } else if (category === 'manufacturing') {
-      title = 'PartDesign sketcher & CAM';
       desc = `Configure Path CAM G-code post-processors, run CalculiX FEM solvers, and design sketcher constraints in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'TechDraw 2D Sheet Templates';
       desc = `Design custom SVG title block frames, manage TechDraw projection standard views, and export PDF sheets in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'OpenCASCADE healing & config';
       desc = `Stitch imported STEP non-manifold shells, heal topological naming issues, and lock user preferences in ${tool.name}.`;
     }
   } else if (isCAE) {
     if (category === 'migration') {
-      title = 'APDL & Solver Scripting';
       desc = `Write ANSYS Parametric Design Language (APDL) batch solver input files and configure ACT Python extensions in ${tool.name}.`;
     } else if (category === 'manufacturing') {
-      title = 'HPC Solver & GPU Tuning';
       desc = `Configure Intel MPI cluster networks, allocate GPU solver cores, and optimize SSD out-of-core scratch spaces in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'Post-Processing Reports';
       desc = `Map nCode dynamic structural fatigue simulations, extract modal mass factors, and generate solver logs in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'FEA Mesh & Licensing Setup';
       desc = `Configure FLEXlm port whitelists, refine boundary layer meshes (y+ limits), and debug nonlinear contact convergences in ${tool.name}.`;
     }
   } else if (tool.slug === 'catia') {
     if (category === 'migration') {
-      title = 'CAA API & ENOVIA Sync';
       desc = `Develop C++ CAA components, compile workspace identities, and automate BOM properties data exports in ${tool.name}.`;
     } else if (category === 'manufacturing') {
-      title = 'GSD Surfaces & NC Toolpath';
       desc = `Configure Generative Shape Design (GSD) healing tolerances, CAM NC toolpaths post-processors, and Sheetmetal SMD K-Factors in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'Drafting Sheet Formats';
       desc = `Manage sheet projection directions, configure drawing sheet background frame blocks, and export drafting sheets in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'DSLS & CAD Formats';
       desc = `Configure DSLS licensing network ports, restore corrupted CATSettings panels, and heal STEP AP242 data transfer geometries in ${tool.name}.`;
     }
   } else if (tool.slug === 'creo') {
     if (category === 'migration') {
-      title = 'OTK API & J-Link Customization';
       desc = `Compile custom C++ OTK applications, configure J-Link Java metadata queries, and automate model properties in ${tool.name}.`;
     } else if (category === 'manufacturing') {
-      title = 'Skeleton Top-down & Sheet Metal';
       desc = `Configure assembly skeleton reference paths, setup Creo Sheetmetal bend tables (.tbl), and design wire harness spools in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'config.pro Drawing Outputs';
       desc = `Configure drawing border templates, customize config.pro output parameters, and manage drafting views in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'Windchill PLM & Licensing';
       desc = `Configure ptc.opt options files, manage Windchill workspace client caches, and diagnose lmgrd server errors in ${tool.name}.`;
+    }
+  } else if (tool.slug === 'autocad') {
+    if (category === 'migration') {
+      desc = `Compile custom FAS/VLX LISP utilities, manage ObjectARX libraries, and configure secure script paths in ${tool.name}.`;
+    } else if (category === 'printing') {
+      desc = `Manage CTB/STB plot pens, configure paper sizes, and fix missing font display during plotting in ${tool.name}.`;
+    } else if (category === 'standards') {
+      desc = `Configure AIA and ISO 13567 default layer name schemes, linetypes, and dimensions scales in ${tool.name}.`;
+    }
+  } else if (tool.slug === 'revit') {
+    if (category === 'migration') {
+      desc = `Integrate visual scripting parameters, compile Zero Touch C# components, and automate model checking in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      desc = `Configure duct friction loss schedules, parametric rebar cages, and advanced steel joints details in ${tool.name}.`;
+    } else if (category === 'printing') {
+      desc = `Fix margin overrides, font substitute overlaps, and vector vs. raster print resolution in ${tool.name}.`;
+    } else if (category === 'standards') {
+      desc = `Troubleshoot shared coordinate drifts, link CAD projections, and configure IFC4 export schemas in ${tool.name}.`;
+    }
+  } else if (tool.slug === 'altium-designer') {
+    if (category === 'migration') {
+      desc = `Import legacy database libraries, manage database connection strings, and automate tasks with the scripting API in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      desc = `Configure multi-board panelizations, mechanical rout lines, and export NC drill files in ${tool.name}.`;
+    } else if (category === 'printing') {
+      desc = `Configure output jobs (.OutJob), fix PDF generator crashes, and generate PCB assembly print layouts in ${tool.name}.`;
+    } else if (category === 'standards') {
+      desc = `Configure impedance profiles, match trace lengths, and establish clearance rules for 3D components in ${tool.name}.`;
     }
   } else if (isBIM) {
     if (category === 'migration') {
-      title = 'Dynamo & API Automation';
       desc = `Integrate visual scripting parameters, compile Zero Touch C# components, and automate model checking in ${tool.name}.`;
     } else if (category === 'manufacturing') {
-      title = 'MEP & Structural Detailing';
       desc = `Configure duct friction loss schedules, parametric rebar cages, and advanced steel joints details in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'PDF Sheet Printing';
       desc = `Fix margin overrides, font substitute overlaps, and vector vs. raster print resolution in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'BIM Standards & Coordinates';
       desc = `Troubleshoot shared coordinate drifts, link CAD projections, and configure IFC4 export schemas in ${tool.name}.`;
     }
   } else if (isMCAD) {
     if (category === 'migration') {
-      title = 'API & PDM Customization';
       desc = `Develop C# plugins, automate assemblies macro commands, and clean cache conflicts in ${tool.name} PDM.`;
     } else if (category === 'manufacturing') {
-      title = 'Sheet Metal & Solid Detailing';
       desc = `Configure K-Factor blank lengths, bend calculations tables, and export certified detail drawing sheets in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'Drawing & Pen Styles';
       desc = `Manage sheet formats, pen weights scales, and print resolution for assembly drawings in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'MCAD Formats & Standards';
       desc = `Repair imported STEP/IGES surface tears, set modeling tolerance, and align coordinate origins in ${tool.name}.`;
     }
   } else if (isEDA) {
     if (category === 'migration') {
-      title = 'Library & Database Sync';
       desc = `Import legacy database libraries, manage database connection strings, and automate tasks with the scripting API in ${tool.name}.`;
     } else if (category === 'manufacturing') {
-      title = 'PCB Layout & Gerber Setup';
       desc = `Configure multi-board panelizations, mechanical rout lines, and export NC drill files in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'OutJob Output Generation';
       desc = `Configure output jobs (.OutJob), fix PDF generator crashes, and generate PCB assembly print layouts in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'Signal Integrity & DRC Rules';
       desc = `Configure impedance profiles, match trace lengths, and establish clearance rules for 3D components in ${tool.name}.`;
     }
-  } else if (tool.slug === 'autocad') {
+  } else if (isCAE) {
     if (category === 'migration') {
-      title = 'AutoLISP & ObjectARX';
-      desc = `Compile custom FAS/VLX LISP utilities, manage ObjectARX libraries, and configure secure script paths in ${tool.name}.`;
+      desc = `Write ANSYS Parametric Design Language (APDL) batch solver input files and configure ACT Python extensions in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      desc = `Configure Intel MPI cluster networks, allocate GPU solver cores, and optimize SSD out-of-core scratch spaces in ${tool.name}.`;
     } else if (category === 'printing') {
-      title = 'Plot Style & Printing';
-      desc = `Manage CTB/STB plot pens, configure paper sizes, and fix missing font display during plotting in ${tool.name}.`;
+      desc = `Map nCode dynamic structural fatigue simulations, extract modal mass factors, and generate solver logs in ${tool.name}.`;
     } else if (category === 'standards') {
-      title = 'CAD Layer Standards';
-      desc = `Configure AIA and ISO 13567 default layer name schemes, linetypes, and dimensions scales in ${tool.name}.`;
+      desc = `Configure FLEXlm port whitelists, refine boundary layer meshes (y+ limits), and debug nonlinear contact convergences in ${tool.name}.`;
     }
   }
 
