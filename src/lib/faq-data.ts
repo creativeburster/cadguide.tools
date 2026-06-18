@@ -2412,4 +2412,484 @@ export const accordionFaqs: AccordionFaq[] = [
     a: 'FreeCAD files (.FCStd) are zip files. If a file is corrupt: Rename extension from `.FCStd` to `.zip`. Unzip the archive. Inspect `Document.xml` for syntax errors using an XML editor. Repair nodes, zip files back, and rename the extension to `.FCStd` to recover your design.'
   },
 
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'How to configure Siemens NX uglmd licensing port whitelists?',
+    a: 'Open the licensing file (splm15.lic) on the host, locate the SERVER line and set the port (default 28000). Set a fixed port for the daemon, e.g., \'VENDOR uglmd port=28001\'. Whitelist both ports (28000 and 28001) in Windows Defender/hardware firewalls to ensure client communication.'
+  },
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'How to resolve Siemens NX Error -15: \'Cannot connect to license server system\'?',
+    a: 'Error -15 indicates that the client cannot connect to the server. Check if the \'SPLM_LICENSE_SERVER\' environment variable is correctly set to \'28000@server_ip\'. Ensure the \'Siemens PLM License Server\' service is running on the host and verify the network connection using telnet.'
+  },
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'How does Siemens NX Value-Based Token Licensing work?',
+    a: 'Token licensing allows users to check out premium add-on applications (e.g., advanced routing, routing cabling, sheet metal) using a pool of tokens. When the application starts, a predefined number of tokens is checked out; when closed, tokens are returned. It is managed by splm15.lic.'
+  },
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'How to resolve Siemens NX license borrowing (checkout) failures?',
+    a: 'Use the Siemens PLM Licensing Tool, switch to the \'Borrowing\' tab, select the required features, and set a return date. If it fails, ensure that the option file (\'uglmd.opt\') does not contain a \'BORROW_LOWWATER\' restriction and verify that floating seats are available.'
+  },
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'How to set up uglmd.opt to reserve license seats for specific CAD teams?',
+    a: 'Create a file named \'uglmd.opt\' in the license manager directory. Define groups using \'GROUP CAD_TEAM user1 user2\'. Add reservations, e.g., \'RESERVE 5 gateway GROUP CAD_TEAM\' to ensure the Gateway base seat is reserved for essential designers.'
+  },
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'How to resolve Siemens NX license checkout timeouts on remote VPN connections?',
+    a: 'Set the client-side system environment variable \'FLEXLM_TIMEOUT\' to \'3000000\' (3 seconds) or higher. This allows the license manager client tool to wait longer for handshakes on high-latency networks.'
+  },
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'How to clear a hung license token checkout in Siemens NX?',
+    a: 'Open LMTOOLS on the license server, select \'Server Status\', click \'Perform Status Enquiry\' to find the user. Switch to \'Start/Stop/Reread\' and restart the server, or use \'lmutil lmremove\' command to force release the hung tokens.'
+  },
+  {
+    category: 'licensing',
+    tools: ['siemens-nx'],
+    q: 'What is the difference between node-locked and floating licenses in Siemens NX?',
+    a: 'Node-locked licenses are tied to the physical MAC address (or Composite ID) of a single workstation. Floating licenses allow any user on the network to pull gateways seats from a centralized server pool managed by lmgrd.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to optimize NX viewport lag during large assembly operations?',
+    a: 'Go to Assembly Preferences, set component loading to \'Lightweight\' (Visualization data only) instead of \'Fully Load\'. Set the graphic representation to use cached facet data to bypass the load of solid body parameters.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to enable GPU hardware acceleration inside Siemens NX?',
+    a: 'Ensure your NVIDIA/AMD workstation GPU driver is set to the \'Workstation App - Advanced 3D\' profile. Inside NX, go to Menu > Preferences > Visualization > Performance, and enable \'Use Graphics Hardware Acceleration\' and GPU shading options.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to resolve NX Nastran solver out-of-memory errors?',
+    a: 'Edit the solver execution properties (.rc file) and set \'memory=0.85*physical\' to utilize system RAM. Configure the Nastran scratch directory to point to local high-speed PCIe NVMe SSDs instead of network drives.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to accelerate NX Assembly Clearance Analysis execution times?',
+    a: 'Limit the analysis scope to \'Selected Components\' instead of checking the entire tree. Adjust the tolerance limits, enable parallel CPU thread options, and save clash results to lightweight formats.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to configure NX virtual memory parameters to handle massive products?',
+    a: 'Configure Windows pagefile size to be at least 1.5 times physical RAM (e.g., set to 64GB pagefile for 32GB RAM). Inside NX, adjust the Customer Defaults memory threshold options to release unused assembly representations.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to use \'Simplify Assembly\' in NX to save workstation RAM?',
+    a: 'Run \'Simplify Assembly\' (or Wrap Assembly) to convert complex inner details of parts into lightweight bounding solids. This reduces face counts and graphics load, saving up to 80% RAM during layout design.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'Why does the NX viewport stutter during dynamic rotations?',
+    a: 'This occurs when dynamic rendering parameters exceed GPU bandwidth. In Visualization Performance settings, set \'Dynamic Fit\' to \'Simplify\' and lower the dynamic frame rate target to 30 FPS.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to optimize multi-core CPU usage for NX Nastran FEA solver?',
+    a: 'Add the \'parallel=N\' parameter to the solver command line, where N is the number of physical CPU cores. This allows Nastran to parallelize matrix operations during linear/nonlinear calculations.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to optimize NX CAM toolpath generation speed?',
+    a: 'Enable \'Multi-Threading\' in CAM preferences. Set tolerance values matching the roughing requirements (e.g., 0.05mm instead of 0.01mm) to drastically reduce toolpath calculating delays.'
+  },
+  {
+    category: 'performance',
+    tools: ['siemens-nx'],
+    q: 'How to configure local CGR file cache directories in NX?',
+    a: 'Go to Customer Defaults > Assemblies > Site Caching. Define a local SSD directory path for CGR/JT cached files. This prevents NX from downloading visual representations over network connections on every file load.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to lock and distribute NX Customer Defaults across network users?',
+    a: 'Establish a central administrative directory on a network drive. Set the environment variable \'UGII_SITE_DIR\' or \'UGII_GROUP_DIR\' pointing to this share. Modify Customer Defaults and save them as site-level overrides to lock the options.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to set up custom drafting border templates in Siemens NX?',
+    a: 'Design the drawing sheet outline in a template part (.prt) file. Register it inside the \'pax\' template configuration file (e.g., \'ugs_drawing_templates.pax\') located in the \'UGII/templates\' directory to make it selectable.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to export Step AP242 from Siemens NX while preserving PMI annotations?',
+    a: 'In STEP export preferences, choose \'STEP AP242\' instead of AP203/214. Check \'Export PMI\' and verify that semantic representation options are enabled. This preserves MBD metadata for downstream manufacturing.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to configure Siemens JT export settings to optimize visual tolerances?',
+    a: 'Edit the \'tess.config\' file used by the JT translator. Define LOD (Level of Detail) settings, set the chordal deviation limits, and verify that PMI entities are mapped correctly to lightweight structures.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to lock material selection properties inside NX Part templates?',
+    a: 'Open the default template part file in the templates folder, assign standard materials from the library, lock the attributes, and save. Any new models created will inherit these locked material variables.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to prevent circular reference warnings in NX Assembly design?',
+    a: 'Enforce Top-Down modeling design. When using WAVE geometry linkers, reference geometry downward from parent skeletons to child components. Avoid linking features back up the tree structure to eliminate solver cycles.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to configure NX Layer Categories to standardize modeling visibility?',
+    a: 'Set up layer categories (e.g., \'SKETCH\' = 1-10, \'SOLID\' = 11-20, \'PMI\' = 21-30) inside your seed templates. Go to Layer Category manager, lock the category parameters, and save to enforce visibility rules.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to set custom tolerances inside Siemens NX Modeling preferences?',
+    a: 'Go to Menu > Preferences > Modeling. Adjust the distance tolerance (default 0.0254mm) and angle tolerance. Ensure that all designers share identical tolerances to prevent feature stitching failures during component imports.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to configure NX CAM post-processor config parameters?',
+    a: 'Use Post Configurator, import the CNC machine tool kinematic XML schema, map G-code coordinate variables, and save. Centralize the directory path by configuring the \'UGII_CAM_POST_DIR\' environment variable.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to configure sheet metal bend allowances in Siemens NX?',
+    a: 'Set custom K-Factor values (e.g., 0.33 for standard steel) or import bend allowance tables (.tbl) matching shop floor tooling specifications. Go to Customer Defaults > Sheet Metal to set default parameters.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to link NX drafting parts list tables directly to model properties?',
+    a: 'Edit the Parts List table properties, map table cells to system attributes (e.g., \'<W$=$DB_PART_NO>\'), and save. The parts list will automatically pull BOM properties directly from the assembly structure.'
+  },
+  {
+    category: 'standards',
+    tools: ['siemens-nx'],
+    q: 'How to import JT models into NX while preserving original CAD geometry trees?',
+    a: 'Ensure that the JT file contains XT Brep data (not just facet visualization data). In JT Import options, choose \'Import as Solid Body\' and map the coordinate system to prevent geometry orientation errors.'
+  },
+  {
+    category: 'licensing',
+    tools: ['rhino'],
+    q: 'How to configure McNeel Cloud Zoo team licenses?',
+    a: 'Log in to the Rhino Accounts dashboard, create a team, add team members\' email addresses, and select \'Add Licenses\'. Paste your Rhino product key to make the seat float dynamically among team members.'
+  },
+  {
+    category: 'licensing',
+    tools: ['rhino'],
+    q: 'How to resolve Rhino validation errors on Cloud Zoo checkouts?',
+    a: 'If checkout fails with connection errors, verify that clients can connect to \'https://auth.mcneel.com\'. Clear local browser session caches and re-authenticate your McNeel credentials in the Rhino startup window.'
+  },
+  {
+    category: 'licensing',
+    tools: ['rhino'],
+    q: 'How to configure McNeel LAN Zoo server for internal subnets?',
+    a: 'Install the LAN Zoo server utility on a host, open port 12389 (TCP and UDP) in local firewalls, and add product keys. Configure Rhino clients to use the Zoo server using the host IP or DNS name.'
+  },
+  {
+    category: 'licensing',
+    tools: ['rhino'],
+    q: 'Can we borrow a Rhino license from Cloud Zoo for offline use?',
+    a: 'Yes. In the Rhino licensing setup panel, click \'Borrow License\'. This locks the Zoo seat to your local workstation hardware for up to 30 days, allowing offline modeling without network connections.'
+  },
+  {
+    category: 'licensing',
+    tools: ['rhino'],
+    q: 'How to release a stuck license checkout from LAN Zoo server?',
+    a: 'Open the LAN Zoo Console utility, go to the active client list, select the checked-out computer, and click \'Check In\'. This force releases the seat back to the floating license manager pool.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to fix viewport display lag in Rhino 3D?',
+    a: 'Go to Options > View > OpenGL. Set Anti-aliasing to \'None\' or \'2x\', enable \'GPU Tessellation\', and disable features like shadow redraws. Ensure Rhino uses your high-speed dedicated GPU in driver settings.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to optimize Grasshopper calculation speeds for large data runs?',
+    a: 'Avoid using long nested loops inside C#/Python nodes. Use Grasshopper \'Data Trees\' properly, enable \'Simplify\' to shorten path structures, and disable heavy display previews to reduce rendering overhead.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to reduce file size and memory footprint for large Rhino models?',
+    a: 'Run the \'Purge\' command to remove unused layers, materials, blocks, and linestyles. Save the file with the \'Save Small\' option enabled to discard pre-calculated render meshes and reduce file size.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to speed up viewport mesh generation for dense curves in Rhino?',
+    a: 'Go to Options > Document Properties > Mesh. Set the mesh parameters from \'Smooth and Slower\' to \'Jagged and Faster\' to reduce the graphic facets generated for rendering viewport previews.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to accelerate Grasshopper calculations using GPU computing?',
+    a: 'Use specialized OpenCL/CUDA acceleration plugins for Grasshopper. Ensure your workstation GPU is enabled in the Grasshopper preferences panel and assign computational arrays to parallel processors.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'Why does Rhino freeze when importing massive STEP files?',
+    a: 'Rhino builds NURBS surfaces during imports. In import options, disable \'Join surfaces on import\' to bypass the topology solver. Once imported, you can join selected surfaces using tolerance controls.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to configure the Rhino block manager to save system RAM?',
+    a: 'Use \'Linked Blocks\' instead of \'Embedded Blocks\' for repetitive parts. Linked blocks load geometries on demand and share resources, reducing memory consumption in large scenes.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to disable shadow maps in Rhino to improve frame rate?',
+    a: 'Go to Options > View > Display Modes > Shaded. Under Shadow settings, uncheck \'Cast Shadows\' or lower the shadow resolution to reduce graphic card computing loads.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to configure Rhino OpenCL settings for SubD modeling?',
+    a: 'Go to Options > View > SubD. Enable \'Use OpenCL\' for SubD calculations. This transfers mesh division and editing tasks to the GPU, increasing the viewport frame rate.'
+  },
+  {
+    category: 'performance',
+    tools: ['rhino'],
+    q: 'How to clear user.cfg cache when Rhino startup is extremely slow?',
+    a: 'Go to `%APPDATA%/McNeel/Rhinoceros/8.0/settings`, backup and delete the `settings-Scheme__Default.xml` file. This restores default layouts, settings, and speeds up startup times.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to convert Rhino NURBS surfaces to watertight solids in STEP format?',
+    a: 'Select the surfaces, run the \'Join\' command, and verify that the command line says \'joined into one closed polysurface\'. In export properties, choose \'STEP\' and set the tolerance value to match the design requirements.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to ensure watertight SubD geometries in Rhino 8?',
+    a: 'Select the SubD geometry, run the \'ShowEdges\' command, and set it to \'Naked Edges\'. If naked edges are highlighted, use \'FillMeshHole\' or stitch boundary loops to ensure a watertight solid.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to configure Rhino layer mapping standards for AutoCAD exports?',
+    a: 'Edit the export scheme under Options > File Types > DWG/DXF. Map Rhino layer names, object colors, and linestyles to corresponding AutoCAD standards to ensure drafting compatibility.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to repair surface holes in imported IGES files?',
+    a: 'Run \'Untrim\' to recover boundary edges, adjust tolerances using \'RebuildEdges\', and join surfaces. Use \'ShowEdges\' to verify that no naked interior edges remain.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to standardize Rhino drawing borders for ISO print layouts?',
+    a: 'Create a template file (.3dm) containing standard ISO sheet layouts, title blocks, and scales. Set this file as the default template in Rhino\'s options panel to enforce standards.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to configure Grasshopper script inputs to ensure compatibility?',
+    a: 'Add validation logic inside C#/Python nodes to check input types and ranges. Set up default input parameters and clear data paths to prevent runtime errors.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to configure Rhino laser cutting templates?',
+    a: 'Create separate layers for cut paths (e.g., \'CUT\' = red, \'ENGRAVE\' = blue) in standard templates. Clean curves using \'SelDup\' and \'Make2D\' to ensure G-code translators export clean toolpaths.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to link custom text values to Rhino layouts dynamically?',
+    a: 'Use Rhino\'s \'Text Fields\' feature (e.g., `%<DocumentText("Author")>%`). Any updates to the Document Text will automatically update layout title blocks.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to export STL meshes optimized for SLA 3D printing?',
+    a: 'Use \'Mesh\' command to convert NURBS to mesh. Set max distance edge to 0.01mm. Run \'ShowEdges\' to verify the mesh is watertight before exporting to STL.'
+  },
+  {
+    category: 'standards',
+    tools: ['rhino'],
+    q: 'How to synchronize Rhino shortcut profiles across designers?',
+    a: 'Go to Options > Keyboard, export the keyboard configuration file (.ini), and import it into other workstations to synchronize keyboard shortcuts.'
+  },
+  {
+    category: 'licensing',
+    tools: ['microstation'],
+    q: 'How to set up Bentley SES (Subscription Entitlement Service) licensing?',
+    a: 'Install Bentley Connection Client on the workstation, log in using your enterprise email credentials, and launch MicroStation. Entitlements are pulled automatically from the Bentley Cloud portal.'
+  },
+  {
+    category: 'licensing',
+    tools: ['microstation'],
+    q: 'How long can MicroStation run offline using Bentley SES licensing?',
+    a: 'By default, workstations can run offline for up to 7 days before requiring verification. For extended offline periods, checkout a license seat for up to 30 days in the Bentley Licensing Tool.'
+  },
+  {
+    category: 'licensing',
+    tools: ['microstation'],
+    q: 'How to migrate SELECT Server node keys to Bentley SES?',
+    a: 'Bentley SELECT Server is decommissioned. CAD administrators must transition keys to Bentley SES inside the Bentley Entitlement Management dashboard, mapping active node licenses to users.'
+  },
+  {
+    category: 'licensing',
+    tools: ['microstation'],
+    q: 'How to resolve Bentley SES licensing checkout timeout errors?',
+    a: 'Check that the client can connect to \'https://ims.bentley.com\' and \'https://buddi.bentley.com\' over port 443. Configure proxy details inside Bentley Connection Client settings.'
+  },
+  {
+    category: 'performance',
+    tools: ['microstation'],
+    q: 'How to optimize MicroStation 3D viewport lag in CONNECT Edition?',
+    a: 'Go to Preferences > Raster Manager, enable hardware acceleration, set DirectX variables, and disable dynamic shadows. Verify that MicroStation runs on your dedicated workstation GPU.'
+  },
+  {
+    category: 'performance',
+    tools: ['microstation'],
+    q: 'How to configure raster image caches to speed up large DGN displays?',
+    a: 'In Preferences > Raster Manager > Memory, define a local SSD directory path for image cache files. This speeds up viewport redraws when dealing with massive background images.'
+  },
+  {
+    category: 'performance',
+    tools: ['microstation'],
+    q: 'How to clip reference files to save workstation memory load?',
+    a: 'Use the \'Clip Reference\' tool to limit the visible boundary of referenced drawings. Uncheck \'Display\' for unused references to reduce active RAM consumption during design tasks.'
+  },
+  {
+    category: 'performance',
+    tools: ['microstation'],
+    q: 'How to speed up MicroStation CONNECT startup speeds?',
+    a: 'Clean local user preference files (.upf) and disable automatic startup checking for network references in workspace settings to accelerate startup times.'
+  },
+  {
+    category: 'standards',
+    tools: ['microstation'],
+    q: 'How to preserve custom linestyles when converting DGN to DWG?',
+    a: 'In DGN-to-DWG export options, select \'Custom Linestyles\', map linestyles to SHX fonts, and define a layer mapping file to prevent linestyle distortion in AutoCAD.'
+  },
+  {
+    category: 'standards',
+    tools: ['microstation'],
+    q: 'How to distribute network Workspace and WorkSet directories in MicroStation?',
+    a: 'Set up a shared network directory for configurations, modify the \'ConfigurationSetup.cfg\' file on clients, and point \'_USTN_CUSTOM_CONFIGURATION\' to the network path.'
+  },
+  {
+    category: 'standards',
+    tools: ['microstation'],
+    q: 'How to configure CEL libraries to standardize components in MicroStation?',
+    a: 'Store cells in a central cell library (.cel) file, place it in a network workspace path, and set the \'_USTN_CELLLIST\' environment variable pointing to the file to make cells available to team members.'
+  },
+  {
+    category: 'standards',
+    tools: ['microstation'],
+    q: 'How to fix geospatial coordinates drifts during DGN reference links?',
+    a: 'Go to Drawing Properties > Coordinate System, select \'Inherit GCS from Reference\' or select a matching projection system to prevent model shifts.'
+  },
+  {
+    category: 'standards',
+    tools: ['microstation'],
+    q: 'How to configure drawing pen tables in MicroStation?',
+    a: 'Edit pen tables (.tbl) inside Print Organizer, map color indexes to pen weights, and save. Link this pen table to standard printer drivers to standardize PDF outputs.'
+  },
+  {
+    category: 'standards',
+    tools: ['microstation'],
+    q: 'How to map custom attributes to MicroStation title block cells?',
+    a: 'Use \'Tags\' or \'Item Types\' in MicroStation. Create a cell containing tag placeholders, associate it with drawing properties, and the title block cells will update automatically.'
+  },
+  {
+    category: 'standards',
+    tools: ['microstation'],
+    q: 'How to repair SmartSolids boolean operation errors in MicroStation?',
+    a: 'SmartSolids boolean errors are caused by geometry overlaps or self-intersections. Use the \'Stitch\' tool to repair faces, verify manifold boundaries, and retry boolean operations.'
+  },
+  {
+    category: 'standards',
+    tools: ['openscad'],
+    q: 'How to resolve \'Object not manifold\' errors in OpenSCAD CSG rendering?',
+    a: 'This occurs when boolean operations create infinitely thin walls or intersecting faces. Offset overlapping faces by a small value (e.g., 0.001mm) to ensure clean intersections inside CGAL solvers.'
+  },
+  {
+    category: 'standards',
+    tools: ['openscad'],
+    q: 'How to integrate external MCAD/BOSL2 libraries in OpenSCAD?',
+    a: 'Download the library repository, place it inside the library path (`%USERPROFILE%/Documents/OpenSCAD/libraries` on Windows), and add the `use <BOSL2/std.scad>` directory reference at the top of your scripts.'
+  },
+  {
+    category: 'standards',
+    tools: ['openscad'],
+    q: 'How to resolve double-precision floating errors in OpenSCAD CGAL solvers?',
+    a: 'Avoid using values that are too close (e.g., subtraction of identical coordinates). Add alignment values or offset geometries to prevent floating-point calculation errors.'
+  },
+  {
+    category: 'performance',
+    tools: ['openscad'],
+    q: 'How to optimize OpenSCAD render times when setting $fn values?',
+    a: 'Avoid setting a large global `$fn` variable (e.g., `$fn=200`). Use local facet configurations (e.g., `cylinder(r=5, h=10, $fn=50)`) only where high facet detail is required to reduce memory load.'
+  },
+  {
+    category: 'performance',
+    tools: ['openscad'],
+    q: 'How to optimize the OpenSCAD viewport display for heavy scripts?',
+    a: 'Lower Options > View > OpenCSG settings, disable high-quality rendering, and increase the rendering cache size. Enable viewport downscaling to prevent lag during rotation.'
+  },
+  {
+    category: 'standards',
+    tools: ['openscad'],
+    q: 'Why does the difference() boolean fail with warning red marks in OpenSCAD?',
+    a: 'This occurs when the subtracted shape does not completely overlap the boundary of the main shape. Extend the dimensions of the subtracted shape to ensure clean geometric boundaries.'
+  },
+  {
+    category: 'standards',
+    tools: ['openscad'],
+    q: 'How to fix blank viewports when importing STL files into OpenSCAD?',
+    a: 'Ensure the imported STL does not contain self-intersections or corrupted face indexing. Use external mesh repair tools to heal the STL before importing it using the `import()` command.'
+  },
+  {
+    category: 'standards',
+    tools: ['openscad'],
+    q: 'How to fix self-intersection errors in linear_extrude() twist?',
+    a: 'Reduce the twist value or simplify the base 2D polygon profile. Twist operations on complex polygons can cause facets to intersect, crashing the rendering engine.'
+  },
+  {
+    category: 'performance',
+    tools: ['openscad'],
+    q: 'How to configure headless CLI rendering in OpenSCAD on server OS?',
+    a: 'Run OpenSCAD in headless mode using `xvfb-run` on Linux servers: `xvfb-run openscad -o output.stl input.scad`. This creates a virtual display buffer to compile and export shapes.'
+  },
+  {
+    category: 'standards',
+    tools: ['openscad'],
+    q: 'How to configure OpenSCAD workbench integration in FreeCAD?',
+    a: 'In FreeCAD, go to Preferences > OpenSCAD, and set the path pointing to the OpenSCAD executable file. This allows FreeCAD to execute OpenSCAD commands and scripts directly.'
+  },
 ];
