@@ -1810,4 +1810,125 @@ export const accordionFaqs: AccordionFaq[] = [
     q: 'How to link and georeference ESRI GIS Shapefiles (SHP) into Revit models?',
     a: 'Revit cannot link SHP files directly. Convert the shapefile to DWG using AutoCAD Map 3D (`MAPIMPORT`). In Revit, link the DWG, use \'Specify Coordinates at Point\' to anchor your survey base point, and save a matching `.prj` file alongside the RVT.'
   },
+  {
+    category: 'licensing',
+    tools: ['altium-designer'],
+    q: 'How do we resolve Altium 365 cloud subscription workspace login timeouts and offline workspace locks?',
+    a: 'Altium 365 Named User licenses require periodic network pings. If local proxy servers block `*.altium.com` on port 443, the application triggers workspace access lockouts. Configure outbound proxy whitelist exceptions for `*.altium.com`, `*.live.altium.com`, and `*.okta.com`. For completely air-gapped sites, convert your seats to Standalone Licenses using the Altium Portal and deploy the generated `.alf` license files locally.'
+  },
+  {
+    category: 'licensing',
+    tools: ['altium-designer'],
+    q: 'How to diagnose Altium Private License Server (PLS) connection dropouts and port binding blocks?',
+    a: 'Altium PLS services route traffic through port 9780 (HTTP) and port 9785 (HTTPS) by default. If clients fail to fetch licenses, open Windows Defender Firewall on the server, create Inbound rules for TCP ports 9780 and 9785. On client computers, verify that Altium\'s Setup under \'License Management\' > \'Setup Private License Server\' points to the correct domain hostname or IPv4 IP.'
+  },
+  {
+    category: 'licensing',
+    tools: ['altium-designer'],
+    q: 'How can an IT administrator restrict license borrowing duration and set up auto-release for Altium PLS?',
+    a: 'Open your PLS configuration tool (or Altium Infrastructure Server dashboard). Under Licensing Rules: 1. Set the maximum license borrowing duration limit to 168 hours (7 days). 2. Turn on automatic seat reclamation by configuring the idle session release parameter (recommended: 900 seconds / 15 minutes of inactivity) to prevent inactive design sessions from locking up shared seats.'
+  },
+  {
+    category: 'licensing',
+    tools: ['altium-designer'],
+    q: 'How to perform a silent command-line deployment of Altium Designer across enterprise workstations?',
+    a: 'Use Microsoft Intune or script deployments targeting the Altium MSI installer. Run: `msiexec.exe /i "AltiumDesignerSetup.msi" /qn INSTALLDIR="C:\\Program Files\\Altium\\AD" ADDLOCAL=System,PCB,Schematic,Draftsman,Outputs LICENSE_SERVER="9780@PLS_SERVER_IP"` to run a headless deployment without UI interaction.'
+  },
+  {
+    category: 'licensing',
+    tools: ['altium-designer'],
+    q: 'How do we allocate specific Altium licenses to different engineering groups using the Altium Infrastructure Server (AIS)?',
+    a: 'Log in to your local AIS admin console. Navigate to the Users and Groups tab. Define groups (e.g., \'RF_Team\', \'Digital_Layout\'). Go to Licenses > Allocation, assign target license pools (e.g., Altium Designer SE or Subscription seats) to these groups, and configure \'Limit Usage\' parameters to restrict seats from being consumed by other departments.'
+  },
+  {
+    category: 'licensing',
+    tools: ['altium-designer'],
+    q: 'How do we handle Altium EULA licensing audits and block local system telemetry?',
+    a: 'Altium audits check for unauthorized activations using built-in system telemetry. To enforce company compliance and block telemetry: 1. Go to System Preferences > System > Account and disable \'Send anonymous usage statistics\'. 2. For secure subnets, set domain firewall block rules targeting `telemetry.altium.com` and `customer-experience.altium.com` to prevent outbound data transfers.'
+  },
+  {
+    category: 'performance',
+    tools: ['altium-designer'],
+    q: 'How to prevent startup lag and search path freezes when porting P-CAD or OrCAD legacy libraries to Altium Designer?',
+    a: 'Legacy databases contain absolute file paths that Altium tries to search on startup, causing network timeouts. To fix: Open the Libraries panel, remove unresolvable network path entries, and convert legacy `.lib` and `.olb` databases into compiled library packages (`.IntLib`) or Altium DbLib database links using SQL Server Express.'
+  },
+  {
+    category: 'performance',
+    tools: ['altium-designer'],
+    q: 'How to resolve viewport lag and graphics freezes when switching to 3D layout view in Altium Designer?',
+    a: '3D view freezes point to graphics hardware rendering conflicts. In Altium, go to System Preferences > PCB Editor > Display. Under Advanced Graphics Options, verify that hardware acceleration is set to ON and check that OpenGL is bound to your dedicated workstation GPU (NVIDIA RTX/Quadro) rather than integrated graphics.'
+  },
+  {
+    category: 'performance',
+    tools: ['altium-designer'],
+    q: 'How to optimize Online Design Rule Check (DRC) processing slowdowns on complex multi-layer boards?',
+    a: 'Online DRC runs geometry checks on every cursor movement, causing layout lag. Go to Tools > Design Rule Check > Rules to Check. Disable online checking for rules that require heavy computing (e.g., Clearance, Polygon-to-Split-Plane, and Silk-to-Solder-Mask). Keep these set to Batch DRC mode, allowing you to run audits only prior to exporting production files.'
+  },
+  {
+    category: 'performance',
+    tools: ['altium-designer'],
+    q: 'How to resolve Git version control sync deadlocks and file lock conflicts in Altium 365?',
+    a: 'Git lock collisions occur when multiple designers edit the same binary PCB document (`.PcbDoc`) simultaneously. Use Altium\'s built-in VCS Lock feature: Right-click the document and select \'VCS\' > \'Lock\'. This marks the document as read-only for other team members in the Altium 365 workspace, preventing merge conflicts.'
+  },
+  {
+    category: 'performance',
+    tools: ['altium-designer'],
+    q: 'How to troubleshoot Altium OutJob PDF generator crashes and printer driver freezes?',
+    a: 'OutJob freezes are caused by legacy network printer drivers or corrupted PDF configurations. Go to the OutJob setup file, select PDF outputs, and click \'Configure\'. Under Page Setup, switch the target printer from physical network hardware to \'Adobe PDF\' or Altium\'s native \'PDF Export\' driver. Ensure your system\'s default printer is set to a local software driver.'
+  },
+  {
+    category: 'performance',
+    tools: ['altium-designer'],
+    q: 'How to speed up schematic compiler processing and resolve violation check hangs?',
+    a: 'Schematic compiler lag occurs when compiling massive multi-sheet designs. Go to Project > Project Options > Error Reporting. Change harmless warnings (e.g., \'Unconnected object\', \'Net with no driving source\') from \'Error\' or \'Warning\' to \'No Report\'. This reduces the compiler lookup table size and speeds up netlist generation.'
+  },
+  {
+    category: 'performance',
+    tools: ['altium-designer'],
+    q: 'How to eliminate viewport stuttering when rendering high-density polygon pours?',
+    a: 'polygon recalculations consume significant CPU resources. To optimize viewport performance: Go to System Preferences > PCB Editor > Polygon Repour. Change the repour behavior from \'Always\' or \'Prompt\' to \'Never\' or \'Manual\'. This stops Altium from recalculating polygons on every component move, letting you repour them manually (using `T-G-A`) once routing is complete.'
+  },
+  {
+    category: 'standards',
+    tools: ['altium-designer'],
+    q: 'How do we configure a multi-layer PCB impedance profile using the Layer Stack Manager?',
+    a: 'Open the Layer Stack Manager (Design > Layer Stack Manager). Go to the Impedance tab, click Add Impedance Profile. Select target layers (e.g., Top, Bottom, or Mid-layers) and define target impedance (e.g. 50-ohm single-ended or 100-ohm differential). Input copper thickness and dielectric properties from your board house, and run the built-in Solver to calculate the exact trace width limits.'
+  },
+  {
+    category: 'standards',
+    tools: ['altium-designer'],
+    q: 'How to resolve board outline scaling mismatches (mil vs mm) when importing DXF files into Altium Designer?',
+    a: 'Scaling issues happen when import units do not match the DXF export settings. In Altium, go to File > Import > DXF/DWG. In the import dialog, match the units parameter (Imperial for mils, Metric for mm) to the CAD file\'s original units. Check \'Locate Auto\' to align coordinate centers, and map DXF outlines directly to the Keep-Out layer.'
+  },
+  {
+    category: 'standards',
+    tools: ['altium-designer'],
+    q: 'How to export Gerber X2 and IPC-2581 production output files with exact NC drill tolerances?',
+    a: 'Standard Gerber RS-274X lacks layer stack definitions, which can cause stackup errors. To export newer standards: Go to File > Assembly Outputs > IPC-2581. Set the unit type to Metric and grid to 2:4 format. In the OutJob file, configure NC Drill files, click Properties, and ensure drill coordinate formats match Gerber settings (e.g., 2:4 Metric, Suppress Leading Zeros).'
+  },
+  {
+    category: 'standards',
+    tools: ['altium-designer'],
+    q: 'How to resolve 3D STEP model alignment offsets and configure mechanical clearance rules?',
+    a: 'STEP offsets occur when the 3D model origin differs from the PCB footprint origin. Double-click the 3D body component, select \'Standoff Height\' and rotation angles to align it with PCB pads. Go to Design > Rules > Placement > Component Clearance, and create a rule specifying the minimum spacing (e.g., 0.25mm) between 3D shapes to prevent collision issues.'
+  },
+  {
+    category: 'standards',
+    tools: ['altium-designer'],
+    q: 'How to configure panelization arrays and V-Groove breakout routing guidelines in Altium Designer?',
+    a: 'Create a new PCB file representing the panel. Go to Place > Embedded Board Array. Link this array to your target board file, define the row/column count (e.g., 2x3), and specify panel margins (e.g., 5mm). Place a route guide line on the mechanical layer representing the V-Groove depth (typically 1/3 of board thickness from top and bottom) for routing.'
+  },
+  {
+    category: 'standards',
+    tools: ['altium-designer'],
+    q: 'How do we run Python scripts via the Altium Scripting API to automate custom design rule audits?',
+    a: 'Altium Designer supports scripting to automate design tasks. Create a new script project (File > New > Script Project), select Python as the scripting engine. Write your audit script importing `AltiumDesigner.Api` namespace. Use `PCBServer.GetCurrentPCBHand()` to query active layout geometries, loop through components, check parameters, and write violations directly to an external CSV file.'
+  },
+  {
+    category: 'standards',
+    tools: ['altium-designer'],
+    q: 'How to resolve schematic sheet connector nets compiler violations in hierarchical design projects?',
+    a: 'Hierarchical compiler violations occur when Sheet Entries on a sheet symbol do not match the Ports on the child sheet. Right-click the parent sheet symbol and select \'Sheet Symbol Actions\' > \'Synchronize Sheet Entries and Ports\'. Inspect mismatched pins, select missing connections, and click \'Apply\' to synchronize sheet connections.'
+  },
+
 ];

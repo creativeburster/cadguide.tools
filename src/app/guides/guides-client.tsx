@@ -628,6 +628,7 @@ function getCategoryTabsForTool(tool: any): { id: string; label: string }[] {
   const industries = tool.industries || [];
   const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
   const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
+  const isEDA = industries.some((i: string) => /electronics|eda|pcb|hardware/i.test(i)) || tool.category_id === 'c6' || tool.category_id === 'eda' || tool.slug === 'altium-designer';
   const isOpenSource = (tool.pricing_type as string) === 'Open Source' || (tool.pricing_type as string) === 'Free';
 
   let filtered = defaultTabs;
@@ -648,6 +649,12 @@ function getCategoryTabsForTool(tool: any): { id: string; label: string }[] {
       if (t.id === 'printing') return { id: t.id, label: 'Drawing & Pen Styles' };
       if (t.id === 'standards') return { id: t.id, label: 'MCAD Formats & Standards' };
     }
+    if (isEDA) {
+      if (t.id === 'migration') return { id: t.id, label: 'Library & Database Sync' };
+      if (t.id === 'manufacturing') return { id: t.id, label: 'PCB Layout & Gerber Setup' };
+      if (t.id === 'printing') return { id: t.id, label: 'OutJob Output Generation' };
+      if (t.id === 'standards') return { id: t.id, label: 'Signal Integrity & DRC Rules' };
+    }
     if (tool.slug === 'autocad') {
       if (t.id === 'migration') return { id: t.id, label: 'AutoLISP & ObjectARX' };
       if (t.id === 'printing') return { id: t.id, label: 'Plot Style & Printing' };
@@ -663,6 +670,7 @@ function getMappedCategoryInfo(category: string, tool: any, originalTitle: strin
   const industries = tool.industries || [];
   const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
   const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
+  const isEDA = industries.some((i: string) => /electronics|eda|pcb|hardware/i.test(i)) || tool.category_id === 'c6' || tool.category_id === 'eda' || tool.slug === 'altium-designer';
 
   let title = originalTitle;
   let desc = originalDesc;
@@ -694,6 +702,20 @@ function getMappedCategoryInfo(category: string, tool: any, originalTitle: strin
     } else if (category === 'standards') {
       title = 'MCAD Formats & Standards';
       desc = `Repair imported STEP/IGES surface tears, set modeling tolerance, and align coordinate origins in ${tool.name}.`;
+    }
+  } else if (isEDA) {
+    if (category === 'migration') {
+      title = 'Library & Database Sync';
+      desc = `Import legacy database libraries, manage database connection strings, and automate tasks with the scripting API in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      title = 'PCB Layout & Gerber Setup';
+      desc = `Configure multi-board panelizations, mechanical rout lines, and export NC drill files in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'OutJob Output Generation';
+      desc = `Configure output jobs (.OutJob), fix PDF generator crashes, and generate PCB assembly print layouts in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'Signal Integrity & DRC Rules';
+      desc = `Configure impedance profiles, match trace lengths, and establish clearance rules for 3D components in ${tool.name}.`;
     }
   } else if (tool.slug === 'autocad') {
     if (category === 'migration') {

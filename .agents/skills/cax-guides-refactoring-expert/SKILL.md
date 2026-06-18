@@ -7,6 +7,14 @@ description: 用于 CAx/BIM 软件专业技术指南与 Q&A 数据库的深度�
 
 本技能旨在规范 `cadguide.tools` 项目中全量 240 个 CAD/BIM/CAE/EDA 软件的指南（Guides）与问答（FAQs）的扩容开发，确保生成的内容 100% 具备技术真实性，消除 AI 腔调，并彻底杜绝“张冠李戴”的穿帮现象。
 
+> [!IMPORTANT]
+> **📐 内容体量判定铁律：全网痕迹与官网事实驱动 (No Synthetic Guesswork)**
+> 禁止使用主观的“软件功能打分模型”去生硬派发指南和 FAQ 的数量。每个软件的内容体量**必须且只能**基于以下客观事实的真实回溯：
+> 1. **官网 Support/KB 现存的 Known Issues 真实体量** (官网没有的，绝不生造)。
+> 2. **Reddit、官方论坛、GitHub 社区关于该软件排错的真实发帖痕迹厚度** (社区无人讨论的偏门 Bug，绝不无中生有)。
+> 3. **搜索引擎中用户的真实检索曝光量 (Search Intent Trace)**。
+> **量化规程**：全网痕迹庞大的软件 (如 AutoCAD, SolidWorks, Altium) 撰写 100+ 篇；痕迹中等的主流软件 (如 Archicad, Bluebeam) 撰写 20~40 篇；对于痕迹稀少的小众/闭源冷门软件 (如 Cimatron, Cabinet Vision)，**有几条真实痕迹就写几条 (如 3~5 篇/条)，哪怕只有几篇也必须 100% 真实，严禁为了强行凑数而胡编乱造，导致张冠李戴。**
+
 ---
 
 ## 📂 1. 技术事实获取与深度学习 (Fact-Finding & Grabbing)
