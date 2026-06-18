@@ -10,7 +10,9 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 import {
   Search,
-  ChevronRight
+  ChevronRight,
+  ChevronDown,
+  X
 } from 'lucide-react';
 
 import {
@@ -39,6 +41,44 @@ export default function GuidesClient() {
 
   // Search logic for left sidebar
   const [searchQuery, setSearchQuery] = useState('');
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Click outside to close dropdown
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleSelectTool = (slug: string) => {
+    setSelectedToolSlug(slug);
+    setIsOpen(false);
+    setSearchTerm('');
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      if (slug === 'all') {
+        url.searchParams.delete('tool');
+      } else {
+        url.searchParams.set('tool', slug);
+      }
+      window.history.pushState({}, '', url.toString());
+    }
+  };
+
+  const sortedToolsList = [...tools].sort((a, b) => a.name.localeCompare(b.name));
+  const filteredToolsList = sortedToolsList.filter(t => 
+    t.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    t.slug.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const selectedTool = tools.find(t => t.slug === selectedToolSlug) || null;
   const meta = selectedTool ? getArchetypeMetadata(selectedTool.category_id) : null;
@@ -214,33 +254,85 @@ export default function GuidesClient() {
             <span className="text-[9px] font-black tracking-widest text-slate-400 uppercase block">
               Active Software Focus
             </span>
-            <div className="relative">
-              <select
-                value={selectedToolSlug}
-                onChange={(e) => {
-                  setSelectedToolSlug(e.target.value);
-                  if (typeof window !== 'undefined') {
-                    const url = new URL(window.location.href);
-                    if (e.target.value === 'all') {
-                      url.searchParams.delete('tool');
-                    } else {
-                      url.searchParams.set('tool', e.target.value);
-                    }
-                    window.history.pushState({}, '', url.toString());
-                  }
-                }}
-                className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold rounded-xl pl-3 pr-8 py-2.5 appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 shadow-sm cursor-pointer hover:bg-slate-100/50"
+            <div className="relative" ref={dropdownRef}>
+              {/* Trigger Button */}
+              <button
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold rounded-xl pl-3 pr-8 py-2.5 text-left flex items-center justify-between shadow-sm cursor-pointer hover:bg-slate-100/50 focus:outline-none focus:ring-1 focus:ring-blue-500"
               >
-                <option value="all">⚡ All Software</option>
-                {[...tools].sort((a, b) => a.name.localeCompare(b.name)).map((t) => (
-                  <option key={t.slug} value={t.slug}>
-                    {t.name}
-                  </option>
-                ))}
-              </select>
-              <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-slate-400 text-[9px]">
-                ▼
-              </div>
+                <span className="truncate">
+                  {selectedToolSlug === 'all' ? '⚡ All Software' : (selectedTool?.name || selectedToolSlug)}
+                </span>
+                <ChevronDown className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              </button>
+
+              {/* Popover List */}
+              {isOpen && (
+                <div className="absolute left-0 right-0 mt-1.5 z-50 bg-white border border-slate-200/80 rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[260px] animate-in fade-in-50 slide-in-from-top-1 duration-100">
+                  {/* Search Input inside Popover */}
+                  <div className="p-2 border-b border-slate-100 flex items-center gap-1.5 bg-slate-50/50">
+                    <Search className="w-3.5 h-3.5 text-slate-400 shrink-0 ml-1" />
+                    <input
+                      type="text"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      placeholder="Filter software..."
+                      className="w-full bg-transparent text-xs font-medium focus:outline-none text-slate-700 py-1"
+                      autoFocus
+                    />
+                    {searchTerm && (
+                      <button
+                        type="button"
+                        onClick={() => setSearchTerm('')}
+                        className="text-slate-400 hover:text-slate-600 p-0.5 rounded-full hover:bg-slate-200/50 transition-colors"
+                      >
+                        <X className="w-3.5 h-3.5" />
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Options List */}
+                  <div className="overflow-y-auto py-1 flex-1">
+                    <button
+                      type="button"
+                      onClick={() => handleSelectTool('all')}
+                      className={cn(
+                        "w-full text-left px-3 py-2 text-xs font-bold transition-colors flex items-center justify-between",
+                        selectedToolSlug === 'all' 
+                          ? "bg-blue-50 text-blue-600" 
+                          : "text-slate-700 hover:bg-slate-50"
+                      )}
+                    >
+                      <span>⚡ All Software</span>
+                    </button>
+                    {filteredToolsList.length > 0 ? (
+                      filteredToolsList.map((t) => {
+                        const isSelected = selectedToolSlug === t.slug;
+                        return (
+                          <button
+                            key={t.slug}
+                            type="button"
+                            onClick={() => handleSelectTool(t.slug)}
+                            className={cn(
+                              "w-full text-left px-3 py-2 text-xs font-semibold transition-colors flex items-center justify-between",
+                              isSelected 
+                                ? "bg-blue-50 text-blue-600 font-bold" 
+                                : "text-slate-700 hover:bg-slate-50"
+                            )}
+                          >
+                            <span>{t.name}</span>
+                          </button>
+                        );
+                      })
+                    ) : (
+                      <div className="px-3 py-4 text-center text-xs text-slate-400 font-medium">
+                        No software found
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </Card>
 
