@@ -548,7 +548,7 @@ export default function GuidesClient() {
       isArticleCompatibleWithTool(g.title, g.category, selectedTool)
     );
     
-    let safe = allCompatible.slice(0, 20);
+    let safe = allCompatible;
     if (safe.length < 4) {
       const fallbackPool = ARTICLES_LIST.filter(
         (g) =>
@@ -558,7 +558,7 @@ export default function GuidesClient() {
           !g.title.toLowerCase().includes("ssot") &&
           !g.title.toLowerCase().includes("procurement")
       );
-      safe = [...safe, ...fallbackPool].slice(0, 20);
+      safe = [...safe, ...fallbackPool].slice(0, 100);
     }
     
     return safe.map((g) => {
@@ -568,7 +568,7 @@ export default function GuidesClient() {
         title: localized.title,
         excerpt: localized.excerpt,
         keyword: localized.keyword,
-        slug: `${selectedTool.slug}-${g.category}-${g.id.split('-').pop()}`
+        slug: g.slug
       };
     });
   }, [selectedTool]);
@@ -684,12 +684,6 @@ export default function GuidesClient() {
   ];
 
   const filteredSidebarItems = sidebarNavItems
-    .filter(item => {
-      if (process.env.NODE_ENV === 'development') {
-        return item.id !== 'sitemap';
-      }
-      return true;
-    })
     .filter(item => item.label.toLowerCase().includes(searchQuery.toLowerCase()));
 
   return (
@@ -811,12 +805,7 @@ export default function GuidesClient() {
               { id: 'graph', label: 'Interactive Graph' },
               { id: 'faq', label: 'Technical FAQ' },
               { id: 'sitemap', label: 'Sitemap' }
-            ].filter(tab => {
-              if (process.env.NODE_ENV === 'development') {
-                return tab.id !== 'sitemap';
-              }
-              return true;
-            }).map((tab) => (
+            ].map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setCurrentView(tab.id as any)}
@@ -866,163 +855,96 @@ export default function GuidesClient() {
                 </div>
               </Card>
 
-              {process.env.NODE_ENV === 'development' ? (
-                /* Brand New Three-Column Navigation Cards for Local Dev Sandbox */
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <Card className="border border-slate-200/60 shadow-sm rounded-3xl p-6 bg-white hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg font-bold">
-                        🌐
-                      </div>
-                      <h3 className="text-base font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
-                        Knowledge Graph
-                      </h3>
-                      <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                        Explore the interactive multi-dimensional network connecting 240+ CAD/BIM software kernels, licensing parameters, and cross-format conversions.
-                      </p>
-                    </div>
-                    <Button
-                      onClick={() => setCurrentView('graph')}
-                      className="w-full mt-6 h-9 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs"
+              {/* Symmetric Grid of Category sections */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {sortedCategorySections.map((p, idx) => {
+                  const isCardOpen = selectedToolSlug !== 'all'
+                    ? openCardAccordions[p.id] !== false
+                    : !!openCardAccordions[p.id];
+                  return (
+                    <Card
+                      key={p.id}
+                      className="border border-slate-200/50 shadow-sm rounded-3xl p-6 sm:p-7 bg-white relative overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 group"
                     >
-                      Open Graph
-                    </Button>
-                  </Card>
+                      <div className="relative z-10 space-y-4">
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                            Section {idx + 1}
+                          </span>
+                          <Badge variant="outline" className="bg-slate-50 text-slate-500 text-[8px] font-bold border-slate-100 uppercase tracking-wide">
+                            {p.countLabel}
+                          </Badge>
+                        </div>
+                        
+                        <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                          <span className={`w-1 h-5 rounded-full bg-gradient-to-b ${p.gradient}`} />
+                          {p.title}
+                        </h3>
+                        
+                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
+                          {p.desc}
+                        </p>
 
-                  <Card className="border border-slate-200/60 shadow-sm rounded-3xl p-6 bg-white hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <div className="w-10 h-10 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg font-bold">
-                        🔮
-                      </div>
-                      <h3 className="text-base font-black text-slate-900 tracking-tight group-hover:text-purple-600 transition-colors">
-                        Concepts & Index
-                      </h3>
-                      <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                        Search and index technical terms, geometric cores (like Parasolid, ACIS), file schemas, and customized enterprise menus (CUIX) parameters.
-                      </p>
-                    </div>
-                    <Button
-                      onClick={() => setCurrentView('concepts')}
-                      className="w-full mt-6 h-9 rounded-xl bg-[#1e293b] hover:bg-slate-800 text-white font-bold text-xs"
-                    >
-                      View Concepts
-                    </Button>
-                  </Card>
-
-                  <Card className="border border-slate-200/60 shadow-sm rounded-3xl p-6 bg-white hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <div className="w-10 h-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg font-bold">
-                        💬
-                      </div>
-                      <h3 className="text-base font-black text-slate-900 tracking-tight group-hover:text-indigo-600 transition-colors">
-                        Technical FAQ
-                      </h3>
-                      <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                        Quick solutions for advanced concurrent seat queue errors, workstation RAM overrides, and graphics hardware stutters.
-                      </p>
-                    </div>
-                    <Button
-                      onClick={() => setCurrentView('faq')}
-                      className="w-full mt-6 h-9 rounded-xl bg-slate-100 hover:bg-slate-200/60 text-slate-700 font-bold text-xs border border-slate-200"
-                    >
-                      Browse FAQ
-                    </Button>
-                  </Card>
-                </div>
-              ) : (
-                /* Symmetric Grid of Category sections (Production only) */
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {sortedCategorySections.map((p, idx) => {
-                    const isCardOpen = !!openCardAccordions[p.id];
-                    return (
-                      <Card
-                        key={p.id}
-                        className="border border-slate-200/50 shadow-sm rounded-3xl p-6 sm:p-7 bg-white relative overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 group"
-                      >
-                        <div className="relative z-10 space-y-4">
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                              Section {idx + 1}
+                        <div className="flex flex-wrap gap-1.5 pt-1">
+                          {p.tags.slice(0, 3).map((tag) => (
+                            <span key={tag} className="text-[9px] font-bold bg-slate-50 border border-slate-150 text-slate-400 px-2 py-0.5 rounded">
+                              {tag}
                             </span>
-                            <Badge variant="outline" className="bg-slate-50 text-slate-500 text-[8px] font-bold border-slate-100 uppercase tracking-wide">
-                              {p.countLabel}
-                            </Badge>
-                          </div>
-                          
-                          <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight flex items-center gap-2 group-hover:text-blue-600 transition-colors">
-                            <span className={`w-1 h-5 rounded-full bg-gradient-to-b ${p.gradient}`} />
-                            {p.title}
-                          </h3>
-                          
-                          <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
-                            {p.desc}
-                          </p>
+                          ))}
+                        </div>
 
-                          <div className="flex flex-wrap gap-1.5 pt-1">
-                            {p.tags.slice(0, 3).map((tag) => (
-                              <span key={tag} className="text-[9px] font-bold bg-slate-50 border border-slate-150 text-slate-400 px-2 py-0.5 rounded">
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
+                        <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                          <button
+                            onClick={() => toggleCardAccordion(p.id)}
+                            className="text-xs font-black uppercase tracking-wider text-blue-600 hover:text-blue-700 transition-colors"
+                          >
+                            {isCardOpen ? 'Collapse Guides ▲' : 'Unfold Guides ▼'}
+                          </button>
+                        </div>
 
-                          <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-                            <button
-                              onClick={() => toggleCardAccordion(p.id)}
-                              className="text-xs font-black uppercase tracking-wider text-blue-600 hover:text-blue-700 transition-colors"
-                            >
-                              {isCardOpen ? 'Collapse Guides ▲' : 'Unfold Guides ▼'}
-                            </button>
-                          </div>
-
-                          {/* Unfolded links */}
-                          <div className={cn(
-                            "transition-all duration-300 ease-in-out overflow-hidden space-y-3",
-                            isCardOpen ? "max-h-[500px] pt-4 border-t border-slate-100 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
-                          )}>
-                            {process.env.NODE_ENV === 'development' ? (
-                              <div className="text-[10px] text-slate-400 font-bold bg-slate-50 border border-slate-100 p-2.5 rounded-lg text-center select-none">
-                                🔒 Guides hidden in Local Dev (30-Day Plan Sandbox)
-                              </div>
-                            ) : selectedTool ? (
-                              safeAvailableGuides.filter(art => art.category === p.category).length > 0 ? (
-                                <ul className="space-y-2.5 text-xs">
-                                  {safeAvailableGuides
-                                    .filter(art => art.category === p.category)
-                                    .map((art) => (
-                                      <li key={art.title} className="flex items-start gap-1.5">
-                                        <span className="text-blue-500 font-bold shrink-0 mt-0.5">→</span>
-                                        <Link href={`/guides/${art.slug}`} className="font-bold text-slate-700 hover:text-blue-600 hover:underline">
-                                          {art.title}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                </ul>
-                              ) : (
-                                <span className="text-[10px] text-slate-400 block italic">No specific guides for {selectedTool.name} in this section.</span>
-                              )
-                            ) : (
+                        {/* Unfolded links */}
+                        <div className={cn(
+                          "transition-all duration-300 ease-in-out overflow-hidden space-y-3",
+                          isCardOpen ? "max-h-[500px] pt-4 border-t border-slate-100 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+                        )}>
+                          {selectedTool ? (
+                            safeAvailableGuides.filter(art => art.category === p.category).length > 0 ? (
                               <ul className="space-y-2.5 text-xs">
-                                {ARTICLES_LIST.filter(a => a.category === p.category).slice(0, 4).map((art) => {
-                                  const slug = `${art.softwareSlug}-${art.category}-${art.id.split('-').pop()}`;
-                                  return (
+                                {safeAvailableGuides
+                                  .filter(art => art.category === p.category)
+                                  .map((art) => (
                                     <li key={art.title} className="flex items-start gap-1.5">
-                                      <span className="text-blue-500 font-bold shrink-0">→</span>
-                                      <Link href={`/guides/${slug}`} className="font-bold text-slate-700 hover:text-blue-600 hover:underline">
+                                      <span className="text-blue-500 font-bold shrink-0 mt-0.5">→</span>
+                                      <Link href={`/guides/${art.slug}`} className="font-bold text-slate-700 hover:text-blue-600 hover:underline">
                                         {art.title}
                                       </Link>
                                     </li>
-                                  );
-                                })}
+                                  ))}
                               </ul>
-                            )}
-                          </div>
+                            ) : (
+                              <span className="text-[10px] text-slate-400 block italic">No specific guides for {selectedTool.name} in this section.</span>
+                            )
+                          ) : (
+                            <ul className="space-y-2.5 text-xs">
+                              {ARTICLES_LIST.filter(a => a.category === p.category).slice(0, 4).map((art) => {
+                                const slug = art.slug;
+                                return (
+                                  <li key={art.title} className="flex items-start gap-1.5">
+                                    <span className="text-blue-500 font-bold shrink-0">→</span>
+                                    <Link href={`/guides/${slug}`} className="font-bold text-slate-700 hover:text-blue-600 hover:underline">
+                                      {art.title}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          )}
                         </div>
-                      </Card>
-                    );
-                  })}
-                </div>
-              )}
+                      </div>
+                    </Card>
+                  );
+                })}
+              </div>
             </div>
           )}
 
@@ -1153,12 +1075,10 @@ export default function GuidesClient() {
                                 url.searchParams.set('tool', selectedGraphNode.id);
                                 window.history.pushState({}, '', url.toString());
                               }
-                              if (process.env.NODE_ENV !== 'development') {
-                                setCurrentView('overview');
-                              }
+                              setCurrentView('overview');
                             }}
                           >
-                            <Eye className="w-3.5 h-3.5" /> {process.env.NODE_ENV === 'development' ? 'Focus Software' : 'Filter Guides'}
+                            <Eye className="w-3.5 h-3.5" /> Filter Guides
                           </Button>
                           <Button
                             className="w-full h-9 rounded-lg bg-slate-800 hover:bg-slate-750 text-slate-200 font-bold text-xs flex items-center justify-center gap-1 border border-slate-700 shadow-sm"
