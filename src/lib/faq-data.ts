@@ -14,7 +14,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['solidworks'],
     q: 'How to prevent SolidWorks Out of Memory and system resource depletion crashes on large assemblies?',
-    a: 'When working with large assemblies, SolidWorks can exhaust Windows GDI handles and commit charge limits. Resolve this by: 1. Navigating to Windows Advanced System Settings > Virtual Memory and manually configuring a custom Pagefile set to 1.5x to 2x your physical RAM on your fastest local NVMe SSD. 2. Adjusting GDI handle limits in the Windows Registry (HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows) by setting GDIProcessHandleLimit to 15000.'
+    a: 'When working with large assemblies, SolidWorks can exhaust Windows GDI handles and commit charge limits. Resolve this by: 1. Navigating to Windows Advanced System Settings > Virtual Memory and manually configuring a custom Pagefile set to 1.5x to 2x your physical RAM on your fastest local NVMe SSD. 2. Adjusting GDI handle limits in the Windows Registry (HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Windows) by setting GDIProcessHandleLimit to 15000.'
   },
   {
     category: 'standards',
@@ -39,6 +39,156 @@ export const accordionFaqs: AccordionFaq[] = [
     tools: ['solidworks'],
     q: 'How do we resolve file local cache conflicts and version lockups in SolidWorks PDM?',
     a: 'SolidWorks PDM cache lockups happen when local file versions drift from the database vault. Right-click the PDM vault directory and choose \'Clear Local Cache\' to remove un-checked-out files. If files remain locked, open PDM Administration, go to User Settings, and select \'Force Get Latest Version\' on drawing open. Terminate EdmServer.exe and ConisioAdmin.exe via Task Manager if PDM process locks occur.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to configure 1:1 DXF/DWG sheet metal flat pattern exports for CNC laser cutting?',
+    a: 'Right-click the Flat-Pattern feature in the FeatureManager tree and select Export to DXF/DWG. Under Output, select \'Sheet Metal\' and choose \'Geometry\' and \'Bend lines\'. Make sure to set \'Export at 1:1 scale\'. Under drawing mapping, map bend lines and outer profiles to separate layers (e.g., BEND and CUT) to ensure correct CNC parsing.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'Why is SolidWorks RealView Graphics greyed out, and how do we activate it?',
+    a: 'RealView is blocked if your GPU model is not hardcoded in the SolidWorks registry. Go to HKEY_CURRENT_USER\\\\Software\\\\SolidWorks\\\\SOLIDWORKS <version>\\\\Performance\\\\Graphics\\\\Hardware\\\\Current, find your Renderer name. Match it to a key under Gl2Shaders\\\\NV40 (for NVIDIA) and create a DWORD value named \'Workarounds\' set to 30008 or 40000 to force authentication.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How do we fix Hole Wizard and Toolbox database connection failure errors?',
+    a: 'This occurs when SolidWorks cannot access the `swbrowser.sldedb` database file. Go to Options > System Options > Hole Wizard/Toolbox, and verify the path points to your `SolidWorks Data` folder. If sharing this folder on a network, ensure users have full read/write privileges. Run `UpdateBrowserDatabase.exe` as Admin to resolve version mismatch errors.'
+  },
+  {
+    category: 'licensing',
+    tools: ['solidworks'],
+    q: 'How do we resolve SolidNetWork License Manager (SNL) connection blockages?',
+    a: 'SNL manager operates on port 25734 (lmgrd) and port 25735 (sw_d vendor daemon) by default. In Windows Firewall on the server, create Inbound rules allowing TCP ports 25734 and 25735. In SNL License Manager on the server, check \'A firewall is in use on this server\' to lock the vendor daemon to port 25735, preventing WAN dropout failures.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How do we extract unsaved parts after a SolidWorks fatal crash?',
+    a: 'When SolidWorks crashes, it preserves temp files. Navigate to `%USERPROFILE%\\\\AppData\\\\Local\\\\Temp` or your designated AutoRecover folder. Locate files starting with `AutoRecover of` and having `.swar` extension. Copy the file to another folder, rename the extension to `.sldprt` or `.sldasm`, and open it directly to restore your unsaved design.'
+  },
+  {
+    category: 'licensing',
+    tools: ['solidworks'],
+    q: 'How does an IT administrator configure sw_d.opt to manage license timeouts for SolidWorks?',
+    a: 'Create a `sw_d.opt` text file in your SNL installation folder. Enforce automatic license reclamation for idle sessions by adding `TIMEOUTALL 900` (reclaims seats after 15 minutes of inactivity). You can also reserve seats for specific users by adding `RESERVE 2 SOLIDWORKS GROUP design_leads`.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How to resolve viewport lag caused by mate conflicts in large SolidWorks assemblies?',
+    a: 'Redundant or over-defining mates cause the SolidWorks solver to continuously loop, slowing down viewport performance. Audit your FeatureManager tree for yellow warning and red error icons under Mates. Use the \'Mate Diagnostics\' tool to isolate and delete redundant mates, or use \'Mate Controller\' to animate complex links without solver loop overhead.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to configure first angle vs third angle projection in SolidWorks drawing sheets?',
+    a: 'To switch projection settings: Right-click the Drawing Sheet tab, select Properties. Under Sheet Properties, find the \'Type of projection\' radio buttons, and select \'First angle\' (European standard) or \'Third angle\' (US standard). Save this drawing setting directly into your `.drwdot` templates to enforce consistent sheet outputs.'
+  },
+  {
+    category: 'licensing',
+    tools: ['solidworks'],
+    q: 'What is the SolidWorks Perpetual license buyout licensing model vs rental SaaS?',
+    a: 'SolidWorks still supports Perpetual license buyout options, which require purchasing a perpetual seat plus a mandatory first-year Subscription Service (maintenance). Annual renewals are optional but recommended to get software upgrades and support. Rental SaaS subscriptions are term-based and cease to run when the term expires.'
+  },
+  {
+    category: 'licensing',
+    tools: ['solidworks'],
+    q: 'How to perform a silent command-line deployment of SolidWorks across corporate networks?',
+    a: 'Use the SolidWorks Installation Manager to create an Administrative Image. Navigate to the Admin Image folder, edit `StartSWInstall.hta` to pre-configure serial numbers and options. To deploy silently via Microsoft Intune or script, run: `msiexec /i \"SOLIDWORKS.msi\" TRANSFORMS=setup.mst QB- /L*V \"install.log\"` with elevated system credentials.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How to clean up local registry and temporary files to restore SolidWorks launch speed?',
+    a: 'Launch speed degrades as local caches grow. Optimize startup by running a cleanup script that clears `%LOCALAPPDATA%\\\\DassaultSystemes\\\\` and the Windows `%TEMP%` directories. If startup hangs, open Registry Editor, rename `HKEY_CURRENT_USER\\\\Software\\\\SolidWorks\\\\SOLIDWORKS <version>` to backup, forcing SolidWorks to rebuild a clean configuration registry.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How do we configure custom material libraries and properties in SolidWorks?',
+    a: 'To create a custom material: Edit Material > Right-click Custom Materials > New Category, and create a New Material. Input physical variables (Elastic Modulus, Poisson\'s Ratio, Tensile Strength). Link this material to a custom property (e.g., Material = `\"SW-Material\"`) to allow custom drawings templates and bill of materials (BOM) to auto-fill material info.'
+  },
+  {
+    category: 'licensing',
+    tools: ['solidworks'],
+    q: 'How to restrict SolidWorks licensing borrowing durations on SNL servers?',
+    a: 'Open your `sw_d.opt` options file on the SNL license server. Use `MAX_BORROW_HOURS SOLIDWORKS 168` to limit borrowing to 7 days (168 hours). To prevent license exhaustion, add `BORROW_LOWWATER SOLIDWORKS 5` to ensure at least 5 licenses remain in the floating pool for active office designers.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to import and map SolidWorks geometries into Autodesk Fusion 360?',
+    a: 'Fusion 360 can read SolidWorks `.sldprt` and `.sldasm` files directly using cloud translation. To preserve parametric design history and geometric precision on complex models, export the SolidWorks file as a STEP AP242 file. This format preserves annotations and product manufacturing information (PMI) during import.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How to configure SpeedPak to speed up drawings loading times for complex assemblies?',
+    a: 'SpeedPak creates a simplified representation of an assembly without losing references. Open the assembly ConfigurationManager, right-click the configuration, and select \'Add SpeedPak\'. Choose face/body references to remain active. In drawing sheets, reference the SpeedPak configuration to load views rapidly without resolving sub-components.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to import CAD structural steel weldment profiles in SolidWorks?',
+    a: 'Create or download weldment library profiles in `.sldlfp` library feature part format. Navigate to Options > System Options > File Locations. Select \'Weldment Profiles\' from the dropdown, and add the path to your root weldment folder. The folder structure must be nested: `Weldment Profiles\\\\Standard (e.g., ISO)\\\\Type (e.g., C-Channel)\\\\size.sldlfp`.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to configure ANSI vs ISO dimensioning and drafting standards in SolidWorks?',
+    a: 'Drafting standards are file-specific. Go to Options > Document Properties > Drafting Standard. Select \'ANSI\' or \'ISO\' from the dropdown. This automatically updates dimension line offsets, arrow styles, and orthographic projection layout rules. Save this file as a drawing template `.drwdot` to standardize vendor drawings.'
+  },
+  {
+    category: 'licensing',
+    tools: ['solidworks'],
+    q: 'How to resolve SolidWorks license checkout error \'License file does not support this version\'?',
+    a: 'This occurs when the client version is newer than the SNL server version, or the license file has expired. Always upgrade the server\'s SolidNetWork License Manager to the latest version first. SNL servers are backward compatible, meaning a 2026 server can distribute seats to 2024 clients, but not vice versa.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How to optimize SolidWorks performance for Virtual Desktop Infrastructures (VDI)?',
+    a: 'VDI deployment requires GPU pass-through (vGPU) and frame rate matching. Allocate at least 8GB vGPU profile (NVIDIA GRID/RTX) per CAD seat, and configure H.264/H.265 hardware encoding. In SolidWorks, turn off \'Enhance graphics performance\' under System Options > Performance if remote display latency or mouse offset issues occur.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How to configure assembly envelopes to streamline viewport redraw in SolidWorks?',
+    a: 'Envelopes are reference components that do not contribute to assembly weight or BOM, used for spatial boundaries. Select a component, open Component Properties, and check \'Envelope\'. This excludes components from solver calculations and drawing views, reducing graphics card rendering load in large structures.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to preserve custom properties during SolidWorks file version conversions?',
+    a: 'SolidWorks files are not backward compatible. Saving a file in SolidWorks 2026 converts the database format, making it unopenable in 2025. To share files with legacy seats while keeping custom attributes, export the model as a STEP AP242 or Parasolid (.x_t) file, which retains string metadata and geometry.'
+  },
+  {
+    category: 'licensing',
+    tools: ['solidworks'],
+    q: 'How to silently install PDM vault connection settings on user workstations?',
+    a: 'Configure the vault on a template client computer. Open regedit, navigate to `HKEY_CURRENT_USER\\\\Software\\\\SolidWorks\\\\Applications\\\\PDMWorks Enterprise\\\\Vaults\\\\<VaultName>`. Export this key as a `.reg` file. In your IT deployment script, run: `regedit.exe /s \"\\\\server\\\\pdm\\\\vault_setup.reg\"` to distribute connection settings silently.'
+  },
+  {
+    category: 'performance',
+    tools: ['solidworks'],
+    q: 'How to isolate conflicting SolidWorks third-party add-ins causing startup hangs?',
+    a: 'If SolidWorks hangs during \'Loading Registry\' or \'Loading Add-ins\', start in Safe Mode by running \'SolidWorks RX\' from the Windows Start menu and selecting \'Bypass Tools/Options\' and \'Bypass Add-ins\'. To manually disable addins, navigate to `HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\SolidWorks\\\\Addins` in Registry Editor and rename the registry keys of external addins.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to configure SolidWorks PDM API to enforce file naming conventions?',
+    a: 'Develop a PDM C# add-in implementing the `IEdmAddIn5` interface. Bind the add-in to the `EdmCmdType.EdmCmd_PreCheckIn` command event. In the command handler, retrieve the file name using `IEdmFile5.Name`. Run a regex match, and if the name violates company standards, set the `mbsError` output variable, rolling back the check-in.'
+  },
+  {
+    category: 'standards',
+    tools: ['solidworks'],
+    q: 'How to import large coordinate point clouds (.xyz / .ply) into SolidWorks?',
+    a: 'SolidWorks doesn\'t import raw point clouds natively in standard configurations. Activate the \'ScanTo3D\' add-in under Tools > Add-Ins (available in Professional and Premium). Go to File > Open, select Point Cloud Files, load the xyz/ply file, and run the \'Mesh Prep Wizard\' to generate a solid surface model.'
   },
   {
     category: 'licensing',
