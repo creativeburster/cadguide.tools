@@ -3289,6 +3289,27 @@ function renderMarkdown(content: string) {
 function renderRealArticlePage(tool: Tool, template: any, category: string) {
   const isStub = template.contentMarkdown?.includes("Executive Summary & Objective") || (template.contentMarkdown?.length < 1800);
 
+  const categoryNames: Record<string, string> = {
+    procurement: 'PROCUREMENT & TCO',
+    troubleshooting: 'TROUBLESHOOTING',
+    performance: 'PERFORMANCE',
+    standards: 'STANDARDS & COMPATIBILITY',
+    deployment: 'IT DEPLOYMENT',
+    migration: 'MIGRATION & API',
+    manufacturing: 'SPECIALIZED TOOLSETS'
+  };
+
+  const categoryCnNames: Record<string, string> = {
+    procurement: '采购与成本',
+    troubleshooting: '故障排除',
+    performance: '性能优化',
+    standards: '标准与兼容性',
+    deployment: 'IT部署',
+    migration: '迁移与API',
+    manufacturing: '专业工具',
+    printing: '打印与出图'
+  };
+
   // 1. 根据 category 分类，选择不同的视觉配置
   let theme = {
     bg: 'bg-[#faf9f6]', // 默认优雅暖白
@@ -3542,15 +3563,15 @@ function renderRealArticlePage(tool: Tool, template: any, category: string) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         
         {/* Navigation breadcrumbs */}
-        <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-400 mb-8 uppercase tracking-wider">
-          <Link href={homeHref} className="hover:text-blue-600 transition-colors">HOME</Link>
-          <span>/</span>
-          <Link href="/guides" className="hover:text-blue-600 transition-colors">GUIDES</Link>
-          <span>/</span>
+        <nav className="flex items-center gap-1.5 text-xs font-bold text-slate-400 mb-8 tracking-wider">
+          <Link href={homeHref} className="hover:text-blue-600 transition-colors">home</Link>
+          <span className="text-slate-300 font-normal">/</span>
+          <Link href="/guides" className="hover:text-blue-600 transition-colors">指南</Link>
+          <span className="text-slate-300 font-normal">/</span>
           <Link href={`/guides?tool=${tool.slug}`} className="hover:text-blue-600 transition-colors font-black text-slate-650">{tool.name}</Link>
-          <span>/</span>
-          <span className="text-slate-450 font-normal normal-case truncate max-w-[280px]" title={template.title}>
-            {template.title}
+          <span className="text-slate-300 font-normal">/</span>
+          <span className="text-slate-450 font-normal">
+            {categoryCnNames[category] || category}
           </span>
         </nav>
 
