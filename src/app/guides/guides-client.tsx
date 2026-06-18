@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Script from 'next/script';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -10,16 +9,6 @@ import { tools } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import React from 'react';
 import {
-  ZoomIn,
-  ZoomOut,
-  RotateCcw,
-  Network,
-  Info,
-  Eye,
-  BookOpen,
-  HelpCircle,
-  FolderOpen,
-  LayoutGrid,
   Search,
   ChevronRight
 } from 'lucide-react';
@@ -27,112 +16,16 @@ import {
 import {
   CATEGORY_SECTIONS,
   ARTICLES_LIST,
-  DIRECTORY_FOLDERS,
   getArchetypeMetadata,
   getLocalizedTitleAndExcerpt,
-  getLocalizedTitle,
   isArticleCompatibleWithTool
 } from '@/lib/guides-data';
-import graphData from '@/lib/data/graph-data.json';
 
-const cheatsheetRedirects: Record<string, string> = {
-  'cross-platform cad shortcuts matrix': '/toolbox/shortcuts',
-  'solidworks essential keyboard shortcuts list': '/toolbox/solidworks-shortcuts-sheet',
-  'rhino 3d shortcut keys & command aliases guide': '/toolbox/rhino-shortcuts-sheet',
-  'revit keyboard shortcuts & command codes table': '/toolbox/revit-shortcuts-sheet',
-  'sketchup pro quick reference hotkeys cheat sheet': '/toolbox/sketchup-shortcuts-sheet',
-  'autodesk inventor keyboard shortcuts reference': '/toolbox/inventor-shortcuts-sheet',
-  'bentley microstation v8i keyboard shortcuts guide': '/toolbox/microstation-shortcuts-sheet',
-  'graphisoft archicad keyboard shortcuts chart': '/toolbox/archicad-shortcuts-sheet',
-  'dassault catia v5/v6 key shortcuts table': '/toolbox/catia-shortcuts-sheet',
-  'ptc creo parametric shortcut keys reference': '/toolbox/creo-shortcuts-sheet',
-  'freecad open-source cad hotkeys & mouse navigation': '/toolbox/freecad-shortcuts-sheet',
-  'autodesk fusion 360 keyboard hotkeys reference': '/toolbox/fusion360-shortcuts-sheet',
-  'draftsight keyboard shortcuts & command aliases': '/toolbox/draftsight-shortcuts-sheet',
-  'bricscad hotkeys & command customization guide': '/toolbox/bricscad-shortcuts-sheet',
-  'vectorworks keyboard shortcuts reference chart': '/toolbox/vectorworks-shortcuts-sheet',
-  'autocad vs. gstarcad shortcut command diff table': '/toolbox/autocad-vs-gstarcad-shortcuts',
-  'autocad vs. zwcad command shortcut diff guide': '/toolbox/autocad-vs-zwcad-shortcuts'
-};
 
-export const getProgrammaticLink = (title: string, forcedToolSlug?: string): string => {
-  const titleLower = title.toLowerCase().trim();
-  if (cheatsheetRedirects[titleLower]) {
-    return cheatsheetRedirects[titleLower];
-  }
-  
-  const art = ARTICLES_LIST.find(a => {
-    const artTitleLower = a.title.toLowerCase().trim();
-    return artTitleLower === titleLower ||
-           titleLower.includes(artTitleLower) ||
-           artTitleLower.includes(titleLower) ||
-           a.title.toLowerCase().split(' ').some(word => word.length > 4 && titleLower.includes(word));
-  });
-
-  if (art) {
-    const artIndex = art.id.split('-').pop();
-    
-    if (forcedToolSlug && forcedToolSlug !== 'all') {
-      const forcedTool = tools.find(t => t.slug === forcedToolSlug);
-      if (forcedTool) {
-        const allCompatible = ARTICLES_LIST.filter(g =>
-          isArticleCompatibleWithTool(g.title, g.category, forcedTool)
-        );
-        let safe = allCompatible.slice(0, 20);
-        if (safe.length < 4) {
-          const fallbackPool = ARTICLES_LIST.filter(
-            g => !safe.some(existing => existing.id === g.id) &&
-                 !g.title.toLowerCase().includes("license") &&
-                 !g.title.toLowerCase().includes("flexlm") &&
-                 !g.title.toLowerCase().includes("ssot") &&
-                 !g.title.toLowerCase().includes("procurement")
-          );
-          safe = [...safe, ...fallbackPool].slice(0, 20);
-        }
-        
-        const isAvailable = safe.some(g => g.id === art.id);
-        if (isAvailable) {
-          return `/guides/${forcedToolSlug}-${art.category}-${artIndex}`;
-        }
-      }
-    }
-    
-    const matchedTool = [...tools]
-      .sort((a, b) => b.slug.length - a.slug.length)
-      .find(t => isArticleCompatibleWithTool(art.title, art.category, t));
-      
-      const fallbackSlug = matchedTool ? matchedTool.slug : (art.category === 'troubleshooting' ? 'autocad' : 'solidworks');
-      return `/guides/${fallbackSlug}-${art.category}-${artIndex}`;
-  }
-  
-  return `/guides`;
-};
-
-// D3 types
-interface GraphNode {
-  id: string;
-  name: string;
-  type: 'Tool' | 'Concept' | 'Format';
-  val: number;
-  color: string;
-  desc?: string;
-  x?: number;
-  y?: number;
-  vx?: number;
-  vy?: number;
-  fx?: number | null;
-  fy?: number | null;
-}
-
-interface GraphLink {
-  source: string;
-  target: string;
-  value: number;
-}
 
 export default function GuidesClient() {
   // Navigation View logic (matching Gstaracademy)
-  const [currentView, setCurrentView] = useState<'overview' | 'graph' | 'concepts' | 'faq' | 'sitemap'>('overview');
+  const [currentView, setCurrentView] = useState<'overview' | 'faq'>('overview');
   
   // Traditional Guide list state
   const [activeTab, setActiveTab] = useState<'all' | 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing'>('all');
@@ -148,22 +41,8 @@ export default function GuidesClient() {
   // Search logic for left sidebar
   const [searchQuery, setSearchQuery] = useState('');
 
-  // D3.js references
-  const svgRef = useRef<SVGSVGElement | null>(null);
-  const graphContainerRef = useRef<HTMLDivElement | null>(null);
-  const [d3Loaded, setD3Loaded] = useState(false);
-  const [selectedGraphNode, setSelectedGraphNode] = useState<GraphNode | null>(null);
-  const [graphStats, setGraphStats] = useState({ nodes: 0, links: 0 });
-
   const selectedTool = tools.find(t => t.slug === selectedToolSlug) || null;
   const meta = selectedTool ? getArchetypeMetadata(selectedTool.category_id) : null;
-
-  // Deep clone graph data to prevent D3 from mutating read-only imported JSON objects
-  const { initialNodes, initialLinks } = React.useMemo(() => {
-    const nodes: GraphNode[] = JSON.parse(JSON.stringify(graphData.nodes));
-    const links: GraphLink[] = JSON.parse(JSON.stringify(graphData.links));
-    return { initialNodes: nodes, initialLinks: links };
-  }, []);
 
   // Sync title
   useEffect(() => {
@@ -201,314 +80,7 @@ export default function GuidesClient() {
         }
       }
     }
-    setGraphStats({ nodes: initialNodes.length, links: initialLinks.length });
   }, []);
-
-
-
-  // D3 Render logic for Tab: 'graph'
-  useEffect(() => {
-    if (currentView !== 'graph' || !d3Loaded || !svgRef.current || !graphContainerRef.current) return;
-
-    const d3 = (window as any).d3;
-    if (!d3) return;
-
-    d3.select(svgRef.current).selectAll('*').remove();
-
-    const width = graphContainerRef.current.clientWidth || 800;
-    const height = Math.max(graphContainerRef.current.clientHeight || 550, 500);
-
-    const svg = d3.select(svgRef.current)
-      .attr('viewBox', [0, 0, width, height])
-      .attr('width', '100%')
-      .attr('height', '100%');
-
-    // Add filter defs for neon glow
-    const defs = svg.append('defs');
-    const glowFilter = defs.append('filter')
-      .attr('id', 'glow')
-      .attr('x', '-30%')
-      .attr('y', '-30%')
-      .attr('width', '160%')
-      .attr('height', '160%');
-
-    glowFilter.append('feGaussianBlur')
-      .attr('stdDeviation', '4')
-      .attr('result', 'blur');
-
-    glowFilter.append('feMerge')
-      .selectAll('feMergeNode')
-      .data(['blur', 'SourceGraphic'])
-      .join('feMergeNode')
-      .attr('in', (d: any) => d);
-
-    const g = svg.append('g');
-
-    const zoomBehavior = d3.zoom()
-      .scaleExtent([0.3, 4])
-      .on('zoom', (event: any) => {
-        g.attr('transform', event.transform);
-      });
-
-    svg.call(zoomBehavior);
-
-    const simulation = d3.forceSimulation(initialNodes)
-      .force('link', d3.forceLink(initialLinks).id((d: any) => d.id).distance(110).strength(0.12))
-      .force('charge', d3.forceManyBody().strength(-200).distanceMax(350))
-      .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collide', d3.forceCollide().radius((d: any) => d.val + 8).strength(0.85));
-
-    const link = g.append('g')
-      .selectAll('line')
-      .data(initialLinks)
-      .join('line')
-      .attr('class', 'graph-link')
-      .attr('stroke', 'rgba(148, 163, 184, 0.25)')
-      .attr('stroke-width', 1.5);
-
-    const isTouch = typeof window !== 'undefined' && (('ontouchstart' in window) || (navigator.maxTouchPoints > 0));
-
-    const drag = (sim: any) => {
-      function dragstarted(event: any) {
-        if (!event.active) sim.alphaTarget(0.3).restart();
-        event.subject.fx = event.subject.x;
-        event.subject.fy = event.subject.y;
-      }
-      function dragged(event: any) {
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
-      }
-      function dragended(event: any) {
-        if (!event.active) sim.alphaTarget(0);
-        event.subject.fx = null;
-        event.subject.fy = null;
-      }
-      return d3.drag()
-        .on('start', dragstarted)
-        .on('drag', dragged)
-        .on('end', dragended);
-    };
-
-    const adjList = new Map<string, Set<string>>();
-    initialNodes.forEach(n => adjList.set(n.id, new Set()));
-    initialLinks.forEach(e => {
-      const s = typeof e.source === 'object' ? (e.source as any).id : e.source;
-      const t = typeof e.target === 'object' ? (e.target as any).id : e.target;
-      adjList.get(s)?.add(t);
-      adjList.get(t)?.add(s);
-    });
-
-    const node = g.append('g')
-      .selectAll('g')
-      .data(initialNodes)
-      .join('g')
-      .attr('class', 'graph-node')
-      .style('cursor', 'pointer');
-
-    if (!isTouch) {
-      node.call(drag(simulation));
-    }
-
-    // Node circles
-    node.append('circle')
-      .attr('r', (d: any) => d.val)
-      .attr('fill', (d: any) => d.color)
-      .attr('stroke', '#ffffff')
-      .attr('stroke-width', 1.5)
-      .attr('filter', 'url(#glow)');
-
-    // Node labels
-    node.append('text')
-      .text((d: any) => d.name)
-      .attr('dy', (d: any) => d.val + 16)
-      .attr('text-anchor', 'middle')
-      .style('font-size', (d: any) => d.type === 'Tool' ? '12px' : '10px');
-
-    // Tooltip elements
-    const tooltipEl = document.getElementById('g-tooltip');
-    const titleEl = document.getElementById('g-tooltip-title');
-    const typeEl = document.getElementById('g-tooltip-type');
-    const descEl = document.getElementById('g-tooltip-desc');
-
-    function showDetails(event: any, d: GraphNode, element: any) {
-      const neighbors = adjList.get(d.id) || new Set();
-      
-      // Enlarge active circle
-      d3.select(element).select('circle')
-        .transition()
-        .duration(200)
-        .attr('r', d.val + 5);
-
-      // Fade unrelated nodes
-      node.style('opacity', (n: any) => (n.id === d.id || neighbors.has(n.id) ? 1.0 : 0.15));
-
-      // Highlight connections
-      link
-        .attr('stroke', (l: any) => (l.source.id === d.id || l.target.id === d.id ? '#d946ef' : 'rgba(148, 163, 184, 0.25)'))
-        .attr('stroke-opacity', (l: any) => (l.source.id === d.id || l.target.id === d.id ? 0.95 : 0.03))
-        .attr('stroke-width', (l: any) => (l.source.id === d.id || l.target.id === d.id ? 2.5 : 1.5))
-        .attr('stroke-dasharray', (l: any) => (l.source.id === d.id || l.target.id === d.id ? null : '4,3'));
-
-      // Draw spider web lines and dots
-      g.selectAll('.spider-line').remove();
-      g.selectAll('.spider-dot').remove();
-
-      initialNodes.forEach((n: any) => {
-        if (neighbors.has(n.id)) {
-          // Line
-          g.append('line')
-            .attr('class', 'spider-line')
-            .attr('x1', d.x)
-            .attr('y1', d.y)
-            .attr('x2', n.x)
-            .attr('y2', n.y)
-            .attr('stroke', n.color)
-            .attr('stroke-width', 1.8)
-            .attr('stroke-dasharray', '5,3')
-            .attr('stroke-opacity', 0.85);
-
-          // Mid point dot
-          g.append('circle')
-            .attr('class', 'spider-dot')
-            .attr('cx', ((d as any).x + n.x) / 2)
-            .attr('cy', ((d as any).y + n.y) / 2)
-            .attr('r', 3)
-            .attr('fill', n.color)
-            .attr('filter', 'url(#glow)');
-        }
-      });
-
-      // Populate & show tooltip
-      if (tooltipEl && titleEl && typeEl && descEl) {
-        titleEl.textContent = d.name;
-        typeEl.textContent = d.type === 'Tool' ? 'Software Core' : d.type === 'Concept' ? 'Troubleshooting Directive' : 'Data Format Specification';
-        descEl.textContent = d.desc || '';
-        tooltipEl.style.opacity = '1';
-      }
-    }
-
-    function hideDetails(event: any, d: GraphNode, element: any) {
-      d3.select(element).select('circle')
-        .transition()
-        .duration(200)
-        .attr('r', d.val);
-
-      node.style('opacity', 1.0);
-      link
-        .attr('stroke', 'rgba(148, 163, 184, 0.25)')
-        .attr('stroke-opacity', 0.4)
-        .attr('stroke-width', 1.5)
-        .attr('stroke-dasharray', null);
-
-      g.selectAll('.spider-line').remove();
-      g.selectAll('.spider-dot').remove();
-
-      if (tooltipEl) {
-        tooltipEl.style.opacity = '0';
-      }
-    }
-
-    node.on('mouseover', (event: any, d: GraphNode) => {
-      if (isTouch) return;
-      showDetails(event, d, event.currentTarget);
-    })
-    .on('mousemove', (event: any) => {
-      if (isTouch) return;
-      if (tooltipEl) {
-        tooltipEl.style.left = `${event.offsetX + 15}px`;
-        tooltipEl.style.top = `${event.offsetY - 15}px`;
-      }
-    })
-    .on('mouseout', (event: any, d: GraphNode) => {
-      if (isTouch) return;
-      hideDetails(event, d, event.currentTarget);
-    })
-    .on('click', (event: any, d: GraphNode) => {
-      setSelectedGraphNode(d);
-      showDetails(event, d, event.currentTarget);
-      
-      // If tool node clicked, sync sidebar selection
-      if (d.type === 'Tool') {
-        setSelectedToolSlug(d.id);
-        if (typeof window !== 'undefined') {
-          const url = new URL(window.location.href);
-          url.searchParams.set('tool', d.id);
-          window.history.pushState({}, '', url.toString());
-        }
-      }
-      
-      event.stopPropagation();
-    });
-
-    svg.on('click', () => {
-      setSelectedGraphNode(null);
-      if (tooltipEl) tooltipEl.style.opacity = '0';
-      node.style('opacity', 1.0);
-      link
-        .attr('stroke', 'rgba(148, 163, 184, 0.25)')
-        .attr('stroke-opacity', 0.4)
-        .attr('stroke-width', 1.5)
-        .attr('stroke-dasharray', null);
-      g.selectAll('.spider-line').remove();
-      g.selectAll('.spider-dot').remove();
-    });
-
-    simulation.on('tick', () => {
-      link
-        .attr('x1', (d: any) => d.source.x)
-        .attr('y1', (d: any) => d.source.y)
-        .attr('x2', (d: any) => d.target.x)
-        .attr('y2', (d: any) => d.target.y);
-
-      node.attr('transform', (d: any) => `translate(${d.x}, ${d.y})`);
-    });
-
-    const zoomIn = () => svg.transition().duration(300).call(zoomBehavior.scaleBy, 1.3);
-    const zoomOut = () => svg.transition().duration(300).call(zoomBehavior.scaleBy, 0.7);
-    const zoomReset = () => {
-      const scale = 0.85;
-      const x = width / 2 - (width / 2) * scale;
-      const y = height / 2 - (height / 2) * scale;
-      svg.transition().duration(600).call(
-        zoomBehavior.transform,
-        d3.zoomIdentity.translate(x, y).scale(scale)
-      );
-    };
-
-    const btnIn = document.getElementById('g-zoom-in');
-    const btnOut = document.getElementById('g-zoom-out');
-    const btnReset = document.getElementById('g-zoom-reset');
-
-    if (btnIn) btnIn.onclick = zoomIn;
-    if (btnOut) btnOut.onclick = zoomOut;
-    if (btnReset) btnReset.onclick = zoomReset;
-
-    // Auto fit layout in 800ms
-    const autoFitTimer = setTimeout(zoomReset, 800);
-
-    // Stop shaking after 3s to save CPU
-    const stopTimer = setTimeout(() => {
-      simulation.stop();
-      initialNodes.forEach((d: any) => {
-        d.fx = d.x;
-        d.fy = d.y;
-        d.vx = 0;
-        d.vy = 0;
-      });
-      setTimeout(() => {
-        initialNodes.forEach((d: any) => {
-          d.fx = null;
-          d.fy = null;
-        });
-      }, 500);
-    }, 3000);
-
-    return () => {
-      simulation.stop();
-      clearTimeout(autoFitTimer);
-      clearTimeout(stopTimer);
-    };
-  }, [currentView, d3Loaded]);
 
   const sortedCategorySections = React.useMemo(() => {
     if (!meta) return CATEGORY_SECTIONS;
@@ -678,9 +250,7 @@ export default function GuidesClient() {
   // Left Sidebar Filter Logic
   const sidebarNavItems = [
     { id: 'overview', label: 'Overview', icon: '🏛' },
-    { id: 'graph', label: 'Knowledge Graph', icon: '🕸️' },
-    { id: 'faq', label: 'Technical FAQ', icon: '💬' },
-    { id: 'sitemap', label: 'Folder Directory', icon: '📂' }
+    { id: 'faq', label: 'FAQ', icon: '💬' }
   ];
 
   const filteredSidebarItems = sidebarNavItems
@@ -688,11 +258,6 @@ export default function GuidesClient() {
 
   return (
     <main className="min-h-screen bg-[#f7f5f0] pb-24 text-slate-800">
-      <Script
-        src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"
-        strategy="lazyOnload"
-        onLoad={() => setD3Loaded(true)}
-      />
 
       {/* Decorative Visual Header Accent Line */}
       <div className={cn(
@@ -731,34 +296,6 @@ export default function GuidesClient() {
             </div>
           </Card>
 
-          {/* Navigation Menu */}
-          <Card className="p-2.5 rounded-2xl bg-white border border-slate-200/60 shadow-sm flex flex-col gap-1">
-            <span className="text-[9px] font-black tracking-widest text-slate-400 uppercase px-3 py-1.5">
-              Knowledge Navigation
-            </span>
-            {filteredSidebarItems.map((item) => {
-              const isActive = currentView === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => setCurrentView(item.id as any)}
-                  className={cn(
-                    "w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-bold transition-all text-left",
-                    isActive
-                      ? "bg-blue-600 text-white shadow-md shadow-blue-100"
-                      : "text-slate-600 hover:bg-slate-50 hover:text-blue-600"
-                  )}
-                >
-                  <span className="flex items-center gap-2.5">
-                    <span className="text-sm">{item.icon}</span>
-                    {item.label}
-                  </span>
-                  <ChevronRight className="w-3.5 h-3.5 opacity-60" />
-                </button>
-              );
-            })}
-          </Card>
-
           {/* Sidebar quick Software Filter */}
           <Card className="p-4 rounded-2xl bg-white border border-slate-200/60 shadow-sm space-y-2">
             <span className="text-[9px] font-black tracking-widest text-slate-400 uppercase block">
@@ -793,6 +330,34 @@ export default function GuidesClient() {
               </div>
             </div>
           </Card>
+
+          {/* Navigation Menu */}
+          <Card className="p-2.5 rounded-2xl bg-white border border-slate-200/60 shadow-sm flex flex-col gap-1">
+            <span className="text-[9px] font-black tracking-widest text-slate-400 uppercase px-3 py-1.5">
+              Knowledge Navigation
+            </span>
+            {filteredSidebarItems.map((item) => {
+              const isActive = currentView === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setCurrentView(item.id as any)}
+                  className={cn(
+                    "w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-bold transition-all text-left",
+                    isActive
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-100"
+                      : "text-slate-600 hover:bg-slate-50 hover:text-blue-600"
+                  )}
+                >
+                  <span className="flex items-center gap-2.5">
+                    <span className="text-sm">{item.icon}</span>
+                    {item.label}
+                  </span>
+                  <ChevronRight className="w-3.5 h-3.5 opacity-60" />
+                </button>
+              );
+            })}
+          </Card>
         </aside>
 
         {/* --- MAIN DISPLAY PANEL (Gstaracademy Layout matching) --- */}
@@ -802,9 +367,7 @@ export default function GuidesClient() {
           <div className="flex flex-wrap gap-1.5 border-b border-slate-200 pb-4 mb-6">
             {[
               { id: 'overview', label: 'Overview' },
-              { id: 'graph', label: 'Interactive Graph' },
-              { id: 'faq', label: 'Technical FAQ' },
-              { id: 'sitemap', label: 'Sitemap' }
+              { id: 'faq', label: 'FAQ' }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -948,263 +511,6 @@ export default function GuidesClient() {
             </div>
           )}
 
-          {/* VIEW B: INTERACTIVE GRAPH */}
-          {currentView === 'graph' && (
-            <div
-              ref={graphContainerRef}
-              className="relative w-full h-[550px] bg-[#0f172a] border border-slate-800/80 rounded-[32px] overflow-hidden shadow-2xl animate-in fade-in duration-300 flex flex-col md:flex-row"
-              style={{
-                boxShadow: 'inset 0 0 80px rgba(0, 0, 0, 0.6)'
-              }}
-            >
-              {/* Background Grid Accent */}
-              <div
-                className="absolute inset-0 pointer-events-none opacity-60"
-                style={{
-                  background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%)',
-                  backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 0)',
-                  backgroundSize: '24px 24px',
-                }}
-              />
-
-              {/* Canvas Area */}
-              <div className="flex-grow h-full w-full relative z-10">
-                {!d3Loaded && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-slate-950/70 z-20 backdrop-blur-sm">
-                    <div className="flex flex-col items-center gap-2">
-                      <Network className="w-8 h-8 text-blue-400 animate-pulse" />
-                      <span className="text-xs font-bold text-slate-500">Loading Interactive Canvas...</span>
-                    </div>
-                  </div>
-                )}
-                
-                {/* Graph Floating Stats */}
-                <div className="absolute top-4 left-4 z-10 pointer-events-none select-none">
-                  <h3 className="text-sm font-black text-slate-200 flex items-center gap-1.5 drop-shadow-md">
-                    <Network className="w-4 h-4 text-blue-400 animate-pulse" />
-                    Interactive CAx Knowledge Map
-                  </h3>
-                  <span className="text-[9px] font-mono text-slate-500 block mt-0.5">
-                    {graphStats.nodes} nodes · {graphStats.links} dynamic constraints
-                  </span>
-                </div>
-
-                {/* Canvas zoom console */}
-                <div className="absolute top-4 right-4 z-10 flex gap-1.5">
-                  <Button
-                    id="g-zoom-in"
-                    size="icon"
-                    variant="outline"
-                    className="w-8 h-8 rounded-lg bg-slate-900/60 border-slate-800/80 text-slate-300 hover:bg-slate-800/80 hover:text-white backdrop-blur-md transition-all shadow-md"
-                  >
-                    <ZoomIn className="w-3.5 h-3.5" />
-                  </Button>
-                  <Button
-                    id="g-zoom-out"
-                    size="icon"
-                    variant="outline"
-                    className="w-8 h-8 rounded-lg bg-slate-900/60 border-slate-800/80 text-slate-300 hover:bg-slate-800/80 hover:text-white backdrop-blur-md transition-all shadow-md"
-                  >
-                    <ZoomOut className="w-3.5 h-3.5" />
-                  </Button>
-                  <Button
-                    id="g-zoom-reset"
-                    size="icon"
-                    variant="outline"
-                    className="w-8 h-8 rounded-lg bg-slate-900/60 border-slate-800/80 text-slate-300 hover:bg-slate-800/80 hover:text-white backdrop-blur-md transition-all shadow-md"
-                  >
-                    <RotateCcw className="w-3.5 h-3.5" />
-                  </Button>
-                </div>
-
-                <svg ref={svgRef} className="w-full h-full block" />
-
-                {/* Canvas legend */}
-                <div className="absolute bottom-4 left-4 z-10 bg-slate-900/70 backdrop-blur-md border border-slate-800/50 rounded-lg p-2.5 shadow-lg space-y-1.5">
-                  <div className="flex items-center gap-3 text-[10px] font-bold text-slate-400">
-                    <div className="flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-[#38bdf8] shadow-[0_0_6px_#38bdf8]" /> Tool
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-[#c084fc] shadow-[0_0_6px_#c084fc]" /> Troubleshooting
-                    </div>
-                  </div>
-                </div>
-
-                {/* Interactive Hover Tooltip */}
-                <div
-                  id="g-tooltip"
-                  className="absolute pointer-events-none opacity-0 transition-opacity duration-200 bg-slate-950/90 border border-slate-800 rounded-xl p-3 max-w-[260px] shadow-2xl z-30 backdrop-blur-md text-xs text-slate-300"
-                  style={{
-                    boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.4)'
-                  }}
-                >
-                  <div id="g-tooltip-title" className="font-black text-sm text-white mb-0.5" />
-                  <div id="g-tooltip-type" className="text-[9px] font-black uppercase tracking-wider text-purple-400 mb-2" />
-                  <div id="g-tooltip-desc" className="leading-relaxed text-slate-400 font-medium" />
-                </div>
-              </div>
-
-              {/* Canvas Info Sidebar Drawer */}
-              <div className="w-full md:w-64 border-t md:border-t-0 md:border-l border-slate-800 bg-slate-900/40 p-5 shrink-0 z-10 flex flex-col justify-between backdrop-blur-md">
-                {selectedGraphNode ? (
-                  <div className="flex flex-col h-full justify-between animate-in fade-in duration-300">
-                    <div>
-                      <span className={`inline-block px-2 py-0.5 rounded text-[8px] font-black uppercase tracking-wider ${
-                        selectedGraphNode.type === 'Tool' ? 'bg-blue-950/50 text-blue-400 border border-blue-900/50' :
-                        selectedGraphNode.type === 'Concept' ? 'bg-purple-950/50 text-purple-400 border border-purple-900/50' :
-                        'bg-amber-950/50 text-amber-400 border border-amber-900/50'
-                      }`}>
-                        {selectedGraphNode.type}
-                      </span>
-                      <h4 className="text-base font-black text-white mt-2 drop-shadow-md">{selectedGraphNode.name}</h4>
-                      <p className="text-xs text-slate-400 mt-3 leading-relaxed font-medium">
-                        {selectedGraphNode.desc || 'This node maps standard CAx engineering interconnections. Double click or tap specs button to inspect associated EULA auditing and file formats.'}
-                      </p>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-800 mt-4 space-y-2">
-                      {selectedGraphNode.type === 'Tool' ? (
-                        <>
-                          <Button
-                            className="w-full h-9 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1 shadow-md shadow-blue-950"
-                            onClick={() => {
-                              setSelectedToolSlug(selectedGraphNode.id);
-                              if (typeof window !== 'undefined') {
-                                const url = new URL(window.location.href);
-                                url.searchParams.set('tool', selectedGraphNode.id);
-                                window.history.pushState({}, '', url.toString());
-                              }
-                              setCurrentView('overview');
-                            }}
-                          >
-                            <Eye className="w-3.5 h-3.5" /> Filter Guides
-                          </Button>
-                          <Button
-                            className="w-full h-9 rounded-lg bg-slate-800 hover:bg-slate-750 text-slate-200 font-bold text-xs flex items-center justify-center gap-1 border border-slate-700 shadow-sm"
-                            onClick={() => {
-                              setSearchQuery(selectedGraphNode.name);
-                              setFaqTab('all');
-                              setFaqPage(1);
-                              setCurrentView('faq');
-                            }}
-                          >
-                            <BookOpen className="w-3.5 h-3.5" /> View FAQs
-                          </Button>
-                        </>
-                      ) : (() => {
-                        const troubleFaqMap: Record<string, string> = {
-                          'error-0024': 'How to debug and resolve AutoCAD Fatal Error 0x0024 crash?',
-                          'sw-pdm': 'How do we resolve file local cache conflicts and version lockups in SolidWorks PDM?',
-                          'viewport-lag': 'How to eliminate SolidWorks assembly viewport stutter and graphics lag?',
-                          'flexlm-15': 'How to diagnose and resolve FLEXlm Network License Error -15,10?',
-                          'registry-socket': 'How to resolve AutoCAD viewport freezes caused by Windows Registry port socket leakage?',
-                          'hatch-leak': 'How to prevent stutters and memory leakage caused by high-density hatch patterns?',
-                          'sw-swap': 'How to prevent SolidWorks Out of Memory and system resource depletion crashes on large assemblies?',
-                          'parasolid-knit': 'How to repair imported STEP/IGES broken faces and sheet knitting tolerance failures in SolidWorks?',
-                          'revit-coords': 'How to resolve model position drift and alignment shifts in linked Revit models?',
-                          'revit-ifc-export': 'How to configure Revit IFC4 export settings to prevent missing parameter sets and class mapping errors?',
-                          'revit-family-purge': 'How to optimize bloated Revit families and resolve view redraw lags in heavy project models?'
-                        };
-                        const targetFaqQ = troubleFaqMap[selectedGraphNode.id];
-                        if (targetFaqQ) {
-                          return (
-                            <Button
-                              className="w-full h-9 rounded-lg bg-red-650 hover:bg-red-700 text-white font-bold text-xs flex items-center justify-center gap-1 shadow-md shadow-red-950 border border-red-800"
-                              onClick={() => {
-                                setOpenFaqQuestion(targetFaqQ);
-                                setSearchQuery('');
-                                const matchedFaq = accordionFaqs.find(f => f.q === targetFaqQ);
-                                if (matchedFaq) {
-                                  setFaqTab(matchedFaq.category as any);
-                                }
-                                setFaqPage(1);
-                                setCurrentView('faq');
-                              }}
-                            >
-                              <HelpCircle className="w-3.5 h-3.5" /> View Solution
-                            </Button>
-                          );
-                        }
-                        return (
-                          <Button
-                            className="w-full h-9 rounded-lg bg-slate-850 hover:bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center gap-1 border border-slate-700 shadow-sm"
-                            onClick={() => {
-                              setSearchQuery(selectedGraphNode.name);
-                              setCurrentView('faq');
-                            }}
-                          >
-                            <Eye className="w-3.5 h-3.5" /> Search FAQ
-                          </Button>
-                        );
-                      })()}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center justify-center h-full text-center py-6 select-none">
-                    <div className="w-10 h-10 rounded-xl bg-slate-850/80 border border-slate-800 flex items-center justify-center text-slate-500 mb-3 animate-pulse">
-                      <Network className="w-5 h-5 text-blue-400/80" />
-                    </div>
-                    <h5 className="text-xs font-bold text-slate-300">Inspection Deck</h5>
-                    <p className="text-[10px] text-slate-550 mt-1 max-w-[150px] leading-relaxed font-medium">
-                      Click any graphical hub to populate technical compatibility, FlexNet OPTIONS restrictions, and licenses.
-                    </p>
-                  </div>
-                )}
-              </div>
-
-              {/* Embed CSS style block for graph filters, glow and outlines */}
-              <style dangerouslySetInnerHTML={{ __html: `
-                .graph-node circle {
-                  cursor: pointer;
-                  transition: r 0.25s cubic-bezier(0.4, 0, 0.2, 1), stroke-width 0.25s ease;
-                }
-                .graph-node:hover circle {
-                  stroke-width: 2px !important;
-                }
-                .graph-node text {
-                  fill: #f1f5f9;
-                  stroke: #090d16;
-                  stroke-width: 4px;
-                  stroke-linecap: round;
-                  stroke-linejoin: round;
-                  paint-order: stroke fill;
-                  font-family: ui-sans-serif, system-ui, sans-serif;
-                  font-weight: 800;
-                  letter-spacing: -0.2px;
-                  pointer-events: none;
-                  user-select: none;
-                }
-                .graph-link {
-                  transition: stroke 0.2s ease, stroke-width 0.2s ease, stroke-opacity 0.2s ease;
-                }
-              `}} />
-            </div>
-          )}
-
-          {/* VIEW C: CONCEPTS & TERMS */}
-          {currentView === 'concepts' && (
-            <div className="space-y-6 animate-in fade-in duration-300">
-              <Card className="p-6 rounded-2xl bg-white border border-slate-200/50 shadow-sm">
-                <h3 className="text-lg font-black text-slate-900 tracking-tight flex items-center gap-2 mb-4">
-                  <span className="w-1.5 h-5 rounded bg-emerald-500" />
-                  Core Concepts & Standards Index
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {initialNodes.filter(n => n.type !== 'Tool').map((node) => (
-                    <div key={node.id} className="p-3 bg-slate-50 hover:bg-emerald-50/30 border border-slate-100 hover:border-emerald-200 rounded-xl transition-all group">
-                      <div className="flex items-center justify-between">
-                        <span className="font-bold text-xs text-slate-800 group-hover:text-emerald-700">{node.name}</span>
-                        <span className="text-[8px] bg-slate-200/50 px-1.5 py-0.5 rounded text-slate-500 font-bold uppercase tracking-wider">
-                          {node.type}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </div>
-          )}
 
           {/* VIEW D: TECHNICAL FAQ */}
           {currentView === 'faq' && (
@@ -1263,38 +569,7 @@ export default function GuidesClient() {
             </section>
           )}
 
-          {/* VIEW E: SITEMAP */}
-          {currentView === 'sitemap' && (
-            <div className="space-y-6 animate-in fade-in duration-300">
-              <Card className="p-6 rounded-2xl bg-white border border-slate-200/50 shadow-sm space-y-4">
-                {DIRECTORY_FOLDERS.map((folder) => {
-                  const isOpen = !!openFolders[folder.id];
-                  return (
-                    <div key={folder.id} className="border border-slate-150 rounded-xl overflow-hidden bg-white shadow-sm">
-                      <button
-                        onClick={() => toggleFolder(folder.id)}
-                        className="w-full flex items-center justify-between p-4 text-left hover:bg-slate-50/50 transition-colors"
-                      >
-                        <span className="flex items-center gap-2 text-xs font-bold text-slate-800">
-                          <span>{folder.icon}</span> {folder.title}
-                        </span>
-                        <span className="text-xs text-slate-400">▶</span>
-                      </button>
-                      <div className={cn("overflow-hidden transition-all duration-300", isOpen ? "max-h-[800px] p-4 border-t border-slate-100 bg-slate-55/10" : "max-h-0 p-0")}>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                          {folder.links.map((link, lIdx) => (
-                            <Link key={lIdx} href={folder.id === 'fol-cheatsheets' ? link.href : getProgrammaticLink(link.title, selectedTool?.slug)} className="hover:text-blue-600 hover:underline font-bold text-slate-700">
-                              → {link.title}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Card>
-            </div>
-          )}
+
 
         </section>
       </div>
