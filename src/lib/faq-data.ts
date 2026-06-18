@@ -706,4 +706,52 @@ export const accordionFaqs: AccordionFaq[] = [
     q: "Why does AutoCAD experience viewport lag under DirectX 12, and how do we revert to DirectX 11?",
     a: "DirectX 12 rendering can cause virtual memory leaks on legacy or integrated graphics. To roll back, type `GFXDX12` in AutoCAD and set it to `0`. Close and restart AutoCAD. Type `3DCONFIG` and verify the virtual device shows as DirectX 11 (`gdi11.dbx` instead of `gdi12.dbx`). In the `3DCONFIG` settings panel, you can also toggle OFF High Quality Geometry (HQGEOM) to disable anti-aliasing and reduce rasterization load on the GPU."
   },
+  {
+    category: 'standards',
+    tools: ['revit'],
+    q: "How to resolve 'Acquire Coordinates Failed' errors when linking models in Revit?",
+    a: "Revit blocks coordinate acquisition if the linked reference model (.rvt or .dwg) has multiple active site locations. Open the linked reference model, go to Manage > Location > Site tab, select the obsolete or duplicate sites and delete them, leaving only a single correct coordinate site. Save and reload the link in your host model, then execute Acquire Coordinates again."
+  },
+  {
+    category: 'standards',
+    tools: ['revit'],
+    q: "How to prevent model coordinate drift and 3D alignment shifts in linked Revit models?",
+    a: "Prevent coordinate drift by linking files using 'Auto - By Shared Coordinates'. Once aligned, select the Survey Point and Project Base Point in the viewport and click the Pin tool (shortcut PN) to lock coordinates. Acquire coordinates from the site model rather than attempting to publish them back if working in cloud-shared environments."
+  },
+  {
+    category: 'performance',
+    tools: ['revit'],
+    q: "How to resolve Revit Sync to Central freezes and workstation lockups?",
+    a: "Synchronization freezes are often caused by corrupted local workspace cache files. Close all active Revit sessions. Navigate to %LOCALAPPDATA%\\Autodesk\\Revit\\Autodesk Revit <Version>\\CollaborationCache and clear its contents. Also navigate to %LOCALAPPDATA%\\Autodesk\\Revit\\PacCache and delete all cached PAC files. Clear the local %TEMP% folder before re-launching Revit."
+  },
+  {
+    category: 'performance',
+    tools: ['revit'],
+    q: "How to isolate third-party add-in conflicts causing Revit Sync to Central crashes?",
+    a: "To isolate plugin interference, close Revit and navigate to C:\\ProgramData\\Autodesk\\Revit\\Addins\\<Version>. Move all .addin files to a temporary folder. Restart Revit and run the Sync. If successful, restore plugins one-by-one to identify the culprit. Review your Revit Journals in %LOCALAPPDATA%\\Autodesk\\Revit\\Autodesk Revit <Version>\\Journals for SSL_ERROR entries indicative of firewall network packet inspection blocks."
+  },
+  {
+    category: 'standards',
+    tools: ['revit'],
+    q: "How to prevent missing shared parameters when exporting Revit models to IFC4?",
+    a: "Create a plain text user-defined parameter mapping file (e.g., following DefaultUserDefinedParameterSets.txt). Map properties using syntax: 'PropertySet: PsetName [I/T] IFC_Class' followed by property names, Revit parameter names, and data types (e.g., Text, Real). In IFC Export Setup > Property Sets, check 'Export user-defined property sets' and load this mapping file."
+  },
+  {
+    category: 'standards',
+    tools: ['revit'],
+    q: "How to fix Revit elements exporting as IfcBuildingElementProxy generic objects?",
+    a: "To enforce correct schema mapping, go to File > Export > Options > IFC Options. Review the mapping table and verify that Revit categories are mapped to their specific IFC classes (e.g., Walls map to IfcWall, Structural Columns map to IfcColumn). Ensure standard category mapping profiles are loaded consistently across all project workstations."
+  },
+  {
+    category: 'performance',
+    tools: ['revit'],
+    q: "How to eliminate viewport lag and redraw delays caused by bloated Revit families?",
+    a: "Open the family (.rfa) file. Go to Visibility/Graphics (VG) > Imported Categories, select and delete any imported DWG/DXF files (use Trace instead of Import CAD). Run Purge Unused from the Manage tab at least three times consecutively. For complex geometry, use Visibility Settings to display 3D meshes only in 'Fine' views and draw lightweight 2D Symbolic Lines for 'Coarse' and 'Medium' plan views."
+  },
+  {
+    category: 'licensing',
+    tools: ['revit'],
+    q: "How to perform a silent deployment of Revit using the modern Autodesk ODIS engine?",
+    a: "Generate your deployment configuration XML package from the Autodesk Account portal. Open administrative command line and execute: `Setup.exe --silent --offline_mode -q --config \".\\\\image\\\\Collection.xml\"`. To resolve licensing registration conflicts, run AdskLicensingInstHelper.exe register with Product Key 829R1 (for Revit 2026) and the path to your Revit2026.pit file."
+  },
 ];

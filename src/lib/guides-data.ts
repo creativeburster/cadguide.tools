@@ -40,7 +40,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'standards',
     title: 'Platform Compatibility & Standards',
     desc: 'Deploy and optimize CAD software across macOS, Linux, and Web environments.',
-    countLabel: '23 Active Guides',
+    countLabel: '25 Active Guides',
     gradient: 'from-blue-500 via-indigo-600 to-violet-500',
     articles: [
       { title: 'Apple Silicon M1/M2/M3 native Mac Performance tuning: Optimizing AutoCAD for macOS Workstations', slug: 'm1-m2-mac-silicon-tuning', keyword: 'autocad for mac' },
@@ -66,6 +66,8 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Imperial to Metric Dimension Styles: Standardizing Unit Precision and Dual Dimensions', slug: 'imperial-metric-dimension-style', keyword: 'autocad drafting' },
       { title: 'Configuring CTB and STB Plot Style Tables: Line Weight Mapping for Monochrome Output', slug: 'ctb-stb-plot-style-tables', keyword: 'autocad tools' },
       { title: 'Model Space vs. Paper Space Standards: Designing Compliant Layout Viewport Structures', slug: 'model-space-vs-paper-space-standards', keyword: 'autocad drafting' },
+      { title: 'Revit Shared Coordinates Alignment: Troubleshooting Acquire Coordinates Failures and 3D Offsets', slug: 'revit-shared-coordinates-acquire-failed', keyword: 'autocad revit' },
+      { title: 'Revit IFC4 Export Guide: Fixing Missing Shared Parameters and Category Mapping', slug: 'revit-ifc-export-missing-parameters-mapping', keyword: 'autocad revit' },
     ],
     tags: ['#Mac-CAD', '#Linux-CAD', '#AutoCAD-Web', '#ISO-Standards']
   },
@@ -74,7 +76,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'performance',
     title: 'Legacy Performance Speed Tuning',
     desc: 'Configure modern heavy CAD platforms to launch and render optimally on low-end hardware.',
-    countLabel: '15 Active Guides',
+    countLabel: '16 Active Guides',
     gradient: 'from-amber-500 via-orange-600 to-yellow-500',
     articles: [
       { title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations', slug: 'why-engineers-use-autocad-2007-speed-tuning', keyword: 'autocad 2007' },
@@ -92,6 +94,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Automatic Temp Cache Cleaner: Scripting Windows Temp Cleanup for AutoCAD Workspace Health', slug: 'automatic-temp-cache-cleaner', keyword: 'autocad tools' },
       { title: 'AutoCAD MEP Calculators: Sizing HVAC Ducts and Calculating Pipe Friction Losses', slug: 'mep-fluid-friction-flow-calculator', keyword: 'autocad mep' },
       { title: 'AutoCAD 3D Viewport Performance: rolling back DirectX 12 to DirectX 11 via GFXDX12', slug: 'autocad-3d-viewport-dx12-acceleration', keyword: 'autocad 3d' },
+      { title: 'Optimizing Bloated Revit Families: Preventing Viewport Redraw Lag and Family Cache Bloat', slug: 'revit-family-performance-bloat-optimization', keyword: 'autocad tools' },
     ],
     tags: ['#LegacyTuning', '#RAM-Optimization', '#Speed-Boost']
   },
@@ -100,7 +103,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'troubleshooting',
     title: 'Enterprise Troubleshooting & Licensing',
     desc: 'Diagnose fatal address freezes, FLEXlm port server conflicts, and registry socket locks.',
-    countLabel: '16 Active Guides',
+    countLabel: '17 Active Guides',
     gradient: 'from-rose-500 via-pink-600 to-red-500',
     articles: [
       { title: 'Enterprise Troubleshooting Blueprint: Fixing AutoCAD Fatal Errors & FLEXlm Network License Failures', slug: 'fixing-autocad-fatal-errors-flexlm-licensing', keyword: 'flexlm error -15' },
@@ -118,6 +121,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Recovering Corrupted DWG Backup Disaster: Reconstructing Drawing Databases via .BAK and .SV$', slug: 'recovering-corrupted-dwg-backup-disaster', keyword: 'autocad reader' },
       { title: 'Resolving XREF Path Circular Dependency: Repairing Corrupted Drawing References and Viewport Freeze', slug: 'resolving-xref-path-circular-dependency', keyword: 'autocad reader' },
       { title: 'Fixing ACIS 3D Boolean Stitching Failure: Repairing Topology Tears and Import Mesh Errors', slug: 'fixing-acis-3d-boolean-stitching-failure', keyword: 'autocad 3d' },
+      { title: 'Resolving Revit Sync to Central Freezes: Clearing Local Collaboration Cache and Temp Directory', slug: 'revit-central-model-sync-crash-cache', keyword: 'autocad tools' },
     ],
     tags: ['#FLEXlm-Error-15', '#FatalError-0x0024', '#RegistryTuning']
   },
@@ -126,7 +130,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'deployment',
     title: 'Enterprise IT System Deployment',
     desc: 'Package silent deployments, manage FLEXlm options files, and automate silent updates.',
-    countLabel: '16 Active Guides',
+    countLabel: '17 Active Guides',
     gradient: 'from-indigo-600 via-purple-600 to-pink-500',
     articles: [
       { title: 'Silent Deploy AutoCAD with Microsoft Intune: Enterprise Packaging and Silent MSI Distribution Guide', slug: 'silent-deploy-autocad-microsoft-intune', keyword: 'autocad windows 11' },
@@ -145,6 +149,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Autodesk ODIS Silent Deployment Guide: CLI Installation Parameters and Resolving Error 1603', slug: 'autodesk-odis-silent-deployment-1603', keyword: 'autodesk cad' },
       { title: 'Enforcing AutoCAD TRUSTEDPATHS via GPO: Enterprise Security Registry Deployment', slug: 'autolisp-secure-load-gpo-trustedpaths', keyword: 'autocad tools' },
       { title: 'FLEXlm Redundant Three-Server Setup: High Availability and License Idle Timeout Options', slug: 'flexlm-redundant-three-server-opt', keyword: 'autocad online' },
+      { title: 'Revit Enterprise Silent Deployment: Configuring ODIS Installation Commands and Licensing Services', slug: 'revit-silent-deployment-odis-licensing', keyword: 'autocad tools' },
     ],
     tags: ['#IntuneDeploy', '#SilentPack', '#LicenseReserve']
   },
@@ -1470,6 +1475,66 @@ export const ARTICLES_LIST: GuideArticleCard[] = [
     keyword: 'autocad 3d',
     slug: 'autocad-3d-viewport-dx12-acceleration'
   },
+  {
+    id: 'art-revit-shared-coordinates-acquire',
+    category: 'standards',
+    title: 'Revit Shared Coordinates Alignment: Troubleshooting Acquire Coordinates Failures and 3D Offsets',
+    excerpt: 'An operations guide to resolve Autodesk Revit shared coordinate system drift and the Acquire Coordinates Failed error when linking external CAD/BIM models.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'revit',
+    keyword: 'autocad revit',
+    slug: 'revit-shared-coordinates-acquire-failed'
+  },
+  {
+    id: 'art-revit-central-sync-crash',
+    category: 'troubleshooting',
+    title: 'Resolving Revit Sync to Central Freezes: Clearing Local Collaboration Cache and Temp Directory',
+    excerpt: 'A troubleshooting blueprint to resolve Revit synchronization freezes, network timeout crashes, and local data lockups when performing a Sync to Central.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'revit',
+    keyword: 'autocad tools',
+    slug: 'revit-central-model-sync-crash-cache'
+  },
+  {
+    id: 'art-revit-ifc-export-mapping',
+    category: 'standards',
+    title: 'Revit IFC4 Export Guide: Fixing Missing Shared Parameters and Category Mapping',
+    excerpt: 'A developer guide to configuring Custom Property Set mapping files and category class tables for seamless IFC4 data exports from Revit.',
+    author: 'Will P. (BIM Data Strategist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'revit',
+    keyword: 'autocad revit',
+    slug: 'revit-ifc-export-missing-parameters-mapping'
+  },
+  {
+    id: 'art-revit-family-perf-bloat',
+    category: 'performance',
+    title: 'Optimizing Bloated Revit Families: Preventing Viewport Redraw Lag and Family Cache Bloat',
+    excerpt: 'A performance optimization guide to purging redundant CAD imports and configuring visibility detail level rules for large Revit project models.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'revit',
+    keyword: 'autocad tools',
+    slug: 'revit-family-performance-bloat-optimization'
+  },
+  {
+    id: 'art-revit-silent-deploy',
+    category: 'deployment',
+    title: 'Revit Enterprise Silent Deployment: Configuring ODIS Installation Commands and Licensing Services',
+    excerpt: 'An IT deployment guide to packaging quiet installation parameters using the modern Autodesk ODIS engine and resolving licensing registration conflicts.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'revit',
+    keyword: 'autocad tools',
+    slug: 'revit-silent-deployment-odis-licensing'
+  },
 ];
 
 // Stub exports to maintain compatibility with other pages
@@ -1511,8 +1576,9 @@ export function getLocalizedTitle(title: string, category: string, tool: Tool): 
 }
 
 export function isArticleCompatibleWithTool(articleTitle: string, articleCategory: string, tool: Tool): boolean {
-  if (tool.slug !== 'autocad') {
-    return false;
+  const article = ARTICLES_LIST.find(a => a.title === articleTitle);
+  if (article) {
+    return article.softwareSlug === tool.slug;
   }
-  return true;
+  return tool.slug === 'autocad';
 }

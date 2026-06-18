@@ -4310,7 +4310,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   try {
     const fs = require('fs');
     const path = require('path');
-    const mdPath = path.join(process.cwd(), 'src/content/guides/autocad', `${template.slug}.md`);
+    const mdPath = path.join(process.cwd(), 'src/content/guides', template.softwareSlug, `${template.slug}.md`);
     contentMarkdown = fs.readFileSync(mdPath, 'utf-8');
   } catch (err) {
     console.error(`Failed to load markdown for slug ${template.slug}:`, err);
