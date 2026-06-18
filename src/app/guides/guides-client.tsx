@@ -381,7 +381,7 @@ export default function GuidesClient() {
       // Populate & show tooltip
       if (tooltipEl && titleEl && typeEl && descEl) {
         titleEl.textContent = d.name;
-        typeEl.textContent = d.type === 'Tool' ? 'Software Core' : d.type === 'Concept' ? 'Architectural Concept' : 'Data Format Specification';
+        typeEl.textContent = d.type === 'Tool' ? 'Software Core' : d.type === 'Concept' ? 'Troubleshooting Directive' : 'Data Format Specification';
         descEl.textContent = d.desc || '';
         tooltipEl.style.opacity = '1';
       }
@@ -679,7 +679,6 @@ export default function GuidesClient() {
   const sidebarNavItems = [
     { id: 'overview', label: 'Overview', icon: '🏛' },
     { id: 'graph', label: 'Knowledge Graph', icon: '🕸️' },
-    { id: 'concepts', label: 'Concepts & Terms', icon: '🔮' },
     { id: 'faq', label: 'Technical FAQ', icon: '💬' },
     { id: 'sitemap', label: 'Folder Directory', icon: '📂' }
   ];
@@ -810,7 +809,6 @@ export default function GuidesClient() {
             {[
               { id: 'overview', label: 'Overview' },
               { id: 'graph', label: 'Interactive Graph' },
-              { id: 'concepts', label: 'Concepts & Terms' },
               { id: 'faq', label: 'Technical FAQ' },
               { id: 'sitemap', label: 'Sitemap' }
             ].filter(tab => {
@@ -1106,10 +1104,7 @@ export default function GuidesClient() {
                       <span className="w-2 h-2 rounded-full bg-[#38bdf8] shadow-[0_0_6px_#38bdf8]" /> Tool
                     </div>
                     <div className="flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-[#c084fc] shadow-[0_0_6px_#c084fc]" /> Concept
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-[#fbbf24] shadow-[0_0_6px_#fbbf24]" /> Format
+                      <span className="w-2 h-2 rounded-full bg-[#c084fc] shadow-[0_0_6px_#c084fc]" /> Troubleshooting
                     </div>
                   </div>
                 </div>
@@ -1216,10 +1211,10 @@ export default function GuidesClient() {
                             className="w-full h-9 rounded-lg bg-slate-850 hover:bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center gap-1 border border-slate-700 shadow-sm"
                             onClick={() => {
                               setSearchQuery(selectedGraphNode.name);
-                              setCurrentView('concepts');
+                              setCurrentView('faq');
                             }}
                           >
-                            <Eye className="w-3.5 h-3.5" /> Search Concept
+                            <Eye className="w-3.5 h-3.5" /> Search FAQ
                           </Button>
                         );
                       })()}
