@@ -3413,7 +3413,7 @@ function renderRealArticlePage(tool: Tool, template: any, category: string) {
         {/* Registry diagnostic block */}
         <div className="space-y-3">
           <div className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-1">Quick Registry Fix</div>
-          <div className="bg-slate-950 p-4 rounded-xl font-mono text-[10px] text-slate-350 overflow-x-auto select-all border border-slate-900 leading-relaxed">
+          <div className="bg-slate-950 p-4 rounded-xl font-mono text-[10px] text-slate-100 overflow-x-auto select-all border border-slate-900 leading-relaxed">
             <code>
               {`[HKEY_CURRENT_USER\\Software\\FLEXlm License Manager]\n"FLEXLM_TIMEOUT"=dword:000f4240`}
             </code>
@@ -3542,12 +3542,16 @@ function renderRealArticlePage(tool: Tool, template: any, category: string) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         
         {/* Navigation breadcrumbs */}
-        <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-400 mb-8">
-          <Link href={homeHref} className="hover:text-blue-600 transition-colors uppercase">HOME</Link>
+        <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-400 mb-8 uppercase tracking-wider">
+          <Link href={homeHref} className="hover:text-blue-600 transition-colors">HOME</Link>
           <span>/</span>
-          <Link href="/guides" className="hover:text-blue-600 transition-colors uppercase">GUIDES</Link>
+          <Link href="/guides" className="hover:text-blue-600 transition-colors">GUIDES</Link>
           <span>/</span>
-          <span className="text-slate-650 uppercase font-black">{tool.name}</span>
+          <Link href={`/guides?tool=${tool.slug}`} className="hover:text-blue-600 transition-colors font-black text-slate-650">{tool.name}</Link>
+          <span>/</span>
+          <span className="text-slate-450 font-normal normal-case truncate max-w-[280px]" title={template.title}>
+            {template.title}
+          </span>
         </nav>
 
         {/* Back Link */}
