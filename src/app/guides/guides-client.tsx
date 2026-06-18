@@ -147,7 +147,7 @@ export default function GuidesClient() {
     f.a.toLowerCase().includes(searchLower)
   );
 
-  const FAQS_PER_PAGE = 3;
+  const FAQS_PER_PAGE = 200; // Increase to display all 100+ Autodesk FAQs directly in the list view
   const totalFaqPages = Math.ceil(filteredFaqs.length / FAQS_PER_PAGE);
   const displayedFaqs = filteredFaqs.slice((faqPage - 1) * FAQS_PER_PAGE, faqPage * FAQS_PER_PAGE);
 
