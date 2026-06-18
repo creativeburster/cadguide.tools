@@ -82,13 +82,22 @@ export default function GuidesClient() {
   }, []);
 
   const sortedCategorySections = React.useMemo(() => {
-    if (!meta) return CATEGORY_SECTIONS;
-    return [...CATEGORY_SECTIONS].sort((a, b) => {
+    // 过滤掉免费/开源工具的采购分类
+    let sections = CATEGORY_SECTIONS;
+    if (selectedTool) {
+      const isOpenSource = (selectedTool.pricing_type as string) === 'Open Source' || (selectedTool.pricing_type as string) === 'Free';
+      if (isOpenSource) {
+        sections = sections.filter(s => s.category !== 'procurement');
+      }
+    }
+
+    if (!meta) return sections;
+    return [...sections].sort((a, b) => {
       const indexA = meta.categoryOrder.indexOf(a.category);
       const indexB = meta.categoryOrder.indexOf(b.category);
       return indexA - indexB;
     });
-  }, [meta]);
+  }, [meta, selectedTool]);
 
 
 
@@ -326,6 +335,7 @@ export default function GuidesClient() {
               {/* Symmetric Grid of Category sections */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {sortedCategorySections.map((p, idx) => {
+                  const mappedInfo = getMappedCategoryInfo(p.category, selectedTool, p.title, p.desc);
 
                   return (
                     <Card
@@ -344,11 +354,11 @@ export default function GuidesClient() {
                         
                         <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight flex items-center gap-2 group-hover:text-blue-600 transition-colors">
                           <span className={`w-1 h-5 rounded-full bg-gradient-to-b ${p.gradient}`} />
-                          {p.title}
+                          {mappedInfo.title}
                         </h3>
                         
                         <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
-                          {p.desc}
+                          {mappedInfo.desc}
                         </p>
 
                         <div className="flex flex-wrap gap-1.5 pt-1">
@@ -383,17 +393,7 @@ export default function GuidesClient() {
               {/* Category tabs inside Tool Guide */}
               <Card className="p-4 rounded-2xl bg-white border border-slate-200/60 shadow-sm">
                 <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-4xl mx-auto">
-                  {[
-                    { id: 'all', label: 'All Operations' },
-                    { id: 'procurement', label: 'Procurement & TCO' },
-                    { id: 'troubleshooting', label: 'Troubleshooting' },
-                    { id: 'performance', label: 'Performance' },
-                    { id: 'standards', label: 'Standards' },
-                    { id: 'deployment', label: 'IT Deployment' },
-                    { id: 'migration', label: 'Migration & API' },
-                    { id: 'manufacturing', label: 'Specialized Toolsets' },
-                    { id: 'printing', label: 'Printing & Plotting' }
-                  ].map((tab) => (
+                  {getCategoryTabsForTool(selectedTool).map((tab) => (
                     <button
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id as any)}
@@ -608,4 +608,105 @@ export default function GuidesClient() {
       </div>
     </main>
   );
+}
+
+function getCategoryTabsForTool(tool: any): { id: string; label: string }[] {
+  const defaultTabs = [
+    { id: 'all', label: 'All Operations' },
+    { id: 'procurement', label: 'Procurement & TCO' },
+    { id: 'troubleshooting', label: 'Troubleshooting' },
+    { id: 'performance', label: 'Performance' },
+    { id: 'standards', label: 'Standards' },
+    { id: 'deployment', label: 'IT Deployment' },
+    { id: 'migration', label: 'Migration & API' },
+    { id: 'manufacturing', label: 'Specialized Toolsets' },
+    { id: 'printing', label: 'Printing & Plotting' }
+  ];
+
+  if (!tool) return defaultTabs;
+
+  const industries = tool.industries || [];
+  const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
+  const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
+  const isOpenSource = (tool.pricing_type as string) === 'Open Source' || (tool.pricing_type as string) === 'Free';
+
+  let filtered = defaultTabs;
+  if (isOpenSource) {
+    filtered = filtered.filter(t => t.id !== 'procurement');
+  }
+
+  return filtered.map(t => {
+    if (isBIM) {
+      if (t.id === 'migration') return { id: t.id, label: 'Dynamo & API Automation' };
+      if (t.id === 'manufacturing') return { id: t.id, label: 'MEP & Structural Detailing' };
+      if (t.id === 'printing') return { id: t.id, label: 'PDF Sheet Printing' };
+      if (t.id === 'standards') return { id: t.id, label: 'BIM Standards & Coordinates' };
+    }
+    if (isMCAD) {
+      if (t.id === 'migration') return { id: t.id, label: 'API & PDM Customization' };
+      if (t.id === 'manufacturing') return { id: t.id, label: 'Sheet Metal & Solid Detailing' };
+      if (t.id === 'printing') return { id: t.id, label: 'Drawing & Pen Styles' };
+      if (t.id === 'standards') return { id: t.id, label: 'MCAD Formats & Standards' };
+    }
+    if (tool.slug === 'autocad') {
+      if (t.id === 'migration') return { id: t.id, label: 'AutoLISP & ObjectARX' };
+      if (t.id === 'printing') return { id: t.id, label: 'Plot Style & Printing' };
+      if (t.id === 'standards') return { id: t.id, label: 'CAD Layer Standards' };
+    }
+    return t;
+  });
+}
+
+function getMappedCategoryInfo(category: string, tool: any, originalTitle: string, originalDesc: string) {
+  if (!tool) return { title: originalTitle, desc: originalDesc };
+
+  const industries = tool.industries || [];
+  const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
+  const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
+
+  let title = originalTitle;
+  let desc = originalDesc;
+
+  if (isBIM) {
+    if (category === 'migration') {
+      title = 'Dynamo & API Automation';
+      desc = `Integrate visual scripting parameters, compile Zero Touch C# components, and automate model checking in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      title = 'MEP & Structural Detailing';
+      desc = `Configure duct friction loss schedules, parametric rebar cages, and advanced steel joints details in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'PDF Sheet Printing';
+      desc = `Fix margin overrides, font substitute overlaps, and vector vs. raster print resolution in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'BIM Standards & Coordinates';
+      desc = `Troubleshoot shared coordinate drifts, link CAD projections, and configure IFC4 export schemas in ${tool.name}.`;
+    }
+  } else if (isMCAD) {
+    if (category === 'migration') {
+      title = 'API & PDM Customization';
+      desc = `Develop C# plugins, automate assemblies macro commands, and clean cache conflicts in ${tool.name} PDM.`;
+    } else if (category === 'manufacturing') {
+      title = 'Sheet Metal & Solid Detailing';
+      desc = `Configure K-Factor blank lengths, bend calculations tables, and export certified detail drawing sheets in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'Drawing & Pen Styles';
+      desc = `Manage sheet formats, pen weights scales, and print resolution for assembly drawings in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'MCAD Formats & Standards';
+      desc = `Repair imported STEP/IGES surface tears, set modeling tolerance, and align coordinate origins in ${tool.name}.`;
+    }
+  } else if (tool.slug === 'autocad') {
+    if (category === 'migration') {
+      title = 'AutoLISP & ObjectARX';
+      desc = `Compile custom FAS/VLX LISP utilities, manage ObjectARX libraries, and configure secure script paths in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'Plot Style & Printing';
+      desc = `Manage CTB/STB plot pens, configure paper sizes, and fix missing font display during plotting in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'CAD Layer Standards';
+      desc = `Configure AIA and ISO 13567 default layer name schemes, linetypes, and dimensions scales in ${tool.name}.`;
+    }
+  }
+
+  return { title, desc };
 }
