@@ -3299,17 +3299,6 @@ function renderRealArticlePage(tool: Tool, template: any, category: string) {
     manufacturing: 'SPECIALIZED TOOLSETS'
   };
 
-  const categoryCnNames: Record<string, string> = {
-    procurement: '采购与成本',
-    troubleshooting: '故障排除',
-    performance: '性能优化',
-    standards: '标准与兼容性',
-    deployment: 'IT部署',
-    migration: '迁移与API',
-    manufacturing: '专业工具',
-    printing: '打印与出图'
-  };
-
   // 1. 根据 category 分类，选择不同的视觉配置
   let theme = {
     bg: 'bg-[#faf9f6]', // 默认优雅暖白
@@ -3563,15 +3552,15 @@ function renderRealArticlePage(tool: Tool, template: any, category: string) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         
         {/* Navigation breadcrumbs */}
-        <nav className="flex items-center gap-1.5 text-xs font-bold text-slate-400 mb-8 tracking-wider">
+        <nav className="flex items-center gap-1.5 text-[10px] font-bold text-slate-400 mb-8 uppercase tracking-wider">
           <Link href={homeHref} className="hover:text-blue-600 transition-colors">home</Link>
           <span className="text-slate-300 font-normal">/</span>
-          <Link href="/guides" className="hover:text-blue-600 transition-colors">指南</Link>
+          <Link href="/guides" className="hover:text-blue-600 transition-colors">guides</Link>
           <span className="text-slate-300 font-normal">/</span>
           <Link href={`/guides?tool=${tool.slug}`} className="hover:text-blue-600 transition-colors font-black text-slate-650">{tool.name}</Link>
           <span className="text-slate-300 font-normal">/</span>
           <span className="text-slate-450 font-normal">
-            {categoryCnNames[category] || category}
+            {categoryNames[category] || category}
           </span>
         </nav>
 
@@ -3626,10 +3615,9 @@ function renderRealArticlePage(tool: Tool, template: any, category: string) {
               <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/80 flex items-start gap-4 text-amber-900 shadow-sm">
                 <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5 text-amber-700" />
                 <div className="space-y-1">
-                  <h4 className="text-xs font-black uppercase tracking-wider text-amber-950">IT技术蓝图大纲 (IT Operations Stub Outline)</h4>
-                  <p className="text-[11px] leading-relaxed text-amber-800 font-medium">
-                    本文档目前作为企业级 IT 操作蓝图大纲进行索引。正文已包含核心系统参数与配置步骤。
-                    后续将由 CAD 运维主管 and 系统专家根据官方最新帮助中心对各物理节点细节命令进行扩展写入。
+                  <h4 className="text-xs font-black uppercase tracking-wider text-amber-950">IT Operations Stub Outline & Technical Blueprint</h4>
+                  <p className="text-[11px] leading-relaxed text-amber-850 font-medium">
+                    This document is currently indexed as an enterprise-grade IT operations blueprint outline. The body contains validated system parameters and primary configuration protocols. Detailed localized command syntax and patch updates will be progressively integrated by CAD system administrators and network engineers based on the latest Autodesk Support & Help Center releases.
                   </p>
                 </div>
               </div>
