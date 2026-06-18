@@ -42,15 +42,18 @@ export default function GuidesClient() {
   // Search logic for left sidebar
   const [searchQuery, setSearchQuery] = useState('');
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Click outside to close dropdown
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        setIsDropdownOpen(false);
+        setIsFocused(false);
+        setInputValue('');
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -61,8 +64,9 @@ export default function GuidesClient() {
 
   const handleSelectTool = (slug: string) => {
     setSelectedToolSlug(slug);
-    setIsOpen(false);
-    setSearchTerm('');
+    setIsDropdownOpen(false);
+    setIsFocused(false);
+    setInputValue('');
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       if (slug === 'all') {
@@ -75,10 +79,13 @@ export default function GuidesClient() {
   };
 
   const sortedToolsList = [...tools].sort((a, b) => a.name.localeCompare(b.name));
-  const filteredToolsList = sortedToolsList.filter(t => 
-    t.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    t.slug.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredToolsList = sortedToolsList.filter(t => {
+    if (isFocused && inputValue) {
+      return t.name.toLowerCase().includes(inputValue.toLowerCase()) ||
+             t.slug.toLowerCase().includes(inputValue.toLowerCase());
+    }
+    return true;
+  });
 
   const selectedTool = tools.find(t => t.slug === selectedToolSlug) || null;
   const meta = selectedTool ? getArchetypeMetadata(selectedTool.category_id) : null;
@@ -255,43 +262,39 @@ export default function GuidesClient() {
               Active Software Focus
             </span>
             <div className="relative" ref={dropdownRef}>
-              {/* Trigger Button */}
+              {/* Input field with select dropdown functionality combined */}
+              <input
+                type="text"
+                value={isFocused ? inputValue : (selectedToolSlug === 'all' ? '⚡ All Software' : (selectedTool?.name || ''))}
+                onChange={(e) => {
+                  setInputValue(e.target.value);
+                  setIsDropdownOpen(true);
+                }}
+                onFocus={() => {
+                  setIsFocused(true);
+                  setIsDropdownOpen(true);
+                  setInputValue('');
+                }}
+                placeholder="Type to search..."
+                className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold rounded-xl pl-3 pr-8 py-2.5 focus:outline-none focus:ring-1 focus:ring-blue-500 shadow-sm cursor-pointer hover:bg-slate-100/50"
+              />
               <button
                 type="button"
-                onClick={() => setIsOpen(!isOpen)}
-                className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold rounded-xl pl-3 pr-8 py-2.5 text-left flex items-center justify-between shadow-sm cursor-pointer hover:bg-slate-100/50 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                onClick={() => {
+                  setIsDropdownOpen(!isDropdownOpen);
+                  if (!isDropdownOpen) {
+                    setIsFocused(true);
+                    setInputValue('');
+                  }
+                }}
+                className="absolute inset-y-0 right-0 px-3 flex items-center text-slate-400 hover:text-slate-600"
               >
-                <span className="truncate">
-                  {selectedToolSlug === 'all' ? '⚡ All Software' : (selectedTool?.name || selectedToolSlug)}
-                </span>
-                <ChevronDown className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <ChevronDown className="w-3.5 h-3.5 shrink-0" />
               </button>
 
               {/* Popover List */}
-              {isOpen && (
-                <div className="absolute left-0 right-0 mt-1.5 z-50 bg-white border border-slate-200/80 rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[260px] animate-in fade-in-50 slide-in-from-top-1 duration-100">
-                  {/* Search Input inside Popover */}
-                  <div className="p-2 border-b border-slate-100 flex items-center gap-1.5 bg-slate-50/50">
-                    <Search className="w-3.5 h-3.5 text-slate-400 shrink-0 ml-1" />
-                    <input
-                      type="text"
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      placeholder="Filter software..."
-                      className="w-full bg-transparent text-xs font-medium focus:outline-none text-slate-700 py-1"
-                      autoFocus
-                    />
-                    {searchTerm && (
-                      <button
-                        type="button"
-                        onClick={() => setSearchTerm('')}
-                        className="text-slate-400 hover:text-slate-600 p-0.5 rounded-full hover:bg-slate-200/50 transition-colors"
-                      >
-                        <X className="w-3.5 h-3.5" />
-                      </button>
-                    )}
-                  </div>
-
+              {isDropdownOpen && (
+                <div className="absolute left-0 right-0 mt-1.5 z-50 bg-white border border-slate-200/80 rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[220px] animate-in fade-in-50 slide-in-from-top-1 duration-100">
                   {/* Options List */}
                   <div className="overflow-y-auto py-1 flex-1">
                     <button
