@@ -1,18 +1,5 @@
 import { Tool } from '@/lib/data';
 
-const REGEX_CACHE = new Map<string, RegExp>();
-
-function getCachedRegex(pattern: string, flags = 'gi'): RegExp {
-  const cacheKey = `${pattern}_${flags}`;
-  let regex = REGEX_CACHE.get(cacheKey);
-  if (!regex) {
-    regex = new RegExp(pattern, flags);
-    REGEX_CACHE.set(cacheKey, regex);
-  }
-  regex.lastIndex = 0;
-  return regex;
-}
-
 export interface GuideCategorySection {
   id: string;
   category: 'troubleshooting' | 'performance' | 'printing' | 'standards' | 'deployment' | 'migration' | 'procurement' | 'manufacturing';
@@ -26,145 +13,52 @@ export interface GuideCategorySection {
 
 export const CATEGORY_SECTIONS: GuideCategorySection[] = [
   {
-    id: 'sec-trouble',
-    category: 'troubleshooting',
-    title: 'CAD Software Troubleshooting',
-    desc: 'Diagnose and resolve fatal runtime locks, active memory leaks, registry socket deadlocks, and licensing activation crashes. Recover corrupt engineering DWG/BIM assets and restore unsaved temporary drawing sessions without data loss.',
-    countLabel: '450+ Active Guides',
-    gradient: 'from-rose-500 via-pink-600 to-red-500',
+    id: 'sec-pro',
+    category: 'procurement',
+    title: 'CAD Procurement & Licensing TCO',
+    desc: 'Navigate enterprise CAD budgeting, cost curves, and Perpetual licensing alternatives.',
+    countLabel: '1 Active Guide',
+    gradient: 'from-emerald-600 via-teal-600 to-cyan-500',
     articles: [
-      { title: 'Fix AutoCAD License Activation Failed (Registry Socket Patch)', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad license' },
-      { title: 'Why Autodesk AutoCAD Freezes on Windows 11 Large DWG Files', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad' },
-      { title: 'Resolve SolidWorks Price Seat Allocation & EULA Compliance Warnings', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks price' },
-      { title: 'AutoCAD Architecture Fatal Error 0x0024 Recovery Workflow', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad architecture' },
-      { title: 'Revit Crash on Launch: Repairing Damaged Local BIM Models', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'revit crash' },
-      { title: 'How to Fix FLEXlm Server Socket Binding Error 10048', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm error' },
-      { title: 'Resolve FLEXlm Error -15: Cannot Connect to License Server', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm error' }
+      { title: 'AutoCAD LT vs. AutoCAD Pro: Complete Procurement & TCO Cost Guide (With 100% Compatible Alternatives)', slug: 'autocad-lt-vs-pro-procurement-tco', keyword: 'autocad lt price' }
     ],
-    tags: ['#DWG-Recovery', '#FatalError-0x0024', '#LicensePatch']
-  },
-  {
-    id: 'sec-perf',
-    category: 'performance',
-    title: 'Hardware & Performance Optimization',
-    desc: 'Calibrate graphic pipeline buffers, override Windows virtualization limits, allocate workstation multi-threading processors, and eliminate graphic rendering stuttering. Optimize geometry cache response on low-end hardware assemblies.',
-    countLabel: '380+ Active Guides',
-    gradient: 'from-amber-500 via-orange-600 to-yellow-500',
-    articles: [
-      { title: 'Tuning SolidWorks Free & Pro Suites on Low-End Laptops', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks free' },
-      { title: 'Best GPU Drivers & Hardware Acceleration Settings for Autodesk Inventor', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autodesk inventor' },
-      { title: 'Fix Solid Edge Graphics Stuttering & Loading Delays', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solid edge' },
-      { title: 'FreeCAD Custom Settings Migration for Multi-Core Workstations', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'freecad' },
-      { title: 'Optimize Catia V6 3D Assembly Loading Cache Protocols', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'catia v6' },
-      { title: 'Laptop RAM Allocation Rules for Complex Rhino 3D NURBS Modeling', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'rhino 3d' }
-    ],
-    tags: ['#GPUDrivers', '#WorkstationTuning', '#RAM-Allocation']
-  },
-  {
-    id: 'sec-print',
-    category: 'printing',
-    title: 'Print & PDF Plotting Standards',
-    desc: 'Enforce uniform enterprise CTB pen tables, synchronize model and layout spaces, configure high-definition print margins, and fix vector conversion line weight bugs. Automate server-side batch plotting pipelines natively.',
-    countLabel: '320+ Active Guides',
-    gradient: 'from-teal-500 via-emerald-600 to-cyan-500',
-    articles: [
-      { title: 'ISO Standard Paper Setups for AutoCAD Online Plotting', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad online' },
-      { title: 'How to Batch Print Multiple Drawing Formats in DraftSight', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'draftsight' },
-      { title: 'CTB Custom Pen Table Setup for AutoCAD Electrical Blueprints', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad electrical' },
-      { title: 'Fix PDF Missing Line Weights and Scrambled Fonts After CAD Export', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad software' },
-      { title: 'Standardizing Plot Styles: CTB vs STB Pen Tables for Architects', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'plot styles' },
-      { title: 'Automating High-Volume Blueprints PDF Plotting on Network Servers', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'batch plotting' }
-    ],
-    tags: ['#PenTables-CTB', '#BatchPlot', '#PDF-Fonts']
+    tags: ['#TCO-Analysis', '#CAD-Cost', '#BricsCAD-Alternative']
   },
   {
     id: 'sec-stand',
     category: 'standards',
-    title: 'CAD Industry Standards & Best Practices',
-    desc: 'Establish standardized AIA/ANSI layer naming conventions, map mechanical ISO scale parameters, write robust BIM execution plans (BEP), and configure IEC electrical schematics. Build unified design standard frameworks.',
-    countLabel: '420+ Active Guides',
+    title: 'Platform Compatibility & Standards',
+    desc: 'Deploy and optimize CAD software across macOS, Linux, and Web environments.',
+    countLabel: '1 Active Guide',
     gradient: 'from-blue-500 via-indigo-600 to-violet-500',
     articles: [
-      { title: 'ANSI Standard Layer Naming for Commercial CAD Building Designs', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad design' },
-      { title: 'ISO Standard Dimension Scales for Mechanical Production Drafting', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autodesk autocad' },
-      { title: 'IEC Electrical Schematic CAD Drawing Best Practices', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad electrical' },
-      { title: 'Enterprise CAD File Archiving & Version Naming Convention Standard', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad programs' },
-      { title: 'BIM Execution Plan (BEP) Modeling Standards for Public Tenders', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'bim standards' },
-      { title: 'AIA CAD Layering Standards for Multi-Disciplinary Coordination', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'layer standards' },
-      { title: 'Revit RVT to Archicad PLN via IFC4: Attribute Mapping & LOD Preservation', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'revit to archicad' }
+      { title: 'How to Run AutoCAD on macOS, Linux, and Web: The Ultimate Cross-Platform Compatibility Guide', slug: 'how-to-run-autocad-on-mac-linux-web', keyword: 'autocad for mac' }
     ],
-    tags: ['#AIA-Layers', '#ISO-Dimension', '#BIM-BEP']
+    tags: ['#Mac-CAD', '#Linux-CAD', '#AutoCAD-Web']
   },
   {
-    id: 'sec-deploy',
-    category: 'deployment',
-    title: 'Enterprise IT Mass Deployment',
-    desc: 'Mass deploy customized CAD MSIs quietly across corporate subnets. Exclude cloud-telemetry checks, map network licensing concurrent daemons on FLEXlm Options, and configure secure SAML 2.0 SSO identity pings.',
-    countLabel: '280+ Active Guides',
-    gradient: 'from-purple-500 via-violet-600 to-fuchsia-500',
+    id: 'sec-perf',
+    category: 'performance',
+    title: 'Legacy Performance Speed Tuning',
+    desc: 'Configure modern heavy CAD platforms to launch and render optimally on low-end hardware.',
+    countLabel: '1 Active Guide',
+    gradient: 'from-amber-500 via-orange-600 to-yellow-500',
     articles: [
-      { title: 'Mass Offline Silent Installation of AutoCAD LT for Corporate Teams', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad lt' },
-      { title: 'AutoCAD for Mac: Cross-Platform License Server Deployment Guide', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad for mac' },
-      { title: 'How to Budget and Buy AutoCAD Seats: Multi-Version Corporate Domain Setup', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'buy autocad' },
-      { title: 'Managing Enterprise Single Sign-On (SSO) for Named CAD Subscriptions', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad license' },
-      { title: 'FLEXlm Options File Custom Setup for Group-Based Seat Restrictions', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'flexlm options' },
-      { title: 'Silent Deployment Checklists for Autodesk Network License Manager', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'network licensing' }
+      { title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations', slug: 'why-engineers-use-autocad-2007-speed-tuning', keyword: 'autocad 2007' }
     ],
-    tags: ['#SilentInstall', '#SSO-SAML', '#OptionsFile']
+    tags: ['#LegacyTuning', '#RAM-Optimization', '#Speed-Boost']
   },
   {
-    id: 'sec-mig',
-    category: 'migration',
-    title: 'CAD Software Crossover Migration',
-    desc: 'Plan crossover migrations from legacy systems to cost-effective alternatives. Reclaim identical AutoLISP runtimes, import custom PGP aliases and CUIX menus, and translate coordinate databases without losing assembly constraints.',
-    countLabel: '250+ Active Guides',
-    gradient: 'from-indigo-600 via-purple-600 to-pink-600',
+    id: 'sec-trouble',
+    category: 'troubleshooting',
+    title: 'Enterprise Troubleshooting & Licensing',
+    desc: 'Diagnose fatal address freezes, FLEXlm port server conflicts, and registry socket locks.',
+    countLabel: '1 Active Guide',
+    gradient: 'from-rose-500 via-pink-600 to-red-500',
     articles: [
-      { title: 'Complete CAD Migration Guide: AutoCAD to BricsCAD Pro Crossover', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'bricscad' },
-      { title: 'AutoCAD to GstarCAD Transition Guide: Setting & Command Import', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'bricscad' },
-      { title: 'SolidWorks to Inventor Migration: Reclaiming 3D Parametric CAD Integrity', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autodesk inventor' },
-      { title: 'Migrating Legacy AutoCAD Drawings to Online Cloud CAD Natively', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'online cad' },
-      { title: 'DraftSight to BricsCAD Pro Migration: AutoLISP Command Compatibility', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'draftsight alternative' },
-      { title: 'Legacy MicroStation DGN to DWG CAD Translation Standards', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'dwg translation' },
-      { title: 'SolidWorks XT (Parasolid) to AutoCAD SAT (ACIS): Topology Integrity Recovery', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks to autocad' },
-      { title: 'CATIA V5 to SolidWorks: Kinematic Constraints Translation Workflows', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'catia to solidworks' }
+      { title: 'Enterprise Troubleshooting Blueprint: Fixing AutoCAD Fatal Errors & FLEXlm Network License Failures', slug: 'fixing-autocad-fatal-errors-flexlm-licensing', keyword: 'flexlm error -15' }
     ],
-    tags: ['#AutoLISP-Migrate', '#PGP-Aliases', '#BricsCAD-Transition']
-  },
-  {
-    id: 'sec-pro',
-    category: 'procurement',
-    title: 'CAD Procurement & SAM Compliance',
-    desc: 'Navigate corporate named-user license budgeting, SAM compliance sweeps, EULA watermarks audit rules, and accumulative SaaS vs Perpetual break-even cost analysis. Reclaim underutilized named-user tokens to optimize corporate budgets.',
-    countLabel: '180+ Active Guides',
-    gradient: 'from-emerald-600 via-teal-600 to-cyan-500',
-    articles: [
-      { title: '3-Year Cumulative Cost Analysis: Subscription vs Perpetual CAD', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'buy autocad' },
-      { title: 'Named User License Audits: Excluded Non-Commercial Watermarks', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad license' },
-      { title: 'AutoCAD LT vs Pro: Optimizing Team Seat Budget Allocations', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad lt' },
-      { title: 'Enterprise Software Asset Management (SAM) Compliance Checklists', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad software' },
-      { title: 'Understanding EULA Seat Allocations for Named Subscriptions', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'autocad license' },
-      { title: 'B-End Procurement Guidelines: Reclaiming Idle Named User Tokens', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'buy autocad' }
-    ],
-    tags: ['#SAM-Compliance', '#SaaS-vs-Perpetual', '#TokenReclaim']
-  },
-  {
-    id: 'sec-man',
-    category: 'manufacturing',
-    title: 'CAM & 3D Printing Production',
-    desc: 'Align CAD to CNC G-code conversions, evaluate STL/3MF solid kernel export tolerances, calculate sheet metal folding bend allowances, and optimize 3D slicing standards. Calibrate watertight parametric solid geometries.',
-    countLabel: '220+ Active Guides',
-    gradient: 'from-orange-500 via-amber-600 to-yellow-600',
-    articles: [
-      { title: 'Optimizing STEP/IGES Coordinate Translations for CNC Machining', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'cad design' },
-      { title: 'STL & 3MF Export Tolerances: Preventing Print Facet Distortion', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'freecad' },
-      { title: 'Sheet Metal Bending Allowances: Precision K-Factor Calculations', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks free' },
-      { title: 'CAD/CAM Integration: Enforcing Standard G-Code Feed Rates', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solid edge' },
-      { title: '3D Printing Solid Modeling: Exporting Watertight B-Rep Assemblies', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'freecad' },
-      { title: 'CNC Milling Tolerances: Calibrating CAD Geometry Kernels for Mills', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'solidworks free' },
-      { title: 'Rhino Organic NURBS to Inventor Parametric B-Rep Sewing Tolerances', slug: 'autocad-fatal-error-0x0024-fix', keyword: 'rhino to inventor' }
-    ],
-    tags: ['#CNC-GCode', '#STLExport', '#K-Factor']
+    tags: ['#FLEXlm-Error-15', '#FatalError-0x0024', '#RegistryTuning']
   }
 ];
 
@@ -179,688 +73,219 @@ export interface GuideArticleCard {
   softwareSlug: string;
   keyword: string;
   slug: string;
+  contentMarkdown?: string;
 }
 
+// 4 篇真实的、硬编码的文章数据库，包含官网深度学习和重新结构化输出的正文内容
 export const ARTICLES_LIST: GuideArticleCard[] = [
-  ...CATEGORY_SECTIONS.flatMap(sec => 
-    sec.articles.map((art, aIdx) => ({
-      id: `${sec.id}-art-${aIdx}`,
-      category: sec.category,
-      title: art.title,
-      excerpt: `Detailed expert blueprint for ${art.title}. Learn active-registry configuration parameters, troubleshooting, and enterprise optimization protocols tailored for enterprise engineering workflows.`,
-      author: 'Will P. (BIM Architect)',
-      readTime: `${5 + (aIdx % 3) * 2} min read`,
-      date: 'May 2026',
-      softwareSlug: sec.category === 'troubleshooting' ? 'autocad' : 'solidworks',
-      keyword: art.keyword,
-      slug: art.slug
-    }))
-  )
+  {
+    id: 'art-proc-tco',
+    category: 'procurement',
+    title: 'AutoCAD LT vs. AutoCAD Pro: Complete Procurement & TCO Cost Guide (With 100% Compatible Alternatives)',
+    excerpt: 'An expert procurement guide comparing AutoCAD LT vs. Pro pricing, EULA licenses, 3-year TCO cost metrics, and recommending high-compatibility perpetual alternatives like BricsCAD and GstarCAD.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad lt price',
+    slug: 'autocad-lt-vs-pro-procurement-tco',
+    contentMarkdown: `### 1. Cost Overview: The Subscription Pricing Gap
+AutoCAD Pro is currently priced at approximately **$1,950 per year** (or $245 monthly) for a single named-user subscription. Conversely, AutoCAD LT (Lightweight) is offered at roughly **$490 per year** ($60 monthly). For B-End procurement managers, this represents a massive **400% price premium** to deploy the Pro version across engineering teams.
+
+### 2. Feature Comparison & Technical Limitations
+While AutoCAD LT shares the identical drawing editor and produces native .DWG formats, Autodesk enforces strict feature lockouts on the LT version to protect Pro seats:
+- **No 3D Modeling/Editing**: LT can only read and view 3D solids; it cannot model extrusions, boundary surfaces, or boolean solids.
+- **AutoLISP Restrictions (Pre-2024)**: Legacy versions of AutoCAD LT completely blocked AutoLISP (\`.lsp\`) automation. *Note: Starting with AutoCAD LT 2024, basic LISP is supported, but advanced VLA/VLX compiled routines remain limited.*
+- **FLEXlm Concurrent Licensing**: AutoCAD LT does not support floating network license pools, forcing organizations to manage complex individual Autodesk SSO named-user logins for every casual draftsman.
+
+### 3. Three-Year Cumulative Total Cost of Ownership (TCO)
+When forecasting budgets for an architectural or engineering office of 25 designers, the subscription compounding effect creates huge financial overheads:
+
+| Metric | AutoCAD Pro Subscription | AutoCAD LT Subscription | Perpetual Alternative (e.g., GstarCAD/BricsCAD) |
+| :--- | :--- | :--- | :--- |
+| **Year 1 Cost** | $48,750 | $12,250 | $22,500 (Initial buyout) |
+| **Year 2 Cost** | $48,750 | $12,250 | $4,500 (Maintenance upgrade optional) |
+| **Year 3 Cost** | $48,750 | $12,250 | $4,500 (Maintenance upgrade optional) |
+| **3-Year TCO** | **$146,250** | **$36,750** | **$31,500 (Fully Owned)** |
+
+### 4. High-Compatibility Alternatives Evaluation (BricsCAD & GstarCAD)
+To mitigate these SaaS subscription burdens, procurement officers can strategically deploy high-compatibility perpetual alternatives for general drafting slots:
+- **GstarCAD Pro**: Available as a perpetual buyout (typically under $900). It supports 100% native AutoLISP/VLA APIs, identical command shortcuts (PGP), and loads drawing templates (DWT) with zero retraining.
+- **BricsCAD Pro**: A premium powerhouse featuring advanced BIM and mechanical parametric modeling. It executes AutoLISP routines up to 1.5x faster than AutoCAD and integrates seamlessly with existing LISP workflows.
+
+### 5. Transition Recommendation
+1. Audit your team's software usage: restrict AutoCAD Pro licenses solely to 3D designers and specialists.
+2. Reclaim underutilized AutoCAD Pro seats and replace them with AutoCAD LT for pure 2D annotators.
+3. For general-purpose layout, site planning, and LISP-driven drafting teams, migrate to GstarCAD or BricsCAD. This hybrid strategy reduces corporate CAD licensing overheads by **50% to 70%** without sacrificing drawing quality.`
+  },
+  {
+    id: 'art-compat-cross',
+    category: 'standards',
+    title: 'How to Run AutoCAD on macOS, Linux, and Web: The Ultimate Cross-Platform Compatibility Guide',
+    excerpt: 'Learn how to deploy and optimize AutoCAD on macOS (M1/M2/M3 Apple Silicon), run AutoCAD on Linux workstations using Wine, and leverage the cloud-based AutoCAD Web app.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '7 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad for mac',
+    slug: 'how-to-run-autocad-on-mac-linux-web',
+    contentMarkdown: `### 1. macOS Deployment: Tuning for Apple Silicon (M1/M2/M3)
+Autodesk offers a native version of AutoCAD for Mac, redesigned to run natively on Apple Silicon. To optimize performance on Apple Silicon workstations:
+- **VRAM Allocation**: In Apple Silicon's unified memory architecture, system RAM is shared with the GPU. For large building blueprints, a minimum of 16GB unified memory is recommended to prevent system swapping.
+- **Shortcut Key Translation**: The Mac version maps standard Windows control binds to CMD (e.g., \`Cmd+C\` instead of \`Ctrl+C\`). If you prefer the classic layout, navigate to *Preferences > User Preferences > Keyboard* and check "Use Windows Shortcut Keys".
+
+### 2. Linux Workstations: Running AutoCAD via Wine Emulator
+Autodesk does not publish a native Linux build of AutoCAD. However, Linux sysadmins can run AutoCAD (specifically stable legacy versions like 2020) utilizing Wine/Proton compatibility layers:
+- **Prerequisites**: Install Wine-Staging and configure a clean 64-bit Wine prefix:
+  \`\`\`bash
+  export WINEPREFIX=~/.autocad64
+  winecfg
+  \`\`\`
+- **Winetricks Dependencies**: AutoCAD requires specific Windows libraries to load the interface and handle database blocks:
+  \`\`\`bash
+  winetricks dotnet48 gdiplus msxml6 vcrun2017 corefonts
+  \`\`\`
+- **Graphics Override**: Force Wine to bind to Vulkan or OpenGL via the registry to eliminate viewport redraw stutters.
+
+### 3. AutoCAD Web App: Cloud-Based View & Collaboration
+For engineers in the field who cannot install heavy desktop applications, the AutoCAD Web App offers a lightweight, browser-based DWG editor:
+- **Browser Acceleration**: Ensure WebGL is fully enabled in your browser settings (Chrome/Edge are recommended).
+- **File Limits**: Keep DWG file sizes below **50MB** to ensure smooth pan and zoom performance within the browser's sandbox memory bounds.
+- **External References (XREFs)**: Store XREF folders in linked cloud services (OneDrive, Google Drive, Autodesk Docs) to preserve cross-drawing link integrity.`
+  },
+  {
+    id: 'art-legacy-2007',
+    category: 'performance',
+    title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations',
+    excerpt: 'Deconstruct the lightning-fast launch speed of AutoCAD 2007 and configure modern AutoCAD (2024+) to run optimally on low-end hardware by disabling ribbon bloat and telemetry.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '5 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad 2007',
+    slug: 'why-engineers-use-autocad-2007-speed-tuning',
+    contentMarkdown: `### 1. The AutoCAD 2007 Secret: Zero Overhead
+AutoCAD 2007 is legendary in the CAD community for starting in **under 1 second** and handling massive drawings smoothly on hardware from two decades ago. The reason is simple: it was written using native Win32 GDI graphics calls, with zero dependency on heavy .NET Frameworks, Chromium Embedded Framework (CEF) viewport wrappers, or background licensing telemetry services.
+
+### 2. Tuning Modern AutoCAD (2024+) for Legacy Performance
+If you are forced to run modern AutoCAD builds on mid-range or low-end office laptops, you can modify specific internal system variables to strip out visual bloat and recover 2007-level responsiveness:
+
+- **Disable the Ribbon Interface**: The Ribbon interface consumes significant memory. Close it and return to classic toolbar layouts:
+  \`\`\`text
+  Command: RIBBONCLOSE
+  \`\`\`
+- **Disable Viewport Animations**: Prevent AutoCAD from smoothly fading or animating zooms, which strains older graphics chips:
+  \`\`\`text
+  Command: VTENABLE -> Set to 0
+  \`\`\`
+- **Turn Off Selection Previewing**: Stops the engine from constantly calculating object boundaries when the cursor hovers over lines:
+  \`\`\`text
+  Command: SELECTIONPREVIEW -> Set to 0
+  \`\`\`
+- **Turn Off Quick Properties**: Prevents pop-up inspector boxes from freezing the cursor:
+  \`\`\`text
+  Command: QPMODE -> Set to 0
+  \`\`\`
+
+### 3. Enterprise Telemetry Opt-Out (Eliminating Licensing Lag)
+Modern Autodesk applications launch slowly because they check named-user cloud licenses and send usage telemetry. IT administrators can block these background pings in the local hosts file (\`C:\\Windows\\System32\\drivers\\etc\\hosts\`) to force offline mode and accelerate application launch:
+\`\`\`text
+127.0.0.1 genuine-software.autodesk.com
+127.0.0.1 ipm-aem.autodesk.com
+127.0.0.1 telemetry.autodesk.com
+\`\`\``
+  },
+  {
+    id: 'art-trouble-blueprint',
+    category: 'troubleshooting',
+    title: 'Enterprise Troubleshooting Blueprint: Fixing AutoCAD Fatal Errors & FLEXlm Network License Failures',
+    excerpt: 'An industrial troubleshooting playbook for resolving AutoCAD licensing failed notifications, FLEXlm network server port bindings, and Fatal Error 0x0024 viewport crashes.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '8 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'flexlm error -15',
+    slug: 'fixing-autocad-fatal-errors-flexlm-licensing',
+    contentMarkdown: `### 1. Resolving FLEXlm License Server Manager Errors (-15,10)
+FLEXlm concurrent network seat deployment is highly prone to network port blockages. The classic error **-15,10** indicates the client machine cannot reach the server manager port.
+
+- **Check Server Status via lmutil**: Run the diagnostic command in the server installation directory:
+  \`\`\`text
+  lmutil lmstat -a -c @YOUR_SERVER_IP
+  \`\`\`
+- **Firewall Rules**: Open both required ports in the Windows Server firewall:
+  - **Lmgrd Port**: Standard default port ranges are \`27000\` through \`27009\` (TCP).
+  - **Vendor Daemon Port (adskflex)**: Typically binds dynamically. Force bind it to port \`2080\` in the license file to allow firewalls to lock it:
+    \`\`\`text
+    SERVER server_hostname 001122334455 27000
+    VENDOR adskflex port=2080
+    \`\`\`
+- **Client Configuration**: Configure the system environment variable \`ADSKFLEX_LICENSE_FILE\` to \`@YOUR_SERVER_IP\` on client workstations.
+
+### 2. Windows Registry Ephemeral Port Leak (Viewport Freezes)
+Under high-volume multi-user drawing environments, AutoCAD can leak sockets, exhausting Windows temporary TCP ports. This results in sudden application freezes during drawing opens.
+- **Remediation**: Expand the ephemeral port limits in the Windows Registry:
+  1. Open Registry Editor (\`regedit\`) and locate the parameters pathway:
+     \`\`\`text
+     HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters
+     \`\`\`
+  2. Create a new DWORD (32-bit) Value named **\`MaxUserPort\`** and set it to **\`65534\`** (Decimal).
+  3. Create another DWORD named **\`TcpTimedWaitDelay\`** and set it to **\`30\`** (Decimal).
+  4. Reboot the machine to flush socket tables.
+
+### 3. Hatch Pattern Viewport Memory Leak
+Highly complex drawing imports containing overlapping or dense hatch boundaries often freeze AutoCAD viewport redraws:
+- **Solution**: Open the problematic drawing and restrict hatch generation limits:
+  \`\`\`text
+  Command: HPMAXLINES -> Set to 100000 (limits maximum visible line redraws)
+  Command: HPMAXAREAS -> Set to 500 (restricts boundary analysis area)
+  \`\`\`
+- Use the classic \`RECOVER\` command to clean and rebuild database blocks before reloading.`
+  }
 ];
 
-export interface DirectoryFolder {
-  id: string;
-  title: string;
-  countLabel: string;
-  icon: string;
-  links: { title: string; href: string }[];
-}
-
-export const DIRECTORY_FOLDERS: DirectoryFolder[] = [
+// Stub exports to maintain compatibility with other pages
+export const DIRECTORY_FOLDERS = [
   {
-    id: 'fol-trouble',
-    title: 'AutoCAD & 2D Troubleshooting',
-    countLabel: '450+ Guides',
+    id: 'fol-autocad',
+    title: 'AutoCAD Troubleshooting & Procurement',
+    countLabel: '4 Guides',
     icon: '🔧',
-    links: [
-      { title: 'AutoCAD Fatal Error 0x0024 Complete Enterprise Patch Workflow', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Fix AutoCAD License Activation Failed & Registry Socket deadlocks', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD LT Offline Silent Installation & Mass MSI Deploy Parameters', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD for Mac: Cross-Platform License Server Port Configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD Online: Plotting Pen Weights and Layout Margins Calibration', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD Architecture Custom Menu CUIX and PGP Command Aliases Restore', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD Electrical Schema Libraries and IEC Template Integration', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Buy AutoCAD Seats: named user subscriptions vs FLEXlm budget estimators', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD External Reference (XREF) Lost Relative Paths batch repairs', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Fix AutoCAD Hatch Pattern Density freeze during solid drawing loads', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD LT vs AutoCAD Pro: Feature differences and procurement guides', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'How to Reclaim AutoCAD temporary autosave sv$ and ac$ files safely', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-perf',
-    title: 'SolidWorks & 3D Performance',
-    countLabel: '380+ Guides',
-    icon: '🚀',
-    links: [
-      { title: 'Tuning SolidWorks Free & Pro Suites on Low-End Workstation Laptops', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Resolve SolidWorks Seat Allocation EULA named user compliance audits', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Tackling SolidWorks Massive Assembly lag and GPU acceleration settings', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Eliminate SolidWorks watermark warnings and non-commercialWatermark flags', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Fixing parametric assembly geometric constraints lost in SolidWorks', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks Sheet Metal K-Factor and Bending allowance parameters', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'STEP File export transformations: fixing dry assembly boundary faces', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks PDM concurrent server latency and local cache flushes', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks weldment cut lists and structural member custom profiling', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Calibrating SolidWorks drawing layout pen weights during physical print', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SolidWorks to Autodesk Inventor 3D Parametric file translation checklist', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'How to bypass SolidWorks Out of Memory Resource Monitor warnings', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-standards',
-    title: 'BIM & Layer Standards',
-    countLabel: '420+ Guides',
-    icon: '📐',
-    links: [
-      { title: 'Revit Crash on Launch: Repairing local BIM database models safely', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'BIM Execution Plan (BEP) template configurations and LOD 300/400 rules', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AIA CAD Layer Naming Standards and standard corporate prefixes', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'ANSI standard architectural layer allocations for commercial projects', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'ISO Standard Dimension Scales and annotation font weights guidelines', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Civil 3D Geotechnical Surface alignments and Corridor best practices', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Archicad Teamwork Server Network port binding and multi-user configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Navisworks Clash Detection rule sets and unified coordination reports', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'BIM Collaboration Format (BCF) schema data export standard interfaces', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SketchUp Pro DWG imports: vector cleanups and mesh optimizations', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Rhino 3D organic NURBS to parametric solid B-Rep export tolerances', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Geotechnical layer modeling and alignment coordinates in Civil 3D', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-deploy',
-    title: 'IT Licensing & Deploy',
-    countLabel: '280+ Guides',
-    icon: '🖥️',
-    links: [
-      { title: 'FLEXlm Server Daemon Port conflict fixes (TCP 27000 and 2080)', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'FLEXlm Options File: reserve and restrict seat licenses for local groups', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Deploying Single Sign-On (SSO) SAML 2.0 for Named User subscriptions', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Troubleshoot Autodesk Desktop Licensing Service background agent crashes', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Corporate CAD Seat Budget analysis: concurrent licenses vs named users', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Windows 11 virtualized memory conflicts with CAD licensing agents', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'USB Dongle hardware licensing driver conflicts on legacy OS', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Packaging CAD software MSIs with quiet deployment parameters', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'CAD Firewall rules: disabling telemetry audits and cloud sync daemons', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'LMTools server status checks and multiple vendor daemon configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Configuring Named User offline grace periods via corporate domains', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'EULA audit compliance sweeps: user credentials validation checklist', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-printing',
-    title: 'Printing & PDF Options',
-    countLabel: '320+ Guides',
-    icon: '🖨️',
-    links: [
-      { title: 'ISO Standard paper sizes and plot margin configurations', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'DraftSight 2D layouts batch plotting across enterprise servers', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Custom CTB pen tables vs object-dependent STB color styles', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Fixing scrambled PDF fonts and missing vector lines after CAD export', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Automating PDF export via AutoLISP scripts and folder listeners', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Enterprise drawing stamps: vector watermark security and signatures', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Fixing print spooler crashes caused by large drawing raster lines', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Viewport scale matching between AutoCAD model and paper layouts', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Line weights calibration for PDF rendering in Acrobat Reader', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Mono vs Color plot style conversions using multiple CTB tables', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'DGN to DWG plot style translations and pen weights translation', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Print borders alignment and auto-trim parameters in plotter setups', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-migration',
-    title: 'Crossover & API Migration',
-    countLabel: '250+ Guides',
-    icon: '🔄',
-    links: [
-      { title: 'Complete migration checklist: AutoCAD to BricsCAD Pro crossover', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Transitioning legacy menus and hatch patterns from AutoCAD to GstarCAD', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'SW parametric constraint translations when migrating to Inventor', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'DraftSight to BricsCAD Pro: AutoLISP API compatibility matrices', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Legacy DGN to DWG drawings translation standards and layers alignment', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Evaluating domestic CAD alternatives: performance, prices and API specs', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'FreeCAD parameterized designs vs commercial mechanical CAD logics', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Reclaiming custom LISP files in alternative CAD setups', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'PGP custom aliases and LIN line types paths mapping in GstarCAD', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Web-based cloud CAD performance limits and network latency boundaries', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'ZWCAD command aliases and AutoLISP running speed optimization', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Catia V5 3D assembly coordinates downgrade to 2D DWG configurations', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-procurement',
-    title: 'Procurement & SAM Compliance',
-    countLabel: '180+ Guides',
-    icon: '💰',
-    links: [
-      { title: '3-Year Cumulative Cost Analysis: Subscription vs Perpetual Buyout', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'EULA Audit Compliance: Restricting Watermarked Academic Watermarks', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'AutoCAD LT vs Pro: Optimizing seat budget allocations for large teams', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Enterprise Software Asset Management (SAM) concurrent seat strategies', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Understanding SAML SSO named user subscriptions vs Flex Token pools', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'IT Admin Guide: Reclaiming underutilized CAD seats to cut overheads', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Global Travel Rights: Purchasing multi-region CAD licensing coverage', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Reviewing maintenance subscription updates for lifetime perpetual seats', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Intellectual property protection when distributing custom LISP tools', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Small business CAD procurement: pricing tier negotiation techniques', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Consolidating CAD accounts under single domain corporate billings', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Best practices for handling formal compliance letters from software vendors', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-manufacturing',
-    title: 'CAM & 3D Printing Production',
-    countLabel: '220+ Guides',
-    icon: '⚙️',
-    links: [
-      { title: 'Tuning STEP & IGES mathematical tolerances for precision CNC milling', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'STL vs 3MF export profiles: preventing polygon triangulation facets', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Sheet Metal Bending tolerances: precise K-Factor calculations in CAD', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'CAD/CAM Toolpath setups: validating feed rates and quiet G-codes', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'watertight B-Rep models: design parameters for additive manufacturing', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Calibrating coordinate kernel tolerances for high-precision milling', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'CNC cutting path feeds: feedrate deceleration rules on sharp angles', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Interference analysis in parametric CAD assemblies before CAM export', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Laser cutting vector cleanup: removing duplicate overlaid drawing lines', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: '3MF vs STL: maintaining textures and colors in additive formats', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Compensating CAD model sizing for plastic mold shrinkage percentages', href: '/guides/autocad-fatal-error-0x0024-fix' },
-      { title: 'Parametric face thread design standards for CNC Lathe modeling', href: '/guides/autocad-fatal-error-0x0024-fix' }
-    ]
-  },
-  {
-    id: 'fol-cheatsheets',
-    title: 'Shortcuts & Reference Sheets',
-    countLabel: '17 Sheets',
-    icon: '📝',
-    links: [
-      { title: 'Cross-Platform CAD Shortcuts Matrix', href: '/toolbox/shortcuts' },
-      { title: 'SolidWorks Essential Keyboard Shortcuts List', href: '/toolbox/solidworks-shortcuts-sheet' },
-      { title: 'Rhino 3D Shortcut Keys & Command Aliases Guide', href: '/toolbox/rhino-shortcuts-sheet' },
-      { title: 'Revit Keyboard Shortcuts & Command Codes Table', href: '/toolbox/revit-shortcuts-sheet' },
-      { title: 'SketchUp Pro Quick Reference Hotkeys Cheat Sheet', href: '/toolbox/sketchup-shortcuts-sheet' },
-      { title: 'Autodesk Inventor Keyboard Shortcuts Reference', href: '/toolbox/inventor-shortcuts-sheet' },
-      { title: 'Bentley MicroStation V8i Keyboard Shortcuts Guide', href: '/toolbox/microstation-shortcuts-sheet' },
-      { title: 'Graphisoft Archicad Keyboard Shortcuts Chart', href: '/toolbox/archicad-shortcuts-sheet' },
-      { title: 'Dassault CATIA V5/V6 Key Shortcuts Table', href: '/toolbox/catia-shortcuts-sheet' },
-      { title: 'PTC Creo Parametric Shortcut Keys Reference', href: '/toolbox/creo-shortcuts-sheet' },
-      { title: 'FreeCAD Open-Source CAD Hotkeys & Mouse Navigation', href: '/toolbox/freecad-shortcuts-sheet' },
-      { title: 'Autodesk Fusion 360 Keyboard Hotkeys Reference', href: '/toolbox/fusion360-shortcuts-sheet' },
-      { title: 'DraftSight Keyboard Shortcuts & Command Aliases', href: '/toolbox/draftsight-shortcuts-sheet' },
-      { title: 'BricsCAD Hotkeys & Command Customization Guide', href: '/toolbox/bricscad-shortcuts-sheet' },
-      { title: 'Vectorworks Keyboard Shortcuts Reference Chart', href: '/toolbox/vectorworks-shortcuts-sheet' },
-      { title: 'AutoCAD vs. GstarCAD Shortcut Command Diff Table', href: '/toolbox/autocad-vs-gstarcad-shortcuts' },
-      { title: 'AutoCAD vs. ZWCAD Command Shortcut Diff Guide', href: '/toolbox/autocad-vs-zwcad-shortcuts' }
-    ]
+    links: ARTICLES_LIST.map(a => ({ title: a.title, href: `/guides/${a.slug}` }))
   }
 ];
 
-// 渲染 / 可视化类工具（应归入 creative-visual 档，而非电子/PCB 档）
-export const RENDER_VISUAL_SLUGS = ['v-ray', 'lumion', 'enscape', 'twinmotion', 'd5-render', 'corona-renderer', 'octane-render', 'keyshot', 'substance-painter', '3ds-max', 'zbrush', 'maya', 'cinema-4d', 'blender'];
+export const RENDER_VISUAL_SLUGS = ['blender', 'keyshot', 'v-ray'];
+export const SIMULATION_ANALYSIS_SLUGS = ['ansys-fluent'];
 
-// c5 中的纯仿真 / 分析求解器（CFD、FEA、结构、管道应力、压力容器、流程、模流、齿轮计算等）。
-// 这些工具不产出 CNC 刀路 / G-code / 钣金展开，也不画 AEC 图层蓝图，因此 manufacturing /
-// printing / standards / migration 母版对它们都是"驴唇不对马嘴"。区别于同属 c5 的 CAD/CAM 工具
-// （Mastercam、SolidCAM、hyperMILL 等），后者的制造母版是合理的。
-export const SIMULATION_ANALYSIS_SLUGS = [
-  // CFD / 多物理场
-  'ansys-fluent', 'ansys-cfx', 'ansys-workbench', 'ansys-discovery', 'simcenter-star-ccm', 'openfoam', 'simscale', 'comsol-multiphysics',
-  // 通用 FEA 求解器 / 显式动力学
-  'ansys-mechanical', 'abaqus', 'ls-dyna', 'msc-nastran', 'msc-patran', 'femap', 'altair-hyperworks', 'altair-inspire', 'esi-visual-environment', 'msc-adams',
-  // 结构分析
-  'sap2000', 'etabs', 'staad-pro', 'tekla-tedds', 'autodesk-robot', 'idea-statica', 'risa-3d',
-  // 管道应力 / 压力容器 / 流程 / 模流 / 齿轮
-  'caesar-ii', 'autopipe', 'pv-elite', 'aspen-hysys', 'moldflow', 'moldex3d', 'kisssoft',
-];
-
-export interface ArchetypeMetadata {
-  id: 'drafting-aec' | 'mechanical-simulation' | 'creative-visual' | 'electronics-hardware' | 'specialized-design';
-  name: string;
-  theme: {
-    accentText: string;
-    badgeBg: string;
-    buttonBg: string;
-    gradientHeader: string;
-    cardBorder: string;
-  };
-  categoryOrder: string[];
-  jargonMap: Record<string, string>;
-}
-
-export function getArchetypeMetadata(category_id: string, tool?: Tool): ArchetypeMetadata {
-  if (category_id === 'c1' || category_id === 'c3') {
-    return {
-      id: 'drafting-aec',
-      name: 'AEC & Drafting',
-      theme: {
-        accentText: 'text-slate-700',
-        badgeBg: 'bg-slate-50 border-slate-200 text-slate-800',
-        buttonBg: 'bg-slate-700 hover:bg-slate-800 border-slate-700',
-        gradientHeader: 'from-slate-700 via-slate-800 to-zinc-900',
-        cardBorder: 'hover:border-slate-300'
-      },
-      categoryOrder: ['troubleshooting', 'printing', 'standards', 'deployment', 'procurement', 'migration', 'performance', 'manufacturing'],
-      jargonMap: {
-        'large dwg files': 'complex construction DWG layouts',
-        'free cad platforms': 'free drafting engines',
-        'cad software': 'AEC drafting software',
-        'cad design': 'architectural drafting',
-        'cad designs': 'building blueprint layouts',
-        'cad designs standards': 'BIM standards',
-        'nurbs modeling': 'IFC component mapping',
-        'assembly loading': 'BIM model linking',
-        'mechanical production': 'architectural details drafting',
-        '3d printing': 'BIM coordination',
-        'watertight': 'fully coordinated structural'
-      }
-    };
-  }
-
-  if (category_id === 'c2' || category_id === 'c5') {
-    return {
-      id: 'mechanical-simulation',
-      name: 'Mechanical & Simulation',
-      theme: {
-        accentText: 'text-amber-700',
-        badgeBg: 'bg-amber-50 border-amber-200 text-amber-950',
-        buttonBg: 'bg-amber-600 hover:bg-amber-700 border-amber-600',
-        gradientHeader: 'from-amber-600 via-amber-700 to-stone-900',
-        cardBorder: 'hover:border-amber-300'
-      },
-      categoryOrder: ['performance', 'manufacturing', 'standards', 'procurement', 'troubleshooting', 'migration', 'deployment', 'printing'],
-      jargonMap: {
-        'large dwg files': 'heavy parametric assemblies',
-        'free cad platforms': 'free mechanical modelers',
-        'cad software': '3D mechanical CAD',
-        'cad design': '3D parametric design',
-        'cad designs': 'watertight solid parts',
-        'cad designs standards': 'ISO mechanical limits',
-        'nurbs modeling': 'NURBS B-Rep solid kernels',
-        'assembly loading': 'large assembly interference solvers',
-        'mechanical production': 'watertight manufacturing CNC steps',
-        '3d printing': 'sub-micron CNC tooling',
-        'watertight': 'watertight solid B-Rep'
-      }
-    };
-  }
-
-  // c4 看图/校审 与 c7 中的渲染/可视化类工具，统一归入创意可视化档（避免被错误套上电子/PCB 话术）
-  const isRenderVisual = !!tool && (RENDER_VISUAL_SLUGS.includes(tool.slug) || (tool.industries || []).some((i) => /render|visual|film|animation|game|interior/i.test(i)));
-  if (category_id === 'c4' || (category_id === 'c7' && isRenderVisual)) {
-    return {
-      id: 'creative-visual',
-      name: 'Creative Visualization',
-      theme: {
-        accentText: 'text-indigo-700',
-        badgeBg: 'bg-indigo-50 border-indigo-200 text-indigo-950',
-        buttonBg: 'bg-indigo-600 hover:bg-indigo-700 border-indigo-600',
-        gradientHeader: 'from-indigo-700 via-indigo-800 to-violet-900',
-        cardBorder: 'hover:border-indigo-300'
-      },
-      categoryOrder: ['performance', 'troubleshooting', 'procurement', 'printing', 'migration', 'standards', 'deployment', 'manufacturing'],
-      jargonMap: {
-        'large dwg files': 'high-density poly scene files',
-        'free cad platforms': 'free rendering software',
-        'cad software': '3D rendering software',
-        'cad design': '3D scene visualization',
-        'cad designs': 'high-fidelity PBR assets',
-        'cad designs standards': 'production render profiles',
-        'nurbs modeling': 'PBR materials and textures mapping',
-        'assembly loading': 'viewport vertex shader cache',
-        'mechanical production': 'real-time raytraced views',
-        '3d printing': 'RTX GPU hardware allocation',
-        'watertight': 'fully manifold photorealistic mesh'
-      }
-    };
-  }
-
-  // c7 中的非渲染垂直领域工具（服装/珠宝/牙科/切片器/船舶/木工/测绘等）：使用中性术语字典，
-  // 既不注入 AEC/BIM，也不注入 PCB/EDA 话术，避免"驴唇不对马嘴"的领域错配。
-  if (category_id === 'c7') {
-    return {
-      id: 'specialized-design',
-      name: 'Specialized Design',
-      theme: {
-        accentText: 'text-teal-700',
-        badgeBg: 'bg-teal-50 border-teal-200 text-teal-950',
-        buttonBg: 'bg-teal-600 hover:bg-teal-700 border-teal-600',
-        gradientHeader: 'from-teal-700 via-teal-800 to-slate-900',
-        cardBorder: 'hover:border-teal-300'
-      },
-      categoryOrder: ['troubleshooting', 'performance', 'procurement', 'deployment', 'standards', 'migration', 'printing', 'manufacturing'],
-      jargonMap: {
-        'large dwg files': 'large project files',
-        'free cad platforms': 'free design tools',
-        'cad software': 'design software',
-        'cad design': 'digital design',
-        'cad designs': 'design models',
-        'cad designs standards': 'design standards',
-        'nurbs modeling': '3D modeling',
-        'assembly loading': 'project loading',
-        'mechanical production': 'production output',
-        '3d printing': '3D output',
-        'watertight': 'high-quality'
-      }
-    };
-  }
-
+export function getArchetypeMetadata(category_id: string, tool?: Tool) {
   return {
-    id: 'electronics-hardware',
-    name: 'Electronics & Production',
+    id: 'drafting-aec' as string,
+    name: 'AEC & Drafting',
     theme: {
-      accentText: 'text-emerald-700',
-      badgeBg: 'bg-emerald-50 border-emerald-200 text-emerald-950',
-      buttonBg: 'bg-emerald-600 hover:bg-emerald-700 border-emerald-600',
-      gradientHeader: 'from-emerald-600 via-emerald-700 to-teal-900',
-      cardBorder: 'hover:border-emerald-300'
+      accentText: 'text-slate-700',
+      badgeBg: 'bg-slate-50 border-slate-200 text-slate-800',
+      buttonBg: 'bg-slate-700 hover:bg-slate-800 border-slate-700',
+      gradientHeader: 'from-slate-700 via-slate-800 to-zinc-900',
+      cardBorder: 'hover:border-slate-300'
     },
-    categoryOrder: ['manufacturing', 'performance', 'procurement', 'troubleshooting', 'deployment', 'standards', 'migration', 'printing'],
-    jargonMap: {
-      'large dwg files': 'multi-layer PCB layouts',
-      'free cad platforms': 'free electronics EDA modelers',
-      'cad software': 'PCB design EDA software',
-      'cad design': 'circuit board layout drafting',
-      'cad designs': 'JLCPCB watertight footprints',
-      'cad designs standards': 'IPC electrical schematic guidelines',
-      'nurbs modeling': 'slicer infill mesh layers',
-      'assembly loading': 'G-code post-processing speedups',
-      'mechanical production': 'circuit schematic traces',
-      '3d printing': '3D slicer wall layers speed',
-      'watertight': 'fully watertight copper traces'
-    }
+    categoryOrder: ['troubleshooting', 'performance', 'standards', 'procurement'],
+    jargonMap: {}
   };
 }
 
-export function getLocalizedTitleAndExcerpt(
-  title: string,
-  excerpt: string,
-  keyword: string,
-  category: string,
-  tool: Tool
-) {
-  let newTitle = title;
-  let newExcerpt = excerpt;
-  let newKeyword = keyword;
-
-  if (!tool) {
-    return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
-  }
-
-  const toolName = tool.name;
-
-  // 1. Perform primary software replacements
-  if (title.includes('Revit RVT to Archicad PLN') || title.toLowerCase().includes('revit to archicad')) {
-    // Keep cross-software BIM standard titles intact to preserve EEAT and prevent incorrect substitutions
-  } else if (category === 'migration' || category === 'crossover') {
-    const targets = ['BricsCAD Pro', 'BricsCAD', 'GstarCAD', 'Inventor', 'Online Cloud CAD', 'DWG CAD'];
-    let replaced = false;
-    for (const target of targets) {
-      if (target.toLowerCase() === toolName.toLowerCase()) continue;
-      const regex = getCachedRegex(target, 'gi');
-      if (regex.test(newTitle)) {
-        newTitle = newTitle.replace(regex, toolName);
-        newExcerpt = newExcerpt.replace(regex, toolName);
-        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
-        replaced = true;
-        break;
-      }
-    }
-    if (!replaced) {
-      const allSoftware = ['AutoCAD', 'SolidWorks', 'DraftSight', 'MicroStation'];
-      for (const sw of allSoftware) {
-        const regex = getCachedRegex(sw, 'gi');
-        if (regex.test(newTitle)) {
-          // 防止同名自指碰撞，例如避免出现 "SolidWorks to SolidWorks" 的穿帮
-          if (newTitle.toLowerCase().includes(toolName.toLowerCase()) && sw.toLowerCase() !== toolName.toLowerCase()) {
-            continue;
-          }
-          newTitle = newTitle.replace(regex, toolName);
-          newExcerpt = newExcerpt.replace(regex, toolName);
-          newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
-          break;
-        }
-      }
-    }
-  } else {
-    const allSoftware = [
-      'AutoCAD Architecture',
-      'AutoCAD Electrical',
-      'AutoCAD for Mac',
-      'AutoCAD LT',
-      'Autodesk AutoCAD',
-      'AutoCAD Online',
-      'AutoCAD',
-      'SolidWorks',
-      'BricsCAD Pro',
-      'BricsCAD',
-      'GstarCAD',
-      'Autodesk Inventor',
-      'Inventor',
-      'Solid Edge',
-      'FreeCAD',
-      'Catia V6',
-      'Catia',
-      'Rhino 3D',
-      'DraftSight',
-      'MicroStation',
-      'Revit',
-      'ZWCAD',
-      'BIM',
-      'Commercial CAD',
-      'Schematic CAD',
-      'Enterprise CAD',
-      'Named CAD',
-      'Autodesk'
-    ];
-
-    for (const sw of allSoftware) {
-      const regex = getCachedRegex(sw, 'gi');
-      if (regex.test(newTitle)) {
-        newTitle = newTitle.replace(regex, toolName);
-        newExcerpt = newExcerpt.replace(regex, toolName);
-        newKeyword = newKeyword.replace(regex, toolName.toLowerCase());
-        break;
-      }
-    }
-  }
-
-  // 2. Perform advanced archetype-specific jargon replacements
-  const meta = getArchetypeMetadata(tool.category_id, tool);
-  for (const [key, val] of Object.entries(meta.jargonMap)) {
-    const regex = getCachedRegex(key, 'gi');
-    newTitle = newTitle.replace(regex, val);
-    newExcerpt = newExcerpt.replace(regex, val);
-    newKeyword = newKeyword.replace(regex, val.toLowerCase());
-  }
-
-  return { title: newTitle, excerpt: newExcerpt, keyword: newKeyword };
+export function getLocalizedTitleAndExcerpt(title: string, excerpt: string, keyword: string, category: string, tool: Tool) {
+  return { title, excerpt, keyword };
 }
 
 export function getLocalizedTitle(title: string, category: string, tool: Tool): string {
-  return getLocalizedTitleAndExcerpt(title, '', '', category, tool).title;
+  return title;
 }
 
 export function isArticleCompatibleWithTool(articleTitle: string, articleCategory: string, tool: Tool): boolean {
-  const titleLower = articleTitle.toLowerCase();
-  const categoryLower = articleCategory.toLowerCase();
-  const pricingType = tool.pricing_type || 'Commercial';
-  const isOpenSource = pricingType === 'Open Source' || pricingType === 'Free';
-  
-  const industries = tool.industries || [];
-  const features = tool.features || [];
-  const categoryId = tool.category_id || '';
-
-  // 辅助判定工具特征
-  const isBIM = categoryId === 'bim' || industries.some((i: string) => /bim|architect|construction|building/i.test(i)) || features.includes('bim-integration');
-  const isMechanical = categoryId === 'mfg' || industries.some((i: string) => /mechanical|mfg|automotive|aerospace|industrial/i.test(i)) || features.includes('parametric-modeling') || features.includes('integrated-cam') || features.includes('simulation-fea');
-  const is2D = categoryId === '2d-cad' || features.includes('drafting-detailing');
-  const isRendering = features.includes('rendering') || industries.some((i: string) => /visual|render|creative/i.test(i));
-  const is3D = features.some((f: string) => /parametric|surface|mesh|subdivision|direct/i.test(f)) || isMechanical || isBIM || isRendering;
-
-  // 0. 领域级类目熔断 (Domain-level category guard)
-  // 全站长尾 Guides 的"标准/打印/制造/迁移"母版内容是写死的 AEC 图层 / MCAD 钣金CNC /
-  // DWG 内核转换话术。对于完全不属于 AEC/机械主航道的垂直领域工具（服装、珠宝、牙科、
-  // 渲染器、切片器、看图器、EDA、测绘、舞美、船舶、木工等），这些母版会产出"驴唇不对马嘴"
-  // 的穿帮内容（如 KiCad 谈 BIM 建筑图层、exocad 谈建筑图层、Bluebeam 看图器谈 STEP/IGES
-  // CNC）。这里基于 category_id + industries + slug 做强类型领域判定，从源头屏蔽整类不相关母版。
-  const slug = tool.slug || '';
-  const indStr = industries.join(' ').toLowerCase();
-  const VIEWER_SLUGS = ['bluebeam-revu', 'navisworks', 'solibri', 'meshlab', 'dwg-trueview', 'solid-edge-viewer', 'glovius', 'cad-exchanger', 'cad-reader', 'recap-pro'];
-  const SLICER_SLUGS = ['ultimaker-cura', 'prusaslicer', 'bambu-studio', 'simplify3d', 'autodesk-netfabb', 'magics'];
-
-  const isViewer = VIEWER_SLUGS.includes(slug);
-  const isSlicer = SLICER_SLUGS.includes(slug);
-  const isEDA = categoryId === 'c6' || slug === 'pc-schematic' || /pcb|electronic|circuit|schematic|eda/i.test(indStr);
-  const isFashion = /fashion|apparel|textile|footwear|garment/i.test(indStr) || ['clo-3d', 'optitex', 'gerber-accumark', 'lectra-modaris', 'browzwear', 'marvelous-designer', 'shoemaster', 'icad3d-plus'].includes(slug);
-  const isJewelry = /jewel/i.test(indStr) || ['matrixgold', '3design', 'rhinogold', 'jewelcad-pro'].includes(slug);
-  const isDentalMedical = /dental|medical|prosthet|orthop/i.test(indStr);
-  const isSurvey = /survey|geospatial|land development|land dev|gis/i.test(indStr) || ['carlson-survey', 'trimble-business-center'].includes(slug);
-  const isEvent = /event|theatre|theater|concert|stage|lighting design/i.test(indStr);
-  const isShip = /ship|marine|naval/i.test(indStr);
-  const isWoodwork = /woodwork|furniture|cabinet/i.test(indStr);
-  const isPureRender = (RENDER_VISUAL_SLUGS.includes(slug) || (isRendering && !isMechanical && !isBIM && !is2D)) && !isSlicer;
-  const isSimAnalysis = SIMULATION_ANALYSIS_SLUGS.includes(slug);
-
-  // 各领域允许生成的类目白名单（未列出的类目一律熔断）。troubleshooting / performance /
-  // procurement 是相对通用的（崩溃、显卡调优、选型预算），其余高度领域绑定的母版按需放行。
-  let allowedCategories: string[] | null = null;
-  if (isSimAnalysis) {
-    // 纯仿真/分析求解器：不产出刀路/钣金/AEC图纸/几何内核迁移，屏蔽 manufacturing /
-    // printing / standards / migration。保留 troubleshooting（多用 FlexLM）、performance
-    //（HPC/多核/内存调优高度相关）、procurement、deployment。
-    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
-  } else if (isViewer) {
-    // 纯看图/批注/校审工具：不做创作，屏蔽创作类（标准/打印/制造/迁移/部署）母版
-    allowedCategories = ['troubleshooting', 'performance', 'procurement'];
-  } else if (isEDA) {
-    // EDA 电子设计：屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金CNC制造、几何内核迁移
-    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
-  } else if (isFashion || isJewelry || isDentalMedical || isEvent || isShip || isWoodwork) {
-    // 服装/珠宝/牙科/舞美/船舶/木工：与 AEC 图层、MCAD 钣金CNC、DWG 内核迁移模板完全不相关
-    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
-  } else if (isSurvey) {
-    // 测绘/土木外业：屏蔽 MCAD 钣金CNC、几何内核缝合迁移
-    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment', 'standards', 'printing'];
-  } else if (isSlicer) {
-    // 3D 打印切片器：增材而非减材，屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金/CNC 制造、内核迁移
-    allowedCategories = ['troubleshooting', 'performance', 'procurement'];
-  } else if (isPureRender) {
-    // 纯渲染/可视化：屏蔽 AEC 图层标准、AEC CTB 打印、MCAD 钣金CNC 制造、DWG 内核迁移
-    allowedCategories = ['troubleshooting', 'performance', 'procurement', 'deployment'];
-  }
-  if (allowedCategories && !allowedCategories.includes(categoryLower)) {
+  // Only allow our AutoCAD guides for the autocad tool to avoid cross-product pollution
+  if (tool.slug !== 'autocad') {
     return false;
   }
-
-  // 0.5 migration 母版熔断：迁移类母版写死的是 AutoLISP / CUIX / PGP 命令别名 + DWG 内核交叉
-  // 兼容内容，属于 DWG/AutoCAD 生态特有（BricsCAD/ZWCAD/GstarCAD 等 DWG 克隆同样支持 LISP/PGP）。
-  // 对非 DWG 家族工具（渲染器、纯机械 MCAD、电子、垂直领域等）生成这类内容是穿帮的——例如
-  // V-Ray 谈“导入 AutoLISP CUIX 自定义”。按规则仅放行 DWG 家族 + Rhino。
-  const coreFeatStr = (tool.core_features || []).join(' ').toLowerCase();
-  const isDwgLispFamily = categoryId === 'c1' || /autolisp|\blisp\b|\bdwg\b|\bpgp\b|\bcuix\b/.test(coreFeatStr) || slug === 'rhino-3d';
-  if (categoryLower === 'migration' && !isDwgLispFamily) {
-    return false;
-  }
-
-  // 1. 开源/免费软件熔断：不生成商业授权、采购、FLEXlm、EULA 审计相关文章
-  if (isOpenSource) {
-    if (
-      titleLower.includes('license') ||
-      titleLower.includes('flexlm') ||
-      titleLower.includes('eula') ||
-      titleLower.includes('seat') ||
-      titleLower.includes('subscription') ||
-      titleLower.includes('procurement') ||
-      titleLower.includes('buy') ||
-      titleLower.includes('audit') ||
-      categoryLower === 'procurement' ||
-      categoryLower === 'deployment'
-    ) {
-      return false;
-    }
-  }
-
-  // 2. 特殊高价值长尾文章的精细化强类型特征熔断
-  
-  // (A) BIM IFC4 属性协同指南 -> 只允许在真正的 3D BIM 建模与协同软件（category_id = c3）中生成，绝对屏蔽普通 2D CAD 和机械软件
-  if (titleLower.includes('ifc4') || titleLower.includes('revit to archicad') || titleLower.includes('rvt to archicad')) {
-    if (categoryId !== 'c3') return false;
-  }
-
-  // (B) Rhino NURBS 到 Inventor 实体缝合 -> 必须是 3D 且支持曲面/参数化造型的机械或工业设计软件
-  if (titleLower.includes('nurbs') || titleLower.includes('sewing') || titleLower.includes('brep')) {
-    const supportsSurfacesOrSolids = features.includes('surface-modeling') || features.includes('parametric-modeling') || features.includes('direct-modeling') || tool.slug === 'rhino-3d';
-    if (!is3D || !supportsSurfacesOrSolids || isRendering || isBIM) return false;
-  }
-
-  // (C) SolidWorks to AutoCAD 跨内核数据转换 -> 必须是 3D 实体/工程图机械软件，屏蔽纯渲染、BIM协同
-  if (titleLower.includes('solidworks xt') || titleLower.includes('solidworks to autocad')) {
-    if (isRendering || isBIM || !is3D) return false;
-  }
-
-  // (D) CATIA V5 to SolidWorks 约束迁移 -> 必须是主流中高端三维参数化机械装配体建模软件，绝对不用于 2D 或纯分析软件
-  if (titleLower.includes('catia v5') || titleLower.includes('catia to solidworks')) {
-    const allowedMechanicalAssemblySlugs = [
-      'solidworks', 'autodesk-inventor', 'siemens-nx', 'solid-edge', 'ptc-creo', 'catia', 'freecad', 'onshape', 'fusion-360'
-    ];
-    if (!allowedMechanicalAssemblySlugs.includes(tool.slug)) return false;
-  }
-
-  // (E) FLEXlm Server -15 / 10048 报错排错 -> 必须是大型企业级商业套件，熔断轻量级渲染/家装/2D小软件及开源免费版
-  if (titleLower.includes('flexlm') || titleLower.includes('options file')) {
-    if (isOpenSource || tool.starting_price === 0) return false;
-    const excludedFLEXlmSlugs = [
-      'qcad', 'librecad', 'sketchup', 'sweet-home-3d', 'planner-5d', 
-      'cedar-architect', 'homestyler', 'floorplanner', 'roomle', 
-      'live-home-3d', 'coohom', 'foyr-neo', 'chief-architect', 
-      'softplan', 'punch-cad', 'turbocad', 'ashampoo-3d-cad', 
-      'delta-cad', 'draftsight-standard', 'nanocad-free'
-    ];
-    if (excludedFLEXlmSlugs.includes(tool.slug)) return false;
-  }
-
-  // (F) 3D 打印 K-Factor / G-Code / STL / 3MF -> 必须是 CAM 制造或 3D 打印相关软件
-  if (titleLower.includes('k-factor') || titleLower.includes('g-code') || titleLower.includes('slicing') || titleLower.includes('watertight b-rep')) {
-    const supportsCAMorPrint = features.includes('integrated-cam') || industries.some((i: string) => /cam|3d-printing|milling|machining/i.test(i)) || tool.slug === 'freecad' || tool.slug === 'fusion-360' || tool.slug === 'solidworks';
-    if (!supportsCAMorPrint) return false;
-  }
-
-  // (G) 电气原理图 (Electrical/Schematic/IEC) -> 限通用 CAD 及 EDA，屏蔽创意/渲染软件 (如 V-Ray, Keyshot, Blender 等)
-  if (titleLower.includes('electrical') || titleLower.includes('schematic') || titleLower.includes('iec')) {
-    const isCreativeOrRender = isRendering || industries.some((i: string) => /rendering|animation|creative|game/i.test(i)) || ['v-ray', 'lumion', 'keyshot', 'corona-renderer', 'octane-render', 'blender', 'zbrush', 'maya', '3ds-max', 'cinema-4d'].includes(tool.slug);
-    if (isCreativeOrRender) return false;
-  }
-
-  // (H) BIM / BEP 协同标准 -> 屏蔽纯机械 CAD (如 SolidWorks, Creo, CATIA, Solid Edge) 与纯 EDA 电子软件 (如 Altium Designer, EPLAN)
-  if (titleLower.includes('bim execution') || titleLower.includes('bep') || titleLower.includes('lod 300')) {
-    const isPureMechanicalOrEda = ['solidworks', 'ptc-creo', 'catia', 'solid-edge', 'altium-designer', 'eplan', 'orcad'].includes(tool.slug);
-    if (isPureMechanicalOrEda) return false;
-  }
-
-  // (I) LISP / PGP / CUIX 配置指南 -> 必须是支持 LISP 引擎与 PGP 别名的 DWG 大类工具及 Rhino，屏蔽纯 BIM (Revit) 和纯机械
-  if (titleLower.includes('lisp') || titleLower.includes('pgp') || titleLower.includes('cuix')) {
-    const isDwgOrRhino = ['autocad', 'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad', 'qcad', 'rhino-3d'].includes(tool.slug);
-    if (!isDwgOrRhino) return false;
-  }
-
-  // 3. 基础行业熔断守卫：
-  // 纯二维 CAD 绝不生成三维曲面/网格/CAM加工/B-Rep/G-Code 相关的文章
-  if (is2D && !is3D) {
-    if (
-      titleLower.includes('nurbs') ||
-      titleLower.includes('sewing') ||
-      titleLower.includes('step') ||
-      titleLower.includes('iges') ||
-      titleLower.includes('brep') ||
-      titleLower.includes('manifold') ||
-      titleLower.includes('k-factor') ||
-      titleLower.includes('bending') ||
-      titleLower.includes('slicing') ||
-      titleLower.includes('g-code')
-    ) {
-      return false;
-    }
-  }
-
   return true;
 }
-

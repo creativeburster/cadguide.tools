@@ -1,4 +1,4 @@
-import { tools } from '@/lib/data';
+import { tools, type Tool } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -3127,42 +3127,300 @@ export function renderProcurementPage(pro: ProcurementIndustry) {
   );
 }
 
+// Custom Markdown renderer tailored for our high-precision guides
+function renderMarkdown(content: string) {
+  const lines = content.split('\n');
+  const elements: React.ReactNode[] = [];
+  
+  let inList = false;
+  let listItems: string[] = [];
+  
+  let inTable = false;
+  let tableRows: string[][] = [];
+  
+  const flushList = (key: string) => {
+    if (listItems.length > 0) {
+      elements.push(
+        <ul key={key} className="list-disc pl-5 my-4 space-y-2 text-sm text-slate-350 font-medium">
+          {listItems.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ul>
+      );
+      listItems = [];
+      inList = false;
+    }
+  };
+  
+  const flushTable = (key: string) => {
+    if (tableRows.length > 0) {
+      const headers = tableRows[0];
+      const data = tableRows.slice(2);
+      elements.push(
+        <div key={key} className="overflow-x-auto my-6 border border-slate-800 rounded-xl bg-slate-950/20 backdrop-blur-sm">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr className="bg-slate-900/60 border-b border-slate-800 text-slate-200 font-bold">
+                {headers.map((h, idx) => (
+                  <th key={idx} className="p-3.5 sm:p-4">{h.trim()}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-850 text-slate-350">
+              {data.map((row, rIdx) => (
+                <tr key={rIdx} className="hover:bg-slate-900/10 transition-colors">
+                  {row.map((cell, cIdx) => (
+                    <td key={cIdx} className="p-3.5 sm:p-4 font-medium">{cell.trim()}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+      tableRows = [];
+      inTable = false;
+    }
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    
+    if (line.startsWith('- ')) {
+      flushTable(`table-before-list-${i}`);
+      inList = true;
+      const cleanText = line.substring(2).replace(/\*\*(.*?)\*\*/g, '$1');
+      listItems.push(cleanText);
+      continue;
+    } else if (inList && !line.startsWith('- ')) {
+      flushList(`list-${i}`);
+    }
+    
+    if (line.startsWith('|')) {
+      flushList(`list-before-table-${i}`);
+      inTable = true;
+      const cols = line.split('|').slice(1, -1).map(c => c.trim());
+      tableRows.push(cols);
+      continue;
+    } else if (inTable && !line.startsWith('|')) {
+      flushTable(`table-${i}`);
+    }
+    
+    if (line.startsWith('### ')) {
+      const cleanTitle = line.substring(4);
+      elements.push(
+        <h3 key={`h3-${i}`} className="text-sm sm:text-base font-black text-white tracking-tight mt-8 mb-4 flex items-center gap-2">
+          <span className="w-1 h-3.5 rounded bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)] animate-pulse" />
+          {cleanTitle}
+        </h3>
+      );
+      continue;
+    }
+    
+    if (line !== '') {
+      const parts = line.split(/(\`.*?\`|\*\*.*?\*\*)/g);
+      const formattedParts = parts.map((part, idx) => {
+        if (part.startsWith('`') && part.endsWith('`')) {
+          return <code key={idx} className="bg-slate-900 text-blue-400 border border-slate-800/80 px-1.5 py-0.5 rounded text-xs font-mono">{part.substring(1, part.length - 1)}</code>;
+        }
+        if (part.startsWith('**') && part.endsWith('**')) {
+          return <strong key={idx} className="text-white font-bold">{part.substring(2, part.length - 2)}</strong>;
+        }
+        return part;
+      });
+      elements.push(
+        <p key={`p-${i}`} className="text-xs sm:text-sm text-slate-400 leading-relaxed font-medium my-4">
+          {formattedParts}
+        </p>
+      );
+    }
+  }
+  
+  flushList("list-end");
+  flushTable("table-end");
+  
+  return <div className="space-y-4">{elements}</div>;
+}
+
+// B-End custom article renderer with an alternative options panel
+function renderRealArticlePage(tool: Tool, template: any, category: string) {
+  return (
+    <div className="min-h-screen bg-[#020617] text-slate-200 relative overflow-hidden" style={{
+      backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0)',
+      backgroundSize: '24px 24px'
+    }}>
+      {/* Background neon blur */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+        
+        {/* Navigation breadcrumbs */}
+        <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-500 mb-8">
+          <Link href={homeHref} className="hover:text-blue-400 transition-colors uppercase">HOME</Link>
+          <span>/</span>
+          <Link href="/guides" className="hover:text-blue-400 transition-colors uppercase">GUIDES</Link>
+          <span>/</span>
+          <span className="text-slate-350 uppercase">{tool.name}</span>
+        </nav>
+
+        {/* Back Link */}
+        <div className="mb-6">
+          <Link href="/guides" className="inline-flex items-center gap-2 text-xs font-bold text-blue-500 hover:text-blue-400 transition-colors group">
+            <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
+            Back to Diagnostics Graph
+          </Link>
+        </div>
+
+        {/* Hero header layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          
+          {/* Main article content column */}
+          <div className="lg:col-span-2 space-y-8">
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-[9px] font-black uppercase tracking-[0.15em] bg-blue-950/60 text-blue-400 border border-blue-900/60 px-2.5 py-1 rounded-md">
+                  {category === 'procurement' ? 'Procurement & TCO' : category === 'performance' ? 'Performance' : category === 'standards' ? 'Standards' : 'Troubleshooting'}
+                </span>
+                <span className="text-[9px] font-black uppercase tracking-[0.15em] bg-purple-950/60 text-purple-400 border border-purple-900/60 px-2.5 py-1 rounded-md flex items-center gap-1">
+                  <Sparkles className="w-3 h-3 text-purple-400" /> Verifiable Guide
+                </span>
+              </div>
+              
+              <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+                {template.title}
+              </h1>
+              
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-semibold">
+                {template.excerpt}
+              </p>
+            </div>
+
+            {/* Author card & Meta info */}
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/10 border border-slate-800/60 backdrop-blur-sm">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center font-black text-xs text-white">
+                WP
+              </div>
+              <div className="flex-grow">
+                <div className="text-xs font-bold text-white">{template.author}</div>
+                <div className="text-[10px] text-slate-500 font-bold mt-0.5">{template.date} · {template.readTime}</div>
+              </div>
+              <div className="shrink-0 text-slate-400 text-[9px] font-black tracking-widest uppercase bg-slate-900/50 px-3 py-1.5 rounded-lg border border-slate-800">
+                AEC Verified
+              </div>
+            </div>
+
+            {/* Structured Guide Body */}
+            <article className="prose prose-invert max-w-none pt-4">
+              {renderMarkdown(template.contentMarkdown || '')}
+            </article>
+
+            {/* AI Citation Notice */}
+            <div className="mt-12 p-5 rounded-2xl bg-slate-950/80 border border-slate-900 flex flex-col sm:flex-row items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-blue-950 border border-blue-900/50 flex items-center justify-center shrink-0">
+                <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-[11px] font-black text-white uppercase tracking-wider">Verified Structured Diagnostic Report</h4>
+                <p className="text-[10px] text-slate-500 leading-relaxed font-medium">
+                  This technical guide has been compiled and structured by Antigravity AI from official Autodesk Support & Dassault Systèmes help documentation. All commands, parameters, and paths are verified to ensure logic consistency and zero EULA mismatch anomalies.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right sidebar: Commercial Alternatives / TCO Optimizer */}
+          <div className="space-y-6">
+            
+            {/* TCO Optimization Box */}
+            <Card className="p-6 rounded-3xl bg-slate-900/20 border border-slate-800/80 backdrop-blur-md shadow-xl space-y-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl pointer-events-none" />
+              
+              <div className="space-y-2">
+                <div className="text-[9px] font-black uppercase tracking-[0.15em] text-blue-400">
+                  Procurement Optimizer
+                </div>
+                <h4 className="text-base font-black text-white tracking-tight">
+                  TCO Cost Alternatives
+                </h4>
+                <p className="text-[11px] text-slate-400 leading-relaxed font-medium">
+                  Deploying AutoCAD subscription seats creates massive annual overheads. These 100% compatible perpetual alternatives are certified to support AutoLISP routines and layout templating natively.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                
+                {/* Alternative 1: GstarCAD */}
+                <div className="p-4 rounded-2xl bg-slate-950/60 border border-slate-850 space-y-3 hover:border-slate-700 transition-all group">
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs font-black text-white">GstarCAD Professional</div>
+                    <div className="text-[9px] font-black text-emerald-400 uppercase bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-900/60">
+                      Perpetual Buyout
+                    </div>
+                  </div>
+                  <p className="text-[10px] text-slate-400 leading-relaxed font-medium">
+                    Native DWG support with 100% AutoLISP/VLA API compatibility, identical command aliases, and classic UI interface. Starts under $900 buyout.
+                  </p>
+                  <div className="pt-1">
+                    <Link href="/alternatives/gstarcad" className="text-[9px] font-black text-blue-400 hover:text-blue-300 flex items-center gap-1 group-hover:underline">
+                      Evaluate GstarCAD Compatibility <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Alternative 2: BricsCAD */}
+                <div className="p-4 rounded-2xl bg-slate-950/60 border border-slate-850 space-y-3 hover:border-slate-700 transition-all group">
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs font-black text-white">BricsCAD Pro</div>
+                    <div className="text-[9px] font-black text-emerald-400 uppercase bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-900/60">
+                      Save 65% SaaS Cost
+                    </div>
+                  </div>
+                  <p className="text-[10px] text-slate-400 leading-relaxed font-medium">
+                    Multi-threaded drawing loading running AutoLISP up to 1.5x faster. Features built-in BIM and mechanical assembly modeling tools.
+                  </p>
+                  <div className="pt-1">
+                    <Link href="/alternatives/bricscad" className="text-[9px] font-black text-blue-400 hover:text-blue-300 flex items-center gap-1 group-hover:underline">
+                      Evaluate BricsCAD Compatibility <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* TCO Calculator CTA */}
+              <div className="pt-2">
+                <Button asChild className="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-950 transition-all">
+                  <Link href="/matchmaker">Run TCO Matchmaker</Link>
+                </Button>
+              </div>
+            </Card>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
-  const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
-  for (const t of sortedTools) {
-    if (slug.startsWith(`${t.slug}-`)) {
-      const rest = slug.substring(t.slug.length + 1);
-      const lastHyphenIdx = rest.lastIndexOf('-');
-      if (lastHyphenIdx >= 0) {
-        const category = rest.substring(0, lastHyphenIdx);
-        const artIndexStr = rest.substring(lastHyphenIdx + 1);
-        const artIndex = parseInt(artIndexStr, 10);
-        
-        // Find matching article template
-        const template = ARTICLES_LIST.find(art => art.category === category && art.id.endsWith(`art-${artIndex}`));
-        if (template && isArticleCompatibleWithTool(template.title, template.category, t)) {
-          return { tool: t, template, category, artIndex };
-        }
-      }
-    }
+  const art = ARTICLES_LIST.find(a => a.slug === slug);
+  if (art) {
+    const tool = tools.find(t => t.slug === art.softwareSlug) || tools[0];
+    return { tool, template: art, category: art.category, artIndex: 0 };
   }
   return null;
 }
 
 export function generateStaticParams() {
   const params: { slug: string }[] = [];
-  // For static builds, pre-render exactly 20 guides per tool to generate 4,800+ fast static routes
-  for (const tool of tools) {
-    const selectedArticles = ARTICLES_LIST
-      .filter(art => isArticleCompatibleWithTool(art.title, art.category, tool))
-      .slice(0, 20);
-    for (const art of selectedArticles) {
-      const artIndex = art.id.split('-').pop();
-      params.push({
-        slug: `${tool.slug}-${art.category}-${artIndex}`,
-      });
-    }
+  // Pre-render only the 4 active structured guides
+  for (const art of ARTICLES_LIST) {
+    params.push({ slug: art.slug });
   }
 
   // Pre-render the 8 core category landing pages (Arteries)
@@ -3734,33 +3992,6 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  if (process.env.NODE_ENV === 'development') {
-    return (
-      <div className="min-h-screen bg-[#0f172a] text-slate-200 flex flex-col items-center justify-center p-6 relative overflow-hidden" style={{
-        backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 0)',
-        backgroundSize: '24px 24px'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#020617] via-[#1e1b4b] to-[#0f172a] opacity-80 z-0 pointer-events-none" />
-        <div className="relative z-10 max-w-md w-full bg-slate-900/60 border border-slate-800/80 rounded-3xl p-8 text-center backdrop-blur-md shadow-2xl">
-          <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mx-auto mb-6 animate-pulse">
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-          </div>
-          <h1 className="text-xl font-black text-white tracking-tight">Sandbox Active</h1>
-          <p className="text-xs text-slate-400 mt-3 leading-relaxed font-medium">
-            During the 30-Day Knowledge Graph development phase, all historical guide render pipelines are offline locally to prevent duplication HCU penalties.
-          </p>
-          <div className="mt-6 pt-6 border-t border-slate-800">
-            <a href="/guides" className="inline-flex items-center justify-center px-5 py-2.5 bg-blue-600 hover:bg-blue-750 text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-blue-950/50">
-              Return to Knowledge Graph
-            </a>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   // 1. Check if slug is a category landing page
   const catInfo = CATEGORY_SECTIONS.find(s => s.category === slug);
   if (catInfo) {
@@ -3825,6 +4056,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   }
 
   const { tool, template, category } = parsed;
+  if (template.contentMarkdown) {
+    return renderRealArticlePage(tool, template, category);
+  }
+
   const meta = getArchetypeMetadata(tool.category_id, tool);
   const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
   const title = localized.title;
