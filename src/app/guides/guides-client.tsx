@@ -275,11 +275,18 @@ export default function GuidesClient() {
                   setIsDropdownOpen(true);
                   setInputValue('');
                 }}
+                onMouseDown={(e) => {
+                  // Prevent click outside trigger on mousedown
+                  e.stopPropagation();
+                }}
                 placeholder="Type to search..."
                 className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold rounded-xl pl-3 pr-8 py-2.5 focus:outline-none focus:ring-1 focus:ring-blue-500 shadow-sm cursor-pointer hover:bg-slate-100/50"
               />
               <button
                 type="button"
+                onMouseDown={(e) => {
+                  e.stopPropagation();
+                }}
                 onClick={() => {
                   setIsDropdownOpen(!isDropdownOpen);
                   if (!isDropdownOpen) {
@@ -294,11 +301,18 @@ export default function GuidesClient() {
 
               {/* Popover List */}
               {isDropdownOpen && (
-                <div className="absolute left-0 right-0 mt-1.5 z-50 bg-white border border-slate-200/80 rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[220px] animate-in fade-in-50 slide-in-from-top-1 duration-100">
+                <div 
+                  className="absolute left-0 right-0 mt-1.5 z-50 bg-white border border-slate-200/80 rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[220px] animate-in fade-in-50 slide-in-from-top-1 duration-100"
+                  onMouseDown={(e) => {
+                    // Prevent any mousedown inside list from triggering click outside
+                    e.stopPropagation();
+                  }}
+                >
                   {/* Options List */}
                   <div className="overflow-y-auto py-1 flex-1">
                     <button
                       type="button"
+                      onMouseDown={(e) => e.stopPropagation()}
                       onClick={() => handleSelectTool('all')}
                       className={cn(
                         "w-full text-left px-3 py-2 text-xs font-bold transition-colors flex items-center justify-between",
@@ -316,6 +330,7 @@ export default function GuidesClient() {
                           <button
                             key={t.slug}
                             type="button"
+                            onMouseDown={(e) => e.stopPropagation()}
                             onClick={() => handleSelectTool(t.slug)}
                             className={cn(
                               "w-full text-left px-3 py-2 text-xs font-semibold transition-colors flex items-center justify-between",
