@@ -12,34 +12,52 @@ date: "June 2026"
 
 # FreeCAD Headless Execution: Running Automation Scripts without GUI
 
-Managing **FreeCAD Headless Execution: Running Automation Scripts without GUI** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
+在进行企业级部署与深度应用开发时，合理优化 **FreeCAD Headless Execution: Running Automation Scripts without GUI** 是保证整个 CAD/CAE 设计管线高效流转的关键。本技术规程将针对这一具体的工具配置节点，从系统诊断、底层配置及实操优化的角度提供官方可验证的实施方案。
 
-### System Standards & Configuration Diagnostics
-Enforcing global configurations, automated layouts, silent installer deployments, and API integrations ensures CAD workflow consistency.
+## 1. 深度系统诊断与环境校验
+FreeCAD底层高度依赖Python进行功能扩充。开发常遇到的瓶颈在于，对几何特征的操作未触发 `document.recompute()` 导致视口未更新，或在非主线程直接修改Qt GUI线程导致系统死锁崩溃。
 
-### FreeCAD Python automation script (headless console)
-Automate mesh export conversions and feature creations:
+在日常的多用户高并发协同中，应当使用系统工具或环境变量进行实时诊断。针对当前的主题 `[freecad python]`，建议 CAD 团队主管和 IT 运维人员首先对该软件实例的工作上下文和环境变量进行审计，核实系统是否满足本指南所提到的参数要求。
 
-```python
-# Headless FreeCAD script
+## 2. 底层代码或配置文件蓝图 (Code & Config Blueprint)
+根据该软件在企业中的典型应用环境，您需要将以下配置文件下发至对应软件的 `startup` 或 `admin` 系统路径中。
+
+# FreeCAD Headless: 无界面生成高精度法兰并导出 STEP
 import FreeCAD as App
 import Part
+import sys
 
-doc = App.newDocument("HeadlessPart")
-box = doc.addObject("Part::Box", "Box")
-box.Length = 50.0
-box.Width = 30.0
-box.Height = 20.0
-doc.recompute()
+def build_flange_manifold(radius, thickness, hole_r, output_path):
+    doc = App.newDocument("HeadlessFlange")
+    
+    cylinder = doc.addObject("Part::Cylinder", "BaseBody")
+    cylinder.Radius = radius
+    cylinder.Height = thickness
+    
+    hole = doc.addObject("Part::Cylinder", "FlangeHole")
+    hole.Radius = hole_r
+    hole.Height = thickness + 2.0
+    hole.Placement.Base = App.Vector(0, 0, -1)
+    
+    doc.recompute()
+    
+    cut = doc.addObject("Part::Cut", "FinalCut")
+    cut.Base = cylinder
+    cut.Tool = hole
+    
+    doc.recompute()
+    Part.export([cut], output_path)
 
-Part.export([box], "dist/box.step")
-print("[+] Headless Step export complete.")
-```
 
-### FreeCAD Administration Playbook
-1. **Standardize layout templates**: Save custom SVG sheet templates inside the TechDraw templates directory.
-2. **Deploy custom macros**: Put custom Python macro scripts in `%APPDATA%/FreeCAD/Macro` folder to automate workflows.
-3. **Verify OpenCASCADE library path**: Ensure local library paths match compiled version headers to avoid segfault crashes.
+> [!TIP]
+> 配置文件在上传至服务器或保存至本地 AppData 之前，务必确保无任何多余的特殊字符和空行，且文件采用 `UTF-8` 或标准的 `ANSI` 编码格式保存。
+
+## 3. 步骤化系统优化指南 (Optimization Playbook)
+请严格遵循以下实操规程在本地 CAD 终端机或企业中心许可服务器上执行优化部署：
+
+1. **导入FreeCAD动态模块**：手动将 FreeCAD 的 `bin` 物理目录加入 `sys.path`。
+2. **编写参数化逻辑**：利用 `Part::Feature` 提供的高级实体建模函数（如 Extrude, Revolve, Cut）定义复杂结构。
+3. **执行Shape healing**：调用 `Part::makeSolid()` 保证图形的非流形缝合，最后使用 `Part.export()` 导出。
 
 ---
 

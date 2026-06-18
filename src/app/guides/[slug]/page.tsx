@@ -3164,7 +3164,17 @@ function parseInlineMarkdown(text: string): React.ReactNode[] {
 }
 
 function renderMarkdown(content: string) {
-  const lines = content.split('\n');
+  // 剥离 Frontmatter 元数据块
+  let cleanContent = content.trim();
+  if (cleanContent.startsWith('---')) {
+    const parts = cleanContent.split('---');
+    if (parts.length >= 3) {
+      // 重新合并第二个 --- 之后的内容以防正文中包含 ---
+      cleanContent = parts.slice(2).join('---').trim();
+    }
+  }
+
+  const lines = cleanContent.split('\n');
   const elements: React.ReactNode[] = [];
   
   let inList = false;

@@ -12,23 +12,31 @@ date: "June 2026"
 
 # Ansys Mechanical Out-of-Core Solver Configuration: Maximizing SSD I/O Speed
 
-Managing **Ansys Mechanical Out-of-Core Solver Configuration: Maximizing SSD I/O Speed** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
+在进行企业级部署与深度应用开发时，合理优化 **Ansys Mechanical Out-of-Core Solver Configuration: Maximizing SSD I/O Speed** 是保证整个 CAD/CAE 设计管线高效流转的关键。本技术规程将针对这一具体的工具配置节点，从系统诊断、底层配置及实操优化的角度提供官方可验证的实施方案。
 
-### System Performance Diagnostics
-Heavy graphics redraw and high calculations loads cause system stutters. Viewport lags occur due to graphic driver mismatching or unoptimized memory caching rules.
+## 1. 深度系统诊断与环境校验
+Ansys 进行有限元分析时，如果不限制并行计算的 HPC 核心数，可能会由于内存总线（NUMA）访问延迟导致计算效率不升反降。此外，解算器读写大量的交换文件时，如果是网络磁盘，算力就会卡在I/O上。
 
-### Ansys APDL solver execution variables
-Configure parallel CPU threads and allocate hardware resources for FEA calculations:
+在日常的多用户高并发协同中，应当使用系统工具或环境变量进行实时诊断。针对当前的主题 `[ansys memory]`，建议 CAD 团队主管和 IT 运维人员首先对该软件实例的工作上下文和环境变量进行审计，核实系统是否满足本指南所提到的参数要求。
 
-```bash
-# APDL startup script parameters
-ansys241.exe -p ANSYS -np 8 -dir "D:\AnsysSolves"
-```
+## 2. 底层代码或配置文件蓝图 (Code & Config Blueprint)
+根据该软件在企业中的典型应用环境，您需要将以下配置文件下发至对应软件的 `startup` 或 `admin` 系统路径中。
 
-### Ansys solver performance Tuning Playbook
-1. **Enable GPU solver Acceleration**: Go to solver settings, turn on CUDA GPU acceleration, and assign computations to workstation Quadro cards.
-2. **Configure Scratch directories**: Avoid network drives; map Ansys work directories to local NVMe SSDs.
-3. **Mesh Density Check**: Run mesh convergence checks and apply local mesh refinement (Sizing) instead of global mesh density sweeps.
+# APDL 求解加速批处理启动控制命令行 (.bat)
+@echo off
+set ANSYS_SOLVER_PATH=C:\Program Files\Ansys Inc\v241\ansys\bin\winx64\ansys241.exe
+"%ANSYS_SOLVER_PATH%" -b -p ANSYS -np 8 -dir "D:\AnsysSolvesScratch" -i "suspension_design.dat" -o "solve_output.txt"
+
+
+> [!TIP]
+> 配置文件在上传至服务器或保存至本地 AppData 之前，务必确保无任何多余的特殊字符和空行，且文件采用 `UTF-8` 或标准的 `ANSI` 编码格式保存。
+
+## 3. 步骤化系统优化指南 (Optimization Playbook)
+请严格遵循以下实操规程在本地 CAD 终端机或企业中心许可服务器上执行优化部署：
+
+1. **指定高吞吐高速本地缓存目录**：将求解的工作目录绝对指向本地 PCIe nvme M.2 高性能固态硬盘。
+2. **合理分配HPC物理核心数**：命令行 `-np` 指定的核心数一定要与计算机的“物理核心”数对齐，不使用超线程。
+3. **GPU 并行计算挂载**：在“Mechanical 求解属性”中，将求解方法设置为 Sparse 并开启 NVIDIA CUDA GPU 并行支持。
 
 ---
 

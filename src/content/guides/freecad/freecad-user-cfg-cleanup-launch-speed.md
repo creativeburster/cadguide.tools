@@ -12,23 +12,39 @@ date: "June 2026"
 
 # FreeCAD user.cfg Memory Purge: Restoring Slow Launch Speeds
 
-Managing **FreeCAD user.cfg Memory Purge: Restoring Slow Launch Speeds** is key to minimizing pipeline bottlenecks. This technical directive details the parameters, validated commands, and verified configurations necessary to resolve this specific CAD block.
+在进行企业级部署与深度应用开发时，合理优化 **FreeCAD user.cfg Memory Purge: Restoring Slow Launch Speeds** 是保证整个 CAD/CAE 设计管线高效流转的关键。本技术规程将针对这一具体的工具配置节点，从系统诊断、底层配置及实操优化的角度提供官方可验证的实施方案。
 
-### System Performance Diagnostics
-Heavy graphics redraw and high calculations loads cause system stutters. Viewport lags occur due to graphic driver mismatching or unoptimized memory caching rules.
+## 1. 深度系统诊断与环境校验
+FreeCAD 进行大型模型渲染和布尔切削时，三维视口旋转时频繁卡顿是因为 Coin3D 场景图频繁重绘。此外，如果拓扑特征树中的某些几何块面片数过多且未做 Refining，也会导致主线程挂起。
 
-### FreeCAD Coin3D performance preferences
-Adjust Coin3D memory allocations to prevent segment fault crashes during redraws:
+在日常的多用户高并发协同中，应当使用系统工具或环境变量进行实时诊断。针对当前的主题 `[freecad lag]`，建议 CAD 团队主管和 IT 运维人员首先对该软件实例的工作上下文和环境变量进行审计，核实系统是否满足本指南所提到的参数要求。
 
-```text
-# FreeCAD terminal performance tweaks
-export COIN_GL_NO_CURRENT_CONTEXT_CHECK=1
-```
+## 2. 底层代码或配置文件蓝图 (Code & Config Blueprint)
+根据该软件在企业中的典型应用环境，您需要将以下配置文件下发至对应软件的 `startup` 或 `admin` 系统路径中。
 
-### FreeCAD Viewport Optimization Playbook
-1. **Optimize Coin3D Settings**: Go to Edit > Preferences > Display > 3D View. Set Render caching options to "Auto" and limit anti-aliasing to 2x.
-2. **Avoid topological naming errors**: Change sketch reference bounds to map to datum planes instead of solid faces.
-3. **Perform local shape Healing**: Use the "Part Workbench > Simple Copy" or "OpenCASCADE Healing" function to clean imported complex meshes.
+# FreeCAD python 宏脚本: 自动化网格精简与特征重用
+import FreeCAD as App
+import Part
+
+doc = App.ActiveDocument
+if doc is not None:
+    active_obj = doc.ActiveObject
+    if active_obj is not None and active_obj.isDerivedFrom("Part::Feature"):
+        refined_shape = active_obj.Shape.removeSplitter()
+        refined_feat = doc.addObject("Part::Feature", active_obj.Name + "_Clean")
+        refined_feat.Shape = refined_shape
+        doc.recompute()
+
+
+> [!TIP]
+> 配置文件在上传至服务器或保存至本地 AppData 之前，务必确保无任何多余的特殊字符和空行，且文件采用 `UTF-8` 或标准的 `ANSI` 编码格式保存。
+
+## 3. 步骤化系统优化指南 (Optimization Playbook)
+请严格遵循以下实操规程在本地 CAD 终端机或企业中心许可服务器上执行优化部署：
+
+1. **配置Coin3D三维视口缓存**：在“编辑 > 首选项 > 显示 > 3D 视图”中，将渲染高速缓存模式设为“自动（Auto）”。
+2. **执行模型 Refining 清洗**：在 Part 工作台中，对导入的第三方 STEP 实体模型执行“Refine Shape（精炼形态）”以擦除无效面片。
+3. **优化 Sketch 解算开销**：避免在一个 Sketch 草图里绘制超过 100 个的复杂约束，将复杂的特征体拆分进行分步凸起操作。
 
 ---
 
