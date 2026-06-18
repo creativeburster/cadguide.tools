@@ -74,7 +74,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'performance',
     title: 'Legacy Performance Speed Tuning',
     desc: 'Configure modern heavy CAD platforms to launch and render optimally on low-end hardware.',
-    countLabel: '14 Active Guides',
+    countLabel: '15 Active Guides',
     gradient: 'from-amber-500 via-orange-600 to-yellow-500',
     articles: [
       { title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations', slug: 'why-engineers-use-autocad-2007-speed-tuning', keyword: 'autocad 2007' },
@@ -91,6 +91,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Transparency Display Viewport Bottleneck: Reducing CPU Single-Thread Overhead in Layer Rendering', slug: 'transparency-display-bottleneck', keyword: 'autocad drawing' },
       { title: 'Automatic Temp Cache Cleaner: Scripting Windows Temp Cleanup for AutoCAD Workspace Health', slug: 'automatic-temp-cache-cleaner', keyword: 'autocad tools' },
       { title: 'AutoCAD MEP Calculators: Sizing HVAC Ducts and Calculating Pipe Friction Losses', slug: 'mep-fluid-friction-flow-calculator', keyword: 'autocad mep' },
+      { title: 'AutoCAD 3D Viewport Performance: rolling back DirectX 12 to DirectX 11 via GFXDX12', slug: 'autocad-3d-viewport-dx12-acceleration', keyword: 'autocad 3d' },
     ],
     tags: ['#LegacyTuning', '#RAM-Optimization', '#Speed-Boost']
   },
@@ -125,7 +126,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'deployment',
     title: 'Enterprise IT System Deployment',
     desc: 'Package silent deployments, manage FLEXlm options files, and automate silent updates.',
-    countLabel: '13 Active Guides',
+    countLabel: '16 Active Guides',
     gradient: 'from-indigo-600 via-purple-600 to-pink-500',
     articles: [
       { title: 'Silent Deploy AutoCAD with Microsoft Intune: Enterprise Packaging and Silent MSI Distribution Guide', slug: 'silent-deploy-autocad-microsoft-intune', keyword: 'autocad windows 11' },
@@ -141,6 +142,9 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Optimizing LICPATH.lic Timeout and Latency: Troubleshooting Remote WAN FLEXlm Licensing Delays', slug: 'optimizing-licpath-timeout-latency-offices', keyword: 'autocad online' },
       { title: 'Plotter Configuration PC3 Distribution Server: Enforcing Uniform Printing Margins and Plot Styles', slug: 'plotter-pc3-distribution-server', keyword: 'autocad reader' },
       { title: 'Silent Update Patch Deployment Automation: Managing AutoCAD Hotfixes and Security Updates', slug: 'silent-update-patch-deployment-automation', keyword: 'autodesk cad' },
+      { title: 'Autodesk ODIS Silent Deployment Guide: CLI Installation Parameters and Resolving Error 1603', slug: 'autodesk-odis-silent-deployment-1603', keyword: 'autodesk cad' },
+      { title: 'Enforcing AutoCAD TRUSTEDPATHS via GPO: Enterprise Security Registry Deployment', slug: 'autolisp-secure-load-gpo-trustedpaths', keyword: 'autocad tools' },
+      { title: 'FLEXlm Redundant Three-Server Setup: High Availability and License Idle Timeout Options', slug: 'flexlm-redundant-three-server-opt', keyword: 'autocad online' },
     ],
     tags: ['#IntuneDeploy', '#SilentPack', '#LicenseReserve']
   },
@@ -149,7 +153,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'migration',
     title: 'Migration &二次开发 API',
     desc: 'Import AutoLISP customizations, develop Visual LISP react utilities, and C# ObjectARX plugins.',
-    countLabel: '11 Active Guides',
+    countLabel: '12 Active Guides',
     gradient: 'from-violet-600 via-purple-700 to-fuchsia-500',
     articles: [
       { title: 'Introduction to AutoLISP Scripting: Writing Your First Layout and Selection Macro', slug: 'autolisp-scripting-first-macro', keyword: 'autocad tools' },
@@ -163,6 +167,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Customizing PGP Command Aliases: Scripting Custom Command Shortcuts for LISP Macros', slug: 'pgp-alias-commands-automation', keyword: 'autocad tools' },
       { title: 'AutoCAD DCL Dialog Design: Developing Graphical User Interfaces for AutoLISP Scripts', slug: 'autocad-dcl-dialog-design', keyword: 'autocad tools' },
       { title: 'acad.lsp and acaddoc.lsp Centralized Deployment: Automating Corporate LISP Library Loads', slug: 'acad-doc-lsp-centralized-deploy', keyword: 'autocad tools' },
+      { title: 'AutoCAD .NET 8 API Migration Blueprint: Upgrading ObjectARX and C# Plugins', slug: 'autocad-net-8-migration-blueprint', keyword: 'autocad tools' },
     ],
     tags: ['#LispAPI', '#ObjectARX', '#CustomPGP']
   },
@@ -1404,6 +1409,66 @@ export const ARTICLES_LIST: GuideArticleCard[] = [
     softwareSlug: 'autocad',
     keyword: 'autocad tools',
     slug: 'acad-doc-lsp-centralized-deploy'
+  },
+  {
+    id: 'art-net-8-migration',
+    category: 'migration',
+    title: 'AutoCAD .NET 8 API Migration Blueprint: Upgrading ObjectARX and C# Plugins',
+    excerpt: 'A developer guide to retargeting C# and ObjectARX custom CAD applications from legacy .NET Framework 4.8 to .NET 8.0, modifying target frameworks, and adjusting assembly references.',
+    author: 'Will P. (Enterprise CAD Developer)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'autocad-net-8-migration-blueprint'
+  },
+  {
+    id: 'art-odis-silent-deploy',
+    category: 'deployment',
+    title: 'Autodesk ODIS Silent Deployment Guide: CLI Installation Parameters and Resolving Error 1603',
+    excerpt: 'Learn how to deploy AutoCAD silently using the modern Autodesk On-Demand Installation Service (ODIS) engine and troubleshoot common Windows Installer 1603 failures.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autodesk cad',
+    slug: 'autodesk-odis-silent-deployment-1603'
+  },
+  {
+    id: 'art-autolisp-gpo-trustedpaths',
+    category: 'deployment',
+    title: 'Enforcing AutoCAD TRUSTEDPATHS via GPO: Enterprise Security Registry Deployment',
+    excerpt: 'A system administrator playbook to configure AutoCAD SECURELOAD controls and deploy LISP path TRUSTEDPATHS configurations via Windows Group Policy Objects (GPO).',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'autolisp-secure-load-gpo-trustedpaths'
+  },
+  {
+    id: 'art-flexlm-redundant-three-server',
+    category: 'deployment',
+    title: 'FLEXlm Redundant Three-Server Setup: High Availability and License Idle Timeout Options',
+    excerpt: 'A step-by-step IT guide to configuring a redundant three-server licensing pool for AutoCAD and establishing seat timeouts using TIMEOUTALL in adskflex.opt.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad online',
+    slug: 'flexlm-redundant-three-server-opt'
+  },
+  {
+    id: 'art-3d-viewport-dx12-rollback',
+    category: 'performance',
+    title: 'AutoCAD 3D Viewport Performance: rolling back DirectX 12 to DirectX 11 via GFXDX12',
+    excerpt: 'Diagnose and resolve viewport latency and visual artifacts in AutoCAD by rolling back from DirectX 12 to DirectX 11 and optimizing 3DCONFIG rendering parameters.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad 3d',
+    slug: 'autocad-3d-viewport-dx12-acceleration'
   },
 ];
 

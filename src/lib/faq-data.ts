@@ -658,4 +658,52 @@ export const accordionFaqs: AccordionFaq[] = [
     q: "How to configure the command logfile log buffer in AutoCAD?",
     a: "To keep logs of command histories for CAD audits: 1. Set the system variable `LOGFILEMODE` to `1`. 2. AutoCAD will save all command history records as a `.log` text file. 3. Check the output folder via options for file path paths (`LOGFILEPATH`)."
   },
+  {
+    category: 'standards',
+    tools: ['autocad'],
+    q: "How to upgrade AutoCAD .NET or ObjectARX custom plugins to support AutoCAD 2025 and 2026?",
+    a: "AutoCAD 2025 and 2026 have migrated from .NET Framework 4.8 to .NET 8.0 (Core). You must edit your project's `.csproj` file, retarget it using `<TargetFramework>net8.0-windows</TargetFramework>`, enable `<UseWindowsForms>true</UseWindowsForms>` and `<UseWPF>true</UseWPF>`, and update core dynamic reference paths for `accoremgd.dll`, `acdbmgd.dll`, and `acmgd.dll` to point to the new SDK layout with Copy Local set to False."
+  },
+  {
+    category: 'standards',
+    tools: ['autocad'],
+    q: "How to resolve assembly load and command registration failures after upgrading AutoCAD plugins to .NET 8?",
+    a: "Command loading failures in .NET 8 are often caused by dependency mismatch with the legacy .NET Framework. Check that any referenced Windows compatibility packages are upgraded to their .NET 8 equivalents via NuGet. Ensure your initialization class implements `IExtensionApplication` correctly, and that compiler target platform is strictly set to x64 since AutoCAD does not support AnyCPU runtime binding for .NET 8 assemblies."
+  },
+  {
+    category: 'licensing',
+    tools: ['autocad'],
+    q: "How to execute a silent installation of AutoCAD using the modern ODIS deployment engine?",
+    a: "Autodesk ODIS installations bypass legacy MSI commands. You must call the main setup binary with parameters: `Setup.exe --silent --offline_mode -q --config \".\\\\image\\\\Collection.xml\"`. The `--silent` parameter ensures no GUI forms are rendered, `--offline_mode` skips internet registration sweeps, and `-q` runs the bootstrapper in quiet background mode."
+  },
+  {
+    category: 'licensing',
+    tools: ['autocad'],
+    q: "How to troubleshoot and resolve Windows Installer Error 1603 during AutoCAD ODIS installation?",
+    a: "Error 1603 is a generic abort flag. Fix it by: 1. Purging the local ODIS cache contents in `C:\\ProgramData\\Autodesk\\ODIS` and running `AdODIS-installer.exe` to repair the engine service. 2. Removing duplicate installation registry entries under `HKLM\\Software\\Autodesk\\UPI2\\` using the Microsoft troubleshooter. 3. Granting the `SYSTEM` account Full Control permissions over `%SystemRoot%\\Temp` to permit extraction."
+  },
+  {
+    category: 'licensing',
+    tools: ['autocad'],
+    q: "How to deploy and enforce AutoCAD TRUSTEDPATHS variables across enterprise workstations using GPO?",
+    a: "Configure trusted paths in Active Directory Group Policy Editor by going to User Configuration > Preferences > Windows Settings > Registry. Create an Update action on the key path `Software\\\\Autodesk\\\\AutoCAD\\\\R24.3\\\\ACAD-8001:409\\\\Profiles\\\\<YOUR_PROFILE_NAME>\\\\Variables`. Set the value name to `TRUSTEDPATHS`, type to `REG_SZ`, and value data to your semi-colon separated shared network directories containing custom scripts (e.g. `\\\\\\\\server\\\\cad\\\\support;\\\\\\\\server\\\\cad\\\\lisp`)."
+  },
+  {
+    category: 'licensing',
+    tools: ['autocad'],
+    q: "How to configure AutoCAD SECURELOAD variable to load LISP macros silently without triggering security warning popups?",
+    a: "SECURELOAD controls external code load security. Set `SECURELOAD` to `1` (which auto-loads files from directories specified in `TRUSTEDPATHS` and warns for other folders) or `2` (which strictly loads only from folders listed in `TRUSTEDPATHS` and blocks all other locations). Ensure all custom directories containing LISP, FAS, or VLX scripts are registered under `TRUSTEDPATHS`."
+  },
+  {
+    category: 'licensing',
+    tools: ['autocad'],
+    q: "How to configure a redundant three-server licensing pool for FLEXlm concurrent AutoCAD seats?",
+    a: "A three-server redundant pool requires three local servers in the same subnet. Edit the license file header to list three `SERVER` lines with their respective hostnames, MAC addresses, and ports (default 27000), followed by `VENDOR adskflex port=2080`. Set up LMTOOLS on all three nodes pointing to this file. Start the services in the sequence of Primary, Secondary, then Tertiary. Two of the three servers must remain online to maintain licensing quorum."
+  },
+  {
+    category: 'performance',
+    tools: ['autocad'],
+    q: "Why does AutoCAD experience viewport lag under DirectX 12, and how do we revert to DirectX 11?",
+    a: "DirectX 12 rendering can cause virtual memory leaks on legacy or integrated graphics. To roll back, type `GFXDX12` in AutoCAD and set it to `0`. Close and restart AutoCAD. Type `3DCONFIG` and verify the virtual device shows as DirectX 11 (`gdi11.dbx` instead of `gdi12.dbx`). In the `3DCONFIG` settings panel, you can also toggle OFF High Quality Geometry (HQGEOM) to disable anti-aliasing and reduce rasterization load on the GPU."
+  },
 ];
