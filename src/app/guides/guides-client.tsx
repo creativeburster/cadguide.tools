@@ -147,7 +147,7 @@ export default function GuidesClient() {
     f.a.toLowerCase().includes(searchLower)
   );
 
-  const FAQS_PER_PAGE = 200; // Increase to display all 100+ Autodesk FAQs directly in the list view
+  const FAQS_PER_PAGE = 10; // Set to 10 for paginated view of official FAQs
   const totalFaqPages = Math.ceil(filteredFaqs.length / FAQS_PER_PAGE);
   const displayedFaqs = filteredFaqs.slice((faqPage - 1) * FAQS_PER_PAGE, faqPage * FAQS_PER_PAGE);
 
@@ -562,6 +562,41 @@ export default function GuidesClient() {
                     );
                   })}
                 </div>
+
+                {/* Pagination Controls */}
+                {totalFaqPages > 1 && (
+                  <div className="flex items-center justify-between border-t border-slate-100 pt-6 mt-6 max-w-2xl mx-auto">
+                    <button
+                      disabled={faqPage === 1}
+                      onClick={() => {
+                        setFaqPage(prev => Math.max(prev - 1, 1));
+                        setOpenFaqQuestion(null);
+                        if (typeof window !== 'undefined') {
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                      }}
+                      className="px-4 py-2 border border-slate-200 rounded-xl text-[10px] font-black uppercase tracking-wider text-slate-500 hover:text-slate-800 hover:border-slate-300 disabled:opacity-40 disabled:hover:text-slate-500 disabled:hover:border-slate-200 transition-all"
+                    >
+                      ← Prev
+                    </button>
+                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                      Page <span className="text-slate-800 font-extrabold">{faqPage}</span> of <span className="text-slate-800 font-extrabold">{totalFaqPages}</span>
+                    </div>
+                    <button
+                      disabled={faqPage === totalFaqPages}
+                      onClick={() => {
+                        setFaqPage(prev => Math.min(prev + 1, totalFaqPages));
+                        setOpenFaqQuestion(null);
+                        if (typeof window !== 'undefined') {
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                      }}
+                      className="px-4 py-2 border border-slate-200 rounded-xl text-[10px] font-black uppercase tracking-wider text-slate-500 hover:text-slate-800 hover:border-slate-300 disabled:opacity-40 disabled:hover:text-slate-500 disabled:hover:border-slate-200 transition-all"
+                    >
+                      Next →
+                    </button>
+                  </div>
+                )}
               </Card>
             </section>
           )}
