@@ -4056,9 +4056,19 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   }
 
   const { tool, template, category } = parsed;
-  if (template.contentMarkdown) {
-    return renderRealArticlePage(tool, template, category);
+
+  let contentMarkdown = '';
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const mdPath = path.join(process.cwd(), 'src/content/guides/autocad', `${template.slug}.md`);
+    contentMarkdown = fs.readFileSync(mdPath, 'utf-8');
+  } catch (err) {
+    console.error(`Failed to load markdown for slug ${template.slug}:`, err);
   }
+
+  const templateWithContent = { ...template, contentMarkdown };
+  return renderRealArticlePage(tool, templateWithContent, category);
 
   const meta = getArchetypeMetadata(tool.category_id, tool);
   const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);

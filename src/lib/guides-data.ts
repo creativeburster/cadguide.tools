@@ -17,10 +17,21 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'procurement',
     title: 'CAD Procurement & Licensing TCO',
     desc: 'Navigate enterprise CAD budgeting, cost curves, and Perpetual licensing alternatives.',
-    countLabel: '1 Active Guide',
+    countLabel: '12 Active Guides',
     gradient: 'from-emerald-600 via-teal-600 to-cyan-500',
     articles: [
-      { title: 'AutoCAD LT vs. AutoCAD Pro: Complete Procurement & TCO Cost Guide (With 100% Compatible Alternatives)', slug: 'autocad-lt-vs-pro-procurement-tco', keyword: 'autocad lt price' }
+      { title: 'AutoCAD LT vs. AutoCAD Pro: Complete Procurement & TCO Cost Guide (With 100% Compatible Alternatives)', slug: 'autocad-lt-vs-pro-procurement-tco', keyword: 'autocad lt price' },
+      { title: 'Perpetual Buyout CAD Alternatives: Evaluating BricsCAD, GstarCAD, and ZWCAD for Enterprise Deployment', slug: 'perpetual-buyout-cad-alternatives', keyword: 'autocad price' },
+      { title: 'Autodesk Named-User Migration Audit: Optimizing Licensing Budgets and Floating Network Compliance', slug: 'autodesk-named-user-migration-audit', keyword: 'autocad cost' },
+      { title: 'Preventing Autodesk EULA Compliance Audit Risks: Best Practices for Enterprise Asset Managers', slug: 'preventing-autodesk-eula-audit-risks', keyword: 'autodesk autocad' },
+      { title: 'Autodesk Token Flex Cost Guide: Strategic Budgeting and Pay-Per-Use Licensing Optimization', slug: 'autodesk-token-flex-cost-guide', keyword: 'autocad price' },
+      { title: 'CAD Licensing Strategy for Architecture Firms: Scaling Seats from 20 to 100 Draftsmen Efficiently', slug: 'cad-licensing-strategy-architecture-firms', keyword: 'cad lt cost' },
+      { title: 'Autodesk Student to Commercial Upgrade: Removing Educational Plot Watermarks Legal Framework', slug: 'autocad-student-to-commercial-watermark', keyword: 'autocad student' },
+      { title: 'Cloud CAD vs. On-Premises TCO Analysis: Comparing Autodesk Cloud Subscriptions with Perpetual Buyouts', slug: 'cloud-vs-onprem-tco-analysis', keyword: 'autocad cost' },
+      { title: 'Global CAD Licensing Audit: Managing Regional EULA Restrictions for Multinational Engineering Teams', slug: 'multinational-cad-license-geographic-restrictions', keyword: 'autodesk autocad' },
+      { title: 'Autodesk Subscription Renewal Negotiation: Critical Negotiation Playbook for Enterprise IT Procurement', slug: 'autodesk-subscription-renewal-negotiation', keyword: 'autocad cost' },
+      { title: 'AutoCAD Civil 3D vs. Autodesk Revit Suite TCO: Financial Optimization for Infrastructure and BIM Projects', slug: 'autocad-civil-3d-vs-revit-bundle-tco', keyword: 'autocad civil 3d' },
+      { title: 'AutoCAD Web and Mobile TCO Alternative: Deploying Lightweight CAD Viewers for Casual Site Engineers', slug: 'autocad-web-mobile-procurement-alternative', keyword: 'autocad reader' },
     ],
     tags: ['#TCO-Analysis', '#CAD-Cost', '#BricsCAD-Alternative']
   },
@@ -29,22 +40,57 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'standards',
     title: 'Platform Compatibility & Standards',
     desc: 'Deploy and optimize CAD software across macOS, Linux, and Web environments.',
-    countLabel: '1 Active Guide',
+    countLabel: '23 Active Guides',
     gradient: 'from-blue-500 via-indigo-600 to-violet-500',
     articles: [
-      { title: 'How to Run AutoCAD on macOS, Linux, and Web: The Ultimate Cross-Platform Compatibility Guide', slug: 'how-to-run-autocad-on-mac-linux-web', keyword: 'autocad for mac' }
+      { title: 'Apple Silicon M1/M2/M3 native Mac Performance tuning: Optimizing AutoCAD for macOS Workstations', slug: 'm1-m2-mac-silicon-tuning', keyword: 'autocad for mac' },
+      { title: 'How to Run AutoCAD on Linux Workstations: Deploying stable CAD via Wine and Winetricks Layers', slug: 'run-autocad-linux-wine', keyword: 'autocad linux' },
+      { title: 'AutoCAD Web App Performance and Rendering Limits: Cloud-Based DWG Editing and Font Sandbox', slug: 'autocad-web-limits-rendering', keyword: 'autocad web' },
+      { title: 'AutoCAD Mobile iPad Pro Drafting Guide: Optimizing Stylus Input, Gesture Controls, and VRAM Buffers', slug: 'autocad-mobile-ipad-gestures', keyword: 'autocad for ipad' },
+      { title: 'DWG and DXF Precision Exchange: Optimizing Tolerance Compatibility Between AutoCAD and SolidWorks', slug: 'dwg-dxf-precision-exchange', keyword: 'autocad dxf' },
+      { title: 'Revit and Inventor DWG Alignment: Coordinating Multi-Software 3D Models Coordinate Origin Setup', slug: 'revit-inventor-dwg-alignment', keyword: 'autocad revit' },
+      { title: 'Batch Converting Legacy DWG Formats: Utilizing DWG TrueView for Seamless Version Downscaling', slug: 'batch-convert-dwg-trueview', keyword: 'autocad trueview' },
+      { title: 'Mac vs. Windows AutoCAD Shortcut Translation: Mapping Windows Control Keys under macOS Finder', slug: 'macos-vs-windows-shortcuts', keyword: 'autocad macos' },
+      { title: 'Cloud Collaboration and DWG File Locks: Resolving SharePoint and OneDrive Lock conflicts', slug: 'cloud-collaboration-file-locks', keyword: 'autocad online' },
+      { title: 'SketchUp SKP Import Repair: Preventing Viewport Tessellation and Surface Tears in AutoCAD 3D', slug: 'sketchup-skp-import-repair', keyword: 'autocad sketchup' },
+      { title: 'Civil 3D GIS Projection Transform: Aligning Mapping Projections and Real-World Coordinates', slug: 'civil3d-gis-projection-transform', keyword: 'autocad civil 3d' },
+      { title: 'Shared CAD Storage on NFS and SMB Servers: Optimizing Network Cache Settings and File Open Latency', slug: 'nfs-smb-shared-files-locks', keyword: 'autocad online' },
+      { title: 'ISO 13567 CAD Layer Standards: Designing Structured Layer Names for Global Projects', slug: 'iso-13567-cad-layer-standards', keyword: 'autocad drafting' },
+      { title: 'AIA CAD Layer Mapping: Coordinating Layer Names in Revit DWG Export Settings', slug: 'aia-cad-layer-mapping-revit', keyword: 'autocad revit' },
+      { title: 'CAD Standards Checker: Utilizing DWS Files to Automatically Audit Layer and Text Styles', slug: 'standards-checker-dws-enforcement', keyword: 'autocad drafting' },
+      { title: 'Custom Line Styles and Lineweights: Coding Complex LIN Files Containing Text Elements', slug: 'lineweight-lin-complex-lines', keyword: 'autocad drafting' },
+      { title: 'Layer Translator LAYTRANS Batch: Standardizing Vendor Drawings Layer Lists', slug: 'layer-translator-laytrans-batch', keyword: 'autocad drawing' },
+      { title: 'Annotative Scale and Text Optimization: Preventing Scaled Dimension Text Size Discrepancies', slug: 'annotative-scale-dimension-styles', keyword: 'autocad drafting' },
+      { title: 'Creating CAD DWT Templates: Standardizing Border Blocks and Dynamic Title Sheet Attributes', slug: 'dwt-template-border-attributes', keyword: 'autocad drafting' },
+      { title: 'Resolving Missing SHX Fonts: Configuring Font Mapping Table (FMP) and Font Directories', slug: 'missing-shx-font-mapping', keyword: 'autocad tools' },
+      { title: 'Imperial to Metric Dimension Styles: Standardizing Unit Precision and Dual Dimensions', slug: 'imperial-metric-dimension-style', keyword: 'autocad drafting' },
+      { title: 'Configuring CTB and STB Plot Style Tables: Line Weight Mapping for Monochrome Output', slug: 'ctb-stb-plot-style-tables', keyword: 'autocad tools' },
+      { title: 'Model Space vs. Paper Space Standards: Designing Compliant Layout Viewport Structures', slug: 'model-space-vs-paper-space-standards', keyword: 'autocad drafting' },
     ],
-    tags: ['#Mac-CAD', '#Linux-CAD', '#AutoCAD-Web']
+    tags: ['#Mac-CAD', '#Linux-CAD', '#AutoCAD-Web', '#ISO-Standards']
   },
   {
     id: 'sec-perf',
     category: 'performance',
     title: 'Legacy Performance Speed Tuning',
     desc: 'Configure modern heavy CAD platforms to launch and render optimally on low-end hardware.',
-    countLabel: '1 Active Guide',
+    countLabel: '14 Active Guides',
     gradient: 'from-amber-500 via-orange-600 to-yellow-500',
     articles: [
-      { title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations', slug: 'why-engineers-use-autocad-2007-speed-tuning', keyword: 'autocad 2007' }
+      { title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations', slug: 'why-engineers-use-autocad-2007-speed-tuning', keyword: 'autocad 2007' },
+      { title: 'Ribbon Menu Stripping Classic Toolbars: Recovering Desktop Memory Space on Older Workstations', slug: 'ribbon-menu-stripping-classic', keyword: 'autocad tools' },
+      { title: 'DirectX Viewport Rendering Configuration: Tuning DirectX 11/12 and Optimizing Dedicated VRAM', slug: 'directx-rendering-vram-allocation', keyword: 'autocad 3d' },
+      { title: 'Disabling Selection Preview and Cycling: Eliminating Cursor Stutter in Dense CAD Assemblies', slug: 'disable-selection-preview-cycling', keyword: 'autocad tools' },
+      { title: 'Viewport Tuning System Variables: Restoring AutoCAD Launch Speed and Reducing Drawing Load Time', slug: 'system-variables-viewport-tuning', keyword: 'autocad tools' },
+      { title: 'Large Assembly Demand Loading: Utilizing DEMANDLOAD and INDEXCTL for Layer-Only Drawing Opens', slug: 'large-assembly-demand-loading', keyword: 'autocad tools' },
+      { title: 'Purge and Audit Command Scripting: Automatically Cleaning RegApps, Orphan Blocks, and Null Nodes', slug: 'purge-audit-command-scripting', keyword: 'autocad drawing' },
+      { title: 'Windows Pagefile Tuning for Heavy CAD Assemblies: Allocating Virtual Memory on Fast PCIe Drives', slug: 'windows-pagefile-nvme-tuning', keyword: 'autocad registry' },
+      { title: 'Disabling Background Plotting: Freeing Up Core Threads for Active Viewport Editing', slug: 'disable-background-plot-render', keyword: 'autocad drawing' },
+      { title: 'Skip File Signature Validation: Eliminating Offline Cold Launch Delay in Isolated Subnets', slug: 'skip-file-signature-validation', keyword: 'autocad registry' },
+      { title: 'Blocking Start Tab Web Load: Customizing AutoCAD Startup Screen to Skip Online Fetch Tasks', slug: 'block-start-tab-web-loading', keyword: 'autocad tools' },
+      { title: 'Transparency Display Viewport Bottleneck: Reducing CPU Single-Thread Overhead in Layer Rendering', slug: 'transparency-display-bottleneck', keyword: 'autocad drawing' },
+      { title: 'Automatic Temp Cache Cleaner: Scripting Windows Temp Cleanup for AutoCAD Workspace Health', slug: 'automatic-temp-cache-cleaner', keyword: 'autocad tools' },
+      { title: 'AutoCAD MEP Calculators: Sizing HVAC Ducts and Calculating Pipe Friction Losses', slug: 'mep-fluid-friction-flow-calculator', keyword: 'autocad mep' },
     ],
     tags: ['#LegacyTuning', '#RAM-Optimization', '#Speed-Boost']
   },
@@ -53,12 +99,95 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
     category: 'troubleshooting',
     title: 'Enterprise Troubleshooting & Licensing',
     desc: 'Diagnose fatal address freezes, FLEXlm port server conflicts, and registry socket locks.',
-    countLabel: '1 Active Guide',
+    countLabel: '16 Active Guides',
     gradient: 'from-rose-500 via-pink-600 to-red-500',
     articles: [
-      { title: 'Enterprise Troubleshooting Blueprint: Fixing AutoCAD Fatal Errors & FLEXlm Network License Failures', slug: 'fixing-autocad-fatal-errors-flexlm-licensing', keyword: 'flexlm error -15' }
+      { title: 'Enterprise Troubleshooting Blueprint: Fixing AutoCAD Fatal Errors & FLEXlm Network License Failures', slug: 'fixing-autocad-fatal-errors-flexlm-licensing', keyword: 'flexlm error -15' },
+      { title: 'Fixing FLEXlm Licensing Error -97,121: Resolving Expired Certificates and Daemon Sockets Conflicts', slug: 'fixing-flexlm-licensing-error-97-121', keyword: 'flexlm error -15' },
+      { title: 'Windows Registry Ephemeral Port Leak: Troubleshooting Sudden AutoCAD Viewport Hangs and Launches', slug: 'windows-registry-socket-leak-viewport-freezes', keyword: 'autocad registry' },
+      { title: 'Fixing AutoCAD Fatal Error 0x0024: Resolving Graphics Driver Crashes and Viewport Hardware Acceleration', slug: 'fixing-autocad-fatal-error-0x0024-graphics', keyword: 'autocad registry' },
+      { title: 'Hatch Pattern Crash HPMAXLINES Leak: Optimizing Memory Budgets for Ultra-Dense Hatch Redraws', slug: 'hatch-pattern-crash-hpmaxlines-leak', keyword: 'autocad drawing' },
+      { title: 'Fixing Licensing Failed Service Restart Guide: Restoring Autodesk Desktop Licensing Service Logs', slug: 'fixing-licensing-failed-service-restart-guide', keyword: 'autocad price' },
+      { title: 'Restoring Corrupted .NET Framework for AutoCAD: Resolving Visual C++ Runtime and Startup Crashes', slug: 'restoring-corrupted-dotnet-framework-autocad', keyword: 'autocad registry' },
+      { title: 'Clean Rebuild User Profile Registry: Restoring Local Configuration Paths and Workspace Profiles', slug: 'clean-rebuild-user-profile-regedit', keyword: 'autocad registry' },
+      { title: 'Fixing Missing acdb.dll and Module Crashes: Repairing AutoCAD Shared Library Component Blocks', slug: 'fixing-missing-acdb-dll-module-crashes', keyword: 'autocad registry' },
+      { title: 'Resolving Dual GPU Viewport Acceleration Issues: Forcing High-Performance Dedicated Graphics Card', slug: 'resolving-dual-gpu-viewport-acceleration-issue', keyword: 'autocad 3d' },
+      { title: 'Proxy PAC and VPN Routing Telemetry Lag: Eliminating AutoCAD Verification Services Timeout Crashes', slug: 'proxy-pac-vpn-routing-telemetry-lag', keyword: 'autocad online' },
+      { title: 'Securing AutoCAD TRUSTEDPATHS: Preventing LISP Loading Sandbox Security Warning Loops', slug: 'securing-autocad-trustedpaths-lisp-sandboxing', keyword: 'autocad getintopc' },
+      { title: 'Recovering Corrupted DWG Backup Disaster: Reconstructing Drawing Databases via .BAK and .SV$', slug: 'recovering-corrupted-dwg-backup-disaster', keyword: 'autocad reader' },
+      { title: 'Resolving XREF Path Circular Dependency: Repairing Corrupted Drawing References and Viewport Freeze', slug: 'resolving-xref-path-circular-dependency', keyword: 'autocad reader' },
+      { title: 'Fixing ACIS 3D Boolean Stitching Failure: Repairing Topology Tears and Import Mesh Errors', slug: 'fixing-acis-3d-boolean-stitching-failure', keyword: 'autocad 3d' },
     ],
     tags: ['#FLEXlm-Error-15', '#FatalError-0x0024', '#RegistryTuning']
+  },
+  {
+    id: 'sec-deploy',
+    category: 'deployment',
+    title: 'Enterprise IT System Deployment',
+    desc: 'Package silent deployments, manage FLEXlm options files, and automate silent updates.',
+    countLabel: '13 Active Guides',
+    gradient: 'from-indigo-600 via-purple-600 to-pink-500',
+    articles: [
+      { title: 'Silent Deploy AutoCAD with Microsoft Intune: Enterprise Packaging and Silent MSI Distribution Guide', slug: 'silent-deploy-autocad-microsoft-intune', keyword: 'autocad windows 11' },
+      { title: 'AutoCAD Command-Line Installation Parameters: Master Deployments and Silent Setup Variables', slug: 'autocad-command-line-installation-parameters', keyword: 'autodesk cad' },
+      { title: 'Private Subnet CAD Deployment: Restricting Outside Web Access and Routing Local License Pools', slug: 'private-subnet-cad-deployment-dns-block', keyword: 'autodesk autocad' },
+      { title: 'SCCM AutoCAD Mass Deployment Guide: Managing User Profiles, Templates, and Support Path Variables', slug: 'sccm-autocad-mass-deployment-profile', keyword: 'autocad tools' },
+      { title: 'Configuring adskflex.opt Licensing Rules: Controlling Floating Pools, Reserving Seats, and Timeout Limits', slug: 'configuring-adskflex-opt-licensing-rules', keyword: 'autocad toolsets' },
+      { title: 'Blocking AutoCAD Telemetry and Telemetry Telemetry Uploads: Enterprise Hosts and Registry Configuration', slug: 'blocking-autocad-telemetry-privacy-hosts', keyword: 'autocad registry' },
+      { title: 'FLEXlm License Server Redundancy Setup: Configuring Three-Server Redundant Pools for High Availability', slug: 'flexlm-license-server-redundancy-setup', keyword: 'autocad online' },
+      { title: 'Group Policy AutoCAD Security Configuration: Locking Down Registries and Securing User Directories', slug: 'group-policy-autocad-security-registry', keyword: 'autocad registry' },
+      { title: 'Offline Activation Codes Installation: Configuring AutoCAD in Completely Air-Gapped Networks', slug: 'offline-activation-codes-installation', keyword: 'autodesk cad' },
+      { title: 'Centralized CAD Support Paths Configuration: Enforcing Uniform Templates, Fonts, and CTB Across Teams', slug: 'centralized-support-paths-configuration', keyword: 'autocad tools' },
+      { title: 'Optimizing LICPATH.lic Timeout and Latency: Troubleshooting Remote WAN FLEXlm Licensing Delays', slug: 'optimizing-licpath-timeout-latency-offices', keyword: 'autocad online' },
+      { title: 'Plotter Configuration PC3 Distribution Server: Enforcing Uniform Printing Margins and Plot Styles', slug: 'plotter-pc3-distribution-server', keyword: 'autocad reader' },
+      { title: 'Silent Update Patch Deployment Automation: Managing AutoCAD Hotfixes and Security Updates', slug: 'silent-update-patch-deployment-automation', keyword: 'autodesk cad' },
+    ],
+    tags: ['#IntuneDeploy', '#SilentPack', '#LicenseReserve']
+  },
+  {
+    id: 'sec-mig',
+    category: 'migration',
+    title: 'Migration &二次开发 API',
+    desc: 'Import AutoLISP customizations, develop Visual LISP react utilities, and C# ObjectARX plugins.',
+    countLabel: '11 Active Guides',
+    gradient: 'from-violet-600 via-purple-700 to-fuchsia-500',
+    articles: [
+      { title: 'Introduction to AutoLISP Scripting: Writing Your First Layout and Selection Macro', slug: 'autolisp-scripting-first-macro', keyword: 'autocad tools' },
+      { title: 'Visual LISP IDE Debugger Setup: Debugging LSP Routines in AutoCAD 2025+', slug: 'visual-lisp-ide-debugger-setup', keyword: 'autocad tools' },
+      { title: 'AutoLISP ActiveX Automation: Harnessing VLA-VLAX APIs to Modify Object Properties Fast', slug: 'vla-activex-lisp-automation', keyword: 'autocad tools' },
+      { title: 'Batch Purge LSP Scripting: Automatically Cleaning Thousands of DWG Database Headers', slug: 'batch-purge-lsp-folders', keyword: 'autocad tools' },
+      { title: 'Compiling LSP into FAS and VLX: Securing AutoLISP Source Code from Editing', slug: 'compile-lsp-vlx-fas-protection', keyword: 'autocad tools' },
+      { title: 'AutoLISP Reactors and Event Listeners: Automating Tasks on Save and Print Commands', slug: 'lisp-reactors-event-listeners', keyword: 'autocad tools' },
+      { title: 'ObjectARX and .NET API C#二次开发: Building Enterprise CAD Extensions and High-Speed Calculations', slug: 'objectarx-net-csharp-api', keyword: 'autocad tools' },
+      { title: 'AutoCAD JavaScript API: Automating Web Canvas Geometry Generation in Browser Sandboxes', slug: 'javascript-api-web-canvas-rendering', keyword: 'autocad tools' },
+      { title: 'Customizing PGP Command Aliases: Scripting Custom Command Shortcuts for LISP Macros', slug: 'pgp-alias-commands-automation', keyword: 'autocad tools' },
+      { title: 'AutoCAD DCL Dialog Design: Developing Graphical User Interfaces for AutoLISP Scripts', slug: 'autocad-dcl-dialog-design', keyword: 'autocad tools' },
+      { title: 'acad.lsp and acaddoc.lsp Centralized Deployment: Automating Corporate LISP Library Loads', slug: 'acad-doc-lsp-centralized-deploy', keyword: 'autocad tools' },
+    ],
+    tags: ['#LispAPI', '#ObjectARX', '#CustomPGP']
+  },
+  {
+    id: 'sec-mfg',
+    category: 'manufacturing',
+    title: 'Specialized Toolsets Guides',
+    desc: 'Harness Architecture smart objects, Electrical schematic tagging, and Mechanical library automation.',
+    countLabel: '13 Active Guides',
+    gradient: 'from-teal-600 via-emerald-600 to-green-500',
+    articles: [
+      { title: 'AutoCAD Architecture: Enforcing Smart Walls, Doors, and Windows Elevation Generators', slug: 'architecture-smart-objects-elevation', keyword: 'autocad architecture' },
+      { title: 'AutoCAD Electrical: Automation of Wire Numbering and Component Tagging Databases', slug: 'electrical-wire-numbering-tagging', keyword: 'autocad electrical' },
+      { title: 'AutoCAD Electrical Circuit Builder Templates: Designing Compliant Schematic Control Systems', slug: 'electrical-circuit-builder-templates', keyword: 'autocad electrical' },
+      { title: 'AutoCAD Mechanical: Configuring Power Layers and Automation of Standard Part Libraries', slug: 'mechanical-power-layers-automation', keyword: 'autocad mechanical' },
+      { title: 'AutoCAD Mechanical Calculators: Parametric Spring, Shaft, and Cam Stress Analyses', slug: 'mechanical-engineering-calculators', keyword: 'autocad mechanical' },
+      { title: 'AutoCAD Map 3D: Feature Data Objects (FDO) Database Mapping and GIS Data Integration', slug: 'map3d-fdo-database-mapping', keyword: 'autocad map 3d' },
+      { title: 'AutoCAD Map 3D Topology Cleanup: Standardizing GIS Layers and Spatial Features', slug: 'map3d-topology-cleanup-gis', keyword: 'autocad map 3d' },
+      { title: 'AutoCAD MEP: 3D Piping, HVAC, and Electrical Conduit Clash Detection Playbook', slug: 'mep-duct-conduit-clash-detection', keyword: 'autocad mep' },
+      { title: 'AutoCAD Plant 3D: P&ID Flow Diagrams Syncing and 3D Piping Model Validation', slug: 'plant3d-pid-sync-model-verification', keyword: 'autocad toolsets' },
+      { title: 'AutoCAD Plant 3D: Ortho and Iso Drawing Generation and PCF Data Export Guidelines', slug: 'plant3d-ortho-iso-generation', keyword: 'autocad toolsets' },
+      { title: 'AutoCAD Raster Design: Vectorizing Scanned Paper Drawings and Rubbersheet Alignment', slug: 'raster-design-vector-rubbersheeting', keyword: 'autocad toolsets' },
+      { title: 'Cross-Toolset CAD Workflows: Importing Architecture Structures into Plant 3D Pipelines', slug: 'cross-toolset-workflow-architecture-plant3d', keyword: 'autocad toolsets' },
+    ],
+    tags: ['#SpecializedToolsets', '#AutoCADElectrical', '#MechanicalParts']
   }
 ];
 
@@ -73,10 +202,8 @@ export interface GuideArticleCard {
   softwareSlug: string;
   keyword: string;
   slug: string;
-  contentMarkdown?: string;
 }
 
-// 4 篇真实的、硬编码的文章数据库，包含官网深度学习和重新结构化输出的正文内容
 export const ARTICLES_LIST: GuideArticleCard[] = [
   {
     id: 'art-proc-tco',
@@ -88,160 +215,1196 @@ export const ARTICLES_LIST: GuideArticleCard[] = [
     date: 'June 2026',
     softwareSlug: 'autocad',
     keyword: 'autocad lt price',
-    slug: 'autocad-lt-vs-pro-procurement-tco',
-    contentMarkdown: `### 1. Cost Overview: The Subscription Pricing Gap
-AutoCAD Pro is currently priced at approximately **$1,950 per year** (or $245 monthly) for a single named-user subscription. Conversely, AutoCAD LT (Lightweight) is offered at roughly **$490 per year** ($60 monthly). For B-End procurement managers, this represents a massive **400% price premium** to deploy the Pro version across engineering teams.
-
-### 2. Feature Comparison & Technical Limitations
-While AutoCAD LT shares the identical drawing editor and produces native .DWG formats, Autodesk enforces strict feature lockouts on the LT version to protect Pro seats:
-- **No 3D Modeling/Editing**: LT can only read and view 3D solids; it cannot model extrusions, boundary surfaces, or boolean solids.
-- **AutoLISP Restrictions (Pre-2024)**: Legacy versions of AutoCAD LT completely blocked AutoLISP (\`.lsp\`) automation. *Note: Starting with AutoCAD LT 2024, basic LISP is supported, but advanced VLA/VLX compiled routines remain limited.*
-- **FLEXlm Concurrent Licensing**: AutoCAD LT does not support floating network license pools, forcing organizations to manage complex individual Autodesk SSO named-user logins for every casual draftsman.
-
-### 3. Three-Year Cumulative Total Cost of Ownership (TCO)
-When forecasting budgets for an architectural or engineering office of 25 designers, the subscription compounding effect creates huge financial overheads:
-
-| Metric | AutoCAD Pro Subscription | AutoCAD LT Subscription | Perpetual Alternative (e.g., GstarCAD/BricsCAD) |
-| :--- | :--- | :--- | :--- |
-| **Year 1 Cost** | $48,750 | $12,250 | $22,500 (Initial buyout) |
-| **Year 2 Cost** | $48,750 | $12,250 | $4,500 (Maintenance upgrade optional) |
-| **Year 3 Cost** | $48,750 | $12,250 | $4,500 (Maintenance upgrade optional) |
-| **3-Year TCO** | **$146,250** | **$36,750** | **$31,500 (Fully Owned)** |
-
-### 4. High-Compatibility Alternatives Evaluation (BricsCAD & GstarCAD)
-To mitigate these SaaS subscription burdens, procurement officers can strategically deploy high-compatibility perpetual alternatives for general drafting slots:
-- **GstarCAD Pro**: Available as a perpetual buyout (typically under $900). It supports 100% native AutoLISP/VLA APIs, identical command shortcuts (PGP), and loads drawing templates (DWT) with zero retraining.
-- **BricsCAD Pro**: A premium powerhouse featuring advanced BIM and mechanical parametric modeling. It executes AutoLISP routines up to 1.5x faster than AutoCAD and integrates seamlessly with existing LISP workflows.
-
-### 5. Transition Recommendation
-1. Audit your team's software usage: restrict AutoCAD Pro licenses solely to 3D designers and specialists.
-2. Reclaim underutilized AutoCAD Pro seats and replace them with AutoCAD LT for pure 2D annotators.
-3. For general-purpose layout, site planning, and LISP-driven drafting teams, migrate to GstarCAD or BricsCAD. This hybrid strategy reduces corporate CAD licensing overheads by **50% to 70%** without sacrificing drawing quality.`
+    slug: 'autocad-lt-vs-pro-procurement-tco'
   },
   {
-    id: 'art-compat-cross',
-    category: 'standards',
-    title: 'How to Run AutoCAD on macOS, Linux, and Web: The Ultimate Cross-Platform Compatibility Guide',
-    excerpt: 'Learn how to deploy and optimize AutoCAD on macOS (M1/M2/M3 Apple Silicon), run AutoCAD on Linux workstations using Wine, and leverage the cloud-based AutoCAD Web app.',
-    author: 'Will P. (BIM Architect)',
-    readTime: '7 min read',
+    id: 'art-buyout-cad-alt',
+    category: 'procurement',
+    title: 'Perpetual Buyout CAD Alternatives: Evaluating BricsCAD, GstarCAD, and ZWCAD for Enterprise Deployment',
+    excerpt: 'A detailed comparison of perpetual licensing buyout alternatives to Autodesk subscription SaaS, including API compatibility, CAD standards, and feature matrices.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
     date: 'June 2026',
     softwareSlug: 'autocad',
-    keyword: 'autocad for mac',
-    slug: 'how-to-run-autocad-on-mac-linux-web',
-    contentMarkdown: `### 1. macOS Deployment: Tuning for Apple Silicon (M1/M2/M3)
-Autodesk offers a native version of AutoCAD for Mac, redesigned to run natively on Apple Silicon. To optimize performance on Apple Silicon workstations:
-- **VRAM Allocation**: In Apple Silicon's unified memory architecture, system RAM is shared with the GPU. For large building blueprints, a minimum of 16GB unified memory is recommended to prevent system swapping.
-- **Shortcut Key Translation**: The Mac version maps standard Windows control binds to CMD (e.g., \`Cmd+C\` instead of \`Ctrl+C\`). If you prefer the classic layout, navigate to *Preferences > User Preferences > Keyboard* and check "Use Windows Shortcut Keys".
-
-### 2. Linux Workstations: Running AutoCAD via Wine Emulator
-Autodesk does not publish a native Linux build of AutoCAD. However, Linux sysadmins can run AutoCAD (specifically stable legacy versions like 2020) utilizing Wine/Proton compatibility layers:
-- **Prerequisites**: Install Wine-Staging and configure a clean 64-bit Wine prefix:
-  \`\`\`bash
-  export WINEPREFIX=~/.autocad64
-  winecfg
-  \`\`\`
-- **Winetricks Dependencies**: AutoCAD requires specific Windows libraries to load the interface and handle database blocks:
-  \`\`\`bash
-  winetricks dotnet48 gdiplus msxml6 vcrun2017 corefonts
-  \`\`\`
-- **Graphics Override**: Force Wine to bind to Vulkan or OpenGL via the registry to eliminate viewport redraw stutters.
-
-### 3. AutoCAD Web App: Cloud-Based View & Collaboration
-For engineers in the field who cannot install heavy desktop applications, the AutoCAD Web App offers a lightweight, browser-based DWG editor:
-- **Browser Acceleration**: Ensure WebGL is fully enabled in your browser settings (Chrome/Edge are recommended).
-- **File Limits**: Keep DWG file sizes below **50MB** to ensure smooth pan and zoom performance within the browser's sandbox memory bounds.
-- **External References (XREFs)**: Store XREF folders in linked cloud services (OneDrive, Google Drive, Autodesk Docs) to preserve cross-drawing link integrity.`
+    keyword: 'autocad price',
+    slug: 'perpetual-buyout-cad-alternatives'
   },
   {
-    id: 'art-legacy-2007',
-    category: 'performance',
-    title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations',
-    excerpt: 'Deconstruct the lightning-fast launch speed of AutoCAD 2007 and configure modern AutoCAD (2024+) to run optimally on low-end hardware by disabling ribbon bloat and telemetry.',
-    author: 'Will P. (Hardware Specialist)',
-    readTime: '5 min read',
+    id: 'art-named-user-migration',
+    category: 'procurement',
+    title: 'Autodesk Named-User Migration Audit: Optimizing Licensing Budgets and Floating Network Compliance',
+    excerpt: 'Learn how to transition away from Autodesk\'s single Named-User subscription sweeps, manage license pools, and optimize enterprise budgets.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
     date: 'June 2026',
     softwareSlug: 'autocad',
-    keyword: 'autocad 2007',
-    slug: 'why-engineers-use-autocad-2007-speed-tuning',
-    contentMarkdown: `### 1. The AutoCAD 2007 Secret: Zero Overhead
-AutoCAD 2007 is legendary in the CAD community for starting in **under 1 second** and handling massive drawings smoothly on hardware from two decades ago. The reason is simple: it was written using native Win32 GDI graphics calls, with zero dependency on heavy .NET Frameworks, Chromium Embedded Framework (CEF) viewport wrappers, or background licensing telemetry services.
-
-### 2. Tuning Modern AutoCAD (2024+) for Legacy Performance
-If you are forced to run modern AutoCAD builds on mid-range or low-end office laptops, you can modify specific internal system variables to strip out visual bloat and recover 2007-level responsiveness:
-
-- **Disable the Ribbon Interface**: The Ribbon interface consumes significant memory. Close it and return to classic toolbar layouts:
-  \`\`\`text
-  Command: RIBBONCLOSE
-  \`\`\`
-- **Disable Viewport Animations**: Prevent AutoCAD from smoothly fading or animating zooms, which strains older graphics chips:
-  \`\`\`text
-  Command: VTENABLE -> Set to 0
-  \`\`\`
-- **Turn Off Selection Previewing**: Stops the engine from constantly calculating object boundaries when the cursor hovers over lines:
-  \`\`\`text
-  Command: SELECTIONPREVIEW -> Set to 0
-  \`\`\`
-- **Turn Off Quick Properties**: Prevents pop-up inspector boxes from freezing the cursor:
-  \`\`\`text
-  Command: QPMODE -> Set to 0
-  \`\`\`
-
-### 3. Enterprise Telemetry Opt-Out (Eliminating Licensing Lag)
-Modern Autodesk applications launch slowly because they check named-user cloud licenses and send usage telemetry. IT administrators can block these background pings in the local hosts file (\`C:\\Windows\\System32\\drivers\\etc\\hosts\`) to force offline mode and accelerate application launch:
-\`\`\`text
-127.0.0.1 genuine-software.autodesk.com
-127.0.0.1 ipm-aem.autodesk.com
-127.0.0.1 telemetry.autodesk.com
-\`\`\``
+    keyword: 'autocad cost',
+    slug: 'autodesk-named-user-migration-audit'
   },
   {
-    id: 'art-trouble-blueprint',
+    id: 'art-eula-audit-risks',
+    category: 'procurement',
+    title: 'Preventing Autodesk EULA Compliance Audit Risks: Best Practices for Enterprise Asset Managers',
+    excerpt: 'An insider guide to navigating Autodesk software asset audits, auditing software assets silently, and protecting your corporation from EULA compliance penalties.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autodesk autocad',
+    slug: 'preventing-autodesk-eula-audit-risks'
+  },
+  {
+    id: 'art-token-flex-cost',
+    category: 'procurement',
+    title: 'Autodesk Token Flex Cost Guide: Strategic Budgeting and Pay-Per-Use Licensing Optimization',
+    excerpt: 'An expert analysis of Autodesk\'s Token Flex enterprise model, outlining how tokens are consumed, cost-per-day variables, and negotiation tactics.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad price',
+    slug: 'autodesk-token-flex-cost-guide'
+  },
+  {
+    id: 'art-licensing-strategy-firms',
+    category: 'procurement',
+    title: 'CAD Licensing Strategy for Architecture Firms: Scaling Seats from 20 to 100 Draftsmen Efficiently',
+    excerpt: 'Best practices for AEC B-End procurement managers to scale CAD licensing configurations, balancing AutoCAD LT, Pro, and compatible alternatives.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'cad lt cost',
+    slug: 'cad-licensing-strategy-architecture-firms'
+  },
+  {
+    id: 'art-student-to-commercial',
+    category: 'procurement',
+    title: 'Autodesk Student to Commercial Upgrade: Removing Educational Plot Watermarks Legal Framework',
+    excerpt: 'Understand the technical and legal requirements for upgrading AutoCAD educational licenses, removing print watermarks, and shifting to commercial seats.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad student',
+    slug: 'autocad-student-to-commercial-watermark'
+  },
+  {
+    id: 'art-cloud-vs-onprem-tco',
+    category: 'procurement',
+    title: 'Cloud CAD vs. On-Premises TCO Analysis: Comparing Autodesk Cloud Subscriptions with Perpetual Buyouts',
+    excerpt: 'A rigorous cost-benefit comparison of running cloud-based CAD platforms vs. local high-performance perpetual workstations over a 5-year cycle.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad cost',
+    slug: 'cloud-vs-onprem-tco-analysis'
+  },
+  {
+    id: 'art-geo-restrictions-licensing',
+    category: 'procurement',
+    title: 'Global CAD Licensing Audit: Managing Regional EULA Restrictions for Multinational Engineering Teams',
+    excerpt: 'How global enterprises manage cross-border licensing, regional EULA restrictions, and deployment options under Autodesk global contracts.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autodesk autocad',
+    slug: 'multinational-cad-license-geographic-restrictions'
+  },
+  {
+    id: 'art-subscription-renewal-negotiation',
+    category: 'procurement',
+    title: 'Autodesk Subscription Renewal Negotiation: Critical Negotiation Playbook for Enterprise IT Procurement',
+    excerpt: 'A negotiation blueprint for B-End procurement leads to secure maximum discounts on AutoCAD renewals and counter sales reps pressure.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad cost',
+    slug: 'autodesk-subscription-renewal-negotiation'
+  },
+  {
+    id: 'art-civil3d-vs-revit-bundle',
+    category: 'procurement',
+    title: 'AutoCAD Civil 3D vs. Autodesk Revit Suite TCO: Financial Optimization for Infrastructure and BIM Projects',
+    excerpt: 'A detailed financial procurement comparison of Civil 3D infrastructure toolsets vs. Revit suite deployment for multi-disciplinary AEC slots.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad civil 3d',
+    slug: 'autocad-civil-3d-vs-revit-bundle-tco'
+  },
+  {
+    id: 'art-web-mobile-alternative',
+    category: 'procurement',
+    title: 'AutoCAD Web and Mobile TCO Alternative: Deploying Lightweight CAD Viewers for Casual Site Engineers',
+    excerpt: 'Analyze the cost and capability tradeoffs of using AutoCAD Web/Mobile vs. deploying free CAD readers and lightweight alternatives on construction sites.',
+    author: 'Will P. (Enterprise CAD Auditor)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad reader',
+    slug: 'autocad-web-mobile-procurement-alternative'
+  },
+  {
+    id: 'art-silent-deploy-intune',
+    category: 'deployment',
+    title: 'Silent Deploy AutoCAD with Microsoft Intune: Enterprise Packaging and Silent MSI Distribution Guide',
+    excerpt: 'Step-by-step IT engineering playbook for packaging, scripting, and deploying AutoCAD silently across corporate Active Directory subnets using MS Intune.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad windows 11',
+    slug: 'silent-deploy-autocad-microsoft-intune'
+  },
+  {
+    id: 'art-installation-parameters',
+    category: 'deployment',
+    title: 'AutoCAD Command-Line Installation Parameters: Master Deployments and Silent Setup Variables',
+    excerpt: 'A comprehensive listing of Autodesk deployment parameters, command line flags, custom deployment options, and unattended MSI install commands.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autodesk cad',
+    slug: 'autocad-command-line-installation-parameters'
+  },
+  {
+    id: 'art-private-subnet-dns-block',
+    category: 'deployment',
+    title: 'Private Subnet CAD Deployment: Restricting Outside Web Access and Routing Local License Pools',
+    excerpt: 'How to deploy CAD workstations in zero-internet subnets, configure offline registries, and route FLEXlm license servers securely.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autodesk autocad',
+    slug: 'private-subnet-cad-deployment-dns-block'
+  },
+  {
+    id: 'art-sccm-mass-deployment',
+    category: 'deployment',
+    title: 'SCCM AutoCAD Mass Deployment Guide: Managing User Profiles, Templates, and Support Path Variables',
+    excerpt: 'A master deployment blueprint utilizing Microsoft SCCM to push AutoCAD updates, profile overrides, and common directory pathways across networks.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'sccm-autocad-mass-deployment-profile'
+  },
+  {
+    id: 'art-adskflex-opt-rules',
+    category: 'deployment',
+    title: 'Configuring adskflex.opt Licensing Rules: Controlling Floating Pools, Reserving Seats, and Timeout Limits',
+    excerpt: 'Learn how to write robust FLEXlm Options Files (adskflex.opt) to allocate licenses to specific department groups and prevent idle seat hogging.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad toolsets',
+    slug: 'configuring-adskflex-opt-licensing-rules'
+  },
+  {
+    id: 'art-block-telemetry-hosts',
+    category: 'deployment',
+    title: 'Blocking AutoCAD Telemetry and Telemetry Telemetry Uploads: Enterprise Hosts and Registry Configuration',
+    excerpt: 'IT configuration manual for blocking background Autodesk analytics services, telemetry domains, and checking named-user licenses in offline mode.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'blocking-autocad-telemetry-privacy-hosts'
+  },
+  {
+    id: 'art-flexlm-redundancy-setup',
+    category: 'deployment',
+    title: 'FLEXlm License Server Redundancy Setup: Configuring Three-Server Redundant Pools for High Availability',
+    excerpt: 'A step-by-step sysadmin guide to deploying a three-server redundant FLEXlm licensing architecture to ensure zero-downtime CAD operations.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad online',
+    slug: 'flexlm-license-server-redundancy-setup'
+  },
+  {
+    id: 'art-gpo-security-registry',
+    category: 'deployment',
+    title: 'Group Policy AutoCAD Security Configuration: Locking Down Registries and Securing User Directories',
+    excerpt: 'Using Active Directory Group Policy Objects (GPOs) to restrict executables loading, enforce secure LISP path directories, and secure registry configs.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'group-policy-autocad-security-registry'
+  },
+  {
+    id: 'art-offline-activation-codes',
+    category: 'deployment',
+    title: 'Offline Activation Codes Installation: Configuring AutoCAD in Completely Air-Gapped Networks',
+    excerpt: 'A detailed workflow guide on how to request offline Autodesk activation codes, manage activation files, and configure air-gapped engineering slots.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autodesk cad',
+    slug: 'offline-activation-codes-installation'
+  },
+  {
+    id: 'art-centralized-support-paths',
+    category: 'deployment',
+    title: 'Centralized CAD Support Paths Configuration: Enforcing Uniform Templates, Fonts, and CTB Across Teams',
+    excerpt: 'How to coordinate local and network file paths, templates (DWT), print styles (CTB), and SHX fonts on shared file servers for 100+ draftsmen.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'centralized-support-paths-configuration'
+  },
+  {
+    id: 'art-licpath-timeout-latency',
+    category: 'deployment',
+    title: 'Optimizing LICPATH.lic Timeout and Latency: Troubleshooting Remote WAN FLEXlm Licensing Delays',
+    excerpt: 'Sysadmin strategies for adjusting the registry variable FLEXLM_TIMEOUT and adskflex port latency configurations for cross-region WAN connections.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad online',
+    slug: 'optimizing-licpath-timeout-latency-offices'
+  },
+  {
+    id: 'art-plotter-pc3-distribution',
+    category: 'deployment',
+    title: 'Plotter Configuration PC3 Distribution Server: Enforcing Uniform Printing Margins and Plot Styles',
+    excerpt: 'How to distribute, lock down, and synchronize PC3 and PMP configuration files on central print servers to prevent plotting errors.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad reader',
+    slug: 'plotter-pc3-distribution-server'
+  },
+  {
+    id: 'art-silent-patch-update',
+    category: 'deployment',
+    title: 'Silent Update Patch Deployment Automation: Managing AutoCAD Hotfixes and Security Updates',
+    excerpt: 'IT guide to script, verify, and push Autodesk updates, cumulative security hotfixes, and update packages silently to workstations.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autodesk cad',
+    slug: 'silent-update-patch-deployment-automation'
+  },
+  {
+    id: 'art-flexlm-error-15',
     category: 'troubleshooting',
     title: 'Enterprise Troubleshooting Blueprint: Fixing AutoCAD Fatal Errors & FLEXlm Network License Failures',
     excerpt: 'An industrial troubleshooting playbook for resolving AutoCAD licensing failed notifications, FLEXlm network server port bindings, and Fatal Error 0x0024 viewport crashes.',
     author: 'Will P. (Enterprise IT Lead)',
-    readTime: '8 min read',
+    readTime: '6 min read',
     date: 'June 2026',
     softwareSlug: 'autocad',
     keyword: 'flexlm error -15',
-    slug: 'fixing-autocad-fatal-errors-flexlm-licensing',
-    contentMarkdown: `### 1. Resolving FLEXlm License Server Manager Errors (-15,10)
-FLEXlm concurrent network seat deployment is highly prone to network port blockages. The classic error **-15,10** indicates the client machine cannot reach the server manager port.
-
-- **Check Server Status via lmutil**: Run the diagnostic command in the server installation directory:
-  \`\`\`text
-  lmutil lmstat -a -c @YOUR_SERVER_IP
-  \`\`\`
-- **Firewall Rules**: Open both required ports in the Windows Server firewall:
-  - **Lmgrd Port**: Standard default port ranges are \`27000\` through \`27009\` (TCP).
-  - **Vendor Daemon Port (adskflex)**: Typically binds dynamically. Force bind it to port \`2080\` in the license file to allow firewalls to lock it:
-    \`\`\`text
-    SERVER server_hostname 001122334455 27000
-    VENDOR adskflex port=2080
-    \`\`\`
-- **Client Configuration**: Configure the system environment variable \`ADSKFLEX_LICENSE_FILE\` to \`@YOUR_SERVER_IP\` on client workstations.
-
-### 2. Windows Registry Ephemeral Port Leak (Viewport Freezes)
-Under high-volume multi-user drawing environments, AutoCAD can leak sockets, exhausting Windows temporary TCP ports. This results in sudden application freezes during drawing opens.
-- **Remediation**: Expand the ephemeral port limits in the Windows Registry:
-  1. Open Registry Editor (\`regedit\`) and locate the parameters pathway:
-     \`\`\`text
-     HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters
-     \`\`\`
-  2. Create a new DWORD (32-bit) Value named **\`MaxUserPort\`** and set it to **\`65534\`** (Decimal).
-  3. Create another DWORD named **\`TcpTimedWaitDelay\`** and set it to **\`30\`** (Decimal).
-  4. Reboot the machine to flush socket tables.
-
-### 3. Hatch Pattern Viewport Memory Leak
-Highly complex drawing imports containing overlapping or dense hatch boundaries often freeze AutoCAD viewport redraws:
-- **Solution**: Open the problematic drawing and restrict hatch generation limits:
-  \`\`\`text
-  Command: HPMAXLINES -> Set to 100000 (limits maximum visible line redraws)
-  Command: HPMAXAREAS -> Set to 500 (restricts boundary analysis area)
-  \`\`\`
-- Use the classic \`RECOVER\` command to clean and rebuild database blocks before reloading.`
-  }
+    slug: 'fixing-autocad-fatal-errors-flexlm-licensing'
+  },
+  {
+    id: 'art-flexlm-error-97-121',
+    category: 'troubleshooting',
+    title: 'Fixing FLEXlm Licensing Error -97,121: Resolving Expired Certificates and Daemon Sockets Conflicts',
+    excerpt: 'A deep troubleshooting guide for resolving vendor daemon crashes, expired licensing certificates, and conflicting lmgrd services.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'flexlm error -15',
+    slug: 'fixing-flexlm-licensing-error-97-121'
+  },
+  {
+    id: 'art-windows-registry-socket-leak',
+    category: 'troubleshooting',
+    title: 'Windows Registry Ephemeral Port Leak: Troubleshooting Sudden AutoCAD Viewport Hangs and Launches',
+    excerpt: 'Remediation guide for expanding Windows TCP ephemeral ports (MaxUserPort, TcpTimedWaitDelay) to prevent viewport freezes under heavy file access.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'windows-registry-socket-leak-viewport-freezes'
+  },
+  {
+    id: 'art-fatal-error-0x0024-graphics',
+    category: 'troubleshooting',
+    title: 'Fixing AutoCAD Fatal Error 0x0024: Resolving Graphics Driver Crashes and Viewport Hardware Acceleration',
+    excerpt: 'Deep technical analysis of memory access violation errors, DX11/12 driver incompatibilities, and system configurations to recover workstation stability.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'fixing-autocad-fatal-error-0x0024-graphics'
+  },
+  {
+    id: 'art-hatch-pattern-crash-hpmaxlines',
+    category: 'troubleshooting',
+    title: 'Hatch Pattern Crash HPMAXLINES Leak: Optimizing Memory Budgets for Ultra-Dense Hatch Redraws',
+    excerpt: 'How to optimize hatch limits, change HPMAXLINES/HPMAXAREAS system variables, and repair drawings that trigger out-of-memory viewport crashes.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drawing',
+    slug: 'hatch-pattern-crash-hpmaxlines-leak'
+  },
+  {
+    id: 'art-licensing-failed-service-restart',
+    category: 'troubleshooting',
+    title: 'Fixing Licensing Failed Service Restart Guide: Restoring Autodesk Desktop Licensing Service Logs',
+    excerpt: 'Diagnose, repair, and restart Autodesk Desktop Licensing Service (AdskLicensing) and verify licensing components folder integrity.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad price',
+    slug: 'fixing-licensing-failed-service-restart-guide'
+  },
+  {
+    id: 'art-corrupted-dotnet-framework',
+    category: 'troubleshooting',
+    title: 'Restoring Corrupted .NET Framework for AutoCAD: Resolving Visual C++ Runtime and Startup Crashes',
+    excerpt: 'How to uninstall, patch, and clean .NET Framework modules and Visual C++ redistributables causing AutoCAD startup crashes.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'restoring-corrupted-dotnet-framework-autocad'
+  },
+  {
+    id: 'art-clean-uninstall-profile-rebuild',
+    category: 'troubleshooting',
+    title: 'Clean Rebuild User Profile Registry: Restoring Local Configuration Paths and Workspace Profiles',
+    excerpt: 'Guide to execute clean profile resets, backing up local AppData paths, and wiping specific registry nodes without full software uninstalls.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'clean-rebuild-user-profile-regedit'
+  },
+  {
+    id: 'art-missing-acdb-dll-crashes',
+    category: 'troubleshooting',
+    title: 'Fixing Missing acdb.dll and Module Crashes: Repairing AutoCAD Shared Library Component Blocks',
+    excerpt: 'Solve startup errors caused by corrupted, quarantined, or missing core DLLs like acdb24.dll or acdbmgd.dll.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'fixing-missing-acdb-dll-module-crashes'
+  },
+  {
+    id: 'art-dual-gpu-viewport-acceleration',
+    category: 'troubleshooting',
+    title: 'Resolving Dual GPU Viewport Acceleration Issues: Forcing High-Performance Dedicated Graphics Card',
+    excerpt: 'IT guide to configuring Windows Graphics Settings and GPU Control Panels to force AutoCAD viewports onto dedicated PCIe GPUs instead of integrated ones.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad 3d',
+    slug: 'resolving-dual-gpu-viewport-acceleration-issue'
+  },
+  {
+    id: 'art-proxy-pac-vpn-routing-lag',
+    category: 'troubleshooting',
+    title: 'Proxy PAC and VPN Routing Telemetry Lag: Eliminating AutoCAD Verification Services Timeout Crashes',
+    excerpt: 'Configure system bypass rules and routing tables to bypass VPN bottlenecks for Autodesk validation checks.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad online',
+    slug: 'proxy-pac-vpn-routing-telemetry-lag'
+  },
+  {
+    id: 'art-trustedpaths-lisp-sandboxing',
+    category: 'troubleshooting',
+    title: 'Securing AutoCAD TRUSTEDPATHS: Preventing LISP Loading Sandbox Security Warning Loops',
+    excerpt: 'Configure SECURELOAD, TRUSTEDPATHS, and SECURELOAD registry variables to run legacy AutoLISP routines without pop-up notifications.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad getintopc',
+    slug: 'securing-autocad-trustedpaths-lisp-sandboxing'
+  },
+  {
+    id: 'art-recovering-corrupted-dwg-backup',
+    category: 'troubleshooting',
+    title: 'Recovering Corrupted DWG Backup Disaster: Reconstructing Drawing Databases via .BAK and .SV$',
+    excerpt: 'Step-by-step instructions to recover lost data, purge corrupted database headers, and locate temp recovery folders.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad reader',
+    slug: 'recovering-corrupted-dwg-backup-disaster'
+  },
+  {
+    id: 'art-xref-path-circular-dependency',
+    category: 'troubleshooting',
+    title: 'Resolving XREF Path Circular Dependency: Repairing Corrupted Drawing References and Viewport Freeze',
+    excerpt: 'How to diagnose circular references, clean unresolved nested overlay paths, and use Reference Manager to map network paths.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad reader',
+    slug: 'resolving-xref-path-circular-dependency'
+  },
+  {
+    id: 'art-acis-3d-boolean-stitching-failure',
+    category: 'troubleshooting',
+    title: 'Fixing ACIS 3D Boolean Stitching Failure: Repairing Topology Tears and Import Mesh Errors',
+    excerpt: 'Detailed workflows to fix topological gaps, patch non-manifold edges, and fix boolean operations failures on 3D ACIS solids.',
+    author: 'Will P. (Enterprise IT Lead)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad 3d',
+    slug: 'fixing-acis-3d-boolean-stitching-failure'
+  },
+  {
+    id: 'art-m1-m2-mac-silicon-tuning',
+    category: 'standards',
+    title: 'Apple Silicon M1/M2/M3 native Mac Performance tuning: Optimizing AutoCAD for macOS Workstations',
+    excerpt: 'Configure Apple Silicon unified memory buffers, map shortcut systems, and optimize hardware-accelerated layouts under macOS.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad for mac',
+    slug: 'm1-m2-mac-silicon-tuning'
+  },
+  {
+    id: 'art-run-autocad-linux-wine',
+    category: 'standards',
+    title: 'How to Run AutoCAD on Linux Workstations: Deploying stable CAD via Wine and Winetricks Layers',
+    excerpt: 'A sysadmin manual on setting up a 64-bit Wine prefix, winetricks dependencies, and graphics bypass rules to run stable AutoCAD on Linux.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad linux',
+    slug: 'run-autocad-linux-wine'
+  },
+  {
+    id: 'art-autocad-web-limits-rendering',
+    category: 'standards',
+    title: 'AutoCAD Web App Performance and Rendering Limits: Cloud-Based DWG Editing and Font Sandbox',
+    excerpt: 'Understand file size boundaries, WebGL graphics constraints, XREF clouds link integrity, and font mapping in browser-based CAD.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad web',
+    slug: 'autocad-web-limits-rendering'
+  },
+  {
+    id: 'art-autocad-mobile-ipad-gestures',
+    category: 'standards',
+    title: 'AutoCAD Mobile iPad Pro Drafting Guide: Optimizing Stylus Input, Gesture Controls, and VRAM Buffers',
+    excerpt: 'How to load multi-megabyte drawings on iPad, configure offline workspace databases, and leverage stylus sensitivity configurations.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad for ipad',
+    slug: 'autocad-mobile-ipad-gestures'
+  },
+  {
+    id: 'art-dwg-dxf-precision-exchange',
+    category: 'standards',
+    title: 'DWG and DXF Precision Exchange: Optimizing Tolerance Compatibility Between AutoCAD and SolidWorks',
+    excerpt: 'Learn how to exports coordinate parameters, match scaling scales, and preserve parametric spline profiles during exports.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad dxf',
+    slug: 'dwg-dxf-precision-exchange'
+  },
+  {
+    id: 'art-revit-inventor-dwg-alignment',
+    category: 'standards',
+    title: 'Revit and Inventor DWG Alignment: Coordinating Multi-Software 3D Models Coordinate Origin Setup',
+    excerpt: 'A master alignment checklist to coordinate global coordinates, shared parameters, and structural geometries between AutoCAD, Revit, and Inventor.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad revit',
+    slug: 'revit-inventor-dwg-alignment'
+  },
+  {
+    id: 'art-batch-convert-dwg-trueview',
+    category: 'standards',
+    title: 'Batch Converting Legacy DWG Formats: Utilizing DWG TrueView for Seamless Version Downscaling',
+    excerpt: 'Learn how to configure batch converter tasks to convert legacy CAD formats (2000-2027) without licensing warnings.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad trueview',
+    slug: 'batch-convert-dwg-trueview'
+  },
+  {
+    id: 'art-macos-vs-windows-shortcuts',
+    category: 'standards',
+    title: 'Mac vs. Windows AutoCAD Shortcut Translation: Mapping Windows Control Keys under macOS Finder',
+    excerpt: 'A configuration tutorial for Mac draftsmen to re-map PGP command aliases and restore standard control keys.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad macos',
+    slug: 'macos-vs-windows-shortcuts'
+  },
+  {
+    id: 'art-cloud-collaboration-file-locks',
+    category: 'standards',
+    title: 'Cloud Collaboration and DWG File Locks: Resolving SharePoint and OneDrive Lock conflicts',
+    excerpt: 'Manage file locking files (.dwl, .dwl2), map sync directories, and coordinate multi-user editing.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad online',
+    slug: 'cloud-collaboration-file-locks'
+  },
+  {
+    id: 'art-sketchup-skp-import-repair',
+    category: 'standards',
+    title: 'SketchUp SKP Import Repair: Preventing Viewport Tessellation and Surface Tears in AutoCAD 3D',
+    excerpt: 'How to clean model geometries, convert meshes into 3D solids, and stitch surfaces during SKP-to-DWG imports.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad sketchup',
+    slug: 'sketchup-skp-import-repair'
+  },
+  {
+    id: 'art-civil3d-gis-projection-transform',
+    category: 'standards',
+    title: 'Civil 3D GIS Projection Transform: Aligning Mapping Projections and Real-World Coordinates',
+    excerpt: 'A standard coordinate setup tutorial mapping EPSG projections, grid setups, and coordinates alignments for geospatial models.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad civil 3d',
+    slug: 'civil3d-gis-projection-transform'
+  },
+  {
+    id: 'art-nfs-smb-shared-files-locks',
+    category: 'standards',
+    title: 'Shared CAD Storage on NFS and SMB Servers: Optimizing Network Cache Settings and File Open Latency',
+    excerpt: 'Tuning server cache sizes, resolving folder sync errors, and optimising file locks configuration.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad online',
+    slug: 'nfs-smb-shared-files-locks'
+  },
+  {
+    id: 'art-autocad-2007-legacy-tuning',
+    category: 'performance',
+    title: 'Why Engineers Still Search for AutoCAD 2007: Performance Optimizations for Legacy & Low-End Workstations',
+    excerpt: 'Deconstruct the lightning-fast launch speed of AutoCAD 2007 and configure modern AutoCAD (2024+) to run optimally on low-end hardware by disabling ribbon bloat and telemetry.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad 2007',
+    slug: 'why-engineers-use-autocad-2007-speed-tuning'
+  },
+  {
+    id: 'art-ribbon-menu-stripping-classic',
+    category: 'performance',
+    title: 'Ribbon Menu Stripping Classic Toolbars: Recovering Desktop Memory Space on Older Workstations',
+    excerpt: 'How to use RIBBONCLOSE, configure toolbar profiles, and minimize UI processor cycles.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'ribbon-menu-stripping-classic'
+  },
+  {
+    id: 'art-directx-rendering-vram-allocation',
+    category: 'performance',
+    title: 'DirectX Viewport Rendering Configuration: Tuning DirectX 11/12 and Optimizing Dedicated VRAM',
+    excerpt: 'IT playbook to adjust GFXDX12 variable, bypass GPU viewport bottlenecks, and configure VRAM caching levels.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad 3d',
+    slug: 'directx-rendering-vram-allocation'
+  },
+  {
+    id: 'art-disable-selection-preview-cycling',
+    category: 'performance',
+    title: 'Disabling Selection Preview and Cycling: Eliminating Cursor Stutter in Dense CAD Assemblies',
+    excerpt: 'Change SELECTIONPREVIEW and SELECTIONCYCLING variables to stop hardware-intensive geometry checks.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'disable-selection-preview-cycling'
+  },
+  {
+    id: 'art-system-variables-viewport-tuning',
+    category: 'performance',
+    title: 'Viewport Tuning System Variables: Restoring AutoCAD Launch Speed and Reducing Drawing Load Time',
+    excerpt: 'A master configuration list setting variables VTENABLE, QPMODE, and COMMANDLINE properties.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'system-variables-viewport-tuning'
+  },
+  {
+    id: 'art-large-assembly-demand-loading',
+    category: 'performance',
+    title: 'Large Assembly Demand Loading: Utilizing DEMANDLOAD and INDEXCTL for Layer-Only Drawing Opens',
+    excerpt: 'Maximize workstation RAM efficiency by loading layer indexes and external references on-demand.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'large-assembly-demand-loading'
+  },
+  {
+    id: 'art-purge-audit-command-scripting',
+    category: 'performance',
+    title: 'Purge and Audit Command Scripting: Automatically Cleaning RegApps, Orphan Blocks, and Null Nodes',
+    excerpt: 'Create batch cleanup routines utilizing PURGE, -PURGE, and AUDIT to reduce file size up to 80%.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drawing',
+    slug: 'purge-audit-command-scripting'
+  },
+  {
+    id: 'art-windows-pagefile-nvme-tuning',
+    category: 'performance',
+    title: 'Windows Pagefile Tuning for Heavy CAD Assemblies: Allocating Virtual Memory on Fast PCIe Drives',
+    excerpt: 'Configure custom virtual memory pages, target fast NVMe PCIe slots, and prevent memory allocation crashes.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'windows-pagefile-nvme-tuning'
+  },
+  {
+    id: 'art-disable-background-plot-render',
+    category: 'performance',
+    title: 'Disabling Background Plotting: Freeing Up Core Threads for Active Viewport Editing',
+    excerpt: 'Tune BACKGROUNDPLOT variable to eliminate print delays and UI stutters during massive plotting tasks.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drawing',
+    slug: 'disable-background-plot-render'
+  },
+  {
+    id: 'art-skip-file-signature-validation',
+    category: 'performance',
+    title: 'Skip File Signature Validation: Eliminating Offline Cold Launch Delay in Isolated Subnets',
+    excerpt: 'Disable digital signature verification and web security checks to speed up offline application cold-boots.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad registry',
+    slug: 'skip-file-signature-validation'
+  },
+  {
+    id: 'art-block-start-tab-web-loading',
+    category: 'performance',
+    title: 'Blocking Start Tab Web Load: Customizing AutoCAD Startup Screen to Skip Online Fetch Tasks',
+    excerpt: 'Configure STARTUP variable to load template blank spaces directly, skipping news dashboards.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'block-start-tab-web-loading'
+  },
+  {
+    id: 'art-transparency-display-bottleneck',
+    category: 'performance',
+    title: 'Transparency Display Viewport Bottleneck: Reducing CPU Single-Thread Overhead in Layer Rendering',
+    excerpt: 'Tune TRANSPARENCYDISPLAY settings to bypass viewport lag during rendering of transparent lines.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drawing',
+    slug: 'transparency-display-bottleneck'
+  },
+  {
+    id: 'art-automatic-temp-cache-cleaner',
+    category: 'performance',
+    title: 'Automatic Temp Cache Cleaner: Scripting Windows Temp Cleanup for AutoCAD Workspace Health',
+    excerpt: 'Create batch cmd files to clean dynamic caches, graphics registry structures, and temp saves.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'automatic-temp-cache-cleaner'
+  },
+  {
+    id: 'art-architecture-smart-objects-elevation',
+    category: 'manufacturing',
+    title: 'AutoCAD Architecture: Enforcing Smart Walls, Doors, and Windows Elevation Generators',
+    excerpt: 'How to model parametric wall structures, automate floor plan elevations, and clean 3D boundaries.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad architecture',
+    slug: 'architecture-smart-objects-elevation'
+  },
+  {
+    id: 'art-electrical-wire-numbering-tagging',
+    category: 'manufacturing',
+    title: 'AutoCAD Electrical: Automation of Wire Numbering and Component Tagging Databases',
+    excerpt: 'Configure naming schemas, PLC catalog lists, and project structures to prevent manual tagging.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad electrical',
+    slug: 'electrical-wire-numbering-tagging'
+  },
+  {
+    id: 'art-electrical-circuit-builder-templates',
+    category: 'manufacturing',
+    title: 'AutoCAD Electrical Circuit Builder Templates: Designing Compliant Schematic Control Systems',
+    excerpt: 'Learn how to configure dynamic wiring templates, customize control logic, and import components libraries.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad electrical',
+    slug: 'electrical-circuit-builder-templates'
+  },
+  {
+    id: 'art-mechanical-power-layers-automation',
+    category: 'manufacturing',
+    title: 'AutoCAD Mechanical: Configuring Power Layers and Automation of Standard Part Libraries',
+    excerpt: 'Setup layer configuration properties that automatically route parts to their ISO/ANSI target layers.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad mechanical',
+    slug: 'mechanical-power-layers-automation'
+  },
+  {
+    id: 'art-mechanical-engineering-calculators',
+    category: 'manufacturing',
+    title: 'AutoCAD Mechanical Calculators: Parametric Spring, Shaft, and Cam Stress Analyses',
+    excerpt: 'Use built-in engineering calculation libraries to configure spring rates, shaft deflection, and cam profiles.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad mechanical',
+    slug: 'mechanical-engineering-calculators'
+  },
+  {
+    id: 'art-map3d-fdo-database-mapping',
+    category: 'manufacturing',
+    title: 'AutoCAD Map 3D: Feature Data Objects (FDO) Database Mapping and GIS Data Integration',
+    excerpt: 'Connect directly to ESRI SHP, Oracle Spatial databases, and coordinates databases without conversions.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad map 3d',
+    slug: 'map3d-fdo-database-mapping'
+  },
+  {
+    id: 'art-map3d-topology-cleanup-gis',
+    category: 'manufacturing',
+    title: 'AutoCAD Map 3D Topology Cleanup: Standardizing GIS Layers and Spatial Features',
+    excerpt: 'How to execute Map Clean routines, purge snapping tolerances, and merge polygon spatial fields.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad map 3d',
+    slug: 'map3d-topology-cleanup-gis'
+  },
+  {
+    id: 'art-mep-duct-conduit-clash-detection',
+    category: 'manufacturing',
+    title: 'AutoCAD MEP: 3D Piping, HVAC, and Electrical Conduit Clash Detection Playbook',
+    excerpt: 'Setup interference checks, coordinate spatial boundaries, and align building duct structures.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad mep',
+    slug: 'mep-duct-conduit-clash-detection'
+  },
+  {
+    id: 'art-mep-fluid-friction-flow-calculator',
+    category: 'performance',
+    title: 'AutoCAD MEP Calculators: Sizing HVAC Ducts and Calculating Pipe Friction Losses',
+    excerpt: 'A practical guide to piping networks calculations, flow velocities, and head losses config.',
+    author: 'Will P. (Hardware Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad mep',
+    slug: 'mep-fluid-friction-flow-calculator'
+  },
+  {
+    id: 'art-plant3d-pid-sync-model-verification',
+    category: 'manufacturing',
+    title: 'AutoCAD Plant 3D: P&ID Flow Diagrams Syncing and 3D Piping Model Validation',
+    excerpt: 'Coordinate schematic databases with physical pipelines, check data mismatches, and lock specs.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad toolsets',
+    slug: 'plant3d-pid-sync-model-verification'
+  },
+  {
+    id: 'art-plant3d-ortho-iso-generation',
+    category: 'manufacturing',
+    title: 'AutoCAD Plant 3D: Ortho and Iso Drawing Generation and PCF Data Export Guidelines',
+    excerpt: 'Configure orthographic templates, format isometric margins, and exports piping PCFs.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad toolsets',
+    slug: 'plant3d-ortho-iso-generation'
+  },
+  {
+    id: 'art-raster-design-vector-rubbersheeting',
+    category: 'manufacturing',
+    title: 'AutoCAD Raster Design: Vectorizing Scanned Paper Drawings and Rubbersheet Alignment',
+    excerpt: 'Use raster cleaners, snap raster points, and perform rubbersheet spatial warping on scanned plans.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad toolsets',
+    slug: 'raster-design-vector-rubbersheeting'
+  },
+  {
+    id: 'art-cross-toolset-workflow-architecture-plant3d',
+    category: 'manufacturing',
+    title: 'Cross-Toolset CAD Workflows: Importing Architecture Structures into Plant 3D Pipelines',
+    excerpt: 'Resolve modeling tolerance tears, scale coordinate planes, and bridge model layers.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad toolsets',
+    slug: 'cross-toolset-workflow-architecture-plant3d'
+  },
+  {
+    id: 'art-iso-13567-cad-layer-standards',
+    category: 'standards',
+    title: 'ISO 13567 CAD Layer Standards: Designing Structured Layer Names for Global Projects',
+    excerpt: 'Setup ISO 13567 layers, configure discipline prefixes, and enforce uniform color indexes.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drafting',
+    slug: 'iso-13567-cad-layer-standards'
+  },
+  {
+    id: 'art-aia-cad-layer-mapping-revit',
+    category: 'standards',
+    title: 'AIA CAD Layer Mapping: Coordinating Layer Names in Revit DWG Export Settings',
+    excerpt: 'A step-by-step export setup mapping Revit object categories to AIA CAD standards.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad revit',
+    slug: 'aia-cad-layer-mapping-revit'
+  },
+  {
+    id: 'art-standards-checker-dws-enforcement',
+    category: 'standards',
+    title: 'CAD Standards Checker: Utilizing DWS Files to Automatically Audit Layer and Text Styles',
+    excerpt: 'Create DWS templates, setup CAD Standards alert checks, and auto-correct drawing properties.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drafting',
+    slug: 'standards-checker-dws-enforcement'
+  },
+  {
+    id: 'art-lineweight-lin-complex-lines',
+    category: 'standards',
+    title: 'Custom Line Styles and Lineweights: Coding Complex LIN Files Containing Text Elements',
+    excerpt: 'A coding guide for customizing complex line styles (LIN) and shape files (SHX) manually.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drafting',
+    slug: 'lineweight-lin-complex-lines'
+  },
+  {
+    id: 'art-layer-translator-laytrans-batch',
+    category: 'standards',
+    title: 'Layer Translator LAYTRANS Batch: Standardizing Vendor Drawings Layer Lists',
+    excerpt: 'Setup layer mapping charts, batch translate layers lists, and standardize external inputs.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drawing',
+    slug: 'layer-translator-laytrans-batch'
+  },
+  {
+    id: 'art-annotative-scale-dimension-styles',
+    category: 'standards',
+    title: 'Annotative Scale and Text Optimization: Preventing Scaled Dimension Text Size Discrepancies',
+    excerpt: 'Configure annotative styling, setup text scales, and prevent text overlapping in layouts.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drafting',
+    slug: 'annotative-scale-dimension-styles'
+  },
+  {
+    id: 'art-dwt-template-border-attributes',
+    category: 'standards',
+    title: 'Creating CAD DWT Templates: Standardizing Border Blocks and Dynamic Title Sheet Attributes',
+    excerpt: 'Setup coordinate systems, coordinate drawing margins, and script dynamic text attributes.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drafting',
+    slug: 'dwt-template-border-attributes'
+  },
+  {
+    id: 'art-missing-shx-font-mapping',
+    category: 'standards',
+    title: 'Resolving Missing SHX Fonts: Configuring Font Mapping Table (FMP) and Font Directories',
+    excerpt: 'Locate system paths, customize acad.fmp, and substitute missing SHX block fonts.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'missing-shx-font-mapping'
+  },
+  {
+    id: 'art-imperial-metric-dimension-style',
+    category: 'standards',
+    title: 'Imperial to Metric Dimension Styles: Standardizing Unit Precision and Dual Dimensions',
+    excerpt: 'Configure scale factors, set architectural dual dimensioning, and align margins.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drafting',
+    slug: 'imperial-metric-dimension-style'
+  },
+  {
+    id: 'art-ctb-stb-plot-style-tables',
+    category: 'standards',
+    title: 'Configuring CTB and STB Plot Style Tables: Line Weight Mapping for Monochrome Output',
+    excerpt: 'The complete difference and setup guidelines for color-dependent vs. named plotting styles.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'ctb-stb-plot-style-tables'
+  },
+  {
+    id: 'art-model-space-vs-paper-space-standards',
+    category: 'standards',
+    title: 'Model Space vs. Paper Space Standards: Designing Compliant Layout Viewport Structures',
+    excerpt: 'Drafting guidelines for scale mapping, viewport locks, and dimensioning standards.',
+    author: 'Will P. (BIM Architect)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad drafting',
+    slug: 'model-space-vs-paper-space-standards'
+  },
+  {
+    id: 'art-autolisp-scripting-first-macro',
+    category: 'migration',
+    title: 'Introduction to AutoLISP Scripting: Writing Your First Layout and Selection Macro',
+    excerpt: 'Step-by-step tutorial coding LISP macros, selecting viewport geometries, and running loops.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'autolisp-scripting-first-macro'
+  },
+  {
+    id: 'art-visual-lisp-ide-debugger-setup',
+    category: 'migration',
+    title: 'Visual LISP IDE Debugger Setup: Debugging LSP Routines in AutoCAD 2025+',
+    excerpt: 'Setup Visual LISP IDE, monitor active local variables, and evaluate runtime LSP loops.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'visual-lisp-ide-debugger-setup'
+  },
+  {
+    id: 'art-vla-activex-lisp-automation',
+    category: 'migration',
+    title: 'AutoLISP ActiveX Automation: Harnessing VLA-VLAX APIs to Modify Object Properties Fast',
+    excerpt: 'A coding guide utilizing ActiveX objects, altering database features, and executing functions.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'vla-activex-lisp-automation'
+  },
+  {
+    id: 'art-batch-purge-lsp-folders',
+    category: 'migration',
+    title: 'Batch Purge LSP Scripting: Automatically Cleaning Thousands of DWG Database Headers',
+    excerpt: 'Create loop-based LISP macros to purge, audit, and save directories of drawing sheets.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'batch-purge-lsp-folders'
+  },
+  {
+    id: 'art-compile-lsp-vlx-fas-protection',
+    category: 'migration',
+    title: 'Compiling LSP into FAS and VLX: Securing AutoLISP Source Code from Editing',
+    excerpt: 'How to use Visual LISP compile utility, encrypt code blocks, and package multi-file libraries.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'compile-lsp-vlx-fas-protection'
+  },
+  {
+    id: 'art-lisp-reactors-event-listeners',
+    category: 'migration',
+    title: 'AutoLISP Reactors and Event Listeners: Automating Tasks on Save and Print Commands',
+    excerpt: 'A coding manual implementing Lisp reactor bindings, tracking dwg actions, and automating triggers.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'lisp-reactors-event-listeners'
+  },
+  {
+    id: 'art-objectarx-net-csharp-api',
+    category: 'migration',
+    title: 'ObjectARX and .NET API C#二次开发: Building Enterprise CAD Extensions and High-Speed Calculations',
+    excerpt: 'Learn how to setup Visual Studio, link ObjectARX SDK, and develop high-speed plugins.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'objectarx-net-csharp-api'
+  },
+  {
+    id: 'art-javascript-api-web-canvas-rendering',
+    category: 'migration',
+    title: 'AutoCAD JavaScript API: Automating Web Canvas Geometry Generation in Browser Sandboxes',
+    excerpt: 'Develop JS utilities utilizing Autodesk web libraries, draw canvas lines, and load templates.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'javascript-api-web-canvas-rendering'
+  },
+  {
+    id: 'art-pgp-alias-commands-automation',
+    category: 'migration',
+    title: 'Customizing PGP Command Aliases: Scripting Custom Command Shortcuts for LISP Macros',
+    excerpt: 'How to alter acad.pgp, create shorthand commands, and load custom alias structures.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'pgp-alias-commands-automation'
+  },
+  {
+    id: 'art-autocad-dcl-dialog-design',
+    category: 'migration',
+    title: 'AutoCAD DCL Dialog Design: Developing Graphical User Interfaces for AutoLISP Scripts',
+    excerpt: 'Learn how to code DCL files, build form elements, and handle user choices inside Lisp.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'autocad-dcl-dialog-design'
+  },
+  {
+    id: 'art-acad-doc-lsp-centralized-deploy',
+    category: 'migration',
+    title: 'acad.lsp and acaddoc.lsp Centralized Deployment: Automating Corporate LISP Library Loads',
+    excerpt: 'IT playbook to deploy shared acad.lsp files, load security paths, and enforce silent loads.',
+    author: 'Will P. (AEC Workflow Specialist)',
+    readTime: '6 min read',
+    date: 'June 2026',
+    softwareSlug: 'autocad',
+    keyword: 'autocad tools',
+    slug: 'acad-doc-lsp-centralized-deploy'
+  },
 ];
 
 // Stub exports to maintain compatibility with other pages
@@ -249,7 +1412,7 @@ export const DIRECTORY_FOLDERS = [
   {
     id: 'fol-autocad',
     title: 'AutoCAD Troubleshooting & Procurement',
-    countLabel: '4 Guides',
+    countLabel: '100 Guides',
     icon: '🔧',
     links: ARTICLES_LIST.map(a => ({ title: a.title, href: `/guides/${a.slug}` }))
   }
@@ -269,7 +1432,7 @@ export function getArchetypeMetadata(category_id: string, tool?: Tool) {
       gradientHeader: 'from-slate-700 via-slate-800 to-zinc-900',
       cardBorder: 'hover:border-slate-300'
     },
-    categoryOrder: ['troubleshooting', 'performance', 'standards', 'procurement'],
+    categoryOrder: ['troubleshooting', 'performance', 'standards', 'procurement', 'deployment', 'migration', 'manufacturing'],
     jargonMap: {}
   };
 }
@@ -283,7 +1446,6 @@ export function getLocalizedTitle(title: string, category: string, tool: Tool): 
 }
 
 export function isArticleCompatibleWithTool(articleTitle: string, articleCategory: string, tool: Tool): boolean {
-  // Only allow our AutoCAD guides for the autocad tool to avoid cross-product pollution
   if (tool.slug !== 'autocad') {
     return false;
   }
