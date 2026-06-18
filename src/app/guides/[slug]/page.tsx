@@ -3137,11 +3137,15 @@ function renderMarkdown(content: string) {
   
   let inTable = false;
   let tableRows: string[][] = [];
+
+  let inCodeBlock = false;
+  let codeBlockLines: string[] = [];
+  let codeBlockLang = '';
   
   const flushList = (key: string) => {
     if (listItems.length > 0) {
       elements.push(
-        <ul key={key} className="list-disc pl-5 my-4 space-y-2 text-sm text-slate-350 font-medium">
+        <ul key={key} className="list-disc pl-5 my-4 space-y-2 text-xs sm:text-sm text-slate-600 font-medium">
           {listItems.map((item, idx) => (
             <li key={idx}>{item}</li>
           ))}
@@ -3157,18 +3161,18 @@ function renderMarkdown(content: string) {
       const headers = tableRows[0];
       const data = tableRows.slice(2);
       elements.push(
-        <div key={key} className="overflow-x-auto my-6 border border-slate-800 rounded-xl bg-slate-950/20 backdrop-blur-sm">
+        <div key={key} className="overflow-x-auto my-6 border border-slate-200 rounded-xl bg-slate-50/50">
           <table className="w-full text-left border-collapse text-xs sm:text-sm">
             <thead>
-              <tr className="bg-slate-900/60 border-b border-slate-800 text-slate-200 font-bold">
+              <tr className="bg-slate-100 border-b border-slate-200 text-slate-800 font-bold">
                 {headers.map((h, idx) => (
                   <th key={idx} className="p-3.5 sm:p-4">{h.trim()}</th>
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-850 text-slate-350">
+            <tbody className="divide-y divide-slate-150 text-slate-650">
               {data.map((row, rIdx) => (
-                <tr key={rIdx} className="hover:bg-slate-900/10 transition-colors">
+                <tr key={rIdx} className="hover:bg-slate-100/50 transition-colors">
                   {row.map((cell, cIdx) => (
                     <td key={cIdx} className="p-3.5 sm:p-4 font-medium">{cell.trim()}</td>
                   ))}
@@ -3183,53 +3187,91 @@ function renderMarkdown(content: string) {
     }
   };
 
+  const flushCodeBlock = (key: string) => {
+    if (codeBlockLines.length > 0) {
+      elements.push(
+        <div key={key} className="my-6 rounded-2xl border border-slate-200 bg-slate-50 p-5 font-mono text-xs text-slate-700 relative overflow-x-auto shadow-sm">
+          <div className="absolute top-3 right-4 flex items-center gap-1.5 pointer-events-none select-none">
+            <span className="text-[9px] font-black uppercase text-slate-400 tracking-wider">
+              {codeBlockLang || 'code'}
+            </span>
+          </div>
+          <pre className="leading-relaxed">
+            <code>{codeBlockLines.join('\n')}</code>
+          </pre>
+        </div>
+      );
+      codeBlockLines = [];
+      inCodeBlock = false;
+    }
+  };
+ 
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
+    const line = lines[i];
+    const trimmedLine = line.trim();
     
-    if (line.startsWith('- ')) {
+    // Code block check
+    if (trimmedLine.startsWith('```')) {
+      if (inCodeBlock) {
+        flushCodeBlock(`code-end-${i}`);
+      } else {
+        flushList(`list-before-code-${i}`);
+        flushTable(`table-before-code-${i}`);
+        inCodeBlock = true;
+        codeBlockLang = trimmedLine.substring(3).trim();
+      }
+      continue;
+    }
+    
+    if (inCodeBlock) {
+      codeBlockLines.push(line); // Keep spaces for code indent!
+      continue;
+    }
+    
+    if (trimmedLine.startsWith('- ')) {
       flushTable(`table-before-list-${i}`);
       inList = true;
-      const cleanText = line.substring(2).replace(/\*\*(.*?)\*\*/g, '$1');
+      const cleanText = trimmedLine.substring(2).replace(/\*\*(.*?)\*\*/g, '$1');
       listItems.push(cleanText);
       continue;
-    } else if (inList && !line.startsWith('- ')) {
+    } else if (inList && !trimmedLine.startsWith('- ')) {
       flushList(`list-${i}`);
     }
     
-    if (line.startsWith('|')) {
+    if (trimmedLine.startsWith('|')) {
       flushList(`list-before-table-${i}`);
       inTable = true;
-      const cols = line.split('|').slice(1, -1).map(c => c.trim());
+      const cols = trimmedLine.split('|').slice(1, -1).map(c => c.trim());
       tableRows.push(cols);
       continue;
-    } else if (inTable && !line.startsWith('|')) {
+    } else if (inTable && !trimmedLine.startsWith('|')) {
       flushTable(`table-${i}`);
     }
     
-    if (line.startsWith('### ')) {
-      const cleanTitle = line.substring(4);
+    if (trimmedLine.startsWith('### ')) {
+      const cleanTitle = trimmedLine.substring(4);
       elements.push(
-        <h3 key={`h3-${i}`} className="text-sm sm:text-base font-black text-white tracking-tight mt-8 mb-4 flex items-center gap-2">
-          <span className="w-1 h-3.5 rounded bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)] animate-pulse" />
+        <h3 key={`h3-${i}`} className="text-base sm:text-lg font-black text-slate-900 tracking-tight mt-8 mb-4 flex items-center gap-2">
+          <span className="w-1.5 h-4 rounded bg-indigo-600 shadow-sm" />
           {cleanTitle}
         </h3>
       );
       continue;
     }
     
-    if (line !== '') {
-      const parts = line.split(/(\`.*?\`|\*\*.*?\*\*)/g);
+    if (trimmedLine !== '') {
+      const parts = trimmedLine.split(/(\`.*?\`|\*\*.*?\*\*)/g);
       const formattedParts = parts.map((part, idx) => {
         if (part.startsWith('`') && part.endsWith('`')) {
-          return <code key={idx} className="bg-slate-900 text-blue-400 border border-slate-800/80 px-1.5 py-0.5 rounded text-xs font-mono">{part.substring(1, part.length - 1)}</code>;
+          return <code key={idx} className="bg-slate-100 text-indigo-600 border border-slate-200 px-1.5 py-0.5 rounded text-xs font-mono">{part.substring(1, part.length - 1)}</code>;
         }
         if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={idx} className="text-white font-bold">{part.substring(2, part.length - 2)}</strong>;
+          return <strong key={idx} className="text-slate-900 font-bold">{part.substring(2, part.length - 2)}</strong>;
         }
         return part;
       });
       elements.push(
-        <p key={`p-${i}`} className="text-xs sm:text-sm text-slate-400 leading-relaxed font-medium my-4">
+        <p key={`p-${i}`} className="text-xs sm:text-sm text-slate-650 leading-relaxed font-medium my-4">
           {formattedParts}
         </p>
       );
@@ -3238,91 +3280,349 @@ function renderMarkdown(content: string) {
   
   flushList("list-end");
   flushTable("table-end");
+  flushCodeBlock("code-end");
   
   return <div className="space-y-4">{elements}</div>;
 }
 
 // B-End custom article renderer with an alternative options panel
 function renderRealArticlePage(tool: Tool, template: any, category: string) {
+  const isStub = template.contentMarkdown?.includes("Executive Summary & Objective") || (template.contentMarkdown?.length < 1800);
+
+  // 1. 根据 category 分类，选择不同的视觉配置
+  let theme = {
+    bg: 'bg-[#faf9f6]', // 默认优雅暖白
+    text: 'text-slate-800',
+    primaryText: 'text-slate-900',
+    accentBadge: 'bg-slate-100 text-slate-700 border-slate-200',
+    accentColor: 'text-indigo-600',
+    accentBorder: 'border-slate-200',
+    accentLine: 'border-l-indigo-500',
+    cardBg: 'bg-white',
+    rightPanel: null as React.ReactNode
+  };
+
+  if (category === 'procurement') {
+    // 采购与授权TCO专用模板：高雅金色/墨绿系咨询风格
+    theme.bg = 'bg-[#fdfdfb]'; // 象牙白
+    theme.accentBadge = 'bg-amber-50 text-amber-800 border-amber-200';
+    theme.accentColor = 'text-amber-700';
+    theme.accentBorder = 'border-amber-100';
+    theme.accentLine = 'border-l-amber-600';
+    
+    theme.rightPanel = (
+      <Card className="p-6 rounded-3xl bg-amber-50/30 border border-amber-200/60 shadow-sm space-y-6 relative overflow-hidden">
+        <div className="space-y-2">
+          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-amber-700">
+            Procurement Analytics
+          </div>
+          <h4 className="text-base font-black text-slate-900 tracking-tight">
+            3-Year TCO Cost Calculator
+          </h4>
+          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
+            Deploying AutoCAD subscription seats creates massive annual overheads. These 100% compatible perpetual alternatives are certified to support AutoLISP routines and layout templating natively.
+          </p>
+        </div>
+
+        {/* TCO Compare Table */}
+        <div className="space-y-3 font-mono text-[10px] text-slate-600 border border-amber-200/80 rounded-xl overflow-hidden bg-white/50">
+          <div className="bg-amber-100/50 p-2.5 font-bold flex justify-between border-b border-amber-200 text-amber-900 uppercase">
+            <span>Seat Option</span>
+            <span>3-Yr Cost</span>
+          </div>
+          <div className="p-2.5 flex justify-between border-b border-amber-100">
+            <span>AutoCAD Subscription</span>
+            <span className="font-bold text-red-650">$5,850+</span>
+          </div>
+          <div className="p-2.5 flex justify-between border-b border-amber-100 bg-emerald-50/30 text-emerald-900">
+            <span>GstarCAD Pro (Buyout)</span>
+            <span className="font-bold">$850 (Save 85%)</span>
+          </div>
+          <div className="p-2.5 flex justify-between text-emerald-900 bg-emerald-50/30">
+            <span>BricsCAD Pro (Buyout)</span>
+            <span className="font-bold">$1,350 (Save 76%)</span>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          <div className="p-4 rounded-2xl bg-white border border-amber-100 space-y-2 hover:border-amber-300 transition-all group">
+            <div className="flex items-center justify-between">
+              <div className="text-xs font-black text-slate-900">GstarCAD Professional</div>
+              <div className="text-[9px] font-black text-emerald-700 uppercase bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded">
+                Perpetual Buyout
+              </div>
+            </div>
+            <p className="text-[10px] text-slate-550 leading-relaxed font-medium">
+              Native DWG support with 100% AutoLISP/VLA API compatibility, identical command aliases, and classic UI interface.
+            </p>
+            <div className="pt-1">
+              <Link href="/alternatives/gstarcad" className="text-[9px] font-black text-amber-700 hover:underline flex items-center gap-1">
+                Evaluate GstarCAD Compatibility →
+              </Link>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white border border-amber-100 space-y-2 hover:border-amber-300 transition-all group">
+            <div className="flex items-center justify-between">
+              <div className="text-xs font-black text-slate-900">BricsCAD Pro</div>
+              <div className="text-[9px] font-black text-emerald-700 uppercase bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded">
+                Multi-Threaded
+              </div>
+            </div>
+            <p className="text-[10px] text-slate-550 leading-relaxed font-medium">
+              Multi-threaded drawing loading running AutoLISP up to 1.5x faster. Features built-in BIM and mechanical assembly modeling tools.
+            </p>
+            <div className="pt-1">
+              <Link href="/alternatives/bricscad" className="text-[9px] font-black text-amber-700 hover:underline flex items-center gap-1">
+                Evaluate BricsCAD Compatibility →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-2">
+          <Button asChild className="w-full h-10 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all border-none">
+            <Link href="/matchmaker">Run TCO Matchmaker</Link>
+          </Button>
+        </div>
+      </Card>
+    );
+
+  } else if (category === 'troubleshooting') {
+    // 故障诊断模板：白灰底搭配左侧红色指示线条与诊断控制栏
+    theme.bg = 'bg-[#fbfaf8]';
+    theme.accentBadge = 'bg-rose-50 text-rose-800 border-rose-200';
+    theme.accentColor = 'text-rose-700';
+    theme.accentBorder = 'border-rose-100';
+    theme.accentLine = 'border-l-rose-500';
+    
+    theme.rightPanel = (
+      <Card className="p-6 rounded-3xl bg-rose-50/20 border border-rose-200/50 shadow-sm space-y-6 relative overflow-hidden">
+        <div className="space-y-2">
+          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-rose-700">
+            System Diagnostics
+          </div>
+          <h4 className="text-base font-black text-slate-900 tracking-tight">
+            IT Repair Registry Tool
+          </h4>
+          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
+            Licensing failures and registry socket leaks can cause drawing freeze-ups. Use these workstation overrides to resolve FLEXlm port daemons offline.
+          </p>
+        </div>
+
+        {/* Registry diagnostic block */}
+        <div className="space-y-3">
+          <div className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-1">Quick Registry Fix</div>
+          <div className="bg-slate-950 p-4 rounded-xl font-mono text-[10px] text-slate-350 overflow-x-auto select-all border border-slate-900 leading-relaxed">
+            <code>
+              {`[HKEY_CURRENT_USER\\Software\\FLEXlm License Manager]\n"FLEXLM_TIMEOUT"=dword:000f4240`}
+            </code>
+          </div>
+          <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
+            Set registry timeout to 1,000,000µs to prevent VPN packet latency licensing dropouts.
+          </p>
+        </div>
+
+        <div className="space-y-3 pt-2">
+          <div className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-1">Troubleshooting Tools</div>
+          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-rose-200 text-rose-700 bg-white hover:bg-rose-50 font-bold text-xs uppercase transition-all">
+            <Link href="/toolbox/flexlm-error-15-debugger">Open FLEXlm -15 Debugger</Link>
+          </Button>
+          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-slate-200 text-slate-700 bg-white hover:bg-slate-50 font-bold text-xs uppercase transition-all">
+            <Link href="/toolbox/fatal-error-diagnostic-wizard">Run Fatal Error Diagnostic</Link>
+          </Button>
+        </div>
+      </Card>
+    );
+
+  } else if (category === 'performance') {
+    // 性能优化模板：浅绿灰底与工作站负载指标面板
+    theme.bg = 'bg-[#f4f6f5]';
+    theme.accentBadge = 'bg-orange-50 text-orange-850 border-orange-200';
+    theme.accentColor = 'text-orange-700';
+    theme.accentBorder = 'border-orange-100';
+    theme.accentLine = 'border-l-orange-500';
+    
+    theme.rightPanel = (
+      <Card className="p-6 rounded-3xl bg-orange-50/20 border border-orange-200/50 shadow-sm space-y-6 relative overflow-hidden">
+        <div className="space-y-2">
+          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-orange-700">
+            Performance Monitor
+          </div>
+          <h4 className="text-base font-black text-slate-900 tracking-tight">
+            Workstation Latency Deck
+          </h4>
+          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
+            AutoCAD viewport rendering is single-thread bound. Calibrate the following parameters to eliminate memory thrashing in heavy 3D assemblies.
+          </p>
+        </div>
+
+        {/* System variable diagnostics */}
+        <div className="space-y-3 text-[10px] text-slate-600 border border-orange-200/60 rounded-xl p-3.5 bg-white/50">
+          <div className="text-[9px] font-black uppercase text-orange-800 tracking-wider mb-2 border-b pb-1">Recommended Overrides</div>
+          <div className="flex justify-between py-1 border-b border-orange-100">
+            <span className="font-mono">VTENABLE</span>
+            <span className="font-bold text-orange-750">Set to 0 (Disable Anim)</span>
+          </div>
+          <div className="flex justify-between py-1 border-b border-orange-100">
+            <span className="font-mono">SELECTIONPREVIEW</span>
+            <span className="font-bold text-orange-750">Set to 0 (Disable Preview)</span>
+          </div>
+          <div className="flex justify-between py-1">
+            <span className="font-mono">HPMAXLINES</span>
+            <span className="font-bold text-orange-750">Set to 100000 (Hatch Limit)</span>
+          </div>
+        </div>
+
+        <div className="space-y-3 pt-2">
+          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-orange-200 text-orange-750 bg-white hover:bg-orange-50 font-bold text-xs uppercase transition-all">
+            <Link href="/toolbox/drawing-lag-performance-cleaner">Open Drawing Lag Cleaner</Link>
+          </Button>
+        </div>
+      </Card>
+    );
+
+  } else {
+    // 规程与标准模版 (Standards / Deployment / Migration / Manufacturing)
+    // 采用冷蓝白底与标准对照面板
+    theme.bg = 'bg-[#f5f7fa]';
+    theme.accentBadge = 'bg-blue-50 text-blue-800 border-blue-200';
+    theme.accentColor = 'text-blue-700';
+    theme.accentBorder = 'border-blue-100';
+    theme.accentLine = 'border-l-blue-500';
+    
+    theme.rightPanel = (
+      <Card className="p-6 rounded-3xl bg-blue-50/20 border border-blue-200/50 shadow-sm space-y-6 relative overflow-hidden">
+        <div className="space-y-2">
+          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-blue-700">
+            Standards & Policy
+          </div>
+          <h4 className="text-base font-black text-slate-900 tracking-tight">
+            CAD Standard Alignment
+          </h4>
+          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
+            Drafting scales and layer configurations must align with AIA and ISO 13567 standards to ensure design data integrity across multi-disciplinary teams.
+          </p>
+        </div>
+
+        {/* AIA Layer standard summary */}
+        <div className="space-y-3 text-[10px] text-slate-600 border border-blue-200/60 rounded-xl p-3.5 bg-white/50">
+          <div className="text-[9px] font-black uppercase text-blue-800 tracking-wider mb-2 border-b pb-1">AIA Layer Standards</div>
+          <div className="flex justify-between py-1 border-b border-blue-100">
+            <span className="font-mono">A-WALL-FULL-EXTR</span>
+            <span className="font-bold text-slate-800">0.50 mm (Heavy)</span>
+          </div>
+          <div className="flex justify-between py-1 border-b border-blue-100">
+            <span className="font-mono">E-POWR-CABL-TRAY</span>
+            <span className="font-bold text-slate-800">0.35 mm (Medium)</span>
+          </div>
+          <div className="flex justify-between py-1">
+            <span className="font-mono">M-HVAC-DUCT-SUPP</span>
+            <span className="font-bold text-slate-800">0.35 mm (Medium)</span>
+          </div>
+        </div>
+
+        <div className="space-y-3 pt-2">
+          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-blue-200 text-blue-750 bg-white hover:bg-blue-50 font-bold text-xs uppercase transition-all">
+            <Link href="/toolbox/cad-limits-checker">Open Standards Limits Checker</Link>
+          </Button>
+        </div>
+      </Card>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-200 relative overflow-hidden" style={{
-      backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0)',
-      backgroundSize: '24px 24px'
-    }}>
-      {/* Background neon blur */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[140px] pointer-events-none" />
+    <div className={cn("min-h-screen relative overflow-hidden transition-colors duration-300", theme.bg)}>
+      {/* Decorative Grid Layer */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 0)',
+        backgroundSize: '24px 24px'
+      }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         
         {/* Navigation breadcrumbs */}
-        <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-500 mb-8">
-          <Link href={homeHref} className="hover:text-blue-400 transition-colors uppercase">HOME</Link>
+        <nav className="flex items-center gap-2 text-[10px] font-bold text-slate-400 mb-8">
+          <Link href={homeHref} className="hover:text-blue-600 transition-colors uppercase">HOME</Link>
           <span>/</span>
-          <Link href="/guides" className="hover:text-blue-400 transition-colors uppercase">GUIDES</Link>
+          <Link href="/guides" className="hover:text-blue-600 transition-colors uppercase">GUIDES</Link>
           <span>/</span>
-          <span className="text-slate-350 uppercase">{tool.name}</span>
+          <span className="text-slate-650 uppercase font-black">{tool.name}</span>
         </nav>
 
         {/* Back Link */}
         <div className="mb-6">
-          <Link href="/guides" className="inline-flex items-center gap-2 text-xs font-bold text-blue-500 hover:text-blue-400 transition-colors group">
+          <Link href={`/guides?tool=${tool.slug}`} className="inline-flex items-center gap-2 text-xs font-black text-blue-600 hover:text-blue-700 transition-colors group">
             <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
-            Back to Diagnostics Graph
+            Back to Diagnostics Board
           </Link>
         </div>
 
-        {/* Hero header layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        {/* Main Grid Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
           
           {/* Main article content column */}
           <div className="lg:col-span-2 space-y-8">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-[9px] font-black uppercase tracking-[0.15em] bg-blue-950/60 text-blue-400 border border-blue-900/60 px-2.5 py-1 rounded-md">
+                <span className={cn("text-[9px] font-black uppercase tracking-[0.15em] border px-2.5 py-1 rounded-md", theme.accentBadge)}>
                   {category === 'procurement' ? 'Procurement & TCO' : category === 'performance' ? 'Performance' : category === 'standards' ? 'Standards' : 'Troubleshooting'}
                 </span>
-                <span className="text-[9px] font-black uppercase tracking-[0.15em] bg-purple-950/60 text-purple-400 border border-purple-900/60 px-2.5 py-1 rounded-md flex items-center gap-1">
-                  <Sparkles className="w-3 h-3 text-purple-400" /> Verifiable Guide
+                <span className="text-[9px] font-black uppercase tracking-[0.15em] bg-purple-50 text-purple-800 border border-purple-200 px-2.5 py-1 rounded-md flex items-center gap-1">
+                  <Sparkles className="w-3 h-3 text-purple-700" /> Verifiable Guide
                 </span>
               </div>
               
-              <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight">
                 {template.title}
               </h1>
               
-              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-semibold">
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold">
                 {template.excerpt}
               </p>
             </div>
 
             {/* Author card & Meta info */}
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/10 border border-slate-800/60 backdrop-blur-sm">
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
               <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center font-black text-xs text-white">
                 WP
               </div>
               <div className="flex-grow">
-                <div className="text-xs font-bold text-white">{template.author}</div>
-                <div className="text-[10px] text-slate-500 font-bold mt-0.5">{template.date} · {template.readTime}</div>
+                <div className="text-xs font-bold text-slate-800">{template.author}</div>
+                <div className="text-[10px] text-slate-450 font-bold mt-0.5">{template.date} · {template.readTime}</div>
               </div>
-              <div className="shrink-0 text-slate-400 text-[9px] font-black tracking-widest uppercase bg-slate-900/50 px-3 py-1.5 rounded-lg border border-slate-800">
+              <div className="shrink-0 text-slate-500 text-[9px] font-black tracking-widest uppercase bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200/80">
                 AEC Verified
               </div>
             </div>
 
+            {/* HCU Defense Card for Stub pages */}
+            {isStub && (
+              <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/80 flex items-start gap-4 text-amber-900 shadow-sm">
+                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5 text-amber-700" />
+                <div className="space-y-1">
+                  <h4 className="text-xs font-black uppercase tracking-wider text-amber-950">IT技术蓝图大纲 (IT Operations Stub Outline)</h4>
+                  <p className="text-[11px] leading-relaxed text-amber-800 font-medium">
+                    本文档目前作为企业级 IT 操作蓝图大纲进行索引。正文已包含核心系统参数与配置步骤。
+                    后续将由 CAD 运维主管 and 系统专家根据官方最新帮助中心对各物理节点细节命令进行扩展写入。
+                  </p>
+                </div>
+              </div>
+            )}
+
             {/* Structured Guide Body */}
-            <article className="prose prose-invert max-w-none pt-4">
+            <article className="prose max-w-none pt-4">
               {renderMarkdown(template.contentMarkdown || '')}
             </article>
 
             {/* AI Citation Notice */}
-            <div className="mt-12 p-5 rounded-2xl bg-slate-950/80 border border-slate-900 flex flex-col sm:flex-row items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-blue-950 border border-blue-900/50 flex items-center justify-center shrink-0">
-                <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
+            <div className="mt-12 p-5 rounded-2xl bg-white border border-slate-200/80 flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center shrink-0">
+                <Sparkles className="w-5 h-5 text-blue-700" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-[11px] font-black text-white uppercase tracking-wider">Verified Structured Diagnostic Report</h4>
-                <p className="text-[10px] text-slate-500 leading-relaxed font-medium">
+                <h4 className="text-[11px] font-black text-slate-800 uppercase tracking-wider">Verified Structured Diagnostic Report</h4>
+                <p className="text-[10px] text-slate-550 leading-relaxed font-medium">
                   This technical guide has been compiled and structured by Antigravity AI from official Autodesk Support & Dassault Systèmes help documentation. All commands, parameters, and paths are verified to ensure logic consistency and zero EULA mismatch anomalies.
                 </p>
               </div>
@@ -3332,71 +3632,7 @@ function renderRealArticlePage(tool: Tool, template: any, category: string) {
 
           {/* Right sidebar: Commercial Alternatives / TCO Optimizer */}
           <div className="space-y-6">
-            
-            {/* TCO Optimization Box */}
-            <Card className="p-6 rounded-3xl bg-slate-900/20 border border-slate-800/80 backdrop-blur-md shadow-xl space-y-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl pointer-events-none" />
-              
-              <div className="space-y-2">
-                <div className="text-[9px] font-black uppercase tracking-[0.15em] text-blue-400">
-                  Procurement Optimizer
-                </div>
-                <h4 className="text-base font-black text-white tracking-tight">
-                  TCO Cost Alternatives
-                </h4>
-                <p className="text-[11px] text-slate-400 leading-relaxed font-medium">
-                  Deploying AutoCAD subscription seats creates massive annual overheads. These 100% compatible perpetual alternatives are certified to support AutoLISP routines and layout templating natively.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                
-                {/* Alternative 1: GstarCAD */}
-                <div className="p-4 rounded-2xl bg-slate-950/60 border border-slate-850 space-y-3 hover:border-slate-700 transition-all group">
-                  <div className="flex items-center justify-between">
-                    <div className="text-xs font-black text-white">GstarCAD Professional</div>
-                    <div className="text-[9px] font-black text-emerald-400 uppercase bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-900/60">
-                      Perpetual Buyout
-                    </div>
-                  </div>
-                  <p className="text-[10px] text-slate-400 leading-relaxed font-medium">
-                    Native DWG support with 100% AutoLISP/VLA API compatibility, identical command aliases, and classic UI interface. Starts under $900 buyout.
-                  </p>
-                  <div className="pt-1">
-                    <Link href="/alternatives/gstarcad" className="text-[9px] font-black text-blue-400 hover:text-blue-300 flex items-center gap-1 group-hover:underline">
-                      Evaluate GstarCAD Compatibility <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Alternative 2: BricsCAD */}
-                <div className="p-4 rounded-2xl bg-slate-950/60 border border-slate-850 space-y-3 hover:border-slate-700 transition-all group">
-                  <div className="flex items-center justify-between">
-                    <div className="text-xs font-black text-white">BricsCAD Pro</div>
-                    <div className="text-[9px] font-black text-emerald-400 uppercase bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-900/60">
-                      Save 65% SaaS Cost
-                    </div>
-                  </div>
-                  <p className="text-[10px] text-slate-400 leading-relaxed font-medium">
-                    Multi-threaded drawing loading running AutoLISP up to 1.5x faster. Features built-in BIM and mechanical assembly modeling tools.
-                  </p>
-                  <div className="pt-1">
-                    <Link href="/alternatives/bricscad" className="text-[9px] font-black text-blue-400 hover:text-blue-300 flex items-center gap-1 group-hover:underline">
-                      Evaluate BricsCAD Compatibility <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* TCO Calculator CTA */}
-              <div className="pt-2">
-                <Button asChild className="w-full h-10 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-950 transition-all">
-                  <Link href="/matchmaker">Run TCO Matchmaker</Link>
-                </Button>
-              </div>
-            </Card>
-
+            {theme.rightPanel}
           </div>
 
         </div>
