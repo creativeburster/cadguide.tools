@@ -1,18 +1,49 @@
 ### 1. Executive Summary & Objective
-This expert technical directive provides the official implementation blueprint for **Deploying Autodesk Desktop Licensing Service Silently: GPO Group Policy Controls**. 
+This systems administrator playbook provides the technical steps for silently deploying the **Autodesk Desktop Licensing Service (AdskLicensing)** across corporate active directory domains using Windows **Group Policy Objects (GPO)** and automated batch scripts.
 
-Designed specifically for enterprise IT administrators, BIM managers, and senior building design draftsmen, this guide resolves key operational bottlenecks, license constraints, and performance overheads associated with `autocad tools` configurations in Revit.
+### 2. Silent Command Line Arguments
+The modern Autodesk deployment bootstrapper relies on the Licensing Service Installer to register active product licenses. The standard setup file `AdskLicensing-installer.exe` can be executed silently in unattended mode to avoid user interaction:
 
-### 2. Core Diagnostic & Configuration Matrix
-To deploy these optimizations successfully across your engineering slots, verify the following baseline variables:
+```cmd
+"AdskLicensing-installer.exe" --unattendedmodeui none
+```
 
-- **Target CAD Engine**: Revit (BIM & Analytical Toolsets)
-- **Technical Category**: Deployment
-- **Search Intent Keyword**: `autocad tools`
-- **Baseline System Compliance**: Verified for release versions 2020 through 2026
+### 3. Step-by-Step GPO Computer Startup Script Deployment Playbook
 
-### 3. Step-by-Step System Optimization Playbook
-1. **Initialize Environment Audit**: Close all active BIM sessions and clear local temporary directories to flush system cache buffers.
-2. **Apply Directory Configurations**: Navigate to your network templates paths or registry editor and check option paths against standard profiles.
-3. **Execute Diagnostics**: Run license manager validations using central server options files to confirm token reservations.
-4. **Verify Viewport Integrity**: Reload Revit databases and execute standard viewport pan/zoom sweeps to confirm graphics card compatibility.
+#### Step 1: Create a Shared Network Installation Asset
+1. Extract the Autodesk licensing binaries from your Revit installation image or download the latest update pack.
+2. Place `AdskLicensing-installer.exe` into a shared network folder accessible by Domain Computers (e.g., `\\YourServer\DeploymentShare\Licensing\`).
+3. Set network permissions: grant **Read & Execute** permissions to the **Domain Computers** security group.
+
+#### Step 2: Code the Installation Verification Script
+Create a new file named `InstallAdskLicensing.bat` to verify if the target service is already active, preventing redundant installation loops on every boot:
+
+```batch
+@echo off
+:: Check for the presence of the licensing service executable
+if exist "C:\Program Files (x86)\Common Files\Autodesk Shared\AdskLicensing\Current\AdskLicensingService\AdskLicensingService.exe" (
+    echo Autodesk Desktop Licensing Service is already installed. Exiting...
+    exit /b 0
+)
+
+:: Execute unattended silent installation
+pushd "\\YourServer\DeploymentShare\Licensing\"
+"AdskLicensing-installer.exe" --unattendedmodeui none
+popd
+
+exit /b %ERRORLEVEL%
+```
+
+#### Step 3: Configure GPO in Active Directory
+1. Log in to your Domain Controller and open the **Group Policy Management Console (`gpmc.msc`)**.
+2. Right-click your target Organization Unit (OU) containing the engineering workstation computer objects, and select **Create a GPO in this domain, and Link it here...**.
+3. Name the GPO **"Autodesk Licensing Service Silent Deploy"**.
+4. Right-click the new GPO and select **Edit**.
+5. In the Group Policy Management Editor, navigate to:
+   `Computer Configuration` > `Policies` > `Windows Settings` > `Scripts (Startup/Shutdown)`
+6. Double-click **Startup**, click **Add...**, and browse to place the `InstallAdskLicensing.bat` script.
+7. Click **Apply** and close the editor. Run `gpupdate /force` on target clients to test the deployment.
+
+### 4. Official References & Source Links
+*   **Autodesk Support Article**: [How to Install Autodesk Desktop Licensing Service Silently](https://knowledge.autodesk.com/)
+*   **Microsoft TechNet**: [Deploying Windows Startup Scripts via GPO](https://learn.microsoft.com/)
