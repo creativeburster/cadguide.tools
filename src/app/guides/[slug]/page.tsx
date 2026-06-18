@@ -3128,6 +3128,41 @@ export function renderProcurementPage(pro: ProcurementIndustry) {
 }
 
 // Custom Markdown renderer tailored for our high-precision guides
+function parseInlineMarkdown(text: string): React.ReactNode[] {
+  const parts = text.split(/(\`.*?\`|\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
+  return parts.map((part, idx) => {
+    if (part.startsWith('`') && part.endsWith('`')) {
+      return (
+        <code key={idx} className="bg-slate-100 text-indigo-600 border border-slate-200 px-1.5 py-0.5 rounded text-xs font-mono">
+          {part.substring(1, part.length - 1)}
+        </code>
+      );
+    }
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={idx} className="text-slate-900 font-bold">
+          {part.substring(2, part.length - 2)}
+        </strong>
+      );
+    }
+    const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+    if (linkMatch) {
+      return (
+        <a 
+          key={idx} 
+          href={linkMatch[2]} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-blue-600 font-bold hover:underline"
+        >
+          {linkMatch[1]}
+        </a>
+      );
+    }
+    return part;
+  });
+}
+
 function renderMarkdown(content: string) {
   const lines = content.split('\n');
   const elements: React.ReactNode[] = [];
@@ -3141,13 +3176,16 @@ function renderMarkdown(content: string) {
   let inCodeBlock = false;
   let codeBlockLines: string[] = [];
   let codeBlockLang = '';
+
+  let inQuote = false;
+  let quoteLines: string[] = [];
   
   const flushList = (key: string) => {
     if (listItems.length > 0) {
       elements.push(
         <ul key={key} className="list-disc pl-5 my-4 space-y-2 text-xs sm:text-sm text-slate-600 font-medium">
           {listItems.map((item, idx) => (
-            <li key={idx}>{item}</li>
+            <li key={idx}>{parseInlineMarkdown(item)}</li>
           ))}
         </ul>
       );
@@ -3174,7 +3212,9 @@ function renderMarkdown(content: string) {
               {data.map((row, rIdx) => (
                 <tr key={rIdx} className="hover:bg-slate-100/50 transition-colors">
                   {row.map((cell, cIdx) => (
-                    <td key={cIdx} className="p-3.5 sm:p-4 font-medium">{cell.trim()}</td>
+                    <td key={cIdx} className="p-3.5 sm:p-4 font-medium">
+                      {parseInlineMarkdown(cell.trim())}
+                    </td>
                   ))}
                 </tr>
               ))}
@@ -3205,6 +3245,42 @@ function renderMarkdown(content: string) {
       inCodeBlock = false;
     }
   };
+
+  const flushQuote = (key: string) => {
+    if (quoteLines.length > 0) {
+      const hasImportant = quoteLines.some(l => l.includes('[!IMPORTANT]'));
+      const filteredLines = quoteLines.filter(l => !l.includes('[!IMPORTANT]'));
+      elements.push(
+        <div 
+          key={key} 
+          className={`my-6 p-5 rounded-2xl border-l-4 ${
+            hasImportant 
+              ? 'bg-blue-50/50 border-l-blue-650 text-slate-800' 
+              : 'bg-slate-50 border-l-slate-400 text-slate-600'
+          } font-medium`}
+        >
+          {filteredLines.map((ql, idx) => {
+            const cleanQL = ql.trim();
+            if (cleanQL.startsWith('- ')) {
+              return (
+                <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm my-1.5">
+                  <span className="text-blue-600 mt-1.5 select-none">●</span>
+                  <div className="flex-1">{parseInlineMarkdown(cleanQL.substring(2))}</div>
+                </div>
+              );
+            }
+            return (
+              <p key={idx} className="text-xs sm:text-sm my-1.5 leading-relaxed">
+                {parseInlineMarkdown(ql)}
+              </p>
+            );
+          })}
+        </div>
+      );
+      quoteLines = [];
+      inQuote = false;
+    }
+  };
  
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
@@ -3217,6 +3293,7 @@ function renderMarkdown(content: string) {
       } else {
         flushList(`list-before-code-${i}`);
         flushTable(`table-before-code-${i}`);
+        flushQuote(`quote-before-code-${i}`);
         inCodeBlock = true;
         codeBlockLang = trimmedLine.substring(3).trim();
       }
@@ -3224,15 +3301,26 @@ function renderMarkdown(content: string) {
     }
     
     if (inCodeBlock) {
-      codeBlockLines.push(line); // Keep spaces for code indent!
+      codeBlockLines.push(line);
       continue;
+    }
+
+    // Blockquote check
+    if (trimmedLine.startsWith('>')) {
+      flushList(`list-before-quote-${i}`);
+      flushTable(`table-before-quote-${i}`);
+      inQuote = true;
+      quoteLines.push(trimmedLine.substring(1).trim());
+      continue;
+    } else if (inQuote && !trimmedLine.startsWith('>')) {
+      flushQuote(`quote-${i}`);
     }
     
     if (trimmedLine.startsWith('- ')) {
       flushTable(`table-before-list-${i}`);
+      flushQuote(`quote-before-list-${i}`);
       inList = true;
-      const cleanText = trimmedLine.substring(2).replace(/\*\*(.*?)\*\*/g, '$1');
-      listItems.push(cleanText);
+      listItems.push(trimmedLine.substring(2));
       continue;
     } else if (inList && !trimmedLine.startsWith('- ')) {
       flushList(`list-${i}`);
@@ -3240,6 +3328,7 @@ function renderMarkdown(content: string) {
     
     if (trimmedLine.startsWith('|')) {
       flushList(`list-before-table-${i}`);
+      flushQuote(`quote-before-table-${i}`);
       inTable = true;
       const cols = trimmedLine.split('|').slice(1, -1).map(c => c.trim());
       tableRows.push(cols);
@@ -3249,6 +3338,9 @@ function renderMarkdown(content: string) {
     }
     
     if (trimmedLine.startsWith('### ')) {
+      flushList(`list-before-h3-${i}`);
+      flushTable(`table-before-h3-${i}`);
+      flushQuote(`quote-before-h3-${i}`);
       const cleanTitle = trimmedLine.substring(4);
       elements.push(
         <h3 key={`h3-${i}`} className="text-base sm:text-lg font-black text-slate-900 tracking-tight mt-8 mb-4 flex items-center gap-2">
@@ -3260,19 +3352,9 @@ function renderMarkdown(content: string) {
     }
     
     if (trimmedLine !== '') {
-      const parts = trimmedLine.split(/(\`.*?\`|\*\*.*?\*\*)/g);
-      const formattedParts = parts.map((part, idx) => {
-        if (part.startsWith('`') && part.endsWith('`')) {
-          return <code key={idx} className="bg-slate-100 text-indigo-600 border border-slate-200 px-1.5 py-0.5 rounded text-xs font-mono">{part.substring(1, part.length - 1)}</code>;
-        }
-        if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={idx} className="text-slate-900 font-bold">{part.substring(2, part.length - 2)}</strong>;
-        }
-        return part;
-      });
       elements.push(
         <p key={`p-${i}`} className="text-xs sm:text-sm text-slate-650 leading-relaxed font-medium my-4">
-          {formattedParts}
+          {parseInlineMarkdown(trimmedLine)}
         </p>
       );
     }
@@ -3281,6 +3363,7 @@ function renderMarkdown(content: string) {
   flushList("list-end");
   flushTable("table-end");
   flushCodeBlock("code-end");
+  flushQuote("quote-end");
   
   return <div className="space-y-4">{elements}</div>;
 }
