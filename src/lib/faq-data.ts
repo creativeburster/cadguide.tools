@@ -1931,4 +1931,485 @@ export const accordionFaqs: AccordionFaq[] = [
     a: 'Hierarchical compiler violations occur when Sheet Entries on a sheet symbol do not match the Ports on the child sheet. Right-click the parent sheet symbol and select \'Sheet Symbol Actions\' > \'Synchronize Sheet Entries and Ports\'. Inspect mismatched pins, select missing connections, and click \'Apply\' to synchronize sheet connections.'
   },
 
+  {
+    category: 'licensing',
+    tools: ['catia'],
+    q: 'How to resolve Catia DSLS client connection licensing error -13?',
+    a: 'DSLS Error -13 indicates a license server name mismatch or cache corruption. To resolve: 1. Navigate to `C:\\ProgramData\\DassaultSystemes\\Licenses\\` and open `DSLS.lic`. Verify the server hostname matches your license server. 2. Purge local network license caches on the server and check if port 9780 (HTTP) or 9785 (HTTPS) is whitelisted in your server firewall.'
+  },
+  {
+    category: 'licensing',
+    tools: ['catia'],
+    q: 'How to borrow a Catia V5 license for offline field work?',
+    a: 'Open Dassault\'s Local License Manager (LUM/DSLS client setup). Under the \'License Borrowing\' tab, select the target license configuration (e.g. MD2 or HD2), select the return date (maximum 30 days), and click \'Borrow\'. Ensure you are connected to the network during this checkout.'
+  },
+  {
+    category: 'licensing',
+    tools: ['catia'],
+    q: 'What is the financial cost comparison of Catia V5 Primary License Charge (PLC) vs. Annual License Charge (ALC)?',
+    a: 'Catia perpetual licenses use a split payment model: 1. PLC is the upfront buyout fee for the perpetual seat. 2. ALC is the annual maintenance fee (typically 18-20% of PLC) required for software upgrades and technical support. Dropping ALC saves maintenance costs but locks your workspace to the active Catia release.'
+  },
+  {
+    category: 'licensing',
+    tools: ['catia'],
+    q: 'How to package and silently deploy Catia V5 using command-line arguments?',
+    a: 'To deploy Catia headlessly, run: `startb.exe -u "C:\\catia_env" -s -v -wait` pointing to your deployment configuration file. Make sure to specify `LICENSING=DSLS` and the target server address in the setup ini to distribute config parameters silently.'
+  },
+  {
+    category: 'licensing',
+    tools: ['catia'],
+    q: 'How does an IT administrator handle Dassault Systemes EULA audits and block seat telemetry?',
+    a: 'DSLS servers track client network configurations. To audit license usage: Open DSLS Administrator, export the client usage log, and verify hostnames against active directory inventories. Block anonymous telemetry by setting the system registry DWORD `DisableTelemetry` to `1` under DassaultSystemes hardware keys.'
+  },
+  {
+    category: 'licensing',
+    tools: ['catia'],
+    q: 'How to configure dynamic license allocations for Catia configurations in DSLS?',
+    a: 'Open your `DSLS` option administration file on the server. Group users using the `GROUP` keyword. Apply `RESERVE` and `LIMIT` parameters (e.g. `RESERVE 5 HD2 GROUP aerospace_team`) to ensure high-end surface design seats are kept for designers.'
+  },
+  {
+    category: 'performance',
+    tools: ['catia'],
+    q: 'How to eliminate Catia viewport redraw lag and stutter on massive assemblies?',
+    a: 'Viewport lag is typically resolved by enabling Visualization Cache Mode: Go to Tools > Options > Infrastructure > Product Structure > Cache Management tab. Check \'Work with Cache System\' and define a local cache directory on your fastest NVMe SSD. Catia will load lightweight `.cgr` files instead of full solids.'
+  },
+  {
+    category: 'performance',
+    tools: ['catia'],
+    q: 'Why does the Catia 3D viewport freeze on Windows 11, and how do we resolve it?',
+    a: 'Freezes occur when Catia attempts to render OpenGL features on integrated laptop graphics. To resolve: Open NVIDIA Control Panel > Manage 3D Settings. Add `CNEXT.exe` (Catia\'s primary engine) and set the Graphics Processor to \'High-performance NVIDIA processor\'. Turn off Threaded Optimization to prevent thread deadlocks.'
+  },
+  {
+    category: 'performance',
+    tools: ['catia'],
+    q: 'How to speed up 3D Space Analysis interference clash sweeps in Catia?',
+    a: 'Clash sweeps calculate complex spatial boundaries. To accelerate: Open Tools > Options > Digital Mockup > DMU Space Analysis. Set computation accuracy from default \'Detailed\' to \'Approximate\' (0.5mm clearance limit). This reduces CPU processing times by up to 75% on large structures.'
+  },
+  {
+    category: 'performance',
+    tools: ['catia'],
+    q: 'How to resolve Catia PLM ENOVIA database check-in save lag?',
+    a: 'Save lag occurs when local ENOVIA caches grow too large. Purge the workspace cache folder under `%LOCALAPPDATA%\\DassaultSystemes\\ENOVIA\\`. Ensure the local MTU settings match the PLM server network configs to avoid packet division latency over remote VPN links.'
+  },
+  {
+    category: 'performance',
+    tools: ['catia'],
+    q: 'How to resolve assembly update solver deadlocks caused by over-defined constraints?',
+    a: 'When constraints loop recursively, Catia solver loops, consuming CPU cores. Audit the model tree: Find constraint items with red cross or yellow warning icons. Use the \'Constraint Analysis\' tool to diagnose and delete cyclic reference links. Use \'Fix\' constraints to lock rigid components without solver overhead.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to repair imported IGES surface gaps and stitch faces in Catia GSD?',
+    a: 'Imported surfaces often contain gaps due to modeling scale drift. Open Generative Shape Design (GSD), select Join. Set the tolerance parameter up to 0.1mm. If open boundaries remain, use the \'Healing Assistant\' workbench, select the joined surface, and run \'Freeze\' or \'Stitch Gaps\' to heal topology defects.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to export STEP AP242 files from Catia without losing geometric tolerances?',
+    a: 'Go to Tools > Options > Compatibility > STEP tab. Under Export, set Application Protocol to \'AP242\' and check \'3D Product Manufacturing Information (PMI)\'. This ensures geometric tolerances, annotations, and assembly structural definitions are exported cleanly.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to design custom border blocks and sheet templates in Catia Drafting?',
+    a: 'Sheet templates must be created in the background view: Go to Edit > Sheet Background. Create or import your frame border and title block drawing. Go to File > Page Setup and define custom attributes. Return to Edit > Working Views to lock drawing borders on corporate sheets.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to map part numbers to ERP specifications in Catia assemblies?',
+    a: 'Double-click the parent product, open Properties. Under the Product tab, modify \'Part Number\' to align with ERP standards. To batch update, write a macro script accessing `Product.PartNumber` to write assembly attributes directly into your ERP database.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to configure post-processors in CATIA Manufacturing to export NC G-Code?',
+    a: 'Go to Tools > Options > Machining > Resources. Under Post-Processor, select the path pointing to your IMS or CENIT post-processor directory. In your Manufacturing Program, right-click, select \'Generate NC Code\', and choose the `.aptsource` output to run G-code translation.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to customize drawing sheet projection standards in Catia?',
+    a: 'To switch projection settings: Go to Tools > Standards. Select Category: \'Drafting\' and select the standard XML file (e.g. ISO.xml). Locate Sheet > Projection Method, set value to \'First Angle\' (European) or \'Third Angle\' (US). Save the XML and reload drafting modules.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to resolve Catia V5 CATSettings directory corruption?',
+    a: 'CATSettings corruption causes panel displacement and freezes. Go to `%APPDATA%\\DassaultSystemes\\CATSettings\\` and delete all contents. On next startup, Catia V5 rebuilds a default CATSettings database. To preserve custom shortcuts, export your settings folder to a secure network directory before purging.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to compile CAA C++ API macros in Catia V5?',
+    a: 'CAA developers require Visual Studio and the Dassault CAA RADE toolkit. Set up the workspace env using `mkinstenv`. During compilation, link to target component objects (e.g. `JS0GROUP`, `GUID`). Ensure your `IdentityCard.xml` declares correct module dependencies before compilation.'
+  },
+  {
+    category: 'standards',
+    tools: ['catia'],
+    q: 'How to automate exporting product properties from Catia to Excel using VB script?',
+    a: 'Create a CATScript macro: Declare `CATIA.ActiveDocument` as `ProductDocument`. Retrieve the root product: `Set rootProduct = activeDoc.Product`. Loop through sub-products: `For Each subProduct In rootProduct.Products`. Extract properties like `subProduct.PartNumber` and write them to an Excel Object using VBA hooks.'
+  },
+  {
+    category: 'licensing',
+    tools: ['ansys'],
+    q: 'How to resolve Ansys License Manager FLEXlm error -15 on client startup?',
+    a: 'FLEXlm Error -15 indicates a port binding lockout. To fix: 1. Ensure the license manager service is running on the server. 2. Whitelist TCP port 1055 (lmgrd) and TCP port 2325 (ansyslmd vendor daemon) in your server\'s Windows Firewall. 3. Check if the server\'s host file matches the system IP address.'
+  },
+  {
+    category: 'licensing',
+    tools: ['ansys'],
+    q: 'How to reserve Ansys license seats for specific research teams using ansyslmd.opt?',
+    a: 'Create or edit `ansyslmd.opt` in your licensing folder. Use: `GROUP CFD_Team user1 user2`. Reserve seats using the feature code: `RESERVE 4 aa_r_fl_s GROUP CFD_Team` (reserves 4 Fluent Solver seats). Cap borrow duration by adding `MAX_BORROW_HOURS aa_r_fl_s 168` to avoid seat starvation.'
+  },
+  {
+    category: 'licensing',
+    tools: ['ansys'],
+    q: 'How does Ansys HPC (High-Performance Computing) licensing scale solver cores?',
+    a: 'Ansys HPC packs scale using a power-of-four rule: 1. A baseline license allows solving on 4 cores. 2. Adding 1 HPC Pack unlocks 8 cores (12 cores total). 3. Adding 2 HPC Packs unlocks 32 cores (36 cores total). 4. Adding 3 HPC Packs unlocks 128 cores. Settle core licensing limits before submitting jobs to solver clusters.'
+  },
+  {
+    category: 'licensing',
+    tools: ['ansys'],
+    q: 'How to configure client workstations to query fallback Ansys license servers?',
+    a: 'Open Windows Environment Variables. Edit system variable `ANSYSLMD_LICENSE_FILE`. Define fallback license servers separated by semicolons: `1055@PRIMARY_SERVER;1055@FALLBACK_SERVER`. This ensures client workstations fail over to the secondary server if the primary manager goes offline.'
+  },
+  {
+    category: 'licensing',
+    tools: ['ansys'],
+    q: 'What is the billing logic of Ansys Elastic Licensing compared to local token pools?',
+    a: 'Elastic Licensing uses cloud-based token pools. IT managers purchase prepaid tokens. Solvers communicate with the Ansys Cloud Licensing portal on port 443. Tokens are deducted per minute based on active solver usage (e.g. Fluent CFDs consume tokens faster than static mechanical solvers), perfect for peak load workloads.'
+  },
+  {
+    category: 'licensing',
+    tools: ['ansys'],
+    q: 'How to silently install Ansys Licensing Helper across corporate networks?',
+    a: 'Run the helper setup silently with elevated rights to configure client port binds. Run: `licensinghelper.exe -a configure -f "1055@SERVER_IP"` to configure licensing registries headlessly.'
+  },
+  {
+    category: 'performance',
+    tools: ['ansys'],
+    q: 'How to configure GPU solver acceleration for Ansys Mechanical simulations?',
+    a: 'GPU acceleration speeds up sparse solver runs. To configure: 1. Ensure you have a certified GPU (NVIDIA RTX/Quadro with Compute Capability 3.5+). 2. In Workbench, go to Tools > Options > Solution > GPU Acceleration, set to \'NVIDIA\'. 3. Or set system environment variable `ANS_GPU_ENABLE=1` before solving.'
+  },
+  {
+    category: 'performance',
+    tools: ['ansys'],
+    q: 'How to optimize Intel MPI cluster configurations for Ansys Fluent solver speeds?',
+    a: 'MPI communication overhead slows down parallel solver runs. To optimize: 1. Whitelist MPI ports in Windows Firewall. 2. Run Fluent using command-line variables: `fluent 3d -t16 -mpi=intel` to force Intel MPI bindings. 3. Configure InfiniBand interfaces to run on maximum MTU settings to speed up cluster communications.'
+  },
+  {
+    category: 'performance',
+    tools: ['ansys'],
+    q: 'How to configure Ansys Mechanical solver scratch paths to prevent Out-of-Core slows?',
+    a: 'If simulations exceed RAM limits, the solver writes database files to disk (Out-of-Core mode). In Workbench, go to Tools > Options > Mechanical. Set the Scratch Directory to point to a local NVMe PCIe SSD (avoid network shares). This prevents I/O bottlenecks during solver iterations.'
+  },
+  {
+    category: 'performance',
+    tools: ['ansys'],
+    q: 'How to resolve Ansys Mechanical \'Out of Memory\' solver allocation failures?',
+    a: 'If solving fails due to memory allocation: 1. Open Windows Advanced System Settings > Virtual Memory. Set custom Pagefile size to 1.5x-2x physical RAM. 2. In Mechanical, go to Analysis Settings, change Solver Type from Direct to Iterative (PCG), which consumes up to 75% less RAM on large mesh models.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to diagnose stress singularities during Ansys Workbench mesh convergence audits?',
+    a: 'Stress singularities occur at sharp corners or point loads, causing stress values to rise infinitely with grid refinement. To diagnose: Apply Convergence controls under results. If stress fails to stabilize while grid size decreases, apply a local fillet to distribute the force, or measure displacement convergence instead.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to configure bi-directional CAD geometry parameter sync in Ansys Workbench?',
+    a: 'To push parametric variations from CAD to Workbench: Ensure your CAD model parameters are prefixed with `DS_` (e.g. `DS_Length`). In Workbench, enable the CAD connection module. Running parameter sweeps will automatically rebuild the CAD geometries and update the FEA solvers.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to calculate Wall Y+ grid heights for Ansys Fluent CFD boundary layers?',
+    a: 'For Fluent CFD runs: If using the SST k-omega turbulence model, target a y+ value of `y+ < 1`. Use a Y+ calculator to estimate the first cell height based on fluid density, reference velocity, and length. Design boundary layers in your mesh setup to capture wall shear stresses accurately.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to validate modal participation mass factors in Ansys dynamic runs?',
+    a: 'For modal and seismic simulations: Under Analysis Settings, configure the solver to extract at least 50 modes. Go to Solution Information > Retrieve Solver Output. Review Mass Participation Factors. Ensure the cumulative mass participation factor exceeds 90% across the active axes.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to fix contact non-convergence in Ansys Mechanical structural analysis?',
+    a: 'If contacts fail to converge: 1. Open Contact properties, change Formulation from Pure Penalty to Augmented Lagrange. 2. Lower the Normal Stiffness factor (FKTG) to 0.1 to allow minor penetration, which stabilizes the Newton-Raphson solver. 3. Adjust Pinball Region parameters to capture initial gaps.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to optimize LS-DYNA explicit dynamic simulations time steps?',
+    a: 'Explicit solvers calculate stable time steps based on the smallest mesh element. If time steps are too small: Enable Mass Scaling under Analysis Settings. Set a minimum time step limit. LS-DYNA will add minor mass to tiny elements to increase the time step, speeding up calculations without affecting mass accuracy.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to resolve Fluent CFD solver divergence warning errors in Workbench?',
+    a: 'Divergence warnings point to algebraic multigrid (AMG) solver crashes. To resolve: 1. Run grid diagnostics to verify skewness is below 0.9. 2. In Solution Controls, lower the pressure and momentum Under-Relaxation Factors (e.g. Pressure to 0.2, Momentum to 0.5). 3. Switch pressure-velocity coupling to Coupled mode.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to run Ansys Mechanical solvers headlessly using APDL macros?',
+    a: 'Save your APDL commands to an input file `model.dat`. Open Command Prompt and execute: `ansys2026.exe -b -i model.dat -o output.out`. This runs the solver headlessly in batch mode, generating logs in `output.out`, perfect for cluster computing nodes.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to configure Ansys Customization Toolkit (ACT) for Python macro automation?',
+    a: 'ACT plugins require defining an XML manifest and writing a Python script. Place ACT folder under `%APPDATA%\\Ansys\\v260\\ACT\\`. The XML registers the custom buttons and panels, while the Python script calls Ansys mechanical APIs to automate post-processing and geometry actions.'
+  },
+  {
+    category: 'standards',
+    tools: ['ansys'],
+    q: 'How to predict metal SLM 3D printing distortion in Ansys Additive?',
+    a: 'Additive runs require matching thermal-mechanical variables. Open Ansys Additive. Define the metal powder properties, scan speed, laser power, and layer thickness. Run the transient thermal solver to generate the temperature history, then map this history to the structural solver to predict residual stress.'
+  },
+  {
+    category: 'licensing',
+    tools: ['creo'],
+    q: 'How to resolve Creo startup licensing error -96 (Server node is down)?',
+    a: 'FLEXlm Error -96 indicates that the client workstation cannot reach the PTC license server manager process (lmgrd.exe). On the server, open LMTOOLS, confirm the service is running, and verify that TCP ports 7788 (default PTC port) and 7789 are whitelisted in your server\'s firewall.'
+  },
+  {
+    category: 'licensing',
+    tools: ['creo'],
+    q: 'How to configure client workstations to search for the Creo license server?',
+    a: 'Open Windows Environment Variables. Create or edit a system variable named `PTC_LSD_LICENSE_FILE`. Set its value to `7788@SERVER_IP` (or `@SERVER_HOSTNAME`). This registry value tells the Creo licensing engine where to check out active product seats on boot.'
+  },
+  {
+    category: 'licensing',
+    tools: ['creo'],
+    q: 'How does PTC Windchill PLM client licensing allocation work?',
+    a: 'Windchill licenses check out based on active user login group policies. IT managers map active directory (AD) user groups to Windchill license profiles (e.g. Windchill PDMLink, Windchill ProjectLink) in the Windchill Directory Server console to organize seat allocations.'
+  },
+  {
+    category: 'licensing',
+    tools: ['creo'],
+    q: 'How to restrict borrow periods on PTC license servers using ptc.opt?',
+    a: 'Create a `ptc.opt` file in your license installation path. Use: `MAX_BORROW_HOURS PROE_FeatureCode 168` to restrict borrowing to 7 days (168 hours). To reserve floating seats, add `BORROW_LOWWATER PROE_FeatureCode 5` to ensure 5 seats remain unborrowable.'
+  },
+  {
+    category: 'licensing',
+    tools: ['creo'],
+    q: 'What is the offline usage policy for PTC Creo subscription licenses?',
+    a: 'PTC Creo subscription seats require online check-in every 30 days. Workstations must connect to the PTC license server or internet portal to refresh active seat security certificates, or Creo features will lock up on startup.'
+  },
+  {
+    category: 'licensing',
+    tools: ['creo'],
+    q: 'How to silently install PTC Creo across enterprise workstations?',
+    a: 'First, run the Creo installer manually on a template PC and export the configuration XML file. To deploy silently via Intune or script, run: `setup.exe /quiet /qn /norestart /config creo_setup.xml`. This executes a completely headless installation.'
+  },
+  {
+    category: 'performance',
+    tools: ['creo'],
+    q: 'How to optimize Creo config.pro parameters to resolve viewport drawing lag?',
+    a: 'Viewport lag on large assemblies is resolved by adjusting `config.pro` parameters: Set `graphics` to `opengl`, set `save_drawing_picture_file` to `embed`, and disable pre-selection highlights by setting `prehighlight` to `no` to speed up display refresh.'
+  },
+  {
+    category: 'performance',
+    tools: ['creo'],
+    q: 'Why does Creo stutter during assembly rotate, and how to fix it?',
+    a: 'Stutters point to Creo running on integrated graphics. Open NVIDIA Control Panel > Manage 3D Settings. Add `xtop.exe` (Creo Parametric) and set the Graphics Processor to \'High-performance NVIDIA processor\'. Turn off Threaded Optimization to prevent thread deadlocks.'
+  },
+  {
+    category: 'performance',
+    tools: ['creo'],
+    q: 'How to configure simplified representations in Creo to optimize RAM load?',
+    a: 'Simplified reps limit loaded assembly components. In Creo, open your assembly, select View Manager > Simp Rep tab. Create a new representation, choose \'Exclude\' as default, and select only target components to load. This reduces RAM consumption on heavy layouts.'
+  },
+  {
+    category: 'performance',
+    tools: ['creo'],
+    q: 'How to resolve Creo Windchill PLM local client workspace cache corruption?',
+    a: 'Workspace corruption causes check-in failures and freezes. Close Creo. Navigate to `%APPDATA%\\..\\Local\\PTC\\WF\\.Settings\\.cache\\` and delete all contents. On next startup, Windchill rebuilds a clean client cache database, resolving sync locks.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to resolve circular reference warnings in Creo skeleton models?',
+    a: 'Circular references happen when a parent feature references a child. To resolve: Go to Tools > Reference Viewer. Inspect active reference trees. Ensure the Skeleton model layout contains only unidirectional references, avoiding back-references from child assemblies.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to configure custom sheet metal bend tables in Creo Parametric?',
+    a: 'Creo uses bend tables to calculate flat blank lengths. Save your custom bend rules to a `.tbl` file. In `config.pro`, set `pro_sheet_metal_dir` to point to your bend tables folder. In Sheetmetal options, select the table to run bend calculations.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to distribute uniform config.pro settings across CAD workstations?',
+    a: 'Place your master `config.pro` and `config.win` files on a secure network directory. Set system environment variables or modify local Creo installation scripts to point to this path on startup, ensuring all workstations run matching drafting settings.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to compile C++ macros using Creo Object Toolkit (OTK)?',
+    a: 'OTK developers require Visual Studio. Open the OTK installation folder, run the compiler batch environment. Link compile configurations to target object library files (e.g. `otk_cpp.lib`). Verify module dependencies in `protk.dat` before debugging.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to write Creo J-Link Java macros to export assembly metadata?',
+    a: 'Set up a Java project importing `com.ptc.cip` and `com.ptc.pfc` libraries. Write a J-Link script starting a session: `Session s = pfcGlobal.GetProESession()`. Traverse assembly models, query parameters like Part Number, and write variables to an external CSV file.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to configure post-processors in Creo NC for CNC machine toolpath exports?',
+    a: 'Go to Manufacturing options > Machine Tool Setup. Set the Post-Processor directory to point to your `.popt` configuration files folder. Right-click your Toolpath sequence, select \'Generate NC Code\', and translate track files into G-code.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to configure electrical wiring spools in Creo Cabling?',
+    a: 'Cabling harness runs require wire spool definitions. Import your XML schematic netlists. Create spools in Cabling menu, defining wire colors, diameter values, and linear weight parameters. Creo will draw dynamic 3D harnesses matching netlist connections.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to repair surface tears in imported STEP models using Creo IDD?',
+    a: 'Imported STEP files often contain geometric gaps. Open the model in Creo, right-click the imported feature, select Edit Definition. Activate Import Data Doctor (IDD). Use the \'Heal\' or \'Stitch\' commands, set gaps tolerance, and close boundary loops.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to configure dynamic drawing sheet templates in Creo?',
+    a: 'Create a new drawing sheet template (.drw). Design border blocks and title frames. Insert dynamic parameters in cell blocks: `&dwg_name`, `&todays_date`, `&model_name`. Save sheet settings as a template to allow auto-fill features on model load.'
+  },
+  {
+    category: 'standards',
+    tools: ['creo'],
+    q: 'How to enforce ASME Y14.5 drafting compliance in Creo?',
+    a: 'Drafting standards are file-specific. Open your model, go to File > Prepare > Model Properties > Detail Options. Set `drawing_text_height` and dimension line offsets. Set standard parameters to ASME or ISO to enforce uniform drawings formatting.'
+  },
+  {
+    category: 'performance',
+    tools: ['freecad'],
+    q: 'How to resolve Coin3D viewport redraw lag in FreeCAD?',
+    a: 'Redraw lag occurs when FreeCAD processes complex rendering calculations. To optimize: Go to Edit > Preferences > Display. Under Navigation, disable \'Pre-selection highlight\' and change anti-aliasing to Off. This reduces graphic shader overheads on large layouts.'
+  },
+  {
+    category: 'performance',
+    tools: ['freecad'],
+    q: 'How to configure OpenCL GPU acceleration in FreeCAD?',
+    a: 'OpenCL acceleration speeds up mesh calculations. Open Edit > Preferences > Mesh. Go to the OpenCL tab, check \'Enable OpenCL acceleration\', and select your dedicated GPU platform from the list. This speeds up mesh boolean and refining sweeps.'
+  },
+  {
+    category: 'performance',
+    tools: ['freecad'],
+    q: 'How to restore slow FreeCAD startup speeds by purging user.cfg?',
+    a: 'Launch speed degrades as local configuration database caches grow. Close FreeCAD. Navigate to `%APPDATA%\\FreeCAD\\` and delete `user.cfg` and `system.cfg`. FreeCAD will rebuild clean configuration databases on next launch, restoring startup speeds.'
+  },
+  {
+    category: 'performance',
+    tools: ['freecad'],
+    q: 'How to resolve FreeCAD AppImage segment fault crashes on Linux startup?',
+    a: 'Segfault crashes point to local glibc or libGL library version conflicts. To resolve: Run the AppImage from the command line using environment variables: `LD_PRELOAD=/usr/lib/libGL.so ./FreeCAD.AppImage`. This forces FreeCAD to bind to the system graphics library.'
+  },
+  {
+    category: 'performance',
+    tools: ['freecad'],
+    q: 'How to break infinite recomputation loops in FreeCAD models?',
+    a: 'Recomputation loops occur when features reference each other recursively in the tree. To trace: Right-click the document in the tree view, select Dependency Graph. Find red cyclic reference links, open the sketches, and rebuild references to run unidirectionally.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to avoid topological naming feature breaks in FreeCAD?',
+    a: 'Sketching directly on dynamic solid faces causes parent references to shift during modifications, breaking downstream features. Best practice: Create Datum Planes and Sketcher Binders. Bind sketches to these static datum planes to isolate features from topology shifts.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to stitch broken surface gaps in FreeCAD imported STEP models?',
+    a: 'STEP geometries can import with surface tears. Open the Part workbench. Select the imported shape, go to Part > Shape Healing. Run \'Identify Gaps\'. Select \'Stitch Gaps\' and specify tolerance (e.g. 0.05mm) to stitch faces into a manifold solid shape.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to design custom drawing templates in FreeCAD TechDraw workbench?',
+    a: 'TechDraw templates are SVG files. Design your title frames and border blocks in Inkscape. Use tag attributes to define editable cells: `<freecad:editable-text id="title">`. Save the SVG, go to TechDraw options, select the template to display sheets.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to configure global geometric precision variables for FreeCAD STEP exports?',
+    a: 'Go to Edit > Preferences > Import-Export > STEP. Change Schema from \'AP203\' to \'AP214\' or \'AP242\' (which preserves assembly structures and tolerances). Set the coordinate precision limit to 1e-06 to prevent rounding errors during STEP file translations.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to resolve constraint redundancy solver failures in FreeCAD Sketcher?',
+    a: 'Redundancy warnings happen when multiple constraints define the same geometric dimension. Select the sketch, check the Solver messages panel. Click on the blue hyperlinked redundant constraint IDs and press Delete. Ensure all sketches are fully constrained before feature sweeps.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to integrate and configure the CalculiX solver in FreeCAD FEM?',
+    a: 'Go to Edit > Preferences > FEM. Under CalculiX, set the path pointing to your local `ccx.exe` installation binary. In your FEM Analysis container, add a Solver CalculiX element, set the analysis type to static, and run the calculation.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to configure CAM post-processors in FreeCAD Path workbench?',
+    a: 'Open the Path CAM workbench. Select your Job parameters, go to Output tab. Set the Post-Processor dropdown to match your CNC controller dialect (e.g. LinuxCNC, Fanuc, or Grbl). Click \'Post-Process\' to translate toolpath tracks to clean G-code.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to write Python macro scripts to automate feature creation in FreeCAD?',
+    a: 'Activate the Python Console (View > Panels). Import target modules: `import FreeCAD as App, Part`. Create a new document: `doc = App.newDocument()`. Draw a shape: `box = Part.makeBox(10,10,10)`. Add the shape to the document tree: `Part.show(box)`. Save the macro as `.FCMacro`.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to execute FreeCAD Python automation scripts headlessly?',
+    a: 'To run scripts without loading the GUI: Open Command Prompt, execute: `FreeCADcmd.exe --run script.py`. This executes the Python operations silently, ideal for automated server geometry validations or conversion tasks.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to manually install external workbenches offline in FreeCAD Addon Manager?',
+    a: 'If the online manager fails to connect: Download the target workbench repository zip file from GitHub. Unzip and rename the folder. Place it in `%APPDATA%\\FreeCAD\\Mod\\` (on Windows) or `~/.local/share/FreeCAD/Mod/` (on Linux). Restart FreeCAD to load the workbench.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to configure drawing projection standards in TechDraw preferences?',
+    a: 'Go to Edit > Preferences > TechDraw. Under the Standards tab, locate the Projection option. Select \'First Angle\' (European standard) or \'Third Angle\' (US standard). Save preferences. This automatically updates drawing layouts on sheet generation.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to convert imported STL mesh files to solids in FreeCAD?',
+    a: 'STL files contain non-solid facets. Open Part workbench. Import STL. Select the mesh, go to Part > Create Shape from Mesh. Audits shape: select shape, go to Part > Convert to Solid. Run Refine Shape to clean up flat faces, making the shape openable in PartDesign.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to define parametric variables in FreeCAD using Spreadsheet workbench?',
+    a: 'Open Spreadsheet workbench. Create a sheet. Input parameters (e.g. `Width = 50`). Right-click the cell, select Properties > Alias, set Alias name to `width`. In PartDesign sketcher, enter `=Spreadsheet.width` in the dimension constraint box to link variables.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to lock user preferences in FreeCAD for enterprise deployments?',
+    a: 'IT managers can enforce standard settings. Configure options on a template client computer. Copy the generated `user.cfg` file from `%APPDATA%\\FreeCAD\\`. During silent deployment, copy this config file silently to user workstations via deployment scripts.'
+  },
+  {
+    category: 'standards',
+    tools: ['freecad'],
+    q: 'How to repair corrupted FreeCAD document files?',
+    a: 'FreeCAD files (.FCStd) are zip files. If a file is corrupt: Rename extension from `.FCStd` to `.zip`. Unzip the archive. Inspect `Document.xml` for syntax errors using an XML editor. Repair nodes, zip files back, and rename the extension to `.FCStd` to recover your design.'
+  },
+
 ];

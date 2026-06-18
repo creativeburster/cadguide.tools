@@ -629,6 +629,8 @@ function getCategoryTabsForTool(tool: any): { id: string; label: string }[] {
   const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
   const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
   const isEDA = industries.some((i: string) => /electronics|eda|pcb|hardware/i.test(i)) || tool.category_id === 'c6' || tool.category_id === 'eda' || tool.slug === 'altium-designer';
+  const isCAE = industries.some((i: string) => /simulation|analysis|cae|finite/i.test(i)) || tool.category_id === 'cae' || tool.slug === 'ansys';
+  const isFreeCAD = tool.slug === 'freecad';
   const isOpenSource = (tool.pricing_type as string) === 'Open Source' || (tool.pricing_type as string) === 'Free';
 
   let filtered = defaultTabs;
@@ -637,6 +639,30 @@ function getCategoryTabsForTool(tool: any): { id: string; label: string }[] {
   }
 
   return filtered.map(t => {
+    if (isFreeCAD) {
+      if (t.id === 'migration') return { id: t.id, label: 'Python Macro Scripting' };
+      if (t.id === 'manufacturing') return { id: t.id, label: 'PartDesign sketcher & CAM' };
+      if (t.id === 'printing') return { id: t.id, label: 'TechDraw 2D Sheet Templates' };
+      if (t.id === 'standards') return { id: t.id, label: 'OpenCASCADE healing & config' };
+    }
+    if (isCAE) {
+      if (t.id === 'migration') return { id: t.id, label: 'APDL & Solver Scripting' };
+      if (t.id === 'manufacturing') return { id: t.id, label: 'HPC Solver & GPU Tuning' };
+      if (t.id === 'printing') return { id: t.id, label: 'Post-Processing Reports' };
+      if (t.id === 'standards') return { id: t.id, label: 'FEA Mesh & Licensing Setup' };
+    }
+    if (tool.slug === 'catia') {
+      if (t.id === 'migration') return { id: t.id, label: 'CAA API & ENOVIA Sync' };
+      if (t.id === 'manufacturing') return { id: t.id, label: 'GSD Surfaces & NC Toolpath' };
+      if (t.id === 'printing') return { id: t.id, label: 'Drafting Sheet Formats' };
+      if (t.id === 'standards') return { id: t.id, label: 'DSLS & CAD Formats' };
+    }
+    if (tool.slug === 'creo') {
+      if (t.id === 'migration') return { id: t.id, label: 'OTK API & J-Link Customization' };
+      if (t.id === 'manufacturing') return { id: t.id, label: 'Skeleton Top-down & Sheet Metal' };
+      if (t.id === 'printing') return { id: t.id, label: 'config.pro Drawing Outputs' };
+      if (t.id === 'standards') return { id: t.id, label: 'Windchill PLM & Licensing' };
+    }
     if (isBIM) {
       if (t.id === 'migration') return { id: t.id, label: 'Dynamo & API Automation' };
       if (t.id === 'manufacturing') return { id: t.id, label: 'MEP & Structural Detailing' };
@@ -671,11 +697,69 @@ function getMappedCategoryInfo(category: string, tool: any, originalTitle: strin
   const isBIM = industries.some((i: string) => /bim|architect|civil|building/i.test(i)) || tool.category_id === 'bim';
   const isMCAD = industries.some((i: string) => /mechanical|mfg|automotive|aerospace/i.test(i)) || tool.category_id === 'mfg';
   const isEDA = industries.some((i: string) => /electronics|eda|pcb|hardware/i.test(i)) || tool.category_id === 'c6' || tool.category_id === 'eda' || tool.slug === 'altium-designer';
+  const isCAE = industries.some((i: string) => /simulation|analysis|cae|finite/i.test(i)) || tool.category_id === 'cae' || tool.slug === 'ansys';
+  const isFreeCAD = tool.slug === 'freecad';
 
   let title = originalTitle;
   let desc = originalDesc;
 
-  if (isBIM) {
+  if (isFreeCAD) {
+    if (category === 'migration') {
+      title = 'Python Macro Scripting';
+      desc = `Write Python macro scripts, run headless background geometry audits, and customize FreeCAD interfaces.`;
+    } else if (category === 'manufacturing') {
+      title = 'PartDesign sketcher & CAM';
+      desc = `Configure Path CAM G-code post-processors, run CalculiX FEM solvers, and design sketcher constraints in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'TechDraw 2D Sheet Templates';
+      desc = `Design custom SVG title block frames, manage TechDraw projection standard views, and export PDF sheets in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'OpenCASCADE healing & config';
+      desc = `Stitch imported STEP non-manifold shells, heal topological naming issues, and lock user preferences in ${tool.name}.`;
+    }
+  } else if (isCAE) {
+    if (category === 'migration') {
+      title = 'APDL & Solver Scripting';
+      desc = `Write ANSYS Parametric Design Language (APDL) batch solver input files and configure ACT Python extensions in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      title = 'HPC Solver & GPU Tuning';
+      desc = `Configure Intel MPI cluster networks, allocate GPU solver cores, and optimize SSD out-of-core scratch spaces in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'Post-Processing Reports';
+      desc = `Map nCode dynamic structural fatigue simulations, extract modal mass factors, and generate solver logs in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'FEA Mesh & Licensing Setup';
+      desc = `Configure FLEXlm port whitelists, refine boundary layer meshes (y+ limits), and debug nonlinear contact convergences in ${tool.name}.`;
+    }
+  } else if (tool.slug === 'catia') {
+    if (category === 'migration') {
+      title = 'CAA API & ENOVIA Sync';
+      desc = `Develop C++ CAA components, compile workspace identities, and automate BOM properties data exports in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      title = 'GSD Surfaces & NC Toolpath';
+      desc = `Configure Generative Shape Design (GSD) healing tolerances, CAM NC toolpaths post-processors, and Sheetmetal SMD K-Factors in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'Drafting Sheet Formats';
+      desc = `Manage sheet projection directions, configure drawing sheet background frame blocks, and export drafting sheets in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'DSLS & CAD Formats';
+      desc = `Configure DSLS licensing network ports, restore corrupted CATSettings panels, and heal STEP AP242 data transfer geometries in ${tool.name}.`;
+    }
+  } else if (tool.slug === 'creo') {
+    if (category === 'migration') {
+      title = 'OTK API & J-Link Customization';
+      desc = `Compile custom C++ OTK applications, configure J-Link Java metadata queries, and automate model properties in ${tool.name}.`;
+    } else if (category === 'manufacturing') {
+      title = 'Skeleton Top-down & Sheet Metal';
+      desc = `Configure assembly skeleton reference paths, setup Creo Sheetmetal bend tables (.tbl), and design wire harness spools in ${tool.name}.`;
+    } else if (category === 'printing') {
+      title = 'config.pro Drawing Outputs';
+      desc = `Configure drawing border templates, customize config.pro output parameters, and manage drafting views in ${tool.name}.`;
+    } else if (category === 'standards') {
+      title = 'Windchill PLM & Licensing';
+      desc = `Configure ptc.opt options files, manage Windchill workspace client caches, and diagnose lmgrd server errors in ${tool.name}.`;
+    }
+  } else if (isBIM) {
     if (category === 'migration') {
       title = 'Dynamo & API Automation';
       desc = `Integrate visual scripting parameters, compile Zero Touch C# components, and automate model checking in ${tool.name}.`;
