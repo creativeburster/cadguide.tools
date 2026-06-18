@@ -17,7 +17,7 @@ export function Navbar() {
     { name: 'Matchmaker', href: '/matchmaker' },
     { name: 'Toolbox', href: '/toolbox' },
     { name: 'Deals', href: '/deals' },
-    { name: 'Guide', href: '/guides' },
+    ...(process.env.NODE_ENV === 'development' ? [{ name: 'Guide', href: '/guides' }] : []),
   ];
 
   return (

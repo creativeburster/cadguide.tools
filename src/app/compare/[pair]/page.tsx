@@ -645,20 +645,24 @@ export default async function ComparePairPage(
   );
 
   // Metropolitan Interlink: Cross-linked Guides for both tools
-  const guidesForA = ARTICLES_LIST
-    .filter(g => isArticleCompatibleWithTool(g.title, g.category, a))
-    .slice(0, 2)
-    .map(g => {
-      const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, a);
-      return { ...g, title: loc.title, excerpt: loc.excerpt, slug: `${a.slug}-${g.category}-${g.id.split('-').pop()}` };
-    });
-  const guidesForB = ARTICLES_LIST
-    .filter(g => isArticleCompatibleWithTool(g.title, g.category, b))
-    .slice(0, 2)
-    .map(g => {
-      const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, b);
-      return { ...g, title: loc.title, excerpt: loc.excerpt, slug: `${b.slug}-${g.category}-${g.id.split('-').pop()}` };
-    });
+  const guidesForA = process.env.NODE_ENV === 'development'
+    ? ARTICLES_LIST
+        .filter(g => isArticleCompatibleWithTool(g.title, g.category, a))
+        .slice(0, 2)
+        .map(g => {
+          const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, a);
+          return { ...g, title: loc.title, excerpt: loc.excerpt, slug: `${a.slug}-${g.category}-${g.id.split('-').pop()}` };
+        })
+    : [];
+  const guidesForB = process.env.NODE_ENV === 'development'
+    ? ARTICLES_LIST
+        .filter(g => isArticleCompatibleWithTool(g.title, g.category, b))
+        .slice(0, 2)
+        .map(g => {
+          const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, b);
+          return { ...g, title: loc.title, excerpt: loc.excerpt, slug: `${b.slug}-${g.category}-${g.id.split('-').pop()}` };
+        })
+    : [];
   // Dedupe by slug
   const seenSlugs = new Set<string>();
   const mergedGuides = [...guidesForA, ...guidesForB].filter(g => {
@@ -734,9 +738,9 @@ export default async function ComparePairPage(
     'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad'
   ];
 
-  const is3DMCAD = process.env.NODE_ENV !== 'development' && kernelTools.includes(a.slug) && kernelTools.includes(b.slug);
-  const hasShieldA = process.env.NODE_ENV !== 'development' && licensingTools.includes(a.slug);
-  const hasShieldB = process.env.NODE_ENV !== 'development' && licensingTools.includes(b.slug);
+  const is3DMCAD = process.env.NODE_ENV === 'development' && kernelTools.includes(a.slug) && kernelTools.includes(b.slug);
+  const hasShieldA = process.env.NODE_ENV === 'development' && licensingTools.includes(a.slug);
+  const hasShieldB = process.env.NODE_ENV === 'development' && licensingTools.includes(b.slug);
 
   const exploreBlock = (
     <section key="explore-block" className="mt-10 pt-6 border-t border-slate-100">

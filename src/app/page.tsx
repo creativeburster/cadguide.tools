@@ -219,7 +219,8 @@ function HomeBody() {
       </section>
 
       {/* 3.5. EXPERT KNOWLEDGE CENTER & SUB-ENCYCLOPEDIA GATEWAY */}
-      <section className="bg-white py-24 border-b border-slate-100">
+      {process.env.NODE_ENV === 'development' && (
+        <section className="bg-white py-24 border-b border-slate-100">
         <div className="max-w-[1360px] mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="max-w-2xl">
@@ -321,6 +322,7 @@ function HomeBody() {
           </div>
         </div>
       </section>
+      )}
 
       {/* 4. FREE INTERACTIVE TOOLBOX SHELF */}
       <section className="bg-slate-50 py-24 border-y border-slate-100/50">
@@ -532,11 +534,13 @@ function HomeBody() {
               <div className="mt-1 text-xs text-slate-600">16 technical spotlights + 7 discipline reviews</div>
             </Link>
             {/* Added Box 9: Guides Library */}
-            <Link href="/guides" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6,160+ Directives</div>
-              <div className="mt-1 text-lg font-black text-slate-900">Guides Library</div>
-              <div className="mt-1 text-xs text-slate-600">Troubleshooting playbooks, custom setup scripts…</div>
-            </Link>
+            {process.env.NODE_ENV === 'development' && (
+              <Link href="/guides" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6,160+ Directives</div>
+                <div className="mt-1 text-lg font-black text-slate-900">Guides Library</div>
+                <div className="mt-1 text-xs text-slate-600">Troubleshooting playbooks, custom setup scripts…</div>
+              </Link>
+            )}
             {/* Added Box 10: Interactive Toolbox */}
             <Link href="/toolbox" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">25+ Tools</div>
