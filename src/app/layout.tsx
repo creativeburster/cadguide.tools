@@ -55,23 +55,20 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${inter.className} min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans`}>
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            if (window.location.hostname === 'cadguide.tools' || window.location.hostname === 'www.cadguide.tools') {
-              var script = document.createElement('script');
-              script.async = true;
-              script.src = "https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC";
-              document.head.appendChild(script);
-
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-2NC8HV27GC');
-            }
-          `}
-        </Script>
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.className} min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans`}>
         <Script id="brandreward-sdk" strategy="lazyOnload">
           {`
             if (window.location.hostname === 'cadguide.tools' || window.location.hostname === 'www.cadguide.tools') {
