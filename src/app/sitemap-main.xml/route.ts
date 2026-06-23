@@ -34,7 +34,8 @@ export async function GET() {
     { url: '/open-source', priority: 0.9, changefreq: 'monthly' },
     { url: '/pricing', priority: 0.9, changefreq: 'monthly' },
     { url: '/deals', priority: 0.90, changefreq: 'daily' },
-    { url: '/guides', priority: 0.95, changefreq: 'daily' },
+    // REMOVED: /guides — already blocked by robots.txt Disallow + meta noindex + 302→404.
+    // Submitting it here at priority 0.95 contradicts all three signals and harms site trust.
     { url: '/about', priority: 0.50, changefreq: 'monthly' },
     { url: '/contact', priority: 0.50, changefreq: 'monthly' },
     { url: '/privacy', priority: 0.30, changefreq: 'monthly' },

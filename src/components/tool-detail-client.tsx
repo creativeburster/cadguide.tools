@@ -1099,8 +1099,8 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
             </section>
 
-            {/* Guides Section */}
-            {relatedGuides.length > 0 && (
+            {/* Guides Section — dev-only; guides are noindex+302→404 in production */}
+            {process.env.NODE_ENV === 'development' && relatedGuides.length > 0 && (
               <section id="guides" className="scroll-mt-36 space-y-6 md:space-y-10">
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600">

@@ -671,7 +671,7 @@ export default async function ComparePairPage(
     return true;
   }).slice(0, 4);
 
-  const guidesBlock = process.env.NODE_ENV === 'development' ? null : (mergedGuides.length > 0 ? (
+  const guidesBlock = process.env.NODE_ENV !== 'development' ? null : (mergedGuides.length > 0 ? (
     <section key="guides-block" className="mb-8 rounded-2xl bg-white border border-slate-200 p-6 shadow-xs">
       <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
         <svg className={`w-5 h-5 ${layout.accentText}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
