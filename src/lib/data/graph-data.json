@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    { "id": "autocad", "name": "AutoCAD", "type": "Tool", "val": 26, "color": "#38bdf8", "desc": "Industry-standard 2D drafting and basic 3D modeling platform. Powered by ASM kernel and heavily extensible." },
+    { "id": "solidworks", "name": "SolidWorks", "type": "Tool", "val": 24, "color": "#38bdf8", "desc": "High-precision parametric 3D CAD software for mechanical design. Built on top of the Parasolid kernel." },
+    { "id": "revit", "name": "Revit", "type": "Tool", "val": 22, "color": "#38bdf8", "desc": "Leading Building Information Modeling (BIM) authoring software for collaborative architectural design." },
+    { "id": "freecad", "name": "FreeCAD", "type": "Tool", "val": 20, "color": "#38bdf8", "desc": "Open-source parametric 3D modeler featuring high modularity and built-in Python scripting." },
+    { "id": "error-0024", "name": "Fatal Error 0x0024", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "High-frequency AutoCAD memory address crash caused by corrupt temporary drawing blocks." },
+    { "id": "k-factor", "name": "K-Factor Calculations", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Sheet metal neutral axis offset coefficient used in SolidWorks to compute flat pattern dimensions." },
+    { "id": "sw-pdm", "name": "SolidWorks PDM Lock", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Product Data Management server vault module prone to lock local drawing caches during offline states." },
+    { "id": "viewport-lag", "name": "Viewport OpenGL Lag", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "SolidWorks display stutter bug resolved by certified workstation graphics drivers or registry overrides." },
+    { "id": "flexlm-15", "name": "FLEXlm Error -15", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Network license error -15,10 indicating the client cannot reach the license server manager port." },
+    { "id": "registry-socket", "name": "Registry Socket Tuning", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Windows Registry optimization adjusting MaxUserPort to prevent socket depletion stutters." },
+    { "id": "hatch-leak", "name": "Hatch Render Leak", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Severe viewport stutters and drawing memory leakage caused by ultra-dense hatch boundaries." },
+    { "id": "sw-swap", "name": "System Swap Tuning", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Windows Pagefile and system commit charge tuning preventing SolidWorks out-of-memory crashes." },
+    { "id": "parasolid-knit", "name": "Parasolid Sheet Knitting", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Parasolid tolerance mismatch and knitting diagnostics resolving imported non-native geometry gaps." },
+    { "id": "revit-coords", "name": "BIM Shared Coordinates", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "Shared coordinates alignment and survey point offset resolution preventing model drift in federated BIM links." },
+    { "id": "revit-ifc-export", "name": "BIM IFC4 Export Schema", "type": "Concept", "val": 14, "color": "#c084fc", "desc": "IFC4/IFC2x3 schema class mapping and property set (Pset) configuration ensuring lossless openBIM export." },
+    { "id": "revit-family-purge", "name": "BIM RFA Family Purge", "type": "Concept", "val": 13, "color": "#c084fc", "desc": "Revit family size optimization and parameter purge protocols resolving severe view redraw stutters." }
+  ],
+  "links": [
+    { "source": "autocad", "target": "error-0024", "value": 2 },
+    { "source": "autocad", "target": "flexlm-15", "value": 2 },
+    { "source": "autocad", "target": "registry-socket", "value": 1.5 },
+    { "source": "autocad", "target": "hatch-leak", "value": 2 },
+    { "source": "solidworks", "target": "k-factor", "value": 2 },
+    { "source": "solidworks", "target": "sw-pdm", "value": 1.5 },
+    { "source": "solidworks", "target": "viewport-lag", "value": 2 },
+    { "source": "solidworks", "target": "sw-swap", "value": 1.5 },
+    { "source": "solidworks", "target": "parasolid-knit", "value": 2 },
+    { "source": "revit", "target": "revit-coords", "value": 2 },
+    { "source": "revit", "target": "revit-ifc-export", "value": 2 },
+    { "source": "revit", "target": "revit-family-purge", "value": 2 }
+  ]
+}

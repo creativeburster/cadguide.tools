@@ -9,6 +9,18 @@ import { KERNEL_TOOLS } from '@/lib/kernel-data';
 const BASE_URL = 'https://cadguide.tools';
 
 export async function GET() {
+  if (process.env.NODE_ENV === 'production') {
+    const emptyXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+</urlset>`;
+    return new NextResponse(emptyXml, {
+      headers: {
+        'Content-Type': 'application/xml',
+        'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+      },
+    });
+  }
+
   // Fixed content-version date — only update this when content is substantively changed.
   // Do NOT use new Date() here; a dynamic timestamp causes Googlebot to re-crawl unchanged
   // pages every time the sitemap is fetched, wasting crawl budget.

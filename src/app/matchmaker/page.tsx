@@ -126,7 +126,11 @@ export default function Page() {
                 <BookOpen className="w-4 h-4 text-rose-500" /> Hot Technical Guides
               </h3>
               <div className="space-y-1">
-                {[
+                {process.env.NODE_ENV === 'development' ? (
+                  <div className="text-[10px] text-slate-400 font-bold bg-slate-50 border border-slate-100 p-4 rounded-xl text-center select-none">
+                    🔒 Guides hidden in Local Dev (30-Day Plan Sandbox)
+                  </div>
+                ) : [
                   { name: 'AutoCAD 0x0024 Fatal Error Fix', slug: 'autocad-troubleshooting-0' },
                   { name: 'FLEXlm Socket Port Binding Patch', slug: 'autocad-troubleshooting-1' },
                   { name: 'SolidWorks Performance Setup', slug: 'solidworks-performance-1' },

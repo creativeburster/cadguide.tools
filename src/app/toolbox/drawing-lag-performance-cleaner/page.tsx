@@ -46,7 +46,8 @@ export default function DrawingLagCleanerPage() {
           <DrawingLagCleanerClient />
         </section>
 
-        {/* Related Expert Guides Section */}
+        {/* Related Expert Guides Section — dev-only; guides are noindex+302→404 in production */}
+        {process.env.NODE_ENV === 'development' && (
         <section className="pb-24 pt-4 max-w-[1200px] mx-auto px-6 md:px-12">
           <div className="border-t border-slate-200/80 pt-12">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
@@ -83,6 +84,7 @@ export default function DrawingLagCleanerPage() {
             </div>
           </div>
         </section>
+        )}
       </main>
     </>
   );

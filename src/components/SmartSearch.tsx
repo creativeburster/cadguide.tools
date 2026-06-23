@@ -232,7 +232,7 @@ export function SmartSearch() {
                   <div className="p-2 border-b border-slate-100 bg-slate-50/50">
                     <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-blue-600 flex items-center gap-1.5">
                       <FileText className="w-3.5 h-3.5" />
-                      Matching Guides & Comparisons
+                      {process.env.NODE_ENV === 'development' ? "Matching Guides & Comparisons" : "Matching Lists & Comparisons"}
                     </div>
                     <div className="space-y-0.5 mt-1">
                       {searchSuggestions.articles.map((article) => (
@@ -358,7 +358,7 @@ export function SmartSearch() {
                   <div className="p-2 bg-slate-50/50">
                     <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-blue-600 flex items-center gap-1.5">
                       <FileText className="w-3.5 h-3.5" />
-                      Related Guides & Comparisons
+                      {process.env.NODE_ENV === 'development' ? "Related Guides & Comparisons" : "Related Lists & Comparisons"}
                     </div>
                     <div className="space-y-0.5 mt-1">
                       {searchSuggestions.articles.map((article) => (

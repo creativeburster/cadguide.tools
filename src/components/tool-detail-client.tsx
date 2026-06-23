@@ -26,14 +26,14 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const bestDeal = getBestDealForTool(tool.id);
 
   // Helper flags to render contextual B-End compliance & standards guides inside sidebar
-  const hasLicensingShield = [
+  const hasLicensingShield = process.env.NODE_ENV === 'development' && [
     'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
     'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
     'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
     'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad'
   ].includes(tool.slug);
 
-  const hasDraftingStandards = [
+  const hasDraftingStandards = process.env.NODE_ENV === 'development' && [
     'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
     'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
     'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
@@ -95,16 +95,18 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   );
 
   // 1. 获取所有与当前工具兼容的指南
-  const allCompatibleGuides = ARTICLES_LIST.filter((g) =>
-    isArticleCompatibleWithTool(g.title, g.category, tool)
-  );
+  const allCompatibleGuides = process.env.NODE_ENV === 'development'
+    ? ARTICLES_LIST.filter((g) => isArticleCompatibleWithTool(g.title, g.category, tool))
+    : [];
 
   // 2. 切出前 10 篇（这 10 篇是在 guides/[slug] 的 generateStaticParams 中为该工具渲染出来的全部有效路由）
   // 为了防止某些极其特殊或严格熔断条件下的工具导致文章过少，这里加入防空置兜底：
   // 若少于 4 篇（极端边缘情况），则从 ARTICLES_LIST 借调非商业、安全的通用指南进行补位。
-  let safeAvailableGuides = allCompatibleGuides.slice(0, 20);
+  let safeAvailableGuides = process.env.NODE_ENV === 'development'
+    ? allCompatibleGuides.slice(0, 20)
+    : [];
   
-  if (safeAvailableGuides.length < 4) {
+  if (process.env.NODE_ENV === 'development' && safeAvailableGuides.length < 4) {
     const fallbackPool = ARTICLES_LIST.filter(
       (g) =>
         !safeAvailableGuides.some((existing) => existing.id === g.id) &&
@@ -117,18 +119,20 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   }
 
   // 3. 底部关联的 4 篇相关指南，直接取前 4 篇并进行本地化翻译
-  const relatedGuides = safeAvailableGuides
-    .slice(0, 4)
-    .map((g) => {
-      const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
-      return {
-        ...g,
-        title: localized.title,
-        excerpt: localized.excerpt,
-        keyword: localized.keyword,
-        slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
-      };
-    });
+  const relatedGuides = process.env.NODE_ENV === 'development'
+    ? safeAvailableGuides
+        .slice(0, 4)
+        .map((g) => {
+          const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
+          return {
+            ...g,
+            title: localized.title,
+            excerpt: localized.excerpt,
+            keyword: localized.keyword,
+            slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
+          };
+        })
+    : [];
 
 
   // Surface Compatibility / Trust sub-nav entries only when at least
@@ -1095,8 +1099,8 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
             </section>
 
-            {/* Guides Section */}
-            {relatedGuides.length > 0 && (
+            {/* Guides Section — dev-only; guides are noindex+302→404 in production */}
+            {process.env.NODE_ENV === 'development' && relatedGuides.length > 0 && (
               <section id="guides" className="scroll-mt-36 space-y-6 md:space-y-10">
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600">

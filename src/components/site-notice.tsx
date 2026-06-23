@@ -28,7 +28,7 @@ export function SiteNotice() {
     <div className="bg-blue-600 text-white text-sm relative z-[300] site-notice">
       <div className="container mx-auto px-4 py-2.5 flex items-center justify-center gap-2">
         <span className="font-medium text-center pr-6">
-          Find and compare CAD & BIM software. Access objective reviews, active <Link href="/deals" className="underline font-bold hover:text-sky-100 transition-colors">deals</Link>, and professional troubleshooting guides.
+          Find and compare CAD & BIM software. Access objective reviews, comparisons, and active <Link href="/deals" className="underline font-bold hover:text-sky-100 transition-colors">deals</Link>{process.env.NODE_ENV === 'development' && ", and professional troubleshooting guides"}.
         </span>
         <button
           onClick={handleDismiss}
