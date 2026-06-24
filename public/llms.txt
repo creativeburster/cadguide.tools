@@ -17,58 +17,58 @@ CADGuide.tools is an independent comparison and review platform for professional
 ## Core Sections
 
 ### Tool Directory
-- `/tools` — Full catalog of 240+ CAD tools, filterable by category, platform, pricing
-- `/tools/[slug]` — Individual tool pages with benchmarks, specs, pricing, and expert scores (e.g. `/tools/autocad`, `/tools/solidworks`, `/tools/freecad`)
-- `/all-tools` — A-Z flat index of every tool in the database
+- [Tool Directory](https://cadguide.tools/tools) — Full catalog of 240+ CAD tools, filterable by category, platform, pricing
+- [Individual Tool Pages](https://cadguide.tools/tools) — Individual tool pages with benchmarks, specs, pricing, and expert scores (e.g. [/tools/autocad](https://cadguide.tools/tools/autocad), [/tools/solidworks](https://cadguide.tools/tools/solidworks), [/tools/freecad](https://cadguide.tools/tools/freecad))
+- [All Tools A-Z Flat Index](https://cadguide.tools/all-tools) — A-Z flat index of every tool in the database
 
 ### Comparison Hub
-- `/compare` — Entry page for side-by-side CAD software comparison
-- `/compare/[tool-a]-vs-[tool-b]` — Direct head-to-head pages (e.g. `/compare/autocad-vs-zwcad`, `/compare/solidworks-vs-freecad`)
-- `/alternatives/[slug]` — "Best alternatives to X" pages for every major tool
-- `/best/[category]` — Category best-of lists (e.g. `/best/2d-cad`, `/best/bim`, `/best/3d-modeling`)
-- `/best/feature/[feature]` — Feature-specific best-of lists (e.g. `/best/feature/parametric-modeling`, `/best/feature/cloud-collaboration`)
+- [Compare CAD Software](https://cadguide.tools/compare) — Entry page for side-by-side CAD software comparison
+- [Direct Head-to-Head Compare](https://cadguide.tools/compare) — Direct head-to-head pages (e.g. [/compare/autocad-vs-zwcad](https://cadguide.tools/compare/autocad-vs-zwcad), [/compare/solidworks-vs-freecad](https://cadguide.tools/compare/solidworks-vs-freecad))
+- [Alternatives Catalog](https://cadguide.tools/tools) — "Best alternatives to X" pages for every major tool (e.g., `/alternatives/[slug]`)
+- [Best Categories](https://cadguide.tools/best/2d-cad) — Category best-of lists (e.g. [/best/2d-cad](https://cadguide.tools/best/2d-cad), [/best/bim](https://cadguide.tools/best/bim), [/best/3d-modeling](https://cadguide.tools/best/3d-modeling))
+- [Best Features](https://cadguide.tools/best/feature/parametric-modeling) — Feature-specific best-of lists (e.g. [/best/feature/parametric-modeling](https://cadguide.tools/best/feature/parametric-modeling), [/best/feature/cloud-collaboration](https://cadguide.tools/best/feature/cloud-collaboration))
 
 ### Specialized Directories
-- `/platforms/[platform]` — Tools by OS: `/platforms/mac`, `/platforms/linux`, `/platforms/web`, `/platforms/windows`
-- `/file-formats/[format]` — Tools supporting a file format: `/file-formats/dwg`, `/file-formats/step`, `/file-formats/ifc`
-- `/for/[persona]` — Tools for specific roles: `/for/architects`, `/for/mechanical-engineers`, `/for/civil-engineers`, `/for/students`
-- `/sectors/[sector]` — Tools by industry: `/sectors/architecture`, `/sectors/manufacturing`, `/sectors/aerospace`
-- `/free` — Audited list of all free and freemium CAD tools
-- `/open-source` — Catalog of all open-source CAD tools
-- `/pricing/[model]` — Tools grouped by pricing model: `/pricing/subscription`, `/pricing/perpetual`, `/pricing/freemium`
+- [Platforms Directory](https://cadguide.tools/platforms/windows) — Tools by OS: [/platforms/mac](https://cadguide.tools/platforms/mac), [/platforms/linux](https://cadguide.tools/platforms/linux), [/platforms/web](https://cadguide.tools/platforms/web), [/platforms/windows](https://cadguide.tools/platforms/windows)
+- [File Formats Directory](https://cadguide.tools/file-formats/dwg) — Tools supporting a file format: [/file-formats/dwg](https://cadguide.tools/file-formats/dwg), [/file-formats/step](https://cadguide.tools/file-formats/step), [/file-formats/ifc](https://cadguide.tools/file-formats/ifc)
+- [Personas Directory](https://cadguide.tools/for/architects) — Tools for specific roles: [/for/architects](https://cadguide.tools/for/architects), [/for/mechanical-engineers](https://cadguide.tools/for/mechanical-engineers), [/for/civil-engineers](https://cadguide.tools/for/civil-engineers), [/for/students](https://cadguide.tools/for/students)
+- [Sectors Directory](https://cadguide.tools/sectors/architecture) — Tools by industry: [/sectors/architecture](https://cadguide.tools/sectors/architecture), [/sectors/manufacturing](https://cadguide.tools/sectors/manufacturing), [/sectors/aerospace](https://cadguide.tools/sectors/aerospace)
+- [Free CAD Tools](https://cadguide.tools/free) — Audited list of all free and freemium CAD tools
+- [Open Source CAD Tools](https://cadguide.tools/open-source) — Catalog of all open-source CAD tools
+- [Pricing Directory](https://cadguide.tools/pricing/subscription) — Tools grouped by pricing model: [/pricing/subscription](https://cadguide.tools/pricing/subscription), [/pricing/perpetual](https://cadguide.tools/pricing/perpetual), [/pricing/freemium](https://cadguide.tools/pricing/freemium)
 
 ### Smart Tools
-- `/matchmaker` — 6-question CAD software recommender, matches users to optimal tools
-- `/toolbox` — Interactive engineering toolbox with 70+ web-based utilities
+- [Matchmaker](https://cadguide.tools/matchmaker) — 6-question CAD software recommender, matches users to optimal tools
+- [Toolbox](https://cadguide.tools/toolbox) — Interactive engineering toolbox with 70+ web-based utilities
 
-### Interactive Toolbox Highlights (`/toolbox`)
-- `/toolbox/dwg-version-checker` — Detect DWG file format version from binary header (AC1032, AC1027, etc.)
-- `/toolbox/k-factor-calculator` — DIN 6935 sheet metal bend allowance & K-factor calculator
-- `/toolbox/limits-and-fits-calculator` — ISO 286 shaft/hole tolerance and mechanical fit calculator
-- `/toolbox/thread-drill-size-calculator` — Metric and UNC/UNF tap drill size calculator
-- `/toolbox/beam-deflection-structural-calculator` — Steel I-beam deflection and section modulus calculator
-- `/toolbox/viewport-scale-factor-converter` — CAD viewport scale factor & XP zoom command calculator
-- `/toolbox/shortcuts` — Cross-platform CAD keyboard shortcuts comparison matrix (AutoCAD, ZWCAD, GstarCAD)
-- `/toolbox/fatal-error-diagnostic-wizard` — AutoCAD crash address code diagnostic tool
-- `/toolbox/flexlm-error-15-debugger` — FLEXlm network license error -15 troubleshooter
-- `/toolbox/ctb-plot-style-pen-visualizer` — CAD CTB plot style file reader and pen weight visualizer
-- `/toolbox/dxf-watermark-layer-parser` — DXF educational watermark detector & layer parser
-- `/toolbox/color-rgb-to-aci-matchbox` — RGB/Hex to AutoCAD Index Color (ACI) converter
-- `/toolbox/acad-pgp-alias-editor` — Online ACAD.pgp command alias editor & compiler
-- `/toolbox/flexlm-debug-log-analyzer` — FLEXlm license debug log offline analyzer
+### Interactive Toolbox Highlights
+- [DWG Version Checker](https://cadguide.tools/toolbox/dwg-version-checker) — Detect DWG file format version from binary header (AC1032, AC1027, etc.)
+- [K-Factor Calculator](https://cadguide.tools/toolbox/k-factor-calculator) — DIN 6935 sheet metal bend allowance & K-factor calculator
+- [Limits and Fits Calculator](https://cadguide.tools/toolbox/limits-and-fits-calculator) — ISO 286 shaft/hole tolerance and mechanical fit calculator
+- [Thread Drill Size Calculator](https://cadguide.tools/toolbox/thread-drill-size-calculator) — Metric and UNC/UNF tap drill size calculator
+- [Beam Deflection Calculator](https://cadguide.tools/toolbox/beam-deflection-structural-calculator) — Steel I-beam deflection and section modulus calculator
+- [Viewport Scale Factor Converter](https://cadguide.tools/toolbox/viewport-scale-factor-converter) — CAD viewport scale factor & XP zoom command calculator
+- [Shortcuts Comparison Matrix](https://cadguide.tools/toolbox/shortcuts) — Cross-platform CAD keyboard shortcuts comparison matrix
+- [Fatal Error Diagnostic Wizard](https://cadguide.tools/toolbox/fatal-error-diagnostic-wizard) — AutoCAD crash address code diagnostic tool
+- [FLEXlm Error 15 Debugger](https://cadguide.tools/toolbox/flexlm-error-15-debugger) — FLEXlm network license error -15 troubleshooter
+- [CTB Plot Style Visualizer](https://cadguide.tools/toolbox/ctb-plot-style-pen-visualizer) — CAD CTB plot style file reader and pen weight visualizer
+- [DXF Watermark Layer Parser](https://cadguide.tools/toolbox/dxf-watermark-layer-parser) — DXF educational watermark detector & layer parser
+- [Color RGB to ACI Matchbox](https://cadguide.tools/toolbox/color-rgb-to-aci-matchbox) — RGB/Hex to AutoCAD Index Color (ACI) converter
+- [ACAD PGP Alias Editor](https://cadguide.tools/toolbox/acad-pgp-alias-editor) — Online ACAD.pgp command alias editor & compiler
+- [FLEXlm Debug Log Analyzer](https://cadguide.tools/toolbox/flexlm-debug-log-analyzer) — FLEXlm license debug log offline analyzer
 
 ### Guides & Long-form Content
-- `/guides` — Index of all long-form CAD engineering guides
-- `/guides/[slug]` — Deep-dive articles on troubleshooting, performance, standards, migration, and more
+- [Guides Index](https://cadguide.tools/guides) — Index of all long-form CAD engineering guides
+- [Guides Articles](https://cadguide.tools/guides) — Deep-dive articles on troubleshooting, performance, standards, migration, and more
   - Categories: `troubleshooting`, `performance`, `printing`, `standards`, `deployment`, `migration`, `procurement`, `manufacturing`
 
 ### Site Information
-- `/about` — About CADGuide.tools and the editorial team
-- `/contact` — Contact form
-- `/deals` — Current CAD software promotions and discounts
-- `/matchmaker` — Smart CAD software selector
-- `/privacy` — Privacy policy
-- `/affiliate-disclosure` — Affiliate relationship disclosure
+- [About Us](https://cadguide.tools/about) — About CADGuide.tools and the editorial team
+- [Contact](https://cadguide.tools/contact) — Contact form
+- [Deals & Promotions](https://cadguide.tools/deals) — Current CAD software promotions and discounts
+- [Matchmaker Recommender](https://cadguide.tools/matchmaker) — Smart CAD software selector
+- [Privacy Policy](https://cadguide.tools/privacy) — Privacy policy
+- [Affiliate Disclosure](https://cadguide.tools/affiliate-disclosure) — Affiliate relationship disclosure
 
 ---
 
@@ -94,12 +94,12 @@ CADGuide.tools is an independent comparison and review platform for professional
 
 ## Machine-Readable Sitemaps
 
-- Primary index: https://cadguide.tools/sitemap.xml
-- Tools: https://cadguide.tools/sitemap-tools.xml
-- Toolbox utilities: https://cadguide.tools/sitemap-toolbox.xml
-- Comparisons: https://cadguide.tools/sitemap-compare.xml
-- Guides: https://cadguide.tools/sitemap-guides.xml
-- Alternatives: https://cadguide.tools/sitemap-alternatives.xml
+- [Primary index](https://cadguide.tools/sitemap.xml)
+- [Tools index](https://cadguide.tools/sitemap-tools.xml)
+- [Toolbox utilities index](https://cadguide.tools/sitemap-toolbox.xml)
+- [Comparisons index](https://cadguide.tools/sitemap-compare.xml)
+- [Guides index](https://cadguide.tools/sitemap-guides.xml)
+- [Alternatives index](https://cadguide.tools/sitemap-alternatives.xml)
 
 ---
 
