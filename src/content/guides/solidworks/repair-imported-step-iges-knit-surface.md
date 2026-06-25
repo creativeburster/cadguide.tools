@@ -1,51 +1,200 @@
 ---
-title: "Repairing Imported STEP and IGES Geometry: Using Knit Surface with Custom Tolerances in SolidWorks"
-excerpt: "Learn how to repair broken faces, micro-gaps, and sheet metal tolerances on imported STEP/IGES models in SolidWorks."
-category: "standards"
+title: "Repairing Imported STEP and IGES Geometry in SolidWorks: Surface Knitting and Solid Recovery"
+excerpt: "Workflow for diagnosing and fixing imported STEP/IGES files with gaps, overlapping surfaces, and failed solid body conversion using SolidWorks import diagnostics and surface healing tools."
+category: "troubleshooting"
 softwareSlug: "solidworks"
-keyword: "solidworks step file"
+keyword: "solidworks import step"
 slug: "repair-imported-step-iges-knit-surface"
-author: "Will P. (Enterprise CAD Auditor)"
-readTime: "8 min read"
-date: "June 2026"
+author: "CADGuide Technical Editorial"
+readTime: "13 min read"
+date: "2026-06-25"
+sources:
+  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Import_Diagnostics.htm"
+  - "https://forum.solidworks.com/servlet/JiveServlet/showThread/156789"
 ---
 
-# Repairing Imported STEP and IGES Geometry: Using Knit Surface with Custom Tolerances in SolidWorks
+# Repairing Imported STEP and IGES Geometry in SolidWorks: Surface Knitting and Solid Body Recovery
 
-在进行企业级部署与深度应用开发时，合理优化 **Repairing Imported STEP and IGES Geometry: Using Knit Surface with Custom Tolerances in SolidWorks** 是保证整个 CAD/CAE 设计管线高效流转的关键。本技术规程将针对这一具体的工具配置节点，从系统诊断、底层配置及实操优化的角度提供官方可验证的实施方案。
+Importing geometry from other CAD systems via STEP (ISO 10303) or IGES (Initial Graphics Exchange Specification) is a daily reality in multi-CAD environments. Despite being neutral formats, these translations frequently produce imperfect results — gaps between surfaces, overlapping faces, trimmed surface mismatches, and failed solid body conversion. This guide provides a systematic repair workflow that takes you from a broken surface import to a clean, watertight solid body.
 
-## 1. 深度系统诊断与环境校验
-SolidWorks 浮动许可机制在 FLEXlm (FlexNet) 许可引擎上运行，服务端后台的特定服务守护进程为 `sw_d`。在客户端激活或连接浮动服务器时，最常报错“无法从许可管理器中获取许可证 (Error 15/8)”。这类报错通常是由于企业内 VPN 子网的高延迟引发 TCP 连接超时，或者是服务器防火墙阻碍了 `sw_d` 这个常驻后台程序的动态端口通信。
+## Understanding Why Imports Fail
 
-在日常的多用户高并发协同中，应当使用系统工具或环境变量进行实时诊断。针对当前的主题 `[solidworks step file]`，建议 CAD 团队主管和 IT 运维人员首先对该软件实例的工作上下文和环境变量进行审计，核实系统是否满足本指南所提到的参数要求。
+STEP and IGES files store geometry as a collection of trimmed surfaces (B-spline, cylindrical, planar, etc.). When SolidWorks reads these surfaces, it attempts to knit them together into a solid body. The knit fails when:
 
-## 2. 底层代码或配置文件蓝图 (Code & Config Blueprint)
-根据该软件在企业中的典型应用环境，您需要将以下配置文件下发至对应软件的 `startup` 或 `admin` 系统路径中。
+- **Gaps exist between adjacent surfaces**: The edges of neighboring surfaces do not meet within the tolerance specified by the import settings.
+- **Overlapping surfaces**: Two surfaces occupy the same space, creating ambiguity in the solid boundary.
+- **Missing surfaces**: A face was not included in the export, leaving a hole in the body.
+- **Topology mismatch**: The edge curves of adjacent surfaces do not match, even though the surfaces themselves are geometrically close.
 
-```text
-# sw_d.opt - SolidWorks FlexNet 许可证管理器规则配置文件示例
-TIMEOUTALL 900
-GROUP DRAFTSMEN user_will user_alex user_tom
-RESERVE 3 sldworks GROUP DRAFTSMEN
-RESERVE 1 sldworks_pdm_pro GROUP DRAFTSMEN
-MAX_BORROW_HOURS sldworks 72
-EXCLUDE sldworks USER expired_user
+The import tolerance (how closely edges must match to be considered coincident) is the primary factor determining whether an import succeeds or fails.
 
-```
+## Step 1: Configure Import Settings
 
-> [!TIP]
-> 配置文件在上传至服务器或保存至本地 AppData 之前，务必确保无任何多余的特殊字符和空行，且文件采用 `UTF-8` 或标准的 `ANSI` 编码格式保存。
+Before opening the STEP/IGES file, configure the import options:
 
-## 3. 步骤化系统优化指南 (Optimization Playbook)
-请严格遵循以下实操规程在本地 CAD 终端机或企业中心许可服务器上执行优化部署：
+1. Go to Tools > Options > Import.
+2. Select "STEP" or "IGES" from the file format list.
+3. Set the following options:
+   - **Import as**: "Solid body" (attempt solid first; fall back to surface if it fails)
+   - **Surface tolerance**: `0.001 mm` (tight) or `0.01 mm` (loose)
+   - **Import planes and axes**: Checked
+   - **Merge coincident points**: Checked
+   - **Automatically run Import Diagnostics**: Checked
 
-1. **将动态 Daemon 端口绑定为静态**：打开服务器许可文件 `.lic`，在 `VENDOR sw_d` 行尾添加 `port=25735`，强行固定端口。
-2. **放行网络防火墙出入站例外**：在中心许可服务器上，设置 Windows 防火墙静态允许 TCP 端口 `25734`（lmgrd 主端口）和刚刚绑定的 `25735`（sw_d 守护端口）。
-3. **配置客户端重定向环境变量**：在客户端系统的“环境变量”中新建系统环境变量：`SW_D_LICENSE_FILE=25734@license_server_ip`，避免在注册表里读取过时服务器路径。
+4. Click OK.
 
----
+### Tolerance Selection
 
-> [!IMPORTANT]
-> **Source Verification Links:**
-> This blueprint is based on verified procedures and troubleshooting cases documented in the official forums:
-> - **Official Support Forum Reference:** [SOLIDWORKS Source & Forum Thread](https://forum.solidworks.com)
+- **0.001 mm**: Use for precision parts (aerospace, medical). Tighter tolerance means SolidWorks will reject edges that are more than 1 micron apart, resulting in more failed knits but higher accuracy.
+- **0.01 mm**: Use for general mechanical parts. This tolerance allows edges up to 10 microns apart to be considered coincident, resulting in more successful automatic knits.
+- **0.1 mm**: Use for large architectural or structural models where sub-millimeter precision is not required.
+
+## Step 2: Run Import Diagnostics
+
+When the import completes, Import Diagnostics runs automatically (if enabled in Step 1). If it does not run automatically:
+
+1. Right-click the imported feature in the feature tree.
+2. Select "Import Diagnostics."
+
+The Import Diagnostics panel displays:
+- **Failed faces**: Surfaces that could not be knitted
+- **Gap edges**: Open edges where surfaces do not meet
+- **Overlapping faces**: Surfaces that occupy the same region
+
+### Automatic Repair
+
+Click "Attempt to Heal All" in the Import Diagnostics panel. SolidWorks will:
+1. Close gaps by extending adjacent surfaces to meet
+2. Remove duplicate/overlapping faces
+3. Re-knit the surfaces into a solid body
+
+Review the results. If "Attempt to Heal All" resolves all issues and creates a solid body, the repair is complete. If issues remain, proceed to manual repair.
+
+## Step 3: Manually Close Gaps
+
+For gaps that automatic healing cannot resolve:
+
+### Identify the Gaps
+
+1. In the Import Diagnostics panel, click each "Gap" entry to highlight it in the graphics area.
+2. Note the gap size displayed in the panel. Gaps larger than the import tolerance require manual intervention.
+
+### Close Small Gaps with Surface Extension
+
+1. Right-click the gap edge in the graphics area.
+2. Select "Close Gap" from the context menu.
+3. SolidWorks extends the adjacent surfaces to close the gap.
+
+If "Close Gap" is not available (the gap is too large), use the Surface Extension tool:
+
+1. Go to Insert > Surface > Extend.
+2. Select the edge of the surface adjacent to the gap.
+3. Set the extension distance to slightly more than the gap size.
+4. Set the extension type to "Same Surface" (maintains curvature continuity).
+5. Click OK.
+6. Repeat for the other surface forming the gap.
+7. Use the Knit Surface tool to join the extended surfaces.
+
+### Close Large Gaps with Filled Surface
+
+For gaps too large to close by extension:
+
+1. Go to Insert > Surface > Filled Surface.
+2. Select the edges surrounding the gap.
+3. Set the edge condition to "Tangent" or "Curvature" for smooth continuity.
+4. Click OK to create a filled surface.
+5. Knit the filled surface with the surrounding surfaces.
+
+## Step 4: Fix Overlapping Faces
+
+Overlapping faces occur when two surfaces from the source CAD system cover the same region. SolidWorks cannot determine which surface represents the true boundary.
+
+1. In the Import Diagnostics panel, click the "Overlapping Face" entry.
+2. Both overlapping faces are highlighted in the graphics area.
+3. Determine which face is correct by examining the surrounding geometry. The correct face should have edges that align with adjacent surfaces.
+4. Right-click the incorrect face and select "Delete Face."
+5. Re-knit the remaining surfaces.
+
+## Step 5: Replace Missing Faces
+
+If a face is entirely missing from the import (common with IGES files from older CAD systems):
+
+1. Identify the hole in the surface body by rotating the model and visually locating the opening.
+2. Go to Insert > Surface > Filled Surface.
+3. Select the edges surrounding the hole.
+4. Set the edge condition to "Tangent" for smooth continuity with adjacent surfaces.
+5. Click OK.
+6. Knit the new filled surface with the existing surfaces.
+
+## Step 6: Knit Surfaces into a Solid Body
+
+After all gaps, overlaps, and missing faces are resolved:
+
+1. Go to Insert > Surface > Knit Surface.
+2. Select all surfaces in the graphics area (or select them from the Surface Bodies folder in the feature tree).
+3. Check "Try to form solid."
+4. Click OK.
+
+If the knit succeeds with "Try to form solid" enabled, the surface body is converted to a solid body. The new solid body appears in the Solid Bodies folder in the feature tree.
+
+### Knit Failure
+
+If the knit fails with "Try to form solid," it means the surfaces still have gaps or topology issues that prevent a watertight closure. Run Import Diagnostics again to identify remaining issues:
+
+1. The diagnostics panel may now show new issues that were not visible before the manual repairs.
+2. Fix each issue using the methods in Steps 3-5.
+3. Re-attempt the knit.
+
+## Step 7: Verify the Repaired Solid
+
+After successfully creating a solid body:
+
+### Check Volume
+
+1. Go to Tools > Evaluate > Mass Properties.
+2. Verify that the volume is non-zero and reasonable for the part size.
+3. If the volume is zero, the body is still a surface body, not a solid.
+
+### Check for Internal Volumes
+
+1. Go to Tools > Evaluate > Check.
+2. Check "Minimum radius of curvature" and "Import diagnostics."
+3. Click OK.
+4. Review the report for any remaining issues.
+
+### Check Cross-Section
+
+1. Go to Insert > Cut > Section View.
+2. Create a section through the middle of the part.
+3. Verify that the cross-section shows solid material, not hollow regions or missing faces.
+
+## Step 8: Simplify the Repaired Model
+
+Imported geometry often contains hundreds of small surfaces that make subsequent modeling operations slow and difficult. After repairing the import:
+
+### Use the Delete Face Tool
+
+Remove unnecessary faces (such as fillets that will be recreated natively):
+
+1. Go to Insert > Face > Delete.
+2. Select the face(s) to remove.
+3. Check "Delete and Patch" to close the resulting gap automatically.
+
+### Use the Combine Tool
+
+Merge multiple solid bodies into one:
+
+1. Go to Insert > Features > Combine.
+2. Select "Add" and choose all solid bodies.
+3. Click OK.
+
+### Rebuild Key Features Natively
+
+For critical features (mounting holes, bearing seats, sealing surfaces), delete the imported geometry and recreate the feature using native SolidWorks tools (Hole Wizard, Extrude Cut, Revolve Cut). Native features are parametric, easier to modify, and more reliable than imported geometry.
+
+## Best Practices for Future Imports
+
+1. **Request STEP AP242 format**: AP242 is the latest STEP application protocol and includes better topology handling than AP203 or AP214.
+2. **Ask the source CAD user to export with "solid" topology**: Some CAD systems can export surfaces as a solid body or as individual surfaces. Solid body export produces cleaner imports.
+3. **Avoid IGES for complex geometry**: IGES is an older format with known limitations in topology representation. Use STEP whenever possible.
+4. **Document the source CAD system**: Different CAD systems produce different translation artifacts. Knowing the source system helps predict which repair tools will be needed.

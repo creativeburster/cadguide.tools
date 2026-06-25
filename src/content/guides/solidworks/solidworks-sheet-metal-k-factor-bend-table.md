@@ -1,61 +1,239 @@
 ---
-title: "Determining Sheet Metal K-Factor and Bend Allowances: Material Bend Tables for CNC Fabrication"
-excerpt: "A sheet metal engineering guide to calculate bend allowances, neutral axes, and deploy custom bend tables."
+title: "Configuring K-Factor and Bend Tables for Accurate Sheet Metal Flat Patterns in SolidWorks"
+excerpt: "Complete guide to setting up K-factor values, bend allowance tables, and gauge tables in SolidWorks to produce manufacturing-accurate flat patterns for sheet metal fabrication."
 category: "manufacturing"
 softwareSlug: "solidworks"
-keyword: "solidworks sheet metal"
+keyword: "solidworks sheet metal k factor"
 slug: "solidworks-sheet-metal-k-factor-bend-table"
-author: "Will P. (Enterprise CAD Auditor)"
-readTime: "8 min read"
-date: "June 2026"
+author: "CADGuide Technical Editorial"
+readTime: "13 min read"
+date: "2026-06-25"
+sources:
+  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Sheet_Metal_K_Factor.htm"
+  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Bend_Tables.htm"
 ---
 
-# Determining Sheet Metal K-Factor and Bend Allowances: Material Bend Tables for CNC Fabrication
+# Configuring K-Factor and Bend Tables for Accurate Sheet Metal Flat Patterns in SolidWorks
 
-在进行企业级部署与深度应用开发时，合理优化 **Determining Sheet Metal K-Factor and Bend Allowances: Material Bend Tables for CNC Fabrication** 是保证整个 CAD/CAE 设计管线高效流转的关键。本技术规程将针对这一具体的工具配置节点，从系统诊断、底层配置及实操优化的角度提供官方可验证的实施方案。
+The K-factor is the single most important variable in sheet metal design. It determines how much material is consumed during bending and directly affects the flat pattern length. An incorrect K-factor produces flat patterns that are too long or too short, resulting in parts that do not fit after fabrication. This guide covers K-factor theory, practical configuration in SolidWorks, and the setup of bend tables and gauge tables for manufacturing-accurate results.
 
-## 1. 深度系统诊断与环境校验
-在企业多用户并行设计环境下，统一的 SolidWorks 标准件库（Toolbox 数据库）、图纸属性以及物料明细表（BOM）映射是保证数据能顺利导入 ERP 系统的关键。如果设计师各自为战、私自本地修改配置，会导致 Toolbox 在装配时发生几何尺寸自动改变的“错乱”现象，或者 PDM 属性映射丢失导致零件编码冲突。
+## Understanding the K-Factor
 
-在日常的多用户高并发协同中，应当使用系统工具或环境变量进行实时诊断。针对当前的主题 `[solidworks sheet metal]`，建议 CAD 团队主管和 IT 运维人员首先对该软件实例的工作上下文和环境变量进行审计，核实系统是否满足本指南所提到的参数要求。
+When sheet metal is bent, the material on the inside of the bend compresses and the material on the outside stretches. Somewhere between these two surfaces is a neutral axis where the material neither compresses nor stretches. The K-factor is the ratio of the neutral axis distance from the inside surface to the material thickness:
 
-## 2. 底层代码或配置文件蓝图 (Code & Config Blueprint)
-根据该软件在企业中的典型应用环境，您需要将以下配置文件下发至对应软件的 `startup` 或 `admin` 系统路径中。
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<!-- SolidWorks PDM 变量与 ERP 物料属性标准强映射配置文件 (Enterprise_BOM_Mapping.xml) -->
-<SolidWorksPropertyMapping>
-  <ERPConfiguration>
-    <ERPConnectionString>Provider=SQLOLEDB;Data Source=erp_server;Initial Catalog=ERPDB;</ERPConnectionString>
-    <AutoGeneratePartNumber Value="true" />
-  </ERPConfiguration>
-  <PropertyMapping>
-    <Map Property="PartNumber" Target="ERP_ITEM_CODE" ReadOnly="false" />
-    <Map Property="Description" Target="ERP_DESCRIPTION" ReadOnly="false" />
-    <Map Property="Material" Target="ERP_MATERIAL" ReadOnly="true" />
-    <Map Property="Mass" Target="ERP_WEIGHT" ReadOnly="true" />
-  </PropertyMapping>
-  <ToolboxSettings>
-    <SharedPath Value="\\central-server\SolidWorksData" />
-    <SetReadOnlyForUsers Value="true" />
-  </ToolboxSettings>
-</SolidWorksPropertyMapping>
+```
+K = t / T
 ```
 
-> [!TIP]
-> 配置文件在上传至服务器或保存至本地 AppData 之前，务必确保无任何多余的特殊字符和空行，且文件采用 `UTF-8` 或标准的 `ANSI` 编码格式保存。
+Where:
+- `t` = distance from inside surface to neutral axis
+- `T` = total material thickness
 
-## 3. 步骤化系统优化指南 (Optimization Playbook)
-请严格遵循以下实操规程在本地 CAD 终端机或企业中心许可服务器上执行优化部署：
+### Typical K-Factor Values
 
-1. **集中化部署企业 Toolbox 共享数据库**：将本地的 `SolidWorks Data` 标准件库拷贝至公司中心高吞吐文件服务器上，并在系统选项中配置路径指向，同时设为非库管理员只读以防数据被篡改。
-2. **建立工程图标题栏强映射规则**：在 PDM 管理工具中设置“卡片属性绑定”，把零件或装配体的自定义属性（如 PartNumber）和 `.drw` 工程图的明细表及标题栏属性进行双向强同步绑定。
-3. **下发企业钣金折弯系数规范**：在全局 `config.pro` 或系统选项中指定鈑金折弯系数表路径，强制统一使用内部预先测试好的 `.xls` 钣金折弯表，避免工艺图纸下发后尺寸超差。
+| Material | Soft Aluminum | Hard Aluminum | Steel | Stainless Steel |
+|---|---|---|---|---|
+| K-factor | 0.33 | 0.38 | 0.40 | 0.44 |
 
----
+The K-factor varies based on:
+- **Material type**: Softer materials allow more plastic deformation, shifting the neutral axis inward (lower K-factor).
+- **Material thickness**: Thicker materials shift the neutral axis outward (higher K-factor).
+- **Bend radius**: Tighter bend radii shift the neutral axis inward (lower K-factor).
+- **Bend method**: Air bending produces a different K-factor than bottom bending or coining.
 
-> [!IMPORTANT]
-> **Source Verification Links:**
-> This blueprint is based on verified procedures and troubleshooting cases documented in the official forums:
-> - **Official Support Forum Reference:** [SOLIDWORKS Source & Forum Thread](https://forum.solidworks.com)
+## Step 1: Set the Default K-Factor in SolidWorks
+
+### Global Default
+
+1. Go to Tools > Options > Document Properties > Sheet Metal.
+2. Under "Bend Allowance," select "K-Factor" as the bend allowance type.
+3. Enter the K-factor value (e.g., `0.40` for mild steel).
+4. Set the K-factor base to "Inside" (the default and most common convention).
+
+### Per-Bend Override
+
+For individual bends that require a different K-factor (e.g., a very tight radius bend in a different material):
+
+1. Open the sheet metal part.
+2. In the feature tree, right-click the specific bend feature.
+3. Select "Edit Feature."
+4. In the Bend Properties panel, override the K-factor value.
+5. Click OK.
+
+The per-bend K-factor overrides the document default for that specific bend only.
+
+## Step 2: Create a Bend Table
+
+Bend tables provide K-factor values that vary based on bend radius and material thickness, which is more accurate than using a single K-factor for all bends.
+
+### Create a Bend Table File
+
+1. Go to Tools > Options > Document Properties > Sheet Metal.
+2. Under "Bend Allowance," select "Bend Table."
+3. Click "Browse" and navigate to a location to save the table.
+4. Click "New" to create a new bend table.
+
+SolidWorks creates a sample bend table file (`.xls` or `.txt` format). Edit the table to match your fabrication shop's standards.
+
+### Excel Bend Table Format
+
+| Thickness (mm) | Radius 0.5 | Radius 1.0 | Radius 2.0 | Radius 3.0 | Radius 5.0 |
+|---|---|---|---|---|---|
+| 0.5 | 0.35 | 0.38 | 0.40 | 0.42 | 0.44 |
+| 1.0 | 0.33 | 0.35 | 0.38 | 0.40 | 0.42 |
+| 1.5 | 0.32 | 0.34 | 0.36 | 0.38 | 0.40 |
+| 2.0 | 0.30 | 0.33 | 0.35 | 0.37 | 0.39 |
+| 3.0 | 0.28 | 0.31 | 0.33 | 0.35 | 0.37 |
+
+Each cell contains the K-factor for the corresponding thickness and radius combination. SolidWorks interpolates between entries for values not explicitly listed.
+
+### Text Bend Table Format
+
+For environments without Excel, use the text format:
+
+```
+; SolidWorks Bend Table
+; Units: mm
+;
+; Thickness    Radius    K-Factor
+0.5            0.5        0.35
+0.5            1.0        0.38
+0.5            2.0        0.40
+1.0            0.5        0.33
+1.0            1.0        0.35
+1.0            2.0        0.38
+```
+
+Save the file with a `.btl` extension in the SolidWorks bend table directory:
+
+```
+C:\Program Files\SolidWorks Corp\SolidWorks\lang\english\sheetmetal bend tables\
+```
+
+### Apply the Bend Table
+
+1. Go to Tools > Options > Document Properties > Sheet Metal.
+2. Under "Bend Allowance," select "Bend Table."
+3. Browse to and select the bend table file.
+4. Click OK.
+
+All new bends in the current document will use the K-factor from the table based on their thickness and radius.
+
+## Step 3: Create a Gauge Table
+
+Gauge tables define the available material thicknesses and their associated properties. When a gauge table is active, SolidWorks restricts thickness selections to the gauges listed in the table, preventing users from entering non-standard thicknesses.
+
+### Create a Gauge Table
+
+1. Go to Tools > Options > Document Properties > Sheet Metal.
+2. Under "Gauge Table," click "Browse."
+3. Click "New" and save the file.
+
+### Excel Gauge Table Format
+
+| Gauge | Thickness (mm) | Material | K-Factor | Bend Radius |
+|---|---|---|---|---|
+| 20 | 0.9 | Steel | 0.38 | 0.9 |
+| 18 | 1.2 | Steel | 0.38 | 1.2 |
+| 16 | 1.6 | Steel | 0.40 | 1.6 |
+| 14 | 2.0 | Steel | 0.40 | 2.0 |
+| 12 | 2.6 | Steel | 0.42 | 2.6 |
+| 10 | 3.4 | Steel | 0.42 | 3.4 |
+
+Create separate gauge tables for different materials (Steel, Aluminum, Stainless Steel) since gauge numbers correspond to different thicknesses for each material.
+
+### Apply the Gauge Table
+
+1. In the sheet metal part, go to the Sheet Metal feature in the feature tree.
+2. Edit the feature.
+3. In the Sheet Metal PropertyManager, check "Use gauge table."
+4. Select the appropriate gauge table from the dropdown.
+5. The thickness field now shows a dropdown of available gauges instead of a free-text input.
+
+## Step 4: Verify Flat Pattern Accuracy
+
+After configuring K-factor and bend tables, verify the flat pattern against a known-good sample:
+
+### Create a Test Part
+
+1. Create a simple L-bracket with known dimensions:
+   - Leg 1: 50 mm
+   - Leg 2: 50 mm
+   - Thickness: 1.5 mm (16 gauge steel)
+   - Bend radius: 1.5 mm
+   - Bend angle: 90 degrees
+
+2. Flatten the part (right-click the flat pattern in the feature tree > "Flatten").
+
+3. Measure the total flat length:
+   ```
+   Tools > Evaluate > Measure
+   ```
+   Select both ends of the flattened part.
+
+### Expected Flat Length Calculation
+
+```
+Flat Length = Leg1 + Leg2 + Bend Allowance
+
+Bend Allowance = (π/180) × Angle × (R + K × T)
+Bend Allowance = (π/180) × 90 × (1.5 + 0.40 × 1.5)
+Bend Allowance = (π/180) × 90 × 2.1
+Bend Allowance = 3.30 mm
+
+Flat Length = 50 + 50 + 3.30 = 103.30 mm
+```
+
+If the measured flat length matches the calculated value (within 0.1 mm), the K-factor configuration is correct. If not, adjust the K-factor and re-measure.
+
+### Physical Verification
+
+Cut a sample part from the actual material and measure it after bending. Compare the physical dimensions to the SolidWorks model. If the physical part is longer than expected, decrease the K-factor. If shorter, increase the K-factor.
+
+## Step 5: Configure Bend Deduction (Alternative to K-Factor)
+
+Some fabrication shops prefer to work with bend deduction rather than K-factor. Bend deduction is the amount subtracted from the total flat length to account for the material consumed by the bend.
+
+### Switch to Bend Deduction
+
+1. Go to Tools > Options > Document Properties > Sheet Metal.
+2. Under "Bend Allowance," select "Bend Deduction."
+3. Enter the bend deduction value (in mm or inches).
+
+### Bend Deduction Table
+
+Create a bend deduction table with the same format as the K-factor bend table, but with bend deduction values instead:
+
+| Thickness (mm) | Radius 1.0 | Radius 2.0 | Radius 3.0 |
+|---|---|---|---|
+| 1.0 | 1.65 | 2.20 | 2.75 |
+| 1.5 | 2.10 | 2.80 | 3.50 |
+| 2.0 | 2.60 | 3.40 | 4.20 |
+
+The relationship between K-factor and bend deduction is:
+
+```
+BD = 2 × (R + T) × tan(A/2) - BA
+```
+
+Where `BA` is the bend allowance calculated from the K-factor. If your shop provides bend deduction values, use them directly — do not convert to K-factor, as the conversion introduces rounding errors.
+
+## Step 6: Export Flat Patterns for Manufacturing
+
+### DXF Export
+
+1. Right-click the flat pattern in the feature tree.
+2. Select "Export to DXF/DWG."
+3. In the export dialog:
+   - Set format to "DXF"
+   - Set version to "R2010" or later
+   - Check "Export bend lines" to include bend centerlines
+   - Check "Export sketch entities" to include any sketches on the flat pattern
+
+4. Click OK and save the file.
+
+### Common DXF Export Issues
+
+- **Missing bend lines**: Ensure bend lines are set to "Show" in the flat pattern view.
+- **Incorrect units**: Verify the DXF export units match the manufacturing equipment's expected units (mm or inches).
+- **Splines instead of arcs**: Some laser cutters do not support splines. In the export options, set "Spline to arc" conversion with a tolerance of `0.01 mm`.
