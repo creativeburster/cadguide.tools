@@ -3,21 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   allowedDevOrigins: ['127.0.0.1'],
   async redirects() {
-    const isProd = process.env.NODE_ENV === 'production';
     return [
-      // 生产环境拦截所有对 /guides 的直接访问并重定向至 404
-      ...(isProd ? [
-        {
-          source: '/guides',
-          destination: '/404',
-          permanent: false,
-        },
-        {
-          source: '/guides/:path*',
-          destination: '/404',
-          permanent: false,
-        }
-      ] : []),
       // 1. Redirect standards-iso-128-* to standards-iso-*
       {
         source: '/guides/standards-iso-128-:tool',
