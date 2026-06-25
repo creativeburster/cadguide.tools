@@ -55,15 +55,23 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
+        {/* Google Analytics — skip for known bots to keep GA4 data clean */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-2NC8HV27GC');
+              (function(){
+                var ua = navigator.userAgent;
+                var bots = /GPTBot|ChatGPT-User|ClaudeBot|Claude-Web|PerplexityBot|Google-Extended|cohere-ai|OMgili|YouBot|Applebot-Extended|Meta-ExternalAgent|Amazonbot|Bytespider|PetalBot|Baiduspider|AhrefsBot|SemrushBot|DotBot|BLEXBot|MJ12bot|MegaIndex|DataForSeoBot|Googlebot|Bingbot|Slurp|DuckDuckBot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|WhatsApp/i;
+                if (bots.test(ua)) return;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC';
+                document.head.appendChild(s);
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-2NC8HV27GC');
+              })();
             `,
           }}
         />
