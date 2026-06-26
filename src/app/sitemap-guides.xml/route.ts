@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { NextResponse } from 'next/server';
 import { tools } from '@/lib/data';
 import { ARTICLES_LIST, isArticleCompatibleWithTool } from '@/lib/guides-data';

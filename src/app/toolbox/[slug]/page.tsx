@@ -24,10 +24,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 }
 
 // Next.js static prerendering for dynamic coming-soon slots
-export async function generateStaticParams() {
-  // Only pre-render 'coming-soon' tools. Already released tools have their own static directories.
-  const comingSoonTools = TOOLBOX_DATA.filter((t) => t.status === 'coming-soon');
-  return comingSoonTools.map((t) => ({
+export function generateStaticParams() {
+  return TOOLBOX_DATA.map((t) => ({
     slug: t.slug,
   }));
 }

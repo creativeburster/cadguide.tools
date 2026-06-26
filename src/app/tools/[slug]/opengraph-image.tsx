@@ -9,6 +9,8 @@ export const contentType = 'image/png';
 
 export const headers = { 'X-Robots-Tag': 'noindex, nofollow' };
 // Pre-generate one OG image per tool at build time.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug }));
 }

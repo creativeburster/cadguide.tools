@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { NextResponse } from 'next/server';
 import { featureCategories } from '@/lib/data/featureCategories';
 import { PRICING_PAGES } from '@/lib/pricing-licensing-content';
