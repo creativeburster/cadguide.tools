@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
   allowedDevOrigins: ['127.0.0.1'],
+  // redirects is not supported with output: export.
+  // We migrated these redirect rules to public/_redirects.
+  /*
   async redirects() {
     return [
       // 1. Redirect standards-iso-128-* to standards-iso-*
@@ -45,6 +49,7 @@ const nextConfig: NextConfig = {
       }
     ];
   },
+  */
 };
 
 export default nextConfig;

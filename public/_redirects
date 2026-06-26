@@ -1,0 +1,14 @@
+# 1. Redirect standards-iso-128-* to standards-iso-*
+/guides/standards-iso-128-* /guides/standards-iso-:splat 301
+
+# 2. Redirect industry-high-frequency-pcb-design to industry-pcb-design
+/guides/industry-high-frequency-pcb-design /guides/industry-pcb-design 301
+
+# 3. Redirect haochen-cad to gstarcad (tool renaming)
+/tools/haochen-cad /tools/gstarcad 301
+/alternatives/haochen-cad /alternatives/gstarcad 301
+
+# 4. Redirect root-level legacy pricing paths
+/forever /pricing/perpetual 301
+/3yr /pricing/subscription 301
+/mo /pricing/subscription 301
