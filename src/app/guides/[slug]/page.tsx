@@ -3758,6 +3758,8 @@ function parseGuideSlug(slug: string) {
   return null;
 }
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   const params: { slug: string }[] = [];
   // Pre-render only the 4 active structured guides

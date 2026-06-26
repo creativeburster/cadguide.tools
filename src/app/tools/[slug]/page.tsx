@@ -14,6 +14,8 @@ import {
 } from '@/lib/seo';
 import type { Metadata } from 'next';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return tools.map((tool) => ({
     slug: tool.slug,

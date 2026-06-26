@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   });
 }
 
+export const dynamicParams = false;
+
 // Next.js static prerendering for dynamic coming-soon slots
 export async function generateStaticParams() {
   // Only pre-render 'coming-soon' tools. Already released tools have their own static directories.
