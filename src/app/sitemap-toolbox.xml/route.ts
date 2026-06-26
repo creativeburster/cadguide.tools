@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { NextResponse } from 'next/server';
 import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 
