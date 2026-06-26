@@ -17,7 +17,7 @@ import { getStandardPageData, STANDARDS_LIST, DRAFTING_TOOLS, DraftingStandardPa
 import { getLicensingShieldData, LICENSING_TOOLS, LicensingShieldPage } from '@/lib/licensing-data';
 import { getKernelPageData, KERNEL_TOOLS, KernelPageData } from '@/lib/kernel-data';
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 // 稳定的内容日期常量。此前 dateModified 用 new Date() 每次请求都刷成"今天"，向爬虫
 // 伪造内容新鲜度；改为固定的内容版本日期，仅在内容实质性更新时手动调整。

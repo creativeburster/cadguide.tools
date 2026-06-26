@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* shadcn / Base UI design tokens mapped into Tailwind v4. Without these,
    utilities like `bg-primary` / `text-primary-foreground` resolve to nothing,
