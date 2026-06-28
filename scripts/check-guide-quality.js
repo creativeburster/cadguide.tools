@@ -43,7 +43,9 @@ const HOMEPAGE_PATTERNS = [
 ];
 
 function extractFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  // Normalize line endings
+  const normalized = content.replace(/\r\n/g, '\n');
+  const match = normalized.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return null;
   const fmText = match[1];
   const fm = {};
@@ -74,16 +76,25 @@ function extractFrontmatter(content) {
 }
 
 function countWords(text) {
+  // Normalize line endings
+  const normalized = text.replace(/\r\n/g, '\n');
   // Remove frontmatter
-  const body = text.replace(/^---\n[\s\S]*?\n---\n/, '');
-  // Remove code blocks
+  const body = normalized.replace(/^---\n[\s\S]*?\n---\n/, '');
+  // Count words in code blocks separately (at 0.5 weight since code is less prose-dense)
+  const codeBlocks = body.match(/```[\s\S]*?```/g) || [];
+  const codeWords = codeBlocks.reduce((sum, block) => {
+    const cleaned = block.replace(/```\w*\n?|```/g, '').replace(/[#*_>\-|]/g, ' ');
+    return sum + Math.floor(cleaned.split(/\s+/).filter(w => w.length > 0).length * 0.5);
+  }, 0);
+  // Remove code blocks for prose word count
   const noCode = body.replace(/```[\s\S]*?```/g, '');
   // Remove inline code
   const noInline = noCode.replace(/`[^`]+`/g, '');
   // Remove markdown formatting
   const noMd = noInline.replace(/[#*_>\-|]/g, ' ');
   // Split and count
-  return noMd.split(/\s+/).filter(w => w.length > 0).length;
+  const proseWords = noMd.split(/\s+/).filter(w => w.length > 0).length;
+  return proseWords + codeWords;
 }
 
 function hasChinese(text) {
@@ -145,7 +156,7 @@ function checkFile(filePath) {
   
   // 6. Content-title match (check that all keyword words appear in body)
   if (fm && fm.title && fm.keyword) {
-    const body = content.replace(/^---\n[\s\S]*?\n---\n/, '').toLowerCase();
+    const body = content.replace(/\r\n/g, '\n').replace(/^---\n[\s\S]*?\n---\n/, '').toLowerCase();
     const keyword = fm.keyword.toLowerCase();
     const keywordWords = keyword.split(/\s+/).filter(w => w.length > 2);
     const missingWords = keywordWords.filter(w => !body.includes(w));
@@ -157,6 +168,7 @@ function checkFile(filePath) {
   // 7. Source domain match with softwareSlug
   if (fm && fm.softwareSlug && fm.sources) {
     const sources = Array.isArray(fm.sources) ? fm.sources : [fm.sources];
+    const genericForums = ['reddit.com', 'eng-tips.com', 'stackoverflow.com', 'github.com'];
     const softwareDomainMap = {
       'autocad': ['autodesk.com', 'autodesk.net'],
       'revit': ['autodesk.com', 'autodesk.net'],
@@ -169,6 +181,7 @@ function checkFile(filePath) {
       'rhino': ['mcneel.com', 'rhino3d.com'],
       'microstation': ['bentley.com'],
       'altium-designer': ['altium.com'],
+      'inventor': ['autodesk.com', 'autodesk.net'],
       'openscad': ['openscad.org', 'github.com/openscad'],
     };
     const validDomains = softwareDomainMap[fm.softwareSlug] || [];
@@ -176,7 +189,8 @@ function checkFile(filePath) {
       for (const src of sources) {
         if (src) {
           const matchesDomain = validDomains.some(d => src.includes(d));
-          if (!matchesDomain && !src.includes('forum.') && !src.includes('community.')) {
+          const isGenericForum = genericForums.some(f => src.includes(f));
+          if (!matchesDomain && !isGenericForum && !src.includes('forum.') && !src.includes('community.')) {
             // Check if it's a generic forum/community link for the right brand
             const isRelevant = validDomains.some(d => {
               const brand = d.split('.')[0];

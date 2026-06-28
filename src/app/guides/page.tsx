@@ -8,11 +8,11 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: 'CAD Professional Guides & Technical Knowledge Base',
-    description: 'In-depth technical guides for CAD, BIM, and CAE software. Troubleshoot errors, optimize performance, configure licensing, and master manufacturing workflows.',
+    title: 'CAD Troubleshooting & Performance Guides',
+    description: '104 expert guides for AutoCAD, SolidWorks, Revit, Blender, Civil 3D, Tekla and 15+ CAD/BIM tools. Fix crashes, slow performance, file corruption and licensing errors.',
     path: '/guides',
   }),
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 export default function GuidesPage() {

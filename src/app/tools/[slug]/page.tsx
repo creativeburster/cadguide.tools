@@ -12,6 +12,7 @@ import {
   reviewLd,
   SITE_NAME,
 } from '@/lib/seo';
+import { getGuidesByTool } from '@/lib/guides-markdown';
 import type { Metadata } from 'next';
 
 export const dynamicParams = false;
@@ -109,7 +110,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           dangerouslySetInnerHTML={{ __html: JSON.stringify(review) }}
         />
       ))}
-      <ToolDetailClient tool={tool} category={category} alternativeTools={alternativeTools} />
+      <ToolDetailClient tool={tool} category={category} alternativeTools={alternativeTools} guides={getGuidesByTool(tool.slug)} />
     </>
   );
 }

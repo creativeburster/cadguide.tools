@@ -14,14 +14,16 @@ import { linkifyToolNames } from "@/lib/linkify";
 import { comparisonPairs } from "@/lib/seo-content";
 import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from "@/lib/guides-data";
 import { getBestDealForTool } from '@/lib/deals-data';
+import type { MarkdownGuide } from '@/lib/guides-markdown';
 
 interface Props {
   tool: Tool;
   category?: Category;
   alternativeTools: (Tool | undefined)[];
+  guides?: MarkdownGuide[];
 }
 
-export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
+export function ToolDetailClient({ tool, category, alternativeTools, guides = [] }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
   const bestDeal = getBestDealForTool(tool.id);
 
@@ -94,45 +96,8 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
   );
 
-  // 1. 获取所有与当前工具兼容的指南
-  const allCompatibleGuides = process.env.NODE_ENV === 'development'
-    ? ARTICLES_LIST.filter((g) => isArticleCompatibleWithTool(g.title, g.category, tool))
-    : [];
-
-  // 2. 切出前 10 篇（这 10 篇是在 guides/[slug] 的 generateStaticParams 中为该工具渲染出来的全部有效路由）
-  // 为了防止某些极其特殊或严格熔断条件下的工具导致文章过少，这里加入防空置兜底：
-  // 若少于 4 篇（极端边缘情况），则从 ARTICLES_LIST 借调非商业、安全的通用指南进行补位。
-  let safeAvailableGuides = process.env.NODE_ENV === 'development'
-    ? allCompatibleGuides.slice(0, 20)
-    : [];
-  
-  if (process.env.NODE_ENV === 'development' && safeAvailableGuides.length < 4) {
-    const fallbackPool = ARTICLES_LIST.filter(
-      (g) =>
-        !safeAvailableGuides.some((existing) => existing.id === g.id) &&
-        !g.title.toLowerCase().includes("license") &&
-        !g.title.toLowerCase().includes("flexlm") &&
-        !g.title.toLowerCase().includes("ssot") &&
-        !g.title.toLowerCase().includes("procurement")
-    );
-    safeAvailableGuides = [...safeAvailableGuides, ...fallbackPool].slice(0, 20);
-  }
-
-  // 3. 底部关联的 4 篇相关指南，直接取前 4 篇并进行本地化翻译
-  const relatedGuides = process.env.NODE_ENV === 'development'
-    ? safeAvailableGuides
-        .slice(0, 4)
-        .map((g) => {
-          const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
-          return {
-            ...g,
-            title: localized.title,
-            excerpt: localized.excerpt,
-            keyword: localized.keyword,
-            slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`
-          };
-        })
-    : [];
+  // Use real markdown guides passed from server, take up to 4 for the section
+  const relatedGuides = guides.slice(0, 4);
 
 
   // Surface Compatibility / Trust sub-nav entries only when at least
@@ -188,15 +153,6 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
       icon: <MessageSquare className="w-3.5 h-3.5" />,
     },
     { id: "faq", label: "FAQ", icon: <HelpCircle className="w-3.5 h-3.5" /> },
-    ...(relatedGuides.length > 0
-      ? [
-          {
-            id: "guides",
-            label: "Guides",
-            icon: <FileText className="w-3.5 h-3.5" />,
-          },
-        ]
-      : []),
     {
       id: "alternatives",
       label: "Alternatives",
@@ -1099,74 +1055,6 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
               </div>
             </section>
 
-            {/* Guides Section — dev-only; guides are noindex+302→404 in production */}
-            {process.env.NODE_ENV === 'development' && relatedGuides.length > 0 && (
-              <section id="guides" className="scroll-mt-36 space-y-6 md:space-y-10">
-                <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600">
-                    <FileText className="w-6 h-6" />
-                  </div>
-                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
-                    Troubleshooting & Technical Guides
-                  </h2>
-                </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {relatedGuides.map((g) => (
-                    <Card
-                      key={g.id}
-                      className="border-none shadow-[0_24px_48px_-15px_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-8 bg-white flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
-                    >
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-lg">
-                            Expert Guide
-                          </span>
-                          <span className="text-xs text-slate-400 font-semibold">{g.readTime}</span>
-                        </div>
-                        
-                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight mb-3 group-hover:text-blue-600 transition-colors">
-                          <Link href={`/guides/${g.slug}`}>{g.title}</Link>
-                        </h3>
-                        
-                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium line-clamp-3 mb-6">
-                          {g.excerpt}
-                        </p>
-                      </div>
-
-                      <div className="pt-4 border-t border-slate-100 space-y-4">
-                        <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-                          <div className="flex items-center gap-2">
-                            <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-black text-[9px] flex items-center justify-center">WP</span>
-                            <span className="font-semibold text-slate-700">{g.author}</span>
-                          </div>
-                          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">
-                            Date: {g.date}
-                          </div>
-                        </div>
-
-                        <div className="flex items-center justify-between pt-2">
-                          <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                            Focus: {g.keyword}
-                          </span>
-                          <Link href={`/guides/${g.slug}`} className="text-xs font-black text-blue-600 hover:underline">
-                            Read Guide →
-                          </Link>
-                        </div>
-                      </div>
-                    </Card>
-                  ))}
-                </div>
-                <div className="text-center pt-2">
-                  <Link
-                    href={`/guides?tool=${tool.slug}`}
-                    className="inline-flex items-center gap-2 text-blue-600 font-black hover:underline"
-                  >
-                    Explore all {tool.name} expert guides in our library →
-                  </Link>
-                </div>
-              </section>
-            )}
-
             {/* Alternatives Section */}
             <section id="alternatives" className="scroll-mt-36 space-y-6 md:space-y-10">
               <div className="flex items-center justify-between">
@@ -1369,6 +1257,43 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                   </Link>
                 </div>
               </div>
+
+              {/* Troubleshooting & Technical Guides Sidebar Card */}
+              {relatedGuides.length > 0 && (
+                <div className="bg-white border border-slate-100 p-6 md:p-8 rounded-[24px] md:rounded-[40px] shadow-sm space-y-5">
+                  <div className="flex items-center gap-2 border-b border-slate-50 pb-3">
+                    <FileText className="w-4 h-4 text-blue-600" />
+                    <h4 className="font-black text-slate-900 text-xs uppercase tracking-wider text-[11px] text-slate-400">
+                      Troubleshooting & Guides
+                    </h4>
+                  </div>
+                  <div className="space-y-3">
+                    {relatedGuides.map((g) => (
+                      <Link
+                        key={g.slug}
+                        href={`/guides/articles/${g.slug}`}
+                        className="block p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 transition-all border border-slate-50 hover:border-blue-100 group"
+                      >
+                        <div className="flex items-center justify-between mb-1.5">
+                          <span className="text-[8px] font-mono font-black text-blue-600 uppercase tracking-widest">
+                            {g.category}
+                          </span>
+                          <span className="text-[9px] text-slate-400 font-bold">{g.readTime}</span>
+                        </div>
+                        <h5 className="font-bold text-slate-800 text-xs line-clamp-2 leading-snug group-hover:text-blue-600 transition-colors">
+                          {g.title}
+                        </h5>
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href="/guides"
+                    className="block text-center text-[10px] font-bold text-blue-600 hover:underline uppercase tracking-widest transition-colors pt-1"
+                  >
+                    Explore All Guides →
+                  </Link>
+                </div>
+              )}
 
               {/* Contextual EULA Compliance Shield (Metropolitan Interlink Entry) */}
               {hasLicensingShield && (

@@ -48,8 +48,14 @@ export default function GuidesListClient({
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [toolSearch, setToolSearch] = useState('');
   const [isSitemapOpen, setIsSitemapOpen] = useState(false);
-  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const [bySoftwareOpen, setBySoftwareOpen] = useState(false);
+  const [openToolInAccordion, setOpenToolInAccordion] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(12);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const PAGE_SIZE = 12;
+
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [selectedTool, searchQuery]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -75,8 +81,11 @@ export default function GuidesListClient({
     return true;
   });
 
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = filtered.length > visibleCount;
+
   const guidesByTool: Record<string, MarkdownGuide[]> = {};
-  for (const guide of filtered) {
+  for (const guide of visible) {
     if (!guidesByTool[guide.softwareSlug]) guidesByTool[guide.softwareSlug] = [];
     guidesByTool[guide.softwareSlug].push(guide);
   }
@@ -130,10 +139,10 @@ export default function GuidesListClient({
             Technical Knowledge Base
           </Badge>
           <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
-            CAD Professional Guides
+            CAD Troubleshooting & Performance Guides
           </h1>
           <p className="text-slate-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Step-by-step technical guides for enterprise CAD, BIM, and CAE software. Troubleshoot fatal errors, optimize performance, configure licensing, and master manufacturing workflows.
+            {guides.length} expert-written guides covering {availableTools.length} CAD, BIM, and CAE software tools. Fix crashes, optimize performance, resolve file corruption, troubleshoot licensing errors, and master manufacturing workflows with step-by-step solutions.
           </p>
           <div className="flex items-center justify-center gap-6 mt-6 text-center">
             <div>
@@ -149,18 +158,19 @@ export default function GuidesListClient({
         </div>
 
         {/* Tool dropdown + Guide search */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-10">
+        <div className="flex flex-col sm:flex-row gap-4 mb-10">
           {/* Searchable tool dropdown */}
-          <div className="relative sm:w-72" ref={dropdownRef}>
+          <div className="relative flex-1 sm:flex-none sm:w-80" ref={dropdownRef}>
+            <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Filter by Software</label>
             <button
               onClick={() => { setDropdownOpen(!dropdownOpen); setToolSearch(''); }}
-              className="w-full flex items-center justify-between px-4 py-2.5 bg-white border border-slate-200 text-xs font-bold rounded-xl hover:border-slate-300 transition-all"
+              className="w-full flex items-center justify-between px-4 py-3 bg-white border-2 border-slate-200 text-sm font-bold rounded-xl hover:border-blue-300 transition-all shadow-sm"
             >
               <span className="text-slate-700">{selectedToolName}</span>
               <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             {dropdownOpen && (
-              <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden">
+              <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-white border-2 border-slate-200 rounded-xl shadow-lg overflow-hidden">
                 <div className="relative p-2 border-b border-slate-100">
                   <Search className="absolute left-4 top-3 w-3.5 h-3.5 text-slate-400" />
                   <input
@@ -202,21 +212,22 @@ export default function GuidesListClient({
             )}
           </div>
           {/* Guide search */}
-          <div className="relative sm:ml-auto sm:w-64">
-            <Search className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
+          <div className="relative flex-1 sm:flex-none sm:w-80 sm:ml-auto">
+            <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Search Guides</label>
+            <Search className="absolute left-3 top-[34px] w-4 h-4 text-slate-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search guides..."
-              className="w-full pl-9 pr-4 py-2 bg-white border border-slate-200 text-xs font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/15 text-slate-700"
+              placeholder="Search by title, keyword, or topic..."
+              className="w-full pl-9 pr-4 py-3 bg-white border-2 border-slate-200 text-sm font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-300 text-slate-700 shadow-sm"
             />
           </div>
         </div>
 
         {/* Results count */}
         <div className="mb-6 text-xs font-semibold text-slate-400">
-          Showing {filtered.length} guide{filtered.length !== 1 ? 's' : ''}
+          Showing {visible.length} of {filtered.length} guide{filtered.length !== 1 ? 's' : ''}
           {selectedTool !== 'all' && ` for ${toolMap.get(selectedTool)?.name || selectedTool}`}
         </div>
 
@@ -283,6 +294,18 @@ export default function GuidesListClient({
           })}
         </div>
 
+        {/* Load More */}
+        {hasMore && (
+          <div className="text-center pt-8">
+            <button
+              onClick={() => setVisibleCount(c => c + PAGE_SIZE)}
+              className="px-6 py-3 bg-white border border-slate-200 text-xs font-black text-slate-700 rounded-xl hover:border-blue-200 hover:text-blue-600 transition-all uppercase tracking-wider shadow-sm"
+            >
+              Load More Guides ({filtered.length - visible.length} remaining)
+            </button>
+          </div>
+        )}
+
         {/* No results */}
         {filtered.length === 0 && (
           <div className="text-center py-20">
@@ -300,7 +323,7 @@ export default function GuidesListClient({
           <Card className="border border-slate-100 shadow-sm rounded-2xl bg-white overflow-hidden">
             <button
               type="button"
-              onClick={() => setOpenAccordion(openAccordion ? null : 'all')}
+              onClick={() => setBySoftwareOpen(!bySoftwareOpen)}
               className="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50/70 transition-colors gap-4"
             >
               <div>
@@ -315,21 +338,21 @@ export default function GuidesListClient({
                 <span className="text-[10px] font-black uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-100/50 px-2.5 py-1 rounded-xl">
                   {guides.length} Guides
                 </span>
-                <span className={`transform transition-transform text-slate-500 text-sm font-black shrink-0 ${openAccordion === 'all' ? 'rotate-90' : ''}`}>
+                <span className={`transform transition-transform text-slate-500 text-sm font-black shrink-0 ${bySoftwareOpen ? 'rotate-90' : ''}`}>
                   ▶
                 </span>
               </div>
             </button>
-            <div className={`transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-100/40 ${openAccordion === 'all' ? 'max-h-[2000px] p-5 opacity-100' : 'max-h-0 p-0 opacity-0 pointer-events-none'}`}>
-              <div className="space-y-3">
+            <div className={`transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-100/40 ${bySoftwareOpen ? 'max-h-[3000px] p-5 opacity-100' : 'max-h-0 p-0 opacity-0 pointer-events-none'}`}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-3">
                 {availableTools.map(tool => {
                   const toolGuides = allGuidesByTool[tool.slug] || [];
                   if (toolGuides.length === 0) return null;
-                  const isToolOpen = openAccordion === tool.slug;
+                  const isToolOpen = openToolInAccordion === tool.slug;
                   return (
                     <div key={tool.slug} className="border border-slate-100 rounded-xl overflow-hidden">
                       <button
-                        onClick={() => setOpenAccordion(isToolOpen ? null : tool.slug)}
+                        onClick={() => setOpenToolInAccordion(isToolOpen ? null : tool.slug)}
                         className="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-50 transition-colors"
                       >
                         <span className="flex items-center gap-2">
@@ -385,26 +408,36 @@ export default function GuidesListClient({
                 </span>
               </div>
             </button>
-            <div className={`transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-100/40 bg-white ${isSitemapOpen ? 'max-h-[2500px] p-6 opacity-100' : 'max-h-0 p-0 opacity-0 pointer-events-none'}`}>
-              <div className="space-y-6">
-                {lettersWithGuides.map(([letter, letterGuides]) => (
-                  <div key={letter} className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-6 pb-4 border-b border-slate-50 last:border-none">
-                    <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 font-black text-sm flex items-center justify-center shrink-0 shadow-sm border border-blue-100/40">
-                      {letter}
-                    </span>
-                    <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs sm:text-sm pt-1.5">
+            <div className={`transition-all duration-300 ease-in-out overflow-hidden border-t border-slate-100/40 bg-white ${isSitemapOpen ? 'max-h-[5000px] p-6 opacity-100' : 'max-h-0 p-0 opacity-0 pointer-events-none'}`}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
+                {(() => {
+                  const sorted = [...guides].sort((a, b) => a.title.localeCompare(b.title));
+                  const grouped: Record<string, typeof guides> = {};
+                  for (const g of sorted) {
+                    const letter = g.title.charAt(0).toUpperCase();
+                    if (!grouped[letter]) grouped[letter] = [];
+                    grouped[letter].push(g);
+                  }
+                  return Object.entries(grouped).map(([letter, letterGuides]) => (
+                    <div key={letter} className="space-y-1">
+                      <div className="flex items-center gap-2 pb-1.5 mb-1 border-b border-slate-100">
+                        <span className="w-6 h-6 rounded-lg bg-blue-50 text-blue-600 font-black text-xs flex items-center justify-center shrink-0 border border-blue-100/40">
+                          {letter}
+                        </span>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{letterGuides.length} guides</span>
+                      </div>
                       {letterGuides.map(g => (
                         <Link
                           key={g.slug}
                           href={`/guides/articles/${g.slug}`}
-                          className="font-bold text-slate-600 hover:text-blue-600 hover:underline transition-colors block"
+                          className="block px-3 py-1.5 text-xs font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors"
                         >
                           {g.title}
                         </Link>
                       ))}
                     </div>
-                  </div>
-                ))}
+                  ));
+                })()}
               </div>
             </div>
           </Card>

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import MatchmakerClient from './matchmaker-client';
 import { Sparkles, Scale, Layers, BookOpen, Settings, Tag, ArrowRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { getAllMarkdownGuides } from '@/lib/guides-markdown';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Find Your Perfect CAD Tool in 60 Seconds',
@@ -21,6 +22,11 @@ export default function Page() {
   ]);
   const howTo = howToLd();
   const validCompareSlugs = comparisonPairs().map((p) => p.pairSlug);
+
+  // Get top guides for the matchmaker interlink section
+  const topGuides = getAllMarkdownGuides()
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .slice(0, 5);
 
   return (
     <>
@@ -126,23 +132,13 @@ export default function Page() {
                 <BookOpen className="w-4 h-4 text-rose-500" /> Hot Technical Guides
               </h3>
               <div className="space-y-1">
-                {process.env.NODE_ENV === 'development' ? (
-                  <div className="text-[10px] text-slate-400 font-bold bg-slate-50 border border-slate-100 p-4 rounded-xl text-center select-none">
-                    🔒 Guides hidden in Local Dev (30-Day Plan Sandbox)
-                  </div>
-                ) : [
-                  { name: 'AutoCAD 0x0024 Fatal Error Fix', slug: 'autocad-troubleshooting-0' },
-                  { name: 'FLEXlm Socket Port Binding Patch', slug: 'autocad-troubleshooting-1' },
-                  { name: 'SolidWorks Performance Setup', slug: 'solidworks-performance-1' },
-                  { name: 'Custom CTB Pen Tables Plotting', slug: 'autocad-printing-2' },
-                  { name: 'Revit AIA Layer Guidelines V6', slug: 'revit-standards-1' }
-                ].map((item) => (
+                {topGuides.map((item) => (
                   <Link
                     key={item.slug}
-                    href={`/guides/${item.slug}`}
+                    href={`/guides/articles/${item.slug}`}
                     className="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors py-2 px-2.5 hover:bg-slate-50 rounded-xl group"
                   >
-                    <span className="truncate">{item.name}</span>
+                    <span className="truncate">{item.title}</span>
                     <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 transition-colors group-hover:translate-x-0.5 shrink-0" />
                   </Link>
                 ))}
