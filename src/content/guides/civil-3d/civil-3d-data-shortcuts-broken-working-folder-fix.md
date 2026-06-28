@@ -7,7 +7,7 @@ keyword: "Civil 3D data shortcuts broken working folder reference path"
 slug: "civil-3d-data-shortcuts-broken-working-folder-fix"
 author: "CAD IT Admin"
 readTime: "8 min"
-date: "2022025-06-23"
+date: "2025-06-23"
 sources:
   - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Slow-performance-when-working-on-Civil-3D-drawing.html"
   - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Slow-perfomace-when-working-with-long-3D-polylines-or-big-surfaces.html"

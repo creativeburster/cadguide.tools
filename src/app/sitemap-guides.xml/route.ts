@@ -17,12 +17,16 @@ export async function GET() {
 
   // 2. Individual guide articles
   const guides = getAllMarkdownGuides();
-  const guideUrls = guides.map(g => `  <url>
+  const guideUrls = guides.map(g => {
+    // Validate date format (YYYY-MM-DD); fall back to fixed date if invalid
+    const dateStr = /^\d{4}-\d{2}-\d{2}$/.test(g.date) ? g.date : '2025-06-15';
+    return `  <url>
     <loc>${BASE_URL}/guides/articles/${g.slug}</loc>
-    <lastmod>${g.date}T00:00:00.000Z</lastmod>
+    <lastmod>${dateStr}T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
-  </url>`);
+  </url>`;
+  });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
