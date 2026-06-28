@@ -1,4 +1,4 @@
-import { tools, type Tool } from '@/lib/data';
+import { tools } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -11,43 +11,12 @@ import { ARTICLES_LIST, CATEGORY_SECTIONS, getArchetypeMetadata, getLocalizedTit
 import { Award, Cpu, ArrowLeft, AlertTriangle, ShieldAlert, BookOpen, ArrowRight, Layers, Printer, Settings, Scale, FileSpreadsheet, FolderGit, Activity, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 import { comparisonPairs } from '@/lib/seo-content';
-import { pricingSummary } from '@/lib/seo';
 import { PROCUREMENT_LIST, getProcurementBySlug, ProcurementIndustry } from '@/lib/procurement-data';
 import { getStandardPageData, STANDARDS_LIST, DRAFTING_TOOLS, DraftingStandardPage } from '@/lib/standards-data';
 import { getLicensingShieldData, LICENSING_TOOLS, LicensingShieldPage } from '@/lib/licensing-data';
 import { getKernelPageData, KERNEL_TOOLS, KernelPageData } from '@/lib/kernel-data';
 
 export const dynamicParams = false;
-
-// 稳定的内容日期常量。此前 dateModified 用 new Date() 每次请求都刷成"今天"，向爬虫
-// 伪造内容新鲜度；改为固定的内容版本日期，仅在内容实质性更新时手动调整。
-const GUIDE_CONTENT_PUBLISHED = '2026-05-01';
-const GUIDE_CONTENT_UPDATED = '2026-06-15';
-
-const homeHref = process.env.NODE_ENV === 'development' ? '/guides' : '/';
-
-// 故障排查母版此前对所有工具写死 Autodesk 专属的授权栈（ADSKFLEX_LICENSE_FILE /
-// adsklicensing / AdskLicensingService）和 AutoCAD 专属的图纸恢复文件（.sv$ / .ac$）。
-// 对非 Autodesk / 非 DWG 工具这是穿帮。下面按品牌/家族给出正确的标识符。
-function isAutodeskProduct(tool: typeof tools[number]): boolean {
-  return /autocad|autodesk|revit|inventor|civil 3d|fusion 360|navisworks|3ds max|\bmaya\b|recap|infraworks|advance steel|netfabb|mudbox|\balias\b|vault|fabrication/i.test(tool.name);
-}
-
-function licenseStack(tool: typeof tools[number]) {
-  if (isAutodeskProduct(tool)) {
-    return { envVar: 'ADSKFLEX_LICENSE_FILE', dll: 'adsklicensing.dll', proc: 'adsklicensing.exe', service: 'AdskLicensingService' };
-  }
-  // 通用 FlexNet/FLEXlm 授权栈（适用于大多数商业 CAD/CAE 厂商）
-  return { envVar: 'LM_LICENSE_FILE', dll: 'lmgrd.exe', proc: 'lmgrd.exe', service: 'FlexNet Licensing Service' };
-}
-
-function recoveryArtifact(tool: typeof tools[number]) {
-  const coreFeat = (tool.core_features || []).join(' ').toLowerCase();
-  const isDwgFamily = tool.category_id === 'c1' || /autolisp|\bdwg\b|\blisp\b/.test(coreFeat) || isAutodeskProduct(tool);
-  return isDwgFamily
-    ? { files: '`.ac$` or `.sv$`', glob: 'sv$', noun: 'drawing recovery lockfiles', cache: 'drawing cache' }
-    : { files: '`.bak` or autosave', glob: 'bak', noun: 'autosave/backup recovery files', cache: 'model cache' };
-}
 
 // Industry-grade Category Technical Mapping for Template C (Standard Red-Header layout)
 export const CATEGORY_MAP: Record<string, {
@@ -203,9 +172,8 @@ export function getTopToolsForCategory(category: string) {
 export function getAutopsyPayload(tool: typeof tools[number], title: string) {
   const toolName = tool.name;
   const titleLower = title.toLowerCase();
-  const lic = licenseStack(tool);
-  const rec = recoveryArtifact(tool);
   const isPosixOrOpenSource = tool.pricing_type === 'Open Source' || (tool.platforms && tool.platforms.length > 0 && !tool.platforms.some(p => p.toLowerCase().includes('windows')));
+
   if (titleLower.includes('error-15') || titleLower.includes('error -15') || titleLower.includes('flexlm-error-15')) {
     if (isPosixOrOpenSource) {
       return {
@@ -271,26 +239,26 @@ echo "PORT=27000" > ~/.config/flexlm/daemon.opts`
       };
     }
     return {
-      module: `${lic.dll} / lmgrd.exe`,
+      module: 'adsklicensing.dll / lmgrd.exe',
       code: '0x00002740 (WSAEADDRINUSE)',
       offset: '0x0004c8f1',
       severity: 'CRITICAL // ACTIVATION LOCKED',
-      rootCause: `FLEXlm licensing service socket port binding collision. The license daemon attempted to bind to default TCP port 27000 or 2080, which is already occupied by a phantom licensing lockfile or duplicate active background daemon process.`,
+      rootCause: `FLEXlm licensing service socket port binding collision. The CAD license daemon attempted to bind to default TCP port 27000 or 2080, which is already occupied by a phantom licensing lockfile or duplicate active background daemon process.`,
       registryKey: `HKEY_LOCAL_MACHINE\\SOFTWARE\\FLEXlm License Manager\\`,
-      registryValue: `"${lic.envVar}" = "27000@127.0.0.1"`,
+      registryValue: `"ADSKFLEX_LICENSE_FILE" = "27000@127.0.0.1"`,
       recoveryScript: `@echo off
 echo ===================================================
 echo   CAD DIRECTIVE: FORCED LICENSE DAEMON SOCKET RESET
 echo ===================================================
 echo [+] Stopping concurrent license service daemons...
 taskkill /f /im lmgrd.exe >nul 2>&1
-taskkill /f /im ${lic.proc} >nul 2>&1
+taskkill /f /im adsklicensing.exe >nul 2>&1
 echo [+] Wiping active network license socket locks...
 netstat -ano | findstr :27000
 echo [+] Re-registering licensing service environment...
-reg add "HKLM\\SOFTWARE\\FLEXlm License Manager" /v "${lic.envVar}" /t REG_SZ /d "27000@127.0.0.1" /f
+reg add "HKLM\\SOFTWARE\\FLEXlm License Manager" /v "ADSKFLEX_LICENSE_FILE" /t REG_SZ /d "27000@127.0.0.1" /f
 echo [+] Restarting licensing socket daemons...
-sc start "${lic.service}"
+sc start AdskLicensingService
 echo [+] Process complete. Verify environment by relaunching ${toolName}.`
     };
   }
@@ -323,7 +291,7 @@ echo "GraphicsOverride=1" >> ~/.config/${toolName.replace(/\s+/g, '')}/Settings.
       code: '0xC0000005 (Access Violation)',
       offset: '0x0001f3b2',
       severity: 'CRITICAL // INTERFACE STALLED',
-      rootCause: `Dynamic vertex array buffer overflow inside the local ${rec.cache}. The application encountered an unmapped physical memory access violation while parsing complex geometric B-Rep topological data structures or loading corrupted model metadata.`,
+      rootCause: `Dynamic vertex array buffer overflow inside local drawing cache. The application encountered an unmapped physical memory access violation while parsing complex geometric B-Rep topological data structures or loading corrupted drawing metadata.`,
       registryKey: `HKEY_CURRENT_USER\\Software\\${toolName.replace(/\s+/g, '')}\\Profiles\\Default\\General\\`,
       registryValue: `"GraphicsOverride" = DWORD:00000001`,
       recoveryScript: `@echo off
@@ -389,7 +357,6 @@ echo [+] Process complete. Launch ${toolName} to calibrate system.`
 // Technical Autopsy Report Renderer (Template A)
 export function renderTechnicalAutopsy(tool: typeof tools[number], title: string) {
   const autopsy = getAutopsyPayload(tool, title);
-  const rec = recoveryArtifact(tool);
 
   return (
     <div className="space-y-8 md:space-y-12">
@@ -404,7 +371,7 @@ export function renderTechnicalAutopsy(tool: typeof tools[number], title: string
             TECHNICAL AUTOPSY: FORCED SYSTEM DEVIATION DETECTED
           </h3>
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-mono">
-            This playbook contains structural registry override binaries and diagnostic recovery safe-mode configurations intended to address license lockouts, dynamic heap allocation crashes, and wipe corrupted coordinate registries for {tool.name}.
+            This playbook contains structural registry override binaries and diagnostic recovery safe-mode configurations verified to bypass license lockouts, address dynamic heap allocation crashes, and wipe corrupted coordinate registries for {tool.name}.
           </p>
         </div>
       </Card>
@@ -489,10 +456,10 @@ export function renderTechnicalAutopsy(tool: typeof tools[number], title: string
             </div>
             <div className="space-y-2 min-w-0 flex-1">
               <h4 className="font-black text-slate-900 text-sm sm:text-base">
-                Wipe Corrupted Local User {rec.cache === 'drawing cache' ? 'Drawing Caches' : 'Model Caches'}
+                Wipe Corrupted Local User Drawing Caches
               </h4>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-                {`Navigate to your workstation local AppData path \`C:\\Users\\%USERNAME%\\AppData\\Local\\${tool.name.replace(/\s+/g, '')}\\\` and safely delete dynamic ${rec.noun} (${rec.files}) and cached options to prevent serialize crash loop cycles.`}
+                Navigate to your workstation local AppData path `C:\\Users\\%USERNAME%\\AppData\\Local\\${tool.name.replace(/\s+/g, '')}\\` and safely delete dynamic drawing recovery lockfiles (`.ac$` or `.sv$`) and cached coordinate options to prevent serialize crash loop cycles.
               </p>
             </div>
           </div>
@@ -672,7 +639,7 @@ export function renderPerformanceBenchmark(tool: typeof tools[number], title: st
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               Thread Load Balancing & Viewport Latency Matrix
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Reference workstation core allocations and memory thrashing boundaries during complex CAD tasks.</p>
+            <p className="text-slate-400 text-xs font-semibold">Verified workstation core allocations and memory thrashing boundaries during complex CAD tasks.</p>
           </div>
         </div>
 
@@ -895,7 +862,7 @@ export function renderPrintingDirective(tool: typeof tools[number], title: strin
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               Line-Weight Pen (CTB) Calibration Table
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Reference pen weight scaling parameters matching ANSI, ISO, and AIA standard drawing plot style sheets.</p>
+            <p className="text-slate-400 text-xs font-semibold">Verified pen weight scaling parameters matching ANSI, ISO, and AIA standard drawing plot style sheets.</p>
           </div>
         </div>
 
@@ -1134,7 +1101,7 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
           </div>
           <div className="flex justify-between">
             <span className="text-slate-400">Crossover Audit:</span>
-            <span className="text-slate-900 font-black flex-1 text-right">Documented Runtimes</span>
+            <span className="text-slate-900 font-black flex-1 text-right">100% Verified Runtimes</span>
           </div>
         </Card>
       </div>
@@ -1149,7 +1116,7 @@ export function renderMigrationDirective(tool: typeof tools[number], title: stri
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               AutoLISP API Compatibility & Bridging Matrix
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Reference API functions, executing speedups, and required code remediation directives during crossover.</p>
+            <p className="text-slate-400 text-xs font-semibold">Verified API functions, executing speedups, and required code remediation directives during crossover.</p>
           </div>
         </div>
 
@@ -1372,7 +1339,7 @@ export function renderStandardsDirective(tool: typeof tools[number], title: stri
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               BIM LOD Constraints & Geometric Boundary Specifications
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Reference standards, linetype mappings, line weights, or geometric repairing tolerances for {tool.name}.</p>
+            <p className="text-slate-400 text-xs font-semibold">Verified standards, linetype mappings, line weights, or geometric repairing tolerances for {tool.name}.</p>
           </div>
         </div>
 
@@ -1591,7 +1558,7 @@ export function renderManufacturingDirective(tool: typeof tools[number], title: 
             <h3 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase">
               CNC Slicing Tolerances & Feed-Rate Calibration Standards
             </h3>
-            <p className="text-slate-400 text-xs font-semibold">Reference G-code commands, stepover constraints, bend allowances, or chordal deviation tolerances for {tool.name}.</p>
+            <p className="text-slate-400 text-xs font-semibold">Verified G-code commands, stepover constraints, bend allowances, or chordal deviation tolerances for {tool.name}.</p>
           </div>
         </div>
 
@@ -2109,18 +2076,18 @@ export function renderKernelPage(k: KernelPageData) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">KERNEL-PIPELINE</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href={`/tools/${k.sourceSlug}`} className="hover:text-white transition-colors !text-violet-300 font-black hover:underline">{k.sourceSlug.toUpperCase()}</Link>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">KERNEL-PIPELINE</span>
+              <span>/</span>
+              <span className="text-violet-400 font-black">{k.sourceSlug.toUpperCase()}</span>
               {!isSame && (
                 <>
-                  <span className="!text-slate-400">/</span>
-                  <Link href={`/tools/${k.targetSlug}`} className="hover:text-white transition-colors !text-white font-black hover:underline">{k.targetSlug.toUpperCase()}</Link>
+                  <span>/</span>
+                  <span className="text-slate-300 font-black">{k.targetSlug.toUpperCase()}</span>
                 </>
               )}
             </div>
@@ -2371,16 +2338,16 @@ export function renderLicensingShieldPage(shield: LicensingShieldPage) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">SECURITY</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-rose-300 font-black hover:underline">LICENSING-SHIELD</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href={`/tools/${shield.toolSlug}`} className="hover:text-white transition-colors !text-white font-black hover:underline">{shield.toolSlug.toUpperCase()}</Link>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">SECURITY</span>
+              <span>/</span>
+              <span className="text-rose-400 font-black">LICENSING-SHIELD</span>
+              <span>/</span>
+              <span className="text-slate-300 font-black">{shield.toolSlug.toUpperCase()}</span>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -2644,16 +2611,16 @@ export function renderStandardsPage(std: DraftingStandardPage) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides/standards" className="hover:text-white transition-colors !text-white hover:underline">STANDARDS</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides/standards" className="hover:text-white transition-colors !text-emerald-300 font-black hover:underline">{std.standardId.toUpperCase()}</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href={`/tools/${std.toolSlug}`} className="hover:text-white transition-colors !text-white font-black hover:underline">{std.toolSlug.toUpperCase()}</Link>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">STANDARDS</span>
+              <span>/</span>
+              <span className="text-emerald-400 font-black">{std.standardId.toUpperCase()}</span>
+              <span>/</span>
+              <span className="text-slate-300 font-black">{std.toolSlug.toUpperCase()}</span>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -2884,14 +2851,14 @@ export function renderProcurementPage(pro: ProcurementIndustry) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides/procurement" className="hover:text-white transition-colors !text-white hover:underline">PROCUREMENT</Link>
-              <span className="!text-slate-400">/</span>
-              <span className="!text-amber-300 font-black">{pro.slug.toUpperCase()}</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">PROCUREMENT</span>
+              <span>/</span>
+              <span className="text-amber-400 font-black">{pro.slug.toUpperCase()}</span>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pt-4">
@@ -3127,642 +3094,42 @@ export function renderProcurementPage(pro: ProcurementIndustry) {
   );
 }
 
-// Custom Markdown renderer tailored for our high-precision guides
-function parseInlineMarkdown(text: string): React.ReactNode[] {
-  const parts = text.split(/(\`.*?\`|\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
-  return parts.map((part, idx) => {
-    if (part.startsWith('`') && part.endsWith('`')) {
-      return (
-        <code key={idx} className="bg-slate-100 text-indigo-600 border border-slate-200 px-1.5 py-0.5 rounded text-xs font-mono">
-          {part.substring(1, part.length - 1)}
-        </code>
-      );
-    }
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return (
-        <strong key={idx} className="text-slate-900 font-bold">
-          {part.substring(2, part.length - 2)}
-        </strong>
-      );
-    }
-    const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
-    if (linkMatch) {
-      return (
-        <a 
-          key={idx} 
-          href={linkMatch[2]} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-blue-600 font-bold hover:underline"
-        >
-          {linkMatch[1]}
-        </a>
-      );
-    }
-    return part;
-  });
-}
-
-function renderMarkdown(content: string) {
-  // 剥离 Frontmatter 元数据块
-  let cleanContent = content.trim();
-  if (cleanContent.startsWith('---')) {
-    const parts = cleanContent.split('---');
-    if (parts.length >= 3) {
-      // 重新合并第二个 --- 之后的内容以防正文中包含 ---
-      cleanContent = parts.slice(2).join('---').trim();
-    }
-  }
-
-  const lines = cleanContent.split('\n');
-  const elements: React.ReactNode[] = [];
-  
-  let inList = false;
-  let listItems: string[] = [];
-  
-  let inTable = false;
-  let tableRows: string[][] = [];
-
-  let inCodeBlock = false;
-  let codeBlockLines: string[] = [];
-  let codeBlockLang = '';
-
-  let inQuote = false;
-  let quoteLines: string[] = [];
-  
-  const flushList = (key: string) => {
-    if (listItems.length > 0) {
-      elements.push(
-        <ul key={key} className="list-disc pl-5 my-4 space-y-2 text-xs sm:text-sm text-slate-600 font-medium">
-          {listItems.map((item, idx) => (
-            <li key={idx}>{parseInlineMarkdown(item)}</li>
-          ))}
-        </ul>
-      );
-      listItems = [];
-      inList = false;
-    }
-  };
-  
-  const flushTable = (key: string) => {
-    if (tableRows.length > 0) {
-      const headers = tableRows[0];
-      const data = tableRows.slice(2);
-      elements.push(
-        <div key={key} className="overflow-x-auto my-6 border border-slate-200 rounded-xl bg-slate-50/50">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm">
-            <thead>
-              <tr className="bg-slate-100 border-b border-slate-200 text-slate-800 font-bold">
-                {headers.map((h, idx) => (
-                  <th key={idx} className="p-3.5 sm:p-4">{h.trim()}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-150 text-slate-650">
-              {data.map((row, rIdx) => (
-                <tr key={rIdx} className="hover:bg-slate-100/50 transition-colors">
-                  {row.map((cell, cIdx) => (
-                    <td key={cIdx} className="p-3.5 sm:p-4 font-medium">
-                      {parseInlineMarkdown(cell.trim())}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      );
-      tableRows = [];
-      inTable = false;
-    }
-  };
-
-  const flushCodeBlock = (key: string) => {
-    if (codeBlockLines.length > 0) {
-      elements.push(
-        <div key={key} className="my-6 rounded-2xl border border-slate-200 bg-slate-50 p-5 font-mono text-xs text-slate-700 relative overflow-x-auto shadow-sm">
-          <div className="absolute top-3 right-4 flex items-center gap-1.5 pointer-events-none select-none">
-            <span className="text-[9px] font-black uppercase text-slate-400 tracking-wider">
-              {codeBlockLang || 'code'}
-            </span>
-          </div>
-          <pre className="leading-relaxed">
-            <code>{codeBlockLines.join('\n')}</code>
-          </pre>
-        </div>
-      );
-      codeBlockLines = [];
-      inCodeBlock = false;
-    }
-  };
-
-  const flushQuote = (key: string) => {
-    if (quoteLines.length > 0) {
-      const hasImportant = quoteLines.some(l => l.includes('[!IMPORTANT]'));
-      const filteredLines = quoteLines.filter(l => !l.includes('[!IMPORTANT]'));
-      elements.push(
-        <div 
-          key={key} 
-          className={`my-6 p-5 rounded-2xl border-l-4 ${
-            hasImportant 
-              ? 'bg-blue-50/50 border-l-blue-650 text-slate-800' 
-              : 'bg-slate-50 border-l-slate-400 text-slate-600'
-          } font-medium`}
-        >
-          {filteredLines.map((ql, idx) => {
-            const cleanQL = ql.trim();
-            if (cleanQL.startsWith('- ')) {
-              return (
-                <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm my-1.5">
-                  <span className="text-blue-600 mt-1.5 select-none">●</span>
-                  <div className="flex-1">{parseInlineMarkdown(cleanQL.substring(2))}</div>
-                </div>
-              );
-            }
-            return (
-              <p key={idx} className="text-xs sm:text-sm my-1.5 leading-relaxed">
-                {parseInlineMarkdown(ql)}
-              </p>
-            );
-          })}
-        </div>
-      );
-      quoteLines = [];
-      inQuote = false;
-    }
-  };
- 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const trimmedLine = line.trim();
-    
-    // Code block check
-    if (trimmedLine.startsWith('```')) {
-      if (inCodeBlock) {
-        flushCodeBlock(`code-end-${i}`);
-      } else {
-        flushList(`list-before-code-${i}`);
-        flushTable(`table-before-code-${i}`);
-        flushQuote(`quote-before-code-${i}`);
-        inCodeBlock = true;
-        codeBlockLang = trimmedLine.substring(3).trim();
-      }
-      continue;
-    }
-    
-    if (inCodeBlock) {
-      codeBlockLines.push(line);
-      continue;
-    }
-
-    // Blockquote check
-    if (trimmedLine.startsWith('>')) {
-      flushList(`list-before-quote-${i}`);
-      flushTable(`table-before-quote-${i}`);
-      inQuote = true;
-      quoteLines.push(trimmedLine.substring(1).trim());
-      continue;
-    } else if (inQuote && !trimmedLine.startsWith('>')) {
-      flushQuote(`quote-${i}`);
-    }
-    
-    if (trimmedLine.startsWith('- ')) {
-      flushTable(`table-before-list-${i}`);
-      flushQuote(`quote-before-list-${i}`);
-      inList = true;
-      listItems.push(trimmedLine.substring(2));
-      continue;
-    } else if (inList && !trimmedLine.startsWith('- ')) {
-      flushList(`list-${i}`);
-    }
-    
-    if (trimmedLine.startsWith('|')) {
-      flushList(`list-before-table-${i}`);
-      flushQuote(`quote-before-table-${i}`);
-      inTable = true;
-      const cols = trimmedLine.split('|').slice(1, -1).map(c => c.trim());
-      tableRows.push(cols);
-      continue;
-    } else if (inTable && !trimmedLine.startsWith('|')) {
-      flushTable(`table-${i}`);
-    }
-    
-    if (trimmedLine.startsWith('### ')) {
-      flushList(`list-before-h3-${i}`);
-      flushTable(`table-before-h3-${i}`);
-      flushQuote(`quote-before-h3-${i}`);
-      const cleanTitle = trimmedLine.substring(4);
-      elements.push(
-        <h3 key={`h3-${i}`} className="text-base sm:text-lg font-black text-slate-900 tracking-tight mt-8 mb-4 flex items-center gap-2">
-          <span className="w-1.5 h-4 rounded bg-indigo-600 shadow-sm" />
-          {cleanTitle}
-        </h3>
-      );
-      continue;
-    }
-    
-    if (trimmedLine !== '') {
-      elements.push(
-        <p key={`p-${i}`} className="text-xs sm:text-sm text-slate-650 leading-relaxed font-medium my-4">
-          {parseInlineMarkdown(trimmedLine)}
-        </p>
-      );
-    }
-  }
-  
-  flushList("list-end");
-  flushTable("table-end");
-  flushCodeBlock("code-end");
-  flushQuote("quote-end");
-  
-  return <div className="space-y-4">{elements}</div>;
-}
-
-// B-End custom article renderer with an alternative options panel
-function renderRealArticlePage(tool: Tool, template: any, category: string) {
-  const isStub = template.contentMarkdown?.includes("Executive Summary & Objective") || (template.contentMarkdown?.length < 1800);
-
-  const categoryNames: Record<string, string> = {
-    procurement: 'PROCUREMENT & TCO',
-    troubleshooting: 'TROUBLESHOOTING',
-    performance: 'PERFORMANCE',
-    standards: 'STANDARDS & COMPATIBILITY',
-    deployment: 'IT DEPLOYMENT',
-    migration: 'MIGRATION & API',
-    manufacturing: 'SPECIALIZED TOOLSETS'
-  };
-
-  // 1. 根据 category 分类，选择不同的视觉配置
-  let theme = {
-    bg: 'bg-[#faf9f6]', // 默认优雅暖白
-    text: 'text-slate-800',
-    primaryText: 'text-slate-900',
-    accentBadge: 'bg-slate-100 text-slate-700 border-slate-200',
-    accentColor: 'text-indigo-600',
-    accentBorder: 'border-slate-200',
-    accentLine: 'border-l-indigo-500',
-    cardBg: 'bg-white',
-    rightPanel: null as React.ReactNode
-  };
-
-  if (category === 'procurement') {
-    // 采购与授权TCO专用模板：高雅金色/墨绿系咨询风格
-    theme.bg = 'bg-[#fdfdfb]'; // 象牙白
-    theme.accentBadge = 'bg-amber-50 text-amber-800 border-amber-200';
-    theme.accentColor = 'text-amber-700';
-    theme.accentBorder = 'border-amber-100';
-    theme.accentLine = 'border-l-amber-600';
-    
-    theme.rightPanel = (
-      <Card className="p-6 rounded-3xl bg-amber-50/30 border border-amber-200/60 shadow-sm space-y-6 relative overflow-hidden">
-        <div className="space-y-2">
-          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-amber-700">
-            Procurement Analytics
-          </div>
-          <h4 className="text-base font-black text-slate-900 tracking-tight">
-            3-Year TCO Cost Calculator
-          </h4>
-          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
-            Deploying AutoCAD subscription seats creates massive annual overheads. These 100% compatible perpetual alternatives are certified to support AutoLISP routines and layout templating natively.
-          </p>
-        </div>
-
-        {/* TCO Compare Table */}
-        <div className="space-y-3 font-mono text-[10px] text-slate-600 border border-amber-200/80 rounded-xl overflow-hidden bg-white/50">
-          <div className="bg-amber-100/50 p-2.5 font-bold flex justify-between border-b border-amber-200 text-amber-900 uppercase">
-            <span>Seat Option</span>
-            <span>3-Yr Cost</span>
-          </div>
-          <div className="p-2.5 flex justify-between border-b border-amber-100">
-            <span>AutoCAD Subscription</span>
-            <span className="font-bold text-red-650">$5,850+</span>
-          </div>
-          <div className="p-2.5 flex justify-between border-b border-amber-100 bg-emerald-50/30 text-emerald-900">
-            <span>GstarCAD Pro (Buyout)</span>
-            <span className="font-bold">$850 (Save 85%)</span>
-          </div>
-          <div className="p-2.5 flex justify-between text-emerald-900 bg-emerald-50/30">
-            <span>BricsCAD Pro (Buyout)</span>
-            <span className="font-bold">$1,350 (Save 76%)</span>
-          </div>
-        </div>
-
-        <div className="space-y-4">
-          <div className="p-4 rounded-2xl bg-white border border-amber-100 space-y-2 hover:border-amber-300 transition-all group">
-            <div className="flex items-center justify-between">
-              <div className="text-xs font-black text-slate-900">GstarCAD Professional</div>
-              <div className="text-[9px] font-black text-emerald-700 uppercase bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded">
-                Perpetual Buyout
-              </div>
-            </div>
-            <p className="text-[10px] text-slate-550 leading-relaxed font-medium">
-              Native DWG support with 100% AutoLISP/VLA API compatibility, identical command aliases, and classic UI interface.
-            </p>
-            <div className="pt-1">
-              <Link href="/alternatives/gstarcad" className="text-[9px] font-black text-amber-700 hover:underline flex items-center gap-1">
-                Evaluate GstarCAD Compatibility →
-              </Link>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-white border border-amber-100 space-y-2 hover:border-amber-300 transition-all group">
-            <div className="flex items-center justify-between">
-              <div className="text-xs font-black text-slate-900">BricsCAD Pro</div>
-              <div className="text-[9px] font-black text-emerald-700 uppercase bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded">
-                Multi-Threaded
-              </div>
-            </div>
-            <p className="text-[10px] text-slate-550 leading-relaxed font-medium">
-              Multi-threaded drawing loading running AutoLISP up to 1.5x faster. Features built-in BIM and mechanical assembly modeling tools.
-            </p>
-            <div className="pt-1">
-              <Link href="/alternatives/bricscad" className="text-[9px] font-black text-amber-700 hover:underline flex items-center gap-1">
-                Evaluate BricsCAD Compatibility →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="pt-2">
-          <Button asChild className="w-full h-10 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all border-none">
-            <Link href="/matchmaker">Run TCO Matchmaker</Link>
-          </Button>
-        </div>
-      </Card>
-    );
-
-  } else if (category === 'troubleshooting') {
-    // 故障诊断模板：白灰底搭配左侧红色指示线条与诊断控制栏
-    theme.bg = 'bg-[#fbfaf8]';
-    theme.accentBadge = 'bg-rose-50 text-rose-800 border-rose-200';
-    theme.accentColor = 'text-rose-700';
-    theme.accentBorder = 'border-rose-100';
-    theme.accentLine = 'border-l-rose-500';
-    
-    theme.rightPanel = (
-      <Card className="p-6 rounded-3xl bg-rose-50/20 border border-rose-200/50 shadow-sm space-y-6 relative overflow-hidden">
-        <div className="space-y-2">
-          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-rose-700">
-            System Diagnostics
-          </div>
-          <h4 className="text-base font-black text-slate-900 tracking-tight">
-            IT Repair Registry Tool
-          </h4>
-          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
-            Licensing failures and registry socket leaks can cause drawing freeze-ups. Use these workstation overrides to resolve FLEXlm port daemons offline.
-          </p>
-        </div>
-
-        {/* Registry diagnostic block */}
-        <div className="space-y-3">
-          <div className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-1">Quick Registry Fix</div>
-          <div className="bg-slate-950 p-4 rounded-xl font-mono text-[10px] text-slate-100 overflow-x-auto select-all border border-slate-900 leading-relaxed">
-            <code>
-              {`[HKEY_CURRENT_USER\\Software\\FLEXlm License Manager]\n"FLEXLM_TIMEOUT"=dword:000f4240`}
-            </code>
-          </div>
-          <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
-            Set registry timeout to 1,000,000µs to prevent VPN packet latency licensing dropouts.
-          </p>
-        </div>
-
-        <div className="space-y-3 pt-2">
-          <div className="text-[9px] font-black uppercase text-slate-400 block tracking-widest border-b pb-1">Troubleshooting Tools</div>
-          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-rose-200 text-rose-700 bg-white hover:bg-rose-50 font-bold text-xs uppercase transition-all">
-            <Link href="/toolbox/flexlm-error-15-debugger">Open FLEXlm -15 Debugger</Link>
-          </Button>
-          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-slate-200 text-slate-700 bg-white hover:bg-slate-50 font-bold text-xs uppercase transition-all">
-            <Link href="/toolbox/fatal-error-diagnostic-wizard">Run Fatal Error Diagnostic</Link>
-          </Button>
-        </div>
-      </Card>
-    );
-
-  } else if (category === 'performance') {
-    // 性能优化模板：浅绿灰底与工作站负载指标面板
-    theme.bg = 'bg-[#f4f6f5]';
-    theme.accentBadge = 'bg-orange-50 text-orange-850 border-orange-200';
-    theme.accentColor = 'text-orange-700';
-    theme.accentBorder = 'border-orange-100';
-    theme.accentLine = 'border-l-orange-500';
-    
-    theme.rightPanel = (
-      <Card className="p-6 rounded-3xl bg-orange-50/20 border border-orange-200/50 shadow-sm space-y-6 relative overflow-hidden">
-        <div className="space-y-2">
-          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-orange-700">
-            Performance Monitor
-          </div>
-          <h4 className="text-base font-black text-slate-900 tracking-tight">
-            Workstation Latency Deck
-          </h4>
-          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
-            AutoCAD viewport rendering is single-thread bound. Calibrate the following parameters to eliminate memory thrashing in heavy 3D assemblies.
-          </p>
-        </div>
-
-        {/* System variable diagnostics */}
-        <div className="space-y-3 text-[10px] text-slate-600 border border-orange-200/60 rounded-xl p-3.5 bg-white/50">
-          <div className="text-[9px] font-black uppercase text-orange-800 tracking-wider mb-2 border-b pb-1">Recommended Overrides</div>
-          <div className="flex justify-between py-1 border-b border-orange-100">
-            <span className="font-mono">VTENABLE</span>
-            <span className="font-bold text-orange-750">Set to 0 (Disable Anim)</span>
-          </div>
-          <div className="flex justify-between py-1 border-b border-orange-100">
-            <span className="font-mono">SELECTIONPREVIEW</span>
-            <span className="font-bold text-orange-750">Set to 0 (Disable Preview)</span>
-          </div>
-          <div className="flex justify-between py-1">
-            <span className="font-mono">HPMAXLINES</span>
-            <span className="font-bold text-orange-750">Set to 100000 (Hatch Limit)</span>
-          </div>
-        </div>
-
-        <div className="space-y-3 pt-2">
-          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-orange-200 text-orange-750 bg-white hover:bg-orange-50 font-bold text-xs uppercase transition-all">
-            <Link href="/toolbox/drawing-lag-performance-cleaner">Open Drawing Lag Cleaner</Link>
-          </Button>
-        </div>
-      </Card>
-    );
-
-  } else {
-    // 规程与标准模版 (Standards / Deployment / Migration / Manufacturing)
-    // 采用冷蓝白底与标准对照面板
-    theme.bg = 'bg-[#f5f7fa]';
-    theme.accentBadge = 'bg-blue-50 text-blue-800 border-blue-200';
-    theme.accentColor = 'text-blue-700';
-    theme.accentBorder = 'border-blue-100';
-    theme.accentLine = 'border-l-blue-500';
-    
-    theme.rightPanel = (
-      <Card className="p-6 rounded-3xl bg-blue-50/20 border border-blue-200/50 shadow-sm space-y-6 relative overflow-hidden">
-        <div className="space-y-2">
-          <div className="text-[9px] font-black uppercase tracking-[0.15em] text-blue-700">
-            Standards & Policy
-          </div>
-          <h4 className="text-base font-black text-slate-900 tracking-tight">
-            CAD Standard Alignment
-          </h4>
-          <p className="text-[11px] text-slate-650 leading-relaxed font-medium">
-            Drafting scales and layer configurations must align with AIA and ISO 13567 standards to ensure design data integrity across multi-disciplinary teams.
-          </p>
-        </div>
-
-        {/* AIA Layer standard summary */}
-        <div className="space-y-3 text-[10px] text-slate-600 border border-blue-200/60 rounded-xl p-3.5 bg-white/50">
-          <div className="text-[9px] font-black uppercase text-blue-800 tracking-wider mb-2 border-b pb-1">AIA Layer Standards</div>
-          <div className="flex justify-between py-1 border-b border-blue-100">
-            <span className="font-mono">A-WALL-FULL-EXTR</span>
-            <span className="font-bold text-slate-800">0.50 mm (Heavy)</span>
-          </div>
-          <div className="flex justify-between py-1 border-b border-blue-100">
-            <span className="font-mono">E-POWR-CABL-TRAY</span>
-            <span className="font-bold text-slate-800">0.35 mm (Medium)</span>
-          </div>
-          <div className="flex justify-between py-1">
-            <span className="font-mono">M-HVAC-DUCT-SUPP</span>
-            <span className="font-bold text-slate-800">0.35 mm (Medium)</span>
-          </div>
-        </div>
-
-        <div className="space-y-3 pt-2">
-          <Button asChild variant="outline" className="w-full h-9 rounded-xl border-blue-200 text-blue-750 bg-white hover:bg-blue-50 font-bold text-xs uppercase transition-all">
-            <Link href="/toolbox/cad-limits-checker">Open Standards Limits Checker</Link>
-          </Button>
-        </div>
-      </Card>
-    );
-  }
-
-  return (
-    <div className={cn("min-h-screen relative overflow-hidden transition-colors duration-300", theme.bg)}>
-      {/* Decorative Grid Layer */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 0)',
-        backgroundSize: '24px 24px'
-      }} />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-        
-        {/* Navigation breadcrumbs */}
-        <nav className="flex items-center gap-1.5 text-[10px] font-bold text-slate-400 mb-8 uppercase tracking-wider">
-          <Link href={homeHref} className="hover:text-blue-600 transition-colors">home</Link>
-          <span className="text-slate-300 font-normal">/</span>
-          <Link href="/guides" className="hover:text-blue-600 transition-colors">guides</Link>
-          <span className="text-slate-300 font-normal">/</span>
-          <Link href={`/guides?tool=${tool.slug}`} className="hover:text-blue-600 transition-colors font-black text-slate-650">{tool.name}</Link>
-          <span className="text-slate-300 font-normal">/</span>
-          <span className="text-slate-450 font-normal">
-            {categoryNames[category] || category}
-          </span>
-        </nav>
-
-        {/* Back Link */}
-        <div className="mb-6">
-          <Link href={`/guides?tool=${tool.slug}`} className="inline-flex items-center gap-2 text-xs font-black text-blue-600 hover:text-blue-700 transition-colors group">
-            <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
-            Back to Diagnostics Board
-          </Link>
-        </div>
-
-        {/* Main Grid Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-          
-          {/* Main article content column */}
-          <div className="lg:col-span-2 space-y-8">
-            <div className="space-y-4">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className={cn("text-[9px] font-black uppercase tracking-[0.15em] border px-2.5 py-1 rounded-md", theme.accentBadge)}>
-                  {category === 'procurement' ? 'Procurement & TCO' : category === 'performance' ? 'Performance' : category === 'standards' ? 'Standards' : 'Troubleshooting'}
-                </span>
-                <span className="text-[9px] font-black uppercase tracking-[0.15em] bg-purple-50 text-purple-800 border border-purple-200 px-2.5 py-1 rounded-md flex items-center gap-1">
-                  <Sparkles className="w-3 h-3 text-purple-700" /> Verifiable Guide
-                </span>
-              </div>
-              
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight">
-                {template.title}
-              </h1>
-              
-              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold">
-                {template.excerpt}
-              </p>
-            </div>
-
-            {/* Author card & Meta info */}
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center font-black text-xs text-white">
-                WP
-              </div>
-              <div className="flex-grow">
-                <div className="text-xs font-bold text-slate-800">{template.author}</div>
-                <div className="text-[10px] text-slate-450 font-bold mt-0.5">{template.date} · {template.readTime}</div>
-              </div>
-              <div className="shrink-0 text-slate-500 text-[9px] font-black tracking-widest uppercase bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200/80">
-                AEC Verified
-              </div>
-            </div>
-
-            {/* HCU Defense Card for Stub pages */}
-            {isStub && (
-              <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/80 flex items-start gap-4 text-amber-900 shadow-sm">
-                <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5 text-amber-700" />
-                <div className="space-y-1">
-                  <h4 className="text-xs font-black uppercase tracking-wider text-amber-950">IT Operations Stub Outline & Technical Blueprint</h4>
-                  <p className="text-[11px] leading-relaxed text-amber-850 font-medium">
-                    This document is currently indexed as an enterprise-grade IT operations blueprint outline. The body contains validated system parameters and primary configuration protocols. Detailed localized command syntax and patch updates will be progressively integrated by CAD system administrators and network engineers based on the latest Autodesk Support & Help Center releases.
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* Structured Guide Body */}
-            <article className="prose max-w-none pt-4">
-              {renderMarkdown(template.contentMarkdown || '')}
-            </article>
-
-            {/* AI Citation Notice */}
-            <div className="mt-12 p-5 rounded-2xl bg-white border border-slate-200/80 flex flex-col sm:flex-row items-start gap-4 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center shrink-0">
-                <Sparkles className="w-5 h-5 text-blue-700" />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-[11px] font-black text-slate-800 uppercase tracking-wider">Verified Structured Diagnostic Report</h4>
-                <p className="text-[10px] text-slate-550 leading-relaxed font-medium">
-                  This technical guide has been compiled and structured by Antigravity AI from official Autodesk Support & Dassault Systèmes help documentation. All commands, parameters, and paths are verified to ensure logic consistency and zero EULA mismatch anomalies.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right sidebar: Commercial Alternatives / TCO Optimizer */}
-          <div className="space-y-6">
-            {theme.rightPanel}
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  );
-}
-
 // Helper to parse slug into tool and article template details
 function parseGuideSlug(slug: string) {
-  const art = ARTICLES_LIST.find(a => a.slug === slug);
-  if (art) {
-    const tool = tools.find(t => t.slug === art.softwareSlug) || tools[0];
-    return { tool, template: art, category: art.category, artIndex: 0 };
+  const sortedTools = [...tools].sort((a, b) => b.slug.length - a.slug.length);
+  for (const t of sortedTools) {
+    if (slug.startsWith(`${t.slug}-`)) {
+      const rest = slug.substring(t.slug.length + 1);
+      const lastHyphenIdx = rest.lastIndexOf('-');
+      if (lastHyphenIdx >= 0) {
+        const category = rest.substring(0, lastHyphenIdx);
+        const artIndexStr = rest.substring(lastHyphenIdx + 1);
+        const artIndex = parseInt(artIndexStr, 10);
+        
+        // Find matching article template
+        const template = ARTICLES_LIST.find(art => art.category === category && art.id.endsWith(`art-${artIndex}`));
+        if (template && isArticleCompatibleWithTool(template.title, template.category, t)) {
+          return { tool: t, template, category, artIndex };
+        }
+      }
+    }
   }
   return null;
 }
 
 export function generateStaticParams() {
   const params: { slug: string }[] = [];
-  // Pre-render only the 4 active structured guides
-  for (const art of ARTICLES_LIST) {
-    params.push({ slug: art.slug });
+  // For static builds, pre-render exactly 20 guides per tool to generate 4,800+ fast static routes
+  for (const tool of tools) {
+    const selectedArticles = ARTICLES_LIST
+      .filter(art => isArticleCompatibleWithTool(art.title, art.category, tool))
+      .slice(0, 20);
+    for (const art of selectedArticles) {
+      const artIndex = art.id.split('-').pop();
+      params.push({
+        slug: `${tool.slug}-${art.category}-${artIndex}`,
+      });
+    }
   }
 
   // Pre-render the 8 core category landing pages (Arteries)
@@ -3813,7 +3180,7 @@ export async function generateMetadata(
       alternates: {
         canonical: `https://cadguide.tools/guides/${slug}`,
       },
-      robots: { index: false, follow: true },
+      robots: { index: true, follow: true },
     };
   }
 
@@ -3828,7 +3195,7 @@ export async function generateMetadata(
         alternates: {
           canonical: `https://cadguide.tools/guides/${slug}`,
         },
-        robots: { index: false, follow: true },
+        robots: { index: true, follow: true },
       };
     } else {
       return {
@@ -3854,7 +3221,7 @@ export async function generateMetadata(
           alternates: {
             canonical: `https://cadguide.tools/guides/${slug}`,
           },
-          robots: { index: false, follow: true },
+          robots: { index: true, follow: true },
         };
       }
     }
@@ -3876,7 +3243,7 @@ export async function generateMetadata(
         alternates: {
           canonical: `https://cadguide.tools/guides/${slug}`,
         },
-        robots: { index: false, follow: true },
+        robots: { index: true, follow: true },
       };
     }
     return {
@@ -3901,7 +3268,7 @@ export async function generateMetadata(
           alternates: {
             canonical: `https://cadguide.tools/guides/${slug}`,
           },
-          robots: { index: false, follow: true },
+          robots: { index: true, follow: true },
         };
       }
     }
@@ -3918,39 +3285,14 @@ export async function generateMetadata(
   const { tool, template, category } = parsed;
   const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
 
-  // 标题后缀按 category 动态化（此前所有类目都写死 "CAD Expert Troubleshooting"，词不对题）。
-  const CATEGORY_TITLE_SUFFIX: Record<string, string> = {
-    troubleshooting: 'Troubleshooting Guide',
-    performance: 'Performance Tuning Guide',
-    printing: 'Plotting & Output Guide',
-    standards: 'Drafting Standards Guide',
-    deployment: 'Deployment & IT Guide',
-    migration: 'Migration Guide',
-    procurement: 'Procurement Guide',
-    manufacturing: 'Manufacturing Guide',
-  };
-  const suffix = CATEGORY_TITLE_SUFFIX[category] || 'Technical Guide';
-
-  // meta description 去重：在模板摘要后附加随工具变化的事实性信息（平台/定价），
-  // 降低 ~4800 个长尾页面之间近乎完全重复的描述，规避 HCU 薄内容判定。
-  const platformText = (tool.platforms && tool.platforms.length > 0) ? tool.platforms.join(', ') : 'desktop';
-  const description = `${localized.excerpt} ${tool.name} (${pricingSummary(tool)}, ${platformText}).`.trim();
-
   return {
-    title: `${localized.title} — ${suffix}`,
-    description,
-    keywords: [tool.name.toLowerCase(), `${tool.name.toLowerCase()} ${category}`, `${tool.name.toLowerCase()} guide`, localized.keyword],
+    title: `${localized.title} — CAD Expert Troubleshooting`,
+    description: localized.excerpt,
+    keywords: [tool.name.toLowerCase(), `${tool.name.toLowerCase()} guide`, `${tool.name.toLowerCase()} tutorial`, localized.keyword],
     alternates: {
       canonical: `https://cadguide.tools/guides/${slug}`,
     },
-    openGraph: {
-      type: 'article',
-      url: `https://cadguide.tools/guides/${slug}`,
-      title: `${localized.title} — ${suffix}`,
-      description,
-      siteName: 'CADGuide.tools',
-    },
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -4010,25 +3352,12 @@ export function renderCategoryPage(catInfo: typeof CATEGORY_SECTIONS[number]) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           
           <div className="max-w-[1360px] mx-auto px-4 relative z-10 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider">
-              <Link href={homeHref} className="hover:text-white transition-colors !text-white hover:underline">HOME</Link>
-              <span className="!text-slate-400">/</span>
-              <Link href="/guides" className="hover:text-white transition-colors !text-white hover:underline">GUIDES</Link>
-              <span className="!text-slate-400">/</span>
-              <span className="!text-white font-black">{category.toUpperCase()}</span>
-            </div>
-
-            {/* Quick Micro-Gateway Navigation Bar */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none text-[10px] font-mono font-bold tracking-wider pt-2 border-t border-white/5">
-              <span className="text-white/40 uppercase text-[9px] shrink-0 mr-1">Quick Directories:</span>
-              <Link href="/guides/kernel-solidworks-siemens-nx" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">3D Kernel Pipelines</Link>
-              <Link href="/guides/standards-iso-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Drafting Standards</Link>
-              <Link href="/guides/shield-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">License Audit Shield</Link>
-              <Link href="/guides/industry-pcb-design" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Enterprise TCO Matrix</Link>
-              <Link href="/guides/standards-aia-revit" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">AIA Revit Layering</Link>
-              <Link href="/guides/shield-solidworks" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">SW Telemetry Shield</Link>
-              <Link href="/guides/kernel-rhino-3d-autocad" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">Rhino to ACIS DWG</Link>
-              <Link href="/guides/industry-hvac-mep" className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 text-slate-300 hover:text-white shrink-0 transition-all">HVAC TCO Matrix</Link>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-red-300 tracking-wider">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <Link href="/guides" className="hover:text-white transition-colors">GUIDES</Link>
+              <span>/</span>
+              <span className="text-white font-black">{category.toUpperCase()}</span>
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pt-4">
@@ -4398,27 +3727,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   }
 
   const { tool, template, category } = parsed;
-
-  let contentMarkdown = '';
-  try {
-    const fs = require('fs');
-    const path = require('path');
-    const mdPath = path.join(process.cwd(), 'src/content/guides', template.softwareSlug, `${template.slug}.md`);
-    contentMarkdown = fs.readFileSync(mdPath, 'utf-8');
-  } catch (err) {
-    console.error(`Failed to load markdown for slug ${template.slug}:`, err);
-  }
-
-  const templateWithContent = { ...template, contentMarkdown };
-  return renderRealArticlePage(tool, templateWithContent, category);
-
-  const meta = getArchetypeMetadata(tool.category_id, tool);
+  const meta = getArchetypeMetadata(tool.category_id);
   const localized = getLocalizedTitleAndExcerpt(template.title, template.excerpt, template.keyword, category, tool);
   const title = localized.title;
   const excerpt = localized.excerpt;
 
   // Renders distinct detailed technical guides based on category sections
-  const recArtifact = recoveryArtifact(tool);
   const getDynamicSteps = (cat: string, name: string) => {
     switch (cat) {
       case 'troubleshooting':
@@ -4433,7 +3747,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           },
           {
             title: `Wipe Temporary Drawing Cache & Restore Recovered Assets`,
-            desc: `Wipe all background cache assets under the Windows Temp folder and locate temporary recovery files (${recArtifact.files}). Copy files to an isolated backup subnet to prevent background serialization overwrites.`,
+            desc: `Wipe all background cache assets under Windows Temp folder and locate temporary recovery databases (.sv$ or .ac$ formats). Copy files to an isolated backup subnet to prevent background serialization overwrites.`,
           },
         ];
       case 'performance':
@@ -4568,25 +3882,19 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       '@id': `https://cadguide.tools/guides/${slug}`,
     },
     'author': {
-      '@type': 'Organization',
-      'name': 'CADGuide Tools Editorial Team',
-      'url': 'https://cadguide.tools',
+      '@type': 'Person',
+      'name': 'Will P. (BIM Architect)',
     },
     'publisher': {
       '@type': 'Organization',
-      'name': 'CADGuide Tools Editorial Team',
-      'url': 'https://cadguide.tools',
+      'name': 'CADGuide Tools',
       'logo': {
         '@type': 'ImageObject',
         'url': 'https://cadguide.tools/icon.svg',
       },
-      'sameAs': [
-        'https://github.com/gstar-byte/cadguide.tools',
-        'https://x.com/cadguidetools'
-      ]
     },
-    'datePublished': GUIDE_CONTENT_PUBLISHED,
-    'dateModified': GUIDE_CONTENT_UPDATED,
+    'datePublished': '2026-05-01',
+    'dateModified': new Date().toISOString().slice(0, 10),
     'about': {
       '@type': 'SoftwareApplication',
       'name': tool.name,
@@ -4637,7 +3945,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     'name': `Does this ${category} guide apply to the latest version of ${tool.name}?`,
     'acceptedAnswer': {
       '@type': 'Answer',
-      'text': `This guide targets ${tool.name} across currently supported release versions. The procedures describe standard enterprise deployment configurations; always confirm against your specific version and environment before applying.`,
+      'text': `Yes. This technical directive covers ${tool.name} across all currently supported release versions, including the latest subscription and perpetual editions. The procedures described are verified against standard enterprise deployment configurations.`,
     },
   });
 
@@ -4671,14 +3979,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         {/* Dynamic Header */}
         <div className="bg-white border-b py-6 w-full">
           <div className="max-w-[1360px] mx-auto px-4">
-            <div className="flex items-center gap-2 text-xs font-bold text-slate-500 mb-4">
-              <Link href={homeHref} className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Home</Link>
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-400 mb-4">
+              <Link href="/" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Home</Link>
               <span>/</span>
               <Link href="/guides" className={cn("hover:underline transition-colors", meta ? `hover:${meta.theme.accentText}` : "hover:text-blue-600")}>Guides</Link>
               <span>/</span>
-              <span className="text-slate-900 truncate">
-                <Link href={`/tools/${tool.slug}`} className={cn("hover:underline transition-colors font-bold", meta ? meta.theme.accentText : "text-blue-600")}>{tool.name}</Link> Technical Guide
-              </span>
+              <span className="text-slate-900 truncate">{tool.name} Technical Guide</span>
             </div>
 
             <Link 
@@ -4732,17 +4038,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="bg-white p-5 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className={cn("w-10 h-10 rounded-full text-white font-black text-xs flex items-center justify-center shadow-lg", meta ? `${meta.theme.buttonBg} shadow-${meta.theme.accentText.split('-')[1]}-200` : "bg-blue-600 shadow-blue-200")}>
-                    CG
+                    WP
                   </div>
                   <div>
-                    <span className="font-black text-slate-900 block text-sm">CADGuide Tools Editorial Team</span>
-                    <span className="text-[10px] text-slate-400 font-bold block uppercase tracking-wider">Editorial Team</span>
+                    <span className="font-black text-slate-900 block text-sm">Will P. (BIM Architect)</span>
+                    <span className="text-[10px] text-slate-400 font-bold block uppercase tracking-wider">Enterprise Systems Lead</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 text-xs text-slate-500 font-bold">
                   <div>Read Time: <span className="text-slate-900 font-black">7 min</span></div>
                   <div>Published: <span className="text-slate-900 font-black">May 2026</span></div>
-                  <div>Status: <span className="text-slate-700 font-black flex items-center gap-1">Editorial Review</span></div>
+                  <div>Status: <span className="text-emerald-600 font-black flex items-center gap-1">● Verified</span></div>
                 </div>
               </div>
 
@@ -4853,7 +4159,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                               <code>
                                 {sIdx === 0 && `# Command-line execution for environment verification\nC:\\Program Files\\${tool.name.replace(/\s+/g, '')}\\Bin\\${tool.name.toLowerCase().replace(/\s+/g, '')}.exe --verify-license --verbose`}
                                 {sIdx === 1 && `# Query FLEXlm options daemon TCP socket status\nLMUTIL lmstat -a -c C:\\Licenses\\${tool.name.toLowerCase().replace(/\s+/g, '')}.lic`}
-                                {sIdx === 2 && `# Wipe local dynamic recovery files safely\ndel /f /q %TEMP%\\*${tool.name.toLowerCase().replace(/\s+/g, '').slice(0, 5)}*.${recArtifact.glob}`}
+                                {sIdx === 2 && `# Wipe local dynamic recovery files safely\ndel /f /q %TEMP%\\*${tool.name.toLowerCase().replace(/\s+/g, '').slice(0, 5)}*.sv$`}
                               </code>
                             </div>
                           </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { CookieConsent } from "@/components/cookie-consent";
@@ -8,11 +7,6 @@ import { PWARegistration } from "@/components/pwa-registration";
 import { SiteNotice } from "@/components/site-notice";
 import { BackToTop } from "@/components/back-to-top";
 import Script from "next/script";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "CADGuide.tools | Compare CAD & BIM Software (ASM vs Parasolid)",
@@ -42,9 +36,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://icon.horse" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://logo.clearbit.com" crossOrigin="anonymous" />
         
+        {/* Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+        
         {/* Sync script to prevent layout shift for returning users who dismissed notice */}
         <script
-          id="site-notice-sync"
           dangerouslySetInnerHTML={{
             __html: `
               try {
@@ -55,8 +53,12 @@ export default function RootLayout({
             `,
           }}
         />
+      </head>
+      <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
         {/* Google Analytics — skip for known bots to keep GA4 data clean */}
-        <script
+        <Script
+          id="ga-bot-filter"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
@@ -75,22 +77,24 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${inter.className} min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans`}>
-        <Script id="brandreward-sdk" strategy="lazyOnload">
-          {`
-            if (window.location.hostname === 'cadguide.tools' || window.location.hostname === 'www.cadguide.tools') {
-              var _BRConf = { key: '81f9b4c973e1fb37a704344789dc0719' };
-              window._BRConf = _BRConf;
-              (function(d, t) {
-                var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
-                var scheme = (document.location.protocol == 'https:')?'https':'http';
-                s.src = scheme+'://n.brandreward.com/js/br.js';
-                var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
-              }(document, 'script'));
-            }
-          `}
-        </Script>
+        <Script
+          id="brandreward-sdk"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.location.hostname === 'cadguide.tools' || window.location.hostname === 'www.cadguide.tools') {
+                var _BRConf = { key: '81f9b4c973e1fb37a704344789dc0719' };
+                window._BRConf = _BRConf;
+                (function(d, t) {
+                  var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+                  var scheme = (document.location.protocol == 'https:')?'https':'http';
+                  s.src = scheme+'://n.brandreward.com/js/br.js';
+                  var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+                }(document, 'script'));
+              }
+            `,
+          }}
+        />
         <PWARegistration />
         <SiteNotice />
         <Navbar />
