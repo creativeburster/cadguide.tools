@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   });
 }
 
+export const dynamicParams = false;
+
 // Next.js static prerendering for dynamic coming-soon slots
 export function generateStaticParams() {
   return TOOLBOX_DATA.map((t) => ({

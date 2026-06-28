@@ -18,6 +18,36 @@ import { getKernelPageData, KERNEL_TOOLS, KernelPageData } from '@/lib/kernel-da
 
 export const dynamicParams = false;
 
+// 稳定的内容日期常量。此前 dateModified 用 new Date() 每次请求都刷成"今天"，向爬虫
+// 伪造内容新鲜度；改为固定的内容版本日期，仅在内容实质性更新时手动调整。
+const GUIDE_CONTENT_PUBLISHED = '2026-05-01';
+const GUIDE_CONTENT_UPDATED = '2026-06-15';
+
+const homeHref = process.env.NODE_ENV === 'development' ? '/guides' : '/';
+
+// 故障排查母版此前对所有工具写死 Autodesk 专属的授权栈（ADSKFLEX_LICENSE_FILE /
+// adsklicensing / AdskLicensingService）和 AutoCAD 专属的图纸恢复文件（.sv$ / .ac$）。
+// 对非 Autodesk / 非 DWG 工具这是穿帮。下面按品牌/家族给出正确的标识符。
+function isAutodeskProduct(tool: typeof tools[number]): boolean {
+  return /autocad|autodesk|revit|inventor|civil 3d|fusion 360|navisworks|3ds max|\bmaya\b|recap|infraworks|advance steel|netfabb|mudbox|\balias\b|vault|fabrication/i.test(tool.name);
+}
+
+function licenseStack(tool: typeof tools[number]) {
+  if (isAutodeskProduct(tool)) {
+    return { envVar: 'ADSKFLEX_LICENSE_FILE', dll: 'adsklicensing.dll', proc: 'adsklicensing.exe', service: 'AdskLicensingService' };
+  }
+  // 通用 FlexNet/FLEXlm 授权栈（适用于大多数商业 CAD/CAE 厂商）
+  return { envVar: 'LM_LICENSE_FILE', dll: 'lmgrd.exe', proc: 'lmgrd.exe', service: 'FlexNet Licensing Service' };
+}
+
+function recoveryArtifact(tool: typeof tools[number]) {
+  const coreFeat = (tool.core_features || []).join(' ').toLowerCase();
+  const isDwgFamily = tool.category_id === 'c1' || /autolisp|\bdwg\b|\blisp\b/.test(coreFeat) || isAutodeskProduct(tool);
+  return isDwgFamily
+    ? { files: '`.ac$` or `.sv$`', glob: 'sv$', noun: 'drawing recovery lockfiles', cache: 'drawing cache' }
+    : { files: '`.bak` or autosave', glob: 'bak', noun: 'autosave/backup recovery files', cache: 'model cache' };
+}
+
 // Industry-grade Category Technical Mapping for Template C (Standard Red-Header layout)
 export const CATEGORY_MAP: Record<string, {
   directiveCode: string;
