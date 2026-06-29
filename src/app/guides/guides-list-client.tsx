@@ -160,7 +160,7 @@ export default function GuidesListClient({
         {/* Tool dropdown + Guide search */}
         <div className="flex flex-col sm:flex-row gap-4 mb-10">
           {/* Searchable tool dropdown */}
-          <div className="relative flex-1 sm:flex-none sm:w-80" ref={dropdownRef}>
+          <div className="relative flex-1 sm:flex-none sm:w-80 sm:ml-[500px]" ref={dropdownRef}>
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Filter by Software</label>
             <button
               onClick={() => { setDropdownOpen(!dropdownOpen); setToolSearch(''); }}
