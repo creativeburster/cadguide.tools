@@ -260,7 +260,7 @@ export default function GuidesListClient({
                     const categoryColor = CATEGORY_COLORS[guide.category] || 'bg-slate-50 text-slate-700 border-slate-200';
 
                     return (
-                      <Link key={guide.slug} href={`/guides/articles/${guide.slug}`} className="block group">
+                      <Link key={guide.slug} href={`/guides/${guide.slug}`} className="block group">
                         <Card className="rounded-2xl border border-slate-100 shadow-sm p-5 bg-white h-full flex flex-col justify-between hover:shadow-md hover:border-blue-100 transition-all duration-300">
                           <div className="space-y-3">
                             <div className="flex items-center justify-between">
@@ -392,7 +392,7 @@ export default function GuidesListClient({
                                       </div>
                                       <p className="text-xs text-slate-500 leading-relaxed font-medium mb-2">{g.excerpt}</p>
                                       <Link
-                                        href={`/guides/articles/${g.slug}`}
+                                        href={`/guides/${g.slug}`}
                                         className="inline-flex items-center gap-1 text-[10px] font-black text-blue-600 hover:gap-2 transition-all uppercase tracking-wider"
                                       >
                                         Read Guide
@@ -492,7 +492,7 @@ export default function GuidesListClient({
                                       </div>
                                       <p className="text-xs text-slate-500 leading-relaxed font-medium mb-2">{g.excerpt}</p>
                                       <Link
-                                        href={`/guides/articles/${g.slug}`}
+                                        href={`/guides/${g.slug}`}
                                         className="inline-flex items-center gap-1 text-[10px] font-black text-blue-600 hover:gap-2 transition-all uppercase tracking-wider"
                                       >
                                         Read Guide
