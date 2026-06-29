@@ -57,6 +57,13 @@ export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // 2. 路由重定向逻辑
+  // Redirect /guides/articles/* to /guides/* (route simplification, 301)
+  if (pathname.startsWith('/guides/articles/')) {
+    const slug = pathname.slice('/guides/articles/'.length);
+    url.pathname = `/guides/${slug}`;
+    return NextResponse.redirect(url, 301);
+  }
+
   // Legacy /guides cheatsheet pages → /toolbox canonicals (301)
   if (pathname.startsWith('/guides/')) {
     const slug = pathname.slice('/guides/'.length);
