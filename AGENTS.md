@@ -68,3 +68,46 @@ This version has breaking changes — APIs, conventions, and file structure may 
     2. 校验成功后，只在本地完成 `git commit`，并在对话框中将构建输出呈报给用户。
     3. **有且仅有当用户在聊天对话中发出明确的“推送”或“push”字样时，智能体方可执行 `git push`**。
 *   **违反后果**：未经用户首肯擅自执行 push 将被视为严重违规与逻辑越权故障。
+
+---
+
+## 📝 6. Guide 内容创作准则 (Guide Content Creation Principles)
+
+### 核心规则
+每篇 guide 必须基于**真实搜索需求和实际社区讨论**，不能凭空生成。
+
+### 研究优先流程
+1. **搜索量验证** — 确认话题有真实搜索需求（Google Trends、论坛提及、Reddit 帖子、Autodesk/SolidWorks 社区帖子）。
+2. **来源收集** — 写作前收集 2+ 权威来源（官方文档、厂商 KB、社区帖子、有互动的 YouTube 教程）。
+3. **综合改写** — 将多个来源整合为一个连贯叙述。禁止复制粘贴。用自己的话改写并加入实际经验。
+
+### 语气与风格
+- **第一人称** — "I see this issue when…", "In my experience…", "I recommend…"
+- **去 AI 味** — 禁止使用 "In this comprehensive guide, we will explore…", "It's worth noting that…", "Delve into", "Navigate the complexities of", "In the realm of" 等 AI 典型措辞。
+- **直接实用** — 像资深 CAD 管理员跟同事说话，不像教科书。
+- **实战经验** — 引用真实场景："A client called me last month because their Revit central model…", "I've seen this exact error on three different Inventor installs."
+
+### 质量标准
+- **1000+ 字** 每篇 guide
+- **2+ 来源** 在 frontmatter `sources` 数组中引用
+- **可操作步骤** — 每篇 guide 必须有具体修复步骤，不只是理论
+- **无废话** — 每段都要传递信息， aggressively 删减填充内容
+- **Frontmatter 必填** — title, excerpt, category, softwareSlug, keyword, slug, author, readTime, date, sources
+
+### 分类
+- `troubleshooting` — 错误修复、崩溃、文件损坏
+- `performance` — 速度优化、大文件、硬件
+- `migration` — 版本升级、平台切换
+- `standards` — 制图标准、合规、格式
+- `procurement` — 许可、采购、审计
+- `deployment` — 安装、网络配置、部署
+- `manufacturing` — CAM、钣金、3D 打印
+- `printing` — 打印、PDF 导出、打印标准
+- `workflow` — 工作流程教程
+- `comparison` — 软件对比
+
+### 禁止事项
+- 不研究真实需求就生成 guide
+- 编造错误代码、文件路径或注册表键
+- 适用于任何软件的通用建议
+- AI 典型的对冲语言和元评论
