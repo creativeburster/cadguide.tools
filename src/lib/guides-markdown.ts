@@ -36,7 +36,7 @@ export function getAllMarkdownGuides(): MarkdownGuide[] {
       const filePath = path.join(toolDir, file);
       const raw = fs.readFileSync(filePath, 'utf-8');
       const { data } = matter(raw);
-      if (data.slug) {
+      if (data.slug && data.title) {
         guides.push({
           slug: data.slug as string,
           title: data.title as string,

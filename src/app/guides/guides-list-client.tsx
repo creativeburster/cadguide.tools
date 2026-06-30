@@ -102,7 +102,7 @@ export default function GuidesListClient({
   const allGuidesByLetter: Record<string, MarkdownGuide[]> = {};
   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(l => { allGuidesByLetter[l] = []; });
   for (const g of guides) {
-    const letter = g.title.trim().charAt(0).toUpperCase();
+    const letter = (g.title || '').trim().charAt(0).toUpperCase();
     if (allGuidesByLetter[letter]) {
       allGuidesByLetter[letter].push(g);
     } else {

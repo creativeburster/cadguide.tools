@@ -1,5 +1,5 @@
 ---
-title:<arg_value>"LibreCAD 2D Drafting: Interface, Tools, and DXF Workflow for Technical Drawings"
+title: "LibreCAD 2D Drafting: Interface, Tools, and DXF Workflow for Technical Drawings"
 excerpt: "A beginner guide to using LibreCAD for 2D technical drafting, covering interface navigation, drawing and modification tools, layer management, and DXF file compatibility with professional CAD systems."
 category: "workflow"
 softwareSlug: "librecad"
