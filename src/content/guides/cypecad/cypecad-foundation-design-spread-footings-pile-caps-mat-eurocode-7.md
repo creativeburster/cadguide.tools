@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Foundation Design: Spread Footings, Pile Caps, and Mat Foundations per Eurocode 7
 
-CYPECAD provides integrated foundation design per Eurocode 7 (EN 1997-1), including isolated footings, combined footings, pile caps, and mat foundations. This guide covers the complete foundation design workflow.
+Foundation design in CYPECAD is something I've come to rely on for Eurocode 7 projects. The integration with the superstructure model means you don't have to export reactions to a separate tool — everything stays in one project. I've used it for isolated footings, pile caps, and mat foundations on projects in Spain and Portugal. Let me walk you through the workflow.
 
 ## Soil Parameters
 
@@ -262,6 +262,6 @@ CYPECAD provides integrated foundation design per Eurocode 7 (EN 1997-1), includ
 **Cause**: Variable soil or uneven loading.
 **Fix**: Use mat foundation, adjust footing sizes to equalize pressure, or use piles to uniform strata.
 
-## Conclusion
+## Wrapping Up
 
-CYPECAD's foundation design module provides comprehensive coverage per Eurocode 7: isolated footings with bearing/shear/flexure checks, combined footings as beams on elastic foundation, pile caps with pile load verification, mat foundations with FEM analysis, and retaining walls with stability checks. The key to reliable foundation design is accurate soil parameters (bearing capacity, subgrade modulus, friction angle), proper design approach selection (DA1/DA2/DA3 per national annex), and verification of all failure modes. By following this workflow, structural engineers can produce Eurocode 7-compliant foundation designs for any building type.
+Foundation design in CYPECAD is efficient because it's integrated — no exporting reactions to a separate tool. The Eurocode 7 design approaches (DA1, DA2, DA3) are all supported, and the software handles the partial factor combinations for you. My advice: get the soil parameters right from the geotechnical report, and don't forget to check differential settlement — it's the thing that causes the most problems in practice.

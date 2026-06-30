@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Home Design: 3D Modeling, Plans, and Construction Documents
 
-Chief Architect is purpose-built for residential design and construction documentation. Unlike general CAD tools, it automatically generates 3D models, sections, elevations, schedules, and material lists from 2D plans. This guide covers the complete home design workflow.
+I've been using Chief Architect for residential design for years, and what keeps me coming back is how fast it is. Unlike Revit, where you're building a full BIM model, Chief Architect is designed specifically for home builders and residential designers. You draw 2D plans and it automatically generates 3D models, sections, elevations, schedules, and material lists. Let me walk you through the workflow.
 
 ## Project Setup
 
@@ -303,6 +303,6 @@ Chief Architect is purpose-built for residential design and construction documen
    - Takes 1-10 minutes per image
    - Includes reflections, refractions, soft shadows
 
-## Conclusion
+## Wrapping Up
 
-Chief Architect provides a complete residential design workflow: draw 2D plans with walls, doors, windows, stairs, and cabinets; automatically generate 3D models, sections, and elevations; produce construction documents (floor plans, elevations, sections, foundation, roof, electrical); and compile schedules and material lists for construction. The automatic 3D generation from 2D plans saves significant time compared to separate 2D and 3D workflows. For custom home builders, architects, and designers who focus on residential projects, Chief Architect offers one of the most efficient workflows from concept to construction documents.
+Chief Architect is the most efficient residential design tool I've used. The automatic 3D generation from 2D plans is the killer feature — you draw the floor plan, and the 3D model, sections, elevations, and schedules are all there. For custom home builders and residential designers, it's hard to beat. My tip: set up your template file with your default wall types, window styles, and annotation preferences before starting a project. That upfront investment pays off on every subsequent project.

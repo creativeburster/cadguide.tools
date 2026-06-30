@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Rendering and Presentation: Ray Tracing, Walkthroughs, and Client Visuals
 
-Creating compelling visual presentations is essential for residential design — clients need to see their future home before construction begins. Chief Architect provides built-in rendering, walkthrough, and panorama tools. This guide covers the complete presentation workflow.
+Client presentations are where Chief Architect's rendering tools pay for themselves. I've had clients sign off on designs after a single walkthrough — no need for separate rendering software or outsourcing to a visualization studio. The built-in ray tracing, walkthroughs, and panorama tools are surprisingly capable. Let me show you how I use them.
 
 ## Camera Setup
 
@@ -296,6 +296,6 @@ Ray trace rendering includes:
 6. **Multiple panoramas**: Every major room
 7. **Material board**: Image showing all selected materials
 
-## Conclusion
+## Wrapping Up
 
-Chief Architect's rendering and presentation tools provide everything needed for compelling client visuals: camera setup with multiple view types, comprehensive lighting design (natural and artificial), material textures with realistic properties, ray trace rendering with reflections and global illumination, walkthrough videos with smooth camera paths, and 360° panorama exports for immersive viewing. The built-in ray tracer produces photorealistic results without third-party plugins, and the panorama export allows clients to explore spaces in any web browser. For residential designers who need to present their work visually — which is essential for winning client approval — Chief Architect offers one of the most complete presentation workflows in its price range.
+Chief Architect's rendering tools have gotten good enough that I rarely need external rendering software for residential projects. The ray tracer produces solid results, the walkthroughs are smooth, and the panorama export is a client favorite — there's nothing like sending a client a link they can open on their phone to explore their future home. My tip: invest time in getting your lighting right. Good lighting makes more difference to a render than expensive materials.

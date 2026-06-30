@@ -15,7 +15,7 @@ sources:
 
 # SAP2000 vs ETABS: Choosing the Right CSI Analysis Tool for Your Project
 
-Both SAP2000 and ETABS are developed by Computers and Structures, Inc. (CSI), but they serve different purposes. SAP2000 is a general-purpose structural analysis tool; ETABS is specialized for building structures. This comparison helps you choose the right tool.
+I get asked "SAP2000 or ETABS?" all the time. They're both from CSI, they both do structural analysis, and there's a lot of overlap. But after using both for years, I've developed a clear sense of when each one is the right choice. It's not about which is better — it's about which fits your project. Here's how I decide.
 
 ## Target Market
 
@@ -182,6 +182,6 @@ Many structural engineering firms use both:
 - Both share the same analysis engine (CSI solver)
 - Models can be exchanged (with some limitations)
 
-## Conclusion
+## My Take
 
-SAP2000 and ETABS are complementary tools from the same developer. SAP2000 is the general-purpose tool for any structure type — bridges, stadiums, towers, industrial facilities — with moving load analysis and broad code support. ETABS is the building specialist — with story-based modeling, automatic wind and seismic generation, shear wall design, and concrete detailing. For building engineers, ETABS is the more efficient choice. For bridge engineers and those working on non-building structures, SAP2000 is the right tool. Many firms benefit from having both to cover all project types.
+If you do buildings, use ETABS. If you do bridges, stadiums, towers, or industrial structures, use SAP2000. If your firm does both, get both — they share the same solver and the interface is similar enough that switching between them isn't painful. I've never understood the urge to force one tool to do everything when both are reasonably priced and complementary.

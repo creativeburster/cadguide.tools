@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Reinforcement Detailing: Bar Scheduling, Drawings, and 3D Visualization
 
-CYPECAD goes beyond analysis and design ratios — it generates detailed reinforcement plans, bar schedules, and 3D reinforcement models. This eliminates the need for separate detailing software and ensures consistency between design and drawings. This guide covers the complete reinforcement detailing workflow.
+What sold me on CYPECAD was the reinforcement detailing. I used to spend hours in AutoCAD drawing rebar layouts by hand after running the design in ETABS. With CYPECAD, the reinforcement plans, bar schedules, and 3D rebar models are all generated automatically from the design. It's not perfect — you still need to review and adjust — but it saves me days of work on a typical project. Let me walk you through it.
 
 ## Reinforcement Design Output
 
@@ -266,6 +266,6 @@ CYPECAD goes beyond analysis and design ratios — it generates detailed reinfor
 7. **Generate steel quantity report**: For cost estimation
 8. **Use 3D visualization**: For client presentations and contractor coordination
 
-## Conclusion
+## Wrapping Up
 
-CYPECAD's reinforcement detailing module provides a complete workflow from design to construction: automatic reinforcement calculation, bar scheduling with weight calculation, automatic drawing generation (floor plans, reinforcement plans, section details), 3D reinforcement visualization with clash detection, and export to DXF/DWG and IFC. This integrated approach eliminates the need for separate detailing software and ensures consistency between design calculations and construction drawings. For structural engineers who need to deliver complete reinforcement packages — not just design ratios — CYPECAD offers one of the most efficient workflows in the market.
+The reinforcement detailing in CYPECAD is what sets it apart from other structural design tools in my experience. Going from design ratios to construction-ready drawings without switching software is a huge time saver. The 3D visualization is great for catching clashes — I've found bars colliding in tight column-beam joints that I would have missed on 2D drawings alone. Always review the automatic output, but the software does most of the heavy lifting for you.

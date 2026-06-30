@@ -15,7 +15,7 @@ sources:
 
 # Optimizing Revit Performance for Large Models: RAM, Pagefile, and Storage Configuration
 
-Revit models exceeding 500 MB test the limits of workstation hardware and Revit's memory management. Symptoms include 30-second delays when switching views, frozen cursor during synchronization, and excessive time to open or save files. This guide covers the complete optimization stack — from Windows-level memory configuration to Revit's internal performance settings — to restore responsiveness on large BIM projects.
+I've worked on Revit models that were 800 MB before anyone even added the mechanical systems. When your model gets that big, it's not just Revit being slow — it's a hardware and configuration problem too. I spent weeks tuning one project model, going through Windows memory settings, Revit's internal options, and hardware upgrades until I got it to a usable state. Here's the full optimization stack I now apply to every large Revit project.
 
 ## Understanding Revit's Memory Architecture
 

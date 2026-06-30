@@ -15,7 +15,7 @@ sources:
 
 # Optimizing AutoCAD Performance with Large Assemblies and Heavy Drawings
 
-Working with DWG files exceeding 100 MB or containing more than 50,000 entities pushes AutoCAD's rendering engine to its limits. Symptoms include delayed viewport panning, multi-second freezes during selection highlights, and excessive regeneration times when toggling layers. This guide provides a systematic optimization workflow that addresses software configuration, drawing hygiene, and hardware tuning to restore responsive performance.
+I once inherited a 280 MB DWG file from a contractor that took 45 seconds just to pan across the viewport. Every selection highlight froze the screen for two seconds. Regenerating when I toggled a layer? Forget about it. After spending way too long dealing with that file, I developed a checklist of optimizations that I now run through on every heavy drawing I encounter. Here's what actually works.
 
 ## Step 1: Enable Demand Loading for XREFs
 

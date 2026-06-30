@@ -15,7 +15,7 @@ sources:
 
 # Allplan Drawing Production: Layouts, Title Blocks, Views, and Plotting Standards
 
-Producing construction drawings is the primary deliverable for most AEC projects. Allplan's drawing production tools generate views directly from the 3D BIM model, ensuring drawings always reflect the current design. This guide covers the complete drawing production workflow from layout setup to PDF output.
+Drawing production in Allplan is something I've come to appreciate more and more. The fact that views are generated directly from the 3D model means drawings always reflect the current design — no more forgetting to update a section after moving a wall. Let me walk you through how I set up layouts, title blocks, views, and plotting.
 
 ## Layout Setup
 
@@ -233,6 +233,6 @@ Before issuing drawings, verify:
 - [ ] All layers set to "no-plot" are correctly configured
 - [ ] Revision history is updated
 
-## Conclusion
+## Wrapping Up
 
-Allplan's drawing production system provides a complete path from BIM model to construction drawings. The associative link between 3D model and 2D views ensures consistency, while the pen-based system and layer management give you precise control over drawing appearance. By creating standardized title blocks, dimension styles, and pen/layer configurations in a project template, you can produce professional construction drawings efficiently. The batch plotting to PDF with vector output and searchable text ensures high-quality deliverables for contractors and clients.
+Allplan's drawing production system is solid once you get your templates set up. The associative link between 3D model and 2D views means you never have to worry about a section being out of date. My advice: invest time in configuring your pen system, layer structure, and title blocks in a project template before you start your first real project. That upfront work pays off every time you issue a drawing set.

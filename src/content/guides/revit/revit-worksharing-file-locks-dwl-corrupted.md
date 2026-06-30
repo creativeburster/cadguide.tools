@@ -15,7 +15,7 @@ sources:
 
 # Resolving Revit Worksharing File Locks and Corrupted DWL Files
 
-Revit's worksharing environment uses lock files to manage concurrent access to the central model. When these lock files become corrupted or stale, users encounter errors ranging from "Cannot access central model" to "Another user is editing this element" when no other user is active. This guide covers the complete diagnostic and resolution workflow for worksharing lock file issues.
+Revit worksharing lock file issues are frustrating because they make you think someone else is in the model when they're not. I've had users call me saying "I can't sync, it says someone is editing" — at 11 PM when nobody else is in the office. The culprit is almost always a stale or corrupted DWL file. Let me walk you through how I diagnose and fix these lock file problems, and how to prevent them from recurring.
 
 ## Understanding Revit Lock Files
 

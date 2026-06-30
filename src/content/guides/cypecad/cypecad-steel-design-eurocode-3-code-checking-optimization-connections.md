@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Steel Design: Eurocode 3 Code Checking, Member Optimization, and Connection Design
 
-CYPECAD supports steel building design per Eurocode 3 (EN 1993-1-1) with integrated code checking, section optimization, and connection design through CYPE Connect. This guide covers the complete steel design workflow.
+Steel design in CYPECAD per Eurocode 3 is straightforward once you've done it a few times. The code checking, section optimization, and connection design through CYPE Connect cover most of what I need for steel building projects in Europe. Let me walk you through the workflow I use.
 
 ## Steel Section Database
 
@@ -249,6 +249,6 @@ CYPECAD automatically classifies sections per EN 1993-1-1 Table 5.2:
 **Cause**: Steel reaches critical temperature before fire rating.
 **Fix**: Add fire protection (boards, intumescent coating), increase section size (lower section factor), or encase in concrete.
 
-## Conclusion
+## Wrapping Up
 
-CYPECAD's steel design module provides comprehensive Eurocode 3 code checking, section optimization, fire design per EN 1993-1-2, and connection design through CYPE Connect. The key to efficient steel design is proper section classification (which determines design method), correct unbraced length configuration (which affects buckling capacity), and group optimization (which reduces fabrication complexity). By following this workflow, structural engineers can produce code-compliant steel designs with detailed connection output ready for construction.
+Steel design in CYPECAD per Eurocode 3 covers most of what I need for building projects. The section classification and buckling checks are reliable, and the CYPE Connect integration for joints is handy. My tip: pay attention to section classification — it determines which design method applies, and getting it wrong can lead to either unsafe or overly conservative designs. And don't forget fire design — it's often required by building regulations and CYPECAD handles it per EN 1993-1-2.

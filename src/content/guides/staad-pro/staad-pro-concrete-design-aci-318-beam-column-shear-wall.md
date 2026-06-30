@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Concrete Design: ACI 318 Beam, Column, and Shear Wall Design
 
-Concrete design in STAAD.Pro follows ACI 318 for reinforced concrete structures. The workflow covers beam flexural and shear design, column interaction design, and shear wall design — all with automatic reinforcement calculation and seismic detailing. This guide covers the complete concrete design process.
+I've done concrete design in STAAD.Pro on everything from small commercial buildings to industrial structures, and the workflow is pretty consistent once you get the hang of it. ACI 318 is the code I use most, and STAAD handles beam flexural and shear design, column interaction, and shear wall design with automatic reinforcement calculation. Let me walk you through the whole process.
 
 ## ACI 318 Design Setup
 
@@ -240,6 +240,6 @@ For columns in seismic force-resisting systems:
 **Cause**: High compressive stress in wall edges.
 **Fix**: Add boundary elements with confined reinforcement, increase wall thickness, or redistribute lateral forces.
 
-## Conclusion
+## Wrapping Up
 
-STAAD.Pro's concrete design module provides comprehensive ACI 318 code checking for beams, columns, and shear walls. The automatic reinforcement calculation, interaction diagram generation, and seismic detailing per ACI Chapter 18 cover the complete concrete design workflow. The key to efficient concrete design is selecting appropriate section sizes early (to avoid redesign), understanding the interaction between axial and flexural capacity in columns, and properly configuring boundary elements in shear walls for seismic resistance. By following this workflow, structural engineers can produce code-compliant concrete designs with detailed reinforcement output ready for construction drawings.
+Concrete design in STAAD is reliable once you get the parameters dialed in. The automatic reinforcement calculation saves a lot of manual work, but don't just accept the defaults — review the output, especially for columns where axial-flexural interaction is critical. For shear walls in seismic zones, pay close attention to boundary elements. STAAD flags when they're needed, but you need to design them properly.

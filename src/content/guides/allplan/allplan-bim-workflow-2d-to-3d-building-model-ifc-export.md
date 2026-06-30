@@ -15,7 +15,7 @@ sources:
 
 # Allplan BIM Workflow: From 2D Drawings to 3D Building Models and IFC Export
 
-Allplan is Nemetschek's flagship BIM and CAD platform, widely used in Europe for architecture, engineering, and construction. Its strength lies in the seamless transition between 2D drafting and 3D BIM modeling — you can start with 2D plans and progressively build a full BIM model without switching software. This guide covers the complete workflow from 2D drawings to IFC export.
+I started using Allplan on a project in Munich about four years ago, and what impressed me was how smoothly it handles the transition from 2D drafting to 3D BIM. You don't have to commit to full BIM from the start — you can begin with 2D plans and progressively build up the 3D model. That flexibility is rare in BIM software. Let me walk you through the workflow from 2D drawings to IFC export.
 
 ## Project Setup
 
@@ -218,6 +218,6 @@ Before exporting, verify:
 5. Add title block and north arrow
 6. File > Plot to print or export to PDF
 
-## Conclusion
+## Wrapping Up
 
-Allplan's BIM workflow from 2D to 3D is one of the most efficient in the industry, particularly for teams transitioning from traditional 2D drafting to BIM. The ability to convert 2D plans into parametric 3D building elements, add reinforcement, generate quantity takeoffs, and export to IFC for cross-platform collaboration covers the complete AEC workflow. By following this guide — set up the project, prepare 2D drawings, convert to 3D, add reinforcement, generate quantities, export to IFC, and produce drawing sets — you can leverage Allplan's full BIM capabilities for professional building projects.
+Allplan's 2D-to-3D workflow is one of the things that drew me to the software. Not every project needs full BIM from day one, and the ability to start with 2D and progressively build up the 3D model is invaluable. The IFC export is reliable, the quantity takeoffs are accurate, and the reinforcement tools are excellent. My tip: set up your project template carefully — layers, lineweights, title blocks, and default materials. A good template saves you hours on every project.

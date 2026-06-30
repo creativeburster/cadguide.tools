@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Editor Commands: Text-Based Modeling, Automation, and Batch Processing
 
-While STAAD.Pro has a graphical user interface, its command editor provides direct access to the STAAD analysis engine through a text-based command language. Many experienced engineers prefer the editor for speed, reproducibility, and automation. This guide covers the command syntax for modeling, loading, analysis, and design.
+I'll admit it — I'm one of those engineers who prefers the STAAD editor over the graphical interface. There's something satisfying about typing out a model in text and watching it run. But more importantly, the editor is faster, reproducible, and easy to automate. Let me walk you through the command syntax I use for modeling, loading, analysis, and design.
 
 ## Accessing the Editor
 
@@ -426,6 +426,6 @@ Run: `python generate.py 5 > model.std`
 7. **Use batch processing** — for parametric studies and optimization loops
 8. **Version control** — .std files are text and work well with Git
 
-## Conclusion
+## Wrapping Up
 
-The STAAD.Pro command editor provides a powerful text-based interface for structural modeling that is faster, more reproducible, and more automatable than the GUI. By mastering the command syntax for joints, members, properties, loads, analysis, and design, engineers can create models efficiently and automate repetitive tasks through batch processing and parametric scripts. The text-based .std files are ideal for version control, template reuse, and integration with external tools like Python for parametric design studies.
+I know the editor isn't for everyone, but if you're comfortable with text-based modeling, it's the fastest way to work in STAAD. The .std files are plain text, which means they work with Git, they're easy to template, and you can generate them with Python scripts for parametric studies. If you're still using the GUI exclusively, give the editor a try on your next simple project — you might be surprised how fast it is.

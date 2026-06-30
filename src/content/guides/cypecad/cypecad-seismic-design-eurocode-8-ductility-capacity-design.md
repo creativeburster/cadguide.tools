@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Seismic Design: Eurocode 8 Analysis, Ductility, and Capacity Design
 
-CYPECAD implements Eurocode 8 (EN 1998-1) for seismic design of buildings. This covers seismic action definition, ductility-based design, capacity design principles, and detailing requirements for concrete and steel structures. This guide covers the complete seismic workflow.
+Seismic design per Eurocode 8 in CYPECAD is well-implemented once you understand the workflow. I've used it on projects in southern Spain and Italy where seismic requirements are significant but not extreme. The software handles seismic action definition, ductility-based design, capacity design, and detailing requirements for concrete and steel. Let me walk you through how I set it up.
 
 ## Seismic Action Definition
 
@@ -267,6 +267,6 @@ CYPECAD implements Eurocode 8 (EN 1998-1) for seismic design of buildings. This 
 **Cause**: Wall compressive stress exceeds 0.35-0.4 × fck.
 **Fix**: Add boundary elements with confined reinforcement, increase wall length, or increase wall thickness.
 
-## Conclusion
+## Wrapping Up
 
-CYPECAD's seismic design module implements Eurocode 8 comprehensively: seismic action definition, response spectrum generation, ductility class detailing (DCL/DCM/DCH), capacity design (strong column/weak beam, shear overstrength), seismic joint verification, and drift checking. The key to code-compliant seismic design is selecting the appropriate behavior factor (q) and ductility class, ensuring capacity design principles are satisfied, and providing adequate confinement in critical regions. By following this workflow, structural engineers can design buildings that meet Eurocode 8 requirements for any seismic zone in Europe.
+CYPECAD's Eurocode 8 implementation is solid once you understand the ductility class system. My advice: don't default to the highest ductility class (DCH) just to be safe — it actually requires more stringent detailing and can be harder to achieve. Pick the ductility class that matches your building's seismic hazard and structural system. And always verify capacity design — strong column/weak beam is fundamental to earthquake-resistant design.

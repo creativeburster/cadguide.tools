@@ -15,7 +15,7 @@ sources:
 
 # Allplan Reinforcement Detailing: 3D Rebar Modeling, Schedules, and CNC Export
 
-Allplan Engineering includes one of the most mature reinforcement detailing systems in the BIM market. Unlike Revit, where reinforcement is often an add-on, Allplan's rebar tools were built from the ground up for structural engineers working with European and international rebar standards. This guide covers the complete reinforcement workflow from bar placement to CNC export.
+Allplan's reinforcement detailing tools are, in my opinion, some of the best in the BIM market. Unlike Revit, where rebar tools feel like an add-on, Allplan was built from the ground up for structural engineers working with European and international rebar standards. I've used it on projects where the 3D rebar model was sent directly to CNC bending machines — no manual interpretation required. Let me walk you through the workflow.
 
 ## Prerequisites
 
@@ -247,6 +247,6 @@ The BVBS file contains:
 **Cause**: Machine-specific parameters not configured correctly.
 **Fix**: Verify the machine type in BVBS export settings. Check bar diameter compatibility. Ensure all bars have valid shape codes.
 
-## Conclusion
+## Wrapping Up
 
-Allplan's reinforcement detailing system is one of its strongest differentiators. The 3D rebar modeling, comprehensive bar shape library, automatic bending schedules, and BVBS CNC export provide a complete workflow from design to fabrication. For structural engineering firms working with reinforced concrete — particularly in European markets — Allplan's reinforcement tools offer capabilities that Revit matches only with add-ins. By following the workflow of element setup, bar placement, schedule generation, and CNC export, you can produce fabrication-ready reinforcement data directly from the BIM model.
+Allplan's reinforcement tools are, in my opinion, the best in the BIM market for structural engineers. The 3D rebar modeling is precise, the bar schedule generation is automatic, and the BVBS CNC export works flawlessly with modern bending machines. I've sent rebar data directly from Allplan to the fabricator with no manual interpretation in between — that's a workflow that saves time and eliminates errors. If you do a lot of reinforced concrete work, Allplan is worth serious consideration for the reinforcement tools alone.

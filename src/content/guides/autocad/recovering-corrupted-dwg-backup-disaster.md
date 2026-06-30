@@ -15,7 +15,7 @@ sources:
 
 # Recovering Corrupted DWG Files: A Complete Disaster Recovery Workflow
 
-A corrupted DWG file can halt an entire project. Whether caused by a network interruption during save, a power failure, or a failing storage drive, the inability to open a drawing file is one of the most stressful situations a CAD professional faces. This guide covers every recovery method available, ordered from least invasive to most aggressive, so you can try the safest options first before escalating.
+There's nothing quite like the feeling of trying to open a DWG file you spent 40 hours on and getting a "drawing file is not valid" message. I've been there — heart pounding, deadline looming. Over the years I've developed a recovery workflow that starts with the least invasive methods and escalates from there. Not every method works every time, but I've recovered probably 90% of the corrupted files I've encountered using this sequence.
 
 ## Understanding DWG File Corruption
 

@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Roof and Terrain Design: Automatic Roofs, Dormers, and Site Grading
 
-Roof and terrain design are critical for residential projects. Chief Architect provides automatic roof generation from wall outlines, manual roof editing for complex designs, and terrain modeling with elevation data. This guide covers the complete roof and terrain workflow.
+Roof and terrain design in Chief Architect is one of my favorite parts of the software. The automatic roof generation from wall outlines is almost magical — you draw the exterior walls, tell it what roof style you want, and it builds it. For complex roofs with dormers and valleys, there's manual editing available too. And the terrain tools handle site grading and elevation data well. Let me walk you through both.
 
 ## Automatic Roof Generation
 
@@ -321,6 +321,6 @@ For complex roof intersections (L-shaped houses, additions):
    - **Scale bar**: Graphic scale
 3. Set scale: 1" = 20' (typical for site plans)
 
-## Conclusion
+## Wrapping Up
 
-Chief Architect's roof and terrain tools provide a complete residential site design workflow: automatic roof generation from wall outlines (gable, hip, gambrel, mansard), manual roof editing for complex designs, dormer and skylight placement, automatic roof framing, terrain modeling with elevation data and contour lines, property boundaries with setbacks, site features (driveway, walkway, patio, deck), landscaping, grading with cut/fill calculation, and site plan production. The automatic roof generation is particularly powerful — what takes hours in general CAD tools takes minutes in Chief Architect. For residential designers who need to model roofs and sites efficiently, Chief Architect offers one of the most streamlined workflows available.
+The roof and terrain tools in Chief Architect are two of my favorite features. The automatic roof generation is almost magical — draw the walls, pick a style, and there's your roof. For complex roofs, the manual editing tools give you full control. And the terrain modeling with cut/fill calculations is great for site plans. My tip: always check the roof in 3D after generating it — sometimes the automatic dormer placement needs a bit of manual adjustment to look right.

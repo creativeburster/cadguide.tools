@@ -15,7 +15,7 @@ sources:
 
 # Allplan IFC Export and BIM Collaboration: Coordination View, Clash Detection, and Multi-Platform Workflow
 
-IFC (Industry Foundation Classes) is the open BIM exchange format that enables collaboration between different BIM platforms. Allplan's IFC implementation is BuildingSMART certified and considered one of the most robust in the industry. This guide covers everything you need to configure IFC exports for coordination, clash detection, and cross-platform workflows.
+IFC export from Allplan is one of the areas where this software really stands out. I've exchanged IFC files between Allplan and Revit, ArchiCAD, and Tekla on multi-platform projects, and Allplan's IFC implementation is the most reliable I've worked with. It's BuildingSMART certified, and the mapping options give you fine control over what gets exported. Let me walk you through the configuration.
 
 ## IFC Versions and Model View Definitions
 
@@ -205,6 +205,6 @@ Before issuing an IFC file for coordination, run model checking:
 7. **Version control IFC files** — name files with date and revision (e.g., `Architectural_R03_20260630.ifc`)
 8. **Run model checking before issue** — catch errors before they reach the coordination team
 
-## Conclusion
+## Wrapping Up
 
-Allplan's IFC export is one of its strongest features for BIM collaboration. The BuildingSMART-certified implementation, comprehensive property set support, and robust coordinate system handling make it reliable for cross-platform projects. By following the export configuration steps, running model quality checks, and using BCF for clash communication, you can maintain an efficient collaboration workflow with Revit, ArchiCAD, Tekla, and Solibri users. The key to success is standardization — agree on IFC version, MVD, property sets, and coordinate systems before the first export, and maintain consistency throughout the project.
+Allplan's IFC export is one of the best in the business, and I've relied on it for multi-platform coordination on several projects. The key to success is standardization — agree on IFC version, MVD, property sets, and coordinates with your collaborators before the first export. I've seen coordination projects descend into chaos because one team exported IFC 4 when everyone else was using IFC 2x3. Get the basics right upfront and the rest follows naturally.

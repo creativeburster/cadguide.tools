@@ -15,7 +15,7 @@ sources:
 
 # SAP2000 Steel and Concrete Design: AISC, ACI, and Eurocode Code Checking
 
-After analysis, the next step is code-based design — verifying that each member has sufficient capacity for the applied loads. SAP2000 supports AISC 360 for steel, ACI 318 for concrete, and Eurocode 2 and 3 for European projects. This guide covers the complete design workflow.
+Running the analysis is only half the job — the other half is proving to the code that your members are adequate. I've spent more time on steel and concrete design checks in SAP2000 than I have on the analysis itself. The software supports AISC 360, ACI 318, and Eurocode 2 and 3, and once you know where the buttons are, the workflow is pretty smooth. Let me walk you through it.
 
 ## Steel Design (AISC 360)
 
@@ -253,6 +253,6 @@ After analysis, the next step is code-based design — verifying that each membe
 **Cause**: Initial section sizes were too conservative.
 **Fix**: Use auto-select optimization to find lighter sections. Group members to reduce section variety.
 
-## Conclusion
+## Wrapping Up
 
-SAP2000's design modules provide comprehensive code checking for steel (AISC 360, Eurocode 3) and concrete (ACI 318, Eurocode 2) members. The key to efficient design is proper parameter configuration (unbraced lengths, K factors, material strengths), grouping members for optimization, and iterating between analysis and design until convergence. By following the optimization workflow — initial analysis, review ratios, auto-select, re-analyze, re-design — structural engineers can produce code-compliant designs with efficient member sizes, ready for construction document preparation.
+The design modules in SAP2000 are solid once you get the parameters right. The thing I see junior engineers struggle with most is unbraced length — get that wrong and your capacity calculations are off, sometimes dramatically. Take the time to set K factors and unbraced lengths properly for each member. The auto-select optimization is great for steel — let the software iterate and find the lightest section that works, then do a manual review.

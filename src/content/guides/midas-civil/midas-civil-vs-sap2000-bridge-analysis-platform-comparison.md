@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Civil vs SAP2000: Bridge Analysis Platform Comparison for Bridge Engineers
 
-Both MIDAS Civil and SAP2000 analyze bridges, but they approach bridge engineering differently. MIDAS Civil is purpose-built for bridges; SAP2000 is a general-purpose tool with bridge capabilities. This comparison helps bridge engineers choose.
+I've used both MIDAS Civil and SAP2000 for bridge analysis, and while both can get the job done, they approach bridge engineering very differently. MIDAS Civil is purpose-built for bridges; SAP2000 is a general-purpose tool with bridge capabilities. Here's how I decide which one to use for a given project.
 
 ## Target Market
 
@@ -157,6 +157,6 @@ Autodesk offers CSiBridge (built on SAP2000) with more bridge-specific features:
 
 CSiBridge bridges some of the gap but still falls short of MIDAS Civil for advanced bridge engineering.
 
-## Conclusion
+## My Take
 
-For bridge engineers, MIDAS Civil is the more capable tool — with construction stage analysis, PSC design, camber calculation, and comprehensive bridge-specific features. SAP2000 is adequate for simple bridges but lacks the advanced capabilities needed for segmental construction, prestressed concrete design, and long-term behavior analysis. The choice depends on your bridge types: for standard girder bridges, either tool works; for segmental, PSC, or cable-stayed bridges, MIDAS Civil is the clear choice. Many firms use SAP2000 for simple bridges and MIDAS Civil for complex bridge projects.
+For bridge engineers, the choice is straightforward in my mind. If you're doing simple girder bridges, either tool works fine. If you're doing segmental construction, PSC design, cable-stayed bridges, or anything with construction stage analysis, MIDAS Civil is the clear winner. SAP2000 is a good general-purpose tool, but it simply doesn't have the bridge-specific depth that MIDAS Civil does. I use both, but MIDAS Civil is my primary bridge tool.

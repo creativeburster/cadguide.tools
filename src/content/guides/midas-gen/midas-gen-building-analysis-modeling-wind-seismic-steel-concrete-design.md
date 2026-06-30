@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Gen Building Analysis: Modeling, Wind, Seismic, and Steel-Concrete Design
 
-MIDAS Gen is MIDAS IT's building structural analysis and design software, widely used in Asia and increasingly worldwide. It combines story-based modeling, automatic lateral load generation, and integrated design for steel and concrete. This guide covers the complete building analysis workflow.
+I started using MIDAS Gen about six years ago when our firm took on a project in Southeast Asia where the local engineers required it. Coming from ETABS, the story-based modeling approach felt different but intuitive. Now I use it regularly for building projects in Asia and the Middle East. Let me walk you through the complete workflow from model creation to steel and concrete design.
 
 ## Project Setup
 
@@ -320,6 +320,6 @@ MIDAS Gen is MIDAS IT's building structural analysis and design software, widely
 | Ties | #10 @ 100/300mm |
 | Capacity ratio | 0.78 |
 
-## Conclusion
+## Wrapping Up
 
-MIDAS Gen provides a complete building analysis and design workflow: story-based modeling, automatic wind and seismic load generation, P-Delta analysis, response spectrum analysis, and integrated steel and concrete design. The automatic lateral load generation saves significant time compared to manual calculation, and the story-based output (shear, drift, center of mass) directly supports code compliance checks. By following this workflow, structural engineers can efficiently analyze and design buildings of any height and complexity in compliance with international design codes.
+MIDAS Gen's automatic lateral load generation is what saves me the most time — wind and seismic loads per multiple codes, generated automatically from the building geometry. The story-based output (shear, drift, center of mass) is exactly what you need for code compliance checks. My tip: always verify the auto-generated wind loads against a hand calculation for the first few projects until you build confidence in the defaults.

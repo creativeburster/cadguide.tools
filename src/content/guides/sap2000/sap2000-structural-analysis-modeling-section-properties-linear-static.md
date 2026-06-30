@@ -15,7 +15,7 @@ sources:
 
 # SAP2000 Structural Analysis: Modeling, Section Properties, and Linear Static Analysis
 
-SAP2000 is CSI (Computers and Structures, Inc.)'s general-purpose structural analysis software, used for buildings, bridges, and special structures. Its intuitive interface and powerful analysis engine make it popular worldwide. This guide covers the complete workflow from model creation to result interpretation.
+SAP2000 was the first structural analysis software I learned, and I still use it regularly for projects that aren't pure buildings. It's CSI's general-purpose tool — bridges, special structures, industrial frames — and the interface is straightforward once you understand the workflow. Let me walk you through how I build a model from scratch, from grid setup to result interpretation.
 
 ## Model Creation
 
@@ -303,6 +303,6 @@ For a typical building, use the 3D frame template:
 9. **Use groups** — organize elements by floor, type, or section for easy selection
 10. **Document assumptions** — note support conditions, load values, and section properties
 
-## Conclusion
+## Wrapping Up
 
-SAP2000 provides an intuitive yet powerful structural analysis workflow: grid-based model creation, comprehensive section and material libraries, flexible loading options, multiple analysis types, and detailed result visualization. The key to reliable analysis is careful model setup — correct geometry, appropriate sections, realistic loads, and proper supports. By following this workflow and verifying results at each step (deformed shape, reactions, member forces), structural engineers can confidently analyze buildings, bridges, and special structures in SAP2000.
+SAP2000 is a tool I keep coming back to for non-building structures. The grid-based modeling is intuitive, the section library is comprehensive, and the analysis engine is rock-solid. My biggest piece of advice: always check your deformed shape first. If it looks wrong, the model is wrong — no amount of fancy post-processing will fix a bad model. Get the geometry and supports right, and the rest follows.

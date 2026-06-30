@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Building Design: 3D Modeling, Analysis, and Concrete Design per Eurocode 2
 
-CYPECAD is CYPE's flagship structural design software for buildings, widely used in Spain, Latin America, and Southern Europe. It integrates architectural plan import, 3D modeling, finite element analysis, and reinforced concrete design per Eurocode 2. This guide covers the complete workflow.
+I started using CYPECAD on a project in Barcelona about five years ago, and it was a bit of a culture shock coming from ETABS. The workflow is very European — tightly integrated with Eurocodes, with a strong emphasis on automatic reinforcement detailing and drawing production. Once I got used to it, I came to appreciate how it handles the full chain from architectural plan import to concrete design per Eurocode 2. Let me walk you through the workflow.
 
 ## Project Setup
 
@@ -264,6 +264,6 @@ CYPECAD is CYPE's flagship structural design software for buildings, widely used
    - Bar mark, shape, diameter, length, quantity
    - Total steel weight per element and per floor
 
-## Conclusion
+## Wrapping Up
 
-CYPECAD provides an integrated building design workflow: import architectural plans, model structural elements, automatically generate loads per Eurocode, perform FEM analysis, and design reinforced concrete per Eurocode 2. The automatic load generation (wind per EN 1991-1-4, seismic per EN 1998-1) saves significant time, while the integrated reinforcement design and drawing generation provide a complete deliverable. For structural engineers working in Eurocode jurisdictions — particularly in Spain and Latin America — CYPECAD offers an efficient and code-compliant workflow from architectural plans to construction drawings.
+CYPECAD's integrated workflow is what makes it special — from architectural plans to concrete design to reinforcement drawings, all in one package. The automatic load generation per Eurocode saves me hours, and the reinforcement drawings are good enough to issue with minimal cleanup. If you're working in a Eurocode jurisdiction, especially in Spain or Latin America, CYPECAD is hard to beat for efficiency.

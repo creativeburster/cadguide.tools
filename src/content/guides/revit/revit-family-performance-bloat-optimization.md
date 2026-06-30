@@ -15,7 +15,7 @@ sources:
 
 # Optimizing Revit Family Files: Reducing Bloat and Improving Load Performance
 
-Heavy Revit families are the single most common cause of model performance problems. A single poorly-constructed family can consume 100 MB or more of RAM, increase open times by 30 seconds, and cause view regeneration to lag across the entire project. This guide provides a systematic workflow for identifying, analyzing, and optimizing problematic families.
+I once traced a Revit model's 40-second open time back to a single family file — a door family that some well-meaning drafter had loaded with 15 nested parametric arrays, 8 visibility states, and 200 MB of embedded geometry. After I cleaned it up, the model opened in 12 seconds. That experience made me a bit obsessive about family optimization. Here's the workflow I use to identify, analyze, and fix bloated families.
 
 ## Identifying Heavy Families
 

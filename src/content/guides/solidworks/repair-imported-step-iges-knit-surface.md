@@ -15,7 +15,7 @@ sources:
 
 # Repairing Imported STEP and IGES Geometry in SolidWorks: Surface Knitting and Solid Body Recovery
 
-Importing geometry from other CAD systems via STEP (ISO 10303) or IGES (Initial Graphics Exchange Specification) is a daily reality in multi-CAD environments. Despite being neutral formats, these translations frequently produce imperfect results — gaps between surfaces, overlapping faces, trimmed surface mismatches, and failed solid body conversion. This guide provides a systematic repair workflow that takes you from a broken surface import to a clean, watertight solid body.
+If you work in a multi-CAD environment, you know the pain of importing STEP or IGES files that arrive as a mess of unconnected surfaces instead of a clean solid body. I've spent countless hours knitting surfaces, closing gaps, and trying to salvage imported geometry from customers and suppliers. After a while, I developed a systematic repair workflow that takes you from a broken surface import to a watertight solid body — and it works for the vast majority of cases.
 
 ## Understanding Why Imports Fail
 

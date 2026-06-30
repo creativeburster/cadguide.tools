@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Civil Bridge Analysis: Modeling, Moving Loads, and Bridge Design per AASHTO and Eurocode
 
-MIDAS Civil is MIDAS IT's flagship bridge analysis and design software, used for highway bridges, railway bridges, pedestrian bridges, and special structures. It provides a complete workflow from modeling to design, with support for AASHTO LRFD, Eurocode, and other international bridge codes. This guide covers the complete bridge analysis workflow.
+MIDAS Civil is my go-to tool for bridge analysis. I've used it on highway bridges, railway bridges, and pedestrian structures, and the moving load analysis and code-based design features are excellent. Whether you're working with AASHTO LRFD or Eurocode, the workflow is well-structured. Let me walk you through the complete bridge analysis process.
 
 ## Bridge Modeling
 
@@ -305,6 +305,6 @@ For non-standard bridges:
    - **Live load deflection**: L/800 (vehicular), L/1000 (pedestrian)
    - **Long-term deflection**: Including creep and shrinkage
 
-## Conclusion
+## Wrapping Up
 
-MIDAS Civil provides a complete bridge analysis and design workflow: bridge modeler for rapid model creation, comprehensive loading including AASHTO HL-93 moving loads, influence line generation, envelope calculation, and code-based design for steel, PSC, and concrete bridges. The moving load analysis efficiently captures the worst-case effects of vehicular loads, while the AASHTO LRFD design checks ensure code compliance. By following this workflow, bridge engineers can analyze and design any bridge type — from simple girder bridges to complex cable-stayed structures — in compliance with international bridge design codes.
+MIDAS Civil is my preferred tool for bridge analysis, and the moving load workflow is a big reason why. The influence line approach is efficient, the AASHTO and Eurocode design checks are comprehensive, and the envelope generation captures the worst-case effects automatically. My tip: always check your deflection limits against the code — I've seen engineers get so focused on strength that they forget serviceability. A bridge that's strong enough but bounces too much under traffic isn't a good bridge.

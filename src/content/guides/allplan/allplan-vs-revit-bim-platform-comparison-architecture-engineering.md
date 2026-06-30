@@ -15,7 +15,7 @@ sources:
 
 # Allplan vs Revit: BIM Platform Comparison for Architecture and Engineering Firms
 
-Allplan and Revit are two of the most widely used BIM platforms in the AEC industry. Revit dominates in North America and the UK; Allplan has a strong following in Germany, Austria, Switzerland, and increasingly in Eastern Europe. Both produce BIM models with IFC export, but their philosophies and strengths differ significantly. This comparison is based on production use of both platforms.
+I've used both Allplan and Revit on production projects, and the comparison is interesting because they approach BIM from very different angles. Revit dominates in North America and the UK; Allplan has a strong following in Germany, Austria, Switzerland, and increasingly in Eastern Europe. Both produce BIM models with IFC export, but their philosophies and strengths are quite different. Here's my take based on real project experience with both.
 
 ## Cost Comparison
 
@@ -151,6 +151,6 @@ Revit's collaboration ecosystem (BIM 360, Autodesk Docs, Navisworks) is more mat
 - You work in North America where Revit is the industry standard
 - You need conceptual massing and free-form modeling
 
-## Conclusion
+## My Take
 
-Allplan and Revit are both capable BIM platforms with different strengths. Allplan excels in reinforcement, precast, 2D/3D hybrid workflows, and IFC round-trip — making it ideal for engineering firms and teams transitioning from CAD. Revit dominates in ecosystem size, collaboration, free-form modeling, and market adoption — making it the safer choice for firms that need seamless collaboration with Revit-using partners. The choice often comes down to your region (Revit in North America, Allplan in DACH region), your discipline (Allplan for reinforcement-heavy engineering, Revit for architecture), and your collaboration requirements.
+Both Allplan and Revit are capable BIM platforms, and I've used both on real projects. If you're in the DACH region (Germany, Austria, Switzerland) or do a lot of reinforced concrete work, Allplan is the stronger choice — the reinforcement tools and 2D/3D hybrid workflow are genuinely better. If you're in North America or need deep collaboration with Revit-using partners, Revit is the safer choice. For engineering firms that need reinforcement detailing and precast design, I'd lean toward Allplan. For architecture firms that need conceptual modeling and a large ecosystem, Revit wins.

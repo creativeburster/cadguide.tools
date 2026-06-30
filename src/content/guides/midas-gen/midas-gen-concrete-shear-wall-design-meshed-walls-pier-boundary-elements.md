@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Gen Concrete Shear Wall Design: Meshed Walls, Pier Forces, and Boundary Elements
 
-Shear wall design is one of the most critical aspects of seismic design for concrete buildings. MIDAS Gen provides specialized tools for meshed wall analysis, pier force extraction, and boundary element design. This guide covers the complete shear wall design workflow.
+Shear wall design in MIDAS Gen took me a while to get comfortable with. The meshed wall approach is powerful but the workflow is different from what I was used to in ETABS. Once I understood how pier forces are extracted from the meshed model and how boundary elements are designed, it became my preferred method for seismic shear wall design. Let me walk you through it.
 
 ## Wall Modeling
 
@@ -274,6 +274,6 @@ For walls connected by coupling beams (lintels over openings):
 **Cause**: Service-level stresses exceed concrete tensile strength.
 **Fix**: Increase reinforcement ratio, add crack control reinforcement, or increase wall thickness.
 
-## Conclusion
+## Wrapping Up
 
-MIDAS Gen's shear wall design module provides a complete workflow: meshed wall modeling, pier and spandrel force extraction, vertical and horizontal reinforcement design, boundary element identification and design, and coupling beam design with diagonal reinforcement. The key to reliable wall design is proper meshing (fine enough for accurate force distribution), correct pier labeling (for integrated force output), and careful boundary element design (critical for seismic performance). By following this workflow, structural engineers can design code-compliant shear walls that provide the necessary lateral resistance for buildings in seismic zones.
+Shear wall design in MIDAS Gen took me a while to get comfortable with, but the meshed wall approach gives you much more accurate force distribution than the simple pier model. The key things I've learned: mesh fine enough for accurate results, label your piers carefully so the force output is useful, and don't skimp on boundary element design in seismic zones — that's where walls fail when they fail.

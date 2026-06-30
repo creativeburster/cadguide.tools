@@ -15,7 +15,7 @@ sources:
 
 # Configuring K-Factor and Bend Tables for Accurate Sheet Metal Flat Patterns in SolidWorks
 
-The K-factor is the single most important variable in sheet metal design. It determines how much material is consumed during bending and directly affects the flat pattern length. An incorrect K-factor produces flat patterns that are too long or too short, resulting in parts that do not fit after fabrication. This guide covers K-factor theory, practical configuration in SolidWorks, and the setup of bend tables and gauge tables for manufacturing-accurate results.
+I learned the hard way that getting the K-factor wrong in sheet metal design is an expensive mistake. I once sent a batch of brackets to fabrication with a default K-factor, and every single one came back too short — the bend allowance was off by just enough to make the mounting holes misalign. That's when I decided to actually understand what the K-factor does and how to configure it properly in SolidWorks. Let me share what I've learned, from the theory to the practical setup of bend tables and gauge tables.
 
 ## Understanding the K-Factor
 

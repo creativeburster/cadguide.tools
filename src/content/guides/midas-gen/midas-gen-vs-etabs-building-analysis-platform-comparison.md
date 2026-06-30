@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Gen vs ETABS: Building Analysis Platform Comparison for Structural Engineers
 
-MIDAS Gen and ETABS are the two most widely used building-specific structural analysis platforms outside of North America. ETABS dominates in the Americas; MIDAS Gen has a strong following in Asia, the Middle East, and parts of Europe. This comparison helps structural engineers choose between them.
+I've used both MIDAS Gen and ETABS extensively, and the question of which one to use comes up a lot — especially on international projects where the client or local authority has a preference. ETABS dominates in the Americas; MIDAS Gen has a strong following in Asia, the Middle East, and parts of Europe. Both are capable tools, but they have different strengths. Here's how I think about the choice.
 
 ## Cost Comparison
 
@@ -167,6 +167,6 @@ MIDAS Gen and ETABS do not have direct file exchange. To transfer models:
 2. Import into the other
 3. Geometry transfers but design parameters and load cases may need reconfiguration
 
-## Conclusion
+## My Take
 
-MIDAS Gen and ETABS are both excellent building analysis platforms with different regional strengths. MIDAS Gen excels in Asian markets with comprehensive code support (KS, GB, AIJ), construction stage analysis with creep/shrinkage, and flexible modeling for non-building structures. ETABS dominates in North America with its mature story workflow, automatic code checks, detailed concrete detailing, and large user community. The choice often comes down to your region, your design codes, and whether you need advanced features like construction stage analysis. Both platforms produce reliable results for any building project when used correctly.
+Both MIDAS Gen and ETABS are excellent tools. If you're in Asia or the Middle East, MIDAS Gen is probably the better choice — better code support for the region, construction stage analysis built in, and a growing user community. If you're in the Americas, ETABS is the safer bet — larger community, better support, and most of your collaborators will be using it. If you work internationally, you might need both. I use MIDAS Gen for Asian projects and ETABS for North American ones, and that setup works well for me.

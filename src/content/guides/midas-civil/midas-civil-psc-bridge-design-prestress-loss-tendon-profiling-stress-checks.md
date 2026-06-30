@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Civil PSC Bridge Design: Prestress Loss, Tendon Profiling, and Stress Checks
 
-Prestressed concrete (PSC) bridges are the most common bridge type for medium spans (20-50m). MIDAS Civil provides comprehensive PSC design tools including tendon profiling, prestress loss calculation, and stress checks per AASHTO LRFD. This guide covers the complete PSC bridge design workflow.
+Prestressed concrete bridge design is one of my favorite topics — there's something satisfying about profiling tendons and watching the stress checks come out green. MIDAS Civil handles the full PSC workflow: tendon profiling, prestress loss calculation, and stress checks per AASHTO LRFD. Let me walk you through how I set up a PSC bridge design.
 
 ## PSC Section Definition
 
@@ -259,6 +259,6 @@ Prestressed concrete (PSC) bridges are the most common bridge type for medium sp
    - **Total deflection**: ≤ L/240 (typical for PSC bridges)
    - **Live load deflection**: ≤ L/800 (vehicular)
 
-## Conclusion
+## Wrapping Up
 
-PSC bridge design in MIDAS Civil covers the complete workflow: section definition, tendon profiling with harparabolic layouts, comprehensive prestress loss calculation (elastic shortening, friction, anchorage set, creep, shrinkage, relaxation), stress checks at transfer and service per AASHTO LRFD, and ultimate flexural and shear strength design. The key to successful PSC design is accurate loss calculation (which determines the effective prestress), proper tendon profiling (which maximizes eccentricity where moments are highest), and careful stress checking at both transfer and service conditions. By following this workflow, bridge engineers can design efficient and code-compliant PSC bridges for spans from 20 to 50+ meters.
+PSC bridge design in MIDAS Civil is comprehensive and well-organized. The thing I always emphasize: get your prestress losses right. The effective prestress after losses determines everything — stress checks, deflection, ultimate capacity. Don't just accept the default loss parameters; check them against your project's specifications. And always check stresses at transfer — that's when the concrete is youngest and weakest, and the prestress force is highest.

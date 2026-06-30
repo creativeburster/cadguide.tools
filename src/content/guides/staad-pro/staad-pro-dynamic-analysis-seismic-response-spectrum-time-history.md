@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Dynamic Analysis: Seismic Response Spectrum and Time History
 
-Dynamic analysis is essential for structures in seismic zones, wind-sensitive buildings, and structures with vibration concerns. STAAD.Pro provides modal analysis, response spectrum analysis, and time history analysis. This guide covers the complete dynamic analysis workflow.
+Dynamic analysis used to intimidate me — all those modes, frequencies, and spectrum curves seemed like black magic compared to static analysis. But after running dozens of seismic analyses in STAAD.Pro, I've come to appreciate how systematic it is. Modal analysis, response spectrum, time history — each has its place. Let me walk you through how I set them up.
 
 ## Modal Analysis
 
@@ -250,6 +250,6 @@ Per ASCE 7, compare dynamic base shear to static base shear:
 **Cause**: Asymmetric mass or stiffness distribution.
 **Fix**: Redistribute mass or stiffness. Add torsional bracing. Use accidental eccentricity (±5% of building dimension).
 
-## Conclusion
+## Wrapping Up
 
-Dynamic analysis in STAAD.Pro covers the complete seismic workflow: modal analysis for natural frequencies and mode shapes, response spectrum analysis for code-based seismic design, and time history analysis for site-specific ground motions. The key to reliable results is achieving 90%+ mass participation, using CQC for closely-spaced modes, comparing dynamic base shear to static (≥85% scaling), and properly combining directional seismic loads. By following this workflow, structural engineers can perform code-compliant dynamic analysis for buildings in any seismic zone.
+Dynamic analysis in STAAD used to scare me, but it's really just a systematic process. Run the modal analysis, check mass participation (90%+ or you need more modes), set up the response spectrum, scale to static base shear, and check drift. The CQC modal combination is the right choice for most buildings — SRSS can underestimate response when modes are closely spaced. Take it step by step and it's not so bad.

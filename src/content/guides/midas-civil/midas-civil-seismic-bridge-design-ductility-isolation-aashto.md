@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Civil Seismic Bridge Design: Ductility, Isolation, and AASHTO Seismic Provisions
 
-Seismic bridge design differs from building seismic design — bridges have different structural systems, different failure modes, and different code provisions. MIDAS Civil provides tools for AASHTO seismic bridge design, including ductility-based design and seismic isolation. This guide covers the complete seismic bridge workflow.
+Seismic bridge design is a different animal from building seismic design. Bridges have different structural systems, different failure modes, and the code provisions (AASHTO) reflect that. I've done seismic bridge design in MIDAS Civil for projects in California and Japan, and the ductility-based design and seismic isolation tools are solid. Let me walk you through the workflow.
 
 ## AASHTO Seismic Provisions Overview
 
@@ -261,6 +261,6 @@ Members that should NOT yield (must remain elastic):
 **Cause**: Excessive relative displacement between deck segments.
 **Fix**: Add restrainer cables, increase seat width, or use continuous deck.
 
-## Conclusion
+## Wrapping Up
 
-Seismic bridge design in MIDAS Civil covers displacement-based design per AASHTO, ductility through plastic hinge formation in columns, capacity protection of foundations and superstructure, seismic isolation with lead rubber bearings, and pushover analysis for performance verification. The key to successful seismic bridge design is ensuring that plastic hinges form in the right places (columns, not foundations), providing adequate confinement for ductility, and verifying that displacement demand does not exceed capacity. By following this workflow, bridge engineers can design bridges that perform well under seismic loading — protecting life safety and maintaining functionality where required.
+Seismic bridge design is fundamentally different from building seismic design — it's displacement-based, not force-based. The most important thing I've learned: make sure your plastic hinges form in the columns, not the foundations or superstructure. That's the whole point of capacity design. And don't forget to check unseating at expansion joints — that's a common failure mode in earthquakes, and it's easy to overlook. MIDAS Civil handles all of this well, but you need to understand the philosophy behind the code provisions.

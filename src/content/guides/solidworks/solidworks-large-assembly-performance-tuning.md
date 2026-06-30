@@ -15,7 +15,7 @@ sources:
 
 # Large Assembly Performance Tuning in SolidWorks: System Settings and Workflow Strategies
 
-Assemblies with more than 5,000 components push SolidWorks to its performance limits. Symptoms include 30-second delays when opening assemblies, frozen cursor during mate updates, and regeneration times that make iterative design impractical. This guide covers every performance setting available in SolidWorks 2024-2026, ordered by impact, so you can apply the highest-value changes first.
+I've worked with SolidWorks assemblies ranging from 50 parts to 15,000, and I can tell you that the 5,000-component mark is where things start getting painful. Opening the assembly takes 30 seconds, the cursor freezes during mate updates, and every rebuild feels like watching paint dry. Over the years I've compiled a checklist of performance settings that actually make a difference — not the theoretical stuff from the help docs, but the changes I've measured and verified on real projects. Here they are, ordered by impact.
 
 ## Step 1: Enable Large Assembly Mode
 

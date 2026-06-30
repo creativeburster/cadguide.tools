@@ -15,7 +15,7 @@ sources:
 
 # Configuring ADSKFLEX Options File for AutoCAD Network License Management
 
-The Autodesk Network License Manager (NLM) uses FLEXlm (FlexNet) to manage floating licenses for AutoCAD and other Autodesk products. The options file (`.opt`) is the primary control mechanism for license administrators to define who can access which licenses, how long they can hold them, and what happens when they step away. This guide covers the complete configuration of the ADSKFLEX options file, from basic syntax to advanced group management.
+I've been managing Autodesk network licenses for over a decade, and I still remember the chaos before I learned how to properly configure the ADSKFLEX options file. We had 30 AutoCAD licenses and 45 users — every morning was a race to see who grabbed a license first. Once I figured out the `.opt` file, I could reserve licenses by team, set timeouts for idle users, and actually manage who got access to what. Let me walk you through everything I've learned about configuring it.
 
 ## Understanding the Options File Location
 

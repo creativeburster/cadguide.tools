@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD vs ETABS: Building Design Platform Comparison for European and Latin American Markets
 
-CYPECAD and ETABS are both building design platforms, but they serve different markets and design philosophies. CYPECAD is deeply integrated with Eurocodes and popular in Spain and Latin America; ETABS is the global standard with strength in North American codes. This comparison helps engineers choose.
+I've used both CYPECAD and ETABS on building projects, and the choice usually comes down to where the project is located and which codes govern. CYPECAD is deeply integrated with Eurocodes and popular in Spain and Latin America; ETABS is the global standard with strength in North American codes. Both get the job done, but the workflow is quite different. Here's how I compare them.
 
 ## Market Position
 
@@ -163,6 +163,6 @@ Some firms in Europe and Latin America use both:
 
 The tools serve different markets and workflows, so using both covers all project types.
 
-## Conclusion
+## My Take
 
-CYPECAD and ETABS serve different markets with different strengths. CYPECAD excels in Eurocode jurisdictions with integrated foundation design, automatic drawing generation, Spanish code support, and lower cost — making it ideal for firms in Spain, Latin America, and Southern Europe. ETABS dominates globally with superior modeling flexibility, advanced analysis, large community, and deep ACI/AISC integration — making it the standard for North American and international projects. The choice depends on your location, design codes, project types, and whether you need integrated drawings and foundations (CYPECAD) or advanced analysis and global collaboration (ETABS).
+If you're in Spain or Latin America, CYPECAD is probably the right choice — the Eurocode integration, Spanish code support, and automatic drawing generation are hard to beat. If you're working internationally, especially in North America or the Middle East, ETABS is the safer bet. Some firms I know use both — CYPECAD for Eurocode projects where they need construction drawings, ETABS for international projects where they need advanced analysis. There's no wrong answer here — it's about matching the tool to your market and workflow.
