@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import { ArrowLeft, Clock, Calendar, ExternalLink, ArrowRight, FileText, Scale, Settings, Sparkles, BookOpen, Tag } from 'lucide-react';
 import { tools } from '@/lib/data';
 import { getAllMarkdownGuides } from '@/lib/guides-markdown';
+import { getBestDealForTool } from '@/lib/deals-data';
 import { comparisonPairs } from '@/lib/seo-content';
 import { ToolLogo } from '@/components/tool-logo';
 import { Card } from '@/components/ui/card';
@@ -136,6 +137,7 @@ export default async function GuideArticlePage(
   const toolDisplayName = tool.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
   const matchedTool = tools.find(t => t.slug === frontmatter.softwareSlug);
+  const bestDeal = matchedTool ? getBestDealForTool(matchedTool.id) : null;
   const allGuides = getAllMarkdownGuides();
   const sameToolGuides = allGuides
     .filter(g => g.softwareSlug === frontmatter.softwareSlug && g.slug !== slug);
@@ -506,23 +508,38 @@ export default async function GuideArticlePage(
               </Card>
             )}
 
-            {/* Deals link */}
-            {matchedTool && (
+            {/* Deals link — only when an actual deal exists */}
+            {matchedTool && bestDeal && (
               <Card className="rounded-[24px] md:rounded-[32px] p-6 border-2 border-emerald-500 bg-emerald-500/5 shadow-sm space-y-4 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
                 <div className="relative z-10 space-y-3">
                   <div className="text-[9px] font-black text-emerald-500 uppercase tracking-[0.2em] flex items-center gap-1.5">
-                    <Tag className="w-3.5 h-3.5" /> Active Deals
+                    <Tag className="w-3.5 h-3.5" /> Active Deal
                   </div>
-                  <h3 className="font-black text-slate-900 text-base leading-snug">Save on {matchedTool.name} Licensing</h3>
+                  <h3 className="font-black text-slate-900 text-base leading-snug">{bestDeal.title}</h3>
+                  <div className="text-2xl font-black text-emerald-600 tracking-tight">{bestDeal.discount}</div>
                   <p className="text-slate-500 text-xs font-semibold leading-relaxed">
-                    Check active coupon codes, discounts, and verified perpetual alternatives to cut down software expenses.
+                    {bestDeal.description}
                   </p>
-                  <Link
-                    href={`/deals?tool=${matchedTool.slug}`}
+                  {bestDeal.code && (
+                    <div className="bg-emerald-50 border border-emerald-200 rounded-xl px-3 py-2 text-center">
+                      <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-widest">Code: </span>
+                      <span className="font-black text-sm tracking-wider text-emerald-700">{bestDeal.code}</span>
+                    </div>
+                  )}
+                  <a
+                    href={bestDeal.link}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
                     className="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl h-11 text-xs shadow-md flex items-center justify-center transition-all"
                   >
-                    View {matchedTool.name} Deals →
+                    Claim This Deal →
+                  </a>
+                  <Link
+                    href="/deals"
+                    className="block text-center text-[10px] font-bold text-emerald-600 uppercase tracking-widest hover:text-emerald-700 transition-colors"
+                  >
+                    See All Active Deals →
                   </Link>
                 </div>
               </Card>
