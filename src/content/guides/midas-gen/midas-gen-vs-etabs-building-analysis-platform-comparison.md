@@ -167,6 +167,10 @@ MIDAS Gen and ETABS do not have direct file exchange. To transfer models:
 2. Import into the other
 3. Geometry transfers but design parameters and load cases may need reconfiguration
 
+## Code Support and Regional Considerations
+
+Code support is a major factor in choosing between midas Gen and ETABS. ETABS has comprehensive support for US codes: ACI 318 for concrete, AISC 360 for steel, ASCE 7 for loads, and IBC for general building requirements. This makes ETABS the default choice for US-based structural engineering practice. midas Gen supports a broader range of international codes: Eurocode, British Standards, Korean, Chinese, Japanese, and Indian codes, in addition to US codes. This makes midas Gen more versatile for international firms working across multiple code jurisdictions. However, the depth of code support varies — midas Gen's US code implementation may not be as comprehensive or up-to-date as ETABS' implementation. For firms working primarily in the US, ETABS' code support is more reliable and better validated. For firms working in Europe, Asia, or the Middle East, midas Gen's multi-code support is a significant advantage.
+
 ## My Take
 
 Both MIDAS Gen and ETABS are excellent tools. If you're in Asia or the Middle East, MIDAS Gen is probably the better choice — better code support for the region, construction stage analysis built in, and a growing user community. If you're in the Americas, ETABS is the safer bet — larger community, better support, and most of your collaborators will be using it. If you work internationally, you might need both. I use MIDAS Gen for Asian projects and ETABS for North American ones, and that setup works well for me.

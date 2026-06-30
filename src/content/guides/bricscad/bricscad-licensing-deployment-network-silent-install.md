@@ -168,6 +168,10 @@ During the borrow period, one fewer license is available on the server. The borr
 5. **Schedule license server maintenance** — restart the license service monthly to clear stale connections
 6. **Monitor license usage** — use the license server's built-in reporting to track concurrent usage and plan seat purchases
 
+## Network License Server Setup Details
+
+Setting up the BricsCAD network license server requires attention to several technical details. The Bricsys Network License Manager uses the Reprise License Manager (RLM) framework, which requires three open ports: 5053 for license broadcast, 5054 for the web admin interface, and a dynamically assigned port for the ISV server. The dynamic port can be fixed by editing the Bricsys.lic file on the server — this is recommended for environments with strict firewall rules. The license server can run on Windows or Linux but not macOS. Client computers can be any platform. For activation, the server must have internet access to validate the license with Bricsys' activation servers. For offline activation, generate a license request file and email it to Bricsys support. The RLM web interface at http://server:5054 shows license status, active users, and usage history. Monitor this regularly to ensure licenses are being released properly — stuck licenses are a common issue that requires restarting the RLM service. For redundancy, Bricsys supports license server failover with a backup server.
+
 ## Conclusion
 
 BricsCAD's licensing and deployment model is simpler than Autodesk's, but it still requires careful configuration for enterprise environments. The MSI-based silent install, network license server, and license borrowing system cover the majority of deployment scenarios. By pre-configuring licenses in the MSI properties and deploying standardized profiles, you can roll out BricsCAD to hundreds of workstations with minimal manual intervention.

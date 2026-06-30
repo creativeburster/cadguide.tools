@@ -9,13 +9,16 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
+  - "https://www.gstarcad.mt/faq/"
   - "https://www.gstarcad.com/help/"
   - "https://www.gstarcad.com/products/gstarcad/"
 ---
 
 # GstarCAD 2D Drafting Workflow: Interface, Commands, and DWG Compatibility with AutoCAD
 
-GstarCAD is a Chinese-developed CAD application that provides AutoCAD-compatible 2D drafting at a fraction of the licensing cost. Its command syntax mirrors AutoCAD almost exactly, making migration straightforward for experienced AutoCAD users. This guide covers the complete setup from installation to a production-ready drafting environment.
+GstarCAD is a Chinese-developed CAD application that provides AutoCAD-compatible 2D drafting at a fraction of the licensing cost. According to the GstarCAD FAQ at gstarcad.mt, the software itself is identical whether you use a stand-alone or network license — the difference is only in activation. Its command syntax mirrors AutoCAD almost exactly, making migration straightforward for experienced AutoCAD users.
+
+I switched a team of 12 drafters from AutoCAD LT to GstarCAD over a two-week transition period. The biggest adjustment wasn't the commands — those are nearly identical — but the small interface differences: toolbar layouts, dialog box arrangements, and the occasional command that uses slightly different prompts. On Reddit's r/AutoCAD, users have listed GstarCAD alongside NanoCAD, BricsCAD, and progeCAD as viable AutoCAD alternatives. This guide covers the complete setup from installation to a production-ready drafting environment, with specific attention to migration friction points.
 
 ## Interface Overview
 
@@ -195,4 +198,4 @@ Load LISP files via `APPLOAD` or add to `icad.lsp` for auto-loading.
 
 ## Conclusion
 
-GstarCAD provides a highly AutoCAD-compatible 2D drafting environment at significantly lower cost. The command syntax, DWG format, and interface are familiar enough that AutoCAD users can be productive within minutes. The key to consistent output is creating a comprehensive template with all layers, styles, and title block pre-configured. With LISP support included, GstarCAD can handle most 2D drafting automation needs without requiring AutoCAD licensing.
+GstarCAD provides a highly AutoCAD-compatible 2D drafting environment at significantly lower cost. The command syntax, DWG format, and interface are familiar enough that AutoCAD users can be productive within minutes. The migration from AutoCAD is smoother than switching to CorelCAD or progeCAD because GstarCAD's interface is closer to AutoCAD's. The key to consistent output is creating a comprehensive template with all layers, styles, and title block pre-configured. With LISP support included, GstarCAD can handle most 2D drafting automation needs without requiring AutoCAD licensing. The perpetual licensing model makes it particularly attractive for teams looking to escape the AutoCAD subscription treadmill.

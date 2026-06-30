@@ -224,6 +224,10 @@ To deploy LISP routines to multiple users:
 4. **Use `PROFILE` import** to distribute the profile with correct support paths
 5. **Version control** the LISP files using Git or SVN for change tracking
 
+## BRX API for Advanced Development
+
+When LISP isn't sufficient for your automation needs in BricsCAD, the BRX (BricsCAD Runtime eXtension) API provides a C++ development path similar to AutoCAD's ObjectARX. BRX gives you direct access to the drawing database, graphics system, and command registration framework. You can create custom commands that appear in the command line, build dialog boxes using BRX UI tools, and implement real-time entity manipulation that responds to user interaction. The BRX SDK is available from Bricsys and includes documentation, sample projects, and header files. Development is done in Visual Studio on Windows or GCC on Linux. The key advantage of BRX over LISP is performance — BRX programs run as compiled native code, making them orders of magnitude faster than interpreted LISP for computationally intensive tasks. BRX also provides access to features that LISP can't reach: custom entity types, direct graphics pipeline manipulation, and integration with external databases. For teams migrating from AutoCAD, BRX code is similar to ObjectARX code and can often be ported with moderate effort, making BricsCAD the strongest AutoCAD alternative for teams with existing C++ development investments.
+
 ## Conclusion
 
 LISP automation in BricsCAD is a practical, high-ROI investment for any team doing repetitive CAD work. The combination of BLADE for development, `defun c:` for custom commands, and batch processing loops for multi-file operations covers the majority of automation needs. By following the error handling patterns and deployment strategies in this guide, you can build a robust LISP toolkit that saves hours of manual work across your organization.

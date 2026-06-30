@@ -9,8 +9,9 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:
+  - "https://www.reddit.com/r/StructuralEngineering/comments/1gywbts/what_software_to_use/"
+  - "https://www.reddit.com/r/StructuralEngineering/comments/1cu1bsz/which_software_is_best/"
   - "https://www.cype.com/en/cypecad/"
-  - "https://www.csiamerica.com/products/etabs"
 ---
 
 # CYPECAD vs ETABS: Building Design Platform Comparison for European and Latin American Markets
@@ -162,6 +163,10 @@ Some firms in Europe and Latin America use both:
 - **ETABS** for international projects and complex analysis
 
 The tools serve different markets and workflows, so using both covers all project types.
+
+## Workflow and Productivity Comparison
+
+The workflow differences between CYPECAD and ETABS reflect their different design philosophies. CYPECAD's workflow is design-oriented: you define the building geometry, assign loads, and CYPECAD automatically generates the structural model, performs analysis, and designs the elements according to the selected code. This automated approach is fast for standard buildings. ETABS' workflow is analysis-oriented: you manually build the analytical model, define load patterns and combinations, run the analysis, and then perform design checks. For repetitive building types like residential or office towers, CYPECAD's automation saves significant time. For unusual structures with complex geometry or non-standard load patterns, ETABS' manual modeling approach provides the flexibility needed. Many structural engineers use both tools — CYPECAD for standard buildings where speed matters, and ETABS for complex structures where analytical control matters.
 
 ## My Take
 

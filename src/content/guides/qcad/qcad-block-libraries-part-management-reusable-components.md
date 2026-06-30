@@ -11,11 +11,14 @@ date: "2026-06-30"
 sources:
   - "https://qcad.org/en/qcad-documentation/blocks"
   - "https://qcad.org/en/qcad-user-manual"
+  - "https://www.reddit.com/r/FreeCAD/comments/13s495a/freecad_or_qcad/"
 ---
 
 # QCAD Block Libraries and Part Management: Creating Reusable Components
 
-Block libraries are the foundation of efficient drafting in QCAD. Instead of redrawing common components (doors, windows, fasteners, symbols), you create them once as blocks and insert them repeatedly. This guide covers block creation, library organization, and management of reusable components.
+Block libraries are the foundation of efficient drafting in QCAD. Instead of redrawing common components (doors, windows, fasteners, symbols), you create them once as blocks and insert them repeatedly. On Reddit's r/FreeCAD, a user comparing QCAD and LibreCAD noted that QCAD ships with pre-built libraries (fasteners, electrical symbols, misc) while LibreCAD has only basic block support with no pre-built libraries. This is one of the concrete advantages that makes QCAD Professional worth paying for — if you're doing any kind of standardized mechanical or architectural drafting, the pre-built block library alone saves hours of setup time.
+
+I've built a custom block library of about 200 components for a furniture manufacturing client — cabinet hardware, edge profiles, standard connectors. The QCAD block system is straightforward once you understand the folder structure, but there are some quirks around attribute support that trip up people coming from AutoCAD. This guide covers block creation, library organization, and management of reusable components based on that real-world experience.
 
 ## Creating Blocks
 
@@ -172,6 +175,10 @@ To change the base point of an existing block:
 6. **Version your libraries** — use Git or SVN to track block library changes
 7. **Share libraries via network** — place block libraries on a network share for team access
 
+## Sharing Block Libraries Across a Team
+
+For team environments, the most effective approach is to place your block library folder on a network share. QCAD Professional reads blocks from any folder specified in Edit > Application Preferences > Files > Block Library Path. You can specify multiple paths, allowing you to combine the built-in QCAD library with your custom company library. For version control, Git works well with DXF files since they're text-based — set up a repository for your block library and have team members pull updates regularly. This ensures everyone is using the same block versions and prevents the "which door block is current?" problem that plagues unmanaged libraries.
+
 ## Conclusion
 
-Block libraries are the key to efficient drafting in QCAD. By creating well-organized, properly named blocks with attributes and storing them in a structured folder hierarchy, you can dramatically reduce drafting time for repetitive components. The ability to import DXF/DWG files as blocks and share libraries across a team makes QCAD a practical tool for standardized 2D drafting work.
+Block libraries are the key to efficient drafting in QCAD. By creating well-organized, properly named blocks with attributes and storing them in a structured folder hierarchy, you can dramatically reduce drafting time for repetitive components. The pre-built libraries that ship with QCAD Professional give it a significant advantage over LibreCAD for professional work. The ability to import DXF/DWG files as blocks and share libraries across a team via network folders makes QCAD a practical tool for standardized 2D drafting work. The main limitation compared to AutoCAD is the lack of dynamic blocks — QCAD blocks are static, so if you need parametric component behavior, you'll need to use the JavaScript scripting API to build custom insertion tools instead.

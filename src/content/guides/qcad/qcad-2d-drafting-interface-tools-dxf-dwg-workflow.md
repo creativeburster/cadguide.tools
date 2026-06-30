@@ -187,6 +187,10 @@ Since QCAD lacks viewports, you must set the print scale directly in the print d
 - Paper units: mm
 - Drawing units: mm
 
+## DXF vs DWG Workflow Considerations
+
+QCAD Professional handles both DXF and DWG files, but there are important workflow differences to understand. DXF is QCAD's native format and has the best round-trip fidelity. When you save a drawing as DXF in QCAD and reopen it, every entity, layer, and block survives perfectly. DWG support is added through the Teigha (now ODA) libraries and is generally reliable but not perfect. Complex DWG files with custom objects, dynamic blocks, or embedded data may not round-trip cleanly. For collaborative work with AutoCAD users, saving to DWG 2018 format is recommended. For internal work where you control both ends of the workflow, DXF is the safer choice. QCAD also supports SVG export for web publishing and PDF export for printing. The SVG export preserves vector geometry and text, making it useful for creating web-ready technical illustrations. When importing files from other CAD systems, always check the scale — QCAD imports at the scale stored in the file, but if the source system used different units, you may need to scale the drawing after import.
+
 ## Conclusion
 
 QCAD is a capable open-source 2D CAD tool for technical drawings, schematics, and drafting work that does not require paper space layouts or complex hatching. Its DXF-native approach ensures compatibility with AutoCAD and other CAD systems. The block library system and cross-platform availability make it suitable for small firms, education, and individual users who need professional 2D drafting without licensing costs. The main limitations are the lack of paper space, LISP automation, and limited DWG support in the free version.

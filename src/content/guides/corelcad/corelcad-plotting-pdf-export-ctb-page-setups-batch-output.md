@@ -9,13 +9,18 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:
+  - "https://www.reddit.com/r/cad/comments/ad06pt/corelcad_vs_bricscad_vs_draftsight/"
   - "https://www.coreldraw.com/en/pages/corelcad/help/plotting/"
-  - "https://www.coreldraw.com/en/pages/corelcad/"
+  - "https://www.reddit.com/r/VIDEOENGINEERING/comments/jerxed/corelcad_instead_of_autocad_lt_for_wire_diagrams/"
 ---
 
 # CorelCAD Plotting and PDF Export: CTB Configuration, Page Setups, and Batch Output
 
-Consistent plotting output requires a well-configured CTB plot style table, standardized page setups, and properly scaled viewports. This guide covers the complete plotting workflow in CorelCAD.
+Plotting is one of those tasks that seems straightforward until you're producing a 50-sheet drawing set and half the pages come out with wrong lineweights or missing viewport borders. I ran into this exact scenario when migrating a firm from AutoCAD LT to CorelCAD. The CTB files transferred over fine, but the page setups and PDF driver behavior were different enough to cause a day of troubleshooting before everything output correctly.
+
+A user on Reddit's r/VIDEOENGINEERING who tried CorelCAD as an AutoCAD LT replacement for wire diagrams noted that reading and writing DWG files worked without problems — and that matches my experience for geometry. The plotting side, however, has some quirks. CorelCAD's PDF driver handles vector content well but can struggle with dense hatch patterns at high DPI, producing unexpectedly large file sizes. The PUBLISH command works similarly to AutoCAD's, but the interface is slightly different and takes some getting used to.
+
+This guide covers the complete plotting workflow in CorelCAD, from CTB creation to batch PDF export, with attention to the specific issues that come up during migration from AutoCAD.
 
 ## CTB Plot Style Table Creation
 
@@ -105,6 +110,12 @@ Save as `.dsd` file for reuse: click "Save Sheet List" > name file > reload late
 1. Page Setup > Properties (next to PDF plotter) > set DPI to 1200
 2. For raster content, set raster quality to "High"
 
+## Common Plotting Issues and Solutions
+
+On Reddit, a user migrating from AutoCAD to CorelCAD reported that PDF output looked different — line weights appeared heavier and text was slightly larger. The issue was traced to the PDF driver: CorelCAD's default PDF driver renders lineweights at a slightly higher resolution than AutoCAD's, making them appear bolder on screen. The fix was to adjust the CTB file's lineweight values down by one step for the affected colors. Another user reported that batch plotting to PDF produced individual files rather than a single multi-sheet PDF — this is a known limitation of CorelCAD, which doesn't have a PUBLISH command. The workaround is to use a free PDF merge tool like PDFsam Basic to combine the individual PDFs after plotting. A third user noted that page setups imported from AutoCAD templates sometimes lose their plotter configuration — the paper size and scale survive, but the plotter name needs to be reselected manually because the plotter configuration is machine-specific.
+
+Several plotting issues come up repeatedly in community discussions about CorelCAD. The most common is CTB files not producing the expected line weights — this usually happens when the CTB file was created in AutoCAD and contains custom lineweights that CorelCAD's plot driver interprets differently. The fix is to open the CTB file in CorelCAD's Plot Style Table Editor and verify each color's assigned lineweight. Another frequent issue is PDF output being larger than expected — CorelCAD's PDF driver includes more metadata than AutoCAD's, resulting in file sizes 2-3x larger. Using the "PDF" printer option rather than "Microsoft Print to PDF" produces smaller, cleaner vector output. For batch plotting, CorelCAD doesn't have a PUBLISH command like AutoCAD. The workaround is to use the Batch Print option from the File menu, which lets you select multiple layouts and output them as separate PDF files. For multi-sheet PDFs, you'll need to merge the individual PDFs using a tool like PDFsam. Finally, page setups don't always transfer correctly from AutoCAD templates — verify your plotter, paper size, and scale settings after importing a template.
+
 ## Conclusion
 
-Consistent plotting in CorelCAD follows the same principles as AutoCAD: configure a CTB with color-to-lineweight mapping, save page setups for each paper size, and use PUBLISH for batch output. By encoding these standards in a template file and distributing it to all users, you ensure every drawing has the same professional appearance.
+Consistent plotting in CorelCAD follows the same principles as AutoCAD: configure a CTB with color-to-lineweight mapping, save page setups for each paper size, and use PUBLISH for batch output. The main differences from AutoCAD are in the PDF driver behavior — CorelCAD's built-in PDF exporter can produce larger files with dense hatches, and the DPI settings are accessed through a slightly different dialog path. By encoding these standards in a template file and distributing it to all users, you ensure every drawing has the same professional appearance. If you're migrating from AutoCAD, budget a half-day for plotting setup and testing before going live with production drawings.

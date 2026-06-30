@@ -9,8 +9,10 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://nanocad.com/support/documentation"
-  - "https://nanocad.com/support/"
+  - "https://nanocad.com/learning/online-help/nanocad-platform/recovery-of-document/"
+  - "https://support.nanocad.com/helpdesk/KB/View/66719772-nanocad-can-t-open-can-t-display-correctly-specific-files"
+  - "https://support.csoft.com/knowledgebase.php?article=63"
+  - "https://www.nanocad.in/2D-design-3D-modeling-solution/25/en/topic/auto-saving-and-backup"
 ---
 
 # nanoCAD DWG File Recovery: Fixing Corrupted Drawings and Recovering Lost Data

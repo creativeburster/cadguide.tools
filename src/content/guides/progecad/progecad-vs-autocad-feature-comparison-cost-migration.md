@@ -9,8 +9,9 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.progesoft.com/products/progecad-professional/compare/"
-  - "https://www.autodesk.com/products/autocad/compare"
+  - "https://www.progesoft.com/products/progecad-professional/manual?mp=developer-reference%2Flisp%2Flisp-compatibility"
+  - "https://www.cadtutor.net/forum/topic/86867-lisp-works-in-c3d-but-not-in-progecad/"
+  - "https://forums.intellicadms.com/viewtopic.php?t=2774"
 ---
 
 # progeCAD vs AutoCAD: Feature Comparison, Cost Analysis, and Migration Guide
@@ -156,6 +157,10 @@ List all commands, LISP routines, and plugins. Categorize as available, partial,
 - **Dynamic block authoring** — display only, cannot create or edit
 - **Specialized plugins** — many AutoCAD plugins unavailable for progeCAD
 - **Rendering** — no advanced rendering engine
+
+## Migration Planning and Timeline
+
+A successful migration from AutoCAD to progeCAD requires careful planning. The typical timeline for a 10-15 person drafting team is four to six weeks. Week one: install progeCAD on test machines, identify all LISP routines, custom commands, and templates in use. Week two: test LISP routines and identify which need adaptation. Test DWG round-trip fidelity with the most complex drawings. Week three: adapt failed LISP routines, create progeCAD templates matching existing AutoCAD templates, and configure page setups and plot styles. Week four: pilot deployment with 3-5 users on real projects. Week five: full deployment with training sessions covering interface differences and known limitations. Week six: follow-up training and issue resolution. The total cost of migration includes the progeCAD licenses, training time, and productivity dip during transition. This should be compared against the ongoing subscription savings to calculate the break-even point, which is typically three to six months for a 10-person team.
 
 ## Conclusion
 

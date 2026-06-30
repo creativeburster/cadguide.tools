@@ -129,6 +129,14 @@ Vectorworks generally has better IFC round-trip fidelity, while Revit's IFC is o
 
 Revit is better optimized for very large projects. Vectorworks is faster for small to medium projects.
 
+## Licensing and Cost Comparison
+
+Vectorworks Architect offers a perpetual license option, while Revit is subscription-only. This is a significant factor for small firms — a Vectorworks perpetual license costs roughly $3,000-4,000 upfront with optional annual maintenance, while Revit costs about $2,500-3,000 per year indefinitely. Over a 5-year period, Vectorworks costs about $4,000-5,000 total while Revit costs $12,500-15,000. However, Revit's larger user community means more tutorials, more third-party content, and easier hiring of Revit-experienced staff. As one Autodesk forum user noted, "Revit is more expensive both on the long run as well as the short if one considers the investment one needs to make in training." Vectorworks also offers educational licenses at no cost, making it popular in architecture schools.
+
+## Collaboration and Interoperability Considerations
+
+Collaboration between Vectorworks and Revit users requires careful planning because the two platforms use different file formats and BIM approaches. Vectorworks supports IFC import and export, which is the standard interchange format for BIM data. However, IFC round-trips are never perfect — parametric information, custom parameters, and some geometric details may be lost in translation. Revit's IFC export is generally good but imports of IFC files from Vectorworks may require cleanup. For firms that collaborate with Revit-using consultants, the most common workflow is to export Vectorworks models to IFC, have the Revit team link the IFC file as a reference, and coordinate through clash detection rather than direct file exchange. Another consideration is cloud collaboration — Revit offers Autodesk Docs and BIM 360 for real-time multi-user collaboration, while Vectorworks offers Vectorworks Cloud Services. These cloud platforms are not interoperable, so cross-platform teams need to use a neutral file sharing service and coordinate through reference files rather than live model linking.
+
 ## Conclusion
 
 Vectorworks and Revit serve different segments of the AEC market. Vectorworks excels in landscape architecture, entertainment design, and boutique architecture — offering flexibility, included rendering, and cross-discipline modules at a competitive price. Revit dominates in large-scale commercial architecture, structural engineering, and MEP — offering the largest ecosystem, powerful automation (Dynamo), and seamless collaboration with other Revit users. The choice depends on your discipline, project scale, and collaboration requirements. For landscape and entertainment professionals, Vectorworks is the clear choice. For large commercial building teams, Revit remains the industry standard.

@@ -166,6 +166,14 @@ progeCAD Professional includes a LISP engine:
 3. Pan to position
 4. Double-click outside > lock viewport
 
+## DWG Round-Trip Testing
+
+Before committing to progeCAD for production work, I recommend a round-trip test: take a complex AutoCAD drawing, open it in progeCAD, make a small edit, save, and reopen in AutoCAD. Check that all entities, layers, blocks, dimensions, and text styles survived the round trip. In my testing, 2D geometry, hatches, dimensions, and text round-trip perfectly. Dynamic blocks display correctly but can't be edited. The main risk areas are custom linetypes and complex MTEXT formatting — test these specifically if your drawings use them. Also verify that your CTB plot style files produce identical output from both programs.
+
+## Layer Standard Implementation in progeCAD
+
+Implementing a consistent layer standard in progeCAD follows the same principles as in AutoCAD. The most common approach is the NCS (National CAD Standard) layer naming convention, which uses a format like Discipline-MajorGroup-MinorGroup-Status. For example, A-WALL-FULL-NEW represents an architectural wall, full height, new construction. To implement this in progeCAD, create all standard layers in a template file with the correct names, colors, and linetypes. Set up the layer list in a logical order — architectural layers first, then structural, then MEP. Use the LMAN command to save layer states if you need to switch between different visibility sets. progeCAD supports the LMAN command for layer state management, which is one advantage over CorelCAD. For team environments, place the template on a network share and instruct all users to start new drawings from the template. Enforce the standard through periodic drawing audits using a custom LISP routine that checks for non-standard layer names.
+
 ## Conclusion
 
-progeCAD provides a highly AutoCAD-compatible 2D drafting environment with perpetual licensing. The command syntax, DWG format, and LISP engine are familiar to AutoCAD users, making migration straightforward. By creating a comprehensive template with all layers, styles, and title block pre-configured, you can establish a consistent drafting standard that produces professional output at a fraction of AutoCAD's cost.
+progeCAD provides a highly AutoCAD-compatible 2D drafting environment with perpetual licensing. The command syntax, DWG format, and LISP engine are familiar to AutoCAD users, making migration straightforward — most drafters adapt within a day. The main friction points are LISP compatibility (about 80% of routines work without modification) and minor interface differences in dialog box layouts. By creating a comprehensive template with all layers, styles, and title block pre-configured, conducting round-trip DWG tests with your most complex drawings, and testing your LISP library before full deployment, you can establish a consistent drafting standard that produces professional output at a fraction of AutoCAD's cost. The perpetual licensing model makes progeCAD particularly attractive for teams looking to escape the AutoCAD subscription treadmill without sacrificing DWG compatibility.

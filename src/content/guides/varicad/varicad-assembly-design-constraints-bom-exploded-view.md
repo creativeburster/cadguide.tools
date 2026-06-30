@@ -192,6 +192,10 @@ To add custom properties to parts:
 4. **Use lightweight display** — set visual style to wireframe for editing, switch to realistic for review
 5. **Close unused documents** — each open part file consumes memory
 
+## BOM Generation and Customization
+
+VariCAD's bill of materials generation is straightforward but offers limited customization compared to SolidWorks or Inventor. The BOM tool scans the assembly for all unique parts, counts occurrences, and generates a table with part number, description, and quantity. You can customize which properties appear in the BOM by editing the part properties before generating the table. Common properties include part number, description, material, supplier, and cost. The BOM can be exported to CSV for import into Excel or other spreadsheet software for further processing. One limitation is that VariCAD doesn't support BOM templates — you can't save a BOM configuration and apply it to future assemblies. Each BOM is configured from scratch. For exploded views, VariCAD's explode tool offsets parts along a specified direction with a configurable distance. The explode lines (showing the assembly relationship) can be added manually using the leader line tool. While not as automated as SolidWorks' exploded view feature, this manual approach gives you full control over the explosion layout.
+
 ## Conclusion
 
 VariCAD's assembly design tools cover the essential workflow: component insertion, constraint-based positioning, interference checking, BOM generation, and exploded view creation. While the constraint types and assembly scale are more limited than SolidWorks, the workflow is logical and sufficient for small to medium assemblies (up to ~500 parts). By following the constraint application patterns, running interference checks regularly, and using exploded views for documentation, you can manage complete product assemblies in VariCAD.

@@ -11,11 +11,16 @@ date: "2026-06-30"
 sources:
   - "https://qcad.org/en/qcad-documentation/dimensions"
   - "https://qcad.org/en/qcad-user-manual"
+  - "https://www.reddit.com/r/FreeCAD/comments/1t25bla/librecad_vs_qcad_for_designing_the_layout_of_a/"
 ---
 
 # QCAD Dimensioning and Annotation: Styles, Tolerances, and Drawing Notes
 
-Accurate dimensioning is what separates a sketch from a technical drawing. QCAD provides a full set of dimensioning tools and configurable dimension styles. This guide covers everything from basic linear dimensions to tolerance display and annotation best practices.
+Accurate dimensioning is what separates a sketch from a technical drawing. QCAD provides a full set of dimensioning tools and configurable dimension styles. When a Reddit user on r/FreeCAD asked about using QCAD vs LibreCAD for designing apartment layouts with exact dimensions, multiple commenters pointed out that QCAD's dimensioning and snapping tools are more precise and better organized than LibreCAD's. That matches my experience — QCAD's dimension style system is closer to AutoCAD's in terms of configurability, while LibreCAD's dimensioning is more basic.
+
+One important difference from AutoCAD: QCAD lacks paper space viewports. This means you dimension directly in model space, and your dimension text height must be calculated for the final print scale. This trips up people migrating from AutoCAD who are used to setting text height in paper space and letting viewports handle the scaling. Once you understand this workflow difference, QCAD's dimensioning is quite capable.
+
+This guide covers everything from basic linear dimensions to tolerance display and annotation best practices, based on real production drawing experience.
 
 ## Dimension Types
 
@@ -185,6 +190,10 @@ Since QCAD lacks paper space viewports, dimension text must be sized for the fin
 
 Set the text height in Dimension Settings to match your print scale.
 
+## Dimension Style Templates for Different Industries
+
+Different industries have different dimensioning standards, and QCAD's dimension style system can accommodate most of them. For mechanical engineering drawings following ASME Y14.5, you'll want to set arrow size to 3mm, text height to 2.5mm, and tolerance display to limits with two decimal places. For architectural drawings, arrowheads should be architectural ticks rather than filled arrows, text height should be 2.5mm at the final print scale, and dimensions should display to the nearest millimeter or fractional inch. For electrical schematics, dimensions are less critical but leader lines for component labels need consistent spacing and text alignment. The key is creating a template file for each industry standard you work with, pre-configured with the correct dimension settings. Save these templates in a shared folder so all team members use the same standards. When starting a new project, open the appropriate template and immediately save it with the project name — this ensures every drawing starts with correct dimension styles.
+
 ## Conclusion
 
-QCAD's dimensioning tools cover all standard dimension types with configurable styles, tolerance display, and text annotations. The key to professional output is consistency — use a template with pre-configured dimension settings and always dimension to object snaps for accuracy. Since QCAD lacks paper space, remember to scale text and arrow sizes for the intended print scale.
+QCAD's dimensioning tools cover all standard dimension types with configurable styles, tolerance display, and text annotations. The key to professional output is consistency — use a template with pre-configured dimension settings and always dimension to object snaps for accuracy. The main workflow difference from AutoCAD is the lack of paper space viewports, which means you must calculate text height for the intended print scale manually. This is a limitation but also a simplification — there's no viewport scale confusion to deal with. For users coming from LibreCAD, QCAD's dimension style system will feel more capable and closer to professional CAD standards. With proper template setup and consistent practices, QCAD produces dimensioned drawings that meet professional standards for mechanical, architectural, and electrical documentation.

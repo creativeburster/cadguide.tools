@@ -176,6 +176,10 @@ TurboCAD Platinum extends parametric constraints to 3D:
 5. **Use design tables for part families** — avoid creating separate drawings for dimension variants
 6. **Group constraints logically** — use constraint groups for complex designs
 
+## Practical Parametric Design Examples
+
+Parametric constraints in TurboCAD shine in scenarios where you need to test multiple dimension values without redrawing. A common use case is a bracket with variable hole spacing — apply geometric constraints to keep holes centered on the bracket, then use dimensional constraints to drive the spacing. Change the spacing dimension and the holes reposition automatically. Another use case is a series of similar parts with different sizes — create one parametric part and generate variants by changing the driving dimensions. The Parametric Part Manager stores these variants and lets you insert any version into a drawing. For 3D parts, constraints can drive extrusion heights, revolution angles, and boolean operation positions. The key limitation is that constraint chains can become circular — if dimension A depends on dimension B which depends on dimension A, the solver will fail. Always build constraints in a logical hierarchy where parent dimensions drive child dimensions, never the reverse. Test each constraint as you add it rather than adding many at once and trying to debug the entire chain.
+
 ## Conclusion
 
 Parametric constraints in TurboCAD Platinum transform static drawings into intelligent, adaptable designs. The 2D constraint system handles profile design and part families through design tables, while the 3D constraint system enables assembly positioning and parametric relationships between parts. By following the workflow of geometric constraints first, dimensional constraints second, and design tables for variants, you can create flexible designs that update automatically when requirements change.

@@ -218,6 +218,14 @@ To apply constraints:
 **Cause**: Selected faces are not compatible (e.g., trying to mate a cylindrical face with a planar face).
 **Fix**: Use appropriate constraint types for the geometry. Use "Insert" for shaft-hole, "Mate" for flat faces.
 
+## Stability Tips for 3D Work
+
+Based on community discussions and personal experience, TurboCAD's 3D modeling is more prone to crashes than its 2D drafting. To minimize stability issues: save frequently (every 10-15 minutes during 3D work), avoid complex boolean operations on more than two solids at a time, break large assemblies into sub-assemblies, and close other memory-intensive applications while working in 3D. If TurboCAD crashes during a boolean operation, the file may become corrupted — always keep a backup before performing complex 3D operations. The ACIS kernel that powers TurboCAD's 3D is the same technology used in CorelCAD and progeCAD, so the solid modeling workflow and limitations are similar across all three.
+
+## Assembly Modeling Workflow Tips
+
+TurboCAD's assembly modeling tools allow you to position multiple parts relative to each other using constraints. The available constraint types include mate (faces touching), align (faces parallel and oriented same direction), insert (cylindrical faces coaxial), and angle (faces at specified angle). To create an assembly, start by inserting the base part as a fixed component. Then insert subsequent parts and apply constraints to position them. The constraint solver in TurboCAD is less robust than SolidWorks' — complex constraint chains with more than 10-15 parts can become unstable and may not solve correctly. For large assemblies, break them into sub-assemblies and combine them hierarchically. Always save before applying new constraints, as the solver can occasionally crash during complex operations. When a constraint fails to solve, check for conflicting constraints — two parts can't be both mated and aligned to the same face simultaneously. The assembly tree in the drawing explorer shows all parts and their constraints, making it easier to diagnose positioning issues.
+
 ## Conclusion
 
 TurboCAD Platinum's 3D modeling capabilities cover the full mechanical design workflow: primitive creation, extrusion, revolution, boolean operations, solid editing, assembly design with constraints, and 2D drawing generation from 3D models. The ACIS kernel ensures compatibility with other CAD systems through STEP and IGES export. While not as advanced as SolidWorks or Inventor, TurboCAD provides sufficient 3D tools for small to medium mechanical design projects at a significantly lower price point.

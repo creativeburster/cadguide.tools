@@ -194,6 +194,10 @@ Before exporting for manufacturing, verify:
 - [ ] Bend direction annotations are included
 - [ ] No overlapping or duplicate lines in DXF
 
+## Manufacturing Export Best Practices
+
+When exporting sheet metal flat patterns from VariCAD for laser cutting or CNC punching, follow these best practices to ensure clean manufacturing output. First, always verify the unfolded pattern is correct — check that bend lines are marked, the overall dimensions match the expected flat size, and there are no overlapping contours. Second, export to DXF format rather than DWG — most laser cutting and CNC punching machines read DXF files directly. Third, set the DXF version to R15 (2000) for maximum compatibility with manufacturing equipment. Fourth, ensure all geometry is on a single layer with color set to white or black — some laser cutting software interprets colors as cutting power levels. Fifth, remove all text, dimensions, and annotations from the export file — manufacturing machines only need the cutting contours. Sixth, set the drawing units to millimeters, as most manufacturing equipment expects metric units. Finally, if the part has internal cutouts, verify they are separate closed contours and not connected to the outer profile. Following these steps ensures the manufacturing shop can process your file without manual cleanup.
+
 ## Conclusion
 
 VariCAD's sheet metal tools cover the complete workflow from 3D design to flat pattern export. The automatic unfolding with K-factor-based bend allowance calculation produces accurate flat patterns for manufacturing. By properly configuring material properties, adding corner and bend reliefs, and exporting with bend line annotations, you can produce DXF files that go directly to laser cutting and CNC punching machines without additional processing.

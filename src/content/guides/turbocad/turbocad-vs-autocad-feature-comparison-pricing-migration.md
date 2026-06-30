@@ -165,6 +165,10 @@ List features your team uses. Key questions:
 - **Advanced rendering** — TurboCAD's Lightworks is basic compared to Arnold
 - **Specialized toolsets** — AutoCAD's Architecture, Mechanical, Electrical toolsets have no TurboCAD equivalent
 
+## Real User Migration Experiences from Community Discussions
+
+Reddit users who have migrated from AutoCAD to TurboCAD report mixed experiences. On r/engineering, a user needing 6-10 licenses noted the cost savings as the primary driver but expressed concern about reliability. On r/cad, a user with 20 years of AutoCAD experience and 8 years of TurboCAD stated that TurboCAD is "much less stable and no where near the level of AutoCAD" — a sentiment echoed by multiple commenters. Specific stability issues mentioned include crashes during complex 3D boolean operations, slow performance with large assemblies, and occasional file corruption after crashes. However, users also noted that for simple 2D drafting, TurboCAD works fine and the cost savings are significant. The consensus from community discussions is that TurboCAD is a reasonable choice for small firms and individual users doing primarily 2D work, but it's not recommended for production-critical 3D modeling or large-team collaboration where stability is essential. The migration path from AutoCAD is relatively smooth — command syntax is similar, DWG files open correctly, and the interface is familiar enough that most drafters can transition within a few days.
+
 ## Conclusion
 
 TurboCAD Platinum is a strong alternative to AutoCAD for teams that need both 2D drafting and 3D mechanical design. Its assembly design capabilities and standard parts library are actually superior to AutoCAD's, and the perpetual licensing model offers significant long-term savings. The main trade-offs are limited LISP support, no dynamic block authoring, no Sheet Set Manager, and no Autodesk cloud integration. For mechanical design teams that do not depend on these specific AutoCAD features, TurboCAD Platinum delivers excellent value.

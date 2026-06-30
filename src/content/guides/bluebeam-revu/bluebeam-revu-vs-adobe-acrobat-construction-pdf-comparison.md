@@ -178,6 +178,10 @@ Many construction firms use both:
 
 The tools serve different purposes and don't conflict when installed on the same machine.
 
+## Industry-Specific Features Comparison
+
+Bluebeam Revu's industry-specific features go far beyond what Adobe Acrobat offers for AEC professionals. The measurement tools in Bluebeam include linear, area, volume, and count measurements with automatic scale calibration from drawing dimensions. You can calibrate scale by measuring a known dimension on the drawing and entering the real-world value — Bluebeam then applies that scale to all subsequent measurements. The drawing comparison tool overlays two PDFs and highlights differences in geometry, text, and annotations — essential for checking revision submissions. The Studio feature provides cloud-based collaboration where multiple reviewers can mark up the same document simultaneously, with each user's marks tracked by color and timestamp. Adobe Acrobat has none of these AEC-specific features. However, Adobe Acrobat excels in general PDF tasks: creating forms, digital signatures, OCR for scanned documents, and PDF/A archiving. For construction firms, Bluebeam Revu is the clear choice for drawing review and markup. For general office PDF tasks, Adobe Acrobat remains the standard. Many firms maintain both — Bluebeam for drawings and Adobe for general document management.
+
 ## Conclusion
 
 Bluebeam Revu and Adobe Acrobat Pro serve different needs. Revu is purpose-built for construction document management with drawing scale calibration, measurement tools, batch processing, Studio Sessions, and punch list workflows. Acrobat is a general-purpose PDF editor with superior OCR, text editing, form creation, and digital signatures. For construction professionals who work with drawings daily, Revu is the clear choice — its measurement and batch tools have no Acrobat equivalent. For general office PDF tasks, Acrobat remains the standard. Many AEC firms benefit from using both tools for their respective strengths.

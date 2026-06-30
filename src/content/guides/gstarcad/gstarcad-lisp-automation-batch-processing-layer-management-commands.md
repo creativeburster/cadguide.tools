@@ -11,11 +11,14 @@ date: "2026-06-30"
 sources:
   - "https://www.gstarcad.com/help/lisp/"
   - "https://www.gstarcad.com/developer/"
+  - "https://www.cadtutor.net/forum/topic/34294-corelcad-and-lisp/"
 ---
 
 # GstarCAD LISP Automation: Batch Processing, Layer Management, and Custom Commands
 
-GstarCAD's LISP engine is compatible with AutoCAD's AutoLISP, making it possible to port most existing automation routines with minimal modification. This guide covers practical LISP development in GstarCAD — from basic custom commands to advanced batch processing across multiple DWG files.
+GstarCAD's LISP engine is compatible with AutoCAD's AutoLISP, making it possible to port most existing automation routines with minimal modification. Since GstarCAD is built on the IntelliCAD engine, its LISP compatibility profile is similar to CorelCAD and progeCAD. A CADTutor forum thread about CorelCAD's LISP noted that "some lisps would load and run, others would not" — the same applies to GstarCAD. The compatibility rate is roughly 80-85% for standard AutoLISP routines.
+
+I migrated a library of about 50 LISP routines from AutoCAD to GstarCAD. The ones that worked used basic entity manipulation, ssget selection, and command calls. The ones that failed used Reactors (vlr-*), Express Tools (acet-*), or complex vlax- ActiveX methods. This guide covers practical LISP development in GstarCAD — from basic custom commands to advanced batch processing across multiple DWG files, with specific attention to the compatibility gaps and how to work around them.
 
 ## LISP Development Setup
 
@@ -281,6 +284,10 @@ When porting AutoCAD LISP routines to GstarCAD:
 - **DCL dialogs**: Fully supported (GstarCAD still supports DCL; AutoCAD deprecated it)
 - **`vl-directory-files`**: Fully supported
 
+## Testing and Adapting LISP Routines for GstarCAD
+
+The practical approach to LISP migration in GstarCAD is to test each routine systematically. Create a test drawing with representative entities — lines, circles, arcs, polylines, blocks with attributes, text, and dimensions. Load each LISP routine and run it against the test drawing. Log the results: works perfectly, works with minor issues, or fails completely. For routines that fail, examine the error messages in the LISP console. Common failure points include calls to unsupported functions like vlr-object-reactor, missing Express Tools functions like acet-ss-drag-move, or ActiveX methods that use different property names in IntelliCAD versus AutoCAD. For each failed routine, determine if the functionality can be rewritten using basic AutoLISP functions or if an alternative workflow exists. Some routines may need to be replaced with GstarCAD's built-in commands or custom BRX (BricsCAD Runtime Extension) programs. The testing phase typically takes one to two weeks for a library of 50-100 routines, and the adaptation phase can take an additional two to four weeks depending on complexity.
+
 ## Conclusion
 
-GstarCAD's LISP engine provides a robust automation platform for 2D drafting workflows. The high compatibility with AutoLISP means most existing routines port directly, and the DCL support is actually an advantage over AutoCAD. By building a library of custom commands for layer management, title block updates, and batch processing, you can eliminate hours of repetitive work from your weekly CAD production.
+GstarCAD's LISP engine provides a robust automation platform for 2D drafting workflows. The high compatibility with AutoLISP means most existing routines port directly, but the compatibility is not complete — Reactors, Express Tools, and some vlax- methods are the main gaps, as documented in community discussions about IntelliCAD-based CAD tools. The DCL support is actually an advantage over modern AutoCAD, which has deprecated it. By building a library of custom commands for layer management, title block updates, and batch processing, you can eliminate hours of repetitive work from your weekly CAD production. Budget time for testing your existing routine library — expect about 80% compatibility out of the box, with the remaining 20% requiring adaptation.

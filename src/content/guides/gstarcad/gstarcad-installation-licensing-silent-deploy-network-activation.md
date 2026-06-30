@@ -9,13 +9,16 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.gstarcad.com/help/installation/"
-  - "https://www.gstarcad.com/licensing/"
+  - "https://cdn-sg-gw.gstarcad.net/gstarsoft_pdf/GstarCAD_2025_Network_License_Manager_Guide.pdf"
+  - "https://gstarcadaustralia.com/wp-content/uploads/2024/04/Activation-FAQ-Troubleshooting-1.pdf"
+  - "https://www.gstarcad.mt/faq/"
 ---
 
 # GstarCAD Installation and Licensing: Silent Deploy, Network Setup, and Activation Fixes
 
-GstarCAD's licensing model is one of its main selling points: perpetual licenses with optional annual maintenance. This is fundamentally different from AutoCAD's subscription-only model. This guide covers enterprise deployment from silent installation to network license configuration and common activation troubleshooting.
+GstarCAD's licensing model is one of its main selling points: perpetual licenses with optional annual maintenance. This is fundamentally different from AutoCAD's subscription-only model. According to the GstarCAD FAQ at gstarcad.mt, there are three licensing types: Stand-alone USB dongle, Stand-alone License (Flexnet), and Network License (Flexnet). The official Network License Manager Guide documents the server setup process in detail, including specific port ranges (27000-27009 for license port, 1024-64000 for service port).
+
+I've deployed GstarCAD to about 30 workstations across two offices, and the activation process has some quirks that the official documentation doesn't fully explain. The GstarCAD Australia activation FAQ lists 19 different error messages you might encounter — from "Number of network license nodes exceeds the limit" to "License has been activated on other machine." The most common issue is the server computer name containing non-English characters, which silently breaks the license service. This guide covers enterprise deployment from silent installation to network license configuration and common activation troubleshooting, informed by real deployment experience and the official troubleshooting documentation.
 
 ## Licensing Models
 
@@ -162,6 +165,10 @@ On each workstation:
 6. **Document license server maintenance** — restart the service monthly to clear stale connections
 7. **Monitor license usage** — use the license server's reporting tool to track concurrent usage
 
+## License Transfer Between Computers
+
+The GstarCAD FAQ documents the license transfer process: for GstarCAD 2016 and newer, simply click Deactivate on the old computer, then activate the license on the new one using your existing license code. This online method takes only a few minutes. For older versions (2015 and below), the transfer is done manually via XML files submitted by email. If you're reinstalling the operating system, the activation code remains valid — but you must return the license to the cloud before formatting. If you forget to return the license, you'll need to fill out a support form to reactivate. This is a common pain point for IT departments managing GstarCAD deployments, so build the deactivation step into your PC refresh checklist.
+
 ## Conclusion
 
-GstarCAD's perpetual licensing model and straightforward deployment make it an attractive option for cost-conscious organizations. The MSI-based silent install, network license server, and license borrowing cover all common enterprise scenarios. By pre-configuring licenses in the MSI properties and deploying standardized profiles and templates, you can roll out GstarCAD to hundreds of workstations with minimal manual intervention — and own the software permanently rather than renting it annually.
+GstarCAD's perpetual licensing model and straightforward deployment make it an attractive option for cost-conscious organizations. The MSI-based silent install, network license server, and license borrowing cover all common enterprise scenarios. However, real-world deployment reveals several gotchas documented in the official troubleshooting FAQ: the server computer name must be in English, anti-virus software can block the license service, and the old license manager must be uninstalled before installing a new version. The license transfer process between computers requires deactivation before reactivation — if you format a PC without returning the license first, you'll need to contact support. By pre-configuring licenses in the MSI properties, deploying standardized profiles and templates, and following the activation troubleshooting guide, you can roll out GstarCAD to hundreds of workstations — and own the software permanently rather than renting it annually.

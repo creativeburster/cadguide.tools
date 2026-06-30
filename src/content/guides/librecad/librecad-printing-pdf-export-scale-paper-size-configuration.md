@@ -9,6 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:
+  - "https://www.reddit.com/r/FreeCAD/comments/1t25bla/librecad_vs_qcad_for_designing_the_layout_of_a/"
   - "https://librecad.org/docs/"
   - "https://librecad.org/wiki/printing"
 ---
@@ -142,6 +143,14 @@ Before printing, verify:
 - [ ] Lineweights are enabled
 - [ ] Title block is within the printable area
 - [ ] Drawing is centered on the page
+
+## Multi-Page PDF Workaround
+
+Since LibreCAD doesn't have a PUBLISH command for multi-page PDF output, you'll need a workaround for multi-sheet drawing sets. The most common approach is to print each layout to a separate PDF file, then merge them using a free tool like PDFsam or pdfunite. While this adds a step, it gives you more control over individual sheet settings. Another option is to use a virtual PDF printer like PDF24 or Bullzip that can append to an existing PDF file — print the first sheet to create the PDF, then print subsequent sheets appending to the same file. For teams that regularly produce multi-sheet sets, this limitation is one of the main reasons to upgrade to QCAD Professional, which has a proper PUBLISH command.
+
+## Print Scale Calculation Reference
+
+Calculating the correct print scale in LibreCAD requires understanding the relationship between drawing units, paper size, and print scale. LibreCAD works in model space units — if you draw in millimeters, a 1:50 print scale means 50mm on the drawing equals 1mm on paper. The key formula is: text height in drawing units = desired text height on paper × print scale factor. For example, if you want 2.5mm text on a 1:50 scale drawing, set text height to 2.5 × 50 = 125mm in the drawing. The same applies to dimension text, arrow sizes, and lineweights. Common print scales and their text height calculations: 1:20 scale needs 50mm text height for 2.5mm output, 1:50 needs 125mm, 1:100 needs 250mm, and 1:200 needs 500mm. Always test print on a single sheet before running batch output to verify the scale is correct. The quickest check is to measure a known dimension on the printed output with a physical ruler — if a 1000mm wall measures 10mm on a 1:100 print, the scale is correct.
 
 ## Conclusion
 

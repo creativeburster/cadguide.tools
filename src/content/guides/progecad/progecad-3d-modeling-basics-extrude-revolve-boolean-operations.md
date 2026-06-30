@@ -213,6 +213,10 @@ Boolean operations combine or modify solids:
 3. Specify file name
 4. The .sat file can be imported into SolidWorks, Inventor, or other ACIS-based applications
 
+## Common 3D Modeling Pitfalls and How to Avoid Them
+
+The most common pitfall in ACIS-based 3D modeling is creating surfaces instead of solids. This happens when the 2D profile used for extrusion or revolution is not a closed, welded polyline. If you draw a rectangle using four separate lines and try to extrude it, you'll get a surface, not a solid. The fix is to use the PEDIT command to join the lines into a single closed polyline before extruding. Another common issue is boolean operations failing — this typically happens when two solids share a coincident face or edge. The ACIS kernel sometimes can't resolve the topology. The workaround is to slightly offset one solid so the faces overlap rather than coincide. A third pitfall is STL export producing an empty file — this means the object is a surface, not a solid. Use the MASSPROP command to verify an object is a solid before exporting to STL. If MASSPROP returns volume and mass properties, it's a solid. If it returns an error, it's a surface that needs to be converted.
+
 ## Conclusion
 
 progeCAD Professional's 3D modeling capabilities cover the fundamentals: extrusion, revolution, boolean operations, solid editing, sectioning, and export to common 3D formats. While not a replacement for dedicated MCAD software, it is sufficient for basic mechanical parts, architectural massing, and 3D documentation. The ACIS kernel ensures compatibility with other ACIS-based CAD systems through SAT export. By mastering these fundamental operations, you can extend your progeCAD workflow from 2D drafting into basic 3D modeling without purchasing additional software.

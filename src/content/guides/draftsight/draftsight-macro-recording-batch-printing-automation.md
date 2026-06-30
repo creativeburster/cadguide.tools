@@ -255,6 +255,10 @@ For overnight or off-peak batch printing:
 6. **Use absolute paths** — scripts may not respect the current working directory
 7. **Include QSAVE before CLOSE** — ensures changes are saved before the file closes
 
+## Batch Print Configuration Best Practices
+
+Based on community discussions and real usage, here are the best practices for DraftSight batch printing. First, always create and save a print configuration for each common output format — one for PDF, one for physical printers, and one for DWF if needed. This ensures consistent output settings across batch print jobs. Second, use the .bpl batch print list file to save your print job configuration — this allows you to reprint the same set of drawings with one click. Third, when publishing multi-sheet PDFs, select "PDF" as the printer name directly in the Print dialog — not "Microsoft Print to PDF" or "Adobe PDF," which may gray out the multi-sheet option. This specific issue was reported on the DraftSight user community and the solution was to scroll down the printer list to find the native "PDF" option. Fourth, for large batch jobs, use the Pause button periodically to check output quality on the first few sheets before continuing. Fifth, always specify an output folder path before starting the batch — if the path is not set, DraftSight may prompt for each file, defeating the purpose of batch processing.
+
 ## Conclusion
 
 DraftSight's automation capabilities — script files, batch printing, and LISP routines — provide practical time savings for any team doing repetitive CAD work. Script files require no programming and can handle cleanup, layer setup, and attribute updates. The PUBLISH command handles multi-sheet printing with reusable configurations. For more advanced automation, LISP routines provide file looping and conditional logic. By combining these tools, you can eliminate hours of manual work from your weekly CAD workflow.
