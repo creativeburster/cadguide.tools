@@ -96,8 +96,8 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
     (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
   );
 
-  // Use real markdown guides passed from server, take up to 4 for the section
-  const relatedGuides = guides.slice(0, 4);
+  // Use real markdown guides passed from server, take up to 8 for the section
+  const relatedGuides = guides.slice(0, 8);
 
 
   // Surface Compatibility / Trust sub-nav entries only when at least

@@ -137,9 +137,12 @@ export default async function GuideArticlePage(
 
   const matchedTool = tools.find(t => t.slug === frontmatter.softwareSlug);
   const allGuides = getAllMarkdownGuides();
-  const relatedGuides = allGuides
-    .filter(g => g.softwareSlug === frontmatter.softwareSlug && g.slug !== slug)
-    .slice(0, 3);
+  const sameToolGuides = allGuides
+    .filter(g => g.softwareSlug === frontmatter.softwareSlug && g.slug !== slug);
+  const relatedGuides = sameToolGuides.slice(0, 6);
+  const crossToolGuides = allGuides
+    .filter(g => g.softwareSlug !== frontmatter.softwareSlug && g.category === frontmatter.category && g.slug !== slug)
+    .slice(0, 4);
 
   // Sidebar: comparison pairs for this tool
   const toolComparisons = matchedTool
@@ -335,7 +338,7 @@ export default async function GuideArticlePage(
             {relatedGuides.length > 0 && (
               <div className="mt-8 pt-8 border-t border-slate-100">
                 <h2 className="text-lg font-black text-slate-900 mb-4">More {toolDisplayName} Guides</h2>
-                <div className="grid sm:grid-cols-3 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {relatedGuides.map(g => (
                     <Link
                       key={g.slug}
@@ -347,6 +350,34 @@ export default async function GuideArticlePage(
                       <p className="text-[10px] text-slate-400 font-semibold mt-2">{g.readTime}</p>
                     </Link>
                   ))}
+                </div>
+              </div>
+            )}
+
+            {/* Cross-tool guides (same category) */}
+            {crossToolGuides.length > 0 && (
+              <div className="mt-8 pt-8 border-t border-slate-100">
+                <h2 className="text-lg font-black text-slate-900 mb-1">Related {categoryLabel} Guides</h2>
+                <p className="text-xs text-slate-500 font-medium mb-4">Similar {categoryLabel.toLowerCase()} content for other CAD tools</p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {crossToolGuides.map(g => {
+                    const gToolName = g.softwareSlug.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                    return (
+                      <Link
+                        key={g.slug}
+                        href={`/guides/articles/${g.slug}`}
+                        className="block p-4 bg-white border border-slate-100 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all group"
+                      >
+                        <div className="flex items-center gap-2 mb-2">
+                          <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">{gToolName}</p>
+                          <span className="text-[9px] text-slate-300">•</span>
+                          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{g.category}</p>
+                        </div>
+                        <p className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">{g.title}</p>
+                        <p className="text-[10px] text-slate-400 font-semibold mt-2">{g.readTime}</p>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -428,7 +459,7 @@ export default async function GuideArticlePage(
             {relatedGuides.length > 0 && (
               <Card className="rounded-[24px] md:rounded-[32px] p-6 sm:p-8 border border-slate-100 shadow-sm bg-white space-y-4">
                 <h3 className="text-[11px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                  <BookOpen className="w-4 h-4" /> Related Guides
+                  <BookOpen className="w-4 h-4" /> More {toolDisplayName} Guides
                 </h3>
                 <div className="space-y-3">
                   {relatedGuides.map(g => (
