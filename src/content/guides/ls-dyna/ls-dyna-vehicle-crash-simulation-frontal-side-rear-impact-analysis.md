@@ -15,7 +15,7 @@ sources:
 
 # LS-DYNA Vehicle Crash Simulation: Frontal, Side, and Rear Impact Analysis
 
-Vehicle crash simulation is the primary application of LS-DYNA. Automotive OEMs and suppliers use it to evaluate safety performance before physical testing, reducing development cost and time. This guide covers the complete crash simulation workflow.
+I've been involved in vehicle crash simulation for years, and LS-DYNA is the tool everyone in automotive uses — there's really no debate about that. What I want to share here isn't just the setup steps, but the things that actually make your crash results match physical tests. Because honestly, getting a crash simulation to correlate with a sled test is one of the hardest things I've done in my career.
 
 ## Full Vehicle Model
 
@@ -285,6 +285,6 @@ Vehicle crash simulation is the primary application of LS-DYNA. Automotive OEMs 
 - [ ] Energy balance is satisfied (KE = IE + CE + HG)
 - [ ] Hourglass energy < 5% of internal energy
 
-## Conclusion
+## Wrapping Up
 
-LS-DYNA vehicle crash simulation provides a comprehensive safety evaluation workflow: full vehicle modeling with detailed BIW, closures, suspension, and powertrain; spot weld and adhesive joint modeling with failure; barrier models for frontal, side, and rear impact; ATD dummy models with injury criteria (HIC, chest, neck, femur); restraint systems (seatbelt, airbag) with deployment timing; and detailed post-processing (acceleration pulse, intrusion, energy absorption). The key to accurate crash simulation is matching the physical test setup (mass, velocity, barrier), using validated material models with strain rate effects, correctly positioning dummies and restraints, and correlating with physical test data. By following this workflow, automotive engineers can evaluate safety performance early in the design cycle, reducing the number of physical tests and accelerating vehicle development.
+If you're getting into crash simulation, my biggest advice is to correlate with physical test data early and often. I've seen beautiful-looking simulations that were completely wrong because the spot weld failure force was off or the material strain rate parameters weren't calibrated. Get the vehicle mass right (within 2%), make sure your material cards include strain rate effects, and check your acceleration pulse against a physical test before you trust any injury numbers. Once your baseline correlates, you can confidently evaluate design changes — and that's where crash simulation saves months of development time.

@@ -15,7 +15,7 @@ sources:
 
 # COMSOL Heat Transfer: Conduction, Convection, Radiation, and Phase Change
 
-COMSOL's Heat Transfer Module provides comprehensive thermal simulation — conduction in solids, convection with fluid coupling, radiation between surfaces, and phase change (melting/solidification). This guide covers the complete heat transfer workflow.
+Heat transfer in COMSOL is something I use on almost every project — whether it's electronics cooling, a heat exchanger, or a thermal stress analysis. What I like about COMSOL's heat transfer module is how straightforward it is to couple with fluid flow or electromagnetics. No external coupling, no data passing between solvers. Let me walk you through how I set up conduction, convection, radiation, and phase change problems.
 
 ## Heat Transfer Modes
 
@@ -310,6 +310,6 @@ COMSOL's Heat Transfer Module provides comprehensive thermal simulation — cond
 - [ ] Steady-state results are independent of initial conditions
 - [ ] Temperature results are physically reasonable
 
-## Conclusion
+## Wrapping Up
 
-COMSOL's Heat Transfer Module provides comprehensive thermal simulation: conduction in solids with temperature-dependent properties, convection coupled with CFD, surface-to-surface radiation with automatic view factors, phase change with enthalpy method, and thermal contact resistance at interfaces. The key advantage is native multiphysics coupling — heat transfer couples seamlessly with fluid flow, electromagnetics, and structural mechanics. The key to reliable thermal analysis is accurate material properties (especially anisotropic PCB conductivity), realistic boundary conditions (heat transfer coefficients and emissivity), proper thermal contact modeling, and mesh refinement near heat sources. By following this workflow, engineers can predict temperatures, design cooling solutions, and evaluate thermal management for electronics, heat exchangers, and phase change applications.
+If I had to point out the most common mistake in thermal analysis, it's forgetting radiation. People remember conduction and convection but skip radiation because it seems negligible. At temperatures above 300°C, radiation can account for more than half the heat transfer — ignoring it will give you temperatures that are way too high. The other thing: thermal contact resistance. I've seen so many analyses where the temperature jump at an interface was completely ignored, and the results were off by 20-30°C. Add a thin layer or specify contact conductance at every interface where two solids meet.

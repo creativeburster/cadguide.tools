@@ -15,7 +15,7 @@ sources:
 
 # ANSYS Fluent CFD: Meshing, Boundary Conditions, and Flow Analysis
 
-ANSYS Fluent is the industry-leading CFD solver for fluid flow, heat transfer, and chemical reactions. This guide covers the complete CFD workflow from meshing to post-processing.
+I've been running CFD simulations in Fluent for over a decade — from simple pipe flows to full vehicle aerodynamics — and I can honestly say the workflow becomes repeatable once you nail down a few fundamentals. Let me walk you through how I approach a Fluent project, from extracting the fluid domain to checking convergence and pulling force reports.
 
 ## CFD Workflow Overview
 
@@ -327,6 +327,6 @@ y₁ = 30 × μ / (ρ × uτ)
 **Symptom**: y+ too high or too low for turbulence model.
 **Fix**: Adjust first inflation layer height. For SST k-ω: target y+ < 1. For k-ε with wall functions: target 30 < y+ < 300.
 
-## Conclusion
+## Wrapping Up
 
-ANSYS Fluent provides a comprehensive CFD workflow: fluid domain extraction, CFD-specific meshing with inflation layers, comprehensive boundary conditions, robust pressure-based and density-based solvers, and detailed post-processing with contours, vectors, streamlines, and force reports. The key to reliable CFD results is proper meshing (especially inflation layers for wall-bounded flows), appropriate turbulence model selection (SST k-ω for wall flows, k-ε for general purpose), and careful convergence monitoring (residuals plus monitor points). By following this workflow, engineers can simulate fluid flow, heat transfer, and aerodynamics with confidence, reducing the need for physical wind tunnel testing.
+If there's one thing I've learned from running CFD in Fluent, it's that your mesh makes or breaks the simulation. A bad mesh with great solver settings still gives you garbage. Spend the time on inflation layers, get your y+ in the right range for your turbulence model, and always check mass flow balance before you trust any results. Once those basics are solid, Fluent handles the rest — and you can get reliable flow, heat transfer, and aerodynamic data without needing a wind tunnel.

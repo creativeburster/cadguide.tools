@@ -15,7 +15,7 @@ sources:
 
 # COMSOL Optimization and Parametric Sweep: Design Studies and Sensitivity Analysis
 
-COMSOL provides parametric studies, optimization, and topology optimization for design exploration. This guide covers parametric sweeps, the Optimization Module, topology optimization, and sensitivity analysis.
+Optimization in COMSOL is something I've grown to appreciate more over time. At first, I only used parametric sweeps — just running the same model with different parameter values and picking the best result. But once I started using the Optimization Module with SNOPT and MMA, I realized how much faster it is to let the solver find the optimum for me. Let me walk you through how I approach design studies, optimization, and topology optimization in COMSOL.
 
 ## Parametric Sweep
 
@@ -275,6 +275,6 @@ COMSOL provides parametric studies, optimization, and topology optimization for 
 - [ ] Sensitivity analysis identifies critical parameters
 - [ ] Results are physically reasonable
 
-## Conclusion
+## Wrapping Up
 
-COMSOL provides comprehensive optimization and design exploration: parametric sweeps for systematic variation, the Optimization Module with gradient-free and gradient-based methods, topology optimization for generative structural and thermal design, shape optimization for boundary refinement, and sensitivity analysis for identifying critical parameters. The key to successful optimization is defining the right objective and constraints, selecting the appropriate optimization method (MMA for topology, SNOPT for general, Nelder-Mead for non-smooth), and always verifying the optimized design with a full analysis. By following this workflow, engineers can explore design spaces, reduce weight, improve performance, and identify the most influential parameters for any multiphysics problem.
+My advice for optimization in COMSOL: start with parametric sweeps before jumping into formal optimization. They're simpler, they give you a feel for how the design responds, and you can use them to find a good starting point for the optimizer. When you do use the Optimization Module, pick the right method — SNOPT for smooth problems with continuous variables, Nelder-Mead for non-smooth or noisy objectives, and MMA for topology optimization. And always run a full verification analysis on the optimized design. I've caught cases where the optimizer found a solution that technically met the constraints but had stress concentrations in places the optimization didn't check.

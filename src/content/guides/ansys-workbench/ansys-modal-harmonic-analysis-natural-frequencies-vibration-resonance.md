@@ -15,7 +15,7 @@ sources:
 
 # ANSYS Modal and Harmonic Analysis: Natural Frequencies, Vibration, and Resonance
 
-Modal analysis determines natural frequencies and mode shapes — the fundamental vibration characteristics of any structure. Harmonic analysis predicts response to sinusoidal excitation. Together, they are essential for rotating equipment, bridges, buildings, and any structure subject to dynamic loads.
+I'll be honest — vibration analysis wasn't something I paid much attention to until a bracket I designed started cracking at a frequency I hadn't even considered. That taught me real fast why modal and harmonic analysis matter. Let me walk you through how I approach vibration simulation in ANSYS, from pulling out natural frequencies to checking whether your structure will shake itself apart at resonance.
 
 ## Modal Analysis
 
@@ -291,6 +291,6 @@ If natural frequency is too close to excitation:
 **Symptom**: 3σ stress > yield strength.
 **Fix**: Increase stiffness or strength. Add damping. Redesign to reduce stress concentration at high-stress modes.
 
-## Conclusion
+## Wrapping Up
 
-ANSYS modal and harmonic analysis provides comprehensive vibration analysis: modal analysis for natural frequencies and mode shapes, harmonic response for sinusoidal excitation, and PSD analysis for random vibration. The key to vibration analysis is extracting enough modes (90%+ effective mass), applying realistic damping, and ensuring no natural frequency is within ±20% of any excitation frequency. For rotating equipment, the harmonic analysis directly predicts the response to unbalance forces, while PSD analysis handles random environments like transportation and earthquakes. By following this workflow, engineers can identify and avoid resonance, predict vibration amplitudes, and design structures that perform reliably under dynamic loads.
+If I could give one piece of advice about vibration analysis, it's this: don't skip the effective mass check. I've seen too many analyses where someone extracted six modes, called it done, and missed a critical mode that held 40% of the mass in a direction that mattered. Extract enough modes to get 90%+ effective mass, use realistic damping (not the default), and make sure no natural frequency sits within 20% of your excitation frequency. Do that, and you'll catch resonance issues before they become field failures.

@@ -15,7 +15,7 @@ sources:
 
 # SimScale HVAC and Building Simulation: Airflow, Thermal Comfort, and Smoke Propagation
 
-SimScale provides cloud-based simulation for HVAC and building design — indoor airflow, thermal comfort, natural ventilation, smoke propagation, and outdoor pedestrian wind comfort. This guide covers the complete building simulation workflow.
+HVAC and building simulation is an area where I think SimScale really shines. I've used it for everything from checking whether an office space has adequate ventilation to evaluating pedestrian wind comfort around a new high-rise. The cloud aspect is a big plus here because you often need to run multiple wind directions or design variants, and doing that in parallel on the cloud saves a lot of time. Let me walk you through the main use cases.
 
 ## Indoor Airflow Analysis
 
@@ -283,6 +283,6 @@ SimScale provides cloud-based simulation for HVAC and building design — indoor
 - [ ] Multiple wind directions are evaluated
 - [ ] Results match analytical estimates (where available)
 
-## Conclusion
+## Wrapping Up
 
-SimScale provides comprehensive HVAC and building simulation on the cloud: indoor airflow for ventilation design, thermal comfort (PMV/PPD) per ASHRAE 55, natural ventilation with wind and buoyancy, smoke propagation for fire safety (tenability and evacuation), and outdoor pedestrian wind comfort for urban design. The key advantage of cloud simulation is running multiple scenarios (wind directions, design variants) in parallel without local hardware. The key to reliable building simulation is accurate boundary conditions (supply air, heat sources, wind data), proper meshing (refined at vents and ground level), and comfort/tenability criteria evaluation (PMV, smoke height, wind speed). By following this workflow, HVAC engineers and architects can optimize building performance for comfort, safety, and energy efficiency.
+Building simulation is one of those areas where running multiple scenarios in parallel makes a huge difference. When I'm doing pedestrian wind comfort, I run 8 wind directions simultaneously — that would take days on a single workstation, but on SimScale it's done in a few hours. For smoke propagation, the transient nature means long run times, and not having my local machine tied up is a real benefit. The results aren't as detailed as a full FDS analysis, but for most practical HVAC and wind comfort questions, SimScale gives you what you need to make good design decisions.

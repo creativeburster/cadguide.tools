@@ -15,7 +15,7 @@ sources:
 
 # SimScale Cloud CFD: External Aerodynamics, Internal Flow, and Thermal Management
 
-SimScale is a cloud-native CAE platform — no local hardware or installation required. CFD simulations run on cloud HPC clusters, accessible through a web browser. This guide covers the complete cloud CFD workflow.
+I started using SimScale about three years ago when I didn't have access to a workstation and needed to run a CFD analysis on a heat sink. The fact that I could do it from my laptop in a coffee shop felt almost too good to be true. It's not a replacement for Fluent or CFX in every scenario, but for a lot of common CFD problems, it gets the job done. Let me walk you through how I use it.
 
 ## Cloud CFD Advantages
 
@@ -243,6 +243,6 @@ SimScale is a cloud-native CAE platform — no local hardware or installation re
 - [ ] Mesh independence verified (results don't change with refinement)
 - [ ] Results are physically reasonable
 
-## Conclusion
+## Wrapping Up
 
-SimScale provides a complete cloud-based CFD workflow — no local hardware, no software installation, accessible from any web browser. The platform handles external aerodynamics (drag and lift), internal flow (pipes, valves, ducts), and conjugate heat transfer (electronics cooling, heat exchangers) with industry-standard turbulence models (SST k-ω, k-ε). The key advantage is cloud HPC — running large simulations (10M+ cells) on up to 96 cores without investing in workstations. The key to reliable cloud CFD is the same as desktop CFD: proper meshing (especially y+ for turbulence models), correct boundary conditions, and convergence verification. By following this workflow, engineers can run CFD simulations from anywhere, share results instantly, and scale computing resources as needed.
+SimScale won't replace your desktop CFD setup for everything — if you need combustion models, LES, or multiphase VOF, you'll still want Fluent or CFX. But for external aerodynamics, internal flow, and conjugate heat transfer, it handles the job well. The thing I like most is that I can start a simulation, close my laptop, and check results on my phone when it's done. No workstation humming in the background, no license server to manage. Just upload, mesh, run, and share.

@@ -15,7 +15,7 @@ sources:
 
 # LS-DYNA vs Abaqus/Explicit: Explicit Dynamics Solver Comparison for Crash and Impact
 
-LS-DYNA and Abaqus/Explicit are the two leading explicit dynamics solvers. Both solve high-speed, nonlinear problems — but they differ in history, architecture, and industry adoption. This comparison helps engineers choose.
+I've used both LS-DYNA and Abaqus/Explicit enough to have real opinions about them. LS-DYNA was my first explicit solver, so I'm probably a bit biased, but I've come to appreciate Abaqus/Explicit for different reasons. If you're trying to decide which one to use, let me break down the differences I've actually experienced.
 
 ## History and Market
 
@@ -189,6 +189,6 @@ Some companies use both:
 
 The keyword/input files are not compatible. Models must be rebuilt in the other tool.
 
-## Conclusion
+## My Take
 
-LS-DYNA and Abaqus/Explicit are both excellent explicit dynamics solvers with different strengths. LS-DYNA is the automotive crash industry standard — with more material models (250+), specialized contact types, free dummy models, and better adaptive meshing for forming. Abaqus/Explicit offers smoother implicit-explicit transition, general contact (auto-detect), better GUI workflow (CAE), and larger VUMAT community. The choice depends on your industry (automotive → LS-DYNA, aerospace → Abaqus), need for specialized materials (LS-DYNA has more), and workflow preference (keyword file vs GUI). Both are capable of the most demanding explicit dynamics problems — crash, impact, blast, and forming.
+Here's how I decide: if I'm doing automotive crash or metal forming, LS-DYNA is the obvious choice — it's what the industry uses, the dummy models are free, and the material library is unmatched. If I'm already using Abaqus/Standard for a project and need to run an explicit drop test or impact analysis, Abaqus/Explicit makes more sense because I can import the model directly. Switching between the two isn't practical — the file formats are completely different. So pick the one that fits your industry and stick with it.

@@ -15,7 +15,7 @@ sources:
 
 # COMSOL CFD Analysis: Laminar, Turbulent, and Multiphase Flow Simulation
 
-COMSOL's CFD Module provides fluid flow simulation for laminar, turbulent, and multiphase flows. Unlike dedicated CFD tools, COMSOL CFD natively couples with structural, thermal, and chemical physics. This guide covers the complete CFD workflow.
+I'll be upfront — COMSOL isn't my first choice for pure CFD work. If I'm doing a complex external aerodynamics simulation, I'll reach for Fluent. But when I need CFD coupled with other physics — like conjugate heat transfer or fluid-structure interaction — COMSOL is hard to beat. The fact that everything shares one mesh and one solver makes coupled problems so much easier. Here's how I approach CFD in COMSOL.
 
 ## Flow Physics Selection
 
@@ -278,6 +278,6 @@ COMSOL's CFD Module provides fluid flow simulation for laminar, turbulent, and m
 - [ ] Mesh independence verified (results don't change with refinement)
 - [ ] Results are physically reasonable (compare to analytical or experimental)
 
-## Conclusion
+## Wrapping Up
 
-COMSOL's CFD Module provides comprehensive fluid flow simulation: laminar and turbulent flow with multiple turbulence models, conjugate heat transfer for thermal-fluid coupling, multiphase flow for interface tracking, and porous media flow. The key advantage over dedicated CFD tools is native multiphysics coupling — fluid flow couples seamlessly with structural, thermal, and chemical physics. The key to reliable CFD results is proper flow regime identification (laminar vs. turbulent), appropriate turbulence model selection (SST for wall flows, k-ε for general purpose), correct near-wall meshing (y+ target), and careful convergence monitoring. By following this workflow, engineers can simulate fluid flow in applications from microfluidics to heat exchangers to aerodynamics.
+COMSOL's CFD capabilities are solid for most general flow problems, and where it really shines is when you need to couple flow with something else — heat transfer, structural mechanics, or electromagnetics. That said, for standalone CFD, make sure you pick the right turbulence model (SST k-ω for wall-bounded flows, k-ε for general internal flows) and get your y+ in the right range. I've seen too many people use k-ε with wall functions when their y+ was actually below 1 — that's the wrong setup and your results will be off. Check your y+ after every run.
