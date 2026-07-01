@@ -21,7 +21,7 @@ export async function GET() {
     // Validate date format (YYYY-MM-DD); fall back to fixed date if invalid
     const dateStr = /^\d{4}-\d{2}-\d{2}$/.test(g.date) ? g.date : '2025-06-15';
     return `  <url>
-    <loc>${BASE_URL}/guides/articles/${g.slug}</loc>
+    <loc>${BASE_URL}/guides/${g.slug}</loc>
     <lastmod>${dateStr}T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>

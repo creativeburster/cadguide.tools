@@ -38,7 +38,27 @@ const GUIDES_TO_TOOLBOX_SLUGS = new Set([
   'vectorworks-shortcuts-sheet',
 ]);
 
-export function proxy(request: NextRequest) {
+// Old guide URL pattern: {tool}-{category}-{number} (e.g. revit-standards-1)
+// These are legacy URLs from a previous routing scheme that no longer exist.
+// Redirect them to the guides listing page to preserve link equity.
+const OLD_GUIDE_PATTERN = /^\/guides\/[a-z0-9-]+-(troubleshooting|performance|migration|standards|procurement|deployment|manufacturing|printing|workflow|comparison)-\d+$/;
+
+// Category-only guide URLs (e.g. /guides/troubleshooting) are not real guide
+// slugs — they are category filter names. Redirect to /guides listing page.
+const GUIDE_CATEGORY_SLUGS = new Set([
+  'troubleshooting',
+  'performance',
+  'migration',
+  'standards',
+  'procurement',
+  'deployment',
+  'manufacturing',
+  'printing',
+  'workflow',
+  'comparison',
+]);
+
+export function middleware(request: NextRequest) {
   // 1. 拦截垃圾爬虫
   const userAgent = request.headers.get('user-agent') || '';
   const lowerUserAgent = userAgent.toLowerCase();
@@ -62,6 +82,21 @@ export function proxy(request: NextRequest) {
     const slug = pathname.slice('/guides/articles/'.length);
     url.pathname = `/guides/${slug}`;
     return NextResponse.redirect(url, 301);
+  }
+
+  // Legacy old-pattern guide URLs → /guides listing (301)
+  if (OLD_GUIDE_PATTERN.test(pathname)) {
+    url.pathname = '/guides';
+    return NextResponse.redirect(url, 301);
+  }
+
+  // Category-only guide URLs (e.g. /guides/troubleshooting) → /guides (301)
+  if (pathname.startsWith('/guides/')) {
+    const slug = pathname.slice('/guides/'.length);
+    if (GUIDE_CATEGORY_SLUGS.has(slug)) {
+      url.pathname = '/guides';
+      return NextResponse.redirect(url, 301);
+    }
   }
 
   // Legacy /guides cheatsheet pages → /toolbox canonicals (301)

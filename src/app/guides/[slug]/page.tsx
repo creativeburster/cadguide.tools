@@ -15,6 +15,7 @@ import { ToolLogo } from '@/components/tool-logo';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { clampTitle } from '@/lib/seo';
 
 const CONTENT_DIR = path.join(process.cwd(), 'src', 'content', 'guides');
 
@@ -62,7 +63,9 @@ function getGuideBySlug(slug: string): { frontmatter: GuideFrontmatter; contentH
   const { data, content } = matter(raw);
 
   const processed = remark().use(html).processSync(content);
-  const contentHtml = processed.toString();
+  const contentHtml = processed.toString()
+    .replace(/<h1>/g, '<h2>')
+    .replace(/<\/h1>/g, '</h2>');
 
   return { frontmatter: data as GuideFrontmatter, contentHtml, tool: found.tool };
 }
@@ -82,15 +85,15 @@ export async function generateMetadata(
 
   const { frontmatter } = guide;
   return {
-    title: frontmatter.title,
+    title: clampTitle(frontmatter.title),
     description: frontmatter.excerpt,
     keywords: [frontmatter.keyword, frontmatter.category, 'cad guide', 'technical guide', frontmatter.softwareSlug],
     alternates: {
-      canonical: `https://cadguide.tools/guides/articles/${slug}`,
+      canonical: `https://cadguide.tools/guides/${slug}`,
     },
     openGraph: {
       type: 'article',
-      url: `https://cadguide.tools/guides/articles/${slug}`,
+      url: `https://cadguide.tools/guides/${slug}`,
       title: frontmatter.title,
       description: frontmatter.excerpt,
       siteName: 'CADGuide.tools',
@@ -344,7 +347,7 @@ export default async function GuideArticlePage(
                   {relatedGuides.map(g => (
                     <Link
                       key={g.slug}
-                      href={`/guides/articles/${g.slug}`}
+                      href={`/guides/${g.slug}`}
                       className="block p-4 bg-white border border-slate-100 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all group"
                     >
                       <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">{g.category}</p>
@@ -367,7 +370,7 @@ export default async function GuideArticlePage(
                     return (
                       <Link
                         key={g.slug}
-                        href={`/guides/articles/${g.slug}`}
+                        href={`/guides/${g.slug}`}
                         className="block p-4 bg-white border border-slate-100 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all group"
                       >
                         <div className="flex items-center gap-2 mb-2">
@@ -467,7 +470,7 @@ export default async function GuideArticlePage(
                   {relatedGuides.map(g => (
                     <Link
                       key={g.slug}
-                      href={`/guides/articles/${g.slug}`}
+                      href={`/guides/${g.slug}`}
                       className="block p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 hover:text-blue-600 transition-all border border-slate-50 hover:border-blue-100 group"
                     >
                       <span className="text-[8px] font-mono font-black text-blue-600 uppercase tracking-widest block mb-1">

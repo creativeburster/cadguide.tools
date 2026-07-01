@@ -46,6 +46,19 @@ export function toolDescription(tool: Tool, category?: Category): string {
 // array) to add or remove slugs as more tools get indexed by Google.
 const PRESERVED_INDEXED_SLUGS: readonly string[] = preservedIndexedSlugs.slugs;
 
+const MAX_TITLE = 60;
+
+/** Truncate a title to ≤60 chars, breaking at word boundary when possible. */
+export function clampTitle(title: string): string {
+  if (title.length <= MAX_TITLE) return title;
+  const truncated = title.slice(0, MAX_TITLE - 3);
+  const lastSpace = truncated.lastIndexOf(" ");
+  if (lastSpace > MAX_TITLE * 0.6) {
+    return truncated.slice(0, lastSpace) + "...";
+  }
+  return truncated + "...";
+}
+
 /** Title for both the `<title>` tag and Open Graph. */
 export function toolTitle(tool: Tool, category?: Category): string {
   const categoryName = category?.name ?? "CAD";
@@ -54,14 +67,29 @@ export function toolTitle(tool: Tool, category?: Category): string {
 
   // If the tool is already indexed (in our whitelist), preserve its exact title pattern containing price to guarantee zero rank volatility
   if (PRESERVED_INDEXED_SLUGS.includes(tool.slug)) {
-    return `${tool.name} Review ${currentYear}: ${categoryName} Software (${price}) | ${SITE_NAME}`;
+    const full = `${tool.name} Review ${currentYear}: ${categoryName} Software (${price}) | ${SITE_NAME}`;
+    if (full.length <= MAX_TITLE) return full;
+    // Progressively shorten: drop site name, then price, then category
+    const noSite = `${tool.name} Review ${currentYear}: ${categoryName} Software (${price})`;
+    if (noSite.length <= MAX_TITLE) return noSite;
+    const noPrice = `${tool.name} Review ${currentYear}: ${categoryName} | ${SITE_NAME}`;
+    if (noPrice.length <= MAX_TITLE) return noPrice;
+    const compact = `${tool.name} Review ${currentYear} | ${SITE_NAME}`;
+    if (compact.length <= MAX_TITLE) return compact;
+    return clampTitle(compact);
   }
 
   // For the unindexed, longer tail tools, we avoid repetitive templated price brackets 
   // (which Google's quality classifier flags as auto-generated thin content).
   // Instead, we use a distinct, highly compact specs-oriented title layout (conforming to Google's 50-60 character limit)
   // to establish high-quality authority and boost rapid indexing.
-  return `${tool.name} Review ${currentYear}: ${categoryName} Tech Specs | ${SITE_NAME}`;
+  const full = `${tool.name} Review ${currentYear}: ${categoryName} Tech Specs | ${SITE_NAME}`;
+  if (full.length <= MAX_TITLE) return full;
+  const noSite = `${tool.name} Review ${currentYear}: ${categoryName} Tech Specs`;
+  if (noSite.length <= MAX_TITLE) return noSite;
+  const compact = `${tool.name} Review ${currentYear} | ${SITE_NAME}`;
+  if (compact.length <= MAX_TITLE) return compact;
+  return clampTitle(compact);
 }
 
 /** Canonical URL for the tool detail page. */

@@ -14,5 +14,10 @@ export default function GoLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <h1 className="sr-only">External Redirect — CADGuide.tools</h1>
+      {children}
+    </>
+  );
 }

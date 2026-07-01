@@ -1271,7 +1271,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                     {relatedGuides.map((g) => (
                       <Link
                         key={g.slug}
-                        href={`/guides/articles/${g.slug}`}
+                        href={`/guides/${g.slug}`}
                         className="block p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 transition-all border border-slate-50 hover:border-blue-100 group"
                       >
                         <div className="flex items-center justify-between mb-1.5">

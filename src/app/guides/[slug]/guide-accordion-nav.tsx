@@ -69,7 +69,7 @@ export default function GuideAccordionNav({
                       {toolGuides.map(g => (
                         <li key={g.slug}>
                           <Link
-                            href={`/guides/articles/${g.slug}`}
+                            href={`/guides/${g.slug}`}
                             className={`block px-4 py-2.5 text-xs font-semibold transition-colors ${
                               g.slug === currentSlug
                                 ? 'text-blue-600 bg-blue-50/50'
@@ -125,7 +125,7 @@ export default function GuideAccordionNav({
                 .map(t => (
                   <Link
                     key={t.slug}
-                    href={`/guides/articles/${t.slug}`}
+                    href={`/guides/${t.slug}`}
                     className={`block py-1 text-xs font-semibold transition-colors ${
                       t.slug === currentSlug
                         ? 'text-blue-600'
@@ -145,7 +145,7 @@ export default function GuideAccordionNav({
               {nonAlphaGuides.map(t => (
                 <Link
                   key={t.slug}
-                  href={`/guides/articles/${t.slug}`}
+                  href={`/guides/${t.slug}`}
                   className={`block py-1 text-xs font-semibold transition-colors ${
                     t.slug === currentSlug ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'
                   }`}

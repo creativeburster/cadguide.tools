@@ -135,7 +135,7 @@ export default function Page() {
                 {topGuides.map((item) => (
                   <Link
                     key={item.slug}
-                    href={`/guides/articles/${item.slug}`}
+                    href={`/guides/${item.slug}`}
                     className="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors py-2 px-2.5 hover:bg-slate-50 rounded-xl group"
                   >
                     <span className="truncate">{item.title}</span>

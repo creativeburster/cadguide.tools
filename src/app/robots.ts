@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        disallow: ['/api/', '/cdn-cgi/'],
       },
       // 拦截常见的无用爬虫与消耗资源的分析工具
       {

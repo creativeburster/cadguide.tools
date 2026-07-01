@@ -29,6 +29,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
+      <h1 className="sr-only">Compare CAD &amp; BIM Software Side-by-Side</h1>
       <ComparePage />
 
       {/* Guides cross-link section */}
@@ -46,7 +47,7 @@ export default function Page() {
           {compareGuides.map(g => (
             <Link
               key={g.slug}
-              href={`/guides/articles/${g.slug}`}
+              href={`/guides/${g.slug}`}
               className="block p-5 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group"
             >
               <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">{g.category}</p>

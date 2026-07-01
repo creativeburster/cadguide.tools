@@ -72,7 +72,7 @@ export default function ToolboxPage() {
               .map(g => (
                 <Link
                   key={g.slug}
-                  href={`/guides/articles/${g.slug}`}
+                  href={`/guides/${g.slug}`}
                   className="block p-5 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group"
                 >
                   <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">{g.category}</p>
