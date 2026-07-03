@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { PLATFORM_PAGES, toolsForPlatform } from '@/lib/seo-content';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Software by Operating System & Platform',
@@ -11,8 +11,16 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function PlatformsIndexPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'Platforms', path: '/platforms' },
+  ]);
   return (
     <main className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <article className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <nav className="text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:underline">Home</Link>{' / '}

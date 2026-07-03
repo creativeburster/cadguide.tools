@@ -792,6 +792,16 @@ export const activeDeals: Deal[] = [
     link: 'https://solidedge.siemens.com/en/solutions/users/free-viewers/',
   },
 
+  {
+    id: 'd-bricscad-trial',
+    toolId: 't13', // BricsCAD
+    title: 'BricsCAD 30-Day Free Trial',
+    description: 'Download a fully functional 30-day free trial of BricsCAD — the all-in-one 2D, 3D, BIM, and mechanical CAD platform. No credit card required.',
+    discount: '30-Day Free Trial',
+    type: 'Evergreen',
+    link: 'https://bricscad.octave.com/bricscad-download',
+  },
+
   // BATCH 5: EDA & Mid-Tier Vendor Trials
   {
     id: 'd-altium-trial', toolId: 't10', title: 'Altium Designer Free Trial',
