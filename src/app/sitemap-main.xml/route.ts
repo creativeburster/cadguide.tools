@@ -8,6 +8,7 @@ import {
   formatPagePaths,
   personaPagePaths,
   sectorPagePaths,
+  freeSubPagePaths,
 } from '@/lib/seo-content';
 
 const BASE_URL = 'https://cadguide.tools';
@@ -16,7 +17,7 @@ export async function GET() {
   // Fixed content-version date — only update this when content is substantively changed.
   // Do NOT use new Date() here; a dynamic timestamp causes Googlebot to re-crawl unchanged
   // pages every time the sitemap is fetched, wasting crawl budget.
-  const now = '2026-05-17T00:00:00.000Z'; // Core hub pages launch date
+  const now = '2026-07-03T00:00:00.000Z'; // Content update: free subpages, new personas, beginners page
 
   // 1. Core Hub Landing Pages
   const pages = [
@@ -110,17 +111,35 @@ export async function GET() {
     <priority>0.85</priority>
   </url>`);
 
+  // 9. Free subpages
+  const freeSubUrls = freeSubPagePaths().map((p) => `  <url>
+    <loc>${BASE_URL}/free/${p.slug}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>`);
+
+  // 10. Beginners page
+  const beginnersUrl = `  <url>
+    <loc>${BASE_URL}/best/beginners</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>`;
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${mainHubUrls.join('\n')}
 ${bestOfUrls.join('\n')}
 ${featureUrls.join('\n')}
+${beginnersUrl}
 ${platformUrls.join('\n')}
 ${formatUrls.join('\n')}
 ${personaUrls.join('\n')}
 ${sectorUrls.join('\n')}
 ${pricingUrls.join('\n')}
+${freeSubUrls.join('\n')}
 </urlset>`;
 
   return new NextResponse(xml, {
