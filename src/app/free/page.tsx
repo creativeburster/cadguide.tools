@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { freeTools } from '@/lib/seo-content';
+import { freeTools, FREE_SUBPAGES, freeToolsByCategory } from '@/lib/seo-content';
 import type { Tool } from '@/lib/data';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
@@ -269,6 +269,31 @@ export default function FreeCadPage() {
               <Link href="/open-source" className="text-blue-600 hover:underline font-bold">open-source CAD page</Link>.
             </p>
           </header>
+
+          {/* Subcategory navigation */}
+          <section className="mb-10">
+            <h2 className="text-lg font-bold text-slate-900 mb-4">Browse by Category</h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {Object.values(FREE_SUBPAGES).map((sub) => {
+                const count = freeToolsByCategory(sub.categoryIds).length;
+                return (
+                  <li key={sub.slug}>
+                    <Link
+                      href={`/free/${sub.slug}`}
+                      className="block p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all text-center group"
+                    >
+                      <div className="text-2xl font-black text-emerald-600 group-hover:text-emerald-700 transition-colors">
+                        {count}
+                      </div>
+                      <div className="mt-1 text-xs font-bold text-slate-700 group-hover:text-emerald-700 transition-colors">
+                        {sub.displayName}
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
 
           {/* Interactive comparative limits table */}
           <FreeTierMatrix />

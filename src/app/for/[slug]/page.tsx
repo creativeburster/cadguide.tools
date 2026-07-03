@@ -33,8 +33,8 @@ interface PersonaStyle {
 }
 
 function getStyleForPersona(slug: string): PersonaStyle {
-  const tech = ['mechanical-engineers', 'civil-engineers', 'electrical-engineers', 'hvac-engineers', 'cnc-machinists'];
-  const creative = ['architects', 'jewelry-designers', 'animators', '3d-printing', 'landscape-architects', 'interior-designers', 'industrial-designers'];
+  const tech = ['mechanical-engineers', 'civil-engineers', 'electrical-engineers', 'hvac-engineers', 'cnc-machinists', 'structural-engineers', 'surveyors'];
+  const creative = ['architects', 'jewelry-designers', 'animators', '3d-printing', 'landscape-architects', 'interior-designers', 'industrial-designers', 'fashion-designers'];
   const business = ['startups', 'freelancers', 'construction-managers', 'cad-managers'];
   
   if (tech.includes(slug)) {

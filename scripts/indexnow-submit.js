@@ -93,6 +93,49 @@ function collectUrls() {
   const pricingSlugs = ['subscription', 'perpetual', 'network', 'educational', 'freemium'];
   pricingSlugs.forEach(s => urls.add(`/pricing/${s}`));
 
+  // 5b. Free subpages
+  const freeSlugs = ['2d-cad', '3d-cad', 'bim', 'pcb', 'cam', 'rendering'];
+  freeSlugs.forEach(s => urls.add(`/free/${s}`));
+
+  // 5c. Best category pages
+  const bestCategorySlugs = ['2d-cad', '3d-modeling', 'bim', 'viewer', 'cae-cam', 'eda', 'specialized', 'beginners'];
+  bestCategorySlugs.forEach(s => urls.add(`/best/${s}`));
+
+  // 5d. Best feature pages
+  const bestFeatureSlugs = ['ai-assisted', 'cloud-collaboration', 'generative-design', 'parametric-modeling', 'direct-modeling', 'sheet-metal', 'surface-modeling', 'subdivision-modeling', 'mesh-modeling', 'reverse-engineering', 'integrated-cam', 'simulation-fea', 'bim-integration', 'piping-routing', 'rendering', 'drafting-detailing'];
+  bestFeatureSlugs.forEach(s => urls.add(`/best/feature/${s}`));
+
+  // 5e. Persona pages
+  const personaSlugs = ['architects', 'mechanical-engineers', 'civil-engineers', 'students', 'jewelry-designers', 'electrical-engineers', 'animators', '3d-printing', 'startups', 'freelancers', 'landscape-architects', 'hvac-engineers', 'interior-designers', 'construction-managers', 'industrial-designers', 'cnc-machinists', 'cad-managers', 'structural-engineers', 'surveyors', 'fashion-designers'];
+  personaSlugs.forEach(s => urls.add(`/for/${s}`));
+
+  // 5f. Sector pages
+  const sectorSlugs = ['cae', 'cam', '3d-printing', 'automotive', 'hydraulic-geotechnical', 'aerospace', 'rail-transit', 'medical-devices', 'sheet-metal', 'steel-structures', 'quantity-takeoff', 'piping-pipeline', 'reverse-engineering', 'agricultural-machinery', 'woodworking-customization', 'petrochemical'];
+  sectorSlugs.forEach(s => urls.add(`/sectors/${s}`));
+
+  // 5g. Platform pages
+  const platformSlugs = ['mac', 'linux', 'web', 'ios', 'windows', 'android'];
+  platformSlugs.forEach(s => urls.add(`/platforms/${s}`));
+
+  // 5h. Alternatives pages — one per tool slug
+  if (fs.existsSync(dataDir)) {
+    const dataFiles2 = fs.readdirSync(dataDir).filter(f => f.endsWith('.ts'));
+    for (const file of dataFiles2) {
+      const content = fs.readFileSync(path.join(dataDir, file), 'utf-8');
+      const slugMatches = content.matchAll(/slug:\s*["']([^"']+)["']/g);
+      for (const match of slugMatches) {
+        const slug = match[1];
+        if (slug && !slug.includes('${')) {
+          urls.add(`/alternatives/${slug}`);
+        }
+      }
+    }
+  }
+
+  // 5i. File format pages
+  const formatSlugs = ['dwg', 'dxf', 'step', 'stl', 'iges', 'ifc', 'obj', 'pdf', 'fbx', 'jt', '3dm', '3mf', 'sldprt', 'ipt', 'rvt', 'dgn', 'gcode', 'x_t', 'sat', 'usd', 'dwf', 'exb', 'vda', 'cgr', 'catpart', 'nxprt', 'creoprt', 'slddrw', 'idw', 'f3d', 'skp'];
+  formatSlugs.forEach(s => urls.add(`/formats/${s}`));
+
   // 6. Toolbox pages — read from app directory
   const toolboxDir = path.join(process.cwd(), 'src', 'app', 'toolbox');
   if (fs.existsSync(toolboxDir)) {

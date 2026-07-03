@@ -1639,6 +1639,80 @@ export const PERSONA_PAGES: Record<string, PersonaPage> = {
       },
     ],
   },
+  "structural-engineers": {
+    slug: "structural-engineers",
+    displayName: "Structural Engineers",
+    shortNoun: "structural engineer",
+    filter: (t) =>
+      hasAny(t.industries, ["Structural Engineering", "Construction", "AEC", "Civil Engineering"]) &&
+      /structural|staad|etabs|sap2000|risa|robot|idea|connection|fea|analysis|concrete|steel|timber|seismic|wind|foundation|retaining/i.test(t.name + " " + t.short_desc + " " + (t.core_features || []).join(" ")) ||
+      ["sap2000", "etabs", "staad-pro", "autodesk-robot", "idea-statica", "risa-3d"].includes(t.slug),
+    intro:
+      "Structural engineers live in the space between architecture and physics — turning schematic designs into load-bearing reality. The tools in this category handle finite element analysis, steel and concrete connection design, seismic and wind load calculations, and BIM-integrated structural coordination. Whether you are running a high-rise through ETABS or detailing steel connections in IDEA StatiCa, below are the platforms that structural engineers rely on daily.",
+    faqs: [
+      {
+        q: "What is the best structural analysis software for buildings?",
+        a: "CSI ETABS is the industry standard for building structural analysis, particularly for high-rise and seismic design. For general-purpose analysis (bridges, towers, industrial), CSI SAP2000 and Bentley STAAD.Pro are the leading choices. RISA-3D is popular in US consulting offices for light commercial and residential.",
+      },
+      {
+        q: "STAAD.Pro vs ETABS — which should I choose?",
+        a: "ETABS is purpose-built for building analysis with strong seismic and wind load capabilities. STAAD.Pro is more general-purpose and excels in industrial structures, offshore, and infrastructure projects. Many structural firms maintain licenses for both.",
+      },
+      {
+        q: "How does BIM integration work for structural engineers?",
+        a: "Autodesk Robot Structural Analysis links directly with Revit for BIM-driven structural workflows — model changes in Revit propagate to Robot for analysis. CSI ETABS and SAP2000 also import IFC models from Revit and ArchiCAD. IDEA StatiCa connects to both Revit and ETABS for steel connection detailing.",
+      },
+    ],
+  },
+  "surveyors": {
+    slug: "surveyors",
+    displayName: "Land Surveyors",
+    shortNoun: "land surveyor",
+    filter: (t) =>
+      hasAny(t.industries, ["Surveying", "Land Development", "Mapping"]) ||
+      /survey|gnss|total.station|field.to.finish|data.collector|cadastral|topograph/i.test(t.name + " " + t.short_desc + " " + (t.core_features || []).join(" ")) ||
+      ["carlson-survey", "microsurvey"].includes(t.slug),
+    intro:
+      "Land surveyors need CAD tools that speak the language of field-to-finish workflows — importing total station and GNSS data, processing field collector files, generating cadastral plans, and producing topographic surface models. Unlike general civil engineering, surveying CAD prioritizes coordinate geometry (COGO), legal description generation, and compatibility with data collectors like Carlson SurvCE. Below are the tools that land surveyors depend on for production work.",
+    faqs: [
+      {
+        q: "What is the best CAD software for land surveyors?",
+        a: "Carlson Survey is the dominant choice for US land surveyors, running on AutoCAD or bundled IntelliCAD with strong total-station and GNSS integration. For civil engineering firms that also do surveying, Autodesk Civil 3D with its survey tools is a common alternative.",
+      },
+      {
+        q: "Can I use AutoCAD for surveying?",
+        a: "AutoCAD alone lacks survey-specific COGO and field-to-finish tools. Most surveyors add Carlson Survey or MicroSurvey as a companion. Civil 3D includes basic survey functionality but is heavier and more expensive than dedicated surveying CAD.",
+      },
+      {
+        q: "Do surveyors need drone or point cloud processing?",
+        a: "Increasingly yes. Drone photogrammetry and LiDAR scans are replacing traditional topographic surveys. Tools like Carlson Survey and Civil 3D both import point clouds, but dedicated processing software (Bentley ContextCapture, Agisoft Metashape) is often used upstream to generate the surface models.",
+      },
+    ],
+  },
+  "fashion-designers": {
+    slug: "fashion-designers",
+    displayName: "Fashion & Apparel Designers",
+    shortNoun: "fashion designer",
+    filter: (t) =>
+      hasAny(t.industries, ["Fashion", "Apparel", "Textile", "Luxury", "Footwear"]) ||
+      /garment|pattern|apparel|fashion|textile|fabric|virtual.sampl|clo3d|browzwear|optitex|accumark|modaris|shoemaster/i.test(t.name + " " + t.short_desc + " " + (t.core_features || []).join(" ")),
+    intro:
+      "Fashion and apparel designers have their own specialized CAD ecosystem — 2D pattern making, grading, marker making, and 3D virtual garment simulation. Tools like CLO 3D and Browzwear VStitcher let brands replace physical samples with photoreal digital prototypes, while Gerber AccuMark and Lectra Modaris remain the backbone of production pattern making in global apparel factories. Below are the CAD platforms powering the fashion industry.",
+    faqs: [
+      {
+        q: "What is the best 3D fashion design software?",
+        a: "CLO 3D is the leading 3D garment design tool for fashion brands and indie designers — intuitive draping, fabric simulation, and virtual fitting. Browzwear VStitcher is the enterprise alternative, stronger in technical development and integration with PLM systems. Both replace physical sampling with digital prototypes.",
+      },
+      {
+        q: "CLO 3D vs Browzwear — which should I choose?",
+        a: "CLO 3D for design-led teams and smaller brands — it has a gentler learning curve and better visualization. Browzwear VStitcher for large apparel manufacturers — it has deeper technical pattern tools, PLM integration, and is built for enterprise scale. Many brands use both: CLO for concept, Browzwear for production.",
+      },
+      {
+        q: "What is the industry standard for apparel pattern making?",
+        a: "Gerber AccuMark (now Lectra) and Lectra Modaris are the two dominant 2D pattern making and grading systems in global apparel manufacturing. Virtually every major apparel factory runs one or both. Optitex is a strong alternative with integrated 3D simulation.",
+      },
+    ],
+  },
 };
 
 export function personaPagePaths(): { slug: string }[] {
@@ -2081,6 +2155,117 @@ export function openSourceTools(): Tool[] {
   return tools
     .filter((t) => t.pricing_type === "Open Source")
     .sort((a, b) => b.score - a.score);
+}
+
+export interface FreeSubPage {
+  slug: string;
+  displayName: string;
+  categoryIds: string[];
+  title: string;
+  description: string;
+  intro: string;
+  faqs: { q: string; a: string }[];
+}
+
+export const FREE_SUBPAGES: Record<string, FreeSubPage> = {
+  "2d-cad": {
+    slug: "2d-cad",
+    displayName: "2D CAD",
+    categoryIds: ["c1"],
+    title: "Best Free 2D CAD Software in 2026",
+    description: "Free and open-source 2D drafting tools — LibreCAD, QCAD, NanoCAD, and more. No trials, no watermarks, no expiry.",
+    intro: "Free 2D CAD has come a long way from the days of buggy DXF importers and missing dimension styles. In 2026, tools like LibreCAD and QCAD handle production drafting with clean DWG/DXF compatibility, proper layer management, and print-ready sheet layouts. Below are every free and freemium 2D CAD tool in our catalog, ranked by expert score.",
+    faqs: [
+      { q: "Is LibreCAD really free for commercial use?", a: "Yes. LibreCAD is GPL-licensed and has zero commercial restrictions. You can use it for paid drafting work with no license fees." },
+      { q: "Can free 2D CAD open and edit DWG files?", a: "Most can. LibreCAD uses DXF natively but imports DWG via the libdxfrw library. NanoCAD Free and DWG FastView both handle DWG directly. Be aware that complex AutoCAD entities (dynamic blocks, annotative objects) may not survive the round-trip perfectly." },
+      { q: "What is the best free alternative to AutoCAD for 2D drafting?", a: "For pure 2D drafting, NanoCAD Free (Windows) and LibreCAD (cross-platform) are the strongest options. QCAD Community Edition is also solid for simpler drawings." },
+    ],
+  },
+  "3d-cad": {
+    slug: "3d-cad",
+    displayName: "3D CAD",
+    categoryIds: ["c2"],
+    title: "Best Free 3D CAD Software in 2026",
+    description: "Free and open-source 3D modeling tools — FreeCAD, Blender, OpenSCAD, SolveSpace, and more. Parametric, mesh, and script-based options.",
+    intro: "Free 3D CAD in 2026 is genuinely production-capable. FreeCAD delivers parametric solid modeling with a growing assembly workbench. Blender handles organic mesh modeling, sculpting, and rendering. OpenSCAD lets you build geometry from code. Below are every free and freemium 3D modeling tool in our catalog, sorted by expert score.",
+    faqs: [
+      { q: "Is FreeCAD good enough for professional mechanical design?", a: "FreeCAD has matured significantly and is now used in professional mechanical design, especially for small studios and startups that cannot justify SolidWorks or Fusion 360 subscriptions. The Part Design workbench is stable for parametric modeling, though the assembly workbench is still evolving." },
+      { q: "Blender vs FreeCAD for 3D modeling?", a: "They serve different purposes. FreeCAD is a parametric solid modeler (good for engineering, dimensions, constraints). Blender is a polygon mesh modeler (good for organic shapes, animation, rendering). Many users run both." },
+      { q: "Can I use free 3D CAD for commercial product design?", a: "FreeCAD, Blender, and OpenSCAD are all GPL or open-source licensed with no commercial-use restrictions. Fusion 360 Personal and Onshape Free are freemium but prohibit commercial use in their terms." },
+    ],
+  },
+  bim: {
+    slug: "bim",
+    displayName: "BIM",
+    categoryIds: ["c3"],
+    title: "Best Free BIM Software in 2026",
+    description: "Free and open-source Building Information Modeling tools — BlenderBIM, FreeCAD BIM, and freemium BIM options for architects.",
+    intro: "Free BIM is the hardest category to fill in 2026. Native BIM authoring is still dominated by commercial tools (Revit, ArchiCAD, Vectorworks). However, BlenderBIM (IFC-native BIM inside Blender) and FreeCAD's BIM workbench are closing the gap rapidly, and several vendors offer free educational or community tiers. Below are all free and freemium BIM-capable tools in our catalog.",
+    faqs: [
+      { q: "Is BlenderBIM production-ready?", a: "BlenderBIM is the most mature open-source BIM authoring tool, with full IFC4 support and an active development community. It is usable for real projects, though it lacks the documentation automation and multi-discipline coordination features of Revit or ArchiCAD." },
+      { q: "Can I get Revit for free?", a: "Revit is available free for students and educators through the Autodesk Education plan (1-year renewable). There is no free commercial tier. For commercial work, consider BlenderBIM or FreeCAD BIM as open-source alternatives." },
+      { q: "What is the best free BIM software for small architecture firms?", a: "BlenderBIM for IFC-native modeling, FreeCAD BIM workbench for parametric architectural design, and SketchUp Free for concept massing. None of these match Revit's documentation output yet, but they cover modeling and coordination." },
+    ],
+  },
+  pcb: {
+    slug: "pcb",
+    displayName: "PCB / EDA",
+    categoryIds: ["c6"],
+    title: "Best Free PCB Design Software in 2026",
+    description: "Free and open-source PCB / EDA tools — KiCad, EasyEDA, LTspice, CircuitMaker, and more. From schematic to Gerber output at zero cost.",
+    intro: "Free PCB design software is arguably the most mature segment of free CAD. KiCad is a production-grade EDA suite used by professional hardware companies. EasyEDA offers one-click fabrication through JLCPCB. LTspice dominates analog simulation. Below are every free and freemium EDA tool in our catalog, ranked by expert score.",
+    faqs: [
+      { q: "Is KiCad really good enough for professional PCB design?", a: "Yes. KiCad is used by professional hardware teams at companies like Tesla and SparkFun. It handles multi-layer boards, differential pairs, length matching, and 3D board visualization. The main gap vs Altium is in advanced constraint management and enterprise collaboration features." },
+      { q: "KiCad vs EasyEDA — which should I choose?", a: "KiCad for professional desktop-based work with full offline control. EasyEDA for rapid prototyping with integrated PCB fabrication (JLCPCB). KiCad has better library management; EasyEDA has faster order-to-board workflow." },
+      { q: "Can I design a 4-layer PCB with free EDA software?", a: "Absolutely. KiCad supports up to 32 copper layers. EasyEDA supports 6 layers on their free tier. Both handle impedance-controlled routing and 3D board previews." },
+    ],
+  },
+  cam: {
+    slug: "cam",
+    displayName: "CAM / CNC",
+    categoryIds: ["c5"],
+    title: "Best Free CAM Software in 2026",
+    description: "Free and open-source CAM / CNC programming tools — FreeCAD Path, Blender CAM, and freemium CAM options for makers and hobbyists.",
+    intro: "Free CAM software has improved dramatically, though it still trails commercial packages like Mastercam and Fusion 360's CAM module in toolpath sophistication and post-processor coverage. FreeCAD's Path workbench and Blender CAM cover basic 2.5D and 3D routing. Below are all free and freemium CAM-capable tools in our catalog.",
+    faqs: [
+      { q: "Is free CAM software safe for production CNC machining?", a: "FreeCAD Path is suitable for simple 2.5D parts and hobbyist CNC work. For production machining with complex 3D surfacing, high-speed toolpaths, or 5-axis operations, commercial CAM (Fusion 360, Mastercam, NX CAM) is strongly recommended for both capability and safety." },
+      { q: "Can I use FreeCAD Path for 3D carving?", a: "Yes, FreeCAD Path supports 3D surface machining with ball-nose toolpaths. It is slower and less optimized than commercial alternatives, but functional for wood, foam, and soft materials." },
+      { q: "What is the best free CAM for a hobbyist CNC router?", a: "FreeCAD Path for 2.5D pocketing and profiling. For simple G-code editing and simulation, NCViewer (browser-based) is a handy companion tool." },
+    ],
+  },
+  rendering: {
+    slug: "rendering",
+    displayName: "Rendering & Visualization",
+    categoryIds: ["c7"],
+    title: "Best Free CAD Rendering Software in 2026",
+    description: "Free rendering and visualization tools for CAD — Blender Cycles, D5 Render Community, and freemium visualization options.",
+    intro: "Free rendering has been transformed by GPU ray tracing and denoising. Blender's Cycles engine delivers photorealistic results on consumer GPUs. D5 Render Community Edition offers real-time architectural visualization. Below are all free and freemium rendering and visualization tools in our catalog, ranked by expert score.",
+    faqs: [
+      { q: "Can Blender Cycles match V-Ray or KeyShot for CAD rendering?", a: "For static product renders and architectural visualization, Cycles can produce results indistinguishable from commercial renderers. The main gap is in material library convenience (V-Ray's material library, KeyShot's drag-and-drop materials) and render speed on complex scenes." },
+      { q: "Is D5 Render Community Edition really free?", a: "Yes, D5 Render Community is free with no time limit. It includes real-time ray tracing, PBR materials, and commercial use. The paid Pro tier adds higher resolution exports, asset library access, and advanced weather systems." },
+      { q: "What hardware do I need for free CAD rendering?", a: "Blender Cycles works on both CPU and GPU (CUDA, OptiX, HIP, Metal). For real-time rendering (D5 Render, Unreal Engine), an NVIDIA RTX 3060 or better with 8GB+ VRAM is the practical minimum." },
+    ],
+  },
+};
+
+export function freeToolsByCategory(categoryIds: string[]): Tool[] {
+  return tools
+    .filter(
+      (t) =>
+        (t.pricing_type === "Free" ||
+          t.pricing_type === "Freemium" ||
+          t.pricing_type === "Open Source") &&
+        categoryIds.includes(t.category_id),
+    )
+    .sort((a, b) => b.score - a.score);
+}
+
+export function freeSubPagePaths(): { slug: string }[] {
+  return Object.values(FREE_SUBPAGES).map((p) => ({ slug: p.slug }));
+}
+
+export function getFreeSubPage(slug: string): FreeSubPage | undefined {
+  return FREE_SUBPAGES[slug];
 }
 
 /** ---------- Article Search System ---------------------------------

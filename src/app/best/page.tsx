@@ -79,6 +79,30 @@ export default function BestIndexPage() {
             </p>
           </header>
 
+          {/* Beginners highlight */}
+          <section className="mb-12">
+            <Link
+              href="/best/beginners"
+              className="block rounded-3xl bg-gradient-to-br from-violet-500/10 via-fuchsia-500/5 to-sky-500/10 border border-violet-200/60 hover:border-violet-300 p-6 sm:p-8 transition-all hover:shadow-md"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-violet-50 text-violet-700 border border-violet-100 text-[10px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded">
+                  Beginner Friendly
+                </span>
+                <span className="text-xs text-slate-400 font-semibold">New for {YEAR}</span>
+              </div>
+              <h2 className="text-2xl font-extrabold text-slate-900">
+                Best CAD Software for Beginners
+              </h2>
+              <p className="mt-2 text-slate-600 leading-relaxed max-w-2xl">
+                Just starting out? These tools have the gentlest learning curves, free tiers, and the best tutorials — from Tinkercad (minutes to learn) to FreeCAD (weeks, but unlimited capability).
+              </p>
+              <span className="mt-4 inline-block text-sm font-bold text-violet-600">
+                See the beginner learning path →
+              </span>
+            </Link>
+          </section>
+
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
               Browse by Industry & Discipline
