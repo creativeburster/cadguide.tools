@@ -15,16 +15,6 @@ export interface Deal {
 export const activeDeals: Deal[] = [
   // 1. Promo Codes & Sales (限时特惠与优惠码)
   {
-    id: 'd-bricscad-summer',
-    toolId: 't13', // BricsCAD
-    title: 'BricsCAD June Summer Promotion 2026',
-    description: 'Enjoy a verified 15% discount on new individual licenses of BricsCAD Lite and BricsCAD Pro. Applies to both perpetual and subscription options.',
-    discount: '15% OFF Perpetual & Sub',
-    type: 'Promo',
-    expires: '2026-06-30',
-    link: 'https://www.bricsys.com/',
-  },
-  {
     id: 'd-progecad',
     toolId: 't57', // progeCAD Pro
     title: 'progeCAD Professional Discount',
