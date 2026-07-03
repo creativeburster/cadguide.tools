@@ -174,9 +174,9 @@ export default function GuidesListClient({
         </div>
 
         {/* Tool dropdown + Category dropdown + Guide search */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-10">
+        <div className="flex flex-col sm:flex-row gap-4 mb-10 sm:max-w-3xl sm:mx-auto">
           {/* Searchable tool dropdown */}
-          <div className="relative flex-1 sm:flex-none sm:w-64" ref={dropdownRef}>
+          <div className="relative flex-1" ref={dropdownRef}>
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Filter by Software</label>
             <button
               onClick={() => { setDropdownOpen(!dropdownOpen); setToolSearch(''); }}
@@ -228,7 +228,7 @@ export default function GuidesListClient({
             )}
           </div>
           {/* Guide search */}
-          <div className="relative flex-1 sm:flex-none sm:w-80">
+          <div className="relative flex-1">
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Search Guides</label>
             <Search className="absolute left-3 top-[34px] w-4 h-4 text-slate-400" />
             <input
@@ -240,7 +240,7 @@ export default function GuidesListClient({
             />
           </div>
           {/* Category dropdown */}
-          <div className="relative flex-1 sm:flex-none sm:w-56 sm:ml-auto" ref={categoryDropdownRef}>
+          <div className="relative flex-1" ref={categoryDropdownRef}>
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Filter by Category</label>
             <button
               onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
