@@ -493,7 +493,7 @@ function HomeBody() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             <Link href="/for" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">17 roles</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">20 roles</div>
               <div className="mt-1 text-lg font-black text-slate-900">By Role</div>
               <div className="mt-1 text-xs text-slate-600">Architects, engineers, students…</div>
             </Link>
@@ -534,13 +534,11 @@ function HomeBody() {
               <div className="mt-1 text-xs text-slate-600">16 technical spotlights + 7 discipline reviews</div>
             </Link>
             {/* Added Box 9: Guides Library */}
-            {process.env.NODE_ENV === 'development' && (
-              <Link href="/guides" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-                <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6,160+ Directives</div>
-                <div className="mt-1 text-lg font-black text-slate-900">Guides Library</div>
-                <div className="mt-1 text-xs text-slate-600">Troubleshooting playbooks, custom setup scripts…</div>
-              </Link>
-            )}
+            <Link href="/guides" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">6,160+ Directives</div>
+              <div className="mt-1 text-lg font-black text-slate-900">Guides Library</div>
+              <div className="mt-1 text-xs text-slate-600">Troubleshooting playbooks, custom setup scripts…</div>
+            </Link>
             {/* Added Box 10: Interactive Toolbox */}
             <Link href="/toolbox" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
               <div className="text-xs uppercase tracking-wider text-blue-600 font-black">25+ Tools</div>
