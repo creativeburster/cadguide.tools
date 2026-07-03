@@ -178,7 +178,7 @@
 | 平台 | URL | 状态 | 收录日期 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
 | **AlternativeTo** | `https://alternativeto.net` | `[x] 已提交` | 2026-06-15 | 审核中，约需 1-3 天 |
-| **Product Hunt** | `https://www.producthunt.com` | `[ ] 待提交` | - | 提交后当天生效 |
+| **Product Hunt** | `https://www.producthunt.com` | `[x] 已发布` | 2026-07-02 | 当天生效，DA 91 高流量 |
 | **Slant.co** | `https://www.slant.co` | `[ ] 待提交` | - | 直接关联到 AutoCAD 替代问题 |
 | **BetaList** | `https://betalist.com` | `[ ] 待提交` | - | 免费排队审核较慢 |
 
@@ -188,9 +188,9 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **GitHub Awesome List** | `https://github.com` | `[x] 已创建` | 2026-06-07 | 创建 awesome-cad-resources 仓库 |
 | **Dev.to** | `https://dev.to` | `[x] 已创建` | 2026-06-07 | 注册即发，已发布第一篇文章 |
-| **Hashnode** | `https://hashnode.com` | `[ ] 待发文` | - | 注册即发，Dofollow |
+| **Hashnode** | `https://hashnode.com` | `[x] 已发布` | 2026-07-01 | Dofollow，技术架构角度文章 |
 | **Medium** | `https://medium.com` | `[x] 已创建` | 2026-06-15 | 注册即发，已发布 AutoCAD 选型干货文章 |
-| **HackerNoon** | `https://hackernoon.com` | `[ ] 待投稿` | - | 24h 审核，Dofollow |
+| **HackerNoon** | `https://hackernoon.com` | `[x] 已投稿` | 2026-07-01 | 24h 审核，Dofollow，技术架构文章 |
 | **SaaSHub** | `https://www.saashub.com` | `[x] 已创建` | 2026-06-15 | 1-2 天审核，已完成验证 |
 | **ToolPilot.ai** | `https://www.toolpilot.ai` | `[ ] 待提交` | - | 当天通过 |
 | **SideProjectors** | `https://www.sideprojectors.com` | `[x] 已创建` | 2026-06-15 | 提交成功，已在广场中展示 |

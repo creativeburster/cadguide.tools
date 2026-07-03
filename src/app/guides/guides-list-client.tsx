@@ -23,6 +23,8 @@ const CATEGORY_LABELS: Record<string, string> = {
   procurement: 'Procurement',
   printing: 'Printing',
   migration: 'Migration',
+  workflow: 'Workflow',
+  comparison: 'Comparison',
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -34,6 +36,8 @@ const CATEGORY_COLORS: Record<string, string> = {
   procurement: 'bg-emerald-50 text-emerald-700 border-emerald-200',
   printing: 'bg-teal-50 text-teal-700 border-teal-200',
   migration: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  workflow: 'bg-orange-50 text-orange-700 border-orange-200',
+  comparison: 'bg-pink-50 text-pink-700 border-pink-200',
 };
 
 export default function GuidesListClient({
@@ -44,8 +48,10 @@ export default function GuidesListClient({
   availableTools: AvailableTool[];
 }) {
   const [selectedTool, setSelectedTool] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [toolSearch, setToolSearch] = useState('');
   const [isSitemapOpen, setIsSitemapOpen] = useState(false);
   const [bySoftwareOpen, setBySoftwareOpen] = useState(false);
@@ -54,15 +60,19 @@ export default function GuidesListClient({
   const [openLetterInAccordion, setOpenLetterInAccordion] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(12);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const categoryDropdownRef = useRef<HTMLDivElement>(null);
 
   const PAGE_SIZE = 12;
 
-  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [selectedTool, searchQuery]);
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [selectedTool, selectedCategory, searchQuery]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setDropdownOpen(false);
+      }
+      if (categoryDropdownRef.current && !categoryDropdownRef.current.contains(e.target as Node)) {
+        setCategoryDropdownOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -76,6 +86,7 @@ export default function GuidesListClient({
 
   const filtered = guides.filter(g => {
     if (selectedTool !== 'all' && g.softwareSlug !== selectedTool) return false;
+    if (selectedCategory !== 'all' && g.category !== selectedCategory) return false;
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       return g.title.toLowerCase().includes(q) || g.excerpt.toLowerCase().includes(q) || g.keyword.toLowerCase().includes(q);
@@ -94,6 +105,11 @@ export default function GuidesListClient({
 
   const toolMap = new Map(availableTools.map(t => [t.slug, t]));
   const selectedToolName = selectedTool === 'all' ? 'All Software' : (toolMap.get(selectedTool)?.name || selectedTool);
+  const selectedCategoryLabel = selectedCategory === 'all' ? 'All Categories' : (CATEGORY_LABELS[selectedCategory] || selectedCategory);
+
+  const availableCategories = Object.keys(CATEGORY_LABELS)
+    .filter(cat => guides.some(g => g.category === cat))
+    .sort((a, b) => (CATEGORY_LABELS[a] || a).localeCompare(CATEGORY_LABELS[b] || b));
   const filteredTools = availableTools.filter(t =>
     t.name.toLowerCase().includes(toolSearch.toLowerCase())
   );
@@ -159,10 +175,10 @@ export default function GuidesListClient({
           </div>
         </div>
 
-        {/* Tool dropdown + Guide search */}
+        {/* Tool dropdown + Category dropdown + Guide search */}
         <div className="flex flex-col sm:flex-row gap-4 mb-10">
           {/* Searchable tool dropdown */}
-          <div className="relative flex-1 sm:flex-none sm:w-80 sm:ml-[500px]" ref={dropdownRef}>
+          <div className="relative flex-1 sm:flex-none sm:w-64" ref={dropdownRef}>
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Filter by Software</label>
             <button
               onClick={() => { setDropdownOpen(!dropdownOpen); setToolSearch(''); }}
@@ -213,6 +229,44 @@ export default function GuidesListClient({
               </div>
             )}
           </div>
+          {/* Category dropdown */}
+          <div className="relative flex-1 sm:flex-none sm:w-56" ref={categoryDropdownRef}>
+            <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Filter by Category</label>
+            <button
+              onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
+              className="w-full flex items-center justify-between px-4 py-3 bg-white border-2 border-slate-200 text-sm font-bold rounded-xl hover:border-blue-300 transition-all shadow-sm"
+            >
+              <span className="text-slate-700">{selectedCategoryLabel}</span>
+              <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {categoryDropdownOpen && (
+              <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-white border-2 border-slate-200 rounded-xl shadow-lg overflow-hidden">
+                <div className="max-h-60 overflow-y-auto">
+                  <button
+                    onClick={() => { setSelectedCategory('all'); setCategoryDropdownOpen(false); }}
+                    className={`w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold hover:bg-slate-50 transition-colors ${
+                      selectedCategory === 'all' ? 'text-blue-600' : 'text-slate-700'
+                    }`}
+                  >
+                    All Categories
+                    {selectedCategory === 'all' && <Check className="w-3.5 h-3.5" />}
+                  </button>
+                  {availableCategories.map(cat => (
+                    <button
+                      key={cat}
+                      onClick={() => { setSelectedCategory(cat); setCategoryDropdownOpen(false); }}
+                      className={`w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold hover:bg-slate-50 transition-colors ${
+                        selectedCategory === cat ? 'text-blue-600' : 'text-slate-700'
+                      }`}
+                    >
+                      {CATEGORY_LABELS[cat] || cat}
+                      {selectedCategory === cat && <Check className="w-3.5 h-3.5" />}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
           {/* Guide search */}
           <div className="relative flex-1 sm:flex-none sm:w-80 sm:ml-auto">
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Search Guides</label>
@@ -231,6 +285,7 @@ export default function GuidesListClient({
         <div className="mb-6 text-xs font-semibold text-slate-400">
           Showing {visible.length} of {filtered.length} guide{filtered.length !== 1 ? 's' : ''}
           {selectedTool !== 'all' && ` for ${toolMap.get(selectedTool)?.name || selectedTool}`}
+          {selectedCategory !== 'all' && ` in ${CATEGORY_LABELS[selectedCategory] || selectedCategory}`}
         </div>
 
         {/* Tool sections */}
@@ -313,7 +368,7 @@ export default function GuidesListClient({
           <div className="text-center py-20">
             <BookOpen className="w-12 h-12 text-slate-300 mx-auto mb-4" />
             <p className="text-slate-400 font-semibold">
-              {searchQuery ? `No guides found for "${searchQuery}".` : 'No guides available for this software.'}
+              {searchQuery ? `No guides found for "${searchQuery}".` : 'No guides available for the selected filters.'}
             </p>
           </div>
         )}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>HackerNoon Article — Copy Me</title></head>
+<body style="font-family: Georgia, serif; max-width: 700px; margin: 40px auto; line-height: 1.7;">
+
+<h1>Building a Niche SaaS Directory with Next.js and Zero Infrastructure</h1>
+
+<p><em>Why we chose static site generation over a traditional CMS for 6,000+ pages of CAD software data</em></p>
+
+<p>The conventional wisdom for building a software directory is: get a CMS, spin up a database, deploy a web server. We did the opposite.</p>
+
+<p>CADGuide.tools is a comparison platform for CAD, BIM, and CAE software — 240+ tools, 104 technical guides, 67 head-to-head comparison pages, and dozens of free calculators. That's over 6,000 unique URLs. The entire site runs on static HTML served from Cloudflare's edge network. No server. No database. No monthly hosting bill.</p>
+
+<h2>The Decision</h2>
+
+<p>We had three options:</p>
+
+<ol>
+  <li><strong>WordPress + custom plugins</strong> — fast to start, but slow at scale and expensive to host</li>
+  <li><strong>Next.js + headless CMS</strong> — flexible, but adds a runtime dependency and API latency</li>
+  <li><strong>Next.js SSG + local data files</strong> — zero runtime cost, but requires rebuild for content changes</li>
+</ol>
+
+<p>We chose option 3 because our content is inherently read-only. A CAD software comparison page doesn't need real-time user-generated content. It needs to be fast, SEO-friendly, and cheap to operate.</p>
+
+<h2>The Architecture</h2>
+
+<p>All 240+ tool records are defined in TypeScript data files with full type safety. When we run <code>next build</code>, Next.js enumerates every URL via <code>generateStaticParams</code>, renders each page to static HTML, and outputs them to the <code>out/</code> directory. Cloudflare serves these files from 300+ edge locations worldwide.</p>
+
+<p>For the 104 technical guides, we use Markdown files with YAML frontmatter. At build time, <code>gray-matter</code> parses the frontmatter and <code>remark</code> converts the Markdown body to HTML. Each guide becomes a static page with full SEO metadata, JSON-LD structured data, and canonical URLs.</p>
+
+<h2>The Results</h2>
+
+<ul>
+  <li><strong>Build time</strong>: 90 seconds for 6,000+ pages</li>
+  <li><strong>Time to first byte</strong>: &lt;50ms globally</li>
+  <li><strong>Hosting cost</strong>: $0</li>
+  <li><strong>Lighthouse score</strong>: 100/100 on most pages</li>
+</ul>
+
+<p>The site is live at <a href="https://cadguide.tools">CADGuide.tools</a>. Try searching for a tool, comparing two CAD programs side-by-side, or reading a troubleshooting guide. Every page loads instantly because there's no server round-trip.</p>
+
+<h2>When Static Isn't Enough</h2>
+
+<p>We do have one dynamic endpoint: the <code>/go</code> redirect bridge for affiliate links. That's a single serverless function. Everything else is static.</p>
+
+<p>For search, we pre-build a JSON search index at build time and load it client-side. It's not as powerful as Algolia, but for 240 tools, a 50KB JSON file with client-side fuzzy search is more than enough — and it costs nothing.</p>
+
+<h2>Takeaway</h2>
+
+<p>If you're building a content-heavy site that's fundamentally read-only — a directory, a knowledge base, a comparison tool — seriously consider static site generation. The developer experience of Next.js SSG combined with Cloudflare's edge network gives you enterprise-grade performance at literal zero cost.</p>
+
+</body>
+</html>
