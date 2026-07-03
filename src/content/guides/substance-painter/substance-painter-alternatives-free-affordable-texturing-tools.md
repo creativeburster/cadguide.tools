@@ -1,7 +1,7 @@
 ---
 title: "Substance Painter Alternatives: Free and Affordable 3D Texturing Tools"
 excerpt: "Substance Painter's subscription adds up fast. I compare the best free and cheaper alternatives — ArmorPaint, 3D-Coat, Quixel Mixer, InstaMAT, Material Maker, and Blender's built-in tools — with honest assessments of where each one falls short."
-category: "comparison"
+category: "procurement"
 softwareSlug: "substance-painter"
 keyword: "substance painter alternative"
 slug: "substance-painter-alternatives-free-affordable-texturing-tools"

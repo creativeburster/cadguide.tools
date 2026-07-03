@@ -24,7 +24,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   printing: 'Printing',
   migration: 'Migration',
   workflow: 'Workflow',
-  comparison: 'Comparison',
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -37,7 +36,6 @@ const CATEGORY_COLORS: Record<string, string> = {
   printing: 'bg-teal-50 text-teal-700 border-teal-200',
   migration: 'bg-cyan-50 text-cyan-700 border-cyan-200',
   workflow: 'bg-orange-50 text-orange-700 border-orange-200',
-  comparison: 'bg-pink-50 text-pink-700 border-pink-200',
 };
 
 export default function GuidesListClient({
@@ -229,8 +227,20 @@ export default function GuidesListClient({
               </div>
             )}
           </div>
+          {/* Guide search */}
+          <div className="relative flex-1 sm:flex-none sm:w-80">
+            <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Search Guides</label>
+            <Search className="absolute left-3 top-[34px] w-4 h-4 text-slate-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              placeholder="Search by title, keyword, or topic..."
+              className="w-full pl-9 pr-4 py-3 bg-white border-2 border-slate-200 text-sm font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-300 text-slate-700 shadow-sm"
+            />
+          </div>
           {/* Category dropdown */}
-          <div className="relative flex-1 sm:flex-none sm:w-56" ref={categoryDropdownRef}>
+          <div className="relative flex-1 sm:flex-none sm:w-56 sm:ml-auto" ref={categoryDropdownRef}>
             <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Filter by Category</label>
             <button
               onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
@@ -266,18 +276,6 @@ export default function GuidesListClient({
                 </div>
               </div>
             )}
-          </div>
-          {/* Guide search */}
-          <div className="relative flex-1 sm:flex-none sm:w-80 sm:ml-auto">
-            <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Search Guides</label>
-            <Search className="absolute left-3 top-[34px] w-4 h-4 text-slate-400" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search by title, keyword, or topic..."
-              className="w-full pl-9 pr-4 py-3 bg-white border-2 border-slate-200 text-sm font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-300 text-slate-700 shadow-sm"
-            />
           </div>
         </div>
 

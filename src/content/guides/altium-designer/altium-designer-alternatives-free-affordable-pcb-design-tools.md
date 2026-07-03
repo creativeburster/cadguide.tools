@@ -1,7 +1,7 @@
 ---
 title: "Altium Designer Alternatives: Free and Affordable PCB Design Tools"
 excerpt: "Altium Designer costs $7,500/year per seat. I compare the best alternatives — KiCad, EasyEDA, DipTrace, Eagle in Fusion 360, and OrCAD — with honest assessments of which features you lose and which you don't."
-category: "comparison"
+category: "procurement"
 softwareSlug: "altium-designer"
 keyword: "altium designer alternatives"
 slug: "altium-designer-alternatives-free-affordable-pcb-design-tools"
