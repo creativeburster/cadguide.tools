@@ -6,7 +6,7 @@ import html from 'remark-html';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowLeft, Clock, Calendar, ExternalLink, ArrowRight, FileText, Scale, Settings, Sparkles, BookOpen, Tag } from 'lucide-react';
+import { ArrowLeft, Clock, ExternalLink, ArrowRight, FileText, Scale, Settings, Sparkles, BookOpen, Tag } from 'lucide-react';
 import { tools } from '@/lib/data';
 import { getAllMarkdownGuides } from '@/lib/guides-markdown';
 import { getBestDealForTool } from '@/lib/deals-data';
@@ -266,10 +266,6 @@ export default async function GuideArticlePage(
 
               <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 font-medium">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5" />
-                  {frontmatter.date}
-                </span>
-                <span className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" />
                   {frontmatter.readTime}
                 </span>
@@ -314,7 +310,6 @@ export default async function GuideArticlePage(
               </div>
               <div className="flex items-center gap-6 text-xs text-slate-500 font-bold">
                 <div>Read Time: <span className="text-slate-900 font-black">{frontmatter.readTime}</span></div>
-                <div>Published: <span className="text-slate-900 font-black">{frontmatter.date}</span></div>
                 <div>Status: <span className="text-emerald-600 font-black flex items-center gap-1">● Verified</span></div>
               </div>
             </div>
