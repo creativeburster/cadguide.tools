@@ -6,10 +6,12 @@ import GuidesListClient from './guides-list-client';
 
 export const dynamic = 'force-static';
 
+const _guideCount = getAllMarkdownGuides().length;
+
 export const metadata: Metadata = {
   ...pageMetadata({
     title: 'CAD Troubleshooting & Performance Guides',
-    description: '104 expert guides for AutoCAD, SolidWorks, Revit, Blender, Civil 3D, Tekla and 15+ CAD/BIM tools. Fix crashes, slow performance, file corruption and licensing errors.',
+    description: `${_guideCount} expert guides for AutoCAD, SolidWorks, Revit, Blender, Civil 3D, Tekla and 15+ CAD/BIM tools. Fix crashes, slow performance, file corruption and licensing errors.`,
     path: '/guides',
   }),
   robots: { index: true, follow: true },

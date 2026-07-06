@@ -5,7 +5,7 @@ import { getAllMarkdownGuides } from '@/lib/guides-markdown';
 const BASE_URL = 'https://cadguide.tools';
 
 export async function GET() {
-  const now = '2026-06-28T00:00:00.000Z';
+  const now = new Date().toISOString();
 
   // 1. Guides hub page
   const hubUrl = `  <url>
