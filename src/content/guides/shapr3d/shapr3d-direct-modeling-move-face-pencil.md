@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.shapr3d.com/learn/tutorials/direct-modeling"
   - "https://help.shapr3d.com/direct-modeling"
+  - "https://www.shapr3d.com/download/ipad"
 ---
 
 # Shapr3D Direct Modeling: Move, Rotate, and Scale Faces with Pencil Gestures

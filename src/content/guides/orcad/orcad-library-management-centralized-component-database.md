@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.orcad.com/support/library-management"
-  - "https://forum.orcad.com/forum/libraries"
+  - "https://www.ema-eda.com/ema-resources/blog/component-library-management-in-orcad-x-your-questions-answered/"
+  - "https://resources.pcb.cadence.com/blog/2025-pcb-design-component-library"
 ---
 
 # OrCAD Library Management: Building a Centralized Component Database

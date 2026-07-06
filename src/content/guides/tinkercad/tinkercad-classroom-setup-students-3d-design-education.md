@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.tinkercad.com/learn/educators"
-  - "https://www.tinkercad.com/blog/education"
+  - "https://stemeducationworks.com/webinar-blogs/3d-printing-simplified-getting-started-with-tinkercad-in-your-classroom/"
+  - "https://themadstemlab.com/tinkercad-101-an-introduction-for-young-designers/"
 ---
 
 # Tinkercad Classroom: Setting Up 3D Design Classes for Students

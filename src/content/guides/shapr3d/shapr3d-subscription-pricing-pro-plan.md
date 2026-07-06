@@ -10,7 +10,7 @@ readTime: "8 min read"
 date: "2026-07-06"
 sources:
   - "https://www.shapr3d.com/pricing"
-  - "https://www.shapr3d.com/compare-plans"
+  - "https://illustrarch.com/articles/design-softwares/93688-shapr3d-review-architects.html"
 ---
 
 # Shapr3D Subscription Pricing: Is the Pro Plan Worth It for Professional Use?

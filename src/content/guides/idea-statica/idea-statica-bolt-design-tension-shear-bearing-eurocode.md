@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ideastatica.com/support/bolts"
-  - "https://www.ideastatica.com/learn/bolt-tutorials"
+  - "https://www.ideastatica.com/support-center/check-of-bolts-and-preloaded-bolts-according-to-eurocode"
+  - "https://www.ideastatica.com/support-center/steel-connection-design-according-to-eurocode"
 ---
 
 # IDEA StatiCa Bolt Design: Tension, Shear, and Bearing Capacity per Eurocode 3

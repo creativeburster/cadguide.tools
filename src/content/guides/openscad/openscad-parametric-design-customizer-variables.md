@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://openscad.org/docs/manually/Customizer.html"
-  - "https://www.thingiverse.com/thing:customizer"
+  - "https://openscad.org/cheatsheet/index.html"
+  - "https://en.wikibooks.org/wiki/OpenSCAD_Tutorial/Chapter_1"
 ---
 
 # OpenSCAD Parametric Design: Creating Customizable Models with Customizer Variables

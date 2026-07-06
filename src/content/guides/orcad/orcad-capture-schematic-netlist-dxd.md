@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.orcad.com/products/capture"
-  - "https://forum.orcad.com/forum/capture"
+  - "https://resources.pcb.cadence.com/orcad-x-constraint-management-guide"
+  - "https://medium.com/@lisa_8645/orcad-pcb-design-tutorial-for-2026-00e73c411310"
 ---
 
 # OrCAD Capture Schematic Design: Netlist Generation and DxD Integration

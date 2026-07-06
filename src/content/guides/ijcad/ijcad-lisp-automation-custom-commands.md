@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ijcad.co.jp/en/support/lisp"
-  - "https://forums.intellicad.com/forum/lisp"
+  - "https://support.ijcad.jp/hc/ja/articles/205153323-LISP-%E3%81%AB%E3%82%88%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%AE%E6%A6%82%E8%A6%81"
+  - "https://wiki.gz-labs.net/index.php/AutoLISP"
 ---
 
 # IJCAD LISP Automation: Building Custom Commands for Japanese Drafting Workflows

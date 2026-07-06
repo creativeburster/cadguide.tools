@@ -10,7 +10,7 @@ readTime: "8 min read"
 date: "2026-07-06"
 sources:
   - "https://www.ironcad.com/products/ironcad-draft"
-  - "https://www.ironcad.com/pricing"
+  - "https://www.ironcad.com/products/ironcad"
 ---
 
 # IronCAD vs IronCAD DRAFT: Choosing Between 3D and 2D Workflows

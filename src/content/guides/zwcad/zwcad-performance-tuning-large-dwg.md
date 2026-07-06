@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.zwsoft.com/zwcad/performance-guide"
-  - "https://forums.zwsoft.com/forum/performance"
+  - "https://confluence.zwcad.com/pages/viewpage.action?pageId=134689623"
+  - "https://resources.imaginit.com/support-blog/tips-to-improve-performance-in-autocad-and-autocad-based-products"
 ---
 
 # ZWCAD Performance Tuning for Large DWG Files

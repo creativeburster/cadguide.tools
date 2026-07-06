@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.carlsonsw.com/products/carlson-survey"
-  - "https://www.autodesk.com/products/civil-3d"
+  - "https://carlsonps.com/blogs/blog/factors-to-consider-when-evaluating-carlson-survey-vs-civil-3d"
+  - "https://www.reddit.com/r/Surveying/comments/g1suq1/civil_3d_vs_carlson/"
 ---
 
 # Carlson Survey vs Civil 3D: Surveying Software Comparison for Land Surveyors

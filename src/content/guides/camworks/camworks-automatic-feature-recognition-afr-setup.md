@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.camworks.com/support/afr"
-  - "https://forums.camworks.com/forum/afr"
+  - "https://camworks.com/why-camworks/"
+  - "https://www.goengineer.com/videos/camworks-and-solidworks-cam-using-feature-recognition"
 ---
 
 # CAMWorks Automatic Feature Recognition: Setup and Tuning for Production

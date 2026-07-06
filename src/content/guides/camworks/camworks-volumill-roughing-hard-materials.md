@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.camworks.com/volumill"
-  - "https://www.camworks.com/support/volumill-tuning"
+  - "https://camworks.com/modules/camworks-volumill/"
+  - "https://www.volumill.com/camworks%C2%AE"
 ---
 
 # CAMWorks VoluMill: High-Efficiency Roughing for Hard Materials

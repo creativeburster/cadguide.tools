@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.tinkercad.com/compare"
-  - "https://www.sketchup.com/compare"
+  - "https://www.trustradius.com/compare-products/autodesk-tinkercad-vs-sketchup"
+  - "https://www.getapp.com/industries-software/a/sketchup/compare/tinkercad/"
 ---
 
 # Tinkercad vs SketchUp: Which Free 3D Modeling Tool Is Right for You?

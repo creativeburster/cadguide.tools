@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://risa.com/learn/dynamic-analysis"
-  - "https://risa.com/support/dynamic"
+  - "https://help.risa.com/risahelp/risa3d/Content/DynamicAnalysis/Dynamic-Analysis.htm"
+  - "https://blog.risa.com/post/how-to-run-a-basic-dynamic-eigensolution-in-risa-3d"
 ---
 
 # RISA-3D Dynamic Analysis: Modal, Response Spectrum, and Time History Setup

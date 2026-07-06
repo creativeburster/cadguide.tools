@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.camworks.com/tolerance-based-machining"
-  - "https://www.camworks.com/support/tbm"
+  - "https://camworks.com/tolerance-based-machining/"
+  - "https://camworks.com/blog/machining-accuracy-in-cam-automation-with-tbm/"
 ---
 
 # CAMWorks Tolerance-Based Machining: Linking GD&T to Toolpath Accuracy

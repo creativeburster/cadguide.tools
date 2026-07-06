@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.autodesk.com/products/robot-structural-analysis"
-  - "https://www.csiamerica.com/products/etabs"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/robot-vs-csi-products-for-use-with-revit/td-p/7707428"
+  - "https://www.irjet.net/archives/V12/i9/IRJET-V12I949.pdf"
 ---
 
 # Autodesk Robot vs ETABS: Which Structural Analysis Tool for Building Design?

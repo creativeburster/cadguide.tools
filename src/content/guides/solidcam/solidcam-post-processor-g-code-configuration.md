@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.solidcam.com/support/post-processors"
-  - "https://www.solidcam.com/post-processor-guide"
+  - "https://solidcam.help/2021/milling/iMachining_CAM_Settings.htm"
+  - "https://solidcam.com/imachining/imachining-technology-wizard/"
 ---
 
 # SolidCAM Post Processor Configuration: Customizing G-Code Output for Your Machine

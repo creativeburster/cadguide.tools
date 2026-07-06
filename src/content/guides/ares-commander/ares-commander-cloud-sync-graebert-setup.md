@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.graebert.com/ares-kudo/cloud-collaboration"
-  - "https://help.graebert.com/ares-commander/cloud-sync"
+  - "https://www.graebert.com/blog/product-news/cloud-ares-cad-software-enables-easy-collaboration-for-dwg-drawings/"
+  - "https://www.graebert.academy/courses/1844444/lectures/42123926"
 ---
 
 # ARES Commander Cloud Sync: Setting Up Graebert Cloud for Team Collaboration

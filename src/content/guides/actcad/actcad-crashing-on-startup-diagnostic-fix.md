@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://actcad.com/support/troubleshooting"
-  - "https://forums.actcad.com/forum/crash-issues"
+  - "https://actcad.com/faq.php"
+  - "https://actcad.com/blog-single.php?id=59&title=how-to-use-purge-recover-commands-in-actcad%3F"
 ---
 
 # ActCAD Crashing on Startup: Diagnostic and Fix Guide

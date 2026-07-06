@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ironcad.com/support/import-export"
-  - "https://forums.ironcad.com/forum/import-issues"
+  - "https://en.solidmakarna.se/supportblogg/olika-metoder-for-3d-modellering-i-ironcad"
+  - "https://www.ironcad.com/blog/anatomy-ironcads-triball/"
 ---
 
 # IronCAD Importing STEP and IGES Files: Repairing and Editing Imported Geometry

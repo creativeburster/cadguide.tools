@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.autodesk.com/products/eagle/learn-drc"
-  - "https://www.autodesk.com/products/eagle/learn-gerber"
+  - "https://docs.oshpark.com/design-tools/eagle/design-rules-files/"
+  - "https://www.raypcb.com/eagle-drc-and-gerber-files-a-complete-guide/"
 ---
 
 # Eagle DRC and Manufacturing Output: Setting Up Design Rules for Your PCB Fab

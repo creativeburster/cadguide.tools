@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.alibre.com/support/sheet-metal"
-  - "https://en.wikipedia.org/wiki/Bending_(metalworking)#K-factor"
+  - "https://www.alibre.com/blog/how-to-design-sheet-metal-parts-a-comprehensive-guide/"
+  - "https://www.approvedsheetmetal.com/blog/5-sheet-metal-design-formulas"
 ---
 
 # Alibre Design Sheet Metal Design: Bend Tables, K-Factor, and Flat Pattern Export

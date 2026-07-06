@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://help.autodesk.com/view/RSAPRO/2026/ENU/wind-loads"
-  - "https://www.asce.org/asce-7"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/about-using-the-wind-generator-according-to-eurocode/td-p/7126252"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/wind-loads-simulation-according-to-asce-7-16/td-p/14137870"
 ---
 
 # Autodesk Robot Wind Load Generation: ASCE 7 and Eurocode 1 Setup

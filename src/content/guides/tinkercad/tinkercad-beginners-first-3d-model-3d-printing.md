@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.tinkercad.com/learn"
-  - "https://www.tinkercad.com/blog/getting-started"
+  - "https://nozzledown.com/tinkercad-tutorial-2026-design-first-3d-printable-object/"
+  - "https://learn.sparkfun.com/tutorials/getting-started-with-3d-printing-using-tinkercad/modeling-in-tinkercad"
 ---
 
 # Tinkercad for Beginners: Creating Your First 3D Model for 3D Printing

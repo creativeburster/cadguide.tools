@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.solidcam.com/imachining"
-  - "https://www.solidcam.com/3d-hsm"
+  - "https://solidcam.com/imachining/imachining-technology-wizard/"
+  - "https://solidcam.help/2023/milling/imachining_technology.htm"
 ---
 
 # SolidCAM Toolpath Strategies: Choosing Between iMachining and 3D HSM

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.kubotek3d.com/support/file-exchange"
-  - "https://help.solidworks.com/ImportExport"
+  - "https://www.kubotekkosmos.com/direct-cad/meet-keycreator"
+  - "https://www.solidsmack.com/resources/direct-edit-solidworks-model-keycreator-3d-direct-modeling/"
 ---
 
 # KeyCreator to SolidWorks File Exchange: Best Practices for Roundtrip Workflow

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.solidcam.com/5-axis-machining"
-  - "https://www.solidcam.com/support/5-axis-setup"
+  - "https://solidcam.help/2023/milling/imachining_operation_overview.htm"
+  - "https://solidcam.help/2021/milling/iMachining_Technology_page_Technology.htm"
 ---
 
 # SolidCAM 5-Axis Machining: Setup, Tool Axis Control, and Collision Avoidance

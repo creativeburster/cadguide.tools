@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.gibbscam.com/support/interface"
-  - "https://forums.gibbscam.com/forum/customization"
+  - "https://www.gibbscam.com/products/"
+  - "https://www.softwaresuggest.com/compare/gibbs-cam-vs-mastercam"
 ---
 
 # GibbsCAM Interface Navigation: Customizing Toolbars and Workflows for Speed

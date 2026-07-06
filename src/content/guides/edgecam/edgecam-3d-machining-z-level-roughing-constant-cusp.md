@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.edgecam.com/support/3d-machining"
-  - "https://forums.edgecam.com/forum/3d-machining"
+  - "https://www.stillam.com/wp-content/uploads/pdfs/edgecam_milling_more.pdf"
+  - "https://hexagon.com/products/edgecam-intelligent-manufacturing"
 ---
 
 # EdgeCAM 3D Machining: Z-Level Roughing and Constant Cusp Finishing Setup

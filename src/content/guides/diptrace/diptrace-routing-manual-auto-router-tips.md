@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.diptrace.com/support/routing"
-  - "https://www.diptrace.com/docs/manual/pcb-layout"
+  - "https://diptrace.com/forum/viewtopic.php?t=10446"
+  - "https://diptrace.com/forum/viewtopic.php?t=10021"
 ---
 
 # DipTrace Routing: Manual and Auto-Router Tips for Clean PCB Layouts

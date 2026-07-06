@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.alibre.com/pricing"
-  - "https://www.alibre.com/support/license-faq"
+  - "https://www.alibre.com/buy-now/"
+  - "https://www.alibre.com/licensing/"
 ---
 
 # Alibre Design Perpetual License: Understanding Maintenance, Upgrades, and Ownership

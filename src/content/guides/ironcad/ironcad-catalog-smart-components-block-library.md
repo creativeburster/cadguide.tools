@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ironcad.com/support/catalogs"
-  - "https://forums.ironcad.com/forum/catalogs"
+  - "https://www.ironcad.com/products/ironcad"
+  - "https://www.ironcad.academy/tutorial/triball"
 ---
 
 # IronCAD Catalog System: Building Reusable Smart Components and Block Libraries

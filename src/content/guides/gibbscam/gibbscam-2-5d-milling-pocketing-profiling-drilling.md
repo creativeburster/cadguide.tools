@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.gibbscam.com/support/milling"
-  - "https://forums.gibbscam.com/forum/milling"
+  - "https://www.gibbscam.com/products/"
+  - "https://sourceforge.net/software/compare/GibbsCAM-vs-Mastercam-vs-NX-CAM/"
 ---
 
 # GibbsCAM 2.5D Milling: Pocketing, Profiling, and Drilling Best Practices

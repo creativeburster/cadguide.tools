@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.kubotek3d.com/support/performance"
-  - "https://forums.kubotek3d.com/forum/performance"
+  - "https://help.kubotekkosmos.com/KeyCreator/2026SP0/a10328"
+  - "https://www.kubotekkosmos.com/direct-cad/meet-keycreator"
 ---
 
 # KeyCreator Performance Optimization for Complex Models and Large Assemblies

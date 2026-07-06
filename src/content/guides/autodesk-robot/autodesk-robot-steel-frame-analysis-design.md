@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://help.autodesk.com/view/RSAPRO/2026/ENU/"
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum"
+  - "https://www.autodesk.com/learn/ondemand/module/analysis-and-design-for-steel-structures"
+  - "https://dezignark.com/blog/design-a-complete-steel-frame-in-robot-structural-analysis-professional/"
 ---
 
 # Autodesk Robot Structural Analysis: Steel Frame Design Workflow

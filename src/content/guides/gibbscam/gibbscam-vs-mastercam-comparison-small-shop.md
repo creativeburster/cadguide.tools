@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.gibbscam.com/products"
-  - "https://www.mastercam.com/products"
+  - "https://www.practicalmachinist.com/forum/threads/gibbscam-or-mastercam.445079/"
+  - "https://sourceforge.net/software/compare/GibbsCAM-vs-Mastercam-vs-NX-CAM/"
 ---
 
 # GibbsCAM vs Mastercam: Feature and Cost Comparison for Small to Mid-Size Shops

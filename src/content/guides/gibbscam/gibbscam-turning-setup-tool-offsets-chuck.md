@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.gibbscam.com/support/turning"
-  - "https://forums.gibbscam.com/forum/turning"
+  - "https://www.gibbscam.com/products/"
+  - "https://www.techjockey.com/compare/gibbscam-vs-mastercam"
 ---
 
 # GibbsCAM Turning Setup: Tool Definition, Offsets, and Chuck Configuration

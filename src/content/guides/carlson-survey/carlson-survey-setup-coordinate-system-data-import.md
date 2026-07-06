@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.carlsonsw.com/support/carlson-survey"
-  - "https://www.carlsonsw.com/learn/survey-tutorials"
+  - "https://files.carlsonsw.com/mirror/manuals/Carlson_2022/source/Tutorials/Geodetic_Reports/Geodetic_Report.html"
+  - "https://www.cadapult-software.com/wp-content/uploads/2021/01/Carlson_Survey_2021_TOC_Sample.pdf"
 ---
 
 # Carlson Survey Setup: Coordinate Systems, Data Import, and Project Configuration

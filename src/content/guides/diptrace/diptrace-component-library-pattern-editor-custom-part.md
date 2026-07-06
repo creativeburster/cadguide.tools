@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.diptrace.com/support/library-creation"
-  - "https://www.diptrace.com/docs/manual/pattern-editor"
+  - "https://diptrace.com/diptrace-software/library-creation/"
+  - "https://diptrace.com/forum/viewtopic.php?t=11762"
 ---
 
 # DipTrace Component Library: Creating Custom Parts with Pattern Editor

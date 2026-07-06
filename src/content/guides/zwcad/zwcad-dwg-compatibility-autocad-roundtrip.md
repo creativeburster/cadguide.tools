@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.zwsoft.com/zwcad/help"
-  - "https://forums.autodesk.com/t5/autocad-forum/dwg-compatibility-issues/td-p/8765432"
+  - "https://www.zwsoft.com/user-guide/fix-zwcad-invalid-drawing-file-error"
+  - "https://forum.bricsys.com/discussion/39478/exporting-dwg-to-something-that-zwcad-can-open"
 ---
 
 # ZWCAD to AutoCAD DWG Roundtrip: Fixing Compatibility Issues

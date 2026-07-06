@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.autodesk.com/products/eagle/learn-libraries"
-  - "https://forum.autodesk.com/t5/eagle-forum/library-creation"
+  - "https://learn.sparkfun.com/tutorials/making-custom-footprints-in-eagle/all"
+  - "https://www.build-electronic-circuits.com/eagle-components/"
 ---
 
 # Eagle Library Management: Creating Custom Components and Footprints

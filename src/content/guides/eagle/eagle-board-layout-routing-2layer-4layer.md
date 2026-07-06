@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.autodesk.com/products/eagle/learn-routing"
-  - "https://forum.autodesk.com/t5/eagle-forum/routing"
+  - "https://learn.sparkfun.com/tutorials/using-eagle-board-layout/all"
+  - "https://resources.altium.com/p/understanding-ground-planes-your-two-layer-pcb"
 ---
 
 # Eagle Board Layout: Routing Strategies for 2-Layer and 4-Layer PCBs

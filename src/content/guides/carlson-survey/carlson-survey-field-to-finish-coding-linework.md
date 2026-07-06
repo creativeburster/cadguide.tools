@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.carlsonsw.com/support/field-to-finish"
-  - "https://www.carlsonsw.com/learn/f2f-tutorials"
+  - "https://web.carlsonsw.com/files/knowledgebase/kbase_attach/812/Lesson%203-Field%20to%20Finish%20for%20Faster%20Drafting.pdf"
+  - "https://web.carlsonsw.com/knowledgebase/kbase05.php?action=display_topic&topic_id=1136"
 ---
 
 # Carlson Survey Field to Finish: Automating Drawing Creation from Field Codes

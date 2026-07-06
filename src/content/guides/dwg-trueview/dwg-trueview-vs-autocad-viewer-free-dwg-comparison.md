@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.autodesk.com/viewers"
-  - "https://knowledge.autodesk.com/support/dwg-trueview"
+  - "https://www.g2.com/compare/autodesk-dwg-trueview-vs-autodesk-viewer"
+  - "https://bitfab.io/blog/the-best-dwg-file-viewers/"
 ---
 
 # DWG TrueView vs AutoCAD Viewer: Free DWG Viewing Options Compared

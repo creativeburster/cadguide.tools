@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.shapr3d.com/learn/tutorials/sketch-constraints"
-  - "https://help.shapr3d.com/constraints"
+  - "https://help.shapr3d.com/sketching/sketch-tools/constraints"
+  - "https://discourse.shapr3d.com/t/ipad-tutorial/36094"
 ---
 
 # Shapr3D Sketch Constraints: Mastering Parametric Relationships on iPad

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.edgecam.com/support/feature-finder"
-  - "https://forums.edgecam.com/forum/feature-recognition"
+  - "https://hexagon.com/products/edgecam-intelligent-manufacturing"
+  - "https://documentation-be.hexagon.com/bundle/edgecam_gs_2022.1/raw/resource/enus/edgecam_gs_2022.1.pdf"
 ---
 
 # EdgeCAM Feature Recognition: Automating Toolpath Generation from Solid Models

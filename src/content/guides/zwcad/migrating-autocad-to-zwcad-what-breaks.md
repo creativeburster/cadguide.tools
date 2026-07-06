@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.zwsoft.com/zwcad/migration-guide"
-  - "https://forums.zwsoft.com/forum/migration-from-autocad"
+  - "https://forums.autodesk.com/t5/autocad-forum/question-on-zw-dxf-and-dwg-imports-to-autodesk/td-p/13169761"
+  - "https://brillianttechnologies.net/dwg-compatibility-deep-dive-what-to-test-before-you-roll-out-zwcad-with-brillianttechnologies/"
 ---
 
 # Migrating from AutoCAD to ZWCAD: What Breaks and How to Fix It

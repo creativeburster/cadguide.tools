@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.autodesk.com/products/eagle/learn-schematic"
-  - "https://forum.autodesk.com/t5/eagle-forum/schematic-design"
+  - "https://www.raypcb.com/schematic-drawing-tutorial-for-eagle/"
+  - "https://maker.pro/custom/tutorial/autodesk-eagle-for-beginners-basics"
 ---
 
 # Eagle Schematic Design: Net Classes, Power Rails, and Hierarchical Sheets

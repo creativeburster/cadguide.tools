@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ijcad.co.jp/en/support/standards"
-  - "https://www.jisc.go.jp/eng/jis-drafts/dimension-standards"
+  - "https://www.cobanengineering.com/GeometricDimensioningAndTolerancing/JISPaperSizes.asp"
+  - "https://standards.globalspec.com/std/14325063/jis-b-0001"
 ---
 
 # IJCAD Japanese Imperial Units and Drawing Standards Configuration

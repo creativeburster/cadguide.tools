@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://openscad.org/docs/manual/STL_Export.html"
-  - "https://manual.slic3r.org/advanced/model-repair"
+  - "https://openscad.org/documentation.html"
+  - "https://en.wikibooks.org/wiki/OpenSCAD_Tutorial"
 ---
 
 # OpenSCAD to STL Export: Optimizing Mesh Quality for 3D Printing

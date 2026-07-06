@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.orcad.com/products"
-  - "https://www.altium.com/altium-designer"
+  - "https://www.altium.com/altium-designer/compare/cadence-orcad"
+  - "https://www.nordcad.eu/altium-vs-orcad-x/"
 ---
 
 # OrCAD vs Altium Designer: Feature Comparison for Professional PCB Design

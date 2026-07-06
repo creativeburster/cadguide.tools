@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.camworks.com/compare/solidcam"
-  - "https://www.solidcam.com/compare/camworks"
+  - "https://www.g2.com/compare/camworks-vs-solidcam"
+  - "https://nerdisa.com/camworks-vs-solidcam"
 ---
 
 # CAMWorks vs SolidCAM: Which Integrated CAM Is Right for Your SolidWorks Shop?

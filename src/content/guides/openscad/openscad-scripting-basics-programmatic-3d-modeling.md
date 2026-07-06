@@ -10,7 +10,7 @@ readTime: "11 min read"
 date: "2026-07-06"
 sources:
   - "https://openscad.org/documentation.html"
-  - "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual"
+  - "https://en.wikibooks.org/wiki/OpenSCAD_Tutorial"
 ---
 
 # OpenSCAD Scripting Basics: Programmatic 3D Modeling with Code

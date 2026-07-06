@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ideastatica.com/support/connections"
-  - "https://www.ideastatica.com/learn/tutorials"
+  - "https://www.ideastatica.com/support-center/base-plate-connections-aisc"
+  - "https://www.ideastatica.com/blog/complete-base-plate-workflow"
 ---
 
 # IDEA StatiCa Steel Connection Design: Base Plate and Moment Connection Design

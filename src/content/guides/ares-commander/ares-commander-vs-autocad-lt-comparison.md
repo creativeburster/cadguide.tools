@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.graebert.com/ares-commander/features"
-  - "https://www.autodesk.com/products/autocad-lt/features"
+  - "https://www.saashub.com/compare-autocad-lt-vs-ares-commander"
+  - "https://bimsoft.lv/autocad-vs-ares-commander/"
 ---
 
 # ARES Commander vs AutoCAD LT: Feature Comparison for 2D Drafting

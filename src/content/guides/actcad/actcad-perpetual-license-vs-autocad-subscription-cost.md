@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://actcad.com/pricing"
-  - "https://www.autodesk.com/products/autocad/subscribe"
+  - "https://www.smartcadsoft.com/can-you-buy-autocad-without-subscription/"
+  - "https://www.zwsoft.com/blog/autocad-perpetual-license"
 ---
 
 # ActCAD Perpetual License vs AutoCAD Subscription: Cost Comparison and Break-Even Analysis

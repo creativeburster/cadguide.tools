@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.solidcam.com/support/simulation"
-  - "https://www.solidcam.com/solidverify"
+  - "https://solidcam.help/2023/milling/imachining_operation_overview.htm"
+  - "https://solidcam.com/imachining/imachining-technology-wizard/"
 ---
 
 # SolidCAM Simulation and Verification: Preventing Collisions Before They Happen

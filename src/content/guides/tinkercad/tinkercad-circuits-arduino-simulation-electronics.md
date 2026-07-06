@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.tinkercad.com/learn/circuits"
-  - "https://www.tinkercad.com/blog/circuits"
+  - "https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits"
+  - "https://www.digikey.com/en/maker/tutorials/2022/getting-started-with-tinkercad-circuits"
 ---
 
 # Tinkercad Circuits: Simulating Arduino and Electronics Projects in Browser

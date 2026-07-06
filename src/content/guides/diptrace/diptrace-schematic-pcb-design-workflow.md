@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.diptrace.com/support/tutorials"
-  - "https://www.diptrace.com/docs/manual"
+  - "https://www.diptrace.com/support/tutorials/"
+  - "https://www.pcbway.com/blog/PCB_Design_Tutorial/PCB_Design_Tutorial_with_DipTrace_for_beginners.html"
 ---
 
 # DipTrace Schematic and PCB Design: Complete Beginner to Production Workflow

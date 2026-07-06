@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.tinkercad.com/learn/advanced"
-  - "https://www.autodesk.com/products/fusion-360/learn"
+  - "https://weareprintlab.com/blog/transitioning-from-tinkercad-to-autodesk-fusion/"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Sending-a-model-from-TinkerCAD-to-fusion-360-fails.html"
 ---
 
 # Tinkercad to Fusion 360: When and How to Upgrade Your 3D Modeling

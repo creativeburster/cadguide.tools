@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.autodesk.com/viewers/dwg-trueview"
-  - "https://knowledge.autodesk.com/support/dwg-trueview"
+  - "https://www.autodesk.com/products/dwg-trueview/overview"
+  - "https://www.autodesk.com/viewers"
 ---
 
 # DWG TrueView: Viewing, Measuring, and Printing DWG Files Without AutoCAD

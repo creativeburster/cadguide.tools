@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.alibre.com/support/file-export"
-  - "https://www.iso.org/standard/61042.html (STEP AP242)"
+  - "https://www.alibre.com/3d-cad-file-formats/"
+  - "https://cadinterop.com/en/formats/cad-systems/alibre.html"
 ---
 
 # Alibre Design File Export: STEP, IGES, and STL Best Practices for Manufacturing

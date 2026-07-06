@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://actcad.com/support/network-deployment"
-  - "https://forums.actcad.com/forum/deployment"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-install-silently.html"
+  - "https://www.pdq.com/blog/silently-deploy-autocad-pdq-deploy/"
 ---
 
 # ActCAD Network Deployment: Silent Install and Configuration for Multiple Seats

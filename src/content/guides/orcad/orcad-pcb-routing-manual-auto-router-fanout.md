@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.orcad.com/support/routing"
-  - "https://forum.orcad.com/forum/routing"
+  - "https://www.ema-eda.com/how-to-page/how-to-create-fanouts-in-orcad-x-presto/"
+  - "https://resources.pcb.cadence.com/blog/2022-layout-strategies-when-using-a-pcb-autorouter"
 ---
 
 # OrCAD PCB Routing: Manual vs Auto-Router Strategies for Complex Boards

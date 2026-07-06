@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ideastatica.com/compare"
-  - "https://www.tekla.com/products/tekla-structural-designer"
+  - "https://www.ideastatica.com/bim/tekla-structural-designer"
+  - "https://www.ideastatica.com/support-center/tekla-structural-designer-bim-link-for-connection-design-en"
 ---
 
 # IDEA StatiCa vs Tekla Structural Designer: Steel Connection Design Comparison

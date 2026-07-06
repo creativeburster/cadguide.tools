@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://help.autodesk.com/view/RSAPRO/2026/ENU/slab-design"
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/slab"
+  - "https://help.autodesk.com/cloudhelp/2022/ENU/Robot-GSG/files/Tutorials/Robot_GSG_Tutorials_Tut_Plate_Design_html.html"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/example-of-reinforcement-calculation-for-a-slab-according-to-ec2/td-p/12020455"
 ---
 
 # Autodesk Robot Concrete Slab Design: FEM Analysis and Reinforcement

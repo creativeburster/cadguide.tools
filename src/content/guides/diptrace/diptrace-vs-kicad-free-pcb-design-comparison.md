@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.diptrace.com/compare"
-  - "https://docs.kicad.org/8.0/en/"
+  - "https://www.cirexx.com/diptrace-vs-kicad/"
+  - "https://www.g2.com/compare/diptrace-vs-kicad-eda"
 ---
 
 # DipTrace vs KiCad: Choosing the Right Free PCB Design Tool

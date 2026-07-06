@@ -9,8 +9,8 @@ author: "CAD IT Admin"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
-  - "https://www.mastercam.com/support/"
-  - "https://www.mastercam.com/resources/training/"
+  - "https://www.mastercam.com/solutions/"
+  - "https://wiki.harvard.edu/confluence/display/fabricationlab/MasterCAM+2020+Step-by-Step+Guide"
 ---
 
 # Mastercam 3D Machining: Roughing, Finishing, and High-Speed Toolpaths for Complex Surfaces

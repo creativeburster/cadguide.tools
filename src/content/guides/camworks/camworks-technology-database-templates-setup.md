@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.camworks.com/support/tech-db"
-  - "https://forums.camworks.com/forum/tech-database"
+  - "https://camworks.com/webinar/solidworks-cam-and-camworks-getting-started-with-the-techdb/"
+  - "https://support.hawkridgesys.com/hc/en-us/articles/360018822091-CAMWorks-How-To-Set-Up-a-Custom-Machine-In-The-Technology-Database"
 ---
 
 # CAMWorks Tech Database: Building Reusable Machining Templates for Your Shop

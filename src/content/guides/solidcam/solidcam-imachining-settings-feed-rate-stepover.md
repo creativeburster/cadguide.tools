@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.solidcam.com/imachining/technology-wizard"
-  - "https://www.solidcam.com/support/imachining-tuning"
+  - "https://solidcam.help/2021/milling/iMachining_Technology_page_Technology.htm"
+  - "https://solidcam.com/imachining/imachining-technology-wizard/"
 ---
 
 # SolidCAM iMachining Settings: Optimizing Feed Rate, Stepover, and Engagement

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.edgecam.com/products"
-  - "https://www.mastercam.com/products/mill"
+  - "https://hexagon.com/products/edgecam-intelligent-manufacturing"
+  - "https://www.mastercam.com/solutions/"
 ---
 
 # EdgeCAM vs Mastercam: Feature and Workflow Comparison for Job Shops

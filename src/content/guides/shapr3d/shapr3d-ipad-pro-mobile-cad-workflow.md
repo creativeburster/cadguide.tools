@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.shapr3d.com/supported-devices"
-  - "https://www.shapr3d.com/learn/tutorials"
+  - "https://www.shapr3d.com/download/ipad"
+  - "https://illustrarch.com/articles/design-softwares/93688-shapr3d-review-architects.html"
 ---
 
 # Shapr3D on iPad Pro: Complete Mobile CAD Workflow from Sketch to Manufacturing

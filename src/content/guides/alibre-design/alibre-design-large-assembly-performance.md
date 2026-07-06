@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.alibre.com/support/assembly-performance"
-  - "https://forums.alibre.com/forum/performance"
+  - "https://www.alibre.com/version27/"
+  - "https://grabcad.com/questions/are-there-tricks-to-get-alibre-loading-big-assemblies-faster"
 ---
 
 # Alibre Design Assembly Performance: Optimizing Large Assembly Handling

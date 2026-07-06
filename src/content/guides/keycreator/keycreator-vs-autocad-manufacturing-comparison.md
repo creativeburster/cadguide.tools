@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.kubotek3d.com/products/keycreator"
-  - "https://www.autodesk.com/products/autocad/features"
+  - "https://www.kubotekkosmos.com/direct-cad/meet-keycreator"
+  - "https://keytodata.com/en/keycreator/"
 ---
 
 # KeyCreator vs AutoCAD: Why Direct 3D Modeling Beats 2D for Manufacturing

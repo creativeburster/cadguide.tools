@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ideastatica.com/support/bim"
-  - "https://www.ideastatica.com/learn/revit-integration"
+  - "https://www.ideastatica.com/support-center/autodesk-revit-bim-link-for-connection-design-en"
+  - "https://www.ideastatica.com/support-center/robot-structural-analysis-bim-link-for-connection-design-aisc"
 ---
 
 # IDEA StatiCa Integration with Revit and Robot: BIM Workflow for Steel Connections

@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://openscad.org/docs/modules.html"
+  - "https://en.wikibooks.org/wiki/OpenSCAD_Tutorial"
   - "https://github.com/BelfrySCAD/BOSL2"
 ---
 

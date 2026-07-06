@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.zwsoft.com/zwcad/help/pgp-customization"
-  - "https://forums.zwsoft.com/forum/customization"
+  - "https://confluence.zwcad.com/pages/viewpage.action?pageId=110932231"
+  - "https://www.zwsoft.com/support/zwcad-base-faq/569"
 ---
 
 # ZWCAD Custom Command Aliases and PGP File Configuration

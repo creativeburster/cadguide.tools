@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:
-  - "https://help.graebert.com/ares-commander/object-snap"
-  - "https://forums.graebert.com/forum/osnap-issues"
+  - "https://help.graebert.com/en/articles/3057171-release-history-of-ares-commander"
+  - "https://help.graebert.com/en/articles/9260031-ares-commander-2025-release-notes"
 ---
 
 # ARES Commander Object Snap Issues: Fixing Erratic Snapping Behavior

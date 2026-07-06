@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ijcad.co.jp/en/support/plotting"
-  - "https://help.intellicad.com/plotting"
+  - "https://blog.nobledesktop.com/learn/autocad/plotting-printing"
+  - "https://docs.fileformat.com/settings/pmp/"
 ---
 
 # IJCAD Printing and Plotting: Configuring Japanese Paper Sizes and Plot Styles

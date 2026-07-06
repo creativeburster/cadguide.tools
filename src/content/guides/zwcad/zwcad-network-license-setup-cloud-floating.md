@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.zwsoft.com/zwcad/network-license-guide"
-  - "https://forums.zwsoft.com/forum/network-licensing"
+  - "https://www.zwsoft.com/support/zwcad-instruction-installation/deploy-zwcad-network-license"
+  - "https://confluence.zwcad.com/pages/viewpage.action?pageId=284951443"
 ---
 
 # ZWCAD Network License Setup with ZWCAD Cloud Floating

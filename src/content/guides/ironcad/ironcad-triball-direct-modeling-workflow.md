@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ironcad.com/support/triball"
-  - "https://forums.ironcad.com/forum/modeling"
+  - "https://www.ironcad.com/blog/anatomy-ironcads-triball/"
+  - "https://www.ironcad.academy/tutorial/triball"
 ---
 
 # IronCAD Direct Modeling Workflow: When to Use Triball vs Parametric Features

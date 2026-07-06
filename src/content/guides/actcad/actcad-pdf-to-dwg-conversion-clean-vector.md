@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://actcad.com/support/pdf-to-dwg"
-  - "https://forums.actcad.com/forum/pdf-conversion"
+  - "https://dwg.autodwg.com/"
+  - "https://www.autodwg.com/pdf-to-dwg-converter/"
 ---
 
 # ActCAD PDF to DWG Conversion: Getting Clean Vector Output

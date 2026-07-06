@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ideastatica.com/support/welds"
-  - "https://www.ideastatica.com/learn/weld-tutorials"
+  - "https://www.ideastatica.com/support-center/weld-welds-in-idea-statica"
+  - "https://www.ideastatica.com/support-center/catalog-of-aisc-limit-states-and-design-requirements"
 ---
 
 # IDEA StatiCa Weld Design: Fillet, Butt, and Plug Welds per AISC and Eurocode

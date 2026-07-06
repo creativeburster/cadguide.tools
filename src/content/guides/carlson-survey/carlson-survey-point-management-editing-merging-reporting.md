@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.carlsonsw.com/support/point-management"
-  - "https://www.carlsonsw.com/learn/point-tutorials"
+  - "https://files.carlsonsw.com/mirror/manuals/Carlson_2022/source/General/Points/CooRDinate_File_Utilities/CooRDinate_File_Utilities.htm"
+  - "https://carlsonsw.com/product/carlson-survey"
 ---
 
 # Carlson Survey Point Management: Editing, Merging, and Reporting Survey Points

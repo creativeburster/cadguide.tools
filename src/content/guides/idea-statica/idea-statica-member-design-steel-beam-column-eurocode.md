@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ideastatica.com/support/member"
-  - "https://www.ideastatica.com/learn/member-tutorials"
+  - "https://www.ideastatica.com/support-center/steel-frame-en"
+  - "https://www.ideastatica.com/support-center/simple-steel-beam-member-en"
 ---
 
 # IDEA StatiCa Member Design: Steel Beams, Columns, and Bracing per Eurocode

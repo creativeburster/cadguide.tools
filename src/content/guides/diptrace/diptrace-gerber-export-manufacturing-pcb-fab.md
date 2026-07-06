@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.diptrace.com/support/gerber-export"
-  - "https://www.diptrace.com/docs/manual/output"
+  - "https://pcbsync.com/technical-support/how-to-generate-gerber-files-from-diptrace/"
+  - "https://www.pcbway.com/blog/PCB_Layout_Software/How_to_generate_Gerber_files_from_DipTrace.html"
 ---
 
 # DipTrace Gerber Export and Manufacturing: Preparing Files for PCB Fab Houses

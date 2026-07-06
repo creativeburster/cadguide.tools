@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://risa.com/products/risa-3d"
-  - "https://www.bentley.com/products/brands/staad"
+  - "https://engineerboards.com/threads/staad-pro-vs-risa.34142/"
+  - "https://www.reddit.com/r/StructuralEngineering/comments/gyudrn/the_war_of_structural_softwares_staad_pro_vs/"
 ---
 
 # RISA-3D vs STAAD.Pro: Structural Analysis Software Comparison

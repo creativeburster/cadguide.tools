@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.orcad.com/products/pcb-professional"
-  - "https://forum.orcad.com/forum/constraint-manager"
+  - "https://resources.pcb.cadence.com/blog/2025-how-to-add-differential-pair-in-orcad-x-schematic"
+  - "https://www.parallel-systems.co.uk/wp-content/uploads/2020/02/diffpair_definition.pdf"
 ---
 
 # OrCAD PCB Professional: Constraint Manager Setup for Differential Pairs and Impedance

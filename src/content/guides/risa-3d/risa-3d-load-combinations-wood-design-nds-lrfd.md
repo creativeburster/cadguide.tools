@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://risa.com/learn/wood-design"
-  - "https://www.awc.org/codes-standards/publications/nds"
+  - "https://help.risa.com/risahelp/risa3d/Content/Loads-2D-3D/Loads-LoadCombinations.htm"
+  - "https://help.risa.com/risahelp/risafloor/Content/Common_Design/Wood%20-%20Design.htm"
 ---
 
 # RISA-3D Load Combinations and Wood Design: NDS and LRFD Workflow

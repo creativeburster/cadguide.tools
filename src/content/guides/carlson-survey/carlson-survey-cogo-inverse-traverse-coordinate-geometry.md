@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.carlsonsw.com/support/cogo"
-  - "https://www.carlsonsw.com/learn/cogo-tutorials"
+  - "https://files.carlsonsw.com/mirror/manuals/Carlson_2015/source/Survey/COGO/Inverse/Inverse.htm"
+  - "http://files.carlsonsw.com/mirror/manuals/Carlson_2017/source/Survey/COGO/Traverse/Traverse.htm"
 ---
 
 # Carlson Survey COGO: Inverse, Traverse, and Coordinate Geometry Calculations

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://risa.com/learn/risa-3d-tutorials"
-  - "https://risa.com/support/risa-3d"
+  - "https://risa.com/risahelp/risa3d/Content/3D_2D_Only_Topics/Boundary%20Conditions.htm"
+  - "https://blog.risa.com/post/how-should-i-model-boundary-conditions-for-a-truss-in-risa-3d"
 ---
 
 # RISA-3D Modeling Basics: Nodes, Members, and Boundary Conditions

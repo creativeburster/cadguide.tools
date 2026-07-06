@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://knowledge.autodesk.com/support/dwg-trueview/learn-explore/dwg-compare"
-  - "https://www.autodesk.com/support/dwg-compare"
+  - "https://www.autodesk.com/products/dwg-trueview/overview"
+  - "https://cad-kenkyujo.com/en/2dcad/autocad/trueview/"
 ---
 
 # DWG TrueView DWG Compare: Detecting Changes Between Drawing Revisions

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ironcad.com/support/rendering"
-  - "https://forums.ironcad.com/forum/rendering"
+  - "https://www.ironcad.com/products/ironcad"
+  - "https://en.solidmakarna.se/supportblogg/olika-metoder-for-3d-modellering-i-ironcad"
 ---
 
 # IronCAD Rendering and Animation: Creating Product Visualizations and Exploded Views

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://docs.kicad.org/8.0/en/eeschema/eeschema.html#eagle-import"
-  - "https://forum.kicad.info/t/eagle-import"
+  - "https://forum.kicad.info/t/eagle-import-incorrectly-inconsistently-changes-reconnects-net-names/69074"
+  - "https://hackaday.com/2023/07/01/importing-eagle-projects-into-kicad-7-and-how-to-fix-them/"
 ---
 
 # Eagle to KiCad Migration: Converting Schematics and PCB Layouts Successfully

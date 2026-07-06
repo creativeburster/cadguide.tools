@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.gibbscam.com/support/post-processors"
-  - "https://forums.gibbscam.com/forum/post-processors"
+  - "https://www.gibbscam.com/products/"
+  - "https://www.practicalmachinist.com/forum/threads/gibbscam-or-mastercam.445079/"
 ---
 
 # GibbsCAM Post Processor Setup: Getting Clean G-Code for Your CNC Machine

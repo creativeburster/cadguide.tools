@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.kubotek3d.com/support/keycreator-direct-modeling"
-  - "https://forums.kubotek3d.com/forum/modeling"
+  - "https://www.machinedesign.com/additive-3d-printing/fea-and-simulation/article/21819594/direct-modeler-builds-a-better-fuel-tank"
+  - "https://www.solidsmack.com/resources/direct-edit-solidworks-model-keycreator-3d-direct-modeling/"
 ---
 
 # KeyCreator Direct Modeling: Editing Imported Models Without Feature Trees

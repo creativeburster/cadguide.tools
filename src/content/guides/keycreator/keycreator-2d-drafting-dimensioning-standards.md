@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.kubotek3d.com/support/drafting"
-  - "https://www.asme.org/codes-standards/y14-5-dimensioning-tolerancing"
+  - "https://keytodata.com/en/keycreator/"
+  - "https://help.kubotekkosmos.com/KeyCreator/2026SP0/a10328"
 ---
 
 # KeyCreator 2D Drafting: Dimensioning Standards and Drawing Automation

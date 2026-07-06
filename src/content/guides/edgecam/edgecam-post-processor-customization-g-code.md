@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.edgecam.com/support/post-processors"
-  - "https://forums.edgecam.com/forum/post-processors"
+  - "https://www.stillam.com/how-to-install-a-post/"
+  - "https://jeffcnc.weebly.com/edgecam-info1.html"
 ---
 
 # EdgeCAM Post Processor Customization: Modifying G-Code Output for Custom Machines

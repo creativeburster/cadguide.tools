@@ -10,7 +10,7 @@ readTime: "11 min"
 date: "2025-06-29"
 sources:
   - "https://www.mastercam.com/solutions/lathe/"
-  - "https://www.mastercam.com/resources/training/"
+  - "https://www.mastercam.com/support/product-training/courses/"
 ---
 
 # Mastercam Lathe: Turning, Threading, Grooving, and C-Axis Mill-Turn Toolpaths

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.alibre.com/compare/solidworks"
-  - "https://www.solidworks.com/pricing"
+  - "https://www.g2.com/compare/alibre-design-vs-solidworks"
+  - "https://deelip.com/alibre-design-vs-solidworks/"
 ---
 
 # Alibre Design vs SolidWorks: Feature Comparison for Small Manufacturing

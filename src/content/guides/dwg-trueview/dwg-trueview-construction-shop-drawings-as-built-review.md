@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://knowledge.autodesk.com/support/dwg-trueview"
-  - "https://www.autodesk.com/build/construction-drawing-management"
+  - "https://www.autodesk.com/viewers"
+  - "https://thatcadgirl.com/faq/use-dwg-convert-save-dwg-files-earlier-version/"
 ---
 
 # DWG TrueView for Construction: Reviewing Shop Drawings and As-Builts On Site

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ijcad.co.jp/en/support/dwg-compatibility"
-  - "https://forums.autodesk.com/t5/autocad-forum/intellicad-dwg-exchange"
+  - "https://support.ijcad.jp/hc/en-us/articles/202730179-IJCAD-and-AutoCAD-of-relationship"
+  - "https://www.intellicad.org/intellicad-vs-autocad-comparison-r13.0"
 ---
 
 # IJCAD to AutoCAD Migration: Ensuring Seamless DWG Exchange

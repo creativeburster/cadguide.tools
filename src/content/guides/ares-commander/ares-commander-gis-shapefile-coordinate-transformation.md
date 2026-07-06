@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.graebert.com/ares-commander/gis-tools"
-  - "https://help.graebert.com/ares-commander/gis"
+  - "https://www.graebert.com/cad-software/ares-map/"
+  - "https://www.esri.com/partners/gr-bert-gmbh-a2T390000003DubEAE/ares-map-a2d3900000049BRAAY"
 ---
 
 # ARES Commander GIS Tools: Importing Shapefiles and Coordinate Transformation

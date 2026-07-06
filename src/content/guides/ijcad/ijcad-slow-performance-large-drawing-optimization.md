@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://www.ijcad.co.jp/en/support/performance"
-  - "https://forums.intellicad.com/forum/performance"
+  - "https://www.intellicad.org/12.1-features-0"
+  - "https://www.intellicad.org/13.0-features"
 ---
 
 # IJCAD Slow Performance on Large Drawings: Optimization Guide

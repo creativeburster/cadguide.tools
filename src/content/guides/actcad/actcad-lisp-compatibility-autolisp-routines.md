@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://actcad.com/support/lisp-compatibility"
-  - "https://forums.actcad.com/forum/lisp-discussion"
+  - "https://en.wikipedia.org/wiki/AutoLISP"
+  - "https://forums.intellicadms.com/viewtopic.php?t=3391"
 ---
 
 # ActCAD LISP Compatibility: Running AutoLISP Routines Without Modification

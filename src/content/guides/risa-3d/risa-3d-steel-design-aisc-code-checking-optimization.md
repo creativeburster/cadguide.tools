@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
-  - "https://risa.com/learn/steel-design"
-  - "https://risa.com/support/risa-3d-steel"
+  - "https://blog.risa.com/post/how-can-i-optimize-my-members-in-risa-3d"
+  - "https://help.risa.com/risahelp/risa3d/Content/HotRolled/Hot%20Rolled%20Steel%20-%20Design%20Results.htm"
 ---
 
 # RISA-3D Steel Design: AISC Code Checking and Member Optimization

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://help.graebert.com/ares-commander/customization"
-  - "https://forums.graebert.com/forum/customization"
+  - "https://www.graebert.com/blog/tutorial/add-modify-panels-ares/"
+  - "https://help.graebert.com/en/articles/3067902-displaying-and-positioning-toolbars"
 ---
 
 # ARES Commander Ribbon Customization: Building Custom Toolbars and Panels
