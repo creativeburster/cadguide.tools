@@ -269,7 +269,6 @@ export default async function GuideArticlePage(
                   <Clock className="w-3.5 h-3.5" />
                   {frontmatter.readTime}
                 </span>
-                <span className="text-slate-400">By {frontmatter.author}</span>
               </div>
             </div>
 
@@ -297,19 +296,10 @@ export default async function GuideArticlePage(
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start w-full">
           {/* Main content column */}
           <main className="flex-1 min-w-0 w-full">
-            {/* Author banner */}
-            <div className="bg-white p-5 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center shadow-lg">
-                  WP
-                </div>
-                <div>
-                  <span className="font-black text-slate-900 block text-sm">{frontmatter.author}</span>
-                  <span className="text-[10px] text-slate-400 font-bold block uppercase tracking-wider">Enterprise Systems Lead</span>
-                </div>
-              </div>
+            {/* Article info bar */}
+            <div className="bg-white p-4 sm:p-5 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm flex items-center justify-between gap-4 mb-8">
               <div className="flex items-center gap-6 text-xs text-slate-500 font-bold">
-                <div>Read Time: <span className="text-slate-900 font-black">{frontmatter.readTime}</span></div>
+                <div className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> Read Time: <span className="text-slate-900 font-black ml-1">{frontmatter.readTime}</span></div>
                 <div>Status: <span className="text-emerald-600 font-black flex items-center gap-1">● Verified</span></div>
               </div>
             </div>
