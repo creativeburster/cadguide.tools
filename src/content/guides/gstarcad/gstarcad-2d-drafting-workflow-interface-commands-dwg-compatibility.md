@@ -11,7 +11,7 @@ date: "2026-06-30"
 sources:
   - "https://www.gstarcad.mt/faq/"
   - "https://www.gstarcad.com/help/"
-  - "https://www.gstarcad.com/products/gstarcad/"
+
 ---
 
 # GstarCAD 2D Drafting Workflow: Interface, Commands, and DWG Compatibility with AutoCAD

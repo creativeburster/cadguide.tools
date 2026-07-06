@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.ansys.com/products/structures"
   - "https://ansyshelp.ansys.com/"
+
 ---
 
 # ANSYS Workbench Structural FEA: Static Analysis, Meshing, and Stress Evaluation

@@ -10,7 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://www.comsol.com/comsol-multiphysics"
-  - "https://www.ansys.com/products"
+
 ---
 
 # COMSOL vs ANSYS: Multiphysics Platform Comparison for Coupled Simulation

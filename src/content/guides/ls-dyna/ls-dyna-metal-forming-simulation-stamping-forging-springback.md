@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.lstc.com/products/ls-dyna"
-  - "https://www.dynasupport.com/"
+  - "https://lsdyna.ansys.com/manuals/"
+  - "https://www.dynasupport.com/tutorial/metal-forming"
 ---
 
 # LS-DYNA Metal Forming Simulation: Stamping, Forging, and Springback Analysis

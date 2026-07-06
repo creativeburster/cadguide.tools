@@ -11,7 +11,7 @@ date: "2025-06-29"
 sources:
   - "https://www.gerbertechnology.com/accumark-3d/"
   - "https://www.gerbertechnology.com/accumark/"
-  - "https://www.yunique.com/products/yuniqueplm"
+
 ---
 
 # Gerber AccuMark 3D Virtual Sampling: 3D Fit Validation and Pattern-to-3D Workflow

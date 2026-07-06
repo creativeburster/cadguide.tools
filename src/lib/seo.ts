@@ -497,6 +497,87 @@ export function howToLd() {
   };
 }
 
+// ------- Guide article helpers -------------------------------------------
+
+/** Schema.org TechArticle payload for Guide pages. */
+export function guideArticleLd(opts: {
+  title: string;
+  excerpt: string;
+  slug: string;
+  author: string;
+  date: string;
+  category: string;
+  softwareSlug: string;
+  wordCount?: number;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: opts.title,
+    description: opts.excerpt,
+    url: `${SITE_URL}/guides/${opts.slug}`,
+    datePublished: opts.date,
+    dateModified: opts.date,
+    author: {
+      "@type": "Person",
+      name: opts.author,
+      jobTitle: "Enterprise Systems Lead",
+    },
+    publisher: SITE_PUBLISHER,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/guides/${opts.slug}`,
+    },
+    articleSection: opts.category,
+    about: {
+      "@type": "SoftwareApplication",
+      name: opts.softwareSlug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" "),
+    },
+    ...(opts.wordCount ? { wordCount: opts.wordCount } : {}),
+    inLanguage: "en",
+    isAccessibleForFree: true,
+  };
+}
+
+/** Schema.org BreadcrumbList payload for Guide pages. */
+export function guideBreadcrumbLd(opts: {
+  toolDisplayName: string;
+  category: string;
+  title: string;
+  slug: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${SITE_URL}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: opts.toolDisplayName,
+        item: `${SITE_URL}/guides?software=${opts.toolDisplayName.toLowerCase().replace(/\s+/g, "-")}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: opts.title,
+        item: `${SITE_URL}/guides/${opts.slug}`,
+      },
+    ],
+  };
+}
+
 /** Schema.org Review payload from external ratings. Returns null if no external ratings. */
 export function reviewLd(tool: Tool) {
   if (!tool.external_ratings || tool.external_ratings.length === 0) return null;

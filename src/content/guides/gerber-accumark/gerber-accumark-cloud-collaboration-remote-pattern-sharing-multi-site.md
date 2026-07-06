@@ -10,8 +10,8 @@ readTime: "9 min"
 date: "2025-06-29"
 sources:
   - "https://www.gerbertechnology.com/accumark/"
-  - "https://www.yunique.com/products/yuniqueplm"
   - "https://www.gerbertechnology.com/accumark-cloud/"
+
 ---
 
 # Gerber AccuMark Cloud Collaboration: Remote Pattern Sharing and Multi-Site Production

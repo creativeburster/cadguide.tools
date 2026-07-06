@@ -10,8 +10,8 @@ readTime: "11 min"
 date: "2025-06-29"
 sources:
   - "https://www.csiamerica.com/products/etabs"
-  - "https://docs.csiamerica.com/manuals/etabs/"
   - "https://www.csiamerica.com/support/learn"
+
 ---
 
 # ETABS Building Modeling: Grids, Story Levels, Section Properties, and Material Definition

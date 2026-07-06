@@ -10,7 +10,7 @@ readTime: "9 min"
 date: "2025-06-18"
 sources:
   - "https://community.sw.siemens.com/s/question/0D5Vb00000TqaA1KAJ/urgent-help-needed-my-nx-is-extremely-slow-despite-a-highend-pc"
-  - "https://docs.sw.siemens.com/en-US/product/471595/release/NX-2306/text/ug_doc/assembly_loading"
+
 ---
 
 # NX Large Assembly Performance: Lightweight Representations and Simplification

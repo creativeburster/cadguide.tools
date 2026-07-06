@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://manual.cype.com/cypecad/foundations/"
-  - "https://www.cype.com/en/cypecad/"
+  - "https://info.cype.com/en/software/cypecad/"
+  - "https://www.concretecentre.com/resources"
 ---
 
 # CYPECAD Foundation Design: Spread Footings, Pile Caps, and Mat Foundations per Eurocode 7

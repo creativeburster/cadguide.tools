@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.allplan.com/en/help"
   - "https://www.allplan.com/en/products/allplan-architecture"
+
 ---
 
 # Allplan BIM Workflow: From 2D Drawings to 3D Building Models and IFC Export

@@ -10,7 +10,7 @@ readTime: "10 min read"
 date: "2026-06-30"
 sources:
   - "https://www.bluebeam.com/product/revu/"
-  - "https://www.adobe.com/acrobat/pricing.html"
+
 ---
 
 # Bluebeam Revu vs Adobe Acrobat: Which PDF Tool Is Right for Construction?

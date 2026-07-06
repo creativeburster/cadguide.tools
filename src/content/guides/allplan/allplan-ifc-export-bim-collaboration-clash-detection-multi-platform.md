@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.allplan.com/en/help/ifc"
   - "https://www.buildingsmart.org/standards/ifs/"
+
 ---
 
 # Allplan IFC Export and BIM Collaboration: Coordination View, Clash Detection, and Multi-Platform Workflow

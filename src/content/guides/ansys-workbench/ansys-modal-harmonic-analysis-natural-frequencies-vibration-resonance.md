@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.ansys.com/products/structures"
   - "https://ansyshelp.ansys.com/"
+
 ---
 
 # ANSYS Modal and Harmonic Analysis: Natural Frequencies, Vibration, and Resonance

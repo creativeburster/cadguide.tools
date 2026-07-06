@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.ansys.com/products/structures/topology-optimization"
   - "https://ansyshelp.ansys.com/"
+
 ---
 
 # ANSYS Topology Optimization and Design Exploration: Parametric Studies and Weight Reduction

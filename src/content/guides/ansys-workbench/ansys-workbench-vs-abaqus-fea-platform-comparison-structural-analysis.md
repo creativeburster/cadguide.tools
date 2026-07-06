@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.ansys.com/products/structures"
   - "https://www.3ds.com/products/simulia/abaqus"
+
 ---
 
 # ANSYS Workbench vs Abaqus: FEA Platform Comparison for Structural Analysis

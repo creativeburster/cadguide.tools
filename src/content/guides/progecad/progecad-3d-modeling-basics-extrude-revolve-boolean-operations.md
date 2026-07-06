@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.progesoft.com/support/documentation/3d-modeling/"
   - "https://www.progesoft.com/products/progecad-professional/"
+
 ---
 
 # progeCAD 3D Modeling Basics: Extrude, Revolve, and Boolean Operations

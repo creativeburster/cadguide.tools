@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://optitex.com/products/optitex-pattern-design"
   - "https://www.gerbertechnology.com/accumark/"
-  - "https://www.lectra.com/en/modaris"
+
 ---
 
 # Optitex vs Gerber AccuMark vs Lectra Modaris: Apparel CAD Software Comparison

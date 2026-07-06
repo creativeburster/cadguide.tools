@@ -11,8 +11,8 @@ date: "2025-06-22"
 sources:
   - "https://support.marvelousdesigner.com/hc/en-us/articles/47358128221337-Avatar-Editor-ver-2025-0"
   - "https://support.marvelousdesigner.com/hc/en-us/articles/47358335130649-Auto-Fitting"
-  - "https://help.sansar.com/hc/en-us/articles/115005693363-Fitting-Marvelous-Designer-clothing-to-your-avatar"
   - "https://www.reddit.com/r/MarvelousDesigner/comments/1crjg0i/fitting_help/"
+
 ---
 
 # Marvelous Designer Avatar Setup and Garment Fitting: Custom Characters, Arrangement Points, and Auto-Fitting

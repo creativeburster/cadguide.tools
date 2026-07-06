@@ -10,9 +10,9 @@ readTime: "10 min"
 date: "2025-06-22"
 sources:
   - "https://wiki.bambulab.com/en/software/bambu-studio/3rd-party-printer-profile"
-  - "https://wiki.bambulab.com/en/software/bambu-studio/release/release-note-v1.3"
   - "https://forum.bambulab.com/t/what-exactly-is-a-print-profile-and-how-do-you-upload-one/29080"
   - "https://github.com/bambulab/BambuStudio/issues/7823"
+
 ---
 
 # Bambu Studio Custom Printer Profiles: Non-Bambu Printers, Voron, Creality, and Custom Setup

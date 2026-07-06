@@ -10,7 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://qcad.org/en/qcad-documentation"
-  - "https://qcad.org/en/qcad-user-manual"
+
 ---
 
 # QCAD 2D Drafting: Interface, Tools, and DXF/DWG Workflow for Technical Drawings

@@ -10,8 +10,8 @@ readTime: "10 min"
 date: "2025-06-29"
 sources:
   - "https://www.ptc.com/en/products/creo/parametric"
-  - "https://www.solidworks.com/product/solidworks-3d-cad"
   - "https://www.plm.automation.siemens.com/global/en/products/nx/"
+
 ---
 
 # PTC Creo vs SolidWorks vs Siemens NX: Enterprise 3D CAD Comparison for Engineering Teams

@@ -9,9 +9,9 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.gstarcad.com/help/lisp/"
   - "https://www.gstarcad.com/developer/"
   - "https://www.cadtutor.net/forum/topic/34294-corelcad-and-lisp/"
+
 ---
 
 # GstarCAD LISP Automation: Batch Processing, Layer Management, and Custom Commands

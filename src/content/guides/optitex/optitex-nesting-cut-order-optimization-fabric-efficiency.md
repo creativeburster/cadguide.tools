@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://optitex.com/products/optitex-marker"
-  - "https://optitex.com/resources/blog/"
-  - "https://optitex.com/products/optitex-pattern-design"
+  - "https://help.optitex.com/"
+  - "https://www.optitex.com/marker-nesting/"
 ---
 
 # Optitex Nesting and Cut Order Optimization: Maximizing Fabric Efficiency for Production

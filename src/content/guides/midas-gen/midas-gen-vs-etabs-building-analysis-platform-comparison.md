@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.midasuser.com/products/gen"
   - "https://www.csiamerica.com/products/etabs"
+
 ---
 
 # MIDAS Gen vs ETABS: Building Analysis Platform Comparison for Structural Engineers

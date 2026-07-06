@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.vectorworks.net/en-US/products/compare"
-  - "https://www.autodesk.com/products/revit/compare"
+  - "https://archademia.com/vectorworks-vs-revit/"
+  - "https://thefuture3d.com/vectorworks-vs-revit/"
 ---
 
 # Vectorworks vs Revit: BIM Platform Comparison for Architecture and Design Firms

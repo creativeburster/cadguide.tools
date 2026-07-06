@@ -10,9 +10,7 @@ readTime: "10 min"
 date: "2025-06-29"
 sources:
   - "https://exocad.com/products/dentalcad"
-  - "https://docs.exocad.com/docs_dentalcad_3.0/2302.html"
-  - "https://www.3shape.com/en/products/dental-lab/scanners-and-software/3shape-dental-system"
-  - "https://www.dentsplysirona.com/en/discover/discover-by-category/digital-dentistry/cerec-primescan.html"
+
 ---
 
 # exocad vs 3Shape vs CEREC: Dental CAD Software Comparison for Labs and Clinics

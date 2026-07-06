@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://manual.cype.com/cypecad/seismic/"
-  - "https://www.cype.com/en/cypecad/"
+  - "https://info.cype.com/en/software/cypecad/"
+  - "https://www.youtube.com/@CYPEIngenieros"
 ---
 
 # CYPECAD Seismic Design: Eurocode 8 Analysis, Ductility, and Capacity Design

@@ -10,8 +10,8 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://www.cadtutor.net/forum/topic/34294-corelcad-and-lisp/"
-  - "https://www.coreldraw.com/en/pages/corelcad/help/lisp/"
   - "https://community.coreldraw.com/talk/technical_graphics_products/f/corelcad/41792/corelcad-export-stl-problem"
+
 ---
 
 # CorelCAD LISP Automation: Custom Commands, Layer Tools, and Batch Processing

@@ -10,8 +10,8 @@ readTime: "10 min"
 date: "2025-06-29"
 sources:
   - "https://www.cabinetvision.com/products"
-  - "https://www.mozaiksoftware.com/features"
   - "https://www.sketchup.com/plans-and-pricing"
+
 ---
 
 # Cabinet Vision vs SketchUp vs Mozaik: Cabinet Design Software Comparison for Woodworkers

@@ -11,7 +11,7 @@ date: "2025-06-29"
 sources:
   - "https://www.gerbertechnology.com/accumark/"
   - "https://www.gerbertechnology.com/cutting/"
-  - "https://www.yunique.com/products/yuniqueplm"
+
 ---
 
 # Gerber AccuMark Marker Making and Cut Planning: Nesting, Efficiency, and Gerber Cutter Integration

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.varicad.com/en/docs/assembly"
-  - "https://www.varicad.com/en/products/"
+  - "https://www.varicad.com/en/home/"
+  - "https://www.youtube.com/@VariCADSystem"
 ---
 
 # VariCAD Assembly Design: Constraints, BOM, and Exploded View Workflow

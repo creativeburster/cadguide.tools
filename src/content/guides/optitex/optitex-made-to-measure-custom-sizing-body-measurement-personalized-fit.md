@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://optitex.com/products/optitex-pattern-design"
-  - "https://optitex.com/resources/blog/"
-  - "https://optitex.com/solutions/made-to-measure"
+  - "https://help.optitex.com/"
+  - "https://www.optitex.com/made-to-measure/"
 ---
 
 # Optitex Made-to-Measure (MTM): Custom Sizing, Body Measurement Integration, and Personalized Fit

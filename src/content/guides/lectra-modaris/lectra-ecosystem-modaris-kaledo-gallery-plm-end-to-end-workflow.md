@@ -9,10 +9,8 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://www.lectra.com/en/modaris"
-  - "https://www.lectra.com/en/3d-prototyping"
-  - "https://www.lectra.com/en/cutting"
-  - "https://www.lectra.com/en/kaledo"
+  - "https://www.lectra.com/en/products/modaris"
+  - "https://www.lectra.com/en/products/kaledo"
 ---
 
 # Lectra Ecosystem: Modaris, Kaledo, Gallery PLM, and the End-to-End Fashion Workflow

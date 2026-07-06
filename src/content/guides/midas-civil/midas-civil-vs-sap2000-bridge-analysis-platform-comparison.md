@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.midasuser.com/products/civil"
   - "https://www.csiamerica.com/products/sap2000"
+
 ---
 
 # MIDAS Civil vs SAP2000: Bridge Analysis Platform Comparison for Bridge Engineers

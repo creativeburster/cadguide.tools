@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://docs.csiamerica.com/help/sap2000/dynamic-analysis"
   - "https://www.csiamerica.com/products/sap2000"
+
 ---
 
 # SAP2000 Seismic Analysis: Response Spectrum, Time History, and Pushover

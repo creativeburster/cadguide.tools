@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://manual.cype.com/cypecad/steel/"
-  - "https://www.cype.com/en/cypecad/"
+  - "https://info.cype.com/en/software/cypecad/"
+  - "https://www.youtube.com/@CYPEIngenieros"
 ---
 
 # CYPECAD Steel Design: Eurocode 3 Code Checking, Member Optimization, and Connection Design

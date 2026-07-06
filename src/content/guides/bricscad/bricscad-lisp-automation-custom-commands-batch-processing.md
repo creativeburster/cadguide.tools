@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://help.bricsys.com/document/BRICSCAD-LISP-DEVELOPER-GUIDE/Content/Topics/LISP-overview.htm"
   - "https://www.bricsys.com/bricscad/api"
+
 ---
 
 # BricsCAD LISP Automation: Custom Commands and Batch Processing Scripts

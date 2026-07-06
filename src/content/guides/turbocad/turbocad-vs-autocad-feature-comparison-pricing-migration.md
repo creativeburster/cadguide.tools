@@ -10,7 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.turbocad.com/compare"
-  - "https://www.autodesk.com/products/autocad/compare"
+
 ---
 
 # TurboCAD vs AutoCAD: Feature Comparison, Pricing, and Migration Guide

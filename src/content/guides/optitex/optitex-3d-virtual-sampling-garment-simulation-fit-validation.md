@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
-  - "https://optitex.com/products/optitex-3d-simulation"
-  - "https://optitex.com/resources/blog/"
-  - "https://optitex.com/products/optitex-pattern-design"
+  - "https://help.optitex.com/"
+  - "https://www.optitex.com/3d-virtual-sampling/"
 ---
 
 # Optitex 3D Virtual Sampling: Garment Simulation, Fit Validation, and Pattern Adjustment

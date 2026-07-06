@@ -10,7 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://app-help.vectorworks.net/spotlight/"
-  - "https://www.vectorworks.net/en-US/products/spotlight"
+
 ---
 
 # Vectorworks Spotlight: Entertainment Design, Lighting, and Event Production Workflow

@@ -10,7 +10,7 @@ readTime: "12 min read"
 date: "2026-06-25"
 sources:
   - "https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-C3D4E5F6-A7B8-9012-CDEF-123456789ABC"
-  - "https://forums.autodesk.com/t5/revit-forum/worksharing-dwl-file-corruption/td-p/3210987"
+
 ---
 
 # Resolving Revit Worksharing File Locks and Corrupted DWL Files

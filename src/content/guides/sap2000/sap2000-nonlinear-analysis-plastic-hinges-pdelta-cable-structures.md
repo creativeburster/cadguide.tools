@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://docs.csiamerica.com/help/sap2000/nonlinear"
   - "https://www.csiamerica.com/products/sap2000"
+
 ---
 
 # SAP2000 Nonlinear Analysis: Plastic Hinges, P-Delta, and Cable Structures

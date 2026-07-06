@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.simscale.com/product/features/cfd/"
   - "https://docs.simscale.com/"
+
 ---
 
 # SimScale Cloud CFD: External Aerodynamics, Internal Flow, and Thermal Management

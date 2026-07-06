@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.varicad.com/en/docs/2d-drawing"
-  - "https://www.varicad.com/en/products/"
+  - "https://www.varicad.com/en/home/"
+  - "https://www.youtube.com/@VariCADSystem"
 ---
 
 # VariCAD 2D Drawing Generation: Views, Dimensions, GD&T, and DWG Export

@@ -10,8 +10,8 @@ readTime: "10 min read"
 date: "2026-06-30"
 sources:
   - "https://www.reddit.com/r/cad/comments/ad06pt/corelcad_vs_bricscad_vs_draftsight/"
-  - "https://www.coreldraw.com/en/pages/corelcad/help/plotting/"
   - "https://www.reddit.com/r/VIDEOENGINEERING/comments/jerxed/corelcad_instead_of_autocad_lt_for_wire_diagrams/"
+
 ---
 
 # CorelCAD Plotting and PDF Export: CTB Configuration, Page Setups, and Batch Output

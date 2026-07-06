@@ -11,7 +11,7 @@ date: "2026-06-30"
 sources:
   - "https://www.reddit.com/r/StructuralEngineering/comments/1gywbts/what_software_to_use/"
   - "https://www.reddit.com/r/StructuralEngineering/comments/1cu1bsz/which_software_is_best/"
-  - "https://www.cype.com/en/cypecad/"
+
 ---
 
 # CYPECAD vs ETABS: Building Design Platform Comparison for European and Latin American Markets

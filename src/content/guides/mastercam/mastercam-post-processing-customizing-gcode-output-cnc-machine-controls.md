@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://www.mastercam.com/support/learning-resources/"
-  - "https://docs.mastercam.com/2025/en/"
-  - "https://www.mastercam.com/products/mastercam-mill/"
+  - "https://www.mastercam.com/support/"
+  - "https://www.mastercam.com/resources/"
 ---
 
 # Mastercam Post Processing: Customizing G-Code Output for CNC Machine Controls

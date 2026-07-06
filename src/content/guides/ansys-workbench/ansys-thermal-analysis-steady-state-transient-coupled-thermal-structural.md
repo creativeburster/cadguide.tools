@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.ansys.com/products/thermal"
   - "https://ansyshelp.ansys.com/"
+
 ---
 
 # ANSYS Thermal Analysis: Steady-State, Transient, and Coupled Thermal-Structural Simulation

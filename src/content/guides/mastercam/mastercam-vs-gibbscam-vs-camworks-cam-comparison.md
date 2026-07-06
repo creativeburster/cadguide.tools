@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://www.mastercam.com/products/"
-  - "https://www.gibbscam.com/products"
-  - "https://www.camworks.com/products"
+  - "https://www.mastercam.com/solutions/"
+  - "https://www.g2.com/products/mastercam/competitors"
 ---
 
 # Mastercam vs GibbsCAM vs CAMWorks: CAM Software Comparison for CNC Programming

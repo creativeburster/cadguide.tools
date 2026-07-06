@@ -11,7 +11,7 @@ date: "2025-06-29"
 sources:
   - "https://www.ptc.com/en/products/creo/parametric"
   - "https://support.ptc.com/help/creo/creo_pma/r10.0/usascii/index.html"
-  - "https://www.ptc.com/en/learn/tutorials/creo"
+
 ---
 
 # PTC Creo Parametric Part Design: Sketching, Features, and Intent Reference

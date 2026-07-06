@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:
-  - "https://help.bricsys.com/document/BRICSCAD-BIM-USER-GUIDE/Content/Topics/BIM-modeling.htm"
   - "https://www.bricsys.com/bricscad/bim"
+
 ---
 
 # BricsCAD BIM Modeling: Walls, Slabs, and Roof Tools from 2D Plans

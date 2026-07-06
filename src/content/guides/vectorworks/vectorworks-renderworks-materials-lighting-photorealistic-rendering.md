@@ -10,7 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://app-help.vectorworks.net/rendering/"
-  - "https://www.vectorworks.net/en-US/products/renderworks"
+
 ---
 
 # Vectorworks Renderworks: Materials, Lighting, and Photorealistic Rendering Workflow

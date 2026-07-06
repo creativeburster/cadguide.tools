@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.lstc.com/products/ls-dyna"
-  - "https://www.dynasupport.com/"
+  - "https://lsdyna.ansys.com/manuals/"
+  - "https://www.nhtsa.gov/crash-simulation-vehicle-safety"
 ---
 
 # LS-DYNA Vehicle Crash Simulation: Frontal, Side, and Rear Impact Analysis

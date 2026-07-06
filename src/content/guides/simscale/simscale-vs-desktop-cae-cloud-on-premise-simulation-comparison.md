@@ -10,7 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://www.simscale.com/product/"
-  - "https://www.ansys.com/products"
+
 ---
 
 # SimScale vs Desktop CAE: Cloud vs On-Premise Simulation Platform Comparison

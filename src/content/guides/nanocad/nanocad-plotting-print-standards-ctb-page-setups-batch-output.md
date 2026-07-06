@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://nanocad.com/support/documentation/plotting"
   - "https://nanocad.com/products/nanocad/"
+
 ---
 
 # nanoCAD Plotting and Print Standards: CTB Files, Page Setups, and Batch Output

@@ -9,9 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:
-  - "https://qcad.org/en/qcad-documentation/blocks"
-  - "https://qcad.org/en/qcad-user-manual"
   - "https://www.reddit.com/r/FreeCAD/comments/13s495a/freecad_or_qcad/"
+
 ---
 
 # QCAD Block Libraries and Part Management: Creating Reusable Components

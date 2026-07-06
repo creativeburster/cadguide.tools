@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://help.bricsys.com/document/BRICSCAD-USER-GUIDE/Content/Topics/DWG-compatibility.htm"
   - "https://www.bricsys.com/bricscad/compare"
+
 ---
 
 # BricsCAD to AutoCAD DWG Compatibility: Seamless Workflow Transition Guide

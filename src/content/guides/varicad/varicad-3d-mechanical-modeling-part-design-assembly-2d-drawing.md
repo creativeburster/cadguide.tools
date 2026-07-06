@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.varicad.com/en/docs/"
-  - "https://www.varicad.com/en/products/"
+  - "https://www.varicad.com/en/home/"
+  - "https://www.youtube.com/@VariCADSystem"
 ---
 
 # VariCAD 3D Mechanical Modeling: Part Design, Assembly, and 2D Drawing Generation

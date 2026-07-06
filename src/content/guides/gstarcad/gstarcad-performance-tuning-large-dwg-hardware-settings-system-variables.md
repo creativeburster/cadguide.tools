@@ -9,9 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.gstarcad.com/help/performance/"
-  - "https://www.gstarcad.com/products/gstarcad/"
   - "https://gstarcadaustralia.com/wp-content/uploads/2024/04/Activation-FAQ-Troubleshooting-1.pdf"
+
 ---
 
 # GstarCAD Performance Tuning: Large DWG Files, Hardware Settings, and System Variables

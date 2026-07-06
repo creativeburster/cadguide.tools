@@ -15,7 +15,7 @@ import { ToolLogo } from '@/components/tool-logo';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
-import { clampTitle } from '@/lib/seo';
+import { clampTitle, guideArticleLd, guideBreadcrumbLd } from '@/lib/seo';
 
 const CONTENT_DIR = path.join(process.cwd(), 'src', 'content', 'guides');
 
@@ -53,7 +53,7 @@ function getAllGuides(): { slug: string; frontmatter: GuideFrontmatter; tool: st
   return guides;
 }
 
-function getGuideBySlug(slug: string): { frontmatter: GuideFrontmatter; contentHtml: string; tool: string } | null {
+function getGuideBySlug(slug: string): { frontmatter: GuideFrontmatter; contentHtml: string; tool: string; headings: { level: number; id: string; text: string }[]; wordCount: number } | null {
   const all = getAllGuides();
   const found = all.find(g => g.slug === slug);
   if (!found) return null;
@@ -63,11 +63,29 @@ function getGuideBySlug(slug: string): { frontmatter: GuideFrontmatter; contentH
   const { data, content } = matter(raw);
 
   const processed = remark().use(html).processSync(content);
-  const contentHtml = processed.toString()
+  let contentHtml = processed.toString()
     .replace(/<h1>/g, '<h2>')
     .replace(/<\/h1>/g, '</h2>');
 
-  return { frontmatter: data as GuideFrontmatter, contentHtml, tool: found.tool };
+  // Inject id anchors into headings for ToC deep linking
+  let headingIndex = 0;
+  contentHtml = contentHtml.replace(/<h([23])>(.*?)<\/h\1>/gi, (_match, level, text) => {
+    const id = `section-${headingIndex++}`;
+    return `<h${level} id="${id}">${text}</h${level}>`;
+  });
+
+  // Extract headings for ToC
+  const tocRegex = /<h([23]) id="(section-\d+)">(.*?)<\/h\1>/gi;
+  const headings: { level: number; id: string; text: string }[] = [];
+  let m;
+  while ((m = tocRegex.exec(contentHtml)) !== null) {
+    headings.push({ level: parseInt(m[1]), id: m[2], text: m[3].replace(/<[^>]+>/g, '') });
+  }
+
+  // Word count for schema
+  const wordCount = content.split(/\s+/).filter(Boolean).length;
+
+  return { frontmatter: data as GuideFrontmatter, contentHtml, tool: found.tool, headings, wordCount };
 }
 
 export function generateStaticParams() {
@@ -133,7 +151,7 @@ export default async function GuideArticlePage(
   const guide = getGuideBySlug(slug);
   if (!guide) notFound();
 
-  const { frontmatter, contentHtml, tool } = guide;
+  const { frontmatter, contentHtml, tool, headings, wordCount } = guide;
   const categoryLabel = CATEGORY_LABELS[frontmatter.category] || frontmatter.category;
   const categoryColor = CATEGORY_COLORS[frontmatter.category] || 'bg-slate-50 text-slate-700 border-slate-200';
 
@@ -190,8 +208,35 @@ export default async function GuideArticlePage(
   };
   const toolboxItems = toolboxMap[frontmatter.category] || toolboxMap['troubleshooting'];
 
+  // Build JSON-LD payloads
+  const articleSchema = guideArticleLd({
+    title: frontmatter.title,
+    excerpt: frontmatter.excerpt,
+    slug: slug,
+    author: frontmatter.author,
+    date: frontmatter.date,
+    category: frontmatter.category,
+    softwareSlug: frontmatter.softwareSlug,
+    wordCount,
+  });
+  const breadcrumbSchema = guideBreadcrumbLd({
+    toolDisplayName,
+    category: categoryLabel,
+    title: frontmatter.title,
+    slug: slug,
+  });
+
   return (
     <article className="min-h-screen bg-[#fcfdfe]">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <header className="border-b border-slate-100 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -273,6 +318,27 @@ export default async function GuideArticlePage(
                 <div>Status: <span className="text-emerald-600 font-black flex items-center gap-1">● Verified</span></div>
               </div>
             </div>
+
+            {/* Table of Contents */}
+            {headings.length >= 3 && (
+              <nav className="mb-8 bg-white p-5 sm:p-6 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm">
+                <h2 className="text-xs font-black text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <FileText className="w-4 h-4" /> Table of Contents
+                </h2>
+                <ol className="space-y-1.5">
+                  {headings.map((h: { level: number; id: string; text: string }, i: number) => (
+                    <li key={i} className={cn(h.level === 3 ? 'pl-4' : '')}>
+                      <a
+                        href={`#${h.id}`}
+                        className="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors block py-0.5"
+                      >
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
 
             {/* Article content */}
             <div

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://manual.midasuser.com/EN/civil/2023/psc-design"
-  - "https://www.midasuser.com/products/civil"
+  - "https://globalsupport.midasuser.com/"
+  - "https://academy.midasuser.com/"
 ---
 
 # MIDAS Civil PSC Bridge Design: Prestress Loss, Tendon Profiling, and Stress Checks

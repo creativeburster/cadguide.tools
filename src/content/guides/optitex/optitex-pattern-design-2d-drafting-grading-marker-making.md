@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
-  - "https://optitex.com/products/optitex-pattern-design"
-  - "https://optitex.com/products/optitex-marker"
-  - "https://optitex.com/resources/blog/"
+  - "https://help.optitex.com/"
+  - "https://www.optitex.com/pds/"
 ---
 
 # Optitex Pattern Design: 2D Drafting, Grading, and Marker Making for Production

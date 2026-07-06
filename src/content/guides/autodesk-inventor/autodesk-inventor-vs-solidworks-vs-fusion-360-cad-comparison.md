@@ -10,8 +10,7 @@ readTime: "10 min"
 date: "2025-06-29"
 sources:
   - "https://www.autodesk.com/products/inventor/overview"
-  - "https://www.solidworks.com/product/solidworks-3d-cad"
-  - "https://www.autodesk.com/products/fusion-360/overview"
+
 ---
 
 # Autodesk Inventor vs SolidWorks vs Fusion 360: Mid-Market 3D CAD Comparison

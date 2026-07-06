@@ -10,7 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://www.bricsys.com/bricscad/licensing"
-  - "https://help.bricsys.com/document/BRICSCAD-ADMIN-GUIDE/Content/Topics/Network-licensing.htm"
+
 ---
 
 # BricsCAD Licensing and Deployment: Network Licenses, Silent Install, and Activation Troubleshooting

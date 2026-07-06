@@ -9,9 +9,9 @@ author: "CAD IT Admin"
 readTime: "9 min"
 date: "2025-06-23"
 sources:
-  - "https://devtalk.freecad.org/t/too-long-processing-time/51330"
   - "https://github.com/FreeCAD/FreeCAD/issues/18735"
   - "https://github.com/FreeCAD/FreeCAD/issues/20157"
+
 ---
 
 # FreeCAD Assembly Slow Loading: TechDraw Bloat, A2plus Optimization, and File Splitting

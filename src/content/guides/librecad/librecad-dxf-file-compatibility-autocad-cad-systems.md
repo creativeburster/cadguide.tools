@@ -10,8 +10,7 @@ readTime: "10 min read"
 date: "2026-06-30"
 sources:
   - "https://www.reddit.com/r/FreeCAD/comments/13s495a/freecad_or_qcad/"
-  - "https://librecad.org/docs/"
-  - "https://librecad.org/wiki/dxf"
+
 ---
 
 # LibreCAD DXF File Compatibility: Working with AutoCAD and Other CAD Systems

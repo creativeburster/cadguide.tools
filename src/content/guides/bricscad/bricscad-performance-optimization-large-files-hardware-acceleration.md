@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://help.bricsys.com/document/BRICSCAD-USER-GUIDE/Content/Topics/Performance.htm"
   - "https://www.bricsys.com/bricscad/system-requirements"
+
 ---
 
 # BricsCAD Performance Optimization: Large Files, Hardware Acceleration, and System Tuning

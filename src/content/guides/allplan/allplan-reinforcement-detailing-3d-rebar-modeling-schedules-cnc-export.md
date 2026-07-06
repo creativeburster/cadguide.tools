@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.allplan.com/en/help/reinforcement"
   - "https://www.allplan.com/en/products/allplan-engineering"
+
 ---
 
 # Allplan Reinforcement Detailing: 3D Rebar Modeling, Schedules, and CNC Export

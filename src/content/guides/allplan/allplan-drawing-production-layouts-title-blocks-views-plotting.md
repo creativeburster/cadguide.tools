@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.allplan.com/en/help/drawing"
   - "https://www.allplan.com/en/products/allplan-architecture"
+
 ---
 
 # Allplan Drawing Production: Layouts, Title Blocks, Views, and Plotting Standards

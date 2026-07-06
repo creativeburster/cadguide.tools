@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.lstc.com/products/ls-dyna"
   - "https://www.3ds.com/products/simulia/abaqus"
+
 ---
 
 # LS-DYNA vs Abaqus/Explicit: Explicit Dynamics Solver Comparison for Crash and Impact

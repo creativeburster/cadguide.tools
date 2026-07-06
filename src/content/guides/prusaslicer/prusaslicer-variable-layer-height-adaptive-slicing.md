@@ -12,7 +12,7 @@ sources:
   - "https://help.prusa3d.com/article/variable-layer-height-function_1750"
   - "https://filamentfeed.com/article/variable-layer-height-adaptive-slicing-june-2026"
   - "https://www.muppetlabs.co/3dprinting_techniques_adaptive_layer_heights.html"
-  - "https://nozzlenerd.com/how-to-use-adaptive-layer-height-in-3d-printing-faster-prints-without-losing-quality/"
+
 ---
 
 # PrusaSlicer Variable Layer Height: Adaptive Slicing for Faster Prints Without Losing Quality

@@ -10,8 +10,8 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://qcad.org/en/qcad-scripting"
-  - "https://qcad.org/en/qcad-documentation/scripting"
   - "https://www.reddit.com/r/FreeCAD/comments/13s495a/freecad_or_qcad/"
+
 ---
 
 # QCAD JavaScript Scripting: Automating Drawing Tasks and Custom Tools

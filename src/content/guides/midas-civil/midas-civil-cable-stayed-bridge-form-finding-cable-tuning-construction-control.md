@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://manual.midasuser.com/EN/civil/2023/cable-stayed"
-  - "https://www.midasuser.com/products/civil"
+  - "https://globalsupport.midasuser.com/"
+  - "https://academy.midasuser.com/"
 ---
 
 # MIDAS Civil Cable-Stayed Bridge Analysis: Form Finding, Cable Tuning, and Construction Control

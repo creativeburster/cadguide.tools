@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://manual.midasuser.com/EN/gen/2023/concrete-design"
-  - "https://www.midasuser.com/products/gen"
+  - "https://globalsupport.midasuser.com/"
+  - "https://academy.midasuser.com/"
 ---
 
 # MIDAS Gen Concrete Shear Wall Design: Meshed Walls, Pier Forces, and Boundary Elements

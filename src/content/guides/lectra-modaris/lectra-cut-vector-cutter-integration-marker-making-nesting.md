@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://www.lectra.com/en/cutting"
-  - "https://www.lectra.com/en/modaris"
-  - "https://www.lectra.com/en/3d-prototyping"
+  - "https://www.lectra.com/en/products/vector"
+  - "https://www.lectra.com/en/products/diamino"
 ---
 
 # Lectra Cut and Vector Cutter Integration: Marker Making, Nesting, and Automated Cutting

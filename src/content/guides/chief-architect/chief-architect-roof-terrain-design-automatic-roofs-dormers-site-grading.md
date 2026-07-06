@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.chiefarchitect.com/support/article/KB-01049/"
   - "https://www.chiefarchitect.com/products/premier/"
+
 ---
 
 # Chief Architect Roof and Terrain Design: Automatic Roofs, Dormers, and Site Grading

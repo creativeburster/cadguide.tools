@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
-  - "https://www.mastercam.com/products/mastercam-mill/"
-  - "https://www.mastercam.com/support/learning-resources/"
-  - "https://docs.mastercam.com/2025/en/"
+  - "https://www.mastercam.com/support/"
+  - "https://www.mastercam.com/resources/training/"
 ---
 
 # Mastercam 2D Machining: Facing, Contour, Pocket, and Drilling Toolpaths

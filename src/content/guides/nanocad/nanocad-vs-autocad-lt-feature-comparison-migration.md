@@ -10,7 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://nanocad.com/products/nanocad/compare"
-  - "https://www.autodesk.com/products/autocad-lt/compare"
+
 ---
 
 # nanoCAD vs AutoCAD LT: Feature Comparison and Cost-Saving Migration Guide

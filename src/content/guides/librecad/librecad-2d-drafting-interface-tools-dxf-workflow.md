@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://librecad.org/docs/"
-  - "https://librecad.org/wiki/"
+  - "https://librecad.readthedocs.io/en/latest/"
+  - "https://wiki.librecad.org/index.php/Main_Page"
 ---
 
 # LibreCAD 2D Drafting: Interface, Tools, and DXF Workflow for Technical Drawings

@@ -10,7 +10,7 @@ readTime: "12 min"
 date: "2025-06-29"
 sources:
   - "https://exocad.com/products/dentalcad"
-  - "https://docs.exocad.com/docs_dentalcad_3.0/2302.html"
+
 ---
 
 # exocad Implant Restoration Design: Abutment, Screw-Retained Crown, and Hybrid Prosthesis

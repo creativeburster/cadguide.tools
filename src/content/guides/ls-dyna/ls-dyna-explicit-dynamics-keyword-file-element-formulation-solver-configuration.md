@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.lstc.com/products/ls-dyna"
-  - "https://www.dynasupport.com/"
+  - "https://lsdyna.ansys.com/manuals/"
+  - "https://www.dynasupport.com/howtos"
 ---
 
 # LS-DYNA Explicit Dynamics: Keyword File Setup, Element Formulation, and Solver Configuration

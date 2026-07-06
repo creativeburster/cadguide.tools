@@ -9,9 +9,8 @@ author: "CAD IT Admin"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
-  - "https://www.lectra.com/en/modaris"
-  - "https://www.lectra.com/en/3d-prototyping"
-  - "https://www.lectra.com/en/cutting"
+  - "https://www.lectra.com/en/products/modaris"
+  - "https://www.scribd.com/document/lectra-modaris-user-guide"
 ---
 
 # Lectra Modaris Pattern Design: Advanced Drafting, Variant Management, and Size Grading

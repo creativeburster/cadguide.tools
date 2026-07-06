@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://nanocad.com/support/documentation/lisp"
   - "https://nanocad.com/products/nanocad/plus/"
+
 ---
 
 # nanoCAD LISP Programming: Custom Commands, Entity Selection, and Drawing Automation

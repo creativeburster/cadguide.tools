@@ -12,7 +12,7 @@ sources:
   - "https://www.reddit.com/r/CNC/comments/1g2ijea/powermill_slow_calculation_at_36/"
   - "https://forums.autodesk.com/t5/powermill-forum/separate-toolpath-tolerance-from-collision-check-tolerance-for/td-p/12148265"
   - "https://forums.autodesk.com/t5/powermill-forum/gouge-and-collision-check-parameter/td-p/12903503"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-check-a-toolpath-for-collisions-or-gouges-in-PowerMill.html"
+
 ---
 
 # PowerMill Toolpath Calculation Issues: Fixing Slow Calculation, Bad STL Files, and Collision Check Problems

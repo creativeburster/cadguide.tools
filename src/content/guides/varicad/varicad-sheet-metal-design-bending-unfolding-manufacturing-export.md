@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.varicad.com/en/docs/sheet-metal"
-  - "https://www.varicad.com/en/products/"
+  - "https://www.varicad.com/en/home/"
+  - "https://www.youtube.com/@VariCADSystem"
 ---
 
 # VariCAD Sheet Metal Design: Bending, Unfolding, and Manufacturing Export

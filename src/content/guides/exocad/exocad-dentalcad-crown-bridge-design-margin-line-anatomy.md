@@ -10,8 +10,8 @@ readTime: "12 min"
 date: "2025-06-29"
 sources:
   - "https://exocad.com/products/dentalcad"
-  - "https://docs.exocad.com/docs_dentalcad_3.0/2302.html"
   - "https://www.youtube.com/watch?v=exocad-tutorials"
+
 ---
 
 # exocad DentalCAD Crown and Bridge Design: Margin Line, Reduction, and Anatomy Workflow

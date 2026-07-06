@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
-  - "https://www.ansys.com/products/fluids/ansys-fluent"
   - "https://ansyshelp.ansys.com/"
+
 ---
 
 # ANSYS Fluent CFD: Meshing, Boundary Conditions, and Flow Analysis

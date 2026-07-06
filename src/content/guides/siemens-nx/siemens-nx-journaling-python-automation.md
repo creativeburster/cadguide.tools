@@ -9,8 +9,8 @@ author: "CAD IT Admin"
 readTime: "11 min"
 date: "2025-06-19"
 sources:
-  - "https://docs.sw.siemens.com/en-US/product/471595/release/NX-2306/text/ug_doc/journaling"
   - "https://community.sw.siemens.com/s/question/0D54O00006mG0HbSAK/solved-general-fault-exception"
+
 ---
 
 # NX Journaling Automation: Python Scripts for Repetitive CAD Tasks

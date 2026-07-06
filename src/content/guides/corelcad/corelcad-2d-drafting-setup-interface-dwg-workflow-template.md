@@ -11,7 +11,7 @@ date: "2026-06-30"
 sources:
   - "https://www.reddit.com/r/cad/comments/ad06pt/corelcad_vs_bricscad_vs_draftsight/"
   - "https://www.reddit.com/r/cad/comments/j2uq0g/why_are_opinions_on_corelcad/"
-  - "https://www.coreldraw.com/en/pages/corelcad/help/"
+
 ---
 
 # CorelCAD 2D Drafting Setup: Interface, DWG Workflow, and Template Creation

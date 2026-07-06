@@ -11,7 +11,7 @@ date: "2025-06-29"
 sources:
   - "https://www.gerbertechnology.com/accumark/"
   - "https://www.gerbertechnology.com/accumark-3d/"
-  - "https://www.yunique.com/products/yuniqueplm"
+
 ---
 
 # Gerber AccuMark Pattern Design: Drafting, Grade Rules, and Size Run Management

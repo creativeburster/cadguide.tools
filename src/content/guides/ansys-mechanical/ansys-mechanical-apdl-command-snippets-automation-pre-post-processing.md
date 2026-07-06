@@ -10,9 +10,9 @@ readTime: "13 min read"
 date: "2026-06-30"
 sources:
   - "https://www.padtinc.com/2019/07/08/how-to-use-apdl-command-snippets-in-your-ansys-mechanical-model/"
-  - "https://innovationspace.ansys.com/forum/forums/topic/commands-to-run-apdl-macros-via-python-scriptting-in-ansys-mechanical/"
   - "https://blog.ozeninc.com/resources/postprocessing-non-accesible-objects-in-ansys-mechanical-part-2"
   - "https://ansyshelp.ansys.com/public/Views/Secured/corp/v242/en/wb2_js/wb2js_example4.html"
+
 ---
 
 # ANSYS Mechanical APDL Command Snippets: Automating Pre-Processing, Post-Processing, and Custom Results

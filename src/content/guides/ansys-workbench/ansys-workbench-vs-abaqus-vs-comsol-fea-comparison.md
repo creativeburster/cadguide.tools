@@ -9,9 +9,9 @@ author: "CAD IT Admin"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
-  - "https://www.ansys.com/products/structures/ansys-mechanical"
   - "https://www.3ds.com/products-services/simulia/products/abaqus/"
   - "https://www.comsol.com/products"
+
 ---
 
 # ANSYS Workbench vs Abaqus vs COMSOL: FEA Software Comparison for Engineering Simulation
