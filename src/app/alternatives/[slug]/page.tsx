@@ -155,9 +155,12 @@ function faqLd(tool: Tool, alts: Tool[]) {
         name: `Why would I switch away from ${tool.name}?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: tool.cons && tool.cons.length > 0
-            ? `The most frequently cited pain points with ${tool.name}: ${tool.cons.slice(0, 3).join('; ')}. Each alternative below directly addresses one or more of these limitations.`
-            : `Common reasons: cost (perpetual vs subscription pricing), platform requirements, specific feature gaps, or vendor lock-in concerns.`,
+          text: (() => {
+            const cons = tool.cons?.filter(c => c.length < 80).slice(0, 3);
+            if (!cons || cons.length === 0) return `Common reasons: cost (perpetual vs subscription pricing), platform requirements, specific feature gaps, or vendor lock-in concerns.`;
+            const formatted = cons.map(c => c.charAt(0).toLowerCase() + c.slice(1).replace(/\.$/, ''));
+            return `The most frequently cited pain points with ${tool.name}: ${formatted.join('; ')}. Each alternative below directly addresses one or more of these limitations.`;
+          })(),
         },
       },
     ],
@@ -365,10 +368,13 @@ function renderAlternativesFAQs(tool: Tool, alts: Tool[], style: AlternativeStyl
         <div>
           <dt className="font-semibold text-slate-900 text-sm sm:text-base">Why would I switch away from {tool.name}?</dt>
           <dd className="mt-2 text-slate-600 text-sm leading-relaxed">
-            {tool.cons && tool.cons.length > 0
-              ? <span>The most common pain points reported by {tool.name} users: <strong>{tool.cons[0]}</strong>{tool.cons[1] ? ` Also: ${tool.cons[1]}.` : ''} Each alternative on this list addresses at least one of these gaps.</span>
-              : <span>Most teams switch due to licensing costs, platform restrictions, or specific workflow gaps that a more specialized tool handles better.</span>
-            }
+            {(() => {
+              const cons = tool.cons?.filter(c => c.length < 80);
+              if (!cons || cons.length === 0) return <span>Most teams switch due to licensing costs, platform restrictions, or specific workflow gaps that a more specialized tool handles better.</span>;
+              const c0 = cons[0].charAt(0).toUpperCase() + cons[0].slice(1).replace(/\.$/, '');
+              const c1 = cons[1] ? (cons[1].charAt(0).toLowerCase() + cons[1].slice(1).replace(/\.$/, '')) : null;
+              return <span>The most common pain points reported by {tool.name} users: <strong>{c0}</strong>{c1 ? `. Also: ${c1}` : ''}. Each alternative on this list addresses at least one of these gaps.</span>;
+            })()}
           </dd>
         </div>
       </dl>
