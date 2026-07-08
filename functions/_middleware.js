@@ -367,8 +367,13 @@ export async function onRequest(context) {
   const url = new URL(context.request.url);
   const path = url.pathname;
 
-  // Check exact match against known-deleted URLs
-  if (GONE_PATHS.has(path)) {
+  // Regex to detect legacy AI-generated guides patterns, e.g. /guides/allplan-troubleshooting-0
+  // Categories: troubleshooting, performance, migration, standards, procurement, deployment, manufacturing, printing, workflow, comparison
+  // Followed by a single digit suffix (0-9)
+  const isLegacyGuidePattern = /^\/guides\/[a-zA-Z0-9_-]+-(troubleshooting|performance|migration|standards|procurement|deployment|manufacturing|printing|workflow|comparison)-[0-9]$/.test(path);
+
+  // Check exact match against known-deleted URLs OR regex match for legacy guides pattern
+  if (GONE_PATHS.has(path) || isLegacyGuidePattern) {
     return new Response(
       `<!DOCTYPE html>
 <html lang="en">
