@@ -3,7 +3,8 @@
 
 // All 173 deleted URLs from GSC 404 report (2026-07-08)
 const GONE_PATHS = new Set([
-  // === Guides (64) — legacy AI-generated batch, pattern: {tool}-troubleshooting-{N} ===
+  // === Guides (65) — legacy AI-generated batch ===
+  "/guides/substance-painter-troubleshooting-1",  // previously blocked by robots.txt
   "/guides/surfcam-troubleshooting-0",
   "/guides/blender-troubleshooting-6",
   "/guides/allegro-pcb-troubleshooting-6",
@@ -187,7 +188,7 @@ export async function onRequest(context) {
     return new Response(
       `<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><title>410 Gone</title><meta name="robots" content="noindex"></head>
+<head><meta charset="utf-8"><title>410 Gone</title></head>
 <body>
 <h1>410 Gone</h1>
 <p>This page has been permanently removed and will not return.</p>
@@ -198,7 +199,6 @@ export async function onRequest(context) {
         status: 410,
         headers: {
           "Content-Type": "text/html;charset=UTF-8",
-          "X-Robots-Tag": "noindex",
           "Cache-Control": "public, max-age=86400",
         },
       }
