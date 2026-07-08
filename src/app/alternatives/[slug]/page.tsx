@@ -155,7 +155,9 @@ function faqLd(tool: Tool, alts: Tool[]) {
         name: `Why would I switch away from ${tool.name}?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `Common reasons: cost (perpetual vs subscription pricing), platform requirements (Mac / Linux / web), specific feature gaps, or vendor lock-in concerns. Each alternative below addresses one or more of these.`,
+          text: tool.cons && tool.cons.length > 0
+            ? `The most frequently cited pain points with ${tool.name}: ${tool.cons.slice(0, 3).join('; ')}. Each alternative below directly addresses one or more of these limitations.`
+            : `Common reasons: cost (perpetual vs subscription pricing), platform requirements, specific feature gaps, or vendor lock-in concerns.`,
         },
       },
     ],
@@ -363,7 +365,10 @@ function renderAlternativesFAQs(tool: Tool, alts: Tool[], style: AlternativeStyl
         <div>
           <dt className="font-semibold text-slate-900 text-sm sm:text-base">Why would I switch away from {tool.name}?</dt>
           <dd className="mt-2 text-slate-600 text-sm leading-relaxed">
-            Most draftspeople switch due to rising subscription licensing costs, localized platform needs (e.g. running native Mac or Linux CAD engines), or sudden proprietary cloud storage mandates.
+            {tool.cons && tool.cons.length > 0
+              ? <span>The most common pain points reported by {tool.name} users: <strong>{tool.cons[0]}</strong>{tool.cons[1] ? ` Also: ${tool.cons[1]}.` : ''} Each alternative on this list addresses at least one of these gaps.</span>
+              : <span>Most teams switch due to licensing costs, platform restrictions, or specific workflow gaps that a more specialized tool handles better.</span>
+            }
           </dd>
         </div>
       </dl>
@@ -428,6 +433,20 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                   <span>{whyTryInstead(tool, alt)}</span>
                 </div>
+                {/* Editor's Pick highlight for top 3 — unique content per page */}
+                {i < 3 && alt.pros && alt.pros.length > 0 && (
+                  <div className="mt-3 p-3 bg-blue-50/60 rounded-xl border border-blue-100 text-xs text-blue-800 leading-relaxed">
+                    <span className="font-bold uppercase tracking-wide text-blue-600 block mb-1">
+                      #{i + 1} Editor Pick
+                    </span>
+                    {alt.pros[0]}{alt.pros[1] ? ` ${alt.pros[1]}` : ''}
+                    {alt.pricing_type === 'Free' || alt.pricing_type === 'Open Source'
+                      ? ` Available at no cost.`
+                      : tool.starting_price > 0 && alt.starting_price > 0 && alt.starting_price < tool.starting_price * 0.7
+                      ? ` Starting at $${alt.starting_price} — ${Math.round((1 - alt.starting_price / tool.starting_price) * 100)}% less than ${tool.name}.`
+                      : ''}
+                  </div>
+                )}
                 <div className="mt-4 flex flex-wrap gap-4">
                   <Link
                     href={`/tools/${alt.slug}`}
@@ -593,14 +612,41 @@ function renderRelatedLinks(tool: Tool) {
 
 // --- MAIN CONTROLLER PAGE ---
 
-function getDynamicAlternativesIntro(tool: Tool, count: number, archetype: string): string {
+function getDynamicAlternativesIntro(tool: Tool, alts: Tool[], archetype: string): string {
+  const count = alts.length;
+
+  // Pricing signal
+  const pricingSignal = tool.pricing_type === 'Subscription'
+    ? `${tool.name} is subscription-only — teams that need perpetual ownership or want to cap long-term spend`
+    : tool.pricing_type === 'Perpetual'
+    ? `${tool.name} uses perpetual licensing — teams needing cloud collaboration or flexible seat scaling`
+    : tool.pricing_type === 'Free' || tool.pricing_type === 'Open Source'
+    ? `Teams upgrading from ${tool.name}'s open-source model to a commercially supported platform`
+    : `Teams evaluating ${tool.name}'s ${tool.pricing_type.toLowerCase()} licensing model`;
+
+  // Platform signal
+  const platformNote = tool.platforms?.length === 1 && tool.platforms[0] === 'Windows'
+    ? ` or need macOS / Linux / web access`
+    : tool.platforms?.length === 1 && tool.platforms[0] === 'macOS'
+    ? ` or need Windows / cross-platform compatibility`
+    : '';
+
+  // Top con signal
+  const topCon = tool.cons?.[0]
+    ? ` The most cited pain point: ${tool.cons[0].toLowerCase().replace(/\.$/, '')}.`
+    : '';
+
+  // Cheapest alt signal
+  const cheapestFree = alts.find(a => a.pricing_type === 'Free' || a.pricing_type === 'Open Source');
+  const cheapestNote = cheapestFree ? ` ${cheapestFree.name} is our top free pick.` : '';
+
   if (archetype === 'technical-migration') {
-    return `Evaluating alternatives to ${tool.name} centers on mitigating licensing overheads and securing file-format compatibility for enterprise teams. Below are ${count} hand-vetted CAD/BIM tools capable of replacing ${tool.name} in production. These editors' picks are analyzed by command-line AutoLISP compatibility, DWG/RVT reference integrity, and the feasibility of concurrent network deployment.`;
+    return `${pricingSignal}${platformNote} are the most common triggers for this search.${topCon} Below are ${count} hand-vetted tools our editors evaluated for DWG/RVT file integrity, AutoLISP/API compatibility, and network deployment feasibility.${cheapestNote}`;
   }
   if (archetype === 'creative-styling') {
-    return `Finding a substitute for ${tool.name} requires matching its specific curvature controls and mesh density pipeline response. Below, we review ${count} top alternatives for 3D modeling and rendering. Our evaluation focuses on G2 surface continuity preservation, viewport GPU shaders, and how cleanly each modeller exports watertight shells for visualization or manufacturing.`;
+    return `${pricingSignal}${platformNote} typically drive the search for a ${tool.name} alternative.${topCon} We reviewed ${count} alternatives focusing on G2 surface continuity, viewport GPU performance, and clean watertight export for visualization or manufacturing pipelines.${cheapestNote}`;
   }
-  return `Switching away from ${tool.name} is often motivated by a desire for zero vendor lock-in or specialized EDA/CAM workflows. Below are ${count} open-source and professional alternatives offering maximum file schema transparency (avoiding proprietary cloud silos). Compare them by library management flexibility, Python scripting extensibility, and export format compliance.`;
+  return `${pricingSignal}${platformNote} commonly look for alternatives.${topCon} Below are ${count} tools evaluated for file format openness, scripting extensibility, and EDA/CAM workflow fit.${cheapestNote}`;
 }
 
 export default async function AlternativesPage(
@@ -656,7 +702,7 @@ export default async function AlternativesPage(
               {pageTitle(tool, alts.length)}
             </h1>
             <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-              {getDynamicAlternativesIntro(tool, alts.length, style.archetype)}
+              {getDynamicAlternativesIntro(tool, alts, style.archetype)}
             </p>
           </header>
 
