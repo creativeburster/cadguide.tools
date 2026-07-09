@@ -922,5 +922,290 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     releasedDate: '2026-06-05',
     origin: 'third-party',
     keywords: ['skp to fbx online', 'sketchup rendering export', 'convert skp scene to mesh', 'fbx texture mapping']
+  },
+
+  // ==================== NEW NATIVE CALCULATORS ====================
+  {
+    slug: 'gear-module-calculator',
+    title: 'Gear Module, Pitch Diameter & Teeth Calculator',
+    description: 'Calculate gear module (m), pitch diameter, number of teeth, and center distance for metric spur gears.',
+    detailDesc: 'Enter any two of module, teeth count, or pitch diameter to calculate the third. Supports center distance calculation for two mating gears. Includes standard module series recommendations (DIN 780).',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['gear module calculator', 'spur gear pitch diameter', 'gear teeth calculation', 'dinv 780 module', 'metric gear calculator', 'gear center distance', 'm d z gear formula', 'module pitch circle diameter']
+  },
+  {
+    slug: 'cnc-feed-rate-calculator',
+    title: 'CNC Feed Rate, Spindle Speed & Chip Load Calculator',
+    description: 'Calculate CNC milling feed rate (mm/min), spindle RPM, and chip load per tooth for optimal machining.',
+    detailDesc: 'Input cutting speed (Vc), number of flutes, and chip load per tooth to calculate spindle RPM and feed rate. Supports metric and imperial units. Includes recommended cutting speeds for common materials (steel, aluminum, brass, plastic).',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['cnc feed rate calculator', 'spindle speed rpm', 'chip load per tooth', 'machining feed calculation', 'cnc milling speed calculator', 'cutting speed vc formula', 'feed rate mm per minute', 'cnc machining parameters']
+  },
+  {
+    slug: 'steel-section-weight-calculator',
+    title: 'Steel Section Weight & Surface Area Calculator',
+    description: 'Calculate per-meter weight and surface area for steel I-beams, angles, channels, tubes, and flat bars.',
+    detailDesc: 'Select steel profile type (I-beam, angle, channel, round tube, square tube, flat bar) and enter dimensions to calculate weight per meter, total weight, and paint surface area. Uses standard steel density (7850 kg/m³).',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['steel weight calculator', 'i-beam weight per meter', 'angle steel weight', 'steel channel weight', 'steel tube weight calculator', 'steel profile surface area', 'steel section mass calculator', 'fabrication steel weight']
+  },
+  {
+    slug: 'surface-roughness-converter',
+    title: 'Surface Roughness Ra, Rz, Rt Converter & Comparator',
+    description: 'Convert between Ra, Rz, and Rt surface roughness values and compare with ISO grade numbers.',
+    detailDesc: 'Enter any roughness value (Ra, Rz, or Rt) to convert to the others. Includes ISO 1302 surface finish symbols, N-grade classification, and common manufacturing process capability ranges (grinding, milling, turning).',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['surface roughness converter', 'ra to rz conversion', 'rt roughness calculator', 'iso 1302 surface finish', 'n grade roughness', 'ra rz rt converter', 'surface finish comparator', 'grinding milling roughness range']
+  },
+  {
+    slug: 'pipe-thermal-expansion-calculator',
+    title: 'Pipe Thermal Expansion & Anchor Force Calculator',
+    description: 'Calculate thermal expansion length, expansion stress, and anchor loads for piping systems.',
+    detailDesc: 'Enter pipe material, length, temperature change, and pipe size to calculate thermal expansion (ΔL), expansion stress, and anchor force. Supports carbon steel, stainless steel, copper, and aluminum. Uses ASME B31.3 expansion coefficients.',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['pipe thermal expansion calculator', 'pipe expansion length', 'thermal stress piping', 'asme b31.3 expansion', 'pipe anchor force', 'carbon steel expansion coefficient', 'pipe stress thermal', 'piping expansion calculation']
+  },
+  {
+    slug: 'tolerance-stackup-calculator',
+    title: 'Dimensional Tolerance Stack-Up Analyzer (Worst Case & RSS)',
+    description: 'Analyze dimensional tolerance chains using Worst Case (arithmetic) and Root Sum Square (statistical) methods.',
+    detailDesc: 'Enter a chain of dimensions with their ±tolerances to calculate the total stack-up using both Worst Case and RSS methods. Identifies the maximum and minimum assembly dimensions and highlights critical contributors.',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['tolerance stackup calculator', 'worst case tolerance', 'rss root sum square', 'dimensional chain analysis', 'tolerance analysis tool', 'assembly tolerance calculation', 'statistical tolerance stackup', 'arithmetic tolerance method']
+  },
+  {
+    slug: 'injection-clamping-force-calculator',
+    title: 'Injection Molding Clamping Force & Projected Area Calculator',
+    description: 'Calculate the required clamping force for injection molding based on projected area and cavity pressure.',
+    detailDesc: 'Enter projected part area, number of cavities, and cavity pressure factor to calculate the required clamping force (tons). Includes recommended cavity pressures for common materials (PP, PE, ABS, PC, nylon) and safety factor guidance.',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['injection molding clamping force', 'projected area calculator', 'cavity pressure injection', 'mold clamping tonnage', 'injection molding force calculation', 'clamping force formula', 'mold tonnage calculator', 'plastic injection pressure']
+  },
+  {
+    slug: 'belt-drive-length-calculator',
+    title: 'Belt Drive Length & Center Distance Calculator',
+    description: 'Calculate belt length, center distance, and speed ratio for V-belt and timing belt drive systems.',
+    detailDesc: 'Enter driver and driven pulley diameters and center distance to calculate belt length. Or enter belt length and pulley diameters to find center distance. Includes speed ratio and RPM output calculation.',
+    category: 'calculator',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['belt drive length calculator', 'v-belt length formula', 'timing belt center distance', 'pulley speed ratio', 'belt drive calculation', 'center distance calculator', 'belt length formula', 'pulley rpm calculator']
+  },
+
+  // ==================== NEW NATIVE CHEATSHEETS ====================
+  {
+    slug: 'nx-shortcuts-sheet',
+    title: 'Siemens NX Keyboard Shortcuts & Mouse Gestures Guide',
+    description: 'Searchable cheat sheet for Siemens NX (Unigraphics) modeling, sketching, and assembly shortcuts.',
+    detailDesc: 'Complete index of NX keyboard shortcuts including sketcher tools, feature modeling, assembly constraints, and synchronous technology. Covers NX 12 through NX 2307 series with mouse gesture and radial tool button guides.',
+    category: 'cheatsheet',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['nx shortcuts', 'siemens nx hotkeys', 'ug nx keyboard', 'nx sketcher shortcuts', 'nx mouse gestures', 'nx command aliases', 'unigraphics shortcuts', 'nx assembly shortcuts']
+  },
+  {
+    slug: 'civil3d-shortcuts-sheet',
+    title: 'Autodesk Civil 3D Keyboard Shortcuts & Command Aliases',
+    description: 'Quick reference for Civil 3D surface, alignment, profile, and corridor modeling shortcuts.',
+    detailDesc: 'Searchable index of Civil 3D-specific shortcuts beyond standard AutoCAD, including surface editing, alignment layout, profile view, corridor section, and pipe network commands. Optimized for civil/transportation design workflows.',
+    category: 'cheatsheet',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['civil 3d shortcuts', 'civil 3d hotkeys', 'autocad civil shortcuts', 'civil 3d command aliases', 'corridor shortcuts', 'alignment profile shortcuts', 'civil 3d cheat sheet', 'civil engineering cad keys']
+  },
+
+  // ==================== NEW NATIVE CONVERTERS ====================
+  {
+    slug: 'stl-mesh-checker',
+    title: 'STL Mesh Inspector: Triangle Count, Volume & Watertightness Checker',
+    description: 'Drag and drop STL files to check triangle count, bounding box, volume, surface area, and mesh integrity.',
+    detailDesc: 'A fully client-side STL parser that reads both ASCII and binary STL files. Reports triangle count, bounding box dimensions, calculated volume, surface area, edge manifoldness check, and identifies non-watertight edges for 3D printing validation.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['stl checker', 'stl mesh inspector', 'stl triangle count', 'stl volume calculator', 'watertight mesh check', 'stl bounding box', '3d print mesh validation', 'stl file analyzer online']
+  },
+  {
+    slug: 'step-file-header-parser',
+    title: 'STEP File Header Parser & Metadata Inspector',
+    description: 'Drag and drop STEP (.stp/.step) files to extract header metadata: author, organization, CAD system, and units.',
+    detailDesc: 'A client-side text parser that reads the ISO 10303 STEP header section (HEADER; ENDSEC;) to extract FILE_DESCRIPTION, FILE_NAME, and FILE_SCHEMA entries. Identifies the originating CAD system, authoring organization, and AP protocol (AP203, AP214, AP242).',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['step file parser', 'step header metadata', 'iso 10303 parser', 'step ap203 ap214 ap242', 'step file inspector', 'cad file metadata extractor', 'step file information', 'stp header reader']
+  },
+  {
+    slug: 'csv-to-dxf-converter',
+    title: 'CSV Coordinate to DXF Point & Polyline Converter',
+    description: 'Convert CSV coordinate data (Northing, Easting, Elevation) to DXF format for CAD import.',
+    detailDesc: 'Upload a CSV file with X,Y,Z coordinates and generate a DXF file with points, polylines, or both. Supports configurable column mapping, point labels, layer names, and coordinate scaling. Output downloads directly — no server upload required.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['csv to dxf converter', 'coordinate to cad', 'csv points to dxf', 'survey points to dxf', 'csv to dxf online', 'coordinate import cad', 'csv xyz to dxf', 'survey data to autocad']
+  },
+
+  // ==================== NEW NATIVE TROUBLESHOOTERS ====================
+  {
+    slug: 'solidworks-crash-diagnostic-wizard',
+    title: 'SolidWorks Crash & Freeze Diagnostic Wizard',
+    description: 'Diagnose SolidWorks crashes, freezes, and instability by walking through common causes and fixes.',
+    detailDesc: 'An interactive diagnostic wizard for SolidWorks stability issues. Covers graphics driver conflicts, memory exhaustion, corrupt toolbox, registry issues, and service pack problems. Provides step-by-step fixes based on crash symptoms.',
+    category: 'troubleshoot',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['solidworks crash fix', 'solidworks freeze diagnostic', 'solidworks stability issues', 'solidworks graphics crash', 'solidworks rx diagnostic', 'solidworks not responding', 'solidworks crash on startup', 'solidworks performance troubleshooting']
+  },
+  {
+    slug: 'revit-performance-diagnostic-wizard',
+    title: 'Revit Model Performance & Slow Navigation Diagnostic',
+    description: 'Diagnose slow Revit models, laggy navigation, and long sync times with an interactive troubleshooting wizard.',
+    detailDesc: 'Walks through common Revit performance bottlenecks: oversized families, excessive linked models, poor view templates, DWG imports, and worksharing conflicts. Provides actionable fixes based on reported symptoms.',
+    category: 'troubleshoot',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-07-09',
+    keywords: ['revit slow performance', 'revit model lag fix', 'revit performance optimization', 'revit family size optimization', 'revit navigation slow', 'revit sync slow fix', 'revit troubleshooting wizard', 'revit model cleanup']
+  },
+
+  // ==================== NEW THIRD-PARTY REFERRALS ====================
+  {
+    slug: 'online-ifc-to-revit-converter',
+    title: 'Online IFC to Revit RVT Model Converter',
+    description: 'Objective reviews & direct portal: Convert openBIM IFC models back to native Revit RVT families and elements.',
+    detailDesc: 'We evaluate cloud services that parse IFC entities and reconstruct them as native Revit families, preserving parameter data and category assignments. Compare conversion fidelity, element mapping accuracy, and parameter retention.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['ifc to rvt converter', 'ifc to revit online', 'openbim to revit', 'ifc import revit', 'ifc to native revit families']
+  },
+  {
+    slug: 'online-mesh-repair-service',
+    title: 'Online 3D Mesh Repair & Healing Service',
+    description: 'Objective reviews & direct portal: Fix non-manifold edges, holes, and intersections in STL/OBJ meshes for 3D printing.',
+    detailDesc: 'Evaluate cloud mesh repair tools that automatically detect and fix non-manifold edges, fill holes, remove self-intersections, and re-orient normals. Compare repair algorithms, batch processing, and output quality.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['mesh repair online', 'stl fix holes', 'non-manifold mesh fix', '3d print mesh repair', 'mesh healing service', 'fix stl file online']
+  },
+  {
+    slug: 'online-reverse-engineering-service',
+    title: 'Online 3D Scan Reverse Engineering & CAD Reconstruction',
+    description: 'Objective reviews & direct portal: Convert 3D scan point clouds and meshes into parametric CAD models.',
+    detailDesc: 'We review cloud-based reverse engineering platforms that take scan data (point clouds, meshes) and generate parametric CAD surfaces, solid models, and 2D drawings. Compare auto-surfacing, primitive fitting, and export formats.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['reverse engineering online', '3d scan to cad', 'point cloud to solid model', 'mesh to step converter', 'scan to parametric cad', 'reverse engineering software cloud']
+  },
+  {
+    slug: 'online-cad-file-compressor',
+    title: 'Online CAD File Size Compressor & Optimizer',
+    description: 'Objective reviews & direct portal: Reduce DWG, RVT, and STEP file sizes for email sharing and cloud upload.',
+    detailDesc: 'Evaluate cloud file compression services that purge unused elements, compress textures, simplify geometry, and strip metadata from CAD files. Compare compression ratios, quality retention, and supported formats.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['cad file compressor', 'dwg file size reducer', 'rvt file optimization', 'compress step file', 'cad file size reduction', 'optimize dwg for sharing']
+  },
+  {
+    slug: 'online-bim-quantity-estimator',
+    title: 'Online BIM Material Quantity & Cost Estimator',
+    description: 'Objective reviews & direct portal: Extract material quantities, volumes, and cost estimates from IFC and RVT models.',
+    detailDesc: 'We benchmark cloud-based BIM quantity takeoff tools that parse IFC and Revit models to extract material volumes, counts, and areas. Compare accuracy, material classification, and export to cost estimation formats.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['bim quantity takeoff', 'ifc material extraction', 'revit quantity estimation', 'bim cost calculator', 'online quantity surveyor', 'bim material schedule']
+  },
+  {
+    slug: 'online-cnc-nesting-optimizer',
+    title: 'Online CNC Nesting & Sheet Material Optimization',
+    description: 'Objective reviews & direct portal: Optimize part layout on sheet metal, wood, and composite panels to minimize waste.',
+    detailDesc: 'Evaluate cloud nesting engines that arrange 2D DXF/DWG parts on standard sheet sizes to maximize material utilization. Compare nesting algorithms, utilization rates, and support for common sheet sizes.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['cnc nesting online', 'sheet metal nesting', 'dxf nesting optimizer', 'material utilization calculator', 'nesting software cloud', 'sheet cutting optimization']
+  },
+  {
+    slug: 'online-cfd-simulation-platform',
+    title: 'Online Cloud CFD Simulation & Fluid Analysis Platform',
+    description: 'Objective reviews & direct portal: Run computational fluid dynamics simulations in the cloud without local hardware.',
+    detailDesc: 'We review cloud CFD platforms that handle mesh generation, solver execution, and post-processing in browser-based interfaces. Compare solver types (RANS, LES, DNS), mesh capacity, and pricing models.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['cloud cfd simulation', 'online fluid dynamics', 'cfd solver cloud', 'browser cfd analysis', 'cloud airflow simulation', 'online heat transfer simulation']
+  },
+  {
+    slug: 'online-fea-simulation-platform',
+    title: 'Online Cloud FEA Structural Analysis Platform',
+    description: 'Objective reviews & direct portal: Run finite element analysis simulations in the cloud without local software licenses.',
+    detailDesc: 'Evaluate cloud FEA platforms that handle meshing, solving, and post-processing for linear static, modal, and nonlinear analyses. Compare solver performance, material libraries, and CAD import capabilities.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['cloud fea simulation', 'online structural analysis', 'finite element cloud', 'browser fea solver', 'online stress analysis', 'cloud mechanical simulation']
+  },
+  {
+    slug: 'online-injection-mold-flow-analysis',
+    title: 'Online Injection Molding Flow & Mold Analysis Service',
+    description: 'Objective reviews & direct portal: Simulate plastic injection molding fill patterns, cooling, and warpage in the cloud.',
+    detailDesc: 'We review cloud mold flow analysis services that predict fill patterns, air traps, weld lines, cooling time, and part warpage. Compare solver accuracy, material databases, and optimization recommendations.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['injection mold flow analysis', 'moldex3d cloud', 'moldflow online', 'plastic simulation cloud', 'mold filling simulation', 'warpage prediction online']
+  },
+  {
+    slug: 'online-bim-coordination-checker',
+    title: 'Online BIM Clash Detection & Coordination Checker',
+    description: 'Objective reviews & direct portal: Upload IFC and NWD models for automated clash detection and coordination review.',
+    detailDesc: 'Evaluate cloud BIM coordination platforms that perform automated clash detection between disciplines (architecture, structure, MEP). Compare clash detection algorithms, grouping, reporting, and integration with issue trackers.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'third-party',
+    keywords: ['bim clash detection online', 'navisworks alternative cloud', 'ifc coordination check', 'bim conflict detection', 'online clash report', 'bim coordination platform']
   }
 ];
