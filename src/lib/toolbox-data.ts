@@ -1207,5 +1207,60 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     releasedDate: '2026-07-09',
     origin: 'third-party',
     keywords: ['bim clash detection online', 'navisworks alternative cloud', 'ifc coordination check', 'bim conflict detection', 'online clash report', 'bim coordination platform']
+  },
+  {
+    slug: 'bolt-circle-pattern-calculator',
+    title: 'Bolt Circle Pattern & Flange Hole Coordinate Calculator',
+    description: 'Generate X/Y coordinates for equally spaced bolt circles. Configurable bolt count, PCD, rotation offset, and hole diameter. Export CSV for CNC drilling.',
+    detailDesc: 'Calculate precise hole coordinates for flange drilling patterns. Enter pitch circle diameter (PCD), number of bolts, and starting angle to get X/Y coordinates for each hole. Includes bolt circle SVG preview and CSV export for CNC machines.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'native',
+    keywords: ['bolt circle calculator', 'flange hole pattern', 'pcd coordinate generator', 'bolt pattern cnc', 'drilling coordinate calculator', 'bolt circle coordinate']
+  },
+  {
+    slug: 'gcode-quick-reference-sheet',
+    title: 'CNC G-Code & M-Code Quick Reference Cheatsheet',
+    description: 'Searchable index of common CNC G-codes (G0-G92) and M-codes (M0-M30) with descriptions, modal groups, and usage examples.',
+    detailDesc: 'A comprehensive, searchable reference for CNC programming G-codes and M-codes. Covers Fanuc, Haas, Siemens, and LinuxCNC dialects. Includes modal group classification and common canned cycles.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'native',
+    keywords: ['g-code reference', 'cnc m-code list', 'fanuc g-code cheat sheet', 'haas g-code reference', 'cnc programming codes', 'g-code modal groups']
+  },
+  {
+    slug: 'gdt-symbol-reference-guide',
+    title: 'GD&T Symbol Reference Guide (ASME Y14.5)',
+    description: 'Interactive reference for ASME Y14.5 Geometric Dimensioning & Tolerancing symbols. Form, profile, orientation, location, and runout controls with tolerance zone descriptions.',
+    detailDesc: 'Browse all ASME Y14.5 GD&T symbols by category: form, profile, orientation, location, and runout. Each symbol includes its tolerance zone type, datum references, material condition modifiers, and practical usage examples.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'native',
+    keywords: ['gd&t symbols', 'asme y14.5 reference', 'geometric dimensioning tolerancing', 'gdt symbol guide', 'tolerance zone types', 'datum reference frame']
+  },
+  {
+    slug: 'pump-affinity-law-calculator',
+    title: 'Pump Affinity Law Calculator (Flow, Head & Power)',
+    description: 'Calculate new flow rate, head pressure, and shaft power when changing pump speed or impeller diameter per affinity laws.',
+    detailDesc: 'Apply centrifugal pump affinity laws to predict performance changes. Q₂/Q₁ = N₂/N₁, H₂/H₁ = (N₂/N₁)², P₂/P₁ = (N₂/N₁)³. Supports both speed change and impeller diameter change modes.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'native',
+    keywords: ['pump affinity law', 'centrifugal pump calculator', 'impeller speed change', 'pump performance curve', 'flow head power calculator', 'pump scaling law']
+  },
+  {
+    slug: '3d-print-cost-time-estimator',
+    title: '3D Print Time & Filament Cost Estimator',
+    description: 'Estimate 3D printing time and filament cost from model volume, infill percentage, layer height, print speed, and material price.',
+    detailDesc: 'Calculate print time and material cost for FDM 3D prints. Enter model volume, infill ratio, layer height, and print speed to get estimated print duration and filament weight/cost. Supports PLA, PETG, ABS, and TPU material presets.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-07-09',
+    origin: 'native',
+    keywords: ['3d print time calculator', 'filament cost estimator', 'print time estimate', 'fdm cost calculator', 'pla filament price', '3d printing material cost']
   }
 ];
