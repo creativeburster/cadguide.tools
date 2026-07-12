@@ -95,6 +95,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Frontmatter 必填** — title, excerpt, category, softwareSlug, keyword, slug, author, readTime, date, sources
 
 ### 分类
+**分类由真实搜索需求决定，不是先定分类再填内容。**
+
+流程：先搜索该工具的真实讨论、论坛帖子、搜索量数据 → 根据实际发现的内容确定分类 → 如果现有分类都不合适，创建新分类。
+
+现有分类（参考，非强制）：
 - `troubleshooting` — 错误修复、崩溃、文件损坏
 - `performance` — 速度优化、大文件、硬件
 - `migration` — 版本升级、平台切换
@@ -106,8 +111,13 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - `workflow` — 工作流程教程
 - `comparison` — 软件对比
 
+**禁止按模板分配分类**（如"每个工具必须 1 篇 troubleshooting + 1 篇 performance…"）。每个工具的 5 篇 guide 分类应反映该工具真实的搜索需求分布，不同工具的分类组合应该不同。
+
 ### 禁止事项
 - 不研究真实需求就生成 guide
 - 编造错误代码、文件路径或注册表键
 - 适用于任何软件的通用建议
 - AI 典型的对冲语言和元评论
+- **杜撰虚构的个人经历** — 禁止编造"我在三台工作站上验证过"、"上周客户打电话说…"等无法核实的第一人称叙事。可以基于真实来源的内容用第一人称改写，但不得编造具体场景、数字和事件
+- **预设分类再填内容** — 禁止先确定分类模板再据此生成 guide。分类必须由搜索调研中发现的真实话题决定
+- **编造具体技术参数** — 如加工转速、进给速度、注册表路径等，除非来自可验证的来源。不确定时应标注"请参考厂商推荐参数"
