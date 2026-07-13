@@ -10,6 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://www.chiefarchitect.com/products/premier/"
+  - "https://www.chiefarchitect.com/support/article/KB-00648/creating-an-automatic-dormer.html"
 
 ---
 

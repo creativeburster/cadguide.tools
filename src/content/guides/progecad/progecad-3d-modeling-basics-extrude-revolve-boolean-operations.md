@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.progesoft.com/products/progecad-professional/"
+  - "https://www.progesoft.com/products/progecad-professional/manual?mp=drawing-in-three-dimensions%2Fcreating-three-dimensional-entities%2Fcreating-extruded-solids-or-surfaces"
 
 ---
 

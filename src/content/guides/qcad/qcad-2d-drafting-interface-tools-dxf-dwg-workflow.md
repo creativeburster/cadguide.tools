@@ -10,6 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://qcad.org/en/qcad-documentation"
+  - "https://www.qcad.org/en/tutorial-layers-blocks-and-attributes"
 
 ---
 

@@ -10,6 +10,7 @@ readTime: "7 min"
 date: "2025-06-17"
 sources:
   - "https://community.sw.siemens.com/s/question/0D54O000061xUAwSAM/nx-not-responding-intermittently"
+  - "https://community.sw.siemens.com/s/question/0D54O000089QAQOSA4/main-supported-journaling-language-nx2027-onwards"
 ---
 
 # NX License Borrowing Freeze: Fixing Intermittent Not Responding

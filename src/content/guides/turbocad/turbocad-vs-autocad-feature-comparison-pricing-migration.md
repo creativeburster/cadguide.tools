@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.turbocad.com/compare"
+  - "https://en.wikipedia.org/wiki/TurboCAD"
 
 ---
 

@@ -10,6 +10,7 @@ readTime: "7 min"
 date: "2025-06-18"
 sources:
   - "https://community.ptc.com/t5/3D-Part-Assembly-Design/Connection-between-end-points-problem-with-red-dots/td-p/993624"
+  - "https://community.ptc.com/t5/PTC-Education-Forum/Sketching-in-2d-Finding-open-loops-etc/td-p/299239"
 ---
 
 # Creo Sketch Red Dots and Open Profile Errors: Fixing Unconnected Entities

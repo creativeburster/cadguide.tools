@@ -10,6 +10,7 @@ readTime: "10 min"
 date: "2025-06-29"
 sources:
   - "https://www.autodesk.com/products/inventor/overview"
+  - "https://www.autodesk.com/compare/fusion-360-vs-inventor"
 
 ---
 

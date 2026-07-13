@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.buildingsmart.org/standards/ifs/"
+  - "https://www.allplan.com/ap_en/press-reports/press-report/allplan-promotes-open-bim-workflows-for-buildings-infrastructure-and-fabrication/"
 
 ---
 

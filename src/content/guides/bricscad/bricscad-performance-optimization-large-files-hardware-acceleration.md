@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.bricsys.com/bricscad/system-requirements"
+  - "https://www.bricsys.com/bricscad/compare"
 
 ---
 

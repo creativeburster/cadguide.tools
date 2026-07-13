@@ -10,6 +10,7 @@ readTime: "8 min"
 date: "2025-06-17"
 sources:
   - "https://community.ptc.com/t5/3D-Part-Assembly-Design/STEP-file-failing-to-open-in-Creo-10/td-p/941769"
+  - "https://community.ptc.com/t5/System-Administration/Opening-large-STEP-files/td-p/412755"
 ---
 
 # Creo STEP File Import Crashes: Memory and Configuration Fixes for Large Files

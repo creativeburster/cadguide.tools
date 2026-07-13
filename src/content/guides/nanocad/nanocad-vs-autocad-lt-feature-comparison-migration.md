@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://nanocad.com/products/nanocad/compare"
+  - "https://nanocad.com/learning/online-help/nanocad-platform/software-extensions/"
 
 ---
 

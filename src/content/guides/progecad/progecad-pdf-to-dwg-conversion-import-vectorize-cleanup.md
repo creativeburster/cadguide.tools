@@ -10,6 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://www.progesoft.com/products/progecad-professional/"
+  - "https://www.progesoft.com/products/progecad-professional/manual"
 
 ---
 

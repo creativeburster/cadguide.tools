@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.csiamerica.com/products/sap2000"
+  - "https://wiki.csiamerica.com/pages/viewpage.action?pageId=1741982"
 
 ---
 

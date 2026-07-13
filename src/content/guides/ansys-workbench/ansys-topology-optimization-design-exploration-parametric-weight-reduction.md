@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://ansyshelp.ansys.com/"
+  - "https://innovationspace.ansys.com/knowledge/forums/topic/structural-modeling-with-ansys-workbench-mechanical/"
 
 ---
 

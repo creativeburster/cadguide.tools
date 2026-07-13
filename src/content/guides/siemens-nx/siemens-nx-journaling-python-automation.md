@@ -10,6 +10,7 @@ readTime: "11 min"
 date: "2025-06-19"
 sources:
   - "https://community.sw.siemens.com/s/question/0D54O00006mG0HbSAK/solved-general-fault-exception"
+  - "https://community.sw.siemens.com/s/question/0D5Vb000005MIZjKAO/need-to-know-about-nx-journal"
 
 ---
 

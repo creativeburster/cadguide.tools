@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-25"
 sources:
   - "https://help.autodesk.com/cloudhelp/2025/ENU/Revit-Collaborate/files/GUID-179D47D6-9AB6-4A16-810C-9AB819826448.htm"
+  - "https://help.autodesk.com/cloudhelp/2022/ENU/Revit-Troubleshooting/files/GUID-F93E4D20-E17B-40D6-88BF-D3D97391BCAC.htm"
 
 ---
 

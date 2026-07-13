@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://ansyshelp.ansys.com/"
+  - "https://ansyshelp.ansys.com/public/Views/Secured/corp/v252/en/wb_sim/ds_static_mechanical_analysis_type.html"
 
 ---
 

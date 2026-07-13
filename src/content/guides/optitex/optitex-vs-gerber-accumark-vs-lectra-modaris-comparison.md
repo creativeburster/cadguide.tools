@@ -10,6 +10,7 @@ readTime: "10 min"
 date: "2025-06-29"
 sources:
   - "https://www.gerbertechnology.com/accumark/"
+  - "https://optitex.com/"
 
 ---
 

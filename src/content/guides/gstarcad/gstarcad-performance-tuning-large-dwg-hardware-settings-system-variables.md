@@ -10,6 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://gstarcadaustralia.com/wp-content/uploads/2024/04/Activation-FAQ-Troubleshooting-1.pdf"
+  - "https://www.gstarcad.com/"
 
 ---
 

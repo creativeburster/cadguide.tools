@@ -10,6 +10,7 @@ readTime: "13 min read"
 date: "2026-06-30"
 sources:
   - "https://nanocad.com/products/nanocad/plus/"
+  - "https://nanocad.com/learning/online-help/nanocad-platform/work-with-lisp-applications/"
 
 ---
 

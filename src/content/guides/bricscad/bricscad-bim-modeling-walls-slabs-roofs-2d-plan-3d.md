@@ -10,6 +10,7 @@ readTime: "14 min read"
 date: "2026-06-30"
 sources:
   - "https://www.bricsys.com/bricscad/bim"
+  - "https://developer.bricsys.com/bricscad/help/en_US/V25/DevRef/source/BricsCADBIMLISPAPI.htm"
 
 ---
 

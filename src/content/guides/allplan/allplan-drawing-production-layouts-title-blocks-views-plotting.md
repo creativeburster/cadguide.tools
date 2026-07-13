@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.allplan.com/en/products/allplan-architecture"
+  - "https://www.allplan.com/ap_en/products/allplan-architecture/"
 
 ---
 

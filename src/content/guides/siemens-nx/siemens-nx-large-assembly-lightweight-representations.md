@@ -10,6 +10,7 @@ readTime: "9 min"
 date: "2025-06-18"
 sources:
   - "https://community.sw.siemens.com/s/question/0D5Vb00000TqaA1KAJ/urgent-help-needed-my-nx-is-extremely-slow-despite-a-highend-pc"
+  - "https://community.sw.siemens.com/s/question/0D54O000061xLS0SAM/how-to-get-started-find-documentation-get-help"
 
 ---
 

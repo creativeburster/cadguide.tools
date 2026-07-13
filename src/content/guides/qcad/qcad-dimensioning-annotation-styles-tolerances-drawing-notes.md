@@ -10,6 +10,7 @@ readTime: "10 min read"
 date: "2026-06-30"
 sources:
   - "https://www.reddit.com/r/FreeCAD/comments/1t25bla/librecad_vs_qcad_for_designing_the_layout_of_a/"
+  - "https://qcad.org/en/qcad-documentation"
 
 ---
 

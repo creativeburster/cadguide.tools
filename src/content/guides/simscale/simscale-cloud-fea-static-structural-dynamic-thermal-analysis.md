@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://docs.simscale.com/"
+  - "https://www.simscale.com/docs/"
 
 ---
 

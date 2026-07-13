@@ -10,6 +10,7 @@ readTime: "12 min read"
 date: "2026-06-30"
 sources:
   - "https://www.csiamerica.com/products/sap2000"
+  - "https://help.csiamerica.com/help/sap2000/26/26.0.0/SAP2000/WebHelp/Getting_Started/Steel_Frame_Design_Procedure.htm"
 
 ---
 

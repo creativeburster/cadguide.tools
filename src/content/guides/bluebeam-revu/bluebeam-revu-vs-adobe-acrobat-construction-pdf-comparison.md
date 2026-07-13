@@ -10,6 +10,7 @@ readTime: "10 min read"
 date: "2026-06-30"
 sources:
   - "https://www.bluebeam.com/product/revu/"
+  - "https://www.bluebeam.com/product/"
 
 ---
 

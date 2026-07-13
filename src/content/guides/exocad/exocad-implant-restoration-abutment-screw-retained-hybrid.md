@@ -10,6 +10,7 @@ readTime: "12 min"
 date: "2025-06-29"
 sources:
   - "https://exocad.com/products/dentalcad"
+  - "https://wiki.exocad.com/wiki/index.php/DentalCAD_Documentation_-_Index_of_topics"
 
 ---
 

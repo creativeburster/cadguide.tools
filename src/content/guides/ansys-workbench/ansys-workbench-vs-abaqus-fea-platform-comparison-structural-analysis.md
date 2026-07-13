@@ -10,6 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://www.3ds.com/products/simulia/abaqus"
+  - "https://en.wikipedia.org/wiki/ANSYS"
 
 ---
 

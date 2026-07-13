@@ -10,6 +10,7 @@ readTime: "6 min"
 date: "2025-06-16"
 sources:
   - "https://forums.autodesk.com/t5/inventor-forum/slow-part-creation-in-inventor-on-high-performance-laptop-nvidia/td-p/13095386"
+  - "https://forums.autodesk.com/t5/inventor-forum/comparison-of-inventor-to-solidworks/td-p/7751095"
 ---
 
 # Inventor First Part Creation Slow: Fixing the 50-Second Delay with DYNAMIC_LOAD_APPLETS

@@ -10,6 +10,7 @@ readTime: "11 min read"
 date: "2026-06-30"
 sources:
   - "https://nanocad.com/products/nanocad/"
+  - "https://nanocad.com/learning/online-help/nanocad-platform/ncad.lsp/"
 
 ---
 
