@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-A1B2C3D4-E5F6-7890-ABCD-EF12345678CD"
+  - "https://knowledge.autodesk.com/support/revit-products/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Revit-Customize/files/GUID-C395AAC8-B5E2-40A5-8B48-1BFEEA9116D6-htm.html"
   - "https://forums.autodesk.com/t5/revit-forum/family-file-optimization/td-p/5432109"
 ---
 

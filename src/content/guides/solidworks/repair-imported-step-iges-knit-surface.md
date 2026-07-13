@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Import_Diagnostics.htm"
-  - "https://forum.solidworks.com/servlet/JiveServlet/showThread/156789"
+  - "https://help.solidworks.com/2026/English/SolidWorks/sldworks/c_Import_Diagnostics_Overview.htm"
+  - "https://help.solidworks.com/2024/english/SolidWorks/sldworks/t_reading_step_iges_acis_sw.htm"
 ---
 
 # Repairing Imported STEP and IGES Geometry in SolidWorks: Surface Knitting and Solid Body Recovery

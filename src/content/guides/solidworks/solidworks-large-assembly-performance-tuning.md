@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Large_Assembly_Performance.htm"
-  - "https://forum.solidworks.com/servlet/JiveServlet/showThread/234567"
+  - "https://help.solidworks.com/2021/english/SolidWorks/sldworks/c_Improving_Large_Assembly_Performance_SWassy.htm"
+  - "https://help.solidworks.com/2024/English/SolidWorks/sldworks/c_mate_error_examples.htm"
 ---
 
 # Large Assembly Performance Tuning in SolidWorks: System Settings and Workflow Strategies

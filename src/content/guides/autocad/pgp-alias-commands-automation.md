@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "11 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/ACD/2026/ENU/?guid=GUID-D1A3F5B7-2C4E-4A6B-8D9F-1E3C5A7B9D2E"
-  - "https://knowledge.autodesk.com/support/autocad/learn-explore/caas/CloudHelp/CloudHelp/2026/ENU/AutoCAD-Core/files/GUID-B4E6D8F1-3A5C-4D7B-9E2F-1A6C3B5D7E8F-htm.html"
+  - "https://help.autodesk.com/cloudhelp/2026/ENU/AutoCAD-Customization/files/GUID-FE9AE544-F537-4D3B-8F75-B76484513787.htm"
+  - "https://help.autodesk.com/cloudhelp/2026/ENU/AutoCAD-Customization/files/GUID-D4CACED6-DFBA-43C3-BC42-8D980AB3AE75.htm"
 ---
 
 # Customizing AutoCAD Command Aliases with PGP Files for Faster Drafting

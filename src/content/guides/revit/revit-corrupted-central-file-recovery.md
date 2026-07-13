@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-AB12CD34-EF56-7890-ABCD-EF1234567890"
+  - "https://knowledge.autodesk.com/support/revit-products/troubleshooting/caas/sfdcarticles/sfdcarticles/Error-Data-in-Revit-file-is-corrupt-and-needs-to-be-manually-recovered.html"
   - "https://forums.autodesk.com/t5/revit-forum/central-model-corruption-recovery/td-p/7654321"
 ---
 

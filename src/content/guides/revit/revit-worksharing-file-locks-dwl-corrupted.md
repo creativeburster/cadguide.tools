@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-C3D4E5F6-A7B8-9012-CDEF-123456789ABC"
+  - "https://help.autodesk.com/cloudhelp/2025/ENU/Revit-Collaborate/files/GUID-179D47D6-9AB6-4A16-810C-9AB819826448.htm"
 
 ---
 

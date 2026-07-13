@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "15 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/ACD/2026/ENU/?guid=GUID-C2D4E6A8-1F3B-4D7E-9A5C-6B8D2E1F4A7B"
-  - "https://knowledge.autodesk.com/support/autocad/learn-explore/caas/CloudHelp/CloudHelp/2026/ENU/AutoCAD-Core/files/GUID-E5B7F1A3-2C4D-4F8B-1A6E-3C5D7B9F2E8A-htm.html"
+  - "https://knowledge.autodesk.com/customer-service/network-license-administration/managing-network-licenses/interpreting-your-license-file/feature-codes/2019-flexnet-feature-codes"
+  - "https://knowledge.autodesk.com/support/autocad/troubleshooting/caas/sfdcarticles/sfdcarticles/FLEXnet-License-Finder-dialog-box-appears-when-you-try-to-start-program.html"
 ---
 
 # Configuring ADSKFLEX Options File for AutoCAD Network License Management

@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/ACD/2026/ENU/?guid=GUID-A5F2E3D1-8B4C-4A6B-9C7E-2D1F5A3B7E8C"
-  - "https://knowledge.autodesk.com/support/autocad/learn-explore/caas/CloudHelp/CloudHelp/2026/ENU/AutoCAD-Core/files/GUID-D8A2F1B3-4C5E-4A7D-9F2B-1E6C3A5D7B9E-htm.html"
+  - "https://knowledge.autodesk.com/support/autocad/troubleshooting/caas/sfdcarticles/sfdcarticles/AutoCAD-File-Corruption.html"
+  - "https://knowledge.autodesk.com/support/autocad/learn-explore/caas/sfdcarticles/sfdcarticles/how-to-recover-lost-work-due-to-a-crash-in-autocad.html"
 ---
 
 # Recovering Corrupted DWG Files: A Complete Disaster Recovery Workflow

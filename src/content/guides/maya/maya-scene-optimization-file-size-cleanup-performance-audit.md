@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
-  - "https://help.autodesk.com/cloudhelp/2024/ENU/Maya-Animation/files/GUID-6002180E-1171-4FF2-8E2B-4C208F5DB2CC.htm"
+  - "https://help.autodesk.com/view/MAYAUL/2025/ENU/"
   - "https://forums.autodesk.com/t5/maya-forum/viewport-2-0-and-hypershade-are-dreadful/td-p/13162905"
   - "https://forums.autodesk.com/t5/maya-modeling-forum/maya-not-using-computer-resources/td-p/13057454"
   - "https://forums.autodesk.com/t5/maya-forum/maya-locks-up-ui-becomes-laggy-and-unusable-with-animation-rig/td-p/12715483"

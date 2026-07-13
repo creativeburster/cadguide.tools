@@ -11,7 +11,7 @@ date: "2025-06-22"
 sources:
   - "https://www.autodesk.com/products/netfabb/overview"
   - "https://www.tpm.com/blog/autodesk-netfabb-the-complete-solution-for-3d-printing-preparation/"
-  - "https://knowledge.autodesk.com/support/netfabb/learn-explore/caas/CloudHelp/cloudhelp/2021/ENU/NETF/files/GUID-E8674B22-008F-4FE1-A1C1-FD32CB375713-htm.html"
+  - "https://www.autodesk.com/products/netfabb/overview"
 ---
 
 # Autodesk Netfabb Simulation and Support Generation for Metal Additive Manufacturing

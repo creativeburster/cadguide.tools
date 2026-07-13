@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-B2C3D4E5-F6A7-8901-BCDE-F123456789AB"
+  - "https://knowledge.autodesk.com/support/revit/troubleshooting/caas/sfdcarticles/sfdcarticles/Certain-shared-parameters-not-exportetd-to-IFC-from-Revit.html"
   - "https://forums.autodesk.com/t5/revit-forum/ifc-export-missing-parameters/td-p/4321098"
 ---
 

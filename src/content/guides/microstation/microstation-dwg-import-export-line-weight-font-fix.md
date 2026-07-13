@@ -9,7 +9,7 @@ author: "CAD IT Admin"
 readTime: "8 min"
 date: "2025-06-24"
 sources:
-  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2024.2/ReadMe/en/html5/topics/369286/GUID-CC5461A6-5F9E-412F-B22C-A89884C8A992.html"
+  - "https://www.bentley.com/software/microstation/"
   - "https://www.bentley.com/en/products/product-line/microstation"
 ---
 

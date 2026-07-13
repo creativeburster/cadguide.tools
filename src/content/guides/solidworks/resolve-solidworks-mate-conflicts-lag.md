@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Mate_Diagnostics.htm"
-  - "https://forum.solidworks.com/servlet/JiveServlet/showThread/189234"
+  - "https://help.solidworks.com/2019/english/SolidWorks/sldworks/t_techniques_fixing_mate_problems.htm"
+  - "https://help.solidworks.com/2024/English/SolidWorks/sldworks/c_mate_error_examples.htm"
 ---
 
 # Resolving Mate Conflicts and Rebuild Lag in SolidWorks Assemblies

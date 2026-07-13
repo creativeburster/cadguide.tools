@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/SolidWorks_License_Error_5.htm"
-  - "https://forum.solidworks.com/servlet/JiveServlet/showThread/345678"
+  - "https://help.solidworks.com/2022/english/SolidWorks/install_guide/c_troubleshooting_snl_licenses.htm"
+  - "https://help.solidworks.com/2025/English/Installation/install_guide/c_installing_configuring_snl.htm"
 ---
 
 # Fixing SolidWorks License Error 5: No Feature Available

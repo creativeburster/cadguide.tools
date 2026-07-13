@@ -10,7 +10,7 @@ readTime: "11 min read"
 date: "2026-07-06"
 sources:
   - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Recommended-modal-analysis-settings-for-seismic-load-cases-in-Robot-Structural-Analysis.html"
-  - "https://knowledge.autodesk.com/support/robot-structural-analysis-professional/learn-explore/caas/CloudHelp/cloudhelp/2021/ENU/RSAPRO-UsersGuide/files/GUID-99F8FEED-918D-4512-882E-3643455A784D-htm.html"
+  - "https://www.autodesk.com/products/robot-structural-analysis/overview"
 ---
 
 # Autodesk Robot Seismic Analysis: Response Spectrum and Modal Analysis Setup

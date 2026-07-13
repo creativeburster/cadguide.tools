@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/ACD/2026/ENU/?guid=GUID-F3B1C7D2-9E4A-4B8C-1D6E-5F2A7C9B3E8D"
+  - "https://knowledge.autodesk.com/support/autocad-lt/troubleshooting/caas/sfdcarticles/sfdcarticles/Optimizing-the-AutoCAD-drawing-file-Purge-Audit-Recover.html"
   - "https://forums.autodesk.com/t5/autocad-forum/large-dwg-file-performance-optimization/td-p/8765432"
 ---
 

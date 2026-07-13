@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:
-  - "https://docs.bentley.com/LiveContent/web/STAAD.Pro%20Help-v28/en/GUID-FC527CAB-C22D-4DA0-8E8B-9A3F4B9F4F4B.html"
+  - "https://www.bentley.com/software/staad/"
   - "https://www.bentley.com/software/staad/"
 ---
 

@@ -9,7 +9,7 @@ author: "CAD IT Admin"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
-  - "https://knowledge.autodesk.com/support/netfabb/learn-explore/caas/CloudHelp/cloudhelp/2021/ENU/NETF/files/GUID-E8674B22-008F-4FE1-A1C1-FD32CB375713-htm.html"
+  - "https://www.autodesk.com/products/netfabb/overview"
   - "https://formlabs.com/blog/best-stl-file-repair-software-tools/"
   - "https://www.datanumen.com/stl-repair/guides/repair-stl-files/"
   - "https://omnvert.com/en/tutorials/fix-non-manifold-stl"

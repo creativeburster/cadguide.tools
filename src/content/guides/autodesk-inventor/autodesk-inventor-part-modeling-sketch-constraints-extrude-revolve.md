@@ -11,7 +11,7 @@ date: "2025-06-29"
 sources:
   - "https://help.autodesk.com/view/INVNTOR/2025/ENU/"
   - "https://www.autodesk.com/products/inventor/overview"
-  - "https://help.autodesk.com/view/INVNTOR/2025/ENU/?guid=GUID-1B1B1B1B-1B1B-1B1B-1B1B-1B1B1B1B1B1B"
+  - "https://help.autodesk.com/cloudhelp/2026/ENU/Inventor-Help/files/GUID-FAF69614-E8F2-4763-975C-552E0BEA1DD1.htm"
 ---
 
 # Autodesk Inventor Part Modeling: Sketch Constraints, Extrude, Revolve, and Feature Tree

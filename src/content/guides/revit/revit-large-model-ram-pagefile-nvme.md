@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-F1A2B3C4-D5E6-7890-ABCD-EF12345678AB"
+  - "https://knowledge.autodesk.com/support/revit-products/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Revit-Customize/files/GUID-66A61D65-967D-4DB7-B4C0-FB77C2EDECF6-htm.html"
   - "https://forums.autodesk.com/t5/revit-forum/large-model-performance-optimization/td-p/6543210"
 ---
 

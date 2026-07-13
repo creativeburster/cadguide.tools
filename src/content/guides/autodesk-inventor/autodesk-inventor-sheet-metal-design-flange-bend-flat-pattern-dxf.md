@@ -11,7 +11,7 @@ date: "2025-06-29"
 sources:
   - "https://help.autodesk.com/view/INVNTOR/2025/ENU/"
   - "https://www.autodesk.com/products/inventor/overview"
-  - "https://help.autodesk.com/view/INVNTOR/2025/ENU/?guid=GUID-3B3B3B3B-3B3B-3B3B-3B3B-3B3B3B3B3B3B"
+  - "https://help.autodesk.com/cloudhelp/2026/ENU/Inventor-Help/files/GUID-5A2D77F1-1A36-4E6C-A1C4-4F111CBE7650.htm"
 ---
 
 # Autodesk Inventor Sheet Metal Design: Flange, Bend, Flat Pattern, and DXF Export

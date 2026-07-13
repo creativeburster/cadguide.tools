@@ -11,7 +11,7 @@ date: "2025-06-29"
 sources:
   - "https://help.autodesk.com/view/INVNTOR/2025/ENU/"
   - "https://www.autodesk.com/products/inventor/overview"
-  - "https://help.autodesk.com/view/INVNTOR/2025/ENU/?guid=GUID-2B2B2B2B-2B2B-2B2B-2B2B-2B2B2B2B2B2B"
+  - "https://help.autodesk.com/cloudhelp/2024/ENU/Inventor-Help/files/GUID-2DFEAF48-DCBF-4781-9AC7-76D91DC2D896.htm"
 ---
 
 # Autodesk Inventor Assembly Design: Constraints, Joints, and Motion Simulation

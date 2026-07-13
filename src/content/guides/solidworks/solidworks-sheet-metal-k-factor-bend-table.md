@@ -9,8 +9,8 @@ author: "CADGuide Technical Editorial"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Sheet_Metal_K_Factor.htm"
-  - "https://help.solidworks.com/2026/English/SolidWorks/SWHelp/Article_ID/Bend_Tables.htm"
+  - "https://help.solidworks.com/2021/English/SolidWorks/sldworks/c_K_Factor.htm"
+  - "https://help.solidworks.com/2026/english/SolidWorks/sldworks/c_Bend_Table_Overview.htm"
 ---
 
 # Configuring K-Factor and Bend Tables for Accurate Sheet Metal Flat Patterns in SolidWorks

@@ -11,7 +11,7 @@ date: "2025-06-21"
 sources:
   - "https://forums.autodesk.com/t5/3ds-max-forum/3ds-max-2025-random-crashing/td-p/13716127"
   - "https://forums.autodesk.com/t5/3ds-max-forum/3ds-max-crashing-frequently-when-opening-or-working-on-a-scene/td-p/12893646"
-  - "https://help.autodesk.com/view/3DSMAX/2025/ENU/?guid=GUID-505D364C-C5E2-4646-9CEF-B8D1B39C841F"
+  - "https://help.autodesk.com/view/3DSMAX/2025/ENU/"
 ---
 
 # 3ds Max Random Crashes: Memory, Driver, and Crash Log Analysis Guide

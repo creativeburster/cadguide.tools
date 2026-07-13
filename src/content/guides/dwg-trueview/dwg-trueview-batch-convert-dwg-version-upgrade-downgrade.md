@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
-  - "https://help.autodesk.com/cloudhelp/2023/ENU/DWGTrueView/files/GUID-02A76727-B2A9-4ADA-8866-3D8435985231.htm"
+  - "https://www.autodesk.com/products/dwg/viewers"
   - "https://www.cad-notes.com/dwg-trueview-open-and-save-to-any-version-of-dwg/"
 ---
 

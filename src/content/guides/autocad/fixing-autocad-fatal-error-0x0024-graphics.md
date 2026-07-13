@@ -9,7 +9,7 @@ author: "CADGuide Technical Editorial"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:
-  - "https://help.autodesk.com/view/ACD/2026/ENU/?guid=GUID-7D6B3F8E-A2C4-4E1B-9F3D-6A8C2E5B7D1A"
+  - "https://knowledge.autodesk.com/support/autocad/troubleshooting/caas/sfdcarticles/sfdcarticles/FLEXnet-License-Finder-dialog-box-appears-when-you-try-to-start-program.html"
   - "https://forums.autodesk.com/t5/autocad-forum/fatal-error-0x0024-unhandled-e06d7363/td-p/9876543"
 ---
 

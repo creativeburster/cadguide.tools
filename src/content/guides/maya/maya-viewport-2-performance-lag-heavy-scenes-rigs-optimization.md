@@ -12,7 +12,7 @@ sources:
   - "https://forums.autodesk.com/t5/maya-forum/viewport-2-0-and-hypershade-are-dreadful/td-p/13162905"
   - "https://forums.autodesk.com/t5/maya-modeling-forum/maya-not-using-computer-resources/td-p/13057454"
   - "https://forums.autodesk.com/t5/maya-forum/maya-locks-up-ui-becomes-laggy-and-unusable-with-animation-rig/td-p/12715483"
-  - "https://help.autodesk.com/cloudhelp/2023/ENU/Maya-Rendering/files/GUID-B7C04719-3D25-4A02-9F90-96208FB223C2.htm"
+  - "https://help.autodesk.com/view/MAYAUL/2025/ENU/"
 ---
 
 # Fixing Maya Viewport 2.0 Lag: Optimization Strategies for Heavy Scenes and Rigs
