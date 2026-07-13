@@ -52,7 +52,7 @@ The Mesh Buildup Wizard appears in the top left, and individual scans display in
 
 ### Select Reference and Moving Scans
 1. Under **Method**, choose **local based on picked points** (manual alignment)
-   - The SAIC guide recommends this over auto-alignment: "It is always good to be responsible for your own editing as it can come in handy when auto-processes fail — which they often do"
+   - Manual alignment gives you control over the result and is more reliable than auto-alignment when scans have limited overlap or complex geometry
 2. Click the **Reference** box and select a reference scan from the bottom row
    - Choose the scan with the most information/coverage
 3. Click the **Moving** box and select a scan to align with the reference
@@ -93,11 +93,10 @@ According to Geomagic's documentation: "Global Registration aligns a point cloud
 5. This improves alignment precision beyond what manual point picking achieves
 
 ### The UMD Workflow
-The University of Maryland tutorial describes this process for scanner data:
-1. Select Scan Groups 1_0 through 1_5 → Optimize Alignment → green check
-2. Repeat for each scan group (2_0 through 2_5, 3_0 through 3_5)
-3. After individual groups are optimized, use **Align Objects** to globally align all groups together
-4. Finally, run **Optimize Alignment** on all 15 point cloud objects together
+The University of Maryland tutorial describes a process for scanner data:
+1. Optimize alignment within each scan group first
+2. Then use **Align Objects** to globally align all groups together
+3. Finally, run **Optimize Alignment** on all point cloud objects together for best precision
 
 ## Step 5: Data Merging / Triangulation (Mesh Buildup Wizard — Stage 3)
 
@@ -145,7 +144,7 @@ After merging, orient the model to the world coordinate system:
 - Use the Optimize Alignment tool after manual alignment to refine
 
 ### Issue: Deleted Mesh Data Reappears During Alignment
-This was a known bug (fixed in Design X 2023.2.0 per the release notes). Update to the latest version.
+This has been reported as a bug in some older versions of Design X. Update to the latest version.
 
 ### Issue: Scans from Different Coordinate Systems
 If scans were taken with different scanner positions/orientations:

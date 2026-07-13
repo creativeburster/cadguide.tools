@@ -140,7 +140,7 @@ Based on the INSA Toulouse KISSsys Tutorial 2:
 8. Calculate the system
 
 ### Bearing Placement
-The INSA tutorial notes: "In the KISSsys system, the roller bearings that connect the planet pin to the planet gear are added to the same level as the shafts themselves, in the same way as in the KISSsoft shaft calculation."
+In the KISSsys system, the roller bearings that connect the planet pin to the planet gear are added to the same level as the shafts themselves, similar to how they are defined in the KISSsoft shaft calculation.
 
 ## Shifting Transmissions
 

@@ -31,20 +31,20 @@ The process works as follows:
 ## Supported CAD Systems and Compatibility
 
 ### Full Feature Tree Transfer (with modeling history)
-- **SOLIDWORKS**: 2006–2024
-- **Siemens NX**: 8–1953 series
-- **PTC Creo (Pro/E)**: up to 11.0
-- **Autodesk Inventor**: 2010–2025
-- **AutoCAD**: 2010–2011
+- **SOLIDWORKS**
+- **Siemens NX**
+- **PTC Creo (Pro/E)**
+- **Autodesk Inventor**
+- **AutoCAD**
 
 ### Geometry Only (no feature tree)
 - **Solid Edge**: Solid or surface bodies only
 - **CATIA**: Solid or surface bodies only
 
-Note: "LiveTransfer from Design X to SOLIDWORKS, Siemens NX, Creo (Pro/E), AutoCAD and Inventor supports CAD data along with its modeling history. When using LiveTransfer from Design X to Solid Edge or CATIA, only selected solid or surface bodies are supported to transfer, and no feature tree."
+LiveTransfer to SOLIDWORKS, Siemens NX, Creo (Pro/E), AutoCAD and Inventor supports CAD data along with its modeling history. When using LiveTransfer to Solid Edge or CATIA, only selected solid or surface bodies are supported to transfer, and no feature tree.
 
 ### Version Support Caveat
-From the 2024.3.2 release notes: "LiveTransfer also supports older versions of CAD software, but please be aware that CAD software versions prior to the previous three releases have not been tested and we cannot guarantee LiveTransfer functionality for these versions."
+LiveTransfer also supports older versions of CAD software, but CAD software versions prior to the previous three releases have not been tested and functionality cannot be guaranteed for these versions. Check the Geomagic support knowledge base for the latest compatibility information.
 
 ## LiveTransfer Workflow
 
@@ -84,10 +84,10 @@ If a feature cannot be transferred:
 ## Known Issues and Fixes
 
 ### Issue: 3D Patch Network Not Transferred to SOLIDWORKS
-**Bug GDX-17250** (fixed in 2022.0.0): Auto-surfacing patch networks were not transferred to SOLIDWORKS via LiveTransfer. Update to Design X 2022.0.0 or later.
+In some older versions of Design X, auto-surfacing patch networks were not properly transferred to SOLIDWORKS via LiveTransfer. Update to the latest version of Design X to resolve this issue.
 
 ### Issue: 3D Sketch Export — Self-Intersection Warning
-From the 2023.2.0 release notes: "A warning message will now notify users if some curves in the 3D sketch cannot be exported to the CAD application due to self intersection issues."
+Newer versions of Design X display a warning message if some curves in the 3D sketch cannot be exported to the CAD application due to self intersection issues.
 
 If you see this warning:
 1. Identify the self-intersecting curves in the 3D sketch

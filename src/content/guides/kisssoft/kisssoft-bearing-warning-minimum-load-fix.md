@@ -103,6 +103,43 @@ The equivalent static load exceeds the static load rating. Fix: Select a bearing
 ### "Speed exceeds limiting speed"
 The operating speed is above the bearing's speed limit. Fix: Select a high-speed bearing or reduce speed.
 
+## Bearing Manufacturer Minimum Load Guidelines
+
+Different bearing manufacturers specify minimum load differently:
+
+### SKF
+SKF provides minimum load formulas in their catalogues. For deep groove ball bearings: `P_min = 0.01 × C0`. For cylindrical roller bearings: `P_min = 0.02 × C0`. SKF also recommends using spring preload for bearings that may operate below minimum load, especially in vertical shaft applications where gravitational load is insufficient.
+
+### Schaeffler (FAG/INA)
+Schaeffler specifies minimum load as a function of the dynamic load rating C and speed. For ball bearings: `P_min = k × C` where k depends on the bearing series. Schaeffler's application engineering notes that low-load operation is particularly problematic at high speeds where centrifugal forces can cause ball skidding.
+
+### Timken
+Timken provides minimum load recommendations for tapered roller bearings based on the thrust load component.
+
+### NSK
+NSK recommends minimum loads similar to SKF (0.01 × C0 for ball bearings, 0.02 × C0 for roller bearings). NSK's catalogue notes that bearings operating at very low speeds (close to zero) may not generate sufficient lubricant film even above the minimum load threshold.
+
+## Diagnosing the Root Cause in KISSsoft
+
+### Step 1: Check the Bearing Load Report
+1. Open the bearing calculation report in KISSsoft
+2. Look at the equivalent dynamic load P value
+3. Compare P with 0.01 × C0
+4. If P is significantly below 0.01 × C0, the bearing is heavily oversized
+
+### Step 2: Check the Load Spectrum
+If using a load spectrum (multiple load cases):
+1. Check each load case individually — the warning may appear for only some cases
+2. The minimum load check is performed for each load case separately
+3. If only one load case triggers the warning, consider whether that case represents real operating conditions
+
+### Step 3: Check Bearing Type
+Some bearing types are more sensitive to low load:
+- **Deep groove ball bearings**: Most sensitive — commonly trigger the warning
+- **Angular contact ball bearings**: Less sensitive due to inherent preload from contact angle
+- **Cylindrical roller bearings**: Moderate sensitivity
+- **Tapered roller bearings**: Least sensitive when properly paired (mounted back-to-back or face-to-face)
+
 ## Best Practices
 
 1. **Right-size bearings**: Don't overspecify bearings "just to be safe" — oversized bearings trigger minimum load warnings
@@ -110,3 +147,6 @@ The operating speed is above the bearing's speed limit. Fix: Select a high-speed
 3. **Consider preload for light-load applications**: Spring preload is a standard solution for bearings that operate below minimum load
 4. **Use manufacturer-specific bearings for final design**: General bearings skip the minimum load check but lose analysis features
 5. **Consult bearing manufacturers**: SKF, Schaeffler, Timken, and NSK all have application engineering support for minimum load questions
+6. **Check load spectrum cases individually**: The warning may only apply to certain operating conditions
+7. **Consider bearing arrangement**: Paired angular contact or tapered roller bearings in back-to-back/face-to-face arrangements generate internal preload, reducing the risk of low-load operation
+8. **Monitor temperature in operation**: If the warning is accepted, monitor bearing temperature — skidding causes temperature rise that can be detected with thermocouples

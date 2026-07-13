@@ -98,8 +98,7 @@ For accurate contact analysis, the system deformation must be considered:
 ### Profile Modifications (in the profile direction)
 1. Open the **Modifications** tab
 2. Add **profile crowning** (diameter-centered):
-   - Recommendation: HB = 0.005 × normal module
-   - Example: For mn = 7.5 mm, HB = 0.005 × 7.5 = 38 μm
+   - The appropriate magnitude depends on the module, load, and application — consult KISSsoft training materials or the ISO 6336 standard for sizing guidance
 3. Add **tip relief** or **root relief** if needed
 4. Profile modifications affect:
    - Entry/exit impacts
@@ -108,8 +107,7 @@ For accurate contact analysis, the system deformation must be considered:
 
 ### Lead Modifications (in the face width direction)
 1. Add **lengthwise crowning**:
-   - Recommendation: LB = b² / 1000 (b = face width in mm)
-   - Example: For b = 72 mm, LB = 72² / 1000 = 5.18 mm... no, LB = b / 1000 = 72 / 1000 = 0.072 mm = 72 μm
+   - The appropriate magnitude depends on the face width, shaft deformation, and load — consult KISSsoft training materials or ISO 6336 for sizing guidance
 2. Add **helix angle modification** if the contact pattern is offset
 3. Add **end relief** if edge contact occurs
 4. Lead modifications affect:
