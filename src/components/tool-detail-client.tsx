@@ -245,6 +245,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                     slug={tool.slug} src={tool.logo_url}
                     websiteUrl={tool.official_url}
                     name={tool.name}
+                    priority={true}
                     className="w-20 h-20 md:w-40 md:h-40 rounded-[24px] md:rounded-[40px] shadow-2xl border-2 md:border-4 border-white shrink-0 bg-white"
                   />
                   <div className="flex-1">

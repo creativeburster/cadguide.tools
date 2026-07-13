@@ -238,6 +238,7 @@ export default async function BestOfPage(
                       src={tool.logo_url}
                       websiteUrl={tool.official_url}
                       name={tool.name}
+                      priority={i < 2}
                       className="w-16 h-16 rounded-xl flex-shrink-0"
                     />
                     <div className="flex-1 min-w-0">

@@ -279,7 +279,7 @@ export default async function GuideArticlePage(
             {/* Tool badge in header */}
             {matchedTool && (
               <div className="shrink-0 flex items-center gap-4 bg-white p-4 rounded-3xl border border-slate-100 shadow-sm">
-                <ToolLogo slug={matchedTool.slug} name={matchedTool.name} src={matchedTool.logo_url} className="w-14 h-14 rounded-2xl shadow bg-white border border-slate-100" />
+                <ToolLogo slug={matchedTool.slug} name={matchedTool.name} src={matchedTool.logo_url} priority={true} className="w-14 h-14 rounded-2xl shadow bg-white border border-slate-100" />
                 <div>
                   <span className="text-[10px] text-slate-400 font-black uppercase tracking-wider block">Target Software</span>
                   <Link href={`/tools/${matchedTool.slug}`} className="font-black text-slate-900 hover:text-blue-600 hover:underline block text-lg transition-colors">

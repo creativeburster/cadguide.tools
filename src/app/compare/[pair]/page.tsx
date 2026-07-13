@@ -524,6 +524,7 @@ export default async function ComparePairPage(
               src={t.logo_url}
               websiteUrl={t.official_url}
               name={t.name}
+              priority={true}
               className="w-12 h-12 rounded-xl flex-shrink-0 bg-slate-50 border border-slate-100"
             />
             <div>

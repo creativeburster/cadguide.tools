@@ -414,6 +414,7 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
                 src={alt.logo_url}
                 websiteUrl={alt.official_url}
                 name={alt.name}
+                priority={i < 2}
                 className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex-shrink-0 border border-slate-100 shadow-inner"
               />
               <div className="flex-1 min-w-0">
@@ -720,6 +721,7 @@ export default async function AlternativesPage(
                 src={tool.logo_url}
                 websiteUrl={tool.official_url}
                 name={tool.name}
+                priority={true}
                 className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex-shrink-0 border border-slate-100 shadow-inner"
               />
               <div className="flex-1 min-w-0">
