@@ -16,6 +16,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { clampTitle, guideArticleLd, guideBreadcrumbLd } from '@/lib/seo';
+import { linkifyToolNamesInHtml } from '@/lib/linkify-html';
 
 const CONTENT_DIR = path.join(process.cwd(), 'src', 'content', 'guides');
 
@@ -81,6 +82,9 @@ function getGuideBySlug(slug: string): { frontmatter: GuideFrontmatter; contentH
   while ((m = tocRegex.exec(contentHtml)) !== null) {
     headings.push({ level: parseInt(m[1]), id: m[2], text: m[3].replace(/<[^>]+>/g, '') });
   }
+
+  // Auto-link tool names in the guide body (one link per tool per article)
+  contentHtml = linkifyToolNamesInHtml(contentHtml, (data as GuideFrontmatter).softwareSlug);
 
   // Word count for schema
   const wordCount = content.split(/\s+/).filter(Boolean).length;
