@@ -1396,6 +1396,83 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ['gd&t symbols', 'asme y14.5 reference', 'geometric dimensioning tolerancing', 'gdt symbol guide', 'tolerance zone types', 'datum reference frame']
   },
   {
+    slug: 'iso-286-limits-fits-reference',
+    title: 'ISO 286 Limits & Fits Reference Table',
+    description: 'Searchable ISO 286-1/2 limits and fits reference: IT tolerance grades, shaft/hole fundamental deviations, and common fit combinations with applications.',
+    detailDesc: 'Browse ISO 286 limits and fits by category: clearance, transition, and interference fits. Includes IT5-IT11 tolerance grades in micrometers for common size ranges, shaft (a-zc) and hole (A-ZC) fundamental deviations, and practical application examples for each fit.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['iso 286', 'limits and fits', 'tolerance grades', 'it tolerance', 'shaft tolerance', 'hole tolerance', 'clearance fit', 'interference fit', 'transition fit', 'hole basis system']
+  },
+  {
+    slug: 'iso-metric-thread-reference',
+    title: 'ISO Metric Thread & Tap Drill Size Reference',
+    description: 'Complete ISO metric thread table (M1.6–M48) with coarse/fine pitch, tap drill sizes, clearance holes, and thread engagement data.',
+    detailDesc: 'Searchable ISO 261 metric thread reference covering M1.6 to M48 coarse pitch and M8 to M30 fine pitch threads. Includes tap drill diameters, ISO 273 clearance hole sizes (close/normal), thread tolerance classes (4H-8g), and thread engagement guidelines.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['iso metric thread', 'tap drill size', 'thread pitch', 'm6 m8 m10', 'clearance hole', 'thread tolerance', 'iso 261', 'iso 965', 'metric fine thread', 'tap drill chart']
+  },
+  {
+    slug: 'aws-welding-symbol-reference',
+    title: 'AWS Welding Symbol Reference Guide (A2.4)',
+    description: 'Complete AWS A2.4 welding symbol reference: groove, fillet, plug, surfacing welds with supplementary symbols and tail notes.',
+    detailDesc: 'Browse AWS A2.4 welding symbols by category: groove welds (V, bevel, U, J, flare), basic welds (fillet, plug, slot, spot, seam), supplementary symbols (all-around, field weld, backing, contour), and process codes (SMAW, GMAW, GTAW, FCAW, SAW).',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['aws welding symbols', 'a2.4 standard', 'weld symbol reference', 'groove weld symbol', 'fillet weld symbol', 'welding process codes', 'smaw gmaw gtaw', 'weld all around symbol', 'field weld symbol']
+  },
+  {
+    slug: 'surface-roughness-reference',
+    title: 'Surface Roughness (Ra/Rz) Symbols & Values Reference',
+    description: 'ISO 1302 surface texture symbols, Ra/Rz values, manufacturing process capabilities, and typical applications reference table.',
+    detailDesc: 'Searchable ISO 1302 surface roughness reference: surface texture symbols (material removal, prohibited, lay direction), Ra values from 0.012 to 50μm with corresponding manufacturing processes, Rz conversion data, and typical engineering applications.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['surface roughness', 'ra value', 'rz value', 'iso 1302', 'surface finish symbol', 'surface texture', 'machining surface finish', 'ra rz conversion', 'surface lay', 'grinding polishing lapping']
+  },
+  {
+    slug: 'autolisp-function-reference',
+    title: 'AutoLISP Function Quick Reference for AutoCAD',
+    description: 'Complete AutoLISP function reference: math, geometry, entity access, selection sets, list manipulation, and command execution for AutoCAD scripting.',
+    detailDesc: '50+ AutoLISP functions organized by category: math and logic operators, geometry calculations (distance, angle, polar, inters), entity access (entget, entmake, entmod, ssget), list operations (car, cdr, mapcar, assoc), I/O functions (getpoint, getdist, command), and system variables.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['autolisp', 'autolisp functions', 'autocad scripting', 'autocad api', 'entget entmake', 'ssget selection set', 'lisp programming', 'autocad automation', 'defun c:', 'dxf group codes']
+  },
+  {
+    slug: 'steel-section-properties-reference',
+    title: 'Standard Steel Section Properties Reference (IPE/HEA/HEB/UB/UC)',
+    description: 'European (IPE, HEA, HEB, UPE) and British (UB, UC) steel section properties: dimensions, area, weight, moment of inertia, and section modulus.',
+    detailDesc: 'Searchable steel section properties database: European IPE beams (80-600), HEA/HEB wide flange sections (100-400), British Universal Beams (203-610) and Columns (152-356), and channel sections (UPE/PFC). Includes cross-sectional area, unit weight, moment of inertia (Iy), and section modulus (Wy).',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['steel section properties', 'ipe beam', 'hea heb section', 'universal beam', 'universal column', 'moment of inertia', 'section modulus', 'steel profile', 'eurocode 3', 'hot rolled steel', 'ub uc section']
+  },
+  {
+    slug: 'cnc-speeds-feeds-reference',
+    title: 'CNC Speeds & Feeds Quick Reference Table',
+    description: 'CNC cutting speeds (Vc) and feed rates per material: steel, aluminum, stainless, titanium, brass, and plastics with HSS and carbide tool data.',
+    detailDesc: 'Searchable CNC speeds and feeds reference: HSS and carbide cutting speeds for 12+ materials (aluminum, steel, stainless, titanium, cast iron, Inconel, brass, plastics), chip load per tooth data, drilling speeds, RPM/feed formulas, and material-specific machining tips.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['cnc speeds and feeds', 'cutting speed', 'feed rate', 'spindle speed rpm', 'chip load', 'carbide tool speed', 'hss tool speed', 'aluminum machining', 'stainless machining', 'titanium machining', 'cnc formula']
+  },
+  {
     slug: 'pump-affinity-law-calculator',
     title: 'Pump Affinity Law Calculator (Flow, Head & Power)',
     description: 'Calculate new flow rate, head pressure, and shaft power when changing pump speed or impeller diameter per affinity laws.',
