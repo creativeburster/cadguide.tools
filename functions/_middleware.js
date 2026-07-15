@@ -3,6 +3,7 @@
 
 // All 173 deleted URLs from GSC 404 report (2026-07-08)
 const GONE_PATHS = new Set([
+  "/licensing",
   // === Guides (65) — legacy AI-generated batch ===
   "/guides/substance-painter-troubleshooting-1",  // previously blocked by robots.txt
   "/guides/surfcam-troubleshooting-0",
