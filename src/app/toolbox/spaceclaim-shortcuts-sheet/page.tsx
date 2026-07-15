@@ -23,20 +23,42 @@ export default function SpaceClaimShortcutsPage() {
       />
 
       <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
-        <section className="bg-slate-900 text-white py-16 relative overflow-hidden print:hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Keyboard Shortcuts Cheatsheet
+        {/* Hero — amber accent */}
+        <section className="bg-gradient-to-r from-slate-900 to-amber-950 text-white py-16 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-5 uppercase tracking-[0.15em]">
+              Ansys Direct Modeling
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              SpaceClaim <span className="text-blue-400">Keyboard Shortcuts</span> Cheat Sheet
+            <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
+              SpaceClaim <span className="text-amber-400">Keyboard Shortcuts</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable reference for Ansys SpaceClaim keyboard shortcuts covering design tools, editing, viewing, and selection workflows.
+            <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
+              Direct modeling at its fastest. The <strong className="text-amber-300">Pull</strong> tool does 80% of the work —
+              extrude, round, offset, revolve — all from one key. Search every SpaceClaim hotkey here.
             </p>
+          </div>
+        </section>
+
+        {/* Direct modeling core tools — unique to SpaceClaim */}
+        <section className="bg-white border-b border-slate-100 py-8 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <h2 className="text-sm font-black text-slate-400 uppercase tracking-wider mb-4">Core Direct Modeling Tools</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { key: 'P', name: 'Pull', desc: 'Extrude, round, offset, revolve' },
+                { key: 'M', name: 'Move', desc: 'Translate faces and edges' },
+                { key: 'F', name: 'Fill', desc: 'Replace, patch, close gaps' },
+                { key: 'C', name: 'Combine', desc: 'Merge, subtract, intersect' },
+              ].map((tool) => (
+                <div key={tool.key} className="bg-amber-50 rounded-2xl border border-amber-100 p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <kbd className="font-mono bg-slate-900 text-amber-400 px-3 py-1.5 rounded-lg font-black text-sm select-all">{tool.key}</kbd>
+                    <span className="font-black text-slate-800">{tool.name}</span>
+                  </div>
+                  <p className="text-xs text-slate-500 font-medium">{tool.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

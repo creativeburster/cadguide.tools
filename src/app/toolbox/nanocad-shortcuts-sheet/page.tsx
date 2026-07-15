@@ -23,20 +23,39 @@ export default function NanoCADShortcutsPage() {
       />
 
       <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
-        <section className="bg-slate-900 text-white py-16 relative overflow-hidden print:hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Keyboard Shortcuts Cheatsheet
+        {/* Hero — minimal, green accent */}
+        <section className="bg-white border-b border-slate-100 py-12 print:hidden">
+          <div className="max-w-[800px] mx-auto px-6 md:px-12 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-green-500/10 text-green-600 border border-green-500/20 mb-4 uppercase tracking-[0.15em]">
+              Free CAD · Open Source
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              nanoCAD <span className="text-blue-400">Keyboard Shortcuts and Command Aliases</span> Cheat Sheet
+            <h1 className="text-3xl md:text-4xl font-black mb-3 tracking-tight text-slate-900">
+              nanoCAD <span className="text-green-600">Keyboard Shortcuts</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable reference for nanoCAD keyboard shortcuts, hot keys, and command aliases — compatible with AutoCAD workflows.
+            <p className="text-base text-slate-500 leading-relaxed font-medium">
+              The free, AutoCAD-compatible CAD platform. Every hotkey, function key, and command alias
+              in one searchable reference — with alias file download for your workflow.
             </p>
+          </div>
+        </section>
+
+        {/* Free CAD features — unique to nanoCAD */}
+        <section className="bg-green-50/50 border-b border-green-100 py-6 print:hidden">
+          <div className="max-w-[800px] mx-auto px-6 md:px-12">
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-black text-green-600">$0</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">Free License</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-green-600">100%</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">AutoCAD Compatible</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-green-600">.pgp</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">Alias Import</div>
+              </div>
+            </div>
           </div>
         </section>
 

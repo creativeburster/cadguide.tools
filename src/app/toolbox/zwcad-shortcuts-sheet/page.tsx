@@ -23,20 +23,35 @@ export default function ZWCADShortcutsPage() {
       />
 
       <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
-        <section className="bg-slate-900 text-white py-16 relative overflow-hidden print:hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Keyboard Shortcuts Cheatsheet
+        {/* Hero — compact, red accent */}
+        <section className="bg-slate-900 text-white py-14 print:hidden">
+          <div className="max-w-[900px] mx-auto px-6 md:px-12 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-red-500/10 text-red-400 border border-red-500/20 mb-5 uppercase tracking-[0.15em]">
+              ZWCAD 2D Drafting Reference
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              ZWCAD <span className="text-blue-400">Keyboard Shortcuts and Command Aliases</span> Cheat Sheet
+            <h1 className="text-3xl md:text-4xl font-black mb-4 tracking-tight leading-tight">
+              ZWCAD <span className="text-red-400">Hotkeys & PGP Aliases</span> Reference
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable reference for ZWCAD keyboard shortcuts, function keys, and PGP-compatible command aliases for efficient 2D/3D drafting.
+            <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
+              ZWCAD shares the same PGP alias format as AutoCAD — if you know one, you know the other.
+              Search every shortcut, function key, and command alias here.
             </p>
+          </div>
+        </section>
+
+        {/* Migration callout — unique to ZWCAD */}
+        <section className="bg-red-50 border-y border-red-100 py-6 print:hidden">
+          <div className="max-w-[900px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-4">
+            <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-2xl">
+              🔄
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-sm font-black text-red-900 uppercase tracking-wider">Migrating from AutoCAD?</h2>
+              <p className="text-sm text-red-700/80 font-medium mt-1">
+                ZWCAD reads <code className="bg-red-100 px-1.5 py-0.5 rounded text-xs">acad.pgp</code> files directly.
+                Import your existing aliases via Customize User Interface with zero retraining needed.
+              </p>
+            </div>
           </div>
         </section>
 

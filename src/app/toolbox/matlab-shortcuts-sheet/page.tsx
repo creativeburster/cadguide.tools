@@ -23,20 +23,69 @@ export default function MatlabShortcutsPage() {
       />
 
       <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
-        <section className="bg-slate-900 text-white py-16 relative overflow-hidden print:hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Keyboard Shortcuts Cheatsheet
+        {/* Hero — green accent */}
+        <section className="bg-gradient-to-r from-slate-900 to-green-950 text-white py-16 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <div className="flex flex-col items-center text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-green-500/10 text-green-400 border border-green-500/20 mb-5 uppercase tracking-[0.15em]">
+                Numerical Computing
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
+                MATLAB <span className="text-green-400">Keyboard Shortcuts</span>
+              </h1>
+              <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl font-medium">
+                Editor, Command Window, debugging, and navigation — 49+ shortcuts for the complete MATLAB workflow.
+                Press <kbd className="bg-green-500/10 text-green-300 px-2 py-0.5 rounded font-mono text-sm">Up Arrow</kbd> in the
+                Command Window to recall previous commands.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              MATLAB <span className="text-blue-400">Keyboard Shortcuts</span> Cheat Sheet
-            </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable reference for MATLAB keyboard shortcuts covering the editor, command window, navigation, debugging, and code execution.
-            </p>
+          </div>
+        </section>
+
+        {/* Editor vs Command Window guide — unique to MATLAB */}
+        <section className="bg-white border-b border-slate-100 py-8 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <h2 className="text-sm font-black text-slate-400 uppercase tracking-wider mb-4">Two Workspaces, Different Shortcuts</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-green-50 rounded-2xl border border-green-100 p-5">
+                <h3 className="font-black text-green-900 mb-3 flex items-center gap-2">
+                  <span className="text-lg">📝</span> Editor
+                </h3>
+                <div className="space-y-2 text-sm">
+                  {[
+                    { k: 'Ctrl+R', d: 'Comment lines' },
+                    { k: 'Ctrl+T', d: 'Uncomment lines' },
+                    { k: 'Ctrl+I', d: 'Smart indent' },
+                    { k: 'Ctrl+D', d: 'Open function file' },
+                    { k: 'F5', d: 'Run script' },
+                  ].map((item) => (
+                    <div key={item.k} className="flex items-center gap-3">
+                      <kbd className="font-mono bg-slate-900 text-green-300 px-2.5 py-1 rounded-lg font-black text-xs select-all min-w-[80px] text-center">{item.k}</kbd>
+                      <span className="text-slate-600 font-medium">{item.d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-green-50 rounded-2xl border border-green-100 p-5">
+                <h3 className="font-black text-green-900 mb-3 flex items-center gap-2">
+                  <span className="text-lg">💻</span> Command Window
+                </h3>
+                <div className="space-y-2 text-sm">
+                  {[
+                    { k: '↑', d: 'Recall previous command' },
+                    { k: '↓', d: 'Recall next command' },
+                    { k: 'Esc', d: 'Clear current line' },
+                    { k: 'Ctrl+C', d: 'Interrupt computation' },
+                    { k: 'Tab', d: 'Auto-complete name' },
+                  ].map((item) => (
+                    <div key={item.k} className="flex items-center gap-3">
+                      <kbd className="font-mono bg-slate-900 text-green-300 px-2.5 py-1 rounded-lg font-black text-xs select-all min-w-[80px] text-center">{item.k}</kbd>
+                      <span className="text-slate-600 font-medium">{item.d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

@@ -23,20 +23,42 @@ export default function OnshapeShortcutsPage() {
       />
 
       <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
-        <section className="bg-slate-900 text-white py-16 relative overflow-hidden print:hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Keyboard Shortcuts Cheatsheet
+        {/* Hero — cloud-themed, sky blue gradient */}
+        <section className="bg-gradient-to-b from-sky-500 via-sky-600 to-slate-900 text-white py-20 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-white/10 text-sky-200 border border-white/20 mb-6 uppercase tracking-[0.15em]">
+              ☁️ Cloud-Native CAD
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Onshape <span className="text-blue-400">Keyboard Shortcuts</span> Cheat Sheet
+            <h1 className="text-4xl md:text-5xl font-black mb-5 tracking-tight leading-tight">
+              Onshape <span className="text-sky-200">Keyboard Shortcuts</span><br />Complete Reference
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable reference for Onshape keyboard shortcuts covering Part Studio, assembly, sketch, drawing, and 3D view navigation.
+            <p className="text-base md:text-lg text-sky-100/80 leading-relaxed max-w-2xl mx-auto font-medium">
+              Over 70 browser-based shortcuts for Part Studio, Assembly, Sketch, Drawing, and 3D view.
+              Press <kbd className="bg-white/15 px-2 py-0.5 rounded font-mono text-sm">Shift+?</kbd> anywhere in Onshape to see them all in-app.
             </p>
+          </div>
+        </section>
+
+        {/* Browser shortcuts intro — unique to Onshape */}
+        <section className="bg-white border-b border-slate-100 py-8 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-black text-sky-600 mb-1">L</div>
+                <div className="text-sm font-bold text-slate-700">Sketch: Line</div>
+                <div className="text-xs text-slate-400 font-medium mt-0.5">Single-key tools in sketch mode</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-black text-sky-600 mb-1">Shift+E</div>
+                <div className="text-sm font-bold text-slate-700">Part Studio: Extrude</div>
+                <div className="text-xs text-slate-400 font-medium mt-0.5">Shift+letter for features</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-black text-sky-600 mb-1">Shift+7</div>
+                <div className="text-sm font-bold text-slate-700">View: Isometric</div>
+                <div className="text-xs text-slate-400 font-medium mt-0.5">Shift+number for views</div>
+              </div>
+            </div>
           </div>
         </section>
 

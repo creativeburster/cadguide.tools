@@ -23,20 +23,47 @@ export default function AnsysShortcutsPage() {
       />
 
       <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
-        <section className="bg-slate-900 text-white py-16 relative overflow-hidden print:hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Keyboard Shortcuts Cheatsheet
+        {/* Hero — yellow accent */}
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-yellow-950/40 text-white py-16 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <div className="flex flex-col items-center text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 mb-5 uppercase tracking-[0.15em]">
+                Finite Element Analysis
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
+                ANSYS Mechanical <span className="text-yellow-400">Hotkeys</span>
+              </h1>
+              <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl font-medium">
+                From geometry import to post-processing results — every ANSYS Mechanical shortcut
+                organized by FEA workflow stage. Press
+                <kbd className="bg-yellow-500/10 text-yellow-300 px-2 py-0.5 rounded font-mono text-sm mx-1">F5</kbd>
+                to update cells in Workbench.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              ANSYS Mechanical <span className="text-blue-400">Keyboard Shortcuts</span> Cheat Sheet
-            </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable reference for ANSYS Mechanical hotkeys covering model navigation, geometry, mesh, boundary conditions, and post-processing.
-            </p>
+          </div>
+        </section>
+
+        {/* FEA workflow stages — unique to ANSYS */}
+        <section className="bg-white border-b border-slate-100 py-8 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <h2 className="text-sm font-black text-slate-400 uppercase tracking-wider mb-4">FEA Workflow Stages</h2>
+            <div className="flex flex-wrap items-center gap-2">
+              {[
+                { label: 'Geometry', icon: '📦' },
+                { label: 'Mesh', icon: '🔲' },
+                { label: 'Setup', icon: '⚙️' },
+                { label: 'Solve', icon: '▶️' },
+                { label: 'Results', icon: '📊' },
+              ].map((stage, i) => (
+                <div key={stage.label} className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 bg-yellow-50 rounded-xl px-4 py-2 border border-yellow-100">
+                    <span className="text-base">{stage.icon}</span>
+                    <span className="text-sm font-bold text-yellow-900">{stage.label}</span>
+                  </div>
+                  {i < 4 && <span className="text-yellow-400 font-black">→</span>}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

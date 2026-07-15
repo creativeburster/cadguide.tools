@@ -23,19 +23,52 @@ export default function GstarCADShortcutsPage() {
       />
 
       <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
-        <section className="bg-slate-900 text-white py-16 relative overflow-hidden print:hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Keyboard Shortcuts Cheatsheet
+        {/* Hero — split layout, cyan accent */}
+        <section className="bg-slate-900 text-white py-16 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-5 uppercase tracking-[0.15em]">
+                  GstarCAD Shortcuts
+                </div>
+                <h1 className="text-3xl md:text-4xl font-black mb-4 tracking-tight leading-tight">
+                  GstarCAD<br />
+                  <span className="text-cyan-400">Command Aliases</span> & Hotkeys
+                </h1>
+                <p className="text-base text-slate-300 leading-relaxed font-medium">
+                  GstarCAD mirrors AutoCAD's alias system by default. Type
+                  <code className="text-cyan-300 bg-cyan-500/10 px-1.5 py-0.5 rounded text-sm mx-1">L</code> for LINE,
+                  <code className="text-cyan-300 bg-cyan-500/10 px-1.5 py-0.5 rounded text-sm mx-1">CO</code> for COPY —
+                  your muscle memory transfers instantly.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                <h2 className="text-xs font-black text-cyan-400 uppercase tracking-wider mb-4">Quick Reference</h2>
+                <div className="space-y-2.5">
+                  {[
+                    { k: 'LA', d: 'Layer Manager' },
+                    { k: 'B', d: 'Create Block' },
+                    { k: 'H', d: 'Hatch Fill' },
+                    { k: 'F3', d: 'Object Snap' },
+                  ].map((r) => (
+                    <div key={r.k} className="flex items-center gap-3">
+                      <kbd className="font-mono bg-slate-800 text-cyan-300 px-2.5 py-1 rounded-lg font-black text-xs select-all min-w-[48px] text-center">{r.k}</kbd>
+                      <span className="text-sm text-slate-300 font-medium">{r.d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              GstarCAD <span className="text-blue-400">Keyboard Shortcuts and Command Aliases</span> Cheat Sheet
-            </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable reference for GstarCAD keyboard shortcuts, function keys, and command aliases — fully compatible with AutoCAD PGP format.
+          </div>
+        </section>
+
+        {/* Workspace note — unique to GstarCAD */}
+        <section className="bg-cyan-50 border-b border-cyan-100 py-5 print:hidden">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+            <p className="text-sm text-cyan-900 font-medium text-center">
+              💡 In GstarCAD Classic workspace, menu items show underlined letters — press
+              <kbd className="bg-cyan-100 px-1.5 py-0.5 rounded text-xs mx-1 font-mono">Alt + underlined letter</kbd>
+              to access menu commands without the mouse.
             </p>
           </div>
         </section>
