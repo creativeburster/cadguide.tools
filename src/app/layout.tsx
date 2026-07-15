@@ -32,6 +32,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
         
+        {/* Sitemap reference for SEO & AI Search Crawler discovery */}
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        
         {/* DNS Preconnects for external resources */}
         <link rel="preconnect" href="https://icon.horse" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://logo.clearbit.com" crossOrigin="anonymous" />
