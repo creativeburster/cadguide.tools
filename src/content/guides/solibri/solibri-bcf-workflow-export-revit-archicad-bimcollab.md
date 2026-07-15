@@ -166,10 +166,10 @@ This is a hybrid approach — not as seamless as BIMcollab, but works if you're 
 
 A BCF issue is only useful if the resolver can understand and act on it. Here's what makes a good BCF issue:
 
-### Title
+### Issue Title
 Be specific: "Duct D-12 conflicts with beam B-07 at Grid C/Level 3" — not "Clash found."
 
-### Description
+### Issue Description
 Include: what the clash is, which disciplines are involved, what the expected resolution is.
 
 ### Viewpoint

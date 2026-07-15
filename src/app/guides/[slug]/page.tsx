@@ -17,6 +17,7 @@ import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { clampTitle, guideArticleLd, guideBreadcrumbLd } from '@/lib/seo';
 import { linkifyToolNamesInHtml } from '@/lib/linkify-html';
+import { TableOfContents } from '@/components/table-of-contents';
 
 const CONTENT_DIR = path.join(process.cwd(), 'src', 'content', 'guides');
 
@@ -309,25 +310,7 @@ export default async function GuideArticlePage(
             </div>
 
             {/* Table of Contents */}
-            {headings.length >= 3 && (
-              <nav className="mb-8 bg-white p-5 sm:p-6 rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-sm">
-                <h2 className="text-xs font-black text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <FileText className="w-4 h-4" /> Table of Contents
-                </h2>
-                <ol className="space-y-1.5">
-                  {headings.map((h: { level: number; id: string; text: string }, i: number) => (
-                    <li key={i} className={cn(h.level === 3 ? 'pl-4' : '')}>
-                      <a
-                        href={`#${h.id}`}
-                        className="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors block py-0.5"
-                      >
-                        {h.text}
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              </nav>
-            )}
+            <TableOfContents headings={headings} />
 
             {/* Article content */}
             <div
