@@ -1,0 +1,191 @@
+'use client';
+
+import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
+
+const CATEGORIES = [
+  { id: 'number', name: '🔢 Number Drills (#80–#1)' },
+  { id: 'letter', name: '🔤 Letter Drills (A–Z)' },
+  { id: 'fractional', name: '📏 Fractional (inch)' },
+  { id: 'metric', name: '📏 Metric (mm)' },
+  { id: 'tap', name: '🔩 Tap Drill Applications' },
+];
+
+const SHORTCUTS = [
+  // Number drills — most commonly used ones
+  { keys: '#80', command: '0.0135in · 0.343mm', category: 'number', description: 'Smallest standard number drill. Used for micro-drilling in electronics and watchmaking. Requires pin vise or precision chuck.' },
+  { keys: '#70', command: '0.0280in · 0.711mm', category: 'number', description: 'Very small drill. Used in PCB fabrication and precision instruments.' },
+  { keys: '#60', command: '0.0400in · 1.016mm', category: 'number', description: 'Fine drill for electronics and model making. Close to 1mm.' },
+  { keys: '#56', command: '0.0465in · 1.181mm', category: 'number', description: 'Tap drill for 0-80 UNF (0.0465"). Common in miniature instrumentation.' },
+  { keys: '#55', command: '0.0520in · 1.321mm', category: 'number', description: 'Tap drill for 1-64 UNC (0.052"). Small screw thread tap drill.' },
+  { keys: '#54', command: '0.0550in · 1.397mm', category: 'number', description: 'Tap drill for 1-72 UNF (0.055"). Fine thread small tap drill.' },
+  { keys: '#53', command: '0.0595in · 1.511mm', category: 'number', description: 'Tap drill for 2-56 UNC (0.0595"). Very common small screw tap drill.' },
+  { keys: '#52', command: '0.0635in · 1.613mm', category: 'number', description: 'Tap drill for 2-64 UNC and 3-48 UNC. Close to 1.6mm metric.' },
+  { keys: '#50', command: '0.0700in · 1.778mm', category: 'number', description: 'Tap drill for 3-56 UNF (0.070"). Close to 1.8mm.' },
+  { keys: '#49', command: '0.0730in · 1.854mm', category: 'number', description: 'Tap drill for 4-40 UNC (0.073"). Common small screw in US.' },
+  { keys: '#48', command: '0.0760in · 1.930mm', category: 'number', description: 'Tap drill for 4-48 UNF. Close to 2.0mm.' },
+  { keys: '#47', command: '0.0785in · 1.994mm', category: 'number', description: 'Close to 2.0mm. Used for clearance holes for #2 screws.' },
+  { keys: '#46', command: '0.0810in · 2.057mm', category: 'number', description: 'Tap drill for 5-44 UNC. Close to 2.05mm.' },
+  { keys: '#45', command: '0.0820in · 2.083mm', category: 'number', description: 'Tap drill for 3-48 UNC (alternate). Close to 2.1mm.' },
+  { keys: '#44', command: '0.0860in · 2.184mm', category: 'number', description: 'Tap drill for 5-40 UNC. Close to 2.2mm.' },
+  { keys: '#43', command: '0.0890in · 2.261mm', category: 'number', description: 'Tap drill for 6-40 UNC (0.089"). Common in US electronics.' },
+  { keys: '#42', command: '0.0935in · 2.375mm', category: 'number', description: 'Tap drill for 6-32 UNC (alternate, 0.0935"). Close to 2.4mm.' },
+  { keys: '#41', command: '0.0960in · 2.438mm', category: 'number', description: 'Close to 2.5mm. Used for clearance holes for #4 screws.' },
+  { keys: '#40', command: '0.0980in · 2.489mm', category: 'number', description: 'Tap drill for 6-32 UNC (0.098"). Very common in US hardware.' },
+  { keys: '#39', command: '0.0995in · 2.527mm', category: 'number', description: 'Close to 2.5mm. Tap drill for 3-48 UNC (alternate).' },
+  { keys: '#38', command: '0.1015in · 2.578mm', category: 'number', description: 'Tap drill for 5-44 UNC (alternate). Close to 2.6mm.' },
+  { keys: '#37', command: '0.1040in · 2.642mm', category: 'number', description: 'Tap drill for 6-40 UNC (alternate). Close to 2.65mm.' },
+  { keys: '#36', command: '0.1065in · 2.705mm', category: 'number', description: 'Tap drill for 8-32 UNC (0.1065"). Close to 2.7mm.' },
+  { keys: '#35', command: '0.1100in · 2.794mm', category: 'number', description: 'Tap drill for 6-40 UNF (alternate). Close to 2.8mm. Also clearance for #6 screws.' },
+  { keys: '#34', command: '0.1110in · 2.819mm', category: 'number', description: 'Close to 2.8mm. Used for various small tap applications.' },
+  { keys: '#33', command: '0.1130in · 2.870mm', category: 'number', description: 'Tap drill for 4-40 UNC (clearance). Close to 2.9mm.' },
+  { keys: '#32', command: '0.1160in · 2.946mm', category: 'number', description: 'Close to 3.0mm. Tap drill for 8-36 UNF.' },
+  { keys: '#31', command: '0.1200in · 3.048mm', category: 'number', description: 'Tap drill for 10-24 UNC (0.120"). Close to 3.0mm. Common in US hardware.' },
+  { keys: '#30', command: '0.1285in · 3.264mm', category: 'number', description: 'Tap drill for 10-32 UNF (0.1285"). Close to 3.3mm.' },
+  { keys: '#29', command: '0.1360in · 3.454mm', category: 'number', description: 'Tap drill for 8-32 UNC (alternate) and 10-24 UNC. Close to 3.5mm.' },
+  { keys: '#28', command: '0.1405in · 3.569mm', category: 'number', description: 'Tap drill for 10-32 UNF (alternate). Close to 3.6mm.' },
+  { keys: '#27', command: '0.1440in · 3.658mm', category: 'number', description: 'Tap drill for 3/16-24 UNF. Close to 3.7mm.' },
+  { keys: '#26', command: '0.1470in · 3.734mm', category: 'number', description: 'Tap drill for 10-32 UNF (alternate). Close to 3.75mm.' },
+  { keys: '#25', command: '0.1495in · 3.797mm', category: 'number', description: 'Tap drill for 10-24 UNC (alternate). Close to 3.8mm. Also clearance for #8 screws.' },
+  { keys: '#24', command: '0.1520in · 3.861mm', category: 'number', description: 'Close to 3.9mm. Used for various tap applications.' },
+  { keys: '#23', command: '0.1540in · 3.912mm', category: 'number', description: 'Close to 4.0mm. Tap drill for 12-24 UNC.' },
+  { keys: '#22', command: '0.1570in · 3.988mm', category: 'number', description: 'Close to 4.0mm. Tap drill for 10-32 UNF (alternate).' },
+  { keys: '#21', command: '0.1590in · 4.039mm', category: 'number', description: 'Tap drill for 10-32 UNF (0.159"). Close to 4.0mm. Very common.' },
+  { keys: '#20', command: '0.1610in · 4.089mm', category: 'number', description: 'Tap drill for 12-28 UNF. Close to 4.1mm.' },
+  { keys: '#19', command: '0.1660in · 4.216mm', category: 'number', description: 'Tap drill for 12-24 UNC (alternate). Close to 4.2mm.' },
+  { keys: '#18', command: '0.1690in · 4.293mm', category: 'number', description: 'Close to 4.3mm. Used for clearance holes for #10 screws.' },
+  { keys: '#17', command: '0.1730in · 4.394mm', category: 'number', description: 'Tap drill for 12-24 UNC. Close to 4.4mm.' },
+  { keys: '#16', command: '0.1770in · 4.496mm', category: 'number', description: 'Tap drill for 12-28 UNF (alternate). Close to 4.5mm.' },
+  { keys: '#15', command: '0.1800in · 4.572mm', category: 'number', description: 'Close to 4.6mm. Used for various tap applications.' },
+  { keys: '#14', command: '0.1820in · 4.623mm', category: 'number', description: 'Close to 4.6mm. Tap drill for 1/4-20 UNC (alternate).' },
+  { keys: '#13', command: '0.1850in · 4.699mm', category: 'number', description: 'Close to 4.7mm. Tap drill for 1/4-28 UNF.' },
+  { keys: '#12', command: '0.1890in · 4.801mm', category: 'number', description: 'Close to 4.8mm. Tap drill for 1/4-20 UNC.' },
+  { keys: '#11', command: '0.1910in · 4.851mm', category: 'number', description: 'Close to 4.9mm. Tap drill for 1/4-28 UNF (alternate).' },
+  { keys: '#10', command: '0.1935in · 4.915mm', category: 'number', description: 'Close to 5.0mm. Tap drill for 1/4-20 UNC (alternate).' },
+  { keys: '#9', command: '0.1960in · 4.978mm', category: 'number', description: 'Close to 5.0mm. Tap drill for 1/4-28 UNF (alternate).' },
+  { keys: '#8', command: '0.1990in · 5.055mm', category: 'number', description: 'Tap drill for 1/4-20 UNC. Close to 5.0mm. Common.' },
+  { keys: '#7', command: '0.2010in · 5.105mm', category: 'number', description: 'Tap drill for 1/4-28 UNF. Close to 5.1mm.' },
+  { keys: '#6', command: '0.2040in · 5.182mm', category: 'number', description: 'Close to 5.2mm. Clearance for #12 screws.' },
+  { keys: '#5', command: '0.2055in · 5.220mm', category: 'number', description: 'Close to 5.2mm. Tap drill for 5/16-18 UNC (alternate).' },
+  { keys: '#4', command: '0.2090in · 5.309mm', category: 'number', description: 'Close to 5.3mm. Tap drill for 5/16-24 UNF.' },
+  { keys: '#3', command: '0.2130in · 5.410mm', category: 'number', description: 'Tap drill for 5/16-18 UNC. Close to 5.4mm.' },
+  { keys: '#2', command: '0.2210in · 5.613mm', category: 'number', description: 'Close to 5.6mm. Tap drill for 5/16-24 UNF (alternate).' },
+  { keys: '#1', command: '0.2280in · 5.791mm', category: 'number', description: 'Largest number drill. Tap drill for 5/16-18 UNC (alternate). Close to 5.8mm.' },
+
+  // Letter drills A-Z
+  { keys: 'A', command: '0.234in · 5.944mm', category: 'letter', description: 'Tap drill for 5/16-18 UNC (alternate). Close to 6.0mm.' },
+  { keys: 'B', command: '0.238in · 6.045mm', category: 'letter', description: 'Close to 6.0mm. Tap drill for 5/16-24 UNF (alternate).' },
+  { keys: 'C', command: '0.242in · 6.147mm', category: 'letter', description: 'Close to 6.1mm. Clearance for 1/4" bolts.' },
+  { keys: 'D', command: '0.246in · 6.248mm', category: 'letter', description: 'Close to 6.25mm. Tap drill for 5/16-18 UNC.' },
+  { keys: 'E', command: '0.250in · 6.350mm', category: 'letter', description: 'Exactly 1/4 inch. Tap drill for 5/16-18 UNC (alternate). Common reference size.' },
+  { keys: 'F', command: '0.257in · 6.528mm', category: 'letter', description: 'Tap drill for 5/16-24 UNF. Close to 6.5mm.' },
+  { keys: 'G', command: '0.261in · 6.629mm', category: 'letter', description: 'Tap drill for 3/8-24 UNF. Close to 6.6mm.' },
+  { keys: 'H', command: '0.266in · 6.756mm', category: 'letter', description: 'Close to 6.8mm. Tap drill for 3/8-16 UNC (alternate).' },
+  { keys: 'I', command: '0.272in · 6.909mm', category: 'letter', description: 'Tap drill for 3/8-16 UNC. Close to 7.0mm.' },
+  { keys: 'J', command: '0.277in · 7.036mm', category: 'letter', description: 'Close to 7.0mm. Tap drill for 3/8-24 UNF (alternate).' },
+  { keys: 'K', command: '0.281in · 7.137mm', category: 'letter', description: 'Tap drill for 3/8-16 UNC (alternate). Close to 7.14mm. Common.' },
+  { keys: 'L', command: '0.290in · 7.366mm', category: 'letter', description: 'Close to 7.4mm. Clearance for 5/16" bolts.' },
+  { keys: 'M', command: '0.295in · 7.493mm', category: 'letter', description: 'Close to 7.5mm. Tap drill for 7/16-20 UNF.' },
+  { keys: 'N', command: '0.302in · 7.671mm', category: 'letter', description: 'Tap drill for 7/16-14 UNC. Close to 7.7mm.' },
+  { keys: 'O', command: '0.316in · 8.026mm', category: 'letter', description: 'Close to 8.0mm. Clearance for 3/8" bolts.' },
+  { keys: 'P', command: '0.323in · 8.204mm', category: 'letter', description: 'Tap drill for 7/16-14 UNC (alternate). Close to 8.2mm.' },
+  { keys: 'Q', command: '0.332in · 8.433mm', category: 'letter', description: 'Tap drill for 1/2-13 UNC. Close to 8.5mm. Very common.' },
+  { keys: 'R', command: '0.339in · 8.611mm', category: 'letter', description: 'Close to 8.6mm. Tap drill for 1/2-20 UNF.' },
+  { keys: 'S', command: '0.348in · 8.839mm', category: 'letter', description: 'Close to 8.8mm. Tap drill for 1/2-13 UNC (alternate).' },
+  { keys: 'T', command: '0.358in · 9.093mm', category: 'letter', description: 'Close to 9.1mm. Tap drill for 1/2-20 UNF (alternate).' },
+  { keys: 'U', command: '0.368in · 9.347mm', category: 'letter', description: 'Tap drill for 9/16-12 UNC. Close to 9.35mm.' },
+  { keys: 'V', command: '0.377in · 9.576mm', category: 'letter', description: 'Close to 9.6mm. Tap drill for 9/16-18 UNF.' },
+  { keys: 'W', command: '0.386in · 9.804mm', category: 'letter', description: 'Close to 9.8mm. Tap drill for 5/8-11 UNC.' },
+  { keys: 'X', command: '0.397in · 10.084mm', category: 'letter', description: 'Tap drill for 5/8-11 UNC (alternate). Close to 10.1mm.' },
+  { keys: 'Y', command: '0.404in · 10.262mm', category: 'letter', description: 'Close to 10.3mm. Tap drill for 5/8-18 UNF.' },
+  { keys: 'Z', command: '0.413in · 10.490mm', category: 'letter', description: 'Largest letter drill. Close to 10.5mm. Clearance for 1/2" bolts.' },
+
+  // Fractional inch drills (most common)
+  { keys: '1/16"', command: '0.0625in · 1.588mm', category: 'fractional', description: 'Smallest standard fractional drill. Tap drill for #2 and #3 screws. Close to 1.6mm.' },
+  { keys: '5/64"', command: '0.0781in · 1.984mm', category: 'fractional', description: 'Close to 2.0mm. Tap drill for #4 screws.' },
+  { keys: '3/32"', command: '0.0938in · 2.381mm', category: 'fractional', description: 'Tap drill for #6 screws. Close to 2.4mm.' },
+  { keys: '7/64"', command: '0.1094in · 2.778mm', category: 'fractional', description: 'Tap drill for #8 screws. Close to 2.8mm.' },
+  { keys: '1/8"', command: '0.1250in · 3.175mm', category: 'fractional', description: 'Very common size. Close to 3.2mm. Clearance for #5 and #6 screws.' },
+  { keys: '9/64"', command: '0.1406in · 3.572mm', category: 'fractional', description: 'Close to 3.6mm. Tap drill for #10 screws.' },
+  { keys: '5/32"', command: '0.1563in · 3.969mm', category: 'fractional', description: 'Close to 4.0mm. Clearance for #8 screws.' },
+  { keys: '11/64"', command: '0.1719in · 4.366mm', category: 'fractional', description: 'Close to 4.4mm. Tap drill for #12 screws.' },
+  { keys: '3/16"', command: '0.1875in · 4.763mm', category: 'fractional', description: 'Common size. Close to 4.8mm. Clearance for #10 screws.' },
+  { keys: '13/64"', command: '0.2031in · 5.159mm', category: 'fractional', description: 'Close to 5.2mm. Tap drill for 1/4" screws.' },
+  { keys: '7/32"', command: '0.2188in · 5.556mm', category: 'fractional', description: 'Close to 5.6mm. Clearance for #12 screws.' },
+  { keys: '15/64"', command: '0.2344in · 5.953mm', category: 'fractional', description: 'Close to 6.0mm. Clearance for 1/4" screws.' },
+  { keys: '1/4"', command: '0.2500in · 6.350mm', category: 'fractional', description: 'Very common. Exactly 6.35mm. Clearance for 1/4" bolts (close fit).' },
+  { keys: '17/64"', command: '0.2656in · 6.747mm', category: 'fractional', description: 'Close to 6.75mm. Tap drill for 5/16" screws.' },
+  { keys: '9/32"', command: '0.2813in · 7.144mm', category: 'fractional', description: 'Close to 7.14mm. Tap drill for 3/8" screws.' },
+  { keys: '19/64"', command: '0.2969in · 7.541mm', category: 'fractional', description: 'Close to 7.5mm. Clearance for 5/16" bolts.' },
+  { keys: '5/16"', command: '0.3125in · 7.938mm', category: 'fractional', description: 'Common. Close to 8.0mm. Clearance for 5/16" bolts (close fit).' },
+  { keys: '21/64"', command: '0.3281in · 8.334mm', category: 'fractional', description: 'Close to 8.3mm. Tap drill for 3/8" screws.' },
+  { keys: '11/32"', command: '0.3438in · 8.731mm', category: 'fractional', description: 'Close to 8.7mm. Clearance for 3/8" bolts.' },
+  { keys: '23/64"', command: '0.3594in · 9.128mm', category: 'fractional', description: 'Close to 9.1mm. Tap drill for 7/16" screws.' },
+  { keys: '3/8"', command: '0.3750in · 9.525mm', category: 'fractional', description: 'Very common. Close to 9.5mm. Clearance for 3/8" bolts (close fit).' },
+  { keys: '25/64"', command: '0.3906in · 9.922mm', category: 'fractional', description: 'Close to 9.9mm. Tap drill for 1/2" screws.' },
+  { keys: '13/32"', command: '0.4063in · 10.319mm', category: 'fractional', description: 'Close to 10.3mm. Clearance for 7/16" bolts.' },
+  { keys: '27/64"', command: '0.4219in · 10.716mm', category: 'fractional', description: 'Close to 10.7mm. Tap drill for 9/16" screws.' },
+  { keys: '7/16"', command: '0.4375in · 11.113mm', category: 'fractional', description: 'Common. Close to 11.1mm. Clearance for 7/16" bolts.' },
+  { keys: '29/64"', command: '0.4531in · 11.509mm', category: 'fractional', description: 'Close to 11.5mm. Tap drill for 5/8" screws.' },
+  { keys: '15/32"', command: '0.4688in · 11.906mm', category: 'fractional', description: 'Close to 11.9mm. Clearance for 1/2" bolts.' },
+  { keys: '1/2"', command: '0.5000in · 12.700mm', category: 'fractional', description: 'Very common. Exactly 12.7mm. Clearance for 1/2" bolts (close fit).' },
+
+  // Metric drill equivalents
+  { keys: '0.5mm', command: '0.0197in · ~#79', category: 'metric', description: 'Smallest commonly available metric drill. Used in precision electronics and watchmaking.' },
+  { keys: '1.0mm', command: '0.0394in · ~#60', category: 'metric', description: 'Common small metric drill. Used in PCB work and precision instruments.' },
+  { keys: '1.5mm', command: '0.0591in · ~#53', category: 'metric', description: 'Tap drill for M1.6×0.35. Close to #53 drill.' },
+  { keys: '2.0mm', command: '0.0787in · ~#47', category: 'metric', description: 'Tap drill for M2.5×0.45. Close to #47 drill.' },
+  { keys: '2.5mm', command: '0.0984in · ~#39', category: 'metric', description: 'Tap drill for M3×0.5. Close to #39 drill. Very common.' },
+  { keys: '3.0mm', command: '0.1181in · ~#31', category: 'metric', description: 'Very common. Tap drill for M3.5×0.6. Close to #31 drill.' },
+  { keys: '3.3mm', command: '0.1299in · ~#30', category: 'metric', description: 'Tap drill for M4×0.7. Close to #30 drill.' },
+  { keys: '4.0mm', command: '0.1575in · ~#22', category: 'metric', description: 'Common. Tap drill for M4.5×0.75. Close to #22 drill.' },
+  { keys: '4.2mm', command: '0.1654in · ~#19', category: 'metric', description: 'Tap drill for M5×0.8. Close to #19 drill.' },
+  { keys: '5.0mm', command: '0.1969in · ~#9', category: 'metric', description: 'Very common. Tap drill for M6×1.0. Close to #9 drill.' },
+  { keys: '6.0mm', command: '0.2362in · ~D', category: 'metric', description: 'Common. Clearance for M6 bolts. Close to D drill (0.246").' },
+  { keys: '6.8mm', command: '0.2677in · ~H', category: 'metric', description: 'Tap drill for M8×1.25. Close to H drill (0.266"). Very common.' },
+  { keys: '7.0mm', command: '0.2756in · ~J', category: 'metric', description: 'Tap drill for M8×1.0 (fine). Close to J drill.' },
+  { keys: '8.0mm', command: '0.3150in · ~O', category: 'metric', description: 'Common. Clearance for M8 bolts. Close to O drill.' },
+  { keys: '8.5mm', command: '0.3346in · ~Q', category: 'metric', description: 'Tap drill for M10×1.5. Close to Q drill (0.332"). Very common.' },
+  { keys: '9.0mm', command: '0.3543in · ~T', category: 'metric', description: 'Tap drill for M10×1.0 (fine). Close to T drill.' },
+  { keys: '10.0mm', command: '0.3937in · ~X', category: 'metric', description: 'Common. Clearance for M10 bolts. Close to X drill.' },
+  { keys: '10.2mm', command: '0.4016in · ~Y', category: 'metric', description: 'Tap drill for M12×1.75. Close to Y drill.' },
+  { keys: '11.0mm', command: '0.4331in', category: 'metric', description: 'Tap drill for M12×1.5 (fine). No close letter/number equivalent.' },
+  { keys: '12.0mm', command: '0.4724in', category: 'metric', description: 'Common. Tap drill for M14×2.0. Clearance for M12 bolts.' },
+  { keys: '14.0mm', command: '0.5512in', category: 'metric', description: 'Tap drill for M16×2.0. Clearance for M14 bolts.' },
+  { keys: '17.5mm', command: '0.6890in', category: 'metric', description: 'Tap drill for M20×2.5. No close fractional equivalent.' },
+  { keys: '21.0mm', command: '0.8268in', category: 'metric', description: 'Tap drill for M24×3.0. No close fractional equivalent.' },
+  { keys: '26.5mm', command: '1.0433in', category: 'metric', description: 'Tap drill for M30×3.5. No close fractional equivalent.' },
+
+  // Tap drill applications summary
+  { keys: '4-40 UNC', command: 'Tap Drill: #43 (0.089")', category: 'tap', description: 'Tap drill for #4-40 UNC thread. #43 drill = 2.261mm. 75% thread engagement. Most common small US screw thread.' },
+  { keys: '6-32 UNC', command: 'Tap Drill: #36 (0.1065")', category: 'tap', description: 'Tap drill for #6-32 UNC thread. #36 drill = 2.705mm. 75% thread engagement. Very common in US hardware.' },
+  { keys: '8-32 UNC', command: 'Tap Drill: #29 (0.136")', category: 'tap', description: 'Tap drill for #8-32 UNC thread. #29 drill = 3.454mm. 75% thread engagement. Common in US electronics and hardware.' },
+  { keys: '10-24 UNC', command: 'Tap Drill: #25 (0.1495")', category: 'tap', description: 'Tap drill for #10-24 UNC thread. #25 drill = 3.797mm. 75% thread engagement. Coarse thread for #10 screws.' },
+  { keys: '10-32 UNF', command: 'Tap Drill: #21 (0.159")', category: 'tap', description: 'Tap drill for #10-32 UNF thread. #21 drill = 4.039mm. 75% thread engagement. Fine thread for #10 screws.' },
+  { keys: '1/4-20 UNC', command: 'Tap Drill: #7 (0.201")', category: 'tap', description: 'Tap drill for 1/4-20 UNC thread. #7 drill = 5.105mm. 75% thread engagement. Very common US thread.' },
+  { keys: '5/16-18 UNC', command: 'Tap Drill: F (0.257")', category: 'tap', description: 'Tap drill for 5/16-18 UNC thread. F drill = 6.528mm. 75% thread engagement. Common structural thread.' },
+  { keys: '3/8-16 UNC', command: 'Tap Drill: 5/16" (0.3125")', category: 'tap', description: 'Tap drill for 3/8-16 UNC thread. 5/16" drill = 7.938mm. 75% thread engagement. Common heavy-duty thread.' },
+  { keys: '1/2-13 UNC', command: 'Tap Drill: 27/64" (0.4219")', category: 'tap', description: 'Tap drill for 1/2-13 UNC thread. 27/64" drill = 10.716mm. 75% thread engagement. Or use Q drill (0.332") for 75%.' },
+];
+
+const TIPS = [
+  {
+    title: 'Number, letter, and fractional drill systems',
+    content: 'US drill sizes use three systems: Number drills (#80 smallest to #1 largest, 0.0135" to 0.228"), Letter drills (A smallest to Z largest, 0.234" to 0.413"), and Fractional drills (1/16" and up in 1/64" increments). The systems overlap: #1 (0.228") flows into A (0.234"), and Z (0.413") flows into fractional sizes. Metric drills (0.5mm and up) run in parallel and often have close equivalents in the US systems.'
+  },
+  {
+    title: 'Finding the right tap drill',
+    content: 'For UNC/UNF threads, tap drill = major diameter − pitch (same as metric). For 75% thread engagement: 1/4-20 → 0.250 − 0.050 = 0.200" → use #7 drill (0.201"). For 50% engagement (easier tapping in hard materials), use one size larger. Always use cutting fluid when tapping steel. For blind holes, use spiral flute taps that push chips ahead.'
+  },
+];
+
+export default function DrillSizeClient() {
+  return (
+    <ShortcutCheatsheetClient
+      title="Drill Bit Size Chart"
+      subtitle="Complete drill bit size chart: number drills (#80-#1), letter drills (A-Z), fractional inch drills, and metric drills with tap drill applications."
+      categories={CATEGORIES}
+      shortcuts={SHORTCUTS}
+      tips={TIPS}
+    />
+  );
+}

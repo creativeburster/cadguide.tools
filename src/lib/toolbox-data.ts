@@ -1473,6 +1473,61 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ['cnc speeds and feeds', 'cutting speed', 'feed rate', 'spindle speed rpm', 'chip load', 'carbide tool speed', 'hss tool speed', 'aluminum machining', 'stainless machining', 'titanium machining', 'cnc formula']
   },
   {
+    slug: 'iso-2768-general-tolerances-reference',
+    title: 'ISO 2768 General Tolerances Reference Table',
+    description: 'ISO 2768-1/2 general tolerances for linear dimensions, angular dimensions, and geometrical tolerances across four accuracy classes (fine, medium, coarse, very coarse).',
+    detailDesc: 'Searchable ISO 2768 general tolerance reference: linear tolerances per size range (0.5-4000mm), angular tolerances per angle and side length, geometrical tolerances (flatness, straightness, perpendicularity, symmetry, runout), and accuracy class selection guide.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['iso 2768', 'general tolerances', 'iso 2768-1', 'iso 2768-2', 'linear tolerance', 'angular tolerance', 'geometrical tolerance', 'fine medium coarse', 'general tolerance class', 'din 7168']
+  },
+  {
+    slug: 'drill-bit-size-chart',
+    title: 'Drill Bit Size Chart (Number, Letter & Fractional)',
+    description: 'Complete drill bit size chart: number drills (#1-#80), letter drills (A-Z), and fractional inch drills with metric conversions and tap drill applications.',
+    detailDesc: '120+ drill sizes from #80 (0.34mm) to 1/2" (12.7mm): number drills with inch/mm conversions, letter drills A-Z, fractional inch drills, metric drill equivalents, and tap drill applications for UNC/UNF threads.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['drill bit size chart', 'number drill', 'letter drill', 'fractional drill', 'drill size conversion', 'tap drill size', 'drill chart metric imperial', 'ansi b94.11', 'drill bit mm to inch']
+  },
+  {
+    slug: 'material-properties-reference',
+    title: 'Engineering Material Properties Reference Table',
+    description: 'Mechanical properties of steel, aluminum, copper, titanium, brass, and engineering plastics: density, yield strength, elastic modulus, Poisson ratio, and thermal expansion.',
+    detailDesc: '40+ engineering materials with mechanical properties: steels (1018, 1045, 4140, 4340, 303, 304, 316, 17-4PH, D2), aluminum alloys (6061, 7075, 2024, 5052), copper/brass/bronze, titanium (Ti-6Al-4V), nickel alloys (Inconel 718, Monel), cast iron, and engineering plastics (POM, PEEK, PTFE, PC, ABS).',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['material properties', 'engineering materials', 'steel properties', 'aluminum properties', 'titanium properties', 'yield strength', 'elastic modulus', 'density', 'thermal expansion', 'material selection', 'inconel properties', 'plastic properties']
+  },
+  {
+    slug: 'imperial-thread-reference',
+    title: 'UNC/UNF Imperial Thread & Tap Drill Reference',
+    description: 'Complete UNC (coarse) and UNF (fine) thread table: #0 through 1-1/2" with TPI, tap drill sizes, clearance holes, and thread engagement data.',
+    detailDesc: 'Searchable UNC and UNF thread reference: #0-80 through 1-1/2"-6 UNC coarse threads, #0-80 through 1-1/2"-12 UNF fine threads, clearance hole sizes (close/normal), thread tolerance classes (1A-3B), and tap drill formula.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['unc thread', 'unf thread', 'imperial thread', 'unified thread', 'threads per inch', 'tap drill size', 'asme b1.1', 'clearance hole', 'thread tolerance class', 'coarse fine thread']
+  },
+  {
+    slug: 'pipe-size-chart',
+    title: 'Pipe Size Chart (NPS/DN/Schedule) Reference',
+    description: 'Complete pipe size chart: NPS to DN conversion, outside diameter, wall thickness for Schedule 10-160 and XS/XXS, with weight and bore data.',
+    detailDesc: 'Searchable pipe size chart: NPS 1/8" to 24" with DN conversion, OD, wall thickness for Schedule 10/40/80/160, inside diameter (bore), and weight per meter. Covers ASME B36.10 and EN 10220 standards.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-07-15',
+    origin: 'native',
+    keywords: ['pipe size chart', 'nps dn conversion', 'pipe schedule', 'pipe wall thickness', 'pipe outside diameter', 'asme b36.10', 'schedule 40 80', 'pipe weight', 'nominal pipe size', 'pipe od']
+  },
+  {
     slug: 'pump-affinity-law-calculator',
     title: 'Pump Affinity Law Calculator (Flow, Head & Power)',
     description: 'Calculate new flow rate, head pressure, and shaft power when changing pump speed or impeller diameter per affinity laws.',
