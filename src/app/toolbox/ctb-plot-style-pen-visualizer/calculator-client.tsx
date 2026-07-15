@@ -897,7 +897,7 @@ export default function CtbPlotStyleClient() {
               <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
                 <Eye className="w-6 h-6 text-blue-600" /> Plot Style Sheet Blueprint Simulator
               </h2>
-              <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+              <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
                 Visualizing lines mapping matching rule changes
               </p>
             </div>
@@ -906,7 +906,7 @@ export default function CtbPlotStyleClient() {
             <div className="bg-slate-100 p-1.5 rounded-2xl flex gap-1 self-stretch sm:self-auto">
               <button
                 onClick={() => setActiveTab('model')}
-                className={`flex-1 sm:flex-none px-4 py-2 rounded-xl text-xs font-black transition-all ${
+                className={`flex-1 sm:flex-none px-4 py-2 rounded-xl text-base font-black transition-all ${
                   activeTab === 'model'
                     ? 'bg-slate-900 text-white shadow-sm'
                     : 'text-slate-500 hover:text-slate-900'
@@ -916,7 +916,7 @@ export default function CtbPlotStyleClient() {
               </button>
               <button
                 onClick={() => setActiveTab('plot')}
-                className={`flex-1 sm:flex-none px-4 py-2 rounded-xl text-xs font-black transition-all ${
+                className={`flex-1 sm:flex-none px-4 py-2 rounded-xl text-base font-black transition-all ${
                   activeTab === 'plot'
                     ? 'bg-white text-slate-900 shadow-sm'
                     : 'text-slate-500 hover:text-slate-900'
@@ -936,7 +936,7 @@ export default function CtbPlotStyleClient() {
             />
             
             {/* Quick Badge indicator */}
-            <div className="absolute top-4 left-4 pointer-events-none px-3 py-1.5 rounded-lg text-[10px] font-black tracking-widest bg-slate-900/80 text-white/90 uppercase border border-white/10 backdrop-blur-sm">
+            <div className="absolute top-4 left-4 pointer-events-none px-3 py-1.5 rounded-lg text-sm font-black tracking-widest bg-slate-900/80 text-white/90 uppercase border border-white/10 backdrop-blur-sm">
               {activeTab === 'model' ? 'AutoCAD Space' : `${selectedPreset.toUpperCase()} Active`}
             </div>
           </div>
@@ -945,7 +945,7 @@ export default function CtbPlotStyleClient() {
           <div className="grid grid-cols-3 gap-3">
             <button
               onClick={() => handlePresetReset('monochrome')}
-              className={`p-3 rounded-2xl text-xs font-black border transition-all flex flex-col items-center gap-1 ${
+              className={`p-3 rounded-2xl text-base font-black border transition-all flex flex-col items-center gap-1 ${
                 selectedPreset === 'monochrome'
                   ? 'bg-slate-900 text-white border-slate-900'
                   : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
@@ -956,7 +956,7 @@ export default function CtbPlotStyleClient() {
             </button>
             <button
               onClick={() => handlePresetReset('acad')}
-              className={`p-3 rounded-2xl text-xs font-black border transition-all flex flex-col items-center gap-1 ${
+              className={`p-3 rounded-2xl text-base font-black border transition-all flex flex-col items-center gap-1 ${
                 selectedPreset === 'acad'
                   ? 'bg-slate-900 text-white border-slate-900'
                   : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
@@ -967,7 +967,7 @@ export default function CtbPlotStyleClient() {
             </button>
             <button
               onClick={() => handlePresetReset('grayscale')}
-              className={`p-3 rounded-2xl text-xs font-black border transition-all flex flex-col items-center gap-1 ${
+              className={`p-3 rounded-2xl text-base font-black border transition-all flex flex-col items-center gap-1 ${
                 selectedPreset === 'grayscale'
                   ? 'bg-slate-900 text-white border-slate-900'
                   : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
@@ -989,7 +989,7 @@ export default function CtbPlotStyleClient() {
             />
             <button
               onClick={() => ctbFileInputRef.current?.click()}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl border-2 border-dashed border-slate-200 hover:border-blue-400 hover:bg-blue-50/20 text-slate-600 hover:text-blue-600 font-bold text-xs transition-all cursor-pointer text-center"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl border-2 border-dashed border-slate-200 hover:border-blue-400 hover:bg-blue-50/20 text-slate-600 hover:text-blue-600 font-bold text-base transition-all cursor-pointer text-center"
             >
               <Upload className="w-4 h-4" />
               Upload local custom .ctb print style file
@@ -1005,14 +1005,14 @@ export default function CtbPlotStyleClient() {
               <h2 className="text-xl font-black flex items-center gap-2">
                 <Sliders className="w-5 h-5 text-blue-400" /> Pen Properties Panel
               </h2>
-              <span className="text-[10px] font-black uppercase bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded border border-blue-500/20">
+              <span className="text-sm font-black uppercase bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded border border-blue-500/20">
                 {selectedIndices.length} Selected
               </span>
             </div>
 
             {/* Selection Overview Container */}
             <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-800 space-y-3">
-              <div className="text-xs text-slate-400 font-bold uppercase tracking-wider">
+              <div className="text-base text-slate-400 font-bold uppercase tracking-wider">
                 Editing Color Target:
               </div>
               
@@ -1023,7 +1023,7 @@ export default function CtbPlotStyleClient() {
                   return (
                     <div 
                       key={idx}
-                      className="inline-flex items-center gap-1 bg-slate-800 hover:bg-slate-750 px-2.5 py-1 rounded-xl text-xs font-black border border-slate-700/50 transition-colors"
+                      className="inline-flex items-center gap-1 bg-slate-800 hover:bg-slate-750 px-2.5 py-1 rounded-xl text-base font-black border border-slate-700/50 transition-colors"
                     >
                       <div className="w-2.5 h-2.5 rounded-full border border-white/20" style={{ backgroundColor: c.hex }} />
                       <span>Color {idx}</span>
@@ -1033,7 +1033,7 @@ export default function CtbPlotStyleClient() {
               </div>
 
               {selectedIndices.length === 1 && (
-                <div className="text-[10px] text-slate-400 font-bold leading-relaxed border-t border-slate-800 pt-2 flex justify-between">
+                <div className="text-sm text-slate-400 font-bold leading-relaxed border-t border-slate-800 pt-2 flex justify-between">
                   <span>Name: {ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.name}</span>
                   <span>RGB: ({ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.r}, {ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.g}, {ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.b})</span>
                 </div>
@@ -1047,14 +1047,14 @@ export default function CtbPlotStyleClient() {
               
               {/* Plot Color Mapping Select */}
               <div className="space-y-2">
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+                <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                   <span>1. Plot Color Mapping</span>
-                  <span className="text-[10px] text-blue-400 lowercase">AutoCAD Color Style</span>
+                  <span className="text-sm text-blue-400 lowercase">AutoCAD Color Style</span>
                 </label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     onClick={() => updateSelectedConfig('plotColorType', 'black')}
-                    className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                       editConfig.plotColorType === 'black'
                         ? 'bg-white text-slate-900 border-white shadow'
                         : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -1064,7 +1064,7 @@ export default function CtbPlotStyleClient() {
                   </button>
                   <button
                     onClick={() => updateSelectedConfig('plotColorType', 'object')}
-                    className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                       editConfig.plotColorType === 'object'
                         ? 'bg-white text-slate-900 border-white shadow'
                         : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -1074,7 +1074,7 @@ export default function CtbPlotStyleClient() {
                   </button>
                   <button
                     onClick={() => updateSelectedConfig('plotColorType', 'grayscale')}
-                    className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                       editConfig.plotColorType === 'grayscale'
                         ? 'bg-white text-slate-900 border-white shadow'
                         : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -1084,7 +1084,7 @@ export default function CtbPlotStyleClient() {
                   </button>
                   <button
                     onClick={() => updateSelectedConfig('plotColorType', 'custom')}
-                    className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                       editConfig.plotColorType === 'custom'
                         ? 'bg-white text-slate-900 border-white shadow'
                         : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -1106,7 +1106,7 @@ export default function CtbPlotStyleClient() {
                       type="text" 
                       value={editConfig.customColorHex}
                       onChange={(e) => updateSelectedConfig('customColorHex', e.target.value)}
-                      className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg text-xs font-mono w-full text-white uppercase focus:outline-none focus:border-blue-500"
+                      className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg text-base font-mono w-full text-white uppercase focus:outline-none focus:border-blue-500"
                     />
                   </div>
                 )}
@@ -1114,14 +1114,14 @@ export default function CtbPlotStyleClient() {
 
               {/* Lineweight Dropdown */}
               <div className="space-y-2">
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+                <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                   <span>2. Lineweight (Pen Width)</span>
-                  <span className="text-[10px] text-blue-400 font-mono">mm</span>
+                  <span className="text-sm text-blue-400 font-mono">mm</span>
                 </label>
                 <select
                   value={editConfig.lineweight}
                   onChange={(e) => updateSelectedConfig('lineweight', parseFloat(e.target.value))}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4.5 py-3 text-xs font-bold focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4.5 py-3 text-base font-bold focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white"
                 >
                   {STANDARD_LINEWEIGHTS.map((lw) => (
                     <option key={lw.value} value={lw.value} className="bg-slate-900">
@@ -1133,7 +1133,7 @@ export default function CtbPlotStyleClient() {
 
               {/* Linetype Selector */}
               <div className="space-y-2">
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wide">
+                <label className="text-base font-black text-slate-400 uppercase tracking-wide">
                   3. Vector Linetype
                 </label>
                 <div className="grid grid-cols-3 gap-2">
@@ -1147,7 +1147,7 @@ export default function CtbPlotStyleClient() {
                     <button
                       key={lt.id}
                       onClick={() => updateSelectedConfig('linetype', lt.id as PlotStyleConfig['linetype'])}
-                      className={`py-2.5 px-1 rounded-xl text-[10px] font-black border transition-all ${
+                      className={`py-2.5 px-1 rounded-xl text-sm font-black border transition-all ${
                         editConfig.linetype === lt.id
                           ? 'bg-blue-600 text-white border-blue-600'
                           : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -1161,9 +1161,9 @@ export default function CtbPlotStyleClient() {
 
               {/* Screening Slider */}
               <div className="space-y-2">
-                <div className="flex justify-between items-center text-xs font-black text-slate-400 uppercase tracking-wide">
+                <div className="flex justify-between items-center text-base font-black text-slate-400 uppercase tracking-wide">
                   <span>4. Screening (Ink Density)</span>
-                  <span className="text-blue-400 font-mono text-sm">{editConfig.screening}%</span>
+                  <span className="text-blue-400 font-mono text-lg">{editConfig.screening}%</span>
                 </div>
                 <input
                   type="range"
@@ -1183,7 +1183,7 @@ export default function CtbPlotStyleClient() {
 
               {/* Dynamic Hand-drawn Stroke Canvas Simulator */}
               <div className="bg-slate-950 rounded-2xl p-4 border border-slate-800 space-y-3 mt-4">
-                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex justify-between">
+                <div className="text-sm text-slate-400 font-bold uppercase tracking-wider flex justify-between">
                   <span>Plot Lineweight Simulation</span>
                   <span className="text-blue-400 font-mono">
                     {editConfig.lineweight === -1 ? 'Use Object Weight' : `${editConfig.lineweight} mm`}
@@ -1203,7 +1203,7 @@ export default function CtbPlotStyleClient() {
           ) : (
             <div className="flex-1 py-12 flex flex-col items-center justify-center text-slate-500 text-center">
               <Settings className="w-12 h-12 stroke-[1.5] mb-3 animate-spin" />
-              <p className="text-sm font-semibold">Select colors on the grid to change settings</p>
+              <p className="text-lg font-semibold">Select colors on the grid to change settings</p>
             </div>
           )}
 
@@ -1212,13 +1212,13 @@ export default function CtbPlotStyleClient() {
             <div className="flex gap-3">
               <button
                 onClick={handleExportPcp}
-                className="flex-1 bg-white hover:bg-slate-100 text-slate-900 font-black text-xs py-3 px-4.5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
+                className="flex-1 bg-white hover:bg-slate-100 text-slate-900 font-black text-base py-3 px-4.5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
               >
                 <Download className="w-4 h-4" /> Export PCP Pen File
               </button>
               <button
                 onClick={handleExportJson}
-                className="bg-slate-800 hover:bg-slate-750 border border-slate-700 text-white font-black text-xs py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95"
+                className="bg-slate-800 hover:bg-slate-750 border border-slate-700 text-white font-black text-base py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95"
                 title="Backup active settings as JSON configuration"
               >
                 <FileText className="w-4 h-4" /> Save Config
@@ -1226,7 +1226,7 @@ export default function CtbPlotStyleClient() {
             </div>
 
             {/* Custom Import Label trigger */}
-            <div className="flex justify-between items-center text-xs font-semibold text-slate-400 bg-slate-950/30 p-3 rounded-xl border border-slate-850">
+            <div className="flex justify-between items-center text-base font-semibold text-slate-400 bg-slate-950/30 p-3 rounded-xl border border-slate-850">
               <span>Import backup JSON style:</span>
               <label className="cursor-pointer text-blue-400 hover:text-blue-300 font-black flex items-center gap-1">
                 <Plus className="w-3.5 h-3.5" /> Upload File
@@ -1253,7 +1253,7 @@ export default function CtbPlotStyleClient() {
             <h2 className="text-xl font-black text-slate-950 flex items-center gap-2">
               <Grid className="w-5 h-5 text-blue-600" /> AutoCAD Index Color (ACI 1-255) Grid Matrix
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1">
+            <p className="text-base text-slate-400 font-bold mt-1">
               Currently modifying {modifiedPensCount} style mapping rules from AutoCAD defaults
             </p>
           </div>
@@ -1266,14 +1266,14 @@ export default function CtbPlotStyleClient() {
               placeholder="Search by Index (e.g. 3, 252) or Name..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 md:w-60 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs font-semibold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="flex-1 md:w-60 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-base font-semibold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             />
 
             {/* Filter buttons */}
             <div className="bg-slate-100 p-1 rounded-xl flex gap-0.5">
               <button
                 onClick={() => setColorFilter('all')}
-                className={`px-3 py-1.5 rounded-lg text-[10px] font-black transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-sm font-black transition-all ${
                   colorFilter === 'all' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
@@ -1281,7 +1281,7 @@ export default function CtbPlotStyleClient() {
               </button>
               <button
                 onClick={() => setColorFilter('standard')}
-                className={`px-3 py-1.5 rounded-lg text-[10px] font-black transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-sm font-black transition-all ${
                   colorFilter === 'standard' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
@@ -1289,7 +1289,7 @@ export default function CtbPlotStyleClient() {
               </button>
               <button
                 onClick={() => setColorFilter('grayscale')}
-                className={`px-3 py-1.5 rounded-lg text-[10px] font-black transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-sm font-black transition-all ${
                   colorFilter === 'grayscale' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
@@ -1301,7 +1301,7 @@ export default function CtbPlotStyleClient() {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsBatchMode(!isBatchMode)}
-                className={`p-2.5 rounded-xl border text-xs font-black transition-all flex items-center gap-1.5 ${
+                className={`p-2.5 rounded-xl border text-base font-black transition-all flex items-center gap-1.5 ${
                   isBatchMode 
                     ? 'bg-blue-50 border-blue-200 text-blue-700' 
                     : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50'
@@ -1317,7 +1317,7 @@ export default function CtbPlotStyleClient() {
         </div>
 
         {/* Quick selection shortcut buttons */}
-        <div className="flex flex-wrap gap-2 text-xs font-bold">
+        <div className="flex flex-wrap gap-2 text-base font-bold">
           <span className="text-slate-400 self-center mr-2 text-[11px] uppercase tracking-wide font-black">Quick Select:</span>
           <button 
             onClick={() => selectQuickGroup('standard')}
@@ -1407,7 +1407,7 @@ export default function CtbPlotStyleClient() {
         </div>
 
         {/* Tip banner */}
-        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4.5 flex gap-3 text-xs text-blue-700 leading-relaxed font-semibold">
+        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4.5 flex gap-3 text-base text-blue-700 leading-relaxed font-semibold">
           <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
           <div>
             <span className="font-extrabold uppercase text-blue-800">ACI Selection Tip:</span> You can hold <kbd className="bg-blue-100 text-blue-800 px-1 py-0.5 rounded border border-blue-200">Ctrl</kbd> (or <kbd className="bg-blue-100 text-blue-800 px-1 py-0.5 rounded border border-blue-200">Cmd</kbd>) to toggle multiple specific colors, or hold <kbd className="bg-blue-100 text-blue-800 px-1 py-0.5 rounded border border-blue-200">Shift</kbd> to select color blocks ranges on the ACI matrix grid. Toggle <span className="text-blue-800 underline">Batch Select Mode</span> for easy touch and click select.
@@ -1423,14 +1423,14 @@ export default function CtbPlotStyleClient() {
             <h3 className="text-lg font-black text-slate-900 flex items-center gap-2">
               <FileText className="w-5 h-5 text-blue-600" /> Export Plot Rules Standard Table
             </h3>
-            <p className="text-xs text-slate-400 font-bold mt-0.5">
+            <p className="text-base text-slate-400 font-bold mt-0.5">
               Copy configured plot pen overrides directly as a markdown chart table for documentation
             </p>
           </div>
 
           <button
             onClick={handleCopyMarkdown}
-            className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-black text-xs py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
+            className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-black text-base py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
           >
             {copiedText ? (
               <>
@@ -1451,10 +1451,10 @@ export default function CtbPlotStyleClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> Troubleshooting CTB Plots & Pen Styles
         </h3>
         
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">1. How to use PCP/CTB configuration files in AutoCAD</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>Importing PCP mapping settings</strong>: When running plot outputs in AutoCAD, you can import our generated `.pcp` table structure by typing the command <code className="bg-slate-100 text-slate-800 px-1 py-0.5 rounded font-mono">STYLEMANAGER</code>.
               </p>
@@ -1469,11 +1469,11 @@ export default function CtbPlotStyleClient() {
 
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. Industry standard pen thickness conventions</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 To maintain standard engineering and architectural layout styles (ISO/ANSI drafting guidelines), we recommend assigning the following line weights to standard color codes:
               </p>
-              <ul className="list-disc pl-4 space-y-1 bg-slate-50 border border-slate-100 p-3 rounded-xl font-mono text-[10px]">
+              <ul className="list-disc pl-4 space-y-1 bg-slate-50 border border-slate-100 p-3 rounded-xl font-mono text-sm">
                 <li><strong className="text-red-600">ACI 1 (Red)</strong>: 0.18 mm — Center lines, grids, hatch contours.</li>
                 <li><strong className="text-yellow-500">ACI 2 (Yellow)</strong>: 0.25 mm — Dimensions, annotation tags, leaders.</li>
                 <li><strong className="text-green-600">ACI 3 (Green)</strong>: 0.35 mm — Standard structural walls, visible geometry.</li>

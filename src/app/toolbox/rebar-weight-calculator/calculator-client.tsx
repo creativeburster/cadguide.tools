@@ -49,31 +49,31 @@ export default function RebarWeightClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Bar Size</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Bar Size</label>
             <select value={barIdx} onChange={e => setBarIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {BAR_SIZES.map((b, i) => <option key={i} value={i}>{b.name}</option>)}
             </select>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Single Bar Length (m)</label>
-            <input type="number" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Single Bar Length (m)</label>
+            <input type="number" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Bar Spacing (mm)</label>
-            <input type="number" value={spacing} onChange={e => setSpacing(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Bar Spacing (mm)</label>
+            <input type="number" value={spacing} onChange={e => setSpacing(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Slab Width (m)</label>
-            <input type="number" value={slabWidth} onChange={e => setSlabWidth(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Slab Width (m)</label>
+            <input type="number" value={slabWidth} onChange={e => setSlabWidth(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Slab Length (m)</label>
-            <input type="number" value={slabLength} onChange={e => setSlabLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Slab Length (m)</label>
+            <input type="number" value={slabLength} onChange={e => setSlabLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -83,41 +83,41 @@ export default function RebarWeightClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-slate-100 rounded-2xl p-6 border border-slate-200">
-                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">Unit Weight</div>
+                <div className="text-base font-black text-slate-500 uppercase tracking-wider mb-2">Unit Weight</div>
                 <div className="text-3xl font-black text-slate-800">{result.unitWeight.toFixed(3)}<span className="text-lg text-slate-500"> kg/m</span></div>
-                <div className="text-xs text-slate-600 font-medium mt-1">W = d²/162</div>
+                <div className="text-base text-slate-600 font-medium mt-1">W = d²/162</div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Single Bar Weight</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Single Bar Weight</div>
                 <div className="text-3xl font-black text-blue-700">{result.barWeight.toFixed(2)}<span className="text-lg text-blue-400"> kg</span></div>
-                <div className="text-xs text-blue-600 font-medium mt-1">{length}m bar</div>
+                <div className="text-base text-blue-600 font-medium mt-1">{length}m bar</div>
               </div>
             </div>
 
             <div className="mt-4 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <h3 className="text-xs font-black text-slate-400 uppercase tracking-wider mb-3">Slab Reinforcement (both directions)</h3>
+              <h3 className="text-base font-black text-slate-400 uppercase tracking-wider mb-3">Slab Reinforcement (both directions)</h3>
               <div className="grid grid-cols-4 gap-3">
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Bars (Width)</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Bars (Width)</div>
                   <div className="text-lg font-black text-slate-700">{result.barsPerWidth}</div>
                 </div>
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Bars (Length)</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Bars (Length)</div>
                   <div className="text-lg font-black text-slate-700">{result.barsPerLength}</div>
                 </div>
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Total Length</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Total Length</div>
                   <div className="text-lg font-black text-slate-700">{result.totalLength.toFixed(1)} m</div>
                 </div>
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Total Weight</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Total Weight</div>
                   <div className="text-lg font-black text-green-700">{result.totalWeight.toFixed(1)} kg</div>
                 </div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'Unit weight formula: W = d²/162 (kg/m, d in mm). Based on steel density 7850 kg/m³. Number of bars = (slab dimension / spacing) + 1. Add 10-15% for laps and waste.'}
               </div>

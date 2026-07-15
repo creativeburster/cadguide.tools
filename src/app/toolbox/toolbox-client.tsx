@@ -44,7 +44,7 @@ export default function ToolboxClient() {
             placeholder="Search toolbox (e.g. DWG, K-factor, shortcut)..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full h-12 pl-12 pr-6 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+            className="w-full h-12 pl-12 pr-6 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
           />
           <div className="absolute left-4 top-3.5 text-slate-400">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@ export default function ToolboxClient() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-4 py-2 rounded-2xl border border-slate-100">
+        <div className="flex items-center gap-4 text-base font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-4 py-2 rounded-2xl border border-slate-100">
           <span>Total Utilities: {TOOLBOX_DATA.length}</span>
           <span className="text-slate-200">|</span>
           <span className="text-blue-600">Active: {TOOLBOX_DATA.filter(t => t.status === 'released').length}</span>
@@ -66,7 +66,7 @@ export default function ToolboxClient() {
           <button
             key={cat.id}
             onClick={() => setActiveCategory(cat.id)}
-            className={`px-5 py-2.5 rounded-xl text-xs font-black border transition-all ${
+            className={`px-5 py-2.5 rounded-xl text-base font-black border transition-all ${
               activeCategory === cat.id
                 ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                 : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'
@@ -95,25 +95,25 @@ export default function ToolboxClient() {
                     {renderCategoryIcon(item.category)}
                   </div>
                   {item.status === 'released' ? (
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-emerald-50 text-emerald-600 border border-emerald-100 animate-pulse">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-black bg-emerald-50 text-emerald-600 border border-emerald-100 animate-pulse">
                       ● Active / Try Free
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-slate-100 text-slate-400 border border-slate-200">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-black bg-slate-100 text-slate-400 border border-slate-200">
                       Coming Soon
                     </span>
                   )}
                 </div>
 
-                <h3 className="text-base font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                <p className="text-base text-slate-500 leading-relaxed font-medium">
                   {item.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
+              <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between text-base font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
                 <span>View Details</span>
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />

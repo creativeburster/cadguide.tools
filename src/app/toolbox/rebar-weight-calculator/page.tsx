@@ -24,7 +24,7 @@ export default function RebarWeightPage() {
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#64748b_1px,transparent_1px)] [background-size:20px_20px]"></div>
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-slate-400/10 text-slate-300 border border-slate-400/20 mb-6 uppercase tracking-[0.15em]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-slate-400/10 text-slate-300 border border-slate-400/20 mb-6 uppercase tracking-[0.15em]">
               Reinforcement Design
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">

@@ -211,7 +211,7 @@ export default function ViewportScaleCalculatorClient() {
         <div className="lg:col-span-5 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
           <div className="space-y-2">
             <h2 className="text-xl font-black text-slate-900">Scale Configuration</h2>
-            <p className="text-xs text-slate-400 font-semibold">
+            <p className="text-base text-slate-400 font-semibold">
               Select drafting units and target printing scale to convert Zoom factor.
             </p>
           </div>
@@ -219,13 +219,13 @@ export default function ViewportScaleCalculatorClient() {
           <div className="space-y-6">
             {/* Model Space Units selection */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block">Model Space Unit (Drafting unit)</label>
+              <label className="text-base font-black text-slate-500 uppercase tracking-wider block">Model Space Unit (Drafting unit)</label>
               <div className="flex flex-wrap gap-2">
                 {(['mm', 'cm', 'm', 'in', 'ft'] as const).map((unit) => (
                   <button
                     key={unit}
                     onClick={() => setModelUnit(unit)}
-                    className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                       modelUnit === unit
                         ? 'bg-blue-600 border-blue-600 text-white shadow-md'
                         : 'bg-slate-50 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -243,11 +243,11 @@ export default function ViewportScaleCalculatorClient() {
 
             {/* Paper Space Layout Sheet Units selection */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block">Layout Sheet Unit (Paper unit)</label>
+              <label className="text-base font-black text-slate-500 uppercase tracking-wider block">Layout Sheet Unit (Paper unit)</label>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setPaperUnit('mm')}
-                  className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                  className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                     paperUnit === 'mm'
                       ? 'bg-blue-600 border-blue-600 text-white shadow-md'
                       : 'bg-slate-50 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -257,7 +257,7 @@ export default function ViewportScaleCalculatorClient() {
                 </button>
                 <button
                   onClick={() => setPaperUnit('in')}
-                  className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                  className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                     paperUnit === 'in'
                       ? 'bg-blue-600 border-blue-600 text-white shadow-md'
                       : 'bg-slate-50 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -271,7 +271,7 @@ export default function ViewportScaleCalculatorClient() {
             {/* Target printing scale selection */}
             <div className="space-y-4 pt-4 border-t border-slate-50">
               <div className="flex items-center justify-between">
-                <label className="text-xs font-black text-slate-500 uppercase tracking-wider">Target Print Scale (1:X)</label>
+                <label className="text-base font-black text-slate-500 uppercase tracking-wider">Target Print Scale (1:X)</label>
                 <div className="flex gap-2">
                   <button
                     onClick={() => {
@@ -279,7 +279,7 @@ export default function ViewportScaleCalculatorClient() {
                       setUseCustomRatio(false);
                       setPresetRatio(100);
                     }}
-                    className={`px-2.5 py-1 rounded text-[10px] font-black border transition-all ${
+                    className={`px-2.5 py-1 rounded text-sm font-black border transition-all ${
                       scaleSystem === 'metric' && !useCustomRatio ? 'bg-slate-800 text-white' : 'bg-slate-50 text-slate-400'
                     }`}
                   >
@@ -291,7 +291,7 @@ export default function ViewportScaleCalculatorClient() {
                       setUseCustomRatio(false);
                       setPresetRatio(96);
                     }}
-                    className={`px-2.5 py-1 rounded text-[10px] font-black border transition-all ${
+                    className={`px-2.5 py-1 rounded text-sm font-black border transition-all ${
                       scaleSystem === 'imperial' && !useCustomRatio ? 'bg-slate-800 text-white' : 'bg-slate-50 text-slate-400'
                     }`}
                   >
@@ -299,7 +299,7 @@ export default function ViewportScaleCalculatorClient() {
                   </button>
                   <button
                     onClick={() => setUseCustomRatio(true)}
-                    className={`px-2.5 py-1 rounded text-[10px] font-black border transition-all ${
+                    className={`px-2.5 py-1 rounded text-sm font-black border transition-all ${
                       useCustomRatio ? 'bg-slate-800 text-white' : 'bg-slate-50 text-slate-400'
                     }`}
                   >
@@ -311,14 +311,14 @@ export default function ViewportScaleCalculatorClient() {
               {useCustomRatio ? (
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-sm font-bold text-slate-400">1 :</span>
+                    <span className="text-lg font-bold text-slate-400">1 :</span>
                     <input
                       type="number"
                       value={customRatio}
                       min={1}
                       max={10000}
                       onChange={(e) => setCustomRatio(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold focus:outline-none focus:ring-2 focus:ring-blue-600/10 focus:bg-white text-sm"
+                      className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold focus:outline-none focus:ring-2 focus:ring-blue-600/10 focus:bg-white text-lg"
                     />
                   </div>
                   <input
@@ -333,13 +333,13 @@ export default function ViewportScaleCalculatorClient() {
                 </div>
               ) : (
                 <div className="space-y-3">
-                  <span className="text-[10px] font-bold text-slate-400">Select Scale Preset</span>
+                  <span className="text-sm font-bold text-slate-400">Select Scale Preset</span>
                   <div className="grid grid-cols-2 gap-2">
                     {(scaleSystem === 'metric' ? METRIC_PRESETS : IMPERIAL_PRESETS).map((p) => (
                       <button
                         key={p.label}
                         onClick={() => setPresetRatio(p.ratio)}
-                        className={`py-2 px-3 rounded-xl text-xs font-black border text-left transition-all ${
+                        className={`py-2 px-3 rounded-xl text-base font-black border text-left transition-all ${
                           presetRatio === p.ratio
                             ? 'bg-blue-50 border-blue-200 text-blue-700 font-extrabold shadow-sm'
                             : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'
@@ -361,11 +361,11 @@ export default function ViewportScaleCalculatorClient() {
             {/* Visual preview card */}
             <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
               <div className="w-full flex items-center justify-between border-b border-slate-50 pb-4 mb-4">
-                <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+                <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
                   <Layers className="w-4 h-4 text-blue-600" /> Print Sheet Layout Mockup (Paper viewport preview)
                 </h3>
                 {svgPreview.isOverflow && (
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-[10px] font-black bg-rose-50 text-rose-600 border border-rose-100">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-sm font-black bg-rose-50 text-rose-600 border border-rose-100">
                     ⚠️ Viewport Overflow
                   </span>
                 )}
@@ -488,10 +488,10 @@ export default function ViewportScaleCalculatorClient() {
             {/* Calculations results details cards */}
             <div className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl space-y-6">
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                <h3 className="text-sm font-black uppercase tracking-widest text-slate-400">Viewport Scale factor</h3>
+                <h3 className="text-lg font-black uppercase tracking-widest text-slate-400">Viewport Scale factor</h3>
                 <button
                   onClick={downloadReport}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-base font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition-all"
                 >
                   <FileText className="w-3.5 h-3.5" /> CSV Report
                 </button>
@@ -500,7 +500,7 @@ export default function ViewportScaleCalculatorClient() {
               {/* AutoCAD command block card */}
               <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="space-y-1">
-                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                  <div className="text-sm font-bold text-slate-400 uppercase tracking-widest">
                     AutoCAD Zoom Command Multiplier
                   </div>
                   <div className="text-3xl font-black tracking-tight text-blue-400 font-mono">
@@ -509,7 +509,7 @@ export default function ViewportScaleCalculatorClient() {
                 </div>
                 <button
                   onClick={handleCopyCommand}
-                  className="flex items-center justify-center gap-2 h-12 px-6 rounded-2xl bg-blue-600 hover:bg-blue-500 font-black text-xs uppercase tracking-wider text-white shadow-lg shadow-blue-600/10 active:scale-95 transition-all shrink-0"
+                  className="flex items-center justify-center gap-2 h-12 px-6 rounded-2xl bg-blue-600 hover:bg-blue-500 font-black text-base uppercase tracking-wider text-white shadow-lg shadow-blue-600/10 active:scale-95 transition-all shrink-0"
                 >
                   {copied ? (
                     <>
@@ -525,17 +525,17 @@ export default function ViewportScaleCalculatorClient() {
 
               {/* Formula & variables summary card */}
               <div className="bg-slate-800/40 p-5 rounded-2xl border border-slate-800/40 space-y-4">
-                <h4 className="text-xs font-black text-slate-400 uppercase tracking-wider border-b border-slate-800/50 pb-2">Equivalent Ratios</h4>
-                <div className="grid md:grid-cols-2 gap-4 text-xs font-semibold leading-relaxed">
+                <h4 className="text-base font-black text-slate-400 uppercase tracking-wider border-b border-slate-800/50 pb-2">Equivalent Ratios</h4>
+                <div className="grid md:grid-cols-2 gap-4 text-base font-semibold leading-relaxed">
                   <div className="space-y-1 bg-slate-800/30 p-4 rounded-xl border border-slate-800/30 text-center">
                     <span className="text-slate-400 block text-[9px] uppercase">Paper space representation</span>
-                    <span className="text-base font-black text-white">
+                    <span className="text-xl font-black text-white">
                       1 {paperUnit} = {results.paperRepresentation.toFixed(4)} {modelUnit}
                     </span>
                   </div>
                   <div className="space-y-1 bg-slate-800/30 p-4 rounded-xl border border-slate-800/30 text-center">
                     <span className="text-slate-400 block text-[9px] uppercase">Plotting scale factor</span>
-                    <span className="text-base font-black text-white">
+                    <span className="text-xl font-black text-white">
                       1 : {activeRatio}
                     </span>
                   </div>
@@ -552,21 +552,21 @@ export default function ViewportScaleCalculatorClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> Viewport Scaling Engineering Reference
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">1. Setting Viewport Scale in AutoCAD</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>Step 1</strong>: Double-click inside the layout viewport window to activate model space editing.
               </p>
               <p>
-                <strong>Step 2</strong>: Type <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-[10px]">Z</code> (Zoom) and press Enter.
+                <strong>Step 2</strong>: Type <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-sm">Z</code> (Zoom) and press Enter.
               </p>
               <p>
-                <strong>Step 3</strong>: Type <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-[10px]">S</code> (Scale) and press Enter.
+                <strong>Step 3</strong>: Type <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-sm">S</code> (Scale) and press Enter.
               </p>
               <p>
-                <strong>Step 4</strong>: Type the computed multiplier followed by <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-[10px]">XP</code> (e.g. <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-[10px]">{results?.xpCommandString || '20XP'}</code>) and press Enter.
+                <strong>Step 4</strong>: Type the computed multiplier followed by <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-sm">XP</code> (e.g. <code className="bg-slate-50 border border-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono text-sm">{results?.xpCommandString || '20XP'}</code>) and press Enter.
               </p>
               <p>
                 <strong>Step 5</strong>: Double-click outside the viewport to lock paper space, then lock the viewport display scaling using the properties palette.
@@ -576,7 +576,7 @@ export default function ViewportScaleCalculatorClient() {
 
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Why is the XP factor not always 1/Scale?</h4>
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
+            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-base font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
                 <span className="text-slate-400">{'// Unit Mismatch Correction'}</span>
                 <div>Layout paper space sheets are always drawn in Millimeters (or Inches).</div>

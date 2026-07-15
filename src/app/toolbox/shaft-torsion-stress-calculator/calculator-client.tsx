@@ -60,11 +60,11 @@ export default function ShaftTorsionClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Shaft Type</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Shaft Type</label>
             <div className="grid grid-cols-2 gap-2">
               {(['solid', 'hollow'] as const).map(t => (
                 <button key={t} onClick={() => setShaftType(t)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${shaftType === t ? 'bg-purple-600 border-purple-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${shaftType === t ? 'bg-purple-600 border-purple-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
                   {t === 'solid' ? 'Solid' : 'Hollow'}
                 </button>
               ))}
@@ -72,39 +72,39 @@ export default function ShaftTorsionClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
             <select value={matIdx} onChange={e => setMatIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {MATERIALS.map((m, i) => <option key={i} value={i}>{m.name}</option>)}
             </select>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Outer Diameter (mm)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Outer Diameter (mm)</label>
             <input type="number" value={outerDia} onChange={e => setOuterDia(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           {shaftType === 'hollow' && (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Inner Diameter (mm)</label>
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Inner Diameter (mm)</label>
               <input type="number" value={innerDia} onChange={e => setInnerDia(parseFloat(e.target.value) || 0)}
-                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
             </div>
           )}
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Length (mm)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Length (mm)</label>
             <input type="number" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Input Mode</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Input Mode</label>
             <div className="grid grid-cols-2 gap-2">
               {(['torque', 'power'] as const).map(m => (
                 <button key={m} onClick={() => setInputMode(m)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${inputMode === m ? 'bg-purple-600 border-purple-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${inputMode === m ? 'bg-purple-600 border-purple-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
                   {m === 'torque' ? 'Torque (Nm)' : 'Power (kW)'}
                 </button>
               ))}
@@ -113,21 +113,21 @@ export default function ShaftTorsionClient() {
 
           {inputMode === 'torque' ? (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Torque (Nm)</label>
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Torque (Nm)</label>
               <input type="number" value={torque} onChange={e => setTorque(parseFloat(e.target.value) || 0)}
-                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
             </div>
           ) : (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Power (kW)</label>
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Power (kW)</label>
                 <input type="number" value={power} onChange={e => setPower(parseFloat(e.target.value) || 0)}
-                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Speed (RPM)</label>
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Speed (RPM)</label>
                 <input type="number" value={rpm} onChange={e => setRPM(parseFloat(e.target.value) || 0)}
-                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
@@ -144,28 +144,28 @@ export default function ShaftTorsionClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
-                <div className="text-xs font-black text-red-400 uppercase tracking-wider mb-2">Shear Stress</div>
+                <div className="text-base font-black text-red-400 uppercase tracking-wider mb-2">Shear Stress</div>
                 <div className="text-3xl font-black text-red-700">{result.shearStress.toFixed(1)}<span className="text-lg text-red-400"> MPa</span></div>
-                <div className="text-xs text-red-600 font-medium mt-1">τ = T×r / J</div>
+                <div className="text-base text-red-600 font-medium mt-1">τ = T×r / J</div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Twist Angle</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Twist Angle</div>
                 <div className="text-3xl font-black text-blue-700">{result.twistAngle.toFixed(3)}<span className="text-lg text-blue-400">°</span></div>
-                <div className="text-xs text-blue-600 font-medium mt-1">θ = TL / (GJ)</div>
+                <div className="text-base text-blue-600 font-medium mt-1">θ = TL / (GJ)</div>
               </div>
             </div>
 
             <div className="mt-4 grid grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Applied Torque</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Applied Torque</div>
                 <div className="text-lg font-black text-slate-700">{result.T.toFixed(1)} Nm</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Polar Inertia J</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Polar Inertia J</div>
                 <div className="text-lg font-black text-slate-700">{(result.J * 1e12).toFixed(0)} mm⁴</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Safety Factor</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Safety Factor</div>
                 <div className={`text-lg font-black ${result.safetyFactor > 2 ? 'text-green-600' : result.safetyFactor > 1 ? 'text-orange-600' : 'text-red-600'}`}>
                   {result.safetyFactor > 999 ? '∞' : result.safetyFactor.toFixed(2)}
                 </div>
@@ -173,7 +173,7 @@ export default function ShaftTorsionClient() {
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 Solid: J = πD⁴/32. Hollow: J = π(D⁴−d⁴)/32. Shear stress τ = T×r/J. Twist angle θ = TL/(GJ) in radians, converted to degrees. Safety factor uses distortion energy theory (0.577×yield).
               </div>

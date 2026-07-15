@@ -56,14 +56,14 @@ export default function OhmsLawClient() {
 
           {fields.map(f => (
             <div key={f.label}>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">{f.label}</label>
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">{f.label}</label>
               <input type="number" value={f.value} onChange={e => f.setter(e.target.value)} placeholder="—"
-                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
+                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
             </div>
           ))}
 
           <button onClick={() => { setVoltage(''); setCurrent(''); setResistance(''); setPower(''); }}
-            className="w-full py-3 rounded-xl text-xs font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+            className="w-full py-3 rounded-xl text-base font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
             Clear All
           </button>
         </div>
@@ -79,25 +79,25 @@ export default function OhmsLawClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-yellow-50 rounded-2xl p-6 border border-yellow-100">
-                <div className="text-xs font-black text-yellow-400 uppercase tracking-wider mb-2">Voltage</div>
+                <div className="text-base font-black text-yellow-400 uppercase tracking-wider mb-2">Voltage</div>
                 <div className="text-3xl font-black text-yellow-700">{result.v.toFixed(4)}<span className="text-lg text-yellow-400"> V</span></div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Current</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Current</div>
                 <div className="text-3xl font-black text-blue-700">{result.i.toFixed(4)}<span className="text-lg text-blue-400"> A</span></div>
               </div>
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-2">Resistance</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Resistance</div>
                 <div className="text-3xl font-black text-orange-700">{result.r.toFixed(4)}<span className="text-lg text-orange-400"> Ω</span></div>
               </div>
               <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
-                <div className="text-xs font-black text-red-400 uppercase tracking-wider mb-2">Power</div>
+                <div className="text-base font-black text-red-400 uppercase tracking-wider mb-2">Power</div>
                 <div className="text-3xl font-black text-red-700">{result.p.toFixed(4)}<span className="text-lg text-red-400"> W</span></div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'V = I × R. P = V × I = I² × R = V²/R. Enter any two known values; the calculator solves for all four. Leave unknown fields blank.'}
               </div>

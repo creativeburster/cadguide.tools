@@ -94,13 +94,13 @@ Generated via CADGuide.tools`;
 
         {/* Material C Coefficient */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             1. Pipe Material & C-Value
           </label>
           <select
             value={materialIdx}
             onChange={(e) => setMaterialIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {PIPE_MATERIALS.map((m, i) => (
               <option key={m.name} value={i}>
@@ -108,7 +108,7 @@ Generated via CADGuide.tools`;
               </option>
 ))}
           </select>
-          <p className="text-[10px] text-slate-500 print:hidden">
+          <p className="text-sm text-slate-500 print:hidden">
             * C factor (Hazen-Williams constant) The larger the value, the smoother the pipe wall. 
           </p>
           <div className="hidden print:block font-bold">
@@ -118,7 +118,7 @@ Generated via CADGuide.tools`;
 
         {/* Flow Rate */}
         <div className="space-y-3">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">2. Design flow (Flow Rate Q)</span>
             <span className="text-blue-400 font-mono">{flowRate} m³/h</span>
           </div>
@@ -138,7 +138,7 @@ Generated via CADGuide.tools`;
                 step="0.1"
                 value={flowRate}
                 onChange={(e) => setFlowRate(Math.max(0.1, Number(e.target.value)))}
-                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500"
+                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500"
               />
               <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-500 font-mono">m³/h</span>
             </div>
@@ -147,7 +147,7 @@ Generated via CADGuide.tools`;
                 type="text"
                 disabled
                 value={(flowRate * 16.6667).toFixed(1)}
-                className="w-full bg-slate-850 border border-slate-800/40 rounded-xl px-3.5 py-2.5 text-xs font-mono text-slate-500 focus:outline-none"
+                className="w-full bg-slate-850 border border-slate-800/40 rounded-xl px-3.5 py-2.5 text-base font-mono text-slate-500 focus:outline-none"
               />
               <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-500 font-mono">L/min</span>
             </div>
@@ -156,7 +156,7 @@ Generated via CADGuide.tools`;
 
         {/* Internal Diameter */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">3. Actual inner diameter of pipe (Inner Diameter d)</span>
             <span className="text-blue-400 font-mono">{diameter} mm</span>
           </div>
@@ -173,13 +173,13 @@ Generated via CADGuide.tools`;
             type="number"
             value={diameter}
             onChange={(e) => setDiameter(Math.max(2, Number(e.target.value)))}
-            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
+            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
           />
         </div>
 
         {/* Pipe Length */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">4. Total physical length of pipe (Length L)</span>
             <span className="text-blue-400 font-mono">{length} m</span>
           </div>
@@ -196,7 +196,7 @@ Generated via CADGuide.tools`;
             type="number"
             value={length}
             onChange={(e) => setLength(Math.max(1, Number(e.target.value)))}
-            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
+            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
           />
         </div>
       </div>
@@ -212,7 +212,7 @@ Generated via CADGuide.tools`;
             </h3>
             <button
               onClick={copyToClipboard}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
+              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-base font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
               <span>{copied ? 'Copied' : 'Copy report'}</span>
@@ -221,11 +221,11 @@ Generated via CADGuide.tools`;
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Flow Velocity
               </span>
               <div className={`text-2xl font-black font-mono ${isVelocityHigh ? 'text-amber-600' : 'text-slate-800'}`}>
-                {hydraulics.velocity.toFixed(2)} <span className="text-xs text-slate-500 font-sans">m/s</span>
+                {hydraulics.velocity.toFixed(2)} <span className="text-base text-slate-500 font-sans">m/s</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Gravity water supply recommendation: 0.8 - 1.5 m/s
@@ -233,11 +233,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Frictional head loss (Static Head Loss)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
-                {hydraulics.headLoss.toFixed(2)} <span className="text-xs text-slate-500 font-sans">mH₂O</span>
+                {hydraulics.headLoss.toFixed(2)} <span className="text-base text-slate-500 font-sans">mH₂O</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Corresponding total pressure loss: {hydraulics.pressureDrop.toFixed(1)} kPa
@@ -245,11 +245,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Unit Friction Gradient (Unit Loss)
               </span>
               <div className={`text-2xl font-black font-mono ${isLossSevere ? 'text-red-500' : 'text-emerald-600'}`}>
-                {hydraulics.unitPressureDrop.toFixed(4)} <span className="text-xs text-slate-500 font-sans">kPa/m</span>
+                {hydraulics.unitPressureDrop.toFixed(4)} <span className="text-base text-slate-500 font-sans">kPa/m</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Comfort limit: &lt; 0.35 kPa/m
@@ -259,7 +259,7 @@ Generated via CADGuide.tools`;
 
           {/* Excessive head loss warning */}
           {(isLossSevere || isVelocityHigh) && (
-            <div className="flex gap-3 bg-red-50 border border-red-100 p-4 rounded-2xl text-red-800 text-xs">
+            <div className="flex gap-3 bg-red-50 border border-red-100 p-4 rounded-2xl text-red-800 text-base">
               <Info className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
                 <strong className="font-black">Warning: Excessive pipeline pressure loss or abnormal wind noise! </strong>
@@ -275,7 +275,7 @@ Generated via CADGuide.tools`;
         {/* Dynamic Pipe SVG */}
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
+            <span className="text-sm font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
               Fluid resistance and shear gradient simulator
             </span>
             <span className="text-[9px] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded font-mono font-bold uppercase print:hidden">
@@ -354,7 +354,7 @@ Generated via CADGuide.tools`;
             </svg>
           </div>
 
-          <div className="text-[10px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
+          <div className="text-sm text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Droplets className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
               <strong>Flow Physics Tip: </strong>Flow velocity animation shows the change in kinetic energy of the fluid through the movement of streamlines in the pipe.. The C factor of the pipe material determines the pipe resistance coefficient; When the inner surface of the pipe is rusted or scaled (e.g. C sliding from 150 to 80) , The boundary resistance of the pipe wall increases significantly, and the unit friction head loss under the same flow rate will increase exponentially.. 

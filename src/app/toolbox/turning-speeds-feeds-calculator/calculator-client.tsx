@@ -51,19 +51,19 @@ export default function TurningSpeedsClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
             <select value={matIdx} onChange={e => setMatIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {MATERIALS.map((m, i) => <option key={i} value={i}>{m.name}</option>)}
             </select>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Tool Material</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Tool Material</label>
             <div className="grid grid-cols-2 gap-2">
               {(['hss', 'carbide'] as const).map(t => (
                 <button key={t} onClick={() => setToolType(t)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${toolType === t ? 'bg-amber-600 border-amber-600 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${toolType === t ? 'bg-amber-600 border-amber-600 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
                   {t === 'hss' ? 'HSS' : 'Carbide'}
                 </button>
               ))}
@@ -73,36 +73,36 @@ export default function TurningSpeedsClient() {
           <div>
             <label className="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" checked={useCustom} onChange={e => setUseCustom(e.target.checked)} className="w-5 h-5 rounded accent-amber-600" />
-              <span className="text-xs font-black text-slate-400 uppercase tracking-wider">Custom Speeds</span>
+              <span className="text-base font-black text-slate-400 uppercase tracking-wider">Custom Speeds</span>
             </label>
           </div>
 
           {useCustom && (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Cutting Speed Vc (m/min)</label>
-                <input type="number" value={customVc} onChange={e => setCustomVc(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Cutting Speed Vc (m/min)</label>
+                <input type="number" value={customVc} onChange={e => setCustomVc(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Feed/Rev (mm/rev)</label>
-                <input type="number" step="0.01" value={customFeed} onChange={e => setCustomFeed(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Feed/Rev (mm/rev)</label>
+                <input type="number" step="0.01" value={customFeed} onChange={e => setCustomFeed(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Workpiece Ø (mm)</label>
-            <input type="number" value={diameter} onChange={e => setDiameter(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Workpiece Ø (mm)</label>
+            <input type="number" value={diameter} onChange={e => setDiameter(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Depth of Cut (mm)</label>
-            <input type="number" step="0.1" value={doc} onChange={e => setDoc(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Depth of Cut (mm)</label>
+            <input type="number" step="0.1" value={doc} onChange={e => setDoc(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Cut Length (mm)</label>
-            <input type="number" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Cut Length (mm)</label>
+            <input type="number" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -117,34 +117,34 @@ export default function TurningSpeedsClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100">
-                <div className="text-xs font-black text-amber-400 uppercase tracking-wider mb-2">Spindle Speed</div>
+                <div className="text-base font-black text-amber-400 uppercase tracking-wider mb-2">Spindle Speed</div>
                 <div className="text-3xl font-black text-amber-700">{result.rpm.toFixed(0)}<span className="text-lg text-amber-400"> RPM</span></div>
-                <div className="text-xs text-amber-600 font-medium mt-1">N = Vc×1000 / (π×D)</div>
+                <div className="text-base text-amber-600 font-medium mt-1">N = Vc×1000 / (π×D)</div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Feed Rate</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Feed Rate</div>
                 <div className="text-3xl font-black text-blue-700">{result.feedRate.toFixed(1)}<span className="text-lg text-blue-400"> mm/min</span></div>
-                <div className="text-xs text-blue-600 font-medium mt-1">F = N × fn</div>
+                <div className="text-base text-blue-600 font-medium mt-1">F = N × fn</div>
               </div>
             </div>
 
             <div className="mt-4 grid grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Cutting Speed</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Cutting Speed</div>
                 <div className="text-lg font-black text-slate-700">{result.Vc} m/min</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">MRR</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">MRR</div>
                 <div className="text-lg font-black text-slate-700">{result.mrr.toFixed(0)} mm³/min</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Cutting Time</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Cutting Time</div>
                 <div className="text-lg font-black text-slate-700">{result.cuttingTime.toFixed(1)} s</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 RPM = Vc×1000/(π×D). Feed rate = RPM × feed/rev. MRR = feedRate × DOC × Ø. Cutting time = length / feedRate × 60. Values are starting points — adjust based on tool wear, surface finish, and rigidity.
               </div>

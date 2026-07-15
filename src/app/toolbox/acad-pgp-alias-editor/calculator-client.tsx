@@ -535,10 +535,10 @@ export default function AcadPgpEditorClient() {
         <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col justify-between gap-6">
           <div>
             <h2 className="text-slate-900 font-black text-lg tracking-tight">File configuration panel</h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               PGP Loader & Compiler
             </p>
-            <p className="text-xs text-slate-500 mt-3 leading-relaxed">
+            <p className="text-base text-slate-500 mt-3 leading-relaxed">
               Support uploading your local <b>`acad.pgp`</b> / <b>`gcad.pgp`</b> for offline editing. After editing, generate a new one with one click PGP file. 
             </p>
           </div>
@@ -554,7 +554,7 @@ export default function AcadPgpEditorClient() {
               />
               <label
                 htmlFor="pgp-file-input"
-                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl border-2 border-dashed border-slate-200 hover:border-blue-500 hover:bg-blue-50/20 text-slate-600 hover:text-blue-600 font-bold text-sm transition-all cursor-pointer text-center w-full"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl border-2 border-dashed border-slate-200 hover:border-blue-500 hover:bg-blue-50/20 text-slate-600 hover:text-blue-600 font-bold text-lg transition-all cursor-pointer text-center w-full"
               >
                 <Upload className="w-4 h-4" />
                 Upload local .pgp alias file
@@ -563,7 +563,7 @@ export default function AcadPgpEditorClient() {
 
             <button
               onClick={handleDownload}
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-lg shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
             >
               <Download className="w-4 h-4" />
               Compile and download acad.pgp
@@ -580,11 +580,11 @@ export default function AcadPgpEditorClient() {
           <div className="flex justify-between items-center pb-3 border-b border-slate-800">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="text-xs font-mono font-black text-slate-400">CAD COMMAND LINE TERMINAL</span>
+              <span className="text-base font-mono font-black text-slate-400">CAD COMMAND LINE TERMINAL</span>
             </div>
             <button
               onClick={() => setTerminalHistory(['Terminal Reset Completed. PGP Simulator active.'])}
-              className="text-[10px] font-mono text-slate-500 hover:text-slate-300 flex items-center gap-1 cursor-pointer"
+              className="text-sm font-mono text-slate-500 hover:text-slate-300 flex items-center gap-1 cursor-pointer"
             >
               <RefreshCw className="w-3 h-3" />
               clear screen
@@ -592,7 +592,7 @@ export default function AcadPgpEditorClient() {
           </div>
 
           {/* Terminal log output area */}
-          <div className="flex-1 overflow-y-auto max-h-[140px] font-mono text-[10px] text-emerald-400/90 py-3 flex flex-col gap-1.5 scrollbar-thin">
+          <div className="flex-1 overflow-y-auto max-h-[140px] font-mono text-sm text-emerald-400/90 py-3 flex flex-col gap-1.5 scrollbar-thin">
             {terminalHistory.map((log, index) => (
               <div key={index} className="leading-relaxed whitespace-pre-wrap">
                 {log}
@@ -630,17 +630,17 @@ export default function AcadPgpEditorClient() {
 
           {/* Terminal input form */}
           <form onSubmit={handleTerminalSubmit} className="flex gap-2 pt-2 border-t border-slate-800">
-            <span className="text-emerald-500 font-mono font-bold text-xs flex items-center">CAD&gt;</span>
+            <span className="text-emerald-500 font-mono font-bold text-base flex items-center">CAD&gt;</span>
             <input
               type="text"
               value={terminalInput}
               onChange={(e) => setTerminalInput(e.target.value)}
               placeholder="For example: C, L, REINIT, PL..."
-              className="flex-1 bg-transparent text-white font-mono text-xs focus:outline-none border-none p-0"
+              className="flex-1 bg-transparent text-white font-mono text-base focus:outline-none border-none p-0"
             />
             <button
               type="submit"
-              className="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono text-[10px] cursor-pointer"
+              className="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white font-mono text-sm cursor-pointer"
             >
               send
             </button>
@@ -655,10 +655,10 @@ export default function AcadPgpEditorClient() {
           <h2 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
             <ImageIcon className="w-5 h-5 text-blue-600" /> CAD Command Line Shortcut Wallpaper Designer
           </h2>
-          <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+          <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
             High-Resolution Desktop & Mobile Wallpaper Generator (Linkable Asset)
           </p>
-          <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+          <p className="text-base text-slate-500 mt-2 leading-relaxed">
             Configure your customized command line aliases into a beautiful minimalist, engineering blueprint, or retro cyberpunk desktop wallpaper. Display your daily drawing cheatsheet on your screen for quick lookup.
           </p>
         </div>
@@ -666,7 +666,7 @@ export default function AcadPgpEditorClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left: Canvas Live Preview Area */}
           <div className="lg:col-span-5 bg-slate-950 rounded-2xl p-4 flex flex-col justify-center items-center border border-slate-800 shadow-inner min-h-[280px]">
-            <span className="text-[10px] font-mono text-slate-500 mb-3 flex items-center gap-1.5 uppercase tracking-widest">
+            <span className="text-sm font-mono text-slate-500 mb-3 flex items-center gap-1.5 uppercase tracking-widest">
               <Eye className="w-3.5 h-3.5" /> Real-time Live Preview Thumbnail
             </span>
             <div className="w-full flex justify-center items-center flex-1">
@@ -687,7 +687,7 @@ export default function AcadPgpEditorClient() {
             <div className="space-y-5">
               {/* 1. Theme Picker */}
               <div className="space-y-2">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">1. Wallpaper Aesthetics Theme</label>
+                <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block">1. Wallpaper Aesthetics Theme</label>
                 <div className="grid grid-cols-3 gap-3">
                   {[
                     { id: 'minimalist', name: 'Minimalist Tech', desc: 'Clean Light Gray', bg: 'bg-slate-50 border-slate-200 text-slate-800' },
@@ -701,7 +701,7 @@ export default function AcadPgpEditorClient() {
                         wallpaperTheme === theme.id ? 'ring-2 ring-blue-500 ring-offset-2 scale-[1.02] shadow-sm' : 'opacity-75 hover:opacity-100'
                       }`}
                     >
-                      <span className="font-bold text-xs">{theme.name}</span>
+                      <span className="font-bold text-base">{theme.name}</span>
                       <span className="text-[9px] opacity-75">{theme.desc}</span>
                     </button>
                   ))}
@@ -710,7 +710,7 @@ export default function AcadPgpEditorClient() {
 
               {/* 2. Resolution Picker */}
               <div className="space-y-2">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">2. Canvas Dimension Ratio</label>
+                <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block">2. Canvas Dimension Ratio</label>
                 <div className="bg-slate-100 p-1 rounded-xl flex gap-1 w-full sm:w-auto inline-flex">
                   {[
                     { id: '4k', label: '4K UHD (3840x2160)' },
@@ -720,7 +720,7 @@ export default function AcadPgpEditorClient() {
                     <button
                       key={res.id}
                       onClick={() => setWallpaperResolution(res.id as any)}
-                      className={`px-4 py-2 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${
+                      className={`px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
                         wallpaperResolution === res.id ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-900'
                       }`}
                     >
@@ -733,7 +733,7 @@ export default function AcadPgpEditorClient() {
               {/* 3. Aliases Selector list */}
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">3. Select Shortcuts to Render ({selectedAliases.length} selected)</label>
+                  <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block">3. Select Shortcuts to Render ({selectedAliases.length} selected)</label>
                   <div className="flex gap-2">
                     <button
                       onClick={() => setSelectedAliases(aliases.slice(0, 16).map(a => a.alias))}
@@ -762,7 +762,7 @@ export default function AcadPgpEditorClient() {
                     return (
                       <label
                         key={item.alias}
-                        className={`flex items-center gap-1.5 p-1.5 rounded-lg border text-[10px] cursor-pointer transition-all hover:bg-white select-none ${
+                        className={`flex items-center gap-1.5 p-1.5 rounded-lg border text-sm cursor-pointer transition-all hover:bg-white select-none ${
                           isChecked ? 'border-blue-100 bg-white font-black text-slate-900' : 'border-slate-100 text-slate-500'
                         }`}
                       >
@@ -791,7 +791,7 @@ export default function AcadPgpEditorClient() {
             <button
               onClick={handleDownloadWallpaper}
               disabled={selectedAliases.length === 0}
-              className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-black text-sm shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer w-full text-center"
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-black text-lg shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer w-full text-center"
             >
               <Download className="w-4 h-4" />
               Generate & Download High-Resolution Wallpaper (.PNG)
@@ -806,7 +806,7 @@ export default function AcadPgpEditorClient() {
           <div className="flex gap-2">
             <button
               onClick={() => setActiveTab('editor')}
-              className={`px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-base font-black transition-all cursor-pointer ${
                 activeTab === 'editor'
                   ? 'bg-slate-900 text-white'
                   : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
@@ -816,7 +816,7 @@ export default function AcadPgpEditorClient() {
             </button>
             <button
               onClick={() => setActiveTab('presets')}
-              className={`px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-base font-black transition-all cursor-pointer ${
                 activeTab === 'presets'
                   ? 'bg-slate-900 text-white'
                   : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
@@ -835,7 +835,7 @@ export default function AcadPgpEditorClient() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search for shortcut keys or commands..."
-              className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-xs font-semibold text-slate-700"
+              className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-base font-semibold text-slate-700"
             />
           </div>
         </div>
@@ -844,19 +844,19 @@ export default function AcadPgpEditorClient() {
         {activeTab === 'presets' && (
           <div className="py-6 flex flex-col gap-6">
             <div>
-              <h3 className="text-slate-800 font-bold text-sm">Select a basic development preset</h3>
-              <p className="text-xs text-slate-400 mt-1">You can load the factory default alias libraries of major CAD platforms with one click here., Use this as a blueprint for secondary customization. </p>
+              <h3 className="text-slate-800 font-bold text-lg">Select a basic development preset</h3>
+              <p className="text-base text-slate-400 mt-1">You can load the factory default alias libraries of major CAD platforms with one click here., Use this as a blueprint for secondary customization. </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between gap-4">
                 <div>
-                  <span className="text-xs font-black bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md">AutoCAD Official</span>
-                  <h4 className="font-bold text-slate-800 text-sm mt-2">AutoCAD Official default shortcut key preset</h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">Including C (Circle), L (Line), PL (Pline), etc. 30 An official high-frequency alias. </p>
+                  <span className="text-base font-black bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md">AutoCAD Official</span>
+                  <h4 className="font-bold text-slate-800 text-lg mt-2">AutoCAD Official default shortcut key preset</h4>
+                  <p className="text-base text-slate-500 mt-1 leading-relaxed">Including C (Circle), L (Line), PL (Pline), etc. 30 An official high-frequency alias. </p>
                 </div>
                 <button
                   onClick={() => { loadPreset('autocad'); setActiveTab('editor'); }}
-                  className="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs text-center cursor-pointer"
+                  className="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base text-center cursor-pointer"
                 >
                   Load AutoCAD preset
                 </button>
@@ -864,13 +864,13 @@ export default function AcadPgpEditorClient() {
 
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between gap-4">
                 <div>
-                  <span className="text-xs font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">GstarCAD Official</span>
-                  <h4 className="font-bold text-slate-800 text-sm mt-2">Haochen CAD official default shortcut key presets</h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">Integrated Haochen&apos;s unique instructions (such as workspace switching, shortcut alias for extended commands, etc.). </p>
+                  <span className="text-base font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">GstarCAD Official</span>
+                  <h4 className="font-bold text-slate-800 text-lg mt-2">Haochen CAD official default shortcut key presets</h4>
+                  <p className="text-base text-slate-500 mt-1 leading-relaxed">Integrated Haochen&apos;s unique instructions (such as workspace switching, shortcut alias for extended commands, etc.). </p>
                 </div>
                 <button
                   onClick={() => { loadPreset('gstarcad'); setActiveTab('editor'); }}
-                  className="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs text-center cursor-pointer"
+                  className="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base text-center cursor-pointer"
                 >
                   Load Haochen CAD preset
                 </button>
@@ -886,30 +886,30 @@ export default function AcadPgpEditorClient() {
             {/* Added alias input field */}
             <form onSubmit={handleAddAlias} className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex flex-col md:flex-row items-end gap-3">
               <div className="flex-1 w-full flex flex-col gap-1.5">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Quick aliases (such as: C)</label>
+                <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Quick aliases (such as: C)</label>
                 <input
                   type="text"
                   value={newAlias}
                   onChange={(e) => setNewAlias(e.target.value)}
                   placeholder="C"
-                  className="px-3 py-2 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-xs font-mono font-bold text-slate-800 uppercase"
+                  className="px-3 py-2 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-base font-mono font-bold text-slate-800 uppercase"
                 />
               </div>
 
               <div className="flex-1 w-full flex flex-col gap-1.5">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Point to CAD command (Such as: CIRCLE)</label>
+                <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Point to CAD command (Such as: CIRCLE)</label>
                 <input
                   type="text"
                   value={newCommand}
                   onChange={(e) => setNewCommand(e.target.value)}
                   placeholder="CIRCLE"
-                  className="px-3 py-2 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-xs font-mono font-bold text-slate-800 uppercase"
+                  className="px-3 py-2 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-base font-mono font-bold text-slate-800 uppercase"
                 />
               </div>
 
               <button
                 type="submit"
-                className="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-xs flex items-center justify-center gap-1.5 cursor-pointer w-full md:w-auto h-[38px] flex-shrink-0"
+                className="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-base flex items-center justify-center gap-1.5 cursor-pointer w-full md:w-auto h-[38px] flex-shrink-0"
               >
                 <Plus className="w-4 h-4" />
                 Add alias item
@@ -918,9 +918,9 @@ export default function AcadPgpEditorClient() {
 
             {/* List rendering */}
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse text-xs">
+              <table className="w-full text-left border-collapse text-base">
                 <thead>
-                  <tr className="border-b border-slate-100 text-slate-400 uppercase text-[10px] tracking-wider font-bold">
+                  <tr className="border-b border-slate-100 text-slate-400 uppercase text-sm tracking-wider font-bold">
                     <th className="py-3 px-4 w-[160px]">Alias</th>
                     <th className="py-3 px-4">Mapping CAD commands (Command)</th>
                     <th className="py-3 px-4 w-[100px] text-center">Status check</th>
@@ -957,12 +957,12 @@ export default function AcadPgpEditorClient() {
                         </td>
                         <td className="py-2.5 px-4 text-center">
                           {isConflict ? (
-                            <span className="inline-flex items-center gap-1 text-[10px] font-black text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-100">
+                            <span className="inline-flex items-center gap-1 text-sm font-black text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-100">
                               <AlertTriangle className="w-3 h-3" />
                               Alias conflict
                             </span>
 ) : (
-                            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+                            <span className="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
                               <Check className="w-3 h-3" />
                               normal
                             </span>
@@ -998,18 +998,18 @@ export default function AcadPgpEditorClient() {
       {/* Geek's Guide - REINIT Effectiveness and Alias Priority */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
         <div>
-          <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
+          <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-blue-500 animate-pulse" />
             AutoCAD Advanced Guide to Shortcut Key Aliases
           </h3>
-          <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">
+          <p className="text-base text-slate-400 mt-1 uppercase tracking-wide">
             AutoCAD PGP Deployment & Priority Optimization Guide
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs leading-relaxed text-slate-500">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-base leading-relaxed text-slate-500">
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               1. Directly overload the REINIT mechanism from the command line
             </h4>
@@ -1018,7 +1018,7 @@ export default function AcadPgpEditorClient() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               2. Alias conflicts and priority override rules
             </h4>
@@ -1027,7 +1027,7 @@ export default function AcadPgpEditorClient() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               3. External command extension fields
             </h4>

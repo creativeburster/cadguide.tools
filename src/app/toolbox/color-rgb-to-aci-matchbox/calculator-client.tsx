@@ -281,7 +281,7 @@ export default function ColorMatchboxClient() {
     <div className="space-y-12">
       {/* Brand Color Presets */}
       <div className="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm space-y-4">
-        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+        <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
           <Layers className="w-4 h-4 text-blue-600" /> Common Digital Color Presets
         </h3>
         <div className="flex flex-wrap gap-2.5">
@@ -297,7 +297,7 @@ export default function ColorMatchboxClient() {
             <button
               key={c.name}
               onClick={() => handleApplyPreset(c.hex)}
-              className="px-4 py-2 rounded-xl text-xs font-bold bg-slate-50 border border-slate-100 text-slate-700 hover:bg-blue-50 hover:border-blue-200 transition-all"
+              className="px-4 py-2 rounded-xl text-base font-bold bg-slate-50 border border-slate-100 text-slate-700 hover:bg-blue-50 hover:border-blue-200 transition-all"
             >
               {c.name} ({c.hex})
             </button>
@@ -310,7 +310,7 @@ export default function ColorMatchboxClient() {
         <div className="lg:col-span-5 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
           <div className="space-y-2">
             <h2 className="text-xl font-black text-slate-900">Digital Color Input</h2>
-            <p className="text-xs text-slate-400 font-semibold">
+            <p className="text-base text-slate-400 font-semibold">
               Select a custom color to translate to its nearest AutoCAD indexing value.
             </p>
           </div>
@@ -327,21 +327,21 @@ export default function ColorMatchboxClient() {
                 />
               </div>
               <div className="space-y-1 w-full">
-                <span className="text-[10px] font-bold text-slate-400 uppercase">HEX Code</span>
+                <span className="text-sm font-bold text-slate-400 uppercase">HEX Code</span>
                 <input
                   type="text"
                   value={hexInput}
                   maxLength={7}
                   onChange={(e) => handleHexChange(e.target.value)}
                   placeholder="#3B82F6"
-                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold focus:outline-none focus:ring-2 focus:ring-blue-600/10 focus:bg-white text-sm font-mono text-slate-700"
+                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold focus:outline-none focus:ring-2 focus:ring-blue-600/10 focus:bg-white text-lg font-mono text-slate-700"
                 />
               </div>
             </div>
 
             {/* Red slider */}
             <div className="space-y-2 pt-4 border-t border-slate-50">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+              <div className="flex items-center justify-between text-base font-bold text-slate-700">
                 <span className="text-slate-400 uppercase">Red (R)</span>
                 <span className="font-mono">{rgbR}</span>
               </div>
@@ -357,7 +357,7 @@ export default function ColorMatchboxClient() {
 
             {/* Green slider */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+              <div className="flex items-center justify-between text-base font-bold text-slate-700">
                 <span className="text-slate-400 uppercase">Green (G)</span>
                 <span className="font-mono">{rgbG}</span>
               </div>
@@ -373,7 +373,7 @@ export default function ColorMatchboxClient() {
 
             {/* Blue slider */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+              <div className="flex items-center justify-between text-base font-bold text-slate-700">
                 <span className="text-slate-400 uppercase">Blue (B)</span>
                 <span className="font-mono">{rgbB}</span>
               </div>
@@ -394,7 +394,7 @@ export default function ColorMatchboxClient() {
           <div className="lg:col-span-7 space-y-6">
             {/* Split Screen Matchbox */}
             <div className="bg-white border border-slate-100 rounded-[32px] overflow-hidden shadow-sm flex flex-col">
-              <div className="h-44 flex text-center font-bold text-xs uppercase tracking-widest text-white">
+              <div className="h-44 flex text-center font-bold text-base uppercase tracking-widest text-white">
                 {/* Left side: user custom input */}
                 <div
                   style={{ backgroundColor: hexInput }}
@@ -403,7 +403,7 @@ export default function ColorMatchboxClient() {
                   <span className="bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
                     Custom Input
                   </span>
-                  <span className="text-sm font-black font-mono mt-2 bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
+                  <span className="text-lg font-black font-mono mt-2 bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
                     {hexInput.toUpperCase()}
                   </span>
                 </div>
@@ -416,7 +416,7 @@ export default function ColorMatchboxClient() {
                   <span className="bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
                     Autodesk ACI Match
                   </span>
-                  <span className="text-sm font-black font-mono mt-2 bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
+                  <span className="text-lg font-black font-mono mt-2 bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
                     ACI {bestMatch.index} ({bestMatch.hex.toUpperCase()})
                   </span>
                 </div>
@@ -426,7 +426,7 @@ export default function ColorMatchboxClient() {
               <div className="p-6 md:p-8 space-y-6 border-t border-slate-100">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-100">
                   <div>
-                    <div className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-1">
+                    <div className="text-base font-bold text-blue-600 uppercase tracking-widest mb-1">
                       Matched Color: {bestMatch.name}
                     </div>
                     <h3 className="text-2xl font-black text-slate-900 flex items-center gap-2">
@@ -435,7 +435,7 @@ export default function ColorMatchboxClient() {
                   </div>
                   <button
                     onClick={handleCopyIndex}
-                    className="flex items-center justify-center gap-1.5 h-10 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-widest shrink-0"
+                    className="flex items-center justify-center gap-1.5 h-10 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base uppercase tracking-widest shrink-0"
                   >
                     {copied ? (
                       <>
@@ -452,25 +452,25 @@ export default function ColorMatchboxClient() {
                 {/* Recommended CTB plot details */}
                 <div className="grid md:grid-cols-3 gap-6 text-slate-700">
                   <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Default Pen Width</div>
+                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Default Pen Width</div>
                     <div className="text-lg font-black text-slate-800">{ctbRecommendation.pen}</div>
                   </div>
                   <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Color Screening</div>
+                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Color Screening</div>
                     <div className="text-lg font-black text-slate-800">{ctbRecommendation.screening}</div>
                   </div>
                   <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">CIE76 Delta-E Distance</div>
+                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">CIE76 Delta-E Distance</div>
                     <div className="text-lg font-black text-slate-800">{bestMatch.distance.toFixed(1)}</div>
                   </div>
                 </div>
 
                 {/* Layer mapping recommendation */}
                 <div className="bg-blue-50/50 rounded-2xl p-5 border border-blue-50/50 space-y-2">
-                  <h4 className="text-xs font-black text-blue-800 uppercase tracking-wider flex items-center gap-1.5">
+                  <h4 className="text-base font-black text-blue-800 uppercase tracking-wider flex items-center gap-1.5">
                     <Info className="w-4 h-4" /> Recommended Layer & Usage
                   </h4>
-                  <p className="text-xs text-blue-600 leading-relaxed font-semibold">
+                  <p className="text-base text-blue-600 leading-relaxed font-semibold">
                     {ctbRecommendation.layer}. 
                     {bestMatch.distance > 8 && ' Note: The closest matching ACI index has a Delta-E distance of ' + bestMatch.distance.toFixed(1) + '. It is recommended to use layers configurations instead of direct color overriding if absolute brand precision is needed.'}
                   </p>
@@ -480,7 +480,7 @@ export default function ColorMatchboxClient() {
 
             {/* alternative nearest matching candidates */}
             <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm space-y-4">
-              <h4 className="text-xs font-black text-slate-400 uppercase tracking-wider">Top 5 Alternative Matches</h4>
+              <h4 className="text-base font-black text-slate-400 uppercase tracking-wider">Top 5 Alternative Matches</h4>
               <div className="grid grid-cols-5 gap-3">
                 {matchedColors.slice(1, 6).map((aci) => (
                   <button
@@ -492,7 +492,7 @@ export default function ColorMatchboxClient() {
                       style={{ backgroundColor: aci.hex }}
                       className="h-10 rounded-lg mb-2 group-hover:scale-95 transition-transform"
                     ></div>
-                    <div className="text-[10px] font-extrabold text-slate-800">Index {aci.index}</div>
+                    <div className="text-sm font-extrabold text-slate-800">Index {aci.index}</div>
                     <div className="text-[8px] text-slate-400 font-semibold mt-0.5">ΔE: {aci.distance.toFixed(1)}</div>
                   </button>
                 ))}
@@ -508,10 +508,10 @@ export default function ColorMatchboxClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> CIE76 Delta-E Color Distance Reference
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">1. Why Delta-E mapping is necessary</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>Euclidean RGB vs Human Eye</strong>: A simple distance formula in RGB space ({"$d = \\sqrt{\\Delta R^2 + \\Delta G^2 + \\Delta B^2}$"}) treats color channels linearly. However, the human eye is far more sensitive to green wavelengths than blue, and perceives brightness non-linearly.
               </p>
@@ -530,7 +530,7 @@ export default function ColorMatchboxClient() {
 
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Color translation log</h4>
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
+            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-base font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
                 <span className="text-slate-400">{'// XYZ D65 reference conversion'}</span>
                 <div>X = {rgbR * 0.4124 + rgbG * 0.3576 + rgbB * 0.1805}</div>

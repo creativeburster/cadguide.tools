@@ -86,11 +86,11 @@ export default function HardnessConverterClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Hardness Scale</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Hardness Scale</label>
             <div className="grid grid-cols-2 gap-2">
               {scales.map(s => (
                 <button key={s.id} onClick={() => setInputScale(s.id)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${inputScale === s.id ? 'bg-cyan-600 border-cyan-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${inputScale === s.id ? 'bg-cyan-600 border-cyan-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
                   {s.name}
                 </button>
               ))}
@@ -98,9 +98,9 @@ export default function HardnessConverterClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Value ({inputScale})</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Value ({inputScale})</label>
             <input type="number" step="0.1" value={inputValue} onChange={e => setInputValue(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -124,17 +124,17 @@ export default function HardnessConverterClient() {
                   r.color === 'teal' ? 'bg-teal-50 border-teal-100' :
                   'bg-red-50 border-red-100'
                 }`}>
-                  <span className="text-sm font-black text-slate-700">{r.label}</span>
+                  <span className="text-lg font-black text-slate-700">{r.label}</span>
                   <span className="text-xl font-black text-slate-900">
                     {r.value === null ? 'N/A' : r.value < 100 ? r.value.toFixed(1) : r.value.toFixed(0)}
-                    <span className="text-sm text-slate-400 ml-1">{r.unit}</span>
+                    <span className="text-lg text-slate-400 ml-1">{r.unit}</span>
                   </span>
                 </div>
               ))}
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 Conversions are approximate for carbon and alloy steels. Actual values may vary by material composition, test method, and specimen preparation. Tensile strength estimate: σu ≈ 3.45 × HB (for steel).
               </div>

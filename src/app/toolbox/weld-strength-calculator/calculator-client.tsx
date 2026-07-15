@@ -82,13 +82,13 @@ Generated via CADGuide.tools`;
 
         {/* Electrode Strength */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             1. Weld Electrode and Structural Steel Specification Strength (Weld Electrode)
           </label>
           <select
             value={electrodeIdx}
             onChange={(e) => setElectrodeIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {WELD_ELECTRODES.map((el, i) => (
               <option key={el.name} value={i}>
@@ -103,7 +103,7 @@ Generated via CADGuide.tools`;
 
         {/* Weld Leg Size */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">2. Leg Size hf</span>
             <span className="text-blue-400 font-mono">{legSize} mm</span>
           </div>
@@ -120,13 +120,13 @@ Generated via CADGuide.tools`;
             type="number"
             value={legSize}
             onChange={(e) => setLegSize(Math.max(1, Number(e.target.value)))}
-            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
+            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
           />
         </div>
 
         {/* Weld Length */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">3. Weld design length (Weld Length L)</span>
             <span className="text-blue-400 font-mono">{length} mm</span>
           </div>
@@ -148,7 +148,7 @@ Generated via CADGuide.tools`;
               onChange={(e) => setExcludeCraters(e.target.checked)}
               className="rounded border-slate-850 text-blue-600 focus:ring-blue-500 w-4 h-4 bg-slate-850 accent-blue-500 cursor-pointer"
             />
-            <label htmlFor="craters" className="text-xs font-bold text-slate-300 cursor-pointer select-none">
+            <label htmlFor="craters" className="text-base font-bold text-slate-300 cursor-pointer select-none">
               Deduction of crater boundary defects (deduction of 2×hf)
             </label>
           </div>
@@ -156,7 +156,7 @@ Generated via CADGuide.tools`;
 
         {/* External Applied Load */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">4. Shear/tensile external load (Load P)</span>
             <span className="text-blue-400 font-mono">{appliedLoad} kN</span>
           </div>
@@ -173,7 +173,7 @@ Generated via CADGuide.tools`;
             type="number"
             value={appliedLoad}
             onChange={(e) => setAppliedLoad(Math.max(1, Number(e.target.value)))}
-            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
+            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
           />
         </div>
       </div>
@@ -189,7 +189,7 @@ Generated via CADGuide.tools`;
             </h3>
             <button
               onClick={copyToClipboard}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
+              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-base font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
               <span>{copied ? 'Copied' : 'Copy report'}</span>
@@ -198,11 +198,11 @@ Generated via CADGuide.tools`;
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Design tensile limit (Allowable Load)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
-                {physics.maxCapacity.toFixed(2)} <span className="text-xs text-slate-500 font-sans">kN</span>
+                {physics.maxCapacity.toFixed(2)} <span className="text-base text-slate-500 font-sans">kN</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Maximum safe bearing capacity of welds
@@ -210,11 +210,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Effective throat thickness (Throat Size a)
               </span>
               <div className="text-2xl font-black font-mono text-slate-800">
-                {physics.throat.toFixed(2)} <span className="text-xs text-slate-500 font-sans">mm</span>
+                {physics.throat.toFixed(2)} <span className="text-base text-slate-500 font-sans">mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Calculated thickness of minimum bearing surface
@@ -222,11 +222,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Weld stress intensity utilization rate
               </span>
               <div className={`text-2xl font-black font-mono ${isSafetyDanger ? 'text-red-500' : (isSafetyWarning ? 'text-amber-500' : 'text-emerald-600')}`}>
-                {physics.stressRatio.toFixed(1)} <span className="text-xs text-slate-500 font-sans">%</span>
+                {physics.stressRatio.toFixed(1)} <span className="text-base text-slate-500 font-sans">%</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 actual design load ratio
@@ -236,7 +236,7 @@ Generated via CADGuide.tools`;
 
           {/* Safety warnings */}
           {isSafetyDanger && (
-            <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
+            <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-base">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
                 <strong className="font-black">Weld overload shear damage warning! </strong>
@@ -248,7 +248,7 @@ Generated via CADGuide.tools`;
 )}
 
           {isSafetyWarning && !isSafetyDanger && (
-            <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
+            <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-base">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
                 <strong className="font-black">Weld Highly Stressed</strong>
@@ -263,7 +263,7 @@ Generated via CADGuide.tools`;
         {/* Weld 2D Section SVG */}
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
+            <span className="text-sm font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
               Simulation of the throat thickness of the weld and the shear section of the damage zone
             </span>
           </div>
@@ -334,7 +334,7 @@ Generated via CADGuide.tools`;
             </svg>
           </div>
 
-          <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-650">
+          <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-650">
             * Physical diagram: The load-bearing shear section of a fillet weld is its 45 The &quot;effective throat thickness surface at the angle bisector&quot;&quot; (That is the green/red dotted line in the picture) . When the external load is too high, this section will crack due to stress shear.. Use GB 50017 and AISC Ultimate load-bearing specifications accurately estimate safety redundancy. 
           </p>
         </div>

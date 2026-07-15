@@ -183,13 +183,13 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
               <h2 className="text-white font-black text-lg tracking-tight">Network permission link topology monitoring</h2>
             </div>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               Network Licensing Link Path Topology
             </p>
           </div>
           <button
             onClick={handleReset}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-black text-slate-300 border border-slate-700/60 transition-all cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-base font-black text-slate-300 border border-slate-700/60 transition-all cursor-pointer"
           >
             <RotateCcw className="w-3 h-3" />
             reset diagnostics
@@ -381,7 +381,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
         {/* Left: Multi-step wizard step bar (Navigation Step list) */}
         <div className="lg:col-span-1 flex flex-col gap-4">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
-            <h3 className="text-slate-800 font-black text-base tracking-tight mb-4 flex items-center gap-2">
+            <h3 className="text-slate-800 font-black text-xl tracking-tight mb-4 flex items-center gap-2">
               <Activity className="w-4 h-4 text-blue-500" />
               Diagnostic process progress
             </h3>
@@ -402,7 +402,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-black ${
+                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-base font-black ${
                         isActive
                           ? 'bg-blue-500 text-white'
                           : isCompleted
@@ -411,7 +411,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                       }`}>
                         {idx + 1}
                       </span>
-                      <span className="text-sm">{step.name}</span>
+                      <span className="text-lg">{step.name}</span>
                     </div>
                     {isCompleted && <Check className="w-4 h-4 text-emerald-600" />}
                     {isActive && <ArrowRight className="w-4 h-4 text-blue-600 animate-pulse" />}
@@ -425,38 +425,38 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <Info className="w-4 h-4 text-slate-500" />
-              <h3 className="text-slate-800 font-black text-sm uppercase tracking-wider">Server parameter settings</h3>
+              <h3 className="text-slate-800 font-black text-lg uppercase tracking-wider">Server parameter settings</h3>
             </div>
             
             {/* Input 1: Server Address */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="serverAddress" className="text-xs font-black text-slate-500 uppercase">Server IP/Hostname</label>
+              <label htmlFor="serverAddress" className="text-base font-black text-slate-500 uppercase">Server IP/Hostname</label>
               <input
                 id="serverAddress"
                 type="text"
                 value={serverAddress}
                 onChange={(e) => setServerAddress(e.target.value)}
                 placeholder="For example: license-server"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800"
               />
             </div>
 
             {/* Input 2: lmgrd Port */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="lmgrdPort" className="text-xs font-black text-slate-500 uppercase">lmgrd Main port</label>
+              <label htmlFor="lmgrdPort" className="text-base font-black text-slate-500 uppercase">lmgrd Main port</label>
               <input
                 id="lmgrdPort"
                 type="text"
                 value={lmgrdPort}
                 onChange={(e) => setLmgrdPort(e.target.value)}
                 placeholder="Default: 27000"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800"
               />
             </div>
 
             {/* Input 3: Vendor daemon select */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="vendorName" className="text-xs font-black text-slate-500 uppercase">Vendor plug-in service name</label>
+              <label htmlFor="vendorName" className="text-base font-black text-slate-500 uppercase">Vendor plug-in service name</label>
               <select
                 id="vendorName"
                 value={vendorName}
@@ -465,7 +465,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                   if (e.target.value === 'adskflex') setVendorPort('2080');
                   else if (e.target.value === 'swutil') setVendorPort('25735');
                 }}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-white"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800 bg-white"
               >
                 <option value="adskflex">adskflex (Autodesk/AutoCAD)</option>
                 <option value="swutil">swutil / saltxd (SolidWorks)</option>
@@ -476,14 +476,14 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
 
             {/* Input 4: Vendor Lock Port */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="vendorPort" className="text-xs font-black text-slate-500 uppercase">Vendor Lock port</label>
+              <label htmlFor="vendorPort" className="text-base font-black text-slate-500 uppercase">Vendor Lock port</label>
               <input
                 id="vendorPort"
                 type="text"
                 value={vendorPort}
                 onChange={(e) => setVendorPort(e.target.value)}
                 placeholder="For example: 2080"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800"
               />
             </div>
           </div>
@@ -498,7 +498,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
               <div className="flex flex-col gap-6 flex-1">
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 1: Select your failure scenario</h3>
-                  <p className="text-sm text-slate-500 mt-1">Recommend corresponding troubleshooting entry points based on specific fault symptoms.. </p>
+                  <p className="text-lg text-slate-500 mt-1">Recommend corresponding troubleshooting entry points based on specific fault symptoms.. </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-auto">
@@ -516,13 +516,13 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                     <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-4 group-hover:scale-110 transition-transform">
                       <Cpu className="w-5 h-5" />
                     </div>
-                    <h4 className="text-slate-800 font-bold text-base">Client connection error (terminal computer)</h4>
-                    <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                    <h4 className="text-slate-800 font-bold text-xl">Client connection error (terminal computer)</h4>
+                    <p className="text-base text-slate-500 mt-2 leading-relaxed">
                       Client CAD stuck on startup&quot;Checking license&quot; interface, Final popup: <br />
                       <span className="font-mono text-red-500 font-black">Error -15: Cannot connect to license server</span><br />
                       Or it is detected that the authorization has expired and hung up. 
                     </p>
-                    <div className="mt-4 flex items-center gap-1 text-xs font-black text-blue-600">
+                    <div className="mt-4 flex items-center gap-1 text-base font-black text-blue-600">
                       Start diagnosis
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -542,11 +542,11 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                     <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-600 mb-4 group-hover:scale-110 transition-transform">
                       <Server className="w-5 h-5" />
                     </div>
-                    <h4 className="text-slate-800 font-bold text-base">Server port changes (IT administrator)</h4>
-                    <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                    <h4 className="text-slate-800 font-bold text-xl">Server port changes (IT administrator)</h4>
+                    <p className="text-base text-slate-500 mt-2 leading-relaxed">
                       The server-side lmgrd service can start and run normally.. But the client always reports errors occasionally and needs to restart the service repeatedly., And because the Vendor plug-in port changes randomly, the firewall rules frequently fail.. 
                     </p>
-                    <div className="mt-4 flex items-center gap-1 text-xs font-black text-violet-600">
+                    <div className="mt-4 flex items-center gap-1 text-base font-black text-violet-600">
                       Lock server port
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -560,12 +560,12 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
               <div className="flex flex-col gap-6 flex-1">
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 2: Detection DNS Domain Name Resolution and Connectivity</h3>
-                  <p className="text-sm text-slate-500 mt-1">
+                  <p className="text-lg text-slate-500 mt-1">
                     Make sure that the client computer can recognize and translate the license server address (hostname or IP) . 
                   </p>
                 </div>
 
-                <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
+                <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> Windows CMD / PowerShell Diagnostic commands</span>
                     <button
@@ -586,14 +586,14 @@ ${psNslookupCommand}`}
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <span className="text-xs font-black text-slate-500 uppercase">Select local test results: </span>
+                  <span className="text-base font-black text-slate-500 uppercase">Select local test results: </span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <button
                       onClick={() => {
                         setPingStatus('success');
                         setCurrentStep(2); // Next step
                       }}
-                      className={`px-4 py-3 rounded-xl border text-sm font-bold transition-all ${
+                      className={`px-4 py-3 rounded-xl border text-lg font-bold transition-all ${
                         pingStatus === 'success'
                           ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-800'
                           : 'border-slate-100 bg-slate-50/20 text-slate-700 hover:bg-slate-100/50'
@@ -603,7 +603,7 @@ ${psNslookupCommand}`}
                     </button>
                     <button
                       onClick={() => setPingStatus('unknown_host')}
-                      className={`px-4 py-3 rounded-xl border text-sm font-bold transition-all ${
+                      className={`px-4 py-3 rounded-xl border text-lg font-bold transition-all ${
                         pingStatus === 'unknown_host'
                           ? 'border-red-500/40 bg-red-500/10 text-red-800'
                           : 'border-slate-100 bg-slate-50/20 text-slate-700 hover:bg-slate-100/50'
@@ -613,7 +613,7 @@ ${psNslookupCommand}`}
                     </button>
                     <button
                       onClick={() => setPingStatus('timeout')}
-                      className={`px-4 py-3 rounded-xl border text-sm font-bold transition-all ${
+                      className={`px-4 py-3 rounded-xl border text-lg font-bold transition-all ${
                         pingStatus === 'timeout'
                           ? 'border-orange-500/40 bg-orange-500/10 text-orange-800'
                           : 'border-slate-100 bg-slate-50/20 text-slate-700 hover:bg-slate-100/50'
@@ -628,14 +628,14 @@ ${psNslookupCommand}`}
                 {pingStatus === 'unknown_host' && (
                   <div className="bg-red-50 rounded-2xl border border-red-100 p-5 flex gap-3 text-red-800">
                     <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    <div className="text-xs leading-relaxed">
+                    <div className="text-base leading-relaxed">
                       <p className="font-bold mb-1">Domain name resolution failed (DNS failure) </p>
                       <p>The client cannot translate hostname <span className="font-mono bg-red-100/80 px-1 rounded font-black">{serverAddress}</span> to IP Address. This is a network basic error. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
                         <li>Please check that the server name is spelled correctly. </li>
                         <li><b>Temporary fix</b>: If you know the server IP, You can directly write the IP when configuring environment variables on the client, for example <span className="font-mono bg-red-100/80 px-1 rounded font-black">27000@192.168.1.100</span>. </li>
                         <li><b>Permanent fix</b>: On the client side <span className="font-mono bg-red-100/80 px-1 rounded">C:\Windows\System32\drivers\etc\hosts</span> Append a line to the file: <br />
-                          <span className="font-mono bg-slate-900 text-slate-200 px-2 py-0.5 rounded text-[10px] mt-1 inline-block select-all">192.168.1.100  {serverAddress}</span>
+                          <span className="font-mono bg-slate-900 text-slate-200 px-2 py-0.5 rounded text-sm mt-1 inline-block select-all">192.168.1.100  {serverAddress}</span>
                         </li>
                       </ul>
                     </div>
@@ -645,7 +645,7 @@ ${psNslookupCommand}`}
                 {pingStatus === 'timeout' && (
                   <div className="bg-orange-50 rounded-2xl border border-orange-100 p-5 flex gap-3 text-orange-800">
                     <AlertTriangle className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <div className="text-xs leading-relaxed">
+                    <div className="text-base leading-relaxed">
                       <p className="font-bold mb-1">Physical link times out or Ping disabled</p>
                       <p>It means there is a problem with the physical connection between the client and the server, or the other party has enabled ICMP Ban Ping Policy. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
@@ -660,14 +660,14 @@ ${psNslookupCommand}`}
                 <div className="mt-auto pt-4 flex justify-between border-t border-slate-100">
                   <button
                     onClick={() => setCurrentStep(0)}
-                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
+                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-lg font-bold cursor-pointer"
                   >
                     Previous step
                   </button>
                   <button
                     onClick={() => setCurrentStep(2)}
                     disabled={pingStatus === 'untested'}
-                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
                     Next step: Diagnostic port
                   </button>
@@ -680,13 +680,13 @@ ${psNslookupCommand}`}
               <div className="flex flex-col gap-6 flex-1">
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 3: Verify TCP Port opening and firewall status</h3>
-                  <p className="text-sm text-slate-500 mt-1">
+                  <p className="text-lg text-slate-500 mt-1">
                     FLEXlm Authorization service contains **lmgrd main service port** (Default 27000-27009) and **Vendor Vendor specific port** (default random, Here it is assumed to be {vendorPort}). If only the main service port is opened and intercepted Vendor port, will generate Error -15 Connection failure. 
                   </p>
                 </div>
 
                 {/* PowerShell Command Block */}
-                <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
+                <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> PowerShell One-click TCP connectivity handshake</span>
                     <button
@@ -709,11 +709,11 @@ ${psPortTestVendor}`}
                 {/* Port Selection Options */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
-                    <span className="text-xs font-black text-slate-500 uppercase">lmgrd Port test results (Port {lmgrdPort})</span>
+                    <span className="text-base font-black text-slate-500 uppercase">lmgrd Port test results (Port {lmgrdPort})</span>
                     <div className="flex gap-2">
                       <button
                         onClick={() => setPort27000Status('open')}
-                        className={`flex-1 py-2 px-3 text-xs font-bold rounded-lg border transition-all ${
+                        className={`flex-1 py-2 px-3 text-base font-bold rounded-lg border transition-all ${
                           port27000Status === 'open'
                             ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-800'
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
@@ -723,7 +723,7 @@ ${psPortTestVendor}`}
                       </button>
                       <button
                         onClick={() => setPort27000Status('closed')}
-                        className={`flex-1 py-2 px-3 text-xs font-bold rounded-lg border transition-all ${
+                        className={`flex-1 py-2 px-3 text-base font-bold rounded-lg border transition-all ${
                           port27000Status === 'closed'
                             ? 'border-red-500/40 bg-red-500/10 text-red-800'
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
@@ -735,11 +735,11 @@ ${psPortTestVendor}`}
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <span className="text-xs font-black text-slate-500 uppercase">Vendor Port test results (Port {vendorPort})</span>
+                    <span className="text-base font-black text-slate-500 uppercase">Vendor Port test results (Port {vendorPort})</span>
                     <div className="flex gap-2">
                       <button
                         onClick={() => setPortVendorStatus('open')}
-                        className={`flex-1 py-2 px-3 text-xs font-bold rounded-lg border transition-all ${
+                        className={`flex-1 py-2 px-3 text-base font-bold rounded-lg border transition-all ${
                           portVendorStatus === 'open'
                             ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-800'
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
@@ -749,7 +749,7 @@ ${psPortTestVendor}`}
                       </button>
                       <button
                         onClick={() => setPortVendorStatus('closed')}
-                        className={`flex-1 py-2 px-3 text-xs font-bold rounded-lg border transition-all ${
+                        className={`flex-1 py-2 px-3 text-base font-bold rounded-lg border transition-all ${
                           portVendorStatus === 'closed'
                             ? 'border-red-500/40 bg-red-500/10 text-red-800'
                             : 'border-slate-100 bg-slate-50/20 text-slate-600 hover:bg-slate-100/50'
@@ -765,7 +765,7 @@ ${psPortTestVendor}`}
                 {(port27000Status === 'closed' || portVendorStatus === 'closed') && (
                   <div className="bg-amber-50 rounded-2xl border border-amber-100 p-5 text-amber-900 flex gap-3">
                     <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                    <div className="text-xs leading-relaxed flex-1">
+                    <div className="text-base leading-relaxed flex-1">
                       <p className="font-bold mb-1">The port is found to be blocked! Please check the firewall and service status in the following order: </p>
                       
                       <ul className="list-decimal list-inside space-y-2 mt-2">
@@ -776,7 +776,7 @@ ${psPortTestVendor}`}
                         <li>
                           <b>Open ports on the server firewall (IT staff perform) </b>: <br />
                           If the service is started but still unavailable, it means that Windows Defender Firewall inbound rule interception. Please set the PowerShell China as<b>administrator</b>Execute the following command to quickly release: 
-                          <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[10px] mt-2 relative select-all flex justify-between items-start gap-4">
+                          <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-sm mt-2 relative select-all flex justify-between items-start gap-4">
                             <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{serverFirewallCmd}</pre>
                             <button
                               onClick={() => handleCopy(serverFirewallCmd, 'srvFw')}
@@ -798,14 +798,14 @@ ${psPortTestVendor}`}
                 <div className="mt-auto pt-4 flex justify-between border-t border-slate-100">
                   <button
                     onClick={() => setCurrentStep(1)}
-                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
+                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-lg font-bold cursor-pointer"
                   >
                     Previous step
                   </button>
                   <button
                     onClick={() => setCurrentStep(3)}
                     disabled={port27000Status === 'untested' && portVendorStatus === 'untested'}
-                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
                     Next step: Configure client variables
                   </button>
@@ -818,13 +818,13 @@ ${psPortTestVendor}`}
               <div className="flex flex-col gap-6 flex-1">
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 4: Check and repair client environment variables and registry</h3>
-                  <p className="text-sm text-slate-500 mt-1">
+                  <p className="text-lg text-slate-500 mt-1">
                     Even if the network is open, if the client is configured with incorrect or conflicting old server environment variables, Error -15 will also be reported. 
                   </p>
                 </div>
 
                 {/* Client diagnostic script */}
-                <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
+                <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-500 flex items-center gap-1"><Terminal className="w-3.5 h-3.5" /> Client-side one-click diagnostic environment script (PowerShell)</span>
                     <button
@@ -835,18 +835,18 @@ ${psPortTestVendor}`}
                       {copiedText === 'diagScript' ? 'Copied ' : 'Copy script'}
                     </button>
                   </div>
-                  <div className="max-h-[140px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-[10px]">
+                  <div className="max-h-[140px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-sm">
                     <pre className="whitespace-pre">{psClientDiagnosticScript}</pre>
                   </div>
-                  <p className="text-[10px] text-slate-400 italic">Usage: Copy the entire code, Search on the client computer and enter as &quot;administrator&quot;&quot;Open PowerShell, paste and press Enter to execute. You can see all misconfigured environment variables and cache entries at a glance. </p>
+                  <p className="text-sm text-slate-400 italic">Usage: Copy the entire code, Search on the client computer and enter as &quot;administrator&quot;&quot;Open PowerShell, paste and press Enter to execute. You can see all misconfigured environment variables and cache entries at a glance. </p>
                 </div>
 
                 {/* Write recommended environment variables */}
                 <div className="bg-blue-50 rounded-2xl border border-blue-100 p-5 text-blue-900">
-                  <h4 className="font-bold text-xs mb-2 flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> Repair configuration: write environment variables with one click</h4>
-                  <p className="text-xs leading-relaxed mb-3">If it is found that it is not configured or misconfigured, please use<b>As an administrator</b>run the following command to bind the current server to the system environment variable (No need to restart, effective immediately) : </p>
+                  <h4 className="font-bold text-base mb-2 flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> Repair configuration: write environment variables with one click</h4>
+                  <p className="text-base leading-relaxed mb-3">If it is found that it is not configured or misconfigured, please use<b>As an administrator</b>run the following command to bind the current server to the system environment variable (No need to restart, effective immediately) : </p>
                   
-                  <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[10px] select-all flex justify-between items-start gap-4">
+                  <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-sm select-all flex justify-between items-start gap-4">
                     <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{clientRepairCmd}</pre>
                     <button
                       onClick={() => handleCopy(clientRepairCmd, 'clRepair')}
@@ -855,7 +855,7 @@ ${psPortTestVendor}`}
                       {copiedText === 'clRepair' ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
                     </button>
                   </div>
-                  <ul className="list-disc list-inside text-[10px] text-blue-800/80 mt-3 space-y-1">
+                  <ul className="list-disc list-inside text-sm text-blue-800/80 mt-3 space-y-1">
                     <li>For Autodesk/AutoCAD series: The environment variable is named <span className="font-mono bg-blue-100 px-1 rounded">ADSKFLEX_LICENSE_FILE</span></li>
                     <li>For SolidWorks: The environment variable name is usually <span className="font-mono bg-blue-100 px-1 rounded">SW_D_LICENSE_FILE</span> Or specify <span className="font-mono bg-blue-100 px-1 rounded">25734@server directly in the settings</span></li>
                     <li>If you are using a non-standard main port, you need to bring the port prefix, For example: <span className="font-mono bg-blue-100 px-1 font-bold">@{serverAddress}</span> or <span className="font-mono bg-blue-100 px-1 font-bold">{lmgrdPort}@{serverAddress}</span>. </li>
@@ -865,13 +865,13 @@ ${psPortTestVendor}`}
                 <div className="mt-auto pt-4 flex justify-between border-t border-slate-100">
                   <button
                     onClick={() => setCurrentStep(2)}
-                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
+                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-lg font-bold cursor-pointer"
                   >
                     Previous step
                   </button>
                   <button
                     onClick={() => setCurrentStep(4)}
-                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold cursor-pointer"
+                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-lg font-bold cursor-pointer"
                   >
                     Next step: Configure the license server lock port
                   </button>
@@ -884,22 +884,22 @@ ${psPortTestVendor}`}
               <div className="flex flex-col gap-6 flex-1">
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 5: Lock FLEXlm License Vendor Daemon Port</h3>
-                  <p className="text-sm text-slate-500 mt-1">
+                  <p className="text-lg text-slate-500 mt-1">
                     This is the core method to cure Error -15. If you do not explicitly lock the port, every time the server restarts, Vendor The ports are all randomized (such as changing to 62890) , Because the administrator did not open the random port in the firewall, the connection will fail again.. 
                   </p>
                 </div>
 
                 <div className="bg-slate-50 rounded-2xl border border-slate-100 p-5 flex flex-col gap-4">
-                  <h4 className="text-slate-800 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5">
+                  <h4 className="text-slate-800 font-bold text-base uppercase tracking-wider flex items-center gap-1.5">
                     <Lock className="w-3.5 h-3.5 text-blue-600" />
                     LIC License header generator
                   </h4>
-                  <p className="text-xs text-slate-500 leading-relaxed">
+                  <p className="text-base text-slate-500 leading-relaxed">
                     Open the license file on your server (usually `.lic` or `.dat` format) , Locate the top few lines of the file (usually starting with SERVER and VENDOR or DAEMON at the beginning), modify and replace them with the configuration generated below: 
                   </p>
 
-                  <div className="bg-slate-900 text-slate-300 p-4 rounded-xl font-mono text-xs flex flex-col gap-3">
-                    <div className="flex justify-between items-center text-[10px] text-slate-500">
+                  <div className="bg-slate-900 text-slate-300 p-4 rounded-xl font-mono text-base flex flex-col gap-3">
+                    <div className="flex justify-between items-center text-sm text-slate-500">
                       <span>LIC File replacement header example (recommended port)</span>
                       <button
                         onClick={() => handleCopy(`SERVER ${serverAddress || 'license-server'} ANY ${lmgrdPort || '27000'}\nVENDOR ${vendorName} port=${vendorPort || '2080'}`, 'licHead')}
@@ -915,7 +915,7 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
                     </pre>
                   </div>
 
-                  <div className="text-xs leading-relaxed text-slate-600 border-l-2 border-blue-500 pl-3">
+                  <div className="text-base leading-relaxed text-slate-600 border-l-2 border-blue-500 pl-3">
                     <p className="font-bold text-slate-800 mb-1">Implementation steps: </p>
                     <ol className="list-decimal list-inside space-y-1 text-slate-600">
                       <li>Stop the server&apos;s FLEXlm / LMTOOLS licensing service. </li>
@@ -929,13 +929,13 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
                 <div className="mt-auto pt-4 flex justify-between border-t border-slate-100">
                   <button
                     onClick={() => setCurrentStep(3)}
-                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-sm font-bold cursor-pointer"
+                    className="px-4 py-2 text-slate-500 hover:text-slate-800 text-lg font-bold cursor-pointer"
                   >
                     Previous step
                   </button>
                   <button
                     onClick={handleReset}
-                    className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-bold flex items-center gap-1 cursor-pointer"
+                    className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-lg font-bold flex items-center gap-1 cursor-pointer"
                   >
                     <Check className="w-4 h-4" />
                     Complete diagnosis
@@ -956,21 +956,21 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
             <Code className="w-5 h-5 text-blue-500" />
             FLEXlm Online version -15 Depth error reporting principles and troubleshooting knowledge base
           </h2>
-          <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+          <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
             FLEXlm Error -15 In-depth Technical Principles & Solution Hub
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-slate-600">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-slate-600">
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">Why do both ports trigger -15 errors?? </h3>
+              <h3 className="font-bold text-slate-800 text-xl mb-1.5">Why do both ports trigger -15 errors?? </h3>
               <p>
                 Many network administrators deploy CAD floating servers, I habitually only open the service port of `lmgrd.exe` in the firewall. (Usually 27000). When the client initiates a connection, The main process will respond to the client with a randomly selected Vendor supplier process. (For example, the port of `adskflex.exe`). Because the port is blocked by the server firewall, the client eventually generates a handshake timeout., Returns `Error -15: Cannot connect to license server`. Therefore, Locking the Vendor port is the first step to ensure stability. 
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">Why hostname/DNS resolution is the first step in troubleshooting? </h3>
+              <h3 className="font-bold text-slate-800 text-xl mb-1.5">Why hostname/DNS resolution is the first step in troubleshooting? </h3>
               <p>
                 CAD The client starts up and queries environment variables such as `ADSKFLEX_LICENSE_FILE=@my-server`) When, first call the operating system&apos;s DNS Parse the module to obtain the intranet of `my-server` IP. If WINS/DNS services are not deployed on the network, Or the client cannot find the corresponding record in the host Hosts, The connection will be interrupted directly during the domain name resolution stage. If such a failure occurs, Using IP directly is often the fastest temporary alternative. 
               </p>
@@ -979,13 +979,13 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
 
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">Client environment variable priority principle</h3>
+              <h3 className="font-bold text-slate-800 text-xl mb-1.5">Client environment variable priority principle</h3>
               <p>
                 In Windows environment, FLEXlm Reading the licensing configuration follows a specific order: System environment variables (System Environment Variables) ➔ User Environment Variables ➔ Registry Cache Configuration. If an enterprise user changes the authorization server, but the client still has the registry configuration of the old server, CAD It will first try to connect to the old service and cause an error. Use PowerShell Diagnostic scripts can perfectly eliminate such configuration dead ends. 
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-base mb-1.5">Network delay and timeout mechanism (FLEXLM_TIMEOUT)</h3>
+              <h3 className="font-bold text-slate-800 text-xl mb-1.5">Network delay and timeout mechanism (FLEXLM_TIMEOUT)</h3>
               <p>
                 If the client is working remotely (remote dial-up VPN) Or the wireless network signal is unstable, FLEXlm’s default handshake response timeout (About 0.1 seconds) It may be too low. You can create a new file named <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">FLEXLM_TIMEOUT</span> system variable, the value is set to <span className="font-mono bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-black">1000000</span> (The unit is microseconds, that is 1.0 seconds), can effectively avoid network physical delays caused by -15 Connection failed. 
               </p>

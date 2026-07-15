@@ -54,9 +54,9 @@ export default function WireGaugeClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">AWG Size</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">AWG Size</label>
             <select value={awgIdx} onChange={e => setAwgIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {AWG_TABLE.map((r, i) => (
                 <option key={i} value={i}>AWG {r.awg}</option>
               ))}
@@ -64,18 +64,18 @@ export default function WireGaugeClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Conductor Material</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Conductor Material</label>
             <div className="grid grid-cols-2 gap-2">
               {(['copper', 'aluminum'] as const).map(m => (
                 <button key={m} onClick={() => setMaterial(m)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${material === m ? 'bg-orange-600 border-orange-600 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${material === m ? 'bg-orange-600 border-orange-600 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
                   {m === 'copper' ? 'Copper' : 'Aluminum'}
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="text-xs text-slate-400 font-medium bg-slate-50 rounded-xl p-3 border border-slate-100">
+          <div className="text-base text-slate-400 font-medium bg-slate-50 rounded-xl p-3 border border-slate-100">
             AWG formula: D = 0.127 × 92^((36-AWG)/39) mm. Each 3-gauge decrease doubles the cross-sectional area.
           </div>
         </div>
@@ -86,29 +86,29 @@ export default function WireGaugeClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-2">Diameter</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Diameter</div>
                 <div className="text-3xl font-black text-orange-700">{result.D.toFixed(3)}<span className="text-lg text-orange-400"> mm</span></div>
-                <div className="text-xs text-orange-600 font-medium mt-1">{(result.D / 25.4).toFixed(4)} in</div>
+                <div className="text-base text-orange-600 font-medium mt-1">{(result.D / 25.4).toFixed(4)} in</div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Cross-Section Area</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Cross-Section Area</div>
                 <div className="text-3xl font-black text-blue-700">{result.area.toFixed(3)}<span className="text-lg text-blue-400"> mm²</span></div>
-                <div className="text-xs text-blue-600 font-medium mt-1">{(result.area * 1973).toFixed(0)} cmil</div>
+                <div className="text-base text-blue-600 font-medium mt-1">{(result.area * 1973).toFixed(0)} cmil</div>
               </div>
               <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
-                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-2">Resistance</div>
+                <div className="text-base font-black text-purple-400 uppercase tracking-wider mb-2">Resistance</div>
                 <div className="text-3xl font-black text-purple-700">{result.resistance.toFixed(4)}<span className="text-lg text-purple-400"> Ω/km</span></div>
-                <div className="text-xs text-purple-600 font-medium mt-1">{(result.resistance / 3.281).toFixed(5)} Ω/ft</div>
+                <div className="text-base text-purple-600 font-medium mt-1">{(result.resistance / 3.281).toFixed(5)} Ω/ft</div>
               </div>
               <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
-                <div className="text-xs font-black text-red-400 uppercase tracking-wider mb-2">Ampacity (60°C)</div>
+                <div className="text-base font-black text-red-400 uppercase tracking-wider mb-2">Ampacity (60°C)</div>
                 <div className="text-3xl font-black text-red-700">{result.ampacity}<span className="text-lg text-red-400"> A</span></div>
-                <div className="text-xs text-red-600 font-medium mt-1">NEC Table 310.16 (approx.)</div>
+                <div className="text-base text-red-600 font-medium mt-1">NEC Table 310.16 (approx.)</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'AWG: American Wire Gauge. Smaller number = thicker wire. Each 3 AWG decrease doubles area. Each 6 AWG decrease doubles diameter. Ampacity values are approximate for 60°C rated insulation in free air — consult NEC for specific installations.'}
               </div>

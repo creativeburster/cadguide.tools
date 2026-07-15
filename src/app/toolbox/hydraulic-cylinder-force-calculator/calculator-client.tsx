@@ -52,11 +52,11 @@ export default function HydraulicCylinderClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Unit System</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Unit System</label>
             <div className="grid grid-cols-2 gap-2">
               {(['metric', 'imperial'] as const).map(u => (
                 <button key={u} onClick={() => setUnit(u)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${unit === u ? 'bg-orange-600 border-orange-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${unit === u ? 'bg-orange-600 border-orange-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
                   {u === 'metric' ? 'Metric (mm, bar)' : 'Imperial (in, psi)'}
                 </button>
               ))}
@@ -64,21 +64,21 @@ export default function HydraulicCylinderClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Bore Diameter ({unit === 'metric' ? 'mm' : 'in'})</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Bore Diameter ({unit === 'metric' ? 'mm' : 'in'})</label>
             <input type="number" value={bore} onChange={e => setBore(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Rod Diameter ({unit === 'metric' ? 'mm' : 'in'})</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Rod Diameter ({unit === 'metric' ? 'mm' : 'in'})</label>
             <input type="number" value={rodDia} onChange={e => setRodDia(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Pressure ({unit === 'metric' ? 'bar' : 'psi'})</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pressure ({unit === 'metric' ? 'bar' : 'psi'})</label>
             <input type="number" value={pressure} onChange={e => setPressure(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
           </div>
         </div>
 
@@ -93,34 +93,34 @@ export default function HydraulicCylinderClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Push Force (Extension)</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Push Force (Extension)</div>
                 <div className="text-3xl font-black text-blue-700">{fmtForce(result.pushForce)}</div>
-                <div className="text-xs text-blue-600 font-medium mt-1">F = P × π×D²/4</div>
+                <div className="text-base text-blue-600 font-medium mt-1">F = P × π×D²/4</div>
               </div>
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-2">Pull Force (Retraction)</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Pull Force (Retraction)</div>
                 <div className="text-3xl font-black text-orange-700">{fmtForce(result.pullForce)}</div>
-                <div className="text-xs text-orange-600 font-medium mt-1">F = P × π×(D²−d²)/4</div>
+                <div className="text-base text-orange-600 font-medium mt-1">F = P × π×(D²−d²)/4</div>
               </div>
             </div>
 
             <div className="mt-4 grid grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Full Area</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Full Area</div>
                 <div className="text-lg font-black text-slate-700">{(result.fullArea * 1e6).toFixed(2)} mm²</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Annulus Area</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Annulus Area</div>
                 <div className="text-lg font-black text-slate-700">{(result.annulusArea * 1e6).toFixed(2)} mm²</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Pull Reduction</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Pull Reduction</div>
                 <div className="text-lg font-black text-slate-700">{result.pullReduction}%</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 Push force uses full piston area. Pull force uses annulus area (piston minus rod). The rod reduces effective area during retraction, resulting in lower pull force at the same pressure.
               </div>

@@ -259,7 +259,7 @@ export default function FlexlmQueueClient() {
             <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
               <Users className="w-6 h-6 text-blue-600" /> License Pool Concurrency Grid
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
               Visual seat allocation showing active usage vs queue blocks
             </p>
           </div>
@@ -284,14 +284,14 @@ export default function FlexlmQueueClient() {
                 );
               })}
               {activeSeats > 100 && (
-                <div className="col-span-10 text-center text-xs font-bold text-slate-400 py-1">
+                <div className="col-span-10 text-center text-base font-bold text-slate-400 py-1">
                   + {activeSeats - 100} more seats in the licensing pool...
                 </div>
               )}
             </div>
             
             {/* Legend and Queue indication */}
-            <div className="flex flex-wrap gap-4 mt-6 justify-center text-[10px] font-bold uppercase tracking-wider text-slate-500">
+            <div className="flex flex-wrap gap-4 mt-6 justify-center text-sm font-bold uppercase tracking-wider text-slate-500">
               <div className="flex items-center gap-1.5">
                 <span className="w-3.5 h-3.5 rounded bg-emerald-500 border border-emerald-600 inline-block"></span>
                 <span>Available ({Math.max(0, activeSeats - Math.ceil(offeredLoad))} seats)</span>
@@ -325,10 +325,10 @@ export default function FlexlmQueueClient() {
                   <AlertTriangle className="w-6 h-6 text-rose-600 shrink-0" />
                 )}
                 <div>
-                  <div className="font-black text-sm uppercase tracking-wide">
+                  <div className="font-black text-lg uppercase tracking-wide">
                     {isSaving ? `Network License ROI: Save $${savings.toLocaleString()}/yr` : `Float Licensing Deficit (-$${Math.abs(savings).toLocaleString()}/yr)`}
                   </div>
-                  <p className="text-xs text-slate-500 font-semibold mt-0.5 leading-relaxed">
+                  <p className="text-base text-slate-500 font-semibold mt-0.5 leading-relaxed">
                     {isSaving 
                       ? `By pooling ${activeSeats} floating seats for ${teamSize} users, you reduce hardware/license counts by ${teamSize - activeSeats} units, saving ${stats.savingsPercent.toFixed(1)}% of your CAD software budget.`
                       : `The floating license premium (${software.premium}x cost) outweighs the seat savings count. Standalone Named User models would be cheaper for a team of this size. Consider reducing seats or shifting to standalone.`
@@ -346,7 +346,7 @@ export default function FlexlmQueueClient() {
             <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
               <Activity className="w-6 h-6 text-blue-600" /> Denial Rate Curve
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
               Erlang-C sensitivity analysis curve
             </p>
           </div>
@@ -428,7 +428,7 @@ export default function FlexlmQueueClient() {
 
           {/* Details table properties */}
           <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-[11px] font-semibold text-slate-500 space-y-1">
-            <div className="font-black text-slate-800 text-[10px] uppercase tracking-wider mb-1">
+            <div className="font-black text-slate-800 text-sm uppercase tracking-wider mb-1">
               Active Pool Sensitivity:
             </div>
             <div className="flex justify-between font-mono">
@@ -456,20 +456,20 @@ export default function FlexlmQueueClient() {
             <h2 className="text-xl font-black flex items-center gap-2">
               <Settings className="w-5 h-5 text-blue-400" /> Floating Concurrency Setup
             </h2>
-            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+            <p className="text-sm text-slate-400 font-bold uppercase tracking-wider mt-0.5">
               Input user metrics and licensing setups
             </p>
           </div>
 
           {/* Software Preset Selector */}
           <div className="space-y-2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wide">
+            <label className="text-base font-black text-slate-400 uppercase tracking-wide">
               1. Target CAD Software & Cost Profile
             </label>
             <select
               value={softwareIdx}
               onChange={(e) => setSoftwareIdx(parseInt(e.target.value))}
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs font-bold focus:outline-none focus:border-blue-500 text-white"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-base font-bold focus:outline-none focus:border-blue-500 text-white"
             >
               {SOFTWARE_PRESETS.map((preset, idx) => (
                 <option key={idx} value={idx}>
@@ -483,22 +483,22 @@ export default function FlexlmQueueClient() {
           {softwareIdx === 4 && (
             <div className="grid grid-cols-2 gap-4 border border-slate-800 rounded-2xl p-4 bg-slate-950/20">
               <div className="space-y-1.5">
-                <label className="text-[10px] text-slate-400 font-bold">Cost Per Named User ($)</label>
+                <label className="text-sm text-slate-400 font-bold">Cost Per Named User ($)</label>
                 <input
                   type="number"
                   value={customCost}
                   onChange={(e) => setCustomCost(parseFloat(e.target.value) || 0)}
-                  className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none"
+                  className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-base font-mono text-white focus:outline-none"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-[10px] text-slate-400 font-bold">Floating Premium Multiplier</label>
+                <label className="text-sm text-slate-400 font-bold">Floating Premium Multiplier</label>
                 <input
                   type="number"
                   step="0.1"
                   value={customPremium}
                   onChange={(e) => setCustomPremium(parseFloat(e.target.value) || 1)}
-                  className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none"
+                  className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-base font-mono text-white focus:outline-none"
                 />
               </div>
             </div>
@@ -509,9 +509,9 @@ export default function FlexlmQueueClient() {
             
             {/* Total Team Size */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>Total Engineers / Users (U)</span>
-                <span className="text-blue-400 font-mono text-sm">{teamSize} Users</span>
+                <span className="text-blue-400 font-mono text-lg">{teamSize} Users</span>
               </label>
               <input
                 type="range"
@@ -526,9 +526,9 @@ export default function FlexlmQueueClient() {
 
             {/* Average drafting hours */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>Avg Daily Drafting Hours (Hd)</span>
-                <span className="text-blue-400 font-mono text-sm">{draftingHours} Hours</span>
+                <span className="text-blue-400 font-mono text-lg">{draftingHours} Hours</span>
               </label>
               <input
                 type="range"
@@ -544,7 +544,7 @@ export default function FlexlmQueueClient() {
             {/* Business shift window */}
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                <label className="text-sm text-slate-400 font-bold flex justify-between">
                   <span>Shift Windows (Hw)</span>
                   <span className="font-mono text-blue-400">{businessHours} hrs</span>
                 </label>
@@ -554,11 +554,11 @@ export default function FlexlmQueueClient() {
                   max="24"
                   value={businessHours}
                   onChange={(e) => setBusinessHours(parseInt(e.target.value) || 8)}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                <label className="text-sm text-slate-400 font-bold flex justify-between">
                   <span>Peak Load Factor (Fp)</span>
                   <span className="font-mono text-blue-400">{peakFactor}x</span>
                 </label>
@@ -569,7 +569,7 @@ export default function FlexlmQueueClient() {
                   max="2.5"
                   value={peakFactor}
                   onChange={(e) => setPeakFactor(parseFloat(e.target.value) || 1.0)}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                 />
               </div>
             </div>
@@ -583,16 +583,16 @@ export default function FlexlmQueueClient() {
               <h2 className="text-xl font-black flex items-center gap-2">
                 <Sliders className="w-5 h-5 text-blue-400" /> Tolerances & Pool Controls
               </h2>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+              <p className="text-sm text-slate-400 font-bold uppercase tracking-wider mt-0.5">
                 Define license constraints and wait parameters
               </p>
             </div>
 
             {/* Target Denial probability */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>Target License Denial Probability</span>
-                <span className="text-blue-400 font-mono text-sm">{targetDenial}%</span>
+                <span className="text-blue-400 font-mono text-lg">{targetDenial}%</span>
               </label>
               <input
                 type="range"
@@ -612,9 +612,9 @@ export default function FlexlmQueueClient() {
 
             {/* Selected seats slider */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>License Pool Size (m)</span>
-                <span className="text-amber-400 font-mono text-sm">{activeSeats} Seats</span>
+                <span className="text-amber-400 font-mono text-lg">{activeSeats} Seats</span>
               </label>
               <input
                 type="range"
@@ -636,9 +636,9 @@ export default function FlexlmQueueClient() {
 
             {/* Avg Session duration */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>Average CAD Session Duration (Ts)</span>
-                <span className="text-blue-400 font-mono text-sm">{sessionDuration} Hours</span>
+                <span className="text-blue-400 font-mono text-lg">{sessionDuration} Hours</span>
               </label>
               <input
                 type="range"
@@ -653,24 +653,24 @@ export default function FlexlmQueueClient() {
           </div>
 
           {/* Results pricing block */}
-          <div className="bg-slate-800/50 rounded-2xl p-5 border border-slate-800 space-y-3.5 text-xs">
-            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">
+          <div className="bg-slate-800/50 rounded-2xl p-5 border border-slate-800 space-y-3.5 text-base">
+            <div className="text-sm text-slate-400 font-bold uppercase tracking-wider mb-2">
               Cost Summary Comparison
             </div>
             
             <div className="grid grid-cols-2 gap-3.5">
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Named-User Cost</div>
-                <div className="text-white font-black text-base font-mono">
+                <div className="text-white font-black text-xl font-mono">
                   ${stats.standaloneTotal.toLocaleString()}
-                  <span className="text-[10px] text-slate-400 ml-0.5">/yr</span>
+                  <span className="text-sm text-slate-400 ml-0.5">/yr</span>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">pooled license cost</div>
-                <div className="text-white font-black text-base font-mono">
+                <div className="text-white font-black text-xl font-mono">
                   ${stats.floatingTotal.toLocaleString()}
-                  <span className="text-[10px] text-slate-400 ml-0.5">/yr</span>
+                  <span className="text-sm text-slate-400 ml-0.5">/yr</span>
                 </div>
               </div>
             </div>
@@ -683,7 +683,7 @@ export default function FlexlmQueueClient() {
             }`}>
               <div className="font-extrabold text-[11px] flex justify-between items-center">
                 <span>NET IT BUDGET SAVINGS:</span>
-                <span className="text-white font-mono text-sm font-black">
+                <span className="text-white font-mono text-lg font-black">
                   {stats.budgetSavings > 0 ? '+' : ''}${stats.budgetSavings.toLocaleString()} / year
                 </span>
               </div>
@@ -693,7 +693,7 @@ export default function FlexlmQueueClient() {
           {/* Action buttons */}
           <button
             onClick={handleCopySummary}
-            className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-xs py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
+            className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-base py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
           >
             {copied ? (
               <><Check className="w-4 h-4 text-green-600" /> Summary Copied!</>
@@ -711,14 +711,14 @@ export default function FlexlmQueueClient() {
             <h3 className="text-lg font-black text-white flex items-center gap-2">
               <Terminal className="w-5 h-5 text-blue-400" /> Generated FLEXlm Options File Config (options.opt)
             </h3>
-            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+            <p className="text-sm text-slate-400 font-bold uppercase tracking-wider mt-0.5">
               Copy-pasteable server-side optimization variables
             </p>
           </div>
           
           <button
             onClick={handleCopyOptions}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-xs px-4 py-2.5 rounded-xl border border-slate-700 flex items-center gap-2 active:scale-95 transition-all"
+            className="bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-base px-4 py-2.5 rounded-xl border border-slate-700 flex items-center gap-2 active:scale-95 transition-all"
           >
             {optionsCopied ? (
               <><Check className="w-4 h-4 text-emerald-400" /> Config Copied!</>
@@ -739,10 +739,10 @@ export default function FlexlmQueueClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> Queuing Theory & FLEXlm Allocation Guide
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">1. How Erlang-C Models Floating Licenses</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 Floating CAD licensing is a classic M/M/m queuing system. There are m identical servers (licenses) available to a finite group of users. When an engineer launches AutoCAD or SolidWorks, they request a license from the server.
               </p>
@@ -761,14 +761,14 @@ export default function FlexlmQueueClient() {
 
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. Reducing License Camping via options.opt</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 The primary weakness of floating licenses is <strong>license camping</strong>: users leave AutoCAD open overnight or during lunch, unnecessarily holding a seat.
               </p>
               <p>
                 To mitigate this, licensing managers configure the <code>options.opt</code> file on the license server:
               </p>
-              <ul className="list-disc pl-4 space-y-1 text-[10px] font-mono leading-relaxed">
+              <ul className="list-disc pl-4 space-y-1 text-sm font-mono leading-relaxed">
                 <li><strong>TIMEOUTALL 900</strong>: Reclaims the license if the client machine is idle for more than 15 minutes (900 seconds). Standard practice.</li>
                 <li><strong>BORROW_LOWWATER</strong>: Restricts borrowing seats for offline laptops, ensuring a minimum pool remains active on the local server.</li>
                 <li><strong>EXCLUDE / INCLUDE</strong>: Prevents non-drafting personnel from accidentally holding seats, reserving them for core engineers.</li>

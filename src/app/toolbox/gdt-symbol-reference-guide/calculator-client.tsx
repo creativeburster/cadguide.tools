@@ -74,10 +74,10 @@ export default function GDTSymbolClient() {
     <div className="space-y-8">
       <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-white border border-slate-100 p-6 rounded-3xl shadow-sm print:hidden">
         <div className="relative w-full md:max-w-md">
-          <input type="text" placeholder="Search GD&T symbols..." value={search} onChange={e => setSearch(e.target.value)} className="w-full h-12 pl-12 pr-6 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+          <input type="text" placeholder="Search GD&T symbols..." value={search} onChange={e => setSearch(e.target.value)} className="w-full h-12 pl-12 pr-6 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           <Search className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
         </div>
-        <button onClick={() => window.print()} className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-xs font-black bg-blue-600 text-white hover:bg-blue-700 transition-all">
+        <button onClick={() => window.print()} className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-base font-black bg-blue-600 text-white hover:bg-blue-700 transition-all">
           <Printer className="w-4 h-4" />
           Print A4 Cheat Sheet
         </button>
@@ -85,7 +85,7 @@ export default function GDTSymbolClient() {
 
       <div className="flex flex-wrap gap-2 print:hidden">
         {CATEGORIES.map(cat => (
-          <button key={cat.id} onClick={() => setActiveCat(cat.id)} className={`px-4 py-2 rounded-xl text-xs font-black border transition-all ${activeCat === cat.id ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>{cat.name}</button>
+          <button key={cat.id} onClick={() => setActiveCat(cat.id)} className={`px-4 py-2 rounded-xl text-base font-black border transition-all ${activeCat === cat.id ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>{cat.name}</button>
         ))}
       </div>
 
@@ -98,25 +98,25 @@ export default function GDTSymbolClient() {
               </div>
               <span className="text-[9px] font-black text-slate-400 uppercase tracking-wider">{item.category}</span>
             </div>
-            <h3 className="text-sm font-black text-slate-900 group-hover:text-blue-600 transition-colors">{item.name}</h3>
+            <h3 className="text-lg font-black text-slate-900 group-hover:text-blue-600 transition-colors">{item.name}</h3>
             <div className="mt-2 space-y-1">
-              <p className="text-[10px] font-bold text-slate-400"><span className="text-slate-500">Zone:</span> {item.zone}</p>
-              <p className="text-[10px] font-bold text-slate-400"><span className="text-slate-500">Datum:</span> {item.datum}</p>
+              <p className="text-sm font-bold text-slate-400"><span className="text-slate-500">Zone:</span> {item.zone}</p>
+              <p className="text-sm font-bold text-slate-400"><span className="text-slate-500">Datum:</span> {item.datum}</p>
             </div>
-            <p className="text-xs text-slate-500 mt-2 font-medium leading-relaxed">{item.description}</p>
+            <p className="text-base text-slate-500 mt-2 font-medium leading-relaxed">{item.description}</p>
           </div>
         ))}
       </div>
 
       {/* Material Condition Modifiers */}
       <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-        <h3 className="text-sm font-black text-slate-900 mb-4">Material Condition Modifiers</h3>
+        <h3 className="text-lg font-black text-slate-900 mb-4">Material Condition Modifiers</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {MATERIAL_MODIFIERS.map((m, i) => (
             <div key={i} className="rounded-2xl bg-slate-50 border border-slate-100 p-4">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white text-lg font-black">{m.symbol}</div>
-                <p className="text-xs font-black text-slate-900">{m.name}</p>
+                <p className="text-base font-black text-slate-900">{m.name}</p>
               </div>
               <p className="text-[11px] text-slate-500 font-medium leading-relaxed">{m.description}</p>
             </div>

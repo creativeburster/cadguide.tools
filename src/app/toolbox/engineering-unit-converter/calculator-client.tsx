@@ -133,7 +133,7 @@ export default function UnitConverterClient() {
       <div className="flex flex-wrap gap-2">
         {CATEGORIES.map(c => (
           <button key={c.id} onClick={() => { setCategory(c.id); setFromUnit(0); setToUnit(Math.min(2, UNITS[c.id].length - 1)); }}
-            className={`px-4 py-2.5 rounded-xl text-xs font-black border transition-all ${category === c.id ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+            className={`px-4 py-2.5 rounded-xl text-base font-black border transition-all ${category === c.id ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
             {c.icon} {c.name}
           </button>
         ))}
@@ -149,12 +149,12 @@ export default function UnitConverterClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
             <div className="flex gap-3">
               <input type="number" value={inputValue} onChange={e => setInputValue(parseFloat(e.target.value) || 0)}
-                className="flex-1 h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                className="flex-1 h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               <select value={fromUnit} onChange={e => setFromUnit(parseInt(e.target.value))}
-                className="w-32 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+                className="w-32 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
                 {units.map((u, i) => <option key={i} value={i}>{u.name}</option>)}
               </select>
             </div>
@@ -167,12 +167,12 @@ export default function UnitConverterClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
             <div className="flex gap-3">
               <input type="number" value={result.toFixed(6)} readOnly
-                className="flex-1 h-12 px-4 rounded-2xl bg-blue-50 border border-blue-100 text-sm font-black text-blue-700" />
+                className="flex-1 h-12 px-4 rounded-2xl bg-blue-50 border border-blue-100 text-lg font-black text-blue-700" />
               <select value={toUnit} onChange={e => setToUnit(parseInt(e.target.value))}
-                className="w-32 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+                className="w-32 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
                 {units.map((u, i) => <option key={i} value={i}>{u.name}</option>)}
               </select>
             </div>
@@ -184,8 +184,8 @@ export default function UnitConverterClient() {
           <div className="space-y-2">
             {units.map((u, i) => (
               <div key={i} className="flex items-center justify-between rounded-xl px-4 py-2.5 bg-slate-50 border border-slate-100">
-                <span className="text-sm font-bold text-slate-600">{u.name}</span>
-                <span className="text-sm font-black text-slate-900">
+                <span className="text-lg font-bold text-slate-600">{u.name}</span>
+                <span className="text-lg font-black text-slate-900">
                   {category === 'temperature'
                     ? convertTemp(inputValue, units[fromUnit].name, u.name).toFixed(4)
                     : ((inputValue * units[fromUnit].factor) / u.factor).toFixed(4)}

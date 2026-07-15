@@ -132,7 +132,7 @@ export default function MissingRegappCleanerClient() {
               <Settings className="w-5 h-5 text-blue-500" />
               Clean up configuration items
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               Purge Optimization Options
             </p>
             
@@ -147,8 +147,8 @@ export default function MissingRegappCleanerClient() {
                   className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
                 />
                 <div>
-                  <span className="text-xs font-bold text-slate-800">Deep comprehensive cleaning (Purge All)</span>
-                  <p className="text-[10px] text-slate-400 leading-normal mt-0.5">In addition to Regapp, also eliminate other redundant unused layers in the drawing., Block and text styles. </p>
+                  <span className="text-base font-bold text-slate-800">Deep comprehensive cleaning (Purge All)</span>
+                  <p className="text-sm text-slate-400 leading-normal mt-0.5">In addition to Regapp, also eliminate other redundant unused layers in the drawing., Block and text styles. </p>
                 </div>
               </label>
 
@@ -163,8 +163,8 @@ export default function MissingRegappCleanerClient() {
                   className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
                 />
                 <div>
-                  <span className="text-xs font-bold text-slate-800">Automatic and silent cleaning of open images (S::STARTUP)</span>
-                  <p className="text-[10px] text-slate-400 leading-normal mt-0.5">Utilizing the AutoLISP loading mechanism, Automatically and silently executed after CAD starts or drawing is opened CleanDwg Macro. </p>
+                  <span className="text-base font-bold text-slate-800">Automatic and silent cleaning of open images (S::STARTUP)</span>
+                  <p className="text-sm text-slate-400 leading-normal mt-0.5">Utilizing the AutoLISP loading mechanism, Automatically and silently executed after CAD starts or drawing is opened CleanDwg Macro. </p>
                 </div>
               </label>
 
@@ -177,8 +177,8 @@ export default function MissingRegappCleanerClient() {
                   className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
                 />
                 <div>
-                  <span className="text-xs font-bold text-slate-800">Automatically save and exit after cleaning is completed</span>
-                  <p className="text-[10px] text-slate-400 leading-normal mt-0.5">Specifically used for batch SCR script calls. After completing the deep reconstruction of Regapp, directly QSAVE and close the window. </p>
+                  <span className="text-base font-bold text-slate-800">Automatically save and exit after cleaning is completed</span>
+                  <p className="text-sm text-slate-400 leading-normal mt-0.5">Specifically used for batch SCR script calls. After completing the deep reconstruction of Regapp, directly QSAVE and close the window. </p>
                 </div>
               </label>
 
@@ -190,8 +190,8 @@ export default function MissingRegappCleanerClient() {
                   className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
                 />
                 <div>
-                  <span className="text-xs font-bold text-slate-800">Command line output cleanup success report</span>
-                  <p className="text-[10px] text-slate-400 leading-normal mt-0.5">After execution, output in the CAD command line Cleaned Summary Report to confirm successful execution. </p>
+                  <span className="text-base font-bold text-slate-800">Command line output cleanup success report</span>
+                  <p className="text-sm text-slate-400 leading-normal mt-0.5">After execution, output in the CAD command line Cleaned Summary Report to confirm successful execution. </p>
                 </div>
               </label>
 
@@ -201,14 +201,14 @@ export default function MissingRegappCleanerClient() {
           <div className="flex flex-col gap-2">
             <button
               onClick={downloadLisp}
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-lg shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
             >
               <Download className="w-4 h-4" />
               Download cleanup.lsp
             </button>
             <button
               onClick={downloadBat}
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-all cursor-pointer w-full"
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base transition-all cursor-pointer w-full"
             >
               Download generate_scr.bat (batch)
             </button>
@@ -224,7 +224,7 @@ export default function MissingRegappCleanerClient() {
               <Cpu className="w-5 h-5 text-blue-400" />
               Registered Application (Regapp) Drawing Cleaning Simulation
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               Live Cleaning & Compression Simulator
             </p>
           </div>
@@ -232,9 +232,9 @@ export default function MissingRegappCleanerClient() {
           {/* Simulation graphics part */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-6">
             <div className="flex flex-col gap-4">
-              <div className="flex justify-between text-xs font-bold text-slate-400">
+              <div className="flex justify-between text-base font-bold text-slate-400">
                 <span>Set initial drawing size (MB)</span>
-                <span className="text-blue-400 font-mono text-sm">{bloatedSize} MB</span>
+                <span className="text-blue-400 font-mono text-lg">{bloatedSize} MB</span>
               </div>
               <input
                 type="range"
@@ -251,7 +251,7 @@ export default function MissingRegappCleanerClient() {
                 disabled={cleanProgress === 'cleaning'}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
-              <p className="text-[10px] text-slate-500 leading-relaxed">
+              <p className="text-sm text-slate-500 leading-relaxed">
                 Usually from external software such as Revit Synergy, Tianzheng, Southern CASS) exported DWG Drawings accumulate thousands of useless `Regapp` dictionary aliases, As a result, the file becomes huge inexplicably and the image freezes. 
               </p>
             </div>
@@ -264,7 +264,7 @@ export default function MissingRegappCleanerClient() {
                   <span className="text-3xl animate-bounce">🗑️</span>
                   <button
                     onClick={triggerCleanSimulation}
-                    className="px-4 py-2 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 font-black text-xs transition-all cursor-pointer"
+                    className="px-4 py-2 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 font-black text-base transition-all cursor-pointer"
                   >
                     Start simulating deep cleansing
                   </button>
@@ -281,7 +281,7 @@ export default function MissingRegappCleanerClient() {
                     <circle cx="50" cy="20" r="3" fill="#3b82f6" className="animate-[spin_2s_linear_infinite]" />
                     <circle cx="75" cy="20" r="1.5" fill="#10b981" />
                   </svg>
-                  <span className="text-[10px] text-slate-400 font-mono tracking-widest animate-pulse uppercase">
+                  <span className="text-sm text-slate-400 font-mono tracking-widest animate-pulse uppercase">
                     PURGING REGAPPS & RESCALING DICTIONARY...
                   </span>
                 </div>
@@ -291,7 +291,7 @@ export default function MissingRegappCleanerClient() {
                 <div className="text-center py-2 flex flex-col items-center gap-2">
                   <CheckCircle className="w-8 h-8 text-emerald-400" />
                   <div className="flex items-baseline gap-2 mt-1">
-                    <span className="text-xs line-through text-slate-500 font-mono">{bloatedSize}MB</span>
+                    <span className="text-base line-through text-slate-500 font-mono">{bloatedSize}MB</span>
                     <span className="text-lg font-black text-emerald-400 font-mono">{cleanedSizeResult}MB</span>
                   </div>
                   <span className="text-[9px] font-black text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
@@ -303,7 +303,7 @@ export default function MissingRegappCleanerClient() {
             </div>
           </div>
 
-          <div className="text-[10px] text-slate-400 leading-normal border-t border-slate-800 pt-3 flex gap-2">
+          <div className="text-sm text-slate-400 leading-normal border-t border-slate-800 pt-3 flex gap-2">
             <Info className="w-4 h-4 text-blue-400 flex-shrink-0" />
             <span>Tip: real DWG Run this in AutoCAD LISP After scripting, the volume shrinkage is 70%-95% between, depending on Regapp Bloat ratio. </span>
           </div>
@@ -315,17 +315,17 @@ export default function MissingRegappCleanerClient() {
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-6 border-b border-slate-100">
           <div>
-            <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
+            <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
               <FileCode className="w-5 h-5 text-blue-500" />
               Script code preview area
             </h3>
-            <p className="text-xs text-slate-400 font-bold mt-1">You can directly copy and paste the code into the CAD command line to execute</p>
+            <p className="text-base text-slate-400 font-bold mt-1">You can directly copy and paste the code into the CAD command line to execute</p>
           </div>
 
           <div className="flex gap-1 bg-slate-100 p-1 rounded-xl">
             <button
               onClick={() => setActiveTab('lisp')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg text-base font-bold transition-all cursor-pointer ${
                 activeTab === 'lisp' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -333,7 +333,7 @@ export default function MissingRegappCleanerClient() {
             </button>
             <button
               onClick={() => setActiveTab('bat')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg text-base font-bold transition-all cursor-pointer ${
                 activeTab === 'bat' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -341,7 +341,7 @@ export default function MissingRegappCleanerClient() {
             </button>
             <button
               onClick={() => setActiveTab('scr')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg text-base font-bold transition-all cursor-pointer ${
                 activeTab === 'scr' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -351,7 +351,7 @@ export default function MissingRegappCleanerClient() {
         </div>
 
         {/* Core preview display */}
-        <div className="bg-slate-900 text-slate-300 font-mono text-xs p-6 rounded-2xl overflow-x-auto max-h-[400px] border border-slate-950 relative select-all">
+        <div className="bg-slate-900 text-slate-300 font-mono text-base p-6 rounded-2xl overflow-x-auto max-h-[400px] border border-slate-950 relative select-all">
           <pre className="whitespace-pre">
             {activeTab === 'lisp' && lispCode}
             {activeTab === 'bat' && batCode}
@@ -363,18 +363,18 @@ export default function MissingRegappCleanerClient() {
       {/* Geek’s Guide to Productivity – Where Regapp Comes from and How to Clean It Up */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
         <div>
-          <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
+          <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
             <Layers className="w-5 h-5 text-blue-500" />
             CAD Registered application (Regapp) bloated in-depth science popularization and geek guide
           </h3>
-          <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">
+          <p className="text-base text-slate-400 mt-1 uppercase tracking-wide">
             CAD Regapp Registry Bloat & Professional Troubleshooting Guide
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs leading-relaxed text-slate-500">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-base leading-relaxed text-slate-500">
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               1. What is Regapp spam? 
             </h4>
@@ -383,7 +383,7 @@ export default function MissingRegappCleanerClient() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               2. Normal PURGE and silent command line PURGE
             </h4>
@@ -392,7 +392,7 @@ export default function MissingRegappCleanerClient() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               3. SCR Batch unattended cleanup workflow
             </h4>

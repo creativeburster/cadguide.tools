@@ -47,11 +47,11 @@ export default function ThreePhaseClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Solve For</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Solve For</label>
             <div className="grid grid-cols-2 gap-2">
               {(['kW', 'amps'] as const).map(m => (
                 <button key={m} onClick={() => setSolveMode(m)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${solveMode === m ? 'bg-purple-600 border-purple-600 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${solveMode === m ? 'bg-purple-600 border-purple-600 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
                   {m === 'kW' ? 'Power → Amps' : 'Amps → Power'}
                 </button>
               ))}
@@ -59,29 +59,29 @@ export default function ThreePhaseClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Line Voltage (V)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Line Voltage (V)</label>
             <input type="number" value={voltage} onChange={e => setVoltage(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">
               {solveMode === 'kW' ? 'Real Power (kW)' : 'Line Current (A)'}
             </label>
             <input type="number" value={power} onChange={e => setPower(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Power Factor</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Power Factor</label>
             <input type="number" step="0.01" value={powerFactor} onChange={e => setPowerFactor(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Motor Efficiency (%)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Motor Efficiency (%)</label>
             <input type="number" value={efficiency} onChange={e => setEfficiency(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -96,19 +96,19 @@ export default function ThreePhaseClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
-                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-2">Real Power</div>
+                <div className="text-base font-black text-purple-400 uppercase tracking-wider mb-2">Real Power</div>
                 <div className="text-3xl font-black text-purple-700">{result.kW.toFixed(2)}<span className="text-lg text-purple-400"> kW</span></div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Line Current</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Line Current</div>
                 <div className="text-3xl font-black text-blue-700">{result.amps.toFixed(2)}<span className="text-lg text-blue-400"> A</span></div>
               </div>
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-2">Apparent Power</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Apparent Power</div>
                 <div className="text-3xl font-black text-orange-700">{result.kVA.toFixed(2)}<span className="text-lg text-orange-400"> kVA</span></div>
               </div>
               <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
-                <div className="text-xs font-black text-red-400 uppercase tracking-wider mb-2">Reactive Power</div>
+                <div className="text-base font-black text-red-400 uppercase tracking-wider mb-2">Reactive Power</div>
                 <div className="text-3xl font-black text-red-700">{result.kVAR.toFixed(2)}<span className="text-lg text-red-400"> kVAR</span></div>
               </div>
             </div>
@@ -116,18 +116,18 @@ export default function ThreePhaseClient() {
             <div className="mt-4 bg-slate-50 rounded-xl p-4 border border-slate-100">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Motor Input Current</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Motor Input Current</div>
                   <div className="text-xl font-black text-slate-700">{result.motorCurrent.toFixed(2)} A</div>
                 </div>
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Power Factor Angle</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Power Factor Angle</div>
                   <div className="text-xl font-black text-slate-700">{(Math.acos(powerFactor) * 180 / Math.PI).toFixed(1)}°</div>
                 </div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'I = P×1000 / (√3 × V × PF). kVA = kW / PF. kVAR = kVA × sin(φ). Motor current = line current / efficiency. For 3-phase 400V at PF=0.85, 15kW draws ~25.5A.'}
               </div>

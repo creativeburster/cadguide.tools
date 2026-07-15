@@ -118,37 +118,37 @@ Generated via CADGuide.tools`;
             <Sliders className="w-5 h-5 text-blue-400" />
             <span>Input parameters (Parameters)</span>
           </h2>
-          <span className="text-[10px] text-slate-400 font-bold bg-slate-800 px-2.5 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-sm text-slate-400 font-bold bg-slate-800 px-2.5 py-1 rounded-full uppercase tracking-wider">
             MEP Configurator
           </span>
         </div>
 
         {/* Duct Type */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block print:hidden">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block print:hidden">
             1. Duct Shape
           </label>
           <div className="grid grid-cols-2 gap-3 print:hidden">
             <button
               onClick={() => setShape('round')}
-              className={`py-3 px-4 rounded-2xl text-xs font-black border transition-all duration-200 flex flex-col items-center gap-1.5 ${
+              className={`py-3 px-4 rounded-2xl text-base font-black border transition-all duration-200 flex flex-col items-center gap-1.5 ${
                 shape === 'round'
                   ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                   : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
               }`}
             >
-              <span className="text-sm">●</span>
+              <span className="text-lg">●</span>
               <span>Round duct (Round)</span>
             </button>
             <button
               onClick={() => setShape('rectangular')}
-              className={`py-3 px-4 rounded-2xl text-xs font-black border transition-all duration-200 flex flex-col items-center gap-1.5 ${
+              className={`py-3 px-4 rounded-2xl text-base font-black border transition-all duration-200 flex flex-col items-center gap-1.5 ${
                 shape === 'rectangular'
                   ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                   : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
               }`}
             >
-              <span className="text-sm">■</span>
+              <span className="text-lg">■</span>
               <span>Rectangular duct (Rectangular)</span>
             </button>
           </div>
@@ -159,7 +159,7 @@ Generated via CADGuide.tools`;
 
         {/* Airflow */}
         <div className="space-y-3">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">2. Design air volume (Airflow Q)</span>
             <span className="text-blue-400 font-mono">{flowRate} m³/h</span>
           </div>
@@ -178,7 +178,7 @@ Generated via CADGuide.tools`;
                 type="number"
                 value={flowRate}
                 onChange={(e) => setFlowRate(Math.max(1, Number(e.target.value)))}
-                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500"
+                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500"
               />
               <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-500">m³/h</span>
             </div>
@@ -187,7 +187,7 @@ Generated via CADGuide.tools`;
                 type="text"
                 disabled
                 value={(flowRate * 0.5886).toFixed(1)}
-                className="w-full bg-slate-850 border border-slate-800/40 rounded-xl px-3.5 py-2.5 text-xs font-mono text-slate-500 focus:outline-none"
+                className="w-full bg-slate-850 border border-slate-800/40 rounded-xl px-3.5 py-2.5 text-base font-mono text-slate-500 focus:outline-none"
               />
               <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-500">CFM</span>
             </div>
@@ -196,13 +196,13 @@ Generated via CADGuide.tools`;
 
         {/* Dimensions Inputs */}
         <div className="border-t border-slate-800/80 pt-5 space-y-4">
-          <div className="text-xs font-black text-slate-400 uppercase tracking-wider">
+          <div className="text-base font-black text-slate-400 uppercase tracking-wider">
             3. Duct Dimensions
           </div>
 
           {shape === 'round' ? (
             <div className="space-y-3">
-              <div className="flex justify-between items-center text-xs font-bold">
+              <div className="flex justify-between items-center text-base font-bold">
                 <span>Diameter D</span>
                 <span className="font-mono text-blue-400">{diameter} mm</span>
               </div>
@@ -219,13 +219,13 @@ Generated via CADGuide.tools`;
                 type="number"
                 value={diameter}
                 onChange={(e) => setDiameter(Math.max(10, Number(e.target.value)))}
-                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
+                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
               />
             </div>
 ) : (
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                <label className="text-sm text-slate-400 font-bold flex justify-between">
                   <span>Width a</span>
                   <span className="font-mono text-blue-400">{width} mm</span>
                 </label>
@@ -233,11 +233,11 @@ Generated via CADGuide.tools`;
                   type="number"
                   value={width}
                   onChange={(e) => setWidth(Math.max(10, Number(e.target.value)))}
-                  className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500"
+                  className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                <label className="text-sm text-slate-400 font-bold flex justify-between">
                   <span>Height b</span>
                   <span className="font-mono text-blue-400">{height} mm</span>
                 </label>
@@ -245,7 +245,7 @@ Generated via CADGuide.tools`;
                   type="number"
                   value={height}
                   onChange={(e) => setHeight(Math.max(10, Number(e.target.value)))}
-                  className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500"
+                  className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500"
                 />
               </div>
             </div>
@@ -254,13 +254,13 @@ Generated via CADGuide.tools`;
 
         {/* Roughness Presets */}
         <div className="border-t border-slate-800/80 pt-5 space-y-4">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             4. Material absolute roughness (Roughness)
           </label>
           <select
             value={roughnessIdx}
             onChange={(e) => setRoughnessIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none focus:ring-1 focus:ring-blue-500 print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none focus:ring-1 focus:ring-blue-500 print:hidden"
           >
             {ROUGHNESS_PRESETS.map((p, i) => (
               <option key={p.name} value={i}>
@@ -277,7 +277,7 @@ Generated via CADGuide.tools`;
                 step="0.001"
                 value={customRoughness}
                 onChange={(e) => setCustomRoughness(Math.max(0.0001, Number(e.target.value)))}
-                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500"
+                className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500"
               />
               <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-500">mm</span>
             </div>
@@ -299,7 +299,7 @@ Generated via CADGuide.tools`;
             </h3>
             <button
               onClick={copyToClipboard}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
+              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-base font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? (
                 <>
@@ -317,12 +317,12 @@ Generated via CADGuide.tools`;
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1">
+              <div className="text-sm text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1">
                 <span>Velocity</span>
                 <Wind className="w-3 h-3 text-slate-400" />
               </div>
               <div className="text-2xl font-black font-mono text-slate-800">
-                {physics.velocity.toFixed(2)} <span className="text-xs text-slate-500 font-sans">m/s</span>
+                {physics.velocity.toFixed(2)} <span className="text-base text-slate-500 font-sans">m/s</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Limit reference value: &lt; {velocityLimit} m/s
@@ -330,11 +330,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <div className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Unit friction resistance (Head Loss)
               </div>
               <div className={`text-2xl font-black font-mono ${physics.pressureDrop > 1.2 ? 'text-amber-600' : 'text-emerald-600'}`}>
-                {physics.pressureDrop.toFixed(3)} <span className="text-xs font-sans text-slate-500">Pa/m</span>
+                {physics.pressureDrop.toFixed(3)} <span className="text-base font-sans text-slate-500">Pa/m</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Recommended upper limit: 1.0 Pa/m
@@ -342,11 +342,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <div className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Equivalent hydraulic diameter (Hydraulic Diam.)
               </div>
               <div className="text-2xl font-black font-mono text-slate-850">
-                {Math.round(physics.hydraulicDiameter * 1000)} <span className="text-xs text-slate-500 font-sans">mm</span>
+                {Math.round(physics.hydraulicDiameter * 1000)} <span className="text-base text-slate-500 font-sans">mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Cross-sectional area: {physics.area.toFixed(4)} m²
@@ -356,7 +356,7 @@ Generated via CADGuide.tools`;
 
           {/* Warning state if speed limit is violated */}
           {physics.velocity > velocityLimit && (
-            <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
+            <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-base">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
                 <strong className="font-black">WARNING: Actual wind speed exceeds recommended limits! </strong>
@@ -369,7 +369,7 @@ Generated via CADGuide.tools`;
         {/* Visual feedback - Live SVG flow physics */}
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
+            <span className="text-sm font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
               Duct physical airflow section preview (Dynamic Flow Visualizer)
             </span>
             <span className="text-[9px] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded font-mono font-bold uppercase print:hidden">
@@ -456,7 +456,7 @@ Generated via CADGuide.tools`;
             </svg>
           </div>
 
-          <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-600">
+          <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-600">
             * The animation shows the flow velocity simulation of the air flow line in the center of the air duct. The flow line changes from blue to red, indicating that the pressure loss in the pipe is increasing. (Red is the high loss area). Use Haaland Equations and Colebrook Pipe Resistance Fluid Dynamics for accurate solution. 
           </p>
         </div>

@@ -115,11 +115,11 @@ export default function PipeExpansionClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Material</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Material</label>
             <select
               value={materialIdx}
               onChange={e => setMaterialIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
             >
               {MATERIALS.map((m, i) => (
                 <option key={m.name} value={i}>{m.name}</option>
@@ -130,44 +130,44 @@ export default function PipeExpansionClient() {
           {materialIdx === 5 && (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">α (×10⁻⁶ /°C)</label>
-                <input type="number" step="0.1" value={customAlpha} onChange={e => setCustomAlpha(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">α (×10⁻⁶ /°C)</label>
+                <input type="number" step="0.1" value={customAlpha} onChange={e => setCustomAlpha(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">E (GPa)</label>
-                <input type="number" step="1" value={customE} onChange={e => setCustomE(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">E (GPa)</label>
+                <input type="number" step="1" value={customE} onChange={e => setCustomE(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
             </>
           )}
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Length (m)</label>
-            <input type="number" step="0.5" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Length (m)</label>
+            <input type="number" step="0.5" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Temperature Change ΔT (°C)</label>
-            <input type="number" step="5" value={tempChange} onChange={e => setTempChange(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Temperature Change ΔT (°C)</label>
+            <input type="number" step="5" value={tempChange} onChange={e => setTempChange(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
             <div className="mt-2 flex flex-wrap gap-1.5">
               {[50, 100, 150, 200, 300].map(t => (
-                <button key={t} onClick={() => setTempChange(t)} className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 border border-slate-100 transition-all">ΔT {t}°C</button>
+                <button key={t} onClick={() => setTempChange(t)} className="px-2.5 py-1 rounded-lg text-sm font-bold bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 border border-slate-100 transition-all">ΔT {t}°C</button>
               ))}
             </div>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe OD (mm)</label>
-            <input type="number" step="1" value={pipeOD} onChange={e => setPipeOD(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe OD (mm)</label>
+            <input type="number" step="1" value={pipeOD} onChange={e => setPipeOD(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
             <div className="mt-2 flex flex-wrap gap-1.5">
               {[{l:'2"',v:60.3},{l:'4"',v:114.3},{l:'6"',v:168.3},{l:'8"',v:219.1}].map(s => (
-                <button key={s.v} onClick={() => setPipeOD(s.v)} className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 border border-slate-100 transition-all">NPS {s.l}</button>
+                <button key={s.v} onClick={() => setPipeOD(s.v)} className="px-2.5 py-1 rounded-lg text-sm font-bold bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 border border-slate-100 transition-all">NPS {s.l}</button>
               ))}
             </div>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Wall Thickness (mm)</label>
-            <input type="number" step="0.1" value={wallThk} onChange={e => setWallThk(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Wall Thickness (mm)</label>
+            <input type="number" step="0.1" value={wallThk} onChange={e => setWallThk(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
         </div>
 
@@ -176,7 +176,7 @@ export default function PipeExpansionClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Expansion Results</h2>
-              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
+              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
                 <Download className="w-4 h-4" />
                 Export CSV
               </button>
@@ -184,14 +184,14 @@ export default function PipeExpansionClient() {
 
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 p-6 text-white">
-                <p className="text-[10px] font-black uppercase tracking-wider opacity-80 mb-1">Thermal Expansion ΔL</p>
-                <p className="text-3xl font-black">{results.deltaL_mm}<span className="text-sm font-bold ml-2 opacity-80">mm</span></p>
-                <p className="text-[10px] mt-2 opacity-70">ΔL = α × L × ΔT</p>
+                <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">Thermal Expansion ΔL</p>
+                <p className="text-3xl font-black">{results.deltaL_mm}<span className="text-lg font-bold ml-2 opacity-80">mm</span></p>
+                <p className="text-sm mt-2 opacity-70">ΔL = α × L × ΔT</p>
               </div>
               <div className="rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-6 text-white">
-                <p className="text-[10px] font-black uppercase tracking-wider opacity-80 mb-1">Expansion per Meter</p>
-                <p className="text-3xl font-black">{results.deltaL_mm_per_m}<span className="text-sm font-bold ml-2 opacity-80">mm/m</span></p>
-                <p className="text-[10px] mt-2 opacity-70">α × ΔT × 1000</p>
+                <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">Expansion per Meter</p>
+                <p className="text-3xl font-black">{results.deltaL_mm_per_m}<span className="text-lg font-bold ml-2 opacity-80">mm/m</span></p>
+                <p className="text-sm mt-2 opacity-70">α × ΔT × 1000</p>
               </div>
             </div>
 
@@ -202,8 +202,8 @@ export default function PipeExpansionClient() {
                 { label: 'Pipe Wall Area', value: results.area_mm2, unit: 'mm²' },
               ].map(item => (
                 <div key={item.label} className="rounded-2xl bg-slate-50 border border-slate-100 p-4">
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
-                  <p className="text-lg font-black text-slate-900">{item.value}<span className="text-xs text-slate-400 font-bold ml-1">{item.unit}</span></p>
+                  <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
+                  <p className="text-lg font-black text-slate-900">{item.value}<span className="text-base text-slate-400 font-bold ml-1">{item.unit}</span></p>
                 </div>
               ))}
             </div>
@@ -211,14 +211,14 @@ export default function PipeExpansionClient() {
             {/* Safety Check */}
             <div className={`rounded-2xl p-5 border-2 ${results.isSafe ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200'}`}>
               <div className="flex items-center gap-3">
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${results.isSafe ? 'bg-emerald-500' : 'bg-red-500'} text-white text-sm font-black`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${results.isSafe ? 'bg-emerald-500' : 'bg-red-500'} text-white text-lg font-black`}>
                   {results.isSafe ? '✓' : '!'}
                 </div>
                 <div>
-                  <p className={`text-sm font-black ${results.isSafe ? 'text-emerald-700' : 'text-red-700'}`}>
+                  <p className={`text-lg font-black ${results.isSafe ? 'text-emerald-700' : 'text-red-700'}`}>
                     {results.isSafe ? 'Within Allowable Stress' : 'EXCEEDS Allowable Stress'}
                   </p>
-                  <p className="text-xs text-slate-500 font-medium mt-0.5">
+                  <p className="text-base text-slate-500 font-medium mt-0.5">
                     Stress ratio: {results.stressRatio}% of allowable ({results.allowableStress} MPa per ASME B31.3)
                   </p>
                 </div>
@@ -228,11 +228,11 @@ export default function PipeExpansionClient() {
 
           {/* Visual Pipe Expansion */}
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-4">Pipe Expansion Visualization</h3>
+            <h3 className="text-lg font-black text-slate-900 mb-4">Pipe Expansion Visualization</h3>
             <svg viewBox="0 0 500 120" className="w-full">
               {/* Cold pipe */}
               <rect x="50" y="40" width="400" height="30" rx="4" fill="#93c5fd" opacity="0.4" stroke="#3b82f6" strokeWidth="1.5" />
-              <text x="250" y="35" className="fill-blue-600 text-[10px] font-bold text-center">Cold (reference)</text>
+              <text x="250" y="35" className="fill-blue-600 text-sm font-bold text-center">Cold (reference)</text>
               {/* Hot pipe (expanded) */}
               {(() => {
                 const expansion = Math.min(parseFloat(results.deltaL_mm) * 2, 80);
@@ -240,7 +240,7 @@ export default function PipeExpansionClient() {
                   <>
                     <rect x="50" y="75" width={400 + expansion} height="30" rx="4" fill="#fca5a5" opacity="0.4" stroke="#ef4444" strokeWidth="1.5" />
                     <line x1={450} y1="70" x2={450 + expansion} y2="70" stroke="#ef4444" strokeWidth="2" markerEnd="url(#arrow)" />
-                    <text x={450 + expansion / 2} y="68" className="fill-red-500 text-[10px] font-bold">ΔL={results.deltaL_mm}mm</text>
+                    <text x={450 + expansion / 2} y="68" className="fill-red-500 text-sm font-bold">ΔL={results.deltaL_mm}mm</text>
                   </>
                 );
               })()}
@@ -255,7 +255,7 @@ export default function PipeExpansionClient() {
                 </marker>
               </defs>
             </svg>
-            <div className="mt-3 flex items-start gap-2 text-[10px] text-slate-400 font-medium">
+            <div className="mt-3 flex items-start gap-2 text-sm text-slate-400 font-medium">
               <Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />
               <span>Stress and force values assume the pipe is fully restrained (both ends fixed). If unrestrained, the pipe expands freely and stress is zero. Use expansion loops or joints if allowable stress is exceeded.</span>
             </div>

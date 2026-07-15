@@ -116,13 +116,13 @@ All`;
 
         {/* Paper Size */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             1. Standard drawing specifications (Paper Size)
           </label>
           <select
             value={paperIdx}
             onChange={(e) => setPaperIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {PAPER_SIZES.map((p, i) => (
               <option key={p.name} value={i}>
@@ -138,13 +138,13 @@ All`;
         {/* Orientation & Unit */}
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
               2. Orientation
             </label>
             <div className="flex gap-2 print:hidden">
               <button
                 onClick={() => setOrientation('landscape')}
-                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
                   orientation === 'landscape'
                     ? 'bg-blue-600 border-blue-600 text-white'
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
@@ -154,7 +154,7 @@ All`;
               </button>
               <button
                 onClick={() => setOrientation('portrait')}
-                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
                   orientation === 'portrait'
                     ? 'bg-blue-600 border-blue-600 text-white'
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
@@ -169,13 +169,13 @@ All`;
           </div>
 
           <div className="space-y-2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
               3. CAD Unit
             </label>
             <div className="flex gap-2 print:hidden">
               <button
                 onClick={() => setUnit('mm')}
-                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
                   unit === 'mm'
                     ? 'bg-blue-600 border-blue-600 text-white'
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
@@ -185,7 +185,7 @@ All`;
               </button>
               <button
                 onClick={() => setUnit('m')}
-                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
                   unit === 'm'
                     ? 'bg-blue-600 border-blue-600 text-white'
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
@@ -202,14 +202,14 @@ All`;
 
         {/* Output Scale */}
         <div className="space-y-3">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">4. Output Scale</span>
             <span className="text-blue-400 font-mono">{scale.label}</span>
           </div>
           <select
             value={scaleIdx}
             onChange={(e) => setScaleIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {SCALES.map((s, i) => (
               <option key={s.label} value={i}>
@@ -236,7 +236,7 @@ All`;
 
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-black uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-black uppercase tracking-wider">
                 LIMITS Coordinate
               </span>
               <div className="text-xl font-black font-mono text-slate-800">
@@ -248,7 +248,7 @@ All`;
             </div>
 
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-black uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-black uppercase tracking-wider">
                 Recommended grid step size (GRID / SNAP)
               </span>
               <div className="text-xl font-black font-mono text-blue-600">
@@ -263,12 +263,12 @@ All`;
           {/* CLI Script Output */}
           <div className="space-y-2 border-t border-slate-100 pt-5">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-black text-slate-500 uppercase tracking-wide">
+              <span className="text-base font-black text-slate-500 uppercase tracking-wide">
                 AutoCAD One-click configuration generation from the command line
               </span>
               <button
                 onClick={copyMacro}
-                className="px-2.5 py-1 rounded bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-[10px] font-black flex items-center gap-1 border border-slate-200/50 print:hidden"
+                className="px-2.5 py-1 rounded bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-sm font-black flex items-center gap-1 border border-slate-200/50 print:hidden"
               >
                 {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{copied ? 'Copied ' : 'Copy command'}</span>
@@ -283,7 +283,7 @@ All`;
         {/* Dynamic Model Space Visualizer */}
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+            <span className="text-sm font-black text-slate-400 uppercase tracking-widest">
               Model space sheet paper boundaries and Grid preview
             </span>
           </div>
@@ -335,7 +335,7 @@ All`;
             </svg>
           </div>
 
-          <div className="text-[10px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
+          <div className="text-sm text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
               <strong>LIMITS Core tip: </strong>The purpose of configuring drawing limits is to limit misdrawing beyond the drawing range., and enable AutoCAD&apos;s `GRID` (Grid) is only displayed in the drawing printing area. When aligning model space within a layout viewport, Make sure the `LIMITS` scale matches the viewport XP The reciprocal proportions are consistent and can be avoided&quot;Grid exceeds screen&quot; or&quot;&quot;The grid is too dense and does not display&quot; phenomenon. 

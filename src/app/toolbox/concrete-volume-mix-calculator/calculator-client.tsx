@@ -60,11 +60,11 @@ export default function ConcreteMixClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Shape</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Shape</label>
             <div className="grid grid-cols-3 gap-2">
               {(['slab', 'column', 'footing'] as const).map(s => (
                 <button key={s} onClick={() => setShape(s)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${shape === s ? 'bg-stone-700 border-stone-700 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${shape === s ? 'bg-stone-700 border-stone-700 text-white' : 'bg-white border-slate-100 text-slate-600'}`}>
                   {s.charAt(0).toUpperCase() + s.slice(1)}
                 </button>
               ))}
@@ -73,38 +73,38 @@ export default function ConcreteMixClient() {
 
           {shape === 'column' ? (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Diameter (m)</label>
-              <input type="number" step="0.01" value={diameter} onChange={e => setDiameter(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Diameter (m)</label>
+              <input type="number" step="0.01" value={diameter} onChange={e => setDiameter(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
             </div>
           ) : (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Length (m)</label>
-                <input type="number" step="0.1" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Length (m)</label>
+                <input type="number" step="0.1" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Width (m)</label>
-                <input type="number" step="0.1" value={width} onChange={e => setWidth(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Width (m)</label>
+                <input type="number" step="0.1" value={width} onChange={e => setWidth(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">{shape === 'column' ? 'Height' : 'Thickness/Depth'} (m)</label>
-            <input type="number" step="0.01" value={height} onChange={e => setHeight(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">{shape === 'column' ? 'Height' : 'Thickness/Depth'} (m)</label>
+            <input type="number" step="0.01" value={height} onChange={e => setHeight(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Mix Ratio</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Mix Ratio</label>
             <select value={mixIdx} onChange={e => setMixIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {MIX_RATIOS.map((m, i) => <option key={i} value={i}>{m.name}</option>)}
             </select>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Waste Factor (%)</label>
-            <input type="number" value={waste} onChange={e => setWaste(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Waste Factor (%)</label>
+            <input type="number" value={waste} onChange={e => setWaste(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -113,36 +113,36 @@ export default function ConcreteMixClient() {
             <h2 className="text-lg font-black text-slate-900 tracking-tight mb-6">Results</h2>
 
             <div className="bg-stone-100 rounded-2xl p-6 border border-stone-200 mb-4">
-              <div className="text-xs font-black text-stone-500 uppercase tracking-wider mb-2">Concrete Volume</div>
+              <div className="text-base font-black text-stone-500 uppercase tracking-wider mb-2">Concrete Volume</div>
               <div className="text-4xl font-black text-stone-800">{result.volumeWithWaste.toFixed(3)}<span className="text-xl text-stone-500"> m³</span></div>
-              <div className="text-xs text-stone-600 font-medium mt-1">{(result.volumeWithWaste * 35.31).toFixed(1)} ft³ · {(result.volumeWithWaste * 1.31).toFixed(2)} yd³</div>
+              <div className="text-base text-stone-600 font-medium mt-1">{(result.volumeWithWaste * 35.31).toFixed(1)} ft³ · {(result.volumeWithWaste * 1.31).toFixed(2)} yd³</div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Cement</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Cement</div>
                 <div className="text-xl font-black text-slate-700">{result.cementBags.toFixed(1)} bags</div>
-                <div className="text-xs text-slate-500 font-medium">{result.cementKg.toFixed(0)} kg (50kg bags)</div>
+                <div className="text-base text-slate-500 font-medium">{result.cementKg.toFixed(0)} kg (50kg bags)</div>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Sand</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Sand</div>
                 <div className="text-xl font-black text-slate-700">{result.sandVol.toFixed(3)} m³</div>
-                <div className="text-xs text-slate-500 font-medium">{result.sandKg.toFixed(0)} kg</div>
+                <div className="text-base text-slate-500 font-medium">{result.sandKg.toFixed(0)} kg</div>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Aggregate</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Aggregate</div>
                 <div className="text-xl font-black text-slate-700">{result.aggVol.toFixed(3)} m³</div>
-                <div className="text-xs text-slate-500 font-medium">{result.aggKg.toFixed(0)} kg</div>
+                <div className="text-base text-slate-500 font-medium">{result.aggKg.toFixed(0)} kg</div>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Water</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Water</div>
                 <div className="text-xl font-black text-slate-700">{result.waterL.toFixed(0)} L</div>
-                <div className="text-xs text-slate-500 font-medium">w/c ratio ≈ 0.5</div>
+                <div className="text-base text-slate-500 font-medium">w/c ratio ≈ 0.5</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'Dry volume = wet volume × 1.54 (voids). Cement = 50kg per bag, 0.0347 m³. Sand density ≈ 1600 kg/m³. Aggregate density ≈ 1450 kg/m³. Water/cement ratio ≈ 0.5 for medium workability.'}
               </div>

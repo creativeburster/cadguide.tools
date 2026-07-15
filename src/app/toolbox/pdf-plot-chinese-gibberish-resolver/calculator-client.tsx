@@ -98,11 +98,11 @@ export default function PdfFontGibberishClient() {
               <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></span>
               <h2 className="text-white font-black text-lg tracking-tight">PDF Picture rendering and font embedding link detection</h2>
             </div>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               PDF Plotting & Font Integration Pipeline
             </p>
           </div>
-          <div className="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-black">
+          <div className="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-base font-black">
             interactive diagnostic status
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function PdfFontGibberishClient() {
         {/* Left: Select your garbled characters */}
         <div className="lg:col-span-1 flex flex-col gap-4">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
-            <h3 className="text-slate-800 font-black text-base tracking-tight mb-4 flex items-center gap-2">
+            <h3 className="text-slate-800 font-black text-xl tracking-tight mb-4 flex items-center gap-2">
               <Activity className="w-4 h-4 text-blue-500" />
               Please select your garbled code phenomenon
             </h3>
@@ -212,8 +212,8 @@ export default function PdfFontGibberishClient() {
                         {sym.badge}
                       </span>
                     </div>
-                    <span className="text-sm text-slate-800 font-black mt-2">{sym.name}</span>
-                    <span className="text-xs text-slate-400 font-medium mt-1 leading-relaxed">{sym.desc}</span>
+                    <span className="text-lg text-slate-800 font-black mt-2">{sym.name}</span>
+                    <span className="text-base text-slate-400 font-medium mt-1 leading-relaxed">{sym.desc}</span>
                   </button>
 );
               })}
@@ -225,19 +225,19 @@ export default function PdfFontGibberishClient() {
             <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <Info className="w-4 h-4 text-slate-500" />
-                <h3 className="text-slate-800 font-black text-sm uppercase tracking-wider">Default large font configuration</h3>
+                <h3 className="text-slate-800 font-black text-lg uppercase tracking-wider">Default large font configuration</h3>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="fontAlt" className="text-xs font-black text-slate-500 uppercase">Replace large font name (SHX)</label>
+                <label htmlFor="fontAlt" className="text-base font-black text-slate-500 uppercase">Replace large font name (SHX)</label>
                 <input
                   id="fontAlt"
                   type="text"
                   value={fontAltVal}
                   onChange={(e) => setFontAltVal(e.target.value)}
                   placeholder="Default: gbcbig.shx"
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800"
                 />
-                <p className="text-[10px] text-slate-400 mt-1 leading-normal">
+                <p className="text-sm text-slate-400 mt-1 leading-normal">
                   AutoCAD When opening a drawing, if the corresponding large font cannot be found (Chinese font), will use `FONTALT` The font specified by the variable is automatically replaced. Commonly used recommendations `gbcbig.shx` (National standard large font) or `hztxt.shx`. 
                 </p>
               </div>
@@ -258,7 +258,7 @@ export default function PdfFontGibberishClient() {
               
               {/* Question Mark Fix */}
               {symptomId === 'question_mark' && (
-                <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-3">
+                <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (Why is it displayed as a question mark?) : </p>
                   <p>Chinese characters are represented by large fonts in CAD (Big Font) Form rendering. When loading external incoming drawings, If the special Chinese font used by the other party does not exist in your local `Fonts` folder (or the replacement is not registered globally), the CAD engine will render these missing characters as `?`. </p>
                   
@@ -273,7 +273,7 @@ export default function PdfFontGibberishClient() {
 
               {/* Scrambled Gibberish Fix */}
               {symptomId === 'scrambled_gibberish' && (
-                <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-3">
+                <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (why the characters become garbled characters)) : </p>
                   <p>In newer versions of AutoCAD, The system introduces the `PDFSHX` variable (The default value is 1). After turning on this variable, Print inside the exported PDF, Each SHX Chinese font will also be PDF Exported as comments so that they can be PDF Search in the software. However, due to encoding parsing conflicts, This will cause messy English characters and large garbled characters to appear in many PDF browsers.. </p>
                   
@@ -288,7 +288,7 @@ export default function PdfFontGibberishClient() {
 
               {/* Outline Geometry Fix */}
               {symptomId === 'outline_geometry' && (
-                <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-3">
+                <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (why it becomes hollow and extremely stuck) : </p>
                   <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, Or configure it to convert &quot;text&quot; into geometry (Geometries) &quot;, CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow.. </p>
                   
@@ -304,8 +304,8 @@ export default function PdfFontGibberishClient() {
             </div>
 
             {/* One-click AutoLISP script area */}
-            <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4 mt-6">
-              <div className="flex justify-between items-center text-[10px] text-slate-500">
+            <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4 mt-6">
+              <div className="flex justify-between items-center text-sm text-slate-500">
                 <span>AutoLISP One-click repair instructions (just paste from the command line)</span>
                 <button
                   onClick={() => handleCopy(lispFixCommand, 'lispFix')}
@@ -315,10 +315,10 @@ export default function PdfFontGibberishClient() {
                   {copiedText === 'lispFix' ? 'Copied ' : 'Copy fix code'}
                 </button>
               </div>
-              <pre className="overflow-x-auto text-emerald-400 select-all p-1 bg-slate-950/40 rounded-lg max-h-[120px] text-[10px]">
+              <pre className="overflow-x-auto text-emerald-400 select-all p-1 bg-slate-950/40 rounded-lg max-h-[120px] text-sm">
                 {lispFixCommand}
               </pre>
-              <p className="text-[10px] text-slate-400 italic">Usage: Click to copy, From the CAD command line just press Ctrl+V Paste all the content and press Enter. The repair macro will be loaded silently, And directly call the command on the command line to perform one-click batch repair. </p>
+              <p className="text-sm text-slate-400 italic">Usage: Click to copy, From the CAD command line just press Ctrl+V Paste all the content and press Enter. The repair macro will be loaded silently, And directly call the command on the command line to perform one-click batch repair. </p>
             </div>
 
           </div>

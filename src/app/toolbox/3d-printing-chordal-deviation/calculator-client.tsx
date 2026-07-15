@@ -151,7 +151,7 @@ export default function ChordalDeviationClient() {
             <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
               <Layers className="w-6 h-6 text-blue-600" /> Arc vs. Polygon Mesh Overlay
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
               Interactive chordal sagitta geometry visualization
             </p>
           </div>
@@ -279,8 +279,8 @@ export default function ChordalDeviationClient() {
           <div className={`${vc.bg} ${vc.border} border rounded-2xl p-5 flex items-center gap-4`}>
             <VerdictIcon className={`w-6 h-6 ${vc.color} shrink-0`} />
             <div>
-              <div className={`font-black text-sm ${vc.color}`}>{vc.label}</div>
-              <p className="text-xs text-slate-500 font-semibold mt-0.5 leading-relaxed">
+              <div className={`font-black text-lg ${vc.color}`}>{vc.label}</div>
+              <p className="text-base text-slate-500 font-semibold mt-0.5 leading-relaxed">
                 {calculations.verdict === 'excellent' && 'Your chordal deviation is well below the printer resolution threshold. Exported mesh geometry will be visually indistinguishable from original BREP curves.'}
                 {calculations.verdict === 'good' && 'The deviation is within your printer\'s achievable tolerance. Circular holes should print without noticeable polygon stepping.'}
                 {calculations.verdict === 'warning' && `Consider reducing angular step to ${calculations.optimalAngle.toFixed(1)}° (${calculations.minSegments} segments) to bring the deviation below your printer tolerance of ${printerTolerance} mm.`}
@@ -297,16 +297,16 @@ export default function ChordalDeviationClient() {
               <h2 className="text-xl font-black flex items-center gap-2">
                 <Settings className="w-5 h-5 text-blue-400" /> Export Parameters
               </h2>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+              <p className="text-sm text-slate-400 font-bold uppercase tracking-wider mt-0.5">
                 Configure STEP/IGES to STL export settings
               </p>
             </div>
 
             {/* Hole/Cylinder Radius Input */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>1. Feature Radius (mm)</span>
-                <span className="text-blue-400 font-mono text-sm">{radius} mm</span>
+                <span className="text-blue-400 font-mono text-lg">{radius} mm</span>
               </label>
               <input
                 type="range"
@@ -325,7 +325,7 @@ export default function ChordalDeviationClient() {
                   step="0.1"
                   value={radius}
                   onChange={(e) => setRadius(parseFloat(e.target.value) || 0.1)}
-                  className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-xs font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
+                  className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-base font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
                 />
                 <div className="flex gap-1">
                   {[2, 5, 10, 25, 50].map((v) => (
@@ -347,9 +347,9 @@ export default function ChordalDeviationClient() {
 
             {/* Angular Step Input */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>2. Angular Step (°)</span>
-                <span className="text-blue-400 font-mono text-sm">{angularStep}°</span>
+                <span className="text-blue-400 font-mono text-lg">{angularStep}°</span>
               </label>
               <input
                 type="range"
@@ -369,7 +369,7 @@ export default function ChordalDeviationClient() {
 
             {/* Printer Preset Selector */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide">
                 3. 3D Printer Technology
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -377,7 +377,7 @@ export default function ChordalDeviationClient() {
                   <button
                     key={i}
                     onClick={() => handlePresetChange(i)}
-                    className={`py-2.5 px-2 rounded-xl text-[10px] font-black border transition-all ${
+                    className={`py-2.5 px-2 rounded-xl text-sm font-black border transition-all ${
                       selectedPreset === i
                         ? 'bg-blue-600 text-white border-blue-600'
                         : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -391,9 +391,9 @@ export default function ChordalDeviationClient() {
 
             {/* Custom tolerance if Custom preset */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>4. Printer Tolerance Limit</span>
-                <span className="text-blue-400 font-mono text-sm">{printerTolerance} mm</span>
+                <span className="text-blue-400 font-mono text-lg">{printerTolerance} mm</span>
               </label>
               <input
                 type="range"
@@ -408,8 +408,8 @@ export default function ChordalDeviationClient() {
           </div>
 
           {/* Calculated Results Summary Card */}
-          <div className="bg-slate-800/50 rounded-2xl p-5 border border-slate-800 space-y-3 text-xs">
-            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-3">
+          <div className="bg-slate-800/50 rounded-2xl p-5 border border-slate-800 space-y-3 text-base">
+            <div className="text-sm text-slate-400 font-bold uppercase tracking-wider mb-3">
               Computed Mesh Metrics
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -419,21 +419,21 @@ export default function ChordalDeviationClient() {
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-700/50">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Sagitta (S)</div>
-                <div className="text-amber-400 font-black text-lg font-mono">{calculations.sagitta.toFixed(4)}<span className="text-[10px] text-slate-400 ml-1">mm</span></div>
+                <div className="text-amber-400 font-black text-lg font-mono">{calculations.sagitta.toFixed(4)}<span className="text-sm text-slate-400 ml-1">mm</span></div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-700/50">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Chord Length</div>
-                <div className="text-white font-black text-sm font-mono">{calculations.chordLength.toFixed(4)}<span className="text-[10px] text-slate-400 ml-1">mm</span></div>
+                <div className="text-white font-black text-lg font-mono">{calculations.chordLength.toFixed(4)}<span className="text-sm text-slate-400 ml-1">mm</span></div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-700/50">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Arc Error</div>
-                <div className="text-white font-black text-sm font-mono">{calculations.arcError.toFixed(3)}<span className="text-[10px] text-slate-400 ml-1">%</span></div>
+                <div className="text-white font-black text-lg font-mono">{calculations.arcError.toFixed(3)}<span className="text-sm text-slate-400 ml-1">%</span></div>
               </div>
             </div>
 
             {/* Recommendation */}
             <div className="bg-blue-950/30 rounded-xl p-3.5 border border-blue-900/30 mt-2">
-              <div className="text-blue-400 font-black text-[10px] uppercase tracking-wider mb-1 flex items-center gap-1">
+              <div className="text-blue-400 font-black text-sm uppercase tracking-wider mb-1 flex items-center gap-1">
                 <Printer className="w-3.5 h-3.5" /> Recommended Export Settings
               </div>
               <div className="text-blue-200 text-[11px] font-semibold leading-relaxed">
@@ -445,7 +445,7 @@ export default function ChordalDeviationClient() {
           {/* Copy Summary button */}
           <button
             onClick={handleCopySummary}
-            className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-xs py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
+            className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-base py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
           >
             {copied ? (
               <><Check className="w-4 h-4 text-green-600" /> Report Copied!</>
@@ -462,17 +462,17 @@ export default function ChordalDeviationClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> Understanding Chordal Deviation in CAD-to-Print Workflows
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">1. What is chordal deviation?</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>Definition</strong>: Chordal deviation (also called sagitta or chord height) is the maximum perpendicular distance between a chord segment and the arc it approximates. When CAD software exports BREP (boundary representation) geometry to STL mesh format, every curve is approximated by a series of straight line segments.
               </p>
               <p>
                 <strong>The Sagitta Formula</strong>: For a circle of radius R divided into N polygon segments, each segment subtends an angle {"θ = 360° / N"}. The sagitta is computed as:
               </p>
-              <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono text-center text-sm text-slate-800 font-black">
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono text-center text-lg text-slate-800 font-black">
                 {"S = R × (1 − cos(θ/2))"}
               </div>
               <p>
@@ -483,11 +483,11 @@ export default function ChordalDeviationClient() {
 
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. CAD software STL export settings guide</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 Most CAD platforms expose the chordal deviation parameter under different UI labels during STL export:
               </p>
-              <ul className="list-disc pl-4 space-y-1.5 bg-slate-50 border border-slate-100 p-4 rounded-xl text-[10px] font-mono leading-relaxed">
+              <ul className="list-disc pl-4 space-y-1.5 bg-slate-50 border border-slate-100 p-4 rounded-xl text-sm font-mono leading-relaxed">
                 <li><strong className="text-slate-800">SolidWorks</strong>: File → Save As → STL → Options → Deviation (Fine/Custom tolerance).</li>
                 <li><strong className="text-slate-800">Fusion 360</strong>: Export → Mesh → Refinement (Low/Medium/High/Custom).</li>
                 <li><strong className="text-slate-800">Inventor</strong>: File → Save Copy As → STL → Surface Deviation.</li>
@@ -504,7 +504,7 @@ export default function ChordalDeviationClient() {
       </div>
 
       {/* Tip banner */}
-      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4.5 flex gap-3 text-xs text-blue-700 leading-relaxed font-semibold">
+      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4.5 flex gap-3 text-base text-blue-700 leading-relaxed font-semibold">
         <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
         <div>
           <span className="font-extrabold uppercase text-blue-800">Watertight Mesh Tip:</span> After exporting STL, always run a mesh integrity check. Non-manifold edges, flipped normals, or gaps between polygon faces will cause slicing failures. Most slicers (Cura, PrusaSlicer) include built-in repair tools, or use open-source Meshmixer for advanced healing.

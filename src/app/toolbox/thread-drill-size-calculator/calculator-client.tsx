@@ -341,7 +341,7 @@ export default function ThreadDrillCalculatorClient() {
     <div className="space-y-12">
       {/* Material quick recommendations bar */}
       <div className="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm space-y-4">
-        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+        <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
           <Layers className="w-4 h-4 text-blue-600" /> Material Specific Thread Height Targets
         </h3>
         <div className="flex flex-wrap gap-2.5">
@@ -353,14 +353,14 @@ export default function ThreadDrillCalculatorClient() {
             <button
               key={item.mat}
               onClick={() => handleApplyMaterial(item.mat)}
-              className={`px-4 py-3 rounded-xl text-xs font-bold border transition-all text-left max-w-sm ${
+              className={`px-4 py-3 rounded-xl text-base font-bold border transition-all text-left max-w-sm ${
                 material === item.mat
                   ? 'bg-blue-50 border-blue-200 text-blue-700 font-extrabold shadow-sm'
                   : 'bg-slate-50 border-slate-100 text-slate-700 hover:bg-slate-100'
               }`}
             >
               <div className="font-extrabold">{item.label}</div>
-              <div className="text-[10px] text-slate-400 font-semibold mt-0.5">{item.desc}</div>
+              <div className="text-sm text-slate-400 font-semibold mt-0.5">{item.desc}</div>
             </button>
           ))}
         </div>
@@ -371,7 +371,7 @@ export default function ThreadDrillCalculatorClient() {
         <div className="lg:col-span-5 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
           <div className="space-y-2">
             <h2 className="text-xl font-black text-slate-900">Thread Parameters</h2>
-            <p className="text-xs text-slate-400 font-semibold">
+            <p className="text-base text-slate-400 font-semibold">
               Select standard thread size and fine-tune target engagement parameters.
             </p>
           </div>
@@ -379,11 +379,11 @@ export default function ThreadDrillCalculatorClient() {
           <div className="space-y-6">
             {/* Thread standard type selection */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block">Thread Standard</label>
+              <label className="text-base font-black text-slate-500 uppercase tracking-wider block">Thread Standard</label>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => handleTypeChange('metric-coarse')}
-                  className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                  className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                     threadType === 'metric-coarse'
                       ? 'bg-blue-600 border-blue-600 text-white'
                       : 'bg-slate-50 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -393,7 +393,7 @@ export default function ThreadDrillCalculatorClient() {
                 </button>
                 <button
                   onClick={() => handleTypeChange('metric-fine')}
-                  className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                  className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                     threadType === 'metric-fine'
                       ? 'bg-blue-600 border-blue-600 text-white'
                       : 'bg-slate-50 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -403,7 +403,7 @@ export default function ThreadDrillCalculatorClient() {
                 </button>
                 <button
                   onClick={() => handleTypeChange('unc')}
-                  className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                  className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                     threadType === 'unc'
                       ? 'bg-blue-600 border-blue-600 text-white'
                       : 'bg-slate-50 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -413,7 +413,7 @@ export default function ThreadDrillCalculatorClient() {
                 </button>
                 <button
                   onClick={() => handleTypeChange('unf')}
-                  className={`py-2 px-3 rounded-xl text-xs font-black border transition-all ${
+                  className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
                     threadType === 'unf'
                       ? 'bg-blue-600 border-blue-600 text-white'
                       : 'bg-slate-50 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -426,11 +426,11 @@ export default function ThreadDrillCalculatorClient() {
 
             {/* Specific Thread dropdown selector */}
             <div className="space-y-1">
-              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block">Thread Size</label>
+              <label className="text-base font-black text-slate-500 uppercase tracking-wider block">Thread Size</label>
               <select
                 value={selectedThreadId}
                 onChange={(e) => setSelectedThreadId(e.target.value)}
-                className="w-full h-12 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-sm"
+                className="w-full h-12 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-lg"
               >
                 {(THREAD_DATA[threadType] || []).map((t) => (
                   <option key={t.id} value={t.id}>{t.label}</option>
@@ -440,7 +440,7 @@ export default function ThreadDrillCalculatorClient() {
 
             {/* Engagement Slider */}
             <div className="space-y-3 pt-4 border-t border-slate-50">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+              <div className="flex items-center justify-between text-base font-bold text-slate-700">
                 <span className="uppercase tracking-wider">Target Thread Engagement</span>
                 <div className="flex items-center gap-1">
                   <input
@@ -479,7 +479,7 @@ export default function ThreadDrillCalculatorClient() {
             {/* Visualizer graphic card */}
             <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
               <div className="w-full flex items-center justify-between border-b border-slate-50 pb-4 mb-4">
-                <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+                <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
                   <Layers className="w-4 h-4 text-blue-600" /> Tap Drill Cross-Section Visualizer
                 </h3>
               </div>
@@ -571,10 +571,10 @@ export default function ThreadDrillCalculatorClient() {
             {/* Calculations results detail cards */}
             <div className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl space-y-6">
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                <h3 className="text-sm font-black uppercase tracking-widest text-slate-400">Calculated Drill selection</h3>
+                <h3 className="text-lg font-black uppercase tracking-widest text-slate-400">Calculated Drill selection</h3>
                 <button
                   onClick={downloadReport}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-base font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition-all"
                 >
                   <FileText className="w-3.5 h-3.5" /> CSV Report
                 </button>
@@ -582,20 +582,20 @@ export default function ThreadDrillCalculatorClient() {
 
               {/* Large Output Card: Recommended standard drill bit */}
               <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-800 text-center space-y-2">
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <div className="text-base font-bold text-slate-400 uppercase tracking-widest">
                   Recommended Physical Drill Bit
                 </div>
                 <div className="text-4xl md:text-5xl font-black tracking-tight text-blue-400">
                   {results.closestDrill.name}
                 </div>
-                <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
+                <p className="text-sm text-slate-400 font-semibold leading-relaxed">
                   Calculated pilot bore: {results.calculatedDrillMm.toFixed(3)} mm (Yields {results.actualEngagement.toFixed(1)}% thread height).
                 </p>
               </div>
 
               {/* Technical Specifications list */}
-              <div className="bg-slate-800/40 p-5 rounded-2xl border border-slate-800/40 space-y-4 text-xs font-semibold leading-relaxed">
-                <h4 className="text-xs font-black text-slate-400 uppercase tracking-wider border-b border-slate-800/50 pb-2">Technical specs</h4>
+              <div className="bg-slate-800/40 p-5 rounded-2xl border border-slate-800/40 space-y-4 text-base font-semibold leading-relaxed">
+                <h4 className="text-base font-black text-slate-400 uppercase tracking-wider border-b border-slate-800/50 pb-2">Technical specs</h4>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <div className="flex justify-between border-b border-slate-800/50 pb-1.5">
@@ -638,10 +638,10 @@ export default function ThreadDrillCalculatorClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> Tap Drill Engineering Guide
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">1. Bending & Machining Torque Balance</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>The 75% Thread Myth</strong>: While many standard charts print sizes targeting 75% engagement, this is a legacy standard from when hand-threading was common. In CNC milling and modern assembly, 60% to 65% is preferred for steel and hard alloys.
               </p>
@@ -659,7 +659,7 @@ export default function ThreadDrillCalculatorClient() {
 
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Machinists Formulas</h4>
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
+            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-base font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
                 <span className="text-slate-400">{'// Metric Thread Formula'}</span>
                 <div>Drill = D - (Engagement / 76.98) * P</div>

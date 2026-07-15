@@ -30,7 +30,7 @@ export default function DrawingLagCleanerPage() {
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
               CAD Optimization Suite
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
@@ -52,11 +52,11 @@ export default function DrawingLagCleanerPage() {
           <div className="border-t border-slate-200/80 pt-12">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
               <div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-emerald-600 block mb-1">Expert Reading</span>
+                <span className="text-sm font-black uppercase tracking-widest text-emerald-600 block mb-1">Expert Reading</span>
                 <h2 className="text-2xl font-black text-slate-900 tracking-tight">Performance Tuning & Troubleshooting</h2>
-                <p className="text-xs text-slate-500 font-medium mt-1">Further reading on CAD hardware acceleration, silent installs, and LISP APIs.</p>
+                <p className="text-base text-slate-500 font-medium mt-1">Further reading on CAD hardware acceleration, silent installs, and LISP APIs.</p>
               </div>
-              <Link href="/guides" className="text-xs font-black text-emerald-600 hover:underline">
+              <Link href="/guides" className="text-base font-black text-emerald-600 hover:underline">
                 Explore Guides Library (6,160+) →
               </Link>
             </div>
@@ -68,8 +68,8 @@ export default function DrawingLagCleanerPage() {
               >
                 <div className="absolute top-0 right-0 w-20 h-20 bg-emerald-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
                 <span className="text-[9px] font-mono font-black text-emerald-600 uppercase tracking-wider block mb-1">Graphics Optimization</span>
-                <h3 className="text-sm font-bold text-slate-900 leading-snug group-hover:text-emerald-600 transition-colors">GPU Hardware Acceleration Settings →</h3>
-                <p className="text-xs text-slate-500 mt-2 font-medium">Configure graphics cards, thread allocations, and cache sizes to eliminate cross-hair stuttering.</p>
+                <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-emerald-600 transition-colors">GPU Hardware Acceleration Settings →</h3>
+                <p className="text-base text-slate-500 mt-2 font-medium">Configure graphics cards, thread allocations, and cache sizes to eliminate cross-hair stuttering.</p>
               </Link>
 
               <Link 
@@ -78,8 +78,8 @@ export default function DrawingLagCleanerPage() {
               >
                 <div className="absolute top-0 right-0 w-20 h-20 bg-emerald-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
                 <span className="text-[9px] font-mono font-black text-emerald-600 uppercase tracking-wider block mb-1">Automation APIs</span>
-                <h3 className="text-sm font-bold text-slate-900 leading-snug group-hover:text-emerald-600 transition-colors">LISP & PGP Shortcut Migration Matrix →</h3>
-                <p className="text-xs text-slate-500 mt-2 font-medium">Troubleshoot custom command overrides, recover pgp aliases, and deploy cross-CAD scripts.</p>
+                <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-emerald-600 transition-colors">LISP & PGP Shortcut Migration Matrix →</h3>
+                <p className="text-base text-slate-500 mt-2 font-medium">Troubleshoot custom command overrides, recover pgp aliases, and deploy cross-CAD scripts.</p>
               </Link>
             </div>
           </div>

@@ -95,11 +95,11 @@ export default function FatalErrorWizardClient() {
               <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
               <h2 className="text-white font-black text-lg tracking-tight">CAD Diagnostic analysis of fatal crash popup</h2>
             </div>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               Fatal Error Box Memory Address Decompiler
             </p>
           </div>
-          <div className="px-3 py-1 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20 text-xs font-black">
+          <div className="px-3 py-1 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20 text-base font-black">
             Faulty decompilation engine
           </div>
         </div>
@@ -152,28 +152,28 @@ export default function FatalErrorWizardClient() {
         {/* Left: Search or select an address */}
         <div className="lg:col-span-1 flex flex-col gap-4">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-4">
-            <h3 className="text-slate-800 font-black text-base tracking-tight flex items-center gap-2">
+            <h3 className="text-slate-800 font-black text-xl tracking-tight flex items-center gap-2">
               <Search className="w-4 h-4 text-blue-500" />
               Address reverse check and positioning
             </h3>
             
             {/* Custom Search bar */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="customSearch" className="text-xs font-black text-slate-500 uppercase">Search for a specific error code</label>
+              <label htmlFor="customSearch" className="text-base font-black text-slate-500 uppercase">Search for a specific error code</label>
               <input
                 id="customSearch"
                 type="text"
                 value={customCode}
                 onChange={(e) => setCustomCode(e.target.value)}
                 placeholder="For example, enter: c0000005"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800"
               />
             </div>
 
             <div className="border-t border-slate-100 my-2"></div>
 
             {/* Standard List Selection */}
-            <span className="text-xs font-black text-slate-400 uppercase tracking-wider">Core crash address default</span>
+            <span className="text-base font-black text-slate-400 uppercase tracking-wider">Core crash address default</span>
             <div className="flex flex-col gap-2">
               {ERROR_DATABASE.map((err, idx) => {
                 const isActive = idx === selectedIdx && !customCode;
@@ -191,8 +191,8 @@ export default function FatalErrorWizardClient() {
                     }`}
                   >
                     <div className="flex flex-col gap-0.5">
-                      <span className="text-xs font-black font-mono">{err.address}</span>
-                      <span className="text-[10px] text-slate-400 font-medium truncate max-w-[180px]">{err.title}</span>
+                      <span className="text-base font-black font-mono">{err.address}</span>
+                      <span className="text-sm text-slate-400 font-medium truncate max-w-[180px]">{err.title}</span>
                     </div>
                     {isActive && <ArrowRight className="w-4 h-4 text-red-600 animate-pulse" />}
                   </button>
@@ -217,7 +217,7 @@ export default function FatalErrorWizardClient() {
                 </h3>
               </div>
 
-              <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100/80 text-xs text-slate-600 leading-relaxed">
+              <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100/80 text-base text-slate-600 leading-relaxed">
                 <p className="font-black text-slate-800 mb-1 flex items-center gap-1">
                   <ShieldAlert className="w-4 h-4 text-red-500" />
                   Decryption of abnormal causes: 
@@ -225,7 +225,7 @@ export default function FatalErrorWizardClient() {
                 <p>{activeError.reason}</p>
               </div>
 
-              <div className="text-xs text-slate-600 leading-relaxed flex flex-col gap-2">
+              <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-2">
                 <p className="font-black text-slate-800 flex items-center gap-1">
                   <Settings2 className="w-4 h-4 text-blue-500" />
                   Tailored Solution: 
@@ -236,8 +236,8 @@ export default function FatalErrorWizardClient() {
 
             {/* CMD/PowerShell Fix code box */}
             {activeError.command && (
-              <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4 mt-6">
-                <div className="flex justify-between items-center text-[10px] text-slate-500">
+              <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4 mt-6">
+                <div className="flex justify-between items-center text-sm text-slate-500">
                   <span>{activeError.commandDesc}</span>
                   <button
                     onClick={() => handleCopy(activeError.command!, 'errCmd')}
@@ -247,7 +247,7 @@ export default function FatalErrorWizardClient() {
                     {copiedText === 'errCmd' ? 'Copied ' : 'Copy command'}
                   </button>
                 </div>
-                <pre className="overflow-x-auto text-emerald-400 select-all p-1 bg-slate-950/40 rounded-lg max-h-[100px] text-[10px]">
+                <pre className="overflow-x-auto text-emerald-400 select-all p-1 bg-slate-950/40 rounded-lg max-h-[100px] text-sm">
                   {activeError.command}
                 </pre>
               </div>

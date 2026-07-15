@@ -123,7 +123,7 @@ export default function CadScaleListResetClient() {
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h2 className="text-slate-900 font-black text-lg tracking-tight">Rebuild scale selection</h2>
-                <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">
+                <p className="text-base text-slate-400 font-bold uppercase tracking-wider">
                   Scale List Checklist
                 </p>
               </div>
@@ -132,19 +132,19 @@ export default function CadScaleListResetClient() {
             <div className="flex gap-2 mb-4">
               <button
                 onClick={() => toggleMetric(true)}
-                className="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 text-[10px] font-bold cursor-pointer"
+                className="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
               >
                 Select Metric All
               </button>
               <button
                 onClick={() => toggleMetric(false)}
-                className="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 text-[10px] font-bold cursor-pointer"
+                className="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
               >
                 Abolish the metric system
               </button>
             </div>
 
-            <p className="text-[10px] text-slate-400 leading-relaxed mb-4">
+            <p className="text-sm text-slate-400 leading-relaxed mb-4">
               Check the boxes you want to keep in CAD after reset and add them automatically**Core Standard Scale**. Unchecked scales will be completely deleted, Keep the viewport list clean. 
             </p>
 
@@ -176,7 +176,7 @@ export default function CadScaleListResetClient() {
 
           <button
             onClick={handleDownload}
-            className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
+            className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-lg shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
           >
             <Download className="w-4 h-4" />
             Download reset_scalelist.lsp
@@ -190,14 +190,14 @@ export default function CadScaleListResetClient() {
           <div className="flex justify-between items-center pb-3 border-b border-slate-800">
             <div>
               <h2 className="text-white font-black text-lg tracking-tight">Viewport ratio list slimming demo</h2>
-              <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">
+              <p className="text-base text-slate-400 font-bold uppercase tracking-wider">
                 Viewport Scale List Cleaner Simulator
               </p>
             </div>
             {cleanStatus !== 'cleaning' && (
               <button
                 onClick={handleResetSimulation}
-                className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-xs transition-all cursor-pointer flex items-center gap-1.5"
+                className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-base transition-all cursor-pointer flex items-center gap-1.5"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
                 Reset cleaning simulation
@@ -209,7 +209,7 @@ export default function CadScaleListResetClient() {
           <div className="grid grid-cols-2 gap-4 py-4">
             {/* Bloated list */}
             <div className="bg-slate-900/80 rounded-2xl p-4 border border-slate-850 flex flex-col gap-2 min-h-[160px] max-h-[200px] overflow-y-auto">
-              <span className="text-[10px] font-black text-rose-400 uppercase tracking-widest flex items-center gap-1">
+              <span className="text-sm font-black text-rose-400 uppercase tracking-widest flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping"></span>
                 Bloated scale list (Xref contamination)
               </span>
@@ -225,7 +225,7 @@ export default function CadScaleListResetClient() {
                   <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:1000_xref_nested</div>
                 </div>
 ) : (
-                <div className="flex flex-col items-center justify-center h-full text-slate-500 text-xs py-8">
+                <div className="flex flex-col items-center justify-center h-full text-slate-500 text-base py-8">
                   All cleared! 
                 </div>
 )}
@@ -233,19 +233,19 @@ export default function CadScaleListResetClient() {
 
             {/* After reset and purification */}
             <div className="bg-slate-900/80 rounded-2xl p-4 border border-slate-850 flex flex-col gap-2 min-h-[160px] max-h-[200px] overflow-y-auto">
-              <span className="text-[10px] font-black text-emerald-400 uppercase tracking-widest flex items-center gap-1">
+              <span className="text-sm font-black text-emerald-400 uppercase tracking-widest flex items-center gap-1">
                 {cleanStatus === 'done' && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>}
                 Reset after purification (refresh core ratio)
               </span>
 
               {cleanStatus === 'cleaning' && (
-                <div className="flex flex-col items-center justify-center h-full text-slate-400 text-[10px] py-8 animate-pulse font-mono uppercase tracking-widest">
+                <div className="flex flex-col items-center justify-center h-full text-slate-400 text-sm py-8 animate-pulse font-mono uppercase tracking-widest">
                   Wiping dict...
                 </div>
 )}
 
               {cleanStatus === 'idle' && (
-                <div className="flex flex-col items-center justify-center h-full text-slate-500 text-xs py-8">
+                <div className="flex flex-col items-center justify-center h-full text-slate-500 text-base py-8">
                   Waiting for reset to start...
                 </div>
 )}
@@ -267,7 +267,7 @@ export default function CadScaleListResetClient() {
             </div>
           </div>
 
-          <div className="text-[10px] text-slate-400 leading-normal border-t border-slate-800 pt-3 flex gap-2">
+          <div className="text-sm text-slate-400 leading-normal border-t border-slate-800 pt-3 flex gap-2">
             <Info className="w-4 h-4 text-blue-400 flex-shrink-0" />
             <span>
               Scale lists split exponentially when drawings are contaminated with external references. Reset and rebuild resolves CAD copy-paste stuck issue. 
@@ -281,16 +281,16 @@ export default function CadScaleListResetClient() {
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-6 border-b border-slate-100">
           <div>
-            <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
+            <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
               <FileCode className="w-5 h-5 text-blue-500" />
               LISP Code preview
             </h3>
-            <p className="text-xs text-slate-400 font-bold mt-1">Copy and load this section directly in CAD LISP Start slimming down and refactoring the code</p>
+            <p className="text-base text-slate-400 font-bold mt-1">Copy and load this section directly in CAD LISP Start slimming down and refactoring the code</p>
           </div>
         </div>
 
         {/* Core preview */}
-        <div className="bg-slate-900 text-slate-300 font-mono text-xs p-6 rounded-2xl overflow-x-auto max-h-[400px] border border-slate-950 relative select-all">
+        <div className="bg-slate-900 text-slate-300 font-mono text-base p-6 rounded-2xl overflow-x-auto max-h-[400px] border border-slate-950 relative select-all">
           <pre className="whitespace-pre">{lispCode}</pre>
         </div>
       </div>
@@ -298,18 +298,18 @@ export default function CadScaleListResetClient() {
       {/* Geek’s Guide to Productivity */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
         <div>
-          <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
+          <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-blue-500 animate-pulse" />
             Advanced Guide to Expanding and Resetting Scale Lists
           </h3>
-          <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">
+          <p className="text-base text-slate-400 mt-1 uppercase tracking-wide">
             CAD Viewport Scale List Bloat Diagnostic & Reset Guide
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs leading-relaxed text-slate-500">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-base leading-relaxed text-slate-500">
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               1. Why does copying and pasting cause lag? 
             </h4>
@@ -318,7 +318,7 @@ export default function CadScaleListResetClient() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               2. Dictionary cleaning command with -SCALELISTEDIT
             </h4>
@@ -327,7 +327,7 @@ export default function CadScaleListResetClient() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5 flex items-center gap-1">
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               3. Automatic scale cleaning of multiple images in batches
             </h4>

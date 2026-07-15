@@ -59,37 +59,37 @@ export default function BoltCircleClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Pitch Circle Diameter PCD (mm)</label>
-            <input type="number" step="1" value={pcd} onChange={e => setPcd(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pitch Circle Diameter PCD (mm)</label>
+            <input type="number" step="1" value={pcd} onChange={e => setPcd(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Number of Bolts</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Number of Bolts</label>
             <div className="grid grid-cols-4 gap-2">
               {[3, 4, 6, 8, 10, 12, 16, 24].map(n => (
-                <button key={n} onClick={() => setBoltCount(n)} className={`h-10 rounded-xl text-xs font-black border transition-all ${boltCount === n ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>{n}</button>
+                <button key={n} onClick={() => setBoltCount(n)} className={`h-10 rounded-xl text-base font-black border transition-all ${boltCount === n ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>{n}</button>
               ))}
             </div>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Start Angle (°)</label>
-            <input type="number" step="15" value={startAngle} onChange={e => setStartAngle(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Start Angle (°)</label>
+            <input type="number" step="15" value={startAngle} onChange={e => setStartAngle(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
             <div className="mt-2 flex gap-1.5">
               {[0, 45, 90, 180].map(a => (
-                <button key={a} onClick={() => setStartAngle(a)} className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 border border-slate-100 transition-all">{a}°</button>
+                <button key={a} onClick={() => setStartAngle(a)} className="px-2.5 py-1 rounded-lg text-sm font-bold bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 border border-slate-100 transition-all">{a}°</button>
               ))}
             </div>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Hole Diameter (mm)</label>
-            <input type="number" step="0.5" value={holeDia} onChange={e => setHoleDia(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Hole Diameter (mm)</label>
+            <input type="number" step="0.5" value={holeDia} onChange={e => setHoleDia(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <label className="flex items-center gap-3 cursor-pointer">
             <input type="checkbox" checked={centerHole} onChange={e => setCenterHole(e.target.checked)} className="w-4 h-4 rounded accent-blue-600" />
-            <span className="text-xs font-bold text-slate-600">Add center hole (0, 0)</span>
+            <span className="text-base font-bold text-slate-600">Add center hole (0, 0)</span>
           </label>
         </div>
 
@@ -98,20 +98,20 @@ export default function BoltCircleClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Hole Coordinates</h2>
-              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
+              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
                 <Download className="w-4 h-4" />
                 Export CSV
               </button>
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
+              <table className="w-full text-lg">
                 <thead>
                   <tr className="border-b border-slate-100">
-                    <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">#</th>
-                    <th className="text-right py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">X (mm)</th>
-                    <th className="text-right py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">Y (mm)</th>
-                    <th className="text-right py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">Angle</th>
+                    <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">#</th>
+                    <th className="text-right py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">X (mm)</th>
+                    <th className="text-right py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">Y (mm)</th>
+                    <th className="text-right py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">Angle</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -138,7 +138,7 @@ export default function BoltCircleClient() {
 
           {/* SVG Preview */}
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-4">Bolt Circle Preview</h3>
+            <h3 className="text-lg font-black text-slate-900 mb-4">Bolt Circle Preview</h3>
             <div className="flex justify-center">
               <svg viewBox={`-${svgR + 5} -${svgR + 5} ${2 * svgR + 10} ${2 * svgR + 10}`} className="w-full max-w-[360px]">
                 <circle cx="0" cy="0" r={pcd / 2 * scale} fill="none" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4 2" />

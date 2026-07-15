@@ -311,7 +311,7 @@ export default function LimitsAndFitsCalculatorClient() {
     <div className="space-y-12">
       {/* Preset standard fit selection */}
       <div className="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm space-y-4">
-        <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+        <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
           <Layers className="w-4 h-4 text-blue-600" /> ISO 286 Recommended Fits (Standard Presets)
         </h3>
         <div className="flex flex-wrap gap-2.5">
@@ -319,10 +319,10 @@ export default function LimitsAndFitsCalculatorClient() {
             <button
               key={p.name}
               onClick={() => handleApplyPreset(p)}
-              className="px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-50 border border-slate-100 text-slate-700 hover:bg-blue-50 hover:border-blue-200 transition-all text-left"
+              className="px-4 py-2.5 rounded-xl text-base font-bold bg-slate-50 border border-slate-100 text-slate-700 hover:bg-blue-50 hover:border-blue-200 transition-all text-left"
             >
               <div className="font-extrabold text-slate-800">{p.hole}/{p.shaft}</div>
-              <div className="text-[10px] text-slate-400 font-semibold mt-0.5">{p.name.split(' - ')[1]}</div>
+              <div className="text-sm text-slate-400 font-semibold mt-0.5">{p.name.split(' - ')[1]}</div>
             </button>
           ))}
         </div>
@@ -333,7 +333,7 @@ export default function LimitsAndFitsCalculatorClient() {
         <div className="lg:col-span-5 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
           <div className="space-y-2">
             <h2 className="text-xl font-black text-slate-900">Fits Configuration</h2>
-            <p className="text-xs text-slate-400 font-semibold">
+            <p className="text-base text-slate-400 font-semibold">
               Nominal sizes range up to 500mm. Standard tolerance letters and grades are selectable.
             </p>
           </div>
@@ -341,7 +341,7 @@ export default function LimitsAndFitsCalculatorClient() {
           <div className="space-y-6">
             {/* Nominal size input */}
             <div className="space-y-3">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+              <div className="flex items-center justify-between text-base font-bold text-slate-700">
                 <span className="uppercase tracking-wider">Nominal Size (D)</span>
                 <div className="flex items-center gap-1">
                   <input
@@ -378,14 +378,14 @@ export default function LimitsAndFitsCalculatorClient() {
 
             {/* Hole Selection Selection */}
             <div className="space-y-4 pt-4 border-t border-slate-50">
-              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block">Hole Tolerance Band</label>
+              <label className="text-base font-black text-slate-500 uppercase tracking-wider block">Hole Tolerance Band</label>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400">Deviation Letter</span>
+                  <span className="text-sm font-bold text-slate-400">Deviation Letter</span>
                   <select
                     value={holeLetter}
                     onChange={(e) => setHoleLetter(e.target.value)}
-                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-sm"
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-lg"
                   >
                     {Object.keys(HOLE_DEVIATIONS).map((l) => (
                       <option key={l} value={l}>Hole {l}</option>
@@ -393,11 +393,11 @@ export default function LimitsAndFitsCalculatorClient() {
                   </select>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400">IT Grade</span>
+                  <span className="text-sm font-bold text-slate-400">IT Grade</span>
                   <select
                     value={holeGrade}
                     onChange={(e) => setHoleGrade(e.target.value)}
-                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-sm"
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-lg"
                   >
                     {Object.keys(IT_LOOKUP).map((g) => (
                       <option key={g} value={g}>IT{g}</option>
@@ -409,14 +409,14 @@ export default function LimitsAndFitsCalculatorClient() {
 
             {/* Shaft Selection Selection */}
             <div className="space-y-4 pt-4 border-t border-slate-50">
-              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block">Shaft Tolerance Band</label>
+              <label className="text-base font-black text-slate-500 uppercase tracking-wider block">Shaft Tolerance Band</label>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400">Deviation Letter</span>
+                  <span className="text-sm font-bold text-slate-400">Deviation Letter</span>
                   <select
                     value={shaftLetter}
                     onChange={(e) => setShaftLetter(e.target.value)}
-                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-sm"
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-lg"
                   >
                     {Object.keys(SHAFT_DEVIATIONS).map((l) => (
                       <option key={l} value={l}>Shaft {l}</option>
@@ -424,11 +424,11 @@ export default function LimitsAndFitsCalculatorClient() {
                   </select>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400">IT Grade</span>
+                  <span className="text-sm font-bold text-slate-400">IT Grade</span>
                   <select
                     value={shaftGrade}
                     onChange={(e) => setShaftGrade(e.target.value)}
-                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-sm"
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/10 text-lg"
                   >
                     {Object.keys(IT_LOOKUP).map((g) => (
                       <option key={g} value={g}>IT{g}</option>
@@ -446,12 +446,12 @@ export default function LimitsAndFitsCalculatorClient() {
             {/* Visualizer Chart */}
             <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
               <div className="w-full flex items-center justify-between border-b border-slate-50 pb-4 mb-4">
-                <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+                <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
                   <Layers className="w-4 h-4 text-blue-600" /> Tolerance Zone Diagram (μm)
                 </h3>
                 <button
                   onClick={downloadSvg}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-50 border border-slate-100 text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-base font-bold bg-slate-50 border border-slate-100 text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all"
                 >
                   <Download className="w-3.5 h-3.5" /> SVG
                 </button>
@@ -474,7 +474,7 @@ export default function LimitsAndFitsCalculatorClient() {
                     strokeWidth="1.5"
                     strokeDasharray="4,3"
                   />
-                  <text x="25" y={svgMetrics.midY - 6} fill="#64748b" className="text-[10px] font-black uppercase tracking-wider">
+                  <text x="25" y={svgMetrics.midY - 6} fill="#64748b" className="text-sm font-black uppercase tracking-wider">
                     Nominal Zero Line (D = {size} mm)
                   </text>
 
@@ -490,7 +490,7 @@ export default function LimitsAndFitsCalculatorClient() {
                     strokeWidth="2.2"
                     rx="4"
                   />
-                  <text x="145" y={Math.min(270, Math.max(30, svgMetrics.holeTop + svgMetrics.holeHeight/2 + 4))} fill="#1d4ed8" textAnchor="middle" className="text-xs font-black">
+                  <text x="145" y={Math.min(270, Math.max(30, svgMetrics.holeTop + svgMetrics.holeHeight/2 + 4))} fill="#1d4ed8" textAnchor="middle" className="text-base font-black">
                     Hole {holeLetter}{holeGrade}
                   </text>
 
@@ -506,33 +506,33 @@ export default function LimitsAndFitsCalculatorClient() {
                     strokeWidth="2.2"
                     rx="4"
                   />
-                  <text x="305" y={Math.min(270, Math.max(30, svgMetrics.shaftTop + svgMetrics.shaftHeight/2 + 4))} fill="#b45309" textAnchor="middle" className="text-xs font-black">
+                  <text x="305" y={Math.min(270, Math.max(30, svgMetrics.shaftTop + svgMetrics.shaftHeight/2 + 4))} fill="#b45309" textAnchor="middle" className="text-base font-black">
                     Shaft {shaftLetter}{shaftGrade}
                   </text>
 
                   {/* Deviation Dimension Lines: Hole */}
                   {/* Upper Limit Indicator */}
                   <line x1="90" y1={svgMetrics.holeTop} x2="110" y2={svgMetrics.holeTop} stroke="#64748b" strokeWidth="1" strokeDasharray="2,2" />
-                  <text x="80" y={svgMetrics.holeTop + 3.5} fill="#64748b" textAnchor="end" className="text-[10px] font-bold font-mono">
+                  <text x="80" y={svgMetrics.holeTop + 3.5} fill="#64748b" textAnchor="end" className="text-sm font-bold font-mono">
                     {results.holeES > 0 ? `+${results.holeES}` : results.holeES}
                   </text>
 
                   {/* Lower Limit Indicator */}
                   <line x1="90" y1={svgMetrics.holeBottom} x2="110" y2={svgMetrics.holeBottom} stroke="#64748b" strokeWidth="1" strokeDasharray="2,2" />
-                  <text x="80" y={svgMetrics.holeBottom + 3.5} fill="#64748b" textAnchor="end" className="text-[10px] font-bold font-mono">
+                  <text x="80" y={svgMetrics.holeBottom + 3.5} fill="#64748b" textAnchor="end" className="text-sm font-bold font-mono">
                     {results.holeEI > 0 ? `+${results.holeEI}` : results.holeEI}
                   </text>
 
                   {/* Deviation Dimension Lines: Shaft */}
                   {/* Upper Limit Indicator */}
                   <line x1="340" y1={svgMetrics.shaftTop} x2="360" y2={svgMetrics.shaftTop} stroke="#64748b" strokeWidth="1" strokeDasharray="2,2" />
-                  <text x="370" y={svgMetrics.shaftTop + 3.5} fill="#64748b" textAnchor="start" className="text-[10px] font-bold font-mono">
+                  <text x="370" y={svgMetrics.shaftTop + 3.5} fill="#64748b" textAnchor="start" className="text-sm font-bold font-mono">
                     {results.shaftES > 0 ? `+${results.shaftES}` : results.shaftES}
                   </text>
 
                   {/* Lower Limit Indicator */}
                   <line x1="340" y1={svgMetrics.shaftBottom} x2="360" y2={svgMetrics.shaftBottom} stroke="#64748b" strokeWidth="1" strokeDasharray="2,2" />
-                  <text x="370" y={svgMetrics.shaftBottom + 3.5} fill="#64748b" textAnchor="start" className="text-[10px] font-bold font-mono">
+                  <text x="370" y={svgMetrics.shaftBottom + 3.5} fill="#64748b" textAnchor="start" className="text-sm font-bold font-mono">
                     {results.shaftEI > 0 ? `+${results.shaftEI}` : results.shaftEI}
                   </text>
                 </svg>
@@ -542,10 +542,10 @@ export default function LimitsAndFitsCalculatorClient() {
             {/* Calculations results details cards */}
             <div className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl space-y-6">
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                <h3 className="text-sm font-black uppercase tracking-widest text-slate-400">Tolerance Deviation Details</h3>
+                <h3 className="text-lg font-black uppercase tracking-widest text-slate-400">Tolerance Deviation Details</h3>
                 <button
                   onClick={downloadCsv}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-base font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition-all"
                 >
                   <FileText className="w-3.5 h-3.5" /> CSV Report
                 </button>
@@ -553,7 +553,7 @@ export default function LimitsAndFitsCalculatorClient() {
 
               {/* Fit Type Large Output Badge */}
               <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-800 text-center space-y-2">
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <div className="text-base font-bold text-slate-400 uppercase tracking-widest">
                   Calculated Fit Classification
                 </div>
                 {results.fitType === 'clearance' && (
@@ -573,7 +573,7 @@ export default function LimitsAndFitsCalculatorClient() {
                 )}
                 
                 {/* Clearance details */}
-                <div className="text-xs text-slate-300 font-semibold leading-relaxed pt-2 flex flex-wrap justify-center gap-x-6 gap-y-1">
+                <div className="text-base text-slate-300 font-semibold leading-relaxed pt-2 flex flex-wrap justify-center gap-x-6 gap-y-1">
                   {results.fitType !== 'interference' && (
                     <span>Max Clearance: <strong className="text-white">{results.maxClearance.toFixed(1)} μm</strong></span>
                   )}
@@ -593,8 +593,8 @@ export default function LimitsAndFitsCalculatorClient() {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Hole details card */}
                 <div className="bg-slate-800/40 p-5 rounded-2xl border border-slate-800/40 space-y-4">
-                  <h4 className="text-xs font-black text-blue-400 uppercase tracking-wider">Hole Limits ({holeLetter.toUpperCase()}{holeGrade})</h4>
-                  <div className="space-y-2 text-xs font-semibold leading-relaxed">
+                  <h4 className="text-base font-black text-blue-400 uppercase tracking-wider">Hole Limits ({holeLetter.toUpperCase()}{holeGrade})</h4>
+                  <div className="space-y-2 text-base font-semibold leading-relaxed">
                     <div className="flex justify-between border-b border-slate-800/50 pb-1.5">
                       <span className="text-slate-400">Upper Deviation (ES)</span>
                       <span>{results.holeES > 0 ? `+${results.holeES}` : results.holeES} μm</span>
@@ -620,8 +620,8 @@ export default function LimitsAndFitsCalculatorClient() {
 
                 {/* Shaft details card */}
                 <div className="bg-slate-800/40 p-5 rounded-2xl border border-slate-800/40 space-y-4">
-                  <h4 className="text-xs font-black text-amber-400 uppercase tracking-wider">Shaft Limits ({shaftLetter.toLowerCase()}{shaftGrade})</h4>
-                  <div className="space-y-2 text-xs font-semibold leading-relaxed">
+                  <h4 className="text-base font-black text-amber-400 uppercase tracking-wider">Shaft Limits ({shaftLetter.toLowerCase()}{shaftGrade})</h4>
+                  <div className="space-y-2 text-base font-semibold leading-relaxed">
                     <div className="flex justify-between border-b border-slate-800/50 pb-1.5">
                       <span className="text-slate-400">Upper Deviation (es)</span>
                       <span>{results.shaftES > 0 ? `+${results.shaftES}` : results.shaftES} μm</span>
@@ -656,10 +656,10 @@ export default function LimitsAndFitsCalculatorClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> Engineering Limits & Fits Guide
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">1. Understanding fit Types</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>Clearance Fit</strong> (Clearance fit: The hole is always larger than the shaft. This allows rotational or axial sliding movement between the parts. Common examples include H7/g6, H8/f7.
               </p>
@@ -674,7 +674,7 @@ export default function LimitsAndFitsCalculatorClient() {
 
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Standard ISO 286 Nomenclature</h4>
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-xs font-semibold text-slate-600 leading-relaxed font-mono">
+            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-base font-semibold text-slate-600 leading-relaxed font-mono">
               <div>
                 <span className="text-slate-400">{'// Fit Designation: e.g. H7/g6'}</span>
                 <div>Capital Letter &quot;H&quot; represents Hole Tolerance.</div>

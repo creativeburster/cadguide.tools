@@ -160,7 +160,7 @@ export default function STEPParserClient() {
         {loading ? (
           <div className="flex flex-col items-center gap-4">
             <Loader className="w-12 h-12 text-blue-500 animate-spin" />
-            <p className="text-sm font-bold text-slate-600">Parsing STEP header...</p>
+            <p className="text-lg font-bold text-slate-600">Parsing STEP header...</p>
           </div>
         ) : (
           <div className="flex flex-col items-center gap-4">
@@ -169,7 +169,7 @@ export default function STEPParserClient() {
             </div>
             <div>
               <p className="text-lg font-black text-slate-900">Drop your STEP file here</p>
-              <p className="text-xs text-slate-500 font-medium mt-1">or click to browse • .step / .stp files • Only header is read, no upload</p>
+              <p className="text-base text-slate-500 font-medium mt-1">or click to browse • .step / .stp files • Only header is read, no upload</p>
             </div>
           </div>
         )}
@@ -178,7 +178,7 @@ export default function STEPParserClient() {
       {error && (
         <div className="bg-red-50 border border-red-200 rounded-2xl p-6 flex items-center gap-3">
           <AlertTriangle className="w-5 h-5 text-red-500 shrink-0" />
-          <p className="text-sm font-bold text-red-700">{error}</p>
+          <p className="text-lg font-bold text-red-700">{error}</p>
         </div>
       )}
 
@@ -189,7 +189,7 @@ export default function STEPParserClient() {
             <div className="flex items-center gap-3 mb-6">
               <FileBox className="w-6 h-6 text-blue-600" />
               <h2 className="text-lg font-black text-slate-900 tracking-tight">{header.fileName}</h2>
-              <span className="text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-lg">{formatSize(header.fileSize)}</span>
+              <span className="text-base font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-lg">{formatSize(header.fileSize)}</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -204,8 +204,8 @@ export default function STEPParserClient() {
                 { label: 'Implementation Level', value: header.implementationLevel || '—' },
               ].map(item => (
                 <div key={item.label} className="rounded-2xl bg-slate-50 border border-slate-100 p-4">
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
-                  <p className="text-sm font-bold text-slate-900 break-all">{item.value}</p>
+                  <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
+                  <p className="text-lg font-bold text-slate-900 break-all">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -213,20 +213,20 @@ export default function STEPParserClient() {
 
           {/* Schema / AP Protocol */}
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-4">ISO 10303 Application Protocol</h3>
+            <h3 className="text-lg font-black text-slate-900 mb-4">ISO 10303 Application Protocol</h3>
             <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
-              <p className="text-[10px] font-black uppercase tracking-wider opacity-80 mb-1">FILE_SCHEMA</p>
+              <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">FILE_SCHEMA</p>
               <p className="text-2xl font-black">{header.schema.join(', ') || 'Unknown'}</p>
-              <p className="text-xs mt-2 opacity-80 font-medium">{header.schemaPretty || 'Unknown protocol'}</p>
+              <p className="text-base mt-2 opacity-80 font-medium">{header.schemaPretty || 'Unknown protocol'}</p>
             </div>
           </div>
 
           {/* Description */}
           {header.description && (
             <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-              <h3 className="text-sm font-black text-slate-900 mb-4">FILE_DESCRIPTION</h3>
+              <h3 className="text-lg font-black text-slate-900 mb-4">FILE_DESCRIPTION</h3>
               <div className="rounded-2xl bg-slate-50 border border-slate-100 p-5">
-                <p className="text-sm text-slate-700 font-medium leading-relaxed">{header.description}</p>
+                <p className="text-lg text-slate-700 font-medium leading-relaxed">{header.description}</p>
               </div>
             </div>
           )}
@@ -234,7 +234,7 @@ export default function STEPParserClient() {
           {/* Info Note */}
           <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 flex items-start gap-3">
             <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-            <p className="text-xs text-slate-600 font-medium leading-relaxed">
+            <p className="text-base text-slate-600 font-medium leading-relaxed">
               Only the first 8 KB of the file was read to extract the ISO 10303 HEADER section. The DATA section (geometry, topology, product structure) was not parsed. Your file was never uploaded to any server.
             </p>
           </div>

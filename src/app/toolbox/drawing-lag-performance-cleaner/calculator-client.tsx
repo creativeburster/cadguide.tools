@@ -173,7 +173,7 @@ ${internalCommands}
       <div className="flex bg-slate-100 p-1 rounded-2xl w-fit self-center">
         <button
           onClick={() => setCleanMode('lisp')}
-          className={`px-6 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer ${
+          className={`px-6 py-2.5 rounded-xl text-base font-black transition-all cursor-pointer ${
             cleanMode === 'lisp' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
           }`}
         >
@@ -181,7 +181,7 @@ ${internalCommands}
         </button>
         <button
           onClick={() => setCleanMode('dxf')}
-          className={`px-6 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer ${
+          className={`px-6 py-2.5 rounded-xl text-base font-black transition-all cursor-pointer ${
             cleanMode === 'dxf' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
           }`}
         >
@@ -200,11 +200,11 @@ ${internalCommands}
                   <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></span>
                   <h2 className="text-white font-black text-lg tracking-tight">DWG Database physical structure purification</h2>
                 </div>
-                <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+                <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
                   DWG Database Structural Purification
                 </p>
               </div>
-              <div className="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-black">
+              <div className="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-base font-black">
                 LISP compiler
               </div>
             </div>
@@ -263,7 +263,7 @@ ${internalCommands}
             {/* Left: Caton feature selection configuration */}
             <div className="lg:col-span-1 flex flex-col gap-6">
               <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-5">
-                <h3 className="text-slate-800 font-black text-base tracking-tight flex items-center gap-2">
+                <h3 className="text-slate-800 font-black text-xl tracking-tight flex items-center gap-2">
                   <Gauge className="w-4 h-4 text-blue-500" />
                   Causing symptoms and cleaning scope
                 </h3>
@@ -279,7 +279,7 @@ ${internalCommands}
                       onChange={(e) => setCleanRegapp(e.target.checked)}
                       className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                     />
-                    <div className="text-xs">
+                    <div className="text-base">
                       <span className="font-bold text-slate-700 block">Register Application Cleanup (Regapps)</span>
                       <span className="text-slate-400">For oversized capacity (hundreds of lines in dozens of lines)MB) Deep cleaning of the drawings. </span>
                     </div>
@@ -293,7 +293,7 @@ ${internalCommands}
                       onChange={(e) => setCleanScalelist(e.target.checked)}
                       className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                     />
-                    <div className="text-xs">
+                    <div className="text-base">
                       <span className="font-bold text-slate-700 block">Reset Scale List</span>
                       <span className="text-slate-400">Solve the problem of drawings getting stuck and unresponsive for several seconds when the viewport is zoomed or switched between layouts.. </span>
                     </div>
@@ -307,7 +307,7 @@ ${internalCommands}
                       onChange={(e) => setCleanOrphanBlock(e.target.checked)}
                       className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                     />
-                    <div className="text-xs">
+                    <div className="text-base">
                       <span className="font-bold text-slate-700 block">Powerful PURGE redundant garbage</span>
                       <span className="text-slate-400">Perform three rounds of deep PURGE to clear out irrelevant blocks and empty layers hidden at the bottom. </span>
                     </div>
@@ -321,7 +321,7 @@ ${internalCommands}
                       onChange={(e) => setRunAudit(e.target.checked)}
                       className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                     />
-                    <div className="text-xs">
+                    <div className="text-base">
                       <span className="font-bold text-slate-700 block">Database Physical Verification (AUDIT)</span>
                       <span className="text-slate-400">Check the coordinates of 3D primitive nodes and automatically delete damage, Misplaced malformed data. </span>
                     </div>
@@ -335,7 +335,7 @@ ${internalCommands}
                       onChange={(e) => setIndexDgnLine(e.target.checked)}
                       className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                     />
-                    <div className="text-xs">
+                    <div className="text-base">
                       <span className="font-bold text-red-500 block">Unshelled DGN bloated linear style (DGN Style)</span>
                       <span className="text-slate-400">Stripping of very large line style dictionaries leftover from MicroStation import. </span>
                     </div>
@@ -352,14 +352,14 @@ ${internalCommands}
                 <div className="flex flex-col gap-5">
                   <div>
                     <h3 className="text-slate-900 font-black text-xl tracking-tight">AutoLISP Macro code real-time compilation</h3>
-                    <p className="text-xs text-slate-400 mt-1">
+                    <p className="text-base text-slate-400 mt-1">
                       This can be done within CAD as `.lsp` File load or paste and run directly in the command line. 
                     </p>
                   </div>
 
                   {/* LISP Code view */}
-                  <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
-                    <div className="flex justify-between items-center text-[10px] text-slate-500">
+                  <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4">
+                    <div className="flex justify-between items-center text-sm text-slate-500">
                       <span className="flex items-center gap-1"><Code2 className="w-3.5 h-3.5" /> cleandwg.lsp Source code</span>
                       <button
                         onClick={() => handleCopy(compiledLispScript, 'lispCode')}
@@ -369,7 +369,7 @@ ${internalCommands}
                         {copiedText === 'lispCode' ? 'Copied ' : 'Copy command'}
                       </button>
                     </div>
-                    <div className="max-h-[180px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-[10px]">
+                    <div className="max-h-[180px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-sm">
                       <pre className="whitespace-pre">{compiledLispScript}</pre>
                     </div>
                   </div>
@@ -377,7 +377,7 @@ ${internalCommands}
                   {/* Core Principles and Operation Manual */}
                   <div className="bg-blue-50 rounded-2xl border border-blue-100 p-5 flex gap-3 text-blue-900">
                     <Zap className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <div className="text-xs leading-relaxed">
+                    <div className="text-base leading-relaxed">
                       <p className="font-black text-slate-800 mb-1">Instructions for use and operation: </p>
                       <ol className="list-decimal list-inside space-y-1 mt-2 text-slate-700 font-medium">
                         <li>Copy the code generated above to create a plain text file on the desktop, Rename to <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">cleandwg.lsp</span>. </li>
@@ -404,10 +404,10 @@ ${internalCommands}
               <h3 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
                 <Upload className="w-5 h-5 text-blue-600" /> Online Database Optimizer
               </h3>
-              <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+              <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
                 100% Client-side sandbox purification
               </p>
-              <p className="text-xs text-slate-500 mt-3 leading-relaxed">
+              <p className="text-base text-slate-500 mt-3 leading-relaxed">
                 Directly drop your ASCII format `.dxf` drawing files. The system will inspect and wipe DGN Style blocks and Regapps directly in browser memory without sending a single byte to external servers.
               </p>
             </div>
@@ -432,13 +432,13 @@ ${internalCommands}
               <FileText className="w-10 h-10 text-slate-300 mb-3" />
               {dxfFile ? (
                 <div>
-                  <span className="text-xs font-bold text-slate-800 block truncate max-w-[200px]">{dxfFile.name}</span>
-                  <span className="text-[10px] text-slate-400">{(dxfFile.size / 1024 / 1024).toFixed(2)} MB</span>
+                  <span className="text-base font-bold text-slate-800 block truncate max-w-[200px]">{dxfFile.name}</span>
+                  <span className="text-sm text-slate-400">{(dxfFile.size / 1024 / 1024).toFixed(2)} MB</span>
                 </div>
               ) : (
                 <div>
-                  <span className="text-xs font-bold text-slate-700 block">Click or Drag DXF to load</span>
-                  <span className="text-[10px] text-slate-400">Supports files up to 100MB</span>
+                  <span className="text-base font-bold text-slate-700 block">Click or Drag DXF to load</span>
+                  <span className="text-sm text-slate-400">Supports files up to 100MB</span>
                 </div>
               )}
             </div>
@@ -447,7 +447,7 @@ ${internalCommands}
               {isCleaned ? (
                 <button
                   onClick={handleDownloadCleaned}
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-xs flex items-center justify-center gap-1.5 cursor-pointer animate-fadeIn"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-base flex items-center justify-center gap-1.5 cursor-pointer animate-fadeIn"
                 >
                   <Download className="w-4 h-4" /> Download Slimmed Drawing (.DXF)
                 </button>
@@ -455,7 +455,7 @@ ${internalCommands}
                 <button
                   onClick={handleCleanDxf}
                   disabled={!dxfFile || isCleaning}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-350 text-white font-black py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-350 text-white font-black py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-base flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   {isCleaning ? (
                     <>
@@ -476,7 +476,7 @@ ${internalCommands}
             {/* Logs console */}
             <div className="bg-slate-950 border border-slate-800 rounded-3xl p-6 shadow-2xl flex-1 flex flex-col justify-between min-h-[300px] relative overflow-hidden">
               <div className="flex justify-between items-center pb-3 border-b border-slate-800 mb-3">
-                <span className="text-xs font-mono font-black text-slate-400 flex items-center gap-2">
+                <span className="text-base font-mono font-black text-slate-400 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   Purification Console Output
                 </span>
@@ -488,7 +488,7 @@ ${internalCommands}
                 </button>
               </div>
 
-              <div className="flex-1 overflow-y-auto max-h-[160px] font-mono text-[10px] text-emerald-400/90 flex flex-col gap-1.5 scrollbar-thin">
+              <div className="flex-1 overflow-y-auto max-h-[160px] font-mono text-sm text-emerald-400/90 flex flex-col gap-1.5 scrollbar-thin">
                 {logHistory.length > 0 ? (
                   logHistory.map((log, index) => (
                     <div key={index} className="leading-relaxed whitespace-pre-wrap">{log}</div>
@@ -502,22 +502,22 @@ ${internalCommands}
                 <div className="mt-4 pt-4 border-t border-slate-800 grid grid-cols-3 gap-4 text-center animate-fadeIn">
                   <div className="p-3 bg-slate-900/40 rounded-xl border border-slate-800/60">
                     <span className="text-[9px] font-bold text-slate-400 uppercase block">DGN Styles Bypassed</span>
-                    <span className="text-emerald-400 font-black text-sm font-mono mt-0.5">{cleanStats.dgnRemoved}</span>
+                    <span className="text-emerald-400 font-black text-lg font-mono mt-0.5">{cleanStats.dgnRemoved}</span>
                   </div>
                   <div className="p-3 bg-slate-900/40 rounded-xl border border-slate-800/60">
                     <span className="text-[9px] font-bold text-slate-400 uppercase block">Regapps Purged</span>
-                    <span className="text-emerald-400 font-black text-sm font-mono mt-0.5">{cleanStats.regappRemoved}</span>
+                    <span className="text-emerald-400 font-black text-lg font-mono mt-0.5">{cleanStats.regappRemoved}</span>
                   </div>
                   <div className="p-3 bg-slate-900/40 rounded-xl border border-slate-800/60">
                     <span className="text-[9px] font-bold text-slate-400 uppercase block">Scales Neutralized</span>
-                    <span className="text-emerald-400 font-black text-sm font-mono mt-0.5">{cleanStats.scalesReset}</span>
+                    <span className="text-emerald-400 font-black text-lg font-mono mt-0.5">{cleanStats.scalesReset}</span>
                   </div>
                 </div>
               )}
             </div>
 
             {/* Geek guide card */}
-            <div className="bg-blue-50 border border-blue-100 p-5 rounded-2xl flex gap-3 text-blue-900 text-xs leading-relaxed">
+            <div className="bg-blue-50 border border-blue-100 p-5 rounded-2xl flex gap-3 text-blue-900 text-base leading-relaxed">
               <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-extrabold text-slate-800 mb-1">Online Purging Mechanics:</h4>

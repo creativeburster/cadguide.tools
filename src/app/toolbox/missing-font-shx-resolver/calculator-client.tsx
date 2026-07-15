@@ -199,7 +199,7 @@ export default function MissingFontResolverClient() {
             placeholder="Enter the missing font file name (e.g.: hztxt, tssdeng, tch)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-6 pr-12 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition duration-300"
+            className="w-full pl-6 pr-12 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-lg font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition duration-300"
           />
           <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 select-none pointer-events-none">
             🔍
@@ -209,7 +209,7 @@ export default function MissingFontResolverClient() {
         <div className="flex flex-wrap gap-2.5">
           <button
             onClick={() => setActiveCategory('all')}
-            className={`px-4 py-2 rounded-xl text-xs font-black border transition-all ${
+            className={`px-4 py-2 rounded-xl text-base font-black border transition-all ${
               activeCategory === 'all'
                 ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
@@ -219,7 +219,7 @@ export default function MissingFontResolverClient() {
           </button>
           <button
             onClick={() => setActiveCategory('chinese')}
-            className={`px-4 py-2 rounded-xl text-xs font-black border transition-all ${
+            className={`px-4 py-2 rounded-xl text-base font-black border transition-all ${
               activeCategory === 'chinese'
                 ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
@@ -229,7 +229,7 @@ export default function MissingFontResolverClient() {
           </button>
           <button
             onClick={() => setActiveCategory('western')}
-            className={`px-4 py-2 rounded-xl text-xs font-black border transition-all ${
+            className={`px-4 py-2 rounded-xl text-base font-black border transition-all ${
               activeCategory === 'western'
                 ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
@@ -239,7 +239,7 @@ export default function MissingFontResolverClient() {
           </button>
           <button
             onClick={() => setActiveCategory('symbol')}
-            className={`px-4 py-2 rounded-xl text-xs font-black border transition-all ${
+            className={`px-4 py-2 rounded-xl text-base font-black border transition-all ${
               activeCategory === 'symbol'
                 ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
@@ -262,7 +262,7 @@ export default function MissingFontResolverClient() {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="text-xs text-blue-600 font-bold underline hover:text-blue-700"
+                className="text-base text-blue-600 font-bold underline hover:text-blue-700"
               >
                 Clear search criteria
               </button>
@@ -272,8 +272,8 @@ export default function MissingFontResolverClient() {
           {filteredFonts.length === 0 ? (
             <div className="bg-white rounded-3xl border border-slate-100 p-8 text-center text-slate-500">
               <span className="text-3xl block mb-2">❓</span>
-              <p className="text-sm font-bold">No related font name was matched. </p>
-              <p className="text-xs text-slate-400 mt-1">You can try typing the main letters of the font (e.g.: Abbreviate hztxt2.shx as hztxt Search) . </p>
+              <p className="text-lg font-bold">No related font name was matched. </p>
+              <p className="text-base text-slate-400 mt-1">You can try typing the main letters of the font (e.g.: Abbreviate hztxt2.shx as hztxt Search) . </p>
             </div>
 ) : (
             <div className="space-y-6">
@@ -289,11 +289,11 @@ export default function MissingFontResolverClient() {
                         <h4 className="text-lg font-black text-slate-800 tracking-tight">
                           {font.name}.SHX
                         </h4>
-                        <span className="text-[10px] font-black text-slate-400 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-100 uppercase tracking-widest">
+                        <span className="text-sm font-black text-slate-400 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-100 uppercase tracking-widest">
                           {font.type}
                         </span>
                       </div>
-                      <p className="text-xs text-slate-400 font-bold">
+                      <p className="text-base text-slate-400 font-bold">
                         Background: {font.source}
                       </p>
                     </div>
@@ -302,18 +302,18 @@ export default function MissingFontResolverClient() {
                   {/* Body & Alt Suggested */}
                   <div className="grid md:grid-cols-3 gap-6 bg-slate-50/50 border border-slate-100/50 rounded-2xl p-4 print:bg-white print:border-slate-300">
                     <div className="md:col-span-2 space-y-2">
-                      <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                      <h5 className="text-sm font-black text-slate-400 uppercase tracking-widest">
                         Substitution Principles and Guidelines
                       </h5>
-                      <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                      <p className="text-base text-slate-500 leading-relaxed font-semibold">
                         {font.explanation}
                       </p>
                     </div>
                     <div className="bg-blue-50/50 rounded-xl p-4 border border-blue-50/50 print:bg-white print:border-slate-200">
-                      <h5 className="text-[10px] font-black text-blue-800 uppercase tracking-widest mb-1">
+                      <h5 className="text-sm font-black text-blue-800 uppercase tracking-widest mb-1">
                         Optimal security substitution
                       </h5>
-                      <p className="text-xs font-black text-blue-600">
+                      <p className="text-base font-black text-blue-600">
                         {font.suggestedAlt}
                       </p>
                     </div>
@@ -323,13 +323,13 @@ export default function MissingFontResolverClient() {
                   <div className="grid md:grid-cols-2 gap-4 pt-2 print:hidden">
                     <div className="space-y-1.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                        <span className="text-sm font-black text-slate-400 uppercase tracking-widest">
                           AutoLISP Alternate instructions (executed directly from the command line) 
                         </span>
                         {font.command !== 'N/A' && (
                           <button
                             onClick={() => handleCopy(font.command, idx, false)}
-                            className="text-[10px] text-blue-600 font-bold underline hover:text-blue-700"
+                            className="text-sm text-blue-600 font-bold underline hover:text-blue-700"
                           >
                             {copiedIndex === idx ? '✓ Copied ' : 'Copy command'}
                           </button>
@@ -342,12 +342,12 @@ export default function MissingFontResolverClient() {
 
                     <div className="space-y-1.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                        <span className="text-sm font-black text-slate-400 uppercase tracking-widest">
                           acad.fmp Map configuration items (write configuration files) 
                         </span>
                         <button
                           onClick={() => handleCopy(font.fmpEntry, idx, true)}
-                          className="text-[10px] text-blue-600 font-bold underline hover:text-blue-700"
+                          className="text-sm text-blue-600 font-bold underline hover:text-blue-700"
                         >
                           {copiedFmpIndex === idx ? '✓ Copied' : 'Copy configuration'}
                         </button>
@@ -371,9 +371,9 @@ export default function MissingFontResolverClient() {
               💡 Three-step method for quick repair (How to Fix)
             </h3>
             
-            <ol className="space-y-4 text-xs leading-relaxed font-semibold">
+            <ol className="space-y-4 text-base leading-relaxed font-semibold">
               <li className="flex gap-3">
-                <span className="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center font-black flex-shrink-0 text-[10px]">
+                <span className="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center font-black flex-shrink-0 text-sm">
                   1
                 </span>
                 <div>
@@ -384,7 +384,7 @@ export default function MissingFontResolverClient() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <span className="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center font-black flex-shrink-0 text-[10px]">
+                <span className="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center font-black flex-shrink-0 text-sm">
                   2
                 </span>
                 <div>
@@ -395,7 +395,7 @@ export default function MissingFontResolverClient() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <span className="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center font-black flex-shrink-0 text-[10px]">
+                <span className="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center font-black flex-shrink-0 text-sm">
                   3
                 </span>
                 <div>
@@ -409,10 +409,10 @@ export default function MissingFontResolverClient() {
           </div>
 
           <div className="bg-white rounded-3xl border border-slate-100 p-6 space-y-4 print:border-slate-300">
-            <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest">
+            <h4 className="text-base font-black text-slate-400 uppercase tracking-widest">
               Standard Fonts Package
             </h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+            <p className="text-base text-slate-500 leading-relaxed font-semibold">
               AutoCAD The built-in default includes `gbcbig.shx` (Chinese large font), `hztxt.shx` (Classic Chinese fonts) and `simplex.shx` (Single-line Spanish fonts). These fonts have extremely high versatility and safety factor.. 
             </p>
           </div>
@@ -439,27 +439,27 @@ export default function MissingFontResolverClient() {
         <h3 className="text-2xl font-black text-slate-900">Troubleshooting missing fonts and garbled characters (SHX Font FAQ)</h3>
         <div className="grid md:grid-cols-2 gap-6 print:grid-cols-1">
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-sm">What is the difference between a question mark (?) and garbled text?? </h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">What is the difference between a question mark (?) and garbled text?? </h4>
+            <p className="text-base text-slate-500 leading-relaxed font-medium">
               * **Question mark (?)** represents CAD The engine cannot find the drawing specified in your Fonts folder. SHX The font, or its mapping rules cannot match special symbols; 
               * **Scrambled Text** represents the code page specified inside the drawing (Codepage) or font style (Style) resolution conflict, For example, use Western fonts to force parsing of double-byte Chinese large fonts. 
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-sm">Can I download font packages online and import them? </h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">Can I download font packages online and import them? </h4>
+            <p className="text-base text-slate-500 leading-relaxed font-medium">
               It is highly not recommended to download batches of several gigabytes from the Internet in batches.&quot;CADFull font package&quot;. This type of package contains a large number of duplicate names, Damaged and redundant fonts, prone to triggering CAD Startup speed plummets, coordinate capture fails, Even bundled with macro Trojans. Targeted configuration on demand FONTALT Alternate mapping is the standard specification for enterprise IT operations. 
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-sm">Big Font and Spanish regular font in CAD How to configure it? </h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">Big Font and Spanish regular font in CAD How to configure it? </h4>
+            <p className="text-base text-slate-500 leading-relaxed font-medium">
               AutoCAD The text style (STYLE) allows combined mounting: &quot;SHX font on the left&quot;The box is responsible for English letters and numbers (such as simplex.shx) ; Check &quot;Use large fonts&quot;&quot;rear, right&quot;The large font &quot;box is responsible for Chinese, Japanese and Korean characters (Such as gbcbig.shx). Only if both are configured correctly, The drawings can be restored correctly. 
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-sm">Why can Tianzheng Software or Structure Explorer automatically identify it? </h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">Why can Tianzheng Software or Structure Explorer automatically identify it? </h4>
+            <p className="text-base text-slate-500 leading-relaxed font-medium">
               These customized CAD secondary development kits will be installed with their dedicated Fonts Folders are automatically added to AutoCAD&apos;s&quot;Support File Search Path &quot;Medium. To view in bare CAD, Just copy and add their Fonts paths to your local CAD within the options search path. 
             </p>
           </div>

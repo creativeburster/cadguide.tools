@@ -302,7 +302,7 @@ export default function BeamDeflectionClient() {
             <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
               <Activity className="w-6 h-6 text-blue-600" /> Beam Bending & Load Curve
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
               Exaggerated deflection line based on Euler-Bernoulli beam theory
             </p>
           </div>
@@ -449,12 +449,12 @@ export default function BeamDeflectionClient() {
                   <AlertTriangle className={`w-6 h-6 shrink-0 ${status === 'danger' ? 'text-red-600' : 'text-amber-600'}`} />
                 )}
                 <div>
-                  <div className="font-black text-sm uppercase tracking-wide">
+                  <div className="font-black text-lg uppercase tracking-wide">
                     {status === 'safe' && 'Structural Assessment: SAFE (structural safety)'}
                     {status === 'danger' && 'Structural Assessment: DANGER (The bearing capacity and stiffness exceed the standard!)'}
                     {status === 'warning' && (!isDefSafe ? 'Assessment: DEFLECTION LIMIT EXCEEDED' : 'Assessment: FLEXURAL STRESS EXCEEDED')}
                   </div>
-                  <p className="text-xs text-slate-500 font-semibold mt-0.5 leading-relaxed">
+                  <p className="text-base text-slate-500 font-semibold mt-0.5 leading-relaxed">
                     {status === 'safe' && `Bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) are within the material limits for ${material.name}.`}
                     {status === 'danger' && `Both maximum bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and structural deflection exceed safe limits for ${material.name}. Reduce load or increase beam cross-section size.`}
                     {status === 'warning' && (!isDefSafe
@@ -473,7 +473,7 @@ export default function BeamDeflectionClient() {
             <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
               <Shield className="w-6 h-6 text-blue-600" /> Beam Profile Cross-Section
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
               Real-time scaled cross section visualizer with key variables
             </p>
           </div>
@@ -603,7 +603,7 @@ export default function BeamDeflectionClient() {
           </div>
 
           <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-[11px] font-semibold text-slate-500 space-y-1">
-            <div className="font-black text-slate-800 text-[10px] uppercase tracking-wider mb-1">
+            <div className="font-black text-slate-800 text-sm uppercase tracking-wider mb-1">
               Cross Section Properties:
             </div>
             <div className="flex justify-between font-mono">
@@ -631,20 +631,20 @@ export default function BeamDeflectionClient() {
             <h2 className="text-xl font-black flex items-center gap-2">
               <Settings className="w-5 h-5 text-blue-400" /> Beam Setup Parameters
             </h2>
-            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+            <p className="text-sm text-slate-400 font-bold uppercase tracking-wider mt-0.5">
               Select support structure and profile geometries
             </p>
           </div>
 
           {/* Load Condition Selector */}
           <div className="space-y-2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wide">
+            <label className="text-base font-black text-slate-400 uppercase tracking-wide">
               1. Support & Load Arrangement
             </label>
             <select
               value={loadConditionIdx}
               onChange={(e) => setLoadConditionIdx(parseInt(e.target.value))}
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-xs font-bold focus:outline-none focus:border-blue-500 text-white"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-base font-bold focus:outline-none focus:border-blue-500 text-white"
             >
               {LOAD_CONDITIONS.map((c, i) => (
                 <option key={c.id} value={i}>
@@ -656,7 +656,7 @@ export default function BeamDeflectionClient() {
 
           {/* Profile Section Selector */}
           <div className="space-y-2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wide">
+            <label className="text-base font-black text-slate-400 uppercase tracking-wide">
               2. Beam Section Shape
             </label>
             <div className="grid grid-cols-2 gap-2.5">
@@ -664,7 +664,7 @@ export default function BeamDeflectionClient() {
                 <button
                   key={p.id}
                   onClick={() => setProfileType(p.id)}
-                  className={`py-3 px-2 rounded-xl text-xs font-black border transition-all ${
+                  className={`py-3 px-2 rounded-xl text-base font-black border transition-all ${
                     profileType === p.id
                       ? 'bg-blue-600 text-white border-blue-600'
                       : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -678,14 +678,14 @@ export default function BeamDeflectionClient() {
 
           {/* Dimensions Controls Based on Shape */}
           <div className="border-t border-slate-800 pt-5 space-y-4">
-            <div className="text-xs font-black text-slate-400 uppercase tracking-wide">
+            <div className="text-base font-black text-slate-400 uppercase tracking-wide">
               3. Cross Section Dimensions (mm)
             </div>
 
             {profileType === 'i-beam' && (
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Height (H)</span>
                     <span className="font-mono text-blue-400">{dimH} mm</span>
                   </label>
@@ -693,11 +693,11 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimH}
                     onChange={(e) => setDimH(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Flange Width (B)</span>
                     <span className="font-mono text-blue-400">{dimB} mm</span>
                   </label>
@@ -705,11 +705,11 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimB}
                     onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Flange Thickness (tf)</span>
                     <span className="font-mono text-blue-400">{dimTf} mm</span>
                   </label>
@@ -717,11 +717,11 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimTf}
                     onChange={(e) => setDimTf(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Web Thickness (tw)</span>
                     <span className="font-mono text-blue-400">{dimTw} mm</span>
                   </label>
@@ -729,7 +729,7 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimTw}
                     onChange={(e) => setDimTw(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -738,7 +738,7 @@ export default function BeamDeflectionClient() {
             {profileType === 'box' && (
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Outer Height (H)</span>
                     <span className="font-mono text-blue-400">{dimH} mm</span>
                   </label>
@@ -746,11 +746,11 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimH}
                     onChange={(e) => setDimH(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Outer Width (B)</span>
                     <span className="font-mono text-blue-400">{dimB} mm</span>
                   </label>
@@ -758,11 +758,11 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimB}
                     onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5 col-span-2">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Wall Thickness (t)</span>
                     <span className="font-mono text-blue-400">{dimT} mm</span>
                   </label>
@@ -770,7 +770,7 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimT}
                     onChange={(e) => setDimT(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -779,7 +779,7 @@ export default function BeamDeflectionClient() {
             {profileType === 'solid-rect' && (
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Height (H)</span>
                     <span className="font-mono text-blue-400">{dimH} mm</span>
                   </label>
@@ -787,11 +787,11 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimH}
                     onChange={(e) => setDimH(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Width (B)</span>
                     <span className="font-mono text-blue-400">{dimB} mm</span>
                   </label>
@@ -799,7 +799,7 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimB}
                     onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -808,7 +808,7 @@ export default function BeamDeflectionClient() {
             {profileType === 'pipe' && (
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Outer Diameter (D)</span>
                     <span className="font-mono text-blue-400">{dimB} mm</span>
                   </label>
@@ -816,11 +816,11 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimB}
                     onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold flex justify-between">
+                  <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Wall Thickness (t)</span>
                     <span className="font-mono text-blue-400">{dimT} mm</span>
                   </label>
@@ -828,7 +828,7 @@ export default function BeamDeflectionClient() {
                     type="number"
                     value={dimT}
                     onChange={(e) => setDimT(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -843,16 +843,16 @@ export default function BeamDeflectionClient() {
               <h2 className="text-xl font-black flex items-center gap-2">
                 <Sliders className="w-5 h-5 text-blue-400" /> Physical Loads & Materials
               </h2>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+              <p className="text-sm text-slate-400 font-bold uppercase tracking-wider mt-0.5">
                 Define structural parameters and forces
               </p>
             </div>
 
             {/* Span Length */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>Beam Span Length (L)</span>
-                <span className="text-blue-400 font-mono text-sm">{length} m</span>
+                <span className="text-blue-400 font-mono text-lg">{length} m</span>
               </label>
               <input
                 type="range"
@@ -871,18 +871,18 @@ export default function BeamDeflectionClient() {
                   step="0.1"
                   value={length}
                   onChange={(e) => setLength(parseFloat(e.target.value) || 0.1)}
-                  className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-xs font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
+                  className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-base font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
                 />
               </div>
             </div>
 
             {/* Load Values */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide flex justify-between">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>
                   {loadSetup.load === 'point' ? 'Applied Point Force (P)' : 'Uniform Load (w)'}
                 </span>
-                <span className="text-blue-400 font-mono text-sm">
+                <span className="text-blue-400 font-mono text-lg">
                   {loadValue} {loadSetup.load === 'point' ? 'kN' : 'kN/m'}
                 </span>
               </label>
@@ -903,14 +903,14 @@ export default function BeamDeflectionClient() {
                   step="0.5"
                   value={loadValue}
                   onChange={(e) => setLoadValue(parseFloat(e.target.value) || 0.1)}
-                  className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-xs font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
+                  className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-base font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
                 />
               </div>
             </div>
 
             {/* Material Presets */}
             <div className="space-y-2">
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wide">
+              <label className="text-base font-black text-slate-400 uppercase tracking-wide">
                 Material Grade Presets
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -918,7 +918,7 @@ export default function BeamDeflectionClient() {
                   <button
                     key={i}
                     onClick={() => setMaterialIdx(i)}
-                    className={`py-2.5 px-2 rounded-xl text-[10px] font-black border transition-all ${
+                    className={`py-2.5 px-2 rounded-xl text-sm font-black border transition-all ${
                       materialIdx === i
                         ? 'bg-blue-600 text-white border-blue-600'
                         : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
@@ -934,21 +934,21 @@ export default function BeamDeflectionClient() {
             {materialIdx === 3 && (
               <div className="grid grid-cols-2 gap-4 border border-slate-800 rounded-2xl p-4 bg-slate-950/20">
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold">Elastic Modulus (GPa)</label>
+                  <label className="text-sm text-slate-400 font-bold">Elastic Modulus (GPa)</label>
                   <input
                     type="number"
                     value={customE}
                     onChange={(e) => setCustomE(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[10px] text-slate-400 font-bold">Yield Strength (MPa)</label>
+                  <label className="text-sm text-slate-400 font-bold">Yield Strength (MPa)</label>
                   <input
                     type="number"
                     value={customYield}
                     onChange={(e) => setCustomYield(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none"
+                    className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -956,40 +956,40 @@ export default function BeamDeflectionClient() {
           </div>
 
           {/* Results Block */}
-          <div className="bg-slate-800/50 rounded-2xl p-5 border border-slate-800 space-y-3.5 text-xs">
-            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">
+          <div className="bg-slate-800/50 rounded-2xl p-5 border border-slate-800 space-y-3.5 text-base">
+            <div className="text-sm text-slate-400 font-bold uppercase tracking-wider mb-2">
               Bending deflection & stress report
             </div>
             
             <div className="grid grid-cols-2 gap-3.5">
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Max Moment</div>
-                <div className="text-white font-black text-base font-mono">
+                <div className="text-white font-black text-xl font-mono">
                   {(structuralOutputs.maxMoment / 1e6).toFixed(3)}
-                  <span className="text-[10px] text-slate-400 ml-1">kN·m</span>
+                  <span className="text-sm text-slate-400 ml-1">kN·m</span>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Max Deflection</div>
-                <div className={`font-black text-base font-mono ${
+                <div className={`font-black text-xl font-mono ${
                   structuralOutputs.isDeflectionSafe ? 'text-emerald-400' : 'text-red-400'
                 }`}>
                   {structuralOutputs.maxDeflection.toFixed(2)}
-                  <span className="text-[10px] text-slate-400 ml-1">mm</span>
+                  <span className="text-sm text-slate-400 ml-1">mm</span>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Bending Stress</div>
-                <div className={`font-black text-base font-mono ${
+                <div className={`font-black text-xl font-mono ${
                   structuralOutputs.isStressSafe ? 'text-white' : 'text-red-400'
                 }`}>
                   {structuralOutputs.maxStress.toFixed(1)}
-                  <span className="text-[10px] text-slate-400 ml-1">MPa</span>
+                  <span className="text-sm text-slate-400 ml-1">MPa</span>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Safety Factor</div>
-                <div className={`font-black text-base font-mono ${
+                <div className={`font-black text-xl font-mono ${
                   structuralOutputs.isStressSafe ? 'text-blue-400' : 'text-red-400'
                 }`}>
                   {structuralOutputs.safetyFactor > 100 ? '99+' : structuralOutputs.safetyFactor.toFixed(2)}
@@ -1006,7 +1006,7 @@ export default function BeamDeflectionClient() {
           {/* Action buttons */}
           <button
             onClick={handleCopySummary}
-            className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-xs py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
+            className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-base py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
           >
             {copied ? (
               <><Check className="w-4 h-4 text-green-600" /> Report Copied!</>
@@ -1023,17 +1023,17 @@ export default function BeamDeflectionClient() {
           <HelpCircle className="w-5 h-5 text-blue-600" /> Beam Deflection Engineering Guidelines
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">1. Bending Stresses & Moment of Inertia</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>Moment of Inertia (I<sub>x</sub>)</strong> measures a profile{"'"}s resistance to bending based purely on its geometric shape. An I-beam concentrates material in the top and bottom flanges away from the neutral axis, maximizing I<sub>x</sub> while minimizing weight.
               </p>
               <p>
                 <strong>Maximum Bending Stress (σ<sub>max</sub>)</strong> occurs at the extreme outer fibers of the beam (furthest from the neutral axis). It is calculated as:
               </p>
-              <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono text-center text-sm text-slate-800 font-black">
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 font-mono text-center text-lg text-slate-800 font-black">
                 {"\u03C3_max = M_max / W_x"}
               </div>
               <p>
@@ -1044,11 +1044,11 @@ export default function BeamDeflectionClient() {
 
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. Standard Deflection Serviceability Limits</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 In structural engineering, beam deflection is governed by <em>serviceability limits</em> to prevent unsightly sagging, cracking of plaster, or vibration. Deflection limits are defined as a fraction of the span length L:
               </p>
-              <ul className="list-disc pl-4 space-y-1.5 bg-slate-50 border border-slate-100 p-4 rounded-xl text-[10px] font-mono leading-relaxed">
+              <ul className="list-disc pl-4 space-y-1.5 bg-slate-50 border border-slate-100 p-4 rounded-xl text-sm font-mono leading-relaxed">
                 <li><strong className="text-slate-800">L/360</strong>: Strictest limit. Commonly used for floor joists supporting plaster ceilings to prevent cracking under live loads.</li>
                 <li><strong className="text-slate-800">L/240</strong>: Standard limit for roof beams, rafters, and members supporting non-plaster ceilings under combined loads.</li>
                 <li><strong className="text-slate-800">L/180</strong>: Frequently applied to cantilever beams or steel roof purlins where sagging has fewer cosmetic impacts.</li>
@@ -1062,7 +1062,7 @@ export default function BeamDeflectionClient() {
       </div>
 
       {/* Info Tips */}
-      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4.5 flex gap-3 text-xs text-blue-700 leading-relaxed font-semibold">
+      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4.5 flex gap-3 text-base text-blue-700 leading-relaxed font-semibold">
         <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
         <div>
           <span className="font-extrabold uppercase text-blue-800">AISC Steel Selection Tip:</span> When designing structural members using AISC standards, beam self-weight should be added to the uniformly distributed dead load. The self-weight can be computed by multiplying the cross-sectional area (A) by the density of steel (7850 kg/m³ or 0.00000785 g/mm³).

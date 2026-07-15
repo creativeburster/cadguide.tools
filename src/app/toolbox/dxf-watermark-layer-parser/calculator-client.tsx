@@ -391,7 +391,7 @@ export default function DxfParserClient() {
             <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
               <Layers className="w-6 h-6 text-blue-600" /> CAD File Drag & Drop Inspector
             </h2>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wide">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
               100% Client-side privacy execution sandbox
             </p>
           </div>
@@ -417,7 +417,7 @@ export default function DxfParserClient() {
             {isLoading ? (
               <div className="space-y-4">
                 <RefreshCw className="w-12 h-12 text-blue-600 animate-spin mx-auto" />
-                <p className="text-xs font-black text-slate-500 uppercase tracking-widest">
+                <p className="text-base font-black text-slate-500 uppercase tracking-widest">
                   Parsing DXF tables state indexes...
                 </p>
               </div>
@@ -427,10 +427,10 @@ export default function DxfParserClient() {
                   <FileText className="w-10 h-10 text-slate-400" />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm font-black text-slate-700">
+                  <p className="text-lg font-black text-slate-700">
                     Drag and drop your ASCII .dxf drawing here
                   </p>
-                  <p className="text-xs text-slate-400 font-medium">
+                  <p className="text-base text-slate-400 font-medium">
                     or click to browse local folders
                   </p>
                 </div>
@@ -441,7 +441,7 @@ export default function DxfParserClient() {
             )}
           </div>
 
-          <div className="text-[10px] text-slate-400 font-semibold leading-relaxed border-t border-slate-100 pt-4 flex gap-2">
+          <div className="text-sm text-slate-400 font-semibold leading-relaxed border-t border-slate-100 pt-4 flex gap-2">
             <Info className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             <span>
               <strong>Privacy Protocol</strong>: We use HTML5 File Slicing to only read the DXF file header in your local browser sandbox. No bytes are sent to our servers.
@@ -457,7 +457,7 @@ export default function DxfParserClient() {
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="text-xl font-black text-white">File Audit Certificate</h3>
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+                    <p className="text-sm text-slate-400 font-bold uppercase tracking-wider mt-0.5">
                       Analyzed in {result.scanTimeMs} ms
                     </p>
                   </div>
@@ -472,7 +472,7 @@ export default function DxfParserClient() {
                   )}
                 </div>
 
-                <div className="space-y-3 bg-slate-800/40 p-4.5 rounded-2xl border border-slate-800/80 text-xs font-semibold">
+                <div className="space-y-3 bg-slate-800/40 p-4.5 rounded-2xl border border-slate-800/80 text-base font-semibold">
                   <div className="flex justify-between border-b border-slate-800/50 pb-2">
                     <span className="text-slate-400 font-bold">Filename</span>
                     <span className="text-white truncate max-w-[180px] font-mono">{result.fileName}</span>
@@ -497,7 +497,7 @@ export default function DxfParserClient() {
                     ? 'bg-amber-950/25 border-amber-900/40 text-amber-300' 
                     : 'bg-emerald-950/25 border-emerald-900/40 text-emerald-300'
                 } space-y-2`}>
-                  <div className="flex items-center gap-2 font-black text-sm">
+                  <div className="flex items-center gap-2 font-black text-lg">
                     {result.isEducational ? (
                       <>
                         <AlertCircle className="w-4 h-4" />
@@ -520,10 +520,10 @@ export default function DxfParserClient() {
 
               {result.isEducational && result.detectedSignatures.length > 0 && (
                 <div className="space-y-2">
-                  <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                  <div className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                     Detected Metadata Triggers:
                   </div>
-                  <div className="text-[10px] bg-slate-950/50 p-3 rounded-xl border border-slate-800/80 font-mono text-amber-400 leading-relaxed">
+                  <div className="text-sm bg-slate-950/50 p-3 rounded-xl border border-slate-800/80 font-mono text-amber-400 leading-relaxed">
                     {result.detectedSignatures.map((sig, sIdx) => (
                       <div key={sIdx}>• {sig}</div>
                     ))}
@@ -534,7 +534,7 @@ export default function DxfParserClient() {
           ) : (
             <div className="flex-1 py-16 flex flex-col items-center justify-center text-slate-500 text-center">
               <Shield className="w-12 h-12 stroke-[1.5] text-slate-600 mb-3" />
-              <p className="text-sm font-semibold">Drop or upload a DXF drawing to run diagnostic audit reports</p>
+              <p className="text-lg font-semibold">Drop or upload a DXF drawing to run diagnostic audit reports</p>
             </div>
           )}
         </div>
@@ -557,14 +557,14 @@ export default function DxfParserClient() {
               )}
             </div>
             <div className="space-y-1">
-              <h3 className="text-slate-900 font-black text-base tracking-tight">
+              <h3 className="text-slate-900 font-black text-xl tracking-tight">
                 {isCleaned 
                   ? 'Educational Stamp Successfully Cleaned!' 
                   : !result.detectedSignatures.length 
                   ? 'Drawing Clean & Ready' 
                   : 'Educational Watermark Detected'}
               </h3>
-              <p className="text-xs text-slate-500 max-w-xl leading-relaxed">
+              <p className="text-base text-slate-500 max-w-xl leading-relaxed">
                 {isCleaned 
                   ? `Successfully neutralized ${cleanCount} educational markers in the DXF file. The geometry features, block definitions, and layers have been 100% preserved without structural corruption.`
                   : !result.detectedSignatures.length 
@@ -573,7 +573,7 @@ export default function DxfParserClient() {
               </p>
               
               {isCleaned && (
-                <div className="grid grid-cols-3 gap-4 mt-3 pt-3 border-t border-slate-100 text-[10px] font-mono text-slate-500">
+                <div className="grid grid-cols-3 gap-4 mt-3 pt-3 border-t border-slate-100 text-sm font-mono text-slate-500">
                   <div>• Neutralized points: <span className="text-emerald-600 font-bold font-mono">{cleanCount}</span></div>
                   <div>• Geometry loss: <span className="text-emerald-600 font-bold font-mono">0% (Lossless)</span></div>
                   <div>• Structural integrity: <span className="text-emerald-600 font-bold font-mono">100% Pass</span></div>
@@ -586,19 +586,19 @@ export default function DxfParserClient() {
             {isCleaned ? (
               <button
                 onClick={handleDownloadCleaned}
-                className="w-full md:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm shadow-lg shadow-emerald-100 hover:shadow-emerald-200 transition-all cursor-pointer"
+                className="w-full md:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-lg shadow-lg shadow-emerald-100 hover:shadow-emerald-200 transition-all cursor-pointer"
               >
                 <Download className="w-4 h-4" /> Download Cleaned DXF
               </button>
             ) : !result.detectedSignatures.length ? (
-              <div className="flex items-center gap-1 text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-4 py-2 rounded-xl">
+              <div className="flex items-center gap-1 text-base font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-4 py-2 rounded-xl">
                 <Check className="w-4 h-4" /> Certified Safe
               </div>
             ) : (
               <button
                 onClick={handleCleanWatermark}
                 disabled={isCleaning}
-                className="w-full md:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-black text-sm shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer"
+                className="w-full md:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-black text-lg shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer"
               >
                 {isCleaning ? (
                   <>
@@ -623,7 +623,7 @@ export default function DxfParserClient() {
               <h3 className="text-xl font-black text-slate-900 flex items-center gap-2">
                 <Layers className="w-5 h-5 text-blue-600" /> CAD Layer Audit Ledger
               </h3>
-              <p className="text-xs text-slate-400 font-bold mt-1">
+              <p className="text-base text-slate-400 font-bold mt-1">
                 Showing {filteredLayers.length} of {result.layers.length} parsed drawing layers
               </p>
             </div>
@@ -638,7 +638,7 @@ export default function DxfParserClient() {
                   placeholder="Search layers by name..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-xs font-semibold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-base font-semibold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -653,7 +653,7 @@ export default function DxfParserClient() {
                   <button
                     key={f.id}
                     onClick={() => setLayerFilter(f.id as typeof layerFilter)}
-                    className={`px-3.5 py-1.5 rounded-lg text-[10px] font-black transition-all ${
+                    className={`px-3.5 py-1.5 rounded-lg text-sm font-black transition-all ${
                       layerFilter === f.id ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
                     }`}
                   >
@@ -665,7 +665,7 @@ export default function DxfParserClient() {
               {/* Export CSV trigger */}
               <button
                 onClick={handleExportCsv}
-                className="bg-slate-900 hover:bg-slate-800 text-white font-black text-xs py-2 px-4 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95"
+                className="bg-slate-900 hover:bg-slate-800 text-white font-black text-base py-2 px-4 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95"
               >
                 <Download className="w-3.5 h-3.5" /> CSV Export
               </button>
@@ -674,7 +674,7 @@ export default function DxfParserClient() {
 
           {/* Ledger Table Layout */}
           <div className="overflow-x-auto rounded-2xl border border-slate-100">
-            <table className="w-full border-collapse text-left text-xs font-semibold">
+            <table className="w-full border-collapse text-left text-base font-semibold">
               <thead>
                 <tr className="bg-slate-50 text-slate-400 border-b border-slate-100 uppercase text-[9px] tracking-wider font-black">
                   <th className="py-4 px-6">Layer Name</th>
@@ -736,7 +736,7 @@ export default function DxfParserClient() {
                       <td className="py-4 px-6 text-right">
                         <button
                           onClick={() => handleCopyLispCommand(l.name)}
-                          className="inline-flex items-center gap-1 bg-slate-100 hover:bg-slate-200 text-slate-800 px-3 py-1.5 rounded-lg text-[10px] font-black transition-colors"
+                          className="inline-flex items-center gap-1 bg-slate-100 hover:bg-slate-200 text-slate-800 px-3 py-1.5 rounded-lg text-sm font-black transition-colors"
                           title="Copy Autolisp Freeze layer string"
                         >
                           {copiedLayerIndex === l.name ? (
@@ -773,10 +773,10 @@ export default function DxfParserClient() {
           <AlertTriangle className="w-5 h-5 text-amber-500" /> AutoCAD Educational Plot Stamp Removal Workflow
         </h3>
         
-        <div className="grid md:grid-cols-2 gap-8 text-sm">
+        <div className="grid md:grid-cols-2 gap-8 text-lg">
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">1. Why Educational watermarks contaminate drawings</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 <strong>The Propagation Effect</strong>: If you copy even a single line, block symbol, or layer from a drawing that was created using an educational CAD license into a clean commercial project, the entire project will become infected.
               </p>
@@ -788,7 +788,7 @@ export default function DxfParserClient() {
 
           <div className="space-y-4">
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. Safe, non-destructive cleaning guide</h4>
-            <div className="space-y-3 text-xs text-slate-500 font-semibold leading-relaxed">
+            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
                 Follow this industry standard procedure to clean drawing templates locally without using unsafe third-party executables:
               </p>

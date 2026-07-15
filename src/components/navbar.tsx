@@ -12,10 +12,10 @@ export function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
+    { name: 'Toolbox', href: '/toolbox' },
     { name: 'Directory', href: '/tools' },
     { name: 'Compare', href: '/compare' },
     { name: 'Matchmaker', href: '/matchmaker' },
-    { name: 'Toolbox', href: '/toolbox' },
     { name: 'Deals', href: '/deals' },
     { name: 'Guides', href: '/guides' },
   ];

@@ -172,7 +172,7 @@ export default function SolidWorksShortcutsClient() {
               <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></span>
               <h2 className="text-white font-black text-lg tracking-tight">SolidWorks Mouse gesture dynamic roulette</h2>
             </div>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               Interactive Mouse Gestures Wheel Map
             </p>
           </div>
@@ -180,7 +180,7 @@ export default function SolidWorksShortcutsClient() {
           <div className="flex gap-2">
             <button
               onClick={() => setGestureMode(4)}
-              className={`px-3 py-1.5 rounded-xl border text-xs font-black transition-all cursor-pointer ${
+              className={`px-3 py-1.5 rounded-xl border text-base font-black transition-all cursor-pointer ${
                 gestureMode === 4
                   ? 'bg-blue-500 border-blue-400 text-white'
                   : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
@@ -190,7 +190,7 @@ export default function SolidWorksShortcutsClient() {
             </button>
             <button
               onClick={() => setGestureMode(8)}
-              className={`px-3 py-1.5 rounded-xl border text-xs font-black transition-all cursor-pointer ${
+              className={`px-3 py-1.5 rounded-xl border text-base font-black transition-all cursor-pointer ${
                 gestureMode === 8
                   ? 'bg-blue-500 border-blue-400 text-white'
                   : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
@@ -206,7 +206,7 @@ export default function SolidWorksShortcutsClient() {
           
           {/* Left: Roulette environment switching */}
           <div className="flex flex-col gap-4">
-            <span className="text-xs font-black text-slate-400 uppercase tracking-wider">Choose a gesture work environment</span>
+            <span className="text-base font-black text-slate-400 uppercase tracking-wider">Choose a gesture work environment</span>
             <div className="grid grid-cols-2 gap-3">
               {(['sketch', 'part', 'assembly', 'drawing'] as const).map((env) => {
                 const label = env === 'sketch' ? '📐 Sketch environment': env === 'part' ? '⚙️ Part modeling' : env === 'assembly' ? '🔗 Assembly' : '📝 Drawing';
@@ -217,7 +217,7 @@ export default function SolidWorksShortcutsClient() {
                       setGestureEnv(env);
                       setHoveredGesture(null);
                     }}
-                    className={`py-3 px-4 rounded-2xl border text-sm font-bold text-left transition-all ${
+                    className={`py-3 px-4 rounded-2xl border text-lg font-bold text-left transition-all ${
                       gestureEnv === env
                         ? 'bg-blue-500/10 border-blue-500/30 text-blue-400'
                         : 'bg-slate-950/40 border-slate-800 text-slate-400 hover:bg-slate-800/40'
@@ -229,7 +229,7 @@ export default function SolidWorksShortcutsClient() {
               })}
             </div>
 
-            <div className="bg-slate-950/60 rounded-2xl border border-slate-800/80 p-5 mt-2 flex gap-3 text-xs leading-relaxed text-slate-400">
+            <div className="bg-slate-950/60 rounded-2xl border border-slate-800/80 p-5 mt-2 flex gap-3 text-base leading-relaxed text-slate-400">
               <Compass className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-slate-300">What are mouse gestures? </p>
@@ -473,13 +473,13 @@ export default function SolidWorksShortcutsClient() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search for keys or commands (such as: Ctrl, Rebuild, Line)..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-slate-50/50"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800 bg-slate-50/50"
             />
           </div>
 
           <button
             onClick={handlePrint}
-            className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md transition-all cursor-pointer"
+            className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-lg shadow-md transition-all cursor-pointer"
           >
             <Printer className="w-4 h-4" />
             Print shortcut key list (A4)
@@ -494,7 +494,7 @@ export default function SolidWorksShortcutsClient() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-black border transition-all cursor-pointer ${
+                className={`px-4 py-2 rounded-xl text-base font-black border transition-all cursor-pointer ${
                   activeCategory === cat
                     ? 'bg-slate-900 border-slate-950 text-white font-bold'
                     : 'bg-slate-50/80 border-slate-100 text-slate-600 hover:bg-slate-100'
@@ -508,9 +508,9 @@ export default function SolidWorksShortcutsClient() {
 
         {/* Shortcut key to render table */}
         <div className="overflow-x-auto print:overflow-visible">
-          <table className="w-full text-left border-collapse text-xs font-semibold text-slate-600">
+          <table className="w-full text-left border-collapse text-base font-semibold text-slate-600">
             <thead>
-              <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-[10px] tracking-wider">
+              <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-sm tracking-wider">
                 <th className="py-3 px-4 w-[180px]">Shortcut hotkeys</th>
                 <th className="py-3 px-4 w-[200px]">Trigger command</th>
                 <th className="py-3 px-4">Use function description</th>
@@ -520,11 +520,11 @@ export default function SolidWorksShortcutsClient() {
               {filteredShortcuts.map((item, idx) => (
                 <tr key={idx} className="border-b border-slate-50 hover:bg-slate-50/40 print:hover:bg-transparent">
                   <td className="py-3 px-4">
-                    <span className="font-mono bg-slate-900 text-white px-2.5 py-1 rounded-lg font-black tracking-tight text-[10px] shadow-sm select-all">
+                    <span className="font-mono bg-slate-900 text-white px-2.5 py-1 rounded-lg font-black tracking-tight text-sm shadow-sm select-all">
                       {item.keys}
                     </span>
                   </td>
-                  <td className="py-3 px-4 text-slate-900 font-black text-sm">{item.command}</td>
+                  <td className="py-3 px-4 text-slate-900 font-black text-lg">{item.command}</td>
                   <td className="py-3 px-4 text-slate-500 font-medium leading-relaxed">{item.description}</td>
                 </tr>
 ))}
@@ -582,24 +582,24 @@ export default function SolidWorksShortcutsClient() {
       {/* Geek Productivity Guide Cards */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6 print:hidden">
         <div>
-          <h3 className="text-slate-900 font-black text-base tracking-tight flex items-center gap-2">
+          <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-blue-500 animate-pulse" />
             SolidWorks Advanced efficiency tips
           </h3>
-          <p className="text-xs text-slate-400 mt-1 uppercase tracking-wide">
+          <p className="text-base text-slate-400 mt-1 uppercase tracking-wide">
             SolidWorks Advanced Productivity Strategies Guide
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs leading-relaxed text-slate-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base leading-relaxed text-slate-500">
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5">1. The perfect combination of mouse gestures and shortcut toolbar</h4>
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5">1. The perfect combination of mouse gestures and shortcut toolbar</h4>
             <p>
               In SolidWorks, It is strongly recommended to configure mouse gestures to 8 directions, and put the most frequent &quot;draw straight line&quot;&quot;, &quot;Circle&quot;, &quot;Smart Size&quot;, &quot;Crop&quot; and&quot;face up to &quot;put it in&quot;. Incorporate less frequent but critical construction tools such as Stretch, cut off, stake out, datum) put in <b>`S Key Shortcut Panel`</b> Medium. In this way, when you are designing, you can right-drag with the right mouse to complete the sketch., Just press the S key with your left hand to generate a three-dimensional body with one click, Realize that &quot;both hands do not leave the center of gravity of the keyboard and mouse&quot;&quot;Extremely fast experience. 
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-800 text-sm mb-1.5">2. Forced rebuild (Ctrl+Q) vs. normal rebuild (Ctrl+B) The difference</h4>
+            <h4 className="font-bold text-slate-800 text-lg mb-1.5">2. Forced rebuild (Ctrl+Q) vs. normal rebuild (Ctrl+B) The difference</h4>
             <p>
               Regular Rebuild (Ctrl+B) rebuilds the generated solid only on the currently modified sketch feature, Although the calculation speed is fast, when there are many assembly relationships,, It is easy to cause coordination errors or some sketch relationships cannot be updated. And<b>Forced rebuild (Ctrl+Q) </b>clears the memory cache directly, Starting from the topmost plane of the FeatureManager feature tree, Decompile and rebuild the chassis line by line for all assembly primitives and geometric constraints. Whenever the dimensions are changed but the entity remains unchanged, Or if the assembly drawing is missing, press Ctrl+Q It is the most direct and thorough self-healing command. 
             </p>

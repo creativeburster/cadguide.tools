@@ -76,9 +76,9 @@ export default function SectionModulusClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Section Type</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Section Type</label>
             <select value={section} onChange={e => setSection(e.target.value as SectionType)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {SECTIONS.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
             </select>
           </div>
@@ -86,39 +86,39 @@ export default function SectionModulusClient() {
           {(section === 'rect' || section === 'box' || section === 'ibeam') && (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Width B (mm)</label>
-                <input type="number" value={b} onChange={e => setB(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Width B (mm)</label>
+                <input type="number" value={b} onChange={e => setB(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Height H (mm)</label>
-                <input type="number" value={h} onChange={e => setH(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Height H (mm)</label>
+                <input type="number" value={h} onChange={e => setH(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
 
           {(section === 'circular' || section === 'tube') && (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Outer Diameter D (mm)</label>
-              <input type="number" value={d} onChange={e => setD(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Outer Diameter D (mm)</label>
+              <input type="number" value={d} onChange={e => setD(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
             </div>
           )}
 
           {(section === 'tube' || section === 'box') && (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Wall Thickness tw (mm)</label>
-              <input type="number" value={tw} onChange={e => setTw(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Wall Thickness tw (mm)</label>
+              <input type="number" value={tw} onChange={e => setTw(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
             </div>
           )}
 
           {section === 'ibeam' && (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Web Thickness tw (mm)</label>
-                <input type="number" value={tw} onChange={e => setTw(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Web Thickness tw (mm)</label>
+                <input type="number" value={tw} onChange={e => setTw(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Flange Thickness tf (mm)</label>
-                <input type="number" value={tf} onChange={e => setTf(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Flange Thickness tf (mm)</label>
+                <input type="number" value={tf} onChange={e => setTf(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
@@ -130,38 +130,38 @@ export default function SectionModulusClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-cyan-50 rounded-2xl p-6 border border-cyan-100">
-                <div className="text-xs font-black text-cyan-400 uppercase tracking-wider mb-2">Moment of Inertia Ix</div>
-                <div className="text-2xl font-black text-cyan-700">{(result.Ix / 1e4).toFixed(2)}<span className="text-base text-cyan-400"> ×10⁴ mm⁴</span></div>
-                <div className="text-xs text-cyan-600 font-medium mt-1">{(result.Ix / 1e6).toFixed(4)} cm⁴</div>
+                <div className="text-base font-black text-cyan-400 uppercase tracking-wider mb-2">Moment of Inertia Ix</div>
+                <div className="text-2xl font-black text-cyan-700">{(result.Ix / 1e4).toFixed(2)}<span className="text-xl text-cyan-400"> ×10⁴ mm⁴</span></div>
+                <div className="text-base text-cyan-600 font-medium mt-1">{(result.Ix / 1e6).toFixed(4)} cm⁴</div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Section Modulus Wx</div>
-                <div className="text-2xl font-black text-blue-700">{(result.Wx / 1e3).toFixed(2)}<span className="text-base text-blue-400"> ×10³ mm³</span></div>
-                <div className="text-xs text-blue-600 font-medium mt-1">{(result.Wx / 1e3).toFixed(2)} cm³</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Section Modulus Wx</div>
+                <div className="text-2xl font-black text-blue-700">{(result.Wx / 1e3).toFixed(2)}<span className="text-xl text-blue-400"> ×10³ mm³</span></div>
+                <div className="text-base text-blue-600 font-medium mt-1">{(result.Wx / 1e3).toFixed(2)} cm³</div>
               </div>
             </div>
 
             <div className="mt-4 grid grid-cols-4 gap-3">
               <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Iy</div>
-                <div className="text-base font-black text-slate-700">{(result.Iy / 1e4).toFixed(2)}×10⁴</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Iy</div>
+                <div className="text-xl font-black text-slate-700">{(result.Iy / 1e4).toFixed(2)}×10⁴</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Wy</div>
-                <div className="text-base font-black text-slate-700">{(result.Wy / 1e3).toFixed(2)}×10³</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Wy</div>
+                <div className="text-xl font-black text-slate-700">{(result.Wy / 1e3).toFixed(2)}×10³</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Area</div>
-                <div className="text-base font-black text-slate-700">{result.A.toFixed(0)} mm²</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Area</div>
+                <div className="text-xl font-black text-slate-700">{result.A.toFixed(0)} mm²</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">rx (gyr.)</div>
-                <div className="text-base font-black text-slate-700">{result.rx.toFixed(2)} mm</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">rx (gyr.)</div>
+                <div className="text-xl font-black text-slate-700">{result.rx.toFixed(2)} mm</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'Rect: I = BH³/12, W = BH²/6. Circle: I = πD⁴/64, W = πD³/32. Tube: I = π(D⁴-d⁴)/64. I-beam: I = [BH³ - (B-tw)(H-2tf)³]/12. Section modulus W = I/(H/2). Bending stress σ = M/W.'}
               </div>

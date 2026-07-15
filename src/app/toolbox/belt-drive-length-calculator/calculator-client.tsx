@@ -99,37 +99,37 @@ export default function BeltDriveClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Solve For</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Solve For</label>
             <div className="grid grid-cols-2 gap-2">
-              <button onClick={() => setMode('beltLength')} className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${mode === 'beltLength' ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>Belt Length</button>
-              <button onClick={() => setMode('centerDistance')} className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${mode === 'centerDistance' ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>Center Dist</button>
+              <button onClick={() => setMode('beltLength')} className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${mode === 'beltLength' ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>Belt Length</button>
+              <button onClick={() => setMode('centerDistance')} className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${mode === 'centerDistance' ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>Center Dist</button>
             </div>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Driver Pulley D₁ (mm)</label>
-            <input type="number" step="5" value={d1} onChange={e => setD1(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Driver Pulley D₁ (mm)</label>
+            <input type="number" step="5" value={d1} onChange={e => setD1(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Driven Pulley D₂ (mm)</label>
-            <input type="number" step="5" value={d2} onChange={e => setD2(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Driven Pulley D₂ (mm)</label>
+            <input type="number" step="5" value={d2} onChange={e => setD2(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Input RPM</label>
-            <input type="number" step="10" value={inputRPM} onChange={e => setInputRPM(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Input RPM</label>
+            <input type="number" step="10" value={inputRPM} onChange={e => setInputRPM(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           {mode === 'beltLength' ? (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Center Distance C (mm)</label>
-              <input type="number" step="10" value={centerDist} onChange={e => setCenterDist(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Center Distance C (mm)</label>
+              <input type="number" step="10" value={centerDist} onChange={e => setCenterDist(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
             </div>
           ) : (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Belt Length L (mm)</label>
-              <input type="number" step="10" value={beltLength} onChange={e => setBeltLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Belt Length L (mm)</label>
+              <input type="number" step="10" value={beltLength} onChange={e => setBeltLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
             </div>
           )}
         </div>
@@ -138,7 +138,7 @@ export default function BeltDriveClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Results</h2>
-              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
+              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
                 <Download className="w-4 h-4" />
                 Export CSV
               </button>
@@ -146,13 +146,13 @@ export default function BeltDriveClient() {
 
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 p-6 text-white">
-                <p className="text-[10px] font-black uppercase tracking-wider opacity-80 mb-1">{mode === 'beltLength' ? 'Belt Length' : 'Center Distance'}</p>
-                <p className="text-3xl font-black">{mode === 'beltLength' ? results.beltLength : results.centerDistance}<span className="text-sm font-bold ml-2 opacity-80">mm</span></p>
+                <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">{mode === 'beltLength' ? 'Belt Length' : 'Center Distance'}</p>
+                <p className="text-3xl font-black">{mode === 'beltLength' ? results.beltLength : results.centerDistance}<span className="text-lg font-bold ml-2 opacity-80">mm</span></p>
               </div>
               <div className="rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-6 text-white">
-                <p className="text-[10px] font-black uppercase tracking-wider opacity-80 mb-1">Output RPM</p>
-                <p className="text-3xl font-black">{results.outputRPM}<span className="text-sm font-bold ml-2 opacity-80">RPM</span></p>
-                <p className="text-[10px] mt-2 opacity-70">Ratio {results.speedRatio}:1</p>
+                <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">Output RPM</p>
+                <p className="text-3xl font-black">{results.outputRPM}<span className="text-lg font-bold ml-2 opacity-80">RPM</span></p>
+                <p className="text-sm mt-2 opacity-70">Ratio {results.speedRatio}:1</p>
               </div>
             </div>
 
@@ -163,8 +163,8 @@ export default function BeltDriveClient() {
                 { label: 'Driven Wrap', value: results.drivenWrap, unit: '°' },
               ].map(item => (
                 <div key={item.label} className="rounded-2xl bg-slate-50 border border-slate-100 p-4">
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
-                  <p className="text-lg font-black text-slate-900">{item.value}<span className="text-xs text-slate-400 font-bold ml-1">{item.unit}</span></p>
+                  <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
+                  <p className="text-lg font-black text-slate-900">{item.value}<span className="text-base text-slate-400 font-bold ml-1">{item.unit}</span></p>
                 </div>
               ))}
             </div>
@@ -172,17 +172,17 @@ export default function BeltDriveClient() {
 
           {/* SVG Pulley Diagram */}
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-4">Pulley Layout</h3>
+            <h3 className="text-lg font-black text-slate-900 mb-4">Pulley Layout</h3>
             <svg viewBox="0 0 500 200" className="w-full">
               {/* Driver pulley */}
               <circle cx="100" cy="100" r={Math.min(d1 / 4, 50)} fill="none" stroke="#3b82f6" strokeWidth="2" />
               <circle cx="100" cy="100" r="3" fill="#3b82f6" />
-              <text x="100" y="170" className="fill-blue-600 text-[10px] font-bold text-center">D₁={d1}mm</text>
+              <text x="100" y="170" className="fill-blue-600 text-sm font-bold text-center">D₁={d1}mm</text>
               <text x="100" y="185" className="fill-slate-400 text-[8px] text-center">{inputRPM} RPM</text>
               {/* Driven pulley */}
               <circle cx="400" cy="100" r={Math.min(d2 / 4, 50)} fill="none" stroke="#10b981" strokeWidth="2" />
               <circle cx="400" cy="100" r="3" fill="#10b981" />
-              <text x="400" y="170" className="fill-emerald-600 text-[10px] font-bold text-center">D₂={d2}mm</text>
+              <text x="400" y="170" className="fill-emerald-600 text-sm font-bold text-center">D₂={d2}mm</text>
               <text x="400" y="185" className="fill-slate-400 text-[8px] text-center">{results.outputRPM} RPM</text>
               {/* Belt lines (simplified as tangent lines) */}
               <line x1={100 + Math.min(d1 / 4, 50)} y1="100" x2={400 + Math.min(d2 / 4, 50)} y2="100" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="4 2" />

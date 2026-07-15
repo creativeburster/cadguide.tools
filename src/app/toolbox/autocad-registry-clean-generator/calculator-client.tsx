@@ -150,11 +150,11 @@ pause`;
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
               <h2 className="text-white font-black text-lg tracking-tight">Windows Deploy console emulation</h2>
             </div>
-            <p className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">
+            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               CMD Batch Reset Execution Simulation
             </p>
           </div>
-          <div className="px-3 py-1 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-black">
+          <div className="px-3 py-1 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-base font-black">
             BAT Script compiler
           </div>
         </div>
@@ -202,19 +202,19 @@ pause`;
         {/* Left: Visual configuration parameter panel */}
         <div className="lg:col-span-1 flex flex-col gap-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-5">
-            <h3 className="text-slate-800 font-black text-base tracking-tight flex items-center gap-2">
+            <h3 className="text-slate-800 font-black text-xl tracking-tight flex items-center gap-2">
               <Settings className="w-4 h-4 text-blue-500" />
               Custom reset configuration
             </h3>
             
             {/* Version Select */}
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="cadVersion" className="text-xs font-black text-slate-500 uppercase">Target CAD software version</label>
+              <label htmlFor="cadVersion" className="text-base font-black text-slate-500 uppercase">Target CAD software version</label>
               <select
                 id="cadVersion"
                 value={versionIdx}
                 onChange={(e) => setVersionIdx(Number(e.target.value))}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-white"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800 bg-white"
               >
                 {CAD_VERSIONS.map((ver, idx) => (
                   <option key={ver.label} value={idx}>{ver.label}</option>
@@ -226,7 +226,7 @@ pause`;
 
             {/* Checkbox Options */}
             <div className="flex flex-col gap-3">
-              <span className="text-xs font-black text-slate-400 uppercase tracking-wider">Select Reset Cleanup Scope</span>
+              <span className="text-base font-black text-slate-400 uppercase tracking-wider">Select Reset Cleanup Scope</span>
 
               {/* Option 1: HKCU */}
               <label className="flex items-start gap-3 cursor-pointer">
@@ -236,7 +236,7 @@ pause`;
                   onChange={(e) => setCleanHkcu(e.target.checked)}
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
-                <div className="text-xs">
+                <div className="text-base">
                   <span className="font-bold text-slate-700 block">User Personalization Configuration Registry (HKCU)</span>
                   <span className="text-slate-400">Reset layout, window size, Customized shortcut keys and other user settings. </span>
                 </div>
@@ -250,7 +250,7 @@ pause`;
                   onChange={(e) => setCleanHklm(e.target.checked)}
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
-                <div className="text-xs">
+                <div className="text-base">
                   <span className="font-bold text-slate-700 block">System Global Environment Registry (HKLM)</span>
                   <span className="text-slate-400">Clean up the installation path remnants. Note: Administrator status is required to execute this script. </span>
                 </div>
@@ -264,7 +264,7 @@ pause`;
                   onChange={(e) => setCleanAppData(e.target.checked)}
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
-                <div className="text-xs">
+                <div className="text-base">
                   <span className="font-bold text-slate-700 block">Local configuration cache folder (AppData)</span>
                   <span className="text-slate-400">Clean Roaming and Local Corrupted CAD user cache folder in directory. </span>
                 </div>
@@ -278,7 +278,7 @@ pause`;
                   onChange={(e) => setCleanFlexlm(e.target.checked)}
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
-                <div className="text-xs">
+                <div className="text-base">
                   <span className="font-bold text-red-500 block">FLEXnet License activation cache (reset license)</span>
                   <span className="text-slate-400">When encountering &quot;License verification failed&quot;If reinstallation still prompts an activation error, check the box and clear the local license lock.. </span>
                 </div>
@@ -292,7 +292,7 @@ pause`;
                   onChange={(e) => setCleanTemp(e.target.checked)}
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
-                <div className="text-xs">
+                <div className="text-base">
                   <span className="font-bold text-slate-700 block">Windows System Temp temporary directory</span>
                   <span className="text-slate-400">Clean up excess left over from the CAD run that was not automatically erased `.tmp` Temporary files. </span>
                 </div>
@@ -308,14 +308,14 @@ pause`;
             <div className="flex flex-col gap-5">
               <div>
                 <h3 className="text-slate-900 font-black text-xl tracking-tight">Reset script code viewing and generation</h3>
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-base text-slate-400 mt-1">
                   Automatically assembled secure batch commands can be found at Windows Double-click or execute silently. 
                 </p>
               </div>
 
               {/* Batch Code viewer */}
-              <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-xs flex flex-col gap-4">
-                <div className="flex justify-between items-center text-[10px] text-slate-500">
+              <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4">
+                <div className="flex justify-between items-center text-sm text-slate-500">
                   <span className="flex items-center gap-1"><FileCode className="w-3.5 h-3.5" /> reset_autocad.bat Source code</span>
                   <div className="flex items-center gap-3">
                     <button
@@ -334,7 +334,7 @@ pause`;
                     </button>
                   </div>
                 </div>
-                <div className="max-h-[160px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-[10px]">
+                <div className="max-h-[160px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-sm">
                   <pre className="whitespace-pre">{generatedBatchScript}</pre>
                 </div>
               </div>
@@ -342,7 +342,7 @@ pause`;
               {/* Use Safety Warning Manual */}
               <div className="bg-amber-50 rounded-2xl border border-amber-100 p-5 flex gap-3 text-amber-900">
                 <ShieldCheck className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                <div className="text-xs leading-relaxed">
+                <div className="text-base leading-relaxed">
                   <p className="font-black text-slate-800 mb-1">Use safety guidelines: </p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-slate-600 font-medium">
                     <li><b>Safe backup first</b>: This script before starting the cleanup, A folder named <span className="font-mono bg-amber-100 px-1 rounded font-black">CAD_Registry_Backup</span> will be generated on your desktop, Export the old registry keys for backup. If you need to restore the configuration, Just double-click the `.reg` file in the folder and re-write it.. </li>

@@ -109,13 +109,13 @@ Generated via CADGuide.tools`;
 
         {/* Bolt size selection */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             1. Bolt Size
           </label>
           <select
             value={boltIdx}
             onChange={(e) => setBoltIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {BOLT_SIZES.map((b, i) => (
               <option key={b.name} value={i}>
@@ -130,13 +130,13 @@ Generated via CADGuide.tools`;
 
         {/* Strength Class */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             2. Bolt Grade
           </label>
           <select
             value={gradeIdx}
             onChange={(e) => setGradeIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {BOLT_GRADES.map((g, i) => (
               <option key={g.name} value={i}>
@@ -151,13 +151,13 @@ Generated via CADGuide.tools`;
 
         {/* Friction / Surface condition */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             3. Assembly surface friction condition (Friction Condition)
           </label>
           <select
             value={frictionIdx}
             onChange={(e) => setFrictionIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {FRICTION_COEFFICIENTS.map((f, i) => (
               <option key={f.name} value={i}>
@@ -172,7 +172,7 @@ Generated via CADGuide.tools`;
 
         {/* Preload ratio */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">4. Set tension ratio (Preload Rate)</span>
             <span className={`${isYieldDanger ? 'text-red-400' : (isYieldWarning ? 'text-amber-400' : 'text-blue-400')} font-mono`}>
               {preloadRatio}% (Yield limit)
@@ -187,7 +187,7 @@ Generated via CADGuide.tools`;
             onChange={(e) => setPreloadRatio(Number(e.target.value))}
             className="w-full h-1.5 bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-500 print:hidden"
           />
-          <p className="text-[10px] text-slate-500">
+          <p className="text-sm text-slate-500">
             * Mechanical engineering industry standard installation recommendations are 70% to 85% yield limit. 
           </p>
         </div>
@@ -204,7 +204,7 @@ Generated via CADGuide.tools`;
             </h3>
             <button
               onClick={copyToClipboard}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
+              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-base font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
               <span>{copied ? 'Copied' : 'Copy data'}</span>
@@ -213,11 +213,11 @@ Generated via CADGuide.tools`;
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Target tightening torque (Torque T)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
-                {results.torque.toFixed(2)} <span className="text-xs text-slate-500 font-sans">N·m</span>
+                {results.torque.toFixed(2)} <span className="text-base text-slate-500 font-sans">N·m</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Torque wrench setting target value
@@ -225,11 +225,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Required preload force (Preload Force F)
               </span>
               <div className="text-2xl font-black font-mono text-slate-800">
-                {results.preloadForce.toFixed(2)} <span className="text-xs text-slate-500 font-sans">kN</span>
+                {results.preloadForce.toFixed(2)} <span className="text-base text-slate-500 font-sans">kN</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Bolt tension tensile force
@@ -237,11 +237,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 ultimate yield bearing capacity
               </span>
               <div className="text-2xl font-black font-mono text-slate-700">
-                {results.yieldLoad.toFixed(1)} <span className="text-xs text-slate-500 font-sans">kN</span>
+                {results.yieldLoad.toFixed(1)} <span className="text-base text-slate-500 font-sans">kN</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Material tensile yield threshold
@@ -251,7 +251,7 @@ Generated via CADGuide.tools`;
 
           {/* Yield warnings */}
           {isYieldDanger && (
-            <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
+            <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-base">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
                 <strong className="font-black">Bolt Yield Danger! </strong>
@@ -263,7 +263,7 @@ Generated via CADGuide.tools`;
 )}
 
           {isYieldWarning && !isYieldDanger && (
-            <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-xs">
+            <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-base">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
                 <strong className="font-black">Critical Overload Warning (Overload Risk)</strong>
@@ -278,7 +278,7 @@ Generated via CADGuide.tools`;
         {/* Bolt stress visualizer */}
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
+            <span className="text-sm font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
               Fastening pair force tensile simulator
             </span>
           </div>
@@ -338,7 +338,7 @@ Generated via CADGuide.tools`;
             </svg>
           </div>
 
-          <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-650">
+          <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-650">
             * Simulation description: The tension arrow represents the tension pre-tightening inside the bolt.. The blue/orange rod in the middle of the bolt changes with the slider to simulate real metal tensile elongation.. When entering the limit area of more than 90%, The member is drawn with a pronounced tapering (necking simulation) To warn of the risk of plastic damage. 
           </p>
         </div>

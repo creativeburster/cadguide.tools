@@ -62,9 +62,9 @@ export default function FatigueLifeClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
             <select value={matIdx} onChange={e => setMatIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {MATERIALS.map((m, i) => <option key={i} value={i}>{m.name}</option>)}
             </select>
           </div>
@@ -72,25 +72,25 @@ export default function FatigueLifeClient() {
           {matIdx === 6 && (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Ultimate Strength Sut (MPa)</label>
-                <input type="number" value={customSut} onChange={e => setCustomSut(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Ultimate Strength Sut (MPa)</label>
+                <input type="number" value={customSut} onChange={e => setCustomSut(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Endurance Limit Se (MPa)</label>
-                <input type="number" value={customSe} onChange={e => setCustomSe(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Endurance Limit Se (MPa)</label>
+                <input type="number" value={customSe} onChange={e => setCustomSe(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Stress Amplitude Sa (MPa)</label>
-            <input type="number" value={stressAmp} onChange={e => setStressAmp(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Stress Amplitude Sa (MPa)</label>
+            <input type="number" value={stressAmp} onChange={e => setStressAmp(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Surface Finish Factor</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Surface Finish Factor</label>
             <select value={surfaceFactor} onChange={e => setSurfaceFactor(parseFloat(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               <option value={1.0}>1.0 — Mirror polished</option>
               <option value={0.9}>0.9 — Ground</option>
               <option value={0.85}>0.85 — Machined</option>
@@ -100,8 +100,8 @@ export default function FatigueLifeClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Size Factor</label>
-            <input type="number" step="0.05" value={sizeFactor} onChange={e => setSizeFactor(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Size Factor</label>
+            <input type="number" step="0.05" value={sizeFactor} onChange={e => setSizeFactor(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -115,31 +115,31 @@ export default function FatigueLifeClient() {
             </div>
 
             <div className={`rounded-2xl p-6 border mb-4 ${result.infinite ? 'bg-green-50 border-green-100' : 'bg-red-50 border-red-100'}`}>
-              <div className={`text-xs font-black uppercase tracking-wider mb-2 ${result.infinite ? 'text-green-400' : 'text-red-400'}`}>Fatigue Life</div>
+              <div className={`text-base font-black uppercase tracking-wider mb-2 ${result.infinite ? 'text-green-400' : 'text-red-400'}`}>Fatigue Life</div>
               <div className={`text-4xl font-black ${result.infinite ? 'text-green-700' : 'text-red-700'}`}>
                 {result.infinite ? '∞' : result.N >= 1e6 ? `${(result.N / 1e6).toFixed(2)}M` : result.N >= 1e3 ? `${(result.N / 1e3).toFixed(1)}k` : result.N.toFixed(0)}
                 {!result.infinite && <span className="text-lg"> cycles</span>}
               </div>
-              <div className={`text-sm font-black mt-2 ${result.infinite ? 'text-green-600' : 'text-red-600'}`}>{result.status}</div>
+              <div className={`text-lg font-black mt-2 ${result.infinite ? 'text-green-600' : 'text-red-600'}`}>{result.status}</div>
             </div>
 
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Endurance Limit</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Endurance Limit</div>
                 <div className="text-lg font-black text-slate-700">{result.Se.toFixed(0)} MPa</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Ultimate Strength</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Ultimate Strength</div>
                 <div className="text-lg font-black text-slate-700">{result.Sut} MPa</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Stress Ratio</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Stress Ratio</div>
                 <div className="text-lg font-black text-slate-700">{(result.Sa / result.Se).toFixed(2)}</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'Basquin equation: Sa = a × N^b, where a = Sut²/Se, b = -0.085. Steel has endurance limit (infinite life below Se). Aluminum has NO endurance limit — always finite life. Surface and size factors reduce Se.'}
               </div>

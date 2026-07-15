@@ -154,13 +154,13 @@ Generated via CADGuide.tools`;
 
         {/* G Modulus Preset */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             1. Spring wire material modulus (Wire Material)
           </label>
           <select
             value={materialIdx}
             onChange={(e) => setMaterialIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {SPRING_MATERIALS.map((sm, i) => (
               <option key={sm.name} value={i}>
@@ -175,7 +175,7 @@ Generated via CADGuide.tools`;
 
         {/* Wire Diameter */}
         <div className="space-y-2.5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">2. Wire Diam. d</span>
             <span className="text-blue-400 font-mono">{wireDiameter} mm</span>
           </div>
@@ -192,7 +192,7 @@ Generated via CADGuide.tools`;
 
         {/* Outer Diameter */}
         <div className="space-y-2.5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">3. Spring outer diameter (Outer Diam. D_out)</span>
             <span className="text-blue-400 font-mono">{outerDiameter} mm</span>
           </div>
@@ -209,7 +209,7 @@ Generated via CADGuide.tools`;
 
         {/* Active Coils */}
         <div className="space-y-2.5 border-t border-slate-800/80 pt-4">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">4. Effective number of spring coils (Coils n)</span>
             <span className="text-blue-400 font-mono">{activeCoils} circle</span>
           </div>
@@ -226,7 +226,7 @@ Generated via CADGuide.tools`;
 
         {/* Free Height */}
         <div className="space-y-2.5 border-t border-slate-800/80 pt-4">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">5. Spring Free Height (Free Height Hf)</span>
             <span className="text-blue-400 font-mono">{freeHeight} mm</span>
           </div>
@@ -243,7 +243,7 @@ Generated via CADGuide.tools`;
 
         {/* Deflection displacement */}
         <div className="space-y-2.5 border-t border-slate-800/80 pt-4">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">6. Assembly compression displacement (Deflection s)</span>
             <span className="text-amber-400 font-mono">{deflection} mm</span>
           </div>
@@ -270,7 +270,7 @@ Generated via CADGuide.tools`;
             </h3>
             <button
               onClick={copyToClipboard}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
+              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-base font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
               <span>{copied ? 'Copied' : 'Copy report'}</span>
@@ -279,11 +279,11 @@ Generated via CADGuide.tools`;
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Compression elastic recovery (Load Force)
               </span>
               <div className="text-2xl font-black font-mono text-blue-600">
-                {spring.force.toFixed(2)} <span className="text-xs text-slate-500 font-sans">N</span>
+                {spring.force.toFixed(2)} <span className="text-base text-slate-500 font-sans">N</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Equivalent to: {(spring.force / 9.81).toFixed(2)} kg gravity
@@ -291,11 +291,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Spring stiffness coefficient (Stiffness)
               </span>
               <div className="text-2xl font-black font-mono text-slate-800">
-                {spring.rate.toFixed(3)} <span className="text-xs text-slate-500 font-sans">N/mm</span>
+                {spring.rate.toFixed(3)} <span className="text-base text-slate-500 font-sans">N/mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Required force for each 1mm press
@@ -303,11 +303,11 @@ Generated via CADGuide.tools`;
             </div>
 
             <div className="space-y-1 col-span-2 md:col-span-1">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Solid Height
               </span>
               <div className="text-2xl font-black font-mono text-slate-700">
-                {spring.solidHeight.toFixed(1)} <span className="text-xs text-slate-500 font-sans">mm</span>
+                {spring.solidHeight.toFixed(1)} <span className="text-base text-slate-500 font-sans">mm</span>
               </div>
               <p className="text-[9px] text-slate-400">
                 Limit displacement: {spring.maxDeflection.toFixed(1)} mm
@@ -317,7 +317,7 @@ Generated via CADGuide.tools`;
 
           {/* Indices warnings */}
           {isSolidExceeded && (
-            <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-xs">
+            <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-base">
               <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
               <div>
                 <strong className="font-black">Spring completely compacted failure (Solid Height Reached)! </strong>
@@ -329,7 +329,7 @@ Generated via CADGuide.tools`;
 )}
 
           {isIndexWarn && (
-            <div className="flex gap-3 bg-amber-50 border border-amber-250 p-4 rounded-2xl text-amber-800 text-xs">
+            <div className="flex gap-3 bg-amber-50 border border-amber-250 p-4 rounded-2xl text-amber-800 text-base">
               <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
               <div>
                 <strong className="font-black">Spring Index Warning</strong>
@@ -346,7 +346,7 @@ Generated via CADGuide.tools`;
         {/* Dynamic Spring SVG */}
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
+            <span className="text-sm font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
               Physical spring compression geometry section preview (Deflection Simulator)
             </span>
           </div>
@@ -388,7 +388,7 @@ Generated via CADGuide.tools`;
             </svg>
           </div>
 
-          <p className="text-[10px] text-slate-400 leading-relaxed mt-4 print:text-slate-655">
+          <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-655">
             * Physical simulation: The spring spiral is recalculated in real time based on the relationship between free height and actual displacement.. The physical gathering of the circle distance vividly demonstrates the enrichment of stiffness reaction and stress. When the stress exceeds the limit, The wire spiral is red (safety hazard area) . 
           </p>
         </div>

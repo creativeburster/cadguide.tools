@@ -38,31 +38,31 @@ export default function BendAllowanceClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Material Thickness (mm)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material Thickness (mm)</label>
             <input type="number" step="0.1" value={thickness} onChange={e => setThickness(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Bend Radius (mm)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Bend Radius (mm)</label>
             <input type="number" step="0.1" value={bendRadius} onChange={e => setBendRadius(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Bend Angle (°)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Bend Angle (°)</label>
             <input type="number" value={bendAngle} onChange={e => setBendAngle(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">K-Factor</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">K-Factor</label>
             <input type="number" step="0.01" value={kFactor} onChange={e => setKFactor(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
             <div className="mt-2 flex flex-wrap gap-1.5">
               {[0.30, 0.33, 0.40, 0.42, 0.45].map(k => (
                 <button key={k} onClick={() => setKFactor(k)}
-                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-50 text-slate-500 hover:bg-orange-50 hover:text-orange-600 border border-slate-100 transition-all">
+                  className="px-2.5 py-1 rounded-lg text-sm font-bold bg-slate-50 text-slate-500 hover:bg-orange-50 hover:text-orange-600 border border-slate-100 transition-all">
                   {k}
                 </button>
               ))}
@@ -70,15 +70,15 @@ export default function BendAllowanceClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Flange 1 Length (mm)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Flange 1 Length (mm)</label>
             <input type="number" value={flange1} onChange={e => setFlange1(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Flange 2 Length (mm)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Flange 2 Length (mm)</label>
             <input type="number" value={flange2} onChange={e => setFlange2(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -88,30 +88,30 @@ export default function BendAllowanceClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-2">Bend Allowance</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Bend Allowance</div>
                 <div className="text-3xl font-black text-orange-700">{result.bendAllowance.toFixed(3)}<span className="text-lg text-orange-400"> mm</span></div>
-                <div className="text-xs text-orange-600 font-medium mt-1">BA = A × (R + K×T)</div>
+                <div className="text-base text-orange-600 font-medium mt-1">BA = A × (R + K×T)</div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Bend Deduction</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Bend Deduction</div>
                 <div className="text-3xl font-black text-blue-700">{result.bendDeduction.toFixed(3)}<span className="text-lg text-blue-400"> mm</span></div>
-                <div className="text-xs text-blue-600 font-medium mt-1">BD = 2×OSSB×tan(A/2) − BA</div>
+                <div className="text-base text-blue-600 font-medium mt-1">BD = 2×OSSB×tan(A/2) − BA</div>
               </div>
             </div>
 
             <div className="mt-4 grid grid-cols-2 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Outside Setback (OSSB)</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Outside Setback (OSSB)</div>
                 <div className="text-xl font-black text-slate-700">{result.outsideSetback.toFixed(2)} mm</div>
               </div>
               <div className="bg-green-50 rounded-xl p-4 border border-green-100">
-                <div className="text-xs font-black text-green-400 uppercase mb-1">Flat Pattern Length</div>
+                <div className="text-base font-black text-green-400 uppercase mb-1">Flat Pattern Length</div>
                 <div className="text-xl font-black text-green-700">{result.flatLength.toFixed(2)} mm</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 K-Factor: 0.30 for air bending soft materials, 0.33 for typical, 0.40-0.45 for bottoming/coining. BA = angle × (R + K×T). BD = 2×OSSB×tan(A/2) − BA. Flat = Flange1 + Flange2 − BD.
               </div>

@@ -50,9 +50,9 @@ export default function ReynoldsClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Fluid</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Fluid</label>
             <select value={fluidIdx} onChange={e => setFluidIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {FLUIDS.map((f, i) => <option key={i} value={i}>{f.name}</option>)}
             </select>
           </div>
@@ -60,24 +60,24 @@ export default function ReynoldsClient() {
           {fluidIdx === 5 && (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Density ρ (kg/m³)</label>
-                <input type="number" value={customRho} onChange={e => setCustomRho(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Density ρ (kg/m³)</label>
+                <input type="number" value={customRho} onChange={e => setCustomRho(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Dynamic Viscosity μ (Pa·s)</label>
-                <input type="number" step="0.0001" value={customMu} onChange={e => setCustomMu(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Dynamic Viscosity μ (Pa·s)</label>
+                <input type="number" step="0.0001" value={customMu} onChange={e => setCustomMu(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Flow Velocity (m/s)</label>
-            <input type="number" step="0.1" value={velocity} onChange={e => setVelocity(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Flow Velocity (m/s)</label>
+            <input type="number" step="0.1" value={velocity} onChange={e => setVelocity(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Diameter (m)</label>
-            <input type="number" step="0.001" value={diameter} onChange={e => setDiameter(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Diameter (m)</label>
+            <input type="number" step="0.001" value={diameter} onChange={e => setDiameter(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
         </div>
 
@@ -95,7 +95,7 @@ export default function ReynoldsClient() {
               result.color === 'orange' ? 'bg-orange-50 border-orange-100' :
               'bg-red-50 border-red-100'
             }`}>
-              <div className={`text-xs font-black uppercase tracking-wider mb-2 ${
+              <div className={`text-base font-black uppercase tracking-wider mb-2 ${
                 result.color === 'blue' ? 'text-blue-400' :
                 result.color === 'orange' ? 'text-orange-400' : 'text-red-400'
               }`}>Reynolds Number</div>
@@ -105,7 +105,7 @@ export default function ReynoldsClient() {
               }`}>
                 {result.Re >= 10000 ? result.Re.toExponential(3) : result.Re.toFixed(1)}
               </div>
-              <div className={`text-sm font-black mt-2 ${
+              <div className={`text-lg font-black mt-2 ${
                 result.color === 'blue' ? 'text-blue-600' :
                 result.color === 'orange' ? 'text-orange-600' : 'text-red-600'
               }`}>{result.regime}</div>
@@ -113,21 +113,21 @@ export default function ReynoldsClient() {
 
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Friction Factor f</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Friction Factor f</div>
                 <div className="text-lg font-black text-slate-700">{result.frictionFactor.toFixed(5)}</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Density</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Density</div>
                 <div className="text-lg font-black text-slate-700">{result.rho} kg/m³</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Viscosity</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Viscosity</div>
                 <div className="text-lg font-black text-slate-700">{result.mu} Pa·s</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {'Re = ρVD/μ. Laminar: Re < 2300 (smooth, parallel streamlines). Transitional: 2300 ≤ Re < 4000. Turbulent: Re ≥ 4000 (chaotic mixing). Friction factor: f = 64/Re (laminar), f = 0.316/Re^0.25 (turbulent, Blasius).'}
               </div>

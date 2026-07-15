@@ -102,34 +102,34 @@ export default function ToleranceStackupClient() {
               </div>
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Dimension Chain</h2>
             </div>
-            <button onClick={addRow} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black bg-blue-600 text-white hover:bg-blue-700 transition-all">
+            <button onClick={addRow} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-600 text-white hover:bg-blue-700 transition-all">
               <Plus className="w-4 h-4" />
               Add Dimension
             </button>
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+            <table className="w-full text-lg">
               <thead>
                 <tr className="border-b border-slate-100">
-                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">#</th>
-                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">Nominal (mm)</th>
-                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">±Tol (mm)</th>
-                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">Dir</th>
+                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">#</th>
+                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">Nominal (mm)</th>
+                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">±Tol (mm)</th>
+                  <th className="text-left py-3 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">Dir</th>
                   <th className="py-3 px-2"></th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((r, idx) => (
                   <tr key={r.id} className="border-b border-slate-50">
-                    <td className="py-3 px-2 font-bold text-slate-400 text-xs">{idx + 1}</td>
+                    <td className="py-3 px-2 font-bold text-slate-400 text-base">{idx + 1}</td>
                     <td className="py-2 px-2">
                       <input
                         type="number"
                         step="0.1"
                         value={r.nominal}
                         onChange={e => updateRow(r.id, 'nominal', parseFloat(e.target.value) || 0)}
-                        className="w-24 h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+                        className="w-24 h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
                       />
                     </td>
                     <td className="py-2 px-2">
@@ -138,13 +138,13 @@ export default function ToleranceStackupClient() {
                         step="0.01"
                         value={r.tolerance}
                         onChange={e => updateRow(r.id, 'tolerance', parseFloat(e.target.value) || 0)}
-                        className="w-24 h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+                        className="w-24 h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
                       />
                     </td>
                     <td className="py-2 px-2">
                       <button
                         onClick={() => updateRow(r.id, 'direction', r.direction === 1 ? -1 : 1)}
-                        className={`w-12 h-10 rounded-xl text-sm font-black border transition-all ${
+                        className={`w-12 h-10 rounded-xl text-lg font-black border transition-all ${
                           r.direction === 1
                             ? 'bg-emerald-50 border-emerald-200 text-emerald-600'
                             : 'bg-red-50 border-red-200 text-red-600'
@@ -165,7 +165,7 @@ export default function ToleranceStackupClient() {
           </div>
 
           {rows.length === 0 && (
-            <div className="text-center py-12 text-slate-400 text-sm font-bold">No dimensions. Click "Add Dimension" to start.</div>
+            <div className="text-center py-12 text-slate-400 text-lg font-bold">No dimensions. Click "Add Dimension" to start.</div>
           )}
         </div>
 
@@ -174,7 +174,7 @@ export default function ToleranceStackupClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Analysis Results</h2>
-              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
+              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
                 <Download className="w-4 h-4" />
                 CSV
               </button>
@@ -182,40 +182,40 @@ export default function ToleranceStackupClient() {
 
             {/* Nominal */}
             <div className="rounded-2xl bg-slate-900 p-5 text-white mb-4">
-              <p className="text-[10px] font-black uppercase tracking-wider opacity-60 mb-1">Nominal Dimension</p>
-              <p className="text-3xl font-black">{results.nominalSum}<span className="text-sm font-bold ml-2 opacity-60">mm</span></p>
+              <p className="text-sm font-black uppercase tracking-wider opacity-60 mb-1">Nominal Dimension</p>
+              <p className="text-3xl font-black">{results.nominalSum}<span className="text-lg font-bold ml-2 opacity-60">mm</span></p>
             </div>
 
             {/* Worst Case */}
             <div className="rounded-2xl bg-blue-50 border border-blue-200 p-5 mb-4">
-              <p className="text-[10px] font-black uppercase tracking-wider text-blue-600 mb-2">Worst Case (Arithmetic)</p>
+              <p className="text-sm font-black uppercase tracking-wider text-blue-600 mb-2">Worst Case (Arithmetic)</p>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <p className="text-[10px] text-slate-400 font-bold">Max</p>
+                  <p className="text-sm text-slate-400 font-bold">Max</p>
                   <p className="text-xl font-black text-blue-700">{results.wcMax}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-400 font-bold">Min</p>
+                  <p className="text-sm text-slate-400 font-bold">Min</p>
                   <p className="text-xl font-black text-blue-700">{results.wcMin}</p>
                 </div>
               </div>
-              <p className="text-[10px] text-slate-500 mt-2 font-medium">±{results.worstCaseTol} mm tolerance band</p>
+              <p className="text-sm text-slate-500 mt-2 font-medium">±{results.worstCaseTol} mm tolerance band</p>
             </div>
 
             {/* RSS */}
             <div className="rounded-2xl bg-emerald-50 border border-emerald-200 p-5 mb-4">
-              <p className="text-[10px] font-black uppercase tracking-wider text-emerald-600 mb-2">RSS (Statistical, ±3σ)</p>
+              <p className="text-sm font-black uppercase tracking-wider text-emerald-600 mb-2">RSS (Statistical, ±3σ)</p>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <p className="text-[10px] text-slate-400 font-bold">Max</p>
+                  <p className="text-sm text-slate-400 font-bold">Max</p>
                   <p className="text-xl font-black text-emerald-700">{results.rssMax}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-400 font-bold">Min</p>
+                  <p className="text-sm text-slate-400 font-bold">Min</p>
                   <p className="text-xl font-black text-emerald-700">{results.rssMin}</p>
                 </div>
               </div>
-              <p className="text-[10px] text-slate-500 mt-2 font-medium">±{results.rssTol} mm tolerance band</p>
+              <p className="text-sm text-slate-500 mt-2 font-medium">±{results.rssTol} mm tolerance band</p>
             </div>
 
             {/* Critical Contributor */}
@@ -223,9 +223,9 @@ export default function ToleranceStackupClient() {
               <div className="rounded-2xl bg-amber-50 border border-amber-200 p-4">
                 <div className="flex items-center gap-2">
                   <AlertTriangle className="w-4 h-4 text-amber-500" />
-                  <p className="text-[10px] font-black uppercase tracking-wider text-amber-600">Critical Contributor</p>
+                  <p className="text-sm font-black uppercase tracking-wider text-amber-600">Critical Contributor</p>
                 </div>
-                <p className="text-xs text-slate-600 font-bold mt-1">
+                <p className="text-base text-slate-600 font-bold mt-1">
                   Largest tolerance ±{results.criticalTol} mm contributes {results.criticalPct}% of total WC band
                 </p>
               </div>
@@ -234,8 +234,8 @@ export default function ToleranceStackupClient() {
 
           {/* Method Comparison */}
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-3">Method Comparison</h3>
-            <div className="space-y-2 text-xs">
+            <h3 className="text-lg font-black text-slate-900 mb-3">Method Comparison</h3>
+            <div className="space-y-2 text-base">
               <div className="flex items-start gap-2">
                 <CheckCircle className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                 <div>

@@ -36,7 +36,7 @@ export default function ToolboxPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
               Drafting & Design Toolkit
             </div>
             <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight">
@@ -61,7 +61,7 @@ export default function ToolboxPage() {
             </div>
             <div>
               <h2 className="text-xl font-black text-slate-900 tracking-tight">Troubleshooting & Performance Guides</h2>
-              <p className="text-xs text-slate-500 font-medium">Step-by-step solutions for crashes, slow performance, file corruption, and more.</p>
+              <p className="text-base text-slate-500 font-medium">Step-by-step solutions for crashes, slow performance, file corruption, and more.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -75,9 +75,9 @@ export default function ToolboxPage() {
                   href={`/guides/${g.slug}`}
                   className="block p-5 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group"
                 >
-                  <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">{g.category}</p>
-                  <p className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2 mb-3">{g.title}</p>
-                  <div className="flex items-center justify-between text-[10px] text-slate-400 font-semibold">
+                  <p className="text-sm font-black text-blue-600 uppercase tracking-widest mb-2">{g.category}</p>
+                  <p className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2 mb-3">{g.title}</p>
+                  <div className="flex items-center justify-between text-sm text-slate-400 font-semibold">
                     <span>{g.readTime}</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all" />
                   </div>

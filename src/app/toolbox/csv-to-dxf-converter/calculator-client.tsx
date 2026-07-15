@@ -187,20 +187,20 @@ export default function CSVToDXFClient() {
               <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
                 <Upload className="w-6 h-6" />
               </div>
-              <p className="text-sm font-black text-slate-900">Drop CSV file or click to browse</p>
-              {fileName && <p className="text-xs text-blue-600 font-bold">{fileName}</p>}
+              <p className="text-lg font-black text-slate-900">Drop CSV file or click to browse</p>
+              {fileName && <p className="text-base text-blue-600 font-bold">{fileName}</p>}
             </div>
           </div>
 
           {/* Manual Input */}
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Or paste CSV data here</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Or paste CSV data here</label>
             <textarea
               value={rawText}
               onChange={e => { setRawText(e.target.value); setFileName(''); }}
               placeholder="Easting,Northing,Elevation,Label&#10;100.5,200.3,10.2,P1&#10;101.0,201.5,10.5,P2"
               rows={6}
-              className="w-full p-4 rounded-2xl bg-slate-50 border border-slate-100 text-xs font-mono focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all resize-y"
+              className="w-full p-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-mono focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all resize-y"
             />
           </div>
 
@@ -208,12 +208,12 @@ export default function CSVToDXFClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-4">
             <div className="flex items-center gap-3 mb-2">
               <Settings className="w-5 h-5 text-blue-600" />
-              <h3 className="text-sm font-black text-slate-900">Column Mapping</h3>
+              <h3 className="text-lg font-black text-slate-900">Column Mapping</h3>
             </div>
 
             <label className="flex items-center gap-3 cursor-pointer">
               <input type="checkbox" checked={hasHeader} onChange={e => setHasHeader(e.target.checked)} className="w-4 h-4 rounded accent-blue-600" />
-              <span className="text-xs font-bold text-slate-600">First row is header</span>
+              <span className="text-base font-bold text-slate-600">First row is header</span>
             </label>
 
             <div className="grid grid-cols-2 gap-3">
@@ -224,13 +224,13 @@ export default function CSVToDXFClient() {
                 { label: 'Label col (-1=auto)', value: colLabel, set: setColLabel },
               ].map(item => (
                 <div key={item.label}>
-                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider block mb-1">{item.label}</label>
+                  <label className="text-sm font-black text-slate-400 uppercase tracking-wider block mb-1">{item.label}</label>
                   <input
                     type="number"
                     min={-1}
                     value={item.value}
                     onChange={e => item.set(parseInt(e.target.value) || 0)}
-                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
                   />
                 </div>
               ))}
@@ -239,7 +239,7 @@ export default function CSVToDXFClient() {
             {detectedHeaders.length > 0 && hasHeader && (
               <div className="flex flex-wrap gap-1.5">
                 {detectedHeaders.map((h, i) => (
-                  <span key={i} className="px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-50 text-slate-500 border border-slate-100">
+                  <span key={i} className="px-2 py-1 rounded-lg text-sm font-bold bg-slate-50 text-slate-500 border border-slate-100">
                     Col {i}: {h}
                   </span>
                 ))}
@@ -247,10 +247,10 @@ export default function CSVToDXFClient() {
             )}
 
             <div>
-              <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider block mb-1">Output Mode</label>
+              <label className="text-sm font-black text-slate-400 uppercase tracking-wider block mb-1">Output Mode</label>
               <div className="grid grid-cols-3 gap-2">
                 {(['points', 'polyline', 'both'] as const).map(m => (
-                  <button key={m} onClick={() => setOutputMode(m)} className={`h-10 rounded-xl text-xs font-black border transition-all ${outputMode === m ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+                  <button key={m} onClick={() => setOutputMode(m)} className={`h-10 rounded-xl text-base font-black border transition-all ${outputMode === m ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
                     {m === 'points' ? 'Points' : m === 'polyline' ? 'Polyline' : 'Both'}
                   </button>
                 ))}
@@ -259,12 +259,12 @@ export default function CSVToDXFClient() {
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider block mb-1">Layer Name</label>
-                <input type="text" value={layerName} onChange={e => setLayerName(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                <label className="text-sm font-black text-slate-400 uppercase tracking-wider block mb-1">Layer Name</label>
+                <input type="text" value={layerName} onChange={e => setLayerName(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
               <div>
-                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider block mb-1">Scale Factor</label>
-                <input type="number" step="0.1" value={scale} onChange={e => setScale(parseFloat(e.target.value) || 1)} className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                <label className="text-sm font-black text-slate-400 uppercase tracking-wider block mb-1">Scale Factor</label>
+                <input type="number" step="0.1" value={scale} onChange={e => setScale(parseFloat(e.target.value) || 1)} className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ export default function CSVToDXFClient() {
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-2xl p-4 flex items-center gap-3">
               <AlertTriangle className="w-5 h-5 text-red-500 shrink-0" />
-              <p className="text-sm font-bold text-red-700">{error}</p>
+              <p className="text-lg font-bold text-red-700">{error}</p>
             </div>
           )}
 
@@ -284,21 +284,21 @@ export default function CSVToDXFClient() {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <FileText className="w-5 h-5 text-blue-600" />
-                <h3 className="text-sm font-black text-slate-900">Data Preview</h3>
+                <h3 className="text-lg font-black text-slate-900">Data Preview</h3>
               </div>
-              <span className="text-xs font-bold text-slate-400">{parsedRows.length} points</span>
+              <span className="text-base font-bold text-slate-400">{parsedRows.length} points</span>
             </div>
 
             {parsedRows.length > 0 ? (
               <div className="overflow-x-auto max-h-[300px] overflow-y-auto">
-                <table className="w-full text-xs">
+                <table className="w-full text-base">
                   <thead className="sticky top-0 bg-white">
                     <tr className="border-b border-slate-100">
-                      <th className="text-left py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">#</th>
-                      <th className="text-right py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">X</th>
-                      <th className="text-right py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">Y</th>
-                      <th className="text-right py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">Z</th>
-                      <th className="text-left py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-[10px]">Label</th>
+                      <th className="text-left py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">#</th>
+                      <th className="text-right py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">X</th>
+                      <th className="text-right py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">Y</th>
+                      <th className="text-right py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">Z</th>
+                      <th className="text-left py-2 px-2 font-black text-slate-400 uppercase tracking-wider text-sm">Label</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -313,10 +313,10 @@ export default function CSVToDXFClient() {
                     ))}
                   </tbody>
                 </table>
-                {parsedRows.length > 100 && <p className="text-center text-[10px] text-slate-400 py-2 font-bold">Showing first 100 of {parsedRows.length} rows</p>}
+                {parsedRows.length > 100 && <p className="text-center text-sm text-slate-400 py-2 font-bold">Showing first 100 of {parsedRows.length} rows</p>}
               </div>
             ) : (
-              <p className="text-center text-slate-400 text-sm font-bold py-8">No data yet. Upload or paste CSV data.</p>
+              <p className="text-center text-slate-400 text-lg font-bold py-8">No data yet. Upload or paste CSV data.</p>
             )}
           </div>
 
@@ -325,12 +325,12 @@ export default function CSVToDXFClient() {
             <button
               onClick={handleDownload}
               disabled={parsedRows.length === 0}
-              className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl text-sm font-black bg-blue-600 text-white hover:bg-blue-700 transition-all disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed"
+              className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl text-lg font-black bg-blue-600 text-white hover:bg-blue-700 transition-all disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed"
             >
               <Download className="w-5 h-5" />
               Download DXF File ({parsedRows.length} points)
             </button>
-            <p className="text-[10px] text-slate-400 mt-3 font-medium text-center">
+            <p className="text-sm text-slate-400 mt-3 font-medium text-center">
               Output: {outputMode === 'points' ? 'Points + Labels' : outputMode === 'polyline' ? 'Connected Polyline' : 'Points + Polyline'} on layer "{layerName}"
             </p>
           </div>

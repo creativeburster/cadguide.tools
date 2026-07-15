@@ -234,7 +234,7 @@ Generated via CADGuide.tools`;
 
         {/* Units */}
         <div className="space-y-2">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             1. Current drawing unit of the drawing (Drawing Unit)
           </label>
           <select
@@ -246,7 +246,7 @@ Generated via CADGuide.tools`;
               const ratio = currentUnit.factor / nextUnit.factor;
               setHatchScale(prev => Number((prev * ratio).toFixed(4)));
             }}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-xs font-bold text-white focus:outline-none print:hidden"
+            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
           >
             {DRAWING_UNITS.map((u, i) => (
               <option key={u.key} value={i}>
@@ -261,7 +261,7 @@ Generated via CADGuide.tools`;
 
         {/* Viewport Scale */}
         <div className="space-y-3">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">2. Target print scale denominator (Scale 1:X)</span>
             <span className="text-blue-400 font-mono">1 : {viewportScale}</span>
           </div>
@@ -278,13 +278,13 @@ Generated via CADGuide.tools`;
             type="number"
             value={viewportScale}
             onChange={(e) => setViewportScale(Math.max(1, Number(e.target.value)))}
-            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
+            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
           />
         </div>
 
         {/* Pattern Select */}
         <div className="space-y-2 border-t border-slate-800/80 pt-5">
-          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
             3. CAD Pattern
           </label>
           <div className="grid grid-cols-2 gap-2.5 print:hidden">
@@ -292,7 +292,7 @@ Generated via CADGuide.tools`;
               <button
                 key={p.key}
                 onClick={() => setPatternIdx(i)}
-                className={`py-3 px-2 rounded-xl text-xs font-black border transition-all duration-205 ${
+                className={`py-3 px-2 rounded-xl text-base font-black border transition-all duration-205 ${
                   patternIdx === i
                     ? 'bg-blue-600 border-blue-600 text-white'
                     : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
@@ -309,14 +309,14 @@ Generated via CADGuide.tools`;
 
         {/* Live Adjusting User Hatch Scale */}
         <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-xs font-black">
+          <div className="flex justify-between items-center text-base font-black">
             <span className="text-slate-400 uppercase tracking-wider">4. Debugging HATCH scale factors (Scale Input)</span>
             <span className="text-blue-400 font-mono">{hatchScale}</span>
           </div>
           <div className="flex gap-2">
             <button
               onClick={() => setHatchScale(Number(recommendation.optimal.toFixed(3)))}
-              className="px-2.5 py-1 rounded bg-slate-850 hover:bg-blue-650 border border-slate-800 text-[10px] font-black text-slate-300 print:hidden"
+              className="px-2.5 py-1 rounded bg-slate-850 hover:bg-blue-650 border border-slate-800 text-sm font-black text-slate-300 print:hidden"
             >
               Apply recommendations
             </button>
@@ -335,7 +335,7 @@ Generated via CADGuide.tools`;
             step="0.0001"
             value={hatchScale}
             onChange={(e) => setHatchScale(Math.max(0.0001, Number(e.target.value)))}
-            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
+            className="w-full bg-slate-850 border border-slate-800 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none focus:border-blue-500 print:hidden"
           />
         </div>
       </div>
@@ -351,7 +351,7 @@ Generated via CADGuide.tools`;
             </h3>
             <button
               onClick={copyToClipboard}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-xs font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
+              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-base font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : null}
               <span>{copied ? 'Copied' : 'Copy data'}</span>
@@ -360,22 +360,22 @@ Generated via CADGuide.tools`;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50 p-5 rounded-2xl border border-slate-150/40">
             <div>
-              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <div className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Optimal HATCH Scale
               </div>
               <div className="text-3xl font-black font-mono text-blue-600 mt-1">
                 {recommendation.optimal.toFixed(3)}
               </div>
-              <p className="text-[10px] text-slate-500 mt-1">
+              <p className="text-sm text-slate-500 mt-1">
                 In the CAD Fill dialog box &quot;Scale&quot; Enter this value in
               </p>
             </div>
             
             <div className="space-y-1.5">
-              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <div className="text-sm text-slate-400 font-bold uppercase tracking-wider">
                 Safety Scale Range
               </div>
-              <div className="font-mono text-xs text-slate-700 font-semibold mt-1">
+              <div className="font-mono text-base text-slate-700 font-semibold mt-1">
                 {recommendation.minSafe.toFixed(3)} to {recommendation.maxSafe.toFixed(3)}
               </div>
               <div className="text-[9px] text-slate-400">
@@ -388,8 +388,8 @@ Generated via CADGuide.tools`;
           <div className={`border p-4.5 rounded-2xl flex gap-3.5 items-start ${status.color}`}>
             <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
             <div className="space-y-1">
-              <strong className="text-sm font-black block">{status.label}</strong>
-              <p className="text-xs leading-relaxed opacity-90">{status.desc}</p>
+              <strong className="text-lg font-black block">{status.label}</strong>
+              <p className="text-base leading-relaxed opacity-90">{status.desc}</p>
             </div>
           </div>
         </div>
@@ -397,7 +397,7 @@ Generated via CADGuide.tools`;
         {/* Interactive Canvas Viewport */}
         <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+            <span className="text-sm font-black text-slate-400 uppercase tracking-widest">
               Live Hatch Canvas Viewport
             </span>
             <span className="text-[9px] text-slate-500 font-mono">

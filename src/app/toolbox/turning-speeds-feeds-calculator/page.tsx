@@ -24,7 +24,7 @@ export default function TurningSpeedsPage() {
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px]"></div>
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6 uppercase tracking-[0.15em]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6 uppercase tracking-[0.15em]">
               CNC Lathe Operations
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">

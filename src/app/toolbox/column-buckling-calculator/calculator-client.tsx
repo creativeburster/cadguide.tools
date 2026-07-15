@@ -81,9 +81,9 @@ export default function ColumnBucklingClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
             <select value={matIdx} onChange={e => setMatIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {MATERIALS.map((m, i) => <option key={i} value={i}>{m.name}</option>)}
             </select>
           </div>
@@ -91,35 +91,35 @@ export default function ColumnBucklingClient() {
           {matIdx === 4 && (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">E (GPa)</label>
-                <input type="number" value={customE} onChange={e => setCustomE(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">E (GPa)</label>
+                <input type="number" value={customE} onChange={e => setCustomE(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Yield (MPa)</label>
-                <input type="number" value={customYield} onChange={e => setCustomYield(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Yield (MPa)</label>
+                <input type="number" value={customYield} onChange={e => setCustomYield(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           )}
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">End Condition</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">End Condition</label>
             <select value={endIdx} onChange={e => setEndIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold">
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
               {END_CONDITIONS.map((c, i) => <option key={i} value={i}>{c.name} (K={c.K})</option>)}
             </select>
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Column Length (mm)</label>
-            <input type="number" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Column Length (mm)</label>
+            <input type="number" value={length} onChange={e => setLength(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Section</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Section</label>
             <div className="grid grid-cols-2 gap-2">
               {(['rect', 'circular'] as const).map(s => (
                 <button key={s} onClick={() => setSection(s)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${section === s ? 'bg-emerald-600 border-emerald-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${section === s ? 'bg-emerald-600 border-emerald-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
                   {s === 'rect' ? 'Rectangular' : 'Circular'}
                 </button>
               ))}
@@ -129,18 +129,18 @@ export default function ColumnBucklingClient() {
           {section === 'rect' ? (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Width b (mm)</label>
-                <input type="number" value={b} onChange={e => setB(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Width b (mm)</label>
+                <input type="number" value={b} onChange={e => setB(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Height h (mm)</label>
-                <input type="number" value={h} onChange={e => setH(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Height h (mm)</label>
+                <input type="number" value={h} onChange={e => setH(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
               </div>
             </>
           ) : (
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Diameter (mm)</label>
-              <input type="number" value={d} onChange={e => setD(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold" />
+              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Diameter (mm)</label>
+              <input type="number" value={d} onChange={e => setD(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
             </div>
           )}
         </div>
@@ -155,22 +155,22 @@ export default function ColumnBucklingClient() {
             </div>
 
             <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100 mb-4">
-              <div className="text-xs font-black text-emerald-400 uppercase tracking-wider mb-2">Critical Buckling Load</div>
+              <div className="text-base font-black text-emerald-400 uppercase tracking-wider mb-2">Critical Buckling Load</div>
               <div className="text-4xl font-black text-emerald-700">{(result.Pcr / 1000).toFixed(2)}<span className="text-xl text-emerald-400"> kN</span></div>
-              <div className="text-xs text-emerald-600 font-medium mt-1">{result.method}</div>
+              <div className="text-base text-emerald-600 font-medium mt-1">{result.method}</div>
             </div>
 
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Slenderness λ</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Slenderness λ</div>
                 <div className="text-lg font-black text-slate-700">{result.slenderness.toFixed(1)}</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Transition Cc</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Transition Cc</div>
                 <div className="text-lg font-black text-slate-700">{result.Cc.toFixed(1)}</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                <div className="text-xs font-black text-slate-400 uppercase mb-1">Radius Gyration</div>
+                <div className="text-base font-black text-slate-400 uppercase mb-1">Radius Gyration</div>
                 <div className="text-lg font-black text-slate-700">{result.r.toFixed(2)} mm</div>
               </div>
             </div>
@@ -178,18 +178,18 @@ export default function ColumnBucklingClient() {
             <div className="mt-4 bg-slate-50 rounded-xl p-4 border border-slate-100">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Moment of Inertia I</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Moment of Inertia I</div>
                   <div className="text-lg font-black text-slate-700">{(result.I).toFixed(0)} mm⁴</div>
                 </div>
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase mb-1">Cross-section Area</div>
+                  <div className="text-base font-black text-slate-400 uppercase mb-1">Cross-section Area</div>
                   <div className="text-lg font-black text-slate-700">{result.A.toFixed(0)} mm²</div>
                 </div>
               </div>
             </div>
 
             <div className={`mt-6 rounded-2xl p-4 border ${result.slenderness >= result.Cc ? 'bg-blue-50 border-blue-100' : 'bg-orange-50 border-orange-100'}`}>
-              <div className="flex items-start gap-2 text-xs font-medium">
+              <div className="flex items-start gap-2 text-base font-medium">
                 <Info className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <span className={result.slenderness >= result.Cc ? 'text-blue-700' : 'text-orange-700'}>
                   {result.slenderness >= result.Cc

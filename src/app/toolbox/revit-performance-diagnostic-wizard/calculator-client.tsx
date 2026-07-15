@@ -205,8 +205,8 @@ export default function RevitPerfClient() {
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className={`text-sm font-black ${selectedId === issue.id ? 'text-blue-600' : 'text-slate-900'}`}>{issue.title}</h3>
-                  <p className="text-[10px] text-slate-400 font-bold mt-1">{issue.symptoms.length} symptoms identified</p>
+                  <h3 className={`text-lg font-black ${selectedId === issue.id ? 'text-blue-600' : 'text-slate-900'}`}>{issue.title}</h3>
+                  <p className="text-sm text-slate-400 font-bold mt-1">{issue.symptoms.length} symptoms identified</p>
                 </div>
               </button>
             );
@@ -217,14 +217,14 @@ export default function RevitPerfClient() {
         <div className="lg:col-span-2 space-y-6">
           {/* Symptoms */}
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-4">Common Symptoms</h3>
+            <h3 className="text-lg font-black text-slate-900 mb-4">Common Symptoms</h3>
             <ul className="space-y-3">
               {selected.symptoms.map((symptom, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-xs font-black shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-base font-black shrink-0 mt-0.5">
                     {i + 1}
                   </div>
-                  <p className="text-sm text-slate-700 font-medium leading-relaxed">{symptom}</p>
+                  <p className="text-lg text-slate-700 font-medium leading-relaxed">{symptom}</p>
                 </li>
               ))}
             </ul>
@@ -232,33 +232,33 @@ export default function RevitPerfClient() {
 
           {/* Root Cause */}
           <div className="bg-amber-50 border border-amber-200 rounded-3xl p-6">
-            <h3 className="text-xs font-black text-amber-600 uppercase tracking-wider mb-2">Root Cause Analysis</h3>
-            <p className="text-sm text-slate-700 font-medium leading-relaxed">{selected.cause}</p>
+            <h3 className="text-base font-black text-amber-600 uppercase tracking-wider mb-2">Root Cause Analysis</h3>
+            <p className="text-lg text-slate-700 font-medium leading-relaxed">{selected.cause}</p>
           </div>
 
           {/* Fixes */}
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-4">Step-by-Step Fixes</h3>
+            <h3 className="text-lg font-black text-slate-900 mb-4">Step-by-Step Fixes</h3>
             <div className="space-y-4">
               {selected.fixes.map((fix, i) => (
                 <div key={i} className="rounded-2xl bg-slate-50 border border-slate-100 p-5">
                   <div className="flex items-start gap-3 mb-2">
-                    <div className="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center text-xs font-black shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center text-base font-black shrink-0">
                       {i + 1}
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-sm font-black text-slate-900">{fix.step}</h4>
-                      <p className="text-xs text-slate-600 font-medium mt-1 leading-relaxed">{fix.detail}</p>
+                      <h4 className="text-lg font-black text-slate-900">{fix.step}</h4>
+                      <p className="text-base text-slate-600 font-medium mt-1 leading-relaxed">{fix.detail}</p>
                     </div>
                   </div>
                   {fix.command && (
                     <div className="mt-3 ml-10 flex items-center gap-2">
-                      <code className="flex-1 px-3 py-2 rounded-lg bg-slate-900 text-white text-xs font-mono break-all">
+                      <code className="flex-1 px-3 py-2 rounded-lg bg-slate-900 text-white text-base font-mono break-all">
                         {fix.command}
                       </code>
                       <button
                         onClick={() => handleCopy(fix.command!, `fix-${i}`)}
-                        className="px-3 py-2 rounded-lg bg-white border border-slate-200 text-xs font-black text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all shrink-0"
+                        className="px-3 py-2 rounded-lg bg-white border border-slate-200 text-base font-black text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all shrink-0"
                       >
                         {copiedText === `fix-${i}` ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
                       </button>
@@ -272,7 +272,7 @@ export default function RevitPerfClient() {
           {/* Next Steps */}
           <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 flex items-center gap-3">
             <ArrowRight className="w-5 h-5 text-blue-500 shrink-0" />
-            <p className="text-xs text-slate-600 font-medium">
+            <p className="text-base text-slate-600 font-medium">
               Still slow after all fixes? Try the <strong>Revit Model Optimization</strong> service via Autodesk, or export the model to IFC and re-import into a clean file to shed accumulated bloat.
             </p>
           </div>

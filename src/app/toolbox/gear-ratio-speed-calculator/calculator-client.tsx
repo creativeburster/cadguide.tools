@@ -87,11 +87,11 @@ export default function GearRatioClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Gear Type</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Gear Type</label>
             <div className="grid grid-cols-2 gap-2">
               {([['spur', 'Spur Pair'], ['planetary', 'Planetary']] as const).map(([id, label]) => (
                 <button key={id} onClick={() => setGearType(id)}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-black border transition-all ${gearType === id ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
+                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${gearType === id ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
                   {label}
                 </button>
               ))}
@@ -99,54 +99,54 @@ export default function GearRatioClient() {
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Input Speed (RPM)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Input Speed (RPM)</label>
             <input type="number" value={inputRPM} onChange={e => setInputRPM(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Input Torque (Nm)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Input Torque (Nm)</label>
             <input type="number" value={inputTorque} onChange={e => setInputTorque(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Efficiency (%)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Efficiency (%)</label>
             <input type="number" value={efficiency} onChange={e => setEfficiency(parseFloat(e.target.value) || 0)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           {gearType === 'spur' ? (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Driver Teeth (z₁)</label>
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Driver Teeth (z₁)</label>
                 <input type="number" value={driverTeeth} onChange={e => setDriverTeeth(parseInt(e.target.value) || 0)}
-                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Driven Teeth (z₂)</label>
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Driven Teeth (z₂)</label>
                 <input type="number" value={drivenTeeth} onChange={e => setDrivenTeeth(parseInt(e.target.value) || 0)}
-                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Module (mm)</label>
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Module (mm)</label>
                 <input type="number" step="0.1" value={module} onChange={e => setModule(parseFloat(e.target.value) || 0)}
-                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
             </>
           ) : (
             <>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Sun Teeth (zₛ)</label>
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Sun Teeth (zₛ)</label>
                 <input type="number" value={sunTeeth} onChange={e => setSunTeeth(parseInt(e.target.value) || 0)}
-                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
               <div>
-                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Ring Teeth (zᵣ)</label>
+                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Ring Teeth (zᵣ)</label>
                 <input type="number" value={ringTeeth} onChange={e => setRingTeeth(parseInt(e.target.value) || 0)}
-                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+                  className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
               </div>
-              <div className="text-xs text-slate-400 font-medium bg-slate-50 rounded-xl p-3 border border-slate-100">
+              <div className="text-base text-slate-400 font-medium bg-slate-50 rounded-xl p-3 border border-slate-100">
                 Ring fixed, sun input, carrier output. Planet teeth = (ring - sun) / 2 = {((ringTeeth - sunTeeth) / 2).toFixed(0)} teeth.
               </div>
             </>
@@ -163,38 +163,38 @@ export default function GearRatioClient() {
                 </div>
                 <h2 className="text-lg font-black text-slate-900 tracking-tight">Results</h2>
               </div>
-              <button onClick={downloadReport} className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+              <button onClick={downloadReport} className="flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
                 <Download className="w-4 h-4" /> CSV
               </button>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-400 uppercase tracking-wider mb-2">Gear Ratio</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Gear Ratio</div>
                 <div className="text-3xl font-black text-blue-700">{result.ratio.toFixed(3)}<span className="text-lg text-blue-400">:1</span></div>
-                <div className="text-xs text-blue-600 font-medium mt-1">{result.reduction}</div>
+                <div className="text-base text-blue-600 font-medium mt-1">{result.reduction}</div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-xs font-black text-green-400 uppercase tracking-wider mb-2">Output Speed</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Output Speed</div>
                 <div className="text-3xl font-black text-green-700">{result.outputRPM.toFixed(1)}<span className="text-lg text-green-400"> RPM</span></div>
-                <div className="text-xs text-green-600 font-medium mt-1">From {inputRPM} RPM input</div>
+                <div className="text-base text-green-600 font-medium mt-1">From {inputRPM} RPM input</div>
               </div>
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-2">Output Torque</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Output Torque</div>
                 <div className="text-3xl font-black text-orange-700">{result.outputTorque.toFixed(1)}<span className="text-lg text-orange-400"> Nm</span></div>
-                <div className="text-xs text-orange-600 font-medium mt-1">From {inputTorque} Nm input</div>
+                <div className="text-base text-orange-600 font-medium mt-1">From {inputTorque} Nm input</div>
               </div>
               {gearType === 'spur' && (
                 <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
-                  <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-2">Center Distance</div>
+                  <div className="text-base font-black text-purple-400 uppercase tracking-wider mb-2">Center Distance</div>
                   <div className="text-3xl font-black text-purple-700">{result.centerDistance.toFixed(1)}<span className="text-lg text-purple-400"> mm</span></div>
-                  <div className="text-xs text-purple-600 font-medium mt-1">a = m(z₁+z₂)/2</div>
+                  <div className="text-base text-purple-600 font-medium mt-1">a = m(z₁+z₂)/2</div>
                 </div>
               )}
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
                 {gearType === 'spur'
                   ? 'Ratio = z₂/z₁. Output RPM = Input RPM / Ratio. Output Torque = Input Torque × Ratio × Efficiency. Center distance = m × (z₁ + z₂) / 2.'

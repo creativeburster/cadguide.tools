@@ -238,19 +238,19 @@ export default function DwgVersionCheckerClient() {
     switch (status) {
       case 'full':
         return (
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-base font-black bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
             ● Read & Write (Full)
           </span>
 );
       case 'partial':
         return (
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-amber-500/10 text-amber-600 border border-amber-500/20">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-base font-black bg-amber-500/10 text-amber-600 border border-amber-500/20">
             ▲ Read Only / Viewer
           </span>
 );
       case 'none':
         return (
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-rose-500/10 text-rose-600 border border-rose-500/20">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-base font-black bg-rose-500/10 text-rose-600 border border-rose-500/20">
             × Unsupported
           </span>
 );
@@ -291,10 +291,10 @@ export default function DwgVersionCheckerClient() {
                 </svg>
               </div>
               <div className="text-center md:text-left">
-                <h4 className="text-sm font-bold text-slate-800">
+                <h4 className="text-lg font-bold text-slate-800">
                   Analyze another DWG drawing?
                 </h4>
-                <p className="text-xs text-slate-500 font-medium">
+                <p className="text-base text-slate-500 font-medium">
                   Drag & drop here or <span className="text-blue-600 font-bold underline">browse files</span>. Client-side local processing.
                 </p>
               </div>
@@ -310,11 +310,11 @@ export default function DwgVersionCheckerClient() {
               <h3 className="text-xl font-bold text-slate-800 mb-2">
                 Drag & Drop your DWG file here
               </h3>
-              <p className="text-sm text-slate-500 mb-6 max-w-sm">
+              <p className="text-lg text-slate-500 mb-6 max-w-sm">
                 Or <span className="text-blue-600 font-bold underline">browse files</span> on your device.
                 Processing is 100% local — your data never leaves your browser.
               </p>
-              <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
+              <div className="text-sm text-slate-400 font-bold uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
                 Pure client-side WebAssembly / JS
               </div>
             </>
@@ -326,7 +326,7 @@ export default function DwgVersionCheckerClient() {
       {loading && (
         <div className="flex flex-col items-center justify-center py-10">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mb-4"></div>
-          <p className="text-sm text-slate-500 font-bold">Analyzing file bytes...</p>
+          <p className="text-lg text-slate-500 font-bold">Analyzing file bytes...</p>
         </div>
 )}
 
@@ -336,7 +336,7 @@ export default function DwgVersionCheckerClient() {
           <div className="text-rose-600 text-2xl font-bold">⚠️</div>
           <div>
             <h4 className="font-bold text-rose-800 mb-1">Failed to analyze file</h4>
-            <p className="text-sm text-rose-600">{error}</p>
+            <p className="text-lg text-rose-600">{error}</p>
           </div>
         </div>
 )}
@@ -346,20 +346,20 @@ export default function DwgVersionCheckerClient() {
         <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-8 animate-fadeIn">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-100">
             <div>
-              <div className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-1">
+              <div className="text-base font-bold text-blue-600 uppercase tracking-widest mb-1">
                 Detected Format Header: {result.code}
               </div>
               <h2 className="text-3xl font-black text-slate-900">
                 {result.year}
               </h2>
               {fileName && (
-                <p className="text-sm text-slate-500 mt-2 font-medium">
+                <p className="text-lg text-slate-500 mt-2 font-medium">
                   File: <span className="text-slate-800 font-bold">{fileName}</span> ({fileSize})
                 </p>
 )}
             </div>
             <div className="bg-slate-50 px-6 py-4 rounded-2xl border border-slate-100 text-center md:text-right">
-              <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Released Year</div>
+              <div className="text-base font-bold text-slate-400 uppercase tracking-widest">Released Year</div>
               <div className="text-2xl font-black text-slate-700">{result.released}</div>
             </div>
           </div>
@@ -367,11 +367,11 @@ export default function DwgVersionCheckerClient() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2 space-y-4">
               <h3 className="text-lg font-bold text-slate-800">Format Description</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">{result.desc}</p>
+              <p className="text-slate-600 leading-relaxed text-lg">{result.desc}</p>
             </div>
             <div className="bg-blue-50/50 rounded-2xl p-6 border border-blue-50">
-              <h4 className="text-xs font-black text-blue-800 uppercase tracking-wider mb-2">SEO Suggestion</h4>
-              <p className="text-xs text-blue-600 leading-relaxed">
+              <h4 className="text-base font-black text-blue-800 uppercase tracking-wider mb-2">SEO Suggestion</h4>
+              <p className="text-base text-blue-600 leading-relaxed">
                 Need to collaborate with users on different versions? Make sure to save down to <strong>AC1027 (2013 Format)</strong> if your clients run legacy AutoCAD 2014-2016 clients.
               </p>
             </div>
@@ -381,7 +381,7 @@ export default function DwgVersionCheckerClient() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-slate-800">Software Compatibility Grid</h3>
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse text-sm">
+              <table className="w-full text-left border-collapse text-lg">
                 <thead>
                   <tr className="border-b border-slate-100">
                     <th className="py-3 font-bold text-slate-500 uppercase tracking-wider">CAD Platform</th>
@@ -393,22 +393,22 @@ export default function DwgVersionCheckerClient() {
                   <tr>
                     <td className="py-4 font-bold text-slate-800">Autodesk AutoCAD (2018+)</td>
                     <td className="py-4">{renderBadge(result.compatibility.autocad)}</td>
-                    <td className="py-4 text-xs text-slate-500">Native format ownership. Supports full object mapping.</td>
+                    <td className="py-4 text-base text-slate-500">Native format ownership. Supports full object mapping.</td>
                   </tr>
                   <tr>
                     <td className="py-4 font-bold text-slate-800">GstarCAD (2024+)</td>
                     <td className="py-4">{renderBadge(result.compatibility.gstarcad)}</td>
-                    <td className="py-4 text-xs text-slate-500">Excellent 1:1 format compatibility, native reading and fast saving.</td>
+                    <td className="py-4 text-base text-slate-500">Excellent 1:1 format compatibility, native reading and fast saving.</td>
                   </tr>
                   <tr>
                     <td className="py-4 font-bold text-slate-800">ZWCAD (2024+)</td>
                     <td className="py-4">{renderBadge(result.compatibility.zwcad)}</td>
-                    <td className="py-4 text-xs text-slate-500">Full block rendering and DWG database fidelity.</td>
+                    <td className="py-4 text-base text-slate-500">Full block rendering and DWG database fidelity.</td>
                   </tr>
                   <tr>
                     <td className="py-4 font-bold text-slate-800">DWG FastView (Mobile & Web)</td>
                     <td className="py-4">{renderBadge(result.compatibility.dwgfastview)}</td>
-                    <td className="py-4 text-xs text-slate-500">Best lightweight mobile viewer for this specific layout.</td>
+                    <td className="py-4 text-base text-slate-500">Best lightweight mobile viewer for this specific layout.</td>
                   </tr>
                 </tbody>
               </table>
@@ -423,7 +423,7 @@ export default function DwgVersionCheckerClient() {
           <h3 className="text-lg font-bold text-slate-800 mb-1">
             Manual Code Explorer
           </h3>
-          <p className="text-xs text-slate-500">
+          <p className="text-base text-slate-500">
             No drawing file handy? Manually inspect any DWG header code to test its cross-platform CAD software support matrix.
           </p>
         </div>
@@ -432,7 +432,7 @@ export default function DwgVersionCheckerClient() {
             <button
               key={code}
               onClick={() => handleManualSelect(code)}
-              className={`px-4 py-2 rounded-xl text-xs font-black border transition-all ${
+              className={`px-4 py-2 rounded-xl text-base font-black border transition-all ${
                 result?.code === code
                   ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
                   : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
@@ -450,25 +450,25 @@ export default function DwgVersionCheckerClient() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white border border-slate-100 rounded-2xl p-6">
             <h4 className="font-bold text-slate-800 mb-2">What is a DWG magic header code?</h4>
-            <p className="text-xs text-slate-500 leading-relaxed">
+            <p className="text-base text-slate-500 leading-relaxed">
               Every DWG file begins with a 6-byte ascii code (e.g. AC1032) indicating the format database version it was written in. The CAD program reads this code first to decide whether it can unpack the vector data.
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6">
             <h4 className="font-bold text-slate-800 mb-2">Why can&apos;t my AutoCAD open a newer DWG?</h4>
-            <p className="text-xs text-slate-500 leading-relaxed">
+            <p className="text-base text-slate-500 leading-relaxed">
               Autodesk AutoCAD is not forward-compatible. If you run AutoCAD 2017 (AC1027), you cannot open a DWG saved in AutoCAD 2018 format (AC1032). You must convert it using a newer viewer or an alternative CAD tool.
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6">
             <h4 className="font-bold text-slate-800 mb-2">Are alternative CAD tools 100% compatible?</h4>
-            <p className="text-xs text-slate-500 leading-relaxed">
+            <p className="text-base text-slate-500 leading-relaxed">
               Modern IntelliCAD and ODA-based engines (GstarCAD, ZWCAD, etc.) are native DWG systems. They can read and write standard DWG formats directly without conversion, matching Autodesk&apos;s structural fidelity.
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6">
             <h4 className="font-bold text-slate-800 mb-2">Is my file safe when dragging into this page?</h4>
-            <p className="text-xs text-slate-500 leading-relaxed">
+            <p className="text-base text-slate-500 leading-relaxed">
               Yes, absolutely. We only use the local HTML5 FileReader API to read the first 6 characters in your browser. The file is never uploaded to any remote server or third-party database.
             </p>
           </div>

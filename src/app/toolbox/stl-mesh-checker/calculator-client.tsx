@@ -201,7 +201,7 @@ export default function STLMeshCheckerClient() {
         {loading ? (
           <div className="flex flex-col items-center gap-4">
             <Loader className="w-12 h-12 text-blue-500 animate-spin" />
-            <p className="text-sm font-bold text-slate-600">Parsing STL file...</p>
+            <p className="text-lg font-bold text-slate-600">Parsing STL file...</p>
           </div>
         ) : (
           <div className="flex flex-col items-center gap-4">
@@ -210,7 +210,7 @@ export default function STLMeshCheckerClient() {
             </div>
             <div>
               <p className="text-lg font-black text-slate-900">Drop your STL file here</p>
-              <p className="text-xs text-slate-500 font-medium mt-1">or click to browse • .stl files only • 100% client-side processing</p>
+              <p className="text-base text-slate-500 font-medium mt-1">or click to browse • .stl files only • 100% client-side processing</p>
             </div>
           </div>
         )}
@@ -219,7 +219,7 @@ export default function STLMeshCheckerClient() {
       {error && (
         <div className="bg-red-50 border border-red-200 rounded-2xl p-6 flex items-center gap-3">
           <AlertTriangle className="w-5 h-5 text-red-500 shrink-0" />
-          <p className="text-sm font-bold text-red-700">{error}</p>
+          <p className="text-lg font-bold text-red-700">{error}</p>
         </div>
       )}
 
@@ -239,7 +239,7 @@ export default function STLMeshCheckerClient() {
                 { label: 'Unique Edges', value: stats.uniqueEdges.toLocaleString() },
               ].map(item => (
                 <div key={item.label} className="rounded-2xl bg-slate-50 border border-slate-100 p-4">
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
+                  <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
                   <p className="text-lg font-black text-slate-900">{item.value}</p>
                 </div>
               ))}
@@ -248,15 +248,15 @@ export default function STLMeshCheckerClient() {
 
           {/* Bounding Box */}
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-sm font-black text-slate-900 mb-4">Bounding Box (mm)</h3>
+            <h3 className="text-lg font-black text-slate-900 mb-4">Bounding Box (mm)</h3>
             <div className="grid grid-cols-3 gap-4">
               {(['X', 'Y', 'Z'] as const).map((axis, i) => {
                 const size = stats.boundingBox.max[i] - stats.boundingBox.min[i];
                 return (
                   <div key={axis} className="rounded-2xl bg-slate-50 border border-slate-100 p-4">
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">{axis}-Axis</p>
-                    <p className="text-xl font-black text-slate-900">{size.toFixed(2)}<span className="text-xs text-slate-400 font-bold ml-1">mm</span></p>
-                    <p className="text-[10px] text-slate-400 mt-1 font-medium">{stats.boundingBox.min[i].toFixed(2)} to {stats.boundingBox.max[i].toFixed(2)}</p>
+                    <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-1">{axis}-Axis</p>
+                    <p className="text-xl font-black text-slate-900">{size.toFixed(2)}<span className="text-base text-slate-400 font-bold ml-1">mm</span></p>
+                    <p className="text-sm text-slate-400 mt-1 font-medium">{stats.boundingBox.min[i].toFixed(2)} to {stats.boundingBox.max[i].toFixed(2)}</p>
                   </div>
                 );
               })}
@@ -266,14 +266,14 @@ export default function STLMeshCheckerClient() {
           {/* Volume & Surface Area */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-2">Mesh Volume</p>
-              <p className="text-3xl font-black text-blue-600">{stats.volume.toFixed(2)}<span className="text-sm font-bold ml-2 text-slate-400">mm³</span></p>
-              <p className="text-xs text-slate-500 mt-2 font-medium">{(stats.volume / 1000).toFixed(2)} cm³</p>
+              <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-2">Mesh Volume</p>
+              <p className="text-3xl font-black text-blue-600">{stats.volume.toFixed(2)}<span className="text-lg font-bold ml-2 text-slate-400">mm³</span></p>
+              <p className="text-base text-slate-500 mt-2 font-medium">{(stats.volume / 1000).toFixed(2)} cm³</p>
             </div>
             <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-2">Surface Area</p>
-              <p className="text-3xl font-black text-emerald-600">{stats.surfaceArea.toFixed(2)}<span className="text-sm font-bold ml-2 text-slate-400">mm²</span></p>
-              <p className="text-xs text-slate-500 mt-2 font-medium">{(stats.surfaceArea / 100).toFixed(2)} cm²</p>
+              <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-2">Surface Area</p>
+              <p className="text-3xl font-black text-emerald-600">{stats.surfaceArea.toFixed(2)}<span className="text-lg font-bold ml-2 text-slate-400">mm²</span></p>
+              <p className="text-base text-slate-500 mt-2 font-medium">{(stats.surfaceArea / 100).toFixed(2)} cm²</p>
             </div>
           </div>
 
@@ -287,7 +287,7 @@ export default function STLMeshCheckerClient() {
                 <p className={`text-lg font-black ${stats.isWatertight ? 'text-emerald-700' : 'text-red-700'}`}>
                   {stats.isWatertight ? 'Mesh is Watertight ✓' : 'Mesh is NOT Watertight'}
                 </p>
-                <p className="text-xs text-slate-500 font-medium mt-1">
+                <p className="text-base text-slate-500 font-medium mt-1">
                   {stats.isWatertight
                     ? 'All edges are shared by exactly 2 triangles. Safe for 3D printing.'
                     : `${stats.nonManifoldEdges} non-manifold edges found (edges shared by ≠ 2 triangles). Fix before 3D printing.`}
