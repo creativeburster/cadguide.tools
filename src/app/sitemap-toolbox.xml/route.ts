@@ -8,7 +8,7 @@ export async function GET() {
   // Fixed content-version date — only update this when content is substantively changed.
   // Do NOT use new Date() here; a dynamic timestamp causes Googlebot to re-crawl unchanged
   // pages every time the sitemap is fetched, wasting crawl budget.
-  const now = '2026-06-10T00:00:00.000Z'; // Toolbox pages launch date
+  const now = '2026-07-16T00:00:00.000Z'; // Updated: 143 new calculators added
 
   // 1. Toolbox Main Index Page
   const mainToolboxUrl = `  <url>
