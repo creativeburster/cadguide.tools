@@ -27,11 +27,14 @@ function pricingLabel(t: Tool): string {
 }
 
 function pageTitle(tool: Tool, count: number): string {
-  return `Best ${tool.name} Alternatives in ${YEAR}: ${count} Tools Compared`;
+  const suffix = ` Alternatives & Equivalents (${YEAR})`;
+  const full = `Best ${tool.name}${suffix}`;
+  if (full.length <= 60) return full;
+  return `${tool.name} Alternatives & Equivalents (${YEAR})`;
 }
 
 function pageDescription(tool: Tool, count: number): string {
-  return `Looking for an alternative to ${tool.name}? Compare ${count} similar CAD tools by pricing, platform, score, and target use case — all hand-vetted by our editors.`;
+  return `Looking for an alternative or equivalent to ${tool.name}? Compare ${count} similar CAD/BIM software options by pricing, platform, score, and features.`;
 }
 
 export async function generateMetadata(
@@ -134,20 +137,20 @@ function faqLd(tool: Tool, alts: Tool[]) {
     mainEntity: [
       {
         '@type': 'Question',
-        name: `What is the closest alternative to ${tool.name}?`,
+        name: `What is the closest alternative or equivalent to ${tool.name}?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `${top?.name ?? 'Our top pick'} is the closest direct alternative to ${tool.name}, with comparable feature depth and a similar target user base.`,
+          text: `${top?.name ?? 'Our top pick'} is the closest equivalent and direct alternative to ${tool.name}, with comparable feature depth and a similar target user base.`,
         },
       },
       {
         '@type': 'Question',
-        name: `Is there a free alternative to ${tool.name}?`,
+        name: `Is there a free equivalent to ${tool.name}?`,
         acceptedAnswer: {
           '@type': 'Answer',
           text: cheapest && (cheapest.pricing_type === 'Free' || cheapest.pricing_type === 'Open Source' || cheapest.pricing_type === 'Freemium')
-            ? `Yes — ${cheapest.name} is ${cheapest.pricing_type.toLowerCase()} and the most accessible option on this list.`
-            : `No truly free direct alternative, but several options on this list are dramatically cheaper than ${tool.name}.`,
+            ? `Yes — ${cheapest.name} is ${cheapest.pricing_type.toLowerCase()} and the most accessible equivalent option on this list.`
+            : `No truly free equivalent, but several options on this list are dramatically cheaper than ${tool.name}.`,
         },
       },
       {
@@ -159,7 +162,7 @@ function faqLd(tool: Tool, alts: Tool[]) {
             const cons = tool.cons?.filter(c => c.length < 80).slice(0, 3);
             if (!cons || cons.length === 0) return `Common reasons: cost (perpetual vs subscription pricing), platform requirements, specific feature gaps, or vendor lock-in concerns.`;
             const formatted = cons.map(c => c.charAt(0).toLowerCase() + c.slice(1).replace(/\.$/, ''));
-            return `The most frequently cited pain points with ${tool.name}: ${formatted.join('; ')}. Each alternative below directly addresses one or more of these limitations.`;
+            return `The most frequently cited pain points with ${tool.name}: ${formatted.join('; ')}. Each equivalent below directly addresses one or more of these limitations.`;
           })(),
         },
       },
@@ -350,18 +353,18 @@ function renderAlternativesFAQs(tool: Tool, alts: Tool[], style: AlternativeStyl
       </h2>
       <dl className="space-y-4">
         <div className="border-b border-slate-100 pb-4">
-          <dt className="font-semibold text-slate-900 text-sm sm:text-base">What is the closest alternative to {tool.name}?</dt>
+          <dt className="font-semibold text-slate-900 text-sm sm:text-base">What is the closest alternative or equivalent to {tool.name}?</dt>
           <dd className="mt-2 text-slate-600 text-sm leading-relaxed">
-            {top?.name ?? 'Our editors recommended tool'} is the closest direct alternative to {tool.name}, offering a highly comparable functional scope and targeting the same engineering workflows.
+            {top?.name ?? 'Our editors recommended tool'} is the closest equivalent and direct alternative to {tool.name}, offering a highly comparable functional scope and targeting the same engineering workflows.
           </dd>
         </div>
         <div className="border-b border-slate-100 pb-4">
-          <dt className="font-semibold text-slate-900 text-sm sm:text-base">Is there a free alternative to {tool.name}?</dt>
+          <dt className="font-semibold text-slate-900 text-sm sm:text-base">Is there a free equivalent to {tool.name}?</dt>
           <dd className="mt-2 text-slate-600 text-sm leading-relaxed">
             {hasFree ? (
-              <span>Yes — <strong>{cheapest.name}</strong> is {cheapest.pricing_type.toLowerCase()} and is the most cost-effective entry point on this alternatives list.</span>
+              <span>Yes — <strong>{cheapest.name}</strong> is {cheapest.pricing_type.toLowerCase()} and is the most cost-effective equivalent on this list.</span>
             ) : (
-              <span>While there are no fully free direct matches, several options on our curated list are significantly more budget-friendly than {tool.name}.</span>
+              <span>While there are no fully free equivalents, several options on our curated list are significantly more budget-friendly than {tool.name}.</span>
             )}
           </dd>
         </div>
@@ -373,7 +376,7 @@ function renderAlternativesFAQs(tool: Tool, alts: Tool[], style: AlternativeStyl
               if (!cons || cons.length === 0) return <span>Most teams switch due to licensing costs, platform restrictions, or specific workflow gaps that a more specialized tool handles better.</span>;
               const c0 = cons[0].charAt(0).toUpperCase() + cons[0].slice(1).replace(/\.$/, '');
               const c1 = cons[1] ? (cons[1].charAt(0).toLowerCase() + cons[1].slice(1).replace(/\.$/, '')) : null;
-              return <span>The most common pain points reported by {tool.name} users: <strong>{c0}</strong>{c1 ? `. Also: ${c1}` : ''}. Each alternative on this list addresses at least one of these gaps.</span>;
+              return <span>The most common pain points reported by {tool.name} users: <strong>{c0}</strong>{c1 ? `. Also: ${c1}` : ''}. Each equivalent on this list addresses at least one of these gaps.</span>;
             })()}
           </dd>
         </div>
@@ -389,10 +392,10 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
     <section className="mb-12">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-          Ranked Alternatives to {tool.name}
+          Ranked Alternatives & Equivalents to {tool.name}
         </h2>
         <span className={`px-2.5 py-1 text-xs font-bold rounded-lg border uppercase tracking-wider ${style.badgeAccent}`}>
-          {alts.length} Shortlists
+          {alts.length} Options
         </span>
       </div>
 
@@ -648,12 +651,12 @@ function getDynamicAlternativesIntro(tool: Tool, alts: Tool[], archetype: string
   const cheapestNote = cheapestFree ? ` ${cheapestFree.name} is our top free pick.` : '';
 
   if (archetype === 'technical-migration') {
-    return `${pricingSignal}${platformNote} are the most common triggers for this search.${topCon} Below are ${count} hand-vetted tools our editors evaluated for DWG/RVT file integrity, AutoLISP/API compatibility, and network deployment feasibility.${cheapestNote}`;
+    return `${pricingSignal}${platformNote} are the most common triggers for this search.${topCon} Below are ${count} hand-vetted equivalents our editors evaluated for DWG/RVT file integrity, AutoLISP/API compatibility, and network deployment feasibility.${cheapestNote}`;
   }
   if (archetype === 'creative-styling') {
-    return `${pricingSignal}${platformNote} typically drive the search for a ${tool.name} alternative.${topCon} We reviewed ${count} alternatives focusing on G2 surface continuity, viewport GPU performance, and clean watertight export for visualization or manufacturing pipelines.${cheapestNote}`;
+    return `${pricingSignal}${platformNote} typically drive the search for a ${tool.name} equivalent.${topCon} We reviewed ${count} comparable tools focusing on G2 surface continuity, viewport GPU performance, and clean watertight export for visualization or manufacturing pipelines.${cheapestNote}`;
   }
-  return `${pricingSignal}${platformNote} commonly look for alternatives.${topCon} Below are ${count} tools evaluated for file format openness, scripting extensibility, and EDA/CAM workflow fit.${cheapestNote}`;
+  return `${pricingSignal}${platformNote} commonly look for equivalent software.${topCon} Below are ${count} options evaluated for file format openness, scripting extensibility, and EDA/CAM workflow fit.${cheapestNote}`;
 }
 
 export default async function AlternativesPage(

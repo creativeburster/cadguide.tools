@@ -12,26 +12,31 @@ export default function ToolboxClient() {
   const [expandedCats, setExpandedCats] = useState<Set<string>>(new Set(['all']));
   const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
 
-  const filteredTools = useMemo(() => {
-    return TOOLBOX_DATA.filter((item) => {
-      const matchesSearch =
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.keywords.some((kw) => kw.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-      return matchesSearch && matchesCategory;
-    });
-  }, [searchTerm, activeCategory]);
+  // Search-only filter (used for category counts so numbers don't disappear when a tab is active)
+  const searchResults = useMemo(() => {
+    if (!searchTerm) return TOOLBOX_DATA;
+    return TOOLBOX_DATA.filter((item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.keywords.some((kw) => kw.toLowerCase().includes(searchTerm.toLowerCase()))
+    );
+  }, [searchTerm]);
 
-  // Group filtered tools by category
+  // Category + search filter (used for the actual grid display)
+  const filteredTools = useMemo(() => {
+    if (activeCategory === 'all') return searchResults;
+    return searchResults.filter((item) => item.category === activeCategory);
+  }, [searchResults, activeCategory]);
+
+  // Group by category for accordion display
   const groupedTools = useMemo(() => {
     const groups: Record<string, ToolboxItem[]> = {};
     for (const cat of TOOLBOX_CATEGORIES) {
       if (cat.id === 'all') continue;
-      groups[cat.id] = filteredTools.filter((t) => t.category === cat.id);
+      groups[cat.id] = searchResults.filter((t) => t.category === cat.id);
     }
     return groups;
-  }, [filteredTools]);
+  }, [searchResults]);
 
   const isSearching = searchTerm.length > 0;
 
