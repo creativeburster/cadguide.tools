@@ -14,7 +14,7 @@ export default function TorqueUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/-/g,''),to=inputs[2].toLowerCase().replace(/-/g,'');const toNm={'nm':1,'knm':1000,'ftlbf':1.356,'inlbf':0.113,'kgfm':9.807};const nm=val*(toNm[from]||1);const result=nm/(toNm[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/-/g,''),to=inputs[2].toLowerCase().replace(/-/g,'');const toNm={'nm':1,'knm':1000,'ftlbf':1.356,'inlbf':0.113,'kgfm':9.807} as Record<string, number>;const nm=val*(toNm[from]||1);const result=nm/(toNm[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

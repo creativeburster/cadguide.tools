@@ -14,7 +14,7 @@ export default function AngleUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1],to=inputs[2];const toDeg={'deg':1,'rad':57.2958,'grad':0.9,'arcmin':1/60,'arcsec':1/3600};const deg=val*(toDeg[from]||1);const result=deg/(toDeg[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1],to=inputs[2];const toDeg={'deg':1,'rad':57.2958,'grad':0.9,'arcmin':1/60,'arcsec':1/3600} as Record<string, number>;const deg=val*(toDeg[from]||1);const result=deg/(toDeg[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

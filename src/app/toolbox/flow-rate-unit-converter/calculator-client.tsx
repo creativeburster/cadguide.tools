@@ -14,7 +14,7 @@ export default function FlowRateUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/\//g,''),to=inputs[2].toLowerCase().replace(/\//g,'');const toLs={'ls':1,'m3h':0.2778,'m3min':16.667,'gpm':0.06309,'cfm':0.472,'lmin':0.01667};const ls=val*(toLs[from]||1);const result=ls/(toLs[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/\//g,''),to=inputs[2].toLowerCase().replace(/\//g,'');const toLs={'ls':1,'m3h':0.2778,'m3min':16.667,'gpm':0.06309,'cfm':0.472,'lmin':0.01667} as Record<string, number>;const ls=val*(toLs[from]||1);const result=ls/(toLs[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

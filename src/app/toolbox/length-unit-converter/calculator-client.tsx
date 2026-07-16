@@ -14,7 +14,7 @@ export default function LengthUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toM={'m':1,'cm':0.01,'mm':0.001,'km':1000,'in':0.0254,'ft':0.3048,'yd':0.9144,'mile':1609.34,'nmi':1852};const m=val*(toM[from]||1);const result=m/(toM[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toM={'m':1,'cm':0.01,'mm':0.001,'km':1000,'in':0.0254,'ft':0.3048,'yd':0.9144,'mile':1609.34,'nmi':1852} as Record<string, number>;const m=val*(toM[from]||1);const result=m/(toM[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

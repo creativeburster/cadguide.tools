@@ -14,7 +14,7 @@ export default function VolumeUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toM3={'m3':1,'l':0.001,'ml':0.000001,'ft3':0.02832,'in3':0.00001639,'gallon':0.003785,'barrel':0.15899,'cm3':0.000001};const m3=val*(toM3[from]||1);const result=m3/(toM3[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toM3={'m3':1,'l':0.001,'ml':0.000001,'ft3':0.02832,'in3':0.00001639,'gallon':0.003785,'barrel':0.15899,'cm3':0.000001} as Record<string, number>;const m3=val*(toM3[from]||1);const result=m3/(toM3[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

@@ -14,7 +14,7 @@ export default function ViscosityUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toPas={'cp':0.001,'pas':1,'poise':0.1,'lbfts':1.488,'cst':0.001};const pas=val*(toPas[from]||1);const result=pas/(toPas[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toPas={'cp':0.001,'pas':1,'poise':0.1,'lbfts':1.488,'cst':0.001} as Record<string, number>;const pas=val*(toPas[from]||1);const result=pas/(toPas[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

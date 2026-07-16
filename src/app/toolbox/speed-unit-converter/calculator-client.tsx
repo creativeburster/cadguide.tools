@@ -14,7 +14,7 @@ export default function SpeedUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/\//g,''),to=inputs[2].toLowerCase().replace(/\//g,'');const toMs={'ms':1,'kmh':0.2778,'mph':0.447,'fts':0.3048,'knot':0.5144,'mach':343};const ms=val*(toMs[from]||1);const result=ms/(toMs[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/\//g,''),to=inputs[2].toLowerCase().replace(/\//g,'');const toMs={'ms':1,'kmh':0.2778,'mph':0.447,'fts':0.3048,'knot':0.5144,'mach':343} as Record<string, number>;const ms=val*(toMs[from]||1);const result=ms/(toMs[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

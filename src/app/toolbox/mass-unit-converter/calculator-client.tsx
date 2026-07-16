@@ -14,7 +14,7 @@ export default function MassUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toKg={'kg':1,'g':0.001,'mg':0.000001,'ton':1000,'lb':0.4536,'oz':0.02835,'slug':14.594,'quintal':100};const kg=val*(toKg[from]||1);const result=kg/(toKg[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toKg={'kg':1,'g':0.001,'mg':0.000001,'ton':1000,'lb':0.4536,'oz':0.02835,'slug':14.594,'quintal':100} as Record<string, number>;const kg=val*(toKg[from]||1);const result=kg/(toKg[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

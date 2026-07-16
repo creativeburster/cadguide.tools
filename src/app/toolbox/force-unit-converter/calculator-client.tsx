@@ -14,7 +14,7 @@ export default function ForceUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toN={'n':1,'kn':1000,'mn':1000000,'kgf':9.807,'lbf':4.448,'ton':9807};const n=val*(toN[from]||1);const result=n/(toN[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toN={'n':1,'kn':1000,'mn':1000000,'kgf':9.807,'lbf':4.448,'ton':9807} as Record<string, number>;const n=val*(toN[from]||1);const result=n/(toN[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

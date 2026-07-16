@@ -14,7 +14,7 @@ export default function DensityUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/\//g,''),to=inputs[2].toLowerCase().replace(/\//g,'');const toKgm3={'kgm3':1,'gcm3':1000,'lbft3':16.018,'lbin3':27680,'kgl':1000};const kgm3=val*(toKgm3[from]||1);const result=kgm3/(toKgm3[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/\//g,''),to=inputs[2].toLowerCase().replace(/\//g,'');const toKgm3={'kgm3':1,'gcm3':1000,'lbft3':16.018,'lbin3':27680,'kgl':1000} as Record<string, number>;const kgm3=val*(toKgm3[from]||1);const result=kgm3/(toKgm3[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

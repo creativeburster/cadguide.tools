@@ -14,7 +14,7 @@ export default function AreaUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toM2={'m2':1,'cm2':0.0001,'mm2':0.000001,'ft2':0.0929,'in2':0.000645,'acre':4047,'hectare':10000,'km2':1000000};const m2=val*(toM2[from]||1);const result=m2/(toM2[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toM2={'m2':1,'cm2':0.0001,'mm2':0.000001,'ft2':0.0929,'in2':0.000645,'acre':4047,'hectare':10000,'km2':1000000} as Record<string, number>;const m2=val*(toM2[from]||1);const result=m2/(toM2[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

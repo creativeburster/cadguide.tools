@@ -14,7 +14,7 @@ export default function EnergyUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toJ={'j':1,'kj':1000,'mj':1000000,'kwh':3600000,'cal':4.184,'btu':1055,'ftlbf':1.356};const j=val*(toJ[from]||1);const result=j/(toJ[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toJ={'j':1,'kj':1000,'mj':1000000,'kwh':3600000,'cal':4.184,'btu':1055,'ftlbf':1.356} as Record<string, number>;const j=val*(toJ[from]||1);const result=j/(toJ[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

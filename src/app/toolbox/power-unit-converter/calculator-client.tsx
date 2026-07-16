@@ -14,7 +14,7 @@ export default function PowerUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toW={'w':1,'kw':1000,'mw':1000000,'hp':745.7,'btuh':0.2931,'ton':3517};const w=val*(toW[from]||1);const result=w/(toW[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toW={'w':1,'kw':1000,'mw':1000000,'hp':745.7,'btuh':0.2931,'ton':3517} as Record<string, number>;const w=val*(toW[from]||1);const result=w/(toW[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {

@@ -14,7 +14,7 @@ export default function PressureUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1],to=inputs[2];const toPa={'pa':1,'kpa':1000,'mpa':1000000,'bar':100000,'psi':6895,'atm':101325,'mmhg':133.3,'kgcm2':98067};const pa=val*(toPa[from]||1);const result=pa/(toPa[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=inputs[1],to=inputs[2];const toPa={'pa':1,'kpa':1000,'mpa':1000000,'bar':100000,'psi':6895,'atm':101325,'mmhg':133.3,'kgcm2':98067} as Record<string, number>;const pa=val*(toPa[from]||1);const result=pa/(toPa[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {
