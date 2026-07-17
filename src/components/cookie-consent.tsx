@@ -3,19 +3,32 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
+interface CookiePreferences {
+  essential: boolean;
+  analytics: boolean;
+  marketing: boolean;
+}
+
+interface CookieConsentItem {
+  value: 'accepted' | 'declined' | 'custom';
+  expiry: number;
+  preferences: CookiePreferences;
+}
+
 // Set localStorage with an expiry time
-const setCookieConsentWithExpiry = (value: string) => {
+const setCookieConsentWithExpiry = (value: 'accepted' | 'declined' | 'custom', preferences: CookiePreferences) => {
   const now = new Date();
   const expiry = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000); // 90 days
-  const item = {
+  const item: CookieConsentItem = {
     value,
     expiry: expiry.getTime(),
+    preferences,
   };
   localStorage.setItem('cookie-consent', JSON.stringify(item));
 };
 
-// Get localStorage with an expiry time
-const getCookieConsentWithExpiry = () => {
+// Get localStorage with an expiry time and handle compatibility
+const getCookieConsentWithExpiry = (): CookieConsentItem | null => {
   const itemStr = localStorage.getItem('cookie-consent');
   if (!itemStr) return null;
   try {
@@ -25,14 +38,33 @@ const getCookieConsentWithExpiry = () => {
       localStorage.removeItem('cookie-consent');
       return null;
     }
-    return item.value;
+    
+    // Compatibility check for older cookie structure
+    if (typeof item === 'object' && item !== null && 'value' in item) {
+      if (!item.preferences) {
+        const isAccepted = item.value === 'accepted';
+        item.preferences = {
+          essential: true,
+          analytics: isAccepted,
+          marketing: isAccepted,
+        };
+      }
+      return item as CookieConsentItem;
+    }
+    return null;
   } catch {
+    localStorage.removeItem('cookie-consent');
     return null;
   }
 };
 
 export function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
+  const [showPreferences, setShowPreferences] = useState(false);
+  
+  // Custom preference states (essential is always true)
+  const [analytics, setAnalytics] = useState(false);
+  const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
     const consent = getCookieConsentWithExpiry();
@@ -42,55 +74,178 @@ export function CookieConsent() {
     }
   }, []);
 
-  const handleClose = () => {
-    setCookieConsentWithExpiry('closed');
+  const handleDeclineAll = () => {
+    const prefs = { essential: true, analytics: false, marketing: false };
+    setCookieConsentWithExpiry('declined', prefs);
     setIsVisible(false);
   };
 
-  const accept = () => {
-    setCookieConsentWithExpiry('accepted');
+  const handleAcceptAll = () => {
+    const prefs = { essential: true, analytics: true, marketing: true };
+    setCookieConsentWithExpiry('accepted', prefs);
+    setIsVisible(false);
+  };
+
+  const handleSavePreferences = () => {
+    const prefs = { essential: true, analytics, marketing };
+    setCookieConsentWithExpiry('custom', prefs);
     setIsVisible(false);
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 left-6 z-[100] animate-in fade-in slide-in-from-bottom-5 duration-500 max-w-[320px]">
-      <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-2xl border border-slate-700/50 backdrop-blur-xl relative">
+    <div className="fixed bottom-6 left-6 z-[100] animate-in fade-in slide-in-from-bottom-5 duration-500 w-[calc(100%-3rem)] sm:w-full sm:max-w-[420px]">
+      <div className="bg-slate-950/95 text-slate-100 p-6 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] border border-slate-800/80 backdrop-blur-xl relative transition-all duration-300 ease-in-out">
+        
+        {/* Top Glow bar */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-t-2xl opacity-80" />
+
         <button
-          onClick={handleClose}
-          className="absolute top-2 right-2 w-5 h-5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-slate-800 rounded-full text-[10px] transition-colors"
-          aria-label="Close cookie banner"
+          onClick={handleDeclineAll}
+          className="absolute top-4 right-4 w-6 h-6 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800/60 rounded-full text-xs transition-colors"
+          aria-label="Decline and close cookie banner"
         >
           ✕
         </button>
-        <div className="flex flex-col gap-4">
-          <div>
-            <h3 className="font-bold text-sm mb-1 flex items-center gap-2">
-              <span>🍪</span> Cookie Policy
-            </h3>
-            <p className="text-slate-400 text-[12px] leading-tight">
-              We use cookies to improve your experience. By continuing, you agree to our <a href="/privacy" className="text-blue-400 hover:underline">Privacy Policy</a>.
-            </p>
+
+        {!showPreferences ? (
+          /* Simple View */
+          <div className="flex flex-col gap-5 pt-1">
+            <div>
+              <h3 className="font-bold text-base mb-2 flex items-center gap-2 text-white">
+                <span className="text-xl">🍪</span> Cookie Settings
+              </h3>
+              <p className="text-slate-300 text-xs leading-relaxed">
+                We use cookies to personalize content, optimize performance, and keep our site free using merchant affiliate links. By continuing, you agree to our{' '}
+                <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline font-medium">
+                  Privacy Policy
+                </a>.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-2 mt-1">
+              <Button
+                variant="ghost"
+                onClick={() => setShowPreferences(true)}
+                className="w-full sm:flex-1 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl text-xs h-9 border border-slate-800"
+              >
+                Customize
+              </Button>
+              <Button
+                variant="outline"
+                onClick={handleDeclineAll}
+                className="w-full sm:flex-1 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl text-xs h-9 border border-slate-800"
+              >
+                Decline All
+              </Button>
+              <Button
+                onClick={handleAcceptAll}
+                className="w-full sm:flex-1 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-xs h-9 shadow-md shadow-blue-900/20 transition-all active:scale-[0.98]"
+              >
+                Accept All
+              </Button>
+            </div>
           </div>
-          <div className="flex gap-2">
-            <Button 
-              size="sm"
-              variant="ghost" 
-              onClick={handleClose}
-              className="flex-1 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg text-xs h-8"
-            >
-              Decline
-            </Button>
-            <Button 
-              size="sm"
-              onClick={accept}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-xs h-8 shadow-lg shadow-blue-900/40"
-            >
-              Accept All
-            </Button>
+        ) : (
+          /* Preferences View */
+          <div className="flex flex-col gap-5 pt-1 animate-in fade-in slide-in-from-right-3 duration-300">
+            <div>
+              <button 
+                onClick={() => setShowPreferences(false)}
+                className="text-xs text-slate-400 hover:text-white flex items-center gap-1 mb-3 transition-colors"
+              >
+                ← Back to simple view
+              </button>
+              <h3 className="font-bold text-base mb-1 text-white">
+                Customize Preferences
+              </h3>
+              <p className="text-slate-400 text-[11px] leading-relaxed">
+                Manage your consent choices for different cookies below. For more information, please read our{' '}
+                <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline font-medium">
+                  Privacy Policy
+                </a>.
+              </p>
+            </div>
+
+            {/* Cookie Categories */}
+            <div className="flex flex-col gap-4 border-y border-slate-800/60 py-4 my-1">
+              
+              {/* Category: Essential */}
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-semibold text-white">Strictly Necessary</span>
+                    <span className="text-[9px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono uppercase tracking-wider">Required</span>
+                  </div>
+                  <p className="text-slate-400 text-[11px] mt-0.5 leading-tight">
+                    Essential for navigation, basic features, and security of the site. They cannot be turned off.
+                  </p>
+                </div>
+                <div className="relative inline-flex items-center mt-1">
+                  <input type="checkbox" checked disabled className="sr-only peer" />
+                  <div className="w-8 h-4 bg-blue-600/50 rounded-full opacity-60 cursor-not-allowed after:content-[''] after:absolute after:top-[2px] after:left-[14px] after:bg-slate-300 after:rounded-full after:h-3 after:w-3" />
+                </div>
+              </div>
+
+              {/* Category: Analytics */}
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <span className="text-xs font-semibold text-white">Analytics & Performance</span>
+                  <p className="text-slate-400 text-[11px] mt-0.5 leading-tight">
+                    Helps us understand how visitors use the website (e.g. page visits, loading speed) to improve overall design.
+                  </p>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer mt-1">
+                  <input
+                    type="checkbox"
+                    checked={analytics}
+                    onChange={(e) => setAnalytics(e.target.checked)}
+                    className="sr-only peer"
+                  />
+                  <div className="w-8 h-4 bg-slate-800 rounded-full peer peer-focus:ring-0 peer-checked:after:translate-x-3.5 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-slate-400 peer-checked:after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-blue-600" />
+                </label>
+              </div>
+
+              {/* Category: Marketing */}
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <span className="text-xs font-semibold text-white">Marketing & Partner Affiliates</span>
+                  <p className="text-slate-400 text-[11px] mt-0.5 leading-tight">
+                    Enables tracking for partner affiliate recommendations, allowing us to keep this service completely free.
+                  </p>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer mt-1">
+                  <input
+                    type="checkbox"
+                    checked={marketing}
+                    onChange={(e) => setMarketing(e.target.checked)}
+                    className="sr-only peer"
+                  />
+                  <div className="w-8 h-4 bg-slate-800 rounded-full peer peer-focus:ring-0 peer-checked:after:translate-x-3.5 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-slate-400 peer-checked:after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-blue-600" />
+                </label>
+              </div>
+
+            </div>
+
+            <div className="flex gap-2">
+              <Button
+                variant="outline"
+                onClick={handleSavePreferences}
+                className="flex-1 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl text-xs h-9 border border-slate-800"
+              >
+                Save Choices
+              </Button>
+              <Button
+                onClick={handleAcceptAll}
+                className="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-xs h-9 shadow-md shadow-blue-900/20 transition-all active:scale-[0.98]"
+              >
+                Accept All
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
+
       </div>
     </div>
   );
