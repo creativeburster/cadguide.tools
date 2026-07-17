@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 
 interface CookiePreferences {
   essential: boolean;
@@ -96,14 +95,14 @@ export function CookieConsent() {
 
   return (
     <div className="fixed bottom-6 left-6 z-[100] animate-in fade-in slide-in-from-bottom-5 duration-500 w-[calc(100%-3rem)] sm:w-full sm:max-w-[420px]">
-      <div className="bg-slate-950/95 text-slate-100 p-6 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] border border-slate-800/80 backdrop-blur-xl relative transition-all duration-300 ease-in-out">
+      <div className="bg-slate-950/95 text-slate-100 p-6 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.6)] border border-slate-800/80 backdrop-blur-xl relative transition-all duration-300 ease-in-out">
         
         {/* Top Glow bar */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-t-2xl opacity-80" />
 
         <button
           onClick={handleDeclineAll}
-          className="absolute top-4 right-4 w-6 h-6 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800/60 rounded-full text-xs transition-colors"
+          className="absolute top-4 right-4 w-6 h-6 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800/60 rounded-full text-xs transition-colors cursor-pointer"
           aria-label="Decline and close cookie banner"
         >
           ✕
@@ -125,26 +124,24 @@ export function CookieConsent() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-2 mt-1">
-              <Button
-                variant="ghost"
+              <button
                 onClick={() => setShowPreferences(true)}
-                className="w-full sm:flex-1 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl text-xs h-9 border border-slate-800"
+                className="w-full sm:flex-1 bg-slate-900 hover:bg-slate-800/80 text-white font-semibold rounded-xl text-xs h-9 border border-slate-850/80 transition-all active:scale-[0.98] flex items-center justify-center cursor-pointer"
               >
                 Customize
-              </Button>
-              <Button
-                variant="outline"
+              </button>
+              <button
                 onClick={handleDeclineAll}
-                className="w-full sm:flex-1 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl text-xs h-9 border border-slate-800"
+                className="w-full sm:flex-1 bg-slate-900 hover:bg-slate-800/80 text-white font-semibold rounded-xl text-xs h-9 border border-slate-850/80 transition-all active:scale-[0.98] flex items-center justify-center cursor-pointer"
               >
                 Decline All
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={handleAcceptAll}
-                className="w-full sm:flex-1 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-xs h-9 shadow-md shadow-blue-900/20 transition-all active:scale-[0.98]"
+                className="w-full sm:flex-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs h-9 shadow-md shadow-blue-900/20 transition-all active:scale-[0.98] flex items-center justify-center cursor-pointer"
               >
                 Accept All
-              </Button>
+              </button>
             </div>
           </div>
         ) : (
@@ -153,7 +150,7 @@ export function CookieConsent() {
             <div>
               <button 
                 onClick={() => setShowPreferences(false)}
-                className="text-xs text-slate-400 hover:text-white flex items-center gap-1 mb-3 transition-colors"
+                className="text-xs text-slate-300 hover:text-white flex items-center gap-1 mb-3 transition-colors cursor-pointer"
               >
                 ← Back to simple view
               </button>
@@ -169,7 +166,7 @@ export function CookieConsent() {
             </div>
 
             {/* Cookie Categories */}
-            <div className="flex flex-col gap-4 border-y border-slate-800/60 py-4 my-1">
+            <div className="flex flex-col gap-4 border-y border-slate-805/60 py-4 my-1">
               
               {/* Category: Essential */}
               <div className="flex items-start justify-between gap-4">
@@ -184,7 +181,7 @@ export function CookieConsent() {
                 </div>
                 <div className="relative inline-flex items-center mt-1">
                   <input type="checkbox" checked disabled className="sr-only peer" />
-                  <div className="w-8 h-4 bg-blue-600/50 rounded-full opacity-60 cursor-not-allowed after:content-[''] after:absolute after:top-[2px] after:left-[14px] after:bg-slate-300 after:rounded-full after:h-3 after:w-3" />
+                  <div className="w-10 h-6 bg-blue-600/70 border border-blue-500/50 rounded-full after:content-[''] after:absolute after:top-[2px] after:left-[18px] after:bg-white after:rounded-full after:h-5 after:w-5 cursor-not-allowed opacity-80" />
                 </div>
               </div>
 
@@ -196,14 +193,14 @@ export function CookieConsent() {
                     Helps us understand how visitors use the website (e.g. page visits, loading speed) to improve overall design.
                   </p>
                 </div>
-                <label className="relative inline-flex items-center cursor-pointer mt-1">
+                <label className="relative inline-flex items-center cursor-pointer mt-1 select-none">
                   <input
                     type="checkbox"
                     checked={analytics}
                     onChange={(e) => setAnalytics(e.target.checked)}
                     className="sr-only peer"
                   />
-                  <div className="w-8 h-4 bg-slate-800 rounded-full peer peer-focus:ring-0 peer-checked:after:translate-x-3.5 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-slate-400 peer-checked:after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-blue-600" />
+                  <div className="w-10 h-6 bg-slate-800 border border-slate-700/60 rounded-full peer peer-focus:ring-0 peer-checked:after:translate-x-4 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-slate-400 peer-checked:after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 peer-checked:border-blue-500" />
                 </label>
               </div>
 
@@ -215,33 +212,32 @@ export function CookieConsent() {
                     Enables tracking for partner affiliate recommendations, allowing us to keep this service completely free.
                   </p>
                 </div>
-                <label className="relative inline-flex items-center cursor-pointer mt-1">
+                <label className="relative inline-flex items-center cursor-pointer mt-1 select-none">
                   <input
                     type="checkbox"
                     checked={marketing}
                     onChange={(e) => setMarketing(e.target.checked)}
                     className="sr-only peer"
                   />
-                  <div className="w-8 h-4 bg-slate-800 rounded-full peer peer-focus:ring-0 peer-checked:after:translate-x-3.5 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-slate-400 peer-checked:after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-blue-600" />
+                  <div className="w-10 h-6 bg-slate-800 border border-slate-700/60 rounded-full peer peer-focus:ring-0 peer-checked:after:translate-x-4 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-slate-400 peer-checked:after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 peer-checked:border-blue-500" />
                 </label>
               </div>
 
             </div>
 
             <div className="flex gap-2">
-              <Button
-                variant="outline"
+              <button
                 onClick={handleSavePreferences}
-                className="flex-1 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl text-xs h-9 border border-slate-800"
+                className="flex-1 bg-slate-900 hover:bg-slate-800/80 text-white font-semibold rounded-xl text-xs h-9 border border-slate-850/80 transition-all active:scale-[0.98] flex items-center justify-center cursor-pointer"
               >
                 Save Choices
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={handleAcceptAll}
-                className="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-xs h-9 shadow-md shadow-blue-900/20 transition-all active:scale-[0.98]"
+                className="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs h-9 shadow-md shadow-blue-900/20 transition-all active:scale-[0.98] flex items-center justify-center cursor-pointer"
               >
                 Accept All
-              </Button>
+              </button>
             </div>
           </div>
         )}
