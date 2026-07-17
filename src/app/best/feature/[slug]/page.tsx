@@ -853,7 +853,12 @@ function articleLd(slug: string, title: string, description: string) {
     headline: title,
     description: description,
     mainEntityOfPage: `${SITE_URL}/best/feature/${slug}`,
-    publisher: {
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: {
       '@type': 'Organization',
       name: 'CADGuide.tools',
       url: SITE_URL,

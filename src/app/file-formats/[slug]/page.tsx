@@ -143,7 +143,12 @@ function articleLd(p: FormatPage, count: number) {
     headline: pageTitle(p, count),
     description: pageDescription(p, count),
     mainEntityOfPage: `${SITE_URL}/file-formats/${p.slug}`,
-    publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
     dateModified: new Date().toISOString().slice(0, 10),
   };

@@ -377,7 +377,7 @@ export async function onRequest(context) {
   if (GONE_PATHS.has(path) || isLegacyGuidePattern) {
     return new Response(
       `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head><meta charset="utf-8"><title>410 Gone</title></head>
 <body>
 <h1>410 Gone</h1>

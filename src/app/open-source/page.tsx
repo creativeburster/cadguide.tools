@@ -98,7 +98,12 @@ function articleLd() {
     headline: TITLE,
     description: DESCRIPTION,
     mainEntityOfPage: `${SITE_URL}/open-source`,
-    publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
     dateModified: new Date().toISOString().slice(0, 10),
   };

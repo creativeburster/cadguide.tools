@@ -118,7 +118,12 @@ function articleLd(tool: Tool, count: number) {
     headline: pageTitle(tool, count),
     description: pageDescription(tool, count),
     mainEntityOfPage: `${SITE_URL}/alternatives/${tool.slug}`,
-    publisher: {
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: {
       '@type': 'Organization',
       name: 'CADGuide.tools',
       url: SITE_URL,

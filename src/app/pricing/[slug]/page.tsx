@@ -158,7 +158,12 @@ function articleLd(p: PricingPageContent) {
     headline: p.seoTitle,
     description: p.seoDesc,
     mainEntityOfPage: `${SITE_URL}/pricing/${p.slug}`,
-    publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
     dateModified: new Date().toISOString().slice(0, 10),
   };

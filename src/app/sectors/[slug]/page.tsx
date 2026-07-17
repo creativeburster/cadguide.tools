@@ -285,7 +285,12 @@ function articleLd(s: SectorPage, count: number) {
     headline: pageTitle(s, count),
     description: pageDescription(s),
     mainEntityOfPage: `${SITE_URL}/sectors/${s.slug}`,
-    publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: { '@type': 'Organization', name: 'CADGuide.tools', url: SITE_URL },
     datePublished: '2026-01-01',
     dateModified: new Date().toISOString().slice(0, 10),
   };

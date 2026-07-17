@@ -19,21 +19,24 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  authors: [{ name: "CADGuide.tools Editorial", url: "https://cadguide.tools/about" }],
+  publisher: "CADGuide.tools",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en-US" className="antialiased">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
         <meta name="theme-color" content="#020617" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
         
-        {/* Sitemap reference for SEO & AI Search Crawler discovery */}
+        {/* Sitemap and LLMs.txt references for SEO & AI Search Crawler discovery */}
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt Index" />
         
         {/* DNS Preconnects for external resources */}
         <link rel="preconnect" href="https://icon.horse" crossOrigin="anonymous" />
@@ -85,7 +88,7 @@ export default function RootLayout({
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
-              if (window.location.hostname === 'cadguide.tools' || window.location.hostname === 'www.cadguide.tools') {
+              if (window.location.hostname && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
                 var _BRConf = { key: '81f9b4c973e1fb37a704344789dc0719' };
                 window._BRConf = _BRConf;
                 (function(d, t) {

@@ -292,7 +292,12 @@ function articleLd(a: Tool, b: Tool, pairSlug: string) {
     headline: pairTitle(a, b),
     description: pairDescription(a, b),
     mainEntityOfPage: `${SITE_URL}/compare/${pairSlug}`,
-    publisher: {
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: {
       '@type': 'Organization',
       name: 'CADGuide.tools',
       url: SITE_URL,

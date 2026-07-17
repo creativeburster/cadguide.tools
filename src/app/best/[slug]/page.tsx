@@ -107,7 +107,12 @@ function articleLd(category: Category) {
     headline: pageTitle(category),
     description: pageDescription(category),
     mainEntityOfPage: `${SITE_URL}/best/${category.slug}`,
-    publisher: {
+    author: {
+  '@type': 'Organization',
+  name: 'CADGuide.tools',
+  url: SITE_URL,
+},
+publisher: {
       '@type': 'Organization',
       name: 'CADGuide.tools',
       url: SITE_URL,
