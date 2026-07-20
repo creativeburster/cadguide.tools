@@ -153,10 +153,11 @@ function offerForTool(tool: Tool) {
 }
 
 /**
- * Build the aggregateRating payload. Prefer real external review counts
- * (G2 / Capterra / TrustRadius). If none are populated, fall back to a
- * placeholder count so Schema.org is happy and Google still considers
- * the field — but bias it small (24) instead of inflated.
+ * Build the aggregateRating payload from real external review counts
+ * (G2 / Capterra / TrustRadius). If no verifiable ratings are present we
+ * omit aggregateRating entirely — we never emit a placeholder or
+ * synthesised count, since fake review structured data risks a Google
+ * manual action.
  */
 function aggregateRatingFor(tool: Tool) {
   const ratings = tool.external_ratings ?? [];

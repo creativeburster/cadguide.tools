@@ -185,41 +185,6 @@ export const c4Tools: Tool[] = [
 
   expert_verdict: "You cannot run a modern construction project without Bluebeam.",
 
-  external_ratings: [{
-    source: "GetApp",
-    score: 4.7,
-    max: 5,
-    count: 975,
-    url: "https://www.getapp.com/collaboration-software/a/bluebeam-pdf-revu/"
-  },
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 445,
-      url: "https://www.g2.com/products/bluebeam/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.7,
-      max: 5,
-      count: 987,
-      url: "https://www.capterra.com/p/121586/Bluebeam-PDF-Revu/reviews/"
-    },
-    {
-      source: "TrustRadius",
-      score: 9,
-      max: 10,
-      count: 396,
-      url: "https://www.trustradius.com/products/bluebeam-revu/reviews/all"
-    },
-    {
-      source: "Software Advice",
-      score: 4.7,
-      max: 5,
-      count: 987,
-      url: "https://www.softwareadvice.com/cms/bluebeam-revu-profile/reviews/"
-    }],
 
   last_updated: "2023-07-16",
   version: "2024"
@@ -395,13 +360,6 @@ export const c4Tools: Tool[] = [
 
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
 
-  external_ratings: [{
-    source: "TrustRadius",
-    score: 9.3,
-    max: 10,
-    count: 43,
-    url: "https://www.trustradius.com/products/navisworks/reviews"
-  }],
 
   last_updated: "2026-03-26",
   version: "2027"
@@ -554,19 +512,6 @@ export const c4Tools: Tool[] = [
 
   expert_verdict: "The premier BIM quality assurance and clash detection utility, crucial for verifying model compliance.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 12,
-    url: "https://www.g2.com/products/solibri/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 8,
-    url: "https://www.capterra.com/p/138698/Solibri/"
-  }],
 
   last_updated: "2024-03-23",
   version: "2024"
@@ -704,22 +649,6 @@ export const c4Tools: Tool[] = [
 
   expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.2,
-      max: 5,
-      count: 20,
-      url: "https://www.g2.com/products/recap-pro/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4,
-      max: 5,
-      count: 10,
-      url: "https://www.capterra.com/p/10006619/Recap-Pro/reviews/"
-    }
-  ],
 
   last_updated: "2023-07-23",
   version: "2024.12"
@@ -855,22 +784,6 @@ export const c4Tools: Tool[] = [
 
   expert_verdict: "The gateway to reality capture in the BIM world.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 5,
-      url: "https://www.g2.com/products/solid-edge-viewer/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4,
-      max: 5,
-      count: 3,
-      url: "https://www.capterra.com/p/10006620/Solid-Edge-Viewer/reviews/"
-    }
-  ],
 
   last_updated: "2024-04-22",
   version: "2024"
@@ -964,22 +877,6 @@ export const c4Tools: Tool[] = [
 
   expert_verdict: "The standard for viewing Solid Edge data in production.",
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 10,
-      url: "https://www.g2.com/products/dwg-trueview/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.3,
-      max: 5,
-      count: 5,
-      url: "https://www.capterra.com/p/10006621/DWG-TrueView/reviews/"
-    }
-  ],
 
   last_updated: "2023-04-12",
   version: "2024"
@@ -1071,7 +968,6 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The essential utility for DWG version management.",
-  external_ratings: [],
   last_updated: "2024-11-27",
   version: "2024"
 }

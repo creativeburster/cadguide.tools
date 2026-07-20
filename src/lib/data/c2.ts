@@ -238,49 +238,6 @@ export const c2Tools: Tool[] = [
       "https://help.solidworks.com/2026/english/api/sldworksapiprogguide/welcome.htm",
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 628,
-    url: "https://www.g2.com/products/solidworks/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 628,
-    url: "https://www.capterra.com/software/182001/solidworks"
-  }, {
-    source: "TrustRadius",
-    score: 9,
-    max: 10,
-    count: 198,
-    url: "https://www.trustradius.com/products/solidworks/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.6,
-    max: 5,
-    count: 86,
-    url: "https://www.gartner.com/peer-insights/product/solidworks"
-  }, {
-    source: "Software Advice",
-    score: 4.6,
-    max: 5,
-    count: 628,
-    url: "https://www.softwareadvice.com/cad/solidworks-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.6,
-    max: 5,
-    count: 628,
-    url: "https://www.getapp.com/cad-software/a/solidworks/"
-  }, {
-    source: "Trustpilot",
-    score: 4.1,
-    max: 5,
-    count: 243,
-    url: "https://www.trustpilot.com/review/www.solidworks.com"
-  }],
 },
 {
   id: "t3",
@@ -499,49 +456,6 @@ export const c2Tools: Tool[] = [
     docs_url: "https://ruby.sketchup.com/",
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 1046,
-    url: "https://www.g2.com/products/sketchup/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 1046,
-    url: "https://www.capterra.com/software/211798/sketchup"
-  }, {
-    source: "TrustRadius",
-    score: 8.8,
-    max: 10,
-    count: 312,
-    url: "https://www.trustradius.com/products/sketchup/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.4,
-    max: 5,
-    count: 42,
-    url: "https://www.gartner.com/peer-insights/product/sketchup"
-  }, {
-    source: "Software Advice",
-    score: 4.5,
-    max: 5,
-    count: 1046,
-    url: "https://www.softwareadvice.com/3d-design/sketchup-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.5,
-    max: 5,
-    count: 1046,
-    url: "https://www.getapp.com/3d-design-software/a/sketchup/"
-  }, {
-    source: "Trustpilot",
-    score: 4.2,
-    max: 5,
-    count: 156,
-    url: "https://www.trustpilot.com/review/sketchup.com"
-  }],
 },
 {
   id: "t5",
@@ -796,49 +710,6 @@ export const c2Tools: Tool[] = [
       "https://help.autodesk.com/view/fusion360/ENU/?guid=GUID-A92A4B10-3781-4925-94C6-47DA85A4F65A",
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 892,
-    url: "https://www.g2.com/products/fusion-360/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 892,
-    url: "https://www.capterra.com/software/200002/autodesk-fusion-360"
-  }, {
-    source: "TrustRadius",
-    score: 8.8,
-    max: 10,
-    count: 267,
-    url: "https://www.trustradius.com/products/fusion-360/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.5,
-    max: 5,
-    count: 56,
-    url: "https://www.gartner.com/peer-insights/product/autodesk-fusion-360"
-  }, {
-    source: "Software Advice",
-    score: 4.6,
-    max: 5,
-    count: 892,
-    url: "https://www.softwareadvice.com/cad/fusion-360-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.6,
-    max: 5,
-    count: 892,
-    url: "https://www.getapp.com/cad-software/a/autodesk-fusion-360/"
-  }, {
-    source: "Trustpilot",
-    score: 4.1,
-    max: 5,
-    count: 312,
-    url: "https://www.trustpilot.com/review/www.autodesk.com/products/fusion-360"
-  }],
 },
 {
   id: "t6",
@@ -1070,49 +941,6 @@ export const c2Tools: Tool[] = [
     docs_url: "https://developer.rhino3d.com/",
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 187,
-    url: "https://www.g2.com/products/rhino/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 187,
-    url: "https://www.capterra.com/software/200001/rhino-3d"
-  }, {
-    source: "TrustRadius",
-    score: 8.8,
-    max: 10,
-    count: 67,
-    url: "https://www.trustradius.com/products/rhino-3d/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.5,
-    max: 5,
-    count: 22,
-    url: "https://www.gartner.com/peer-insights/product/rhino-3d"
-  }, {
-    source: "Software Advice",
-    score: 4.6,
-    max: 5,
-    count: 187,
-    url: "https://www.softwareadvice.com/3d-design/rhino-3d-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.6,
-    max: 5,
-    count: 187,
-    url: "https://www.getapp.com/3d-design-software/a/rhino-3d/"
-  }, {
-    source: "Trustpilot",
-    score: 4.3,
-    max: 5,
-    count: 89,
-    url: "https://www.trustpilot.com/review/www.rhino3d.com"
-  }],
 },
 {
   id: "t7",
@@ -1359,49 +1187,6 @@ export const c2Tools: Tool[] = [
     docs_url: "https://www.3ds.com/products/catia/developer",
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 156,
-    url: "https://www.g2.com/products/catia/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 156,
-    url: "https://www.capterra.com/software/200003/catia"
-  }, {
-    source: "TrustRadius",
-    score: 8.7,
-    max: 10,
-    count: 68,
-    url: "https://www.trustradius.com/products/catia/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.6,
-    max: 5,
-    count: 42,
-    url: "https://www.gartner.com/peer-insights/product/dassault-systemes-catia"
-  }, {
-    source: "Software Advice",
-    score: 4.5,
-    max: 5,
-    count: 156,
-    url: "https://www.softwareadvice.com/cad/catia-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.5,
-    max: 5,
-    count: 156,
-    url: "https://www.getapp.com/cad-software/a/catia/"
-  }, {
-    source: "Trustpilot",
-    score: 4,
-    max: 5,
-    count: 87,
-    url: "https://www.trustpilot.com/review/3ds.com"
-  }],
 },
 {
   id: "t11",
@@ -1586,43 +1371,6 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop"],
   license_types: ["Open-Source", "Free"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 70,
-      url: "https://www.g2.com/products/freecad/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.2,
-      max: 5,
-      count: 110,
-      url: "https://www.capterra.com/p/189000/FreeCAD/",
-    },
-    {
-      source: "TrustRadius",
-      score: 7.0,
-      max: 10,
-      count: 11,
-      url: "https://www.trustradius.com/products/freecad/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.3,
-      max: 5,
-      count: 142,
-      url: "https://www.softwareadvice.com/manufacturing/freecad-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.3,
-      max: 5,
-      count: 142,
-      url: "https://www.getapp.com/all-software/a/freecad/",
-    },
-  ],
 
   support_channels: ["Community", "Documentation"],
   security_compliance: [],
@@ -1856,50 +1604,6 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Cloud", "Web", "Mobile"],
   license_types: ["Subscription", "Free", "Educational"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.6,
-      max: 5,
-      count: 380,
-      url: "https://www.g2.com/products/onshape/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.6,
-      max: 5,
-      count: 280,
-      url: "https://www.capterra.com/p/170018/Onshape/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.7,
-      max: 10,
-      count: 120,
-      url: "https://www.trustradius.com/products/onshape/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 315,
-      url: "https://www.softwareadvice.com/manufacturing/onshape-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.5,
-      max: 5,
-      count: 315,
-      url: "https://www.getapp.com/all-software/a/onshape/",
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 4.8,
-      max: 5,
-      count: 16,
-      url: "https://www.gartner.com/reviews/market/cad-software/vendor/ptc/product/onshape",
-    },
-  ],
 
   support_channels: [
     "Email",
@@ -2077,48 +1781,6 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Solid Edge is the 'thinking man's' SolidWorks.",
 
-  external_ratings: [{
-    source: "TrustRadius",
-    score: 7.9,
-    max: 10,
-    count: 55,
-    url: "https://www.trustradius.com/products/siemens-solid-edge/reviews"
-  },
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 98,
-      url: "https://www.g2.com/products/solid-edge/reviews"
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 67,
-      url: "https://www.capterra.com/p/105942/Solid-Edge/reviews/"
-    },
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 67,
-      url: "https://www.softwareadvice.com/manufacturing/solid-edge-profile/reviews/"
-    },
-    {
-      source: "GetApp",
-      score: 4.5,
-      max: 5,
-      count: 67,
-      url: "https://www.getapp.com/all-software/a/solid-edge/"
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 4.4,
-      max: 5,
-      count: 12,
-      url: "https://www.gartner.com/reviews/market/cad-software/vendor/siemens/product/solid-edge"
-    }]
 },
 {
   id: "t20",
@@ -2272,50 +1934,6 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop"],
   license_types: ["Subscription", "Network", "Educational"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 410,
-      url: "https://www.g2.com/products/autodesk-inventor/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 260,
-      url: "https://www.capterra.com/p/118923/Autodesk-Inventor/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.6,
-      max: 10,
-      count: 350,
-      url: "https://www.trustradius.com/products/autodesk-inventor/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.5,
-      max: 5,
-      count: 278,
-      url: "https://www.softwareadvice.com/manufacturing/autodesk-inventor-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.5,
-      max: 5,
-      count: 278,
-      url: "https://www.getapp.com/all-software/a/autodesk-inventor/",
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 4.5,
-      max: 5,
-      count: 8,
-      url: "https://www.gartner.com/reviews/market/cad-software/vendor/autodesk/product/inventor",
-    },
-  ],
 
   support_channels: [
     "Phone",
@@ -2511,43 +2129,6 @@ export const c2Tools: Tool[] = [
   deployment_options: ["Desktop", "Cloud"],
   license_types: ["Subscription", "Perpetual", "Network", "Floating"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.3,
-      max: 5,
-      count: 460,
-      url: "https://www.g2.com/products/ptc-creo/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.4,
-      max: 5,
-      count: 220,
-      url: "https://www.capterra.com/p/138691/Creo-Parametric/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.4,
-      max: 10,
-      count: 380,
-      url: "https://www.trustradius.com/products/ptc-creo/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.3,
-      max: 5,
-      count: 67,
-      url: "https://www.softwareadvice.com/manufacturing/ptc-creo-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.3,
-      max: 5,
-      count: 67,
-      url: "https://www.getapp.com/all-software/a/ptc-creo/",
-    },
-  ],
 
   support_channels: [
     "Phone",
@@ -2671,25 +2252,6 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "OpenSCAD is the ultimate tool for engineers who think in code.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 31,
-    url: "https://www.g2.com/products/openscad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 3,
-    url: "https://www.capterra.com/p/openscad/reviews/"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 8,
-    url: "https://sourceforge.net/projects/openscad/reviews"
-  }]
 },
 {
   id: "t25",
@@ -2806,41 +2368,6 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "Shapr3D has done the impossible: made professional CAD fun.",
 
-  external_ratings: [{
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 22,
-    url: "https://www.capterra.com/p/184498/Shapr3D/"
-  },
-    {
-      source: "G2",
-      score: 4.8,
-      max: 5,
-      count: 168,
-      url: "https://www.g2.com/products/shapr3d/reviews"
-    },
-    {
-      source: "Software Advice",
-      score: 4.6,
-      max: 5,
-      count: 22,
-      url: "https://www.softwareadvice.com/product/463843-Shapr3D/"
-    },
-    {
-      source: "GetApp",
-      score: 4.6,
-      max: 5,
-      count: 22,
-      url: "https://www.getapp.com/construction-software/a/shapr3d/"
-    },
-    {
-      source: "Gartner Peer Insights",
-      score: 5,
-      max: 5,
-      count: 1,
-      url: "https://www.gartner.com/reviews/market/cad-software/vendor/shapr3d/product/shapr3d"
-    }]
 },
 {
   id: "t29",
@@ -3019,37 +2546,6 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "No mandatory subscriptions, just solid parametric tools.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.8,
-    max: 5,
-    count: 13,
-    url: "https://www.g2.com/products/alibre-design/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 179,
-    url: "https://www.capterra.com/p/172312/Alibre-Design/reviews/"
-  }, {
-    source: "TrustRadius",
-    score: 10,
-    max: 10,
-    count: 10,
-    url: "https://www.trustradius.com/products/alibre-design/reviews"
-  }, {
-    source: "GetApp",
-    score: 4.7,
-    max: 5,
-    count: 169,
-    url: "https://www.getapp.com/construction-software/a/alibre-design/reviews/"
-  }, {
-    source: "Software Advice",
-    score: 4.7,
-    max: 5,
-    count: 169,
-    url: "https://www.softwareadvice.com/engineering-cad/alibre-design-profile/reviews/"
-  }]
 },
 {
   id: "t41",
@@ -3134,19 +2630,6 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "A robust choice for individual mechanical engineers on Linux.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 8,
-    url: "https://www.g2.com/products/varicad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 4,
-    url: "https://www.capterra.com/software/205736/varicad"
-  }]
 },
 {
   id: "t50",
@@ -3293,49 +2776,6 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 287,
-    url: "https://www.g2.com/products/maya/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 287,
-    url: "https://www.capterra.com/software/187001/maya"
-  }, {
-    source: "TrustRadius",
-    score: 9,
-    max: 10,
-    count: 98,
-    url: "https://www.trustradius.com/products/autodesk-maya/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.7,
-    max: 5,
-    count: 34,
-    url: "https://www.gartner.com/peer-insights/product/autodesk-maya"
-  }, {
-    source: "Software Advice",
-    score: 4.7,
-    max: 5,
-    count: 287,
-    url: "https://www.softwareadvice.com/3d-design/maya-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.7,
-    max: 5,
-    count: 287,
-    url: "https://www.getapp.com/3d-design-software/a/autodesk-maya/"
-  }, {
-    source: "Trustpilot",
-    score: 4.3,
-    max: 5,
-    count: 124,
-    url: "https://www.trustpilot.com/review/maya.com"
-  }]
 },
 {
   id: "t51",
@@ -3550,49 +2990,6 @@ export const c2Tools: Tool[] = [
     docs_url: "https://docs.blender.org/api/current/",
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 412,
-    url: "https://www.g2.com/products/blender/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 412,
-    url: "https://www.capterra.com/software/218026/blender"
-  }, {
-    source: "TrustRadius",
-    score: 9.2,
-    max: 10,
-    count: 156,
-    url: "https://www.trustradius.com/products/blender/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.7,
-    max: 5,
-    count: 18,
-    url: "https://www.gartner.com/peer-insights/product/blender"
-  }, {
-    source: "Software Advice",
-    score: 4.7,
-    max: 5,
-    count: 412,
-    url: "https://www.softwareadvice.com/3d-design/blender-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.7,
-    max: 5,
-    count: 412,
-    url: "https://www.getapp.com/3d-design-software/a/blender/"
-  }, {
-    source: "Trustpilot",
-    score: 4.5,
-    max: 5,
-    count: 198,
-    url: "https://www.trustpilot.com/review/www.blender.org"
-  }],
 },
 {
   id: "t52",
@@ -3687,36 +3084,6 @@ export const c2Tools: Tool[] = [
   ],
   cons: ["Expensive", "Smaller user base", "Requires high-end GPU"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 32,
-      url: "https://www.g2.com/products/ironcad/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.3,
-      max: 5,
-      count: 26,
-      url: "https://www.capterra.com/p/140396/IronCAD/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.0,
-      max: 10,
-      count: 18,
-      url: "https://www.trustradius.com/products/ironcad/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.3,
-      max: 5,
-      count: 26,
-      url: "https://www.softwareadvice.com/manufacturing/ironcad-profile/reviews/",
-    },
-  ],
 
   faqs: [
     {
@@ -3893,19 +3260,6 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 22,
-    url: "https://www.g2.com/products/keycreator/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 22,
-    url: "https://www.capterra.com/software/205753/keycreator"
-  }]
 },
 {
   id: "t79",
@@ -3988,19 +3342,6 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "The professional standard for turning physical objects into digital CAD data.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 31,
-    url: "https://www.g2.com/products/geomagic-design-x/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 31,
-    url: "https://www.capterra.com/software/205754/geomagic-design-x"
-  }]
 },
 {
   id: "t80",
@@ -4232,19 +3573,6 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 29,
-    url: "https://www.g2.com/products/zw3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 12,
-    url: "https://www.capterra.es/reviews/174793/zw3d"
-  }]
 },
 {
   id: "t237",
@@ -4352,19 +3680,6 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.7,
-    max: 5,
-    count: 42,
-    url: "https://www.g2.com/products/plasticity-3d-modeling/reviews"
-  }, {
-    source: "TrustRadius",
-    score: 9.1,
-    max: 10,
-    count: 18,
-    url: "https://www.trustradius.com/products/plasticity-3d-modeling/reviews"
-  }]
 },
 {
   id: "t238",
@@ -4546,25 +3861,6 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 116,
-    url: "https://www.g2.com/products/tinkercad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 53,
-    url: "https://www.capterra.com/p/207354/Tinkercad/"
-  }, {
-    source: "TrustRadius",
-    score: 6.7,
-    max: 10,
-    count: 12,
-    url: "https://www.trustradius.com/products/autodesk-tinkercad/reviews"
-  }]
 },
 {
   id: "t27",
