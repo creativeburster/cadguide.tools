@@ -10,7 +10,7 @@ readTime: "12 min read"
 date: "2026-07-09"
 sources:
   - "https://innovationspace.ansys.com/knowledge/forums/topic/how-do-i-get-rid-of-convergence-problems-with-energy-equation-in-fluent-especially-since-r15/"
-  - "https://innovationspace.ansys.com/forums/topic/problem-with-convergence-in-ansys-fluent/"
+  - "https://innovationspace.ansys.com/forum/forums/topic/problem-with-convergence-in-ansys-fluent/"
 ---
 
 # ANSYS Fluent Convergence Troubleshooting: Fixing Divergence, Oscillating Residuals, and Floating Point Errors
