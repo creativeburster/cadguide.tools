@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "shapr3d"
 keyword: "shapr3d export fusion 360 step cam"
 slug: "shapr3d-export-fusion-360-step-cam"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Shapr3D to Fusion 360 Export: Preserving Design Intent and Feature History
 
-Shapr3D is my go-to for concept design on iPad. But for CAM toolpath generation and simulation, I switch to Fusion 360 on desktop. The handoff between the two is straightforward — but there are settings that make the difference between a clean import and a mess of uneditable surfaces.
+Shapr3D is our go-to for concept design on iPad. But for CAM toolpath generation and simulation, we switch to Fusion 360 on desktop. The handoff between the two is straightforward — but there are settings that make the difference between a clean import and a mess of uneditable surfaces.
 
 ## Why Move from Shapr3D to Fusion 360?
 

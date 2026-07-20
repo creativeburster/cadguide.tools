@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "navisworks"
 keyword: "navisworks 4d simulation timeliner"
 slug: "navisworks-4d-simulation-timeliner-bim-schedule-construction"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

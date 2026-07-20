@@ -1,11 +1,11 @@
 ---
 title: "Mastercam Post Processing: Customizing G-Code Output for CNC Machine Controls"
-excerpt: "Mastercam's post processor converts toolpaths to machine-specific G-code. I cover post selection, common post modifications, customizing tool change sequences, coolant and spindle commands, and troubleshooting G-code output issues."
+excerpt: "Mastercam's post processor converts toolpaths to machine-specific G-code. We cover post selection, common post modifications, customizing tool change sequences, coolant and spindle commands, and troubleshooting G-code output issues."
 category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam post processing G-code output CNC machine controls post processor customizing tool change coolant spindle commands troubleshooting"
 slug: "mastercam-post-processing-customizing-gcode-output-cnc-machine-controls"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Mastercam Post Processing: Customizing G-Code Output for CNC Machine Controls
 
-I've customized Mastercam post processors for dozens of CNC machines — from basic Haas mills to complex 5-axis Mazak Integrex mill-turn centers. The post processor is the critical link between Mastercam's internal toolpath data and the machine's specific G-code format. A correctly configured post ensures the machine runs the program without manual editing.
+We've customized Mastercam post processors for dozens of CNC machines — from basic Haas mills to complex 5-axis Mazak Integrex mill-turn centers. The post processor is the critical link between Mastercam's internal toolpath data and the machine's specific G-code format. A correctly configured post ensures the machine runs the program without manual editing.
 
 ## What Is a Post Processor?
 

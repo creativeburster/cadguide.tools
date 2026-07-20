@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-hyperworks"
 keyword: "altair optistruct topology optimization manufacturing constraints design space"
 slug: "altair-optistruct-topology-optimization-manufacturing-constraints-design-space"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Altair OptiStruct: Topology Optimization Setup, Manufacturing Constraints, and Results Interpretation
 
-Topology optimization is where FEA meets design creativity. Instead of analyzing a given design, you tell the solver what the design needs to do, and it finds the optimal material distribution. OptiStruct is one of the best topology optimization solvers I've used. But the results are only as good as your setup — garbage in, garbage out. Here's my complete workflow.
+Topology optimization is where FEA meets design creativity. Instead of analyzing a given design, you tell the solver what the design needs to do, and it finds the optimal material distribution. OptiStruct is one of the best topology optimization solvers we've used. But the results are only as good as your setup — garbage in, garbage out. Here's our complete workflow.
 
 ## What Topology Optimization Does
 

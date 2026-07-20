@@ -1,11 +1,11 @@
 ---
 title: "Simplify3D Dual Extrusion Setup: Multi-Color, Soluble Supports, and Ooze Control"
-excerpt: "Simplify3D's Dual Extrusion Wizard and per-feature extruder assignment let you print multi-color parts and use soluble support material. I cover the Dual Extrusion Wizard, assigning extruders to specific features, ooze shield and prime pillar configuration, and troubleshooting dual extrusion issues."
+excerpt: "Simplify3D's Dual Extrusion Wizard and per-feature extruder assignment let you print multi-color parts and use soluble support material. We cover the Dual Extrusion Wizard, assigning extruders to specific features, ooze shield and prime pillar configuration, and troubleshooting dual extrusion issues."
 category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D dual extrusion multi-color soluble support ooze shield prime pillar"
 slug: "simplify3d-dual-extrusion-multi-color-soluble-support-ooze-control"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Simplify3D Dual Extrusion Setup: Multi-Color, Soluble Supports, and Ooze Control
 
-I've configured dual extrusion setups in Simplify3D for multi-color prints, soluble support workflows, and multi-material parts. The software offers two distinct approaches — the Dual Extrusion Wizard for multi-model prints and per-feature extruder assignment for single-model prints — and understanding when to use each is key to successful dual extrusion printing.
+We've configured dual extrusion setups in Simplify3D for multi-color prints, soluble support workflows, and multi-material parts. The software offers two distinct approaches — the Dual Extrusion Wizard for multi-model prints and per-feature extruder assignment for single-model prints — and understanding when to use each is key to successful dual extrusion printing.
 
 ## Two Approaches to Dual Extrusion
 

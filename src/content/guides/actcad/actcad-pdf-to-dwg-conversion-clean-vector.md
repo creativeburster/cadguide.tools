@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "actcad"
 keyword: "actcad pdf to dwg conversion vector"
 slug: "actcad-pdf-to-dwg-conversion-clean-vector"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ActCAD PDF to DWG Conversion: Getting Clean Vector Output
 
-ActCAD ships with a built-in PDF-to-DWG converter — no extra plugin needed. I've used it on hundreds of supplier drawings and as-built PDFs. When it works, it saves hours of manual tracing. When it doesn't, you get a mess of exploded lines and garbled text. The difference is all in the settings.
+ActCAD ships with a built-in PDF-to-DWG converter — no extra plugin needed. We've used it on hundreds of supplier drawings and as-built PDFs. When it works, it saves hours of manual tracing. When it doesn't, you get a mess of exploded lines and garbled text. The difference is all in the settings.
 
 ## When PDF-to-DWG Works Well
 

@@ -5,7 +5,7 @@ category: "procurement"
 softwareSlug: "alibre-design"
 keyword: "alibre design perpetual license maintenance upgrade"
 slug: "alibre-design-perpetual-license-maintenance-upgrade"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Alibre Design Perpetual License: Understanding Maintenance, Upgrades, and Ownership
 
-Alibre Design is one of the few mid-range 3D CAD tools that still offers perpetual licenses. I've been using it since 2023 and have gone through two upgrade cycles. Here's exactly how the licensing works — because the marketing page doesn't explain the details clearly.
+Alibre Design is one of the few mid-range 3D CAD tools that still offers perpetual licenses. We've been using it since 2023 and have gone through two upgrade cycles. Here's exactly how the licensing works — because the marketing page doesn't explain the details clearly.
 
 ## What You Actually Own
 

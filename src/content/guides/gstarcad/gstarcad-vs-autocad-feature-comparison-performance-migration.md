@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "gstarcad"
 keyword: "gstarcad vs autocad comparison"
 slug: "gstarcad-vs-autocad-feature-comparison-performance-migration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

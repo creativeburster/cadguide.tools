@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "autodesk-dynamo"
 keyword: "autodesk dynamo revit visual scripting parametric automation"
 slug: "autodesk-dynamo-revit-visual-scripting-parametric-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

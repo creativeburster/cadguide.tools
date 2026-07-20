@@ -1,11 +1,11 @@
 ---
 title: "Autodesk Netfabb Hollowing and Lattice Generation: Lightweighting for Additive Manufacturing"
-excerpt: "Netfabb's hollowing and lattice tools reduce part weight and material usage while maintaining structural integrity. I cover the hollowing workflow with drain holes, lattice type selection, the Optimization Engine for load-driven lattice design, and export considerations for SLS and metal AM."
+excerpt: "Netfabb's hollowing and lattice tools reduce part weight and material usage while maintaining structural integrity. We cover the hollowing workflow with drain holes, lattice type selection, the Optimization Engine for load-driven lattice design, and export considerations for SLS and metal AM."
 category: "workflow"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb hollowing lattice generation lightweighting additive manufacturing optimization"
 slug: "autodesk-netfabb-hollowing-lattice-generation-lightweighting"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Netfabb Hollowing and Lattice Generation: Lightweighting for Additive Manufacturing
 
-I've used Netfabb's hollowing and lattice tools to reduce part weight by 40-70% on aerospace and medical components destined for SLS and metal additive manufacturing. These features, available in Netfabb Premium and Ultimate, are among the most powerful lightweighting tools in the AM industry. Understanding how to configure hollowing and lattice structures correctly is essential for producing parts that are both lightweight and structurally sound.
+We've used Netfabb's hollowing and lattice tools to reduce part weight by 40-70% on aerospace and medical components destined for SLS and metal additive manufacturing. These features, available in Netfabb Premium and Ultimate, are among the most powerful lightweighting tools in the AM industry. Understanding how to configure hollowing and lattice structures correctly is essential for producing parts that are both lightweight and structurally sound.
 
 ## Why Lightweighting Matters
 

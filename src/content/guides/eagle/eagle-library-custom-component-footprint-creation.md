@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "eagle"
 keyword: "eagle library custom component footprint creation"
 slug: "eagle-library-custom-component-footprint-creation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Eagle Library Management: Creating Custom Components and Footprints
 
-Every Eagle user eventually needs a component that isn't in the default libraries. I've created hundreds of custom Eagle library parts over the years — from simple connectors to complex BGA footprints. Here's the complete process for creating reliable, manufacturing-ready custom components.
+Every Eagle user eventually needs a component that isn't in the default libraries. We've created hundreds of custom Eagle library parts over the years — from simple connectors to complex BGA footprints. Here's the complete process for creating reliable, manufacturing-ready custom components.
 
 ## Understanding Eagle Library Structure
 
@@ -48,7 +48,7 @@ A device connects the schematic symbol to the physical package. One symbol can m
    - Place pins around the body perimeter.
    - Pin length: 0.3 inch (standard).
    - Pin direction: Set based on function:
-     - **I/O** — Bidirectional (default)
+     - **we/O** — Bidirectional (default)
      - **In** — Input only
      - **Out** — Output only
      - **Pwr** — Power pin (VCC, GND)

@@ -1,11 +1,11 @@
 ---
 title: "Fixing Altium Designer DRC Errors: Common Clearance and Routing Violations"
-excerpt: "Green error markers all over your PCB layout? I cover the most common Altium DRC errors I encounter in production boards, from clearance violations to unrouted nets, and how to fix each one."
+excerpt: "Green error markers all over your PCB layout? We cover the most common Altium DRC errors we encounter in production boards, from clearance violations to unrouted nets, and how to fix each one."
 category: "troubleshooting"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer DRC errors clearance violation"
 slug: "altium-designer-drc-errors-clearance-routing"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-15"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Fixing Altium Designer DRC Errors: Common Clearance and Routing Violations
 
-A user on r/ElectricalEngineering posted what I consider the quintessential Altium beginner question: they'd created a schematic and PCB library for a simple 8-DIP IC, but when they tried to create PCB traces, they got green symbols all over the place. Those green symbols are Altium's Design Rule Check (DRC) violation markers, and they're both the most helpful and most frustrating feature in Altium Designer. I've been designing PCBs in Altium for eight years, from 2-layer hobby boards to 12-layer high-speed digital boards, and I still encounter DRC errors that make me scratch my head. Here's a systematic guide to the most common DRC violations and how to fix them.
+A user on r/ElectricalEngineering posted what we consider the quintessential Altium beginner question: they'd created a schematic and PCB library for a simple 8-DIP IC, but when they tried to create PCB traces, they got green symbols all over the place. Those green symbols are Altium's Design Rule Check (DRC) violation markers, and they're both the most helpful and most frustrating feature in Altium Designer. From 2-layer hobby boards to 12-layer high-speed digital boards, DRC errors trip up even experienced designers. Here's a systematic guide to the most common DRC violations and how to fix them.
 
 ## Understanding the Green Markers
 

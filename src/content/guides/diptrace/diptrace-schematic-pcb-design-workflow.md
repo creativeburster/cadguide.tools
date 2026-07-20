@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "diptrace"
 keyword: "diptrace schematic pcb design workflow beginner"
 slug: "diptrace-schematic-pcb-design-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # DipTrace Schematic and PCB Design: Complete Beginner to Production Workflow
 
-DipTrace is the most beginner-friendly professional PCB design tool I've used. It's not as powerful as Altium or OrCAD, but for 2-layer and 4-layer boards up to medium complexity, it's excellent. I teach PCB design using DipTrace because the learning curve is gentle. Here's the complete workflow from schematic to manufacturing files.
+DipTrace is the most beginner-friendly professional PCB design tool we've used. It's not as powerful as Altium or OrCAD, but for 2-layer and 4-layer boards up to medium complexity, it's excellent. We teach PCB design using DipTrace because the learning curve is gentle. Here's the complete workflow from schematic to manufacturing files.
 
 ## Step 1: Create a Schematic
 

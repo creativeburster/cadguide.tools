@@ -1,11 +1,11 @@
 ---
 title: "Mastercam 2D Machining: Facing, Contour, Pocket, and Drilling Toolpaths"
-excerpt: "Mastercam's 2D machining tools create toolpaths for facing, contouring, pocketing, and drilling operations. I cover tool selection, stock setup, facing, contour roughing and finishing, pocket milling with islands, and drilling cycles for CNC milling."
+excerpt: "Mastercam's 2D machining tools create toolpaths for facing, contouring, pocketing, and drilling operations. We cover tool selection, stock setup, facing, contour roughing and finishing, pocket milling with islands, and drilling cycles for CNC milling."
 category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam 2D machining facing contour pocket drilling toolpaths tool selection stock setup CNC milling roughing finishing"
 slug: "mastercam-2d-machining-facing-contour-pocket-drilling-toolpaths"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Mastercam 2D Machining: Facing, Contour, Pocket, and Drilling Toolpaths
 
-I've programmed hundreds of CNC parts in Mastercam for job shops and production manufacturing. Mastercam is the most widely used CAM software in North America, and its 2D machining toolpaths are the foundation of CNC milling. Understanding facing, contouring, pocketing, and drilling — and how to optimize each for speed and surface finish — is the starting point for every CNC programmer.
+We've programmed hundreds of CNC parts in Mastercam for job shops and production manufacturing. Mastercam is the most widely used CAM software in North America, and its 2D machining toolpaths are the foundation of CNC milling. Understanding facing, contouring, pocketing, and drilling — and how to optimize each for speed and surface finish — is the starting point for every CNC programmer.
 
 ## Mastercam Overview
 

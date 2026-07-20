@@ -1,11 +1,11 @@
 ---
 title: "ArchiCAD File Bloat and Corruption: Compress, Repair, and Audit Workflow"
-excerpt: "ArchiCAD project files grow to 500MB+ and slow down every operation. I cover the compress workflow, repair tool, audit and fix process, and the hotlink module strategy that keeps project files lean."
+excerpt: "ArchiCAD project files grow to 500MB+ and slow down every operation. We cover the compress workflow, repair tool, audit and fix process, and the hotlink module strategy that keeps project files lean."
 category: "performance"
 softwareSlug: "archicad"
 keyword: "ArchiCAD file bloat corruption compress repair audit"
 slug: "archicad-file-bloat-corruption-compress-repair-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

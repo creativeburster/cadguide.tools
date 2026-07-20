@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "idea-statica"
 keyword: "idea statica steel connection base plate moment"
 slug: "idea-statica-steel-connection-base-plate-moment"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IDEA StatiCa Steel Connection Design: Base Plate and Moment Connection Design
 
-IDEA StatiCa is the best steel connection design tool I've used. It uses CBFEM (Component-Based Finite Element Method) — combining component-based design with FEM analysis. I design 20+ connections per project in IDEA StatiCa. Here's the workflow for base plates and moment connections.
+IDEA StatiCa is the best steel connection design tool we've used. It uses CBFEM (Component-Based Finite Element Method) — combining component-based design with FEM analysis. We design 20+ connections per project in IDEA StatiCa. Here's the workflow for base plates and moment connections.
 
 ## What Is CBFEM?
 
@@ -72,7 +72,7 @@ This gives accurate results without the complexity of full FEM modeling. IDEA St
    - **N = -500 kN** (compression)
    - **Vx = 100 kN**
    - **Vy = 50 kN**
-   - **My = 200 kN·m** (major axis moment)
+   - **Our = 200 kN·m** (major axis moment)
 
 3. Define load combinations:
    - IDEA StatiCa auto-generates combinations from the imported load cases

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "progecad"
 keyword: "progecad 2d drafting setup"
 slug: "progecad-2d-drafting-autocad-compatible-workflow-template"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -169,7 +169,7 @@ progeCAD Professional includes a LISP engine:
 
 ## DWG Round-Trip Testing
 
-Before committing to progeCAD for production work, I recommend a round-trip test: take a complex AutoCAD drawing, open it in progeCAD, make a small edit, save, and reopen in AutoCAD. Check that all entities, layers, blocks, dimensions, and text styles survived the round trip. In my testing, 2D geometry, hatches, dimensions, and text round-trip perfectly. Dynamic blocks display correctly but can't be edited. The main risk areas are custom linetypes and complex MTEXT formatting — test these specifically if your drawings use them. Also verify that your CTB plot style files produce identical output from both programs.
+Before committing to progeCAD for production work, we recommend a round-trip test: take a complex AutoCAD drawing, open it in progeCAD, make a small edit, save, and reopen in AutoCAD. Check that all entities, layers, blocks, dimensions, and text styles survived the round trip. In our testing, 2D geometry, hatches, dimensions, and text round-trip perfectly. Dynamic blocks display correctly but can't be edited. The main risk areas are custom linetypes and complex MTEXT formatting — test these specifically if your drawings use them. Also verify that your CTB plot style files produce identical output from both programs.
 
 ## Layer Standard Implementation in progeCAD
 

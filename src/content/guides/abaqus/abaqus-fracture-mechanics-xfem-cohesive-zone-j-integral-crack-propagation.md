@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "abaqus"
 keyword: "abaqus fracture mechanics xfem"
 slug: "abaqus-fracture-mechanics-xfem-cohesive-zone-j-integral-crack-propagation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,14 +15,14 @@ sources:
 
 # Abaqus Fracture Mechanics: XFEM, Cohesive Zone, and J-Integral for Crack Propagation
 
-Fracture mechanics is one of those topics that sounds academic until a crack shows up in your product and you need to figure out if it's going to grow. I've used all three methods in Abaqus — J-integral for checking existing cracks, XFEM for letting cracks propagate wherever they want, and cohesive zone for delamination in composites. Each has its place, and picking the wrong one wastes a lot of time. Let me walk you through when and how I use each.
+Fracture mechanics is one of those topics that sounds academic until a crack shows up in your product and you need to figure out if it's going to grow. We've used all three methods in Abaqus — J-integral for checking existing cracks, XFEM for letting cracks propagate wherever they want, and cohesive zone for delamination in composites. Each has its place, and picking the wrong one wastes a lot of time. Let us walk you through when and how we use each.
 
 ## Fracture Mechanics Fundamentals
 
 ### Stress Intensity Factors
 
 1. Three modes of fracture:
-   - **Mode I (Opening)**: KI — tensile stress normal to crack plane
+   - **Mode we (Opening)**: KI — tensile stress normal to crack plane
    - **Mode II (In-plane shear)**: KII — shear stress parallel to crack
    - **Mode III (Out-of-plane shear)**: KIII — anti-plane shear
 2. Crack grows when K ≥ KIC (fracture toughness):
@@ -122,7 +122,7 @@ XFEM allows crack propagation without remeshing:
 2. Damage evolution:
    - **Type**: Displacement or energy
    - **Mixed mode**: Power law (α = 1.0 for typical)
-   - **GIC, GIIC, GIIIC**: Mode I, II, III fracture energy
+   - **GIC, GIIC, GIIIC**: Mode we, II, III fracture energy
 
 ### Running XFEM Analysis
 
@@ -265,4 +265,4 @@ Cohesive zone modeling (CZM) uses interface elements that separate and fail acco
 
 ## Wrapping Up
 
-My rule of thumb for fracture mechanics in Abaqus: use J-integral when you have a known crack and just need to check if it's safe, XFEM when you want to see where a crack will grow without remeshing, and cohesive zone when you're dealing with delamination or adhesive bonds. The one thing I can't stress enough — your fracture properties (KIC, GC) need to come from actual material tests, not guesses. I've seen analyses where someone used a textbook value that was off by 50%, and the crack prediction was completely wrong. Get the properties right, pick the right method, and always compare to test data when you can.
+Our rule of thumb for fracture mechanics in Abaqus: use J-integral when you have a known crack and just need to check if it's safe, XFEM when you want to see where a crack will grow without remeshing, and cohesive zone when you're dealing with delamination or adhesive bonds. The one thing we can't stress enough — your fracture properties (KIC, GC) need to come from actual material tests, not guesses. We've seen analyses where someone used a textbook value that was off by 50%, and the crack prediction was completely wrong. Get the properties right, pick the right method, and always compare to test data when you can.

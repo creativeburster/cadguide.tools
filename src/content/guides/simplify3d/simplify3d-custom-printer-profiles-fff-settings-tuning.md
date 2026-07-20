@@ -1,11 +1,11 @@
 ---
 title: "Simplify3D Custom Printer Profiles and FFF Settings Tuning Guide"
-excerpt: "Simplify3D's FFF Settings window gives access to over 100 process parameters across Layer, Additions, Infill, Support, Speed, Temperature, and Advanced tabs. I cover creating custom printer profiles, tuning key settings for different materials, and using the Configuration Assistant for printer setup."
+excerpt: "Simplify3D's FFF Settings window gives access to over 100 process parameters across Layer, Additions, Infill, Support, Speed, Temperature, and Advanced tabs. We cover creating custom printer profiles, tuning key settings for different materials, and using the Configuration Assistant for printer setup."
 category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D custom printer profile FFF settings configuration assistant tuning"
 slug: "simplify3d-custom-printer-profiles-fff-settings-tuning"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Simplify3D Custom Printer Profiles and FFF Settings Tuning Guide
 
-I've configured Simplify3D for over 30 different printer models, from stock Prusas to heavily modified custom builds. The FFF (Fused Filament Fabrication) Settings window is the heart of Simplify3D's power — it exposes over 100 parameters that control every aspect of the print process. Understanding how to create and tune custom profiles is essential for getting the best results from any printer.
+We've configured Simplify3D for over 30 different printer models, from stock Prusas to heavily modified custom builds. The FFF (Fused Filament Fabrication) Settings window is the heart of Simplify3D's power — it exposes over 100 parameters that control every aspect of the print process. Understanding how to create and tune custom profiles is essential for getting the best results from any printer.
 
 ## Profiles vs. Processes
 

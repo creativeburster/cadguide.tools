@@ -1,11 +1,11 @@
 ---
 title: "Enscape Not Loading in SketchUp: Plugin Registration, Extension Manager, and GPU Routing Fixes"
-excerpt: "Enscape doesn't appear in SketchUp's toolbar or crashes on launch. I cover the Extension Manager registration, Ruby console diagnostics, NVIDIA Control Panel GPU routing, and the clean reinstall process specific to SketchUp integration."
+excerpt: "Enscape doesn't appear in SketchUp's toolbar or crashes on launch. We cover the Extension Manager registration, Ruby console diagnostics, NVIDIA Control Panel GPU routing, and the clean reinstall process specific to SketchUp integration."
 category: "troubleshooting"
 softwareSlug: "enscape"
 keyword: "Enscape not loading in SketchUp plugin extension fix"
 slug: "enscape-not-loading-sketchup-extension-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Enscape Not Loading in SketchUp: Plugin Registration, Extension Manager, and GPU Routing Fixes
 
-I see this issue regularly: a firm uses Enscape with Revit without problems, but when they try to use it with SketchUp, the Enscape toolbar doesn't appear. Or it appears but crashes SketchUp the moment they click "Start Enscape." The SketchUp integration has some unique quirks that the Revit integration doesn't have, and I've developed a specific troubleshooting process for it.
+We see this issue regularly: a firm uses Enscape with Revit without problems, but when they try to use it with SketchUp, the Enscape toolbar doesn't appear. Or it appears but crashes SketchUp the moment they click "Start Enscape." The SketchUp integration has some unique quirks that the Revit integration doesn't have, and we've developed a specific troubleshooting process for it.
 
 ## Issue 1: Enscape Toolbar Not Visible in SketchUp
 
@@ -83,12 +83,12 @@ A Reddit user found that Enscape crashed SketchUp on a dual-monitor setup but wo
 1. In SketchUp, go to **Window → Ruby Console**
 2. Start Enscape
 3. Watch the Ruby Console output for error messages
-4. Common errors I've seen:
+4. Common errors we've seen:
    - `LoadError: cannot load such file -- enscape` — extension not properly installed
    - `Errno::ENOENT: No such file or directory` — missing Enscape DLL
    - `RuntimeError: GPU initialization failed` — GPU routing issue
 
-The Ruby Console gives you the actual error message, which is invaluable for diagnosis. I always check it before trying any fixes.
+The Ruby Console gives you the actual error message, which is invaluable for diagnosis. We always check it before trying any fixes.
 
 ## Issue 4: Enscape Crashes After GPU Upgrade
 
@@ -128,7 +128,7 @@ The Enscape toolbar appears in SketchUp, but clicking the buttons does nothing �
 2. Try Enscape — if it works, the issue is a permissions problem
 3. To fix permanently: right-click SketchUp shortcut → Properties → Compatibility → check **Run this program as administrator**
 
-I've seen this specifically on firm-issued workstations where IT has locked down standard user permissions. Enscape needs to write to its configuration and cache directories, and without admin rights, it silently fails.
+We've seen this specifically on firm-issued workstations where IT has locked down standard user permissions. Enscape needs to write to its configuration and cache directories, and without admin rights, it silently fails.
 
 ## Issue 6: Enscape Missing After SketchUp Update
 
@@ -152,4 +152,4 @@ After updating SketchUp to a new version, the Enscape extension disappears.
 
 ## Summary
 
-Enscape not loading in SketchUp is usually caused by extension registration failure, GPU routing to integrated graphics, or driver conflicts after GPU upgrades. My fix order: check Extension Manager → reinstall with SketchUp closed → configure NVIDIA Control Panel for dedicated GPU → try single monitor → check Ruby Console for errors → DDU clean driver install. The GPU routing fix resolves about 50% of cases, and the Extension Manager check covers another 30%.
+Enscape not loading in SketchUp is usually caused by extension registration failure, GPU routing to integrated graphics, or driver conflicts after GPU upgrades. Our fix order: check Extension Manager → reinstall with SketchUp closed → configure NVIDIA Control Panel for dedicated GPU → try single monitor → check Ruby Console for errors → DDU clean driver install. The GPU routing fix resolves about 50% of cases, and the Extension Manager check covers another 30%.

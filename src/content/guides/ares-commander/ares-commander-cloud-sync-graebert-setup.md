@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "ares-commander"
 keyword: "ares commander cloud sync graebert setup"
 slug: "ares-commander-cloud-sync-graebert-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ARES Commander Cloud Sync: Setting Up Graebert Cloud for Team Collaboration
 
-I set up Graebert Cloud for a 12-person firm with two offices last year. The promise was real-time collaboration on DWG files without emailing attachments. The reality was close — with some configuration gotchas you need to know about.
+Setting up Graebert Cloud for a multi-office firm promises real-time collaboration on DWG files without emailing attachments. The reality is close — with some configuration gotchas you need to know about.
 
 ## How Graebert Cloud Works
 

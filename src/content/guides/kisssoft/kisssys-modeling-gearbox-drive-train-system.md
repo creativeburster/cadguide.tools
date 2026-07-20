@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "kisssoft"
 keyword: "kisssys system modeling gearbox drive train multi-stage"
 slug: "kisssys-modeling-gearbox-drive-train-system"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

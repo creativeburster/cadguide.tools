@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "eagle"
 keyword: "eagle drc design rules gerber manufacturing output"
 slug: "eagle-drc-design-rules-gerber-manufacturing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Eagle DRC and Manufacturing Output: Setting Up Design Rules for Your PCB Fab
 
-DRC errors are the #1 cause of PCB manufacturing rejections. I've sent boards to JLCPCB, PCBWay, and Advanced Circuits — each has slightly different capabilities. Eagle's DRC is your last check before generating manufacturing files. Here's how to configure it for your specific fab house.
+DRC errors are the #1 cause of PCB manufacturing rejections. We've sent boards to JLCPCB, PCBWay, and Advanced Circuits — each has slightly different capabilities. Eagle's DRC is your last check before generating manufacturing files. Here's how to configure it for your specific fab house.
 
 ## Step 1: Get Your Manufacturer's Design Rules
 

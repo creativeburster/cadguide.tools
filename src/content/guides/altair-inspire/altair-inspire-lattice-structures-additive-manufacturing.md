@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "altair-inspire"
 keyword: "altair inspire lattice structure additive manufacturing 3d printing"
 slug: "altair-inspire-lattice-structures-additive-manufacturing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

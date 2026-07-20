@@ -1,11 +1,11 @@
 ---
 title: "Fusion 360 Machining Performance: Toolpath Calculation Slow, CAM Freezes, and Memory Errors"
-excerpt: "Fusion 360's CAM environment slows to a crawl when calculating toolpaths for complex parts. I cover stock simplification, toolpath segmentation, and the memory settings that prevent CAM freezes and crashes."
+excerpt: "Fusion 360's CAM environment slows to a crawl when calculating toolpaths for complex parts. We cover stock simplification, toolpath segmentation, and the memory settings that prevent CAM freezes and crashes."
 category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 CAM toolpath slow calculation machining performance"
 slug: "fusion-360-cam-toolpath-slow-calculation-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 Fusion 360's CAM environment (formerly HSMWorks) is a powerful machining tool, but it shares the same performance limitations as the design environment — plus its own CAM-specific bottlenecks. When calculating toolpaths for complex parts with fine stepovers, 3D surfaces, or multi-axis operations, Fusion can freeze for minutes, run out of memory, or crash entirely. The Autodesk support article on Fusion 360 and HSM performance acknowledges that large assemblies and complex CAM operations can cause performance issues.
 
-I've been using Fusion 360 CAM for CNC machining for over 5 years, and these are the fixes I've found most effective for CAM-specific performance problems.
+We've been using Fusion 360 CAM for CNC machining for over 5 years, and these are the fixes we've found most effective for CAM-specific performance problems.
 
 ## Understanding CAM Performance Bottlenecks
 

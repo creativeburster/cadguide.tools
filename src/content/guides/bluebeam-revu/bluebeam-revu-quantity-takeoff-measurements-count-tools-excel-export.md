@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bluebeam-revu"
 keyword: "bluebeam revu quantity takeoff"
 slug: "bluebeam-revu-quantity-takeoff-measurements-count-tools-excel-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

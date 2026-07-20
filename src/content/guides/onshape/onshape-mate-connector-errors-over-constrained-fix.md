@@ -1,11 +1,11 @@
 ---
 title: "Onshape Mate Connector Errors: Failed Mates, Over-Constrained Assemblies, and Fix Strategies"
-excerpt: "Onshape mates fail with 'over-constrained' or 'inconsistent' errors, leaving components in wrong positions. I cover the mate diagnostics tool, the isolation method, and the fastener mate workflow that prevents constraint conflicts."
+excerpt: "Onshape mates fail with 'over-constrained' or 'inconsistent' errors, leaving components in wrong positions. We cover the mate diagnostics tool, the isolation method, and the fastener mate workflow that prevents constraint conflicts."
 category: "troubleshooting"
 softwareSlug: "onshape"
 keyword: "Onshape mate connector errors failed over-constrained assembly"
 slug: "onshape-mate-connector-errors-over-constrained-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:

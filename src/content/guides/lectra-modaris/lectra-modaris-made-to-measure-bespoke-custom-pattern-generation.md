@@ -1,11 +1,11 @@
 ---
 title: "Lectra Modaris Made-to-Measure: Custom Pattern Generation for Bespoke and Luxury Apparel"
-excerpt: "Modaris Expert's MTM module generates bespoke patterns from individual body measurements with the most advanced custom sizing tools in the industry. I cover the MTM setup, measurement-driven pattern adaptation, morphing grading, and the bespoke production workflow."
+excerpt: "Modaris Expert's MTM module generates bespoke patterns from individual body measurements with the most advanced custom sizing tools in the industry. We cover the MTM setup, measurement-driven pattern adaptation, morphing grading, and the bespoke production workflow."
 category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Modaris made-to-measure MTM bespoke custom pattern generation morphing grading luxury apparel"
 slug: "lectra-modaris-made-to-measure-bespoke-custom-pattern-generation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Lectra Modaris Made-to-Measure: Custom Pattern Generation for Bespoke and Luxury Apparel
 
-I've implemented MTM workflows in Lectra Modaris for luxury menswear and bespoke womenswear brands. Lectra's MTM capabilities are the most advanced in the apparel CAD industry — the combination of measurement-driven pattern adaptation, morphing grading, and variant management creates a system that can handle everything from semi-custom uniforms to fully bespoke garments. For luxury brands where individualized fit is the core value proposition, Modaris MTM is the tool of choice.
+We've implemented MTM workflows in Lectra Modaris for luxury menswear and bespoke womenswear brands. Lectra's MTM capabilities are the most advanced in the apparel CAD industry — the combination of measurement-driven pattern adaptation, morphing grading, and variant management creates a system that can handle everything from semi-custom uniforms to fully bespoke garments. For luxury brands where individualized fit is the core value proposition, Modaris MTM is the tool of choice.
 
 ## Modaris Expert MTM Overview
 

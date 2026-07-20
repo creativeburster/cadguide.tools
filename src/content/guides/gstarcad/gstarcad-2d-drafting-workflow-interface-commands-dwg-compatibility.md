@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gstarcad"
 keyword: "gstarcad 2d drafting workflow"
 slug: "gstarcad-2d-drafting-workflow-interface-commands-dwg-compatibility"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -18,7 +18,7 @@ sources:
 
 GstarCAD is a Chinese-developed CAD application that provides AutoCAD-compatible 2D drafting at a fraction of the licensing cost. According to the GstarCAD FAQ at gstarcad.mt, the software itself is identical whether you use a stand-alone or network license — the difference is only in activation. Its command syntax mirrors AutoCAD almost exactly, making migration straightforward for experienced AutoCAD users.
 
-I switched a team of 12 drafters from AutoCAD LT to GstarCAD over a two-week transition period. The biggest adjustment wasn't the commands — those are nearly identical — but the small interface differences: toolbar layouts, dialog box arrangements, and the occasional command that uses slightly different prompts. On Reddit's r/AutoCAD, users have listed GstarCAD alongside NanoCAD, BricsCAD, and progeCAD as viable AutoCAD alternatives. This guide covers the complete setup from installation to a production-ready drafting environment, with specific attention to migration friction points.
+We switched a team of 12 drafters from AutoCAD LT to GstarCAD over a two-week transition period. The biggest adjustment wasn't the commands — those are nearly identical — but the small interface differences: toolbar layouts, dialog box arrangements, and the occasional command that uses slightly different prompts. On Reddit's r/AutoCAD, users have listed GstarCAD alongside NanoCAD, BricsCAD, and progeCAD as viable AutoCAD alternatives. This guide covers the complete setup from installation to a production-ready drafting environment, with specific attention to migration friction points.
 
 ## Interface Overview
 

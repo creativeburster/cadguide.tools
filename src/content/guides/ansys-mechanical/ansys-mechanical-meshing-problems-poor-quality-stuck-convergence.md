@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-mechanical"
 keyword: "ansys mechanical meshing problems"
 slug: "ansys-mechanical-meshing-problems-poor-quality-stuck-convergence"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:
@@ -17,9 +17,9 @@ sources:
 
 # ANSYS Mechanical Meshing Problems: Fixing Poor Mesh Quality, Stuck Mesher, and Convergence Failures
 
-I've spent days fighting ANSYS Mechanical's mesher on complex geometry — and the community discussions show I'm far from alone. On Reddit's r/CFD, a user posted a mesh disaster with 216 upvotes, asking "So why did Ansys do this to my mesh?" The response pointed to a knife-edge trailing edge causing high aspect ratio cells and bad convergence. On r/fea, a user reported that their "ANSYS FEA not converging with finer mesh size" — a counterintuitive problem where refining the mesh made things worse. On r/ANSYS, a beginner asked for mesh quality feedback and was told they need "3 elements through the thickness" and should "look into adding a mesh convergence." And on r/fea, a user with a stuck mesher was advised to "investigate the model and remove/clean-up small edges" because "really small edges will throw Ansys mesher."
+We've spent days fighting ANSYS Mechanical's mesher on complex geometry — and the community discussions show we're far from alone. On Reddit's r/CFD, a user posted a mesh disaster with 216 upvotes, asking "So why did Ansys do this to my mesh?" The response pointed to a knife-edge trailing edge causing high aspect ratio cells and bad convergence. On r/fea, a user reported that their "ANSYS FEA not converging with finer mesh size" — a counterintuitive problem where refining the mesh made things worse. On r/ANSYS, a beginner asked for mesh quality feedback and was told they need "3 elements through the thickness" and should "look into adding a mesh convergence." And on r/fea, a user with a stuck mesher was advised to "investigate the model and remove/clean-up small edges" because "really small edges will throw Ansys mesher."
 
-These four issues — poor mesh quality, stuck mesher, convergence failures, and mesh refinement paradoxes — are the most common meshing problems in ANSYS Mechanical. This guide covers the diagnostic and fix strategies I've developed through years of working with complex CAD geometry.
+These four issues — poor mesh quality, stuck mesher, convergence failures, and mesh refinement paradoxes — are the most common meshing problems in ANSYS Mechanical. This guide covers the diagnostic and fix strategies we've developed through years of working with complex CAD geometry.
 
 ## Problem 1: Mesher Stuck or Failing to Generate
 
@@ -122,6 +122,6 @@ On Reddit's r/ANSYS, a beginner was told to "look into adding a mesh convergence
 - **Not enough refinement steps**: 3-5 refinement levels are needed to see the convergence trend.
 - **Using the wrong result metric**: Maximum stress is sensitive to singularities. Use a result at a specific point away from singularities for convergence assessment.
 
-## My Take
+## Our Take
 
 ANSYS meshing problems almost always trace back to geometry quality. The most effective habit is cleaning up CAD geometry before importing it into ANSYS — remove unnecessary fillets, merge small faces, and square off knife edges. Virtual Topology is the most underused tool in ANSYS Mechanical; it lets you fix geometry issues without going back to CAD, which is invaluable when you don't have access to the original CAD files. For convergence problems, always check for stress singularities first — if your stress keeps increasing with mesh refinement, you have a singularity, not a mesh quality problem. Add a small fillet and the problem disappears.

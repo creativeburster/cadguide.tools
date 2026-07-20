@@ -1,11 +1,11 @@
 ---
 title: "Creo Large Assembly Management: Simplified Representations and Envelope Parts"
-excerpt: "Creo can handle 10,000+ component assemblies if you use Simplified Representations and envelope parts correctly. I cover the config.pro settings, rep types, and workflow practices I use for large assembly performance."
+excerpt: "Creo can handle 10,000+ component assemblies if you use Simplified Representations and envelope parts correctly. We cover the config.pro settings, rep types, and workflow practices we use for large assembly performance."
 category: "performance"
 softwareSlug: "ptc-creo"
 keyword: "Creo large assembly simplified representations performance"
 slug: "creo-large-assembly-simplified-representations"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-19"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Creo Large Assembly Management: Simplified Representations and Envelope Parts
 
-I manage Creo assemblies for industrial machinery — our typical products have 5,000 to 15,000 components, and the full plant assembly exceeds 80,000. Creo can handle these sizes, but only if you use its large assembly management tools properly. Out of the box, Creo loads every component's full geometry into memory, which is fine for 500-part assemblies but will bring a workstation to its knees at 10,000 parts. The two most powerful tools for large assembly performance are Simplified Representations and envelope parts. I'll cover both, along with the config.pro settings that make the biggest difference.
+We manage Creo assemblies for industrial machinery — our typical products have 5,000 to 15,000 components, and the full plant assembly exceeds 80,000. Creo can handle these sizes, but only if you use its large assembly management tools properly. Out of the box, Creo loads every component's full geometry into memory, which is fine for 500-part assemblies but will bring a workstation to its knees at 10,000 parts. The two most powerful tools for large assembly performance are Simplified Representations and envelope parts. We'll cover both, along with the config.pro settings that make the biggest difference.
 
 ## Simplified Representations
 
@@ -61,7 +61,7 @@ Instead of manually setting each component, use rules to automatically assign re
    - **State**: Exclude all suppressed components
 3. Rules apply automatically when the rep is activated
 
-For a 10,000-component assembly, I typically create a Design Rep that excludes 70% of components, leaving 3,000 for active work. This reduces memory usage by 80% and load time by 70%.
+For a 10,000-component assembly, we typically create a Design Rep that excludes 70% of components, leaving 3,000 for active work. This reduces memory usage by 80% and load time by 70%.
 
 ## Envelope Parts
 
@@ -91,11 +91,11 @@ An envelope part is a simplified solid that represents the external shape of a c
 - **Complex subassemblies**: A gearbox with 200 internal components can be represented by a single envelope solid
 - **Supplier models**: STEP files from suppliers that contain excessive internal detail
 
-I created envelope parts for all 150 purchased components in our machinery library. This reduced the full assembly memory footprint from 48GB to 12GB — a 75% reduction.
+We created envelope parts for all 150 purchased components in our machinery library. This reduced the full assembly memory footprint from 48GB to 12GB — a 75% reduction.
 
 ## config.pro Settings for Large Assemblies
 
-These are the config.pro settings I use for large assembly performance:
+These are the config.pro settings we use for large assembly performance:
 
 ```
 ! Assembly performance
@@ -134,7 +134,7 @@ delay_regen_on_modify yes
 
 ## Performance Impact: Real Measurements
 
-I measured the impact of these techniques on a 12,000-component assembly:
+We measured the impact of these techniques on a 12,000-component assembly:
 
 | Configuration | Load Time | Memory Usage | Regen Time |
 |--------------|-----------|-------------|------------|
@@ -164,7 +164,7 @@ If you have many similar components (fasteners, brackets, fittings), use Family 
 
 ### Train Your Team
 
-The biggest barrier to large assembly performance is users who don't use Simp Reps. I've seen engineers wait 45 minutes for an assembly to load because they always open the Master rep. Train your team to:
+The biggest barrier to large assembly performance is users who don't use Simp Reps. We've seen engineers wait 45 minutes for an assembly to load because they always open the Master rep. Train your team to:
 
 1. Always select a Simp Rep when opening an assembly
 2. Create personal Simp Reps for their specific work

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "autocad"
 keyword: "recover corrupted dwg"
 slug: "recovering-corrupted-dwg-backup-disaster"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Recovering Corrupted DWG Files: A Complete Disaster Recovery Workflow
 
-There's nothing quite like the feeling of trying to open a DWG file you spent 40 hours on and getting a "drawing file is not valid" message. I've been there — heart pounding, deadline looming. Over the years I've developed a recovery workflow that starts with the least invasive methods and escalates from there. Not every method works every time, but I've recovered probably 90% of the corrupted files I've encountered using this sequence.
+There's nothing quite like the feeling of trying to open a DWG file you spent 40 hours on and getting a "drawing file is not valid" message. We've been there — heart pounding, deadline looming. Over the years we've developed a recovery workflow that starts with the least invasive methods and escalates from there. Not every method works every time, but we've recovered probably 90% of the corrupted files we've encountered using this sequence.
 
 ## Understanding DWG File Corruption
 
@@ -190,7 +190,7 @@ These services typically charge per file but can recover data from severely corr
 ISAVEPERCENT
 ```
 
-Set this to `50` (default is `0`). This instructs AutoCAD to perform incremental saves, writing only changed portions of the drawing rather than rewriting the entire file. Incremental saves reduce disk I/O and lower the probability of corruption during a save operation.
+Set this to `50` (default is `0`). This instructs AutoCAD to perform incremental saves, writing only changed portions of the drawing rather than rewriting the entire file. Incremental saves reduce disk we/O and lower the probability of corruption during a save operation.
 
 ### Use DWG Version Control
 

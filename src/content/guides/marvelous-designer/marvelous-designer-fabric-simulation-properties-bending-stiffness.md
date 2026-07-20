@@ -1,11 +1,11 @@
 ---
 title: "Marvelous Designer Fabric Simulation Properties: Bending, Stiffness, and Wrinkle Control"
-excerpt: "Marvelous Designer's fabric simulation properties control how cloth behaves during simulation. I cover the key physical properties — bending, shear, stretch, density, and pressure — with practical recommendations for different fabric types from silk to denim, and how to tune them for realistic wrinkling."
+excerpt: "Marvelous Designer's fabric simulation properties control how cloth behaves during simulation. We cover the key physical properties — bending, shear, stretch, density, and pressure — with practical recommendations for different fabric types from silk to denim, and how to tune them for realistic wrinkling."
 category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer fabric simulation properties bending stiffness wrinkling"
 slug: "marvelous-designer-fabric-simulation-properties-bending-stiffness"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Marvelous Designer Fabric Simulation Properties: Bending, Stiffness, and Wrinkle Control
 
-I've spent years creating digital garments for game characters and cinematic renders, and Marvelous Designer's fabric simulation properties are the single most important factor in achieving realistic cloth behavior. The difference between a garment that looks like stiff cardboard and one that drapes like real fabric comes down to understanding and tuning these physical properties.
+We've spent years creating digital garments for game characters and cinematic renders, and Marvelous Designer's fabric simulation properties are the single most important factor in achieving realistic cloth behavior. The difference between a garment that looks like stiff cardboard and one that drapes like real fabric comes down to understanding and tuning these physical properties.
 
 ## Understanding Fabric Physical Properties
 
@@ -36,7 +36,7 @@ Bending controls how easily the fabric folds and creases:
 - **High bending (150-500)**: Stiff fabrics like denim and canvas. Few, large folds
 - **Very high bending (500+)**: Rigid materials like leather and heavy wool. Minimal folding
 
-I always set bending separately for warp and weft when I want realistic fabric behavior. Real fabrics often have different stiffness along the grain vs. across it.
+We always set bending separately for warp and weft when we want realistic fabric behavior. Real fabrics often have different stiffness along the grain vs. across it.
 
 ### Shear (Weft/Warp)
 
@@ -45,7 +45,7 @@ Shear controls how much the fabric deforms when the warp and weft threads slide 
 - **Low shear**: Fabric resists diagonal deformation — stiff, doesn't drape well
 - **High shear**: Fabric deforms easily diagonally — flows over curves naturally
 
-For most garments, I keep shear moderate (50-100). Too high and the fabric looks rubbery; too low and it won't conform to the body.
+For most garments, we keep shear moderate (50-100). Too high and the fabric looks rubbery; too low and it won't conform to the body.
 
 ### Stretch (Weft/Warp)
 
@@ -111,13 +111,13 @@ Fabric properties only produce visible results when the mesh density is high eno
 - **High resolution (6-8)**: Detailed wrinkling. Necessary for close-up renders
 - **Very high resolution (9-10)**: Maximum detail. Very slow simulation
 
-I work at resolution 2-3 for initial garment design and fitting, then increase to 5-7 for final simulation and export.
+We work at resolution 2-3 for initial garment design and fitting, then increase to 5-7 for final simulation and export.
 
 ## Tuning Workflow
 
 1. **Start with a preset** closest to your target fabric
 2. **Simulate at low resolution** (2-3) to check overall drape and fit
-3. **Adjust bending** — this is the property I tune most. Increase for stiffer fabric, decrease for softer
+3. **Adjust bending** — this is the property we tune most. Increase for stiffer fabric, decrease for softer
 4. **Adjust shear** — increase if the fabric doesn't conform to curves, decrease if it looks rubbery
 5. **Adjust density** — increase if the fabric looks too floaty, decrease if it's too heavy
 6. **Increase simulation resolution** to 5-7 for final detail

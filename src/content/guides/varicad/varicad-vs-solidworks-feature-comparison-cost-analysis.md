@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "varicad"
 keyword: "varicad vs solidworks comparison"
 slug: "varicad-vs-solidworks-feature-comparison-cost-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

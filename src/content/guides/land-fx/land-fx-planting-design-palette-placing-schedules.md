@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "land-fx"
 keyword: "land f/x planting design palette schedule autoCAD"
 slug: "land-fx-planting-design-palette-placing-schedules"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Land F/X Planting Design: Building Palettes, Placing Plants, and Generating Schedules
 
-Land F/X is a specialized plugin for AutoCAD (and Revit, Rhino, SketchUp) designed specifically for landscape architecture and irrigation design. Its planting tools automate the most tedious parts of landscape design — building plant palettes, placing symbols, labeling, counting, and generating schedules. I'll walk through the complete planting workflow.
+Land F/X is a specialized plugin for AutoCAD (and Revit, Rhino, SketchUp) designed specifically for landscape architecture and irrigation design. Its planting tools automate the most tedious parts of landscape design — building plant palettes, placing symbols, labeling, counting, and generating schedules. We'll walk through the complete planting workflow.
 
 ## Land F/X Project Setup
 

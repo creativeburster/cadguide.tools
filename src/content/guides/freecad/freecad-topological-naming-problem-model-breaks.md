@@ -1,11 +1,11 @@
 ---
 title: "FreeCAD Topological Naming Problem: Why Models Break and How to Prevent It"
-excerpt: "FreeCAD models break when earlier features are edited — references to faces and edges shift, causing downstream features to fail. I cover the TNP mitigation in FreeCAD 1.0, attachment strategies, and workflow habits that prevent model breakage."
+excerpt: "FreeCAD models break when earlier features are edited — references to faces and edges shift, causing downstream features to fail. We cover the TNP mitigation in FreeCAD 1.0, attachment strategies, and workflow habits that prevent model breakage."
 category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD topological naming problem model breaks references"
 slug: "freecad-topological-naming-problem-model-breaks"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

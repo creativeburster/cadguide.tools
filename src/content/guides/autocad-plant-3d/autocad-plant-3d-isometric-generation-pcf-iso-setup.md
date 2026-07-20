@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autocad-plant-3d"
 keyword: "autocad plant 3d isometric generation pcf iso setup"
 slug: "autocad-plant-3d-isometric-generation-pcf-iso-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # AutoCAD Plant 3D Isometric Generation: Configuring PCF Output and Iso Styles
 
-Generating isometrics is the final and most critical output from Plant 3D. I've seen shops waste weeks re-generating isos because the iso style wasn't configured correctly. A single misconfigured annotation template can make every iso in a project unusable. Here's how to set up isometric generation properly the first time.
+Generating isometrics is the final and most critical output from Plant 3D. We've seen shops waste weeks re-generating isos because the iso style wasn't configured correctly. A single misconfigured annotation template can make every iso in a project unusable. Here's how to set up isometric generation properly the first time.
 
 ## Understanding the Isometric Generation Pipeline
 

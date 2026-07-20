@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "comsol-multiphysics"
 keyword: "comsol multiphysics coupling"
 slug: "comsol-multiphysics-coupling-structural-thermal-fluid-structure-electromagnetic"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # COMSOL Multiphysics Coupling: Structural-Thermal, Fluid-Structure, and Electromagnetic Analysis
 
-What drew me to COMSOL in the first place was how it handles multiphysics. I was working on a thermal-structural problem and kept running into issues passing data between separate solvers. With COMSOL, the coupling is native — one model, one mesh, one solver. It just works. Let me walk you through the main coupling types I use regularly: structural-thermal, fluid-structure interaction, and electromagnetic-thermal.
+What drew us to COMSOL in the first place was how it handles multiphysics. We were working on a thermal-structural problem and kept running into issues passing data between separate solvers. With COMSOL, the coupling is native — one model, one mesh, one solver. It just works. Let us walk you through the main coupling types we use regularly: structural-thermal, fluid-structure interaction, and electromagnetic-thermal.
 
 ## COMSOL Architecture
 
@@ -330,4 +330,4 @@ What drew me to COMSOL in the first place was how it handles multiphysics. I was
 
 ## Wrapping Up
 
-After years of using COMSOL for multiphysics, the thing that still impresses me is how little friction there is in setting up coupled problems. Adding a multiphysics node is literally two clicks. But that doesn't mean it's foolproof — the solver choice matters a lot. I use fully coupled when the physics are strongly linked (like Joule heating where temperature changes conductivity), and segregated when they're weakly linked or have very different time scales. If your coupled simulation is slow or won't converge, try switching from fully coupled to segregated — it often helps.
+After years of using COMSOL for multiphysics, the thing that still impresses us is how little friction there is in setting up coupled problems. Adding a multiphysics node is literally two clicks. But that doesn't mean it's foolproof — the solver choice matters a lot. We use fully coupled when the physics are strongly linked (like Joule heating where temperature changes conductivity), and segregated when they're weakly linked or have very different time scales. If your coupled simulation is slow or won't converge, try switching from fully coupled to segregated — it often helps.

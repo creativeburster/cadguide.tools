@@ -1,11 +1,11 @@
 ---
 title: "UltiMaker Cura Infill Patterns: Choosing Between Gyroid, Cubic, Grid, and Lightning"
-excerpt: "Cura offers 14 infill patterns, each with different strength, speed, and material characteristics. I cover the practical differences between gyroid, cubic, grid, lightning, and other patterns — with recommendations for functional parts, display models, flexible prints, and high-speed production."
+excerpt: "Cura offers 14 infill patterns, each with different strength, speed, and material characteristics. We cover the practical differences between gyroid, cubic, grid, lightning, and other patterns — with recommendations for functional parts, display models, flexible prints, and high-speed production."
 category: "workflow"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura infill patterns gyroid cubic grid lightning comparison"
 slug: "ultimaker-cura-infill-patterns-gyroid-cubic-lightning-guide"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -18,7 +18,7 @@ sources:
 
 # UltiMaker Cura Infill Patterns: Choosing Between Gyroid, Cubic, Grid, and Lightning
 
-I've printed hundreds of functional parts, display models, and flexible components, and choosing the right infill pattern makes a bigger difference than most people realize. The wrong pattern can waste material, add hours to print time, or produce a part that fails under load. Cura offers 14 infill patterns, and understanding their trade-offs is essential for getting the most out of your prints.
+We've printed hundreds of functional parts, display models, and flexible components, and choosing the right infill pattern makes a bigger difference than most people realize. The wrong pattern can waste material, add hours to print time, or produce a part that fails under load. Cura offers 14 infill patterns, and understanding their trade-offs is essential for getting the most out of your prints.
 
 ## What Is Infill?
 
@@ -165,7 +165,7 @@ Allows you to specify the angle of infill lines. Default is 45° and 135° (cros
 
 ### Infill Before Walls
 
-Prints infill before walls. This can improve wall-to-infill adhesion but may cause infill patterns to show through the walls. I keep this disabled for display models and enabled for functional parts.
+Prints infill before walls. This can improve wall-to-infill adhesion but may cause infill patterns to show through the walls. We keep this disabled for display models and enabled for functional parts.
 
 ### Infill Overlap
 
@@ -173,4 +173,4 @@ How much the infill overlaps with the inner walls. Higher values improve adhesio
 
 ## Summary
 
-For most functional parts, I use **gyroid at 20% density** — it provides near-isotropic strength, looks great, and prints reliably. For display models, **lightning at 10%** saves significant time and material. For flexible prints, **concentric or cross** at 20% provides controlled flexibility. For large structural parts, **cubic subdivision at 20%** optimizes material placement. The pattern matters as much as the density — choosing the right one can save hours of print time and significantly improve part performance.
+For most functional parts, we use **gyroid at 20% density** — it provides near-isotropic strength, looks great, and prints reliably. For display models, **lightning at 10%** saves significant time and material. For flexible prints, **concentric or cross** at 20% provides controlled flexibility. For large structural parts, **cubic subdivision at 20%** optimizes material placement. The pattern matters as much as the density — choosing the right one can save hours of print time and significantly improve part performance.

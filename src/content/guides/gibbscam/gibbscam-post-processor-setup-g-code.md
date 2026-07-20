@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "gibbscam"
 keyword: "gibbscam post processor setup g-code configuration"
 slug: "gibbscam-post-processor-setup-g-code"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # GibbsCAM Post Processor Setup: Getting Clean G-Code for Your CNC Machine
 
-GibbsCAM ships with 300+ post processors, but finding the right one and customizing it for your specific machine is a rite of passage. I've set up posts for Fanuc, Haas, Mazak, and Okuma machines. Here's the process that gets clean G-code on the first try.
+GibbsCAM ships with 300+ post processors, but finding the right one and customizing it for your specific machine is a rite of passage. We've set up posts for Fanuc, Haas, Mazak, and Okuma machines. Here's the process that gets clean G-code on the first try.
 
 ## Step 1: Select the Right Stock Post
 

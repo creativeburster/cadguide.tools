@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ltspice"
 keyword: "ltspice import spice model subcircuit symbol include"
 slug: "ltspice-importing-third-party-spice-models-subcircuits-symbols"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

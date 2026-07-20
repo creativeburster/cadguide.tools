@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "worknc"
 keyword: "worknc auto 5 roughing finishing mold machining toolpath"
 slug: "worknc-auto-5-roughing-finishing-mold-machining-strategies"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # WorkNC Auto 5 Roughing and Finishing: Mold Machining Toolpath Strategies
 
-WorkNC, part of Hexagon's manufacturing portfolio, is a CAM system specifically designed for mold and die machining. Its Auto 5 technology automates 5-axis toolpath generation for complex mold surfaces, reducing programming time while maintaining surface quality. I'll walk through the key strategies for mold machining.
+WorkNC, part of Hexagon's manufacturing portfolio, is a CAM system specifically designed for mold and die machining. Its Auto 5 technology automates 5-axis toolpath generation for complex mold surfaces, reducing programming time while maintaining surface quality. We'll walk through the key strategies for mold machining.
 
 ## WorkNC's Position in the Market
 

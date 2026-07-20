@@ -1,11 +1,11 @@
 ---
 title: "PrusaSlicer MMU Multi-Material Setup: Wipe Tower, Purging Volumes, and Filament Tip Troubleshooting"
-excerpt: "The Prusa MMU2S and MMU3 enable multi-color printing but introduce failure points around filament tips, sensor calibration, and purging volumes. I cover wipe tower configuration, purging volume optimization, FINDA and IR sensor calibration, and the most common MMU failures with step-by-step fixes."
+excerpt: "The Prusa MMU2S and MMU3 enable multi-color printing but introduce failure points around filament tips, sensor calibration, and purging volumes. We cover wipe tower configuration, purging volume optimization, FINDA and IR sensor calibration, and the most common MMU failures with step-by-step fixes."
 category: "troubleshooting"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer MMU multi-material wipe tower purging filament tip"
 slug: "prusaslicer-mmu-multi-material-setup-troubleshooting"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # PrusaSlicer MMU Multi-Material Setup: Wipe Tower, Purging Volumes, and Filament Tip Troubleshooting
 
-I've been running a Prusa MK3S+ with MMU2S and now a MK4 with MMU3 for multi-color printing, and I can tell you that the difference between a smooth multi-material print and a 12-hour failure marathon comes down to three things: PrusaSlicer settings, sensor calibration, and filament tip quality. The MMU system is capable of beautiful multi-color prints, but it demands meticulous setup.
+We've been running a Prusa MK3S+ with MMU2S and now a MK4 with MMU3 for multi-color printing, and we can tell you that the difference between a smooth multi-material print and a 12-hour failure marathon comes down to three things: PrusaSlicer settings, sensor calibration, and filament tip quality. The MMU system is capable of beautiful multi-color prints, but it demands meticulous setup.
 
 ## Understanding the MMU Workflow
 
@@ -37,9 +37,9 @@ The wipe tower is a sacrificial structure printed alongside your model where the
 
 Key settings under **Print Settings → Support material → Wipe tower**:
 
-- **Wipe tower width**: Default is 60 mm. I keep this at 60 mm for most prints. Reduce to 50 mm for small models to save material, increase to 70-80 mm for models with many color changes.
+- **Wipe tower width**: Default is 60 mm. We keep this at 60 mm for most prints. Reduce to 50 mm for small models to save material, increase to 70-80 mm for models with many color changes.
 - **Wipe tower rotation angle**: Default is 0°. Rotate if it interferes with the model.
-- **Wipe tower brim width**: I set this to 4 mm to ensure the wipe tower adheres well — a detached wipe tower ruins the entire print.
+- **Wipe tower brim width**: We set this to 4 mm to ensure the wipe tower adheres well — a detached wipe tower ruins the entire print.
 - **Wipe tower maximal bridging distance**: Default is 10 mm. This controls how far the wipe tower can bridge gaps. Keep the default.
 
 Prusa's documentation describes the wipe tower as a "Smart wipe tower" that "ensures sharp color transitions and stable filament flow after a color change while aiming to waste as little filament as possible."
@@ -55,7 +55,7 @@ The purging volume matrix shows how much filament to purge when switching from e
 - **Black → White**: 206 mm³
 - **Same color → same color**: 0 mm³
 
-My tuning approach:
+Our tuning approach:
 1. **Start with defaults** — they work well for most PLA colors
 2. **Reduce for similar colors** — switching from light gray to dark gray needs less purging than white to black
 3. **Increase for transparent filaments** — they show contamination more than opaque colors
@@ -105,7 +105,7 @@ To calibrate:
 
 The MMU idler screws must be tightened correctly. Prusa warns: "If the idler springs are over-tightened, it may cause the idler motor to skip. Over-tightening can also cause the pulleys to be 'choked' by the filament."
 
-I tighten until I feel slight resistance, then back off 1/4 turn. The idler should have about 1 mm of gap on both sides.
+We tighten until we feel slight resistance, then back off 1/4 turn. The idler should have about 1 mm of gap on both sides.
 
 ## Common Failures and Fixes
 
@@ -154,7 +154,7 @@ This is catastrophic — the entire print fails. Prevention:
 
 ## Tips for Success
 
-1. **Dry your filament** — moist filament is the #1 cause of MMU failures. I dry all filament at 50°C for 4 hours before MMU prints.
+1. **Dry your filament** — moist filament is the #1 cause of MMU failures. We dry all filament at 50°C for 4 hours before MMU prints.
 2. **Use high-quality filament** — poor tolerance filament jams more frequently in the PTFE tubes.
 3. **Keep the MMU selector clean** — dust and filament debris accumulate and cause jams. Clean weekly.
 4. **Lubricate the PTFE tubes** — occasionally pull a clean cloth through the tubes to remove residue.

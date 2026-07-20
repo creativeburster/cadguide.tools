@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "bimcollab"
 keyword: "bimcollab vs acc model coordination bcf issue platform comparison"
 slug: "bimcollab-vs-acc-model-coordination-bcf-issue-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # BIMcollab vs ACC Model Coordination: BCF Issue Platform Comparison for BIM Projects
 
-Both BIMcollab and ACC Model Coordination manage BIM coordination issues. But they approach it from different angles. BIMcollab is a dedicated BCF platform that connects to any BIM tool. ACC Model Coordination is part of the Autodesk ecosystem and works best with Revit and Navisworks. I've used both extensively. Here's my comparison.
+Both BIMcollab and ACC Model Coordination manage BIM coordination issues. But they approach it from different angles. BIMcollab is a dedicated BCF platform that connects to any BIM tool. ACC Model Coordination is part of the Autodesk ecosystem and works best with Revit and Navisworks. We've used both extensively. Here's our comparison.
 
 ## Platform Overview
 
@@ -168,7 +168,7 @@ For projects with mixed teams (Revit + Archicad + Solibri):
 
 This gives you the best of both worlds: ACC for Revit model sharing, Solibri for clash detection, and BIMcollab for universal issue management.
 
-## My Recommendation
+## Our Recommendation
 
 For most multi-tool projects using Solibri: **BIMcollab is the better choice for issue management**. The live Solibri sync and Archicad support are capabilities ACC simply doesn't have.
 

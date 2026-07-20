@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-fluent"
 keyword: "ansys fluent convergence divergence residuals floating point error troubleshooting"
 slug: "ansys-fluent-convergence-divergence-residuals-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ANSYS Fluent Convergence Troubleshooting: Fixing Divergence, Oscillating Residuals, and Floating Point Errors
 
-Convergence problems are the most common issue in CFD. I've spent days chasing residuals that refuse to settle. The good news is that most convergence problems have identifiable causes — mesh quality, solver settings, boundary conditions, or physics model selection. Here's my troubleshooting process, built from years of fixing Fluent simulations.
+Convergence problems are the most common issue in CFD. We've spent days chasing residuals that refuse to settle. The good news is that most convergence problems have identifiable causes — mesh quality, solver settings, boundary conditions, or physics model selection. Here's our troubleshooting process, built from years of fixing Fluent simulations.
 
 ## Understanding Convergence
 

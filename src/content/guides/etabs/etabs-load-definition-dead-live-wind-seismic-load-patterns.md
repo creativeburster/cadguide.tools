@@ -1,11 +1,11 @@
 ---
 title: "ETABS Load Definition: Dead, Live, Wind, and Seismic Load Patterns"
-excerpt: "ETABS load definition tools create dead, live, wind, and seismic load patterns for building analysis. I cover load pattern setup, load case combinations, wind load assignment per ASCE 7, seismic load definition with response spectrum, and load combination generation."
+excerpt: "ETABS load definition tools create dead, live, wind, and seismic load patterns for building analysis. We cover load pattern setup, load case combinations, wind load assignment per ASCE 7, seismic load definition with response spectrum, and load combination generation."
 category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS load definition dead live wind seismic load patterns combinations ASCE 7 response spectrum building analysis"
 slug: "etabs-load-definition-dead-live-wind-seismic-load-patterns"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ETABS Load Definition: Dead, Live, Wind, and Seismic Load Patterns
 
-I've defined loads for hundreds of building models in ETABS for structural design. Getting the load definition right is critical — loads drive the entire analysis and design process. Underestimate loads and the structure is unsafe; overestimate loads and the structure is uneconomical. ETABS provides comprehensive tools for defining dead, live, wind, and seismic loads according to major building codes.
+We've defined loads for hundreds of building models in ETABS for structural design. Getting the load definition right is critical — loads drive the entire analysis and design process. Underestimate loads and the structure is unsafe; overestimate loads and the structure is uneconomical. ETABS provides comprehensive tools for defining dead, live, wind, and seismic loads according to major building codes.
 
 ## Load Patterns Overview
 
@@ -77,7 +77,7 @@ ETABS uses a two-level load definition system:
    - **Basic wind speed (V)**: e.g., 150 mph (Risk Category II) or per local code
    - **Wind direction**: 0°, 90°, 180°, 270°
    - **Exposure category**: B (urban), C (open), D (coastal)
-   - **Building risk category**: I, II, III, IV
+   - **Building risk category**: We, II, III, IV
    - **Gust factor (G)**: 0.85 (rigid building) or calculated (flexible)
    - **Directionality factor (Kd)**: 0.85
    - **Topographic factor (Kzt)**: 1.0 (flat terrain) or calculated
@@ -101,7 +101,7 @@ ETABS uses a two-level load definition system:
    - **SDS**: Short-period design spectral acceleration (e.g., 0.4g)
    - **SD1**: 1-second design spectral acceleration (e.g., 0.2g)
    - **Site class**: A, B, C, D, E, F
-   - **Risk category**: I, II, III, IV
+   - **Risk category**: We, II, III, IV
    - **Importance factor (Ie)**: 1.0 (II), 1.25 (III), 1.5 (IV)
    - **Response modification factor (R)**:
      - Special RC moment frame: 8
@@ -241,7 +241,7 @@ LC8: 1.0 × DEAD + 1.0 × LIVE - 0.7 × EQX
 3. Set:
    - **Load pattern**: DEAD or LIVE
    - **Force**: Fx, Fy, Fz (e.g., equipment weight)
-   - **Moment**: Mx, My, Mz
+   - **Moment**: Mx, Our, Mz
 4. Click **OK**
 
 ### Wall Loads on Beams

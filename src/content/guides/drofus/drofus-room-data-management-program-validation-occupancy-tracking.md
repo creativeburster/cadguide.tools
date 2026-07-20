@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "drofus"
 keyword: "drofus room data management program validation occupancy tracking healthcare"
 slug: "drofus-room-data-management-program-validation-occupancy-tracking"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # dRofus Room Data Management: Program Validation and Occupancy Tracking for Healthcare Projects
 
-dRofus shines on complex projects with detailed room requirements. I've used it on hospital projects with 2,000+ rooms, each with specific functional requirements, equipment lists, and area targets. Without dRofus, managing this data in Revit alone would be a nightmare. Here's how to use dRofus for room data management that actually works.
+dRofus shines on complex projects with detailed room requirements. We've used it on hospital projects with 2,000+ rooms, each with specific functional requirements, equipment lists, and area targets. Without dRofus, managing this data in Revit alone would be a nightmare. Here's how to use dRofus for room data management that actually works.
 
 ## Why Room Data Management Matters
 

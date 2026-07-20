@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "midas-gen"
 keyword: "midas gen vs etabs comparison"
 slug: "midas-gen-vs-etabs-building-analysis-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # MIDAS Gen vs ETABS: Building Analysis Platform Comparison for Structural Engineers
 
-I've used both MIDAS Gen and ETABS extensively, and the question of which one to use comes up a lot — especially on international projects where the client or local authority has a preference. ETABS dominates in the Americas; MIDAS Gen has a strong following in Asia, the Middle East, and parts of Europe. Both are capable tools, but they have different strengths. Here's how I think about the choice.
+We've used both MIDAS Gen and ETABS extensively, and the question of which one to use comes up a lot — especially on international projects where the client or local authority has a preference. ETABS dominates in the Americas; MIDAS Gen has a strong following in Asia, the Middle East, and parts of Europe. Both are capable tools, but they have different strengths. Here's how we think about the choice.
 
 ## Cost Comparison
 
@@ -172,6 +172,6 @@ MIDAS Gen and ETABS do not have direct file exchange. To transfer models:
 
 Code support is a major factor in choosing between midas Gen and ETABS. ETABS has comprehensive support for US codes: ACI 318 for concrete, AISC 360 for steel, ASCE 7 for loads, and IBC for general building requirements. This makes ETABS the default choice for US-based structural engineering practice. midas Gen supports a broader range of international codes: Eurocode, British Standards, Korean, Chinese, Japanese, and Indian codes, in addition to US codes. This makes midas Gen more versatile for international firms working across multiple code jurisdictions. However, the depth of code support varies — midas Gen's US code implementation may not be as comprehensive or up-to-date as ETABS' implementation. For firms working primarily in the US, ETABS' code support is more reliable and better validated. For firms working in Europe, Asia, or the Middle East, midas Gen's multi-code support is a significant advantage.
 
-## My Take
+## Our Take
 
-Both MIDAS Gen and ETABS are excellent tools. If you're in Asia or the Middle East, MIDAS Gen is probably the better choice — better code support for the region, construction stage analysis built in, and a growing user community. If you're in the Americas, ETABS is the safer bet — larger community, better support, and most of your collaborators will be using it. If you work internationally, you might need both. I use MIDAS Gen for Asian projects and ETABS for North American ones, and that setup works well for me.
+Both MIDAS Gen and ETABS are excellent tools. If you're in Asia or the Middle East, MIDAS Gen is probably the better choice — better code support for the region, construction stage analysis built in, and a growing user community. If you're in the Americas, ETABS is the safer bet — larger community, better support, and most of your collaborators will be using it. If you work internationally, you might need both. We use MIDAS Gen for Asian projects and ETABS for North American ones, and that setup works well for us.

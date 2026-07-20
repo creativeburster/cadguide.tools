@@ -1,11 +1,11 @@
 ---
 title: "Inventor Tube and Pipe Performance: Fixing Rebuild Lag from Adaptive Routes"
-excerpt: "Tube and Pipe routes with adaptive 3D sketches cause Inventor to rebuild the entire model after every action. I cover the adaptivity deactivation, route locking, and workflow changes that fix this specific problem."
+excerpt: "Tube and Pipe routes with adaptive 3D sketches cause Inventor to rebuild the entire model after every action. We cover the adaptivity deactivation, route locking, and workflow changes that fix this specific problem."
 category: "performance"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor tube and pipe performance adaptive route rebuild"
 slug: "inventor-tube-pipe-performance-adaptive-route-rebuild"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-18"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Inventor Tube and Pipe Performance: Fixing Rebuild Lag from Adaptive Routes
 
-The first user on the Autodesk forum described a problem that I've encountered in every plant design project I've managed: they had a moderately large model with tube and pipe routes based on a 3D sketch in a separate part. The tube and pipe model used "derive route" to select the path for the pipes. After any activity — move, place, constraint — the bottom left corner would say "Executing..." and the entire model would rebuild. The performance was very slow.
+The first user on the Autodesk forum described a problem that we've encountered in every plant design project we've managed: they had a moderately large model with tube and pipe routes based on a 3D sketch in a separate part. The tube and pipe model used "derive route" to select the path for the pipes. After any activity — move, place, constraint — the bottom left corner would say "Executing..." and the entire model would rebuild. The performance was very slow.
 
 The user eventually identified the cause: "I believe I may have found the issue which is with the adaptivity of the tube and pipe model and the 3D sketch file used to make the piping model which causes the model to rebuild after any action."
 
@@ -124,7 +124,7 @@ For a route with 50 fittings, this saves 700MB of memory.
 
 ## Real-World Impact
 
-I applied these fixes to a plant assembly with 12 pipe routes, 340 fittings, and 4,348 total occurrences:
+We applied these fixes to a plant assembly with 12 pipe routes, 340 fittings, and 4,348 total occurrences:
 
 | Fix | Rebuild Time | Memory Reduction |
 |-----|-------------|-----------------|

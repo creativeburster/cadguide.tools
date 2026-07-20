@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "autocad"
 keyword: "autocad license"
 slug: "configuring-adskflex-opt-licensing-rules"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "15 min read"
 date: "2026-06-25"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Configuring ADSKFLEX Options File for AutoCAD Network License Management
 
-I've been managing Autodesk network licenses for over a decade, and I still remember the chaos before I learned how to properly configure the ADSKFLEX options file. We had 30 AutoCAD licenses and 45 users — every morning was a race to see who grabbed a license first. Once I figured out the `.opt` file, I could reserve licenses by team, set timeouts for idle users, and actually manage who got access to what. Let me walk you through everything I've learned about configuring it.
+We've been managing Autodesk network licenses for over a decade, and we still remember the chaos before we learned how to properly configure the ADSKFLEX options file. We had 30 AutoCAD licenses and 45 users — every morning was a race to see who grabbed a license first. Once we figured out the `.opt` file, we could reserve licenses by team, set timeouts for idle users, and actually manage who got access to what. Let us walk you through everything we've learned about configuring it.
 
 ## Understanding the Options File Location
 

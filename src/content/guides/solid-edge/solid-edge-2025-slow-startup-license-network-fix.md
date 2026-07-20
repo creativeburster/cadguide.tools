@@ -1,11 +1,11 @@
 ---
 title: "Solid Edge 2025 Slow Startup: License Server Timeout, Network Drive Checks, and Registry Fixes"
-excerpt: "Solid Edge 2025 takes 3 minutes to start on laptops but opens instantly on desktops. I cover the license server timeout fix, network drive check disabling, and the registry settings that eliminate startup delays."
+excerpt: "Solid Edge 2025 takes 3 minutes to start on laptops but opens instantly on desktops. We cover the license server timeout fix, network drive check disabling, and the registry settings that eliminate startup delays."
 category: "performance"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge 2025 slow startup license server network drive"
 slug: "solid-edge-2025-slow-startup-license-network-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

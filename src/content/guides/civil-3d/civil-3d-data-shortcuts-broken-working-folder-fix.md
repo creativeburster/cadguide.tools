@@ -1,11 +1,11 @@
 ---
 title: "Civil 3D Data Shortcuts Broken: Working Folder, Reference Paths, and Synchronization Fixes"
-excerpt: "Civil 3D data shortcuts break when moving projects between servers or after template changes. I cover the working folder setup, data shortcut validation, and the repair workflow that restores broken references."
+excerpt: "Civil 3D data shortcuts break when moving projects between servers or after template changes. We cover the working folder setup, data shortcut validation, and the repair workflow that restores broken references."
 category: "troubleshooting"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D data shortcuts broken working folder reference path"
 slug: "civil-3d-data-shortcuts-broken-working-folder-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

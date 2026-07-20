@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ares-commander"
 keyword: "ares commander object snap not working"
 slug: "ares-commander-object-snap-issues-fixing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ARES Commander Object Snap Issues: Fixing Erratic Snapping Behavior
 
-A user in our office complained that ARES Commander was "snapping to the wrong points" — endpoints were jumping to midpoints, intersections were missing entirely, and sometimes the snap marker wouldn't appear at all. I've seen this exact pattern before. Here's the diagnostic and fix sequence.
+A common ARES Commander complaint is that it "snaps to the wrong points" — endpoints jump to midpoints, intersections go missing entirely, and sometimes the snap marker won't appear at all. We've seen this exact pattern before. Here's the diagnostic and fix sequence.
 
 ## Symptom 1: Snap Jumps to Wrong Entity
 
@@ -88,7 +88,7 @@ If polar tracking angles interfere with object snaps:
 
 ## Best Practice OSNAP Configuration
 
-For general 2D drafting, I recommend this minimal OSNAP set:
+For general 2D drafting, we recommend this minimal OSNAP set:
 
 - **Endpoint** — Always
 - **Midpoint** — Always

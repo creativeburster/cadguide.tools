@@ -1,11 +1,11 @@
 ---
 title: "PrusaSlicer Pressure Advance and Input Shaping Calibration Guide"
-excerpt: "Pressure advance (PA) and input shaping are the two calibration settings that most dramatically improve print quality on modern 3D printers. I cover how to calibrate PA in PrusaSlicer, configure input shaping for Klipper and Prusa firmware, and troubleshoot common issues like bulging corners and ringing artifacts."
+excerpt: "Pressure advance (PA) and input shaping are the two calibration settings that most dramatically improve print quality on modern 3D printers. We cover how to calibrate PA in PrusaSlicer, configure input shaping for Klipper and Prusa firmware, and troubleshoot common issues like bulging corners and ringing artifacts."
 category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer pressure advance input shaping calibration Klipper"
 slug: "prusaslicer-pressure-advance-input-shaping-calibration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -18,7 +18,7 @@ sources:
 
 # PrusaSlicer Pressure Advance and Input Shaping Calibration Guide
 
-I manage a fleet of 3D printers ranging from Prusa MK4s to custom Voron builds, and the two settings that consistently make the biggest quality difference are pressure advance (PA) and input shaping. Both address artifacts that stem from the physics of extruding plastic through a moving nozzle — but they tackle different problems. Pressure advance fixes bulging corners and inconsistent extrusion at direction changes, while input shaping eliminates ringing and ghosting caused by printer vibration.
+We manage a fleet of 3D printers ranging from Prusa MK4s to custom Voron builds, and the two settings that consistently make the biggest quality difference are pressure advance (PA) and input shaping. Both address artifacts that stem from the physics of extruding plastic through a moving nozzle — but they tackle different problems. Pressure advance fixes bulging corners and inconsistent extrusion at direction changes, while input shaping eliminates ringing and ghosting caused by printer vibration.
 
 ## Understanding Pressure Advance
 
@@ -43,7 +43,7 @@ The result of proper PA calibration:
 
 ### Step 2: Run a Calibration Test
 
-I use the PrusaSlicer Pressure Advance Test by gareth.ky on Printables. This test generates a pattern that varies the PA value across a single print, so you can read the optimal value directly from the printed result.
+We use the PrusaSlicer Pressure Advance Test by gareth.ky on Printables. This test generates a pattern that varies the PA value across a single print, so you can read the optimal value directly from the printed result.
 
 1. Download the test model from Printables (model ID 641490)
 2. Open the included 3MF project file in PrusaSlicer — it has the correct settings pre-configured
@@ -145,7 +145,7 @@ The PrusaSlicer forum has many threads on this. The setting appears only when:
 
 ## Recommended Starting Values
 
-Based on my experience across multiple printer types:
+Based on our experience across multiple printer types:
 
 - **Direct drive extruders**: PA 0.02-0.06
 - **Bowden extruders (short tube)**: PA 0.04-0.08
@@ -156,4 +156,4 @@ Vision Miner's documentation notes: "We provide well-tested default values in ou
 
 ## Summary
 
-Pressure advance and input shaping are the two most impactful calibrations you can perform. PA fixes extrusion consistency at direction changes, and input shaping fixes vibration artifacts. Both require test prints and careful reading of results, but the quality improvement is immediately visible. I recommend calibrating PA first (it's simpler and doesn't require hardware), then input shaping (which may require an accelerometer for best results on Klipper).
+Pressure advance and input shaping are the two most impactful calibrations you can perform. PA fixes extrusion consistency at direction changes, and input shaping fixes vibration artifacts. Both require test prints and careful reading of results, but the quality improvement is immediately visible. We recommend calibrating PA first (it's simpler and doesn't require hardware), then input shaping (which may require an accelerometer for best results on Klipper).

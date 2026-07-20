@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "chief-architect"
 keyword: "chief architect vs revit comparison"
 slug: "chief-architect-vs-revit-residential-vs-bim-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect vs Revit: Residential vs BIM Platform Comparison for Home Design
 
-I get asked "Chief Architect or Revit?" a lot, usually by residential designers considering a switch. I've used both extensively, and the answer depends entirely on what kind of work you do. Chief Architect is purpose-built for residential design; Revit is a general-purpose BIM platform. For home builders and residential designers, Chief Architect is usually the better fit. For firms that do both residential and commercial, Revit makes more sense. Here's my detailed comparison.
+We get asked "Chief Architect or Revit?" a lot, usually by residential designers considering a switch. We've used both extensively, and the answer depends entirely on what kind of work you do. Chief Architect is purpose-built for residential design; Revit is a general-purpose BIM platform. For home builders and residential designers, Chief Architect is usually the better fit. For firms that do both residential and commercial, Revit makes more sense. Here's our detailed comparison.
 
 ## Target Market
 
@@ -176,6 +176,6 @@ Some residential architecture firms use both:
 
 The tools serve different markets and don't typically overlap for the same project type.
 
-## My Take
+## Our Take
 
-If you design custom homes, Chief Architect is the better tool — faster, cheaper, and purpose-built for residential. If you do commercial work or need full BIM collaboration, Revit is the way to go. I've used both, and for residential projects, Chief Architect gets me from concept to construction documents in about half the time it would take in Revit. The automatic 3D generation, parametric cabinets, and roof tools are just that much faster for house design. For anything else, Revit's BIM capabilities win.
+If you design custom homes, Chief Architect is the better tool — faster, cheaper, and purpose-built for residential. If you do commercial work or need full BIM collaboration, Revit is the way to go. We've used both, and for residential projects, Chief Architect gets us from concept to construction documents in about half the time it would take in Revit. The automatic 3D generation, parametric cabinets, and roof tools are just that much faster for house design. For anything else, Revit's BIM capabilities win.

@@ -1,11 +1,11 @@
 ---
 title: "Lectra Ecosystem: Modaris, Kaledo, Gallery PLM, and the End-to-End Fashion Workflow"
-excerpt: "Lectra's integrated ecosystem connects pattern making, 3D prototyping, color design, PLM, and cutting. I cover how Modaris, Kaledo, Gallery PLM, and Lectra Cut work together, data flow between modules, and the end-to-end workflow from design concept to cut parts."
+excerpt: "Lectra's integrated ecosystem connects pattern making, 3D prototyping, color design, PLM, and cutting. We cover how Modaris, Kaledo, Gallery PLM, and Lectra Cut work together, data flow between modules, and the end-to-end workflow from design concept to cut parts."
 category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra ecosystem Modaris Kaledo Gallery PLM Lectra Cut end-to-end fashion workflow integration"
 slug: "lectra-ecosystem-modaris-kaledo-gallery-plm-end-to-end-workflow"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Lectra Ecosystem: Modaris, Kaledo, Gallery PLM, and the End-to-End Fashion Workflow
 
-I've worked with the complete Lectra ecosystem in luxury fashion houses where end-to-end integration is essential. Lectra's strength is not in any single module but in how the modules work together — Modaris for patterns, 3D Prototyping for virtual sampling, Kaledo for color and material design, Gallery for PLM, and Lectra Cut for marker making and cutting. Understanding the data flow between these modules is key to maximizing the value of the Lectra ecosystem.
+We've worked with the complete Lectra ecosystem in luxury fashion houses where end-to-end integration is essential. Lectra's strength is not in any single module but in how the modules work together — Modaris for patterns, 3D Prototyping for virtual sampling, Kaledo for color and material design, Gallery for PLM, and Lectra Cut for marker making and cutting. Understanding the data flow between these modules is key to maximizing the value of the Lectra ecosystem.
 
 ## The Lectra Ecosystem
 

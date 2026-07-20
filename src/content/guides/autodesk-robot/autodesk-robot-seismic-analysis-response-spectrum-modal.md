@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "autodesk-robot"
 keyword: "autodesk robot seismic analysis response spectrum modal"
 slug: "autodesk-robot-seismic-analysis-response-spectrum-modal"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Autodesk Robot Seismic Analysis: Response Spectrum and Modal Analysis Setup
 
-Seismic analysis is required for most building structures in seismic zones. Robot handles both the equivalent lateral force method and the response spectrum method. For buildings over 48m or with irregularities, response spectrum is required. Here's my complete setup process.
+Seismic analysis is required for most building structures in seismic zones. Robot handles both the equivalent lateral force method and the response spectrum method. For buildings over 48m or with irregularities, response spectrum is required. Here's our complete setup process.
 
 ## Step 1: Modal Analysis Setup
 
@@ -69,7 +69,7 @@ Seismic analysis is required for most building structures in seismic zones. Robo
    - **Ss**: Short-period spectral acceleration (from USGS maps for site coordinates)
    - **S1**: 1-second spectral acceleration
    - **Site class**: A (hard rock) through F (soft soil)
-   - **Risk category**: I-IV (affects Ie factor)
+   - **Risk category**: We-IV (affects Ie factor)
    - **Response modification factor (R)**: 
      - R=3 for OCBF (ordinary concentrically braced frame)
      - R=8 for SCBF (special concentrically braced frame)
@@ -94,7 +94,7 @@ Seismic analysis is required for most building structures in seismic zones. Robo
 1. Select code: **Eurocode 8 (EN 1998-1)**.
 2. Enter:
    - **agR**: Reference peak ground acceleration (e.g., 0.15g for low, 0.3g for moderate)
-   - **Importance factor (γI)**: 1.0 (II), 1.2 (III), 1.4 (IV)
+   - **Importance factor (γwe)**: 1.0 (II), 1.2 (III), 1.4 (IV)
    - **Ground type**: A (rock), B (dense sand), C (stiff soil), D (soft soil), E (soft above hard)
    - **Spectrum type**: Type 1 (moderate to high seismicity) or Type 2 (low seismicity)
    - **Behavior factor (q)**: 
@@ -141,7 +141,7 @@ Seismic analysis is required for most building structures in seismic zones. Robo
 1. **Results** → **Displacements** → **Story Drift**.
 2. Check drift ratios:
    - **ASCE 7 limits**:
-     - Δ/a ≤ 0.020h for Risk Category I-II (2% of story height)
+     - Δ/a ≤ 0.020h for Risk Category we-II (2% of story height)
      - Δ/a ≤ 0.015h for Risk Category III (1.5%)
      - Δ/a ≤ 0.010h for Risk Category IV (1%)
      - Where a = deflection amplification factor (Cd)

@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "edgecam"
 keyword: "edgecam post processor customization g-code"
 slug: "edgecam-post-processor-customization-g-code"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # EdgeCAM Post Processor Customization: Modifying G-Code Output for Custom Machines
 
-EdgeCAM uses Code Generator (CG) files as post processors. The stock CG files cover common machines, but most shops need at least minor customization. I've modified EdgeCAM post processors for Fanuc, Haas, Siemens, and Heidenhain controllers. Here's the process.
+EdgeCAM uses Code Generator (CG) files as post processors. The stock CG files cover common machines, but most shops need at least minor customization. We've modified EdgeCAM post processors for Fanuc, Haas, Siemens, and Heidenhain controllers. Here's the process.
 
 ## Understanding EdgeCAM Post Architecture
 

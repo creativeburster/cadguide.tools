@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cadworx"
 keyword: "cadworx piping modeling route creation component insertion connection"
 slug: "cadworx-piping-modeling-route-creation-component-insertion-connection"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CADWorx Piping Modeling: Route Creation, Component Insertion, and Connection Troubleshooting
 
-CADWorx is known for fast piping modeling. I've seen experienced CADWorx users route pipe faster than any Plant 3D user — the spec-driven workflow and Quick Connect feature make component insertion nearly automatic. But speed comes with pitfalls. End type mismatches, missing components in specs, and incorrect routing directions all cause problems. Here's how to model pipe in CADWorx correctly.
+CADWorx is known for fast piping modeling. We've seen experienced CADWorx users route pipe faster than any Plant 3D user — the spec-driven workflow and Quick Connect feature make component insertion nearly automatic. But speed comes with pitfalls. End type mismatches, missing components in specs, and incorrect routing directions all cause problems. Here's how to model pipe in CADWorx correctly.
 
 ## Understanding CADWorx Piping Workflow
 

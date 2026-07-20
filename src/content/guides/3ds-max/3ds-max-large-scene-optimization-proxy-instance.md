@@ -1,11 +1,11 @@
 ---
 title: "3ds Max Large Scene Optimization: Proxies, Instances, and Memory Management"
-excerpt: "Working with 1GB+ 3ds Max scenes requires a specific workflow — proxy geometry for high-poly assets, instancing for repeated objects, and aggressive modifier stack management. I cover the techniques I use to keep production scenes responsive."
+excerpt: "Working with 1GB+ 3ds Max scenes requires a specific workflow — proxy geometry for high-poly assets, instancing for repeated objects, and aggressive modifier stack management. We cover the techniques we use to keep production scenes responsive."
 category: "performance"
 softwareSlug: "3ds-max"
 keyword: "3ds Max large scene optimization proxy instance memory"
 slug: "3ds-max-large-scene-optimization-proxy-instance"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-23"
 sources:
@@ -16,17 +16,17 @@ sources:
 
 # 3ds Max Large Scene Optimization: Proxies, Instances, and Memory Management
 
-I manage a studio that does architectural visualization for large-scale developments — shopping malls, university campuses, mixed-use developments. Our scene files regularly exceed 2GB. Without proper optimization, 3ds Max would be unusable on these projects. Over the years, I've developed a workflow that keeps even the heaviest scenes manageable.
+We manage a studio that does architectural visualization for large-scale developments — shopping malls, university campuses, mixed-use developments. Our scene files regularly exceed 2GB. Without proper optimization, 3ds Max would be unusable on these projects. Over the years, we've developed a workflow that keeps even the heaviest scenes manageable.
 
 ## The Three Pillars of Scene Optimization
 
-Everything I do to optimize large scenes falls into three categories:
+Everything we do to optimize large scenes falls into three categories:
 
 1. **Proxy geometry** — replace high-poly objects with lightweight stand-ins
 2. **Instancing** — share geometry data across identical objects
 3. **Modifier management** — collapse stacks before final output
 
-Let me break down each one.
+Let us break down each one.
 
 ## Proxy Geometry: The Single Most Impactful Optimization
 
@@ -34,12 +34,12 @@ Proxies are low-poly representations of high-poly models that exist on disk. The
 
 ### VRayProxy (V-Ray Users)
 
-If you're using V-Ray, VRayProxy is the gold standard. Here's how I set it up:
+If you're using V-Ray, VRayProxy is the gold standard. Here's how we set it up:
 
 1. Create your high-poly model in its own scene file (not your main scene — this is important)
 2. Apply all materials and modifiers, then collapse to Editable Poly
 3. Right-click the object → **V-Ray mesh export**
-4. Choose a folder for the `.vrmesh` file — I use a `/proxies/` subfolder in the project directory
+4. Choose a folder for the `.vrmesh` file — We use a `/proxies/` subfolder in the project directory
 5. In your main scene, create a **VRayProxy** object and point it to the `.vrmesh` file
 6. Set the viewport display to **Preview mesh** with a low face count (1000-2000 faces is enough to recognize the object)
 
@@ -47,11 +47,11 @@ The key advantage of VRayProxy: the geometry is not in your scene file. A tree m
 
 ### Creating Proxy Libraries
 
-I maintain a proxy library on our studio's NAS. Every reusable asset — trees, cars, people, furniture, street furniture — has a `.vrmesh` file in a shared folder. When a new project starts, artists link to the shared proxies rather than importing geometry. This keeps scene files small and ensures consistency across projects.
+A good practice is to maintain a proxy library on shared storage. Every reusable asset — trees, cars, people, furniture, street furniture — gets a `.vrmesh` file in a shared folder. When a new project starts, artists link to the shared proxies rather than importing geometry. This keeps scene files small and ensures consistency across projects.
 
 ### Q-Proxies Plugin
 
-For studios that use multiple render engines, Q-Proxies is a third-party plugin that creates renderer-independent proxies. It works with V-Ray, Arnold, Corona, and Mental Ray. I've used it on projects where different artists prefer different renderers — the proxies work regardless of which renderer is active.
+For studios that use multiple render engines, Q-Proxies is a third-party plugin that creates renderer-independent proxies. It works with V-Ray, Arnold, Corona, and Mental Ray. We've used it on projects where different artists prefer different renderers — the proxies work regardless of which renderer is active.
 
 ## Instancing: Free Memory Savings
 
@@ -59,7 +59,7 @@ Instances share the same geometry data in memory. When you instance an object, 3
 
 **The critical distinction**: Instances vs. Copies. When you Ctrl+V and choose Copy, you get a full duplicate — 10,000 polygons added to memory. When you choose Instance, you get a reference to the same geometry — almost zero additional memory.
 
-I audit every scene before rendering. I select all objects, use **Tools → Scene Explorer**, and sort by polygon count. If I see multiple objects with identical polygon counts, I check if they should be instances. The **Instance Checker** script (available on ScriptSpot) automates this — it finds all identical objects and offers to convert copies to instances.
+We audit every scene before rendering. We select all objects, use **Tools → Scene Explorer**, and sort by polygon count. If we see multiple objects with identical polygon counts, we check if they should be instances. The **Instance Checker** script (available on ScriptSpot) automates this — it finds all identical objects and offers to convert copies to instances.
 
 One project had 500 copies of the same window model — 2.5 million unnecessary polygons. Converting them to instances dropped the scene from 4.2GB to 800MB.
 
@@ -67,16 +67,16 @@ One project had 500 copies of the same window model — 2.5 million unnecessary 
 
 Every modifier on an object creates a new reference in memory. A Bend modifier on a 50,000-poly object means 3ds Max stores the original 50,000 polys plus the bent 50,000 polys. Three modifiers? 200,000 polys in memory for a 50,000-poly object.
 
-**My workflow**:
+**Our workflow**:
 1. During modeling, keep modifiers live — you need flexibility
 2. Before adding the object to the production scene, collapse the stack: right-click the modifier stack → **Collapse To → Editable Poly**
 3. For objects that need parametric flexibility (like railings with a Sweep modifier), keep the modifier but be aware of the memory cost
 
-**Renderable Splines** are particularly expensive. Before rendering, I apply an Edit Mesh or Edit Poly modifier to all renderable splines and collapse them. This converts the procedural spline calculation into static geometry, which renders faster and uses less memory.
+**Renderable Splines** are particularly expensive. Before rendering, we apply an Edit Mesh or Edit Poly modifier to all renderable splines and collapse them. This converts the procedural spline calculation into static geometry, which renders faster and uses less memory.
 
 ## XRefs for Team Workflows
 
-For large projects with multiple team members, I use **XRefs** (External References). Instead of one massive scene file, we split the project into multiple files:
+For large projects with multiple team members, we use **XRefs** (External References). Instead of one massive scene file, we split the project into multiple files:
 
 - `site_terrain.max` — the ground model
 - `buildings.max` — the architecture
@@ -92,7 +92,7 @@ The master scene XRefs all these files. Each team member works on their file ind
 
 Textures are a hidden memory sink. A 4K texture map uses 40MB of VRAM. A scene with 200 unique 4K textures needs 8GB of VRAM just for textures.
 
-**My texture rules**:
+**Our texture rules**:
 - Use 2K textures for objects that are never seen close-up (background buildings, distant trees)
 - Use 4K only for hero objects that the camera passes close to
 - Convert all textures to **.tx format** (V-Ray's tiled texture format) — this allows V-Ray to load only the mipmap levels it needs, dramatically reducing VRAM usage
@@ -100,7 +100,7 @@ Textures are a hidden memory sink. A 4K texture map uses 40MB of VRAM. A scene w
 
 ## Practical Example: A 3GB Scene Reduced to 400MB
 
-I recently optimized a scene for a shopping mall visualization that was causing crashes on a 64GB workstation. Here's what I did:
+We recently optimized a scene for a shopping mall visualization that was causing crashes on a 64GB workstation. Here's what we did:
 
 1. **Converted 340 furniture objects to VRayProxies** — saved 1.8GB
 2. **Found 120 copies of the same bench, converted to instances** — saved 400MB

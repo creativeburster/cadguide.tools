@@ -5,7 +5,7 @@ category: "printing"
 softwareSlug: "librecad"
 keyword: "librecad printing pdf export"
 slug: "librecad-printing-pdf-export-scale-paper-size-configuration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

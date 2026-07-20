@@ -1,11 +1,11 @@
 ---
 title: "MatrixGold Gem Setting Techniques: Prong, Pave, Channel, Bezel, and Flush Setting"
-excerpt: "MatrixGold's gem setting tools automate prong placement, pave patterns, channel cutting, and bezel creation. I cover each setting type with step-by-step workflows, parameter tuning, and production considerations for castable jewelry models."
+excerpt: "MatrixGold's gem setting tools automate prong placement, pave patterns, channel cutting, and bezel creation. We cover each setting type with step-by-step workflows, parameter tuning, and production considerations for castable jewelry models."
 category: "workflow"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold gem setting prong pave channel bezel flush setting techniques jewelry"
 slug: "matrixgold-gem-setting-prong-pave-channel-bezel-flush"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # MatrixGold Gem Setting Techniques: Prong, Pave, Channel, Bezel, and Flush Setting
 
-I've designed jewelry with every major gem setting type in MatrixGold, and each setting requires specific tools and workflows. MatrixGold automates much of the tedious work — prong placement, channel cutting, pave patterns — but understanding the technical requirements of each setting type ensures your models are not just visually correct but also castable and settable in production.
+We've designed jewelry with every major gem setting type in MatrixGold, and each setting requires specific tools and workflows. MatrixGold automates much of the tedious work — prong placement, channel cutting, pave patterns — but understanding the technical requirements of each setting type ensures your models are not just visually correct but also castable and settable in production.
 
 ## Prong Setting
 

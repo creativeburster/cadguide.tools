@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "solibri"
 keyword: "solibri bcf workflow export revit archicad bimcollab issue tracking"
 slug: "solibri-bcf-workflow-export-revit-archicad-bimcollab"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Solibri BCF Workflow: Exporting Issues to Revit, Archicad, and BIMcollab
 
-BCF (BIM Collaboration Format) is the bridge between Solibri and BIM authoring tools. Without a proper BCF workflow, issues found in Solibri sit in isolation — the design team never sees them, and clashes go unresolved. I've set up BCF workflows for dozens of projects, and the difference between a good workflow and a bad one is the difference between issues getting resolved and issues getting ignored.
+BCF (BIM Collaboration Format) is the bridge between Solibri and BIM authoring tools. Without a proper BCF workflow, issues found in Solibri sit in isolation — the design team never sees them, and clashes go unresolved. We've set up BCF workflows for dozens of projects, and the difference between a good workflow and a bad one is the difference between issues getting resolved and issues getting ignored.
 
 ## Understanding BCF
 

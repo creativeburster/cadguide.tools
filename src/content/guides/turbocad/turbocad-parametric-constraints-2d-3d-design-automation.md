@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "turbocad"
 keyword: "turbocad parametric constraints"
 slug: "turbocad-parametric-constraints-2d-3d-design-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

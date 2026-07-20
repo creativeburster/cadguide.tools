@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey vs civil 3d surveying software comparison"
 slug: "carlson-survey-vs-civil-3d-surveying-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Carlson Survey vs Civil 3D: Surveying Software Comparison for Land Surveyors
 
-Both Carlson Survey and Civil 3D are used by land surveyors, but they approach surveying differently. Carlson is surveyor-focused; Civil 3D is engineer-focused with survey capabilities. I've used both for years. Here's my comparison for survey firms.
+Both Carlson Survey and Civil 3D are used by land surveyors, but they approach surveying differently. Carlson is surveyor-focused; Civil 3D is engineer-focused with survey capabilities. We've used both for years. Here's our comparison for survey firms.
 
 ## Target Users
 
@@ -126,7 +126,7 @@ Many survey firms use both:
 
 This requires both licenses but gives the surveyor the best tool for each task.
 
-## My Recommendation
+## Our Recommendation
 
 **For a pure surveying firm**: Carlson Survey. The survey-specific tools, Field to Finish, legal description writer, and lower cost make it the clear choice. The IntelliCAD option eliminates the AutoCAD cost entirely.
 

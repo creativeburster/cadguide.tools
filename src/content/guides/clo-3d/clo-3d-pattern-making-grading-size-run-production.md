@@ -1,11 +1,11 @@
 ---
 title: "CLO 3D Pattern Making and Grading: From First Draft to Size Run Production"
-excerpt: "CLO 3D's pattern making tools mirror real-world garment construction, with added features for digital grading across size runs. I cover the Pattern Drafter tool, importing DXF-AAMA files, creating POM measurements, grading rules, and exporting production-ready patterns for manufacturers."
+excerpt: "CLO 3D's pattern making tools mirror real-world garment construction, with added features for digital grading across size runs. We cover the Pattern Drafter tool, importing DXF-AAMA files, creating POM measurements, grading rules, and exporting production-ready patterns for manufacturers."
 category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D pattern making grading size run POM measurement DXF production"
 slug: "clo-3d-pattern-making-grading-size-run-production"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -18,7 +18,7 @@ sources:
 
 # CLO 3D Pattern Making and Grading: From First Draft to Size Run Production
 
-I've used CLO 3D to take garments from initial concept through to production-ready patterns and tech packs. The pattern making workflow in CLO mirrors real-world garment construction — you draft 2D pattern pieces, sew them together, and simulate — but the digital workflow adds powerful features like instant grading, POM measurement, and tech pack generation that don't exist in traditional pattern making.
+We've used CLO 3D to take garments from initial concept through to production-ready patterns and tech packs. The pattern making workflow in CLO mirrors real-world garment construction — you draft 2D pattern pieces, sew them together, and simulate — but the digital workflow adds powerful features like instant grading, POM measurement, and tech pack generation that don't exist in traditional pattern making.
 
 ## Pattern Creation Tools
 

@@ -5,7 +5,7 @@ category: "automation"
 softwareSlug: "powermill"
 keyword: "powermill macro programming automation"
 slug: "powermill-macro-programming-automating-toolpath-nc-program-feeds-speeds"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # PowerMill Macro Programming: Automating Toolpath Creation, NC Programs, and Feeds/Speeds
 
-I've automated entire CAM workflows in PowerMill using macros, and the community discussions on the Autodesk forums show exactly the kinds of problems macros solve. A user on the PowerMill forum was trying to automate feeds and speeds adjustment: "I have a template file saved with a tool list that has completed cutting data for 4140, and a recorded macro opens the template. I am trying to write a macro to adjust from this baseline cutting data." Another user needed to "create NC programs from toolpaths inside of folders" with a macro, and struggled with nested folder structures. A third user wanted to automate workplane changes across toolpaths when bringing in a new workpiece. And a fourth user was working on a macro for rest roughing that uses the last roughing toolpath as a reference — but got stuck on variable assignment.
+We've automated entire CAM workflows in PowerMill using macros, and the community discussions on the Autodesk forums show exactly the kinds of problems macros solve. A user on the PowerMill forum was trying to automate feeds and speeds adjustment: "I have a template file saved with a tool list that has completed cutting data for 4140, and a recorded macro opens the template. I am trying to write a macro to adjust from this baseline cutting data." Another user needed to "create NC programs from toolpaths inside of folders" with a macro, and struggled with nested folder structures. A third user wanted to automate workplane changes across toolpaths when bringing in a new workpiece. And a fourth user was working on a macro for rest roughing that uses the last roughing toolpath as a reference — but got stuck on variable assignment.
 
 These are the four most common macro automation tasks in PowerMill: feeds/speeds adjustment, NC program generation, workplane management, and toolpath template creation. This guide covers all four with working macro examples from the forum discussions.
 
@@ -182,6 +182,6 @@ When working with nested folders, use `dirname()` and `basename()` to navigate t
 
 Store macros in a version-controlled directory (Git or SVN). This tracks changes and allows rollback when a macro modification breaks the workflow.
 
-## My Take
+## Our Take
 
-PowerMill macros are the difference between a CAM programmer who spends 4 hours setting up a job and one who spends 30 minutes. The most valuable macros are those that automate repetitive setup tasks: feeds and speeds adjustment, NC program creation, and workplane changes. Start by recording macros (Tools > Record Macro) to capture the commands for a manual workflow, then edit the recorded macro to add loops, conditionals, and user input. The forum community is an excellent resource — the macro examples in this guide all came from real forum discussions where users shared working solutions to specific problems. On the Autodesk PowerMill forum, I've found that the community is particularly generous with macro code — users regularly post complete working macros that can be adapted with minimal modification. The key is understanding the macro language fundamentals (variable syntax with $ prefix, FOREACH loops, IF conditionals, and entity access methods) so you can adapt shared macros to your specific workflow. Once you build a library of 10-20 core macros covering your most common operations, the time savings compound across every job.
+PowerMill macros are the difference between a CAM programmer who spends 4 hours setting up a job and one who spends 30 minutes. The most valuable macros are those that automate repetitive setup tasks: feeds and speeds adjustment, NC program creation, and workplane changes. Start by recording macros (Tools > Record Macro) to capture the commands for a manual workflow, then edit the recorded macro to add loops, conditionals, and user input. The forum community is an excellent resource — the macro examples in this guide all came from real forum discussions where users shared working solutions to specific problems. On the Autodesk PowerMill forum, we've found that the community is particularly generous with macro code — users regularly post complete working macros that can be adapted with minimal modification. The key is understanding the macro language fundamentals (variable syntax with $ prefix, FOREACH loops, IF conditionals, and entity access methods) so you can adapt shared macros to your specific workflow. Once you build a library of 10-20 core macros covering your most common operations, the time savings compound across every job.

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "altium-365"
 keyword: "altium 365 connection error portal365 troubleshooting"
 slug: "altium-365-connection-errors-portal365-ssl-firewall-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Altium 365 Connection Errors: Portal365, SSL, and Firewall Troubleshooting
 
-Altium 365 relies on a constant connection to Altium's cloud infrastructure. When that connection breaks, you'll see errors that can range from annoying to workflow-stopping. I've dealt with these issues across multiple corporate environments, and the root causes are almost always network-related.
+Altium 365 relies on a constant connection to Altium's cloud infrastructure. When that connection breaks, you'll see errors that can range from annoying to workflow-stopping. We've dealt with these issues across multiple corporate environments, and the root causes are almost always network-related.
 
 ## Common Error Messages
 
@@ -55,7 +55,7 @@ Antivirus software with web filtering (Kaspersky, ESET, Bitdefender) can interce
 
 Altium 365 requires TLS 1.2. On older Windows systems, it may not be enabled by default:
 
-1. Press Win+I to open Windows Settings
+1. Press Win+we to open Windows Settings
 2. Search for "Internet Options" and launch the Internet Properties panel
 3. Go to the Advanced tab
 4. Scroll to the Security section

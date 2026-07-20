@@ -1,11 +1,11 @@
 ---
 title: "NX Large Assembly Performance: Lightweight Representations and Simplification"
-excerpt: "When your NX assembly hits 10,000+ components, even a high-end workstation struggles. I cover the specific settings and techniques I use to keep large assemblies responsive — from lightweight representations to reference sets and simplification."
+excerpt: "When your NX assembly hits 10,000+ components, even a high-end workstation struggles. We cover the specific settings and techniques we use to keep large assemblies responsive — from lightweight representations to reference sets and simplification."
 category: "performance"
 softwareSlug: "siemens-nx"
 keyword: "NX large assembly performance lightweight"
 slug: "siemens-nx-large-assembly-lightweight-representations"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-18"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # NX Large Assembly Performance: Lightweight Representations and Simplification
 
-I administer NX for a team of 30 engineers working on industrial equipment assemblies that routinely exceed 15,000 components. Over the years, I've developed a set of practices that keep these assemblies workable on standard engineering workstations — not just top-tier machines. The key insight is that NX has powerful tools for reducing the computational load of large assemblies, but most users don't know they exist or don't use them consistently.
+Industrial equipment assemblies in NX routinely exceed 15,000 components, and keeping them workable on standard engineering workstations — not just top-tier machines — takes a deliberate set of practices. The key insight is that NX has powerful tools for reducing the computational load of large assemblies, but most users don't know they exist or don't use them consistently.
 
 ## The Core Problem
 
@@ -43,7 +43,7 @@ When you open an assembly with LWR enabled:
 - You can see and select components, but editing requires "promoting" the component to full representation
 - To promote a component: right-click → **Open in Solid** (or double-click to edit, which automatically loads the full representation)
 
-I've measured the impact directly: a 12,000-component assembly that took 18 minutes to load without LWR loaded in 2.5 minutes with LWR enabled. Memory usage dropped from 52GB to 14GB.
+We've measured the impact directly: a 12,000-component assembly that took 18 minutes to load without LWR loaded in 2.5 minutes with LWR enabled. Memory usage dropped from 52GB to 14GB.
 
 ### Configuring LWR for Your Team
 
@@ -96,7 +96,7 @@ NX's Simplification feature creates a single solid body that represents the exte
 5. Create a reference set containing only the simplified body
 6. In the assembly, use this reference set
 
-I applied this to a supplier-provided hydraulic valve model that was 45MB with full internal geometry. After simplification, the envelope model was 1.2MB — a 37x reduction. In an assembly with 200 such valves, this saved 8.7GB of memory.
+We applied this to a supplier-provided hydraulic valve model that was 45MB with full internal geometry. After simplification, the envelope model was 1.2MB — a 37x reduction. In an assembly with 200 such valves, this saved 8.7GB of memory.
 
 ## Assembly Structure Best Practices
 

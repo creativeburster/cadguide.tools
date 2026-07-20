@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "openfoam"
 keyword: "openfoam solver selection incompressible compressible multiphase"
 slug: "openfoam-solver-selection-incompressible-compressible-multiphase"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # OpenFOAM Solver Selection: Choosing the Right Solver for Incompressible, Compressible, and Multiphase Flows
 
-OpenFOAM includes over 50 solvers, each designed for specific flow regimes. Choosing the wrong solver leads to inaccurate results, convergence problems, or unnecessarily long run times. I'll break down the most commonly used solvers by flow type and help you select the right one for your application.
+OpenFOAM includes over 50 solvers, each designed for specific flow regimes. Choosing the wrong solver leads to inaccurate results, convergence problems, or unnecessarily long run times. We'll break down the most commonly used solvers by flow type and help you select the right one for your application.
 
 ## Incompressible Solvers
 

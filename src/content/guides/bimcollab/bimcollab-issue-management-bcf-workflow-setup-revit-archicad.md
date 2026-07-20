@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "bimcollab"
 keyword: "bimcollab issue management bcf workflow setup revit archicad"
 slug: "bimcollab-issue-management-bcf-workflow-setup-revit-archicad"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # BIMcollab Issue Management: Setting Up BCF Workflows for Multi-Discipline BIM Coordination
 
-BIMcollab is the most widely used cloud platform for BCF issue management. I've set it up for projects with 50+ team members across 5 disciplines. When configured correctly, it creates a seamless issue workflow between Solibri, Revit, Archicad, and Navisworks. When configured poorly, it creates chaos. Here's how to do it right.
+BIMcollab is the most widely used cloud platform for BCF issue management. We've set it up for projects with 50+ team members across 5 disciplines. When configured correctly, it creates a seamless issue workflow between Solibri, Revit, Archicad, and Navisworks. When configured poorly, it creates chaos. Here's how to do it right.
 
 ## Understanding BIMcollab's Role
 

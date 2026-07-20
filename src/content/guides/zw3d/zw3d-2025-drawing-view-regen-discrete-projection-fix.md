@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "zw3d"
 keyword: "zw3d 2025 drawing view regen greyed out discrete projection fix"
 slug: "zw3d-2025-drawing-view-regen-discrete-projection-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "6 min read"
 date: "2026-07-12"
 sources:

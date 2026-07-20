@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-robot"
 keyword: "autodesk robot concrete slab fem reinforcement"
 slug: "autodesk-robot-concrete-slab-fem-reinforcement"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Autodesk Robot Concrete Slab Design: FEM Analysis and Reinforcement
 
-Concrete slab design in Robot uses finite element analysis to calculate moments, shears, and deflections. The reinforcement design module then determines the required bar sizes and spacing. I design flat slabs, one-way slabs, and two-way slabs in Robot regularly. Here's the workflow.
+Concrete slab design in Robot uses finite element analysis to calculate moments, shears, and deflections. The reinforcement design module then determines the required bar sizes and spacing. We design flat slabs, one-way slabs, and two-way slabs in Robot regularly. Here's the workflow.
 
 ## Step 1: Define Slab Geometry
 
@@ -120,7 +120,7 @@ For slabs supported on walls:
 1. **Analysis** → **Run Analysis**.
 2. Robot solves the FEM model and calculates:
    - **Displacements**: Z-deflection at each node
-   - **Moments**: Mx, My, Mxy at each element
+   - **Moments**: Mx, Our, Mxy at each element
    - **Shears**: Vx, Vy at each element
    - **Reactions**: Support reactions at beams, columns, walls
 
@@ -154,7 +154,7 @@ For slabs supported on walls:
 ### Moment Maps
 
 1. **Results** → **Maps** → **Moments**.
-2. View Mx, My, and Mxy contour maps:
+2. View Mx, Our, and Mxy contour maps:
    - **Red areas**: High positive moment (tension at bottom) — need bottom reinforcement
    - **Blue areas**: High negative moment (tension at top) — need top reinforcement
    - **Mxy (torsion)**: High at corners and re-entrant — need additional reinforcement

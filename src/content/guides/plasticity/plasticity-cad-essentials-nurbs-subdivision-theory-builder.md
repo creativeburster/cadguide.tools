@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "plasticity"
 keyword: "plasticity CAD NURBS subdivision theory builder workflow"
 slug: "plasticity-cad-essentials-nurbs-subdivision-theory-builder"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "orcad"
 keyword: "orcad pcb constraint manager differential pair impedance"
 slug: "orcad-pcb-constraint-manager-differential-pair-impedance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # OrCAD PCB Professional: Constraint Manager Setup for Differential Pairs and Impedance
 
-OrCAD's Constraint Manager is where you define electrical and physical rules that drive routing. Instead of hoping the designer routes differential pairs correctly, you set up constraints that enforce correct widths, spacings, and layer assignments. I set up Constraint Manager for every board I design. Here's the complete configuration.
+OrCAD's Constraint Manager is where you define electrical and physical rules that drive routing. Instead of hoping the designer routes differential pairs correctly, you set up constraints that enforce correct widths, spacings, and layer assignments. We set up Constraint Manager for every board we design. Here's the complete configuration.
 
 ## Opening Constraint Manager
 

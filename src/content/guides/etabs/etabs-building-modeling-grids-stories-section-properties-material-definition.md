@@ -1,11 +1,11 @@
 ---
 title: "ETABS Building Modeling: Grids, Stories, Section Properties, and Material Definition"
-excerpt: "ETABS building modeling tools create structural models with grids, story levels, section properties, and material definitions. I cover the grid system setup, story definition, frame section assignment, slab and wall properties, and material specification for building analysis."
+excerpt: "ETABS building modeling tools create structural models with grids, story levels, section properties, and material definitions. We cover the grid system setup, story definition, frame section assignment, slab and wall properties, and material specification for building analysis."
 category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS building modeling grids stories section properties material definition frame slab wall structural analysis"
 slug: "etabs-building-modeling-grids-stories-section-properties-material-definition"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ETABS Building Modeling: Grids, Story Levels, Section Properties, and Material Definition
 
-I've modeled hundreds of buildings in ETABS for structural design — from low-rise concrete buildings to high-rise steel towers. ETABS (Extended Three-Dimensional Analysis of Building Systems) is the industry standard for building structural analysis, used by most structural engineering firms worldwide. Getting the model setup right — grids, stories, sections, and materials — is the foundation of accurate analysis and design.
+We've modeled hundreds of buildings in ETABS for structural design — from low-rise concrete buildings to high-rise steel towers. ETABS (Extended Three-Dimensional Analysis of Building Systems) is the industry standard for building structural analysis, used by most structural engineering firms worldwide. Getting the model setup right — grids, stories, sections, and materials — is the foundation of accurate analysis and design.
 
 ## ETABS Overview
 
@@ -148,7 +148,7 @@ ETABS is specialized for building structures:
 3. Select section type:
    - **Rectangular**: Concrete beam or column (width × depth)
    - **Circular**: Concrete column (diameter)
-   - **Steel I-section**: W-shapes, S-shapes, M-shapes
+   - **Steel we-section**: W-shapes, S-shapes, M-shapes
    - **Steel tube**: HSS (hollow structural section)
    - **Steel channel**: C-shapes, MC-shapes
    - **Steel angle**: L-shapes (single or double)
@@ -283,15 +283,15 @@ ETABS includes standard section databases:
 1. Select elements
 2. **Assign** → **Frame** → **Property Modifiers**
 3. Set modification factors:
-   - **Moment of inertia (I)**: 0.35-0.70 for concrete beams (cracked)
-   - **Moment of inertia (I)**: 0.50-0.80 for concrete columns
+   - **Moment of inertia (we)**: 0.35-0.70 for concrete beams (cracked)
+   - **Moment of inertia (we)**: 0.50-0.80 for concrete columns
    - **Axial area (A)**: 1.0 (usually not modified)
    - **Shear area**: 1.0 (usually not modified)
 4. These factors account for concrete cracking under service loads
 5. ACI 318 recommends:
-   - Beams: I = 0.35 × Igross
-   - Columns: I = 0.70 × Igross
-   - Walls: I = 0.70 × Igross (uncracked) or 0.35 × Igross (cracked)
+   - Beams: We = 0.35 × Igross
+   - Columns: We = 0.70 × Igross
+   - Walls: We = 0.70 × Igross (uncracked) or 0.35 × Igross (cracked)
 
 ## Common Issues
 

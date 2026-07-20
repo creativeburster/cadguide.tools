@@ -1,11 +1,11 @@
 ---
 title: "Inventor First Part Creation Slow: Fixing the 50-Second Delay with DYNAMIC_LOAD_APPLETS"
-excerpt: "Inventor takes 50 seconds to create the first part after launch, then subsequent parts are instant. I explain why this happens and the environment variable fix that reduces it to 10 seconds."
+excerpt: "Inventor takes 50 seconds to create the first part after launch, then subsequent parts are instant. We explain why this happens and the environment variable fix that reduces it to 10 seconds."
 category: "troubleshooting"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor slow first part creation DYNAMIC_LOAD_APPLETS"
 slug: "inventor-first-part-creation-slow-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "6 min"
 date: "2025-06-16"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Inventor First Part Creation Slow: Fixing the 50-Second Delay with DYNAMIC_LOAD_APPLETS
 
-A user on the Autodesk Community forum described a problem that I've seen across multiple Inventor installations: when they launch Inventor, the application opens quickly (within a few seconds). But when they try to create a new part file (.ipt), it takes almost a minute to load. After creating the first part, opening or creating additional parts becomes much faster. The problem persisted across Inventor 2023, 2024, 2025, and even the 2026 beta, on a high-performance laptop with an NVIDIA RTX 4060 and i7 processor.
+A user on the Autodesk Community forum described a problem that we've seen across multiple Inventor installations: when they launch Inventor, the application opens quickly (within a few seconds). But when they try to create a new part file (.ipt), it takes almost a minute to load. After creating the first part, opening or creating additional parts becomes much faster. The problem persisted across Inventor 2023, 2024, 2025, and even the 2026 beta, on a high-performance laptop with an NVIDIA RTX 4060 and i7 processor.
 
 This is a specific, well-documented issue with Inventor's applet loading mechanism, and the fix is an environment variable that Autodesk employee Johnson Shiue shared on the forum.
 

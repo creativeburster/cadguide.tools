@@ -1,11 +1,11 @@
 ---
 title: "Lumion Ray Tracing Artifacts: Blotches, Square Pixels, and Reflection Plane Issues"
-excerpt: "Lumion's ray tracing mode produces blotchy artifacts, square pixel patterns, and incorrect reflections when settings are misconfigured. I cover the NRD vs OIDN denoiser selection, reflection plane placement, and the quality settings that produce clean ray-traced output."
+excerpt: "Lumion's ray tracing mode produces blotchy artifacts, square pixel patterns, and incorrect reflections when settings are misconfigured. We cover the NRD vs OIDN denoiser selection, reflection plane placement, and the quality settings that produce clean ray-traced output."
 category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion ray tracing artifacts blotches square pixels reflections fix"
 slug: "lumion-ray-tracing-artifacts-blotches-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Lumion Ray Tracing Artifacts: Blotches, Square Pixel Patterns, and Reflection Plane Issues
 
-Lumion's ray tracing feature, introduced in Lumion 2023 and significantly improved through 2024 and 2025, produces stunning realistic reflections and shadows. But it's also prone to artifacts that can ruin an otherwise perfect render. I've spent months working through these issues across multiple projects, and I've developed a systematic approach to eliminating them.
+Lumion's ray tracing feature, introduced in Lumion 2023 and significantly improved through 2024 and 2025, produces stunning realistic reflections and shadows. But it's also prone to artifacts that can ruin an otherwise perfect render. We've spent months working through these issues across multiple projects, and we've developed a systematic approach to eliminating them.
 
 ## Artifact Type 1: Blotchy or Patchy Ray-Traced Renders
 
@@ -52,7 +52,7 @@ Reflections appear in wrong places, are missing entirely, or show incorrect geom
 **Fix — Reflection Plane management**:
 1. In the **Reflections effect**, check the **Reflection Planes** list
 2. Each reflection plane should cover exactly one flat reflective surface (floor, countertop, water)
-3. **Remove duplicate or overlapping planes** — I've seen projects with 5 reflection planes all covering the same floor, which causes conflicting reflections
+3. **Remove duplicate or overlapping planes** — We've seen projects with 5 reflection planes all covering the same floor, which causes conflicting reflections
 4. **Size the planes precisely** — a reflection plane that extends beyond the actual surface creates reflections in empty space
 5. For curved reflective surfaces (like a curved glass wall), use the **Global Reflection** effect instead of reflection planes — reflection planes only work for flat surfaces
 
@@ -90,7 +90,7 @@ When rendering ray-traced video, the MP4 output freezes during playback or shows
 
 ## Optimizing Ray Tracing Settings for Quality vs Speed
 
-My recommended settings based on output type:
+Our recommended settings based on output type:
 
 **Photo renders (single image)**:
 - **Denoiser**: NRD (or OIDN for AMD)
@@ -112,4 +112,4 @@ My recommended settings based on output type:
 
 ## Summary
 
-Lumion ray tracing artifacts are caused by insufficient samples, incorrect denoiser selection, or misconfigured reflection planes. My fix order: enable NRD denoiser (or OIDN for AMD) → increase sample count if blotches persist → check reflection plane placement and remove duplicates → verify GPU compatibility and driver version → reduce resolution or complexity for video renders. With NRD and proper settings, ray-traced output in Lumion 2024+ is dramatically faster and cleaner than earlier versions.
+Lumion ray tracing artifacts are caused by insufficient samples, incorrect denoiser selection, or misconfigured reflection planes. Our fix order: enable NRD denoiser (or OIDN for AMD) → increase sample count if blotches persist → check reflection plane placement and remove duplicates → verify GPU compatibility and driver version → reduce resolution or complexity for video renders. With NRD and proper settings, ray-traced output in Lumion 2024+ is dramatically faster and cleaner than earlier versions.

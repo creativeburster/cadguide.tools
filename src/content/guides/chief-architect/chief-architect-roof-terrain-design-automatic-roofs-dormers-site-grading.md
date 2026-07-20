@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "chief-architect"
 keyword: "chief architect roof terrain design"
 slug: "chief-architect-roof-terrain-design-automatic-roofs-dormers-site-grading"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Chief Architect Roof and Terrain Design: Automatic Roofs, Dormers, and Site Grading
 
-Roof and terrain design in Chief Architect is one of my favorite parts of the software. The automatic roof generation from wall outlines is almost magical — you draw the exterior walls, tell it what roof style you want, and it builds it. For complex roofs with dormers and valleys, there's manual editing available too. And the terrain tools handle site grading and elevation data well. Let me walk you through both.
+Roof and terrain design in Chief Architect is one of our favorite parts of the software. The automatic roof generation from wall outlines is almost magical — you draw the exterior walls, tell it what roof style you want, and it builds it. For complex roofs with dormers and valleys, there's manual editing available too. And the terrain tools handle site grading and elevation data well. Let us walk you through both.
 
 ## Automatic Roof Generation
 
@@ -324,4 +324,4 @@ For complex roof intersections (L-shaped houses, additions):
 
 ## Wrapping Up
 
-The roof and terrain tools in Chief Architect are two of my favorite features. The automatic roof generation is almost magical — draw the walls, pick a style, and there's your roof. For complex roofs, the manual editing tools give you full control. And the terrain modeling with cut/fill calculations is great for site plans. My tip: always check the roof in 3D after generating it — sometimes the automatic dormer placement needs a bit of manual adjustment to look right.
+The roof and terrain tools in Chief Architect are two of our favorite features. The automatic roof generation is almost magical — draw the walls, pick a style, and there's your roof. For complex roofs, the manual editing tools give you full control. And the terrain modeling with cut/fill calculations is great for site plans. Our tip: always check the roof in 3D after generating it — sometimes the automatic dormer placement needs a bit of manual adjustment to look right.

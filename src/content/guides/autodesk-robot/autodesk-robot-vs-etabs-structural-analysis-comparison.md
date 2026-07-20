@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "autodesk-robot"
 keyword: "autodesk robot vs etabs structural analysis comparison"
 slug: "autodesk-robot-vs-etabs-structural-analysis-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Autodesk Robot vs ETABS: Which Structural Analysis Tool for Building Design?
 
-Both Robot and ETABS are capable structural analysis tools, but they target different workflows. I've used both for building design and they each have clear strengths. Here's my comparison for structural engineering firms.
+Both Robot and ETABS are capable structural analysis tools, but they target different workflows. We've used both for building design and they each have clear strengths. Here's our comparison for structural engineering firms.
 
 ## Target Users
 
@@ -147,7 +147,7 @@ Both Robot and ETABS are capable structural analysis tools, but they target diff
 - Your firm standardizes on ETABS (common in large firms)
 - You need comprehensive Eurocode national annex support
 
-## My Recommendation
+## Our Recommendation
 
 **For a firm doing mixed structural work with Revit**: Robot. The Revit integration and general-purpose capabilities make it versatile. The AEC Collection pricing makes it cost-effective.
 

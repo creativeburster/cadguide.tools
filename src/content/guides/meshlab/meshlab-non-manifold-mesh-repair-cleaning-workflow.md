@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "meshlab"
 keyword: "meshlab non-manifold mesh repair cleaning workflow"
 slug: "meshlab-non-manifold-mesh-repair-cleaning-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

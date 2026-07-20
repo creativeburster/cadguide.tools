@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "staad-pro"
 keyword: "staad pro concrete design aci"
 slug: "staad-pro-concrete-design-aci-318-beam-column-shear-wall"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Concrete Design: ACI 318 Beam, Column, and Shear Wall Design
 
-I've done concrete design in STAAD.Pro on everything from small commercial buildings to industrial structures, and the workflow is pretty consistent once you get the hang of it. ACI 318 is the code I use most, and STAAD handles beam flexural and shear design, column interaction, and shear wall design with automatic reinforcement calculation. Let me walk you through the whole process.
+We've done concrete design in STAAD.Pro on everything from small commercial buildings to industrial structures, and the workflow is pretty consistent once you get the hang of it. ACI 318 is the code we use most, and STAAD handles beam flexural and shear design, column interaction, and shear wall design with automatic reinforcement calculation. Let us walk you through the whole process.
 
 ## ACI 318 Design Setup
 

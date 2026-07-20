@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cimatron"
 keyword: "cimatron electrode design edm extraction holder manufacturing"
 slug: "cimatron-electrode-design-edm-extraction-holder-manufacturing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Cimatron Electrode Design: EDM Electrode Creation, Extraction, and Manufacturing Workflow
 
-Some mold features can't be machined with a CNC mill — deep ribs, sharp internal corners, and complex 3D pockets. These features require EDM (Electrical Discharge Machining), and EDM requires electrodes. Cimatron's Electrode Design module automates electrode extraction from the mold insert. I've designed hundreds of electrodes in Cimatron. The workflow is efficient once you understand the extraction logic. Here's my complete guide.
+Some mold features can't be machined with a CNC mill — deep ribs, sharp internal corners, and complex 3D pockets. These features require EDM (Electrical Discharge Machining), and EDM requires electrodes. Cimatron's Electrode Design module automates electrode extraction from the mold insert. We've designed hundreds of electrodes in Cimatron. The workflow is efficient once you understand the extraction logic. Here's our complete guide.
 
 ## Why EDM Electrodes Are Needed
 

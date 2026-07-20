@@ -1,11 +1,11 @@
 ---
 title: "FreeCAD TechDraw Slow Performance: View Rendering, Dimension Lag, and Export Fixes"
-excerpt: "FreeCAD's TechDraw workbench takes minutes to render views and lags when placing dimensions. I cover the Keep Updated setting, view simplification, and the external rendering workflow that keeps TechDraw usable."
+excerpt: "FreeCAD's TechDraw workbench takes minutes to render views and lags when placing dimensions. We cover the Keep Updated setting, view simplification, and the external rendering workflow that keeps TechDraw usable."
 category: "performance"
 softwareSlug: "freecad"
 keyword: "FreeCAD TechDraw slow performance view rendering dimension"
 slug: "freecad-techdraw-slow-performance-view-rendering-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

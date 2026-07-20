@@ -1,11 +1,11 @@
 ---
 title: "Tekla Structures Drawing Creation Slow: View Generation, Numbering, and Database Optimization"
-excerpt: "Tekla drawing creation takes minutes per sheet and numbering hangs on large models. I cover the drawing view optimization, numbering series management, and database repair that speed up the documentation workflow."
+excerpt: "Tekla drawing creation takes minutes per sheet and numbering hangs on large models. We cover the drawing view optimization, numbering series management, and database repair that speed up the documentation workflow."
 category: "performance"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures drawing creation slow numbering database optimization"
 slug: "tekla-drawing-creation-slow-numbering-database-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

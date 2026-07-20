@@ -1,11 +1,11 @@
 ---
 title: "Corona Renderer Noise and Fireflies: Noise Limit, Denoiser, and MSI Settings"
-excerpt: "Corona Renderer produces persistent noise and fireflies that won't resolve with more passes. I cover the Noise Limit optimization, Intel AI Denoiser configuration, Fireflies Filter, and Max Sample Intensity (MSI) tuning for clean renders."
+excerpt: "Corona Renderer produces persistent noise and fireflies that won't resolve with more passes. We cover the Noise Limit optimization, Intel AI Denoiser configuration, Fireflies Filter, and Max Sample Intensity (MSI) tuning for clean renders."
 category: "troubleshooting"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer noise fireflies denoiser MSI fix"
 slug: "corona-renderer-noise-fireflies-denoiser-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Corona Renderer Noise and Fireflies: Noise Limit, Denoiser, and MSI Settings
 
-I've been using Corona Renderer since version 3, and I still see the same noise issues on the Chaos support forums every week. The render reaches 50 passes and the noise just won't clean up — splotchy shadows, fireflies around bright lights, and grainy reflections. Corona's approach to noise is different from V-Ray's, and understanding the specific settings is key to getting clean renders without waiting hours.
+We've been using Corona Renderer since version 3, and we still see the same noise issues on the Chaos support forums every week. The render reaches 50 passes and the noise just won't clean up — splotchy shadows, fireflies around bright lights, and grainy reflections. Corona's approach to noise is different from V-Ray's, and understanding the specific settings is key to getting clean renders without waiting hours.
 
 ## Understanding Corona's Noise Model
 
@@ -42,7 +42,7 @@ Corona's denoiser is the single most effective tool for clean renders. Chaos rep
 - **NVIDIA GPU AI Denoiser**: Fastest, requires NVIDIA RTX card, highest quality
 - **Legacy**: Old denoiser, not recommended — use AI denoisers instead
 
-**My recommendation**: Use NVIDIA GPU AI Denoiser if you have an RTX card. It's the fastest and highest quality. For non-RTX systems, use Intel GPU AI Denoiser.
+**Our recommendation**: Use NVIDIA GPU AI Denoiser if you have an RTX card. It's the fastest and highest quality. For non-RTX systems, use Intel GPU AI Denoiser.
 
 ## Fix 2: The Downscaling Method (6x Faster Renders)
 
@@ -142,7 +142,7 @@ The UHD Cache is Corona's GI precomputation system. It's enabled by default and 
 
 ## Practical Example
 
-An interior scene was taking 45 minutes to reach acceptable noise levels at 1080p. Here's what I changed:
+An interior scene was taking 45 minutes to reach acceptable noise levels at 1080p. Here's what we changed:
 
 1. Enabled NVIDIA GPU AI Denoiser at 0.85 (render time: 45 min → 15 min)
 2. Enabled Fireflies Filter at Medium (removed remaining fireflies from spotlights)
@@ -153,4 +153,4 @@ Final result: 45 minutes → 7 minutes. The downscaled 1080p image was visually 
 
 ## Summary
 
-Corona noise and fireflies are best addressed with the denoiser and Fireflies Filter, not by waiting for more passes. My fix order: enable NVIDIA GPU AI Denoiser at 0.85 → enable Fireflies Filter at Medium → apply the downscaling method (render at 2x resolution, denoise, save 50%) → adjust MSI to 10-15 for fireflies → enable Adaptive Light Solver for multi-light scenes → adjust GI vs. AA balance for specific noise types. The denoiser and downscaling method together provide a 6x render time reduction with no visible quality loss.
+Corona noise and fireflies are best addressed with the denoiser and Fireflies Filter, not by waiting for more passes. Our fix order: enable NVIDIA GPU AI Denoiser at 0.85 → enable Fireflies Filter at Medium → apply the downscaling method (render at 2x resolution, denoise, save 50%) → adjust MSI to 10-15 for fireflies → enable Adaptive Light Solver for multi-light scenes → adjust GI vs. AA balance for specific noise types. The denoiser and downscaling method together provide a 6x render time reduction with no visible quality loss.

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "corelcad"
 keyword: "corelcad 3d modeling"
 slug: "corelcad-3d-modeling-extrude-revolve-boolean-stl-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # CorelCAD 3D Modeling: Extrude, Revolve, Boolean Operations, and STL Export
 
-I've been using CorelCAD for 3D printing projects for about two years now, and the number one question I see in the CorelDRAW community forums is some variation of "why can't I export my model to STL?" The answer, as user cj7hawk explained in a detailed forum response, almost always comes down to one thing: you created a surface, not a solid. Your model looks 3D, it renders fine in shaded view, but when you try to select it for STL export, nothing happens.
+For CorelCAD 3D printing projects, the number one question in the CorelDRAW community forums is some variation of "why can't I export my model to STL?" The answer, as user cj7hawk explained in a detailed forum response, almost always comes down to one thing: you created a surface, not a solid. The model looks 3D and renders fine in shaded view, but when you try to select it for STL export, nothing happens.
 
 This is the most common trap for people coming from 2D drafting into 3D modeling in CorelCAD. The ACIS kernel that powers CorelCAD's 3D capabilities distinguishes between surfaces (hollow shells with no volume) and solids (objects with internal volume). Only solids can be exported to STL. On the Reddit r/3Dprinting community, users asking about CorelCAD for 3D printing often get mixed responses — some praise its precision for mechanical parts, while others hit the surface-vs-solid wall and give up.
 

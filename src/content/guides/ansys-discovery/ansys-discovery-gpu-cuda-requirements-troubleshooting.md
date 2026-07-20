@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-discovery"
 keyword: "ansys discovery gpu cuda requirements troubleshooting"
 slug: "ansys-discovery-gpu-cuda-requirements-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-12"
 sources:

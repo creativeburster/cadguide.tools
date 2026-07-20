@@ -1,11 +1,11 @@
 ---
 title: "Blender Viewport Performance: Geometry Nodes, Modifier Stack, and VRAM Optimization"
-excerpt: "Blender's viewport lags with complex geometry nodes and modifier stacks, even on high-end GPUs. I cover the simplify modifier, viewport denoising, and the VRAM management strategy that restores smooth viewport performance."
+excerpt: "Blender's viewport lags with complex geometry nodes and modifier stacks, even on high-end GPUs. We cover the simplify modifier, viewport denoising, and the VRAM management strategy that restores smooth viewport performance."
 category: "performance"
 softwareSlug: "blender"
 keyword: "Blender viewport performance slow geometry nodes modifier VRAM"
 slug: "blender-viewport-performance-geometry-nodes-vram-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

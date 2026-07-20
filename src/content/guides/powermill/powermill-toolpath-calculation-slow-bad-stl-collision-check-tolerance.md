@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "powermill"
 keyword: "powermill toolpath calculation slow"
 slug: "powermill-toolpath-calculation-slow-bad-stl-collision-check-tolerance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -17,9 +17,9 @@ sources:
 
 # PowerMill Toolpath Calculation Issues: Fixing Slow Calculation, Bad STL Files, and Collision Check Problems
 
-I've had PowerMill toolpath calculations hang at 36% for hours, and I've seen collision checks produce false positives that blocked production. On Reddit's r/CNC, a user reported "PowerMill slow calculation at 36%" — a specific percentage where the calculation gets stuck. The response was illuminating: "I have issues with calculations from time to time. Normally it's a bad STL file. If I clean it up and make sure there's no self intersections or weird backwards triangles then PowerMill will work again." On the Autodesk PowerMill forum, a user reported that collision check tolerance was causing false collision results: "I have templates with drill operations and some of them are calculated using a tolerance of 0.1. But this tolerance is causing problems during collision checks. When the tool shank gets too close to the model, false collision results are detected." And another user wanted to check toolpaths for gouges and collisions from the macro side, so the macro could automatically choose a different tool if collisions were detected.
+We've had PowerMill toolpath calculations hang at 36% for hours, and we've seen collision checks produce false positives that blocked production. On Reddit's r/CNC, a user reported "PowerMill slow calculation at 36%" — a specific percentage where the calculation gets stuck. The response was illuminating: "I have issues with calculations from time to time. Normally it's a bad STL file. If I clean it up and make sure there's no self intersections or weird backwards triangles then PowerMill will work again." On the Autodesk PowerMill forum, a user reported that collision check tolerance was causing false collision results: "I have templates with drill operations and some of them are calculated using a tolerance of 0.1. But this tolerance is causing problems during collision checks. When the tool shank gets too close to the model, false collision results are detected." And another user wanted to check toolpaths for gouges and collisions from the macro side, so the macro could automatically choose a different tool if collisions were detected.
 
-These are the three most common PowerMill calculation problems: slow calculation from bad models, false collision results from tolerance settings, and automated collision checking. This guide covers all three based on my experience and community solutions.
+These are the three most common PowerMill calculation problems: slow calculation from bad models, false collision results from tolerance settings, and automated collision checking. This guide covers all three based on our experience and community solutions.
 
 ## Problem 1: Slow or Stuck Toolpath Calculation
 
@@ -143,6 +143,6 @@ If the model has very fine detail that doesn't need to be machined at the curren
 
 Enable toolpath thinning to reduce the number of points in the toolpath where the tool is moving in a straight line. This produces smaller NC files and faster calculation without affecting accuracy.
 
-## My Take
+## Our Take
 
 PowerMill calculation issues almost always trace back to model quality. The "stuck at 36%" problem is the signature of a bad STL file — self-intersections or inverted normals cause the calculator to loop on a specific region. Always check STL quality in Meshmixer or Netfabb before importing. For false collision results, the tolerance setting is the usual culprit — reducing tolerance from 0.1 to 0.01 eliminates most false positives. And for production workflows, invest time in building macro-based automation for collision checking — it catches problems before they reach the machine tool, where a collision can cause thousands of dollars in damage.

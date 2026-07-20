@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "moi3d"
 keyword: "moi3d 3d printing STL export mesh density watertight"
 slug: "moi3d-3d-printing-export-settings-mesh-density-stl"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

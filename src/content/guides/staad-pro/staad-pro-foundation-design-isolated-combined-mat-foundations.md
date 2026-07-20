@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "staad-pro"
 keyword: "staad pro foundation design"
 slug: "staad-pro-foundation-design-isolated-combined-mat-foundations"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Foundation Design: Isolated Footings, Combined Footings, and Mat Foundations
 
-Foundation design is where a lot of engineers get nervous — and I was no exception early in my career. The soil-structure interaction, the geotechnical report, the bearing capacity checks — there's a lot riding on getting it right. STAAD.Pro with STAAD Foundation Advanced (SFA) handles isolated footings, combined footings, pile caps, and mat foundations. Let me walk you through the workflow I use.
+Foundation design is where a lot of engineers get nervous. The soil-structure interaction, the geotechnical report, the bearing capacity checks — there's a lot riding on getting it right. STAAD.Pro with STAAD Foundation Advanced (SFA) handles isolated footings, combined footings, pile caps, and mat foundations. Let us walk you through the workflow we use.
 
 ## Exporting Reactions from STAAD.Pro
 
@@ -193,7 +193,7 @@ Common pile layouts:
 ### Pile Load Check
 
 1. STAAD calculates pile loads:
-   - **Axial load per pile**: P/n ± My × x/I ± Mx × y/I
+   - **Axial load per pile**: P/n ± Our × x/we ± Mx × y/we
    - **Maximum pile load**: Must be ≤ pile capacity
    - **Minimum pile load**: Must be ≥ 0 (no tension) or ≤ tension capacity
 2. If maximum pile load exceeds capacity:
@@ -228,7 +228,7 @@ Common pile layouts:
 2. Apply column loads at node locations
 3. STAAD calculates:
    - **Pressure distribution**: Varies across the mat
-   - **Plate moments**: Mx, My, Mxy at each element
+   - **Plate moments**: Mx, Our, Mxy at each element
    - **Shear**: At column perimeters
    - **Settlement**: Differential and total
 
@@ -244,7 +244,7 @@ Common pile layouts:
 
 1. From plate moment output:
    - **Mx**: Reinforcement in X direction
-   - **My**: Reinforcement in Y direction
+   - **Our**: Reinforcement in Y direction
    - **Top mat**: For hogging moments (near columns)
    - **Bottom mat**: For sagging moments (mid-span)
 2. Calculate required As per meter:
@@ -299,4 +299,4 @@ Common pile layouts:
 
 ## Wrapping Up
 
-Foundation design is where the structural model meets the real world, and getting the soil parameters right is half the battle. I always get the geotechnical report in hand before starting foundation design in SFA. The workflow from STAAD to SFA is smooth — export reactions, design footings, check all failure modes. Don't skip the punching shear check on pile caps — I've seen that catch problems that bearing and flexure checks missed.
+Foundation design is where the structural model meets the real world, and getting the soil parameters right is half the battle. We always get the geotechnical report in hand before starting foundation design in SFA. The workflow from STAAD to SFA is smooth — export reactions, design footings, check all failure modes. Don't skip the punching shear check on pile caps — We've seen that catch problems that bearing and flexure checks missed.

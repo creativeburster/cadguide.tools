@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "openscad"
 keyword: "openscad parametric design customizer variables"
 slug: "openscad-parametric-design-customizer-variables"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # OpenSCAD Parametric Design: Creating Customizable Models with Customizer Variables
 
-The OpenSCAD Customizer is a feature that exposes your script's variables as a GUI panel — users can adjust sliders and dropdowns without touching code. I've published parametric models on Thingiverse that have been customized 10,000+ times. Here's how to set up Customizer-compatible scripts.
+The OpenSCAD Customizer is a feature that exposes your script's variables as a GUI panel — users can adjust sliders and dropdowns without touching code. We've published parametric models on Thingiverse that have been customized 10,000+ times. Here's how to set up Customizer-compatible scripts.
 
 ## How the Customizer Works
 

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-hyperworks"
 keyword: "altair hypermesh mesh quality criteria batchmesher element optimization"
 slug: "altair-hypermesh-mesh-quality-criteria-batchmesher-element-optimization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Altair HyperMesh: Mesh Quality Criteria, BatchMesher Settings, and Element Optimization
 
-Mesh quality determines FEA accuracy. A poor mesh gives wrong results — regardless of how good your solver setup is. I've spent years meshing everything from simple brackets to full vehicle bodies in HyperMesh. The difference between a good mesh and a bad mesh isn't the tool — it's knowing how to configure the quality criteria and parameters. Here's my guide.
+Mesh quality determines FEA accuracy. A poor mesh gives wrong results — regardless of how good your solver setup is. We've spent years meshing everything from simple brackets to full vehicle bodies in HyperMesh. The difference between a good mesh and a bad mesh isn't the tool — it's knowing how to configure the quality criteria and parameters. Here's our guide.
 
 ## Why Mesh Quality Matters
 

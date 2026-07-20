@@ -1,56 +1,43 @@
 ---
-title: "Resolving AutoCAD Fatal Error 0x0024 During Graphics Rendering"
-excerpt: "A systematic troubleshooting workflow for AutoCAD fatal error 0x0024 caused by graphics driver conflicts, corrupted drawing caches, and DirectX rendering pipeline failures."
+title: "Resolving AutoCAD Fatal Errors During 3D and Graphics Operations"
+excerpt: "A systematic troubleshooting workflow for AutoCAD fatal errors that occur during shading, orbiting, and viewport regeneration — caused by graphics driver conflicts, corrupted display caches, and drawing database corruption."
 category: "troubleshooting"
 softwareSlug: "autocad"
 keyword: "autocad fatal error"
 slug: "fixing-autocad-fatal-error-0x0024-graphics"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:
-  - "https://knowledge.autodesk.com/support/autocad/troubleshooting/caas/sfdcarticles/sfdcarticles/FLEXnet-License-Finder-dialog-box-appears-when-you-try-to-start-program.html"
-  - "https://forums.autodesk.com/t5/autocad-forum/fatal-error-0x0024-unhandled-e06d7363/td-p/9876543"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Optimizing-the-AutoCAD-drawing-file-Purge-Audit-Recover.html"
+  - "https://help.autodesk.com/view/ACD/2024/ENU/"
 ---
 
-# Resolving AutoCAD Fatal Error 0x0024 During Graphics Rendering
+# Resolving AutoCAD Fatal Errors During 3D and Graphics Operations
 
-I've had Fatal Error 0x0024 bite me at the worst possible time — halfway through a client presentation, right when I switched to a 3D visual style. The crash dump pointed to the graphics pipeline, but figuring out exactly what was causing it took me through seven different fixes before I found the culprit. Let me save you the headache and walk you through the diagnostic sequence I now use every time this error shows up.
+Fatal errors that strike when you switch to a 3D visual style, orbit a model, or regenerate a viewport almost always point at the graphics pipeline — a driver conflict, a stale display cache, or a corrupted drawing database. This guide walks through a diagnostic sequence, from the fastest and least invasive fixes to database-level repair, so you can isolate the cause methodically instead of reinstalling blindly.
 
-## Understanding the Error Signature
+## Understanding the Error
 
-When AutoCAD encounters this exception, the crash dialog displays a signature similar to:
+Graphics-related AutoCAD crashes typically surface as an unhandled exception dialog (Windows C++ exceptions such as `e06d7363` are common) that appears the moment AutoCAD hands work to the GPU. The exact module and address vary between builds and drivers, so treat the specific values in the dialog as a starting point rather than a definitive diagnosis. The practical signal is *when* the crash happens: if it consistently occurs during shading, orbiting, or viewport regeneration, the graphics driver and display cache are the first things to rule out.
 
-```
-Unhandled Exception e06d7363 (e06d7363h) at 0x00007ffb3e8a3890
-Module: acdb24.dll
-Offset: 0x0024
-```
+## Step 1: Toggle Hardware Acceleration
 
-The `acdb24.dll` module is AutoCAD's core database engine. The offset `0x0024` indicates a null pointer dereference within the graphics cache manager, meaning AutoCAD attempted to render an object whose display data was either corrupted or never properly initialized in VRAM.
+Workstations with hybrid GPU configurations (for example, NVIDIA Optimus laptops with integrated Intel graphics) are a common source of graphics crashes, and many are resolved by adjusting AutoCAD's graphics configuration.
 
-## Step 1: Force DirectX 11 Rendering Mode
-
-AutoCAD 2023 and later default to DirectX 12, which can cause GDI handle leaks on workstations with hybrid GPU configurations (e.g., NVIDIA Optimus laptops with integrated Intel UHD graphics). Switching to DirectX 11 eliminates the majority of 0x0024 crashes.
-
-Open AutoCAD and enter the following system variable at the command line:
+Open AutoCAD and run the following command to open the Graphics Performance dialog:
 
 ```
-GFXDX12
+GRAPHICSCONFIG
 ```
 
-Set the value from `1` to `0`. This instructs the graphics manager to fall back to the DirectX 11 rendering path. After changing this variable:
+(On older releases the command is `3DCONFIG`.) In the dialog, turn **Hardware Acceleration** off, click OK, and restart AutoCAD to test whether the crash still occurs in software rendering. If disabling hardware acceleration stops the crash, the problem is in the GPU driver layer — proceed to Step 3 to update the driver, then re-enable hardware acceleration.
 
-1. Close AutoCAD completely.
-2. Reboot the workstation (a simple logoff is insufficient — the GPU driver state must be fully reset).
-3. Relaunch AutoCAD and type `3DCONFIG` to open the Graphics Performance dialog.
-4. Verify that the Virtual Device entry now reads `gdi11.dbx` instead of `gdi12.dbx`.
-
-If the `3DCONFIG` dialog shows "Software" as the acceleration mode, your GPU driver needs updating before hardware acceleration can be re-enabled.
+If the dialog reports that hardware acceleration is unavailable or falls back to software automatically, your GPU driver needs updating before hardware acceleration can be re-enabled.
 
 ## Step 2: Clear the Drawing Cache and Temporary Files
 
-Corrupted `.dws` (Drawing Standards) and `.ac$` (AutoCAD temporary) files can trigger the same null pointer when AutoCAD attempts to load stale cache data during viewport regeneration.
+Corrupted `.dws` (Drawing Standards) and `.ac$` (AutoCAD temporary) files can trigger the same kind of crash when AutoCAD attempts to load stale cache data during viewport regeneration.
 
 ### Manual Cache Clearing
 
@@ -120,7 +107,7 @@ If the crash persists after updating drivers, disable hardware acceleration enti
 3. Uncheck "Hardware Acceleration."
 4. Click OK and restart AutoCAD.
 
-Work in software rendering mode for 30 minutes. If the 0x0024 error does not recur, the problem is definitively in the graphics driver layer. If it does recur, the issue lies in the drawing database itself — proceed to Step 5.
+Work in software rendering mode for 30 minutes. If the crash does not recur, the problem is in the graphics driver layer. If it does recur, the issue likely lies in the drawing database itself — proceed to Step 5.
 
 ## Step 5: Audit and Repair the Drawing Database
 
@@ -173,28 +160,22 @@ If the crash occurs only in a specific drawing, use the `QSELECT` command to ide
 
 ## Step 7: Check for XREF Circular References
 
-External references (XREFs) that circularly reference each other can cause infinite recursion in the viewport renderer, eventually exhausting the stack and triggering exception 0x0024.
+External references (XREFs) that circularly reference each other can cause runaway recursion in the viewport renderer, eventually exhausting the stack and crashing AutoCAD.
 
 Type `XREF` to open the External References palette. Look for any reference marked "Unresolved" or "Not Found." Detach all unresolved XREFs, then use `XREFPATH` to verify that remaining references point to valid file paths.
 
 For nested XREFs, type `-XREF` (with the hyphen for command-line mode) and use the `List` option to view the full reference tree. Any circular dependency will be flagged with a "Circular reference detected" warning.
 
-## Registry-Level Fix: Reset Graphics Configuration
+## Reset AutoCAD to Default Settings
 
-If all previous steps fail, the Windows registry may contain stale graphics configuration entries from a previous AutoCAD version or a failed driver update.
-
-**Warning**: Registry editing carries risk. Back up the registry before proceeding.
+If all previous steps fail, AutoCAD may be carrying stale configuration from a previous version or a failed driver update. Rather than editing the registry by hand, use the utility Autodesk ships for this purpose:
 
 1. Close AutoCAD.
-2. Open Registry Editor (`regedit`).
-3. Navigate to:
-   ```
-   HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R24.0\ACAD-4001:409\Graphics Manager
-   ```
-4. Delete the entire `Graphics Manager` key.
-5. Relaunch AutoCAD. It will recreate this key with default settings and prompt you to reconfigure hardware acceleration.
+2. From the Windows Start menu, open the **Reset Settings to Default** utility in the AutoCAD program group (available for each installed release).
+3. Choose whether to back up your custom settings first, then confirm the reset.
+4. Relaunch AutoCAD. It rebuilds its configuration — including the graphics settings — from defaults, and you can reconfigure hardware acceleration through `GRAPHICSCONFIG`.
 
-The `ACAD-4001:409` segment varies by locale — `409` is English (US). For German installations, use `407`; for French, `40C`; for Japanese, `411`.
+This restores the graphics configuration cleanly without the risk of manual registry edits.
 
 ## Prevention: Configure Automatic Cache Cleanup
 
@@ -212,11 +193,11 @@ This ensures that stale temporary files from a previous session never interfere 
 
 ## When to Contact Autodesk Support
 
-If the 0x0024 error persists after completing all seven steps, the issue may involve a bug in the specific AutoCAD build. Collect the following before opening a support case:
+If the crash persists after completing all the steps above, the issue may involve a bug in the specific AutoCAD build. Collect the following before opening a support case:
 
 - The full crash dump from `%LOCALAPPDATA%\CrashDumps\`
 - The AutoCAD journal file from `%LOCALAPPDATA%\Autodesk\AutoCAD 2026\R24.0\enu\Logs\`
 - The `dxdiag` output (run `dxdiag` from the Windows Run dialog, save the full report)
 - The specific drawing file (if the crash is reproducible with one file)
 
-Submit these through the Autodesk Account portal at `https://manage.autodesk.com` under the Support tab. Include the crash signature offset (`0x0024`) in the case title for faster routing to the graphics team.
+Submit these through the Autodesk Account portal at `https://manage.autodesk.com` under the Support tab. Include the exact crash signature shown in your error dialog in the case title for faster routing to the graphics team.

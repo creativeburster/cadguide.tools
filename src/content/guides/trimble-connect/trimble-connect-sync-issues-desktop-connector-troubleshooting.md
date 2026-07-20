@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "trimble-connect"
 keyword: "trimble connect sync issues desktop connector troubleshooting file conflicts"
 slug: "trimble-connect-sync-issues-desktop-connector-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Trimble Connect Sync Issues: Troubleshooting Desktop Connector and File Conflicts
 
-Sync issues are the #1 support ticket for Trimble Connect. I've dealt with stuck sync queues, mysterious file conflicts, and IFC files that refuse to upload. The good news is that most sync problems have predictable root causes. Here's my troubleshooting guide based on real-world experience.
+Sync issues are the #1 support ticket for Trimble Connect. We've dealt with stuck sync queues, mysterious file conflicts, and IFC files that refuse to upload. The good news is that most sync problems have predictable root causes. Here's our troubleshooting guide based on real-world experience.
 
 ## Understanding How Trimble Connect Sync Works
 

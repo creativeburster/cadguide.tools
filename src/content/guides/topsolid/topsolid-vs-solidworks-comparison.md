@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "topsolid"
 keyword: "topsolid vs solidworks comparison cad cam integrated"
 slug: "topsolid-vs-solidworks-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

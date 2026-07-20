@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "easyeda"
 keyword: "easyeda pcb design schematic capture component library layout routing"
 slug: "easyeda-pcb-design-schematic-capture-component-library-layout"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # EasyEDA PCB Design: Schematic Capture, Component Library, and PCB Layout Workflow
 
-EasyEDA is the most accessible PCB design tool I've used. It runs in the browser, has a massive online component library, and integrates directly with JLCPCB for manufacturing. I've designed dozens of boards in EasyEDA — from simple Arduino shields to 4-layer IoT devices. It's not as powerful as Altium or KiCad for complex designs, but for most hobbyist and small-team projects, it's more than enough. Here's my complete workflow.
+EasyEDA is the most accessible PCB design tool we've used. It runs in the browser, has a massive online component library, and integrates directly with JLCPCB for manufacturing. We've designed dozens of boards in EasyEDA — from simple Arduino shields to 4-layer IoT devices. It's not as powerful as Altium or KiCad for complex designs, but for most hobbyist and small-team projects, it's more than enough. Here's our complete workflow.
 
 ## EasyEDA Versions
 

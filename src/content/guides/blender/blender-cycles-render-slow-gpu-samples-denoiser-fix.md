@@ -1,11 +1,11 @@
 ---
 title: "Blender Cycles Rendering Slow: GPU Configuration, Sample Optimization, and Denoiser Settings"
-excerpt: "Blender Cycles renders take hours instead of minutes due to wrong GPU settings, excessive samples, and missing denoiser configuration. I cover the OptiX setup, adaptive sampling, and the denoiser workflow that cut render times by 80%."
+excerpt: "Blender Cycles renders take hours instead of minutes due to wrong GPU settings, excessive samples, and missing denoiser configuration. We cover the OptiX setup, adaptive sampling, and the denoiser workflow that cut render times by 80%."
 category: "performance"
 softwareSlug: "blender"
 keyword: "Blender Cycles render slow GPU OptiX samples denoiser"
 slug: "blender-cycles-render-slow-gpu-samples-denoiser-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

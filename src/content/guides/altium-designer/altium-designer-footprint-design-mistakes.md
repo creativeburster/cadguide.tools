@@ -1,11 +1,11 @@
 ---
 title: "Altium Designer Footprint Design: Common Mistakes and How to Fix Them"
-excerpt: "Bad footprints cause soldering failures, DRC errors, and board re-spins. I cover the footprint design mistakes I see most often — from pad size errors to courtyard overlaps — with real examples and fixes."
+excerpt: "Bad footprints cause soldering failures, DRC errors, and board re-spins. We cover the footprint design mistakes we see most often — from pad size errors to courtyard overlaps — with real examples and fixes."
 category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer footprint design mistakes pad size"
 slug: "altium-designer-footprint-design-mistakes"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-16"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Altium Designer Footprint Design: Common Mistakes and How to Fix Them
 
-A Reddit post in r/Altium about common footprint mistakes caught my attention because it described mistakes I've made myself and seen others make repeatedly. The user mentioned that PCB drawing files look nice and convey information clearly to the PCB fab, but they cautioned against making them too early in the design process because assembly images put reference designators in the wrong place. This is just one of many footprint mistakes that can cause real manufacturing problems. After designing PCBs for eight years and reviewing hundreds of designs from junior engineers, I've compiled a list of the most common and impactful footprint mistakes.
+A Reddit post in r/Altium about common footprint mistakes caught our attention because it described mistakes we've made ourselves and seen others make repeatedly. The user mentioned that PCB drawing files look nice and convey information clearly to the PCB fab, but they cautioned against making them too early in the design process because assembly images put reference designators in the wrong place. This is just one of many footprint mistakes that can cause real manufacturing problems. Drawing on common patterns seen across many designs — especially from junior engineers — here is a list of the most common and impactful footprint mistakes.
 
 ## Mistake 1: Incorrect Pad Sizes
 

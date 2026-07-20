@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "gstarcad"
 keyword: "gstarcad performance tuning"
 slug: "gstarcad-performance-tuning-large-dwg-hardware-settings-system-variables"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -18,7 +18,7 @@ sources:
 
 GstarCAD is generally lightweight and fast, but large drawings with dense hatching, complex xref chains, and thousands of entities can still cause performance issues. As an IntelliCAD-based application, GstarCAD shares similar performance characteristics with CorelCAD and progeCAD — it's typically lighter on memory than AutoCAD but can struggle with very large files containing thousands of blocks or complex hatch patterns.
 
-I've worked with a 180MB architectural DWG in GstarCAD that caused significant lag during pan and zoom operations. The fix involved a combination of system variable adjustments, hardware acceleration settings, and drawing cleanup. The GstarCAD support documentation provides some performance guidance, but the most effective optimizations I found came from trial and error and knowledge shared across IntelliCAD-based CAD forums. This guide covers every performance lever available in GstarCAD, from graphics configuration to drawing cleanup.
+We've worked with a 180MB architectural DWG in GstarCAD that caused significant lag during pan and zoom operations. The fix involved a combination of system variable adjustments, hardware acceleration settings, and drawing cleanup. The GstarCAD support documentation provides some performance guidance, but the most effective optimizations we found came from trial and error and knowledge shared across IntelliCAD-based CAD forums. This guide covers every performance lever available in GstarCAD, from graphics configuration to drawing cleanup.
 
 ## Diagnosing Performance Issues
 
@@ -167,7 +167,7 @@ For a 100MB architectural drawing with 50,000 entities:
 
 ## Hardware Recommendations Based on Real-World Testing
 
-Based on my experience running GstarCAD on various hardware configurations, here are practical recommendations. For processor, a mid-range Intel i5 or AMD Ryzen 5 is sufficient for 2D drafting — GstarCAD is single-threaded for most operations, so clock speed matters more than core count. For memory, 8GB is the minimum for comfortable work with drawings up to 50MB. For larger files (100MB+), 16GB is recommended. For graphics, a dedicated GPU with 2GB+ VRAM enables hardware acceleration, which significantly improves pan and zoom performance. Integrated graphics work but will struggle with large drawings. For storage, an SSD is the single biggest performance factor — file open times drop from 15-20 seconds on HDD to 3-5 seconds on SSD. A mid-range NVMe SSD provides the best value. For displays, a 24-inch monitor at 1920x1080 is the minimum comfortable resolution for CAD work. A 27-inch at 2560x1440 is ideal for seeing drawing detail without zooming. Dual monitors are highly recommended — one for the drawing and one for tool palettes and reference material.
+Based on our experience running GstarCAD on various hardware configurations, here are practical recommendations. For processor, a mid-range Intel i5 or AMD Ryzen 5 is sufficient for 2D drafting — GstarCAD is single-threaded for most operations, so clock speed matters more than core count. For memory, 8GB is the minimum for comfortable work with drawings up to 50MB. For larger files (100MB+), 16GB is recommended. For graphics, a dedicated GPU with 2GB+ VRAM enables hardware acceleration, which significantly improves pan and zoom performance. Integrated graphics work but will struggle with large drawings. For storage, an SSD is the single biggest performance factor — file open times drop from 15-20 seconds on HDD to 3-5 seconds on SSD. A mid-range NVMe SSD provides the best value. For displays, a 24-inch monitor at 1920x1080 is the minimum comfortable resolution for CAD work. A 27-inch at 2560x1440 is ideal for seeing drawing detail without zooming. Dual monitors are highly recommended — one for the drawing and one for tool palettes and reference material.
 
 ## Conclusion
 

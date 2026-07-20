@@ -1,11 +1,11 @@
 ---
 title: "Substance Painter Baking Issues: Mesh Map Errors, Cage Setup, and High-to-Low Poly Workflow"
-excerpt: "Substance Painter baking produces artifacts, missing maps, or incorrect normals due to mismatched high/low poly geometry, incorrect cage settings, or naming convention errors. I cover the baking workflow, naming conventions, and the cage calibration that produces clean bakes."
+excerpt: "Substance Painter baking produces artifacts, missing maps, or incorrect normals due to mismatched high/low poly geometry, incorrect cage settings, or naming convention errors. We cover the baking workflow, naming conventions, and the cage calibration that produces clean bakes."
 category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter baking mesh map error cage normal fix"
 slug: "substance-painter-baking-mesh-map-cage-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Substance Painter Baking Issues: Mesh Map Errors, Cage Setup, and High-to-Low Poly Workflow
 
-Baking is the foundation of every Substance Painter project — if the mesh maps (ambient occlusion, curvature, normal, position, thickness) are wrong, every texture you paint on top of them will look wrong. I've debugged baking issues for game studios and product visualization teams, and the problems almost always come down to three things: naming conventions, cage configuration, and high/low poly mesh preparation.
+Baking is the foundation of every Substance Painter project — if the mesh maps (ambient occlusion, curvature, normal, position, thickness) are wrong, every texture you paint on top of them will look wrong. We've debugged baking issues for game studios and product visualization teams, and the problems almost always come down to three things: naming conventions, cage configuration, and high/low poly mesh preparation.
 
 ## Understanding the Baking Pipeline
 
@@ -52,7 +52,7 @@ Substance Painter uses naming conventions to match high-poly meshes to low-poly 
 3. **Extra spaces or special characters**: `barrel _high` (space before _high) — Painter's matching is exact
 4. **Case sensitivity**: `Barrel_high` vs `barrel` — Painter is case-sensitive on some systems
 
-**The fix**: Before importing into Substance Painter, verify the naming in your 3D application (Blender, Maya, 3ds Max). Rename meshes to follow the convention exactly. I use a checklist:
+**The fix**: Before importing into Substance Painter, verify the naming in your 3D application (Blender, Maya, 3ds Max). Rename meshes to follow the convention exactly. We use a checklist:
 - Every low-poly mesh has a clean name (no suffix)
 - Every high-poly mesh has the same name + `_high` suffix
 - No spaces, no special characters, consistent case
@@ -75,7 +75,7 @@ The cage controls how far rays travel from the low-poly mesh to find the high-po
 
 **For complex models**: Use per-mesh cage settings instead of a global cage. Each mesh pair can have its own cage distance, which is essential when different parts of the model have different detail densities.
 
-**My approach**: I start with a global cage distance of 0.02, render a test bake, and inspect the results. If I see missing detail, I increase the cage. If I see bleeding, I decrease it. I iterate until the bake is clean.
+**Our approach**: We start with a global cage distance of 0.02, render a test bake, and inspect the results. If we see missing detail, we increase the cage. If we see bleeding, we decrease it. We iterate until the bake is clean.
 
 ## Issue 3: High-Poly Mesh Not Found
 
@@ -152,4 +152,4 @@ The curvature map doesn't show the expected convex/concave information — edges
 
 ## Summary
 
-Substance Painter baking issues are most often caused by naming convention errors, incorrect cage settings, or UV/smoothing group misalignment. My fix order: verify naming convention (low: `name`, high: `name_high`) → configure cage distance with visualization → ensure UV padding of 4-8 pixels → align smoothing groups with UV seams → test bake at 1024 → inspect all maps → re-bake at target resolution. The naming convention and cage configuration together fix about 70% of baking issues I encounter.
+Substance Painter baking issues are most often caused by naming convention errors, incorrect cage settings, or UV/smoothing group misalignment. Our fix order: verify naming convention (low: `name`, high: `name_high`) → configure cage distance with visualization → ensure UV padding of 4-8 pixels → align smoothing groups with UV seams → test bake at 1024 → inspect all maps → re-bake at target resolution. The naming convention and cage configuration together fix about 70% of baking issues we encounter.

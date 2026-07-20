@@ -1,11 +1,11 @@
 ---
 title: "exocad Full Denture Design: Digital Workflow from Scan to Printed Prosthesis"
-excerpt: "exocad's full denture module designs complete digital dentures with tooth setup, gingiva modeling, and try-in prostheses. I cover the complete workflow from impression scans to final printed dentures, including tooth arrangement, occlusion adjustment, and export for 3D printing."
+excerpt: "exocad's full denture module designs complete digital dentures with tooth setup, gingiva modeling, and try-in prostheses. We cover the complete workflow from impression scans to final printed dentures, including tooth arrangement, occlusion adjustment, and export for 3D printing."
 category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad full denture design digital workflow tooth setup gingiva printed prosthesis"
 slug: "exocad-full-denture-digital-workflow-tooth-setup-printed-prosthesis"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # exocad Full Denture Design: Digital Workflow from Scan to Printed Prosthesis
 
-I've designed complete digital dentures in exocad for edentulous patients, including immediate dentures and final prostheses. The full denture module represents one of the most significant digital transformations in dental technology — replacing the traditional wax-rim, wax-setup, and flasking process with a fully digital workflow that produces try-in prostheses and final dentures via 3D printing.
+We've designed complete digital dentures in exocad for edentulous patients, including immediate dentures and final prostheses. The full denture module represents one of the most significant digital transformations in dental technology — replacing the traditional wax-rim, wax-setup, and flasking process with a fully digital workflow that produces try-in prostheses and final dentures via 3D printing.
 
 ## Full Denture Module Overview
 

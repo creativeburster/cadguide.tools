@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "navisworks"
 keyword: "navisworks model aggregation"
 slug: "navisworks-model-aggregation-multi-discipline-bim-coordination-revit-tekla-ifc"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

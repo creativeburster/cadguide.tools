@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "midas-gen"
 keyword: "midas gen construction stage analysis"
 slug: "midas-gen-construction-stage-analysis-creep-shrinkage-sequential-loading"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Gen Construction Stage Analysis: Creep, Shrinkage, and Sequential Loading
 
-Construction stage analysis is one of those things that seems unnecessary until you do it once and realize how much you've been missing. I started using it on a 40-story residential tower where the columns were shortening more than expected, and the floor slabs were developing unexpected deflections. MIDAS Gen's construction stage analysis showed me exactly what was happening with creep and shrinkage over time. Let me walk you through the setup.
+Construction stage analysis is one of those things that seems unnecessary until you do it once and realize how much you've been missing. On tall buildings — say a 40-story residential tower — columns can shorten more than expected and floor slabs can develop unexpected deflections. MIDAS Gen's construction stage analysis shows exactly what's happening with creep and shrinkage over time. Let us walk you through the setup.
 
 ## Why Construction Stage Analysis Matters
 
@@ -255,4 +255,4 @@ For a segmental bridge:
 
 ## Wrapping Up
 
-Construction stage analysis isn't necessary for every building, but for tall buildings it's essential. The column shortening output alone is worth the effort — I've seen projects where differential shortening between perimeter columns and core walls caused floor slabs to crack because nobody ran a construction stage analysis. If you're working on anything over 20 stories, do yourself a favor and run it. The creep and shrinkage predictions will tell you exactly how much to compensate in the construction drawings.
+Construction stage analysis isn't necessary for every building, but for tall buildings it's essential. The column shortening output alone is worth the effort — We've seen projects where differential shortening between perimeter columns and core walls caused floor slabs to crack because nobody ran a construction stage analysis. If you're working on anything over 20 stories, do yourself a favor and run it. The creep and shrinkage predictions will tell you exactly how much to compensate in the construction drawings.

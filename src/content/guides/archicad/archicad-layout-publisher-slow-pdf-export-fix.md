@@ -1,11 +1,11 @@
 ---
 title: "ArchiCAD Layout and Publisher Slow: Book Update, View Recalculation, and PDF Export Optimization"
-excerpt: "ArchiCAD's Layout book takes minutes to update and PDF exports freeze during publishing. I cover the auto-update toggle, view simplification, and the publisher set configuration that speed up documentation workflows."
+excerpt: "ArchiCAD's Layout book takes minutes to update and PDF exports freeze during publishing. We cover the auto-update toggle, view simplification, and the publisher set configuration that speed up documentation workflows."
 category: "performance"
 softwareSlug: "archicad"
 keyword: "ArchiCAD layout book slow publisher PDF export update"
 slug: "archicad-layout-publisher-slow-pdf-export-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "kompas-3d"
 keyword: "kompas-3d large assembly performance optimization slow"
 slug: "kompas-3d-large-assembly-performance-optimization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-12"
 sources:

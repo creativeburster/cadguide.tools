@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "varicad"
 keyword: "varicad assembly design"
 slug: "varicad-assembly-design-constraints-bom-exploded-view"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

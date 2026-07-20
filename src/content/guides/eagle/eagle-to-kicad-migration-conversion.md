@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "eagle"
 keyword: "eagle to kicad migration conversion"
 slug: "eagle-to-kicad-migration-conversion"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Eagle to KiCad Migration: Converting Schematics and PCB Layouts Successfully
 
-Autodesk moved Eagle to maintenance mode in 2026, and many users are migrating to KiCad. I migrated 30+ Eagle projects to KiCad 8 last year. The built-in importer handles 85% of the work automatically. The remaining 15% is where things get tricky. Here's the complete migration process.
+Autodesk moved Eagle to maintenance mode in 2026, and many users are migrating to KiCad. KiCad 8's built-in importer handles about 85% of the work automatically. The remaining 15% is where things get tricky. Here's the complete migration process.
 
 ## Why Migrate from Eagle to KiCad?
 

@@ -5,17 +5,17 @@ category: "performance"
 softwareSlug: "autocad"
 keyword: "autocad performance"
 slug: "large-assembly-demand-loading"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:
   - "https://knowledge.autodesk.com/support/autocad-lt/troubleshooting/caas/sfdcarticles/sfdcarticles/Optimizing-the-AutoCAD-drawing-file-Purge-Audit-Recover.html"
-  - "https://forums.autodesk.com/t5/autocad-forum/large-dwg-file-performance-optimization/td-p/8765432"
+  - "https://help.autodesk.com/view/ACD/2024/ENU/"
 ---
 
 # Optimizing AutoCAD Performance with Large Assemblies and Heavy Drawings
 
-I once inherited a 280 MB DWG file from a contractor that took 45 seconds just to pan across the viewport. Every selection highlight froze the screen for two seconds. Regenerating when I toggled a layer? Forget about it. After spending way too long dealing with that file, I developed a checklist of optimizations that I now run through on every heavy drawing I encounter. Here's what actually works.
+Heavy DWG files — hundreds of megabytes, tens of thousands of entities, dense hatching, and stacked external references — can make panning, selecting, and regenerating painfully slow. The optimizations below work through the usual culprits in order, from external-reference loading to display settings to database cleanup, so you can bring a sluggish drawing back to a responsive state.
 
 ## Step 1: Enable Demand Loading for XREFs
 
@@ -65,25 +65,17 @@ Set to `3`, then save the file. The index is built on the next save.
 VSCURRENT
 ```
 
-Set to `2` (2D Wireframe). This is the fastest visual style, rendering only edges and outlines without any fill, shadow, or material calculations.
+Set it to `2dwireframe`. This is the fastest visual style, rendering only edges and outlines without any fill, shadow, or material calculations.
 
 ### Disable Silhouette Edges
 
 If you must work in a 3D visual style:
 
 ```
-SILHOUETTES
+DISPSILH
 ```
 
-Set to `0`. This removes the outline edges that AutoCAD calculates for 3D solids, which is one of the most computationally expensive operations in 3D viewport rendering.
-
-### Disable Edge Overhang
-
-```
-EDGEOVERHANG
-```
-
-Set to `0`. Edge overhang extends edge lines slightly beyond their endpoints for visual clarity, but the calculation adds significant overhead on drawings with thousands of edges.
+Set to `0`. This turns off the silhouette edges that AutoCAD calculates for 3D solids in wireframe and 2D wireframe views, which is one of the more computationally expensive operations in 3D viewport rendering.
 
 ## Step 3: Optimize Hatch Display
 
@@ -99,13 +91,13 @@ HATCHEDIT
 
 Select the hatch and increase the pattern scale. A scale of `1.0` instead of `0.1` reduces the number of line segments by 100x with minimal visual difference at typical zoom levels.
 
-### Disable Hatch Animation
+### Create Single Hatch Objects
 
 ```
 HPSEPARATE
 ```
 
-Set to `0`. This prevents AutoCAD from creating separate hatch objects for each enclosed boundary, reducing the total number of hatch entities.
+Set to `0`. When you hatch multiple closed boundaries in one command, this keeps the result as a single hatch object instead of one object per boundary, reducing the total number of hatch entities in the drawing.
 
 ### Use Solid Hatches for Large Areas
 
@@ -169,31 +161,17 @@ Annotation scales accumulate in drawings that have been shared between users wit
 -SCALELISTEDIT
 ```
 
-Remove all scales except those you actively use. Then run:
-
-```
-ANNPURGE
-```
-
-This command (available in AutoCAD 2024+) removes all annotation scale representations except the current one from every annotation object in the drawing.
+Remove all scales except those you actively use. Excess annotation scales are also cleared by the standard `PURGE` command — in the Purge dialog, purge unused items after trimming the scale list, which drops the extra scale representations stored on annotation objects.
 
 ## Step 6: Configure Hardware and Memory Settings
 
-### Allocate More RAM to AutoCAD
+### Enable Multithreaded Regen and Plot
 
 ```
-DACORES
+WHIPTHREAD
 ```
 
-Set this to the number of CPU cores you want AutoCAD to use for multi-core operations (regeneration, rendering, drawing recovery). Set to `4` on a 8-core machine, leaving cores available for the OS and other applications.
-
-### Increase the Graphics Cache Size
-
-```
-CACHEMAXTOTALSIZE
-```
-
-Set to `5000` (5 GB). This allows AutoCAD to cache more viewport data in VRAM, reducing the frequency of full redraws. The default value of `2000` (2 GB) is insufficient for large drawings.
+Set to `3` to let AutoCAD use multiple cores for both redraw/regen and plotting operations (`1` = regen only, `2` = plot only, `0` = single-threaded). On multi-core workstations this reduces the time spent regenerating large drawings.
 
 ### Optimize the Page File
 

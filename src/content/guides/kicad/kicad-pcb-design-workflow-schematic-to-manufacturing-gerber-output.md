@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "kicad"
 keyword: "kicad pcb design workflow"
 slug: "kicad-pcb-design-workflow-schematic-to-manufacturing-gerber-output"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:
@@ -17,9 +17,9 @@ sources:
 
 # KiCad PCB Design Workflow: From Schematic to Manufacturing Output for Beginners
 
-I've designed dozens of PCBs in KiCad, and I remember the learning curve well. On Reddit's r/PrintedCircuitBoard, a university student asked whether to stick with KiCad or switch to Altium, noting that they "do notice limitations" with KiCad for their work. On r/ElectricalEngineering, a beginner asked "is KiCad's importing really this bad?" with 56 upvotes — reflecting the frustration many newcomers feel when first encountering KiCad's component import workflow. And on the KiCad forum, users regularly ask about the basic workflow from idea to manufactured board.
+We've designed dozens of PCBs in KiCad, and we remember the learning curve well. On Reddit's r/PrintedCircuitBoard, a university student asked whether to stick with KiCad or switch to Altium, noting that they "do notice limitations" with KiCad for their work. On r/ElectricalEngineering, a beginner asked "is KiCad's importing really this bad?" with 56 upvotes — reflecting the frustration many newcomers feel when first encountering KiCad's component import workflow. And on the KiCad forum, users regularly ask about the basic workflow from idea to manufactured board.
 
-This guide walks through the complete KiCad workflow from schematic to manufacturing output, covering the pain points I encountered and the solutions I found.
+This guide walks through the complete KiCad workflow from schematic to manufacturing output, covering the pain points we encountered and the solutions we found.
 
 ## Phase 1: Schematic Capture
 
@@ -158,6 +158,6 @@ Most board houses accept a ZIP file containing:
 
 Popular board houses like JLCPCB, PCBWay, and OSH Park accept KiCad-generated files directly. Upload the ZIP file and verify the preview matches your design.
 
-## My Take
+## Our Take
 
-KiCad's workflow is logical once you understand it, but the learning curve is steep for beginners. The most common frustration is footprint assignment — not because it's difficult, but because beginners don't realize they need to assign footprints during schematic capture, not after. My recommendation is to start with a simple 2-layer board (an LED blinker or simple sensor breakout) to learn the full workflow before attempting complex designs. The workflow is the same regardless of complexity, so mastering it on a simple board saves time when you move to multi-layer designs with hundreds of components.
+KiCad's workflow is logical once you understand it, but the learning curve is steep for beginners. The most common frustration is footprint assignment — not because it's difficult, but because beginners don't realize they need to assign footprints during schematic capture, not after. Our recommendation is to start with a simple 2-layer board (an LED blinker or simple sensor breakout) to learn the full workflow before attempting complex designs. The workflow is the same regardless of complexity, so mastering it on a simple board saves time when you move to multi-layer designs with hundreds of components.

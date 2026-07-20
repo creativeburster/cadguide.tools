@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "designspark-mechanical"
 keyword: "designspark mechanical direct modeling pull move fill combine"
 slug: "designspark-mechanical-direct-modeling-pull-move-fill-combine"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -144,7 +144,7 @@ The Combine tool performs Boolean operations between solids.
 #### Boolean Union
 
 1. **Create two overlapping solids**
-2. **Activate Combine** — press I
+2. **Activate Combine** — press we
 3. **Select the target body** — the body to keep
 4. **Select the tool body** — the body to merge with the target
 5. **Choose "Union"** — the two solids merge into one
@@ -152,7 +152,7 @@ The Combine tool performs Boolean operations between solids.
 #### Boolean Subtract
 
 1. **Create two overlapping solids**
-2. **Activate Combine** — press I
+2. **Activate Combine** — press we
 3. **Select the target body** — the body to cut from
 4. **Select the tool body** — the body to subtract
 5. **Choose "Subtract"** — the tool body is removed from the target
@@ -160,7 +160,7 @@ The Combine tool performs Boolean operations between solids.
 #### Boolean Intersect
 
 1. **Create two overlapping solids**
-2. **Activate Combine** — press I
+2. **Activate Combine** — press we
 3. **Select the target body**
 4. **Select the tool body**
 5. **Choose "Intersect"** — only the overlapping volume remains

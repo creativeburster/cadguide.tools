@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ls-dyna"
 keyword: "ls-dyna explicit dynamics"
 slug: "ls-dyna-explicit-dynamics-keyword-file-element-formulation-solver-configuration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # LS-DYNA Explicit Dynamics: Keyword File Setup, Element Formulation, and Solver Configuration
 
-LS-DYNA was the first explicit dynamics solver I ever used, and honestly, the keyword file format intimidated me at first. It's just text — no GUI, no tree structure, just cards and parameters. But once I learned the key cards, it became second nature. Let me walk you through the workflow I use for setting up LS-DYNA models, from element formulation to energy balance checks.
+LS-DYNA was the first explicit dynamics solver we ever used, and honestly, the keyword file format intimidated us at first. It's just text — no GUI, no tree structure, just cards and parameters. But once we learned the key cards, it became second nature. Let us walk you through the workflow we use for setting up LS-DYNA models, from element formulation to energy balance checks.
 
 ## LS-DYNA Workflow
 
@@ -324,4 +324,4 @@ mpirun -np 64 ls-dyna_mpp_d i=inputfile.k memory=2G
 
 ## Wrapping Up
 
-LS-DYNA's keyword file format gives you control over everything, which is both its strength and its weakness. There's no GUI holding your hand — if you get a card wrong, the solver might run but give you bad results. The two things I check on every LS-DYNA run: hourglass energy (keep it under 5% of internal energy) and mass scaling (keep added mass under 5% for quasi-static). If either of those is too high, your results aren't trustworthy regardless of how good everything else looks.
+LS-DYNA's keyword file format gives you control over everything, which is both its strength and its weakness. There's no GUI holding your hand — if you get a card wrong, the solver might run but give you bad results. The two things we check on every LS-DYNA run: hourglass energy (keep it under 5% of internal energy) and mass scaling (keep added mass under 5% for quasi-static). If either of those is too high, your results aren't trustworthy regardless of how good everything else looks.

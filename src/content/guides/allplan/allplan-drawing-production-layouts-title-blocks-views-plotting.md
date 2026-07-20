@@ -5,7 +5,7 @@ category: "printing"
 softwareSlug: "allplan"
 keyword: "allplan drawing production"
 slug: "allplan-drawing-production-layouts-title-blocks-views-plotting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Allplan Drawing Production: Layouts, Title Blocks, Views, and Plotting Standards
 
-Drawing production in Allplan is something I've come to appreciate more and more. The fact that views are generated directly from the 3D model means drawings always reflect the current design — no more forgetting to update a section after moving a wall. Let me walk you through how I set up layouts, title blocks, views, and plotting.
+Drawing production in Allplan is something we've come to appreciate more and more. The fact that views are generated directly from the 3D model means drawings always reflect the current design — no more forgetting to update a section after moving a wall. Let us walk you through how we set up layouts, title blocks, views, and plotting.
 
 ## Layout Setup
 
@@ -236,4 +236,4 @@ Before issuing drawings, verify:
 
 ## Wrapping Up
 
-Allplan's drawing production system is solid once you get your templates set up. The associative link between 3D model and 2D views means you never have to worry about a section being out of date. My advice: invest time in configuring your pen system, layer structure, and title blocks in a project template before you start your first real project. That upfront work pays off every time you issue a drawing set.
+Allplan's drawing production system is solid once you get your templates set up. The associative link between 3D model and 2D views means you never have to worry about a section being out of date. Our advice: invest time in configuring your pen system, layer structure, and title blocks in a project template before you start your first real project. That upfront work pays off every time you issue a drawing set.

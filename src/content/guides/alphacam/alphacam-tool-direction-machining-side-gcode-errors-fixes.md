@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "alphacam"
 keyword: "alphacam tool direction error g-code collision fix"
 slug: "alphacam-tool-direction-machining-side-gcode-errors-fixes"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # AlphaCAM Tool Direction and Machining Side: Common G-Code Errors and Fixes
 
-The most common errors in AlphaCAM come down to two things: wrong tool direction and unsafe G-code. I've seen beginners ruin expensive material because the tool was cutting on the wrong side of the line, and I've seen near-misses from rapid moves to Z0. Here's how to diagnose and fix both.
+The most common errors in AlphaCAM come down to two things: wrong tool direction and unsafe G-code. We've seen beginners ruin expensive material because the tool was cutting on the wrong side of the line, and we've seen near-misses from rapid moves to Z0. Here's how to diagnose and fix both.
 
 ## Tool Direction Basics
 

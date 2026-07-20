@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "solibri"
 keyword: "solibri office vs solibri site license comparison features"
 slug: "solibri-office-vs-solibri-site-license-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Solibri Office vs Solibri Site: Choosing the Right Solibri License for Your Team
 
-Solibri's licensing model confuses most people I talk to. There's Solibri Office, Solibri Site, and Solibri Cloud — and the differences aren't obvious from the product pages. I've helped several companies choose the right license, and the wrong choice can waste thousands of dollars per year. Here's what each license includes and when to choose each.
+Solibri's licensing model confuses most people we talk to. There's Solibri Office, Solibri Site, and Solibri Cloud — and the differences aren't obvious from the product pages. We've helped several companies choose the right license, and the wrong choice can waste thousands of dollars per year. Here's what each license includes and when to choose each.
 
 ## Solibri Product Lineup
 
@@ -159,7 +159,7 @@ Solibri Cloud adds cloud-based processing and collaboration. Key benefits:
 - Projects with simple coordination requirements
 - Budget-constrained projects where desktop checking is sufficient
 
-## My Recommendation
+## Our Recommendation
 
 For most projects:
 

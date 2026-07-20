@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cimatron"
 keyword: "cimatron cooling system design conformal cooling channel routing thermal"
 slug: "cimatron-cooling-system-design-conformal-cooling-channel-routing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Cimatron Cooling System Design: Channel Routing, Conformal Cooling, and Thermal Analysis
 
-Cooling system design is where mold makers win or lose on cycle time. A well-cooled mold cycles 20-30% faster than a poorly cooled one. On a million-part production run, that's the difference between profit and loss. Cimatron's cooling design tools are among the best I've used — especially the 3D conformal cooling capability. Here's my complete cooling design workflow.
+Cooling system design is where mold makers win or lose on cycle time. A well-cooled mold cycles 20-30% faster than a poorly cooled one. On a million-part production run, that's the difference between profit and loss. Cimatron's cooling design tools are among the best we've used — especially the 3D conformal cooling capability. Here's our complete cooling design workflow.
 
 ## Why Cooling Design Matters
 

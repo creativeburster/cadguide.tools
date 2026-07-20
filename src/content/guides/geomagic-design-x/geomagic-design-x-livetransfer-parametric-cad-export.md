@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "geomagic-design-x"
 keyword: "geomagic design x livetransfer solidworks parametric export"
 slug: "geomagic-design-x-livetransfer-parametric-cad-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

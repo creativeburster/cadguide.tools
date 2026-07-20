@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "draftsight"
 keyword: "draftsight pdf import dwg export"
 slug: "draftsight-pdf-import-dwg-export-clean-geometry-conversion"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

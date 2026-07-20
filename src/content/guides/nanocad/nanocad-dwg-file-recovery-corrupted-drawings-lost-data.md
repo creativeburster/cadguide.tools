@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "nanocad"
 keyword: "nanocad dwg file recovery"
 slug: "nanocad-dwg-file-recovery-corrupted-drawings-lost-data"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

@@ -1,11 +1,11 @@
 ---
 title: "NX Journaling Automation: Python Scripts for Repetitive CAD Tasks"
-excerpt: "I share the Python journaling scripts I use to automate batch operations in NX — from mass property exports to automated drawing creation — with real code examples and debugging tips."
+excerpt: "We share the Python journaling scripts we use to automate batch operations in NX — from mass property exports to automated drawing creation — with real code examples and debugging tips."
 category: "deployment"
 softwareSlug: "siemens-nx"
 keyword: "NX journaling Python automation"
 slug: "siemens-nx-journaling-python-automation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-19"
 sources:
@@ -16,13 +16,13 @@ sources:
 
 # NX Journaling Automation: Python Scripts for Repetitive CAD Tasks
 
-I manage a library of over 8,000 standard parts in NX, and every time a new NX version rolls out, we need to update the part templates, regenerate all models, and verify that the mass properties are still correct. Doing this manually for 8,000 parts would take weeks. With NX Journaling and Python, I can do it in an afternoon. I'll share the scripts and techniques I use, along with the pitfalls I've learned the hard way.
+Maintaining a large library of standard parts in NX — thousands of components — is painful by hand: every new NX version means updating part templates, regenerating all models, and verifying that the mass properties are still correct. Doing that manually for thousands of parts would take weeks; with NX Journaling and Python it can be done in an afternoon. This guide shares the scripts and techniques, along with the common pitfalls.
 
 ## What NX Journaling Actually Is
 
 NX Journaling is an API that lets you control NX programmatically through Python or Visual Basic. It's not a macro recorder — it's a full programming interface that gives you access to nearly every NX function: part creation, feature editing, drawing generation, measurement, export, and more.
 
-The API is documented in the NX Open Reference Guide, which ships with NX. You'll find it at `%UGII_BASE_DIR%\NXopen\python\doc\index.html`. The documentation is dense but comprehensive — I reference it constantly.
+The API is documented in the NX Open Reference Guide, which ships with NX. You'll find it at `%UGII_BASE_DIR%\NXopen\python\doc\index.html`. The documentation is dense but comprehensive — We reference it constantly.
 
 ## Getting Started: Your First Journal
 
@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
 ## Debugging Tips
 
-NX Journaling can be frustrating to debug because errors often don't produce clear messages. Here's what I've learned:
+NX Journaling can be frustrating to debug because errors often don't produce clear messages. Here's what we've learned:
 
 ### 1. Use Try-Except Blocks Liberally
 
@@ -209,7 +209,7 @@ Always close parts you open in your script. If you don't, you'll eventually hit 
 
 ## Scheduling Batch Jobs with Windows Task Scheduler
 
-For recurring tasks like weekly mass property updates or template migrations, I schedule journals to run automatically using Windows Task Scheduler:
+For recurring tasks like weekly mass property updates or template migrations, we schedule journals to run automatically using Windows Task Scheduler:
 
 1. Create a batch file that launches NX in batch mode:
    ```batch
@@ -226,7 +226,7 @@ The batch mode runs without the NX UI, which is faster and doesn't interfere wit
 
 ## Reusable Utility Functions
 
-Over time, I've built a library of utility functions that I import into every journal. Here are the most useful ones:
+It's worth building a library of utility functions to import into every journal. Here are the most useful ones:
 
 ```python
 def safe_open_part(theSession, filepath):
@@ -280,4 +280,4 @@ These functions handle the most common failure cases and make your main scripts 
 
 ## Summary
 
-NX Journaling with Python is one of the most powerful tools available to CAD administrators. The scripts I've shared here — mass property export and automated drawing creation — save my team approximately 40 hours per NX version upgrade. Start with simple scripts, test them interactively, and build up a library of reusable functions. The API documentation is your best friend — bookmark it and refer to it often.
+NX Journaling with Python is one of the most powerful tools available to CAD administrators. The scripts we've shared here — mass property export and automated drawing creation — save our team approximately 40 hours per NX version upgrade. Start with simple scripts, test them interactively, and build up a library of reusable functions. The API documentation is your best friend — bookmark it and refer to it often.

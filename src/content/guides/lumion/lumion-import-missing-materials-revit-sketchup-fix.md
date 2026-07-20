@@ -1,11 +1,11 @@
 ---
 title: "Lumion Model Import: Missing Materials, Flipped Faces, and Revit/SketchUp Export Settings"
-excerpt: "Models imported into Lumion with missing materials, flipped faces, or merged geometry are caused by incorrect export settings in Revit and SketchUp. I cover the Surface Smoothing, Geometry Optimization, and material assignment workflow that produces clean imports."
+excerpt: "Models imported into Lumion with missing materials, flipped faces, or merged geometry are caused by incorrect export settings in Revit and SketchUp. We cover the Surface Smoothing, Geometry Optimization, and material assignment workflow that produces clean imports."
 category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion import model missing materials Revit SketchUp export"
 slug: "lumion-import-missing-materials-revit-sketchup-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-21"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Lumion Model Import: Missing Materials, Flipped Faces, and Revit/SketchUp Export Settings
 
-I work with architecture firms that use Revit, SketchUp, and ArchiCAD, and they all send models to Lumion for rendering. The most common complaint I hear is "My materials are missing when I import into Lumion" or "My model looks wrong — faces are flipped and everything is one material." These issues are almost always on the export side, not the Lumion side.
+We work with architecture firms that use Revit, SketchUp, and ArchiCAD, and they all send models to Lumion for rendering. The most common complaint we hear is "My materials are missing when I import into Lumion" or "My model looks wrong — faces are flipped and everything is one material." These issues are almost always on the export side, not the Lumion side.
 
 ## Problem 1: Materials Missing After Re-importing
 
@@ -48,7 +48,7 @@ Some faces of the model are invisible when viewed from certain angles in Lumion.
 4. Right-click → **Reverse Faces** on any remaining flipped faces
 5. Export to Lumion after this cleanup
 
-I've also seen this issue with Revit exports when the model contains custom massing elements with incorrect face orientation. The fix in Revit is to check the massing elements in a 3D view and ensure all faces point outward.
+We've also seen this issue with Revit exports when the model contains custom massing elements with incorrect face orientation. The fix in Revit is to check the massing elements in a 3D view and ensure all faces point outward.
 
 ## Problem 3: All Geometry Merged Into One Material
 
@@ -73,7 +73,7 @@ Curved surfaces appear faceted or jagged in Lumion after import from Revit.
 
 **Fix for Revit**:
 1. In the Lumion LiveSync or export settings, find the **Surface Smoothing** slider
-2. Set it to the **lowest value that still looks acceptable** — I start at 20% and increase only if curves look too faceted
+2. Set it to the **lowest value that still looks acceptable** — We start at 20% and increase only if curves look too faceted
 3. Setting it to maximum (100%) can cause:
    - Extremely large export files (500MB+)
    - Long import times in Lumion
@@ -110,7 +110,7 @@ Materials that look correct in SketchUp appear different in Lumion — colors ar
 
 ## Best Practices for Clean Imports
 
-After years of troubleshooting import issues, I've established these rules for our studio:
+To avoid recurring import issues, we recommend these rules:
 
 1. **Use LiveSync when possible**: It maintains material assignments and updates in real-time. No manual export/import cycle.
 2. **Name materials consistently**: Material names are the link between the source file and Lumion. Never rename materials between updates.

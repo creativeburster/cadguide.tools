@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "multisim"
 keyword: "multisim spice simulation dc ac transient analysis"
 slug: "multisim-spice-simulation-dc-ac-transient-analysis-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # NI Multisim SPICE Simulation: DC, AC, Transient Analysis Setup and Common Errors
 
-Multisim translates your schematic into a SPICE netlist automatically, but understanding what happens behind the scenes helps you diagnose simulation failures. I've taught Multisim to hundreds of students and engineers, and the same issues come up every time.
+Multisim translates your schematic into a SPICE netlist automatically, but understanding what happens behind the scenes helps you diagnose simulation failures. We've taught Multisim to hundreds of students and engineers, and the same issues come up every time.
 
 ## DC Operating Point Analysis
 

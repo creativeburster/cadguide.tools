@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ironcad"
 keyword: "ironcad rendering animation exploded view"
 slug: "ironcad-rendering-animation-exploded-view"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IronCAD Rendering and Animation: Creating Product Visualizations and Exploded Views
 
-I produce product visualizations for client presentations directly in IronCAD — no need for KeyShot or Blender. IronCAD's built-in rendering engine handles materials, lighting, and camera setup. For assembly animations, the exploded view tool creates compelling "how it works" visuals in minutes. Here's the workflow.
+We produce product visualizations for client presentations directly in IronCAD — no need for KeyShot or Blender. IronCAD's built-in rendering engine handles materials, lighting, and camera setup. For assembly animations, the exploded view tool creates compelling "how it works" visuals in minutes. Here's the workflow.
 
 ## Rendering Setup
 

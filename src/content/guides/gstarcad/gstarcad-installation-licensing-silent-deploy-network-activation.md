@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "gstarcad"
 keyword: "gstarcad installation licensing"
 slug: "gstarcad-installation-licensing-silent-deploy-network-activation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -18,7 +18,7 @@ sources:
 
 GstarCAD's licensing model is one of its main selling points: perpetual licenses with optional annual maintenance. This is fundamentally different from AutoCAD's subscription-only model. According to the GstarCAD FAQ at gstarcad.mt, there are three licensing types: Stand-alone USB dongle, Stand-alone License (Flexnet), and Network License (Flexnet). The official Network License Manager Guide documents the server setup process in detail, including specific port ranges (27000-27009 for license port, 1024-64000 for service port).
 
-I've deployed GstarCAD to about 30 workstations across two offices, and the activation process has some quirks that the official documentation doesn't fully explain. The GstarCAD Australia activation FAQ lists 19 different error messages you might encounter — from "Number of network license nodes exceeds the limit" to "License has been activated on other machine." The most common issue is the server computer name containing non-English characters, which silently breaks the license service. This guide covers enterprise deployment from silent installation to network license configuration and common activation troubleshooting, informed by real deployment experience and the official troubleshooting documentation.
+Deploying GstarCAD across dozens of workstations exposes activation quirks that the official documentation doesn't fully explain. The GstarCAD Australia activation FAQ lists 19 different error messages you might encounter — from "Number of network license nodes exceeds the limit" to "License has been activated on other machine." The most common issue is the server computer name containing non-English characters, which silently breaks the license service. This guide covers enterprise deployment from silent installation to network license configuration and common activation troubleshooting, drawing on the official troubleshooting documentation.
 
 ## Licensing Models
 

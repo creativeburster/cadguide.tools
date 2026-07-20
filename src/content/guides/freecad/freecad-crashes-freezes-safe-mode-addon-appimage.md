@@ -1,11 +1,11 @@
 ---
 title: "FreeCAD Crashes and Freezes: Safe Mode, Add-on Conflicts, and AppImage Stability"
-excerpt: "FreeCAD crashes on startup, freezes during modeling, or behaves unpredictably after installing add-ons. I cover the safe mode restart, add-on isolation, and the AppImage vs installed version stability differences."
+excerpt: "FreeCAD crashes on startup, freezes during modeling, or behaves unpredictably after installing add-ons. We cover the safe mode restart, add-on isolation, and the AppImage vs installed version stability differences."
 category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD crashes freezes safe mode add-on conflict AppImage"
 slug: "freecad-crashes-freezes-safe-mode-addon-appimage"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

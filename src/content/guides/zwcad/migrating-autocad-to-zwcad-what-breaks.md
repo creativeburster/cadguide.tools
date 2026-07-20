@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "zwcad"
 keyword: "migrate autocad to zwcad lisp compatibility"
 slug: "migrating-autocad-to-zwcad-what-breaks"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Migrating from AutoCAD to ZWCAD: What Breaks and How to Fix It
 
-I migrated a 25-seat office from AutoCAD 2024 to ZWCAD 2026 over a weekend. About 80% of the transition was seamless — the command line, shortcuts, and DWG files all worked. The other 20% was a mix of LISP quirks, missing menu items, and plot configuration headaches. Here's what I wish someone had told me before I started.
+We migrated a 25-seat office from AutoCAD 2024 to ZWCAD 2026 over a weekend. About 80% of the transition was seamless — the command line, shortcuts, and DWG files all worked. The other 20% was a mix of LISP quirks, missing menu items, and plot configuration headaches. Here's what we wish someone had told us before we started.
 
 ## What Transfers Automatically
 

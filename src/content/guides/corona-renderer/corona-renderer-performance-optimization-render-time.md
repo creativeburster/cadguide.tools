@@ -1,11 +1,11 @@
 ---
 title: "Corona Renderer Performance: Adaptive Light Solver, GI Settings, and Render Time Optimization"
-excerpt: "Slow Corona renders are caused by excessive ray depth, disabled Adaptive Light Solver, or brute-force approaches where the UHD Cache would suffice. I cover the performance tab settings, light solver configuration, and the memory conservation mode for large scenes."
+excerpt: "Slow Corona renders are caused by excessive ray depth, disabled Adaptive Light Solver, or brute-force approaches where the UHD Cache would suffice. We cover the performance tab settings, light solver configuration, and the memory conservation mode for large scenes."
 category: "performance"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer performance optimization render time settings"
 slug: "corona-renderer-performance-optimization-render-time"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Corona Renderer Performance: Adaptive Light Solver, GI Settings, and Render Time Optimization
 
-I optimize Corona Renderer setups for architecture and product visualization studios, and the most common issue is unnecessarily long render times. Corona's default settings are intentionally conservative — they prioritize quality over speed. But with a few targeted adjustments, you can cut render times by 50-70% without visible quality loss.
+We optimize Corona Renderer setups for architecture and product visualization studios, and the most common issue is unnecessarily long render times. Corona's default settings are intentionally conservative — they prioritize quality over speed. But with a few targeted adjustments, you can cut render times by 50-70% without visible quality loss.
 
 ## Setting 1: Adaptive Light Solver (Up to 6x Faster)
 
@@ -41,7 +41,7 @@ If you're opening an old scene, check this setting — it may still be disabled 
 
 Max ray depth controls the maximum number of light bounces. The default works well for most scenes, but adjusting it can improve performance.
 
-**My recommendations**:
+**Our recommendations**:
 - **Default**: Keep the default for most scenes — the change in Corona is very small compared to other renderers
 - **Exterior scenes**: Lowering slightly improves performance with minimal quality impact
 - **Glass-heavy interiors**: May need a higher value for light to pass through multiple glass surfaces
@@ -57,13 +57,13 @@ This setting controls the ratio of GI samples to anti-aliasing samples per pass.
 - **Aliasing or DoF/motion blur noise is the main issue**: Decrease to 8-12 (more AA samples)
 - **Never go below 2 or above 64** — Chaos explicitly warns against these extremes
 
-**My typical setting**: I keep 16 for most scenes. For interiors with complex GI, I increase to 24. For product renders with shallow DoF, I decrease to 8-12.
+**Our typical setting**: We keep 16 for most scenes. For interiors with complex GI, we increase to 24. For product renders with shallow DoF, we decrease to 8-12.
 
 ## Setting 4: Light Samples Multiplier (LSM)
 
 LSM controls samples for direct lighting. Default is 2.
 
-**My usage**:
+**Our usage**:
 - **Quick test renders**: LSM 1 (faster, noisier shadows)
 - **Production renders**: LSM 2 (default — good balance)
 - **Hero shots with clean shadows**: LSM 3-4 (cleaner, slower)
@@ -78,13 +78,13 @@ MSI controls the maximum brightness of secondary GI samples. Default is 20.
 - **Higher MSI (20-30)**: Slower renders, more accurate reflections and caustics, more fireflies
 - **MSI 0**: Unbiased mode — not production-ready, noise never clears in some scenes
 
-**My approach**: I use 15 for most production renders — it's faster than 20 and the reflection difference is negligible. I only increase to 20 for hero shots with critical reflections.
+**Our approach**: We use 15 for most production renders — it's faster than 20 and the reflection difference is negligible. We only increase to 20 for hero shots with critical reflections.
 
 ## Setting 6: Noise Limit and Passes
 
 The Noise Limit tells Corona when to stop rendering. Lower values = cleaner = longer render time.
 
-**My settings**:
+**Our settings**:
 - **Test renders**: Noise Limit 5-10% (quick, noisy but usable for checking composition)
 - **Production renders with denoiser**: Noise Limit 3-5% (the denoiser cleans up remaining noise)
 - **Production renders without denoiser**: Noise Limit 1-2% (clean but slow)
@@ -110,7 +110,7 @@ Displacement is one of the most expensive operations in Corona. The settings in 
 - **Edge length**: Lower values = more tessellation = slower but smoother
 - **Max subdivision**: Limits how many times each triangle can be subdivided
 
-**My displacement settings**:
+**Our displacement settings**:
 - **Test renders**: Screen size 8px (less tessellation, faster)
 - **Production renders**: Screen size 4px (default — good balance)
 - **Hero close-ups**: Screen size 2px (more tessellation, smoother silhouettes)
@@ -146,7 +146,7 @@ If you've tweaked multiple settings and renders are slower than before, reset al
 
 ## Practical Example
 
-An architectural interior was taking 35 minutes per frame at 1080p. Here's what I changed:
+An architectural interior was taking 35 minutes per frame at 1080p. Here's what we changed:
 
 1. Verified Adaptive Light Solver was enabled (it was disabled from an old scene): 35 min → 12 min
 2. Applied downscaling method (4K render, 25% noise limit, denoise, save 50%): 12 min → 5 min
@@ -157,4 +157,4 @@ Final result: 35 minutes → 3.5 minutes per frame. The Adaptive Light Solver al
 
 ## Summary
 
-Corona render time optimization is about using the right settings for each scene type. My optimization order: verify Adaptive Light Solver is enabled → apply the downscaling method (2x resolution, high noise limit, denoise, save 50%) → set MSI to 15 → set LSM to 1-2 → use Conserve Memory mode for large scenes → optimize displacement settings → reset to defaults if experimentation makes things worse. The Adaptive Light Solver and downscaling method together provide the biggest gains — up to 10x faster in multi-light interior scenes.
+Corona render time optimization is about using the right settings for each scene type. Our optimization order: verify Adaptive Light Solver is enabled → apply the downscaling method (2x resolution, high noise limit, denoise, save 50%) → set MSI to 15 → set LSM to 1-2 → use Conserve Memory mode for large scenes → optimize displacement settings → reset to defaults if experimentation makes things worse. The Adaptive Light Solver and downscaling method together provide the biggest gains — up to 10x faster in multi-light interior scenes.

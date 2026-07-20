@@ -1,11 +1,11 @@
 ---
 title: "D5 Render Environment and Weather: HDRI Setup, Season System, and Global Illumination Tuning"
-excerpt: "D5 Render's environment and weather system produces inconsistent lighting, incorrect shadows, or GI artifacts. I cover the HDRI environment configuration, the season and weather system, D5 GI settings, and the ambient and exposure controls for consistent results."
+excerpt: "D5 Render's environment and weather system produces inconsistent lighting, incorrect shadows, or GI artifacts. We cover the HDRI environment configuration, the season and weather system, D5 GI settings, and the ambient and exposure controls for consistent results."
 category: "performance"
 softwareSlug: "d5-render"
 keyword: "D5 Render environment weather HDRI GI settings fix"
 slug: "d5-render-environment-weather-hdri-gi-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # D5 Render Environment and Weather: HDRI Setup, Season System, and Global Illumination Tuning
 
-I configure D5 Render environments for architecture and landscape projects, and the environment system is where I see the most confusion. D5's environment is more than just an HDRI — it includes a proprietary GI system, a weather system, a season system, and ambient controls that all interact. Getting them right is essential for consistent, professional-looking renders.
+We configure D5 Render environments for architecture and landscape projects, and the environment system is where we see the most confusion. D5's environment is more than just an HDRI — it includes a proprietary GI system, a weather system, a season system, and ambient controls that all interact. Getting them right is essential for consistent, professional-looking renders.
 
 ## D5 GI: Understanding the Global Illumination System
 
@@ -75,7 +75,7 @@ D5's sun system works alongside the HDRI environment:
 4. **Shadow softness**: Controls how soft the shadow edges are (higher = softer, lower = sharper)
 5. **Sun size**: Controls the apparent size of the sun disc (affects shadow penumbra)
 
-**For architectural renders, my standard settings**:
+**For architectural renders, our standard settings**:
 - Time: 10:00 AM or 2:00 PM (good shadow angles for facades)
 - Sun intensity: 1.0-1.5
 - Shadow softness: 0.3-0.5 (moderate softness — not too sharp, not too diffuse)
@@ -130,7 +130,7 @@ D5's ambient and exposure settings control the overall brightness and contrast o
 4. **Highlights**: Controls the brightness of the brightest areas
 5. **Shadows**: Controls the darkness of the darkest areas
 
-**My exposure workflow**:
+**Our exposure workflow**:
 1. Set the HDRI brightness and sun intensity first
 2. Then adjust exposure to match the desired overall brightness
 3. Use highlights and shadows for fine-tuning
@@ -140,7 +140,7 @@ D5's ambient and exposure settings control the overall brightness and contrast o
 1. Go to **Environment tab → Ambient**
 2. **Ambient intensity**: Adds a flat fill light to all surfaces
 3. Use sparingly — too much ambient light flattens the image
-4. I typically set ambient to 0.1-0.2 — just enough to lift very dark shadows
+4. We typically set ambient to 0.1-0.2 — just enough to lift very dark shadows
 
 ## Common Environment Issues
 
@@ -160,7 +160,7 @@ D5's ambient and exposure settings control the overall brightness and contrast o
 **Fix**: Use a higher-resolution HDRI (8K instead of 2K). The reflection quality is directly tied to the HDRI resolution — low-res HDRIs produce blurry reflections on glossy surfaces.
 
 **Issue: Fog obscures the building**
-**Fix**: Reduce fog density or lower the fog height. Fog should add atmosphere, not hide the subject. I typically use very low density (0.1-0.2) for architectural renders.
+**Fix**: Reduce fog density or lower the fog height. Fog should add atmosphere, not hide the subject. We typically use very low density (0.1-0.2) for architectural renders.
 
 ## Best Practices
 
@@ -174,4 +174,4 @@ D5's ambient and exposure settings control the overall brightness and contrast o
 
 ## Summary
 
-D5 Render's environment system combines HDRI, sun, weather, seasons, and D5 GI for comprehensive scene lighting. My setup process: select a D5 sky preset or load a custom HDRI → set sun position by time and location → adjust shadow softness → set the season → configure exposure and ambient → keep GI at Medium for editing, High for finals. For consistent results, fix light sources before adjusting exposure, and use D5's built-in vegetation for season-aware landscaping.
+D5 Render's environment system combines HDRI, sun, weather, seasons, and D5 GI for comprehensive scene lighting. Our setup process: select a D5 sky preset or load a custom HDRI → set sun position by time and location → adjust shadow softness → set the season → configure exposure and ambient → keep GI at Medium for editing, High for finals. For consistent results, fix light sources before adjusting exposure, and use D5's built-in vegetation for season-aware landscaping.

@@ -1,11 +1,11 @@
 ---
 title: "ANSYS Workbench Thermal Analysis: Steady-State Heat Transfer, Convection, and Thermal Stress"
-excerpt: "ANSYS Workbench's thermal analysis tools calculate temperature distribution and heat flux in components. I cover steady-state thermal setup, convection and radiation boundary conditions, thermal contact, coupled thermal-structural analysis, and result interpretation."
+excerpt: "ANSYS Workbench's thermal analysis tools calculate temperature distribution and heat flux in components. We cover steady-state thermal setup, convection and radiation boundary conditions, thermal contact, coupled thermal-structural analysis, and result interpretation."
 category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench thermal analysis steady-state heat transfer convection radiation thermal stress coupled structural temperature"
 slug: "ansys-workbench-thermal-analysis-steady-state-convection-thermal-stress"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ANSYS Workbench Thermal Analysis: Steady-State Heat Transfer, Convection, and Thermal Stress
 
-I've run thermal analyses in ANSYS for electronics cooling, engine components, heat exchangers, and building thermal performance. Thermal analysis is critical for any product that generates or is exposed to heat — from circuit boards to turbine blades. ANSYS Workbench provides both steady-state and transient thermal analysis, with the ability to couple thermal results to structural analysis for thermal stress evaluation.
+We've run thermal analyses in ANSYS for electronics cooling, engine components, heat exchangers, and building thermal performance. Thermal analysis is critical for any product that generates or is exposed to heat — from circuit boards to turbine blades. ANSYS Workbench provides both steady-state and transient thermal analysis, with the ability to couple thermal results to structural analysis for thermal stress evaluation.
 
 ## Thermal Analysis Overview
 

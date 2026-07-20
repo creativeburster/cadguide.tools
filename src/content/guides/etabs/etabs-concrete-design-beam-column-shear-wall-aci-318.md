@@ -1,11 +1,11 @@
 ---
 title: "ETABS Concrete Design: Beam, Column, and Shear Wall Design per ACI 318"
-excerpt: "ETABS concrete design tools design beams, columns, and shear walls per ACI 318. I cover design preferences, beam flexural and shear design, column interaction diagrams, shear wall design, and design output interpretation for reinforced concrete buildings."
+excerpt: "ETABS concrete design tools design beams, columns, and shear walls per ACI 318. We cover design preferences, beam flexural and shear design, column interaction diagrams, shear wall design, and design output interpretation for reinforced concrete buildings."
 category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS concrete design beam column shear wall ACI 318 flexural shear interaction diagram reinforced concrete design output"
 slug: "etabs-concrete-design-beam-column-shear-wall-aci-318"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ETABS Concrete Design: Beam, Column, and Shear Wall Design per ACI 318
 
-I've designed reinforced concrete buildings in ETABS for residential, commercial, and institutional projects. ETABS's concrete design module automates the design of beams, columns, and shear walls per ACI 318, generating reinforcement requirements and interaction diagrams. Understanding the design preferences, output interpretation, and code requirements is essential for producing safe and economical concrete designs.
+We've designed reinforced concrete buildings in ETABS for residential, commercial, and institutional projects. ETABS's concrete design module automates the design of beams, columns, and shear walls per ACI 318, generating reinforcement requirements and interaction diagrams. Understanding the design preferences, output interpretation, and code requirements is essential for producing safe and economical concrete designs.
 
 ## Concrete Design Overview
 

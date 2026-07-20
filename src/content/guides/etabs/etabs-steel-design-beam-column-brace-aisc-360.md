@@ -1,11 +1,11 @@
 ---
 title: "ETABS Steel Design: Beam, Column, and Brace Design per AISC 360"
-excerpt: "ETABS steel design tools design steel beams, columns, and braces per AISC 360. I cover design preferences, beam flexural and shear capacity, column interaction, brace design, seismic provisions for special steel systems, and design output interpretation."
+excerpt: "ETABS steel design tools design steel beams, columns, and braces per AISC 360. We cover design preferences, beam flexural and shear capacity, column interaction, brace design, seismic provisions for special steel systems, and design output interpretation."
 category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS steel design beam column brace AISC 360 flexural shear capacity interaction seismic provisions special steel systems output"
 slug: "etabs-steel-design-beam-column-brace-aisc-360"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ETABS Steel Design: Beam, Column, and Brace Design per AISC 360
 
-I've designed steel buildings in ETABS for office towers, industrial facilities, and seismic retrofit projects. ETABS's steel design module automates member design per AISC 360 (LRFD and ASD), including the seismic provisions for special steel systems. Understanding the design preferences, capacity checks, and output interpretation is essential for producing safe and economical steel building designs.
+We've designed steel buildings in ETABS for office towers, industrial facilities, and seismic retrofit projects. ETABS's steel design module automates member design per AISC 360 (LRFD and ASD), including the seismic provisions for special steel systems. Understanding the design preferences, capacity checks, and output interpretation is essential for producing safe and economical steel building designs.
 
 ## Steel Design Overview
 

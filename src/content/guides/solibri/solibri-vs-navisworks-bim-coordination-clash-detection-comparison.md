@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "solibri"
 keyword: "solibri vs navisworks bim coordination clash detection comparison"
 slug: "solibri-vs-navisworks-bim-coordination-clash-detection-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Solibri vs Navisworks: BIM Coordination Tool Comparison for Clash Detection
 
-I've coordinated BIM projects using both Solibri and Navisworks. They're both capable tools, but they approach clash detection from completely different philosophies. Choosing the wrong one wastes time and produces poor coordination results. Here's my comparison after years of using both.
+We've coordinated BIM projects using both Solibri and Navisworks. They're both capable tools, but they approach clash detection from completely different philosophies. Choosing the wrong one wastes time and produces poor coordination results. Here's our comparison after years of using both.
 
 ## Tool Overview
 
@@ -89,7 +89,7 @@ I've coordinated BIM projects using both Solibri and Navisworks. They're both ca
 
 ## Learning Curve
 
-**Solibri**: Steep learning curve. Understanding rulesets, filters, and the Ruleset Manager takes time. I spent two weeks learning Solibri before I was productive.
+**Solibri**: Steep learning curve. Understanding rulesets, filters, and the Ruleset Manager takes time. Most users need a couple of weeks to become productive.
 
 - Pros: Once learned, very efficient for complex coordination
 - Cons: Significant training investment, not intuitive for beginners
@@ -164,7 +164,7 @@ Many projects use both tools:
 
 This gives you the speed of Navisworks for routine coordination and the depth of Solibri for quality assurance.
 
-## My Recommendation
+## Our Recommendation
 
 For most Autodesk-centric projects, Navisworks is the practical choice — it's included in the AEC Collection, handles native Revit files, and is fast enough for weekly coordination.
 

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "meshlab"
 keyword: "meshlab crash large stl file fix"
 slug: "meshlab-crashes-large-stl-files-workarounds"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-12"
 sources:

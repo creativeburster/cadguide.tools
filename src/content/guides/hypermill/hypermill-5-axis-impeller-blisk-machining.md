@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "hypermill"
 keyword: "hypermill 5-axis impeller blisk multiblade machining programming"
 slug: "hypermill-5-axis-impeller-blisk-machining"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "autodesk-construction-cloud"
 keyword: "autodesk construction cloud permission management folder access roles"
 slug: "autodesk-construction-cloud-permission-management-folder-access-roles"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ACC Permission Management: Folder Access, Role Configuration, and External Collaborator Setup
 
-Permission management in ACC is not set-and-forget. I've audited ACC projects where former employees still had access six months after leaving, where contractors had admin rights to design folders, and where external consultants could see confidential financial documents. Bad permissions don't just cause data leaks — they cause accidental deletions, unauthorized changes, and audit failures. Here's how to set up permissions properly.
+Permission management in ACC is not set-and-forget. We've audited ACC projects where former employees still had access six months after leaving, where contractors had admin rights to design folders, and where external consultants could see confidential financial documents. Bad permissions don't just cause data leaks — they cause accidental deletions, unauthorized changes, and audit failures. Here's how to set up permissions properly.
 
 ## Understanding ACC Permission Levels
 
@@ -188,7 +188,7 @@ Clients should see coordination models and final reports, not work-in-progress f
 
 ### Former Employees Still Have Access
 
-I've found former employees with active access in 80% of the ACC projects I've audited. Make it a policy to remove access on the employee's last day, not "when we get around to it."
+We've found former employees with active access in 80% of the ACC projects we've audited. Make it a policy to remove access on the employee's last day, not "when we get around to it."
 
 ## Best Practices
 

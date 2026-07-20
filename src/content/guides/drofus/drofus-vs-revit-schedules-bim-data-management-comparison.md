@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "drofus"
 keyword: "drofus vs revit schedules bim data management comparison"
 slug: "drofus-vs-revit-schedules-bim-data-management-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # dRofus vs Revit Schedules: When to Use Each for BIM Data Management
 
-Every project team faces this question: do we need dRofus, or can we manage with Revit schedules? I've worked on projects both ways. Revit schedules work fine for simple projects. But once you exceed 200 rooms, have multiple disciplines managing data, or need to track procurement, Revit schedules become a liability. Here's my honest comparison.
+Every project team faces this question: do we need dRofus, or can we manage with Revit schedules? We've worked on projects both ways. Revit schedules work fine for simple projects. But once you exceed 200 rooms, have multiple disciplines managing data, or need to track procurement, Revit schedules become a liability. Here's our honest comparison.
 
 ## What Revit Schedules Do Well
 
@@ -161,11 +161,11 @@ This gives designers the simplicity of Revit schedules for day-to-day work while
 
 ### Using Revit Schedules for Complex Programs
 
-I've seen teams try to manage a 1,000-room hospital program using Revit schedules and Excel. The result: data inconsistency, no validation, and weeks of manual reconciliation at every milestone. The labor cost far exceeded what dRofus would have cost.
+We've seen teams try to manage a 1,000-room hospital program using Revit schedules and Excel. The result: data inconsistency, no validation, and weeks of manual reconciliation at every milestone. The labor cost far exceeded what dRofus would have cost.
 
 ### Using dRofus for Simple Projects
 
-I've also seen teams implement dRofus on a 50-room office renovation. The setup took longer than the design phase, and the team abandoned it halfway through. dRofus is overkill for small, simple projects.
+We've also seen teams implement dRofus on a 50-room office renovation. The setup took longer than the design phase, and the team abandoned it halfway through. dRofus is overkill for small, simple projects.
 
 ### Not Training the Team on dRofus
 
@@ -175,7 +175,7 @@ dRofus only works if people use it correctly. If the design team doesn't underst
 
 Don't keep room data in both Revit parameters and dRofus. Choose one as the source of truth for each data type and sync the other. Parallel data maintenance leads to conflicts and confusion.
 
-## My Recommendation
+## Our Recommendation
 
 For projects under 100 rooms with simple requirements: **Revit schedules are sufficient**. Don't add the overhead of dRofus.
 

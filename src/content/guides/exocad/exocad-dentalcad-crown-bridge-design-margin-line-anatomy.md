@@ -1,11 +1,11 @@
 ---
 title: "exocad DentalCAD Crown and Bridge Design: Margin Line, Reduction, and Anatomy Workflow"
-excerpt: "exocad DentalCAD's crown and bridge workflow covers margin line detection, virtual articulator setup, anatomy library selection, and contact adjustment. I cover the complete single crown and 3-unit bridge design workflow with parameter tuning for production-ready restorations."
+excerpt: "exocad DentalCAD's crown and bridge workflow covers margin line detection, virtual articulator setup, anatomy library selection, and contact adjustment. We cover the complete single crown and 3-unit bridge design workflow with parameter tuning for production-ready restorations."
 category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad DentalCAD crown bridge design margin line reduction anatomy workflow"
 slug: "exocad-dentalcad-crown-bridge-design-margin-line-anatomy"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # exocad DentalCAD Crown and Bridge Design: Margin Line, Reduction, and Anatomy Workflow
 
-I've designed hundreds of crowns and bridges in exocad DentalCAD, from single units to full-arch restorations. exocad is one of the most widely used dental CAD systems, prized for its flexibility and open architecture — it works with virtually any scanner and mill. The crown and bridge workflow is the foundation of dental CAD design, and mastering it is essential before moving to more complex restorations like implants and full dentures.
+We've designed hundreds of crowns and bridges in exocad DentalCAD, from single units to full-arch restorations. exocad is one of the most widely used dental CAD systems, prized for its flexibility and open architecture — it works with virtually any scanner and mill. The crown and bridge workflow is the foundation of dental CAD design, and mastering it is essential before moving to more complex restorations like implants and full dentures.
 
 ## exocad DentalCAD Overview
 

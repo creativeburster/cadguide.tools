@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "solibri"
 keyword: "solibri model checker ifc import ruleset clash detection workflow"
 slug: "solibri-model-checker-ifc-import-ruleset-clash-detection-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Solibri Model Checker: IFC Model Import, Ruleset Configuration, and Clash Detection Workflow
 
-Solibri is the most powerful BIM model checker I've used. But power comes with complexity. I've seen coordinators open Solibri, click "Check Model," and get 5,000 clashes — most of which are false positives. Without proper ruleset configuration, Solibri creates noise instead of signal. Here's how to set it up for effective BIM coordination.
+Solibri is the most powerful BIM model checker we've used. But power comes with complexity. We've seen coordinators open Solibri, click "Check Model," and get 5,000 clashes — most of which are false positives. Without proper ruleset configuration, Solibri creates noise instead of signal. Here's how to set it up for effective BIM coordination.
 
 ## Understanding Solibri's Approach
 

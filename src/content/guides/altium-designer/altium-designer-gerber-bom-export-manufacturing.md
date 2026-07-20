@@ -1,11 +1,11 @@
 ---
 title: "Altium Designer Gerber and BOM Export: Manufacturing File Generation Checklist"
-excerpt: "Generating manufacturing files in Altium isn't just clicking 'Export.' I cover the Gerber, drill, pick-and-place, and BOM export settings I verify before sending a design to fabrication."
+excerpt: "Generating manufacturing files in Altium isn't just clicking 'Export.' we cover the Gerber, drill, pick-and-place, and BOM export settings we verify before sending a design to fabrication."
 category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer Gerber export BOM manufacturing files"
 slug: "altium-designer-gerber-bom-export-manufacturing"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-19"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Altium Designer Gerber and BOM Export: Manufacturing File Generation Checklist
 
-I've sent over 200 designs to PCB fabrication and assembly houses, and I've made every export mistake possible: missing drill files, wrong Gerber format, BOM with incorrect part numbers, pick-and-place files with wrong rotations. Each mistake caused a delay or a manufacturing error. After a particularly painful experience where a wrong pick-and-place rotation resulted in 500 boards with all capacitors placed backwards, I created a manufacturing file checklist that I now follow for every design. Here it is.
+We've sent over 200 designs to PCB fabrication and assembly houses, and we've made every export mistake possible: missing drill files, wrong Gerber format, BOM with incorrect part numbers, pick-and-place files with wrong rotations. Each mistake caused a delay or a manufacturing error. After a particularly painful experience where a wrong pick-and-place rotation resulted in 500 boards with all capacitors placed backwards, we created a manufacturing file checklist that we now follow for every design. Here it is.
 
 ## Pre-Export Verification
 
@@ -39,7 +39,7 @@ Before generating any manufacturing files, verify the design is complete:
 **General Tab**:
 - **Units**: Inches or Millimeters (match your manufacturer's preference — most accept both)
 - **Format**: 2:5 (2 integer digits, 5 decimal digits) for inches, or 4:4 for millimeters
-- I use 2:5 inches for US manufacturers and 4:4 millimeters for international manufacturers
+- we use 2:5 inches for US manufacturers and 4:4 millimeters for international manufacturers
 
 **Layers Tab**:
 - Select layers to export:
@@ -131,7 +131,7 @@ This is where the most expensive mistakes happen. A wrong rotation means compone
 3. Cross-check a few components against the PCB layout:
    - Find a component with a known orientation (e.g., an electrolytic capacitor with polarity marking)
    - Verify its rotation in the CSV matches the PCB layout
-   - This is how I caught the backwards capacitor issue — the rotation was 180° off
+   - This is how we caught the backwards capacitor issue — the rotation was 180° off
 
 ## BOM Export
 

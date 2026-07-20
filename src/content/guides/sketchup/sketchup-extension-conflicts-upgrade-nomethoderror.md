@@ -1,11 +1,11 @@
 ---
 title: "SketchUp Extension Conflicts After Version Upgrade: NoMethodError and Migration Issues"
-excerpt: "After upgrading SketchUp, extensions throw NoMethodError or stop loading entirely. I cover the clean installation process, Ruby API compatibility checks, and the extension isolation method that identifies the culprit."
+excerpt: "After upgrading SketchUp, extensions throw NoMethodError or stop loading entirely. We cover the clean installation process, Ruby API compatibility checks, and the extension isolation method that identifies the culprit."
 category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp extension conflict NoMethodError upgrade migration"
 slug: "sketchup-extension-conflicts-upgrade-nomethoderror"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

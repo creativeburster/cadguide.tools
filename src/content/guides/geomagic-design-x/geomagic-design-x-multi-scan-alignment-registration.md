@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "geomagic-design-x"
 keyword: "geomagic design x scan alignment registration multiple scans"
 slug: "geomagic-design-x-multi-scan-alignment-registration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

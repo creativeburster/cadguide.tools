@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "recap-pro"
 keyword: "recap pro scan to bim point cloud cleaning clipping decimation export"
 slug: "recap-pro-scan-to-bim-cleaning-clipping-point-cloud-preparation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ReCap Pro Scan-to-BIM: Cleaning, Clipping, and Preparing Point Clouds for As-Built Modeling
 
-The quality of your Scan-to-BIM model depends on the quality of the point cloud you start with. I've seen modelers spend hours trying to trace walls from a noisy, cluttered point cloud. Thirty minutes of cleaning in ReCap Pro saves hours of modeling frustration. Here's my preparation workflow.
+The quality of your Scan-to-BIM model depends on the quality of the point cloud you start with. We've seen modelers spend hours trying to trace walls from a noisy, cluttered point cloud. Thirty minutes of cleaning in ReCap Pro saves hours of modeling frustration. Here's our preparation workflow.
 
 ## Why Point Cloud Cleaning Matters
 

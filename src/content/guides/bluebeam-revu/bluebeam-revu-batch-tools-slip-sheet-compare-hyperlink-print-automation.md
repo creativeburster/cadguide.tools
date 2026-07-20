@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bluebeam-revu"
 keyword: "bluebeam revu batch tools"
 slug: "bluebeam-revu-batch-tools-slip-sheet-compare-hyperlink-print-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

@@ -1,11 +1,11 @@
 ---
 title: "Bambu Studio AMS Multi-Color Printing: Setup, Wipe Tower Configuration, and Troubleshooting"
-excerpt: "The Bambu Lab AMS enables automated multi-color printing, but successful multi-color prints require correct filament assignment, wipe tower tuning, and understanding the most common AMS failures. I cover AMS setup in Bambu Studio, purge volume optimization, and troubleshooting filament loading and color bleed issues."
+excerpt: "The Bambu Lab AMS enables automated multi-color printing, but successful multi-color prints require correct filament assignment, wipe tower tuning, and understanding the most common AMS failures. We cover AMS setup in Bambu Studio, purge volume optimization, and troubleshooting filament loading and color bleed issues."
 category: "troubleshooting"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio AMS multi-color printing setup troubleshooting"
 slug: "bambu-studio-ams-multi-color-setup-troubleshooting"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # Bambu Studio AMS Multi-Color Printing: Setup, Wipe Tower Configuration, and Troubleshooting
 
-I run multiple Bambu Lab printers with AMS units for production multi-color printing, and the AMS system is remarkably reliable once you understand its quirks. But getting from unboxing to consistently clean multi-color prints requires proper setup in Bambu Studio and an understanding of the failure modes that can ruin a 10-hour print at hour 3.
+We run multiple Bambu Lab printers with AMS units for production multi-color printing, and the AMS system is remarkably reliable once you understand its quirks. But getting from unboxing to consistently clean multi-color prints requires proper setup in Bambu Studio and an understanding of the failure modes that can ruin a 10-hour print at hour 3.
 
 ## AMS Setup in Bambu Studio
 
@@ -54,9 +54,9 @@ In Bambu Studio, find these under **Others → Wipe tower**:
 
 - **Wipe tower minimal volume**: Default is around 15 mm³. This controls the minimum amount of filament purged during each color change. Increase for high-contrast color changes (e.g., black to white), decrease for similar colors.
 
-- **Wipe tower extruder**: Which filament slot to use for the wipe tower structure itself. I use the same slot as the first color to avoid extra purging.
+- **Wipe tower extruder**: Which filament slot to use for the wipe tower structure itself. We use the same slot as the first color to avoid extra purging.
 
-- **Wipe tower width**: Default is 60 mm. I keep this at 60 mm for stability. A narrower wipe tower is less stable and more likely to detach.
+- **Wipe tower width**: Default is 60 mm. We keep this at 60 mm for stability. A narrower wipe tower is less stable and more likely to detach.
 
 - **Wipe tower rotation angle**: Rotate the wipe tower if it interferes with the model or other objects on the build plate.
 
@@ -64,14 +64,14 @@ In Bambu Studio, find these under **Others → Wipe tower**:
 
 The purge volume is the amount of filament flushed during each color change. Too little causes color bleed; too much wastes filament and increases print time.
 
-Bambu Studio automatically calculates purge volumes based on the filament types involved. However, I tune these manually:
+Bambu Studio automatically calculates purge volumes based on the filament types involved. However, we tune these manually:
 
 - **Same color family** (light gray to dark gray): Reduce purge volume by 30-40%
 - **High contrast** (white to black, yellow to blue): Keep default or increase by 10%
 - **Transparent to opaque**: Increase purge volume by 20%
 - **PLA to PETG or vice versa**: Increase significantly — different materials don't mix well
 
-The "flushing multiplier" in Bambu Studio's filament settings lets you scale all purge volumes up or down. I set this to 0.7 for most PLA multi-color prints to reduce waste while maintaining acceptable color separation.
+The "flushing multiplier" in Bambu Studio's filament settings lets you scale all purge volumes up or down. We set this to 0.7 for most PLA multi-color prints to reduce waste while maintaining acceptable color separation.
 
 ## Multi-Color Without AMS
 

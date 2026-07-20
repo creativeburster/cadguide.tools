@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "varicad"
 keyword: "varicad 2d drawing generation"
 slug: "varicad-2d-drawing-generation-views-dimensions-gdt-dwg-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

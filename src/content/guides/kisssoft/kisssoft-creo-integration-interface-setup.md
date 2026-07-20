@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "kisssoft"
 keyword: "kisssoft creo integration interface setup troubleshooting"
 slug: "kisssoft-creo-integration-interface-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "6 min read"
 date: "2026-07-12"
 sources:

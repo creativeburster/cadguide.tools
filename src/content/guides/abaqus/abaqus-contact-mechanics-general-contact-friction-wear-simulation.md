@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "abaqus"
 keyword: "abaqus contact mechanics"
 slug: "abaqus-contact-mechanics-general-contact-friction-wear-simulation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Abaqus Contact Mechanics: General Contact, Friction, and Wear Simulation
 
-Contact modeling in FEA is honestly a pain. I've spent more time debugging contact convergence issues than I care to admit. But Abaqus makes it easier than most — its general contact feature automatically detects contact pairs, which saves you from manually defining every possible interaction in a complex assembly. Let me walk you through how I set up contact, choose friction models, and deal with the common issues that drive people crazy.
+Contact modeling in FEA is honestly a pain. We've spent more time debugging contact convergence issues than we care to admit. But Abaqus makes it easier than most — its general contact feature automatically detects contact pairs, which saves you from manually defining every possible interaction in a complex assembly. Let us walk you through how we set up contact, choose friction models, and deal with the common issues that drive people crazy.
 
 ## Contact Formulations
 
@@ -271,4 +271,4 @@ Contact modeling in FEA is honestly a pain. I've spent more time debugging conta
 
 ## Wrapping Up
 
-Contact is one of those things where experience really matters. I've found that starting with general contact and penalty formulation solves 80% of problems. The other 20% — chattering, penetration, stick-slip — those need contact damping, refined meshes, or a different formulation. Always check CPRESS and COPEN in your results. If you see nodes penetrating the master surface, bump up the penalty stiffness. If contact keeps opening and closing, add some damping. And if you're doing wear simulation with UMESHMOTION, test it on a simple model first — it's powerful but tricky to get right.
+Contact is one of those things where experience really matters. We've found that starting with general contact and penalty formulation solves 80% of problems. The other 20% — chattering, penetration, stick-slip — those need contact damping, refined meshes, or a different formulation. Always check CPRESS and COPEN in your results. If you see nodes penetrating the master surface, bump up the penalty stiffness. If contact keeps opening and closing, add some damping. And if you're doing wear simulation with UMESHMOTION, test it on a simple model first — it's powerful but tricky to get right.

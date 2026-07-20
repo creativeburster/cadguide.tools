@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ironcad"
 keyword: "ironcad triball direct modeling parametric"
 slug: "ironcad-triball-direct-modeling-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IronCAD Direct Modeling Workflow: When to Use Triball vs Parametric Features
 
-IronCAD is unique among mid-range 3D CAD tools — it offers both direct modeling (via the Triball tool) and parametric history-based modeling in the same environment. Most CAD systems force you to choose one paradigm. IronCAD lets you switch freely. After three years of using IronCAD, I've learned when each approach wins and how to combine them.
+IronCAD is unique among mid-range 3D CAD tools — it offers both direct modeling (via the Triball tool) and parametric history-based modeling in the same environment. Most CAD systems force you to choose one paradigm. IronCAD lets you switch freely. After three years of using IronCAD, we've learned when each approach wins and how to combine them.
 
 ## Understanding the Two Paradigms
 

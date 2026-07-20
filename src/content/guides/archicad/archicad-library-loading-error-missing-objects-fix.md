@@ -1,11 +1,11 @@
 ---
 title: "ArchiCAD Library Loading Errors: Missing Objects, Duplicate Libraries, and Migration Fixes"
-excerpt: "After upgrading ArchiCAD, library objects show as missing or duplicated, causing project files to break. I cover the Library Manager workflow, duplicate library resolution, and the migration strategy that prevents missing object errors."
+excerpt: "After upgrading ArchiCAD, library objects show as missing or duplicated, causing project files to break. We cover the Library Manager workflow, duplicate library resolution, and the migration strategy that prevents missing object errors."
 category: "troubleshooting"
 softwareSlug: "archicad"
 keyword: "ArchiCAD library loading error missing objects duplicate migration"
 slug: "archicad-library-loading-error-missing-objects-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:

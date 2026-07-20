@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ironcad"
 keyword: "ironcad catalog smart components block library"
 slug: "ironcad-catalog-smart-components-block-library"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IronCAD Catalog System: Building Reusable Smart Components and Block Libraries
 
-IronCAD's catalog system is one of its most underrated features. Instead of importing block files one at a time, you build a visual library of drag-and-drop components that auto-size and auto-position. I built a catalog of 200+ standard parts for our shop — now a designer can insert a correctly-sized bearing housing in 3 clicks. Here's how to set it up.
+IronCAD's catalog system is one of its most underrated features. Instead of importing block files one at a time, you build a visual library of drag-and-drop components that auto-size and auto-position. With a catalog of a few hundred standard parts, a designer can insert a correctly-sized bearing housing in a few clicks. Here's how to set it up.
 
 ## What Is an IronCAD Catalog?
 

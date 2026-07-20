@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-hyperworks"
 keyword: "altair hyperview fea post-processing stress contour result interpretation report"
 slug: "altair-hyperview-fea-post-processing-stress-contour-result-interpretation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Altair HyperView: FEA Post-Processing, Stress Contours, and Result Interpretation
 
-Running the solver is half the job. Interpreting the results is the other half — and it's the half that matters to the design team. I've seen engineers present stress contours without understanding what they mean. "The red area is bad" isn't analysis. You need to know why it's red, whether it's real, and what to do about it. Here's my guide to FEA post-processing in HyperView.
+Running the solver is half the job. Interpreting the results is the other half — and it's the half that matters to the design team. We've seen engineers present stress contours without understanding what they mean. "The red area is bad" isn't analysis. You need to know why it's red, whether it's real, and what to do about it. Here's our guide to FEA post-processing in HyperView.
 
 ## What HyperView Does
 
@@ -135,7 +135,7 @@ Reaction forces verify that the loads are applied correctly:
 2. Select the support nodes.
 3. HyperView displays:
    - **Fx, Fy, Fz**: Reaction forces at each support
-   - **Mx, My, Mz**: Reaction moments at each support
+   - **Mx, Our, Mz**: Reaction moments at each support
 4. Check:
    - **Force balance**: Sum of reactions = sum of applied loads
    - **Direction**: Reactions should oppose the applied loads

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bluebeam-revu"
 keyword: "bluebeam studio sessions collaboration"
 slug: "bluebeam-revu-studio-sessions-real-time-collaboration-design-review-rfi"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

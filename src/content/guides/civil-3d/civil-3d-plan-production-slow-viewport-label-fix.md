@@ -1,11 +1,11 @@
 ---
 title: "Civil 3D Plan Production Slow: Viewports, Sheet Sets, and Label Density Optimization"
-excerpt: "Civil 3D plan sheets take minutes to open and plot, with label density and viewport complexity causing the biggest slowdowns. I cover the label weeding, viewport freeze, and sheet set manager settings that speed up plan production."
+excerpt: "Civil 3D plan sheets take minutes to open and plot, with label density and viewport complexity causing the biggest slowdowns. We cover the label weeding, viewport freeze, and sheet set manager settings that speed up plan production."
 category: "performance"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D plan production slow viewport sheet set label density"
 slug: "civil-3d-plan-production-slow-viewport-label-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

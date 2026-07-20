@@ -1,11 +1,11 @@
 ---
 title: "SolidWorks Start Sketch Shortcut and Essential Keyboard Commands Guide"
-excerpt: "The S key is SolidWorks' most powerful shortcut — but there's no default key for starting a sketch. I cover how to set up a Start Sketch shortcut, the S-key toolbar system, mouse gestures, and the keyboard shortcuts every SolidWorks user should know."
+excerpt: "The S key is SolidWorks' most powerful shortcut — but there's no default key for starting a sketch. We cover how to set up a Start Sketch shortcut, the S-key toolbar system, mouse gestures, and the keyboard shortcuts every SolidWorks user should know."
 category: "workflow"
 softwareSlug: "solidworks"
 keyword: "what is the keyboard shortcut for start sketch in solidworks"
 slug: "solidworks-start-sketch-shortcut-keyboard-guide"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-03"
 sources:
@@ -41,10 +41,10 @@ Since there's no default key for starting a sketch, here's how to assign one:
 3. In the search box, type "Sketch"
 4. Find the command named **"Sketch"** (this is the Start Sketch command)
 5. Click in the **Shortcut** column next to it
-6. Press the key combination you want to assign (I recommend `Shift+S` or just `S` if you prefer direct access over the toolbar)
+6. Press the key combination you want to assign (we recommend `Shift+S` or just `S` if you prefer direct access over the toolbar)
 7. Click **OK** to save
 
-**My recommendation:** Don't assign a single key to Start Sketch — it conflicts with the S-key toolbar. Instead, add "Sketch" to your S-key toolbar:
+**Our recommendation:** Don't assign a single key to Start Sketch — it conflicts with the S-key toolbar. Instead, add "Sketch" to your S-key toolbar:
 
 1. Go to **Tools → Customize**
 2. Switch to the **Commands** tab
@@ -56,7 +56,7 @@ Now when you press S, the Start Sketch command is right there at your cursor. On
 
 ## Essential SolidWorks Keyboard Shortcuts
 
-Here are the shortcuts I use every single day. Learn these and your modeling speed will increase noticeably.
+Here are the shortcuts we use every single day. Learn these and your modeling speed will increase noticeably.
 
 ### Navigation Shortcuts
 
@@ -136,7 +136,7 @@ With 8 gestures, you get additional directions for Revolve, Loft, Shell, and mor
 
 ## Customizing the S-Key Toolbar for Maximum Speed
 
-The S-key toolbar is where you should invest your customization time. Here's my recommended setup:
+The S-key toolbar is where you should invest your customization time. Here's our recommended setup:
 
 **Part context S-key toolbar:**
 - Sketch (start sketch)

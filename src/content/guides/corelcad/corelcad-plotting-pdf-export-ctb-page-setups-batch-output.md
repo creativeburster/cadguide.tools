@@ -5,7 +5,7 @@ category: "printing"
 softwareSlug: "corelcad"
 keyword: "corelcad plotting pdf export"
 slug: "corelcad-plotting-pdf-export-ctb-page-setups-batch-output"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:
@@ -16,9 +16,9 @@ sources:
 
 # CorelCAD Plotting and PDF Export: CTB Configuration, Page Setups, and Batch Output
 
-Plotting is one of those tasks that seems straightforward until you're producing a 50-sheet drawing set and half the pages come out with wrong lineweights or missing viewport borders. I ran into this exact scenario when migrating a firm from AutoCAD LT to CorelCAD. The CTB files transferred over fine, but the page setups and PDF driver behavior were different enough to cause a day of troubleshooting before everything output correctly.
+Plotting is one of those tasks that seems straightforward until you're producing a 50-sheet drawing set and half the pages come out with wrong lineweights or missing viewport borders. We ran into this exact scenario when migrating a firm from AutoCAD LT to CorelCAD. The CTB files transferred over fine, but the page setups and PDF driver behavior were different enough to cause a day of troubleshooting before everything output correctly.
 
-A user on Reddit's r/VIDEOENGINEERING who tried CorelCAD as an AutoCAD LT replacement for wire diagrams noted that reading and writing DWG files worked without problems — and that matches my experience for geometry. The plotting side, however, has some quirks. CorelCAD's PDF driver handles vector content well but can struggle with dense hatch patterns at high DPI, producing unexpectedly large file sizes. The PUBLISH command works similarly to AutoCAD's, but the interface is slightly different and takes some getting used to.
+A user on Reddit's r/VIDEOENGINEERING who tried CorelCAD as an AutoCAD LT replacement for wire diagrams noted that reading and writing DWG files worked without problems — and that matches our experience for geometry. The plotting side, however, has some quirks. CorelCAD's PDF driver handles vector content well but can struggle with dense hatch patterns at high DPI, producing unexpectedly large file sizes. The PUBLISH command works similarly to AutoCAD's, but the interface is slightly different and takes some getting used to.
 
 This guide covers the complete plotting workflow in CorelCAD, from CTB creation to batch PDF export, with attention to the specific issues that come up during migration from AutoCAD.
 

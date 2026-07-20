@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "actcad"
 keyword: "actcad crash on startup fix"
 slug: "actcad-crashing-on-startup-diagnostic-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ActCAD Crashing on Startup: Diagnostic and Fix Guide
 
-A client called me last month because ActCAD was crashing before the interface even loaded. The splash screen appeared, then vanished — no error message, no crash dump. This is one of the hardest issues to diagnose because you can't get into the program to check settings. Here's the diagnostic sequence I use, ordered from most likely to least likely.
+A common ActCAD failure is crashing before the interface even loads: the splash screen appears, then vanishes — no error message, no crash dump. This is one of the hardest issues to diagnose because you can't get into the program to check settings. Here's the diagnostic sequence we use, ordered from most likely to least likely.
 
 ## Step 1: Reset the User Profile
 

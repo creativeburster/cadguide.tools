@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "midas-gen"
 keyword: "midas gen shear wall design"
 slug: "midas-gen-concrete-shear-wall-design-meshed-walls-pier-boundary-elements"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Gen Concrete Shear Wall Design: Meshed Walls, Pier Forces, and Boundary Elements
 
-Shear wall design in MIDAS Gen took me a while to get comfortable with. The meshed wall approach is powerful but the workflow is different from what I was used to in ETABS. Once I understood how pier forces are extracted from the meshed model and how boundary elements are designed, it became my preferred method for seismic shear wall design. Let me walk you through it.
+Shear wall design in MIDAS Gen took us a while to get comfortable with. The meshed wall approach is powerful but the workflow is different from what we were used to in ETABS. Once we understood how pier forces are extracted from the meshed model and how boundary elements are designed, it became our preferred method for seismic shear wall design. Let us walk you through it.
 
 ## Wall Modeling
 
@@ -276,4 +276,4 @@ For walls connected by coupling beams (lintels over openings):
 
 ## Wrapping Up
 
-Shear wall design in MIDAS Gen took me a while to get comfortable with, but the meshed wall approach gives you much more accurate force distribution than the simple pier model. The key things I've learned: mesh fine enough for accurate results, label your piers carefully so the force output is useful, and don't skimp on boundary element design in seismic zones — that's where walls fail when they fail.
+Shear wall design in MIDAS Gen took us a while to get comfortable with, but the meshed wall approach gives you much more accurate force distribution than the simple pier model. The key things we've learned: mesh fine enough for accurate results, label your piers carefully so the force output is useful, and don't skimp on boundary element design in seismic zones — that's where walls fail when they fail.

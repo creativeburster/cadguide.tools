@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "plasticity"
 keyword: "plasticity vs fusion 360 concept modeling product design comparison"
 slug: "plasticity-vs-fusion-360-concept-modeling-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

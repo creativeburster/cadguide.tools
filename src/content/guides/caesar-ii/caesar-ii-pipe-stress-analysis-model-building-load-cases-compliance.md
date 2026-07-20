@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii pipe stress analysis model building load cases code compliance"
 slug: "caesar-ii-pipe-stress-analysis-model-building-load-cases-compliance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CAESAR II Pipe Stress Analysis: Model Building, Load Cases, and Code Compliance
 
-Pipe stress analysis is not optional — it's a code requirement. ASME B31.3 requires stress analysis for piping systems that exceed certain thresholds. CAESAR II is the industry standard for this analysis. I've modeled hundreds of piping systems in CAESAR II, from simple pump discharge lines to complex refinery header systems. Here's my complete workflow.
+Pipe stress analysis is not optional — it's a code requirement. ASME B31.3 requires stress analysis for piping systems that exceed certain thresholds. CAESAR II is the industry standard for this analysis. We've modeled hundreds of piping systems in CAESAR II, from simple pump discharge lines to complex refinery header systems. Here's our complete workflow.
 
 ## Why Pipe Stress Analysis Matters
 
@@ -261,7 +261,7 @@ Equipment nozzle loads must be within manufacturer allowables:
 1. Go to **Output** → **Nozzle Load Report**.
 2. For each equipment connection:
    - **Force (Fx, Fy, Fz)**: Piping forces on the nozzle
-   - **Moment (Mx, My, Mz)**: Piping moments on the nozzle
+   - **Moment (Mx, Our, Mz)**: Piping moments on the nozzle
 3. Compare with manufacturer allowables:
    - **API 610**: For pump nozzles
    - **API 617**: For compressor nozzles

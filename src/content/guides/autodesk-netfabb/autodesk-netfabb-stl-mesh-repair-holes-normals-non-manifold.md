@@ -1,11 +1,11 @@
 ---
 title: "Autodesk Netfabb STL Mesh Repair: Fixing Holes, Inverted Normals, and Non-Manifold Edges"
-excerpt: "Netfabb's mesh repair tools fix the most common STL errors: holes, inverted normals, non-manifold edges, and self-intersections. I cover the automated repair workflow, manual repair tools, and the specific checks needed to ensure a mesh is 3D-print-ready."
+excerpt: "Netfabb's mesh repair tools fix the most common STL errors: holes, inverted normals, non-manifold edges, and self-intersections. We cover the automated repair workflow, manual repair tools, and the specific checks needed to ensure a mesh is 3D-print-ready."
 category: "troubleshooting"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb STL mesh repair holes inverted normals non-manifold edges fix"
 slug: "autodesk-netfabb-stl-mesh-repair-holes-normals-non-manifold"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # Autodesk Netfabb STL Mesh Repair: Fixing Holes, Inverted Normals, and Non-Manifold Edges
 
-I've repaired thousands of STL files in Netfabb for 3D printing, and the mesh errors I encounter fall into a predictable set of categories. Netfabb is one of the most capable mesh repair tools available — its automated repair function is even embedded in other software like Formlabs PreForm. Understanding the repair workflow and the specific error types ensures your models are print-ready before they reach the slicer.
+We've repaired thousands of STL files in Netfabb for 3D printing, and the mesh errors we encounter fall into a predictable set of categories. Netfabb is one of the most capable mesh repair tools available — its automated repair function is even embedded in other software like Formlabs PreForm. Understanding the repair workflow and the specific error types ensures your models are print-ready before they reach the slicer.
 
 ## Common Mesh Errors
 

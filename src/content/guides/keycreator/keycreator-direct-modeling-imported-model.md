@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "keycreator"
 keyword: "keycreator direct modeling imported model edit"
 slug: "keycreator-direct-modeling-imported-model"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # KeyCreator Direct Modeling: Editing Imported Models Without Feature Trees
 
-KeyCreator (formerly CADKEY) was built on direct modeling before it was trendy. While SolidWorks and Creo were building parametric feature trees, KeyCreator was pushing and pulling faces directly. I use it specifically for modifying client-supplied STEP files where I don't have the original feature tree. Here's the workflow.
+KeyCreator (formerly CADKEY) was built on direct modeling before it was trendy. While SolidWorks and Creo were building parametric feature trees, KeyCreator was pushing and pulling faces directly. We use it specifically for modifying client-supplied STEP files where we don't have the original feature tree. Here's the workflow.
 
 ## Why KeyCreator for Imported Models?
 

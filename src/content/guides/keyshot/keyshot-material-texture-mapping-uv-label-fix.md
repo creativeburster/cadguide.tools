@@ -1,11 +1,11 @@
 ---
 title: "KeyShot Material and Texture Mapping: UV Projection, Label Alignment, and Environment Mapping Fixes"
-excerpt: "KeyShot materials show incorrect texture mapping, labels appear misaligned, and environment reflections look wrong. I cover the UV projection types, label mapping workflow, and environment mapping configuration for product visualization."
+excerpt: "KeyShot materials show incorrect texture mapping, labels appear misaligned, and environment reflections look wrong. We cover the UV projection types, label mapping workflow, and environment mapping configuration for product visualization."
 category: "troubleshooting"
 softwareSlug: "keyshot"
 keyword: "KeyShot material texture mapping UV label environment fix"
 slug: "keyshot-material-texture-mapping-uv-label-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # KeyShot Material and Texture Mapping: UV Projection, Label Alignment, and Environment Mapping Fixes
 
-I work with industrial designers who use KeyShot for product visualization, and texture mapping is the area where I see the most issues. A product model comes in from SolidWorks or Rhino, the designer applies a material, and the texture is stretched, misaligned, or oriented incorrectly. Getting texture mapping right in KeyShot requires understanding the projection types and knowing when to use each one.
+We work with industrial designers who use KeyShot for product visualization, and texture mapping is the area where we see the most issues. A product model comes in from SolidWorks or Rhino, the designer applies a material, and the texture is stretched, misaligned, or oriented incorrectly. Getting texture mapping right in KeyShot requires understanding the projection types and knowing when to use each one.
 
 ## Understanding KeyShot's Texture Mapping Types
 
@@ -53,7 +53,7 @@ KeyShot offers five texture mapping types. Choosing the right one is the first s
 
 ## Fix 1: Texture Stretched on CAD Imports
 
-This is the most common issue I encounter. CAD models from SolidWorks, Rhino, or Inventor import without UV coordinates, and KeyShot's default mapping produces stretched textures.
+This is the most common issue we encounter. CAD models from SolidWorks, Rhino, or Inventor import without UV coordinates, and KeyShot's default mapping produces stretched textures.
 
 **The fix**:
 1. Select the material in KeyShot
@@ -62,7 +62,7 @@ This is the most common issue I encounter. CAD models from SolidWorks, Rhino, or
 4. Adjust the **Scale** to match the desired texture size
 5. Use the **Position** and **Rotation** controls to align the texture
 
-For complex products with multiple surfaces at different angles, I use **Box Mapping** as the default — it handles most product shapes reasonably well without requiring UV unwrapping.
+For complex products with multiple surfaces at different angles, we use **Box Mapping** as the default — it handles most product shapes reasonably well without requiring UV unwrapping.
 
 ## Fix 2: Label and Decal Alignment
 
@@ -98,7 +98,7 @@ The same material looks different on different parts — the texture is larger o
 2. Set the same **Scale** value on all materials
 3. Or: use **Real-World Scale** — enable this in the texture settings, and the texture will be sized in real-world units (e.g., 100mm x 100mm) regardless of the part size
 
-**Real-World Scale** is the most reliable approach for multi-part products. I enable it on all materials and set the texture size to match the physical material (e.g., a wood grain texture at 200mm x 200mm represents a 200mm section of wood).
+**Real-World Scale** is the most reliable approach for multi-part products. We enable it on all materials and set the texture size to match the physical material (e.g., a wood grain texture at 200mm x 200mm represents a 200mm section of wood).
 
 ## Fix 4: Environment Reflections Look Wrong
 
@@ -120,7 +120,7 @@ The surface looks flat even though a bump or normal map is applied.
 
 **Fixes**:
 
-1. **Bump map appears too subtle**: Increase the **Bump Height** in the material's texture settings. I typically use 0.1-0.5 for subtle surface detail and 0.5-1.0 for pronounced detail.
+1. **Bump map appears too subtle**: Increase the **Bump Height** in the material's texture settings. We typically use 0.1-0.5 for subtle surface detail and 0.5-1.0 for pronounced detail.
 
 2. **Normal map shows incorrect detail**: Check that the normal map is connected to the **Normal** slot, not the **Bump** slot. Normal maps and bump maps work differently — a normal map in the bump slot produces incorrect results.
 
@@ -156,4 +156,4 @@ A material that looks correct in SolidWorks or Rhino appears different in KeySho
 
 ## Summary
 
-KeyShot texture mapping issues are most often caused by using UV mapping on CAD models without UV coordinates. My fix order: switch from UV to Box or Planar mapping → adjust scale and position → use Real-World Scale for consistency → use Planar mapping for labels → configure environment reflections with HDRI rotation and intensity → verify normal map connections and color space. For transparent materials, always verify IOR values and refraction sample counts.
+KeyShot texture mapping issues are most often caused by using UV mapping on CAD models without UV coordinates. Our fix order: switch from UV to Box or Planar mapping → adjust scale and position → use Real-World Scale for consistency → use Planar mapping for labels → configure environment reflections with HDRI rotation and intensity → verify normal map connections and color space. For transparent materials, always verify IOR values and refraction sample counts.

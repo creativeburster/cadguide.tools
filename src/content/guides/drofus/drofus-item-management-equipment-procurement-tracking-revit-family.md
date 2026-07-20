@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "drofus"
 keyword: "drofus item management equipment procurement tracking revit family"
 slug: "drofus-item-management-equipment-procurement-tracking-revit-family"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # dRofus Item Management: Equipment Lists, Procurement Tracking, and Family Connections
 
-Items in dRofus represent physical objects that go into a building — medical equipment, furniture, fixtures, AV equipment, IT hardware. I've managed equipment lists with 5,000+ items on hospital projects. dRofus keeps this data organized, connected to Revit families, and tracked through procurement. Here's how to set it up.
+Items in dRofus represent physical objects that go into a building — medical equipment, furniture, fixtures, AV equipment, IT hardware. We've managed equipment lists with 5,000+ items on hospital projects. dRofus keeps this data organized, connected to Revit families, and tracked through procurement. Here's how to set it up.
 
 ## Understanding dRofus Items
 

@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "dwg-trueview"
 keyword: "dwg trueview batch convert dwg version upgrade downgrade"
 slug: "dwg-trueview-batch-convert-dwg-version-upgrade-downgrade"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # DWG TrueView Batch Convert: Upgrading and Downgrading DWG File Versions
 
-DWG file format changes with each AutoCAD release. A DWG saved in AutoCAD 2026 can't be opened in AutoCAD 2018 without conversion. DWG TrueView's DWG Convert tool handles this — for free, in batch. I convert hundreds of files per project. Here's the process.
+DWG file format changes with each AutoCAD release. A DWG saved in AutoCAD 2026 can't be opened in AutoCAD 2018 without conversion. DWG TrueView's DWG Convert tool handles this — for free, in batch. We convert hundreds of files per project. Here's the process.
 
 ## DWG Version History
 

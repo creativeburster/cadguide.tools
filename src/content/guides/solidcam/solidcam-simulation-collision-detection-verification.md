@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "solidcam"
 keyword: "solidcam simulation collision detection verification"
 slug: "solidcam-simulation-collision-detection-verification"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # SolidCAM Simulation and Verification: Preventing Collisions Before They Happen
 
-I've caught two near-miss collisions in SolidCAM simulation that would have destroyed expensive fixtures on the machine. Simulation isn't optional — it's the last line of defense before metal meets metal. Here's how to set it up properly and what to look for.
+We've caught two near-miss collisions in SolidCAM simulation that would have destroyed expensive fixtures on the machine. Simulation isn't optional — it's the last line of defense before metal meets metal. Here's how to set it up properly and what to look for.
 
 ## Types of Simulation in SolidCAM
 

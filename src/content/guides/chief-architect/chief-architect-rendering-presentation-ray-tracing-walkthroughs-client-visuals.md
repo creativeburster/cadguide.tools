@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "chief-architect"
 keyword: "chief architect rendering presentation"
 slug: "chief-architect-rendering-presentation-ray-tracing-walkthroughs-client-visuals"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Rendering and Presentation: Ray Tracing, Walkthroughs, and Client Visuals
 
-Client presentations are where Chief Architect's rendering tools pay for themselves. I've had clients sign off on designs after a single walkthrough — no need for separate rendering software or outsourcing to a visualization studio. The built-in ray tracing, walkthroughs, and panorama tools are surprisingly capable. Let me show you how I use them.
+Client presentations are where Chief Architect's rendering tools pay for themselves. We've had clients sign off on designs after a single walkthrough — no need for separate rendering software or outsourcing to a visualization studio. The built-in ray tracing, walkthroughs, and panorama tools are surprisingly capable. Let us show you how we use them.
 
 ## Camera Setup
 
@@ -298,4 +298,4 @@ Ray trace rendering includes:
 
 ## Wrapping Up
 
-Chief Architect's rendering tools have gotten good enough that I rarely need external rendering software for residential projects. The ray tracer produces solid results, the walkthroughs are smooth, and the panorama export is a client favorite — there's nothing like sending a client a link they can open on their phone to explore their future home. My tip: invest time in getting your lighting right. Good lighting makes more difference to a render than expensive materials.
+Chief Architect's rendering tools have gotten good enough that we rarely need external rendering software for residential projects. The ray tracer produces solid results, the walkthroughs are smooth, and the panorama export is a client favorite — there's nothing like sending a client a link they can open on their phone to explore their future home. Our tip: invest time in getting your lighting right. Good lighting makes more difference to a render than expensive materials.

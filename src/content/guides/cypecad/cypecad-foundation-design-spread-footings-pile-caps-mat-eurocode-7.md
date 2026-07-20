@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cypecad"
 keyword: "cypecad foundation design eurocode 7"
 slug: "cypecad-foundation-design-spread-footings-pile-caps-mat-eurocode-7"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Foundation Design: Spread Footings, Pile Caps, and Mat Foundations per Eurocode 7
 
-Foundation design in CYPECAD is something I've come to rely on for Eurocode 7 projects. The integration with the superstructure model means you don't have to export reactions to a separate tool — everything stays in one project. I've used it for isolated footings, pile caps, and mat foundations on projects in Spain and Portugal. Let me walk you through the workflow.
+Foundation design in CYPECAD is something we've come to rely on for Eurocode 7 projects. The integration with the superstructure model means you don't have to export reactions to a separate tool — everything stays in one project. We've used it for isolated footings, pile caps, and mat foundations on projects in Spain and Portugal. Let us walk you through the workflow.
 
 ## Soil Parameters
 
@@ -145,7 +145,7 @@ Foundation design in CYPECAD is something I've come to rely on for Eurocode 7 pr
 ### Pile Load Check
 
 1. CYPECAD calculates pile loads:
-   - **Axial per pile**: N/n ± My × x/I ± Mx × y/I
+   - **Axial per pile**: N/n ± Our × x/we ± Mx × y/we
    - **Maximum pile load**: ≤ pile capacity
    - **Minimum pile load**: ≥ 0 (no tension) or ≤ tension capacity
 2. If maximum load exceeds capacity:
@@ -180,7 +180,7 @@ Foundation design in CYPECAD is something I've come to rely on for Eurocode 7 pr
 2. Apply column loads at node locations
 3. CYPECAD calculates:
    - **Pressure distribution**: Varies across the mat
-   - **Plate moments**: Mx, My, Mxy per element
+   - **Plate moments**: Mx, Our, Mxy per element
    - **Shear**: At column perimeters
    - **Settlement**: Total and differential
 
@@ -196,7 +196,7 @@ Foundation design in CYPECAD is something I've come to rely on for Eurocode 7 pr
 
 1. From plate moment output:
    - **Mx**: Reinforcement in X direction
-   - **My**: Reinforcement in Y direction
+   - **Our**: Reinforcement in Y direction
    - **Top mat**: For hogging moments (near columns)
    - **Bottom mat**: For sagging moments (mid-span)
 2. Calculate As per meter:
@@ -264,4 +264,4 @@ Foundation design in CYPECAD is something I've come to rely on for Eurocode 7 pr
 
 ## Wrapping Up
 
-Foundation design in CYPECAD is efficient because it's integrated — no exporting reactions to a separate tool. The Eurocode 7 design approaches (DA1, DA2, DA3) are all supported, and the software handles the partial factor combinations for you. My advice: get the soil parameters right from the geotechnical report, and don't forget to check differential settlement — it's the thing that causes the most problems in practice.
+Foundation design in CYPECAD is efficient because it's integrated — no exporting reactions to a separate tool. The Eurocode 7 design approaches (DA1, DA2, DA3) are all supported, and the software handles the partial factor combinations for you. Our advice: get the soil parameters right from the geotechnical report, and don't forget to check differential settlement — it's the thing that causes the most problems in practice.

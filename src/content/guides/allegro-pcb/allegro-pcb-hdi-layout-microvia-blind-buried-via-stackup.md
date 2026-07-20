@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "allegro-pcb"
 keyword: "allegro pcb hdi layout microvia blind buried via"
 slug: "allegro-pcb-hdi-layout-microvia-blind-buried-via-stackup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Allegro PCB HDI Layout: Via Types, Microvias, and Blind/Buried Via Stackup Strategy
 
-High-Density Interconnect (HDI) design in Allegro requires careful planning of via types and layer assignments before you place a single component. Getting the via stackup wrong means you'll hit a wall during routing and have to start over. I've learned this the hard way on BGA fanout designs for 0.4mm pitch packages.
+High-Density Interconnect (HDI) design in Allegro requires careful planning of via types and layer assignments before you place a single component. Getting the via stackup wrong means you'll hit a wall during routing and have to start over — a common trap on BGA fanout designs for 0.4mm pitch packages.
 
 ## Via Types in Allegro
 
@@ -38,7 +38,7 @@ Before routing, define your via stackup in Setup > Constraints > Physical Constr
 
 The key decision is the HDI structure type:
 
-- **Type I** — through-hole + blind vias (one microvia layer on each side)
+- **Type we** — through-hole + blind vias (one microvia layer on each side)
 - **Type II** — through-hole + blind + buried vias
 - **Type III** — multiple microvia layers + buried vias
 - **Type IV-VI** — increasingly complex structures with stacked microvias

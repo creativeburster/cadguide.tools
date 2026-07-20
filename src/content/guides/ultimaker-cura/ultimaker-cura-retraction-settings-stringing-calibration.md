@@ -1,11 +1,11 @@
 ---
 title: "UltiMaker Cura Retraction Settings: Eliminating Stringing and Oozing with Proper Calibration"
-excerpt: "Stringing is the most common print quality issue, and Cura's retraction settings are the primary tool for fixing it. I cover retraction distance, speed, combing mode, and the calibration workflow using retraction test towers — with specific starting values for direct drive and Bowden extruders."
+excerpt: "Stringing is the most common print quality issue, and Cura's retraction settings are the primary tool for fixing it. We cover retraction distance, speed, combing mode, and the calibration workflow using retraction test towers — with specific starting values for direct drive and Bowden extruders."
 category: "troubleshooting"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura retraction settings stringing calibration tuning"
 slug: "ultimaker-cura-retraction-settings-stringing-calibration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -18,7 +18,7 @@ sources:
 
 # UltiMaker Cura Retraction Settings: Eliminating Stringing and Oozing with Proper Calibration
 
-I've helped dozens of people troubleshoot stringing issues, and in almost every case the root cause is either retraction settings that aren't tuned for the specific filament, or a temperature that's too high. Cura has excellent retraction controls, but they're hidden in the advanced settings and many users never venture beyond the defaults.
+We've helped dozens of people troubleshoot stringing issues, and in almost every case the root cause is either retraction settings that aren't tuned for the specific filament, or a temperature that's too high. Cura has excellent retraction controls, but they're hidden in the advanced settings and many users never venture beyond the defaults.
 
 ## What Causes Stringing?
 
@@ -74,7 +74,7 @@ Combing keeps the nozzle within the model boundary during travel moves instead o
 Options:
 - **Off**: No combing — all travel moves are direct
 - **All**: Comb within the entire model — may leave visible travel scars on top surfaces
-- **Not in Skin**: Comb everywhere except top/bottom layers — my default choice
+- **Not in Skin**: Comb everywhere except top/bottom layers — our default choice
 - **Within Infill**: Comb only within infill areas — safest option, no visible scarring
 
 As one detailed guide notes: "Combing is a strategic way to hide oozing, but it doesn't eliminate the underlying tendency to ooze if retraction is insufficient."
@@ -89,7 +89,7 @@ Extra material extruded after a retraction to compensate for oozed material. Def
 
 ### Z Hop When Retracted
 
-Lifts the nozzle during travel moves after retraction. This prevents the nozzle from hitting the print surface during travel. Default is **0 mm** (disabled). I enable it at **0.2 mm** for models with many travel moves. Keep it low — high Z-hop gives ooze more time to form strings.
+Lifts the nozzle during travel moves after retraction. This prevents the nozzle from hitting the print surface during travel. Default is **0 mm** (disabled). We enable it at **0.2 mm** for models with many travel moves. Keep it low — high Z-hop gives ooze more time to form strings.
 
 ## Calibration Workflow
 

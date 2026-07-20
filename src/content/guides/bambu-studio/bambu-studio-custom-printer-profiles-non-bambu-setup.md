@@ -1,11 +1,11 @@
 ---
 title: "Bambu Studio Custom Printer Profiles: Non-Bambu Printers, Voron, Creality, and Custom Setup"
-excerpt: "Bambu Studio supports third-party printers with built-in profiles for Voron and Creality, plus custom printer creation for any FDM machine. I cover creating custom printer profiles, configuring machine limits and G-code, importing community profiles, and the limitations of using Bambu Studio with non-Bambu hardware."
+excerpt: "Bambu Studio supports third-party printers with built-in profiles for Voron and Creality, plus custom printer creation for any FDM machine. We cover creating custom printer profiles, configuring machine limits and G-code, importing community profiles, and the limitations of using Bambu Studio with non-Bambu hardware."
 category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio custom printer profiles non-Bambu Voron Creality setup"
 slug: "bambu-studio-custom-printer-profiles-non-bambu-setup"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # Bambu Studio Custom Printer Profiles: Non-Bambu Printers, Voron, Creality, and Custom Setup
 
-I use Bambu Studio with both Bambu Lab printers and custom CoreXY machines, and while Bambu Studio is optimized for Bambu hardware, it works well with third-party printers once you understand the profile system. Since version 1.3, Bambu Studio includes profiles for several non-Bambu printers, and the custom printer creation system lets you configure any FDM machine.
+We use Bambu Studio with both Bambu Lab printers and custom CoreXY machines, and while Bambu Studio is optimized for Bambu hardware, it works well with third-party printers once you understand the profile system. Since version 1.3, Bambu Studio includes profiles for several non-Bambu printers, and the custom printer creation system lets you configure any FDM machine.
 
 ## Built-In Third-Party Printer Profiles
 
@@ -70,7 +70,7 @@ Under **Printer Settings → Machine limits**:
 - **Max travel speed**: 300-500 mm/s
 - **Max jerk**: 10-20 mm/s
 
-For a Voron 2.4, I use:
+For a Voron 2.4, we use:
 - Max acceleration: 10000 mm/s²
 - Max print speed: 300 mm/s
 - Max travel speed: 500 mm/s
@@ -141,4 +141,4 @@ However, Bambu Studio has advantages:
 
 ## Summary
 
-Bambu Studio works with non-Bambu printers through built-in profiles (Voron, Creality) and custom printer creation. The main limitations are the lack of automatic calibration tools and AMS integration. For non-Bambu printers, I recommend creating a custom printer profile with correct machine limits and G-code, or using OrcaSlicer as an alternative — it shares Bambu Studio's codebase but adds calibration tools and broader printer support. Always verify that your custom profile is selected after loading project files, as Bambu Studio may reset to default profiles.
+Bambu Studio works with non-Bambu printers through built-in profiles (Voron, Creality) and custom printer creation. The main limitations are the lack of automatic calibration tools and AMS integration. For non-Bambu printers, we recommend creating a custom printer profile with correct machine limits and G-code, or using OrcaSlicer as an alternative — it shares Bambu Studio's codebase but adds calibration tools and broader printer support. Always verify that your custom profile is selected after loading project files, as Bambu Studio may reset to default profiles.

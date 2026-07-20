@@ -1,11 +1,11 @@
 ---
 title: "Tekla Structures IFC Export Problems: Missing Geometry, Wrong Properties, and File Size Optimization"
-excerpt: "IFC exports from Tekla Structures have missing parts, incorrect property sets, or excessively large file sizes. I cover the IFC export settings, property mapping, and the model organizer workflow that ensure clean IFC delivery."
+excerpt: "IFC exports from Tekla Structures have missing parts, incorrect property sets, or excessively large file sizes. We cover the IFC export settings, property mapping, and the model organizer workflow that ensure clean IFC delivery."
 category: "troubleshooting"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures IFC export missing geometry properties file size"
 slug: "tekla-ifc-export-missing-geometry-properties-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

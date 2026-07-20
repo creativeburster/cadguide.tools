@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "dwg-trueview"
 keyword: "dwg trueview dwg compare drawing revision changes"
 slug: "dwg-trueview-dwg-compare-drawing-revision-changes"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # DWG TrueView DWG Compare: Detecting Changes Between Drawing Revisions
 
-Drawing revisions happen constantly in construction and engineering projects. Comparing two DWG files manually is tedious and error-prone — you might miss a moved wall or a changed dimension. DWG TrueView's DWG Compare tool automates this. I use it on every revision I receive. Here's how.
+Drawing revisions happen constantly in construction and engineering projects. Comparing two DWG files manually is tedious and error-prone — you might miss a moved wall or a changed dimension. DWG TrueView's DWG Compare tool automates this. We use it on every revision we receive. Here's how.
 
 ## When to Use DWG Compare
 

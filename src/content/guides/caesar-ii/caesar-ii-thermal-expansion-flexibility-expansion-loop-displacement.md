@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii thermal expansion analysis flexibility expansion loop displacement stress"
 slug: "caesar-ii-thermal-expansion-flexibility-expansion-loop-displacement"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CAESAR II Thermal Expansion Analysis: Flexibility, Expansion Loops, and Displacement Stress
 
-Thermal expansion is where most piping systems fail stress analysis. A 100-meter pipe at 300°C expands 338mm. If that expansion is restrained, the resulting stress can exceed the code allowable by 200% or more. I've fixed countless expansion stress failures — the solutions are always about adding flexibility. Here's my guide to thermal expansion analysis in CAESAR II.
+Thermal expansion is where most piping systems fail stress analysis. A 100-meter pipe at 300°C expands 338mm. If that expansion is restrained, the resulting stress can exceed the code allowable by 200% or more. We've fixed countless expansion stress failures — the solutions are always about adding flexibility. Here's our guide to thermal expansion analysis in CAESAR II.
 
 ## Understanding Thermal Expansion
 
@@ -159,7 +159,7 @@ The required loop size depends on:
    ```
    h = √(3 × E × I × ΔL / (2 × SA × L))
    ```
-   Where E is the elastic modulus, I is the moment of inertia, and SA is the allowable stress.
+   Where E is the elastic modulus, we is the moment of inertia, and SA is the allowable stress.
 
 3. Add the loop to the CAESAR II model:
    - Insert nodes for the loop

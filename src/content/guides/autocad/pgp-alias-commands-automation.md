@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "autocad"
 keyword: "autocad shortcuts"
 slug: "pgp-alias-commands-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-25"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Customizing AutoCAD Command Aliases with PGP Files for Faster Drafting
 
-I'm a firm believer that customizing your PGP file is the single highest-ROI thing you can do in AutoCAD. I've watched drafters save 20-30 minutes a day just by switching to aliases that match their workflow. The defaults like `L` for `LINE` and `C` for `CIRCLE` are fine, but the real gains come when you build aliases around how you actually work. Let me show you how I set up mine.
+We're a firm believer that customizing your PGP file is the single highest-ROI thing you can do in AutoCAD. We've watched drafters save 20-30 minutes a day just by switching to aliases that match their workflow. The defaults like `L` for `LINE` and `C` for `CIRCLE` are fine, but the real gains come when you build aliases around how you actually work. Let us show you how we set up ours.
 
 ## Understanding the PGP File
 

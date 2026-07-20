@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "cimatron"
 keyword: "cimatron vs solidworks mold design comparison dedicated mold tool"
 slug: "cimatron-vs-solidworks-mold-design-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Cimatron vs SolidWorks Mold Design: Comparing Dedicated Mold Tools with General-Purpose CAD
 
-I've designed molds in both Cimatron and SolidWorks. The difference is like comparing a Swiss Army knife to a dedicated mold-maker's toolkit. SolidWorks can do mold design — it has parting tools, mold assemblies, and core/cavity separation. But Cimatron is purpose-built for mold making. Every feature is designed for the mold shop. Here's my honest comparison.
+We've designed molds in both Cimatron and SolidWorks. The difference is like comparing a Swiss Army knife to a dedicated mold-maker's toolkit. SolidWorks can do mold design — it has parting tools, mold assemblies, and core/cavity separation. But Cimatron is purpose-built for mold making. Every feature is designed for the mold shop. Here's our honest comparison.
 
 ## Tool Philosophy
 
@@ -190,7 +190,7 @@ I've designed molds in both Cimatron and SolidWorks. The difference is like comp
 - **Budget constraints**: SolidWorks Premium is cheaper than Cimatron + CAM
 - **Collaboration with product designers**: SolidWorks is more common in product design
 
-## My Recommendation
+## Our Recommendation
 
 For **dedicated mold shops**: **Cimatron** — the integrated workflow from part import to NC code is unmatched. QuickSplit, electrode design, and mold assembly automation save days per project.
 

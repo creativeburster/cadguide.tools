@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ansys topology optimization design exploration"
 slug: "ansys-topology-optimization-design-exploration-parametric-weight-reduction"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ANSYS Topology Optimization and Design Exploration: Parametric Studies and Weight Reduction
 
-Topology optimization is one of my favorite features in ANSYS Workbench — there's something satisfying about watching the solver strip away material you don't need and leaving behind a structure that looks like it grew organically. I've used it on brackets, heat sinks, and aerospace ribs, and it consistently delivers 30-60% weight savings when done right. Let me show you how I set up both topology optimization and parametric studies.
+Topology optimization is one of our favorite features in ANSYS Workbench — there's something satisfying about watching the solver strip away material you don't need and leaving behind a structure that looks like it grew organically. We've used it on brackets, heat sinks, and aerospace ribs, and it consistently delivers 30-60% weight savings when done right. Let us show you how we set up both topology optimization and parametric studies.
 
 ## Parametric Studies with DesignXplorer
 
@@ -287,4 +287,4 @@ Topology optimization is one of my favorite features in ANSYS Workbench — ther
 
 ## Wrapping Up
 
-The biggest mistake I see people make with topology optimization is skipping the verification step. The optimized shape looks cool, but you need to run a full analysis on the reconstructed geometry — I've had cases where the stress was fine in the optimization but jumped 40% after I cleaned up the geometry and added fillets. Always verify. And don't forget manufacturing constraints — a beautiful organic shape that you can't actually machine or cast isn't much use. Set your member size limits, add your symmetry, and you'll get results you can actually manufacture.
+The biggest mistake we see people make with topology optimization is skipping the verification step. The optimized shape looks cool, but you need to run a full analysis on the reconstructed geometry — We've had cases where the stress was fine in the optimization but jumped 40% after we cleaned up the geometry and added fillets. Always verify. And don't forget manufacturing constraints — a beautiful organic shape that you can't actually machine or cast isn't much use. Set your member size limits, add your symmetry, and you'll get results you can actually manufacture.

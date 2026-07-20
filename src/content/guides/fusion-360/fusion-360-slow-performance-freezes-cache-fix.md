@@ -1,11 +1,11 @@
 ---
 title: "Fusion 360 Slow Performance and Freezes: Graphics Driver, Cache Clear, and Offline Mode"
-excerpt: "Fusion 360 takes ages to start, freezes during simple operations, and becomes unusable after updates. I cover the graphics driver rollback, local cache clearing, and offline mode workaround that restore performance."
+excerpt: "Fusion 360 takes ages to start, freezes during simple operations, and becomes unusable after updates. We cover the graphics driver rollback, local cache clearing, and offline mode workaround that restore performance."
 category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 slow performance freezes graphics driver cache"
 slug: "fusion-360-slow-performance-freezes-cache-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

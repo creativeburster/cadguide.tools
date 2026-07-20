@@ -1,11 +1,11 @@
 ---
 title: "SketchUp 3D Warehouse Slow Downloads: WebCache Clear and Materials Palette Workaround"
-excerpt: "3D Warehouse downloads take minutes to appear in your model, or stop working entirely. I cover the WebCache deletion fix, the Colors in Model palette workaround, and network troubleshooting."
+excerpt: "3D Warehouse downloads take minutes to appear in your model, or stop working entirely. We cover the WebCache deletion fix, the Colors in Model palette workaround, and network troubleshooting."
 category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp 3D Warehouse slow download WebCache materials"
 slug: "sketchup-3d-warehouse-slow-download-webcache"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:
@@ -135,7 +135,7 @@ If purging doesn't help enough:
 
 ## Best Practices for 3D Warehouse Workflow
 
-Based on the forum discussions, here's the workflow I recommend:
+Based on the forum discussions, here's the workflow we recommend:
 
 1. **Always download to a separate file first**: Never download directly into your project model. Create a new SketchUp file, download the component, inspect it, clean it up, and then copy it into your project.
 

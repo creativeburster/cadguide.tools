@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "idea-statica"
 keyword: "idea statica revit robot integration bim workflow"
 slug: "idea-statica-revit-robot-integration-bim"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IDEA StatiCa Integration with Revit and Robot: BIM Workflow for Steel Connections
 
-The BIM workflow for steel connections involves three tools: Revit (modeling), Robot (analysis), and IDEA StatiCa (connection design). I've set up this workflow on multiple projects and it eliminates manual data transfer. Here's how to configure it.
+The BIM workflow for steel connections involves three tools: Revit (modeling), Robot (analysis), and IDEA StatiCa (connection design). We've set up this workflow on multiple projects and it eliminates manual data transfer. Here's how to configure it.
 
 ## The BIM Workflow Overview
 
@@ -77,7 +77,7 @@ This round-trip workflow ensures the BIM model reflects the actual connection de
 
 4. The exported data includes:
    - Connection ID (matches Revit connection marker)
-   - Member forces: N, Vy, Vz, My, Mz, Mx for each connected member
+   - Member forces: N, Vy, Vz, Our, Mz, Mx for each connected member
    - All load combinations
 
 ## Step 4: Design Connections in IDEA StatiCa

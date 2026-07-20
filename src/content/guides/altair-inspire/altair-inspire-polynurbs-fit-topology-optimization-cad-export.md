@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-inspire"
 keyword: "altair inspire polynurbs fit topology optimization cad export"
 slug: "altair-inspire-polynurbs-fit-topology-optimization-cad-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

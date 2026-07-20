@@ -1,11 +1,11 @@
 ---
 title: "Creo config.pro Best Practices: Essential Settings for Performance and Stability"
-excerpt: "config.pro is Creo's master configuration file, and most users never touch the defaults. I share the settings I deploy to every workstation — for performance, stability, large assemblies, and team standardization."
+excerpt: "config.pro is Creo's master configuration file, and most users never touch the defaults. We share the settings we deploy to every workstation — for performance, stability, large assemblies, and team standardization."
 category: "deployment"
 softwareSlug: "ptc-creo"
 keyword: "Creo config.pro settings best practices performance"
 slug: "creo-config-pro-best-practices-settings"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Creo config.pro Best Practices: Essential Settings for Performance and Stability
 
-I've been administering Creo (and Pro/E before it) for over 15 years, and `config.pro` is the single most impactful configuration file in the system. It controls everything from display quality to memory management to default templates. Most users never modify it — they accept the defaults and wonder why Creo is slow, unstable, or behaves differently than their colleague's installation. I maintain a master `config.pro` that I deploy to every workstation in our engineering department. Here are the settings I consider essential, organized by category.
+We've been administering Creo (and Pro/E before it) for over 15 years, and `config.pro` is the single most impactful configuration file in the system. It controls everything from display quality to memory management to default templates. Most users never modify it — they accept the defaults and wonder why Creo is slow, unstable, or behaves differently than their colleague's installation. We maintain a master `config.pro` that we deploy to every workstation in our engineering department. Here are the settings we consider essential, organized by category.
 
 ## File Locations and Loading Order
 
@@ -26,7 +26,7 @@ Creo loads `config.pro` files in a specific order, and later files override earl
 3. **Working directory config**: `<current directory>\config.pro` — loaded third, project-specific overrides
 4. **Startup config**: Specified with the `-config` command-line flag — loaded last, highest priority
 
-I put company-wide settings in the system config and allow users to add personal settings in their user config. The working directory config is used for project-specific settings like different units or drawing standards.
+We put company-wide settings in the system config and allow users to add personal settings in their user config. The working directory config is used for project-specific settings like different units or drawing standards.
 
 ## Performance Settings
 
@@ -287,11 +287,11 @@ The system config must be in `<Creo install>\Common Files\text\`. Placing it els
 Some users try to override `config.sup` settings by placing contradictory values in their user `config.pro`. This doesn't work — `config.sup` always takes precedence. If a setting is locked, the only way to change it is to modify the `config.sup` file itself on the system.
 
 ### 6. Not testing config changes on a non-production machine
-Before deploying a new `config.pro` to all workstations, test it on a single machine first. A typo in a config setting can cause Creo to behave unpredictably or fail to start. I always test new configurations on my own workstation for a full day before deploying to the team.
+Before deploying a new `config.pro` to all workstations, test it on a single machine first. A typo in a config setting can cause Creo to behave unpredictably or fail to start. We always test new configurations on our own workstation for a full day before deploying to the team.
 
 ## Troubleshooting config.pro Issues
 
-If Creo behaves unexpectedly after a config.pro change, here's my diagnostic process:
+If Creo behaves unexpectedly after a config.pro change, here's our diagnostic process:
 
 1. **Check the Configuration Editor**: File → Options → Configuration Editor shows all active settings and their source files. Verify the setting is being loaded from the expected file.
 2. **Rename config.pro temporarily**: Rename the system config.pro to config.pro.bak and restart Creo. If the problem disappears, the config.pro is the cause.

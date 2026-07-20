@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "featurecam"
 keyword: "featurecam vs fusion 360 cam comparison autodesk"
 slug: "featurecam-vs-fusion-360-cam-feature-based-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

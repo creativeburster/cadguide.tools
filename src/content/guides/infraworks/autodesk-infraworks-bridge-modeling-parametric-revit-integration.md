@@ -1,11 +1,11 @@
 ---
 title: "Autodesk InfraWorks Bridge Modeling: Parametric Bridges, Revit Integration, and Design Workflow"
-excerpt: "InfraWorks parametric bridge modeling creates preliminary bridge designs that publish to Revit and Civil 3D for detailed structural design. I cover the bridge design workflow, component configuration (piers, abutments, decks), and the InfraWorks-to-Revit-to-Civil 3D round-trip workflow."
+excerpt: "InfraWorks parametric bridge modeling creates preliminary bridge designs that publish to Revit and Civil 3D for detailed structural design. We cover the bridge design workflow, component configuration (piers, abutments, decks), and the InfraWorks-to-Revit-to-Civil 3D round-trip workflow."
 category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks bridge modeling parametric piers abutments deck Revit integration workflow"
 slug: "autodesk-infraworks-bridge-modeling-parametric-revit-integration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # Autodesk InfraWorks Bridge Modeling: Parametric Bridges, Revit Integration, and Design Workflow
 
-I've used InfraWorks for preliminary bridge design on highway and rail projects. InfraWorks has become Autodesk's central tool for bridge modeling in a realistic context — you design the bridge geometry parametrically, then publish it to Revit for detailed structural design and to Civil 3D for alignment and grading. The round-trip workflow between these three tools is powerful once you understand how the data flows.
+We've used InfraWorks for preliminary bridge design on highway and rail projects. InfraWorks has become Autodesk's central tool for bridge modeling in a realistic context — you design the bridge geometry parametrically, then publish it to Revit for detailed structural design and to Civil 3D for alignment and grading. The round-trip workflow between these three tools is powerful once you understand how the data flows.
 
 ## The InfraWorks Bridge Workflow
 
@@ -50,7 +50,7 @@ The typical workflow:
 Select the bridge and open the Properties panel:
 
 **Deck**:
-- **Deck Type**: Slab, box girder, I-beam, etc.
+- **Deck Type**: Slab, box girder, we-beam, etc.
 - **Deck Width**: Matches the road width
 - **Deck Thickness**: Structural depth of the deck
 - **Material**: Concrete, steel, composite
@@ -148,7 +148,7 @@ In Revit, you can:
 
 ### Girder Bridges
 
-- **I-Beam**: Common for highway bridges, steel or concrete
+- **we-Beam**: Common for highway bridges, steel or concrete
 - **Box Girder**: Used for longer spans, concrete
 - **Slab**: Simple span bridges for short distances
 
@@ -167,7 +167,7 @@ In Revit, you can:
 
 ### Span Lengths
 
-- **Short spans (10-25m)**: Slab or I-beam bridges
+- **Short spans (10-25m)**: Slab or we-beam bridges
 - **Medium spans (25-50m)**: Box girder or precast girders
 - **Long spans (50-200m)**: Segmental box girders
 - **Very long spans (200m+)**: Cable-stayed or suspension

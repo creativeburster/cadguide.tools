@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bobcad-cam"
 keyword: "bobcad-cam 3 axis milling workflow toolpath wizard simulation"
 slug: "bobcad-cam-3-axis-milling-workflow-stock-setup-toolpath-wizards"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

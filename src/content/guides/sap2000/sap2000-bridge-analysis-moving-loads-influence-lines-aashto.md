@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "sap2000"
 keyword: "sap2000 bridge analysis moving loads"
 slug: "sap2000-bridge-analysis-moving-loads-influence-lines-aashto"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # SAP2000 Bridge Analysis: Moving Loads, Influence Lines, and AASHTO Design
 
-I've used SAP2000 for bridge analysis on everything from simple slab bridges to cable-stayed structures. The bridge modeler is one of those features that seems complicated at first but saves you enormous time once you get comfortable with it. Let me walk you through how I set up moving loads, generate influence lines, and run AASHTO LRFD design checks.
+We've used SAP2000 for bridge analysis on everything from simple slab bridges to cable-stayed structures. The bridge modeler is one of those features that seems complicated at first but saves you enormous time once you get comfortable with it. Let us walk you through how we set up moving loads, generate influence lines, and run AASHTO LRFD design checks.
 
 ## Bridge Modeler
 
@@ -24,7 +24,7 @@ I've used SAP2000 for bridge analysis on everything from simple slab bridges to 
 
 1. File > New Model > Bridge Modeler
 2. Set bridge parameters:
-   - **Bridge type**: Girder (I-beam, box girder), slab, arch, cable-stayed
+   - **Bridge type**: Girder (we-beam, box girder), slab, arch, cable-stayed
    - **Number of spans**: e.g., 3 spans
    - **Span lengths**: e.g., 30m, 40m, 30m
    - **Bridge width**: e.g., 12m (two lanes + shoulders)
@@ -34,7 +34,7 @@ I've used SAP2000 for bridge analysis on everything from simple slab bridges to 
    - **Deck thickness**: e.g., 225mm
    - **Wearing surface**: e.g., 75mm asphalt
 4. Set girder properties:
-   - **Girder type**: AASHTO I-beam (Type I-IV), steel plate girder, box girder
+   - **Girder type**: AASHTO we-beam (Type we-IV), steel plate girder, box girder
    - **Girder section**: Select from library or custom
 5. Set supports:
    - **Abutments**: At bridge ends (expansion or fixed)
@@ -170,7 +170,7 @@ SAP2000 uses a "Bridge Object" concept:
 
 ## AASHTO LRFD Load Combinations
 
-### Strength I (Basic Vehicle + Lane)
+### Strength we (Basic Vehicle + Lane)
 
 ```
 Combo: Strength I
@@ -191,7 +191,7 @@ Combo: Strength II
 1.25 × DC + 1.50 × DW + 1.35 × (LL + IM) + 1.00 × WA
 ```
 
-### Service I (Normal Service)
+### Service we (Normal Service)
 
 ```
 Combo: Service I

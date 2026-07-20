@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey point management editing merging reporting"
 slug: "carlson-survey-point-management-editing-merging-reporting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Carlson Survey Point Management: Editing, Merging, and Reporting Survey Points
 
-Managing survey points is a daily task for surveyors. On a typical project, I deal with points from multiple crews, multiple days, and multiple instruments. Carlson's point management tools keep everything organized. Here's the workflow.
+Managing survey points is a daily task for surveyors. On a typical project, we deal with points from multiple crews, multiple days, and multiple instruments. Carlson's point management tools keep everything organized. Here's the workflow.
 
 ## The Carlson Point Database (CRD File)
 

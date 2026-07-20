@@ -1,11 +1,11 @@
 ---
 title: "Simplify3D Support Structures: Custom Placement, Density, and Separation Settings"
-excerpt: "Simplify3D's support structure tools offer manual placement, density control, and separation tuning. I cover the Customize Support Structures window, adding and removing support pillars, separation from part settings, and using a second extruder for soluble supports."
+excerpt: "Simplify3D's support structure tools offer manual placement, density control, and separation tuning. We cover the Customize Support Structures window, adding and removing support pillars, separation from part settings, and using a second extruder for soluble supports."
 category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D support structures custom placement density separation settings"
 slug: "simplify3d-support-structures-custom-placement-density-separation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Simplify3D Support Structures: Custom Placement, Density, and Separation Settings
 
-I've printed thousands of models with Simplify3D, and the support structure system is one of its strongest features. Unlike many slicers that only offer automatic support generation, Simplify3D lets you manually add, remove, and customize individual support pillars — giving you precise control over where supports go and how they connect to the part.
+We've printed thousands of models with Simplify3D, and the support structure system is one of its strongest features. Unlike many slicers that only offer automatic support generation, Simplify3D lets you manually add, remove, and customize individual support pillars — giving you precise control over where supports go and how they connect to the part.
 
 ## Enabling Support Material
 

@@ -1,11 +1,11 @@
 ---
 title: "ANSYS Workbench Nonlinear Analysis: Contact, Plasticity, and Large Deformation Setup"
-excerpt: "ANSYS Workbench's nonlinear analysis handles contact nonlinearity, material plasticity, and large deformation. I cover nonlinear setup, contact types, plastic material models, Newton-Raphson convergence, and troubleshooting common nonlinear convergence issues."
+excerpt: "ANSYS Workbench's nonlinear analysis handles contact nonlinearity, material plasticity, and large deformation. We cover nonlinear setup, contact types, plastic material models, Newton-Raphson convergence, and troubleshooting common nonlinear convergence issues."
 category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench nonlinear analysis contact plasticity large deformation Newton-Raphson convergence troubleshooting setup"
 slug: "ansys-workbench-nonlinear-analysis-contact-plasticity-large-deformation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ANSYS Workbench Nonlinear Analysis: Contact, Plasticity, and Large Deformation Setup
 
-I've run complex nonlinear analyses in ANSYS for metal forming, rubber seals, bolted joints, and crashworthiness. Nonlinear analysis is where ANSYS separates from basic FEA tools — it handles geometric nonlinearity (large deformation), material nonlinearity (plasticity, hyperelasticity), and contact nonlinearity (changing contact status). Understanding nonlinear setup and convergence control is essential for getting accurate results when linear assumptions don't apply.
+We've run complex nonlinear analyses in ANSYS for metal forming, rubber seals, bolted joints, and crashworthiness. Nonlinear analysis is where ANSYS separates from basic FEA tools — it handles geometric nonlinearity (large deformation), material nonlinearity (plasticity, hyperelasticity), and contact nonlinearity (changing contact status). Understanding nonlinear setup and convergence control is essential for getting accurate results when linear assumptions don't apply.
 
 ## What Makes an Analysis Nonlinear?
 

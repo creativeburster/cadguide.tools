@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "autodesk-robot"
 keyword: "autodesk robot wind load generation asce 7 eurocode"
 slug: "autodesk-robot-wind-load-generation-asce-eurocode"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Autodesk Robot Wind Load Generation: ASCE 7 and Eurocode 1 Setup
 
-Calculating wind loads manually is tedious and error-prone. Robot's wind load generator does it automatically — but you need to set it up correctly. I've seen engineers get wrong results because they entered the wrong exposure category or building dimensions. Here's the correct setup for both ASCE 7 and Eurocode 1.
+Calculating wind loads manually is tedious and error-prone. Robot's wind load generator does it automatically — but you need to set it up correctly. We've seen engineers get wrong results because they entered the wrong exposure category or building dimensions. Here's the correct setup for both ASCE 7 and Eurocode 1.
 
 ## ASCE 7 Wind Load Generation
 
@@ -33,7 +33,7 @@ Calculating wind loads manually is tedious and error-prone. Robot's wind load ge
    - **Exposure D**: Flat, unobstructed areas exposed to wind flowing over open water
 
 5. Set building classification:
-   - **Risk Category I**: Low risk (agricultural, minor storage)
+   - **Risk Category we**: Low risk (agricultural, minor storage)
    - **Risk Category II**: Most buildings (offices, residential)
    - **Risk Category III**: Substantial hazard (schools, assembly)
    - **Risk Category IV**: Essential facilities (hospitals, fire stations)
@@ -114,7 +114,7 @@ Calculating wind loads manually is tedious and error-prone. Robot's wind load ge
 2. Select code: **Eurocode 1 (EN 1991-1-4)**.
 3. Enter:
    - **Fundamental basic wind velocity (vb,0)**: e.g., 24 m/s for most of Europe
-   - **Terrain category**: 0 (sea), I (open), II (farmland), III (suburban), IV (urban)
+   - **Terrain category**: 0 (sea), we (open), II (farmland), III (suburban), IV (urban)
    - **cdir**: Direction factor (typically 1.0)
    - **cseason**: Season factor (typically 1.0)
 
@@ -142,7 +142,7 @@ Calculating wind loads manually is tedious and error-prone. Robot's wind load ge
    - Basic wind velocity: vb = vb,0 × cdir × cseason
    - Mean wind velocity: vm(z) = cr(z) × vb
    - Peak velocity pressure: qp(z) = [1 + 7 × Iv(z)] × ½ × ρ × vm²(z)
-   - Wind pressure: we = qp(z) × cpe, wI = qp(ze) × cpi
+   - Wind pressure: We = qp(z) × cpe, wI = qp(ze) × cpi
 
 ## Common Wind Load Errors
 

@@ -1,11 +1,11 @@
 ---
 title: "ZBrush 'A Corrupt License Has Been Detected' Error: Fix Guide"
-excerpt: "ZBrush says your license is corrupt after a reinstall or OS update? I cover the Pixologic License Manager reset, Maxon App reactivation, remote deactivation via My Licenses, and clean reinstall steps to get ZBrush running again."
+excerpt: "ZBrush says your license is corrupt after a reinstall or OS update? We cover the Pixologic License Manager reset, Maxon App reactivation, remote deactivation via Our Licenses, and clean reinstall steps to get ZBrush running again."
 category: "troubleshooting"
 softwareSlug: "zbrush"
 keyword: "zbrush corrupt license has been detected"
 slug: "zbrush-corrupt-license-detected-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-03"
 sources:
@@ -19,7 +19,7 @@ sources:
 
 Seeing "A corrupt license has been detected" when you launch ZBrush is alarming, but it's a known issue with a straightforward fix. This error occurs when your computer's digital thumbprint changes — typically after reinstalling the software, updating your operating system, or replacing hardware components. ZBrush thinks it's running on a different machine, even though it's physically the same computer.
 
-The fix depends on which licensing system you're using: legacy Pixologic licensing (ZBrush 2018-2022 with a serial number) or Maxon App licensing (subscription or Maxon-purchased perpetual). I'll cover both paths.
+The fix depends on which licensing system you're using: legacy Pixologic licensing (ZBrush 2018-2022 with a serial number) or Maxon App licensing (subscription or Maxon-purchased perpetual). We'll cover both paths.
 
 ## Determine Your License Type
 
@@ -67,11 +67,11 @@ When warned that you should only do this at the instruction of Support, confirm 
 
 After the reset completes, close the License Manager.
 
-### Step 6: Deactivate via My Licenses (Recommended)
+### Step 6: Deactivate via Our Licenses (Recommended)
 
 Even though you've reset the local license, the activation may still be counted on the server side. To free up your activation:
 
-1. Go to [pixologic.com/my-licenses/login.php](https://pixologic.com/my-licenses/login.php)
+1. Go to [pixologic.com/our-licenses/login.php](https://pixologic.com/our-licenses/login.php)
 2. Log in with your Pixologic ID
 3. Find your license key and view its activation history
 4. Active installations are shown in green
@@ -144,7 +144,7 @@ There's no need to deactivate before reinstalling on the same machine when using
 
 Windows major updates (like going from Windows 10 to 11, or major feature updates) can change your machine's digital thumbprint. If you know a major update is coming:
 
-1. Deactivate ZBrush before the update (via License Manager or My Licenses portal)
+1. Deactivate ZBrush before the update (via License Manager or Our Licenses portal)
 2. Run the OS update
 3. Reactivate ZBrush after the update completes
 
@@ -172,7 +172,7 @@ Having multiple versions of ZBrush installed simultaneously (e.g., 2021 and 2022
 | Legacy Pixologic license, corrupt after reinstall | Legacy Fix: Steps 1-7 |
 | Maxon App subscription license | Maxon Fix: Steps 1-3 |
 | Maxon App license, still failing after reset | Maxon Fix: Step 4 (clean reinstall) |
-| "No activations available" during reactivation | Deactivate via My Licenses portal, then reactivate |
+| "No activations available" during reactivation | Deactivate via Our Licenses portal, then reactivate |
 | Side-by-side configuration error when running License Manager | Install Microsoft Visual C++ Redistributable |
 
 ## If Nothing Works

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "staad-pro"
 keyword: "staad pro editor commands"
 slug: "staad-pro-editor-commands-text-modeling-automation-batch-processing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Editor Commands: Text-Based Modeling, Automation, and Batch Processing
 
-I'll admit it — I'm one of those engineers who prefers the STAAD editor over the graphical interface. There's something satisfying about typing out a model in text and watching it run. But more importantly, the editor is faster, reproducible, and easy to automate. Let me walk you through the command syntax I use for modeling, loading, analysis, and design.
+We'll admit it — We're one of those engineers who prefers the STAAD editor over the graphical interface. There's something satisfying about typing out a model in text and watching it run. But more importantly, the editor is faster, reproducible, and easy to automate. Let us walk you through the command syntax we use for modeling, loading, analysis, and design.
 
 ## Accessing the Editor
 
@@ -432,4 +432,4 @@ The STAAD input file's text-based format enables powerful automation workflows t
 
 ## Wrapping Up
 
-I know the editor isn't for everyone, but if you're comfortable with text-based modeling, it's the fastest way to work in STAAD. The .std files are plain text, which means they work with Git, they're easy to template, and you can generate them with Python scripts for parametric studies. If you're still using the GUI exclusively, give the editor a try on your next simple project — you might be surprised how fast it is.
+We know the editor isn't for everyone, but if you're comfortable with text-based modeling, it's the fastest way to work in STAAD. The .std files are plain text, which means they work with Git, they're easy to template, and you can generate them with Python scripts for parametric studies. If you're still using the GUI exclusively, give the editor a try on your next simple project — you might be surprised how fast it is.

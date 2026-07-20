@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simcenter-star-ccm"
 keyword: "simcenter star-ccm+ meshing pipeline polyhedral prism layer"
 slug: "simcenter-star-ccm-meshing-pipeline-surface-polyhedral-prism-layers"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Simcenter STAR-CCM+ Meshing Pipeline: Surface Mesh, Polyhedral Mesh, and Prism Layers
 
-Meshing is the most time-consuming part of CFD setup, and mesh quality determines result accuracy. Simcenter STAR-CCM+ has one of the most robust meshing pipelines in commercial CFD — its polyhedral mesher produces high-quality cells with minimal user intervention. I'll walk through the complete meshing workflow.
+Meshing is the most time-consuming part of CFD setup, and mesh quality determines result accuracy. Simcenter STAR-CCM+ has one of the most robust meshing pipelines in commercial CFD — its polyhedral mesher produces high-quality cells with minimal user intervention. We'll walk through the complete meshing workflow.
 
 ## STAR-CCM+ Meshing Overview
 

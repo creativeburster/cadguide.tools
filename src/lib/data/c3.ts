@@ -221,49 +221,6 @@ export const c3Tools: Tool[] = [
       "https://www.autodesk.com/developer-network/platform-technologies/revit",
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 482,
-    url: "https://www.g2.com/products/revit/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 482,
-    url: "https://www.capterra.com/software/183122/revit"
-  }, {
-    source: "TrustRadius",
-    score: 8.9,
-    max: 10,
-    count: 187,
-    url: "https://www.trustradius.com/products/revit/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.6,
-    max: 5,
-    count: 94,
-    url: "https://www.gartner.com/peer-insights/product/autodesk-revit"
-  }, {
-    source: "Software Advice",
-    score: 4.6,
-    max: 5,
-    count: 482,
-    url: "https://www.softwareadvice.com/bim/revit-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.6,
-    max: 5,
-    count: 482,
-    url: "https://www.getapp.com/construction-software/a/autodesk-revit/"
-  }, {
-    source: "Trustpilot",
-    score: 4.2,
-    max: 5,
-    count: 167,
-    url: "https://www.trustpilot.com/review/revit.com"
-  }],
 },
 {
   id: "t9",
@@ -501,43 +458,6 @@ export const c3Tools: Tool[] = [
   deployment_options: ["Desktop", "Cloud"],
   license_types: ["Subscription", "Perpetual", "Network", "Educational"],
 
-  external_ratings: [
-    {
-      source: "G2",
-      score: 4.4,
-      max: 5,
-      count: 200,
-      url: "https://www.g2.com/products/archicad/reviews",
-    },
-    {
-      source: "Capterra",
-      score: 4.5,
-      max: 5,
-      count: 240,
-      url: "https://www.capterra.com/p/175020/ArchiCAD/",
-    },
-    {
-      source: "TrustRadius",
-      score: 8.5,
-      max: 10,
-      count: 130,
-      url: "https://www.trustradius.com/products/archicad/reviews",
-    },
-    {
-      source: "Software Advice",
-      score: 4.4,
-      max: 5,
-      count: 280,
-      url: "https://www.softwareadvice.com/construction/archicad-profile/reviews/",
-    },
-    {
-      source: "GetApp",
-      score: 4.4,
-      max: 5,
-      count: 281,
-      url: "https://www.getapp.com/construction-software/a/archicad/reviews/",
-    },
-  ],
 
   support_channels: [
     "Email",
@@ -726,34 +646,6 @@ export const c3Tools: Tool[] = [
   last_updated: "2025-02-20",
   free_trial_days: 30,
 
-  external_ratings: [{
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 37,
-    url: "https://www.capterra.com/p/92964/Tekla-Structures/"
-  },
-    {
-      source: "G2",
-      score: 4.5,
-      max: 5,
-      count: 63,
-      url: "https://www.g2.com/products/tekla-structures/reviews"
-    },
-    {
-      source: "Software Advice",
-      score: 4.4,
-      max: 5,
-      count: 36,
-      url: "https://www.softwareadvice.com/construction/tekla-structures-profile/reviews/"
-    },
-    {
-      source: "GetApp",
-      score: 4.4,
-      max: 5,
-      count: 36,
-      url: "https://www.getapp.com/construction-software/a/seed-tekla-bimsight/reviews/"
-    }]
 },
 {
   id: "t17",
@@ -914,25 +806,6 @@ export const c3Tools: Tool[] = [
   last_updated: "2024-09-15",
   free_trial_days: 30,
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 245,
-    url: "https://www.g2.com/products/vectorworks/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 245,
-    url: "https://www.capterra.com/software/205755/vectorworks"
-  }, {
-    source: "TrustRadius",
-    score: 8.8,
-    max: 10,
-    count: 58,
-    url: "https://www.trustradius.com/products/vectorworks/reviews"
-  }]
 },
 {
   id: "t27",
@@ -1088,31 +961,6 @@ export const c3Tools: Tool[] = [
   last_updated: "2025-01-10",
   free_trial_days: 30,
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 89,
-    url: "https://www.g2.com/products/chief-architect/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 89,
-    url: "https://www.capterra.com/software/205738/chief-architect"
-  }, {
-    source: "Software Advice",
-    score: 4.5,
-    max: 5,
-    count: 89,
-    url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.5,
-    max: 5,
-    count: 89,
-    url: "https://www.getapp.com/architectural-cad-software/a/chief-architect/"
-  }]
 },
 {
   id: "t44",
@@ -1260,31 +1108,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 387,
-    url: "https://www.g2.com/products/autodesk-civil-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.6,
-    max: 5,
-    count: 387,
-    url: "https://www.capterra.com/software/205737/civil-3d"
-  }, {
-    source: "TrustRadius",
-    score: 9,
-    max: 10,
-    count: 128,
-    url: "https://www.trustradius.com/products/autodesk-civil-3d/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.6,
-    max: 5,
-    count: 54,
-    url: "https://www.gartner.com/peer-insights/product/autodesk-civil-3d"
-  }]
 },
 {
   id: "t46",
@@ -1369,31 +1192,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 89,
-    url: "https://www.g2.com/products/chief-architect/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 89,
-    url: "https://www.capterra.com/software/205738/chief-architect"
-  }, {
-    source: "Software Advice",
-    score: 4.5,
-    max: 5,
-    count: 89,
-    url: "https://www.softwareadvice.com/architectural-cad/chief-architect-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.5,
-    max: 5,
-    count: 89,
-    url: "https://www.getapp.com/architectural-cad-software/a/chief-architect/"
-  }]
 },
 {
   id: "t74",
@@ -1468,19 +1266,6 @@ export const c3Tools: Tool[] = [
   expert_verdict:
     "The undisputed gold standard for professional landscape architecture.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 34,
-    url: "https://www.g2.com/products/vectorworks/reviews"
-  }, {
-    source: "TrustRadius",
-    score: 10,
-    max: 10,
-    count: 4,
-    url: "https://www.trustradius.com/products/vectorworks-landmark/reviews"
-  }]
 },
 {
   id: "t94",
@@ -1639,19 +1424,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 42,
-    url: "https://www.g2.com/products/allplan/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 42,
-    url: "https://www.capterra.com/software/205739/allplan"
-  }]
 },
 {
   id: "t95",
@@ -1727,19 +1499,6 @@ export const c3Tools: Tool[] = [
   expert_verdict:
     "The definitive platform for highway and infrastructure projects at enterprise scale.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 28,
-    url: "https://www.g2.com/products/openroads-designer/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/software/205740/openroads-designer"
-  }]
 },
 {
   id: "t102",
@@ -2203,19 +1962,6 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "Edificius is a powerful BIM platform boasting a record number of IFC certifications, making it a standout choice for projects prioritizing openBIM compliance. By combining architectural, structural, and MEP modules into a single environment, it offers superb interoperability. While it has a strong footprint in Europe, users should expect a steep learning curve and premium pricing.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 18,
-    url: "https://www.g2.com/products/edificius/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 18,
-    url: "https://www.capterra.it/software/205741/edificius"
-  }]
 },
 {
   id: "t131",
@@ -2813,19 +2559,6 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "dRofus is a robust data-centric program planning and equipment database tool designed to sync with your BIM workflow. Rather than a geometric modeler, it manages metadata, room data sheets, and enterprise procurement specs. While overkill for minor jobs, it is indispensable for complex public works, hospitals, and high-LOD projects.",
 
-  external_ratings: [{
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 12,
-    url: "https://www.capterra.com/software/205742/drofus"
-  }, {
-    source: "GetApp",
-    score: 4.2,
-    max: 5,
-    count: 12,
-    url: "https://www.getapp.com/bim-software/a/drofus/"
-  }]
 },
 {
   id: "t206",
@@ -2944,19 +2677,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 42,
-    url: "https://www.g2.com/products/autocad-plant-3d/reviews"
-  }, {
-    source: "Trustpilot",
-    score: 1.2,
-    max: 5,
-    count: 162,
-    url: "https://www.trustpilot.com/review/www.autodesk.com"
-  }]
 },
 {
   id: "t207",
@@ -3064,19 +2784,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 24,
-    url: "https://www.g2.com/products/intergraph-smartplant-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 24,
-    url: "https://www.capterra.com/software/205743/smartplant-3d"
-  }]
 },
 {
   id: "t208",
@@ -3184,37 +2891,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 24,
-    url: "https://www.g2.com/products/cadworx/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 2,
-    url: "https://www.capterra.com/p/276078/CADWorx-Plant/"
-  }, {
-    source: "TrustRadius",
-    score: 9,
-    max: 10,
-    count: 9,
-    url: "https://www.trustradius.com/products/cadworx/reviews"
-  }, {
-    source: "GetApp",
-    score: 4,
-    max: 5,
-    count: 2,
-    url: "https://www.getapp.com/construction-software/a/cadworx-plant/"
-  }, {
-    source: "Software Advice",
-    score: 4,
-    max: 5,
-    count: 2,
-    url: "https://www.softwareadvice.com/engineering-cad/cadworx-plant-profile/"
-  }]
 },
 {
   id: "t229",
@@ -3322,19 +2998,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 156,
-    url: "https://www.g2.com/products/autodesk-construction-cloud/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.4,
-    max: 5,
-    count: 156,
-    url: "https://www.capterra.com/software/205756/autodesk-construction-cloud"
-  }]
 },
 {
   id: "t230",
@@ -3442,19 +3105,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 87,
-    url: "https://www.g2.com/products/trimble-connect/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 87,
-    url: "https://www.capterra.com/software/205757/trimble-connect"
-  }]
 },
 {
   id: "t231",
@@ -3562,19 +3212,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 45,
-    url: "https://www.g2.com/products/bimcollab/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 45,
-    url: "https://www.capterra.com/software/205758/bimcollab"
-  }]
 },
 {
   id: "t232",

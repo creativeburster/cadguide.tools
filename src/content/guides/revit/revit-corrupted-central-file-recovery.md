@@ -5,17 +5,17 @@ category: "troubleshooting"
 softwareSlug: "revit"
 keyword: "revit central model corrupted"
 slug: "revit-corrupted-central-file-recovery"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
-  - "https://knowledge.autodesk.com/support/revit-products/troubleshooting/caas/sfdcarticles/sfdcarticles/Error-Data-in-Revit-file-is-corrupt-and-needs-to-be-manually-recovered.html"
-  - "https://forums.autodesk.com/t5/revit-forum/central-model-corruption-recovery/td-p/7654321"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-Data-in-Revit-file-is-corrupt-and-needs-to-be-manually-recovered.html"
+  - "https://help.autodesk.com/view/RVT/2024/ENU/"
 ---
 
 # Recovering a Corrupted Revit Central Model: Step-by-Step Disaster Recovery
 
-A corrupted central model in Revit is every BIM coordinator's nightmare. I've been the person everyone stares at when the central model won't open and 12 people can't sync their work. Over the years, I've dealt with corrupted centrals more times than I'd like to admit, and I've learned that there's a definite escalation path — start with the gentle stuff, and only go nuclear if you have to. Here's my recovery playbook, ordered from least to most aggressive.
+A corrupted central model in Revit is every BIM coordinator's nightmare. We've been the person everyone stares at when the central model won't open and 12 people can't sync their work. Over the years, we've dealt with corrupted centrals more times than we'd like to admit, and we've learned that there's a definite escalation path — start with the gentle stuff, and only go nuclear if you have to. Here's our recovery playbook, ordered from least to most aggressive.
 
 ## Understanding Central Model Corruption
 

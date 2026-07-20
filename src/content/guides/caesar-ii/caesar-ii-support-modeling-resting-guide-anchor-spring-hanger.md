@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii support modeling resting guide anchor spring hanger selection"
 slug: "caesar-ii-support-modeling-resting-guide-anchor-spring-hanger"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CAESAR II Support Modeling: Resting, Guide, Anchor, and Spring Hanger Selection
 
-Supports are the most important elements in a pipe stress model. Get the supports wrong and your entire analysis is wrong — even if the pipe geometry and load cases are perfect. I've seen engineers model every support as a rigid anchor and wonder why their expansion stress fails. Support modeling requires understanding how each support type constrains the pipe. Here's my guide.
+Supports are the most important elements in a pipe stress model. Get the supports wrong and your entire analysis is wrong — even if the pipe geometry and load cases are perfect. We've seen engineers model every support as a rigid anchor and wonder why their expansion stress fails. Support modeling requires understanding how each support type constrains the pipe. Here's our guide.
 
 ## Support Types in CAESAR II
 

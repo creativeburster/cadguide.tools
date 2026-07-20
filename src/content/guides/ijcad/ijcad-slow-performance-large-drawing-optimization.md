@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "ijcad"
 keyword: "ijcad slow performance large drawing optimization"
 slug: "ijcad-slow-performance-large-drawing-optimization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

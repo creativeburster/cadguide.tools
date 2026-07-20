@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ansys thermal analysis"
 slug: "ansys-thermal-analysis-steady-state-transient-coupled-thermal-structural"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ANSYS Thermal Analysis: Steady-State, Transient, and Coupled Thermal-Structural Simulation
 
-Thermal analysis is one of those things that seems simple until you actually do it. I learned that the hard way on an electronics cooling project where I forgot to account for thermal contact resistance at a TIM interface — my temperature predictions were off by 30°C. Let me share what I've picked up running steady-state, transient, and coupled thermal-structural analyses in ANSYS Workbench.
+Thermal analysis is one of those things that seems simple until you actually do it. A classic mistake is forgetting to account for thermal contact resistance at a TIM interface, which can throw temperature predictions off by tens of degrees. Let us share what matters when running steady-state, transient, and coupled thermal-structural analyses in ANSYS Workbench.
 
 ## Steady-State Thermal Analysis
 
@@ -282,4 +282,4 @@ Thermal analysis is one of those things that seems simple until you actually do 
 
 ## Wrapping Up
 
-Looking back at the thermal analyses I've run over the years, the ones that went wrong almost always came down to the same things: unrealistic convection coefficients, missing thermal contact resistance, or forgetting radiation on high-temperature surfaces. Get your material properties right, be honest about your boundary conditions, and always refine the mesh near heat sources. Do that, and your temperature predictions will be close enough to make good design decisions — whether you're cooling a CPU or designing a heat exchanger.
+Looking back at the thermal analyses we've run over the years, the ones that went wrong almost always came down to the same things: unrealistic convection coefficients, missing thermal contact resistance, or forgetting radiation on high-temperature surfaces. Get your material properties right, be honest about your boundary conditions, and always refine the mesh near heat sources. Do that, and your temperature predictions will be close enough to make good design decisions — whether you're cooling a CPU or designing a heat exchanger.

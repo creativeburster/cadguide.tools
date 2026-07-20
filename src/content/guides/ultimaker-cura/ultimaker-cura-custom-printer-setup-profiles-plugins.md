@@ -1,11 +1,11 @@
 ---
 title: "UltiMaker Cura Custom Printer Setup: Non-UltiMaker Printers, Profile Management, and Configuration"
-excerpt: "Cura works with any FDM printer, not just UltiMaker hardware. I cover adding custom printers, configuring bed size and extruder settings, managing print profiles, and the most useful marketplace plugins for extending Cura's functionality."
+excerpt: "Cura works with any FDM printer, not just UltiMaker hardware. We cover adding custom printers, configuring bed size and extruder settings, managing print profiles, and the most useful marketplace plugins for extending Cura's functionality."
 category: "workflow"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura custom printer profile non-UltiMaker setup configuration"
 slug: "ultimaker-cura-custom-printer-setup-profiles-plugins"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # UltiMaker Cura Custom Printer Setup: Non-UltiMaker Printers, Profile Management, and Configuration
 
-I use Cura with printers from five different manufacturers, and while it's designed for UltiMaker hardware, it works well with any FDM printer once you understand the profile system. Cura's marketplace and plugin ecosystem also make it more extensible than PrusaSlicer or Bambu Studio.
+We use Cura with printers from five different manufacturers, and while it's designed for UltiMaker hardware, it works well with any FDM printer once you understand the profile system. Cura's marketplace and plugin ecosystem also make it more extensible than PrusaSlicer or Bambu Studio.
 
 ## Adding a Custom Printer
 
@@ -106,7 +106,7 @@ This directory contains all printer definitions, material profiles, and quality 
 
 ## Useful Cura Plugins
 
-Cura's marketplace is one of its biggest advantages over other slicers. Here are the plugins I consider essential:
+Cura's marketplace is one of its biggest advantages over other slicers. Here are the plugins we consider essential:
 
 ### Settings Guide
 Provides hover-over explanations for every setting in Cura. Essential for understanding what each parameter does without leaving the slicer. UltiMaker themselves recommend this plugin.

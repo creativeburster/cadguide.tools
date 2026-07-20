@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "tinkercad"
 keyword: "tinkercad classroom setup students 3d design education"
 slug: "tinkercad-classroom-setup-students-3d-design-education"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Tinkercad Classroom: Setting Up 3D Design Classes for Students
 
-I teach 3D design to middle and high school students using Tinkercad. It's the best tool for education — free, browser-based, and safe for students under 13 (with teacher moderation). Here's how to set up a classroom.
+We teach 3D design to middle and high school students using Tinkercad. It's the best tool for education — free, browser-based, and safe for students under 13 (with teacher moderation). Here's how to set up a classroom.
 
 ## Step 1: Create a Teacher Account
 

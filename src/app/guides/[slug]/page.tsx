@@ -121,7 +121,7 @@ export async function generateMetadata(
       description: frontmatter.excerpt,
       siteName: 'CADGuide.tools',
       publishedTime: frontmatter.date,
-      authors: [frontmatter.author],
+      authors: ['CADGuide Tools Editorial Team'],
     },
     robots: { index: true, follow: true },
   };

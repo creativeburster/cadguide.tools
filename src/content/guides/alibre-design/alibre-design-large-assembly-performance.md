@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "alibre-design"
 keyword: "alibre design large assembly performance slow"
 slug: "alibre-design-large-assembly-performance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Alibre Design Assembly Performance: Optimizing Large Assembly Handling
 
-Alibre Design handles small to medium assemblies (up to ~1,000 parts) well. Push beyond that and you'll hit performance walls — slow opens, laggy rotations, and crashes during saves. I optimized a 3,200-part assembly in Alibre and got it from "unusable" to "workable." Here's what actually helped.
+Alibre Design handles small to medium assemblies (up to ~1,000 parts) well. Push beyond that and you'll hit performance walls — slow opens, laggy rotations, and crashes during saves. We optimized a 3,200-part assembly in Alibre and got it from "unusable" to "workable." Here's what actually helped.
 
 ## Know the Practical Limits
 

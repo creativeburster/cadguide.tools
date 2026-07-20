@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "3dexperience"
 keyword: "3dexperience xdesign xshape browser based modeling solidworks workflow"
 slug: "3dexperience-xdesign-xshape-browser-based-modeling-solidworks"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # 3DEXPERIENCE xDesign and xShape: Browser-Based Modeling Workflow for SOLIDWORKS Teams
 
-xDesign and xShape are the browser-based CAD apps in the 3DEXPERIENCE platform. xDesign is for parametric feature-based modeling (like SOLIDWORKS). xShape is for subdivision surface modeling (like SolidWorks Power Surfacing or Blender). I've used both alongside SOLIDWORKS desktop in hybrid workflows. They're not replacements for SOLIDWORKS — they're complementary tools that extend CAD access to more team members. Here's how to use them effectively.
+xDesign and xShape are the browser-based CAD apps in the 3DEXPERIENCE platform. xDesign is for parametric feature-based modeling (like SOLIDWORKS). xShape is for subdivision surface modeling (like SolidWorks Power Surfacing or Blender). We've used both alongside SOLIDWORKS desktop in hybrid workflows. They're not replacements for SOLIDWORKS — they're complementary tools that extend CAD access to more team members. Here's how to use them effectively.
 
 ## Understanding xDesign and xShape
 
@@ -173,7 +173,7 @@ For the derived part workflow to work correctly:
 4. MySession shows the sync status:
    - **Up to date**: No changes from other users
    - **Modified by others**: Another user has changed a component
-   - **Modified by me**: You have local changes
+   - **Modified by us**: You have local changes
 5. When either user saves, the other sees the update in MySession.
 
 ### Conflict Resolution

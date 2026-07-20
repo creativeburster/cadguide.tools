@@ -1,11 +1,11 @@
 ---
 title: "Solid Edge Synchronous Technology: Transitioning from Ordered to Synchronous Modeling"
-excerpt: "Moving from ordered (history-based) to synchronous (direct) modeling in Solid Edge can be disorienting. I cover the hybrid workflow, steering wheel basics, and common pitfalls when adopting synchronous modeling."
+excerpt: "Moving from ordered (history-based) to synchronous (direct) modeling in Solid Edge can be disorienting. We cover the hybrid workflow, steering wheel basics, and common pitfalls when adopting synchronous modeling."
 category: "workflow"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge synchronous technology ordered modeling transition steering wheel"
 slug: "solid-edge-synchronous-technology-ordered-transition"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:

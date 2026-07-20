@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "orcad"
 keyword: "orcad vs altium designer pcb comparison"
 slug: "orcad-vs-altium-designer-pcb-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # OrCAD vs Altium Designer: Feature Comparison for Professional PCB Design
 
-I've used both OrCAD and Altium Designer for professional PCB design. They're the two dominant tools in the industry, and both produce excellent results. But they have different philosophies, different strengths, and very different price points. Here's my honest comparison.
+We've used both OrCAD and Altium Designer for professional PCB design. They're the two dominant tools in the industry, and both produce excellent results. But they have different philosophies, different strengths, and very different price points. Here's our honest comparison.
 
 ## Philosophy
 
@@ -120,7 +120,7 @@ I've used both OrCAD and Altium Designer for professional PCB design. They're th
 - You're a small team or individual designer
 - You value an integrated, single-application workflow
 
-## My Recommendation
+## Our Recommendation
 
 **For high-speed digital design with complex constraints**: OrCAD. The Constraint Manager's timing and crosstalk capabilities are unmatched at this price point. PSpice is the best analog simulator available.
 

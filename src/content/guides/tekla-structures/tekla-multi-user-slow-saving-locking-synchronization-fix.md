@@ -1,11 +1,11 @@
 ---
 title: "Tekla Structures Multi-User Model Slow: Saving, Locking, and Database Synchronization Fixes"
-excerpt: "Tekla multi-user models slow to a crawl during saving and synchronization, with database locking conflicts causing freezes. I cover the multi-user server optimization, autosave configuration, and the xs_progress_cache setting that fixes multi-user performance."
+excerpt: "Tekla multi-user models slow to a crawl during saving and synchronization, with database locking conflicts causing freezes. We cover the multi-user server optimization, autosave configuration, and the xs_progress_cache setting that fixes multi-user performance."
 category: "troubleshooting"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures multi-user slow saving locking database synchronization"
 slug: "tekla-multi-user-slow-saving-locking-synchronization-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:
@@ -120,7 +120,7 @@ Trimble recommends: "Close all views when saving large models."
 2. Go to **File → Synchronize**
 3. Choose what to synchronize:
    - **Changes from others**: Get other users' changes
-   - **My changes to server**: Send your changes to the server
+   - **Our changes to server**: Send your changes to the server
 4. Synchronize at natural break points, not during active modeling
 
 ### Synchronize Before Numbering

@@ -1,11 +1,11 @@
 ---
 title: "Browzwear VStitcher Export and Integration: GLB, FBX, DXF, and Browzwear Cloud Workflow"
-excerpt: "Exporting garments from VStitcher requires different formats for different targets: GLB for web, FBX for 3D software, DXF for pattern production, and Browzwear Cloud for team collaboration. I cover each export workflow with settings, optimization tips, and common issues."
+excerpt: "Exporting garments from VStitcher requires different formats for different targets: GLB for web, FBX for 3D software, DXF for pattern production, and Browzwear Cloud for team collaboration. We cover each export workflow with settings, optimization tips, and common issues."
 category: "workflow"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher export GLB FBX DXF Browzwear Cloud integration workflow"
 slug: "browzwear-vstitcher-export-integration-glb-fbx-dxf-cloud"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Browzwear VStitcher Export and Integration: GLB, FBX, DXF, and Browzwear Cloud Workflow
 
-I've built export pipelines from VStitcher to web viewers, 3D rendering software, and manufacturing systems. Each target requires a specific export format and configuration. Getting the export right ensures that garments look correct in the destination platform and that production files contain all necessary information.
+We've built export pipelines from VStitcher to web viewers, 3D rendering software, and manufacturing systems. Each target requires a specific export format and configuration. Getting the export right ensures that garments look correct in the destination platform and that production files contain all necessary information.
 
 ## Export Format Overview
 

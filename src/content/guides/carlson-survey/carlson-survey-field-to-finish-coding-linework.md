@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey field to finish coding linework automation"
 slug: "carlson-survey-field-to-finish-coding-linework"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Carlson Survey Field to Finish: Automating Drawing Creation from Field Codes
 
-Field to Finish (F2F) is the most powerful feature in Carlson Survey. It converts field-collected point codes into complete drawing entities — lines, curves, symbols, and annotations — automatically. I've configured F2F for dozens of survey crews. When set up correctly, the drawing is 90% complete when the data is downloaded. Here's how.
+Field to Finish (F2F) is the most powerful feature in Carlson Survey. It converts field-collected point codes into complete drawing entities — lines, curves, symbols, and annotations — automatically. We've configured F2F for dozens of survey crews. When set up correctly, the drawing is 90% complete when the data is downloaded. Here's how.
 
 ## How Field to Finish Works
 

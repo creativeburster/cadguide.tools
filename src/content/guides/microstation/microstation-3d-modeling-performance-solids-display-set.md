@@ -1,11 +1,11 @@
 ---
 title: "MicroStation 3D Modeling Performance: Solids, Surfaces, and Display Optimization for Plant Design"
-excerpt: "MicroStation 3D files with complex solids and surface models lag during orbiting and editing. I cover the solid simplification, display set management, and section cut workflow that keep 3D infrastructure models responsive."
+excerpt: "MicroStation 3D files with complex solids and surface models lag during orbiting and editing. We cover the solid simplification, display set management, and section cut workflow that keep 3D infrastructure models responsive."
 category: "performance"
 softwareSlug: "microstation"
 keyword: "MicroStation 3D modeling performance solids surfaces display set"
 slug: "microstation-3d-modeling-performance-solids-display-set"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

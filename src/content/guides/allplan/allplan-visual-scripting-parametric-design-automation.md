@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "allplan"
 keyword: "allplan visual scripting"
 slug: "allplan-visual-scripting-parametric-design-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Allplan Visual Scripting: Parametric Design Automation Without Coding
 
-I'm not a programmer, so when I heard about Allplan Visual Scripting (AVS), I was skeptical that a node-based tool could replace actual coding. But after using it for a few months, I was automating repetitive tasks that used to eat up my afternoons. AVS is similar to Dynamo for Revit or Grasshopper for Rhino — you connect nodes to create parametric logic without writing a single line of code. Let me show you how I use it.
+We're not a programmer, so when we heard about Allplan Visual Scripting (AVS), we were skeptical that a node-based tool could replace actual coding. But after using it for a few months, we were automating repetitive tasks that used to eat up our afternoons. AVS is similar to Dynamo for Revit or Grasshopper for Rhino — you connect nodes to create parametric logic without writing a single line of code. Let us show you how we use it.
 
 ## Accessing Visual Scripting
 
@@ -176,4 +176,4 @@ Build a library of reusable scripts for common tasks:
 
 ## Wrapping Up
 
-Allplan Visual Scripting isn't as powerful as Dynamo or Grasshopper, but it covers the essential use cases well. I use it for parametric facades, unit layout studies, and quantity extraction — tasks that would take hours manually but minutes with a script. My tip: build a library of reusable scripts for your common tasks. Once you've got a few scripts in your library, you'll find yourself reaching for them on every project.
+Allplan Visual Scripting isn't as powerful as Dynamo or Grasshopper, but it covers the essential use cases well. We use it for parametric facades, unit layout studies, and quantity extraction — tasks that would take hours manually but minutes with a script. Our tip: build a library of reusable scripts for your common tasks. Once you've got a few scripts in your library, you'll find yourself reaching for them on every project.

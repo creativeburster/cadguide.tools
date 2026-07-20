@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "progecad"
 keyword: "progecad vs autocad comparison"
 slug: "progecad-vs-autocad-feature-comparison-cost-migration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

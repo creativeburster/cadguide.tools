@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "geomagic-design-x"
 keyword: "geomagic design x decimate 3d scan data reduce polygon file size"
 slug: "geomagic-design-x-decimating-scan-data-faster-processing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-12"
 sources:

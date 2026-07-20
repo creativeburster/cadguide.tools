@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "idea-statica"
 keyword: "idea statica vs tekla structural designer connection comparison"
 slug: "idea-statica-vs-tekla-structural-designer-connection"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IDEA StatiCa vs Tekla Structural Designer: Steel Connection Design Comparison
 
-Both IDEA StatiCa and Tekla Structural Designer (TSD) handle steel design, but they approach connections differently. IDEA StatiCa specializes in connections with CBFEM analysis; TSD handles overall building design with simpler connection checks. I've used both and here's the comparison.
+Both IDEA StatiCa and Tekla Structural Designer (TSD) handle steel design, but they approach connections differently. IDEA StatiCa specializes in connections with CBFEM analysis; TSD handles overall building design with simpler connection checks. We've used both and here's the comparison.
 
 ## Fundamental Difference
 
@@ -107,7 +107,7 @@ This workflow gives you the best of both worlds: TSD's building-level capabiliti
 
 **Verdict**: TSD integrates natively with Tekla Structures (Trimble ecosystem). IDEA StatiCa integrates with more analysis tools (Robot, ETABS, SAP2000) for force import.
 
-## My Recommendation
+## Our Recommendation
 
 **For a structural firm specializing in steel connections**: IDEA StatiCa. The CBFEM method is the gold standard for connection design. No other tool at this price point matches its analysis quality.
 

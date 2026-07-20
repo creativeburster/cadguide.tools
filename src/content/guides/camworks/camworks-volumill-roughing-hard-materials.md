@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "camworks"
 keyword: "camworks volumill roughing hard materials"
 slug: "camworks-volumill-roughing-hard-materials"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CAMWorks VoluMill: High-Efficiency Roughing for Hard Materials
 
-VoluMill is CAMWorks' high-efficiency roughing module. It uses a proprietary algorithm to maintain constant tool engagement and optimize feed rates dynamically. I've used it on hardened steel (HRC 45) and titanium — it doubles tool life and cuts cycle time by 40-60% compared to traditional offset roughing.
+VoluMill is CAMWorks' high-efficiency roughing module. It uses a proprietary algorithm to maintain constant tool engagement and optimize feed rates dynamically. We've used it on hardened steel (HRC 45) and titanium — it doubles tool life and cuts cycle time by 40-60% compared to traditional offset roughing.
 
 ## How VoluMill Differs from Traditional Roughing
 

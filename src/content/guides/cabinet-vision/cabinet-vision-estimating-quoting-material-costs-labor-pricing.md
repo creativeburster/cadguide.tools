@@ -1,11 +1,11 @@
 ---
 title: "Cabinet Vision Estimating and Quoting: Material Costs, Labor Calculation, and Pricing Reports"
-excerpt: "Cabinet Vision's estimating tools calculate material costs, labor, and pricing for cabinet projects. I cover the material database setup, labor rate configuration, pricing formula creation, and generating professional quotes for clients."
+excerpt: "Cabinet Vision's estimating tools calculate material costs, labor, and pricing for cabinet projects. We cover the material database setup, labor rate configuration, pricing formula creation, and generating professional quotes for clients."
 category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision estimating quoting material costs labor calculation pricing reports quotes clients"
 slug: "cabinet-vision-estimating-quoting-material-costs-labor-pricing"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Cabinet Vision Estimating and Quoting: Material Costs, Labor Calculation, and Pricing Reports
 
-I've used Cabinet Vision's estimating module to quote thousands of cabinet projects ranging from small bathroom vanities to large commercial casework installations. Accurate estimating is what separates profitable cabinet shops from struggling ones — and Cabinet Vision's ability to generate quotes directly from the 3D design eliminates the manual takeoff process that introduces errors and missed parts.
+We've used Cabinet Vision's estimating module to quote thousands of cabinet projects ranging from small bathroom vanities to large commercial casework installations. Accurate estimating is what separates profitable cabinet shops from struggling ones — and Cabinet Vision's ability to generate quotes directly from the 3D design eliminates the manual takeoff process that introduces errors and missed parts.
 
 ## Estimating Overview
 

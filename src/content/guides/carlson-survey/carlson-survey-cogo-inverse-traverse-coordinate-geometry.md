@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey cogo inverse traverse coordinate geometry"
 slug: "carlson-survey-cogo-inverse-traverse-coordinate-geometry"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Carlson Survey COGO: Inverse, Traverse, and Coordinate Geometry Calculations
 
-COGO (Coordinate Geometry) is the mathematical backbone of surveying. Carlson's COGO tools handle all the calculations surveyors need — inverses, intersections, areas, and curves. I use these daily for boundary work. Here's the complete guide.
+COGO (Coordinate Geometry) is the mathematical backbone of surveying. Carlson's COGO tools handle all the calculations surveyors need — inverses, intersections, areas, and curves. We use these daily for boundary work. Here's the complete guide.
 
 ## Inverse (Inverse Calculation)
 

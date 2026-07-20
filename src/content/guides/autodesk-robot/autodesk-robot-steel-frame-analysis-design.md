@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-robot"
 keyword: "autodesk robot steel frame analysis design"
 slug: "autodesk-robot-steel-frame-analysis-design"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Autodesk Robot Structural Analysis: Steel Frame Design Workflow
 
-I use Autodesk Robot for steel frame analysis on industrial projects. It handles wind loading, seismic loading, and steel code checking (AISC, Eurocode) in one workflow. Here's my complete process from model to code check.
+We use Autodesk Robot for steel frame analysis on industrial projects. It handles wind loading, seismic loading, and steel code checking (AISC, Eurocode) in one workflow. Here's our complete process from model to code check.
 
 ## Step 1: Model Geometry
 

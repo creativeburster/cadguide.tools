@@ -1,11 +1,11 @@
 ---
 title: "FreeCAD STEP File Import Takes Forever: Helix Geometry, Memory Overflow, and Workarounds"
-excerpt: "FreeCAD takes an hour to import a STEP file that other CAD software opens in seconds. I cover the helix geometry bottleneck, the Varicad re-export workaround, and memory settings that prevent crashes on large imports."
+excerpt: "FreeCAD takes an hour to import a STEP file that other CAD software opens in seconds. We cover the helix geometry bottleneck, the Varicad re-export workaround, and memory settings that prevent crashes on large imports."
 category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD STEP file import slow hangs helix memory"
 slug: "freecad-step-file-import-slow-helix-memory-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

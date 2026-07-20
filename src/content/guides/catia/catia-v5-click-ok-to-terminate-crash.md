@@ -1,11 +1,11 @@
 ---
 title: "Fixing CATIA V5 'Click OK to Terminate' Crash"
-excerpt: "The infamous 'Click OK to Terminate' error has earned CATIA the nickname 'Close And Try It Again.' I cover the real fixes: graphics driver rollback, CATSettings cleanup, and GDI leak diagnosis."
+excerpt: "The infamous 'Click OK to Terminate' error has earned CATIA the nickname 'Close And Try It Again.' we cover the real fixes: graphics driver rollback, CATSettings cleanup, and GDI leak diagnosis."
 category: "troubleshooting"
 softwareSlug: "catia"
 keyword: "CATIA click OK to terminate crash"
 slug: "catia-v5-click-ok-to-terminate-crash"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-15"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Fixing CATIA V5 "Click OK to Terminate" Crash
 
-If you've used CATIA V5 for any length of time, you've seen the error. A dialog box appears with the message "Click OK to terminate" and your unsaved work is gone. The CAD community has turned this into a running joke — "CATIA: Close And Try It Again." But when you're on a deadline and the software crashes every 20 minutes, it's not funny. I've been the CATIA admin for an aerospace supplier for six years, and I've developed a systematic approach to diagnosing and fixing these crashes.
+If you've used CATIA V5 for any length of time, you've seen the error. A dialog box appears with the message "Click OK to terminate" and your unsaved work is gone. The CAD community has turned this into a running joke — "CATIA: Close And Try It Again." But when you're on a deadline and the software crashes every 20 minutes, it's not funny. We've been the CATIA admin for an aerospace supplier for six years, and we've developed a systematic approach to diagnosing and fixing these crashes.
 
 ## What "Click OK to Terminate" Actually Means
 
@@ -127,4 +127,4 @@ A Reddit user reported that their CATIA V5 R19 installation was corrupted and mi
 
 ## Summary
 
-The "Click OK to Terminate" error is almost always caused by a graphics driver issue or corrupted CATSettings. Start with the graphics driver — install the certified version, not the latest — and if that doesn't fix it, clear the CATSettings. These two fixes resolve about 85% of the cases I've handled. For the remaining 15%, check for GDI leaks and installation corruption. And always, always save your work frequently — CATIA V5's autosave is unreliable, and the crash will come when you least expect it.
+The "Click OK to Terminate" error is almost always caused by a graphics driver issue or corrupted CATSettings. Start with the graphics driver — install the certified version, not the latest — and if that doesn't fix it, clear the CATSettings. These two fixes resolve about 85% of the cases we've handled. For the remaining 15%, check for GDI leaks and installation corruption. And always, always save your work frequently — CATIA V5's autosave is unreliable, and the crash will come when you least expect it.

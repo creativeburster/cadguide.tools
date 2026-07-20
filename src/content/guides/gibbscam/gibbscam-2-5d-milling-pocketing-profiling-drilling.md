@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "gibbscam"
 keyword: "gibbscam 2.5d milling pocketing profiling drilling"
 slug: "gibbscam-2-5d-milling-pocketing-profiling-drilling"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # GibbsCAM 2.5D Milling: Pocketing, Profiling, and Drilling Best Practices
 
-2.5D milling covers 80% of most shops' work — pockets, profiles, and holes. GibbsCAM handles these well, but the default settings aren't optimal. I've tuned my 2.5D parameters over hundreds of parts and these are the settings that consistently produce the best results.
+2.5D milling covers 80% of most shops' work — pockets, profiles, and holes. GibbsCAM handles these well, but the default settings aren't optimal. We've tuned our 2.5D parameters over hundreds of parts and these are the settings that consistently produce the best results.
 
 ## Pocketing
 

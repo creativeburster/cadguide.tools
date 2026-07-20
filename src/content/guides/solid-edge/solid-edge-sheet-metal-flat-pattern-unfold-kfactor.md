@@ -1,11 +1,11 @@
 ---
 title: "Solid Edge Sheet Metal Flat Pattern Errors: Unfold Failures, Wrong K-Factor, and Bend Allowance Fixes"
-excerpt: "Solid Edge sheet metal flat patterns fail to unfold or produce incorrect flat lengths. I cover the material table setup, K-factor calibration, and the corner relief settings that fix flat pattern errors."
+excerpt: "Solid Edge sheet metal flat patterns fail to unfold or produce incorrect flat lengths. We cover the material table setup, K-factor calibration, and the corner relief settings that fix flat pattern errors."
 category: "troubleshooting"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge sheet metal flat pattern unfold error K-factor bend allowance"
 slug: "solid-edge-sheet-metal-flat-pattern-unfold-kfactor"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-25"
 sources:
@@ -142,7 +142,7 @@ If you mix ordered and synchronous features in a sheet metal part, the flat patt
 
 ## Problem 6: Flat Pattern Drawing View Slow
 
-Creating a flat pattern drawing view can be slow for complex sheet metal parts (see my Solid Edge drafting performance guide for general drafting fixes):
+Creating a flat pattern drawing view can be slow for complex sheet metal parts (see our Solid Edge drafting performance guide for general drafting fixes):
 
 ### Fix: Pre-Flatten Before Creating Drawing
 

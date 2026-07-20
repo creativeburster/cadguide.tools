@@ -1,11 +1,11 @@
 ---
 title: "Autodesk InfraWorks Data Import and Model Setup: GIS, Terrain, and Coordinate Systems"
-excerpt: "InfraWorks models start with importing the right data: terrain models, GIS shapefiles, aerial imagery, and Civil 3D drawings. I cover the data import workflow, coordinate system configuration, managing large datasets, and optimizing model performance for infrastructure projects."
+excerpt: "InfraWorks models start with importing the right data: terrain models, GIS shapefiles, aerial imagery, and Civil 3D drawings. We cover the data import workflow, coordinate system configuration, managing large datasets, and optimizing model performance for infrastructure projects."
 category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks data import GIS terrain coordinate system model setup performance"
 slug: "autodesk-infraworks-data-import-gis-terrain-coordinate-system"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Autodesk InfraWorks Data Import and Model Setup: GIS, Terrain, and Coordinate Systems
 
-I've set up InfraWorks models for projects ranging from small intersections to 50-kilometer highway corridors. The quality of the model depends entirely on the data you import — accurate terrain, current imagery, and complete GIS data make the difference between a useful preliminary design tool and a misleading visualization. Getting the data setup right at the beginning saves hours of rework later.
+We've set up InfraWorks models for projects ranging from small intersections to 50-kilometer highway corridors. The quality of the model depends entirely on the data you import — accurate terrain, current imagery, and complete GIS data make the difference between a useful preliminary design tool and a misleading visualization. Getting the data setup right at the beginning saves hours of rework later.
 
 ## Creating a New Model
 

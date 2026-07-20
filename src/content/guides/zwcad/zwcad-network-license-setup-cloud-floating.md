@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "zwcad"
 keyword: "zwcad network license floating setup"
 slug: "zwcad-network-license-setup-cloud-floating"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ZWCAD Network License Setup with ZWCAD Cloud Floating
 
-I deployed ZWCAD network licenses across a 40-seat office last year. The cloud-based floating license system is simpler than Autodesk's FlexLM, but it has quirks that will trip you up if you don't plan ahead. Here's the complete setup guide based on what I learned.
+Deploying ZWCAD network licenses across a multi-seat office has its quirks. The cloud-based floating license system is simpler than Autodesk's FlexLM, but it has details that will trip you up if you don't plan ahead. Here's the complete setup guide.
 
 ## How ZWCAD Network Licensing Works
 

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "multisim"
 keyword: "multisim convergence error singular matrix floating node"
 slug: "multisim-convergence-errors-singular-matrix-floating-node-fixes"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # NI Multisim Convergence Errors: Singular Matrix, Floating Nodes, and Time Step Fixes
 
-Convergence errors are the most frustrating part of SPICE simulation. The simulation runs fine on a simple circuit, but add a few nonlinear components and suddenly you're staring at "Singular matrix" or "Time step too small." Let me walk through each error type and how to fix it.
+Convergence errors are the most frustrating part of SPICE simulation. The simulation runs fine on a simple circuit, but add a few nonlinear components and suddenly you're staring at "Singular matrix" or "Time step too small." Let us walk through each error type and how to fix it.
 
 ## Understanding the Newton-Raphson Problem
 

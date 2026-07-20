@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "meshlab"
 keyword: "meshlab to blender workflow scan data retopology export"
 slug: "meshlab-to-blender-workflow-scan-data-retopology"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "zw3d"
 keyword: "zw3d drawing creation slow large assembly performance"
 slug: "zw3d-drawing-creation-slow-large-assembly-performance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-12"
 sources:

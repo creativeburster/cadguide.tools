@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autocad-plant-3d"
 keyword: "autocad plant 3d equipment modeling nozzles connecting pipe"
 slug: "autocad-plant-3d-equipment-modeling-nozzles-connecting-pipe"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # AutoCAD Plant 3D Equipment Modeling: Creating Nozzles and Connecting Pipe to Vessels
 
-Equipment modeling is the bridge between structural design and piping in Plant 3D. I've seen projects where equipment was modeled as plain 3D solids with no nozzles, making it impossible to connect pipe. Then the piping team had to remodel everything. Getting equipment right from the start saves weeks of rework.
+Equipment modeling is the bridge between structural design and piping in Plant 3D. We've seen projects where equipment was modeled as plain 3D solids with no nozzles, making it impossible to connect pipe. Then the piping team had to remodel everything. Getting equipment right from the start saves weeks of rework.
 
 ## Equipment Modeling Approaches in Plant 3D
 
@@ -74,7 +74,7 @@ After conversion, you need to add nozzles manually:
 
 ### Nozzle Orientation
 
-Nozzle orientation is critical. The nozzle direction vector determines which way the pipe will connect. I've seen nozzles pointing inward into the vessel because the direction was set wrong.
+Nozzle orientation is critical. The nozzle direction vector determines which way the pipe will connect. We've seen nozzles pointing inward into the vessel because the direction was set wrong.
 
 1. After placing the nozzle, check the direction arrow.
 2. The arrow should point **away** from the equipment surface.

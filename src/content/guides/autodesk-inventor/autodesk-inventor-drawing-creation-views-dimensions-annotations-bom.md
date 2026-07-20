@@ -1,11 +1,11 @@
 ---
 title: "Autodesk Inventor Drawing Creation: Views, Dimensions, Annotations, and BOM"
-excerpt: "Inventor's drawing tools create production-ready 2D drawings from 3D models with automated views, dimensions, and BOM. I cover drawing templates, view creation, dimensioning, annotations, hole tables, and parts lists for complete manufacturing documentation."
+excerpt: "Inventor's drawing tools create production-ready 2D drawings from 3D models with automated views, dimensions, and BOM. We cover drawing templates, view creation, dimensioning, annotations, hole tables, and parts lists for complete manufacturing documentation."
 category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor drawing creation views dimensions annotations BOM parts list manufacturing documentation"
 slug: "autodesk-inventor-drawing-creation-views-dimensions-annotations-bom"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Inventor Drawing Creation: Views, Dimensions, Annotations, and BOM
 
-I've created thousands of manufacturing drawings in Inventor for machine shops, sheet metal fabricators, and assembly operations. Inventor's drawing environment is tightly integrated with the 3D model — dimensions and views update automatically when the model changes. This bi-directional link ensures drawings always match the model, eliminating the common error of drawings not reflecting the latest design changes.
+We've created thousands of manufacturing drawings in Inventor for machine shops, sheet metal fabricators, and assembly operations. Inventor's drawing environment is tightly integrated with the 3D model — dimensions and views update automatically when the model changes. This bi-directional link ensures drawings always match the model, eliminating the common error of drawings not reflecting the latest design changes.
 
 ## Drawing Overview
 

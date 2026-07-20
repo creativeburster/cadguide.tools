@@ -1,11 +1,11 @@
 ---
 title: "Browzwear VStitcher Avatar Setup and Fit Validation: Custom Bodies, Scans, and Measurement"
-excerpt: "VStitcher's avatar system supports custom body scans, standard fashion mannequins, and pose-specific mannequins. I cover importing custom avatars, configuring body measurements, using the fit validation tools, and the measurement-based sizing workflow for production accuracy."
+excerpt: "VStitcher's avatar system supports custom body scans, standard fashion mannequins, and pose-specific mannequins. We cover importing custom avatars, configuring body measurements, using the fit validation tools, and the measurement-based sizing workflow for production accuracy."
 category: "workflow"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher avatar setup custom body scan fit validation measurement sizing"
 slug: "browzwear-vstitcher-avatar-setup-fit-validation-custom-body"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Browzwear VStitcher Avatar Setup and Fit Validation: Custom Bodies, Scans, and Measurement
 
-I've set up avatars in VStitcher for everything from standard fashion mannequins to 3D body scans of real fit models. The avatar is the foundation of every garment in VStitcher — accurate body measurements and proper avatar configuration are essential for production-quality fit validation.
+We've set up avatars in VStitcher for everything from standard fashion mannequins to 3D body scans of real fit models. The avatar is the foundation of every garment in VStitcher — accurate body measurements and proper avatar configuration are essential for production-quality fit validation.
 
 ## Avatar Types in VStitcher
 

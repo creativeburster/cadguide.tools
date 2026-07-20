@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "easyeda"
 keyword: "easyeda gerber export missing pads drill offset export failed troubleshooting"
 slug: "easyeda-gerber-export-missing-pads-drill-offset-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # EasyEDA Gerber Export: Fixing Missing Pads, Drill Offsets, and Export Failures
 
-Gerber export is the last step before manufacturing — and the step where problems are most costly. A bad Gerber file means a bad board. I've ordered boards with missing pads because I didn't verify the Gerber output. That was an expensive lesson. Here's how to catch and fix Gerber export problems in EasyEDA before they become manufacturing disasters.
+Gerber export is the last step before manufacturing — and the step where problems are most costly. A bad Gerber file means a bad board. We've ordered boards with missing pads because we didn't verify the Gerber output. That was an expensive lesson. Here's how to catch and fix Gerber export problems in EasyEDA before they become manufacturing disasters.
 
 ## Problem 1: Missing Pads in Exported Gerber
 

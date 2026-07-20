@@ -1,11 +1,11 @@
 ---
 title: "Fixing Creo 'License Request Failed for Feature' on Startup"
-excerpt: "Creo's most common startup error is also the most frustrating. I cover the FlexLM diagnostics, service delay fix, and MAC address verification that resolve this error permanently."
+excerpt: "Creo's most common startup error is also the most frustrating. We cover the FlexLM diagnostics, service delay fix, and MAC address verification that resolve this error permanently."
 category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo license request failed for feature"
 slug: "creo-license-request-failed-feature-startup"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-15"
 sources:
@@ -16,9 +16,9 @@ sources:
 
 # Fixing Creo "License Request Failed for Feature" on Startup
 
-A user on the PTC Community forum described a problem that I've dealt with across multiple organizations: every time they turn on a PC and open Creo 11.0.4.0, they get a "License Warning" dialog with the message "License request failed for feature." The workaround was going to Windows Services and restarting `lmadmin_ptc` — every single time after a reboot. They'd tried reconfiguring licenses and reinstalling the license server, but nothing permanently fixed the issue. Another user in the same thread identified the root cause: the network card wasn't available when the license service started.
+A user on the PTC Community forum described a problem that we've dealt with across multiple organizations: every time they turn on a PC and open Creo 11.0.4.0, they get a "License Warning" dialog with the message "License request failed for feature." The workaround was going to Windows Services and restarting `lmadmin_ptc` — every single time after a reboot. They'd tried reconfiguring licenses and reinstalling the license server, but nothing permanently fixed the issue. Another user in the same thread identified the root cause: the network card wasn't available when the license service started.
 
-This is one of the most common Creo administration problems, and PTC's support articles (CS26888, CS349225, CS369394) cover pieces of it but don't always provide the complete fix. I'll walk through the full diagnosis and resolution.
+This is one of the most common Creo administration problems, and PTC's support articles (CS26888, CS349225, CS369394) cover pieces of it but don't always provide the complete fix. We'll walk through the full diagnosis and resolution.
 
 ## Understanding the Error
 

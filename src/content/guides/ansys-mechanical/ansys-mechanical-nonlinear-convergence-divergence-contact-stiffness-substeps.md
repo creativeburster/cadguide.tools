@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-mechanical"
 keyword: "ansys nonlinear convergence"
 slug: "ansys-mechanical-nonlinear-convergence-divergence-contact-stiffness-substeps"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # ANSYS Mechanical Nonlinear Analysis Convergence: Fixing Divergence, Slow Convergence, and Time Step Issues
 
-I've had nonlinear analyses in ANSYS Mechanical run for 12 hours only to diverge at 80% of the load — and the frustration is universal in the FEA community. On Reddit's r/fea, a user reported that their "ANSYS FEA not converging with finer mesh size" — a problem that seems counterintuitive but is actually common. On r/ANSYS, meshing discussions regularly touch on convergence issues, with experienced users recommending mesh convergence studies. And on CFD-Online, a user documented "problem in convergence due to poor mesh quality" — highlighting the intimate connection between mesh quality and solver convergence.
+We've had nonlinear analyses in ANSYS Mechanical run for 12 hours only to diverge at 80% of the load — and the frustration is universal in the FEA community. On Reddit's r/fea, a user reported that their "ANSYS FEA not converging with finer mesh size" — a problem that seems counterintuitive but is actually common. On r/ANSYS, meshing discussions regularly touch on convergence issues, with experienced users recommending mesh convergence studies. And on CFD-Online, a user documented "problem in convergence due to poor mesh quality" — highlighting the intimate connection between mesh quality and solver convergence.
 
 Nonlinear convergence problems in ANSYS Mechanical fall into three categories: divergence (solver fails to converge), slow convergence (solver converges but takes too many iterations), and false convergence (solver reports convergence but results are wrong). This guide covers the diagnostic and fix strategies for each.
 
@@ -151,6 +151,6 @@ For analyses with large displacement or rotation, enable "Large Deflection" in A
 
 If parts are not fully constrained, the solver detects rigid body motion and fails to converge. Check that all parts have sufficient constraints. Use weak springs (Analysis Settings > Solver Controls > Weak Springs) as a temporary fix to stabilize underconstrained parts.
 
-## My Take
+## Our Take
 
 Nonlinear convergence in ANSYS Mechanical is part science and part art. The most effective diagnostic tool is the Newton-Raphson residual plot — it tells you exactly what's happening inside the solver. For contact problems (the most common cause of failure), "Update Stiffness Each Iteration" combined with careful stiffness factor tuning solves 80% of issues. For material nonlinearity, small substeps near yield points are essential. And always check for stress singularities if your analysis fails with finer mesh — a 0.1mm fillet can be the difference between convergence and 12 hours of wasted solve time.

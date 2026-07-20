@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "eplan-electric-p8"
 keyword: "eplan electric p8 connection wire numbering potential tracking reports"
 slug: "eplan-electric-p8-connection-wire-numbering-potential-tracking"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

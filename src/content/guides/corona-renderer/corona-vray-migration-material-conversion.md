@@ -1,11 +1,11 @@
 ---
 title: "Corona to V-Ray Migration: Material Conversion, Light Mapping, and Render Settings Translation"
-excerpt: "Migrating from Corona to V-Ray requires converting Physical Materials to VRayMtl, Corona Lights to V-Ray Lights, and translating GI settings. I cover the Chaos Cosmos workflow, the material conversion script, and the settings that produce equivalent results."
+excerpt: "Migrating from Corona to V-Ray requires converting Physical Materials to VRayMtl, Corona Lights to V-Ray Lights, and translating GI settings. We cover the Chaos Cosmos workflow, the material conversion script, and the settings that produce equivalent results."
 category: "migration"
 softwareSlug: "corona-renderer"
 keyword: "Corona V-Ray migration material conversion render settings"
 slug: "corona-vray-migration-material-conversion"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:
@@ -16,11 +16,11 @@ sources:
 
 # Corona to V-Ray Migration: Material Conversion, Light Mapping, and Render Settings Translation
 
-I've migrated several studios from Corona Renderer to V-Ray (and a few from V-Ray to Corona). Both are Chaos products, so the migration is smoother than between unrelated renderers, but there are specific conversion steps that need attention. The most common migration scenario I handle is studios that need V-Ray for specific features like GPU rendering, V-Ray Cloud, or compatibility with pipeline tools.
+We've migrated several studios from Corona Renderer to V-Ray (and a few from V-Ray to Corona). Both are Chaos products, so the migration is smoother than between unrelated renderers, but there are specific conversion steps that need attention. The most common migration scenario we handle is studios that need V-Ray for specific features like GPU rendering, V-Ray Cloud, or compatibility with pipeline tools.
 
 ## Why Migrate from Corona to V-Ray?
 
-Common reasons I see:
+Common reasons we see:
 - **GPU rendering**: V-Ray GPU supports CUDA and RTX acceleration; Corona is CPU-only (though Corona GPU is in development)
 - **V-Ray Cloud / Chaos Cloud**: Cloud rendering integration
 - **Pipeline compatibility**: V-Ray is the standard at many large studios
@@ -113,7 +113,7 @@ Corona and V-Ray use different GI systems:
 | Force Path Tracing | Brute Force for both primary and secondary | Disable Light Cache |
 | Adaptive Light Solver | V-Ray Light Eval | Different algorithms, similar purpose |
 
-**My V-Ray GI setup for migrated scenes**:
+**Our V-Ray GI setup for migrated scenes**:
 1. **Primary GI**: Brute Force
 2. **Secondary GI**: Light Cache
 3. **Light Cache subdivs**: 2000-4000 (equivalent to UHD Cache precision)
@@ -170,4 +170,4 @@ After running the scene converter:
 
 ## Summary
 
-Corona to V-Ray migration uses the built-in Scene Converter for automatic conversion, followed by manual adjustment of SSS, displacement, and light intensities. My migration process: run Scene Converter with Corona to V-Ray preset → verify materials (especially roughness-to-glossiness inversion) → adjust SSS parameters manually → verify light portal orientation → tune GI settings (Brute Force + Light Cache) → compare renders side-by-side → adjust light intensities for V-Ray's scale. The automatic converter handles 80-90% of the work; the remaining 10-20% is manual SSS, displacement, and light intensity calibration.
+Corona to V-Ray migration uses the built-in Scene Converter for automatic conversion, followed by manual adjustment of SSS, displacement, and light intensities. Our migration process: run Scene Converter with Corona to V-Ray preset → verify materials (especially roughness-to-glossiness inversion) → adjust SSS parameters manually → verify light portal orientation → tune GI settings (Brute Force + Light Cache) → compare renders side-by-side → adjust light intensities for V-Ray's scale. The automatic converter handles 80-90% of the work; the remaining 10-20% is manual SSS, displacement, and light intensity calibration.

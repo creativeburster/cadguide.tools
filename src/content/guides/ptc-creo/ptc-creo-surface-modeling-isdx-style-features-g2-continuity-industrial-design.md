@@ -1,11 +1,11 @@
 ---
 title: "PTC Creo Surface Modeling: ISDX, Style Features, and G2 Continuity for Industrial Design"
-excerpt: "Creo's surface modeling tools including ISDX Style features create Class-A surfaces with G2 continuity for industrial design. I cover the Style environment, curve creation, surface modeling, continuity analysis, and the workflow for aesthetic surface design."
+excerpt: "Creo's surface modeling tools including ISDX Style features create Class-A surfaces with G2 continuity for industrial design. We cover the Style environment, curve creation, surface modeling, continuity analysis, and the workflow for aesthetic surface design."
 category: "workflow"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo surface modeling ISDX Style features G2 continuity industrial design Class-A surfaces curve creation"
 slug: "ptc-creo-surface-modeling-isdx-style-features-g2-continuity-industrial-design"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # PTC Creo Surface Modeling: ISDX, Style Features, and G2 Continuity for Industrial Design
 
-I've used Creo's ISDX (Interactive Surface Design Extension) for consumer product design where surface quality and aesthetics are critical. ISDX is Creo's freeform surface modeling tool — it allows creation of Class-A surfaces with G2 (curvature) continuity that are difficult or impossible with standard parametric features. Understanding ISDX is essential for industrial designers working in Creo.
+We've used Creo's ISDX (Interactive Surface Design Extension) for consumer product design where surface quality and aesthetics are critical. ISDX is Creo's freeform surface modeling tool — it allows creation of Class-A surfaces with G2 (curvature) continuity that are difficult or impossible with standard parametric features. Understanding ISDX is essential for industrial designers working in Creo.
 
 ## ISDX Overview
 

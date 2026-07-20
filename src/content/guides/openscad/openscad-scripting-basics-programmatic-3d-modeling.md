@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "openscad"
 keyword: "openscad scripting basics programmatic 3d modeling"
 slug: "openscad-scripting-basics-programmatic-3d-modeling"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # OpenSCAD Scripting Basics: Programmatic 3D Modeling with Code
 
-OpenSCAD isn't like other CAD tools. There's no mouse-based modeling, no sketching, no Pencil gestures. You write code — and the 3D model appears. I was skeptical until I needed to generate 50 variations of a parametric bracket. OpenSCAD did it in 20 lines of code. Here's the basics for getting started.
+OpenSCAD isn't like other CAD tools. There's no mouse-based modeling, no sketching, no Pencil gestures. You write code — and the 3D model appears. We were skeptical until we needed to generate 50 variations of a parametric bracket. OpenSCAD did it in 20 lines of code. Here's the basics for getting started.
 
 ## What Is OpenSCAD?
 

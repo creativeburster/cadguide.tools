@@ -1,11 +1,11 @@
 ---
 title: "MatrixGold Jewelry Design Essentials: Builders, Dynamic Commands, and Ring Modeling"
-excerpt: "MatrixGold's builders and dynamic commands streamline jewelry CAD design on the Rhino platform. I cover the ring rail system, profile placer, gem setting tools, and the parametric builder workflow for creating production-ready jewelry models."
+excerpt: "MatrixGold's builders and dynamic commands streamline jewelry CAD design on the Rhino platform. We cover the ring rail system, profile placer, gem setting tools, and the parametric builder workflow for creating production-ready jewelry models."
 category: "workflow"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold jewelry design builders dynamic commands ring modeling profile placer"
 slug: "matrixgold-jewelry-design-builders-dynamic-commands-ring-modeling"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # MatrixGold Jewelry Design Essentials: Builders, Dynamic Commands, and Ring Modeling
 
-I've designed hundreds of jewelry pieces in MatrixGold, from simple solitaire rings to complex pave necklaces. MatrixGold is built on Rhino 3D and adds jewelry-specific tools — builders, dynamic commands, and gem setting utilities — that dramatically speed up the design process compared to raw Rhino modeling. Understanding the builder system and dynamic commands is the foundation of efficient MatrixGold workflow.
+We've designed hundreds of jewelry pieces in MatrixGold, from simple solitaire rings to complex pave necklaces. MatrixGold is built on Rhino 3D and adds jewelry-specific tools — builders, dynamic commands, and gem setting utilities — that dramatically speed up the design process compared to raw Rhino modeling. Understanding the builder system and dynamic commands is the foundation of efficient MatrixGold workflow.
 
 ## MatrixGold vs. Rhino
 

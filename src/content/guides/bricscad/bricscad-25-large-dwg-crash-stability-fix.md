@@ -1,11 +1,11 @@
 ---
 title: "BricsCAD V25 Crashing With Large DWG Files: Stability Fix Guide"
-excerpt: "BricsCAD V25 crashes when opening or editing large DWG files. I cover the DWGHEALTH command, memory tuning, PURGE and AUDIT workflows, hardware acceleration settings, and recovery procedures to keep large drawings stable."
+excerpt: "BricsCAD V25 crashes when opening or editing large DWG files. We cover the DWGHEALTH command, memory tuning, PURGE and AUDIT workflows, hardware acceleration settings, and recovery procedures to keep large drawings stable."
 category: "troubleshooting"
 softwareSlug: "bricscad"
 keyword: "bricscad 25 crash with large dwg"
 slug: "bricscad-25-large-dwg-crash-stability-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-03"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # BricsCAD V25 Crashing With Large DWG Files: Stability Fix Guide
 
-BricsCAD V25 is generally stable — I've found it to be at least as reliable as AutoCAD for day-to-day work. But large DWG files (50MB+) can push it past its comfort zone, especially when the drawing contains nested blocks, complex hatches, or imported geometry from third-party sources. If BricsCAD is crashing when you open, edit, or save a large DWG, this guide walks through every fix I've used to get things stable again.
+BricsCAD V25 is generally stable — We've found it to be at least as reliable as AutoCAD for day-to-day work. But large DWG files (50MB+) can push it past its comfort zone, especially when the drawing contains nested blocks, complex hatches, or imported geometry from third-party sources. If BricsCAD is crashing when you open, edit, or save a large DWG, this guide walks through every fix we've used to get things stable again.
 
 ## Why BricsCAD Crashes on Large DWG Files
 
@@ -62,7 +62,7 @@ If DWGHEALTH isn't available or you want a manual approach, the classic PURGE + 
 5. Run `PURGE` again — sometimes a second pass finds more nested junk
 6. Save the drawing
 
-I always run AUDIT and PURGE on any DWG I receive from external sources before doing any work. It prevents 80% of crash scenarios caused by accumulated file errors.
+We always run AUDIT and PURGE on any DWG we receive from external sources before doing any work. It prevents 80% of crash scenarios caused by accumulated file errors.
 
 ## Fix 3: Adjust Memory and System Settings
 

@@ -1,11 +1,11 @@
 ---
 title: "Simplify3D Print Quality Troubleshooting: Top 10 Issues and Fixes"
-excerpt: "Simplify3D's print quality troubleshooting guide covers warping, stringing, poor adhesion, layer shifting, and surface defects. I cover the top 10 most common print quality issues, their root causes, and the specific Simplify3D settings to adjust for each problem."
+excerpt: "Simplify3D's print quality troubleshooting guide covers warping, stringing, poor adhesion, layer shifting, and surface defects. We cover the top 10 most common print quality issues, their root causes, and the specific Simplify3D settings to adjust for each problem."
 category: "troubleshooting"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D print quality troubleshooting warping stringing layer shifting adhesion"
 slug: "simplify3d-print-quality-troubleshooting-top-10-issues"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # Simplify3D Print Quality Troubleshooting: Top 10 Issues and Fixes
 
-I've spent years dialing in Simplify3D settings across dozens of printer types and materials. The print quality issues I see most often have specific root causes and corresponding settings adjustments. Here are the top 10 issues and how to fix them in Simplify3D.
+We've spent years dialing in Simplify3D settings across dozens of printer types and materials. The print quality issues we see most often have specific root causes and corresponding settings adjustments. Here are the top 10 issues and how to fix them in Simplify3D.
 
 ## 1. Warping
 

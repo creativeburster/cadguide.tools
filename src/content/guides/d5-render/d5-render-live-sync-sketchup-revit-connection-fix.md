@@ -1,11 +1,11 @@
 ---
 title: "D5 Render Live Sync: SketchUp, Revit, and 3ds Max Connection Issues and Workflow"
-excerpt: "D5 Render's Live Sync fails to connect, stops updating, or imports models with missing materials. I cover the plugin installation for each CAD application, the sync connection troubleshooting, and the material and geometry transfer workflow."
+excerpt: "D5 Render's Live Sync fails to connect, stops updating, or imports models with missing materials. We cover the plugin installation for each CAD application, the sync connection troubleshooting, and the material and geometry transfer workflow."
 category: "troubleshooting"
 softwareSlug: "d5-render"
 keyword: "D5 Render Live Sync SketchUp Revit connection fix"
 slug: "d5-render-live-sync-sketchup-revit-connection-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # D5 Render Live Sync: SketchUp, Revit, and 3ds Max Connection Issues and Workflow
 
-I set up D5 Render Live Sync for architecture firms that use SketchUp, Revit, and 3ds Max. Live Sync is D5's real-time connection feature — you modify the model in the CAD application and it updates in D5 Render automatically. When it works, it's transformative for the design iteration workflow. When it fails, which happens regularly, the connection drops silently and updates stop flowing.
+We set up D5 Render Live Sync for architecture firms that use SketchUp, Revit, and 3ds Max. Live Sync is D5's real-time connection feature — you modify the model in the CAD application and it updates in D5 Render automatically. When it works, it's transformative for the design iteration workflow. When it fails, which happens regularly, the connection drops silently and updates stop flowing.
 
 ## D5 Live Sync Supported Applications
 
@@ -173,4 +173,4 @@ The connection was working but updates no longer appear in D5 Render.
 
 ## Summary
 
-D5 Render Live Sync issues are most often caused by plugin installation problems, firewall blocking, or model errors. My fix order: verify the D5 Converter plugin is installed and enabled → open D5 Render before the CAD application → check firewall exceptions → run as administrator → re-establish connection by toggling sync → check for model errors in the CAD application → restart both applications. For material issues, always apply D5's PBR materials after sync rather than relying on CAD-transferred materials.
+D5 Render Live Sync issues are most often caused by plugin installation problems, firewall blocking, or model errors. Our fix order: verify the D5 Converter plugin is installed and enabled → open D5 Render before the CAD application → check firewall exceptions → run as administrator → re-establish connection by toggling sync → check for model errors in the CAD application → restart both applications. For material issues, always apply D5's PBR materials after sync rather than relying on CAD-transferred materials.

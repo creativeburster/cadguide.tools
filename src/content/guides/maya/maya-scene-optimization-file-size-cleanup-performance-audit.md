@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "maya"
 keyword: "maya scene optimization cleanup"
 slug: "maya-scene-optimization-file-size-cleanup-performance-audit"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -17,9 +17,9 @@ sources:
 
 # Maya Scene Optimization: Reducing File Size, Cleanup Strategies, and Performance Audits
 
-I've opened Maya scenes that took 10 minutes to load and then lagged so badly that modeling was impossible. On the Autodesk forums, users report similar experiences: one user described the viewport as "dreadful" with constant "processing" messages, another found Maya using only 15% CPU and 0% GPU on a powerful machine, and a college admin reported Maya "locking up" entirely when loading animation rigs. In my experience, these performance problems usually stem from scene bloat — accumulated history, unused nodes, duplicate shading networks, and unoptimized textures that build up over months of production.
+We've opened Maya scenes that took 10 minutes to load and then lagged so badly that modeling was impossible. On the Autodesk forums, users report similar experiences: one user described the viewport as "dreadful" with constant "processing" messages, another found Maya using only 15% CPU and 0% GPU on a powerful machine, and a college admin reported Maya "locking up" entirely when loading animation rigs. In our experience, these performance problems usually stem from scene bloat — accumulated history, unused nodes, duplicate shading networks, and unoptimized textures that build up over months of production.
 
-This guide covers the systematic scene audit and cleanup process I use to bring heavy Maya scenes back to usable performance.
+This guide covers the systematic scene audit and cleanup process we use to bring heavy Maya scenes back to usable performance.
 
 ## The Scene Audit Process
 
@@ -121,6 +121,6 @@ Script nodes and plugin data from old tools accumulate in scene files. Use File 
 
 When a scene has become too bloated to clean effectively, the nuclear option is to export only the needed objects to a new file. Select the geometry, rigs, and materials you need, then File > Export Selection. This creates a clean file with only the essential nodes, leaving behind all the accumulated junk.
 
-## My Take
+## Our Take
 
 Scene optimization in Maya is not a one-time task — it's an ongoing discipline. The most effective habit is running Optimize Scene Size after every major modeling or rigging phase, not waiting until the scene becomes unusable. Deleting history is the single most impactful cleanup action, followed by removing duplicate shading networks. For long-running productions, establish a weekly cleanup routine: run Optimize Scene Size, delete history on non-rigged geometry, audit textures, and unload unused references. This prevents the gradual accumulation of bloat that turns a fast scene into a slow one over weeks and months.

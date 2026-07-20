@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "msc-adams"
 keyword: "msc adams vehicle dynamics suspension ride handling simulation"
 slug: "msc-adams-vehicle-dynamics-suspension-ride-handling-simulation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # MSC Adams Vehicle Dynamics: Suspension Modeling, Ride, and Handling Simulation
 
-Adams/Car is the automotive industry standard for vehicle dynamics simulation. It builds on Adams' multibody dynamics engine with vehicle-specific templates, subsystems, and standardized test procedures. I'll walk through building a suspension model and running ride and handling analyses.
+Adams/Car is the automotive industry standard for vehicle dynamics simulation. It builds on Adams' multibody dynamics engine with vehicle-specific templates, subsystems, and standardized test procedures. We'll walk through building a suspension model and running ride and handling analyses.
 
 ## Adams/Car Architecture
 

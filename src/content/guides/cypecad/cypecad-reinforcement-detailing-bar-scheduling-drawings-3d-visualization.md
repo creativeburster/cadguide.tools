@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cypecad"
 keyword: "cypecad reinforcement detailing"
 slug: "cypecad-reinforcement-detailing-bar-scheduling-drawings-3d-visualization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Reinforcement Detailing: Bar Scheduling, Drawings, and 3D Visualization
 
-What sold me on CYPECAD was the reinforcement detailing. I used to spend hours in AutoCAD drawing rebar layouts by hand after running the design in ETABS. With CYPECAD, the reinforcement plans, bar schedules, and 3D rebar models are all generated automatically from the design. It's not perfect — you still need to review and adjust — but it saves me days of work on a typical project. Let me walk you through it.
+What sold us on CYPECAD was the reinforcement detailing. We used to spend hours in AutoCAD drawing rebar layouts by hand after running the design in ETABS. With CYPECAD, the reinforcement plans, bar schedules, and 3D rebar models are all generated automatically from the design. It's not perfect — you still need to review and adjust — but it saves us days of work on a typical project. Let us walk you through it.
 
 ## Reinforcement Design Output
 
@@ -268,4 +268,4 @@ What sold me on CYPECAD was the reinforcement detailing. I used to spend hours i
 
 ## Wrapping Up
 
-The reinforcement detailing in CYPECAD is what sets it apart from other structural design tools in my experience. Going from design ratios to construction-ready drawings without switching software is a huge time saver. The 3D visualization is great for catching clashes — I've found bars colliding in tight column-beam joints that I would have missed on 2D drawings alone. Always review the automatic output, but the software does most of the heavy lifting for you.
+The reinforcement detailing in CYPECAD is what sets it apart from other structural design tools in our experience. Going from design ratios to construction-ready drawings without switching software is a huge time saver. The 3D visualization is great for catching clashes — We've found bars colliding in tight column-beam joints that we would have missed on 2D drawings alone. Always review the automatic output, but the software does most of the heavy lifting for you.

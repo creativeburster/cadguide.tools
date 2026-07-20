@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "ijcad"
 keyword: "ijcad autocad dwg compatibility migration"
 slug: "ijcad-autocad-dwg-compatibility-migration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IJCAD to AutoCAD Migration: Ensuring Seamless DWG Exchange
 
-IJCAD is a Japanese-market IntelliCAD-based CAD that's gaining traction in other Asian markets. I worked with a firm that used IJCAD for cost reasons but collaborated with AutoCAD-using partners. The DWG exchange was mostly smooth, but there were enough issues to warrant a documented workflow. Here's what we established.
+IJCAD is a Japanese-market IntelliCAD-based CAD that's gaining traction in other Asian markets. We worked with a firm that used IJCAD for cost reasons but collaborated with AutoCAD-using partners. The DWG exchange was mostly smooth, but there were enough issues to warrant a documented workflow. Here's what we established.
 
 ## DWG Format Compatibility
 

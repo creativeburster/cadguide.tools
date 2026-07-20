@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "keycreator"
 keyword: "keycreator solidworks file exchange step parasolid"
 slug: "keycreator-solidworks-file-exchange"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # KeyCreator to SolidWorks File Exchange: Best Practices for Roundtrip Workflow
 
-I work in a mixed CAD environment — KeyCreator for direct modeling modifications and SolidWorks for parametric design. Moving files between them is a daily reality. Here's the workflow that preserves geometry fidelity.
+We work in a mixed CAD environment — KeyCreator for direct modeling modifications and SolidWorks for parametric design. Moving files between them is a daily reality. Here's the workflow that preserves geometry fidelity.
 
 ## Format Selection: STEP vs Parasolid vs IGES
 

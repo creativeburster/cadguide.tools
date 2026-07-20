@@ -299,43 +299,6 @@ export const c1Tools: Tool[] = [
     docs_url: "https://aps.autodesk.com/developer/overview/autocad"
   },
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 3207,
-    url: "https://www.g2.com/products/autocad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 3207,
-    url: "https://www.capterra.com/software/174021/autocad"
-  }, {
-    source: "TrustRadius",
-    score: 8.9,
-    max: 10,
-    count: 847,
-    url: "https://www.trustradius.com/products/autocad/reviews"
-  }, {
-    source: "Gartner Peer Insights",
-    score: 4.6,
-    max: 5,
-    count: 112,
-    url: "https://www.gartner.com/peer-insights/product/autocad"
-  }, {
-    source: "Software Advice",
-    score: 4.7,
-    max: 5,
-    count: 3207,
-    url: "https://www.softwareadvice.com/cad/autocad-profile/"
-  }, {
-    source: "GetApp",
-    score: 4.7,
-    max: 5,
-    count: 3207,
-    url: "https://www.getapp.com/cad-software/a/autocad/"
-  }]
 },
 {
   id: "t12",
@@ -529,37 +492,6 @@ export const c1Tools: Tool[] = [
     "Multi-platform (Desktop & Mobile)"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.6,
-    max: 5,
-    count: 343,
-    url: "https://www.g2.com/products/zwcad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 17,
-    url: "https://www.capterra.com/p/176603/ZWCAD/reviews"
-  }, {
-    source: "TrustRadius",
-    score: 4,
-    max: 5,
-    count: 2,
-    url: "https://www.trustradius.com/products/zwcad/competitors"
-  }, {
-    source: "Software Advice",
-    score: 4.5,
-    max: 5,
-    count: 17,
-    url: "https://www.softwareadvice.com/architectural-cad/zwcad-profile/"
-  }, {
-    source: "Trustpilot",
-    score: 3.7,
-    max: 5,
-    count: 1,
-    url: "https://www.trustpilot.com/review/zwsoft.com"
-  }]
 },
 {
   id: "t13",
@@ -752,25 +684,6 @@ export const c1Tools: Tool[] = [
     "Point Cloud viewing & modeling"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.5,
-    max: 5,
-    count: 128,
-    url: "https://www.g2.com/products/bricscad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.7,
-    max: 5,
-    count: 89,
-    url: "https://www.capterra.com/p/159378/BricsCAD/reviews"
-  }, {
-    source: "TrustRadius",
-    score: 10,
-    max: 10,
-    count: 11,
-    url: "https://www.trustradius.com/products/bricscad/reviews"
-  }]
 },
 {
   id: "t21",
@@ -944,25 +857,6 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4,
-    max: 5,
-    count: 184,
-    url: "https://www.g2.com/products/microstation/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 176,
-    url: "https://www.capterra.com/p/175028/MicroStation/"
-  }, {
-    source: "TrustRadius",
-    score: 8.2,
-    max: 10,
-    count: 24,
-    url: "https://www.trustradius.com/products/microstation/reviews"
-  }]
 },
 {
   id: "t22",
@@ -1147,25 +1041,6 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 206,
-    url: "https://www.g2.com/products/draftsight/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 182,
-    url: "https://www.capterra.com/software/205735/draftsight"
-  }, {
-    source: "TrustRadius",
-    score: 8.7,
-    max: 10,
-    count: 417,
-    url: "https://www.trustradius.com/products/draftsight/reviews"
-  }]
 },
 {
   id: "t43",
@@ -1445,7 +1320,6 @@ export const c1Tools: Tool[] = [
     "DWG Compatibility"
   ],
 
-  external_ratings: []
 },
 {
   id: "t53",
@@ -1628,7 +1502,6 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  external_ratings: []
 },
 {
   id: "t54",
@@ -1777,25 +1650,6 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 32,
-    url: "https://www.g2.com/products/gstarcad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 15,
-    url: "https://www.capterra.com/p/180290/GstarCAD/"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 22,
-    url: "https://sourceforge.net/projects/gstarcad/reviews"
-  }]
 },
 {
   id: "t55",
@@ -2095,25 +1949,6 @@ export const c1Tools: Tool[] = [
     "DXF/DWG Support"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 13,
-    url: "https://www.g2.com/products/qcad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 7,
-    url: "https://www.capterra.co.nz/software/172927/qcad"
-  }, {
-    source: "SourceForge",
-    score: 4.5,
-    max: 5,
-    count: 89,
-    url: "https://sourceforge.net/projects/qcad/"
-  }]
 },
 {
   id: "t56",
@@ -2443,19 +2278,6 @@ export const c1Tools: Tool[] = [
     "Parametric Design"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 68,
-    url: "https://www.g2.com/products/nanocad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.5,
-    max: 5,
-    count: 68,
-    url: "https://www.capterra.com/software/205744/nanocad"
-  }]
 },
 {
   id: "t57",
@@ -2763,19 +2585,6 @@ export const c1Tools: Tool[] = [
     "Block Libraries"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 78,
-    url: "https://www.g2.com/products/progecad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 78,
-    url: "https://www.capterra.com/software/205745/progecad"
-  }]
 },
 {
   id: "t60",
@@ -3084,25 +2893,6 @@ export const c1Tools: Tool[] = [
     "Lightweight"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 58,
-    url: "https://www.g2.com/products/librecad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 58,
-    url: "https://www.capterra.com/software/205746/librecad"
-  }, {
-    source: "SourceForge",
-    score: 4.7,
-    max: 5,
-    count: 523,
-    url: "https://sourceforge.net/projects/librecad/"
-  }]
 },
 {
   id: "t61",
@@ -3408,7 +3198,6 @@ export const c1Tools: Tool[] = [
     "Perpetual Licensing"
   ],
 
-  external_ratings: []
 },
 {
   id: "t62",
@@ -3501,19 +3290,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 48,
-    url: "https://www.g2.com/products/turbocad/reviews"
-  }, {
-    source: "Capterra",
-    score: 3.8,
-    max: 5,
-    count: 33,
-    url: "https://www.capterra.co.nz/software/167524/turbocad-professional"
-  }]
 },
 {
   id: "t88",
@@ -3829,7 +3605,6 @@ export const c1Tools: Tool[] = [
     "Perpetual Licensing"
   ],
 
-  external_ratings: []
 },
 {
   id: "t90",
@@ -4118,19 +3893,6 @@ export const c1Tools: Tool[] = [
     "BOM Generation"
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 19,
-    url: "https://www.g2.com/products/caxa-cad/reviews"
-  }, {
-    source: "SourceForge",
-    score: 4.2,
-    max: 5,
-    count: 34,
-    url: "https://sourceforge.net/projects/caxa/"
-  }]
 },
 {
   id: "t91",
@@ -4253,19 +4015,6 @@ export const c1Tools: Tool[] = [
     }
   ],
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 11,
-    url: "https://www.g2.com/products/ares-commander/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 5,
-    url: "https://www.capterra.com/software/215973/ares-commander"
-  }]
 },
 {
   id: "t100",
@@ -4623,7 +4372,6 @@ export const c1Tools: Tool[] = [
     "Manufacturing Planning"
   ],
 
-  external_ratings: []
 },
 {
   id: "t104",
@@ -4823,7 +4571,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A highly scalable 2D/3D mechanical design and factory layout suite, preferred by industrial engineering teams.",
-  external_ratings: []
 },
 {
   id: "t107",
@@ -5024,7 +4771,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized 3D space planning and interior design tool, renowned for quick DWG layouts and high-quality product rendering.",
-  external_ratings: []
 },
 {
   id: "t108",
@@ -5227,7 +4973,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A pioneering Chinese cloud-native 3D CAD/PLM system, allowing collaborative part and assembly modeling in browsers.",
-  external_ratings: []
 },
 {
   id: "t109",
@@ -5430,7 +5175,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A high-end 3D CAD/CAM software for mold and die design, widely adopted by automotive manufacturers in Asia.",
-  external_ratings: []
 },
 {
   id: "t113",
@@ -5614,7 +5358,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A leading Japanese DWG-compatible CAD software, highly optimized for local construction and manufacturing industries.",
-  external_ratings: []
 },
 {
   id: "t115",
@@ -5814,7 +5557,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized Japanese 2D CAD design system, featuring excellent multi-layer handling and custom API extensions.",
-  external_ratings: []
 },
 {
   id: "t116",
@@ -6099,7 +5841,6 @@ export const c1Tools: Tool[] = [
     "Plotting & Output"
   ],
 
-  external_ratings: []
 },
 {
   id: "t117",
@@ -6308,19 +6049,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A powerful Russian parametric 3D modeling system featuring extensive mechanical part libraries and design utilities.",
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 38,
-    url: "https://www.g2.com/products/kompas-3d/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 38,
-    url: "https://www.capterra.com/software/205747/kompas-3d"
-  }]
 },
 {
   id: "t118",
@@ -6537,19 +6265,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A high-performance parametric 3D CAD suite offering advanced structural styling and kinematic simulation.",
-  external_ratings: [{
-    source: "G2",
-    score: 4.1,
-    max: 5,
-    count: 23,
-    url: "https://www.g2.com/products/t-flex-cad/reviews"
-  }, {
-    source: "Capterra",
-    score: 4,
-    max: 5,
-    count: 23,
-    url: "https://www.capterra.com/software/205748/t-flex-cad"
-  }]
 },
 {
   id: "t120",
@@ -6865,7 +6580,6 @@ export const c1Tools: Tool[] = [
     "AutoCAD Integration"
   ],
 
-  external_ratings: []
 },
 {
   id: "t121",
@@ -7090,19 +6804,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
-  external_ratings: [{
-    source: "G2",
-    score: 4.4,
-    max: 5,
-    count: 32,
-    url: "https://www.g2.com/products/aveva-e3d-design/reviews"
-  }, {
-    source: "TrustRadius",
-    score: 8.8,
-    max: 10,
-    count: 12,
-    url: "https://www.trustradius.com/products/aveva-e3d-design/reviews"
-  }]
 },
 {
   id: "t122",
@@ -7311,7 +7012,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "An accessible direct 3D modeling tool powered by SpaceClaim, perfect for rapid hardware prototyping.",
-  external_ratings: []
 },
 {
   id: "t123",
@@ -7632,7 +7332,6 @@ export const c1Tools: Tool[] = [
     "Seismic Analysis"
   ],
 
-  external_ratings: []
 },
 {
   id: "t126",
@@ -7858,19 +7557,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The industry standard for bridge design and structural analysis, offering powerful detailing and loading utilities.",
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 28,
-    url: "https://www.g2.com/products/midas-civil/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.2,
-    max: 5,
-    count: 28,
-    url: "https://www.capterra.com/software/205749/midas-civil"
-  }]
 },
 {
   id: "t127",
@@ -8096,7 +7782,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation.",
-  external_ratings: []
 },
 {
   id: "t128",
@@ -8317,7 +8002,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A popular South Korean DWG-native CAD tool offering perpetual licensing and rich localized CAD utilities.",
-  external_ratings: []
 },
 {
   id: "t132",
@@ -8650,7 +8334,6 @@ export const c1Tools: Tool[] = [
     "Assembly Management"
   ],
 
-  external_ratings: []
 },
 {
   id: "t133",
@@ -8801,7 +8484,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
-  external_ratings: []
 },
 {
   id: "t134",
@@ -8952,7 +8634,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized AutoCAD and civil-integrated geology and mine planning software, ideal for underground detailing.",
-  external_ratings: []
 },
 {
   id: "t135",
@@ -9103,7 +8784,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "An advanced multiphysics simulation and optimization suite, tailored for optomechatronic systems.",
-  external_ratings: []
 },
 {
   id: "t136",
@@ -9254,7 +8934,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
-  external_ratings: []
 },
 {
   id: "t137",
@@ -9405,7 +9084,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized BIM modeling suite for building services (MEP) design and regulatory verification.",
-  external_ratings: []
 },
 {
   id: "t141",
@@ -9556,7 +9234,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
-  external_ratings: []
 },
 {
   id: "t142",
@@ -9707,7 +9384,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
-  external_ratings: []
 },
 {
   id: "t143",
@@ -10040,7 +9716,6 @@ export const c1Tools: Tool[] = [
     "Perpetual Licensing"
   ],
 
-  external_ratings: []
 },
 {
   id: "t144",
@@ -10348,7 +10023,6 @@ export const c1Tools: Tool[] = [
     "Mathematical Algorithms"
   ],
 
-  external_ratings: []
 },
 {
   id: "t145",
@@ -10499,7 +10173,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A leading Brazilian concrete building design and detailing software, highly optimized for regional construction standards.",
-  external_ratings: []
 },
 {
   id: "t146",
@@ -10650,7 +10323,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The preferred interior planning and furniture CAD suite in South America, tightly integrated with manufacturing systems.",
-  external_ratings: []
 },
 {
   id: "t147",
@@ -10801,19 +10473,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 21,
-    url: "https://www.g2.com/products/scia-engineer/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 21,
-    url: "https://www.capterra.com/software/205750/scia-engineer"
-  }]
 },
 {
   id: "t148",
@@ -11152,7 +10811,6 @@ export const c1Tools: Tool[] = [
     "Large Assembly Support"
   ],
 
-  external_ratings: []
 },
 {
   id: "t151",
@@ -11304,19 +10962,6 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "A high-performance full-spectrum CAM system, unmatched for multi-tasking mill-turn and Swiss-type machining.",
 
-  external_ratings: [{
-    source: "G2",
-    score: 4.3,
-    max: 5,
-    count: 45,
-    url: "https://www.g2.com/products/esprit/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.3,
-    max: 5,
-    count: 45,
-    url: "https://www.capterra.com/software/205751/esprit"
-  }]
 },
 {
   id: "t158",
@@ -11632,7 +11277,6 @@ export const c1Tools: Tool[] = [
     "Workflow Automation"
   ],
 
-  external_ratings: []
 },
 {
   id: "t167",
@@ -11824,7 +11468,6 @@ export const c1Tools: Tool[] = [
   ],
 
   key_capabilities: ["Sheet Metal Forming", "Spring Back Compensation", "FEA Analysis", "Die Design", "Process Simulation"],
-  external_ratings: []
 },
 {
   id: "t170",
@@ -11975,19 +11618,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized AutoCAD-based shipbuilding CAD/CAM system, renowned for managing massive offshore structure models.",
-  external_ratings: [{
-    source: "G2",
-    score: 4.2,
-    max: 5,
-    count: 18,
-    url: "https://www.g2.com/products/shipconstructor/reviews"
-  }, {
-    source: "Capterra",
-    score: 4.1,
-    max: 5,
-    count: 18,
-    url: "https://www.capterra.com/software/205752/shipconstructor"
-  }]
 },
 {
   id: "t171",
@@ -12138,7 +11768,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The global standard in ship design and operations, unmatched for naval architecture calculations and stability analysis.",
-  external_ratings: []
 },
 {
   id: "t172",
@@ -12339,7 +11968,6 @@ export const c1Tools: Tool[] = [
   ],
 
   key_capabilities: ["Ship Design", "3D Modeling", "Multi-disciplinary Design", "Siemens Xcelerator Integration", "Data Management"],
-  external_ratings: []
 },
 {
   id: "t173",
@@ -12490,7 +12118,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A premier German 3D CAD/CAM software for furniture manufacture, exhibition stands, and interior design.",
-  external_ratings: []
 },
 {
   id: "t174",
@@ -12641,7 +12268,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized 3D design and manufacturing integration software, linking furniture designs directly to CNC machines.",
-  external_ratings: []
 },
 {
   id: "t175",
@@ -12792,7 +12418,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The leading kitchen and bathroom planning software, featuring an extensive catalog of manufacturer brands.",
-  external_ratings: []
 },
 {
   id: "t176",
@@ -12943,7 +12568,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A highly visual 3D design and presentation software tailored for tilers, stove builders, and interior designers.",
-  external_ratings: []
 },
 {
   id: "t177",
@@ -13135,7 +12759,6 @@ export const c1Tools: Tool[] = [
   ],
 
   key_capabilities: ["3D Kitchen Design", "Cabinet Library", "Photo-Realistic Rendering", "Automated Dimensioning", "Rapid Space Planning"],
-  external_ratings: []
 },
 {
   id: "t92",
@@ -13278,7 +12901,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "ArcSite is ideal for field documentation and mobile floor plan creation.",
-  external_ratings: []
 },
 {
   id: "t93",
@@ -13421,7 +13043,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
-  external_ratings: []
 },
 {
   id: "t94",
@@ -13564,7 +13185,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "UVCAD is a practical mobile CAD solution for basic 2D drafting needs.",
-  external_ratings: []
 },
 {
   id: "t95",
@@ -13706,6 +13326,5 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "Updraw is a good choice for iOS users focused on dimensioned 2D drawings.",
-  external_ratings: []
 }
 ];

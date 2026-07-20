@@ -1,11 +1,11 @@
 ---
 title: "Ansys Contact Modeling: Friction, Penetration, and Pinball Radius Tuning"
-excerpt: "Contact problems in Ansys are the source of most convergence failures and inaccurate results. I cover the contact algorithms, pinball radius, and stiffness settings I use for reliable contact simulations."
+excerpt: "Contact problems in Ansys are the source of most convergence failures and inaccurate results. We cover the contact algorithms, pinball radius, and stiffness settings we use for reliable contact simulations."
 category: "troubleshooting"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys contact friction penetration pinball radius"
 slug: "ansys-contact-modeling-friction-penetration-pinball"
-author: "FEA Analyst"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-17"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Ansys Contact Modeling: Friction, Penetration, and Pinball Radius Tuning
 
-A user on the Ansys Learning Forum was simulating a brake rotor with frictional contacts and getting convergence failures. Another user was modeling a tungsten wire stretched over a steel support with frictional contact and couldn't get the solver to converge. Contact modeling is the single most common source of FEA problems I encounter — it accounts for about 70% of the support questions I receive from junior analysts. The issue is that contact is inherently nonlinear (the stiffness changes depending on whether surfaces are touching or separated), and Ansys offers many parameters that control contact behavior. Getting them wrong gives you either convergence failure or physically incorrect results (excessive penetration, oscillating contact, or missed contact entirely).
+A user on the Ansys Learning Forum was simulating a brake rotor with frictional contacts and getting convergence failures. Another user was modeling a tungsten wire stretched over a steel support with frictional contact and couldn't get the solver to converge. Contact modeling is the single most common source of FEA problems we encounter — it accounts for about 70% of the support questions we receive from junior analysts. The issue is that contact is inherently nonlinear (the stiffness changes depending on whether surfaces are touching or separated), and Ansys offers many parameters that control contact behavior. Getting them wrong gives you either convergence failure or physically incorrect results (excessive penetration, oscillating contact, or missed contact entirely).
 
 ## Contact Algorithms in Ansys
 
@@ -78,7 +78,7 @@ If the pinball radius is too large:
    - **Program Controlled**: Ansys calculates based on element size (usually adequate)
    - **Manual**: You specify the radius
 
-I use manual settings in these cases:
+We use manual settings in these cases:
 - **Large initial gap**: If surfaces start far apart, increase the pinball radius to ensure contact is detected when they close
 - **Contact with small features**: If the contact area is small, decrease the pinball radius to avoid detecting contact too early
 - **Sliding contact**: For surfaces that slide significantly, increase the pinball radius to maintain contact detection during sliding

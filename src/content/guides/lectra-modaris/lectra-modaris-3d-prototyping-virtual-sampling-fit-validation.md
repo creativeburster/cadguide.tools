@@ -1,11 +1,11 @@
 ---
 title: "Lectra Modaris 3D Prototyping: Virtual Sampling, Fit Validation, and Fabric Simulation"
-excerpt: "Lectra's 3D Prototyping module simulates garments on avatars for virtual fit validation. I cover the 3D simulation setup, fabric property measurement integration, tension analysis, and the Modaris-to-3D-to-Modaris round-trip workflow for production-ready virtual sampling."
+excerpt: "Lectra's 3D Prototyping module simulates garments on avatars for virtual fit validation. We cover the 3D simulation setup, fabric property measurement integration, tension analysis, and the Modaris-to-3D-to-Modaris round-trip workflow for production-ready virtual sampling."
 category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Modaris 3D prototyping virtual sampling fit validation fabric simulation tension analysis"
 slug: "lectra-modaris-3d-prototyping-virtual-sampling-fit-validation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Lectra Modaris 3D Prototyping: Virtual Sampling, Fit Validation, and Fabric Simulation
 
-I've used Lectra's 3D Prototyping module for luxury fashion brands where physical sampling is expensive and fit precision is critical. Lectra's 3D approach differs from Optitex and Gerber — it places strong emphasis on accurate fabric property measurement through its integrated fabric testing ecosystem, ensuring that the 3D simulation closely matches the actual fabric behavior.
+We've used Lectra's 3D Prototyping module for luxury fashion brands where physical sampling is expensive and fit precision is critical. Lectra's 3D approach differs from Optitex and Gerber — it places strong emphasis on accurate fabric property measurement through its integrated fabric testing ecosystem, ensuring that the 3D simulation closely matches the actual fabric behavior.
 
 ## 3D Prototyping Overview
 

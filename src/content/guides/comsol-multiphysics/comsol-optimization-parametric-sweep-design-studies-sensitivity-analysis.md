@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "comsol-multiphysics"
 keyword: "comsol optimization parametric sweep"
 slug: "comsol-optimization-parametric-sweep-design-studies-sensitivity-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # COMSOL Optimization and Parametric Sweep: Design Studies and Sensitivity Analysis
 
-Optimization in COMSOL is something I've grown to appreciate more over time. At first, I only used parametric sweeps — just running the same model with different parameter values and picking the best result. But once I started using the Optimization Module with SNOPT and MMA, I realized how much faster it is to let the solver find the optimum for me. Let me walk you through how I approach design studies, optimization, and topology optimization in COMSOL.
+Optimization in COMSOL is something we've grown to appreciate more over time. At first, we only used parametric sweeps — just running the same model with different parameter values and picking the best result. But once we started using the Optimization Module with SNOPT and MMA, we realized how much faster it is to let the solver find the optimum for us. Let us walk you through how we approach design studies, optimization, and topology optimization in COMSOL.
 
 ## Parametric Sweep
 
@@ -277,4 +277,4 @@ Optimization in COMSOL is something I've grown to appreciate more over time. At 
 
 ## Wrapping Up
 
-My advice for optimization in COMSOL: start with parametric sweeps before jumping into formal optimization. They're simpler, they give you a feel for how the design responds, and you can use them to find a good starting point for the optimizer. When you do use the Optimization Module, pick the right method — SNOPT for smooth problems with continuous variables, Nelder-Mead for non-smooth or noisy objectives, and MMA for topology optimization. And always run a full verification analysis on the optimized design. I've caught cases where the optimizer found a solution that technically met the constraints but had stress concentrations in places the optimization didn't check.
+Our advice for optimization in COMSOL: start with parametric sweeps before jumping into formal optimization. They're simpler, they give you a feel for how the design responds, and you can use them to find a good starting point for the optimizer. When you do use the Optimization Module, pick the right method — SNOPT for smooth problems with continuous variables, Nelder-Mead for non-smooth or noisy objectives, and MMA for topology optimization. And always run a full verification analysis on the optimized design. We've caught cases where the optimizer found a solution that technically met the constraints but had stress concentrations in places the optimization didn't check.

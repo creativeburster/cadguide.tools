@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "vectorworks"
 keyword: "vectorworks architect bim workflow"
 slug: "vectorworks-architect-bim-modeling-site-design-drawing-production"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

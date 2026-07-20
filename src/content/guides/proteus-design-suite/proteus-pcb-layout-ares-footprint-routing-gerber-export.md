@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "proteus-design-suite"
 keyword: "proteus pcb layout ares footprint routing gerber export"
 slug: "proteus-pcb-layout-ares-footprint-routing-gerber-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Proteus PCB Layout ARES: Footprint Assignment, Routing, and Gerber Export Workflow
 
-Proteus combines schematic capture (ISIS) and PCB layout (ARES) in one package. The transition from schematic to layout is seamless, but there are several configuration steps that determine whether your board will be manufacturable. I'll walk through the complete workflow from schematic to Gerber files.
+Proteus combines schematic capture (ISIS) and PCB layout (ARES) in one package. The transition from schematic to layout is seamless, but there are several configuration steps that determine whether your board will be manufacturable. We'll walk through the complete workflow from schematic to Gerber files.
 
 ## From ISIS to ARES
 

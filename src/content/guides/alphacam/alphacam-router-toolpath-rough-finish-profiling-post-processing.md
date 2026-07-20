@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "alphacam"
 keyword: "alphacam router toolpath rough finish profiling post processor"
 slug: "alphacam-router-toolpath-rough-finish-profiling-post-processing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # AlphaCAM Router Toolpath Setup: Rough/Finish Profiling, Tool Selection, and Post Processing
 
-AlphaCAM is one of the most widely used CAM systems for CNC routing in woodworking and sign-making. The workflow is straightforward once you understand the relationship between geometry, tool direction, and post processing. I'll walk through the complete process from drawing to G-code.
+AlphaCAM is one of the most widely used CAM systems for CNC routing in woodworking and sign-making. The workflow is straightforward once you understand the relationship between geometry, tool direction, and post processing. We'll walk through the complete process from drawing to G-code.
 
 ## The CNC Workflow in AlphaCAM
 

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "abaqus"
 keyword: "abaqus nonlinear fea"
 slug: "abaqus-nonlinear-fea-plasticity-large-deformation-convergence"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Abaqus Nonlinear FEA: Plasticity, Large Deformation, and Solver Convergence
 
-Nonlinear FEA is where things get real. I remember my first nonlinear analysis — it ran for two hours and then crashed with a convergence error that I had no idea how to fix. After years of working with Abaqus/Standard, I've learned that nonlinear analysis is less about the software and more about understanding what's making your model nonlinear in the first place. Let me walk you through how I set up and troubleshoot nonlinear runs.
+Nonlinear FEA is where things get real. A first nonlinear analysis often ends the same way — a long run that crashes with a convergence error that's hard to interpret. The key lesson is that nonlinear analysis is less about the software and more about understanding what's making your model nonlinear in the first place. Let us walk you through how to set up and troubleshoot nonlinear runs.
 
 ## Nonlinearity Sources
 
@@ -282,4 +282,4 @@ Abaqus/Standard uses Newton-Raphson iteration:
 
 ## Wrapping Up
 
-If I had to boil nonlinear FEA down to one thing, it's this: know what's making your model nonlinear and set up your solver accordingly. Small initial increments, reasonable cutback limits, and stabilization when you need it. I check the energy balance on every nonlinear run — if artificial energy is more than 5% of internal energy, something's off with your damping or your mesh. And don't be afraid to start with a simpler model and add complexity. I've seen too many people throw a fully nonlinear model at the solver on day one and then spend a week trying to figure out why it won't converge.
+If we had to boil nonlinear FEA down to one thing, it's this: know what's making your model nonlinear and set up your solver accordingly. Small initial increments, reasonable cutback limits, and stabilization when you need it. We check the energy balance on every nonlinear run — if artificial energy is more than 5% of internal energy, something's off with your damping or your mesh. And don't be afraid to start with a simpler model and add complexity. We've seen too many people throw a fully nonlinear model at the solver on day one and then spend a week trying to figure out why it won't converge.

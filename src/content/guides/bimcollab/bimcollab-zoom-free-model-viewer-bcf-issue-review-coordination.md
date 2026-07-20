@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bimcollab"
 keyword: "bimcollab zoom free model viewer bcf issue review coordination"
 slug: "bimcollab-zoom-free-model-viewer-bcf-issue-review-coordination"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # BIMcollab Zoom: Free Model Viewer for BCF Issue Review and Coordination Meetings
 
-BIMcollab Zoom is a free desktop model viewer that loads IFC files and connects to BIMcollab for BCF issue management. I use it in every coordination meeting — it's faster than opening Revit, handles large IFC models well, and lets anyone review issues without a BIM authoring tool license. Here's how to get the most out of it.
+BIMcollab Zoom is a free desktop model viewer that loads IFC files and connects to BIMcollab for BCF issue management. We use it in every coordination meeting — it's faster than opening Revit, handles large IFC models well, and lets anyone review issues without a BIM authoring tool license. Here's how to get the most out of it.
 
 ## What BIMcollab Zoom Is (and Isn't)
 

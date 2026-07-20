@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "draftsight"
 keyword: "draftsight vs autocad comparison"
 slug: "draftsight-vs-autocad-feature-comparison-migration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

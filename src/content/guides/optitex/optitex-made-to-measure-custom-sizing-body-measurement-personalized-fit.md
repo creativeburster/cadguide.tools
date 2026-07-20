@@ -1,11 +1,11 @@
 ---
 title: "Optitex Made-to-Measure (MTM): Custom Sizing, Body Measurement Integration, and Personalized Fit"
-excerpt: "Optitex's MTM module generates custom-sized patterns from individual body measurements. I cover the measurement input workflow, grade rule adaptation for custom sizes, 3D fit validation for MTM garments, and production workflow for personalized apparel."
+excerpt: "Optitex's MTM module generates custom-sized patterns from individual body measurements. We cover the measurement input workflow, grade rule adaptation for custom sizes, 3D fit validation for MTM garments, and production workflow for personalized apparel."
 category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex made-to-measure MTM custom sizing body measurement personalized fit production workflow"
 slug: "optitex-made-to-measure-custom-sizing-body-measurement-personalized-fit"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Optitex Made-to-Measure (MTM): Custom Sizing, Body Measurement Integration, and Personalized Fit
 
-I've implemented Optitex MTM workflows for uniform programs and custom apparel services. Made-to-measure (MTM) is one of the fastest-growing segments in apparel — customers increasingly expect personalized fit, and Optitex's MTM module enables pattern generation from individual body measurements without manual pattern adjustment for each order.
+We've implemented Optitex MTM workflows for uniform programs and custom apparel services. Made-to-measure (MTM) is one of the fastest-growing segments in apparel — customers increasingly expect personalized fit, and Optitex's MTM module enables pattern generation from individual body measurements without manual pattern adjustment for each order.
 
 ## What Is Made-to-Measure?
 

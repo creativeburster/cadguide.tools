@@ -1,11 +1,11 @@
 ---
 title: "Onshape Imported Model Complexity: Reducing Triangle Count and Lag from Manufacturer Files"
-excerpt: "Imported manufacturer models with excessive detail cause Onshape to lag during assembly operations. I cover the simplify feature, bounding box replacement, and the configuration strategy that eliminates imported model lag."
+excerpt: "Imported manufacturer models with excessive detail cause Onshape to lag during assembly operations. We cover the simplify feature, bounding box replacement, and the configuration strategy that eliminates imported model lag."
 category: "performance"
 softwareSlug: "onshape"
 keyword: "Onshape imported model complexity performance lag simplify"
 slug: "onshape-imported-model-complexity-simplify-lag"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

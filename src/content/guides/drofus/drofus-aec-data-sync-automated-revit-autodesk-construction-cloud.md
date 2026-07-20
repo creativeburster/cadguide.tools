@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "drofus"
 keyword: "drofus aec data sync automated revit autodesk construction cloud"
 slug: "drofus-aec-data-sync-automated-revit-autodesk-construction-cloud"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # dRofus AEC Data Sync: Automated Revit Data Synchronization via Autodesk Construction Cloud
 
-AEC Data Sync is dRofus's cloud-based integration with Revit via Autodesk Construction Cloud. Instead of opening Revit and manually running the dRofus plugin to sync data, AEC Data Sync automatically syncs when models are published to ACC. I've set this up on two hospital projects, and it eliminates the manual sync bottleneck. But the setup has specific requirements and limitations that aren't obvious. Here's what you need to know.
+AEC Data Sync is dRofus's cloud-based integration with Revit via Autodesk Construction Cloud. Instead of opening Revit and manually running the dRofus plugin to sync data, AEC Data Sync automatically syncs when models are published to ACC. We've set this up on two hospital projects, and it eliminates the manual sync bottleneck. But the setup has specific requirements and limitations that aren't obvious. Here's what you need to know.
 
 ## How AEC Data Sync Works
 

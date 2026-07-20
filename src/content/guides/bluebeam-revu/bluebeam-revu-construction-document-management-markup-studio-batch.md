@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bluebeam-revu"
 keyword: "bluebeam revu construction document management"
 slug: "bluebeam-revu-construction-document-management-markup-studio-batch"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

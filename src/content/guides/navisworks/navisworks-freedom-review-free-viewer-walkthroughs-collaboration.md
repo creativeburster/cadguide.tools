@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "navisworks"
 keyword: "navisworks freedom viewer review"
 slug: "navisworks-freedom-review-free-viewer-walkthroughs-collaboration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

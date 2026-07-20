@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "keycreator"
 keyword: "keycreator 2d drafting dimensioning standards drawing"
 slug: "keycreator-2d-drafting-dimensioning-standards"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # KeyCreator 2D Drafting: Dimensioning Standards and Drawing Automation
 
-KeyCreator started as CADKEY — a 2D drafting tool. Its 2D module is mature and capable. I produce all our manufacturing drawings in KeyCreator, and after setting up the standards correctly, drawing creation is fast and consistent. Here's the configuration.
+KeyCreator started as CADKEY — a 2D drafting tool. Its 2D module is mature and capable. We produce all our manufacturing drawings in KeyCreator, and after setting up the standards correctly, drawing creation is fast and consistent. Here's the configuration.
 
 ## Step 1: Set the Drafting Standard
 

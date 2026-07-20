@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "risa-3d"
 keyword: "risa-3d load combinations wood design nds lrfd"
 slug: "risa-3d-load-combinations-wood-design-nds-lrfd"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # RISA-3D Load Combinations and Wood Design: NDS and LRFD Workflow
 
-Wood design in RISA-3D follows the NDS (National Design Specification for Wood Construction). The key difference from steel or concrete is the **load duration factor (CD)** — wood is stronger under short-duration loads. I design wood structures in RISA regularly. Here's the complete workflow.
+Wood design in RISA-3D follows the NDS (National Design Specification for Wood Construction). The key difference from steel or concrete is the **load duration factor (CD)** — wood is stronger under short-duration loads. We design wood structures in RISA regularly. Here's the complete workflow.
 
 ## ASD vs LRFD for Wood
 
@@ -80,7 +80,7 @@ RISA also supports LRFD for wood (NDS Appendix N):
    - Enter actual dimensions (e.g., 5.125"×18")
    - Set the grade combination
 
-4. For I-joists:
+4. For we-joists:
    - Select from manufacturer database (TJI, BCI, etc.)
    - Or enter custom section properties
 

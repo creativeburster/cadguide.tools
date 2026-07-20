@@ -1,11 +1,11 @@
 ---
 title: "Inventor Slow Performance on Large Models: Model States, Adaptivity, and Bad Geometry"
-excerpt: "Inventor slows to a crawl on models with 4000+ occurrences and multiple model states. I cover the Ctrl+F7 bad body check, adaptivity deactivation, and model state optimization that restore performance."
+excerpt: "Inventor slows to a crawl on models with 4000+ occurrences and multiple model states. We cover the Ctrl+F7 bad body check, adaptivity deactivation, and model state optimization that restore performance."
 category: "performance"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor slow performance large assembly model states"
 slug: "inventor-slow-performance-large-models-model-states"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-15"
 sources:
@@ -16,13 +16,13 @@ sources:
 
 # Inventor Slow Performance on Large Models: Model States, Adaptivity, and Bad Geometry
 
-A user on the Autodesk Community forum described a problem that perfectly matches my daily experience: they had a moderately large model with 4,348 occurrences and 1,467 open documents, including tube and pipe routes. After any activity — move, place, constraint — the bottom left corner would say "Executing..." and the entire model would rebuild. Another user reported that Inventor 2024.2 was "incredibly slow" with large assemblies using View Representations and 6+ Model States, taking 30+ minutes to open drawings and 1 hour to update after modifying the 3D. A third user with a high-end PC (RTX 4060, i7) noticed that Inventor would drop to 4-10 FPS during certain operations despite low CPU and GPU utilization.
+A user on the Autodesk Community forum described a problem that perfectly matches our daily experience: they had a moderately large model with 4,348 occurrences and 1,467 open documents, including tube and pipe routes. After any activity — move, place, constraint — the bottom left corner would say "Executing..." and the entire model would rebuild. Another user reported that Inventor 2024.2 was "incredibly slow" with large assemblies using View Representations and 6+ Model States, taking 30+ minutes to open drawings and 1 hour to update after modifying the 3D. A third user with a high-end PC (RTX 4060, i7) noticed that Inventor would drop to 4-10 FPS during certain operations despite low CPU and GPU utilization.
 
-All three of these problems share common root causes that I've learned to diagnose systematically. The Autodesk forum responses from Johnson Shiue (an Autodesk employee) consistently point to the same set of issues: bad geometry, adaptivity, model states, and network storage. I'll cover each one.
+All three of these problems share common root causes that we've learned to diagnose systematically. The Autodesk forum responses from Johnson Shiue (an Autodesk employee) consistently point to the same set of issues: bad geometry, adaptivity, model states, and network storage. We'll cover each one.
 
 ## Diagnosis Step 1: Check for Bad Geometry (Ctrl+F7)
 
-This is the first thing I check when Inventor is slow. Bad bodies — geometry with internal errors — cause Inventor to spend excessive time during regeneration because it has to work around the errors.
+This is the first thing we check when Inventor is slow. Bad bodies — geometry with internal errors — cause Inventor to spend excessive time during regeneration because it has to work around the errors.
 
 ### Running the Bad Body Check
 
@@ -89,7 +89,7 @@ When you have 6 Model States, Inventor has to track 6 sets of data for every fea
 
 ### Best Practice: One Model State Per Assembly
 
-The Autodesk forum response noted: "It's recommended to use only one Model state per drawing." I extend this: use only one Model State per assembly unless you have a compelling reason. If you need to show different configurations, create separate assembly files. The file management overhead is worth the performance gain.
+The Autodesk forum response noted: "It's recommended to use only one Model state per drawing." we extend this: use only one Model State per assembly unless you have a compelling reason. If you need to show different configurations, create separate assembly files. The file management overhead is worth the performance gain.
 
 ## Diagnosis Step 4: Check Network Storage Performance
 
@@ -189,4 +189,4 @@ This disables the dynamic loading of applets (UI components) that Inventor loads
 | Disable Core Isolation on Win 11 | Medium | Easy |
 | Set DYNAMIC_LOAD_APPLETS=0 | Low (first-part only) | Easy |
 
-Start with Model States — they're the most common cause of severe performance degradation. Then check for bad bodies with Ctrl+F7. Then deactivate adaptivity. These three fixes resolve about 80% of Inventor performance problems I encounter.
+Start with Model States — they're the most common cause of severe performance degradation. Then check for bad bodies with Ctrl+F7. Then deactivate adaptivity. These three fixes resolve about 80% of Inventor performance problems we encounter.

@@ -1,11 +1,11 @@
 ---
 title: "NX License Borrowing Freeze: Fixing Intermittent Not Responding"
-excerpt: "Borrowed an NX license to work from home and now the software freezes every 5-10 minutes? I explain why the license manager's background ping causes this and how to fix it without returning to the office."
+excerpt: "Borrowed an NX license to work from home and now the software freezes every 5-10 minutes? We explain why the license manager's background ping causes this and how to fix it without returning to the office."
 category: "troubleshooting"
 softwareSlug: "siemens-nx"
 keyword: "NX license borrow freeze not responding"
 slug: "siemens-nx-license-borrow-freeze-not-responding"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-17"
 sources:
@@ -15,9 +15,9 @@ sources:
 
 # NX License Borrowing Freeze: Fixing Intermittent Not Responding
 
-A user on the Siemens community forum described a problem I've lived through personally: they borrowed an NX license from the server to work from home, and within hours, NX started freezing every 5-10 minutes for about a minute or two each time. Task Manager showed the process as "Not Responding." The same license worked perfectly when connected to the network directly. Another user in the same thread confirmed the identical behavior with a borrowed license on NX 1851.
+A user on the Siemens community forum described a problem we've lived through personally: they borrowed an NX license from the server to work from home, and within hours, NX started freezing every 5-10 minutes for about a minute or two each time. Task Manager showed the process as "Not Responding." The same license worked perfectly when connected to the network directly. Another user in the same thread confirmed the identical behavior with a borrowed license on NX 1851.
 
-This is a known behavior pattern with Siemens PLM License Server (SPLM) borrowing, and unfortunately, the fix is not straightforward. I'll walk through what's happening, why it happens, and the workarounds I've used in production.
+This is a known behavior pattern with Siemens PLM License Server (SPLM) borrowing, and unfortunately, the fix is not straightforward. We'll walk through what's happening, why it happens, and the workarounds we've used in production.
 
 ## What's Actually Happening
 
@@ -85,7 +85,7 @@ This doesn't prevent the freeze entirely, but it reduces each freeze from 30-60 
 
 The forum thread on this issue dates back to NX 1851, and the behavior persists in newer versions. The reason is that the background verification is a security feature — it ensures borrowed licenses haven't been tampered with or duplicated. Removing it would create a security hole in the licensing system.
 
-The practical solution is to make the timeout as short as possible (Fixes 1, 2, and 5) so the verification fails fast instead of hanging. In my experience, combining Fix 1 (localhost) with Fix 5 (reduced timeout) eliminates the problem for 90% of users.
+The practical solution is to make the timeout as short as possible (Fixes 1, 2, and 5) so the verification fails fast instead of hanging. In our experience, combining Fix 1 (localhost) with Fix 5 (reduced timeout) eliminates the problem for 90% of users.
 
 ## Verifying Which Fix Worked
 

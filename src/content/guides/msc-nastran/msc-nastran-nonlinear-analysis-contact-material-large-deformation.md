@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "msc-nastran"
 keyword: "msc nastran nonlinear analysis contact material large deformation"
 slug: "msc-nastran-nonlinear-analysis-contact-material-large-deformation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

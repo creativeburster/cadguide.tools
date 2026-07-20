@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ijcad"
 keyword: "ijcad lisp automation custom commands"
 slug: "ijcad-lisp-automation-custom-commands"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # IJCAD LISP Automation: Building Custom Commands for Japanese Drafting Workflows
 
-IJCAD's AutoLISP support lets you automate repetitive drafting tasks. I built a suite of LISP routines for our Japanese drafting team that cut drawing setup time from 15 minutes to under 2 minutes. Here are the most useful routines.
+IJCAD's AutoLISP support lets you automate repetitive drafting tasks. We built a suite of LISP routines for our Japanese drafting team that cut drawing setup time from 15 minutes to under 2 minutes. Here are the most useful routines.
 
 ## Routine 1: Auto-Populate Title Block
 

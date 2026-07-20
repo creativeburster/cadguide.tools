@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bimcollab"
 keyword: "bimcollab bcf manager revit plugin live issue sync viewpoint"
 slug: "bimcollab-bcf-manager-revit-plugin-live-issue-sync-viewpoint"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # BIMcollab BCF Manager for Revit: Live Issue Sync Without File Export
 
-The BIMcollab BCF Manager for Revit is the plugin that connects Revit to BIMcollab Cloud. Without it, Revit users have to import and export BCF files manually — which is slow, error-prone, and leads to outdated issue data. With it, issues sync live. I've installed this plugin for hundreds of Revit users. Here's how to set it up and use it effectively.
+The BIMcollab BCF Manager for Revit is the plugin that connects Revit to BIMcollab Cloud. Without it, Revit users have to import and export BCF files manually — which is slow, error-prone, and leads to outdated issue data. With it, issues sync live. We've installed this plugin for hundreds of Revit users. Here's how to set it up and use it effectively.
 
 ## Why the BCF Manager Plugin Matters
 

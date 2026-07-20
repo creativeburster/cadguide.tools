@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "tebis"
 keyword: "tebis 3d milling roughing finishing residual stock mold"
 slug: "tebis-3d-milling-roughing-finishing-residual-stock-mold"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

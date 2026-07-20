@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "librecad"
 keyword: "librecad vs qcad comparison"
 slug: "librecad-vs-qcad-choosing-open-source-2d-cad-tool"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:
@@ -20,7 +20,7 @@ The LibreCAD vs QCAD debate is a staple of open-source CAD communities. On Reddi
 
 These real community discussions reveal the practical tradeoff: LibreCAD is completely free and feels familiar to AutoCAD users, but has limited format support and no scripting. QCAD Professional costs money but adds DWG support, JavaScript automation, and pre-built block libraries. Since LibreCAD is a fork of QCAD Community Edition from 2011, they share a common ancestor but have diverged significantly.
 
-I've used both tools for different projects — LibreCAD for quick shop sketches and QCAD Professional for client deliverables. This guide helps you choose based on real workflow needs, not feature checklists.
+We've used both tools for different projects — LibreCAD for quick shop sketches and QCAD Professional for client deliverables. This guide helps you choose based on real workflow needs, not feature checklists.
 
 ## Background
 
@@ -69,7 +69,7 @@ For DWG compatibility, QCAD Professional is the only option.
 
 ## Scripting
 
-- **QCAD Professional**: JavaScript API for entity creation, modification, batch operations, and file I/O
+- **QCAD Professional**: JavaScript API for entity creation, modification, batch operations, and file we/O
 - **QCAD Community**: No scripting
 - **LibreCAD**: No scripting
 

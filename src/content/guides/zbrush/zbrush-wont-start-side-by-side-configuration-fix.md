@@ -1,11 +1,11 @@
 ---
 title: "ZBrush Won't Start: Side-by-Side Configuration Error and Visual C++ Runtime Fix"
-excerpt: "The 'side-by-side configuration is incorrect' error when launching ZBrush is a Windows DLL dependency issue, not a ZBrush bug. I cover the Visual C++ Redistributable installation, Sxs tracing, and the clean reinstall process that fixes it permanently."
+excerpt: "The 'side-by-side configuration is incorrect' error when launching ZBrush is a Windows DLL dependency issue, not a ZBrush bug. We cover the Visual C++ Redistributable installation, Sxs tracing, and the clean reinstall process that fixes it permanently."
 category: "troubleshooting"
 softwareSlug: "zbrush"
 keyword: "ZBrush won't start side-by-side configuration incorrect error"
 slug: "zbrush-wont-start-side-by-side-configuration-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # ZBrush Won't Start: Side-by-Side Configuration Error and Visual C++ Runtime Fix
 
-I got a call from a new hire last week: "ZBrush won't open. It says 'side-by-side configuration is incorrect.' I've reinstalled it twice." This error has been around since ZBrush 4R3, and it's still one of the most common startup failures I encounter. The good news is that it's not a ZBrush bug — it's a Windows dependency issue, and the fix is straightforward once you understand what's happening.
+The "side-by-side configuration is incorrect" error when launching ZBrush has been around since ZBrush 4R3, and it's still one of the most common startup failures. The good news is that it's not a ZBrush bug — it's a Windows dependency issue, and the fix is straightforward once you understand what's happening.
 
 ## What "Side-by-Side Configuration" Actually Means
 
@@ -38,7 +38,7 @@ This fixes the issue 90% of the time. The specific version ZBrush needs depends 
 2. Also install **Microsoft Visual C++ 2010 Redistributable (x86)**
 3. Restart and try ZBrush
 
-I keep a folder of all Visual C++ Redistributables on our network share. When setting up a new workstation, I install them all before installing any creative software. This prevents not just ZBrush startup errors but also issues with 3ds Max, Substance Painter, and other tools.
+We keep a folder of all Visual C++ Redistributables on our network share. When setting up a new workstation, we install them all before installing any creative software. This prevents not just ZBrush startup errors but also issues with 3ds Max, Substance Painter, and other tools.
 
 ## Fix 2: Use SxsTrace to Identify the Exact Missing Dependency
 
@@ -71,7 +71,7 @@ The Event Viewer provides similar information to SxsTrace but is easier to read:
 3. Look for "SideBySide" errors with the timestamp matching your ZBrush launch attempt
 4. The error details will name the missing assembly
 
-I check the Event Viewer before running SxsTrace because it's faster and the information is usually sufficient.
+We check the Event Viewer before running SxsTrace because it's faster and the information is usually sufficient.
 
 ## Fix 4: Repair Existing Visual C++ Installations
 
@@ -83,7 +83,7 @@ Sometimes the Visual C++ Redistributable is installed but corrupted. Instead of 
 4. Click **Modify → Repair**
 5. Restart the computer
 
-I've seen cases where a Windows update corrupted the Visual C++ runtime, and a repair fixed it when a fresh install didn't.
+We've seen cases where a Windows update corrupted the Visual C++ runtime, and a repair fixed it when a fresh install didn't.
 
 ## Fix 5: Clean Reinstallation of ZBrush
 
@@ -97,17 +97,17 @@ If all else fails, a clean reinstallation of ZBrush ensures the correct manifest
 6. Install ZBrush fresh
 7. Install all Visual C++ Redistributables before the first launch
 
-This is the nuclear option, but I've never seen it fail when the issue is purely a side-by-side configuration problem.
+This is the nuclear option, but we've never seen it fail when the issue is purely a side-by-side configuration problem.
 
 ## Fix 6: Windows Reset (Extreme Cases)
 
-I had one case where a user's Windows installation had accumulated so many corrupted SxS assemblies that no application would launch — not just ZBrush. The Windows component store itself was damaged.
+We had one case where a user's Windows installation had accumulated so many corrupted SxS assemblies that no application would launch — not just ZBrush. The Windows component store itself was damaged.
 
-**The fix**: Run `DISM /Online /Cleanup-Image /RestoreHealth` from an elevated command prompt. This repairs the Windows component store, including all SxS assemblies. If DISM can't fix it, a Windows reset (Settings → System → Recovery → Reset this PC → Keep my files) is the last resort.
+**The fix**: Run `DISM /Online /Cleanup-Image /RestoreHealth` from an elevated command prompt. This repairs the Windows component store, including all SxS assemblies. If DISM can't fix it, a Windows reset (Settings → System → Recovery → Reset this PC → Keep our files) is the last resort.
 
 ## Preventing the Error on New Installations
 
-My workstation setup checklist now includes:
+Our workstation setup checklist now includes:
 
 1. Install all Visual C++ Redistributables (2005, 2008, 2010, 2012, 2013, 2015-2022) — both x86 and x64
 2. Install ZBrush
@@ -115,15 +115,15 @@ My workstation setup checklist now includes:
 4. Run Windows Update to get the latest runtime updates
 5. Create a system restore point for easy rollback if a future Windows update breaks the runtimes
 
-I also create a **batch script** that silently installs all Visual C++ Redistributables in sequence. This ensures no version is missed and the installation is repeatable across multiple workstations. The script installs each redistributable with the `/quiet /norestart` flags, which means no user interaction is required and no reboots interrupt the process. I keep this script on our network share alongside the redistributable installers, so any IT team member can set up a new workstation without missing a dependency.
+We also create a **batch script** that silently installs all Visual C++ Redistributables in sequence. This ensures no version is missed and the installation is repeatable across multiple workstations. The script installs each redistributable with the `/quiet /norestart` flags, which means no user interaction is required and no reboots interrupt the process. Keep this script on a network share alongside the redistributable installers, so any IT team member can set up a new workstation without missing a dependency.
 
-Another preventive measure: I **image the workstation** after the initial setup is complete. This way, if a Windows update corrupts the SxS assemblies, I can restore the image in 20 minutes instead of spending hours troubleshooting DLL errors. The image includes all Visual C++ runtimes, ZBrush, 3ds Max, and all other studio software — pre-configured and tested.
+Another preventive measure: We **image the workstation** after the initial setup is complete. This way, if a Windows update corrupts the SxS assemblies, we can restore the image in 20 minutes instead of spending hours troubleshooting DLL errors. The image includes all Visual C++ runtimes, ZBrush, 3ds Max, and all other studio software — pre-configured and tested.
 
 ## Common Misdiagnoses
 
-I've seen IT departments waste hours on the wrong fixes for this error:
+We've seen IT departments waste hours on the wrong fixes for this error:
 
-**Misdiagnosis 1 — "Reinstall ZBrush"**: The error message literally says "Reinstalling the application may fix this problem," so this is the first thing everyone tries. It rarely works because the missing component is a Microsoft runtime, not a ZBrush file. I've seen users reinstall ZBrush 5+ times before contacting me.
+**Misdiagnosis 1 — "Reinstall ZBrush"**: The error message literally says "Reinstalling the application may fix this problem," so this is the first thing everyone tries. It rarely works because the missing component is a Microsoft runtime, not a ZBrush file. We've seen users reinstall ZBrush 5+ times before contacting us.
 
 **Misdiagnosis 2 — "Run as Administrator"**: Some IT techs suggest running ZBrush as Administrator to bypass the side-by-side check. This doesn't work — the SxS system operates at the Windows level, not the user level. Administrator rights don't change which assemblies are registered.
 
@@ -141,8 +141,8 @@ If you've tried all the fixes above and ZBrush still won't launch, it's time to 
 4. **ZBrush version** — check the installer file name or your Maxon account
 5. **List of installed Visual C++ Redistributables** — go to Settings → Apps and list all "Visual C++" entries
 
-Maxon support can provide version-specific guidance and may have seen the exact issue on other systems. I've contacted them twice for unusual SxS errors, and both times they provided a specific redistributable version that resolved the issue.
+Maxon support can provide version-specific guidance and may have seen the exact issue on other systems. We've contacted them twice for unusual SxS errors, and both times they provided a specific redistributable version that resolved the issue.
 
 ## Summary
 
-The "side-by-side configuration is incorrect" error is a Windows DLL dependency issue, not a ZBrush problem. Install the correct Visual C++ Redistributable (check SxsTrace or Event Viewer for the exact version), repair existing installations if needed, and do a clean ZBrush reinstall as a last resort. I prevent it entirely by installing all Visual C++ runtimes before any creative software on new workstations, and I maintain a batch script and system image for rapid deployment. Don't waste time on common misdiagnoses — if the error says "side-by-side," it's a dependency issue that requires a specific runtime installation.
+The "side-by-side configuration is incorrect" error is a Windows DLL dependency issue, not a ZBrush problem. Install the correct Visual C++ Redistributable (check SxsTrace or Event Viewer for the exact version), repair existing installations if needed, and do a clean ZBrush reinstall as a last resort. We prevent it entirely by installing all Visual C++ runtimes before any creative software on new workstations, and we maintain a batch script and system image for rapid deployment. Don't waste time on common misdiagnoses — if the error says "side-by-side," it's a dependency issue that requires a specific runtime installation.

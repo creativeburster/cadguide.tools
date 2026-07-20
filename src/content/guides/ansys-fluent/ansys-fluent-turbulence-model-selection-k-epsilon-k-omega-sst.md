@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-fluent"
 keyword: "ansys fluent turbulence model selection k-epsilon k-omega sst spalart-allmaras"
 slug: "ansys-fluent-turbulence-model-selection-k-epsilon-k-omega-sst"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ANSYS Fluent Turbulence Model Selection: k-epsilon, k-omega SST, Spalart-Allmaras, and Transition Models
 
-Choosing the wrong turbulence model gives you wrong results — even if the mesh is perfect and the solver converges. I've seen engineers use k-epsilon for everything because it's the default, then wonder why their simulation doesn't match wind tunnel data. The turbulence model must match the flow physics. Here's my selection guide.
+Choosing the wrong turbulence model gives you wrong results — even if the mesh is perfect and the solver converges. We've seen engineers use k-epsilon for everything because it's the default, then wonder why their simulation doesn't match wind tunnel data. The turbulence model must match the flow physics. Here's our selection guide.
 
 ## Why Turbulence Model Selection Matters
 

@@ -1,11 +1,11 @@
 ---
 title: "Autodesk Inventor Assembly Design: Constraints, Joints, and Motion Simulation"
-excerpt: "Inventor's assembly tools combine parts into functional mechanisms with constraints and joints. I cover assembly constraints, joint types, motion simulation, interference detection, and exploded views for documentation."
+excerpt: "Inventor's assembly tools combine parts into functional mechanisms with constraints and joints. We cover assembly constraints, joint types, motion simulation, interference detection, and exploded views for documentation."
 category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor assembly design constraints joints motion simulation interference detection exploded views"
 slug: "autodesk-inventor-assembly-design-constraints-joints-motion-simulation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Inventor Assembly Design: Constraints, Joints, and Motion Simulation
 
-I've built complex assemblies in Inventor ranging from 10-part mechanisms to 1000+ part machines. Assembly design is where individual parts come together as a functional product. Inventor's constraint and joint system determines how parts relate to each other, and the motion simulation tools let you verify that the mechanism works before manufacturing.
+We've built complex assemblies in Inventor ranging from 10-part mechanisms to 1000+ part machines. Assembly design is where individual parts come together as a functional product. Inventor's constraint and joint system determines how parts relate to each other, and the motion simulation tools let you verify that the mechanism works before manufacturing.
 
 ## Assembly Overview
 

@@ -1,11 +1,11 @@
 ---
 title: "SketchUp Inferencing Stops Working: Cursor Not Snapping to Corners and Guidelines"
-excerpt: "SketchUp's inferencing suddenly stops — the cursor no longer snaps to endpoints, midpoints, or intersections. I cover the click-out-click-in fix, the graphics engine switch, and the preferences reset that restore snapping."
+excerpt: "SketchUp's inferencing suddenly stops — the cursor no longer snaps to endpoints, midpoints, or intersections. We cover the click-out-click-in fix, the graphics engine switch, and the preferences reset that restore snapping."
 category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp inferencing not working snapping cursor corners"
 slug: "sketchup-inferencing-stops-working-snapping-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-26"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 A user on the SketchUp Community forum reported two related problems on their M1 MacBook Pro: SketchUp 2024 crashed on startup (before opening any files), and when they could get it running, the cursor would frequently stop snapping to corners, endpoints, and guidelines. They had to restart SketchUp each time to restore inferencing. The SketchUp staff response confirmed that these two issues are related — both are caused by the new graphics engine — and provided fixes for each.
 
-This is a problem I've encountered across multiple SketchUp versions and platforms. Inferencing — SketchUp's smart snapping system that highlights endpoints, midpoints, intersections, and on-edge positions — is one of the most fundamental modeling tools. When it stops working, modeling becomes nearly impossible.
+This is a problem we've encountered across multiple SketchUp versions and platforms. Inferencing — SketchUp's smart snapping system that highlights endpoints, midpoints, intersections, and on-edge positions — is one of the most fundamental modeling tools. When it stops working, modeling becomes nearly impossible.
 
 ## Understanding SketchUp Inferencing
 

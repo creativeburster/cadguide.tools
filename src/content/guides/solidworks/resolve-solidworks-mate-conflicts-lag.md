@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "solidworks"
 keyword: "solidworks mate conflict"
 slug: "resolve-solidworks-mate-conflicts-lag"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Resolving Mate Conflicts and Rebuild Lag in SolidWorks Assemblies
 
-Mate conflicts in SolidWorks are the kind of problem that sneaks up on you. Everything is working fine, then you add one more mate and suddenly the assembly won't rebuild, components are jumping to random positions, and the feature tree is lit up with red and yellow warnings. I've spent way too much of my career untangling mate conflicts — both my own and other people's. Here's the systematic approach I use to diagnose and fix them without making things worse.
+Mate conflicts in SolidWorks are the kind of problem that sneaks up on you. Everything is working fine, then you add one more mate and suddenly the assembly won't rebuild, components are jumping to random positions, and the feature tree is lit up with red and yellow warnings. We've spent way too much of our career untangling mate conflicts — both our own and other people's. Here's the systematic approach we use to diagnose and fix them without making things worse.
 
 ## Understanding Mate Status Indicators
 

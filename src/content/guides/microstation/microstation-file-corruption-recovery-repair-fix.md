@@ -1,11 +1,11 @@
 ---
 title: "MicroStation File Corruption: Recovery, Compress, and Axiom FileFixer Workflow"
-excerpt: "MicroStation files won't open, crash on save, or show missing elements due to corruption. I cover the built-in file repair, compress options, and the manual recovery workflow that saves corrupted design files."
+excerpt: "MicroStation files won't open, crash on save, or show missing elements due to corruption. We cover the built-in file repair, compress options, and the manual recovery workflow that saves corrupted design files."
 category: "troubleshooting"
 softwareSlug: "microstation"
 keyword: "MicroStation file corruption recovery crash won't open repair"
 slug: "microstation-file-corruption-recovery-repair-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:

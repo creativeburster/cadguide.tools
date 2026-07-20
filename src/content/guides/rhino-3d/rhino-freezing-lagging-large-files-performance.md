@@ -1,11 +1,11 @@
 ---
 title: "Rhino 7/8 Freezing and Lagging with Large Files: Hardware and Settings Fix"
-excerpt: "Rhino freezes for minutes when working with 7-8 GB files? I cover the mesh reduction, display pipeline settings, and hardware upgrades that actually make a difference."
+excerpt: "Rhino freezes for minutes when working with 7-8 GB files? We cover the mesh reduction, display pipeline settings, and hardware upgrades that actually make a difference."
 category: "performance"
 softwareSlug: "rhino-3d"
 keyword: "Rhino freezing lagging large files performance"
 slug: "rhino-freezing-lagging-large-files-performance"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-16"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Rhino 7/8 Freezing and Lagging with Large Files: Hardware and Settings Fix
 
-A user on the McNeel forum described a problem that resonated with me deeply: they were experiencing severe performance issues in Rhino 7 when working with large files around 7-8 GB. Rhino would frequently stop responding, taking up to 3 minutes to recover. The issue worsened with 3 or more files open simultaneously. Despite forcing Rhino to use the dedicated NVIDIA RTX 3070 GPU in Windows settings, the problem persisted. They asked the question I've been asked many times: "Do I need to upgrade my RAM, my GPU, or both?"
+A user on the McNeel forum described a problem that resonated with us deeply: they were experiencing severe performance issues in Rhino 7 when working with large files around 7-8 GB. Rhino would frequently stop responding, taking up to 3 minutes to recover. The issue worsened with 3 or more files open simultaneously. Despite forcing Rhino to use the dedicated NVIDIA RTX 3070 GPU in Windows settings, the problem persisted. They asked the question we've been asked many times: "Do I need to upgrade my RAM, my GPU, or both?"
 
 The answer, as is often the case, is nuanced. It's not just about hardware — it's about how Rhino handles large meshes and display data.
 
@@ -115,7 +115,7 @@ If you've optimized the software settings and Rhino is still slow, it's time to 
 
 ### RAM
 
-For 7-8GB files, 32GB of RAM (as the forum user had) is borderline. Here's my recommendation:
+For 7-8GB files, 32GB of RAM (as the forum user had) is borderline. Here's our recommendation:
 
 | File Size | Minimum RAM | Recommended RAM |
 |-----------|------------|-----------------|

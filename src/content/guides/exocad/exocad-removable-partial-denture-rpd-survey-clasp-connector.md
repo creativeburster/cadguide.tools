@@ -1,11 +1,11 @@
 ---
 title: "exocad Removable Partial Denture (RPD) Design: Survey Line, Clasp, and Connector Workflow"
-excerpt: "exocad's RPD module designs removable partial dentures with survey analysis, clasp placement, and connector design. I cover the survey line workflow, clasp type selection, rest seat design, major connector configuration, and export for 3D printing or casting."
+excerpt: "exocad's RPD module designs removable partial dentures with survey analysis, clasp placement, and connector design. We cover the survey line workflow, clasp type selection, rest seat design, major connector configuration, and export for 3D printing or casting."
 category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad removable partial denture RPD survey line clasp connector design workflow"
 slug: "exocad-removable-partial-denture-rpd-survey-clasp-connector"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,13 +16,13 @@ sources:
 
 # exocad Removable Partial Denture (RPD) Design: Survey Line, Clasp, and Connector Workflow
 
-I've designed removable partial dentures (RPDs) in exocad for Kennedy Class I through IV cases. The RPD module in exocad brings digital precision to a traditionally analog process — survey analysis, clasp design, and connector layout that were once done by hand on a physical model can now be done digitally with exact control over undercut amounts and clasp positions.
+We've designed removable partial dentures (RPDs) in exocad for Kennedy Class we through IV cases. The RPD module in exocad brings digital precision to a traditionally analog process — survey analysis, clasp design, and connector layout that were once done by hand on a physical model can now be done digitally with exact control over undercut amounts and clasp positions.
 
 ## RPD Module Overview
 
 exocad's RPD module supports:
 - **Survey analysis**: Digital surveying of the cast to determine undercut areas
-- **Clasp design**: Akers, back-action, I-bar, and combination clasps
+- **Clasp design**: Akers, back-action, we-bar, and combination clasps
 - **Rest seats**: Occlusal, cingulum, and lingual rests
 - **Major connectors**: Palatal strap, palatal plate, lingual bar, lingual plate
 - **Minor connectors**: Connecting clasps to the major connector
@@ -46,7 +46,7 @@ exocad's RPD module supports:
 1. Select **RPD** as the case type
 2. Define which teeth are present and which are missing
 3. Define the Kennedy classification:
-   - **Class I**: Bilateral free-end saddles
+   - **Class we**: Bilateral free-end saddles
    - **Class II**: Unilateral free-end saddle
    - **Class III**: Unilateral bounded saddle
    - **Class IV**: Anterior bounded saddle
@@ -97,11 +97,11 @@ exocad's RPD module supports:
    - Engages mesial or distal undercut
    - No separate reciprocal arm needed
 
-3. **I-Bar (RPI/RPA)**:
-   - For free-end saddle cases (Kennedy I/II)
-   - I-bar engages the mesial undercut
+3. **we-Bar (RPI/RPA)**:
+   - For free-end saddle cases (Kennedy we/II)
+   - we-bar engages the mesial undercut
    - Rest on the mesial occlusal
-   - Plate (RPA) or I-bar (RPI) on the distal
+   - Plate (RPA) or we-bar (RPI) on the distal
 
 4. **Combination Clasp**:
    - Cast clasp body with wrought wire retentive arm
@@ -142,11 +142,11 @@ exocad's RPD module supports:
 
 1. **Palatal Strap**: A narrow band across the palate
    - Minimum width: 8mm
-   - Used for Kennedy Class I and II
+   - Used for Kennedy Class we and II
    - Less palatal coverage than a plate
 
 2. **Palatal Plate**: Covers the entire palate
-   - Used for Kennedy Class I with extensive saddles
+   - Used for Kennedy Class we with extensive saddles
    - Provides maximum support
    - May affect phonetics and taste
 
@@ -247,4 +247,4 @@ exocad's RPD module supports:
 
 ## Summary
 
-exocad's RPD module brings digital precision to removable partial denture design. Start with survey analysis — adjust the insertion path to create appropriate undercuts on clasped teeth. Design clasps based on the clasp type (Akers for posterior, I-bar for free-end saddles) with correct retention amounts (0.25mm for Co-Cr). Design rest seats with 1.0-1.5mm depth. Choose the major connector based on the arch (palatal strap/plate for upper, lingual bar for lower). Design saddle areas with mesh for acrylic retention. Set up denture teeth with proper occlusion. Export the framework as STL for casting, milling, or DMLS. The most common issues — clasp not engaging, connector interference, and RPD rocking — are fixed by adjusting the insertion path, modifying the connector path, and verifying rest seat positions.
+exocad's RPD module brings digital precision to removable partial denture design. Start with survey analysis — adjust the insertion path to create appropriate undercuts on clasped teeth. Design clasps based on the clasp type (Akers for posterior, we-bar for free-end saddles) with correct retention amounts (0.25mm for Co-Cr). Design rest seats with 1.0-1.5mm depth. Choose the major connector based on the arch (palatal strap/plate for upper, lingual bar for lower). Design saddle areas with mesh for acrylic retention. Set up denture teeth with proper occlusion. Export the framework as STL for casting, milling, or DMLS. The most common issues — clasp not engaging, connector interference, and RPD rocking — are fixed by adjusting the insertion path, modifying the connector path, and verifying rest seat positions.

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "esprit"
 keyword: "esprit solidmill 3 axis roughing finishing residual stock"
 slug: "esprit-cam-solidmill-3-axis-roughing-finishing-residual-stock"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

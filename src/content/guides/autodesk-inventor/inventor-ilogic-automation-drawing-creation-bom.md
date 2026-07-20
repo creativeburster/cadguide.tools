@@ -1,11 +1,11 @@
 ---
 title: "Inventor iLogic Automation: Rules for Automated Drawing Creation and BOM Export"
-excerpt: "I share the iLogic rules I use to automate drawing creation, BOM export, and part numbering — with real code examples and error handling that works in production."
+excerpt: "We share the iLogic rules we use to automate drawing creation, BOM export, and part numbering — with real code examples and error handling that works in production."
 category: "deployment"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor iLogic automation drawing creation BOM"
 slug: "inventor-ilogic-automation-drawing-creation-bom"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-19"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Inventor iLogic Automation: Rules for Automated Drawing Creation and BOM Export
 
-I manage a library of 3,000+ standard parts in Inventor, and every new part needs a drawing, a BOM entry, and a part number. Doing this manually takes 15-20 minutes per part. With iLogic, I've automated the entire process to under 30 seconds. I'll share the rules I use, with real code that works in production. These rules have been tested across Inventor 2022 through 2025.
+We manage a library of 3,000+ standard parts in Inventor, and every new part needs a drawing, a BOM entry, and a part number. Doing this manually takes 15-20 minutes per part. With iLogic, we've automated the entire process to under 30 seconds. We'll share the rules we use, with real code that works in production. These rules have been tested across Inventor 2022 through 2025.
 
 ## What iLogic Is
 
@@ -312,7 +312,7 @@ For rules that should be available in every document:
 
 ## Error Handling and Debugging iLogic Rules
 
-iLogic rules can fail silently — the rule stops executing but Inventor doesn't always show a clear error message. Here are the debugging techniques I use:
+iLogic rules can fail silently — the rule stops executing but Inventor doesn't always show a clear error message. Here are the debugging techniques we use:
 
 ### Try-Catch Error Handling
 
@@ -361,4 +361,4 @@ Always test new rules on a copy of your production data:
 
 ## Summary
 
-iLogic automation saves my team approximately 20 hours per week across 30 engineers. The five rules I've shared handle the most repetitive tasks: part numbering, drawing creation, BOM export, mass property updates, and drawing completeness checks. Deploy them as external rules on a network share so all team members have access. Start with the auto-generate part number rule — it's the simplest and provides immediate value. Then add the drawing creation and BOM export rules as your team becomes comfortable with iLogic.
+iLogic automation saves our team approximately 20 hours per week across 30 engineers. The five rules we've shared handle the most repetitive tasks: part numbering, drawing creation, BOM export, mass property updates, and drawing completeness checks. Deploy them as external rules on a network share so all team members have access. Start with the auto-generate part number rule — it's the simplest and provides immediate value. Then add the drawing creation and BOM export rules as your team becomes comfortable with iLogic.

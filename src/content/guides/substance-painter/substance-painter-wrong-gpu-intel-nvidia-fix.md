@@ -1,11 +1,11 @@
 ---
 title: "Substance Painter GPU Selection: Wrong GPU, Intel Override, and NVIDIA Control Panel Configuration"
-excerpt: "Substance Painter runs on the Intel integrated GPU instead of the dedicated NVIDIA card, causing poor performance and GPU error messages. I cover the NVIDIA Control Panel configuration, Windows Graphics settings, and the log file analysis I use to verify GPU selection."
+excerpt: "Substance Painter runs on the Intel integrated GPU instead of the dedicated NVIDIA card, causing poor performance and GPU error messages. We cover the NVIDIA Control Panel configuration, Windows Graphics settings, and the log file analysis we use to verify GPU selection."
 category: "deployment"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter wrong GPU Intel NVIDIA control panel fix"
 slug: "substance-painter-wrong-gpu-intel-nvidia-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Substance Painter GPU Selection: Wrong GPU, Intel Override, and NVIDIA Control Panel Configuration
 
-I see this issue on almost every laptop and many desktop workstations I set up: Substance Painter runs on the Intel integrated GPU instead of the dedicated NVIDIA card. The symptoms are obvious — poor performance, GPU error messages on launch, and VRAM readings that don't match the dedicated GPU's specifications. The fix requires configuration in multiple places because Windows, NVIDIA, and Adobe each have their own GPU selection mechanisms.
+We see this issue on almost every laptop and many desktop workstations: Substance Painter runs on the Intel integrated GPU instead of the dedicated NVIDIA card. The symptoms are obvious — poor performance, GPU error messages on launch, and VRAM readings that don't match the dedicated GPU's specifications. The fix requires configuration in multiple places because Windows, NVIDIA, and Adobe each have their own GPU selection mechanisms.
 
 ## Symptom: GPU Error Message on Launch
 
@@ -149,4 +149,4 @@ If the Intel GPU shows high usage while Painter is running, the GPU selection co
 
 ## Summary
 
-Substance Painter running on the wrong GPU is the most common cause of performance issues on laptops and dual-GPU workstations. My fix order: configure NVIDIA Control Panel for High-performance NVIDIA processor → configure Windows Graphics settings → verify in Painter's log file → update GPU drivers → increase TDR delay if warning persists → disable Intel GPU as last resort (desktop only). The NVIDIA Control Panel and Windows Graphics settings together resolve the wrong GPU issue in about 95% of cases I encounter.
+Substance Painter running on the wrong GPU is the most common cause of performance issues on laptops and dual-GPU workstations. Our fix order: configure NVIDIA Control Panel for High-performance NVIDIA processor → configure Windows Graphics settings → verify in Painter's log file → update GPU drivers → increase TDR delay if warning persists → disable Intel GPU as last resort (desktop only). The NVIDIA Control Panel and Windows Graphics settings together resolve the wrong GPU issue in about 95% of cases we encounter.

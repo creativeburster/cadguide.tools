@@ -1,11 +1,11 @@
 ---
 title: "Optitex Nesting and Cut Order Optimization: Maximizing Fabric Efficiency for Production"
-excerpt: "Optitex's nesting engine and cut order optimization tools maximize fabric utilization and minimize cutting time. I cover automatic vs manual nesting, cut order planning, fabric matching for stripes and patterns, and efficiency reporting for apparel production."
+excerpt: "Optitex's nesting engine and cut order optimization tools maximize fabric utilization and minimize cutting time. We cover automatic vs manual nesting, cut order planning, fabric matching for stripes and patterns, and efficiency reporting for apparel production."
 category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex nesting cut order optimization fabric efficiency marker making production apparel"
 slug: "optitex-nesting-cut-order-optimization-fabric-efficiency"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Optitex Nesting and Cut Order Optimization: Maximizing Fabric Efficiency for Production
 
-I've optimized markers and cut orders in Optitex for production runs of 500 to 50,000 garments. Fabric is typically 40-70% of a garment's cost, so even a 2-3% improvement in marker efficiency translates to significant savings at scale. Optitex's nesting engine and cut order tools are designed to squeeze maximum utilization from every meter of fabric while maintaining production efficiency.
+We've optimized markers and cut orders in Optitex for production runs of 500 to 50,000 garments. Fabric is typically 40-70% of a garment's cost, so even a 2-3% improvement in marker efficiency translates to significant savings at scale. Optitex's nesting engine and cut order tools are designed to squeeze maximum utilization from every meter of fabric while maintaining production efficiency.
 
 ## Nesting Fundamentals
 

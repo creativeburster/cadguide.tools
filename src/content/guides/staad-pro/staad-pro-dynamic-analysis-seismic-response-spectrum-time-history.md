@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "staad-pro"
 keyword: "staad pro dynamic analysis seismic"
 slug: "staad-pro-dynamic-analysis-seismic-response-spectrum-time-history"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Dynamic Analysis: Seismic Response Spectrum and Time History
 
-Dynamic analysis used to intimidate me — all those modes, frequencies, and spectrum curves seemed like black magic compared to static analysis. But after running dozens of seismic analyses in STAAD.Pro, I've come to appreciate how systematic it is. Modal analysis, response spectrum, time history — each has its place. Let me walk you through how I set them up.
+Dynamic analysis used to intimidate us — all those modes, frequencies, and spectrum curves seemed like black magic compared to static analysis. But after running dozens of seismic analyses in STAAD.Pro, we've come to appreciate how systematic it is. Modal analysis, response spectrum, time history — each has its place. Let us walk you through how we set them up.
 
 ## Modal Analysis
 
@@ -252,4 +252,4 @@ Per ASCE 7, compare dynamic base shear to static base shear:
 
 ## Wrapping Up
 
-Dynamic analysis in STAAD used to scare me, but it's really just a systematic process. Run the modal analysis, check mass participation (90%+ or you need more modes), set up the response spectrum, scale to static base shear, and check drift. The CQC modal combination is the right choice for most buildings — SRSS can underestimate response when modes are closely spaced. Take it step by step and it's not so bad.
+Dynamic analysis in STAAD used to scare us, but it's really just a systematic process. Run the modal analysis, check mass participation (90%+ or you need more modes), set up the response spectrum, scale to static base shear, and check drift. The CQC modal combination is the right choice for most buildings — SRSS can underestimate response when modes are closely spaced. Take it step by step and it's not so bad.

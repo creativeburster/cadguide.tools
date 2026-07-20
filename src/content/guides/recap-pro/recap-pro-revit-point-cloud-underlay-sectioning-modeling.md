@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "recap-pro"
 keyword: "recap pro revit point cloud underlay sectioning modeling workflow"
 slug: "recap-pro-revit-point-cloud-underlay-sectioning-modeling"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ReCap Pro to Revit Workflow: Point Cloud Underlay Setup, Sectioning, and Modeling Best Practices
 
-The point cloud is your reality. The Revit model is your interpretation. Getting the point cloud into Revit correctly — aligned, visible, and performant — is the difference between accurate as-built modeling and guesswork. I've set up dozens of point cloud underlays in Revit. Here's my workflow for getting it right.
+The point cloud is your reality. The Revit model is your interpretation. Getting the point cloud into Revit correctly — aligned, visible, and performant — is the difference between accurate as-built modeling and guesswork. We've set up dozens of point cloud underlays in Revit. Here's our workflow for getting it right.
 
 ## Why Use Point Clouds in Revit
 

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "esprit"
 keyword: "esprit cam 5 axis machining simultaneous 3+2 freeform"
 slug: "esprit-cam-5-axis-machining-simultaneous-3+2-freeform-toolpath"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ESPRIT CAM 5-Axis Machining: Simultaneous, 3+2, and Freeform Toolpath Programming
 
-ESPRIT CAM, now part of Hexagon, is known for its 5-axis machining capabilities. The system's ability to combine 5-axis, 3+2, and 3-axis toolpaths in a single program makes it a go-to for aerospace, medical, and mold shops. I'll walk through the key strategies and how to set them up.
+ESPRIT CAM, now part of Hexagon, is known for its 5-axis machining capabilities. The system's ability to combine 5-axis, 3+2, and 3-axis toolpaths in a single program makes it a go-to for aerospace, medical, and mold shops. We'll walk through the key strategies and how to set them up.
 
 ## 5-Axis Machining Modes
 

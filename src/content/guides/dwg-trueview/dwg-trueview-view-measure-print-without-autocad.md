@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "dwg-trueview"
 keyword: "dwg trueview view measure print dwg without autocad"
 slug: "dwg-trueview-view-measure-print-without-autocad"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # DWG TrueView: Viewing, Measuring, and Printing DWG Files Without AutoCAD
 
-DWG TrueView is Autodesk's free DWG viewer. It's essentially AutoCAD without editing capabilities. I use it daily to review drawings from clients and contractors without needing an AutoCAD license. Here's how to get the most out of it.
+DWG TrueView is Autodesk's free DWG viewer. It's essentially AutoCAD without editing capabilities. We use it daily to review drawings from clients and contractors without needing an AutoCAD license. Here's how to get the most out of it.
 
 ## Installation and Setup
 

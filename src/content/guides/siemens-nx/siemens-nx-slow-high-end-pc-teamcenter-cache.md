@@ -1,11 +1,11 @@
 ---
 title: "NX Extremely Slow Despite High-End PC: Teamcenter Cache and Performance Tuning"
-excerpt: "i9-14900, 128GB RAM, RTX 2000 — and NX still takes an hour to load a processed program. I diagnose the real bottleneck: Teamcenter cache, network latency, and antivirus interference."
+excerpt: "i9-14900, 128GB RAM, RTX 2000 — and NX still takes an hour to load a processed program. We diagnose the real bottleneck: Teamcenter cache, network latency, and antivirus interference."
 category: "performance"
 softwareSlug: "siemens-nx"
 keyword: "NX slow performance Teamcenter"
 slug: "siemens-nx-slow-high-end-pc-teamcenter-cache"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-16"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # NX Extremely Slow Despite High-End PC: Teamcenter Cache and Performance Tuning
 
-A user posted on the Siemens community forum in January 2025 with a frustration I hear almost weekly: an i9-14900, 128GB of RAM, and an RTX 2000 — top-of-the-line hardware — yet NX takes an hour to access an already-processed program. They work in a Teamcenter environment with six other users, all connected to a server folder for libraries and devices. The question is one I've been asked in every CAD admin role I've held: *why is my expensive workstation so slow?*
+A user posted on the Siemens community forum in January 2025 with a frustration we hear almost weekly: an i9-14900, 128GB of RAM, and an RTX 2000 — top-of-the-line hardware — yet NX takes an hour to access an already-processed program. They work in a Teamcenter environment with six other users, all connected to a server folder for libraries and devices. The question is one we've been asked in every CAD admin role we've held: *why is our expensive workstation so slow?*
 
 The answer is almost never the hardware. It's the environment.
 
@@ -23,7 +23,7 @@ The answer is almost never the hardware. It's the environment.
 
 When NX is integrated with Teamcenter, every file operation — open, save, check-out, check-in — goes through the Teamcenter server. Even if you have 128GB of RAM and an NVMe drive, if your request has to travel across a network to a server that's serving six other users simultaneously, your hardware doesn't matter. You're waiting on the network.
 
-Here's how I diagnose this systematically.
+Here's how we diagnose this systematically.
 
 ## Step 1: Measure Network Latency to the Teamcenter Server
 
@@ -71,7 +71,7 @@ If your organization has more than 10 NX users, you should be running an FMS (Fi
 3. Set the FMS cache server hostname
 4. Verify connectivity with the FMS diagnostic tool: `fms_diag -server=<hostname>`
 
-I've seen environments where adding a single FMS cache server reduced file open times from 45 seconds to 3 seconds for a team of 20 engineers.
+We've seen environments where adding a single FMS cache server reduced file open times from 45 seconds to 3 seconds for a team of 20 engineers.
 
 ## Step 3: Exclude NX Directories from Antivirus Scanning
 
@@ -146,7 +146,7 @@ A slow license server can cause NX to pause at startup and during feature activa
 
 ## Summary
 
-When NX is slow on a high-end workstation, the problem is almost never the workstation itself. In my experience, the breakdown is:
+When NX is slow on a high-end workstation, the problem is almost never the workstation itself. In our experience, the breakdown is:
 
 - **40% network/Teamcenter cache issues** — the most common cause
 - **25% antivirus scanning** — the most overlooked cause
@@ -154,4 +154,4 @@ When NX is slow on a high-end workstation, the problem is almost never the works
 - **10% display and assembly settings** — easy to fix, moderate impact
 - **10% license server latency** — rare but impactful
 
-Start with network diagnostics and antivirus exclusions. These two fixes alone resolve the problem in about 65% of the cases I've handled.
+Start with network diagnostics and antivirus exclusions. These two fixes alone resolve the problem in about 65% of the cases we've handled.

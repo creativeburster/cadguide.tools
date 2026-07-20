@@ -1,11 +1,11 @@
 ---
 title: "Cabinet Vision vs SketchUp vs Mozaik: Cabinet Design Software Comparison for Woodworkers"
-excerpt: "Cabinet Vision, SketchUp, and Mozaik are three popular cabinet design tools serving different segments of the woodworking market. I compare their features, CNC integration, ease of use, pricing, and suitability for custom shops vs. production manufacturing."
+excerpt: "Cabinet Vision, SketchUp, and Mozaik are three popular cabinet design tools serving different segments of the woodworking market. We compare their features, CNC integration, ease of use, pricing, and suitability for custom shops vs. production manufacturing."
 category: "comparison"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision vs SketchUp vs Mozaik cabinet design software comparison CNC integration woodworkers"
 slug: "cabinet-vision-vs-sketchup-vs-mozaik-cabinet-design-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Cabinet Vision vs SketchUp vs Mozaik: Cabinet Design Software Comparison for Woodworkers
 
-I've worked with all three of these cabinet design tools in different shop environments. Cabinet Vision, SketchUp, and Mozaik represent three very different approaches to cabinet design — full parametric manufacturing, general 3D modeling, and affordable CNC-ready design. Understanding their differences helps woodworkers and cabinet shops choose the right tool for their specific needs and budget.
+We've worked with all three of these cabinet design tools in different shop environments. Cabinet Vision, SketchUp, and Mozaik represent three very different approaches to cabinet design — full parametric manufacturing, general 3D modeling, and affordable CNC-ready design. Understanding their differences helps woodworkers and cabinet shops choose the right tool for their specific needs and budget.
 
 ## Quick Comparison
 

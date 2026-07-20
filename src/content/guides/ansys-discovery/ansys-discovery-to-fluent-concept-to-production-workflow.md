@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-discovery"
 keyword: "ansys discovery to fluent workflow concept production cfd"
 slug: "ansys-discovery-to-fluent-concept-to-production-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

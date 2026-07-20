@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "drofus"
 keyword: "drofus revit integration attribute configuration data sync setup"
 slug: "drofus-revit-integration-attribute-configuration-data-sync-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-07-08"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # dRofus Revit Integration: Attribute Configuration and Data Sync Setup
 
-dRofus is a BIM data management platform that sits alongside Revit and manages room data, equipment, and program requirements. I've set up dRofus for hospitals, universities, and government buildings. The attribute configuration is the heart of the dRofus-Revit integration — get it wrong and your data sync will be a mess. Get it right and dRofus becomes the single source of truth for your project data.
+dRofus is a BIM data management platform that sits alongside Revit and manages room data, equipment, and program requirements. We've set up dRofus for hospitals, universities, and government buildings. The attribute configuration is the heart of the dRofus-Revit integration — get it wrong and your data sync will be a mess. Get it right and dRofus becomes the single source of truth for your project data.
 
 ## Understanding the dRofus-Revit Relationship
 

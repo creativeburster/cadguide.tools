@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "nanocad"
 keyword: "nanocad 2d drafting setup"
 slug: "nanocad-2d-drafting-setup-interface-units-layers-template"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

@@ -1,11 +1,11 @@
 ---
 title: "UltiMaker Cura Print Quality Troubleshooting: Top 10 Issues and Fixes"
-excerpt: "From warping and elephant foot to under-extrusion and layer shifting, I cover the 10 most common Cura print quality issues with their root causes and specific settings adjustments to fix them. Each issue includes diagnosis steps and recommended Cura settings changes."
+excerpt: "From warping and elephant foot to under-extrusion and layer shifting, we cover the 10 most common Cura print quality issues with their root causes and specific settings adjustments to fix them. Each issue includes diagnosis steps and recommended Cura settings changes."
 category: "troubleshooting"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura print quality troubleshooting warping under-extrusion layer shifting"
 slug: "ultimaker-cura-print-quality-troubleshooting-top-10-issues"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # UltiMaker Cura Print Quality Troubleshooting: Top 10 Issues and Fixes
 
-After years of helping people troubleshoot 3D print failures, I've found that almost every print quality issue maps to one of ten common problems. Each has specific root causes and Cura settings that can fix them. I'll cover diagnosis, cause, and solution for each.
+After years of helping people troubleshoot 3D print failures, we've found that almost every print quality issue maps to one of ten common problems. Each has specific root causes and Cura settings that can fix them. We'll cover diagnosis, cause, and solution for each.
 
 ## 1. Warping (Corners Lifting from Bed)
 
@@ -196,7 +196,7 @@ After years of helping people troubleshoot 3D print failures, I've found that al
 
 ## Diagnostic Workflow
 
-When troubleshooting a print quality issue, I follow this sequence:
+When troubleshooting a print quality issue, we follow this sequence:
 
 1. **Identify the symptom** — match it to one of the 10 issues above
 2. **Check temperature first** — wrong temperature is the most common root cause

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "progecad"
 keyword: "progecad lisp programming"
 slug: "progecad-lisp-programming-custom-tools-batch-processing-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

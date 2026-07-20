@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "idea-statica"
 keyword: "idea statica weld design fillet butt aisc eurocode"
 slug: "idea-statica-weld-design-fillet-butt-aisc-eurocode"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

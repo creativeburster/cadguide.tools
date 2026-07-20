@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "topsolid"
 keyword: "topsolid cam post processor customization g-code machine setup"
 slug: "topsolid-cam-post-processor-customization-gcode"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-12"
 sources:

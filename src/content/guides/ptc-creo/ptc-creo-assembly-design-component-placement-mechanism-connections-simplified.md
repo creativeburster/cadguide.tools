@@ -1,11 +1,11 @@
 ---
 title: "PTC Creo Assembly Design: Component Placement, Mechanism Connections, and Simplified Representations"
-excerpt: "Creo's assembly tools combine parts with placement constraints and mechanism connections for motion analysis. I cover component placement, constraint types, mechanism connections, simplified representations for large assemblies, and interference checking."
+excerpt: "Creo's assembly tools combine parts with placement constraints and mechanism connections for motion analysis. We cover component placement, constraint types, mechanism connections, simplified representations for large assemblies, and interference checking."
 category: "workflow"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo assembly design component placement mechanism connections simplified representations interference checking"
 slug: "ptc-creo-assembly-design-component-placement-mechanism-connections-simplified"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # PTC Creo Assembly Design: Component Placement, Mechanism Connections, and Simplified Representations
 
-I've managed large Creo assemblies for aerospace and automotive projects with thousands of components. Creo's assembly tools are among the most capable in the industry — particularly its simplified representations and mechanism design capabilities. Understanding component placement, connection types, and large assembly management is essential for any engineering team using Creo for complex products.
+We've managed large Creo assemblies for aerospace and automotive projects with thousands of components. Creo's assembly tools are among the most capable in the industry — particularly its simplified representations and mechanism design capabilities. Understanding component placement, connection types, and large assembly management is essential for any engineering team using Creo for complex products.
 
 ## Assembly Overview
 

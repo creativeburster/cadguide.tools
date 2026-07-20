@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "edgecam"
 keyword: "edgecam 3d machining z-level roughing constant cusp"
 slug: "edgecam-3d-machining-z-level-roughing-constant-cusp"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # EdgeCAM 3D Machining: Z-Level Roughing and Constant Cusp Finishing Setup
 
-Mold and die work requires 3D machining strategies that balance material removal rate with surface finish quality. I program mold cavities in EdgeCAM regularly, and the Z-level roughing + constant cusp finishing combination is my go-to workflow. Here's the complete setup.
+Mold and die work requires 3D machining strategies that balance material removal rate with surface finish quality. We program mold cavities in EdgeCAM regularly, and the Z-level roughing + constant cusp finishing combination is our go-to workflow. Here's the complete setup.
 
 ## Step 1: Prepare the Model and Stock
 

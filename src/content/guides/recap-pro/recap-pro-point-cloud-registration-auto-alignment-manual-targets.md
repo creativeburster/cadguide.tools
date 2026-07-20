@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "recap-pro"
 keyword: "recap pro point cloud registration auto alignment manual targets survey points"
 slug: "recap-pro-point-cloud-registration-auto-alignment-manual-targets"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ReCap Pro Point Cloud Registration: Auto-Alignment, Manual Targets, and Survey Point Workflow
 
-Point cloud registration is the foundation of every laser scanning project. Get it wrong and everything downstream — Revit modeling, clash detection, as-built documentation — inherits the error. I've registered hundreds of scan projects in ReCap Pro, from small single-room scans to 1200-scan building exteriors. The workflow is straightforward when it works. When it doesn't, you need to know why. Here's my complete registration guide.
+Point cloud registration is the foundation of every laser scanning project. Get it wrong and everything downstream — Revit modeling, clash detection, as-built documentation — inherits the error. We've registered hundreds of scan projects in ReCap Pro, from small single-room scans to 1200-scan building exteriors. The workflow is straightforward when it works. When it doesn't, you need to know why. Here's our complete registration guide.
 
 ## Understanding Registration
 

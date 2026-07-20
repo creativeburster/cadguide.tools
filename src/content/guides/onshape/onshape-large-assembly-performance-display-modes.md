@@ -1,11 +1,11 @@
 ---
 title: "Onshape Large Assembly Performance: Lightweight Modes, Performance Meter, and Simplification"
-excerpt: "Onshape assemblies lag when dragging components, orbiting, or inserting parts with hundreds of occurrences. I cover the performance meter analysis, display modes, and component simplification that keep large assemblies responsive."
+excerpt: "Onshape assemblies lag when dragging components, orbiting, or inserting parts with hundreds of occurrences. We cover the performance meter analysis, display modes, and component simplification that keep large assemblies responsive."
 category: "performance"
 softwareSlug: "onshape"
 keyword: "Onshape large assembly performance slow display modes"
 slug: "onshape-large-assembly-performance-display-modes"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

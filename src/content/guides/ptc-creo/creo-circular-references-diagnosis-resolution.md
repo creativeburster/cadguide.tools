@@ -1,11 +1,11 @@
 ---
 title: "Creo Circular References: Diagnosis and Resolution Using .crc Files and Reference Viewer"
-excerpt: "Circular references in Creo are silent model killers — they don't break the model immediately but cause unpredictable failures later. I cover the .crc file analysis, Reference Viewer workflow, and modeling practices that prevent them."
+excerpt: "Circular references in Creo are silent model killers — they don't break the model immediately but cause unpredictable failures later. We cover the .crc file analysis, Reference Viewer workflow, and modeling practices that prevent them."
 category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo circular references troubleshooting crc file"
 slug: "creo-circular-references-diagnosis-resolution"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-16"
 sources:
@@ -19,7 +19,7 @@ A user on the PTC Community forum asked a question that resonated with every Cre
 
 Troubleshooting circular references requires understanding how Creo's dependency chain works.
 
-The response from experienced users was unequivocal: "Circular references should never be left in a design! They are extreme high risk to cause huge problems." This is advice I've internalized over years of Creo administration. Circular references are time bombs — they don't break your model today, but they will break it at the worst possible moment, usually during a design change or a version upgrade.
+The response from experienced users was unequivocal: "Circular references should never be left in a design! They are extreme high risk to cause huge problems." This is advice we've internalized over years of Creo administration. Circular references are time bombs — they don't break your model today, but they will break it at the worst possible moment, usually during a design change or a version upgrade.
 
 ## What Is a Circular Reference?
 
@@ -107,7 +107,7 @@ Once you've identified the problematic reference, you have several options:
 
 ## Prevention: Modeling Best Practices
 
-Preventing circular references is much easier than fixing them. Here are the practices I enforce with my team:
+Preventing circular references is much easier than fixing them. Here are the practices we enforce with our team:
 
 ### 1. Always Reference Earlier Features
 

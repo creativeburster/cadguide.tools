@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ls-dyna"
 keyword: "ls-dyna vehicle crash simulation"
 slug: "ls-dyna-vehicle-crash-simulation-frontal-side-rear-impact-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # LS-DYNA Vehicle Crash Simulation: Frontal, Side, and Rear Impact Analysis
 
-I've been involved in vehicle crash simulation for years, and LS-DYNA is the tool everyone in automotive uses — there's really no debate about that. What I want to share here isn't just the setup steps, but the things that actually make your crash results match physical tests. Because honestly, getting a crash simulation to correlate with a sled test is one of the hardest things I've done in my career.
+We've been involved in vehicle crash simulation for years, and LS-DYNA is the tool everyone in automotive uses — there's really no debate about that. What we want to share here isn't just the setup steps, but the things that actually make your crash results match physical tests. Because honestly, getting a crash simulation to correlate with a sled test is one of the hardest things we've done in our career.
 
 ## Full Vehicle Model
 
@@ -60,7 +60,7 @@ I've been involved in vehicle crash simulation for years, and LS-DYNA is the too
 1. *MAT_COHESIVE_MIXED_MODE (MAT_138):
    - For adhesive bonds (hem flanges, structural adhesive)
    - Traction-separation law
-   - Mixed-mode failure (Mode I + Mode II)
+   - Mixed-mode failure (Mode we + Mode II)
 2. Parameters:
    - **Normal strength**: tN (MPa)
    - **Shear strength**: tS (MPa)
@@ -191,7 +191,7 @@ I've been involved in vehicle crash simulation for years, and LS-DYNA is the too
 2. **Chest acceleration**: < 60G (3ms clip)
 3. **Chest deflection**: < 63mm (Hybrid III)
 4. **Neck injury (Nij)**:
-   - Nij = Fz/Fzc + My/Myc
+   - Nij = Fz/Fzc + Our/Myc
    - Limit: Nij < 1.0
 5. **Femur force**: < 10kN
 
@@ -287,4 +287,4 @@ I've been involved in vehicle crash simulation for years, and LS-DYNA is the too
 
 ## Wrapping Up
 
-If you're getting into crash simulation, my biggest advice is to correlate with physical test data early and often. I've seen beautiful-looking simulations that were completely wrong because the spot weld failure force was off or the material strain rate parameters weren't calibrated. Get the vehicle mass right (within 2%), make sure your material cards include strain rate effects, and check your acceleration pulse against a physical test before you trust any injury numbers. Once your baseline correlates, you can confidently evaluate design changes — and that's where crash simulation saves months of development time.
+If you're getting into crash simulation, our biggest advice is to correlate with physical test data early and often. We've seen beautiful-looking simulations that were completely wrong because the spot weld failure force was off or the material strain rate parameters weren't calibrated. Get the vehicle mass right (within 2%), make sure your material cards include strain rate effects, and check your acceleration pulse against a physical test before you trust any injury numbers. Once your baseline correlates, you can confidently evaluate design changes — and that's where crash simulation saves months of development time.

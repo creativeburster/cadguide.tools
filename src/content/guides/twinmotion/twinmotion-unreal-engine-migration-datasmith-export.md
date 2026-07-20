@@ -1,11 +1,11 @@
 ---
 title: "Twinmotion to Unreal Engine Migration: Datasmith Export, Material Conversion, and Scene Setup"
-excerpt: "Moving Twinmotion scenes to Unreal Engine for VR, film, or interactive applications requires correct Datasmith export settings, material conversion, and lighting setup. I cover the export workflow, Twinmotion-to-UE material translation, and the collision and navigation mesh configuration."
+excerpt: "Moving Twinmotion scenes to Unreal Engine for VR, film, or interactive applications requires correct Datasmith export settings, material conversion, and lighting setup. We cover the export workflow, Twinmotion-to-UE material translation, and the collision and navigation mesh configuration."
 category: "migration"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion Unreal Engine migration Datasmith export workflow"
 slug: "twinmotion-unreal-engine-migration-datasmith-export"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Twinmotion to Unreal Engine Migration: Datasmith Export, Material Conversion, and Scene Setup
 
-I've migrated several architectural visualization projects from Twinmotion to Unreal Engine — typically when a client wants to go beyond static renders into VR walkthroughs, interactive configurators, or film-quality cinematics. Twinmotion is built on Unreal Engine technology, so the migration path is smoother than from other applications, but there are still specific steps and gotchas I've learned through trial and error.
+We've migrated several architectural visualization projects from Twinmotion to Unreal Engine — typically when a client wants to go beyond static renders into VR walkthroughs, interactive configurators, or film-quality cinematics. Twinmotion is built on Unreal Engine technology, so the migration path is smoother than from other applications, but there are still specific steps and gotchas we've learned through trial and error.
 
 ## Why Migrate from Twinmotion to Unreal Engine?
 
@@ -76,7 +76,7 @@ Twinmotion's materials import as Unreal Engine materials with basic texture conn
 - **Twinmotion glass materials**: Import with basic transparency — add refraction and IOR settings in UE for realistic glass
 - **Twinmotion emissive materials**: Import with emissive color but without bloom — enable bloom in UE post-processing
 
-**My material conversion process**:
+**Our material conversion process**:
 1. After import, open each material in the Material Editor
 2. Check that all texture maps are connected correctly
 3. Add a **Tangent Space Normal** node for normal maps

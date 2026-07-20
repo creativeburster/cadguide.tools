@@ -1,11 +1,11 @@
 ---
 title: "Lumion Performance Optimization: FPS, Render Times, and Project Complexity Management"
-excerpt: "Lumion performance drops when project complexity exceeds GPU capabilities. I cover the Editor Quality settings, effect management, VRAM optimization, and the project complexity audit I run on every struggling workstation."
+excerpt: "Lumion performance drops when project complexity exceeds GPU capabilities. We cover the Editor Quality settings, effect management, VRAM optimization, and the project complexity audit we run on every struggling workstation."
 category: "performance"
 softwareSlug: "lumion"
 keyword: "Lumion performance slow FPS render time optimization"
 slug: "lumion-performance-optimization-fps-render-time"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Lumion Performance Optimization: FPS, Render Times, and Project Complexity Management
 
-I regularly audit Lumion workstations for architecture firms, and the most common issue is poor performance — single-digit FPS in the editor, long render times, and occasional white-screen freezes. Lumion is a real-time renderer, which means its performance is directly tied to your GPU's ability to process the entire scene at every frame. Unlike offline renderers like V-Ray, you can't just "wait longer" — if the GPU can't handle the scene, it stutters or crashes.
+The most common Lumion issue in architecture firms is poor performance — single-digit FPS in the editor, long render times, and occasional white-screen freezes. Lumion is a real-time renderer, which means its performance is directly tied to your GPU's ability to process the entire scene at every frame. Unlike offline renderers like V-Ray, you can't just "wait longer" — if the GPU can't handle the scene, it stutters or crashes.
 
 ## Understanding Lumion's Performance Model
 
@@ -48,17 +48,17 @@ Lumion's library objects are beautiful but expensive. The knowledge base specifi
 - **3D grass**: The grass rendering feature creates millions of blades in real-time. Use it only in close-up shots, not for wide landscape views.
 - **Water surfaces**: Animated water with reflections is expensive. Use simple water for large areas and detailed water only for foregrounds.
 
-**My approach**: I create two versions of each project — a "working" version with standard-quality objects and a "final" version with high-quality objects swapped in for the render. This keeps editing fast while maintaining render quality.
+**Our approach**: We create two versions of each project — a "working" version with standard-quality objects and a "final" version with high-quality objects swapped in for the render. This keeps editing fast while maintaining render quality.
 
 ## Optimization 3: Effect Stack Management
 
-Every effect in Lumion's Photo or Movie mode adds GPU load. I've seen projects with 15+ effects active, many of which make no visible difference.
+Every effect in Lumion's Photo or Movie mode adds GPU load. We've seen projects with 15+ effects active, many of which make no visible difference.
 
-**My effect audit process**:
+**Our effect audit process**:
 1. Open the Effect stack
 2. Toggle each effect off one at a time
 3. If you can't see a difference, remove it permanently
-4. Common unnecessary effects I find:
+4. Common unnecessary effects we find:
    - **2-Point Perspective** when the camera is already level
    - **Fog** when it's barely visible
    - **Skylight** when the scene already has good ambient lighting
@@ -78,7 +78,7 @@ The knowledge base mentions a critical shadow setting: **"All shadows rendered a
 
 ## Optimization 5: Model Simplification Before Import
 
-The most effective performance optimization happens before the model even reaches Lumion. I work with architects to simplify their Revit and SketchUp models before export:
+The most effective performance optimization happens before the model even reaches Lumion. We work with architects to simplify their Revit and SketchUp models before export:
 
 **Revit simplification**:
 - Hide unnecessary categories (furniture, electrical, plumbing) before export
@@ -101,7 +101,7 @@ Lumion loads all textures into GPU VRAM. If your scene uses more VRAM than your 
 - **16GB VRAM** (RTX 4080): ~40GB project file
 - **24GB VRAM** (RTX 3090/4090): ~60GB project file
 
-These are rough guidelines — actual limits depend on texture sizes and effect complexity. I monitor VRAM usage with **GPU-Z** or **Task Manager → Performance → GPU** during editing. If VRAM usage exceeds 80% of capacity, I start simplifying.
+These are rough guidelines — actual limits depend on texture sizes and effect complexity. We monitor VRAM usage with **GPU-Z** or **Task Manager → Performance → GPU** during editing. If VRAM usage exceeds 80% of capacity, we start simplifying.
 
 ## Optimization 7: Lumion 2024/2025 Performance Features
 
@@ -122,13 +122,13 @@ For final renders, the output resolution directly affects render time:
 - **2K (2560x1440)**: Good balance for most presentations
 - **1080p (1920x1080)**: Fastest, sufficient for screen presentations
 
-**My approach**: Render at 2K for client presentations (sufficient for projector and screen display). Only render at 4K for printed materials or when the client specifically requests it.
+**Our approach**: Render at 2K for client presentations (sufficient for projector and screen display). Only render at 4K for printed materials or when the client specifically requests it.
 
 For video: render at 1080p/30fps for most presentations. Only go to 4K/60fps for high-end marketing videos.
 
 ## Practical Example
 
-A firm came to me with a Lumion project that was running at 3 FPS on an RTX 3070 (8GB VRAM). Here's what I changed:
+A firm came to us with a Lumion project that was running at 3 FPS on an RTX 3070 (8GB VRAM). Here's what we changed:
 
 1. Editor Quality: 3-star → 2-star (FPS: 3 → 7)
 2. Editor Resolution: 100% → 50% (FPS: 7 → 12)
@@ -141,4 +141,4 @@ Final result: 3 FPS → 45 FPS. The project was now fully usable for editing, an
 
 ## Summary
 
-Lumion performance optimization is about managing project complexity within your GPU's capabilities. My optimization order: reduce Editor Quality and Resolution → audit and remove unnecessary effects → disable real-time shadows in Build mode → simplify models before import → manage VRAM budget → use NRD denoiser for faster ray-traced renders. The biggest gains come from the simplest changes — Editor Quality and effect cleanup alone typically double FPS.
+Lumion performance optimization is about managing project complexity within your GPU's capabilities. Our optimization order: reduce Editor Quality and Resolution → audit and remove unnecessary effects → disable real-time shadows in Build mode → simplify models before import → manage VRAM budget → use NRD denoiser for faster ray-traced renders. The biggest gains come from the simplest changes — Editor Quality and effect cleanup alone typically double FPS.

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "midas-gen"
 keyword: "midas gen building analysis"
 slug: "midas-gen-building-analysis-modeling-wind-seismic-steel-concrete-design"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Gen Building Analysis: Modeling, Wind, Seismic, and Steel-Concrete Design
 
-I started using MIDAS Gen about six years ago when our firm took on a project in Southeast Asia where the local engineers required it. Coming from ETABS, the story-based modeling approach felt different but intuitive. Now I use it regularly for building projects in Asia and the Middle East. Let me walk you through the complete workflow from model creation to steel and concrete design.
+MIDAS Gen is widely used for building projects in Asia and the Middle East, and is sometimes required by local engineers. Coming from ETABS, its story-based modeling approach feels different but intuitive. Let us walk you through the complete workflow from model creation to steel and concrete design.
 
 ## Project Setup
 
@@ -145,7 +145,7 @@ I started using MIDAS Gen about six years ago when our firm took on a project in
    - **SD1**: 0.3g
    - **Site class**: D
    - **Response modification (R)**: 5 (special steel frame)
-   - **Importance factor (I)**: 1.0
+   - **Importance factor (we)**: 1.0
    - **Seismic weight**: Dead + 0.25 × Live
 3. MIDAS Gen automatically:
    - Calculates seismic mass per story
@@ -322,4 +322,4 @@ I started using MIDAS Gen about six years ago when our firm took on a project in
 
 ## Wrapping Up
 
-MIDAS Gen's automatic lateral load generation is what saves me the most time — wind and seismic loads per multiple codes, generated automatically from the building geometry. The story-based output (shear, drift, center of mass) is exactly what you need for code compliance checks. My tip: always verify the auto-generated wind loads against a hand calculation for the first few projects until you build confidence in the defaults.
+MIDAS Gen's automatic lateral load generation is what saves us the most time — wind and seismic loads per multiple codes, generated automatically from the building geometry. The story-based output (shear, drift, center of mass) is exactly what you need for code compliance checks. Our tip: always verify the auto-generated wind loads against a hand calculation for the first few projects until you build confidence in the defaults.

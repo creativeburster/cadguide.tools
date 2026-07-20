@@ -1,11 +1,11 @@
 ---
 title: "Lectra Modaris Pattern Design: Advanced Drafting, Variant Management, and Size Grading"
-excerpt: "Lectra Modaris provides advanced pattern drafting with variant management and sophisticated size grading for fashion production. I cover the drafting workspace, variant system, grade point management, and the Modaris data structure for organized pattern development."
+excerpt: "Lectra Modaris provides advanced pattern drafting with variant management and sophisticated size grading for fashion production. We cover the drafting workspace, variant system, grade point management, and the Modaris data structure for organized pattern development."
 category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Modaris pattern design advanced drafting variant management size grading fashion production"
 slug: "lectra-modaris-pattern-design-advanced-drafting-variant-grading"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Lectra Modaris Pattern Design: Advanced Drafting, Variant Management, and Size Grading
 
-I've used Lectra Modaris in European fashion houses producing luxury and high-end garments. Modaris is the most sophisticated pattern making system of the "big three" apparel CAD platforms — it excels at complex pattern constructions, made-to-measure, and variant management. The learning curve is steeper than Optitex or Gerber, but the depth of control is unmatched for advanced pattern engineering.
+We've used Lectra Modaris in European fashion houses producing luxury and high-end garments. Modaris is the most sophisticated pattern making system of the "big three" apparel CAD platforms — it excels at complex pattern constructions, made-to-measure, and variant management. The learning curve is steeper than Optitex or Gerber, but the depth of control is unmatched for advanced pattern engineering.
 
 ## Modaris Overview
 

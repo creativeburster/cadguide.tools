@@ -1,11 +1,11 @@
 ---
 title: "Inventor View Representations and LOD: Managing Display States for Large Assemblies"
-excerpt: "View Representations and Level of Detail (LOD) are Inventor's tools for managing what gets displayed and loaded. I cover the difference between them, how to configure each, and the performance impact of common mistakes."
+excerpt: "View Representations and Level of Detail (LOD) are Inventor's tools for managing what gets displayed and loaded. We cover the difference between them, how to configure each, and the performance impact of common mistakes."
 category: "performance"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor View Representations Level of Detail LOD performance"
 slug: "inventor-view-representations-lod-large-assemblies"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-20"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 A user on the Autodesk forum reported that Inventor 2024.2 was "incredibly slow" with large assemblies using around 10 View Representations and 6+ Model States. Opening a drawing took 30 minutes, updating a drawing after modifying the 3D took 1 hour, and saving took several minutes. After removing the Model States, performance was restored. But the user also had 10 View Representations, which raises the question: what's the difference between View Representations, Level of Detail (LOD), and Model States, and how does each affect performance?
 
-I've seen these three features confused and misused in every organization I've worked with. Understanding the difference and using each correctly is essential for large assembly performance.
+We've seen these three features confused and misused in every organization we've worked with. Understanding the difference and using each correctly is essential for large assembly performance.
 
 ## The Three Representation Types
 
@@ -174,7 +174,7 @@ This ensures that when you select a View Rep for a specific task, the appropriat
 
 ## Performance Impact: Real Measurements
 
-I measured the impact on a 9,200-occurrence assembly:
+We measured the impact on a 9,200-occurrence assembly:
 
 | Configuration | Open Time | Memory | Drawing Update |
 |--------------|-----------|--------|-----------------|

@@ -1,11 +1,11 @@
 ---
 title: "Corona Renderer Lighting: HDRI Setup, Light Portal, and Interior Daylight Workflow"
-excerpt: "Corona interior renders are noisy and dark when HDRI and light portals are misconfigured. I cover the Corona Sun + Sky setup, HDRI Dome Light configuration, light portal placement for windows, and the adaptive light solver tuning for multi-light interiors."
+excerpt: "Corona interior renders are noisy and dark when HDRI and light portals are misconfigured. We cover the Corona Sun + Sky setup, HDRI Dome Light configuration, light portal placement for windows, and the adaptive light solver tuning for multi-light interiors."
 category: "performance"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer lighting HDRI light portal interior fix"
 slug: "corona-renderer-lighting-hdri-portal-interior-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-23"
 sources:
@@ -16,13 +16,13 @@ sources:
 
 # Corona Renderer Lighting: HDRI Setup, Light Portal, and Interior Daylight Workflow
 
-I set up lighting for architectural visualization in Corona Renderer, and the most common issue I encounter is dark, noisy interiors. The architect places an HDRI in the environment slot, hits render, and gets a splotchy mess that takes 200 passes to clean up. The problem isn't the HDRI — it's the lack of light portals and incorrect GI configuration for interior daylight.
+We set up lighting for architectural visualization in Corona Renderer, and the most common issue we encounter is dark, noisy interiors. The architect places an HDRI in the environment slot, hits render, and gets a splotchy mess that takes 200 passes to clean up. The problem isn't the HDRI — it's the lack of light portals and incorrect GI configuration for interior daylight.
 
 ## Interior Daylight: Sun + Sky + Light Portals
 
 ### Step 1: Corona Sun + Sky
 
-For interior daylight, I use Corona Sun + Sky rather than an HDRI. The Sun is a direct light that's perfectly sampled — no noise, no fireflies.
+For interior daylight, we use Corona Sun + Sky rather than an HDRI. The Sun is a direct light that's perfectly sampled — no noise, no fireflies.
 
 **Setup**:
 1. Create a **Corona Sun** in the Create panel → Lights → Corona
@@ -96,7 +96,7 @@ The Adaptive Light Solver is essential for interior scenes with many artificial 
 
 For interior scenes with artificial lighting (lamps, ceiling lights, LED strips):
 
-**Corona Light types I use**:
+**Corona Light types we use**:
 - **Area Light**: For rectangular light panels, ceiling troffers, flat panels
 - **Sphere Light**: For bulbs, spherical lamps
 - **Spot Light**: For directional lights, track lighting
@@ -120,7 +120,7 @@ Getting the right HDRI intensity is a common challenge:
 3. **Too bright**: Decrease multiplier in 0.5 increments
 4. **Use the VFB exposure control**: Instead of changing the HDRI multiplier, adjust the **Exposure** in the Corona VFB. This is like camera exposure — it affects the entire image without changing the lighting.
 
-**My approach**: I set the HDRI multiplier to 1.0 and adjust exposure in the VFB. This keeps the lighting physically accurate and makes exposure adjustments non-destructive.
+**Our approach**: We set the HDRI multiplier to 1.0 and adjust exposure in the VFB. This keeps the lighting physically accurate and makes exposure adjustments non-destructive.
 
 ## Environment Override
 

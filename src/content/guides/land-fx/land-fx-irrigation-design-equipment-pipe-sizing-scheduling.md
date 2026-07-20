@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "land-fx"
 keyword: "land f/x irrigation design pipe sizing equipment schedule"
 slug: "land-fx-irrigation-design-equipment-pipe-sizing-scheduling"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

@@ -1,11 +1,11 @@
 ---
 title: "Solid Edge Drafting Performance: View Update Slow, Dimension Lag, and Sheet Metal Flat Pattern Fixes"
-excerpt: "Solid Edge drafting environment lags when updating views and placing dimensions on complex models. I cover the draft view quality settings, background update toggle, and the sheet metal flat pattern optimization that fixes drafting slowdowns."
+excerpt: "Solid Edge drafting environment lags when updating views and placing dimensions on complex models. We cover the draft view quality settings, background update toggle, and the sheet metal flat pattern optimization that fixes drafting slowdowns."
 category: "performance"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge drafting performance slow view update dimension"
 slug: "solid-edge-drafting-performance-view-update-dimension"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

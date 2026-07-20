@@ -1,11 +1,11 @@
 ---
 title: "Enscape Crashes and Black Screen: GPU, Loading Screen, and Multi-Monitor Fixes"
-excerpt: "Enscape crashes at 5% loading, renders a black screen, or crashes the host application (Revit, SketchUp). I cover the NVIDIA Control Panel configuration, multi-monitor conflict, and the cache clearing process that resolves these issues."
+excerpt: "Enscape crashes at 5% loading, renders a black screen, or crashes the host application (Revit, SketchUp). We cover the NVIDIA Control Panel configuration, multi-monitor conflict, and the cache clearing process that resolves these issues."
 category: "troubleshooting"
 softwareSlug: "enscape"
 keyword: "Enscape crash black screen loading error fix"
 slug: "enscape-crash-black-screen-loading-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:
@@ -16,11 +16,11 @@ sources:
 
 # Enscape Crashes and Black Screen: GPU, Loading Screen, and Multi-Monitor Fixes
 
-I support several architecture and interior design firms that use Enscape for real-time rendering in Revit and SketchUp. The two most common crash scenarios I encounter are: Enscape gets stuck at 5% on the loading screen, and Enscape opens but displays a completely black screen. Both are frustrating because they give no error message — just a frozen loading bar or a black viewport.
+We support several architecture and interior design firms that use Enscape for real-time rendering in Revit and SketchUp. The two most common crash scenarios we encounter are: Enscape gets stuck at 5% on the loading screen, and Enscape opens but displays a completely black screen. Both are frustrating because they give no error message — just a frozen loading bar or a black viewport.
 
 ## Issue 1: Enscape Stuck at 5% Loading Screen
 
-This is the most common crash I see. The user clicks "Start Enscape," the loading bar appears, reaches 5%, and then freezes indefinitely. The host application (Revit or SketchUp) may also become unresponsive.
+This is the most common crash we see. The user clicks "Start Enscape," the loading bar appears, reaches 5%, and then freezes indefinitely. The host application (Revit or SketchUp) may also become unresponsive.
 
 **Fix 1 — NVIDIA Control Panel configuration**:
 1. Open **NVIDIA Control Panel** → **Manage 3D settings**
@@ -46,7 +46,7 @@ A Reddit user discovered that their Enscape crash at 5% was caused by a **dual-m
 4. Re-enable the second monitor after Enscape has loaded
 5. If the issue persists with dual monitors, try setting both monitors to the same resolution and refresh rate
 
-This appears to be a bug in how Enscape initializes its rendering context across multiple display outputs. I've seen it specifically with mixed-DPI monitor setups (e.g., a 4K primary and a 1080p secondary).
+This appears to be a bug in how Enscape initializes its rendering context across multiple display outputs. We've seen it specifically with mixed-DPI monitor setups (e.g., a 4K primary and a 1080p secondary).
 
 **Fix 3 — Clear Enscape cache**:
 1. Close Enscape and the host application
@@ -103,7 +103,7 @@ Autodesk's support documentation specifically mentions checking if add-ins are c
 5. **Common conflicts**: Navisworks add-in, Dynamo, other rendering plugins (Lumion LiveSync, Twinmotion)
 
 **Fix 2 — Update Enscape to the latest version**:
-Chaos (Enscape's developer) releases updates frequently, and many crash issues are fixed in newer versions. I've seen users on Enscape 3.5 experiencing crashes that were fixed in Enscape 4.1.
+Chaos (Enscape's developer) releases updates frequently, and many crash issues are fixed in newer versions. We've seen users on Enscape 3.5 experiencing crashes that were fixed in Enscape 4.1.
 
 **The fix**:
 1. Check your Enscape version: Enscape menu → About
@@ -135,7 +135,7 @@ When you upgrade a GPU, the old driver remnants can conflict with the new card:
 6. Configure NVIDIA Control Panel / AMD Adrenalin settings for Enscape
 7. Restart and test
 
-I've seen this exact scenario multiple times. The old GPU's driver files were still present and Enscape was trying to use them, causing a crash. DDU is the only reliable way to completely remove old driver files.
+We've seen this exact scenario multiple times. The old GPU's driver files were still present and Enscape was trying to use them, causing a crash. DDU is the only reliable way to completely remove old driver files.
 
 ## Issue 5: Enscape Crashes on Specific Projects
 
@@ -159,4 +159,4 @@ Enscape works fine on most projects but crashes on one specific file. This indic
 
 ## Summary
 
-Enscape crashes and black screens are most often caused by GPU routing issues (integrated vs dedicated), multi-monitor conflicts, or corrupted cache. My fix order: configure NVIDIA Control Panel for dedicated GPU → clear Enscape cache → try single monitor → update Enscape → check for add-in conflicts → DDU clean driver install after GPU upgrades. The NVIDIA Control Panel fix alone resolves about 60% of the crash reports I receive.
+Enscape crashes and black screens are most often caused by GPU routing issues (integrated vs dedicated), multi-monitor conflicts, or corrupted cache. Our fix order: configure NVIDIA Control Panel for dedicated GPU → clear Enscape cache → try single monitor → update Enscape → check for add-in conflicts → DDU clean driver install after GPU upgrades. The NVIDIA Control Panel fix alone resolves about 60% of the crash reports we receive.

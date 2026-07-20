@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "ares-commander"
 keyword: "ares commander vs autocad lt comparison"
 slug: "ares-commander-vs-autocad-lt-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # ARES Commander vs AutoCAD LT: Feature Comparison for 2D Drafting
 
-I've used both ARES Commander and AutoCAD LT extensively. They occupy the same market segment — affordable 2D drafting — but they're not interchangeable. Depending on your workflow, one is clearly better than the other. Here's my head-to-head comparison after six months of daily use.
+We've used both ARES Commander and AutoCAD LT extensively. They occupy the same market segment — affordable 2D drafting — but they're not interchangeable. Depending on your workflow, one is clearly better than the other. Here's our head-to-head comparison after six months of daily use.
 
 ## Core DWG Compatibility
 
@@ -29,7 +29,7 @@ Both products read and write genuine DWG files. Neither uses a translation layer
 | DWF/PDF underlay | Yes | Yes |
 | DWG roundtrip fidelity | Excellent | Native (reference) |
 
-DWG compatibility is a wash. Drawings roundtrip between the two without visible loss in either direction. ARES Commander uses the Teigha (ODA) libraries for DWG I/O, which are industry-standard and trusted by major CAD vendors.
+DWG compatibility is a wash. Drawings roundtrip between the two without visible loss in either direction. ARES Commander uses the Teigha (ODA) libraries for DWG we/O, which are industry-standard and trusted by major CAD vendors.
 
 ## LISP Support
 
@@ -88,7 +88,7 @@ ARES Commander is cheaper over 3+ years because the perpetual license means you 
 - **Community size** — Larger user community means more tutorials, forums, and third-party content
 - **Specialized toolsets** — LT now includes some specialized toolsets (mechanical, architectural) that ARES doesn't match
 
-## My Recommendation
+## Our Recommendation
 
 **Choose ARES Commander if:**
 - You need LISP support for custom automation

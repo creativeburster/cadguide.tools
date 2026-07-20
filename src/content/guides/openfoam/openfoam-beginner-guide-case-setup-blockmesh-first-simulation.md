@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "openfoam"
 keyword: "openfoam beginner guide case setup blockmesh first simulation"
 slug: "openfoam-beginner-guide-case-setup-blockmesh-first-simulation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # OpenFOAM Beginner Guide: Case Setup, Mesh Generation with blockMesh, and First Simulation
 
-OpenFOAM is a free, open-source CFD toolbox used across academia and industry. Unlike commercial CFD software with polished GUIs, OpenFOAM is command-line driven and uses text files for all configuration. This makes the learning curve steeper but gives complete control over the simulation. I'll walk you through your first OpenFOAM case from scratch.
+OpenFOAM is a free, open-source CFD toolbox used across academia and industry. Unlike commercial CFD software with polished GUIs, OpenFOAM is command-line driven and uses text files for all configuration. This makes the learning curve steeper but gives complete control over the simulation. We'll walk you through your first OpenFOAM case from scratch.
 
 ## OpenFOAM Case Structure
 

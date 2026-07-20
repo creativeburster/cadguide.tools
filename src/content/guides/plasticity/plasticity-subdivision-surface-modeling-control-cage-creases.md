@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "plasticity"
 keyword: "plasticity subdivision surface modeling control cage crease organic"
 slug: "plasticity-subdivision-surface-modeling-control-cage-creases"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

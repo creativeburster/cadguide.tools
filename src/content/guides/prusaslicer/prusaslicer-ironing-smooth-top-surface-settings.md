@@ -1,11 +1,11 @@
 ---
 title: "PrusaSlicer Ironing: Smooth Top Surfaces with Settings Tuning and Material Selection"
-excerpt: "Ironing in PrusaSlicer smooths flat top surfaces by running the nozzle over them at reduced flow rate after the final layer. I cover the three ironing modes, flow rate and speed tuning, material compatibility, and the common issues like scarring and poor adhesion that plague ironed surfaces."
+excerpt: "Ironing in PrusaSlicer smooths flat top surfaces by running the nozzle over them at reduced flow rate after the final layer. We cover the three ironing modes, flow rate and speed tuning, material compatibility, and the common issues like scarring and poor adhesion that plague ironed surfaces."
 category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer ironing smooth top surface settings flow rate"
 slug: "prusaslicer-ironing-smooth-top-surface-settings"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # PrusaSlicer Ironing: Smooth Top Surfaces with Settings Tuning and Material Selection
 
-I print a lot of functional parts that need smooth flat top surfaces — enclosure panels, jigs, brackets, and nameplates. PrusaSlicer's ironing feature, introduced in version 2.3, is the most effective way to achieve a near-injection-molded finish on flat top layers. But ironing is finicky — the wrong flow rate, speed, or material choice can leave you with scarring, poor adhesion, or a surface that looks worse than no ironing at all.
+We print a lot of functional parts that need smooth flat top surfaces — enclosure panels, jigs, brackets, and nameplates. PrusaSlicer's ironing feature, introduced in version 2.3, is the most effective way to achieve a near-injection-molded finish on flat top layers. But ironing is finicky — the wrong flow rate, speed, or material choice can leave you with scarring, poor adhesion, or a surface that looks worse than no ironing at all.
 
 ## What Is Ironing?
 
@@ -45,7 +45,7 @@ Ironing is applied to every flat top surface on the model. This is the most aggr
 
 ### Top Surfaces Only
 
-Ironing is applied only to the highest top surface on the model. Lower top surfaces (like internal shelves or stepped features) are not ironed. This is my default choice for most prints — it gives the best visual result on the most visible surface without wasting time on hidden areas.
+Ironing is applied only to the highest top surface on the model. Lower top surfaces (like internal shelves or stepped features) are not ironed. This is our default choice for most prints — it gives the best visual result on the most visible surface without wasting time on hidden areas.
 
 ### No Ironing
 
@@ -61,7 +61,7 @@ This is the most critical setting. It controls how much material is extruded dur
 - **Too high (> 20%)**: Excess material builds up on the surface, creating ridges and blobs. The surface can look worse than no ironing.
 - **Optimal range**: 10-15% for most PLA, 8-12% for PETG, 5-10% for ABS/ASA
 
-A Prusa forum user reports: "Flow rate 40%, ironing speed 50mm/sec, top layers increased to 8." This is an aggressive setting that works for some filaments but will cause issues with others. I recommend starting at 10% and adjusting in 2% increments.
+A Prusa forum user reports: "Flow rate 40%, ironing speed 50mm/sec, top layers increased to 8." This is an aggressive setting that works for some filaments but will cause issues with others. We recommend starting at 10% and adjusting in 2% increments.
 
 ### Ironing Speed
 
@@ -86,13 +86,13 @@ PrusaSlicer offers two patterns:
 Ironing works differently across filament types:
 
 ### PLA
-Ironing works excellently with PLA. The material remelts easily at typical print temperatures (210-220°C) and doesn't stick to the nozzle. Most of my ironed prints are PLA.
+Ironing works excellently with PLA. The material remelts easily at typical print temperatures (210-220°C) and doesn't stick to the nozzle. Most of our ironed prints are PLA.
 
 ### PETG
-PETG is more challenging. It has a sticky melt that can adhere to the nozzle during ironing, leaving deposits on the surface. I reduce flow rate to 8% and speed to 15 mm/s for PETG. Some users report better results with no ironing and instead using a very slow outer perimeter speed.
+PETG is more challenging. It has a sticky melt that can adhere to the nozzle during ironing, leaving deposits on the surface. We reduce flow rate to 8% and speed to 15 mm/s for PETG. Some users report better results with no ironing and instead using a very slow outer perimeter speed.
 
 ### ABS/ASA
-Ironing can work with ABS and ASA but requires careful temperature management. The ironing pass can cause warping if the part cools too quickly. I use 5-10% flow rate and ensure the enclosure is at temperature. Results are generally good but not as smooth as PLA.
+Ironing can work with ABS and ASA but requires careful temperature management. The ironing pass can cause warping if the part cools too quickly. We use 5-10% flow rate and ensure the enclosure is at temperature. Results are generally good but not as smooth as PLA.
 
 ### TPU (Flexible)
 Ironing is not recommended for TPU. The flexible material deforms under the nozzle pressure, and the slow ironing speed can cause the filament to jam in the extruder.
@@ -123,7 +123,7 @@ If some areas are smooth and others are rough, the likely cause is uneven bed le
 
 For PETG, reduce ironing flow rate to 8% and speed to 15 mm/s. Apply a thin coat of glue stick to the nozzle tip before printing (it burns off but helps prevent sticking). Some users report that switching to a plated copper or high-temp nozzle reduces PETG adhesion.
 
-## My Recommended Starting Point
+## Our Recommended Starting Point
 
 For PLA with a 0.4 mm nozzle at 0.2 mm layer height:
 - **Ironing mode**: Top surfaces only
@@ -134,7 +134,7 @@ For PLA with a 0.4 mm nozzle at 0.2 mm layer height:
 - **Top layer infill**: Monotonic
 - **Top solid layers**: At least 5 (fewer top layers can cause scarring because the ironing pass has less material to work with)
 
-A Reddit user notes: "I've not gotten good ironing out of PrusaSlicer." This is a common sentiment, but in my experience, it almost always comes down to flow rate being too high or the top layer count being too low. Start with the settings above and adjust incrementally.
+A Reddit user notes: "I've not gotten good ironing out of PrusaSlicer." This is a common sentiment, but in our experience, it almost always comes down to flow rate being too high or the top layer count being too low. Start with the settings above and adjust incrementally.
 
 ## Summary
 

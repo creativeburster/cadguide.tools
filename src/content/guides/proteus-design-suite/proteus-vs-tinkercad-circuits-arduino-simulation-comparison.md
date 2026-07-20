@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "proteus-design-suite"
 keyword: "proteus vs tinkercad arduino simulation comparison"
 slug: "proteus-vs-tinkercad-circuits-arduino-simulation-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Proteus vs Tinkercad Circuits: Arduino and Electronics Simulation Comparison
 
-Both Proteus and Tinkercad Circuits simulate Arduino and electronics, but they serve very different audiences. Proteus is a professional EDA suite with deep simulation capabilities, while Tinkercad is a free browser-based tool designed for education and quick prototyping. I've used both extensively and can help you decide which fits your needs.
+Both Proteus and Tinkercad Circuits simulate Arduino and electronics, but they serve very different audiences. Proteus is a professional EDA suite with deep simulation capabilities, while Tinkercad is a free browser-based tool designed for education and quick prototyping. We've used both extensively and can help you decide which fits your needs.
 
 ## Overview
 

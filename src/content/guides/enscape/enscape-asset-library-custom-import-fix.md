@@ -1,11 +1,11 @@
 ---
 title: "Enscape Asset Library and Custom Asset Import: Missing Assets, Port Forwarding, and 3D Model Preparation"
-excerpt: "Enscape's Asset Library fails to load, custom imported assets look wrong, or assets disappear after updates. I cover the network configuration, asset cache repair, and the custom asset preparation workflow for SketchUp and Revit."
+excerpt: "Enscape's Asset Library fails to load, custom imported assets look wrong, or assets disappear after updates. We cover the network configuration, asset cache repair, and the custom asset preparation workflow for SketchUp and Revit."
 category: "deployment"
 softwareSlug: "enscape"
 keyword: "Enscape asset library not loading custom asset import fix"
 slug: "enscape-asset-library-custom-import-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-25"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Enscape Asset Library and Custom Asset Import: Missing Assets, Port Forwarding, and 3D Model Preparation
 
-The Enscape Asset Library is one of the features that makes Enscape so popular — you can drop trees, people, furniture, and vehicles into your scene with a single click. But when the library fails to load, or when custom imported assets look wrong, it blocks the entire workflow. I've dealt with both issues across multiple firms and developed reliable solutions.
+The Enscape Asset Library is one of the features that makes Enscape so popular — you can drop trees, people, furniture, and vehicles into your scene with a single click. But when the library fails to load, or when custom imported assets look wrong, it blocks the entire workflow. We've dealt with both issues across multiple firms and developed reliable solutions.
 
 ## Issue 1: Asset Library Won't Load
 
@@ -39,7 +39,7 @@ The Enscape Asset Library downloads assets from Chaos's servers. If your network
 4. Restart the host application and open Enscape
 5. The Asset Library will re-download its catalog — this may take a few minutes
 
-I clear the asset cache monthly on all workstations. The cache can become corrupted over time, especially after Enscape updates, causing assets to fail to load or display incorrectly.
+We clear the asset cache monthly on all workstations. The cache can become corrupted over time, especially after Enscape updates, causing assets to fail to load or display incorrectly.
 
 **Fix 3 — Check Enscape account sign-in**:
 Some Enscape versions require you to be signed in to your Chaos account to access the full Asset Library:
@@ -91,7 +91,7 @@ Enscape allows importing custom 3D models as assets. But imported models often a
 
 ## Issue 4: Custom Asset Import Workflow
 
-Here's the workflow I use for importing custom assets into Enscape:
+Here's the workflow we use for importing custom assets into Enscape:
 
 ### From SketchUp
 1. Create or download the model in SketchUp
@@ -130,13 +130,13 @@ After updating Enscape to a new version, previously placed custom assets disappe
 4. After the update, restore the backed-up folder
 5. Re-import any assets that still don't appear
 
-**Prevention**: I maintain a shared network folder of all custom assets. After any Enscape update, I re-import from this shared folder, which takes about 10 minutes and ensures all custom assets are available.
+**Prevention**: We maintain a shared network folder of all custom assets. After any Enscape update, we re-import from this shared folder, which takes about 10 minutes and ensures all custom assets are available.
 
 ## Issue 6: Asset Library Performance Impact
 
 Placing too many assets from the library can cause performance issues, especially with high-poly assets like trees and vehicles.
 
-**My guidelines**:
+**Our guidelines**:
 - **Trees**: Limit to 50-100 per scene. Use 2D billboard trees for distant areas
 - **People**: Limit to 20-30 per scene. Use low-poly versions for background figures
 - **Vehicles**: Limit to 10-15 per scene. Each vehicle can be 20,000+ polygons
@@ -156,4 +156,4 @@ Placing too many assets from the library can cause performance issues, especiall
 
 ## Summary
 
-Enscape Asset Library issues are usually caused by network restrictions, cache corruption, or incorrect custom asset preparation. My fix order: check network connectivity and firewall → clear asset cache → verify account sign-in → prepare custom assets with correct scale, materials, and orientation → back up custom assets before updates. For custom imports, always prepare the model in the source application (correct units, applied materials, reasonable polygon count) before bringing it into Enscape.
+Enscape Asset Library issues are usually caused by network restrictions, cache corruption, or incorrect custom asset preparation. Our fix order: check network connectivity and firewall → clear asset cache → verify account sign-in → prepare custom assets with correct scale, materials, and orientation → back up custom assets before updates. For custom imports, always prepare the model in the source application (correct units, applied materials, reasonable polygon count) before bringing it into Enscape.

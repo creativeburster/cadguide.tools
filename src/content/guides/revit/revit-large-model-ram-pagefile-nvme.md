@@ -5,17 +5,17 @@ category: "performance"
 softwareSlug: "revit"
 keyword: "revit performance large model"
 slug: "revit-large-model-ram-pagefile-nvme"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:
   - "https://knowledge.autodesk.com/support/revit-products/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Revit-Customize/files/GUID-66A61D65-967D-4DB7-B4C0-FB77C2EDECF6-htm.html"
-  - "https://forums.autodesk.com/t5/revit-forum/large-model-performance-optimization/td-p/6543210"
+  - "https://help.autodesk.com/view/RVT/2024/ENU/"
 ---
 
 # Optimizing Revit Performance for Large Models: RAM, Pagefile, and Storage Configuration
 
-I've worked on Revit models that were 800 MB before anyone even added the mechanical systems. When your model gets that big, it's not just Revit being slow — it's a hardware and configuration problem too. I spent weeks tuning one project model, going through Windows memory settings, Revit's internal options, and hardware upgrades until I got it to a usable state. Here's the full optimization stack I now apply to every large Revit project.
+Revit models can reach 800 MB before anyone even adds the mechanical systems. When a model gets that big, it's not just Revit being slow — it's a hardware and configuration problem too. Tuning a model that large means working through Windows memory settings, Revit's internal options, and hardware upgrades. Here's the full optimization stack to apply to every large Revit project.
 
 ## Understanding Revit's Memory Architecture
 
@@ -213,7 +213,7 @@ Revit uses DirectX 11 for viewport rendering. Certified workstation GPUs provide
 - **Central model**: NVMe SSD on the server (if using local server) or cloud storage (BIM 360/ACC)
 - **Revit cache and temp files**: NVMe SSD
 
-Avoid SATA SSDs and HDDs for any Revit working files. The random I/O pattern of Revit's save operations makes storage speed critical.
+Avoid SATA SSDs and HDDs for any Revit working files. The random we/O pattern of Revit's save operations makes storage speed critical.
 
 ## Monitoring Performance
 

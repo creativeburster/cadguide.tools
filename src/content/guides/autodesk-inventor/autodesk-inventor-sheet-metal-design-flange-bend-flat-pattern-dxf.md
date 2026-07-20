@@ -1,11 +1,11 @@
 ---
 title: "Autodesk Inventor Sheet Metal Design: Flange, Bend, Flat Pattern, and DXF Export"
-excerpt: "Inventor's sheet metal tools create manufacturable sheet metal parts with flanges, bends, and flat patterns. I cover sheet metal rules, flange creation, bend relief, corner relief, flat pattern generation, and DXF export for laser cutting."
+excerpt: "Inventor's sheet metal tools create manufacturable sheet metal parts with flanges, bends, and flat patterns. We cover sheet metal rules, flange creation, bend relief, corner relief, flat pattern generation, and DXF export for laser cutting."
 category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor sheet metal design flange bend flat pattern DXF export laser cutting bend relief"
 slug: "autodesk-inventor-sheet-metal-design-flange-bend-flat-pattern-dxf"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Inventor Sheet Metal Design: Flange, Bend, Flat Pattern, and DXF Export
 
-I've designed sheet metal enclosures, brackets, and panels in Inventor for electronics, industrial equipment, and consumer products. Inventor's sheet metal environment is purpose-built for manufacturable sheet metal parts — it understands material thickness, bend radius, K-factor, and bend allowances, and it generates accurate flat patterns for laser cutting and CNC punching.
+We've designed sheet metal enclosures, brackets, and panels in Inventor for electronics, industrial equipment, and consumer products. Inventor's sheet metal environment is purpose-built for manufacturable sheet metal parts — it understands material thickness, bend radius, K-factor, and bend allowances, and it generates accurate flat patterns for laser cutting and CNC punching.
 
 ## Sheet Metal Environment Overview
 

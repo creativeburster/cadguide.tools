@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey setup coordinate system data import"
 slug: "carlson-survey-setup-coordinate-system-data-import"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Carlson Survey Setup: Coordinate Systems, Data Import, and Project Configuration
 
-Carlson Survey runs on top of AutoCAD or IntelliCAD and handles field-to-finish survey workflows. I've used it for boundary surveys, topographic surveys, and construction staking. The setup is critical — get the coordinate system wrong and every point will be off. Here's the complete setup process.
+Carlson Survey runs on top of AutoCAD or IntelliCAD and handles field-to-finish survey workflows. We've used it for boundary surveys, topographic surveys, and construction staking. The setup is critical — get the coordinate system wrong and every point will be off. Here's the complete setup process.
 
 ## Step 1: Create a New Project
 

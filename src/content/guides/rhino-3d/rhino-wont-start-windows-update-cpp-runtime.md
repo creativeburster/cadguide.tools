@@ -1,11 +1,11 @@
 ---
 title: "Rhino Won't Start After Windows Update: C++ Runtime and Driver Repair"
-excerpt: "Rhino 7 or 8 crashes on launch with an APPCRASH in coreclr.dll? I walk through the fix that McNeel support recommends — repairing Visual C++ Redistributables and doing a clean graphics driver install."
+excerpt: "Rhino 7 or 8 crashes on launch with an APPCRASH in coreclr.dll? We walk through the fix that McNeel support recommends — repairing Visual C++ Redistributables and doing a clean graphics driver install."
 category: "troubleshooting"
 softwareSlug: "rhino-3d"
 keyword: "Rhino won't start crash coreclr.dll"
 slug: "rhino-wont-start-windows-update-cpp-runtime"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-15"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Rhino Won't Start After Windows Update: C++ Runtime and Driver Repair
 
-I've seen this exact scenario play out multiple times: Rhino was working fine yesterday, and today it won't launch. The welcome screen appears briefly and then disappears, or nothing happens at all. One user on the McNeel forum described it perfectly: "I was able to open Rhino and rhino files earlier this morning, but then closed one file and since then it won't open." Another user on a brand new computer couldn't launch Rhino 8 at all — clicking "Login…" resulted in nothing, and Rhino.exe dropped off the Task Manager.
+We've seen this exact scenario play out multiple times: Rhino was working fine yesterday, and today it won't launch. The welcome screen appears briefly and then disappears, or nothing happens at all. One user on the McNeel forum described it perfectly: "I was able to open Rhino and rhino files earlier this morning, but then closed one file and since then it won't open." Another user on a brand new computer couldn't launch Rhino 8 at all — clicking "Login…" resulted in nothing, and Rhino.exe dropped off the Task Manager.
 
 The McNeel forum moderators have identified the root cause in most of these cases, and the fix is surprisingly simple. But it's not obvious, and most users try reinstalling Rhino first — which doesn't fix the problem because the issue isn't with Rhino itself.
 

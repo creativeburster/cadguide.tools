@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "worknc"
 keyword: "worknc vs powermill cam comparison mold die"
 slug: "worknc-vs-powermill-mold-die-cam-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # WorkNC vs PowerMill: CAM Software Comparison for Mold and Die Machining
 
-WorkNC (Hexagon) and PowerMill (Autodesk) are both specialized CAM systems for mold and die machining. They target the same market but take different approaches to toolpath generation and automation. I've programmed molds in both systems and can break down where each excels.
+WorkNC (Hexagon) and PowerMill (Autodesk) are both specialized CAM systems for mold and die machining. They target the same market but take different approaches to toolpath generation and automation. We've programmed molds in both systems and can break down where each excels.
 
 ## Overview
 

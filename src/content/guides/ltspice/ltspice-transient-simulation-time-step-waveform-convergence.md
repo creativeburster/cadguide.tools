@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ltspice"
 keyword: "ltspice transient simulation time step convergence"
 slug: "ltspice-transient-simulation-time-step-waveform-convergence"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:
@@ -54,7 +54,7 @@ To measure the voltage difference between two nodes, click the first node, then 
 
 ### Power Dissipation
 
-To plot power dissipation in a component, Alt-click the component (not just click). LTspice plots V×I for that component. This is essential for thermal analysis of MOSFETs and diodes.
+To plot power dissipation in a component, Alt-click the component (not just click). LTspice plots V×we for that component. This is essential for thermal analysis of MOSFETs and diodes.
 
 ### FFT Analysis
 

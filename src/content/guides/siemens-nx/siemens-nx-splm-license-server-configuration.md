@@ -1,11 +1,11 @@
 ---
 title: "Configuring NX SPLM License Server: Port, Firewall, and Options File"
-excerpt: "Setting up a Siemens PLM License Server for NX isn't just 'install and go.' I cover the firewall rules, port configuration, options file for borrowing, and the diagnostic commands I use to keep licenses flowing."
+excerpt: "Setting up a Siemens PLM License Server for NX isn't just 'install and go.' we cover the firewall rules, port configuration, options file for borrowing, and the diagnostic commands we use to keep licenses flowing."
 category: "deployment"
 softwareSlug: "siemens-nx"
 keyword: "NX SPLM license server configuration"
 slug: "siemens-nx-splm-license-server-configuration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Configuring NX SPLM License Server: Port, Firewall, and Options File
 
-I've set up Siemens PLM License Servers in environments ranging from 5-user startups to 200-seat enterprise deployments. The installation wizard makes it look straightforward, but the real work happens after the installer finishes — firewall rules, options file configuration, borrowing setup, and client environment variables. Get any of these wrong, and you'll have users who can't start NX, can't borrow licenses, or experience intermittent freezing during work.
+We've set up Siemens PLM License Servers in environments ranging from 5-user startups to 200-seat enterprise deployments. The installation wizard makes it look straightforward, but the real work happens after the installer finishes — firewall rules, options file configuration, borrowing setup, and client environment variables. Get any of these wrong, and you'll have users who can't start NX, can't borrow licenses, or experience intermittent freezing during work.
 
 ## Installing the License Server
 
@@ -153,7 +153,7 @@ On each NX workstation, set the `SPLM_LICENSE_SERVER` environment variable:
 
 ## Diagnostic Commands
 
-I use these commands regularly to troubleshoot license issues:
+We use these commands regularly to troubleshoot license issues:
 
 ```bash
 # Check if the license server is running
@@ -171,7 +171,7 @@ lmutil lmstat -u username -c 28000@license-server-hostname
 
 ## Monitoring License Usage
 
-I run a monthly license usage audit to ensure we have enough licenses and that users aren't hoarding them. Here's my process:
+We run a monthly license usage audit to ensure we have enough licenses and that users aren't hoarding them. Here's our process:
 
 ### Generating a Usage Report
 
@@ -192,7 +192,7 @@ I run a monthly license usage audit to ensure we have enough licenses and that u
 
 ### Setting Up Email Alerts
 
-I use a simple Python script to check license availability and send an email alert when licenses are running low:
+We use a simple Python script to check license availability and send an email alert when licenses are running low:
 
 ```python
 import subprocess

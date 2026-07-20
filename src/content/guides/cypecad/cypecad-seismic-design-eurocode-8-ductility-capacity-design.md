@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cypecad"
 keyword: "cypecad seismic design eurocode 8"
 slug: "cypecad-seismic-design-eurocode-8-ductility-capacity-design"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Seismic Design: Eurocode 8 Analysis, Ductility, and Capacity Design
 
-Seismic design per Eurocode 8 in CYPECAD is well-implemented once you understand the workflow. I've used it on projects in southern Spain and Italy where seismic requirements are significant but not extreme. The software handles seismic action definition, ductility-based design, capacity design, and detailing requirements for concrete and steel. Let me walk you through how I set it up.
+Seismic design per Eurocode 8 in CYPECAD is well-implemented once you understand the workflow. We've used it on projects in southern Spain and Italy where seismic requirements are significant but not extreme. The software handles seismic action definition, ductility-based design, capacity design, and detailing requirements for concrete and steel. Let us walk you through how we set it up.
 
 ## Seismic Action Definition
 
@@ -27,11 +27,11 @@ Seismic design per Eurocode 8 in CYPECAD is well-implemented once you understand
      - Low: 0.05g (e.g., UK, northern Germany)
      - Moderate: 0.15g (e.g., southern Spain, Italy)
      - High: 0.25g-0.36g (e.g., Greece, Turkey)
-   - **Importance factor (γI)**:
+   - **Importance factor (γwe)**:
      - II (ordinary): 1.0
      - III (important): 1.2
      - IV (essential): 1.4
-   - **Design ground acceleration**: ag = γI × agR
+   - **Design ground acceleration**: ag = γwe × agR
 
 ### Soil Type
 
@@ -269,4 +269,4 @@ Seismic design per Eurocode 8 in CYPECAD is well-implemented once you understand
 
 ## Wrapping Up
 
-CYPECAD's Eurocode 8 implementation is solid once you understand the ductility class system. My advice: don't default to the highest ductility class (DCH) just to be safe — it actually requires more stringent detailing and can be harder to achieve. Pick the ductility class that matches your building's seismic hazard and structural system. And always verify capacity design — strong column/weak beam is fundamental to earthquake-resistant design.
+CYPECAD's Eurocode 8 implementation is solid once you understand the ductility class system. Our advice: don't default to the highest ductility class (DCH) just to be safe — it actually requires more stringent detailing and can be harder to achieve. Pick the ductility class that matches your building's seismic hazard and structural system. And always verify capacity design — strong column/weak beam is fundamental to earthquake-resistant design.

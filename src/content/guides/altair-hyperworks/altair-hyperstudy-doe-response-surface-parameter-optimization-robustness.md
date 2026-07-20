@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-hyperworks"
 keyword: "altair hyperstudy doe response surface parameter optimization robustness"
 slug: "altair-hyperstudy-doe-response-surface-parameter-optimization-robustness"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:
@@ -15,7 +15,7 @@ sources:
 
 # Altair HyperStudy: Design of Experiments, Response Surfaces, and Parameter Optimization
 
-HyperStudy is Altair's design exploration tool. It sits on top of your FEA solver and systematically varies design parameters to find the best combination. Instead of changing one parameter at a time and re-running, HyperStudy runs a designed set of experiments and builds a mathematical model of the design's behavior. I've used HyperStudy to optimize everything from bracket thickness to full suspension geometry. Here's my workflow.
+HyperStudy is Altair's design exploration tool. It sits on top of your FEA solver and systematically varies design parameters to find the best combination. Instead of changing one parameter at a time and re-running, HyperStudy runs a designed set of experiments and builds a mathematical model of the design's behavior. We've used HyperStudy to optimize everything from bracket thickness to full suspension geometry. Here's our workflow.
 
 ## What HyperStudy Does
 
