@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "recap-pro"
 keyword: "recap pro point cloud registration auto alignment manual targets survey points"
 slug: "recap-pro-point-cloud-registration-auto-alignment-manual-targets"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

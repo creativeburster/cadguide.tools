@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "progecad"
 keyword: "progecad 2d drafting setup"
 slug: "progecad-2d-drafting-autocad-compatible-workflow-template"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

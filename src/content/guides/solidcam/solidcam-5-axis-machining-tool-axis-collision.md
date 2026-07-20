@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "solidcam"
 keyword: "solidcam 5-axis machining tool axis control collision"
 slug: "solidcam-5-axis-machining-tool-axis-collision"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-06"
 sources:

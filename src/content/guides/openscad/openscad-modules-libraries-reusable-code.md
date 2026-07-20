@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "openscad"
 keyword: "openscad modules libraries include use bosl2"
 slug: "openscad-modules-libraries-reusable-code"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

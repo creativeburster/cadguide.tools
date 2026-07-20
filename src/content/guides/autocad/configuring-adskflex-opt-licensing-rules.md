@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "autocad"
 keyword: "autocad license"
 slug: "configuring-adskflex-opt-licensing-rules"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "15 min read"
 date: "2026-06-25"
 sources:

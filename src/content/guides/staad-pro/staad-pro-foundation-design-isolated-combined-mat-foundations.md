@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "staad-pro"
 keyword: "staad pro foundation design"
 slug: "staad-pro-foundation-design-isolated-combined-mat-foundations"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

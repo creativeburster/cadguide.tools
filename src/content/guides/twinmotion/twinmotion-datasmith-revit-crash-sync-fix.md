@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion Datasmith Revit crash sync fix"
 slug: "twinmotion-datasmith-revit-crash-sync-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

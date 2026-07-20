@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "opencascade"
 keyword: "opencascade boolean operations STEP IGES STL data exchange C++"
 slug: "opencascade-boolean-operations-data-exchange-step-iges-stl"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "tinkercad"
 keyword: "tinkercad beginners first 3d model 3d printing"
 slug: "tinkercad-beginners-first-3d-model-3d-printing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

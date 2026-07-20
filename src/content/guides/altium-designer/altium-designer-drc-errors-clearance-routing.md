@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer DRC errors clearance violation"
 slug: "altium-designer-drc-errors-clearance-routing"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-15"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb 3D print preparation orientation packing slicing workflow"
 slug: "autodesk-netfabb-3d-print-preparation-orientation-packing-slicing"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

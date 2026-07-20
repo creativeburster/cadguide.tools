@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion crash freeze not responding render fix"
 slug: "lumion-crash-freeze-render-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

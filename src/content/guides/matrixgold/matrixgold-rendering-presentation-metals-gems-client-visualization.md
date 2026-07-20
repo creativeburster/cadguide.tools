@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold rendering presentation metals gems lighting client visualization KeyShot"
 slug: "matrixgold-rendering-presentation-metals-gems-client-visualization"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

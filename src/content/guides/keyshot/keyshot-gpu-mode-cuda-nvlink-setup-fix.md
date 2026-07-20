@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "keyshot"
 keyword: "KeyShot GPU mode CUDA error NVLink multi-GPU setup"
 slug: "keyshot-gpu-mode-cuda-nvlink-setup-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

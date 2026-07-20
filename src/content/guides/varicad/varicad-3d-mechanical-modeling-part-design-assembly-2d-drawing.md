@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "varicad"
 keyword: "varicad 3d mechanical modeling"
 slug: "varicad-3d-mechanical-modeling-part-design-assembly-2d-drawing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

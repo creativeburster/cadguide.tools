@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "etabs"
 keyword: "ETABS vs SAP2000 vs STAAD.Pro structural analysis software comparison building design modeling analysis codes pricing"
 slug: "etabs-vs-sap2000-vs-staad-pro-structural-analysis-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

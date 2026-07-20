@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer Gerber export BOM manufacturing files"
 slug: "altium-designer-gerber-bom-export-manufacturing"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-19"
 sources:

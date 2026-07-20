@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "3dexperience"
 keyword: "3dexperience solidworks integration collaborative space mysession setup"
 slug: "3dexperience-solidworks-integration-collaborative-space-mysession-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-07-09"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "catia"
 keyword: "CATIA problem reading document load operation failed"
 slug: "catia-v5-problem-reading-document-recovery"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-16"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey field to finish coding linework automation"
 slug: "carlson-survey-field-to-finish-coding-linework"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

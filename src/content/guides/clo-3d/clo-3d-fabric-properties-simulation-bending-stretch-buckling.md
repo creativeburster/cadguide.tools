@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D fabric properties simulation bending stretch buckling density"
 slug: "clo-3d-fabric-properties-simulation-bending-stretch-buckling"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

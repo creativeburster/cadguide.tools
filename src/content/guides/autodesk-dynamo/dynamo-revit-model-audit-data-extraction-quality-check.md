@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-dynamo"
 keyword: "dynamo revit model audit data extraction quality check"
 slug: "dynamo-revit-model-audit-data-extraction-quality-check"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

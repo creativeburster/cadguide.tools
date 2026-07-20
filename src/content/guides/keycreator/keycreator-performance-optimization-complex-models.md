@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "keycreator"
 keyword: "keycreator performance slow complex model optimization"
 slug: "keycreator-performance-optimization-complex-models"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

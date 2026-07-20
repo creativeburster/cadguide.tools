@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision estimating quoting material costs labor calculation pricing reports quotes clients"
 slug: "cabinet-vision-estimating-quoting-material-costs-labor-pricing"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

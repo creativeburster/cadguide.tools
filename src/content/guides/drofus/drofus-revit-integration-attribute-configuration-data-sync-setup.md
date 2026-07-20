@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "drofus"
 keyword: "drofus revit integration attribute configuration data sync setup"
 slug: "drofus-revit-integration-attribute-configuration-data-sync-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-07-08"
 sources:

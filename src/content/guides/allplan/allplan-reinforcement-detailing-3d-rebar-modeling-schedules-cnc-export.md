@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "allplan"
 keyword: "allplan reinforcement detailing"
 slug: "allplan-reinforcement-detailing-3d-rebar-modeling-schedules-cnc-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

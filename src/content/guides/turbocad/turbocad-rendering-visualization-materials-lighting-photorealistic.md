@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "turbocad"
 keyword: "turbocad rendering visualization"
 slug: "turbocad-rendering-visualization-materials-lighting-photorealistic"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

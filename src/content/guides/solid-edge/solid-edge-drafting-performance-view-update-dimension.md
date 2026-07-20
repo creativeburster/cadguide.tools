@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge drafting performance slow view update dimension"
 slug: "solid-edge-drafting-performance-view-update-dimension"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "onshape"
 keyword: "Onshape large assembly performance slow display modes"
 slug: "onshape-large-assembly-performance-display-modes"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

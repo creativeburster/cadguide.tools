@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam Lathe turning threading grooving C-axis mill-turn toolpaths facing roughing finishing CNC lathe stock setup"
 slug: "mastercam-lathe-turning-threading-grooving-c-axis-mill-turn"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

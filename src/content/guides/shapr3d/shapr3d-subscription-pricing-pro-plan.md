@@ -5,7 +5,7 @@ category: "procurement"
 softwareSlug: "shapr3d"
 keyword: "shapr3d subscription pricing pro plan worth it"
 slug: "shapr3d-subscription-pricing-pro-plan"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:

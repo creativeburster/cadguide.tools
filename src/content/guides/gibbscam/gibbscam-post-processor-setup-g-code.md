@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "gibbscam"
 keyword: "gibbscam post processor setup g-code configuration"
 slug: "gibbscam-post-processor-setup-g-code"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

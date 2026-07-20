@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "catia"
 keyword: "CATIA click OK to terminate crash"
 slug: "catia-v5-click-ok-to-terminate-crash"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-15"
 sources:

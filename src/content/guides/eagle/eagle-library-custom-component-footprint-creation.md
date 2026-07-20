@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "eagle"
 keyword: "eagle library custom component footprint creation"
 slug: "eagle-library-custom-component-footprint-creation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

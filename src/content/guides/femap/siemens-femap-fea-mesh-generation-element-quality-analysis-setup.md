@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "femap"
 keyword: "siemens femap fea mesh generation element quality analysis setup"
 slug: "siemens-femap-fea-mesh-generation-element-quality-analysis-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

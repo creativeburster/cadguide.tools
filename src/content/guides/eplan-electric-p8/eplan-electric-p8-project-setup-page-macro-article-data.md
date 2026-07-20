@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "eplan-electric-p8"
 keyword: "eplan electric p8 project setup page macro article data"
 slug: "eplan-electric-p8-project-setup-page-macro-article-data"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

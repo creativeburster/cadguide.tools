@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "blender"
 keyword: "Blender UV mapping overlapping islands seams texture stretching"
 slug: "blender-uv-mapping-overlapping-islands-seams-stretching-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

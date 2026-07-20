@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "navisworks"
 keyword: "navisworks quantification takeoff"
 slug: "navisworks-quantification-model-based-quantity-takeoff-cost-estimation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

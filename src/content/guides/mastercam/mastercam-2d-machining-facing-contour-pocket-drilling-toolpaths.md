@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam 2D machining facing contour pocket drilling toolpaths tool selection stock setup CNC milling roughing finishing"
 slug: "mastercam-2d-machining-facing-contour-pocket-drilling-toolpaths"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

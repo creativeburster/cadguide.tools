@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Cut Vector cutter integration marker making nesting automated cutting leather apparel manufacturing"
 slug: "lectra-cut-vector-cutter-integration-marker-making-nesting"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "3ds-max"
 keyword: "3ds Max viewport lag high end PC performance fix"
 slug: "3ds-max-viewport-lag-high-end-pc-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-20"
 sources:

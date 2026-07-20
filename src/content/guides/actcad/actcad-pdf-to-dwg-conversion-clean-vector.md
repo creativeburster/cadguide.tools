@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "actcad"
 keyword: "actcad pdf to dwg conversion vector"
 slug: "actcad-pdf-to-dwg-conversion-clean-vector"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

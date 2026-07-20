@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio custom printer profiles non-Bambu Voron Creality setup"
 slug: "bambu-studio-custom-printer-profiles-non-bambu-setup"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "troubleshooting freecad"
 slug: "freecad-troubleshooting-common-errors-startup-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-07-03"
 sources:

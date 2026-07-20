@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter performance optimization resolution layers export"
 slug: "substance-painter-performance-optimization-resolution-layers"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

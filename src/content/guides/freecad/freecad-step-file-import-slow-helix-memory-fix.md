@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD STEP file import slow hangs helix memory"
 slug: "freecad-step-file-import-slow-helix-memory-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

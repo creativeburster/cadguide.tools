@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "qcad"
 keyword: "qcad dimensioning annotation"
 slug: "qcad-dimensioning-annotation-styles-tolerances-drawing-notes"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

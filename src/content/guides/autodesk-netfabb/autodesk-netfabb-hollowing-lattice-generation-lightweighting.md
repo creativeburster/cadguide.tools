@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb hollowing lattice generation lightweighting additive manufacturing optimization"
 slug: "autodesk-netfabb-hollowing-lattice-generation-lightweighting"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

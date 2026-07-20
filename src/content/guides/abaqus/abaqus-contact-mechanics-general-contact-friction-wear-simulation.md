@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "abaqus"
 keyword: "abaqus contact mechanics"
 slug: "abaqus-contact-mechanics-general-contact-friction-wear-simulation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

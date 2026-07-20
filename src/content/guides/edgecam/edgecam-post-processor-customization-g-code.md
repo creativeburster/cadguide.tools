@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "edgecam"
 keyword: "edgecam post processor customization g-code"
 slug: "edgecam-post-processor-customization-g-code"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher vs CLO 3D vs Marvelous Designer comparison fashion 3D software"
 slug: "browzwear-vs-clo-3d-vs-marvelous-designer-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "risa-3d"
 keyword: "risa-3d steel design aisc code checking optimization"
 slug: "risa-3d-steel-design-aisc-code-checking-optimization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

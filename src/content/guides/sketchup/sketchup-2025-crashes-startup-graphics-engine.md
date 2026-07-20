@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp 2025 crashes startup graphics engine classic"
 slug: "sketchup-2025-crashes-startup-graphics-engine"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

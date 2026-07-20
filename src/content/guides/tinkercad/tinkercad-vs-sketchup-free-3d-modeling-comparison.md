@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "tinkercad"
 keyword: "tinkercad vs sketchup free 3d modeling comparison"
 slug: "tinkercad-vs-sketchup-free-3d-modeling-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

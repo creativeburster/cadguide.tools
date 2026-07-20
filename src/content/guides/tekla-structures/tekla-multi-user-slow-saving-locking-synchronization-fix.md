@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures multi-user slow saving locking database synchronization"
 slug: "tekla-multi-user-slow-saving-locking-synchronization-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

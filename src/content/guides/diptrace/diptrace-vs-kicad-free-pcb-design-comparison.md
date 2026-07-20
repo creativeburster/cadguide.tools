@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "diptrace"
 keyword: "diptrace vs kicad free pcb design comparison"
 slug: "diptrace-vs-kicad-free-pcb-design-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

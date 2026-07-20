@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "sap2000"
 keyword: "sap2000 vs etabs comparison"
 slug: "sap2000-vs-etabs-choosing-csi-analysis-tool-project"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

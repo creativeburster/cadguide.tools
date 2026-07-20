@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo Parametric part design sketching features intent reference datum planes modeling workflow"
 slug: "ptc-creo-parametric-part-design-sketching-features-intent-reference"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

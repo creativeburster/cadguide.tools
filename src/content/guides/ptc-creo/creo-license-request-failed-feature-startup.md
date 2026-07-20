@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo license request failed for feature"
 slug: "creo-license-request-failed-feature-startup"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-15"
 sources:

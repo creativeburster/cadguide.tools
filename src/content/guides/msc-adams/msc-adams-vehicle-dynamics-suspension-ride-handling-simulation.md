@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "msc-adams"
 keyword: "msc adams vehicle dynamics suspension ride handling simulation"
 slug: "msc-adams-vehicle-dynamics-suspension-ride-handling-simulation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

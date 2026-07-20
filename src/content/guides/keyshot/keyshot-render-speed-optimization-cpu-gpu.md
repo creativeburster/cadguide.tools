@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "keyshot"
 keyword: "KeyShot render speed slow optimization CPU GPU settings"
 slug: "keyshot-render-speed-optimization-cpu-gpu"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ares-commander"
 keyword: "ares commander object snap not working"
 slug: "ares-commander-object-snap-issues-fixing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:

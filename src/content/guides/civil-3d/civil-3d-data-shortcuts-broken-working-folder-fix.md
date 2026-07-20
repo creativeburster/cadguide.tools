@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D data shortcuts broken working folder reference path"
 slug: "civil-3d-data-shortcuts-broken-working-folder-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

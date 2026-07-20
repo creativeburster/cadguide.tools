@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "idea-statica"
 keyword: "idea statica vs tekla structural designer connection comparison"
 slug: "idea-statica-vs-tekla-structural-designer-connection"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

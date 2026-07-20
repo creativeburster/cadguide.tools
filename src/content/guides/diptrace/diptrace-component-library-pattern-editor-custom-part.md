@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "diptrace"
 keyword: "diptrace component library pattern editor custom part"
 slug: "diptrace-component-library-pattern-editor-custom-part"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

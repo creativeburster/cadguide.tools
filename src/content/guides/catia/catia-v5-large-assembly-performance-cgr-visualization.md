@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "catia"
 keyword: "CATIA V5 large assembly performance CGR"
 slug: "catia-v5-large-assembly-performance-cgr-visualization"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-19"
 sources:

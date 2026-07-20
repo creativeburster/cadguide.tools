@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "comsol-multiphysics"
 keyword: "comsol cfd analysis"
 slug: "comsol-cfd-analysis-laminar-turbulent-multiphase-flow-simulation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-robot"
 keyword: "autodesk robot steel frame analysis design"
 slug: "autodesk-robot-steel-frame-analysis-design"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

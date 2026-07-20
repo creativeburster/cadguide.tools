@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 CAM toolpath slow calculation machining performance"
 slug: "fusion-360-cam-toolpath-slow-calculation-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:

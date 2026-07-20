@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "proteus-design-suite"
 keyword: "proteus vs tinkercad arduino simulation comparison"
 slug: "proteus-vs-tinkercad-circuits-arduino-simulation-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-13"
 sources:

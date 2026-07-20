@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "shapr3d"
 keyword: "shapr3d sketch constraints parametric"
 slug: "shapr3d-sketch-constraints-parametric"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

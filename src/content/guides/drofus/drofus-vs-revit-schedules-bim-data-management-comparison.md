@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "drofus"
 keyword: "drofus vs revit schedules bim data management comparison"
 slug: "drofus-vs-revit-schedules-bim-data-management-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

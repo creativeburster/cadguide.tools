@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ltspice"
 keyword: "ltspice transient simulation time step convergence"
 slug: "ltspice-transient-simulation-time-step-waveform-convergence"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

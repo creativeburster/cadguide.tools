@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD topological naming problem model breaks references"
 slug: "freecad-topological-naming-problem-model-breaks"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

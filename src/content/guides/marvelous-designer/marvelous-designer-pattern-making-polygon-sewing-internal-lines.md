@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer pattern making polygon tool sewing internal lines"
 slug: "marvelous-designer-pattern-making-polygon-sewing-internal-lines"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

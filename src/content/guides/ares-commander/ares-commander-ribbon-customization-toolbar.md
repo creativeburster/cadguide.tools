@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ares-commander"
 keyword: "ares commander ribbon customization toolbar"
 slug: "ares-commander-ribbon-customization-toolbar"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

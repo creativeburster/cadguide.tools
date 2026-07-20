@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark Cloud collaboration remote pattern sharing multi-site production version control"
 slug: "gerber-accumark-cloud-collaboration-remote-pattern-sharing-multi-site"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-29"
 sources:

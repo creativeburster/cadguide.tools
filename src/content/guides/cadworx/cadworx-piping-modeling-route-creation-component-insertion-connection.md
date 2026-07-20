@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cadworx"
 keyword: "cadworx piping modeling route creation component insertion connection"
 slug: "cadworx-piping-modeling-route-creation-component-insertion-connection"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

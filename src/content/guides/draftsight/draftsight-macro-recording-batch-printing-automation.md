@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "draftsight"
 keyword: "draftsight batch printing automation"
 slug: "draftsight-macro-recording-batch-printing-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

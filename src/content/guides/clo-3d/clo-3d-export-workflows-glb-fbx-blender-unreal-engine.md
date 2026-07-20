@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D export GLB FBX Blender Unreal Engine LiveSync workflow"
 slug: "clo-3d-export-workflows-glb-fbx-blender-unreal-engine"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:

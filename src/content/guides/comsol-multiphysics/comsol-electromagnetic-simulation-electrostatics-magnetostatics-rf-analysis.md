@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "comsol-multiphysics"
 keyword: "comsol electromagnetic simulation"
 slug: "comsol-electromagnetic-simulation-electrostatics-magnetostatics-rf-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

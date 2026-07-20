@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "chief-architect"
 keyword: "chief architect interior design"
 slug: "chief-architect-interior-design-cabinets-fixtures-materials-walkthroughs"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

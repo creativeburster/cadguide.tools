@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "chief-architect"
 keyword: "chief architect roof terrain design"
 slug: "chief-architect-roof-terrain-design-automatic-roofs-dormers-site-grading"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

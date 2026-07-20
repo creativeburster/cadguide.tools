@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cimatron"
 keyword: "cimatron cooling system design conformal cooling channel routing thermal"
 slug: "cimatron-cooling-system-design-conformal-cooling-channel-routing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

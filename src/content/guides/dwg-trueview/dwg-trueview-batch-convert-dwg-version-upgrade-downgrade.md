@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "dwg-trueview"
 keyword: "dwg trueview batch convert dwg version upgrade downgrade"
 slug: "dwg-trueview-batch-convert-dwg-version-upgrade-downgrade"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

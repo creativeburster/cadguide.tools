@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D vs Marvelous Designer comparison differences fashion CG workflow"
 slug: "clo-3d-vs-marvelous-designer-comparison-differences"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

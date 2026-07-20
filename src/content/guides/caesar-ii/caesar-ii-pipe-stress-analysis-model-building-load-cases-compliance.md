@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii pipe stress analysis model building load cases code compliance"
 slug: "caesar-ii-pipe-stress-analysis-model-building-load-cases-compliance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

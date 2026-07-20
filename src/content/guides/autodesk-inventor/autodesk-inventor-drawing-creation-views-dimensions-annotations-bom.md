@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor drawing creation views dimensions annotations BOM parts list manufacturing documentation"
 slug: "autodesk-inventor-drawing-creation-views-dimensions-annotations-bom"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

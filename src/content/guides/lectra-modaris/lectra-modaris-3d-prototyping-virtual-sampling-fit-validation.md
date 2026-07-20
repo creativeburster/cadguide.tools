@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Modaris 3D prototyping virtual sampling fit validation fabric simulation tension analysis"
 slug: "lectra-modaris-3d-prototyping-virtual-sampling-fit-validation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "femap"
 keyword: "femap random vibration psd analysis rms fatigue"
 slug: "femap-random-vibration-psd-analysis-setup-results-fatigue"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

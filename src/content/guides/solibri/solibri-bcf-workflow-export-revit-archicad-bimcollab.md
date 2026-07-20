@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "solibri"
 keyword: "solibri bcf workflow export revit archicad bimcollab issue tracking"
 slug: "solibri-bcf-workflow-export-revit-archicad-bimcollab"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

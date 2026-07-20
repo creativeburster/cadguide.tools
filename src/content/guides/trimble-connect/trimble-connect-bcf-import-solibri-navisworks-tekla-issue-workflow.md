@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "trimble-connect"
 keyword: "trimble connect bcf import solibri navisworks tekla issue workflow"
 slug: "trimble-connect-bcf-import-solibri-navisworks-tekla-issue-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

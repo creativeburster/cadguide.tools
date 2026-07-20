@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench static structural analysis mesh materials loads boundary conditions stress result interpretation FEA"
 slug: "ansys-workbench-static-structural-analysis-mesh-materials-loads-results"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor part modeling sketch constraints extrude revolve feature tree parametric design"
 slug: "autodesk-inventor-part-modeling-sketch-constraints-extrude-revolve"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 large assembly performance suppress features timeline"
 slug: "fusion-360-large-assembly-performance-timeline-suppress"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-23"
 sources:

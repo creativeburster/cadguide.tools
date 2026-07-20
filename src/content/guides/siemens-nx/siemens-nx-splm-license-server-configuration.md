@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "siemens-nx"
 keyword: "NX SPLM license server configuration"
 slug: "siemens-nx-splm-license-server-configuration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

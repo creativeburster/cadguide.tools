@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold gem setting prong pave channel bezel flush setting techniques jewelry"
 slug: "matrixgold-gem-setting-prong-pave-channel-bezel-flush"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

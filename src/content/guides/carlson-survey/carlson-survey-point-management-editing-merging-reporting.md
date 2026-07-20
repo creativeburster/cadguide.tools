@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey point management editing merging reporting"
 slug: "carlson-survey-point-management-editing-merging-reporting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

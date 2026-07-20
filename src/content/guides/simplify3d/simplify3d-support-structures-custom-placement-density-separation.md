@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D support structures custom placement density separation settings"
 slug: "simplify3d-support-structures-custom-placement-density-separation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

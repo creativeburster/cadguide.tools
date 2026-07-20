@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "siemens-nx"
 keyword: "NX journaling Python automation"
 slug: "siemens-nx-journaling-python-automation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-19"
 sources:

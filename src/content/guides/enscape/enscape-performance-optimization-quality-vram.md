@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "enscape"
 keyword: "Enscape performance laggy optimization quality settings VRAM"
 slug: "enscape-performance-optimization-quality-vram"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

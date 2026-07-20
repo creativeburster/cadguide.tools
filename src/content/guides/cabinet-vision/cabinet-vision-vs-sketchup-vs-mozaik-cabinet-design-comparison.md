@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision vs SketchUp vs Mozaik cabinet design software comparison CNC integration woodworkers"
 slug: "cabinet-vision-vs-sketchup-vs-mozaik-cabinet-design-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

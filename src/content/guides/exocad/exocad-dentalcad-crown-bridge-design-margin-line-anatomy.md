@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad DentalCAD crown bridge design margin line reduction anatomy workflow"
 slug: "exocad-dentalcad-crown-bridge-design-margin-line-anatomy"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-29"
 sources:

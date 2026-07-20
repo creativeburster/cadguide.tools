@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cadworx"
 keyword: "cadworx equipment vessel modeling nozzles platforms ladders"
 slug: "cadworx-equipment-vessel-modeling-nozzles-platforms-ladders"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

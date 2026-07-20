@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion LiveSync not working Revit SketchUp connection fix"
 slug: "lumion-livesync-connection-revit-sketchup-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

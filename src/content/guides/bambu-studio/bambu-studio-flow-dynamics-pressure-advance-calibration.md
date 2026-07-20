@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio flow dynamics pressure advance calibration guide"
 slug: "bambu-studio-flow-dynamics-pressure-advance-calibration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

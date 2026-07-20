@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "onshape"
 keyword: "Onshape version history restore deleted feature without losing progress"
 slug: "onshape-version-history-restore-deleted-feature"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:

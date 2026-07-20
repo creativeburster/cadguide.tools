@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion Path Tracer settings crash multi-GPU fix"
 slug: "twinmotion-path-tracer-settings-crash-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-23"
 sources:

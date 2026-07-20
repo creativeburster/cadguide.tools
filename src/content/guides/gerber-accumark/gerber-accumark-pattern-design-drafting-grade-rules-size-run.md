@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark pattern design drafting grade rules size run management apparel production"
 slug: "gerber-accumark-pattern-design-drafting-grade-rules-size-run"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

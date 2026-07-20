@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "abaqus"
 keyword: "abaqus explicit dynamic analysis"
 slug: "abaqus-explicit-dynamic-analysis-crash-drop-test-impact"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

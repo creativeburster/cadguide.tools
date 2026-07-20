@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "powermill"
 keyword: "powermill toolpath calculation slow"
 slug: "powermill-toolpath-calculation-slow-bad-stl-collision-check-tolerance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

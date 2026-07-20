@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer footprint design mistakes pad size"
 slug: "altium-designer-footprint-design-mistakes"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-16"
 sources:

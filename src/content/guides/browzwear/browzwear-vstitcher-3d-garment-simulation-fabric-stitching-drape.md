@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher 3D garment simulation fabric properties stitching drape workflow"
 slug: "browzwear-vstitcher-3d-garment-simulation-fabric-stitching-drape"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

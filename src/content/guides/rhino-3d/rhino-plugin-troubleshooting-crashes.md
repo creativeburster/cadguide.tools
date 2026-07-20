@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "rhino-3d"
 keyword: "Rhino plugin crash troubleshooting"
 slug: "rhino-plugin-troubleshooting-crashes"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-17"
 sources:

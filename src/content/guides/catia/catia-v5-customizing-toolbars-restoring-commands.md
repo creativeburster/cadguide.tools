@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "catia"
 keyword: "CATIA V5 toolbar customize restore commands"
 slug: "catia-v5-customizing-toolbars-restoring-commands"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-18"
 sources:

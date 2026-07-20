@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys mesh quality element distortion metrics"
 slug: "ansys-mesh-quality-element-distortion-diagnosis"
-author: "FEA Analyst"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-16"
 sources:

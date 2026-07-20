@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "easyeda"
 keyword: "easyeda jlcpcb smt assembly bom pick and place component sourcing"
 slug: "easyeda-jlcpcb-smt-assembly-bom-pick-and-place-sourcing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-09"
 sources:

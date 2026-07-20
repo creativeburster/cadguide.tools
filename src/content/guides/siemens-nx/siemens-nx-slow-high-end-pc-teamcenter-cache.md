@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "siemens-nx"
 keyword: "NX slow performance Teamcenter"
 slug: "siemens-nx-slow-high-end-pc-teamcenter-cache"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-16"
 sources:

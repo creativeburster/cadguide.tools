@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex 3D virtual sampling garment simulation fit validation pattern adjustment workflow"
 slug: "optitex-3d-virtual-sampling-garment-simulation-fit-validation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

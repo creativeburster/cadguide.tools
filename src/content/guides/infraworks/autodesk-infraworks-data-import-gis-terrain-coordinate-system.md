@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks data import GIS terrain coordinate system model setup performance"
 slug: "autodesk-infraworks-data-import-gis-terrain-coordinate-system"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

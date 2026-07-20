@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "exocad"
 keyword: "exocad vs 3Shape vs CEREC dental CAD software comparison labs clinics workflow"
 slug: "exocad-vs-3shape-vs-cerec-dental-cad-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

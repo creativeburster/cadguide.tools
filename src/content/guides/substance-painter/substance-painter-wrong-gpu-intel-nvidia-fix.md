@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter wrong GPU Intel NVIDIA control panel fix"
 slug: "substance-painter-wrong-gpu-intel-nvidia-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

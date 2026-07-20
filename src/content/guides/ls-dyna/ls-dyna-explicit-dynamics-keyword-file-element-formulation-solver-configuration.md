@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ls-dyna"
 keyword: "ls-dyna explicit dynamics"
 slug: "ls-dyna-explicit-dynamics-keyword-file-element-formulation-solver-configuration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

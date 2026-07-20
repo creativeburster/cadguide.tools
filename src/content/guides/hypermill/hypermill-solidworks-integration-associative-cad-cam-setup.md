@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "hypermill"
 keyword: "hypermill solidworks integration associative cad cam setup"
 slug: "hypermill-solidworks-integration-associative-cad-cam-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

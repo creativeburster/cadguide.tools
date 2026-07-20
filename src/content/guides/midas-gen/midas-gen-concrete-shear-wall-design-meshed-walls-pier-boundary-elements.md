@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "midas-gen"
 keyword: "midas gen shear wall design"
 slug: "midas-gen-concrete-shear-wall-design-meshed-walls-pier-boundary-elements"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

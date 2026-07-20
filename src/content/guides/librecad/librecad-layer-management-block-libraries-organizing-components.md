@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "librecad"
 keyword: "librecad layer block library"
 slug: "librecad-layer-management-block-libraries-organizing-components"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

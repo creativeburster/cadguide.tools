@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor sheet metal design flange bend flat pattern DXF export laser cutting bend relief"
 slug: "autodesk-inventor-sheet-metal-design-flange-bend-flat-pattern-dxf"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "zbrush"
 keyword: "ZBrush export 3ds Max Blender GoZ FBX displacement map"
 slug: "zbrush-export-3dsmax-blender-goz-displacement"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:

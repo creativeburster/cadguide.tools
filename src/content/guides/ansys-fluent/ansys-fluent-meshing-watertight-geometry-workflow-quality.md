@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-fluent"
 keyword: "ansys fluent meshing watertight geometry workflow mesh quality"
 slug: "ansys-fluent-meshing-watertight-geometry-workflow-quality"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

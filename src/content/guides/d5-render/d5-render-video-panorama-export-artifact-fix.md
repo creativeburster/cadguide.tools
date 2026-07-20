@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "d5-render"
 keyword: "D5 Render video panorama export resolution artifact fix"
 slug: "d5-render-video-panorama-export-artifact-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D multi-process variable settings wizard different regions model"
 slug: "simplify3d-multi-process-variable-settings-different-regions"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

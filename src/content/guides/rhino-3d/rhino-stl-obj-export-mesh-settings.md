@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "rhino-3d"
 keyword: "Rhino STL OBJ export mesh settings 3D printing"
 slug: "rhino-stl-obj-export-mesh-settings"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-18"
 sources:

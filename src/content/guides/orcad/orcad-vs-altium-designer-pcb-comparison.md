@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "orcad"
 keyword: "orcad vs altium designer pcb comparison"
 slug: "orcad-vs-altium-designer-pcb-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

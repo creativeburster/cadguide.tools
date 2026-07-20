@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS steel design beam column brace AISC 360 flexural shear capacity interaction seismic provisions special steel systems output"
 slug: "etabs-steel-design-beam-column-brace-aisc-360"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

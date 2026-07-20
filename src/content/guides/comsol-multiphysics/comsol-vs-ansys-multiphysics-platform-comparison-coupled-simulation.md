@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "comsol-multiphysics"
 keyword: "comsol vs ansys multiphysics comparison"
 slug: "comsol-vs-ansys-multiphysics-platform-comparison-coupled-simulation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex made-to-measure MTM custom sizing body measurement personalized fit production workflow"
 slug: "optitex-made-to-measure-custom-sizing-body-measurement-personalized-fit"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

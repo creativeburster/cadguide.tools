@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra ecosystem Modaris Kaledo Gallery PLM Lectra Cut end-to-end fashion workflow integration"
 slug: "lectra-ecosystem-modaris-kaledo-gallery-plm-end-to-end-workflow"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

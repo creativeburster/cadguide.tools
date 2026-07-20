@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura tree supports configuration branch settings guide"
 slug: "ultimaker-cura-tree-supports-configuration-guide"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

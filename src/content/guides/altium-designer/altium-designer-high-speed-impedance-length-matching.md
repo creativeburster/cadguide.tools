@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer high speed impedance control length matching"
 slug: "altium-designer-high-speed-impedance-length-matching"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-17"
 sources:

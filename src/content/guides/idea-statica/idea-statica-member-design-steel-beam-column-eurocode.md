@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "idea-statica"
 keyword: "idea statica member design steel beam column eurocode"
 slug: "idea-statica-member-design-steel-beam-column-eurocode"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

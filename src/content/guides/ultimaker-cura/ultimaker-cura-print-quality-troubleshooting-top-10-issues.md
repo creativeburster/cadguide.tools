@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura print quality troubleshooting warping under-extrusion layer shifting"
 slug: "ultimaker-cura-print-quality-troubleshooting-top-10-issues"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:

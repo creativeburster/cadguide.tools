@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge large assembly performance simplify mode activate"
 slug: "solid-edge-large-assembly-performance-simplify-activate"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

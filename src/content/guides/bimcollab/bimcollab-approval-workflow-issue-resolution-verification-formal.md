@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bimcollab"
 keyword: "bimcollab approval workflow issue resolution verification formal"
 slug: "bimcollab-approval-workflow-issue-resolution-verification-formal"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

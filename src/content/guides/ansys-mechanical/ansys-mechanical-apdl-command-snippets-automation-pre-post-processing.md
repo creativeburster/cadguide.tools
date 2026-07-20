@@ -5,7 +5,7 @@ category: "automation"
 softwareSlug: "ansys-mechanical"
 keyword: "ansys apdl command snippets"
 slug: "ansys-mechanical-apdl-command-snippets-automation-pre-post-processing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

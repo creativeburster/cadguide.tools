@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "openscad"
 keyword: "openscad parametric design customizer variables"
 slug: "openscad-parametric-design-customizer-variables"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

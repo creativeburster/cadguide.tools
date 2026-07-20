@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "solibri"
 keyword: "solibri vs navisworks bim coordination clash detection comparison"
 slug: "solibri-vs-navisworks-bim-coordination-clash-detection-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

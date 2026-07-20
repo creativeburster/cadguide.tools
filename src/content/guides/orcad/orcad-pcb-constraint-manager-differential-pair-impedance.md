@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "orcad"
 keyword: "orcad pcb constraint manager differential pair impedance"
 slug: "orcad-pcb-constraint-manager-differential-pair-impedance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

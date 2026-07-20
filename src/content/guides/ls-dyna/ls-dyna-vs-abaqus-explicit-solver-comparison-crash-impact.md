@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "ls-dyna"
 keyword: "ls-dyna vs abaqus explicit comparison"
 slug: "ls-dyna-vs-abaqus-explicit-solver-comparison-crash-impact"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "abaqus"
 keyword: "abaqus fracture mechanics xfem"
 slug: "abaqus-fracture-mechanics-xfem-cohesive-zone-j-integral-crack-propagation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

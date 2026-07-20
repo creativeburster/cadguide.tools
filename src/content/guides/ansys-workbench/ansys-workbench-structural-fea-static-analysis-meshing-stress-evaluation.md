@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ansys workbench structural fea"
 slug: "ansys-workbench-structural-fea-static-analysis-meshing-stress-evaluation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

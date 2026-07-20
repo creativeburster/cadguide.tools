@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "rhino-3d"
 keyword: "rhino display pipeline optimization"
 slug: "rhino-display-pipeline-heavy-mesh-optimization-viewport-lag"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gstarcad"
 keyword: "gstarcad 2d drafting workflow"
 slug: "gstarcad-2d-drafting-workflow-interface-commands-dwg-compatibility"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

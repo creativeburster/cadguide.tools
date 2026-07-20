@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ansys topology optimization design exploration"
 slug: "ansys-topology-optimization-design-exploration-parametric-weight-reduction"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

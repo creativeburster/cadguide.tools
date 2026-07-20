@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS building modeling grids stories section properties material definition frame slab wall structural analysis"
 slug: "etabs-building-modeling-grids-stories-section-properties-material-definition"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

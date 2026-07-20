@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "corona-renderer"
 keyword: "Corona V-Ray migration material conversion render settings"
 slug: "corona-vray-migration-material-conversion"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:

@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "solidworks"
 keyword: "solidworks sheet metal k factor"
 slug: "solidworks-sheet-metal-k-factor-bend-table"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:

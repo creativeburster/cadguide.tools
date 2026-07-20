@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "easyeda"
 keyword: "easyeda gerber export missing pads drill offset export failed troubleshooting"
 slug: "easyeda-gerber-export-missing-pads-drill-offset-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-09"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "d5-render"
 keyword: "D5 Render Live Sync SketchUp Revit connection fix"
 slug: "d5-render-live-sync-sketchup-revit-connection-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

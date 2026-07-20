@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "msc-adams"
 keyword: "msc adams convergence error over constrained mechanism debugging"
 slug: "msc-adams-convergence-errors-over-constrained-mechanism-debugging"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

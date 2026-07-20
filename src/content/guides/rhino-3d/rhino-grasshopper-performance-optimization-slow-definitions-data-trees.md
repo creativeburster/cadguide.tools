@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "rhino-3d"
 keyword: "grasshopper performance optimization"
 slug: "rhino-grasshopper-performance-optimization-slow-definitions-data-trees"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:

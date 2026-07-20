@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks roadway design corridors intersections roundabouts coverage areas"
 slug: "autodesk-infraworks-roadway-design-corridors-intersections"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

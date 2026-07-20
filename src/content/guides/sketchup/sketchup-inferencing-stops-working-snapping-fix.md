@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp inferencing not working snapping cursor corners"
 slug: "sketchup-inferencing-stops-working-snapping-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-26"
 sources:

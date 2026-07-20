@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "varicad"
 keyword: "varicad sheet metal design"
 slug: "varicad-sheet-metal-design-bending-unfolding-manufacturing-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

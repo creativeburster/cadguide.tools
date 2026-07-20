@@ -5,7 +5,7 @@ category: "procurement"
 softwareSlug: "alibre-design"
 keyword: "alibre design perpetual license maintenance upgrade"
 slug: "alibre-design-perpetual-license-maintenance-upgrade"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:

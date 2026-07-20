@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo STEP file import crash large file"
 slug: "creo-step-file-import-crash-large-files"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-17"
 sources:

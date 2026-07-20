@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "kompas-3d"
 keyword: "kompas-3d step import export format settings configuration"
 slug: "kompas-3d-step-import-export-format-settings"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

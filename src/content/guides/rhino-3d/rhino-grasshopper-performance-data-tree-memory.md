@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "rhino-3d"
 keyword: "Grasshopper performance data tree optimization"
 slug: "rhino-grasshopper-performance-data-tree-memory"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-19"
 sources:

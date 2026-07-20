@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer copper pour best practices thermal relief"
 slug: "altium-designer-copper-pour-best-practices"
-author: "PCB Design Engineer"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-18"
 sources:

@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "midas-civil"
 keyword: "midas civil vs sap2000 bridge"
 slug: "midas-civil-vs-sap2000-bridge-analysis-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

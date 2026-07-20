@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "mastercam"
 keyword: "Mastercam vs GibbsCAM vs CAMWorks CAM software comparison CNC programming 2D 3D machining lathe mill-turn post processing pricing"
 slug: "mastercam-vs-gibbscam-vs-camworks-cam-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

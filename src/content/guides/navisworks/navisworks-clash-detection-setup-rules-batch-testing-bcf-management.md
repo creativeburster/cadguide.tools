@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "navisworks"
 keyword: "navisworks clash detection"
 slug: "navisworks-clash-detection-setup-rules-batch-testing-bcf-management"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

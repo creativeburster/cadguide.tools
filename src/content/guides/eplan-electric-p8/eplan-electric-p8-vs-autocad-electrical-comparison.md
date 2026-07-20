@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "eplan-electric-p8"
 keyword: "eplan electric p8 vs autocad electrical comparison"
 slug: "eplan-electric-p8-vs-autocad-electrical-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

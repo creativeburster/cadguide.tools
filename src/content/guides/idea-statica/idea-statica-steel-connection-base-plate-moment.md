@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "idea-statica"
 keyword: "idea statica steel connection base plate moment"
 slug: "idea-statica-steel-connection-base-plate-moment"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

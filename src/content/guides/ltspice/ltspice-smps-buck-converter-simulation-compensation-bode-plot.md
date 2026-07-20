@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ltspice"
 keyword: "ltspice smps buck converter simulation bode plot compensation"
 slug: "ltspice-smps-buck-converter-simulation-compensation-bode-plot"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

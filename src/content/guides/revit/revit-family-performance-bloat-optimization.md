@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "revit"
 keyword: "revit family performance"
 slug: "revit-family-performance-bloat-optimization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:

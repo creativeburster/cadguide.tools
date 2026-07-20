@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "librecad"
 keyword: "librecad vs qcad comparison"
 slug: "librecad-vs-qcad-choosing-open-source-2d-cad-tool"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

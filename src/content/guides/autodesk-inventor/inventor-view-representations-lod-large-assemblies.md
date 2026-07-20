@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor View Representations Level of Detail LOD performance"
 slug: "inventor-view-representations-lod-large-assemblies"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-20"
 sources:

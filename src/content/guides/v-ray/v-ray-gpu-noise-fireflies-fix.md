@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "v-ray"
 keyword: "V-Ray GPU rendering noise fireflies settings fix"
 slug: "v-ray-gpu-noise-fireflies-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

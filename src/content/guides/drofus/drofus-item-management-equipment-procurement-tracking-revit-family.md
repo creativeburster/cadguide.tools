@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "drofus"
 keyword: "drofus item management equipment procurement tracking revit family"
 slug: "drofus-item-management-equipment-procurement-tracking-revit-family"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

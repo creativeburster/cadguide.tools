@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "turbocad"
 keyword: "turbocad 3d modeling"
 slug: "turbocad-3d-modeling-solid-primitives-boolean-assembly-design"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

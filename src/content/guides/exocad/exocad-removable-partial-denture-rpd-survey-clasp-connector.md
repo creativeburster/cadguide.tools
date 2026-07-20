@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad removable partial denture RPD survey line clasp connector design workflow"
 slug: "exocad-removable-partial-denture-rpd-survey-clasp-connector"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "risa-3d"
 keyword: "risa-3d modeling nodes members boundary conditions"
 slug: "risa-3d-modeling-nodes-members-boundary-conditions"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

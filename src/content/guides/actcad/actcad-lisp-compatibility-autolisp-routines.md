@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "actcad"
 keyword: "actcad lisp compatibility autolisp"
 slug: "actcad-lisp-compatibility-autolisp-routines"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

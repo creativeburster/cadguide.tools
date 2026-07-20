@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "recap-pro"
 keyword: "recap pro scan to bim point cloud cleaning clipping decimation export"
 slug: "recap-pro-scan-to-bim-cleaning-clipping-point-cloud-preparation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

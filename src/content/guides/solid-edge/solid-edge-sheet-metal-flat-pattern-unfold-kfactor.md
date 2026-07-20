@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge sheet metal flat pattern unfold error K-factor bend allowance"
 slug: "solid-edge-sheet-metal-flat-pattern-unfold-kfactor"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-25"
 sources:

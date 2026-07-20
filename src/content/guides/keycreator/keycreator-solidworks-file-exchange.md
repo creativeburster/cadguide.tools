@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "keycreator"
 keyword: "keycreator solidworks file exchange step parasolid"
 slug: "keycreator-solidworks-file-exchange"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

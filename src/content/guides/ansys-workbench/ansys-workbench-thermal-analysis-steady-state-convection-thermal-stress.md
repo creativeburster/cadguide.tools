@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench thermal analysis steady-state heat transfer convection radiation thermal stress coupled structural temperature"
 slug: "ansys-workbench-thermal-analysis-steady-state-convection-thermal-stress"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "catia"
 keyword: "CATIA to SolidWorks migration import"
 slug: "catia-v5-to-solidworks-migration-feature-tree"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-17"
 sources:

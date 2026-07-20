@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor Windows 11 slow performance Core Isolation"
 slug: "inventor-windows-11-performance-fix-core-isolation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-17"
 sources:

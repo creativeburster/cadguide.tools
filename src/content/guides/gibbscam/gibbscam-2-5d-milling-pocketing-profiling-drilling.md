@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "gibbscam"
 keyword: "gibbscam 2.5d milling pocketing profiling drilling"
 slug: "gibbscam-2-5d-milling-pocketing-profiling-drilling"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

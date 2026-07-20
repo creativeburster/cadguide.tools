@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge 2025 slow startup license server network drive"
 slug: "solid-edge-2025-slow-startup-license-network-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

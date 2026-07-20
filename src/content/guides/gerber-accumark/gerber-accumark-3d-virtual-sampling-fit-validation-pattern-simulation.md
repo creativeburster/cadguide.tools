@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark 3D virtual sampling fit validation pattern simulation avatar tension analysis"
 slug: "gerber-accumark-3d-virtual-sampling-fit-validation-pattern-simulation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

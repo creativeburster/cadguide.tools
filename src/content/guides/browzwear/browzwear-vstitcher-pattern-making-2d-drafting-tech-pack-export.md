@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher pattern making 2D drafting blocks tech pack grading export"
 slug: "browzwear-vstitcher-pattern-making-2d-drafting-tech-pack-export"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

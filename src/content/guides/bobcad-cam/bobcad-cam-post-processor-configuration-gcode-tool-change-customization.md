@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "bobcad-cam"
 keyword: "bobcad-cam post processor configuration g-code tool change"
 slug: "bobcad-cam-post-processor-configuration-gcode-tool-change-customization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

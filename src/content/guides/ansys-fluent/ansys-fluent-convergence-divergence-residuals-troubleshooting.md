@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-fluent"
 keyword: "ansys fluent convergence divergence residuals floating point error troubleshooting"
 slug: "ansys-fluent-convergence-divergence-residuals-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

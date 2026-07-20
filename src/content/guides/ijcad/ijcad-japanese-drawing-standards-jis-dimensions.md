@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "ijcad"
 keyword: "ijcad japanese drawing standards jis dimensions"
 slug: "ijcad-japanese-drawing-standards-jis-dimensions"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

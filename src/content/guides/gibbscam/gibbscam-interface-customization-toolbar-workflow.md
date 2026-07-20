@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gibbscam"
 keyword: "gibbscam interface customization toolbar workflow"
 slug: "gibbscam-interface-customization-toolbar-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

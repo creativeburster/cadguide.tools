@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "freecad"
 keyword: "FreeCAD assembly slow loading A2plus TechDraw performance"
 slug: "freecad-assembly-slow-loading-techdraw-a2plus-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

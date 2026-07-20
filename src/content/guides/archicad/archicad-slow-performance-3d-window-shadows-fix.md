@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "archicad"
 keyword: "ArchiCAD slow performance 3D window lag shadows layer combination"
 slug: "archicad-slow-performance-3d-window-shadows-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

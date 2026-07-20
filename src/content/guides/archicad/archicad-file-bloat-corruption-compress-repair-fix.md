@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "archicad"
 keyword: "ArchiCAD file bloat corruption compress repair audit"
 slug: "archicad-file-bloat-corruption-compress-repair-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

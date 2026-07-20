@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "vectorworks"
 keyword: "vectorworks renderworks rendering"
 slug: "vectorworks-renderworks-materials-lighting-photorealistic-rendering"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

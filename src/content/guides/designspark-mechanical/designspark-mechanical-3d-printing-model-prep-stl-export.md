@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "designspark-mechanical"
 keyword: "designspark mechanical 3d printing STL export model preparation"
 slug: "designspark-mechanical-3d-printing-model-prep-stl-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

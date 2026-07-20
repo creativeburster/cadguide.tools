@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "blender"
 keyword: "Blender large scene management collections linking proxy architecture"
 slug: "blender-large-scene-collections-linking-proxy-workflow"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

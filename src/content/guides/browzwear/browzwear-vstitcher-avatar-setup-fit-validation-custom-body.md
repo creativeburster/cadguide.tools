@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher avatar setup custom body scan fit validation measurement sizing"
 slug: "browzwear-vstitcher-avatar-setup-fit-validation-custom-body"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

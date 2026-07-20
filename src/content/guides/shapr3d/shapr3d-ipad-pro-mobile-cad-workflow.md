@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "shapr3d"
 keyword: "shapr3d ipad pro mobile cad workflow"
 slug: "shapr3d-ipad-pro-mobile-cad-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

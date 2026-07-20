@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "rhino-3d"
 keyword: "Rhino freezing lagging large files performance"
 slug: "rhino-freezing-lagging-large-files-performance"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-16"
 sources:

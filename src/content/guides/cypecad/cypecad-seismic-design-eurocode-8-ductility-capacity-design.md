@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cypecad"
 keyword: "cypecad seismic design eurocode 8"
 slug: "cypecad-seismic-design-eurocode-8-ductility-capacity-design"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

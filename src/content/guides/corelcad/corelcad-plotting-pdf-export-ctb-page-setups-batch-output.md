@@ -5,7 +5,7 @@ category: "printing"
 softwareSlug: "corelcad"
 keyword: "corelcad plotting pdf export"
 slug: "corelcad-plotting-pdf-export-ctb-page-setups-batch-output"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

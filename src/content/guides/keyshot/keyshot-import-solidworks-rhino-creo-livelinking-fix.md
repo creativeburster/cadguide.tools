@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "keyshot"
 keyword: "KeyShot import SolidWorks Rhino Creo LiveLinking geometry fix"
 slug: "keyshot-import-solidworks-rhino-creo-livelinking-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:

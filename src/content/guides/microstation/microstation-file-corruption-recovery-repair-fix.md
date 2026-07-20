@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "microstation"
 keyword: "MicroStation file corruption recovery crash won't open repair"
 slug: "microstation-file-corruption-recovery-repair-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "blender"
 keyword: "Blender Cycles render slow GPU OptiX samples denoiser"
 slug: "blender-cycles-render-slow-gpu-samples-denoiser-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

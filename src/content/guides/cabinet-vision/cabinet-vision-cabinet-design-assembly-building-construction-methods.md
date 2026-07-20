@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision cabinet design assembly building construction methods material selection parametric"
 slug: "cabinet-vision-cabinet-design-assembly-building-construction-methods"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-29"
 sources:

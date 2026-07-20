@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "sap2000"
 keyword: "sap2000 nonlinear analysis"
 slug: "sap2000-nonlinear-analysis-plastic-hinges-pdelta-cable-structures"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

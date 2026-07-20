@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "solidworks"
 keyword: "solidworks import step"
 slug: "repair-imported-step-iges-knit-surface"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:

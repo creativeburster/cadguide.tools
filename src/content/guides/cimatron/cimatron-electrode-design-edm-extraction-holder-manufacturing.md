@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cimatron"
 keyword: "cimatron electrode design edm extraction holder manufacturing"
 slug: "cimatron-electrode-design-edm-extraction-holder-manufacturing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

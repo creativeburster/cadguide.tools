@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "alphacam"
 keyword: "alphacam router toolpath rough finish profiling post processor"
 slug: "alphacam-router-toolpath-rough-finish-profiling-post-processing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

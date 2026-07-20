@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "solibri"
 keyword: "solibri ruleset customization creating project specific validation rules"
 slug: "solibri-ruleset-customization-creating-project-specific-validation-rules"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

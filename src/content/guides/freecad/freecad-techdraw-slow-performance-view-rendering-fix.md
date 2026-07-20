@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "freecad"
 keyword: "FreeCAD TechDraw slow performance view rendering dimension"
 slug: "freecad-techdraw-slow-performance-view-rendering-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

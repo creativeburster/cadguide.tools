@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer retopology export Maya Blender ZBrush mesh quality"
 slug: "marvelous-designer-retopology-export-maya-blender-zbrush"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

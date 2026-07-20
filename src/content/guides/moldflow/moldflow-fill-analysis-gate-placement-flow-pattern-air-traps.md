@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "moldflow"
 keyword: "moldflow fill analysis gate placement air trap weld line"
 slug: "moldflow-fill-analysis-gate-placement-flow-pattern-air-traps"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

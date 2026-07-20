@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "trimble-connect"
 keyword: "trimble connect vs autodesk construction cloud bim platform comparison"
 slug: "trimble-connect-vs-autodesk-construction-cloud-bim-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

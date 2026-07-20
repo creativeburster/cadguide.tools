@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "enscape"
 keyword: "Enscape not loading in SketchUp plugin extension fix"
 slug: "enscape-not-loading-sketchup-extension-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

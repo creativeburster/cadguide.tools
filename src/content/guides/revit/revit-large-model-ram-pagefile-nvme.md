@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "revit"
 keyword: "revit performance large model"
 slug: "revit-large-model-ram-pagefile-nvme"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:

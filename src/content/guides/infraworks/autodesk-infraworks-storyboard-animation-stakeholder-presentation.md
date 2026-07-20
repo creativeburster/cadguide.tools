@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks storyboard animation flythrough stakeholder presentation video export"
 slug: "autodesk-infraworks-storyboard-animation-stakeholder-presentation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

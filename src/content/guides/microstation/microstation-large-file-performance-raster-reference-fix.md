@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "microstation"
 keyword: "MicroStation large file performance slow raster reference display"
 slug: "microstation-large-file-performance-raster-reference-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

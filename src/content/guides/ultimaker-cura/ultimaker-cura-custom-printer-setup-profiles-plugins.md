@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura custom printer profile non-UltiMaker setup configuration"
 slug: "ultimaker-cura-custom-printer-setup-profiles-plugins"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

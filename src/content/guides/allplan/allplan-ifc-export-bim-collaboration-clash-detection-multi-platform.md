@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "allplan"
 keyword: "allplan ifc export bim collaboration"
 slug: "allplan-ifc-export-bim-collaboration-clash-detection-multi-platform"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

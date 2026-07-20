@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "simcenter-star-ccm"
 keyword: "simcenter star-ccm+ vs ansys fluent cfd comparison"
 slug: "simcenter-star-ccm-vs-ansys-fluent-cfd-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

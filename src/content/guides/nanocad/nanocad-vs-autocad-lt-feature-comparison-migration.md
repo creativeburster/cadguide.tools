@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "nanocad"
 keyword: "nanocad vs autocad lt comparison"
 slug: "nanocad-vs-autocad-lt-feature-comparison-migration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench modal analysis natural frequencies mode shapes resonance avoidance harmonic response vibration"
 slug: "ansys-workbench-modal-analysis-natural-frequencies-mode-shapes-resonance"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

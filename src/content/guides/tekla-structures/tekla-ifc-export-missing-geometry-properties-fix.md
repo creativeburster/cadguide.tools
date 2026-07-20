@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures IFC export missing geometry properties file size"
 slug: "tekla-ifc-export-missing-geometry-properties-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

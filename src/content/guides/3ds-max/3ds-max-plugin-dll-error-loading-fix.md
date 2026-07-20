@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "3ds-max"
 keyword: "3ds Max plugin DLL error loading missing file fix"
 slug: "3ds-max-plugin-dll-error-loading-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:

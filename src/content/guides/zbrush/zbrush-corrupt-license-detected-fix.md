@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "zbrush"
 keyword: "zbrush corrupt license has been detected"
 slug: "zbrush-corrupt-license-detected-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-03"
 sources:

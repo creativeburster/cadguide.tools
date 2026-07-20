@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "optitex"
 keyword: "Optitex vs Gerber AccuMark vs Lectra Modaris apparel CAD software comparison pattern grading marker"
 slug: "optitex-vs-gerber-accumark-vs-lectra-modaris-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "ansys-workbench"
 keyword: "ansys vs abaqus fea comparison"
 slug: "ansys-workbench-vs-abaqus-fea-platform-comparison-structural-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

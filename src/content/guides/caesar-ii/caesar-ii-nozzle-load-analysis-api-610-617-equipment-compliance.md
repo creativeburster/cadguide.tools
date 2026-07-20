@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii nozzle load analysis api 610 617 equipment connection compliance"
 slug: "caesar-ii-nozzle-load-analysis-api-610-617-equipment-compliance"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

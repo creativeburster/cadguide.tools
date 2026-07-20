@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "altium-365"
 keyword: "altium 365 connection error portal365 troubleshooting"
 slug: "altium-365-connection-errors-portal365-ssl-firewall-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

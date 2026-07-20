@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "enscape"
 keyword: "Enscape materials gray not showing Revit textures fix"
 slug: "enscape-materials-gray-revit-textures-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

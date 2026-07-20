@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "kompas-3d"
 keyword: "kompas-3d vs solidworks comparison mechanical engineering cad"
 slug: "kompas-3d-vs-solidworks-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

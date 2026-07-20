@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "kicad"
 keyword: "kicad vs altium designer"
 slug: "kicad-vs-altium-designer-comparison-pcb-design-tool-choosing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

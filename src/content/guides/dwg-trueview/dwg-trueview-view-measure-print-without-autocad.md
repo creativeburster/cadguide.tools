@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "dwg-trueview"
 keyword: "dwg trueview view measure print dwg without autocad"
 slug: "dwg-trueview-view-measure-print-without-autocad"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

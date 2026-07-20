@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam 3D machining roughing finishing high-speed toolpaths complex surfaces parallel radial project rest machining dynamic CNC"
 slug: "mastercam-3d-machining-roughing-finishing-high-speed-toolpaths"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

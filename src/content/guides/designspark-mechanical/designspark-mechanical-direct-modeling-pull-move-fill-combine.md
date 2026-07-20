@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "designspark-mechanical"
 keyword: "designspark mechanical direct modeling pull move fill combine"
 slug: "designspark-mechanical-direct-modeling-pull-move-fill-combine"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

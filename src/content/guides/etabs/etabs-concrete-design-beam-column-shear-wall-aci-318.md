@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS concrete design beam column shear wall ACI 318 flexural shear interaction diagram reinforced concrete design output"
 slug: "etabs-concrete-design-beam-column-shear-wall-aci-318"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

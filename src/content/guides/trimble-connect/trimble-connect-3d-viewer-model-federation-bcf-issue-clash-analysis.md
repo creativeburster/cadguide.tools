@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "trimble-connect"
 keyword: "trimble connect 3d viewer model federation bcf issue clash analysis"
 slug: "trimble-connect-3d-viewer-model-federation-bcf-issue-clash-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

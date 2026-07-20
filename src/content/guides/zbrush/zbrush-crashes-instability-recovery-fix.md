@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "zbrush"
 keyword: "ZBrush crashing crash recovery fix"
 slug: "zbrush-crashes-instability-recovery-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

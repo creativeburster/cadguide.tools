@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "autocad-plant-3d"
 keyword: "autocad plant 3d piping specification setup catalog editor"
 slug: "autocad-plant-3d-piping-specification-setup-catalog-editor"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

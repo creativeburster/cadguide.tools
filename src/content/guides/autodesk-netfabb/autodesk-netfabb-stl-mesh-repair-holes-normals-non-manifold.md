@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb STL mesh repair holes inverted normals non-manifold edges fix"
 slug: "autodesk-netfabb-stl-mesh-repair-holes-normals-non-manifold"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

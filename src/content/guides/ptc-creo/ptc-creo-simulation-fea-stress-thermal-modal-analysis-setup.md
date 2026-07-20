@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo simulation FEA stress analysis thermal modal analysis mesh boundary conditions loads results"
 slug: "ptc-creo-simulation-fea-stress-thermal-modal-analysis-setup"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "midas-gen"
 keyword: "midas gen vs etabs comparison"
 slug: "midas-gen-vs-etabs-building-analysis-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

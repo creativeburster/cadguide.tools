@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bimcollab"
 keyword: "bimcollab bcf manager revit plugin live issue sync viewpoint"
 slug: "bimcollab-bcf-manager-revit-plugin-live-issue-sync-viewpoint"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

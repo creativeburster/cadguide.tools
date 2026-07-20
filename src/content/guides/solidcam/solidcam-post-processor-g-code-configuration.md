@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "solidcam"
 keyword: "solidcam post processor g-code configuration"
 slug: "solidcam-post-processor-g-code-configuration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

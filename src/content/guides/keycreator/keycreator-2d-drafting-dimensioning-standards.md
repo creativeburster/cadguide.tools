@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "keycreator"
 keyword: "keycreator 2d drafting dimensioning standards drawing"
 slug: "keycreator-2d-drafting-dimensioning-standards"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "alibre-design"
 keyword: "alibre design step iges stl export manufacturing"
 slug: "alibre-design-step-iges-stl-export-manufacturing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

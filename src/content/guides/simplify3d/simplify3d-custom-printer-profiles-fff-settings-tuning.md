@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D custom printer profile FFF settings configuration assistant tuning"
 slug: "simplify3d-custom-printer-profiles-fff-settings-tuning"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

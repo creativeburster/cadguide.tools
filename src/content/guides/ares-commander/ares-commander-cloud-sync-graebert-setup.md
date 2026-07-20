@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "ares-commander"
 keyword: "ares commander cloud sync graebert setup"
 slug: "ares-commander-cloud-sync-graebert-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

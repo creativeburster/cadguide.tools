@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-discovery"
 keyword: "ansys discovery structural simulation stress analysis setup"
 slug: "ansys-discovery-structural-simulation-stress-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

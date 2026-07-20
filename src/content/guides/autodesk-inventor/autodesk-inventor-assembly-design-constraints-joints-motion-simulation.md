@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor assembly design constraints joints motion simulation interference detection exploded views"
 slug: "autodesk-inventor-assembly-design-constraints-joints-motion-simulation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

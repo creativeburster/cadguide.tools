@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "sketchup"
 keyword: "SketchUp large model performance edge count file size"
 slug: "sketchup-large-model-performance-edge-count-tags"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

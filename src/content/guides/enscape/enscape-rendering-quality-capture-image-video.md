@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "enscape"
 keyword: "Enscape rendering quality capture image video panorama settings"
 slug: "enscape-rendering-quality-capture-image-video"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:

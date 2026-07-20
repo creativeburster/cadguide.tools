@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "enscape"
 keyword: "Enscape crash black screen loading error fix"
 slug: "enscape-crash-black-screen-loading-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

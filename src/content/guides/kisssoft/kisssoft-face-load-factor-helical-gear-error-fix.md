@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "kisssoft"
 keyword: "kisssoft face load factor khbeta helical gear error fix"
 slug: "kisssoft-face-load-factor-helical-gear-error-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

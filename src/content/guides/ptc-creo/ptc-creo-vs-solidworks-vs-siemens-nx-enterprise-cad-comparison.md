@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo vs SolidWorks vs Siemens NX enterprise 3D CAD comparison modeling assembly simulation PLM surface"
 slug: "ptc-creo-vs-solidworks-vs-siemens-nx-enterprise-cad-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

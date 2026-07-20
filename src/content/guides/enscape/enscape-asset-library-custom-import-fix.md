@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "enscape"
 keyword: "Enscape asset library not loading custom asset import fix"
 slug: "enscape-asset-library-custom-import-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-25"
 sources:

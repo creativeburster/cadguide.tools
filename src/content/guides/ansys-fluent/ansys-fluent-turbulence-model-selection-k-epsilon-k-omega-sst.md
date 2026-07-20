@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-fluent"
 keyword: "ansys fluent turbulence model selection k-epsilon k-omega sst spalart-allmaras"
 slug: "ansys-fluent-turbulence-model-selection-k-epsilon-k-omega-sst"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

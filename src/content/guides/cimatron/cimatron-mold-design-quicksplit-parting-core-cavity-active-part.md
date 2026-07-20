@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cimatron"
 keyword: "cimatron mold design quicksplit parting core cavity active part"
 slug: "cimatron-mold-design-quicksplit-parting-core-cavity-active-part"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

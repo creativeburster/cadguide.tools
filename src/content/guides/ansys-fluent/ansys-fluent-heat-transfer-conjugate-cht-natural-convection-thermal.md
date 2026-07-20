@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-fluent"
 keyword: "ansys fluent heat transfer conjugate cht natural convection thermal boundary"
 slug: "ansys-fluent-heat-transfer-conjugate-cht-natural-convection-thermal"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

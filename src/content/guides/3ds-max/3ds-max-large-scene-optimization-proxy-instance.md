@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "3ds-max"
 keyword: "3ds Max large scene optimization proxy instance memory"
 slug: "3ds-max-large-scene-optimization-proxy-instance"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-23"
 sources:

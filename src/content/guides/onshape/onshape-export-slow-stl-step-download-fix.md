@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "onshape"
 keyword: "Onshape export slow STL STEP file download problem"
 slug: "onshape-export-slow-stl-step-download-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

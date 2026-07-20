@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio speed tuning volumetric flow acceleration profile optimization"
 slug: "bambu-studio-speed-tuning-volumetric-flow-acceleration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

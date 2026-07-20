@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "turbocad"
 keyword: "turbocad vs autocad comparison"
 slug: "turbocad-vs-autocad-feature-comparison-pricing-migration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

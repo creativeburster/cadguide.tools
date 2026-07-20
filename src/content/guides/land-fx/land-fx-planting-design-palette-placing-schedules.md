@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "land-fx"
 keyword: "land f/x planting design palette schedule autoCAD"
 slug: "land-fx-planting-design-palette-placing-schedules"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

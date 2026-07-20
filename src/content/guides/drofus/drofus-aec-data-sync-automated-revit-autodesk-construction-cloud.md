@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "drofus"
 keyword: "drofus aec data sync automated revit autodesk construction cloud"
 slug: "drofus-aec-data-sync-automated-revit-autodesk-construction-cloud"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

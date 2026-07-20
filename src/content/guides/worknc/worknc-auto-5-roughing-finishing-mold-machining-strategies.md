@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "worknc"
 keyword: "worknc auto 5 roughing finishing mold machining toolpath"
 slug: "worknc-auto-5-roughing-finishing-mold-machining-strategies"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

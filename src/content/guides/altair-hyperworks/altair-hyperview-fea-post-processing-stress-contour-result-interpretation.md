@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-hyperworks"
 keyword: "altair hyperview fea post-processing stress contour result interpretation report"
 slug: "altair-hyperview-fea-post-processing-stress-contour-result-interpretation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "zw3d"
 keyword: "zw3d 2025 crash closing views sp2 fix"
 slug: "zw3d-2025-sp2-crash-closing-views-workaround"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "6 min read"
 date: "2026-07-12"
 sources:

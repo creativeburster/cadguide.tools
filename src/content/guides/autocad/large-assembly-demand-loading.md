@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "autocad"
 keyword: "autocad performance"
 slug: "large-assembly-demand-loading"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-25"
 sources:

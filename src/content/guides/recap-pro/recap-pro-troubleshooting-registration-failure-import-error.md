@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "recap-pro"
 keyword: "recap pro troubleshooting registration failure import error scanner compatibility"
 slug: "recap-pro-troubleshooting-registration-failure-import-error"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

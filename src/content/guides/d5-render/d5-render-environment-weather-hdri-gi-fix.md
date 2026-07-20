@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "d5-render"
 keyword: "D5 Render environment weather HDRI GI settings fix"
 slug: "d5-render-environment-weather-hdri-gi-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

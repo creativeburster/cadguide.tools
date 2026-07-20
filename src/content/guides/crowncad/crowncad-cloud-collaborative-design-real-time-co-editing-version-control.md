@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "crowncad"
 keyword: "crowncad cloud collaborative design real-time co-editing version control"
 slug: "crowncad-cloud-collaborative-design-real-time-co-editing-version-control"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

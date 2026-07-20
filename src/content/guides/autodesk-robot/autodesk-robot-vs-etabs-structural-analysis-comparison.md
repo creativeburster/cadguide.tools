@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "autodesk-robot"
 keyword: "autodesk robot vs etabs structural analysis comparison"
 slug: "autodesk-robot-vs-etabs-structural-analysis-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

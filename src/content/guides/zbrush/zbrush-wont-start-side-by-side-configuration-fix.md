@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "zbrush"
 keyword: "ZBrush won't start side-by-side configuration incorrect error"
 slug: "zbrush-wont-start-side-by-side-configuration-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:

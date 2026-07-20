@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "autodesk-construction-cloud"
 keyword: "autodesk construction cloud docs vs design collaboration module"
 slug: "autodesk-construction-cloud-docs-vs-design-collaboration-module"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

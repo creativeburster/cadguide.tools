@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "ansys-fluent"
 keyword: "ansys fluent vs cfx cfd solver comparison pressure-based coupled"
 slug: "ansys-fluent-vs-cfx-cfd-solver-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

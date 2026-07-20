@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "solidworks"
 keyword: "solidworks license error"
 slug: "fix-solidworks-license-error-5-no-feature"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:

@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "opencascade"
 keyword: "opencascade technology OCCT BRep topology TopoDS C++ developer"
 slug: "opencascade-technology-occt-developer-guide-brep-topology"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-13"
 sources:

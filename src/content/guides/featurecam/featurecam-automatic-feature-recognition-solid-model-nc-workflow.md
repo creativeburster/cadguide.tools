@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "featurecam"
 keyword: "featurecam automatic feature recognition AFR solid model"
 slug: "featurecam-automatic-feature-recognition-solid-model-nc-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ares-commander"
 keyword: "ares commander gis shapefile coordinate transformation"
 slug: "ares-commander-gis-shapefile-coordinate-transformation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures complex items performance shape cleaner DirectX"
 slug: "tekla-complex-items-performance-shape-cleaner-directx"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:

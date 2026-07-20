@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys convergence error nonlinear contact friction"
 slug: "ansys-nonlinear-convergence-solver-unable-converge"
-author: "FEA Analyst"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-15"
 sources:

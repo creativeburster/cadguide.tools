@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor slow performance large assembly model states"
 slug: "inventor-slow-performance-large-models-model-states"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-15"
 sources:

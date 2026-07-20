@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "bricscad"
 keyword: "bricscad 25 crash with large dwg"
 slug: "bricscad-25-large-dwg-crash-stability-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-03"
 sources:

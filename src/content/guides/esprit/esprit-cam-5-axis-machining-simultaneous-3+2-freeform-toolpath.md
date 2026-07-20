@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "esprit"
 keyword: "esprit cam 5 axis machining simultaneous 3+2 freeform"
 slug: "esprit-cam-5-axis-machining-simultaneous-3+2-freeform-toolpath"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

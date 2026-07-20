@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter baking mesh map error cage normal fix"
 slug: "substance-painter-baking-mesh-map-cage-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:

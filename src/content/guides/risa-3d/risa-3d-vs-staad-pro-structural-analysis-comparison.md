@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "risa-3d"
 keyword: "risa-3d vs staad pro structural analysis comparison"
 slug: "risa-3d-vs-staad-pro-structural-analysis-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

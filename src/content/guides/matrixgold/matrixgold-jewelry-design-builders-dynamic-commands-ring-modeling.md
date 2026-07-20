@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold jewelry design builders dynamic commands ring modeling profile placer"
 slug: "matrixgold-jewelry-design-builders-dynamic-commands-ring-modeling"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:

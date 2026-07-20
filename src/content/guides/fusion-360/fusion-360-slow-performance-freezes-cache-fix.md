@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 slow performance freezes graphics driver cache"
 slug: "fusion-360-slow-performance-freezes-cache-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

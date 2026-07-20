@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo assembly design component placement mechanism connections simplified representations interference checking"
 slug: "ptc-creo-assembly-design-component-placement-mechanism-connections-simplified"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

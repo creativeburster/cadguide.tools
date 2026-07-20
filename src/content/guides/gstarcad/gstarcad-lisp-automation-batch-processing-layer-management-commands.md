@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gstarcad"
 keyword: "gstarcad lisp automation"
 slug: "gstarcad-lisp-automation-batch-processing-layer-management-commands"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

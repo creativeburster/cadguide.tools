@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark MTM made-to-measure YuniquePLM integration custom apparel product lifecycle management"
 slug: "gerber-accumark-mtm-yuniqueplm-integration-custom-apparel-plm"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

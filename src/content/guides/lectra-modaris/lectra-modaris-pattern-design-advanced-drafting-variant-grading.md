@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Modaris pattern design advanced drafting variant management size grading fashion production"
 slug: "lectra-modaris-pattern-design-advanced-drafting-variant-grading"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

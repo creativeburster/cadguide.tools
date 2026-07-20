@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "hypermill"
 keyword: "hypermill 5-axis collision avoidance automatic tilt strategy tool angle"
 slug: "hypermill-5-axis-collision-avoidance-tilt-strategy"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

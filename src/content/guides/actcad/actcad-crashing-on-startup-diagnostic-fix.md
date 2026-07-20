@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "actcad"
 keyword: "actcad crash on startup fix"
 slug: "actcad-crashing-on-startup-diagnostic-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

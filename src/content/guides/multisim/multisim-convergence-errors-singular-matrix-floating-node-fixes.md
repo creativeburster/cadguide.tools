@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "multisim"
 keyword: "multisim convergence error singular matrix floating node"
 slug: "multisim-convergence-errors-singular-matrix-floating-node-fixes"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

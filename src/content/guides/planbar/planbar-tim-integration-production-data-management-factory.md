@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "planbar"
 keyword: "planbar TIM technical information manager production data factory"
 slug: "planbar-tim-integration-production-data-management-factory"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

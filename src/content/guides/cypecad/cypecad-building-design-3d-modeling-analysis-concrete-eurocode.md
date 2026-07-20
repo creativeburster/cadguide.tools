@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cypecad"
 keyword: "cypecad building design"
 slug: "cypecad-building-design-3d-modeling-analysis-concrete-eurocode"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

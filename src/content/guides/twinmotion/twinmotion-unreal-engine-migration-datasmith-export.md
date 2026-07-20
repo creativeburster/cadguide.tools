@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion Unreal Engine migration Datasmith export workflow"
 slug: "twinmotion-unreal-engine-migration-datasmith-export"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:

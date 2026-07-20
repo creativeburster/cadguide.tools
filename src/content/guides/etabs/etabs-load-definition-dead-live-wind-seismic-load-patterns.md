@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS load definition dead live wind seismic load patterns combinations ASCE 7 response spectrum building analysis"
 slug: "etabs-load-definition-dead-live-wind-seismic-load-patterns"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

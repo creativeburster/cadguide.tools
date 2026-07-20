@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "solidworks"
 keyword: "solidworks large assembly"
 slug: "solidworks-large-assembly-performance-tuning"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:

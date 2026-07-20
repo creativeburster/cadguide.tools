@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autocad-plant-3d"
 keyword: "autocad plant 3d isometric generation pcf iso setup"
 slug: "autocad-plant-3d-isometric-generation-pcf-iso-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

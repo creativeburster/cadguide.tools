@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii support modeling resting guide anchor spring hanger selection"
 slug: "caesar-ii-support-modeling-resting-guide-anchor-spring-hanger"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

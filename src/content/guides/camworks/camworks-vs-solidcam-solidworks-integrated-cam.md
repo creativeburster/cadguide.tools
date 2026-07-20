@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "camworks"
 keyword: "camworks vs solidcam solidworks integrated cam"
 slug: "camworks-vs-solidcam-solidworks-integrated-cam"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

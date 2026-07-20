@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D avatar setup custom body dressing arrangement points fit verification"
 slug: "clo-3d-avatar-dressing-workflow-custom-body-fit-verification"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

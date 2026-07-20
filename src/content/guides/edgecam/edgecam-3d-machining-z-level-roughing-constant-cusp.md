@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "edgecam"
 keyword: "edgecam 3d machining z-level roughing constant cusp"
 slug: "edgecam-3d-machining-z-level-roughing-constant-cusp"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

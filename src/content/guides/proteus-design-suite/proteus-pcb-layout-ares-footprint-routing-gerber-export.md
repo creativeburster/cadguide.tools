@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "proteus-design-suite"
 keyword: "proteus pcb layout ares footprint routing gerber export"
 slug: "proteus-pcb-layout-ares-footprint-routing-gerber-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

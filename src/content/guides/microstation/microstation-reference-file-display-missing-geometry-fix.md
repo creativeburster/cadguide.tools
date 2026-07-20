@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "microstation"
 keyword: "MicroStation reference file display missing geometry coordinates level"
 slug: "microstation-reference-file-display-missing-geometry-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

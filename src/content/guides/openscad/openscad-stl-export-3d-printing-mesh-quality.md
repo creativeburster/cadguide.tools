@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "openscad"
 keyword: "openscad stl export 3d printing mesh quality"
 slug: "openscad-stl-export-3d-printing-mesh-quality"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ironcad"
 keyword: "ironcad catalog smart components block library"
 slug: "ironcad-catalog-smart-components-block-library"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

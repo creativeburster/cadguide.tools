@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "onshape"
 keyword: "Onshape mate connector errors failed over-constrained assembly"
 slug: "onshape-mate-connector-errors-over-constrained-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:

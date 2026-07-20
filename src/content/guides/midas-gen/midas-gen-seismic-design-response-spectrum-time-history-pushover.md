@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "midas-gen"
 keyword: "midas gen seismic design"
 slug: "midas-gen-seismic-design-response-spectrum-time-history-pushover"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

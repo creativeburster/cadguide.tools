@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "zwcad"
 keyword: "zwcad network license floating setup"
 slug: "zwcad-network-license-setup-cloud-floating"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

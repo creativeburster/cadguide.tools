@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altium-365"
 keyword: "altium 365 codesigner ecad mcad solidworks sync"
 slug: "altium-365-codesigner-ecad-mcad-solidworks-sync-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

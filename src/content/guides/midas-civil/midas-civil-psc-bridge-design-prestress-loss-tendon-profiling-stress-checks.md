@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "midas-civil"
 keyword: "midas civil psc bridge design"
 slug: "midas-civil-psc-bridge-design-prestress-loss-tendon-profiling-stress-checks"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

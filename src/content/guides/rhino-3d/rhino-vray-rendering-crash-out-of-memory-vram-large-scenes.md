@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "rhino-3d"
 keyword: "vray rendering crash rhino"
 slug: "rhino-vray-rendering-crash-out-of-memory-vram-large-scenes"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

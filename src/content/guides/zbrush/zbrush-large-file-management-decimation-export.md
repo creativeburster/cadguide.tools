@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "zbrush"
 keyword: "ZBrush large file size decimation export workflow"
 slug: "zbrush-large-file-management-decimation-export"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-23"
 sources:

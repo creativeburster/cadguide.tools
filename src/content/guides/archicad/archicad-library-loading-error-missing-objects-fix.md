@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "archicad"
 keyword: "ArchiCAD library loading error missing objects duplicate migration"
 slug: "archicad-library-loading-error-missing-objects-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-22"
 sources:

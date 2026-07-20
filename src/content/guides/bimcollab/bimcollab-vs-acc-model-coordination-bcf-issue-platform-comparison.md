@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "bimcollab"
 keyword: "bimcollab vs acc model coordination bcf issue platform comparison"
 slug: "bimcollab-vs-acc-model-coordination-bcf-issue-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

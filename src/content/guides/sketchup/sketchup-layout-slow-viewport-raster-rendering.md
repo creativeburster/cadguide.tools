@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "sketchup"
 keyword: "SketchUp LayOut slow viewport update raster rendering"
 slug: "sketchup-layout-slow-viewport-raster-rendering"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

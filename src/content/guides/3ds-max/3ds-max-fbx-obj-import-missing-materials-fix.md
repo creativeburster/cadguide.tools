@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "3ds-max"
 keyword: "3ds Max FBX import missing materials OBJ textures fix"
 slug: "3ds-max-fbx-obj-import-missing-materials-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

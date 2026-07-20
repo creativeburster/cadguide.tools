@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "lumion"
 keyword: "Lumion performance slow FPS render time optimization"
 slug: "lumion-performance-optimization-fps-render-time"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

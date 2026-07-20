@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bricscad"
 keyword: "bricscad bim modeling"
 slug: "bricscad-bim-modeling-walls-slabs-roofs-2d-plan-3d"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:

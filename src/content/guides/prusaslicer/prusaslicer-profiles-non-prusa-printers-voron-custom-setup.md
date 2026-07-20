@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer profiles non-Prusa printers Voron Bambu custom setup"
 slug: "prusaslicer-profiles-non-prusa-printers-voron-custom-setup"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "camworks"
 keyword: "camworks technology database setup templates"
 slug: "camworks-technology-database-templates-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

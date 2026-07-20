@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision room layout elevations wall placement countertops 3D visualization kitchen bath"
 slug: "cabinet-vision-room-layout-elevations-countertops-3d-visualization"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

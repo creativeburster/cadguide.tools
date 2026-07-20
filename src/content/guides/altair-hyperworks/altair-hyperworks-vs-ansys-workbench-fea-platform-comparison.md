@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "altair-hyperworks"
 keyword: "altair hyperworks vs ansys workbench fea platform comparison structural analysis"
 slug: "altair-hyperworks-vs-ansys-workbench-fea-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

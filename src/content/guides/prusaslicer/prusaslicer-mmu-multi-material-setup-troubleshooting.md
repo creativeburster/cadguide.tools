@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer MMU multi-material wipe tower purging filament tip"
 slug: "prusaslicer-mmu-multi-material-setup-troubleshooting"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:

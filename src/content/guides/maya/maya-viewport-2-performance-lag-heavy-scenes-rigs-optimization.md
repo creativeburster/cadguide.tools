@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "maya"
 keyword: "maya viewport performance lag"
 slug: "maya-viewport-2-performance-lag-heavy-scenes-rigs-optimization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:

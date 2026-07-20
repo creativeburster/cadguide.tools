@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "ptc-creo"
 keyword: "Creo large assembly simplified representations performance"
 slug: "creo-large-assembly-simplified-representations"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-19"
 sources:

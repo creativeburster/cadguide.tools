@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "orcad"
 keyword: "orcad library management centralized component database"
 slug: "orcad-library-management-centralized-component-database"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

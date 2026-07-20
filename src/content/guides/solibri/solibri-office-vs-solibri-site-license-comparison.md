@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "solibri"
 keyword: "solibri office vs solibri site license comparison features"
 slug: "solibri-office-vs-solibri-site-license-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys contact friction penetration pinball radius"
 slug: "ansys-contact-modeling-friction-penetration-pinball"
-author: "FEA Analyst"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-17"
 sources:

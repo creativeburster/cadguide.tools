@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio AMS multi-color printing setup troubleshooting"
 slug: "bambu-studio-ams-multi-color-setup-troubleshooting"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

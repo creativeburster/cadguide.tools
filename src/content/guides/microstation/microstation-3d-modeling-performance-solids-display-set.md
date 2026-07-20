@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "microstation"
 keyword: "MicroStation 3D modeling performance solids surfaces display set"
 slug: "microstation-3d-modeling-performance-solids-display-set"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

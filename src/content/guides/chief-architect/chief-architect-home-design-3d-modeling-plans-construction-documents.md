@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "chief-architect"
 keyword: "chief architect home design"
 slug: "chief-architect-home-design-3d-modeling-plans-construction-documents"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

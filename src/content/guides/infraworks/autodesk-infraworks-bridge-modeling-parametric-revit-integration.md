@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks bridge modeling parametric piers abutments deck Revit integration workflow"
 slug: "autodesk-infraworks-bridge-modeling-parametric-revit-integration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

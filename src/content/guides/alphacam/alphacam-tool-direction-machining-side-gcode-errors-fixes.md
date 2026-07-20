@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "alphacam"
 keyword: "alphacam tool direction error g-code collision fix"
 slug: "alphacam-tool-direction-machining-side-gcode-errors-fixes"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

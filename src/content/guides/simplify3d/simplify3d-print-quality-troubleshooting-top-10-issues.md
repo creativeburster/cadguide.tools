@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D print quality troubleshooting warping stringing layer shifting adhesion"
 slug: "simplify3d-print-quality-troubleshooting-top-10-issues"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:

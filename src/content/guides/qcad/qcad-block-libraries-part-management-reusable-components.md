@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "qcad"
 keyword: "qcad block library"
 slug: "qcad-block-libraries-part-management-reusable-components"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

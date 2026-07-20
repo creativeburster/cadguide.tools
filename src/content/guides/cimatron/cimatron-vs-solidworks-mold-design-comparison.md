@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "cimatron"
 keyword: "cimatron vs solidworks mold design comparison dedicated mold tool"
 slug: "cimatron-vs-solidworks-mold-design-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

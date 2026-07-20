@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "siemens-nx"
 keyword: "NX license borrow freeze not responding"
 slug: "siemens-nx-license-borrow-freeze-not-responding"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-17"
 sources:

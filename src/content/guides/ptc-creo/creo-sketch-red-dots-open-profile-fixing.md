@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo sketch red dots open profile unconnected entities"
 slug: "creo-sketch-red-dots-open-profile-fixing"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-18"
 sources:

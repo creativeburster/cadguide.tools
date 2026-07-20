@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio tree supports fuzzy skin support painting configuration"
 slug: "bambu-studio-tree-supports-fuzzy-skin-guide"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

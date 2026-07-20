@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "3ds-max"
 keyword: "3ds Max random crash freeze no error message fix"
 slug: "3ds-max-random-crashes-diagnostic-guide"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

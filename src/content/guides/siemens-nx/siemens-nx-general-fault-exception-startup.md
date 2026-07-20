@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "siemens-nx"
 keyword: "NX general fault exception"
 slug: "siemens-nx-general-fault-exception-startup"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-15"
 sources:

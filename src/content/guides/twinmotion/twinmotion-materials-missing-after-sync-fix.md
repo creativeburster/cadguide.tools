@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion materials missing after sync update fix"
 slug: "twinmotion-materials-missing-after-sync-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

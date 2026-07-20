@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor iLogic automation drawing creation BOM"
 slug: "inventor-ilogic-automation-drawing-creation-bom"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-19"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "rhino-3d"
 keyword: "Rhino won't start crash coreclr.dll"
 slug: "rhino-wont-start-windows-update-cpp-runtime"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min"
 date: "2025-06-15"
 sources:

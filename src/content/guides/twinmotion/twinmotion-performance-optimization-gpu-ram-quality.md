@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion performance optimization GPU RAM quality settings"
 slug: "twinmotion-performance-optimization-gpu-ram-quality"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-21"
 sources:

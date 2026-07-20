@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "revit"
 keyword: "revit ifc export"
 slug: "revit-ifc-export-missing-parameters-mapping"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:

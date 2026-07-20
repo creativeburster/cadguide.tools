@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "openscad"
 keyword: "openscad vs freecad open source comparison"
 slug: "openscad-vs-freecad-open-source-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

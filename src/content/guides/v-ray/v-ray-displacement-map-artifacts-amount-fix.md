@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "v-ray"
 keyword: "V-Ray displacement map artifacts amount direction fix 3ds Max"
 slug: "v-ray-displacement-map-artifacts-amount-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-24"
 sources:

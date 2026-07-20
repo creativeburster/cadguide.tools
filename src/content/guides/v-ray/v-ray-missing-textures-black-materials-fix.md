@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "v-ray"
 keyword: "V-Ray missing textures black materials file path fix"
 slug: "v-ray-missing-textures-black-materials-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

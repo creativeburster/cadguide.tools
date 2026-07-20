@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys thermal stress coupled analysis convergence"
 slug: "ansys-thermal-stress-coupled-analysis-convergence"
-author: "FEA Analyst"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-19"
 sources:

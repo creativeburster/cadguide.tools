@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb vs Meshmixer vs Magics STL repair tool comparison 3D printing"
 slug: "autodesk-netfabb-vs-meshmixer-vs-magics-stl-repair-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

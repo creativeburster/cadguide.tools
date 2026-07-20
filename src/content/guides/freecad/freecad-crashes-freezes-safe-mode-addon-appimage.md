@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD crashes freezes safe mode add-on conflict AppImage"
 slug: "freecad-crashes-freezes-safe-mode-addon-appimage"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

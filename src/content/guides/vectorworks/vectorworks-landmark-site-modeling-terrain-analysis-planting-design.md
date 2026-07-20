@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "vectorworks"
 keyword: "vectorworks landmark landscape"
 slug: "vectorworks-landmark-site-modeling-terrain-analysis-planting-design"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

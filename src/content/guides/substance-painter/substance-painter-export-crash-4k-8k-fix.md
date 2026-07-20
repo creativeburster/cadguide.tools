@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter export crash 4K 8K virtual memory TDR fix"
 slug: "substance-painter-export-crash-4k-8k-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

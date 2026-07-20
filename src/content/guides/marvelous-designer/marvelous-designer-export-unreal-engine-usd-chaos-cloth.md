@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer export Unreal Engine USD Chaos Cloth LiveSync"
 slug: "marvelous-designer-export-unreal-engine-usd-chaos-cloth"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-22"
 sources:

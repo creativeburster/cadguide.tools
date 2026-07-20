@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bricscad"
 keyword: "bricscad autocad compatibility"
 slug: "bricscad-dwg-compatibility-autocad-workflow-transition"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

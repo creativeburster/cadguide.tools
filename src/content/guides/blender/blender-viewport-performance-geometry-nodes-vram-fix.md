@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "blender"
 keyword: "Blender viewport performance slow geometry nodes modifier VRAM"
 slug: "blender-viewport-performance-geometry-nodes-vram-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

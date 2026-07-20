@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "topsolid"
 keyword: "topsolid wood parametric furniture design cnc manufacturing"
 slug: "topsolid-wood-parametric-furniture-design-manufacturing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

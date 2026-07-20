@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer avatar setup custom character garment fitting arrangement points"
 slug: "marvelous-designer-avatar-setup-garment-fitting-custom-characters"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

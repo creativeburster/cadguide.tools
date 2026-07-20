@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex nesting cut order optimization fabric efficiency marker making production apparel"
 slug: "optitex-nesting-cut-order-optimization-fabric-efficiency"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

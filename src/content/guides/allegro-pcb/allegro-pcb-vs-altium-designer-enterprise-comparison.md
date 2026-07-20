@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "allegro-pcb"
 keyword: "allegro pcb vs altium designer comparison enterprise"
 slug: "allegro-pcb-vs-altium-designer-enterprise-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

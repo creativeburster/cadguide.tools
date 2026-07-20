@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "powermill"
 keyword: "powermill toolpath templates"
 slug: "powermill-toolpath-templates-reusable-cam-strategies-repeatable-production"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 drawing performance slow viewport dimension export"
 slug: "fusion-360-drawing-performance-viewport-dimension-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

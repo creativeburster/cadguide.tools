@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "corelcad"
 keyword: "corelcad 3d modeling"
 slug: "corelcad-3d-modeling-extrude-revolve-boolean-stl-export"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

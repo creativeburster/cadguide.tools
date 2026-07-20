@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "zbrush"
 keyword: "ZBrush brush lag stuttering sculpting performance fix"
 slug: "zbrush-brush-lag-stuttering-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-20"
 sources:

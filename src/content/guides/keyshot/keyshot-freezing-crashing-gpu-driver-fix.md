@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "keyshot"
 keyword: "KeyShot freezing crashing GPU driver conflict fix"
 slug: "keyshot-freezing-crashing-gpu-driver-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer pressure advance input shaping calibration Klipper"
 slug: "prusaslicer-pressure-advance-input-shaping-calibration"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

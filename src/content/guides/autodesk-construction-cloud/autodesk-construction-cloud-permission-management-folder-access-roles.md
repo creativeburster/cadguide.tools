@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "autodesk-construction-cloud"
 keyword: "autodesk construction cloud permission management folder access roles"
 slug: "autodesk-construction-cloud-permission-management-folder-access-roles"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

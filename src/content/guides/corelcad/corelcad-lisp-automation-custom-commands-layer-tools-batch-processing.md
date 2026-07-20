@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "corelcad"
 keyword: "corelcad lisp automation"
 slug: "corelcad-lisp-automation-custom-commands-layer-tools-batch-processing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

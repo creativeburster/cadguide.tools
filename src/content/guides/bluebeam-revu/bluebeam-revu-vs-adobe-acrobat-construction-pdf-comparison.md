@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "bluebeam-revu"
 keyword: "bluebeam revu vs adobe acrobat"
 slug: "bluebeam-revu-vs-adobe-acrobat-construction-pdf-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

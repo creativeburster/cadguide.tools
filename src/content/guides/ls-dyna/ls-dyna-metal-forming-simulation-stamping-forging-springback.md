@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ls-dyna"
 keyword: "ls-dyna metal forming simulation"
 slug: "ls-dyna-metal-forming-simulation-stamping-forging-springback"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

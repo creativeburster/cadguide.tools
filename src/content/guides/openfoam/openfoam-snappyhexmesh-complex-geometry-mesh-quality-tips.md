@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "openfoam"
 keyword: "openfoam snappyhexmesh complex geometry mesh quality"
 slug: "openfoam-snappyhexmesh-complex-geometry-mesh-quality-tips"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

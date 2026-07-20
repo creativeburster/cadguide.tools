@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey setup coordinate system data import"
 slug: "carlson-survey-setup-coordinate-system-data-import"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

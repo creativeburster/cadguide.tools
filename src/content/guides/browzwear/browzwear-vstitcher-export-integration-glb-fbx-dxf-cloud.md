@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher export GLB FBX DXF Browzwear Cloud integration workflow"
 slug: "browzwear-vstitcher-export-integration-glb-fbx-dxf-cloud"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

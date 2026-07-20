@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "tinkercad"
 keyword: "tinkercad classroom setup students 3d design education"
 slug: "tinkercad-classroom-setup-students-3d-design-education"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

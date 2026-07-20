@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simscale"
 keyword: "simscale workflow collaboration"
 slug: "simscale-workflow-collaboration-project-setup-mesh-import-team-sharing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

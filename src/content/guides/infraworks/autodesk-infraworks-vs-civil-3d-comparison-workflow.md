@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks vs Civil 3D comparison preliminary detailed civil design workflow"
 slug: "autodesk-infraworks-vs-civil-3d-comparison-workflow"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

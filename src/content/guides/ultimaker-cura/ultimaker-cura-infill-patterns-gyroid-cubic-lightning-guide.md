@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura infill patterns gyroid cubic grid lightning comparison"
 slug: "ultimaker-cura-infill-patterns-gyroid-cubic-lightning-guide"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

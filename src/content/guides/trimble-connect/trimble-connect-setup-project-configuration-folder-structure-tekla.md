@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "trimble-connect"
 keyword: "trimble connect setup project configuration folder structure tekla"
 slug: "trimble-connect-setup-project-configuration-folder-structure-tekla"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

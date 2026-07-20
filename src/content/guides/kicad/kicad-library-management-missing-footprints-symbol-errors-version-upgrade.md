@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "kicad"
 keyword: "kicad library management footprint"
 slug: "kicad-library-management-missing-footprints-symbol-errors-version-upgrade"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "allegro-pcb"
 keyword: "allegro pcb high speed constraint manager differential pairs"
 slug: "allegro-pcb-high-speed-constraint-manager-differential-pairs"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

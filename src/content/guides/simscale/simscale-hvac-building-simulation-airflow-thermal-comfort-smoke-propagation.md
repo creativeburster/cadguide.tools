@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simscale"
 keyword: "simscale hvac building simulation"
 slug: "simscale-hvac-building-simulation-airflow-thermal-comfort-smoke-propagation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

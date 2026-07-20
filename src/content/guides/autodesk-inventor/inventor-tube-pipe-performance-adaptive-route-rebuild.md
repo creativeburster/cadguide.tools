@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor tube and pipe performance adaptive route rebuild"
 slug: "inventor-tube-pipe-performance-adaptive-route-rebuild"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-18"
 sources:

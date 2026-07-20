@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys Workbench parametric study design optimization"
 slug: "ansys-workbench-parametric-study-optimization"
-author: "FEA Analyst"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-18"
 sources:

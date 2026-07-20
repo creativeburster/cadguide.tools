@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter VRAM out of memory crash TDR fix"
 slug: "substance-painter-vram-out-of-memory-crash-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-20"
 sources:

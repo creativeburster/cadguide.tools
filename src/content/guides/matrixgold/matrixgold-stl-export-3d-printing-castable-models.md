@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold STL export 3D printing jewelry castable models rapid prototyping investment casting"
 slug: "matrixgold-stl-export-3d-printing-castable-models"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

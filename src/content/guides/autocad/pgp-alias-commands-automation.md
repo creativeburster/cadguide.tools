@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "autocad"
 keyword: "autocad shortcuts"
 slug: "pgp-alias-commands-automation"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-25"
 sources:

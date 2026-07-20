@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "keyshot"
 keyword: "KeyShot material texture mapping UV label environment fix"
 slug: "keyshot-material-texture-mapping-uv-label-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

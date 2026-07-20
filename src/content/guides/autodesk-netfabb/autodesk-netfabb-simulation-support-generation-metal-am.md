@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb simulation support generation metal additive manufacturing SLM DMLS distortion"
 slug: "autodesk-netfabb-simulation-support-generation-metal-am"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

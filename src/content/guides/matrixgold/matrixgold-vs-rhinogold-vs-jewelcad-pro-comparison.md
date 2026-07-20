@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold vs RhinoGold vs JewelCAD Pro jewelry CAD software comparison features"
 slug: "matrixgold-vs-rhinogold-vs-jewelcad-pro-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

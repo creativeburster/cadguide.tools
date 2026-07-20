@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "turbocad"
 keyword: "turbocad 2d drafting mechanical"
 slug: "turbocad-2d-drafting-mechanical-design-interface-tools-dwg-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

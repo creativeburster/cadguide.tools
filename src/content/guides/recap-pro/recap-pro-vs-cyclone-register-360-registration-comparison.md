@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "recap-pro"
 keyword: "recap pro vs cyclone register 360 point cloud registration comparison"
 slug: "recap-pro-vs-cyclone-register-360-registration-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

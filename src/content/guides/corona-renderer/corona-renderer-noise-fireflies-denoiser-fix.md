@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer noise fireflies denoiser MSI fix"
 slug: "corona-renderer-noise-fireflies-denoiser-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

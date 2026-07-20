@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "comsol-multiphysics"
 keyword: "comsol multiphysics coupling"
 slug: "comsol-multiphysics-coupling-structural-thermal-fluid-structure-electromagnetic"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

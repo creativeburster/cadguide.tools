@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "geomagic-design-x"
 keyword: "geomagic design x vs meshlab scan processing comparison"
 slug: "geomagic-design-x-vs-meshlab-scan-processing-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "geomagic-design-x"
 keyword: "geomagic design x auto surfacing non-manifold mesh error fix"
 slug: "geomagic-design-x-auto-surfacing-non-manifold-mesh-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-12"
 sources:

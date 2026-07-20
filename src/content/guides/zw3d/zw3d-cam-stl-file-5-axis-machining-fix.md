@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "zw3d"
 keyword: "zw3d cam stl file 5-axis machining not recognized"
 slug: "zw3d-cam-stl-file-5-axis-machining-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

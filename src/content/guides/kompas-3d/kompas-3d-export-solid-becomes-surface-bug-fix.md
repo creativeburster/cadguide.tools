@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "kompas-3d"
 keyword: "kompas-3d export solid becomes surface step x_t sat bug"
 slug: "kompas-3d-export-solid-becomes-surface-bug-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

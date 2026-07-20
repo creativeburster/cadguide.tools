@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "altair-inspire"
 keyword: "altair inspire topology optimization fails contact error fix"
 slug: "altair-inspire-topology-optimization-fails-contact-errors"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

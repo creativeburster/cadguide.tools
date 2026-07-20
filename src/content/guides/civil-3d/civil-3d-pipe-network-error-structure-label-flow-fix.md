@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D pipe network error structure label flow direction profile"
 slug: "civil-3d-pipe-network-error-structure-label-flow-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

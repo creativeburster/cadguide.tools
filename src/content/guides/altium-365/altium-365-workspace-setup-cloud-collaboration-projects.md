@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "altium-365"
 keyword: "altium 365 workspace setup collaboration"
 slug: "altium-365-workspace-setup-cloud-collaboration-projects"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

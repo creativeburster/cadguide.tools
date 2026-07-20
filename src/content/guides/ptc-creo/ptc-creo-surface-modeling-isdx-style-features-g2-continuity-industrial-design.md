@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo surface modeling ISDX Style features G2 continuity industrial design Class-A surfaces curve creation"
 slug: "ptc-creo-surface-modeling-isdx-style-features-g2-continuity-industrial-design"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

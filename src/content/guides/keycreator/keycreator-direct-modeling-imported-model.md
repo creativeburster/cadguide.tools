@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "keycreator"
 keyword: "keycreator direct modeling imported model edit"
 slug: "keycreator-direct-modeling-imported-model"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

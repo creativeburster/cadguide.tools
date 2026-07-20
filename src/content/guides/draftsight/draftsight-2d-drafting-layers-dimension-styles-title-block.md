@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "draftsight"
 keyword: "draftsight 2d drafting"
 slug: "draftsight-2d-drafting-layers-dimension-styles-title-block"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures drawing creation slow numbering database optimization"
 slug: "tekla-drawing-creation-slow-numbering-database-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-23"
 sources:

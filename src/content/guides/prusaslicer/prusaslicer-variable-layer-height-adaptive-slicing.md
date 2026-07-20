@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer variable layer height adaptive slicing configuration"
 slug: "prusaslicer-variable-layer-height-adaptive-slicing"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

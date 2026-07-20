@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-hyperworks"
 keyword: "altair hyperstudy doe response surface parameter optimization robustness"
 slug: "altair-hyperstudy-doe-response-surface-parameter-optimization-robustness"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

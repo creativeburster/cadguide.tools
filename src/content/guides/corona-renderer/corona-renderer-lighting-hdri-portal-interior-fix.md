@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer lighting HDRI light portal interior fix"
 slug: "corona-renderer-lighting-hdri-portal-interior-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-23"
 sources:

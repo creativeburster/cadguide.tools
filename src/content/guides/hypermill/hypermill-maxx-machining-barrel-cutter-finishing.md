@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "hypermill"
 keyword: "hypermill maxx machining barrel cutter conical finishing strategy"
 slug: "hypermill-maxx-machining-barrel-cutter-finishing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-12"
 sources:

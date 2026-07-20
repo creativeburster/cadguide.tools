@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "openfoam"
 keyword: "openfoam solver selection incompressible compressible multiphase"
 slug: "openfoam-solver-selection-incompressible-compressible-multiphase"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

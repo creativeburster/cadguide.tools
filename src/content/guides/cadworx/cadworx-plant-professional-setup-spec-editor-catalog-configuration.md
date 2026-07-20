@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "cadworx"
 keyword: "cadworx plant professional setup spec editor catalog configuration"
 slug: "cadworx-plant-professional-setup-spec-editor-catalog-configuration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

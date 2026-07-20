@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "kisssoft"
 keyword: "kisssoft bearing warning minimum load not reached fix"
 slug: "kisssoft-bearing-warning-minimum-load-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "6 min read"
 date: "2026-07-12"
 sources:

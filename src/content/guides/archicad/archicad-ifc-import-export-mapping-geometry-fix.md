@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "archicad"
 keyword: "ArchiCAD IFC import export mapping geometry coordination"
 slug: "archicad-ifc-import-export-mapping-geometry-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-25"
 sources:

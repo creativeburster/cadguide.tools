@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bimcollab"
 keyword: "bimcollab zoom free model viewer bcf issue review coordination"
 slug: "bimcollab-zoom-free-model-viewer-bcf-issue-review-coordination"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

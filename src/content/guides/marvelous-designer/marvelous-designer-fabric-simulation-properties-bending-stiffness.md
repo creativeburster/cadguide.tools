@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer fabric simulation properties bending stiffness wrinkling"
 slug: "marvelous-designer-fabric-simulation-properties-bending-stiffness"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

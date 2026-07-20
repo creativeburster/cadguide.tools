@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simscale"
 keyword: "simscale cloud cfd analysis"
 slug: "simscale-cloud-cfd-external-aerodynamics-internal-flow-thermal-management"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

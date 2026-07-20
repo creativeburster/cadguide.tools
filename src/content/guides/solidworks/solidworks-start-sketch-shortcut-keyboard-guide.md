@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "solidworks"
 keyword: "what is the keyboard shortcut for start sketch in solidworks"
 slug: "solidworks-start-sketch-shortcut-keyboard-guide"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-03"
 sources:

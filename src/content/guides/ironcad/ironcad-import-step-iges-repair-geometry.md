@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ironcad"
 keyword: "ironcad import step iges repair geometry"
 slug: "ironcad-import-step-iges-repair-geometry"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

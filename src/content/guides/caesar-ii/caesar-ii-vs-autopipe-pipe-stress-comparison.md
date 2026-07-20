@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii vs autopipe pipe stress analysis software comparison"
 slug: "caesar-ii-vs-autopipe-pipe-stress-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

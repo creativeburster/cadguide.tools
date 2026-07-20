@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "moldflow"
 keyword: "moldflow cooling analysis cycle time optimization channel layout"
 slug: "moldflow-cooling-analysis-cycle-time-optimization-temperature-distribution"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-13"
 sources:

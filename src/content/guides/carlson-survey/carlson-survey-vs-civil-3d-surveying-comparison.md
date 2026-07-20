@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "carlson-survey"
 keyword: "carlson survey vs civil 3d surveying software comparison"
 slug: "carlson-survey-vs-civil-3d-surveying-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

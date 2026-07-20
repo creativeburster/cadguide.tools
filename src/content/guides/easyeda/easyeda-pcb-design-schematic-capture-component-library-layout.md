@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "easyeda"
 keyword: "easyeda pcb design schematic capture component library layout routing"
 slug: "easyeda-pcb-design-schematic-capture-component-library-layout"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

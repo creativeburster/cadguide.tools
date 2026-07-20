@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam post processing G-code output CNC machine controls post processor customizing tool change coolant spindle commands troubleshooting"
 slug: "mastercam-post-processing-customizing-gcode-output-cnc-machine-controls"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

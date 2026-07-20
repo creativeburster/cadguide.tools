@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "edgecam"
 keyword: "edgecam tool library setup holders cutting parameters"
 slug: "edgecam-tool-library-setup-holders-parameters"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

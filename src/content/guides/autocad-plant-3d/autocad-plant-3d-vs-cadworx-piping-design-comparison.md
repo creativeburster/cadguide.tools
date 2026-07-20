@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "autocad-plant-3d"
 keyword: "autocad plant 3d vs cadworx comparison piping design"
 slug: "autocad-plant-3d-vs-cadworx-piping-design-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

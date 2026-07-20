@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion import model missing materials Revit SketchUp export"
 slug: "lumion-import-missing-materials-revit-sketchup-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-21"
 sources:

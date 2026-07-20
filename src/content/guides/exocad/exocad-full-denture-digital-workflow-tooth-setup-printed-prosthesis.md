@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad full denture design digital workflow tooth setup gingiva printed prosthesis"
 slug: "exocad-full-denture-digital-workflow-tooth-setup-printed-prosthesis"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

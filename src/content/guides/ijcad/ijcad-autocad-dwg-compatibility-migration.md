@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "ijcad"
 keyword: "ijcad autocad dwg compatibility migration"
 slug: "ijcad-autocad-dwg-compatibility-migration"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

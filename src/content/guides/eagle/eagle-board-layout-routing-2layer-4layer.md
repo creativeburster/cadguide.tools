@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "eagle"
 keyword: "eagle board layout routing 2-layer 4-layer ground plane"
 slug: "eagle-board-layout-routing-2layer-4layer"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

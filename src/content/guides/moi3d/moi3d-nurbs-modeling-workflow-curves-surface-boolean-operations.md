@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "moi3d"
 keyword: "moi3d NURBS modeling workflow curves surface boolean"
 slug: "moi3d-nurbs-modeling-workflow-curves-surface-boolean-operations"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

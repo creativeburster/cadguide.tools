@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "sap2000"
 keyword: "sap2000 structural analysis"
 slug: "sap2000-structural-analysis-modeling-section-properties-linear-static"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:

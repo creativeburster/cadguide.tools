@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "recap-pro"
 keyword: "recap pro revit point cloud underlay sectioning modeling workflow"
 slug: "recap-pro-revit-point-cloud-underlay-sectioning-modeling"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

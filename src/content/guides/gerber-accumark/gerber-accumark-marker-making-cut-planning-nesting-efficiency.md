@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark marker making cut planning nesting efficiency Gerber cutter integration GT5250 GTXL"
 slug: "gerber-accumark-marker-making-cut-planning-nesting-efficiency"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "microstation"
 keyword: "MicroStation DWG import export line weight font compatibility"
 slug: "microstation-dwg-import-export-line-weight-font-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

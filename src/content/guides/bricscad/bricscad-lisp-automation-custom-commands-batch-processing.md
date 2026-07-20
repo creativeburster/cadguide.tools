@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "bricscad"
 keyword: "bricscad lisp automation"
 slug: "bricscad-lisp-automation-custom-commands-batch-processing"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

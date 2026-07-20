@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "vectorworks"
 keyword: "vectorworks 2026 crashing at cineware when launching"
 slug: "vectorworks-2026-cineware-crash-launch-fix"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-03"
 sources:

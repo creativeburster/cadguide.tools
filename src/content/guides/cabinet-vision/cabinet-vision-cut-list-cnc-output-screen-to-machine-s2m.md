@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision cut list CNC output Screen-to-Machine S2M part optimization machine code production"
 slug: "cabinet-vision-cut-list-cnc-output-screen-to-machine-s2m"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

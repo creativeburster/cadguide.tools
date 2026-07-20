@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "siemens-nx"
 keyword: "NX large assembly performance lightweight"
 slug: "siemens-nx-large-assembly-lightweight-representations"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-18"
 sources:

@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench nonlinear analysis contact plasticity large deformation Newton-Raphson convergence troubleshooting setup"
 slug: "ansys-workbench-nonlinear-analysis-contact-plasticity-large-deformation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

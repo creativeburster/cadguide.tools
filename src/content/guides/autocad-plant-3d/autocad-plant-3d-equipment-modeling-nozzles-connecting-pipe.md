@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "autocad-plant-3d"
 keyword: "autocad plant 3d equipment modeling nozzles connecting pipe"
 slug: "autocad-plant-3d-equipment-modeling-nozzles-connecting-pipe"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-08"
 sources:

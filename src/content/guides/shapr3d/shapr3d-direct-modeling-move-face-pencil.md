@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "shapr3d"
 keyword: "shapr3d direct modeling move face pencil"
 slug: "shapr3d-direct-modeling-move-face-pencil"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-06"
 sources:

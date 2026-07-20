@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "solibri"
 keyword: "solibri model checker ifc import ruleset clash detection workflow"
 slug: "solibri-model-checker-ifc-import-ruleset-clash-detection-workflow"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-07-08"
 sources:

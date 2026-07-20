@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "ls-dyna"
 keyword: "ls-dyna vehicle crash simulation"
 slug: "ls-dyna-vehicle-crash-simulation-frontal-side-rear-impact-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

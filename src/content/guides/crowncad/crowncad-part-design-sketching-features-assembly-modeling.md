@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "crowncad"
 keyword: "crowncad part design sketch features assembly cloud CAD"
 slug: "crowncad-part-design-sketching-features-assembly-modeling"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-13"
 sources:

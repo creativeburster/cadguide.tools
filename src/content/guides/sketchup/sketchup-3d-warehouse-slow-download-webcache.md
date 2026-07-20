@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp 3D Warehouse slow download WebCache materials"
 slug: "sketchup-3d-warehouse-slow-download-webcache"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

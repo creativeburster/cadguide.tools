@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "altair-hyperworks"
 keyword: "altair hypermesh mesh quality criteria batchmesher element optimization"
 slug: "altair-hypermesh-mesh-quality-criteria-batchmesher-element-optimization"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

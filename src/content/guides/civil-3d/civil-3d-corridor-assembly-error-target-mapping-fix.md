@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D corridor assembly error target mapping rebuild failure"
 slug: "civil-3d-corridor-assembly-error-target-mapping-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

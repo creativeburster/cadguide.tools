@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "proteus-design-suite"
 keyword: "proteus arduino simulation isis hex file virtual instruments"
 slug: "proteus-arduino-simulation-isis-hex-file-virtual-instruments"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-13"
 sources:

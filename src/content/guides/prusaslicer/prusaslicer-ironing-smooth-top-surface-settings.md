@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer ironing smooth top surface settings flow rate"
 slug: "prusaslicer-ironing-smooth-top-surface-settings"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

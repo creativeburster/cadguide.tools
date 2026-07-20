@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D pattern making grading size run POM measurement DXF production"
 slug: "clo-3d-pattern-making-grading-size-run-production"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

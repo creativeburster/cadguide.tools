@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "ironcad"
 keyword: "ironcad vs ironcad draft 3d 2d"
 slug: "ironcad-vs-ironcad-draft-3d-2d"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-06"
 sources:

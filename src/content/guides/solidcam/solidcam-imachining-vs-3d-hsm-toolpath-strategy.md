@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "solidcam"
 keyword: "solidcam imachining vs 3d hsm toolpath strategy"
 slug: "solidcam-imachining-vs-3d-hsm-toolpath-strategy"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

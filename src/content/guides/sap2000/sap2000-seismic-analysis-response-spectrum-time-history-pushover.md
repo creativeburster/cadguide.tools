@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "sap2000"
 keyword: "sap2000 seismic analysis"
 slug: "sap2000-seismic-analysis-response-spectrum-time-history-pushover"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "13 min read"
 date: "2026-06-30"
 sources:

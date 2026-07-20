@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "multisim"
 keyword: "multisim vs ltspice comparison spice simulation"
 slug: "multisim-vs-ltspice-free-spice-simulation-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "7 min read"
 date: "2026-07-13"
 sources:

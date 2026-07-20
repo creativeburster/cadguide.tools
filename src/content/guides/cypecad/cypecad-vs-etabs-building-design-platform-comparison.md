@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "cypecad"
 keyword: "cypecad vs etabs comparison"
 slug: "cypecad-vs-etabs-building-design-platform-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-06-30"
 sources:

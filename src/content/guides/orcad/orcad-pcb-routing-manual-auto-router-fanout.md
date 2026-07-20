@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "orcad"
 keyword: "orcad pcb routing manual auto-router fanout"
 slug: "orcad-pcb-routing-manual-auto-router-fanout"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "3dexperience"
 keyword: "3dexperience vs solidworks pdm cloud vs local vault comparison"
 slug: "3dexperience-vs-solidworks-pdm-cloud-vs-local-vault-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-09"
 sources:

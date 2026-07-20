@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor slow first part creation DYNAMIC_LOAD_APPLETS"
 slug: "inventor-first-part-creation-slow-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "6 min"
 date: "2025-06-16"
 sources:

@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "risa-3d"
 keyword: "risa-3d dynamic analysis modal response spectrum time history"
 slug: "risa-3d-dynamic-analysis-modal-response-spectrum-time-history"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

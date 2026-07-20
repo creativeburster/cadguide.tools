@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "revit"
 keyword: "revit worksharing lock file"
 slug: "revit-worksharing-file-locks-dwl-corrupted"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-25"
 sources:

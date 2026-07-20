@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer performance optimization render time settings"
 slug: "corona-renderer-performance-optimization-render-time"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

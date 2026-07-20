@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp extension conflict NoMethodError upgrade migration"
 slug: "sketchup-extension-conflicts-upgrade-nomethoderror"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-25"
 sources:

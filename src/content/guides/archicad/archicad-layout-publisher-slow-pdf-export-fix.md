@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "archicad"
 keyword: "ArchiCAD layout book slow publisher PDF export update"
 slug: "archicad-layout-publisher-slow-pdf-export-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-24"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures large model performance work area view filter"
 slug: "tekla-large-model-performance-work-area-view-filter"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-21"
 sources:

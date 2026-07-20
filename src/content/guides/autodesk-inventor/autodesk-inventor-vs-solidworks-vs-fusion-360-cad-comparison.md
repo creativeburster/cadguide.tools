@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor vs SolidWorks vs Fusion 360 3D CAD comparison modeling simulation sheet metal assembly pricing"
 slug: "autodesk-inventor-vs-solidworks-vs-fusion-360-cad-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "d5-render"
 keyword: "D5 Render performance optimization DLSS FPS GI settings"
 slug: "d5-render-performance-optimization-dlss-fps-gi"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

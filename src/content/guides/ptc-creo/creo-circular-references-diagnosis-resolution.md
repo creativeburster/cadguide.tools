@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo circular references troubleshooting crc file"
 slug: "creo-circular-references-diagnosis-resolution"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min"
 date: "2025-06-16"
 sources:

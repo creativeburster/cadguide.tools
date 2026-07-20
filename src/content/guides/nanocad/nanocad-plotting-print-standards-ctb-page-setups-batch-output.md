@@ -5,7 +5,7 @@ category: "printing"
 softwareSlug: "nanocad"
 keyword: "nanocad plotting print standards"
 slug: "nanocad-plotting-print-standards-ctb-page-setups-batch-output"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-06-30"
 sources:

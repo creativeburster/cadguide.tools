@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "easyeda"
 keyword: "easyeda spice simulation circuit verification transient analysis waveform"
 slug: "easyeda-spice-simulation-circuit-verification-transient-analysis"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-09"
 sources:

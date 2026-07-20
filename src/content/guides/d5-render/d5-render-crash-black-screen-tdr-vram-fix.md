@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "d5-render"
 keyword: "D5 Render crash black screen TDR VRAM fix"
 slug: "d5-render-crash-black-screen-tdr-vram-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-20"
 sources:

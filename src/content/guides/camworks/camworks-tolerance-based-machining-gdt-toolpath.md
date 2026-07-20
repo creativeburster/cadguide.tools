@@ -5,7 +5,7 @@ category: "standards"
 softwareSlug: "camworks"
 keyword: "camworks tolerance based machining gdt toolpath"
 slug: "camworks-tolerance-based-machining-gdt-toolpath"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

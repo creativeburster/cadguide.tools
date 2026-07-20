@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer material PBR glass SSS displacement setup"
 slug: "corona-renderer-material-glass-sss-displacement-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-22"
 sources:

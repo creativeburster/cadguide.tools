@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "v-ray"
 keyword: "V-Ray render time slow optimization settings speed up"
 slug: "v-ray-render-time-optimization"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-21"
 sources:

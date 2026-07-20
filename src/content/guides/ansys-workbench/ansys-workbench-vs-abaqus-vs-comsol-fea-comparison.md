@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench vs Abaqus vs COMSOL FEA software comparison nonlinear multiphysics simulation engineering solver capabilities"
 slug: "ansys-workbench-vs-abaqus-vs-comsol-fea-comparison"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

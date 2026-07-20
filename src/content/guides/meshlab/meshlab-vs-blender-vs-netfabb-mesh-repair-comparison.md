@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "meshlab"
 keyword: "meshlab vs blender vs netfabb mesh repair comparison"
 slug: "meshlab-vs-blender-vs-netfabb-mesh-repair-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min read"
 date: "2026-07-12"
 sources:

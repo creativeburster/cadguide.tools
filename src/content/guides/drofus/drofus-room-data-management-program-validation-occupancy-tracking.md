@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "drofus"
 keyword: "drofus room data management program validation occupancy tracking healthcare"
 slug: "drofus-room-data-management-program-validation-occupancy-tracking"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

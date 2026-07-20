@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge synchronous technology ordered modeling transition steering wheel"
 slug: "solid-edge-synchronous-technology-ordered-transition"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-24"
 sources:

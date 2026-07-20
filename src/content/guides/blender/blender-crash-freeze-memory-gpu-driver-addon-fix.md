@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "blender"
 keyword: "Blender crash freeze out of memory GPU driver addon conflict"
 slug: "blender-crash-freeze-memory-gpu-driver-addon-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

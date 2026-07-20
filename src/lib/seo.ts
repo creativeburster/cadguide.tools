@@ -519,11 +519,7 @@ export function guideArticleLd(opts: {
     url: `${SITE_URL}/guides/${opts.slug}`,
     datePublished: opts.date,
     dateModified: opts.date,
-    author: {
-      "@type": "Person",
-      name: opts.author,
-      jobTitle: "Enterprise Systems Lead",
-    },
+    author: SITE_PUBLISHER,
     publisher: SITE_PUBLISHER,
     mainEntityOfPage: {
       "@type": "WebPage",

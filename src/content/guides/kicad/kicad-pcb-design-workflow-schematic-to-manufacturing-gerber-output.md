@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "kicad"
 keyword: "kicad pcb design workflow"
 slug: "kicad-pcb-design-workflow-schematic-to-manufacturing-gerber-output"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-30"
 sources:

@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "alphacam"
 keyword: "alphacam vs vectric aspire cnc router comparison"
 slug: "alphacam-vs-vectric-aspire-cnc-router-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

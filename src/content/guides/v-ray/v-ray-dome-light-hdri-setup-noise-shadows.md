@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "v-ray"
 keyword: "V-Ray Dome Light HDRI setup noise shadows environment"
 slug: "v-ray-dome-light-hdri-setup-noise-shadows"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-23"
 sources:

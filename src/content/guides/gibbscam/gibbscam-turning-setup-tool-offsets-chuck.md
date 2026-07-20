@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "gibbscam"
 keyword: "gibbscam turning setup tool offsets chuck configuration"
 slug: "gibbscam-turning-setup-tool-offsets-chuck"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

@@ -5,7 +5,7 @@ category: "manufacturing"
 softwareSlug: "alibre-design"
 keyword: "alibre design sheet metal k-factor flat pattern"
 slug: "alibre-design-sheet-metal-k-factor-flat-pattern"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min read"
 date: "2026-07-06"
 sources:

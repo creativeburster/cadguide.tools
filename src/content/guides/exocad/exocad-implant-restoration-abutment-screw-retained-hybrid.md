@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad implant restoration abutment screw-retained crown hybrid prosthesis design workflow"
 slug: "exocad-implant-restoration-abutment-screw-retained-hybrid"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-06-29"
 sources:

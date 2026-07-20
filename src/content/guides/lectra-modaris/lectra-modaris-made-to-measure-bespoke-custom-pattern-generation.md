@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Modaris made-to-measure MTM bespoke custom pattern generation morphing grading luxury apparel"
 slug: "lectra-modaris-made-to-measure-bespoke-custom-pattern-generation"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-29"
 sources:

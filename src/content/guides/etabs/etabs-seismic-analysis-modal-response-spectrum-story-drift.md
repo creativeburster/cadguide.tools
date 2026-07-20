@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS seismic analysis modal response spectrum story drift CQC ASCE 7 earthquake building response natural period"
 slug: "etabs-seismic-analysis-modal-response-spectrum-story-drift"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

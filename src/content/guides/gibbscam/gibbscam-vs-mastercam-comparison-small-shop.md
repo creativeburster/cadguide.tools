@@ -5,7 +5,7 @@ category: "comparison"
 softwareSlug: "gibbscam"
 keyword: "gibbscam vs mastercam comparison small shop"
 slug: "gibbscam-vs-mastercam-comparison-small-shop"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-06"
 sources:

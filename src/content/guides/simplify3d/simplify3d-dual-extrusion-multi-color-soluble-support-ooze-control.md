@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D dual extrusion multi-color soluble support ooze shield prime pillar"
 slug: "simplify3d-dual-extrusion-multi-color-soluble-support-ooze-control"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-22"
 sources:

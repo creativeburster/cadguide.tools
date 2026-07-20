@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "autocad"
 keyword: "recover corrupted dwg"
 slug: "recovering-corrupted-dwg-backup-disaster"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:

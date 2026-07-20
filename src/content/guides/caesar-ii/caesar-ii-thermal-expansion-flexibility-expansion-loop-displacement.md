@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "caesar-ii"
 keyword: "caesar ii thermal expansion analysis flexibility expansion loop displacement stress"
 slug: "caesar-ii-thermal-expansion-flexibility-expansion-loop-displacement"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-09"
 sources:

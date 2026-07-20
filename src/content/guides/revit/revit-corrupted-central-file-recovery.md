@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "revit"
 keyword: "revit central model corrupted"
 slug: "revit-corrupted-central-file-recovery"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:

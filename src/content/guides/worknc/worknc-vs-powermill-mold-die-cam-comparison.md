@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "worknc"
 keyword: "worknc vs powermill cam comparison mold die"
 slug: "worknc-vs-powermill-mold-die-cam-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

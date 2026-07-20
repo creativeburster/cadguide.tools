@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "cadworx"
 keyword: "cadworx isogen configuration i-configure isometric output setup"
 slug: "cadworx-isogen-configuration-i-configure-isometric-output-setup"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

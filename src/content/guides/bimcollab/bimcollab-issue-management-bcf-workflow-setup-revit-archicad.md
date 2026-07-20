@@ -5,7 +5,7 @@ category: "deployment"
 softwareSlug: "bimcollab"
 keyword: "bimcollab issue management bcf workflow setup revit archicad"
 slug: "bimcollab-issue-management-bcf-workflow-setup-revit-archicad"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-07-08"
 sources:

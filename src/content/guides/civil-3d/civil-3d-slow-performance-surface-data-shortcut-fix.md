@@ -5,7 +5,7 @@ category: "performance"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D slow performance surface corridor data shortcut drawing"
 slug: "civil-3d-slow-performance-surface-data-shortcut-fix"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-06-21"
 sources:

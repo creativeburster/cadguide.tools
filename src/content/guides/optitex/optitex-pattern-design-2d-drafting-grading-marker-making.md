@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex pattern design 2D drafting grading marker making production cutting machines"
 slug: "optitex-pattern-design-2d-drafting-grading-marker-making"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-06-29"
 sources:

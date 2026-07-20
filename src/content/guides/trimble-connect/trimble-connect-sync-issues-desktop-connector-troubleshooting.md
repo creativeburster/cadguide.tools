@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "trimble-connect"
 keyword: "trimble connect sync issues desktop connector troubleshooting file conflicts"
 slug: "trimble-connect-sync-issues-desktop-connector-troubleshooting"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "10 min read"
 date: "2026-07-08"
 sources:

@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "esprit"
 keyword: "esprit cam vs mastercam comparison multi-axis cnc"
 slug: "esprit-cam-vs-mastercam-multi-axis-cnc-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

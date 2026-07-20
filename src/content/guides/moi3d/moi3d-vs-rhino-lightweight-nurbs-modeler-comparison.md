@@ -5,7 +5,7 @@ category: "migration"
 softwareSlug: "moi3d"
 keyword: "moi3d vs rhino NURBS modeler comparison product design"
 slug: "moi3d-vs-rhino-lightweight-nurbs-modeler-comparison"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "8 min read"
 date: "2026-07-13"
 sources:

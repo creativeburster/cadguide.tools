@@ -5,7 +5,7 @@ category: "troubleshooting"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 files missing after update hub migration"
 slug: "fusion-360-files-missing-hub-migration-cache-recovery"
-author: "CAD IT Admin"
+author: "CADGuide Tools Editorial Team"
 readTime: "9 min"
 date: "2025-06-22"
 sources:

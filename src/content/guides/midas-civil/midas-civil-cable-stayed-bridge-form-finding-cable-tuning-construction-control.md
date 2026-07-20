@@ -5,7 +5,7 @@ category: "workflow"
 softwareSlug: "midas-civil"
 keyword: "midas civil cable stayed bridge"
 slug: "midas-civil-cable-stayed-bridge-form-finding-cable-tuning-construction-control"
-author: "CADGuide Technical Editorial"
+author: "CADGuide Tools Editorial Team"
 readTime: "12 min read"
 date: "2026-06-30"
 sources:
