@@ -10,7 +10,7 @@ readTime: "12 min read"
 date: "2026-06-25"
 sources:
   - "https://knowledge.autodesk.com/support/revit-products/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Revit-Customize/files/GUID-C395AAC8-B5E2-40A5-8B48-1BFEEA9116D6-htm.html"
-  - "https://forums.autodesk.com/t5/revit-forum/family-file-optimization/td-p/5432109"
+  - "https://help.autodesk.com/view/RVT/2024/ENU/"
 ---
 
 # Optimizing Revit Family Files: Reducing Bloat and Improving Load Performance

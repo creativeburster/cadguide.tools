@@ -9,8 +9,8 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
-  - "https://knowledge.autodesk.com/support/revit-products/troubleshooting/caas/sfdcarticles/sfdcarticles/Error-Data-in-Revit-file-is-corrupt-and-needs-to-be-manually-recovered.html"
-  - "https://forums.autodesk.com/t5/revit-forum/central-model-corruption-recovery/td-p/7654321"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-Data-in-Revit-file-is-corrupt-and-needs-to-be-manually-recovered.html"
+  - "https://help.autodesk.com/view/RVT/2024/ENU/"
 ---
 
 # Recovering a Corrupted Revit Central Model: Step-by-Step Disaster Recovery

@@ -9,8 +9,8 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min read"
 date: "2026-06-25"
 sources:
-  - "https://knowledge.autodesk.com/support/revit/troubleshooting/caas/sfdcarticles/sfdcarticles/Certain-shared-parameters-not-exportetd-to-IFC-from-Revit.html"
-  - "https://forums.autodesk.com/t5/revit-forum/ifc-export-missing-parameters/td-p/4321098"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Certain-shared-parameters-not-exportetd-to-IFC-from-Revit.html"
+  - "https://help.autodesk.com/view/RVT/2024/ENU/"
 ---
 
 # Fixing Missing Parameters in Revit IFC Exports: Mapping and Configuration Guide

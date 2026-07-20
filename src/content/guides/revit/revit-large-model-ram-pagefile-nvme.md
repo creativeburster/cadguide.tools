@@ -10,7 +10,7 @@ readTime: "13 min read"
 date: "2026-06-25"
 sources:
   - "https://knowledge.autodesk.com/support/revit-products/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Revit-Customize/files/GUID-66A61D65-967D-4DB7-B4C0-FB77C2EDECF6-htm.html"
-  - "https://forums.autodesk.com/t5/revit-forum/large-model-performance-optimization/td-p/6543210"
+  - "https://help.autodesk.com/view/RVT/2024/ENU/"
 ---
 
 # Optimizing Revit Performance for Large Models: RAM, Pagefile, and Storage Configuration
