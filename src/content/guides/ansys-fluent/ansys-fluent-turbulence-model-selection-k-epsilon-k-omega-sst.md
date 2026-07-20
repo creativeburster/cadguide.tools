@@ -10,7 +10,7 @@ readTime: "12 min read"
 date: "2026-07-09"
 sources:
   - "https://innovationspace.ansys.com/knowledge/forums/topic/what-are-the-suggested-steps-if-i-am-having-convergence-issues-for-conjugate-heat-transfer-problems/"
-  - "https://innovationspace.ansys.com/forums/topic/problem-with-convergence-in-ansys-fluent/"
+  - "https://innovationspace.ansys.com/forum/forums/topic/problem-with-convergence-in-ansys-fluent/"
 ---
 
 # ANSYS Fluent Turbulence Model Selection: k-epsilon, k-omega SST, Spalart-Allmaras, and Transition Models
