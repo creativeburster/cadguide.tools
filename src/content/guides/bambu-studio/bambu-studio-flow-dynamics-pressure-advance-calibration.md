@@ -1,6 +1,6 @@
 ---
 title: "Bambu Studio Flow Dynamics and Pressure Advance Calibration: Getting Perfect Prints Every Time"
-excerpt: "Bambu Studio includes built-in calibration tools for flow dynamics, pressure advance, and flow rate — but most users never run them. I cover the complete calibration workflow from first layer to pressure advance, with recommended values for common filaments and troubleshooting for corner bulging, seam gaps, and inconsistent extrusion."
+excerpt: "Bambu Studio includes built-in calibration tools for flow dynamics, pressure advance, and flow rate — but most users never run them. We cover the complete calibration workflow from first layer to pressure advance, with recommended values for common filaments and troubleshooting for corner bulging, seam gaps, and inconsistent extrusion."
 category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio flow dynamics pressure advance calibration guide"
@@ -18,11 +18,11 @@ sources:
 
 # Bambu Studio Flow Dynamics and Pressure Advance Calibration: Getting Perfect Prints Every Time
 
-I've calibrated dozens of filaments across Bambu X1C, P1S, and A1 printers, and Bambu Studio's built-in calibration tools are excellent — when you know which ones to run and in what order. The calibration workflow matters: calibrate flow rate before pressure advance, and always calibrate with input shaping enabled (which is the default on Bambu Lab printers).
+We've calibrated dozens of filaments across Bambu X1C, P1S, and A1 printers, and Bambu Studio's built-in calibration tools are excellent — when you know which ones to run and in what order. The calibration workflow matters: calibrate flow rate before pressure advance, and always calibrate with input shaping enabled (which is the default on Bambu Lab printers).
 
 ## The Calibration Order
 
-Bambu Studio includes several calibration tools, accessible via the **Calibration** menu. Here's the order I follow for every new filament:
+Bambu Studio includes several calibration tools, accessible via the **Calibration** menu. Here's the order we follow for every new filament:
 
 1. **Bed leveling / bed tramming** — ensure the first layer is consistent
 2. **Flow Dynamics Calibration** — measures how the filament flows at different speeds
@@ -33,7 +33,7 @@ As one calibration guide notes: "Run through these once when you first set up a 
 
 ## Step 1: Bed Leveling and First Layer
 
-Before any filament calibration, ensure your bed is properly leveled. Bambu Lab printers automate this, but I always verify:
+Before any filament calibration, ensure your bed is properly leveled. Bambu Lab printers automate this, but we always verify:
 
 1. Run the bed leveling sequence from the printer's LCD
 2. Print a first layer test pattern (a single-layer square covering most of the bed)
@@ -96,7 +96,7 @@ If you disable input shaping, calibrate PA, then re-enable input shaping, your P
 
 ### Typical Pressure Advance Values
 
-Based on community calibration data and my own testing:
+Based on community calibration data and our own testing:
 
 - **Bambu PLA (0.4mm nozzle)**: 0.018-0.025
 - **Third-party PLA**: 0.015-0.030

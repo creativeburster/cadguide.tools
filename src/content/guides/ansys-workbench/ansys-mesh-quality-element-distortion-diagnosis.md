@@ -1,6 +1,6 @@
 ---
 title: "Ansys Mesh Quality Metrics: Element Distortion Diagnosis and Fix Guide"
-excerpt: "Poor mesh quality gives you wrong answers without any warning. I cover the quality metrics I check on every analysis, the thresholds I use, and the meshing techniques that fix distorted elements."
+excerpt: "Poor mesh quality gives you wrong answers without any warning. We cover the quality metrics we check on every analysis, the thresholds we use, and the meshing techniques that fix distorted elements."
 category: "performance"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys mesh quality element distortion metrics"
@@ -15,7 +15,7 @@ sources:
 
 # Ansys Mesh Quality Metrics: Element Distortion Diagnosis and Fix Guide
 
-I learned the importance of mesh quality the hard way. Early in my FEA career, I ran a stress analysis on a bracket with a coarse mesh and got a maximum stress of 85 MPa — well below the material's yield strength. My senior engineer asked me to refine the mesh and re-run. The refined mesh gave 340 MPa — above yield. The coarse mesh had missed a stress concentration entirely because the elements were too distorted to capture the stress gradient. That experience taught me that mesh quality isn't just about convergence — it's about getting the right answer.
+Mesh quality can change your conclusions, not just your convergence. Consider a stress analysis on a bracket: a coarse mesh might report a maximum stress of 85 MPa — well below the material's yield strength — while a refined mesh gives 340 MPa, above yield. The coarse mesh misses the stress concentration entirely because the elements are too distorted to capture the stress gradient. Mesh quality isn't just about convergence — it's about getting the right answer.
 
 ## Why Mesh Quality Matters
 
@@ -79,16 +79,16 @@ Measures how much a quadrilateral face deviates from being planar. Only applies 
 5. Click on the histogram to see the distribution of quality values
 6. Red elements are the worst — focus your fixes on those
 
-### My Standard Quality Check
+### Our Standard Quality Check
 
-For every analysis, I check these metrics:
+For every analysis, we check these metrics:
 
 1. **Element Quality**: Min value > 0.1, average > 0.5
 2. **Aspect Ratio**: Max value < 20
 3. **Jacobian Ratio**: Min value > 0.5
 4. **Skewness**: Max value < 0.85
 
-If any of these thresholds are violated, I fix the mesh before running the analysis.
+If any of these thresholds are violated, we fix the mesh before running the analysis.
 
 ## Common Mesh Problems and Fixes
 
@@ -144,7 +144,7 @@ If any of these thresholds are violated, I fix the mesh before running the analy
 
 ## Mesh Convergence Study
 
-A mesh convergence study verifies that the mesh is fine enough to give accurate results. Here's how I do it:
+A mesh convergence study verifies that the mesh is fine enough to give accurate results. Here's how we do it:
 
 1. Run the analysis with the initial mesh
 2. Note the maximum stress (or whatever result you're interested in)
@@ -174,7 +174,7 @@ Ansys offers several meshing methods. Choosing the right one affects both qualit
 | Sweep | Sweepable bodies | Excellent | Fast |
 | Cartesian | Regular geometry | Excellent | Fast |
 
-For most mechanical parts, I use:
+For most mechanical parts, we use:
 - **MultiZone** for the main body (if sweepable)
 - **Tetrahedrons** for complex features
 - **Sphere of Influence** refinement at stress concentrations

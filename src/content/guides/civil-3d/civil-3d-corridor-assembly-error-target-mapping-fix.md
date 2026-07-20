@@ -1,6 +1,6 @@
 ---
 title: "Civil 3D Corridor Modeling Problems: Assembly Errors, Target Mapping, and Rebuild Failures"
-excerpt: "Civil 3D corridors fail to build, display incorrectly, or take minutes to rebuild after edits. I cover the assembly parameter check, target mapping workflow, and the corridor rebuild optimization that fix corridor modeling issues."
+excerpt: "Civil 3D corridors fail to build, display incorrectly, or take minutes to rebuild after edits. We cover the assembly parameter check, target mapping workflow, and the corridor rebuild optimization that fix corridor modeling issues."
 category: "troubleshooting"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D corridor assembly error target mapping rebuild failure"

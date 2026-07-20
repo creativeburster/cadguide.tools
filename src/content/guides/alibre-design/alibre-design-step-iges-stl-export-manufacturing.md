@@ -15,7 +15,7 @@ sources:
 
 # Alibre Design File Export: STEP, IGES, and STL Best Practices for Manufacturing
 
-I've sent hundreds of parts from Alibre Design to CNC machine shops and 3D printing services. The CAD model might be perfect, but if the export settings are wrong, the manufacturer gets garbage. Here's the export workflow I use to avoid rejections.
+We've sent hundreds of parts from Alibre Design to CNC machine shops and 3D printing services. The CAD model might be perfect, but if the export settings are wrong, the manufacturer gets garbage. Here's the export workflow we use to avoid rejections.
 
 ## STEP Export for CNC Machining
 

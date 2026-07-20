@@ -1,6 +1,6 @@
 ---
 title: "Cabinet Vision Cut List, CNC Output, and Screen-to-Machine (S2M) Workflow"
-excerpt: "Cabinet Vision's cut list and CNC output tools generate production-ready part lists and machine code. I cover the cut list report, part optimization, CNC program generation, and the Screen-to-Machine (S2M) workflow for direct CNC integration."
+excerpt: "Cabinet Vision's cut list and CNC output tools generate production-ready part lists and machine code. We cover the cut list report, part optimization, CNC program generation, and the Screen-to-Machine (S2M) workflow for direct CNC integration."
 category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision cut list CNC output Screen-to-Machine S2M part optimization machine code production"
@@ -16,7 +16,7 @@ sources:
 
 # Cabinet Vision Cut List, CNC Output, and Screen-to-Machine (S2M) Workflow
 
-I've set up Cabinet Vision's Screen-to-Machine (S2M) workflow for cabinet shops transitioning from manual cutting to CNC production. The S2M workflow is what sets Cabinet Vision apart from general CAD tools — it generates not just drawings but actual machine code that drives CNC routers, saws, and edge banders. Understanding the complete workflow from design to machine code is essential for any shop using CNC equipment.
+We've set up Cabinet Vision's Screen-to-Machine (S2M) workflow for cabinet shops transitioning from manual cutting to CNC production. The S2M workflow is what sets Cabinet Vision apart from general CAD tools — it generates not just drawings but actual machine code that drives CNC routers, saws, and edge banders. Understanding the complete workflow from design to machine code is essential for any shop using CNC equipment.
 
 ## The Production Output Overview
 

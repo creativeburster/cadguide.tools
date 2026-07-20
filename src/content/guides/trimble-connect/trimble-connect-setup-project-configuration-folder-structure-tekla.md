@@ -15,7 +15,7 @@ sources:
 
 # Trimble Connect Setup: Project Configuration, Folder Structure, and Tekla Integration
 
-Trimble Connect is Trimble's cloud collaboration platform for BIM projects. I've set it up for steel detailing projects, infrastructure projects, and multi-discipline building projects. It's particularly strong in the Tekla ecosystem, but it works with any BIM tool that can export IFC. Here's how to configure it properly.
+Trimble Connect is Trimble's cloud collaboration platform for BIM projects. We've set it up for steel detailing projects, infrastructure projects, and multi-discipline building projects. It's particularly strong in the Tekla ecosystem, but it works with any BIM tool that can export IFC. Here's how to configure it properly.
 
 ## Understanding Trimble Connect's Position
 

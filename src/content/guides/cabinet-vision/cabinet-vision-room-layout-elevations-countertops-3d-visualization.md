@@ -1,6 +1,6 @@
 ---
 title: "Cabinet Vision Room Layout and Elevations: Wall Placement, Countertops, and 3D Visualization"
-excerpt: "Cabinet Vision's room layout tools create full kitchen and bath layouts with wall placement, countertop generation, and 3D visualization. I cover the room setup workflow, cabinet placement on walls, countertop configuration, and generating client presentation renderings."
+excerpt: "Cabinet Vision's room layout tools create full kitchen and bath layouts with wall placement, countertop generation, and 3D visualization. We cover the room setup workflow, cabinet placement on walls, countertop configuration, and generating client presentation renderings."
 category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision room layout elevations wall placement countertops 3D visualization kitchen bath"
@@ -16,7 +16,7 @@ sources:
 
 # Cabinet Vision Room Layout and Elevations: Wall Placement, Countertops, and 3D Visualization
 
-I've designed complete kitchen and bath layouts in Cabinet Vision for both residential and commercial projects. The room layout module is where individual cabinets come together as a complete installation — proper wall setup, cabinet placement, countertop generation, and 3D visualization are essential for both production planning and client presentations.
+We've designed complete kitchen and bath layouts in Cabinet Vision for both residential and commercial projects. The room layout module is where individual cabinets come together as a complete installation — proper wall setup, cabinet placement, countertop generation, and 3D visualization are essential for both production planning and client presentations.
 
 ## Room Setup
 

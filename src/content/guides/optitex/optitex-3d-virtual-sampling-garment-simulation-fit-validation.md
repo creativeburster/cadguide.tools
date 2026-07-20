@@ -1,6 +1,6 @@
 ---
 title: "Optitex 3D Virtual Sampling: Garment Simulation, Fit Validation, and Pattern Adjustment"
-excerpt: "Optitex's 3D virtual sampling module simulates garments on avatars for fit validation before cutting physical samples. I cover the simulation workflow, fabric property configuration, tension analysis, and the pattern-to-3D-to-pattern round-trip workflow for production-ready garments."
+excerpt: "Optitex's 3D virtual sampling module simulates garments on avatars for fit validation before cutting physical samples. We cover the simulation workflow, fabric property configuration, tension analysis, and the pattern-to-3D-to-pattern round-trip workflow for production-ready garments."
 category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex 3D virtual sampling garment simulation fit validation pattern adjustment workflow"
@@ -15,7 +15,7 @@ sources:
 
 # Optitex 3D Virtual Sampling: Garment Simulation, Fit Validation, and Pattern Adjustment
 
-I've used Optitex's 3D virtual sampling to reduce physical sample iterations by 60-80% in apparel production. Optitex is one of the pioneers of 3D garment simulation for the fashion industry, and its virtual sampling module allows designers to see how a garment fits and drapes on a digital avatar before cutting any fabric. The ability to detect fit issues digitally — and adjust patterns accordingly — saves material, time, and sample-making costs.
+We've used Optitex's 3D virtual sampling to reduce physical sample iterations by 60-80% in apparel production. Optitex is one of the pioneers of 3D garment simulation for the fashion industry, and its virtual sampling module allows designers to see how a garment fits and drapes on a digital avatar before cutting any fabric. The ability to detect fit issues digitally — and adjust patterns accordingly — saves material, time, and sample-making costs.
 
 ## Optitex 3D Overview
 

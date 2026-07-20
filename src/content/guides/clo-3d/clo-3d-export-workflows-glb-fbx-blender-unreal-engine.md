@@ -1,6 +1,6 @@
 ---
 title: "CLO 3D Export Workflows: GLB for Web, FBX for Blender, and Unreal Engine LiveSync"
-excerpt: "Exporting garments from CLO 3D requires different workflows depending on the target platform. I cover GLB export for web and e-commerce, FBX to Blender for cleanup and optimization, Unreal Engine LiveSync for real-time fashion visualization, and the specific export settings for each pipeline."
+excerpt: "Exporting garments from CLO 3D requires different workflows depending on the target platform. We cover GLB export for web and e-commerce, FBX to Blender for cleanup and optimization, Unreal Engine LiveSync for real-time fashion visualization, and the specific export settings for each pipeline."
 category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D export GLB FBX Blender Unreal Engine LiveSync workflow"
@@ -17,7 +17,7 @@ sources:
 
 # CLO 3D Export Workflows: GLB for Web, FBX for Blender, and Unreal Engine LiveSync
 
-I've built CLO 3D export pipelines for e-commerce product pages, virtual try-on platforms, and Unreal Engine fashion visualizations. Each target platform requires a different export format and optimization workflow. Getting the export right is critical — even a perfectly designed garment can look terrible in the final platform if the mesh, UVs, or materials aren't properly configured.
+We've built CLO 3D export pipelines for e-commerce product pages, virtual try-on platforms, and Unreal Engine fashion visualizations. Each target platform requires a different export format and optimization workflow. Getting the export right is critical — even a perfectly designed garment can look terrible in the final platform if the mesh, UVs, or materials aren't properly configured.
 
 ## Export Format Overview
 

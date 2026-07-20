@@ -1,6 +1,6 @@
 ---
 title: "Marvelous Designer to Unreal Engine: USD Export, Chaos Cloth, and LiveSync Workflow"
-excerpt: "Exporting garments from Marvelous Designer to Unreal Engine requires choosing between static mesh (FBX), geometry cache (Alembic), and real-time simulation (USD + Chaos Cloth). I cover each workflow, the LiveSync plugin, and the specific export settings needed for MetaHuman clothing."
+excerpt: "Exporting garments from Marvelous Designer to Unreal Engine requires choosing between static mesh (FBX), geometry cache (Alembic), and real-time simulation (USD + Chaos Cloth). We cover each workflow, the LiveSync plugin, and the specific export settings needed for MetaHuman clothing."
 category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer export Unreal Engine USD Chaos Cloth LiveSync"
@@ -18,7 +18,7 @@ sources:
 
 # Marvelous Designer to Unreal Engine: USD Export, Chaos Cloth, and LiveSync Workflow
 
-I've built complete clothing pipelines from Marvelous Designer to Unreal Engine for MetaHuman projects, and the export workflow has evolved significantly with Unreal Engine 5.4's Chaos Cloth system and Marvelous Designer's USD export support. There are three distinct workflows depending on whether you need static garments, baked animations, or real-time cloth simulation.
+We've built complete clothing pipelines from Marvelous Designer to Unreal Engine for MetaHuman projects, and the export workflow has evolved significantly with Unreal Engine 5.4's Chaos Cloth system and Marvelous Designer's USD export support. There are three distinct workflows depending on whether you need static garments, baked animations, or real-time cloth simulation.
 
 ## Three Export Workflows
 

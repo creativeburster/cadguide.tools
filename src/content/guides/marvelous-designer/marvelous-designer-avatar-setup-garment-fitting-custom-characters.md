@@ -1,6 +1,6 @@
 ---
 title: "Marvelous Designer Avatar Setup and Garment Fitting: Custom Characters, Arrangement Points, and Auto-Fitting"
-excerpt: "Fitting clothing to custom characters in Marvelous Designer requires proper avatar setup, arrangement point configuration, and understanding the auto-fitting system. I cover importing custom avatars, adjusting body measurements, using arrangement points for garment placement, and troubleshooting common fitting issues."
+excerpt: "Fitting clothing to custom characters in Marvelous Designer requires proper avatar setup, arrangement point configuration, and understanding the auto-fitting system. We cover importing custom avatars, adjusting body measurements, using arrangement points for garment placement, and troubleshooting common fitting issues."
 category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer avatar setup custom character garment fitting arrangement points"
@@ -17,7 +17,7 @@ sources:
 
 # Marvelous Designer Avatar Setup and Garment Fitting: Custom Characters, Arrangement Points, and Auto-Fitting
 
-I've fitted hundreds of garments on characters ranging from standard Marvelous Designer avatars to custom MetaHumans and stylized game characters. The fitting process is where most users struggle — garments that look perfect on the default avatar often don't translate to custom characters without proper avatar setup and arrangement point configuration.
+We've fitted hundreds of garments on characters ranging from standard Marvelous Designer avatars to custom MetaHumans and stylized game characters. The fitting process is where most users struggle — garments that look perfect on the default avatar often don't translate to custom characters without proper avatar setup and arrangement point configuration.
 
 ## Avatar Types in Marvelous Designer
 
@@ -26,7 +26,7 @@ Marvelous Designer includes several built-in avatar types:
 - **MetaHuman avatars**: Pre-configured for Epic Games' MetaHuman framework
 - **Custom avatars**: Imported from FBX, OBJ, or GLB files
 
-For most production work, I import a custom avatar that matches the target character's body proportions exactly.
+For most production work, we import a custom avatar that matches the target character's body proportions exactly.
 
 ## Importing a Custom Avatar
 
@@ -92,7 +92,7 @@ For custom avatars, the default arrangement points may not be in the right posit
 3. Adjust its position in X, Y, Z
 4. Add new arrangement points if needed
 
-I always verify arrangement points after importing a custom avatar — they're often slightly off, which causes garments to start simulation in the wrong position.
+We always verify arrangement points after importing a custom avatar — they're often slightly off, which causes garments to start simulation in the wrong position.
 
 ## Auto-Fitting
 
@@ -118,7 +118,7 @@ Auto-fitting works well for size differences (e.g., fitting a medium garment on 
 
 ## Manual Fitting Workflow
 
-When auto-fitting doesn't produce good results, I use this manual workflow:
+When auto-fitting doesn't produce good results, we use this manual workflow:
 
 ### Step 1: Position Pattern Pieces
 

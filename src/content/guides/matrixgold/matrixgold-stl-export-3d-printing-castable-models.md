@@ -1,6 +1,6 @@
 ---
 title: "MatrixGold STL Export and 3D Printing for Jewelry: Castable Models and Rapid Prototyping"
-excerpt: "Exporting castable STL files from MatrixGold requires specific mesh settings, wall thicknesses, and sprue preparation. I cover STL export settings, checking for naked edges, minimum wall thickness guidelines, and preparing models for investment casting and direct printing."
+excerpt: "Exporting castable STL files from MatrixGold requires specific mesh settings, wall thicknesses, and sprue preparation. We cover STL export settings, checking for naked edges, minimum wall thickness guidelines, and preparing models for investment casting and direct printing."
 category: "workflow"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold STL export 3D printing jewelry castable models rapid prototyping investment casting"
@@ -16,7 +16,7 @@ sources:
 
 # MatrixGold STL Export and 3D Printing for Jewelry: Castable Models and Rapid Prototyping
 
-I've prepared hundreds of MatrixGold models for 3D printing and investment casting. Jewelry 3D printing is far more demanding than typical FDM printing — the models need to be perfectly manifold, have appropriate wall thicknesses for casting, and meet the resolution requirements of resin printers designed for castable patterns. Getting the export and preparation right determines whether the caster can successfully burn out the pattern and cast the metal.
+We've prepared hundreds of MatrixGold models for 3D printing and investment casting. Jewelry 3D printing is far more demanding than typical FDM printing — the models need to be perfectly manifold, have appropriate wall thicknesses for casting, and meet the resolution requirements of resin printers designed for castable patterns. Getting the export and preparation right determines whether the caster can successfully burn out the pattern and cast the metal.
 
 ## Pre-Export Checklist
 

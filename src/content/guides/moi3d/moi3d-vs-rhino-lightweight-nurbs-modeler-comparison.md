@@ -15,7 +15,7 @@ sources:
 
 # MoI3D vs Rhino: Lightweight NURBS Modeler Comparison for Product Design
 
-MoI3D and Rhinoceros (Rhino) are both NURBS-based 3D modelers, but they target different users. MoI3D is a lightweight, affordable modeler with an intuitive interface, while Rhino is a full-featured professional tool with an extensive plugin ecosystem. I've used both and can help you decide which fits your workflow.
+MoI3D and Rhinoceros (Rhino) are both NURBS-based 3D modelers, but they target different users. MoI3D is a lightweight, affordable modeler with an intuitive interface, while Rhino is a full-featured professional tool with an extensive plugin ecosystem. We've used both and can help you decide which fits your workflow.
 
 ## Overview
 

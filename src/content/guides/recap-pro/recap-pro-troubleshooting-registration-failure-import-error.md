@@ -15,7 +15,7 @@ sources:
 
 # ReCap Pro Troubleshooting: Fixing Registration Failures, Import Errors, and Scanner Compatibility
 
-ReCap Pro works great with Autodesk-supported scanners and standard file formats. But throw in a non-standard scanner, an E57 file from an unusual source, or a 2025 version upgrade, and things break. I've debugged all of these problems. Here are the most common ReCap Pro issues and their fixes.
+ReCap Pro works great with Autodesk-supported scanners and standard file formats. But throw in a non-standard scanner, an E57 file from an unusual source, or a 2025 version upgrade, and things break. We've debugged all of these problems. Here are the most common ReCap Pro issues and their fixes.
 
 ## Problem 1: Auto-Registration Fails with Third-Party Scanners
 
@@ -200,7 +200,7 @@ Large projects (100+ scans, > 50GB) exceed available memory or GPU resources.
 4. **Upgrade hardware**:
    - **RAM**: 32GB minimum for large projects, 64GB recommended
    - **GPU**: Dedicated GPU with 4GB+ VRAM
-   - **Storage**: SSD for faster I/O
+   - **Storage**: SSD for faster we/O
 5. **Decimate before registration**:
    - Reduce point density in each scan before registration
    - This reduces memory usage during registration

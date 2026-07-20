@@ -15,7 +15,7 @@ sources:
 
 # Tinkercad to Fusion 360: When and How to Upgrade Your 3D Modeling
 
-Tinkercad is perfect for beginners, but eventually you'll hit its limits. I started in Tinkercad and moved to Fusion 360 after about 3 months. The transition is jarring but worth it. Here's how to know when to switch and how to make the move.
+Tinkercad is perfect for beginners, but eventually you'll hit its limits. We started in Tinkercad and moved to Fusion 360 after about 3 months. The transition is jarring but worth it. Here's how to know when to switch and how to make the move.
 
 ## When Tinkercad Is No Longer Enough
 

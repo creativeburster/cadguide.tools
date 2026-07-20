@@ -1,6 +1,6 @@
 ---
 title: "D5 Render Performance: DLSS, Frame Generation, GI Optimization, and Asset Management"
-excerpt: "D5 Render FPS drops in large scenes due to excessive assets, high-resolution textures, and unoptimized GI settings. I cover the DLSS 3 configuration, texture streaming, light sampling optimization, and the asset merging strategy that keeps D5 smooth."
+excerpt: "D5 Render FPS drops in large scenes due to excessive assets, high-resolution textures, and unoptimized GI settings. We cover the DLSS 3 configuration, texture streaming, light sampling optimization, and the asset merging strategy that keeps D5 smooth."
 category: "performance"
 softwareSlug: "d5-render"
 keyword: "D5 Render performance optimization DLSS FPS GI settings"
@@ -16,7 +16,7 @@ sources:
 
 # D5 Render Performance: DLSS, Frame Generation, GI Optimization, and Asset Management
 
-I optimize D5 Render workflows for architecture and landscape design firms, and the performance challenges are unique compared to other real-time renderers. D5 uses its own proprietary GI (Global Illumination) engine called D5 GI, which is optimized for architectural scenes but has specific performance characteristics. Understanding how D5 manages geometry, textures, and lights is key to maintaining smooth FPS.
+We optimize D5 Render workflows for architecture and landscape design firms, and the performance challenges are unique compared to other real-time renderers. D5 uses its own proprietary GI (Global Illumination) engine called D5 GI, which is optimized for architectural scenes but has specific performance characteristics. Understanding how D5 manages geometry, textures, and lights is key to maintaining smooth FPS.
 
 ## Optimization 1: DLSS Configuration
 
@@ -89,7 +89,7 @@ D5 automatically merges certain types of assets to reduce draw calls:
 
 D5's documentation recommends: "More reflective scenes will reduce efficiency. You can turn the specular of materials far from the camera to 0 to cancel the reflection."
 
-**My approach**:
+**Our approach**:
 1. For foreground materials: keep full reflection (specular at default)
 2. For midground materials (10-50m from camera): reduce specular to 50%
 3. For background materials (50m+): set specular to 0
@@ -101,7 +101,7 @@ D5's documentation recommends: "More reflective scenes will reduce efficiency. Y
 
 Vegetation is the most common cause of FPS drops in D5 Render. Trees, grass, and plants are extremely GPU-intensive.
 
-**My vegetation optimization rules**:
+**Our vegetation optimization rules**:
 1. **Limit grass area**: Don't apply grass to the entire site. Apply it only to areas visible in the camera view.
 2. **Use D5's built-in vegetation**: D5's vegetation assets are optimized for the engine. Imported vegetation from other sources may not be optimized.
 3. **Reduce vegetation density**: Lower the density slider for grass and ground cover — 50% density often looks as good as 100% at half the GPU cost.
@@ -143,7 +143,7 @@ For real-time editing vs final output:
 
 ## Practical Example
 
-A landscape architecture firm came to me with a large urban park project running at 15 FPS on an RTX 3070 (8GB VRAM). Here's what I changed:
+A landscape architecture firm came to us with a large urban park project running at 15 FPS on an RTX 3070 (8GB VRAM). Here's what we changed:
 
 1. Enabled DLSS in Quality mode (FPS: 15 → 28)
 2. Reduced grass area from full site to camera-visible area only (FPS: 28 → 35)
@@ -157,4 +157,4 @@ Final result: 15 FPS → 65 FPS. VRAM usage dropped from 7.8GB to 5.2GB (67% uti
 
 ## Summary
 
-D5 Render performance optimization is about leveraging DLSS, texture streaming, and smart asset management. My optimization order: enable DLSS (Quality for editing, Performance for max FPS) → enable Frame Generation on RTX 40 series → reduce grass area and vegetation density → set specular to 0 on distant materials → use billboard trees for background → disable DoF and Tyndall during editing → keep render resolution at 1080p for editing. DLSS and vegetation optimization together typically provide a 3-4x FPS improvement.
+D5 Render performance optimization is about leveraging DLSS, texture streaming, and smart asset management. Our optimization order: enable DLSS (Quality for editing, Performance for max FPS) → enable Frame Generation on RTX 40 series → reduce grass area and vegetation density → set specular to 0 on distant materials → use billboard trees for background → disable DoF and Tyndall during editing → keep render resolution at 1080p for editing. DLSS and vegetation optimization together typically provide a 3-4x FPS improvement.

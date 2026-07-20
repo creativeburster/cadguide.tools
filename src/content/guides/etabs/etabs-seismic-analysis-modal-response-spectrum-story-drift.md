@@ -1,6 +1,6 @@
 ---
 title: "ETABS Seismic Analysis: Modal, Response Spectrum, and Story Drift Evaluation"
-excerpt: "ETABS seismic analysis tools calculate building response to earthquake loads using modal analysis and response spectrum methods. I cover modal analysis setup, CQC modal combination, response spectrum application, story drift calculation, and seismic design checks per ASCE 7."
+excerpt: "ETABS seismic analysis tools calculate building response to earthquake loads using modal analysis and response spectrum methods. We cover modal analysis setup, CQC modal combination, response spectrum application, story drift calculation, and seismic design checks per ASCE 7."
 category: "workflow"
 softwareSlug: "etabs"
 keyword: "ETABS seismic analysis modal response spectrum story drift CQC ASCE 7 earthquake building response natural period"
@@ -16,7 +16,7 @@ sources:
 
 # ETABS Seismic Analysis: Modal, Response Spectrum, and Story Drift Evaluation
 
-I've performed seismic analysis on buildings from 3-story concrete structures to 50-story steel towers in ETABS. Seismic analysis is one of the most critical aspects of building design in earthquake-prone regions. ETABS provides comprehensive tools for modal analysis, response spectrum analysis, and story drift evaluation — all essential for verifying that a building meets seismic code requirements.
+We've performed seismic analysis on buildings from 3-story concrete structures to 50-story steel towers in ETABS. Seismic analysis is one of the most critical aspects of building design in earthquake-prone regions. ETABS provides comprehensive tools for modal analysis, response spectrum analysis, and story drift evaluation — all essential for verifying that a building meets seismic code requirements.
 
 ## Seismic Analysis Overview
 
@@ -173,7 +173,7 @@ The response spectrum base shear must be scaled to match the ELF base shear per 
    - **Drift**: Difference in displacement between adjacent stories
    - **Drift ratio**: Drift / story height
 4. ASCE 7 drift limits:
-   - **Risk Category I/II**: Δ ≤ 0.020 × story height (1/50)
+   - **Risk Category we/II**: Δ ≤ 0.020 × story height (1/50)
    - **Risk Category III**: Δ ≤ 0.015 × story height (1/67)
    - **Risk Category IV**: Δ ≤ 0.010 × story height (1/100)
 5. The drift must be multiplied by the deflection amplification factor Cd:

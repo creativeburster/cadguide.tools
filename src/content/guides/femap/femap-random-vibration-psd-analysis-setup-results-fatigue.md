@@ -15,7 +15,7 @@ sources:
 
 # Femap Random Vibration PSD Analysis: Setup, Results Interpretation, and Fatigue Estimation
 
-Random vibration analysis is essential for products that must survive vibration environments — aerospace electronics, automotive components, and military equipment. Femap with NX Nastran provides a complete workflow for PSD-based random vibration analysis. I'll walk through the setup, results interpretation, and fatigue estimation.
+Random vibration analysis is essential for products that must survive vibration environments — aerospace electronics, automotive components, and military equipment. Femap with NX Nastran provides a complete workflow for PSD-based random vibration analysis. We'll walk through the setup, results interpretation, and fatigue estimation.
 
 ## What Is Random Vibration Analysis?
 

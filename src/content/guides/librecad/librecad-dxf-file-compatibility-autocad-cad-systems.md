@@ -18,7 +18,7 @@ sources:
 
 LibreCAD uses DXF as its native file format, making it inherently compatible with AutoCAD and other CAD systems that support DXF. However, DXF compatibility is not always straightforward. On Reddit's r/FreeCAD, a user noted that "LibreCAD has a poor cross-format support (pdf, dwg, dxf)" — and that assessment is partially accurate. While LibreCAD reads and writes DXF files well, it cannot read or write DWG files directly, and its DXF write support is limited to older format versions.
 
-I've been in situations where a client sent DWG files and I had to use LibreCAD to open them. The workaround — converting DWG to DXF using the free ODA File Converter — works but adds an extra step to every file exchange. For teams that regularly collaborate with AutoCAD users, this friction adds up. The DXF format itself is well-supported for basic 2D entities (lines, arcs, circles, text, dimensions), but complex entities like dynamic blocks, MLEADER objects, and certain hatch patterns may not survive the round trip.
+A common situation is receiving DWG files that you need to open in LibreCAD. The workaround — converting DWG to DXF using the free ODA File Converter — works but adds an extra step to every file exchange. For teams that regularly collaborate with AutoCAD users, this friction adds up. The DXF format itself is well-supported for basic 2D entities (lines, arcs, circles, text, dimensions), but complex entities like dynamic blocks, MLEADER objects, and certain hatch patterns may not survive the round trip.
 
 This guide covers everything you need to know about DXF file exchange with LibreCAD, based on real workflow experience and community-reported issues.
 

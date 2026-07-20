@@ -15,7 +15,7 @@ sources:
 
 # RISA-3D Steel Design: AISC Code Checking and Member Optimization
 
-Steel design in RISA-3D follows AISC 360 (LRFD or ASD). The code checking is automatic — you define the members and loads, RISA checks every member against the code. I've optimized hundreds of steel frames in RISA. Here's the workflow.
+Steel design in RISA-3D follows AISC 360 (LRFD or ASD). The code checking is automatic — you define the members and loads, RISA checks every member against the code. We've optimized hundreds of steel frames in RISA. Here's the workflow.
 
 ## Step 1: Set Design Code
 

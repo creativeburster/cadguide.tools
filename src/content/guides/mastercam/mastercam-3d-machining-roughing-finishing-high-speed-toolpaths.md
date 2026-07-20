@@ -1,6 +1,6 @@
 ---
 title: "Mastercam 3D Machining: Roughing, Finishing, and High-Speed Toolpaths for Complex Surfaces"
-excerpt: "Mastercam's 3D machining tools create toolpaths for complex surface models using roughing and finishing strategies. I cover surface roughing, parallel finishing, radial finishing, project finishing, rest machining, and high-speed dynamic toolpaths for 3D CNC milling."
+excerpt: "Mastercam's 3D machining tools create toolpaths for complex surface models using roughing and finishing strategies. We cover surface roughing, parallel finishing, radial finishing, project finishing, rest machining, and high-speed dynamic toolpaths for 3D CNC milling."
 category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam 3D machining roughing finishing high-speed toolpaths complex surfaces parallel radial project rest machining dynamic CNC"
@@ -15,7 +15,7 @@ sources:
 
 # Mastercam 3D Machining: Roughing, Finishing, and High-Speed Toolpaths for Complex Surfaces
 
-I've programmed complex 3D parts in Mastercam for mold making, aerospace components, and medical implants. 3D machining is fundamentally different from 2D — the toolpath follows complex surface geometry rather than simple 2D contours. Mastercam offers a wide range of 3D roughing and finishing strategies, and choosing the right combination is critical for surface finish, cycle time, and tool life.
+We've programmed complex 3D parts in Mastercam for mold making, aerospace components, and medical implants. 3D machining is fundamentally different from 2D — the toolpath follows complex surface geometry rather than simple 2D contours. Mastercam offers a wide range of 3D roughing and finishing strategies, and choosing the right combination is critical for surface finish, cycle time, and tool life.
 
 ## 3D Machining Overview
 

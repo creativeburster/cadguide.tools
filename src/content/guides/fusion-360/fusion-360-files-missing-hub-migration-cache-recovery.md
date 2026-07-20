@@ -1,6 +1,6 @@
 ---
 title: "Fusion 360 Files Missing After Update: Hub Migration, Single User Storage, and Cache Recovery"
-excerpt: "After a Fusion 360 update or reinstall, your designs show '??' errors or disappear entirely. I cover the Hub migration fix, Single User Storage transfer, and local cache recovery that get your files back."
+excerpt: "After a Fusion 360 update or reinstall, your designs show '??' errors or disappear entirely. We cover the Hub migration fix, Single User Storage transfer, and local cache recovery that get your files back."
 category: "troubleshooting"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 files missing after update hub migration"

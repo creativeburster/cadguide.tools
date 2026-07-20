@@ -1,6 +1,6 @@
 ---
 title: "Blender Large Scene Management: Collections, Linking, and Proxy Workflow for Architecture and Environment"
-excerpt: "Blender slows to a crawl with architectural and environment scenes containing millions of polygons. I cover the collection organization, library linking, and the proxy workflow that keep large scenes manageable."
+excerpt: "Blender slows to a crawl with architectural and environment scenes containing millions of polygons. We cover the collection organization, library linking, and the proxy workflow that keep large scenes manageable."
 category: "workflow"
 softwareSlug: "blender"
 keyword: "Blender large scene management collections linking proxy architecture"

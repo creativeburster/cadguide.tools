@@ -17,9 +17,9 @@ sources:
 
 # Rhino Display Pipeline Optimization: Fixing Laggy Viewports with Heavy Mesh Models
 
-I've worked with Rhino models that had 50 million polygons, and the viewport was so laggy that rotating the view took 5 seconds per frame. On the McNeel forum, a user described similar frustration: "I'm frustrated with the performance of grasshopper in rhino and rhino itself." On the Grasshopper3D forum, another user noted that "Rhino and Grasshopper cannot even make use of the multiple cores on your own computer" — which applies to the display pipeline as well. The display pipeline is largely single-threaded, so a faster GPU doesn't always help if the bottleneck is in mesh processing.
+We've worked with Rhino models that had 50 million polygons, and the viewport was so laggy that rotating the view took 5 seconds per frame. On the McNeel forum, a user described similar frustration: "I'm frustrated with the performance of grasshopper in rhino and rhino itself." On the Grasshopper3D forum, another user noted that "Rhino and Grasshopper cannot even make use of the multiple cores on your own computer" — which applies to the display pipeline as well. The display pipeline is largely single-threaded, so a faster GPU doesn't always help if the bottleneck is in mesh processing.
 
-This guide covers the display pipeline optimizations I've found most effective for heavy mesh models, from basic settings changes to advanced viewport strategies.
+This guide covers the display pipeline optimizations we've found most effective for heavy mesh models, from basic settings changes to advanced viewport strategies.
 
 ## Understanding the Rhino Display Pipeline
 
@@ -66,7 +66,7 @@ Anti-aliasing smooths edges but requires multiple samples per pixel. Go to Displ
 
 Clipping planes cut away geometry you don't need to see. Use the ClippingPlane command to create section cuts through your model. This reduces the number of objects the display pipeline needs to process.
 
-For large architectural models, I typically create two clipping planes — one horizontal (to cut through floors) and one vertical (to cut through the building). This lets me work on interior details without the entire building being processed.
+For large architectural models, we typically create two clipping planes — one horizontal (to cut through floors) and one vertical (to cut through the building). This lets us work on interior details without the entire building being processed.
 
 ## Intermediate Optimizations
 
@@ -131,6 +131,6 @@ Based on community discussions:
 - **RAM**: 32GB minimum for models with 10M+ polygons. The display meshes are held in RAM.
 - **GPU driver**: Use the "Studio" or "Enterprise" driver rather than "Game Ready" — these are more stable for CAD applications.
 
-## My Take
+## Our Take
 
 The biggest viewport performance gains come from the simplest changes: switching to Wireframe display, reducing render mesh density, and hiding unused layers. These three changes alone can take a model from unusable to workable in under a minute. For ongoing work, creating custom display modes for different phases (modeling, review, presentation) lets you balance visual quality and performance without constantly adjusting settings. And don't underestimate the power of clipping planes — they're the most underused optimization tool in Rhino, and they can cut your display workload in half.

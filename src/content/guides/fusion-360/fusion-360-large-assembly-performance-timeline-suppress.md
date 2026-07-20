@@ -1,6 +1,6 @@
 ---
 title: "Fusion 360 Large Assembly Performance: Suppress Features, Simplify Components, and Manage the Timeline"
-excerpt: "Fusion 360 slows to a crawl when your timeline exceeds 500 features or your assembly has 1000+ occurrences. I cover the feature suppression, component simplification, and timeline management strategies that keep Fusion responsive."
+excerpt: "Fusion 360 slows to a crawl when your timeline exceeds 500 features or your assembly has 1000+ occurrences. We cover the feature suppression, component simplification, and timeline management strategies that keep Fusion responsive."
 category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 large assembly performance suppress features timeline"
@@ -18,7 +18,7 @@ sources:
 
 Fusion 360 is a cloud-connected parametric modeler, and its performance depends on three factors: the length of your parametric timeline, the number of occurrences in your assembly, and the complexity of each component. Unlike traditional CAD systems like SolidWorks or Inventor, Fusion 360 also has cloud sync overhead — every save triggers an upload, and every open may trigger a download. When your design gets large, all three factors compound, and Fusion can become unusably slow.
 
-Autodesk's official support article on large assembly performance in Fusion 360 acknowledges that "performance issues can occur when working with large assemblies." The recommended fixes focus on reducing the amount of data Fusion needs to process. I've implemented these strategies across dozens of large Fusion projects and added my own field-tested techniques.
+Autodesk's official support article on large assembly performance in Fusion 360 acknowledges that "performance issues can occur when working with large assemblies." The recommended fixes focus on reducing the amount of data Fusion needs to process. We've implemented these strategies across dozens of large Fusion projects and added our own field-tested techniques.
 
 ## Understanding Fusion 360's Performance Factors
 

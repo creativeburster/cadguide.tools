@@ -1,6 +1,6 @@
 ---
-title: "CADWorx ISOGEN Configuration: I-Configure Setup for Custom Isometric Output"
-excerpt: "How to configure ISOGEN in CADWorx using I-Configure — covering style settings, symbol mapping, annotation placement, dimensioning options, BOM reports, and troubleshooting missing symbols and wrong component representations in isometrics."
+title: "CADWorx ISOGEN Configuration: We-Configure Setup for Custom Isometric Output"
+excerpt: "How to configure ISOGEN in CADWorx using we-Configure — covering style settings, symbol mapping, annotation placement, dimensioning options, BOM reports, and troubleshooting missing symbols and wrong component representations in isometrics."
 category: "workflow"
 softwareSlug: "cadworx"
 keyword: "cadworx isogen configuration i-configure isometric output setup"
@@ -13,9 +13,9 @@ sources:
   - "https://docs.hexagonppm.com/r/en-US/CADWorx-Plant/24/902857"
 ---
 
-# CADWorx ISOGEN Configuration: I-Configure Setup for Custom Isometric Output
+# CADWorx ISOGEN Configuration: We-Configure Setup for Custom Isometric Output
 
-ISOGEN is the engine that turns your 3D CADWorx model into fabrication-ready isometric drawings. I've configured ISOGEN for dozens of projects, and the difference between a good configuration and a bad one is the difference between isometrics that fabricators can use and isometrics that generate RFIs. Here's how to configure I-Configure for professional isometric output.
+ISOGEN is the engine that turns your 3D CADWorx model into fabrication-ready isometric drawings. We've configured ISOGEN for dozens of projects, and the difference between a good configuration and a bad one is the difference between isometrics that fabricators can use and isometrics that generate RFIs. Here's how to configure we-Configure for professional isometric output.
 
 ## Understanding the ISOGEN Pipeline in CADWorx
 
@@ -23,16 +23,16 @@ CADWorx generates isometrics through this pipeline:
 
 1. **3D Model** — pipe routes with components
 2. **PCF File** — CADWorx exports a PCF (Piping Component File) for each line
-3. **I-Configure** — defines how ISOGEN processes the PCF
+3. **we-Configure** — defines how ISOGEN processes the PCF
 4. **ISOGEN** — generates the isometric drawing from the PCF
 5. **Output** — DWG, PDF, or both
 
-I-Configure is the control panel. Every aspect of the isometric appearance — symbols, annotations, dimensions, BOM, border — is configured here.
+We-Configure is the control panel. Every aspect of the isometric appearance — symbols, annotations, dimensions, BOM, border — is configured here.
 
-## Step 1: Open I-Configure
+## Step 1: Open we-Configure
 
-1. From CADWorx, go to **ISO** → **I-Configure**.
-2. Or launch I-Configure from the Windows Start Menu.
+1. From CADWorx, go to **ISO** → **we-Configure**.
+2. Or launch we-Configure from the Windows Start Menu.
 3. The Home screen displays key configuration areas:
    - **Style**: Visual appearance
    - **Symbol**: Component representations
@@ -40,7 +40,7 @@ I-Configure is the control panel. Every aspect of the isometric appearance — s
    - **Report**: BOM and material reports
    - **Border**: Drawing border and title block
 
-4. If working with a CADWorx project, I-Configure loads the project's configuration automatically.
+4. If working with a CADWorx project, we-Configure loads the project's configuration automatically.
 
 ## Step 2: Configure Style Settings
 
@@ -101,16 +101,16 @@ Symbols define how each component appears on the isometric.
 For non-standard components:
 
 1. Create a DWG block for the custom symbol.
-2. In I-Configure, go to **Symbol** → **Custom Symbols**.
+2. In we-Configure, go to **Symbol** → **Custom Symbols**.
 3. Add the block file path.
 4. Map the custom component to the new symbol.
 5. Test by generating an isometric with the custom component.
 
 ### Common Symbol Issues
 
-**Wrong symbol for component**: The component's spec code maps to the wrong ISOGEN symbol. Check the symbol mapping in I-Configure and correct the mapping.
+**Wrong symbol for component**: The component's spec code maps to the wrong ISOGEN symbol. Check the symbol mapping in we-Configure and correct the mapping.
 
-**Symbol too large/small**: Adjust the symbol scale in I-Configure. Symbols should be proportional to the pipe size on the isometric.
+**Symbol too large/small**: Adjust the symbol scale in we-Configure. Symbols should be proportional to the pipe size on the isometric.
 
 **Missing symbol**: The component type doesn't have a symbol assigned. Create a custom symbol or map it to a similar existing symbol.
 
@@ -169,7 +169,7 @@ The description format determines what text appears in the BOM:
 - **Elbow**: "ELBOW 4\" 90° LR BW ASME B16.9" (size, angle, type, end, standard)
 - **Valve**: "GATE VALVE 4\" 150# RF API 600" (type, size, class, facing, standard)
 
-Configure the description format in I-Configure to match your fabrication shop's requirements.
+Configure the description format in we-Configure to match your fabrication shop's requirements.
 
 ## Step 6: Configure Drawing Border
 
@@ -196,7 +196,7 @@ After configuration:
 1. Open a CADWorx model with pipe routes.
 2. Go to **ISO** → **Generate Isometric**.
 3. Select the line to generate.
-4. Choose the I-Configure style.
+4. Choose the we-Configure style.
 5. Click **Generate**.
 6. Review the output:
    - Are symbols correct?
@@ -211,7 +211,7 @@ ISOGEN configuration is iterative. After generating test isometrics:
 
 1. **Review with the fabrication team** — ask if the isometrics are usable
 2. **Note issues** — wrong symbols, missing annotations, BOM errors
-3. **Adjust I-Configure settings** — fix the identified issues
+3. **Adjust we-Configure settings** — fix the identified issues
 4. **Re-generate** — verify the fixes
 5. **Repeat** — until the fabrication team approves the output
 
@@ -221,7 +221,7 @@ For large projects, generate isometrics in batches:
 
 1. Go to **ISO** → **Batch Generation**.
 2. Select multiple lines.
-3. Choose the I-Configure style.
+3. Choose the we-Configure style.
 4. Click **Generate All**.
 5. ISOGEN processes each line and creates individual isometric drawings.
 
@@ -240,7 +240,7 @@ For large projects, generate isometrics in batches:
 1. Check the PCF file was created — look in the project's PCF folder.
 2. Open the PCF in a text editor — verify it contains component data.
 3. Check the ISOGEN log file for errors.
-4. Verify I-Configure is pointing to the correct style and symbol libraries.
+4. Verify we-Configure is pointing to the correct style and symbol libraries.
 
 ### Missing Components in Isometric
 
@@ -248,11 +248,11 @@ The component is in the model but not in the isometric. Causes:
 
 1. **Component not in spec** — the component was inserted as a custom part. Add it to the spec.
 2. **PCF export error** — the component wasn't included in the PCF. Check PCF export settings.
-3. **Symbol not mapped** — the component type doesn't have a symbol in I-Configure. Map a symbol.
+3. **Symbol not mapped** — the component type doesn't have a symbol in we-Configure. Map a symbol.
 
 ### Annotations Overlapping
 
-1. Adjust annotation spacing in I-Configure.
+1. Adjust annotation spacing in we-Configure.
 2. Change annotation position (above/below) for specific component types.
 3. Reduce the amount of annotation text.
 4. Increase the drawing scale to provide more space.
@@ -260,15 +260,15 @@ The component is in the model but not in the isometric. Causes:
 ### BOM Shows Wrong Quantities
 
 1. Check the model for duplicate components.
-2. Verify the BOM aggregation settings in I-Configure (group by type or by size).
+2. Verify the BOM aggregation settings in we-Configure (group by type or by size).
 3. Check for components with wrong spec codes.
 
 ## Best Practices
 
-- **Create project-specific I-Configure styles** — don't modify the default styles
+- **Create project-specific we-Configure styles** — don't modify the default styles
 - **Test with the fabrication team** — they're the end users of the isometrics
-- **Document the configuration** — keep a record of all I-Configure settings
+- **Document the configuration** — keep a record of all we-Configure settings
 - **Use consistent styles across projects** — saves setup time and improves consistency
 - **Generate isometrics early and often** — don't wait until the model is complete
-- **Archive I-Configure files with the project** — preserve the configuration for future reference
-- **Train the team on I-Configure** — don't rely on one person for ISOGEN configuration
+- **Archive we-Configure files with the project** — preserve the configuration for future reference
+- **Train the team on we-Configure** — don't rely on one person for ISOGEN configuration

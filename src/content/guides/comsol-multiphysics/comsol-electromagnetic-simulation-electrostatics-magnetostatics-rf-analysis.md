@@ -15,7 +15,7 @@ sources:
 
 # COMSOL Electromagnetic Simulation: Electrostatics, Magnetostatics, and RF Analysis
 
-Electromagnetic simulation is one of those areas where COMSOL really stands out. I've used it for everything from capacitor design to RF antenna work, and the fact that I can couple electromagnetic results directly with thermal and structural physics in the same model is a huge time-saver. Let me walk you through how I approach EM simulation in COMSOL, from DC electrostatics to high-frequency RF.
+Electromagnetic simulation is one of those areas where COMSOL really stands out. We've used it for everything from capacitor design to RF antenna work, and the fact that we can couple electromagnetic results directly with thermal and structural physics in the same model is a huge time-saver. Let us walk you through how we approach EM simulation in COMSOL, from DC electrostatics to high-frequency RF.
 
 ## Electrostatics
 
@@ -81,11 +81,11 @@ Electromagnetic simulation is one of those areas where COMSOL really stands out.
 ### Coil and Current Modeling
 
 1. **Single-turn coil**: 
-   - Current: I (A) through coil
-   - Magnetic field: B = μ₀I/(2πr) (for long straight wire)
+   - Current: We (A) through coil
+   - Magnetic field: B = μ₀we/(2πr) (for long straight wire)
 2. **Multi-turn coil**:
    - Number of turns: N
-   - Current per turn: I
+   - Current per turn: We
    - Total ampere-turns: NI
 3. **Current density**: J = NI / Across (A/m²)
 
@@ -94,7 +94,7 @@ Electromagnetic simulation is one of those areas where COMSOL really stands out.
 1. **Magnetic flux density**: B (T) — contour or vector
 2. **Magnetic field intensity**: H (A/m)
 3. **Magnetic force**: On ferromagnetic parts (Maxwell stress)
-4. **Inductance**: L = NΦ/I (flux linkage per current)
+4. **Inductance**: L = NΦ/we (flux linkage per current)
 5. **Energy**: W = 0.5 × ∫ B·H dV (J)
 
 ### Applications
@@ -256,4 +256,4 @@ Electromagnetic simulation is one of those areas where COMSOL really stands out.
 
 ## Wrapping Up
 
-The thing about electromagnetic simulation in COMSOL is that your material properties make or break the analysis. I once spent three days trying to figure out why my eddy current results were wrong, only to realize I'd used the wrong conductivity value for the steel core. Double-check your εr, μr, and σ values before you hit solve. And if you're doing RF work, make sure your mesh resolves the wavelength — at least 5-6 elements per wavelength, or your S-parameters will be garbage. Get those basics right and COMSOL handles the rest.
+The thing about electromagnetic simulation in COMSOL is that your material properties make or break the analysis. A classic pitfall is using the wrong conductivity value for a steel core, which quietly produces wrong eddy current results — double-check your εr, μr, and σ values before you hit solve. And if you're doing RF work, make sure your mesh resolves the wavelength — at least 5-6 elements per wavelength, or your S-parameters will be garbage. Get those basics right and COMSOL handles the rest.

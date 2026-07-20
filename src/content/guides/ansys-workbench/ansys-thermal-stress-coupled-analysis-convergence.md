@@ -1,6 +1,6 @@
 ---
 title: "Ansys Thermal-Stress Coupled Analysis: Preventing Convergence and Accuracy Issues"
-excerpt: "Coupled thermal-stress analysis in Ansys combines two nonlinearities — temperature-dependent material and thermal expansion. I cover the setup, common convergence traps, and verification techniques I use for thermal-stress problems."
+excerpt: "Coupled thermal-stress analysis in Ansys combines two nonlinearities — temperature-dependent material and thermal expansion. We cover the setup, common convergence traps, and verification techniques we use for thermal-stress problems."
 category: "troubleshooting"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys thermal stress coupled analysis convergence"
@@ -15,7 +15,7 @@ sources:
 
 # Ansys Thermal-Stress Coupled Analysis: Preventing Convergence and Accuracy Issues
 
-I work in the semiconductor packaging industry, where thermal-stress analysis is critical. A typical problem: a silicon die is bonded to a copper substrate with solder, and the assembly undergoes thermal cycling from -40°C to 125°C. The different coefficients of thermal expansion (CTE) between silicon (2.6 ppm/°C), copper (17 ppm/°C), and solder (23 ppm/°C) create enormous stresses during temperature changes. Getting this analysis to converge and give accurate results requires careful setup. I've spent years learning the traps, and I'll share them here.
+We work in the semiconductor packaging industry, where thermal-stress analysis is critical. A typical problem: a silicon die is bonded to a copper substrate with solder, and the assembly undergoes thermal cycling from -40°C to 125°C. The different coefficients of thermal expansion (CTE) between silicon (2.6 ppm/°C), copper (17 ppm/°C), and solder (23 ppm/°C) create enormous stresses during temperature changes. Getting this analysis to converge and give accurate results requires careful setup. We've spent years learning the traps, and we'll share them here.
 
 ## Types of Thermal-Stress Analysis in Ansys
 
@@ -44,7 +44,7 @@ Solve thermal and structural in alternating iterations within the same solver.
 - **When to use**: Intermediate coupling — some temperature dependence but deformation doesn't significantly affect thermal behavior
 - **Setup**: Available in Ansys Mechanical APDL, less common in Workbench
 
-For most thermal-stress problems, the **sequential** approach is sufficient and more robust. I use the **fully coupled** approach only when material properties change significantly with temperature or when contact gaps change during thermal loading.
+For most thermal-stress problems, the **sequential** approach is sufficient and more robust. We use the **fully coupled** approach only when material properties change significantly with temperature or when contact gaps change during thermal loading.
 
 ## Setting Up a Sequential Thermal-Stress Analysis
 

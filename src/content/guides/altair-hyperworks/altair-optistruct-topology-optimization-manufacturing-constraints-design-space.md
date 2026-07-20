@@ -15,7 +15,7 @@ sources:
 
 # Altair OptiStruct: Topology Optimization Setup, Manufacturing Constraints, and Results Interpretation
 
-Topology optimization is where FEA meets design creativity. Instead of analyzing a given design, you tell the solver what the design needs to do, and it finds the optimal material distribution. OptiStruct is one of the best topology optimization solvers I've used. But the results are only as good as your setup — garbage in, garbage out. Here's my complete workflow.
+Topology optimization is where FEA meets design creativity. Instead of analyzing a given design, you tell the solver what the design needs to do, and it finds the optimal material distribution. OptiStruct is one of the best topology optimization solvers we've used. But the results are only as good as your setup — garbage in, garbage out. Here's our complete workflow.
 
 ## What Topology Optimization Does
 

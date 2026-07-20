@@ -15,7 +15,7 @@ sources:
 
 # SolidCAM iMachining Settings: Optimizing Feed Rate, Stepover, and Engagement
 
-iMachining's Technology Wizard gives you recommended settings, but the defaults are conservative. After running iMachining on dozens of parts across different materials and machines, I've learned how to push the parameters without breaking tools. Here's my tuning guide.
+iMachining's Technology Wizard gives you recommended settings, but the defaults are conservative. After running iMachining on dozens of parts across different materials and machines, we've learned how to push the parameters without breaking tools. Here's our tuning guide.
 
 ## The Three Key Parameters
 

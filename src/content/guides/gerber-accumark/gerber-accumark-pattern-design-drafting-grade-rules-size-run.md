@@ -1,6 +1,6 @@
 ---
 title: "Gerber AccuMark Pattern Design: Drafting, Grade Rules, and Size Run Management"
-excerpt: "Gerber AccuMark's pattern design tools handle 2D drafting, grade rule tables, and size run management for apparel production. I cover the drafting workspace, grade rule setup, pattern piece parameters, and the AccuMark data structure for organized production pattern management."
+excerpt: "Gerber AccuMark's pattern design tools handle 2D drafting, grade rule tables, and size run management for apparel production. We cover the drafting workspace, grade rule setup, pattern piece parameters, and the AccuMark data structure for organized production pattern management."
 category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark pattern design drafting grade rules size run management apparel production"
@@ -16,7 +16,7 @@ sources:
 
 # Gerber AccuMark Pattern Design: Drafting, Grade Rules, and Size Run Management
 
-I've used Gerber AccuMark in apparel production environments handling hundreds of styles per season. AccuMark is the industry standard pattern making system in the Americas, with decades of development behind it. The system's strength lies in its structured data management — every pattern, grade, and marker is organized in a database that scales from a single style to thousands of styles across multiple seasons.
+We've used Gerber AccuMark in apparel production environments handling hundreds of styles per season. AccuMark is the industry standard pattern making system in the Americas, with decades of development behind it. The system's strength lies in its structured data management — every pattern, grade, and marker is organized in a database that scales from a single style to thousands of styles across multiple seasons.
 
 ## AccuMark Overview
 

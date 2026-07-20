@@ -15,7 +15,7 @@ sources:
 
 # ANSYS Fluent Heat Transfer Simulation: Conjugate Heat Transfer, Natural Convection, and Thermal Boundary Conditions
 
-Heat transfer simulations are where I see the most convergence problems. The energy equation is sensitive — it interacts with the flow field, turbulence model, and mesh quality in ways that momentum equations don't. Conjugate heat transfer (CHT), where you simulate both solid and fluid domains, adds another layer of complexity. Here's how to set up heat transfer simulations that converge and give accurate results.
+Heat transfer simulations are where we see the most convergence problems. The energy equation is sensitive — it interacts with the flow field, turbulence model, and mesh quality in ways that momentum equations don't. Conjugate heat transfer (CHT), where you simulate both solid and fluid domains, adds another layer of complexity. Here's how to set up heat transfer simulations that converge and give accurate results.
 
 ## Types of Heat Transfer in Fluent
 

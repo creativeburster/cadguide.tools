@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Steel Design: Eurocode 3 Code Checking, Member Optimization, and Connection Design
 
-Steel design in CYPECAD per Eurocode 3 is straightforward once you've done it a few times. The code checking, section optimization, and connection design through CYPE Connect cover most of what I need for steel building projects in Europe. Let me walk you through the workflow I use.
+Steel design in CYPECAD per Eurocode 3 is straightforward once you've done it a few times. The code checking, section optimization, and connection design through CYPE Connect cover most of what we need for steel building projects in Europe. Let us walk you through the workflow we use.
 
 ## Steel Section Database
 
@@ -23,7 +23,7 @@ Steel design in CYPECAD per Eurocode 3 is straightforward once you've done it a 
 
 1. Beams > Steel Sections
 2. Select from database:
-   - **IPE**: European I-beams (IPE 80 to IPE 600)
+   - **IPE**: European we-beams (IPE 80 to IPE 600)
    - **HEA/HEB/HEM**: European H-sections (HEA 100 to HEM 1000)
    - **UPN**: European channels (UPN 80 to UPN 400)
    - **L-sections**: Equal and unequal angles
@@ -251,4 +251,4 @@ CYPECAD automatically classifies sections per EN 1993-1-1 Table 5.2:
 
 ## Wrapping Up
 
-Steel design in CYPECAD per Eurocode 3 covers most of what I need for building projects. The section classification and buckling checks are reliable, and the CYPE Connect integration for joints is handy. My tip: pay attention to section classification — it determines which design method applies, and getting it wrong can lead to either unsafe or overly conservative designs. And don't forget fire design — it's often required by building regulations and CYPECAD handles it per EN 1993-1-2.
+Steel design in CYPECAD per Eurocode 3 covers most of what we need for building projects. The section classification and buckling checks are reliable, and the CYPE Connect integration for joints is handy. Our tip: pay attention to section classification — it determines which design method applies, and getting it wrong can lead to either unsafe or overly conservative designs. And don't forget fire design — it's often required by building regulations and CYPECAD handles it per EN 1993-1-2.

@@ -15,7 +15,7 @@ sources:
 
 # Trimble Connect BCF Workflow: Importing Issues from Solibri and Navisworks for Tekla Teams
 
-On most BIM projects, the coordinator runs clash detection in Solibri or Navisworks, but the steel team works in Tekla Structures. Without a BCF workflow, issues found in coordination never reach the Tekla team — or they reach them as screenshots in an email, which is useless. I've set up BCF workflows specifically for Tekla teams using Trimble Connect as the bridge. Here's how.
+On most BIM projects, the coordinator runs clash detection in Solibri or Navisworks, but the steel team works in Tekla Structures. Without a BCF workflow, issues found in coordination never reach the Tekla team — or they reach them as screenshots in an email, which is useless. We've set up BCF workflows specifically for Tekla teams using Trimble Connect as the bridge. Here's how.
 
 ## The BCF Bridge Concept
 

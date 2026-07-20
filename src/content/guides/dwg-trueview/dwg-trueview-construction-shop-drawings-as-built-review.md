@@ -15,7 +15,7 @@ sources:
 
 # DWG TrueView for Construction: Reviewing Shop Drawings and As-Builts On Site
 
-On a construction site, you need to view drawings quickly, measure dimensions, and print full-size plots — but you don't always have an AutoCAD license. DWG TrueView fills this gap. I've used it on job sites for years. Here's the field workflow.
+On a construction site, you need to view drawings quickly, measure dimensions, and print full-size plots — but you don't always have an AutoCAD license. DWG TrueView fills this gap. We've used it on job sites for years. Here's the field workflow.
 
 ## Setting Up DWG TrueView for Site Use
 

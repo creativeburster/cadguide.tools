@@ -65,7 +65,7 @@ OpenSCAD uses the variable that produces the **highest facet count**:
 | High-detail (jewelry) | 128 | — | — | Very smooth, large file |
 | Mixed sizes (recommended) | 0 | 12 | 1 | Adaptive — smooth on all sizes |
 
-**My recommendation**: Set these at the top of your file:
+**Our recommendation**: Set these at the top of your file:
 ```openscad
 $fn = 0;    // Let $fa and $fs control
 $fa = 12;   // Max 12° per facet (30 facets per circle)

@@ -16,7 +16,7 @@ sources:
 
 # SAP2000 Structural Analysis: Modeling, Section Properties, and Linear Static Analysis
 
-SAP2000 was the first structural analysis software I learned, and I still use it regularly for projects that aren't pure buildings. It's CSI's general-purpose tool — bridges, special structures, industrial frames — and the interface is straightforward once you understand the workflow. Let me walk you through how I build a model from scratch, from grid setup to result interpretation.
+SAP2000 was the first structural analysis software we learned, and we still use it regularly for projects that aren't pure buildings. It's CSI's general-purpose tool — bridges, special structures, industrial frames — and the interface is straightforward once you understand the workflow. Let us walk you through how we build a model from scratch, from grid setup to result interpretation.
 
 ## Model Creation
 
@@ -306,4 +306,4 @@ For a typical building, use the 3D frame template:
 
 ## Wrapping Up
 
-SAP2000 is a tool I keep coming back to for non-building structures. The grid-based modeling is intuitive, the section library is comprehensive, and the analysis engine is rock-solid. My biggest piece of advice: always check your deformed shape first. If it looks wrong, the model is wrong — no amount of fancy post-processing will fix a bad model. Get the geometry and supports right, and the rest follows.
+SAP2000 is a tool we keep coming back to for non-building structures. The grid-based modeling is intuitive, the section library is comprehensive, and the analysis engine is rock-solid. Our biggest piece of advice: always check your deformed shape first. If it looks wrong, the model is wrong — no amount of fancy post-processing will fix a bad model. Get the geometry and supports right, and the rest follows.

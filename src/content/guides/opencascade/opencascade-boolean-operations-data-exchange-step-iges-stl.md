@@ -15,7 +15,7 @@ sources:
 
 # OpenCASCADE Boolean Operations and Data Exchange: STEP, IGES, and STL Workflows
 
-Boolean operations and data exchange are two of the most common tasks in OCCT-based applications. Whether you're building a CAD importer, a geometry processor, or a custom modeling tool, you'll need to combine shapes and read/write industry-standard file formats. I'll cover both with practical C++ code examples.
+Boolean operations and data exchange are two of the most common tasks in OCCT-based applications. Whether you're building a CAD importer, a geometry processor, or a custom modeling tool, you'll need to combine shapes and read/write industry-standard file formats. We'll cover both with practical C++ code examples.
 
 ## Boolean Operations
 

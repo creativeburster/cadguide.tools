@@ -15,7 +15,7 @@ sources:
 
 # MSC Nastran Dynamic Analysis: Modal, Frequency Response, and Random Vibration
 
-MSC Nastran is the original finite element solver for structural dynamics. It's used across aerospace, automotive, and defense industries for vibration, shock, and fatigue analysis. The dynamic analysis capabilities are extensive — I'll cover the three most common types: modal, frequency response, and random vibration.
+MSC Nastran is the original finite element solver for structural dynamics. It's used across aerospace, automotive, and defense industries for vibration, shock, and fatigue analysis. The dynamic analysis capabilities are extensive — We'll cover the three most common types: modal, frequency response, and random vibration.
 
 ## Dynamic Analysis Types in MSC Nastran
 

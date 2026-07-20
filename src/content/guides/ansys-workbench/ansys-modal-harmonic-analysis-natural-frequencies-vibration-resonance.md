@@ -16,7 +16,7 @@ sources:
 
 # ANSYS Modal and Harmonic Analysis: Natural Frequencies, Vibration, and Resonance
 
-I'll be honest — vibration analysis wasn't something I paid much attention to until a bracket I designed started cracking at a frequency I hadn't even considered. That taught me real fast why modal and harmonic analysis matter. Let me walk you through how I approach vibration simulation in ANSYS, from pulling out natural frequencies to checking whether your structure will shake itself apart at resonance.
+We'll be honest — vibration analysis wasn't something we paid much attention to until a bracket we designed started cracking at a frequency we hadn't even considered. That taught us real fast why modal and harmonic analysis matter. Let us walk you through how we approach vibration simulation in ANSYS, from pulling out natural frequencies to checking whether your structure will shake itself apart at resonance.
 
 ## Modal Analysis
 
@@ -294,4 +294,4 @@ If natural frequency is too close to excitation:
 
 ## Wrapping Up
 
-If I could give one piece of advice about vibration analysis, it's this: don't skip the effective mass check. I've seen too many analyses where someone extracted six modes, called it done, and missed a critical mode that held 40% of the mass in a direction that mattered. Extract enough modes to get 90%+ effective mass, use realistic damping (not the default), and make sure no natural frequency sits within 20% of your excitation frequency. Do that, and you'll catch resonance issues before they become field failures.
+If we could give one piece of advice about vibration analysis, it's this: don't skip the effective mass check. We've seen too many analyses where someone extracted six modes, called it done, and missed a critical mode that held 40% of the mass in a direction that mattered. Extract enough modes to get 90%+ effective mass, use realistic damping (not the default), and make sure no natural frequency sits within 20% of your excitation frequency. Do that, and you'll catch resonance issues before they become field failures.

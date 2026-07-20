@@ -15,7 +15,7 @@ sources:
 
 # ESPRIT CAM vs Mastercam: CAM Software Comparison for Multi-Axis CNC Programming
 
-ESPRIT and Mastercam are two of the most widely used CAM systems in professional CNC machining. Both are capable of complex multi-axis programming, but they differ in philosophy, workflow, and target market. I've programmed parts in both systems and can break down the key differences.
+ESPRIT and Mastercam are two of the most widely used CAM systems in professional CNC machining. Both are capable of complex multi-axis programming, but they differ in philosophy, workflow, and target market. We've programmed parts in both systems and can break down the key differences.
 
 ## Overview
 

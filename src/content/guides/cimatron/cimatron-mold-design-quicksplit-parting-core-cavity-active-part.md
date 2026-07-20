@@ -15,7 +15,7 @@ sources:
 
 # Cimatron Mold Design: QuickSplit Parting, Core/Cavity Separation, and Active Part Workflow
 
-Cimatron Mold Design is purpose-built for injection mold tooling. I've used it for consumer electronics, automotive trim, and medical device molds. The QuickSplit tool is the heart of the workflow — it automatically separates part faces into core and cavity directions based on draft angles. When it works, it's fast. When the part has complex geometry, you need to know how to guide it. Here's my complete mold design workflow.
+Cimatron Mold Design is purpose-built for injection mold tooling. We've used it for consumer electronics, automotive trim, and medical device molds. The QuickSplit tool is the heart of the workflow — it automatically separates part faces into core and cavity directions based on draft angles. When it works, it's fast. When the part has complex geometry, you need to know how to guide it. Here's our complete mold design workflow.
 
 ## Understanding Cimatron Mold Design
 

@@ -16,7 +16,7 @@ sources:
 
 # Resolving Revit Worksharing File Locks and Corrupted DWL Files
 
-Revit worksharing lock file issues are frustrating because they make you think someone else is in the model when they're not. I've had users call me saying "I can't sync, it says someone is editing" — at 11 PM when nobody else is in the office. The culprit is almost always a stale or corrupted DWL file. Let me walk you through how I diagnose and fix these lock file problems, and how to prevent them from recurring.
+Revit worksharing lock file issues are frustrating because they make you think someone else is in the model when they're not. We've had users call us saying "I can't sync, it says someone is editing" — at 11 PM when nobody else is in the office. The culprit is almost always a stale or corrupted DWL file. Let us walk you through how we diagnose and fix these lock file problems, and how to prevent them from recurring.
 
 ## Understanding Revit Lock Files
 

@@ -15,7 +15,7 @@ sources:
 
 # SimScale Workflow and Collaboration: Project Setup, Mesh Import, and Team Sharing
 
-The collaboration features in SimScale are what actually sold me on the platform. I was working on a project with a team spread across three time zones, and the ability to share a simulation result with a simple URL — no software install, no file transfer — was a game changer. Let me walk you through the workflow and collaboration tools I use regularly.
+The collaboration features in SimScale are what actually sold us on the platform. We were working on a project with a team spread across three time zones, and the ability to share a simulation result with a simple URL — no software install, no file transfer — was a game changer. Let us walk you through the workflow and collaboration tools we use regularly.
 
 ## Project Setup
 
@@ -305,4 +305,4 @@ run = requests.post(f"https://api.simscale.com/v1/projects/{project_id}/simulati
 
 ## Wrapping Up
 
-The collaboration side of SimScale is honestly its biggest differentiator. Being able to send a client a link and let them explore the 3D results in their browser — no software, no plugins — is huge for client communication. The API is also handy if you want to automate repetitive analyses. I set up a pipeline that runs a standard thermal analysis on every new heat sink design and posts the results to our team chat. It's not something you'd do with desktop CAE without a lot of scripting and infrastructure.
+The collaboration side of SimScale is honestly its biggest differentiator. Being able to send a client a link and let them explore the 3D results in their browser — no software, no plugins — is huge for client communication. The API is also handy if you want to automate repetitive analyses. We set up a pipeline that runs a standard thermal analysis on every new heat sink design and posts the results to our team chat. It's not something you'd do with desktop CAE without a lot of scripting and infrastructure.

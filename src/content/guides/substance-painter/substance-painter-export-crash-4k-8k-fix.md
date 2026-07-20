@@ -1,6 +1,6 @@
 ---
 title: "Substance Painter Export Crashes: 4K/8K Resolution, Virtual Memory, and TDR Timeout Fixes"
-excerpt: "Substance Painter crashes during texture export at 4K or 8K resolution due to insufficient virtual memory or Windows TDR timeouts. I cover the page file configuration, TDR registry fix, export preset optimization, and the incremental export workaround."
+excerpt: "Substance Painter crashes during texture export at 4K or 8K resolution due to insufficient virtual memory or Windows TDR timeouts. We cover the page file configuration, TDR registry fix, export preset optimization, and the incremental export workaround."
 category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter export crash 4K 8K virtual memory TDR fix"
@@ -15,7 +15,7 @@ sources:
 
 # Substance Painter Export Crashes: 4K/8K Resolution, Virtual Memory, and TDR Timeout Fixes
 
-Exporting textures from Substance Painter should be the easy part — you've done all the creative work, and now you just need to get the maps out. But for many artists, the export is where everything falls apart. The progress bar reaches 70%, and then Substance Painter vanishes without an error message. Adobe's official documentation identifies three specific causes for export crashes, and I've encountered all of them repeatedly.
+Exporting textures from Substance Painter should be the easy part — you've done all the creative work, and now you just need to get the maps out. But for many artists, the export is where everything falls apart. The progress bar reaches 70%, and then Substance Painter vanishes without an error message. Adobe's official documentation identifies three specific causes for export crashes, and we've encountered all of them repeatedly.
 
 ## Cause 1: Windows TDR Timeout During Export
 
@@ -31,7 +31,7 @@ During export, Substance Painter performs intensive GPU computations — composi
    - **TdrDdiDelay**: Set to **10** (decimal)
 4. Restart the computer
 
-This is Adobe's officially recommended fix for export crashes. I apply it to every workstation before installing Substance Painter. It prevents the vast majority of export crashes.
+This is Adobe's officially recommended fix for export crashes. We apply it to every workstation before installing Substance Painter. It prevents the vast majority of export crashes.
 
 ## Cause 2: Insufficient Virtual Memory
 
@@ -48,7 +48,7 @@ During export, Painter loads all layers, material data, and mesh maps into RAM s
 4. Ensure the page file is on your fastest **NVMe SSD**
 5. Restart the computer
 
-**My recommendations by system RAM**:
+**Our recommendations by system RAM**:
 - **16GB RAM**: 32GB virtual memory minimum
 - **32GB RAM**: 32GB virtual memory minimum
 - **64GB RAM**: 16GB virtual memory (system rarely needs to swap with 64GB RAM)
@@ -78,7 +78,7 @@ Substance Painter includes export presets for different engines and workflows. U
 - **Arnold (Maya)**: Exports BaseColor, Normal, Roughness, Metallic, AO
 - **Custom**: Select only the maps you need
 
-**My recommendation**: Use the engine-specific preset rather than exporting all possible maps. Exporting 12 maps when you only need 5 wastes memory and time.
+**Our recommendation**: Use the engine-specific preset rather than exporting all possible maps. Exporting 12 maps when you only need 5 wastes memory and time.
 
 ## Export Optimization 2: Incremental Export
 
@@ -113,7 +113,7 @@ Before exporting at high resolution, close everything that uses RAM or VRAM:
 4. **Communication apps**: Discord, Teams, Slack
 5. **Background services**: Antivirus scans, Windows Update downloads
 
-I tell artists to treat export time like render time — close everything, let Painter have all available resources, and wait. A 4K export with 50 layers takes 30-60 seconds when the system has enough free memory, but can crash instantly if memory is constrained.
+We tell artists to treat export time like render time — close everything, let Painter have all available resources, and wait. A 4K export with 50 layers takes 30-60 seconds when the system has enough free memory, but can crash instantly if memory is constrained.
 
 ## Export Optimization 5: Use Command Line Export
 
@@ -140,4 +140,4 @@ If you see memory usage climbing toward the limit, cancel the export, optimize (
 
 ## Summary
 
-Substance Painter export crashes are caused by TDR timeouts, insufficient virtual memory, or SVT memory spikes. My fix order: increase TdrDelay to 10 seconds → set 32-64GB virtual memory on NVMe SSD → use the correct export preset → close all other applications → try incremental export → use command-line export for maximum stability. The TDR fix and virtual memory increase together resolve about 85% of export crash cases I encounter.
+Substance Painter export crashes are caused by TDR timeouts, insufficient virtual memory, or SVT memory spikes. Our fix order: increase TdrDelay to 10 seconds → set 32-64GB virtual memory on NVMe SSD → use the correct export preset → close all other applications → try incremental export → use command-line export for maximum stability. The TDR fix and virtual memory increase together resolve about 85% of export crash cases we encounter.

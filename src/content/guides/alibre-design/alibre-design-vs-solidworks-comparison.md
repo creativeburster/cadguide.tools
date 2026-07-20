@@ -15,7 +15,7 @@ sources:
 
 # Alibre Design vs SolidWorks: Feature Comparison for Small Manufacturing
 
-I ran a 5-person product design shop that couldn't justify SolidWorks subscription costs. We tried Alibre Design (now Alibre Design 2026) as a budget alternative. After two years of daily use, I can tell you exactly where it matches SolidWorks and where it falls short.
+We ran a 5-person product design shop that couldn't justify SolidWorks subscription costs. We tried Alibre Design (now Alibre Design 2026) as a budget alternative. After two years of daily use, we can tell you exactly where it matches SolidWorks and where it falls short.
 
 ## Parametric Modeling
 
@@ -97,7 +97,7 @@ Alibre saves **$9,000+ per seat** over 3 years. For a 5-person team: **$45,000+ 
 - **PDM** — SolidWorks PDM Standard is included; Alibre has no built-in PDM
 - **Industry recognition** — Some clients require SolidWorks-native files
 
-## My Recommendation
+## Our Recommendation
 
 **Choose Alibre Design if:**
 - You have 1–10 designers

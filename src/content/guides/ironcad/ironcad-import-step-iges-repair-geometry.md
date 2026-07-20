@@ -15,7 +15,7 @@ sources:
 
 # IronCAD Importing STEP and IGES Files: Repairing and Editing Imported Geometry
 
-I receive STEP files from clients who use SolidWorks, Creo, and Inventor. IronCAD imports them well — better than most mid-range CAD systems — but no STEP import is perfect. Here's my workflow for getting clean, editable geometry from imported files.
+We receive STEP files from clients who use SolidWorks, Creo, and Inventor. IronCAD imports them well — better than most mid-range CAD systems — but no STEP import is perfect. Here's our workflow for getting clean, editable geometry from imported files.
 
 ## Step 1: Import the File
 

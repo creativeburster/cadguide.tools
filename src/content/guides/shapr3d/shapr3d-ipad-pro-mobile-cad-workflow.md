@@ -15,7 +15,7 @@ sources:
 
 # Shapr3D on iPad Pro: Complete Mobile CAD Workflow from Sketch to Manufacturing
 
-I designed a complete product — from concept sketch to CNC-ready STEP file — entirely on an iPad Pro with Shapr3D. No desktop, no external monitor. It works. Here's the full workflow I use for client projects.
+We designed a complete product — from concept sketch to CNC-ready STEP file — entirely on an iPad Pro with Shapr3D. No desktop, no external monitor. It works. Here's the full workflow we use for client projects.
 
 ## Hardware Setup
 
@@ -38,7 +38,7 @@ For 2D drawings (DWG/DXF):
 
 ## Step 2: Sketch with Apple Pencil
 
-Shapr3D's sketching is the most intuitive of any CAD tool I've used:
+Shapr3D's sketching is the most intuitive of any CAD tool we've used:
 
 1. Tap **Sketch** → select a plane (XY, XZ, YZ, or a face of existing geometry).
 2. Draw lines freehand with the Pencil — Shapr3D auto-snaps to horizontal, vertical, and parallel.
@@ -149,6 +149,6 @@ Shapr3D on iPad can't do:
 - **Simulation (FEA)** — Not available on iPad.
 - **Rendering** — Basic only. For photorealistic renders, export to KeyShot or Blender on desktop.
 
-## My Verdict
+## Our Verdict
 
 For individual product designers and small projects, the iPad-only workflow is viable and enjoyable. The Pencil-based sketching is faster than mouse-based sketching in any desktop CAD. For complex assemblies or production-level manufacturing documentation, you'll need to move to desktop Shapr3D or another CAD system.

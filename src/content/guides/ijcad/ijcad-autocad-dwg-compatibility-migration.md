@@ -15,7 +15,7 @@ sources:
 
 # IJCAD to AutoCAD Migration: Ensuring Seamless DWG Exchange
 
-IJCAD is a Japanese-market IntelliCAD-based CAD that's gaining traction in other Asian markets. I worked with a firm that used IJCAD for cost reasons but collaborated with AutoCAD-using partners. The DWG exchange was mostly smooth, but there were enough issues to warrant a documented workflow. Here's what we established.
+IJCAD is a Japanese-market IntelliCAD-based CAD that's gaining traction in other Asian markets. We worked with a firm that used IJCAD for cost reasons but collaborated with AutoCAD-using partners. The DWG exchange was mostly smooth, but there were enough issues to warrant a documented workflow. Here's what we established.
 
 ## DWG Format Compatibility
 

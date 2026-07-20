@@ -1,6 +1,6 @@
 ---
 title: "Blender UV Mapping Problems: Overlapping Islands, Seams, and Texture Stretching Fixes"
-excerpt: "Blender UV maps have overlapping islands, visible seams, and stretched textures on complex models. I cover the smart UV unwrap, seam placement strategy, and the island packing workflow that produce clean UV maps."
+excerpt: "Blender UV maps have overlapping islands, visible seams, and stretched textures on complex models. We cover the smart UV unwrap, seam placement strategy, and the island packing workflow that produce clean UV maps."
 category: "troubleshooting"
 softwareSlug: "blender"
 keyword: "Blender UV mapping overlapping islands seams texture stretching"

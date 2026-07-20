@@ -15,7 +15,7 @@ sources:
 
 # ACC Revit Cloud Worksharing: Central Model Workflow and Sync Troubleshooting
 
-Moving Revit worksharing to the cloud via ACC is a game-changer for distributed teams. But the transition from network-based worksharing to cloud worksharing breaks things in new and confusing ways. I've helped teams migrate from Revit Server to BIM 360 to ACC, and each migration has its own gotchas. Here's what I've learned.
+Moving Revit worksharing to the cloud via ACC is a game-changer for distributed teams. But the transition from network-based worksharing to cloud worksharing breaks things in new and confusing ways. We've helped teams migrate from Revit Server to BIM 360 to ACC, and each migration has its own gotchas. Here's what we've learned.
 
 ## How Cloud Worksharing Differs from Network Worksharing
 
@@ -113,7 +113,7 @@ The cache can grow to several GB per project. If you work on multiple ACC projec
 
 ## Step 4: Troubleshoot Sync Failures
 
-Sync failures are the most common cloud worksharing issue. Here's my diagnostic process:
+Sync failures are the most common cloud worksharing issue. Here's our diagnostic process:
 
 ### "Sync Failed — Try Again Later"
 

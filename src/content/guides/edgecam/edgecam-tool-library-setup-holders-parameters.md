@@ -15,7 +15,7 @@ sources:
 
 # EdgeCAM Tool Library Setup: Organizing Tools, Holders, and Cutting Parameters
 
-A well-organized tool library saves hours of programming time. I inherited an EdgeCAM setup where every programmer created tools from scratch for each job. After building a shared library, programming time dropped by 40%. Here's how to set it up properly.
+A well-organized tool library saves hours of programming time. In shops where every programmer creates tools from scratch for each job, building a shared library can dramatically cut programming time. Here's how to set it up properly.
 
 ## Understanding EdgeCAM Tool Assemblies
 

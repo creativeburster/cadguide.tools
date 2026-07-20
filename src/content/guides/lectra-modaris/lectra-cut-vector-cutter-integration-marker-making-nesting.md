@@ -1,6 +1,6 @@
 ---
 title: "Lectra Cut and Vector Cutter Integration: Marker Making, Nesting, and Automated Cutting"
-excerpt: "Lectra Cut's marker making and Vector cutter integration provide end-to-end cutting workflow from pattern to cut parts. I cover automatic nesting, leather-specific nesting, cut order planning, Vector cutter setup, and production optimization for apparel manufacturing."
+excerpt: "Lectra Cut's marker making and Vector cutter integration provide end-to-end cutting workflow from pattern to cut parts. We cover automatic nesting, leather-specific nesting, cut order planning, Vector cutter setup, and production optimization for apparel manufacturing."
 category: "workflow"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Cut Vector cutter integration marker making nesting automated cutting leather apparel manufacturing"
@@ -15,7 +15,7 @@ sources:
 
 # Lectra Cut and Vector Cutter Integration: Marker Making, Nesting, and Automated Cutting
 
-I've managed Lectra cutting operations for apparel factories producing everything from fast fashion to luxury leather goods. The Lectra Cut and Vector cutter ecosystem is one of the most advanced cutting solutions in the industry — particularly for leather nesting, where Lectra's algorithm is best-in-class. Understanding the full workflow from marker making to cut parts is essential for any operation using Lectra equipment.
+We've managed Lectra cutting operations for apparel factories producing everything from fast fashion to luxury leather goods. The Lectra Cut and Vector cutter ecosystem is one of the most advanced cutting solutions in the industry — particularly for leather nesting, where Lectra's algorithm is best-in-class. Understanding the full workflow from marker making to cut parts is essential for any operation using Lectra equipment.
 
 ## Lectra Cut Overview
 

@@ -20,7 +20,7 @@ The QCAD vs LibreCAD question is one of the most frequently asked in open-source
 
 LibreCAD is actually a fork of QCAD's Community Edition from 2011. They share a common ancestor but have diverged significantly over the past decade. The relationship is similar to LibreOffice and OpenOffice — same roots, different branches. On r/FreeCAD, one user noted that "LibreCAD has a poor cross-format support (pdf, dwg, dxf)" while another responded that "QCAD is perfect for DXF file generation, very easy to learn." That exchange captures the core tradeoff: LibreCAD is simpler and lighter, QCAD Professional is more capable but costs money.
 
-I've used both extensively — LibreCAD for quick shop floor sketches and QCAD Professional for client deliverables. Here's what I've learned from real daily use, informed by community discussions from multiple Reddit threads.
+We've used both extensively — LibreCAD for quick shop floor sketches and QCAD Professional for client deliverables. Here's what we've learned from real daily use, informed by community discussions from multiple Reddit threads.
 
 ## Origin and Relationship
 

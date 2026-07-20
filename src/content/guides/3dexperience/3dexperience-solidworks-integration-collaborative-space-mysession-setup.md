@@ -15,7 +15,7 @@ sources:
 
 # 3DEXPERIENCE SOLIDWORKS Integration: Collaborative Spaces, MySession, and Platform Setup
 
-I've implemented 3DEXPERIENCE for three SOLIDWORKS-based companies. The pattern is always the same: the first month is painful, the second month starts to click, and by the third month nobody wants to go back to local file management. But only when the setup is done right. A poorly configured 3DEXPERIENCE environment creates more problems than it solves. Here's my setup playbook.
+We've implemented 3DEXPERIENCE for three SOLIDWORKS-based companies. The pattern is always the same: the first month is painful, the second month starts to click, and by the third month nobody wants to go back to local file management. But only when the setup is done right. A poorly configured 3DEXPERIENCE environment creates more problems than it solves. Here's our setup playbook.
 
 ## Understanding the Architecture
 

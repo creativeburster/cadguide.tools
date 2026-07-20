@@ -63,7 +63,7 @@ DraftSight installation and activation issues fall into four categories: install
 **Cause**: The serial number was entered incorrectly, or the serial number is already activated on the maximum number of machines.
 
 **Solution**:
-1. Verify the serial number character-by-character (check for confusion between O/0, I/1, B/8)
+1. Verify the serial number character-by-character (check for confusion between O/0, we/1, B/8)
 2. Log into the 3DS portal to check how many activations your serial number has:
    - Go to `https://www.3ds.com/credentials/`
    - Navigate to "My Products" > DraftSight

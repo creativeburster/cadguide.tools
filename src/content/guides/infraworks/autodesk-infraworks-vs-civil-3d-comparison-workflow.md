@@ -1,6 +1,6 @@
 ---
 title: "Autodesk InfraWorks vs Civil 3D: Preliminary vs Detailed Civil Design Workflow"
-excerpt: "InfraWorks and Civil 3D serve different stages of the infrastructure design process. I compare their capabilities, explain when to use each, and cover the data exchange workflow between them for road, bridge, and site design projects."
+excerpt: "InfraWorks and Civil 3D serve different stages of the infrastructure design process. We compare their capabilities, explain when to use each, and cover the data exchange workflow between them for road, bridge, and site design projects."
 category: "comparison"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks vs Civil 3D comparison preliminary detailed civil design workflow"
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk InfraWorks vs Civil 3D: Preliminary vs Detailed Civil Design Workflow
 
-I've used both InfraWorks and Civil 3D on the same projects, and understanding the division of labor between them is essential for an efficient civil design workflow. They're not competing tools — they're complementary stages of the same pipeline. InfraWorks handles preliminary design in context, and Civil 3D handles detailed engineering design and documentation.
+We've used both InfraWorks and Civil 3D on the same projects, and understanding the division of labor between them is essential for an efficient civil design workflow. They're not competing tools — they're complementary stages of the same pipeline. InfraWorks handles preliminary design in context, and Civil 3D handles detailed engineering design and documentation.
 
 ## Core Difference
 

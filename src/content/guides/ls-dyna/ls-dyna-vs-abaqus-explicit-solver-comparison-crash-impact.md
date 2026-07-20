@@ -16,7 +16,7 @@ sources:
 
 # LS-DYNA vs Abaqus/Explicit: Explicit Dynamics Solver Comparison for Crash and Impact
 
-I've used both LS-DYNA and Abaqus/Explicit enough to have real opinions about them. LS-DYNA was my first explicit solver, so I'm probably a bit biased, but I've come to appreciate Abaqus/Explicit for different reasons. If you're trying to decide which one to use, let me break down the differences I've actually experienced.
+LS-DYNA and Abaqus/Explicit are both mature explicit solvers, each with different strengths. If you're trying to decide which one to use, let us break down the practical differences between them.
 
 ## History and Market
 
@@ -190,6 +190,6 @@ Some companies use both:
 
 The keyword/input files are not compatible. Models must be rebuilt in the other tool.
 
-## My Take
+## Our Take
 
-Here's how I decide: if I'm doing automotive crash or metal forming, LS-DYNA is the obvious choice — it's what the industry uses, the dummy models are free, and the material library is unmatched. If I'm already using Abaqus/Standard for a project and need to run an explicit drop test or impact analysis, Abaqus/Explicit makes more sense because I can import the model directly. Switching between the two isn't practical — the file formats are completely different. So pick the one that fits your industry and stick with it.
+Here's how we decide: if we're doing automotive crash or metal forming, LS-DYNA is the obvious choice — it's what the industry uses, the dummy models are free, and the material library is unmatched. If we're already using Abaqus/Standard for a project and need to run an explicit drop test or impact analysis, Abaqus/Explicit makes more sense because we can import the model directly. Switching between the two isn't practical — the file formats are completely different. So pick the one that fits your industry and stick with it.

@@ -15,7 +15,7 @@ sources:
 
 # AutoCAD Plant 3D Piping Specification Setup: Building Custom Specs in the Catalog Editor
 
-I've set up Plant 3D specs for oil and gas projects, water treatment plants, and chemical facilities. The Spec Editor is powerful but unforgiving — one missing gasket or bolt set and your entire spec refuses to connect parts. I've spent days debugging specs that looked correct but had hidden end type mismatches. Here's my complete setup guide.
+We've set up Plant 3D specs for oil and gas projects, water treatment plants, and chemical facilities. The Spec Editor is powerful but unforgiving — one missing gasket or bolt set and your entire spec refuses to connect parts. We've spent days debugging specs that looked correct but had hidden end type mismatches. Here's our complete setup guide.
 
 ## Understanding the Spec and Catalog Relationship
 
@@ -67,7 +67,7 @@ The gaskets and bolt sets are the most commonly forgotten items. Without them, f
 
 ## Step 4: Configure End Types and Connections
 
-End type mismatches are the #1 cause of connection errors in Plant 3D. I've seen specs where everything looks correct but valves won't insert because the end types don't match the pipe.
+End type mismatches are the #1 cause of connection errors in Plant 3D. We've seen specs where everything looks correct but valves won't insert because the end types don't match the pipe.
 
 ### Common End Types
 

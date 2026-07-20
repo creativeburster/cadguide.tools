@@ -15,7 +15,7 @@ sources:
 
 # DipTrace Routing: Manual and Auto-Router Tips for Clean PCB Layouts
 
-Routing is where your schematic becomes a physical circuit. DipTrace's routing tools are basic compared to Altium or KiCad, but with the right techniques, you can produce clean, manufacturable boards. Here's what I've learned from routing 100+ DipTrace boards.
+Routing is where your schematic becomes a physical circuit. DipTrace's routing tools are basic compared to Altium or KiCad, but with the right techniques, you can produce clean, manufacturable boards. Here's what we've learned from routing 100+ DipTrace boards.
 
 ## Manual Routing
 

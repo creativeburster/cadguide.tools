@@ -1,6 +1,6 @@
 ---
 title: "Twinmotion Datasmith Revit Sync Crashes: Plugin Version Matching, Model Cleanup, and Export Workarounds"
-excerpt: "Revit crashes when clicking Synchronize or Open in Twinmotion due to Datasmith plugin version mismatches, corrupted geometry, or plugin conflicts. I cover the version compatibility matrix, model purge workflow, and the FBX export fallback."
+excerpt: "Revit crashes when clicking Synchronize or Open in Twinmotion due to Datasmith plugin version mismatches, corrupted geometry, or plugin conflicts. We cover the version compatibility matrix, model purge workflow, and the FBX export fallback."
 category: "troubleshooting"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion Datasmith Revit crash sync fix"
@@ -16,7 +16,7 @@ sources:
 
 # Twinmotion Datasmith Revit Sync Crashes: Plugin Version Matching, Model Cleanup, and Export Workarounds
 
-I support multiple architecture firms using Twinmotion with Revit, and the single most common crash scenario is: the architect clicks "Synchronize" or "Open in Twinmotion" in Revit's Datasmith tab, and Revit immediately closes — no error message, no CER dialog, just a silent crash. The Revit journal's last line reads "DatasmithRevitExporterInitialization: Initializing Datasmith" and then nothing.
+We support multiple architecture firms using Twinmotion with Revit, and the single most common crash scenario is: the architect clicks "Synchronize" or "Open in Twinmotion" in Revit's Datasmith tab, and Revit immediately closes — no error message, no CER dialog, just a silent crash. The Revit journal's last line reads "DatasmithRevitExporterInitialization: Initializing Datasmith" and then nothing.
 
 ## Cause 1: Datasmith Plugin Version Mismatch
 
@@ -85,7 +85,7 @@ Twinmotion's Direct Link feature maintains a cache of synced data. If this cache
 6. Restart Revit and Twinmotion
 7. Re-establish the Direct Link connection
 
-I clear this cache whenever a firm reports persistent sync crashes. It resolves about 20% of cases that aren't fixed by plugin version correction.
+We clear this cache whenever a firm reports persistent sync crashes. It resolves about 20% of cases that aren't fixed by plugin version correction.
 
 ## Workaround: Export to Udatasmith File Instead of Direct Sync
 
@@ -119,7 +119,7 @@ If the Datasmith plugin itself is failing to install correctly, generate an inst
 5. Complete the installation
 6. A log file will be created on your desktop — examine it for error messages
 
-This log shows exactly which components failed to install and why. I use it when the standard installation silently fails.
+This log shows exactly which components failed to install and why. We use it when the standard installation silently fails.
 
 ## Preventive Measures
 
@@ -131,4 +131,4 @@ This log shows exactly which components failed to install and why. I use it when
 
 ## Summary
 
-Twinmotion Datasmith Revit crashes are most often caused by plugin version mismatches, corrupted model geometry, or cache corruption. My fix order: verify version compatibility → purge and audit the Revit model → remove old plugin files → clear Direct Link cache → use Udatasmith file export as workaround → use FBX export as last resort. The version compatibility fix alone resolves about 60% of crash cases I encounter.
+Twinmotion Datasmith Revit crashes are most often caused by plugin version mismatches, corrupted model geometry, or cache corruption. Our fix order: verify version compatibility → purge and audit the Revit model → remove old plugin files → clear Direct Link cache → use Udatasmith file export as workaround → use FBX export as last resort. The version compatibility fix alone resolves about 60% of crash cases we encounter.

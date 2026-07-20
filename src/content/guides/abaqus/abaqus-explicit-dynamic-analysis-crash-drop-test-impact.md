@@ -15,7 +15,7 @@ sources:
 
 # Abaqus/Explicit Dynamic Analysis: Crash, Drop Test, and High-Speed Impact Simulation
 
-The first time I ran an Abaqus/Explicit simulation, I was blown away by how different it felt from Standard. No convergence errors, no Newton-Raphson iterations failing — it just runs. That's the beauty of explicit time integration. But it comes with its own challenges: tiny time steps, mass scaling, and energy balance checks. Let me walk you through how I set up explicit dynamics simulations for crash, drop tests, and impact.
+The first time we ran an Abaqus/Explicit simulation, we were blown away by how different it felt from Standard. No convergence errors, no Newton-Raphson iterations failing — it just runs. That's the beauty of explicit time integration. But it comes with its own challenges: tiny time steps, mass scaling, and energy balance checks. Let us walk you through how we set up explicit dynamics simulations for crash, drop tests, and impact.
 
 ## Explicit vs. Implicit
 
@@ -297,4 +297,4 @@ The first time I ran an Abaqus/Explicit simulation, I was blown away by how diff
 
 ## Wrapping Up
 
-The thing I love about Abaqus/Explicit is that it just doesn't have convergence problems — it always runs. But that doesn't mean the results are always right. I always check the energy balance: if hourglass energy is more than 5% of internal energy, your reduced-integration elements are cheating you. If mass scaling added too much mass, your dynamic results are wrong. These two checks catch most of the bad explicit analyses I've seen. Get those right, use Johnson-Cook for high-strain-rate materials, and your crash and drop test simulations will give you data you can actually trust.
+The thing we love about Abaqus/Explicit is that it just doesn't have convergence problems — it always runs. But that doesn't mean the results are always right. We always check the energy balance: if hourglass energy is more than 5% of internal energy, your reduced-integration elements are cheating you. If mass scaling added too much mass, your dynamic results are wrong. These two checks catch most of the bad explicit analyses we've seen. Get those right, use Johnson-Cook for high-strain-rate materials, and your crash and drop test simulations will give you data you can actually trust.

@@ -15,7 +15,7 @@ sources:
 
 # Tinkercad Circuits: Simulating Arduino and Electronics Projects in Browser
 
-Tinkercad Circuits is a hidden gem. Most people know Tinkercad for 3D modeling, but the Circuits module is a full Arduino simulator. I use it to prototype projects before buying parts. Here's how to use it.
+Tinkercad Circuits is a hidden gem. Most people know Tinkercad for 3D modeling, but the Circuits module is a full Arduino simulator. We use it to prototype projects before buying parts. Here's how to use it.
 
 ## Getting Started
 

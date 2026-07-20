@@ -15,7 +15,7 @@ sources:
 
 # AutoCAD Plant 3D P&ID to 3D Model Workflow: Linking Schematics to Pipe Routes
 
-The P&ID to 3D workflow in Plant 3D is supposed to be seamless — draw your P&ID, then route pipes in 3D with the specs and line tags automatically synchronized. In practice, I've seen this workflow break in dozens of ways. Line tags don't match, specs are missing, components appear in the P&ID but not in 3D. Here's how to set it up correctly and troubleshoot when it breaks.
+The P&ID to 3D workflow in Plant 3D is supposed to be seamless — draw your P&ID, then route pipes in 3D with the specs and line tags automatically synchronized. In practice, we've seen this workflow break in dozens of ways. Line tags don't match, specs are missing, components appear in the P&ID but not in 3D. Here's how to set it up correctly and troubleshoot when it breaks.
 
 ## Understanding the P&ID-3D Link
 

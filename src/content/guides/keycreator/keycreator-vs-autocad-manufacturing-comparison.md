@@ -15,7 +15,7 @@ sources:
 
 # KeyCreator vs AutoCAD: Why Direct 3D Modeling Beats 2D for Manufacturing
 
-Many machine shops still use AutoCAD for 2D drawing because "it's what we've always used." I transitioned a shop from AutoCAD 2D to KeyCreator 3D and the results were immediate — fewer interpretation errors, faster design changes, and better communication with CNC programmers. Here's the honest comparison.
+Many machine shops still use AutoCAD for 2D drawing because "it's what we've always used." we transitioned a shop from AutoCAD 2D to KeyCreator 3D and the results were immediate — fewer interpretation errors, faster design changes, and better communication with CNC programmers. Here's the honest comparison.
 
 ## The Fundamental Difference
 
@@ -102,7 +102,7 @@ Moving from AutoCAD 2D to KeyCreator 3D requires:
 
 The transition takes 1-2 months for a small shop. The productivity gains start paying off in month 3.
 
-## My Recommendation
+## Our Recommendation
 
 If you make things (machine parts, brackets, enclosures, fixtures, tooling), move to KeyCreator. The 3D workflow eliminates interpretation errors and speeds up design changes. The perpetual license saves money long-term.
 

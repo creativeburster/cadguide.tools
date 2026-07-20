@@ -1,6 +1,6 @@
 ---
 title: "Solid Edge Large Assembly Performance: Simplify Mode, Active Only, and Configuration Management"
-excerpt: "Solid Edge assemblies with 5000+ parts lag during rotation, editing, and saving. I cover the Simplify mode, Activate Only selection, and the configuration management strategy that keeps large assemblies responsive."
+excerpt: "Solid Edge assemblies with 5000+ parts lag during rotation, editing, and saving. We cover the Simplify mode, Activate Only selection, and the configuration management strategy that keeps large assemblies responsive."
 category: "performance"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge large assembly performance simplify mode activate"

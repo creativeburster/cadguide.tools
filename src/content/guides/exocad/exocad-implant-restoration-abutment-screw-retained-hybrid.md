@@ -1,6 +1,6 @@
 ---
 title: "exocad Implant Restoration Design: Abutment, Screw-Retained Crown, and Hybrid Prosthesis"
-excerpt: "exocad's implant module designs custom abutments, screw-retained crowns, and full-arch hybrid prostheses. I cover implant library selection, abutment parameter configuration, screw channel design, and the hybrid prosthesis workflow with multi-unit abutments."
+excerpt: "exocad's implant module designs custom abutments, screw-retained crowns, and full-arch hybrid prostheses. We cover implant library selection, abutment parameter configuration, screw channel design, and the hybrid prosthesis workflow with multi-unit abutments."
 category: "workflow"
 softwareSlug: "exocad"
 keyword: "exocad implant restoration abutment screw-retained crown hybrid prosthesis design workflow"
@@ -16,7 +16,7 @@ sources:
 
 # exocad Implant Restoration Design: Abutment, Screw-Retained Crown, and Hybrid Prosthesis
 
-I've designed implant restorations in exocad ranging from single-tooth custom abutments to full-arch All-on-4 hybrid prostheses. exocad's implant module is one of its strongest features — it supports virtually every implant system through its open library architecture. Understanding the implant workflow is essential for any dental lab doing implant work, as it differs significantly from conventional crown and bridge design.
+We've designed implant restorations in exocad ranging from single-tooth custom abutments to full-arch All-on-4 hybrid prostheses. exocad's implant module is one of its strongest features — it supports virtually every implant system through its open library architecture. Understanding the implant workflow is essential for any dental lab doing implant work, as it differs significantly from conventional crown and bridge design.
 
 ## Implant Module Overview
 

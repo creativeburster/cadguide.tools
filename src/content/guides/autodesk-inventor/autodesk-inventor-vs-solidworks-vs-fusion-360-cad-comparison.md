@@ -1,6 +1,6 @@
 ---
 title: "Autodesk Inventor vs SolidWorks vs Fusion 360: Mid-Market 3D CAD Comparison"
-excerpt: "Inventor, SolidWorks, and Fusion 360 are three leading mid-market parametric CAD tools. I compare their modeling capabilities, simulation tools, sheet metal, assembly management, cloud collaboration, pricing, and suitability for different engineering teams."
+excerpt: "Inventor, SolidWorks, and Fusion 360 are three leading mid-market parametric CAD tools. We compare their modeling capabilities, simulation tools, sheet metal, assembly management, cloud collaboration, pricing, and suitability for different engineering teams."
 category: "comparison"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor vs SolidWorks vs Fusion 360 3D CAD comparison modeling simulation sheet metal assembly pricing"
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Inventor vs SolidWorks vs Fusion 360: Mid-Market 3D CAD Comparison
 
-I've used all three of these CAD platforms for product design and mechanical engineering. Inventor, SolidWorks, and Fusion 360 represent the three main approaches to mid-market 3D CAD — desktop parametric, desktop parametric with ecosystem, and cloud-enabled collaborative. Each has distinct strengths and trade-offs that make them suitable for different engineering teams and product types.
+We've used all three of these CAD platforms for product design and mechanical engineering. Inventor, SolidWorks, and Fusion 360 represent the three main approaches to mid-market 3D CAD — desktop parametric, desktop parametric with ecosystem, and cloud-enabled collaborative. Each has distinct strengths and trade-offs that make them suitable for different engineering teams and product types.
 
 ## Quick Comparison
 

@@ -15,7 +15,7 @@ sources:
 
 # Altium 365 Workspace Setup: Cloud Collaboration, Project Sharing, and Version Control
 
-I've set up Altium 365 Workspaces for several teams ranging from two-person startups to fifty-engineer enterprises. The Workspace is the central hub that connects Altium Designer to the cloud, enabling version control, component management, and real-time collaboration. Let me walk you through the setup process and the key decisions you need to make.
+We've set up Altium 365 Workspaces for several teams ranging from two-person startups to fifty-engineer enterprises. The Workspace is the central hub that connects Altium Designer to the cloud, enabling version control, component management, and real-time collaboration. Let us walk you through the setup process and the key decisions you need to make.
 
 ## What the Workspace Actually Does
 

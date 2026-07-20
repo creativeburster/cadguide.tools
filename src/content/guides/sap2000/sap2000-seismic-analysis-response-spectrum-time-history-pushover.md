@@ -16,7 +16,7 @@ sources:
 
 # SAP2000 Seismic Analysis: Response Spectrum, Time History, and Pushover
 
-Seismic analysis is something I take very seriously — I've seen what happens when it's done wrong. SAP2000 gives you three levels of seismic analysis, and I've used all of them on different projects. Response spectrum is my go-to for most buildings, time history is essential for critical structures with site-specific ground motion, and pushover is what I use for performance-based assessment. Let me walk you through each method and when to use them.
+Seismic analysis is something we take very seriously — We've seen what happens when it's done wrong. SAP2000 gives you three levels of seismic analysis, and we've used all of them on different projects. Response spectrum is our go-to for most buildings, time history is essential for critical structures with site-specific ground motion, and pushover is what we use for performance-based assessment. Let us walk you through each method and when to use them.
 
 ## Modal Analysis (Prerequisite)
 
@@ -217,7 +217,7 @@ Pushover analysis applies a gradually increasing lateral load to the structure u
    - **Columns**: Axial-moment hinges (P-M3) at ends
    - **Braces**: Axial hinge (P) at midpoint
 3. Set hinge moment-rotation curve:
-   - **Yield point**: My = fy × Z (plastic section modulus)
+   - **Yield point**: Our = fy × Z (plastic section modulus)
    - **Ultimate**: Rotation capacity per ASCE 41
    - **Acceptance criteria**: IO (Immediate Occupancy), LS (Life Safety), CP (Collapse Prevention)
 
@@ -267,4 +267,4 @@ Pushover analysis applies a gradually increasing lateral load to the structure u
 
 ## Wrapping Up
 
-For most of my projects, response spectrum analysis is all I need. It's fast, code-accepted, and gives you the forces and drifts you need for design. Time history is for those special cases where the site-specific ground motion tells you something the code spectrum doesn't. Pushover is for when you need to demonstrate performance beyond elastic limits. My recommendation: master response spectrum first, then add time history and pushover to your toolkit as project demands require them.
+For most of our projects, response spectrum analysis is all we need. It's fast, code-accepted, and gives you the forces and drifts you need for design. Time history is for those special cases where the site-specific ground motion tells you something the code spectrum doesn't. Pushover is for when you need to demonstrate performance beyond elastic limits. Our recommendation: master response spectrum first, then add time history and pushover to your toolkit as project demands require them.

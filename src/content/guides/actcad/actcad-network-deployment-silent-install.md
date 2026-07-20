@@ -15,7 +15,7 @@ sources:
 
 # ActCAD Network Deployment: Silent Install and Configuration for Multiple Seats
 
-I deployed ActCAD to 40 workstations across three office locations last year. Doing it manually would have taken a week. With silent installation and a configuration script, the whole deployment took an afternoon. Here's the complete process.
+Deploying ActCAD to dozens of workstations across multiple offices manually would take a week. With silent installation and a configuration script, the whole deployment can take an afternoon. Here's the complete process.
 
 ## Step 1: Prepare the Installation Package
 

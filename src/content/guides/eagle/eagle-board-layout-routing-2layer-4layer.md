@@ -15,7 +15,7 @@ sources:
 
 # Eagle Board Layout: Routing Strategies for 2-Layer and 4-Layer PCBs
 
-Routing is where the schematic becomes a physical board. Good routing makes a board that works; bad routing makes a board that picks up noise, fails EMI testing, and has signal integrity issues. I've routed hundreds of Eagle boards and these are the strategies that consistently produce working PCBs.
+Routing is where the schematic becomes a physical board. Good routing makes a board that works; bad routing makes a board that picks up noise, fails EMI testing, and has signal integrity issues. We've routed hundreds of Eagle boards and these are the strategies that consistently produce working PCBs.
 
 ## 2-Layer Board Strategy
 
@@ -31,7 +31,7 @@ Routing is where the schematic becomes a physical board. Good routing makes a bo
 Route in this order:
 1. **Power traces** — Widest traces, shortest paths
 2. **Critical signals** — High-speed, analog, differential pairs
-3. **General signals** — Digital I/O, slow signals
+3. **General signals** — Digital we/O, slow signals
 4. **Ground fills** — Fill remaining space on both layers
 
 ### Ground Plane Strategy for 2-Layer

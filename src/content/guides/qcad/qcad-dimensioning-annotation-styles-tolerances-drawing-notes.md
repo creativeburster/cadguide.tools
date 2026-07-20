@@ -16,7 +16,7 @@ sources:
 
 # QCAD Dimensioning and Annotation: Styles, Tolerances, and Drawing Notes
 
-Accurate dimensioning is what separates a sketch from a technical drawing. QCAD provides a full set of dimensioning tools and configurable dimension styles. When a Reddit user on r/FreeCAD asked about using QCAD vs LibreCAD for designing apartment layouts with exact dimensions, multiple commenters pointed out that QCAD's dimensioning and snapping tools are more precise and better organized than LibreCAD's. That matches my experience — QCAD's dimension style system is closer to AutoCAD's in terms of configurability, while LibreCAD's dimensioning is more basic.
+Accurate dimensioning is what separates a sketch from a technical drawing. QCAD provides a full set of dimensioning tools and configurable dimension styles. When a Reddit user on r/FreeCAD asked about using QCAD vs LibreCAD for designing apartment layouts with exact dimensions, multiple commenters pointed out that QCAD's dimensioning and snapping tools are more precise and better organized than LibreCAD's. That matches our experience — QCAD's dimension style system is closer to AutoCAD's in terms of configurability, while LibreCAD's dimensioning is more basic.
 
 One important difference from AutoCAD: QCAD lacks paper space viewports. This means you dimension directly in model space, and your dimension text height must be calculated for the final print scale. This trips up people migrating from AutoCAD who are used to setting text height in paper space and letting viewports handle the scaling. Once you understand this workflow difference, QCAD's dimensioning is quite capable.
 

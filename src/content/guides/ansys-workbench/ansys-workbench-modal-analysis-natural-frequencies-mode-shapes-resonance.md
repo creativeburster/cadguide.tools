@@ -1,6 +1,6 @@
 ---
 title: "ANSYS Workbench Modal Analysis: Natural Frequencies, Mode Shapes, and Resonance Avoidance"
-excerpt: "ANSYS Workbench's modal analysis calculates natural frequencies and mode shapes to identify resonance risks. I cover modal analysis setup, pre-stressed modal, mode interpretation, resonance avoidance strategies, and harmonic response for vibration design."
+excerpt: "ANSYS Workbench's modal analysis calculates natural frequencies and mode shapes to identify resonance risks. We cover modal analysis setup, pre-stressed modal, mode interpretation, resonance avoidance strategies, and harmonic response for vibration design."
 category: "workflow"
 softwareSlug: "ansys-workbench"
 keyword: "ANSYS Workbench modal analysis natural frequencies mode shapes resonance avoidance harmonic response vibration"
@@ -16,7 +16,7 @@ sources:
 
 # ANSYS Workbench Modal Analysis: Natural Frequencies, Mode Shapes, and Resonance Avoidance
 
-I've run modal analyses on everything from rotating machinery to building structures to consumer electronics. Modal analysis is the foundation of vibration design — it tells you the natural frequencies at which a structure wants to vibrate and the mode shapes that show how it deforms at each frequency. Understanding modal results is essential for avoiding resonance, which is the leading cause of vibration-induced failures.
+We've run modal analyses on everything from rotating machinery to building structures to consumer electronics. Modal analysis is the foundation of vibration design — it tells you the natural frequencies at which a structure wants to vibrate and the mode shapes that show how it deforms at each frequency. Understanding modal results is essential for avoiding resonance, which is the leading cause of vibration-induced failures.
 
 ## What Is Modal Analysis?
 

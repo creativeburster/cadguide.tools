@@ -15,7 +15,7 @@ sources:
 
 # ZWCAD Performance Tuning for Large DWG Files
 
-I had a 280 MB site plan that made ZWCAD crawl — 15 seconds to pan, 30 seconds to save, and the occasional freeze that forced a hard kill via Task Manager. After a week of tuning, I got it down to smooth real-time panning and 3-second saves. Here's what actually made a difference.
+We had a 280 MB site plan that made ZWCAD crawl — 15 seconds to pan, 30 seconds to save, and the occasional freeze that forced a hard kill via Task Manager. After a week of tuning, we got it down to smooth real-time panning and 3-second saves. Here's what actually made a difference.
 
 ## Step 1: Disable Visual Styles for 2D Work
 
@@ -46,7 +46,7 @@ ZWCAD loads all objects in the drawing into memory on open. For large files, ena
 
 Type `OPTIONS` → **Open and Save** tab:
 - Set **Demand load ObjectARX/SDS applications** to **Demand load**
-- Set **Maximum number of backup files** to 1 (default is 4, each backup consumes disk I/O on save)
+- Set **Maximum number of backup files** to 1 (default is 4, each backup consumes disk we/O on save)
 
 ## Step 4: Adjust Memory and Cache Settings
 

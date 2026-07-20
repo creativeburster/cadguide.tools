@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Civil Bridge Analysis: Modeling, Moving Loads, and Bridge Design per AASHTO and Eurocode
 
-MIDAS Civil is my go-to tool for bridge analysis. I've used it on highway bridges, railway bridges, and pedestrian structures, and the moving load analysis and code-based design features are excellent. Whether you're working with AASHTO LRFD or Eurocode, the workflow is well-structured. Let me walk you through the complete bridge analysis process.
+MIDAS Civil is our go-to tool for bridge analysis. We've used it on highway bridges, railway bridges, and pedestrian structures, and the moving load analysis and code-based design features are excellent. Whether you're working with AASHTO LRFD or Eurocode, the workflow is well-structured. Let us walk you through the complete bridge analysis process.
 
 ## Bridge Modeling
 
@@ -30,7 +30,7 @@ MIDAS Civil is my go-to tool for bridge analysis. I've used it on highway bridge
 
 1. Model > Bridge Modeler > Bridge Wizard
 2. Step through the wizard:
-   - **Bridge type**: I-girder, box girder, PSC, steel composite
+   - **Bridge type**: We-girder, box girder, PSC, steel composite
    - **Spans**: Number and lengths (e.g., 3 spans: 30m, 40m, 30m)
    - **Width**: Bridge deck width (e.g., 12m)
    - **Girders**: Number and spacing (e.g., 5 girders at 2.5m)
@@ -54,10 +54,10 @@ For non-standard bridges:
 
 1. Model > Section
 2. Add sections:
-   - **Steel I-girder**: Top flange, web, bottom flange dimensions
+   - **Steel we-girder**: Top flange, web, bottom flange dimensions
    - **PSC Box girder**: Multi-cell box with top and bottom slabs
    - **Composite**: Steel girder + concrete deck (effective width)
-   - **AASHTO I-beam**: Standard Type I-IV
+   - **AASHTO we-beam**: Standard Type we-IV
    - **Predefined**: Select from international section databases
 3. Calculate section properties:
    - Area (A), Moment of inertia (Iy, Iz), Torsion constant (J)
@@ -210,7 +210,7 @@ For non-standard bridges:
 
 ## AASHTO LRFD Load Combinations
 
-### Strength I
+### Strength we
 
 ```
 1.25 × DC + 1.50 × DW + 1.75 × (LL + IM + BR + PL) + 1.00 × WA
@@ -222,7 +222,7 @@ For non-standard bridges:
 1.25 × DC + 1.50 × DW + 1.35 × (LL + IM) + 1.00 × WA
 ```
 
-### Service I
+### Service we
 
 ```
 1.00 × DC + 1.00 × DW + 1.00 × (LL + IM) + 1.00 × WA
@@ -307,4 +307,4 @@ For non-standard bridges:
 
 ## Wrapping Up
 
-MIDAS Civil is my preferred tool for bridge analysis, and the moving load workflow is a big reason why. The influence line approach is efficient, the AASHTO and Eurocode design checks are comprehensive, and the envelope generation captures the worst-case effects automatically. My tip: always check your deflection limits against the code — I've seen engineers get so focused on strength that they forget serviceability. A bridge that's strong enough but bounces too much under traffic isn't a good bridge.
+MIDAS Civil is our preferred tool for bridge analysis, and the moving load workflow is a big reason why. The influence line approach is efficient, the AASHTO and Eurocode design checks are comprehensive, and the envelope generation captures the worst-case effects automatically. Our tip: always check your deflection limits against the code — We've seen engineers get so focused on strength that they forget serviceability. A bridge that's strong enough but bounces too much under traffic isn't a good bridge.

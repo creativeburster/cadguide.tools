@@ -1,6 +1,6 @@
 ---
 title: "Cabinet Vision Cabinet Design: Assembly Building, Construction Methods, and Material Selection"
-excerpt: "Cabinet Vision's assembly building tools create custom cabinets with parametric construction methods and material libraries. I cover the cabinet design workflow, construction method selection, material assignment, hardware placement, and the parametric assembly system for production-ready cabinetry."
+excerpt: "Cabinet Vision's assembly building tools create custom cabinets with parametric construction methods and material libraries. We cover the cabinet design workflow, construction method selection, material assignment, hardware placement, and the parametric assembly system for production-ready cabinetry."
 category: "workflow"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision cabinet design assembly building construction methods material selection parametric"
@@ -16,7 +16,7 @@ sources:
 
 # Cabinet Vision Cabinet Design: Assembly Building, Construction Methods, and Material Selection
 
-I've designed thousands of cabinets in Cabinet Vision for custom kitchen, bath, and commercial casework projects. Cabinet Vision is the industry standard for cabinet and casework design in North America, used by custom cabinet shops and large commercial manufacturers alike. Its parametric assembly system — where changing one parameter updates all related parts — is the core of efficient cabinet design.
+We've designed thousands of cabinets in Cabinet Vision for custom kitchen, bath, and commercial casework projects. Cabinet Vision is the industry standard for cabinet and casework design in North America, used by custom cabinet shops and large commercial manufacturers alike. Its parametric assembly system — where changing one parameter updates all related parts — is the core of efficient cabinet design.
 
 ## Cabinet Vision Overview
 

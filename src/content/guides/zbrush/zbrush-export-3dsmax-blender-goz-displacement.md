@@ -1,6 +1,6 @@
 ---
 title: "ZBrush to 3ds Max and Blender Export: GoZ, FBX, and Displacement Map Workflow"
-excerpt: "Moving sculpts from ZBrush to 3ds Max or Blender requires correct export settings, UV preparation, and displacement map configuration. I cover the GoZ setup, manual FBX export, and the displacement map pipeline that preserves every detail."
+excerpt: "Moving sculpts from ZBrush to 3ds Max or Blender requires correct export settings, UV preparation, and displacement map configuration. We cover the GoZ setup, manual FBX export, and the displacement map pipeline that preserves every detail."
 category: "migration"
 softwareSlug: "zbrush"
 keyword: "ZBrush export 3ds Max Blender GoZ FBX displacement map"
@@ -15,7 +15,7 @@ sources:
 
 # ZBrush to 3ds Max and Blender Export: GoZ, FBX, and Displacement Map Workflow
 
-The handoff between ZBrush and the rendering application is where I see the most pipeline failures. A sculpt looks perfect in ZBrush, but after export to 3ds Max or Blender, the detail is gone, the UVs are mangled, or the displacement maps don't line up. I've spent years refining this workflow, and I'm going to share the exact process I use for every character and prop that goes through our pipeline.
+The handoff between ZBrush and the rendering application is where we see the most pipeline failures. A sculpt looks perfect in ZBrush, but after export to 3ds Max or Blender, the detail is gone, the UVs are mangled, or the displacement maps don't line up. We've spent years refining this workflow, and we're going to share the exact process we use for every character and prop that goes through our pipeline.
 
 ## Method 1: GoZ (Fastest, Best for Iteration)
 
@@ -35,15 +35,15 @@ GoZ is ZBrush's one-click export system. When configured correctly, it sends you
 
 **GoZ limitations**: GoZ exports the current subdivision level, not the highest. If you're at subdivision level 1, you get a low-poly model. Always step up to your highest subdivision level (using **D** key) before clicking GoZ if you want full detail.
 
-GoZ is best for quick iteration — sending a model back and forth between ZBrush and 3ds Max to check proportions, lighting, or composition. For final asset delivery, I use the manual export method with displacement maps.
+GoZ is best for quick iteration — sending a model back and forth between ZBrush and 3ds Max to check proportions, lighting, or composition. For final asset delivery, we use the manual export method with displacement maps.
 
 ## Method 2: Manual FBX/OBJ Export with Displacement Maps
 
-This is the production workflow I use for final asset delivery. It produces a low-poly mesh with displacement and normal maps that recreate the full ZBrush detail at render time.
+This is the production workflow we use for final asset delivery. It produces a low-poly mesh with displacement and normal maps that recreate the full ZBrush detail at render time.
 
 ### Step 1: UV Unwrap at a Low Subdivision Level
 
-UVs must be created before baking maps. I unwrap at subdivision level 2 or 3 — high enough that the UV seams are in good positions, low enough that the unwrap operation is fast.
+UVs must be created before baking maps. We unwrap at subdivision level 2 or 3 — high enough that the UV seams are in good positions, low enough that the unwrap operation is fast.
 
 1. Step down to subdivision level 2 or 3 (**Shift+D**)
 2. Use **Tool → UV Map → Create** for automatic UVs, or
@@ -61,7 +61,7 @@ UVs must be created before baking maps. I unwrap at subdivision level 2 or 3 —
 7. The displacement map appears in the **Alpha** palette — export it as a TIFF or EXR
 
 **Important settings**:
-- **Mode**: I use **Flip V** for 3ds Max (3ds Max's V-Ray expects flipped V coordinates). For Blender, leave Flip V unchecked.
+- **Mode**: We use **Flip V** for 3ds Max (3ds Max's V-Ray expects flipped V coordinates). For Blender, leave Flip V unchecked.
 - **Smooth UV**: Enable this if your UVs have visible seams — it smooths the displacement across seam boundaries
 
 ### Step 3: Bake Normal Map
@@ -89,11 +89,11 @@ The exported mesh is now your low-poly base — typically 5,000 to 50,000 polygo
 1. Import the OBJ into 3ds Max
 2. Apply a **V-Ray Displacement Modifier** to the mesh
 3. Load the displacement map (TIFF or EXR) into the displacement slot
-4. Set **Amount** to 1.0 initially — adjust based on the result (I typically end up between 0.3 and 2.0)
+4. Set **Amount** to 1.0 initially — adjust based on the result (we typically end up between 0.3 and 2.0)
 5. Set **Edge Length** to 4 (lower values give more subdivision at render time but slower renders)
 6. Apply the normal map in the material's **Bump** slot with the V-Ray Normal Map node
 
-**Common issue — displacement direction**: If the displacement pushes inward instead of outward, check the **Channel** setting in the V-Ray Displacement Modifier. I set it to **2D (Landscape)** for most character work. If the displacement looks inverted, swap the black and white values in the output curve.
+**Common issue — displacement direction**: If the displacement pushes inward instead of outward, check the **Channel** setting in the V-Ray Displacement Modifier. We set it to **2D (Landscape)** for most character work. If the displacement looks inverted, swap the black and white values in the output curve.
 
 ### Step 6: Set Up in Blender
 

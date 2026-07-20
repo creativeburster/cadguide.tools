@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Interior Design: Cabinets, Fixtures, Materials, and 3D Walkthroughs
 
-The interior design tools in Chief Architect are where this software really shines for residential work. I've designed kitchens, bathrooms, and whole-home interiors with it, and the parametric cabinets and fixture libraries save me hours compared to modeling everything from scratch. Let me walk you through the interior design workflow.
+The interior design tools in Chief Architect are where this software really shines for residential work. We've designed kitchens, bathrooms, and whole-home interiors with it, and the parametric cabinets and fixture libraries save us hours compared to modeling everything from scratch. Let us walk you through the interior design workflow.
 
 ## Kitchen Design
 
@@ -293,4 +293,4 @@ The interior design tools in Chief Architect are where this software really shin
 
 ## Wrapping Up
 
-The interior design tools in Chief Architect are a major time-saver for residential work. The parametric cabinets alone save me hours on every kitchen and bathroom design. My workflow tip: build a library of your most-used cabinet configurations and material combinations in the user catalog. Once you've got that library set up, you can drop in a complete kitchen layout in minutes and focus your time on the details that make each project unique.
+The interior design tools in Chief Architect are a major time-saver for residential work. The parametric cabinets alone save us hours on every kitchen and bathroom design. Our workflow tip: build a library of your most-used cabinet configurations and material combinations in the user catalog. Once you've got that library set up, you can drop in a complete kitchen layout in minutes and focus your time on the details that make each project unique.

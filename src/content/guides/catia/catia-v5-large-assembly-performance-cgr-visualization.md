@@ -1,6 +1,6 @@
 ---
 title: "CATIA V5 Large Assembly Performance: Cache, Level of Detail, and Visualization Mode"
-excerpt: "When your CATIA assembly hits 5,000+ instances, even a powerful workstation slows to a crawl. I cover the CGR cache, visualization mode, and level-of-detail settings that keep large assemblies workable."
+excerpt: "When your CATIA assembly hits 5,000+ instances, even a powerful workstation slows to a crawl. We cover the CGR cache, visualization mode, and level-of-detail settings that keep large assemblies workable."
 category: "performance"
 softwareSlug: "catia"
 keyword: "CATIA V5 large assembly performance CGR"
@@ -15,7 +15,7 @@ sources:
 
 # CATIA V5 Large Assembly Performance: Cache, Level of Detail, and Visualization Mode
 
-I work with CATIA assemblies in the automotive supply chain — our typical product assembly has 8,000 to 12,000 instances, and the full vehicle assembly at our OEM customer exceeds 50,000. Over the years, I've learned that CATIA V5 can handle these sizes, but only if you configure it correctly. Out of the box, CATIA loads every component's full geometry into memory, which is fine for 100-part assemblies but catastrophic for 10,000-part ones. The three settings that make the biggest difference are the CGR cache, visualization mode, and level of detail.
+We work with CATIA assemblies in the automotive supply chain — our typical product assembly has 8,000 to 12,000 instances, and the full vehicle assembly at our OEM customer exceeds 50,000. Over the years, we've learned that CATIA V5 can handle these sizes, but only if you configure it correctly. Out of the box, CATIA loads every component's full geometry into memory, which is fine for 100-part assemblies but catastrophic for 10,000-part ones. The three settings that make the biggest difference are the CGR cache, visualization mode, and level of detail.
 
 ## Understanding CGR (Catastrophically Good Resolution — Just Kidding)
 
@@ -26,7 +26,7 @@ CGR stands for CATIA Graphic Representation. A CGR file is a lightweight represe
 1. Go to **Tools → Options → Infrastructure → Product Structure**
 2. Under the **Cache Management** tab:
    - Check **Enable cache system**
-   - Set **Cache size** to at least 4096 MB (4GB) — I use 8192 MB (8GB) on workstations with 32GB+ RAM
+   - Set **Cache size** to at least 4096 MB (4GB) — We use 8192 MB (8GB) on workstations with 32GB+ RAM
    - Set **Cache location** to a local SSD path (e.g., `C:\CATCache`)
 3. Under **Cache Settings**:
    - Set **Time stamp** to **Check timestamp** — this ensures CATIA uses the latest version of each CGR
@@ -87,7 +87,7 @@ CATIA V5 supports Level of Detail for CGR files. A LOD is a coarser tessellation
    - Set **Proportional** to a value between 0.01 and 0.5
    - Lower values = higher quality but more triangles
    - Higher values = lower quality but fewer triangles
-4. For large assemblies, I use:
+4. For large assemblies, we use:
    - **High LOD**: 0.01 (for close-up work on specific components)
    - **Medium LOD**: 0.1 (for general assembly navigation)
    - **Low LOD**: 0.3 (for overview and large assembly navigation)
@@ -128,7 +128,7 @@ Shadows are computationally expensive, especially with thousands of components:
 
 ## Performance Impact: Real Measurements
 
-I measured the impact of these settings on a 9,200-instance assembly:
+We measured the impact of these settings on a 9,200-instance assembly:
 
 | Configuration | Load Time | Memory Usage | Frame Rate |
 |--------------|-----------|-------------|------------|

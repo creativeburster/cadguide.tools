@@ -15,7 +15,7 @@ sources:
 
 # CADWorx Plant Professional Setup: Spec Editor, Catalogs, and Project Configuration
 
-I've set up CADWorx for chemical plants, oil and gas facilities, and food and beverage projects. CADWorx is faster to set up than Plant 3D — you can start laying pipe within hours of installing the software. But "fast to start" doesn't mean "fast to get right." A poorly configured spec or catalog will haunt you through the entire project. Here's how to set up CADWorx properly from day one.
+We've set up CADWorx for chemical plants, oil and gas facilities, and food and beverage projects. CADWorx is faster to set up than Plant 3D — you can start laying pipe within hours of installing the software. But "fast to start" doesn't mean "fast to get right." A poorly configured spec or catalog will haunt you through the entire project. Here's how to set up CADWorx properly from day one.
 
 ## Understanding CADWorx's Architecture
 
@@ -25,7 +25,7 @@ CADWorx Plant Professional consists of:
 - **CADWorx P&ID**: Process and instrumentation diagrams
 - **CADWorx Specification Editor**: Create and manage piping specs
 - **ISOGEN**: Isometric drawing generation
-- **I-Configure**: ISOGEN configuration interface
+- **we-Configure**: ISOGEN configuration interface
 - **BricsCAD Platinum**: Included with CADWorx license (no separate AutoCAD license needed)
 
 CADWorx runs on either AutoCAD or BricsCAD. Since Hexagon includes BricsCAD Platinum with the license, most new setups use BricsCAD.
@@ -145,9 +145,9 @@ For a complete spec, include:
 
 ## Step 5: Configure ISOGEN Settings
 
-ISOGEN generates isometric drawings from the 3D model. Configuration is done through I-Configure.
+ISOGEN generates isometric drawings from the 3D model. Configuration is done through we-Configure.
 
-1. Open **I-Configure** (from the CADWorx ribbon or standalone).
+1. Open **we-Configure** (from the CADWorx ribbon or standalone).
 2. The Home screen shows key configuration areas:
    - **Style**: Visual appearance of isometrics
    - **Symbol**: Component symbols on isometrics

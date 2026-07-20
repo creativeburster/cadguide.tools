@@ -1,6 +1,6 @@
 ---
 title: "Substance Painter Performance: Document Resolution, Layer Management, and Export Optimization"
-excerpt: "Substance Painter slows down with large documents, excessive layers, and high-resolution exports. I cover the resolution workflow, layer optimization, cache management, and the baking settings that keep Painter responsive on any GPU."
+excerpt: "Substance Painter slows down with large documents, excessive layers, and high-resolution exports. We cover the resolution workflow, layer optimization, cache management, and the baking settings that keep Painter responsive on any GPU."
 category: "performance"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter performance optimization resolution layers export"
@@ -16,7 +16,7 @@ sources:
 
 # Substance Painter Performance: Document Resolution, Layer Management, and Export Optimization
 
-I optimize Substance Painter workflows for game and film texture artists, and the performance issues follow a predictable pattern: the project starts out fast, but as layers accumulate and resolution increases, Painter becomes sluggish — each brush stroke takes seconds to appear, layer toggles are delayed, and baking operations take forever. The good news is that Adobe's documentation and community resources provide clear optimization paths.
+We optimize Substance Painter workflows for game and film texture artists, and the performance issues follow a predictable pattern: the project starts out fast, but as layers accumulate and resolution increases, Painter becomes sluggish — each brush stroke takes seconds to appear, layer toggles are delayed, and baking operations take forever. The good news is that Adobe's documentation and community resources provide clear optimization paths.
 
 ## Optimization 1: Document Resolution Strategy
 
@@ -27,7 +27,7 @@ The document resolution is the single biggest performance factor in Substance Pa
 - **4096 (4K)**: 4x the pixels of 2K — hero assets and cinematics
 - **8192 (8K)**: 4x the pixels of 4K — only for extreme close-ups
 
-**My resolution workflow**:
+**Our resolution workflow**:
 1. **Start at 1024 or 2048** for all texturing work — painting, masking, material assignment
 2. Do all creative work at this resolution — it's fast and responsive
 3. **Increase to 4096 only for final export** — change resolution, export maps, then change back
@@ -39,11 +39,11 @@ Adobe's documentation confirms: "Since Substance 3D Painter is non-destructive t
 
 ## Optimization 2: Layer Management
 
-Every layer in Substance Painter consumes VRAM and processing power. I've seen projects with 100+ layers that became unusable.
+Every layer in Substance Painter consumes VRAM and processing power. We've seen projects with 100+ layers that became unusable.
 
-**My layer optimization rules**:
+**Our layer optimization rules**:
 
-1. **Merge completed layers**: Once you're satisfied with a layer's contribution, merge it down. This is destructive, so I duplicate the layer first and hide the duplicate as a backup.
+1. **Merge completed layers**: Once you're satisfied with a layer's contribution, merge it down. This is destructive, so we duplicate the layer first and hide the duplicate as a backup.
 
 2. **Use folders for organization**: Folders with masks are more efficient than individual layers with masks. Group related layers into folders and apply a single mask to the folder.
 
@@ -69,13 +69,13 @@ Substance Painter generates a preview cache for each texture set. Adobe's docume
 3. Delete the cache folder
 4. Restart Painter — it will rebuild the cache as needed
 
-I clear the cache weekly on all workstations. It accumulates stale data from old projects and can grow to several GB over time.
+We clear the cache weekly on all workstations. It accumulates stale data from old projects and can grow to several GB over time.
 
 ## Optimization 4: Baking Performance
 
 Texture baking (ambient occlusion, curvature, normal maps from high-poly to low-poly) is one of the most expensive operations in Substance Painter.
 
-**My baking optimization**:
+**Our baking optimization**:
 1. **Set the correct output resolution**: Match the bake resolution to the document resolution — don't bake at 4K if your document is 2K
 2. **Limit the baking cage**: Use a tight cage that closely follows the mesh — a loose cage increases the baking area and computation time
 3. **Disable unused maps**: Only bake the maps you need — if you don't use position or thickness maps, disable them
@@ -86,7 +86,7 @@ Texture baking (ambient occlusion, curvature, normal maps from high-poly to low-
 
 Exporting textures at high resolution can crash Substance Painter if the system runs out of memory. Adobe's documentation identifies this as a known issue: "Some specific cases can lead to Substance 3D Painter crashing while exporting, especially at very high resolution (such as 4K or 8K)."
 
-**My export workflow**:
+**Our export workflow**:
 1. **Close other applications**: Free as much RAM and VRAM as possible before exporting
 2. **Export at the target resolution only**: Don't export at 8K if the game engine will use 2K — it wastes time and memory
 3. **Use the correct export preset**: Select the preset that matches your target engine (Unreal Engine 4/5, Unity, Arnold, etc.) — this exports only the required maps in the correct format
@@ -105,7 +105,7 @@ Adobe's documentation emphasizes: "The more VRAM Painter has access to, the fast
 
 "Substance 3D Painter is not alone in working with the GPU. A solution to ensure good performance while keeping these applications open is to be sure Substance 3D Painter is launched first in order to request its own VRAM allocation."
 
-**My rule**: Always launch Substance Painter before any other GPU-using application. Painter claims its VRAM allocation on launch. If another application (Blender, Unreal, Chrome) is already using VRAM, Painter gets a smaller allocation and performs worse.
+**Our rule**: Always launch Substance Painter before any other GPU-using application. Painter claims its VRAM allocation on launch. If another application (Blender, Unreal, Chrome) is already using VRAM, Painter gets a smaller allocation and performs worse.
 
 **NVIDIA Control Panel configuration**:
 1. Add `Adobe Substance 3D Painter.exe` to Program Settings
@@ -123,7 +123,7 @@ The UV Tile (UDIM) workflow allows multiple UV tiles per texture set, which is e
 
 ## Practical Example
 
-A texture artist came to me with a character project that was taking 5 seconds per brush stroke at 4K with 60 layers on an RTX 3070 (8GB VRAM). Here's what I changed:
+A texture artist came to us with a character project that was taking 5 seconds per brush stroke at 4K with 60 layers on an RTX 3070 (8GB VRAM). Here's what we changed:
 
 1. Document resolution: 4096 → 2048 (brush stroke delay: 5s → 1s)
 2. Viewport texture resolution: 4K → 2K (VRAM: 7.2GB → 4.1GB)
@@ -136,4 +136,4 @@ Final result: 5 seconds per brush stroke → 0.3 seconds. VRAM usage dropped fro
 
 ## Summary
 
-Substance Painter performance optimization is about managing VRAM through resolution, layers, and cache. My optimization order: work at 2048 resolution, export at 4096 → merge completed layers → reduce viewport texture resolution → disable TAA → close other GPU applications → launch Painter first → manage cache budget → optimize baking settings. The resolution reduction alone typically provides a 4x performance improvement.
+Substance Painter performance optimization is about managing VRAM through resolution, layers, and cache. Our optimization order: work at 2048 resolution, export at 4096 → merge completed layers → reduce viewport texture resolution → disable TAA → close other GPU applications → launch Painter first → manage cache budget → optimize baking settings. The resolution reduction alone typically provides a 4x performance improvement.

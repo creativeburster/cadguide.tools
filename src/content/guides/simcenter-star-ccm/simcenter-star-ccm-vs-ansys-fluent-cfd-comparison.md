@@ -15,7 +15,7 @@ sources:
 
 # Simcenter STAR-CCM+ vs ANSYS Fluent: Commercial CFD Software Comparison
 
-STAR-CCM+ (Siemens) and ANSYS Fluent are the two dominant commercial CFD platforms. Both are capable of solving complex fluid dynamics problems, but they differ significantly in workflow, meshing philosophy, and target industries. I've used both extensively and can break down the key differences.
+STAR-CCM+ (Siemens) and ANSYS Fluent are the two dominant commercial CFD platforms. Both are capable of solving complex fluid dynamics problems, but they differ significantly in workflow, meshing philosophy, and target industries. We've used both extensively and can break down the key differences.
 
 ## Overview
 

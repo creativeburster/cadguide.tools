@@ -15,7 +15,7 @@ sources:
 
 # Autodesk Construction Cloud Setup: Project Structure and Folder Hierarchy Best Practices
 
-I've set up ACC (formerly BIM 360) for projects ranging from small office buildings to large infrastructure projects. The setup you choose on day one determines whether your team collaborates smoothly or fights the system for the next two years. I've seen projects where the folder structure was so bad that teams stopped using ACC entirely and went back to network drives. Here's how to do it right.
+We've set up ACC (formerly BIM 360) for projects ranging from small office buildings to large infrastructure projects. The setup you choose on day one determines whether your team collaborates smoothly or fights the system for the next two years. We've seen projects where the folder structure was so bad that teams stopped using ACC entirely and went back to network drives. Here's how to do it right.
 
 ## Understanding ACC Modules
 

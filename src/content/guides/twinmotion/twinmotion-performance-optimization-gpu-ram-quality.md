@@ -1,6 +1,6 @@
 ---
 title: "Twinmotion Performance Optimization: GPU RAM, Quality Settings, Path Tracer, and Nanite"
-excerpt: "Twinmotion performance drops when GPU RAM exceeds 80%, too many lights are active, or Path Tracer samples are set too high. I cover the Statistics panel monitoring, Quality settings strategy, Nanite geometry optimization, and Lumen configuration."
+excerpt: "Twinmotion performance drops when GPU RAM exceeds 80%, too many lights are active, or Path Tracer samples are set too high. We cover the Statistics panel monitoring, Quality settings strategy, Nanite geometry optimization, and Lumen configuration."
 category: "performance"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion performance optimization GPU RAM quality settings"
@@ -16,7 +16,7 @@ sources:
 
 # Twinmotion Performance Optimization: GPU RAM, Quality Settings, Path Tracer, and Nanite
 
-I audit Twinmotion workstations for architecture firms, and the performance complaints follow a predictable pattern: the scene starts out smooth at 60 FPS, but as the architect adds more assets, materials, and lights, the framerate drops to 15-20 FPS and navigation becomes painful. Twinmotion is a real-time GPU renderer — every element in the scene is processed every frame, so complexity directly impacts performance.
+Twinmotion performance complaints in architecture firms follow a predictable pattern: the scene starts out smooth at 60 FPS, but as more assets, materials, and lights are added, the framerate drops to 15-20 FPS and navigation becomes painful. Twinmotion is a real-time GPU renderer — every element in the scene is processed every frame, so complexity directly impacts performance.
 
 ## Monitoring: The Statistics Panel
 
@@ -31,18 +31,18 @@ Before optimizing, you need to know what's causing the bottleneck. Twinmotion's 
    - **Triangles**: Total polygon count in the scene
    - **Lights**: Number of active light sources
 
-I check the Statistics panel at the start of every session and after adding significant new content. If GPU RAM is above 80%, I optimize before continuing.
+We check the Statistics panel at the start of every session and after adding significant new content. If GPU RAM is above 80%, we optimize before continuing.
 
 ## Optimization 1: Quality Settings Strategy
 
 Twinmotion's Quality settings control viewport resolution and feature quality. The key insight from Epic's documentation: **lowering Quality settings improves viewport performance without affecting export quality**.
 
-**My workflow**:
+**Our workflow**:
 - **While editing**: Set Quality to **Simple** or **Medium** — this gives maximum FPS for navigation
 - **For preview**: Switch to **High** to see what the final render will look like
 - **For export**: Switch to **Ultra** just before rendering
 
-Quality settings can be changed without restarting Twinmotion, so I switch back and forth constantly. Working at Simple quality and exporting at Ultra quality gives me the best of both worlds.
+Quality settings can be changed without restarting Twinmotion, so we switch back and forth constantly. Working at Simple quality and exporting at Ultra quality gives us the best of both worlds.
 
 **To change**: Click the **Quality** button in the top toolbar, or go to **Preferences → Quality**.
 
@@ -73,7 +73,7 @@ Twinmotion includes Nanite, Unreal Engine's virtualized geometry system. Nanite 
 1. When importing a model, check **Enable Nanite** in the import dialog
 2. For existing geometry: select it in the Scene Graph → Properties → enable Nanite
 
-**Nanite settings I configure**:
+**Nanite settings we configure**:
 - **Precision**: Auto (let Twinmotion calculate based on geometry size)
 - **Border edge tolerance**: Enable for vegetation (prevents gaps in canopies)
 - **Ribbon triangles**: Enable for foliage and grass
@@ -112,7 +112,7 @@ Lumen provides realistic real-time global illumination but requires significant 
 
 Twinmotion's Path Tracer produces photorealistic renders but is computationally expensive. The Sample per pixel and Bounces settings directly affect GPU memory and render time.
 
-**My Path Tracer settings**:
+**Our Path Tracer settings**:
 - **Samples per pixel**: 64-256 for still images, 32-64 for video
 - **Bounces**: 4-6 for interiors, 3 for exteriors
 - **Multi-GPU**: If you have multiple NVIDIA GPUs with SLI, enable Multi-GPU in Preferences → Settings → Path Tracer for 50-200% performance improvement
@@ -129,7 +129,7 @@ Enable Vsync to limit the frame rate to your monitor's refresh rate:
 
 ## Practical Example
 
-A firm came to me with a large urban plaza project running at 12 FPS on an RTX 3080 (10GB VRAM). Here's what I changed:
+A firm came to us with a large urban plaza project running at 12 FPS on an RTX 3080 (10GB VRAM). Here's what we changed:
 
 1. Quality: Ultra → Simple (FPS: 12 → 28)
 2. Enabled Nanite on 150 imported tree models (FPS: 28 → 38)
@@ -142,4 +142,4 @@ Final result: 12 FPS → 45 FPS, VRAM usage reduced from 92% to 63%. The project
 
 ## Summary
 
-Twinmotion performance optimization is about managing GPU RAM, geometry complexity, and light count within your hardware's capabilities. My optimization order: monitor Statistics panel → lower Quality for editing → enable Nanite on high-poly assets → reduce light count → manage texture sizes → delete unused materials → use Lumen only for previews/finals → configure Path Tracer samples carefully. The Quality setting and Nanite together typically provide the biggest FPS improvements.
+Twinmotion performance optimization is about managing GPU RAM, geometry complexity, and light count within your hardware's capabilities. Our optimization order: monitor Statistics panel → lower Quality for editing → enable Nanite on high-poly assets → reduce light count → manage texture sizes → delete unused materials → use Lumen only for previews/finals → configure Path Tracer samples carefully. The Quality setting and Nanite together typically provide the biggest FPS improvements.

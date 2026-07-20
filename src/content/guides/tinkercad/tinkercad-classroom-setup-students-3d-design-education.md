@@ -15,7 +15,7 @@ sources:
 
 # Tinkercad Classroom: Setting Up 3D Design Classes for Students
 
-I teach 3D design to middle and high school students using Tinkercad. It's the best tool for education — free, browser-based, and safe for students under 13 (with teacher moderation). Here's how to set up a classroom.
+We teach 3D design to middle and high school students using Tinkercad. It's the best tool for education — free, browser-based, and safe for students under 13 (with teacher moderation). Here's how to set up a classroom.
 
 ## Step 1: Create a Teacher Account
 

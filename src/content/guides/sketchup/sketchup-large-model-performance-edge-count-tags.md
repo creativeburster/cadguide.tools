@@ -1,6 +1,6 @@
 ---
 title: "SketchUp Large Model Performance: Edge Count, Tags, and 3D Warehouse Bloat"
-excerpt: "A 1.4GB SketchUp file with 47 million edges brought a 64GB RAM workstation to its knees. I cover the edge count reduction, tag management, and 3D Warehouse cleanup strategies that actually work."
+excerpt: "A 1.4GB SketchUp file with 47 million edges brought a 64GB RAM workstation to its knees. We cover the edge count reduction, tag management, and 3D Warehouse cleanup strategies that actually work."
 category: "performance"
 softwareSlug: "sketchup"
 keyword: "SketchUp large model performance edge count file size"

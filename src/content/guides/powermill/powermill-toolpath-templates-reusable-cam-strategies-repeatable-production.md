@@ -17,9 +17,9 @@ sources:
 
 # PowerMill Toolpath Templates: Building Reusable CAM Strategies for Repeatable Production
 
-I've built PowerMill template libraries that reduced CAM programming time from 4 hours to 30 minutes per part, and the key was understanding how templates interact with macros, tool databases, and folder structures. On the Autodesk PowerMill forum, a user described their template-based workflow: "I have a template file saved with a tool list that has completed cutting data for 4140, and a recorded macro opens the template (creates all tools)." Another user built a macro that imports a rest roughing template and automatically references the last roughing toolpath. And a user with complex setup folders needed macros to rename toolpaths following setup order, not just folder order.
+We've built PowerMill template libraries that reduced CAM programming time from 4 hours to 30 minutes per part, and the key was understanding how templates interact with macros, tool databases, and folder structures. On the Autodesk PowerMill forum, a user described their template-based workflow: "I have a template file saved with a tool list that has completed cutting data for 4140, and a recorded macro opens the template (creates all tools)." Another user built a macro that imports a rest roughing template and automatically references the last roughing toolpath. And a user with complex setup folders needed macros to rename toolpaths following setup order, not just folder order.
 
-These discussions reveal the real power of PowerMill templates: they're not just saved toolpath settings — they're the foundation for automated CAM workflows when combined with macros and structured project organization. This guide covers template creation, macro integration, and team deployment based on my experience building template libraries for production machine shops.
+These discussions reveal the real power of PowerMill templates: they're not just saved toolpath settings — they're the foundation for automated CAM workflows when combined with macros and structured project organization. This guide covers template creation, macro integration, and team deployment based on our experience building template libraries for production machine shops.
 
 ## Understanding PowerMill Templates
 
@@ -198,6 +198,6 @@ Example: `Scallop-Finish-6mm-0.3SO-0.01TOL-Steel.ptf`
 
 Schedule quarterly reviews of template libraries. Remove obsolete templates, update parameters based on machining experience, and add new templates for new tool types or strategies.
 
-## My Take
+## Our Take
 
 Toolpath templates are the foundation of efficient CAM programming in PowerMill. The combination of templates (for standardized parameters) and macros (for conditional logic and multi-step automation) is where the real productivity gains happen. Start by creating templates for your most common operations — typically one roughing template, one semi-finish template, and one finishing template per tool size. Then build macros that import these templates and adjust parameters based on material, machine, or part requirements. The forum examples in this guide demonstrate that even complex workflows like rest roughing with automatic reference selection can be fully automated with the right template and macro combination. The investment in template and macro development pays back within weeks for shops that run similar parts repeatedly.

@@ -1,6 +1,6 @@
 ---
 title: "CATIA V5 Customizing Toolbars and Restoring Lost Commands"
-excerpt: "Toolbars disappear, commands go missing, and the customize menu won't let you restore them. I cover the CATSettings reset, toolbar recovery, and how to build a clean custom workspace in CATIA V5."
+excerpt: "Toolbars disappear, commands go missing, and the customize menu won't let you restore them. We cover the CATSettings reset, toolbar recovery, and how to build a clean custom workspace in CATIA V5."
 category: "deployment"
 softwareSlug: "catia"
 keyword: "CATIA V5 toolbar customize restore commands"
@@ -15,7 +15,7 @@ sources:
 
 # CATIA V5 Customizing Toolbars and Restoring Lost Commands
 
-A Reddit user in r/CATIA posted a problem that I've seen dozens of times: they stopped using CATIA for about a year, and when they came back, they couldn't select the Transformation features pattern. They went to Customize, Toolbar, and selected "Restore all contents" — but it didn't fix the issue. This is a surprisingly common problem in CATIA V5, and the solution isn't as obvious as it should be.
+A Reddit user in r/CATIA posted a problem that we've seen dozens of times: they stopped using CATIA for about a year, and when they came back, they couldn't select the Transformation features pattern. They went to Customize, Toolbar, and selected "Restore all contents" — but it didn't fix the issue. This is a surprisingly common problem in CATIA V5, and the solution isn't as obvious as it should be.
 
 ## Why Toolbars and Commands Disappear
 
@@ -25,7 +25,7 @@ Additionally, CATIA's toolbar customization is tied to the workbench you're in. 
 
 ## Fix 1: Full CATSettings Reset
 
-This is the nuclear option, but it's the most reliable fix. I recommend trying this first because partial fixes often leave you chasing multiple issues.
+This is the nuclear option, but it's the most reliable fix. We recommend trying this first because partial fixes often leave you chasing multiple issues.
 
 1. Close CATIA completely
 2. Open your CATSettings folder:
@@ -81,7 +81,7 @@ CATIA uses a file called `Standard.dic` to define which commands are available. 
 
 ## Building a Clean Custom Workspace
 
-Once you've restored your toolbars, here's how I recommend setting up a clean, efficient workspace:
+Once you've restored your toolbars, here's how we recommend setting up a clean, efficient workspace:
 
 ### Create Custom Toolbars for Your Workflow
 
@@ -140,7 +140,7 @@ If a command is missing, first verify you're in the right workbench. Then check 
 
 ## Sharing Custom Toolbars Across a Team
 
-When multiple engineers need the same toolbar layout, the most reliable approach is to export and import the entire CATSettings configuration. I maintain a golden CATSettings template on our network share that contains our company-standard toolbars, standards, and display preferences. When a new engineer joins or someone's settings get corrupted, we copy the golden template to their workstation. This ensures everyone starts from the same baseline.
+When multiple engineers need the same toolbar layout, the most reliable approach is to export and import the entire CATSettings configuration. Maintain a golden CATSettings template on a network share containing your company-standard toolbars, standards, and display preferences. When a new engineer joins or someone's settings get corrupted, copy the golden template to their workstation. This ensures everyone starts from the same baseline.
 
 One caveat: the CATSettings folder also contains machine-specific settings like recent file lists and window positions. These don't cause problems when copied between similar workstations, but if the screen resolutions differ, toolbar positions may be off. Users can manually reposition toolbars after the copy without affecting the command availability.
 

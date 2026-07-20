@@ -15,7 +15,7 @@ sources:
 
 # Solibri Ruleset Customization: Creating Project-Specific BIM Validation Rules
 
-Default Solibri rulesets catch common issues, but every project has unique requirements. I've built custom rulesets for hospitals (door clearance checks), data centers (cable routing clearance), and residential projects (minimum room sizes). Custom rulesets are what separate basic clash detection from real BIM quality management. Here's how to build them.
+Default Solibri rulesets catch common issues, but every project has unique requirements. We've built custom rulesets for hospitals (door clearance checks), data centers (cable routing clearance), and residential projects (minimum room sizes). Custom rulesets are what separate basic clash detection from real BIM quality management. Here's how to build them.
 
 ## Understanding Rule Structure in Solibri
 
@@ -139,7 +139,7 @@ For Property Check rules:
 
 ## Step 5: Create Project-Specific Rules
 
-Here are examples of custom rules I've created for real projects:
+Here are examples of custom rules we've created for real projects:
 
 ### Rule: Door Clearance Check (Hospital Project)
 

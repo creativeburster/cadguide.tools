@@ -1,6 +1,6 @@
 ---
 title: "PTC Creo Parametric Part Design: Sketching, Features, and Intent Reference"
-excerpt: "Creo Parametric's part design tools create robust parametric models with sketched features, datum references, and design intent. I cover the Creo modeling workflow, sketch tools, feature creation, datum planes, and best practices for stable models."
+excerpt: "Creo Parametric's part design tools create robust parametric models with sketched features, datum references, and design intent. We cover the Creo modeling workflow, sketch tools, feature creation, datum planes, and best practices for stable models."
 category: "workflow"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo Parametric part design sketching features intent reference datum planes modeling workflow"
@@ -16,7 +16,7 @@ sources:
 
 # PTC Creo Parametric Part Design: Sketching, Features, and Intent Reference
 
-I've designed complex mechanical parts in Creo for aerospace, automotive, and industrial equipment. Creo Parametric (formerly Pro/ENGINEER) is one of the most established parametric CAD systems, known for its strict modeling discipline and robust model architecture. While the learning curve is steeper than SolidWorks or Inventor, Creo's emphasis on design intent and reference management creates models that are exceptionally stable and editable.
+We've designed complex mechanical parts in Creo for aerospace, automotive, and industrial equipment. Creo Parametric (formerly Pro/ENGINEER) is one of the most established parametric CAD systems, known for its strict modeling discipline and robust model architecture. While the learning curve is steeper than SolidWorks or Inventor, Creo's emphasis on design intent and reference management creates models that are exceptionally stable and editable.
 
 ## Creo Parametric Overview
 

@@ -15,7 +15,7 @@ sources:
 
 # Shapr3D Direct Modeling: Move, Rotate, and Scale Faces with Pencil Gestures
 
-Shapr3D combines direct modeling with Pencil-based input, and the result is the fastest face-editing workflow I've used in any CAD tool. Moving a face in SolidWorks takes 4-5 clicks. In Shapr3D, it takes 2 taps and a drag. Here's the complete direct modeling toolkit.
+Shapr3D combines direct modeling with Pencil-based input, and the result is the fastest face-editing workflow we've used in any CAD tool. Moving a face in SolidWorks takes 4-5 clicks. In Shapr3D, it takes 2 taps and a drag. Here's the complete direct modeling toolkit.
 
 ## The Select Tool
 

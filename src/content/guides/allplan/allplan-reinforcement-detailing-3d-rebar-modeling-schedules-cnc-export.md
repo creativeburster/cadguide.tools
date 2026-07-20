@@ -16,7 +16,7 @@ sources:
 
 # Allplan Reinforcement Detailing: 3D Rebar Modeling, Schedules, and CNC Export
 
-Allplan's reinforcement detailing tools are, in my opinion, some of the best in the BIM market. Unlike Revit, where rebar tools feel like an add-on, Allplan was built from the ground up for structural engineers working with European and international rebar standards. I've used it on projects where the 3D rebar model was sent directly to CNC bending machines — no manual interpretation required. Let me walk you through the workflow.
+Allplan's reinforcement detailing tools are, in our opinion, some of the best in the BIM market. Unlike Revit, where rebar tools feel like an add-on, Allplan was built from the ground up for structural engineers working with European and international rebar standards. We've used it on projects where the 3D rebar model was sent directly to CNC bending machines — no manual interpretation required. Let us walk you through the workflow.
 
 ## Prerequisites
 
@@ -250,4 +250,4 @@ The BVBS file contains:
 
 ## Wrapping Up
 
-Allplan's reinforcement tools are, in my opinion, the best in the BIM market for structural engineers. The 3D rebar modeling is precise, the bar schedule generation is automatic, and the BVBS CNC export works flawlessly with modern bending machines. I've sent rebar data directly from Allplan to the fabricator with no manual interpretation in between — that's a workflow that saves time and eliminates errors. If you do a lot of reinforced concrete work, Allplan is worth serious consideration for the reinforcement tools alone.
+Allplan's reinforcement tools are, in our opinion, the best in the BIM market for structural engineers. The 3D rebar modeling is precise, the bar schedule generation is automatic, and the BVBS CNC export works flawlessly with modern bending machines. We've sent rebar data directly from Allplan to the fabricator with no manual interpretation in between — that's a workflow that saves time and eliminates errors. If you do a lot of reinforced concrete work, Allplan is worth serious consideration for the reinforcement tools alone.

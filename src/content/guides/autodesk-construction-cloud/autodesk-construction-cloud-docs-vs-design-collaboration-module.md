@@ -15,7 +15,7 @@ sources:
 
 # ACC Docs vs Design Collaboration: Choosing the Right Module for Your BIM Workflow
 
-I've seen teams use ACC Docs when they should have used Design Collaboration, and vice versa. The result is always the same — broken workflows, outdated models, and frustrated teams. The modules look similar on the surface, but they serve fundamentally different purposes. Here's how to choose the right one.
+We've seen teams use ACC Docs when they should have used Design Collaboration, and vice versa. The result is always the same — broken workflows, outdated models, and frustrated teams. The modules look similar on the surface, but they serve fundamentally different purposes. Here's how to choose the right one.
 
 ## What Each Module Does
 
@@ -130,7 +130,7 @@ Contractors don't need Design Collaboration — they need to view models, not ed
 
 If budget is tight, you can use Docs only and manage model sharing manually. But for any multi-discipline project, Design Collaboration pays for itself in time saved within the first month.
 
-## My Recommendation
+## Our Recommendation
 
 For any project with more than one discipline working in Revit:
 

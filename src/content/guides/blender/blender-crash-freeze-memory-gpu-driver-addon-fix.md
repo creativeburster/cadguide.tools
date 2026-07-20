@@ -1,6 +1,6 @@
 ---
 title: "Blender Crashes and Freezes: Out of Memory, GPU Driver, and Add-on Conflict Fixes"
-excerpt: "Blender crashes during rendering or with large scenes due to VRAM exhaustion, driver conflicts, and problematic add-ons. I cover the memory management, driver rollback, and safe mode startup that identify and fix crash causes."
+excerpt: "Blender crashes during rendering or with large scenes due to VRAM exhaustion, driver conflicts, and problematic add-ons. We cover the memory management, driver rollback, and safe mode startup that identify and fix crash causes."
 category: "troubleshooting"
 softwareSlug: "blender"
 keyword: "Blender crash freeze out of memory GPU driver addon conflict"

@@ -15,7 +15,7 @@ sources:
 
 # ReCap Pro vs Cyclone Register 360: Point Cloud Registration Software Comparison
 
-I've registered point clouds in both ReCap Pro and Cyclone Register 360. They're the two dominant registration tools in the industry. ReCap Pro is the Autodesk ecosystem choice — integrates seamlessly with Revit and Navisworks. Cyclone Register 360 is the Leica ecosystem choice — superior registration accuracy and control. The right choice depends on your scanner hardware, downstream workflow, and registration complexity. Here's my comparison.
+We've registered point clouds in both ReCap Pro and Cyclone Register 360. They're the two dominant registration tools in the industry. ReCap Pro is the Autodesk ecosystem choice — integrates seamlessly with Revit and Navisworks. Cyclone Register 360 is the Leica ecosystem choice — superior registration accuracy and control. The right choice depends on your scanner hardware, downstream workflow, and registration complexity. Here's our comparison.
 
 ## Architecture
 
@@ -219,7 +219,7 @@ I've registered point clouds in both ReCap Pro and Cyclone Register 360. They're
 - **Survey control**: Extensive coordinate system library and weighted adjustment
 - **TruView sharing**: Free web-based point cloud sharing with stakeholders
 
-## My Recommendation
+## Our Recommendation
 
 For **Autodesk-centric teams**: **ReCap Pro** — the .rcs integration with Revit is seamless. If you have the AEC Collection, it's already included. Accept the limitations (no Z-axis lock, moderate accuracy) and use survey points to control drift.
 

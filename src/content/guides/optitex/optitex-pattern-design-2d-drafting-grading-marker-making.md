@@ -1,6 +1,6 @@
 ---
 title: "Optitex Pattern Design: 2D Drafting, Grading, and Marker Making for Production"
-excerpt: "Optitex Pattern Design provides 2D pattern drafting, grading, and marker making for apparel production. I cover the drafting tools, grade rule setup, size run management, marker efficiency optimization, and export to cutting machines."
+excerpt: "Optitex Pattern Design provides 2D pattern drafting, grading, and marker making for apparel production. We cover the drafting tools, grade rule setup, size run management, marker efficiency optimization, and export to cutting machines."
 category: "workflow"
 softwareSlug: "optitex"
 keyword: "Optitex pattern design 2D drafting grading marker making production cutting machines"
@@ -15,7 +15,7 @@ sources:
 
 # Optitex Pattern Design: 2D Drafting, Grading, and Marker Making for Production
 
-I've used Optitex Pattern Design for production pattern making on apparel lines ranging from basic t-shirts to tailored jackets. Optitex's 2D pattern module is a professional-grade pattern making system that handles drafting, grading, and marker making — the three core functions of a production pattern room. Understanding the full workflow from first pattern to cut-ready marker is essential for any apparel production operation.
+We've used Optitex Pattern Design for production pattern making on apparel lines ranging from basic t-shirts to tailored jackets. Optitex's 2D pattern module is a professional-grade pattern making system that handles drafting, grading, and marker making — the three core functions of a production pattern room. Understanding the full workflow from first pattern to cut-ready marker is essential for any apparel production operation.
 
 ## Optitex Pattern Design Overview
 

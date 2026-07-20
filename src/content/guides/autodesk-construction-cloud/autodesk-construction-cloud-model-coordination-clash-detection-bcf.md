@@ -15,7 +15,7 @@ sources:
 
 # ACC Model Coordination: Clash Detection Setup and BCF Issue Workflow
 
-Model Coordination in ACC is where BIM coordination actually happens. I've run weekly coordination meetings using ACC for years, and the difference between a well-configured Model Coordination setup and a bad one is night and day. A good setup catches clashes early, tracks them to resolution, and keeps everyone accountable. A bad setup creates noise — thousands of false positives that nobody acts on.
+Model Coordination in ACC is where BIM coordination actually happens. We've run weekly coordination meetings using ACC for years, and the difference between a well-configured Model Coordination setup and a bad one is night and day. A good setup catches clashes early, tracks them to resolution, and keeps everyone accountable. A bad setup creates noise — thousands of false positives that nobody acts on.
 
 ## Understanding ACC Model Coordination
 

@@ -1,6 +1,6 @@
 ---
 title: "Substance Painter VRAM Out of Memory: TDR Fix, Sparse Virtual Textures, and Resolution Management"
-excerpt: "Substance Painter crashes with OpenGL out-of-memory errors on 8GB GPUs, freezes on AMD cards, or crashes during 4K export. I cover the TDR registry fix, SVT configuration, document resolution strategy, and the AMD driver rollback workaround."
+excerpt: "Substance Painter crashes with OpenGL out-of-memory errors on 8GB GPUs, freezes on AMD cards, or crashes during 4K export. We cover the TDR registry fix, SVT configuration, document resolution strategy, and the AMD driver rollback workaround."
 category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter VRAM out of memory crash TDR fix"
@@ -16,7 +16,7 @@ sources:
 
 # Substance Painter VRAM Out of Memory: TDR Fix, Sparse Virtual Textures, and Resolution Management
 
-I support texture artists working in Substance Painter, and the most common crash I encounter is VRAM exhaustion. The symptoms are consistent: the artist is working on a 4K texture set, the viewport becomes corrupted, Substance Painter slows to a crawl, and then it crashes with an NVIDIA OpenGL driver out-of-memory error. This happens on 8GB GPUs, 16GB GPUs, and I've even seen it on 24GB GPUs with complex multi-UDIM projects.
+We support texture artists working in Substance Painter, and the most common crash we encounter is VRAM exhaustion. The symptoms are consistent: the artist is working on a 4K texture set, the viewport becomes corrupted, Substance Painter slows to a crawl, and then it crashes with an NVIDIA OpenGL driver out-of-memory error. This happens on 8GB GPUs, 16GB GPUs, and we've even seen it on 24GB GPUs with complex multi-UDIM projects.
 
 ## Understanding Substance Painter's VRAM Usage
 
@@ -45,7 +45,7 @@ The most impactful fix for Substance Painter crashes is increasing the Windows T
    - **TdrDdiDelay**: Set to **10** (decimal)
 4. Restart the computer
 
-The default TdrDelay is 2 seconds. Setting it to 10 gives Painter's VRAM swap operations enough time to complete without Windows intervening. I apply this fix to every workstation before installing Substance Painter — it prevents 90% of crash reports.
+The default TdrDelay is 2 seconds. Setting it to 10 gives Painter's VRAM swap operations enough time to complete without Windows intervening. We apply this fix to every workstation before installing Substance Painter — it prevents 90% of crash reports.
 
 ## Fix 2: Disable Hardware Acceleration in Sparse Virtual Textures
 
@@ -65,7 +65,7 @@ For AMD GPU users specifically, Adobe has identified a critical issue with Spars
 
 The fastest way to reduce VRAM usage is to lower the document resolution. Adobe's documentation confirms: "The bigger the Texture set resolution is, the bigger the preview cache will be."
 
-**My resolution workflow**:
+**Our resolution workflow**:
 1. **Create the project at 1024 or 2048** for initial texturing work
 2. Do all the heavy painting, masking, and material assignment at this lower resolution
 3. When ready for final export, **change the resolution to 4096**
@@ -95,7 +95,7 @@ Adobe support recommends disabling Temporal Anti-Aliasing (TAA) to reduce VRAM c
 2. Disable **Temporal Anti-Aliasing**
 3. TAA stores multiple frames in VRAM for smoothing — disabling it frees significant VRAM
 
-The visual quality difference is minor, especially during editing. I enable TAA only for final screenshots.
+The visual quality difference is minor, especially during editing. We enable TAA only for final screenshots.
 
 ## Fix 6: Lower Shader Quality
 
@@ -107,7 +107,7 @@ The visual quality difference is minor, especially during editing. I enable TAA 
 
 Adobe's documentation is clear: "Substance 3D Painter is not alone in working with the GPU, other applications do the same. Almost any 3D application will use the GPU and VRAM to run, including those commonly used alongside Painter, like Blender, Maya, Unreal Engine, Unity, C4D."
 
-**My recommendation**: Close all other 3D applications while using Substance Painter. If you must keep another application open (e.g., Blender for reference), launch Substance Painter **first** so it claims its VRAM allocation before the other application starts consuming VRAM.
+**Our recommendation**: Close all other 3D applications while using Substance Painter. If you must keep another application open (e.g., Blender for reference), launch Substance Painter **first** so it claims its VRAM allocation before the other application starts consuming VRAM.
 
 **Specific VRAM hogs to close**:
 - Blender (especially with Cycles GPU rendering)
@@ -148,4 +148,4 @@ A user reported crashes when running two instances of Substance Painter simultan
 
 ## Summary
 
-Substance Painter VRAM crashes are caused by insufficient VRAM headroom, Windows TDR timeouts, or AMD driver issues. My fix order: increase TdrDelay to 10 seconds → reduce document resolution to 2048 for editing → reduce viewport texture resolution → disable TAA and lower shader quality → disable SVT hardware acceleration (AMD only) → close other GPU applications → increase virtual memory → configure NVIDIA driver settings. The TDR fix and resolution reduction together prevent 80% of crash cases I encounter.
+Substance Painter VRAM crashes are caused by insufficient VRAM headroom, Windows TDR timeouts, or AMD driver issues. Our fix order: increase TdrDelay to 10 seconds → reduce document resolution to 2048 for editing → reduce viewport texture resolution → disable TAA and lower shader quality → disable SVT hardware acceleration (AMD only) → close other GPU applications → increase virtual memory → configure NVIDIA driver settings. The TDR fix and resolution reduction together prevent 80% of crash cases we encounter.

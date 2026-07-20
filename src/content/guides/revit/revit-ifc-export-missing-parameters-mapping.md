@@ -15,7 +15,7 @@ sources:
 
 # Fixing Missing Parameters in Revit IFC Exports: Mapping and Configuration Guide
 
-IFC export from Revit is one of those things that should be straightforward but rarely is. I've been on projects where the structural engineer opened our IFC export in Navisworks and half the parameter data was missing — no fire rating, no load-bearing flag, no material properties. The problem wasn't Revit's IFC exporter; it was that nobody had configured the parameter mapping. Let me walk you through how I set up IFC exports so the downstream applications actually get the data they need.
+IFC export from Revit is one of those things that should be straightforward but rarely is. We've been on projects where the structural engineer opened our IFC export in Navisworks and half the parameter data was missing — no fire rating, no load-bearing flag, no material properties. The problem wasn't Revit's IFC exporter; it was that nobody had configured the parameter mapping. Let us walk you through how we set up IFC exports so the downstream applications actually get the data they need.
 
 ## Understanding IFC Export in Revit
 

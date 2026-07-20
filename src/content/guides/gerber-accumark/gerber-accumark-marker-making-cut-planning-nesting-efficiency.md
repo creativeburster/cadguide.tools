@@ -1,6 +1,6 @@
 ---
 title: "Gerber AccuMark Marker Making and Cut Planning: Nesting, Efficiency, and Gerber Cutter Integration"
-excerpt: "AccuMark's marker making and cut planning tools optimize fabric utilization and cutting schedules. I cover automatic and manual nesting, cut order planning, marker efficiency reporting, and direct integration with Gerber GT5250 and GTXL cutting machines."
+excerpt: "AccuMark's marker making and cut planning tools optimize fabric utilization and cutting schedules. We cover automatic and manual nesting, cut order planning, marker efficiency reporting, and direct integration with Gerber GT5250 and GTXL cutting machines."
 category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark marker making cut planning nesting efficiency Gerber cutter integration GT5250 GTXL"
@@ -16,7 +16,7 @@ sources:
 
 # Gerber AccuMark Marker Making and Cut Planning: Nesting, Efficiency, and Gerber Cutter Integration
 
-I've managed marker making and cut planning in AccuMark for production runs of up to 30,000 units per style. AccuMark's marker engine is one of the most efficient in the industry, and its direct integration with Gerber cutting machines creates a seamless workflow from pattern to cut. Understanding the marker making and cut planning tools is essential for any production using Gerber equipment.
+We've managed marker making and cut planning in AccuMark for production runs of up to 30,000 units per style. AccuMark's marker engine is one of the most efficient in the industry, and its direct integration with Gerber cutting machines creates a seamless workflow from pattern to cut. Understanding the marker making and cut planning tools is essential for any production using Gerber equipment.
 
 ## Marker Making Overview
 

@@ -1,6 +1,6 @@
 ---
 title: "PrusaSlicer Variable Layer Height: Adaptive Slicing for Faster Prints Without Losing Quality"
-excerpt: "Variable layer height in PrusaSlicer automatically adjusts layer thickness based on model curvature — fine layers where detail matters, thick layers where speed is fine. I cover the automatic and manual modes, recommended min/max ranges, and when adaptive slicing saves the most time."
+excerpt: "Variable layer height in PrusaSlicer automatically adjusts layer thickness based on model curvature — fine layers where detail matters, thick layers where speed is fine. We cover the automatic and manual modes, recommended min/max ranges, and when adaptive slicing saves the most time."
 category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer variable layer height adaptive slicing configuration"
@@ -17,7 +17,7 @@ sources:
 
 # PrusaSlicer Variable Layer Height: Adaptive Slicing for Faster Prints Without Losing Quality
 
-I print a lot of miniatures, busts, and organic models, and variable layer height (VLH) is the single feature that has saved me the most print time without sacrificing visual quality. PrusaSlicer's implementation of adaptive slicing is the most mature among open-source slicers, and understanding how to configure it properly can cut 30-40% off your print time on curved models. This guide covers the complete configuration process for both automatic and manual modes.
+We print a lot of miniatures, busts, and organic models, and variable layer height (VLH) is the single feature that has saved us the most print time without sacrificing visual quality. PrusaSlicer's implementation of adaptive slicing is the most mature among open-source slicers, and understanding how to configure it properly can cut 30-40% off your print time on curved models. This guide covers the complete configuration process for both automatic and manual modes.
 
 ## What Is Variable Layer Height?
 
@@ -29,7 +29,7 @@ The result: a print that looks like it was printed at 0.10 mm layer height every
 
 ## Enabling Variable Layer Height
 
-There are two ways to use VLH in PrusaSlicer: automatic and manual. I use both together.
+There are two ways to use VLH in PrusaSlicer: automatic and manual. We use both together.
 
 ### Automatic Mode
 
@@ -58,13 +58,13 @@ This is useful for models where the algorithm doesn't make the right choice — 
 
 This controls the aggressiveness of the adaptation. Moving toward **Quality** uses thinner minimum layers and more conservative adaptation. Moving toward **Speed** allows thicker maximum layers and more aggressive adaptation.
 
-I keep this slightly toward Quality for display models and slightly toward Speed for functional parts.
+We keep this slightly toward Quality for display models and slightly toward Speed for functional parts.
 
 ### Minimum Layer Height
 
 The thinnest layer the algorithm will use. PrusaSlicer pulls this from your printer profile, but you can override it.
 
-My recommendations:
+Our recommendations:
 - **0.4 mm nozzle**: Minimum 0.08-0.10 mm
 - **0.6 mm nozzle**: Minimum 0.12-0.15 mm
 - **0.8 mm nozzle**: Minimum 0.16-0.20 mm
@@ -75,14 +75,14 @@ Going below 0.08 mm with a 0.4 mm nozzle causes issues: the nozzle drags across 
 
 The thickest layer the algorithm will use. This should generally be no more than 75-80% of your nozzle diameter.
 
-My recommendations:
+Our recommendations:
 - **0.4 mm nozzle**: Maximum 0.28-0.30 mm
 - **0.6 mm nozzle**: Maximum 0.45-0.48 mm
 - **0.8 mm nozzle**: Maximum 0.60-0.64 mm
 
 ### Smoothing Radius
 
-This controls how gradually layer heights transition between fine and thick. A larger radius smooths the transition over more layers, which produces a more gradual change. I use the default radius and click Smooth 2-3 times for organic models.
+This controls how gradually layer heights transition between fine and thick. A larger radius smooths the transition over more layers, which produces a more gradual change. We use the default radius and click Smooth 2-3 times for organic models.
 
 ### Preserve Fine Details
 
@@ -144,10 +144,10 @@ Very large layer height jumps (e.g., 0.08 mm to 0.30 mm in a single step) can cr
 
 ## Per-Part Variable Layer Height
 
-One feature I use frequently is applying different VLH settings to different parts on the same build plate. PrusaSlicer allows this — each part can have its own VLH profile. This is useful when printing multiple objects with different geometry in the same print job.
+One feature we use frequently is applying different VLH settings to different parts on the same build plate. PrusaSlicer allows this — each part can have its own VLH profile. This is useful when printing multiple objects with different geometry in the same print job.
 
 As one practitioner notes: "We're also not limited to applying variable layer heights across all parts in a single print. PrusaSlicer allows us to apply different settings for each part on the bed."
 
 ## Summary
 
-Variable layer height is one of PrusaSlicer's most powerful features for anyone printing organic or curved models. The automatic mode handles most cases well, and the manual override system lets you fix specific areas where the algorithm doesn't make the right choice. I recommend enabling it by default on any model with significant surface curvature — the setup takes seconds and the time savings are substantial. For prismatic mechanical parts, uniform layer heights remain the better choice.
+Variable layer height is one of PrusaSlicer's most powerful features for anyone printing organic or curved models. The automatic mode handles most cases well, and the manual override system lets you fix specific areas where the algorithm doesn't make the right choice. We recommend enabling it by default on any model with significant surface curvature — the setup takes seconds and the time savings are substantial. For prismatic mechanical parts, uniform layer heights remain the better choice.

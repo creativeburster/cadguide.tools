@@ -15,7 +15,7 @@ sources:
 
 # EdgeCAM vs Mastercam: Feature and Workflow Comparison for Job Shops
 
-I've programmed parts in both EdgeCAM and Mastercam for years. They're both capable CAM systems, but they suit different types of shops. Here's my honest comparison after using both extensively.
+We've programmed parts in both EdgeCAM and Mastercam for years. They're both capable CAM systems, but they suit different types of shops. Here's our honest comparison after using both extensively.
 
 ## Target Users
 
@@ -123,7 +123,7 @@ Both handle all major CAD formats. No significant difference.
 - Your shop has a mix of mills, lathes, and mill-turn machines
 - You want a larger community for support and training resources
 
-## My Recommendation
+## Our Recommendation
 
 **For a 3-5 person job shop doing mostly 2.5D and 3+2 work**: EdgeCAM. The feature recognition and automation save 30-50% programming time compared to Mastercam. The learning curve is shorter, so new hires become productive faster.
 

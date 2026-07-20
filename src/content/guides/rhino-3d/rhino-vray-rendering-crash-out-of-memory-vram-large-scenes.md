@@ -17,9 +17,9 @@ sources:
 
 # Fixing Rhino V-Ray Rendering Crashes: Out of Memory and VRAM Issues on Large Scenes
 
-I've had V-Ray crashes destroy hours of work on multiple occasions — always on the most complex scenes, always right before a deadline. On Reddit's r/rhino, a user described the exact scenario: "I am trying to render a scene in rhino 7 with lots of vray proxies and Vray furs in the scene. I keep getting out of memory errors." On the Chaos forums, another user reported "strong VRAM increase over a few renderings" — a memory leak pattern where each successive render uses more VRAM until the GPU runs out. And on the McNeel forum, a user with 16GB RAM and an i7 processor reported crashing "almost as soon as my render starts with a relatively small output size on medium quality."
+We've had V-Ray crashes destroy hours of work on multiple occasions — always on the most complex scenes, always right before a deadline. On Reddit's r/rhino, a user described the exact scenario: "I am trying to render a scene in rhino 7 with lots of vray proxies and Vray furs in the scene. I keep getting out of memory errors." On the Chaos forums, another user reported "strong VRAM increase over a few renderings" — a memory leak pattern where each successive render uses more VRAM until the GPU runs out. And on the McNeel forum, a user with 16GB RAM and an i7 processor reported crashing "almost as soon as my render starts with a relatively small output size on medium quality."
 
-These are the three most common V-Ray crash patterns in Rhino, and each has a different root cause and fix. This guide covers all three based on my experience troubleshooting V-Ray across dozens of complex architectural and product visualization projects.
+These are the three most common V-Ray crash patterns in Rhino, and each has a different root cause and fix. This guide covers all three based on our experience troubleshooting V-Ray across dozens of complex architectural and product visualization projects.
 
 ## Crash Pattern 1: VRAM Exhaustion on GPU Rendering
 
@@ -119,13 +119,13 @@ If you can't add more physical RAM, increasing the Windows page file can prevent
 
 ## Hardware Recommendations for Large Scenes
 
-Based on community discussions and my experience:
+Based on community discussions and our experience:
 
 - **GPU**: 16GB+ VRAM for GPU rendering of complex scenes. RTX 4080 (16GB) or RTX 4090 (24GB) are ideal. 8GB cards will struggle with any scene using 4K textures and multiple proxies.
 - **RAM**: 64GB minimum for large architectural scenes. 128GB for scenes with heavy displacement or thousands of proxies.
 - **CPU**: For CPU rendering, more cores = faster. A 16-core CPU at 3.5GHz will outperform an 8-core at 5.0GHz for CPU rendering (opposite of Grasshopper).
 - **Storage**: NVMe SSD for texture loading speed. Textures load from disk during rendering, so slow storage bottlenecks the render.
 
-## My Take
+## Our Take
 
-V-Ray crashes in Rhino are almost always memory-related, and the fix is usually reducing memory usage rather than adding more hardware. The single most effective change I've made is converting all repetitive geometry to V-Ray proxies and keeping textures at 2K unless the material is seen in close-up. For the VRAM leak issue, the V-Ray frame buffer clear button plus periodic Rhino restarts is the reliable workaround until Chaos fixes the underlying bug. If you're consistently hitting memory limits, seriously consider whether GPU rendering is right for your scene size — CPU rendering with 64GB RAM handles scenes that would need a $2,000 GPU to render on GPU.
+V-Ray crashes in Rhino are almost always memory-related, and the fix is usually reducing memory usage rather than adding more hardware. The single most effective change we've made is converting all repetitive geometry to V-Ray proxies and keeping textures at 2K unless the material is seen in close-up. For the VRAM leak issue, the V-Ray frame buffer clear button plus periodic Rhino restarts is the reliable workaround until Chaos fixes the underlying bug. If you're consistently hitting memory limits, seriously consider whether GPU rendering is right for your scene size — CPU rendering with 64GB RAM handles scenes that would need a $2,000 GPU to render on GPU.

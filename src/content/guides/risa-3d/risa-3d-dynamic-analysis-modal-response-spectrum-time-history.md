@@ -15,7 +15,7 @@ sources:
 
 # RISA-3D Dynamic Analysis: Modal, Response Spectrum, and Time History Setup
 
-Dynamic analysis is required for seismic design of most buildings. RISA-3D handles modal analysis, response spectrum, and time history. I've set up dynamic analysis for dozens of buildings in RISA. Here's the complete process.
+Dynamic analysis is required for seismic design of most buildings. RISA-3D handles modal analysis, response spectrum, and time history. We've set up dynamic analysis for dozens of buildings in RISA. Here's the complete process.
 
 ## Step 1: Mass Source Definition
 
@@ -78,7 +78,7 @@ Dynamic analysis is required for seismic design of most buildings. RISA-3D handl
    - **Ss**: Short-period spectral acceleration (from USGS)
    - **S1**: 1-second spectral acceleration
    - **Site Class**: A-F
-   - **Risk Category**: I-IV
+   - **Risk Category**: We-IV
    - **R**: Response modification factor
 
 4. RISA generates the design response spectrum:

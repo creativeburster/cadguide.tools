@@ -18,7 +18,7 @@ sources:
 
 GstarCAD's LISP engine is compatible with AutoCAD's AutoLISP, making it possible to port most existing automation routines with minimal modification. Since GstarCAD is built on the IntelliCAD engine, its LISP compatibility profile is similar to CorelCAD and progeCAD. A CADTutor forum thread about CorelCAD's LISP noted that "some lisps would load and run, others would not" — the same applies to GstarCAD. The compatibility rate is roughly 80-85% for standard AutoLISP routines.
 
-I migrated a library of about 50 LISP routines from AutoCAD to GstarCAD. The ones that worked used basic entity manipulation, ssget selection, and command calls. The ones that failed used Reactors (vlr-*), Express Tools (acet-*), or complex vlax- ActiveX methods. This guide covers practical LISP development in GstarCAD — from basic custom commands to advanced batch processing across multiple DWG files, with specific attention to the compatibility gaps and how to work around them.
+We migrated a library of about 50 LISP routines from AutoCAD to GstarCAD. The ones that worked used basic entity manipulation, ssget selection, and command calls. The ones that failed used Reactors (vlr-*), Express Tools (acet-*), or complex vlax- ActiveX methods. This guide covers practical LISP development in GstarCAD — from basic custom commands to advanced batch processing across multiple DWG files, with specific attention to the compatibility gaps and how to work around them.
 
 ## LISP Development Setup
 

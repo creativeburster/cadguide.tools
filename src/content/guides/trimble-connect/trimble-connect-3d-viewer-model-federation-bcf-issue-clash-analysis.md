@@ -15,7 +15,7 @@ sources:
 
 # Trimble Connect 3D Viewer: Model Federation, BCF Issue Creation, and Clash Analysis
 
-The 3D Viewer is Trimble Connect's primary tool for BIM coordination. It runs in the browser — no desktop installation needed. I've used it for weekly coordination meetings, design reviews, and on-site model checking. It's not as powerful as Solibri or Navisworks, but for cloud-based coordination with distributed teams, it gets the job done. Here's how to use it effectively.
+The 3D Viewer is Trimble Connect's primary tool for BIM coordination. It runs in the browser — no desktop installation needed. We've used it for weekly coordination meetings, design reviews, and on-site model checking. It's not as powerful as Solibri or Navisworks, but for cloud-based coordination with distributed teams, it gets the job done. Here's how to use it effectively.
 
 ## Accessing the 3D Viewer
 

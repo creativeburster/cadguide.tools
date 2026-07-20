@@ -15,7 +15,7 @@ sources:
 
 # Fixing SolidWorks License Error 5: No Feature Available
 
-License Error 5 in SolidWorks is one of those issues that can bring an entire engineering team to a standstill. I've dealt with it more times than I can count — usually right before a deadline, when someone desperately needs to open a model. The error means the SolidWorks Network License (SNL) server received the license request but couldn't match it to any feature in its loaded license file. Let me walk you through every cause I've encountered, from the most common to the obscure ones that had me pulling my hair out.
+License Error 5 in SolidWorks is one of those issues that can bring an entire engineering team to a standstill. We've dealt with it more times than we can count — usually right before a deadline, when someone desperately needs to open a model. The error means the SolidWorks Network License (SNL) server received the license request but couldn't match it to any feature in its loaded license file. Let us walk you through every cause we've encountered, from the most common to the obscure ones that had us pulling our hair out.
 
 ## Understanding the Error Message
 

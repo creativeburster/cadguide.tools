@@ -1,6 +1,6 @@
 ---
 title: "MicroStation Large File Performance: Reference Files, Raster Manager, and Display Settings"
-excerpt: "MicroStation files with large raster attachments and complex references slow to a crawl. I cover the Raster Manager memory settings, reference display optimization, and the level management strategy that keeps large files responsive."
+excerpt: "MicroStation files with large raster attachments and complex references slow to a crawl. We cover the Raster Manager memory settings, reference display optimization, and the level management strategy that keeps large files responsive."
 category: "performance"
 softwareSlug: "microstation"
 keyword: "MicroStation large file performance slow raster reference display"

@@ -1,6 +1,6 @@
 ---
 title: "ArchiCAD IFC Import and Export: Mapping, Geometry Quality, and Coordination Workflow"
-excerpt: "IFC files imported into ArchiCAD have wrong geometry, missing properties, or excessive file sizes. I cover the IFC translation setup, geometry simplification, and the BIM coordination workflow that ensures clean IFC exchange."
+excerpt: "IFC files imported into ArchiCAD have wrong geometry, missing properties, or excessive file sizes. We cover the IFC translation setup, geometry simplification, and the BIM coordination workflow that ensures clean IFC exchange."
 category: "workflow"
 softwareSlug: "archicad"
 keyword: "ArchiCAD IFC import export mapping geometry coordination"

@@ -15,7 +15,7 @@ sources:
 
 # SolidCAM Simulation and Verification: Preventing Collisions Before They Happen
 
-I've caught two near-miss collisions in SolidCAM simulation that would have destroyed expensive fixtures on the machine. Simulation isn't optional — it's the last line of defense before metal meets metal. Here's how to set it up properly and what to look for.
+We've caught two near-miss collisions in SolidCAM simulation that would have destroyed expensive fixtures on the machine. Simulation isn't optional — it's the last line of defense before metal meets metal. Here's how to set it up properly and what to look for.
 
 ## Types of Simulation in SolidCAM
 

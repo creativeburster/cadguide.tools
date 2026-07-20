@@ -1,6 +1,6 @@
 ---
 title: "Autodesk InfraWorks Storyboards, Animations, and Stakeholder Presentation"
-excerpt: "InfraWorks storyboard tools create animated flythroughs, construction sequences, and comparison views for stakeholder presentations. I cover creating storyboards, keyframe animation, before/after comparisons, and exporting videos and interactive web scenes."
+excerpt: "InfraWorks storyboard tools create animated flythroughs, construction sequences, and comparison views for stakeholder presentations. We cover creating storyboards, keyframe animation, before/after comparisons, and exporting videos and interactive web scenes."
 category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks storyboard animation flythrough stakeholder presentation video export"
@@ -15,7 +15,7 @@ sources:
 
 # Autodesk InfraWorks Storyboards, Animations, and Stakeholder Presentation
 
-I've created dozens of InfraWorks presentations for public hearings, client reviews, and regulatory submissions. The storyboard tools transform a static 3D model into a compelling narrative — animated flythroughs, construction phasing sequences, and before/after comparisons that help non-technical stakeholders understand the project's impact. A well-crafted storyboard can make the difference between project approval and confusion.
+We've created dozens of InfraWorks presentations for public hearings, client reviews, and regulatory submissions. The storyboard tools transform a static 3D model into a compelling narrative — animated flythroughs, construction phasing sequences, and before/after comparisons that help non-technical stakeholders understand the project's impact. A well-crafted storyboard can make the difference between project approval and confusion.
 
 ## What Are Storyboards?
 

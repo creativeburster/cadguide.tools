@@ -81,7 +81,7 @@ ZWCAD's default PGP file has some different aliases than AutoCAD. Common conflic
 | `A` | ARC | ARRAY |
 | `DT` | TEXT | DTEXT |
 
-If your team relies on AutoCAD's alias conventions, search and replace these in `zwcad.pgp` to match. I recommend keeping a master PGP file in a shared network location and deploying it to all workstations.
+If your team relies on AutoCAD's alias conventions, search and replace these in `zwcad.pgp` to match. We recommend keeping a master PGP file in a shared network location and deploying it to all workstations.
 
 ## Deploying PGP Changes Across a Team
 

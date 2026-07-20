@@ -1,6 +1,6 @@
 ---
 title: "Bambu Studio Tree Supports and Fuzzy Skin: Configuration, Painting, and Tuning Guide"
-excerpt: "Bambu Studio's tree supports generate branching structures that save material and simplify removal, while fuzzy skin adds organic texture to model surfaces. I cover tree support settings, the support painting tool, fuzzy skin configuration, and the workaround for adjusting fuzzy skin parameters on painted areas."
+excerpt: "Bambu Studio's tree supports generate branching structures that save material and simplify removal, while fuzzy skin adds organic texture to model surfaces. We cover tree support settings, the support painting tool, fuzzy skin configuration, and the workaround for adjusting fuzzy skin parameters on painted areas."
 category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio tree supports fuzzy skin support painting configuration"
@@ -18,7 +18,7 @@ sources:
 
 # Bambu Studio Tree Supports and Fuzzy Skin: Configuration, Painting, and Tuning Guide
 
-I print a lot of organic models, miniatures, and functional parts with complex overhangs, and Bambu Studio's tree supports and fuzzy skin are two features I use on almost every print. Tree supports save material and are easier to remove than traditional grid supports, while fuzzy skin transforms flat, boring surfaces into organic textures that hide layer lines and add visual interest.
+We print a lot of organic models, miniatures, and functional parts with complex overhangs, and Bambu Studio's tree supports and fuzzy skin are two features we use on almost every print. Tree supports save material and are easier to remove than traditional grid supports, while fuzzy skin transforms flat, boring surfaces into organic textures that hide layer lines and add visual interest.
 
 ## Tree Supports in Bambu Studio
 
@@ -96,7 +96,7 @@ In Bambu Studio, go to **Others → Fuzzy Skin**:
 
 ### Key Fuzzy Skin Settings
 
-- **Fuzzy skin thickness**: Maximum distance the nozzle can deviate from the actual contour. Default is 0.3 mm. Larger values create a more pronounced texture. I use 0.2 mm for subtle texture and 0.5 mm for dramatic organic surfaces.
+- **Fuzzy skin thickness**: Maximum distance the nozzle can deviate from the actual contour. Default is 0.3 mm. Larger values create a more pronounced texture. We use 0.2 mm for subtle texture and 0.5 mm for dramatic organic surfaces.
 
 - **Fuzzy skin point distance**: Distance between random displacement points along the contour. Default is 0.3 mm. Smaller values create a finer texture; larger values create a coarser, more dramatic texture.
 
@@ -117,7 +117,7 @@ The modified values will be applied to the painted areas only. The forum notes t
 
 ## Combining Tree Supports and Fuzzy Skin
 
-I frequently combine tree supports with fuzzy skin on terrain and miniature prints:
+We frequently combine tree supports with fuzzy skin on terrain and miniature prints:
 1. Enable tree supports with auto detection
 2. Paint "remove support" on areas where supports would damage a fuzzy-skinned surface
 3. Enable fuzzy skin on "Contour" mode

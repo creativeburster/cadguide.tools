@@ -15,7 +15,7 @@ sources:
 
 # ActCAD LISP Compatibility: Running AutoLISP Routines Without Modification
 
-ActCAD runs on the IntelliCAD kernel, which means its LISP engine is close to AutoCAD's but not identical. I ported about 60 LISP routines from AutoCAD to ActCAD last quarter — roughly 80% ran without changes, 15% needed minor tweaks, and 5% required full rewrites. Here's what I learned.
+ActCAD runs on the IntelliCAD kernel, which means its LISP engine is close to AutoCAD's but not identical. We ported about 60 LISP routines from AutoCAD to ActCAD last quarter — roughly 80% ran without changes, 15% needed minor tweaks, and 5% required full rewrites. Here's what we learned.
 
 ## What Works Out of the Box
 

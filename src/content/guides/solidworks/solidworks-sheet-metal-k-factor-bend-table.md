@@ -15,7 +15,7 @@ sources:
 
 # Configuring K-Factor and Bend Tables for Accurate Sheet Metal Flat Patterns in SolidWorks
 
-I learned the hard way that getting the K-factor wrong in sheet metal design is an expensive mistake. I once sent a batch of brackets to fabrication with a default K-factor, and every single one came back too short — the bend allowance was off by just enough to make the mounting holes misalign. That's when I decided to actually understand what the K-factor does and how to configure it properly in SolidWorks. Let me share what I've learned, from the theory to the practical setup of bend tables and gauge tables.
+Getting the K-factor wrong in sheet metal design is an expensive mistake. Leaving it at a default value can throw off the bend allowance just enough that parts come back too short and mounting holes misalign — which is why it's worth understanding what the K-factor does and how to configure it properly in SolidWorks. Let us share what we've learned, from the theory to the practical setup of bend tables and gauge tables.
 
 ## Understanding the K-Factor
 

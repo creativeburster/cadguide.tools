@@ -15,7 +15,7 @@ sources:
 
 # NI Multisim vs LTspice: Free SPICE Simulation Tool Comparison for Circuit Design
 
-Both Multisim and LTspice are SPICE-based circuit simulators, but they target very different users. Multisim is a commercial product with a polished GUI and virtual instruments, while LTspice is a free tool from Analog Devices optimized for speed and switching regulator simulation. I use both regularly and can break down where each shines.
+Both Multisim and LTspice are SPICE-based circuit simulators, but they target very different users. Multisim is a commercial product with a polished GUI and virtual instruments, while LTspice is a free tool from Analog Devices optimized for speed and switching regulator simulation. We use both regularly and can break down where each shines.
 
 ## Overview
 

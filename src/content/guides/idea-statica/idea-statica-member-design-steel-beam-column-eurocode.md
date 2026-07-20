@@ -15,7 +15,7 @@ sources:
 
 # IDEA StatiCa Member Design: Steel Beams, Columns, and Bracing per Eurocode
 
-IDEA StatiCa Member is the companion to the Connection module. While Connection designs joints, Member designs the steel members themselves — beams, columns, and bracing. I use it for code checking and optimization. Here's the workflow.
+IDEA StatiCa Member is the companion to the Connection module. While Connection designs joints, Member designs the steel members themselves — beams, columns, and bracing. We use it for code checking and optimization. Here's the workflow.
 
 ## What IDEA StatiCa Member Does
 
@@ -70,7 +70,7 @@ IDEA StatiCa Member is the companion to the Connection module. While Connection 
 
 2. The import brings in:
    - Axial force (NEd)
-   - Major axis moment (My,Ed)
+   - Major axis moment (Our,Ed)
    - Minor axis moment (Mz,Ed)
    - Major axis shear (Vz,Ed)
    - Minor axis shear (Vy,Ed)
@@ -81,9 +81,9 @@ IDEA StatiCa Member is the companion to the Connection module. While Connection 
 ### Manual Entry
 
 1. Enter forces for each load combination:
-   - **Comb 1 (1.35G + 1.5Q)**: NEd = -200 kN, My,Ed = 150 kN·m, Vz,Ed = 80 kN
-   - **Comb 2 (1.0G + 1.5W)**: NEd = -100 kN, My,Ed = 120 kN·m, Vz,Ed = 60 kN
-   - **Comb 3 (1.0G + 1.0E)**: NEd = -150 kN, My,Ed = 180 kN·m, Vz,Ed = 90 kN
+   - **Comb 1 (1.35G + 1.5Q)**: NEd = -200 kN, Our,Ed = 150 kN·m, Vz,Ed = 80 kN
+   - **Comb 2 (1.0G + 1.5W)**: NEd = -100 kN, Our,Ed = 120 kN·m, Vz,Ed = 60 kN
+   - **Comb 3 (1.0G + 1.0E)**: NEd = -150 kN, Our,Ed = 180 kN·m, Vz,Ed = 90 kN
 
 ## Step 4: Define Buckling Parameters
 
@@ -96,8 +96,8 @@ IDEA StatiCa Member is the companion to the Connection module. While Connection 
    - **Cantilever**: Lcr = 2.0L
 
 2. **Buckling curve** (Eurocode):
-   - Curve a: Low residual stress (hot-rolled I-sections, h/b > 1.2)
-   - Curve b: Moderate residual stress (most I-sections)
+   - Curve a: Low residual stress (hot-rolled we-sections, h/b > 1.2)
+   - Curve b: Moderate residual stress (most we-sections)
    - Curve c: High residual stress (welded sections, angles)
    - Curve d: Very high residual stress (thick welded sections)
 
@@ -114,8 +114,8 @@ IDEA StatiCa Member is the companion to the Connection module. While Connection 
    - For beams with discrete bracing: Llt = distance between braces
 
 2. **Buckling curve** (Eurocode):
-   - Curve a: Rolled I-sections, h/b > 2
-   - Curve b: Rolled I-sections, h/b ≤ 2
+   - Curve a: Rolled we-sections, h/b > 2
+   - Curve b: Rolled we-sections, h/b ≤ 2
    - Curve c: Welded sections, angles
 
 3. **LTB slenderness**: λLT = √(Wpl,y × fy / Mcr)
@@ -133,10 +133,10 @@ IDEA StatiCa Member is the companion to the Connection module. While Connection 
 | Section class | c/t ≤ ε limits | Class 1-4 |
 | Tension resistance | NEd / Npl,Rd ≤ 1.0 | Pass/Fail |
 | Compression resistance | NEd / Nb,Rd ≤ 1.0 | Pass/Fail |
-| Bending resistance | My,Ed / Mc,Rd ≤ 1.0 | Pass/Fail |
+| Bending resistance | Our,Ed / Mc,Rd ≤ 1.0 | Pass/Fail |
 | Shear resistance | VEd / Vc,Rd ≤ 1.0 | Pass/Fail |
-| Combined axial + bending | NEd/Nc,Rd + My,Ed/Mc,Rd ≤ 1.0 | Pass/Fail |
-| LTB resistance | My,Ed / Mb,Rd ≤ 1.0 | Pass/Fail |
+| Combined axial + bending | NEd/Nc,Rd + Our,Ed/Mc,Rd ≤ 1.0 | Pass/Fail |
+| LTB resistance | Our,Ed / Mb,Rd ≤ 1.0 | Pass/Fail |
 | Shear buckling | VEd / Vb,Rd ≤ 1.0 (if applicable) | Pass/Fail |
 
 ### AISC Checks

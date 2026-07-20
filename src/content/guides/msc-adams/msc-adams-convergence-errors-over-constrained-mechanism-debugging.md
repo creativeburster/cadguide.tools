@@ -15,7 +15,7 @@ sources:
 
 # MSC Adams Common Errors: Convergence Failures, Over-Constrained Mechanisms, and Debugging
 
-Adams is a powerful multibody dynamics solver, but that power comes with complexity. Models that look correct can fail to simulate because of over-constraint, singular configurations, or numerical stiffness. I've debugged hundreds of Adams models and can share the most common issues and their fixes.
+Adams is a powerful multibody dynamics solver, but that power comes with complexity. Models that look correct can fail to simulate because of over-constraint, singular configurations, or numerical stiffness. We've debugged hundreds of Adams models and can share the most common issues and their fixes.
 
 ## Over-Constrained Mechanisms
 

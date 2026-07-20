@@ -1,6 +1,6 @@
 ---
 title: "Ansys Nonlinear Convergence: Fixing 'Solver Engine Unable to Converge' Errors"
-excerpt: "Nonlinear analysis failing to converge is the most common Ansys Mechanical problem I encounter. I cover the systematic approach to achieving convergence — from contact stiffness tuning to substep management and Newton-Raphson diagnostics."
+excerpt: "Nonlinear analysis failing to converge is the most common Ansys Mechanical problem we encounter. We cover the systematic approach to achieving convergence — from contact stiffness tuning to substep management and Newton-Raphson diagnostics."
 category: "troubleshooting"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys convergence error nonlinear contact friction"
@@ -17,9 +17,9 @@ sources:
 
 # Ansys Nonlinear Convergence: Fixing "Solver Engine Unable to Converge" Errors
 
-A user on the Ansys Learning Forum described a problem I've encountered countless times: they were designing a brake rotor and running analysis with frictional contacts. After a few minutes, the solver would stop with warnings about friction values greater than 0.2 and an error stating the solver engine was unable to converge on a solution. Another user reported convergence errors while simulating a 2D circle with large displacement at the top edge and fixed bottom edge. A third user struggled with a frictional contact between a steel support structure and a tungsten wire — the analysis simply refused to converge.
+A user on the Ansys Learning Forum described a problem we've encountered countless times: they were designing a brake rotor and running analysis with frictional contacts. After a few minutes, the solver would stop with warnings about friction values greater than 0.2 and an error stating the solver engine was unable to converge on a solution. Another user reported convergence errors while simulating a 2D circle with large displacement at the top edge and fixed bottom edge. A third user struggled with a frictional contact between a steel support structure and a tungsten wire — the analysis simply refused to converge.
 
-Nonlinear convergence failure is the most common problem in Ansys Mechanical, and it's also the most frustrating because there's no single fix. The solver's inability to converge means the Newton-Raphson iterations aren't finding equilibrium — the internal forces don't balance the external forces within the tolerance. I'll walk through the systematic approach I use to diagnose and fix convergence problems.
+Nonlinear convergence failure is the most common problem in Ansys Mechanical, and it's also the most frustrating because there's no single fix. The solver's inability to converge means the Newton-Raphson iterations aren't finding equilibrium — the internal forces don't balance the external forces within the tolerance. We'll walk through the systematic approach we use to diagnose and fix convergence problems.
 
 ## Understanding Nonlinear Convergence
 

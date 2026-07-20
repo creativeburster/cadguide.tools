@@ -15,7 +15,7 @@ sources:
 
 # CAESAR II vs AutoPIPE: Pipe Stress Analysis Software Comparison
 
-CAESAR II and AutoPIPE are the two dominant pipe stress analysis tools. CAESAR II is the Hexagon/Intergraph product — the industry standard for decades. AutoPIPE is the Bentley product — newer, with strong 3D integration. I've used both extensively. They solve the same problem with different philosophies. Here's my comparison.
+CAESAR II and AutoPIPE are the two dominant pipe stress analysis tools. CAESAR II is the Hexagon/Intergraph product — the industry standard for decades. AutoPIPE is the Bentley product — newer, with strong 3D integration. We've used both extensively. They solve the same problem with different philosophies. Here's our comparison.
 
 ## Tool Philosophy
 
@@ -260,7 +260,7 @@ CAESAR II and AutoPIPE are the two dominant pipe stress analysis tools. CAESAR I
 - **Budget-conscious**: Slightly lower cost
 - **Modern interface**: Prefer graphical over spreadsheet input
 
-## My Recommendation
+## Our Recommendation
 
 For **oil & gas and power industry**: **CAESAR II** — it's the industry standard. Clients, vendors, and regulators expect CAESAR II output. The spreadsheet input is fast once you're experienced.
 

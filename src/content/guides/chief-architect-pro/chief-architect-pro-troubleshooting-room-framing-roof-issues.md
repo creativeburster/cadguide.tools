@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Pro Troubleshooting: Room Definition, Framing, and Roof Issues
 
-Chief Architect Pro is powerful, but its automated features — room definition, framing, and roof generation — depend on a correctly structured model. When something goes wrong, the root cause is usually in the walls, room definitions, or default settings. I'll cover the most common issues and their fixes.
+Chief Architect Pro is powerful, but its automated features — room definition, framing, and roof generation — depend on a correctly structured model. When something goes wrong, the root cause is usually in the walls, room definitions, or default settings. We'll cover the most common issues and their fixes.
 
 ## Room Selection Issues
 

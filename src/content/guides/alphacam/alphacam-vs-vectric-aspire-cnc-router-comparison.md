@@ -15,7 +15,7 @@ sources:
 
 # AlphaCAM vs Vectric Aspire: CNC Router CAM Software Comparison for Woodworking
 
-Both AlphaCAM and Vectric Aspire are popular CAM solutions for CNC routing, but they target different segments of the market. AlphaCAM is an industrial-grade CAM system used in production shops, while Aspire is designed for smaller shops, hobbyists, and sign makers. I've used both and can break down where each excels.
+Both AlphaCAM and Vectric Aspire are popular CAM solutions for CNC routing, but they target different segments of the market. AlphaCAM is an industrial-grade CAM system used in production shops, while Aspire is designed for smaller shops, hobbyists, and sign makers. We've used both and can break down where each excels.
 
 ## Overview
 

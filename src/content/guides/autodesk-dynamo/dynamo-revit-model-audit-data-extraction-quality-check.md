@@ -15,7 +15,7 @@ sources:
 
 # Dynamo Data Extraction and Model Auditing: Checking Revit BIM Quality Automatically
 
-Model auditing is one of the most valuable uses of Dynamo. Instead of manually checking hundreds of elements for compliance, you can create a Dynamo script that automatically verifies naming conventions, parameter values, element placement, and model standards. I'll show you how to build auditing scripts that save hours of manual review.
+Model auditing is one of the most valuable uses of Dynamo. Instead of manually checking hundreds of elements for compliance, you can create a Dynamo script that automatically verifies naming conventions, parameter values, element placement, and model standards. We'll show you how to build auditing scripts that save hours of manual review.
 
 ## Why Automate Model Auditing?
 

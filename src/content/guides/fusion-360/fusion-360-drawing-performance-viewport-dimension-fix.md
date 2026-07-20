@@ -1,6 +1,6 @@
 ---
 title: "Fusion 360 Drawing Performance: Viewport Slow, Dimension Lag, and Export Fixes"
-excerpt: "Fusion 360's drawing environment lags when placing dimensions, updating views, or exporting PDFs. I cover view simplification, dimension style optimization, and the export workflow that prevents freezes."
+excerpt: "Fusion 360's drawing environment lags when placing dimensions, updating views, or exporting PDFs. We cover view simplification, dimension style optimization, and the export workflow that prevents freezes."
 category: "performance"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 drawing performance slow viewport dimension export"
@@ -128,7 +128,7 @@ Fusion 360 caches drawing view renderings. If the cache becomes corrupted, drawi
 
 1. Close the drawing
 2. Close Fusion 360
-3. Clear the local cache (see the cache clearing procedure in my Fusion 360 performance guide)
+3. Clear the local cache (see the cache clearing procedure in our Fusion 360 performance guide)
 4. Restart Fusion and reopen the drawing
 5. Views will re-render from scratch, which may take a few minutes but should be faster for ongoing work
 

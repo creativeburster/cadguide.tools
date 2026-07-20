@@ -15,7 +15,7 @@ sources:
 
 # Recovering a Corrupted Revit Central Model: Step-by-Step Disaster Recovery
 
-A corrupted central model in Revit is every BIM coordinator's nightmare. I've been the person everyone stares at when the central model won't open and 12 people can't sync their work. Over the years, I've dealt with corrupted centrals more times than I'd like to admit, and I've learned that there's a definite escalation path — start with the gentle stuff, and only go nuclear if you have to. Here's my recovery playbook, ordered from least to most aggressive.
+A corrupted central model in Revit is every BIM coordinator's nightmare. We've been the person everyone stares at when the central model won't open and 12 people can't sync their work. Over the years, we've dealt with corrupted centrals more times than we'd like to admit, and we've learned that there's a definite escalation path — start with the gentle stuff, and only go nuclear if you have to. Here's our recovery playbook, ordered from least to most aggressive.
 
 ## Understanding Central Model Corruption
 

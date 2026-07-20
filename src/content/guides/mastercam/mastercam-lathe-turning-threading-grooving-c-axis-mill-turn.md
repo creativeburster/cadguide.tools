@@ -1,6 +1,6 @@
 ---
 title: "Mastercam Lathe: Turning, Threading, Grooving, and C-Axis Mill-Turn Toolpaths"
-excerpt: "Mastercam Lathe creates CNC turning toolpaths for facing, roughing, finishing, threading, and grooving operations. I cover lathe stock setup, turning tool selection, roughing and finishing strategies, threading cycles, and C-axis mill-turn operations."
+excerpt: "Mastercam Lathe creates CNC turning toolpaths for facing, roughing, finishing, threading, and grooving operations. We cover lathe stock setup, turning tool selection, roughing and finishing strategies, threading cycles, and C-axis mill-turn operations."
 category: "workflow"
 softwareSlug: "mastercam"
 keyword: "Mastercam Lathe turning threading grooving C-axis mill-turn toolpaths facing roughing finishing CNC lathe stock setup"
@@ -15,7 +15,7 @@ sources:
 
 # Mastercam Lathe: Turning, Threading, Grooving, and C-Axis Mill-Turn Toolpaths
 
-I've programmed CNC lathes in Mastercam for precision shafts, hydraulic fittings, and complex mill-turn parts. Mastercam Lathe is one of the most capable turning CAM systems — it handles everything from basic 2-axis turning to multi-axis mill-turn with live tooling. Understanding the toolpath strategies and tool selection is essential for efficient lathe programming.
+We've programmed CNC lathes in Mastercam for precision shafts, hydraulic fittings, and complex mill-turn parts. Mastercam Lathe is one of the most capable turning CAM systems — it handles everything from basic 2-axis turning to multi-axis mill-turn with live tooling. Understanding the toolpath strategies and tool selection is essential for efficient lathe programming.
 
 ## Mastercam Lathe Overview
 

@@ -1,6 +1,6 @@
 ---
 title: "Tekla Structures Complex Items Performance: Shape Cleaner, DirectX, and Dashed Hidden Lines"
-excerpt: "Tekla Structures lags when working with complex items imported from DWG, SKP, or IFC files. I cover the Shape Cleaner extension, DirectX rendering setup, and the XS_USE_DASHED_HIDDEN_LINES setting that fix item performance."
+excerpt: "Tekla Structures lags when working with complex items imported from DWG, SKP, or IFC files. We cover the Shape Cleaner extension, DirectX rendering setup, and the XS_USE_DASHED_HIDDEN_LINES setting that fix item performance."
 category: "performance"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures complex items performance shape cleaner DirectX"

@@ -15,7 +15,7 @@ sources:
 
 # CAESAR II Nozzle Load Analysis: Equipment Connection Evaluation and API 610/617 Compliance
 
-Equipment nozzle loads are the most scrutinized output of a pipe stress analysis. Piping engineers check them. Mechanical engineers check them. Vendors check them. If your nozzle loads exceed the allowable, the equipment vendor won't approve the design, and the project stops. I've spent more time reducing nozzle loads than any other aspect of pipe stress. Here's my approach.
+Equipment nozzle loads are the most scrutinized output of a pipe stress analysis. Piping engineers check them. Mechanical engineers check them. Vendors check them. If your nozzle loads exceed the allowable, the equipment vendor won't approve the design, and the project stops. We've spent more time reducing nozzle loads than any other aspect of pipe stress. Here's our approach.
 
 ## Why Nozzle Loads Matter
 
@@ -81,7 +81,7 @@ API 610 provides allowable nozzle loads for centrifugal pumps:
 
 For each pump nozzle, API 610 provides:
 - **Fx, Fy, Fz**: Allowable forces (N or lbf)
-- **Mx, My, Mz**: Allowable moments (N·m or ft·lbf)
+- **Mx, Our, Mz**: Allowable moments (N·m or ft·lbf)
 
 The allowables depend on:
 - **Nozzle size**: Larger nozzles have higher allowables
@@ -93,7 +93,7 @@ The allowables depend on:
 1. Run the CAESAR II analysis.
 2. Go to **Output** → **Nozzle Load Report**.
 3. For each pump nozzle:
-   - **Applied loads**: Fx, Fy, Fz, Mx, My, Mz from the piping model
+   - **Applied loads**: Fx, Fy, Fz, Mx, Our, Mz from the piping model
    - **Allowable loads**: From API 610 (or vendor specification)
    - **Ratio**: Applied / Allowable
 4. Check each component:
@@ -212,7 +212,7 @@ Create a nozzle load summary for each equipment connection:
 3. **Load case**: Operating (W+P+T)
 4. **Applied loads**:
    - Fx, Fy, Fz (forces)
-   - Mx, My, Mz (moments)
+   - Mx, Our, Mz (moments)
 5. **Allowable loads** (from API 610, vendor, or WRC 107):
    - Fx_A, Fy_A, Fz_A
    - Mx_A, My_A, Mz_A
@@ -229,7 +229,7 @@ Create a table for each equipment connection:
 | Fy (N) | 2,100 | 2,500 | 84% | Pass |
 | Fz (N) | 850 | 2,000 | 43% | Pass |
 | Mx (N·m) | 450 | 1,000 | 45% | Pass |
-| My (N·m) | 1,800 | 2,000 | 90% | Warning |
+| Our (N·m) | 1,800 | 2,000 | 90% | Warning |
 | Mz (N·m) | 320 | 800 | 40% | Pass |
 
 ## Best Practices

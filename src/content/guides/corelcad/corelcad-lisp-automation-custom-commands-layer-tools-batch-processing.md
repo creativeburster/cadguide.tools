@@ -16,9 +16,9 @@ sources:
 
 # CorelCAD LISP Automation: Custom Commands, Layer Tools, and Batch Processing
 
-I picked up CorelCAD a few years back when the Humble Bundle offered it at a fraction of AutoCAD's price. As someone who had built up a library of AutoLISP routines over years of AutoCAD use, my first question was: will my LISP files even work? The short answer is mostly yes, but with enough gotchas to make you pull your hair out. A thread on the CADTutor forums from user BIGAL captured this perfectly — they noted that while some LISP routines loaded and ran fine in CorelCAD, others simply refused to work, and it wasn't obvious why. That matches my experience exactly.
+For anyone with a library of AutoLISP routines built up over years of AutoCAD use, the first question about CorelCAD is: will those LISP files even work? The short answer is mostly yes, but with enough gotchas to make you pull your hair out. A thread on the CADTutor forums from user BIGAL captured this well — some LISP routines loaded and ran fine in CorelCAD, while others simply refused to work, and it wasn't obvious why.
 
-CorelCAD uses the IntelliCAD LISP engine, which is broadly compatible with AutoLISP but has documented gaps. The good news is that basic entity manipulation, ssget selection, command calls, and DCL dialogs all work. The bad news is that Reactors (vlr-* functions), some ActiveX vlax- methods, and anything relying on ObjectARX extensions will silently fail. I learned this the hard way when a block-attribute extraction routine I'd used for years in AutoCAD crashed CorelCAD on load because it called `vlr-object-reactor` during initialization.
+CorelCAD uses the IntelliCAD LISP engine, which is broadly compatible with AutoLISP but has documented gaps. The good news is that basic entity manipulation, ssget selection, command calls, and DCL dialogs all work. The bad news is that Reactors (vlr-* functions), some ActiveX vlax- methods, and anything relying on ObjectARX extensions will silently fail. For example, a block-attribute extraction routine that calls `vlr-object-reactor` during initialization will crash CorelCAD on load, even if it ran fine for years in AutoCAD.
 
 This guide covers what actually works in CorelCAD's LISP environment, with practical routines you can use today for layer management, block counting, text correction, and batch file processing.
 
@@ -186,7 +186,7 @@ CorelCAD supports DCL dialogs (deprecated in AutoCAD):
 
 ## Real-World Compatibility Gotchas
 
-After migrating dozens of LISP routines from AutoCAD to CorelCAD, I've compiled a list of the most common failure points:
+After migrating dozens of LISP routines from AutoCAD to CorelCAD, we've compiled a list of the most common failure points:
 
 ### 1. Express Tools Functions Are Missing
 
@@ -216,7 +216,7 @@ Here's where CorelCAD surprises people: its DCL (Dialog Control Language) suppor
 
 ## Testing Your Routines
 
-Before deploying any migrated LISP routine to production, I recommend this testing sequence:
+Before deploying any migrated LISP routine to production, we recommend this testing sequence:
 
 1. Load the routine with `(load "routine.lsp")` and check for errors
 2. Run `vl-load-com` first — even if some vlax- functions are missing, the basic vl- functions work

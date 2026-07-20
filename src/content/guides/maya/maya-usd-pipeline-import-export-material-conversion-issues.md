@@ -17,9 +17,9 @@ sources:
 
 # Maya USD Pipeline: Import/Export Workflows, Material Conversion Issues, and Fixes
 
-I've spent more hours than I care to admit trying to get USD files to round-trip between Maya and Unreal Engine. On the Autodesk Community forums, a user described the exact frustration I've felt: "I am encountering an issue with Maya's USD Export feature regarding material conversion. Specifically, when I have an Arnold Standard Surface or a MaterialX shader assigned in Maya and then enable 'USD Preview Surface' or 'MaterialX' in the USD Export options, the resulting USD file appears to contain the materials, but only Maya can correctly load them. Unreal Engine, Blender, and other tools end up with geometry only, with no material applied." After 20 hours of troubleshooting, that user discovered that Maya doesn't automatically convert Arnold shaders to USD Preview Surface at export time — a fundamental limitation that isn't clearly documented.
+We've spent more hours than we care to admit trying to get USD files to round-trip between Maya and Unreal Engine. On the Autodesk Community forums, a user described the exact frustration we've felt: "I am encountering an issue with Maya's USD Export feature regarding material conversion. Specifically, when I have an Arnold Standard Surface or a MaterialX shader assigned in Maya and then enable 'USD Preview Surface' or 'MaterialX' in the USD Export options, the resulting USD file appears to contain the materials, but only Maya can correctly load them. Unreal Engine, Blender, and other tools end up with geometry only, with no material applied." After 20 hours of troubleshooting, that user discovered that Maya doesn't automatically convert Arnold shaders to USD Preview Surface at export time — a fundamental limitation that isn't clearly documented.
 
-On GitHub, the maya-usd project has multiple open issues documenting USD import/export problems: texture paths lost on import, .usdc files not recognized, and the USD plugin failing to load due to Bifrost conflicts. This guide covers the real-world USD pipeline issues I've encountered and the workarounds that actually work.
+On GitHub, the maya-usd project has multiple open issues documenting USD import/export problems: texture paths lost on import, .usdc files not recognized, and the USD plugin failing to load due to Bifrost conflicts. This guide covers the real-world USD pipeline issues we've encountered and the workarounds that actually work.
 
 ## USD Import Issues
 
@@ -87,6 +87,6 @@ Before committing to a USD pipeline, test the full round-trip: export from Maya,
 
 The official maya-usd plugin on GitHub is updated more frequently than the version bundled with Maya. If you encounter bugs, check if a newer plugin version fixes them. Install the latest plugin from the GitHub releases page.
 
-## My Take
+## Our Take
 
-USD in Maya is powerful but has rough edges — particularly around material conversion and plugin stability. The single most important lesson I've learned is to use USD Preview Surface materials from the start when cross-application compatibility is needed. Relying on Maya to convert Arnold shaders at export time simply doesn't work reliably. The second most important lesson is to use the Layer Panel for USD loading rather than File > Import — it handles textures and materials more correctly. USD is the future of 3D pipelines, but right now it requires patience and workarounds to function smoothly in production.
+USD in Maya is powerful but has rough edges — particularly around material conversion and plugin stability. The single most important lesson we've learned is to use USD Preview Surface materials from the start when cross-application compatibility is needed. Relying on Maya to convert Arnold shaders at export time simply doesn't work reliably. The second most important lesson is to use the Layer Panel for USD loading rather than File > Import — it handles textures and materials more correctly. USD is the future of 3D pipelines, but right now it requires patience and workarounds to function smoothly in production.

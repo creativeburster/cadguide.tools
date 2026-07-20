@@ -1,6 +1,6 @@
 ---
 title: "Twinmotion Path Tracer: Settings, Crashes, and Multi-GPU Configuration for Photorealistic Renders"
-excerpt: "Twinmotion's Path Tracer produces photorealistic output but crashes on high sample settings, requires DXR-compatible GPUs, and needs specific Multi-GPU configuration. I cover the hardware requirements, sample tuning, and crash prevention settings."
+excerpt: "Twinmotion's Path Tracer produces photorealistic output but crashes on high sample settings, requires DXR-compatible GPUs, and needs specific Multi-GPU configuration. We cover the hardware requirements, sample tuning, and crash prevention settings."
 category: "performance"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion Path Tracer settings crash multi-GPU fix"
@@ -16,7 +16,7 @@ sources:
 
 # Twinmotion Path Tracer: Settings, Crashes, and Multi-GPU Configuration for Photorealistic Renders
 
-The Path Tracer is Twinmotion's highest-quality rendering mode — it uses ray tracing to calculate accurate lighting, reflections, and global illumination. When it works, the results are stunning. When it crashes, which happens frequently with aggressive settings, you get a black screen and a frustrated architect. I've configured Path Tracer across multiple workstations and developed a reliable setup process.
+The Path Tracer is Twinmotion's highest-quality rendering mode — it uses ray tracing to calculate accurate lighting, reflections, and global illumination. When it works, the results are stunning. When it crashes, which happens frequently with aggressive settings, you get a black screen. The reliable setup process below avoids most of those crashes.
 
 ## Hardware Requirements
 
@@ -48,7 +48,7 @@ The two critical settings that control quality and performance:
 - **4-5**: Interior scenes (light needs to bounce off multiple surfaces)
 - **6+**: Complex interiors with glass and mirrors — increases render time significantly
 
-**My recommended settings by scene type**:
+**Our recommended settings by scene type**:
 - **Exterior still**: 128 samples, 3 bounces
 - **Interior still**: 256 samples, 5 bounces
 - **Exterior video**: 64 samples, 3 bounces
@@ -116,7 +116,7 @@ Twinmotion supports multiple NVIDIA GPUs via SLI for the Path Tracer. Epic repor
 - Both GPUs must be NVIDIA — AMD CrossFire is not supported
 - The performance gain depends on the SLI bridge bandwidth — NVLink provides better scaling than a standard SLI bridge
 
-**My experience**: With two RTX 4090s connected via NVLink, Path Tracer render time for a 256-sample interior still dropped from 4 minutes to 1.5 minutes — roughly a 2.7x improvement.
+**Our experience**: With two RTX 4090s connected via NVLink, Path Tracer render time for a 256-sample interior still dropped from 4 minutes to 1.5 minutes — roughly a 2.7x improvement.
 
 ## Path Tracer vs Lumen: When to Use Each
 
@@ -137,7 +137,7 @@ Twinmotion supports multiple NVIDIA GPUs via SLI for the Path Tracer. Epic repor
 - Best for: editing and scene setup
 - Fastest: maximum FPS for navigation
 
-**My workflow**: Standard for editing → Lumen for client walkthroughs → Path Tracer for final renders. I switch between modes depending on the task, not the quality setting.
+**Our workflow**: Standard for editing → Lumen for client walkthroughs → Path Tracer for final renders. We switch between modes depending on the task, not the quality setting.
 
 ## Path Tracer Artifacts and Fixes
 
@@ -151,4 +151,4 @@ Twinmotion supports multiple NVIDIA GPUs via SLI for the Path Tracer. Epic repor
 
 ## Summary
 
-Twinmotion's Path Tracer requires a DXR-compatible GPU, careful sample and bounce tuning, and sufficient VRAM headroom. My setup process: verify DXR GPU support → start with 64 samples and 3 bounces → increase gradually until you find your GPU's limit → optimize scene VRAM before enabling Path Tracer → use Multi-GPU with SLI for 50-200% speedup. Use Path Tracer for final renders, Lumen for walkthroughs, and Standard for editing.
+Twinmotion's Path Tracer requires a DXR-compatible GPU, careful sample and bounce tuning, and sufficient VRAM headroom. Our setup process: verify DXR GPU support → start with 64 samples and 3 bounces → increase gradually until you find your GPU's limit → optimize scene VRAM before enabling Path Tracer → use Multi-GPU with SLI for 50-200% speedup. Use Path Tracer for final renders, Lumen for walkthroughs, and Standard for editing.

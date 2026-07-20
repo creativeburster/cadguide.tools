@@ -1,6 +1,6 @@
 ---
 title: "Inventor Windows 11 Performance Fix: Core Isolation, Gaming Mode, and Clean Reinstall"
-excerpt: "After a Windows 11 upgrade, Inventor becomes slow to open, save, and apply features. I cover the Windows security settings that cause this and the clean reinstall process that fixes it."
+excerpt: "After a Windows 11 upgrade, Inventor becomes slow to open, save, and apply features. We cover the Windows security settings that cause this and the clean reinstall process that fixes it."
 category: "troubleshooting"
 softwareSlug: "autodesk-inventor"
 keyword: "Inventor Windows 11 slow performance Core Isolation"
@@ -15,7 +15,7 @@ sources:
 
 # Inventor Windows 11 Performance Fix: Core Isolation, Gaming Mode, and Clean Reinstall
 
-An IT team upgraded a user's machine from Windows 10 to Windows 11, and Inventor 2025.4 went from running perfectly to being nearly unusable. Models took longer to open, saving crashed the software or took minutes, and basic features took ages to apply. The user's Acer ConceptD laptop had run all Autodesk software perfectly before the update. This is a scenario I've dealt with across multiple organizations — Windows 11 introduces security and performance changes that can make Inventor slow and unresponsive.
+An IT team upgraded a user's machine from Windows 10 to Windows 11, and Inventor 2025.4 went from running perfectly to being nearly unusable. Models took longer to open, saving crashed the software or took minutes, and basic features took ages to apply. The user's Acer ConceptD laptop had run all Autodesk software perfectly before the update. This is a scenario we've dealt with across multiple organizations — Windows 11 introduces security and performance changes that can make Inventor slow and unresponsive.
 
 ## Why Windows 11 Affects Inventor Performance
 

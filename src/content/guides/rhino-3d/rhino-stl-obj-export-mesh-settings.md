@@ -1,6 +1,6 @@
 ---
 title: "Rhino to STL/OBJ Export: Optimal Mesh Settings for 3D Printing and Rendering"
-excerpt: "Bad STL exports from Rhino cause 3D printing failures and rendering artifacts. I cover the mesh settings, tolerance values, and cleanup commands I use to produce clean exports every time."
+excerpt: "Bad STL exports from Rhino cause 3D printing failures and rendering artifacts. We cover the mesh settings, tolerance values, and cleanup commands we use to produce clean exports every time."
 category: "deployment"
 softwareSlug: "rhino-3d"
 keyword: "Rhino STL OBJ export mesh settings 3D printing"
@@ -15,7 +15,7 @@ sources:
 
 # Rhino to STL/OBJ Export: Optimal Mesh Settings for 3D Printing and Rendering
 
-I've been running a 3D printing service for three years, and about 40% of the files customers send me are STLs exported from Rhino. The quality ranges from perfect to unprintable, and the difference is almost always in the mesh export settings. Rhino's default STL export settings produce meshes that are either too dense (500MB+ files that crash slicer software) or too coarse (visible facets on curved surfaces). I'll share the exact settings I use for different applications, from high-resolution resin printing to architectural rendering.
+We've been running a 3D printing service for three years, and about 40% of the files customers send us are STLs exported from Rhino. The quality ranges from perfect to unprintable, and the difference is almost always in the mesh export settings. Rhino's default STL export settings produce meshes that are either too dense (500MB+ files that crash slicer software) or too coarse (visible facets on curved surfaces). We'll share the exact settings we use for different applications, from high-resolution resin printing to architectural rendering.
 
 ## Understanding Rhino's Mesh System
 

@@ -15,7 +15,7 @@ sources:
 
 # NI Multisim Convergence Errors: Singular Matrix, Floating Nodes, and Time Step Fixes
 
-Convergence errors are the most frustrating part of SPICE simulation. The simulation runs fine on a simple circuit, but add a few nonlinear components and suddenly you're staring at "Singular matrix" or "Time step too small." Let me walk through each error type and how to fix it.
+Convergence errors are the most frustrating part of SPICE simulation. The simulation runs fine on a simple circuit, but add a few nonlinear components and suddenly you're staring at "Singular matrix" or "Time step too small." Let us walk through each error type and how to fix it.
 
 ## Understanding the Newton-Raphson Problem
 

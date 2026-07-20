@@ -15,7 +15,7 @@ sources:
 
 # Allegro PCB vs Altium Designer: Feature Comparison for Enterprise PCB Design
 
-Choosing between Cadence Allegro and Altium Designer is one of the most consequential decisions a hardware team makes. Both are capable tools, but they differ significantly in philosophy, pricing, and target use case. I've worked with both across multiple companies and can break down where each excels.
+Choosing between Cadence Allegro and Altium Designer is one of the most consequential decisions a hardware team makes. Both are capable tools, but they differ significantly in philosophy, pricing, and target use case. We've worked with both across multiple companies and can break down where each excels.
 
 ## Target Market and Philosophy
 

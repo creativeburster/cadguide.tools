@@ -15,7 +15,7 @@ sources:
 
 # ARES Commander Ribbon Customization: Building Custom Toolbars and Panels
 
-ARES Commander's ribbon is fully customizable — more so than AutoCAD LT's. I built a custom ribbon for our drafting team with company-specific commands, LISP shortcuts, and standard block libraries accessible in two clicks. Here's how.
+ARES Commander's ribbon is fully customizable — more so than AutoCAD LT's. We built a custom ribbon for our drafting team with company-specific commands, LISP shortcuts, and standard block libraries accessible in two clicks. Here's how.
 
 ## Accessing the Customization Interface
 
@@ -62,7 +62,7 @@ ARES Commander supports PNG and BMP icons. To add a custom icon:
 5. Click **Browse** and select your PNG file.
 6. The icon appears on the ribbon button.
 
-For a professional look, use a consistent icon style across all custom commands. I use Lucide icons (open-source, MIT licensed) — they're clean and modern.
+For a professional look, use a consistent icon style across all custom commands. We use Lucide icons (open-source, MIT licensed) — they're clean and modern.
 
 ## Step 4: Create Keyboard Shortcuts
 

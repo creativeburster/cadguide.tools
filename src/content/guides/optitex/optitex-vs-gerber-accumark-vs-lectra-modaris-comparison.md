@@ -1,6 +1,6 @@
 ---
 title: "Optitex vs Gerber AccuMark vs Lectra Modaris: Apparel CAD Software Comparison"
-excerpt: "Optitex, Gerber AccuMark, and Lectra Modaris are the three leading apparel CAD systems for pattern making, grading, and marker making. I compare their features, 3D simulation capabilities, cutting machine compatibility, and pricing to help apparel companies choose the right platform."
+excerpt: "Optitex, Gerber AccuMark, and Lectra Modaris are the three leading apparel CAD systems for pattern making, grading, and marker making. We compare their features, 3D simulation capabilities, cutting machine compatibility, and pricing to help apparel companies choose the right platform."
 category: "comparison"
 softwareSlug: "optitex"
 keyword: "Optitex vs Gerber AccuMark vs Lectra Modaris apparel CAD software comparison pattern grading marker"
@@ -16,7 +16,7 @@ sources:
 
 # Optitex vs Gerber AccuMark vs Lectra Modaris: Apparel CAD Software Comparison
 
-I've worked with all three of these apparel CAD platforms in different production environments. Optitex, Gerber AccuMark, and Lectra Modaris are the "big three" of apparel pattern making and marker making — each has decades of development and dominates different geographic markets and industry segments. Choosing between them is often as much about existing infrastructure and regional support as it is about feature comparison.
+We've worked with all three of these apparel CAD platforms in different production environments. Optitex, Gerber AccuMark, and Lectra Modaris are the "big three" of apparel pattern making and marker making — each has decades of development and dominates different geographic markets and industry segments. Choosing between them is often as much about existing infrastructure and regional support as it is about feature comparison.
 
 ## Quick Comparison
 

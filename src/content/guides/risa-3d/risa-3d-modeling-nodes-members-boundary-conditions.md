@@ -15,7 +15,7 @@ sources:
 
 # RISA-3D Modeling Basics: Nodes, Members, and Boundary Conditions
 
-RISA-3D is one of the most widely used structural analysis tools in the US. I've modeled everything from small canopies to multi-story buildings in RISA. The modeling interface is straightforward but has specific conventions. Here's the complete guide.
+RISA-3D is one of the most widely used structural analysis tools in the US. We've modeled everything from small canopies to multi-story buildings in RISA. The modeling interface is straightforward but has specific conventions. Here's the complete guide.
 
 ## Step 1: Project Setup
 
@@ -99,7 +99,7 @@ End releases define which forces can be transferred at each end:
 - **Fixed-fixed**: All 6 forces transferred (moment connection)
 - **Pinned-pinned**: No moments transferred (simple connection)
 - **Fixed-pinned**: Moment at one end, pin at the other (cantilever)
-- **Custom**: Release specific forces (e.g., release My at start, keep all others)
+- **Custom**: Release specific forces (e.g., release Our at start, keep all others)
 
 For typical steel framing:
 - **Beams**: Pinned-pinned (simple shear connections)

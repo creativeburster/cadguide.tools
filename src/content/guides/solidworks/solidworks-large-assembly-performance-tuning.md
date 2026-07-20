@@ -15,7 +15,7 @@ sources:
 
 # Large Assembly Performance Tuning in SolidWorks: System Settings and Workflow Strategies
 
-I've worked with SolidWorks assemblies ranging from 50 parts to 15,000, and I can tell you that the 5,000-component mark is where things start getting painful. Opening the assembly takes 30 seconds, the cursor freezes during mate updates, and every rebuild feels like watching paint dry. Over the years I've compiled a checklist of performance settings that actually make a difference — not the theoretical stuff from the help docs, but the changes I've measured and verified on real projects. Here they are, ordered by impact.
+We've worked with SolidWorks assemblies ranging from 50 parts to 15,000, and we can tell you that the 5,000-component mark is where things start getting painful. Opening the assembly takes 30 seconds, the cursor freezes during mate updates, and every rebuild feels like watching paint dry. Over the years we've compiled a checklist of performance settings that actually make a difference — not the theoretical stuff from the help docs, but the changes we've measured and verified on real projects. Here they are, ordered by impact.
 
 ## Step 1: Enable Large Assembly Mode
 
@@ -222,7 +222,7 @@ Consumer GPUs (RTX 4070, 4080, 4090) work but are not certified and may experien
 - **Working files**: NVMe SSD
 - **Archive/PDM vault**: Any SSD (SATA is acceptable for cold storage)
 
-Avoid HDDs for any SolidWorks working files. The random I/O pattern of assembly loading makes HDD performance unacceptable for large assemblies.
+Avoid HDDs for any SolidWorks working files. The random we/O pattern of assembly loading makes HDD performance unacceptable for large assemblies.
 
 ## Monitoring Performance
 

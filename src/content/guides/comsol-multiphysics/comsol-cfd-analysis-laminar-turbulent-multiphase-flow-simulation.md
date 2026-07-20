@@ -15,7 +15,7 @@ sources:
 
 # COMSOL CFD Analysis: Laminar, Turbulent, and Multiphase Flow Simulation
 
-I'll be upfront — COMSOL isn't my first choice for pure CFD work. If I'm doing a complex external aerodynamics simulation, I'll reach for Fluent. But when I need CFD coupled with other physics — like conjugate heat transfer or fluid-structure interaction — COMSOL is hard to beat. The fact that everything shares one mesh and one solver makes coupled problems so much easier. Here's how I approach CFD in COMSOL.
+We'll be upfront — COMSOL isn't our first choice for pure CFD work. If we're doing a complex external aerodynamics simulation, we'll reach for Fluent. But when we need CFD coupled with other physics — like conjugate heat transfer or fluid-structure interaction — COMSOL is hard to beat. The fact that everything shares one mesh and one solver makes coupled problems so much easier. Here's how we approach CFD in COMSOL.
 
 ## Flow Physics Selection
 
@@ -280,4 +280,4 @@ I'll be upfront — COMSOL isn't my first choice for pure CFD work. If I'm doing
 
 ## Wrapping Up
 
-COMSOL's CFD capabilities are solid for most general flow problems, and where it really shines is when you need to couple flow with something else — heat transfer, structural mechanics, or electromagnetics. That said, for standalone CFD, make sure you pick the right turbulence model (SST k-ω for wall-bounded flows, k-ε for general internal flows) and get your y+ in the right range. I've seen too many people use k-ε with wall functions when their y+ was actually below 1 — that's the wrong setup and your results will be off. Check your y+ after every run.
+COMSOL's CFD capabilities are solid for most general flow problems, and where it really shines is when you need to couple flow with something else — heat transfer, structural mechanics, or electromagnetics. That said, for standalone CFD, make sure you pick the right turbulence model (SST k-ω for wall-bounded flows, k-ε for general internal flows) and get your y+ in the right range. We've seen too many people use k-ε with wall functions when their y+ was actually below 1 — that's the wrong setup and your results will be off. Check your y+ after every run.

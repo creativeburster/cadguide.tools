@@ -16,7 +16,7 @@ sources:
 
 # MIDAS Civil vs SAP2000: Bridge Analysis Platform Comparison for Bridge Engineers
 
-I've used both MIDAS Civil and SAP2000 for bridge analysis, and while both can get the job done, they approach bridge engineering very differently. MIDAS Civil is purpose-built for bridges; SAP2000 is a general-purpose tool with bridge capabilities. Here's how I decide which one to use for a given project.
+We've used both MIDAS Civil and SAP2000 for bridge analysis, and while both can get the job done, they approach bridge engineering very differently. MIDAS Civil is purpose-built for bridges; SAP2000 is a general-purpose tool with bridge capabilities. Here's how we decide which one to use for a given project.
 
 ## Target Market
 
@@ -43,7 +43,7 @@ MIDAS Civil is slightly more expensive but includes more bridge-specific feature
 | Feature | MIDAS Civil | SAP2000 |
 |---------|-------------|---------|
 | Bridge wizard | Yes (comprehensive) | Yes (basic templates) |
-| Girder types | I-girder, box, PSC, composite | I-girder, box, truss |
+| Girder types | we-girder, box, PSC, composite | we-girder, box, truss |
 | Auto meshing | Yes (deck, girders, diaphragms) | Yes |
 | Bearing modeling | Yes (elastic link) | Yes (spring) |
 | Abutment modeling | Yes | Yes |
@@ -162,6 +162,6 @@ CSiBridge bridges some of the gap but still falls short of MIDAS Civil for advan
 
 Beyond construction stage analysis, midas Civil also excels in moving load analysis for bridges. The program includes built-in moving load generators for standard truck and lane loads per AASHTO, Eurocode, and other international codes. You define the traffic lanes, and midas Civil automatically generates all possible vehicle positions, performs influence surface analysis, and envelopes the results. SAP2000 has similar capabilities but the interface is less streamlined — defining lanes and vehicles requires more manual input. For post-tensioned bridge design, midas Civil includes a dedicated PSC (Pre-Stressed Concrete) design module that handles tendon profiling, stress checks, and loss calculations. SAP2000 can model tendons but doesn't have the same level of automated PSC design checking. On Eng-Tips, a user noted that "MIDAS is powerful but atrocious" — the interface is the main complaint, not the analysis capabilities. For engineers willing to tolerate the interface, midas Civil's bridge-specific tools are unmatched at this price point.
 
-## My Take
+## Our Take
 
-For bridge engineers, the choice is straightforward in my mind. If you're doing simple girder bridges, either tool works fine. If you're doing segmental construction, PSC design, cable-stayed bridges, or anything with construction stage analysis, MIDAS Civil is the clear winner. SAP2000 is a good general-purpose tool, but it simply doesn't have the bridge-specific depth that MIDAS Civil does. I use both, but MIDAS Civil is my primary bridge tool. The interface takes getting used to, and I've had my share of frustration with it, but the analysis results have always been reliable and the construction stage workflow saves me days of manual calculation on every complex bridge project.
+For bridge engineers, the choice is straightforward in our mind. If you're doing simple girder bridges, either tool works fine. If you're doing segmental construction, PSC design, cable-stayed bridges, or anything with construction stage analysis, MIDAS Civil is the clear winner. SAP2000 is a good general-purpose tool, but it simply doesn't have the bridge-specific depth that MIDAS Civil does. We use both, but MIDAS Civil is our primary bridge tool. The interface takes getting used to, and we've had our share of frustration with it, but the analysis results have always been reliable and the construction stage workflow saves us days of manual calculation on every complex bridge project.

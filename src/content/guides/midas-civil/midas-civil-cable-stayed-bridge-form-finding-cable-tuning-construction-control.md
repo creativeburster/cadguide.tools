@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Civil Cable-Stayed Bridge Analysis: Form Finding, Cable Tuning, and Construction Control
 
-Cable-stayed bridges are the most complex structures I've worked on, and MIDAS Civil is the tool I trust for them. The form-finding process, cable force optimization, and construction stage control are all built into the software. I learned cable-stayed analysis on a 240m main span bridge project, and it was a steep learning curve. Let me share what I picked up.
+Cable-stayed bridges are among the most complex structures to analyze, and MIDAS Civil is a trusted tool for them. The form-finding process, cable force optimization, and construction stage control are all built into the software. Cable-stayed analysis has a steep learning curve. Let us share what matters.
 
 ## Cable-Stayed Bridge Modeling
 
@@ -256,4 +256,4 @@ Form finding determines the initial cable forces that produce the desired deck p
 
 ## Wrapping Up
 
-Cable-stayed bridge analysis is one of the most challenging things I've done in structural engineering, and MIDAS Civil is the right tool for it. The form-finding process is critical — get the cable forces wrong at the start and everything downstream is a mess. Construction stage analysis is non-negotiable for these bridges. Take it step by step, validate against simple hand calculations where you can, and don't be afraid to iterate on the cable tuning until the dead load moments are where you want them.
+Cable-stayed bridge analysis is one of the most challenging things we've done in structural engineering, and MIDAS Civil is the right tool for it. The form-finding process is critical — get the cable forces wrong at the start and everything downstream is a mess. Construction stage analysis is non-negotiable for these bridges. Take it step by step, validate against simple hand calculations where you can, and don't be afraid to iterate on the cable tuning until the dead load moments are where you want them.

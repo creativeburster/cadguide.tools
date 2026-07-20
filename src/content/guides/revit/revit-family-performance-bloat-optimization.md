@@ -15,7 +15,7 @@ sources:
 
 # Optimizing Revit Family Files: Reducing Bloat and Improving Load Performance
 
-I once traced a Revit model's 40-second open time back to a single family file — a door family that some well-meaning drafter had loaded with 15 nested parametric arrays, 8 visibility states, and 200 MB of embedded geometry. After I cleaned it up, the model opened in 12 seconds. That experience made me a bit obsessive about family optimization. Here's the workflow I use to identify, analyze, and fix bloated families.
+A single bloated family can dominate a Revit model's open time — a door family loaded with many nested parametric arrays, multiple visibility states, and hundreds of megabytes of embedded geometry can add tens of seconds on its own. Cleaning up families like that can cut open times dramatically. Here's the workflow to identify, analyze, and fix bloated families.
 
 ## Identifying Heavy Families
 

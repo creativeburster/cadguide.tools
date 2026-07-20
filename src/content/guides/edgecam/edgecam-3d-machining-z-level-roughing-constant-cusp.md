@@ -15,7 +15,7 @@ sources:
 
 # EdgeCAM 3D Machining: Z-Level Roughing and Constant Cusp Finishing Setup
 
-Mold and die work requires 3D machining strategies that balance material removal rate with surface finish quality. I program mold cavities in EdgeCAM regularly, and the Z-level roughing + constant cusp finishing combination is my go-to workflow. Here's the complete setup.
+Mold and die work requires 3D machining strategies that balance material removal rate with surface finish quality. We program mold cavities in EdgeCAM regularly, and the Z-level roughing + constant cusp finishing combination is our go-to workflow. Here's the complete setup.
 
 ## Step 1: Prepare the Model and Stock
 

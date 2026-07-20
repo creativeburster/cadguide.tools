@@ -1,6 +1,6 @@
 ---
 title: "CLO 3D Avatar and Dressing Workflow: Custom Bodies, Arrangement Points, and Fit Verification"
-excerpt: "CLO 3D's avatar system supports custom body scans, standard fashion avatars, and MetaHuman characters. I cover importing custom avatars, configuring arrangement points, using the Avatar Editor for body measurements, and the fit verification workflow with tension maps and measurement checks."
+excerpt: "CLO 3D's avatar system supports custom body scans, standard fashion avatars, and MetaHuman characters. We cover importing custom avatars, configuring arrangement points, using the Avatar Editor for body measurements, and the fit verification workflow with tension maps and measurement checks."
 category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D avatar setup custom body dressing arrangement points fit verification"
@@ -16,7 +16,7 @@ sources:
 
 # CLO 3D Avatar and Dressing Workflow: Custom Bodies, Arrangement Points, and Fit Verification
 
-I've set up avatars in CLO 3D ranging from standard fashion mannequins to 3D body scans of real models and MetaHuman characters for virtual fashion shows. The avatar is the foundation of every garment in CLO — if the body is wrong, the fit will be wrong, and no amount of pattern adjustment will compensate.
+We've set up avatars in CLO 3D ranging from standard fashion mannequins to 3D body scans of real models and MetaHuman characters for virtual fashion shows. The avatar is the foundation of every garment in CLO — if the body is wrong, the fit will be wrong, and no amount of pattern adjustment will compensate.
 
 ## Avatar Types in CLO 3D
 
@@ -34,7 +34,7 @@ To add a standard avatar:
 
 ### Custom Avatars
 
-For production work, I typically import a custom avatar that matches the target body exactly:
+For production work, we typically import a custom avatar that matches the target body exactly:
 
 1. File → Import → Avatar (or drag and drop)
 2. Supported formats: FBX, OBJ, GLB
@@ -146,7 +146,7 @@ The tension map is CLO 3D's most powerful fit verification tool. It shows where 
 - **Blue areas**: The fabric is compressed or floating. The garment is too loose. Reduce ease or decrease the pattern dimension.
 - **Green/white areas**: Normal tension. The garment fits correctly.
 
-I check the tension map at these key areas:
+We check the tension map at these key areas:
 - Armhole/sleeve cap
 - Chest/bust
 - Waist

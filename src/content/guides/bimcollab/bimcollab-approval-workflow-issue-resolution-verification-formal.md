@@ -15,7 +15,7 @@ sources:
 
 # BIMcollab Approval Workflow: Formal Issue Resolution and Verification for BIM Quality
 
-On small projects, anyone can close issues — the coordinator trusts that when a designer marks something as resolved, it's actually fixed. On large, formal projects, that trust doesn't work. I've seen designers mark issues as "Resolved" when the fix was incomplete, or close issues without the coordinator's verification. The approval workflow in BIMcollab prevents this by adding a formal verification step. Here's how to set it up.
+On small projects, anyone can close issues — the coordinator trusts that when a designer marks something as resolved, it's actually fixed. On large, formal projects, that trust doesn't work. We've seen designers mark issues as "Resolved" when the fix was incomplete, or close issues without the coordinator's verification. The approval workflow in BIMcollab prevents this by adding a formal verification step. Here's how to set it up.
 
 ## Why the Approval Workflow Matters
 

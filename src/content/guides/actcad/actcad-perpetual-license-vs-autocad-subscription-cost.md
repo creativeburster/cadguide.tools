@@ -15,7 +15,7 @@ sources:
 
 # ActCAD Perpetual License vs AutoCAD Subscription: Cost Comparison and Break-Even Analysis
 
-I ran the numbers for our 25-seat office when considering ActCAD as an AutoCAD replacement. The headline savings are significant — ActCAD perpetual costs roughly the same as one year of AutoCAD subscription. But the full picture has nuances. Here's the breakdown.
+We ran the numbers for our 25-seat office when considering ActCAD as an AutoCAD replacement. The headline savings are significant — ActCAD perpetual costs roughly the same as one year of AutoCAD subscription. But the full picture has nuances. Here's the breakdown.
 
 ## Upfront Cost Comparison (Per Seat)
 

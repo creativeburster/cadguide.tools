@@ -15,7 +15,7 @@ sources:
 
 # STAAD.Pro Structural Analysis: Modeling, Loading, and Steel-Concrete Design Workflow
 
-STAAD.Pro has been my workhorse for structural analysis on industrial and commercial projects for years. It supports over 90 design codes and handles everything from a simple beam to a complex 3D frame. The learning curve can be steep if you're coming from a GUI-first tool, but once you understand the workflow, it's efficient and reliable. Let me walk you through the full process from model creation to code-based design.
+STAAD.Pro has been our workhorse for structural analysis on industrial and commercial projects for years. It supports over 90 design codes and handles everything from a simple beam to a complex 3D frame. The learning curve can be steep if you're coming from a GUI-first tool, but once you understand the workflow, it's efficient and reliable. Let us walk you through the full process from model creation to code-based design.
 
 ## Model Creation
 
@@ -58,7 +58,7 @@ Nodes (joints) are the foundation of the model:
 1. Select members
 2. Property > Section Database
 3. Choose section type:
-   - **Steel**: W-shapes (AISC), I-shapes (European), HSS, angles, channels
+   - **Steel**: W-shapes (AISC), we-shapes (European), HSS, angles, channels
    - **Concrete**: Rectangular, circular, custom
    - **Timber**: Dimensional lumber, glulam
 4. Select specific section (e.g., W12x26, ISMB 300, 300×300mm)
@@ -150,7 +150,7 @@ Nodes (joints) are the foundation of the model:
    - **Seismic zone/PGA**: e.g., Zone V (PGA=0.36g)
    - **Soil type**: Hard, medium, soft
    - **Response reduction factor (R)**: e.g., 5 (special steel frame)
-   - **Importance factor (I)**: 1.0 (standard), 1.25 (essential)
+   - **Importance factor (we)**: 1.0 (standard), 1.25 (essential)
 4. STAAD calculates the base shear and distributes it vertically
 
 ### Load Combinations
@@ -324,4 +324,4 @@ For tall buildings or slender structures:
 
 ## Wrapping Up
 
-STAAD.Pro has been my reliable workhorse for years. The learning curve is real, especially if you're coming from a GUI-first tool, but once you understand the workflow — model, loads, analysis, design — it's efficient and dependable. My advice: always check your deformed shape and reaction forces before trusting any design output. If the reactions don't balance or the deformed shape looks wrong, fix the model before proceeding.
+STAAD.Pro has been our reliable workhorse for years. The learning curve is real, especially if you're coming from a GUI-first tool, but once you understand the workflow — model, loads, analysis, design — it's efficient and dependable. Our advice: always check your deformed shape and reaction forces before trusting any design output. If the reactions don't balance or the deformed shape looks wrong, fix the model before proceeding.

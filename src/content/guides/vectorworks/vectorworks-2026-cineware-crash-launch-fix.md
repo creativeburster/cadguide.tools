@@ -1,6 +1,6 @@
 ---
 title: "Vectorworks 2026 Crashing at Cineware on Launch: Fix Guide"
-excerpt: "Vectorworks 2026 crashes during startup while loading the Cineware render engine. I cover the AVX2 CPU requirement, the empty-folder workaround, GPU driver fixes, and how to get Vectorworks running again."
+excerpt: "Vectorworks 2026 crashes during startup while loading the Cineware render engine. We cover the AVX2 CPU requirement, the empty-folder workaround, GPU driver fixes, and how to get Vectorworks running again."
 category: "troubleshooting"
 softwareSlug: "vectorworks"
 keyword: "vectorworks 2026 crashing at cineware when launching"
@@ -17,7 +17,7 @@ sources:
 
 # Vectorworks 2026 Crashing at Cineware on Launch: Fix Guide
 
-If Vectorworks 2026 crashes right when the splash screen says "Loading Cineware," you're not alone. This has been one of the most reported issues on the Vectorworks community board since the 2026 release. The good news is that there are several working fixes, and most of them take under 10 minutes. I'll walk you through every solution I've seen work, ordered from easiest to most involved.
+If Vectorworks 2026 crashes right when the splash screen says "Loading Cineware," you're not alone. This has been one of the most reported issues on the Vectorworks community board since the 2026 release. The good news is that there are several working fixes, and most of them take under 10 minutes. We'll walk you through every solution we've seen work, ordered from easiest to most involved.
 
 ## What's Actually Happening
 

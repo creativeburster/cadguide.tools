@@ -1,6 +1,6 @@
 ---
 title: "Corona Renderer Materials and Displacement: PBR Setup, Glass, and SSS Configuration"
-excerpt: "Corona materials render incorrectly due to wrong PBR settings, glass IOR mismatches, or displacement edge length misconfiguration. I cover the Corona Physical Material setup, glass and SSS parameters, and displacement tuning for clean surfaces."
+excerpt: "Corona materials render incorrectly due to wrong PBR settings, glass IOR mismatches, or displacement edge length misconfiguration. We cover the Corona Physical Material setup, glass and SSS parameters, and displacement tuning for clean surfaces."
 category: "troubleshooting"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer material PBR glass SSS displacement setup"
@@ -15,7 +15,7 @@ sources:
 
 # Corona Renderer Materials and Displacement: PBR Setup, Glass, and SSS Configuration
 
-I set up Corona materials for architecture and product visualization projects, and the material issues I see most often are: PBR materials with incorrect roughness/metallic values, glass that renders dark or with wrong refraction, SSS materials that are noisy or look melted, and displacement that produces jagged edges or excessive render times. Let me walk through each material type and the settings I use.
+We set up Corona materials for architecture and product visualization projects, and the material issues we see most often are: PBR materials with incorrect roughness/metallic values, glass that renders dark or with wrong refraction, SSS materials that are noisy or look melted, and displacement that produces jagged edges or excessive render times. Let us walk through each material type and the settings we use.
 
 ## Corona Physical Material: PBR Setup
 
@@ -40,7 +40,7 @@ The Corona Physical Material is the standard material type — it replaces the l
 
 ## Glass Material Setup
 
-Glass is one of the most common materials I configure, and it's also the most error-prone.
+Glass is one of the most common materials we configure, and it's also the most error-prone.
 
 **Standard glass setup**:
 1. Create a Corona Physical Material
@@ -136,4 +136,4 @@ Corona's displacement adds real geometric detail at render time. It's powerful b
 
 ## Summary
 
-Corona material issues are most often caused by incorrect PBR values, wrong glass IOR, or displacement misconfiguration. My setup process: use Corona Physical Material with correct Roughness (not Glossiness) → set Metalness to 0 or 1 (never 0.5) → configure glass with correct IOR and Fresnel → use Fast SSS for subsurface materials → set displacement Edge length to 4px with 16-bit maps → use 3D displacement for curved surfaces. For performance, use the cheapest surface detail method (bump < normal < displacement) that meets the visual requirement.
+Corona material issues are most often caused by incorrect PBR values, wrong glass IOR, or displacement misconfiguration. Our setup process: use Corona Physical Material with correct Roughness (not Glossiness) → set Metalness to 0 or 1 (never 0.5) → configure glass with correct IOR and Fresnel → use Fast SSS for subsurface materials → set displacement Edge length to 4px with 16-bit maps → use 3D displacement for curved surfaces. For performance, use the cheapest surface detail method (bump < normal < displacement) that meets the visual requirement.

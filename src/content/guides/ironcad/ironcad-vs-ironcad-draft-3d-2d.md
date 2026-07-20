@@ -15,7 +15,7 @@ sources:
 
 # IronCAD vs IronCAD DRAFT: Choosing Between 3D and 2D Workflows
 
-IronCAD ships as two integrated products: the main 3D design environment and IronCAD DRAFT, a 2D drafting module. I've used both in a fabrication shop that does 3D design for products and 2D detailing for shop drawings. Here's how they differ and when to use each.
+IronCAD ships as two integrated products: the main 3D design environment and IronCAD DRAFT, a 2D drafting module. We've used both in a fabrication shop that does 3D design for products and 2D detailing for shop drawings. Here's how they differ and when to use each.
 
 ## What Is IronCAD (3D)?
 
@@ -87,7 +87,7 @@ The two modules integrate through file exchange:
 
 **IronCAD Inovate**: Mid-tier 3D only (no DRAFT). ~$1,495 perpetual. For users who need 3D viewing and light editing but not full modeling.
 
-## My Recommendation
+## Our Recommendation
 
 **For a 5-person product design team**: Get the full Suite (3D + DRAFT) for designers. Add 1-2 standalone DRAFT licenses for dedicated 2D detailers who don't need 3D.
 

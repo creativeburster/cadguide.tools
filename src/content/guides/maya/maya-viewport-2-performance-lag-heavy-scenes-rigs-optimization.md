@@ -17,9 +17,9 @@ sources:
 
 # Fixing Maya Viewport 2.0 Lag: Optimization Strategies for Heavy Scenes and Rigs
 
-I've had Maya's viewport lag so badly that every mouse click produced a blue "thinking" circle for 5 seconds — and I know I'm not alone. On the Autodesk Community forums, a user wrote that "Viewport 2.0 and Hypershade are dreadful" and described the exact same pain: "I find myself having to wait for that annoying 'processing' message, and not being able to do anything else in the meantime, than doing actual work." Another user on the Maya modeling forum reported that Maya was "barely using any of my computer's resources while processing tasks" — 15% CPU, 0% GPU, 6% RAM on an i7-11700k with RTX 3070 and 32GB RAM. And an admin at Otis College reported that Maya "locks up and becomes severely laggy" when loading animation rigs, even on i9 machines with RTX A4500 GPUs.
+We've had Maya's viewport lag so badly that every mouse click produced a blue "thinking" circle for 5 seconds — and we know we're not alone. On the Autodesk Community forums, a user wrote that "Viewport 2.0 and Hypershade are dreadful" and described the exact same pain: "I find myself having to wait for that annoying 'processing' message, and not being able to do anything else in the meantime, than doing actual work." Another user on the Maya modeling forum reported that Maya was "barely using any of my computer's resources while processing tasks" — 15% CPU, 0% GPU, 6% RAM on an i7-11700k with RTX 3070 and 32GB RAM. And an admin at Otis College reported that Maya "locks up and becomes severely laggy" when loading animation rigs, even on i9 machines with RTX A4500 GPUs.
 
-These reports capture the three main viewport performance problems in Maya: single-threaded computation, GPU underutilization, and rig evaluation overhead. This guide covers the fixes I've found effective across years of working with heavy Maya scenes.
+These reports capture the three main viewport performance problems in Maya: single-threaded computation, GPU underutilization, and rig evaluation overhead. This guide covers the fixes we've found effective across years of working with heavy Maya scenes.
 
 ## Understanding the Viewport 2.0 Bottleneck
 
@@ -115,13 +115,13 @@ Use the Evaluation Toolkit (available via the MEL command `evalManager`) to iden
 
 ## Hardware Recommendations
 
-Based on community discussions and my experience:
+Based on community discussions and our experience:
 
 - **CPU**: Single-core speed matters most. An i9 at 5.0GHz outperforms a Threadripper at 3.5GHz for most Maya viewport operations.
 - **GPU**: 8GB+ VRAM for scenes with many textures. The viewport uses VRAM for texture caching. An RTX 3070 or better is recommended.
 - **RAM**: 32GB minimum for complex scenes and rigs. 64GB for large environments.
 - **Storage**: NVMe SSD significantly improves scene load times and texture streaming.
 
-## My Take
+## Our Take
 
 The most effective viewport optimization in Maya is deleting history and switching to Parallel evaluation mode — these two changes alone can take a scene from unusable to workable. For rig work, cached playback is essential — without it, complex rigs are simply too slow to animate efficiently. And don't be fooled by low CPU/GPU utilization in Task Manager — Maya's single-threaded evaluation means that one core is likely at 100% even when overall CPU usage shows 15%. The fix isn't more hardware, it's reducing the amount of work that single core has to do.

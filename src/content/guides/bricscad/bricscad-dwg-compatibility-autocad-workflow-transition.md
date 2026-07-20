@@ -16,7 +16,7 @@ sources:
 
 # BricsCAD to AutoCAD DWG Compatibility: Seamless Workflow Transition Guide
 
-Switching between BricsCAD and AutoCAD is increasingly common as firms look to reduce licensing costs without disrupting established workflows. The good news is that BricsCAD uses the same DWG file format natively — no translation layer, no file conversion. But that does not mean the transition is friction-free. Subtle differences in system variables, font availability, LISP extensions, and rendering engines can cause unexpected issues when files move between the two platforms. This guide covers every compatibility pitfall I have encountered in production environments and how to resolve them.
+Switching between BricsCAD and AutoCAD is increasingly common as firms look to reduce licensing costs without disrupting established workflows. The good news is that BricsCAD uses the same DWG file format natively — no translation layer, no file conversion. But that does not mean the transition is friction-free. Subtle differences in system variables, font availability, LISP extensions, and rendering engines can cause unexpected issues when files move between the two platforms. This guide covers every compatibility pitfall we have encountered in production environments and how to resolve them.
 
 ## DWG Version Alignment
 

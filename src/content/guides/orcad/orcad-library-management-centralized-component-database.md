@@ -15,7 +15,7 @@ sources:
 
 # OrCAD Library Management: Building a Centralized Component Database
 
-Library management is the least glamorous but most impactful part of PCB design. I've seen companies with 50 duplicate parts, inconsistent footprints, and no version control. After implementing a centralized library system, their error rate dropped by 80%. Here's how to set it up.
+Library management is the least glamorous but most impactful part of PCB design. We've seen companies with 50 duplicate parts, inconsistent footprints, and no version control. After implementing a centralized library system, their error rate dropped by 80%. Here's how to set it up.
 
 ## The Problem with Decentralized Libraries
 
@@ -91,7 +91,7 @@ Every part must have these properties defined:
 |----------|---------|---------|
 | Part Number | MCP23017-E/SO | Unique identifier |
 | Manufacturer | Microchip | Sourcing |
-| Description | 16-bit I2C I/O Expander | BOM documentation |
+| Description | 16-bit I2C we/O Expander | BOM documentation |
 | PCB Footprint | SOIC16-3.9x9.9-1.27 | Links to PCB library |
 | Value | MCP23017 | Display on schematic |
 | Tolerance | N/A | For passive components |

@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Gen Seismic Design: Response Spectrum, Time History, and Pushover Analysis
 
-Seismic design in MIDAS Gen covers the full spectrum — from simple equivalent lateral force to nonlinear time history and pushover. I've used all of these methods on different projects, and the nice thing about MIDAS Gen is that you can start with a simple response spectrum analysis and escalate to nonlinear methods without rebuilding the model. Let me walk you through each method.
+Seismic design in MIDAS Gen covers the full spectrum — from simple equivalent lateral force to nonlinear time history and pushover. We've used all of these methods on different projects, and the nice thing about MIDAS Gen is that you can start with a simple response spectrum analysis and escalate to nonlinear methods without rebuilding the model. Let us walk you through each method.
 
 ## Equivalent Lateral Force (ELF)
 
@@ -29,12 +29,12 @@ Seismic design in MIDAS Gen covers the full spectrum — from simple equivalent 
    - **TL**: 8 seconds (long-period transition)
    - **Site class**: D
    - **R**: 5 (special steel frame), 8 (special concrete wall)
-   - **I**: 1.0 (standard), 1.25 (essential), 1.5 (hazardous)
+   - **we**: 1.0 (standard), 1.25 (essential), 1.5 (hazardous)
    - **Seismic weight**: Dead + 0.25 × Live
 4. MIDAS Gen calculates:
    - **Seismic mass per story**: From defined weight
    - **Fundamental period (T)**: From modal analysis or empirical
-   - **Base shear**: V = Cs × W = (SDS / (R/I)) × W
+   - **Base shear**: V = Cs × W = (SDS / (R/we)) × W
    - **Vertical distribution**: Fx = V × wx × hx^k / Σ(wi × hi^k)
    - **Accidental eccentricity**: 5% of building dimension
 
@@ -46,11 +46,11 @@ For Indian projects:
    - **Zone**: V (PGA = 0.36g)
    - **Soil type**: Medium (Type II)
    - **R**: 5 (SMRF)
-   - **I**: 1.0
+   - **we**: 1.0
    - **Damping**: 5%
 3. MIDAS Gen calculates:
    - **Sa/g**: From response spectrum per IS 1893
-   - **Ah**: Z/2 × I/R × Sa/g
+   - **Ah**: Z/2 × we/R × Sa/g
    - **Base shear**: V = Ah × W
 
 ## Modal Analysis
@@ -183,7 +183,7 @@ For Indian projects:
 
 #### Concrete Beam Hinge (Moment)
 - **Type**: M3 (strong axis moment)
-- **Yield moment**: My = fy × As × (d - a/2)
+- **Yield moment**: Our = fy × As × (d - a/2)
 - **Plastic rotation**: Per ASCE 41 Table 10-7
 - **Acceptance criteria**: IO = 0.005 rad, LS = 0.02 rad, CP = 0.025 rad
 
@@ -195,7 +195,7 @@ For Indian projects:
 
 #### Steel Beam Hinge (Moment)
 - **Type**: M3
-- **Yield moment**: My = fy × Zx
+- **Yield moment**: Our = fy × Zx
 - **Plastic rotation**: Per ASCE 41 Table 5-6
 - **Acceptance criteria**: IO = 0.0098 rad, LS = 0.035 rad, CP = 0.05 rad
 
@@ -278,4 +278,4 @@ For Indian projects:
 
 ## Wrapping Up
 
-MIDAS Gen's seismic workflow is efficient because you can escalate from simple to complex without rebuilding the model. Start with equivalent lateral force, move to response spectrum, and only go to time history or pushover if the project demands it. The automatic load generation and story-based output make the whole process faster than doing it manually. My rule: always check mass participation and drift before moving on to design — if those two look right, you're in good shape.
+MIDAS Gen's seismic workflow is efficient because you can escalate from simple to complex without rebuilding the model. Start with equivalent lateral force, move to response spectrum, and only go to time history or pushover if the project demands it. The automatic load generation and story-based output make the whole process faster than doing it manually. Our rule: always check mass participation and drift before moving on to design — if those two look right, you're in good shape.

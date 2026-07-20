@@ -15,7 +15,7 @@ sources:
 
 # CYPECAD Building Design: 3D Modeling, Analysis, and Concrete Design per Eurocode 2
 
-I started using CYPECAD on a project in Barcelona about five years ago, and it was a bit of a culture shock coming from ETABS. The workflow is very European — tightly integrated with Eurocodes, with a strong emphasis on automatic reinforcement detailing and drawing production. Once I got used to it, I came to appreciate how it handles the full chain from architectural plan import to concrete design per Eurocode 2. Let me walk you through the workflow.
+CYPECAD can be a bit of a culture shock coming from ETABS. The workflow is very European — tightly integrated with Eurocodes, with a strong emphasis on automatic reinforcement detailing and drawing production. It handles the full chain from architectural plan import to concrete design per Eurocode 2. Let us walk you through the workflow.
 
 ## Project Setup
 
@@ -124,7 +124,7 @@ I started using CYPECAD on a project in Barcelona about five years ago, and it w
 1. Loads > Wind Load
 2. Set per Eurocode 1 (EN 1991-1-4):
    - **Basic wind speed (vb)**: e.g., 26 m/s
-   - **Terrain category**: 0, I, II, III, or IV
+   - **Terrain category**: 0, we, II, III, or IV
    - **Building height**: For pressure variation
 3. CYPECAD automatically:
    - Calculates wind pressure at each elevation
@@ -136,7 +136,7 @@ I started using CYPECAD on a project in Barcelona about five years ago, and it w
 1. Loads > Seismic Load
 2. Set per Eurocode 8 (EN 1998-1):
    - **Reference PGA (agR)**: e.g., 0.25g
-   - **Importance factor (γI)**: 1.0 (II), 1.2 (III), 1.4 (IV)
+   - **Importance factor (γwe)**: 1.0 (II), 1.2 (III), 1.4 (IV)
    - **Soil type**: A, B, C, D, or E
    - **Behavior factor (q)**: 3.0 (medium ductility), 5.85 (high ductility)
    - **Damping**: 5%
@@ -266,4 +266,4 @@ I started using CYPECAD on a project in Barcelona about five years ago, and it w
 
 ## Wrapping Up
 
-CYPECAD's integrated workflow is what makes it special — from architectural plans to concrete design to reinforcement drawings, all in one package. The automatic load generation per Eurocode saves me hours, and the reinforcement drawings are good enough to issue with minimal cleanup. If you're working in a Eurocode jurisdiction, especially in Spain or Latin America, CYPECAD is hard to beat for efficiency.
+CYPECAD's integrated workflow is what makes it special — from architectural plans to concrete design to reinforcement drawings, all in one package. The automatic load generation per Eurocode saves us hours, and the reinforcement drawings are good enough to issue with minimal cleanup. If you're working in a Eurocode jurisdiction, especially in Spain or Latin America, CYPECAD is hard to beat for efficiency.

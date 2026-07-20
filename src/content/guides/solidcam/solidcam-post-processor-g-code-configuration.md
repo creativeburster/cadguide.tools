@@ -15,7 +15,7 @@ sources:
 
 # SolidCAM Post Processor Configuration: Customizing G-Code Output for Your Machine
 
-The post processor is the bridge between SolidCAM's toolpath data and your CNC machine's G-code dialect. Get it wrong and the machine either refuses to run, crashes, or produces incorrect parts. I've customized post processors for 15+ different machines. Here's what you need to know.
+The post processor is the bridge between SolidCAM's toolpath data and your CNC machine's G-code dialect. Get it wrong and the machine either refuses to run, crashes, or produces incorrect parts. We've customized post processors for 15+ different machines. Here's what you need to know.
 
 ## What Is a Post Processor?
 

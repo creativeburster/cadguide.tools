@@ -1,6 +1,6 @@
 ---
 title: "Creo Sketch Red Dots and Open Profile Errors: Fixing Unconnected Entities"
-excerpt: "Red dots in your Creo sketch mean endpoints aren't connected — and Creo won't let you create features from open profiles. I cover the Corner tool, trim techniques, and config.pro settings that fix sketching frustrations."
+excerpt: "Red dots in your Creo sketch mean endpoints aren't connected — and Creo won't let you create features from open profiles. We cover the Corner tool, trim techniques, and config.pro settings that fix sketching frustrations."
 category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo sketch red dots open profile unconnected entities"
@@ -17,7 +17,7 @@ sources:
 
 A user on the PTC Community forum described a sketching problem that every Creo user encounters: "I am having sketching problems when it comes to uniting even simple segments. CREO 10 / Win10 is butchering even the simplest connections between an arc and a segment, or even between two angled segments. No matter how much I magnify to see what the problem is, CREO still shows them on the same line, but in the end makes them red anyway! Drives me completely nuts!"
 
-I've been there. You zoom in until you can see individual pixels, and the endpoints look like they're on top of each other, but Creo still marks them with red dots. The red dots indicate endpoints that aren't connected — they're either slightly offset, overlapping, or doubled. Creo requires a closed profile (no red dots) to create most solid features, so this error blocks your progress entirely.
+We've been there. You zoom in until you can see individual pixels, and the endpoints look like they're on top of each other, but Creo still marks them with red dots. The red dots indicate endpoints that aren't connected — they're either slightly offset, overlapping, or doubled. Creo requires a closed profile (no red dots) to create most solid features, so this error blocks your progress entirely.
 
 ## What Red Dots Mean
 
@@ -120,7 +120,7 @@ sketcher_constraint_display yes
 
 The `sketcher_accuracy` setting controls how close two endpoints need to be for Creo to consider them connected. The default is 0.001 (relative units). If your endpoints are slightly off, reducing this value to 0.0001 may help Creo recognize them as connected.
 
-However, I don't recommend relying on accuracy settings — it's better to use explicit constraints to ensure connections are exact.
+However, we don't recommend relying on accuracy settings — it's better to use explicit constraints to ensure connections are exact.
 
 ## Fix 7: Use the Sketch Diagnostics Tool
 

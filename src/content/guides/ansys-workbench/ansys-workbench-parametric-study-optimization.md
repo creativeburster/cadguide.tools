@@ -1,6 +1,6 @@
 ---
 title: "Ansys Workbench Parametric Study: Design Exploration and Optimization Workflow"
-excerpt: "Running a parametric study in Ansys Workbench lets you explore design space without manually re-running each configuration. I cover the setup, design points, and response surface optimization I use for design exploration."
+excerpt: "Running a parametric study in Ansys Workbench lets you explore design space without manually re-running each configuration. We cover the setup, design points, and response surface optimization we use for design exploration."
 category: "deployment"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys Workbench parametric study design optimization"
@@ -15,7 +15,7 @@ sources:
 
 # Ansys Workbench Parametric Study: Design Exploration and Optimization Workflow
 
-I use parametric studies in Ansys Workbench for nearly every design optimization project. Whether I'm optimizing a bracket for minimum weight with a stress constraint, or finding the optimal wall thickness for a pressure vessel, the parametric workflow lets me explore the design space systematically instead of guessing. I'll walk through the complete workflow I use, from setting up parameters to generating response surfaces and finding optimal designs.
+We use parametric studies in Ansys Workbench for nearly every design optimization project. Whether we're optimizing a bracket for minimum weight with a stress constraint, or finding the optimal wall thickness for a pressure vessel, the parametric workflow lets us explore the design space systematically instead of guessing. We'll walk through the complete workflow we use, from setting up parameters to generating response surfaces and finding optimal designs.
 
 ## Setting Up Parameters
 
@@ -160,14 +160,14 @@ The optimization returns 3 candidate designs. For each:
 
 ## Practical Example: Bracket Optimization
 
-I recently optimized a steel bracket with the following parameters:
+We recently optimized a steel bracket with the following parameters:
 
 - **Input**: Wall thickness (3-8mm), fillet radius (2-6mm), hole diameter (5-12mm)
 - **Output**: Maximum stress, total mass
 - **Objective**: Minimize mass
 - **Constraint**: Maximum stress < 200 MPa
 
-The DOE (Central Composite Design) generated 15 design points. The sensitivity analysis showed that wall thickness had 70% influence on stress, fillet radius had 25%, and hole diameter had 5%. I fixed the hole diameter at 8mm and re-ran with 2 parameters.
+The DOE (Central Composite Design) generated 15 design points. The sensitivity analysis showed that wall thickness had 70% influence on stress, fillet radius had 25%, and hole diameter had 5%. We fixed the hole diameter at 8mm and re-ran with 2 parameters.
 
 The optimization found a design with 4.2mm wall thickness, 4.8mm fillet radius, and 127g mass — a 35% weight reduction from the original design (195g) while keeping stress below 200 MPa. Verification analysis confirmed the stress was 192 MPa, within 2% of the predicted 188 MPa.
 

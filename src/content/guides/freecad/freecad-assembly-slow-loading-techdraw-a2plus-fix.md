@@ -1,6 +1,6 @@
 ---
 title: "FreeCAD Assembly Slow Loading: TechDraw Bloat, A2plus Optimization, and File Splitting"
-excerpt: "FreeCAD assemblies take minutes to load and every component change triggers long recalculation. I cover the TechDraw page bloat fix, A2plus optimization, and the file splitting strategy that keeps assemblies responsive."
+excerpt: "FreeCAD assemblies take minutes to load and every component change triggers long recalculation. We cover the TechDraw page bloat fix, A2plus optimization, and the file splitting strategy that keeps assemblies responsive."
 category: "performance"
 softwareSlug: "freecad"
 keyword: "FreeCAD assembly slow loading A2plus TechDraw performance"

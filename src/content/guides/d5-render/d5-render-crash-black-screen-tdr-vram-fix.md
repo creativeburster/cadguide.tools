@@ -1,6 +1,6 @@
 ---
 title: "D5 Render Crash and Black Screen: TDR Fix, VRAM Management, and GPU Configuration"
-excerpt: "D5 Render crashes with black screens during 4K rendering or video export due to VRAM exhaustion, TDR timeouts, or incorrect GPU configuration. I cover the TDR registry fix, VRAM monitoring with GPU-Z, and the DLSS and texture streaming settings that prevent crashes."
+excerpt: "D5 Render crashes with black screens during 4K rendering or video export due to VRAM exhaustion, TDR timeouts, or incorrect GPU configuration. We cover the TDR registry fix, VRAM monitoring with GPU-Z, and the DLSS and texture streaming settings that prevent crashes."
 category: "troubleshooting"
 softwareSlug: "d5-render"
 keyword: "D5 Render crash black screen TDR VRAM fix"
@@ -16,7 +16,7 @@ sources:
 
 # D5 Render Crash and Black Screen: TDR Fix, VRAM Management, and GPU Configuration
 
-I support architecture firms using D5 Render for real-time visualization, and the crash reports I receive are remarkably consistent: the screen turns black during 4K rendering or video export, the computer stays on but is unresponsive, and the only fix is a hard restart. D5 Render's official support documentation identifies several causes for these crashes, and I've developed a systematic troubleshooting process.
+We support architecture firms using D5 Render for real-time visualization, and the crash reports we receive are remarkably consistent: the screen turns black during 4K rendering or video export, the computer stays on but is unresponsive, and the only fix is a hard restart. D5 Render's official support documentation identifies several causes for these crashes, and we've developed a systematic troubleshooting process.
 
 ## Understanding the Black Screen Crash
 
@@ -38,7 +38,7 @@ This is the most impactful fix for D5 Render crashes, and D5's own documentation
 
 **D5's specific recommendation**: "Start D5 Render with administrator privileges and restart your computer. The program will automatically modify the TDR values, which can improve stability to a great extent."
 
-So D5 Render can actually set the TDR values automatically when run as administrator. I recommend both approaches: run as admin once to let D5 set the values, then verify and manually adjust if needed.
+So D5 Render can actually set the TDR values automatically when run as administrator. We recommend both approaches: run as admin once to let D5 set the values, then verify and manually adjust if needed.
 
 **To run as administrator**:
 1. Right-click the D5 Render shortcut → **Properties → Compatibility**
@@ -58,7 +58,7 @@ D5's documentation recommends using GPU-Z for accurate VRAM monitoring: "Windows
 
 **Task Manager alternative**: If you don't have GPU-Z, use Task Manager → Performance → GPU → Dedicated GPU Memory. It's less accurate but gives a rough indication.
 
-**My monitoring protocol**: I keep GPU-Z on a second monitor while working in D5. If VRAM approaches 80%, I optimize the scene before continuing. This prevents crashes rather than fixing them after the fact.
+**Our monitoring protocol**: We keep GPU-Z on a second monitor while working in D5. If VRAM approaches 80%, we optimize the scene before continuing. This prevents crashes rather than fixing them after the fact.
 
 ## Fix 3: Enable DLSS
 
@@ -91,7 +91,7 @@ D5's documentation lists specific features that consume significant VRAM:
 3. **High-resolution textures**: Replace distant material textures with lower resolution versions. D5's documentation: "Higher resolution mapping will also take up video memory. You can replace the mapping of materials farther away from the camera with a lower resolution mapping."
 4. **Reflections**: "More reflective scenes will reduce efficiency. You can turn the specular of materials far from the camera to 0 to cancel the reflection."
 
-**My optimization checklist for crash-prone scenes**:
+**Our optimization checklist for crash-prone scenes**:
 - [ ] Disable Depth of Field
 - [ ] Disable Tyndall effect
 - [ ] Replace 4K textures with 2K on distant surfaces
@@ -166,8 +166,8 @@ Corrupted cache files can cause crashes:
 3. Delete the `Cache` folder
 4. Restart D5 Render — it will rebuild the cache
 
-I clear the D5 cache monthly on all workstations. It accumulates stale data from old projects and can grow to several GB.
+We clear the D5 cache monthly on all workstations. It accumulates stale data from old projects and can grow to several GB.
 
 ## Summary
 
-D5 Render crashes and black screens are most often caused by VRAM exhaustion, TDR timeouts, or insufficient GPU capabilities. My fix order: run D5 as administrator to auto-set TDR values → manually set TdrDelay to 10 in registry → enable DLSS → monitor VRAM with GPU-Z → disable DoF and Tyndall effect → reduce render resolution → replace high-res textures on distant surfaces → update GPU drivers → clear D5 cache. The TDR fix and DLSS enablement together prevent about 70% of crash cases I encounter.
+D5 Render crashes and black screens are most often caused by VRAM exhaustion, TDR timeouts, or insufficient GPU capabilities. Our fix order: run D5 as administrator to auto-set TDR values → manually set TdrDelay to 10 in registry → enable DLSS → monitor VRAM with GPU-Z → disable DoF and Tyndall effect → reduce render resolution → replace high-res textures on distant surfaces → update GPU drivers → clear D5 cache. The TDR fix and DLSS enablement together prevent about 70% of crash cases we encounter.

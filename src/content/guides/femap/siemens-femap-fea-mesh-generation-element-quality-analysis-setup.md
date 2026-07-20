@@ -15,7 +15,7 @@ sources:
 
 # Siemens Femap FEA Pre-Processing: Mesh Generation, Element Quality, and Analysis Setup
 
-Femap is Siemens' CAD-independent FEA pre- and post-processor. It works with multiple solvers (NX Nastran, MSC Nastran, ANSYS, Abaqus) but is most commonly paired with NX Nastran. The pre-processing workflow — from CAD import to analysis-ready model — determines the quality of your results. I'll walk through each step.
+Femap is Siemens' CAD-independent FEA pre- and post-processor. It works with multiple solvers (NX Nastran, MSC Nastran, ANSYS, Abaqus) but is most commonly paired with NX Nastran. The pre-processing workflow — from CAD import to analysis-ready model — determines the quality of your results. We'll walk through each step.
 
 ## Step 1: CAD Import and Cleanup
 

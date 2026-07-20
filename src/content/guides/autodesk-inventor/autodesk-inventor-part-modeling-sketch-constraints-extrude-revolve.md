@@ -1,6 +1,6 @@
 ---
 title: "Autodesk Inventor Part Modeling: Sketch Constraints, Extrude, Revolve, and Feature Tree"
-excerpt: "Inventor's part modeling tools create parametric 3D parts from sketched profiles. I cover sketch constraints, the extrude and revolve tools, feature tree management, and parametric design best practices for robust editable parts."
+excerpt: "Inventor's part modeling tools create parametric 3D parts from sketched profiles. We cover sketch constraints, the extrude and revolve tools, feature tree management, and parametric design best practices for robust editable parts."
 category: "workflow"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor part modeling sketch constraints extrude revolve feature tree parametric design"
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Inventor Part Modeling: Sketch Constraints, Extrude, Revolve, and Feature Tree
 
-I've designed hundreds of parametric parts in Inventor for mechanical and industrial product design. Inventor's parametric modeling approach — where sketches drive features and features build the part — is the foundation of everything else the software does. Understanding sketch constraints, feature ordering, and parametric relationships is essential for creating parts that are robust, editable, and don't break when dimensions change.
+We've designed hundreds of parametric parts in Inventor for mechanical and industrial product design. Inventor's parametric modeling approach — where sketches drive features and features build the part — is the foundation of everything else the software does. Understanding sketch constraints, feature ordering, and parametric relationships is essential for creating parts that are robust, editable, and don't break when dimensions change.
 
 ## Inventor Part Modeling Overview
 

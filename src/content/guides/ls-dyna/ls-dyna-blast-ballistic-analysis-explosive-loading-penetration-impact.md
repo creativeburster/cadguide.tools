@@ -15,7 +15,7 @@ sources:
 
 # LS-DYNA Blast and Ballistic Analysis: Explosive Loading, Penetration, and Impact Response
 
-Blast and ballistic simulation is a specialized area that I got into through a defense project. It's a whole different world from structural FEA — you're dealing with explosive equations of state, ALE fluid-structure coupling, and eroding contact for penetration. The first time I saw a blast wave propagate through an ALE mesh and hit a structure, I was hooked. Let me walk you through how I set up these simulations.
+Blast and ballistic simulation is a specialized area, common in defense and protective-structures work. It's a whole different world from structural FEA — you're dealing with explosive equations of state, ALE fluid-structure coupling, and eroding contact for penetration. Let us walk you through how to set up these simulations.
 
 ## Explosive Modeling
 
@@ -102,12 +102,12 @@ Blast and ballistic simulation is a specialized area that I got into through a d
    - ΔPmax = f(Z) (from empirical curves, e.g., Kingery-Bulmash)
 2. **Positive phase duration**: td (ms)
    - Duration of positive pressure
-3. **Impulse**: I = ∫ΔP dt (Pa·s)
+3. **Impulse**: We = ∫ΔP dt (Pa·s)
    - Area under pressure-time curve
 
 ### Scaled Distance
 
-| Z (m/kg^(1/3)) | ΔPmax (kPa) | td (ms) | I (kPa·s) |
+| Z (m/kg^(1/3)) | ΔPmax (kPa) | td (ms) | we (kPa·s) |
 |----------------|------------|---------|-----------|
 | 1.0 | 800 | 0.6 | 200 |
 | 2.0 | 200 | 1.5 | 150 |
@@ -301,4 +301,4 @@ Blast and ballistic simulation is a specialized area that I got into through a d
 
 ## Wrapping Up
 
-Blast and ballistic simulation is one of those areas where you really need to validate against test data. The JWL parameters for your explosive need to match the actual explosive you're using — don't just grab TNT numbers and assume they work for RDX. For penetration, your mesh size in the impact zone matters enormously — I typically use 0.5-1mm elements for small caliber projectiles. And always check your energy balance. If energy isn't conserved, your results are wrong no matter how good the animation looks.
+Blast and ballistic simulation is one of those areas where you really need to validate against test data. The JWL parameters for your explosive need to match the actual explosive you're using — don't just grab TNT numbers and assume they work for RDX. For penetration, your mesh size in the impact zone matters enormously — We typically use 0.5-1mm elements for small caliber projectiles. And always check your energy balance. If energy isn't conserved, your results are wrong no matter how good the animation looks.

@@ -15,7 +15,7 @@ sources:
 
 # OrCAD PCB Routing: Manual vs Auto-Router Strategies for Complex Boards
 
-Routing a complex PCB is part art, part science. I've routed boards with 2,000+ nets in OrCAD and developed a workflow that combines manual control for critical signals with auto-routing for bulk connections. Here's the strategy.
+Routing a complex PCB is part art, part science. We've routed boards with 2,000+ nets in OrCAD and developed a workflow that combines manual control for critical signals with auto-routing for bulk connections. Here's the strategy.
 
 ## Routing Priority Order
 
@@ -153,4 +153,4 @@ After auto-routing:
 
 **Differential pair length mismatch**: After auto-routing, check pair lengths. Use **Delay Tune** to add serpentine to the shorter trace.
 
-**Power trace voltage drop**: Long, thin power traces cause voltage drop. Calculate: V_drop = I × R, where R = ρ × L / (W × T). For a 0.5mm wide, 100mm long, 35µm thick copper trace carrying 2A: V_drop = 0.12V. If this is too much, widen the trace or use a power plane.
+**Power trace voltage drop**: Long, thin power traces cause voltage drop. Calculate: V_drop = we × R, where R = ρ × L / (W × T). For a 0.5mm wide, 100mm long, 35µm thick copper trace carrying 2A: V_drop = 0.12V. If this is too much, widen the trace or use a power plane.

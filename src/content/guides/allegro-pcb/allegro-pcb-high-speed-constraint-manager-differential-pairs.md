@@ -15,7 +15,7 @@ sources:
 
 # Cadence Allegro PCB High-Speed Design: Constraint Manager Setup and Differential Pairs
 
-Allegro's Constraint Manager is the backbone of high-speed PCB design in the Cadence flow. Rather than checking rules after routing, Constraint Manager enforces electrical and physical rules in real-time as you route, preventing violations before they happen. I've used it on DDR4, PCIe Gen 4, and 100GbE designs, and the setup process is consistent once you understand the hierarchy.
+Allegro's Constraint Manager is the backbone of high-speed PCB design in the Cadence flow. Rather than checking rules after routing, Constraint Manager enforces electrical and physical rules in real-time as you route, preventing violations before they happen. We've used it on DDR4, PCIe Gen 4, and 100GbE designs, and the setup process is consistent once you understand the hierarchy.
 
 ## Constraint Manager Architecture
 

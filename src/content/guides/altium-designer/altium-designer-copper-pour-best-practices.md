@@ -1,6 +1,6 @@
 ---
 title: "Altium Designer Copper Pour Best Practices: Avoiding Disconnected Islands and Thermal Relief Issues"
-excerpt: "Copper pours look simple but cause subtle manufacturing and signal integrity problems. I cover the pour settings, clearance rules, and verification steps I use to avoid disconnected islands, thermal relief failures, and plane noise."
+excerpt: "Copper pours look simple but cause subtle manufacturing and signal integrity problems. We cover the pour settings, clearance rules, and verification steps we use to avoid disconnected islands, thermal relief failures, and plane noise."
 category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer copper pour best practices thermal relief"
@@ -15,7 +15,7 @@ sources:
 
 # Altium Designer Copper Pour Best Practices: Avoiding Disconnected Islands and Thermal Relief Issues
 
-A Reddit user in r/Altium reported problems with updating their PCB — a common complaint that often traces back to copper pour issues. Copper pours are one of Altium's most useful features for EMI reduction and thermal management, but they're also the source of many subtle problems that don't show up until the board is manufactured. I've dealt with disconnected copper islands that caused antenna effects, thermal relief connections that failed during reflow, and plane splits that created signal integrity nightmares. Here's how to use copper pours correctly and avoid the problems I've encountered.
+A Reddit user in r/Altium reported problems with updating their PCB — a common complaint that often traces back to copper pour issues. Copper pours are one of Altium's most useful features for EMI reduction and thermal management, but they're also the source of many subtle problems that don't show up until the board is manufactured. We've dealt with disconnected copper islands that caused antenna effects, thermal relief connections that failed during reflow, and plane splits that created signal integrity nightmares. Here's how to use copper pours correctly and avoid the problems we've encountered.
 
 ## When to Use Copper Pours
 

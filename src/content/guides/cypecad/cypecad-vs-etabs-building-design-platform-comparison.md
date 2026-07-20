@@ -16,7 +16,7 @@ sources:
 
 # CYPECAD vs ETABS: Building Design Platform Comparison for European and Latin American Markets
 
-I've used both CYPECAD and ETABS on building projects, and the choice usually comes down to where the project is located and which codes govern. CYPECAD is deeply integrated with Eurocodes and popular in Spain and Latin America; ETABS is the global standard with strength in North American codes. Both get the job done, but the workflow is quite different. Here's how I compare them.
+We've used both CYPECAD and ETABS on building projects, and the choice usually comes down to where the project is located and which codes govern. CYPECAD is deeply integrated with Eurocodes and popular in Spain and Latin America; ETABS is the global standard with strength in North American codes. Both get the job done, but the workflow is quite different. Here's how we compare them.
 
 ## Market Position
 
@@ -168,6 +168,6 @@ The tools serve different markets and workflows, so using both covers all projec
 
 The workflow differences between CYPECAD and ETABS reflect their different design philosophies. CYPECAD's workflow is design-oriented: you define the building geometry, assign loads, and CYPECAD automatically generates the structural model, performs analysis, and designs the elements according to the selected code. This automated approach is fast for standard buildings. ETABS' workflow is analysis-oriented: you manually build the analytical model, define load patterns and combinations, run the analysis, and then perform design checks. For repetitive building types like residential or office towers, CYPECAD's automation saves significant time. For unusual structures with complex geometry or non-standard load patterns, ETABS' manual modeling approach provides the flexibility needed. Many structural engineers use both tools — CYPECAD for standard buildings where speed matters, and ETABS for complex structures where analytical control matters.
 
-## My Take
+## Our Take
 
-If you're in Spain or Latin America, CYPECAD is probably the right choice — the Eurocode integration, Spanish code support, and automatic drawing generation are hard to beat. If you're working internationally, especially in North America or the Middle East, ETABS is the safer bet. Some firms I know use both — CYPECAD for Eurocode projects where they need construction drawings, ETABS for international projects where they need advanced analysis. There's no wrong answer here — it's about matching the tool to your market and workflow.
+If you're in Spain or Latin America, CYPECAD is probably the right choice — the Eurocode integration, Spanish code support, and automatic drawing generation are hard to beat. If you're working internationally, especially in North America or the Middle East, ETABS is the safer bet. Some firms we know use both — CYPECAD for Eurocode projects where they need construction drawings, ETABS for international projects where they need advanced analysis. There's no wrong answer here — it's about matching the tool to your market and workflow.

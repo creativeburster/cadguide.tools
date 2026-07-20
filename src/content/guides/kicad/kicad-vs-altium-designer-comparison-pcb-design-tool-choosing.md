@@ -17,7 +17,7 @@ sources:
 
 # KiCad vs Altium Designer: Choosing the Right PCB Design Tool for Your Team
 
-I've used both KiCad and Altium Designer extensively, and the choice between them is one of the most frequently debated topics in the PCB design community. On Reddit's r/PrintedCircuitBoard, a user asked "Should I learn KiCad or Altium Designer?" and received 51 comments — most reflecting the same divide I see in every discussion. Another user on a university design team asked whether to stick with KiCad or switch to Altium, noting that they "do notice limitations" with KiCad. And a startup founder asked "Altium or KiCad for a startup?" when joining a company that currently uses KiCad, noting that they're "primarily an Altium Designer user" who has "heard generally OK things" about KiCad.
+We've used both KiCad and Altium Designer extensively, and the choice between them is one of the most frequently debated topics in the PCB design community. On Reddit's r/PrintedCircuitBoard, a user asked "Should I learn KiCad or Altium Designer?" and received 51 comments — most reflecting the same divide we see in every discussion. Another user on a university design team asked whether to stick with KiCad or switch to Altium, noting that they "do notice limitations" with KiCad. And a startup founder asked "Altium or KiCad for a startup?" when joining a company that currently uses KiCad, noting that they're "primarily an Altium Designer user" who has "heard generally OK things" about KiCad.
 
 These discussions capture the real decision: KiCad is free and capable, Altium is expensive and polished. The right choice depends on your team size, budget, project complexity, and collaboration needs.
 
@@ -111,6 +111,6 @@ If you're switching from KiCad to Altium:
 - The transition is generally smoother due to Altium's more comprehensive import tools
 - Library setup in Altium's managed system takes time but provides long-term benefits
 
-## My Take
+## Our Take
 
 For startups and small teams, KiCad is the pragmatic choice — it's free, capable, and constantly improving. The library management pain is real but manageable with Git-based shared libraries and community resources. For established companies with complex boards and managed library requirements, Altium's subscription cost is justified by the productivity gains in library management, design rules, and collaboration. The worst approach is being in between — using Altium for simple boards where KiCad would suffice, or using KiCad for complex high-speed boards where Altium's advanced features would save significant time. Match the tool to your actual needs, not to what you think you might need someday. On the KiCad forum, users who have used both tools agree that KiCad's rapid improvement in recent versions (especially v8 and v9) has closed much of the gap for typical 2-6 layer boards. The decision ultimately comes down to whether your team needs the managed library ecosystem and advanced design rules that Altium provides, or whether you can work effectively with KiCad's file-based libraries and community-maintained components.

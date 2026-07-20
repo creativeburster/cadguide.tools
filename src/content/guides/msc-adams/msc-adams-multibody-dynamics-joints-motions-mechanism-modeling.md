@@ -15,7 +15,7 @@ sources:
 
 # MSC Adams Multibody Dynamics: Building Mechanism Models with Joints and Motions
 
-MSC Adams is the industry-standard multibody dynamics simulation software. It lets you build virtual prototypes of mechanical systems — from four-bar linkages to full vehicle suspensions — and simulate their motion before building physical prototypes. I'll walk through the complete process of building and simulating a mechanism model.
+MSC Adams is the industry-standard multibody dynamics simulation software. It lets you build virtual prototypes of mechanical systems — from four-bar linkages to full vehicle suspensions — and simulate their motion before building physical prototypes. We'll walk through the complete process of building and simulating a mechanism model.
 
 ## Adams Modeling Workflow
 

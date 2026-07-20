@@ -15,7 +15,7 @@ sources:
 
 # CADWorx Equipment and Vessel Modeling: Nozzles, Platforms, and Ladders
 
-Equipment modeling in CADWorx is more capable than most people realize. I've modeled everything from simple pumps to complex distillation columns with platforms and ladders. The Equipment module is parametric — you define dimensions and it generates the 3D model. But getting nozzles right is critical, because if the nozzles are wrong, the piping connections will fail. Here's my complete equipment modeling guide.
+Equipment modeling in CADWorx is more capable than most people realize. We've modeled everything from simple pumps to complex distillation columns with platforms and ladders. The Equipment module is parametric — you define dimensions and it generates the 3D model. But getting nozzles right is critical, because if the nozzles are wrong, the piping connections will fail. Here's our complete equipment modeling guide.
 
 ## Understanding CADWorx Equipment
 

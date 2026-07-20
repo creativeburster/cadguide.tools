@@ -15,7 +15,7 @@ sources:
 
 # OpenSCAD Modules and Libraries: Building Reusable Code for Complex Models
 
-After writing OpenSCAD scripts for a year, my code files were getting unwieldy — 500-line scripts with duplicated logic. Then I discovered modules and libraries. Now I have a personal library of 40+ reusable modules that make new designs take minutes instead of hours. Here's how to organize your OpenSCAD code.
+After writing OpenSCAD scripts for a year, our code files were getting unwieldy — 500-line scripts with duplicated logic. Then we discovered modules and libraries. Now we have a personal library of 40+ reusable modules that make new designs take minutes instead of hours. Here's how to organize your OpenSCAD code.
 
 ## Module Basics
 

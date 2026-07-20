@@ -1,6 +1,6 @@
 ---
 title: "Autodesk Netfabb 3D Print Preparation: Orientation, Packing, and Slicing Workflow"
-excerpt: "Netfabb's print preparation tools handle part orientation, build plate packing, slicing, and G-code generation for industrial 3D printers. I cover the orientation optimization workflow, arranging multiple parts on the build plate, and exporting print-ready files for SLS, SLA, and FDM systems."
+excerpt: "Netfabb's print preparation tools handle part orientation, build plate packing, slicing, and G-code generation for industrial 3D printers. We cover the orientation optimization workflow, arranging multiple parts on the build plate, and exporting print-ready files for SLS, SLA, and FDM systems."
 category: "workflow"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb 3D print preparation orientation packing slicing workflow"
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Netfabb 3D Print Preparation: Orientation, Packing, and Slicing Workflow
 
-I've prepared hundreds of parts for 3D printing through Netfabb, from single prototypes to full build plates of nested SLS parts. Netfabb's print preparation pipeline covers everything from part orientation to build plate packing to final slicing — and understanding each step ensures efficient, successful prints across FDM, SLA, and SLS technologies.
+We've prepared hundreds of parts for 3D printing through Netfabb, from single prototypes to full build plates of nested SLS parts. Netfabb's print preparation pipeline covers everything from part orientation to build plate packing to final slicing — and understanding each step ensures efficient, successful prints across FDM, SLA, and SLS technologies.
 
 ## The Print Preparation Pipeline
 

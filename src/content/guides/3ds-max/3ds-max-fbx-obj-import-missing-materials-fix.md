@@ -1,6 +1,6 @@
 ---
 title: "3ds Max FBX and OBJ Import: Missing Materials, Broken UVs, and Texture Path Recovery"
-excerpt: "FBX imports arriving in 3ds Max with no materials, OBJ files missing texture mappings, and Revit-to-Max exports showing everything gray — I cover the root causes and the exact import settings that fix each scenario."
+excerpt: "FBX imports arriving in 3ds Max with no materials, OBJ files missing texture mappings, and Revit-to-Max exports showing everything gray — We cover the root causes and the exact import settings that fix each scenario."
 category: "troubleshooting"
 softwareSlug: "3ds-max"
 keyword: "3ds Max FBX import missing materials OBJ textures fix"
@@ -16,13 +16,13 @@ sources:
 
 # 3ds Max FBX and OBJ Import: Missing Materials, Broken UVs, and Texture Path Recovery
 
-I get a lot of FBX and OBJ files from architects, game studios, and other 3D artists. The single most common problem I encounter is materials not coming through on import. The model geometry arrives fine, but everything is gray — no textures, no material assignments, just a blank slate that would take hours to retexture manually.
+We get a lot of FBX and OBJ files from architects, game studios, and other 3D artists. The single most common problem we encounter is materials not coming through on import. The model geometry arrives fine, but everything is gray — no textures, no material assignments, just a blank slate that would take hours to retexture manually.
 
-Let me break down the three main scenarios I see and how I fix each one.
+Let us break down the three main scenarios we see and how we fix each one.
 
 ## Scenario 1: FBX Import with No Materials
 
-This is the most frequent complaint I hear. An architect sends you an FBX exported from Revit, you import it into 3ds Max, and everything appears as a flat gray material-less mesh.
+This is the most frequent complaint we hear. An architect sends you an FBX exported from Revit, you import it into 3ds Max, and everything appears as a flat gray material-less mesh.
 
 **Root cause**: The FBX file contains material data, but 3ds Max's import settings are either not configured to read them, or the material types in the FBX are not compatible with 3ds Max's material system.
 
@@ -33,9 +33,9 @@ This is the most frequent complaint I hear. An architect sends you an FBX export
 3. Go to the **Geometry** tab and verify **Preserve Instances** and **Preserve Edge Orientation** are enabled
 4. Go to the **Advanced Options → Units** tab and set the system unit to match the source file (usually centimeters for Revit exports)
 
-If materials still don't come through, the issue is likely on the export side. I've found that Revit FBX exports need **Graphic Display Options set to Realistic** before exporting. If the Revit view is set to Wireframe or Hidden Line, the materials don't get baked into the FBX. I send this instruction back to the architect every time now.
+If materials still don't come through, the issue is likely on the export side. We've found that Revit FBX exports need **Graphic Display Options set to Realistic** before exporting. If the Revit view is set to Wireframe or Hidden Line, the materials don't get baked into the FBX. We send this instruction back to the architect every time now.
 
-For FBX files from Blender or Cinema 4D, the problem is often that the source software used a material type that 3ds Max doesn't recognize. In these cases, I use **Autodesk's FBX Converter** tool to re-process the file with material conversion enabled. It's an older tool but still works for this purpose.
+For FBX files from Blender or Cinema 4D, the problem is often that the source software used a material type that 3ds Max doesn't recognize. In these cases, we use **Autodesk's FBX Converter** tool to re-process the file with material conversion enabled. It's an older tool but still works for this purpose.
 
 ## Scenario 2: OBJ Import with Textures but No Material Assignments
 
@@ -50,11 +50,11 @@ OBJ files are simpler than FBX — they come with a `.mtl` (material library) fi
 3. If the MTL file references a V-Ray material type (like `Ns 1.5` with custom parameters), 3ds Max's OBJ importer won't apply it
 4. The workaround: export the OBJ from the source software using **Standard materials** instead of V-Ray or custom materials
 
-One user on the Autodesk forums discovered that the problem was specifically with V-Ray materials — when the source used a Standard material, the import worked perfectly. I've confirmed this in my own testing. If you control the export process, always use Standard materials for OBJ exchange.
+One user on the Autodesk forums discovered that the problem was specifically with V-Ray materials — when the source used a Standard material, the import worked perfectly. If you control the export process, always use Standard materials for OBJ exchange.
 
 ## Scenario 3: Texture Paths Broken After Moving Files
 
-This one bit me early in my career. You receive a project folder with a `.max` file, texture files, and everything works. You reorganize the folder structure, and suddenly all textures are missing.
+This one is easy to miss. You receive a project folder with a `.max` file, texture files, and everything works. You reorganize the folder structure, and suddenly all textures are missing.
 
 **Root cause**: 3ds Max stores absolute file paths for textures. When you move files, the paths no longer match.
 
@@ -69,7 +69,7 @@ This is the single most useful shortcut in 3ds Max for texture management:
 5. Browse to the correct location and click OK
 6. For multiple missing textures in the same folder, right-click → **Set Path** on the folder header and set the path once
 
-I also configure **Customize → Configure Project Paths → External Files** to add the project folder as a search path. This way, 3ds Max looks in the project folder for any textures before reporting them as missing.
+We also configure **Customize → Configure Project Paths → External Files** to add the project folder as a search path. This way, 3ds Max looks in the project folder for any textures before reporting them as missing.
 
 **Pro tip**: Always keep texture files in the same folder as the `.max` file, or in a subfolder like `/maps/` within the project. 3ds Max will find textures in the same folder as the scene file automatically.
 
@@ -77,13 +77,13 @@ I also configure **Customize → Configure Project Paths → External Files** to
 
 This deserves its own section because it's so common in architecture visualization workflows.
 
-When exporting from Revit to FBX for 3ds Max, materials frequently don't transfer. I've found two critical settings that must be correct on the Revit side:
+When exporting from Revit to FBX for 3ds Max, materials frequently don't transfer. We've found two critical settings that must be correct on the Revit side:
 
 1. **Graphic Display Options → Realistic**: The Revit view must be set to Realistic display mode before exporting. If it's set to any other mode (Wireframe, Hidden Line, Shaded), the FBX will not include material assignments.
 
 2. **Export → FBX → Use LOD (Level of Detail)**: Check this option so the export uses the current Graphic Display option. Without this, Revit exports with default settings that strip materials.
 
-Even with these settings correct, some Revit materials won't translate to 3ds Max materials. Revit's material system is fundamentally different from 3ds Max's. I typically plan to reassign materials in 3ds Max for any Revit import — the geometry and UVs come through, but I rebuild the material assignments using 3ds Max's Physical Material or V-Ray material.
+Even with these settings correct, some Revit materials won't translate to 3ds Max materials. Revit's material system is fundamentally different from 3ds Max's. We typically plan to reassign materials in 3ds Max for any Revit import — the geometry and UVs come through, but we rebuild the material assignments using 3ds Max's Physical Material or V-Ray material.
 
 ## Scenario 5: Multi/Sub-Object Materials Lost on OBJ/FBX Export
 
@@ -93,11 +93,11 @@ When you have a single mesh with multiple materials assigned via Material IDs (M
 
 **The fix**: Before exporting, **detach** elements with different material IDs into separate objects. Each object gets its own material, which exports cleanly to OBJ/FBX.
 
-For FBX, Multi/Sub-Object materials transfer better, but I've still seen issues with UV mapping on sub-elements. The most reliable approach I've found is to **UV unwrap** with the Unwrap UVW modifier before export. This creates unambiguous UV data that survives the FBX round-trip to Blender, Cinema 4D, and back.
+For FBX, Multi/Sub-Object materials transfer better, but we've still seen issues with UV mapping on sub-elements. The most reliable approach we've found is to **UV unwrap** with the Unwrap UVW modifier before export. This creates unambiguous UV data that survives the FBX round-trip to Blender, Cinema 4D, and back.
 
 ## Best Practices for Interoperability
 
-After years of dealing with these issues, I've established these rules for our studio:
+To avoid these issues, we recommend these rules:
 
 - **Use FBX for Max-to-Max and Max-to-Revit transfers** — it preserves the most data
 - **Use OBJ for Max-to-Blender transfers** — simpler, fewer compatibility issues
@@ -109,4 +109,4 @@ After years of dealing with these issues, I've established these rules for our s
 
 ## Summary
 
-Missing materials on import almost always comes down to either incompatible material types or incorrect export settings on the source side. The fixes are: check FBX import options for Embed Media, use Standard materials for OBJ, set Revit to Realistic display before export, and use Shift+T (Asset Tracking) to fix broken texture paths. These four techniques cover 95% of the import issues I encounter.
+Missing materials on import almost always comes down to either incompatible material types or incorrect export settings on the source side. The fixes are: check FBX import options for Embed Media, use Standard materials for OBJ, set Revit to Realistic display before export, and use Shift+T (Asset Tracking) to fix broken texture paths. These four techniques cover 95% of the import issues we encounter.

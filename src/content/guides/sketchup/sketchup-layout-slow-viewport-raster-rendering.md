@@ -1,6 +1,6 @@
 ---
 title: "SketchUp LayOut Slow Viewport Updates: Raster Mode, Edge Reduction, and Auto-Render"
-excerpt: "LayOut hangs for minutes when updating SketchUp viewports, showing the yellow exclamation mark indefinitely. I cover the Raster rendering switch, auto-render disabling, and model simplification that fix this."
+excerpt: "LayOut hangs for minutes when updating SketchUp viewports, showing the yellow exclamation mark indefinitely. We cover the Raster rendering switch, auto-render disabling, and model simplification that fix this."
 category: "performance"
 softwareSlug: "sketchup"
 keyword: "SketchUp LayOut slow viewport update raster rendering"

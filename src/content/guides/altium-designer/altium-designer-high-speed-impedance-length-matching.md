@@ -1,6 +1,6 @@
 ---
 title: "Altium Designer High-Speed PCB Routing: Impedance Control and Length Matching"
-excerpt: "Getting 50-ohm impedance and length matching right in Altium requires more than just setting a trace width. I cover the stackup calculator, impedance rules, and length tuning tools I use for DDR and PCIe designs."
+excerpt: "Getting 50-ohm impedance and length matching right in Altium requires more than just setting a trace width. We cover the stackup calculator, impedance rules, and length tuning tools we use for DDR and PCIe designs."
 category: "deployment"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer high speed impedance control length matching"
@@ -15,7 +15,7 @@ sources:
 
 # Altium Designer High-Speed PCB Routing: Impedance Control and Length Matching
 
-I design PCBs for embedded systems with DDR4 memory, PCIe Gen 3, and USB 3.2 — all of which require controlled impedance and length matching. When I first started doing high-speed design in Altium, I made every mistake in the book: I used the wrong stackup, calculated impedance by hand (and got it wrong), and tried to length-match by eyeballing trace lengths. After two board re-spins that cost my company over $15,000, I learned to do it properly. Here's the workflow I now use for every high-speed design.
+Embedded systems with DDR4 memory, PCIe Gen 3, and USB 3.2 all require controlled impedance and length matching. Engineers new to high-speed design in Altium tend to make the same mistakes: the wrong stackup, impedance calculated by hand (and gotten wrong), and length-matching by eyeballing trace lengths. Those mistakes lead to costly board re-spins. Here's a workflow that gets high-speed design right the first time.
 
 ## Step 1: Define Your Stackup
 
@@ -33,7 +33,7 @@ Controlled impedance starts with the PCB stackup. The trace width needed for 50-
 
 ### A Practical 4-Layer Stackup for 50-Ohm Routing
 
-For most of my designs, I use this 4-layer stackup:
+For most of our designs, we use this 4-layer stackup:
 
 | Layer | Material | Thickness | Dk |
 |-------|----------|-----------|-----|
@@ -45,7 +45,7 @@ For most of my designs, I use this 4-layer stackup:
 | Prepreg | FR-4 | 0.1mm | 4.3 |
 | Bottom Copper | Copper | 0.018mm | - |
 
-With this stackup, a 0.18mm trace width on the top layer gives approximately 50-ohm single-ended impedance. But don't take my word for it — use the impedance calculator.
+With this stackup, a 0.18mm trace width on the top layer gives approximately 50-ohm single-ended impedance. But don't take our word for it — use the impedance calculator.
 
 ## Step 2: Calculate Impedance in Altium
 
@@ -65,7 +65,7 @@ Altium's Layer Stack Manager includes an impedance calculator.
 
 ### Verifying with a Field Solver
 
-Altium's built-in impedance calculator uses a 2D field solver, which is accurate for standard geometries. For unusual stackups (embedded microstrip, coplanar waveguide), I verify with a dedicated field solver like Saturn PCB Toolkit or Si9000.
+Altium's built-in impedance calculator uses a 2D field solver, which is accurate for standard geometries. For unusual stackups (embedded microstrip, coplanar waveguide), we verify with a dedicated field solver like Saturn PCB Toolkit or Si9000.
 
 ## Step 3: Set Up Impedance Rules
 

@@ -18,7 +18,7 @@ sources:
 
 Proper organization of layers and blocks is the difference between a maintainable drawing and a chaotic mess. LibreCAD provides the tools — but as Reddit users on r/FreeCAD have noted, LibreCAD has only basic block support with no pre-built libraries, unlike QCAD Professional which ships with fastener and electrical symbol libraries. This means you'll need to build your component library from scratch in LibreCAD.
 
-I set up LibreCAD for a small electronics workshop where we needed consistent layer standards across schematic drawings. The layer management tools are basic compared to AutoCAD — there's no layer filters or layer states feature — but for simple 2D work, the core functionality is adequate. This guide covers how to use LibreCAD's organizational tools effectively with industry-standard naming conventions and library management practices.
+We set up LibreCAD for a small electronics workshop where we needed consistent layer standards across schematic drawings. The layer management tools are basic compared to AutoCAD — there's no layer filters or layer states feature — but for simple 2D work, the core functionality is adequate. This guide covers how to use LibreCAD's organizational tools effectively with industry-standard naming conventions and library management practices.
 
 ## Layer Management
 

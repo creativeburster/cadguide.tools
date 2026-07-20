@@ -15,7 +15,7 @@ sources:
 
 # Tinkercad vs SketchUp: Which Free 3D Modeling Tool Is Right for You?
 
-Both Tinkercad and SketchUp are free, beginner-friendly 3D modeling tools. I use both — Tinkercad for quick 3D-printable parts and SketchUp for architectural models. They serve different purposes. Here's the comparison.
+Both Tinkercad and SketchUp are free, beginner-friendly 3D modeling tools. We use both — Tinkercad for quick 3D-printable parts and SketchUp for architectural models. They serve different purposes. Here's the comparison.
 
 ## Modeling Approach
 
@@ -53,7 +53,7 @@ Both Tinkercad and SketchUp are free, beginner-friendly 3D modeling tools. I use
 |---------|-----------|----------|
 | Walls and rooms | Basic (boxes) | Excellent (push/pull) |
 | Doors and windows | Basic (holes) | Excellent (components) |
-| Roofs | Basic (prisms) | Excellent (follow-me tool) |
+| Roofs | Basic (prisms) | Excellent (follow-us tool) |
 | Dimensions | Metric (mm) | Imperial/metric (ft/m) |
 | 2D import (floor plans) | No | Yes (DWG, DXF, PDF) |
 | Geolocation | No | Yes (Google Earth integration) |
@@ -127,7 +127,7 @@ Some projects benefit from both tools:
 
 3. **Educational projects**: Use Tinkercad for 3D printing projects and SketchUp for architectural design units in the curriculum.
 
-## My Recommendation
+## Our Recommendation
 
 **For 3D printing and maker projects**: Tinkercad. It's the fastest path from idea to printable model. The guaranteed solid geometry means your prints will work.
 

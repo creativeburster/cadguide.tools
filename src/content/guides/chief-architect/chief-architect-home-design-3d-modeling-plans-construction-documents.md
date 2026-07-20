@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Home Design: 3D Modeling, Plans, and Construction Documents
 
-I've been using Chief Architect for residential design for years, and what keeps me coming back is how fast it is. Unlike Revit, where you're building a full BIM model, Chief Architect is designed specifically for home builders and residential designers. You draw 2D plans and it automatically generates 3D models, sections, elevations, schedules, and material lists. Let me walk you through the workflow.
+We've been using Chief Architect for residential design for years, and what keeps us coming back is how fast it is. Unlike Revit, where you're building a full BIM model, Chief Architect is designed specifically for home builders and residential designers. You draw 2D plans and it automatically generates 3D models, sections, elevations, schedules, and material lists. Let us walk you through the workflow.
 
 ## Project Setup
 
@@ -305,4 +305,4 @@ I've been using Chief Architect for residential design for years, and what keeps
 
 ## Wrapping Up
 
-Chief Architect is the most efficient residential design tool I've used. The automatic 3D generation from 2D plans is the killer feature — you draw the floor plan, and the 3D model, sections, elevations, and schedules are all there. For custom home builders and residential designers, it's hard to beat. My tip: set up your template file with your default wall types, window styles, and annotation preferences before starting a project. That upfront investment pays off on every subsequent project.
+Chief Architect is the most efficient residential design tool we've used. The automatic 3D generation from 2D plans is the killer feature — you draw the floor plan, and the 3D model, sections, elevations, and schedules are all there. For custom home builders and residential designers, it's hard to beat. Our tip: set up your template file with your default wall types, window styles, and annotation preferences before starting a project. That upfront investment pays off on every subsequent project.

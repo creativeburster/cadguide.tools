@@ -1,6 +1,6 @@
 ---
 title: "Autodesk InfraWorks Roadway Design: Corridors, Intersections, and Coverage Areas"
-excerpt: "InfraWorks roadway design tools create preliminary road corridors, intersections, and roundabouts in a real-world geographic context. I cover the road design workflow, adding roads from scratch or importing alignments, intersection modeling, and adjusting road profiles and cross-sections."
+excerpt: "InfraWorks roadway design tools create preliminary road corridors, intersections, and roundabouts in a real-world geographic context. We cover the road design workflow, adding roads from scratch or importing alignments, intersection modeling, and adjusting road profiles and cross-sections."
 category: "workflow"
 softwareSlug: "infraworks"
 keyword: "Autodesk InfraWorks roadway design corridors intersections roundabouts coverage areas"
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk InfraWorks Roadway Design: Corridors, Intersections, and Coverage Areas
 
-I've used InfraWorks for preliminary roadway design on highway, urban, and rural projects. InfraWorks excels at creating realistic infrastructure models in their geographic context — you can design roads, bridges, and site features on real terrain with satellite imagery, then share the model with stakeholders for visual review before detailed design in Civil 3D.
+We've used InfraWorks for preliminary roadway design on highway, urban, and rural projects. InfraWorks excels at creating realistic infrastructure models in their geographic context — you can design roads, bridges, and site features on real terrain with satellite imagery, then share the model with stakeholders for visual review before detailed design in Civil 3D.
 
 ## InfraWorks in the Infrastructure Workflow
 

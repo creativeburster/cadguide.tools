@@ -15,7 +15,7 @@ sources:
 
 # SolidCAM 5-Axis Machining: Setup, Tool Axis Control, and Collision Avoidance
 
-5-axis machining in SolidCAM is powerful but complex. I crashed a 5-axis machine in my first month because I didn't understand tool axis control properly. After that expensive lesson, I developed a systematic approach to 5-axis setup that I now use for every job. Here it is.
+5-axis machining in SolidCAM is powerful but complex, and misunderstanding tool axis control is an easy way to crash a machine. A systematic approach to 5-axis setup avoids those expensive mistakes. Here it is.
 
 ## Machine Configuration
 

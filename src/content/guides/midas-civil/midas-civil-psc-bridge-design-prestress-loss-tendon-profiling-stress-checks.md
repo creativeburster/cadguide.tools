@@ -15,7 +15,7 @@ sources:
 
 # MIDAS Civil PSC Bridge Design: Prestress Loss, Tendon Profiling, and Stress Checks
 
-Prestressed concrete bridge design is one of my favorite topics — there's something satisfying about profiling tendons and watching the stress checks come out green. MIDAS Civil handles the full PSC workflow: tendon profiling, prestress loss calculation, and stress checks per AASHTO LRFD. Let me walk you through how I set up a PSC bridge design.
+Prestressed concrete bridge design is one of our favorite topics — there's something satisfying about profiling tendons and watching the stress checks come out green. MIDAS Civil handles the full PSC workflow: tendon profiling, prestress loss calculation, and stress checks per AASHTO LRFD. Let us walk you through how we set up a PSC bridge design.
 
 ## PSC Section Definition
 
@@ -32,11 +32,11 @@ Prestressed concrete bridge design is one of my favorite topics — there's some
    - **Fillets**: 300×300mm at web-slab junctions
 3. Calculate section properties:
    - Area (A), Centroid (yc), Moment of inertia (Iy, Iz)
-   - Section modulus (St = I/yc, Sb = I/(h-yc))
+   - Section modulus (St = we/yc, Sb = we/(h-yc))
 
-### I-Girder Section
+### we-Girder Section
 
-1. Model > Section > PSC Section > I-Beam
+1. Model > Section > PSC Section > we-Beam
 2. Define:
    - **Top flange width**: 500mm
    - **Top flange thickness**: 200mm
@@ -261,4 +261,4 @@ Prestressed concrete bridge design is one of my favorite topics — there's some
 
 ## Wrapping Up
 
-PSC bridge design in MIDAS Civil is comprehensive and well-organized. The thing I always emphasize: get your prestress losses right. The effective prestress after losses determines everything — stress checks, deflection, ultimate capacity. Don't just accept the default loss parameters; check them against your project's specifications. And always check stresses at transfer — that's when the concrete is youngest and weakest, and the prestress force is highest.
+PSC bridge design in MIDAS Civil is comprehensive and well-organized. The thing we always emphasize: get your prestress losses right. The effective prestress after losses determines everything — stress checks, deflection, ultimate capacity. Don't just accept the default loss parameters; check them against your project's specifications. And always check stresses at transfer — that's when the concrete is youngest and weakest, and the prestress force is highest.

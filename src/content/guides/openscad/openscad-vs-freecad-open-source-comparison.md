@@ -15,7 +15,7 @@ sources:
 
 # OpenSCAD vs FreeCAD: Choosing the Right Open Source CAD for Your Project
 
-Both OpenSCAD and FreeCAD are free, open-source 3D CAD tools. But they approach modeling from opposite directions. OpenSCAD is code-based; FreeCAD is GUI-based. I use both, and the choice depends entirely on what I'm doing. Here's when each wins.
+Both OpenSCAD and FreeCAD are free, open-source 3D CAD tools. But they approach modeling from opposite directions. OpenSCAD is code-based; FreeCAD is GUI-based. We use both, and the choice depends entirely on what we're doing. Here's when each wins.
 
 ## Fundamental Difference
 
@@ -121,7 +121,7 @@ This workflow gives you OpenSCAD's parametric flexibility plus FreeCAD's drawing
 
 **FreeCAD**: 1-2 weeks to understand the workbench system. 1-3 months to become proficient. The complexity comes from having many workbenches (Part, PartDesign, Sketcher, TechDraw, Path, FEM, etc.) with different workflows.
 
-## My Recommendation
+## Our Recommendation
 
 **Choose OpenSCAD if:**
 - You primarily 3D print your designs

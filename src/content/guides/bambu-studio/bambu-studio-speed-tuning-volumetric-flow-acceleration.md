@@ -1,6 +1,6 @@
 ---
 title: "Bambu Studio Speed Tuning: Volumetric Flow, Acceleration, and Profile Optimization"
-excerpt: "Bambu Lab printers can hit 500 mm/s, but most users never reach those speeds because of volumetric flow limits, acceleration caps, and cooling constraints. I cover the three speed bottlenecks in Bambu Studio, profile selection (Standard/Sport/Ludicrous), and specific settings to push speed without sacrificing quality."
+excerpt: "Bambu Lab printers can hit 500 mm/s, but most users never reach those speeds because of volumetric flow limits, acceleration caps, and cooling constraints. We cover the three speed bottlenecks in Bambu Studio, profile selection (Standard/Sport/Ludicrous), and specific settings to push speed without sacrificing quality."
 category: "workflow"
 softwareSlug: "bambu-studio"
 keyword: "Bambu Studio speed tuning volumetric flow acceleration profile optimization"
@@ -17,7 +17,7 @@ sources:
 
 # Bambu Studio Speed Tuning: Volumetric Flow, Acceleration, and Profile Optimization
 
-I run Bambu Lab printers for production, and the most common question I get is "why is my printer not printing as fast as it claims?" The answer almost always comes down to three bottlenecks: volumetric flow limits, acceleration, and cooling. Understanding how these interact in Bambu Studio is the key to actually achieving the speeds your printer is capable of.
+We run Bambu Lab printers for production, and the most common question we get is "why is my printer not printing as fast as it claims?" The answer almost always comes down to three bottlenecks: volumetric flow limits, acceleration, and cooling. Understanding how these interact in Bambu Studio is the key to actually achieving the speeds your printer is capable of.
 
 ## The Three Speed Bottlenecks
 

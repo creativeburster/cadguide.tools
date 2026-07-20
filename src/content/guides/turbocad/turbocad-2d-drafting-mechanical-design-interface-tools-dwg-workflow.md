@@ -178,7 +178,7 @@ TurboCAD supports GD&T (Geometric Dimensioning and Tolerancing):
 
 ## DWG Compatibility Notes
 
-TurboCAD's DWG compatibility is generally good but not perfect. In my testing, 2D geometry, dimensions, and text round-trip well with AutoCAD. The main issues are with complex hatch patterns and custom linetypes — some AutoCAD hatches may not display identically in TurboCAD. Dynamic blocks from AutoCAD are display-only, same as in CorelCAD and progeCAD. TurboCAD also supports its own TCW native format, which preserves more data than DWG but is not compatible with other CAD systems. For maximum compatibility when sharing files with AutoCAD users, always save to DWG 2018 format and verify the round-trip before sending critical files.
+TurboCAD's DWG compatibility is generally good but not perfect. In our testing, 2D geometry, dimensions, and text round-trip well with AutoCAD. The main issues are with complex hatch patterns and custom linetypes — some AutoCAD hatches may not display identically in TurboCAD. Dynamic blocks from AutoCAD are display-only, same as in CorelCAD and progeCAD. TurboCAD also supports its own TCW native format, which preserves more data than DWG but is not compatible with other CAD systems. For maximum compatibility when sharing files with AutoCAD users, always save to DWG 2018 format and verify the round-trip before sending critical files.
 
 ## Mechanical Design Tools Overview
 

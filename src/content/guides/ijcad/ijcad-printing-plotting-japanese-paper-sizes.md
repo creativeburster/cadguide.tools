@@ -15,7 +15,7 @@ sources:
 
 # IJCAD Printing and Plotting: Configuring Japanese Paper Sizes and Plot Styles
 
-Plotting from IJCAD is nearly identical to AutoCAD, but the Japanese market defaults and paper size handling have some quirks. I set up plotting for a firm that needed both JIS and ISO output — here's the configuration that worked.
+Plotting from IJCAD is nearly identical to AutoCAD, but the Japanese market defaults and paper size handling have some quirks. We set up plotting for a firm that needed both JIS and ISO output — here's the configuration that worked.
 
 ## Step 1: Configure Printer Drivers
 

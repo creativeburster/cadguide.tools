@@ -1,6 +1,6 @@
 ---
 title: "KeyShot Import from SolidWorks, Rhino, and Creo: LiveLinking, Geometry Quality, and Material Transfer"
-excerpt: "Importing CAD models into KeyShot produces missing faces, incorrect materials, or broken LiveLinking. I cover the import format selection, LiveLinking setup for each CAD application, and the geometry repair workflow for problematic imports."
+excerpt: "Importing CAD models into KeyShot produces missing faces, incorrect materials, or broken LiveLinking. We cover the import format selection, LiveLinking setup for each CAD application, and the geometry repair workflow for problematic imports."
 category: "migration"
 softwareSlug: "keyshot"
 keyword: "KeyShot import SolidWorks Rhino Creo LiveLinking geometry fix"
@@ -16,7 +16,7 @@ sources:
 
 # KeyShot Import from SolidWorks, Rhino, and Creo: LiveLinking, Geometry Quality, and Material Transfer
 
-I work with industrial designers who use SolidWorks, Rhino, and Creo alongside KeyShot. The import process seems simple — just export a file and open it in KeyShot — but the details determine whether you get a clean model with materials or a broken mess with missing faces and default gray surfaces. I've refined this workflow across hundreds of product visualization projects.
+We work with industrial designers who use SolidWorks, Rhino, and Creo alongside KeyShot. The import process seems simple — just export a file and open it in KeyShot — but the details determine whether you get a clean model with materials or a broken mess with missing faces and default gray surfaces. We've refined this workflow across hundreds of product visualization projects.
 
 ## Import Format Selection
 
@@ -34,7 +34,7 @@ KeyShot supports many import formats, but they're not all equal:
 - **OBJ (.obj)**: Preserves geometry and basic materials but loses advanced material properties
 - **STL (.stl)**: Geometry only, no materials — triangulated mesh, not recommended for rendering
 
-**My recommendation**: Always use the native format first. Only fall back to STEP/IGES if the native format fails, and use FBX/OBJ only as a last resort.
+**Our recommendation**: Always use the native format first. Only fall back to STEP/IGES if the native format fails, and use FBX/OBJ only as a last resort.
 
 ## LiveLinking Setup
 
@@ -159,4 +159,4 @@ The model imports as a single object instead of an assembly with individual part
 
 ## Summary
 
-KeyShot import quality depends on format selection and CAD model preparation. My workflow: use native format import → set up LiveLinking for iteration → run geometry diagnostics in CAD before export → verify scale after import → use Medium tessellation for balance → preserve assembly structure → apply PBR materials in KeyShot → save to material library. The native format import and LiveLinking setup together eliminate 90% of import issues I encounter.
+KeyShot import quality depends on format selection and CAD model preparation. Our workflow: use native format import → set up LiveLinking for iteration → run geometry diagnostics in CAD before export → verify scale after import → use Medium tessellation for balance → preserve assembly structure → apply PBR materials in KeyShot → save to material library. The native format import and LiveLinking setup together eliminate 90% of import issues we encounter.

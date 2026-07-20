@@ -1,6 +1,6 @@
 ---
 title: "V-Ray Missing Textures and Black Materials: File Path, Bitmap, and Asset Tracking Fixes"
-excerpt: "Missing textures rendering as black or pink in V-Ray are caused by broken file paths, network share disconnections, or incorrect bitmap settings. I cover the Asset Tracking workflow, bitmap path repair, and render farm texture packaging."
+excerpt: "Missing textures rendering as black or pink in V-Ray are caused by broken file paths, network share disconnections, or incorrect bitmap settings. We cover the Asset Tracking workflow, bitmap path repair, and render farm texture packaging."
 category: "troubleshooting"
 softwareSlug: "v-ray"
 keyword: "V-Ray missing textures black materials file path fix"
@@ -16,7 +16,7 @@ sources:
 
 # V-Ray Missing Textures and Black Materials: File Path, Bitmap, and Asset Tracking Fixes
 
-I manage render submissions for a studio that sends work to multiple render farms, and the most common failure is missing textures. The render comes back with black or pink materials where textures should be. It's frustrating because everything looked fine in the local viewport — the problem only appears when the scene is rendered on a different machine.
+We manage render submissions for a studio that sends work to multiple render farms, and the most common failure is missing textures. The render comes back with black or pink materials where textures should be. It's frustrating because everything looked fine in the local viewport — the problem only appears when the scene is rendered on a different machine.
 
 ## The Root Cause: Absolute File Paths
 
@@ -24,7 +24,7 @@ I manage render submissions for a studio that sends work to multiple render farm
 
 ## Fix 1: Use Asset Tracking (Shift+T)
 
-This is the first tool I reach for when textures are missing:
+This is the first tool we reach for when textures are missing:
 
 1. Press **Shift+T** to open Asset Tracking
 2. Missing textures show a red "Missing" status
@@ -32,7 +32,7 @@ This is the first tool I reach for when textures are missing:
 4. Browse to the correct location
 5. For multiple textures in the same folder, right-click the column header → **Set Path** on all missing items at once
 
-**Pro tip**: I use **Customize → Configure Project Paths → External Files** to add the project's texture folder as a search path. Once configured, 3ds Max automatically finds textures in that folder without needing manual Set Path operations.
+**Pro tip**: We use **Customize → Configure Project Paths → External Files** to add the project's texture folder as a search path. Once configured, 3ds Max automatically finds textures in that folder without needing manual Set Path operations.
 
 ## Fix 2: Use Relative Paths
 
@@ -48,13 +48,13 @@ When the project is moved to another machine or render farm, as long as the text
 
 ## Fix 3: Package the Scene for Render Farms
 
-When sending to a render farm, I use **File → Save As → Archive** (or **File → Archive**) to package the scene. This creates a `.zip` file containing:
+When sending to a render farm, we use **File → Save As → Archive** (or **File → Archive**) to package the scene. This creates a `.zip` file containing:
 - The `.max` scene file
 - All texture files
 - All proxy files
 - All XRef files
 
-The archive uses relative paths, so when the render farm unpacks it, all textures are found. I never send a raw `.max` file to a render farm — always an archive.
+The archive uses relative paths, so when the render farm unpacks it, all textures are found. We never send a raw `.max` file to a render farm — always an archive.
 
 **Alternative**: Use **Project Manager** (a free 3ds Max plugin) or **Connecter** (a popular asset management tool) to package scenes with all dependencies.
 
@@ -92,7 +92,7 @@ In studio environments, textures often live on a NAS or network share. If the sh
 4. Disable NAS sleep/power-saving mode during work hours
 5. For render nodes, ensure the mapped drive is available before the render service starts
 
-I configure all studio workstations and render nodes with the same drive mapping. This eliminates path mismatch issues between machines.
+Configure all workstations and render nodes with the same drive mapping. This eliminates path mismatch issues between machines.
 
 ## Fix 6: V-Ray Material Compatibility
 

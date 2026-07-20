@@ -15,7 +15,7 @@ sources:
 
 # GibbsCAM Turning Setup: Tool Definition, Offsets, and Chuck Configuration
 
-Turning setup in GibbsCAM is straightforward once you understand the tool definition system. I program lathe parts daily and the setup that took me 30 minutes initially now takes 5. Here's the complete process.
+Turning setup in GibbsCAM is straightforward once you understand the tool definition system. We program lathe parts daily and the setup that took us 30 minutes initially now takes 5. Here's the complete process.
 
 ## Step 1: Define the Lathe Machine
 

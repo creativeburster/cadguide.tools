@@ -135,7 +135,7 @@ This is the same model as Adobe Creative Cloud and Autodesk products. You're ren
 - **Desktop Shapr3D**: Included with Pro subscription (no extra cost). Runs on Mac and Windows.
 - **Internet for cloud sync**: Not a direct cost, but cloud sync requires an internet connection. Offline mode works but syncs when reconnected.
 
-## My Recommendation
+## Our Recommendation
 
 If you're a professional product designer who values mobility, Shapr3D Pro at $299/year is excellent value. The STEP export alone justifies the cost. The iPad workflow is genuinely faster for concept design than any desktop CAD.
 

@@ -15,7 +15,7 @@ sources:
 
 # OrCAD Capture Schematic Design: Netlist Generation and DxD Integration
 
-OrCAD Capture is the schematic entry tool in Cadence's PCB design flow. I've used it for years in professional PCB design. It's more structured than Eagle — stricter library management, better hierarchical design, and tighter integration with OrCAD PCB Professional. Here's how to use it effectively.
+OrCAD Capture is the schematic entry tool in Cadence's PCB design flow. We've used it for years in professional PCB design. It's more structured than Eagle — stricter library management, better hierarchical design, and tighter integration with OrCAD PCB Professional. Here's how to use it effectively.
 
 ## Project Setup
 

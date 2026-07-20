@@ -1,6 +1,6 @@
 ---
 title: "CLO 3D Fabric Properties and Simulation: Bending, Stretch, Buckling, and Density Tuning"
-excerpt: "CLO 3D's fabric physical properties — bending, stretch, buckling, and density — determine how digital garments drape and behave. I cover each property with recommended values for common fabric types, the Fabric Kit measurement workflow, and simulation settings for production-quality results."
+excerpt: "CLO 3D's fabric physical properties — bending, stretch, buckling, and density — determine how digital garments drape and behave. We cover each property with recommended values for common fabric types, the Fabric Kit measurement workflow, and simulation settings for production-quality results."
 category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D fabric properties simulation bending stretch buckling density"
@@ -17,7 +17,7 @@ sources:
 
 # CLO 3D Fabric Properties and Simulation: Bending, Stretch, Buckling, and Density Tuning
 
-I've worked with CLO 3D across fashion collections and technical apparel design, and getting fabric properties right is the single most important factor in producing digital garments that look and behave like real fabric. CLO 3D shares its core simulation engine with Marvelous Designer, but the fashion-focused workflow and Fabric Kit integration make the property tuning process more precise and production-oriented.
+We've worked with CLO 3D across fashion collections and technical apparel design, and getting fabric properties right is the single most important factor in producing digital garments that look and behave like real fabric. CLO 3D shares its core simulation engine with Marvelous Designer, but the fashion-focused workflow and Fabric Kit integration make the property tuning process more precise and production-oriented.
 
 ## Core Fabric Physical Properties
 
@@ -36,7 +36,7 @@ Stretch is measured separately for warp and weft. Many woven fabrics have near-z
 
 ### Bending
 
-Bending controls fabric stiffness — how resistant the fabric is to being folded or creased. This is the property I tune most frequently.
+Bending controls fabric stiffness — how resistant the fabric is to being folded or creased. This is the property we tune most frequently.
 
 - **Very soft (silk chiffon, organza)**: 5-20
 - **Soft (silk, lightweight cotton)**: 20-50
@@ -147,7 +147,7 @@ Particle distance controls mesh resolution — the distance between vertices in 
 - **5-10**: Medium resolution. Good balance for most work
 - **1-5**: Low resolution. Fast but minimal wrinkling
 
-I work at particle distance 15-20 for initial design, then reduce to 5-8 for final simulation.
+We work at particle distance 15-20 for initial design, then reduce to 5-8 for final simulation.
 
 ### Advanced Simulation Properties
 

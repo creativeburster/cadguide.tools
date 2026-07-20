@@ -15,7 +15,7 @@ sources:
 
 # Eagle Schematic Design: Net Classes, Power Rails, and Hierarchical Sheets
 
-A clean schematic is the foundation of a manufacturable PCB. I've inherited Eagle projects with 200+ components on a single sheet, unlabeled nets, and power rails that made no sense. After cleaning them up, I developed these practices for organizing Eagle schematics.
+A clean schematic is the foundation of a manufacturable PCB. Eagle projects can easily degrade into 200+ components on a single sheet, unlabeled nets, and power rails that make no sense. These practices keep Eagle schematics organized.
 
 ## Net Classes: Routing Different Signal Types
 

@@ -1,6 +1,6 @@
 ---
 title: "Twinmotion Materials Missing After Sync: One-Click Update, Material Reassignment, and PBR Workflow"
-excerpt: "Materials disappear or revert to defaults after syncing a model update from Revit or SketchUp. I cover the material persistence rules, the One-Click Update behavior, and the PBR material workflow that maintains consistent appearance across syncs."
+excerpt: "Materials disappear or revert to defaults after syncing a model update from Revit or SketchUp. We cover the material persistence rules, the One-Click Update behavior, and the PBR material workflow that maintains consistent appearance across syncs."
 category: "troubleshooting"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion materials missing after sync update fix"
@@ -15,7 +15,7 @@ sources:
 
 # Twinmotion Materials Missing After Sync: One-Click Update, Material Reassignment, and PBR Workflow
 
-I work with firms that sync Revit and SketchUp models to Twinmotion daily, and the most frustrating issue they encounter is material loss after a sync update. You spend hours applying beautiful PBR materials in Twinmotion — adjusting roughness, adding normal maps, configuring weathering — and then you sync a minor geometry update from Revit, and all your materials revert to default gray.
+We work with firms that sync Revit and SketchUp models to Twinmotion daily, and the most frustrating issue they encounter is material loss after a sync update. You spend hours applying beautiful PBR materials in Twinmotion — adjusting roughness, adding normal maps, configuring weathering — and then you sync a minor geometry update from Revit, and all your materials revert to default gray.
 
 ## Understanding Twinmotion's Material Sync Behavior
 
@@ -52,7 +52,7 @@ Materials only sync from Revit when the 3D view's Visual Style is set to **Reali
 2. Go to the **View tab → Visual Style → Realistic**
 3. Re-sync to Twinmotion
 
-I create a dedicated 3D view called "3D-Twinmotion" with Realistic visual style and lock it, so no one accidentally changes it.
+We create a dedicated 3D view called "3D-Twinmotion" with Realistic visual style and lock it, so no one accidentally changes it.
 
 ## Cause 3: One-Click Update Overriding Custom Materials
 
@@ -83,7 +83,7 @@ SketchUp materials transfer to Twinmotion through the Datasmith exporter, but th
 
 ## Cause 5: PBR Material Workflow for Twinmotion
 
-Twinmotion's PBR (Physically Based Rendering) material system is more advanced than Revit's or SketchUp's material systems. I use a hybrid workflow:
+Twinmotion's PBR (Physically Based Rendering) material system is more advanced than Revit's or SketchUp's material systems. We use a hybrid workflow:
 
 1. **Assign base materials in Revit/SketchUp**: Use simple color materials to establish material zones. These sync through Datasmith and give you a starting point in Twinmotion.
 2. **Apply PBR materials in Twinmotion**: Replace the basic materials with Twinmotion's PBR materials, which include:
@@ -93,13 +93,13 @@ Twinmotion's PBR (Physically Based Rendering) material system is more advanced t
    - **Metallic map**: For metal surfaces
 3. **Save custom materials to the library**: Once you've configured a PBR material, save it to your Twinmotion Material Library so you can quickly reapply it if a sync resets it
 
-**My material library organization**:
+**Our material library organization**:
 - **Architectural**: Brick, concrete, stone, wood, metal, glass
 - **Interior**: Fabrics, flooring, wall finishes, ceiling tiles
 - **Landscape**: Grass, gravel, soil, bark, water
 - **Weathered**: Aged versions of standard materials with weathering effects
 
-Having a well-organized material library means that even if a sync resets materials, I can reapply them in minutes using the library.
+Having a well-organized material library means that even if a sync resets materials, we can reapply them in minutes using the library.
 
 ## Cause 6: Material Slots and Multi-Material Objects
 
@@ -123,4 +123,4 @@ Some imported objects have multiple material slots (e.g., a window with separate
 
 ## Summary
 
-Twinmotion material loss after sync is almost always caused by material name changes, incorrect Revit visual style, or new geometry that Twinmotion can't match to existing materials. My fix order: verify material names are consistent in Revit → set visual style to Realistic → check for new geometry that needs manual material assignment → maintain a PBR material library for quick reapplication. The best prevention is a strict material naming convention and a well-organized Twinmotion material library.
+Twinmotion material loss after sync is almost always caused by material name changes, incorrect Revit visual style, or new geometry that Twinmotion can't match to existing materials. Our fix order: verify material names are consistent in Revit → set visual style to Realistic → check for new geometry that needs manual material assignment → maintain a PBR material library for quick reapplication. The best prevention is a strict material naming convention and a well-organized Twinmotion material library.

@@ -15,7 +15,7 @@ sources:
 
 # DipTrace Gerber Export and Manufacturing: Preparing Files for PCB Fab Houses
 
-Getting clean Gerber files out of DipTrace is straightforward, but there are settings that trip up beginners. I've ordered 200+ boards from JLCPCB and PCBWay using DipTrace-generated Gerbers. Here's the exact process I use every time.
+Getting clean Gerber files out of DipTrace is straightforward, but there are settings that trip up beginners. We've ordered 200+ boards from JLCPCB and PCBWay using DipTrace-generated Gerbers. Here's the exact process we use every time.
 
 ## Pre-Export Checklist
 

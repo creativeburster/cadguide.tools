@@ -15,7 +15,7 @@ sources:
 
 # 3DEXPERIENCE Configuration Management: Physical Products, CAD Families, and Lifecycle
 
-Configuration management is the most misunderstood aspect of 3DEXPERIENCE for SOLIDWORKS users. In SOLIDWORKS, configurations are simple — you create multiple configurations in one part file. In 3DEXPERIENCE, each SOLIDWORKS configuration creates a separate Physical Product on the platform. Get this wrong and you end up with dozens of unwanted linked Physical Products that are impossible to manage. I've cleaned up this mess for two companies. Here's how to avoid it.
+Configuration management is the most misunderstood aspect of 3DEXPERIENCE for SOLIDWORKS users. In SOLIDWORKS, configurations are simple — you create multiple configurations in one part file. In 3DEXPERIENCE, each SOLIDWORKS configuration creates a separate Physical Product on the platform. Get this wrong and you end up with dozens of unwanted linked Physical Products that are impossible to manage. We've cleaned up this mess for two companies. Here's how to avoid it.
 
 ## The Core Concept: Physical Product vs CAD Family
 

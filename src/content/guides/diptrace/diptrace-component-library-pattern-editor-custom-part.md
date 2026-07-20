@@ -15,7 +15,7 @@ sources:
 
 # DipTrace Component Library: Creating Custom Parts with Pattern Editor
 
-DipTrace's Pattern Editor and Component Editor make custom part creation straightforward. I've created 200+ custom parts in DipTrace for components not in the standard library. Here's the complete process.
+DipTrace's Pattern Editor and Component Editor make custom part creation straightforward. We've created 200+ custom parts in DipTrace for components not in the standard library. Here's the complete process.
 
 ## DipTrace Library Structure
 

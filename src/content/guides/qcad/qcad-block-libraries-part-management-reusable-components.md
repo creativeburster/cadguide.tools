@@ -18,7 +18,7 @@ sources:
 
 Block libraries are the foundation of efficient drafting in QCAD. Instead of redrawing common components (doors, windows, fasteners, symbols), you create them once as blocks and insert them repeatedly. On Reddit's r/FreeCAD, a user comparing QCAD and LibreCAD noted that QCAD ships with pre-built libraries (fasteners, electrical symbols, misc) while LibreCAD has only basic block support with no pre-built libraries. This is one of the concrete advantages that makes QCAD Professional worth paying for — if you're doing any kind of standardized mechanical or architectural drafting, the pre-built block library alone saves hours of setup time.
 
-I've built a custom block library of about 200 components for a furniture manufacturing client — cabinet hardware, edge profiles, standard connectors. The QCAD block system is straightforward once you understand the folder structure, but there are some quirks around attribute support that trip up people coming from AutoCAD. This guide covers block creation, library organization, and management of reusable components based on that real-world experience.
+We've built a custom block library of about 200 components for a furniture manufacturing client — cabinet hardware, edge profiles, standard connectors. The QCAD block system is straightforward once you understand the folder structure, but there are some quirks around attribute support that trip up people coming from AutoCAD. This guide covers block creation, library organization, and management of reusable components based on that real-world experience.
 
 ## Creating Blocks
 

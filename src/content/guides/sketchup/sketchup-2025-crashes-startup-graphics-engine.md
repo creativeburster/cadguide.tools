@@ -1,6 +1,6 @@
 ---
 title: "SketchUp 2025 Crashes on Startup: Graphics Engine Switch and Extension Isolation"
-excerpt: "SketchUp 2025 crashes before BugSplat even appears, or crashes repeatedly on startup with no clear cause. I cover the classic graphics engine switch, login_session.dat deletion, and extension isolation that actually fix this."
+excerpt: "SketchUp 2025 crashes before BugSplat even appears, or crashes repeatedly on startup with no clear cause. We cover the classic graphics engine switch, login_session.dat deletion, and extension isolation that actually fix this."
 category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp 2025 crashes startup graphics engine classic"
@@ -16,7 +16,7 @@ sources:
 
 # SketchUp 2025 Crashes on Startup: Graphics Engine Switch and Extension Isolation
 
-A user on the SketchUp Community forum reported that SketchUp 2025 Pro crashed before any BugSplat appeared, even after updating the driver for their GeForce RTX 4090. Another user said SketchUp 2025 on Windows 11 would open to the welcome screen but crash completely as soon as they clicked to open any file — even one they had been working on just two hours earlier. A third user on macOS 15.4.1 reported that extensions caused crashes at startup, sometimes requiring 3-4 restart attempts before SketchUp finally opened. These are the three most common crash patterns I've seen with SketchUp 2025, and they have different root causes and different fixes.
+A user on the SketchUp Community forum reported that SketchUp 2025 Pro crashed before any BugSplat appeared, even after updating the driver for their GeForce RTX 4090. Another user said SketchUp 2025 on Windows 11 would open to the welcome screen but crash completely as soon as they clicked to open any file — even one they had been working on just two hours earlier. A third user on macOS 15.4.1 reported that extensions caused crashes at startup, sometimes requiring 3-4 restart attempts before SketchUp finally opened. These are the three most common crash patterns we've seen with SketchUp 2025, and they have different root causes and different fixes.
 
 ## Crash Pattern 1: Silent Crash Before BugSplat
 

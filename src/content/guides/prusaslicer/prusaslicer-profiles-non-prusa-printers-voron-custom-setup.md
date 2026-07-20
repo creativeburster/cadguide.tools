@@ -1,6 +1,6 @@
 ---
 title: "PrusaSlicer Profiles for Non-Prusa Printers: Voron, Bambu, Creality, and Custom Setup"
-excerpt: "PrusaSlicer ships with profiles for Prusa printers, but it works with any FDM printer. I cover how to set up custom printer profiles for Voron, Creality, and other brands, work around Prusa's preset dependency system, and import community-maintained profiles for non-Prusa hardware."
+excerpt: "PrusaSlicer ships with profiles for Prusa printers, but it works with any FDM printer. We cover how to set up custom printer profiles for Voron, Creality, and other brands, work around Prusa's preset dependency system, and import community-maintained profiles for non-Prusa hardware."
 category: "workflow"
 softwareSlug: "prusaslicer"
 keyword: "PrusaSlicer profiles non-Prusa printers Voron Bambu custom setup"
@@ -18,7 +18,7 @@ sources:
 
 # PrusaSlicer Profiles for Non-Prusa Printers: Voron, Bambu, Creality, and Custom Setup
 
-I run a mixed fleet of 3D printers — two Prusa MK4s, a Voron 2.4, a Bambu X1C, and a couple of modified Creality machines — and PrusaSlicer is my preferred slicer for all of them. While PrusaSlicer is developed by Prusa Research and ships with excellent profiles for Prusa hardware, it works with any FDM printer. The challenge is getting the profiles set up correctly for non-Prusa machines.
+We run a mixed fleet of 3D printers — two Prusa MK4s, a Voron 2.4, a Bambu X1C, and a couple of modified Creality machines — and PrusaSlicer is our preferred slicer for all of them. While PrusaSlicer is developed by Prusa Research and ships with excellent profiles for Prusa hardware, it works with any FDM printer. The challenge is getting the profiles set up correctly for non-Prusa machines.
 
 ## PrusaSlicer's Built-In Non-Prusa Profiles
 
@@ -41,7 +41,7 @@ The Voron documentation states: "All modern mainstream slicers are able to produ
 
 ## Setting Up a Custom Printer Profile
 
-For printers without built-in profiles, you need to create a custom printer configuration. Here's my process:
+For printers without built-in profiles, you need to create a custom printer configuration. Here's our process:
 
 ### Step 1: Create a Custom Printer
 
@@ -85,7 +85,7 @@ Go to **Printer Settings → Custom G-code**:
 
 ## Working Around Prusa's Dependency System
 
-One of the most common frustrations I encounter — and one that appears frequently on the Prusa forum — is PrusaSlicer's dependency system. Prusa links print profiles, filament profiles, and printer profiles together using dependencies. When you try to use a Prusa print profile with a custom printer, PrusaSlicer may refuse or show warnings.
+One of the most common frustrations we encounter — and one that appears frequently on the Prusa forum — is PrusaSlicer's dependency system. Prusa links print profiles, filament profiles, and printer profiles together using dependencies. When you try to use a Prusa print profile with a custom printer, PrusaSlicer may refuse or show warnings.
 
 A Prusa forum user explains: "Unfortunately, you've run into Prusa's use of dependencies. They use dependencies in their presets to link them to specific printers and filaments."
 
@@ -127,9 +127,9 @@ However, PrusaSlicer has advantages:
 
 A Voron community member on Reddit notes: "I stay within SuperSlicer and PrusaSlicer. But also I only own Voron printers." This reflects a common sentiment — many Voron owners prefer PrusaSlicer's interface and support quality despite OrcaSlicer's broader printer support.
 
-## My Recommended Setup for Mixed Fleets
+## Our Recommended Setup for Mixed Fleets
 
-If you have multiple printer brands, I recommend:
+If you have multiple printer brands, we recommend:
 1. **PrusaSlicer** for Prusa printers and any printer where you want the best support generation
 2. **Bambu Studio** for Bambu Lab printers (AMS integration is native)
 3. **OrcaSlicer** if you want a single slicer for all printers and value built-in calibration tools

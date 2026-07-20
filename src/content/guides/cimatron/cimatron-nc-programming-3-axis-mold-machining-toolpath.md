@@ -15,7 +15,7 @@ sources:
 
 # Cimatron NC Programming: 3-Axis Mold Machining Toolpaths and Post-Processing
 
-Cimatron NC is the manufacturing module that turns mold designs into G-code. I've programmed hundreds of mold inserts — from simple 2D pockets to complex 3D surfaces. The key to efficient mold machining is choosing the right toolpath strategy for each stage: roughing, semi-finishing, finishing, and rest machining. Here's my complete 3-axis workflow.
+Cimatron NC is the manufacturing module that turns mold designs into G-code. We've programmed hundreds of mold inserts — from simple 2D pockets to complex 3D surfaces. The key to efficient mold machining is choosing the right toolpath strategy for each stage: roughing, semi-finishing, finishing, and rest machining. Here's our complete 3-axis workflow.
 
 ## Understanding Cimatron NC
 
@@ -256,7 +256,7 @@ If the post-processor doesn't match your machine:
    - **Spindle format**: S3000 vs S3000.0
    - **Feed rate format**: F500 vs F500.0
    - **Tool change format**: T1 M06 vs M06 T1
-   - **Arc format**: I/J/K vs R
+   - **Arc format**: We/J/K vs R
 3. Test with a simple program before running complex parts.
 
 ## Best Practices

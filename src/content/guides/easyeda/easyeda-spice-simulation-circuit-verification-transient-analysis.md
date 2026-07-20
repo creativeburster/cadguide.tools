@@ -15,7 +15,7 @@ sources:
 
 # EasyEDA SPICE Simulation: Circuit Verification Before PCB Layout
 
-SPICE simulation in EasyEDA is one of its underrated features. Most users go straight from schematic to PCB without simulating. I've caught design errors in simulation that would have cost me a board spin — oscillating op-amps, wrong RC time constants, insufficient margin on voltage dividers. EasyEDA's built-in SPICE lets you verify before you manufacture. Here's how to use it.
+SPICE simulation in EasyEDA is one of its underrated features. Most users go straight from schematic to PCB without simulating. We've caught design errors in simulation that would have cost us a board spin — oscillating op-amps, wrong RC time constants, insufficient margin on voltage dividers. EasyEDA's built-in SPICE lets you verify before you manufacture. Here's how to use it.
 
 ## What EasyEDA SPICE Can Do
 

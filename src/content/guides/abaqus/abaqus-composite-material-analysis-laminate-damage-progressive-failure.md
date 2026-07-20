@@ -15,7 +15,7 @@ sources:
 
 # Abaqus Composite Material Analysis: Laminate Modeling, Damage, and Progressive Failure
 
-I started working with composites about eight years ago, and honestly, the learning curve was steeper than I expected. The orthotropic material properties, the ply angles, the layup sequence — get any of those wrong and your analysis is meaningless. But once it clicks, Abaqus handles composites really well. Let me walk you through how I set up laminate definitions, run progressive failure with Hashin damage, and model delamination.
+Composite analysis has a steep learning curve. The orthotropic material properties, the ply angles, the layup sequence — get any of those wrong and your analysis is meaningless. But once it clicks, Abaqus handles composites really well. Let us walk you through how to set up laminate definitions, run progressive failure with Hashin damage, and model delamination.
 
 ## Composite Laminate Definition
 
@@ -203,11 +203,11 @@ I started working with composites about eight years ago, and honestly, the learn
 3. Interface properties:
    - **Normal strength (tN)**: 50-100 MPa (composite interface)
    - **Shear strength (tS, tT)**: 30-80 MPa
-   - **Mode I fracture energy (GIC)**: 0.3-1.0 mJ/mm²
+   - **Mode we fracture energy (GIC)**: 0.3-1.0 mJ/mm²
    - **Mode II fracture energy (GIIC)**: 1.0-3.0 mJ/mm²
 4. Mixed-mode:
    - **Power law**: (GI/GIC)^α + (GII/GIIC)^α = 1
-   - **BK (Benzeggagh-Kenane)**: For Mode I/II mixity
+   - **BK (Benzeggagh-Kenane)**: For Mode we/II mixity
 
 ### Virtual Crack Closure Technique (VCCT)
 
@@ -220,7 +220,7 @@ I started working with composites about eight years ago, and honestly, the learn
    - Based on LEFM (linear elastic fracture mechanics)
    - Good for brittle delamination
 3. Parameters:
-   - **GIC, GIIC**: Mode I and II critical energy release rates
+   - **GIC, GIIC**: Mode we and II critical energy release rates
    - **Mixed mode**: Power law or BK
 
 ## Impact Analysis (Abaqus/Explicit)
@@ -291,4 +291,4 @@ I started working with composites about eight years ago, and honestly, the learn
 
 ## Wrapping Up
 
-Composites analysis in Abaqus comes down to two things: getting your material properties right and choosing the right damage model. I always start with a simple [0/90]s laminate and compare first-ply failure to a hand calculation before running anything complex. If the simple case doesn't match, your properties or layup definition is wrong — no point running a full progressive failure analysis on a bad foundation. And don't forget delamination — I've seen too many composite analyses that only model in-plane damage and completely miss the out-of-plane failure that actually drives the design.
+Composites analysis in Abaqus comes down to two things: getting your material properties right and choosing the right damage model. We always start with a simple [0/90]s laminate and compare first-ply failure to a hand calculation before running anything complex. If the simple case doesn't match, your properties or layup definition is wrong — no point running a full progressive failure analysis on a bad foundation. And don't forget delamination — We've seen too many composite analyses that only model in-plane damage and completely miss the out-of-plane failure that actually drives the design.

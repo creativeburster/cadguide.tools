@@ -16,7 +16,7 @@ sources:
 
 # SAP2000 Steel and Concrete Design: AISC, ACI, and Eurocode Code Checking
 
-Running the analysis is only half the job — the other half is proving to the code that your members are adequate. I've spent more time on steel and concrete design checks in SAP2000 than I have on the analysis itself. The software supports AISC 360, ACI 318, and Eurocode 2 and 3, and once you know where the buttons are, the workflow is pretty smooth. Let me walk you through it.
+Running the analysis is only half the job — the other half is proving to the code that your members are adequate. We've spent more time on steel and concrete design checks in SAP2000 than we have on the analysis itself. The software supports AISC 360, ACI 318, and Eurocode 2 and 3, and once you know where the buttons are, the workflow is pretty smooth. Let us walk you through it.
 
 ## Steel Design (AISC 360)
 
@@ -256,4 +256,4 @@ Running the analysis is only half the job — the other half is proving to the c
 
 ## Wrapping Up
 
-The design modules in SAP2000 are solid once you get the parameters right. The thing I see junior engineers struggle with most is unbraced length — get that wrong and your capacity calculations are off, sometimes dramatically. Take the time to set K factors and unbraced lengths properly for each member. The auto-select optimization is great for steel — let the software iterate and find the lightest section that works, then do a manual review.
+The design modules in SAP2000 are solid once you get the parameters right. The thing we see junior engineers struggle with most is unbraced length — get that wrong and your capacity calculations are off, sometimes dramatically. Take the time to set K factors and unbraced lengths properly for each member. The auto-select optimization is great for steel — let the software iterate and find the lightest section that works, then do a manual review.

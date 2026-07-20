@@ -15,7 +15,7 @@ sources:
 
 # Trimble Connect vs Autodesk Construction Cloud: BIM Platform Comparison for Construction Projects
 
-I've managed BIM projects on both Trimble Connect and Autodesk Construction Cloud. Both are capable CDE (Common Data Environment) platforms, but they come from different ecosystems and serve different primary audiences. ACC is built around the Autodesk/Revit world. Trimble Connect is built around the Tekla/Trimble world. Choosing the wrong platform for your team creates friction every single day.
+We've managed BIM projects on both Trimble Connect and Autodesk Construction Cloud. Both are capable CDE (Common Data Environment) platforms, but they come from different ecosystems and serve different primary audiences. ACC is built around the Autodesk/Revit world. Trimble Connect is built around the Tekla/Trimble world. Choosing the wrong platform for your team creates friction every single day.
 
 ## Platform Overview
 
@@ -170,7 +170,7 @@ For projects with both Revit and Tekla teams:
 
 This dual-platform approach is more complex but sometimes necessary when you have teams deeply invested in different ecosystems.
 
-## My Recommendation
+## Our Recommendation
 
 For most building projects in the Autodesk ecosystem, ACC is the natural choice. The Revit integration alone justifies the cost — automated model sharing between disciplines saves hours every week.
 

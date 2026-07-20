@@ -1,6 +1,6 @@
 ---
 title: "Lumion LiveSync Setup and Troubleshooting: Revit, SketchUp, and ArchiCAD Connection Issues"
-excerpt: "Lumion LiveSync drops connection, fails to sync materials, or won't appear in the host application's ribbon. I cover the plugin installation order, version matching, and the log file analysis I use to diagnose sync failures."
+excerpt: "Lumion LiveSync drops connection, fails to sync materials, or won't appear in the host application's ribbon. We cover the plugin installation order, version matching, and the log file analysis we use to diagnose sync failures."
 category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion LiveSync not working Revit SketchUp connection fix"
@@ -16,11 +16,11 @@ sources:
 
 # Lumion LiveSync Setup and Troubleshooting: Revit, SketchUp, and ArchiCAD Connection Issues
 
-LiveSync is one of Lumion's best features — you change something in Revit or SketchUp, and it appears in Lumion in real-time. But when it stops working, it's incredibly frustrating. I've supported multiple firms through LiveSync setup issues, and the problems almost always come down to version mismatches, installation order, or plugin conflicts.
+LiveSync is one of Lumion's best features — you change something in Revit or SketchUp, and it appears in Lumion in real-time. But when it stops working, it's incredibly frustrating. We've supported multiple firms through LiveSync setup issues, and the problems almost always come down to version mismatches, installation order, or plugin conflicts.
 
 ## Problem 1: LiveSync Plugin Not Showing in Revit Ribbon
 
-The most common issue I encounter: the architect installs the Lumion LiveSync plugin, but it doesn't appear in Revit's ribbon tab.
+The most common issue we encounter: the architect installs the Lumion LiveSync plugin, but it doesn't appear in Revit's ribbon tab.
 
 **Fix — check installation order**:
 1. **Install Revit first**, then install Lumion, then install the LiveSync plugin. If Lumion was installed before Revit, the plugin registration doesn't happen correctly.
@@ -28,8 +28,8 @@ The most common issue I encounter: the architect installs the Lumion LiveSync pl
 3. In Revit, go to **Add-Ins tab → Manage Add-Ins** and check if Lumion LiveSync is listed. If it's listed but not loaded, there's a conflict with another add-in.
 4. Disable all other add-ins temporarily and restart Revit. If the Lumion tab appears, re-enable add-ins one at a time to find the conflict.
 
-**Common conflicts I've seen**:
-- **Enscape** and Lumion LiveSync running simultaneously — both hook into Revit's rendering pipeline. I recommend using only one at a time.
+**Common conflicts we've seen**:
+- **Enscape** and Lumion LiveSync running simultaneously — both hook into Revit's rendering pipeline. We recommend using only one at a time.
 - **Older versions of Navisworks Timeliner** — can block add-in loading.
 - **Custom company add-ins** that load at startup — these can interfere with LiveSync's initialization.
 
@@ -76,7 +76,7 @@ LiveSync is syncing, but every change in Revit causes a 30-second freeze in both
 
 **Fix — reduce sync complexity**:
 1. **Hide unnecessary elements** in the Revit 3D view before starting LiveSync. Only sync what you need to see in Lumion.
-2. **Use a simplified 3D view**: Create a dedicated 3D view for LiveSync with minimal visible categories. I create a view called "3D-Lumion" that only shows walls, floors, roofs, doors, windows, and furniture — no electrical, plumbing, or structural details.
+2. **Use a simplified 3D view**: Create a dedicated 3D view for LiveSync with minimal visible categories. We create a view called "3D-Lumion" that only shows walls, floors, roofs, doors, windows, and furniture — no electrical, plumbing, or structural details.
 3. **Reduce Surface Smoothing** in the LiveSync settings — lower values produce fewer polygons and faster sync times.
 4. **Disable Geometry Optimization** if sync is slow — it adds processing time during export.
 
@@ -112,4 +112,4 @@ Revit LT has limited API access, which affects LiveSync functionality.
 
 ## Summary
 
-LiveSync issues are most commonly caused by installation order problems, version mismatches, or Revit view settings. My fix order: verify installation order (Revit → Lumion → LiveSync plugin) → check for add-in conflicts → set Revit view to Realistic → add firewall exclusions → create a dedicated simplified 3D view for syncing. When LiveSync works, it's transformative for the design workflow — when it doesn't, these steps will get it back on track.
+LiveSync issues are most commonly caused by installation order problems, version mismatches, or Revit view settings. Our fix order: verify installation order (Revit → Lumion → LiveSync plugin) → check for add-in conflicts → set Revit view to Realistic → add firewall exclusions → create a dedicated simplified 3D view for syncing. When LiveSync works, it's transformative for the design workflow — when it doesn't, these steps will get it back on track.

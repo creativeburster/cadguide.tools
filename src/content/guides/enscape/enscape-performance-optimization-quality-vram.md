@@ -1,6 +1,6 @@
 ---
 title: "Enscape Performance Optimization: Quality Slider, VRAM, and Ray Tracing Settings"
-excerpt: "Enscape performance depends on the Quality slider, VRAM capacity, and ray tracing configuration. I cover the NVIDIA OptiX optimization, DLSS setup, grass rendering toggle, and the scene simplification workflow that keeps Enscape smooth."
+excerpt: "Enscape performance depends on the Quality slider, VRAM capacity, and ray tracing configuration. We cover the NVIDIA OptiX optimization, DLSS setup, grass rendering toggle, and the scene simplification workflow that keeps Enscape smooth."
 category: "performance"
 softwareSlug: "enscape"
 keyword: "Enscape performance laggy optimization quality settings VRAM"
@@ -16,13 +16,13 @@ sources:
 
 # Enscape Performance Optimization: Quality Slider, VRAM, and Ray Tracing Settings
 
-I've optimized Enscape installations across multiple firms, and the performance complaints are remarkably consistent: "Enscape is laggy," "My FPS drops to 10 when I walk through the model," "Rendering takes forever." The good news is that Enscape has a relatively simple settings panel — the bad news is that most users don't understand what each setting actually does to GPU load.
+We've optimized Enscape installations across multiple firms, and the performance complaints are remarkably consistent: "Enscape is laggy," "My FPS drops to 10 when I walk through the model," "Rendering takes forever." The good news is that Enscape has a relatively simple settings panel — the bad news is that most users don't understand what each setting actually does to GPU load.
 
 ## The Quality Slider: Enscape's Master Control
 
 Enscape condenses all real-time performance attributes into a single **Quality slider** in the General settings tab. This is both brilliant and frustrating — brilliant because it's simple, frustrating because you can't individually tune the components.
 
-**My recommended settings by hardware**:
+**Our recommended settings by hardware**:
 
 | GPU | Quality Setting | Expected FPS |
 |-----|----------------|-------------|
@@ -62,7 +62,7 @@ Enscape supports **NVIDIA DLSS (Deep Learning Super Sampling)**, which renders a
 3. If you need maximum FPS, set to **Performance** mode
 4. DLSS is only available on **NVIDIA RTX cards** (RTX 2060 and newer)
 
-With DLSS on Quality mode, I typically see a 40-60% FPS improvement on RTX 4070 and above. The image quality difference is nearly imperceptible in most architectural scenes.
+With DLSS on Quality mode, we typically see a 40-60% FPS improvement on RTX 4070 and above. The image quality difference is nearly imperceptible in most architectural scenes.
 
 ## Ray Tracing Settings
 
@@ -87,7 +87,7 @@ Enscape's ray tracing features add realistic reflections and shadows but are GPU
 
 The **Grass/Carpet Rendering** feature creates actual 3D grass geometry in real-time. It's beautiful but extremely expensive.
 
-**My approach**:
+**Our approach**:
 1. **Disable during editing** — the FPS cost can be 50% or more
 2. **Enable only for the final render** — turn it on when you're ready to capture the image or video
 3. **Limit grass area** — don't apply the grass material to the entire site. Apply it only to areas visible in the render
@@ -114,7 +114,7 @@ The biggest performance factor is the complexity of the model coming from Revit 
 
 A simple but often overlooked optimization: the size of the Enscape viewport window directly affects performance. Enscape renders every pixel in the window, so a larger window means more pixels to render.
 
-**My approach**:
+**Our approach**:
 1. During editing, use a **smaller Enscape window** (1280x720 or smaller)
 2. For final renders, set the **Resolution** in Settings to the desired output size (1920x1080, 3840x2160)
 3. The Resolution setting controls the render output size, not the window size — you can have a small window but render at 4K
@@ -146,7 +146,7 @@ Enscape distinguishes between **real-time quality** (what you see while navigati
 
 ## Practical Example
 
-A firm came to me with Enscape running at 8 FPS on an RTX 3070 (8GB VRAM) in a large Revit project. Here's what I changed:
+A firm came to us with Enscape running at 8 FPS on an RTX 3070 (8GB VRAM) in a large Revit project. Here's what we changed:
 
 1. Quality: High → Medium (FPS: 8 → 18)
 2. Resolution: 4K → 1080p (FPS: 18 → 28)
@@ -159,4 +159,4 @@ Final result: 8 FPS → 65 FPS. The model was now fully navigable, and final ren
 
 ## Summary
 
-Enscape performance optimization is about managing GPU load through the Quality slider, VRAM usage, and ray tracing settings. My optimization order: set Quality to Medium for editing → enable DLSS on RTX cards → disable ray tracing and grass during editing → create a dedicated simplified 3D view in the host application → reduce Enscape window size → switch to High/Ultra quality only for final captures. The Quality slider and DLSS together typically provide a 3-4x FPS improvement.
+Enscape performance optimization is about managing GPU load through the Quality slider, VRAM usage, and ray tracing settings. Our optimization order: set Quality to Medium for editing → enable DLSS on RTX cards → disable ray tracing and grass during editing → create a dedicated simplified 3D view in the host application → reduce Enscape window size → switch to High/Ultra quality only for final captures. The Quality slider and DLSS together typically provide a 3-4x FPS improvement.

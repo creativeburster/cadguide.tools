@@ -1,6 +1,6 @@
 ---
 title: "Marvelous Designer Pattern Making: Polygon Tool, Sewing, and Internal Lines Guide"
-excerpt: "Pattern making in Marvelous Designer follows real-world garment construction — draft 2D pattern pieces, sew them together, and simulate. I cover the Polygon and Rectangle tools, segment and free sewing, internal lines for details and wrinkles, and the workflow for creating a complete garment from scratch."
+excerpt: "Pattern making in Marvelous Designer follows real-world garment construction — draft 2D pattern pieces, sew them together, and simulate. We cover the Polygon and Rectangle tools, segment and free sewing, internal lines for details and wrinkles, and the workflow for creating a complete garment from scratch."
 category: "workflow"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer pattern making polygon tool sewing internal lines"
@@ -17,13 +17,13 @@ sources:
 
 # Marvelous Designer Pattern Making: Polygon Tool, Sewing, and Internal Lines Guide
 
-I've created garments ranging from simple t-shirts to complex historical costumes in Marvelous Designer, and the pattern making workflow is fundamentally the same as real-world garment construction. You draft 2D pattern pieces, sew them together, and let the simulation handle the 3D draping. Understanding the tools and their shortcuts is essential for efficient garment creation.
+We've created garments ranging from simple t-shirts to complex historical costumes in Marvelous Designer, and the pattern making workflow is fundamentally the same as real-world garment construction. You draft 2D pattern pieces, sew them together, and let the simulation handle the 3D draping. Understanding the tools and their shortcuts is essential for efficient garment creation.
 
 ## Pattern Creation Tools
 
 ### Polygon Tool (H)
 
-The Polygon tool is the primary tool for creating free-form pattern shapes. It's the tool I use most frequently.
+The Polygon tool is the primary tool for creating free-form pattern shapes. It's the tool we use most frequently.
 
 **How to use**:
 1. Press **H** to activate the Polygon tool
@@ -47,7 +47,7 @@ Creates rectangular pattern pieces. Faster than Polygon for simple shapes.
 2. Click and drag to define the rectangle
 3. The pattern is created with four corner points
 
-I use the Rectangle tool for simple panels (sleeves, pant legs) and then refine with the Edit Pattern tool.
+We use the Rectangle tool for simple panels (sleeves, pant legs) and then refine with the Edit Pattern tool.
 
 ### Internal Polygon/Line Tool (G)
 
@@ -176,7 +176,7 @@ Internal lines can control where fabric wrinkles:
 
 ## Complete Garment Workflow: Simple T-Shirt
 
-Here's the workflow I use to create a basic t-shirt:
+Here's the workflow we use to create a basic t-shirt:
 
 ### Step 1: Create the Front Panel
 1. Use the Rectangle tool (S) to create a rectangle roughly the width of the torso + ease

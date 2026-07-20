@@ -16,7 +16,7 @@ sources:
 
 # ANSYS Workbench vs Abaqus: FEA Platform Comparison for Structural Analysis
 
-I've used both ANSYS Workbench and Abaqus extensively — ANSYS for thermal and CFD-coupled problems, Abaqus for nonlinear structural and crash work. After years of switching between them, I've developed a pretty clear sense of where each one shines and where it falls short. Let me break it down so you can pick the right one for your specific needs.
+We've used both ANSYS Workbench and Abaqus extensively — ANSYS for thermal and CFD-coupled problems, Abaqus for nonlinear structural and crash work. After years of switching between them, we've developed a pretty clear sense of where each one shines and where it falls short. Let us break it down so you can pick the right one for your specific needs.
 
 ## Market Position
 
@@ -202,6 +202,6 @@ ANSYS and Abaqus do not have direct file exchange. To transfer:
 3. Re-mesh and re-define materials and boundary conditions
 4. No direct transfer of mesh, loads, or results
 
-## My Take
+## Our Take
 
-Having used both platforms on real projects, here's how I think about it: if your work involves CFD, thermal-fluid coupling, or multiphysics, ANSYS is the obvious choice — Fluent alone justifies it. If you're doing crash, metal forming, or heavily nonlinear structural work, Abaqus is the better tool — its general contact and explicit solver are hard to beat. Plenty of large companies keep both around, and honestly, that's not a bad approach. You use the right tool for the job rather than forcing one platform to do something it wasn't built for.
+Having used both platforms on real projects, here's how we think about it: if your work involves CFD, thermal-fluid coupling, or multiphysics, ANSYS is the obvious choice — Fluent alone justifies it. If you're doing crash, metal forming, or heavily nonlinear structural work, Abaqus is the better tool — its general contact and explicit solver are hard to beat. Plenty of large companies keep both around, and honestly, that's not a bad approach. You use the right tool for the job rather than forcing one platform to do something it wasn't built for.

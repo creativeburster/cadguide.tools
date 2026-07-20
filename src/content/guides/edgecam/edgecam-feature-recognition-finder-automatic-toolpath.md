@@ -15,7 +15,7 @@ sources:
 
 # EdgeCAM Feature Recognition: Automating Toolpath Generation from Solid Models
 
-EdgeCAM's Feature Finder is the single biggest time-saver in the software. Instead of manually selecting edges and faces for each operation, Feature Finder scans the solid model and identifies all machinable features automatically. I program a part with 30 features in under 10 minutes — manually it would take an hour. Here's how to use it effectively.
+EdgeCAM's Feature Finder is the single biggest time-saver in the software. Instead of manually selecting edges and faces for each operation, Feature Finder scans the solid model and identifies all machinable features automatically. We program a part with 30 features in under 10 minutes — manually it would take an hour. Here's how to use it effectively.
 
 ## What Feature Finder Detects
 

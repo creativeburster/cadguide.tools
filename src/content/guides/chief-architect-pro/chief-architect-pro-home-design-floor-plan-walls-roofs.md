@@ -15,7 +15,7 @@ sources:
 
 # Chief Architect Pro Home Design: Floor Plan, Walls, Roofs, and Construction Documents
 
-Chief Architect Pro is a residential design software that combines 2D drafting, 3D modeling, and construction document generation in one package. It's widely used by custom home designers, remodelers, and builders. The workflow is designed to be intuitive — you draw walls, and the software automatically generates floors, roofs, and framing. I'll walk through the complete home design process.
+Chief Architect Pro is a residential design software that combines 2D drafting, 3D modeling, and construction document generation in one package. It's widely used by custom home designers, remodelers, and builders. The workflow is designed to be intuitive — you draw walls, and the software automatically generates floors, roofs, and framing. We'll walk through the complete home design process.
 
 ## Setting Up Defaults
 

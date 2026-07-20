@@ -15,7 +15,7 @@ sources:
 
 # CAMWorks Tolerance-Based Machining: Linking GD&T to Toolpath Accuracy
 
-CAMWorks Tolerance-Based Machining (TBM) reads GD&T tolerances from the SolidWorks model and adjusts toolpath strategies accordingly. Tight tolerance holes get boring operations instead of drilling. Flatness-toleranced surfaces get multiple finishing passes. I've been using TBM for a year and it eliminates the manual step of "looking at the drawing to decide what needs to be precise." Here's how it works.
+CAMWorks Tolerance-Based Machining (TBM) reads GD&T tolerances from the SolidWorks model and adjusts toolpath strategies accordingly. Tight tolerance holes get boring operations instead of drilling. Flatness-toleranced surfaces get multiple finishing passes. We've been using TBM for a year and it eliminates the manual step of "looking at the drawing to decide what needs to be precise." Here's how it works.
 
 ## What TBM Does
 

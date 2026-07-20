@@ -15,7 +15,7 @@ sources:
 
 # FeatureCAM Automatic Feature Recognition: From Solid Model to NC Program Workflow
 
-FeatureCAM's standout feature is Automatic Feature Recognition (AFR) — the ability to analyze a 3D solid model and automatically identify machinable features like faces, holes, pockets, and sides. This dramatically reduces programming time compared to manually selecting geometry for each operation. Let me walk through the complete workflow.
+FeatureCAM's standout feature is Automatic Feature Recognition (AFR) — the ability to analyze a 3D solid model and automatically identify machinable features like faces, holes, pockets, and sides. This dramatically reduces programming time compared to manually selecting geometry for each operation. Let us walk through the complete workflow.
 
 ## The FeatureCAM Workflow
 

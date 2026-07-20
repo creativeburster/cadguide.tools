@@ -15,7 +15,7 @@ sources:
 
 # Tinkercad for Beginners: Creating Your First 3D Model for 3D Printing
 
-Tinkercad is the easiest way to start 3D modeling. I teach 3D printing workshops and Tinkercad is where everyone begins. No installation needed — it runs in the browser. Here's how to create your first printable model.
+Tinkercad is the easiest way to start 3D modeling. We teach 3D printing workshops and Tinkercad is where everyone begins. No installation needed — it runs in the browser. Here's how to create your first printable model.
 
 ## Getting Started
 

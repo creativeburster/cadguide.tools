@@ -15,7 +15,7 @@ sources:
 
 # 3DEXPERIENCE File Preparation Assistant: Cleaning SOLIDWORKS Data Before Platform Migration
 
-I've seen companies skip the File Preparation Assistant and upload their SOLIDWORKS data directly to 3DEXPERIENCE. Every single time, they regret it. Duplicate files create unwanted linked Physical Products. Missing references cause broken assemblies. 3D Interconnect links to non-native CAD files can't be saved to the platform. The File Preparation Assistant catches all of these before they become platform problems. Here's how to use it properly.
+We've seen companies skip the File Preparation Assistant and upload their SOLIDWORKS data directly to 3DEXPERIENCE. Every single time, they regret it. Duplicate files create unwanted linked Physical Products. Missing references cause broken assemblies. 3D Interconnect links to non-native CAD files can't be saved to the platform. The File Preparation Assistant catches all of these before they become platform problems. Here's how to use it properly.
 
 ## What the File Preparation Assistant Does
 

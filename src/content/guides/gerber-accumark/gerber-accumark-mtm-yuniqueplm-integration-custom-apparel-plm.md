@@ -1,6 +1,6 @@
 ---
 title: "Gerber AccuMark MTM and YuniquePLM Integration: Custom Apparel and Product Lifecycle Management"
-excerpt: "AccuMark MTM generates custom-sized patterns from body measurements, while YuniquePLM manages the full product lifecycle from design to production. I cover the MTM workflow, body measurement integration, PLM style management, and how the two systems integrate for custom apparel production."
+excerpt: "AccuMark MTM generates custom-sized patterns from body measurements, while YuniquePLM manages the full product lifecycle from design to production. We cover the MTM workflow, body measurement integration, PLM style management, and how the two systems integrate for custom apparel production."
 category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark MTM made-to-measure YuniquePLM integration custom apparel product lifecycle management"
@@ -16,7 +16,7 @@ sources:
 
 # Gerber AccuMark MTM and YuniquePLM Integration: Custom Apparel and Product Lifecycle Management
 
-I've implemented AccuMark MTM and YuniquePLM for uniform programs and custom apparel services. The combination of made-to-measure pattern generation and product lifecycle management creates a complete system for personalized apparel production — from individual body measurements through pattern generation, tech pack creation, and production tracking.
+We've implemented AccuMark MTM and YuniquePLM for uniform programs and custom apparel services. The combination of made-to-measure pattern generation and product lifecycle management creates a complete system for personalized apparel production — from individual body measurements through pattern generation, tech pack creation, and production tracking.
 
 ## AccuMark MTM Overview
 

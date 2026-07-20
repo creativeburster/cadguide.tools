@@ -1,6 +1,6 @@
 ---
 title: "Civil 3D Pipe Network Errors: Structure Labels, Flow Direction, and Profile Display Fixes"
-excerpt: "Civil 3D pipe networks show wrong flow direction, missing structure labels, and broken profile views. I cover the pipe network rules, part list configuration, and the profile display settings that fix drainage modeling issues."
+excerpt: "Civil 3D pipe networks show wrong flow direction, missing structure labels, and broken profile views. We cover the pipe network rules, part list configuration, and the profile display settings that fix drainage modeling issues."
 category: "troubleshooting"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D pipe network error structure label flow direction profile"

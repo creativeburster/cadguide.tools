@@ -15,7 +15,7 @@ sources:
 
 # DipTrace vs KiCad: Choosing the Right Free PCB Design Tool
 
-Both DipTrace and KiCad offer free versions for PCB design. I've used both extensively and they serve different audiences. DipTrace is easier to learn; KiCad is more powerful and truly unlimited. Here's my comparison.
+Both DipTrace and KiCad offer free versions for PCB design. We've used both extensively and they serve different audiences. DipTrace is easier to learn; KiCad is more powerful and truly unlimited. Here's our comparison.
 
 ## Pricing Model
 
@@ -125,7 +125,7 @@ DipTrace offers perpetual licenses — you own the software. This is a significa
 
 **KiCad**: No upgrade needed — it's always free and unlimited. New features are added every 6 months through community development.
 
-## My Recommendation
+## Our Recommendation
 
 **For a hobbyist making simple boards**: DipTrace Free. The gentle learning curve and large library get you to your first board quickly. If you stay within the free limits, you never need to pay.
 

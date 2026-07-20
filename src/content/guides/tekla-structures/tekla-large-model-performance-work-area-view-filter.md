@@ -1,6 +1,6 @@
 ---
 title: "Tekla Structures Large Model Performance: Work Area, View Filters, and Model History"
-excerpt: "Tekla Structures slows down with large steel models — zooming lags, saving takes minutes, and numbering hangs. I cover the work area optimization, model history disabling, and view filter strategy that keep large models responsive."
+excerpt: "Tekla Structures slows down with large steel models — zooming lags, saving takes minutes, and numbering hangs. We cover the work area optimization, model history disabling, and view filter strategy that keep large models responsive."
 category: "performance"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures large model performance work area view filter"

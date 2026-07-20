@@ -1,6 +1,6 @@
 ---
 title: "Enscape Materials Showing Gray: Revit Material Asset, Texture Path, and Phase Filter Fixes"
-excerpt: "Enscape renders Revit materials as gray even though they look correct in Revit's realistic view. I cover the material asset configuration, texture path repair, phase filter workaround, and the sample size calibration that fixes this persistent issue."
+excerpt: "Enscape renders Revit materials as gray even though they look correct in Revit's realistic view. We cover the material asset configuration, texture path repair, phase filter workaround, and the sample size calibration that fixes this persistent issue."
 category: "troubleshooting"
 softwareSlug: "enscape"
 keyword: "Enscape materials gray not showing Revit textures fix"
@@ -16,11 +16,11 @@ sources:
 
 # Enscape Materials Showing Gray: Revit Material Asset, Texture Path, and Phase Filter Fixes
 
-I've been chasing this issue for months across multiple firms. The symptom is always the same: materials look perfect in Revit's Realistic view, but when you open Enscape, all custom materials render as flat gray. Meanwhile, Revit family assets (trees, furniture, people) show their textures correctly. It's maddening because the materials are "right" in Revit but Enscape doesn't see them.
+We've been chasing this issue for months across multiple firms. The symptom is always the same: materials look perfect in Revit's Realistic view, but when you open Enscape, all custom materials render as flat gray. Meanwhile, Revit family assets (trees, furniture, people) show their textures correctly. It's maddening because the materials are "right" in Revit but Enscape doesn't see them.
 
 ## Root Cause 1: Missing Texture File Paths
 
-This is the most common cause I've encountered. Revit materials reference texture image files, and if those files are missing or the paths are broken, Revit shows a yellow "!" warning in the material editor. Revit may still display a color fallback in its realistic view, but Enscape can't render the texture because the file doesn't exist.
+This is the most common cause we've encountered. Revit materials reference texture image files, and if those files are missing or the paths are broken, Revit shows a yellow "!" warning in the material editor. Revit may still display a color fallback in its realistic view, but Enscape can't render the texture because the file doesn't exist.
 
 **Diagnosis**:
 1. In Revit, open **Manage → Materials**
@@ -38,7 +38,7 @@ A user on the Autodesk forums reported that even a Revit sample project showed t
 
 ## Root Cause 2: Phase Filter Interference
 
-This is a lesser-known fix that I discovered after weeks of troubleshooting. A user on Reddit reported that Enscape support directed them to change the view's phase filter from "Show All" to "Show Complete" — and it worked.
+This is a lesser-known fix that we discovered after weeks of troubleshooting. A user on Reddit reported that Enscape support directed them to change the view's phase filter from "Show All" to "Show Complete" — and it worked.
 
 **The fix**:
 1. In Revit, open the 3D view you're using with Enscape
@@ -47,7 +47,7 @@ This is a lesser-known fix that I discovered after weeks of troubleshooting. A u
 4. The "Show All" phase filter can cause Enscape to fail to resolve material assignments for elements in different phases
 5. Reload Enscape
 
-I've tested this fix on multiple projects, and it resolves the gray materials issue in about 30% of cases where texture paths are correct. The phase filter affects how Enscape processes the Revit model's element visibility, and "Show All" can confuse the material resolution.
+We've tested this fix on multiple projects, and it resolves the gray materials issue in about 30% of cases where texture paths are correct. The phase filter affects how Enscape processes the Revit model's element visibility, and "Show All" can confuse the material resolution.
 
 ## Root Cause 3: Material Asset Type Mismatch
 
@@ -113,7 +113,7 @@ Enscape supports JPG, PNG, and TIFF texture formats. If your textures are in an 
 
 ## Diagnostic Checklist
 
-When materials show as gray in Enscape, I run through this checklist in order:
+When materials show as gray in Enscape, we run through this checklist in order:
 
 1. **Check for yellow "!" warnings** in Revit's material editor — fix any missing texture paths
 2. **Change Phase Filter** from "Show All" to "Show Complete" — quick test that fixes 30% of cases
@@ -126,4 +126,4 @@ When materials show as gray in Enscape, I run through this checklist in order:
 
 ## Summary
 
-Enscape gray materials are most often caused by missing texture paths, phase filter settings, or material asset configuration. My fix order: check for missing texture warnings in Revit → change Phase Filter to "Show Complete" → set Enscape to "Use Appearance" → verify Sample Size values → check Enscape material overrides → verify material library after reinstall. The texture path fix and phase filter change together resolve about 80% of gray material cases I encounter.
+Enscape gray materials are most often caused by missing texture paths, phase filter settings, or material asset configuration. Our fix order: check for missing texture warnings in Revit → change Phase Filter to "Show Complete" → set Enscape to "Use Appearance" → verify Sample Size values → check Enscape material overrides → verify material library after reinstall. The texture path fix and phase filter change together resolve about 80% of gray material cases we encounter.

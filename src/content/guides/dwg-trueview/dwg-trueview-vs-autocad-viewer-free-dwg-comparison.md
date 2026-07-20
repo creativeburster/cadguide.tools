@@ -15,7 +15,7 @@ sources:
 
 # DWG TrueView vs AutoCAD Viewer: Free DWG Viewing Options Compared
 
-There are several free options for viewing DWG files. I've tested all the major ones. DWG TrueView is the most capable, but it's not always the best choice. Here's my comparison.
+There are several free options for viewing DWG files. We've tested all the major ones. DWG TrueView is the most capable, but it's not always the best choice. Here's our comparison.
 
 ## Options Compared
 
@@ -130,7 +130,7 @@ There are several free options for viewing DWG files. I've tested all the major 
 - **Pros**: Open source, lightweight, cross-platform
 - **Cons**: DXF only (can't open DWG directly), limited features
 
-## My Recommendations
+## Our Recommendations
 
 ### For a construction site office:
 **DWG TrueView**. Offline access, full plotting, no file size limits, and batch operations make it ideal for site environments with unreliable internet.
@@ -152,7 +152,7 @@ There are several free options for viewing DWG files. I've tested all the major 
 
 ## Workflow Recommendation
 
-For most engineering and construction firms, I recommend **both** DWG TrueView and the Autodesk Online Viewer:
+For most engineering and construction firms, we recommend **both** DWG TrueView and the Autodesk Online Viewer:
 
 1. **Install DWG TrueView** on office workstations for:
    - Daily drawing review

@@ -18,7 +18,7 @@ sources:
 
 The question of whether CorelCAD can replace AutoCAD comes up constantly on CAD forums. On Reddit's r/cad, a user comparing CorelCAD, BricsCAD, and DraftSight noted that CorelCAD reads and writes DWG files without problems but can't create dynamic blocks because AutoCAD holds a patent on them. Another user on r/VIDEOENGINEERING tried CorelCAD as an AutoCAD LT replacement for wire diagrams and confirmed the DWG compatibility but warned about a "learning curve for anyone going from LT to CorelCAD."
 
-I've been running both side by side for two years on the same machine — CorelCAD 2024 for small client projects and AutoCAD 2024 for larger collaborative work. The comparison below is based on real daily use, not spec sheets. The short version: CorelCAD covers about 90% of what most 2D drafting teams need, at roughly one-quarter of AutoCAD's annual subscription price. But that last 10% can matter a lot depending on your workflow.
+We've been running both side by side for two years on the same machine — CorelCAD 2024 for small client projects and AutoCAD 2024 for larger collaborative work. The comparison below is based on real daily use, not spec sheets. The short version: CorelCAD covers about 90% of what most 2D drafting teams need, at roughly one-quarter of AutoCAD's annual subscription price. But that last 10% can matter a lot depending on your workflow.
 
 CorelCAD is built on the IntelliCAD engine, not Autodesk's codebase. This means it's not a clone — it's a parallel implementation that happens to read the same file format. Most commands work identically, but the differences are in the edges: LISP compatibility, dynamic blocks, 3D modeling, and ecosystem integration.
 

@@ -15,7 +15,7 @@ sources:
 
 # KeyCreator Performance Optimization for Complex Models and Large Assemblies
 
-KeyCreator is generally fast for direct modeling — it doesn't have the feature tree regeneration overhead of parametric CAD. But push it with a 2,000-part assembly or a model with 50,000+ faces, and you'll feel it. Here's how I keep KeyCreator responsive.
+KeyCreator is generally fast for direct modeling — it doesn't have the feature tree regeneration overhead of parametric CAD. But push it with a 2,000-part assembly or a model with 50,000+ faces, and you'll feel it. Here's how we keep KeyCreator responsive.
 
 ## Hardware Requirements
 

@@ -15,7 +15,7 @@ sources:
 
 # CrownCAD Part Design: Sketching, Features, and Assembly Modeling in the Cloud
 
-CrownCAD provides a full parametric 3D CAD modeling environment that runs in a web browser. Despite being cloud-based, it offers the same modeling capabilities as desktop CAD: sketching with constraints, feature-based design, assembly modeling with mates, and 2D drawing creation. I'll walk through the complete part and assembly design workflow.
+CrownCAD provides a full parametric 3D CAD modeling environment that runs in a web browser. Despite being cloud-based, it offers the same modeling capabilities as desktop CAD: sketching with constraints, feature-based design, assembly modeling with mates, and 2D drawing creation. We'll walk through the complete part and assembly design workflow.
 
 ## CrownCAD Architecture
 

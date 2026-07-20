@@ -15,7 +15,7 @@ sources:
 
 # BobCAD-CAM Post Processor Configuration: G-Code Output, Tool Change Order, and Customization
 
-The post processor is the bridge between BobCAD-CAM's internal toolpath data and the G-code your CNC machine understands. Getting it right is critical — a misconfigured post can produce G-code that crashes your machine or produces poor surface finish. I'll walk through the key configuration points and common fixes.
+The post processor is the bridge between BobCAD-CAM's internal toolpath data and the G-code your CNC machine understands. Getting it right is critical — a misconfigured post can produce G-code that crashes your machine or produces poor surface finish. We'll walk through the key configuration points and common fixes.
 
 ## What a Post Processor Does
 
@@ -108,9 +108,9 @@ The tool crashes into the workpiece because the machine doesn't account for tool
 
 ### Wrong Arc Format
 
-Some controllers require I/J format for arcs, others accept R format. If your machine errors on arc moves:
+Some controllers require we/J format for arcs, others accept R format. If your machine errors on arc moves:
 
-**Fix:** Change the arc output format in the post processor from R to I/J or vice versa.
+**Fix:** Change the arc output format in the post processor from R to we/J or vice versa.
 
 ### Excessive Rapid Moves
 

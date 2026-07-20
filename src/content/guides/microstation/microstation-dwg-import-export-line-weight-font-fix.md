@@ -1,6 +1,6 @@
 ---
 title: "MicroStation DWG Compatibility: Import Export Issues, Line Weight Mapping, and Font Substitution"
-excerpt: "MicroStation DWG import and export produce wrong line weights, missing fonts, and shifted geometry. I cover the DWG save-as settings, line weight mapping tables, and font configuration that ensure clean DWG round-trips."
+excerpt: "MicroStation DWG import and export produce wrong line weights, missing fonts, and shifted geometry. We cover the DWG save-as settings, line weight mapping tables, and font configuration that ensure clean DWG round-trips."
 category: "troubleshooting"
 softwareSlug: "microstation"
 keyword: "MicroStation DWG import export line weight font compatibility"

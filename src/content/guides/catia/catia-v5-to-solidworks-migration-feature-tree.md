@@ -1,6 +1,6 @@
 ---
 title: "CATIA V5 to SolidWorks Migration: Handling Feature Tree Loss and Import Errors"
-excerpt: "Migrating CATIA V5 models to SolidWorks means losing the feature tree. I share the workflow I've developed to preserve design intent, rebuild key features, and handle the most common import errors."
+excerpt: "Migrating CATIA V5 models to SolidWorks means losing the feature tree. We share the workflow we've developed to preserve design intent, rebuild key features, and handle the most common import errors."
 category: "migration"
 softwareSlug: "catia"
 keyword: "CATIA to SolidWorks migration import"
@@ -15,13 +15,13 @@ sources:
 
 # CATIA V5 to SolidWorks Migration: Handling Feature Tree Loss and Import Errors
 
-I led a migration project last year where we moved 4,000+ CATIA V5 parts and assemblies to SolidWorks. The executive decision was made for cost reasons — SolidWorks licenses are significantly cheaper than CATIA, and the team was small enough that the transition was feasible. What management didn't understand was that migrating CAD files isn't just a file format conversion. It's a complete re-creation of the design intent. CATIA's feature tree doesn't translate to SolidWorks. The parametric relationships, sketches, and constraints that make a model editable are lost in translation. I'll share the workflow I developed to make this migration as painless as possible.
+Migrating thousands of CATIA V5 parts and assemblies to SolidWorks is often driven by cost — SolidWorks licenses are significantly cheaper than CATIA. But migrating CAD files isn't just a file-format conversion; it's a complete re-creation of the design intent. CATIA's feature tree doesn't translate to SolidWorks — the parametric relationships, sketches, and constraints that make a model editable are lost in translation. This guide shares a workflow to make the migration as painless as possible.
 
 ## The Fundamental Problem
 
 When you import a CATIA V5 file (`.CATPart` or `.CATProduct`) into SolidWorks, you get a "dumb solid" — a solid body with the correct geometry but no feature tree. You can't edit the dimensions of a hole, change a fillet radius, or suppress a feature. The model is a snapshot of the final geometry, not a recipe for creating it.
 
-SolidWorks offers `FeatureWorks` to attempt automatic feature recognition, but in my experience, it successfully reconstructs the feature tree for less than 20% of real-world parts. The rest require manual reconstruction.
+SolidWorks offers `FeatureWorks` to attempt automatic feature recognition, but in our experience, it successfully reconstructs the feature tree for less than 20% of real-world parts. The rest require manual reconstruction.
 
 ## Pre-Migration Assessment
 
@@ -73,7 +73,7 @@ If the import succeeds and you have a solid body, run FeatureWorks to attempt au
 3. Choose the features to recognize: Extrudes, Revolves, Holes, Fillets, Chamfers, Drafts
 4. Click **Recognize**
 
-FeatureWorks will attempt to identify features and rebuild the tree. In my experience:
+FeatureWorks will attempt to identify features and rebuild the tree. In our experience:
 - **Holes and hole patterns**: 80% success rate — FeatureWorks is good at these
 - **Extrudes and revolves**: 50% success rate — depends on sketch complexity
 - **Fillets and chamfers**: 40% success rate — often recognized but with wrong references
@@ -82,7 +82,7 @@ FeatureWorks will attempt to identify features and rebuild the tree. In my exper
 
 ### Step 4: Manual Reconstruction
 
-For features that FeatureWorks can't recognize, you'll need to rebuild them manually. Here's my approach:
+For features that FeatureWorks can't recognize, you'll need to rebuild them manually. Here's our approach:
 
 1. **Start with the base feature**: Identify the largest extrude or revolve — this is usually the foundation of the part
 2. **Use the Measure tool to extract dimensions**: Measure the key dimensions from the imported solid
@@ -123,7 +123,7 @@ This usually means the part is too complex for automatic recognition.
 
 ## Time Estimates
 
-Based on my migration project:
+Based on our migration project:
 
 | Part Complexity | Count | Time per Part | Total Time |
 |----------------|-------|---------------|------------|

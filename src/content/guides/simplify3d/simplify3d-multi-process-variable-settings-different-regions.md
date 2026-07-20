@@ -1,6 +1,6 @@
 ---
 title: "Simplify3D Multi-Process Printing: Variable Settings for Different Model Regions"
-excerpt: "Simplify3D's Variable Settings Wizard lets you apply different process settings to different height regions of a single model. I cover the multi-process workflow, split locations, continuous printing mode, and practical use cases like changing infill density or layer height mid-print."
+excerpt: "Simplify3D's Variable Settings Wizard lets you apply different process settings to different height regions of a single model. We cover the multi-process workflow, split locations, continuous printing mode, and practical use cases like changing infill density or layer height mid-print."
 category: "workflow"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D multi-process variable settings wizard different regions model"
@@ -16,7 +16,7 @@ sources:
 
 # Simplify3D Multi-Process Printing: Variable Settings for Different Model Regions
 
-I've used Simplify3D's multi-process feature extensively for parts that need different settings in different regions — dense infill at the base for strength, low infill at the top for speed, or fine layer heights for visible surfaces and coarse layers for hidden areas. This feature is one of Simplify3D's biggest differentiators compared to other slicers, and understanding how to use it unlocks significant quality and efficiency gains.
+We've used Simplify3D's multi-process feature extensively for parts that need different settings in different regions — dense infill at the base for strength, low infill at the top for speed, or fine layer heights for visible surfaces and coarse layers for hidden areas. This feature is one of Simplify3D's biggest differentiators compared to other slicers, and understanding how to use it unlocks significant quality and efficiency gains.
 
 ## What Is Multi-Process Printing?
 

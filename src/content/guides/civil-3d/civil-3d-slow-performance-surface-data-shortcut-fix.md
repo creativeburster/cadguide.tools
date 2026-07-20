@@ -1,6 +1,6 @@
 ---
 title: "Civil 3D Slow Performance: Surface Optimization, Data Shortcuts, and Drawing Cleanup"
-excerpt: "Civil 3D drawings with large surfaces, corridors, and feature lines take minutes to save and update. I cover the surface simplification, data shortcut strategy, and the purge-audit-recover workflow that restore performance."
+excerpt: "Civil 3D drawings with large surfaces, corridors, and feature lines take minutes to save and update. We cover the surface simplification, data shortcut strategy, and the purge-audit-recover workflow that restore performance."
 category: "performance"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D slow performance surface corridor data shortcut drawing"

@@ -1,6 +1,6 @@
 ---
 title: "Gerber AccuMark 3D Virtual Sampling: 3D Fit Validation and Pattern-to-3D Workflow"
-excerpt: "AccuMark 3D adds virtual sampling to the AccuMark platform with garment simulation, fit validation, and pattern adjustment. I cover the 3D simulation setup, tension analysis, avatar configuration, and the round-trip workflow between 2D patterns and 3D virtual samples."
+excerpt: "AccuMark 3D adds virtual sampling to the AccuMark platform with garment simulation, fit validation, and pattern adjustment. We cover the 3D simulation setup, tension analysis, avatar configuration, and the round-trip workflow between 2D patterns and 3D virtual samples."
 category: "workflow"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark 3D virtual sampling fit validation pattern simulation avatar tension analysis"
@@ -16,7 +16,7 @@ sources:
 
 # Gerber AccuMark 3D Virtual Sampling: 3D Fit Validation and Pattern-to-3D Workflow
 
-I've used AccuMark 3D to reduce physical sampling iterations for apparel brands producing in the Americas. AccuMark 3D is Gerber's virtual sampling add-on for the AccuMark platform — it takes 2D patterns from PDS and simulates them on 3D avatars for fit validation. While it's a separate module from the core AccuMark pattern and marker tools, the integration is seamless: pattern changes in PDS update the 3D simulation, and fit analysis in 3D can drive pattern adjustments.
+We've used AccuMark 3D to reduce physical sampling iterations for apparel brands producing in the Americas. AccuMark 3D is Gerber's virtual sampling add-on for the AccuMark platform — it takes 2D patterns from PDS and simulates them on 3D avatars for fit validation. While it's a separate module from the core AccuMark pattern and marker tools, the integration is seamless: pattern changes in PDS update the 3D simulation, and fit analysis in 3D can drive pattern adjustments.
 
 ## AccuMark 3D Overview
 

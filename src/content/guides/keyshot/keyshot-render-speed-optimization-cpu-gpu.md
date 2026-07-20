@@ -1,6 +1,6 @@
 ---
 title: "KeyShot Render Speed Optimization: CPU vs GPU, Real-Time Resolution, and Denoiser Settings"
-excerpt: "Slow KeyShot renders are caused by high real-time resolution, excessive CPU usage, or not using the GPU mode. I cover the CPU usage limit, real-time resolution strategy, denoiser configuration, and the GPU mode activation workflow."
+excerpt: "Slow KeyShot renders are caused by high real-time resolution, excessive CPU usage, or not using the GPU mode. We cover the CPU usage limit, real-time resolution strategy, denoiser configuration, and the GPU mode activation workflow."
 category: "performance"
 softwareSlug: "keyshot"
 keyword: "KeyShot render speed slow optimization CPU GPU settings"
@@ -16,7 +16,7 @@ sources:
 
 # KeyShot Render Speed Optimization: CPU vs GPU, Real-Time Resolution, and Denoiser Settings
 
-I've optimized KeyShot workflows for product design teams across multiple companies, and the most common complaint is "KeyShot is rendering slower than I expected." The KeyShot support knowledge base has specific guidance on this, and I've supplemented it with settings I've tuned through years of production work.
+We've optimized KeyShot workflows for product design teams across multiple companies, and the most common complaint is "KeyShot is rendering slower than I expected." The KeyShot support knowledge base has specific guidance on this, and we've supplemented it with settings we've tuned through years of production work.
 
 ## Fix 1: Lower the Real-Time Resolution
 
@@ -30,7 +30,7 @@ KeyShot's real-time render window updates continuously as you make changes. The 
 
 KeyShot's support documentation confirms: "Hiding parts and showing only the ones you are currently working on helps improve performance." Combined with a lower real-time resolution, this gives the biggest performance boost.
 
-**My workflow**: I work at 1280x720 for material and lighting setup, then switch to 4K only for the final render. The real-time window at 720p updates in 1-2 seconds; at 4K, it takes 10-15 seconds per update.
+**Our workflow**: We work at 1280x720 for material and lighting setup, then switch to 4K only for the final render. The real-time window at 720p updates in 1-2 seconds; at 4K, it takes 10-15 seconds per update.
 
 ## Fix 2: Limit CPU Usage for Smoother Performance
 
@@ -44,14 +44,14 @@ This sounds counterintuitive, but KeyShot's support documentation explicitly rec
 3. This leaves 10-20% of CPU capacity for the OS and KeyShot's non-rendering tasks
 4. The render time increases slightly (5-10%), but the overall experience is much smoother
 
-I set CPU usage to 85% on all workstations. The render time difference is negligible, but the UI stays responsive — you can orbit the camera, adjust materials, and switch tabs without waiting for the render to pause.
+We set CPU usage to 85% on all workstations. The render time difference is negligible, but the UI stays responsive — you can orbit the camera, adjust materials, and switch tabs without waiting for the render to pause.
 
 ## Fix 3: Enable GPU Mode
 
 KeyShot supports GPU rendering using NVIDIA CUDA. GPU mode is significantly faster than CPU mode for most scenes, especially those with complex materials and lighting.
 
 **To enable GPU mode**:
-1. Click the **GPU icon** in the ribbon (if it's grayed out, your driver is outdated — see my crash fix guide)
+1. Click the **GPU icon** in the ribbon (if it's grayed out, your driver is outdated — see our crash fix guide)
 2. KeyShot switches to GPU rendering
 3. The real-time update speed should increase dramatically
 
@@ -60,7 +60,7 @@ KeyShot supports GPU rendering using NVIDIA CUDA. GPU mode is significantly fast
 - Minimum 8GB VRAM recommended
 - Driver version 545.84 or later (576.52 recommended)
 
-**GPU vs CPU performance comparison** (my tests on RTX 4070 vs Ryzen 9 5950X):
+**GPU vs CPU performance comparison** (our tests on RTX 4070 vs Ryzen 9 5950X):
 - **Simple product scene** (1 object, 2 lights): GPU 3x faster
 - **Complex interior** (50 objects, 10 lights): GPU 5x faster
 - **Automotive scene** (car + environment, 20+ materials): GPU 8x faster
@@ -76,7 +76,7 @@ KeyShot includes a denoiser that cleans up noise in partially-rendered images. T
 2. Enable the denoiser
 3. Set the **Amount** to 0.5-0.8 (higher values remove more noise but can blur detail)
 
-With the denoiser enabled, I can reduce the sample count by 50-70% and achieve the same visual quality. This directly translates to faster render times.
+With the denoiser enabled, we can reduce the sample count by 50-70% and achieve the same visual quality. This directly translates to faster render times.
 
 **For GPU mode**: KeyShot supports the NVIDIA AI Denoiser, which is faster and higher quality than the CPU denoiser. It requires an RTX GPU.
 
@@ -84,7 +84,7 @@ With the denoiser enabled, I can reduce the sample count by 50-70% and achieve t
 
 KeyShot's support documentation recommends hiding parts that aren't being worked on. Every visible part consumes render resources, even if it's not in the camera view.
 
-**My approach**:
+**Our approach**:
 1. In the **Scene tab**, use the visibility toggle (eye icon) to hide parts
 2. Group parts logically (body, interior, details, environment) and hide groups you're not working on
 3. For final renders, unhide everything
@@ -108,13 +108,13 @@ Certain material types are more expensive to render than others:
 
 ## Fix 7: Optimize Lighting
 
-**Reduce light count**: Every light in the scene adds render time. For product renders, I use 3-5 lights maximum:
+**Reduce light count**: Every light in the scene adds render time. For product renders, we use 3-5 lights maximum:
 - **Key light**: Main illumination (area light or HDRI)
 - **Fill light**: Softens shadows (area light at low intensity)
 - **Rim light**: Separates product from background (spot or point light)
 - **Environment**: HDRI for reflections and ambient
 
-**Use HDRI efficiently**: A single HDRI environment light can replace multiple individual lights. It provides realistic reflections and ambient occlusion in one source. I use HDRI as the primary light source and add only 1-2 additional lights for specific highlights.
+**Use HDRI efficiently**: A single HDRI environment light can replace multiple individual lights. It provides realistic reflections and ambient occlusion in one source. We use HDRI as the primary light source and add only 1-2 additional lights for specific highlights.
 
 ## Fix 8: Adjust Anti-Aliasing
 
@@ -125,7 +125,7 @@ KeyShot's anti-aliasing settings affect both quality and render time:
 3. **Global illumination**: Set to 4-8 for interiors, 2-4 for exteriors
 4. **Shadows**: Set to 4-8 (higher values smooth shadow edges but increase render time)
 
-I use 4 samples for test renders and 8 for final renders. Going above 8 rarely produces visible improvement but significantly increases render time.
+We use 4 samples for test renders and 8 for final renders. Going above 8 rarely produces visible improvement but significantly increases render time.
 
 ## Fix 9: Network Rendering
 
@@ -136,7 +136,7 @@ For studios with multiple workstations, KeyShot Network Rendering distributes re
 3. Submit render jobs to the queue
 4. Each Worker processes a portion of the render
 
-**My setup**: 5 workstations (1 Master + 4 Workers) reduces render time by approximately 4x compared to a single machine. All Workers must have compatible KeyShot Network Rendering licenses.
+**Example**: a setup of 5 machines (1 Master + 4 Workers) reduces render time by approximately 4x compared to a single machine. All Workers must have compatible KeyShot Network Rendering licenses.
 
 **Troubleshooting network rendering**: KeyShot's support documentation recommends:
 - Reboot all machines before starting network rendering
@@ -146,7 +146,7 @@ For studios with multiple workstations, KeyShot Network Rendering distributes re
 
 ## Practical Example
 
-A product designer came to me with a consumer electronics render taking 45 minutes on CPU. Here's what I changed:
+A product designer came to us with a consumer electronics render taking 45 minutes on CPU. Here's what we changed:
 
 1. Enabled GPU mode (RTX 4070): 45 min → 8 min
 2. Lowered real-time resolution to 720p for editing: smoother workflow
@@ -159,4 +159,4 @@ Final result: 45 minutes → 3.5 minutes for the final render. The visual qualit
 
 ## Summary
 
-KeyShot render speed optimization is about using the right mode and settings for each task. My optimization order: enable GPU mode → lower real-time resolution for editing → enable denoiser → limit CPU usage to 85% → hide unused parts → optimize expensive materials → reduce light count → use network rendering for large jobs. GPU mode and the denoiser together typically provide a 10x speed improvement over default CPU settings.
+KeyShot render speed optimization is about using the right mode and settings for each task. Our optimization order: enable GPU mode → lower real-time resolution for editing → enable denoiser → limit CPU usage to 85% → hide unused parts → optimize expensive materials → reduce light count → use network rendering for large jobs. GPU mode and the denoiser together typically provide a 10x speed improvement over default CPU settings.

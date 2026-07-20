@@ -16,7 +16,7 @@ sources:
 
 # SAP2000 Nonlinear Analysis: Plastic Hinges, P-Delta, and Cable Structures
 
-I'll be honest — I avoided nonlinear analysis in SAP2000 for years because I thought it was overkill for most of my projects. Then I designed a cable-stayed pedestrian bridge and realized that linear analysis just doesn't cut it when geometry changes significantly under load. P-Delta effects, plastic hinges, cable sag — these aren't theoretical concerns, they're things that make the difference between a safe design and a wrong one. Let me walk you through how I approach all three.
+We'll be honest — We avoided nonlinear analysis in SAP2000 for years because we thought it was overkill for most of our projects. Then we designed a cable-stayed pedestrian bridge and realized that linear analysis just doesn't cut it when geometry changes significantly under load. P-Delta effects, plastic hinges, cable sag — these aren't theoretical concerns, they're things that make the difference between a safe design and a wrong one. Let us walk you through how we approach all three.
 
 ## Geometric Nonlinearity (P-Delta)
 
@@ -75,8 +75,8 @@ Compare linear vs. P-Delta results:
 
 1. Set hinge type: M3 (moment about strong axis)
 2. Set moment-rotation curve:
-   - **Yield moment (My)**: My = fy × Zx (plastic section modulus)
-   - **Yield rotation (θy)**: θy = My × L / (6 × E × Ix)
+   - **Yield moment (Our)**: Our = fy × Zx (plastic section modulus)
+   - **Yield rotation (θy)**: θy = Our × L / (6 × E × Ix)
    - **Plastic rotation capacity**: Per ASCE 41 Table 5-6
    - **Acceptance criteria**: IO, LS, CP rotation limits
 3. Set hinge location: At both ends of the member
@@ -86,7 +86,7 @@ Compare linear vs. P-Delta results:
 1. Set hinge type: P-M3 (coupled axial and moment)
 2. Set interaction surface:
    - **Axial yield**: Py = fy × Ag
-   - **Moment yield**: My = fy × Zx
+   - **Moment yield**: Our = fy × Zx
    - **Interaction**: Per AISC or ACI interaction equation
 3. The hinge accounts for axial load effect on moment capacity
 
@@ -289,4 +289,4 @@ Compare linear vs. P-Delta results:
 
 ## Wrapping Up
 
-Nonlinear analysis isn't something you need on every project, but when you do need it, SAP2000 handles it well. My advice: start with P-Delta on all your tall building projects — it's cheap to run and gives you a quick sense of whether second-order effects matter. Plastic hinges and pushover are for performance-based seismic design, and cable structures need the large displacement solver. Run the analysis, check convergence, and always verify that the results make physical sense.
+Nonlinear analysis isn't something you need on every project, but when you do need it, SAP2000 handles it well. Our advice: start with P-Delta on all your tall building projects — it's cheap to run and gives you a quick sense of whether second-order effects matter. Plastic hinges and pushover are for performance-based seismic design, and cable structures need the large displacement solver. Run the analysis, check convergence, and always verify that the results make physical sense.

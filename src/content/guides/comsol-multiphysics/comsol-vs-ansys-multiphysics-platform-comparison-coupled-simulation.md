@@ -16,7 +16,7 @@ sources:
 
 # COMSOL vs ANSYS: Multiphysics Platform Comparison for Coupled Simulation
 
-I've switched between COMSOL and ANSYS plenty of times over the years, and each platform has its own personality. COMSOL feels like it was designed by physicists who wanted everything to work together naturally. ANSYS feels like it was built by engineers who wanted the best tool for each specific job. Both philosophies have merit. Here's how I think about the trade-offs.
+We've switched between COMSOL and ANSYS plenty of times over the years, and each platform has its own personality. COMSOL feels like it was designed by physicists who wanted everything to work together naturally. ANSYS feels like it was built by engineers who wanted the best tool for each specific job. Both philosophies have merit. Here's how we think about the trade-offs.
 
 ## Architecture Comparison
 
@@ -193,6 +193,6 @@ I've switched between COMSOL and ANSYS plenty of times over the years, and each 
 - **Material library**: Extensive (Granta)
 - **Training and support**: Larger community, more resources
 
-## My Take
+## Our Take
 
-Here's how I decide between the two: if my problem is fundamentally multiphysics — say, induction heating where electromagnetic, thermal, and structural physics all interact tightly — COMSOL is my go-to. The native coupling just makes it easier. If I need best-in-class CFD or I'm working with a team that expects ANSYS files, I use ANSYS. The reality is most companies pick one and stick with it, and honestly, you can get good results from either if you know what you're doing. The tool matters less than the engineer using it.
+Here's how we decide between the two: if our problem is fundamentally multiphysics — say, induction heating where electromagnetic, thermal, and structural physics all interact tightly — COMSOL is our go-to. The native coupling just makes it easier. If we need best-in-class CFD or we're working with a team that expects ANSYS files, we use ANSYS. The reality is most companies pick one and stick with it, and honestly, you can get good results from either if you know what you're doing. The tool matters less than the engineer using it.

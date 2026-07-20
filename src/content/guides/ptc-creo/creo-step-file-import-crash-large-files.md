@@ -1,6 +1,6 @@
 ---
 title: "Creo STEP File Import Crashes: Memory and Configuration Fixes for Large Files"
-excerpt: "Importing a 600MB STEP file crashes Creo with a fatal error? I cover the memory monitoring, import settings, and file splitting techniques I use to handle large STEP imports."
+excerpt: "Importing a 600MB STEP file crashes Creo with a fatal error? We cover the memory monitoring, import settings, and file splitting techniques we use to handle large STEP imports."
 category: "troubleshooting"
 softwareSlug: "ptc-creo"
 keyword: "Creo STEP file import crash large file"
@@ -15,9 +15,9 @@ sources:
 
 # Creo STEP File Import Crashes: Memory and Configuration Fixes for Large Files
 
-A user on the PTC Community forum described a problem I've faced multiple times: they were trying to open a STEP file in Creo 10, and every attempt ended with Creo crashing. An "Auto-traceback info" window appeared with "Fatal Error Encountered," and a traceback file was written to the C drive. The STEP file was in excess of 600,000 KB (600MB). They'd tried adjusting the "Import New Model" default settings but couldn't get past the crash.
+A user on the PTC Community forum described a problem we've faced multiple times: they were trying to open a STEP file in Creo 10, and every attempt ended with Creo crashing. An "Auto-traceback info" window appeared with "Fatal Error Encountered," and a traceback file was written to the C drive. The STEP file was in excess of 600,000 KB (600MB). They'd tried adjusting the "Import New Model" default settings but couldn't get past the crash.
 
-The responses from the community were practical and directly aligned with my own experience. The first suggestion was to monitor RAM usage during import — if the system runs out of RAM and falls back to the page file, a crash is almost inevitable. The second was to request a less detailed model from the supplier. The third was to use the NIST STEP File Analyzer as a diagnostic tool. I'll cover all of these approaches plus the configuration settings that help Creo handle large imports.
+The responses from the community were practical and directly aligned with our own experience. The first suggestion was to monitor RAM usage during import — if the system runs out of RAM and falls back to the page file, a crash is almost inevitable. The second was to request a less detailed model from the supplier. The third was to use the NIST STEP File Analyzer as a diagnostic tool. We'll cover all of these approaches plus the configuration settings that help Creo handle large imports.
 
 ## Understanding Why Creo Crashes on Large STEP Files
 
@@ -42,7 +42,7 @@ As the forum response suggested: "Your first troubleshooting would be to monitor
 
 ### How Much RAM Do You Need?
 
-Based on my experience:
+Based on our experience:
 
 | STEP File Size | Minimum RAM | Recommended RAM |
 |---------------|------------|-----------------|
@@ -55,7 +55,7 @@ The forum user's 600MB STEP file requires at least 32GB of RAM, preferably 64GB.
 
 ## Fix 2: Optimize Import Settings
 
-The import settings significantly affect memory consumption. Here's what I use for large STEP files:
+The import settings significantly affect memory consumption. Here's what we use for large STEP files:
 
 1. **File → Open → change type to STEP**
 2. In the **Import New Model** dialog:

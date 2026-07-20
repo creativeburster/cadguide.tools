@@ -15,7 +15,7 @@ sources:
 
 # IJCAD Japanese Imperial Units and Drawing Standards Configuration
 
-IJCAD was built for the Japanese market, and it includes features for JIS (Japanese Industrial Standards) compliance that other IntelliCAD variants don't have. I configured IJCAD for a firm that does both domestic Japanese projects and international work — here's how to set it up properly.
+IJCAD was built for the Japanese market, and it includes features for JIS (Japanese Industrial Standards) compliance that other IntelliCAD variants don't have. We configured IJCAD for a firm that does both domestic Japanese projects and international work — here's how to set it up properly.
 
 ## Unit System Configuration
 

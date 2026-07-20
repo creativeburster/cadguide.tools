@@ -15,7 +15,7 @@ sources:
 
 # GibbsCAM vs Mastercam: Feature and Cost Comparison for Small to Mid-Size Shops
 
-I've programmed in both GibbsCAM and Mastercam for years. They're both capable systems, but they serve different shop profiles. GibbsCAM is the "get it done fast" tool; Mastercam is the "control every detail" tool. Here's my comparison for small to mid-size shops.
+We've programmed in both GibbsCAM and Mastercam for years. They're both capable systems, but they serve different shop profiles. GibbsCAM is the "get it done fast" tool; Mastercam is the "control every detail" tool. Here's our comparison for small to mid-size shops.
 
 ## Target Audience
 
@@ -134,7 +134,7 @@ GibbsCAM is cheaper than Mastercam subscription but more expensive than Masterca
 - You want a perpetual license option
 - You need a large community for support and training resources
 
-## My Recommendation
+## Our Recommendation
 
 **For a 3-10 person shop doing turning and 2.5D milling**: GibbsCAM. The fast programming and strong turning module give the best ROI. The gentle learning curve means new hires become productive quickly.
 

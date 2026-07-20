@@ -15,7 +15,7 @@ sources:
 
 # AutoCAD Plant 3D Not Responding: Diagnosing and Fixing Freezes on Large Plant Models
 
-Plant 3D freezing is the most common complaint I hear from users on large projects. The "Not Responding" message in the title bar sends everyone into a panic. I've worked on plant models with 50,000+ pipe segments and I've learned that most freezes come down to a handful of root causes. Here's my diagnostic process.
+Plant 3D freezing is the most common complaint we hear from users on large projects. The "Not Responding" message in the title bar sends everyone into a panic. We've worked on plant models with 50,000+ pipe segments and we've learned that most freezes come down to a handful of root causes. Here's our diagnostic process.
 
 ## Root Cause #1: Insufficient Hardware Resources
 

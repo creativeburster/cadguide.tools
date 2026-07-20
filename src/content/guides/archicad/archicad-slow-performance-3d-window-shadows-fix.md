@@ -1,6 +1,6 @@
 ---
 title: "ArchiCAD Slow Performance: 3D Window Lag, Shadow Bug Fix, and Layer Combination Optimization"
-excerpt: "ArchiCAD 27's 3D window lags on high-end workstations, even with small residential projects. I cover the DrawShadowsDuringNavigationOGL registry fix, layer combination cleanup, and the solid element operations audit that restore performance."
+excerpt: "ArchiCAD 27's 3D window lags on high-end workstations, even with small residential projects. We cover the DrawShadowsDuringNavigationOGL registry fix, layer combination cleanup, and the solid element operations audit that restore performance."
 category: "performance"
 softwareSlug: "archicad"
 keyword: "ArchiCAD slow performance 3D window lag shadows layer combination"

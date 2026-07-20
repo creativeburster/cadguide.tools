@@ -1,6 +1,6 @@
 ---
 title: "MicroStation Reference File Display Problems: Missing Geometry, Wrong Coordinates, and Level Overrides"
-excerpt: "MicroStation reference files show missing geometry, display at wrong coordinates, or ignore level settings. I cover the reference attachment settings, coordinate system alignment, and the level override workflow that fixes display issues."
+excerpt: "MicroStation reference files show missing geometry, display at wrong coordinates, or ignore level settings. We cover the reference attachment settings, coordinate system alignment, and the level override workflow that fixes display issues."
 category: "troubleshooting"
 softwareSlug: "microstation"
 keyword: "MicroStation reference file display missing geometry coordinates level"

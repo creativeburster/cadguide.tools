@@ -15,7 +15,7 @@ sources:
 
 # Alibre Design Sheet Metal Design: Bend Tables, K-Factor, and Flat Pattern Export
 
-I design sheet metal enclosures in Alibre Design for a small fabrication shop. The sheet metal module is solid — it handles bends, flanges, and flat patterns correctly once you configure the K-factor properly. Getting that configuration wrong means your flat pattern is the wrong size and the fabricated part doesn't fit. Here's the complete setup.
+We design sheet metal enclosures in Alibre Design for a small fabrication shop. The sheet metal module is solid — it handles bends, flanges, and flat patterns correctly once you configure the K-factor properly. Getting that configuration wrong means your flat pattern is the wrong size and the fabricated part doesn't fit. Here's the complete setup.
 
 ## Understanding K-Factor
 

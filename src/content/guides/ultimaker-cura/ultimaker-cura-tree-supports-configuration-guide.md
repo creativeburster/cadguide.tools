@@ -1,6 +1,6 @@
 ---
 title: "UltiMaker Cura Tree Supports: Configuration, Branch Settings, and When to Use Them"
-excerpt: "Cura's tree supports generate branching structures that reduce material waste and model scarring compared to standard grid supports. I cover the key branch settings — maximum angle, diameter, branch density, and collision resolution — plus when tree supports outperform normal supports and how to use the new Xmas tree variant."
+excerpt: "Cura's tree supports generate branching structures that reduce material waste and model scarring compared to standard grid supports. We cover the key branch settings — maximum angle, diameter, branch density, and collision resolution — plus when tree supports outperform normal supports and how to use the new Xmas tree variant."
 category: "workflow"
 softwareSlug: "ultimaker-cura"
 keyword: "UltiMaker Cura tree supports configuration branch settings guide"
@@ -17,7 +17,7 @@ sources:
 
 # UltiMaker Cura Tree Supports: Configuration, Branch Settings, and When to Use Them
 
-I've used Cura's tree supports extensively for miniature printing, organic models, and parts with complex overhangs. Cura was the first major slicer to implement tree supports, and its implementation remains one of the most configurable. This guide covers the key branch settings — the difference between supports that peel off cleanly and supports that fuse to your model or collapse mid-print.
+We've used Cura's tree supports extensively for miniature printing, organic models, and parts with complex overhangs. Cura was the first major slicer to implement tree supports, and its implementation remains one of the most configurable. This guide covers the key branch settings — the difference between supports that peel off cleanly and supports that fuse to your model or collapse mid-print.
 
 ## What Are Tree Supports?
 
@@ -43,7 +43,7 @@ Once enabled, a new set of tree-specific parameters appears.
 - **Touching Buildplate**: Supports only grow from the build plate upward. No supports rest on the model surface. This produces fewer supports, saves material, and leaves no marks on vertical surfaces.
 - **Everywhere**: Supports can rest on the model surface as well as the build plate. Necessary for models with internal cavities or overhangs that can't be reached from the build plate.
 
-I start with "Touching Buildplate" and switch to "Everywhere" only if the preview shows unsupported overhangs.
+We start with "Touching Buildplate" and switch to "Everywhere" only if the preview shows unsupported overhangs.
 
 ### Branch Diameter
 
@@ -65,7 +65,7 @@ Controls how quickly branches thicken toward the base. Default is **5°**. Highe
 
 The maximum angle branches can deviate from vertical. Default is **50°** in Cura (note: this is measured from vertical, not from horizontal). Higher values allow branches to reach further sideways but are less stable.
 
-Cura's documentation states: "An overhang angle of 40° is considered reliable." I keep this at **40-50°** for most prints.
+Cura's documentation states: "An overhang angle of 40° is considered reliable." we keep this at **40-50°** for most prints.
 
 ### Preferred Branch Angle
 
@@ -73,7 +73,7 @@ The angle branches use when they don't need to avoid the model. Lower values mea
 
 ### Branch Density
 
-Controls how dense the support structure is at the tips of branches. Higher values produce better overhang quality but make supports harder to remove. I use the default for most prints and increase it for models with critical overhang surfaces.
+Controls how dense the support structure is at the tips of branches. Higher values produce better overhang quality but make supports harder to remove. We use the default for most prints and increase it for models with critical overhang surfaces.
 
 ### Tip Diameter
 
@@ -81,7 +81,7 @@ The diameter at the very tip of each branch where it contacts the model. Smaller
 
 ### Collision Resolution
 
-Controls how accurately the tree avoids the model. Lower values are more accurate but slower to slice. Default is **0.15 mm**. I keep the default — the slicing time increase from lower values is rarely worth the marginal improvement.
+Controls how accurately the tree avoids the model. Lower values are more accurate but slower to slice. Default is **0.15 mm**. We keep the default — the slicing time increase from lower values is rarely worth the marginal improvement.
 
 ### Limit Branch Reach
 

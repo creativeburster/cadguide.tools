@@ -1,6 +1,6 @@
 ---
 title: "D5 Render Video and Panorama Export: Resolution, Frame Generation, and Artifact Prevention"
-excerpt: "D5 Render video exports crash at 4K, panoramas have seam artifacts, and exported videos show frame-to-frame flickering. I cover the resolution and FPS settings, DLSS Frame Generation caveats for video, and the panorama resolution and format selection."
+excerpt: "D5 Render video exports crash at 4K, panoramas have seam artifacts, and exported videos show frame-to-frame flickering. We cover the resolution and FPS settings, DLSS Frame Generation caveats for video, and the panorama resolution and format selection."
 category: "performance"
 softwareSlug: "d5-render"
 keyword: "D5 Render video panorama export resolution artifact fix"
@@ -16,7 +16,7 @@ sources:
 
 # D5 Render Video and Panorama Export: Resolution, Frame Generation, and Artifact Prevention
 
-I export videos and panoramas from D5 Render for client presentations, and the export process has specific challenges that image capture doesn't have. Video exports crash at high resolutions, panoramas show seam artifacts, and frame-to-frame flickering can ruin an otherwise perfect walkthrough. I've developed export workflows that address each of these issues.
+We export videos and panoramas from D5 Render for client presentations, and the export process has specific challenges that image capture doesn't have. Video exports crash at high resolutions, panoramas show seam artifacts, and frame-to-frame flickering can ruin an otherwise perfect walkthrough. We've developed export workflows that address each of these issues.
 
 ## Video Export: Resolution and FPS
 
@@ -35,7 +35,7 @@ A user on the D5 forum reported: "My computer is crashing all the time when rend
 - **30 FPS**: Standard for presentations — smooth motion
 - **60 FPS**: Very smooth — best for walkthroughs with fast camera movement
 
-**My recommendations**:
+**Our recommendations**:
 - For client presentations: 1080p at 30 FPS (good quality, manageable file size)
 - For marketing videos: 4K at 30 FPS (requires high-end GPU)
 - For quick previews: 720p at 30 FPS (fast export, small file)
@@ -51,7 +51,7 @@ DLSS Frame Generation is excellent for real-time editing but has specific issues
 2. **Partial scene stuttering**: Some scenes may have occasional stuck or shaking frames
 3. **Artifact amplification**: Any real-time artifacts are amplified when captured frame-by-frame in video
 
-**My recommendation**: Disable Frame Generation for video export. The FPS improvement isn't needed for export (you're not navigating in real-time), and it prevents potential artifacts.
+**Our recommendation**: Disable Frame Generation for video export. The FPS improvement isn't needed for export (you're not navigating in real-time), and it prevents potential artifacts.
 
 **To disable for export**:
 1. Go to **Menu → Frame Generation**
@@ -89,10 +89,10 @@ A smooth camera path is essential for professional video output:
 1. **Create a camera path**: Use D5's keyframe animation system
 2. **Limit camera speed**: Fast camera movement causes GI flickering and texture pop-in
 3. **Use smooth curves**: D5 interpolates between keyframes — ensure the path doesn't have sharp turns
-4. **Add enough keyframes**: More keyframes = smoother camera movement. I use a keyframe every 1-2 seconds of video.
+4. **Add enough keyframes**: More keyframes = smoother camera movement. We use a keyframe every 1-2 seconds of video.
 5. **Preview before exporting**: Play the camera path in real-time to check for issues before committing to a full export
 
-**My camera path workflow**:
+**Our camera path workflow**:
 1. Set keyframes at the start and end of the desired path
 2. Add intermediate keyframes at decision points (corners, stops, zooms)
 3. Adjust the interpolation curve for smooth acceleration and deceleration
@@ -113,7 +113,7 @@ D5 Render supports 360-degree panorama export for VR viewing and interactive pre
 - **PNG**: Larger file, lossless — best for archival and post-processing
 - **EXR**: HDR format — for compositing and tone mapping in post
 
-**My panorama workflow**:
+**Our panorama workflow**:
 1. Set the camera at the desired viewing position (eye level, typically 1.6m)
 2. Set panorama resolution to 4096x2048 for standard VR
 3. Export as JPG for web delivery, PNG for archival
@@ -144,12 +144,12 @@ D5 Render exports video in specific formats:
 2. **MP4 (H.265/HEVC)**: Better compression, smaller files, may need codec on older systems
 3. **PNG sequence**: Individual frames for post-processing in After Effects or Premiere
 
-**My encoding recommendations**:
+**Our encoding recommendations**:
 - For client delivery: MP4 H.264 at 20-30 Mbps bitrate
 - For marketing: MP4 H.265 at 15-20 Mbps bitrate (smaller file, same quality)
 - For post-processing: PNG sequence, then encode in Adobe Media Encoder
 
-**Re-encoding for quality**: D5's default encoding bitrate may be low for professional use. I always re-encode D5 videos through Adobe Media Encoder at 30-50 Mbps for client deliverables. This eliminates compression banding in gradients and skies.
+**Re-encoding for quality**: D5's default encoding bitrate may be low for professional use. We always re-encode D5 videos through Adobe Media Encoder at 30-50 Mbps for client deliverables. This eliminates compression banding in gradients and skies.
 
 ## Best Practices for Video and Panorama Export
 
@@ -164,4 +164,4 @@ D5 Render exports video in specific formats:
 
 ## Summary
 
-D5 Render video and panorama export requires careful resolution selection, Frame Generation management, and artifact prevention. My export workflow: disable Frame Generation → set GI to High → test at 720p first → use moderate camera speed → export at target resolution → re-encode at high bitrate in post. For panoramas, use 4096x2048 for standard VR, position the seam away from the main viewing direction, and increase GI quality to prevent seam artifacts. The 720p test export and Frame Generation disable are the two steps that prevent the most export issues.
+D5 Render video and panorama export requires careful resolution selection, Frame Generation management, and artifact prevention. Our export workflow: disable Frame Generation → set GI to High → test at 720p first → use moderate camera speed → export at target resolution → re-encode at high bitrate in post. For panoramas, use 4096x2048 for standard VR, position the seam away from the main viewing direction, and increase GI quality to prevent seam artifacts. The 720p test export and Frame Generation disable are the two steps that prevent the most export issues.

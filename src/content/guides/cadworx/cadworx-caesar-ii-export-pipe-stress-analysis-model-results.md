@@ -15,7 +15,7 @@ sources:
 
 # CADWorx to CAESAR II: Exporting Pipe Stress Analysis Models and Interpreting Results
 
-CADWorx and CAESAR II are both Hexagon products, and the integration between them is one of the strongest reasons to choose the Hexagon ecosystem. I've exported hundreds of lines from CADWorx to CAESAR II for stress analysis. The export is usually smooth, but there are specific configuration steps and common pitfalls. Here's the complete workflow.
+CADWorx and CAESAR II are both Hexagon products, and the integration between them is one of the strongest reasons to choose the Hexagon ecosystem. We've exported hundreds of lines from CADWorx to CAESAR II for stress analysis. The export is usually smooth, but there are specific configuration steps and common pitfalls. Here's the complete workflow.
 
 ## Why Pipe Stress Analysis Matters
 

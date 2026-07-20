@@ -1,6 +1,6 @@
 ---
 title: "Onshape Export Slow and STL File Problems: Mesh Quality, File Size, and Browser Settings"
-excerpt: "Exporting STL or STEP files from Onshape takes minutes or fails entirely. I cover the mesh density settings, browser cache clearing, and the API export method that bypasses UI performance issues."
+excerpt: "Exporting STL or STEP files from Onshape takes minutes or fails entirely. We cover the mesh density settings, browser cache clearing, and the API export method that bypasses UI performance issues."
 category: "troubleshooting"
 softwareSlug: "onshape"
 keyword: "Onshape export slow STL STEP file download problem"

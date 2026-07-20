@@ -1,6 +1,6 @@
 ---
 title: "Browzwear VStitcher Pattern Making: 2D Drafting, Blocks, and Tech Pack Export"
-excerpt: "VStitcher's 2D pattern making tools support drafting from scratch, importing DXF-AAMA files, and using 3D CAD blocks. I cover the pattern drafting workflow, grading across size runs, POM measurements, and exporting production-ready tech packs and patterns for manufacturers."
+excerpt: "VStitcher's 2D pattern making tools support drafting from scratch, importing DXF-AAMA files, and using 3D CAD blocks. We cover the pattern drafting workflow, grading across size runs, POM measurements, and exporting production-ready tech packs and patterns for manufacturers."
 category: "workflow"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher pattern making 2D drafting blocks tech pack grading export"
@@ -17,7 +17,7 @@ sources:
 
 # Browzwear VStitcher Pattern Making: 2D Drafting, Blocks, and Tech Pack Export
 
-I've used VStitcher's pattern making tools for both original design and production pattern preparation. The 2D pattern environment in VStitcher mirrors traditional flat pattern making — you draft pattern pieces, add seam allowances, place notches, and define grainlines — but with the advantage of real-time 3D simulation to verify fit and drape as you work.
+We've used VStitcher's pattern making tools for both original design and production pattern preparation. The 2D pattern environment in VStitcher mirrors traditional flat pattern making — you draft pattern pieces, add seam allowances, place notches, and define grainlines — but with the advantage of real-time 3D simulation to verify fit and drape as you work.
 
 ## Pattern Creation Methods
 

@@ -15,7 +15,7 @@ sources:
 
 # EasyEDA JLCPCB SMT Assembly: BOM, Pick-and-Place, and Component Sourcing Workflow
 
-JLCPCB SMT assembly is where EasyEDA's integration shines. Instead of ordering bare boards and hand-soldering 100 components, you upload the BOM and pick-and-place file, and JLCPCB assembles the components for you. I've ordered hundreds of assembled boards through this workflow. It's fast, affordable, and reliable — when you prepare the files correctly. Here's my complete workflow.
+JLCPCB SMT assembly is where EasyEDA's integration shines. Instead of ordering bare boards and hand-soldering 100 components, you upload the BOM and pick-and-place file, and JLCPCB assembles the components for you. We've ordered hundreds of assembled boards through this workflow. It's fast, affordable, and reliable — when you prepare the files correctly. Here's our complete workflow.
 
 ## What JLCPCB SMT Assembly Includes
 

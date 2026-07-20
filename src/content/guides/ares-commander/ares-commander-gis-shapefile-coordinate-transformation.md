@@ -15,7 +15,7 @@ sources:
 
 # ARES Commander GIS Tools: Importing Shapefiles and Coordinate Transformation
 
-Most 2D CAD tools treat GIS data as an afterthought. ARES Commander actually ships with proper GIS tools — coordinate system assignment, shapefile import, and georeferenced export. I used it on a site development project where the surveyor delivered shapefiles in a state plane coordinate system and we needed everything in UTM. Here's the workflow.
+Most 2D CAD tools treat GIS data as an afterthought. ARES Commander actually ships with proper GIS tools — coordinate system assignment, shapefile import, and georeferenced export. We used it on a site development project where the surveyor delivered shapefiles in a state plane coordinate system and we needed everything in UTM. Here's the workflow.
 
 ## What ARES Commander GIS Tools Include
 

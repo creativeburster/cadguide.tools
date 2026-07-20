@@ -1,6 +1,6 @@
 ---
 title: "Onshape Version History and Restore: Recovering Deleted Features Without Losing Progress"
-excerpt: "You deleted a feature by mistake and want to restore it — but restoring a version reverts your entire design. I cover the selective restore workflow, branch creation, and the copy-from-history method that saves your progress."
+excerpt: "You deleted a feature by mistake and want to restore it — but restoring a version reverts your entire design. We cover the selective restore workflow, branch creation, and the copy-from-history method that saves your progress."
 category: "troubleshooting"
 softwareSlug: "onshape"
 keyword: "Onshape version history restore deleted feature without losing progress"

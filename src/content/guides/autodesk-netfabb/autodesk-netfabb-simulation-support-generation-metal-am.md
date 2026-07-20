@@ -1,6 +1,6 @@
 ---
 title: "Autodesk Netfabb Simulation and Support Generation for Metal Additive Manufacturing"
-excerpt: "Metal AM requires simulation to predict thermal distortion and support structures to anchor parts to the build plate. I cover Netfabb's thermal simulation workflow, support generation for SLM/DMLS, build preparation for metal AM, and distortion compensation strategies."
+excerpt: "Metal AM requires simulation to predict thermal distortion and support structures to anchor parts to the build plate. We cover Netfabb's thermal simulation workflow, support generation for SLM/DMLS, build preparation for metal AM, and distortion compensation strategies."
 category: "workflow"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb simulation support generation metal additive manufacturing SLM DMLS distortion"
@@ -16,7 +16,7 @@ sources:
 
 # Autodesk Netfabb Simulation and Support Generation for Metal Additive Manufacturing
 
-I've prepared metal AM parts using Netfabb's simulation and support generation tools for SLM and DMLS printers. Metal additive manufacturing is far less forgiving than polymer 3D printing — thermal gradients cause distortion, unsupported overhangs lead to build failures, and residual stress can crack parts during or after printing. Netfabb's simulation and support tools (available in Premium and Ultimate) are designed to address these challenges.
+We've prepared metal AM parts using Netfabb's simulation and support generation tools for SLM and DMLS printers. Metal additive manufacturing is far less forgiving than polymer 3D printing — thermal gradients cause distortion, unsupported overhangs lead to build failures, and residual stress can crack parts during or after printing. Netfabb's simulation and support tools (available in Premium and Ultimate) are designed to address these challenges.
 
 ## Why Metal AM Needs Simulation
 

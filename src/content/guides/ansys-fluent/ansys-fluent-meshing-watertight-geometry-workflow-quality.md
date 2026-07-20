@@ -15,7 +15,7 @@ sources:
 
 # ANSYS Fluent Meshing: Watertight Geometry Workflow and Mesh Quality Optimization
 
-Mesh quality determines whether your CFD simulation converges and whether the results are accurate. I've spent more time fixing meshes than running simulations. ANSYS Fluent Meshing with the Watertight Geometry workflow has made the process more predictable, but it's still not push-button. Here's my workflow for generating high-quality meshes that converge on the first or second try.
+Mesh quality determines whether your CFD simulation converges and whether the results are accurate. We've spent more time fixing meshes than running simulations. ANSYS Fluent Meshing with the Watertight Geometry workflow has made the process more predictable, but it's still not push-button. Here's our workflow for generating high-quality meshes that converge on the first or second try.
 
 ## Why Mesh Quality Matters
 
