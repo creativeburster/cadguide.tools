@@ -59,30 +59,21 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
-        {/* Google Analytics — skip for known bots to keep GA4 data clean */}
-        <Script
-          id="ga-bot-filter"
-          strategy="afterInteractive"
+        
+        {/* Google Analytics for Search Console Verification */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function(){
-                var ua = navigator.userAgent;
-                var bots = /GPTBot|ChatGPT-User|ClaudeBot|Claude-Web|PerplexityBot|Google-Extended|cohere-ai|OMgili|YouBot|Applebot-Extended|Meta-ExternalAgent|Amazonbot|Bytespider|PetalBot|Baiduspider|AhrefsBot|SemrushBot|DotBot|BLEXBot|MJ12bot|MegaIndex|DataForSeoBot|Googlebot|Bingbot|Slurp|DuckDuckBot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|WhatsApp/i;
-                if (bots.test(ua)) return;
-                var s = document.createElement('script');
-                s.async = true;
-                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC';
-                document.head.appendChild(s);
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-2NC8HV27GC');
-              })();
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2NC8HV27GC');
             `,
           }}
         />
+      </head>
+      <body className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans">
         <Script
           id="brandreward-sdk"
           strategy="lazyOnload"
