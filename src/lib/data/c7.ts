@@ -1135,8 +1135,8 @@ export const c7Tools: Tool[] = [
   name: "Infraworks",
   slug: "infraworks",
   logo_url: "",
-  short_desc: "Professional solution for Infraworks.",
-  description: "Detailed information about Infraworks.",
+  short_desc: "Autodesk InfraWorks — conceptual design and modeling software for civil infrastructure, transportation, and urban planning.",
+  description: "Autodesk InfraWorks is a conceptual design platform for civil infrastructure. It enables rapid 3D modeling of terrain, roads, bridges, and urban environments, supporting preliminary design and stakeholder communication for transportation and site planning.",
 
   pricing_tiers: [
     {
@@ -1217,10 +1217,11 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+  country: "USA",
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 260,
 
   platforms: [
     "Windows"
@@ -1287,8 +1288,8 @@ export const c7Tools: Tool[] = [
   name: "3ds Max",
   slug: "3ds-max",
   logo_url: "",
-  short_desc: "Professional solution for 3ds Max.",
-  description: "Detailed information about 3ds Max.",
+  short_desc: "Industry-standard 3D modeling, animation, and rendering software for games, film, and visualization.",
+  description: "Autodesk 3ds Max is a professional 3D modeling, animation, and rendering application widely used in games, film, visual effects, and architectural visualization. It offers advanced polygon modeling, character rigging, particle systems, and integration with Arnold and V-Ray renderers.",
 
   pricing_tiers: [
     {
@@ -1369,10 +1370,11 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+  country: "USA",
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 2475,
 
   platforms: [
     "Windows"
@@ -1439,8 +1441,8 @@ export const c7Tools: Tool[] = [
   name: "ZBrush",
   slug: "zbrush",
   logo_url: "",
-  short_desc: "Professional solution for ZBrush.",
-  description: "Detailed information about ZBrush.",
+  short_desc: "Digital sculpting and painting software for high-resolution character and creature modeling.",
+  description: "ZBrush, from Maxon, is the industry-standard digital sculpting tool for high-poly character and creature design. It combines sculpting, painting, and posing with a unique pixol technology that stores depth, lighting, and material information per pixel.",
 
   pricing_tiers: [
     {
@@ -1521,10 +1523,11 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+  country: "Germany",
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 399,
 
   platforms: [
     "Windows"
@@ -1591,8 +1594,8 @@ export const c7Tools: Tool[] = [
   name: "KeyShot",
   slug: "keyshot",
   logo_url: "",
-  short_desc: "Professional solution for KeyShot.",
-  description: "Detailed information about KeyShot.",
+  short_desc: "Real-time ray-tracing rendering software for product visualization and industrial design.",
+  description: "KeyShot, from Luxion, is a real-time ray-tracing renderer for product visualization and industrial design. It imports CAD geometry directly and provides physically accurate materials, lighting, and studio environments with drag-and-drop simplicity.",
 
   pricing_tiers: [
     {
@@ -1661,10 +1664,11 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+  country: "USA",
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 545,
 
   platforms: [
     "Windows"
@@ -1731,8 +1735,8 @@ export const c7Tools: Tool[] = [
   name: "Lumion",
   slug: "lumion",
   logo_url: "",
-  short_desc: "Professional solution for Lumion.",
-  description: "Detailed information about Lumion.",
+  short_desc: "Architectural visualization software for fast, photorealistic rendering of 3D building models.",
+  description: "Lumion, from Act-3D, is an architectural visualization tool that turns 3D CAD and BIM models into photorealistic images, videos, and 360 panoramas. It features a large asset library, weather effects, and real-time preview for fast iteration.",
 
   pricing_tiers: [
     {
@@ -1813,10 +1817,11 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+  country: "Netherlands",
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 1499,
 
   platforms: [
     "Windows"
@@ -1883,8 +1888,8 @@ export const c7Tools: Tool[] = [
   name: "Enscape",
   slug: "enscape",
   logo_url: "",
-  short_desc: "Professional solution for Enscape.",
-  description: "Detailed information about Enscape.",
+  short_desc: "Real-time rendering and VR plugin for Revit, SketchUp, Rhino, and Archicad.",
+  description: "Enscape, from Chaos, is a real-time rendering and virtual reality plugin that integrates directly into Revit, SketchUp, Rhino, and Archicad. It provides instant visual feedback, asset libraries, and one-click VR export for architectural design review.",
 
   pricing_tiers: [
     {
@@ -1965,10 +1970,11 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+  country: "Germany",
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 329,
 
   platforms: [
     "Windows"
@@ -2035,8 +2041,8 @@ export const c7Tools: Tool[] = [
   name: "Twinmotion",
   slug: "twinmotion",
   logo_url: "",
-  short_desc: "Professional solution for Twinmotion.",
-  description: "Detailed information about Twinmotion.",
+  short_desc: "Real-time visualization tool built on Unreal Engine for architecture and construction.",
+  description: "Twinmotion, from Epic Games, is a real-time visualization tool built on Unreal Engine. It enables architects and construction professionals to create high-quality renderings, panoramas, and VR experiences from CAD and BIM data with an intuitive interface.",
 
   pricing_tiers: [
     {
@@ -2117,10 +2123,11 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
+  country: "USA",
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 445,
 
   platforms: [
     "Windows"

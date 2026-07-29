@@ -1381,6 +1381,7 @@ export const c5Tools: Tool[] = [
   logo_url: "",
   short_desc: "NASA-born structural analysis solver, now by Hexagon.",
   description: "MSC Nastran is a multidisciplinary structural analysis application used by engineers to perform static, dynamic, and thermal analysis across the aerospace, automotive and manufacturing industries.",
+  country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 18000,
@@ -11874,7 +11875,7 @@ export const c5Tools: Tool[] = [
   country: "UK",
   category_id: "c5",
   pricing_type: "Subscription",
-  starting_price: 0,
+  starting_price: 2390,
 
   platforms: [
     "Windows"

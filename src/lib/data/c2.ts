@@ -2640,6 +2640,7 @@ export const c2Tools: Tool[] = [
 
   description:
     "Maya is professional 3D software for creating realistic characters and effects.",
+  country: "USA",
 
   category_id: "c2",
   pricing_type: "Subscription",
