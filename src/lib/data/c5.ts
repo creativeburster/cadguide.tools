@@ -10654,6 +10654,7 @@ export const c5Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2024",
 
   expert_verdict: "A high-end 3D CAD/CAM software for mold and die design, widely adopted by automotive manufacturers in Asia.",
 },
@@ -11574,6 +11575,7 @@ export const c5Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "An advanced multiphysics simulation and optimization suite, tailored for optomechatronic systems.",
 },
@@ -11724,6 +11726,7 @@ export const c5Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
 },
@@ -12212,6 +12215,7 @@ export const c5Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "A high-performance full-spectrum CAM system, unmatched for multi-tasking mill-turn and Swiss-type machining.",
 

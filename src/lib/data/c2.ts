@@ -1778,6 +1778,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "OpenGL",
     standards: ["PAR", "STEP", "IGES", "JT"],
   },
+  version: "2025",
 
   expert_verdict: "Solid Edge is the 'thinking man's' SolidWorks.",
 
@@ -2248,6 +2249,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "None",
     standards: ["STL", "OFF", "AMF", "CSG"],
   },
+  version: "2025.05",
 
   expert_verdict:
     "OpenSCAD is the ultimate tool for engineers who think in code.",
@@ -2364,6 +2366,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Metal / DirectX",
     standards: ["STEP", "IGES", "XT", "STL"],
   },
+  version: "2025",
 
   expert_verdict:
     "Shapr3D has done the impossible: made professional CAD fun.",
@@ -2442,6 +2445,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "None",
     standards: ["STEP", "STL", "DXF"],
   },
+  version: "3.1",
   expert_verdict: "A masterclass in minimalist parametric design.",
 },
 {
@@ -2543,6 +2547,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "DirectX",
     standards: ["STEP", "IGES", "SAT", "STL"],
   },
+  version: "2025",
 
   expert_verdict: "No mandatory subscriptions, just solid parametric tools.",
 
@@ -2626,6 +2631,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Basic",
     standards: ["STEP", "IGES", "STL"],
   },
+  version: "2025",
 
   expert_verdict:
     "A robust choice for individual mechanical engineers on Linux.",
@@ -2696,6 +2702,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "CUDA",
     standards: ["FBX", "USD", "OBJ"],
   },
+  version: "2025",
 
   expert_verdict: "The power user's choice for Hollywood effects.",
 
@@ -3045,6 +3052,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "None",
     standards: ["STEP", "STL", "DXF"],
   },
+  version: "3.1",
   expert_verdict:
     "The ultimate tool for engineers who value geometric purity.",
 },
@@ -3119,6 +3127,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["STEP", "SAT", "X_T"],
   },
+  version: "2025",
 
   expert_verdict:
     "A radical alternative to history-based CAD that can triple design output for mechanical assemblies.",
@@ -3257,6 +3266,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Moderate",
     standards: ["STEP", "IGES", "STL"],
   },
+  version: "2025",
 
   expert_verdict:
     "The absolute best tool for engineers who need to fix 'broken' geometry from other systems.",
@@ -3339,6 +3349,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Ultra",
     standards: ["STEP", "IGES", "STL"],
   },
+  version: "2025",
 
   expert_verdict:
     "The professional standard for turning physical objects into digital CAD data.",
@@ -3411,6 +3422,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Ultra",
     standards: ["STEP", "IGES", "VDAFS"],
   },
+  version: "2025",
   expert_verdict:
     "The software behind almost every beautiful car you see on the road.",
 },
@@ -3489,6 +3501,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["STEP", "IGES", "DXF", "STL"],
   },
+  version: "2025",
 
   expert_verdict:
     "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
@@ -3621,6 +3634,7 @@ export const c2Tools: Tool[] = [
     "gpu_optimization": "OpenGL",
     "standards": ["STEP", "IGES", "Parasolid", "OBJ"],
   },
+  version: "2025",
 
   "expert_verdict": "The most exciting new 3D CAD in years. If you wished Rhino felt more like Blender, Plasticity is for you.",
 
@@ -3728,6 +3742,7 @@ export const c2Tools: Tool[] = [
     "gpu_optimization": "OpenGL",
     "standards": ["STEP", "IGES", "OBJ", "3DM"],
   },
+  version: "4.0",
 
   "expert_verdict": "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
   faqs: [{
@@ -3859,6 +3874,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Basic",
     standards: ["STL", "OBJ", "SVG"],
   },
+  version: "2025",
 
   expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics.",
 
@@ -3939,6 +3955,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Basic",
     standards: ["CATIA", "NX", "SolidWorks", "Creo", "Inventor"],
   },
+  version: "2025",
   expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
 },
 {
@@ -4017,6 +4034,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Basic",
     standards: ["STEP", "IGES", "STL", "JT", "Parasolid"],
   },
+  version: "3.25",
   expert_verdict: "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion.",
 },
 {
@@ -4218,6 +4236,7 @@ export const c2Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2025",
 
   expert_verdict: "A pioneering Chinese cloud-native 3D CAD/PLM system, allowing collaborative part and assembly modeling in browsers.",
 },

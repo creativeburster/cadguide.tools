@@ -5548,6 +5548,7 @@ export const c7Tools: Tool[] = [
       "3DS"
     ]
   },
+  version: "2025",
 
   expert_verdict: "A specialized 3D space planning and interior design tool, renowned for quick DWG layouts and high-quality product rendering.",
 },
@@ -5922,6 +5923,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
 },
@@ -6072,6 +6074,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "A specialized AutoCAD and civil-integrated geology and mine planning software, ideal for underground detailing.",
 },
@@ -6222,6 +6225,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
 },
@@ -6372,6 +6376,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "The preferred interior planning and furniture CAD suite in South America, tightly integrated with manufacturing systems.",
 },
@@ -6522,6 +6527,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "A specialized AutoCAD-based shipbuilding CAD/CAM system, renowned for managing massive offshore structure models.",
 },
@@ -6672,6 +6678,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "The global standard in ship design and operations, unmatched for naval architecture calculations and stability analysis.",
 },
@@ -7022,6 +7029,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "A premier German 3D CAD/CAM software for furniture manufacture, exhibition stands, and interior design.",
 },
@@ -7172,6 +7180,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "A specialized 3D design and manufacturing integration software, linking furniture designs directly to CNC machines.",
 },
@@ -7322,6 +7331,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "The leading kitchen and bathroom planning software, featuring an extensive catalog of manufacturer brands.",
 },
@@ -7472,6 +7482,7 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "A highly visual 3D design and presentation software tailored for tilers, stove builders, and interior designers.",
 },

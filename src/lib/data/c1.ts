@@ -854,6 +854,7 @@ export const c1Tools: Tool[] = [
       "STEP"
     ]
   },
+  version: "2024",
 
   expert_verdict: "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering.",
 
@@ -1038,6 +1039,7 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2025",
 
   expert_verdict: "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans.",
 
@@ -3106,6 +3108,7 @@ export const c1Tools: Tool[] = [
       "IFC"
     ]
   },
+  version: "2025",
 
   expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
 },
@@ -3804,6 +3807,7 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2025",
 
   expert_verdict: "The undisputed king of cross-platform DWG CAD — desktop, mobile, and cloud in perfect sync.",
 
@@ -4030,6 +4034,7 @@ export const c1Tools: Tool[] = [
       "STEP"
     ]
   },
+  version: "2024",
 
   expert_verdict: "A highly scalable 2D/3D mechanical design and factory layout suite, preferred by industrial engineering teams.",
 },
@@ -4213,6 +4218,7 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2025",
 
   expert_verdict: "A leading Japanese DWG-compatible CAD software, highly optimized for local construction and manufacturing industries.",
 },
@@ -4412,6 +4418,7 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2025",
 
   expert_verdict: "A specialized Japanese 2D CAD design system, featuring excellent multi-layer handling and custom API extensions.",
 },
@@ -5697,6 +5704,7 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2025",
 
   expert_verdict: "ArcSite is ideal for field documentation and mobile floor plan creation.",
 },
@@ -5839,6 +5847,7 @@ export const c1Tools: Tool[] = [
       "DXF"
     ]
   },
+  version: "2024",
 
   expert_verdict: "UVCAD is a practical mobile CAD solution for basic 2D drafting needs.",
 },
@@ -5980,6 +5989,7 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
+  version: "2024",
 
   expert_verdict: "Updraw is a good choice for iOS users focused on dimensioned 2D drawings.",
 }

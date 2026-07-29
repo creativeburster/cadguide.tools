@@ -1292,6 +1292,7 @@ export const c4Tools: Tool[] = [
       "DXF"
     ]
   },
+  version: "2025",
 
   expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
 }

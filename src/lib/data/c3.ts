@@ -1166,6 +1166,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["IFC", "DWG", "OBJ"],
   },
+  version: "2025",
 
   expert_verdict: "The money-making machine for home builders.",
 
@@ -1262,6 +1263,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["IFC", "DWG", "Shapefile"],
   },
+  version: "2025",
 
   expert_verdict:
     "The undisputed gold standard for professional landscape architecture.",
@@ -1342,6 +1344,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["IFC", "DWG", "DXF", "STEP"],
   },
+  version: "2025",
 
   expert_verdict:
     "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
@@ -1495,6 +1498,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["IFC", "DGN", "DWG", "LandXML"],
   },
+  version: "2025",
 
   expert_verdict:
     "The definitive platform for highway and infrastructure projects at enterprise scale.",
@@ -1596,6 +1600,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: [],
   },
+  version: "2024",
   expert_verdict: "A robust project management tool designed for the French AEC industry with tight BIM integrations.",
 },
 {
@@ -1714,6 +1719,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Yes",
     standards: ["DWG", "DXF", "STEP", "IFC"],
   },
+  version: "2025",
   expert_verdict: "HiCAD is a comprehensive CAD/PDM/PLM solution covering mechanical engineering, plant design, sheet metal, and steel construction. While highly reliable with specialized workflows, it carries a premium price tag and a steep learning curve.",
 },
 {
@@ -1832,6 +1838,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
+  version: "2024",
   expert_verdict: "Renga is a cost-effective BIM system built to comply with local regulations. It provides a decent multi-disciplinary CAD environment for regional projects, but has limited English documentation and overseas adoption.",
 },
 {
@@ -1959,6 +1966,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
+  version: "2025",
 
   expert_verdict: "Edificius is a powerful BIM platform boasting a record number of IFC certifications, making it a standout choice for projects prioritizing openBIM compliance. By combining architectural, structural, and MEP modules into a single environment, it offers superb interoperability. While it has a strong footprint in Europe, users should expect a steep learning curve and premium pricing.",
 
@@ -2079,6 +2087,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF"],
   },
+  version: "2025",
   expert_verdict: "EdiLus is a tailored architectural BIM solution featuring IFC-certified interoperability. With its friendly interface and automated drawing outputs, it is highly accessible for architects. Structural and MEP modules are light, making it best suited for pure building layout and documentation in small to mid-sized firms looking for a cost-effective choice.",
 },
 {
@@ -2195,6 +2204,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "STEP"],
   },
+  version: "2025",
   expert_verdict: "cadwork is the premier CAD/CAM suite for wood engineering and timber frame design, offering seamless transitions from 3D modeling directly to CNC machinery output. Highly regarded for its Swiss precision and deep integration, it carries a premium price and steep learning curve, making it an essential investment for timber specialists but irrelevant for general contractors.",
 },
 {
@@ -2313,6 +2323,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
+  version: "2025",
   expert_verdict: "MagiCAD is the benchmark for MEP engineering, providing fully integrated tools for HVAC, piping, and electrical design. Its extensive manufacturer catalog and robust Revit integration make it a top choice in Europe. It requires a significant financial investment, but for dedicated MEP design firms, the efficiency gains are unmatched.",
 },
 {
@@ -2429,6 +2440,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
+  version: "2025",
   expert_verdict: "DDS-CAD is an established MEP BIM solution covering mechanical, electrical, and piping trades. With native energy calculations and solid Nordic market adoption, it is a highly reliable tool. It lacks versatile general architectural modeling, making it a dedicated engineering choice for building systems professionals.",
 },
 {
@@ -2556,6 +2568,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "Basic",
     standards: ["IFC", "DWG", "DXF", "RVT"],
   },
+  version: "2025",
 
   expert_verdict: "dRofus is a robust data-centric program planning and equipment database tool designed to sync with your BIM workflow. Rather than a geometric modeler, it manages metadata, room data sheets, and enterprise procurement specs. While overkill for minor jobs, it is indispensable for complex public works, hospitals, and high-LOD projects.",
 
@@ -2617,6 +2630,7 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "Basic",
     "standards": ["DWG", "PCF", "ISO 15926"],
   },
+  version: "2025",
 
   "expert_verdict": "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
 
@@ -2724,6 +2738,7 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "Basic",
     "standards": ["ISO 15926", "PCF", "DGN"],
   },
+  version: "2024",
 
   "expert_verdict": "Goes head-to-head with AVEVA E3D. Pick based on which one your owner-operator already uses for its asset model.",
 
@@ -2831,6 +2846,7 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "Basic",
     "standards": ["DWG", "PCF", "ISO 15926"],
   },
+  version: "2025",
 
   "expert_verdict": "The pragmatic plant-design choice for North American EPCs that already live inside AutoCAD.",
 
@@ -2938,6 +2954,7 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "N/A",
     "standards": ["IFC", "RVT", "DWG", "Navisworks NWD"],
   },
+  version: "2025",
 
   "expert_verdict": "The natural collaboration layer for any Autodesk-centric AEC firm — and the de facto industry standard CDE.",
 
@@ -3045,6 +3062,7 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "N/A",
     "standards": ["IFC", "DWG", "RVT", "SKP"],
   },
+  version: "2025",
 
   "expert_verdict": "If you live in Tekla or SketchUp, Trimble Connect is the natural CDE — free tier alone makes it worth trying.",
 
@@ -3152,6 +3170,7 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "Yes (ZOOM)",
     "standards": ["BCF 2.1 / 3.0", "IFC"],
   },
+  version: "2025",
 
   "expert_verdict": "The gold standard for openBIM issue management. Pair with Solibri or ZOOM for clash, and you have a vendor-neutral coordination stack.",
 
@@ -3259,6 +3278,7 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "N/A",
     "standards": ["RVT", "DWG", "IFC"],
   },
+  version: "2025",
 
   "expert_verdict": "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
   faqs: [{
@@ -3463,6 +3483,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
 },
@@ -3613,6 +3634,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2024",
 
   expert_verdict: "A specialized BIM modeling suite for building services (MEP) design and regulatory verification.",
 },
@@ -3763,6 +3785,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
 },
@@ -3913,6 +3936,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
+  version: "2025",
 
   expert_verdict: "A leading Brazilian concrete building design and detailing software, highly optimized for regional construction standards.",
 },
