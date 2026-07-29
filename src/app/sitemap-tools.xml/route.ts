@@ -8,7 +8,7 @@ export async function GET() {
   // Fixed content-version date — only update this when content is substantively changed.
   // Do NOT use new Date() here; a dynamic timestamp causes Googlebot to re-crawl unchanged
   // pages every time the sitemap is fetched, wasting crawl budget.
-  const now = '2026-05-23T00:00:00.000Z'; // Tool detail pages launch date
+  const now = '2026-07-29T00:00:00.000Z'; // Content update: 37 tools reclassified, metadata corrections, 93 new guides
 
   // Tool Detail Pages
   const toolUrls = tools.map((tool) => {
