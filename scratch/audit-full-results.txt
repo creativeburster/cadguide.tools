@@ -1,0 +1,691 @@
+=== COMPREHENSIVE CONTENT QUALITY AUDIT ===
+Total old guides: 532
+KEEP: 246 (46%)
+REWRITE: 256 (48%)
+DELETE: 30 (6%)
+
+=== DELETE (30) ===
+autodesk-netfabb/autodesk-netfabb-vs-meshmixer-vs-magics-stl-repair-comparison.md | d:6 | product_page_only,error_some(4),specific_problem,comparison_heavy,cat_comparison,long
+browzwear/browzwear-vs-clo-3d-vs-marvelous-designer-comparison.md | d:6 | product_page_only,comparison_heavy,cat_comparison,long
+edgecam/edgecam-vs-mastercam-comparison-job-shop.md | d:6 | product_page_only,comparison_heavy,cat_comparison,long
+exocad/exocad-vs-3shape-vs-cerec-dental-cad-comparison.md | d:6 | product_page_only,comparison_heavy,cat_comparison,long
+gstarcad/gstarcad-vs-autocad-feature-comparison-performance-migration.md | d:6 | product_page_only,error_some(3),comparison_heavy,cat_comparison,long
+kompas-3d/kompas-3d-vs-solidworks-comparison.md | d:6 | product_page_only,comparison_heavy,cat_comparison,long
+ls-dyna/ls-dyna-vs-abaqus-explicit-solver-comparison-crash-impact.md | d:6 | product_page_only,error_rich(10),comparison_heavy,cat_comparison,long
+mastercam/mastercam-vs-gibbscam-vs-camworks-cam-comparison.md | d:6 | product_page_only,comparison_heavy,cat_comparison,long
+matrixgold/matrixgold-vs-rhinogold-vs-jewelcad-pro-comparison.md | d:6 | product_page_only,error_some(4),comparison_heavy,cat_comparison,long
+midas-gen/midas-gen-vs-etabs-building-analysis-platform-comparison.md | d:6 | product_page_only,comparison_heavy,cat_comparison,long
+nanocad/nanocad-vs-autocad-lt-feature-comparison-migration.md | d:6 | product_page_only,error_some(3),comparison_heavy,cat_comparison,long
+progecad/progecad-vs-autocad-feature-comparison-cost-migration.md | d:6 | product_page_only,error_some(3),comparison_heavy,cat_comparison,long
+simscale/simscale-vs-desktop-cae-cloud-on-premise-simulation-comparison.md | d:6 | product_page_only,error_some(3),comparison_heavy,cat_comparison,long
+varicad/varicad-vs-solidworks-feature-comparison-cost-analysis.md | d:6 | product_page_only,error_some(2),comparison_heavy,cat_comparison,long
+cabinet-vision/cabinet-vision-vs-sketchup-vs-mozaik-cabinet-design-comparison.md | d:4 | error_some(4),comparison_heavy,cat_comparison,long
+draftsight/draftsight-vs-autocad-feature-comparison-migration.md | d:4 | error_some(4),comparison_heavy,cat_comparison,long
+drofus/drofus-vs-revit-schedules-bim-data-management-comparison.md | d:4 | error_rich(11),comparison_heavy,cat_comparison,long
+dwg-trueview/dwg-trueview-vs-autocad-viewer-free-dwg-comparison.md | d:4 | error_some(4),comparison_heavy,cat_comparison,long
+easyeda/easyeda-vs-kicad-pcb-design-comparison-free-tool.md | d:4 | error_some(3),comparison_heavy,cat_comparison,long
+gibbscam/gibbscam-vs-mastercam-comparison-small-shop.md | d:4 | comparison_heavy,cat_comparison,long
+infraworks/autodesk-infraworks-vs-civil-3d-comparison-workflow.md | d:4 | support_src,comparison_heavy,cat_comparison,long
+keycreator/keycreator-vs-autocad-manufacturing-comparison.md | d:4 | error_rich(8),comparison_heavy,cat_comparison,long
+openscad/openscad-vs-freecad-open-source-comparison.md | d:4 | error_some(4),comparison_heavy,cat_comparison,long
+optitex/optitex-vs-gerber-accumark-vs-lectra-modaris-comparison.md | d:4 | error_some(3),comparison_heavy,cat_comparison,long
+orcad/orcad-vs-altium-designer-pcb-comparison.md | d:4 | comparison_heavy,cat_comparison,long
+solibri/solibri-office-vs-solibri-site-license-comparison.md | d:4 | error_rich(9),comparison_heavy,cat_comparison,long
+solibri/solibri-vs-navisworks-bim-coordination-clash-detection-comparison.md | d:4 | comparison_heavy,cat_comparison,long
+turbocad/turbocad-vs-autocad-feature-comparison-pricing-migration.md | d:4 | error_some(3),comparison_heavy,cat_comparison,long
+vectorworks/vectorworks-vs-revit-bim-platform-comparison-architecture-design.md | d:4 | error_some(2),comparison_heavy,cat_comparison,long
+ironcad/ironcad-vs-ironcad-draft-3d-2d.md | d:3 | product_page_only,error_some(2),cat_comparison
+
+=== KEEP (246) ===
+3ds-max/3ds-max-random-crashes-diagnostic-guide.md | k:12 | forum_src,support_src,error_rich(41),error_code,specific_problem,troubleshoot_real,long
+altair-inspire/altair-inspire-topology-optimization-fails-contact-errors.md | k:10 | forum_src,error_rich(26),error_code,specific_problem,troubleshoot_real,long
+catia/catia-v5-click-ok-to-terminate-crash.md | k:10 | forum_src,error_rich(54),error_code,specific_problem,troubleshoot_real,long
+enscape/enscape-crash-black-screen-loading-fix.md | k:10 | forum_src,error_rich(32),error_code,specific_problem,troubleshoot_real,long
+enscape/enscape-not-loading-sketchup-extension-fix.md | k:10 | forum_src,error_rich(28),error_code,specific_problem,troubleshoot_real,long
+freecad/freecad-troubleshooting-common-errors-startup-fix.md | k:10 | forum_src,error_rich(59),error_code,specific_problem,troubleshoot_real,long
+maya/maya-viewport-2-performance-lag-heavy-scenes-rigs-optimization.md | k:10 | forum_src,support_src,error_rich(6),troubleshoot_real,long
+powermill/powermill-toolpath-calculation-slow-bad-stl-collision-check-tolerance.md | k:10 | forum_src,error_rich(14),error_code,specific_problem,troubleshoot_real,long
+recap-pro/recap-pro-troubleshooting-registration-failure-import-error.md | k:10 | forum_src,error_rich(31),error_code,specific_problem,troubleshoot_real,long
+rhino-3d/rhino-vray-rendering-crash-out-of-memory-vram-large-scenes.md | k:10 | forum_src,error_rich(31),error_code,specific_problem,troubleshoot_real,long
+twinmotion/twinmotion-datasmith-revit-crash-sync-fix.md | k:10 | forum_src,error_rich(30),error_code,specific_problem,troubleshoot_real,long
+3ds-max/3ds-max-fbx-obj-import-missing-materials-fix.md | k:9 | forum_src,error_rich(20),specific_problem,troubleshoot_real,long
+ansys-mechanical/ansys-mechanical-meshing-problems-poor-quality-stuck-convergence.md | k:9 | forum_src,error_rich(17),specific_problem,troubleshoot_real,long
+ansys-mechanical/ansys-mechanical-nonlinear-convergence-divergence-contact-stiffness-substeps.md | k:9 | forum_src,error_rich(19),specific_problem,troubleshoot_real,long
+bambu-studio/bambu-studio-ams-multi-color-setup-troubleshooting.md | k:9 | forum_src,error_rich(21),specific_problem,troubleshoot_real,long
+catia/catia-v5-problem-reading-document-recovery.md | k:9 | forum_src,error_rich(36),specific_problem,troubleshoot_real,long
+enscape/enscape-materials-gray-revit-textures-fix.md | k:9 | forum_src,error_rich(35),specific_problem,troubleshoot_real,long
+freecad/freecad-topological-naming-problem-model-breaks.md | k:9 | forum_src,error_rich(29),specific_problem,troubleshoot_real,long
+fusion-360/fusion-360-files-missing-hub-migration-cache-recovery.md | k:9 | forum_src,error_rich(37),specific_problem,troubleshoot_real,long
+kicad/kicad-library-management-missing-footprints-symbol-errors-version-upgrade.md | k:9 | forum_src,error_rich(17),specific_problem,troubleshoot_real,long
+maya/maya-scene-optimization-file-size-cleanup-performance-audit.md | k:9 | forum_src,support_src,error_some(3),specific_problem,perf_real,long
+solidworks/fix-solidworks-license-error-5-no-feature.md | k:9 | support_src,error_rich(32),error_code,specific_problem,troubleshoot_real,long
+altium-designer/altium-designer-drc-errors-clearance-routing.md | k:8 | forum_src,error_rich(13),troubleshoot_real,long
+ansys-discovery/ansys-discovery-gpu-cuda-requirements-troubleshooting.md | k:8 | support_src,error_rich(14),specific_problem,troubleshoot_real,long
+catia/catia-v5-to-solidworks-migration-feature-tree.md | k:8 | forum_src,error_rich(9),specific_problem,migration_real,long
+civil-3d/civil-3d-corridor-assembly-error-target-mapping-fix.md | k:8 | forum_src,error_rich(23),troubleshoot_real,long
+civil-3d/civil-3d-slow-performance-surface-data-shortcut-fix.md | k:8 | forum_src,error_rich(9),specific_problem,perf_real,long
+fusion-360/fusion-360-large-assembly-performance-timeline-suppress.md | k:8 | forum_src,error_rich(11),specific_problem,perf_real,long
+fusion-360/fusion-360-slow-performance-freezes-cache-fix.md | k:8 | forum_src,error_rich(19),specific_problem,perf_real,long
+kisssoft/kisssoft-creo-integration-interface-setup.md | k:8 | forum_src,error_rich(18),error_code,specific_problem,long
+maya/maya-usd-pipeline-import-export-material-conversion-issues.md | k:8 | forum_src,error_rich(11),error_code,specific_problem,long
+recap-pro/recap-pro-point-cloud-registration-auto-alignment-manual-targets.md | k:8 | forum_src,error_rich(31),error_code,specific_problem,long
+revit/revit-corrupted-central-file-recovery.md | k:8 | support_src,error_rich(47),specific_problem,troubleshoot_real,long
+revit/revit-worksharing-file-locks-dwl-corrupted.md | k:8 | support_src,error_rich(20),specific_problem,troubleshoot_real,long
+rhino-3d/rhino-display-pipeline-heavy-mesh-optimization-viewport-lag.md | k:8 | forum_src,error_rich(5),specific_problem,perf_real,long
+solid-edge/solid-edge-large-assembly-performance-simplify-activate.md | k:8 | forum_src,error_rich(10),specific_problem,perf_real,long
+solidworks/repair-imported-step-iges-knit-surface.md | k:8 | support_src,error_rich(17),specific_problem,troubleshoot_real,long
+solidworks/resolve-solidworks-mate-conflicts-lag.md | k:8 | support_src,error_rich(13),specific_problem,troubleshoot_real,long
+zwcad/migrating-autocad-to-zwcad-what-breaks.md | k:8 | forum_src,error_rich(9),specific_problem,migration_real,long
+zwcad/zwcad-dwg-compatibility-autocad-roundtrip.md | k:8 | forum_src,error_rich(19),troubleshoot_real,long
+3ds-max/3ds-max-viewport-lag-high-end-pc-fix.md | k:7 | forum_src,error_rich(5),perf_real,long
+altium-designer/altium-designer-copper-pour-best-practices.md | k:7 | forum_src,error_rich(6),specific_problem,long
+ansys-discovery/ansys-discovery-license-activation-installation-troubleshooting.md | k:7 | support_src,error_rich(15),error_code,specific_problem,long
+catia/catia-v5-customizing-toolbars-restoring-commands.md | k:7 | forum_src,error_rich(18),specific_problem,long
+fusion-360/fusion-360-cam-toolpath-slow-calculation-fix.md | k:7 | forum_src,error_rich(11),perf_real,long
+fusion-360/fusion-360-drawing-performance-viewport-dimension-fix.md | k:7 | forum_src,error_rich(8),perf_real,long
+kicad/kicad-pcb-design-workflow-schematic-to-manufacturing-gerber-output.md | k:7 | forum_src,error_rich(7),specific_problem,long
+librecad/librecad-dxf-file-compatibility-autocad-cad-systems.md | k:7 | forum_src,error_rich(13),specific_problem,long
+meshlab/meshlab-vs-blender-vs-netfabb-mesh-repair-comparison.md | k:7 | forum_src,error_rich(9),specific_problem,comparison_heavy,cat_comparison,long
+powermill/powermill-macro-programming-automating-toolpath-nc-program-feeds-speeds.md | k:7 | forum_src,error_rich(11),specific_problem,long
+rhino-3d/rhino-grasshopper-performance-optimization-slow-definitions-data-trees.md | k:7 | forum_src,error_rich(10),perf_real,long
+shapr3d/shapr3d-export-fusion-360-step-cam.md | k:7 | support_src,error_rich(7),specific_problem,migration_real,long
+solid-edge/solid-edge-2025-slow-startup-license-network-fix.md | k:7 | forum_src,error_rich(7),perf_real,long
+altium-designer/altium-designer-footprint-design-mistakes.md | k:6 | forum_src,error_rich(19),long
+altium-designer/altium-designer-gerber-bom-export-manufacturing.md | k:6 | forum_src,error_rich(11),long
+altium-designer/altium-designer-high-speed-impedance-length-matching.md | k:6 | forum_src,error_rich(11),long
+ansys-discovery/ansys-discovery-to-fluent-concept-to-production-workflow.md | k:6 | forum_src,error_some(4),specific_problem,long
+corelcad/corelcad-3d-modeling-extrude-revolve-boolean-stl-export.md | k:6 | forum_src,error_rich(9),long
+corelcad/corelcad-plotting-pdf-export-ctb-page-setups-batch-output.md | k:6 | forum_src,error_rich(6),long
+d5-render/d5-render-video-panorama-export-artifact-fix.md | k:6 | error_rich(7),error_code,specific_problem,perf_real,long
+enscape/enscape-performance-optimization-quality-vram.md | k:6 | error_rich(5),error_code,specific_problem,perf_real,long
+librecad/librecad-layer-management-block-libraries-organizing-components.md | k:6 | forum_src,error_rich(7),long
+lumion/lumion-performance-optimization-fps-render-time.md | k:6 | error_rich(9),error_code,specific_problem,perf_real,long
+marvelous-designer/marvelous-designer-avatar-setup-garment-fitting-custom-characters.md | k:6 | forum_src,error_rich(5),long
+plasticity/plasticity-cad-essentials-nurbs-subdivision-theory-builder.md | k:6 | forum_src,error_rich(7),long
+plasticity/plasticity-vs-fusion-360-concept-modeling-comparison.md | k:6 | forum_src,error_some(2),migration_real,long
+prusaslicer/prusaslicer-organic-supports-configuration-tuning.md | k:6 | forum_src,error_rich(20),long
+prusaslicer/prusaslicer-profiles-non-prusa-printers-voron-custom-setup.md | k:6 | forum_src,error_some(3),specific_problem,long
+recap-pro/recap-pro-vs-cyclone-register-360-registration-comparison.md | k:6 | forum_src,error_rich(16),comparison_heavy,cat_comparison,long
+revit/revit-large-model-ram-pagefile-nvme.md | k:6 | support_src,error_some(2),specific_problem,perf_real,long
+3ds-max/3ds-max-plugin-dll-error-loading-fix.md | k:5 | error_rich(47),error_code,specific_problem,long
+altair-inspire/altair-inspire-topology-optimization-many-loads-workflow.md | k:5 | forum_src,error_some(2),long
+ansys-discovery/ansys-discovery-real-time-cfd-fluid-flow-setup.md | k:5 | support_src,error_rich(6),long
+ansys-mechanical/ansys-mechanical-apdl-command-snippets-automation-pre-post-processing.md | k:5 | support_src,error_rich(6),long
+archicad/archicad-file-bloat-corruption-compress-repair-fix.md | k:5 | error_rich(18),specific_problem,perf_real,long
+archicad/archicad-library-loading-error-missing-objects-fix.md | k:5 | error_rich(25),error_code,specific_problem,long
+archicad/archicad-slow-performance-3d-window-shadows-fix.md | k:5 | error_rich(9),specific_problem,perf_real,long
+autodesk-dynamo/dynamo-python-scripting-extending-visual-programming-custom-logic.md | k:5 | error_rich(10),error_code,specific_problem,long
+aveva-e3d-design/aveva-e3d-database-claims-flushes-cable-routing-errors.md | k:5 | error_rich(52),error_code,specific_problem,long
+blender/blender-crash-freeze-memory-gpu-driver-addon-fix.md | k:5 | error_rich(61),error_code,specific_problem,long
+cadwork/cadwork-cnc-machine-data-export-btlx-cambium-hundegger-panel-prefab.md | k:5 | error_rich(8),error_code,specific_problem,long
+chief-architect-pro/chief-architect-pro-home-design-floor-plan-walls-roofs.md | k:5 | error_rich(15),error_code,specific_problem,long
+chief-architect-pro/chief-architect-pro-troubleshooting-room-framing-roof-issues.md | k:5 | error_rich(27),error_code,specific_problem,long
+corelcad/corelcad-2d-drafting-setup-interface-dwg-workflow-template.md | k:5 | forum_src,error_some(2),long
+corelcad/corelcad-lisp-automation-custom-commands-layer-tools-batch-processing.md | k:5 | error_rich(22),error_code,specific_problem,long
+corelcad/corelcad-vs-autocad-feature-comparison-migration-guide.md | k:5 | forum_src,error_some(2),comparison_heavy,cat_comparison,long
+d5-render/d5-render-live-sync-sketchup-revit-connection-fix.md | k:5 | error_rich(24),error_code,specific_problem,long
+draftsight/draftsight-installation-errors-activation-failures-troubleshooting.md | k:5 | error_rich(41),error_code,specific_problem,long
+eagle/eagle-to-kicad-migration-conversion.md | k:5 | error_rich(11),specific_problem,migration_real,long
+featurecam/featurecam-hole-machining-drilling-tapping-boring-thread-milling.md | k:5 | support_src,error_rich(6),long
+featurecam/featurecam-vs-fusion-360-cam-feature-based-comparison.md | k:5 | support_src,error_some(3),migration_real,long
+geomagic-design-x/geomagic-design-x-auto-surfacing-non-manifold-mesh-fix.md | k:5 | error_rich(12),error_code,specific_problem,long
+gstarcad/gstarcad-installation-licensing-silent-deploy-network-activation.md | k:5 | error_rich(8),error_code,specific_problem,long
+gstarcad/gstarcad-lisp-automation-batch-processing-layer-management-commands.md | k:5 | error_rich(16),error_code,specific_problem,long
+gstarcad/gstarcad-performance-tuning-large-dwg-hardware-settings-system-variables.md | k:5 | error_rich(9),error_code,perf_real,long
+ijcad/ijcad-lisp-automation-custom-commands.md | k:5 | error_rich(6),error_code,specific_problem,long
+infraworks/autodesk-infraworks-bridge-modeling-parametric-revit-integration.md | k:5 | support_src,error_rich(9),long
+infraworks/autodesk-infraworks-data-import-gis-terrain-coordinate-system.md | k:5 | support_src,error_rich(9),long
+infraworks/autodesk-infraworks-roadway-design-corridors-intersections.md | k:5 | support_src,error_rich(8),long
+keyshot/keyshot-render-speed-optimization-cpu-gpu.md | k:5 | error_rich(5),error_code,perf_real,long
+kisssoft/kisssoft-face-load-factor-helical-gear-error-fix.md | k:5 | error_rich(18),error_code,specific_problem,long
+librecad/librecad-printing-pdf-export-scale-paper-size-configuration.md | k:5 | forum_src,error_some(2),long
+librecad/librecad-vs-qcad-choosing-open-source-2d-cad-tool.md | k:5 | forum_src,error_some(4),comparison_heavy,cat_comparison,long
+lumion/lumion-livesync-connection-revit-sketchup-fix.md | k:5 | error_rich(12),error_code,specific_problem,long
+marvelous-designer/marvelous-designer-retopology-export-maya-blender-zbrush.md | k:5 | forum_src,error_some(2),long
+microstation/microstation-file-corruption-recovery-repair-fix.md | k:5 | product_page_only,error_rich(70),error_code,specific_problem,long
+microstation/microstation-large-file-performance-raster-reference-fix.md | k:5 | product_page_only,error_rich(17),specific_problem,perf_real,long
+nanocad/nanocad-dwg-file-recovery-corrupted-drawings-lost-data.md | k:5 | error_rich(49),error_code,specific_problem,long
+nanocad/nanocad-lisp-programming-custom-commands-entity-selection-automation.md | k:5 | product_page_only,error_rich(15),error_code,specific_problem,long
+plasticity/plasticity-subdivision-surface-modeling-control-cage-creases.md | k:5 | forum_src,error_some(2),long
+progecad/progecad-lisp-programming-custom-tools-batch-processing-automation.md | k:5 | product_page_only,error_rich(18),error_code,specific_problem,long
+prusaslicer/prusaslicer-ironing-smooth-top-surface-settings.md | k:5 | forum_src,error_some(3),long
+pulsonix/pulsonix-pcb-migration-altium-kicad-import-filters-feature-gaps.md | k:5 | error_rich(11),specific_problem,migration_real,long
+qcad/qcad-block-libraries-part-management-reusable-components.md | k:5 | forum_src,error_some(2),long
+qcad/qcad-javascript-scripting-automating-drawing-tasks-custom-tools.md | k:5 | forum_src,error_some(2),long
+qcad/qcad-vs-librecad-open-source-2d-cad-comparison.md | k:5 | forum_src,error_some(2),comparison_heavy,cat_comparison,long
+recap-pro/recap-pro-revit-point-cloud-underlay-sectioning-modeling.md | k:5 | forum_src,error_some(2),long
+recap-pro/recap-pro-scan-to-bim-cleaning-clipping-point-cloud-preparation.md | k:5 | forum_src,error_some(2),long
+revit/revit-ifc-export-missing-parameters-mapping.md | k:5 | support_src,error_some(4),specific_problem,long
+rhino-3d/rhino-wont-start-windows-update-cpp-runtime.md | k:5 | error_rich(30),error_code,specific_problem,long
+sketchup/sketchup-2025-crashes-startup-graphics-engine.md | k:5 | error_rich(49),error_code,specific_problem,long
+sketchup/sketchup-extension-conflicts-upgrade-nomethoderror.md | k:5 | error_rich(36),error_code,specific_problem,long
+sketchup/sketchup-layout-slow-viewport-raster-rendering.md | k:5 | error_rich(6),specific_problem,perf_real,long
+solibri/solibri-bcf-workflow-export-revit-archicad-bimcollab.md | k:5 | support_src,error_rich(6),long
+solid-edge/solid-edge-sheet-metal-flat-pattern-unfold-kfactor.md | k:5 | error_rich(25),error_code,specific_problem,long
+solidworks/solidworks-large-assembly-performance-tuning.md | k:5 | support_src,error_some(4),perf_real,long
+solidworks/solidworks-sheet-metal-k-factor-bend-table.md | k:5 | support_src,error_some(4),specific_problem,long
+solidworks/solidworks-start-sketch-shortcut-keyboard-guide.md | k:5 | forum_src,error_some(4),long
+solvespace/solvespace-naked-edges-solver-failure-opengl-fix.md | k:5 | error_rich(16),error_code,specific_problem,long
+substance-painter/substance-painter-export-crash-4k-8k-fix.md | k:5 | error_rich(19),error_code,specific_problem,long
+substance-painter/substance-painter-performance-optimization-resolution-layers.md | k:5 | error_rich(7),specific_problem,perf_real,long
+substance-painter/substance-painter-wrong-gpu-intel-nvidia-fix.md | k:5 | error_rich(11),error_code,specific_problem,long
+tekla-structures/tekla-drawing-creation-slow-numbering-database-fix.md | k:5 | error_rich(6),specific_problem,perf_real,long
+trimble-business-center/trimble-business-center-gnss-baseline-processing-ephemeris-network-adjustment.md | k:5 | error_rich(22),error_code,specific_problem,long
+trimble-connect/trimble-connect-vs-autodesk-construction-cloud-bim-platform-comparison.md | k:5 | forum_src,error_some(2),comparison_heavy,cat_comparison,long
+twinmotion/twinmotion-path-tracer-settings-crash-fix.md | k:5 | error_rich(17),specific_problem,perf_real,long
+twinmotion/twinmotion-performance-optimization-gpu-ram-quality.md | k:5 | error_rich(11),specific_problem,perf_real,long
+v-ray/v-ray-missing-textures-black-materials-fix.md | k:5 | error_rich(17),error_code,specific_problem,long
+vertex-bd/vertex-bd-framing-automation-truss-errors-hold-down-ifc-import.md | k:5 | error_rich(31),error_code,specific_problem,long
+zbrush/zbrush-corrupt-license-detected-fix.md | k:5 | error_rich(27),error_code,specific_problem,long
+zbrush/zbrush-large-file-management-decimation-export.md | k:5 | error_rich(10),error_code,perf_real,long
+zbrush/zbrush-wont-start-side-by-side-configuration-fix.md | k:5 | error_rich(49),error_code,specific_problem,long
+altium-365/altium-365-connection-errors-portal365-ssl-firewall-troubleshooting.md | k:4 | product_page_only,error_rich(18),error_code,specific_problem
+altium-365/altium-365-workspace-setup-cloud-collaboration-projects.md | k:4 | product_page_only,error_rich(6),specific_problem,long
+ansys-discovery/ansys-discovery-structural-simulation-stress-analysis.md | k:4 | support_src,error_some(3),long
+aspen-hysys/aspen-hysys-distillation-column-convergence-failure-diagnosis.md | k:4 | error_rich(31),specific_problem,long
+autoform/autoform-simulation-accuracy-pareto-principle-force-correlation-springback.md | k:4 | error_rich(15),error_code,long
+bambu-studio/bambu-studio-tree-supports-fuzzy-skin-guide.md | k:4 | error_rich(18),specific_problem,long
+blender/blender-cycles-render-slow-gpu-samples-denoiser-fix.md | k:4 | error_some(3),error_code,perf_real,long
+catia/catia-v5-large-assembly-performance-cgr-visualization.md | k:4 | forum_src,long
+circuitmaker/circuitmaker-performance-limits-rotation-bugs-file-format-migration.md | k:4 | product_page_only,error_rich(17),specific_problem,long
+civil-3d/civil-3d-data-shortcuts-broken-working-folder-fix.md | k:4 | error_rich(27),specific_problem,long
+civil-3d/civil-3d-pipe-network-error-structure-label-flow-fix.md | k:4 | error_rich(30),specific_problem,long
+civil-3d/civil-3d-plan-production-slow-viewport-label-fix.md | k:4 | error_rich(13),perf_real,long
+clo-3d/clo-3d-export-workflows-glb-fbx-blender-unreal-engine.md | k:4 | error_rich(5),specific_problem,long
+corona-renderer/corona-renderer-performance-optimization-render-time.md | k:4 | error_some(4),specific_problem,perf_real,long
+corona-renderer/corona-vray-migration-material-conversion.md | k:4 | error_rich(5),migration_real,long
+d5-render/d5-render-crash-black-screen-tdr-vram-fix.md | k:4 | error_rich(20),specific_problem,long
+d5-render/d5-render-environment-weather-hdri-gi-fix.md | k:4 | error_rich(5),perf_real,long
+d5-render/d5-render-performance-optimization-dlss-fps-gi.md | k:4 | error_some(2),specific_problem,perf_real,long
+draftsight/draftsight-macro-recording-batch-printing-automation.md | k:4 | error_rich(5),specific_problem,long
+draftsight/draftsight-pdf-import-dwg-export-clean-geometry-conversion.md | k:4 | error_rich(9),specific_problem,long
+drofus/drofus-aec-data-sync-automated-revit-autodesk-construction-cloud.md | k:4 | error_rich(9),specific_problem,long
+drofus/drofus-item-management-equipment-procurement-tracking-revit-family.md | k:4 | error_rich(9),specific_problem,long
+drofus/drofus-revit-integration-attribute-configuration-data-sync-setup.md | k:4 | error_rich(18),specific_problem,long
+dwg-trueview/dwg-trueview-batch-convert-dwg-version-upgrade-downgrade.md | k:4 | product_page_only,error_rich(13),specific_problem,long
+dwg-trueview/dwg-trueview-dwg-compare-drawing-revision-changes.md | k:4 | product_page_only,error_rich(41),specific_problem,long
+dwg-trueview/dwg-trueview-view-measure-print-without-autocad.md | k:4 | product_page_only,error_rich(8),specific_problem,long
+eagle/eagle-schematic-net-classes-power-rails-hierarchical.md | k:4 | error_rich(5),specific_problem,long
+easyeda/easyeda-gerber-export-missing-pads-drill-offset-troubleshooting.md | k:4 | error_rich(20),specific_problem,long
+easyeda/easyeda-jlcpcb-smt-assembly-bom-pick-and-place-sourcing.md | k:4 | error_rich(18),specific_problem,long
+easyeda/easyeda-pcb-design-schematic-capture-component-library-layout.md | k:4 | error_rich(12),specific_problem,long
+easyeda/easyeda-spice-simulation-circuit-verification-transient-analysis.md | k:4 | error_rich(7),specific_problem,long
+edgecam/edgecam-post-processor-customization-g-code.md | k:4 | error_rich(20),specific_problem,long
+enscape/enscape-rendering-quality-capture-image-video.md | k:4 | error_some(2),error_code,perf_real,long
+eplan/eplan-check-run-messages-p-code-errors-routing-fix.md | k:4 | error_rich(18),specific_problem,long
+eplan-electric-p8/eplan-electric-p8-connection-wire-numbering-potential-tracking.md | k:4 | product_page_only,error_rich(14),specific_problem,long
+featurecam/featurecam-automatic-feature-recognition-solid-model-nc-workflow.md | k:4 | support_src,error_some(4),long
+freecad/freecad-assembly-slow-loading-techdraw-a2plus-fix.md | k:4 | error_rich(7),perf_real,long
+freecad/freecad-crashes-freezes-safe-mode-addon-appimage.md | k:4 | error_rich(32),specific_problem,long
+freecad/freecad-step-file-import-slow-helix-memory-fix.md | k:4 | error_rich(9),specific_problem,long
+geomagic-design-x/geomagic-design-x-livetransfer-parametric-cad-export.md | k:4 | error_rich(19),specific_problem,long
+hypermill/hypermill-solidworks-integration-associative-cad-cam-setup.md | k:4 | error_rich(10),specific_problem,long
+hypermill/hypermill-virtual-machining-digital-twin-simulation.md | k:4 | error_rich(6),specific_problem,long
+infraworks/autodesk-infraworks-storyboard-animation-stakeholder-presentation.md | k:4 | support_src,error_some(2),long
+keycreator/keycreator-2d-drafting-dimensioning-standards.md | k:4 | error_rich(5),specific_problem,long
+keycreator/keycreator-solidworks-file-exchange.md | k:4 | error_rich(9),specific_problem,migration_real
+keyshot/keyshot-freezing-crashing-gpu-driver-fix.md | k:4 | error_rich(41),specific_problem,long
+keyshot/keyshot-import-solidworks-rhino-creo-livelinking-fix.md | k:4 | error_rich(27),migration_real,long
+kisssoft/kisssoft-contact-analysis-tooth-modification-optimization.md | k:4 | error_rich(12),specific_problem,long
+kompas-3d/kompas-3d-step-import-export-format-settings.md | k:4 | error_rich(8),specific_problem,long
+ltspice/ltspice-importing-third-party-spice-models-subcircuits-symbols.md | k:4 | error_rich(7),specific_problem,long
+lumion/lumion-crash-freeze-render-fix.md | k:4 | error_rich(27),specific_problem,long
+lumion/lumion-import-missing-materials-revit-sketchup-fix.md | k:4 | error_rich(16),specific_problem,long
+magicad/magicad-known-issues-ifc-export-insulation-dhwr-revit-crashes.md | k:4 | error_rich(27),specific_problem,long
+matrixgold/matrixgold-rendering-presentation-metals-gems-client-visualization.md | k:4 | product_page_only,error_rich(5),error_code,long
+meshlab/meshlab-crashes-large-stl-files-workarounds.md | k:4 | error_rich(25),specific_problem,long
+meshlab/meshlab-non-manifold-mesh-repair-cleaning-workflow.md | k:4 | error_rich(6),specific_problem,long
+moldflow/autodesk-moldflow-warpage-analysis-predicting-reducing-deformation.md | k:4 | error_rich(5),specific_problem,long
+msc-adams/msc-adams-convergence-errors-over-constrained-mechanism-debugging.md | k:4 | error_rich(13),specific_problem,long
+msc-patran/msc-patran-imported-geometry-cleanup-congruency-mesh-repair.md | k:4 | error_rich(9),specific_problem,long
+multisim/multisim-convergence-errors-singular-matrix-floating-node-fixes.md | k:4 | error_rich(12),error_code,specific_problem
+multisim/multisim-spice-simulation-dc-ac-transient-analysis-setup.md | k:4 | error_rich(10),error_code,specific_problem
+onshape/onshape-mate-connector-errors-over-constrained-fix.md | k:4 | error_rich(33),specific_problem,long
+onshape/onshape-version-history-restore-deleted-feature.md | k:4 | error_rich(19),specific_problem,long
+opencascade/opencascade-boolean-operations-data-exchange-step-iges-stl.md | k:4 | product_page_only,error_rich(17),specific_problem,long
+orcad/orcad-capture-schematic-netlist-dxd.md | k:4 | error_rich(5),specific_problem,long
+orcad/orcad-library-management-centralized-component-database.md | k:4 | error_rich(8),specific_problem,long
+powermill/powermill-toolpath-templates-reusable-cam-strategies-repeatable-production.md | k:4 | forum_src,long
+progecad/progecad-pdf-to-dwg-conversion-import-vectorize-cleanup.md | k:4 | product_page_only,error_rich(8),specific_problem,long
+prusaslicer/prusaslicer-mmu-multi-material-setup-troubleshooting.md | k:4 | product_page_only,error_rich(20),specific_problem,long
+prusaslicer/prusaslicer-variable-layer-height-adaptive-slicing.md | k:4 | error_rich(9),specific_problem,long
+pv-elite/pv-elite-asme-code-compliance-mdmt-wrc107-lug-hydrotest-issues.md | k:4 | error_rich(18),specific_problem,long
+qcad/qcad-dimensioning-annotation-styles-tolerances-drawing-notes.md | k:4 | forum_src,long
+quadcept/quadcept-pcb-design-verification-gerber-export-netlist-integration.md | k:4 | error_rich(19),specific_problem,long
+rhino-3d/rhino-plugin-troubleshooting-crashes.md | k:4 | error_rich(35),specific_problem,long
+rhino-3d/rhino-stl-obj-export-mesh-settings.md | k:4 | error_rich(5),specific_problem,long
+sap2000/sap2000-structural-analysis-modeling-section-properties-linear-static.md | k:4 | product_page_only,error_rich(9),specific_problem,long
+scia-engineer/scia-engineer-bim-integration-revit-ifc-analytical-model-conversion.md | k:4 | error_rich(23),specific_problem,long
+simscale/simscale-workflow-collaboration-project-setup-mesh-import-team-sharing.md | k:4 | product_page_only,error_rich(6),specific_problem,long
+sketchup/sketchup-3d-warehouse-slow-download-webcache.md | k:4 | error_rich(12),specific_problem,long
+sketchup/sketchup-inferencing-stops-working-snapping-fix.md | k:4 | error_rich(13),specific_problem,long
+solibri/solibri-model-checker-ifc-import-ruleset-clash-detection-workflow.md | k:4 | error_rich(5),specific_problem,long
+solibri/solibri-ruleset-customization-creating-project-specific-validation-rules.md | k:4 | error_rich(6),specific_problem,long
+solid-edge/solid-edge-crash-startup-safe-mode-crashlog-fix.md | k:4 | error_rich(27),error_code,specific_problem
+solid-edge/solid-edge-drafting-performance-view-update-dimension.md | k:4 | error_rich(13),perf_real,long
+solidcam/solidcam-post-processor-g-code-configuration.md | k:4 | error_rich(18),specific_problem,long
+substance-painter/substance-painter-vram-out-of-memory-crash-fix.md | k:4 | error_rich(22),specific_problem,long
+surfcam/surfcam-post-processor-configuration-gcode-errors-custom-posts.md | k:4 | product_page_only,error_rich(15),specific_problem,long
+t-flex-cad/t-flex-cad-parametric-construction-lines-variables-workflow.md | k:4 | error_rich(9),specific_problem,long
+target-3001/target-3001-pcb-design-user-evaluation-strengths-weaknesses.md | k:4 | error_rich(8),specific_problem,long
+tekla-structures/tekla-large-model-performance-work-area-view-filter.md | k:4 | error_rich(6),perf_real,long
+tekla-structures/tekla-multi-user-slow-saving-locking-synchronization-fix.md | k:4 | error_rich(21),specific_problem,long
+tekla-tedds/tekla-tedds-installation-calculator-error-fix-guide.md | k:4 | error_rich(45),specific_problem,long
+think3/think3-boolean-mistakes-non-manifold-sentinel-licensing-fix.md | k:4 | error_rich(22),specific_problem,long
+tinkercad/tinkercad-to-fusion-360-upgrade-transition.md | k:4 | error_rich(12),migration_real,long
+topsolid/topsolid-vs-solidworks-comparison.md | k:4 | error_rich(7),specific_problem,cat_comparison,long
+trimble-connect/trimble-connect-setup-project-configuration-folder-structure-tekla.md | k:4 | error_rich(7),error_code,long
+trimble-connect/trimble-connect-sync-issues-desktop-connector-troubleshooting.md | k:4 | error_rich(32),error_code,long
+v-ray/v-ray-dome-light-hdri-setup-noise-shadows.md | k:4 | error_rich(5),perf_real,long
+v-ray/v-ray-gpu-noise-fireflies-fix.md | k:4 | forum_src,long
+varicad/varicad-2d-drawing-generation-views-dimensions-gdt-dwg-export.md | k:4 | error_rich(9),specific_problem,long
+vectorworks/vectorworks-2026-cineware-crash-launch-fix.md | k:4 | error_rich(32),specific_problem,long
+zbrush/zbrush-crashes-instability-recovery-fix.md | k:4 | error_rich(31),specific_problem,long
+zw3d/solidworks-to-zw3d-migration-ipx-add-in-feature-conversion.md | k:4 | product_page_only,error_some(2),specific_problem,migration_real,long
+zw3d/zw3d-cam-stl-file-5-axis-machining-fix.md | k:4 | product_page_only,error_rich(6),error_code,long
+
+=== REWRITE (256) ===
+altair-inspire/altair-inspire-polynurbs-fit-topology-optimization-cad-export.md | r:3 | tutorial_no_problem,workflow_generic,long
+edgecam/edgecam-tool-library-setup-holders-parameters.md | r:2 | error_some(2),error_code,deployment_rehash,long
+eplan-electric-p8/eplan-electric-p8-project-setup-page-macro-article-data.md | r:2 | product_page_only,error_some(2),deployment_rehash,long
+tinkercad/tinkercad-classroom-setup-students-3d-design-education.md | r:2 | deployment_rehash,long
+browzwear/browzwear-vstitcher-avatar-setup-fit-validation-custom-body.md | r:1 | product_page_only,workflow_generic,long
+clo-3d/clo-3d-pattern-making-grading-size-run-production.md | r:1 | workflow_generic,long
+esprit/esprit-cam-solidmill-3-axis-roughing-finishing-residual-stock.md | r:1 | workflow_generic,long
+gibbscam/gibbscam-interface-customization-toolbar-workflow.md | r:1 | product_page_only,workflow_generic,long
+hypermill/hypermill-5-axis-impeller-blisk-machining.md | r:1 | workflow_generic,long
+librecad/librecad-2d-drafting-interface-tools-dxf-workflow.md | r:1 | workflow_generic,long
+marvelous-designer/marvelous-designer-pattern-making-polygon-sewing-internal-lines.md | r:1 | workflow_generic,long
+matrixgold/matrixgold-gem-setting-prong-pave-channel-bezel-flush.md | r:1 | product_page_only,workflow_generic,long
+midas-gen/midas-gen-building-analysis-modeling-wind-seismic-steel-concrete-design.md | r:1 | product_page_only,workflow_generic,long
+midas-gen/midas-gen-seismic-design-response-spectrum-time-history-pushover.md | r:1 | workflow_generic,long
+openfoam/openfoam-snappyhexmesh-complex-geometry-mesh-quality-tips.md | r:1 | workflow_generic,long
+openscad/openscad-modules-libraries-reusable-code.md | r:1 | workflow_generic,long
+optitex/optitex-made-to-measure-custom-sizing-body-measurement-personalized-fit.md | r:1 | workflow_generic,long
+proteus-design-suite/proteus-arduino-simulation-isis-hex-file-virtual-instruments.md | r:1 | workflow_generic,long
+qcad/qcad-2d-drafting-interface-tools-dxf-dwg-workflow.md | r:1 | workflow_generic,long
+risa-3d/risa-3d-modeling-nodes-members-boundary-conditions.md | r:1 | workflow_generic,long
+sap2000/sap2000-seismic-analysis-response-spectrum-time-history-pushover.md | r:1 | product_page_only,workflow_generic,long
+simcenter-star-ccm/simcenter-star-ccm-meshing-pipeline-surface-polyhedral-prism-layers.md | r:1 | product_page_only,workflow_generic,long
+tinkercad/tinkercad-circuits-arduino-simulation-electronics.md | r:1 | workflow_generic,long
+turbocad/turbocad-rendering-visualization-materials-lighting-photorealistic.md | r:1 | product_page_only,error_code,workflow_generic,long
+vectorworks/vectorworks-architect-bim-modeling-site-design-drawing-production.md | r:1 | workflow_generic,long
+vectorworks/vectorworks-landmark-site-modeling-terrain-analysis-planting-design.md | r:1 | workflow_generic,long
+vectorworks/vectorworks-renderworks-materials-lighting-photorealistic-rendering.md | r:1 | workflow_generic,long
+3ds-max/3ds-max-large-scene-optimization-proxy-instance.md | r:0 | error_some(2),perf_real,long
+allegro-pcb/allegro-pcb-hdi-layout-microvia-blind-buried-via-stackup.md | r:0 | product_page_only,error_some(2)
+allegro-pcb/allegro-pcb-high-speed-constraint-manager-differential-pairs.md | r:0 | error_some(2)
+allegro-pcb/allegro-pcb-vs-altium-designer-enterprise-comparison.md | r:0 | 
+alphacam/alphacam-router-toolpath-rough-finish-profiling-post-processing.md | r:0 | error_rich(9),long
+alphacam/alphacam-tool-direction-machining-side-gcode-errors-fixes.md | r:0 | error_rich(24),long
+alphacam/alphacam-vs-vectric-aspire-cnc-router-comparison.md | r:0 | 
+altair-inspire/altair-inspire-lattice-structures-additive-manufacturing.md | r:0 | error_rich(9),long
+altair-inspire/altair-inspire-motion-analysis-mechanism-simulation.md | r:0 | error_rich(6),long
+altium-365/altium-365-codesigner-ecad-mcad-solidworks-sync-workflow.md | r:0 | product_page_only,error_rich(23)
+archicad/archicad-ifc-import-export-mapping-geometry-fix.md | r:0 | error_rich(19),long
+archicad/archicad-layout-publisher-slow-pdf-export-fix.md | r:0 | error_some(4),perf_real,long
+autodesk-dynamo/autodesk-dynamo-revit-visual-scripting-parametric-automation.md | r:0 | error_rich(7),long
+autodesk-dynamo/dynamo-revit-model-audit-data-extraction-quality-check.md | r:0 | error_some(4),long
+autodesk-netfabb/autodesk-netfabb-3d-print-preparation-orientation-packing-slicing.md | r:0 | product_page_only,error_some(4),long
+autodesk-netfabb/autodesk-netfabb-hollowing-lattice-generation-lightweighting.md | r:0 | product_page_only,error_rich(9),long
+autodesk-netfabb/autodesk-netfabb-simulation-support-generation-metal-am.md | r:0 | product_page_only,error_rich(16),long
+autodesk-netfabb/autodesk-netfabb-stl-mesh-repair-holes-normals-non-manifold.md | r:0 | product_page_only,error_rich(18),long
+bambu-studio/bambu-studio-custom-printer-profiles-non-bambu-setup.md | r:0 | error_rich(7),long
+bambu-studio/bambu-studio-flow-dynamics-pressure-advance-calibration.md | r:0 | error_some(4),long
+bambu-studio/bambu-studio-speed-tuning-volumetric-flow-acceleration.md | r:0 | error_rich(12),long
+blender/blender-large-scene-collections-linking-proxy-workflow.md | r:0 | error_some(3),long
+blender/blender-uv-mapping-overlapping-islands-seams-stretching-fix.md | r:0 | error_rich(6),long
+blender/blender-viewport-performance-geometry-nodes-vram-fix.md | r:0 | error_some(3),perf_real,long
+bobcad-cam/bobcad-cam-3-axis-milling-workflow-stock-setup-toolpath-wizards.md | r:0 | error_rich(8),long
+bobcad-cam/bobcad-cam-post-processor-configuration-gcode-tool-change-customization.md | r:0 | error_rich(23),long
+browzwear/browzwear-vstitcher-3d-garment-simulation-fabric-stitching-drape.md | r:0 | product_page_only,error_some(3),specific_problem,long
+browzwear/browzwear-vstitcher-export-integration-glb-fbx-dxf-cloud.md | r:0 | product_page_only,error_some(3),long
+browzwear/browzwear-vstitcher-pattern-making-2d-drafting-tech-pack-export.md | r:0 | product_page_only,error_some(4),long
+cabinet-vision/cabinet-vision-cabinet-design-assembly-building-construction-methods.md | r:0 | error_rich(13),long
+cabinet-vision/cabinet-vision-cut-list-cnc-output-screen-to-machine-s2m.md | r:0 | error_rich(6),long
+cabinet-vision/cabinet-vision-estimating-quoting-material-costs-labor-pricing.md | r:0 | error_rich(7),long
+cabinet-vision/cabinet-vision-room-layout-elevations-countertops-3d-visualization.md | r:0 | error_rich(12),long
+cad-exchanger/cad-exchanger-step-to-jt-conversion-brep-fidelity-bugs.md | r:0 | error_rich(26),long
+clo-3d/clo-3d-avatar-dressing-workflow-custom-body-fit-verification.md | r:0 | error_some(3),long
+clo-3d/clo-3d-fabric-properties-simulation-bending-stretch-buckling.md | r:0 | error_some(2),long
+clo-3d/clo-3d-vs-marvelous-designer-comparison-differences.md | r:0 | forum_src,comparison_heavy,cat_comparison,long
+corona-renderer/corona-renderer-lighting-hdri-portal-interior-fix.md | r:0 | error_some(4),perf_real,long
+corona-renderer/corona-renderer-material-glass-sss-displacement-fix.md | r:0 | error_rich(14),long
+corona-renderer/corona-renderer-noise-fireflies-denoiser-fix.md | r:0 | error_some(2),error_code,long
+crowncad/crowncad-cloud-collaborative-design-real-time-co-editing-version-control.md | r:0 | error_rich(7),long
+crowncad/crowncad-part-design-sketching-features-assembly-modeling.md | r:0 | error_rich(7),long
+designspark-mechanical/designspark-mechanical-3d-printing-model-prep-stl-export.md | r:0 | error_rich(10),long
+designspark-mechanical/designspark-mechanical-direct-modeling-pull-move-fill-combine.md | r:0 | error_rich(6),long
+draftsight/draftsight-2d-drafting-layers-dimension-styles-title-block.md | r:0 | error_some(3),long
+drofus/drofus-room-data-management-program-validation-occupancy-tracking.md | r:0 | error_some(2),long
+dwg-fastview/dwg-fastview-cannot-open-drawing-missing-font-sync-conflict-fix.md | r:0 | error_rich(25),long
+dwg-trueview/dwg-trueview-construction-shop-drawings-as-built-review.md | r:0 | error_rich(10),long
+eagle/eagle-board-layout-routing-2layer-4layer.md | r:0 | error_some(3),long
+eagle/eagle-drc-design-rules-gerber-manufacturing.md | r:0 | error_rich(10),long
+eagle/eagle-library-custom-component-footprint-creation.md | r:0 | error_some(3),long
+edgecam/edgecam-3d-machining-z-level-roughing-constant-cusp.md | r:0 | product_page_only,error_some(2),long
+edgecam/edgecam-feature-recognition-finder-automatic-toolpath.md | r:0 | product_page_only,error_rich(6),long
+enscape/enscape-asset-library-custom-import-fix.md | r:0 | error_rich(15),long
+eplan-electric-p8/eplan-electric-p8-vs-autocad-electrical-comparison.md | r:0 | product_page_only,error_some(3),migration_real,long
+esprit/esprit-cam-5-axis-machining-simultaneous-3+2-freeform-toolpath.md | r:0 | product_page_only,error_rich(5),long
+esprit/esprit-cam-vs-mastercam-multi-axis-cnc-comparison.md | r:0 | product_page_only,long
+exocad/exocad-dentalcad-crown-bridge-design-margin-line-anatomy.md | r:0 | product_page_only,error_rich(6),long
+exocad/exocad-full-denture-digital-workflow-tooth-setup-printed-prosthesis.md | r:0 | product_page_only,error_some(3),long
+exocad/exocad-implant-restoration-abutment-screw-retained-hybrid.md | r:0 | product_page_only,error_some(2),long
+exocad/exocad-removable-partial-denture-rpd-survey-clasp-connector.md | r:0 | product_page_only,error_some(3),long
+femap/femap-random-vibration-psd-analysis-setup-results-fatigue.md | r:0 | error_rich(5),long
+femap/siemens-femap-fea-mesh-generation-element-quality-analysis-setup.md | r:0 | product_page_only,error_some(4),long
+foran/foran-interoperability-cad-data-exchange-plm-jt-large-model-performance.md | r:0 | error_rich(23),long
+freecad/freecad-techdraw-slow-performance-view-rendering-fix.md | r:0 | error_some(4),perf_real,long
+geomagic-design-x/geomagic-design-x-decimating-scan-data-faster-processing.md | r:0 | error_some(2),specific_problem,long
+geomagic-design-x/geomagic-design-x-multi-scan-alignment-registration.md | r:0 | error_some(2),long
+geomagic-design-x/geomagic-design-x-vs-meshlab-scan-processing-comparison.md | r:0 | error_some(3),cat_comparison,long
+gibbscam/gibbscam-2-5d-milling-pocketing-profiling-drilling.md | r:0 | product_page_only,error_some(3),long
+gibbscam/gibbscam-post-processor-setup-g-code.md | r:0 | product_page_only,error_rich(11),long
+gibbscam/gibbscam-turning-setup-tool-offsets-chuck.md | r:0 | product_page_only,long
+glovius/glovius-cannot-open-file-crash-startup-export-fix.md | r:0 | error_rich(21),error_code
+gstarcad/gstarcad-2d-drafting-workflow-interface-commands-dwg-compatibility.md | r:0 | error_some(2),long
+hypermill/hypermill-5-axis-collision-avoidance-tilt-strategy.md | r:0 | error_rich(8),long
+hypermill/hypermill-maxx-machining-barrel-cutter-finishing.md | r:0 | error_rich(5),long
+ijcad/ijcad-autocad-dwg-compatibility-migration.md | r:0 | error_rich(14),migration_real
+ijcad/ijcad-japanese-drawing-standards-jis-dimensions.md | r:0 | 
+ijcad/ijcad-printing-plotting-japanese-paper-sizes.md | r:0 | specific_problem,long
+ijcad/ijcad-slow-performance-large-drawing-optimization.md | r:0 | error_some(2),perf_real
+ironcad/ironcad-catalog-smart-components-block-library.md | r:0 | product_page_only,error_some(3),error_code,long
+ironcad/ironcad-import-step-iges-repair-geometry.md | r:0 | error_some(4),long
+ironcad/ironcad-rendering-animation-exploded-view.md | r:0 | product_page_only,error_some(3),long
+ironcad/ironcad-triball-direct-modeling-workflow.md | r:0 | error_rich(7),long
+keycreator/keycreator-direct-modeling-imported-model.md | r:0 | error_rich(6),long
+keycreator/keycreator-performance-optimization-complex-models.md | r:0 | 
+keyshot/keyshot-gpu-mode-cuda-nvlink-setup-fix.md | r:0 | error_rich(13),long
+keyshot/keyshot-material-texture-mapping-uv-label-fix.md | r:0 | error_rich(10),long
+kicad/kicad-vs-altium-designer-comparison-pcb-design-tool-choosing.md | r:0 | forum_src,comparison_heavy,cat_comparison,long
+kisssoft/kisssoft-bearing-warning-minimum-load-fix.md | r:0 | product_page_only,error_some(3),specific_problem,long
+kisssoft/kisssys-modeling-gearbox-drive-train-system.md | r:0 | product_page_only,error_some(4),specific_problem,long
+kompas-3d/kompas-3d-export-solid-becomes-surface-bug-fix.md | r:0 | error_some(2),long
+kompas-3d/kompas-3d-large-assembly-performance-optimization.md | r:0 | product_page_only,long
+kompas-3d/kompas-3d-sheet-metal-design-bend-unfold-workflow.md | r:0 | error_rich(7),long
+land-fx/land-fx-irrigation-design-equipment-pipe-sizing-scheduling.md | r:0 | error_some(2),long
+land-fx/land-fx-planting-design-palette-placing-schedules.md | r:0 | error_rich(7),long
+lantek-expert/lantek-expert-nesting-workflow-automatic-manual-machine-reassignment.md | r:0 | error_some(2),long
+ls-dyna/ls-dyna-blast-ballistic-analysis-explosive-loading-penetration-impact.md | r:0 | error_rich(11),long
+ls-dyna/ls-dyna-explicit-dynamics-keyword-file-element-formulation-solver-configuration.md | r:0 | error_rich(11),long
+ls-dyna/ls-dyna-metal-forming-simulation-stamping-forging-springback.md | r:0 | error_rich(28),long
+ls-dyna/ls-dyna-vehicle-crash-simulation-frontal-side-rear-impact-analysis.md | r:0 | error_rich(22),long
+ltspice/ltspice-smps-buck-converter-simulation-compensation-bode-plot.md | r:0 | error_rich(6)
+ltspice/ltspice-transient-simulation-time-step-waveform-convergence.md | r:0 | error_rich(7),specific_problem
+lumion/lumion-ray-tracing-artifacts-blotches-fix.md | r:0 | error_rich(19),long
+lusas/lusas-nonlinear-convergence-diagnosis-residual-pivot-connectivity.md | r:0 | error_rich(7),long
+magics/magics-stl-repair-bad-edges-normals-holes-fix.md | r:0 | error_rich(23),long
+marvelous-designer/marvelous-designer-export-unreal-engine-usd-chaos-cloth.md | r:0 | error_some(4),specific_problem,long
+marvelous-designer/marvelous-designer-fabric-simulation-properties-bending-stiffness.md | r:0 | error_some(3),long
+mastercam/mastercam-2d-machining-facing-contour-pocket-drilling-toolpaths.md | r:0 | error_some(4),long
+mastercam/mastercam-3d-machining-roughing-finishing-high-speed-toolpaths.md | r:0 | error_some(2),long
+mastercam/mastercam-lathe-turning-threading-grooving-c-axis-mill-turn.md | r:0 | error_some(2),long
+mastercam/mastercam-post-processing-customizing-gcode-output-cnc-machine-controls.md | r:0 | error_rich(30),long
+matrixgold/matrixgold-jewelry-design-builders-dynamic-commands-ring-modeling.md | r:0 | product_page_only,error_some(3),long
+matrixgold/matrixgold-stl-export-3d-printing-castable-models.md | r:0 | product_page_only,error_rich(10),long
+meshlab/meshlab-to-blender-workflow-scan-data-retopology.md | r:0 | error_some(3),long
+meshlab/pymeshlab-python-automating-mesh-processing.md | r:0 | error_some(3),long
+microstation/microstation-3d-modeling-performance-solids-display-set.md | r:0 | product_page_only,long
+microstation/microstation-dwg-import-export-line-weight-font-fix.md | r:0 | product_page_only,error_rich(12),long
+microstation/microstation-reference-file-display-missing-geometry-fix.md | r:0 | product_page_only,error_rich(22),long
+midas-gen/midas-gen-concrete-shear-wall-design-meshed-walls-pier-boundary-elements.md | r:0 | error_some(3),long
+midas-gen/midas-gen-construction-stage-analysis-creep-shrinkage-sequential-loading.md | r:0 | error_some(2),long
+moi3d/moi3d-3d-printing-export-settings-mesh-density-stl.md | r:0 | error_some(4),long
+moi3d/moi3d-nurbs-modeling-workflow-curves-surface-boolean-operations.md | r:0 | error_rich(8),long
+moi3d/moi3d-vs-rhino-lightweight-nurbs-modeler-comparison.md | r:0 | long
+moldex3d/moldex3d-mesh-preprocessing-fix-wizard-non-matching-mesh-configuration.md | r:0 | error_rich(6),long
+moldflow/moldflow-cooling-analysis-cycle-time-optimization-temperature-distribution.md | r:0 | error_some(2),long
+moldflow/moldflow-fill-analysis-gate-placement-flow-pattern-air-traps.md | r:0 | error_some(4),long
+msc-adams/msc-adams-multibody-dynamics-joints-motions-mechanism-modeling.md | r:0 | error_some(3),long
+msc-adams/msc-adams-vehicle-dynamics-suspension-ride-handling-simulation.md | r:0 | error_rich(7),long
+msc-nastran/msc-nastran-dynamic-analysis-modal-frequency-response-random-vibration.md | r:0 | error_some(2),long
+msc-nastran/msc-nastran-nonlinear-analysis-contact-material-large-deformation.md | r:0 | error_rich(5),long
+multisim/multisim-vs-ltspice-free-spice-simulation-comparison.md | r:0 | 
+nanocad/nanocad-2d-drafting-setup-interface-units-layers-template.md | r:0 | product_page_only,error_some(3),long
+nanocad/nanocad-plotting-print-standards-ctb-page-setups-batch-output.md | r:0 | product_page_only,error_rich(6),long
+onshape/onshape-export-slow-stl-step-download-fix.md | r:0 | long
+onshape/onshape-imported-model-complexity-simplify-lag.md | r:0 | error_some(2),perf_real,long
+onshape/onshape-large-assembly-performance-display-modes.md | r:0 | error_some(3),perf_real,long
+opencascade/opencascade-technology-occt-developer-guide-brep-topology.md | r:0 | product_page_only,error_rich(8),long
+openfoam/openfoam-beginner-guide-case-setup-blockmesh-first-simulation.md | r:0 | error_rich(5),long
+openfoam/openfoam-solver-selection-incompressible-compressible-multiphase.md | r:0 | error_some(4),long
+openscad/openscad-parametric-design-customizer-variables.md | r:0 | error_some(2),long
+openscad/openscad-scripting-basics-programmatic-3d-modeling.md | r:0 | error_some(2),error_code,long
+openscad/openscad-stl-export-3d-printing-mesh-quality.md | r:0 | error_rich(6),long
+optitex/optitex-3d-virtual-sampling-garment-simulation-fit-validation.md | r:0 | error_some(4),long
+optitex/optitex-nesting-cut-order-optimization-fabric-efficiency.md | r:0 | error_rich(6),long
+optitex/optitex-pattern-design-2d-drafting-grading-marker-making.md | r:0 | error_some(2),long
+orcad/orcad-pcb-constraint-manager-differential-pair-impedance.md | r:0 | error_some(3),long
+orcad/orcad-pcb-routing-manual-auto-router-fanout.md | r:0 | error_some(2),long
+pam-stamp/pam-stamp-springback-simulation-parameters-best-practices.md | r:0 | error_rich(16),long
+pconplanner/pconplanner-performance-disappearing-geometry-gpu-fix.md | r:0 | error_rich(6),long
+planbar/allplan-planbar-precast-workflow-walls-slabs-reinforcement.md | r:0 | product_page_only,error_some(3),long
+planbar/planbar-tim-integration-production-data-management-factory.md | r:0 | product_page_only,error_some(4),error_code,long
+progecad/progecad-2d-drafting-autocad-compatible-workflow-template.md | r:0 | product_page_only,error_some(2),long
+progecad/progecad-3d-modeling-basics-extrude-revolve-boolean-operations.md | r:0 | product_page_only,error_some(3),long
+proteus-design-suite/proteus-pcb-layout-ares-footprint-routing-gerber-export.md | r:0 | error_rich(6),long
+proteus-design-suite/proteus-vs-tinkercad-circuits-arduino-simulation-comparison.md | r:0 | 
+prusaslicer/prusaslicer-pressure-advance-input-shaping-calibration.md | r:0 | error_rich(9),long
+radan/radan-floating-scrap-unfold-errors-tooling-hints-workflow.md | r:0 | product_page_only,error_rich(27),long
+revit/revit-family-performance-bloat-optimization.md | r:0 | support_src,long
+rhino-3d/rhino-freezing-lagging-large-files-performance.md | r:0 | error_some(4),perf_real,long
+rhino-3d/rhino-grasshopper-performance-data-tree-memory.md | r:0 | error_some(3),perf_real,long
+risa-3d/risa-3d-dynamic-analysis-modal-response-spectrum-time-history.md | r:0 | long
+risa-3d/risa-3d-load-combinations-wood-design-nds-lrfd.md | r:0 | long
+risa-3d/risa-3d-steel-design-aisc-code-checking-optimization.md | r:0 | error_rich(6),long
+risa-3d/risa-3d-vs-staad-pro-structural-analysis-comparison.md | r:0 | forum_src,comparison_heavy,cat_comparison,long
+sap2000/sap2000-bridge-analysis-moving-loads-influence-lines-aashto.md | r:0 | product_page_only,error_some(2),long
+sap2000/sap2000-nonlinear-analysis-plastic-hinges-pdelta-cable-structures.md | r:0 | product_page_only,error_some(4),long
+sap2000/sap2000-steel-concrete-design-aisc-aci-eurocode-code-checking.md | r:0 | product_page_only,error_rich(5),long
+sap2000/sap2000-vs-etabs-choosing-csi-analysis-tool-project.md | r:0 | forum_src,comparison_heavy,cat_comparison,long
+shapr3d/shapr3d-direct-modeling-move-face-pencil.md | r:0 | error_some(2),long
+shapr3d/shapr3d-ipad-pro-mobile-cad-workflow.md | r:0 | error_some(2),long
+shapr3d/shapr3d-sketch-constraints-parametric.md | r:0 | error_rich(13),long
+shapr3d/shapr3d-subscription-pricing-pro-plan.md | r:0 | product_page_only,error_rich(6),long
+shipconstructor/shipconstructor-clash-management-navisworks-distributed-teams.md | r:0 | error_some(2),long
+sigmanest/sigmanest-nesting-workflow-optimization-cad-integration-erp-remnants.md | r:0 | error_rich(9),long
+simcenter-star-ccm/simcenter-star-ccm-vs-ansys-fluent-cfd-comparison.md | r:0 | product_page_only,long
+simplify3d/simplify3d-custom-printer-profiles-fff-settings-tuning.md | r:0 | error_some(4),long
+simplify3d/simplify3d-dual-extrusion-multi-color-soluble-support-ooze-control.md | r:0 | error_rich(5),long
+simplify3d/simplify3d-multi-process-variable-settings-different-regions.md | r:0 | error_rich(8),long
+simplify3d/simplify3d-print-quality-troubleshooting-top-10-issues.md | r:0 | error_rich(5),long
+simplify3d/simplify3d-support-structures-custom-placement-density-separation.md | r:0 | error_rich(9),long
+simscale/simscale-cloud-cfd-external-aerodynamics-internal-flow-thermal-management.md | r:0 | error_some(3),long
+simscale/simscale-cloud-fea-static-structural-dynamic-thermal-analysis.md | r:0 | error_some(3),long
+simscale/simscale-hvac-building-simulation-airflow-thermal-comfort-smoke-propagation.md | r:0 | error_some(3),long
+sketchup/sketchup-large-model-performance-edge-count-tags.md | r:0 | error_some(3),perf_real,long
+solid-edge/solid-edge-synchronous-technology-ordered-transition.md | r:0 | error_rich(10),long
+solidcam/solidcam-5-axis-machining-tool-axis-collision.md | r:0 | error_some(4),long
+solidcam/solidcam-imachining-settings-feed-rate-stepover.md | r:0 | long
+solidcam/solidcam-imachining-vs-3d-hsm-toolpath-strategy.md | r:0 | error_some(3),long
+solidcam/solidcam-simulation-collision-detection-verification.md | r:0 | error_rich(10),long
+substance-painter/substance-painter-baking-mesh-map-cage-fix.md | r:0 | error_rich(21),long
+tebis/tebis-3d-milling-roughing-finishing-residual-stock-mold.md | r:0 | error_rich(7),long
+tebis/tebis-digital-twin-machine-simulation-collision-process-libraries.md | r:0 | error_some(3),long
+tekla-structures/tekla-complex-items-performance-shape-cleaner-directx.md | r:0 | error_some(2),perf_real,long
+tekla-structures/tekla-ifc-export-missing-geometry-properties-fix.md | r:0 | error_rich(16),long
+tinkercad/tinkercad-beginners-first-3d-model-3d-printing.md | r:0 | error_rich(5),long
+tinkercad/tinkercad-vs-sketchup-free-3d-modeling-comparison.md | r:0 | error_some(2),cat_comparison,long
+topsolid/topsolid-cam-5-axis-machining-programming.md | r:0 | product_page_only,error_some(3),long
+topsolid/topsolid-cam-post-processor-customization-gcode.md | r:0 | error_rich(10),long
+topsolid/topsolid-cam-simulation-verification-workflow.md | r:0 | product_page_only,error_some(3),specific_problem,long
+topsolid/topsolid-wood-parametric-furniture-design-manufacturing.md | r:0 | product_page_only,error_rich(5),long
+trimble-connect/trimble-connect-3d-viewer-model-federation-bcf-issue-clash-analysis.md | r:0 | error_some(4),long
+trimble-connect/trimble-connect-bcf-import-solibri-navisworks-tekla-issue-workflow.md | r:0 | error_rich(7),long
+turbocad/turbocad-2d-drafting-mechanical-design-interface-tools-dwg-workflow.md | r:0 | product_page_only,error_some(2),long
+turbocad/turbocad-3d-modeling-solid-primitives-boolean-assembly-design.md | r:0 | product_page_only,error_rich(9),long
+turbocad/turbocad-parametric-constraints-2d-3d-design-automation.md | r:0 | product_page_only,error_rich(12),long
+twinmotion/twinmotion-materials-missing-after-sync-fix.md | r:0 | error_rich(22),long
+twinmotion/twinmotion-unreal-engine-migration-datasmith-export.md | r:0 | error_some(3),migration_real,long
+ultimaker-cura/ultimaker-cura-custom-printer-setup-profiles-plugins.md | r:0 | error_some(3),long
+ultimaker-cura/ultimaker-cura-infill-patterns-gyroid-cubic-lightning-guide.md | r:0 | error_some(2),long
+ultimaker-cura/ultimaker-cura-print-quality-troubleshooting-top-10-issues.md | r:0 | error_rich(10),long
+ultimaker-cura/ultimaker-cura-retraction-settings-stringing-calibration.md | r:0 | error_some(3),long
+ultimaker-cura/ultimaker-cura-tree-supports-configuration-guide.md | r:0 | error_rich(14),long
+v-ray/v-ray-displacement-map-artifacts-amount-fix.md | r:0 | long
+v-ray/v-ray-render-time-optimization.md | r:0 | error_some(3),perf_real,long
+varicad/varicad-3d-mechanical-modeling-part-design-assembly-2d-drawing.md | r:0 | error_some(4),long
+varicad/varicad-assembly-design-constraints-bom-exploded-view.md | r:0 | error_some(3),specific_problem,long
+varicad/varicad-sheet-metal-design-bending-unfolding-manufacturing-export.md | r:0 | error_some(4),long
+vectorworks/vectorworks-spotlight-entertainment-design-lighting-event-production.md | r:0 | error_some(2),long
+visi/visi-analysis-draft-checking-split-line-geometry-healing-mold.md | r:0 | error_rich(10),long
+worknc/worknc-auto-5-roughing-finishing-mold-machining-strategies.md | r:0 | product_page_only,error_some(3),long
+worknc/worknc-vs-powermill-mold-die-cam-comparison.md | r:0 | product_page_only,error_some(2),migration_real,long
+zbrush/zbrush-brush-lag-stuttering-fix.md | r:0 | error_some(2),perf_real,long
+zbrush/zbrush-export-3dsmax-blender-goz-displacement.md | r:0 | error_some(4),migration_real,long
+zw3d/zw3d-2025-drawing-view-regen-discrete-projection-fix.md | r:0 | product_page_only,error_rich(18)
+zw3d/zw3d-2025-sp2-crash-closing-views-workaround.md | r:0 | error_rich(23)
+zw3d/zw3d-drawing-creation-slow-large-assembly-performance.md | r:0 | product_page_only,error_some(3),perf_real
+zwcad/zwcad-custom-command-aliases-pgp.md | r:0 | error_some(3)
+zwcad/zwcad-network-license-setup-cloud-floating.md | r:0 | error_rich(10),specific_problem
+zwcad/zwcad-performance-tuning-large-dwg.md | r:0 | error_some(3),specific_problem,perf_real
+
+=== PER-TOOL SUMMARY ===
+rhino-3d: 8 total (K:6 R:2 D:0)
+enscape: 6 total (K:5 R:1 D:0)
+freecad: 6 total (K:5 R:1 D:0)
+prusaslicer: 6 total (K:5 R:1 D:0)
+sap2000: 6 total (K:1 R:5 D:0)
+sketchup: 6 total (K:5 R:1 D:0)
+solid-edge: 6 total (K:5 R:1 D:0)
+solidworks: 6 total (K:6 R:0 D:0)
+vectorworks: 6 total (K:1 R:4 D:1)
+zbrush: 6 total (K:4 R:2 D:0)
+3ds-max: 5 total (K:4 R:1 D:0)
+altair-inspire: 5 total (K:2 R:3 D:0)
+altium-designer: 5 total (K:5 R:0 D:0)
+ansys-discovery: 5 total (K:5 R:0 D:0)
+archicad: 5 total (K:3 R:2 D:0)
+autodesk-netfabb: 5 total (K:0 R:4 D:1)
+bambu-studio: 5 total (K:2 R:3 D:0)
+blender: 5 total (K:2 R:3 D:0)
+browzwear: 5 total (K:0 R:4 D:1)
+cabinet-vision: 5 total (K:0 R:4 D:1)
+catia: 5 total (K:5 R:0 D:0)
+civil-3d: 5 total (K:5 R:0 D:0)
+clo-3d: 5 total (K:1 R:4 D:0)
+corelcad: 5 total (K:5 R:0 D:0)
+corona-renderer: 5 total (K:2 R:3 D:0)
+d5-render: 5 total (K:5 R:0 D:0)
+draftsight: 5 total (K:3 R:1 D:1)
+drofus: 5 total (K:3 R:1 D:1)
+dwg-trueview: 5 total (K:3 R:1 D:1)
+eagle: 5 total (K:2 R:3 D:0)
+easyeda: 5 total (K:4 R:0 D:1)
+edgecam: 5 total (K:1 R:3 D:1)
+exocad: 5 total (K:0 R:4 D:1)
+fusion-360: 5 total (K:5 R:0 D:0)
+geomagic-design-x: 5 total (K:2 R:3 D:0)
+gibbscam: 5 total (K:0 R:4 D:1)
+gstarcad: 5 total (K:3 R:1 D:1)
+hypermill: 5 total (K:2 R:3 D:0)
+ijcad: 5 total (K:1 R:4 D:0)
+infraworks: 5 total (K:4 R:0 D:1)
+ironcad: 5 total (K:0 R:4 D:1)
+keycreator: 5 total (K:2 R:2 D:1)
+keyshot: 5 total (K:3 R:2 D:0)
+kisssoft: 5 total (K:3 R:2 D:0)
+kompas-3d: 5 total (K:1 R:3 D:1)
+librecad: 5 total (K:4 R:1 D:0)
+ls-dyna: 5 total (K:0 R:4 D:1)
+lumion: 5 total (K:4 R:1 D:0)
+marvelous-designer: 5 total (K:2 R:3 D:0)
+mastercam: 5 total (K:0 R:4 D:1)
+matrixgold: 5 total (K:1 R:3 D:1)
+meshlab: 5 total (K:3 R:2 D:0)
+microstation: 5 total (K:2 R:3 D:0)
+midas-gen: 5 total (K:0 R:4 D:1)
+nanocad: 5 total (K:2 R:2 D:1)
+onshape: 5 total (K:2 R:3 D:0)
+openscad: 5 total (K:0 R:4 D:1)
+optitex: 5 total (K:0 R:4 D:1)
+orcad: 5 total (K:2 R:2 D:1)
+progecad: 5 total (K:2 R:2 D:1)
+qcad: 5 total (K:4 R:1 D:0)
+recap-pro: 5 total (K:5 R:0 D:0)
+revit: 5 total (K:4 R:1 D:0)
+risa-3d: 5 total (K:0 R:5 D:0)
+shapr3d: 5 total (K:1 R:4 D:0)
+simplify3d: 5 total (K:0 R:5 D:0)
+simscale: 5 total (K:1 R:3 D:1)
+solibri: 5 total (K:3 R:0 D:2)
+solidcam: 5 total (K:1 R:4 D:0)
+substance-painter: 5 total (K:4 R:1 D:0)
+tekla-structures: 5 total (K:3 R:2 D:0)
+tinkercad: 5 total (K:1 R:4 D:0)
+topsolid: 5 total (K:1 R:4 D:0)
+trimble-connect: 5 total (K:3 R:2 D:0)
+turbocad: 5 total (K:0 R:4 D:1)
+twinmotion: 5 total (K:3 R:2 D:0)
+ultimaker-cura: 5 total (K:0 R:5 D:0)
+v-ray: 5 total (K:3 R:2 D:0)
+varicad: 5 total (K:1 R:3 D:1)
+zw3d: 5 total (K:2 R:3 D:0)
+zwcad: 5 total (K:2 R:3 D:0)
+allegro-pcb: 3 total (K:0 R:3 D:0)
+alphacam: 3 total (K:0 R:3 D:0)
+altium-365: 3 total (K:2 R:1 D:0)
+ansys-mechanical: 3 total (K:3 R:0 D:0)
+autodesk-dynamo: 3 total (K:1 R:2 D:0)
+eplan-electric-p8: 3 total (K:1 R:2 D:0)
+esprit: 3 total (K:0 R:3 D:0)
+featurecam: 3 total (K:3 R:0 D:0)
+kicad: 3 total (K:2 R:1 D:0)
+ltspice: 3 total (K:1 R:2 D:0)
+maya: 3 total (K:3 R:0 D:0)
+moi3d: 3 total (K:0 R:3 D:0)
+moldflow: 3 total (K:1 R:2 D:0)
+msc-adams: 3 total (K:1 R:2 D:0)
+multisim: 3 total (K:2 R:1 D:0)
+openfoam: 3 total (K:0 R:3 D:0)
+plasticity: 3 total (K:3 R:0 D:0)
+powermill: 3 total (K:3 R:0 D:0)
+proteus-design-suite: 3 total (K:0 R:3 D:0)
+bobcad-cam: 2 total (K:0 R:2 D:0)
+chief-architect-pro: 2 total (K:2 R:0 D:0)
+crowncad: 2 total (K:0 R:2 D:0)
+designspark-mechanical: 2 total (K:0 R:2 D:0)
+femap: 2 total (K:0 R:2 D:0)
+land-fx: 2 total (K:0 R:2 D:0)
+msc-nastran: 2 total (K:0 R:2 D:0)
+opencascade: 2 total (K:1 R:1 D:0)
+planbar: 2 total (K:0 R:2 D:0)
+simcenter-star-ccm: 2 total (K:0 R:2 D:0)
+tebis: 2 total (K:0 R:2 D:0)
+worknc: 2 total (K:0 R:2 D:0)
+aspen-hysys: 1 total (K:1 R:0 D:0)
+autoform: 1 total (K:1 R:0 D:0)
+aveva-e3d-design: 1 total (K:1 R:0 D:0)
+cad-exchanger: 1 total (K:0 R:1 D:0)
+cadwork: 1 total (K:1 R:0 D:0)
+circuitmaker: 1 total (K:1 R:0 D:0)
+dwg-fastview: 1 total (K:0 R:1 D:0)
+eplan: 1 total (K:1 R:0 D:0)
+foran: 1 total (K:0 R:1 D:0)
+glovius: 1 total (K:0 R:1 D:0)
+lantek-expert: 1 total (K:0 R:1 D:0)
+lusas: 1 total (K:0 R:1 D:0)
+magicad: 1 total (K:1 R:0 D:0)
+magics: 1 total (K:0 R:1 D:0)
+moldex3d: 1 total (K:0 R:1 D:0)
+msc-patran: 1 total (K:1 R:0 D:0)
+pam-stamp: 1 total (K:0 R:1 D:0)
+pconplanner: 1 total (K:0 R:1 D:0)
+pulsonix: 1 total (K:1 R:0 D:0)
+pv-elite: 1 total (K:1 R:0 D:0)
+quadcept: 1 total (K:1 R:0 D:0)
+radan: 1 total (K:0 R:1 D:0)
+scia-engineer: 1 total (K:1 R:0 D:0)
+shipconstructor: 1 total (K:0 R:1 D:0)
+sigmanest: 1 total (K:0 R:1 D:0)
+solvespace: 1 total (K:1 R:0 D:0)
+surfcam: 1 total (K:1 R:0 D:0)
+t-flex-cad: 1 total (K:1 R:0 D:0)
+target-3001: 1 total (K:1 R:0 D:0)
+tekla-tedds: 1 total (K:1 R:0 D:0)
+think3: 1 total (K:1 R:0 D:0)
+trimble-business-center: 1 total (K:1 R:0 D:0)
+vertex-bd: 1 total (K:1 R:0 D:0)
+visi: 1 total (K:0 R:1 D:0)

@@ -1,0 +1,190 @@
+=== WORST GUIDES (severity >= 3) ===
+Count: 0
+
+
+=== TOOLS BY GUIDE COUNT (top 30) ===
+  ansys-workbench: 16 guides, 14 with issues, cats: troubleshooting, workflow, performance, deployment, comparison
+  autodesk-inventor: 11 guides, 6 with issues, cats: workflow, comparison, troubleshooting, deployment, performance
+  ptc-creo: 11 guides, 9 with issues, cats: troubleshooting, deployment, performance, workflow, comparison
+  rhino-3d: 8 guides, 4 with issues, cats: performance, troubleshooting, deployment
+  allplan: 6 guides, 6 with issues, cats: workflow, printing, comparison
+  autocad-plant-3d: 6 guides, 6 with issues, cats: workflow, performance, deployment, comparison
+  bricscad: 6 guides, 5 with issues, cats: troubleshooting, workflow, deployment, performance
+  comsol-multiphysics: 6 guides, 6 with issues, cats: workflow, comparison
+  cypecad: 6 guides, 6 with issues, cats: workflow, comparison
+  enscape: 6 guides, 1 with issues, cats: deployment, troubleshooting, performance
+  etabs: 6 guides, 5 with issues, cats: workflow, comparison
+  freecad: 6 guides, 2 with issues, cats: performance, troubleshooting
+  idea-statica: 6 guides, 6 with issues, cats: standards, deployment, workflow, comparison
+  midas-civil: 6 guides, 6 with issues, cats: workflow, comparison
+  prusaslicer: 6 guides, 0 with issues, cats: workflow, troubleshooting
+  sap2000: 6 guides, 5 with issues, cats: workflow, comparison
+  siemens-nx: 6 guides, 6 with issues, cats: troubleshooting, deployment, performance
+  sketchup: 6 guides, 1 with issues, cats: troubleshooting, performance
+  solid-edge: 6 guides, 3 with issues, cats: performance, troubleshooting, workflow
+  solidworks: 6 guides, 5 with issues, cats: troubleshooting, performance, manufacturing, workflow
+  staad-pro: 6 guides, 6 with issues, cats: workflow
+  vectorworks: 6 guides, 5 with issues, cats: troubleshooting, workflow, comparison
+  zbrush: 6 guides, 2 with issues, cats: performance, troubleshooting, migration
+  3dexperience: 5 guides, 5 with issues, cats: standards, migration, deployment, comparison, workflow
+  3ds-max: 5 guides, 0 with issues, cats: troubleshooting, performance
+  abaqus: 5 guides, 5 with issues, cats: workflow
+  actcad: 5 guides, 5 with issues, cats: troubleshooting, workflow, deployment, procurement
+  alibre-design: 5 guides, 5 with issues, cats: performance, procurement, manufacturing, comparison
+  altair-hyperworks: 5 guides, 5 with issues, cats: workflow, comparison
+  altair-inspire: 5 guides, 2 with issues, cats: manufacturing, workflow, troubleshooting
+
+=== TOOLS WHERE ALL GUIDES HAVE ISSUES ===
+Count: 89
+  allplan: 6 guides, cats: workflow, printing, comparison
+  autocad-plant-3d: 6 guides, cats: workflow, performance, deployment, comparison
+  comsol-multiphysics: 6 guides, cats: workflow, comparison
+  cypecad: 6 guides, cats: workflow, comparison
+  idea-statica: 6 guides, cats: standards, deployment, workflow, comparison
+  midas-civil: 6 guides, cats: workflow, comparison
+  siemens-nx: 6 guides, cats: troubleshooting, deployment, performance
+  staad-pro: 6 guides, cats: workflow
+  3dexperience: 5 guides, cats: standards, migration, deployment, comparison, workflow
+  abaqus: 5 guides, cats: workflow
+  actcad: 5 guides, cats: troubleshooting, workflow, deployment, procurement
+  alibre-design: 5 guides, cats: performance, procurement, manufacturing, comparison
+  altair-hyperworks: 5 guides, cats: workflow, comparison
+  ansys-fluent: 5 guides, cats: troubleshooting, workflow, comparison
+  ares-commander: 5 guides, cats: deployment, workflow, troubleshooting, comparison
+  autocad: 5 guides, cats: deployment, troubleshooting, performance
+  autodesk-construction-cloud: 5 guides, cats: comparison, workflow, deployment
+  autodesk-robot: 5 guides, cats: workflow, standards, comparison
+  bimcollab: 5 guides, cats: workflow, deployment, comparison
+  bluebeam-revu: 5 guides, cats: workflow, comparison
+  cadworx: 5 guides, cats: workflow, deployment
+  caesar-ii: 5 guides, cats: standards, workflow, comparison
+  camworks: 5 guides, cats: workflow, deployment, standards, manufacturing, comparison
+  carlson-survey: 5 guides, cats: workflow, deployment, comparison
+  chief-architect: 5 guides, cats: workflow, comparison
+  cimatron: 5 guides, cats: workflow, manufacturing, comparison
+  diptrace: 5 guides, cats: workflow, manufacturing, comparison
+  draftsight: 5 guides, cats: workflow, troubleshooting, comparison
+  drofus: 5 guides, cats: deployment, workflow, comparison
+  dwg-trueview: 5 guides, cats: deployment, workflow, comparison
+  eagle: 5 guides, cats: workflow, standards, migration
+  easyeda: 5 guides, cats: troubleshooting, workflow, comparison
+  edgecam: 5 guides, cats: manufacturing, workflow, deployment, comparison
+  exocad: 5 guides, cats: workflow, comparison
+  gerber-accumark: 5 guides, cats: workflow
+  gibbscam: 5 guides, cats: manufacturing, workflow, deployment, comparison
+  ijcad: 5 guides, cats: migration, standards, workflow, printing, performance
+  ironcad: 5 guides, cats: workflow, troubleshooting, comparison
+  keycreator: 5 guides, cats: standards, workflow, performance, migration, comparison
+  lectra-modaris: 5 guides, cats: workflow
+  ls-dyna: 5 guides, cats: workflow, comparison
+  mastercam: 5 guides, cats: workflow, comparison
+  midas-gen: 5 guides, cats: workflow, comparison
+  navisworks: 5 guides, cats: workflow
+  openscad: 5 guides, cats: workflow, manufacturing, comparison
+  optitex: 5 guides, cats: workflow, comparison
+  orcad: 5 guides, cats: workflow, deployment, standards, comparison
+  recap-pro: 5 guides, cats: workflow, troubleshooting, comparison
+  revit: 5 guides, cats: troubleshooting, performance, standards
+  risa-3d: 5 guides, cats: standards, workflow, comparison
+  shapr3d: 5 guides, cats: workflow, migration, procurement
+  simscale: 5 guides, cats: workflow, comparison
+  solibri: 5 guides, cats: workflow, comparison
+  solidcam: 5 guides, cats: manufacturing, deployment, troubleshooting
+  tinkercad: 5 guides, cats: workflow, deployment, migration, comparison
+  trimble-connect: 5 guides, cats: workflow, deployment, troubleshooting, comparison
+  turbocad: 5 guides, cats: workflow, comparison
+  varicad: 5 guides, cats: workflow, comparison
+  zwcad: 5 guides, cats: migration, workflow, troubleshooting, deployment, performance
+  allegro-pcb: 3 guides, cats: workflow, migration
+  alphacam: 3 guides, cats: workflow, troubleshooting, migration
+  altium-365: 3 guides, cats: workflow, troubleshooting, deployment
+  autodesk-dynamo: 3 guides, cats: deployment, workflow
+  eplan-electric-p8: 3 guides, cats: troubleshooting, deployment, migration
+  esprit: 3 guides, cats: workflow, migration
+  featurecam: 3 guides, cats: workflow, migration
+  ltspice: 3 guides, cats: troubleshooting, workflow
+  moi3d: 3 guides, cats: workflow, deployment, migration
+  moldflow: 3 guides, cats: workflow
+  msc-adams: 3 guides, cats: troubleshooting, workflow
+  multisim: 3 guides, cats: troubleshooting, workflow, migration
+  openfoam: 3 guides, cats: deployment, workflow
+  plasticity: 3 guides, cats: deployment, workflow, migration
+  proteus-design-suite: 3 guides, cats: workflow, migration
+  bobcad-cam: 2 guides, cats: workflow, troubleshooting
+  chief-architect-pro: 2 guides, cats: workflow, troubleshooting
+  crowncad: 2 guides, cats: deployment, workflow
+  designspark-mechanical: 2 guides, cats: workflow, deployment
+  femap: 2 guides, cats: workflow
+  land-fx: 2 guides, cats: workflow
+  msc-nastran: 2 guides, cats: workflow
+  opencascade: 2 guides, cats: workflow, deployment
+  planbar: 2 guides, cats: workflow, deployment
+  simcenter-star-ccm: 2 guides, cats: workflow, migration
+  tebis: 2 guides, cats: workflow, deployment
+  worknc: 2 guides, cats: workflow, migration
+  glovius: 1 guides, cats: troubleshooting
+  pconplanner: 1 guides, cats: troubleshooting
+  t-flex-cad: 1 guides, cats: workflow
+
+=== CATEGORY BREAKDOWN OF WORST GUIDES ===
+
+=== SUMMARY ===
+Total guides: 740
+Guides with < 3 sources: 502
+Guides with < 800 words: 46
+Guides with < 500 words: 0
+Worst guides (sev >= 3): 0
+Tools with all guides having issues: 89
+Total tools: 181
+
+=== PRIORITY REDO LIST (top 50 tools) ===
+  allplan: 6 guides | cats: workflow, printing, comparison
+  autocad-plant-3d: 6 guides | cats: workflow, performance, deployment, comparison
+  comsol-multiphysics: 6 guides | cats: workflow, comparison
+  cypecad: 6 guides | cats: workflow, comparison
+  idea-statica: 6 guides | cats: standards, deployment, workflow, comparison
+  midas-civil: 6 guides | cats: workflow, comparison
+  siemens-nx: 6 guides | cats: troubleshooting, deployment, performance
+  staad-pro: 6 guides | cats: workflow
+  3dexperience: 5 guides | cats: standards, migration, deployment, comparison, workflow
+  abaqus: 5 guides | cats: workflow
+  actcad: 5 guides | cats: troubleshooting, workflow, deployment, procurement
+  alibre-design: 5 guides | cats: performance, procurement, manufacturing, comparison
+  altair-hyperworks: 5 guides | cats: workflow, comparison
+  ansys-fluent: 5 guides | cats: troubleshooting, workflow, comparison
+  ares-commander: 5 guides | cats: deployment, workflow, troubleshooting, comparison
+  autocad: 5 guides | cats: deployment, troubleshooting, performance
+  autodesk-construction-cloud: 5 guides | cats: comparison, workflow, deployment
+  autodesk-robot: 5 guides | cats: workflow, standards, comparison
+  bimcollab: 5 guides | cats: workflow, deployment, comparison
+  bluebeam-revu: 5 guides | cats: workflow, comparison
+  cadworx: 5 guides | cats: workflow, deployment
+  caesar-ii: 5 guides | cats: standards, workflow, comparison
+  camworks: 5 guides | cats: workflow, deployment, standards, manufacturing, comparison
+  carlson-survey: 5 guides | cats: workflow, deployment, comparison
+  chief-architect: 5 guides | cats: workflow, comparison
+  cimatron: 5 guides | cats: workflow, manufacturing, comparison
+  diptrace: 5 guides | cats: workflow, manufacturing, comparison
+  draftsight: 5 guides | cats: workflow, troubleshooting, comparison
+  drofus: 5 guides | cats: deployment, workflow, comparison
+  dwg-trueview: 5 guides | cats: deployment, workflow, comparison
+  eagle: 5 guides | cats: workflow, standards, migration
+  easyeda: 5 guides | cats: troubleshooting, workflow, comparison
+  edgecam: 5 guides | cats: manufacturing, workflow, deployment, comparison
+  exocad: 5 guides | cats: workflow, comparison
+  gerber-accumark: 5 guides | cats: workflow
+  gibbscam: 5 guides | cats: manufacturing, workflow, deployment, comparison
+  ijcad: 5 guides | cats: migration, standards, workflow, printing, performance
+  ironcad: 5 guides | cats: workflow, troubleshooting, comparison
+  keycreator: 5 guides | cats: standards, workflow, performance, migration, comparison
+  lectra-modaris: 5 guides | cats: workflow
+  ls-dyna: 5 guides | cats: workflow, comparison
+  mastercam: 5 guides | cats: workflow, comparison
+  midas-gen: 5 guides | cats: workflow, comparison
+  navisworks: 5 guides | cats: workflow
+  openscad: 5 guides | cats: workflow, manufacturing, comparison
+  optitex: 5 guides | cats: workflow, comparison
+  orcad: 5 guides | cats: workflow, deployment, standards, comparison
+  recap-pro: 5 guides | cats: workflow, troubleshooting, comparison
+  revit: 5 guides | cats: troubleshooting, performance, standards
+  risa-3d: 5 guides | cats: standards, workflow, comparison

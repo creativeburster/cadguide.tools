@@ -1,0 +1,2079 @@
+=== CATEGORY DISTRIBUTION ===
+  workflow: 338
+  troubleshooting: 126
+  performance: 70
+  comparison: 69
+  deployment: 53
+  migration: 25
+  standards: 18
+  manufacturing: 15
+  printing: 5
+  procurement: 3
+  automation: 2
+  methodology: 1
+  data-management: 1
+  cnc-export: 1
+  interoperability: 1
+  convergence-diagnosis: 1
+  known-issues: 1
+  configuration: 1
+  geometry-preparation: 1
+  best-practices: 1
+  code-compliance: 1
+  bim-integration: 1
+  workflow-optimization: 1
+  post-processing: 1
+  evaluation: 1
+  gnss-processing: 1
+  framing-automation: 1
+
+Total guides: 740
+Total categories: 27
+
+=== GUIDES BY CATEGORY ===
+
+--- workflow (338) ---
+  3dexperience/3dexperience-xdesign-xshape-browser-based-modeling-solidworks
+    words:1327 headings:23 sources:2 table:true missing:none
+  abaqus/abaqus-composite-material-analysis-laminate-damage-progressive-failure
+    words:1540 headings:26 sources:2 table:true missing:none
+  abaqus/abaqus-contact-mechanics-general-contact-friction-wear-simulation
+    words:1374 headings:26 sources:2 table:true missing:none
+  abaqus/abaqus-explicit-dynamic-analysis-crash-drop-test-impact
+    words:1659 headings:33 sources:2 table:true missing:none
+  abaqus/abaqus-fracture-mechanics-xfem-cohesive-zone-j-integral-crack-propagation
+    words:1527 headings:30 sources:2 table:true missing:none
+  abaqus/abaqus-nonlinear-fea-plasticity-large-deformation-convergence
+    words:1513 headings:28 sources:2 table:true missing:none
+  actcad/actcad-lisp-compatibility-autolisp-routines
+    words:566 headings:10 sources:2 table:false missing:none
+  actcad/actcad-pdf-to-dwg-conversion-clean-vector
+    words:688 headings:7 sources:2 table:false missing:none
+  allegro-pcb/allegro-pcb-hdi-layout-microvia-blind-buried-via-stackup
+    words:620 headings:13 sources:2 table:false missing:none
+  allegro-pcb/allegro-pcb-high-speed-constraint-manager-differential-pairs
+    words:636 headings:11 sources:2 table:false missing:none
+  allplan/allplan-bim-workflow-2d-to-3d-building-model-ifc-export
+    words:1191 headings:27 sources:2 table:false missing:none
+  allplan/allplan-ifc-export-bim-collaboration-clash-detection-multi-platform
+    words:1296 headings:25 sources:2 table:true missing:none
+  allplan/allplan-reinforcement-detailing-3d-rebar-modeling-schedules-cnc-export
+    words:1429 headings:33 sources:2 table:true missing:none
+  allplan/allplan-visual-scripting-parametric-design-automation
+    words:1160 headings:26 sources:2 table:false missing:none
+  alphacam/alphacam-router-toolpath-rough-finish-profiling-post-processing
+    words:878 headings:10 sources:2 table:false missing:none
+  altair-hyperworks/altair-hypermesh-mesh-quality-criteria-batchmesher-element-optimization
+    words:1614 headings:24 sources:2 table:true missing:none
+  altair-hyperworks/altair-hyperstudy-doe-response-surface-parameter-optimization-robustness
+    words:1686 headings:23 sources:2 table:true missing:none
+  altair-hyperworks/altair-hyperview-fea-post-processing-stress-contour-result-interpretation
+    words:1550 headings:23 sources:2 table:false missing:none
+  altair-hyperworks/altair-optistruct-topology-optimization-manufacturing-constraints-design-space
+    words:1566 headings:24 sources:2 table:false missing:none
+  altair-inspire/altair-inspire-motion-analysis-mechanism-simulation
+    words:1081 headings:22 sources:3 table:false missing:none
+  altair-inspire/altair-inspire-polynurbs-fit-topology-optimization-cad-export
+    words:969 headings:18 sources:2 table:true missing:none
+  altair-inspire/altair-inspire-topology-optimization-many-loads-workflow
+    words:872 headings:10 sources:2 table:false missing:none
+  altium-365/altium-365-codesigner-ecad-mcad-solidworks-sync-workflow
+    words:696 headings:15 sources:2 table:false missing:none
+  ansys-discovery/ansys-discovery-real-time-cfd-fluid-flow-setup
+    words:1080 headings:22 sources:3 table:false missing:none
+  ansys-discovery/ansys-discovery-structural-simulation-stress-analysis
+    words:1064 headings:20 sources:3 table:true missing:none
+  ansys-discovery/ansys-discovery-to-fluent-concept-to-production-workflow
+    words:1026 headings:13 sources:3 table:true missing:none
+  ansys-fluent/ansys-fluent-heat-transfer-conjugate-cht-natural-convection-thermal
+    words:1552 headings:38 sources:2 table:false missing:none
+  ansys-fluent/ansys-fluent-meshing-watertight-geometry-workflow-quality
+    words:1702 headings:28 sources:2 table:false missing:none
+  ansys-fluent/ansys-fluent-turbulence-model-selection-k-epsilon-k-omega-sst
+    words:1477 headings:46 sources:2 table:true missing:none
+  ansys-workbench/ansys-fluent-cfd-meshing-boundary-conditions-flow-analysis
+    words:1606 headings:32 sources:2 table:false missing:none
+  ansys-workbench/ansys-modal-harmonic-analysis-natural-frequencies-vibration-resonance
+    words:1556 headings:29 sources:2 table:true missing:none
+  ansys-workbench/ansys-thermal-analysis-steady-state-transient-coupled-thermal-structural
+    words:1460 headings:28 sources:2 table:true missing:none
+  ansys-workbench/ansys-topology-optimization-design-exploration-parametric-weight-reduction
+    words:1485 headings:26 sources:2 table:false missing:none
+  ansys-workbench/ansys-workbench-modal-analysis-natural-frequencies-mode-shapes-resonance
+    words:1701 headings:27 sources:2 table:false missing:none
+  ansys-workbench/ansys-workbench-nonlinear-analysis-contact-plasticity-large-deformation
+    words:1610 headings:33 sources:2 table:false missing:none
+  ansys-workbench/ansys-workbench-static-structural-analysis-mesh-materials-loads-results
+    words:2141 headings:42 sources:2 table:true missing:none
+  ansys-workbench/ansys-workbench-structural-fea-static-analysis-meshing-stress-evaluation
+    words:1447 headings:36 sources:2 table:false missing:none
+  ansys-workbench/ansys-workbench-thermal-analysis-steady-state-convection-thermal-stress
+    words:1613 headings:33 sources:2 table:false missing:none
+  archicad/archicad-ifc-import-export-mapping-geometry-fix
+    words:1383 headings:27 sources:2 table:true missing:none
+  ares-commander/ares-commander-gis-shapefile-coordinate-transformation
+    words:786 headings:8 sources:2 table:false missing:none
+  ares-commander/ares-commander-ribbon-customization-toolbar
+    words:628 headings:8 sources:2 table:false missing:none
+  autocad-plant-3d/autocad-plant-3d-equipment-modeling-nozzles-connecting-pipe
+    words:983 headings:14 sources:2 table:false missing:none
+  autocad-plant-3d/autocad-plant-3d-isometric-generation-pcf-iso-setup
+    words:1019 headings:18 sources:2 table:false missing:none
+  autocad-plant-3d/autocad-plant-3d-pid-to-3d-model-workflow-linking
+    words:995 headings:16 sources:2 table:false missing:none
+  autodesk-construction-cloud/autodesk-construction-cloud-model-coordination-clash-detection-bcf
+    words:1353 headings:22 sources:2 table:false missing:none
+  autodesk-construction-cloud/autodesk-construction-cloud-revit-cloud-worksharing-central-model-sync
+    words:1202 headings:24 sources:2 table:false missing:none
+  autodesk-dynamo/dynamo-python-scripting-extending-visual-programming-custom-logic
+    words:903 headings:33 sources:2 table:false missing:none
+  autodesk-dynamo/dynamo-revit-model-audit-data-extraction-quality-check
+    words:1134 headings:21 sources:2 table:false missing:none
+  autodesk-inventor/autodesk-inventor-assembly-design-constraints-joints-motion-simulation
+    words:1641 headings:38 sources:3 table:false missing:none
+  autodesk-inventor/autodesk-inventor-drawing-creation-views-dimensions-annotations-bom
+    words:1771 headings:37 sources:3 table:false missing:none
+  autodesk-inventor/autodesk-inventor-part-modeling-sketch-constraints-extrude-revolve
+    words:1908 headings:39 sources:3 table:false missing:none
+  autodesk-inventor/autodesk-inventor-sheet-metal-design-flange-bend-flat-pattern-dxf
+    words:1704 headings:32 sources:3 table:true missing:none
+  autodesk-netfabb/autodesk-netfabb-3d-print-preparation-orientation-packing-slicing
+    words:1091 headings:24 sources:3 table:false missing:none
+  autodesk-netfabb/autodesk-netfabb-hollowing-lattice-generation-lightweighting
+    words:1221 headings:22 sources:3 table:true missing:none
+  autodesk-netfabb/autodesk-netfabb-simulation-support-generation-metal-am
+    words:1146 headings:24 sources:3 table:false missing:none
+  autodesk-robot/autodesk-robot-concrete-slab-fem-reinforcement
+    words:1010 headings:20 sources:2 table:false missing:none
+  autodesk-robot/autodesk-robot-steel-frame-analysis-design
+    words:972 headings:17 sources:2 table:false missing:none
+  bambu-studio/bambu-studio-custom-printer-profiles-non-bambu-setup
+    words:1022 headings:13 sources:3 table:false missing:none
+  bambu-studio/bambu-studio-flow-dynamics-pressure-advance-calibration
+    words:1203 headings:20 sources:5 table:false missing:none
+  bambu-studio/bambu-studio-speed-tuning-volumetric-flow-acceleration
+    words:1392 headings:21 sources:4 table:false missing:none
+  bambu-studio/bambu-studio-tree-supports-fuzzy-skin-guide
+    words:1362 headings:17 sources:5 table:false missing:none
+  bimcollab/bimcollab-approval-workflow-issue-resolution-verification-formal
+    words:1422 headings:29 sources:2 table:false missing:none
+  bimcollab/bimcollab-bcf-manager-revit-plugin-live-issue-sync-viewpoint
+    words:1639 headings:22 sources:2 table:false missing:none
+  bimcollab/bimcollab-zoom-free-model-viewer-bcf-issue-review-coordination
+    words:1187 headings:24 sources:2 table:false missing:none
+  blender/blender-large-scene-collections-linking-proxy-workflow
+    words:1379 headings:26 sources:3 table:true missing:none
+  bluebeam-revu/bluebeam-revu-batch-tools-slip-sheet-compare-hyperlink-print-automation
+    words:1391 headings:29 sources:2 table:false missing:none
+  bluebeam-revu/bluebeam-revu-construction-document-management-markup-studio-batch
+    words:1439 headings:31 sources:2 table:false missing:none
+  bluebeam-revu/bluebeam-revu-quantity-takeoff-measurements-count-tools-excel-export
+    words:1463 headings:36 sources:2 table:false missing:none
+  bluebeam-revu/bluebeam-revu-studio-sessions-real-time-collaboration-design-review-rfi
+    words:1340 headings:29 sources:2 table:true missing:none
+  bobcad-cam/bobcad-cam-3-axis-milling-workflow-stock-setup-toolpath-wizards
+    words:871 headings:16 sources:2 table:false missing:none
+  bricscad/bricscad-bim-modeling-walls-slabs-roofs-2d-plan-3d
+    words:1096 headings:17 sources:2 table:false missing:none
+  bricscad/bricscad-dwg-compatibility-autocad-workflow-transition
+    words:1111 headings:11 sources:2 table:false missing:none
+  bricscad/bricscad-lisp-automation-custom-commands-batch-processing
+    words:1277 headings:18 sources:2 table:false missing:none
+  browzwear/browzwear-vstitcher-3d-garment-simulation-fabric-stitching-drape
+    words:1237 headings:28 sources:4 table:false missing:none
+  browzwear/browzwear-vstitcher-avatar-setup-fit-validation-custom-body
+    words:1154 headings:27 sources:3 table:false missing:none
+  browzwear/browzwear-vstitcher-export-integration-glb-fbx-dxf-cloud
+    words:1194 headings:30 sources:3 table:true missing:none
+  browzwear/browzwear-vstitcher-pattern-making-2d-drafting-tech-pack-export
+    words:1182 headings:29 sources:4 table:false missing:none
+  cabinet-vision/cabinet-vision-cabinet-design-assembly-building-construction-methods
+    words:1604 headings:31 sources:3 table:false missing:none
+  cabinet-vision/cabinet-vision-cut-list-cnc-output-screen-to-machine-s2m
+    words:1573 headings:26 sources:3 table:true missing:none
+  cabinet-vision/cabinet-vision-estimating-quoting-material-costs-labor-pricing
+    words:1554 headings:28 sources:3 table:true missing:none
+  cabinet-vision/cabinet-vision-room-layout-elevations-countertops-3d-visualization
+    words:1403 headings:30 sources:3 table:false missing:none
+  cad-exchanger/cad-exchanger-step-to-jt-conversion-brep-fidelity-bugs
+    words:866 headings:18 sources:3 table:true missing:none
+  cadworx/cadworx-caesar-ii-export-pipe-stress-analysis-model-results
+    words:1546 headings:22 sources:2 table:false missing:none
+  cadworx/cadworx-equipment-vessel-modeling-nozzles-platforms-ladders
+    words:1506 headings:22 sources:2 table:false missing:none
+  cadworx/cadworx-isogen-configuration-i-configure-isometric-output-setup
+    words:1565 headings:27 sources:2 table:false missing:none
+  cadworx/cadworx-piping-modeling-route-creation-component-insertion-connection
+    words:1406 headings:28 sources:2 table:false missing:none
+  caesar-ii/caesar-ii-pipe-stress-analysis-model-building-load-cases-compliance
+    words:1722 headings:30 sources:2 table:false missing:none
+  caesar-ii/caesar-ii-support-modeling-resting-guide-anchor-spring-hanger
+    words:1698 headings:29 sources:2 table:true missing:none
+  caesar-ii/caesar-ii-thermal-expansion-flexibility-expansion-loop-displacement
+    words:1645 headings:29 sources:2 table:false missing:none
+  camworks/camworks-automatic-feature-recognition-afr-setup
+    words:1053 headings:22 sources:2 table:true missing:none
+  carlson-survey/carlson-survey-cogo-inverse-traverse-coordinate-geometry
+    words:1195 headings:25 sources:2 table:false missing:none
+  carlson-survey/carlson-survey-field-to-finish-coding-linework
+    words:1293 headings:20 sources:2 table:true missing:none
+  carlson-survey/carlson-survey-point-management-editing-merging-reporting
+    words:1244 headings:19 sources:2 table:false missing:none
+  chief-architect/chief-architect-home-design-3d-modeling-plans-construction-documents
+    words:1399 headings:34 sources:2 table:true missing:none
+  chief-architect/chief-architect-interior-design-cabinets-fixtures-materials-walkthroughs
+    words:1343 headings:30 sources:2 table:false missing:none
+  chief-architect/chief-architect-rendering-presentation-ray-tracing-walkthroughs-client-visuals
+    words:1598 headings:30 sources:2 table:true missing:none
+  chief-architect/chief-architect-roof-terrain-design-automatic-roofs-dormers-site-grading
+    words:1539 headings:31 sources:2 table:false missing:none
+  chief-architect-pro/chief-architect-pro-home-design-floor-plan-walls-roofs
+    words:1534 headings:34 sources:2 table:false missing:none
+  cimatron/cimatron-cooling-system-design-conformal-cooling-channel-routing
+    words:1483 headings:25 sources:2 table:false missing:none
+  cimatron/cimatron-electrode-design-edm-extraction-holder-manufacturing
+    words:1421 headings:20 sources:2 table:false missing:none
+  cimatron/cimatron-mold-design-quicksplit-parting-core-cavity-active-part
+    words:1652 headings:25 sources:2 table:false missing:none
+  clo-3d/clo-3d-avatar-dressing-workflow-custom-body-fit-verification
+    words:1227 headings:27 sources:3 table:false missing:none
+  clo-3d/clo-3d-export-workflows-glb-fbx-blender-unreal-engine
+    words:1493 headings:24 sources:4 table:true missing:none
+  clo-3d/clo-3d-fabric-properties-simulation-bending-stretch-buckling
+    words:1371 headings:25 sources:4 table:false missing:none
+  clo-3d/clo-3d-pattern-making-grading-size-run-production
+    words:1435 headings:29 sources:5 table:false missing:none
+  comsol-multiphysics/comsol-cfd-analysis-laminar-turbulent-multiphase-flow-simulation
+    words:1544 headings:35 sources:2 table:true missing:none
+  comsol-multiphysics/comsol-electromagnetic-simulation-electrostatics-magnetostatics-rf-analysis
+    words:1339 headings:29 sources:2 table:false missing:none
+  comsol-multiphysics/comsol-heat-transfer-conduction-convection-radiation-phase-change
+    words:1642 headings:34 sources:2 table:true missing:none
+  comsol-multiphysics/comsol-multiphysics-coupling-structural-thermal-fluid-structure-electromagnetic
+    words:1667 headings:34 sources:2 table:false missing:none
+  comsol-multiphysics/comsol-optimization-parametric-sweep-design-studies-sensitivity-analysis
+    words:1415 headings:27 sources:2 table:false missing:none
+  corelcad/corelcad-2d-drafting-setup-interface-dwg-workflow-template
+    words:1257 headings:18 sources:2 table:true missing:none
+  corelcad/corelcad-3d-modeling-extrude-revolve-boolean-stl-export
+    words:1331 headings:25 sources:3 table:false missing:none
+  corelcad/corelcad-lisp-automation-custom-commands-layer-tools-batch-processing
+    words:1280 headings:19 sources:2 table:false missing:none
+  crowncad/crowncad-part-design-sketching-features-assembly-modeling
+    words:1418 headings:26 sources:2 table:false missing:none
+  cypecad/cypecad-building-design-3d-modeling-analysis-concrete-eurocode
+    words:1348 headings:28 sources:2 table:false missing:none
+  cypecad/cypecad-foundation-design-spread-footings-pile-caps-mat-eurocode-7
+    words:1391 headings:33 sources:2 table:true missing:none
+  cypecad/cypecad-reinforcement-detailing-bar-scheduling-drawings-3d-visualization
+    words:1512 headings:24 sources:2 table:true missing:none
+  cypecad/cypecad-seismic-design-eurocode-8-ductility-capacity-design
+    words:1457 headings:34 sources:2 table:true missing:none
+  cypecad/cypecad-steel-design-eurocode-3-code-checking-optimization-connections
+    words:1374 headings:33 sources:2 table:true missing:none
+  designspark-mechanical/designspark-mechanical-3d-printing-model-prep-stl-export
+    words:1194 headings:28 sources:2 table:true missing:none
+  diptrace/diptrace-component-library-pattern-editor-custom-part
+    words:967 headings:11 sources:2 table:true missing:none
+  diptrace/diptrace-routing-manual-auto-router-tips
+    words:1045 headings:15 sources:2 table:true missing:none
+  diptrace/diptrace-schematic-pcb-design-workflow
+    words:1202 headings:19 sources:2 table:true missing:none
+  draftsight/draftsight-2d-drafting-layers-dimension-styles-title-block
+    words:1129 headings:20 sources:2 table:true missing:none
+  draftsight/draftsight-macro-recording-batch-printing-automation
+    words:1212 headings:18 sources:2 table:false missing:none
+  draftsight/draftsight-pdf-import-dwg-export-clean-geometry-conversion
+    words:1231 headings:21 sources:2 table:false missing:none
+  drofus/drofus-item-management-equipment-procurement-tracking-revit-family
+    words:1371 headings:22 sources:2 table:false missing:none
+  drofus/drofus-room-data-management-program-validation-occupancy-tracking
+    words:1465 headings:22 sources:2 table:false missing:none
+  dwg-trueview/dwg-trueview-dwg-compare-drawing-revision-changes
+    words:1040 headings:14 sources:2 table:false missing:none
+  dwg-trueview/dwg-trueview-view-measure-print-without-autocad
+    words:1106 headings:23 sources:2 table:false missing:none
+  eagle/eagle-board-layout-routing-2layer-4layer
+    words:1140 headings:20 sources:2 table:true missing:none
+  eagle/eagle-library-custom-component-footprint-creation
+    words:1051 headings:12 sources:2 table:true missing:none
+  easyeda/easyeda-jlcpcb-smt-assembly-bom-pick-and-place-sourcing
+    words:1499 headings:23 sources:2 table:false missing:none
+  easyeda/easyeda-pcb-design-schematic-capture-component-library-layout
+    words:1764 headings:34 sources:2 table:false missing:none
+  easyeda/easyeda-spice-simulation-circuit-verification-transient-analysis
+    words:1398 headings:25 sources:2 table:false missing:none
+  edgecam/edgecam-feature-recognition-finder-automatic-toolpath
+    words:1097 headings:19 sources:2 table:false missing:none
+  esprit/esprit-cam-5-axis-machining-simultaneous-3+2-freeform-toolpath
+    words:892 headings:15 sources:2 table:false missing:none
+  esprit/esprit-cam-solidmill-3-axis-roughing-finishing-residual-stock
+    words:857 headings:16 sources:2 table:false missing:none
+  etabs/etabs-building-modeling-grids-stories-section-properties-material-definition
+    words:1836 headings:33 sources:2 table:false missing:none
+  etabs/etabs-concrete-design-beam-column-shear-wall-aci-318
+    words:1658 headings:28 sources:2 table:false missing:none
+  etabs/etabs-load-definition-dead-live-wind-seismic-load-patterns
+    words:1845 headings:28 sources:2 table:false missing:none
+  etabs/etabs-seismic-analysis-modal-response-spectrum-story-drift
+    words:1789 headings:29 sources:2 table:false missing:none
+  etabs/etabs-steel-design-beam-column-brace-aisc-360
+    words:1895 headings:31 sources:2 table:false missing:none
+  exocad/exocad-dentalcad-crown-bridge-design-margin-line-anatomy
+    words:1503 headings:28 sources:2 table:false missing:none
+  exocad/exocad-full-denture-digital-workflow-tooth-setup-printed-prosthesis
+    words:1508 headings:27 sources:2 table:false missing:none
+  exocad/exocad-implant-restoration-abutment-screw-retained-hybrid
+    words:1448 headings:28 sources:2 table:false missing:none
+  exocad/exocad-removable-partial-denture-rpd-survey-clasp-connector
+    words:1464 headings:28 sources:2 table:false missing:none
+  featurecam/featurecam-automatic-feature-recognition-solid-model-nc-workflow
+    words:967 headings:14 sources:2 table:false missing:none
+  featurecam/featurecam-hole-machining-drilling-tapping-boring-thread-milling
+    words:1040 headings:20 sources:2 table:false missing:none
+  femap/femap-random-vibration-psd-analysis-setup-results-fatigue
+    words:1242 headings:25 sources:2 table:true missing:none
+  femap/siemens-femap-fea-mesh-generation-element-quality-analysis-setup
+    words:1169 headings:20 sources:2 table:true missing:none
+  geomagic-design-x/geomagic-design-x-decimating-scan-data-faster-processing
+    words:1026 headings:23 sources:2 table:true missing:none
+  geomagic-design-x/geomagic-design-x-livetransfer-parametric-cad-export
+    words:1060 headings:22 sources:3 table:false missing:none
+  geomagic-design-x/geomagic-design-x-multi-scan-alignment-registration
+    words:1186 headings:24 sources:3 table:false missing:none
+  gerber-accumark/gerber-accumark-3d-virtual-sampling-fit-validation-pattern-simulation
+    words:1367 headings:32 sources:2 table:false missing:none
+  gerber-accumark/gerber-accumark-cloud-collaboration-remote-pattern-sharing-multi-site
+    words:1253 headings:25 sources:2 table:false missing:none
+  gerber-accumark/gerber-accumark-marker-making-cut-planning-nesting-efficiency
+    words:1408 headings:34 sources:2 table:true missing:none
+  gerber-accumark/gerber-accumark-mtm-yuniqueplm-integration-custom-apparel-plm
+    words:1312 headings:25 sources:2 table:false missing:none
+  gerber-accumark/gerber-accumark-pattern-design-drafting-grade-rules-size-run
+    words:1426 headings:30 sources:2 table:false missing:none
+  gibbscam/gibbscam-interface-customization-toolbar-workflow
+    words:940 headings:17 sources:2 table:true missing:none
+  gstarcad/gstarcad-2d-drafting-workflow-interface-commands-dwg-compatibility
+    words:1208 headings:25 sources:2 table:true missing:none
+  gstarcad/gstarcad-lisp-automation-batch-processing-layer-management-commands
+    words:1400 headings:16 sources:2 table:false missing:none
+  hypermill/hypermill-5-axis-collision-avoidance-tilt-strategy
+    words:1362 headings:26 sources:3 table:false missing:none
+  hypermill/hypermill-5-axis-impeller-blisk-machining
+    words:1435 headings:25 sources:3 table:false missing:none
+  hypermill/hypermill-maxx-machining-barrel-cutter-finishing
+    words:1417 headings:29 sources:3 table:false missing:none
+  hypermill/hypermill-solidworks-integration-associative-cad-cam-setup
+    words:1068 headings:27 sources:3 table:false missing:none
+  hypermill/hypermill-virtual-machining-digital-twin-simulation
+    words:1542 headings:29 sources:3 table:false missing:none
+  idea-statica/idea-statica-steel-connection-base-plate-moment
+    words:1159 headings:16 sources:2 table:true missing:none
+  ijcad/ijcad-lisp-automation-custom-commands
+    words:718 headings:8 sources:2 table:false missing:none
+  infraworks/autodesk-infraworks-bridge-modeling-parametric-revit-integration
+    words:1145 headings:31 sources:4 table:false missing:none
+  infraworks/autodesk-infraworks-data-import-gis-terrain-coordinate-system
+    words:1212 headings:26 sources:2 table:false missing:none
+  infraworks/autodesk-infraworks-roadway-design-corridors-intersections
+    words:1139 headings:29 sources:3 table:false missing:none
+  infraworks/autodesk-infraworks-storyboard-animation-stakeholder-presentation
+    words:1253 headings:34 sources:2 table:false missing:none
+  ironcad/ironcad-catalog-smart-components-block-library
+    words:820 headings:10 sources:2 table:false missing:none
+  ironcad/ironcad-rendering-animation-exploded-view
+    words:938 headings:17 sources:2 table:false missing:none
+  ironcad/ironcad-triball-direct-modeling-workflow
+    words:844 headings:11 sources:2 table:false missing:none
+  keycreator/keycreator-direct-modeling-imported-model
+    words:819 headings:16 sources:2 table:false missing:none
+  kicad/kicad-pcb-design-workflow-schematic-to-manufacturing-gerber-output
+    words:1138 headings:19 sources:4 table:false missing:none
+  kisssoft/kisssoft-contact-analysis-tooth-modification-optimization
+    words:1171 headings:26 sources:3 table:false missing:none
+  kisssoft/kisssys-modeling-gearbox-drive-train-system
+    words:1211 headings:23 sources:3 table:true missing:none
+  kompas-3d/kompas-3d-sheet-metal-design-bend-unfold-workflow
+    words:1265 headings:25 sources:3 table:true missing:none
+  kompas-3d/kompas-3d-step-import-export-format-settings
+    words:1046 headings:20 sources:3 table:true missing:none
+  land-fx/land-fx-irrigation-design-equipment-pipe-sizing-scheduling
+    words:1222 headings:28 sources:2 table:false missing:none
+  land-fx/land-fx-planting-design-palette-placing-schedules
+    words:1219 headings:26 sources:2 table:false missing:none
+  lantek-expert/lantek-expert-nesting-workflow-automatic-manual-machine-reassignment
+    words:884 headings:16 sources:3 table:true missing:none
+  lectra-modaris/lectra-cut-vector-cutter-integration-marker-making-nesting
+    words:1309 headings:26 sources:2 table:true missing:none
+  lectra-modaris/lectra-ecosystem-modaris-kaledo-gallery-plm-end-to-end-workflow
+    words:1476 headings:31 sources:2 table:true missing:none
+  lectra-modaris/lectra-modaris-3d-prototyping-virtual-sampling-fit-validation
+    words:1281 headings:29 sources:2 table:false missing:none
+  lectra-modaris/lectra-modaris-made-to-measure-bespoke-custom-pattern-generation
+    words:1397 headings:27 sources:2 table:false missing:none
+  lectra-modaris/lectra-modaris-pattern-design-advanced-drafting-variant-grading
+    words:1333 headings:27 sources:2 table:false missing:none
+  librecad/librecad-2d-drafting-interface-tools-dxf-workflow
+    words:1126 headings:30 sources:2 table:true missing:none
+  librecad/librecad-dxf-file-compatibility-autocad-cad-systems
+    words:1287 headings:23 sources:2 table:true missing:none
+  librecad/librecad-layer-management-block-libraries-organizing-components
+    words:1265 headings:21 sources:2 table:true missing:none
+  ls-dyna/ls-dyna-blast-ballistic-analysis-explosive-loading-penetration-impact
+    words:1583 headings:28 sources:2 table:true missing:none
+  ls-dyna/ls-dyna-explicit-dynamics-keyword-file-element-formulation-solver-configuration
+    words:1482 headings:36 sources:2 table:false missing:none
+  ls-dyna/ls-dyna-metal-forming-simulation-stamping-forging-springback
+    words:1537 headings:30 sources:2 table:true missing:none
+  ls-dyna/ls-dyna-vehicle-crash-simulation-frontal-side-rear-impact-analysis
+    words:1446 headings:28 sources:2 table:false missing:none
+  ltspice/ltspice-smps-buck-converter-simulation-compensation-bode-plot
+    words:778 headings:11 sources:2 table:false missing:none
+  ltspice/ltspice-transient-simulation-time-step-waveform-convergence
+    words:754 headings:17 sources:2 table:false missing:none
+  magics/magics-stl-repair-bad-edges-normals-holes-fix
+    words:850 headings:12 sources:3 table:false missing:none
+  marvelous-designer/marvelous-designer-avatar-setup-garment-fitting-custom-characters
+    words:1194 headings:23 sources:3 table:false missing:none
+  marvelous-designer/marvelous-designer-export-unreal-engine-usd-chaos-cloth
+    words:1380 headings:15 sources:5 table:false missing:none
+  marvelous-designer/marvelous-designer-fabric-simulation-properties-bending-stiffness
+    words:1178 headings:20 sources:3 table:false missing:none
+  marvelous-designer/marvelous-designer-pattern-making-polygon-sewing-internal-lines
+    words:1412 headings:28 sources:4 table:false missing:none
+  marvelous-designer/marvelous-designer-retopology-export-maya-blender-zbrush
+    words:1368 headings:26 sources:4 table:false missing:none
+  mastercam/mastercam-2d-machining-facing-contour-pocket-drilling-toolpaths
+    words:2105 headings:33 sources:2 table:false missing:none
+  mastercam/mastercam-3d-machining-roughing-finishing-high-speed-toolpaths
+    words:1862 headings:35 sources:2 table:false missing:none
+  mastercam/mastercam-lathe-turning-threading-grooving-c-axis-mill-turn
+    words:1969 headings:33 sources:2 table:false missing:none
+  mastercam/mastercam-post-processing-customizing-gcode-output-cnc-machine-controls
+    words:1589 headings:31 sources:2 table:false missing:none
+  matrixgold/matrixgold-gem-setting-prong-pave-channel-bezel-flush
+    words:1427 headings:29 sources:3 table:true missing:none
+  matrixgold/matrixgold-jewelry-design-builders-dynamic-commands-ring-modeling
+    words:1334 headings:24 sources:3 table:false missing:none
+  matrixgold/matrixgold-rendering-presentation-metals-gems-client-visualization
+    words:1286 headings:28 sources:3 table:false missing:none
+  matrixgold/matrixgold-stl-export-3d-printing-castable-models
+    words:1270 headings:23 sources:3 table:true missing:none
+  maya/maya-usd-pipeline-import-export-material-conversion-issues
+    words:1181 headings:15 sources:4 table:false missing:none
+  meshlab/meshlab-non-manifold-mesh-repair-cleaning-workflow
+    words:983 headings:13 sources:3 table:false missing:none
+  meshlab/meshlab-to-blender-workflow-scan-data-retopology
+    words:986 headings:20 sources:3 table:false missing:none
+  meshlab/pymeshlab-python-automating-mesh-processing
+    words:702 headings:25 sources:3 table:false missing:none
+  midas-civil/midas-civil-bridge-analysis-modeling-moving-loads-aashto-eurocode
+    words:1471 headings:35 sources:2 table:false missing:none
+  midas-civil/midas-civil-cable-stayed-bridge-form-finding-cable-tuning-construction-control
+    words:1414 headings:30 sources:2 table:false missing:none
+  midas-civil/midas-civil-construction-stage-analysis-sequential-casting-creep-camber
+    words:1458 headings:34 sources:2 table:true missing:none
+  midas-civil/midas-civil-psc-bridge-design-prestress-loss-tendon-profiling-stress-checks
+    words:1405 headings:25 sources:2 table:false missing:none
+  midas-civil/midas-civil-seismic-bridge-design-ductility-isolation-aashto
+    words:1438 headings:36 sources:2 table:true missing:none
+  midas-gen/midas-gen-building-analysis-modeling-wind-seismic-steel-concrete-design
+    words:1459 headings:36 sources:2 table:true missing:none
+  midas-gen/midas-gen-concrete-shear-wall-design-meshed-walls-pier-boundary-elements
+    words:1497 headings:29 sources:2 table:true missing:none
+  midas-gen/midas-gen-construction-stage-analysis-creep-shrinkage-sequential-loading
+    words:1447 headings:31 sources:2 table:true missing:none
+  midas-gen/midas-gen-seismic-design-response-spectrum-time-history-pushover
+    words:1429 headings:28 sources:2 table:true missing:none
+  moi3d/moi3d-3d-printing-export-settings-mesh-density-stl
+    words:1084 headings:23 sources:2 table:true missing:none
+  moldflow/autodesk-moldflow-warpage-analysis-predicting-reducing-deformation
+    words:947 headings:21 sources:2 table:false missing:none
+  moldflow/moldflow-cooling-analysis-cycle-time-optimization-temperature-distribution
+    words:1034 headings:23 sources:2 table:false missing:none
+  moldflow/moldflow-fill-analysis-gate-placement-flow-pattern-air-traps
+    words:1069 headings:21 sources:2 table:false missing:none
+  msc-adams/msc-adams-multibody-dynamics-joints-motions-mechanism-modeling
+    words:1225 headings:28 sources:2 table:true missing:none
+  msc-adams/msc-adams-vehicle-dynamics-suspension-ride-handling-simulation
+    words:1091 headings:23 sources:2 table:false missing:none
+  msc-nastran/msc-nastran-dynamic-analysis-modal-frequency-response-random-vibration
+    words:1175 headings:24 sources:2 table:true missing:none
+  msc-nastran/msc-nastran-nonlinear-analysis-contact-material-large-deformation
+    words:1101 headings:22 sources:2 table:false missing:none
+  multisim/multisim-spice-simulation-dc-ac-transient-analysis-setup
+    words:741 headings:14 sources:2 table:false missing:none
+  nanocad/nanocad-2d-drafting-setup-interface-units-layers-template
+    words:1206 headings:26 sources:2 table:true missing:none
+  nanocad/nanocad-lisp-programming-custom-commands-entity-selection-automation
+    words:1596 headings:19 sources:2 table:false missing:none
+  navisworks/navisworks-4d-simulation-timeliner-bim-schedule-construction
+    words:1384 headings:36 sources:2 table:false missing:none
+  navisworks/navisworks-clash-detection-setup-rules-batch-testing-bcf-management
+    words:1409 headings:33 sources:2 table:false missing:none
+  navisworks/navisworks-freedom-review-free-viewer-walkthroughs-collaboration
+    words:1342 headings:33 sources:2 table:false missing:none
+  navisworks/navisworks-model-aggregation-multi-discipline-bim-coordination-revit-tekla-ifc
+    words:1373 headings:28 sources:2 table:true missing:none
+  navisworks/navisworks-quantification-model-based-quantity-takeoff-cost-estimation
+    words:1164 headings:27 sources:2 table:false missing:none
+  opencascade/opencascade-boolean-operations-data-exchange-step-iges-stl
+    words:1146 headings:28 sources:2 table:false missing:none
+  openfoam/openfoam-snappyhexmesh-complex-geometry-mesh-quality-tips
+    words:1061 headings:21 sources:2 table:false missing:none
+  openfoam/openfoam-solver-selection-incompressible-compressible-multiphase
+    words:1170 headings:26 sources:2 table:true missing:none
+  openscad/openscad-modules-libraries-reusable-code
+    words:837 headings:14 sources:2 table:false missing:none
+  openscad/openscad-parametric-design-customizer-variables
+    words:835 headings:10 sources:2 table:false missing:none
+  openscad/openscad-scripting-basics-programmatic-3d-modeling
+    words:773 headings:25 sources:2 table:false missing:none
+  optitex/optitex-3d-virtual-sampling-garment-simulation-fit-validation
+    words:1311 headings:28 sources:2 table:false missing:none
+  optitex/optitex-made-to-measure-custom-sizing-body-measurement-personalized-fit
+    words:1306 headings:27 sources:2 table:false missing:none
+  optitex/optitex-nesting-cut-order-optimization-fabric-efficiency
+    words:1462 headings:32 sources:2 table:true missing:none
+  optitex/optitex-pattern-design-2d-drafting-grading-marker-making
+    words:1383 headings:27 sources:2 table:false missing:none
+  orcad/orcad-capture-schematic-netlist-dxd
+    words:898 headings:18 sources:2 table:false missing:none
+  orcad/orcad-pcb-routing-manual-auto-router-fanout
+    words:994 headings:13 sources:2 table:false missing:none
+  planbar/allplan-planbar-precast-workflow-walls-slabs-reinforcement
+    words:1200 headings:25 sources:2 table:false missing:none
+  plasticity/plasticity-subdivision-surface-modeling-control-cage-creases
+    words:1345 headings:32 sources:2 table:true missing:none
+  powermill/powermill-toolpath-templates-reusable-cam-strategies-repeatable-production
+    words:1159 headings:19 sources:4 table:false missing:none
+  progecad/progecad-2d-drafting-autocad-compatible-workflow-template
+    words:1194 headings:26 sources:2 table:true missing:none
+  progecad/progecad-3d-modeling-basics-extrude-revolve-boolean-operations
+    words:1253 headings:31 sources:2 table:false missing:none
+  progecad/progecad-lisp-programming-custom-tools-batch-processing-automation
+    words:1458 headings:19 sources:3 table:false missing:none
+  progecad/progecad-pdf-to-dwg-conversion-import-vectorize-cleanup
+    words:1209 headings:17 sources:2 table:false missing:none
+  proteus-design-suite/proteus-arduino-simulation-isis-hex-file-virtual-instruments
+    words:798 headings:16 sources:2 table:false missing:none
+  proteus-design-suite/proteus-pcb-layout-ares-footprint-routing-gerber-export
+    words:801 headings:16 sources:2 table:false missing:none
+  prusaslicer/prusaslicer-ironing-smooth-top-surface-settings
+    words:1311 headings:25 sources:4 table:false missing:none
+  prusaslicer/prusaslicer-organic-supports-configuration-tuning
+    words:1199 headings:19 sources:4 table:false missing:none
+  prusaslicer/prusaslicer-pressure-advance-input-shaping-calibration
+    words:1276 headings:18 sources:5 table:false missing:none
+  prusaslicer/prusaslicer-profiles-non-prusa-printers-voron-custom-setup
+    words:1110 headings:16 sources:5 table:false missing:none
+  prusaslicer/prusaslicer-variable-layer-height-adaptive-slicing
+    words:1251 headings:20 sources:3 table:false missing:none
+  ptc-creo/ptc-creo-assembly-design-component-placement-mechanism-connections-simplified
+    words:1669 headings:34 sources:3 table:true missing:none
+  ptc-creo/ptc-creo-parametric-part-design-sketching-features-intent-reference
+    words:2021 headings:41 sources:2 table:false missing:none
+  ptc-creo/ptc-creo-simulation-fea-stress-thermal-modal-analysis-setup
+    words:1810 headings:35 sources:2 table:false missing:none
+  ptc-creo/ptc-creo-surface-modeling-isdx-style-features-g2-continuity-industrial-design
+    words:1455 headings:29 sources:2 table:false missing:none
+  qcad/qcad-2d-drafting-interface-tools-dxf-dwg-workflow
+    words:1249 headings:25 sources:2 table:true missing:none
+  qcad/qcad-block-libraries-part-management-reusable-components
+    words:1091 headings:24 sources:2 table:false missing:none
+  qcad/qcad-javascript-scripting-automating-drawing-tasks-custom-tools
+    words:1486 headings:32 sources:2 table:false missing:none
+  quadcept/quadcept-pcb-design-verification-gerber-export-netlist-integration
+    words:1126 headings:24 sources:3 table:false missing:none
+  radan/radan-floating-scrap-unfold-errors-tooling-hints-workflow
+    words:987 headings:17 sources:3 table:false missing:none
+  recap-pro/recap-pro-point-cloud-registration-auto-alignment-manual-targets
+    words:1657 headings:25 sources:2 table:false missing:none
+  recap-pro/recap-pro-revit-point-cloud-underlay-sectioning-modeling
+    words:1692 headings:26 sources:2 table:true missing:none
+  recap-pro/recap-pro-scan-to-bim-cleaning-clipping-point-cloud-preparation
+    words:1466 headings:27 sources:2 table:true missing:none
+  risa-3d/risa-3d-modeling-nodes-members-boundary-conditions
+    words:1061 headings:16 sources:2 table:true missing:none
+  sap2000/sap2000-bridge-analysis-moving-loads-influence-lines-aashto
+    words:1370 headings:28 sources:2 table:false missing:none
+  sap2000/sap2000-nonlinear-analysis-plastic-hinges-pdelta-cable-structures
+    words:1562 headings:29 sources:2 table:false missing:none
+  sap2000/sap2000-seismic-analysis-response-spectrum-time-history-pushover
+    words:1605 headings:25 sources:2 table:true missing:none
+  sap2000/sap2000-steel-concrete-design-aisc-aci-eurocode-code-checking
+    words:1632 headings:22 sources:2 table:true missing:none
+  sap2000/sap2000-structural-analysis-modeling-section-properties-linear-static
+    words:1605 headings:31 sources:2 table:true missing:none
+  shapr3d/shapr3d-direct-modeling-move-face-pencil
+    words:953 headings:20 sources:2 table:false missing:none
+  shapr3d/shapr3d-ipad-pro-mobile-cad-workflow
+    words:960 headings:19 sources:2 table:false missing:none
+  shapr3d/shapr3d-sketch-constraints-parametric
+    words:988 headings:19 sources:2 table:true missing:none
+  shipconstructor/shipconstructor-clash-management-navisworks-distributed-teams
+    words:1052 headings:23 sources:3 table:false missing:none
+  simcenter-star-ccm/simcenter-star-ccm-meshing-pipeline-surface-polyhedral-prism-layers
+    words:1313 headings:27 sources:2 table:false missing:none
+  simplify3d/simplify3d-custom-printer-profiles-fff-settings-tuning
+    words:1127 headings:21 sources:3 table:false missing:none
+  simplify3d/simplify3d-dual-extrusion-multi-color-soluble-support-ooze-control
+    words:1116 headings:23 sources:3 table:true missing:none
+  simplify3d/simplify3d-multi-process-variable-settings-different-regions
+    words:1121 headings:20 sources:3 table:false missing:none
+  simplify3d/simplify3d-support-structures-custom-placement-density-separation
+    words:1035 headings:13 sources:3 table:false missing:none
+  simscale/simscale-cloud-cfd-external-aerodynamics-internal-flow-thermal-management
+    words:1325 headings:26 sources:2 table:true missing:none
+  simscale/simscale-cloud-fea-static-structural-dynamic-thermal-analysis
+    words:1553 headings:35 sources:2 table:true missing:none
+  simscale/simscale-hvac-building-simulation-airflow-thermal-comfort-smoke-propagation
+    words:1583 headings:30 sources:2 table:true missing:none
+  simscale/simscale-workflow-collaboration-project-setup-mesh-import-team-sharing
+    words:1403 headings:34 sources:2 table:false missing:none
+  solibri/solibri-bcf-workflow-export-revit-archicad-bimcollab
+    words:1428 headings:30 sources:2 table:false missing:none
+  solibri/solibri-model-checker-ifc-import-ruleset-clash-detection-workflow
+    words:1475 headings:22 sources:2 table:false missing:none
+  solibri/solibri-ruleset-customization-creating-project-specific-validation-rules
+    words:1368 headings:26 sources:2 table:false missing:none
+  solid-edge/solid-edge-synchronous-technology-ordered-transition
+    words:1599 headings:26 sources:2 table:true missing:none
+  solidworks/solidworks-start-sketch-shortcut-keyboard-guide
+    words:1353 headings:13 sources:4 table:false missing:none
+  staad-pro/staad-pro-concrete-design-aci-318-beam-column-shear-wall
+    words:1392 headings:30 sources:2 table:true missing:none
+  staad-pro/staad-pro-dynamic-analysis-seismic-response-spectrum-time-history
+    words:1433 headings:27 sources:2 table:true missing:none
+  staad-pro/staad-pro-editor-commands-text-modeling-automation-batch-processing
+    words:1721 headings:42 sources:2 table:false missing:none
+  staad-pro/staad-pro-foundation-design-isolated-combined-mat-foundations
+    words:1603 headings:38 sources:2 table:true missing:none
+  staad-pro/staad-pro-steel-design-aisc-code-checking-optimization-connections
+    words:1371 headings:22 sources:2 table:true missing:none
+  staad-pro/staad-pro-structural-analysis-modeling-loading-steel-concrete-design
+    words:1617 headings:36 sources:2 table:false missing:none
+  t-flex-cad/t-flex-cad-parametric-construction-lines-variables-workflow
+    words:788 headings:15 sources:3 table:false missing:none
+  tebis/tebis-3d-milling-roughing-finishing-residual-stock-mold
+    words:1043 headings:19 sources:2 table:false missing:none
+  tinkercad/tinkercad-beginners-first-3d-model-3d-printing
+    words:1010 headings:20 sources:2 table:false missing:none
+  tinkercad/tinkercad-circuits-arduino-simulation-electronics
+    words:983 headings:25 sources:2 table:false missing:none
+  topsolid/topsolid-cam-5-axis-machining-programming
+    words:1259 headings:27 sources:3 table:false missing:none
+  topsolid/topsolid-cam-post-processor-customization-gcode
+    words:1118 headings:26 sources:3 table:false missing:none
+  topsolid/topsolid-cam-simulation-verification-workflow
+    words:1272 headings:34 sources:3 table:false missing:none
+  topsolid/topsolid-wood-parametric-furniture-design-manufacturing
+    words:1242 headings:24 sources:3 table:false missing:none
+  trimble-connect/trimble-connect-3d-viewer-model-federation-bcf-issue-clash-analysis
+    words:1381 headings:20 sources:2 table:false missing:none
+  trimble-connect/trimble-connect-bcf-import-solibri-navisworks-tekla-issue-workflow
+    words:1441 headings:24 sources:2 table:false missing:none
+  turbocad/turbocad-2d-drafting-mechanical-design-interface-tools-dwg-workflow
+    words:1243 headings:24 sources:2 table:true missing:none
+  turbocad/turbocad-3d-modeling-solid-primitives-boolean-assembly-design
+    words:1258 headings:42 sources:2 table:false missing:none
+  turbocad/turbocad-parametric-constraints-2d-3d-design-automation
+    words:1197 headings:23 sources:2 table:true missing:none
+  turbocad/turbocad-rendering-visualization-materials-lighting-photorealistic
+    words:1050 headings:28 sources:2 table:false missing:none
+  ultimaker-cura/ultimaker-cura-custom-printer-setup-profiles-plugins
+    words:1030 headings:23 sources:4 table:false missing:none
+  ultimaker-cura/ultimaker-cura-infill-patterns-gyroid-cubic-lightning-guide
+    words:1051 headings:20 sources:5 table:false missing:none
+  ultimaker-cura/ultimaker-cura-tree-supports-configuration-guide
+    words:1197 headings:22 sources:4 table:true missing:none
+  varicad/varicad-2d-drawing-generation-views-dimensions-gdt-dwg-export
+    words:1229 headings:32 sources:2 table:false missing:none
+  varicad/varicad-3d-mechanical-modeling-part-design-assembly-2d-drawing
+    words:1243 headings:39 sources:2 table:false missing:none
+  varicad/varicad-assembly-design-constraints-bom-exploded-view
+    words:1190 headings:25 sources:2 table:false missing:none
+  varicad/varicad-sheet-metal-design-bending-unfolding-manufacturing-export
+    words:1216 headings:26 sources:2 table:true missing:none
+  vectorworks/vectorworks-architect-bim-modeling-site-design-drawing-production
+    words:1283 headings:29 sources:2 table:true missing:none
+  vectorworks/vectorworks-landmark-site-modeling-terrain-analysis-planting-design
+    words:1290 headings:32 sources:2 table:false missing:none
+  vectorworks/vectorworks-renderworks-materials-lighting-photorealistic-rendering
+    words:1323 headings:36 sources:2 table:false missing:none
+  vectorworks/vectorworks-spotlight-entertainment-design-lighting-event-production
+    words:1255 headings:31 sources:2 table:true missing:none
+  visi/visi-analysis-draft-checking-split-line-geometry-healing-mold
+    words:1088 headings:23 sources:3 table:false missing:none
+  worknc/worknc-auto-5-roughing-finishing-mold-machining-strategies
+    words:889 headings:18 sources:2 table:false missing:none
+  zwcad/zwcad-custom-command-aliases-pgp
+    words:547 headings:7 sources:2 table:true missing:none
+
+--- troubleshooting (126) ---
+  3ds-max/3ds-max-fbx-obj-import-missing-materials-fix
+    words:1266 headings:8 sources:3 table:false missing:none
+  3ds-max/3ds-max-plugin-dll-error-loading-fix
+    words:1177 headings:10 sources:3 table:false missing:none
+  3ds-max/3ds-max-random-crashes-diagnostic-guide
+    words:1036 headings:9 sources:3 table:false missing:none
+  actcad/actcad-crashing-on-startup-diagnostic-fix
+    words:634 headings:7 sources:2 table:false missing:none
+  alphacam/alphacam-tool-direction-machining-side-gcode-errors-fixes
+    words:841 headings:15 sources:2 table:false missing:none
+  altair-inspire/altair-inspire-topology-optimization-fails-contact-errors
+    words:856 headings:16 sources:3 table:false missing:none
+  altium-365/altium-365-connection-errors-portal365-ssl-firewall-troubleshooting
+    words:678 headings:10 sources:2 table:false missing:none
+  altium-designer/altium-designer-drc-errors-clearance-routing
+    words:1356 headings:22 sources:3 table:false missing:none
+  ansys-discovery/ansys-discovery-gpu-cuda-requirements-troubleshooting
+    words:818 headings:22 sources:3 table:true missing:none
+  ansys-fluent/ansys-fluent-convergence-divergence-residuals-troubleshooting
+    words:1542 headings:36 sources:2 table:true missing:none
+  ansys-mechanical/ansys-mechanical-meshing-problems-poor-quality-stuck-convergence
+    words:1258 headings:17 sources:4 table:false missing:none
+  ansys-mechanical/ansys-mechanical-nonlinear-convergence-divergence-contact-stiffness-substeps
+    words:1216 headings:22 sources:4 table:false missing:none
+  ansys-workbench/ansys-contact-modeling-friction-penetration-pinball
+    words:1431 headings:25 sources:3 table:true missing:none
+  ansys-workbench/ansys-nonlinear-convergence-solver-unable-converge
+    words:1502 headings:20 sources:4 table:true missing:none
+  ansys-workbench/ansys-thermal-stress-coupled-analysis-convergence
+    words:1409 headings:24 sources:2 table:false missing:none
+  archicad/archicad-library-loading-error-missing-objects-fix
+    words:1222 headings:28 sources:2 table:true missing:none
+  ares-commander/ares-commander-object-snap-issues-fixing
+    words:751 headings:8 sources:2 table:false missing:none
+  aspen-hysys/aspen-hysys-distillation-column-convergence-failure-diagnosis
+    words:1242 headings:24 sources:3 table:true missing:none
+  autocad/fixing-autocad-fatal-error-0x0024-graphics
+    words:1406 headings:20 sources:2 table:false missing:none
+  autocad/recovering-corrupted-dwg-backup-disaster
+    words:1496 headings:20 sources:2 table:false missing:none
+  autodesk-inventor/inventor-first-part-creation-slow-fix
+    words:1052 headings:15 sources:2 table:true missing:none
+  autodesk-inventor/inventor-windows-11-performance-fix-core-isolation
+    words:1148 headings:16 sources:2 table:true missing:none
+  autodesk-netfabb/autodesk-netfabb-stl-mesh-repair-holes-normals-non-manifold
+    words:1096 headings:22 sources:4 table:false missing:none
+  bambu-studio/bambu-studio-ams-multi-color-setup-troubleshooting
+    words:1357 headings:17 sources:4 table:false missing:none
+  blender/blender-crash-freeze-memory-gpu-driver-addon-fix
+    words:1583 headings:34 sources:3 table:true missing:none
+  blender/blender-uv-mapping-overlapping-islands-seams-stretching-fix
+    words:1407 headings:29 sources:2 table:true missing:none
+  bobcad-cam/bobcad-cam-post-processor-configuration-gcode-tool-change-customization
+    words:848 headings:17 sources:2 table:false missing:none
+  bricscad/bricscad-25-large-dwg-crash-stability-fix
+    words:1378 headings:11 sources:4 table:false missing:none
+  catia/catia-v5-click-ok-to-terminate-crash
+    words:1187 headings:16 sources:3 table:true missing:none
+  catia/catia-v5-problem-reading-document-recovery
+    words:1125 headings:13 sources:2 table:true missing:none
+  chief-architect-pro/chief-architect-pro-troubleshooting-room-framing-roof-issues
+    words:1402 headings:30 sources:2 table:false missing:none
+  circuitmaker/circuitmaker-performance-limits-rotation-bugs-file-format-migration
+    words:981 headings:12 sources:3 table:true missing:none
+  civil-3d/civil-3d-corridor-assembly-error-target-mapping-fix
+    words:1385 headings:27 sources:3 table:true missing:none
+  civil-3d/civil-3d-data-shortcuts-broken-working-folder-fix
+    words:1356 headings:29 sources:2 table:true missing:none
+  civil-3d/civil-3d-pipe-network-error-structure-label-flow-fix
+    words:1392 headings:28 sources:2 table:true missing:none
+  corona-renderer/corona-renderer-material-glass-sss-displacement-fix
+    words:1239 headings:7 sources:2 table:false missing:none
+  corona-renderer/corona-renderer-noise-fireflies-denoiser-fix
+    words:1415 headings:16 sources:3 table:false missing:none
+  d5-render/d5-render-crash-black-screen-tdr-vram-fix
+    words:1418 headings:12 sources:3 table:false missing:none
+  d5-render/d5-render-live-sync-sketchup-revit-connection-fix
+    words:1383 headings:13 sources:2 table:false missing:none
+  draftsight/draftsight-installation-errors-activation-failures-troubleshooting
+    words:1230 headings:19 sources:2 table:false missing:none
+  dwg-fastview/dwg-fastview-cannot-open-drawing-missing-font-sync-conflict-fix
+    words:970 headings:13 sources:3 table:true missing:none
+  easyeda/easyeda-gerber-export-missing-pads-drill-offset-troubleshooting
+    words:1439 headings:33 sources:2 table:false missing:none
+  enscape/enscape-crash-black-screen-loading-fix
+    words:1405 headings:8 sources:3 table:false missing:none
+  enscape/enscape-materials-gray-revit-textures-fix
+    words:1223 headings:10 sources:3 table:false missing:none
+  enscape/enscape-not-loading-sketchup-extension-fix
+    words:1274 headings:9 sources:3 table:false missing:none
+  eplan/eplan-check-run-messages-p-code-errors-routing-fix
+    words:893 headings:11 sources:3 table:true missing:none
+  eplan-electric-p8/eplan-electric-p8-connection-wire-numbering-potential-tracking
+    words:1022 headings:25 sources:2 table:false missing:none
+  freecad/freecad-crashes-freezes-safe-mode-addon-appimage
+    words:1328 headings:23 sources:3 table:true missing:none
+  freecad/freecad-step-file-import-slow-helix-memory-fix
+    words:1336 headings:21 sources:4 table:true missing:none
+  freecad/freecad-topological-naming-problem-model-breaks
+    words:1442 headings:20 sources:4 table:true missing:none
+  freecad/freecad-troubleshooting-common-errors-startup-fix
+    words:1714 headings:23 sources:4 table:false missing:none
+  fusion-360/fusion-360-files-missing-hub-migration-cache-recovery
+    words:1415 headings:23 sources:4 table:true missing:none
+  geomagic-design-x/geomagic-design-x-auto-surfacing-non-manifold-mesh-fix
+    words:833 headings:14 sources:3 table:false missing:none
+  glovius/glovius-cannot-open-file-crash-startup-export-fix
+    words:699 headings:7 sources:3 table:true missing:none
+  ironcad/ironcad-import-step-iges-repair-geometry
+    words:843 headings:11 sources:2 table:true missing:none
+  keyshot/keyshot-freezing-crashing-gpu-driver-fix
+    words:1107 headings:10 sources:3 table:false missing:none
+  keyshot/keyshot-material-texture-mapping-uv-label-fix
+    words:1436 headings:15 sources:2 table:false missing:none
+  kicad/kicad-library-management-missing-footprints-symbol-errors-version-upgrade
+    words:1088 headings:22 sources:4 table:false missing:none
+  kisssoft/kisssoft-bearing-warning-minimum-load-fix
+    words:1260 headings:25 sources:2 table:false missing:none
+  kisssoft/kisssoft-face-load-factor-helical-gear-error-fix
+    words:974 headings:15 sources:3 table:true missing:none
+  kompas-3d/kompas-3d-export-solid-becomes-surface-bug-fix
+    words:944 headings:18 sources:3 table:false missing:none
+  ltspice/ltspice-importing-third-party-spice-models-subcircuits-symbols
+    words:819 headings:14 sources:2 table:false missing:none
+  lumion/lumion-crash-freeze-render-fix
+    words:1221 headings:9 sources:3 table:false missing:none
+  lumion/lumion-import-missing-materials-revit-sketchup-fix
+    words:1288 headings:10 sources:3 table:false missing:none
+  lumion/lumion-livesync-connection-revit-sketchup-fix
+    words:1154 headings:10 sources:3 table:false missing:none
+  lumion/lumion-ray-tracing-artifacts-blotches-fix
+    words:1197 headings:9 sources:2 table:false missing:none
+  maya/maya-viewport-2-performance-lag-heavy-scenes-rigs-optimization
+    words:1307 headings:23 sources:4 table:false missing:none
+  meshlab/meshlab-crashes-large-stl-files-workarounds
+    words:930 headings:15 sources:3 table:false missing:none
+  microstation/microstation-dwg-import-export-line-weight-font-fix
+    words:1292 headings:25 sources:2 table:true missing:none
+  microstation/microstation-file-corruption-recovery-repair-fix
+    words:1291 headings:21 sources:3 table:true missing:none
+  microstation/microstation-reference-file-display-missing-geometry-fix
+    words:1265 headings:27 sources:2 table:true missing:none
+  msc-adams/msc-adams-convergence-errors-over-constrained-mechanism-debugging
+    words:1003 headings:16 sources:2 table:false missing:none
+  multisim/multisim-convergence-errors-singular-matrix-floating-node-fixes
+    words:743 headings:8 sources:2 table:false missing:none
+  nanocad/nanocad-dwg-file-recovery-corrupted-drawings-lost-data
+    words:1214 headings:22 sources:4 table:false missing:none
+  onshape/onshape-export-slow-stl-step-download-fix
+    words:1241 headings:21 sources:3 table:true missing:none
+  onshape/onshape-mate-connector-errors-over-constrained-fix
+    words:1348 headings:20 sources:3 table:true missing:none
+  onshape/onshape-version-history-restore-deleted-feature
+    words:1160 headings:17 sources:4 table:true missing:none
+  pconplanner/pconplanner-performance-disappearing-geometry-gpu-fix
+    words:763 headings:7 sources:3 table:false missing:none
+  powermill/powermill-toolpath-calculation-slow-bad-stl-collision-check-tolerance
+    words:1353 headings:20 sources:3 table:false missing:none
+  prusaslicer/prusaslicer-mmu-multi-material-setup-troubleshooting
+    words:1489 headings:18 sources:4 table:false missing:none
+  ptc-creo/creo-circular-references-diagnosis-resolution
+    words:1412 headings:21 sources:2 table:false missing:none
+  ptc-creo/creo-license-request-failed-feature-startup
+    words:1350 headings:18 sources:3 table:true missing:none
+  ptc-creo/creo-sketch-red-dots-open-profile-fixing
+    words:1264 headings:18 sources:2 table:false missing:none
+  ptc-creo/creo-step-file-import-crash-large-files
+    words:1447 headings:15 sources:2 table:true missing:none
+  recap-pro/recap-pro-troubleshooting-registration-failure-import-error
+    words:1563 headings:34 sources:2 table:false missing:none
+  revit/revit-corrupted-central-file-recovery
+    words:1565 headings:21 sources:2 table:false missing:none
+  revit/revit-worksharing-file-locks-dwl-corrupted
+    words:1431 headings:24 sources:2 table:true missing:none
+  rhino-3d/rhino-plugin-troubleshooting-crashes
+    words:1065 headings:17 sources:2 table:false missing:none
+  rhino-3d/rhino-vray-rendering-crash-out-of-memory-vram-large-scenes
+    words:1165 headings:15 sources:4 table:false missing:none
+  rhino-3d/rhino-wont-start-windows-update-cpp-runtime
+    words:1102 headings:11 sources:3 table:true missing:none
+  siemens-nx/siemens-nx-general-fault-exception-startup
+    words:1246 headings:13 sources:2 table:false missing:none
+  siemens-nx/siemens-nx-license-borrow-freeze-not-responding
+    words:1151 headings:11 sources:2 table:true missing:none
+  simplify3d/simplify3d-print-quality-troubleshooting-top-10-issues
+    words:1185 headings:13 sources:4 table:true missing:none
+  sketchup/sketchup-2025-crashes-startup-graphics-engine
+    words:1518 headings:20 sources:3 table:true missing:none
+  sketchup/sketchup-3d-warehouse-slow-download-webcache
+    words:1537 headings:17 sources:5 table:true missing:none
+  sketchup/sketchup-extension-conflicts-upgrade-nomethoderror
+    words:1343 headings:21 sources:4 table:true missing:none
+  sketchup/sketchup-inferencing-stops-working-snapping-fix
+    words:1359 headings:18 sources:2 table:true missing:none
+  solid-edge/solid-edge-crash-startup-safe-mode-crashlog-fix
+    words:700 headings:8 sources:3 table:false missing:none
+  solid-edge/solid-edge-sheet-metal-flat-pattern-unfold-kfactor
+    words:1343 headings:21 sources:2 table:true missing:none
+  solidcam/solidcam-simulation-collision-detection-verification
+    words:1159 headings:19 sources:2 table:false missing:none
+  solidworks/fix-solidworks-license-error-5-no-feature
+    words:1416 headings:18 sources:2 table:true missing:none
+  solidworks/repair-imported-step-iges-knit-surface
+    words:1443 headings:23 sources:2 table:false missing:none
+  solidworks/resolve-solidworks-mate-conflicts-lag
+    words:1428 headings:24 sources:2 table:true missing:none
+  solvespace/solvespace-naked-edges-solver-failure-opengl-fix
+    words:930 headings:7 sources:3 table:false missing:none
+  substance-painter/substance-painter-baking-mesh-map-cage-fix
+    words:1488 headings:11 sources:2 table:false missing:none
+  substance-painter/substance-painter-export-crash-4k-8k-fix
+    words:1224 headings:11 sources:2 table:false missing:none
+  substance-painter/substance-painter-vram-out-of-memory-crash-fix
+    words:1359 headings:13 sources:3 table:false missing:none
+  tekla-structures/tekla-ifc-export-missing-geometry-properties-fix
+    words:1341 headings:27 sources:2 table:true missing:none
+  tekla-structures/tekla-multi-user-slow-saving-locking-synchronization-fix
+    words:1360 headings:30 sources:2 table:true missing:none
+  tekla-tedds/tekla-tedds-installation-calculator-error-fix-guide
+    words:1238 headings:18 sources:3 table:true missing:none
+  think3/think3-boolean-mistakes-non-manifold-sentinel-licensing-fix
+    words:1062 headings:12 sources:3 table:true missing:none
+  trimble-connect/trimble-connect-sync-issues-desktop-connector-troubleshooting
+    words:1222 headings:27 sources:2 table:false missing:none
+  twinmotion/twinmotion-datasmith-revit-crash-sync-fix
+    words:1080 headings:10 sources:3 table:false missing:none
+  twinmotion/twinmotion-materials-missing-after-sync-fix
+    words:1169 headings:10 sources:2 table:false missing:none
+  ultimaker-cura/ultimaker-cura-print-quality-troubleshooting-top-10-issues
+    words:1448 headings:13 sources:4 table:false missing:none
+  ultimaker-cura/ultimaker-cura-retraction-settings-stringing-calibration
+    words:1265 headings:25 sources:5 table:false missing:none
+  v-ray/v-ray-displacement-map-artifacts-amount-fix
+    words:1365 headings:13 sources:2 table:false missing:none
+  v-ray/v-ray-gpu-noise-fireflies-fix
+    words:1131 headings:11 sources:3 table:false missing:none
+  v-ray/v-ray-missing-textures-black-materials-fix
+    words:1190 headings:14 sources:3 table:false missing:none
+  vectorworks/vectorworks-2026-cineware-crash-launch-fix
+    words:1366 headings:11 sources:4 table:false missing:none
+  zbrush/zbrush-corrupt-license-detected-fix
+    words:1280 headings:22 sources:4 table:false missing:none
+  zbrush/zbrush-crashes-instability-recovery-fix
+    words:1114 headings:10 sources:3 table:false missing:none
+  zbrush/zbrush-wont-start-side-by-side-configuration-fix
+    words:1414 headings:12 sources:3 table:false missing:none
+  zw3d/zw3d-2025-drawing-view-regen-discrete-projection-fix
+    words:604 headings:9 sources:2 table:false missing:none
+  zw3d/zw3d-2025-sp2-crash-closing-views-workaround
+    words:583 headings:10 sources:2 table:false missing:none
+  zwcad/zwcad-dwg-compatibility-autocad-roundtrip
+    words:796 headings:8 sources:2 table:false missing:none
+
+--- performance (70) ---
+  3ds-max/3ds-max-large-scene-optimization-proxy-instance
+    words:1186 headings:12 sources:3 table:false missing:none
+  3ds-max/3ds-max-viewport-lag-high-end-pc-fix
+    words:1057 headings:9 sources:3 table:false missing:none
+  alibre-design/alibre-design-large-assembly-performance
+    words:809 headings:10 sources:2 table:true missing:none
+  ansys-workbench/ansys-mesh-quality-element-distortion-diagnosis
+    words:1280 headings:20 sources:2 table:true missing:none
+  archicad/archicad-file-bloat-corruption-compress-repair-fix
+    words:1262 headings:21 sources:2 table:true missing:none
+  archicad/archicad-layout-publisher-slow-pdf-export-fix
+    words:1305 headings:25 sources:2 table:true missing:none
+  archicad/archicad-slow-performance-3d-window-shadows-fix
+    words:1553 headings:34 sources:4 table:true missing:none
+  autocad/large-assembly-demand-loading
+    words:1372 headings:25 sources:2 table:false missing:none
+  autocad/pgp-alias-commands-automation
+    words:1197 headings:22 sources:2 table:false missing:none
+  autocad-plant-3d/autocad-plant-3d-not-responding-large-drawing-performance
+    words:931 headings:20 sources:2 table:false missing:none
+  autodesk-inventor/inventor-slow-performance-large-models-model-states
+    words:1593 headings:25 sources:3 table:true missing:none
+  autodesk-inventor/inventor-tube-pipe-performance-adaptive-route-rebuild
+    words:1229 headings:17 sources:2 table:true missing:none
+  autodesk-inventor/inventor-view-representations-lod-large-assemblies
+    words:1488 headings:24 sources:2 table:true missing:none
+  blender/blender-cycles-render-slow-gpu-samples-denoiser-fix
+    words:1325 headings:27 sources:3 table:true missing:none
+  blender/blender-viewport-performance-geometry-nodes-vram-fix
+    words:1532 headings:31 sources:4 table:true missing:none
+  bricscad/bricscad-performance-optimization-large-files-hardware-acceleration
+    words:1171 headings:21 sources:2 table:false missing:none
+  catia/catia-v5-large-assembly-performance-cgr-visualization
+    words:1174 headings:17 sources:2 table:true missing:none
+  civil-3d/civil-3d-plan-production-slow-viewport-label-fix
+    words:1257 headings:28 sources:2 table:true missing:none
+  civil-3d/civil-3d-slow-performance-surface-data-shortcut-fix
+    words:1765 headings:30 sources:3 table:true missing:none
+  corona-renderer/corona-renderer-lighting-hdri-portal-interior-fix
+    words:1288 headings:12 sources:3 table:false missing:none
+  corona-renderer/corona-renderer-performance-optimization-render-time
+    words:1372 headings:14 sources:3 table:false missing:none
+  d5-render/d5-render-environment-weather-hdri-gi-fix
+    words:1370 headings:10 sources:3 table:false missing:none
+  d5-render/d5-render-performance-optimization-dlss-fps-gi
+    words:1334 headings:11 sources:3 table:false missing:none
+  d5-render/d5-render-video-panorama-export-artifact-fix
+    words:1424 headings:10 sources:3 table:false missing:none
+  enscape/enscape-performance-optimization-quality-vram
+    words:1293 headings:14 sources:3 table:true missing:none
+  enscape/enscape-rendering-quality-capture-image-video
+    words:1340 headings:18 sources:3 table:false missing:none
+  freecad/freecad-assembly-slow-loading-techdraw-a2plus-fix
+    words:1335 headings:25 sources:2 table:true missing:none
+  freecad/freecad-techdraw-slow-performance-view-rendering-fix
+    words:1347 headings:26 sources:2 table:true missing:none
+  fusion-360/fusion-360-cam-toolpath-slow-calculation-fix
+    words:1321 headings:27 sources:2 table:true missing:none
+  fusion-360/fusion-360-drawing-performance-viewport-dimension-fix
+    words:1225 headings:23 sources:3 table:true missing:none
+  fusion-360/fusion-360-large-assembly-performance-timeline-suppress
+    words:1455 headings:32 sources:3 table:true missing:none
+  fusion-360/fusion-360-slow-performance-freezes-cache-fix
+    words:1480 headings:24 sources:4 table:true missing:none
+  gstarcad/gstarcad-performance-tuning-large-dwg-hardware-settings-system-variables
+    words:1293 headings:24 sources:2 table:true missing:none
+  ijcad/ijcad-slow-performance-large-drawing-optimization
+    words:750 headings:10 sources:2 table:false missing:none
+  keycreator/keycreator-performance-optimization-complex-models
+    words:767 headings:14 sources:2 table:true missing:none
+  keyshot/keyshot-render-speed-optimization-cpu-gpu
+    words:1341 headings:12 sources:3 table:false missing:none
+  kompas-3d/kompas-3d-large-assembly-performance-optimization
+    words:1032 headings:31 sources:3 table:false missing:none
+  lumion/lumion-performance-optimization-fps-render-time
+    words:1244 headings:12 sources:2 table:false missing:none
+  maya/maya-scene-optimization-file-size-cleanup-performance-audit
+    words:1172 headings:22 sources:4 table:false missing:none
+  microstation/microstation-3d-modeling-performance-solids-display-set
+    words:1277 headings:22 sources:3 table:true missing:none
+  microstation/microstation-large-file-performance-raster-reference-fix
+    words:1486 headings:27 sources:3 table:true missing:none
+  onshape/onshape-imported-model-complexity-simplify-lag
+    words:1214 headings:18 sources:3 table:true missing:none
+  onshape/onshape-large-assembly-performance-display-modes
+    words:1301 headings:23 sources:4 table:true missing:none
+  ptc-creo/creo-large-assembly-simplified-representations
+    words:1261 headings:17 sources:2 table:true missing:none
+  revit/revit-family-performance-bloat-optimization
+    words:1408 headings:30 sources:2 table:false missing:none
+  revit/revit-large-model-ram-pagefile-nvme
+    words:1440 headings:27 sources:2 table:true missing:none
+  rhino-3d/rhino-display-pipeline-heavy-mesh-optimization-viewport-lag
+    words:1158 headings:21 sources:4 table:false missing:none
+  rhino-3d/rhino-freezing-lagging-large-files-performance
+    words:1266 headings:20 sources:2 table:true missing:none
+  rhino-3d/rhino-grasshopper-performance-data-tree-memory
+    words:1373 headings:21 sources:2 table:true missing:none
+  rhino-3d/rhino-grasshopper-performance-optimization-slow-definitions-data-trees
+    words:1264 headings:19 sources:4 table:false missing:none
+  siemens-nx/siemens-nx-large-assembly-lightweight-representations
+    words:1049 headings:18 sources:2 table:false missing:none
+  siemens-nx/siemens-nx-slow-high-end-pc-teamcenter-cache
+    words:1241 headings:18 sources:2 table:false missing:none
+  sketchup/sketchup-large-model-performance-edge-count-tags
+    words:1678 headings:20 sources:5 table:true missing:none
+  sketchup/sketchup-layout-slow-viewport-raster-rendering
+    words:1444 headings:17 sources:4 table:true missing:none
+  solid-edge/solid-edge-2025-slow-startup-license-network-fix
+    words:1447 headings:21 sources:4 table:true missing:none
+  solid-edge/solid-edge-drafting-performance-view-update-dimension
+    words:1420 headings:23 sources:3 table:true missing:none
+  solid-edge/solid-edge-large-assembly-performance-simplify-activate
+    words:1400 headings:25 sources:3 table:true missing:none
+  solidworks/solidworks-large-assembly-performance-tuning
+    words:1523 headings:29 sources:2 table:true missing:none
+  substance-painter/substance-painter-performance-optimization-resolution-layers
+    words:1370 headings:10 sources:3 table:false missing:none
+  tekla-structures/tekla-complex-items-performance-shape-cleaner-directx
+    words:1269 headings:22 sources:3 table:true missing:none
+  tekla-structures/tekla-drawing-creation-slow-numbering-database-fix
+    words:1258 headings:26 sources:3 table:true missing:none
+  tekla-structures/tekla-large-model-performance-work-area-view-filter
+    words:1544 headings:27 sources:4 table:true missing:none
+  twinmotion/twinmotion-path-tracer-settings-crash-fix
+    words:1155 headings:14 sources:3 table:false missing:none
+  twinmotion/twinmotion-performance-optimization-gpu-ram-quality
+    words:1297 headings:11 sources:3 table:false missing:none
+  v-ray/v-ray-dome-light-hdri-setup-noise-shadows
+    words:1262 headings:10 sources:2 table:false missing:none
+  v-ray/v-ray-render-time-optimization
+    words:1369 headings:18 sources:3 table:false missing:none
+  zbrush/zbrush-brush-lag-stuttering-fix
+    words:1175 headings:12 sources:3 table:false missing:none
+  zbrush/zbrush-large-file-management-decimation-export
+    words:1184 headings:10 sources:2 table:false missing:none
+  zw3d/zw3d-drawing-creation-slow-large-assembly-performance
+    words:658 headings:12 sources:3 table:false missing:none
+  zwcad/zwcad-performance-tuning-large-dwg
+    words:627 headings:8 sources:2 table:false missing:none
+
+--- comparison (69) ---
+  3dexperience/3dexperience-vs-solidworks-pdm-cloud-vs-local-vault-comparison
+    words:1131 headings:24 sources:2 table:false missing:none
+  alibre-design/alibre-design-vs-solidworks-comparison
+    words:816 headings:9 sources:2 table:true missing:none
+  allplan/allplan-vs-revit-bim-platform-comparison-architecture-engineering
+    words:1346 headings:16 sources:2 table:true missing:none
+  altair-hyperworks/altair-hyperworks-vs-ansys-workbench-fea-platform-comparison
+    words:1389 headings:37 sources:2 table:false missing:none
+  ansys-fluent/ansys-fluent-vs-cfx-cfd-solver-comparison
+    words:1294 headings:37 sources:2 table:false missing:none
+  ansys-workbench/ansys-workbench-vs-abaqus-fea-platform-comparison-structural-analysis
+    words:1495 headings:16 sources:2 table:true missing:none
+  ansys-workbench/ansys-workbench-vs-abaqus-vs-comsol-fea-comparison
+    words:1581 headings:28 sources:2 table:true missing:none
+  ares-commander/ares-commander-vs-autocad-lt-comparison
+    words:732 headings:9 sources:2 table:true missing:none
+  autocad-plant-3d/autocad-plant-3d-vs-cadworx-piping-design-comparison
+    words:1016 headings:12 sources:2 table:false missing:none
+  autodesk-construction-cloud/autodesk-construction-cloud-docs-vs-design-collaboration-module
+    words:999 headings:17 sources:2 table:false missing:none
+  autodesk-inventor/autodesk-inventor-vs-solidworks-vs-fusion-360-cad-comparison
+    words:1556 headings:28 sources:2 table:true missing:none
+  autodesk-netfabb/autodesk-netfabb-vs-meshmixer-vs-magics-stl-repair-comparison
+    words:1199 headings:24 sources:4 table:true missing:none
+  autodesk-robot/autodesk-robot-vs-etabs-structural-analysis-comparison
+    words:1081 headings:13 sources:2 table:true missing:none
+  bimcollab/bimcollab-vs-acc-model-coordination-bcf-issue-platform-comparison
+    words:1185 headings:14 sources:2 table:false missing:none
+  bluebeam-revu/bluebeam-revu-vs-adobe-acrobat-construction-pdf-comparison
+    words:1378 headings:18 sources:2 table:true missing:none
+  browzwear/browzwear-vs-clo-3d-vs-marvelous-designer-comparison
+    words:1211 headings:26 sources:4 table:true missing:none
+  cabinet-vision/cabinet-vision-vs-sketchup-vs-mozaik-cabinet-design-comparison
+    words:1401 headings:25 sources:2 table:true missing:none
+  caesar-ii/caesar-ii-vs-autopipe-pipe-stress-comparison
+    words:1472 headings:40 sources:2 table:false missing:none
+  camworks/camworks-vs-solidcam-solidworks-integrated-cam
+    words:824 headings:9 sources:2 table:true missing:none
+  carlson-survey/carlson-survey-vs-civil-3d-surveying-comparison
+    words:1042 headings:12 sources:2 table:true missing:none
+  chief-architect/chief-architect-vs-revit-residential-vs-bim-platform-comparison
+    words:1238 headings:16 sources:2 table:true missing:none
+  cimatron/cimatron-vs-solidworks-mold-design-comparison
+    words:1329 headings:32 sources:2 table:false missing:none
+  clo-3d/clo-3d-vs-marvelous-designer-comparison-differences
+    words:1123 headings:15 sources:5 table:true missing:none
+  comsol-multiphysics/comsol-vs-ansys-multiphysics-platform-comparison-coupled-simulation
+    words:1381 headings:15 sources:2 table:true missing:none
+  corelcad/corelcad-vs-autocad-feature-comparison-migration-guide
+    words:1197 headings:14 sources:3 table:true missing:none
+  cypecad/cypecad-vs-etabs-building-design-platform-comparison
+    words:1319 headings:15 sources:2 table:true missing:none
+  diptrace/diptrace-vs-kicad-free-pcb-design-comparison
+    words:969 headings:11 sources:2 table:true missing:none
+  draftsight/draftsight-vs-autocad-feature-comparison-migration
+    words:1288 headings:20 sources:2 table:true missing:none
+  drofus/drofus-vs-revit-schedules-bim-data-management-comparison
+    words:1294 headings:23 sources:2 table:false missing:none
+  dwg-trueview/dwg-trueview-vs-autocad-viewer-free-dwg-comparison
+    words:962 headings:27 sources:2 table:true missing:none
+  easyeda/easyeda-vs-kicad-pcb-design-comparison-free-tool
+    words:1273 headings:36 sources:2 table:false missing:none
+  edgecam/edgecam-vs-mastercam-comparison-job-shop
+    words:949 headings:11 sources:2 table:true missing:none
+  etabs/etabs-vs-sap2000-vs-staad-pro-structural-analysis-comparison
+    words:1820 headings:30 sources:3 table:true missing:none
+  exocad/exocad-vs-3shape-vs-cerec-dental-cad-comparison
+    words:1389 headings:26 sources:2 table:true missing:none
+  geomagic-design-x/geomagic-design-x-vs-meshlab-scan-processing-comparison
+    words:1040 headings:17 sources:3 table:true missing:none
+  gibbscam/gibbscam-vs-mastercam-comparison-small-shop
+    words:961 headings:12 sources:2 table:true missing:none
+  gstarcad/gstarcad-vs-autocad-feature-comparison-performance-migration
+    words:1267 headings:21 sources:2 table:true missing:none
+  idea-statica/idea-statica-vs-tekla-structural-designer-connection
+    words:852 headings:11 sources:2 table:true missing:none
+  infraworks/autodesk-infraworks-vs-civil-3d-comparison-workflow
+    words:1057 headings:21 sources:3 table:true missing:none
+  ironcad/ironcad-vs-ironcad-draft-3d-2d
+    words:624 headings:10 sources:2 table:true missing:none
+  keycreator/keycreator-vs-autocad-manufacturing-comparison
+    words:818 headings:11 sources:2 table:true missing:none
+  kicad/kicad-vs-altium-designer-comparison-pcb-design-tool-choosing
+    words:1059 headings:14 sources:4 table:false missing:none
+  kompas-3d/kompas-3d-vs-solidworks-comparison
+    words:1064 headings:32 sources:3 table:true missing:none
+  librecad/librecad-vs-qcad-choosing-open-source-2d-cad-tool
+    words:1214 headings:15 sources:3 table:true missing:none
+  ls-dyna/ls-dyna-vs-abaqus-explicit-solver-comparison-crash-impact
+    words:1446 headings:15 sources:2 table:true missing:none
+  mastercam/mastercam-vs-gibbscam-vs-camworks-cam-comparison
+    words:1613 headings:29 sources:2 table:true missing:none
+  matrixgold/matrixgold-vs-rhinogold-vs-jewelcad-pro-comparison
+    words:1369 headings:26 sources:3 table:true missing:none
+  meshlab/meshlab-vs-blender-vs-netfabb-mesh-repair-comparison
+    words:1142 headings:19 sources:3 table:true missing:none
+  midas-civil/midas-civil-vs-sap2000-bridge-analysis-platform-comparison
+    words:1230 headings:15 sources:2 table:true missing:none
+  midas-gen/midas-gen-vs-etabs-building-analysis-platform-comparison
+    words:1368 headings:16 sources:2 table:true missing:none
+  nanocad/nanocad-vs-autocad-lt-feature-comparison-migration
+    words:1242 headings:23 sources:2 table:true missing:none
+  openscad/openscad-vs-freecad-open-source-comparison
+    words:846 headings:18 sources:2 table:true missing:none
+  optitex/optitex-vs-gerber-accumark-vs-lectra-modaris-comparison
+    words:1278 headings:25 sources:2 table:true missing:none
+  orcad/orcad-vs-altium-designer-pcb-comparison
+    words:924 headings:11 sources:2 table:true missing:none
+  progecad/progecad-vs-autocad-feature-comparison-cost-migration
+    words:1218 headings:19 sources:3 table:true missing:none
+  ptc-creo/ptc-creo-vs-solidworks-vs-siemens-nx-enterprise-cad-comparison
+    words:1454 headings:26 sources:2 table:true missing:none
+  qcad/qcad-vs-librecad-open-source-2d-cad-comparison
+    words:1189 headings:21 sources:3 table:true missing:none
+  recap-pro/recap-pro-vs-cyclone-register-360-registration-comparison
+    words:1544 headings:40 sources:2 table:false missing:none
+  risa-3d/risa-3d-vs-staad-pro-structural-analysis-comparison
+    words:1036 headings:12 sources:2 table:true missing:none
+  sap2000/sap2000-vs-etabs-choosing-csi-analysis-tool-project
+    words:1381 headings:17 sources:3 table:true missing:none
+  simscale/simscale-vs-desktop-cae-cloud-on-premise-simulation-comparison
+    words:1508 headings:24 sources:2 table:true missing:none
+  solibri/solibri-office-vs-solibri-site-license-comparison
+    words:1077 headings:19 sources:2 table:false missing:none
+  solibri/solibri-vs-navisworks-bim-coordination-clash-detection-comparison
+    words:1104 headings:15 sources:2 table:false missing:none
+  tinkercad/tinkercad-vs-sketchup-free-3d-modeling-comparison
+    words:915 headings:12 sources:2 table:true missing:none
+  topsolid/topsolid-vs-solidworks-comparison
+    words:1181 headings:20 sources:3 table:true missing:none
+  trimble-connect/trimble-connect-vs-autodesk-construction-cloud-bim-platform-comparison
+    words:1265 headings:21 sources:2 table:false missing:none
+  turbocad/turbocad-vs-autocad-feature-comparison-pricing-migration
+    words:1260 headings:17 sources:2 table:true missing:none
+  varicad/varicad-vs-solidworks-feature-comparison-cost-analysis
+    words:1346 headings:14 sources:2 table:true missing:none
+  vectorworks/vectorworks-vs-revit-bim-platform-comparison-architecture-design
+    words:1239 headings:15 sources:2 table:true missing:none
+
+--- deployment (53) ---
+  3dexperience/3dexperience-solidworks-integration-collaborative-space-mysession-setup
+    words:1331 headings:26 sources:2 table:false missing:none
+  actcad/actcad-network-deployment-silent-install
+    words:594 headings:8 sources:2 table:false missing:none
+  altium-365/altium-365-workspace-setup-cloud-collaboration-projects
+    words:771 headings:11 sources:2 table:false missing:none
+  altium-designer/altium-designer-copper-pour-best-practices
+    words:1313 headings:19 sources:2 table:false missing:none
+  altium-designer/altium-designer-footprint-design-mistakes
+    words:1306 headings:24 sources:2 table:false missing:none
+  altium-designer/altium-designer-gerber-bom-export-manufacturing
+    words:1189 headings:14 sources:2 table:false missing:none
+  altium-designer/altium-designer-high-speed-impedance-length-matching
+    words:1441 headings:28 sources:2 table:true missing:none
+  ansys-discovery/ansys-discovery-license-activation-installation-troubleshooting
+    words:893 headings:25 sources:3 table:false missing:none
+  ansys-workbench/ansys-workbench-parametric-study-optimization
+    words:1394 headings:16 sources:2 table:false missing:none
+  ares-commander/ares-commander-cloud-sync-graebert-setup
+    words:772 headings:9 sources:2 table:false missing:none
+  autocad/configuring-adskflex-opt-licensing-rules
+    words:1285 headings:35 sources:2 table:false missing:none
+  autocad-plant-3d/autocad-plant-3d-piping-specification-setup-catalog-editor
+    words:986 headings:19 sources:2 table:false missing:none
+  autodesk-construction-cloud/autodesk-construction-cloud-permission-management-folder-access-roles
+    words:1326 headings:26 sources:2 table:true missing:none
+  autodesk-construction-cloud/autodesk-construction-cloud-setup-project-structure-folder-hierarchy
+    words:1123 headings:18 sources:2 table:false missing:none
+  autodesk-dynamo/autodesk-dynamo-revit-visual-scripting-parametric-automation
+    words:1080 headings:24 sources:2 table:false missing:none
+  autodesk-inventor/inventor-ilogic-automation-drawing-creation-bom
+    words:1624 headings:18 sources:2 table:false missing:none
+  bimcollab/bimcollab-issue-management-bcf-workflow-setup-revit-archicad
+    words:1404 headings:29 sources:2 table:false missing:none
+  bricscad/bricscad-licensing-deployment-network-silent-install
+    words:1201 headings:23 sources:2 table:true missing:none
+  cadworx/cadworx-plant-professional-setup-spec-editor-catalog-configuration
+    words:1347 headings:21 sources:2 table:false missing:none
+  camworks/camworks-technology-database-templates-setup
+    words:1011 headings:15 sources:2 table:true missing:none
+  carlson-survey/carlson-survey-setup-coordinate-system-data-import
+    words:1205 headings:12 sources:2 table:false missing:none
+  catia/catia-v5-customizing-toolbars-restoring-commands
+    words:1148 headings:13 sources:2 table:true missing:none
+  crowncad/crowncad-cloud-collaborative-design-real-time-co-editing-version-control
+    words:1220 headings:28 sources:2 table:false missing:none
+  designspark-mechanical/designspark-mechanical-direct-modeling-pull-move-fill-combine
+    words:1452 headings:18 sources:2 table:false missing:none
+  drofus/drofus-aec-data-sync-automated-revit-autodesk-construction-cloud
+    words:1547 headings:23 sources:2 table:true missing:none
+  drofus/drofus-revit-integration-attribute-configuration-data-sync-setup
+    words:1702 headings:24 sources:2 table:false missing:none
+  dwg-trueview/dwg-trueview-batch-convert-dwg-version-upgrade-downgrade
+    words:1071 headings:17 sources:2 table:true missing:none
+  dwg-trueview/dwg-trueview-construction-shop-drawings-as-built-review
+    words:1093 headings:19 sources:2 table:false missing:none
+  edgecam/edgecam-post-processor-customization-g-code
+    words:915 headings:19 sources:2 table:true missing:none
+  edgecam/edgecam-tool-library-setup-holders-parameters
+    words:965 headings:15 sources:2 table:true missing:none
+  enscape/enscape-asset-library-custom-import-fix
+    words:1341 headings:16 sources:2 table:false missing:none
+  eplan-electric-p8/eplan-electric-p8-project-setup-page-macro-article-data
+    words:1279 headings:27 sources:2 table:true missing:none
+  gibbscam/gibbscam-post-processor-setup-g-code
+    words:854 headings:13 sources:2 table:false missing:none
+  gstarcad/gstarcad-installation-licensing-silent-deploy-network-activation
+    words:1106 headings:23 sources:3 table:true missing:none
+  idea-statica/idea-statica-revit-robot-integration-bim
+    words:949 headings:15 sources:2 table:false missing:none
+  keyshot/keyshot-gpu-mode-cuda-nvlink-setup-fix
+    words:1113 headings:9 sources:3 table:false missing:none
+  kisssoft/kisssoft-creo-integration-interface-setup
+    words:962 headings:15 sources:2 table:false missing:none
+  moi3d/moi3d-nurbs-modeling-workflow-curves-surface-boolean-operations
+    words:1271 headings:28 sources:2 table:false missing:none
+  opencascade/opencascade-technology-occt-developer-guide-brep-topology
+    words:1197 headings:32 sources:2 table:true missing:none
+  openfoam/openfoam-beginner-guide-case-setup-blockmesh-first-simulation
+    words:1011 headings:16 sources:2 table:false missing:none
+  orcad/orcad-library-management-centralized-component-database
+    words:926 headings:18 sources:2 table:true missing:none
+  planbar/planbar-tim-integration-production-data-management-factory
+    words:1163 headings:26 sources:2 table:false missing:none
+  plasticity/plasticity-cad-essentials-nurbs-subdivision-theory-builder
+    words:1296 headings:32 sources:2 table:false missing:none
+  ptc-creo/creo-config-pro-best-practices-settings
+    words:1387 headings:24 sources:2 table:false missing:none
+  rhino-3d/rhino-stl-obj-export-mesh-settings
+    words:1197 headings:20 sources:2 table:true missing:none
+  siemens-nx/siemens-nx-journaling-python-automation
+    words:1247 headings:15 sources:2 table:false missing:none
+  siemens-nx/siemens-nx-splm-license-server-configuration
+    words:1410 headings:35 sources:2 table:false missing:none
+  solidcam/solidcam-post-processor-g-code-configuration
+    words:935 headings:18 sources:2 table:true missing:none
+  substance-painter/substance-painter-wrong-gpu-intel-nvidia-fix
+    words:1247 headings:13 sources:2 table:false missing:none
+  tebis/tebis-digital-twin-machine-simulation-collision-process-libraries
+    words:1060 headings:18 sources:2 table:false missing:none
+  tinkercad/tinkercad-classroom-setup-students-3d-design-education
+    words:992 headings:22 sources:2 table:false missing:none
+  trimble-connect/trimble-connect-setup-project-configuration-folder-structure-tekla
+    words:1399 headings:26 sources:2 table:false missing:none
+  zwcad/zwcad-network-license-setup-cloud-floating
+    words:665 headings:7 sources:2 table:false missing:none
+
+--- migration (25) ---
+  3dexperience/3dexperience-file-preparation-assistant-solidworks-data-migration-cleanup
+    words:1412 headings:21 sources:2 table:false missing:none
+  allegro-pcb/allegro-pcb-vs-altium-designer-enterprise-comparison
+    words:618 headings:10 sources:2 table:true missing:none
+  alphacam/alphacam-vs-vectric-aspire-cnc-router-comparison
+    words:739 headings:12 sources:2 table:true missing:none
+  catia/catia-v5-to-solidworks-migration-feature-tree
+    words:1148 headings:15 sources:2 table:true missing:none
+  corona-renderer/corona-vray-migration-material-conversion
+    words:1327 headings:17 sources:3 table:true missing:none
+  eagle/eagle-to-kicad-migration-conversion
+    words:1043 headings:18 sources:2 table:true missing:none
+  eplan-electric-p8/eplan-electric-p8-vs-autocad-electrical-comparison
+    words:1153 headings:21 sources:2 table:true missing:none
+  esprit/esprit-cam-vs-mastercam-multi-axis-cnc-comparison
+    words:770 headings:12 sources:2 table:true missing:none
+  featurecam/featurecam-vs-fusion-360-cam-feature-based-comparison
+    words:829 headings:14 sources:2 table:true missing:none
+  ijcad/ijcad-autocad-dwg-compatibility-migration
+    words:748 headings:8 sources:2 table:false missing:none
+  keycreator/keycreator-solidworks-file-exchange
+    words:754 headings:12 sources:2 table:true missing:none
+  keyshot/keyshot-import-solidworks-rhino-creo-livelinking-fix
+    words:1391 headings:15 sources:3 table:false missing:none
+  moi3d/moi3d-vs-rhino-lightweight-nurbs-modeler-comparison
+    words:1081 headings:18 sources:2 table:true missing:none
+  multisim/multisim-vs-ltspice-free-spice-simulation-comparison
+    words:709 headings:10 sources:2 table:true missing:none
+  plasticity/plasticity-vs-fusion-360-concept-modeling-comparison
+    words:1267 headings:19 sources:2 table:true missing:none
+  proteus-design-suite/proteus-vs-tinkercad-circuits-arduino-simulation-comparison
+    words:683 headings:13 sources:2 table:true missing:none
+  pulsonix/pulsonix-pcb-migration-altium-kicad-import-filters-feature-gaps
+    words:1148 headings:25 sources:3 table:true missing:none
+  shapr3d/shapr3d-export-fusion-360-step-cam
+    words:889 headings:14 sources:2 table:true missing:none
+  simcenter-star-ccm/simcenter-star-ccm-vs-ansys-fluent-cfd-comparison
+    words:1070 headings:22 sources:2 table:true missing:none
+  tinkercad/tinkercad-to-fusion-360-upgrade-transition
+    words:1092 headings:15 sources:2 table:true missing:none
+  twinmotion/twinmotion-unreal-engine-migration-datasmith-export
+    words:1173 headings:10 sources:3 table:false missing:none
+  worknc/worknc-vs-powermill-mold-die-cam-comparison
+    words:874 headings:12 sources:2 table:true missing:none
+  zbrush/zbrush-export-3dsmax-blender-goz-displacement
+    words:1286 headings:12 sources:2 table:false missing:none
+  zw3d/solidworks-to-zw3d-migration-ipx-add-in-feature-conversion
+    words:959 headings:16 sources:3 table:false missing:none
+  zwcad/migrating-autocad-to-zwcad-what-breaks
+    words:801 headings:8 sources:2 table:false missing:none
+
+--- standards (18) ---
+  3dexperience/3dexperience-configuration-management-physical-product-cad-family-lifecycle
+    words:1486 headings:32 sources:2 table:false missing:none
+  autodesk-robot/autodesk-robot-seismic-analysis-response-spectrum-modal
+    words:1117 headings:15 sources:2 table:false missing:none
+  autodesk-robot/autodesk-robot-wind-load-generation-asce-eurocode
+    words:1035 headings:14 sources:2 table:false missing:none
+  caesar-ii/caesar-ii-nozzle-load-analysis-api-610-617-equipment-compliance
+    words:1535 headings:26 sources:2 table:true missing:none
+  camworks/camworks-tolerance-based-machining-gdt-toolpath
+    words:962 headings:17 sources:2 table:true missing:none
+  eagle/eagle-drc-design-rules-gerber-manufacturing
+    words:992 headings:17 sources:2 table:true missing:none
+  eagle/eagle-schematic-net-classes-power-rails-hierarchical
+    words:953 headings:15 sources:2 table:true missing:none
+  idea-statica/idea-statica-bolt-design-tension-shear-bearing-eurocode
+    words:1177 headings:20 sources:2 table:true missing:none
+  idea-statica/idea-statica-member-design-steel-beam-column-eurocode
+    words:1050 headings:15 sources:2 table:true missing:none
+  idea-statica/idea-statica-weld-design-fillet-butt-aisc-eurocode
+    words:1100 headings:15 sources:2 table:false missing:none
+  ijcad/ijcad-japanese-drawing-standards-jis-dimensions
+    words:742 headings:12 sources:2 table:true missing:none
+  keycreator/keycreator-2d-drafting-dimensioning-standards
+    words:815 headings:12 sources:2 table:false missing:none
+  orcad/orcad-pcb-constraint-manager-differential-pair-impedance
+    words:1047 headings:13 sources:2 table:true missing:none
+  qcad/qcad-dimensioning-annotation-styles-tolerances-drawing-notes
+    words:1195 headings:27 sources:2 table:false missing:none
+  revit/revit-ifc-export-missing-parameters-mapping
+    words:1335 headings:25 sources:2 table:true missing:none
+  risa-3d/risa-3d-dynamic-analysis-modal-response-spectrum-time-history
+    words:1139 headings:17 sources:2 table:true missing:none
+  risa-3d/risa-3d-load-combinations-wood-design-nds-lrfd
+    words:1218 headings:20 sources:2 table:true missing:none
+  risa-3d/risa-3d-steel-design-aisc-code-checking-optimization
+    words:1043 headings:20 sources:2 table:true missing:none
+
+--- manufacturing (15) ---
+  alibre-design/alibre-design-sheet-metal-k-factor-flat-pattern
+    words:894 headings:9 sources:2 table:true missing:none
+  alibre-design/alibre-design-step-iges-stl-export-manufacturing
+    words:833 headings:11 sources:2 table:true missing:none
+  altair-inspire/altair-inspire-lattice-structures-additive-manufacturing
+    words:1081 headings:20 sources:3 table:false missing:none
+  camworks/camworks-volumill-roughing-hard-materials
+    words:893 headings:15 sources:2 table:true missing:none
+  cimatron/cimatron-nc-programming-3-axis-mold-machining-toolpath
+    words:1581 headings:21 sources:2 table:true missing:none
+  diptrace/diptrace-gerber-export-manufacturing-pcb-fab
+    words:1118 headings:16 sources:2 table:true missing:none
+  edgecam/edgecam-3d-machining-z-level-roughing-constant-cusp
+    words:1068 headings:14 sources:2 table:true missing:none
+  gibbscam/gibbscam-2-5d-milling-pocketing-profiling-drilling
+    words:1082 headings:16 sources:2 table:true missing:none
+  gibbscam/gibbscam-turning-setup-tool-offsets-chuck
+    words:1074 headings:18 sources:2 table:false missing:none
+  openscad/openscad-stl-export-3d-printing-mesh-quality
+    words:933 headings:18 sources:2 table:true missing:none
+  solidcam/solidcam-5-axis-machining-tool-axis-collision
+    words:1056 headings:19 sources:2 table:false missing:none
+  solidcam/solidcam-imachining-settings-feed-rate-stepover
+    words:967 headings:17 sources:2 table:true missing:none
+  solidcam/solidcam-imachining-vs-3d-hsm-toolpath-strategy
+    words:850 headings:14 sources:2 table:true missing:none
+  solidworks/solidworks-sheet-metal-k-factor-bend-table
+    words:1507 headings:25 sources:2 table:true missing:none
+  zw3d/zw3d-cam-stl-file-5-axis-machining-fix
+    words:825 headings:18 sources:3 table:false missing:none
+
+--- printing (5) ---
+  allplan/allplan-drawing-production-layouts-title-blocks-views-plotting
+    words:1303 headings:29 sources:2 table:true missing:none
+  corelcad/corelcad-plotting-pdf-export-ctb-page-setups-batch-output
+    words:1085 headings:17 sources:2 table:true missing:none
+  ijcad/ijcad-printing-plotting-japanese-paper-sizes
+    words:863 headings:8 sources:2 table:true missing:none
+  librecad/librecad-printing-pdf-export-scale-paper-size-configuration
+    words:1248 headings:21 sources:2 table:true missing:none
+  nanocad/nanocad-plotting-print-standards-ctb-page-setups-batch-output
+    words:1326 headings:28 sources:2 table:true missing:none
+
+--- procurement (3) ---
+  actcad/actcad-perpetual-license-vs-autocad-subscription-cost
+    words:632 headings:8 sources:2 table:true missing:none
+  alibre-design/alibre-design-perpetual-license-maintenance-upgrade
+    words:795 headings:9 sources:2 table:true missing:none
+  shapr3d/shapr3d-subscription-pricing-pro-plan
+    words:957 headings:15 sources:2 table:true missing:none
+
+--- automation (2) ---
+  ansys-mechanical/ansys-mechanical-apdl-command-snippets-automation-pre-post-processing
+    words:1203 headings:28 sources:3 table:false missing:none
+  powermill/powermill-macro-programming-automating-toolpath-nc-program-feeds-speeds
+    words:1263 headings:13 sources:4 table:false missing:none
+
+--- methodology (1) ---
+  autoform/autoform-simulation-accuracy-pareto-principle-force-correlation-springback
+    words:1342 headings:24 sources:3 table:true missing:none
+
+--- data-management (1) ---
+  aveva-e3d-design/aveva-e3d-database-claims-flushes-cable-routing-errors
+    words:1390 headings:24 sources:3 table:true missing:none
+
+--- cnc-export (1) ---
+  cadwork/cadwork-cnc-machine-data-export-btlx-cambium-hundegger-panel-prefab
+    words:1543 headings:25 sources:3 table:true missing:none
+
+--- interoperability (1) ---
+  foran/foran-interoperability-cad-data-exchange-plm-jt-large-model-performance
+    words:1275 headings:22 sources:3 table:true missing:none
+
+--- convergence-diagnosis (1) ---
+  lusas/lusas-nonlinear-convergence-diagnosis-residual-pivot-connectivity
+    words:1355 headings:28 sources:3 table:true missing:none
+
+--- known-issues (1) ---
+  magicad/magicad-known-issues-ifc-export-insulation-dhwr-revit-crashes
+    words:1501 headings:42 sources:3 table:false missing:none
+
+--- configuration (1) ---
+  moldex3d/moldex3d-mesh-preprocessing-fix-wizard-non-matching-mesh-configuration
+    words:1290 headings:21 sources:3 table:true missing:none
+
+--- geometry-preparation (1) ---
+  msc-patran/msc-patran-imported-geometry-cleanup-congruency-mesh-repair
+    words:1255 headings:23 sources:3 table:true missing:none
+
+--- best-practices (1) ---
+  pam-stamp/pam-stamp-springback-simulation-parameters-best-practices
+    words:1214 headings:20 sources:3 table:true missing:none
+
+--- code-compliance (1) ---
+  pv-elite/pv-elite-asme-code-compliance-mdmt-wrc107-lug-hydrotest-issues
+    words:1617 headings:35 sources:3 table:false missing:none
+
+--- bim-integration (1) ---
+  scia-engineer/scia-engineer-bim-integration-revit-ifc-analytical-model-conversion
+    words:1373 headings:22 sources:3 table:true missing:none
+
+--- workflow-optimization (1) ---
+  sigmanest/sigmanest-nesting-workflow-optimization-cad-integration-erp-remnants
+    words:1293 headings:25 sources:3 table:false missing:none
+
+--- post-processing (1) ---
+  surfcam/surfcam-post-processor-configuration-gcode-errors-custom-posts
+    words:1104 headings:19 sources:3 table:true missing:none
+
+--- evaluation (1) ---
+  target-3001/target-3001-pcb-design-user-evaluation-strengths-weaknesses
+    words:1434 headings:25 sources:3 table:true missing:none
+
+--- gnss-processing (1) ---
+  trimble-business-center/trimble-business-center-gnss-baseline-processing-ephemeris-network-adjustment
+    words:1293 headings:29 sources:3 table:false missing:none
+
+--- framing-automation (1) ---
+  vertex-bd/vertex-bd-framing-automation-truss-errors-hold-down-ifc-import
+    words:1572 headings:33 sources:3 table:false missing:none
+
+=== POTENTIAL ISSUES ===
+  3dexperience/3dexperience-configuration-management-physical-product-cad-family-lifecycle: only 2 sources
+  3dexperience/3dexperience-file-preparation-assistant-solidworks-data-migration-cleanup: only 2 sources
+  3dexperience/3dexperience-solidworks-integration-collaborative-space-mysession-setup: only 2 sources
+  3dexperience/3dexperience-vs-solidworks-pdm-cloud-vs-local-vault-comparison: only 2 sources
+  3dexperience/3dexperience-xdesign-xshape-browser-based-modeling-solidworks: only 2 sources
+  abaqus/abaqus-composite-material-analysis-laminate-damage-progressive-failure: only 2 sources
+  abaqus/abaqus-contact-mechanics-general-contact-friction-wear-simulation: only 2 sources
+  abaqus/abaqus-explicit-dynamic-analysis-crash-drop-test-impact: only 2 sources
+  abaqus/abaqus-fracture-mechanics-xfem-cohesive-zone-j-integral-crack-propagation: only 2 sources
+  abaqus/abaqus-nonlinear-fea-plasticity-large-deformation-convergence: only 2 sources
+  actcad/actcad-crashing-on-startup-diagnostic-fix: only 2 sources | short (634 words)
+  actcad/actcad-lisp-compatibility-autolisp-routines: only 2 sources | short (566 words)
+  actcad/actcad-network-deployment-silent-install: only 2 sources | short (594 words)
+  actcad/actcad-pdf-to-dwg-conversion-clean-vector: only 2 sources | short (688 words)
+  actcad/actcad-perpetual-license-vs-autocad-subscription-cost: only 2 sources | short (632 words)
+  alibre-design/alibre-design-large-assembly-performance: only 2 sources
+  alibre-design/alibre-design-perpetual-license-maintenance-upgrade: only 2 sources | short (795 words)
+  alibre-design/alibre-design-sheet-metal-k-factor-flat-pattern: only 2 sources
+  alibre-design/alibre-design-step-iges-stl-export-manufacturing: only 2 sources
+  alibre-design/alibre-design-vs-solidworks-comparison: only 2 sources
+  allegro-pcb/allegro-pcb-hdi-layout-microvia-blind-buried-via-stackup: only 2 sources | short (620 words)
+  allegro-pcb/allegro-pcb-high-speed-constraint-manager-differential-pairs: only 2 sources | short (636 words)
+  allegro-pcb/allegro-pcb-vs-altium-designer-enterprise-comparison: only 2 sources | short (618 words)
+  allplan/allplan-bim-workflow-2d-to-3d-building-model-ifc-export: only 2 sources
+  allplan/allplan-drawing-production-layouts-title-blocks-views-plotting: only 2 sources
+  allplan/allplan-ifc-export-bim-collaboration-clash-detection-multi-platform: only 2 sources
+  allplan/allplan-reinforcement-detailing-3d-rebar-modeling-schedules-cnc-export: only 2 sources
+  allplan/allplan-visual-scripting-parametric-design-automation: only 2 sources
+  allplan/allplan-vs-revit-bim-platform-comparison-architecture-engineering: only 2 sources
+  alphacam/alphacam-router-toolpath-rough-finish-profiling-post-processing: only 2 sources
+  alphacam/alphacam-tool-direction-machining-side-gcode-errors-fixes: only 2 sources
+  alphacam/alphacam-vs-vectric-aspire-cnc-router-comparison: only 2 sources | short (739 words)
+  altair-hyperworks/altair-hypermesh-mesh-quality-criteria-batchmesher-element-optimization: only 2 sources
+  altair-hyperworks/altair-hyperstudy-doe-response-surface-parameter-optimization-robustness: only 2 sources
+  altair-hyperworks/altair-hyperview-fea-post-processing-stress-contour-result-interpretation: only 2 sources
+  altair-hyperworks/altair-hyperworks-vs-ansys-workbench-fea-platform-comparison: only 2 sources
+  altair-hyperworks/altair-optistruct-topology-optimization-manufacturing-constraints-design-space: only 2 sources
+  altair-inspire/altair-inspire-polynurbs-fit-topology-optimization-cad-export: only 2 sources
+  altair-inspire/altair-inspire-topology-optimization-many-loads-workflow: only 2 sources
+  altium-365/altium-365-codesigner-ecad-mcad-solidworks-sync-workflow: only 2 sources | short (696 words)
+  altium-365/altium-365-connection-errors-portal365-ssl-firewall-troubleshooting: only 2 sources | short (678 words)
+  altium-365/altium-365-workspace-setup-cloud-collaboration-projects: only 2 sources | short (771 words)
+  altium-designer/altium-designer-copper-pour-best-practices: only 2 sources
+  altium-designer/altium-designer-footprint-design-mistakes: only 2 sources
+  altium-designer/altium-designer-gerber-bom-export-manufacturing: only 2 sources
+  altium-designer/altium-designer-high-speed-impedance-length-matching: only 2 sources
+  ansys-fluent/ansys-fluent-convergence-divergence-residuals-troubleshooting: only 2 sources
+  ansys-fluent/ansys-fluent-heat-transfer-conjugate-cht-natural-convection-thermal: only 2 sources
+  ansys-fluent/ansys-fluent-meshing-watertight-geometry-workflow-quality: only 2 sources
+  ansys-fluent/ansys-fluent-turbulence-model-selection-k-epsilon-k-omega-sst: only 2 sources
+  ansys-fluent/ansys-fluent-vs-cfx-cfd-solver-comparison: only 2 sources
+  ansys-workbench/ansys-fluent-cfd-meshing-boundary-conditions-flow-analysis: only 2 sources
+  ansys-workbench/ansys-mesh-quality-element-distortion-diagnosis: only 2 sources
+  ansys-workbench/ansys-modal-harmonic-analysis-natural-frequencies-vibration-resonance: only 2 sources
+  ansys-workbench/ansys-thermal-analysis-steady-state-transient-coupled-thermal-structural: only 2 sources
+  ansys-workbench/ansys-thermal-stress-coupled-analysis-convergence: only 2 sources
+  ansys-workbench/ansys-topology-optimization-design-exploration-parametric-weight-reduction: only 2 sources
+  ansys-workbench/ansys-workbench-modal-analysis-natural-frequencies-mode-shapes-resonance: only 2 sources
+  ansys-workbench/ansys-workbench-nonlinear-analysis-contact-plasticity-large-deformation: only 2 sources
+  ansys-workbench/ansys-workbench-parametric-study-optimization: only 2 sources
+  ansys-workbench/ansys-workbench-static-structural-analysis-mesh-materials-loads-results: only 2 sources
+  ansys-workbench/ansys-workbench-structural-fea-static-analysis-meshing-stress-evaluation: only 2 sources
+  ansys-workbench/ansys-workbench-thermal-analysis-steady-state-convection-thermal-stress: only 2 sources
+  ansys-workbench/ansys-workbench-vs-abaqus-fea-platform-comparison-structural-analysis: only 2 sources
+  ansys-workbench/ansys-workbench-vs-abaqus-vs-comsol-fea-comparison: only 2 sources
+  archicad/archicad-file-bloat-corruption-compress-repair-fix: only 2 sources
+  archicad/archicad-ifc-import-export-mapping-geometry-fix: only 2 sources
+  archicad/archicad-layout-publisher-slow-pdf-export-fix: only 2 sources
+  archicad/archicad-library-loading-error-missing-objects-fix: only 2 sources
+  ares-commander/ares-commander-cloud-sync-graebert-setup: only 2 sources | short (772 words)
+  ares-commander/ares-commander-gis-shapefile-coordinate-transformation: only 2 sources | short (786 words)
+  ares-commander/ares-commander-object-snap-issues-fixing: only 2 sources | short (751 words)
+  ares-commander/ares-commander-ribbon-customization-toolbar: only 2 sources | short (628 words)
+  ares-commander/ares-commander-vs-autocad-lt-comparison: only 2 sources | short (732 words)
+  autocad/configuring-adskflex-opt-licensing-rules: only 2 sources
+  autocad/fixing-autocad-fatal-error-0x0024-graphics: only 2 sources
+  autocad/large-assembly-demand-loading: only 2 sources
+  autocad/pgp-alias-commands-automation: only 2 sources
+  autocad/recovering-corrupted-dwg-backup-disaster: only 2 sources
+  autocad-plant-3d/autocad-plant-3d-equipment-modeling-nozzles-connecting-pipe: only 2 sources
+  autocad-plant-3d/autocad-plant-3d-isometric-generation-pcf-iso-setup: only 2 sources
+  autocad-plant-3d/autocad-plant-3d-not-responding-large-drawing-performance: only 2 sources
+  autocad-plant-3d/autocad-plant-3d-pid-to-3d-model-workflow-linking: only 2 sources
+  autocad-plant-3d/autocad-plant-3d-piping-specification-setup-catalog-editor: only 2 sources
+  autocad-plant-3d/autocad-plant-3d-vs-cadworx-piping-design-comparison: only 2 sources
+  autodesk-construction-cloud/autodesk-construction-cloud-docs-vs-design-collaboration-module: only 2 sources
+  autodesk-construction-cloud/autodesk-construction-cloud-model-coordination-clash-detection-bcf: only 2 sources
+  autodesk-construction-cloud/autodesk-construction-cloud-permission-management-folder-access-roles: only 2 sources
+  autodesk-construction-cloud/autodesk-construction-cloud-revit-cloud-worksharing-central-model-sync: only 2 sources
+  autodesk-construction-cloud/autodesk-construction-cloud-setup-project-structure-folder-hierarchy: only 2 sources
+  autodesk-dynamo/autodesk-dynamo-revit-visual-scripting-parametric-automation: only 2 sources
+  autodesk-dynamo/dynamo-python-scripting-extending-visual-programming-custom-logic: only 2 sources
+  autodesk-dynamo/dynamo-revit-model-audit-data-extraction-quality-check: only 2 sources
+  autodesk-inventor/autodesk-inventor-vs-solidworks-vs-fusion-360-cad-comparison: only 2 sources
+  autodesk-inventor/inventor-first-part-creation-slow-fix: only 2 sources
+  autodesk-inventor/inventor-ilogic-automation-drawing-creation-bom: only 2 sources
+  autodesk-inventor/inventor-tube-pipe-performance-adaptive-route-rebuild: only 2 sources
+  autodesk-inventor/inventor-view-representations-lod-large-assemblies: only 2 sources
+  autodesk-inventor/inventor-windows-11-performance-fix-core-isolation: only 2 sources
+  autodesk-robot/autodesk-robot-concrete-slab-fem-reinforcement: only 2 sources
+  autodesk-robot/autodesk-robot-seismic-analysis-response-spectrum-modal: only 2 sources
+  autodesk-robot/autodesk-robot-steel-frame-analysis-design: only 2 sources
+  autodesk-robot/autodesk-robot-vs-etabs-structural-analysis-comparison: only 2 sources
+  autodesk-robot/autodesk-robot-wind-load-generation-asce-eurocode: only 2 sources
+  bimcollab/bimcollab-approval-workflow-issue-resolution-verification-formal: only 2 sources
+  bimcollab/bimcollab-bcf-manager-revit-plugin-live-issue-sync-viewpoint: only 2 sources
+  bimcollab/bimcollab-issue-management-bcf-workflow-setup-revit-archicad: only 2 sources
+  bimcollab/bimcollab-vs-acc-model-coordination-bcf-issue-platform-comparison: only 2 sources
+  bimcollab/bimcollab-zoom-free-model-viewer-bcf-issue-review-coordination: only 2 sources
+  blender/blender-uv-mapping-overlapping-islands-seams-stretching-fix: only 2 sources
+  bluebeam-revu/bluebeam-revu-batch-tools-slip-sheet-compare-hyperlink-print-automation: only 2 sources
+  bluebeam-revu/bluebeam-revu-construction-document-management-markup-studio-batch: only 2 sources
+  bluebeam-revu/bluebeam-revu-quantity-takeoff-measurements-count-tools-excel-export: only 2 sources
+  bluebeam-revu/bluebeam-revu-studio-sessions-real-time-collaboration-design-review-rfi: only 2 sources
+  bluebeam-revu/bluebeam-revu-vs-adobe-acrobat-construction-pdf-comparison: only 2 sources
+  bobcad-cam/bobcad-cam-3-axis-milling-workflow-stock-setup-toolpath-wizards: only 2 sources
+  bobcad-cam/bobcad-cam-post-processor-configuration-gcode-tool-change-customization: only 2 sources
+  bricscad/bricscad-bim-modeling-walls-slabs-roofs-2d-plan-3d: only 2 sources
+  bricscad/bricscad-dwg-compatibility-autocad-workflow-transition: only 2 sources
+  bricscad/bricscad-licensing-deployment-network-silent-install: only 2 sources
+  bricscad/bricscad-lisp-automation-custom-commands-batch-processing: only 2 sources
+  bricscad/bricscad-performance-optimization-large-files-hardware-acceleration: only 2 sources
+  cabinet-vision/cabinet-vision-vs-sketchup-vs-mozaik-cabinet-design-comparison: only 2 sources
+  cadworx/cadworx-caesar-ii-export-pipe-stress-analysis-model-results: only 2 sources
+  cadworx/cadworx-equipment-vessel-modeling-nozzles-platforms-ladders: only 2 sources
+  cadworx/cadworx-isogen-configuration-i-configure-isometric-output-setup: only 2 sources
+  cadworx/cadworx-piping-modeling-route-creation-component-insertion-connection: only 2 sources
+  cadworx/cadworx-plant-professional-setup-spec-editor-catalog-configuration: only 2 sources
+  caesar-ii/caesar-ii-nozzle-load-analysis-api-610-617-equipment-compliance: only 2 sources
+  caesar-ii/caesar-ii-pipe-stress-analysis-model-building-load-cases-compliance: only 2 sources
+  caesar-ii/caesar-ii-support-modeling-resting-guide-anchor-spring-hanger: only 2 sources
+  caesar-ii/caesar-ii-thermal-expansion-flexibility-expansion-loop-displacement: only 2 sources
+  caesar-ii/caesar-ii-vs-autopipe-pipe-stress-comparison: only 2 sources
+  camworks/camworks-automatic-feature-recognition-afr-setup: only 2 sources
+  camworks/camworks-technology-database-templates-setup: only 2 sources
+  camworks/camworks-tolerance-based-machining-gdt-toolpath: only 2 sources
+  camworks/camworks-volumill-roughing-hard-materials: only 2 sources
+  camworks/camworks-vs-solidcam-solidworks-integrated-cam: only 2 sources
+  carlson-survey/carlson-survey-cogo-inverse-traverse-coordinate-geometry: only 2 sources
+  carlson-survey/carlson-survey-field-to-finish-coding-linework: only 2 sources
+  carlson-survey/carlson-survey-point-management-editing-merging-reporting: only 2 sources
+  carlson-survey/carlson-survey-setup-coordinate-system-data-import: only 2 sources
+  carlson-survey/carlson-survey-vs-civil-3d-surveying-comparison: only 2 sources
+  catia/catia-v5-customizing-toolbars-restoring-commands: only 2 sources
+  catia/catia-v5-large-assembly-performance-cgr-visualization: only 2 sources
+  catia/catia-v5-problem-reading-document-recovery: only 2 sources
+  catia/catia-v5-to-solidworks-migration-feature-tree: only 2 sources
+  chief-architect/chief-architect-home-design-3d-modeling-plans-construction-documents: only 2 sources
+  chief-architect/chief-architect-interior-design-cabinets-fixtures-materials-walkthroughs: only 2 sources
+  chief-architect/chief-architect-rendering-presentation-ray-tracing-walkthroughs-client-visuals: only 2 sources
+  chief-architect/chief-architect-roof-terrain-design-automatic-roofs-dormers-site-grading: only 2 sources
+  chief-architect/chief-architect-vs-revit-residential-vs-bim-platform-comparison: only 2 sources
+  chief-architect-pro/chief-architect-pro-home-design-floor-plan-walls-roofs: only 2 sources
+  chief-architect-pro/chief-architect-pro-troubleshooting-room-framing-roof-issues: only 2 sources
+  cimatron/cimatron-cooling-system-design-conformal-cooling-channel-routing: only 2 sources
+  cimatron/cimatron-electrode-design-edm-extraction-holder-manufacturing: only 2 sources
+  cimatron/cimatron-mold-design-quicksplit-parting-core-cavity-active-part: only 2 sources
+  cimatron/cimatron-nc-programming-3-axis-mold-machining-toolpath: only 2 sources
+  cimatron/cimatron-vs-solidworks-mold-design-comparison: only 2 sources
+  civil-3d/civil-3d-data-shortcuts-broken-working-folder-fix: only 2 sources
+  civil-3d/civil-3d-pipe-network-error-structure-label-flow-fix: only 2 sources
+  civil-3d/civil-3d-plan-production-slow-viewport-label-fix: only 2 sources
+  comsol-multiphysics/comsol-cfd-analysis-laminar-turbulent-multiphase-flow-simulation: only 2 sources
+  comsol-multiphysics/comsol-electromagnetic-simulation-electrostatics-magnetostatics-rf-analysis: only 2 sources
+  comsol-multiphysics/comsol-heat-transfer-conduction-convection-radiation-phase-change: only 2 sources
+  comsol-multiphysics/comsol-multiphysics-coupling-structural-thermal-fluid-structure-electromagnetic: only 2 sources
+  comsol-multiphysics/comsol-optimization-parametric-sweep-design-studies-sensitivity-analysis: only 2 sources
+  comsol-multiphysics/comsol-vs-ansys-multiphysics-platform-comparison-coupled-simulation: only 2 sources
+  corelcad/corelcad-2d-drafting-setup-interface-dwg-workflow-template: only 2 sources
+  corelcad/corelcad-lisp-automation-custom-commands-layer-tools-batch-processing: only 2 sources
+  corelcad/corelcad-plotting-pdf-export-ctb-page-setups-batch-output: only 2 sources
+  corona-renderer/corona-renderer-material-glass-sss-displacement-fix: only 2 sources
+  crowncad/crowncad-cloud-collaborative-design-real-time-co-editing-version-control: only 2 sources
+  crowncad/crowncad-part-design-sketching-features-assembly-modeling: only 2 sources
+  cypecad/cypecad-building-design-3d-modeling-analysis-concrete-eurocode: only 2 sources
+  cypecad/cypecad-foundation-design-spread-footings-pile-caps-mat-eurocode-7: only 2 sources
+  cypecad/cypecad-reinforcement-detailing-bar-scheduling-drawings-3d-visualization: only 2 sources
+  cypecad/cypecad-seismic-design-eurocode-8-ductility-capacity-design: only 2 sources
+  cypecad/cypecad-steel-design-eurocode-3-code-checking-optimization-connections: only 2 sources
+  cypecad/cypecad-vs-etabs-building-design-platform-comparison: only 2 sources
+  d5-render/d5-render-live-sync-sketchup-revit-connection-fix: only 2 sources
+  designspark-mechanical/designspark-mechanical-3d-printing-model-prep-stl-export: only 2 sources
+  designspark-mechanical/designspark-mechanical-direct-modeling-pull-move-fill-combine: only 2 sources
+  diptrace/diptrace-component-library-pattern-editor-custom-part: only 2 sources
+  diptrace/diptrace-gerber-export-manufacturing-pcb-fab: only 2 sources
+  diptrace/diptrace-routing-manual-auto-router-tips: only 2 sources
+  diptrace/diptrace-schematic-pcb-design-workflow: only 2 sources
+  diptrace/diptrace-vs-kicad-free-pcb-design-comparison: only 2 sources
+  draftsight/draftsight-2d-drafting-layers-dimension-styles-title-block: only 2 sources
+  draftsight/draftsight-installation-errors-activation-failures-troubleshooting: only 2 sources
+  draftsight/draftsight-macro-recording-batch-printing-automation: only 2 sources
+  draftsight/draftsight-pdf-import-dwg-export-clean-geometry-conversion: only 2 sources
+  draftsight/draftsight-vs-autocad-feature-comparison-migration: only 2 sources
+  drofus/drofus-aec-data-sync-automated-revit-autodesk-construction-cloud: only 2 sources
+  drofus/drofus-item-management-equipment-procurement-tracking-revit-family: only 2 sources
+  drofus/drofus-revit-integration-attribute-configuration-data-sync-setup: only 2 sources
+  drofus/drofus-room-data-management-program-validation-occupancy-tracking: only 2 sources
+  drofus/drofus-vs-revit-schedules-bim-data-management-comparison: only 2 sources
+  dwg-trueview/dwg-trueview-batch-convert-dwg-version-upgrade-downgrade: only 2 sources
+  dwg-trueview/dwg-trueview-construction-shop-drawings-as-built-review: only 2 sources
+  dwg-trueview/dwg-trueview-dwg-compare-drawing-revision-changes: only 2 sources
+  dwg-trueview/dwg-trueview-view-measure-print-without-autocad: only 2 sources
+  dwg-trueview/dwg-trueview-vs-autocad-viewer-free-dwg-comparison: only 2 sources
+  eagle/eagle-board-layout-routing-2layer-4layer: only 2 sources
+  eagle/eagle-drc-design-rules-gerber-manufacturing: only 2 sources
+  eagle/eagle-library-custom-component-footprint-creation: only 2 sources
+  eagle/eagle-schematic-net-classes-power-rails-hierarchical: only 2 sources
+  eagle/eagle-to-kicad-migration-conversion: only 2 sources
+  easyeda/easyeda-gerber-export-missing-pads-drill-offset-troubleshooting: only 2 sources
+  easyeda/easyeda-jlcpcb-smt-assembly-bom-pick-and-place-sourcing: only 2 sources
+  easyeda/easyeda-pcb-design-schematic-capture-component-library-layout: only 2 sources
+  easyeda/easyeda-spice-simulation-circuit-verification-transient-analysis: only 2 sources
+  easyeda/easyeda-vs-kicad-pcb-design-comparison-free-tool: only 2 sources
+  edgecam/edgecam-3d-machining-z-level-roughing-constant-cusp: only 2 sources
+  edgecam/edgecam-feature-recognition-finder-automatic-toolpath: only 2 sources
+  edgecam/edgecam-post-processor-customization-g-code: only 2 sources
+  edgecam/edgecam-tool-library-setup-holders-parameters: only 2 sources
+  edgecam/edgecam-vs-mastercam-comparison-job-shop: only 2 sources
+  enscape/enscape-asset-library-custom-import-fix: only 2 sources
+  eplan-electric-p8/eplan-electric-p8-connection-wire-numbering-potential-tracking: only 2 sources
+  eplan-electric-p8/eplan-electric-p8-project-setup-page-macro-article-data: only 2 sources
+  eplan-electric-p8/eplan-electric-p8-vs-autocad-electrical-comparison: only 2 sources
+  esprit/esprit-cam-5-axis-machining-simultaneous-3+2-freeform-toolpath: only 2 sources
+  esprit/esprit-cam-solidmill-3-axis-roughing-finishing-residual-stock: only 2 sources
+  esprit/esprit-cam-vs-mastercam-multi-axis-cnc-comparison: only 2 sources | short (770 words)
+  etabs/etabs-building-modeling-grids-stories-section-properties-material-definition: only 2 sources
+  etabs/etabs-concrete-design-beam-column-shear-wall-aci-318: only 2 sources
+  etabs/etabs-load-definition-dead-live-wind-seismic-load-patterns: only 2 sources
+  etabs/etabs-seismic-analysis-modal-response-spectrum-story-drift: only 2 sources
+  etabs/etabs-steel-design-beam-column-brace-aisc-360: only 2 sources
+  exocad/exocad-dentalcad-crown-bridge-design-margin-line-anatomy: only 2 sources
+  exocad/exocad-full-denture-digital-workflow-tooth-setup-printed-prosthesis: only 2 sources
+  exocad/exocad-implant-restoration-abutment-screw-retained-hybrid: only 2 sources
+  exocad/exocad-removable-partial-denture-rpd-survey-clasp-connector: only 2 sources
+  exocad/exocad-vs-3shape-vs-cerec-dental-cad-comparison: only 2 sources
+  featurecam/featurecam-automatic-feature-recognition-solid-model-nc-workflow: only 2 sources
+  featurecam/featurecam-hole-machining-drilling-tapping-boring-thread-milling: only 2 sources
+  featurecam/featurecam-vs-fusion-360-cam-feature-based-comparison: only 2 sources
+  femap/femap-random-vibration-psd-analysis-setup-results-fatigue: only 2 sources
+  femap/siemens-femap-fea-mesh-generation-element-quality-analysis-setup: only 2 sources
+  freecad/freecad-assembly-slow-loading-techdraw-a2plus-fix: only 2 sources
+  freecad/freecad-techdraw-slow-performance-view-rendering-fix: only 2 sources
+  fusion-360/fusion-360-cam-toolpath-slow-calculation-fix: only 2 sources
+  geomagic-design-x/geomagic-design-x-decimating-scan-data-faster-processing: only 2 sources
+  gerber-accumark/gerber-accumark-3d-virtual-sampling-fit-validation-pattern-simulation: only 2 sources
+  gerber-accumark/gerber-accumark-cloud-collaboration-remote-pattern-sharing-multi-site: only 2 sources
+  gerber-accumark/gerber-accumark-marker-making-cut-planning-nesting-efficiency: only 2 sources
+  gerber-accumark/gerber-accumark-mtm-yuniqueplm-integration-custom-apparel-plm: only 2 sources
+  gerber-accumark/gerber-accumark-pattern-design-drafting-grade-rules-size-run: only 2 sources
+  gibbscam/gibbscam-2-5d-milling-pocketing-profiling-drilling: only 2 sources
+  gibbscam/gibbscam-interface-customization-toolbar-workflow: only 2 sources
+  gibbscam/gibbscam-post-processor-setup-g-code: only 2 sources
+  gibbscam/gibbscam-turning-setup-tool-offsets-chuck: only 2 sources
+  gibbscam/gibbscam-vs-mastercam-comparison-small-shop: only 2 sources
+  glovius/glovius-cannot-open-file-crash-startup-export-fix: short (699 words)
+  gstarcad/gstarcad-2d-drafting-workflow-interface-commands-dwg-compatibility: only 2 sources
+  gstarcad/gstarcad-lisp-automation-batch-processing-layer-management-commands: only 2 sources
+  gstarcad/gstarcad-performance-tuning-large-dwg-hardware-settings-system-variables: only 2 sources
+  gstarcad/gstarcad-vs-autocad-feature-comparison-performance-migration: only 2 sources
+  idea-statica/idea-statica-bolt-design-tension-shear-bearing-eurocode: only 2 sources
+  idea-statica/idea-statica-member-design-steel-beam-column-eurocode: only 2 sources
+  idea-statica/idea-statica-revit-robot-integration-bim: only 2 sources
+  idea-statica/idea-statica-steel-connection-base-plate-moment: only 2 sources
+  idea-statica/idea-statica-vs-tekla-structural-designer-connection: only 2 sources
+  idea-statica/idea-statica-weld-design-fillet-butt-aisc-eurocode: only 2 sources
+  ijcad/ijcad-autocad-dwg-compatibility-migration: only 2 sources | short (748 words)
+  ijcad/ijcad-japanese-drawing-standards-jis-dimensions: only 2 sources | short (742 words)
+  ijcad/ijcad-lisp-automation-custom-commands: only 2 sources | short (718 words)
+  ijcad/ijcad-printing-plotting-japanese-paper-sizes: only 2 sources
+  ijcad/ijcad-slow-performance-large-drawing-optimization: only 2 sources | short (750 words)
+  infraworks/autodesk-infraworks-data-import-gis-terrain-coordinate-system: only 2 sources
+  infraworks/autodesk-infraworks-storyboard-animation-stakeholder-presentation: only 2 sources
+  ironcad/ironcad-catalog-smart-components-block-library: only 2 sources
+  ironcad/ironcad-import-step-iges-repair-geometry: only 2 sources
+  ironcad/ironcad-rendering-animation-exploded-view: only 2 sources
+  ironcad/ironcad-triball-direct-modeling-workflow: only 2 sources
+  ironcad/ironcad-vs-ironcad-draft-3d-2d: only 2 sources | short (624 words)
+  keycreator/keycreator-2d-drafting-dimensioning-standards: only 2 sources
+  keycreator/keycreator-direct-modeling-imported-model: only 2 sources
+  keycreator/keycreator-performance-optimization-complex-models: only 2 sources | short (767 words)
+  keycreator/keycreator-solidworks-file-exchange: only 2 sources | short (754 words)
+  keycreator/keycreator-vs-autocad-manufacturing-comparison: only 2 sources
+  keyshot/keyshot-material-texture-mapping-uv-label-fix: only 2 sources
+  kisssoft/kisssoft-bearing-warning-minimum-load-fix: only 2 sources
+  kisssoft/kisssoft-creo-integration-interface-setup: only 2 sources
+  land-fx/land-fx-irrigation-design-equipment-pipe-sizing-scheduling: only 2 sources
+  land-fx/land-fx-planting-design-palette-placing-schedules: only 2 sources
+  lectra-modaris/lectra-cut-vector-cutter-integration-marker-making-nesting: only 2 sources
+  lectra-modaris/lectra-ecosystem-modaris-kaledo-gallery-plm-end-to-end-workflow: only 2 sources
+  lectra-modaris/lectra-modaris-3d-prototyping-virtual-sampling-fit-validation: only 2 sources
+  lectra-modaris/lectra-modaris-made-to-measure-bespoke-custom-pattern-generation: only 2 sources
+  lectra-modaris/lectra-modaris-pattern-design-advanced-drafting-variant-grading: only 2 sources
+  librecad/librecad-2d-drafting-interface-tools-dxf-workflow: only 2 sources
+  librecad/librecad-dxf-file-compatibility-autocad-cad-systems: only 2 sources
+  librecad/librecad-layer-management-block-libraries-organizing-components: only 2 sources
+  librecad/librecad-printing-pdf-export-scale-paper-size-configuration: only 2 sources
+  ls-dyna/ls-dyna-blast-ballistic-analysis-explosive-loading-penetration-impact: only 2 sources
+  ls-dyna/ls-dyna-explicit-dynamics-keyword-file-element-formulation-solver-configuration: only 2 sources
+  ls-dyna/ls-dyna-metal-forming-simulation-stamping-forging-springback: only 2 sources
+  ls-dyna/ls-dyna-vehicle-crash-simulation-frontal-side-rear-impact-analysis: only 2 sources
+  ls-dyna/ls-dyna-vs-abaqus-explicit-solver-comparison-crash-impact: only 2 sources
+  ltspice/ltspice-importing-third-party-spice-models-subcircuits-symbols: only 2 sources
+  ltspice/ltspice-smps-buck-converter-simulation-compensation-bode-plot: only 2 sources | short (778 words)
+  ltspice/ltspice-transient-simulation-time-step-waveform-convergence: only 2 sources | short (754 words)
+  lumion/lumion-performance-optimization-fps-render-time: only 2 sources
+  lumion/lumion-ray-tracing-artifacts-blotches-fix: only 2 sources
+  mastercam/mastercam-2d-machining-facing-contour-pocket-drilling-toolpaths: only 2 sources
+  mastercam/mastercam-3d-machining-roughing-finishing-high-speed-toolpaths: only 2 sources
+  mastercam/mastercam-lathe-turning-threading-grooving-c-axis-mill-turn: only 2 sources
+  mastercam/mastercam-post-processing-customizing-gcode-output-cnc-machine-controls: only 2 sources
+  mastercam/mastercam-vs-gibbscam-vs-camworks-cam-comparison: only 2 sources
+  meshlab/pymeshlab-python-automating-mesh-processing: short (702 words)
+  microstation/microstation-dwg-import-export-line-weight-font-fix: only 2 sources
+  microstation/microstation-reference-file-display-missing-geometry-fix: only 2 sources
+  midas-civil/midas-civil-bridge-analysis-modeling-moving-loads-aashto-eurocode: only 2 sources
+  midas-civil/midas-civil-cable-stayed-bridge-form-finding-cable-tuning-construction-control: only 2 sources
+  midas-civil/midas-civil-construction-stage-analysis-sequential-casting-creep-camber: only 2 sources
+  midas-civil/midas-civil-psc-bridge-design-prestress-loss-tendon-profiling-stress-checks: only 2 sources
+  midas-civil/midas-civil-seismic-bridge-design-ductility-isolation-aashto: only 2 sources
+  midas-civil/midas-civil-vs-sap2000-bridge-analysis-platform-comparison: only 2 sources
+  midas-gen/midas-gen-building-analysis-modeling-wind-seismic-steel-concrete-design: only 2 sources
+  midas-gen/midas-gen-concrete-shear-wall-design-meshed-walls-pier-boundary-elements: only 2 sources
+  midas-gen/midas-gen-construction-stage-analysis-creep-shrinkage-sequential-loading: only 2 sources
+  midas-gen/midas-gen-seismic-design-response-spectrum-time-history-pushover: only 2 sources
+  midas-gen/midas-gen-vs-etabs-building-analysis-platform-comparison: only 2 sources
+  moi3d/moi3d-3d-printing-export-settings-mesh-density-stl: only 2 sources
+  moi3d/moi3d-nurbs-modeling-workflow-curves-surface-boolean-operations: only 2 sources
+  moi3d/moi3d-vs-rhino-lightweight-nurbs-modeler-comparison: only 2 sources
+  moldflow/autodesk-moldflow-warpage-analysis-predicting-reducing-deformation: only 2 sources
+  moldflow/moldflow-cooling-analysis-cycle-time-optimization-temperature-distribution: only 2 sources
+  moldflow/moldflow-fill-analysis-gate-placement-flow-pattern-air-traps: only 2 sources
+  msc-adams/msc-adams-convergence-errors-over-constrained-mechanism-debugging: only 2 sources
+  msc-adams/msc-adams-multibody-dynamics-joints-motions-mechanism-modeling: only 2 sources
+  msc-adams/msc-adams-vehicle-dynamics-suspension-ride-handling-simulation: only 2 sources
+  msc-nastran/msc-nastran-dynamic-analysis-modal-frequency-response-random-vibration: only 2 sources
+  msc-nastran/msc-nastran-nonlinear-analysis-contact-material-large-deformation: only 2 sources
+  multisim/multisim-convergence-errors-singular-matrix-floating-node-fixes: only 2 sources | short (743 words)
+  multisim/multisim-spice-simulation-dc-ac-transient-analysis-setup: only 2 sources | short (741 words)
+  multisim/multisim-vs-ltspice-free-spice-simulation-comparison: only 2 sources | short (709 words)
+  nanocad/nanocad-2d-drafting-setup-interface-units-layers-template: only 2 sources
+  nanocad/nanocad-lisp-programming-custom-commands-entity-selection-automation: only 2 sources
+  nanocad/nanocad-plotting-print-standards-ctb-page-setups-batch-output: only 2 sources
+  nanocad/nanocad-vs-autocad-lt-feature-comparison-migration: only 2 sources
+  navisworks/navisworks-4d-simulation-timeliner-bim-schedule-construction: only 2 sources
+  navisworks/navisworks-clash-detection-setup-rules-batch-testing-bcf-management: only 2 sources
+  navisworks/navisworks-freedom-review-free-viewer-walkthroughs-collaboration: only 2 sources
+  navisworks/navisworks-model-aggregation-multi-discipline-bim-coordination-revit-tekla-ifc: only 2 sources
+  navisworks/navisworks-quantification-model-based-quantity-takeoff-cost-estimation: only 2 sources
+  opencascade/opencascade-boolean-operations-data-exchange-step-iges-stl: only 2 sources
+  opencascade/opencascade-technology-occt-developer-guide-brep-topology: only 2 sources
+  openfoam/openfoam-beginner-guide-case-setup-blockmesh-first-simulation: only 2 sources
+  openfoam/openfoam-snappyhexmesh-complex-geometry-mesh-quality-tips: only 2 sources
+  openfoam/openfoam-solver-selection-incompressible-compressible-multiphase: only 2 sources
+  openscad/openscad-modules-libraries-reusable-code: only 2 sources
+  openscad/openscad-parametric-design-customizer-variables: only 2 sources
+  openscad/openscad-scripting-basics-programmatic-3d-modeling: only 2 sources | short (773 words)
+  openscad/openscad-stl-export-3d-printing-mesh-quality: only 2 sources
+  openscad/openscad-vs-freecad-open-source-comparison: only 2 sources
+  optitex/optitex-3d-virtual-sampling-garment-simulation-fit-validation: only 2 sources
+  optitex/optitex-made-to-measure-custom-sizing-body-measurement-personalized-fit: only 2 sources
+  optitex/optitex-nesting-cut-order-optimization-fabric-efficiency: only 2 sources
+  optitex/optitex-pattern-design-2d-drafting-grading-marker-making: only 2 sources
+  optitex/optitex-vs-gerber-accumark-vs-lectra-modaris-comparison: only 2 sources
+  orcad/orcad-capture-schematic-netlist-dxd: only 2 sources
+  orcad/orcad-library-management-centralized-component-database: only 2 sources
+  orcad/orcad-pcb-constraint-manager-differential-pair-impedance: only 2 sources
+  orcad/orcad-pcb-routing-manual-auto-router-fanout: only 2 sources
+  orcad/orcad-vs-altium-designer-pcb-comparison: only 2 sources
+  pconplanner/pconplanner-performance-disappearing-geometry-gpu-fix: short (763 words)
+  planbar/allplan-planbar-precast-workflow-walls-slabs-reinforcement: only 2 sources
+  planbar/planbar-tim-integration-production-data-management-factory: only 2 sources
+  plasticity/plasticity-cad-essentials-nurbs-subdivision-theory-builder: only 2 sources
+  plasticity/plasticity-subdivision-surface-modeling-control-cage-creases: only 2 sources
+  plasticity/plasticity-vs-fusion-360-concept-modeling-comparison: only 2 sources
+  progecad/progecad-2d-drafting-autocad-compatible-workflow-template: only 2 sources
+  progecad/progecad-3d-modeling-basics-extrude-revolve-boolean-operations: only 2 sources
+  progecad/progecad-pdf-to-dwg-conversion-import-vectorize-cleanup: only 2 sources
+  proteus-design-suite/proteus-arduino-simulation-isis-hex-file-virtual-instruments: only 2 sources | short (798 words)
+  proteus-design-suite/proteus-pcb-layout-ares-footprint-routing-gerber-export: only 2 sources
+  proteus-design-suite/proteus-vs-tinkercad-circuits-arduino-simulation-comparison: only 2 sources | short (683 words)
+  ptc-creo/creo-circular-references-diagnosis-resolution: only 2 sources
+  ptc-creo/creo-config-pro-best-practices-settings: only 2 sources
+  ptc-creo/creo-large-assembly-simplified-representations: only 2 sources
+  ptc-creo/creo-sketch-red-dots-open-profile-fixing: only 2 sources
+  ptc-creo/creo-step-file-import-crash-large-files: only 2 sources
+  ptc-creo/ptc-creo-parametric-part-design-sketching-features-intent-reference: only 2 sources
+  ptc-creo/ptc-creo-simulation-fea-stress-thermal-modal-analysis-setup: only 2 sources
+  ptc-creo/ptc-creo-surface-modeling-isdx-style-features-g2-continuity-industrial-design: only 2 sources
+  ptc-creo/ptc-creo-vs-solidworks-vs-siemens-nx-enterprise-cad-comparison: only 2 sources
+  qcad/qcad-2d-drafting-interface-tools-dxf-dwg-workflow: only 2 sources
+  qcad/qcad-block-libraries-part-management-reusable-components: only 2 sources
+  qcad/qcad-dimensioning-annotation-styles-tolerances-drawing-notes: only 2 sources
+  qcad/qcad-javascript-scripting-automating-drawing-tasks-custom-tools: only 2 sources
+  recap-pro/recap-pro-point-cloud-registration-auto-alignment-manual-targets: only 2 sources
+  recap-pro/recap-pro-revit-point-cloud-underlay-sectioning-modeling: only 2 sources
+  recap-pro/recap-pro-scan-to-bim-cleaning-clipping-point-cloud-preparation: only 2 sources
+  recap-pro/recap-pro-troubleshooting-registration-failure-import-error: only 2 sources
+  recap-pro/recap-pro-vs-cyclone-register-360-registration-comparison: only 2 sources
+  revit/revit-corrupted-central-file-recovery: only 2 sources
+  revit/revit-family-performance-bloat-optimization: only 2 sources
+  revit/revit-ifc-export-missing-parameters-mapping: only 2 sources
+  revit/revit-large-model-ram-pagefile-nvme: only 2 sources
+  revit/revit-worksharing-file-locks-dwl-corrupted: only 2 sources
+  rhino-3d/rhino-freezing-lagging-large-files-performance: only 2 sources
+  rhino-3d/rhino-grasshopper-performance-data-tree-memory: only 2 sources
+  rhino-3d/rhino-plugin-troubleshooting-crashes: only 2 sources
+  rhino-3d/rhino-stl-obj-export-mesh-settings: only 2 sources
+  risa-3d/risa-3d-dynamic-analysis-modal-response-spectrum-time-history: only 2 sources
+  risa-3d/risa-3d-load-combinations-wood-design-nds-lrfd: only 2 sources
+  risa-3d/risa-3d-modeling-nodes-members-boundary-conditions: only 2 sources
+  risa-3d/risa-3d-steel-design-aisc-code-checking-optimization: only 2 sources
+  risa-3d/risa-3d-vs-staad-pro-structural-analysis-comparison: only 2 sources
+  sap2000/sap2000-bridge-analysis-moving-loads-influence-lines-aashto: only 2 sources
+  sap2000/sap2000-nonlinear-analysis-plastic-hinges-pdelta-cable-structures: only 2 sources
+  sap2000/sap2000-seismic-analysis-response-spectrum-time-history-pushover: only 2 sources
+  sap2000/sap2000-steel-concrete-design-aisc-aci-eurocode-code-checking: only 2 sources
+  sap2000/sap2000-structural-analysis-modeling-section-properties-linear-static: only 2 sources
+  shapr3d/shapr3d-direct-modeling-move-face-pencil: only 2 sources
+  shapr3d/shapr3d-export-fusion-360-step-cam: only 2 sources
+  shapr3d/shapr3d-ipad-pro-mobile-cad-workflow: only 2 sources
+  shapr3d/shapr3d-sketch-constraints-parametric: only 2 sources
+  shapr3d/shapr3d-subscription-pricing-pro-plan: only 2 sources
+  siemens-nx/siemens-nx-general-fault-exception-startup: only 2 sources
+  siemens-nx/siemens-nx-journaling-python-automation: only 2 sources
+  siemens-nx/siemens-nx-large-assembly-lightweight-representations: only 2 sources
+  siemens-nx/siemens-nx-license-borrow-freeze-not-responding: only 2 sources
+  siemens-nx/siemens-nx-slow-high-end-pc-teamcenter-cache: only 2 sources
+  siemens-nx/siemens-nx-splm-license-server-configuration: only 2 sources
+  simcenter-star-ccm/simcenter-star-ccm-meshing-pipeline-surface-polyhedral-prism-layers: only 2 sources
+  simcenter-star-ccm/simcenter-star-ccm-vs-ansys-fluent-cfd-comparison: only 2 sources
+  simscale/simscale-cloud-cfd-external-aerodynamics-internal-flow-thermal-management: only 2 sources
+  simscale/simscale-cloud-fea-static-structural-dynamic-thermal-analysis: only 2 sources
+  simscale/simscale-hvac-building-simulation-airflow-thermal-comfort-smoke-propagation: only 2 sources
+  simscale/simscale-vs-desktop-cae-cloud-on-premise-simulation-comparison: only 2 sources
+  simscale/simscale-workflow-collaboration-project-setup-mesh-import-team-sharing: only 2 sources
+  sketchup/sketchup-inferencing-stops-working-snapping-fix: only 2 sources
+  solibri/solibri-bcf-workflow-export-revit-archicad-bimcollab: only 2 sources
+  solibri/solibri-model-checker-ifc-import-ruleset-clash-detection-workflow: only 2 sources
+  solibri/solibri-office-vs-solibri-site-license-comparison: only 2 sources
+  solibri/solibri-ruleset-customization-creating-project-specific-validation-rules: only 2 sources
+  solibri/solibri-vs-navisworks-bim-coordination-clash-detection-comparison: only 2 sources
+  solid-edge/solid-edge-crash-startup-safe-mode-crashlog-fix: short (700 words)
+  solid-edge/solid-edge-sheet-metal-flat-pattern-unfold-kfactor: only 2 sources
+  solid-edge/solid-edge-synchronous-technology-ordered-transition: only 2 sources
+  solidcam/solidcam-5-axis-machining-tool-axis-collision: only 2 sources
+  solidcam/solidcam-imachining-settings-feed-rate-stepover: only 2 sources
+  solidcam/solidcam-imachining-vs-3d-hsm-toolpath-strategy: only 2 sources
+  solidcam/solidcam-post-processor-g-code-configuration: only 2 sources
+  solidcam/solidcam-simulation-collision-detection-verification: only 2 sources
+  solidworks/fix-solidworks-license-error-5-no-feature: only 2 sources
+  solidworks/repair-imported-step-iges-knit-surface: only 2 sources
+  solidworks/resolve-solidworks-mate-conflicts-lag: only 2 sources
+  solidworks/solidworks-large-assembly-performance-tuning: only 2 sources
+  solidworks/solidworks-sheet-metal-k-factor-bend-table: only 2 sources
+  staad-pro/staad-pro-concrete-design-aci-318-beam-column-shear-wall: only 2 sources
+  staad-pro/staad-pro-dynamic-analysis-seismic-response-spectrum-time-history: only 2 sources
+  staad-pro/staad-pro-editor-commands-text-modeling-automation-batch-processing: only 2 sources
+  staad-pro/staad-pro-foundation-design-isolated-combined-mat-foundations: only 2 sources
+  staad-pro/staad-pro-steel-design-aisc-code-checking-optimization-connections: only 2 sources
+  staad-pro/staad-pro-structural-analysis-modeling-loading-steel-concrete-design: only 2 sources
+  substance-painter/substance-painter-baking-mesh-map-cage-fix: only 2 sources
+  substance-painter/substance-painter-export-crash-4k-8k-fix: only 2 sources
+  substance-painter/substance-painter-wrong-gpu-intel-nvidia-fix: only 2 sources
+  t-flex-cad/t-flex-cad-parametric-construction-lines-variables-workflow: short (788 words)
+  tebis/tebis-3d-milling-roughing-finishing-residual-stock-mold: only 2 sources
+  tebis/tebis-digital-twin-machine-simulation-collision-process-libraries: only 2 sources
+  tekla-structures/tekla-ifc-export-missing-geometry-properties-fix: only 2 sources
+  tekla-structures/tekla-multi-user-slow-saving-locking-synchronization-fix: only 2 sources
+  tinkercad/tinkercad-beginners-first-3d-model-3d-printing: only 2 sources
+  tinkercad/tinkercad-circuits-arduino-simulation-electronics: only 2 sources
+  tinkercad/tinkercad-classroom-setup-students-3d-design-education: only 2 sources
+  tinkercad/tinkercad-to-fusion-360-upgrade-transition: only 2 sources
+  tinkercad/tinkercad-vs-sketchup-free-3d-modeling-comparison: only 2 sources
+  trimble-connect/trimble-connect-3d-viewer-model-federation-bcf-issue-clash-analysis: only 2 sources
+  trimble-connect/trimble-connect-bcf-import-solibri-navisworks-tekla-issue-workflow: only 2 sources
+  trimble-connect/trimble-connect-setup-project-configuration-folder-structure-tekla: only 2 sources
+  trimble-connect/trimble-connect-sync-issues-desktop-connector-troubleshooting: only 2 sources
+  trimble-connect/trimble-connect-vs-autodesk-construction-cloud-bim-platform-comparison: only 2 sources
+  turbocad/turbocad-2d-drafting-mechanical-design-interface-tools-dwg-workflow: only 2 sources
+  turbocad/turbocad-3d-modeling-solid-primitives-boolean-assembly-design: only 2 sources
+  turbocad/turbocad-parametric-constraints-2d-3d-design-automation: only 2 sources
+  turbocad/turbocad-rendering-visualization-materials-lighting-photorealistic: only 2 sources
+  turbocad/turbocad-vs-autocad-feature-comparison-pricing-migration: only 2 sources
+  twinmotion/twinmotion-materials-missing-after-sync-fix: only 2 sources
+  v-ray/v-ray-displacement-map-artifacts-amount-fix: only 2 sources
+  v-ray/v-ray-dome-light-hdri-setup-noise-shadows: only 2 sources
+  varicad/varicad-2d-drawing-generation-views-dimensions-gdt-dwg-export: only 2 sources
+  varicad/varicad-3d-mechanical-modeling-part-design-assembly-2d-drawing: only 2 sources
+  varicad/varicad-assembly-design-constraints-bom-exploded-view: only 2 sources
+  varicad/varicad-sheet-metal-design-bending-unfolding-manufacturing-export: only 2 sources
+  varicad/varicad-vs-solidworks-feature-comparison-cost-analysis: only 2 sources
+  vectorworks/vectorworks-architect-bim-modeling-site-design-drawing-production: only 2 sources
+  vectorworks/vectorworks-landmark-site-modeling-terrain-analysis-planting-design: only 2 sources
+  vectorworks/vectorworks-renderworks-materials-lighting-photorealistic-rendering: only 2 sources
+  vectorworks/vectorworks-spotlight-entertainment-design-lighting-event-production: only 2 sources
+  vectorworks/vectorworks-vs-revit-bim-platform-comparison-architecture-design: only 2 sources
+  worknc/worknc-auto-5-roughing-finishing-mold-machining-strategies: only 2 sources
+  worknc/worknc-vs-powermill-mold-die-cam-comparison: only 2 sources
+  zbrush/zbrush-export-3dsmax-blender-goz-displacement: only 2 sources
+  zbrush/zbrush-large-file-management-decimation-export: only 2 sources
+  zw3d/zw3d-2025-drawing-view-regen-discrete-projection-fix: only 2 sources | short (604 words)
+  zw3d/zw3d-2025-sp2-crash-closing-views-workaround: only 2 sources | short (583 words)
+  zw3d/zw3d-drawing-creation-slow-large-assembly-performance: short (658 words)
+  zwcad/migrating-autocad-to-zwcad-what-breaks: only 2 sources
+  zwcad/zwcad-custom-command-aliases-pgp: only 2 sources | short (547 words)
+  zwcad/zwcad-dwg-compatibility-autocad-roundtrip: only 2 sources | short (796 words)
+  zwcad/zwcad-network-license-setup-cloud-floating: only 2 sources | short (665 words)
+  zwcad/zwcad-performance-tuning-large-dwg: only 2 sources | short (627 words)
+
+Guides with issues: 508 / 740
