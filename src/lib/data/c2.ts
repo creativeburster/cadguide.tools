@@ -3856,7 +3856,11 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-  alternatives: ["cad-exchanger", "dwg-fastview", "autocad"],
+  alternatives: [
+    "dwg-fastview",
+    "solid-edge-viewer",
+    "cad-exchanger"
+  ],
   country: "India",
   category_id: "c2",
   pricing_type: "Freemium",
@@ -3935,7 +3939,11 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-  alternatives: ["glovius", "dwg-fastview", "autocad"],
+  alternatives: [
+    "glovius",
+    "meshlab",
+    "solid-edge-viewer"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Freemium",
@@ -4086,9 +4094,9 @@ export const c2Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "zw3d",
+    "onshape",
+    "sinovation"
   ],
 
   country: "China",
@@ -4164,7 +4172,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CrownCAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to CrownCAD are ZW3D, Onshape, SINOVATION. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4300,9 +4308,9 @@ export const c2Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "t-flex-cad",
+    "zw3d",
+    "solidworks"
   ],
 
   country: "Russia",
@@ -4378,7 +4386,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to KOMPAS-3D?",
-      a: "Popular alternatives include SolidWorks, Autodesk Inventor, PTC Creo, Siemens NX, and AutoCAD. The choice depends on your budget, industry requirements, and existing CAD ecosystem."
+      a: "The closest alternatives to KOMPAS-3D are T-FLEX CAD, ZW3D, SolidWorks. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4516,9 +4524,9 @@ export const c2Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "kompas-3d",
+    "solidworks",
+    "solid-edge"
   ],
 
   country: "Russia",
@@ -4595,7 +4603,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to T-FLEX CAD?",
-      a: "Popular alternatives include SolidWorks, Autodesk Inventor, PTC Creo, Siemens NX, and Solid Edge. T-FLEX CAD distinguishes itself with superior parametric capabilities and integrated Express FEA at a competitive price point."
+      a: "The closest alternatives to T-FLEX CAD are KOMPAS-3D, SolidWorks, Solid Edge. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4725,9 +4733,9 @@ export const c2Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "freecad",
+    "fusion-360",
+    "solvespace"
   ],
 
   country: "UK",
@@ -4802,7 +4810,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to DesignSpark Mechanical?",
-      a: "Popular free alternatives include Fusion 360 (free for personal use), FreeCAD, and Onshape (free for individuals). Commercial alternatives include SolidWorks, Autodesk Inventor, and PTC Creo. DesignSpark Mechanical distinguishes itself with its completely free model, extensive manufacturer component libraries, and RS Components ecosystem integration."
+      a: "The closest alternatives to DesignSpark Mechanical are FreeCAD, Fusion 360, SolveSpace. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4959,7 +4967,7 @@ export const c2Tools: Tool[] = [
 
   alternatives: [
     "solidworks",
-    "inventor",
+    "autodesk-inventor",
     "solid-edge"
   ],
 
@@ -5043,7 +5051,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to think3?",
-      a: "For general-purpose 3D CAD, consider SolidWorks, Autodesk Inventor, or PTC Creo. For surface-heavy industrial design, Rhino or Solid Edge may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to think3 are SolidWorks, Autodesk Inventor, Solid Edge. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -5286,9 +5294,9 @@ export const c2Tools: Tool[] = [
   ],
 
   alternatives: [
-    "medusa4",
-    "pconplanner",
-    "crowncad"
+    "catia",
+    "solidworks",
+    "ptc-creo"
   ],
 
   country: "France",
@@ -5369,7 +5377,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to 3DEXPERIENCE?",
-      a: "The closest alternatives within the 2D CAD space are MEDUSA4, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to 3DEXPERIENCE are CATIA, SolidWorks, PTC Creo. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 

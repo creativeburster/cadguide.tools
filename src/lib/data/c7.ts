@@ -462,6 +462,12 @@ export const c7Tools: Tool[] = [
     "Major Shipyards"
   ],
 
+  alternatives: [
+    "shipconstructor",
+    "foran",
+    "napa"
+  ],
+
   official_url: "https://www.aveva.com/en/products/marine/",
   pricing_url: "https://www.aveva.com/en/products/marine/",
   affiliate_url: null,
@@ -502,7 +508,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to AVEVA Marine?",
-      a: "The closest alternatives within the Specialized space are Infraworks, 3ds Max, ZBrush. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to AVEVA Marine are ShipConstructor, FORAN, NAPA. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -5458,9 +5464,9 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "crowncad"
+    "cet-designer",
+    "20-20-design",
+    "palette-cad"
   ],
 
   country: "Germany",
@@ -5535,7 +5541,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to pCon.planner?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to pCon.planner are CET Designer, 20-20 Design, Palette CAD. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -5682,9 +5688,9 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "smartplant-3d",
+    "autocad-plant-3d",
+    "cadworx"
   ],
 
   country: "UK",
@@ -5764,7 +5770,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to AVEVA E3D Design?",
-      a: "Popular alternatives include Hexagon SmartPlant 3D, Bentley OpenPlant, Intergraph CADWorx, and Autodesk Plant 3D. AVEVA E3D Design distinguishes itself with its comprehensive plant design capabilities, strong AVEVA ecosystem integration, and industry-leading rule-based design automation."
+      a: "The closest alternatives to AVEVA E3D Design are Hexagon SmartPlant 3D, AutoCAD Plant 3D, CADWorx Plant Professional. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -5867,9 +5873,7 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "promine"
   ],
 
   country: "Australia",
@@ -5915,7 +5919,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Maptek Vulcan?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Maptek Vulcan are Promine. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -6019,9 +6023,7 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "maptek-vulcan"
   ],
 
   country: "Canada",
@@ -6067,7 +6069,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Promine?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Promine are Maptek Vulcan. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -6171,8 +6173,8 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
+    "20-20-design",
+    "promob",
     "pconplanner"
   ],
 
@@ -6218,7 +6220,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CET Designer?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to CET Designer are 20-20 Design, Promob, pCon.planner. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -6322,9 +6324,9 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "imos-ix",
+    "palette-cad",
+    "cet-designer"
   ],
 
   country: "Brazil",
@@ -6370,7 +6372,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Promob?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Promob are imos iX, Palette CAD, CET Designer. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -6474,9 +6476,9 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "foran",
+    "napa",
+    "aveva-marine"
   ],
 
   country: "Canada",
@@ -6522,7 +6524,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ShipConstructor?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to ShipConstructor are FORAN, NAPA, AVEVA Marine. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -6626,9 +6628,8 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "foran",
+    "shipconstructor"
   ],
 
   country: "Finland",
@@ -6674,7 +6675,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to NAPA?",
-      a: "For ship design software, consider FORAN, Maxsurf, or AVEVA Marine. For general CAD, Siemens NX or other Siemens Xcelerator products may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to NAPA are FORAN, ShipConstructor. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -6769,8 +6770,7 @@ export const c7Tools: Tool[] = [
 
   alternatives: [
     "napa",
-    "maxsurf",
-    "aveva-marine"
+    "shipconstructor"
   ],
 
   country: "Spain",
@@ -6842,7 +6842,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to FORAN?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to FORAN are NAPA, ShipConstructor. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -6979,9 +6979,9 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "imos-ix",
+    "palette-cad",
+    "promob"
   ],
 
   country: "Germany",
@@ -7027,7 +7027,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Pytha?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Pytha are imos iX, Palette CAD, Promob. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -7131,9 +7131,9 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "pytha",
+    "promob",
+    "palette-cad"
   ],
 
   country: "Germany",
@@ -7179,7 +7179,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to imos iX?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to imos iX are Pytha, Promob, Palette CAD. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -7283,9 +7283,9 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "cet-designer",
+    "promob",
+    "kd-max"
   ],
 
   country: "USA",
@@ -7330,7 +7330,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to 20-20 Design?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to 20-20 Design are CET Designer, Promob, KD Max. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -7434,8 +7434,8 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
+    "pytha",
+    "imos-ix",
     "pconplanner"
   ],
 
@@ -7482,7 +7482,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Palette CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Palette CAD are Pytha, imos iX, pCon.planner. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -7575,7 +7575,7 @@ export const c7Tools: Tool[] = [
     },
   ],
 
-  alternatives: ["2020-design", "pro100", "chiefarchitect"],
+  alternatives: ["20-20-design", "promob", "chief-architect"],
   country: "China",
   category_id: "c7",
   pricing_type: "Perpetual",
@@ -7641,7 +7641,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to KD Max?",
-      a: "For kitchen and cabinet design software, consider 2020 Design, Pro100, or Chief Architect. For general CAD, AutoCAD or SketchUp may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to KD Max are 20-20 Design, Promob, Chief Architect. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 

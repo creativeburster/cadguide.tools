@@ -3342,9 +3342,9 @@ export const c3Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "eberick",
+    "etabs",
+    "autodesk-robot"
   ],
 
   country: "Spain",
@@ -3390,7 +3390,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CYPECAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to CYPECAD are Eberick, CSI ETABS, Autodesk Robot Structural Analysis. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -3494,9 +3494,9 @@ export const c3Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "magicad",
+    "dds-cad",
+    "allplan"
   ],
 
   country: "Spain",
@@ -3542,7 +3542,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to TeKton3D?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to TeKton3D are MagiCAD, DDS-CAD, Allplan. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -3646,9 +3646,9 @@ export const c3Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "cadwork",
+    "scia-engineer",
+    "hicad"
   ],
 
   country: "Finland",
@@ -3694,7 +3694,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Vertex BD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Vertex BD are cadwork, SCIA Engineer, HiCAD. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -3798,9 +3798,9 @@ export const c3Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "cypecad",
+    "etabs",
+    "sap2000"
   ],
 
   country: "Brazil",
@@ -3846,7 +3846,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Eberick?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Eberick are CYPECAD, CSI ETABS, CSI SAP2000. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -3992,9 +3992,9 @@ export const c3Tools: Tool[] = [
   ],
 
   alternatives: [
-    "tekla",
+    "tekla-structures",
     "revit",
-    "strakon"
+    "allplan"
   ],
 
   country: "Germany",
@@ -4076,7 +4076,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Planbar?",
-      a: "For precast concrete design, consider Tekla Structures, Revit with precast add-ons, or Strakon. For general BIM software, Revit or ArchiCAD may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Planbar are Tekla Structures, Revit, Allplan. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4316,9 +4316,9 @@ export const c3Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "autocad-plant-3d",
+    "smartplant-3d",
+    "cadworx"
   ],
 
   country: "Russia",
@@ -4401,7 +4401,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to Model Studio CS?",
-      a: "For international markets, consider 3DEXPERIENCE (Dassault), Revit (Autodesk), or AVEVA products. For DWG-based workflows, BricsCAD or nanoCAD may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to Model Studio CS are AutoCAD Plant 3D, Hexagon SmartPlant 3D, CADWorx Plant Professional. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 

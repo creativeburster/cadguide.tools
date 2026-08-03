@@ -1213,8 +1213,7 @@ export const c4Tools: Tool[] = [
 
   alternatives: [
     "dwg-fastview",
-    "autocad",
-    "zwcad"
+    "uvcad"
   ],
 
   country: "China",

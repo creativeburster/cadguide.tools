@@ -3941,9 +3941,9 @@ export const c1Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "pconplanner",
-    "crowncad"
+    "autocad",
+    "draftsight",
+    "bricscad"
   ],
 
   country: "Germany",
@@ -4020,7 +4020,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to MEDUSA4?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, pCon.planner, CrownCAD. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to MEDUSA4 are AutoCAD, DraftSight, BricsCAD. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4139,9 +4139,9 @@ export const c1Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "actcad",
+    "progecad",
+    "zwcad"
   ],
 
   country: "Japan",
@@ -4217,7 +4217,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to IJCAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to IJCAD are ActCAD, progeCAD Professional, ZWCAD. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4339,9 +4339,9 @@ export const c1Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "qcad",
+    "librecad",
+    "draftsight"
   ],
 
   country: "Japan",
@@ -4417,7 +4417,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to RootPro CAD?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to RootPro CAD are QCAD, LibreCAD, DraftSight. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -4842,9 +4842,9 @@ export const c1Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "zwcad",
+    "actcad",
+    "progecad"
   ],
 
   country: "South Korea",
@@ -4924,7 +4924,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to CADian?",
-      a: "Popular alternatives include AutoCAD, BricsCAD, ZWCAD, and DraftSight. CADian distinguishes itself with its 30+ years of development history, Korean language support, local customer service, and competitive perpetual pricing specifically tailored for the Korean market."
+      a: "The closest alternatives to CADian are ZWCAD, ActCAD, progeCAD Professional. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -5329,9 +5329,9 @@ export const c1Tools: Tool[] = [
   ],
 
   alternatives: [
-    "autocad",
-    "sketchup",
-    "revit"
+    "uvcad",
+    "dwg-fastview",
+    "cad-reader"
   ],
 
   country: "USA",

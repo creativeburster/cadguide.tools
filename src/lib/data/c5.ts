@@ -10803,7 +10803,7 @@ export const c5Tools: Tool[] = [
 
   alternatives: [
     "midas-civil",
-    "ansys",
+    "ansys-mechanical",
     "abaqus"
   ],
 
@@ -10888,7 +10888,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to LUSAS?",
-      a: "For general FEA, consider Ansys, Abaqus, or Simulia. For civil/bridge-specific analysis, midas Civil or Bentley products may be alternatives. Compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to LUSAS are midas Civil, ANSYS Mechanical, Abaqus. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -11108,9 +11108,9 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "lusas",
+    "sap2000",
+    "scia-engineer"
   ],
 
   country: "South Korea",
@@ -11191,7 +11191,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to midas Civil?",
-      a: "Popular alternatives include Bentley STAAD.Pro, SAP2000, ETABS, Autodesk Robot Structural Analysis, and LUSAS. midas Civil distinguishes itself with its specialized focus on civil engineering and bridge design, advanced seismic analysis capabilities, and comprehensive BIM integration through FEA NX and CIVIL NX."
+      a: "The closest alternatives to midas Civil are LUSAS, CSI SAP2000, SCIA Engineer. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -11332,9 +11332,9 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "etabs",
+    "sap2000",
+    "scia-engineer"
   ],
 
   country: "South Korea",
@@ -11415,7 +11415,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to midas Gen?",
-      a: "Popular alternatives include Bentley STAAD.Pro, SAP2000, ETABS, Autodesk Robot Structural Analysis, and LUSAS. midas Gen distinguishes itself with its general-purpose focus, comprehensive building design capabilities, advanced seismic analysis including pushover analysis, and BIM integration through FEA NX and CIVIL NX."
+      a: "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, SCIA Engineer. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -11518,9 +11518,9 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "comsol-multiphysics",
+    "ansys-mechanical",
+    "abaqus"
   ],
 
   country: "Belgium",
@@ -11566,7 +11566,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to OOFELIE?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to OOFELIE are COMSOL Multiphysics, ANSYS Mechanical, Abaqus. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -11670,9 +11670,9 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "etabs",
+    "autodesk-robot",
+    "staad-pro"
   ],
 
   country: "Belgium",
@@ -11718,7 +11718,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to SCIA Engineer?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to SCIA Engineer are CSI ETABS, Autodesk Robot Structural Analysis, Bentley STAAD.Pro. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -11873,7 +11873,7 @@ export const c5Tools: Tool[] = [
 
   alternatives: [
     "mastercam",
-    "nx-cam",
+    "mastercam",
     "gibbscam"
   ],
 
@@ -11956,7 +11956,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to PowerMill?",
-      a: "For CNC programming, consider Mastercam, NX CAM, GibbsCAM, or SolidCAM. For Autodesk users, Fusion 360 CAM may be an alternative. Compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to PowerMill are Mastercam, Mastercam, GibbsCAM. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -12160,9 +12160,9 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
+    "mastercam",
+    "hypermill",
+    "powermill"
   ],
 
   country: "USA",
@@ -12208,7 +12208,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to ESPRIT?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives to ESPRIT are Mastercam, hyperMILL, PowerMill. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -12302,7 +12302,7 @@ export const c5Tools: Tool[] = [
     },
   ],
 
-  alternatives: ["autoform", "dynaform", "fti-formingsuite"],
+  alternatives: ["autoform", "ls-dyna", "autoform"],
   country: "France",
   category_id: "c5",
   pricing_type: "Perpetual",
@@ -12368,7 +12368,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to PAM-STAMP?",
-      a: "For sheet metal forming simulation, consider AutoForm, Dynaform, or FTI FormingSuite. For general CAE simulation, Abaqus or Ansys may be alternatives. Compare them side-by-side using the CADGuide comparison tool.",
+      a: "The closest alternatives to PAM-STAMP are AutoForm, LS-DYNA, AutoForm. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
 
