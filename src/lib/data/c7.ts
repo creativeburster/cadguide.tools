@@ -10,7 +10,7 @@ export const c7Tools: Tool[] = [
   logo_url: "https://www.pcschematic.com/images/pcs_logo_new.png",
   short_desc: "Intelligent electrical CAD for automation.",
   description: "PC SCHEMATIC Automation is high-end electrical CAD software for drawing schematics for electrical wiring diagrams, control circuits, pneumatics and hydraulics.",
-  country: "USA",
+  country: "Denmark",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 1500,
@@ -93,7 +93,7 @@ export const c7Tools: Tool[] = [
   expert_verdict: "The most efficient alternative to EPLAN for small to mid-sized automation firms.",
 
 
-  last_updated: "2023-07-12",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -223,7 +223,7 @@ export const c7Tools: Tool[] = [
   logo_url: "https://exocad.com/typo3conf/ext/exocad_site/Resources/Public/Images/exocad_logo.svg",
   short_desc: "Leading dental CAD software for labs.",
   description: "exocad DentalCAD is the tool for every dental technician who wants to be part of the future in digital dentistry.",
-  country: "USA",
+  country: "Germany",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3000,
@@ -333,7 +333,7 @@ export const c7Tools: Tool[] = [
   ],
 
 
-  last_updated: "2023-07-09",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -436,7 +436,7 @@ export const c7Tools: Tool[] = [
   logo_url: "https://www.aveva.com/content/dam/aveva/images/logos/aveva-logo.svg",
   short_desc: "Integrated engineering and design for shipbuilding.",
   description: "AVEVA Marine combines engineering and design for the world's most complex ships and offshore platforms.",
-  country: "USA",
+  country: "UK",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 15000,
@@ -520,7 +520,7 @@ export const c7Tools: Tool[] = [
   expert_verdict: "The undisputed king of heavy-duty maritime engineering.",
 
 
-  last_updated: "2023-11-23",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -530,7 +530,7 @@ export const c7Tools: Tool[] = [
   logo_url: "https://www.clo3d.com/images/common/logo_clo.png",
   short_desc: "3D garment visualization and design.",
   description: "CLO is a 3D fashion design software that creates virtual, true-to-life garment visualizations with cutting-edge simulation technologies.",
-  country: "USA",
+  country: "South Korea",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 600,
@@ -659,7 +659,7 @@ export const c7Tools: Tool[] = [
   ],
 
 
-  last_updated: "2023-08-18",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -669,7 +669,7 @@ export const c7Tools: Tool[] = [
   logo_url: "",
   short_desc: "Leading CAD/CAM for the global footwear industry.",
   description: "Shoemaster is a world-leading CAD/CAM system providing 2D and 3D solutions for the footwear industry, from initial design to manufacturing.",
-  country: "USA",
+  country: "Italy",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 5000,
@@ -752,7 +752,7 @@ export const c7Tools: Tool[] = [
   expert_verdict: "Essential software for global footwear production lines.",
 
 
-  last_updated: "2024-03-19",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -762,10 +762,10 @@ export const c7Tools: Tool[] = [
   logo_url: "https://cast-soft.com/wp-content/themes/cast/images/wysiwyg_logo.png",
   short_desc: "The standard for lighting design and pre-visualization.",
   description: "WYSIWYG is an all-in-one lighting design software tool with CAD, data, visualization, and virtual show control features.",
-  country: "USA",
+  country: "Canada",
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 1200,
+  starting_price: 899,
 
   platforms: [
     "Windows"
@@ -847,7 +847,7 @@ export const c7Tools: Tool[] = [
   expert_verdict: "The only software you need to design and pre-program a world-class concert.",
 
 
-  last_updated: "2024-06-21",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -857,7 +857,7 @@ export const c7Tools: Tool[] = [
   logo_url: "https://3design.com/wp-content/uploads/2019/06/Logo-3Design-Simple-Couleur.png",
   short_desc: "Parametric 3D CAD for professional jewelry.",
   description: "3Design is a powerful 3D jewelry design software that allows for full parametric control, meaning you can change any parameter of your jewelry at any time.",
-  country: "USA",
+  country: "France",
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 6000,
@@ -941,7 +941,7 @@ export const c7Tools: Tool[] = [
   expert_verdict: "The serious alternative to MatrixGold for those who prefer Mac or true parametric history.",
 
 
-  last_updated: "2024-02-20",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -1668,7 +1668,7 @@ export const c7Tools: Tool[] = [
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 545,
+  starting_price: 1299,
 
   platforms: [
     "Windows"
@@ -1727,8 +1727,8 @@ export const c7Tools: Tool[] = [
   expert_verdict: "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
 
 
-  last_updated: "2026-01-22",
-  version: "2025.3"
+  last_updated: "2026-08-03",
+  version: "2026"
 },
 {
   id: "ext-lumion",
@@ -1880,8 +1880,8 @@ export const c7Tools: Tool[] = [
   expert_verdict: "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
 
 
-  last_updated: "2025-11-20",
-  version: "13"
+  last_updated: "2026-08-03",
+  version: "2026"
 },
 {
   id: "ext-enscape",
@@ -1974,7 +1974,7 @@ export const c7Tools: Tool[] = [
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 329,
+  starting_price: 575,
 
   platforms: [
     "Windows"
@@ -2033,8 +2033,8 @@ export const c7Tools: Tool[] = [
   expert_verdict: "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
 
 
-  last_updated: "2025-12-15",
-  version: "4.0"
+  last_updated: "2026-08-03",
+  version: "4.11"
 },
 {
   id: "ext-twinmotion",
@@ -2365,8 +2365,8 @@ export const c7Tools: Tool[] = [
   ],
 
 
-  last_updated: "2026-01-25",
-  version: "6.1"
+  last_updated: "2026-08-03",
+  version: "5.13"
 },
 {
   id: "t214",
@@ -4480,7 +4480,7 @@ export const c7Tools: Tool[] = [
   country: "Bulgaria",
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 396,
+  starting_price: 540,
 
   platforms: [
     "Windows",
@@ -4644,8 +4644,8 @@ export const c7Tools: Tool[] = [
   ],
 
 
-  last_updated: "2026-03-10",
-  version: "6.0"
+  last_updated: "2026-08-03",
+  version: "7"
 },
 {
   id: "t227",
@@ -4818,8 +4818,8 @@ export const c7Tools: Tool[] = [
   ],
 
 
-  last_updated: "2024-06-10",
-  version: "10"
+  last_updated: "2026-08-03",
+  version: "13"
 },
 {
   id: "t228",

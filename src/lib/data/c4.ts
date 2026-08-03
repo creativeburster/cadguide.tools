@@ -278,7 +278,7 @@ export const c4Tools: Tool[] = [
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
-  starting_price: 1050,
+  starting_price: 2835,
 
   platforms: [
     "Windows"
@@ -361,7 +361,7 @@ export const c4Tools: Tool[] = [
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
 
 
-  last_updated: "2026-03-26",
+  last_updated: "2026-08-03",
   version: "2027"
 },
 {
@@ -429,7 +429,7 @@ export const c4Tools: Tool[] = [
     "bluebeam-revu"
   ],
 
-  country: "USA",
+  country: "Finland",
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 3500,
@@ -513,7 +513,7 @@ export const c4Tools: Tool[] = [
   expert_verdict: "The premier BIM quality assurance and clash detection utility, crucial for verifying model compliance.",
 
 
-  last_updated: "2024-03-23",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -564,7 +564,7 @@ export const c4Tools: Tool[] = [
     "solid-edge-viewer"
   ],
 
-  country: "USA",
+  country: "Italy",
   category_id: "c4",
   pricing_type: "Free",
   starting_price: 0,
@@ -650,7 +650,7 @@ export const c4Tools: Tool[] = [
   expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
 
 
-  last_updated: "2023-07-23",
+  last_updated: "2026-08-03",
   version: "2024.12"
 },
 {

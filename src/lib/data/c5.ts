@@ -939,7 +939,7 @@ export const c5Tools: Tool[] = [
     "solidcam"
   ],
 
-  country: "USA",
+  country: "France",
   category_id: "c5",
   pricing_type: "Free",
   starting_price: 0,
@@ -1024,7 +1024,7 @@ export const c5Tools: Tool[] = [
   expert_verdict: "The most important open-source project in CAD history.",
 
 
-  last_updated: "2023-05-04",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -1034,7 +1034,7 @@ export const c5Tools: Tool[] = [
   logo_url: "https://www.visicadcam.com/images/logo.png",
   short_desc: "Specialized CAD/CAM for the mold and die industry.",
   description: "VISI is acknowledged as the world's leading CAD CAM software solution for the Mould & Die industries, offering fully integrated wireframe, surface, and solid modeling.",
-  country: "USA",
+  country: "UK",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 3000,
@@ -1118,7 +1118,7 @@ export const c5Tools: Tool[] = [
   expert_verdict: "If you are making plastic injection molds, VISI is your best friend.",
 
 
-  last_updated: "2024-09-14",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -1128,7 +1128,7 @@ export const c5Tools: Tool[] = [
   logo_url: "https://www.cimatron.com/sites/default/files/cimatron-logo.png",
   short_desc: "Integrated CAD/CAM for mold and die makers.",
   description: "Cimatron delivers a single, integrated solution for toolmakers, from quoting to design, to CNC programming.",
-  country: "USA",
+  country: "Israel",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 3500,
@@ -1212,7 +1212,7 @@ export const c5Tools: Tool[] = [
   expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry.",
 
 
-  last_updated: "2023-05-29",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -1625,7 +1625,7 @@ export const c5Tools: Tool[] = [
   logo_url: "",
   short_desc: "Virtual prototyping platform for crash and comfort simulation.",
   description: "ESI Visual-Environment is a unified pre- and post-processing platform for virtual manufacturing and performance simulation, covering crash, NVH, welding and composites.",
-  country: "USA",
+  country: "France",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 15000,
@@ -1711,7 +1711,7 @@ export const c5Tools: Tool[] = [
   expert_verdict: "The automotive crash simulation specialist trusted by European OEMs for decades.",
 
 
-  last_updated: "2023-01-30",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -1721,7 +1721,7 @@ export const c5Tools: Tool[] = [
   logo_url: "",
   short_desc: "Knowledge-based CAM solution by HCL Technologies.",
   description: "CAMWorks is an industry-leading CAM solution developed by HCL Technologies that works natively inside SolidWorks and Solid Edge, using feature-based machining to automate CNC programming.",
-  country: "USA",
+  country: "India",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 5000,
@@ -1807,7 +1807,7 @@ export const c5Tools: Tool[] = [
   expert_verdict: "The go-to CAM choice for SolidWorks shops seeking deep, native integration without leaving their CAD environment.",
 
 
-  last_updated: "2023-05-22",
+  last_updated: "2026-08-03",
   version: "2026"
 },
 {
@@ -9939,7 +9939,7 @@ export const c5Tools: Tool[] = [
   logo_url: getLogo("AR"),
   short_desc: "Autodesk's general structural analysis tool, tightly linked to Revit for BIM-driven workflows.",
   description: "Robot Structural Analysis Professional is Autodesk's general-purpose FEA tool for buildings, bridges, and civil structures with first-class bidirectional Revit interoperability via the Robot link.",
-  country: "France",
+  country: "Poland",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2615,
@@ -10104,7 +10104,7 @@ export const c5Tools: Tool[] = [
   ],
 
 
-  last_updated: "2024-01-02",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -11674,7 +11674,7 @@ export const c5Tools: Tool[] = [
     "pconplanner"
   ],
 
-  country: "Netherlands",
+  country: "Belgium",
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
@@ -11878,7 +11878,7 @@ export const c5Tools: Tool[] = [
   country: "UK",
   category_id: "c5",
   pricing_type: "Subscription",
-  starting_price: 2390,
+  starting_price: 7760,
 
   platforms: [
     "Windows"
@@ -11972,7 +11972,7 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "Autodesk's high-speed and multi-axis CAM software, engineered for manufacturing complex molds, dies, and aerospace parts.",
   version: "2025",
-  last_updated: "2025-05-21",
+  last_updated: "2026-08-03",
   free_trial_days: 30,
 
   languages: [

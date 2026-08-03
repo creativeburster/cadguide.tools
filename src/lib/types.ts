@@ -73,6 +73,10 @@ export interface Tool {
   version?: string;
   /** ISO yyyy-mm-dd date when this listing was last hand-verified. */
   last_updated?: string;
+  /** True when the vendor has end-of-lifed / stopped selling the product. */
+  discontinued?: boolean;
+  /** Short human-readable note explaining the discontinuation (shown on the detail page). */
+  discontinued_note?: string;
   /** Free trial duration in days, or 0 for "no trial". */
   free_trial_days?: number;
 

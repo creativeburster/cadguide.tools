@@ -3331,7 +3331,9 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "Corel's high-precision 2D drafting and 3D modeling tool, providing native DWG support and seamless graphic suite integration.",
   version: "2023 (Final)",
-  last_updated: "2025-05-20",
+  last_updated: "2026-08-03",
+  discontinued: true,
+  discontinued_note: "CorelCAD was pulled from sale on January 9, 2024 and support ended December 31, 2025. Corel directs former users to Graebert ARES Commander.",
   free_trial_days: 30,
 
   languages: [
@@ -4048,24 +4050,35 @@ export const c1Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Standard",
-      price: "Contact",
-      period: "perpetual",
+      name: "LT (Perpetual)",
+      price: "¥82,500",
+      period: "one-time",
       features: [
         "DWG compatibility",
         "Basic drafting tools",
         "Standard support"
       ],
+      is_popular: false
+    },
+    {
+      name: "STD (Perpetual)",
+      price: "¥110,000",
+      period: "one-time",
+      features: [
+        "All LT features",
+        "Advanced drafting tools",
+        "First-year maintenance included"
+      ],
       is_popular: true
     },
     {
-      name: "Professional",
-      price: "Contact",
-      period: "perpetual",
+      name: "PRO (Subscription)",
+      price: "¥49,500",
+      period: "/yr",
       features: [
-        "All Standard features",
-        "Advanced drafting features",
-        "API integration"
+        "All STD features",
+        "API integration",
+        "Annual updates included"
       ],
       is_popular: false
     }
@@ -4134,8 +4147,8 @@ export const c1Tools: Tool[] = [
 
   country: "Japan",
   category_id: "c1",
-  pricing_type: "Perpetual",
-  starting_price: 50000,
+  pricing_type: "Subscription / Perpetual",
+  starting_price: 0,
 
   platforms: [
     "Windows"
@@ -4188,7 +4201,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "How much does IJCAD cost?",
-      a: "IJCAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "IJCAD is priced in Japanese yen. Perpetual licenses are LT ¥82,500, STD ¥110,000, and PRO ¥137,500 (first-year maintenance included; annual maintenance thereafter). Annual subscriptions run LT ¥33,000, STD ¥39,600, and PRO ¥49,500. The vendor sells primarily through Japanese resellers, so overseas buyers should request a regional quote."
     },
     {
       q: "Is there a free version of IJCAD?",
@@ -4838,7 +4851,7 @@ export const c1Tools: Tool[] = [
   country: "South Korea",
   category_id: "c1",
   pricing_type: "Perpetual",
-  starting_price: 300,
+  starting_price: 1000,
 
   platforms: [
     "Windows"
@@ -4854,7 +4867,7 @@ export const c1Tools: Tool[] = [
   pros: ["30+ years development history", "Korean language support", "Local customer service", "Competitive pricing", "DWG/DXF compatibility", "Proven reliability", "Educational licenses"],
   cons: ["Windows-only platform", "Limited to Korean market", "Less features than international CAD", "No 3D capabilities", "Limited documentation in English"],
   version: "CADian",
-  last_updated: "2025-05-21",
+  last_updated: "2026-08-03",
   free_trial_days: 30,
   languages: ["Korean", "English"],
   file_formats_in: ["DWG", "DXF", "PDF"],
@@ -5255,313 +5268,6 @@ export const c1Tools: Tool[] = [
     "CNC Integration",
     "Surveying Tools",
     "Perpetual Licensing"
-  ],
-
-},
-{
-  id: "t144",
-  name: "CADVision",
-  slug: "cadvision",
-  logo_url: "/logos/cadvision.png",
-  short_desc: "Indian CAD software development company providing CAD solutions, product development services, and custom CAD software for engineering and design applications.",
-  description: "CADVision Engineers is an Indian CAD software development company based in Hyderabad, specializing in CAD software development, product design, and engineering services. The company develops stand-alone CAD applications and provides outsourced product development services for clients in medical devices, automotive, transportation, and other industries. CADVision offers comprehensive CAD software development capabilities including geometric modeling, CAD software customization, and integration services. Their team of software programmers and mathematicians develops complete products that are fast and efficient, helping clients realize the benefits of automation. CADVision operates as a strategic partner and solution provider in the CAD software development space, serving both Indian and global markets. Their focus on custom CAD software development and integration makes them a preferred choice for organizations requiring tailored CAD solutions.",
-
-  pricing_tiers: [
-    {
-      name: "Custom Development",
-      price: "Contact Sales",
-      period: "project-based",
-      features: [
-        "Custom CAD software development",
-        "Product customization",
-        "Integration services",
-        "Geometric modeling"
-      ],
-      is_popular: true
-    },
-    {
-      name: "Outsourced Development",
-      price: "Contact Sales",
-      period: "project-based",
-      features: [
-        "Full product development",
-        "CAD software engineering",
-        "Testing and validation",
-        "Maintenance and support"
-      ],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Development Services",
-      items: [
-        {
-          name: "CAD software development",
-          status: true
-        },
-        {
-          name: "Geometric modeling",
-          status: true
-        },
-        {
-          name: "Product customization",
-          status: true
-        },
-        {
-          name: "Integration services",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Industries Served",
-      items: [
-        {
-          name: "Medical devices",
-          status: true
-        },
-        {
-          name: "Automotive",
-          status: true
-        },
-        {
-          name: "Transportation",
-          status: true
-        },
-        {
-          name: "Mechanical engineering",
-          status: true
-        },
-        {
-          name: "Electronics",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Capabilities",
-      items: [
-        {
-          name: "Software product engineering",
-          status: true
-        },
-        {
-          name: "Mathematical algorithms",
-          status: true
-        },
-        {
-          name: "Automation solutions",
-          status: true
-        },
-        {
-          name: "Testing and validation",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Services",
-      items: [
-        {
-          name: "Outsourced product development",
-          status: true
-        },
-        {
-          name: "CAD software integration",
-          status: true
-        },
-        {
-          name: "Technical documentation",
-          status: true
-        },
-        {
-          name: "Consulting",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "autodesk",
-    "ptc",
-    "siemens"
-  ],
-
-  country: "India",
-  category_id: "c1",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [
-    "CAD Software Development",
-    "Product Design",
-    "Medical Devices",
-    "Automotive",
-    "Transportation",
-    "Mechanical Engineering"
-  ],
-
-  core_features: [
-    "CAD Software Development",
-    "Geometric Modeling",
-    "Product Customization",
-    "Integration Services",
-    "Outsourced Development",
-    "Mathematical Algorithms"
-  ],
-
-  user_scales: [
-    "Small Business",
-    "Mid-Sized Company",
-    "Enterprise"
-  ],
-
-  official_url: "https://cadvision-systems.com/",
-  pricing_url: "https://cadvision-systems.com/",
-  affiliate_url: null,
-  score: 3.1,
-
-  pros: [
-    "Specialized CAD software development expertise",
-    "Strong mathematical and algorithmic capabilities",
-    "Experience across multiple industries",
-    "Custom solution development",
-    "Cost-effective compared to global vendors",
-    "Local Indian market presence with support"
-  ],
-
-  cons: [
-    "Not a standard CAD product but development services",
-    "Limited information on specific products",
-    "Pricing is project-based, not off-the-shelf",
-    "Smaller scale compared to major CAD vendors",
-    "Less documentation and public information",
-    "Primarily service-focused rather than product-focused"
-  ],
-
-  faqs: [
-    {
-      q: "What is CADVision used for?",
-      a: "CADVision is a CAD software development company that provides custom CAD software development, product design services, and CAD software integration for industries including medical devices, automotive, and transportation."
-    },
-    {
-      q: "How much does CADVision cost?",
-      a: "CADVision offers project-based pricing for custom CAD software development and outsourced product development services. Pricing varies based on project scope and requirements. Contact CADVision for a quotation."
-    },
-    {
-      q: "Is there a free version of CADVision?",
-      a: "CADVision is a service provider for custom CAD software development, not a standard CAD product with a free tier. They may offer evaluation periods for custom projects."
-    },
-    {
-      q: "What operating systems does CADVision support?",
-      a: "CADVision develops software primarily for Windows platforms. Specific platform support depends on the custom project requirements."
-    },
-    {
-      q: "Which file formats does CADVision support?",
-      a: "CADVision's custom solutions can support standard CAD formats including DWG, DXF, and others based on project requirements. File format support is customized per project."
-    },
-    {
-      q: "What are the best alternatives to CADVision?",
-      a: "For standard CAD software, consider Autodesk, PTC, or Siemens products. For custom CAD development services, other Indian CAD development firms or global CAD software development companies may be alternatives."
-    }
-  ],
-
-  tech_specs: {
-    engine: "Custom-developed",
-    multicore: "Yes",
-    gpu_optimization: "Depends on project",
-    standards: [
-      "DWG",
-      "DXF",
-      "STEP",
-      "IGES"
-    ]
-  },
-
-  expert_verdict: "A localized architectural drafting and BIM modeling tool optimized for European planning regulations.",
-  version: "Custom",
-  last_updated: "2025-05-21",
-  free_trial_days: 0,
-
-  languages: [
-    "English"
-  ],
-
-  file_formats_in: [
-    "DWG",
-    "DXF",
-    "STEP",
-    "IGES"
-  ],
-
-  file_formats_out: [
-    "DWG",
-    "DXF",
-    "STEP",
-    "IGES",
-    "PDF"
-  ],
-
-  integrations: [
-    "Custom"
-  ],
-
-  deployment_options: [
-    "Desktop"
-  ],
-
-  license_types: [
-    "Perpetual",
-    "Commercial",
-    "Educational"
-  ],
-
-  support_channels: [
-    "Email",
-    "Phone",
-    "Documentation"
-  ],
-
-  security_compliance: [],
-
-  api_sdk: {
-    has_api: true,
-    has_sdk: true,
-    api_type: "Custom API / SDK",
-    sdk_languages: [
-      "C++",
-      "C#",
-      "Python"
-    ],
-    docs_url: "https://cadvision-systems.com/"
-  },
-
-  pricing_breakdown: [
-    {
-      tier: "Custom Development",
-      price: "Contact Sales",
-      notes: "Project-based custom CAD software development"
-    },
-    {
-      tier: "Outsourced Development",
-      price: "Contact Sales",
-      notes: "Full product development and engineering services"
-    }
-  ],
-
-  key_capabilities: [
-    "CAD Software Development",
-    "Geometric Modeling",
-    "Product Customization",
-    "Integration Services",
-    "Mathematical Algorithms"
   ],
 
 },

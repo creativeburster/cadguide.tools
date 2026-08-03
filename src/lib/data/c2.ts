@@ -149,8 +149,8 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "If you are in mechanical design, SolidWorks is the most reliable choice.",
-  version: "2025 SP3",
-  last_updated: "2026-03-20",
+  version: "2026",
+  last_updated: "2026-08-03",
   free_trial_days: 30,
 
   languages: [
@@ -859,8 +859,8 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
 
-  version: "8.10",
-  last_updated: "2026-02-28",
+  version: "8.19",
+  last_updated: "2026-08-03",
   free_trial_days: 90,
 
   languages: [
@@ -1048,7 +1048,7 @@ export const c2Tools: Tool[] = [
   country: "France",
   category_id: "c2",
   pricing_type: "Subscription",
-  starting_price: 4500,
+  starting_price: 7080,
   platforms: ["Windows"],
   industries: ["Aerospace", "Automotive", "Shipbuilding"],
 
@@ -1110,7 +1110,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "CATIA isn't just software; it's an industrial ecosystem.",
   version: "3DEXPERIENCE R2026x",
-  last_updated: "2025-11-15",
+  last_updated: "2026-08-03",
   free_trial_days: 0,
 
   languages: [
@@ -1473,7 +1473,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
-  starting_price: 1500,
+  starting_price: 2500,
   platforms: ["Web", "iOS", "Android"],
   industries: ["Startups", "Consumer Products", "Robotics"],
 
@@ -1535,7 +1535,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Onshape is the 'Google Docs' of CAD.",
   version: "Continuous (cloud)",
-  last_updated: "2025-11-15",
+  last_updated: "2026-08-03",
   free_trial_days: 30,
 
   languages: [
@@ -2189,7 +2189,7 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  alternatives: ["freecad", "solvespace", "solvespace-pro"],
+  alternatives: ["freecad", "solvespace", "solvespace"],
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
@@ -2399,7 +2399,7 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
-  alternatives: ["freecad", "openscad", "solvespace-pro"],
+  alternatives: ["freecad", "openscad", "solvespace"],
   country: "Community/International",
   category_id: "c2",
   pricing_type: "Free",
@@ -2584,7 +2584,7 @@ export const c2Tools: Tool[] = [
   ],
 
   alternatives: ["freecad", "solidworks", "alibre-design"],
-  country: "USA",
+  country: "Czech Republic",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 700,
@@ -2913,8 +2913,8 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  version: "4.5 LTS",
-  last_updated: "2026-05-15",
+  version: "5.2 LTS",
+  last_updated: "2026-08-03",
   free_trial_days: 0,
 
   languages: [
@@ -2998,63 +2998,6 @@ export const c2Tools: Tool[] = [
     docs_url: "https://docs.blender.org/api/current/",
   },
 
-},
-{
-  id: "t52",
-  name: "SolveSpace Pro",
-  slug: "solvespace-pro",
-  logo_url: getLogo("SSP"),
-  short_desc: "Constraint-based 2D/3D parametric CAD.",
-  description:
-    "SolveSpace is a minimalist modeler for precise geometric parts.",
-  country: "USA",
-  category_id: "c2",
-  pricing_type: "Free",
-  starting_price: 0,
-  platforms: ["Windows", "macOS", "Linux"],
-  industries: ["Education", "Makers", "Mechanical"],
-  core_features: ["Constraint Solver", "Geometric Logic", "STEP Export"],
-  user_scales: ["Individuals"],
-  official_url: "https://solvespace.com",
-  affiliate_url: null,
-  score: 4.3,
-  pros: ["Extremely fast", "Pure geometric logic", "Completely free"],
-  cons: ["No assembly", "Hard for organic", "Slow complex rendering"],
-  faqs: [
-    {
-      q: "What is SolveSpace Pro used for?",
-      a: "Constraint-based 2D/3D parametric CAD. SolveSpace Pro is a 3D modeling solution widely adopted in Education, Makers, Mechanical.",
-    },
-    {
-      q: "How much does SolveSpace Pro cost?",
-      a: "SolveSpace Pro is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
-    },
-    {
-      q: "Is SolveSpace Pro really free?",
-      a: "Yes — SolveSpace Pro is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
-    },
-    {
-      q: "What operating systems does SolveSpace Pro support?",
-      a: "SolveSpace Pro runs on Windows, macOS, and Linux.",
-    },
-    {
-      q: "Which file formats does SolveSpace Pro support?",
-      a: "SolveSpace Pro works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options.",
-    },
-    {
-      q: "What are the best alternatives to SolveSpace Pro?",
-      a: "The closest alternatives within the 3D Modeling space are FreeCAD, OpenSCAD, SolveSpace. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
-  ],
-  tech_specs: {
-    engine: "Custom",
-    multicore: "Low",
-    gpu_optimization: "None",
-    standards: ["STEP", "STL", "DXF"],
-  },
-  version: "3.1",
-  expert_verdict:
-    "The ultimate tool for engineers who value geometric purity.",
 },
 {
   id: "t58",

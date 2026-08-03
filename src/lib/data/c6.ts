@@ -102,7 +102,7 @@ export const c6Tools: Tool[] = [
     "eplan-electric-p8"
   ],
 
-  country: "Australia",
+  country: "USA",
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 3850,
@@ -188,7 +188,7 @@ export const c6Tools: Tool[] = [
 
   expert_verdict: "The leading professional PCB design software, combining unified schematic capture, 3D routing, and layout.",
   version: "25",
-  last_updated: "2023-08-28",
+  last_updated: "2026-08-03",
   free_trial_days: 15,
 
   languages: [
@@ -284,18 +284,18 @@ export const c6Tools: Tool[] = [
   name: "Eagle",
   slug: "eagle",
   logo_url: getLogo("EG"),
-  short_desc: "PCB design software integrated with Fusion 360.",
-  description: "EAGLE is an EDA software for PCB design, now part of Autodesk Fusion 360.",
+  short_desc: "Discontinued PCB design software — standalone EAGLE ended in 2021; its features now live in Fusion 360 Electronics.",
+  description: "Autodesk EAGLE was one of the most widely used EDA packages for schematic capture and PCB layout. Autodesk ended standalone EAGLE sales in June 2021 and merged its schematic and board technology into Fusion 360 Electronics. Legacy EAGLE projects open directly in Fusion 360, and new designs should start there instead of EAGLE.",
 
   pricing_tiers: [
     {
-      name: "Subscription",
-      price: "680",
-      period: "/yr",
+      name: "Discontinued",
+      price: "N/A",
+      period: "—",
       features: [
-        "Fusion 360 link",
-        "SPICE",
-        "Library"
+        "Sales ended June 2021",
+        "Merged into Fusion 360 Electronics",
+        "Legacy projects open in Fusion 360"
       ],
       is_popular: true
     }
@@ -330,7 +330,7 @@ export const c6Tools: Tool[] = [
   country: "USA",
   category_id: "c6",
   pricing_type: "Subscription",
-  starting_price: 680,
+  starting_price: 0,
 
   platforms: [
     "Windows",
@@ -355,8 +355,8 @@ export const c6Tools: Tool[] = [
     "Small Business"
   ],
 
-  official_url: "https://www.autodesk.com/eagle",
-  pricing_url: "https://www.autodesk.com/eagle",
+  official_url: "https://www.autodesk.com/products/fusion-360/overview",
+  pricing_url: "https://www.autodesk.com/products/fusion-360/overview",
   affiliate_url: null,
   score: 4.6,
 
@@ -379,7 +379,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "How much does Eagle cost?",
-      a: "Eagle starts at $680 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "EAGLE is no longer sold. Autodesk ended standalone EAGLE subscriptions in June 2021; the former $680/year plan was replaced by Fusion 360, which now includes the former EAGLE electronics functionality."
     },
     {
       q: "Is there a free version of Eagle?",
@@ -413,8 +413,10 @@ export const c6Tools: Tool[] = [
   expert_verdict: "The standard for mid-level professional PCB design.",
 
 
-  last_updated: "2023-04-23",
-  version: "10.0"
+  last_updated: "2026-08-03",
+  discontinued: true,
+  discontinued_note: "Discontinued in June 2021 — EAGLE's schematic and PCB functionality is now part of Autodesk Fusion 360 Electronics.",
+  version: "9.6 (final standalone release)"
 },
 {
   id: "t63",
@@ -423,10 +425,10 @@ export const c6Tools: Tool[] = [
   logo_url: "https://www.eplan.com/typo3conf/ext/eplan/Resources/Public/Images/Logo.svg",
   short_desc: "The global standard for electrical engineering.",
   description: "EPLAN Electric P8 is a consistent, integrated and fast system for the planning and design of electrical engineering for machines and plant systems.",
-  country: "USA",
+  country: "Germany",
   category_id: "c6",
   pricing_type: "Subscription",
-  starting_price: 2500,
+  starting_price: 0,
 
   platforms: [
     "Windows"
@@ -474,7 +476,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "How much does EPLAN Electric P8 cost?",
-      a: "EPLAN Electric P8 starts at $2,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "EPLAN does not publish list prices — licensing is quoted per seat and module bundle through EPLAN and its reseller network. Subscription is the current licensing model; contact EPLAN for a quote."
     },
     {
       q: "Is there a free version of EPLAN Electric P8?",
@@ -486,7 +488,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "Which file formats does EPLAN Electric P8 support?",
-      a: "EPLAN Electric P8 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "EPLAN Electric P8 exchanges DXF, DWG, and PDF for drawings, imports/exports XML and CSV/Excel for project data, and works to IEC, NFPA, and JIC drafting standards. Check EPLAN's documentation for the full list of supported interfaces."
     },
     {
       q: "What are the best alternatives to EPLAN Electric P8?",
@@ -510,7 +512,7 @@ export const c6Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Subscription",
-      price: "3,500",
+      price: "Contact",
       period: "/yr",
       features: [
         "Electrical Design",
@@ -568,7 +570,7 @@ export const c6Tools: Tool[] = [
   ],
 
 
-  last_updated: "2024-10-12",
+  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -2406,7 +2408,7 @@ export const c6Tools: Tool[] = [
   logo_url: getLogo("KI"),
   short_desc: "Free, open-source professional schematic capture and PCB layout suite.",
   description: "KiCad is the dominant open-source EDA suite — schematic capture, PCB layout, 3D viewer, SPICE simulation, and Gerber output — backed by CERN and used in hardware startups, education, and increasingly serious commercial work.",
-  country: "Switzerland",
+  country: "Community/International",
   category_id: "c6",
   pricing_type: "Open Source",
   starting_price: 0,
@@ -2574,8 +2576,8 @@ export const c6Tools: Tool[] = [
   ],
 
 
-  last_updated: "2023-01-29",
-  version: "2024"
+  last_updated: "2026-08-03",
+  version: "10.0"
 },
 {
   id: "t199",

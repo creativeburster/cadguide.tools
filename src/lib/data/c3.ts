@@ -328,7 +328,7 @@ export const c3Tools: Tool[] = [
   country: "Hungary",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 1800,
+  starting_price: 2700,
   platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Interior Design"],
 
@@ -389,8 +389,8 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "ArchiCAD is built by architects, for architects.",
-  version: "28",
-  last_updated: "2025-03-15",
+  version: "29",
+  last_updated: "2026-08-03",
   free_trial_days: 30,
 
   languages: [
@@ -1110,91 +1110,6 @@ export const c3Tools: Tool[] = [
 
 },
 {
-  id: "t46",
-  name: "Chief Architect Pro",
-  slug: "chief-architect-pro",
-  logo_url: getLogo("CAP"),
-  short_desc: "High-end 3D home design for professionals.",
-
-  description:
-    "Chief Architect Pro specializes in advanced residential and light commercial design.",
-
-  country: "USA",
-  category_id: "c3",
-  pricing_type: "Subscription",
-  starting_price: 1995,
-  platforms: ["Windows", "macOS"],
-  industries: ["Residential Design", "Remodeling"],
-  core_features: ["Residential Design", "3D Visualization"],
-  user_scales: ["Small Business", "Agencies"],
-  official_url: "https://www.chiefarchitect.com",
-  affiliate_url: null,
-  score: 4.8,
-  pros: ["Remodeling standard", "Kitchen design speed", "macOS support"],
-  cons: ["Not for mechanical", "Steep learning", "Expensive"],
-
-  faqs: [
-    {
-      q: "What is Chief Architect Pro used for?",
-      a: "High-end 3D home design for professionals. Chief Architect Pro is a BIM solution widely adopted in Residential Design, Remodeling.",
-    },
-    {
-      q: "How much does Chief Architect Pro cost?",
-      a: "Chief Architect Pro starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
-    },
-    {
-      q: "Is there a free version of Chief Architect Pro?",
-      a: "Chief Architect Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.",
-    },
-    {
-      q: "What operating systems does Chief Architect Pro support?",
-      a: "Chief Architect Pro runs on Windows and macOS.",
-    },
-    {
-      q: "Which file formats does Chief Architect Pro support?",
-      a: "Chief Architect Pro works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options.",
-    },
-    {
-      q: "What are the best alternatives to Chief Architect Pro?",
-      a: "The closest alternatives within the BIM space are Chief Architect, ArchiCAD, Allplan. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
-    },
-  ],
-
-  tech_specs: {
-    engine: "Proprietary",
-    multicore: "Moderate",
-    gpu_optimization: "High",
-    standards: ["IFC", "DWG", "OBJ"],
-  },
-  version: "2025",
-
-  expert_verdict: "The money-making machine for home builders.",
-
-  pricing_tiers: [
-    {
-      name: "Premier",
-      price: "1,995",
-      period: "/yr",
-      features: ["Professional AEC", "Rendering", "CAD Tools"],
-      is_popular: true,
-    },
-  ],
-
-  detailed_features: [
-    {
-      category: "AEC",
-
-      items: [
-        {
-          name: "Smart Objects",
-          status: true,
-        },
-      ],
-    },
-  ],
-
-},
-{
   id: "t74",
   name: "Vectorworks Landmark",
   slug: "vectorworks-landmark",
@@ -1339,7 +1254,7 @@ export const c3Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "Proprietary BIM",
+    engine: "Siemens Parasolid",
     multicore: "Moderate",
     gpu_optimization: "High",
     standards: ["IFC", "DWG", "DXF", "STEP"],
