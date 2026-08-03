@@ -1258,7 +1258,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized 2D CAD software tailored for high-volume technical drafting and automated manufacturing detailing.",
-  version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 15,
 
@@ -4655,7 +4654,6 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A dedicated civil engineering and construction 2D/3D CAD suite tailored for Japanese public works standards.",
-  version: "Latest",
   last_updated: "2025-05-20",
   free_trial_days: 30,
 
@@ -4867,7 +4865,6 @@ export const c1Tools: Tool[] = [
   score: 0,
   pros: ["30+ years development history", "Korean language support", "Local customer service", "Competitive pricing", "DWG/DXF compatibility", "Proven reliability", "Educational licenses"],
   cons: ["Windows-only platform", "Limited to Korean market", "Less features than international CAD", "No 3D capabilities", "Limited documentation in English"],
-  version: "CADian",
   last_updated: "2026-08-03",
   free_trial_days: 30,
   languages: ["Korean", "English"],

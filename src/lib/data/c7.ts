@@ -5705,7 +5705,6 @@ export const c7Tools: Tool[] = [
   score: 0,
   pros: ["Industry-standard plant design software", "Advanced 3D modeling capabilities", "Comprehensive clash detection", "Strong AVEVA ecosystem integration", "Rule-based design automation", "Real-time collaboration features", "Enterprise-grade solutions", "Extensive industry experience"],
   cons: ["Very high cost", "Steep learning curve", "Windows-only platform", "Requires significant training", "Complex implementation process", "Enterprise-focused pricing"],
-  version: "AVEVA E3D Design",
   last_updated: "2025-05-21",
   free_trial_days: 30,
   languages: ["English", "Chinese", "Japanese", "German", "French", "Spanish", "Russian"],

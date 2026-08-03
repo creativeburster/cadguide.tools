@@ -4383,7 +4383,7 @@ export const c2Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "KOMPAS-3D Geometric Kernel",
+    engine: "C3D (ASCON)",
     multicore: "Yes",
     gpu_optimization: "Basic",
     standards: ["DIN", "ISO", "GOST"]
@@ -4748,7 +4748,6 @@ export const c2Tools: Tool[] = [
   score: 0,
   pros: ["Completely free", "Professional-grade 3D CAD", "Extensive component library", "Manufacturer support", "Good file format support", "Easy to learn", "Active community"],
   cons: ["Windows-only platform", "Limited advanced features", "No enterprise support", "Less powerful than commercial CAD", "Limited documentation"],
-  version: "DesignSpark Mechanical",
   last_updated: "2025-05-21",
   free_trial_days: 0,
   languages: ["English"],
