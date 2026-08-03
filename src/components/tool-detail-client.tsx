@@ -502,9 +502,11 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                     ? "Discontinued"
                     : tool.starting_price > 0
                       ? `$${tool.starting_price.toLocaleString()}`
-                      : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type)
-                        ? "Free"
-                        : "Contact",
+                      : tool.quote_only
+                        ? "Contact"
+                        : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type)
+                          ? "Free"
+                          : "Contact",
                 },
               ].map((stat, i) => (
                 <div
@@ -1172,6 +1174,10 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                           /year
                         </span>
                       </>
+                    ) : tool.quote_only ? (
+                      <span className="text-3xl md:text-4xl font-black text-slate-900">
+                        Contact for pricing
+                      </span>
                     ) : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type) ? (
                       <span className="text-4xl md:text-5xl font-black text-slate-900">
                         Free

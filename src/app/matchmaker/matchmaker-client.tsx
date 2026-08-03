@@ -121,7 +121,7 @@ export default function MatchmakerPage({ validCompareSlugs = [] }: { validCompar
           score += 20;
         } else if (selections.budget === 'free') {
           if (
-            tool.starting_price === 0 ||
+            (tool.starting_price === 0 && !tool.quote_only) ||
             tool.pricing_type === 'Free' ||
             tool.pricing_type === 'Open Source'
           ) {
@@ -133,7 +133,7 @@ export default function MatchmakerPage({ validCompareSlugs = [] }: { validCompar
           }
         } else if (selections.budget === 'low') {
           if (
-            tool.starting_price === 0 ||
+            (tool.starting_price === 0 && !tool.quote_only) ||
             tool.pricing_type === 'Free' ||
             tool.pricing_type === 'Open Source'
           ) {

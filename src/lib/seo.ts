@@ -11,10 +11,11 @@ export const SITE_NAME = "CADGuide.tools";
 
 const MAX_DESC = 160;
 
-/** Pricing summary suitable for titles ("Free", "from $235", "Subscription"). */
+/** Pricing summary suitable for titles ("Free", "from $235", "Quote"). */
 export function pricingSummary(tool: Tool): string {
   if (tool.pricing_type === "Free") return "Free";
   if (tool.pricing_type === "Freemium") return "Freemium";
+  if (tool.quote_only) return "Quote";
   if (tool.starting_price > 0) return `from $${tool.starting_price}`;
   return tool.pricing_type;
 }

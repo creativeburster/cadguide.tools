@@ -3955,12 +3955,12 @@ export const c7Tools: Tool[] = [
   name: "RhinoGold",
   slug: "rhinogold",
   logo_url: "",
-  short_desc: "Rhino-based jewelry CAD plugin with gem setting, parametric jewelry libraries, and rendering.",
-  description: "RhinoGold is a Rhino-based jewelry CAD plugin built around gem setting, parametric jewelry components, and a rendering pipeline — historically the dominant jewelry CAD before being superseded by MatrixGold from the same vendor.",
+  short_desc: "Rhino-based jewelry CAD plugin with gem setting and parametric jewelry libraries — now superseded by RhinoArtisan.",
+  description: "RhinoGold is a Rhino-based jewelry CAD plugin built around gem setting, parametric jewelry components, and rendering. Developed by 2Shapes Technologies, it was long a staple of jewelry studios before being superseded by RhinoArtisan from the same development lineage (now under Stuller).",
   country: "Spain",
   category_id: "c7",
   pricing_type: "Perpetual",
-  starting_price: 2495,
+  starting_price: 0,
 
   platforms: [
     "Windows"
@@ -3996,9 +3996,9 @@ export const c7Tools: Tool[] = [
   ],
 
   cons: [
-    "No longer the vendor's flagship (replaced by MatrixGold)",
+    "Superseded — new development goes into RhinoArtisan",
     "Windows-only",
-    "Roadmap stalled — most new investment goes to MatrixGold"
+    "No longer sold as a standalone by the original vendor"
   ],
 
   tech_specs: {
@@ -4012,7 +4012,7 @@ export const c7Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "Still in use at many small jewelry studios, but new buyers should look at MatrixGold or 3Design.",
+  expert_verdict: "Still running in some jewelry studios, but RhinoGold is end-of-life — new buyers should look at RhinoArtisan, MatrixGold, or 3Design.",
 
   faqs: [
     {
@@ -4021,7 +4021,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "How much does RhinoGold cost?",
-      a: "RhinoGold starts at $2,495 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "RhinoGold is no longer sold as a new license. Its successor RhinoArtisan (from the same 2Shapes/Stuller lineage) starts around $3,770 for the basic CAD plugin, with full editions higher — check current RhinoArtisan pricing before buying."
     },
     {
       q: "Is there a free version of RhinoGold?",
@@ -4033,18 +4033,18 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "Which file formats does RhinoGold support?",
-      a: "RhinoGold works with standard visualization and rendering interchange formats including FBX, OBJ, glTF, and USD. Check the vendor's official documentation for the complete list of supported import and export options."
+      a: "Being Rhino-based, RhinoGold works with 3DM plus common interchange formats like STL, OBJ, STEP, and IGES — STL is the key format for jewelry 3D printing and casting workflows."
     },
     {
       q: "What are the best alternatives to RhinoGold?",
-      a: "The closest alternatives within the Specialized space are JewelCAD Pro, Simplify3D, Carlson Survey. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives for jewelry CAD are RhinoArtisan (its direct successor), MatrixGold, JewelCAD Pro, and 3Design. Compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
   alternatives: [
     "jewelcad-pro",
-    "simplify3d",
-    "carlson-survey"
+    "matrixgold",
+    "3design"
   ],
 
   detailed_features: [
@@ -4119,8 +4119,10 @@ export const c7Tools: Tool[] = [
   ],
 
 
-  last_updated: "2023-11-19",
-  version: "2024"
+  last_updated: "2026-08-03",
+  discontinued: true,
+  discontinued_note: "RhinoGold has been superseded by RhinoArtisan (2Shapes/Stuller lineage) and is no longer sold as a new license.",
+  version: "2024 (final)"
 },
 {
   id: "t224",

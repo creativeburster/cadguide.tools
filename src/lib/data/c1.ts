@@ -3727,7 +3727,7 @@ export const c1Tools: Tool[] = [
   country: "Germany",
   category_id: "c1",
   pricing_type: "Subscription",
-  starting_price: 200,
+  starting_price: 310,
 
   platforms: [
     "Windows",
@@ -3779,7 +3779,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "How much does ARES Commander cost?",
-      a: "ARES Commander starts at $200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "ARES Commander is sold through Graebert and regional resellers; the Trinity subscription (desktop + mobile + cloud) runs around $310/yr equivalent (e.g. ¥46,200/yr on the Japanese price list), with perpetual licenses also offered in some markets. Confirm local pricing with your reseller."
     },
     {
       q: "Is there a free version of ARES Commander?",
@@ -3816,7 +3816,7 @@ export const c1Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Annual",
-      price: "250",
+      price: "310",
       period: "/yr",
       features: [
         "Trinity Workflow",

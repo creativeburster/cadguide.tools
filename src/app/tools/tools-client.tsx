@@ -724,9 +724,11 @@ function ToolsList() {
                           ? 'EOL'
                           : tool.starting_price > 0
                             ? `$${tool.starting_price.toLocaleString()}`
-                            : ['Free', 'Open Source', 'Freemium'].includes(tool.pricing_type)
-                              ? 'FREE'
-                              : 'Quote'}
+                            : tool.quote_only
+                              ? 'Quote'
+                              : ['Free', 'Open Source', 'Freemium'].includes(tool.pricing_type)
+                                ? 'FREE'
+                                : 'Quote'}
                       </div>
                       <div className="text-[9px] text-slate-500 group-hover:text-blue-200 font-bold uppercase mt-1 transition-colors">Per Year / Seat</div>
                     </div>
