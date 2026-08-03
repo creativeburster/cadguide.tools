@@ -712,7 +712,7 @@ function ToolsList() {
                       <p className="text-slate-500 leading-relaxed text-[15px] font-medium line-clamp-2 max-w-2xl">{tool.short_desc}</p>
                       <div className="flex items-center gap-2 mt-3">
                         <span className="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-widest border border-slate-200">
-                          🌍 {tool.country || 'USA'}
+                          🌍 {tool.country || '—'}
                         </span>
                       </div>
                     </div>
@@ -720,7 +720,13 @@ function ToolsList() {
                     <div className="bg-slate-900 px-6 py-4 rounded-[24px] text-right shrink-0 w-full 2xl:w-auto shadow-xl shadow-slate-200 group-hover:bg-blue-600 transition-colors duration-500">
                       <div className="text-[10px] text-blue-400 group-hover:text-blue-100 uppercase font-black tracking-widest mb-1 transition-colors">Starting at</div>
                       <div className="text-2xl font-black text-white">
-                        {tool.starting_price === 0 ? 'FREE' : `$${tool.starting_price.toLocaleString()}`}
+                        {tool.discontinued
+                          ? 'EOL'
+                          : tool.starting_price > 0
+                            ? `$${tool.starting_price.toLocaleString()}`
+                            : ['Free', 'Open Source', 'Freemium'].includes(tool.pricing_type)
+                              ? 'FREE'
+                              : 'Quote'}
                       </div>
                       <div className="text-[9px] text-slate-500 group-hover:text-blue-200 font-bold uppercase mt-1 transition-colors">Per Year / Seat</div>
                     </div>

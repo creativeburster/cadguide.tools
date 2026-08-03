@@ -243,7 +243,7 @@
     "features": [
       "cloud-collaboration"
     ],
-    "country": "Australia"
+    "country": "USA"
   },
   {
     "id": "t11",
@@ -763,7 +763,7 @@
       "BIM Management"
     ],
     "features": [],
-    "country": "USA"
+    "country": "Finland"
   },
   {
     "id": "t37",
@@ -784,7 +784,7 @@
     "features": [
       "mesh-modeling"
     ],
-    "country": "USA"
+    "country": "Italy"
   },
   {
     "id": "t38",
@@ -840,7 +840,7 @@
       "Research"
     ],
     "features": [],
-    "country": "USA"
+    "country": "France"
   },
   {
     "id": "t41",
@@ -858,16 +858,16 @@
       "Hobbyist"
     ],
     "features": [],
-    "country": "USA"
+    "country": "Czech Republic"
   },
   {
     "id": "t42",
     "name": "Eagle",
     "slug": "eagle",
-    "short_desc": "PCB design software integrated with Fusion 360.",
+    "short_desc": "Discontinued PCB design software — standalone EAGLE ended in 2021; its features now live in Fusion 360 Electronics.",
     "score": 4.6,
     "logo_url": "/logos/eg.png",
-    "official_url": "https://www.autodesk.com/eagle",
+    "official_url": "https://www.autodesk.com/products/fusion-360/overview",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
@@ -913,24 +913,6 @@
     "industries": [
       "Civil Engineering",
       "Transportation"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t46",
-    "name": "Chief Architect Pro",
-    "slug": "chief-architect-pro",
-    "short_desc": "High-end 3D home design for professionals.",
-    "score": 4.8,
-    "logo_url": "/logos/cap.png",
-    "official_url": "https://www.chiefarchitect.com",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Residential Design",
-      "Remodeling"
     ],
     "features": [],
     "country": "USA"
@@ -991,7 +973,7 @@
       "subdivision-modeling",
       "mesh-modeling"
     ],
-    "country": ""
+    "country": "USA"
   },
   {
     "id": "t51",
@@ -1014,26 +996,7 @@
       "subdivision-modeling",
       "mesh-modeling"
     ],
-    "country": "USA"
-  },
-  {
-    "id": "t52",
-    "name": "SolveSpace Pro",
-    "slug": "solvespace-pro",
-    "short_desc": "Constraint-based 2D/3D parametric CAD.",
-    "score": 4.3,
-    "logo_url": "/logos/ssp.png",
-    "official_url": "https://solvespace.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Education",
-      "Makers",
-      "Mechanical"
-    ],
-    "features": [],
-    "country": "USA"
+    "country": "Netherlands"
   },
   {
     "id": "t53",
@@ -1043,8 +1006,8 @@
     "score": 4.6,
     "logo_url": "https://en.dwgfastview.com/wp-content/themes/gstarcad-en/images/logo.png",
     "official_url": "https://en.dwgfastview.com",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c4",
+    "category_name": "Viewer",
     "aliases": [],
     "industries": [
       "Construction",
@@ -1258,7 +1221,7 @@
       "Automation"
     ],
     "features": [],
-    "country": "USA"
+    "country": "Germany"
   },
   {
     "id": "t64",
@@ -1276,7 +1239,7 @@
       "Manufacturing"
     ],
     "features": [],
-    "country": "USA"
+    "country": "Denmark"
   },
   {
     "id": "t65",
@@ -1312,7 +1275,7 @@
       "Medical"
     ],
     "features": [],
-    "country": "USA"
+    "country": "Germany"
   },
   {
     "id": "t67",
@@ -1348,7 +1311,7 @@
       "Oil & Gas"
     ],
     "features": [],
-    "country": "USA"
+    "country": "UK"
   },
   {
     "id": "t69",
@@ -1367,7 +1330,7 @@
       "Gaming"
     ],
     "features": [],
-    "country": "USA"
+    "country": "South Korea"
   },
   {
     "id": "t74",
@@ -1403,7 +1366,7 @@
       "Apparel"
     ],
     "features": [],
-    "country": "USA"
+    "country": "Italy"
   },
   {
     "id": "t76",
@@ -1421,7 +1384,7 @@
       "Tooling"
     ],
     "features": [],
-    "country": "USA"
+    "country": "UK"
   },
   {
     "id": "t77",
@@ -1440,7 +1403,7 @@
       "Concerts"
     ],
     "features": [],
-    "country": "USA"
+    "country": "Canada"
   },
   {
     "id": "t78",
@@ -1457,7 +1420,7 @@
       "Jewelry Design"
     ],
     "features": [],
-    "country": "USA"
+    "country": "France"
   },
   {
     "id": "t79",
@@ -1516,7 +1479,7 @@
     "features": [
       "integrated-cam"
     ],
-    "country": "USA"
+    "country": "Israel"
   },
   {
     "id": "t82",
@@ -1592,7 +1555,7 @@
       "Defense"
     ],
     "features": [],
-    "country": ""
+    "country": "USA"
   },
   {
     "id": "t86",
@@ -1630,7 +1593,7 @@
       "Shipbuilding"
     ],
     "features": [],
-    "country": "USA"
+    "country": "France"
   },
   {
     "id": "t88",
@@ -1761,8 +1724,8 @@
     "score": 4.4,
     "logo_url": "",
     "official_url": "https://www.glodon.com/products/cad-reader",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c4",
+    "category_name": "Viewer",
     "aliases": [],
     "industries": [
       "Architecture",
@@ -1791,7 +1754,7 @@
     "features": [
       "integrated-cam"
     ],
-    "country": "USA"
+    "country": "India"
   },
   {
     "id": "t94",
@@ -1877,8 +1840,8 @@
     "score": 4.3,
     "logo_url": "/logos/3dexperience.png",
     "official_url": "https://www.3ds.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
       "Aerospace",
@@ -2014,8 +1977,8 @@
     "score": 3.9,
     "logo_url": "/logos/pconplanner.png",
     "official_url": "https://pcon-planner.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [
       "Interior Design",
@@ -2034,8 +1997,8 @@
     "score": 3.4,
     "logo_url": "/logos/crowncad.png",
     "official_url": "https://www.crowncad.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
       "Manufacturing",
@@ -2054,8 +2017,8 @@
     "score": 3.5,
     "logo_url": "/logos/sinovation.png",
     "official_url": "https://sv.hoteamsoft.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
       "Mold Making",
@@ -2183,8 +2146,8 @@
     "score": 0,
     "logo_url": "/logos/kompas-3d.png",
     "official_url": "https://ascon.net/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
       "Aerospace",
@@ -2211,8 +2174,8 @@
     "score": 0,
     "logo_url": "/logos/t-flex-cad.png",
     "official_url": "https://www.tflex.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
       "Aerospace",
@@ -2255,8 +2218,8 @@
     "score": 3.3,
     "logo_url": "/logos/model-studio-cs.png",
     "official_url": "https://www.csoft.ru/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c3",
+    "category_name": "BIM",
     "aliases": [],
     "industries": [
       "Construction",
@@ -2278,8 +2241,8 @@
     "score": 0,
     "logo_url": "/logos/aveva-e3d-design.ico",
     "official_url": "https://www.aveva.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [
       "Oil and Gas",
@@ -2302,8 +2265,8 @@
     "score": 0,
     "logo_url": "/logos/designspark-mechanical.ico",
     "official_url": "https://www.rs-online.com/designspark/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
       "Product Design",
@@ -2325,8 +2288,8 @@
     "score": 3.5,
     "logo_url": "/logos/lusas.png",
     "official_url": "https://www.lusas.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
       "Civil Engineering",
@@ -2387,8 +2350,8 @@
     "score": 0,
     "logo_url": "/logos/midas-civil.png",
     "official_url": "https://www.midasoft.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
       "Civil Engineering",
@@ -2410,8 +2373,8 @@
     "score": 0,
     "logo_url": "/logos/midas-gen.png",
     "official_url": "https://www.midasoft.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
       "Building Design",
@@ -2492,8 +2455,8 @@
     "score": 3.4,
     "logo_url": "/logos/think3.png",
     "official_url": "https://dptlab.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
       "Industrial Design",
@@ -2510,12 +2473,12 @@
     "id": "t133",
     "name": "Maptek Vulcan",
     "slug": "maptek-vulcan",
-    "short_desc": "Maptek™ is a leading provider of innovative software, hardware and services for the mining industry. Founded 40 years ag",
+    "short_desc": "3D mining software for geological modeling, mine design, and production planning across the mining lifecycle.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.maptek.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2525,12 +2488,12 @@
     "id": "t134",
     "name": "Promine",
     "slug": "promine",
-    "short_desc": "Solutions for Everyday Mining. Our users are guranteed a user-friendly mining and surveying software adaptable to today’",
+    "short_desc": "AutoCAD-based mining software for underground mine design, surveying, and grade control.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.promine.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2540,12 +2503,12 @@
     "id": "t135",
     "name": "OOFELIE",
     "slug": "oofelie",
-    "short_desc": "Open Engineering is a European high-tech supplier of multiphysics simulations engineering tools and services.",
+    "short_desc": "Multiphysics simulation software for strongly coupled thermo-mechanical analysis in optics, MEMS, and aerospace.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.open-engineering.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2555,12 +2518,12 @@
     "id": "t136",
     "name": "CYPECAD",
     "slug": "cypecad",
-    "short_desc": "Technical software for structural design, mep systems, construction management. Engineering projects. Pathology",
+    "short_desc": "Structural analysis and design software for concrete and steel buildings, integrated with MEP and construction management tools.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.cype.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c3",
+    "category_name": "BIM",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2570,12 +2533,12 @@
     "id": "t137",
     "name": "TeKton3D",
     "slug": "tekton3d",
-    "short_desc": "Desarrollo de software para el diseño y cálculo de instalaciones y estructuras en edificios y aplicación del Código Técn",
+    "short_desc": "Spanish BIM software for structural analysis and MEP building services design, aligned with the Spanish Technical Building Code (CTE).",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.imventa.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c3",
+    "category_name": "BIM",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2643,12 +2606,12 @@
     "id": "t141",
     "name": "Vertex BD",
     "slug": "vertex-bd",
-    "short_desc": "Vertexin kotimaiset 3D-suunnitteluohjelmat sekä tiedonhallintaratkaisut teollisuudelle. 3D CAD, PDM ja PLM – lue lisää o",
+    "short_desc": "BIM software for cold-formed steel and timber framing, automating panel design, fabrication drawings, and CNC output.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.vertex.fi/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c3",
+    "category_name": "BIM",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2658,12 +2621,12 @@
     "id": "t142",
     "name": "CET Designer",
     "slug": "cet-designer",
-    "short_desc": "We offer space planning software solutions that will help you streamline your sales, design and order processes.",
+    "short_desc": "Space planning and specification software for commercial interiors, with live rendering and manufacturer catalogs.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.configura.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2694,37 +2657,15 @@
     "country": "India"
   },
   {
-    "id": "t144",
-    "name": "CADVision",
-    "slug": "cadvision",
-    "short_desc": "Indian CAD software development company providing CAD solutions, product development services, and custom CAD software for engineering and design applications.",
-    "score": 3.1,
-    "logo_url": "/logos/cadvision.png",
-    "official_url": "https://cadvision-systems.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "CAD Software Development",
-      "Product Design",
-      "Medical Devices",
-      "Automotive",
-      "Transportation",
-      "Mechanical Engineering"
-    ],
-    "features": [],
-    "country": "India"
-  },
-  {
     "id": "t145",
     "name": "Eberick",
     "slug": "eberick",
-    "short_desc": "Somos a líder nacional para projetos em BIM e Gestão Digital da Construção, com soluções em software para todas as etapa",
+    "short_desc": "Brazilian BIM software for structural analysis and design of reinforced concrete buildings, part of the AltoQi ecosystem.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.altoqi.com.br/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c3",
+    "category_name": "BIM",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2734,12 +2675,12 @@
     "id": "t146",
     "name": "Promob",
     "slug": "promob",
-    "short_desc": "Projetar, produzir e gerenciar nunca foi tão fácil com a Promob Software Solutions. À maior desenvolvedora de software d",
+    "short_desc": "Brazilian furniture design and manufacturing software with integrated rendering, quoting, and CNC cut-list output.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.promob.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2749,16 +2690,16 @@
     "id": "t147",
     "name": "SCIA Engineer",
     "slug": "scia-engineer",
-    "short_desc": "SCIA combines structural engineering and design know-how with technology, to provide powerful structural analysis softwa",
+    "short_desc": "Structural analysis and design software for buildings and civil structures, with multi-material code design and BIM workflows.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.scia.net/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [],
     "features": [],
-    "country": "Netherlands"
+    "country": "Belgium"
   },
   {
     "id": "t148",
@@ -2768,8 +2709,8 @@
     "score": 4.3,
     "logo_url": "/logos/powermill.svg",
     "official_url": "https://www.autodesk.com/products/powermill",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
       "Aerospace",
@@ -2826,12 +2767,12 @@
     "id": "t151",
     "name": "ESPRIT",
     "slug": "esprit",
-    "short_desc": "Is ESPRIT the best CAM software for your shop? Learn more about what makes us different and how we can help you achieve ",
+    "short_desc": "High-performance CAM software for CNC programming, covering 2-5 axis milling, turning, mill-turn, and Swiss-type machining.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.espritcam.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -2963,8 +2904,8 @@
     "score": 3.6,
     "logo_url": "/logos/planbar.png",
     "official_url": "https://www.allplan.com/products/planbar/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c3",
+    "category_name": "BIM",
     "aliases": [],
     "industries": [
       "Precast Concrete",
@@ -3139,8 +3080,8 @@
     "score": 3.9,
     "logo_url": "/logos/pam-stamp.png",
     "official_url": "https://www.esi-group.com/products/pam-stamp",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
       "Automotive",
@@ -3195,12 +3136,12 @@
     "id": "t170",
     "name": "ShipConstructor",
     "slug": "shipconstructor",
-    "short_desc": "Engineering information is a shipbuilder’s most important asset. Using a solution that is built to handle shipbuilding’s",
+    "short_desc": "AutoCAD-based shipbuilding CAD/CAM software for hull structure, piping, and outfitting, backed by a central product model.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.ssi-corporate.com/products/shipconstructor/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -3210,12 +3151,12 @@
     "id": "t171",
     "name": "NAPA",
     "slug": "napa",
-    "short_desc": "NAPA provides maritime software and data services for ship design and operations to enable a safer, more sustainable, an",
+    "short_desc": "Ship design and maritime safety software covering 3D hull modeling, stability, and structural design.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.napa.fi/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -3229,8 +3170,8 @@
     "score": 4,
     "logo_url": "/logos/foran.png",
     "official_url": "https://www.siemens.com/global/en/products/services/marine/foran.html",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [
       "Shipbuilding",
@@ -3246,12 +3187,12 @@
     "id": "t173",
     "name": "Pytha",
     "slug": "pytha",
-    "short_desc": "PYTHA is the most advanced 3D CAD system in interior design, furniture making, exhibition design and for the shop fittin",
+    "short_desc": "3D CAD software for furniture making, interior design, and exhibition/shop fitting, with integrated rendering and CNC output.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.pytha.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -3261,12 +3202,12 @@
     "id": "t174",
     "name": "imos iX",
     "slug": "imos-ix",
-    "short_desc": "Die imos AG entwickelt und vertreibt weltweit integrierte Softwarelösungen für den Möbel- und Innenausbau.",
+    "short_desc": "CAD/CAM software for furniture and interior fitting, linking sales, design, and CNC manufacturing in one data flow.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.imos3d.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -3276,12 +3217,12 @@
     "id": "t175",
     "name": "20-20 Design",
     "slug": "20-20-design",
-    "short_desc": "Explore all training options for Design Flex, the leading kitchen and bathroom design and sales solution. Ideal for resi",
+    "short_desc": "Kitchen, bathroom, and office interior design and sales software with manufacturer catalogs and rendering.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.2020spaces.com/2020design/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -3291,12 +3232,12 @@
     "id": "t176",
     "name": "Palette CAD",
     "slug": "palette-cad",
-    "short_desc": "Palette CAD 3D-Software für Handwerker, Fachhandel & Planer überzeugt mit Einfachheit & Professionalität zugleich. Onlin",
+    "short_desc": "German 3D planning software for trades, showrooms, and interior design, with cloud-based collaboration.",
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.palettecad.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [],
     "features": [],
@@ -3310,8 +3251,8 @@
     "score": 3.4,
     "logo_url": "/logos/kd-max.png",
     "official_url": "https://www.yfcad.com/kd-max/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
+    "category_id": "c7",
+    "category_name": "Specialized",
     "aliases": [],
     "industries": [
       "Interior Design",
@@ -3728,7 +3669,7 @@
       "Education"
     ],
     "features": [],
-    "country": "Switzerland"
+    "country": "Community/International"
   },
   {
     "id": "t199",
@@ -4542,7 +4483,7 @@
       "Civil Engineering"
     ],
     "features": [],
-    "country": "France"
+    "country": "Poland"
   },
   {
     "id": "t243",
@@ -4584,7 +4525,7 @@
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",
-    "short_desc": "Professional solution for Infraworks.",
+    "short_desc": "Autodesk InfraWorks — conceptual design and modeling software for civil infrastructure, transportation, and urban planning.",
     "score": 4.5,
     "logo_url": "",
     "official_url": "https://www.autodesk.com/products/infraworks/overview",
@@ -4595,13 +4536,13 @@
       "Engineering"
     ],
     "features": [],
-    "country": ""
+    "country": "USA"
   },
   {
     "id": "ext-3ds-max",
     "name": "3ds Max",
     "slug": "3ds-max",
-    "short_desc": "Professional solution for 3ds Max.",
+    "short_desc": "Industry-standard 3D modeling, animation, and rendering software for games, film, and visualization.",
     "score": 4.5,
     "logo_url": "",
     "official_url": "https://www.autodesk.com/products/3ds-max/overview",
@@ -4616,13 +4557,13 @@
       "subdivision-modeling",
       "mesh-modeling"
     ],
-    "country": ""
+    "country": "USA"
   },
   {
     "id": "ext-zbrush",
     "name": "ZBrush",
     "slug": "zbrush",
-    "short_desc": "Professional solution for ZBrush.",
+    "short_desc": "Digital sculpting and painting software for high-resolution character and creature modeling.",
     "score": 4.5,
     "logo_url": "",
     "official_url": "https://www.maxon.net/en/zbrush",
@@ -4633,13 +4574,13 @@
       "Engineering"
     ],
     "features": [],
-    "country": ""
+    "country": "Germany"
   },
   {
     "id": "ext-keyshot",
     "name": "KeyShot",
     "slug": "keyshot",
-    "short_desc": "Professional solution for KeyShot.",
+    "short_desc": "Real-time ray-tracing rendering software for product visualization and industrial design.",
     "score": 4.5,
     "logo_url": "",
     "official_url": "https://www.keyshot.com",
@@ -4650,13 +4591,13 @@
       "Engineering"
     ],
     "features": [],
-    "country": ""
+    "country": "USA"
   },
   {
     "id": "ext-lumion",
     "name": "Lumion",
     "slug": "lumion",
-    "short_desc": "Professional solution for Lumion.",
+    "short_desc": "Architectural visualization software for fast, photorealistic rendering of 3D building models.",
     "score": 4.5,
     "logo_url": "",
     "official_url": "https://lumion.com",
@@ -4669,13 +4610,13 @@
     "features": [
       "rendering"
     ],
-    "country": ""
+    "country": "Netherlands"
   },
   {
     "id": "ext-enscape",
     "name": "Enscape",
     "slug": "enscape",
-    "short_desc": "Professional solution for Enscape.",
+    "short_desc": "Real-time rendering and VR plugin for Revit, SketchUp, Rhino, and Archicad.",
     "score": 4.5,
     "logo_url": "",
     "official_url": "https://enscape3d.com",
@@ -4688,13 +4629,13 @@
     "features": [
       "rendering"
     ],
-    "country": ""
+    "country": "Germany"
   },
   {
     "id": "ext-twinmotion",
     "name": "Twinmotion",
     "slug": "twinmotion",
-    "short_desc": "Professional solution for Twinmotion.",
+    "short_desc": "Real-time visualization tool built on Unreal Engine for architecture and construction.",
     "score": 4.5,
     "logo_url": "",
     "official_url": "https://www.twinmotion.com",
@@ -4707,6 +4648,6 @@
     "features": [
       "rendering"
     ],
-    "country": ""
+    "country": "USA"
   }
 ]

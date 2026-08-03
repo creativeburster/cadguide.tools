@@ -2,7 +2,7 @@
 title: "Rhino 8 Mac Render Mesh and Crash Errors: Render Mesh Broken After Update to 8.20 from Metal Renderer Regression Requiring SRC Update or Downgrade, Constant Crashes in Rendered View from Metal GPU Rendering Requiring CPU Render Switch, Performance and Stability Issues from UI Bugs and Beach Ball Lag Requiring Version Update, Crash After macOS Update from Material Rendering Conflict Requiring CPU Render Setting, and Slow Copy Paste and Window Focus Switching from UI State Bug Requiring Restart"
 excerpt: "Rhino 8 fails for 5 distinct reasons: render mesh broken after update to 8.20 from Metal renderer regression requiring SRC update or downgrade, constant crashes in rendered view from Metal GPU rendering requiring CPU render switch, performance and stability issues from UI bugs and beach ball lag requiring version update, crash after macOS update from material rendering conflict requiring CPU render setting, and slow copy paste and window focus switching from UI state bug requiring restart. We cover each with fixes from McNeel Forum."
 category: "mac-render-mesh-and-crash-errors"
-softwareSlug: "rhino"
+softwareSlug: "rhino-3d"
 keyword: "Rhino 8 Mac render mesh broken update 8.20 Metal renderer regression SRC update downgrade constant crashes rendered view CPU render switch performance stability UI bugs beach ball lag crash macOS update material rendering conflict slow copy paste window focus switching UI state bug restart"
 slug: "rhino-8-mac-render-mesh-crash-errors-render-mesh-broken-8-20-metal-regression-constant-crashes-rendered-view-cpu-render-switch-performance-stability-ui-bugs-crash-macos-update-material-rendering-slow-copy-paste-window-focus-switching"
 author: "CADGuide Tools Editorial Team"

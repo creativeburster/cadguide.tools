@@ -259,6 +259,15 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                       >
                         {tool.pricing_type}
                       </Badge>
+                      {tool.discontinued && (
+                        <Badge
+                          variant="outline"
+                          title={tool.discontinued_note}
+                          className="bg-red-50 text-red-600 border-red-200 font-black px-4 py-1.5 uppercase tracking-[0.2em] text-[10px]"
+                        >
+                          Discontinued
+                        </Badge>
+                      )}
                       
                       {/* Dynamic Tree Arteries (Upward SEO Badges) */}
                       {category && (
@@ -489,7 +498,13 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                 {
                   icon: <CreditCard className="w-6 h-6" />,
                   label: "Starting At",
-                  value: `$${tool.starting_price}`,
+                  value: tool.discontinued
+                    ? "Discontinued"
+                    : tool.starting_price > 0
+                      ? `$${tool.starting_price.toLocaleString()}`
+                      : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type)
+                        ? "Free"
+                        : "Contact",
                 },
               ].map((stat, i) => (
                 <div
@@ -1141,15 +1156,31 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                 </div>
                 <CardContent className="p-6 md:p-10 flex-1 bg-white relative z-10">
                   <div className="flex items-baseline gap-2 mb-6 md:mb-10">
-                    <span className="text-slate-400 text-base md:text-lg font-bold">
-                      From
-                    </span>
-                    <span className="text-4xl md:text-5xl font-black text-slate-900">
-                      ${tool.starting_price}
-                    </span>
-                    <span className="text-slate-400 font-bold text-sm">
-                      /year
-                    </span>
+                    {tool.discontinued ? (
+                      <span className="text-3xl md:text-4xl font-black text-red-600">
+                        Discontinued
+                      </span>
+                    ) : tool.starting_price > 0 ? (
+                      <>
+                        <span className="text-slate-400 text-base md:text-lg font-bold">
+                          From
+                        </span>
+                        <span className="text-4xl md:text-5xl font-black text-slate-900">
+                          ${tool.starting_price.toLocaleString()}
+                        </span>
+                        <span className="text-slate-400 font-bold text-sm">
+                          /year
+                        </span>
+                      </>
+                    ) : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type) ? (
+                      <span className="text-4xl md:text-5xl font-black text-slate-900">
+                        Free
+                      </span>
+                    ) : (
+                      <span className="text-3xl md:text-4xl font-black text-slate-900">
+                        Contact for pricing
+                      </span>
+                    )}
                   </div>
 
                   <ul className="space-y-6 mb-12">

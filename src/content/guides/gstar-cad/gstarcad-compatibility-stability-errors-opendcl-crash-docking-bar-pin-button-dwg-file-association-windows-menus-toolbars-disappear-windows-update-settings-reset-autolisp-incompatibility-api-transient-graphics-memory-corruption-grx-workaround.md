@@ -2,7 +2,7 @@
 title: "GstarCAD Compatibility and Stability Errors: OpenDCL Crash from Docking Bar Pin Button Requiring Update to 9.2.0.4, DWG File Association Error from Incorrect Windows Association Requiring Default App Reset, Menus and Toolbars Disappear from Windows Update Requiring Settings Reset, AutoLISP Incompatibility from API Differences Requiring Code Adaptation, and Transient Graphics Memory Corruption from GRX API Differences Requiring Workaround"
 excerpt: "GstarCAD fails for 5 distinct reasons: OpenDCL crash from docking bar pin button requiring update to 9.2.0.4, DWG file association error from incorrect Windows association requiring default app reset, menus and toolbars disappear from Windows update requiring settings reset, AutoLISP incompatibility from API differences requiring code adaptation, and transient graphics memory corruption from GRX API differences requiring workaround. We cover each with fixes from OpenDCL Forum, Architools Support, and Stack Overflow."
 category: "compatibility-and-stability-errors"
-softwareSlug: "gstar-cad"
+softwareSlug: "gstarcad"
 keyword: "GstarCAD OpenDCL crash docking bar pin button update 9.2.0.4 DWG file association error incorrect Windows association default app reset menus toolbars disappear Windows update settings reset AutoLISP incompatibility API differences code adaptation transient graphics memory corruption GRX API workaround"
 slug: "gstarcad-compatibility-stability-errors-opendcl-crash-docking-bar-pin-button-dwg-file-association-windows-menus-toolbars-disappear-windows-update-settings-reset-autolisp-incompatibility-api-transient-graphics-memory-corruption-grx-workaround"
 author: "CADGuide Tools Editorial Team"

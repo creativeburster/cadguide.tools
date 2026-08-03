@@ -1306,7 +1306,7 @@ export const c7Tools: Tool[] = [
     },
     {
       name: "Annual",
-      price: "1,875",
+      price: "2,010",
       period: "/yr",
       features: [
         "Retopology tools",
@@ -1374,7 +1374,7 @@ export const c7Tools: Tool[] = [
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 2475,
+  starting_price: 2010,
 
   platforms: [
     "Windows"
@@ -1600,7 +1600,7 @@ export const c7Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Pro (Annual)",
-      price: "1,188",
+      price: "1,299",
       period: "/yr",
       features: [
         "Real-time Ray Tracing",
@@ -1740,28 +1740,28 @@ export const c7Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Standard",
-      price: "749",
-      period: "/yr",
-      features: [
-        "Core Library",
-        "Real-time rendering",
-        "Limited assets",
-        "Standard effects"
-      ],
-      is_popular: false
-    },
-    {
       name: "Pro",
-      price: "1,499",
+      price: "1,149",
       period: "/yr",
       features: [
         "Full Object Library",
-        "Ray Tracing",
-        "Sound effects",
-        "Real Skies"
+        "Real-time rendering",
+        "Real Skies",
+        "Standard effects"
       ],
       is_popular: true
+    },
+    {
+      name: "Studio",
+      price: "1,499",
+      period: "/yr",
+      features: [
+        "All Pro features",
+        "Ray Tracing",
+        "Sound effects",
+        "SketchUp & Rhino live sync extras"
+      ],
+      is_popular: false
     }
   ],
 
@@ -1821,7 +1821,7 @@ export const c7Tools: Tool[] = [
 
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 1499,
+  starting_price: 1149,
 
   platforms: [
     "Windows"
@@ -1905,8 +1905,8 @@ export const c7Tools: Tool[] = [
       is_popular: true
     },
     {
-      name: "Fixed Seat",
-      price: "538",
+      name: "Solo (Fixed Seat)",
+      price: "575",
       period: "/yr",
       features: [
         "Single machine",
@@ -4657,7 +4657,7 @@ export const c7Tools: Tool[] = [
   country: "Czech Republic",
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 32,
+  starting_price: 395,
 
   platforms: [
     "Windows"
@@ -4720,7 +4720,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "How much does Corona Renderer cost?",
-      a: "Corona Renderer starts at $32 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "Corona is subscription-only under Chaos's current plans: Corona Solo runs about $59.90/month and Corona Premium about $72.90/month (Corona is bundled in the Maxon One/Chaos bundles as well). Educational licenses are available — check chaos.com for current figures."
     },
     {
       q: "Is there a free version of Corona Renderer?",

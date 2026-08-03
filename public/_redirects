@@ -15,3 +15,14 @@
 /forever /pricing/perpetual 301
 /3yr /pricing/subscription 301
 /mo /pricing/subscription 301
+
+# 6. Removed ghost entries (audit 2026-08-03): SolveSpace Pro never existed
+# (SolveSpace is free GPL software), CADvision is a services company not a
+# product, and "Chief Architect Pro" is not a real product name.
+/tools/solvespace-pro /tools/solvespace 301
+/alternatives/solvespace-pro /alternatives/solvespace 301
+/pricing/solvespace-pro /pricing/solvespace 301
+/tools/cadvision /all-tools 301
+/tools/chief-architect-pro /tools/chief-architect 301
+/alternatives/chief-architect-pro /alternatives/chief-architect 301
+/pricing/chief-architect-pro /pricing/chief-architect 301
