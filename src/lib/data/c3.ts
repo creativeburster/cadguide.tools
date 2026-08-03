@@ -2308,7 +2308,7 @@ export const c3Tools: Tool[] = [
   industries: ["MEP", "HVAC", "Electrical", "Construction"],
   core_features: ["MEP Design", "HVAC", "Electrical", "BIM", "Calculation"],
   user_scales: ["Small Business", "Mid-Sized Company", "Enterprise"],
-  official_url: "https://www.graphisoft.com/solutions/dds-cad",
+  official_url: "https://graphisoft.com/plans-and-products/ddscad/",
   affiliate_url: null,
   score: 3.6,
   pros: [
@@ -4029,8 +4029,8 @@ export const c3Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.allplan.com/products/planbar/",
-  pricing_url: "https://www.allplan.com/products/planbar/",
+  official_url: "https://www.allplan.com/products/allplan-precast/",
+  pricing_url: "https://www.allplan.com/products/allplan-precast/",
   affiliate_url: null,
   score: 3.6,
 

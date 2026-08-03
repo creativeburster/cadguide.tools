@@ -468,8 +468,8 @@ export const c7Tools: Tool[] = [
     "napa"
   ],
 
-  official_url: "https://www.aveva.com/en/products/marine/",
-  pricing_url: "https://www.aveva.com/en/products/marine/",
+  official_url: "https://www.aveva.com/en/products/hull-and-outfitting/",
+  pricing_url: "https://www.aveva.com/en/products/hull-and-outfitting/",
   affiliate_url: null,
   score: 4.9,
 
@@ -3294,8 +3294,8 @@ export const c7Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.lectra.com/en/fashion/products/accumark",
-  pricing_url: "https://www.lectra.com/en/fashion/products/accumark",
+  official_url: "https://www.lectra.com/en/fashion/products/gerber-accumark-fashion",
+  pricing_url: "https://www.lectra.com/en/fashion/products/gerber-accumark-fashion",
   affiliate_url: null,
   score: 4.4,
 
@@ -3990,8 +3990,8 @@ export const c7Tools: Tool[] = [
     "SMB"
   ],
 
-  official_url: "https://www.rhinogold.com",
-  pricing_url: "https://www.rhinogold.com",
+  official_url: "https://www.rhinoartisan.com/",
+  pricing_url: "https://www.rhinoartisan.com/",
   affiliate_url: null,
   score: 4.2,
 
@@ -6342,8 +6342,8 @@ export const c7Tools: Tool[] = [
   industries: [],
   core_features: [],
   user_scales: [],
-  official_url: "https://www.promob.com/",
-  pricing_url: "https://www.promob.com/",
+  official_url: "https://promob.com/promob/",
+  pricing_url: "https://promob.com/promob/",
   affiliate_url: null,
   score: 0,
   pros: [],
@@ -6795,8 +6795,8 @@ export const c7Tools: Tool[] = [
   ],
 
   user_scales: ["Mid-Sized Company", "Enterprise"],
-  official_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
-  pricing_url: "https://www.siemens.com/global/en/products/services/marine/foran.html",
+  official_url: "https://www.siemens.com/en-us/technology/foran-marine-software/",
+  pricing_url: "https://www.siemens.com/en-us/technology/foran-marine-software/",
   affiliate_url: null,
   score: 4.0,
 

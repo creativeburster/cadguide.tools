@@ -607,8 +607,8 @@ export const c6Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html",
-  pricing_url: "https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/fusion-compiler.html",
+  official_url: "https://www.synopsys.com/implementation-and-signoff/physical-implementation/fusion-compiler.html",
+  pricing_url: "https://www.synopsys.com/implementation-and-signoff/physical-implementation/fusion-compiler.html",
   affiliate_url: null,
   score: 4.9,
 
@@ -1798,8 +1798,8 @@ export const c6Tools: Tool[] = [
   industries: ["Consumer Electronics", "Automotive", "Aerospace", "Industrial Automation", "Medical Devices", "Telecommunications", "IoT", "Semiconductor"],
   core_features: ["Schematic Capture", "PCB Layout", "Signal Integrity Analysis", "Power Integrity Analysis", "Thermal Analysis", "Xpedition Ecosystem", "High-Speed Design"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
-  official_url: "https://www.sw.siemens.com/en-US/products/pads",
-  pricing_url: "https://www.sw.siemens.com/en-US/products/pads",
+  official_url: "https://www.siemens.com/en-us/products/pcb/pads/professional/",
+  pricing_url: "https://www.siemens.com/en-us/products/pcb/pads/professional/",
   affiliate_url: null,
   score: 0,
   pros: ["Comprehensive PCB design capabilities", "Advanced simulation and analysis tools", "Seamless Xpedition ecosystem integration", "High-speed design support", "Constraint-driven design workflow", "Strong Siemens EDA ecosystem", "Educational licensing available", "Robust library management"],

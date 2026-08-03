@@ -1243,8 +1243,8 @@ export const c4Tools: Tool[] = [
     "Small Business"
   ],
 
-  official_url: "https://www.glodon.com/products/cad-reader",
-  pricing_url: "https://www.glodon.com/products/cad-reader",
+  official_url: "https://dwg.fastcadreader.com/",
+  pricing_url: "https://dwg.fastcadreader.com/",
   affiliate_url: null,
   score: 4.4,
 

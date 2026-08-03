@@ -5623,6 +5623,8 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Freemium",
   starting_price: 0,
+  discontinued: true,
+  discontinued_note: "Updraw has been effectively abandoned — the updraw.app domain is dead and the iOS app has not been updated since 2017.",
 
   platforms: [
     "iOS"
@@ -5645,8 +5647,8 @@ export const c1Tools: Tool[] = [
     "Small Business"
   ],
 
-  official_url: "https://updraw.app",
-  pricing_url: "https://updraw.app",
+  official_url: "https://apps.apple.com/us/app/updraw-create-2d-cad-drawings-with-dimensions/id1111676719",
+  pricing_url: "https://apps.apple.com/us/app/updraw-create-2d-cad-drawings-with-dimensions/id1111676719",
   affiliate_url: null,
   score: 4,
 
