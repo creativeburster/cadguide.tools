@@ -429,6 +429,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -823,6 +824,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -1009,6 +1011,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows",
@@ -1164,6 +1167,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -1318,6 +1322,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -1972,6 +1977,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -2346,6 +2352,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"

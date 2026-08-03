@@ -1909,6 +1909,7 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -10810,6 +10811,7 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -11527,6 +11529,7 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -11678,6 +11681,7 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -12167,6 +12171,7 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -12304,6 +12309,7 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
   platforms: ["Windows"],
   industries: ["Automotive", "Aerospace", "Metal Forming", "Manufacturing", "Appliances", "Consumer Goods"],
 

@@ -5875,6 +5875,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -6026,6 +6027,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -6175,7 +6177,7 @@ export const c7Tools: Tool[] = [
 
   country: "Sweden",
   category_id: "c7",
-  pricing_type: "Perpetual",
+  pricing_type: "Freemium",
   starting_price: 0,
 
   platforms: [
@@ -6328,6 +6330,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -6479,6 +6482,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "macOS"
@@ -6630,6 +6634,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -6771,6 +6776,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -6981,6 +6987,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -7132,6 +7139,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -7281,7 +7289,7 @@ export const c7Tools: Tool[] = [
 
   country: "USA",
   category_id: "c7",
-  pricing_type: "Perpetual",
+  pricing_type: "Freemium",
   starting_price: 0,
 
   platforms: [
@@ -7434,6 +7442,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "macOS"
@@ -7570,6 +7579,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
   platforms: ["Windows"],
   industries: ["Interior Design", "Cabinet Making", "Kitchen Design", "Furniture Manufacturing", "Home Improvement"],
 

@@ -4149,6 +4149,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"

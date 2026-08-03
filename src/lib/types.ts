@@ -77,6 +77,8 @@ export interface Tool {
   discontinued?: boolean;
   /** Short human-readable note explaining the discontinuation (shown on the detail page). */
   discontinued_note?: string;
+  /** True when the product is commercial but has no public list price (contact vendor for a quote). */
+  quote_only?: boolean;
   /** Free trial duration in days, or 0 for "no trial". */
   free_trial_days?: number;
 

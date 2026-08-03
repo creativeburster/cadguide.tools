@@ -1474,6 +1474,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
   platforms: ["Windows"],
   industries: [],
   core_features: [],
@@ -3350,6 +3351,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -3501,6 +3503,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -3652,6 +3655,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -3803,6 +3807,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -3996,6 +4001,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -4319,6 +4325,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"

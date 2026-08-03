@@ -4525,6 +4525,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
@@ -4967,6 +4968,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows"
