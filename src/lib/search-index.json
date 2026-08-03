@@ -4135,7 +4135,7 @@
     "id": "t223",
     "name": "RhinoGold",
     "slug": "rhinogold",
-    "short_desc": "Rhino-based jewelry CAD plugin with gem setting, parametric jewelry libraries, and rendering.",
+    "short_desc": "Rhino-based jewelry CAD plugin with gem setting and parametric jewelry libraries — now superseded by RhinoArtisan.",
     "score": 4.2,
     "logo_url": "",
     "official_url": "https://www.rhinogold.com",
