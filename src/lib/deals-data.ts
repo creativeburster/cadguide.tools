@@ -14,63 +14,6 @@ export interface Deal {
 
 export const activeDeals: Deal[] = [
   // 1. Promo Codes & Sales (限时特惠与优惠码)
-  {
-    id: 'd-progecad',
-    toolId: 't57', // progeCAD Pro
-    title: 'progeCAD Professional Discount',
-    description: 'Get the highly versatile, DWG-compatible AutoCAD alternative with an additional discount for new perpetual licenses.',
-    discount: '15% OFF Perpetual',
-    type: 'Promo',
-    code: 'PROGE15',
-    link: 'https://www.progecad.com/buy',
-  },
-  {
-    id: 'd-dwgfastview',
-    toolId: 't53', // DWG FastView
-    title: 'DWG FastView Premium Upgrade',
-    description: 'Unlock full features, cloud storage, and remove ads across mobile, web, and desktop clients.',
-    discount: '30% OFF Annual',
-    type: 'Promo',
-    code: 'FASTVIEW30',
-    link: 'https://en.dwgfastview.com/upgrade',
-  },
-  {
-    id: 'd-nanocad',
-    toolId: 't56', // nanoCAD
-    title: 'nanoCAD Pro Subscription Sale',
-    description: 'Introductory price for new professional subscribers. Pro-grade CAD with parametric 3D modeling and 3D constraints.',
-    discount: '20% OFF New Sub',
-    type: 'Promo',
-    link: 'https://nanocad.com/buy/',
-  },
-  {
-    id: 'd-turbocad',
-    toolId: 't62', // TurboCAD
-    title: 'TurboCAD Platinum Discount',
-    description: 'Special pricing on the all-in-one professional design suite. Powerful 2D drafting and 3D surface/solid modeling.',
-    discount: 'Save $150 Today',
-    type: 'Promo',
-    link: 'https://www.turbocad.com/turbocad-windows/turbocad-platinum.html',
-  },
-  {
-    id: 'd-zwcad-promo',
-    toolId: 't12', // ZWCAD
-    title: 'ZWCAD Perpetual License Promotion',
-    description: 'Save big on lightweight, fast, and fully DWG-compatible CAD. Enjoy perpetual licensing with no forced updates.',
-    discount: '15% OFF New License',
-    type: 'Promo',
-    link: 'https://www.zwsoft.com/zwcad',
-  },
-  {
-    id: 'd-gstarcad-tradein',
-    toolId: 't54', // GstarCAD
-    title: 'GstarCAD Competitor Trade-in Bonus',
-    description: 'Switch your AutoCAD or other CAD seat to a GstarCAD perpetual license and claim a 20% discount bonus.',
-    discount: '20% Trade-in Bonus',
-    type: 'Promo',
-    link: 'https://www.gstarcad.net/buy',
-  },
-
   // 2. Evergreen Commercial Savings & Free Trials (长期省钱方案与官方免费评估)
   {
     id: 'd-alibre-installments',
@@ -230,9 +173,9 @@ export const activeDeals: Deal[] = [
   {
     id: 'd-rhino-student-buyout',
     toolId: 't6', // Rhino 3D
-    title: 'Rhino 3D Student Perpetual Buyout',
-    description: 'Purchase the fully-featured Rhino 3D perpetual license for just $195 (regularly $995). Fully usable for commercial projects after graduation with no expiry.',
-    discount: 'Save $800 (Perpetual / Commercial-ready)',
+    title: 'Rhino 3D Education License',
+    description: 'Rhino offers heavily discounted education licenses for students and educators. Like commercial Rhino, education licenses are perpetual (no subscription), but they are restricted to learning and academic use — commercial work is not permitted on an education license.',
+    discount: 'Education Pricing (Non-Commercial)',
     type: 'FreeStudent',
     link: 'https://www.rhino3d.com/edu',
   },
@@ -732,12 +675,6 @@ export const activeDeals: Deal[] = [
     link: 'https://www.autodesk.com/viewers/dwg-trueview',
   },
   {
-    id: 'd-eagle-free', toolId: 't42', title: 'Autodesk EAGLE Free for Students',
-    description: 'EAGLE PCB design is free for students and educators through Autodesk Education plan. Schematic capture, PCB layout, and autorouting.',
-    discount: '100% FREE for Students', type: 'FreeStudent',
-    link: 'https://www.autodesk.com/education/edu-software',
-  },
-  {
     id: 'd-multisim-free', toolId: 't201', title: 'NI Multisim Free for Students',
     description: 'Multisim Live is a free, browser-based SPICE simulation and circuit analysis tool for students and educators.',
     discount: 'FREE Student Edition', type: 'FreeStudent',
@@ -862,12 +799,6 @@ export const activeDeals: Deal[] = [
     description: 'Try IronCAD free for 30 days for 3D design with innovative drag-and-drop modeling.',
     discount: '30-Day Free Trial', type: 'Evergreen',
     link: 'https://www.ironcad.com/free-trial/',
-  },
-  {
-    id: 'd-corelcad-trial', toolId: 't88', title: 'CorelCAD Free Trial',
-    description: 'Download a free 15-day trial of CorelCAD for 2D drafting and 3D design.',
-    discount: '15-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.coreldraw.com/en/product/corelcad/',
   },
   {
     id: 'd-actcad-trial', toolId: 't143', title: 'ActCAD Free Trial',
